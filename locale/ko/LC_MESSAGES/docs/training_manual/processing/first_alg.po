@@ -5,7 +5,6 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
 # Kwon.Yongchan <ruvyn@naver.com>, 2024
 # 
 #, fuzzy
@@ -32,17 +31,17 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/processing/first_alg.rst:2
 msgid "Running our first algorithm. The  toolbox"
-msgstr "첫 번째 알고리듬 실행과 툴박스"
+msgstr "첫 알고리즘 실행과 툴박스"
 
 #: ../../docs/training_manual/processing/first_alg.rst:5
 msgid ""
 "In this lesson we will run our first algorithm, and get our first result "
 "from it."
-msgstr "이 강의에서 첫 번째 알고리듬을 실행하고, 첫 번째 결과를 얻을 것입니다."
+msgstr "이 수업에서 첫 알고리즘을 실행하고, 첫 결과를 얻을 것입니다."
 
 #: ../../docs/training_manual/processing/first_alg.rst:8
 msgid ""
@@ -52,19 +51,121 @@ msgid ""
 "we are going to run one of those native algorithms. In particular, we are "
 "going to calculate the centroids of set of polygons."
 msgstr ""
-"앞에서 언급했듯이, 공간처리 프레임워크는 다른 응용 프로그램에서 알고리듬을 실행할 수도 있지만, 외부 소프트웨어 없이 실행할 수 있는 "
-"자체 알고리듬을 내장하고 있기도 합니다. 공간처리 프레임워크에 대해 알아보기 위해 이 자체 알고리듬 가운데 하나를 실행해보겠습니다. 먼저"
-" 폴리곤 집합의 중심점을 계산해봅시다."
+"앞에서 언급했듯이, 공간 처리 프레임워크는 다른 응용 프로그램으로부터 알고리즘을 실행할 수도 있지만, 외부 소프트웨어 없이 실행할 수 "
+"있는 자체 알고리즘을 내장하고 있기도 합니다. 공간 처리 프레임워크에 대해 알아보기 위해 이 자체 알고리즘 가운데 하나를 "
+"실행해보겠습니다. 먼저 폴리곤 집합의 중심점(centroid)을 계산해봅시다."
 
 #: ../../docs/training_manual/processing/first_alg.rst:14
 msgid ""
 "First, open the QGIS project corresponding to this lesson. It contains just "
 "a single layer with two polygons"
-msgstr "먼저 이 강의에 해당하는 QGIS 프로젝트를 여십시오. 폴리곤 두 개가 있는 레이어 하나를 담고 있습니다."
+msgstr "먼저 이 수업에 해당하는 QGIS 프로젝트를 여십시오. 폴리곤 두 개가 있는 레이어 하나를 담고 있습니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:19
+msgid ""
+"Now go to the text box at the top of the toolbox. That is the search box, "
+"and if you type text in it, it will filter the list of algorithms so just "
+"those ones containing the entered text are shown. If there are algorithms "
+"that match your search but belong to a provider that is not active, an "
+"additional label will be shown in the lower part of the toolbox."
+msgstr ""
+"이제 툴박스 최상단에 있는 텍스트 란으로 가십시오. 이 텍스트 란은 검색 용으로, 여러분이 여기에 텍스트를 입력하면 입력한 텍스트를 "
+"포함하고 있는 알고리즘만 보이도록 알고리즘 목록을 필터링할 것입니다. 여러분의 검색 키워드와 일치하지만 활성화되어 있지 않은 제공자에 "
+"속하는 알고리즘이 존재하는 경우, 툴박스 아래 부분에 추가적인 라벨을 표시할 것입니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:25
+msgid "Type ``centroids`` and you should see something like this."
+msgstr "``centroids`` 를 입력하면 다음과 같은 화면을 보게 될 것입니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:29
+msgid ""
+"The search box is a very practical way of finding the algorithm you are "
+"looking for. At the bottom of the dialog, an additional label shows that "
+"there are algorithms that match your search but belong to a provider that is"
+" not active. If you click on the link in that label, the list of algorithms "
+"will also include results from those inactive providers, which will be shown"
+" in light gray. A link to activate each inactive provider is also shown. "
+"We'll see later how to activate other providers."
+msgstr ""
+"검색란은 여러분이 찾고 있는 알고리즘을 찾는 매우 실용적인 방법입니다. 이 대화창의 하단에는 여러분의 검색과 일치하지만 활성화되어 있지 "
+"않은 제공자에 속하는 알고리즘을 추가적인 라벨로 표시합니다. 해당 라벨에 있는 링크를 클릭하면 활성화되어 있지 않은 제공자에 속하는 "
+"알고리즘들을 회색으로 볼 수 있습니다. 비활성 제공자를 각각 활성화시킬 수 있는 링크도 표시됩니다. 이런 다른 제공자들을 활성화시키는 "
+"방법은 나중에 배울 것입니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:39
+msgid ""
+"To execute an algorithm, you just have to double-click on its name in the "
+"toolbox. When you double-click on the *Polygon centroids* algorithm, you "
+"will see the following dialog."
+msgstr ""
+"알고리즘을 실행하려면 툴박스에 있는 알고리즘 이름을 더블클릭하기만 하면 됩니다. *Polygon centroids* 알고리즘을 "
+"더블클릭하면 다음 대화창이 열릴 것입니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:45
+msgid ""
+"All algorithms have a similar interface, which basically contains input "
+"parameters that you have to fill, and outputs that you have to select where "
+"to store. In this case, the only input we have is a vector layer with "
+"polygons."
+msgstr ""
+"모든 알고리즘이 비슷한 인터페이스를 가지고 있습니다. 기본적으로 여러분이 채워야 할 입력물 파라미터와 저장할 위치를 지정해야 할 산출물 "
+"파라미터로 이루어져 있죠. 이 예제의 경우, 입력물은 폴리곤 2개를 가진 벡터 레이어뿐입니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:49
+msgid ""
+"Select the *Polygons* layer as input. The algorithm has a single output, "
+"which is the centroids layer. There are two options to define where a data "
+"output is saved: enter a filepath or save it to a temporary filename"
+msgstr ""
+"입력물에 *Polygons* 레이어를 선택하십시오. 알고리즘은 중심점 레이어 하나만 산출합니다. 데이터 산출물을 저장할 위치를 정의하는 "
+"데 두 가지 옵션이 있습니다. 파일 경로를 입력하거나, 또는 임시 파일명으로 저장하는 것입니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:53
+msgid ""
+"In case you want to set a destination and not save the result in a temporary"
+" file, the format of the output is defined by the filename extension. To "
+"select a format, just select the corresponding file extension (or add it if "
+"you are directly typing the filepath instead). If the extension of the "
+"filepath you entered does not match any of the supported ones, a default "
+"extension (usually :file:`.dbf` for tables, :file:`.tif` for raster layers "
+"and :file:`.shp` for vector ones) will be appended to the filepath and the "
+"file format corresponding to that extension will be used to save the layer "
+"or table."
+msgstr ""
+"여러분이 결과물을 임시 파일로 저장하지 않고 대상 폴더를 설정하고 싶은 경우, 산출물 포맷은 파일 확장자로 정의됩니다. 포맷을 선택하려면"
+" 해당 파일 확장자를 선택하기만 하면 됩니다. (또는 파일 경로에 직접 입력해서 추가해도 됩니다.) 여러분이 입력한 파일 경로의 확장자가"
+" 지원 포맷 가운데 어떤 것과도 일치하지 않는 경우, 기본 확장자가 (일반적으로 테이블의 경우 :file:`.dbf`, 래스터 레이어의 "
+"경우 :file:`.tif`, 그리고 벡터 레이어의 경우 :file:`.shp` 가) 파일 경로에 붙어 해당 확장자에 해당하는 파일 "
+"포맷으로 레이어 또는 테이블을 저장할 것입니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:62
+msgid ""
+"In all the exercises in this guide, we will be saving results to a temporary"
+" file, since there is no need to save them for a later use. Feel free to "
+"save them to a permanent location if you want to."
+msgstr ""
+"우리는 이 교재의 모든 예제에서 결과물을 임시 파일로 저장할 것입니다. 결과물을 이후 사용하기 위해 저장할 필요가 없기 때문입니다. "
+"원한다면 영구적인 위치에 결과물을 저장해도 됩니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:66
+msgid ""
+"Temporary files are deleted once you close QGIS. If you create a project "
+"with an output that was saved as a temporary output, QGIS will complain when"
+" you try to open back the project later, since that output file will not "
+"exist."
+msgstr ""
+"임시 파일은 QGIS를 종료할 때 삭제됩니다. 임시 산출물로 저장한 산출물을 가진 프로젝트를 생성했다면, 여러분이 나중에 해당 프로젝트를"
+" 다시 열려고 할 때 해당 산출 파일이 존재하지 않기 때문에 QGIS가 경고 메시지를 보낼 것입니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:71
+msgid ""
+"Once you have configured the algorithm dialog, press :guilabel:`Run` to run "
+"the algorithm."
+msgstr "알고리즘 대화창을 환경설정하고 나면, :guilabel:`Run` 버튼을 눌러 알고리즘을 실행하십시오."
 
 #: ../../docs/training_manual/processing/first_alg.rst:74
 msgid "You will get the following output."
-msgstr "다음 출력물을 얻게 됩니다."
+msgstr "다음 산출물을 얻게 됩니다."
 
 #: ../../docs/training_manual/processing/first_alg.rst:78
 msgid ""
@@ -73,6 +174,17 @@ msgid ""
 " case of some special algorithms (for instance, reprojection ones), the "
 "outputs will also have that same CRS. We will see more about this soon."
 msgstr ""
-"출력물은 입력물과 동일한 CRS를 사용합니다. 공간 알고리듬은 모든 입력 레이어가 동일한 CRS를 공유한다고 가정하며 어떤 재투영 작업도"
-" 하지 않습니다. 몇몇 특별한 알고리듬(예를 들면 재투영 알고리듬)을 제외하면, 출력물도 동일한 CRS를 사용합니다. 곧 이에 대해 더 "
+"산출물은 입력물과 동일한 좌표계를 사용합니다. 지리 알고리즘은 모든 입력 레이어가 동일한 좌표계를 공유한다고 가정하며 어떤 재투영 작업도"
+" 하지 않습니다. 몇몇 특별한 알고리즘(예를 들면 재투영 알고리즘)을 제외하면, 산출물도 동일한 좌표계를 사용합니다. 곧 이에 대해 더 "
 "자세히 다루게 될 것입니다."
+
+#: ../../docs/training_manual/processing/first_alg.rst:83
+msgid ""
+"Try yourself saving it using different file formats (use, for instance, "
+":file:`shp` and :file:`geojson` as extensions). Also, if you do not want the"
+" layer to be loaded in QGIS after it is generated, you can check off the "
+"checkbox that is found below the output path box."
+msgstr ""
+"서로 다른 파일 포맷들을 사용해서 (예를 들면 :file:`shp` 와 :file:`geojson` 을 확장자로 사용해서) 산출물을 "
+"저장해보십시오. 또 산출물이 생성된 다음 QGIS에 해당 레이어를 불러오고 싶지 않은 경우, 산출물 경로 아래 있는 체크박스를 체크 "
+"해제하면 됩니다."
