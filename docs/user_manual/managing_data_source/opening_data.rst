@@ -450,8 +450,8 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * For all vector source types it is possible to define the :guilabel:`Encoding` or
     to use the :menuselection:`Automatic -->` setting.
 
-* The |radioButtonOn| :guilabel:`OGC API` source type allows you to access vector
-  and raster data from servers that implement the OGC API standards.
+* The |radioButtonOn| :guilabel:`OGC API` source type allows you to access `vector <https://gdal.org/drivers/vector/oapif.html>`_
+  and `raster <https://gdal.org/drivers/raster/ogcapi.html>`_ data from servers that implement the OGC API standards.
   To use this option:
   
   #. Select |radioButtonOn| :guilabel:`OGC API` from the :guilabel:`Data Source Manager`
