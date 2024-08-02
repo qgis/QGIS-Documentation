@@ -6,9 +6,9 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoyuki arai <tarai.3367@gmail.com>, 2024
 # tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoyuki arai <tarai.3367@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,7 +76,7 @@ msgstr "図は海岸線と海岸堤防の背後にある町を示しています
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:33
 msgid "The interface"
-msgstr "インターフェース"
+msgstr "インターフェイス"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:35
 msgid ""
@@ -100,9 +100,21 @@ msgstr "ショートカット"
 msgid "Description"
 msgstr "説明"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:45
+msgid "|addLayer| :sup:`Add Layers`"
+msgstr "|addLayer| :sup:`レイヤを追加`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:265
 msgid "addLayer"
 msgstr "addLayer"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:46
+msgid "hold :kbd:`Ctrl` while drag-and-drop"
+msgstr ":kbd:`Ctrl` キーを押しながらドラッグ＆ドロップ"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:47
+msgid "Allows you to add new layers to a plot."
+msgstr "プロットに新しいレイヤを追加します。"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:48
 msgid "|layerTree| :sup:`Show Layer Tree`"
@@ -328,9 +340,25 @@ msgstr "saveMapAsImage"
 msgid "Exports plots to several image formats"
 msgstr "プロットをいくつかの画像形式でエクスポートします。"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:98
+msgid "|fileSaveAs| :sup:`Export Results`"
+msgstr "|fileSaveAs| :sup:`結果を出力`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:279
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:100
+msgid ""
+"Exports plots as 3D features, 2D Profile and Distance/Elevation Table. (The "
+"results can be saved as DXF files, CSV files or any of the standard writable"
+" vector spatial formats)"
+msgstr ""
+"プロットを3D地物、2D断面図あるいは距離/標高テーブルとして出力します（結果はDXFファイル、CSVファイルまたは標準で書き出し可能な空間ベクタ形式で保存できます）。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:103
+msgid "|options| :sup:`Options` :menuselection:`-->`"
+msgstr "|options| :sup:`オプション` :menuselection:`-->`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:291
 msgid "options"
@@ -341,9 +369,44 @@ msgid ""
 "Provides access to configuration settings of the profile elevation line."
 msgstr "標高断面図曲線の設定にアクセスします。"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:106
+msgid ""
+":menuselection:`-->` |unchecked| :menuselection:`Lock distance/elevation "
+"scales`"
+msgstr ":menuselection:`-->` |unchecked| :menuselection:`距離 / 標高スケールを固定`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:301
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:108
+msgid ""
+"Ensures that the horizontal and vertical scales are always kept equal (so "
+"that e.g. a 45° slope will appear as a 45° slope in the profile view)."
+msgstr ""
+"水平方向と垂直方向のスケールを常に等しく保つようにします（例えば、45° の斜面はプロファイルビューでも 45° の斜面として表示されます）。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:110
+msgid ":menuselection:`--> Distance units`"
+msgstr ":menuselection:`--> 距離の単位`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:112
+msgid ""
+"Allows to render distances in the profile chart with units other than the "
+"map canvas units."
+msgstr "標高断面図内の距離をマップキャンバスの距離単位以外の単位でレンダリングします。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:113
+msgid ":menuselection:`--> Tolerance`"
+msgstr ":menuselection:`--> 許容範囲`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:115
+msgid ""
+"Sets how far from the actual profile line a point can reside within to be "
+"included in the results. Uses the map units and is ignored by other layer or"
+" geometry types."
+msgstr ""
+"実際のプロファイルラインからどの程度離れた点までも結果に含めるかを設定します。許容範囲は地図の単位を使用し、他のレイヤやジオメトリタイプは無視します。"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:117
 msgid "|dock| :sup:`Dock Elevation Profile View`"
@@ -398,7 +461,7 @@ msgid ""
 "features. It also allows a set of interactions such as zooming, panning, "
 "measuring, identifying features, ... using the tools at the top."
 msgstr ""
-"レイヤツリーの右にあるプロットキャンバスは、有効になっているレイヤの標高断面図をプレビューできるメインの場所です。キャンバスのベースはメモリ付きのグリッドで、横軸はプロファイル曲線の長さ、縦軸は測定した地物のZ標高を表します。また、上にあるツールを使用してズーム、パン、距離計測や地物情報表示などの操作ができます。"
+"レイヤツリーの右にあるプロットキャンバスは、有効になっているレイヤの標高断面図をプレビューできるメインの場所です。キャンバスのベースは目盛り付きのグリッドで、横軸はプロファイル曲線の長さ、縦軸は測定した地物のZ標高を表します。また、上にあるツールを使用してズーム、パン、距離計測や地物情報表示などの操作ができます。"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:144
 msgid "Creating an elevation profile"
@@ -408,6 +471,15 @@ msgstr "標高断面図の作成"
 msgid "To create a profile view, you can:"
 msgstr "標高断面図ビューを作成するには、以下のように操作します:"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:148
+msgid ""
+"Go to :menuselection:`View -->` |newElevationProfile| "
+":menuselection:`Elevation Profile` menu. The :guilabel:`Elevation profile` "
+"panel opens."
+msgstr ""
+":menuselection:`ビュー -->` |newElevationProfile| :menuselection:`標高断面図` "
+"メニューを選択します。 :guilabel:`標高断面図` パネルが開きます。"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:289
 msgid "newElevationProfile"
 msgstr "newElevationProfile"
@@ -416,7 +488,7 @@ msgstr "newElevationProfile"
 msgid ""
 "Create the profile line along which the terrain and the features will be "
 "rendered. Select a drawing tool:"
-msgstr "プロファイル曲線を作成します。この線に沿って地形や地物がレンダリングされます。描画ツールを以下から選択します:"
+msgstr "プロファイル曲線を作成します。この線に沿った地形や地物がレンダリングされます。描画ツールを以下から選択します:"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:153
 msgid ""
@@ -457,6 +529,30 @@ msgid ""
 "The next step is to configure the elevation properties of the layers you "
 "want to visualize."
 msgstr "次のステップは、可視化したいレイヤの標高プロパティの設定です。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:167
+msgid ""
+"Push on the |layerTree| :sup:`Show Layer Tree` button to display the list of"
+" layers. By default, not all the layers of the project are loaded and "
+"referenced in the profile tool; e.g., raster layers which are not marked as "
+"having elevation data in their properties are ignored. Clicking the "
+"|addLayer| :sup:`Add layers` button will show a filtered list of possible "
+"layers which can be added to the plot, but which currently aren't in the "
+"plot. Applying the dialog with selected layers will automatically mark them "
+"as having elevation data and immediately add them to the plot."
+msgstr ""
+"|layerTree| :sup:`レイヤツリーを表示` "
+"ボタンを押して、レイヤのリストを表示させます。デフォルトでは、プロファイルツールに読み込まれ参照されるのは、プロジェクトのレイヤすべてではありません。例えば、プロパティに標高データがあるとマークされていないラスタレイヤは無視されます。"
+" |addLayer| :sup:`レイヤを追加` "
+"ボタンをクリックすると、現在のプロットには無くプロットに追加可能な、フィルタリングされたレイヤのリストが表示されます。ダイアログでレイヤ群を選択してOKボタンを押すと、標高データを持つものとして自動的にマークされ、プロットに即座に追加されます。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:175
+msgid ""
+"Holding :kbd:`Ctrl` key, it is possible to drag and drop additional layers "
+"from the main layer tree to one in the elevation profile tool."
+msgstr ""
+"メインレイヤツリーから標高断面図ツールのレイヤツリーにレイヤをドラッグし、 :kbd:`Ctrl` "
+"キーを押しながらドロップすることで、レイヤを追加できます。"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:178
 msgid ""
