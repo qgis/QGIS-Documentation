@@ -32,11 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:2
 msgid "The raster calculator. No-data values"
-msgstr "래스터 계산기와 비(非) 데이터 값"
+msgstr "래스터 계산기와 NODATA 값"
 
 #: ../../docs/training_manual/processing/no_data.rst:5
 msgid ""
@@ -44,8 +44,8 @@ msgid ""
 "operations on raster layers. We will also explain what are no--data values "
 "and how the calculator and other algorithms deal with them"
 msgstr ""
-"이 강의에서 래스터 레이어에 대한 몇몇 작업을 수행하는 데 어떻게 래스터 계산기를 사용하는지 배워보겠습니다. 또 비 데이터 값이 "
-"무엇인지, 래스터 계산기와 다른 알고리듬이 비 데이터 값을 어떻게 다루는지도 배울 것입니다."
+"이 수업에서 래스터 계산기를 사용해서 래스터 레이어에 대한 몇몇 작업을 수행하는 방법을 배워보겠습니다. 또 NODATA 값이 무엇인지, "
+"래스터 계산기와 다른 알고리즘이 NODATA 값을 어떻게 다루는지도 배울 것입니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:8
 msgid ""
@@ -54,7 +54,7 @@ msgid ""
 " different calculations, and one that will soon become an important part of "
 "your toolbox."
 msgstr ""
-"래스터 계산기는 가장 강력한 알고리듬 가운데 하나입니다. 매우 탄력적이고 다용도인 알고리듬으로 여러 가지 계산에 쓸 수 있어, 사용자가 "
+"래스터 계산기는 가장 강력한 알고리즘 가운데 하나입니다. 매우 탄력적이고 다용도인 알고리즘으로 여러 가지 계산에 쓸 수 있어, 사용자가 "
 "툴박스에서 정말 자주 사용하게 될 것입니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:10
@@ -66,7 +66,7 @@ msgid ""
 " the calculator, and also to understand certain techniques that are commonly"
 " applied with it."
 msgstr ""
-"이 강의에서 래스터 계산기를 써서 거의 간단한 편인 몇 가지 계산을 수행할 것입니다. 이를 통해 래스터 계산기를 어떻게 사용하는지, "
+"이 수업에서 래스터 계산기를 써서 대부분 간단한 편인 몇 가지 계산을 수행할 것입니다. 이를 통해 래스터 계산기를 어떻게 사용하는지, "
 "특별한 상황이 발생할 경우 어떻게 그런 상황을 다루는지 알게 될 것입니다. 이후 래스터 계산기 사용 시 기대한 결과를 얻기 위해 이런 "
 "것들뿐만 아니라 일반적으로 적용되는 특정 기법들을 이해하는 것이 중요합니다."
 
@@ -74,13 +74,13 @@ msgstr ""
 msgid ""
 "Open the QGIS project corresponding to this lesson and you will see that it "
 "contains several raster layers."
-msgstr "이 강의에 해당하는 QGIS 프로젝트를 여십시오. 래스터 레이어 몇 개를 담고 있습니다."
+msgstr "이 수업에 해당하는 QGIS 프로젝트를 여십시오. 래스터 레이어 몇 개를 담고 있습니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:14
 msgid ""
 "Now open the toolbox and open the dialog corresponding to the raster "
 "calculator."
-msgstr "이제 툴박스를 열고 래스터 계산기 대화 창을 실행하십시오."
+msgstr "이제 툴박스를 열고 래스터 계산기 대화창을 실행하십시오."
 
 #: ../../docs/training_manual/processing/no_data.rst:18
 msgid "The interface is different in recent versions."
@@ -88,7 +88,7 @@ msgstr "최신 버전의 인터페이스는 달라졌습니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:20
 msgid "The dialog contains 2 parameters."
-msgstr "이 대화 창은 파라미터 2개를 가지고 있습니다."
+msgstr "이 대화창은 파라미터 2개를 가지고 있습니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:22
 msgid ""
@@ -98,7 +98,7 @@ msgid ""
 "dialog that will appear."
 msgstr ""
 ":guilabel:`Raster layers` 는 분석에 쓰일 레이어입니다. 사용자가 원하는 만큼 많은 레이어를 선택할 수 있는 다중 "
-"입력이 가능합니다. 오른쪽에 있는 버튼을 클릭하면 나타나는 대화 창에서 사용자가 사용하길 원하는 레이어들을 선택하십시오."
+"입력이 가능합니다. 오른쪽에 있는 버튼을 클릭하면 나타나는 대화창에서 사용자가 사용하길 원하는 레이어들을 선택하십시오."
 
 #: ../../docs/training_manual/processing/no_data.rst:23
 msgid ""
@@ -143,7 +143,7 @@ msgid ""
 "that we used has valid values in all its cells, so the last parameter has no"
 " effect at all."
 msgstr ""
-":guilabel:`Run` 을 클릭해서 알고리듬을 실행하십시오. 입력 레이어와 동일한 모양이지만 값이 다른 레이어를 얻게 됩니다. "
+":guilabel:`Run` 을 클릭해서 알고리즘을 실행하십시오. 입력 레이어와 동일한 모양이지만 값이 다른 레이어를 얻게 됩니다. "
 "우리가 사용한 입력 레이어가 모든 셀에 유효한 값을 담고 있으므로, 마지막 파라미터에 어떤 영향도 끼치지 못 합니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:39
@@ -157,7 +157,7 @@ msgid ""
 " can calculate that using the raster calculator."
 msgstr ""
 "이번에는 :guilabel:`accflow` 레이어에 대해 다른 계산을 수행해봅시다. 이 레이어는 수자원 파라미터인 누적 "
-"수량(accumulated flow) 값을 담고 있습니다. 주어진 유역의 영역 안에 있는 값만을 담고 있으며, 영역 밖은 비 데이터 "
+"수량(accumulated flow) 값을 담고 있습니다. 주어진 유역의 영역 안에 있는 값만을 담고 있으며, 영역 밖은 NODATA "
 "값입니다. 값들이 분포되어 있는 방식 때문에 렌더링된 레이어에서 정보를 얻기가 힘든 것을 볼 수 있습니다. 누적 수량의 로그를 쓰면 훨씬"
 " 유익하게 표현할 수 있습니다. 래스터 계산기를 써서 로그를 계산해보겠습니다."
 
@@ -166,7 +166,7 @@ msgid ""
 "Open the algorithm dialog again, select the *accflow* layer as the only "
 "input layer, and enter the following formula: ``log(a)``."
 msgstr ""
-"알고리듬 대화 창을 다시 열고, 입력 레이어에 :guilabel:`accflow` 레이어만 선택한 다음, :kbd:`log(a)` 라는 "
+"알고리즘 대화창을 다시 열고, 입력 레이어에 :guilabel:`accflow` 레이어만 선택한 다음, :kbd:`log(a)` 라는 "
 "공식을 입력하십시오."
 
 #: ../../docs/training_manual/processing/no_data.rst:43
@@ -180,7 +180,7 @@ msgid ""
 "outside of the basin, you will see that it contains a no--data value."
 msgstr ""
 "레이어의 어떤 포인트의 값을 알기 위해 :guilabel:`Identify` 도구를 선택할 경우, 방금 생성한 레이어를 선택한 다음 유역"
-" 바깥의 아무 포인트나 클릭해보십시오. 비 데이터 값을 담고 있다는 것을 알 수 있습니다."
+" 바깥의 아무 포인트나 클릭해보십시오. NODATA 값을 담고 있다는 것을 알 수 있습니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:51
 msgid ""
@@ -191,8 +191,8 @@ msgid ""
 " in the corresponding field:"
 msgstr ""
 "다음 예제에서 레이어 하나가 아니라 두 개를 사용해서 두 번째 레이어가 정의하고 있는 유역 범위 안에 있는 유효한 표고값만을 가진 "
-"DEM을 얻어보겠습니다. 래스터 계산기 대화 창을 열고 :guilabel:`Raster layers` 필드에 프로젝트의 두 레이어를 모두"
-" 선택하십시오. :guilabel:`Formula` 필드에 다음 공식을 입력하십시오."
+"DEM을 얻어보겠습니다. 래스터 계산기 대화창을 열고 :guilabel:`Raster layers` 필드에 프로젝트의 두 레이어를 모두 "
+"선택하십시오. :guilabel:`Formula` 필드에 다음 공식을 입력하십시오."
 
 #: ../../docs/training_manual/processing/no_data.rst:57
 msgid ""
@@ -205,8 +205,8 @@ msgid ""
 "outside (``DEM * no_data = no_data``)"
 msgstr ""
 ":kbd:`a` 가 (목록에 첫 번째로 나타나기 때문에) 누적 수량 레이어를 가리키고, :kbd:`b` 가 DEM을 가리킵니다. 공식의 "
-"처음 부분에서 누적 수량 레이어를 자기 자신으로 나누어 유역 안의 값을 모두 1로, 바깥의 값을 비 데이터 값으로 만듭니다. 이것을 "
-"DEM으로 곱하면 유역 안의 셀에 표고값이 (:kbd:`DEM * 1 = DEM`) 생성되고, 바깥의 셀에 비 데이터 값이 "
+"처음 부분에서 누적 수량 레이어를 자기 자신으로 나누어 유역 안의 값을 모두 1로, 바깥의 값을 NODATA 값으로 만듭니다. 이것을 "
+"DEM으로 곱하면 유역 안의 셀에 표고값이 (:kbd:`DEM * 1 = DEM`) 생성되고, 바깥의 셀에 NODATA 값이 "
 "(:kbd:`DEM * no_data = no_data`) 생성됩니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:59
@@ -238,7 +238,7 @@ msgid ""
 " the extent covered by the flow accumulation layer is smaller that the "
 "extent of the full DEM."
 msgstr ""
-"방금 실행한 이 알고리듬에는 비 데이터 값과 이를 다루는 방식 외에도 또다른 흥미로운 점이 있습니다. 방금 계산에 사용한 두 레이어의 "
+"방금 실행한 이 알고리즘에는 NODATA 값과 이를 다루는 방식 외에도 또다른 흥미로운 점이 있습니다. 방금 계산에 사용한 두 레이어의 "
 "범위를 살펴보면 (레이어 목록에서 레이어명을 더블클릭해서 속성을 보면 됩니다) 두 레이어의 범위가 다르다는 것을 알 수 있습니다. 누적 "
 "수량 레이어가 커버하는 범위가 전체 DEM의 범위보다 작기 때문입니다."
 
@@ -266,7 +266,7 @@ msgid ""
 msgstr ""
 "이 경우 (그리고 거의 대부분의 경우) 래스터 계산기가 훌륭한 결과물을 생산하지만, 그 아래에서 이루어지는 추가적인 작업에 대해서도 알고"
 " 있어야 합니다. 결과에 영향을 끼칠 수도 있기 때문입니다. 래스터 계산기가 바람직하지 않은 결과를 내놓을 경우, 미리 수작업으로 "
-"리샘플링 작업을 해놓아야 합니다. 이후 다른 강의들에서 복수의 래스터 레이어를 사용할 때 알고리듬이 어떻게 동작하는지에 대해 자세히 배울"
+"리샘플링 작업을 해놓아야 합니다. 이후 다른 수업들에서 복수의 래스터 레이어를 사용할 때 알고리즘이 어떻게 동작하는지에 대해 자세히 배울"
 " 것입니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:73
@@ -274,7 +274,7 @@ msgid ""
 "Let's finish this lesson with another masking exercise. We are going to "
 "calculate the slope in all areas with an elevation between 1000 and 1500 "
 "meters."
-msgstr "다른 마스킹 예제로 이 강의를 끝내겠습니다. 표고가 1000에서 1500 미터 사이인 모든 영역의 경사도를 계산해보겠습니다."
+msgstr "다른 마스킹 예제로 이 수업을 끝내겠습니다. 표고가 1000에서 1500미터 사이인 모든 영역의 경사도를 계산해보겠습니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:75
 msgid ""
@@ -299,7 +299,7 @@ msgstr "이와 같이 래스터 계산기는 간단한 산술적인 작업만이
 msgid ""
 "The result has a value of 1 inside the range we want to work with, and no-"
 "data in cells outside of it."
-msgstr "우리가 작업하고자 하는 영역 내부의 셀은 1, 외부 셀은 비 데이터 값을 가지는 결과물이 생성됩니다."
+msgstr "우리가 작업하고자 하는 영역 내부의 셀은 1, 외부 셀은 NODATA 값을 가지는 결과물이 생성됩니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:89
 msgid ""
@@ -309,9 +309,9 @@ msgid ""
 "no-data value without needing to know what the no--data value of the cell "
 "is."
 msgstr ""
-"비 데이터 값은 :kbd:`0/0` 표현식에서 나옵니다. 비 데이터 값이 부정확한 값이기 때문에, SAGA는 NaN(Not a "
-"Number) 값을 추가해서 실제 비 데이터 값인 것처럼 처리합니다. 이런 방법으로 셀의 비 데이터 값이 실제로 어떤 값인지 알 필요 "
-"없이 비 데이터 값을 설정할 수 있습니다."
+"NODATA 값은 :kbd:`0/0` 표현식에서 나옵니다. NODATA 값이 부정확한 값이기 때문에, SAGA는 NaN(Not a "
+"Number) 값을 추가해서 실제 NODATA 값인 것처럼 처리합니다. 이런 방법으로 셀의 NODATA 값이 실제로 어떤 값인지 알 필요"
+" 없이 NODATA 값을 설정할 수 있습니다."
 
 #: ../../docs/training_manual/processing/no_data.rst:91
 msgid ""
