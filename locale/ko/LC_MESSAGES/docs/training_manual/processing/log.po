@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-28 17:50+0000\n"
+"POT-Creation-Date: 2024-05-19 15:50+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/processing/log.rst:2
 msgid "The processing log"
@@ -40,7 +40,34 @@ msgstr "공간 처리 로그"
 
 #: ../../docs/training_manual/processing/log.rst:4
 msgid "This lesson describes the processing log."
-msgstr "이 강의에서 공간처리 로그에 대해 설명합니다."
+msgstr "이 수업에서는 공간  처리 로그에 대해 설명합니다."
+
+#: ../../docs/training_manual/processing/log.rst:6
+msgid ""
+"All the analysis performed with the processing framework is logged in QGIS "
+"logging system. This allows you to know more about what has been done with "
+"the processing tools, to solve problems when they happen, and also to re--"
+"run previous operations, since the logging system also implements some "
+"interactivity."
+msgstr ""
+"공간 처리 프레임워크를 통해 수행되는 모든 분석은 QGIS 로그 작업 시스템에 로그로 기록됩니다. 이렇게 하면 공간 처리 도구들을 통해 "
+"어떤 일들이 일어났는지를 더 자세히 알 수 있고, 문제가 발생하는 경우 해결할 수 있으며, 또 이전 작업을 재실행할 수 있습니다. 로그 "
+"작업 시스템도 쌍방향 작업성을 일부 구현하고 있기 때문입니다."
+
+#: ../../docs/training_manual/processing/log.rst:11
+msgid ""
+"To open the log, click on the balloon at the bottom right, on the QGIS "
+"status bar. Some algorithms might leave here information about their "
+"execution. For instance, those algorithms that call an external application "
+"usually log the console output of that application to this entry. If you "
+"have a look at it, you will see that the output of the SAGA algorithm that "
+"we just run (and that fails to execute because input data was not correct) "
+"is stored here."
+msgstr ""
+"로그를 열려면, QGIS 상태 바에서 오른쪽 최하단에 있는 풍선 아이콘을 클릭하십시오. 일부 알고리즘은 여기에 실행 관련 정보를 남길 "
+"수도 있습니다. 예를 들어 외부 응용 프로그램을 호출하는 알고리즘들은 보통 이 항목에 해당 응용 프로그램의 콘솔 산출물을 로그로 "
+"기록합니다. 이 로그를 살펴보면, 방금 실행했던 (그리고 입력 데이터가 정확하지 않아서 실행에 실패한) SAGA 알고리즘의 산출물이 "
+"여기에 저장된 것을 볼 수 있을 것입니다."
 
 #: ../../docs/training_manual/processing/log.rst:18
 msgid ""
@@ -50,9 +77,39 @@ msgid ""
 "problem you are having, which might be a problem in the installation of the "
 "external software or an issue with the data you provided."
 msgstr ""
-"작업이 어떻게 진행되고 있는지 이해하는 데 큰 도움이 됩니다. 고급 사용자는 이 산출물을 분석해서 어째서 알고리듬이 실패했는지 알아낼 수"
-" 있을 것입니다. 고급 사용자가 아닐 경우, 다른 이들이 이 산출물을 가지고 어떤 문제인지, 외부 응용 프로그램의 설치에 문제가 있는지 "
-"또는 사용자가 제공한 데이터에 문제가 있는지 진단해줄 수 있을 것입니다."
+"이 로그는 작업이 어떻게 진행되고 있는지 이해하는 데 큰 도움이 됩니다. 고급 사용자는 이 산출물을 분석해서 어째서 알고리듬이 실패했는지"
+" 알아낼 수 있을 것입니다. 고급 사용자가 아닐 경우, 다른 이들이 이 산출물을 가지고 어떤 문제인지, 외부 응용 프로그램의 설치에 "
+"문제가 있는지 또는 사용자가 제공한 데이터에 문제가 있는지 진단해줄 수 있을 것입니다."
+
+#: ../../docs/training_manual/processing/log.rst:23
+msgid ""
+"Even if the algorithm could be executed, some algorithms might leave "
+"warnings in case the result might not be right. For instance, when executing"
+" an interpolation algorithm with a very small amount of points, the "
+"algorithm can run and will produce a result, but it is likely that it will "
+"not be correct, since more points should be used. It's a good idea to "
+"regularly check for this type of warnings if you are not sure about some "
+"aspect of a given algorithm."
+msgstr ""
+"알고리즘을 실행할 수 있다고 하더라도, 결과물이 올바르지 않을 수도 있는 경우 일부 알고리즘은 경고 메시지를 남길 수도 있습니다. 예를 "
+"들어 보간 알고리즘을 아주 적은 개수의 포인트들로 실행하는 경우, 이 알고리즘이 실행도 되고 결과물도 생성할 테지만 이 결과물은 올바르지"
+" 않을 가능성이 큽니다. 더 많은 포인트를 사용했어야 하기 때문입니다. 여러분이 어떤 알고리즘의 어떤 면을 잘 모르고 있다면, 이런 "
+"유형의 경고 메시지를 정기적으로 확인해보는 편이 좋습니다."
+
+#: ../../docs/training_manual/processing/log.rst:28
+msgid ""
+"From the :menuselection:`Processing --> History...` menu, you'll find "
+"*algorithms* that are executed, regardless of they are executed from the GUI"
+" or from the console (which will be explained later in this manual). The "
+"execution is stored in this dialog as a console call. That means that "
+"everytime you run an algorithm, a console command is added to the log, and "
+"you have the full history of your working session. Here is how that history "
+"looks like:"
+msgstr ""
+":menuselection:`Processing --> History...` 메뉴에서, GUI로부터 실행되었는지 또는 콘솔로부터 "
+"실행되었는지에 상관없이 실행된 *알고리즘* 들을 찾을 수 있습니다. (콘솔에 대해서는 이 교재의 다른 부분에서 설명할 것입니다.) 실행 "
+"자체는 이 대화창에 콘솔 호출로써 저장되어 있습니다. 즉 여러분이 알고리즘을 실행할 때마다 콘솔 명령어가 이 대화창에 추가되어 여러분의 "
+"작업 세션의 전체 이력을 볼 수 있다는 뜻입니다. 이 이력은 다음처럼 보일 겁니다:"
 
 #: ../../docs/training_manual/processing/log.rst:37
 msgid ""
@@ -60,5 +117,70 @@ msgid ""
 "about the syntax of algorithms. We will use it when we discuss how to run "
 "analysis commands from the console."
 msgstr ""
-"이 로그는 콘솔 작업을 시작할 때, 알고리듬의 문법을 배우는 데 굉장히 유용합니다. 콘솔에서 어떻게 분석 명령어를 실행하는지 설명할 때 "
-"이 로그를 이용할 것입니다."
+"이 로그는 콘솔 작업을 시작할 때 알고리즘의 문법을 배우는 데 굉장히 유용합니다. 콘솔에서 어떻게 분석 명령어를 실행하는지 설명할 때 이"
+" 로그를 이용할 것입니다."
+
+#: ../../docs/training_manual/processing/log.rst:41
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along"
+msgstr ":abbr:`★☆☆ (초급 수준)` 따라해보세요"
+
+#: ../../docs/training_manual/processing/log.rst:43
+msgid ""
+"The history is also interactive, and you can run any previous algorithm just"
+" by double-clicking on its entry. This is an easy way of replicating the "
+"work we already did before."
+msgstr ""
+"이 이력은 쌍방향 작업성도 가지고 있기 때문에, 이전에 실행했던 알고리즘이라면 어떤 것이든 더블클릭해서 재실행할 수 있습니다. 이를 통해"
+" 이전에 이미 했던 작업을 손쉽게 복제할 수 있습니다."
+
+#: ../../docs/training_manual/processing/log.rst:46
+msgid "For instance, try the following:"
+msgstr "예를 들어 다음 작업을 해보세요:"
+
+#: ../../docs/training_manual/processing/log.rst:48
+msgid ""
+"Open the data corresponding to the first chapter of this manual and run the "
+"algorithm explained there."
+msgstr "QGIS 공간 처리 지침서 강의의 첫 장에 해당하는 데이타를 열고 첫 장에서 설명한 알고리즘을 실행하십시오."
+
+#: ../../docs/training_manual/processing/log.rst:50
+msgid ""
+"Now go to the History dialog and locate the last algorithm in the list, "
+"which corresponds to the algorithm you have just run."
+msgstr "이제 이력 대화창으로 가서 목록에 있는 마지막 알고리즘을 찾아보십시오. 여러분이 방금 실행했던 알고리즘일 것입니다."
+
+#: ../../docs/training_manual/processing/log.rst:52
+msgid ""
+"Double-click on it and a new result should be produced, just like when you "
+"run it using the normal dialog and calling it from the toolbox."
+msgstr ""
+"해당 알고리즘을 더블클릭하면, 여러분이 일반적인 대화창을 통해 툴박스에서 알고리즘을 호출해 실행했던 것과 똑같이 새 결과물을 생성할 "
+"것입니다."
+
+#: ../../docs/training_manual/processing/log.rst:56
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along"
+msgstr ":abbr:`★★☆ (중급 수준)` 따라해보세요"
+
+#: ../../docs/training_manual/processing/log.rst:58
+msgid "You can also modify the algorithm."
+msgstr "알고리즘도 수정할 수 있습니다."
+
+#: ../../docs/training_manual/processing/log.rst:60
+msgid "Copy the algorithm call"
+msgstr "알고리즘 호출을 복사하십시오."
+
+#: ../../docs/training_manual/processing/log.rst:61
+msgid "Open the :menuselection:`Plugins --> Python console`"
+msgstr ":menuselection:`Plugins --> Python console` 을 여십시오."
+
+#: ../../docs/training_manual/processing/log.rst:62
+msgid "Paste your copy to run the analysis; change the parameters at will."
+msgstr "복사한 내용을 붙여넣고 분석을 실행하십시오. 이때 파라미터를 마음대로 바꿔보세요."
+
+#: ../../docs/training_manual/processing/log.rst:63
+msgid ""
+"To display the resulting file, you may want to replace ``processing.run`` in"
+" the pasted command with ``processing.runAndLoadResults``."
+msgstr ""
+"생성된 파일을 화면에서 보고 싶다면, 붙여넣은 명령어에서 ``processing.run`` 을 "
+"``processing.runAndLoadResults`` 로 대체하면 됩니다."
