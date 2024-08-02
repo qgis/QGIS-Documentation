@@ -306,6 +306,7 @@ The Elevation Controller panel
 ==============================
 
 |elevation| :guilabel:`Elevation Controller` allows you to handle elevation z-range data in 2D maps.
+This option currently supports point cloud layers and raster DEMs.
 Use the panel to visualize and interact with elevation data in the map canvas.
 
 Activate the |elevation| :guilabel:`Elevation Controller` panel in the map canvas by
@@ -315,7 +316,7 @@ side of the map canvas. At the top of the slider, there is a |settings| :sup:`Se
 where you can:
 
 * set the :guilabel:`Fixed range size` to limit elevation range to a fixed size
-* :guilabel:`Set Elevation Range`
+* :guilabel:`Set Elevation Range` to open the project elevation tab, where you can set dedicated lower and upper bounds for the elevation range
 * :guilabel:`Disable Elevation Filter` to remove the elevation filter from the map canvas 
 
 .. index::
