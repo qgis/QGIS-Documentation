@@ -32,18 +32,18 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:2
 msgid "Clipping and merging raster layers"
-msgstr "래스터 레이어 자르기 및 합치기"
+msgstr "래스터 레이어 잘라내기 및 병합하기"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:4
 msgid ""
 "In this lesson we will see another example of spatial data preparation, to "
 "continue using geoalgorithms in real-world scenarios."
 msgstr ""
-"이 강의에서는 계속 실재 세상의 시나리오 안에서 공간 알고리즘을 사용해서 공간 데이터를 준비하는 또다른 예제를 풀어볼 것입니다."
+"이 수업에서는 계속 실제 세상의 시나리오 안에서 지리 알고리즘을 사용해서 공간 데이터를 준비하는 또다른 예제를 풀어볼 것입니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:7
 msgid ""
@@ -54,13 +54,13 @@ msgid ""
 "you open the project corresponding to this lesson, you will see something "
 "like this."
 msgstr ""
-"이 강의에서는, 단일 폴리곤으로 이루어진 벡터 레이어로부터 도시 지역을 둘러싼 영역의 경사도 레이어를 계산해보겠습니다. 기본 DEM은 "
-"래스터 레이어 두 개로 나뉘어져 있습니다. 이 두 레이어를 함께 표출해야만 우리가 작업하고자 하는 도시 주변 영역보다 더 넓은 영역을 "
-"커버하게 됩니다. 이 강의에 해당하는 프로젝트를 열어보면, 다음과 같은 화면을 보게 될 것입니다."
+"이 수업에서는, 단일 폴리곤으로 이루어진 벡터 레이어로부터 도시 지역을 둘러싼 영역의 경사도 레이어를 계산해보겠습니다. 기본 DEM은 "
+"래스터 레이어 두 개로 나뉘어져 있습니다. 이 두 레이어를 함께 사용해야만 우리가 작업하고자 하는 도시 주변 영역보다 더 넓은 영역을 "
+"커버하게 됩니다. 이 수업에 해당하는 프로젝트를 열어보면, 다음과 같은 화면을 보게 될 것입니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:16
 msgid "These layers have two problems:"
-msgstr "이 레이어들은 두 가지 문제점을 가지고 있습니다."
+msgstr "이 레이어들은 두 가지 문제점을 가지고 있습니다:"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:18
 msgid ""
@@ -78,7 +78,7 @@ msgstr ""
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:23
 msgid "Both of them are easily solvable with the appropriate geoalgorithms."
-msgstr "적합한 알고리즘을 사용한다면 두 문제점 모두 쉽게 해결할 수 있습니다."
+msgstr "적합한 지리 알고리즘을 사용한다면 두 문제점 모두 쉽게 해결할 수 있습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:25
 msgid ""
@@ -87,32 +87,32 @@ msgid ""
 "the city area, and then we buffer it, so as to have a raster layer that "
 "covers a bit more that the strictly necessary."
 msgstr ""
-"먼저, 우리가 원하는 영역을 정의하는 사각형을 생성하십시오. 이를 위해 도시 지역의 경계를 나타내는 경계 범위(bounding box)를"
-" 담고 있는 레이어를 생성하고, 꼭 필요한 것보다 조금 더 넓은 영역을 커버하는 래스터 레이어를 얻기 위한 버퍼를 부여하십시오."
+"먼저, 우리가 원하는 영역을 정의하는 사각형을 생성하십시오. 이를 위해 도시 지역의 경계를 나타내는 경계 상자(bounding box)를"
+" 담고 있는 레이어를 생성하고, 꼭 필요한 것보다 조금 더 넓은 영역을 커버하는 래스터 레이어를 얻기 위한 버퍼를 지정하십시오."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:30
 msgid ""
 "To calculate the bounding box , we can use the *Polygon from layer extent* "
 "algorithm"
-msgstr "경계 범위를 계산하는 데 :guilabel:`Polygon from layer extent` 알고리즘을 사용할 수 있습니다."
+msgstr "경계 상자를 계산하려면 :guilabel:`Polygon from layer extent` 알고리즘을 사용하면 됩니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:34
 msgid ""
 "To buffer it, we use the *Fixed distance buffer* algorithm, with the "
 "following parameter values."
 msgstr ""
-"버퍼를 부여하려면 :guilabel:`Fixed distance buffer` 알고리즘을 실행하고 다음과 같이 파라미터 값을 "
+"버퍼를 지정하려면 :guilabel:`Fixed distance buffer` 알고리즘을 실행하고 다음과 같이 파라미터 값을 "
 "설정하십시오."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:38
 msgid ""
 "Syntax changed in recent versions; set both Distance and Arc vertex to .25"
-msgstr "최근 버전에서 문법이 바뀌었습니다. 거리와 원호 꼭짓점 모두 0.25로 설정하세요."
+msgstr "최신 버전에서는 문법이 바뀌었습니다. 거리와 원호 꼭짓점 모두 0.25로 설정하세요."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:40
 msgid ""
 "Here is the resulting bounding box obtained using the parameters shown above"
-msgstr "이 파라미터 값을 통해 다음과 같은 경계 범위 결과물을 얻을 수 있습니다."
+msgstr "이 파라미터 값을 통해 다음과 같은 경계 상자 결과물을 얻을 수 있습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:44
 msgid ""
@@ -122,7 +122,7 @@ msgid ""
 "rectangle, saving one step."
 msgstr ""
 "모서리가 둥근 사각형이지만, 이 레이어에 :guilabel:`Polygon from layer extent` 알고리즘을 실행해서 동등한 "
-"직각 사각형 경계 범위를 쉽게 얻을 수 있습니다. 먼저 도시 범위에 버퍼를 부여한 다음 범위 사각형을 계산해서 한 단계를 생략할 수도 "
+"직사각형 경계 상자를 쉽게 얻을 수 있습니다. 먼저 도시 경계에 버퍼를 부여한 다음 범위 직사각형을 계산해서 한 단계를 생략할 수도 "
 "있습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:50
@@ -132,13 +132,13 @@ msgid ""
 "*Warp (reproject)* tool."
 msgstr ""
 "래스터와 벡터의 투영체가 다르다는 사실을 알 수 있을 것입니다. 따라서 다음 단계를 진행하기 전에 :guilabel:`Warp "
-"(reproject)` 도구를 이용, 재투영해야 합니다."
+"(reproject)` 도구를 이용해서 재투영해야 합니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:56
 msgid ""
 "Recent versions have a more complex interface. Make sure at least one "
 "compression method is selected."
-msgstr "최근 버전의 인터페이스는 좀 더 복잡합니다. 적어도 하나 이상의 압축 방법을 선택했는지 확인하세요."
+msgstr "최신 버전의 인터페이스는 좀 더 복잡합니다. 적어도 하나 이상의 압축 방법을 선택했는지 확인하세요."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:59
 msgid ""
@@ -146,15 +146,16 @@ msgid ""
 "want to obtain, we can crop both of the raster layers, using the *Clip "
 "raster with polygon* algorithm."
 msgstr ""
-"우리가 얻고자 하는 래스터 레이어의 경계 범위를 담고 있는 레이어를 써서 두 래스터 레이어를 잘라낼 수 있습니다. "
-":guilabel:`Clip Raster with Polygons` 알고리즘을 이용하십시오."
+"우리가 얻고자 하는 래스터 레이어의 경계 상자를 담고 있는 레이어를 써서 두 래스터 레이어를 잘라낼 수 있습니다. "
+":guilabel:`Clip Raster with Polygons` 알고리즘을 사용하십시오."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:65
 msgid ""
 "Once the layers have been cropped, they can be merged using the SAGA *Mosaic"
 " raster layers* algorithm."
 msgstr ""
-"레이어를 잘라낸 다음, :guilabel:`Mosaic raster layers` 알고리즘을 써서 두 레이어를 합칠 수 있습니다."
+"레이어를 잘라낸 다음, SAGA의 :guilabel:`Mosaic raster layers` 알고리즘을 써서 두 레이어를 병합할 수 "
+"있습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:69
 msgid ""
@@ -167,14 +168,14 @@ msgid ""
 "automate that operation. In this example, we just have two layers, so you "
 "shouldn't worry about that now."
 msgstr ""
-"합치기를 먼저 하고 자르기를 하면 클리핑 알고리즘을 두 번 호출할 필요가 없어 시간을 절약할 수 있습니다. 하지만 합쳐야 할 레이어가 두"
-" 개 이상인데 용량이 큰 편일 경우, 합치기를 먼저 하면 나중에 처리하기 어려워질 수가 있습니다. 이런 경우 클리핑 알고리즘을 몇 번 "
+"병합을 먼저 하고 잘라내면 잘라내기 알고리즘을 두 번 호출할 필요가 없어 시간을 절약할 수 있습니다. 하지만 병합해야 할 레이어가 두 개"
+" 이상인데 용량이 큰 편일 경우, 병합을 먼저 하면 나중에 처리하기 어려워질 수가 있습니다. 이런 경우 잘라내기 알고리즘을 몇 번 "
 "호출해야만 해서 시간이 걸릴 수도 있지만, 곧 이런 작업을 자동화할 수 있는 추가 도구들을 소개할 것이므로 걱정하지 마십시오. 이 "
 "예제에서는 레이어 두 개뿐이므로 이런 상황에 대해 걱정할 필요는 없습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:77
 msgid "With that, we get the final DEM we want."
-msgstr "합치기 작업으로 결국 원하는 DEM을 얻게 되었습니다."
+msgstr "병합 작업으로 결국 원하는 DEM을 얻게 되었습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:81
 msgid "Now it is time to compute the slope layer."
@@ -191,10 +192,10 @@ msgid ""
 "then correctly calculate the slope, with either SAGA or GDAL."
 msgstr ""
 ":guilabel:`Slope, Aspect, Curvature` 알고리즘으로 경사도 레이어를 계산할 수 있지만, 이 마지막 단계에서 "
-"얻은 DEM의 표고 값은 미터 단위인데 셀 크기가 미터 단위가 아니기 때문에 (해당 레이어는 지리 좌표를 쓰는 CRS를 사용합니다) 입력"
-" 레이어로 적합하지 않습니다. 즉 재투영해야 합니다. 래스터 레이어를 재투영하는데에도 :guilabel:`Warp (reproject)`"
-" 알고리즘을 쓸 수 있습니다. SAGA 또는 GDAL을 통해 미터 단위를 쓰는 (3857 같은) CRS로 재투영해서 경사를 정확하게 "
-"계산할 수 있습니다."
+"얻은 DEM의 표고 값은 미터 단위인데 셀 크기가 미터 단위가 아니기 때문에 (해당 레이어는 지리 좌표를 쓰는 좌표계를 사용합니다) 입력"
+" 레이어로 적합하지 않습니다. 즉 재투영을 해야 합니다. 래스터 레이어를 재투영하는데에도 :guilabel:`Warp "
+"(reproject)` 알고리즘을 쓸 수 있습니다. SAGA 또는 GDAL을 통해 미터 단위를 쓰는 (3857 같은) 좌표계로 재투영하면"
+" 경사를 정확하게 계산할 수 있습니다."
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:91
 msgid "With the new DEM, slope can now be computed."
@@ -235,5 +236,5 @@ msgid ""
 " outside the bounding box that we calculated in one of the first steps. This"
 " can be solved by clipping it again, as we did to obtain the base DEM."
 msgstr ""
-"재투영 과정에서 최종 레이어가 초기 단계에서 계산했던 경계 범위 바깥의 값을 가지게 될 수도 있습니다. 기본 DEM을 얻기 위해 했던 "
-"것과 동일한 방법으로 다시 클리핑하면 이 문제를 해결할 수 있습니다."
+"재투영 과정에서 최종 레이어가 초기 단계에서 계산했던 경계 상자 바깥에 값을 가지게 될 수도 있습니다. 기본 DEM을 얻기 위해 했던 "
+"것과 동일한 방법으로 다시 잘라내면 이 문제를 해결할 수 있습니다."
