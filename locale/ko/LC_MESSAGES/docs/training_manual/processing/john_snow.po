@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:2
 msgid "First analysis example"
@@ -43,7 +43,7 @@ msgid ""
 "In this lesson we will perform some real analysis using just the toolbox, so"
 " you can get more familiar with the processing framework elements."
 msgstr ""
-"이 강의에서는 사용자가 공간처리 프레임워크 요소에 더 익숙해질 수 있도록 툴박스만을 사용해서 실제 분석 작업을 수행할 것입니다."
+"이 수업에서는 사용자가 공간 처리 프레임워크 요소에 더 익숙해질 수 있도록 툴박스만을 사용해서 실제 분석 작업을 수행할 것입니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:7
 msgid ""
@@ -51,7 +51,7 @@ msgid ""
 "have a very powerful tool to perform spatial analysis. It is time to work "
 "out a larger exercise with some real--world data."
 msgstr ""
-"필요한 모든 설정을 끝내고 외부 알고리듬을 사용할 수 있으므로, 공간 분석을 수행할 수 있는 강력한 도구를 갖게 되었습니다. 이제 실재 "
+"필요한 모든 설정을 끝내고 외부 알고리즘을 사용할 수 있으므로, 공간 분석을 수행할 수 있는 강력한 도구를 갖게 되었습니다. 이제 실제 "
 "세계의 데이터를 써서 광범위한 예제를 풀어볼 때가 되었습니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:9
@@ -67,7 +67,7 @@ msgstr ""
 "존 스노우(John Snow)가 1854년 자신의 `획기적인 작업 "
 "<https://ko.wikipedia.org/wiki/%EC%A1%B4_%EC%8A%A4%EB%85%B8_(%EC%9D%98%EC%82%AC)>`_"
 " 에 사용했던 유명한 데이터셋을 이용해서 흥미로운 결과를 얻을 것입니다. 이 데이터셋을 분석하는 작업은 꽤 명확한 편으로 제대로 된 "
-"결과물 및 결론을 얻는 데 복잡한 GIS 기술이 필요하지는 않지만, 이 공간 문제들을 서로 다른 처리 과정 도구들을 써서 어떻게 분석하고"
+"결과물 및 결론을 얻는 데 복잡한 GIS 기술이 필요하지는 않지만, 이 공간 문제들을 서로 다른 공간 처리 도구들을 써서 어떻게 분석하고"
 " 해결할 수 있는지 알 수 있는 훌륭한 방법입니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:11
@@ -76,8 +76,8 @@ msgid ""
 "an OSM rendered map in TIFF format. Open the corresponding QGIS project for "
 "this lesson."
 msgstr ""
-"이 데이터셋은 콜레라에 의한 사망자 수 및 펌프 위치를 담고 있는 shapefile과 TIFF 포맷으로 렌더링된 OSM 맵을 포함합니다."
-" 이 강의에 해당하는 QGIS 프로젝트를 여십시오."
+"이 데이터셋은 콜레라에 의한 사망자 수 및 펌프 위치를 담고 있는 셰이프파일과 TIFF 포맷으로 렌더링된 OSM 맵을 포함합니다. 이 "
+"수업에 해당하는 QGIS 프로젝트를 여십시오."
 
 #: ../../docs/training_manual/processing/john_snow.rst:15
 msgid ""
@@ -86,7 +86,7 @@ msgid ""
 "*Voronoi Diagram* algorithm can be used for that."
 msgstr ""
 "먼저 :guilabel:`Pumps` 레이어의 보로노이 다이어그램(Voronoi diagram, 일명 티센(Thiessen) 폴리곤)을 "
-"계산해서 각 펌프의 영향 범위를 계산해야 합니다. 이 작업에 :guilabel:`Voronoi Diagram` 알고리듬을 사용할 수 "
+"계산해서 각 펌프의 영향 범위를 계산해야 합니다. 이 작업에 :guilabel:`Voronoi Diagram` 알고리즘을 사용할 수 "
 "있습니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:22
@@ -128,12 +128,12 @@ msgid ""
 " tool, and using the configuration shown next."
 msgstr ""
 ":kbd:`Cholera_deaths` 레이어의 각 포인트와 :kbd:`Pumps` 레이어의 포인트 사이의 의존성을 시각화하는 또다른 "
-"훌륭한 방법은 각 :kbd:`Cholera_deaths` 포인트에서 가장 근접한 :kbd:`Pumps` 포인트로 라인을 그려보는 "
-"것입니다. :guilabel:`Distance to closest hub` 도구를 다음과 같이 설정해서 이 작업을 할 수 있습니다."
+"훌륭한 방법은 각 :kbd:`Cholera_deaths` 포인트에서 가장 근접한 :kbd:`Pumps` 포인트로 선을 그어보는 것입니다."
+" :guilabel:`Distance to closest hub` 도구를 다음과 같이 설정해서 이 작업을 할 수 있습니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:40
 msgid "The result looks like this:"
-msgstr "결과는 다음과 같습니다."
+msgstr "결과는 다음과 같습니다:"
 
 #: ../../docs/training_manual/processing/john_snow.rst:44
 msgid ""
@@ -143,8 +143,8 @@ msgid ""
 "parameter, but it is not considering that some locations might have more "
 "cases than other."
 msgstr ""
-"중앙에 있는 펌프의 라인 개수가 가장 많지만, 이것은 사망자 수가 아니라 콜레라가 발생한 위치의 개수라는 점을 잊어서는 안 됩니다. 분명"
-" 결과를 대표할 수 있는 파라미터이긴 하지만 일부 위치의 사망자 수가 다른 곳보다 더 많을 수 있다는 사실을 고려하지 않고 있습니다."
+"중앙에 있는 펌프의 선 개수가 가장 많지만, 이것은 사망자 수가 아니라 콜레라가 발생한 위치의 개수라는 점을 잊어서는 안 됩니다. 분명 "
+"결과를 대표할 수 있는 파라미터이긴 하지만 일부 위치의 사망자 수가 다른 곳보다 더 많을 수 있다는 사실을 고려하지 않고 있습니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:46
 msgid ""
@@ -154,7 +154,7 @@ msgid ""
 "100, the extent and cellsize of the streets raster layer, we get something "
 "like this."
 msgstr ""
-"밀도 레이어로도 어떤 일이 일어나는지를 명확하게 시각화할 수 있습니다. :guilabel:`Kernel density` 알고리듬을 써서 "
+"밀도 레이어로도 어떤 일이 일어나는지를 명확하게 시각화할 수 있습니다. :guilabel:`Kernel density` 알고리즘을 써서 "
 "밀도 레이어를 생성할 수 있습니다. 입력 레이어에 :guilabel:`Cholera_deaths` 레이어를, 가중치 항목에 "
 ":guilabel:`COUNT` 필드를 사용하고, 반경을 100으로 설정한 다음 :kbd:`streets` 래스터 레이어의 범위 및 셀 "
 "크기를 사용하면 다음과 같은 결과를 얻을 수 있습니다."
@@ -164,7 +164,7 @@ msgid ""
 "Remember that, to get the output extent, you do not have to type it. Click "
 "on the button on the right-hand side and select *Use layer/canvas extent*."
 msgstr ""
-"산출물의 범위를 설정하기 위해 직접 입력할 필요가 없다는 사실을 기억하십시오. :guilabel:`Output extent...` 항목 "
+"산출물의 범위를 직접 입력해서 설정할 필요가 없다는 사실을 기억하십시오. :guilabel:`Output extent...` 항목 "
 "오른쪽에 있는 버튼을 클릭한 다음 :guilabel:`Use layer/canvas extent` 를 선택하면 됩니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:54
@@ -173,7 +173,7 @@ msgid ""
 "to the text field. You must do the same with the cellsize, selecting the "
 "cellsize of that layer as well."
 msgstr ""
-"그리고 도로 래스터 레이어를 선택하면 해당 레이어의 범위가 자동적으로 텍스트 란에 채워질 것입니다. 셀 크기도 동일한 방법으로, 해당 "
+"그리고 도로 래스터 레이어를 선택하면 해당 레이어의 범위가 자동적으로 텍스트란에 채워질 것입니다. 셀 크기도 동일한 방법으로, 해당 "
 "레이어의 셀 크기를 선택해서 설정해야 합니다."
 
 #: ../../docs/training_manual/processing/john_snow.rst:56
