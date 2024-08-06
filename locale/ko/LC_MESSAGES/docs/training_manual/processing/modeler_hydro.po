@@ -32,11 +32,45 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro.rst:2
 msgid "More complex models"
 msgstr "더 복잡한 모델"
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:4
+msgid ""
+"In this lesson we will work with a more complex model in the model designer."
+msgstr "이 수업에서는 모델 설계자에서 좀 더 복잡한 모델을 작업할 것입니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:6
+msgid ""
+"The first model that we created in the previous chapter was a very simple "
+"one, with just one input and three algorithms. More complex models can be "
+"created, with different types of inputs and containing more steps. For this "
+"chapter we will work with a model that creates a vector layer with "
+"watersheds, based on a DEM and a threshold value. That will be very useful "
+"for calculating several vector layers corresponding to different thresholds,"
+" without having to repeat each single step each time."
+msgstr ""
+"이전 수업에서 우리가 생성했던 첫 번째 모델은 입력물 1개와 알고리즘 3개뿐인 매우 단순한 모델이었지만, 서로 다른 유형의 입력물들과 더"
+" 많은 단계들을 담고 있는 더 복잡한 모델도 생성할 수 있습니다. 이 수업에서 우리는 DEM과 임계값을 기반으로 유역(watershed)"
+" 벡터 레이어를 생성하는 모델을 작업할 것입니다. 이 모델은 매번 각 단계를 반복할 필요 없이 서로 다른 임계값들에 해당하는 여러 벡터 "
+"레이어들을 계산하는 데 매우 유용할 것입니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:8
+msgid ""
+"This lesson does not contain instructions about how to create your model. "
+"You already know the necessary steps (we saw them in a :ref:`previous lesson"
+" <tm_start_modeler>`) and you have already seen the basic ideas about the "
+"modeler, so you should try it yourself. Spend a few minutes trying to create"
+" your model, and don't worry about making mistakes. Remember: first add the "
+"inputs and then add the algorithms that use them to create the workflow."
+msgstr ""
+"이 수업은 모델을 생성하는 방법에 대한 지침을 포함하고 있지 않습니다. 여러분은 이미 필요한 단계를 알고 있으며 (:ref:`이전 수업 "
+"<tm_start_modeler>` 에서 배웠죠) 모델 설계자에 관한 기본적인 개념도 배웠기 때문에, 직접 해봐야 할 것입니다. 몇 "
+"분이라는 시간을 들여 여러분의 모델을 생성해보십시오. 실수할까 걱정하지 마세요. 기억하십시오 --- 먼저 입력물을 추가한 다음 입력물을 "
+"사용해서 워크플로를 생성하는 알고리즘을 추가하면 됩니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro.rst:10
 msgid ""
@@ -45,12 +79,87 @@ msgid ""
 "finished version of it. Open the modeler and then open the model file that "
 "you will find in the data folder. You should see something like this."
 msgstr ""
-"여러분이 전체 모델을 생성할 수 없어 도움이 필요할 경우, 이 강의에 해당하는 데이터 폴더는 '거의' 완성된 버전의 모델을 담고 "
-"있습니다. 모델 작성자를 실행해서 해당 데이터 폴더에 있는 모델 파일을 열어보십시오. 다음과 같은 모델을 보게 될 것입니다."
+"여러분이 전체 모델을 생성할 수 없어 도움이 필요할 경우, 이 수업에 해당하는 데이터 폴더는 '거의' 완성된 버전의 모델을 담고 "
+"있습니다. 모델 설계자를 실행해서 해당 데이터 폴더에 있는 모델 파일을 열어보십시오. 다음과 같은 모델을 보게 될 것입니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:14
+msgid ""
+"This model contains all the steps needed to complete the calculation, but it"
+" just has one input: the DEM. That means that the threshold for channel "
+"definition uses a fixed value, which makes the model not as useful as it "
+"could be. That is not a problem, since we can edit the model, and that is "
+"exactly what we will do."
+msgstr ""
+"이 모델은 계산을 완료하기 위해 필요한 모든 단계들을 담고 있지만, 입력물은 DEM 하나밖에 없습니다. 즉 수로를 정의하는 데 필요한 "
+"입계값에 고정된 값을 사용하고 있다는 뜻으로, 모델의 가능성을 제한하고 있습니다. 문제는 없습니다. 이 모델을 편집하면 되기 때문입니다."
+" 이제부터 그 작업을 해볼 것입니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:16
+msgid ""
+"First, let's add a numerical input. That will ask the user for a numerical "
+"input that we can use when such a value is needed in any of the algorithms "
+"included in our model."
+msgstr ""
+"먼저 숫자형 입력물을 추가해봅시다. 그러면 모델에 포함된 알고리즘들이 해당 값을 필요로 할 때 사용할 수 있는 숫자형 입력물을 사용자에게"
+" 요청할 것입니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:17
+msgid ""
+"Click on the :guilabel:`Number` entry in the :guilabel:`Inputs` tree, and "
+"you will see the corresponding dialog."
+msgstr ""
+":guilabel:`Inputs` 트리에 있는 :guilabel:`Number` 항목을 클릭하면 해당 대화창이 열릴 것입니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:18
+msgid "Fill it with the following values."
+msgstr "이 대화창에 다음 값들을 입력하십시오."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:20
+msgid ":guilabel:`Parameter name`: ``Threshold for channel definition``"
+msgstr ":guilabel:`Parameter name`: ``Threshold for channel definition``"
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:21
+msgid ":guilabel:`Default value`: ``1,000,000``"
+msgstr ":guilabel:`Default value`: ``1,000,000``"
 
 #: ../../docs/training_manual/processing/modeler_hydro.rst:25
 msgid "Now your model should look like this."
 msgstr "이제 모델이 다음과 같이 보일 것입니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:29
+msgid ""
+"The input that we have just added is not used, so the model hasn't actually "
+"changed. We have to link that input to the algorithm that uses it, in this "
+"case the *Channel network* one. To edit an algorithm that already exists in "
+"the modeler, just click on the pen icon on the corresponding box in the "
+"canvas."
+msgstr ""
+"방금 추가한 입력물은 사용되지 않기 때문에, 모델이 실제로 변경되지는 않았습니다. 이 입력물을 해당 입력물을 사용하는 알고리즘에, 이 "
+"경우 :guilabel:`Channel network` 알고리즘에 연결시켜줘야 합니다. 모델 설계자에 이미 존재하는 알고리즘을 "
+"편집하려면, 캔버스에 있는 해당 상자의 연필 아이콘을 클릭하십시오."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:31
+msgid ""
+"Click on the :guilabel:`Channel network` algorithm and you will see "
+"something like this."
+msgstr ":guilabel:`Channel network` 알고리즘을 클릭하면 다음과 같은 대화창이 열립니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:35
+msgid ""
+"The dialog is filled with the current values used by the algorithm. You can "
+"see that the :guilabel:`Initiation threshold` parameter has a fixed value of"
+" 1,000,000 (this is also the default value of the algorithm, but any other "
+"value could be put in there). However, you might notice that the parameter "
+"is not entered in a common text box, but in a drop-down menu."
+msgstr ""
+"이 대화창은 해당 알고리즘이 현재 사용하고 있는 값들로 채워져 있습니다. :guilabel:`Initiation threshold` "
+"파라미터가 1,000,000이라는 고정값을 가지고 있다는 것을 알 수 있습니다. (이 알고리즘의 기본값이기도 하지만, 다른 값을 입력해도"
+" 됩니다.) 하지만, 이 파라미터의 값을 일반적인 텍스트란이 아니라 드롭다운 메뉴로 입력하게 되어 있다는 사실도 알 수 있을 겁니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:36
+msgid ""
+"Unfold the threshold parameter menu and you will see something like this."
+msgstr "이 임계값 파라미터의 드롭다운 메뉴를 펼치면 다음과 같이 보일 것입니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro.rst:40
 msgid ""
@@ -62,10 +171,40 @@ msgid ""
 "string inputs and you will be able to select one of them or type the desired"
 " fixed value."
 msgstr ""
-"방금 추가했던 입력이 목록에 있어서 이를 선택할 수 있습니다. 모델 내부의 알고리듬이 숫자 값을 필요로 할 때마다, 데이터를 쉽게 변경할"
-" 수 없도록 직접 입력할 수도 있고, 또는 사용 가능한 어떤 입력이나 값들을 사용할 수도 있습니다. (일부 알고리듬은 단일 숫자 값을 "
-"생성한다는 사실을 기억하십시오. 이에 대해서는 곧 배우게 될 것입니다.) 문자열 파라미터의 경우에도, 사용자가 선택할 수 있는 문자열 "
-"입력을 추가하거나, 또는 원하는 고정 값을 입력할 수도 있습니다."
+"우리가 추가했던 입력물이 목록에 있어서 이를 선택할 수 있습니다. 모델 내부의 알고리즘이 숫자값을 필요로 할 때마다, 데이터를 쉽게 "
+"변경할 수 없도록 직접 입력할 수도 있고, 또는 사용 가능한 어떤 입력물이나 값들을 사용할 수도 있습니다. (일부 알고리즘은 숫자값 "
+"하나를 생성한다는 사실을 기억하십시오. 이에 대해서는 곧 배우게 될 것입니다.) 문자열 파라미터의 경우에도, 사용자가 선택할 수 있는 "
+"문자열 입력을 추가하거나, 또는 원하는 고정값을 입력할 수도 있습니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:42
+msgid ""
+"Select the ``Threshold for channel definition`` input in the "
+":guilabel:`Initiation threshold` parameter."
+msgstr ""
+":guilabel:`Initiation threshold` 파라미터에 ``Threshold for channel definition`` "
+"입력물을 선택하십시오."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:43
+msgid ""
+"Click on :guilabel:`OK` to apply the changes to your model. Now the design "
+"of the model should look like this."
+msgstr ""
+":guilabel:`OK` 를 클릭해서 여러분의 모델에 변경 사항을 적용하십시오. 이제 모델의 모양이 다음과 같이 보일 것입니다."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:47
+msgid ""
+"The model is now complete. Run it using the DEM that we have used in "
+"previous lessons, and with different threshold values."
+msgstr "이제 모델이 완성되었습니다. 이 모델을 이전 수업에서 사용했던 DEM과 서로 다른 임계값들을 사용해서 실행해보십시오."
+
+#: ../../docs/training_manual/processing/modeler_hydro.rst:49
+msgid ""
+"Below you have a sample of the result obtained for different values. You can"
+" compare with the result for the default value, which is the one we obtained"
+" in the :ref:`hydrological analysis lesson <tm_hydro_analysis>`."
+msgstr ""
+"다음은 서로 다른 임계값들로 얻은 결과물의 예시입니다. :ref:`수문학적 분석 <tm_hydro_analysis>` 수업에서 얻은 것과"
+" 같은, 기본값으로 얻은 결과물과 비교해보세요."
 
 #: ../../docs/training_manual/processing/modeler_hydro.rst:53
 msgid "Threshold = 100,000"
