@@ -32,21 +32,21 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:2
 msgid "Numeric calculations in the modeler"
-msgstr "모델 작성자 내부에서의 숫자 계산"
+msgstr "모델 설계자에서의 숫자 계산"
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:4
 msgid ""
 "Beware, this chapter is not well tested, please report any issue; images are"
 " missing"
-msgstr "이 강의는 제대로 검증되지 않았으므로 주의하십시오. 어떤 문제라도 알려주십시오. 그림이 뜨지 않을 수도 있습니다."
+msgstr "이 수업은 제대로 검증되지 않았으므로 주의하십시오. 어떤 문제라도 알려주십시오. 그림이 뜨지 않을 수도 있습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:6
 msgid "In this lesson we will see how to use numeric outputs in the modeler"
-msgstr "이 강의에서는 모델 작성자에서 숫자 산출물을 사용하는 방법에 대해 배워보겠습니다."
+msgstr "이 수업에서는 모델 설계자에서 숫자 산출물을 사용하는 방법에 대해 배워보겠습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:8
 msgid ""
@@ -57,28 +57,28 @@ msgid ""
 "threshold raster layer, we will extract it from that layer, based on some "
 "simple statistical analysis."
 msgstr ""
-"이 강의에서는 마지막 강의에서 생성했던 (시작하기 전에 모델 작성자에서 파일을 여십시오) 수문학적 모델을 수정, 유효한 임계값을 "
-"자동적으로 계산해서 사용자의 입력을 요청하지 않도록 만들 것입니다. 해당 임계값이 임계값 래스터 레이어 내부의 변수를 참조하므로, 몇몇 "
-"단순한 통계 분석을 기반으로 해당 레이어에서 변수를 추출할 것입니다."
+"이 수업에서는 마지막 수업에서 생성했던 (시작하기 전에 모델 설계자에서 파일을 여십시오) 수문학적 모델을 무결한 임계값을 자동적으로 "
+"계산하도록 수정해서 사용자 입력을 요청하지 않도록 만들 것입니다. 해당 임계값이 임계값 래스터 레이어 내부의 변수를 참조하기 때문에, "
+"몇몇 단순 통계 분석을 기반으로 해당 레이어에서 변수를 추출할 것입니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:10
 msgid ""
 "Starting with the aforementioned model, let's do the following "
 "modifications:"
-msgstr "앞에서 말했던 모델을 실행해서, 다음과 같이 변경해봅시다."
+msgstr "앞에서 말했던 모델을 실행해서, 다음과 같이 변경해봅시다:"
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:12
 msgid ""
 "First, calculate statistics of the flow accumulation layer using the *Raster"
 " layer statistics* algorithm."
 msgstr ""
-"먼저 :guilabel:`Raster Layer Statistics` 알고리듬을 사용해 집수 지역 레이어의 통계를 계산하십시오."
+"먼저 :guilabel:`Raster Layer Statistics` 알고리즘을 사용해 집수 지역 레이어의 통계를 계산하십시오."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:16
 msgid ""
 "This will generate a set of statistical values that will now be available "
 "for all numeric fields in other algorithms."
-msgstr "이를 통해 생성된 통계값들을 다른 알고리듬의 모든 숫자 파라미터에 입력할 수 있습니다."
+msgstr "이를 통해 생성된 통계값들을 다른 알고리즘의 모든 숫자 파라미터에 입력할 수 있습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:18
 msgid ""
@@ -86,7 +86,7 @@ msgid ""
 "you will see now that you have other options apart from the numeric input "
 "that you added."
 msgstr ""
-"이전 강의와 마찬가지로 :guilabel:`Channel network` 알고리듬을 편집하는 경우, 사용자가 추가했던 숫자 입력 외에 "
+"이전 수업과 마찬가지로 :guilabel:`Channel network` 알고리즘을 편집하는 경우, 사용자가 추가했던 숫자 입력 외에 "
 "다른 옵션이 생성된 것을 볼 수 있습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:22
@@ -97,7 +97,7 @@ msgid ""
 "a better result. For instance, we can use the mean plus 2 times the standard"
 " deviation."
 msgstr ""
-"하지만 이 값들을 그대로 유효한 임계값으로 사용할 수는 없습니다. 아주 현실적이지 않은 하계망이 산출될 것이기 때문입니다. 그 대신 이 "
+"하지만 이 값들을 그대로 무결한 임계값으로 사용할 수는 없습니다. 아주 현실적이지 않은 수로망이 산출될 것이기 때문입니다. 그 대신 이 "
 "값들을 바탕으로 몇 가지 새로운 파라미터를 유도해서 더 나은 결과물을 생성할 수 있습니다. 예를 들면 평균 더하기 표준 편차의 2배라는 "
 "값을 사용할 수 있습니다."
 
@@ -109,12 +109,12 @@ msgid ""
 "provide some useful functionality when creating a model."
 msgstr ""
 "산술 연산을 추가하려면, :guilabel:`Algorithms` 탭의 :menuselection:`Geoalgorithms --> "
-"Modeler --> Modeler tools` 그룹에 있는 계산기를 사용할 수 있습니다. 이 그룹은 모델 작성자 바깥에서는 그닥 쓸모가"
-" 없지만 모델 생성 시 몇몇 유용한 기능을 제공하는 알고리듬들을 담고 있습니다."
+"Modeler --> Modeler tools` 그룹에 있는 계산기를 사용할 수 있습니다. 이 그룹은 모델 설계자 바깥에서는 그닥 쓸모가"
+" 없지만 모델 생성 시 몇몇 유용한 기능을 제공하는 알고리즘들을 담고 있습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:26
 msgid "The parameters dialog of the calculator algorithm looks like this:"
-msgstr "계산기 알고리듬의 파라미터 대화 창은 다음과 같습니다."
+msgstr "계산기 알고리즘의 파라미터 대화창은 다음과 같습니다:"
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:30
 msgid ""
@@ -123,9 +123,9 @@ msgid ""
 "field in the *Channel network* algorithm. Enter the above formula and click "
 "on *OK* to add the algorithm."
 msgstr ""
-"한 눈에 알 수 있듯이, 우리가 지금까지 봐왔던 대화 창들과는 다릅니다. 그러나 :guilabel:`Channel network` "
-"알고리듬의 :guilabel:`Threshold` 항목에서 봤던 것과 동일한 변수들을 보여주고 있습니다. 그림에 보이는 공식을 입력한 "
-"다음 :guilabel:`OK` 를 클릭해서 알고리듬에 추가하십시오."
+"한 눈에 알 수 있듯이, 우리가 지금까지 봐왔던 대화창들과는 다릅니다. 그러나 :guilabel:`Channel network` "
+"알고리즘의 :guilabel:`Threshold` 항목에서 봤던 것과 동일한 변수들을 보여주고 있습니다. 그림에 보이는 공식을 입력한 "
+"다음 :guilabel:`OK` 를 클릭해서 알고리즘에 추가하십시오."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:34
 msgid ""
@@ -133,7 +133,7 @@ msgid ""
 " is connected to two of the values, namely the mean and the standard "
 "deviation, which are the ones that we have used in the formula."
 msgstr ""
-"모델 작성자 캔버스를 보면, 앞의 그림과 같이 계산기 알고리듬이 평균과 표준 편차라는 두 개의 값과 연결되어 있는 것을 볼 수 있습니다."
+"모델 설계자 캔버스를 보면, 앞의 그림과 같이 계산기 알고리즘이 평균과 표준 편차라는 두 개의 값과 연결되어 있는 것을 볼 수 있습니다."
 " 바로 공식에서 사용했던 값들입니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:36
@@ -142,7 +142,7 @@ msgid ""
 "the *Channel network* algorithm, you can now select that value in the "
 "*Threshold* parameter."
 msgstr ""
-"이렇게 새 알고리듬을 추가하면 새 숫자 값이 추가됩니다. 다시 :guilabel:`Channel network` 알고리듬을 더블클릭하면,"
+"이렇게 새 알고리즘을 추가하면 새 숫자 값이 추가됩니다. 다시 :guilabel:`Channel network` 알고리즘을 더블클릭하면,"
 " :guilabel:`Initiation Threshold` 파라미터에 해당 값을 선택할 수 있습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:40
@@ -154,7 +154,7 @@ msgid ""
 "We are not using the numeric input that we added to the model, so it can be "
 "removed. Right--click on it and select *Remove*"
 msgstr ""
-"이전 강의에서 추가했던 숫자 입력을 더 이상 사용하지 않으므로 삭제해도 됩니다. 숫자 입력을 오른쪽 클릭한 다음 "
+"이전 수업에서 추가했던 숫자형 입력물을 더 이상 사용하지 않으므로 삭제해도 됩니다. 숫자형 입력물을 오른쪽 클릭한 다음 "
 ":guilabel:`Remove` 를 선택하십시오."
 
 #: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:46
