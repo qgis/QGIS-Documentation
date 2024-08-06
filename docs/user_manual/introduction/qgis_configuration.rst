@@ -1872,10 +1872,8 @@ In the :guilabel:`Symbol options` group, you can:
   fill colors, hence avoiding same rendering for all layers.
 
 .. _style_database:
-.. _project_colors:
 
 Style Database
-Project Colors
 ..............
 
 A style database in QGIS is a structured repository designed to store symbols,
@@ -1898,6 +1896,26 @@ In the :guilabel:`Style Database` section you can choose to
 style database or you can |newPage| :guilabel:`Create new style database`.
 When you add or remove a style database in this section, the changes will
 be automatically reflected in the |symbology| :guilabel:`Symbology Properties`.
+
+
+.. _project_colors:
+
+Colors properties
+-----------------
+
+.. _figure_project_colors:
+
+.. figure:: img/project_colors.png
+   :align: center
+
+   Colors tab
+
+In the |colorSwatches| :guilabel:`Colors` tab, you can select the  :guilabel:`Color model`,
+i.e. whether selecting a color should by default be defined as ``RGB`` or ``CMYK``.
+Any color defined in a different color model than the one specified here
+will be converted to this color model when exporting a layout.
+
+
 There is also an additional section where you can define specific colors for the
 running project. Like the :ref:`global colors <colors_options>`, you can:
 
@@ -2689,6 +2707,8 @@ in the QGIS user profile.
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
+   :width: 1.5em
+.. |colorSwatches| image:: /static/common/mIconColorSwatches.png
    :width: 1.5em
 .. |crs| image:: /static/common/CRS.png
    :width: 1.5em
