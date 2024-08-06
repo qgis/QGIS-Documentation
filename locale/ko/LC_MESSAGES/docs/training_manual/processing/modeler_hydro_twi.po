@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:2
 msgid "A model within a model"
@@ -42,11 +42,11 @@ msgstr "모델 내부의 모델"
 msgid ""
 "Beware, this chapter is not well tested, please report any issue; images are"
 " missing"
-msgstr "이 강의는 제대로 검증되지 않았으므로 주의하십시오. 어떤 문제라도 알려주십시오. 그림이 뜨지 않을 수도 있습니다."
+msgstr "이 수업은 제대로 검증되지 않았으므로 주의하십시오. 어떤 문제라도 알려주십시오. 그림이 뜨지 않을 수도 있습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:6
 msgid "In this lesson we will see how to use a model within a bigger model."
-msgstr "이 강의에서 더 큰 모델 안에서 모델을 사용하는 방법을 배울 것입니다."
+msgstr "이 수업에서는 더 큰 모델 안에서 모델을 사용하는 방법을 배울 것입니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:8
 msgid ""
@@ -55,7 +55,7 @@ msgid ""
 "other algorithm, which means that you can add a model that you have already "
 "created as part of another one that you create after that."
 msgstr ""
-"이미 모델 몇 개를 생성해봤는데, 이 강의에서 모델들을 결합해서 더 큰 하나의 모델로 만드는 방법을 배워보겠습니다. 모델은 알고리듬과 "
+"이미 모델 몇 개를 생성해봤는데, 이 수업에서 모델들을 결합해서 더 큰 하나의 모델로 만드는 방법을 배워보겠습니다. 모델은 알고리즘과 "
 "동일하게 동작합니다. 즉 모델 하나를 생성한 다음, 해당 모델을 다른 모델의 일부로 추가할 수 있다는 뜻입니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:10
@@ -67,14 +67,14 @@ msgid ""
 "to reuse that model instead of adding the algorithms it contains "
 "individually."
 msgstr ""
-"이 강의에서는 수문학적 모델이 생성하는 결과물인 각 분지에 평균 TWI 값을 추가해서 해당 모델을 확장할 것입니다. 이를 위해 TWI를 "
-"계산한 다음 통계를 생성해야 합니다. 이미 DEM에서 TWI를 계산하는 모델을 생성했기 때문에, 해당 모델이 담고 있는 알고리듬들을 "
+"이 수업에서는 수문학적 모델이 생성하는 결과물인 각 분지에 평균 TWI 값을 추가해서 해당 모델을 확장할 것입니다. 이를 위해 TWI를 "
+"계산한 다음 통계를 생성해야 합니다. 이미 DEM에서 TWI를 계산하는 모델을 생성했기 때문에, 해당 모델이 담고 있는 알고리즘들을 "
 "개별적으로 추가하는 대신 그 모델을 재사용하는 편이 낫습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:12
 msgid ""
 "Let's start with the model we used as starting point for the last lesson."
-msgstr "마지막 강의에서 사용했던 모델로부터 시작해봅시다."
+msgstr "마지막 수업에서 사용했던 모델로부터 시작해봅시다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:14
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:22
@@ -91,8 +91,8 @@ msgid ""
 " toolbox or the algorithms list in the modeler. Make sure you have it "
 "available."
 msgstr ""
-"먼저 TWI 모델을 추가할 것입니다. 이 모델을 사용하려면 :kbd:`models` 폴더에 모델이 저장되어 있어야 합니다. 그렇지 않을 "
-"경우 툴박스나 모델 작성자의 알고리듬 목록에 나타나지 않을 것입니다. 사용 가능한지 확인하십시오."
+"먼저 TWI 모델을 추가할 것입니다. 이 모델을 사용하려면 모델 폴더에 모델이 저장되어 있어야 합니다. 그렇지 않을 경우 툴박스나 모델 "
+"설계자의 알고리즘 목록에 나타나지 않을 것입니다. 사용할 수 있는지 확인하십시오."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:18
 msgid ""
@@ -101,12 +101,12 @@ msgid ""
 "statistics. The only output of this model we are creating will still be the "
 "vector layer with the watersheds."
 msgstr ""
-"TWI 모델을 현재 모델에 추가한 다음 입력 DEM을 입력받도록 설정하십시오. TWI 레이어가 통계를 생성하기만을 원하므로, 산출물을 "
-"임시 파일로 설정하십시오. 우리가 생성하는 모델의 유일한 산출물은 유역을 담고 있는 벡터 레이어가 될 것입니다."
+"TWI 모델을 현재 모델에 추가한 다음 DEM 입력물을 입력받도록 설정하십시오. TWI 레이어가 통계를 생성하기만을 원하므로, 산출물을 "
+"임시 파일로 설정하십시오. 우리가 생성하는 모델의 유일한 산출물은 유역 벡터 레이어가 될 것입니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:20
 msgid "Here is the corresponding parameters dialog:"
-msgstr "다음은 해당 파라미터 대화 창입니다."
+msgstr "다음은 해당 파라미터 대화창입니다:"
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:24
 msgid ""
@@ -114,7 +114,7 @@ msgid ""
 "layer, to generate a new one which contains the values of the TWI "
 "corresponding to each watershed."
 msgstr ""
-"이제 유역 벡터 레이어와 함께 사용할 수 있는 TWI 레이어를 생성할 수 있으므로, 각 유역에 상응하는 TWI 값을 담고 있는 새 "
+"이제 유역 벡터 레이어와 함께 사용할 수 있는 TWI 레이어를 생성할 수 있으므로, 각 유역에 대응하는 TWI 값을 담고 있는 새 "
 "레이어를 생성하겠습니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:26
@@ -122,7 +122,7 @@ msgid ""
 "This calculation is done using the *Grid statistics in polygons* algorithm. "
 "Use the layers mentioned above as input, to create the final result."
 msgstr ""
-":guilabel:`Grid statistics in polygons` 알고리듬을 사용해 계산하십시오. 앞에서 언급한 두 레이어를 "
+":guilabel:`Grid statistics in polygons` 알고리즘을 사용해 계산하십시오. 앞에서 언급한 두 레이어를 "
 "입력물로 사용해서 최종 결과를 생성하십시오."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:30
@@ -133,13 +133,13 @@ msgid ""
 "parameters dialog, and delete the name of the output. That will make it a "
 "temporary output, as it is by default."
 msgstr ""
-"원래 최종 산출물은 :guilabel:`Vectorize grid classes` 알고리듬의 산출물이었지만, 지금은 중간 단계의 결과물로"
-" 사용해야 합니다. 이렇게 변경하려면 알고리듬을 편집해야 합니다. 해당 알고리듬을 더블클릭해서 파라미터 대화 창을 띄운 다음, 산출물 "
-"명칭을 삭제하십시오. 기본값인 임시 산출물로 변경될 것입니다."
+"원래 최종 산출물은 :guilabel:`Vectorize grid classes` 알고리즘의 산출물이었지만, 지금은 중간 단계의 결과물로"
+" 사용해야 합니다. 이렇게 변경하려면 알고리즘을 편집해야 합니다. 해당 알고리즘을 더블클릭해서 파라미터 대화창을 띄운 다음, 산출물 "
+"이름을 삭제하십시오. 기본값인 임시 산출물로 변경될 것입니다."
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:34
 msgid "This is how the final model should look like:"
-msgstr "최종 모델이 다음과 같이 보여야 합니다."
+msgstr "최종 모델이 다음과 같이 보여야 합니다:"
 
 #: ../../docs/training_manual/processing/modeler_hydro_twi.rst:38
 msgid ""
@@ -147,5 +147,5 @@ msgid ""
 "add it just like you add another algorithm, as long as the model is saved in"
 " the models folder and is available in the toolbox."
 msgstr ""
-"어떤 모델을 다른 모델 안에서 사용하는 것은 그리 특별한 일이 아니라는 사실을 알 수 있습니다. 모델이 :kbd:`models` 폴더에 "
-"저장되어 있고 툴박스에서 사용할 수 있는 한, 다른 알고리듬과 마찬가지로 모델을 추가할 수 있습니다."
+"어떤 모델을 다른 모델 안에서 사용하는 것은 그리 특별한 일이 아니라는 사실을 알 수 있습니다. 모델이 모델 폴더에 저장되어 있고 "
+"툴박스에서 사용할 수 있는 한, 다른 알고리즘과 마찬가지로 모델을 추가할 수 있습니다."
