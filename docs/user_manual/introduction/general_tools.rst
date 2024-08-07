@@ -1710,9 +1710,13 @@ from another application: press the space bar while the tab is active, move the
 mouse over the desired color and click on it or press the space bar again. You
 can also click the :guilabel:`Sample Color` button to activate the picker.
 
-Whatever method you use, the selected color is always described through color
-sliders for ``HSV`` (Hue, Saturation, Value) and ``RGB`` (Red, Green, Blue)
-values. The color is also identifiable in :guilabel:`HTML notation`.
+Whatever method you use, the selected color is always described
+through options of a :guilabel:`Color model`
+that defaults to the :ref:`project color model <project_colors>`:
+
+* :guilabel:`RGB`: color is set using sliders for ``HSV`` (Hue, Saturation, Value)
+  or ``RGB`` (Red, Green, Blue) values.
+* :guilabel:`CMYK` (Cyan, Magenta, Yellow, Black)
 
 Modifying a color is as simple as clicking on the color wheel or ramp or on any
 of the color parameters sliders. You can adjust such parameters with the spinbox
