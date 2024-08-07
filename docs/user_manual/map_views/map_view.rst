@@ -193,6 +193,8 @@ rendering based on a time variation. To achieve this, you need:
      :guilabel:`Map Navigation` toolbar
    * or from the :menuselection:`View --> Panels --> Temporal controller panel`
      menu
+   * or from the :menuselection:`View --> Data Filtering --> Temporal controller panel`
+     menu  
 
 .. _temporal_controller:
 
@@ -298,6 +300,24 @@ To create a temporal animation:
      * the time :guilabel:`Range` for the animation
      * the :guilabel:`Step (frame length)` in the unit of your choice
 
+.. _`elevation_controller`:
+
+The Elevation Controller panel
+==============================
+
+|elevation| :guilabel:`Elevation Controller` allows you to handle elevation z-range data in 2D maps.
+This option currently supports point cloud layers and raster DEMs.
+Use the panel to visualize and interact with elevation data in the map canvas.
+
+Activate the |elevation| :guilabel:`Elevation Controller` panel in the map canvas by
+clicking on the :guilabel:`Data Filtering` in the :guilabel:`View` menu. The
+|elevation| :guilabel:`Elevation Controller` appears as a range slider on the left
+side of the map canvas. At the top of the slider, there is a |settings| :sup:`Settings` menu
+where you can:
+
+* set the :guilabel:`Fixed range size` to limit elevation range to a fixed size
+* :guilabel:`Set Elevation Range` to open the project elevation tab, where you can set dedicated lower and upper bounds for the elevation range
+* :guilabel:`Disable Elevation Filter` to remove the elevation filter from the map canvas 
 
 .. index::
    single: Bookmarks
@@ -1326,6 +1346,8 @@ In the dialog that opens:
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |elevation| image:: /static/common/Elevation.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
