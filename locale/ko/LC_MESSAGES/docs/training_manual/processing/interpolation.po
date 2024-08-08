@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/processing/interpolation.rst:2
 msgid "Interpolation"
@@ -42,7 +42,7 @@ msgstr "보간법"
 msgid ""
 "This chapter shows how to interpolate point data, and will show you another "
 "real example of performing spatial analysis"
-msgstr "이 강의에서는 포인트 데이터를 보간하는 방법과 함께 공간 분석을 수행하는 또다른 실제 사례를 배워보겠습니다."
+msgstr "이 수업에서는 포인트 데이터를 보간하는 방법과 함께 공간 분석을 수행하는 또다른 실제 사례를 배워보겠습니다."
 
 #: ../../docs/training_manual/processing/interpolation.rst:7
 msgid ""
@@ -51,12 +51,12 @@ msgid ""
 "interpolating we will add some extra processing to modify the resulting "
 "layer, so we will have a complete analysis routine."
 msgstr ""
-"이 강의를 통해, 포인트 데이터를 보간해서 래스터 레이어를 얻을 것입니다. 그러나 그 전에 데이터를 준비해야 하며, 보간 후에 결과 "
-"레이어를 수정하기 위한 몇 가지 공간처리 과정을 추가해야 합니다. 그래야 완전한 분석 과정을 마칠 수 있기 때문입니다."
+"이 수업을 통해, 포인트 데이터를 보간해서 래스터 레이어를 얻을 것입니다. 그러나 그 전에 데이터를 준비해야 하며, 보간 후에 결과 "
+"레이어를 수정하기 위한 몇 가지 공간 처리 과정을 추가해야 합니다. 그래야 완전한 분석 과정을 마칠 수 있기 때문입니다."
 
 #: ../../docs/training_manual/processing/interpolation.rst:12
 msgid "Open the example data for this lesson, which should look like this."
-msgstr "이 강의에 해당하는 예제 데이터를 불러오십시오. 다음과 같이 보일 것입니다."
+msgstr "이 수업에 해당하는 예제 데이터를 불러오십시오. 다음과 같이 보일 것입니다."
 
 #: ../../docs/training_manual/processing/interpolation.rst:16
 msgid ""
@@ -80,8 +80,8 @@ msgid ""
 "the distribution."
 msgstr ""
 "가장 먼저 해야 할 일은 레이어 정리입니다. 너무 많은 포인트를 담고 있기 때문입니다. 수확기가 방향을 틀거나 어떤 이유로 속도를 변경할"
-" 때마다 위치를 표시하기 때문입니다. *Point filter* 알고리즘이 이 작업에 유용합니다. 값의 분포에서 맨 위와 아래에 있는 "
-"이상값(outlier)으로 생각되는 포인트들을 제거하기 위해 해당 알고리즘을 두 번 사용할 것입니다."
+" 때마다 위치를 표시하기 때문입니다. :guilabel:`Point filter` 알고리즘이 이 작업에 유용합니다. 값의 분포에서 맨 "
+"위와 아래에 있는 이상값(outlier)으로 생각되는 포인트들을 제거하기 위해 해당 알고리즘을 두 번 사용할 것입니다."
 
 #: ../../docs/training_manual/processing/interpolation.rst:28
 msgid "For the first execution, use the following parameter values."
@@ -89,13 +89,13 @@ msgstr "첫 번째 실행 시, 다음 파라미터 값을 사용하십시오."
 
 #: ../../docs/training_manual/processing/interpolation.rst:32
 msgid "Now for the next one, use the configuration shown below."
-msgstr "두 번째 실행 시, 다음과 같이 설정하십시오."
+msgstr "두 번째 실행 시, 다음과 같이 환경설정하십시오."
 
 #: ../../docs/training_manual/processing/interpolation.rst:36
 msgid ""
 "Notice that we are not using the original layer as input, but the output of "
 "the previous run instead."
-msgstr "입력 레이어에 원래 레이어가 아니라 첫 번째 실행의 산출물을 사용한다는 사실을 유념하십시오."
+msgstr "입력 레이어에 원래 레이어가 아니라 첫 번째 실행의 산출물을 사용한다는 사실을 기억하십시오."
 
 #: ../../docs/training_manual/processing/interpolation.rst:39
 msgid ""
@@ -119,9 +119,9 @@ msgid ""
 "from your project to avoid confusion, and leave just the last filtered "
 "layer."
 msgstr ""
-"여기서 :kbd:`Filtered points` 레이어는 두 번째 실행의 결과물을 뜻합니다. 알고리즘이 할당했기 때문에 첫 번째 실행에서"
-" 생성된 레이어와 동일한 명칭이지만, 첫 번째 결과물을 이용해서는 안 됩니다. 다른 용도가 없으므로 혼란을 피하기 위해 첫 번째 결과 "
-"레이어를 제거하고 마지막으로 필터링된 레이어만 남겨둘 수 있습니다."
+"여기서 :kbd:`Filtered points` 레이어는 두 번째 실행의 결과물을 뜻합니다. 알고리즘이 이름을 할당했기 때문에 첫 번째 "
+"실행에서 생성된 레이어와 동일한 이름이지만, 첫 번째 결과물을 이용해서는 안 됩니다. 다른 용도가 없으므로, 혼란을 피하기 위해 첫 번째"
+" 결과물 레이어를 제거하고 마지막으로 필터링된 레이어만 남겨두면 됩니다."
 
 #: ../../docs/training_manual/processing/interpolation.rst:53
 msgid "The resulting raster layer looks like this."
@@ -135,21 +135,21 @@ msgid ""
 "other ones. To fill the missing values, we can use the *Close gaps* "
 "algorithm."
 msgstr ""
-"이미 래스터 레이어이긴 하지만, 일부 셀의 데이터가 사라졌습니다. 방금 래스터화 한 벡터 레이어에서 포인트를 가져온 셀들만 유효한 값을 "
-"담고 있고, 다른 셀들은 비 데이터 값을 담고 있습니다. 사라진 값들을 채우기 위해 :guilabel:`Close gaps` 알고리즘을 "
-"사용할 수 있습니다."
+"이미 래스터 레이어이긴 하지만, 일부 셀의 데이터가 사라졌습니다. 방금 래스터화한 벡터 레이어에서 포인트를 가져온 셀들만 무결한 값을 "
+"담고 있고, 다른 셀들은 NODATA 값을 담고 있습니다. 사라진 값들을 채우려면 :guilabel:`Close gaps` 알고리즘을 "
+"사용하면 됩니다."
 
 #: ../../docs/training_manual/processing/interpolation.rst:64
 msgid "The layer without no--data values looks like this."
-msgstr "비 데이터 값이 없는 레이어는 다음과 같습니다."
+msgstr "NODATA 값이 없는 레이어는 다음과 같습니다."
 
 #: ../../docs/training_manual/processing/interpolation.rst:68
 msgid ""
 "To restrict the area covered by the data to just the region where crop yield"
 " was measured, we can clip the raster layer with the provided limits layer."
 msgstr ""
-"데이터가 커버한 지역을 작물 수확량이 측정된 지역만으로 제한하기 위해, 제공된 :kbd:`limits` 레이어로 래스터 레이어를 잘라낼 "
-"수 있습니다."
+"데이터가 커버하는 지역을 작물 수확량이 측정된 지역만으로 제한하려면, 제공된 :kbd:`limits` 레이어로 래스터 레이어를 잘라내면 "
+"됩니다."
 
 #: ../../docs/training_manual/processing/interpolation.rst:73
 msgid ""
@@ -157,8 +157,8 @@ msgid ""
 "background as a support layer), we can apply a *Gaussian filter* to the "
 "layer."
 msgstr ""
-"좀 더 매끄러운 (덜 정확하지만 배경용 레이어로서 더 잘 렌더링되는) 결과물을 얻기 위해 레이어에 *Gaussian filter* 를 "
-"적용할 수 있습니다."
+"좀 더 매끄러운 (덜 정확하지만 배경 용 레이어로 더 잘 렌더링되는) 결과물을 얻기 위해 레이어에 :guilabel:`Gaussian "
+"filter` 를 적용할 수 있습니다."
 
 #: ../../docs/training_manual/processing/interpolation.rst:78
 msgid "With the above parameters you will get the following result"
