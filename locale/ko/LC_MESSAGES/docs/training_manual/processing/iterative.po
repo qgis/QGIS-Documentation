@@ -31,4 +31,146 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:2
+msgid "Iterative execution of algorithms"
+msgstr "알고리즘 반복 실행"
+
+#: ../../docs/training_manual/processing/iterative.rst:4
+msgid ""
+"This lesson shows a different way of executing algorithms that use vector "
+"layers, by running them repeatedly, iterating over the features in an input "
+"vector layer"
+msgstr ""
+"이 수업에서는 벡터 레이어들을 사용하는 알고리즘을 입력 벡터 레이어에 있는 피처에 대해 반복해서 실행하는, 다른 알고리즘 실행 방법을 "
+"배울 것입니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:6
+msgid ""
+"We already know the model designer, which is one way of automating "
+"processing tasks. However, in some situations, the modeler might not be what"
+" we need to automate a given task. Let's see one of those situations and how"
+" to easily solve it using a different functionality: the iterative execution"
+" of algorithms."
+msgstr ""
+"우리는 이미 공간 처리 작업을 자동화해주는 방법 가운데 하나인 모델 설계자에 대해 알고 있습니다. 하지만 주어진 작업을 자동화하기 위해 "
+"필요한 것이 모델 설계자가 아닌 상황도 있을 수 있습니다. 이런 상황들 가운데 하나를 살펴보고, 알고리즘 반복 실행이라는 다른 기능을 "
+"사용해서 이 문제를 얼마나 쉽게 해결할 수 있는지 알아봅시다."
+
+#: ../../docs/training_manual/processing/iterative.rst:8
+msgid "Open the data corresponding to this chapter. It should look like this."
+msgstr "이 수업에 해당하는 데이터를 여십시오. 다음과 같이 보일 것입니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:12
+msgid ""
+"You will recognize our well-known DEM from previous chapters and a set of "
+"watersheds extracted from it. Imagine that you need to cut the DEM into "
+"several smaller layers, each of them containing just the elevation data "
+"corresponding to a single watershed. That will be useful if you later want "
+"to calculate some parameters related to each watershed, such as its mean "
+"elevation or it hypsographic curve."
+msgstr ""
+"여러분은 이전 수업들을 통해 이제 익숙해진 DEM과 DEM으로부터 추출한 유역 집합을 알아차렸을 겁니다. DEM을 더 작은 레이어 몇 "
+"개로 분할해야 한다고 가정합시다. 분할된 각 레이어는 유역 하나에 해당하는 표고 데이터만 담고 있습니다. 이렇게 하면 나중에 각 유역에 "
+"관련된 몇몇 파라미터들, 예를 들어 각 유역의 평균 표고 또는 표고분포 곡선(hypsographic curve)을 계산하고자 할 때 "
+"유용할 것입니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:14
+msgid ""
+"This can be a lengthy and tedious task, especially if the number of "
+"watersheds is large. However, it is a task that can be easily automated, as "
+"we will see."
+msgstr ""
+"DEM을 각 유역 레이어로 분할하는 작업은, 특히 유역 개수가 많을 경우 시간이 많이 걸리는 지루한 작업이 될 수 있습니다. 그러나 곧 "
+"알게 되겠지만, 매우 쉽게 자동화할 수 있는 작업이기도 합니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:16
+msgid ""
+"The algorithm to use for clipping a raster layer with a polygon layer is "
+"called *Clip raster with polygons*, and has the following parameters dialog."
+msgstr ""
+"래스터 레이어를 폴리곤 레이어를 사용해서 잘라내는 데 쓰이는 알고리즘은 다음 파라미터 대화창을 사용하는 :guilabel:`Clip "
+"raster with polygons` 입니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:20
+msgid ""
+"You can run it using the watersheds layer and the DEM as input, and you will"
+" get the following result."
+msgstr "유역 레이어와 DEM을 입력물로 사용해서 이 알고리즘을 실행하면 다음과 같은 결과물을 얻게 될 것입니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:24
+msgid ""
+"As you can see, the area covered by all the watershed polygons is used."
+msgstr "보면 알 수 있겠지만 유역 폴리곤 전체가 커버하는 영역입니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:26
+msgid ""
+"You can have the DEM clipped with just a single watershed by selecting the "
+"desired watershed and then running the algorithm as we did before."
+msgstr "원하는 유역을 선택한 다음 이전과 마찬가지로 알고리즘을 실행하면 유역 하나만으로 잘라낸 DEM을 얻을 수 있습니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:30
+msgid ""
+"Since only selected features are used, only the selected polygon will be "
+"used to crop the raster layer."
+msgstr "선택한 피처만 사용하기 때문에, 선택한 폴리곤만 사용해서 래스터 레이어를 잘라낼 것입니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:34
+msgid ""
+"Doing this for all the watersheds will produce the result we are looking "
+"for, but it doesn't look like a very practical way of doing it. Instead, "
+"let's see how to automate that *select and crop* routine."
+msgstr ""
+"유역 전부에 대해 이 작업을 수행하면 우리가 바라는 결과물을 생성할 테지만, 그리 실용적인 방법으로 보이지는 않네요. 그 대신, "
+"*선택하고 잘라내는* 루틴을 어떻게 자동화할 수 있는지 알아봅시다."
+
+#: ../../docs/training_manual/processing/iterative.rst:36
+msgid ""
+"First of all, remove the previous selection, so all polygons will be used "
+"again. Now open the *Clip raster with polygon* algorithm and select the same"
+" inputs as before, but this time click on the button that you will find in "
+"the right--hand side of the vector layer input where you have selected the "
+"watersheds layer."
+msgstr ""
+"먼저, 모든 폴리곤을 다시 사용할 수 있도록 이전에 선택한 집합을 해제하십시오. 이제 :guilabel:`Clip raster with "
+"polygons` 알고리즘을 열고 입력물들을 이전과 동일하게 선택하십시오. 다만 이번에는 유역 레이어를 선택한 벡터 레이어 입력물 "
+"오른쪽에서 찾을 수 있는 버튼을 클릭하십시오."
+
+#: ../../docs/training_manual/processing/iterative.rst:40
+msgid ""
+"This button will cause the selected input layer to be split into as many "
+"layer as feature are found in it, each of them containing a single polygon. "
+"With that, the algorithm will be called repeatedly, one for each one of "
+"those single-polygon layers. The result, instead of just one raster layer in"
+" the case of this algorithm, will be a set of raster layers, each one of "
+"them corresponding to one of the executions of the algorithm."
+msgstr ""
+"이 버튼은 선택한 입력 레이어를 그 안에 있는 피처들만큼의 개수로 분할해서 각각 폴리곤 하나를 담고 있는 레이어들을 생성할 것입니다. "
+"그리고 이 알고리즘을 이 단일 폴리곤 레이어들 각각에 대해 반복해서 호출할 것입니다. 이 알고리즘의 경우, 그 결과물은 래스터 레이어 "
+"하나가 아니라 각각 해당 알고리즘의 실행 한 번에 해당하는 래스터 레이어들의 집합이 될 것입니다"
+
+#: ../../docs/training_manual/processing/iterative.rst:42
+msgid ""
+"Here's the result that you will get if you run the clipping algorithm as "
+"explained."
+msgstr "설명한 대로 잘라내기 알고리즘을 실행했다면 다음과 같은 결과물을 얻게 될 것입니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:46
+msgid ""
+"For each layer, the black and white color palette, (or whatever palette you "
+"are using), is adjusted differently, from its minimum to its maximum values."
+" That's the reason why you can see the different pieces and the colors do "
+"not seem to match in the border between layers. Values, however, do match."
+msgstr ""
+"각 레이어에서 흑백 색상표는 (또는 여러분이 사용한 어떤 색상표든) 각 레이어의 최소값에서 최대값에 맞춰 서로 다르게 조정되어 있습니다."
+" 여러분이 이 레이어들 사이의 경계에서 조각들과 색상들이 서로 맞지 않는 것처럼 보이는 것이 바로 이 때문입니다. 하지만 값들은 "
+"일치합니다."
+
+#: ../../docs/training_manual/processing/iterative.rst:48
+msgid ""
+"If you enter an output filename, resulting files will be named using that "
+"filename and a number corresponding to each iteration as suffix."
+msgstr ""
+"여러분이 산출 파일 이름을 입력한 경우, 생성되는 파일들의 이름은 여러분이 입력한 파일 이름 뒤에 각 반복 횟수에 해당하는 숫자가 "
+"접미어로 붙은 이름이 될 것입니다"
