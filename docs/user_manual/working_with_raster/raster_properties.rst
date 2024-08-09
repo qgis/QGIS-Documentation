@@ -80,6 +80,11 @@ Provided information are:
 
 * general such as name in the project, source path, list of auxiliary files,
   last save time and size, the used provider
+* custom properties, used to store in the active project additional information about the layer.
+  Default custom properties include :guilabel:`Identify/format`, which influences how the results from using
+  the |identify| :ref:`Identify features <raster_identify>` tool over a raster layer are formatted.
+  More properties can be created and managed using PyQGIS, specifically through
+  the :pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` method.
 * based on the provider of the layer: extent, width and height, data type,
   GDAL driver, bands statistics
 * the Coordinate Reference System: name, units, method, accuracy, reference
@@ -761,6 +766,39 @@ set whether the layer redraw should be:
 
 * :guilabel:`Fixed time range`: only show the raster layer if the animation
   time is within a :guilabel:`Start date` and :guilabel:`End date` range
+* :guilabel:`Fixed Time Range Per Band`: only shows a band when the current animation time
+  is between its :guilabel:`Begin` and :guilabel:`End` date range. This option allows
+  you to either manually set these time ranges for each band or use the |expression| button
+  to automatically generate datetime values, enabling detailed temporal analysis and visualization.
+  This mode is particularly useful for working with raster layers where each band corresponds to a specific time
+  period, such as NetCDF files.
+
+  .. only:: html
+
+   .. figure:: img/temporal_time_range_per_band.gif
+      :align: center
+      :width: 100%
+
+      Example of using the Fixed Time Range Per Band mode
+
+* :guilabel:`Represents Temporal Values`: interprets each pixel in the raster layer as a datetime value.
+  When this temporal mode is active, pixels that do not fall within the temporal range specified in the
+  render context will be hidden, ensuring that only temporally relevant data is displayed.
+  This mode is effective for:
+
+  * Analyzing land use changes, like observing deforestation patterns.
+  * Studying flooding by comparing water coverage across different times.
+  * Evaluating movement costs in terrain analysis, for example,
+    using GRASS GIS's r.walk tool to calculate travel costs across a landscape.
+
+  .. only:: html
+
+   .. figure:: img/temporal_pixel_value.gif
+      :align: center
+      :width: 100%
+
+      Application of the Represents Temporal Values mode - analyzing GLAD deforestation alerts
+
 * :guilabel:`Redraw layer only`: the layer is redrawn at each new animation
   frame. It's useful when the layer uses time-based expression values for
   renderer settings (e.g. data-defined renderer opacity, to fade in/out
@@ -923,7 +961,15 @@ pixels identification:
 * |checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips for the layer
 * The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor for map tips,
   mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
-  You can check the result of your code sample in the :guilabel:`Preview` frame.
+  You can check the result of your code sample in the :guilabel:`Preview` frame. You can also select and
+  edit existing expressions using the :guilabel:`Insert/Edit Expression` button.
+
+   .. note:: Understanding the :guilabel:`Insert/Edit Expression` button behavior
+
+    If you select some text within an expression (between "[%" and "%]"),
+    or if no text is selected but the cursor is inside an expression,
+    the whole expression will be automatically selected for editing.
+    If the cursor or a selected text is outside an expression, the dialog opens with the selection.
 
 .. _figure_raster_display:
 
@@ -994,8 +1040,15 @@ To use the |identify|:guilabel:`Identify features` tool:
 
 The Identify Results panel will open in its default ``Tree`` view
 and display information about the clicked point.
-Below the name of the raster layer, you have on the left the band(s) of the clicked pixel,
-and on the right their respective value.
+Formatting of the results vary depending on the provider of the layer. For example:
+
+* For a local raster layer: below the name of the layer,
+  you have on the left the band(s) of the clicked pixel,
+  and on the right their respective value.
+* For a remote layer such as WMS, a :guilabel:`Format` menu allows you to select
+  whether the information should be displayed as :guilabel:`HTML`, :guilabel:`Feature`
+  or :guilabel:`Text`.
+
 These values can also be rendered (from the :guilabel:`View` menu located at the bottom of the panel) in:
 
 * a ``Table`` view - organizes the information about the identified features
@@ -1007,7 +1060,7 @@ Under the pixel attributes, you will find the :guilabel:`Derived` information,
 such as:
 
 * ``X`` and ``Y`` coordinate values of the point clicked
-* Column and row of the point clicked (pixel)
+* Column and row of the point clicked (pixel) when compatible
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -1027,6 +1080,8 @@ such as:
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em

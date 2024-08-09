@@ -99,7 +99,8 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
      -
      - Exports plots as 3D features, 2D Profile and Distance/Elevation Table.
        (The results can be saved as DXF files, CSV files or any of the standard
-       writable vector spatial formats)
+       writable vector spatial formats).
+       More details at :ref:`export_elevation_profile`.
    * - |options| :sup:`Options` :menuselection:`-->`
      -
      - Provides access to configuration settings of the profile elevation line.
@@ -254,6 +255,50 @@ For more details, give a look to `QGIS elevation profile/cross section tool -- a
 .. raw:: html
 
   <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/AknJjNPystU" title="QGIS elevation profile/cross section tool -- a deep dive!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe></p>
+
+.. _export_elevation_profile:
+
+Exporting from the elevation profile
+====================================
+
+The top toolbar of the :guilabel:`Elevation profile` dialog provides a variety of tools
+to export an elevation profile, allowing you to reuse the plots in another software:
+
+* |saveAsPDF| :sup:`Export As PDF`: Exports plots to PDF (as high quality vector objects).
+  Following options are requested for generating the output file:
+
+  * The :guilabel:`Page size`, selecting a page from a predefined list or setting custom dimensions,
+    and the page orientation
+  * The :guilabel:`Chart ranges` to control the extent of the chart to export:
+
+    * on the X axis, the :guilabel:`Minimum distance`
+      and :guilabel:`Maximum distance` from the profile curve starting point
+    * On the Y axis, the :guilabel:`Minimum elevation` and :guilabel:`Maximum elevation`
+  * The :guilabel:`Distance axis settings`: helps you configure the horizontal graduation
+    of the grid over which the elevation profile is rendered.
+    You can customize the :guilabel:`Label interval`, the :guilabel:`Major grid line interval`
+    and the :guilabel:`Minor grid line interval`.
+  * The :guilabel:`Elevation axis settings`, same as above, for vertical graduation
+
+  .. Todo: Add a screenshot of the pdf export dialog
+
+* |saveMapAsImage| :sup:`Export As Image`: Exports plots to an image file format.
+  Specific :guilabel:`Export options` such as the :guilabel:`Image width`
+  and :guilabel:`Image height` are requested, along with the :guilabel:`Chart ranges`,
+  :guilabel:`Distance axis settings` and :guilabel:`Elevation axis settings` previously mentioned.
+
+* |fileSaveAs| :sup:`Export results`: Exports the profile results as a set of features of a vector layer
+  (:file:`.DXF`, :file:`.CSV`, :file:`.SHP`, :file:`.GPKG`, ...).
+  Depending on the output format, multiple layers may be returned
+  when the geometry types of exported features differ.
+
+  * :menuselection:`Export 3D features`: Exports profile lines as 3D features,
+    with elevation values taken from the elevation slices and stored in exported geometry Z values.
+  * :menuselection:`Export 2D profile`: Exports profiles as 2D profile lines,
+    with elevation stored in exported geometry Y dimension and distance in X dimension
+    (as shown in the elevation profile widget).
+  * :menuselection:`Export distance/elevation table`: Exports profiles as a table
+    of sampled distance vs elevation values.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

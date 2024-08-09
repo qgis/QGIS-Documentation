@@ -398,8 +398,17 @@ Data Sources settings
 **Feature attributes and table**
 
 * |checkbox| :guilabel:`Open attribute table as docked window`
-* :guilabel:`Copy features as` 'Plain text, no geometry', 'Plain text, WKT geometry',
-  or 'GeoJSON' when pasting features in other applications.
+* :guilabel:`Copy features as`: defines the format to use for data when pasting
+  features in other applications. 
+
+  * :guilabel:`Plain text, no geometry`: attributes are copied as text
+    but the geometry is skipped
+  * :guilabel:`Plain text, WKT geometry`: attributes are copied as text
+    and the geometry is returned in WKT
+  * :guilabel:`Plain text, WKB geometry`: attributes are copied as text
+    and the geometry is returned in WKB (hex format)
+  * :guilabel:`GeoJSON`: attributes and geometry are formatted as GeoJSON data
+
 * :guilabel:`Attribute table behavior` |selectString|: set filter on the attribute
   table at the opening. There are three possibilities: 'Show all features',
   'Show selected features' and 'Show features visible on map'.
@@ -1170,7 +1179,9 @@ Network settings
 * Define :guilabel:`Default expiration period for WMS-C/WMTS tiles (hours)` -
   default is 24
 * Define :guilabel:`Max retry in case of tile or feature request errors`
-* Define :guilabel:`User-Agent`
+* Define :guilabel:`User-Agent prefix` which defaults to ``Mozilla/5.0``.
+  This value will be prepended to both QGIS and OS version
+  e.g.``Mozilla/5.0 QGIS/33801/Ubuntu 22.04.4 LTS`` to shape the user-agent.
 
 .. _figure_network_tab:
 
@@ -1577,7 +1588,7 @@ that allows to store in a single folder:
 By default, a QGIS installation contains a single user profile named ``default``.
 But you can create as many user profiles as you want:
 
-#. Click the :guilabel:`New profile...` entry.
+#. Click the :menuselection:`Settings --> User Profiles --> New profile...` entry.
 #. You'll be prompted to provide a profile name, creating a folder of the same name
    under :file:`~/<UserProfiles>/` where:
 

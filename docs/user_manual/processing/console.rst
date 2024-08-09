@@ -309,13 +309,10 @@ appended to the given file path.
 
 Unlike when an algorithm is executed from the toolbox, outputs are not
 added to the map canvas if you execute that same algorithm from the
-Python console using :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>`,
-but ``runAndLoadResults()`` will do that.
-
-The :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` method returns
-a dictionary with one or more output names (the
-ones shown in the algorithm description) as keys and the file paths of
-those outputs as values:
+Python console using the :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` method.
+That method returns a dictionary with one or more output names
+(the ones shown in the algorithm description) as keys
+and the file paths of those outputs as values:
 
 .. code-block:: python
    :linenos:
@@ -331,11 +328,22 @@ those outputs as values:
     >>> myresult['OUTPUT']
     /data/buffers.shp
 
-You can load feature output by passing the corresponding file paths to
-the ``load()`` method.
-Or you could use ``runAndLoadResults()`` instead of
-:meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` to load
-them immediately.
+You can then load the output in the project as any common layer:
+
+.. code-block:: python
+   :linenos:
+
+    >>> buffered_layer = myresult['OUTPUT']
+    >>> QgsProject.instance().addMapLayer(buffered_layer)
+
+To immediately load the processing outputs in the project,
+you can use the ``runAndLoadResults()`` method instead of ``run()``.
+
+.. code-block:: python
+   :linenos:
+
+    >>> processing.runAndLoadResults("native:buffer", {parameters:values})
+
 
 If you want to open an algorithm dialog from the console you can use the 
 ``createAlgorithmDialog`` method. The only mandatory parameter is the algorithm 
@@ -485,57 +493,8 @@ functions are specified:
   You can see how input and output parameters are used as parameters
   to the ``smoothgeometry`` and ``buffer`` algorithms.
 
-There are a number of different parameter types available for
-input and output. Below is an alphabetically sorted list:
-
-.. list-table:: List of input and output algorithm parameter types
-   :class: longtable
-
-   * - :class:`QgsProcessingParameterAggregate <qgis.core.QgsProcessingParameterAggregate>`
-     - :class:`QgsProcessingParameterAnnotationLayer <qgis.core.QgsProcessingParameterAnnotationLayer>`
-     - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
-     - :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
-   * - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
-     - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
-     - :class:`QgsProcessingParameterCoordinateOperation <qgis.core.QgsProcessingParameterCoordinateOperation>`
-     - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
-   * - :class:`QgsProcessingParameterDatabaseSchema <qgis.core.QgsProcessingParameterDatabaseSchema>`
-     - :class:`QgsProcessingParameterDatabaseTable <qgis.core.QgsProcessingParameterDatabaseTable>`
-     - :class:`QgsProcessingParameterDateTime <qgis.core.QgsProcessingParameterDateTime>`
-     - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
-   * - :class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`
-     - :class:`QgsProcessingParameterExpression <qgis.core.QgsProcessingParameterExpression>`
-     - :class:`QgsProcessingParameterExtent <qgis.core.QgsProcessingParameterExtent>`
-     - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
-   * - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
-     - :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
-     - :class:`QgsProcessingParameterFieldMapping  <qgis.core.QgsProcessingParameterFieldMapping>`
-     - :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
-   * - :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
-     - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
-     - :class:`QgsProcessingParameterGeometry <qgis.core.QgsProcessingParameterGeometry>`
-     - :class:`QgsProcessingParameterLayout <qgis.core.QgsProcessingParameterLayout>`
-   * - :class:`QgsProcessingParameterLayoutItem <qgis.core.QgsProcessingParameterLayoutItem>`
-     - :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
-     - :class:`QgsProcessingParameterMapTheme <qgis.core.QgsProcessingParameterMapTheme>`
-     - :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
-   * - :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
-     - :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
-     - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
-     - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
-   * - :class:`QgsProcessingParameterPointCloudAttribute <qgis.core.QgsProcessingParameterPointCloudAttribute>`
-     - :class:`QgsProcessingParameterPointCloudLayer <qgis.core.QgsProcessingParameterPointCloudLayer>`
-     - :class:`QgsProcessingParameterProviderConnection <qgis.core.QgsProcessingParameterProviderConnection>`
-     - :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
-   * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
-     - :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
-     - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
-     - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
-   * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
-     - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
-     - :class:`QgsProcessingParameterVectorTileDestination <qgis.core.QgsProcessingParameterVectorTileDestination>`
-     - :class:`QgsProcessingParameterVectorTileWriterLayers <qgis.core.QgsProcessingParameterVectorTileWriterLayers>`
-
+There are a number of different parameter types available for input and output.
+You can find the full list at :ref:`processing_algs_input_output`.
 
 The first parameter to the constructors is the name of the parameter,
 and the second is the description of the parameter (for the user

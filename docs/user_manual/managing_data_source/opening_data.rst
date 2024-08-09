@@ -200,6 +200,7 @@ mesh data sources:
 * :menuselection:`Export Layer --> To File...`
 * :guilabel:`Add Layer to Project`
 * :guilabel:`Layer Properties`
+* :guilabel:`Open with Data Source Manager...`
 * :menuselection:`Manage --> Rename "<name of file>"...` or
   :guilabel:`Delete "<name of file>"...`
 * :guilabel:`Show in Files`
@@ -221,6 +222,13 @@ the layers have been added to the project):
 * A :guilabel:`Preview` panel
 * The attribute table for vector sources (in the :guilabel:`Attributes`
   panel).
+
+Use :guilabel:`Open with Data Source Manager...` to directly open and configure the
+data source in the :guilabel:`Data Source Manager` using the URI of your data source.
+This simplifies the process of adding a layer from the :guilabel:`Browser`
+by allowing you to set specific opening options for the data source.
+It is currently available for vector (including the dedicated GeoPackage entry), raster,
+and SpatiaLite data sources.
 
 To add a layer to the project using the :guilabel:`Browser`:
 
@@ -450,7 +458,15 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * For all vector source types it is possible to define the :guilabel:`Encoding` or
     to use the :menuselection:`Automatic -->` setting.
 
-
+* The |radioButtonOn| :guilabel:`OGC API` source type allows you to access `vector <https://gdal.org/drivers/vector/oapif.html>`_
+  and `raster <https://gdal.org/drivers/raster/ogcapi.html>`_ data from servers that implement the OGC API standards.
+  To use this option:
+  
+  #. Select |radioButtonOn| :guilabel:`OGC API` from the :guilabel:`Data Source Manager`
+     dialog.
+  #. Enter the endpoint of the OGC API service you want to connect to. Note that you
+     don't need to prefix the endpoint with "OGCAPI:".
+  #. Click :guilabel:`Connect` to establish a connection to the server.
 
 
 .. _mesh_loading:
@@ -1215,6 +1231,13 @@ The following parameters can be entered:
   only for tables and views that are owned by the user that connects to the
   database.
 
+* |checkbox| :guilabel:`Use estimated table metadata`: If checked, estimated
+  table metadata will be used if available. For large tables, this avoids slow
+  table loads and potentially expensive computations, but may result in
+  incorrect layer properties such as layer extent. The fast extent estimation
+  is available starting with QRC1/2024 and SP8 in HANA Cloud and HANA On-Premise
+  respectively.
+
 * |checkbox| :guilabel:`Also list tables with no geometries`: If checked, QGIS
   searches also for tables and views that do not contain a spatial column.
 
@@ -1522,6 +1545,8 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
 * a :guilabel:`Name`
 * the :guilabel:`URL`
+* a :guilabel:`Prefix`: This is used to specify the proxy prefix in the URL,
+  which is necessary for some ArcGIS servers that use web proxy prefixes. 
 * a :guilabel:`Community endpoint URL`
 * a :guilabel:`Content endpoint URL`
 * the :ref:`authentication <authentication_index>` configuration if necessary

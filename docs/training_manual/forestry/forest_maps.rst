@@ -1,4 +1,4 @@
-|LS| Creating Detailed Maps with the Atlas Tool
+Lesson: Creating Detailed Maps with the Atlas Tool
 ===============================================================================
 
 The systematic sampling design is ready and the field teams have loaded the GPS
@@ -12,7 +12,7 @@ tool to automatically generate a number of maps with a common format.
 **The goal for this lesson:** Learn to use the Atlas tool in QGIS to generate
 detailed printable maps to assist in the field inventory work.
 
-|basic| |FA| Preparing the Print Layout
+:abbr:`★☆☆ (Basic level)` Follow Along: Preparing the Print Layout
 -------------------------------------------------------------------------------
 
 Before we can automate the detailed maps of the forest area and our sampling
@@ -82,7 +82,7 @@ grid at some point, you can always check or uncheck it in the
 :menuselection:`View` menu.
 
 
-|basic| |FA| Adding Background Map
+:abbr:`★☆☆ (Basic level)` Follow Along: Adding Background Map
 -------------------------------------------------------------------------------
 
 Leave the layout open but go back to the map. Let's add some background data and
@@ -122,7 +122,7 @@ Obviously this is not good enough; you want to make the plot numbers as clearly
 visible as possible for the field teams.
 
 
-|basic| |TY| Changing the Symbology of the Layers
+:abbr:`★☆☆ (Basic level)` Try Yourself: Changing the Symbology of the Layers
 -------------------------------------------------------------------------------
 
 You have been working in :doc:`../basic_map/index` with symbology and in
@@ -159,7 +159,7 @@ In order to keep it, and have a visualization of it that shows only the stand bo
    .. figure:: img/composer_2-3.png
       :align: center
 
-|basic| |TY| Create a Basic Map Template
+:abbr:`★☆☆ (Basic level)` Try Yourself: Create a Basic Map Template
 -------------------------------------------------------------------------------
 
 #. Once you have a symbology you are happy with, you are ready to add some more
@@ -183,8 +183,8 @@ In order to keep it, and have a visualization of it that shows only the stand bo
 
 That is what it will look like when printed.
 
-|basic| |FA| Adding More Elements to the Print Layout
--------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Adding More Elements to the Print Layout
+---------------------------------------------------------------------------------
 
 As you probably noticed in the suggested map template images, there are plenty
 of room on the right side of the canvas. Lets see what else could go in there.
@@ -263,7 +263,7 @@ The basic map layout is ready, now you want to make use of the Atlas tool to
 generate as many detail maps in this format as you consider necessary.
 
 
-|basic| |FA| Creating an Atlas Coverage
+:abbr:`★☆☆ (Basic level)` Follow Along: Creating an Atlas Coverage
 -------------------------------------------------------------------------------
 
 The Atlas coverage is just a vector layer that will be used to generate the
@@ -295,7 +295,7 @@ of what each map (created from each polygon) will contain.
 .. figure:: img/atlas_coverage.png
    :align: center
 
-|basic| |FA| Setting Up the Atlas Tool
+:abbr:`★☆☆ (Basic level)` Follow Along: Setting Up the Atlas Tool
 -------------------------------------------------------------------------------
 
 The last step is to set up the Atlas tool:
@@ -340,7 +340,7 @@ Now you can use the preview tool for Atlas maps to review what your maps will lo
 Note that some of them cover areas that are not interesting. Let's do something
 about it and save some trees by not printing those useless maps.
 
-|basic| |FA| Editing the Coverage Layer
+:abbr:`★☆☆ (Basic level)` Follow Along: Editing the Coverage Layer
 -------------------------------------------------------------------------------
 
 Besides removing the polygons for those areas that are not interesting, you can
@@ -371,7 +371,7 @@ field with some remarks for the field teams to have into account:
 #. Enable editing.
 #. Use the |calculateField| calculator to create and populate the following two fields.
 #. Create a field named ``Zone`` of type :guilabel:`Whole number (integer)`.
-#. In the :guilabel:`Expression` box write/copy/construct ``$rownum``.
+#. In the :guilabel:`Expression` box write/copy/construct ``@row_number``.
 #. Create another field named ``Remarks``, of type :guilabel:`Text (string)` and
    a width of ``255``.
 #. In the :guilabel:`Expression` box write ``'No remarks.'``. This will set
@@ -418,7 +418,7 @@ labels to use the information from the :guilabel:`atlas_coverage` layer's attrib
 #. Use the Atlas preview to browse through all the maps you will be creating soon
    and enjoy!
 
-|basic| |FA| Printing the Maps
+:abbr:`★☆☆ (Basic level)` Follow Along: Printing the Maps
 -------------------------------------------------------------------------------
 
 Last but not least, printing or exporting your maps to image files or PDF files.
@@ -455,7 +455,7 @@ Lets print the maps as a single PDF that you can send to the field office for pr
 #. Close the :guilabel:`Print Layout` and the project.
 
 
-|IC|
+In Conclusion
 -------------------------------------------------------------------------------
 
 You have managed to create a template map that can be used to automatically
@@ -464,7 +464,7 @@ plots. As you noticed, this was not an easy task but the benefit will come when
 you need to create similar maps for other regions and you can use the template
 you just saved.
 
-|WN|
+What's Next?
 -------------------------------------------------------------------------------
 
 In the next lesson, you will see how you can use LiDAR data to create a DEM and
@@ -477,16 +477,10 @@ then use it to enhance your data and maps visibility.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |FA| replace:: Follow Along:
-.. |IC| replace:: In Conclusion
-.. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
-.. |WN| replace:: What's Next?
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
 .. |atlas| image:: /static/common/mIconAtlas.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png

@@ -337,7 +337,8 @@ Further reading: :ref:`qgiscollect` algorithm
    :start-after: .. end_collect_geometries_section
    :end-before: .. end_concave_hull_section
 
-Further reading: :ref:`expression_function_GeometryGroup_convex_hull`
+Further reading: :ref:`expression_function_GeometryGroup_convex_hull`,
+:ref:`qgisconcavehull` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_concave_hull_section
@@ -386,7 +387,8 @@ Further reading: :ref:`expression_function_GeometryGroup_overlay_disjoint`
    :start-after: .. end_disjoint_section
    :end-before: .. end_end_point_section
 
-Further reading: :ref:`qgisextractspecificvertices` algorithm
+Further reading: :ref:`expression_function_GeometryGroup_start_point`,
+:ref:`qgisextractspecificvertices` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_end_point_section
@@ -635,7 +637,8 @@ Further reading: :ref:`qgissmoothgeometry` algorithm
    :start-after: .. end_smooth_section
    :end-before: .. end_start_point_section
 
-Further reading: :ref:`qgisextractspecificvertices` algorithm
+Further reading: :ref:`expression_function_GeometryGroup_end_point`,
+:ref:`qgisextractspecificvertices` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_start_point_section
@@ -1108,6 +1111,9 @@ To use these variables in an expression, they should be preceded by the
    "atlas_layername", "The current atlas coverage layer name"
    "atlas_pagename", "The current atlas page name"
    "atlas_totalfeatures", "The total number of features in atlas"
+   "band", "The number of the band in the raster layer"
+   "band_description", "The description of the band in the raster layer"
+   "band_name", "The name of the band in the raster layer"
    "canvas_cursor_point", "The last cursor position on the canvas in the
    project's geographical coordinates"
    "cluster_color", "The color of symbols within a cluster, or NULL if
@@ -1202,6 +1208,8 @@ To use these variables in an expression, they should be preceded by the
    "map_start_time", "The start of the map's temporal time range
    (as a datetime value)"
    "map_units", "The units of map measurements"
+   "map_z_range_lower", "Lower elevation of the map's elevation range"
+   "map_z_range_upper", "Upper elevation of the map's elevation range"
    "model_path", "Full path (including file name) of current model
    (or project path if model is embedded in a project)."
    "model_folder", "Folder containing current model (or project folder
@@ -1211,8 +1219,9 @@ To use these variables in an expression, they should be preceded by the
    "notification_message", "Content of the notification message sent by the provider
    (available only for actions triggered by provider notifications)."
    "parent", "Refers to the current feature in the parent layer, providing access to
-   its attributes and geometry when filtering an :ref:`aggregate <aggregates_function>`
-   function"
+   its attributes and geometry when filtering an :ref:`aggregate <aggregates_function>` function"
+   "plot_axis", "The associated plot axis, e.g. 'x' or 'y'."
+   "plot_axis_value", "The current value for the plot axis."
    "project_abstract", "The project abstract, taken from project metadata"
    "project_area_units", "The area unit for the current project, used when
    calculating areas of geometries"
@@ -1220,7 +1229,7 @@ To use these variables in an expression, they should be preceded by the
    "project_basename", "The basename of current project's filename
    (without path and extension)"
    "project_creation_date", "The project creation date, taken from project metadata"
-   "project_crs", "The Coordinate reference system of the project"
+   "project_crs", "Identifier for the coordinate reference system of the project (e.g., 'EPSG:4326')"
    "project_crs_arconym", "The acronym of the Coordinate reference system of the project"
    "project_crs_definition", "The full definition of the Coordinate reference
    system of the project"
@@ -1241,6 +1250,10 @@ To use these variables in an expression, they should be preceded by the
    "project_path", "The full path (including file name) of the current project"
    "project_title", "The title of current project"
    "project_units", "The units of the project's CRS"
+   "project_vertical_crs", "Identifier for the vertical Coordinate reference system of the project (e.g., 'EPSG:5703')"
+   "project_vertical_crs_definition", "The full definition of the vertical coordinate reference system of the project"
+   "project_vertical_crs_description", "The description of the vertical coordinate reference system of the project"
+   "project_vertical_crs_wkt", "The WKT (well known text) representation of the vertical coordinate reference system of the project"
    "qgis_locale", "The current language of QGIS"
    "qgis_os_name", "The current Operating system name, eg 'windows', 'linux' or 'osx'"
    "qgis_platform", "The QGIS platform, eg 'desktop' or 'server'"

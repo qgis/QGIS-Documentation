@@ -351,122 +351,6 @@ menu options you need to switch to editing mode by clicking on |toggleEditing|
      - :kbd:`Ctrl+.`
      - :guilabel:`Digitizing`
      - :ref:`add_feature`
-   * - |circularStringCurvePoint| :guilabel:`Add Circular String`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`add_circular_string`
-   * - |circularStringRadius| :guilabel:`Add Circular String by Radius`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`add_circular_string`
-   * - :menuselection:`Add Circle -->`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_circles`
-   * - :menuselection:`-->`
-       |circle2Points| :guilabel:`Add Circle from 2 Points`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_circles`
-   * - :menuselection:`-->`
-       |circle3Points| :guilabel:`Add Circle from 3 Points`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_circles`
-   * - :menuselection:`-->`
-       |circle3Tangents| :guilabel:`Add Circle from 3 Tangents`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_circles`
-   * - :menuselection:`-->`
-       |circle2TangentsPoint|
-       :guilabel:`Add Circle from 2 Tangents and a Point`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_circles`
-   * - :menuselection:`-->`
-       |circleCenterPoint|
-       :guilabel:`Add Circle by a Center Point and Another Point`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_circles`
-   * - :menuselection:`Add Rectangle -->`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_rectangles`
-   * - :menuselection:`-->`
-       |rectangleExtent| :guilabel:`Add Rectangle from Extent`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_rectangles`
-   * - :menuselection:`-->`
-       |rectangleCenter|
-       :guilabel:`Add Rectangle from Center and a Point`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_rectangles`
-   * - :menuselection:`-->`
-       |rectangle3PointsProjected|
-       :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
-       and 3rd point)`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_rectangles`
-   * - :menuselection:`-->`
-       |rectangle3PointsDistance|
-       :guilabel:`Add Rectangle from 3 Points (Distance from
-       projected point on segment p1 and p2)`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_rectangles`
-   * - :menuselection:`Add Regular Polygon -->`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_regular_polygons`
-   * - :menuselection:`-->`
-       |regularPolygonCenterPoint|
-       :guilabel:`Add Regular Polygon from Center and a Point`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_regular_polygons`
-   * - :menuselection:`-->`
-       |regularPolygonCenterCorner|
-       :guilabel:`Add Regular Polygon from Center and a Corner`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_regular_polygons`
-   * - :menuselection:`-->`
-       |regularPolygon2Points|
-       :guilabel:`Add Regular Polygon from 2 Points`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_regular_polygons`
-   * - :menuselection:`Add Ellipse -->`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_ellipses`
-   * - :menuselection:`-->`
-       |ellipseCenter2Points|
-       :guilabel:`Add Ellipse from Center and 2 Points`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_ellipses`
-   * - :menuselection:`-->`
-       |ellipseCenterPoint|
-       :guilabel:`Add Ellipse from Center and a Point`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_ellipses`
-   * - :menuselection:`-->`
-       |ellipseExtent| :guilabel:`Add Ellipse from Extent`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_ellipses`
-   * - :menuselection:`-->`
-       |ellipseFoci| :guilabel:`Add Ellipse from Foci`
-     -
-     - :guilabel:`Shape Digitizing`
-     - :ref:`draw_ellipses`
    * - :menuselection:`Add Annotation -->`
      -
      -
@@ -2269,20 +2153,6 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |circle2Points| image:: /static/common/mActionCircle2Points.png
-   :width: 1.5em
-.. |circle2TangentsPoint| image:: /static/common/mActionCircle2TangentsPoint.png
-   :width: 1.5em
-.. |circle3Points| image:: /static/common/mActionCircle3Points.png
-   :width: 1.5em
-.. |circle3Tangents| image:: /static/common/mActionCircle3Tangents.png
-   :width: 1.5em
-.. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
-   :width: 1.5em
-.. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
-   :width: 1.5em
-.. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
-   :width: 1.5em
 .. |clip| image:: /static/common/mAlgorithmClip.png
    :width: 1.5em
 .. |collect| image:: /static/common/mAlgorithmCollect.png
@@ -2328,14 +2198,6 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
-   :width: 1.5em
-.. |ellipseCenter2Points| image:: /static/common/mActionEllipseCenter2Points.png
-   :width: 1.5em
-.. |ellipseCenterPoint| image:: /static/common/mActionEllipseCenterPoint.png
-   :width: 1.5em
-.. |ellipseExtent| image:: /static/common/mActionEllipseExtent.png
-   :width: 1.5em
-.. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
@@ -2548,25 +2410,11 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |rasterize| image:: /static/common/rasterize.png
    :width: 1.5em
-.. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
-   :width: 1.5em
-.. |rectangle3PointsProjected| image:: /static/common/mActionRectangle3PointsProjected.png
-   :width: 1.5em
-.. |rectangleCenter| image:: /static/common/mActionRectangleCenter.png
-   :width: 1.5em
-.. |rectangleExtent| image:: /static/common/mActionRectangleExtent.png
-   :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |regularPoints| image:: /static/common/mAlgorithmRegularPoints.png
-   :width: 1.5em
-.. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
-   :width: 1.5em
-.. |regularPolygonCenterCorner| image:: /static/common/mActionRegularPolygonCenterCorner.png
-   :width: 1.5em
-.. |regularPolygonCenterPoint| image:: /static/common/mActionRegularPolygonCenterPoint.png
    :width: 1.5em
 .. |removeAllFromOverview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em

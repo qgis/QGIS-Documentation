@@ -8,7 +8,7 @@ Raster tools
       :depth: 1
 
 
-.. _qgisalignraster:
+.. _qgisalignsingleraster:
 
 Align raster
 ------------
@@ -17,6 +17,7 @@ Aligns raster by resampling it to the same cell size
 and reprojecting to the same CRS as a reference raster.
 
 .. warning:: **This algorithm is ONLY available in the** :ref:`Model Designer <processing.modeler>` context.
+ For other contexts, use instead :ref:`qgisalignrasters`.
 
 Parameters
 ..........
@@ -122,7 +123,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``native:alignraster``
+**Algorithm ID**: ``native:alignsingleraster``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -138,6 +139,7 @@ Aligns rasters by resampling them to the same cell size
 and reprojecting to the same CRS as a reference raster.
 
 .. warning:: **This algorithm is NOT available in the** :ref:`Model Designer <processing.modeler>` context.
+ Use instead :ref:`qgisalignsingleraster`.
 
 Parameters
 ..........
@@ -156,7 +158,10 @@ Parameters
      - [raster] [list]
      - List of input raster layers with resampling options associated
        (filled as a :class:`QgsProcessingParameterAlignRasterLayers
-       <qgis.core.QgsProcessingParameterAlignRasterLayers>` item):
+       <qgis.core.QgsProcessingParameterAlignRasterLayers>` item ---
+       done in GUI by pressing :guilabel:`Configure Raster...` button
+       for each selected layer):
+
 
        **Input layer** [string] (``inputFile``)
          Full path of the input layer to align

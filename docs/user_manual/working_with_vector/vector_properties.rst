@@ -82,6 +82,12 @@ Provided information are:
 
 * general such as name in the project, source path, list of auxiliary files,
   last save time and size, the used provider
+* custom properties, used to store in the active project additional information about the layer.
+  Default custom properties may include :ref:`layer notes <layer_notes>`,
+  :ref:`legend widgets <vectorlegendmenu>`, :ref:`layer variables <general_tools_variables>`,
+  :ref:`form properties <vector_attributes_menu>`...
+  More custom properties can be created and managed using PyQGIS,
+  specifically through the :pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` method.
 * based on the provider of the layer: format of storage, geometry type,
   data source encoding, extent, feature count...
 * the Coordinate Reference System: name, units, method, accuracy, reference
@@ -394,7 +400,7 @@ To use categorized symbology for a layer:
 
 #. Configure the :ref:`Symbol <symbol-selector>`, which will be used as
    base symbol for all the classes;
-#. Indicate the :ref:`Color ramp <color-ramp>`, ie the range of colors from which
+#. Indicate the :ref:`Color ramp <color-ramp>`, i.e. the range of colors from which
    the color applied to each symbol is selected.
 
    Besides the common options of the :ref:`color ramp widget <color_ramp_widget>`,
@@ -504,6 +510,9 @@ available modes are:
   (the idea of a boxplot).
 * Equal Interval: each class will have the same size (e.g. with the values
   from 1 to 16 and four classes, each class will have a size of four).
+* Fixed Interval: each class will have a fixed range of values (e.g. with the
+  values from 1 to 16 and an interval size of 4, the classes will be 1-4,
+  5-8, 9-12 and 13-16).  
 * Logarithmic scale: suitable for data with a wide range of values.
   Narrow classes for low values and wide classes for large values (e.g. for
   decimal numbers with range [0..100] and two classes, the first class will
@@ -1774,7 +1783,7 @@ The current core implementation of diagrams provides support for:
 * |piechart| :guilabel:`Pie chart`, a circular statistical graphic divided into
   slices to illustrate numerical proportion. The arc length of each slice is
   proportional to the quantity it represents;
-* |text| :guilabel:`Text diagram`, a horizontaly divided circle showing statistics
+* |text| :guilabel:`Text diagram`, a horizontally divided circle showing statistic
   values inside;
 * |histogram| :guilabel:`Histogram`, bars of varying colors for each attribute
   aligned next to each other
@@ -1851,8 +1860,8 @@ In this tab, you can also manage and fine tune the diagram visibility with
 different options:
 
 * :guilabel:`Diagram z-index`: controls how diagrams are drawn on top of each
-  other and on top of labels. A diagram with a high index is drawn over diagrams
-  and labels;
+  other and on top of labels. A diagram with a high index is drawn over other
+  diagrams and labels;
 * |checkbox| :guilabel:`Show all diagrams`: shows all the diagrams even if they
   overlap each other;
 * :guilabel:`Show diagram`: allows only specific diagrams to be rendered;
@@ -1931,12 +1940,12 @@ The information can also be filled using the :ref:`Move labels and diagrams
 <label_toolbar>` tool.
 
 In the :guilabel:`Priority` section, you can define the placement priority rank
-of each diagram, ie if there are different diagrams or labels candidates for the
+of each diagram, i.e. if there are different diagrams or labels candidates for the
 same location, the item with the higher priority will be displayed and the
 others could be left out.
 
 :guilabel:`Discourage diagrams and labels from covering features` defines
-features to use as :ref:`obstacles <labels_obstacles>`, ie QGIS will try to not
+features to use as :ref:`obstacles <labels_obstacles>`, i.e. QGIS will try to not
 place diagrams nor labels over these features.
 The priority rank is then used to evaluate whether a diagram could be omitted
 due to a greater weighted obstacle feature.
@@ -2215,7 +2224,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
 
    #. The first step is to use the |symbologyAdd| :sup:`Add a new tab or group to the form layout` icon.
       Fields and other groups will be displayed in it.
-   #. Then set the properties of the container, ie:
+   #. Then set the properties of the container, i.e.:
 
       * the :guilabel:`Label`: the title that will be used for the container
       * the :guilabel:`Container Type`: it can be a :guilabel:`Tab`,
@@ -2409,6 +2418,11 @@ this group helps you configure the look of the widget assigned to the field:
 * :guilabel:`Override label color`: applies specific color to the field's label
 * :guilabel:`Override label font`: applies specific font properties (bold, italic, underline,
   strikethrough, or font family) to the field's label
+* :guilabel:`Size`: allows to control how widgets will relatively resize when resizing an
+  attribute form.
+
+  * :guilabel:`Horizontal stretch`: sets a higher horizontal value for widgets that need more horizontal space.
+  * :guilabel:`Vertical stretch`: determines how widgets resize vertically when the form is resized.
 
 General options
 ^^^^^^^^^^^^^^^
@@ -2572,7 +2586,8 @@ with the field type. The available widgets are:
 * **Relation Reference**: This is the default widget assigned to the referencing
   field (i.e., the foreign key in the child layer) when a :ref:`relation <vector_relations>`
   is set. It provides direct access to the parent feature's form which in turn
-  embeds the list and form of its children.
+  embeds the list and form of its children. The number of entries in the widget
+  can be limited for efficiency, and if limit is not set, all entries will be loaded.
 * **Text Edit** (default): This opens a text edit field that allows simple
   text or multiple lines to be used. If you choose multiple lines you
   can also choose html content.
@@ -2903,6 +2918,9 @@ that was selected from the identify results or attribute table (see :ref:`using_
 Double quote marks can be used to group text into a single argument to the program, script or command.
 Double quotes will be ignored if preceded by a backslash.
 
+Actions can invoke a single process, with arguments, so Boolean operators (such as ``&``, ``&&``, ``;``, ``|``) will not work.
+In UNIX-like operating systems multiple commands can be executed via ``bash -c``.
+
 The :guilabel:`Action Scopes` allows you to define where the action should be available.
 You have following choices:
 
@@ -3165,6 +3183,15 @@ feature identification:
   mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
   You can check the result of your code sample in the :guilabel:`Preview` frame
   (also convenient for previewing the :guilabel:`Display name` output).
+  Additionally, you can select and edit existing expressions
+  using the :guilabel:`Insert/Edit Expression` button. 
+  
+  .. note:: Understanding the :guilabel:`Insert/Edit Expression` button behavior
+
+   If you select some text within an expression (between "[%" and "%]"),
+   or if no text is selected but the cursor is inside an expression,
+   the whole expression will be automatically selected for editing.
+   If the cursor or a selected text is outside an expression, the dialog opens with the selection.
 
 .. _figure_display_code:
 

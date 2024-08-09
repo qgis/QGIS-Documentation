@@ -204,17 +204,26 @@ from the attribute table (in "table view" mode).
 For more advanced controls, press the |editTable| :sup:`Organize columns...`
 button from the dialog toolbar or choose :guilabel:`Organize columns...`
 in a column header contextual menu.
+
 In the new dialog, you can:
 
 * check/uncheck columns you want to show or hide: a hidden column will
-  disappear from every instances of the attribute table dialog until it is
-  actively restored.
+  disappear from every instance of the attribute table dialog until it is
+  actively restored. It is also possible to:
+
+  * choose :guilabel:`Show All` to display all the fields (columns) and actions in the table 
+  * choose :guilabel:`Hide All` to hide all the fields (columns) and actions in the table
+  * use the :guilabel:`Toggle selection` to invert visibility of the current selection of columns.
+    You can use :ref:`keyboard combination <interacting_features_table>`
+    for selecting multiple columns.
+
 * drag-and-drop items to reorder the columns in the attribute table. Note that
   this change is for the table rendering and does not alter the fields order in
   the layer datasource
 * add a new virtual :guilabel:`Actions` column that displays in each row a
   drop-down box or a button list of enabled actions.
   See :ref:`actions_menu` for more information about actions.
+
 
 .. _sort_columns:
 
@@ -302,11 +311,11 @@ selects the row in the attribute table. If the set of features selected in the
 map canvas (or attribute table) is changed, then the selection is also updated
 in the attribute table (or map canvas) accordingly.
 
-Rows can be selected by clicking on the row number on the left side of the
-row. **Multiple rows** can be marked by holding the :kbd:`Ctrl` key.
+Rows can be selected by clicking on the row number on the left side of the row.
+**Multiple rows** can be marked by holding the :kbd:`Ctrl` key.
 A **continuous selection** can be made by holding the :kbd:`Shift` key and
-clicking on several row headers on the left side of the rows. All rows
-between the current cursor position and the clicked row are selected.
+clicking on several row headers on the left side of the rows.
+All rows between the current cursor position and the clicked row are selected.
 Moving the cursor position in the attribute table, by clicking a cell in the
 table, does not change the row selection. Changing the selection in the main
 canvas does not move the cursor position in the attribute table.
@@ -328,7 +337,7 @@ combinations previously exposed.
 
 Beyond selecting features with the mouse, you can perform automatic selection
 based on feature's attribute using tools available in the attribute table
-toolbar, such as (see section :ref:`automatic_selection` and following one for
+toolbar, such as (see section :ref:`automatic_selection` and subsequent for
 more information and use case):
 
 * |expressionSelect| :guilabel:`Select By Expression...`
@@ -337,7 +346,7 @@ more information and use case):
 * |selectAll| :guilabel:`Select All Features`
 * |invertSelection| :guilabel:`Invert Feature Selection`.
 
-It is also possible to select features using the :ref:`filter_select_form`.
+It is also possible to :ref:`select features using forms <filter_select_form>`.
 
 
 .. _filter_features:
@@ -451,11 +460,11 @@ To clear the filter, either select the :guilabel:`Show all features` option
 from the bottom left pull-down menu, or clear the expression and
 click :guilabel:`Apply` or press :kbd:`Enter`.
 
-Using action on features
-========================
+More actions on features
+------------------------
 
-Users have several possibilities to manipulate feature with the contextual menu
-like:
+Users have several possibilities to manipulate feature in an attribute table.
+Right-click in a cell and you can:
 
 * :guilabel:`Select all` (:kbd:`Ctrl+A`) the features;
 * Copy the content of a cell in the clipboard with :guilabel:`Copy cell content`;
@@ -464,6 +473,8 @@ like:
 * :guilabel:`Flash feature`, to highlight it in the map canvas;
 * :guilabel:`Open form`: it toggles attribute table into form view with a focus
   on the clicked feature.
+* Display a :ref:`list of actions <actions_menu>`, previously enabled
+  in the :menuselection:`Layer properties --> Actions` tab.
 
 .. _figure_copy_cell:
 
@@ -472,35 +483,16 @@ like:
 
     Copy cell content button
 
-If you want to use attribute data in external programs (such as Excel,
-LibreOffice, QGIS or a custom web application), select one or more row(s) and
-use the |copySelected| :sup:`Copy selected rows to clipboard` button or press
-:kbd:`Ctrl+C`.
-
 .. _geometry_format:
 
-In :menuselection:`Settings --> Options --> Data Sources` menu you can
-define the format to paste to with :guilabel:`Copy features as` dropdown
-list:
+If you want to use attribute data in external programs (such as Excel,
+LibreOffice, or a custom web application), select one or more row(s) and
+use the |copySelected| :sup:`Copy selected rows to clipboard` button
+or press :kbd:`Ctrl+C`.
+Moreover, in :menuselection:`Settings --> Options --> Data Sources` menu
+you can define the format to paste to with the :guilabel:`Copy features as` option.
+More details at :ref:`datasources_options`.
 
-* Plain text, no geometry,
-* Plain text, WKT geometry,
-* GeoJSON
-
-You can also display a list of actions in this contextual menu. This is enabled
-in the :menuselection:`Layer properties --> Actions` tab.
-See :ref:`actions_menu` for more information on actions.
-
-Saving selected features as new layer
--------------------------------------
-
-The selected features can be saved as any OGR-supported vector format and
-also transformed into another coordinate reference system (CRS). In the
-contextual menu of the layer, from the :guilabel:`Layers` panel, click on
-:menuselection:`Export --> Save selected features as...` to define the name of
-the output dataset, its format and CRS (see section :ref:`general_saveas`). You'll
-notice that |checkbox| :menuselection:`Save only selected features` is checked.
-It is also possible to specify GDAL creation options within the dialog.
 
 .. index:: Field Calculator, Derived Fields, Virtual Fields, Fields edit
 .. _calculate_fields_values:
@@ -508,17 +500,28 @@ It is also possible to specify GDAL creation options within the dialog.
 Editing attribute values
 =========================
 
-Editing attribute values can be done by:
+In order to modify data in an attribute table, you should first toggle the layer into edit.
+Press the |toggleEditing| :sup:`Toggle Editing` button.
+Depending on the layer geometry type and the clipboard state,
+a few more tools are enabled in the attribute table top toolbar.
+
+Editing attribute values can then be done by:
 
 * typing the new value directly in the cell, whether the attribute table is in
   table or form view. Changes are hence done cell by cell, feature by feature;
 * using the :ref:`field calculator <vector_field_calculator>`: update in a row
-  a field that may already exist or to be created but for multiple features. It
-  can be used to create virtual fields;
+  a field that may already exist or to be created but for multiple features.
+  It can be used to create virtual fields;
 * using the quick field :ref:`calculation bar <quick_field_calculation_bar>`:
   same as above but for only existing field;
 * or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row
   multiple fields for multiple features.
+
+Putting the layer into edit mode will also allow you to
+|editPaste| :sup:`Paste features from clipboard` (:kbd:`Ctrl+V`)
+|editCut| :sup:`Cut selected rows to clipboard` (:kbd:`Ctrl+X`)
+or |deleteSelectedFeatures| :sup:`Delete selected features`.
+More details at :ref:`editingvector`.
 
 .. _vector_field_calculator:
 
@@ -527,8 +530,8 @@ Using the Field Calculator
 
 The |calculateField| :sup:`Field Calculator` button in the attribute table
 allows you to perform calculations on the basis of existing attribute values or
-defined functions, for instance, to calculate length or area of geometry
-features. The results can be used to update an existing field, or written
+defined functions, for instance, to calculate length or area of geometry features.
+The results can be used to update an existing field, or written
 to a new field (that can be a :ref:`virtual <virtual_field>` one).
 
 The field calculator is available on any layer that supports edit.
@@ -585,23 +588,30 @@ Creating a Virtual Field
 ------------------------
 
 A virtual field is a field based on an expression calculated on the fly, meaning
-that its value is automatically updated as soon as an underlying parameter
-changes. The expression is set once; you no longer need to recalculate the field
-each time underlying values change.
+that its value is automatically updated as soon as an underlying parameter changes.
+The expression applies to all the features in the layer and is set once;
+you no longer need to recalculate the field each time underlying values change.
 For example, you may want to use a virtual field if you need area to be evaluated
 as you digitize features or to automatically calculate a duration between dates
 that may change (e.g., using ``now()`` function).
 
+Creating a virtual field is done through the |calculateField| :guilabel:`Field calculator` dialog
+and follows the :ref:`same procedure <vector_field_calculator>` as for regular fields.
+Simply remember to check the |checkbox| :guilabel:`Create virtual field` option
+and use a field type compatible with the data your expression would generate.
+
+Editing a virtual field is done through the |sourceFields| :guilabel:`Fields` tab
+of the layer properties dialog (see :ref:`vector_fields_menu`).
+The expression defining the field is exposed in the :guilabel:`Comment` column,
+and pressing the |expression| button next to it opens an expression editor window
+for update.
+
 .. note:: **Use of Virtual Fields**
 
+   * A field can be set virtual only at its creation.
    * Virtual fields are not permanent in the layer attributes, meaning that
      they're only saved and available in the project file they've been created.
-   * A field can be set virtual only at its creation.
-     Virtual fields are marked with a purple background in the fields tab of
-     the layer properties dialog to distinguish them from regular physical
-     or joined fields. Their expression can be edited later by pressing the
-     expression button in the Comment column. An expression editor window will
-     be opened to adjust the expression of the virtual field.
+
 
 .. _quick_field_calculation_bar:
 
@@ -721,7 +731,7 @@ Under the :guilabel:`Feature` column, panel will display following information:
   * Depending on the geometry type, cartesian measurements of length, perimeter, or area
     in the layer's CRS units. For 3D line vectors, the cartesian line length is available.
   * Depending on the geometry type and if an ellipsoid is set in the :guilabel:`Project Properties`
-    dialog (:guilabel:`General` --> :guilabel:`Measurements`), ellipsoidal values
+    dialog (:menuselection:`General --> Measurements`), ellipsoidal values
     of length, perimeter, or area using the specified units.
   * The count of geometry parts in the feature and the number of the part clicked.
   * The count of vertices in the feature.
@@ -930,6 +940,8 @@ from the external storage system. In that case, more details might appear in the
 .. |selectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
 .. |sort| image:: /static/common/sort.png
+   :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
    :width: 1.5em
 .. |taskCancel| image:: /static/common/mTaskCancel.png
    :width: 1.5em

@@ -251,7 +251,7 @@ Converts a coordinate to degree, minute, second.
 to_int
 ......
 
-Converts a string to integer number. Nothing is returned if a value cannot be converted to integer (e.g '123asd' is invalid).
+Converts a string to integer number. If a value cannot be converted to integer the expression is invalid (e.g '123asd' is invalid).
 
 .. list-table::
    :widths: 15 85
@@ -293,7 +293,7 @@ Converts a string to an interval type. Can be used to take days, hours, month, e
 to_real
 .......
 
-Converts a string to a real number. Nothing is returned if a value cannot be converted to real (e.g '123.56asd' is invalid).  Numbers are rounded after saving changes if the precision is smaller than the result of the conversion.
+Converts a string to a real number. If a value cannot be converted to real the expression is invalid (e.g '123.56asd' is invalid).  Numbers are rounded after saving changes if the precision is smaller than the result of the conversion.
 
 .. list-table::
    :widths: 15 85
