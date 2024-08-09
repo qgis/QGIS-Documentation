@@ -89,11 +89,9 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
   order, group layers, remove and restore items in the list, edit layer names
   and symbology and add a filter.
 
-  * Use the |expandTree| and |collapseTree| buttons to expand or collapse the
-    layout legend tree. The |expandTree| button will expand all the groups and
-    subgroups in the legend tree. The |collapseTree| button will collapse all 
-    the groups and subgroups in the legend tree. Ensure that the :guilabel:`Auto update`
-    is unchecked to use these buttons.
+  * Use the |expandTree| :sup:`Expand all` and |collapseTree| :sup:`Collapse all` buttons
+    to respectively expand or collapse all the groups and subgroups in the legend tree. 
+    Ensure that the :guilabel:`Auto update` is unchecked to use these buttons.
   * The item order can be changed using the |arrowUp| and |arrowDown| buttons or
     with 'drag-and-drop' functionality. The order can not be changed for WMS
     legend graphics.
