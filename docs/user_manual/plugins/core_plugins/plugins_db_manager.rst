@@ -80,6 +80,12 @@ It is possible to highlight a portion of the SQL to only execute that
 portion when pressing :kbd:`Ctrl+R` or clicking the :guilabel:`Execute`
 button.
 
+After executing your query, you can select specific cells in the result set.
+Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the clipboard.
+The copied data is available as a formatted table. This allows
+you to paste the data into other applications, such as spreadsheet where it will
+show up as a table.
+
 The :guilabel:`Query History` button stores the last 20 queries of each database
 and provider.  
 
