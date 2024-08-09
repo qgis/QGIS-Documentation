@@ -82,7 +82,7 @@ button.
 
 After executing your query, you can select specific cells in the result set.
 Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the clipboard.
-The copied data is available in both plain text and HTML format. This allows
+The copied data is available as a formatted table. This allows
 you to paste the data into other applications, such as spreadsheet where it will
 show up as a table.
 
