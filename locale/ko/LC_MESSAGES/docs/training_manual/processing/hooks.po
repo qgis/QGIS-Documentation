@@ -36,3 +36,125 @@ msgstr ""
 #: ../../docs/training_manual/processing/hooks.rst:2
 msgid "Pre- and post-execution script hooks"
 msgstr "실행 전 및 실행 후 스크립트 후크"
+
+#: ../../docs/training_manual/processing/hooks.rst:4
+msgid ""
+"This lesson shows how to use pre- and post-execution hooks, which allow to "
+"perform additional operations before and after actual processing."
+msgstr ""
+"이 수업에서 실제 공간 처리 과정 이전과 이후에 추가적인 작업을 수행할 수 있게 해주는 실행 전(pre-execution) 및 실행 "
+"후(post-execution) 후크(hook)를 사용하는 방법을 배울 것입니다."
+
+#: ../../docs/training_manual/processing/hooks.rst:7
+msgid ""
+"Pre- and post-execution hooks are Processing scripts that run before and "
+"after actual data processing is performed. This can be used to automate "
+"tasks that should be performed whenever an algorithm is executed."
+msgstr ""
+"실행 전 그리고 실행 후 후크란 실제 데이터를 처리하기 이전과 이후 실행되는 공간 처리 스크립트를 말합니다. 어떤 알고리즘을 실행할 "
+"때마다 수행되어야 하는 작업이 있는 경우, 해당 작업을 자동화하는 데 쓰일 수 있습니다."
+
+#: ../../docs/training_manual/processing/hooks.rst:11
+msgid ""
+"The syntax of the hooks is identical to the syntax of Processing scripts, "
+"see the corresponding `chapter "
+"<https://docs.qgis.org/testing/en/docs/user_manual/processing/console.html>`_"
+" in the QGIS User Guide for more details."
+msgstr ""
+"후크의 문법은 공간 처리 스크립트의 문법과 동일합니다. 더 자세한 내용을 알고 싶다면 QGIS 사용자 지침서에 있는 `콘솔에서 공간 처리"
+" 알고리즘 사용 "
+"<https://docs.qgis.org/3.34/ko/docs/user_manual/processing/console.html>`_ "
+"페이지를 참조하세요."
+
+#: ../../docs/training_manual/processing/hooks.rst:15
+msgid ""
+"In addition to all scripts features, in hooks you can use a special global "
+"variable named ``alg``, which represents the algorithm that has just been "
+"(or is about to be) executed."
+msgstr ""
+"모든 스크립트 기능들에 더해, 후크에서는 ``alg`` 라는 특별한 전체 수준 변수를 사용할 수 있습니다. ``alg`` 는 방금 실행된"
+" (또는 곧 실행될) 알고리즘을 나타내는 변수입니다."
+
+#: ../../docs/training_manual/processing/hooks.rst:19
+msgid ""
+"Here is an example post-execution script. By default, Processing stores "
+"analysis results in temporary files. This script will copy outputs to a "
+"specific directory, so they won't be deleted after closing QGIS."
+msgstr ""
+"다음은 실행 후 스크립트의 예시입니다. 공간 처리 프레임워크는 기본적으로 분석 결과를 임시 파일로 저장합니다. 이 스크립트는 지정한 "
+"디렉터리에 산출물을 복사해서 QGIS를 닫은 다음에도 산출물이 삭제되지 않도록 해줄 것입니다."
+
+#: ../../docs/training_manual/processing/hooks.rst:36
+msgid ""
+"In the first two lines we import the required Python packages: ``os`` --- "
+"for path manipulations, e.g. extracting file name, and ``shutil`` --- for "
+"various filesystem operations like copying files. In the third line we "
+"import Processing outputs. This will be explained in more detail later in "
+"this lesson."
+msgstr ""
+"처음 두 행에서 필수 파이썬 패키지 2개를 가져옵니다. ``os`` 는 예를 들어 파일 이름 추출과 같은 경로 조작을 위한 패키지이고, "
+"``shutil`` 은 파일 복사 같은 다양한 파일 시스템 작업을 위한 패키지입니다. 세 번째 행에서 공간 처리 산출물을 가져옵니다. "
+"이에 대해서는 이 수업 후반에 자세히 설명하겠습니다."
+
+#: ../../docs/training_manual/processing/hooks.rst:41
+msgid ""
+"Then we define a ``MY_DIRECTORY`` constant, which is the path to the "
+"directory where we want to copy analysis results."
+msgstr ""
+"그 다음 행에서 ``MY_DIRECTORY`` 상수를 정의합니다. 이 상수는 분석 결과를 복사하고자 하는 디렉터리를 가리키는 경로입니다."
+
+#: ../../docs/training_manual/processing/hooks.rst:44
+msgid ""
+"At the end of the script, we have the main hook code. In the loop we iterate"
+" over all algorithm outputs and check if this output is a file-based output "
+"and can be copied. If so, we determine top-level directory in which output "
+"files are located and then copy all files to our directory."
+msgstr ""
+"이 스크립트의 마지막 부분이 주 후크 코드입니다. 루프(loop)에서 알고리즘 산출물이 파일 기반 산출물인지 따라서 복사할 수 있는지를 "
+"모든 산출물들에 대해 반복해서 확인합니다. 알고리즘 산출물이 파일 기반이어서 복사할 수 있다면, 산출 파일들이 있는 최상위 디렉터리를 "
+"알아내서 파일들을 전부 지정한 디렉터리로 복사합니다."
+
+#: ../../docs/training_manual/processing/hooks.rst:49
+msgid ""
+"To activate this hook we need to open the Processing options, find the entry"
+" named *Post-execution script file* in the *General* group, and specify the "
+"filename of the hook script there. the specified hook will be executed after"
+" each Processing algorithm."
+msgstr ""
+"이 후크를 활성화시키려면 공간 처리 옵션을 열고 :guilabel:`General` 그룹에서 :guilabel:`Post-"
+"execution script file` 을 찾은 다음 해당 옵션에 후크 스크립트의 파일 이름을 지정해줘야 합니다. 그러면 공간 처리 "
+"알고리즘이 실행된 후마다 지정한 후크가 실행될 것입니다."
+
+#: ../../docs/training_manual/processing/hooks.rst:53
+msgid ""
+"In a similar way, we can implement pre-execution hooks. For example, let's "
+"create a hook to check input vectors for geometry errors."
+msgstr ""
+"비슷한 방법으로 실행 전 후크도 구현할 수 있습니다. 예를 들어 입력 벡터에 도형 오류가 있는지 여부를 확인하는 후크를 생성해봅시다."
+
+#: ../../docs/training_manual/processing/hooks.rst:69
+msgid ""
+"As in the previous example, first we import required QGIS and Processing "
+"packages."
+msgstr "이전 예시와 마찬가지로, 먼저 필수 QGIS 패키지와 공간 처리 패키지를 가져옵니다."
+
+#: ../../docs/training_manual/processing/hooks.rst:72
+msgid ""
+"Then we iterate over all the algorithm parameters and if a ParameterVector "
+"parameter is found, we get the corresponding vector layer object from it. We"
+" loop over all the features of the layer and check them for geometry errors."
+" If at least one feature contains an invalid geometry, we print a warning "
+"message."
+msgstr ""
+"그 다음 알고리즘 파라미터들을 전부 반복하면서 :kbd:`ParameterVector` 파라미터가 있는지를 찾고, 해당 파라미터가 "
+"존재하는 경우 이 파라미터에서 해당하는 벡터 레이어 객체를 얻습니다. 레이어의 모든 피처를 반복하면서 도형 오류가 있는지를 확인합니다. "
+"단 하나의 피처라도 무결하지 않은 도형을 담고 있다면, 경고 메시지를 출력합니다."
+
+#: ../../docs/training_manual/processing/hooks.rst:76
+msgid ""
+"To activate this hook we need enter its filename in the *Pre-execution "
+"script file* option in the Processing configuration dialog. The hook will be"
+" executed before running any Processing algorithm."
+msgstr ""
+"이 후크를 활성화시키려면 공간 처리 환경설정 대화창에 있는 :guilabel:`Pre-execution script file` 옵션에 "
+"후크의 파일 이름을 입력해야 합니다. 그러면 공간 처리 알고리즘을 실행하기 전마다 해당 후크가 실행될 것입니다."
