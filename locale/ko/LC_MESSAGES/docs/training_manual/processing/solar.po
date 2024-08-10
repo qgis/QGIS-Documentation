@@ -50,15 +50,15 @@ msgstr ""
 msgid ""
 "This chapter shows how to use several criteria to locate the areas suitable "
 "for installing a photovoltaic power station"
-msgstr "이 강의에서는 태양광 발전소 설치에 적합한 지역의 위치를 선정하는 몇몇 기준을 어떻게 활용하는지 배울 것입니다."
+msgstr "이 수업에서는 태양광 발전소 설치에 적합한 지역의 위치를 선정하는 몇몇 기준을 어떻게 활용하는지 배울 것입니다."
 
 #: ../../docs/training_manual/processing/solar.rst:8
 msgid "First of all, create an aspect map from DTM:"
-msgstr "우선 DEM으로 지도방향을 생성합니다:"
+msgstr "우선 DEM으로부터 경사 방향 맵을 생성합니다:"
 
 #: ../../docs/training_manual/processing/solar.rst:10
 msgid ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
-msgstr ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
+msgstr ":menuselection:`GRASS --> r.aspect` [데이터 유형: int; 셀 크기: 100]"
 
 #: ../../docs/training_manual/processing/solar.rst:12
 msgid ""
@@ -66,8 +66,8 @@ msgid ""
 "East. To extract only South facing slopes (270 degrees +- 45), we can "
 "reclassify it:"
 msgstr ""
-"GRASS에서는 동쪽에서 반시계방향으로 도분초로 방향이 계산됩니다. 남향 경사 (270˚ ± 45˚)만을 추출하려면 다음과 같이 "
-"재분류하십시오:"
+"GRASS는 동쪽으로부터 반시계방향으로, 도 단위로 방향을 계산합니다. 남향 경사면(270˚ ± 45˚)만을 추출하려면 다음 알고리즘을 "
+"사용해서:"
 
 #: ../../docs/training_manual/processing/solar.rst:14
 msgid ":menuselection:`GRASS --> r.reclass`"
@@ -75,7 +75,7 @@ msgstr ":menuselection:`GRASS --> r.reclass`"
 
 #: ../../docs/training_manual/processing/solar.rst:16
 msgid "with the following rules::"
-msgstr "다음규칙 사용:"
+msgstr "다음 규칙을 따라 재분류하십시오:"
 
 #: ../../docs/training_manual/processing/solar.rst:21
 msgid ""
@@ -89,7 +89,7 @@ msgstr ""
 msgid ""
 "We want to build a large farm, so we select only large (> 100 ha) contiguous"
 " areas:"
-msgstr "매우 넓은 발전소를 건설하려 하기 때문에, (100ha를 넘는) 인접 지역만을 선택할 것입니다."
+msgstr "매우 넓은 발전소를 건설하려 하기 때문에, (100ha를 넘는) 연속 지역만을 선택할 것입니다:"
 
 #: ../../docs/training_manual/processing/solar.rst:25
 msgid ":menuselection:`GRASS --> r.reclass.greater`"
@@ -103,12 +103,10 @@ msgstr "마지막으로 벡터로 변환해봅시다:"
 msgid ""
 ":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
 "yes]"
-msgstr ""
-":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
-"yes]"
+msgstr ":menuselection:`GRASS --> r.to.vect` [피처 유형: area; 모서리 평활화: yes]"
 
 #: ../../docs/training_manual/processing/solar.rst:31
 msgid ""
 "**Exercise for the reader**: repeat the analysis, replacing GRASS commands "
 "with analogous from other programs."
-msgstr "**사용자를 위한 실습 예제:** GRASS 명령어를 다른 프로그램들의 유사한 명령어로 바꿔 다시 분석을 수행하십시오."
+msgstr "**사용자를 위한 예제:** GRASS 명령어를 다른 프로그램들의 유사한 명령어로 바꿔 다시 분석을 수행하십시오."
