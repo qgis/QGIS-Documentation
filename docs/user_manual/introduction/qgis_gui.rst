@@ -566,6 +566,18 @@ actions like:
      - :kbd:`Ctrl+Alt+-`
      - :guilabel:`Map Navigation`
      - :ref:`zoom_pan`
+   * - :menuselection:`Data Filtering -->`
+     -
+     -
+     - :ref:`label_mapview`
+   * - :menuselection:`-->` |temporal| :guilabel:`Temporal Controller`
+     -
+     - :guilabel:`Map Navigation`
+     - :ref:`temporal_controller`
+   * - :menuselection:`-->` |elevation| :guilabel:`Elevation Controller`
+     -
+     -
+     - :ref:`elevation_controller`   
    * - |identify| :guilabel:`Identify Features`
      - :kbd:`Ctrl+Shift+I`
      - :guilabel:`Attributes`
@@ -2199,6 +2211,8 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
+.. |elevation| image:: /static/common/Elevation.png
+   :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
 .. |extents| image:: /static/common/extents.png
@@ -2491,6 +2505,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
 .. |symmetricalDifference| image:: /static/common/mAlgorithmSymmetricalDifference.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em

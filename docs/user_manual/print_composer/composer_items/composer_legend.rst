@@ -89,6 +89,9 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
   order, group layers, remove and restore items in the list, edit layer names
   and symbology and add a filter.
 
+  * Use the |expandTree| :sup:`Expand all` and |collapseTree| :sup:`Collapse all` buttons
+    to respectively expand or collapse all the groups and subgroups in the legend tree. 
+    Ensure that the :guilabel:`Auto update` is unchecked to use these buttons.
   * The item order can be changed using the |arrowUp| and |arrowDown| buttons or
     with 'drag-and-drop' functionality. The order can not be changed for WMS
     legend graphics.
@@ -320,6 +323,10 @@ and lines can be customized through this dialog.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |collapseTree| image:: /static/common/mActionCollapseTree.png
+   :width: 1.5em
+.. |expandTree| image:: /static/common/mActionExpandTree.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
