@@ -50,15 +50,15 @@ msgstr ""
 msgid ""
 "This chapter shows how to create an oversimplified model to predict the "
 "probability of landslides."
-msgstr "이 강의에서는 산사태 가능성을 예측하는 과단순화(oversimplified) 모형을 생성하는 법을 배울 것입니다."
+msgstr "이 수업에서는 산사태 가능성을 예측하는 과단순화(oversimplified) 모델을 생성하는 법을 배울 것입니다."
 
 #: ../../docs/training_manual/processing/geomorpho.rst:9
 msgid ""
 "First, we calculate slope (choose among various backends; the interested "
 "reader can calculate the difference between the outputs):"
 msgstr ""
-"먼저, 경사도를 계산해봅시다. (다음 여러 후위(backend)들 가운데 선택하십시오. 관심이 있다면 각 산출물들 강의 차이를 계산해볼 "
-"수도 있습니다.)"
+"먼저, 경사도를 계산해봅시다. (다음 여러 백엔드(backend)들 가운데 선택하십시오. 관심이 있다면 각 산출물들 사이의 차이를 "
+"계산해볼 수도 있습니다.)"
 
 #: ../../docs/training_manual/processing/geomorpho.rst:12
 msgid ":menuselection:`GRASS --> r.slope`"
@@ -81,7 +81,7 @@ msgstr "그 다음 기상관측소에서 측정한 강수량을 보간한 값을
 #: ../../docs/training_manual/processing/geomorpho.rst:19
 msgid ":menuselection:`GRASS --> v.surf.rst` (resolution: 500 m)"
 msgstr ""
-"메뉴에서 :menuselection:`GRASS --> v.surf.rst` 를 선택하십시오. [해상도(resolution)는 500m]"
+"메뉴에서 :menuselection:`GRASS --> v.surf.rst` 를 선택하십시오. [해상도(resolution): 500m]"
 
 #: ../../docs/training_manual/processing/geomorpho.rst:21
 msgid ""
@@ -89,8 +89,8 @@ msgid ""
 " and slope (of course a real model will use more layers, and appropriate "
 "parameters), let's say ``(rainfall * slope )/100``:"
 msgstr ""
-"산사태 가능성은 아주 대략적으로 강수량과 경사도에 따라 달라질 것입니다. (물론 실제 모형은 더 많은 레이어와 적절한 파라미터들을 사용할"
-" 것입니다.) 이렇게 산사태 가능성을 :text:`(rainfall * slope )/100` 라고 할 때,"
+"산사태 가능성은 아주 대략적으로 강수량과 경사도에 따라 달라질 것입니다. (물론 실제 모델은 더 많은 레이어와 적절한 파라미터들을 사용할"
+" 것입니다.) 이렇게 산사태 가능성을 ``(rainfall * slope )/100`` 라고 할 때:"
 
 #: ../../docs/training_manual/processing/geomorpho.rst:25
 msgid ""
@@ -98,8 +98,8 @@ msgid ""
 ":menuselection:`GRASS --> r.mapcalc`)"
 msgstr ""
 "메뉴에서 :menuselection:`SAGA --> Raster calculator` 를 선택한 다음 rain 항목과 slope 항목을"
-" 각각 a, b로 지정, :text:`(a*b)/100` 공식을 입력하십시오. (또는 :menuselection:`GRASS --> "
-"r.mapcalc` 메뉴를 사용해도 됩니다."
+" 각각 a, b로 지정, ``(a*b)/100`` 공식을 입력하십시오. (또는 :menuselection:`GRASS --> "
+"r.mapcalc` 메뉴를 사용해도 됩니다.)"
 
 #: ../../docs/training_manual/processing/geomorpho.rst:27
 msgid ""
