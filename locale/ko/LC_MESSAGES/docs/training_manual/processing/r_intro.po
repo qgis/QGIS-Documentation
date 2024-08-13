@@ -32,39 +32,98 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/processing/r_intro.rst:5
 msgid "Use R scripts in Processing"
-msgstr "처리 과정에서 R 스크립트 사용"
+msgstr "공간 처리에 R 스크립트 사용하기"
+
+#: ../../docs/training_manual/processing/r_intro.rst:7
+msgid ""
+"Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/it>`_"
+msgstr ""
+"이 수업은 `Scuola Superiore Sant'Anna <https://www.santannapisa.it/it>`_ 의 후원으로 "
+"마테오 게타(Matteo Ghetta)가 기고했습니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:10
+msgid ""
+"Processing (with the ``Processing R Provider`` plugin) makes it possible to "
+"write and run R scripts inside QGIS."
+msgstr ""
+"공간 처리 프레임워크의 (그리고 :guilabel:`Processing R Provider` 플러그인의) 도움으로, QGIS에서 R "
+"스크립트를 작성하고 실행할 수 있습니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:14
+msgid ""
+"R has to be installed on your computer and the PATH has to be correctly set "
+"up. Moreover Processing just calls the external R packages, it is not able "
+"to install them. So be sure to install external packages directly in R. See "
+"the related :ref:`chapter <creating_r_scripts>` in the user manual."
+msgstr ""
+"여러분의 컴퓨터에 R가 설치되어 있어야 하고, PATH도 정확하게 설정되어 있어야 합니다. 게다가 공간 처리 프레임워크는 단지 외부 R "
+"패키지들을 호출만 할 뿐이기 때문에, 공간 처리 프레임워크가 이 패키지들을 설치할 수는 없습니다. 따라서 R에 이 외부 패키지들을 직접 "
+"설치해줘야 합니다. 사용자 지침서에 있는 `R 스크립트 생성하기 <creating_r_scripts>` 를 참조하세요."
+
+#: ../../docs/training_manual/processing/r_intro.rst:20
+msgid ""
+"If you have *package* problems, it may be related to missing *mandatory* "
+"packages required by Processing, like ``sp``, ``rgdal`` and ``raster``."
+msgstr ""
+"*패키지* 관련 문제가 발생하는 경우, 공간 처리 프레임워크가 요구하는, 예를 들어 ``sp``, ``rgdal`` 및 "
+"``raster`` 같은 *필수* 패키지들이 누락되었기 때문일 수도 있습니다."
 
 #: ../../docs/training_manual/processing/r_intro.rst:24
 msgid "Adding scripts"
-msgstr "스크립트 추가"
+msgstr "스크립트 추가하기"
+
+#: ../../docs/training_manual/processing/r_intro.rst:26
+msgid ""
+"Adding a script is simple. The easiest way is to open the Processing toolbox"
+" and choose :menuselection:`Create new R script...` from the R menu "
+"(labelled with an R icon) at the top of the Processing Toolbox. You can also"
+" create the script in for instance a text editor and save it in your R "
+"scripts folder (:file:`processing/rscripts`). When it has been saved there, "
+"it will be available for editing by right-clicking on the script name in the"
+" processing toolbox and then choose :menuselection:`Edit Script...`)."
+msgstr ""
+"스크립트를 추가하는 일은 간단합니다. 가장 쉬운 방법은 공간 처리 툴박스를 열고 (R 아이콘이 붙은) R 메뉴에서 "
+":menuselection:`Create new R script...` 를 선택하는 것입니다. 아니면 예를 들어 텍스트 편집기에서 "
+"스크립트를 생성한 다음 R 스크립트 폴더(:file:`processing/rscripts`)에 저장해도 됩니다. 이 폴더에 스크립트를 "
+"저장하면, 공간 처리 툴박스에서 해당 스크립트의 이름을 오른쪽 클릭하고 :menuselection:`Edit Script...` 를 "
+"선택해서 편집할 수 있게 됩니다."
 
 #: ../../docs/training_manual/processing/r_intro.rst:39
 msgid ""
 "If you cannot see R in Processing, you have to activate it in "
 ":menuselection:`Processing --> Options --> Providers`"
 msgstr ""
-"처리 과정에 R이 안 보일 경우, :menuselection:`Processing --> Options --> Providers` "
+"공간 처리에서 R가 안 보일 경우, :menuselection:`Processing --> Options --> Providers` "
 "메뉴에서 활성화시켜야 합니다."
 
 #: ../../docs/training_manual/processing/r_intro.rst:42
 msgid ""
 "It opens a *script editor window* in which you have to specify some "
 "parameters before you can add the script body."
-msgstr "*스크립트 편집 창* 이 열리는데, 여기에 스크립트 자체를 추가하기 전에 몇몇 파라미터들을 설정해줘야 합니다."
+msgstr "*스크립트 편집기 창* 이 열리는데, 여기에 스크립트 본문을 추가하기 전에 몇몇 파라미터들을 지정해줘야 합니다."
 
 #: ../../docs/training_manual/processing/r_intro.rst:50
 msgid "Creating plots"
-msgstr "그래프 생성"
+msgstr "그래프 생성하기"
 
 #: ../../docs/training_manual/processing/r_intro.rst:52
 msgid ""
 "In this tutorial we are going to create a **boxplot** of a vector layer "
 "field."
-msgstr "이번 예제에서 벡터 레이어 항목의 **상자 모양 그래프**를 생성할 것입니다."
+msgstr "이번 예제에서 벡터 레이어 필드의 **상자 수염 그림(boxplot)** 을 생성할 것입니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:54
+msgid ""
+"Open the :file:`r_intro.qgs` QGIS project under the "
+":file:`exercise_data/processing/r_intro/` folder."
+msgstr ""
+":file:`exercise_data/processing/r_intro/` 폴더에 있는 :file:`r_intro.qgs` QGIS "
+"프로젝트를 여십시오."
 
 #: ../../docs/training_manual/processing/r_intro.rst:59
 #: ../../docs/training_manual/processing/r_intro.rst:180
@@ -73,11 +132,77 @@ msgstr "스크립트 파라미터"
 
 #: ../../docs/training_manual/processing/r_intro.rst:61
 msgid "Open the editor and start writing at the beginning of it."
-msgstr "편집기를 실행해서 첫 부분부터 입력을 시작하십시오."
+msgstr "편집기를 실행해서 스크립트 처음부터 입력하십시오."
 
 #: ../../docs/training_manual/processing/r_intro.rst:63
 msgid "You **must** specify some parameters **before** the script body:"
-msgstr "스크립트 자체를 입력하기 **전에** 몇몇 파라미터들을 설정 **해야** 합니다."
+msgstr "스크립트 자체를 입력하기 **전에** 몇몇 파라미터들을 지정 **해야만** 합니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:65
+msgid ""
+"The name of the group (`plots` in this case) in which you want to put your "
+"script (if the group does not exist, it will be created)::"
+msgstr ""
+"여러분의 스크립트가 들어가야 할 그룹의 이름 (이 경우엔 'plots') (해당 그룹이 존재하지 않는 경우 생성할 것입니다):"
+
+#: ../../docs/training_manual/processing/r_intro.rst:70
+msgid ""
+"You will find your script in the **plots** R group in the Processing "
+"toolbox."
+msgstr "공간 처리 툴박스에 있는 **plots** R 그룹에서 여러분의 스크립트를 찾을 수 있을 것입니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:72
+msgid ""
+"You have to tell Processing that you want to display a plot (in this "
+"example)::"
+msgstr "(이 예제에서는) 공간 처리 프레임워크에 그래프를 표출하고 싶다고 말해주어야 합니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:76
+msgid ""
+"You will then find a link to the plot in the **Result Viewer** panel (can be"
+" turned on / off in :menuselection:`View --> Panels` and with "
+":menuselection:`Processing --> Results Viewer`)."
+msgstr ""
+"그러면 **결과물 뷰어(Result Viewer)** 패널에 있는 그래프를 가리키는 링크를 찾을 수 있을 것입니다. (이 패널은 "
+":menuselection:`View --> Panels` 메뉴에서 그리고 :menuselection:`Processing --> "
+"Results Viewer` 메뉴로 켜고끌 수 있습니다.)"
+
+#: ../../docs/training_manual/processing/r_intro.rst:80
+msgid ""
+"You also need to tell Processing about your input data. In this example we "
+"want to create a plot from a field of a vector layer::"
+msgstr ""
+"공간 처리 프레임워크에 여러분의 입력 데이터에 대해서도 말해주어야 합니다. 이 예제에서는 벡터 레이어의 필드 하나로부터 그래프를 "
+"생성하고자 합니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:85
+msgid ""
+"Processing now knows that the input is a vector. The name *Layer* is not "
+"important, what matters is the **vector** parameter."
+msgstr ""
+"공간 처리 프레임워크가 이제 입력물이 벡터라는 사실을 알았습니다. 'Layer'라는 이름은 중요하지 않습니다. 중요한 것은 "
+"**vector** 파라미터입니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:88
+msgid ""
+"Finally, you have to specify the input field of the vector layer (using the "
+"name you have provided above - *Layer*)::"
+msgstr "마지막으로, 벡터 레이어의 입력 필드를 (앞에서 입력한 'Layer'라는 이름을 사용해서) 지정해줘야 합니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:93
+msgid ""
+"Processing now knows that you need a field of *Layer*, and that you will "
+"call it **X**."
+msgstr ""
+"공간 처리 프레임워크가 이제 'Layer'의 필드 하나가 필요하다는 사실과, 해당 필드의 이름이 **X** 라는 사실을 알게 되었습니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:96
+msgid "It is also possible to define the name of your script using ``name``::"
+msgstr "``name`` 파라미터를 사용해서 여러분의 스크립트의 이름을 정의할 수도 있습니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:100
+msgid "If not defined, the file name will be used as the name of the script."
+msgstr "정의하지 않는 경우, 파일 이름을 스크립트 이름으로 사용할 것입니다."
 
 #: ../../docs/training_manual/processing/r_intro.rst:103
 #: ../../docs/training_manual/processing/r_intro.rst:206
@@ -88,16 +213,68 @@ msgstr "스크립트 본문"
 msgid ""
 "Now that you have set up the *heading* of the script you can add the "
 "function::"
-msgstr "이제 스크립트의 *표제(heading)*를 설정했으니, 함수를 추가할 수 있습니다."
+msgstr "이제 스크립트의 *머리말(heading)*를 설정했으니, 함수를 추가할 수 있습니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:109
+msgid ""
+"**boxplot** is the name of the R function, the parameter **Layer** is the "
+"name that you have defined for the input dataset and **X** is the name you "
+"have defined for the field of that dataset."
+msgstr ""
+"**boxplot** 은 R 함수의 이름이고, **Layer** 파라미터는 입력 데이터셋에 대해 정의한 이름이며, **X** 는 해당 "
+"데이터셋의 필드에 대해 정의한 이름입니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:114
+msgid ""
+"The parameter **X** has to be within double square brackets (``[[]]``)."
+msgstr "**X** 파라미터는 이중 대괄호(``[[]]``)로 감싸야 합니다."
 
 #: ../../docs/training_manual/processing/r_intro.rst:116
 #: ../../docs/training_manual/processing/r_intro.rst:225
 msgid "The final script looks like this::"
-msgstr "최종 스크립트는 다음과 같이 보일 겁니다."
+msgstr "최종 스크립트는 다음과 같이 보일 것입니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:126
+msgid ""
+"Save the script in the default path suggested by Processing "
+"(processing/rscripts). If you have not defined a ``name`` in the script "
+"heading, the file name you choose will become the name of the script in the "
+"Processing toolbox."
+msgstr ""
+"공간 처리 프레임워크가 제안하는 기본 경로(:file:`processing/rscripts`)에 스크립트를 저장하십시오. 스크립트 "
+"머리말에 ``name`` 을 정의하지 않았다면, 공간 처리 툴박스에 여러분이 선택한 파일 이름이 스크립트 이름으로 나타날 것입니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:131
+msgid ""
+"You can save the script wherever you like, but Processing will then not be "
+"able to include it in the processing toolbox automatically, so you have to "
+"upload it manually."
+msgstr ""
+"원하는 위치 어디에라도 스크립트를 저장할 수 있지만, 그러면 공간 처리 프레임워크가 공간 처리 툴박스에 해당 스크립트를 자동으로 "
+"포함시키지 못 할 것입니다. 즉 여러분이 직접 업로드해줘야 합니다."
 
 #: ../../docs/training_manual/processing/r_intro.rst:135
 msgid "Now just run it using the button on the top of the editor window:"
-msgstr "이제 편집 창 최상단에 있는 버튼을 클릭해서 스크립트를 실행해보십시오."
+msgstr "이제 편집기 창 최상단에 있는 버튼을 클릭해서 스크립트를 실행해보십시오:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:139
+msgid ""
+"Once the editor window has been closed, use the text box of Processing to "
+"find your script:"
+msgstr "편집기 창이 닫히고나면, 공간 처리 프레임워크의 텍스트란을 사용해서 여러분의 스크립트를 찾아보십시오:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:144
+msgid ""
+"You can now fill the parameters required in the Processing algorithm window:"
+msgstr "이제 공간 처리 알고리즘 창에서 요구하는 파라미터들을 채울 수 있습니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:146
+msgid "for **Layer** choose *sample_points*"
+msgstr "**Layer** 에 *sample_points* 를 선택하십시오."
+
+#: ../../docs/training_manual/processing/r_intro.rst:147
+msgid "for the **X** field choose *value*"
+msgstr "**X** 필드에 *value* 를 선택하십시오."
 
 #: ../../docs/training_manual/processing/r_intro.rst:149
 msgid "Click on **Run**."
@@ -108,33 +285,146 @@ msgid ""
 "The **Result window** should be automatically opened, if not, just click on "
 ":menuselection:`Processing --> Result Viewer...`."
 msgstr ""
-"**Result window** 가 자동적으로 열릴 텐데, 열리지 않을 경우 :menuselection:`Processing --> "
-"Result Viewer...` 메뉴를 클릭하면 됩니다."
+"**결과물 뷰어** 가 자동으로 열릴 텐데, 열리지 않을 경우 :menuselection:`Processing --> Result "
+"Viewer...` 메뉴 항목을 클릭하면 됩니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:156
+msgid "Click on the link in the viewer and you will see:"
+msgstr "뷰어에 있는 링크를 클릭하면 다음을 보게 될 것입니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:161
+msgid "You can open, copy and save the image by right clicking on the plot."
+msgstr "그래프를 오른쪽 클릭하면 이미지를 열고, 복사하고, 저장할 수 있습니다."
 
 #: ../../docs/training_manual/processing/r_intro.rst:164
 msgid "Create a vector"
-msgstr "벡터 생성"
+msgstr "벡터 생성하기"
+
+#: ../../docs/training_manual/processing/r_intro.rst:166
+msgid ""
+"You can also create a vector layer and have it automatically loaded into "
+"QGIS."
+msgstr "벡터 레이어를 생성해서 QGIS에 자동으로 불러올 수도 있습니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:169
+msgid ""
+"The following example has been taken from the ``Random sampling grid`` "
+"script that can be found in the online collection of R scripts (the scripts "
+"in this online collection can be found in https://github.com/qgis/QGIS-"
+"Processing/tree/master/rscripts)."
+msgstr ""
+"다음 예시는 온라인 R 스크립트 모음에서 찾을 수 있는 ``Random sampling grid`` 스크립트로부터 발췌한 것입니다. "
+"(https://github.com/qgis/QGIS-Processing/tree/master/rscripts 에서 이 온라인 스크립트 "
+"모음을 찾을 수 있습니다.)"
+
+#: ../../docs/training_manual/processing/r_intro.rst:174
+msgid ""
+"The aim of this exercise is to create a random point vector layer using an "
+"input vector layer to restrict the extent using the ``spsample`` function of"
+" the ``sp`` package."
+msgstr ""
+"이 예시의 목적은 ``sp`` 패키지의 ``spsample`` 함수를 사용해서, 입력 벡터 레이어의 범위로 제한된 랜덤한 포인트 벡터 "
+"레이어를 생성하는 것입니다."
 
 #: ../../docs/training_manual/processing/r_intro.rst:182
 msgid "As before we have to set some parameters before the script body:"
-msgstr "이전과 마찬가지로 스크립트 자체를 입력하기 전에 몇몇 파라미터들을 설정해줘야 합니다."
+msgstr "이전과 마찬가지로 스크립트 본문을 입력하기 전에 몇몇 파라미터들을 설정해줘야 합니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:184
+msgid ""
+"Specify the name of the group in which you want to put your script, in this "
+"case *Point pattern analysis*::"
+msgstr "여러분의 스크립트가 들어가야 할 그룹 이름을 지정하십시오. 이 경우 'Point pattern analysis'입니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:188
+msgid ""
+"Define an input parameter (a vector layer) that will constrain the placement"
+" of the random points::"
+msgstr "랜덤한 포인트들의 배치를 제한하게 될 입력 파라미터(벡터 레이어)를 정의하십시오:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:193
+msgid ""
+"Set an input parameter for the number of points that are going to be created"
+" (``Size``, with a default value of ``10``)::"
+msgstr "생성될 포인트들의 개수에 대한 입력 파라미터를 (기본값이 ``10`` 인 ``Size`` 를) 설정하십시오:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:198
+msgid ""
+"Since a default value (``10``) is defined, the user can change this number "
+"or can leave the parameter without a number."
+msgstr ""
+"기본값(``10``)을 정의했기 때문에, 사용자가 이 숫자를 변경할 수도 있고, 또는 파라미터에 숫자를 지정하지 않아도 됩니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:201
+msgid "Specify that there is an output vector layer (called ``Output``)::"
+msgstr "(``Output`` 이라는) 산출 벡터 레이어를 지정하십시오:"
 
 #: ../../docs/training_manual/processing/r_intro.rst:208
 msgid "Now you can add the body of the function:"
-msgstr "이제 함수 자체를 추가할 수 있습니다."
+msgstr "이제 함수 본문을 추가할 수 있습니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:210
+msgid "Use the ``spsample`` function::"
+msgstr "``spsample`` 함수를 사용하십시오:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:214
+msgid ""
+"The function uses the *Layer* to constrain the placement of the points (if "
+"it is a line layer, a points will have to be on one of the lines in the "
+"layer, if it is a polygon layer, a point will have to be within a polygon). "
+"The number of points is taken from the *Size* parameter. The sampling method"
+" is *random*."
+msgstr ""
+"이 함수는 포인트들의 배치를 제한하기 위해 *Layer* 를 사용합니다. (해당 레이어가 라인 레이어인 경우, 포인트들이 레이어에 있는 "
+"라인 상에 생성되어야 하며, 폴리곤 레이어인 경우 포인트들이 폴리곤 내부에 생성되어야 합니다.) 생성될 포인트 개수는 *Size* "
+"파라미터에서 가져옵니다. 샘플링 메소드는 *random* 입니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:221
+msgid "Generate the output (the ``Output`` parameter)::"
+msgstr "산출물을 (``Output`` 파라미터를) 작성하십시오:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:236
+msgid "Save it and run it, clicking on the run button."
+msgstr "스크립트를 저장한 다음 실행 버튼을 눌러 실행하십시오."
 
 #: ../../docs/training_manual/processing/r_intro.rst:238
 msgid "In the new window type in the right parameters:"
-msgstr "새 창에서 정확한 파라미터들을 입력하십시오."
+msgstr "새 창에서 파라미터들을 올바르게 입력하십시오:"
 
 #: ../../docs/training_manual/processing/r_intro.rst:242
 msgid "and click on run."
 msgstr "**Run** 버튼을 클릭합니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:244
+msgid ""
+"The result layer will be added to the table of contents and its points will "
+"be displayed on the map canvas:"
+msgstr "산출 레이어가 목차에 추가되고 그 포인트들이 맵 캔버스에 보일 것입니다:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:251
+msgid "Text and graph output from R - syntax"
+msgstr "R의 텍스트 및 그래프 산출물 - 문법"
+
+#: ../../docs/training_manual/processing/r_intro.rst:253
+msgid ""
+"Processing (with the ``Processing R Provider plugin``) uses special syntax "
+"to get the results out of R:"
+msgstr ""
+"공간 처리 프레임워크는 (``Processing R Provider plugin`` 을 통해) R로부터 결과물을 얻기 위해 특수 문법을 "
+"사용합니다:"
 
 #: ../../docs/training_manual/processing/r_intro.rst:256
 msgid ""
 "``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the "
 "result should be sent to R output (Result viewer)"
 msgstr ""
-"명령어 앞에 ``>lillie.test(Layer[[Field]])`` 처럼 ``>`` 를 삽입하는 것은 결과를 R 산출물(Result "
-"viewer)로 보내야 한다는 의미입니다."
+"명령어 앞에 ``>lillie.test(Layer[[Field]])`` 처럼 ``>`` 를 삽입하는 것은 결과물을 R 산출물(결과물 "
+"뷰어)로 보내야 한다는 의미입니다."
+
+#: ../../docs/training_manual/processing/r_intro.rst:258
+msgid ""
+"``+`` after a plot enables overlay plots. For example ``plot(Layer[[X]], "
+"Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
+msgstr ""
+"'plot' 뒤에 ``+`` 를 삽입하면 그래프들을 중첩시킬 수 있습니다. ``plot(Layer[[X]], Layer[[Y]]) + "
+"abline(h=mean(Layer[[X]]))`` 처럼 말이죠."
