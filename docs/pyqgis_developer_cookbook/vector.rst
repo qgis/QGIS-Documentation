@@ -409,8 +409,8 @@ explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
 Add Features
 ------------
 
-Create some :class:`QgsFeature <qgis.core.QgsFeature>` instances and pass a list of them to provider's
-:meth:`addFeatures() <qgis.core.QgsVectorDataProvider.addFeatures>` method. It will return two values:
+Create some :class:`QgsFeature <qgis.core.QgsFeature>` instances and pass a list of them to the provider
+:class:`QgsVectorDataProvider <qgis.core.QgsVectorDataProvider>` ``addFeatures()`` method. It will return two values:
 result (:const:`True` or :const:`False`) and
 list of added features (their ID is set by the data store).
 
@@ -735,7 +735,7 @@ There are several ways to generate a vector layer dataset:
   call to :meth:`writeAsVectorFormatV3()
   <qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` which saves the whole
   vector layer or creating an instance of the class and issue calls to
-  :meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. This class
+  inherited :meth:`addFeature() <qgis.core.QgsFeatureSink.addFeature>`. This class
   supports all the vector formats that GDAL supports (GeoPackage, Shapefile,
   GeoJSON, KML and others).
 * the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class: instantiates
