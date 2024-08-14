@@ -156,6 +156,8 @@ information you'd like to highlight.
 #. :ref:`Singleband pseudocolor <label_colormaptab>` - this renderer
    can be used for files with a continuous palette or color map
    (e.g. an elevation map).
+#. :ref:`Single color <singlecolor>` - the raster layer will be rendered
+   with a single color.
 #. :ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a
    band.
 #. :ref:`Contours <raster_contours>` - Generates contours on the
@@ -300,6 +302,26 @@ item <layout_legend_item>`) is displayed using a continuous color ramp.
 Press :guilabel:`Legend settings...` if you wish to tweak the settings
 or instead use a legend with separated classes (and colors).
 More details at :ref:`raster_legend_settings`.
+
+.. _singlecolor:
+
+Single color
+............
+
+This renderer allows you to render a raster layer using :guilabel:`Single color`.
+This type of renderer is useful when you want to display a raster layer
+uniformly, without any variation in color based on pixel values.
+
+The single color renderer can be used with both single-band and multi-band raster layers.
+When used with multi-band rasters, you can select which band to apply the single color to,
+effectively displaying that specific band uniformly across the entire layer.
+
+.. _figure_raster_singlecolor:
+
+.. figure:: img/rasterSingleColor.png
+   :align: center
+
+   Raster Symbology - Single color rendering
 
 .. index:: Hillshade
 .. _hillshade_renderer:
