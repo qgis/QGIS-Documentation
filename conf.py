@@ -242,6 +242,9 @@ rst_prolog = r"""
         This page is currently translated at |translation progress|.
     """
 
+# A list of warning codes to suppress arbitrary warning messages.
+suppress_warnings = ["config.cache"]
+
 # -- Options for LaTeX output --------------------------------------------------
 
 latex_engine = 'xelatex'
