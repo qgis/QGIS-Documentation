@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-08-15 06:58+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -330,15 +330,15 @@ msgstr "피처 추가하기"
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:412
 msgid ""
 "Create some :class:`QgsFeature <qgis.core.QgsFeature>` instances and pass a "
-"list of them to provider's :meth:`addFeatures() "
-"<qgis.core.QgsVectorDataProvider.addFeatures>` method. It will return two "
-"values: result (:const:`True` or :const:`False`) and list of added features "
-"(their ID is set by the data store)."
+"list of them to the provider :class:`QgsVectorDataProvider "
+"<qgis.core.QgsVectorDataProvider>` ``addFeatures()`` method. It will return "
+"two values: result (:const:`True` or :const:`False`) and list of added "
+"features (their ID is set by the data store)."
 msgstr ""
 ":class:`QgsFeature <qgis.core.QgsFeature>` 클래스 인스턴스를 몇 개 생성한 다음 제공자의 "
-":meth:`addFeatures() <qgis.core.QgsVectorDataProvider.addFeatures>` 메소드에 그 "
-"목록을 전달하십시오. 이 메소드가 결과(:const:`True` 또는 :const:`False`)와 추가된 피처 목록(데이터 저장소가 "
-"설정한, 추가된 피처의 피처 ID)이라는 값 2개를 반환할 것입니다."
+":class:`QgsVectorDataProvider <qgis.core.QgsVectorDataProvider>` "
+"``addFeatures()`` 메소드에 그 목록을 전달하십시오. 이 메소드가 결과(:const:`True` 또는 "
+":const:`False`)와 추가된 피처 목록(데이터 저장소가 설정한, 추가된 피처의 피처 ID)이라는 값 2개를 반환할 것입니다."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:417
 msgid ""
@@ -698,16 +698,16 @@ msgid ""
 "call to :meth:`writeAsVectorFormatV3() "
 "<qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` which saves the whole"
 " vector layer or creating an instance of the class and issue calls to "
-":meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. This class "
-"supports all the vector formats that GDAL supports (GeoPackage, Shapefile, "
-"GeoJSON, KML and others)."
+"inherited :meth:`addFeature() <qgis.core.QgsFeatureSink.addFeature>`. This "
+"class supports all the vector formats that GDAL supports (GeoPackage, "
+"Shapefile, GeoJSON, KML and others)."
 msgstr ""
 ":class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>` 클래스: 디스크에 벡터 "
 "파일을 작성할 수 있는 편리한 클래스입니다. 전체 벡터 레이어를 저장하는 :meth:`writeAsVectorFormatV3() "
 "<qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` 메소드를 정적 호출하거나, 클래스의 "
-"인스턴스를 생성한 다음 :meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`"
-" 메소드를 호출합니다. 이 클래스는 GDAL이 지원하는 벡터 포맷들을 모두 (GeoPackage, 셰이프파일, GeoJSON, KML 및"
-" 기타 등등) 지원합니다."
+"인스턴스를 생성한 다음 상속한 :meth:`addFeature() <qgis.core.QgsFeatureSink.addFeature>` "
+"메소드를 호출합니다. 이 클래스는 GDAL이 지원하는 벡터 포맷들을 모두 (GeoPackage, 셰이프파일, GeoJSON, KML 및 "
+"기타 등등) 지원합니다."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:739
 msgid ""
@@ -844,7 +844,7 @@ msgid ""
 "indexing of the memory provider in the URI. The syntax is:"
 msgstr "좌표계, 필드, 메모리 기반 제공자의 인덱스 작업도 이 URI로 설정할 수 있습니다. 문법은 다음과 같습니다:"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:949
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:946
 msgid "crs=definition"
 msgstr "crs=definition"
 
@@ -859,7 +859,7 @@ msgstr ""
 "<qgis.core.QgsCoordinateReferenceSystem.createFromString>` 메소드가 받아들이는 어떤 양식도"
 " 될 수 있습니다."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:952
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:951
 msgid "index=yes"
 msgstr "index=yes"
 
@@ -867,7 +867,7 @@ msgstr "index=yes"
 msgid "Specifies that the provider will use a spatial index"
 msgstr "제공자가 공간 인덱스를 사용하도록 설정합니다."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:957
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:954
 msgid "field=name:type(length,precision)"
 msgstr "field=name:type(length,precision)"
 
