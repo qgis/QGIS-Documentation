@@ -45,12 +45,12 @@ msgid ""
 "except for clarification. This is to ensure that the quality and consistency"
 " of this manual can be maintained."
 msgstr ""
-"이 강의에 자료를 추가하려면, 이 부록에 명시된 지침을 따라야 합니다. 이 부록에 있는 조건들을 -- 좀 더 명확히 하려는 목적이 "
-"아니라면 -- 수정해서는 안 됩니다. 이 교재의 질과 일관성을 유지하기 위해서 입니다."
+"이 교재에 자료를 추가하려면, 이 부록에 명시된 지침을 따라야 합니다. 이 부록에 있는 조건들을 --- 좀 더 명확히 하려는 목적이 "
+"아니라면 --- 수정해서는 안 됩니다. 이 교재의 품질과 일관성을 유지하기 위해서입니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:10
 msgid "Downloading Resources"
-msgstr "리소스 다운로드"
+msgstr "리소스 다운로드하기"
 
 #: ../../docs/training_manual/appendix/contribute.rst:12
 msgid ""
@@ -59,8 +59,9 @@ msgid ""
 "<https://github.com/>`_ for instructions on how to use the git version "
 "control system."
 msgstr ""
-"이 문서의 소스를 `GitHub <https://github.com/qgis/QGIS-Documentation>`_ 에서 구할 수 "
-"있습니다. Git 버전 컨트롤 시스템 이용법에 대해서는 `GitHub.com <https://github.com/>`_ 에 문의하십시오."
+"`GitHub <https://github.com/qgis/QGIS-Documentation>`_ 에서 이 문서의 소스를 구할 수 "
+"있습니다. 깃(git) 버전 컨트롤 시스템 사용법에 대해서는 `GitHub.com <https://github.com/>`_ 에 "
+"문의하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:17
 msgid "Manual Format"
@@ -75,12 +76,12 @@ msgid ""
 "respective sites."
 msgstr ""
 "이 교재는 `reStructuredText <https://docutils.sourceforge.io/rst.html>`_ 마크업 언어를"
-" 사용하는 파이썬 문서 생성자인 `Sphinx <https://www.sphinx-doc.org/en/master/>`_ 를 이용해서 "
+" 사용하는 파이썬 문서 생성자인 `Sphinx <https://www.sphinx-doc.org/ko/master/>`_ 를 이용해서 "
 "작성됐습니다. 이 도구들의 사용법은 각 해당 사이트에서 알 수 있습니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:25
 msgid "Adding a Module"
-msgstr "모듈 추가"
+msgstr "강의 추가하기"
 
 #: ../../docs/training_manual/appendix/contribute.rst:27
 msgid "To add a new module:"
@@ -91,8 +92,7 @@ msgid ""
 "First create a new directory (directly under the  top-level of the "
 ":file:`qgis-training-manual` directory) with the name of the new module."
 msgstr ""
-"먼저 (최상위 :file:`qgis-training-manual` 디렉터리 바로 아래에) 새 강의의 이름을 가진 새 디렉터리를 "
-"생성하십시오."
+"먼저 (최상위 :file:`qgis-training-manual` 디렉터리 바로 아래에) 새 디렉터리를 새 강의의 이름으로 생성하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:31
 msgid ""
@@ -134,7 +134,7 @@ msgstr "뒤에 오는 강의는 이전 강의에서 배운 지식을 기반으�
 #: ../../docs/training_manual/appendix/contribute.rst:50
 msgid ""
 "Open your new module's own index file (:file:`{module_name}/index.rst`)."
-msgstr "사용자의 새 강의의 인덱스 파일(:file:`[강의_이름]/index.rst` )을 여십시오."
+msgstr "새 강의의 인덱스 파일(:file:`{강의_이름}/index.rst` )을 여십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:51
 msgid "Along the top of the page, create the module heading:"
@@ -171,27 +171,70 @@ msgstr "강의의 목적 및 내용을 설명하는 짧은 글을 작성하십�
 
 #: ../../docs/training_manual/appendix/contribute.rst:63
 msgid "Leave one line open, then add the following text::"
-msgstr "한 줄을 띄운 다음, 다음 텍스트를 추가하십시오."
+msgstr "한 줄을 띄운 다음, 다음 텍스트를 추가하십시오:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:71
+msgid ""
+"... where ``lesson1``, ``lesson2``, etc., are the names of your planned "
+"lessons."
+msgstr "이때 ``lesson1``, ``lesson2`` 등은 여러분이 계획한 수업 제목들입니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:73
 msgid "The module-level index file will look like this:"
-msgstr "모듈 수준의 인덱스 파일은 다음과 같이 보일 것입니다."
+msgstr "강의 수준의 인덱스 파일은 다음과 같이 보일 것입니다:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:90
 msgid "Adding a Lesson"
-msgstr "강의 추가"
+msgstr "수업 추가하기"
 
 #: ../../docs/training_manual/appendix/contribute.rst:92
 msgid "To add a lesson to a new or existing module:"
-msgstr "새 모듈 또는 기존 모듈에 강의를 추가하려면,"
+msgstr "새 강의 또는 기존 강의에 수업을 추가하려면:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:94
 msgid "Open the module directory."
-msgstr "모듈 디렉터리를 여십시오."
+msgstr "강의 디렉터리를 여십시오."
+
+#: ../../docs/training_manual/appendix/contribute.rst:95
+msgid ""
+"Open the :file:`index.rst` file (created above in the case of new modules)."
+msgstr "(새 강의인 경우, 앞에서 생성했던) :file:`index.rst` 파일을 여십시오."
+
+#: ../../docs/training_manual/appendix/contribute.rst:96
+msgid ""
+"Ensure that the name of the planned lesson is listed underneath the "
+":file:`toctree` directive, as shown above."
+msgstr "계획한 수업의 이름들이 앞에서와 같이 :file:`toctree` 지시문 아래 나열되어 있는지 확인하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:98
 msgid "Create a new file under the module directory."
-msgstr "모듈 디렉터리에 새 파일을 생성하십시오."
+msgstr "강의 디렉터리에 새 파일을 생성하십시오."
+
+#: ../../docs/training_manual/appendix/contribute.rst:99
+msgid ""
+"Name this file exactly the same as the name you provided in the module's "
+":file:`index.rst` file, and add the extension :file:`.rst`."
+msgstr ""
+"해당 파일의 이름을 강의의 :file:`index.rst` 에 적은 수업 이름과 정확히 동일하게 지정한 다음, 확장자 "
+":file:`.rst` 를 추가하십시오."
+
+#: ../../docs/training_manual/appendix/contribute.rst:102
+msgid ""
+"For editing purposes, a :file:`.rst` file works exactly like a normal text "
+"file (:file:`.txt`)."
+msgstr "편집 작업의 경우, :file:`.rst` 파일은 일반 텍스트 파일(:file:`.txt`)과 정확히 동일하게 동작합니다."
+
+#: ../../docs/training_manual/appendix/contribute.rst:105
+msgid ""
+"To begin writing the lesson, write the markup phrase ``Lesson``, followed by"
+" the lesson name."
+msgstr "수업을 작성하기 전에 ``Lesson`` 마크업 구문으로 시작하는 수업 이름을 작성하십시오."
+
+#: ../../docs/training_manual/appendix/contribute.rst:107
+msgid ""
+"In the next line, write a line of equal signs (``=``), not shorter than the "
+"lesson title."
+msgstr "그 다음 줄에 수업 제목보다 짧아서는 안 되는 등호(``=``)로 이루어진 줄을 작성하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:108
 msgid "Leave a line open after this."
@@ -199,41 +242,43 @@ msgstr "그 다음 줄은 빈 줄로 남겨두십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:109
 msgid "Write a short description of the lesson's intended purpose."
-msgstr "강의의 목적을 간단히 설명하십시오."
+msgstr "수업의 목표를 간단히 설명하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:110
 msgid ""
 "Include a general introduction to the subject matter. See the existing "
 "lessons in this manual for examples."
-msgstr "주제에 대한 일반적인 소개를 포함시키십시오. 이 교재의 기존 강의를 참고하십시오."
+msgstr "주제에 대한 일반적인 소개를 포함시키십시오. 이 교재의 기존 수업들을 참고하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:112
 msgid "Beneath this, start a new paragraph, beginning with this phrase::"
-msgstr "그 아래에 다음 구문으로 시작하는 새 문장을 작성하십시오."
+msgstr "그 아래에 다음 구문으로 시작하는 새 문장을 작성하십시오:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:116
 msgid "Briefly explain the intended outcome of completing this lesson."
-msgstr "이 강의를 완료하면 얻을 수 있는 결과를 간단히 설명하십시오."
+msgstr "이 수업을 완료하면 얻을 수 있는 결과를 간단히 설명하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:117
 msgid ""
 "If you can't describe the goal of the lesson in one or two sentences, "
 "consider breaking the subject matter up into multiple lessons."
-msgstr "강의의 목적을 문장 하나 또는 두 개로 설명할 수 없을 경우, 해당 주제를 여러 개의 강의로 나누는 것이 좋습니다."
+msgstr "수업의 목표를 문장 하나 또는 두 개로 설명할 수 없을 경우, 해당 주제를 수업 여러 개로 나누는 편이 좋습니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:120
 msgid ""
 "Each lesson will be subdivided into multiple sections, which will be "
 "addressed next."
-msgstr "각 강의는 다음 단계에서 설명하는 것처럼 여러 섹션으로 세분화됩니다."
+msgstr "각 수업은 다음 단계에서 설명하는 것처럼 여러 절들로 세분화됩니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:123
 msgid "Adding a Section"
-msgstr "섹션 추가"
+msgstr "절 추가하기"
 
 #: ../../docs/training_manual/appendix/contribute.rst:125
 msgid "There are two types of sections: \"follow along\" and \"try yourself\"."
-msgstr "섹션에는 \"따라 하기(follow along)\" 및 \"직접 해보기(try yourself)\" 두 가지 유형이 있습니다."
+msgstr ""
+"절(section)에는 \"따라해보세요(follow along)\" 및 \"혼자서 해보세요(try yourself)\" 두 가지 유형이 "
+"있습니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:127
 msgid ""
@@ -242,55 +287,85 @@ msgid ""
 "giving click-by-click directions as clearly as possible, interspersed with "
 "screenshots."
 msgstr ""
-"\"따라 하기\" 섹션은 사용자에게 QGIS의 주어진 측면을 사용하는 방법을 가르치기 위한 상세한 지침들로 이루어집니다. 일반적으로 중간"
-" 중간 스크린샷이 들어가는 가능한 한 명확한 단계별 지침들을 제공합니다."
+"\"따라해보세요\" 절은 사용자에게 QGIS의 지정 측면을 사용하는 방법을 가르치기 위한 상세한 지침들로 이루어집니다. 일반적으로 중간 "
+"중간 스크린샷이 들어가는, 가능한 한 명확한 단계별 지침들을 제공합니다."
+
+#: ../../docs/training_manual/appendix/contribute.rst:131
+msgid ""
+"A \"try yourself\" section gives the reader a short assignment to try by "
+"themselves. It is usually associated with an entry in the answer box "
+"beneath, which will show or explain how to complete the assignment, and will"
+" show the expected outcome if possible."
+msgstr ""
+"\"혼자서 해보세요\" 절은 사용자가 직접 시도해볼 수 있는 간단한 과제를 부여합니다. 이 과제는 보통 과제를 완수하는 방법을 보여주거나"
+" 설명하는, 또는 가능한 경우 예상되는 산출물을 보여주는, 과제 아래의 해답란에 있는 항목과 연결됩니다."
+
+#: ../../docs/training_manual/appendix/contribute.rst:136
+msgid ""
+"Every section comes with a difficulty level. An easy section is denoted by "
+"``★☆☆``, moderate by ``★★☆``, and advanced by ``★★★``."
+msgstr "각 절은 난이도에 따라 분류됩니다. 초급 절은 ``★☆☆``, 중급은 ``★★☆``, 고급은 ``★★★`` 로 표시합니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:140
 msgid "Adding a \"follow along\" section"
-msgstr "\"따라 하기\" 섹션 추가"
+msgstr "\"따라해보세요\" 절 추가하기"
 
 #: ../../docs/training_manual/appendix/contribute.rst:142
 #: ../../docs/training_manual/appendix/contribute.rst:158
 msgid ""
 "To start this section, write the markup phrase of the intended difficulty "
 "level (as shown above)."
-msgstr "이 섹션을 시작하려면, (앞에서 설명한 대로) 의도한 난이도를 나타내는 마크업 구문을 적으십시오."
+msgstr "이 절을 시작하려면, (앞에서 설명한 대로) 의도한 난이도를 나타내는 마크업 구문을 적으십시오."
+
+#: ../../docs/training_manual/appendix/contribute.rst:144
+msgid "Leave a space and then write ``Follow Along:``."
+msgstr "한 칸 띄운 다음 ``Follow Along:`` 이라고 작성하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:145
 msgid ""
 "Leave another space and write the name of the section (use only an initial "
 "capital letter, as well as capitals for proper nouns)."
 msgstr ""
-"다시 한 칸 띄운 다음 섹션 명칭을 쓰십시오. (맨 첫글자만 대문자로 적고, 합당한 명사일 경우에도 첫 글자를 대문자로 적습니다.)"
+"다시 한 칸 띄운 다음 절 이름을 쓰십시오. (맨 첫 글자만 대문자로 적고, 합당한 명사일 경우에도 첫 글자를 대문자로 적습니다.)"
+
+#: ../../docs/training_manual/appendix/contribute.rst:147
+#: ../../docs/training_manual/appendix/contribute.rst:161
+msgid ""
+"In the next line, write a line of minuses/dashes (``-``), not shorter than "
+"the section title."
+msgstr "그 다음 줄에 절 제목보다 짧아서는 안 되는 빼기표/붙임표(``-``)로 이루어진 줄을 작성하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:148
 msgid ""
 "Write a short introduction to the section, explaining its purpose. Then give"
 " detailed (click-by-click) instructions on the procedure to be demonstrated."
-msgstr ""
-"섹션의 목적을 설명하는 간단한 소개문을 작성하십시오. 그 다음 시연할 과정에 대한 자세한 (클릭 단계별) 지침을 작성하십시오."
+msgstr "절의 목적을 설명하는 간단한 소개문을 작성하십시오. 그 다음 시연할 과정에 대한 자세한 (클릭 단계별) 지침을 작성하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:150
 msgid ""
 "In each section, include internal links, external links and screenshots as "
 "needed."
-msgstr "각 섹션에 필요한 만큼 내부 링크, 외부 링크 및 스크린샷을 첨부하십시오."
+msgstr "각 절에 필요한 대로 내부 링크, 외부 링크 및 스크린샷을 첨부하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:151
 msgid ""
 "Try to end each section with a short paragraph that concludes it and leads "
 "naturally to the next section, if possible."
-msgstr "가능하다면, 결론을 내리는 동시에 자연스럽게 다음 섹션으로 이어지는 문단으로 각 섹션을 끝내도록 합니다."
+msgstr "가능하다면, 결론을 내리는 동시에 자연스럽게 다음 절으로 이어지는 문단으로 각 절을 끝내도록 합니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:155
 msgid "Adding a \"try yourself\" section"
-msgstr "\"직접 해보기\" 섹션 추가"
+msgstr "\"혼자서 해보세요\" 절 추가하기"
+
+#: ../../docs/training_manual/appendix/contribute.rst:160
+msgid "Leave a space and then write ``Try Yourself:``."
+msgstr "한 칸 띄운 다음 ``Try Yourself:`` 라고 작성하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:162
 msgid ""
 "Explain the exercise that you want the reader to complete. Refer to previous"
 " sections, lessons or modules if necessary."
-msgstr "사용자가 완수하길 바라는 예제를 설명하십시오. 필요할 경우 이전 섹션, 강의, 또는 모듈을 언급하십시오."
+msgstr "사용자가 완수하길 바라는 예제를 설명하십시오. 필요할 경우 이전 절, 수업, 또는 강의를 언급하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:164
 msgid ""
@@ -298,17 +373,64 @@ msgid ""
 "description is not clear."
 msgstr "텍스트만으로 이루어진 설명이 명확하지 않을 경우, 요구 사항을 명확하게 하는 스크린샷을 첨부하십시오."
 
+#: ../../docs/training_manual/appendix/contribute.rst:167
+msgid ""
+"In most cases, you will want to provide an answer regarding how to complete "
+"the assignment given in this section. To do so, you will need to create and "
+"feed an answer block beneath the instructions."
+msgstr ""
+"대부분의 경우 해당 절이 할당하는 과제를 완수하는 방법에 대한 답안을 제공하고자 할 것입니다. 그러려면 예제 지침 아래에 해답란을 "
+"생성하고 채워야 합니다."
+
+#: ../../docs/training_manual/appendix/contribute.rst:171
+msgid "First, create the custom collapsible widget that contains the answer::"
+msgstr "먼저 답안을 담고 있는, 접을 수 있는 사용자 정의 위젯을 생성하십시오:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:176
+msgid ""
+"Keeping an indentation with regard to the above block, write the "
+"instructions on how to complete the assignment, using links and images where"
+" needed."
+msgstr ""
+"이 블록을 기준으로 들여쓰기를 유지한 채, 필요한 경우 링크 및 이미지를 사용해서 해당 과제를 완수하는 방법에 대한 지침을 작성하십시오."
+
 #: ../../docs/training_manual/appendix/contribute.rst:181
 msgid "Add a Conclusion"
-msgstr "결론 추가"
+msgstr "결론 추가하기"
+
+#: ../../docs/training_manual/appendix/contribute.rst:183
+msgid "To end a lesson:"
+msgstr "수업을 끝내려면:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:185
+msgid ""
+"Write the phrase ``In Conclusion``, followed by a new line of minuses/dashes"
+" (``-``)."
+msgstr ""
+"``In Conclusion`` 구문을 작성하고, 그 다음 줄에 그보다 짧아서는 안 되는 빼기표/붙임표(``-``)로 이루어진 줄을 "
+"작성하십시오."
+
+#: ../../docs/training_manual/appendix/contribute.rst:186
+msgid ""
+"Write a conclusion for the lesson, explaining which concepts have been "
+"covered in the lesson."
+msgstr "해당 수업에서 다루었던 개념들을 설명하는, 수업의 결론을 작성하십시오. "
 
 #: ../../docs/training_manual/appendix/contribute.rst:189
 msgid "Add a Further Reading Section"
-msgstr "참고 문헌 섹션 추가"
+msgstr "더 읽어볼 거리 절 추가하기"
 
 #: ../../docs/training_manual/appendix/contribute.rst:191
 msgid "This section is optional."
-msgstr "이 섹션이 꼭 필요한 것은 아닙니다."
+msgstr "이 절이 꼭 필요한 것은 아닙니다."
+
+#: ../../docs/training_manual/appendix/contribute.rst:193
+msgid ""
+"Write the phrase ``Further Reading``, followed by a new line of "
+"minuses/dashes (``-``)."
+msgstr ""
+"``Further Reading`` 구문을 작성하고, 그 다음 줄에 그보다 짧아서는 안 되는 빼기표/붙임표(``-``)로 이루어진 줄을 "
+"작성하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:195
 msgid "Include links to appropriate external websites."
@@ -316,12 +438,20 @@ msgstr "적합한 외부 웹사이트로 연결되는 링크를 첨부하십시�
 
 #: ../../docs/training_manual/appendix/contribute.rst:198
 msgid "Add a What's Next Section"
-msgstr "다음 주제 섹션 추가"
+msgstr "다음은 무엇을 배우게 될까요? 절 추가"
+
+#: ../../docs/training_manual/appendix/contribute.rst:200
+msgid ""
+"Write the phrase ``What's Next?``, followed by a new line of minuses/dashes "
+"(``-``)."
+msgstr ""
+"``What's Next?`` 구문을 작성하고, 그 다음 줄에 그보다 짧아서는 안 되는 빼기표/붙임표(``-``)로 이루어진 줄을 "
+"작성하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:201
 msgid ""
 "Explain how this lesson has prepared students for the next lesson or module."
-msgstr "현재 강의가 어떻게 다음 강의 또는 모듈을 위해 사용자를 준비시켰는지 설명하십시오."
+msgstr "현재 수업이 어떻게 다음 수업 또는 강의를 위해 사용자를 준비시켰는지 설명하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:202
 msgid ""
@@ -330,40 +460,59 @@ msgid ""
 "you have inserted a new lesson among existing lessons, or after an existing "
 "lesson."
 msgstr ""
-"필요할 경우 이전 강의의 \"다음 주제\" 섹션이 새 강의를 언급하도록 변경하는 일을 잊지 마십시오. 기존 강의들 사이에 또는 기존 강의"
-" 마지막에 새 강의를 삽입하는 경우 필요한 작업입니다."
+"필요할 경우 이전 수업의 \"다음은 무엇을 배우게 될까요?\" 절이 새 수업을 언급하도록 변경하는 일을 잊지 마십시오. 기존 수업들 "
+"사이에 또는 기존 수업들 뒤에 새 수업을 삽입하는 경우 필요한 작업입니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:208
 msgid "Using Markup"
-msgstr "마크업 사용"
+msgstr "마크업 사용하기"
 
 #: ../../docs/training_manual/appendix/contribute.rst:210
 msgid ""
 "To adhere to the standards of this document, you will need to add standard "
 "markup to your text."
-msgstr "이 문서의 표준을 준수하려면, 사용자의 텍스트에 표준 마크업을 추가해야 합니다."
+msgstr "이 문서의 표준을 준수하려면, 여러분의 텍스트에 표준 마크업을 추가해야 합니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:214
 msgid "New concepts"
 msgstr "새로운 개념"
 
+#: ../../docs/training_manual/appendix/contribute.rst:216
+msgid ""
+"If you are explaining a new concept, you will need to write the new "
+"concept's name in italics by enclosing it in asterisks (``*``)."
+msgstr "여러분이 새로운 개념을 설명하는 경우, 해당 개념의 이름을 별표(``*``)로 둘러싸 기울임꼴로 만들어야 합니다."
+
 #: ../../docs/training_manual/appendix/contribute.rst:224
 msgid "Emphasis"
 msgstr "강조"
+
+#: ../../docs/training_manual/appendix/contribute.rst:226
+msgid ""
+"To emphasize a crucial term which is not a new concept, write the term in "
+"bold by enclosing it in double asterisks (``**``)."
+msgstr "새로운 개념이 아닌 중요한 용어를 강조하려면, 해당 용어를 이중 별표(``**``)로 둘러싸 굵은 글씨로 만들어야 합니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:228
 msgid ""
 "Use this sparingly! If used too much, it can seem to the reader that you are"
 " shouting or being condescending."
-msgstr "사용에 주의하십시오! 강조를 너무 많이 사용할 경우 독자에게 소리를 지르거나 잘난 체하는 것으로 보일 수 있습니다."
+msgstr ""
+"너무 자주 사용하지 않도록 주의하십시오! 강조를 너무 많이 사용할 경우 독자에게 소리를 지르거나 잘난 체하는 것으로 보일 수 있습니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:238
 msgid "Images"
 msgstr "이미지"
 
+#: ../../docs/training_manual/appendix/contribute.rst:240
+msgid ""
+"When adding an image, save it to an :file:`img` folder next to the lesson "
+"file."
+msgstr "이미지를 추가하는 경우, 수업 파일 옆에 :file:`img` 폴더를 생성해서 이 폴더에 이미지를 저장하십시오."
+
 #: ../../docs/training_manual/appendix/contribute.rst:241
 msgid "Include it in the document like this::"
-msgstr "문서에 다음과 같이 이미지를 추가하십시오."
+msgstr "문서에 이미지를 다음과 같이 추가하십시오:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:246
 msgid "Remember to leave a line open above and below the image markup."
@@ -377,12 +526,15 @@ msgstr "내부 링크"
 msgid ""
 "To create an anchor for a link, write the following line above the place "
 "where you want the link to point to::"
-msgstr ""
-"링크를 위한 앵커(anchor)를 생성하려면, 사용자가 링크가 가리키게 하고자 하는 곳 윗 줄에 다음과 같은 라인을 작성하십시오."
+msgstr "링크를 위한 앵커(anchor)를 생성하려면, 사용자가 링크가 가리키게 하고자 하는 곳 위에 다음과 같은 줄을 작성하십시오:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:256
 msgid "Remember to leave a line open above and below this line."
 msgstr "이 라인 위아래에 빈 줄을 삽입하는 것을 잊지 마십시오."
+
+#: ../../docs/training_manual/appendix/contribute.rst:257
+msgid "To create a link, refer to it as below::"
+msgstr "링크를 생성하려면, 다음과 같이 참조시키십시오:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:262
 msgid "External links"
@@ -390,29 +542,37 @@ msgstr "외부 링크"
 
 #: ../../docs/training_manual/appendix/contribute.rst:264
 msgid "To create an external link, write it out like this::"
-msgstr "외부 링크를 생성하려면 다음과 같이 작성하십시오."
+msgstr "외부 링크를 생성하려면 다음과 같이 작성하십시오:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:269
 msgid "Using monospaced text"
-msgstr "고정폭 텍스트 사용"
+msgstr "고정폭 텍스트 사용하기"
+
+#: ../../docs/training_manual/appendix/contribute.rst:271
+msgid ""
+"When you are writing text that the user needs to enter, a path name, or the "
+"name of a database element such as a table or column name, you must write it"
+" in ``monospaced text``. For example::"
+msgstr ""
+"사용자가 입력해야 하는 텍스트, 경로 이름, 테이블이나 열 이름 같은 데이터베이스 요소의 이름 등을 작성할 때, ``고정폭 "
+"텍스트(monospaced text)`` 로 써야 합니다. 다음은 그 예시입니다:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:278
 msgid "Labeling GUI items"
-msgstr "GUI 항목 라벨링"
+msgstr "GUI 항목 라벨 작업"
 
 #: ../../docs/training_manual/appendix/contribute.rst:280
 msgid ""
 "If you are referring to a GUI item, such as a button, you must write its "
 "name in :guilabel:`the GUI label format`. For example::"
 msgstr ""
-"버튼 같은 GUI 항목을 언급하는 경우, 그 명칭을 다음과 같이 :guilabel:`the GUI label format` 으로 써야 "
-"합니다."
+"버튼 같은 GUI 항목을 언급하는 경우, 그 명칭을 :guilabel:`GUI 라벨 서식` 으로 써야 합니다. 다음은 그 예시입니다:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:285
 msgid ""
 "This also applies if you are mentioning the name of a tool without requiring"
 " the user to click a button."
-msgstr "사용자가 버튼을 클릭할 필요 없이, 도구명만을 언급할 경우에도 역시 적용됩니다."
+msgstr "사용자가 버튼을 클릭할 필요 없이, 도구 이름만을 언급할 경우에도 역시 적용됩니다."
 
 #: ../../docs/training_manual/appendix/contribute.rst:289
 msgid "Menu selections"
@@ -423,16 +583,23 @@ msgid ""
 "If you are guiding a user through menus, you must use the "
 ":menuselection:`menu --> selection --> format`. For example::"
 msgstr ""
-"사용자에게 메뉴를 안내할 경우, 그 명칭을 다음과 같이 :menuselection:`menu --> selection --> "
-"format` 으로 써야 합니다."
+"사용자에게 메뉴를 안내할 경우, :menuselection:`메뉴 --> 선택 --> 서식` 으로 써야 합니다. 다음은 그 예시입니다:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:298
 msgid "Adding notes"
-msgstr "주석 추가"
+msgstr "주석 추가하기"
+
+#: ../../docs/training_manual/appendix/contribute.rst:300
+msgid ""
+"You might need to add a note in the text, which explains extra details that "
+"can't easily be made part of the flow of the lesson. This is the markup::"
+msgstr ""
+"텍스트 안에 강의의 흐름의 일부로 쉽게 녹아들지 못 하는 추가적인 세부 사항을 설명하는 주석을 추가해야 할 수도 있습니다. 해당 마크업은"
+" 다음과 같습니다:"
 
 #: ../../docs/training_manual/appendix/contribute.rst:313
 msgid "Adding a sponsorship/authorship note"
-msgstr "스폰서/작성자 주석 추가"
+msgstr "후원자/작성자 주석 추가하기"
 
 #: ../../docs/training_manual/appendix/contribute.rst:315
 msgid ""
@@ -442,9 +609,26 @@ msgid ""
 "the module, lesson or section that they sponsored. However, it may not be an"
 " advertisement for their company."
 msgstr ""
-"스폰서를 대신해서 새 모듈, 강의 또는 섹션을 작성하는 경우, 스폰서가 선택한 간단한 스폰서의 메시지를 첨부해야 합니다. 이 메시지는 "
-"독자들에게 스폰서의 명칭을 알려야 하며, 스폰서가 후원하는 모듈, 강의 또는 섹션 제목 아래에 위치해야 합니다. 하지만, 꼭 스폰서 "
+"후원자를 대신해서 새 강의, 수업 또는 절을 작성하는 경우, 후원자가 선택한 간단한 후원자의 메시지를 첨부해야 합니다. 이 메시지는 "
+"독자들에게 후원자의 이름을 알려야 하며, 후원자가 후원하는 강의, 수업 또는 절 제목 아래에 위치해야 합니다. 하지만, 꼭 후원자의 "
 "회사를 위한 광고일 필요는 없습니다."
+
+#: ../../docs/training_manual/appendix/contribute.rst:321
+msgid ""
+"If you have volunteered to write a module, lesson or section in your own "
+"capacity, and not on behalf of a sponsor, you may include an authorship note"
+" below the heading of the module, lesson or section that you authored. This "
+"must take the form ``This [module/lesson/section] contributed by [author "
+"name].`` Do not add further text, contact details, etc. Such details are to "
+"be added in the \"Contributors\" section of the Foreword, along with the "
+"name(s) of the part(s) you added. If you only made enhancements, corrections"
+" and/or additions, list yourself as an editor."
+msgstr ""
+"여러분이 후원자를 대신해서가 아니라 스스로 강의, 수업 또는 절을 작성하는 데 지원했다면, 작성한 강의, 수업 또는 절 제목 아래 작성자"
+" 주석을 삽입할 수 있습니다. ``이 [강의/수업/절]은 [작성자 이름]이 기고했습니다.`` 라는 서식을 지켜야만 합니다. 다른 문장이나"
+" 연락처 등을 추가하지 마십시오. 그런 세부 정보는 추가한 부분(들)의 이름(들)과 함께 서문의 \"개인 "
+"공헌자(Contributors)\" 절에 추가될 것입니다. 내용을 업데이트하거나 수정하거나 추가하기만 했다면 편집자 목록에 이름을 "
+"추가하십시오."
 
 #: ../../docs/training_manual/appendix/contribute.rst:331
 msgid "Thank You!"
