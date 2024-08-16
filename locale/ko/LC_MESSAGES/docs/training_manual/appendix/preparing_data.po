@@ -32,11 +32,11 @@ msgid ""
 msgstr ""
 "번역은 `여러분이 참여할 수 있는 "
 "<https://qgis.org/ko/site/getinvolved/translate.html#becoming-a-"
-"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 에서 번역되고 있습니다."
+"translator>`_ 커뮤니티 활동입니다. 이 페이지는 현재 |translation progress| 번역되었습니다."
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:4
 msgid "Preparing Exercise Data"
-msgstr "예제 데이터 준비"
+msgstr "예제 데이터 준비하기"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:6
 msgid ""
@@ -58,7 +58,7 @@ msgid ""
 msgstr ""
 "교육 교재와 함께 :ref:`제공되는 샘플 데이터 <data_downloadlink>` 는 |majorUrbanName| 마을 및 그 "
 "주변에 대한 자료입니다. |majorUrbanName| 은 남아프리카 공화국의 웨스턴케이프에 있는 케이프타운에서 동쪽으로 2시간 거리에 "
-"있습니다. 이 데이터셋의 피처명은 영어와 아프리칸스어 두 가지로 되어 있습니다."
+"있습니다. 이 데이터셋의 피처 이름은 영어와 아프리칸스어 두 가지로 되어 있습니다."
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:16
 msgid ""
@@ -68,15 +68,19 @@ msgid ""
 "Later modules use more complex data sources which may or may not be "
 "available for your region."
 msgstr ""
-"누구나 이 데이터셋을 어려움없이 이용할 수 있습니다. 그러나 사용자 자국 또는 고향의 데이터를 이용하고자 할 경우, 모듈 3에서 모듈 "
-"7.2까지의 모든 강의에 사용자의 데이터를 쓸 수 있습니다. 이후 강의에는 좀더 복잡한 데이터 소스를 사용하게 되는데, 사용자의 지역에 "
-"따라 이런 데이터가 존재하지 않을 수도 있습니다."
+"누구나 이 데이터셋을 어려움없이 이용할 수 있습니다. 그러나 사용자 자국 또는 고향의 데이터를 이용하고자 할 경우, 3번 강의에서 7번 "
+"강의의 2번째 수업까지의 모든 수업에 사용자 데이터를 쓸 수 있습니다. 이후 수업에는 좀더 복잡한 데이터 소스를 사용하게 되는데, "
+"사용자의 지역에 따라 이런 데이터가 존재하지 않을 수도 있습니다."
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:21
 msgid ""
 "These instructions assume you have a good knowledge of QGIS and are not "
 "intended to be used as teaching material."
 msgstr "이 지침은 사용자가 QGIS를 잘 알고 있다고 가정하며, 강의 교재로 쓰이도록 작성된 것은 아닙니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:25
+msgid "Create OSM based vector files"
+msgstr "OSM 기반 벡터 파일 생성하기"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:27
 msgid ""
@@ -92,21 +96,362 @@ msgstr ""
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:33
 msgid "Open a new QGIS project"
-msgstr "새 QGIS 프로젝트 열기"
+msgstr "새 QGIS 프로젝트를 여십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:34
+msgid ""
+"Select :menuselection:`Layer --> Data Source Manager` to open the "
+":guilabel:`Data Source Manager` dialog"
+msgstr ""
+"메뉴에서 :menuselection:`Layer --> Data Source Manager` 항목을 선택해서 :guilabel:`Data"
+" Source Manager` 대화창을 여십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:36
+msgid ""
+"In the :guilabel:`Browser` tab, expand the :guilabel:`XYZ Tiles` drop-down "
+"menu and double-click the :guilabel:`OpenStreetMap` item."
+msgstr ""
+"대화창의 :guilabel:`Browser` 탭에서 :guilabel:`XYZ Tiles` 드롭다운 메뉴를 펼친 다음 "
+":guilabel:`OpenStreetMap` 항목을 더블클릭하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:43
+msgid "A map of the world is now visible on the map canvas."
+msgstr "이제 맵 캔버스에 세계 지도가 보일 겁니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:44
+msgid "Close the :guilabel:`Data Source Manager` dialog"
+msgstr ":guilabel:`Data Source Manager` 대화창을 닫으십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:45
+msgid "Move to the area you'd like to use as study area"
+msgstr "여러분이 연구 지역으로 사용하고자 하는 지역으로 이동하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:51
+msgid ""
+"Now that we have the area we'll extract the data from, let's enable the "
+"extraction tools."
+msgstr "이제 데이터를 추출할 지역을 선택했으니, 추출 도구를 활성화해봅시다."
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:54
 msgid "Go to :menuselection:`Plugins --> Manage/Install Plugins...`"
-msgstr ":menuselection:`Plugins --> Manage/Install Plugins...` 메뉴 항목을 클릭하십시오."
+msgstr ""
+"메뉴에서 :menuselection:`Plugins --> Manage/Install Plugins...` 항목을 클릭하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:55
+msgid "In the :guilabel:`All` tab, type ``QuickOSM`` in the search box"
+msgstr ":guilabel:`All` 탭에 있는 검색란에 ``QuickOSM`` 이라고 입력하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:56
+msgid ""
+"Select the QuickOSM plugin, press :guilabel:`Install Plugin` and then "
+":guilabel:`Close` the dialog."
+msgstr ""
+"QuickOSM 플러그인을 선택하고, :guilabel:`Install Plugin` 버튼을 누른 다음 :guilabel:`Close` "
+"를 눌러 대화창을 닫으십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:62
+msgid ""
+"Execute the new plugin from :menuselection:`Vector --> QuickOSM --> "
+"QuickOSM...` menu"
+msgstr ""
+"메뉴에서 :menuselection:`Vector --> QuickOSM --> QuickOSM...` 항목을 클릭해서 새 플러그인을 "
+"실행하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:63
+msgid ""
+"In the :guilabel:`Quick query` tab, select ``building`` in the "
+":guilabel:`Key` drop-down menu"
+msgstr ""
+":guilabel:`Quick query` 탭에 있는 :guilabel:`Key` 드롭다운 메뉴에서 ``building`` 을 "
+"선택하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:65
+msgid ""
+"Leave the :guilabel:`Value` field empty, meaning that you are querying all "
+"buildings."
+msgstr ":guilabel:`Value` 필드를 비워두십시오. 모든 건물을 쿼리할 것이라는 의미입니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:67
+msgid "Select :guilabel:`Canvas Extent` in the next drop-down menu"
+msgstr "그 다음 드롭다운 메뉴에서 :guilabel:`Canvas Extent` 를 선택하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:68
+msgid ""
+"Expand the :guilabel:`Advanced` group below and uncheck all geometry types "
+"on the right except :guilabel:`Multipolygons`."
+msgstr ""
+"그 아래 있는 :guilabel:`Advanced` 그룹을 펼친 다음 :guilabel:`Multipolygons` 를 제외하고, "
+"오른쪽에 있는 도형 유형들을 모두 체크 해제하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:70
+msgid "Press :guilabel:`Run query`"
+msgstr ":guilabel:`Run query` 버튼을 누르십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:75
+msgid ""
+"A new ``building`` layer is added to the :guilabel:`Layers` panel, showing "
+"buildings in the selected extent."
+msgstr ""
+":guilabel:`Layers` 패널에 선택한 범위 안에 있는 건물들을 보여주는 새 ``building`` 레이어가 추가됩니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:77
+msgid "Proceed as above to extract other data:"
+msgstr "앞에서와 같은 방법으로 다른 데이터를 추출하십시오:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:79
+msgid "``Key = landuse`` and ``Multipolygons`` geometry type."
+msgstr "``Key = landuse`` 그리고 도형 유형은 ``Multipolygons``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:80
+msgid ""
+"``Key = boundary``, ``Value = protected_area`` and ``Multipolygons`` "
+"geometry type."
+msgstr ""
+"``Key = boundary``, ``Value = protected_area`` 그리고 도형 유형은 ``Multipolygons``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:82
+msgid ""
+"``Key = natural``, ``Value = water`` and ``Multipolygons`` geometry type."
+msgstr "``Key = natural``, ``Value = water`` 그리고 도형 유형은 ``Multipolygons``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:83
+msgid ""
+"``Key = highway`` and check ``Lines`` and ``Multilines`` geometry types."
+msgstr "``Key = highway`` and check ``Lines`` 그리고 도형 유형은 ``Multilines``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:84
+msgid ""
+"``Key = waterway``, ``Value = river`` and check ``Lines`` and ``Multilines``"
+" geometry types."
+msgstr ""
+"``Key = waterway``, ``Value = river`` 그리고 도형 유형은 ``Lines`` 와 ``Multilines``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:86
+msgid "``Key = place`` and ``Points`` geometry type."
+msgstr "``Key = place`` 그리고 도형 유형은 ``Points``"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:88
+msgid ""
+"This process adds the layers as temporary files (indicated by the "
+"|indicatorMemory| icon next to their name)."
+msgstr ""
+"이 과정에서 레이어들은 임시 파일로 추가됩니다. (레이어 이름 옆의 |indicatorMemory| 아이콘으로 알 수 있습니다.)"
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:243
 msgid "indicatorMemory"
 msgstr "indicatorMemory"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:94
+msgid ""
+"You can sample the data your region contains in order to see what kind of "
+"results your region will yield."
+msgstr "여러분의 지역에서 어떤 유형의 결과물을 얻게 될지 알아보려면 여러분의 지역이 담고 있는 데이터를 샘플링해보면 됩니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:97
+msgid ""
+"We now need to save the resulting data to use during your course. We'll be "
+"using ESRI Shapefile, GeoPackage and SpatiaLite formats depending on the "
+"data."
+msgstr ""
+"이제 산출 데이터를 수업에 사용하기 위해 저장해야 합니다. 데이터에 따라 ESRI 셰이프파일(Shapefile), GeoPackage 및"
+" SpatiaLite 포맷을 사용할 것입니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:101
+msgid "To convert the :guilabel:`place` temporary layer to another format:"
+msgstr ":guilabel:`place` 임시 레이어를 다른 포맷으로 변환하려면:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:103
+msgid ""
+"Click the |indicatorMemory| icon next to the :guilabel:`place` layer to open"
+" the :guilabel:`Save Scratch Layer` dialog."
+msgstr ""
+":guilabel:`place` 레이어 옆에 있는 |indicatorMemory| 아이콘을 클릭해서 :guilabel:`Save "
+"Scratch Layer` 대화창을 여십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:106
+msgid ""
+"If you need to change any of the temporary layer's properties (CRS, extent, "
+"fields...), use the :menuselection:`Export --> Save Features as...` "
+"contextual menu instead, and ensure the :guilabel:`Add saved file to map` "
+"option is checked. This adds a new layer."
+msgstr ""
+"임시 레이어의 속성들 가운데 하나라도 (좌표계, 범위, 필드 등등을) 변경해야 할 경우 :menuselection:`Export --> "
+"Save Features as...` 컨텍스트 메뉴를 대신 사용하고, :guilabel:`Add saved file to map` 옵션이"
+" 체크되어 있는지 확인하십시오. 새 레이어를 추가하는 옵션입니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:111
+msgid "Select the :guilabel:`ESRI Shapefile` format"
+msgstr ":guilabel:`ESRI Shapefile` 포맷을 선택하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:112
+msgid ""
+"Use the :guilabel:`...` button to browse to the "
+":file:`exercise_data/shapefile/` folder and save the file as "
+":file:`places.shp`."
+msgstr ""
+":guilabel:`...` 버튼을 클릭하고 :file:`exercise_data/shapefile/` 폴더에 파일을 "
+":file:`places.shp` 라는 이름으로 저장하십시오."
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:118
 #: ../../docs/training_manual/appendix/preparing_data.rst:149
 #: ../../docs/training_manual/appendix/preparing_data.rst:165
 msgid "Press :guilabel:`OK`"
 msgstr ":guilabel:`OK` 를 클릭하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:120
+msgid ""
+"In the :guilabel:`Layers` panel, the temporary :guilabel:`place` layer is "
+"replaced with the saved :guilabel:`places` shapefile layer and the temporary"
+" icon next to it removed."
+msgstr ""
+":guilabel:`Layers` 패널에서, :guilabel:`place` 임시 레이어가 저장한 :guilabel:`places` "
+"셰이프파일 레이어로 대체되고 레이어 이름 옆의 임시 아이콘이 사라집니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:123
+msgid ""
+"Double-click the layer to open its :menuselection:`Layer Properties --> "
+"Source` tab and update the :guilabel:`Layer name` property to match the file"
+" name."
+msgstr ""
+"이 레이어를 더블클릭해서 레이어의 :menuselection:`Layer Properties --> Source` 탭을 열고 "
+":guilabel:`Layer name` 속성을 파일 이름과 일치하도록 업데이트하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:127
+msgid "Repeat the process for other layers, renaming them as follows:"
+msgstr "다른 레이어들에 대해서도 이 과정을 반복하십시오. 다음과 같은 이름으로 변경하면 됩니다:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:129
+msgid "``natural_water`` into ``water``"
+msgstr "``natural_water`` 를 ``water`` 로"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:130
+msgid "``waterway_river`` into ``rivers``"
+msgstr "``waterway_river`` 를 ``rivers`` 로"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:131
+msgid "``boundary_protected_area`` into ``protected_areas``"
+msgstr "``boundary_protected_area`` 를 ``protected_areas`` 로"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:133
+msgid ""
+"Each resulting data set should be saved in the "
+":file:`exercise_data/shapefile/` directory."
+msgstr ":file:`exercise_data/shapefile/` 디렉터리에 각각의 산출 데이터를 저장해야 합니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:136
+msgid ""
+"The next step is to create a GeoPackage file from the :guilabel:`building` "
+"layer to use during the course:"
+msgstr ""
+"다음 단계는 :guilabel:`building` 레이어로부터 수업에 사용하기 위한 GeoPackage 파일을 생성하는 것입니다:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:139
+msgid ""
+"Click the |indicatorMemory| icon next to the :guilabel:`building` layer"
+msgstr ":guilabel:`building` 레이어 옆에 있는 |indicatorMemory| 아이콘을 클릭하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:140
+msgid "Select the :guilabel:`GeoPackage` format"
+msgstr ":guilabel:`GeoPackage` 포맷을 선택하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:141
+msgid ""
+"Save the file as :file:`training_data.gpkg` under the :file:`exercise_data/`"
+" folder"
+msgstr ""
+":file:`exercise_data/` 폴더에 파일을 :file:`training_data.gpkg` 라는 이름으로 저장하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:143
+msgid ""
+"By default, the :guilabel:`Layer name` is filled as the file name. Replace "
+"it with ``buildings``."
+msgstr ""
+":guilabel:`Layer name` 은 기본적으로 파일 이름으로 채워집니다. ``buildings`` 라는 이름으로 바꾸십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:150
+msgid "Rename the layer in its properties dialog"
+msgstr "레이어 속성 대화창에서 레이어 이름을 변경하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:151
+msgid ""
+"Repeat the process with the :guilabel:`highway` layer, saving it as "
+"``roads`` in the same GeoPackage database."
+msgstr ""
+":guilabel:`highway` 레이어에 대해서도 동일한 과정을 반복하고, 동일한 GeoPackage 데이터베이스에 ``roads``"
+" 라는 이름으로 저장하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:154
+msgid ""
+"The last step is to save the remaining temporary file as a SpatiaLite file."
+msgstr "마지막 단계는 나머지 임시 파일을 SpatiaLite 파일로 저장하는 것입니다:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:156
+msgid "Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer"
+msgstr ":guilabel:`landuse` 레이어 옆에 있는 |indicatorMemory| 아이콘을 클릭하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:157
+msgid "Select the :guilabel:`SpatiaLite` format"
+msgstr ":guilabel:`SpatiaLite` 포맷을 선택하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:158
+msgid ""
+"Save the file as :file:`landuse.sqlite` under the :file:`exercise_data/` "
+"folder. By default, the :guilabel:`Layer name` is filled as the file name. "
+"Do not change it."
+msgstr ""
+":file:`exercise_data/` 폴더에 파일을 :file:`landuse.sqlite` 라는 이름으로 저장하십시오. "
+":guilabel:`Layer name` 은 기본적으로 파일 이름으로 채워집니다. 이름을 바꾸지 마십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:167
+msgid ""
+"You should now have a map which looks something like this (the symbology "
+"will certainly be very different, because QGIS randomly assigns colors when "
+"layers are added to the map):"
+msgstr ""
+"이제 다음처럼 보이는 맵을 보게 될 것입니다(QGIS는 레이어가 맵에 추가될 때 색상을 랜덤하게 할당하기 때문에, 레이어 심볼은 매우 "
+"다르게 보일 것입니다):"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:174
+msgid ""
+"The important thing is that you have 7 vector layers matching those shown "
+"above and that all those layers have some data."
+msgstr ""
+"중요한 점은 앞에서 설명했던 것과 일치하는 벡터 레이어 7개를 생성했고, 이 레이어들 모두가 데이터를 가지고 있다는 것입니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:178
+msgid "Create SRTM DEM tiff files"
+msgstr "SRTM DEM Tiff 파일 생성하기"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:180
+msgid ""
+"For modules :ref:`tm_create_vector_data` and :ref:`tm_rasters`, you'll also "
+"need raster images (SRTM DEM) which cover the region you have selected for "
+"your course."
+msgstr ""
+":ref:`tm_create_vector_data` 와 :ref:`tm_rasters` 의 경우, 여러분이 수업을 위해 선택한 지역을 "
+"커버하는 래스터 이미지(SRTM DEM)도 필요합니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:184
+msgid ""
+"The `CGIAR-CGI <https://srtm.csi.cgiar.org/>`_ provides some SRTM DEM you "
+"can download from https://srtm.csi.cgiar.org/srtmdata/."
+msgstr ""
+"`CGIAR-CGI <https://srtm.csi.cgiar.org/>`_ 가 여러분이 "
+"https://srtm.csi.cgiar.org/srtmdata/ 로부터 다운로드할 수 있는 몇몇 SRTM DEM을 제공하고 있습니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:187
+msgid ""
+"You'll need images which cover the entire region you have chosen to use. To "
+"find the extent coordinates, in QGIS , |zoomToLayer| zoom to the extent of "
+"the largest layer and pick the values in the |extents| :guilabel:`Extents` "
+"box of the status bar. Keep the :file:`GeoTiff` format. Once the form is "
+"filled, click on the :guilabel:`Click here to Begin Search >>` button and "
+"download the file(s)."
+msgstr ""
+"여러분이 사용하기로 선택한 지역 전체를 커버하는 이미지가 필요합니다. 범위 좌표를 찾으려면, QGIS에서 범위가 가장 큰 레이어로 "
+"|zoomToLayer| 확대/축소한 다음 상태 바의 |extents| :guilabel:`Extents` 란에 있는 값들을 "
+"선택하십시오. :file:`GeoTiff` 포맷은 그대로 유지하십시오. 양식을 채우고나면, :guilabel:`Click here to "
+"Begin Search >>` 버튼을 클릭해서 파일(들)을 다운로드하십시오."
 
 #: ../../docs/training_manual/appendix/preparing_data.rst:246
 msgid "zoomToLayer"
@@ -116,6 +461,88 @@ msgstr "zoomToLayer"
 msgid "extents"
 msgstr "extents"
 
+#: ../../docs/training_manual/appendix/preparing_data.rst:194
+msgid ""
+"Once you have downloaded the required file(s), they should be saved in the "
+":file:`exercise_data` directory, under :file:`raster/SRTM` subfolders."
+msgstr ""
+"필요한 파일(들)을 다운로드했다면, :file:`exercise_data` 디렉터리의 :file:`raster/SRTM` 하위 폴더에 "
+"저장해야 합니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:198
+msgid "Create imagery tiff files"
+msgstr "영상 Tiff 파일 생성하기"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:201
+msgid ""
+"In Module :ref:`tm_create_vector_data`, :ref:`tm_datasources` lesson shows "
+"close-up images of three school sports fields which students are asked to "
+"digitize. You'll therefore need to reproduce these images using your new "
+"SRTM DEM tiff file(s). There is no obligation to use school sports fields: "
+"any three school land-use types can be used (e.g. different school "
+"buildings, playgrounds or car parks)."
+msgstr ""
+":ref:`tm_create_vector_data` 의 :ref:`tm_datasources` 수업에서는 학생들에게 디지타이즈해보라고 "
+"하는 학교 운동장 세 곳의 클로즈업(close-up) 이미지를 사용합니다. 따라서 새 SRTM DEM Tiff 파일(들)을 사용해서 이런"
+" 이미지를 새로 만들어야 합니다. 반드시 학교 운동장을 사용해야할 필요는 없습니다. 학교의 토지이용 유형들 가운데 아무거나 (예를 들면 "
+"학교 건물, 놀이터, 또는 주차장 등등) 3개를 사용하면 됩니다."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:208
+msgid "For reference, the image in the example data is:"
+msgstr "예제 데이터의 다음 이미지를 참조하세요:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:215
+msgid "Replace tokens"
+msgstr "토큰 대체하기"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:217
+msgid ""
+"Having created your localized dataset, the final step is to replace the "
+"tokens in the :file:`substitutions.txt` file so that the appropriate names "
+"will appear in your localized version of the Training Manual."
+msgstr ""
+"여러분의 로컬 데이터셋을 생성했으니, 마지막 단계는 :file:`substitutions.txt` 파일에 있는 토큰(token)들을 "
+"대체해서 올바른 이름들이 이 교육 교재의 로컬화된 버전에 나타나도록 하는 일입니다."
+
 #: ../../docs/training_manual/appendix/preparing_data.rst:221
 msgid "The tokens you need to replace are as follows:"
-msgstr "교체해야 할 표식들은 다음과 같습니다."
+msgstr "대체해야 할 토큰들은 다음과 같습니다:"
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:223
+msgid ""
+"``majorUrbanName``: this defaults to \"Swellendam\". Replace with the name "
+"of the major town in your region."
+msgstr ""
+"``majorUrbanName``: 기본값은 \"Swellendam\"입니다. 여러분의 지역에 있는 주요 도시의 이름으로 대체하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:225
+msgid ""
+"``schoolAreaType1``: this defaults to \"athletics field\". Replace with the "
+"name of the largest school area type in your region."
+msgstr ""
+"``schoolAreaType1``: 기본값은 \"athletics field\"입니다. 여러분의 지역에서 가장 큰 학교 시설 유형의 "
+"이름으로 대체하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:227
+msgid ""
+"``largeLandUseArea``: this defaults to \"Bontebok National Park\". Replace "
+"with the name of a large landuse polygon in your region."
+msgstr ""
+"``largeLandUseArea``: 기본값은 \"Bontebok National Park\"입니다. 여러분의 지역에서 가장 큰 "
+"토지이용 폴리곤의 이름으로 대체하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:229
+msgid ""
+"``srtmFileName``: this defaults to :file:`srtm_41_19.tif`. Replace this with"
+" the filename of your SRTM DEM file."
+msgstr ""
+"``srtmFileName``: 기본값은 :file:`srtm_41_19.tif` 입니다. 여러분의 SRTM DEM 파일 이름으로 "
+"대체하십시오."
+
+#: ../../docs/training_manual/appendix/preparing_data.rst:231
+msgid ""
+"``localCRS``: this defaults to ``WGS 84 / UTM 34S``. You should replace this"
+" with the correct CRS for your region."
+msgstr ""
+"``localCRS``: 기본값은 ``WGS 84 / UTM 34S`` 입니다. 여러분의 지역에서 사용하는 올바른 좌표계로 대체해야 "
+"합니다."
