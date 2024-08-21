@@ -649,7 +649,7 @@ Elevation Properties
 The |elevationscale| :guilabel:`Elevation` tab provides options to control
 the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
 and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
-Specifically, you can set:
+Specifically, you can set configuration:
 
 .. _figure_mesh_elevation:
 
@@ -658,9 +658,21 @@ Specifically, you can set:
 
    Mesh Elevation properties
 
-* :guilabel:`Elevation Surface`: how the mesh layer vertices Z values
+* :guilabel:`From vertices`: how the mesh layer vertices Z values
   should be interpreted as terrain elevation.
   You can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`.
+* :guilabel:`Fixed Elevation Range`: the mesh layer is linked to a fixed elevation range.
+  This mode is applicable when a layer has either a single fixed elevation or a range (slice)
+  of elevation values. If a range is specified, mesh values will be extruded over this range.
+  You can set the :guilabel:`Lower` and :guilabel:`Upper`
+  elevation range values for the layer, and specify whether the lower or upper :guilabel:`Limits`
+  are inclusive or exclusive.
+* :guilabel:`Fixed Elevation Range Per Group`: each group in the mesh layer
+  is associated with a fixed elevation range. This mode can be used when a layer
+  has elevation data exposed through different dataset groups.
+  This feature is exposed as a user-editable table for dataset groups with lower and upper values.
+  You can either populate the lower and upper values manually
+  or use an |expression| :guilabel:`Expression` to auto-fill all group values based on an expression.
 * :guilabel:`Profile Chart Appearance`: controls the rendering
   of the mesh elements elevation in the profile chart.
   The profile :guilabel:`Style` can be set as:
