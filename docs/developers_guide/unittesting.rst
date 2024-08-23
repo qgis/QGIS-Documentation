@@ -703,6 +703,23 @@ This makes it possible to run a specific subset of tests:
   Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 272ms
   ********* Finished testing of TestQgsDxfExport *********
 
+Sandboxing test run
+-------------------
+
+By default all test temporary files are written to the system temp directory (for example ``/tmp/`` on Linux systems or ``C:\temp`` on Windows). 
+A lot of files can be created in this directory during the test run.
+
+If you do not want to mix up with the common system temp directory (for example on a multi user server or in case of permission issue), 
+you can create your own temp directory and specify it to ``ctest`` by setting the ``TMPDIR`` environment variable with your new directory.
+
+On Linux you could do it with:
+
+.. code-block:: bash
+
+  $ mkdir ~/my_qgis_temp
+  $ TMPDIR=~/my_qgis_temp ctest
+
+
 Debugging unit tests
 --------------------
 
