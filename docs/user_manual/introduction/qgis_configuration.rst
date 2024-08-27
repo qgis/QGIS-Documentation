@@ -398,8 +398,17 @@ Data Sources settings
 **Feature attributes and table**
 
 * |checkbox| :guilabel:`Open attribute table as docked window`
-* :guilabel:`Copy features as` 'Plain text, no geometry', 'Plain text, WKT geometry',
-  or 'GeoJSON' when pasting features in other applications.
+* :guilabel:`Copy features as`: defines the format to use for data when pasting
+  features in other applications.
+
+  * :guilabel:`Plain text, no geometry`: attributes are copied as text
+    but the geometry is skipped
+  * :guilabel:`Plain text, WKT geometry`: attributes are copied as text
+    and the geometry is returned in WKT
+  * :guilabel:`Plain text, WKB geometry`: attributes are copied as text
+    and the geometry is returned in WKB (hex format)
+  * :guilabel:`GeoJSON`: attributes and geometry are formatted as GeoJSON data
+
 * :guilabel:`Attribute table behavior` |selectString|: set filter on the attribute
   table at the opening. There are three possibilities: 'Show all features',
   'Show selected features' and 'Show features visible on map'.
@@ -1170,7 +1179,9 @@ Network settings
 * Define :guilabel:`Default expiration period for WMS-C/WMTS tiles (hours)` -
   default is 24
 * Define :guilabel:`Max retry in case of tile or feature request errors`
-* Define :guilabel:`User-Agent`
+* Define :guilabel:`User-Agent prefix` which defaults to ``Mozilla/5.0``.
+  This value will be prepended to both QGIS and OS version
+  e.g.``Mozilla/5.0 QGIS/33801/Ubuntu 22.04.4 LTS`` to shape the user-agent.
 
 .. _figure_network_tab:
 
@@ -1835,6 +1846,13 @@ Under |symbology| :guilabel:`Styles` tab, you can configure symbols and colors
 inherent to the project, allowing to safely share the project among different
 machines.
 
+.. _figure_default_styles:
+
+.. figure:: img/project_styles.png
+   :align: center
+
+   Styles tab
+
 Default symbols
 ...............
 
@@ -1846,26 +1864,59 @@ Ramp` and :guilabel:`Text Format` (e.g. when enabling labeling).
 Any of these items can be reset using the :guilabel:`Clear` entry from
 the corresponding drop-down widget.
 
-Options
-.......
+Symbol options
+..............
 
-In the :guilabel:`Options` group, you can:
+In the :guilabel:`Symbol options` group, you can:
 
 * Apply a default :guilabel:`Opacity` to new layers
 * |checkbox| :guilabel:`Assign random colors to symbols`, modifying the symbols
   fill colors, hence avoiding same rendering for all layers.
 
-.. _figure_default_styles:
+.. _style_database:
 
-.. figure:: img/project_styles.png
-   :align: center
+Style Database
+..............
 
-   Styles tab
+A style database in QGIS is a structured repository designed to store symbols,
+text formats, and other styling elements. It serves as a centralized location
+where you can organize and manage your symbology resources efficiently.
+You can create a dedicated style database for a specific client, housing
+symbols tailored to that client's need. This ensures a clean and organized
+approach, without cluttering the default style database.
+In multi-user environments, it's possible to store project-specific styles
+in a shared location. By linking a project to these styles, all users within
+the project gain access to common symbology, eliminating the need for
+manual import or updates to individual local style database.
+Storing symbols in a project file offers a practical solution, preventing users
+from overcrowding their global style database with project-specific symbology.
+This approach guarantees that other users working on the same project immediately
+have access to all the necessary symbology upon loading the project.
+
+In the :guilabel:`Style Database` section you can choose to
+|symbologyAdd| :guilabel:`Add` or |symbologyRemove| :guilabel:`Remove`
+style database or you can |newPage| :guilabel:`Create new style database`.
+When you add or remove a style database in this section, the changes will
+be automatically reflected in the |symbology| :guilabel:`Symbology Properties`.
+
 
 .. _project_colors:
 
-Project Colors
-..............
+Colors properties
+-----------------
+
+.. _figure_project_colors:
+
+.. figure:: img/project_colors.png
+   :align: center
+
+   Colors tab
+
+In the |colorSwatches| :guilabel:`Colors` tab, you can select the  :guilabel:`Color model`,
+i.e. whether selecting a color should by default be defined as ``RGB`` or ``CMYK``.
+Any color defined in a different color model than the one specified here
+will be converted to this color model when exporting a layout.
+
 
 There is also an additional section where you can define specific colors for the
 running project. Like the :ref:`global colors <colors_options>`, you can:
@@ -1898,32 +1949,6 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
   #. Repeat steps 2 and 3 as much as needed
   #. Update the project color once and the change is reflected EVERYWHERE
      it's in use.
-
-.. _style_database: 
-
-Style Database
-..............
-
-A style database in QGIS is a structured repository designed to store symbols,
-text formats, and other styling elements. It serves as a centralized location 
-where you can organize and manage your symbology resources efficiently.
-You can create a dedicated style database for a specific client, housing 
-symbols tailored to that client's need. This ensures a clean and organized 
-approach, without cluttering the default style database.
-In multi-user environments, it's possible to store project-specific styles 
-in a shared location. By linking a project to these styles, all users within
-the project gain access to common symbology, eliminating the need for 
-manual import or updates to individual local style database.
-Storing symbols in a project file offers a practical solution, preventing users
-from overcrowding their global style database with project-specific symbology. 
-This approach guarantees that other users working on the same project immediately
-have access to all the necessary symbology upon loading the project.
-
-In the :guilabel:`Style Database` section you can choose to 
-|symbologyAdd| :guilabel:`Add` or |symbologyRemove| :guilabel:`Remove` 
-style database or you can |newPage| :guilabel:`Create new style database`.
-When you add or remove a style database in this section, the changes will
-be automatically reflected in the |symbology| :guilabel:`Symbology Properties`.
 
 
 .. _project_data_source_properties:
@@ -2096,23 +2121,29 @@ panel` to manage the map canvas :ref:`temporal navigation <maptimecontrol>`.
 .. index:: Terrain; Elevation
 .. _project_terrain:
 
-Terrain Properties
-------------------
+Elevation Properties
+--------------------
 
-The |layoutItem3DMap| :guilabel:`Terrain` tab helps you configure default settings
+The |elevationscale| :guilabel:`Elevation` tab helps you configure default settings
 for the terrain and elevation.
 When any new :ref:`3d map <label_3dmapview>` is created in the project,
 the map will default to using the same terrain settings as are defined for the project.
 The project elevation settings will also be respected
 by the :ref:`elevation profile <label_elevation_profile_view>` tool.
 
-
 .. _figure_terrain_tab:
 
-.. figure:: img/project_terrain.png
+.. figure:: img/project_elevation.png
    :align: center
 
-   Project Terrain tab
+   Project Elevation tab
+
+* :guilabel:`Vertical Reference System`
+* :guilabel:`Elevation Range`: helps you define the :guilabel:`Lower` and :guilabel:`Upper` limits
+  for the elevation controller in the project.
+
+  .. todo: add url to elevation controller chapter, i.e.
+   for the :ref:`elevation controller <elevation_controller>` in the project.
 
 * :guilabel:`Terrain` and elevation options are available for:
 
@@ -2685,6 +2716,8 @@ in the QGIS user profile.
    :width: 1.3em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
    :width: 1.5em
+.. |colorSwatches| image:: /static/common/mIconColorSwatches.png
+   :width: 1.5em
 .. |crs| image:: /static/common/CRS.png
    :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
@@ -2696,6 +2729,8 @@ in the QGIS user profile.
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
 .. |elevationProfile| image:: /static/common/mActionElevationProfile.png
+   :width: 1.5em
+.. |elevationscale| image:: /static/common/elevationscale.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
@@ -2718,8 +2753,6 @@ in the QGIS user profile.
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
-   :width: 1.5em
-.. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em

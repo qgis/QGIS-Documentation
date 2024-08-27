@@ -458,7 +458,15 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * For all vector source types it is possible to define the :guilabel:`Encoding` or
     to use the :menuselection:`Automatic -->` setting.
 
-
+* The |radioButtonOn| :guilabel:`OGC API` source type allows you to access `vector <https://gdal.org/drivers/vector/oapif.html>`_
+  and `raster <https://gdal.org/drivers/raster/ogcapi.html>`_ data from servers that implement the OGC API standards.
+  To use this option:
+  
+  #. Select |radioButtonOn| :guilabel:`OGC API` from the :guilabel:`Data Source Manager`
+     dialog.
+  #. Enter the endpoint of the OGC API service you want to connect to. Note that you
+     don't need to prefix the endpoint with "OGCAPI:".
+  #. Click :guilabel:`Connect` to establish a connection to the server.
 
 
 .. _mesh_loading:
@@ -1222,6 +1230,13 @@ The following parameters can be entered:
 * |checkbox| :guilabel:`Only look for user's tables`: If checked, QGIS searches
   only for tables and views that are owned by the user that connects to the
   database.
+
+* |checkbox| :guilabel:`Use estimated table metadata`: If checked, estimated
+  table metadata will be used if available. For large tables, this avoids slow
+  table loads and potentially expensive computations, but may result in
+  incorrect layer properties such as layer extent. The fast extent estimation
+  is available starting with QRC1/2024 and SP8 in HANA Cloud and HANA On-Premise
+  respectively.
 
 * |checkbox| :guilabel:`Also list tables with no geometries`: If checked, QGIS
   searches also for tables and views that do not contain a spatial column.

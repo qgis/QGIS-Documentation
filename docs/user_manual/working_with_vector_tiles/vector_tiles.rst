@@ -79,6 +79,9 @@ Provided information are:
 
 * based on the provider of the layer: name, URI, source type and path, number
   of zoom levels
+* custom properties, used to store in the active project additional information about the layer.
+  More properties can be created and managed using PyQGIS, specifically through
+  the :pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` method.
 * the Coordinate Reference System: name, units, method, accuracy, reference
   (i.e. whether it's static or dynamic)
 * picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access,

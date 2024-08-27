@@ -409,8 +409,8 @@ explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
 Add Features
 ------------
 
-Create some :class:`QgsFeature <qgis.core.QgsFeature>` instances and pass a list of them to provider's
-:meth:`addFeatures() <qgis.core.QgsVectorDataProvider.addFeatures>` method. It will return two values:
+Create some :class:`QgsFeature <qgis.core.QgsFeature>` instances and pass a list of them to the provider
+:class:`QgsVectorDataProvider <qgis.core.QgsVectorDataProvider>` ``addFeatures()`` method. It will return two values:
 result (:const:`True` or :const:`False`) and
 list of added features (their ID is set by the data store).
 
@@ -502,7 +502,7 @@ Here you have some examples that demonstrate how to use these editing methods.
 
 .. testcode:: vectors
 
-  from qgis.PyQt.QtCore import QVariant
+  from qgis.PyQt.QtCore import QMetaType
 
   feat1 = feat2 = QgsFeature(layer.fields())
   fid = 99
@@ -522,7 +522,7 @@ Here you have some examples that demonstrate how to use these editing methods.
   layer.changeAttributeValue(fid, fieldIndex, value)
 
   # add new field
-  layer.addAttribute(QgsField("mytext", QVariant.String))
+  layer.addAttribute(QgsField("mytext", QMetaType.Type.QString))
   # remove a field
   layer.deleteAttribute(fieldIndex)
 
@@ -579,12 +579,12 @@ For deletion of fields just provide a list of field indexes.
 
 .. testcode:: vectors
 
- from qgis.PyQt.QtCore import QVariant
+ from qgis.PyQt.QtCore import QMetaType
 
  if caps & QgsVectorDataProvider.AddAttributes:
      res = layer.dataProvider().addAttributes(
-         [QgsField("mytext", QVariant.String),
-         QgsField("myint", QVariant.Int)])
+         [QgsField("mytext", QMetaType.Type.QString),
+         QgsField("myint", QMetaType.Type.Int)])
 
  if caps & QgsVectorDataProvider.DeleteAttributes:
      res = layer.dataProvider().deleteAttributes([0])
@@ -593,7 +593,9 @@ For deletion of fields just provide a list of field indexes.
 
  # Alternate methods for removing fields
  # first create temporary fields to be removed (f1-3)
- layer.dataProvider().addAttributes([QgsField("f1",QVariant.Int),QgsField("f2",QVariant.Int),QgsField("f3",QVariant.Int)])
+ layer.dataProvider().addAttributes([QgsField("f1", QMetaType.Type.Int),
+                                     QgsField("f2", QMetaType.Type.Int),
+                                     QgsField("f3", QMetaType.Type.Int)])
  layer.updateFields()
  count=layer.fields().count() # count of layer fields
  ind_list=list((count-3, count-2)) # create list
@@ -733,7 +735,7 @@ There are several ways to generate a vector layer dataset:
   call to :meth:`writeAsVectorFormatV3()
   <qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` which saves the whole
   vector layer or creating an instance of the class and issue calls to
-  :meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. This class
+  inherited :meth:`addFeature() <qgis.core.QgsFeatureSink.addFeature>`. This class
   supports all the vector formats that GDAL supports (GeoPackage, Shapefile,
   GeoJSON, KML and others).
 * the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class: instantiates
@@ -839,7 +841,7 @@ you can do the following:
     def fieldDefinition(self, field):
       idx = self.layer.fields().indexFromName(field.name())
       if idx == self.list_field_idx:
-        return QgsField(LIST_FIELD_NAME, QVariant.String)
+        return QgsField(LIST_FIELD_NAME, QMetaType.Type.QString)
       else:
         return self.layer.fields()[idx]
 
@@ -867,12 +869,12 @@ Directly from features
 
 .. testcode:: vectors
 
-  from qgis.PyQt.QtCore import QVariant
+  from qgis.PyQt.QtCore import QMetaType
 
   # define fields for feature attributes. A QgsFields object is needed
   fields = QgsFields()
-  fields.append(QgsField("first", QVariant.Int))
-  fields.append(QgsField("second", QVariant.String))
+  fields.append(QgsField("first", QMetaType.Type.Int))
+  fields.append(QgsField("second", QMetaType.Type.QString))
 
   """ create an instance of vector file writer, which will create the vector file.
   Arguments:
@@ -966,22 +968,22 @@ The following example code illustrates creating and populating a memory provider
 
 .. testcode:: vectors
 
-  from qgis.PyQt.QtCore import QVariant
+  from qgis.PyQt.QtCore import QMetaType
 
   # create layer
   vl = QgsVectorLayer("Point", "temporary_points", "memory")
   pr = vl.dataProvider()
 
   # add fields
-  pr.addAttributes([QgsField("name", QVariant.String),
-                      QgsField("age",  QVariant.Int),
-                      QgsField("size", QVariant.Double)])
+  pr.addAttributes([QgsField("name", QMetaType.Type.QString),
+                      QgsField("age",  QMetaType.Type.Int),
+                      QgsField("size", QMetaType.Type.Double)])
   vl.updateFields() # tell the vector layer to fetch changes from the provider
 
   # add a feature
   fet = QgsFeature()
   fet.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(10,10)))
-  fet.setAttributes(["Johny", 2, 0.3])
+  fet.setAttributes(["Johnny", 2, 0.3])
   pr.addFeatures([fet])
 
   # update layer's extent when new features have been added
@@ -1008,7 +1010,7 @@ Finally, let's check whether everything went well
     fields: 3
     features: 1
     extent: 10.0 10.0 10.0 10.0
-    F: 1 ['Johny', 2, 0.3] <QgsPointXY: POINT(10 10)>
+    F: 1 ['Johnny', 2, 0.3] <QgsPointXY: POINT(10 10)>
 
 .. index:: Vector layers; Symbology
 

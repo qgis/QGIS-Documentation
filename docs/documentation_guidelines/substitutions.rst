@@ -247,6 +247,7 @@ Icon                            Substitution                        Icon        
 |temporal|                      ``|temporal``                       |temporalNavigationOff|         ``|temporalNavigationOff|``
 |temporalNavigationFixedRange|  ``|temporalNavigationFixedRange|``  |temporalNavigationAnimated|    ``|temporalNavigationAnimated|``
 |temporalNavigationMovie|       ``|temporalNavigationMovie|``       |newElevationProfile|           ``|newElevationProfile|``
+|elevation|                     ``|elevation|``                     
 ==============================  ==================================  ==============================  ==================================
 
 Selection and Expressions
@@ -907,6 +908,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1em
+.. |elevation| image:: /static/common/Elevation.png
+   :width: 1.5em
 .. |elevationProfile| image:: /static/common/mActionElevationProfile.png
    :width: 1.5em
 .. |elevationscale| image:: /static/common/elevationscale.png

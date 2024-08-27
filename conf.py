@@ -70,6 +70,7 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = [
     'venv',
+    '.github',
     'docs/user_manual/expressions/expression_help/*'
 ]
 
@@ -241,6 +242,9 @@ rst_prolog = r"""
         Translation is a community effort `you can join <https://qgis.org/en/site/getinvolved/translate.html#becoming-a-translator>`_.
         This page is currently translated at |translation progress|.
     """
+
+# A list of warning codes to suppress arbitrary warning messages.
+suppress_warnings = ["config.cache"]
 
 # -- Options for LaTeX output --------------------------------------------------
 
