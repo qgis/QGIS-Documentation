@@ -59,7 +59,7 @@ You will notice that the geometry field type does not implicitly specify what
 This adds a constraint to the table so that it will only accept a point geometry
 or a null value.
 
-Try Yourself: :abbr:`★★★ (Advanced level)`
+:abbr:`★★★ (Advanced level)` Try Yourself:
 -------------------------------------------------------------------------------
 
 Create a new table called cities and give it some appropriate columns,
@@ -113,7 +113,7 @@ The value :kbd:`4326` refers to the projection we are using; in this case, WGS
 84, which is referred to by the number 4326 (refer to the earlier discussion
 about the EPSG).
 
-Try Yourself: :abbr:`★☆☆ (Basic level)`
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 ...............................................................................
 
 Add an appropriate `geometry_columns` entry for your new cities layer
@@ -191,7 +191,7 @@ Then click :guilabel:`OK` to create this connection.
 Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`
 and add layers to your project as usual.
 
-Try Yourself: :abbr:`★★☆ (Moderate level)`
+:abbr:`★★☆ (Moderate level)` Try Yourself:
 ...............................................................................
 
 Formulate a query that shows a person's name, street name and position (from the
