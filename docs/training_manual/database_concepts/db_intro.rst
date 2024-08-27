@@ -118,7 +118,7 @@ Modelling an Address Database
 Let's use a simple case study to see how a database is constructed. We want to
 create an address database.
 
-Try Yourself: :abbr:`★☆☆ (Basic level)`
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 ...............................................................................
 
 Write down the properties which make up a simple address and which we would want
@@ -205,7 +205,7 @@ Imagine you have many friends with the same street name or city. Every time
 this data is duplicated, it consumes space. Worse still, if a city name
 changes, you have to do a lot of work to update your database.
 
-Try Yourself: :abbr:`★☆☆ (Basic level)`
+:abbr:`★☆☆ (Basic level)` Try Yourself:
 -------------------------------------------------------------------------------
 Redesign the theoretical `people` table above to reduce duplication and to
 normalise the data structure.
@@ -336,7 +336,7 @@ this:
 The ER Diagram helps us to express 'one to many' relationships. In this case
 the arrow symbol show that one street can have many people living on it.
 
-Try Yourself: :abbr:`★★☆ (Moderate level)`
+:abbr:`★★☆ (Moderate level)` Try Yourself:
 ...............................................................................
 
 Our `people` model still has some normalisation issues - try to see if you can
