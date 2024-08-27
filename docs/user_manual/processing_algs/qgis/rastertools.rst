@@ -41,7 +41,7 @@ Parameters
 
        Default: 0
      - Method to use for input layer resampling.
-       :class:`Available options <qgis.analysis.Qgis.GdalResampleAlgorithm>` are:
+       :class:`Available options <qgis.core.Qgis.GdalResampleAlgorithm>` are:
 
        .. include:: ../algs_include.rst
           :start-after: **raster_resampling_methods**
@@ -171,7 +171,7 @@ Parameters
 
        **Resampling method** [enumeration] (``resampleMethod``)
          Method to use for input layer resampling.
-         :class:`Available options <qgis.analysis.Qgis.GdalResampleAlgorithm>` are:
+         :class:`Available options <qgis.core.Qgis.GdalResampleAlgorithm>` are:
 
          .. include:: ../algs_include.rst
             :start-after: **raster_resampling_methods**
