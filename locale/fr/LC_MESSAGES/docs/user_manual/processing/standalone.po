@@ -65,6 +65,14 @@ msgstr ""
 ":file:`metadata.txt` sont reconnues et peuvent être activées et chargées par"
 " l'outil qgis_process."
 
+#: ../../docs/user_manual/processing/standalone.rst:52
+msgid ""
+"Before calling qgis_process on a system without window manager (e.g. a "
+"headless server), you should set::"
+msgstr ""
+"Avant d'appeler qgis_process sur un système sans gestionnaire de fenêtre "
+"(par ex un serveur headless), vous devez définir ::"
+
 #: ../../docs/user_manual/processing/standalone.rst:58
 msgid ""
 "The command ``list`` can be used to get a list of all available providers "
@@ -134,3 +142,43 @@ msgid ""
 msgstr ""
 "``--project_path`` chargera le projet spécifié pour l'exécution de "
 "l'algorithme."
+
+#: ../../docs/user_manual/processing/standalone.rst:95
+msgid ""
+"Complex input parameters, i.e. parameter types which are themselves "
+"specified as a dictionary type object for algorithms, are supported by "
+"qgis_process. To indicate that parameters will be specified via stdin, the "
+"qgis_process command must follow the format (with a trailing ``-`` in place "
+"of the usual arguments list)."
+msgstr ""
+"Les paramètres d'entrée complexes, c'est-à-dire des types de paramètres qui "
+"sont eux-mêmes spécifiés comme un objet de type *dictionnaire* dans les "
+"algorithmes, sont pris en charge par qgis_process. Pour spécifier de tels "
+"paramètres via stdin, la commande qgis_process doit respecter un certain "
+"formatage (avec un ``-`` à la fin, en lieu et place de la liste "
+"d'arguments)."
+
+#: ../../docs/user_manual/processing/standalone.rst:106
+msgid ""
+"The JSON object must contain an \"inputs\" key, which is a map of the input "
+"parameter values. E.g."
+msgstr ""
+"L'objet JSON doit contenir une clé \"inputs\", qui spécifie le tableau des "
+"valeurs de paramètres en entrée. Par exemple :"
+
+#: ../../docs/user_manual/processing/standalone.rst:113
+msgid ""
+"Additionally, extra settings like the distance units, area units, ellipsoid "
+"and project path can be included in this JSON object:"
+msgstr ""
+"En outre, des paramètres additionnels tels que les unités de distance ou de "
+"surface, l’ellipsoïde et le chemin du fichier de projet peuvent êtres inclus"
+" dans l'objet JSON :"
+
+#: ../../docs/user_manual/processing/standalone.rst:126
+msgid ""
+"Specifying input parameters via stdin implies automatically the :file:`JSON`"
+" output format for results."
+msgstr ""
+"Spécifier les paramètres d'entrée via stdin implique automatiquement du "
+":file:`JSON` en format de sortie des résultats."
