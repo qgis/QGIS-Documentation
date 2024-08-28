@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Sorin Călinică <scalinica@gmail.com>, 2024
 # Harrissou Sant-anna, 2024
+# Sorin Călinică <scalinica@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2024\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,29 +24,274 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"Traducerea este un efort al comunității, la care „puteți să vă alăturați "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. În prezent, această pagină este tradusă |translation "
+"progress|."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:6
+msgid "Connecting and Editing Data Across Layers"
+msgstr "Conectarea și Editarea Datelor din Straturi"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:13
+msgid ""
+"Ability to connect data from different layers is one of the duties of a GIS "
+"software. Such a connection can be based on the spatial relationship between"
+" the features, or on their shared attributes. QGIS provides tools to handle "
+"any of these associations, such as:"
+msgstr ""
+"Capacitatea de a interconecta datele diverselor straturi este una dintre "
+"sarcinile unui software GIS. O astfel de conectare se bazează relația "
+"spațială dintre entități sau pe atributele lor comune. QGIS oferă "
+"următoarele instrumente de gestionare a acestor asocieri:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:18
+msgid ""
+"Processing algorithms that can create a new layer as a result of the "
+"connection, namely :ref:`qgisjoinattributesbylocation`, "
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, ..."
+msgstr ""
+"Algoritmi de procesare care pot crea un nou strat ca urmare a conexiunii, "
+"cum ar fi :ref:`qgisjoinattributesbylocation`, :ref:`qgisjoinbynearest`, "
+":ref:`qgisjoinattributestable`, ..."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:21
+msgid ""
+"SQL queries to create a new layer from the :ref:`DB Manager <dbmanager>` or "
+"as a :ref:`virtual layer <vector_virtual_layers>`"
+msgstr ""
+"Interogări SQL pentru a crea un nou strat folosind :ref:`DB Manager "
+"<dbmanager>` sau construind un :ref:`strat virtual <vector_virtual_layers>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:23
+msgid ""
+":ref:`Joins properties <sec_joins>` or :ref:`relations settings "
+"<vector_relations>` that temporarily extend attributes of features in a "
+"given layer, with those of features in another layer based on some matching "
+"attribute(s)."
+msgstr ""
+":ref:`Proprietățile îmbinărilor <sec_joins>` sau :ref:`configurări de "
+"relații <vector_relations>` care extind temporar atributele entităților "
+"dintr-un strat dat, cu cele ale entităților dintr-altul, în funcție de "
+"atribut(ele) comune."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:27
+msgid ""
+"Joins and relations are technical concepts borrowed from databases to get "
+"the most out of data stored in tables by combining their contents. The idea "
+"is that features (rows) of different layers (tables) can be associated to "
+"each other. The number of rows which are matching each other can be of any "
+"value (zero, one, many)."
+msgstr ""
+"Îmbinările și relațiile sunt concepte tehnice împrumutate din bazele de "
+"date, care scot maximum din tabele  prin combinarea conținutului acestora. "
+"Ideea este că entitățile (rândurile) diverselor straturi (tabele) pot fi "
+"asociate între ele. Numărul de rânduri care se pot îmbina poate fi oricare "
+"(zero, unu sau mai mult)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:37
+msgid "Joining features between two layers"
+msgstr "Unirea entităților din două straturi"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:39
+msgid ""
+"**Joins** in QGIS allow you to associate features of the current layer to "
+"features from another loaded vector layer. Whether they are spatially "
+"enabled and the type of geometry do not matter. The join is based on an "
+"attribute that is shared by the layers, in a one-to-one relationship."
+msgstr ""
+"În QGIS **îmbinările** permit să asocierea entităților din stratul curent cu"
+" altele dintr-un alt strat vectorial. Nu contează dacă ambele straturi sunt "
+"spațiale și nici tipul geometriei. Unirea necesită un atribut care este "
+"partajat de ambele straturi, într-o relație de tipul una-la-una."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:44
+msgid "To create a join on a layer (identified below as ``target layer``):"
+msgstr ""
+"Pentru a crea o îmbinare pe un strat (identificat mai jos ca ``strat "
+"destinație``):"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:46
+msgid ""
+"Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab"
+msgstr ""
+"Deschideți fila cu :menuselection:`Proprietățile stratului -->` |join| "
+":guilabel:`Îmbinări`"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
 msgid "join"
 msgstr "join"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:47
+msgid ""
+"Click the |symbologyAdd| :sup:`Add new join` button. The :guilabel:`Add "
+"vector join` dialog appears."
+msgstr ""
+"Clic pe butonul |symbologyAdd| :sup:`Adăugare îmbinare nouă`. Se va deschide"
+" fereastra de dialog  :guilabel:`Adăugare îmbinare vectorială`."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:49
+msgid ""
+"Select the :guilabel:`Join layer` you want to connect with the target vector"
+" layer"
+msgstr ""
+"Selectați the :guilabel:`Stratul de îmbinare` pe care doriți să-l conectați "
+"la stratul vectorial destinație"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:50
+msgid ""
+"Specify the :guilabel:`Join field` (from the ``join layer``) and the "
+":guilabel:`Target field` (from the ``target layer``). These are the fields "
+"that are used to find matching feature in both layers hence they should have"
+" values in common."
+msgstr ""
+"Specificați :guilabel:`Câmpul de îmbinare` (din ``stratul de îmbinare``) și "
+":guilabel:`Câmpul destinație` (din ``stratul destinație``). Acestea sunt "
+"câmpurile utilizate la identificarea entităților din ambele straturi, prin "
+"urmare, ar trebui să aibă valori comune."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:54
+msgid ""
+"Press :guilabel:`OK` and a summary of selected parameters is added to the "
+":guilabel:`Join` panel."
+msgstr ""
+"Apăsați :guilabel:`OK`, după care un rezumat al parametrilor selectați se va"
+" adăuga în panoul :guilabel:`Îmbinare`."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:61
 msgid "Join an attribute table to an existing vector layer"
 msgstr "Alătură un tabel de atribute unui strat vectorial existent"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:63
+msgid ""
+"The steps above will create a join, where **ALL** the attributes of the "
+"**first matching feature** in the join layer is added to the target layer's "
+"feature. The following logic is used to pair features during a join process:"
+msgstr ""
+"Pașii de mai sus vor crea o uniune, în care **TOATE** atributele **primei "
+"entități corespunzătoare** din stratul de îmbinare sunt adăugate la "
+"entitatea stratului țintă. Următoarea logică este utilizată pentru a "
+"împerechea entitățile pe durata procesului de alăturare:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:68
+msgid ""
+"All the features in the target layer are returned, regardless they have a "
+"match"
+msgstr ""
+"Toate entitățile din stratul țintă sunt returnate, indiferent dacă au sau nu"
+" o corespondență"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:69
+msgid ""
+"If the target field contains duplicate values, these features are assigned "
+"the same feature from the join layer."
+msgstr ""
+"Atunci când în câmpul destinație există valori duplicate, acestor entități "
+"li se atribuie aceeași entitate din stratul de îmbinare."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:71
+msgid ""
+"If the join field contains duplicate matching values, only the first fetched"
+" feature is picked."
+msgstr ""
+"Dacă în câmpul de îmbinare există valori corespondente duplicate, atunci se "
+"va reține doar prima entitate preluată."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:73
+msgid ""
+"Joins in QGIS are based on a single field matching so most of the times, you"
+" would want to make sure that values in the matchable fields are unique."
+msgstr ""
+"Îmbinările din QGIS se bazează pe un singur câmp de corespondență, așa că de"
+" cele mai multe ori, asigurați-vă că valorile din câmpurile respective sunt "
+"unice."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:76
+msgid "QGIS provides some more options to tweak the join:"
+msgstr "QGIS oferă opțiuni suplimentare pentru îmbinări:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:78
+msgid ""
+"|checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to "
+"cache values in memory (without geometries) from the joined layer in order "
+"to speed up lookups."
+msgstr ""
+"|checkbox| :guilabel:`Înmagazinarea stratului de îmbinare în memoria "
+"virtuală`: permite stocarea valorilor stratului îmbinat în memorie (fără "
+"geometrii) în scopul accelerării căutărilor."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:80
+msgid ""
+"|unchecked| :guilabel:`Create attribute index on the join field` to speed up"
+" lookups"
+msgstr ""
+"|unchecked| :guilabel:`Crearea unui index pentru atributul câmpului de "
+"îmbinare`: accelerează căutările."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
 msgid "unchecked"
 msgstr "unchecked"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:81
+msgid ""
+"|unchecked| :guilabel:`Dynamic form`: helps to synchronize join fields on "
+"the fly, according to the :guilabel:`Target field`. This way, constraints "
+"for join fields are also correctly updated. Note that it's deactivated by "
+"default because it may be very time consuming if you have a lot of features "
+"or a myriad of joins."
+msgstr ""
+"|unchecked| :guilabel:`Formular dinamic`: ajută la sincronizarea din zbor a "
+"câmpurilor de îmbinare, în conformitate cu :guilabel:`Câmpul destinație`. În"
+" acest fel, constrângerile pentru câmpurile de îmbinare sunt, la rândul lor,"
+" actualizate corect. Rețineți că această facilitate este dezactivată în mod "
+"implicit, deoarece poate consuma foarte mult timp atunci când aveți o "
+"mulțime de entități sau de îmbinări."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:86
+msgid ""
+"If the target layer is editable, then some icons will be displayed in the "
+"attribute table next to fields, in order to inform about their status:"
+msgstr ""
+"Dacă stratul destinație este editabil, atunci unele pictograme vor fi "
+"afișate în tabelul cu atribute de lângă câmpuri, pentru a informa despre "
+"starea acestora:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:89
+msgid ""
+"|joinNotEditable|: the join layer is not configured to be editable. If you "
+"want to be able to edit join features from the target attribute table, then "
+"you have to check the option |checkbox| :guilabel:`Editable join layer`."
+msgstr ""
+"|joinNotEditable|: stratul de îmbinare nu este configurat pentru a fi "
+"editabil. Dacă doriți să puteți edita entitățile corespunzătoare din tabela "
+"cu atribute a stratului destinație, atunci trebuie să bifați opțiunea  "
+"|checkbox| :guilabel:`Strat de îmbinare editabil`."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:684
 msgid "joinNotEditable"
 msgstr "joinNotEditable"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:92
+msgid ""
+"|joinedLayerNotEditable|: the join layer is well configured to be editable, "
+"but its current status is read only."
+msgstr ""
+"|joinedLayerNotEditable|: stratul de îmbinare este bine configurat pentru a "
+"fi editabil, dar în modul curent este disponibil doar pentru citire."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:686
 msgid "joinedLayerNotEditable"

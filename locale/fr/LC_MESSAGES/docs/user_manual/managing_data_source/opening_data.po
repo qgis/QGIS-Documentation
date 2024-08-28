@@ -8,6 +8,7 @@
 # MarieSilvestre, 2024
 # Transifex Bot <>, 2024
 # Harrissou Sant-anna, 2024
+# Thomas Szczurek, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-06 17:56+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: Thomas Szczurek, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,6 +78,14 @@ msgstr ""
 "IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid, et bien d'autres ... Lisez"
 " la liste complète des `formats raster pris en charge "
 "<https://gdal.org/drivers/raster/index.html>`_."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:32
+msgid ""
+"Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, MS "
+"SQL Server, SAP HANA, MySQL..."
+msgstr ""
+"Les formats de base de données incluent PostgreSQL/PostGIS, "
+"SQLite/SpatiaLite, Oracle, MS SQL Server, SAP HANA, MySQL..."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:34
 msgid ""
@@ -989,13 +998,53 @@ msgstr ""
 msgid "Loading a Shapefile with open options"
 msgstr "Charger un Shapefile avec des options"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:380
+msgid ""
+"Press :guilabel:`Add` to load the file in QGIS and display them in the map "
+"view. When adding vector datasets containing multiple layers, the "
+":guilabel:`Select Items to Add` dialog will appear. In this dialog, you can "
+"choose the specific layers from your dataset that you want to add. Also, "
+"under :guilabel:`Options` you can choose to:"
+msgstr ""
+"Appuyez sur :guilabel:`Add` pour charger le fichier dans QGIS et l'afficher "
+"dans la vue cartographique. Lorsque vous ajoutez des jeux de données "
+"vectorielles contenant plusieurs couches, la boîte de dialogue "
+":guilabel:`Select Items to Add` apparaît. Dans cette boîte de dialogue, vous"
+" pouvez choisir les couches spécifiques de votre jeu de données que vous "
+"souhaitez ajouter. De plus, sous :guilabel:`Options`, vous pouvez choisir de"
+" :"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1657
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:390
+msgid ""
+":numref:`figure_vector_loaded` shows QGIS after loading the "
+":file:`alaska.shp` file."
+msgstr ""
+":numref:`figure_vector_loaded` montre QGIS après le chargement du fichier "
+":file:`alaska.shp`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:397
 msgid "QGIS with Shapefile of Alaska loaded"
 msgstr "QGIS après avoir chargé le Shapefile de l'Alaska"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:401
+msgid ""
+"For loading vector and raster files the GDAL driver offers to define open "
+"actions. These will be shown when a file is selected. Options are described "
+"in detail on https://gdal.org/drivers/vector/, "
+"https://gdal.org/drivers/raster and if a file is selected in QGIS, a text "
+"with hyperlink will directly lead to the documentation of the selected file "
+"type."
+msgstr ""
+"Pour charger des fichiers vectoriels et matriciels, le pilote GDAL permet de"
+" définir des actions d'ouverture. Celles-ci s'affichent lorsqu'un fichier "
+"est sélectionné. Les options sont décrites en détail sur "
+"https://gdal.org/drivers/vector/, https://gdal.org/drivers/raster et si un "
+"fichier est sélectionné dans QGIS, un texte avec un lien hypertexte conduira"
+" directement à la documentation du type de fichier sélectionné."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:408
 msgid ""
@@ -1035,6 +1084,19 @@ msgstr ""
 ":guilabel:`Type de source`. Dans ce cas, un répertoire peut être sélectionné"
 " dans la boîte de dialogue après avoir appuyé sur :guilabel:`...` "
 ":sup:`Parcourir`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:425
+msgid ""
+"With the |radioButtonOn| :guilabel:`Database` source type you can select an "
+"existing database connection or create one to the selected database type. "
+"Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``, "
+"``MS SQL Server`` as well as ``PostgreSQL`` or ``MySQL`` ."
+msgstr ""
+"Avec le type de source |radioButtonOn| :guilabel:`Database` vous pouvez "
+"sélectionner une connexion de base de données existante ou en créer une avec"
+" le type de base de données sélectionné. Les types de base de données "
+"possibles sont ``ODBC``, ``Esri Personal Geodatabase``, ``MS SQL Server`` "
+"ainsi que ``PostgreSQL`` ou ``MySQL``."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:430
 msgid ""
@@ -1150,6 +1212,27 @@ msgid ""
 msgstr ""
 "Appuyez sur le bouton :guilabel:`...` :sup:`Parcourir` pour sélectionner le "
 "fichier. :ref:`De nombreux formats <mesh_supported_formats>` sont supportés."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:473
+msgid ""
+"Select the file and press :guilabel:`Add`. The layer will be added using the"
+" native mesh rendering."
+msgstr ""
+"Sélectionnez le fichier et appuyez sur :guilabel:`Add`. Le calque sera "
+"ajouté en utilisant le rendu natif du maillage."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:475
+msgid ""
+"If the selected file contains many mesh layers, then you'll be prompted with"
+" a dialog to choose the sublayers to load. Do your selection and press "
+":guilabel:`OK` and the layers are loaded with the native mesh rendering. "
+"It's also possible to load them within a group."
+msgstr ""
+"Si le fichier sélectionné contient plusieurs couches de maillage, un "
+"dialogue vous demandera de choisir les sous-couches à charger. Faites votre "
+"sélection et pressez :guilabel:`OK` et les couches sont chargées avec le "
+"rendu natif du maillage. Il est également possible de les charger à "
+"l'intérieur d'un groupe."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:485
 msgid "Mesh tab in Data Source Manager"
@@ -1331,6 +1414,84 @@ msgstr ""
 msgid "|checkbox|:guilabel:`Discard empty fields`."
 msgstr "|checkbox| :guilabel:`Supprimer les champs vides`."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:555
+msgid ""
+":guilabel:`Custom boolean literals`: allows you to add a custom couple of "
+"string that will be detected as boolean values."
+msgstr ""
+":guilabel:`Custom boolean literals` : permet d'ajouter un couple de chaînes "
+"personnalisées qui seront détectées comme des valeurs booléennes."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:560
+msgid "Field type detection"
+msgstr "Détection des types de champs"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:562
+msgid ""
+"QGIS tries to detect the field types automatically (unless "
+"|checkbox|:guilabel:`Detect field types` is not checked) by examining the "
+"content of an optional sidecar CSVT file (see: `GeoCSV specification "
+"<https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_) and by "
+"scanning the whole file to make sure that all values can actually be "
+"converted without errors, the fall-back field type is text."
+msgstr ""
+"QGIS essaie de détecter les types de champs automatiquement (à moins que "
+"|checkbox|:guilabel:`Detect field types` ne soit pas coché) en examinant le "
+"contenu d'un fichier CSVT optionnel (voir : `GeoCSV specification "
+"<https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_) et en "
+"analysant le fichier entier pour s'assurer que toutes les valeurs peuvent "
+"être converties sans erreurs, le type de champ de repli est le texte."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:569
+msgid ""
+"The detected field type appears under the field name in sample data preview "
+"table and can be manually changed if necessary."
+msgstr ""
+"Le type de champ détecté apparaît sous le nom du champ dans le tableau de "
+"prévisualisation des données échantillons et peut être modifié manuellement "
+"si nécessaire."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:572
+msgid "The following field types are supported:"
+msgstr "Les types de champs suivants sont pris en charge :"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:574
+msgid ""
+"``Boolean`` case-insensitive literal couples that are interpreted as boolean"
+" values are ``1``/``0``, ``true``/``false``, ``t``/``f``, ``yes``/``no``"
+msgstr ""
+"Les couples littéraux insensibles à la casse ``Booléen`` qui sont "
+"interprétés comme des valeurs booléennes sont ``1`/``0`, ``true``/`false``, "
+"``t``/``f``, ``oui`/``no``."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:576
+msgid "``Whole Number (integer)``"
+msgstr "``Nombre entier (entier)``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:577
+msgid "``Whole Number (integer - 64 bit)``"
+msgstr "``Nombre entier (entier - 64 bits) ``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:578
+msgid "``Decimal Number``: double precision floating point number"
+msgstr "``Nombre décimal`` : nombre à virgule flottante de double précision"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:579
+msgid "``Date``"
+msgstr "``Date``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:580
+msgid "``Time``"
+msgstr "``Heure``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:581
+msgid "``Date and Time``"
+msgstr "``Date et heure``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:582
+msgid "``Text``"
+msgstr "``Texte``"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:586
 msgid "Geometry definition"
 msgstr "Définition de la géométrie"
@@ -1439,6 +1600,27 @@ msgstr ""
 ":file:`.csv` (donc liée à lui) et nécessiterait :ref:`d'être sauvegardée "
 "<general_saveas>` afin d'obtenir une couche spatiale sur le disque."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:628
+msgid "Sample Data"
+msgstr "Exemple de données"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:630
+msgid ""
+"As you set the parser properties, the sample data preview updates regarding "
+"to the applied settings."
+msgstr ""
+"Au fur et à mesure que vous définissez les propriétés de l'analyseur, "
+"l'aperçu de l'échantillon de données se met à jour en fonction des "
+"paramètres appliqués."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:633
+msgid ""
+"Also in the Sample Data Table it is possible to override the automatically "
+"determined column types."
+msgstr ""
+"Dans l'exemple de tableau de données, il est également possible de remplacer"
+" les types de colonnes déterminés automatiquement."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:640
 msgid "Importing a DXF or DWG file"
 msgstr "Importation d'un fichier DXF ou DWG"
@@ -1493,12 +1675,60 @@ msgstr ""
 "Dans la boîte de dialogue :guilabel:`Importation DWG / DXF`, pour importer "
 "le contenu du fichier de dessin:"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:662
+msgid ""
+"Input the location of the :guilabel:`Source drawing`, i.e. the DWG/DXF "
+"drawing file to import."
+msgstr ""
+"Saisissez l'emplacement du :guilabel:`Source drawing`, c'est-à-dire le "
+"fichier de dessin DWG/DXF à importer."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:664
 msgid ""
 "Specify the coordinate reference system of the data in the drawing file."
 msgstr ""
 "Spécifiez le système de coordonnées de référence des données dans le fichier"
 " de dessin."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:665
+msgid ""
+"Input the location of the :guilabel:`Target package`, i.e. the GeoPackage "
+"file that will store the data. If an existing file is provided, then it will"
+" be overwritten."
+msgstr ""
+"Indique l'emplacement du guilabel:`Target package``, c'est à dire le fichier"
+" GeoPackage qui stockera les données. Si un fichier existant est fourni, il "
+"sera écrasé."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:668
+msgid "Choose how to import ``blocks`` with the dedicated combobox:"
+msgstr "Choisissez comment importer les ``blocs`` avec le combobox dédié :"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:670
+msgid ""
+":guilabel:`Expand Block Geometries`: imports the blocks in the drawing file "
+"as normal elements."
+msgstr ""
+":guilabel:`Expand Block Geometries` : importe les blocs dans le fichier de "
+"dessin comme des éléments normaux."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:671
+msgid ""
+":guilabel:`Expand Block Geometries and Add Insert Points`: imports the "
+"blocks in the drawing file as normal elements and adds the insertion point "
+"as a point layer."
+msgstr ""
+":guilabel:`Expand Block Geometries and Add Insert Points`` : importe les "
+"blocs dans le fichier de dessin en tant qu'éléments normaux et ajoute le "
+"point d'insertion en tant que couche de points."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:672
+msgid ""
+":guilabel:`Add Only Insert Points`: adds the blocks insertion point as a "
+"point layer."
+msgstr ""
+":guilabel:`Add Only Insert Points`: ajoute le point d'insertion des blocs en"
+" tant que couche de points."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:674
 msgid ""
@@ -1507,6 +1737,18 @@ msgid ""
 msgstr ""
 "|checkbox| :guilabel:`Utiliser les courbes` pour promouvoir les couches "
 "importées en un type de géométrie ``courbe``."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:676
+msgid ""
+"Use the :guilabel:`Import` button to import the drawing into the destination"
+" GeoPackage file. The GeoPackage database will be automatically populated "
+"with the drawing file content. Depending on the size of the file, this can "
+"take some time."
+msgstr ""
+"Utilisez le bouton :guilabel:`Import` pour importer le dessin dans le "
+"fichier GeoPackage de destination. La base de données GeoPackage sera "
+"automatiquement remplie avec le contenu du fichier de dessin. Selon la "
+"taille du fichier, cette opération peut prendre un certain temps."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:682
 msgid ""
@@ -1519,6 +1761,15 @@ msgstr ""
 "données GeoPackage, le cadre dans la moitié inférieure de la boîte de "
 "dialogue est rempli avec la liste des couches du fichier importé. Vous "
 "pouvez y sélectionner les couches à ajouter au projet QGIS:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:687
+msgid ""
+"At the top, set a :guilabel:`Group name` to group the drawing files in the "
+"project. By default this is set to the filename of the source drawing file."
+msgstr ""
+"En haut, définissez un :guilabel:`Group name` pour regrouper les fichiers de"
+" dessin dans le projet. Par défaut, il s'agit du nom du fichier de dessin "
+"source."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:689
 msgid ""
@@ -1659,6 +1910,23 @@ msgstr ""
 "est un format d'échange standard qui peut contenir n'importe quel nombre de "
 "waypoints, itinéraires et tracks dans un même fichier."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:761
+msgid ""
+"Use the :guilabel:`...` :sup:`Browse` button to select the GPX file, then "
+"use the check boxes to select the feature types you want to load from that "
+"GPX file. Each feature type will be loaded in a separate layer."
+msgstr ""
+"Utilisez le bouton :guilabel:`...` :sup:`Browse` pour sélectionner le "
+"fichier GPX, puis utilisez les cases à cocher pour sélectionner les types "
+"d'entités que vous souhaitez charger à partir de ce fichier GPX. Chaque type"
+" d'élément sera chargé dans une couche séparée."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:765
+msgid "More on GPS data manipulation at :ref:`working_gps`."
+msgstr ""
+"Pour en savoir plus sur la manipulation des données GPS, voir "
+":ref:`working_gps`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:772
 msgid "Loading GPS Data dialog"
 msgstr "Fenêtre de chargement de données GPS"
@@ -1709,6 +1977,10 @@ msgstr ""
 msgid "addPostgisLayer"
 msgstr "addPostgisLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:800
+msgid "|addMssqlLayer| :menuselection:`Add MS SQL Server Layer`"
+msgstr "|addMssqlayer| :menuselection:`Add MS SQL Server Layer`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1637
 msgid "addMssqlLayer"
 msgstr "addMssqlLayer"
@@ -1724,6 +1996,14 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1641
 msgid "addOracleLayer"
 msgstr "addOracleLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:803
+msgid ""
+"|addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` or by typing "
+":kbd:`Ctrl+Shift+G`"
+msgstr ""
+"|addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` ou en tapant "
+":kbd:`Ctrl+Shift+G`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1631
 msgid "addHanaLayer"
@@ -2049,6 +2329,14 @@ msgstr ""
 "|checkbox| :guilabel:`Autoriser l'enregistrement / le chargement de projets "
 "QGIS dans la base de données` - plus de détails :ref:`ici <saveprojecttodb>`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:913
+msgid ""
+"|checkbox| :guilabel:`Allow saving/loading QGIS layer metadata in the "
+"database` - more details :ref:`here <savemetadatatodb>`"
+msgstr ""
+"|:guilabel:``Allow saving/loading QGIS layer metadata in the database` - "
+"plus de détails :ref:`here <savemetadatatodb>`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:916
 msgid "**Use estimated table metadata to speed up operations**"
 msgstr ""
@@ -2132,6 +2420,20 @@ msgstr ""
 msgid "The service file can look like this::"
 msgstr "Le fichier de service peut ressembler à ceci:"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:970
+msgid ""
+"There are two services in the above example: ``water_service`` and "
+"``wastewater_service``. You can use these to connect from QGIS, pgAdmin, "
+"etc. by specifying only the name of the service you want to connect to "
+"(without the enclosing brackets). If you want to use the service with "
+"``psql``, you can do ``psql service=water_service``."
+msgstr ""
+"Il y a deux services dans l'exemple ci-dessus : ``water_service`` et "
+"``wastewater_service``. Vous pouvez les utiliser pour vous connecter depuis "
+"QGIS, pgAdmin, etc. en spécifiant seulement le nom du service auquel vous "
+"voulez vous connecter (sans les crochets). Si vous voulez utiliser le "
+"service avec ``psql``, vous pouvez faire ``psql service=water_service``."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:976
 msgid ""
 "You can find all the PostgreSQL parameters `here "
@@ -2151,6 +2453,20 @@ msgstr ""
 "Si vous ne souhaitez pas enregistrer les mots de passe dans le fichier de "
 "service, vous pouvez utiliser l'option `.pg_pass "
 "<https://www.postgresql.org/docs/current/libpq-pgpass.html>`_."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:984
+msgid "**QGIS Server and service**"
+msgstr "**QGIS Serveur et services **"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:986
+msgid ""
+"When using a service file and QGIS Server, you must configure the service on"
+" the server side as well. You can follow the :ref:`QGIS Server <QGIS-Server-"
+"manual>` documentation."
+msgstr ""
+"Lorsque vous utilisez un fichier de service et QGIS Server, vous devez "
+"également configurer le service côté serveur. Vous pouvez suivre la "
+"documentation :ref:`QGIS Server <QGIS-Server-manual>`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:989
 msgid ""

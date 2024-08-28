@@ -31,13 +31,103 @@ msgid ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. This page is currently translated at |translation progress|."
 msgstr ""
-"Übersetzen ist eine Gemeinschaftsleistung - Sie können mitmachen "
+"Übersetzen ist eine Gemeinschaftsleistung - `Sie können mitmachen "
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. Diese Seite ist aktuell zu  |translation progress| übersetzt."
+"translator>`_. Diese Seite ist aktuell zu |translation progress| übersetzt."
+
+#: ../../docs/user_manual/style_library/style_manager.rst:8
+#: ../../docs/user_manual/style_library/style_manager.rst:43
+msgid "The Style Manager"
+msgstr "Die Stilverwaltung"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:18
+msgid "The Style Manager dialog"
+msgstr "Der Stilverwaltung-Dialog"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:20
+msgid ""
+"The :guilabel:`Style Manager` is the place where you can manage and create "
+"generic style items. These are symbols, color ramps, text formats or label "
+"settings that can be used to symbolize features, layers or print layouts. "
+"They are stored in the :file:`symbology-style.db` database under the active "
+":ref:`user profile <user_profiles>` and shared with all the project files "
+"opened with that profile. Style items can also be shared with others thanks "
+"to the export/import capabilities of the :guilabel:`Style Manager` dialog."
+msgstr ""
+"Die :guilabel:`Stilverwaltung` ist der Ort, an dem Sie grundlegende "
+"Stilelemente verwalten und erstellen können. Dies sind Symbole, Farbrampen, "
+"Textformate oder Etiketteneinstellungen, die zur Symbolisierung von "
+"Objekten, Layern oder Drucklayouts verwendet werden können. Sie werden in "
+"der Datenbank :file:`symbology-style.db` unter dem aktiven "
+":ref:`Benutzerprofil <user_profiles>` gespeichert und für alle mit diesem "
+"Profil geöffneten Projektdateien freigegeben. Stilelemente können dank der "
+"Export-/Importfunktionen des Dialogs :guilabel:`Stilverwaltung` auch mit "
+"anderen gemeinsam genutzt werden."
+
+#: ../../docs/user_manual/style_library/style_manager.rst:29
+msgid "You can open that modeless dialog either:"
+msgstr "Sie können diesen Dialog öffnen über:"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:31
+msgid ""
+"from the :menuselection:`Settings -->` |styleManager| :menuselection:`Style "
+"Manager...` menu"
+msgstr ""
+"das Menü :menuselection:`Einstellungen -->` |styleManager| "
+":menuselection:`Stilverwaltung...`"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:438
 msgid "styleManager"
 msgstr "styleManager"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:33
+msgid ""
+"with the |styleManager| :sup:`Style Manager` button from the Project toolbar"
+msgstr ""
+"mit der Schaltfläche |styleManager| :sup:`Stilverwaltung` in der "
+"Werkzeugleiste des Projekts"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:34
+msgid ""
+"or with the |styleManager| :sup:`Style Manager` button from a vector "
+":menuselection:`Layer Properties -->` menu (while :ref:`configuring a symbol"
+" <symbol-selector>` or :ref:`formatting a text <showlabels>`)."
+msgstr ""
+"mit der Schaltfläche |styleManager| :sup:`Stilverwaltung` aus dem Menü eines"
+" Vektor-Layers :menuselection:`Layereigenschaften -->`  :ref:`Konfiguration "
+"eines Symbols <symbol-selector>` oder :ref:`Formatierung eines Textes "
+"<showlabels>`)."
+
+#: ../../docs/user_manual/style_library/style_manager.rst:50
+msgid "Organizing style items"
+msgstr "Organisieren von Stil-Elementen"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:52
+msgid ""
+"In the upper left corner of the :guilabel:`Style Manager` dialog, within the"
+" drop-down menu, you can choose the style database you want to connect to. "
+"If you choose :guilabel:`Default` you will be connected to the default style"
+" database where you can find all available default style items and the ones "
+"that you saved in this database. Choosing :guilabel:`Project Styles` will "
+"connect you to the Project Style database where you can find only symbols "
+"that you saved in this database. If you created more style databases, they "
+"will be listed in the drop-down menu. There are also options to "
+"|symbologyAdd| :sup:`Add existing style database to project` and |newPage| "
+":sup:`Create new style database` (see more :ref:`Style database "
+"<style_database>`)."
+msgstr ""
+"In der oberen linken Ecke des Dialogs :guilabel:`Stilverwaltung` können Sie "
+"im Dropdown-Menü die Stil-Datenbank auswählen, mit der Sie sich verbinden "
+"möchten. Wenn Sie :guilabel:`Standard` wählen, werden Sie mit der Standard-"
+"Stil-Datenbank verbunden, in der Sie alle verfügbaren Standard-Stil-Elemente"
+" und die von Ihnen in dieser Datenbank gespeicherten finden können. Wenn Sie"
+" :guilabel:`Projektstile` wählen, werden Sie mit der Projektstil-Datenbank "
+"verbunden, in der Sie nur die Symbole finden können, die Sie in dieser "
+"Datenbank gespeichert haben. Wenn Sie weitere Stil-Datenbanken erstellt "
+"haben, werden diese im Dropdown-Menü aufgelistet. Es gibt auch die Optionen "
+"|symbologyAdd| :sup:`Vorhandene Stildatenbank zum Projekt hinzufügen` und "
+"|newPage| :sup:`Neue Stildatenbank erstellen` (siehe mehr "
+":ref:`Stildatenbank <style_database>`)."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:440
 msgid "symbologyAdd"
@@ -47,41 +137,258 @@ msgstr "symbologyAdd"
 msgid "newPage"
 msgstr "newPage"
 
+#: ../../docs/user_manual/style_library/style_manager.rst:62
+msgid ""
+"For each style database, you can organize the elements into different "
+"categories, listed in the panel on the left:"
+msgstr ""
+"Für jede Stildatenbank können Sie die Elemente in verschiedene Kategorien "
+"einteilen, die im Bedienfeld auf der linken Seite aufgeführt sind:"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:65
+msgid ""
+"**Favorites**: displayed by default when configuring an item, it shows an "
+"extensible set of items;"
+msgstr ""
+"**Favoriten**: wird standardmäßig angezeigt, wenn ein Element konfiguriert "
+"wird; zeigt eine erweiterbare Gruppe von Elementen an;"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:67
+msgid "**All**: lists all the available items for the active type;"
+msgstr "**Alle**: listet alle verfügbaren Elemente für den aktiven Typ auf;"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:68
+msgid ""
+"**Tags**: shows a list of labels you can use to identify the items. An item "
+"can be tagged more than once. Select a tag in the list and the tabs are "
+"updated to show only their items that belong to it. To create a new tag you "
+"could later attach to a set of items, use the :guilabel:`Add Tag...` button "
+"or select the |symbologyAdd| :guilabel:`Add Tag...` from any tag contextual "
+"menu;"
+msgstr ""
+"**Tags**: zeigt eine Liste von Tags an, die Sie zur Identifizierung der "
+"Elemente verwenden können. Ein Element kann mehr als einmal gekennzeichnet "
+"werden. Wählen Sie ein Tag in der Liste aus, und die Reiter werden "
+"aktualisiert, um nur die zugehörigen Elemente anzuzeigen. Um einen neuen Tag"
+" zu erstellen, den Sie später an eine Reihe von Elementen anhängen können, "
+"verwenden Sie die Schaltfläche :guilabel:`Tag hinzufügen...` oder wählen Sie"
+" den Befehl |symbologyAdd| :guilabel:`Tag hinzufügen...` aus einem "
+"beliebigen Tag-Kontextmenü;"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:74
+msgid ""
+"**Smart Group**: a smart group dynamically fetches its symbols according to "
+"conditions set (see eg, :numref:`figure_smart_group`). Click the "
+":guilabel:`Add Smart Group...` button to create smart groups. The dialog box"
+" allows you to enter an expression to filter the items to select (has a "
+"particular tag, have a string in its name, etc.). Any symbol, color ramp, "
+"text format or label setting that satisfies the entered condition(s) is "
+"automatically added to the smart group."
+msgstr ""
+"**Schlaue Gruppe**: eine schlaue Gruppe holt sich ihre Symbole dynamisch "
+"gemäß den festgelegten Bedingungen (siehe z.B. "
+":numref:`figure_smart_group`). Klicken Sie auf die Schaltfläche "
+":guilabel:`Schlau-Gruppe hinzufügen...`, um intelligente Gruppen zu "
+"erstellen. Im Dialogfeld können Sie einen Ausdruck eingeben, um die "
+"auszuwählenden Elemente zu filtern (hat ein bestimmtes Tag, hat eine "
+"Zeichenkette im Namen, usw.). Jedes Symbol, jede Farbrampe, jedes Textformat"
+" und jede Etiketteneinstellung, die die eingegebene(n) Bedingung(en) "
+"erfüllen, werden automatisch der intelligenten Gruppe hinzugefügt."
+
+#: ../../docs/user_manual/style_library/style_manager.rst:87
+msgid "Creating a Smart Group"
+msgstr "Erstellen einer schlauen Gruppe"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:89
+msgid ""
+"Tags and smart groups are not mutually exclusive: they are simply two "
+"different ways to organize your style elements. Unlike the smart groups that"
+" automatically fetch their belonged items based on the input constraints, "
+"tags are filled by the user. To edit any of those categories, you can "
+"either:"
+msgstr ""
+"Tags und schlaue Gruppen schließen sich nicht gegenseitig aus: Sie sind "
+"einfach zwei verschiedene Möglichkeiten, Ihre Stilelemente zu organisieren. "
+"Im Gegensatz zu den intelligenten Gruppen, die ihre zugehörigen Elemente "
+"automatisch auf der Grundlage der eingegebenen Einschränkungen abrufen, "
+"werden Tags vom Benutzer gefüllt. Um eine dieser Kategorien zu bearbeiten, "
+"können Sie entweder:"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:95
+msgid ""
+"select the items, right-click and choose :menuselection:`Add to Tag -->` and"
+" then select the tag name or create a new tag;"
+msgstr ""
+"Wählen Sie die Elemente aus, klicken Sie mit der rechten Maustaste und "
+"wählen Sie :menuselection:`Hinzufügen zu Tag -->` und wählen Sie dann den "
+"Tag-Namen oder erstellen Sie ein neues Tag;"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:97
+msgid ""
+"select the tag and press :menuselection:`Modify group... --> Attach Selected"
+" Tag to Symbols`. A checkbox appears next to each item to help you select or"
+" deselect it. When selection is finished, press :menuselection:`Modify "
+"group... --> Finish Tagging`."
+msgstr ""
+"Wählen Sie das Tag aus und drücken Sie :menuselection:`Gruppe ändern... --> "
+"Ausgewähltes Tag an Symbole anhängen`. Neben jedem Element wird ein "
+"Kontrollkästchen angezeigt, mit dessen Hilfe Sie es auswählen bzw. die "
+"Auswahl aufheben können. Wenn die Auswahl abgeschlossen ist, drücken Sie "
+":menuselection:`Gruppe ändern... --> Markieren beenden`."
+
+#: ../../docs/user_manual/style_library/style_manager.rst:101
+msgid ""
+"select the smart group, press :menuselection:`Modify group... --> Edit smart"
+" group...` and configure a new set of constraints in the :guilabel:`Smart "
+"Group Editor` dialog. This option is also available in the contextual menu "
+"of the smart group."
+msgstr ""
+"wählen Sie die intelligente Gruppe aus, drücken Sie die Taste "
+":menuselection:`Gruppe ändern... --> Intelligente Gruppe bearbeiten...` und "
+"konfigurieren Sie einen neuen Satz von Einschränkungen im Dialog "
+":guilabel:`Smart Group Editor`. Diese Option ist auch über das Kontextmenü "
+"der intelligenten Gruppe verfügbar."
+
+#: ../../docs/user_manual/style_library/style_manager.rst:106
+msgid ""
+"To remove a tag or a smart group, right-click on it and select the "
+"|symbologyRemove| :guilabel:`Remove` button. Note that this does not delete "
+"the items grouped in the category."
+msgstr ""
+"Um einen Tag oder eine schlaue Gruppe zu entfernen, klicken Sie mit der "
+"rechten Maustaste darauf und wählen Sie die Schaltfläche |symbologyRemove| "
+":guilabel:`Entfernen`. Beachten Sie, dass dadurch die in der Kategorie "
+"gruppierten Elemente nicht gelöscht werden."
+
 #: ../../docs/user_manual/style_library/style_manager.rst:444
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:110
+msgid ""
+"The :guilabel:`Style Manager` dialog displays in its center a frame with "
+"previewed items organized into tabs:"
+msgstr ""
+"Das Dialogfeld :guilabel:`Stilverwaltung` zeigt in der Mitte einen Rahmen "
+"mit Vorschauelementen, die in Reitern organisiert sind:"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:113
+msgid ""
+":guilabel:`All` for a complete collection of point, linear and surface "
+"symbols and label settings as well as predefined color ramps and text "
+"formats;"
+msgstr ""
+":guilabel:`Alle` für die vollständige Auflistung von Punkt-, Linien- und "
+"Flächensymbolen und Beschriftungseinstellungen sowie vordefinierte "
+"Farbrampen und Textformaten;"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:115
+msgid "|pointLayer| :guilabel:`Marker` for point symbols only;"
+msgstr "|pointLayer| :guilabel:`Markierung` nur für Punktsymbole;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:430
 msgid "pointLayer"
 msgstr "pointLayer"
 
+#: ../../docs/user_manual/style_library/style_manager.rst:116
+msgid "|lineLayer| :guilabel:`Line` for linear symbols only;"
+msgstr "|lineLayer| :guilabel:`Linie` nur für lineare Symbole;"
+
 #: ../../docs/user_manual/style_library/style_manager.rst:424
 msgid "lineLayer"
 msgstr "lineLayer"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:117
+msgid "|polygonLayer| :guilabel:`Fill` for surface symbols only;"
+msgstr "|polygonLayer| :guilabel:`Füllung` nur für Flächensymbole;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:432
 msgid "polygonLayer"
 msgstr "polygonLayer"
 
+#: ../../docs/user_manual/style_library/style_manager.rst:118
+msgid "|color| :guilabel:`Color ramp`;"
+msgstr "|color| :guilabel:`Farbverlauf`;"
+
 #: ../../docs/user_manual/style_library/style_manager.rst:413
 msgid "color"
 msgstr "color"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:119
+msgid ""
+"|text| :guilabel:`Text format` to manage :ref:`text formats <text_format>`, "
+"which store the font, color, buffers, shadows, and backgrounds of texts "
+"(i.e. all the formatting parts of the label settings, which for instance can"
+" be used in layouts);"
+msgstr ""
+"|text| :guilabel:`Textformat`, um :ref:`Textformate <text_format>` zu "
+"verwalten, die die Schriftart, Farbe, Puffer, Schatten und Hintergründe von "
+"Texten speichern (d.h. alle Formatierungsteile der "
+"Beschriftungseinstellungen, die zum Beispiel in Layouts verwendet werden "
+"können);"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:446
 msgid "text"
 msgstr "text"
 
+#: ../../docs/user_manual/style_library/style_manager.rst:123
+msgid ""
+"|labelingSingle| :guilabel:`Label settings` to manage :ref:`label settings "
+"<showlabels>`, which include the text formats and some layer-type specific "
+"settings such as label placement, priority, callouts, rendering..."
+msgstr ""
+"|labelingSingle| :guilabel:`Beschriftungseinstellungen` zur Verwaltung von "
+":ref:`Beschriftungseinstellungen <showlabels>`, die die Textformate und "
+"einige Layer-spezifische Einstellungen wie Platzierung der Beschriftung, "
+"Priorität, Beschriftung, Rendering, usw. beinhalten."
+
 #: ../../docs/user_manual/style_library/style_manager.rst:420
 msgid "labelingSingle"
 msgstr "labelingSingle"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:126
+msgid ""
+"|legend| :guilabel:`Legend Patch Shapes` to manage custom legend patch "
+"shapes, which include :guilabel:`Marker`, :guilabel:`Line` and "
+":guilabel:`Fill` geometries."
+msgstr ""
+"|legend| :guilabel:`Legendensymbole` zur Verwaltung von benutzerdefinierten "
+"Legendensymbolen, die :guilabel:`Markierung`, :guilabel:`Linie` und "
+":guilabel:`Füllung` umfassen."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:422
 msgid "legend"
 msgstr "legend"
 
+#: ../../docs/user_manual/style_library/style_manager.rst:129
+msgid ""
+"|3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties "
+"<3dsymbols>` (extrusion, shading, altitude, ...) for the features to render "
+"in a :ref:`3D Map view <label_3dmapview>`"
+msgstr ""
+"|3d| :guilabel:`3D-Symbole` zur Konfiguration von Symbolen mit "
+":ref:`3D-Eigenschaften <3dsymbols>` (Extrusion, Schattierung, Höhe, ...) für"
+" die Objekte, die in einer :ref:`3D-Kartenansicht <label_3dmapview>` "
+"dargestellt werden sollen."
+
 #: ../../docs/user_manual/style_library/style_manager.rst:409
 msgid "3d"
 msgstr "3d"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:133
+msgid ""
+"You can arrange the Styles in |iconView| :guilabel:`Icon View` or in "
+"|openTable| :guilabel:`List View` on the bottom right side. In both views "
+"the tooltip shows a larger instance of the style. The thumbnail size slider "
+"at the left of the icons helps you adjust the actual thumbnail sizes in the "
+"dialog, for a better preview of the symbols!"
+msgstr ""
+"Sie können die Stile in |iconView| :guilabel:`Icon-Ansicht` oder in "
+"|openTable| :guilabel:`Listen-Ansicht` auf der unteren rechten Seite "
+"anordnen. In beiden Ansichten zeigt der Tooltip eine größere Darstellung des"
+" Stils. Mit dem Schieberegler für die Miniaturgröße links neben den Symbolen"
+" können Sie die Größe der Miniaturansichten im Dialog anpassen, um eine "
+"bessere Vorschau der Symbole zu erhalten."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:418
 msgid "iconView"
@@ -90,6 +397,33 @@ msgstr "iconView"
 #: ../../docs/user_manual/style_library/style_manager.rst:428
 msgid "openTable"
 msgstr "openTable"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:141
+msgid "Adding, editing or removing an item"
+msgstr "Hinzufügen, Bearbeiten oder Entfernen eines Elements"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:143
+msgid ""
+"As seen earlier, style elements are listed under different tabs whose "
+"contents depend on the active category (tag, smart group, favorites...). "
+"When a tab is enabled, you can:"
+msgstr ""
+"Wie Sie bereits gesehen haben, werden die Stilelemente in verschiedenen "
+"Reitern aufgelistet, deren Inhalt von der aktiven Kategorie (Tag, "
+"intelligente Gruppe, Favoriten...) abhängt. Wenn ein Reiter aktiviert ist, "
+"können Sie:"
+
+#: ../../docs/user_manual/style_library/style_manager.rst:147
+msgid ""
+"Add new items: press the |symbologyAdd| :sup:`Add item` button and configure"
+" the item following :ref:`symbols <symbol-selector>`, :ref:`color ramps "
+"<color-ramp>` or :ref:`text format and label <showlabels>` builder "
+"description."
+msgstr ""
+"Ein neues Element hinzufügen: Drücken Sie die Taste |symbologyAdd| "
+":sup:`Element hinzufügen` und konfigurieren Sie das Element mit einer der "
+"folgenden Beschreibungen: :ref:`Symbol <symbol-selector>`, :ref:`Farbverlauf"
+" <color-ramp>` oder :ref:`Textformat und Beschriftung <showlabels>`."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:442
 msgid "symbologyEdit"

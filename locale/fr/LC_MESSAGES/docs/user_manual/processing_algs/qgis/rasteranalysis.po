@@ -7,6 +7,7 @@
 # Translators:
 # Transifex Bot <>, 2024
 # Harrissou Sant-anna, 2024
+# MarieSilvestre, 2024
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-29 19:47+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: MarieSilvestre, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1451,6 +1452,10 @@ msgstr ""
 msgid "``INPUT_VALUE_RASTER``"
 msgstr "``INPUT_VALUE_RASTER``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:400
+msgid "``VALUE_RASTER_BAND``"
+msgstr "``VALUE_RASTER_BAND``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:403
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1114
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1337
@@ -1814,6 +1819,20 @@ msgid ""
 msgstr ""
 "Exemple raster flouté. Saisir la source du raster : Land Tirol - "
 "data.tirol.gv.at."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:849
+msgid ""
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
+msgstr ""
+":ref:`qgisfuzzifyrasterlargemembership`, "
+":ref:`qgisfuzzifyrasterlinearmembership`, "
+":ref:`qgisfuzzifyrasternearmembership`, "
+":ref:`qgisfuzzifyrasterpowermembership`, "
+":ref:`qgisfuzzifyrastersmallmembership`"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:867
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:977
@@ -2359,9 +2378,33 @@ msgstr "``DATA_TYPE``"
 msgid "Output raster data type. Options:"
 msgstr "Type de données raster en sortie. Options:"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "0 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "0 --- Byte        (Entier 8 bit non signé (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "1 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "1 --- Int16       (Entier 16 bit signé (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr "2 --- UInt16      (Entier 16 bit non signé (quint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "3 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "3 --- Int32       (Entier 32 bit signé (qint32))"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:11
 msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
 msgstr "4 --- UInt32      (Entier 32 bit non signé (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "5 --- Float32     (Thirty two bit floating point (float))"
+msgstr "5 --- Float32     (Trente-deux bits à virgule flottante (float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "6 --- Float64     (Sixty four bit floating point (double))"
+msgstr "6 --- Float64     (Soixante-quatre bits à virgule flottante (double))"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:14
 msgid "7 --- CInt16      (Complex Int16)"
@@ -2379,6 +2422,10 @@ msgstr "9 --- CFloat32   (Complexe Float32)"
 msgid "10 --- CFloat64   (Complex Float64)"
 msgstr "10 --- CFloat64   (Complexe Float64)"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "11 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "11 --- Int8       (Entier 8 bit signé (qint8))"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:20
 msgid ""
 "Available options depend on the GDAL version built with QGIS (see "
@@ -2387,12 +2434,24 @@ msgstr ""
 "Les options disponibles dépendent de la version de GDAL compilée avec votre "
 "version de QGIS (voir le menu :menuselection:`Aide --> A propos`)"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1894
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2048
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2585
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2741
+msgid "**NoData pixel count**"
+msgstr "**Nombre de pixels NoData**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1895
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2049
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2586
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2742
 msgid "``NODATA_PIXEL_COUNT``"
 msgstr "``NODATA_PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1897
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2051
+msgid "The count of NoData pixels in the output raster layer"
+msgstr "Le nombre de pixels NoData dans la couche raster en sortie"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1898
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2052
@@ -2613,6 +2672,10 @@ msgstr "``LAYER_NAME``"
 msgid "**Algorithm ID**: ``native:virtualrastercalc``"
 msgstr "**ID de l'algorithme** : ``native:virtualrastercalc``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2292
+msgid "Raster layer properties"
+msgstr "Propriétés de la couche raster"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2313
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2422
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2528
@@ -2641,9 +2704,17 @@ msgstr "Par défaut : Non défini"
 msgid "``BAND_COUNT``"
 msgstr "``BAND_COUNT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2351
+msgid "``HAS_NODATA_VALUE``"
+msgstr "``HAS_NODATA_VALUE``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2352
 msgid "[Boolean]"
 msgstr "[Booléen]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2360
+msgid "``NODATA_VALUE``"
+msgstr "``NODATA_VALUE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2364
 msgid "``PIXEL_HEIGHT``"

@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-02 10:51+0100\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -161,6 +161,10 @@ msgstr "入力ベクタレイヤ"
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:39
 msgid "**Convert all layers from dataset**"
 msgstr "**データセットの全レイヤを変換**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:40
+msgid "``CONVERT_ALL_LAYERS``"
+msgstr "``CONVERT_ALL_LAYERS``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:41
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:161
@@ -373,6 +377,11 @@ msgstr "ピクセル値の設定に使用する属性フィールドを定義し
 msgid "**Add burn in values to existing raster values**"
 msgstr "**ラスタの既存値に焼き込み値を加算**"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:160
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:255
+msgid "``ADD``"
+msgstr "``ADD``"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:164
 msgid ""
 "If False, pixels are assigned the selected field's value. If True, the "
@@ -436,6 +445,11 @@ msgstr "ラスタレイヤの一部を固定値で上書きします。上書き
 msgid "**A fixed value to burn**"
 msgstr "**固定焼き込み値**"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:237
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:338
+msgid "``BURN``"
+msgstr "``BURN``"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:238
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:339
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:366
@@ -493,6 +507,10 @@ msgstr "すべての地物について、バンドに書き込む固定値。"
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:343
 msgid "**Burn value extracted from the \"Z\" values of the feature**"
 msgstr "**地物のZ値をラスタ値に焼き込む**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:346
+msgid "``USE_Z``"
+msgstr "``USE_Z``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:350
 msgid ""
@@ -621,6 +639,10 @@ msgstr "``xmin, xmax, ymin, ymax`` として座標を入力"
 msgid "``NODATA``"
 msgstr "``NODATA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:400
+msgid "Assigns a specified NoData value to output bands"
+msgstr "指定したNoData値を出力バンドに割り当てます"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:405
 msgid "Default: ``[Save to temporary file]``"
 msgstr "デフォルト： ``[一時ファイルに保存]``"
@@ -676,23 +698,23 @@ msgstr "オプション:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "0 --- Byte        (Eight bit unsigned integer (quint8))"
-msgstr "0 -- Byte （符号なし8ビット整数 (quint8)）"
+msgstr "0 -- Byte （8ビット符号なし整数 (quint8)）"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:10
 msgid "1 --- Int16       (Sixteen bit signed integer (qint16))"
-msgstr "1 -- Int16 （符号付き16ビット整数 (qint16)）"
+msgstr "1 -- Int16 （16ビット符号付き整数 (qint16)）"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:11
 msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
-msgstr "2 -- UInt16 （符号なし16ビット整数 (quint16)）"
+msgstr "2 -- UInt16 （16ビット符号なし整数 (quint16)）"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:12
 msgid "3 --- UInt32      (Thirty two bit unsigned integer (quint32))"
-msgstr "3 -- UInt32 （符号なし32ビット整数 (quint32)）"
+msgstr "3 -- UInt32 （32ビット符号なし整数 (quint32)）"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:13
 msgid "4 --- Int32       (Thirty two bit signed integer (qint32))"
-msgstr "4 -- Int32 （符号あり32ビット整数 (qint32)）"
+msgstr "4 -- Int32 （32ビット符号付き整数 (qint32)）"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:14
 msgid "5 --- Float32     (Thirty two bit floating point (float))"
@@ -718,6 +740,10 @@ msgstr "9 -- CFloat32 （複素数 Float32）"
 msgid "10 --- CFloat64   (Complex Float64)"
 msgstr "10 -- CFloat64 （複素数 Float64）"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:20
+msgid "11 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "11 --- Int8       （8ビット符号付き整数(qint8)）"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:22
 msgid ""
 "Available options depend on the GDAL version built with QGIS (see "
@@ -730,9 +756,23 @@ msgstr ""
 msgid "**Pre-initialize the output image with value**"
 msgstr "**指定値で事前に初期化する**"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:460
+msgid "``INIT``"
+msgstr "``INIT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:462
+msgid ""
+"Pre-initializes the output image bands with this value. Not marked as the "
+"NoData value in the output file. The same value is used in all the bands."
+msgstr "この値で出力画像バンドを事前に初期化します。出力ファイルのNoData値としてマークされません。全てのバンドで同じ値が使用されます。"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:465
 msgid "**Invert rasterization**"
 msgstr "**逆ラスタ化**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:466
+msgid "``INVERT``"
+msgstr "``INVERT``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorconversion.rst:470
 msgid ""

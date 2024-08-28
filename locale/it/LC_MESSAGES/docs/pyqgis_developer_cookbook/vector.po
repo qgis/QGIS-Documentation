@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-08-15 06:58+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -354,20 +354,6 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:410
 msgid "Add Features"
 msgstr "Aggiungi Elementi"
-
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:412
-msgid ""
-"Create some :class:`QgsFeature <qgis.core.QgsFeature>` instances and pass a "
-"list of them to provider's :meth:`addFeatures() "
-"<qgis.core.QgsVectorDataProvider.addFeatures>` method. It will return two "
-"values: result (:const:`True` or :const:`False`) and list of added features "
-"(their ID is set by the data store)."
-msgstr ""
-"Creare alcune istanze :class:`QgsFeature <qgis.core.QgsFeature>` e passarne "
-"un elenco al metodo :meth:`addFeatures() "
-"<qgis.core.QgsVectorDataProvider.addFeatures>` del provider. Esso restituirà"
-" due valori: il risultato (:const:`True` o :const:`False`) e l'elenco degli "
-"elementi aggiunti (il loro ID è impostato dal data store)."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:417
 msgid ""
@@ -780,26 +766,6 @@ msgstr "Creare Layer vettoriali"
 msgid "There are several ways to generate a vector layer dataset:"
 msgstr "Ci sono diversi modi per generare un dataset di layer vettoriali:"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:731
-msgid ""
-"the :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>` class: A "
-"convenient class for writing vector files to disk, using either a static "
-"call to :meth:`writeAsVectorFormatV3() "
-"<qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` which saves the whole"
-" vector layer or creating an instance of the class and issue calls to "
-":meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. This class "
-"supports all the vector formats that GDAL supports (GeoPackage, Shapefile, "
-"GeoJSON, KML and others)."
-msgstr ""
-"la classe :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`: Una "
-"classe adatta per scrivere file vettoriali su disco, utilizzando una "
-"chiamata statica a :meth:`writeAsVectorFormatV3() "
-"<qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` che salva l'intero "
-"layer vettoriale, oppure creando un'istanza della classe ed effettuando "
-"chiamate a :meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. "
-"Questa classe supporta tutti i formati vettoriali supportati da GDAL "
-"(GeoPackage, Shapefile, GeoJSON, KML e altri)."
-
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:739
 msgid ""
 "the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class: instantiates a"
@@ -951,7 +917,7 @@ msgstr ""
 "L'URI può anche specificare il sistema di riferimento delle coordinate, i "
 "campi e l'indicizzazione del provider in memoria nell'URI. La sintassi è:"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:949
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:946
 msgid "crs=definition"
 msgstr "crs=definizione"
 
@@ -966,7 +932,7 @@ msgstr ""
 ":meth:`QgsCoordinateReferenceSystem.createFromString() "
 "<qgis.core.QgsCoordinateReferenceSystem.createFromString>`."
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:952
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:951
 msgid "index=yes"
 msgstr "index=yes"
 
@@ -974,7 +940,7 @@ msgstr "index=yes"
 msgid "Specifies that the provider will use a spatial index"
 msgstr "Specifica che il provider userà un indice spaziale"
 
-#: ../../docs/pyqgis_developer_cookbook/vector.rst:957
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:954
 msgid "field=name:type(length,precision)"
 msgstr "field=nome:tipo(lunghezza,precisione)"
 

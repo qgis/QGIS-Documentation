@@ -418,6 +418,24 @@ msgstr ""
 msgid "pencil"
 msgstr "pencil"
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:111
+msgid ""
+"When entering GCPs from the main map canvas, you have the option to hide the"
+" georeferencer window while selecting points from the main canvas. If the "
+"|checkbox| :guilabel:`Automatically hide georeferencer window` checkbox is "
+"ticked, after clicking |pencil| :guilabel:`From Map Canvas`, the main "
+"georeferencer window will be hidden until a point is added on the map "
+"canvas. The :guilabel:`Enter Map Coordinates` dialog will remain open. If "
+"the box is unchecked, both windows will remain open while selecting a point "
+"on the map canvas. This option only takes effect when the georeferencer "
+"window is not docked in the main interface."
+msgstr ""
+"メインマップキャンバスからGCPを入力するとき、メインキャンバスから点を選択している間、ジオリファレンスウインドウを隠すオプションがあります。|checkbox|"
+" :guilabel:`ジオリファレンサのウィンドウを自動で隠す` チェックボックスにチェックを入れると、 |pencil| "
+":guilabel:`地図キャンバスから` "
+"をクリックした後、マップキャンバスに点が追加されるまで、メインのジオリファレンスウィンドウは隠されます。:guilabel:`地図座標の入力` "
+"ダイアログは開いたままになります。このボックスをオフにすると、マップキャンバス上で点を選択している間、両方のウィンドウが開いたままになります。このオプションはジオリファレンスウィンドウがメインインターフェイスにドッキングされていないときのみ効果があります。"
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:302
 msgid "checkbox"
 msgstr "checkbox"
@@ -641,7 +659,16 @@ msgid ""
 " same folder together with the original raster image."
 msgstr ""
 "これ以外の変換タイプに対しては、 :guilabel:`出力ラスタ` "
-"を指定する必要があります。デフォルトでは、新規ファイル（[ファイル名]_modified）をオリジナルのラスタ画像ファイルと同じフォルダに作成します。"
+"を指定する必要があります。デフォルトでは、新規ファイル（[ファイル名]_modified）をオリジナルのラスタ画像ファイルと同じフォルダーに作成します。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:238
+msgid ""
+"As a next step, you have to define the :guilabel:`Target CRS` (Coordinate "
+"Reference System) for the georeferenced raster (see "
+":ref:`label_projections`)."
+msgstr ""
+"続いて、ジオリファレンスされたラスタの :guilabel:`変換先CRS` （座標参照系）を指定する必要があります（ "
+":ref:`label_projections` 参照）。"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:240
 msgid ""
@@ -670,6 +697,21 @@ msgstr ""
 "|checkbox| :guilabel:`必要に応じて透明に0を使用` "
 "にチェックを入れると、値0のピクセルは透明で表示されるようになります。サウスダコタ地形図の例では、余白領域がすべて透明になります。"
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:249
+msgid ""
+"The |checkbox| :guilabel:`Save GCP Points` will store GCP Points in a file "
+"next to the output raster."
+msgstr "|checkbox| :guilabel:`GCPポイントを保存` は、GCPポイントを出力ラスタの隣のファイルに保管します。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:251
+msgid ""
+"Finally, |checkbox| :guilabel:`Load in project when done` loads the output "
+"raster automatically into the QGIS map canvas when the transformation is "
+"done."
+msgstr ""
+"最後に、 |checkbox| :guilabel:`完了後にプロジェクトに読み込む` "
+"にチェックを入れると、変換が完了したときに出力ラスタをQGISのマップキャンバスに自動的に読み込みます。"
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:255
 msgid "Show and adapt raster properties"
 msgstr "ラスタプロパティの表示と調整"
@@ -688,6 +730,50 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:264
 msgid "Configure the georeferencer"
 msgstr "ジオリファレンサの構成"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:266
+msgid ""
+"You can customize the behavior of the georeferencer in "
+":menuselection:`Settings --> Configure Georeferencer` (or use keyboard "
+"shortcut :kbd:`Ctrl+P`)."
+msgstr ""
+":menuselection:`設定 --> ジオリファレンサの構成` （またはキーボードショートカット :kbd:`Ctrl+P` "
+"）でジオリファレンサの動作をカスタマイズできます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:269
+msgid ""
+"Under :guilabel:`Point Tip` you can use the checkboxes to toggle displaying "
+"GCP IDs and X/Y coordinates in both the Georeferencer window and the main "
+"map canvas."
+msgstr ""
+":guilabel:`点のTip` の下にあるチェックボックスを使って、ジオリファレンサウィンドウとメインマップキャンバスの両方にGCP "
+"IDとX/Y座標を表示するかどうかを切り替えることができます。"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:271
+msgid ""
+":guilabel:`Residual Units` controls whether residual units are given in "
+"pixels or map units"
+msgstr ":guilabel:`残差単位` は、残差単位をピクセルで与えるか、マップの単位で与えるかを制御します"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:273
+msgid ""
+":guilabel:`PDF Report` allows you to set margin size in mm for the report "
+"export"
+msgstr ":guilabel:`PDFレポート` では、レポート出力のマージン幅をmm単位で設定できます"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:274
+msgid ""
+":guilabel:`PDF Map` allows you to choose a paper size for the map export"
+msgstr ":guilabel:`PDF地図` では、マップ出力に使う用紙サイズを選ぶことができます"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:275
+msgid ""
+"Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window"
+" docked`. This will dock the Georeferencer window in the main QGIS window "
+"rather than showing it as a separate window that can be minimized."
+msgstr ""
+"最後に、|checkbox| :guilabel:`ジオリファレンサウィンドウを結合して表示` "
+"を有効にすることができます。これはジオリファレンサウィンドウを、最小化できる別のウィンドウとして表示するのではなく、QGISのメインウィンドウにドッキングさせます。"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:283
 msgid "Running the transformation"
