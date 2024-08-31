@@ -64,7 +64,8 @@ msgid ""
 "extent of all features, not the one computed from just the selected ones. We"
 " will try to fix that by using some additional tools into our model."
 msgstr ""
-"補間処理には、先のレッスンで既に説明したように、2つのステップが含まれます。ポイントレイヤーをラスタ化し、ラスタ化されたレイヤーに表示されるデータなしの値を埋めます。ポイントレイヤーに選択がある場合、選択されたポイントのみが使用されますが、出力範囲が自動的に調整されるように設定されている場合は、レイヤーの全範囲が使用されます。つまり、レイヤーの範囲は、常に選択されたものから計算されたものではなく、すべての地物の完全な範囲とみなされます。私たちはモデルにいくつかの追加ツールを使って修正しようとします。"
+"補間処理には、先のレッスンで既に説明したように、2つのステップが含まれます。ポイントレイヤーをラスタ化し、ラスタ化されたレイヤに表示されるno-"
+"data（データなし）値を埋めます。ポイントレイヤに選択範囲がある場合、選択されたポイントのみが使用されますが、出力範囲が自動的に調整されるように設定されている場合は、レイヤの全範囲が使用されます。つまり、レイヤの範囲は、選択されたものから計算されたものではなく、常にすべての地物の完全な範囲とみなされます。私たちのモデルにいくつかの追加ツールを使うことによってそれを修正してみます。"
 
 #: ../../docs/training_manual/processing/modeler_only.rst:10
 msgid ""
@@ -72,7 +73,7 @@ msgid ""
 "case we need a vector layer (restricted to points) and an attribute from it,"
 " with the values that we will use for rasterizing."
 msgstr ""
-"モデラーを開き、必要な入力を追加することによって、モデルを開始します。この場合は、ラスター化に使用する値を持つ（ポイントに制限）ベクターレイヤーとそれからの属性が必要です。"
+"モデラーを開き、必要な入力を追加することによって、モデルを開始します。この場合は、ベクタレイヤ（ポイントに制限）と、ラスタ化に使う値を持ったその属性が必要です。"
 
 #: ../../docs/training_manual/processing/modeler_only.rst:14
 msgid ""
@@ -110,17 +111,17 @@ msgstr "今、 *ベクターレイヤーの境界* アルゴリズムからの�
 
 #: ../../docs/training_manual/processing/modeler_only.rst:26
 msgid "Fill the parameters of the algorithm as shown next:"
-msgstr "次に示すようなアルゴリズムのパラメーターを入力します。"
+msgstr "次に示すようにアルゴリズムのパラメータを入力します："
 
 #: ../../docs/training_manual/processing/modeler_only.rst:30
 msgid "The canvas should now look like."
-msgstr "キャンバスは、今のようになります。"
+msgstr "キャンバスはこのようになる筈です。"
 
 #: ../../docs/training_manual/processing/modeler_only.rst:34
 msgid ""
 "Finally, fill the no-data values of the raster layer using the *Close gaps* "
 "algorithm."
-msgstr "最後に、 *ギャップを閉じる* アルゴリズムを使用してラスターレイヤーの無データ値を埋めます。"
+msgstr "最後に、 *ギャップを閉じる* アルゴリズムを使用してラスターレイヤーのno-data値を埋めます。"
 
 #: ../../docs/training_manual/processing/modeler_only.rst:38
 msgid ""
@@ -129,7 +130,7 @@ msgid ""
 "points in the input layer, and the layer will have the same extent as the "
 "selection."
 msgstr ""
-"このアルゴリズムは現在保存され、ツールボックスに追加する準備が整いました。それを実行できます。入力レイヤーで選択された点を補間することからラスターレイヤーが作成され、そしてそのレイヤーは選択と同じ範囲になるでしょう。"
+"これでアルゴリズムは保存して、ツールボックスに追加する準備が整いました。それを実行すると、入力レイヤで選択されたポイントを補間することでラスタレイヤが作成され、そのレイヤは選択と同じ範囲になります。"
 
 #: ../../docs/training_manual/processing/modeler_only.rst:40
 msgid ""
@@ -139,7 +140,7 @@ msgid ""
 "enters the desired value, but a much better approach would be to have that "
 "value automatically computed."
 msgstr ""
-"ここでアルゴリズムの改善があります。ラスター化する時には、セルサイズについてはハードコードされたharcoded値を使用しています。この値は、ここでのテスト入力レイヤーにとっては良いですが、他の例にとっては良くないかもしれません。新しいパラメーターを追加してユーザーが希望の値を入力するようにもできるでしょうが、より良いアプローチは、その値を自動的に計算させることです。"
+"ここでアルゴリズムの改善があります。ラスタ化する時、セルサイズはハードコードされた値を使いました。この値は、ここでのテスト入力レイヤーにとっては良いですが、他の場合ではそうではないかもしれません。新しいパラメータを追加してユーザーが希望する値を入力することもできますが、より良いアプローチは、その値を自動的に計算させることでしょう。"
 
 #: ../../docs/training_manual/processing/modeler_only.rst:42
 msgid ""
@@ -153,7 +154,7 @@ msgstr ""
 msgid ""
 "Now we have to edit the rasterize algorithm, so it uses the output of the "
 "calculator instead of the hardcoded value."
-msgstr "ここでラスター化アルゴリズムを、ハードコードされた値の代わりに計算機の出力を使用するように編集する必要があります。"
+msgstr "ここでラスター化アルゴリズムを、ハードコード値の代わりに計算機の出力を使用するように編集する必要があります。"
 
 #: ../../docs/training_manual/processing/modeler_only.rst:48
 msgid "The final algorithm should look like this:"
