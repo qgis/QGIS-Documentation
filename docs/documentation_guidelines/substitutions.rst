@@ -157,7 +157,7 @@ Icon                            Substitution                        Icon        
 |regularPolygonCenterCorner|    ``|regularPolygonCenterCorner|``    |regularPolygonCenterPoint|     ``|regularPolygonCenterPoint|``
 ==============================  ==================================  ==============================  ==================================
 
-Identity result
+Identify result
 ...............
 
 ==============================  ==================================  ==============================  ==================================
