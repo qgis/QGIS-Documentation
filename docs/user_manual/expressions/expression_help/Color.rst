@@ -53,6 +53,32 @@ Returns a string representation of a color based on its cyan, magenta, yellow, b
 
 .. end_color_cmyka_section
 
+.. _expression_function_Color_color_cmykf:
+
+color_cmykf
+...........
+
+Returns a color object based on its cyan, magenta, yellow, black and alpha components.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - color_cmykf(cyan, magenta, yellow, black, [alpha=1.0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **cyan** - cyan component as a float value from 0.0 to 1.0
+       * **magenta** - magenta component as a float value from 0.0 to 1.0
+       * **yellow** - yellow component as a float value from 0.0 to 1.0
+       * **black** - black component as a float value from 0.0 to 1.0
+       * **alpha** - alpha component as a float value from 0.0 to 1.0
+   * - Examples
+     - * ``color_cmykf(1,0.9,0.81,0.62)`` → CMYKA: 1.00,0.90,0.81,0.62,1.00
+
+
+.. end_color_cmykf_section
+
 .. _expression_function_Color_color_grayscale_average:
 
 color_grayscale_average
@@ -118,6 +144,31 @@ Returns a string representation of a color based on its hue, saturation, lightne
 
 .. end_color_hsla_section
 
+.. _expression_function_Color_color_hslf:
+
+color_hslf
+..........
+
+Returns a color object based on its hue, saturation, and lightness attributes.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - color_hslf(hue, saturation, lightness, [alpha=1.0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **hue** - hue of the color, as a float value from 0.0 to 1.0
+       * **saturation** - saturation of the color as a float value from 0.0 to 1.0
+       * **lightness** - lightness of the color as a float value from 0.0 to 1.0
+       * **alpha** - alpha component as a float value from 0.0 to 1.0
+   * - Examples
+     - * ``color_hslf(0.3,0.52,0.7)`` → HSLA: 0.30,0.52,0.70,1.00
+
+
+.. end_color_hslf_section
+
 .. _expression_function_Color_color_hsv:
 
 color_hsv
@@ -162,6 +213,31 @@ Returns a string representation of a color based on its hue, saturation, value a
 
 
 .. end_color_hsva_section
+
+.. _expression_function_Color_color_hsvf:
+
+color_hsvf
+..........
+
+Returns a color object based on its hue, saturation, and value attributes.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - color_hsvf(hue, saturation, value, [alpha=1.0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **hue** - hue of the color, as a float value from 0.0 to 1.0
+       * **saturation** - saturation of the color as a float value from 0.0 to 1.0
+       * **value** - value of the color as as a float value from 0.0 to 1.0
+       * **alpha** - alpha component as a float value from 0.0 to 1.0
+   * - Examples
+     - * ``color_hsvf(0.4,1,0.6)`` → HSVA: 0.40,1.00,0.60,1.00
+
+
+.. end_color_hsvf_section
 
 .. _expression_function_Color_color_mix_rgb:
 
@@ -269,6 +345,31 @@ Returns a string representation of a color based on its red, green, blue, and al
 
 
 .. end_color_rgba_section
+
+.. _expression_function_Color_color_rgbf:
+
+color_rgbf
+..........
+
+Returns a color object based on its red, green, blue and alpha components.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - color_rgbf(red, green, blue, [alpha=1.0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **red** - red component as a float value from 0.0 to 1.0
+       * **green** - green component as a float value from 0.0 to 1.0
+       * **blue** - blue component as a float value from 0.0 to 1.0
+       * **alpha** - alpha component as a float value from 0.0 to 1.0
+   * - Examples
+     - * ``color_rgbf(1.0,0.5,0)`` → RGBA: 1.00,0.50,0.00,1.00
+
+
+.. end_color_rgbf_section
 
 .. _expression_function_Color_create_ramp:
 
