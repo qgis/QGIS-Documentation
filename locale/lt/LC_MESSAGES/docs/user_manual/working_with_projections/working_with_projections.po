@@ -31,7 +31,7 @@ msgid ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. This page is currently translated at |translation progress|."
 msgstr ""
-"Vertimas yra bendruomenės pastangos `jūs galite prisijungti "
+"Vertimas yra bendruomenės pastangos, prie kurių `jūs galite prisijungti "
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. Šis puslapis šiuo metu išverstas |translation progress|."
 
@@ -113,7 +113,7 @@ msgstr ""
 "Norint teisingai projektuoti projekto duomenis į konkrečią paskirties CRS, "
 "arba jūsų duomenyse turi būti informacija apie koordinačių atskaitos "
 "sistemą, arba jums reikės rankomis nurodyti sluoksniui teisingą CRS. PostGIS"
-" sluoksniams, QGIS naudoja erdvinės atskaitos identifikatorių, kuris buvo "
+" sluoksniams QGIS naudoja erdvinės atskaitos identifikatorių, kuris buvo "
 "nurodytas, kai buvo sukurtas PostGIS sluoksnis. GDAL palaikomiems duomenims "
 "QGIS remiasi žinomomis priemonėmis nurodyti CRS. Pavyzdžiui Shapefile "
 "formatui tai yra failas, kuriame yra ESRI Well-Known Text (:index:`WKT`) "
@@ -404,6 +404,22 @@ msgstr ""
 " rodoma „nežinomi vienetai“; visi matavimai vykdomi nežinomais žemėlapio "
 "vienetais, neleidžiamas joks konvertavimas."
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
+msgid ""
+"or an existing coordinate reference system that can be *geographic*, "
+"*projected* or *user-defined*. A preview of the CRS extent on earth is "
+"displayed to help you select the appropriate one. Layers added to the "
+"project are translated on-the-fly to this CRS in order to overlay them "
+"regardless of their original CRS. Use of units and ellipsoid setting are "
+"available and make sense and you can perform calculations accordingly."
+msgstr ""
+"arba esama koordinačių atskaitos sistema, kuri gali būti *geografinė*, "
+"*projekcinė* arba *naudotojo apibrėžta*. Rodoma CRS apimties žemėje "
+"peržiūra, leidžianti jums pasirinkti tinkamą projekciją. Į projektą pridėti "
+"sluoksniai, nepriklausomai nuo jų pradinės CRS, automatiškai keičiami į šią "
+"CRS norint juos vaizduoti. Galima naudoti vienetus ir elipsoido nustatymus, "
+"ir jie logiški, ir jūs galite vykdyti atitinkamus skaičiavimus."
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
 msgid ""
 "Whenever you select a new CRS for your QGIS project, the measurement units "
@@ -454,6 +470,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
 msgid "Coordinate Reference System Selector"
 msgstr "Koordinačių atskaitos sistemos parinkiklis"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:217
+msgid "CRS Selector"
+msgstr "CRS parinkiklis"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:219
 msgid ""
@@ -506,9 +526,40 @@ msgstr ""
 "PROJ. Šis tekstas skirtas tik skaitymui ir pateikiamas tik informaciniais "
 "tikslais."
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:236
+msgid ""
+"If you want to remove a recently used CRS from the list that can be done in "
+"several ways:"
+msgstr ""
+"Jei norite išimti neseniai naudotą CRS iš sąrašo, tai galite padaryti "
+"keliais būdais:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:239
+msgid ""
+"Press |clearItem| :sup:`Remove from recently used CRS` button on the right "
+"side."
+msgstr ""
+"Spauskite dešinėje pusėje esantį mygtuką |clearItem| :sup:`Išimti iš "
+"neseniai naudotų CRS sąrašo`."
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:433
 msgid "clearItem"
 msgstr "clearItem"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
+msgid "Press :kbd:`Del` after selecting CRS that you want to remove."
+msgstr "Parinkę CRS, kurį norite išimti, spauskite :kbd:`Del`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:242
+msgid ""
+"Right-click on used CRS and choose |clearItem| :guilabel:`Remove selected "
+"CRS from recently used CRS` to remove selected CRS or |clearConsole| "
+":guilabel:`Clear all recently used CRS` to remove all used CRS."
+msgstr ""
+"Ant naudojamo CRS spauskite dešinį pelės mygtuką ir parinkite |clearItem| "
+":guilabel:`Išimti pažymėtą CRS iš neseniai naudotų CRS`, kad išimtumėte "
+"pažymėtą CRS arba |clearConsole| :guilabel:`Valyti visus neseniai naudotus "
+"CRS`, kad išimtumėte visus CRS."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:431
 msgid "clearConsole"
