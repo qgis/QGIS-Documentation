@@ -84,7 +84,7 @@ Returns a color object based on its cyan, magenta, yellow, black and alpha compo
 color_grayscale_average
 .......................
 
-Applies a grayscale filter and returns a string representation from a provided color.
+Applies a grayscale filter to a color and returns it. Returned type is the same as color argument, i.e. a color string representation or a color object.
 
 .. list-table::
    :widths: 15 85
@@ -92,9 +92,10 @@ Applies a grayscale filter and returns a string representation from a provided c
    * - Syntax
      - color_grayscale_average(color)
    * - Arguments
-     - * **color** - a color string
+     - * **color** - a color string representation or a color object
    * - Examples
      - * ``color_grayscale_average('255,100,50')`` → '135,135,135,255'
+       * ``color_grayscale_average(color_cmykf(0.6,0.5,0.1,0.8))`` → CMYKA: 0.40,0.40,0.40,0.80,1.00
 
 
 .. end_color_grayscale_average_section
@@ -239,6 +240,29 @@ Returns a color object based on its hue, saturation, and value attributes.
 
 .. end_color_hsvf_section
 
+.. _expression_function_Color_color_mix:
+
+color_mix
+.........
+
+Returns a color mixing the red, green, blue, and alpha values of two provided colors based on a given ratio. Returned type is the same as color arguments, i.e. a color string representation or a color object.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - color_mix(color1, color2, ratio)
+   * - Arguments
+     - * **color1** - a color string or a color object
+       * **color2** - a color string or a color object
+       * **ratio** - a ratio
+   * - Examples
+     - * ``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'
+       * ``color_mix(color_cmykf(0.9,0.9,0.9,0.9),color_cmykf(0.1,0.1,0.1,0.1),0.5)`` → CMYKA: 0.50,0.50,0.50,0.50,1.00
+
+
+.. end_color_mix_section
+
 .. _expression_function_Color_color_mix_rgb:
 
 color_mix_rgb
@@ -266,7 +290,7 @@ Returns a string representing a color mixing the red, green, blue, and alpha val
 color_part
 ..........
 
-Returns a specific component from a color string, e.g., the red component or alpha component.
+Returns a specific component from a color string or color object, e.g., the red component or alpha component.
 
 .. list-table::
    :widths: 15 85
@@ -274,7 +298,7 @@ Returns a specific component from a color string, e.g., the red component or alp
    * - Syntax
      - color_part(color, component)
    * - Arguments
-     - * **color** - a color string
+     - * **color** - a color string or a color object
        * **component** - a string corresponding to the color component to return. Valid options are:
 
          
@@ -297,6 +321,7 @@ Returns a specific component from a color string, e.g., the red component or alp
 
    * - Examples
      - * ``color_part('200,10,30','green')`` → 10
+       * ``to_int(color_part(color_cmykf(0.1,0.2,0.3,0.9),'black'))`` → 90
 
 
 .. end_color_part_section
@@ -399,7 +424,7 @@ Returns a gradient ramp from a map of color strings and steps.
 darker
 ......
 
-Returns a darker (or lighter) color string
+Returns a darker (or lighter) color. Returned type is the same as color arguments, i.e. a color string representation or a color object.
 
 .. list-table::
    :widths: 15 85
@@ -407,7 +432,7 @@ Returns a darker (or lighter) color string
    * - Syntax
      - darker(color, factor)
    * - Arguments
-     - * **color** - a color string
+     - * **color** - a color string or a color object
        * **factor** - an integer corresponding to the darkening factor:
 
          * if the factor is greater than 100, this function returns a darker color (e.g., setting factor to 200 returns a color that is half the brightness);
@@ -426,7 +451,7 @@ Returns a darker (or lighter) color string
 lighter
 .......
 
-Returns a lighter (or darker) color string
+Returns a lighter (or darker) color. Returned type is the same as color arguments, i.e. a color string representation or a color object.
 
 .. list-table::
    :widths: 15 85
@@ -434,7 +459,7 @@ Returns a lighter (or darker) color string
    * - Syntax
      - lighter(color, factor)
    * - Arguments
-     - * **color** - a color string
+     - * **color** - a color string or a color object
        * **factor** - an integer corresponding to the lightening factor:
 
          * if the factor is greater than 100, this function returns a lighter color (e.g., setting factor to 150 returns a color that is 50% brighter);
@@ -516,7 +541,7 @@ Returns a string representing a color from an expression-created ramp
 set_color_part
 ..............
 
-Sets a specific color component for a color string, e.g., the red component or alpha component.
+Sets a specific color component for a color string or a color object, e.g., the red component or alpha component.
 
 .. list-table::
    :widths: 15 85
@@ -524,7 +549,7 @@ Sets a specific color component for a color string, e.g., the red component or a
    * - Syntax
      - set_color_part(color, component, value)
    * - Arguments
-     - * **color** - a color string
+     - * **color** - a color string or a color object
        * **component** - a string corresponding to the color component to set. Valid options are:
 
          
@@ -548,6 +573,7 @@ Sets a specific color component for a color string, e.g., the red component or a
        * **value** - new value for color component, respecting the ranges listed above
    * - Examples
      - * ``set_color_part('200,10,30','green',50)`` → '200,50,30,255'
+       * ``set_color_part(color_cmykf(0.21,0,0.92,0.70),'black',100)`` → CMYKA: 0.21,0.00,0.92,1.00,1.00
 
 
 .. end_set_color_part_section
