@@ -2918,7 +2918,8 @@ that was selected from the identify results or attribute table (see :ref:`using_
 Double quote marks can be used to group text into a single argument to the program, script or command.
 Double quotes will be ignored if preceded by a backslash.
 
-Actions can invoke a single process, with arguments, so Boolean operators (such as ``&``, ``&&``, ``;``, ``|``) will not work.
+Actions can invoke a single process, with arguments, so Boolean operators
+(such as ``&``, ``&&``, ``;``, ``|``) will not work.
 In UNIX-like operating systems multiple commands can be executed via ``bash -c``.
 
 The :guilabel:`Action Scopes` allows you to define where the action should be available.
@@ -2972,6 +2973,24 @@ invoked.
 The second example uses the \%\% notation, which does not rely on a particular
 field for its value. When the action is invoked, the \%\% will be replaced by
 the value of the selected field in the identify results or attribute table.
+
+.. index:: Actions, Attribute Actions
+   single: Actions; Duplicate an action
+.. _duplicating_actions:
+
+Duplicating Actions
+-------------------
+
+QGIS allows you to duplicate existing actions. To duplicate an attribute action, 
+open the vector :guilabel:`Layer Properties` dialog and click on the :guilabel:`Actions` tab. 
+In the :guilabel:`Actions` tab, click the |duplicateAction| :sup:`Duplicate an action`
+to open the :guilabel:`Duplicate Action` dialog. You must have selected at least one existing action 
+in order to create a duplicate.
+
+In the dialogue that appears, make any changes that are necessary. See :ref:`adding_actions` 
+for further information. Once finished, press :guilabel:`OK` to create a duplicate of the action with 
+any changes that you made. If you did not edit the description, or if you changed it to be 
+identical to the description of any other existing action, "_1" will be added to the end of it.
 
 .. index::
    single: Actions; Using actions
@@ -3763,6 +3782,8 @@ To do so:
 .. |digitizing| image:: /static/common/digitizing.png
    :width: 1.5em
 .. |display| image:: /static/common/display.png
+   :width: 1.5em
+.. |duplicateAction| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
