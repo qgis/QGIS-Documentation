@@ -176,7 +176,8 @@ plugin libraries`.
 
 Add or Remove :guilabel:`Documentation Path(s)` to use for QGIS help. By default,
 a link to the official online User Manual corresponding to the version being used
-is added. You can however add other links and prioritize them from top to bottom:
+is added (i.e. ``https://docs.qgis.org/§qgis_short_version/$qgis_locale/docs/user_manual/``).
+You can however add other links and prioritize them from top to bottom:
 each time you click on a :guilabel:`Help` button in a dialog, the topmost link
 is checked and if no corresponding page is found, the next one is tried,
 and so on.
