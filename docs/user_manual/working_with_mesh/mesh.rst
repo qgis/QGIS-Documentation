@@ -390,7 +390,7 @@ Available properties depend on the selected symbology as shown in the following 
   +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
   | :guilabel:`Max tail length`            | The time until the particle fades out                                                     |            |             | |checkbox| |            |
   +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | :guilabel:`Wind Barbs`                 | * **Length**: Specifies the lenght of the wind barbs. Choose the units from a dropdown    |            |             |            | |checkbox| |
+  | :guilabel:`Wind Barbs`                 | * **Length**: Specifies the length of the wind barbs. Choose the units from a drop-down   |            |             |            | |checkbox| |
   |                                        |   menu.                                                                                   |            |             |            |            |
   |                                        | * **Data Units**: Specifies the units of wind speed data. Wind barbs encode the wind      |            |             |            |            |
   |                                        |   in knots (nautical miles per hour). Therefore, you should select the units that         |            |             |            |            |
