@@ -164,7 +164,7 @@ Procedure
 
 #. Proper formatting and spell check
     Make sure your code is properly formatted and spelled by running the prepare commit script 
-    **before** issuing `git commit`.
+    **before** issuing ``git commit``.
 
     .. code-block:: bash
 
@@ -195,9 +195,10 @@ Procedure
       git add path/to/your/files
       git commit -m "Add a comment describing your nice feature"
 
-    Without the `-m` option, a new editor window will open for you to write your commit message.
+    Without the ``-m`` option, a new editor window will open for you to write your commit message.
 
-    Commit description should follow `this recommendation <https://www.conventionalcommits.org/en/v1.0.0/#summary>`_.
+    `Here are some recommendations <https://www.conventionalcommits.org/en/v1.0.0/#summary>`_
+    about commit description format.
 
 #. Now, you may want to share your work with QGIS community members.
    Push your new feature up to your online fork repository by doing:
