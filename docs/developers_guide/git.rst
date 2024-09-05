@@ -162,6 +162,29 @@ Procedure
     Code your changes in your local disk with your usual IDE.
     Remember to write tests suite for your modifications, when appropriate.
 
+#. Proper formatting and spell check
+    Make sure your code is properly formatted and spelled by running the prepare commit script 
+    **before** issuing ``git commit``.
+
+    .. code-block:: bash
+
+      ./scripts/prepare_commit.sh
+
+    This can be automated by adding it to a pre-commit hook, for example:
+
+    .. code-block:: bash
+
+      # check if a pre-commit already exists and backup it
+      test -e .git/hooks/pre-commit && mv .git/hooks/pre-commit pre-commit.000
+      # copy prepare_commit.sh as new pre-commit hook
+      cp ./scripts/prepare_commit.sh .git/hooks/pre-commit
+
+    The spell checker script can also be run alone with: 
+
+    .. code-block:: bash
+
+      ./scripts/astyle_all.sh
+
 #. Commit your changes to the git repo:
     When making a commit, put a descriptive comment and rather do
     several small commits if the changes across a number of files are unrelated.
@@ -171,6 +194,11 @@ Procedure
 
       git add path/to/your/files
       git commit -m "Add a comment describing your nice feature"
+
+    Without the ``-m`` option, a new editor window will open for you to write your commit message.
+
+    `Here are some recommendations <https://www.conventionalcommits.org/en/v1.0.0/#summary>`_
+    about commit description format.
 
 #. Now, you may want to share your work with QGIS community members.
    Push your new feature up to your online fork repository by doing:
