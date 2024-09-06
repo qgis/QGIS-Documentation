@@ -31,7 +31,7 @@ msgid ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. This page is currently translated at |translation progress|."
 msgstr ""
-"Vertimas yra bendruomenės pastangos `jūs galite prisijungti "
+"Vertimas yra bendruomenės pastangos, prie kurių `jūs galite prisijungti "
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. Šis puslapis šiuo metu išverstas |translation progress|."
 
@@ -199,7 +199,7 @@ msgid ""
 "Pan the map to the selected features of all the selected layers in the "
 ":guilabel:`Layers` panel."
 msgstr ""
-"Pastumti žemėlapį link visuose skydelyje :guilabel:`Sluoksniai` pažymėtų "
+"Pastumti žemėlapį link visų skydelyje :guilabel:`Sluoksniai` pažymėtų "
 "sluoksnių pažymėtų geoobjektų."
 
 #: ../../docs/user_manual/map_views/map_view.rst:79
@@ -412,7 +412,7 @@ msgid ""
 "per layer, using e.g. the :ref:`scale dependent rendering "
 "<label_scaledepend>`"
 msgstr ""
-"sluoksniui, naudojant pvz. the :ref:`nuo mastelio priklausomą braižymą "
+"sluoksniui, naudojant pvz. :ref:`nuo mastelio priklausomą braižymą "
 "<label_scaledepend>`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:142
@@ -909,6 +909,10 @@ msgstr ""
 "Parinkite apimtį vietos, kurią norite įrašyti, naudodami valdiklį "
 ":ref:`apimties parinkiklis <extent_selector>` widget"
 
+#: ../../docs/user_manual/map_views/map_view.rst:337
+msgid "Change the map :guilabel:`Rotation`"
+msgstr "Pakeiskite žemėlapio :guilabel:`Pasukimą`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:338
 msgid "Indicate the :guilabel:`CRS` to use for the extent"
 msgstr "Naudokite apimčiai naudojamą :guilabel:`CRS`"
@@ -1126,6 +1130,17 @@ msgid ""
 msgstr ""
 "Jūs taipogi galite tempti žymelę iš vieno į kitą aplanką (naudotojo ar "
 "projekto) ar poaplankį (grupę)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:408
+msgid ""
+"You can manage bookmark actions by right-click on the desired bookmark in "
+"the :guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by"
+" typing the bookmark name in the :ref:`locator <label_statusbar>`."
+msgstr ""
+"Jūs galite valdyti žymelių veiksmus paspaudę dešinį mygtuką ant norimos "
+":guilabel:`Erdvinių žymelių tvarkyklės` žymelės. Jūs taipogi galite "
+"priartinti žymeles įrašę žymelės pavadinimą į :ref:`lokatorių "
+"<label_statusbar>`."
 
 #: ../../docs/user_manual/map_views/map_view.rst:416
 msgid "Decorating the map"
@@ -1612,6 +1627,20 @@ msgstr ""
 msgid "Scale Bar"
 msgstr "Mastelio juosta"
 
+#: ../../docs/user_manual/map_views/map_view.rst:627
+msgid ""
+"|scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas. "
+"You can control the style and placement, as well as the labelling of the "
+"bar. The scale bar respects the active :ref:`project's distance unit "
+"<measurements_ellipsoid>` as defined in :menuselection:`Project properties "
+"--> General --> Units for distance measurement`."
+msgstr ""
+"|scaleBar| :guilabel:`Mastelio juosta` prideda į žemėlapio drobę paprastą "
+"mastelio juostą. Jūs galite valdyti  juostos stilių, vietą bei užrašus. "
+"Mastelio juosta atsižvelgia į aktyvius :ref:`projekto atstumo vienetus "
+"<measurements_ellipsoid>`, kaip nurodyta :menuselection:`Projekto savybėse "
+"--> Bendra --> Atstumo matavimo vienetai`."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1368
 msgid "scaleBar"
 msgstr "scaleBar"
@@ -1671,6 +1700,10 @@ msgid ""
 msgstr ""
 "Mastelio juostos šriftą parinkite iškrentančiame sąraše :guilabel:`Juostos "
 "šriftas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:651
+msgid "Set the :guilabel:`Size of bar` in the active unit"
+msgstr "Nustatykite :guilabel:`Juostos dydį` aktyviais vienetais"
 
 #: ../../docs/user_manual/map_views/map_view.rst:652
 msgid ""
@@ -1960,9 +1993,18 @@ msgstr "actionText"
 msgid "Create an annotation as a text label"
 msgstr "Kurti anotaciją kaip tekstinį užrašą"
 
+#: ../../docs/user_manual/map_views/map_view.rst:766
+#: ../../docs/user_manual/map_views/map_view.rst:858
+msgid "|textAlongLine| :sup:`Create Text Annotation along Line`"
+msgstr "|textAlongLine| :sup:`Kurti tekstinę anotaciją palei liniją`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1399
 msgid "textAlongLine"
 msgstr "textAlongLine"
+
+#: ../../docs/user_manual/map_views/map_view.rst:766
+msgid "Create an annotation as a curved text along a linestring"
+msgstr "Kurti anotaciją kaip palei liniją išlenktą tekstą"
 
 #: ../../docs/user_manual/map_views/map_view.rst:769
 msgid "|textAnnotation| :sup:`Text Annotation`"
@@ -2089,6 +2131,18 @@ msgid ""
 "The properties dialog of an annotation layer provides the following tabs:"
 msgstr "Anotacijų sluoksnio savybių dialoge yra šios kortelės:"
 
+#: ../../docs/user_manual/map_views/map_view.rst:811
+msgid ""
+":guilabel:`Information`: a read-only dialog representing an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. This may include the layer extent, count of items per annotation type"
+" and total count, CRS details, ..."
+msgstr ""
+":guilabel:`Informacija`: tik skaitymui skirtas dialogas, kuriame yra įdomi "
+"vieta greitai peržvelgti dabartinio sluoksnio apibendrintą informaciją ir "
+"metaduomenis. Čia gali būti sluoksnio apimtis, bendras ir skirtingų "
+"anotacijų tipų elementų skaičius, CRS detalės, ..."
+
 #: ../../docs/user_manual/map_views/map_view.rst:815
 msgid ""
 ":guilabel:`Source`: defines general settings for the annotation layer. You "
@@ -2187,6 +2241,10 @@ msgstr ""
 "Kai kurios iš šių parinkčių prieinamos iš geoobjektų anotacijų "
 ":guilabel:`Simbologijos` savybių."
 
+#: ../../docs/user_manual/map_views/map_view.rst:850
+msgid "Interacting with features"
+msgstr "Sąveika su geoobjektais"
+
 #: ../../docs/user_manual/map_views/map_view.rst:852
 msgid ""
 "The Feature annotations have dedicated tools for creation depending on their"
@@ -2221,6 +2279,18 @@ msgstr ""
 "Priešingai nei bendri sluoksniai, anotacijų sluoksnio nereikia aktyvuoti, "
 "kad galėtumėte pažymėti jo geoobjektus. Tiesiog čiupkite įrankį |select| "
 ":sup:`Keisti anotacijas` ir galėsite sąveikauti su bet kuria anotacija:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:871
+msgid ""
+"**Selection**: left-click on the annotation. By default, annotations are "
+"rendered in the order of creation, meaning that recent annotations will be "
+"placed on top of older. You may need to play with the Z-index property of "
+"features in order to select ones they would sit above."
+msgstr ""
+"**Pažymėjimas**: spauskite kairį mygtuką ant anotacijos. Pagal nutylėjimą "
+"anotacijos braižomos sukūrimo tvarka, tai reiškia, kad paskutinės sukurtos "
+"anotacijos bus braižomos virš senesnių. Jums gali reikėti pažaisti su "
+"geoobjektų Z-index savybe, jei norite nurodyti, kas turi būti viršuje."
 
 #: ../../docs/user_manual/map_views/map_view.rst:876
 msgid ""
@@ -2276,6 +2346,83 @@ msgid ""
 msgstr ""
 "Pažymėtos anotacijos :guilabel:`Simbologijos` savybės bus rodomos skydelyje "
 ":guilabel:`Sluoksnio stilius`. Jūs galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:898
+msgid "Modify the appearance using full capabilities of:"
+msgstr "Keisti išvaizdą naudodami visas galimybes:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:900
+msgid ""
+"the :ref:`symbol properties <symbol-selector>` for polygon, polyline and "
+"marker annotations"
+msgstr ""
+":ref:`simbolių savybes <symbol-selector>` poligonams, polilinijoms ir "
+"žymeklių anotacijoms"
+
+#: ../../docs/user_manual/map_views/map_view.rst:901
+msgid ""
+"the :ref:`text format properties <text_format>` for text-based annotations. "
+"A text area allows you to construct the string to display using QGIS "
+"expression functions. It is also possible to set the :guilabel:`Alignment` "
+"for text annotation at point (left, center or right of the text point)."
+msgstr ""
+":ref:`teksto formato savybės <text_format>` tekstinėms anotacijoms. Teksto "
+"plotas leidžia jums konstruoti rodomą eilutę naudojant QGIS išraiškos "
+"funkcijas. Taipogi galima nustatyti anotacijos teksto :guilabel:`Lygiavimą` "
+"taške (kairėje, centre ar dešinėje nuo teksto taško)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid ""
+"For text annotation at point, also configure whether it should "
+":guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`. In both "
+"cases, a custom :guilabel:`Angle` can be set for the feature orientation."
+msgstr ""
+"Tekstinėms anotacijoms taške taipogi galima nurodyti, ar jos turėtų "
+":guilabel:`Ignoruoti žemėlapio pasukimą` ar :guilabel:`Suktis su žemėlapiu`."
+" Abiem atvejais galima nurodyti ir savo :guilabel:`Kampą` geoobjektų "
+"orientacijai."
+
+#: ../../docs/user_manual/map_views/map_view.rst:908
+msgid ""
+"For text annotation along a line, configure an :guilabel:`Offset from line` "
+"in the unit of your choice"
+msgstr ""
+"Tekstinėms anotacijoms pagal liniją, konfigūruokite :guilabel:`Poslinkį nuo "
+"linijos` jūsų pasirinktais vienetais"
+
+#: ../../docs/user_manual/map_views/map_view.rst:910
+msgid ""
+"Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale"
+" at which symbol or text sizes which uses paper-based units (such as "
+"millimeters or points) relate to. The sizes will be scaled accordingly "
+"whenever the map is viewed at a different scale. For instance, a line "
+"feature wide of 2mm at 1:2000 :guilabel:`Reference scale` will be rendered "
+"using 4mm when the map is viewed at 1:1000."
+msgstr ""
+"Konfigūruokite |unchecked| :guilabel:`Atskaitos mastelį`: nurodo žemėlapio "
+"mastelį, ties kuriuo simbolių ar teksto dydžiai naudoja popieriumi-paremtus "
+"vienetus (tokius kaip milimetrus ar taškus). Dydžiai bus atitinkamai "
+"pakeisti, kai žemėlapis bus žiūrimas skirtinguose masteliuose. Pavyzdžiui, "
+"2mm pločio linijos geoobjektas 1:2000 :guilabel:`Atskaitos mastelyje` bus "
+"braižomas 4mm, kai žemėlapis žiūrimas mastelyje 1:1000."
+
+#: ../../docs/user_manual/map_views/map_view.rst:915
+msgid ""
+"Set a :guilabel:`Z-index`: a feature with a higher index is placed on top of"
+" features with lower index. A convenient setting for both feature display "
+"and selection."
+msgstr ""
+"Nustatykite :guilabel:`Z-index`: geoobjektai su didesniu indeksu dedami virš"
+" geoobjektų su mažesniu indeksu. Patogus nustatymas tiek geoobjekto rodymui,"
+" tiek ir pažymėjimui."
+
+#: ../../docs/user_manual/map_views/map_view.rst:918
+msgid ""
+"Modify some of the :ref:`Layer rendering <annotationslayer_rendering>` "
+"settings"
+msgstr ""
+"Keiskite kai kuriuos :ref:`Sluoksnio braižymo <annotationslayer_rendering>` "
+"nustatymus"
 
 #: ../../docs/user_manual/map_views/map_view.rst:925
 msgid ""
@@ -2389,13 +2536,74 @@ msgid ""
 msgstr ""
 ":guilabel:`Turinio paraštės`: nustato vidines anotacijos rėmo paraštes."
 
+#: ../../docs/user_manual/map_views/map_view.rst:969
+msgid ""
+"|checkbox| :guilabel:`Live update` allows you to live preview your changes."
+msgstr ""
+"|checkbox| :guilabel:`Gyvas atnaujinimas` leidžia iš karto matyti jūsų "
+"pakeitimus."
+
 #: ../../docs/user_manual/map_views/map_view.rst:976
 msgid "A ballon annotation text dialog"
 msgstr "Baliono anotacijų teksto dialogas"
 
+#: ../../docs/user_manual/map_views/map_view.rst:978
+msgid "When a balloon annotation tool is active, you can also:"
+msgstr "Kai aktyvus baliono anotavimo įrankis, jūs taipogi galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:980
+msgid "Select an annotation"
+msgstr "Pažymėti anotaciją"
+
+#: ../../docs/user_manual/map_views/map_view.rst:981
+msgid "Resize an annotation"
+msgstr "Keisti anotacijos dydį"
+
+#: ../../docs/user_manual/map_views/map_view.rst:982
+msgid ""
+"Move an annotation by map position (by dragging the map marker) or by moving"
+" only the balloon."
+msgstr ""
+"Perkelti anotaciją į žemėlapio poziciją (pertempiant žemėlapio žymeklį) arba"
+" perkelti tik balioną."
+
+#: ../../docs/user_manual/map_views/map_view.rst:983
+msgid ""
+"Delete an annotation: select it and either press the :kbd:`Del` or "
+":kbd:`Backspace` button, or double-click it and press the :guilabel:`Delete`"
+" button in the properties dialog."
+msgstr ""
+"Ištrinti anotaciją: parinkite ją ir arba spauskite mygtuką :kbd:`Del` ar "
+":kbd:`Backspace`, arba du kartus spauskite anotaciją ir savybių dialoge "
+"naudokite mygtuką :guilabel:`Trinti`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:985
+msgid "Right-click and in the contextual menu:"
+msgstr "Paspaudus dešinį pelės mygtuką, per kontekstinį meniu galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:987
+msgid ""
+"|editCopy| :guilabel:`Copy coordinate` of the annotation's map marker in "
+"various CRS"
+msgstr ""
+"|editCopy| :guilabel:`Kopijuoti koordinates` iš anotacijos žemėlapio "
+"žymeklio į skirtingas CRS"
+
+#: ../../docs/user_manual/map_views/map_view.rst:988
+msgid ""
+"|toggleEditing| :guilabel:`Edit` properties of the annotation. Same as "
+"double-clicking the annotation."
+msgstr ""
+"|toggleEditing| :guilabel:`Keisti` anotacijos savybes. Tas pats, kas du "
+"kartus paspaudus anotaciją."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1405
 msgid "toggleEditing"
 msgstr "toggleEditing"
+
+#: ../../docs/user_manual/map_views/map_view.rst:989
+msgid "|deleteSelected| :guilabel:`Delete` the annotation"
+msgstr "|deleteSelected| :guilabel:`Trinti` anotaciją"
 
 #: ../../docs/user_manual/map_views/map_view.rst:997
 msgid "Measuring"
@@ -2570,6 +2778,43 @@ msgstr ""
 "įrankius, kiekvienas pelės paspaudimas (tolerancijos nustatymo ribose) bus "
 "pritrauktas prie sluoksnio."
 
+#: ../../docs/user_manual/map_views/map_view.rst:1065
+msgid ""
+"The |measure| :sup:`Measure Line` measures distances between given points. "
+"The tool then allows you to click points on the map. Each segment length, as"
+" well as the total, shows up in the measure window. In the measure window, "
+"you will see coordinates for all your points and distances. Keep in mind "
+"that the first row will contain only coordinates, as it represents your "
+"starting point. Now it is possible to copy all your line measurements at "
+"once to the clipboard using the :guilabel:`Copy` button. Clicking the "
+":guilabel:`Configuration` button you will access to :guilabel:`Measure Tool "
+"Copy Settings` where you can set up :ref:`copy options "
+"<measure_copy_settings>`. To stop measuring, click the right mouse button."
+msgstr ""
+"|measure| :sup:`Matuoti liniją` matuoja atstumą tarp nurodytų taškų. Įrankis"
+" leidžia jums spausti taškus žemėlapyje. Matavimo lange rodomas kiekvieno "
+"segmento ir bendras ilgis. Matavimo lange jūs matote visų taškų koordinates "
+"ir atstumus. Turėkite omenyje, kad pirma eilutė turės tik koordinates, nes "
+"ji reprezentuoja pradžios tašką. Dabar galima kopijuoti iš karto visus jūsų "
+"matavimus į iškarpinę naudojant mygtuką :guilabel:`Kopijuoti`. Paspaudę "
+"mygtuką :guilabel:`Konfigūracija` pasieksite :guilabel:`Matavimo įrankių "
+"kopijavimo nustatymai`, kur galėsite nustatyti :ref:`kopijavimo parinktis "
+"<measure_copy_settings>`. Norėdami baigti matavimą spauskite dešinį pelės "
+"mygtuką."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1076
+msgid ""
+"Note that you can use the drop-down list near the total to change the "
+":ref:`measurement units <measurements_ellipsoid>` interactively while "
+"working with the measure tool. This unit is retained for the widget until a "
+"new project is created or another project is opened."
+msgstr ""
+"Pastebėtina, kad galite naudoti iškrentantį sąrašą, esantį greta bendros "
+"sumos, jei norite interaktyviai pakeisti :ref:`matavimo vienetus "
+"<measurements_ellipsoid>`, kol dirbate su matavimo įrankiu. Šie vienetai "
+"grąžinami valdiklyje kol sukuriamas naujas projektas arba atveriamas kitas "
+"projektas."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1082
 msgid ""
 "The :guilabel:`Info` section in the dialog explains how calculations are "
@@ -2581,6 +2826,18 @@ msgstr ""
 #: ../../docs/user_manual/map_views/map_view.rst:1091
 msgid "Measure Distance"
 msgstr "Atstumo matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1093
+msgid ""
+"|measureArea| :sup:`Measure Area`: Areas can also be measured. In the "
+"measure window, the accumulated area size appears. Right-click to stop "
+"drawing. The Info section is also available as well as the ability to switch"
+" between different :ref:`area units <measurements_ellipsoid>`."
+msgstr ""
+"|measureArea| :sup:`Matuoti plotą`: Galima matuoti ir plotus. Matavimo lange"
+" rodomas suminis plotas. Norėdami baigti braižyti spauskite dešinį mygtuką. "
+"Taipogi matoma ir informacijos skiltis bei yra galimybė perjungti skirtingus"
+" :ref:`matavimo vienetus <measurements_ellipsoid>`."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1103
 msgid "Measure Area"
