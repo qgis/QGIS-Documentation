@@ -31,7 +31,7 @@ msgid ""
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. This page is currently translated at |translation progress|."
 msgstr ""
-"Vertimas yra bendruomenės pastangos `jūs galite prisijungti "
+"Vertimas yra bendruomenės pastangos, prie kurių `jūs galite prisijungti "
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. Šis puslapis šiuo metu išverstas |translation progress|."
 
@@ -107,9 +107,21 @@ msgstr "Klavišų kombinacija"
 msgid "Description"
 msgstr "Aprašymas"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:45
+msgid "|addLayer| :sup:`Add Layers`"
+msgstr "|addLayer| :sup:`Pridėti sluoksnius`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:265
 msgid "addLayer"
 msgstr "addLayer"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:46
+msgid "hold :kbd:`Ctrl` while drag-and-drop"
+msgstr "laikykite :kbd:`Ctrl` tempiant ir numetant"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:47
+msgid "Allows you to add new layers to a plot."
+msgstr "Leidžia jums pridėti į brėžinį naujus sluoksnius"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:48
 msgid "|layerTree| :sup:`Show Layer Tree`"
@@ -161,7 +173,7 @@ msgstr ""
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:57
 msgid "|arrowLeft| :sup:`Nudge Left`"
-msgstr "|arrowLeft| :sup:`Stumtelėti kariėn`"
+msgstr "|arrowLeft| :sup:`Stumtelėti kairėn`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:267
 msgid "arrowLeft"
@@ -355,9 +367,27 @@ msgstr "saveMapAsImage"
 msgid "Exports plots to several image formats"
 msgstr "Eksportuoja brėžinį į kelis piešinių formatus"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:98
+msgid "|fileSaveAs| :sup:`Export Results`"
+msgstr "|fileSaveAs| :sup:`Eksportuoti rezultatus`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:279
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:100
+msgid ""
+"Exports plots as 3D features, 2D Profile and Distance/Elevation Table. (The "
+"results can be saved as DXF files, CSV files or any of the standard writable"
+" vector spatial formats)"
+msgstr ""
+"Eksportuoja brėžinius kaip 3D geoobjektus, 2D profilį ir Atstumo/Aukščio "
+"lentelę. (Rezultatus galima įrašyti kaip DXF failus, CSV failus ar į bet "
+"kokį kitą standartinį įrašomą vektorinių erdvinių duomenų formatą)"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:103
+msgid "|options| :sup:`Options` :menuselection:`-->`"
+msgstr "|options| :sup:`Parinktys` :menuselection:`-->`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:291
 msgid "options"
@@ -369,9 +399,51 @@ msgid ""
 msgstr ""
 "Teikia prieigą prie profilio aukščio linijos konfigūracijos nustatymų."
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:106
+msgid ""
+":menuselection:`-->` |unchecked| :menuselection:`Lock distance/elevation "
+"scales`"
+msgstr ""
+":menuselection:`-->` |unchecked| :menuselection:`Užrakinti atstumo/aukščio "
+"mastelius`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:301
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:108
+msgid ""
+"Ensures that the horizontal and vertical scales are always kept equal (so "
+"that e.g. a 45° slope will appear as a 45° slope in the profile view)."
+msgstr ""
+"Įsitikina, kad horizontalus ir vertikalus masteliai visada lygūs (taip kad "
+"pvz. 45° nuolydis profilio vaizde visada atrodys kaip 45° nuolydis)."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:110
+msgid ":menuselection:`--> Distance units`"
+msgstr ":menuselection:`--> Atstumo vienetai`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:112
+msgid ""
+"Allows to render distances in the profile chart with units other than the "
+"map canvas units."
+msgstr ""
+"Leidžia profilio diagramoje braižyti atstumus kitais nei žemėlapio drobės "
+"vienetais."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:113
+msgid ":menuselection:`--> Tolerance`"
+msgstr ":menuselection:`--> Tolerancija`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:115
+msgid ""
+"Sets how far from the actual profile line a point can reside within to be "
+"included in the results. Uses the map units and is ignored by other layer or"
+" geometry types."
+msgstr ""
+"Nustato, kiek toli nuo profilio linijos gali būti taškas, kad jis būtų "
+"įtrauktas į rezultatus. Naudoja žemėlapio vienetus ir yra ignoruojamas kitų "
+"sluoksnių ar geometrijos tipų."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:117
 msgid "|dock| :sup:`Dock Elevation Profile View`"
@@ -448,6 +520,16 @@ msgstr "Aukščio profilio kūrimas"
 msgid "To create a profile view, you can:"
 msgstr "Norėdami sukurtumėte profilio vaizdą, jūs galite:"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:148
+msgid ""
+"Go to :menuselection:`View -->` |newElevationProfile| "
+":menuselection:`Elevation Profile` menu. The :guilabel:`Elevation profile` "
+"panel opens."
+msgstr ""
+"Eikite į meniu :menuselection:`Vaizdas -->` |newElevationProfile| "
+":menuselection:`Aukščio profilis`. Atveriamas skydelis :guilabel:`Aukščio "
+"profilis` panel opens."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:289
 msgid "newElevationProfile"
 msgstr "newElevationProfile"
@@ -507,6 +589,35 @@ msgid ""
 msgstr ""
 "Kitas žingsnis yra sukonfigūruoti aukščio savybes sluoksniams, kuriuos "
 "norite vaizduoti."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:167
+msgid ""
+"Push on the |layerTree| :sup:`Show Layer Tree` button to display the list of"
+" layers. By default, not all the layers of the project are loaded and "
+"referenced in the profile tool; e.g., raster layers which are not marked as "
+"having elevation data in their properties are ignored. Clicking the "
+"|addLayer| :sup:`Add layers` button will show a filtered list of possible "
+"layers which can be added to the plot, but which currently aren't in the "
+"plot. Applying the dialog with selected layers will automatically mark them "
+"as having elevation data and immediately add them to the plot."
+msgstr ""
+"Spauskite mygtuką |layerTree| :sup:`Rodyti sluoksnių medį`, kad parodytumėte"
+" sluoksnių sąrašą. Pagal nutylėjimą ne visi projekto sluoksniai įkeliami ir "
+"naudojami profilio įrankyje. Pvz. rastro sluoksniai, kurie savo savybėse "
+"nėra pažymėti kaip turintys aukščio duomenis, yra ignoruojami. Paspaudus "
+"mygtuką |addLayer| :sup:`Pridėti sluoksnius` bus rodomas filtruotas sąrašas "
+"sluoksnių, kuruos galima pridėti į brėžinį, bet kurie šuo metu nėra pridėti "
+"į brėžinį. Pritaikius dialogo pakeitimus su pažymėtais sluoksniais, jie bus "
+"automatiškai pažymėti kaip turintys aukščio duomenis ir bus nedelsiant "
+"pridėti į brėžinį."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:175
+msgid ""
+"Holding :kbd:`Ctrl` key, it is possible to drag and drop additional layers "
+"from the main layer tree to one in the elevation profile tool."
+msgstr ""
+"Laikant :kbd:`Ctrl` mygtuką galima tempti ir numesti papildomus sluoksnius "
+"iš pagrindinio sluoksnių medžio į aukščio profilio įrankio medį."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:178
 msgid ""
