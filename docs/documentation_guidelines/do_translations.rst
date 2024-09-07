@@ -93,7 +93,7 @@ We strongly recommend you to read them.
 .. tip:: **Quick access to translatable files in Transifex**
 
   If you find a wrong or missing translation in the current documentation,
-  you can use the ``Translate page`` link in the left bottom dropdown menu of the page
+  you can use the ``Translate page`` link in the bottom left drop-down menu of the page
   to reach it sources in Transifex and perform any update you wish to.
 
 
