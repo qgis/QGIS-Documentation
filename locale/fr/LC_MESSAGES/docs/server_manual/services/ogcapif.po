@@ -38,6 +38,16 @@ msgstr ""
 msgid "OGC API Features"
 msgstr "OGC API Features"
 
+#: ../../docs/server_manual/services/ogcapif.rst:6
+msgid ""
+"OGC API Features (OAPIF) is the first implementation of the new generation "
+"of OGC protocols. It is described by the `OGC API - Features - Part 1: Core "
+"<http://docs.ogc.org/is/17-069r3/17-069r3.html>`_ document."
+msgstr ""
+"OGC API Features (OAPIF) est la première implémentation de la nouvelle "
+"génération de protocoles OGC. Elle est décrite par le document `OGC API - "
+"Features - Part 1: Core <http://docs.ogc.org/is/17-069r3/17-069r3.html>`_."
+
 #: ../../docs/server_manual/services/ogcapif.rst:11
 msgid ""
 "The API can be reached on typical installations via "
@@ -45,6 +55,14 @@ msgid ""
 msgstr ""
 "L'API est accessible sur les installations classiques via "
 "`http://localhost/qgisserver/wfs3`"
+
+#: ../../docs/server_manual/services/ogcapif.rst:13
+msgid ""
+"Here is a quick informal summary of the most important differences between "
+"the well known WFS protocol and OAPIF:"
+msgstr ""
+"Voici un résumé informel rapide des différences les plus importantes entre "
+"le protocole WFS bien connu et OAPIF:"
 
 #: ../../docs/server_manual/services/ogcapif.rst:16
 msgid ""
@@ -61,6 +79,31 @@ msgid ""
 msgstr ""
 "OAPIF doit suivre les spécifications `OPENAPI "
 "<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_"
+
+#: ../../docs/server_manual/services/ogcapif.rst:22
+msgid ""
+"OAPIF supports multiple output formats but it does not dictate any (only "
+"GeoJSON and HTML are currently available in QGIS OAPIF) and it uses `content"
+" negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
+"determine which format is to be served to the client"
+msgstr ""
+"OAPIF prend en charge plusieurs formats de sortie, mais il n'en dicte aucun "
+"(seuls GeoJSON et HTML sont actuellement disponibles avec OAPIF sous QGIS) "
+"et il utilise la `négociation de contenu "
+"<https://en.wikipedia.org/wiki/Content_negotiation>`_ pour déterminer le "
+"format qui doit être servi au client"
+
+#: ../../docs/server_manual/services/ogcapif.rst:27
+msgid "JSON and HTML are first class citizens in OAPIF"
+msgstr "JSON et HTML sont des citoyens de première classe dans OAPIF"
+
+#: ../../docs/server_manual/services/ogcapif.rst:28
+msgid "OAPIF is self-documenting (through the ``/api`` endpoint)"
+msgstr "OAPIF est auto-documenté (via le point de terminaison ``/api``)"
+
+#: ../../docs/server_manual/services/ogcapif.rst:29
+msgid "OAPIF is fully navigable (through links) and browsable"
+msgstr "OAPIF est entièrement navigable (via des liens) et explorable"
 
 #: ../../docs/server_manual/services/ogcapif.rst:33
 msgid ""
@@ -92,6 +135,14 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:50
 msgid "Resource representation"
 msgstr "Représentation des ressources"
+
+#: ../../docs/server_manual/services/ogcapif.rst:52
+msgid ""
+"The implementation of OGC API Features in QGIS Server currently supports the"
+" following resource representation (output) formats:"
+msgstr ""
+"L'implémentation de l'OGC API Features dans QGIS Server prend actuellement "
+"en charge les formats de représentation (sortie) de ressources suivants :"
 
 #: ../../docs/server_manual/services/ogcapif.rst:55
 msgid "HTML"
@@ -269,6 +320,16 @@ msgstr "``/collections/{collectionId}/items/{featureId}``"
 msgid "Information about a single feature"
 msgstr "Informations sur une seule entité"
 
+#: ../../docs/server_manual/services/ogcapif.rst:104
+msgid ""
+"Similar to WFS-T (transactional Web Feature Service), it is possible to add,"
+" update and delete features (CRUD). The respective requests are described on"
+" \"``/api``\"."
+msgstr ""
+"Comme pour le WFS-T (Transactional Web Feature Service), il est possible "
+"d'ajouter, de mettre à jour et de supprimer des entités (CRUD). Les requêtes"
+" respectives sont décrites sur \"``/api``\"."
+
 #: ../../docs/server_manual/services/ogcapif.rst:109
 msgid ""
 "The main endpoint is the **Landing Page**. From that page it is possible to "
@@ -299,6 +360,10 @@ msgstr ""
 #: ../../docs/server_manual/services/ogcapif.rst:117
 msgid "the Collections (path ``/collections``, link relation ``data``)."
 msgstr "les Collections (chemin ``/collections``, relation de lien ``data``)."
+
+#: ../../docs/server_manual/services/ogcapif.rst:124
+msgid "Server OAPIF landing page"
+msgstr "Page de destination du serveur OAPIF"
 
 #: ../../docs/server_manual/services/ogcapif.rst:129
 msgid "API Definition"
@@ -349,6 +414,10 @@ msgstr ""
 "propriétés du projet). Le chemin de ce point de terminaison est "
 "``/collections/``."
 
+#: ../../docs/server_manual/services/ogcapif.rst:161
+msgid "Server OAPIF collections list page"
+msgstr "Page de liste des collections du serveur OAPIF"
+
 #: ../../docs/server_manual/services/ogcapif.rst:165
 msgid "Collection detail"
 msgstr "Détail de la collection"
@@ -375,6 +444,10 @@ msgstr ""
 "La représentation HTML fournit également une carte consultable avec les "
 "entités disponibles."
 
+#: ../../docs/server_manual/services/ogcapif.rst:182
+msgid "Server OAPIF collection detail page"
+msgstr "Page de détail de la collection du serveur OAPIF"
+
 #: ../../docs/server_manual/services/ogcapif.rst:188
 msgid "Features list"
 msgstr "Liste des entités"
@@ -393,6 +466,10 @@ msgstr ""
 msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
 msgstr ""
 "Ce point de terminaison est analogue à ``GetFeature`` dans WFS 1 et WFS 2."
+
+#: ../../docs/server_manual/services/ogcapif.rst:208
+msgid "Server OAPIF features list page"
+msgstr "Page de liste des entités du serveur OAPIF"
 
 #: ../../docs/server_manual/services/ogcapif.rst:212
 msgid "Feature detail"
@@ -416,6 +493,10 @@ msgid ""
 msgstr ""
 "La représentation HTML fournit également une carte consultable avec la "
 "géométrie de l'entité."
+
+#: ../../docs/server_manual/services/ogcapif.rst:228
+msgid "Server OAPIF feature detail page"
+msgstr "Page de détail des entités du serveur OAPIF"
 
 #: ../../docs/server_manual/services/ogcapif.rst:233
 msgid "Pagination"
@@ -646,6 +727,22 @@ msgstr "renvoie uniquement l'attribut ``name``"
 msgid "Customize the HTML pages"
 msgstr "Personnaliser les pages HTML"
 
+#: ../../docs/server_manual/services/ogcapif.rst:393
+msgid ""
+"The HTML representation uses a set of HTML templates to generate the "
+"response. The template is parsed by a template engine called `inja "
+"<https://github.com/pantor/inja/>`_. The templates can be customized by "
+"overriding them (see: :ref:`server_oapif_template_override`). The template "
+"has access to the same data that are available to the ``JSON`` "
+"representation and a few additional functions are available to the template:"
+msgstr ""
+"La représentation HTML utilise un ensemble de modèles HTML pour générer la "
+"réponse. Le modèle est analysé par un moteur de modèle appelé `inja "
+"<https://github.com/pantor/inja>`_. Les modèles peuvent être personnalisés "
+"en les remplaçant (voir :ref:`server_oapif_template_override`). Le modèle a "
+"accès aux mêmes données disponibles pour la représentation ``JSON``, avec "
+"quelques fonctions supplémentaires :"
+
 #: ../../docs/server_manual/services/ogcapif.rst:405
 msgid "Custom template functions"
 msgstr "Fonctions de modèle personnalisées"
@@ -694,6 +791,22 @@ msgid ""
 msgstr ""
 "``content_type_name(content_type)``: renvoie un nom court à partir d'un type"
 " de contenu, par exemple \"text / html\" renverra \"HTML\""
+
+#: ../../docs/server_manual/services/ogcapif.rst:419
+msgid ""
+"``nl2br( text )``: Returns the input text with all newlines replaced by "
+"\"<br>\" tags"
+msgstr ""
+"``nl2br( text )``: Renvoie le texte en entrée avec les nouvelles lignes "
+"remplacées par les tags \"<br>\""
+
+#: ../../docs/server_manual/services/ogcapif.rst:421
+msgid ""
+"``starts_with( string, prefix )``: returns true if a string begins with the "
+"provided string prefix, false otherwise"
+msgstr ""
+"``starts_with( string, prefix )``: renvoie vrai si un texte commence par le "
+"préfixe indiqué, sinon faux"
 
 #: ../../docs/server_manual/services/ogcapif.rst:428
 msgid "Template overrides"
