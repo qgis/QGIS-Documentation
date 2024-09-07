@@ -238,7 +238,7 @@ rst_prolog = r"""
     .. only:: html and i18n
 
       .. important::
-        Translation is a community effort `you can join <https://docs.qgis.org/latest/en/docs/documentation_guidelines/do_translations.htm>`_.
+        Translation is a community effort :ref:`you can join <translation_guidelines>`.
         This page is currently translated at |translation progress|.
     """
 
