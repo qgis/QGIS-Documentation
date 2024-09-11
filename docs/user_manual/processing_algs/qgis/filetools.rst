@@ -134,7 +134,7 @@ The algorithm has no output.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:openurl``
+**Algorithm ID**: ``native:openurl``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
