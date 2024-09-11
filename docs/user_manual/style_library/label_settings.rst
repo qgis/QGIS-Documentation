@@ -130,47 +130,7 @@ In the |text| :guilabel:`Text` tab, you can set:
 * the :guilabel:`Size` in any :ref:`supported unit <unit_selector>`
 * the :guilabel:`Color`
 * the :guilabel:`Opacity`
-* and :guilabel:`Allow HTML Formatting`:
-  The HTML formatting option enables the proper rendering of some HTML tags to customize the label.
-  The supported HTML tags are:
-
-  * Color, applicable to text, underline, strikethrough, and overline
-  * Font properties (font family, font size, bold and italic)
-  * Superscript and subscript components in text,
-    where the text will be vertically :sup:`super` or :sub:`sub` aligned
-    and automatically sized to 2/3 of the parent font size.
-    You can also set a fixed font size for the superscript/subscript
-    by including css rules, e.g.:
-
-    .. code:: html
-
-      <sup style="font-size:33pt">my superscript text</sup>
-
-    The CSS formatting rules ``vertical-align: super`` or ``vertical-align: sub``
-    are also available in any other HTML element (annotation, layout label or HTML items, ...).
-
-  In order to use the HTML formatting, you need to provide the HTML code in the :guilabel:`Value` field.
-  The expression is parsed and any supported HTML tag overrides its corresponding setting in the labels properties.
-  They also combine well with other background, shadow, buffer... properties of labels.
-
-  Below an example of a HTML-based expression and rendering
-  (applies different colors and underline to the same label):
-
-  .. code:: html
-
-    format(
-      '<span style="color:blue">%1</span> ( <span style="color:red"><u>%2 ft</u></span> )',
-      title( lower( "Name" ) ),
-      round($length)
-    )
-
-  .. _figure_label_html_formatting:
-
-  .. figure:: img/label_HTML_formatting.png
-     :align: center
-
-     Labeling with HTML formatting enabled
-
+* and :guilabel:`Allow HTML Formatting` enables the use of a subset of HTML tags and CSS rules to customize the label.
 
 At the bottom of the tab, a widget shows a filterable list of compatible items
 stored in your :ref:`style manager database <vector_style_manager>`.
@@ -183,6 +143,69 @@ and provide a name and tag(s).
  are also available in this widget. Select one to quickly overwrite the current
  :ref:`textual properties <text_format>` of the label.
  Likewise, you can create/overwrite a text format from there.
+
+
+.. _labels_text_html:
+
+
+Allow HTML Formatting
+.....................
+
+With :guilabel:`Allow HTML Formatting` enabled, you need to provide the HTML code in the :guilabel:`Value` field.
+Use whitespaces instead of tabs for any kind of indentation.
+The expression is parsed and any supported HTML tag overrides its corresponding setting in the labels properties.
+An exhaustive list of the supported subset of HTML tags and CSS properties can be found `here <https://doc.qt.io/qt-5/richtext-html-subset.html>`_.
+
+Examples of supported HTML tags:
+
+* Text formatting, such as italic or bold, e.g.:
+
+  .. code:: html
+
+    <i>QGIS</i> <b>rocks!</b>
+
+* Superscript and subscript, where the text will be vertically :sup:`super` or 
+  :sub:`sub` aligned and automatically sized to 2/3 of the parent font size.
+  You can also set a fixed font size for the superscript/subscript
+  by including css rules, e.g.:
+
+  .. code:: html
+
+    <sup style="font-size:33pt">my superscript text</sup>
+
+Examples of supported CSS properties:
+
+* Font properties (``color``, ``font-family``, ``font-size``, ``font-weight``, ``font-style``, ``word-spacing``).
+  Note that ``word-spacing`` will always use unit points.
+* Text decorations such as underline, overline and line-through (``text-decoration``)
+* Text alignment (``vertical-align``)
+
+CSS properties can be set on HTML tags with the style attribute.
+The HTML tag span does not apply any formatting to text by itself and is ideal if you just want to apply CSS styling.
+A CSS property name and its value are separated by a colon (``:``). 
+Multiple CSS properties are separated by semicolon (``;``), e.g.:
+
+.. code:: html
+
+  <span style="text-decoration:underline;color:blue;word-spacing:20">I will be displayed as blue underlined text with increased space between words</span>
+
+Below an example of a HTML-based expression and rendering
+(applies different colors and underline to the same label):
+
+.. code:: html
+
+  format(
+    '<span style="color:blue">%1</span> ( <span style="color:red"><u>%2 ft</u></span> )',
+    title( lower( "Name" ) ),
+    round($length)
+  )
+
+.. _figure_label_html_formatting:
+
+.. figure:: img/label_HTML_formatting.png
+    :align: center
+
+    Labeling with HTML formatting enabled
 
 .. _labels_formatting:
 
