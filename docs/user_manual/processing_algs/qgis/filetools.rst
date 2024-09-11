@@ -99,3 +99,43 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+.. _qgisopenurl:
+
+Open file or URL
+----------------
+Opens files in their default associated application, 
+or URLs in the user's default web browser.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **URL or file path**
+     - ``URL``
+     - [string]
+     - The URL or path of the file to open.
+
+Outputs
+.......
+
+The algorithm has no output.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:openurl``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
