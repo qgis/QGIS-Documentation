@@ -130,47 +130,7 @@ In the |text| :guilabel:`Text` tab, you can set:
 * the :guilabel:`Size` in any :ref:`supported unit <unit_selector>`
 * the :guilabel:`Color`
 * the :guilabel:`Opacity`
-* and :guilabel:`Allow HTML Formatting`:
-  The HTML formatting option enables the proper rendering of some HTML tags to customize the label.
-  The supported HTML tags are:
-
-  * Color, applicable to text, underline, strikethrough, and overline
-  * Font properties (font family, font size, bold and italic)
-  * Superscript and subscript components in text,
-    where the text will be vertically :sup:`super` or :sub:`sub` aligned
-    and automatically sized to 2/3 of the parent font size.
-    You can also set a fixed font size for the superscript/subscript
-    by including css rules, e.g.:
-
-    .. code:: html
-
-      <sup style="font-size:33pt">my superscript text</sup>
-
-    The CSS formatting rules ``vertical-align: super`` or ``vertical-align: sub``
-    are also available in any other HTML element (annotation, layout label or HTML items, ...).
-
-  In order to use the HTML formatting, you need to provide the HTML code in the :guilabel:`Value` field.
-  The expression is parsed and any supported HTML tag overrides its corresponding setting in the labels properties.
-  They also combine well with other background, shadow, buffer... properties of labels.
-
-  Below an example of a HTML-based expression and rendering
-  (applies different colors and underline to the same label):
-
-  .. code:: html
-
-    format(
-      '<span style="color:blue">%1</span> ( <span style="color:red"><u>%2 ft</u></span> )',
-      title( lower( "Name" ) ),
-      round($length)
-    )
-
-  .. _figure_label_html_formatting:
-
-  .. figure:: img/label_HTML_formatting.png
-     :align: center
-
-     Labeling with HTML formatting enabled
-
+* and :guilabel:`Allow HTML Formatting` enables the use of a subset of HTML tags and CSS rules to customize the label.
 
 At the bottom of the tab, a widget shows a filterable list of compatible items
 stored in your :ref:`style manager database <vector_style_manager>`.
@@ -183,6 +143,57 @@ and provide a name and tag(s).
  are also available in this widget. Select one to quickly overwrite the current
  :ref:`textual properties <text_format>` of the label.
  Likewise, you can create/overwrite a text format from there.
+
+
+.. _labels_text_html:
+
+
+Allow HTML Formatting
+.....................
+
+With :guilabel:`Allow HTML Formatting` enabled, you need to provide the HTML code in the :guilabel:`Value` field.
+The expression is parsed and any supported HTML tag overrides its corresponding setting in the labels properties.
+They also combine well with other background, shadow, buffer... properties of labels.
+
+Several CSS properties are supported:
+
+* Font properties (color, font family, font size, word-spacing, bold and italic)
+* Text decorations (underline, strikethrough, and overline)
+* Some properties, such as ``vertical-align: super`` or ``vertical-align: sub``,
+  are also available in any other HTML element.
+
+Notable tags include superscript and subscript, where the text will be vertically :sup:`super` or 
+:sub:`sub` aligned and automatically sized to 2/3 of the parent font size.
+You can also set a fixed font size for the superscript/subscript
+by including css rules, e.g.:
+
+.. code:: html
+
+  <sup style="font-size:33pt">my superscript text</sup>
+
+Below an example of a HTML-based expression and rendering
+(applies different colors and underline to the same label):
+
+.. code:: html
+
+  format(
+    '<span style="color:blue">%1</span> ( <span style="color:red"><u>%2 ft</u></span> )',
+    title( lower( "Name" ) ),
+    round($length)
+  )
+
+.. _figure_label_html_formatting:
+
+.. figure:: img/label_HTML_formatting.png
+    :align: center
+
+    Labeling with HTML formatting enabled
+ 
+Note:
+
+* It is impossible to list every supported HTML tag and CSS propery. Be courageous and explore!
+* Use whitespaces instead of tabs for any kind of indentation
+* CSS property ``word-spacing`` will always use unit px
 
 .. _labels_formatting:
 
