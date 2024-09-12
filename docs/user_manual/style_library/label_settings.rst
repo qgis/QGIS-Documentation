@@ -160,7 +160,7 @@ Several CSS properties are supported:
 * Font properties (``color``, ``font-family``, ``font-size``, ``font-weight``, ``font-style`` and ``word-spacing``)
 * Underline, strikethrough and overline through ``text-decoration``
 * Some properties such as ``vertical-align: super`` or ``vertical-align: sub``
-  are also available in any other HTML element.
+  are also available in any other HTML element
 
 Notable tags include superscript and subscript, where the text will be vertically :sup:`super` or 
 :sub:`sub` aligned and automatically sized to 2/3 of the parent font size.
