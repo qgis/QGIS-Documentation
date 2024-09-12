@@ -110,9 +110,6 @@ or URLs in the user's default web browser.
 Parameters
 ..........
 
-Basic parameters
-^^^^^^^^^^^^^^^^
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
