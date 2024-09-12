@@ -892,12 +892,15 @@ Heatmap Renderer
 
 With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live
 dynamic heatmaps for (multi)point layers.
-You can specify the heatmap radius in millimeters, points, pixels, map units or
-inches, choose and edit a color ramp for the heatmap style and use a slider for
+You can specify the heatmap :guilabel:`Radius` in millimeters, points, pixels, map units or
+inches, choose and edit a :guilabel:`Color ramp` for the heatmap style and use a slider for
 selecting a trade-off between render speed and quality. You can also define a
-maximum value limit and give a weight to points using a field or an expression.
+:guilabel:`Maximum value` limit and :guilabel:`Weight points by` using a field or an expression.
 When adding or removing a feature the heatmap renderer updates the heatmap style
-automatically.
+automatically. The :guilabel:`Color ramp` will be shown as a legend bar and
+in the :guilabel:`Legend settings` you can set the :guilabel:`Labels` for the :guilabel:`Maximum`
+and :guilabel:`Minimum` values. You can also change the orientation and direction of the legend
+in the :guilabel:`Layout`.
 
 .. _figure_heatmap_symbology:
 
