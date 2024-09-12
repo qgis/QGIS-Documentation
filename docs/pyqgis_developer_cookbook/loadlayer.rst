@@ -209,7 +209,7 @@ providers:
 
   .. testcode:: loadlayer
 
-      uri = "https://demo.mapserver.org/cgi-bin/wfs?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&SRSNAME=EPSG:4326&TYPENAME=ms:cities"
+      uri = "https://demo.mapserver.org/cgi-bin/wfs?service=WFS&version=2.0.0&request=GetFeature&typename=ms:cities"
       vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
 
   The uri can be created using the standard ``urllib`` library:
