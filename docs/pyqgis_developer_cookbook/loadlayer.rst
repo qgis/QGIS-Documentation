@@ -49,28 +49,7 @@ Vector Layers
 =============
 
 To create and add a vector layer instance to the project, specify the layer's data source
-identifier, name for the layer and provider's name:
-
-.. testcode:: loadlayer
-
- # get the path to the shapefile e.g. /home/project/data/ports.shp
- path_to_airports_layer = "testdata/airports.shp"
-
- # The format is:
- # vlayer = QgsVectorLayer(data_source, layer_name, provider_name)
-
- vlayer = QgsVectorLayer(path_to_airports_layer, "Airports layer", "ogr")
- if not vlayer.isValid():
-     print("Layer failed to load!")
- else:
-     QgsProject.instance().addMapLayer(vlayer)
-
-.. .. testoutput:: loadlayer
-   :hide:
-
-   (2): Using non-preferred coordinate operation between EPSG:2964 and EPSG:4326. Using +proj=pipeline +step +proj=unitconvert +xy_in=us-ft +xy_out=m +step +inv +proj=aea +lat_0=50 +lon_0=-154 +lat_1=55 +lat_2=65 +x_0=0 +y_0=0 +ellps=clrk66 +step +proj=push +v_3 +step +proj=cart +ellps=clrk66 +step +proj=helmert +x=-5 +y=135 +z=172 +step +inv +proj=cart +ellps=WGS84 +step +proj=pop +v_3 +step +proj=unitconvert +xy_in=rad +xy_out=deg, preferred +proj=pipeline +step +proj=unitconvert +xy_in=us-ft +xy_out=m +step +inv +proj=aea +lat_0=50 +lon_0=-154 +lat_1=55 +lat_2=65 +x_0=0 +y_0=0 +ellps=clrk66 +step +proj=hgridshift +grids=us_noaa_alaska.tif +step +proj=unitconvert +xy_in=rad +xy_out=deg.
-
-The data source identifier is a string and it is specific to each vector data
+identifier. The data source identifier is a string and it is specific to each vector data
 provider. Layer's name is used in the layer list widget. It is important to
 check whether the layer has been loaded successfully. If it was not, an invalid
 layer instance is returned.
@@ -79,12 +58,11 @@ For a geopackage vector layer:
 
 .. testcode:: loadlayer
 
- # get the path to a geopackage  e.g. /usr/share/qgis/resources/data/world_map.gpkg
- path_to_gpkg = os.path.join(QgsApplication.pkgDataPath(), "resources", "data", "world_map.gpkg")
+ # get the path to a geopackage
+ path_to_gpkg = "testdata/data/data.gpkg"
  # append the layername part
- gpkg_countries_layer = path_to_gpkg + "|layername=countries"
- # e.g. gpkg_places_layer = "/usr/share/qgis/resources/data/world_map.gpkg|layername=countries"
- vlayer = QgsVectorLayer(gpkg_countries_layer, "Countries layer", "ogr")
+ gpkg_airports_layer = path_to_gpkg + "|layername=airports"
+ vlayer = QgsVectorLayer(gpkg_airports_layer, "Airports layer", "ogr")
  if not vlayer.isValid():
      print("Layer failed to load!")
  else:
@@ -96,7 +74,7 @@ method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
 
 .. testcode:: loadlayer
 
-    vlayer = iface.addVectorLayer(path_to_airports_layer, "Airports layer", "ogr")
+    vlayer = iface.addVectorLayer(gpkg_airports_layer, "Airports layer", "ogr")
     if not vlayer:
       print("Layer failed to load!")
 
@@ -110,23 +88,27 @@ providers:
 .. index::
    pair: Loading; GDAL layers
 
-* GDAL library (Shapefile and many other file formats) --- data source is the
-  path to the file:
+* The ogr provider from the GDAL library supports a `wide variety of formats <https://gdal.org/en/latest/drivers/vector/index.html>`_, 
+  also called drivers in GDAL speak. 
+  Examples are Geopackage, Flatgeobuf, Geojson and also The-One-We-Shall-Not-Name.
+  For single-file formats the filepath usually suffices as uri.
+  For geopackages or dxf, a pipe separated suffix allows to specify the layername to load.
 
-  * for Shapefile:
+  * for Geopackage:
 
     .. testcode:: loadlayer
 
-       vlayer = QgsVectorLayer("testdata/airports.shp", "layer_name_you_like", "ogr")
-       QgsProject.instance().addMapLayer(vlayer)
+      uri = "testdata/data/data.gpkg|layername=airports"
+      vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
+      QgsProject.instance().addMapLayer(vlayer)
 
   * for dxf (note the internal options in data source uri):
 
     .. testcode:: loadlayer
 
-       uri = "testdata/sample.dxf|layername=entities|geometrytype=Polygon"
-       vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
-       QgsProject.instance().addMapLayer(vlayer)
+      uri = "testdata/sample.dxf|layername=entities|geometrytype=Polygon"
+      vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
+      QgsProject.instance().addMapLayer(vlayer)
 
 .. index::
    pair: Loading; PostGIS layers
@@ -227,13 +209,8 @@ providers:
 
   .. testcode:: loadlayer
 
-      uri = "https://demo.mapserver.org/cgi-bin/wfs?service=WFS&version=2.0.0&request=GetFeature&typename=ms:cities"
+      uri = "https://demo.mapserver.org/cgi-bin/wfs?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&SRSNAME=EPSG:4326&TYPENAME=ms:cities"
       vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
-
-  .. .. testoutput:: loadlayer
-     :hide:
-
-     (2): Using non-preferred coordinate operation between EPSG:2964 and EPSG:4326. Using +proj=pipeline +step +proj=unitconvert +xy_in=us-ft +xy_out=m +step +inv +proj=aea +lat_0=50 +lon_0=-154 +lat_1=55 +lat_2=65 +x_0=0 +y_0=0 +ellps=clrk66 +step +proj=push +v_3 +step +proj=cart +ellps=clrk66 +step +proj=helmert +x=-5 +y=135 +z=172 +step +inv +proj=cart +ellps=WGS84 +step +proj=pop +v_3 +step +proj=unitconvert +xy_in=rad +xy_out=deg, preferred +proj=pipeline +step +proj=unitconvert +xy_in=us-ft +xy_out=m +step +inv +proj=aea +lat_0=50 +lon_0=-154 +lat_1=55 +lat_2=65 +x_0=0 +y_0=0 +ellps=clrk66 +step +proj=hgridshift +grids=us_noaa_alaska.tif +step +proj=unitconvert +xy_in=rad +xy_out=deg.
 
   The uri can be created using the standard ``urllib`` library:
 

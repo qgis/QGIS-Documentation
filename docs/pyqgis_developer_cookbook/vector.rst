@@ -73,18 +73,25 @@ by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a
 
 .. testcode:: vectors
 
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    vlayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
     for field in vlayer.fields():
         print(field.name(), field.typeName())
 
 
 .. testoutput:: vectors
 
-    ID Integer64
-    fk_region Integer64
-    ELEV Real
-    NAME String
-    USE String
+    fid Integer64
+    id Integer64
+    scalerank Integer64
+    featurecla String
+    type String
+    name String
+    abbrev String
+    location String
+    gps_code String
+    iata_code String
+    wikipedia String
+    natlscale Real
 
 The :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>` and
 :meth:`mapTipTemplate() <qgis.core.QgsMapLayer.mapTipTemplate>` methods provide
@@ -96,13 +103,13 @@ methods you can easily get both:
 
 .. testcode:: vectors
 
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    vlayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
     print(vlayer.displayField())
 
 
 .. testoutput:: vectors
 
-    NAME
+    name
 
 .. note:: If you change the ``Display Name`` from a field to an expression, you have to
    use :meth:`displayExpression() <qgis.core.QgsVectorLayer.displayExpression>`
@@ -703,7 +710,7 @@ field:
 
 .. testcode:: vectors
 
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    vlayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
     feat = QgsVectorLayerUtils.createFeature(vlayer)
 
 
@@ -712,7 +719,7 @@ you to quickly get the values of a field or expression:
 
 .. testcode:: vectors
 
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    vlayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
     # select only the first feature to make the output shorter
     vlayer.selectByIds([1])
     val = QgsVectorLayerUtils.getValues(vlayer, "NAME", selectedOnly=True)
@@ -720,7 +727,7 @@ you to quickly get the values of a field or expression:
 
 .. testoutput:: vectors
 
-    (['AMBLER'], True)
+    (['Sahnewal'], True)
 
 
 .. index:: Vector layers; Creating
@@ -1230,7 +1237,7 @@ arrangement)
 
   from qgis.PyQt import QtGui
 
-  myVectorLayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+  myVectorLayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
   myTargetField = 'ELEV'
   myRangeList = []
   myOpacity = 1
