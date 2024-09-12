@@ -152,17 +152,19 @@ Allow HTML Formatting
 .....................
 
 With :guilabel:`Allow HTML Formatting` enabled, you need to provide the HTML code in the :guilabel:`Value` field.
+Use whitespaces instead of tabs for any kind of indentation.
 The expression is parsed and any supported HTML tag overrides its corresponding setting in the labels properties.
-They also combine well with other background, shadow, buffer... properties of labels.
+It is impossible to list every supported HTML tag and CSS property. 
+Be courageous and explore!
 
-Several CSS properties are supported:
+Supported CSS properties include:
 
-* Font properties (``color``, ``font-family``, ``font-size``, ``font-weight``, ``font-style`` and ``word-spacing``)
-* Underline, strikethrough and overline through ``text-decoration``
-* Some properties such as ``vertical-align: super`` or ``vertical-align: sub``
-  are also available in any other HTML element
+* Font properties (``color``, ``font-family``, ``font-size``, ``font-weight``, ``font-style``, ``word-spacing``). 
+  Note that ``word-spacing`` will always use unit px.
+* Text decorations such as underline, strikethrough and overline (``text-decoration``)
+* Text alignment (``vertical-align``)
 
-Notable tags include superscript and subscript, where the text will be vertically :sup:`super` or 
+Supported tags include superscript and subscript, where the text will be vertically :sup:`super` or 
 :sub:`sub` aligned and automatically sized to 2/3 of the parent font size.
 You can also set a fixed font size for the superscript/subscript
 by including css rules, e.g.:
@@ -188,12 +190,6 @@ Below an example of a HTML-based expression and rendering
     :align: center
 
     Labeling with HTML formatting enabled
- 
-Note:
-
-* It is impossible to list every supported HTML tag and CSS property. Be courageous and explore!
-* Use whitespaces instead of tabs for any kind of indentation
-* CSS property ``word-spacing`` will always use unit px
 
 .. _labels_formatting:
 
