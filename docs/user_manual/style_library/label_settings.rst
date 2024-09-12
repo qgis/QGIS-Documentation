@@ -191,7 +191,7 @@ Below an example of a HTML-based expression and rendering
  
 Note:
 
-* It is impossible to list every supported HTML tag and CSS propery. Be courageous and explore!
+* It is impossible to list every supported HTML tag and CSS property. Be courageous and explore!
 * Use whitespaces instead of tabs for any kind of indentation
 * CSS property ``word-spacing`` will always use unit px
 
