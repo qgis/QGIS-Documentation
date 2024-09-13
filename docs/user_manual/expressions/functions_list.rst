@@ -1158,6 +1158,14 @@ To use these variables in an expression, they should be preceded by the
    "layer_id", "The ID of current layer"
    "layer_ids", "The IDs of all the map layers in the current project as a list"
    "layer_name", "The name of current layer"
+   "layer_vertical_crs", "The Identifier for the vertical coordinate reference system
+   of the layer (e.g., 'EPSG:5703')"
+   "layer_vertical_crs_definition", "The full definition of the vertical Coordinate
+   reference system of the layer"
+   "layer_vertical_crs_description", "The name of the vertical Coordinate reference
+   system of the layer"
+   "layer_vertical_crs_wkt", "The WKT definition of the vertical
+   Coordinate reference system of the current layer"
    "layers", "All the map layers in the current project as a list"
    "layout_dpi", "The composition resolution (DPI)"
    "layout_name", "The layout name"
