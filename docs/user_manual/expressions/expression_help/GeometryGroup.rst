@@ -1477,6 +1477,54 @@ Returns the point interpolated by a specified distance along a linestring geomet
 
 .. end_line_interpolate_point_section
 
+.. _expression_function_GeometryGroup_line_interpolate_point_by_m:
+
+line_interpolate_point_by_m
+...........................
+
+Returns the point interpolated by a matching M value along a linestring geometry.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - line_interpolate_point_by_m(geometry, m, [use_3d_distance=false])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a linestring geometry
+       * **m** - an M value
+       * **use_3d_distance** - controls whether 2D or 3D distances between vertices should be used during interpolation (this option is only considered for lines with z values)
+   * - Examples
+     - * ``geom_to_wkt(line_interpolate_point_by_m(geom_from_wkt('LineStringM(0 0 0, 10 10 10)'), m:=5))`` → 'Point (5 5)'
+
+
+.. end_line_interpolate_point_by_m_section
+
+.. _expression_function_GeometryGroup_line_locate_m:
+
+line_locate_m
+.............
+
+Returns the distance along a linestring corresponding to the first matching interpolated M value.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - line_locate_m(geometry, m, [use_3d_distance=false])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry** - a linestring geometry
+       * **m** - an M value
+       * **use_3d_distance** - controls whether 2D or 3D distances between vertices should be used during interpolation (this option is only considered for lines with z values)
+   * - Examples
+     - * ``line_locate_m(geometry:=geom_from_wkt('LineStringM(0 0 0, 10 10 10)'),m:=5)`` → 7.07106
+
+
+.. end_line_locate_m_section
+
 .. _expression_function_GeometryGroup_line_locate_point:
 
 line_locate_point
