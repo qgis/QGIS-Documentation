@@ -156,22 +156,38 @@ Use whitespaces instead of tabs for any kind of indentation.
 The expression is parsed and any supported HTML tag overrides its corresponding setting in the labels properties.
 An exhaustive list of the supported subset of HTML tags and CSS properties can be found `here <https://doc.qt.io/qt-5/richtext-html-subset.html>`_.
 
+Examples of supported HTML tags:
 
-Supported CSS properties include:
+* Text formatting, such as italic or bold, e.g.:
 
-* Font properties (``color``, ``font-family``, ``font-size``, ``font-weight``, ``font-style``, ``word-spacing``). 
-  Note that ``word-spacing`` will always use unit px.
-* Text decorations such as underline, strikethrough and overline (``text-decoration``)
+  .. code:: html
+
+    <i>QGIS</i> <b>rocks!</b>
+
+* Superscript and subscript, where the text will be vertically :sup:`super` or 
+  :sub:`sub` aligned and automatically sized to 2/3 of the parent font size.
+  You can also set a fixed font size for the superscript/subscript
+  by including css rules, e.g.:
+
+  .. code:: html
+
+    <sup style="font-size:33pt">my superscript text</sup>
+
+Examples of supported CSS properties:
+
+* Font properties (``color``, ``font-family``, ``font-size``, ``font-weight``, ``font-style``, ``word-spacing``).
+  Note that ``word-spacing`` will always use unit points.
+* Text decorations such as underline, overline and line-through (``text-decoration``)
 * Text alignment (``vertical-align``)
 
-Supported tags include superscript and subscript, where the text will be vertically :sup:`super` or 
-:sub:`sub` aligned and automatically sized to 2/3 of the parent font size.
-You can also set a fixed font size for the superscript/subscript
-by including css rules, e.g.:
+CSS properties can be set on HTML tags with the style attribute.
+The HTML tag span does not apply any formatting to text by itself and is ideal if you just want to apply CSS styling.
+A CSS property name and its value are separated by a colon (``:``). 
+Multiple CSS properties are separated by semicolon (``;``), e.g.:
 
 .. code:: html
 
-  <sup style="font-size:33pt">my superscript text</sup>
+  <span style="text-decoration:underline;color:blue;word-spacing:20">I will be displayed as blue underlined text with increased space between words</span>
 
 Below an example of a HTML-based expression and rendering
 (applies different colors and underline to the same label):
