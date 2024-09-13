@@ -2140,8 +2140,7 @@ by the :ref:`elevation profile <label_elevation_profile_view>` tool.
    Project Elevation tab
 
 * :guilabel:`Vertical Reference System`: If the CRS of your project is compound one (including a Z dimension),
-* :guilabel:`Vertical Reference System`: If the CRS of your project is compound one (including a Z dimension),
-   then the vertical CRS for the project will be the vertical component of the project CRS.
+  then the vertical CRS used for the project will be the vertical component of the project CRS.
   If your project CRS is horizontal, then you can select a specific vertical CRS by clicking on the |setProjection| :sup:`Select CRS`.
 * :guilabel:`Elevation Range`: helps you define the :guilabel:`Lower` and :guilabel:`Upper` limits
   for the elevation controller in the project.
