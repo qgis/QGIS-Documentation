@@ -172,9 +172,17 @@ Parameters
        Default: 0
      - Type of the new field. You can choose between:
        
-       * 0 --- Integer
-       * 1 --- Float
-       * 2 --- String
+       * 0 --- Integer (32 bit)
+       * 1 --- Decimal (double)
+       * 2 --- Text (string)
+       * 3 --- Boolean
+       * 4 --- Date
+       * 5 --- Time
+       * 6 --- Date & Time
+       * 7 --- Binary Object (BLOB)
+       * 8 --- String List
+       * 9 --- Integer List
+       * 10 --- Decimal (double) List
        
    * - **Field length**
      - ``FIELD_LENGTH``
@@ -461,9 +469,17 @@ Parameters
        Default: 0
      - Type of the new field. One of:
        
-       * 0 --- Integer
-       * 1 --- Float
-       * 2 --- String
+       * 0 --- Integer (32 bit)
+       * 1 --- Decimal (double)
+       * 2 --- Text (string)
+       * 3 --- Boolean
+       * 4 --- Date
+       * 5 --- Time
+       * 6 --- Date & Time
+       * 7 --- Binary Object (BLOB)
+       * 8 --- String List
+       * 9 --- Integer List
+       * 10 --- Decimal (double) List
        
    * - **Field length**
      - ``FIELD_LENGTH``
@@ -794,10 +810,17 @@ Parameters
        Default: 0
      - The type of the field.  One of:
        
-       * 0 --- Float
-       * 1 --- Integer
-       * 2 --- String
+       * 0 --- Decimal (double)
+       * 1 --- Integer (32 bit)
+       * 2 --- Text (string)
        * 3 --- Date
+       * 4 --- Time
+       * 5 --- Date & Time
+       * 6 --- Boolean
+       * 7 --- Binary Object (BLOB)
+       * 8 --- String List
+       * 9 --- Integer List
+       * 10 --- Decimal (double) List
        
    * - **Output field width**
      - ``FIELD_LENGTH``
