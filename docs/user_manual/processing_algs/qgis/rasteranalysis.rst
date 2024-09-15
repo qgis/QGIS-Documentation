@@ -2611,7 +2611,8 @@ Outputs
        * *value*: pixel value
        * *count*: count of pixels with this value
        * *m2* or *deg2* or *ft2* or ... : total area of pixels with this value.
-         The column name depends on the area unit of the layer's CRS.
+         The column name depends on the area unit of the layer's CRS
+         and the calculation is done in that unit.
 
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
