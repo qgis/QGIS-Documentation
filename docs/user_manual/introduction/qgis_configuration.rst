@@ -2139,7 +2139,9 @@ by the :ref:`elevation profile <label_elevation_profile_view>` tool.
 
    Project Elevation tab
 
-* :guilabel:`Vertical Reference System`
+* :guilabel:`Vertical Reference System`: If the CRS of your project is compound one (including a Z dimension),
+  then the vertical CRS used for the project will be the vertical component of the project CRS.
+  If your project CRS is horizontal, then you can select a specific vertical CRS by clicking on the |setProjection| :sup:`Select CRS`.
 * :guilabel:`Elevation Range`: helps you define the :guilabel:`Lower` and :guilabel:`Upper` limits
   for the elevation controller in the project.
 
@@ -2802,6 +2804,8 @@ in the QGIS user profile.
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |sensor| image:: /static/common/sensor.png
+   :width: 1.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |settings| image:: /static/common/settings.png
    :width: 1.5em
