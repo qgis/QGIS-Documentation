@@ -2511,8 +2511,8 @@ Python code
 
 Raster layer unique values report
 ---------------------------------
-Returns the count and the area, expressed in the area unit of the layer's CRS, of
-each unique value in a given raster layer.
+Returns the count and area of each unique value in a given raster layer.
+The calculation of the area is done in the area unit of the layer's CRS.
 
 Parameters
 ..........
