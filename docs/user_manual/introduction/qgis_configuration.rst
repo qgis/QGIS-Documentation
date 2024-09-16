@@ -2805,6 +2805,8 @@ in the QGIS user profile.
    :width: 2.5em
 .. |sensor| image:: /static/common/sensor.png
    :width: 1.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
 .. |settings| image:: /static/common/settings.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
