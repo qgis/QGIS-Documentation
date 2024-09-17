@@ -6,7 +6,6 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# marcobra <marcobra.ubuntu@gmail.com>, 2024
 # Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
 # 
 #, fuzzy
@@ -14,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-15 06:58+0000\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
@@ -27,12 +26,13 @@ msgstr ""
 
 #: ../../<rst_prolog>:5
 msgid ""
-"Translation is a community effort `you can join "
-"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. This page is currently translated at |translation progress|."
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
 msgstr ""
-"La traduzione è uno sforzo comunitario a cui puoi unirti. Questa pagina è "
-"attualmente tradotta al |translation progress|."
+"unireLa traduzione è uno sforzo comunitario :ref:`you can join "
+"<translation_guidelines>`. Questa pagina è attualmente tradotta al "
+"|translation progress|."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:14
 msgid "Using Vector Layers"
@@ -354,6 +354,20 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:410
 msgid "Add Features"
 msgstr "Aggiungi Elementi"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:412
+msgid ""
+"Create some :class:`QgsFeature <qgis.core.QgsFeature>` instances and pass a "
+"list of them to the provider :class:`QgsVectorDataProvider "
+"<qgis.core.QgsVectorDataProvider>` ``addFeatures()`` method. It will return "
+"two values: result (:const:`True` or :const:`False`) and list of added "
+"features (their ID is set by the data store)."
+msgstr ""
+"Creare alcune istanze :class:`QgsFeature <qgis.core.QgsFeature>` e passarne "
+"un elenco al metodo :class:`QgsVectorDataProvider "
+"<qgis.core.QgsVectorDataProvider>` ``addFeatures()`` del provider. Esso "
+"restituirà due valori: il risultato (:const:`True` o :const:`False`) e "
+"l'elenco degli elementi aggiunti (il loro ID è impostato dal data store)."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:417
 msgid ""
@@ -765,6 +779,26 @@ msgstr "Creare Layer vettoriali"
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:729
 msgid "There are several ways to generate a vector layer dataset:"
 msgstr "Ci sono diversi modi per generare un dataset di layer vettoriali:"
+
+#: ../../docs/pyqgis_developer_cookbook/vector.rst:731
+msgid ""
+"the :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>` class: A "
+"convenient class for writing vector files to disk, using either a static "
+"call to :meth:`writeAsVectorFormatV3() "
+"<qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` which saves the whole"
+" vector layer or creating an instance of the class and issue calls to "
+"inherited :meth:`addFeature() <qgis.core.QgsFeatureSink.addFeature>`. This "
+"class supports all the vector formats that GDAL supports (GeoPackage, "
+"Shapefile, GeoJSON, KML and others)."
+msgstr ""
+"the :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>` class: A "
+"convenient class for writing vector files to disk, using either a static "
+"call to :meth:`writeAsVectorFormatV3() "
+"<qgis.core.QgsVectorFileWriter.writeAsVectorFormatV3>` which saves the whole"
+" vector layer or creating an instance of the class and issue calls to "
+"inherited :meth:`addFeature() <qgis.core.QgsFeatureSink.addFeature>`. This "
+"class supports all the vector formats that GDAL supports (GeoPackage, "
+"Shapefile, GeoJSON, KML and others)."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:739
 msgid ""
