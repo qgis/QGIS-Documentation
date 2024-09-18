@@ -14,26 +14,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 11:43+0000\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2024\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
-"Translation is a community effort `you can join "
-"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. This page is currently translated at |translation progress|."
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
 msgstr ""
-"Übersetzen ist eine Gemeinschaftsleistung - `Sie können mitmachen "
-"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. Diese Seite ist aktuell zu |translation progress| übersetzt."
+"Übersetzen ist eine Gemeinschaftsleistung :ref:`Sie können mitmachen "
+"<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
+" übersetzt."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:5
 msgid "The Symbol Selector"
@@ -1460,3 +1460,446 @@ msgstr ""
 "überlappende Marker aufweisen. (Im Gegensatz zur zufälligen Markerfüllung, "
 "bei der die Punkte immer völlig willkürlich platziert werden... was manchmal"
 " zu visuellen Punkthäufungen oder unerwünschten leeren Bereichen führt)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:605
+msgid ""
+"**Random marker fill**: fills the polygon with a :ref:`marker symbol "
+"<vector_marker_symbols>` placed at random locations within the polygon "
+"boundary. You can set:"
+msgstr ""
+"**Zufällige Markierungsfüllung**: füllt das Polygon mit einem "
+":ref:`Markierungssymbol <vector_marker_symbols> `, das an zufälligen Stellen"
+" innerhalb der Polygongrenze platziert wird. Sie können einstellen:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:609
+msgid ""
+":guilabel:`Count method`: whether the number of marker symbols to render is "
+"considered as an absolute count or density-based"
+msgstr ""
+":guilabel:`Zählmethode`: ob die Anzahl der darzustellenden "
+"Markierungssymbole als absolute Anzahl oder dichtebasiert betrachtet wird"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:611
+msgid ":guilabel:`Point count`: the number of marker symbols to render,"
+msgstr ""
+":guilabel:`Punktanzahl`: die Anzahl der darzustellenden Markierungssymbole,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:612
+msgid ""
+"an optional random number :guilabel:`seed`, to give consistent placement"
+msgstr ""
+"eine optionale Zufallszahl :guilabel:`Saat`, um eine einheitliche "
+"Platzierung zu gewährleisten"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:613
+msgid ""
+":guilabel:`Density area`: in case of density-based count method, ensures the"
+" fill density of markers remains the same on different scale / zoom levels "
+"of markers whenever maps are refreshed (also allows random placement to play"
+" nice with QGIS server and tile-based rendering)"
+msgstr ""
+":guilabel:`Flächendichte`: stellt im Falle der dichtebasierten Zählmethode "
+"sicher, dass die Fülldichte der Marker auf verschiedenen "
+"Skalierungs-/Zoomstufen der Marker gleich bleibt, wenn die Karten "
+"aktualisiert werden (ermöglicht auch eine zufällige Platzierung, um mit dem "
+"QGIS-Server und dem kachelbasierten Rendering zusammenzuarbeiten)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:617
+msgid ""
+":guilabel:`Clip markers to polygon boundary`: whether markers rendered near "
+"the edges of polygons should be clipped to the polygon boundary or not"
+msgstr ""
+":guilabel:`Markierungen durch Polygon zuschneiden`: legt fest, ob "
+"Markierungen, die in der Nähe der Kanten von Polygonen gerendert werden, an "
+"der Polygongrenze abgeschnitten werden sollen oder nicht"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:620
+msgid ""
+"**Raster image fill**: fills the polygon with tiles from a raster image "
+"(:file:`PNG` :file:`JPG`, :file:`BMP` ...). The image can be a file on the "
+"disk, a remote URL or an embedded file encoded as a string (:ref:`more "
+"details <embedded_file_selector>`). Options include (data defined) opacity, "
+"image width, coordinate mode (object or viewport), rotation and offset. The "
+"image width can be set using any of the :ref:`common units <unit_selector>` "
+"or as a percentage of the original size."
+msgstr ""
+"**Rasterbildfüllung**: füllt das Polygon mit Kacheln aus einem Rasterbild "
+"(:file:`PNG` :file:`JPG`, :file:`BMP` ...). Das Bild kann eine Datei auf der"
+" Festplatte, eine entfernte URL oder eine eingebettete Datei sein, die als "
+"String kodiert ist (:ref:`mehr Details s. <embedded_file_selector>`). "
+"Folgende Optionen stehen zur Verfügung: Bildbreite, Koordinatenmodus (Objekt"
+" oder Ansichtsfenster), Deckkraft, Drehung und Versatz. Die Bildbreite kann "
+"in einer :ref:`Einheiten <unit_selector> ` oder als Prozentsatz der "
+"Originalgröße angegeben werden."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:626
+msgid ""
+"**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>` of a "
+"given size (:guilabel:`Texture width`)."
+msgstr ""
+"**SVG-Füllung**: füllt das Polygon unter Verwendung einer :ref:`SVG-"
+"Markierung <svg_marker>` in einer bestimmbaren Größe "
+"(:guilabel:`Texturbreite`)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:628
+msgid ""
+"**Shapeburst fill**: buffers a gradient fill, where a gradient is drawn from"
+" the boundary of a polygon towards the polygon's centre. Configurable "
+"parameters include distance from the boundary to shade, use of color ramps "
+"or simple two color gradients, optional blurring of the fill and offsets."
+msgstr ""
+"**Shapeburst-Füllung**: puffert eine Gradientenfüllung, bei der ein Gradient"
+" vom Rand eines Polygons zur Mitte des Polygons hin gezeichnet wird. Zu den "
+"konfigurierbaren Parametern gehören der Abstand vom Rand zur Schattierung, "
+"die Verwendung von Farbrampen oder einfachen, zweifarbigen Farbverläufen, "
+"die Verwischstärke der Füllung und ein Versatz."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:633
+msgid ""
+"**Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to "
+"represent the polygon boundary. The settings for the outline arrow are the "
+"same as for arrow line symbols."
+msgstr ""
+"**Rand: Pfeil**: verwendet ein :ref:`Linien-Pfeilsymbol <arrow_symbol>` zur "
+"Darstellung der Polygonbegrenzung. Die Einstellungen für den Umrisspfeil "
+"sind die gleichen wie für Linien-Pfeilsymbol."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:636
+msgid ""
+"**Outline: Hashed line**: uses a :ref:`hash line symbol "
+"<hashed_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings). The other settings for the outline hashed line are "
+"the same as for hashed line symbols."
+msgstr ""
+"**Rand: Gehashte Linie**: verwendet einen Layer :ref:Gehashte-Linie-Symbol "
+"<hashed_line_symbol>` zur Darstellung der Polygonbegrenzung "
+"(:guilabel:`Ringe`), die nur die inneren Ringe, nur die äußeren Ringe oder "
+"alle Ringe sein können. Die anderen Einstellungen für die Umrisslinie sind "
+"die gleichen wie für Hash-Liniensymbole."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:640
+msgid ""
+"**Outline: Marker line**: uses a :ref:`marker line symbol "
+"<marker_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings). The other settings for the outline marker line are "
+"same as for marker line symbols."
+msgstr ""
+"**Rand: Markierungslinie**: verwendet ein :ref:`Markierungsliniensymbol "
+"<marker_line_symbol>`, um die Polygonbegrenzung darzustellen "
+"(:guilabel:`Ringe`), die nur die inneren Ringe, nur die äußeren Ringe oder "
+"alle Ringe sein können. Die anderen Einstellungen für die Umrisslinie sind "
+"dieselben wie für Markierungsliniensymbole."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:644
+msgid ""
+"**Outline: simple line**: uses a :ref:`simple line symbol "
+"<simple_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings). The :guilabel:`Draw line only inside polygon` option"
+" displays the polygon borders inside the polygon and can be useful to "
+"clearly represent adjacent polygon boundaries. The other settings for the "
+"outline simple line are the same as for simple line symbols."
+msgstr ""
+"**Rand: Einfache Linie**: verwendet ein :ref:`Einfaches Liniensymbol "
+"<simple_line_symbol>` zur Darstellung der Polygongrenzen "
+"(:guilabel:`Ringe`), die nur die inneren Ringe, nur die äußeren Ringe oder "
+"alle Ringe sein können. Die Option :guilabel:`Linie nur innerhalb des "
+"Polygons zeichnen` zeigt die Polygongrenzen innerhalb des Polygons an und "
+"kann nützlich sein, um angrenzende Polygongrenzen deutlich darzustellen. Die"
+" weiteren Einstellungen für die Umrisslinie sind die gleichen wie für "
+"einfache Liniensymbole."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:654
+msgid ""
+"When geometry type is polygon, you can choose to disable the automatic "
+"clipping of lines/polygons to the canvas extent. In some cases this clipping"
+" results in unfavourable symbology (e.g. centroid fills where the centroid "
+"must always be the actual feature's centroid)."
+msgstr ""
+"Wenn der Geometrietyp Polygon ist, können Sie das automatische Beschneiden "
+"von Linien/Polygonen auf der Kartenansicht deaktivieren. Dies kann hilfreich"
+" sein, da in einigen Fällen dieses Beschneiden zu einer ungünstigen "
+"Symbologie führt (z. B. bei Schwerpunktfüllungen, bei denen der Schwerpunkt "
+"immer der Schwerpunkt des eigentlichen Objekts sein muss)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:662
+msgid "Parametrizable SVG"
+msgstr "Parametrisierbare SVG"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:664
+msgid ""
+"You have the possibility to change the colors of a :guilabel:`SVG marker`. "
+"You have to add the placeholders ``param(fill)`` for fill color, "
+"``param(fill-opacity)`` for fill opacity, ``param(outline)`` and "
+"``param(outline-opacity)`` for stroke color and opacity respectively, and "
+"``param(outline-width)`` for stroke width. These placeholders can optionally"
+" be followed by a default value, e.g.:"
+msgstr ""
+"Sie haben die Möglichkeit, die Farben eines :guilabel:`SVG-Markers` zu "
+"ändern. Sie müssen die Platzhalter ``param(fill)`` für die Farbe der "
+"Füllung, ``param(fill-opacity)`` für die Deckkraft der Füllung, "
+"``param(outline)`` und ``param(outline-opacity)`` für die Farbe bzw. "
+"Deckkraft der Kontur und ``param(outline-width)`` für die Breite der Kontur "
+"hinzufügen. Diese Platzhalter können optional von einem Standardwert gefolgt"
+" werden, z.B:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:677
+msgid ""
+"More generally, SVG can be freely parametrized using ``param(param_name)``. "
+"This param can either be used as an attribute value or a node text:"
+msgstr ""
+"Allgemeiner gesagt, kann SVG mit ``param(param_name)`` frei parametrisiert "
+"werden. Dieser Parameter kann entweder als Attributwert oder als Knotentext "
+"verwendet werden:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:687
+msgid ""
+"The parameters can then be defined as expressions in the :guilabel:`Dynamic "
+"SVG parameters` table."
+msgstr ""
+"Die Parameter können dann als Ausdrücke in der Tabelle :guilabel:`Dynamische"
+" SVG-Parameter` definiert werden."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:692
+msgid "Dynamic SVG parameters table"
+msgstr "Tabelle der dynamischen SVG-Parameter"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:696
+msgid ""
+"QGIS is looking for a complete SVG node. So if your parameter is within a "
+"more complex node, you need to inject the complete node with the expression."
+" For instance, ``transform=\"rotate(param(angle)\"`` will not work. Instead,"
+" you need to do ``transform=\"param(rotation)\"`` and ``rotation`` parameter"
+" will be defined with the expression ``'rotate(' || coalesce(my_field, 0) ||"
+" ')'``."
+msgstr ""
+"QGIS sucht nach einem vollständigen SVG-Knoten. Wenn Ihr Parameter also "
+"innerhalb eines komplexeren Knotens liegt, müssen Sie den kompletten Knoten "
+"mit dem Ausdruck injizieren. Zum Beispiel wird "
+"``transform=„rotate(param(angle)“`` nicht funktionieren. Stattdessen müssen "
+"Sie ``transform=„param(rotation)“`` verwenden und der Parameter ``rotation``"
+" wird mit dem Ausdruck ``'rotate(' || coalesce(my_field, 0) || ')'`` "
+"definiert."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:705
+msgid "The Geometry Generator"
+msgstr "Der Geometrie-Generator"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:707
+msgid ""
+"Available with all types of symbols, the :guilabel:`geometry generator` "
+"symbol layer allows to use :ref:`expression syntax <expression_builder>` to "
+"generate a geometry on the fly during the rendering process. The resulting "
+"geometry does not have to match with the original :guilabel:`Geometry type` "
+"and you can add several differently modified symbol layers on top of each "
+"other."
+msgstr ""
+"Der Symbol Layer :guilabel:`Geometriegenerator` ist für alle Symboltypen "
+"verfügbar und ermöglicht es, mit :ref:`Ausdrucksyntax <expression_builder>` "
+"während des Rendering-Prozesses eine Geometrie on the fly zu erzeugen. Die "
+"resultierende Geometrie muss nicht mit dem ursprünglichen "
+":guilabel:`Geometrietyp` übereinstimmen und Sie können mehrere "
+"unterschiedlich modifizierte Symbol Layer übereinander legen."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:713
+msgid ""
+"A :guilabel:`Units` property can be set: when the geometry generator symbol "
+"is not applied to a layer (e.g., it is used on a layout item), this allows "
+"more control over the generated output."
+msgstr ""
+"Eine :guilabel:`Einheit` kann gesetzt werden: Wenn das Geometrie-Generator-"
+"Symbol nicht auf einen Layer angewendet wird (z.B. auf ein Layout-Element), "
+"erlaubt dies eine bessere Kontrolle über die generierte Ausgabe."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:717
+msgid "Some examples:"
+msgstr "Einige Beispiele:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:720
+msgid "Render symbol as the centroid of a feature"
+msgstr "Symbol als Schwerpunkt eines Objekts rendern"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:726
+msgid ""
+"Visually overlap features within a 100 map units distance from a point "
+"feature, i.e generate a 100m buffer around the point"
+msgstr ""
+"Visuelle Überlappung von Objekten innerhalb eines Abstands von 100 "
+"Karteneinheiten zu einem Punkt-Objekt, d. h. Erzeugung eines Puffers von "
+"100m um den Punkt"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:733
+msgid ""
+"Create a radial effect of points surrounding the central feature point when "
+"used as a MultiPoint geometry generator"
+msgstr ""
+"Erzeugt einen Kreis von Punkt-Objekten, die das zentralen Punkt-Objekt "
+"umgeben, wenn es als MultiPoint-Geometriegenerator verwendet wird"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:751
+msgid ""
+"Create a radial effect of points surrounding the central feature point. The "
+"number of points varies based on a field."
+msgstr ""
+"Erzeugt einen Kreis von Punkt-Objekten, die das zentralen Punkt-Objekt "
+"umgeben. Die Anzahl der Punkte variiert je nach Feld."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:773
+msgid ""
+"Create a curved arrow line connecting features of two layers based on their "
+":ref:`relation <project_relations>`"
+msgstr ""
+"Erzeugt eine gekrümmte Pfeillinie, die Objekte zweier Layer auf der "
+"Grundlage ihrer :ref:`Beziehung <project_relations>` verbindet"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:811
+msgid "The Vector Field Marker"
+msgstr "Die Vektorfeld-Markierung"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:813
+msgid ""
+"The vector field marker is used to display vector field data such as earth "
+"deformation, tidal flows, and the like. It displays the vectors as lines "
+"(preferably arrows) that are scaled and oriented according to selected "
+"attributes of data points. It can only be used to render point data; line "
+"and polygon layers are not drawn by this symbology."
+msgstr ""
+"Der Vektorfeldmarker dient zur Darstellung von Vektorfelddaten wie "
+"Erdverformung, Gezeitenströmungen und dergleichen. Er zeigt die Vektoren als"
+" Linien (vorzugsweise Pfeile) an, die entsprechend den ausgewählten "
+"Attributen der Datenpunkte skaliert und ausgerichtet sind. Er kann nur zur "
+"Darstellung von Punktdaten verwendet werden; Linien- und Polygon-Layer "
+"werden von dieser Symbologie nicht gezeichnet."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:819
+msgid ""
+"The vector field is defined by attributes in the data, which can represent "
+"the field either by:"
+msgstr ""
+"Das Vektorfeld wird durch die Attribute in den Daten definiert, die das Feld"
+" darstellen können durch:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:822
+msgid "**cartesian** components (``x`` and ``y`` components of the field)"
+msgstr "**Kartesische** Komponenten (``x`` und ``y`` Komponenten des Feldes)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:823
+msgid ""
+"or **polar** coordinates: in this case, attributes define ``Length`` and "
+"``Angle``. The angle may be measured either clockwise from north, or "
+"Counterclockwise from east, and may be either in degrees or radians."
+msgstr ""
+"oder **polare** Koordinaten: In diesem Fall definieren die Attribute "
+"``Länge`` und ``Winkel``. Der Winkel kann entweder im Uhrzeigersinn von "
+"Norden oder gegen den Uhrzeigersinn von Osten aus gemessen werden und kann "
+"entweder in Grad oder Radiant angegeben werden."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:826
+msgid ""
+"or as **height only** data, which displays a vertical arrow scaled using an "
+"attribute of the data. This is appropriate for displaying the vertical "
+"component of deformation, for example."
+msgstr ""
+"oder als **Nur-Höhe**-Daten, die einen vertikalen Pfeil anzeigen, der anhand"
+" eines Attributs der Daten skaliert wird. Dies ist z. B. für die Anzeige der"
+" vertikalen Komponente der Verformung geeignet."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:830
+msgid ""
+"The magnitude of field can be scaled up or down to an appropriate size for "
+"viewing the field."
+msgstr ""
+"Die Größe des Feldes kann auf eine für die Betrachtung des Feldes geeignete "
+"Größe herauf- oder herabskaliert werden."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:838
+msgid "Animated marker"
+msgstr "Animierte Markierung"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:840
+msgid ""
+"Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,"
+" :file:`.MNG`, etc. animation file to represent points on your map. You can "
+"specify:"
+msgstr ""
+"Mit dem Symboltyp „Animierte Markierung“ können Sie eine :file:`.GIF`, "
+":file:`.WebP`, :file:`.MNG` usw. Animationsdatei verwenden, um Punkte auf "
+"Ihrer Karte darzustellen. Sie können angeben:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:844
+msgid ":guilabel:`File` path,"
+msgstr ":guilabel:`Datei`-Pfad,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:845
+msgid ""
+":guilabel:`Frame rate`: number of steps that are shown per second, "
+"indicating how fast the animation is played,"
+msgstr ""
+":guilabel:`Bildrate`: Anzahl der Schritte, die pro Sekunde angezeigt werden,"
+" was angibt, wie schnell die Animation abgespielt wird,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:847
+msgid ":guilabel:`Size` in any :ref:`supported unit <unit_selector>`,"
+msgstr ":guilabel:`Größe` in verschiedenen :ref:`Einheiten <unit_selector>`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:848
+msgid ":guilabel:`Opacity`,"
+msgstr ":guilabel:`Deckkraft`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:849
+msgid ":guilabel:`Rotation`,"
+msgstr ":guilabel:`Drehung`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:850
+msgid ""
+":guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions from the "
+"marker position,"
+msgstr ""
+":guilabel:`Versatz` in :guilabel:`x` und :guilabel:`y` Richtung von der "
+"Markerposition aus,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:852
+msgid ":guilabel:`Anchor point`"
+msgstr ":guilabel:`Ankerpunkt`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:854
+msgid "There are two ways to handle animated symbols:"
+msgstr "Es gibt zwei Möglichkeiten, mit animierten Symbolen zu arbeiten:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:856
+msgid ""
+"**When your map is not configured as an animation** (i.e. it's a standard "
+"QGIS project without animations), the frame for the animated markers will be"
+" determined solely by the current timestamp."
+msgstr ""
+"**Wenn Ihre Karte nicht als Animation** konfiguriert ist (d.h. es handelt "
+"sich um ein Standard-QGIS-Projekt ohne Animationen), wird der Rahmen für die"
+" animierten Marker ausschließlich durch den aktuellen Zeitstempel bestimmt."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:866
+msgid "Animated marker when map is not configured as animation"
+msgstr ""
+"Animierte Markierung, wenn die Karte nicht als Animation konfiguriert ist"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:868
+msgid ""
+"**When your map is** :ref:`configured as an animation <maptimecontrol>`, the"
+" animated markers will sync with the animation's timeline. This means that "
+"animated markers will pause when the animation is paused, progress with the "
+"animation, and so forth. The map will also be redrawn according to the frame"
+" rate established for temporal animation. This mode is also applied when "
+"exporting an animation using the temporal controller."
+msgstr ""
+"**Wenn Ihre Karte** :ref:`als Animation <maptimecontrol>`konfiguriert ist, "
+"werden die animierten Markierungen mit der Zeitachse der Animation "
+"synchronisiert. Das bedeutet, dass die animierten Marker pausieren, wenn die"
+" Animation pausiert, mit der Animation fortschreiten usw. Die Karte wird "
+"außerdem entsprechend der für die zeitliche Animation festgelegten Bildrate "
+"neu gezeichnet. Dieser Modus wird auch beim Exportieren einer Animation mit "
+"dem zeitlichen Controller angewendet."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:881
+msgid "Animated marker when map is configured as animation"
+msgstr "Animierte Markierung, wenn die Karte als Animation konfiguriert ist"
