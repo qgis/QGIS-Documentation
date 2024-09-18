@@ -14,26 +14,48 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2024\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
-"Translation is a community effort `you can join "
-"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. This page is currently translated at |translation progress|."
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
 msgstr ""
-"Übersetzen ist eine Gemeinschaftsleistung - Sie können mitmachen "
-"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. Diese Seite ist aktuell zu  |translation progress| übersetzt."
+"Übersetzen ist eine Gemeinschaftsleistung :ref:`Sie können mitmachen "
+"<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
+" übersetzt."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:5
+msgid "Creating 3D Symbols"
+msgstr "3D-Symbole erstellen"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:12
+msgid ""
+"The :guilabel:`Style Manager` helps you create and store 3D symbols for "
+"every geometry type to render in the :ref:`3D map view <label_3dmapview>`."
+msgstr ""
+"Die :guilabel:`Stilverwaltung` hilft Ihnen bei der Erstellung und "
+"Speicherung von 3D-Symbolen für jeden Geometrietyp zur Darstellung in der "
+":ref:`3D-Kartenansicht <label_3dmapview>`."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:15
+msgid ""
+"As of the other items, enable the |3d| :guilabel:`3D Symbols` tab and expand"
+" the |symbologyAdd| button menu to create:"
+msgstr ""
+"Aktivieren Sie wie bei den anderen Elementen den Reiter |3d| :guilabel:`3D "
+"Symbols` und erweitern Sie das Menü der Schaltfläche |symbologyAdd|, um sie "
+"zu erstellen:"
 
 #: ../../docs/user_manual/style_library/3d_symbols.rst:200
 msgid "3d"
@@ -43,10 +65,422 @@ msgstr "3d"
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:18
+msgid ":ref:`3D point symbols <3d_pointlayers>`"
+msgstr ":ref:`3D Punkt-Symbole <3d_pointlayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:19
+msgid ":ref:`3D line symbols <3d_linelayers>`"
+msgstr ":ref:`3D Linien-Symbole<3d_linelayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:20
+msgid ":ref:`3D polygon symbols <3d_polygonlayers>`"
+msgstr ":ref:`3D Polygon-Symbole <3d_polygonlayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:26
+msgid "Point Layers"
+msgstr "3D Punkt-Symbole"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:33
+msgid "Properties of a 3D point symbol"
+msgstr "Eigenschaften eines 3D-Punktsymbols"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:35
+msgid ""
+"You can define different types of 3D :guilabel:`Shape` to use for point "
+"symbols. They are mainly defined by their dimensions whose unit refers to "
+"the CRS of the project. Available types are:"
+msgstr ""
+"Sie können verschiedene Arten von 3D :guilabel:`Form` für die Verwendung von"
+" Punktsymbolen definieren. Sie werden hauptsächlich durch ihre Abmessungen "
+"definiert, deren Einheit sich auf das KBS des Projekts bezieht. Verfügbare "
+"Typen sind:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:39
+msgid ":guilabel:`Sphere` defined by a :guilabel:`Radius`"
+msgstr ":guilabel:`Sphäre` definiert durch einen :guilabel:`Radius`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:40
+msgid ""
+":guilabel:`Cylinder` defined by a :guilabel:`Radius` and :guilabel:`Length`"
+msgstr ""
+":guilabel:`Zylinder` definiert durch :guilabel:`Radius` and "
+":guilabel:`Länge`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:41
+msgid ":guilabel:`Cube` defined by a :guilabel:`Size`"
+msgstr ":guilabel:`Würfel` definiert durch eine :guilabel:`Größe`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:42
+msgid ""
+":guilabel:`Cone` defined by a :guilabel:`Top radius`, a :guilabel:`Bottom "
+"radius` and a :guilabel:`Length`"
+msgstr ""
+":guilabel:`Kegel` definiert durch :guilabel:`Radius oben`, :guilabel:`Radius"
+" unten` und eine :guilabel:`Länge`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:44
+msgid ":guilabel:`Plane` defined by a :guilabel:`Size`"
+msgstr ":guilabel:`Ebene` definiert durch eine :guilabel:`Größe`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:45
+msgid ""
+":guilabel:`Torus` defined by a :guilabel:`Radius` and a :guilabel:`Minor "
+"radius`"
+msgstr ""
+":guilabel:`Ring` definiert durch einen :guilabel:`Radius` und einen "
+":guilabel:`Minimalen Radius`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:46
+msgid ""
+":guilabel:`3D Model`, using a 3D model file: supported formats include "
+"wavefront :file:`.obj`, :file:`.glTF` and :file:`.fbx`. Models can be a file"
+" on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. Community-created models are shared on the QGIS "
+"Hub at https://plugins.qgis.org/wavefronts."
+msgstr ""
+":guilabel:`3D-Modell`, unter Verwendung einer 3D-Modelldatei: Unterstützte "
+"Formate sind wavefront :file:`.obj`, :file:`.glTF` und :file:`.fbx`. Modelle"
+" können eine Datei auf der Festplatte, eine Remote-URL oder :ref:`im Projekt"
+" eingebettet sein <embedded_file_selector>`. Von der Gemeinschaft erstellte "
+"Modelle werden auf dem QGIS Hub unter https://plugins.qgis.org/wavefronts "
+"zur Verfügung gestellt."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:51
+msgid ""
+":guilabel:`Billboard`, defined by the :guilabel:`Billboard height` and the "
+":guilabel:`Billboard symbol` (usually based on a :ref:`marker symbol "
+"<vector_marker_symbols>`). The symbol will have a stable size. Convenient "
+"for visualizing 3D point clouds Shapes."
+msgstr ""
+":guilabel:`Billboard`, definiert durch die :guilabel:`Billboard-Höhe` und "
+"das :guilabel:`Billboard-Symbol` (normalerweise basierend auf einem "
+":ref:`Markersymbol <vector_marker_symbols>`). Das Symbol wird eine stabile "
+"Größe haben. Praktisch für die Visualisierung von 3D-Punktwolken Shapes."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:55
+msgid ""
+"The :guilabel:`Altitude clamping` can be set to :guilabel:`Absolute`, "
+":guilabel:`Relative` or :guilabel:`Terrain`. The :guilabel:`Absolute` "
+"setting can be used when height values of the 3d vectors are provided as "
+"absolute measures from 0. :guilabel:`Relative` and :guilabel:`Terrain` add "
+"given elevation values to the underlying terrain elevation."
+msgstr ""
+"Die :guilabel:`Höhenwinkelbegrenzung` kann auf :guilabel:`Absolut`, "
+":guilabel:`Relativ` oder :guilabel:`Gelände` eingestellt werden. Die "
+"Einstellung :guilabel:`Absolut` kann verwendet werden, wenn die Höhenwerte "
+"der 3D-Vektoren als absolute Maße von 0 aus angegeben werden. "
+":guilabel:`Relativ` und :guilabel:`Terrain` addieren die angegebenen "
+"Höhenwerte zur darunter liegenden Geländehöhe."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:60
+#: ../../docs/user_manual/style_library/3d_symbols.rst:91
+#: ../../docs/user_manual/style_library/3d_symbols.rst:136
+msgid "The :ref:`shading <shading_texture>` properties can be defined."
+msgstr ""
+"Die :ref:`Schatten <shading_texture>`-Eigenschaften können definiert werden."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:61
+msgid ""
+"Under the :guilabel:`Transformations` frame, you can apply affine "
+"transformation to the symbol:"
+msgstr ""
+"Im Rahmen :guilabel:`Transformationen` können Sie affine Transformationen "
+"auf das Symbol anwenden:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:64
+msgid ":guilabel:`Translation` to move objects in x, y and z axis."
+msgstr ""
+":guilabel:`Verschiebung`, um Objekte in der x-, y- und z-Achse zu "
+"verschieben."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:65
+msgid ":guilabel:`Scale` to resize the 3D shapes"
+msgstr ":guilabel:`Maßstab` zur Größenänderung der 3D-Formen"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:66
+msgid ":guilabel:`Rotation` around the x-, y- and z-axis."
+msgstr ":guilabel:`Rotation` um die x-, y- und z-Achse."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:72
+msgid "Line layers"
+msgstr "3D Linien-Symbole"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:79
+msgid "Properties of a 3D line symbol"
+msgstr "Eigenschaften eines 3D-Liniensymbols"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:81
+msgid ""
+"Beneath the :guilabel:`Width` and :guilabel:`Height` settings you can define"
+" the :guilabel:`Extrusion` of the vector lines. If the lines do not have "
+"z-values, you can define the 3d volumes with this setting."
+msgstr ""
+"Neben den Einstellungen :guilabel:`Breite` und :guilabel:`Höhe` können Sie "
+"die :guilabel:`Extrusion` der Vektorlinien definieren. Wenn die Linien keine"
+" z-Werte haben, können Sie mit dieser Einstellung das 3D-Volumen definieren."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:84
+msgid ""
+"With the :guilabel:`Altitude clamping` you define the position of the 3D "
+"lines relative to the underlying terrain surface, if you have included "
+"raster elevation data or other 3D vectors."
+msgstr ""
+"Mit der :guilabel:`Höhenwinkelbegrenzung` definieren Sie die Position der "
+"3D-Linien relativ zur darunter liegenden Geländeoberfläche, wenn Sie "
+"Rasterhöhenangaben oder andere 3D-Vektoren eingebunden haben."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:87
+msgid ""
+"The :guilabel:`Altitude binding` defines how the feature is clamped to the "
+"terrain. Either every :guilabel:`Vertex` of the feature will be clamped to "
+"the terrain or this will be done by the :guilabel:`Centroid`."
+msgstr ""
+"Die :guilabel:`Höhenwinkelbindung` legt fest, wie das Objekt an das Terrain "
+"angepasst wird. Entweder wird jeder :guilabel:`Stützpunkt` des Objekts an "
+"das Terrain angepasst oder dies geschieht über den :guilabel:`Zentroid`."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:90
+msgid "It is possible to |checkbox|:guilabel:`Render as simple 3D lines`."
+msgstr ""
+"Die Option |checkbox|:guilabel:`Als einfache 3D-Linien anzeigen` kann "
+"aktiviert werden."
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:202
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:96
+msgid "Polygon Layers"
+msgstr "3D Polygon-Symbole"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:103
+msgid "Properties of a 3D polygon symbol"
+msgstr "Eigenschaften eines 3D-Polygonsymbols"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:105
+msgid ""
+"As for the other ones, :guilabel:`Height` can be defined in CRS units. You "
+"can also use the |dataDefine| button to overwrite the value with a custom "
+"expression, a variable or an entry of the attribute table"
+msgstr ""
+"Wie bei den anderen Symbolen kann auch hier die :guilabel:`Höhe` in KBS-"
+"Einheiten definiert werden. Sie können auch die Schaltfläche |dataDefine| "
+"verwenden, um den Wert mit einem benutzerdefinierten Ausdruck, einer "
+"Variablen oder einem Eintrag in der Attributtabelle zu überschreiben."
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:204
 msgid "dataDefine"
 msgstr "dataDefine"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:109
+msgid ""
+"Again, :guilabel:`Extrusion` is possible for missing z-values. Also for the "
+"extrusion you can use the |dataDefine| button in order to use the values of "
+"the vector layer and have different results for each polygon:"
+msgstr ""
+"Auch hier ist :guilabel:`Extrusion` für fehlende z-Werte möglich. Auch für "
+"die Extrusion können Sie die Schaltfläche |dataDefine| verwenden, um die "
+"Werte des Vector Layers zu verwenden und für jedes Polygon unterschiedliche "
+"Ergebnisse zu erhalten:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:116
+msgid "Data Defined Extrusion"
+msgstr "Datendefinierte Extrusion"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:118
+msgid ""
+"The :guilabel:`Altitude clamping`, :guilabel:`Altitude binding` can be "
+"defined as explained above."
+msgstr ""
+"Die :guilabel:`Höhenwinkelbegrenzung` und die :guilabel:`Höhenbindung` "
+"können wie oben erläutert definiert werden."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:120
+msgid "The :guilabel:`Culling mode` to apply to the symbol; it can be:"
+msgstr ""
+"Der :guilabel:`Culling-Modus` kann auf das Symbol angewendet werden; die "
+"Optionen sind:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:122
+msgid ""
+":guilabel:`No Culling`: this can help to avoid seemingly missing surfaces "
+"when polygonZ/multipatch data do not have consistent ordering of vertices "
+"(e.g. all clock-wise or counter clock-wise)"
+msgstr ""
+":guilabel:`Kein Culling`: dies kann helfen, scheinbar fehlende Flächen zu "
+"vermeiden, wenn die PolygonZ/Multipatch-Daten keine konsistente Anordnung "
+"der Scheitelpunkte aufweisen (z.B. alle im oder gegen den Uhrzeigersinn)"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:125
+msgid ":guilabel:`Front`"
+msgstr ":guilabel:`Vorderseite`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:126
+msgid "or :guilabel:`Back`"
+msgstr ":guilabel:`Rückseite`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:127
+msgid ""
+"The :guilabel:`Rendered facade` determines the faces to display. Possible "
+"values are :guilabel:`No facades`, :guilabel:`Walls`, :guilabel:`Roofs`, or "
+":guilabel:`Walls and roofs`"
+msgstr ""
+"Die Option :guilabel:`Fassade darstellen` bestimmt die anzuzeigenden "
+"Flächen. Mögliche Werte sind :guilabel:`Keine Fassaden`, :guilabel:`Wände`, "
+":guilabel:`Dächer`, oder :guilabel:`Wände und Dächer`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:130
+msgid ""
+"|checkbox| :guilabel:`Add back faces`: for each triangle, creates both front"
+" and back face with correct normals - at the expense of increased number of "
+"vertex data. This option can be used to fix shading issues (e.g., due to "
+"data with inconsistent order of vertices)."
+msgstr ""
+"|checkbox| :guilabel:`Rückseiten hinzufügen`: erzeugt für jedes Dreieck "
+"sowohl Vorder- als auch Rückseiten mit korrekten Normalen - auf Kosten einer"
+" erhöhten Anzahl von Scheitelpunktdaten. Diese Option kann verwendet werden,"
+" um Schattierungsprobleme zu beheben (z.B. aufgrund von Daten mit "
+"inkonsistenter Reihenfolge der Scheitelpunkte)."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:134
+msgid ""
+"|checkbox| :guilabel:`Invert normals (experimental)`: can be useful for "
+"fixing clockwise/counter-clockwise face vertex orders"
+msgstr ""
+"|checkbox| :guilabel:`Normalen invertieren (experimentell)`: kann nützlich "
+"sein, um die Reihenfolge der Eckpunkte von Flächen im oder gegen den "
+"Uhrzeigersinn zu korrigieren"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:137
+msgid ""
+"Display of the |checkbox| :guilabel:`Edges` of the symbols can be enabled "
+"and assigned a :guilabel:`Width` and :guilabel:`Color`."
+msgstr ""
+"Die Anzeige der |checkbox| :guilabel:`Kanten` der Symbole kann aktiviert und"
+" mit einer :guilabel:`Breite` und :guilabel:`Farbe` versehen werden."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:140
+msgid "**Combination for best rendering of 3D data**"
+msgstr "**Kombination für beste Wiedergabe von 3D-Daten**"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:142
+msgid ""
+":guilabel:`Culling mode`, :guilabel:`Add back faces` and :guilabel:`Invert "
+"normals` are all meant to fix the look of 3D data if it does not look right."
+" Typically when loading some data, it is best to first try ``culling "
+"mode=back`` and ``add back faces=disabled`` - it is the most efficient. If "
+"the rendering does not look correct, try ``add back faces=enabled`` and keep"
+" ``culling mode=no culling``. Other combinations are more advanced and "
+"useful only in some scenarios based on how mixed up is the input dataset."
+msgstr ""
+":guilabel:`Culling-Modus`, :guilabel:`Rückseiten hinzufügen` und "
+":guilabel:`Normale invertieren` sind dazu gedacht, das Aussehen von 3D-Daten"
+" zu korrigieren, wenn sie nicht richtig dargestellt werden. Normalerweise "
+"ist es beim Laden von Daten am besten, zuerst ``Culling-Modus = Rückseite`` "
+"und ``Rückseiten hinzufügen = deaktiviert`` zu probieren - das ist am "
+"effizientesten. Wenn das Rendering nicht korrekt aussieht, versuchen Sie "
+"``Rückseiten hinzufügen = aktiviert`` und behalten Sie ``Culling-Modus = "
+"kein Culling`` bei. Andere Kombinationen sind fortgeschrittener und nur in "
+"bestimmten Szenarien nützlich, je nachdem, wie fehlerhaft der "
+"Eingabedatensatz ist."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:153
+msgid "Shading the texture"
+msgstr "Schattierung der Textur"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:155
+msgid ""
+"Shading helps you reveal 3d details of objects which may otherwise be hidden"
+" due to the scene's lighting. Ultimately, it's an easier material to work "
+"with as you don't need to worry about setting up appropriate scene lighting "
+"in order to visualise features."
+msgstr ""
+"Die Schattierung hilft Ihnen, 3D-Details von Objekten sichtbar zu machen, "
+"die sonst durch die Beleuchtung der Szene verdeckt werden könnten. "
+"Letztendlich ist es ein einfacheres Hilfsmittel, mit dem Sie arbeiten "
+"können, da Sie sich nicht um die richtige Beleuchtung der Szene kümmern "
+"müssen, um Objekte zu visualisieren."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:160
+msgid ""
+"Various techniques of shading are used in QGIS and their availability "
+"depends on the geometry type of the symbol:"
+msgstr ""
+"In QGIS werden verschiedene Schattierungstechniken verwendet, deren "
+"Verfügbarkeit vom Geometrietyp des Symbols abhängt:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:163
+msgid ""
+":guilabel:`Realistic (Phong)`: describes the way a surface reflects light as"
+" a combination of the :guilabel:`Diffuse` reflection of rough surfaces with "
+"the :guilabel:`Specular` reflection of shiny surfaces "
+"(:guilabel:`Shininess`). It also includes an :guilabel:`Ambient` option to "
+"account for the small amount of light that is scattered about the entire "
+"scene. Use the :guilabel:`Opacity` slider to render semi-transparent objects"
+" in 3D. Read more at "
+"https://en.wikipedia.org/wiki/Phong_reflection_model#Description"
+msgstr ""
+":guilabel:`Realistisch (Phong)`: beschreibt die Art und Weise, wie eine "
+"Oberfläche Licht reflektiert, als eine Kombination aus der "
+":guilabel:`Diffus`-Reflexion rauer Oberflächen und der "
+":guilabel:`Spiegelung`-Reflexion glänzender Oberflächen (:guilabel:`Glanz`)."
+" Außerdem gibt es die Option :guilabel:`Stimmung`, um den geringen Anteil "
+"des Lichts zu berücksichtigen, der über die gesamte Szene gestreut wird. "
+"Verwenden Sie den Schieberegler :guilabel:`Deckkraft`, um halbtransparente "
+"Objekte in 3D darzustellen. Lesen Sie mehr unter "
+"https://en.wikipedia.org/wiki/Phong_reflection_model#Description"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:170
+msgid ""
+":guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic "
+"(Phong)` except that an image is used as :guilabel:`Diffuse Texture`. The "
+"image can be a file on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. The :guilabel:`Texture scale` and "
+":guilabel:`Texture rotation` are required. Use the :guilabel:`Opacity` "
+"slider to render semi-transparent objects in 3D."
+msgstr ""
+":guilabel:`Realistisch texturiert (Phong)`: wie :guilabel:`Realistisch "
+"(Phong)` mit dem Unterschied, dass ein Bild als :guilabel:`Diffuse Textur` "
+"verwendet wird. Das Bild kann eine Datei auf der Festplatte, eine Remote-URL"
+" oder :ref:`im Projekt eingebettet sein <embedded_file_selector>`. Die "
+"Angaben :guilabel:`Texturmaßstab` und :guilabel:`Texturdrehung` sind "
+"erforderlich. Verwenden Sie den Schieberegler :guilabel:`Deckkraft`, um "
+"halbtransparente Objekte in 3D darzustellen."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:176
+msgid ""
+":guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-"
+"tones so that edge lines and highlights remain visually prominent. Along "
+"with the :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` "
+"options, you need to provide a :guilabel:`Warm` color (for surface facing "
+"toward the light) and a :guilabel:`Cool` color (for the ones facing away). "
+"Also, the relative contributions to the cool and warm colors by the diffuse "
+"color are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties "
+"respectively. See also https://en.wikipedia.org/wiki/Gooch_shading"
+msgstr ""
+":guilabel:`CAD (Gooch)`: Diese Technik ermöglicht es, dass die Schattierung "
+"nur in den Mitteltönen auftritt, sodass Kantenlinien und Glanzlichter "
+"visuell hervorgehoben bleiben. Zusammen mit den Optionen :guilabel:`Diffus`,"
+" :guilabel:`Spiegelung`, :guilabel:`Glanz` müssen Sie eine "
+":guilabel:`Warm`-Farbe (für die dem Licht zugewandte Fläche) und eine "
+":guilabel:`Kalt`-Farbe (für die dem Licht abgewandte Fläche) angeben. "
+"Außerdem werden die relativen Beiträge der diffusen Farbe zu den kühlen und "
+"warmen Farben durch die Eigenschaften :guilabel:`Alpha` und :guilabel:`Beta`"
+" gesteuert. Siehe auch https://en.wikipedia.org/wiki/Gooch_shading"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:184
+msgid ":guilabel:`Embedded Textures` with 3D models shape"
+msgstr ":guilabel:`Eingebettete Texturen` mit 3D-Form-Modellen"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:188
+msgid "Application example"
+msgstr "Anwendungsbeispiel"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:190
+msgid ""
+"To go through the settings explained above you can have a look at "
+"https://app.merginmaps.com/projects/saber/luxembourg/tree."
+msgstr ""
+"Die oben erläuterten Einstellungen können Sie unter "
+"https://app.merginmaps.com/projects/saber/luxembourg/tree einsehen."
