@@ -340,7 +340,7 @@ reprojected to a different coordinate reference system (CRS) using the
 :menuselection:`Layer --> Save As...` menu or right-clicking on the
 layer in the :guilabel:`Layers panel` and selecting:
 
-* :menuselection:`Export --> Save As...` for raster layers
+* :menuselection:`Export --> Save As...` for raster and point cloud layers
 * :menuselection:`Export --> Save Features As...` or
   :menuselection:`Export --> Save Selected Features As...` for vector
   layers.
@@ -494,6 +494,26 @@ decide whether to:
 
 For formats like ESRI Shapefile, MapInfo .tab, feature append is also available.
 
+Point Cloud specific parameters
+-------------------------------
+
+Similar to raster and vector layers, point cloud layers can be saved in a different
+format and/or reprojected to a different coordinate reference system (CRS).
+This allows you to export a point cloud layer to vector or point cloud formats.
+Current supported formats are: Temporary scratch (memory layer), GeoPackage, ESRI Shapefile,
+DXF and LAS/LAZ point cloud.
+In addition to the common parameters listed above, exporting point cloud layers includes the following options:
+
+* :guilabel:`Filter by Polygon Layer`: Allows you to filter the point cloud data based on a polygon layer.
+* :guilabel:`Elevation Range`: Enables filtering of the point cloud data based on a specified Z range.
+* :guilabel:`Limit number of points`: Provides an option to limit the number of points exported from the point cloud layer.
+
+.. _figure_saveasvector_pointcloud:
+
+.. figure:: img/saveasvector_pointcloud.png
+   :align: center
+
+   Saving a point cloud layer as a new layer
 
 .. index:: DXF Export
 .. _create_dxf_files:
