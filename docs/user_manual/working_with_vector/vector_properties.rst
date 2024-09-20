@@ -896,6 +896,12 @@ You can specify the heatmap :guilabel:`Radius` in millimeters, points, pixels, m
 inches, choose and edit a :guilabel:`Color ramp` for the heatmap style and use a slider for
 selecting a trade-off between render speed and quality. You can also define a
 :guilabel:`Maximum value` limit and :guilabel:`Weight points by` using a field or an expression.
+
+Use |dataDefine| :sup:`Data defined override` to dynamically control :guilabel:`Radius` and
+:guilabel:`Maximum value` based on the attributes of your data.
+For example, the radius of a heatmap point could be determined by its population attribute,
+or the maximum value could be based on a temporal range.
+
 When adding or removing a feature the heatmap renderer updates the heatmap style
 automatically. The :guilabel:`Color ramp` will be shown as a legend bar and
 in the :guilabel:`Legend settings` you can set the :guilabel:`Labels` for the :guilabel:`Maximum`
