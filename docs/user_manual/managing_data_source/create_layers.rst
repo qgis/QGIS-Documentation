@@ -335,7 +335,7 @@ algorithm <processing_algs>`.
 Creating new layers from an existing layer
 ==========================================
 
-Both raster and vector layers can be saved in a different format and/or
+Layers (raster, vector and point cloud) can be saved in a different format and/or
 reprojected to a different coordinate reference system (CRS) using the
 :menuselection:`Layer --> Save As...` menu or right-clicking on the
 layer in the :guilabel:`Layers panel` and selecting:
@@ -364,7 +364,7 @@ Among the common parameters for raster and vector are:
   using the :ref:`extent_selector <extent_selector>` widget
 * :guilabel:`Add saved file to map`: to add the new layer to the canvas
 
-However, some parameters are specific to raster and vector formats:
+However, some parameters are specific to certain formats:
 
 Raster specific parameters
 --------------------------

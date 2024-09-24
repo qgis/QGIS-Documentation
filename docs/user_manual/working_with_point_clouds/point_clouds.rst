@@ -54,6 +54,9 @@ attribute table of point clouds in QGIS. However, the |identify|
 :ref:`Identify tool <identify>` supports point clouds, so you can display all
 attributes, even of a single data point.
 
+If you want to create a new layer, in the same or another supported format,
+from an existing point cloud layer, see :ref:`Creating new layers from an existing layer <general_saveas>`.
+
 
 .. _`point_clouds_properties`:
 
