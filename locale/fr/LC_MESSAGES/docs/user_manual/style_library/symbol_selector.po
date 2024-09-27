@@ -12,27 +12,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-08 11:43+0000\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
-"Translation is a community effort `you can join "
-"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. This page is currently translated at |translation progress|."
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
 msgstr ""
-"La traduction est le fruit d'un effort communautaire auquel `vous pouvez "
-"prendre part <https://qgis.org/fr/site/getinvolved/translate.html#becoming-"
-"a-translator>`_. Cette page est actuellement traduite à |translation "
-"progress|."
+"La traduction est le fruit d'un effort communautaire auquel :ref:`vous "
+"pouvez vous joindre <translation_guidelines>`. Cette page est actuellement "
+"traduite à |translation progress|."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:5
 msgid "The Symbol Selector"
@@ -607,6 +606,15 @@ msgstr "lockedGray"
 msgid "**Vector Field marker** (see :ref:`vector_field_marker`)"
 msgstr "**Marqueur vecteur** ( voir :ref:`vector_field_marker` )"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:254
+msgid ""
+"The symbol can also be set with :guilabel:`Dynamic SVG parameters`. See "
+":ref:`svg_symbol` section to parametrize an SVG symbol."
+msgstr ""
+"Le symbole peut être défini à l'aide des :guilabel:`Paramètres dynamiques de"
+" SVG`. Voir la section :ref:`svg_symbol` pour le paramétrage d'un symbole "
+"SVG."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:257
 msgid "SVG version requirements"
 msgstr "Exigences de version SVG"
@@ -744,6 +752,14 @@ msgstr ""
 msgid "refresh"
 msgstr "refresh"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:350
+msgid "Only available for the stroke option:"
+msgstr "Disponible seulement avec l'option de trait :"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:373
+msgid "Examples of interpolated lines"
+msgstr "Exemples de lignes interpoléées"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:377
 msgid ""
 "**Marker line**: repeats a :ref:`marker symbol <vector_marker_symbols>` over"
@@ -811,6 +827,10 @@ msgstr ":guilabel:`rotation de hachure`"
 msgid "Examples of hashed lines"
 msgstr "Exemples de lignes hachurées"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:451
+msgid "Examples of raster lines"
+msgstr "Exemples de lignes de raster"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:472
 msgid "Fill Symbols"
 msgstr "Symboles de remplissage"
@@ -853,6 +873,10 @@ msgstr ""
 #: ../../docs/user_manual/style_library/symbol_selector.rst:494
 msgid "You can:"
 msgstr "Vous pouvez :"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:496
+msgid ":guilabel:`Force placement of markers inside polygons`"
+msgstr ":guilabel:`Forcer le placement des marqueurs dans les polygones`"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:499
 msgid ""
@@ -911,6 +935,19 @@ msgstr "Le générateur de géométries"
 #: ../../docs/user_manual/style_library/symbol_selector.rst:717
 msgid "Some examples:"
 msgstr "Quelques exemples:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:720
+msgid "Render symbol as the centroid of a feature"
+msgstr "Afficher un symbole au centroïde d'une entité"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:726
+msgid ""
+"Visually overlap features within a 100 map units distance from a point "
+"feature, i.e generate a 100m buffer around the point"
+msgstr ""
+"Visualiser quelles entités sont à moins d'une certaine distance les unes des"
+" autres, par exemple à l'aide d'une zone tampon de 100m autour d'entités "
+"ponctuelles"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:811
 msgid "The Vector Field Marker"
@@ -974,8 +1011,50 @@ msgstr ""
 "L'amplitude du champ peut être augmentée ou réduite à une taille appropriée "
 "pour visualiser le champ."
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:838
+msgid "Animated marker"
+msgstr "Marqueur animé"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:840
+msgid ""
+"Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,"
+" :file:`.MNG`, etc. animation file to represent points on your map. You can "
+"specify:"
+msgstr ""
+"Le symbole de marqueur animé vous permet d'utiliser un fichier d'animation "
+"de type :file:`.GIF`, :file:`.WebP`, :file:`.MNG`, etc. pour représenter des"
+" points sur votre carte. Vous pouvez spécifier :"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:844
+msgid ":guilabel:`File` path,"
+msgstr "Chemin du :guilabel:`Fichier`,"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:847
 msgid ":guilabel:`Size` in any :ref:`supported unit <unit_selector>`,"
 msgstr ""
 "la :guilabel:`Taille` dans n'importe quelle :ref:`unité supportée "
 "<unit_selector>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:848
+msgid ":guilabel:`Opacity`,"
+msgstr ":guilabel:`Opacité`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:849
+msgid ":guilabel:`Rotation`,"
+msgstr ":guilabel:`Rotation`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:850
+msgid ""
+":guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions from the "
+"marker position,"
+msgstr ""
+":guilabel:`Décalage` en :guilabel:`x` et :guilabel:`y` à partir de la "
+"position du marqueur,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:852
+msgid ":guilabel:`Anchor point`"
+msgstr ":guilabel:`Point d'ancrage`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:854
+msgid "There are two ways to handle animated symbols:"
+msgstr "Il existe deux façons de gérer les symboles animés :"

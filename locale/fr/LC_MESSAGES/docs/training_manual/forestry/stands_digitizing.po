@@ -13,27 +13,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
-"Translation is a community effort `you can join "
-"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. This page is currently translated at |translation progress|."
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
 msgstr ""
-"La traduction est le fruit d'un effort communautaire auquel `vous pouvez "
-"prendre part <https://qgis.org/fr/site/getinvolved/translate.html#becoming-"
-"a-translator>`_. Cette page est actuellement traduite à |translation "
-"progress|."
+"La traduction est le fruit d'un effort communautaire auquel :ref:`vous "
+"pouvez vous joindre <translation_guidelines>`. Cette page est actuellement "
+"traduite à |translation progress|."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:2
 msgid "Lesson: Digitizing Forest Stands"
@@ -180,6 +179,13 @@ msgstr ""
 " sélection comme nouvelle couche et ensuite la sauvegarder séparément comme "
 "fichier image :"
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:70
+msgid ""
+"Copy (:kbd:`Ctrl+C` or :menuselection:`Edit --> Copy`) the selected pixels."
+msgstr ""
+"Copiez (:kbd:`Ctrl+C` ou :menuselection:`Éditer --> Copier`) les pixels "
+"sélectionnés."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:73
 msgid ""
 "Click the \"eye\" icon next to the original image layer to switch it off, so"
@@ -215,6 +221,23 @@ msgstr ""
 "Comme vous l'avez fait dans la leçon précédente, vous devez géoréférencer "
 "cette nouvelle image pour pouvoir l'utiliser avec le reste de vos données."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:96
+msgid ""
+"Note that you don't need to digitize the ground control points anymore "
+"because this image is basically the same image as the original map image, as"
+" far as the Georeferencer tool is concerned. Here are some things you should"
+" remember:"
+msgstr ""
+"A noter que vous n'avez plus besoin de numériser les points de contrôle car "
+"cette image est en fait la même image que l'image d'origine de la carte, "
+"dans la mesure où l'outil Géoréférenceur est concerné. Voici quelques "
+"éléments dont vous devriez vous rappeler :"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:100
+msgid "This image is also, of course, in ``KKJ / Finland zone 2`` CRS."
+msgstr ""
+"Cette image est aussi, évidemment, dans le SCR ``KKJ / Finland zone 2``."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:101
 msgid ""
 "You should use the ground control points you saved, :menuselection:`File -->"
@@ -228,11 +251,27 @@ msgid "Remember to review the :guilabel:`Transformation settings`."
 msgstr ""
 "Souvenez-vous de modifier les :guilabel:`Préférences de transformation`."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:104
+msgid ""
+"Name the output raster as :file:`rautjarvi_green_georef.tif` in the "
+":file:`digitizing` folder."
+msgstr ""
+"Nommez le raster de sortie :file:`rautjarvi_green_georef.tif` dans le "
+"dossier :file:`digitizing`."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:107
 msgid "Check that the new raster is fitting nicely with the original map."
 msgstr ""
 "Vérifiez que le nouveau raster se superpose parfaitement avec la carte "
 "d'origine."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:111
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Creating Supporting Points for "
+"Digitizing"
+msgstr ""
+":abbr:`★☆☆ (Niveau basique)` Pas à pas : Créer des points de référence pour "
+"la numérisation"
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:113
 msgid ""
@@ -308,6 +347,12 @@ msgstr ""
 " les utiliser. Vous pouvez maintenant utiliser ces points pour suivre les "
 "lignes d'origine plus facilement que sans eux."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:161
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Digitize the Forest Stands"
+msgstr ""
+":abbr:`★☆☆ (Niveau basique)` Pas à pas : Numériser les peuplements "
+"forestiers"
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:163
 msgid ""
 "Now you are ready to start with the actual digitizing work. You would start "
@@ -334,9 +379,45 @@ msgstr ""
 msgid "Go to :menuselection:`Project --> Snapping options...`"
 msgstr "Allez au menu :menuselection:`Projet --> Options d'accrochage...`"
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:186
+msgid ""
+"Press |snapping| :sup:`Enable Snapping` and select :guilabel:`Advanced "
+"Configuration`"
+msgstr ""
+"Cochez sur |snapping| :sup:`Activer l'accrochage` et sélectionnez "
+":guilabel:`Configuration avancée`"
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:424
 msgid "snapping"
 msgstr "snapping"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:187
+msgid ""
+"Check the :guilabel:`green_centroids` and :guilabel:`forest_stands` layers"
+msgstr ""
+"Cochez les couches :guilabel:`green_centroids` et :guilabel:`forest_stands`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:188
+msgid "Set :guilabel:`Type` for each layer to :guilabel:`Vertex`"
+msgstr "Ajustez chaque :guilabel:`Type` sur :guilabel:`Sommet`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:189
+msgid "Set :guilabel:`Tolerance` for each layer to ``10``"
+msgstr "Définissez la :guilabel:`Tolérance` à ``10`` pour chaque couche"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:190
+msgid "Set :guilabel:`Units` for each layer to :guilabel:`pixels`"
+msgstr ""
+"Sélectionnez les :guilabel:`pixels` comme :guilabel:`Unités` pour chaque "
+"couche"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:191
+msgid ""
+"Check |checkbox| :guilabel:`Avoid Overlap` for the :guilabel:`forest_stands`"
+" layer"
+msgstr ""
+"Cochez |checkbox| :guilabel:`Éviter les chevauchements` pour la couche "
+":guilabel:`forest_stands`"
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:192
 msgid "Press |topologicalEditing| :guilabel:`Topological editing`"
@@ -618,9 +699,30 @@ msgstr "Rendez-vous à l'onglet :guilabel:`Jointure`."
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:336
+msgid "Set the :guilabel:`Join` field to :guilabel:`ID`"
+msgstr "Indiquez :guilabel:`ID` pour le champ :guilabel:`Jointure`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:337
+msgid "Set the :guilabel:`Target` field to :guilabel:`ID`"
+msgstr "Indiquez :guilabel:`ID` pour le champ :guilabel:`Cible`"
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:338
 msgid "Click :guilabel:`OK` two times."
 msgstr "Cliquez sur :guilabel:`OK` deux fois."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:340
+msgid ""
+"The data from the text file should be now linked to your vector file. To see"
+" what has happened, select the ``forest_stands`` layer and use |openTable| "
+":sup:`Open Attribute Table`. You can see that all the attributes from the "
+"inventory data file are now linked to your digitized vector layer."
+msgstr ""
+"Les données du fichier texte devraient être maintenant liées à votre fichier"
+" vectoriel. Pour voir ce qu'il s'est passé, sélectionnez la couche "
+"``forest_stands`` et appuyez sur |openTable| :sup:`Ouvrir la table "
+"attributaire`. Vous pouvez voir que tous les attributs du fichier de données"
+" d'inventaire sont maintenant liées à votre couche vectorielle numérisée."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:418
 msgid "openTable"

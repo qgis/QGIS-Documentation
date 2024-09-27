@@ -13,27 +13,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-29 19:47+0000\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
-"Translation is a community effort `you can join "
-"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. This page is currently translated at |translation progress|."
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
 msgstr ""
-"La traduction est le fruit d'un effort communautaire auquel `vous pouvez "
-"prendre part <https://qgis.org/fr/site/getinvolved/translate.html#becoming-"
-"a-translator>`_. Cette page est actuellement traduite à |translation "
-"progress|."
+"La traduction est le fruit d'un effort communautaire auquel :ref:`vous "
+"pouvez vous joindre <translation_guidelines>`. Cette page est actuellement "
+"traduite à |translation progress|."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:5
 msgid "List of functions"
@@ -2973,6 +2972,14 @@ msgstr "``array_sort(array(3,2,1))`` → [ 1, 2, 3 ]"
 msgid "array_sum"
 msgstr "array_sum"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:451
+msgid ""
+"Returns the sum of arithmetic values in an array. Non numeric values in the "
+"array are ignored."
+msgstr ""
+"Renvoie la somme des valeurs arithmétiques d'une liste. Les valeurs non "
+"numériques de la liste sont ignorées."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:457
 msgid "array_sum(array)"
 msgstr "array_sum(array)"
@@ -4518,6 +4525,24 @@ msgstr "``to_date('29 juin, 2019','d MMMM, yyyy','fr')`` → 2019-06-29"
 msgid "to_datetime"
 msgstr "to_datetime"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:154
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:524
+msgid ""
+"Converts a string into a datetime object. An optional format string can be "
+"provided to parse the string; see `QDate::fromString "
+"<https://doc.qt.io/qt-5/qdate.html#fromString-2>`_, `QTime::fromString "
+"<https://doc.qt.io/qt-5/qtime.html#fromString-1>`_ or the documentation of "
+"the format_date function for additional documentation on the format. By "
+"default the current QGIS user locale is used."
+msgstr ""
+"Convertit une chaîne de caractères en objet datetime. Une chaîne de format "
+"optionnelle peut être fournie pour analyser la chaîne ; voir "
+"`QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_, "
+"`QTime::fromString <https://doc.qt.io/qt-5/qtime.html#fromString-1>`_  ou la"
+" fonction ref:`format_date <expression_function_Date_and_Time_format_date>` "
+"pour des informations additionnelles sur le format. Par défaut, QGIS utilise"
+" les paramètres de langue définis par l'utilisateur."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:160
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:530
 msgid "to_datetime(string, [format], [language])"
@@ -4535,10 +4560,32 @@ msgstr ""
 "**format** - format utilisé pour convertir la chaîne de caractères en date-"
 "heure"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:166
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:536
+msgid ""
+"**language** - language (lowercase, two- or three-letter, ISO 639 language "
+"code) used to convert the string into a datetime. By default the current "
+"QGIS user locale is used."
+msgstr ""
+"**language** - langue (minuscule, deux ou trois lettres, code de langue ISO "
+"639) utilisée pour convertir la chaîne de caractères en datetime. Par "
+"défaut, QGIS utilise les paramètres de langue définis par l'utilisateur."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:168
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:538
 msgid "``to_datetime('2012-05-04 12:50:00')`` → 2012-05-04T12:50:00"
 msgstr "``to_datetime('2012-05-04 12:50:00')`` → 2012-05-04T12:50:00"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:169
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:539
+msgid ""
+"``to_datetime('June 29, 2019 @ 12:34','MMMM d, yyyy @ HH:mm')`` → "
+"2019-06-29T12:34, if the current locale uses the name 'June' for the sixth "
+"month, otherwise an error occurs"
+msgstr ""
+"``to_datetime('Juin 29, 2019 @ 12:34','MMMM d, yyyy @ HH:mm')`` → "
+"2019-06-29T12:34, si 'Juin' est le terme utilisé pour définir le sixième "
+"mois dans la langue paramétrée dans QGIS. Sinon, une erreur se produit."
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:170
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:540
@@ -5385,6 +5432,19 @@ msgstr ""
 "Interprète comme un horaire AM/PM. *ap* correspondra à la fois à 'am' et "
 "'pm'."
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:202
+#: ../../docs/user_manual/expressions/expression_help/String.rst:81
+msgid ""
+"**language** - language (lowercase, two- or three-letter, `ISO 639 language "
+"code <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_) used to "
+"format the date into a custom string. By default the current QGIS user "
+"locale is used."
+msgstr ""
+"**language** - langue (minuscule, deux ou trois lettres, code de langue `ISO"
+" 639 <https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_) utilisée "
+"pour convertir la date en chaîne de caractères. Par défaut, QGIS utilise les"
+" paramètres de langue définis par l'utilisateur."
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:204
 #: ../../docs/user_manual/expressions/expression_help/String.rst:83
 msgid "``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'"
@@ -5394,6 +5454,15 @@ msgstr "``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:84
 msgid "``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'"
 msgstr "``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:206
+#: ../../docs/user_manual/expressions/expression_help/String.rst:85
+msgid ""
+"``format_date('2012-05-15','dddd')`` → 'Tuesday', if the current locale is "
+"an English variant"
+msgstr ""
+"``format_date('2012-05-15','dddd')`` → 'Mardi', si la langue paramétrée est "
+"dérivée du Français"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:207
 #: ../../docs/user_manual/expressions/expression_help/String.rst:86
@@ -5958,6 +6027,12 @@ msgstr "Équivaut à une valeur NULL."
 #: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:22
 msgid "``NULL`` → a NULL value"
 msgstr "``NULL`` → une valeur NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:24
+msgid "To test for NULL use an *IS NULL* or *IS NOT NULL* expression."
+msgstr ""
+"Pour tester les valeurs nulles, utilisez plutôt les expressions *IS NULL* ou"
+" *IS NOT NULL*."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:230
 msgid "Files and Paths Functions"
@@ -6660,7 +6735,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:195
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:385
 msgid "**geometry** - a geometry"
-msgstr "**geometry** - une geometrie"
+msgstr "**geometry** - une géométrie"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
 msgid "**delta_x** - x-axis translation"
@@ -6778,6 +6853,14 @@ msgid ""
 msgstr ""
 "apply_dash_pattern(geometry, pattern, [start_rule=no_rule], "
 "[end_rule=no_rule], [adjustment=both], [pattern_offset=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:83
+msgid ""
+"**geometry** - a geometry (accepts (multi)linestrings or (multi)polygons)."
+msgstr ""
+"**geometry** - une géometrie (accepte aussi bien les (multi)lignes que les "
+"(multi)polygones)."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:90
 msgid ""
@@ -7240,11 +7323,14 @@ msgstr "closest_point(geometry1, geometry2)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 msgid "**geometry1** - geometry to find closest point on"
-msgstr "**géométrie1** - géométrie pour trouver le point le plus proche sur"
+msgstr ""
+"**geometry1** - géométrie sur laquelle localiser le point le plus proche"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 msgid "**geometry2** - geometry to find closest point to"
-msgstr "**geometry2** - géométrie pour trouver le point le plus proche"
+msgstr ""
+"**geometry2** - géométrie vis-à-vis de laquelle il faut trouver le point le "
+"plus proche"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
 msgid ""
@@ -7263,8 +7349,7 @@ msgstr "collect_geometries"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
 msgid "Collects a set of geometries into a multi-part geometry object."
 msgstr ""
-"Rassemble un ensemble de géométries en un objet géométrique en plusieurs "
-"parties."
+"Rassemble un ensemble de géométries en un objet géométrique multipartie."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:167
@@ -7335,7 +7420,7 @@ msgstr "combine(geometry1, geometry2)"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:219
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:288
 msgid "**geometry1** - a geometry"
-msgstr "**geométry1** - une géométrie"
+msgstr "**geometry1** - une géométrie"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:79
@@ -7368,9 +7453,27 @@ msgstr ""
 msgid "concave_hull"
 msgstr "concave_hull"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
+msgid ""
+"Returns a possibly concave polygon that contains all the points in the "
+"geometry"
+msgstr ""
+"Renvoie un polygone concave qui contient tous les points de la géométrie"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
 msgid "concave_hull(geometry, target_percent, [allow_holes=False])"
 msgstr "concave_hull(geometry, target_percent, [allow_holes=False])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
+msgid ""
+"**allow_holes** - optional argument specifying whether to allow holes within"
+" the output geometry. Defaults to FALSE, set to TRUE to avoid including "
+"holes in the output geometry."
+msgstr ""
+"**allow_holes** - argument optionnel indiquant s'il faut permettre des trous"
+" à l'intérieur de la géométrie en sortie. La valeur par défaut est FALSE. "
+"Mettez-la à TRUE si vous ne souhaitez pas de trou dans la géométrie "
+"résultante."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
 msgid ""
@@ -7551,8 +7654,8 @@ msgid ""
 "Returns a geometry that represents that part of geometry1 that does not "
 "intersect with geometry2."
 msgstr ""
-"Renvoie une géométrie qui représente la partie de la géométrie1 qui ne "
-"recoupe pas la géométrie2."
+"Renvoie une géométrie qui représente la partie de la géométrie 1 qui ne "
+"recoupe pas la géométrie 2."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "difference(geometry1, geometry2)"
@@ -8853,10 +8956,10 @@ msgid ""
 "linestring. This function will return NULL if passed a geometry which is not"
 " a LineString/MultiLineString."
 msgstr ""
-"Retourne une géométrie LineString ou MultiLineString, où toutes les "
-"LineStrings connectées de la géométrie en entrée ont été fusionnées en une "
-"seule. Cette fonction retournera NULL si elle passe une géométrie qui n'est "
-"pas une LineString ou MultiLineString."
+"Retourne une géométrie (multi)ligne où toutes les lignes connectées de la "
+"géométrie en entrée ont été fusionnées en une seule. Cette fonction "
+"retournera NULL si on lui passe une géométrie qui n'est pas une LineString "
+"ou MultiLineString."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "line_merge(geometry)"
@@ -8864,7 +8967,7 @@ msgstr "line_merge(geometry)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 msgid "**geometry** - a LineString/MultiLineString geometry"
-msgstr "**geométry** - une géométrie LineString/MultiLineString"
+msgstr "**geometry** - une géométrie (multi)ligne"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid ""
@@ -8903,7 +9006,7 @@ msgstr "line_substring(geometry, start_distance, end_distance)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
 msgid "**geometry** - a linestring or curve geometry"
-msgstr "**geométry** - une géométrie en ligne ou en courbe"
+msgstr "**geometry** - une géométrie linéaire, droite ou courbe"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
 msgid "**start_distance** - distance to start of substring"
@@ -8933,6 +9036,10 @@ msgstr ""
 msgid "Further reading: :ref:`qgislinesubstring` algorithm"
 msgstr "Plus de détails : l'algorithme :ref:`qgislinesubstring`"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid "Returns the m (measure) value of a point geometry."
+msgstr "Renvoie la valeur m (mesure) d'une géométrie de type point."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "m(geometry)"
 msgstr "m(geometry)"
@@ -8950,9 +9057,27 @@ msgstr "``m( geom_from_wkt( 'POINTM(2 5 4)' ) )`` → 4"
 msgid "m_at"
 msgstr "m_at"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"Retrieves a m coordinate of the geometry, or NULL if the geometry has no m "
+"value."
+msgstr ""
+"Récupère la coordonnée m d'une géométrie, ou NULL si la géométrie n'a pas de"
+" valeur m."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "m_at(geometry, vertex)"
 msgstr "m_at(geometry, vertex)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:116
+msgid ""
+"**vertex** - index of the vertex of the geometry (indices start at 0; "
+"negative values apply from the last index, starting at -1)"
+msgstr ""
+"**vertex** - index du sommet de la géométrie (les indices commencent à 0; "
+"les valeurs négatives s'appliquent depuis le dernier sommet, à -1)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid ""
@@ -8977,7 +9102,7 @@ msgstr "m_max(geometry)"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:57
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:78
 msgid "**geometry** - a geometry containing m values"
-msgstr "**geométry** - une géométrie contenant des valeurs m"
+msgstr "**geometry** - une géométrie contenant des valeurs m"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
 msgid "``m_max( make_point_m( 0,0,1 ) )`` → 1"
@@ -9505,6 +9630,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:373
 msgid "make_valid"
 msgstr "make_valid"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:375
+msgid ""
+"Returns a valid geometry or an empty geometry if the geometry could not be "
+"made valid."
+msgstr ""
+"Renvoie une géométrie valide ou une géométrie vide si la géométrie n'a pas "
+"pu être rendue valide."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:381
 msgid "make_valid(geometry, [method=structure], [keep_collapsed=false])"

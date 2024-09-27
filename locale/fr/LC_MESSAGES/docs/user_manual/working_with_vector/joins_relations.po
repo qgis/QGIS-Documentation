@@ -13,31 +13,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2024\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
-"Translation is a community effort `you can join "
-"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
-"translator>`_. This page is currently translated at |translation progress|."
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
 msgstr ""
-"La traduction est le fruit d'un effort communautaire auquel `vous pouvez "
-"prendre part <https://qgis.org/fr/site/getinvolved/translate.html#becoming-"
-"a-translator>`_. Cette page est actuellement traduite à |translation "
-"progress|."
+"La traduction est le fruit d'un effort communautaire auquel :ref:`vous "
+"pouvez vous joindre <translation_guidelines>`. Cette page est actuellement "
+"traduite à |translation progress|."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:6
 msgid "Connecting and Editing Data Across Layers"
 msgstr "Connecter et modifier des données entre couches"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:13
+msgid ""
+"Ability to connect data from different layers is one of the duties of a GIS "
+"software. Such a connection can be based on the spatial relationship between"
+" the features, or on their shared attributes. QGIS provides tools to handle "
+"any of these associations, such as:"
+msgstr ""
+"La capacité à connecter des données de différentes couches est une des "
+"raisons d'être des logiciels SIG. Une telle connexion peut être basée sur la"
+" relation spatiale entre les entités, ou sur leurs attributs communs. QGIS "
+"dispose d'outils pour gérer chacune de ces situations, et notamment :"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:18
 msgid ""
@@ -58,9 +69,27 @@ msgstr ""
 "de Bases de données <dbmanager>` ou en tant que :ref:`couche virtuelle "
 "<vector_virtual_layers>`"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:23
+msgid ""
+":ref:`Joins properties <sec_joins>` or :ref:`relations settings "
+"<vector_relations>` that temporarily extend attributes of features in a "
+"given layer, with those of features in another layer based on some matching "
+"attribute(s)."
+msgstr ""
+":ref:`Les propriétés de jointure <sec_joins>` ou les :ref:`paramètres de "
+"relation <vector_relations>` qui, de manière temporaire, étendent les "
+"attributs des entités d'une couche, à l'aide d'attributs d'entités d'une "
+"autre couche sur la base d'attribut(s) en commun."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:37
 msgid "Joining features between two layers"
 msgstr "Joindre des entités de deux couches"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:44
+msgid "To create a join on a layer (identified below as ``target layer``):"
+msgstr ""
+"Pour créer une jointure sur une couche (que nous appellerons ci-après "
+"``couche cible``) :"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:46
 msgid ""
@@ -104,6 +133,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:61
 msgid "Join an attribute table to an existing vector layer"
 msgstr "Joindre une table attributaire à une couche vecteur existante"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:76
+msgid "QGIS provides some more options to tweak the join:"
+msgstr "QGIS dispose de quelque autres options pour ajuster la jointure :"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:78
 msgid ""
@@ -225,6 +258,11 @@ msgstr "Définir des relations entre plusieurs couches"
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
 msgid "relations"
 msgstr "relations"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:119
+msgid "|symbologyAdd| :guilabel:`Add relation` whose type can be:"
+msgstr ""
+"|symbologyAdd| :guilabel:`Ajouter une relation` dont le type peut être :"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:121
 msgid ":ref:`one to many relation <one_to_many_relation>`"
@@ -863,6 +901,19 @@ msgstr "L'objectif"
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
 msgid "Defining polymorphic relations"
 msgstr "Définir les relations polymorphiques"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:581
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``documents`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``referenced_fk``."
+msgstr ""
+"**Couche de référencement (enfant)** également considérée comme la couche "
+"enfant, est celle sur laquelle se trouve le champ clé étrangère. Dans notre "
+"cas, il s'agit de la couche ``documents``. Pour cette couche, vous devez "
+"ajouter un champ de référencement qui pointe vers l'autre couche, c'est donc"
+" le champ ``referenced_fk``."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:626
 msgid "The example above uses the following database schema:"
