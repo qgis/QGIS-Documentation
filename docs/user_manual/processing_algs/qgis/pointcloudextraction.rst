@@ -243,7 +243,7 @@ Python code
 
 .. _pdalfilter:
 
-filter
+Filter
 ------
 
 Extracts point from the input point cloud which match PDAL expression and/or are inside of a cropping rectangle.
