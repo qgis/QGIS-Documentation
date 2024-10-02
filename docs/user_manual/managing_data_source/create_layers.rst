@@ -508,9 +508,9 @@ In addition to the common parameters listed above, exporting point cloud layers 
 * :guilabel:`Elevation Range`: Enables filtering of the point cloud data based on a specified Z range.
 * :guilabel:`Limit number of points`: Provides an option to limit the number of points exported from the point cloud layer.
 
-.. _figure_saveasvector_pointcloud:
+.. _figure_saveas_pointcloud:
 
-.. figure:: img/saveasvector_pointcloud.png
+.. figure:: img/saveas_pointcloud.png
    :align: center
 
    Saving a point cloud layer as a new layer
