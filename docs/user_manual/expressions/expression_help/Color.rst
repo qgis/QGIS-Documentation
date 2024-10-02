@@ -493,6 +493,26 @@ Returns a color from the project's color scheme.
 
 .. end_project_color_section
 
+.. _expression_function_Color_project_color_object:
+
+project_color_object
+....................
+
+Returns a color from the project's color scheme. Contrary to project_color which returns a color string representation, project_color_object returns a color object.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - project_color_object(name)
+   * - Arguments
+     - * **name** - a color name
+   * - Examples
+     - * ``project_color_object('Logo color')`` → RGBA: 0.08,0.55,0.20,1.00
+
+
+.. end_project_color_object_section
+
 .. _expression_function_Color_ramp_color:
 
 ramp_color
@@ -535,6 +555,49 @@ Returns a string representing a color from an expression-created ramp
 
 
 .. end_ramp_color_section
+
+.. _expression_function_Color_ramp_color_object:
+
+ramp_color_object
+.................
+
+Returns a color object from a color ramp. Contrary to ramp_color which returns a color string representation, ramp_color_object returns a color object.
+
+**Saved ramp variant**
+
+Returns a color object from a saved ramp
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - ramp_color_object(ramp_name, value)
+   * - Arguments
+     - * **ramp_name** - the name of the color ramp as a string, for example 'Spectral'
+       * **value** - the position on the ramp to select the color from as a real number between 0 and 1
+   * - Examples
+     - * ``ramp_color_object('Spectral',0.3)`` → RGBA: 0.99,0.75,0.45,1.00
+
+.. note:: The color ramps available vary between QGIS installations. This function may not give the expected results if you move your QGIS project between installations.
+
+
+**Expression-created ramp variant**
+
+Returns a color object from an expression-created ramp
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - ramp_color_object(ramp, value)
+   * - Arguments
+     - * **ramp** - the color ramp
+       * **value** - the position on the ramp to select the color from as a real number between 0 and 1
+   * - Examples
+     - * ``ramp_color_object(create_ramp(map(0,color_rgbf(0,0,0),1,color_rgbf(1,0,0))),1)`` → RGBA: 1.00,0.00,0.00,1.00
+
+
+.. end_ramp_color_object_section
 
 .. _expression_function_Color_set_color_part:
 
