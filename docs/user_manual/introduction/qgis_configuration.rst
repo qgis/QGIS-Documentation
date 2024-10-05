@@ -132,8 +132,9 @@ displayed at the bottom of the frame.
   version of QGIS`. You can always open projects created with older version of
   QGIS but once the project is saved, trying to open with older release may fail
   because of features not available in that version.
-* :guilabel:`Enable macros` |selectString|. This option was created to handle
-  macros that are written to perform an action on project events. You can
+* :guilabel:`Enable project's embedded Python code` |selectString|. This option
+  was created to handle macros that are written to perform an action on project
+  events, as well as custom Python functions to be used as expressions. You can
   choose between 'Never', 'Ask', 'For this session only' and
   'Always (not recommended)'.
 * :guilabel:`Default paths`: defines whether paths to files and layers used
