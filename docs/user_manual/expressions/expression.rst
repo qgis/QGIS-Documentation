@@ -336,20 +336,13 @@ To create a new function:
 
 #. Press the |symbologyAdd| :sup:`New File` button.
 #. Select where to store the new function. You can choose to save it either in a
-   Function file or in the current QGIS project file.
+   :guilabel:`Function file` or in :guilabel:`Project functions`.
 
-.. _figure_expression_function_add_function_file:
+   * If you select :guilabel:`Function file`, you need to enter a name for the Python :file:`.py` file,
+     which is based on a QGIS template file and is stored in the :file:`/python/expressions` folder
+     under the active :ref:`user profile <user_profiles>` directory.
 
-.. figure:: img/function_editor_add_function_file.png
-   :align: center
-
-   The Add Function File dialog
-
-   If you select Function file, you need to enter a name for the Python :file:`.py`
-   file, which is based on a QGIS template file and is stored in the :file:`/python/expressions`
-   folder under the active :ref:`user profile <user_profiles>` directory.
-
-   If you select Project functions, the new function is stored in the project file.
+   * If you select :guilabel:`Project functions`, the new function is stored in the project file.
 
    A new item is added in the left panel of the :guilabel:`Function Editor` tab.
 
@@ -366,15 +359,13 @@ To create a new function:
 
 Custom Python functions stored as Function files are stored under the user profile
 directory, meaning that at each QGIS startup, it will auto load all the functions
-defined with the current user profile. Be aware that new functions are only saved in
-the :file:`/python/expressions` folder and not in the project file.
-If you share a project that uses one of your custom functions you will need to also
-share the :file:`.py` file in the :file:`/python/expressions` folder.
+defined with the current user profile. Be aware that for sharing Python functions stored
+in Function files you need to share the :file:`.py` file in the :file:`/python/expressions` folder.
 
 On the other hand, custom Python functions stored as Project functions can be easily
 shared by sharing the project file where they were saved. When opening a project
-with project functions, QGIS loads them, ignores them, or asks the user before
-loading them, depending on the :ref:`General settings <general_options>`.
+with project functions, QGIS can load or ignore them depending on whether
+:ref:`embedded Python code is enabled <load_project_code>` in General settings.
 
 To delete a custom function:
 

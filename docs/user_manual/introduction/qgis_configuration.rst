@@ -132,8 +132,10 @@ displayed at the bottom of the frame.
   version of QGIS`. You can always open projects created with older version of
   QGIS but once the project is saved, trying to open with older release may fail
   because of features not available in that version.
+.. _load_project_code:
+
 * :guilabel:`Enable project's embedded Python code` |selectString|. This option
-  was created to handle macros that are written to perform an action on project
+  handles execution of macros that are written to perform an action on project
   events, as well as custom Python functions to be used as expressions. You can
   choose between 'Never', 'Ask', 'For this session only' and
   'Always (not recommended)'.
