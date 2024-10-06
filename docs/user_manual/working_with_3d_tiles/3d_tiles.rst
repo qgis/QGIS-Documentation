@@ -19,7 +19,7 @@ and display 3D content, optimising performance by dynamically loading
 appropriate levels of detail. This technology is widely used in urban 
 planning, architecture, simulation, gaming, and virtual reality, providing
 a standardised and interoperable solution for visualising complex geographical
-data. Read :ref:`3d_tiles` for more details.
+data.
 
 
 .. _figure_3d_tiles_example:
@@ -33,11 +33,14 @@ data. Read :ref:`3d_tiles` for more details.
 Data Sources
 ============
 
-Support for 3D tiles:
+Currently, QGIS supports two formats of 3D tiles:
 
-* Remote source - ``http://example.com/tileset.json``
-* Local files - ``file:///path/to/tiles/tileset.json``
+* `Ceisum 3D tiles <https://cesium.com/why-cesium/3d-tiles/>`_,
+  used primarily for complex 3D models of buildings or whole cities.
+* `Quantized Mesh tiles <https://github.com/CesiumGS/quantized-mesh>`_,
+  used for terrain elevation data.
 
+See :ref:`3d_tiles` for instructions on how to add these data sources to QGIS.
 
 Using data from Cesium ion 
 --------------------------

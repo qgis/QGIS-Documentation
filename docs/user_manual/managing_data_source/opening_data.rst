@@ -1601,11 +1601,14 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
 .. index:: 3D Tiles services
 .. _3d_tiles:
 
-Using 3D tiles services
------------------------
+Using 3D tiled scene services
+------------------------------
 
-To load a 3D tiles into QGIS, use the |addTiledSceneLayer| :guilabel:`Scene` tab
-in the :guilabel:`Data Source Manager` dialog. 
+QGIS supports multiple formats of 3D tiled datasets, grouped together as "tiled
+scenes". These include Cesium 3D Tiles and Quantized Mesh tiles.
+
+To load a tiled scene dataset into QGIS, use the |addTiledSceneLayer|
+:guilabel:`Scene` tab in the :guilabel:`Data Source Manager` dialog.
 
 .. _figure_scene:
 
@@ -1614,26 +1617,26 @@ in the :guilabel:`Data Source Manager` dialog.
 
    Data Source Manager - Scene
 
-Create a :guilabel:`New Cesium 3D Tiles Connection` by clicking on 
-:guilabel:`New`. Add :guilabel:`Name` and :guilabel:`URL` or add
-local tileset file.
+Create a connection by clicking on :guilabel:`New`. You can add a
+:guilabel:`New Cesium 3D Tiles Connection` or a :guilabel:`New Quantized Mesh
+Connection`.
 
-Support for 3D tiles:
+Choose a :guilabel:`Name` and set the :guilabel:`URL` to the URL of a layer description JSON file.
 
-* Remote source - ``http://example.com/tileset.json``
-* Local files - ``file:///path/to/tiles/tileset.json``
+The URL may be remote (e.g. ``http://example.com/tileset.json``) or local (e.g.
+``file:///path/to/tiles/tileset.json``).
 
 .. _figure_tiled_scene_connection:
 
 .. figure:: img/tiled_scene_connection.png
    :align: center
 
-   Tiled Scene Connection 
+   Tiled Scene Connection
 
 You can also add the service from :guilabel:`Browser Panel`.
 
 After creating new connection you are able to :guilabel:`Add` the new layer
-to your map. 
+to your map.
 
 .. _figure_3d_tiles_layer:
 
@@ -1642,6 +1645,12 @@ to your map.
 
    3D Tiles Layer - Textured
 
+.. _figure_quantized_mesh_layer:
+
+.. figure:: img/quantized_mesh_layer.png
+   :align: center
+
+   Quantized Mesh layer
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
