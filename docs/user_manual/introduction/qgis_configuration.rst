@@ -132,6 +132,7 @@ displayed at the bottom of the frame.
   version of QGIS`. You can always open projects created with older version of
   QGIS but once the project is saved, trying to open with older release may fail
   because of features not available in that version.
+
 .. _load_project_code:
 
 * :guilabel:`Enable project's embedded Python code` |selectString|. This option
