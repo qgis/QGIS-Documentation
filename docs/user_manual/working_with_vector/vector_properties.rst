@@ -3201,7 +3201,7 @@ feature identification:
     features in all layers
   * the feature identifier in the attribute table :ref:`form view <attribute_table_view>`
   * the feature identifier when the map or layout is exported to a layered
-    output format such as GeoPDF
+    output format such as Geospatial PDF
   * the map tip information, i.e. the message displayed in the map canvas
     when hovering over a feature of the active layer with the |mapTips| :sup:`Show Map Tips` icon pressed.
     Applicable when |checkbox| :guilabel:`Enable Map Tips` is active
