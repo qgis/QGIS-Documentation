@@ -6,8 +6,11 @@ served by the QGIS Server. It provides a user-friendly fully
 browsable website with basic mapping capabilities to quickly browse the
 datasets exposed through those QGIS projects.
 
-The QGIS Server catalog uses the variables QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES
-and  QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS (see :ref:`qgis-server-envvar`)
+The QGIS Server catalog uses the following environment variables (see :ref:`qgis-server-envvar`):
+
+* `QGIS_SERVER_LANDING_PAGE_PREFIX`: Prefix of the path component of the landing page base URL
+* `QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES`: Directories used by the landing page service to find .qgs and .qgz projects
+* `QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS`: PostgreSQL connection strings used by the landing page service to find projects
 
 .. _figure_server_project_list:
 
