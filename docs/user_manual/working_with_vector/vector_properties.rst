@@ -2592,6 +2592,12 @@ with the field type. The available widgets are:
 * **Value Map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
+  
+  .. note::
+
+   GeoPackage and ESRI File Geodatabase layers with predefined coded **Field Domains**
+   will be automatically recognized by QGIS and assigned a **Value Map** widget for the relevant fields.
+
 * **Value Relation**: Offers values from a related table in a combobox. You can
   select layer, key column and value column. Several options are available to
   change the standard behaviors: allow null value, order by value, allow
