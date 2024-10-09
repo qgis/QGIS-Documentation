@@ -145,6 +145,7 @@ Terrain
       <http://s3.amazonaws.com/elevation-tiles-prod/>`_
       produced by Mapzen tools -- more details at https://registry.opendata.aws/terrain-tiles/
     * a loaded :guilabel:`Mesh` dataset
+    * a :guilabel:`Quantized Mesh` layer from the project
   * :guilabel:`Elevation`: Raster or mesh layer to be used for generation of
     the terrain.
     The raster layer must contain a band that represents elevation.
