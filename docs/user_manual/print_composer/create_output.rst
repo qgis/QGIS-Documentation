@@ -280,6 +280,12 @@ To export a layout as PDF:
 .. note:: Exporting a print layout to formats that supports georeferencing
    (e.g. ``PDF`` and ``TIFF``) creates a georeferenced output by default.
 
+.. tip:: **Mind opacity settings for vector layers**
+   
+   When you set a layer-wide opacity (or opacity for any vector symbology)
+   to less than 100%, it forces a rasterized rendering of those objects during PDF exports.
+   Depending on the size of the layer, this may considerably increase the PDF file size.
+
 .. index:: Atlas generation
 
 .. _atlas_generation:
