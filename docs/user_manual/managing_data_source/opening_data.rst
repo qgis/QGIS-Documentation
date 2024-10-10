@@ -376,7 +376,16 @@ To load a layer from a file:
    Other formats can be loaded by selecting ``All files`` (the top item
    in the pull-down menu).
 #. Press :guilabel:`Open` to load the selected file into :guilabel:`Data
-   Source Manager` dialog
+   Source Manager` dialog.
+
+   Depending on the selected layer type, additional :guilabel:`Options`
+   (encoding, geometry type, table filtering, file locking, data formatting ...)
+   are available for configuring.
+   These options are described in detail in the specific GDAL
+   `vector <https://gdal.org/drivers/vector/>`_
+   or `raster <https://gdal.org/drivers/raster>`_ driver documentation.
+   At the top of the options, a text with hyperlink will directly lead to the documentation
+   of the appopriate driver for the selected file format.
 
    .. _figure_vector_layer_open_options:
 
@@ -404,13 +413,6 @@ To load a layer from a file:
 
       QGIS with Shapefile of Alaska loaded
 
-.. note::
-
- For loading vector and raster files the GDAL driver offers to define open
- actions. These will be shown when a file is selected. Options are described
- in detail on https://gdal.org/drivers/vector/, https://gdal.org/drivers/raster
- and if a file is selected in QGIS, a text with hyperlink will directly
- lead to the documentation of the selected file type.
 .. note::
 
  Because some formats like MapInfo (e.g., :file:`.tab`) or Autocad (:file:`.dxf`)
