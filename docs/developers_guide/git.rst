@@ -263,6 +263,13 @@ If you make a pull request we ask that you please merge master to your PR
 branch regularly so that your PR is always mergeable to the upstream master
 branch.
 
+Pull requests will cause various checks of the Continuous Integration (CI) system
+to run: building for different environments and running tests, running code
+linters, spell checkers, etc. Make sure to look at the results of those ckecks
+and try to address issues they raise. Of course, you can ask a question in the
+pull request if you need help from other developers to understand and/or resolve
+an issue.
+
 If you are a developer and wish to evaluate the pull request queue, there is a
 very nice `tool that lets you do this from the command line
 <https://changelog.com/posts/git-pulls-command-line-tool-for-github-pull-requests>`_
@@ -284,7 +291,6 @@ deserves your options to accelerate it should be (in order of priority):
 * Send a message to the person your PR has been assigned to in the PR queue.
 * Send a message to the project steering committee asking them to help see your
   PR incorporated into the code base.
-
 
 Best practice for creating a pull request
 -----------------------------------------
@@ -331,6 +337,31 @@ QGIS is licensed under the GPL. You should make every effort to ensure you only
 submit patches which are unencumbered by conflicting intellectual property
 rights. Also do not submit code that you are not happy to have made available
 under the GPL.
+
+Pull Requests merge criteria
+============================
+
+Pull requests must be approved by at least one Core Developer (a developer with
+push rights to the qgis/QGIS GitHub repository). Before merging, the Core Developer
+must ensure that the PR passes all reasonable CI checks. Some exceptions exist
+to this rule, e.g. when a check is broken for unrelated reasons (such as broken
+third party services, or a lint/code analysis/spell check test failing from other
+parts of a modified file).
+
+Pull requests created by a Core Developper must also be approved by at least
+another Core Developer.
+
+A PR must remain open for at least 24 hours following submission, even if it has
+already been approved. This is to allow wider feedback to be gathered prior to
+merge, and to permit pre-merge feedback from developers in other time zones.
+Exceptions to this policy are:
+
+- Approved pull requests for backports to stable branches
+- "Emergency" pull requests, eg those which fix broken master builds, CI
+  infrastructure or which represent a time-sensitive security risk
+- Trivial fixes. The definition of "trivial" is left open to common sense and
+  developer discretion, but is expected to include non-risky changes like typo
+  fixes, translation string fixes, tab order changes, or similar.
 
 
 Obtaining GIT Write Access
