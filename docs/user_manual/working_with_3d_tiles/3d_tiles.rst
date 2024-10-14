@@ -30,39 +30,11 @@ data. Read :ref:`3d_tiles` for more details.
    Example of 3D tiles
 
 
-Data Sources
-============
-
 Support for 3D tiles:
 
 * Remote source - ``http://example.com/tileset.json``
 * Local files - ``file:///path/to/tiles/tileset.json``
 
-
-Using data from Cesium ion 
---------------------------
-
-*Cesium ion* is a cloud-based platform for managing and streaming 3D geospatial
-data. It simplifies data management, visualisation and sharing. To add 3D tiles
-from Cesium ion, you need to first sign up to their service 
-here: https://ion.cesium.com.
-
-You can also use Cesium ion plugin from the QGIS repository 
-to add the data to QGIS.
-
-Using Google 3D data
---------------------
-
-To use Google Photorealistic 3D tiles in QGIS, get an API key for 3D tiles. 
-Once you have the key, simply add Google tiles using the same 
-connection process.
-
-.. _figure_google_3d_tiles:
-
-.. figure:: img/google_3d_tiles.png
-   :align: center
-
-   Google 3D Tiles connection 
 
 .. _3dtiles_properties:
 
