@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2024-09-29 09:55+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
 "Last-Translator: Tomas Straupis, 2024\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -35,9 +35,40 @@ msgstr ""
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:2
+msgid "Point Cloud Conversion"
+msgstr "Taškų debesies keitimas"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:4
 msgid "|332|"
 msgstr "|332|"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:12
+msgid ""
+"These algorithms are only available if QGIS uses the PDAL library version "
+"2.5.0 or newer."
+msgstr ""
+"Šie algoritmai galimi tik jei QGIS naudoja PDAL bibliotekos 2.5.0 ar "
+"naujesnę versiją."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:17
+msgid "Convert format"
+msgstr "Keisti formatą"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:19
+msgid ""
+"Converts a point cloud to a different file format, e.g. creates a compressed"
+" :file:`.LAZ`."
+msgstr ""
+"Keičia taškų debesį į kitą failo formatą, pavyzdžiui sukuria suspaustą "
+":file:`.LAZ`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:22
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:88
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:216
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:338
+msgid "Parameters"
+msgstr "Parametrai"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:28
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:54
@@ -50,6 +81,20 @@ msgstr "|332|"
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:347
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:379
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:407
+msgid "Label"
+msgstr "Užrašas"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:29
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:55
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:98
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:140
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:181
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:226
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:264
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:305
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:348
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:380
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:408
 msgid "Name"
 msgstr "Pavadinimas"
 
@@ -64,6 +109,20 @@ msgstr "Pavadinimas"
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:349
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:381
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:409
+msgid "Type"
+msgstr "Tipas"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:31
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:100
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:142
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:183
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:228
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:266
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:307
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:350
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:382
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:410
 msgid "Description"
 msgstr "Aprašymas"
 
@@ -71,48 +130,115 @@ msgstr "Aprašymas"
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:101
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:229
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:351
+msgid "**Input layer**"
+msgstr "**Įvesties sluoksnis**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:102
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:230
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:352
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:38
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:60
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:231
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:353
+msgid "[point cloud]"
+msgstr "[taškų debesis]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:35
+msgid "Input point cloud layer to convert"
+msgstr "Įvesties taškų debesies sluoksnis, kurį reikia keisti"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:36
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:58
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:121
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:184
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:245
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:308
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:361
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:411
+msgid "**Converted**"
+msgstr "**Pakeistas**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:122
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:246
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:309
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:362
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:412
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:109
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:233
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:125
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:249
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:365
+msgid "Default: ``[Save to temporary file]``"
+msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:41
+msgid "Specify the point cloud file to use as output. One of:"
+msgstr ""
+"Nurodykite taškų debesies failą, kurį naudoti kaip išvestį. Vienas iš:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Save to a Temporary File"
+msgstr "Įrašyti į laikiną failą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to File…"
+msgstr "Įrašyti į failą..."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:174
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:298
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:401
+msgid "Outputs"
+msgstr "Išvestys"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:61
+msgid ""
+"Output point cloud layer in a modified file format. Currently supported "
+"formats are :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` and :file:`.VPC`."
+msgstr ""
+"Išvesties taškų debesies sluoksnis pakeistu failo formatu. Šiuo metu "
+"palaikomi formatai yra :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` ir "
+":file:`.VPC`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:219
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:341
+msgid "Basic parameters"
+msgstr "Baziniai parametrai"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:110
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:234
 msgid "``RESOLUTION``"
 msgstr "``RESOLUTION``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:115
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:239
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:116
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:240
 msgid "``TILE_SIZE``"
 msgstr "``TILE_SIZE``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:145
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:269
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:385
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:146
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:270
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:386
 msgid "``FILTER_EXPRESSION``"
 msgstr "``FILTER_EXPRESSION``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:151
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:275
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:391
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:152
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:276
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:392
 msgid "``FILTER_EXTENT``"
 msgstr "``FILTER_EXTENT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:162
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:286
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:163
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:287
 msgid "``ORIGIN_X``"
 msgstr "``ORIGIN_X``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:168
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:292
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:169
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:293
 msgid "``ORIGIN_Y``"
 msgstr "``ORIGIN_Y``"

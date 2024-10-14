@@ -119,6 +119,14 @@ msgstr ""
 msgid "Information Properties"
 msgstr "Eigenschaften Information"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:81
+msgid ""
+"general such as name in the project, source path, list of auxiliary files, "
+"last save time and size, the used provider"
+msgstr ""
+"allgemeine Angaben wie Name im Projekt, Quellpfad, Liste der Hilfsdateien, "
+"letzte Speicherzeit und -größe, der verwendete Datenanbieter"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:85
 msgid ""
 "the Coordinate Reference System: name, units, method, accuracy, reference "
@@ -243,9 +251,64 @@ msgstr "Eigenschaften Darstellung"
 msgid "mapIdentification"
 msgstr "mapIdentification"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:708
+msgid ""
+"You can also activate scale dependent visibility on a layer from within the "
+":guilabel:`Layers` panel: right-click on the layer and in the contextual "
+"menu, select :guilabel:`Set Layer Scale Visibility`."
+msgstr ""
+"Sie können die skalierungsabhängige Sichtbarkeit eines Layers auch über das "
+"Bedienfeld :guilabel:`Layer` aktivieren: Klicken Sie mit der rechten "
+"Maustaste auf den Layer und wählen Sie im Kontextmenü "
+":guilabel:`Maßstabsabhängige Sichtbarkeit des Layers setzen`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:715
+msgid ""
+":guilabel:`Reload data`: the layer will be completely refreshed. Any cached "
+"data will be discarded and refetched from the provider. This mode may result"
+" in slower map refreshes."
+msgstr ""
+":guilabel:`Daten neu laden`: Der Layer wird vollständig aktualisiert. Alle "
+"zwischengespeicherten Daten werden verworfen und vom Anbieter neu geholt. "
+"Dieser Modus kann dazu führen, dass die Karte langsamer aktualisiert wird."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:718
+msgid ""
+":guilabel:`Redraw layer only`: this mode is useful for animation or when the"
+" layer's style will be updated at regular intervals. Canvas updates are "
+"deferred in order to avoid refreshing multiple times if more than one layer "
+"has an auto update interval set."
+msgstr ""
+":guilabel:`Nur Layer neu zeichnen`: Dieser Modus ist nützlich für "
+"Animationen oder wenn der Stil des Layers in regelmäßigen Abständen "
+"aktualisiert werden soll. Die Aktualisierung der Kartenansicht wird "
+"aufgeschoben, um ein mehrfaches Aktualisieren zu vermeiden, wenn für mehr "
+"als einen Layer ein Intervall für die automatische Aktualisierung festgelegt"
+" wurde."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:725
+msgid ""
+"It is also possible to set the :guilabel:`Interval (seconds)` between "
+"consecutive refreshments."
+msgstr ""
+"Es ist auch möglich, das :guilabel:`Intervall (Sekunden)` zwischen "
+"aufeinanderfolgenden Auffrischungen einzustellen."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:739
 msgid "Temporal Properties"
 msgstr "Eigenschaften Zeitlich"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:741
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab provides options to control the "
+"rendering of the layer over time. Such dynamic rendering requires the "
+":ref:`temporal navigation <maptimecontrol>` to be enabled over the map "
+"canvas."
+msgstr ""
+"Die Registerkarte |temporal| :guilabel:`Zeitlich` bietet Optionen zur "
+"Steuerung der Darstellung des Layers im Zeitverlauf. Für eine solche "
+"dynamische Darstellung muss die :ref:`zeitabhängige Darstellung "
+"<maptimecontrol>` in der Kartenansicht aktiviert sein."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:781
 msgid ""
@@ -279,9 +342,55 @@ msgstr "Modus"
 msgid "None"
 msgstr "Keine"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:828
+msgid "Elevation Properties"
+msgstr "Höhe"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:830
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and its appearance in the :ref:`profile tool charts "
+"<label_elevation_profile_view>`. Specifically, you can set:"
+msgstr ""
+"Die Registerkarte |elevationcale| :guilabel:`Höhe` bietet Optionen zur "
+"Steuerung der Layer-Höheneigenschaften in einer :ref:`3D-Kartenansicht "
+"<label_3dmapview>` und ihrer Darstellung im :ref:`Geländehöhenprofil "
+"<label_elevation_profile_view>`. Im Einzelnen können Sie einstellen:"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1073
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:852
+msgid ""
+"a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`"
+msgstr ""
+"ein :guilabel:`Line` mit einem bestimmten :ref:`Linenstil "
+"<vector_line_symbols>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:853
+msgid ""
+"an elevation surface rendered using a fill symbol either above "
+"(:guilabel:`Fill above`) or below (:guilabel:`Fill below`) the elevation "
+"curve line. The surface symbology is represented using:"
+msgstr ""
+"eine Höhenfläche, die mit einem Füllsymbol entweder über "
+"(:guilabel:`Oberhalb füllen`) oder unter (:guilabel:`Unterhalb füllen`) der "
+"Höhenkurvenlinie dargestellt wird. Die Oberflächensymbolik wird mit "
+"dargestellt:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:857
+msgid "a :ref:`Fill style <vector_fill_symbols>`"
+msgstr "ein :ref:`Füllstil <vector_fill_symbols>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:858
+msgid ""
+"and a :guilabel:`Limit`: the maximum (respectively minimum) altitude "
+"determining how high the fill surface will be"
+msgstr ""
+"und eine :guilabel:`Begrenzung`: die maximale (bzw. minimale) Höhe, die "
+"bestimmt, wie hoch die Füllfläche sein wird"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:866
 msgid "Metadata Properties"
@@ -301,13 +410,59 @@ msgstr ""
 msgid "Legend Properties"
 msgstr "Eigenschaften Legende"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:890
+msgid ""
+"Depending on the symbology applied to the layer, you may end up with several"
+" entries in the legend, not necessarily readable/useful to display. The "
+":guilabel:`Legend placeholder image` helps you :ref:`select an image "
+"<embedded_file_selector>` for replacement, displayed both in the "
+":guilabel:`Layers` panel and the print layout legend."
+msgstr ""
+"Abhängig von der auf den Layer angewendeten Symbologie können Sie mehrere "
+"Einträge in der Legende erhalten, die nicht unbedingt lesbar oder nützlich "
+"für die Anzeige sind. Das :guilabel:`Legendenplatzhalterbild` hilft Ihnen "
+"bei der :ref:`Auswahl eines Bildes <embedded_file_selector>` zum Ersetzen, "
+"das sowohl im Bedienfeld :guilabel:`Layer` als auch in der "
+"Drucklayoutlegende angezeigt wird."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:918
 msgid "Display Properties"
 msgstr "Eigenschaften Anzeige"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:923
+msgid ""
+"|checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips "
+"for the layer"
+msgstr ""
+"|checkbox| :guilabel:`Kartentipps einschalten` steuert, ob Kartentipps für "
+"den Layer angezeigt werden sollen"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:936
+msgid "To display map tips:"
+msgstr "So zeigen Sie Kartentipps an:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:938
+msgid ""
+"Select the menu option :menuselection:`View --> Show Map Tips` or click on "
+"the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes "
+"Toolbar`."
+msgstr ""
+"Wählen Sie den Menüpunkt :menuselection:`Ansicht --> Kartenhinweise "
+"anzeigen` oder klicken Sie auf das Symbol |mapTips| :sup:`Kartenhinweise "
+"anzeigen` in der :guilabel:`Attributwerkzeugleiste`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1043
 msgid "mapTips"
 msgstr "mapTips"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:940
+msgid ""
+"Make sure that the layer you target is active and has the |checkbox| "
+":guilabel:`Enable Map Tips` property checked."
+msgstr ""
+"Vergewissern Sie sich, dass der Layer, auf den Sie abzielen, aktiv ist und "
+"dass die Eigenschaft |checkbox| :guilabel:`Kartentipps anzeigen` aktiviert "
+"ist."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:952
 msgid "QGIS Server Properties"
