@@ -102,7 +102,7 @@ a plugin on the official repository:
 #. all required metadata listed in :ref:`metadata table<plugin_metadata_table>`
    must be present
 #. the `version` metadata field must be unique
-#. a licence file must be included, saved as ``LICENSE`` with no extension (i.e. 
+#. a license file must be included, saved as ``LICENSE`` with no extension (i.e. 
    not ``LICENSE.txt`` for example)
 
 Plugin structure
@@ -125,7 +125,7 @@ should look like.
     |   |-- translation_file_de.ts
     |-- img
     |   |-- icon.png
-    |   `-- iconsource.svg
+    |   |-- iconsource.svg
     |-- __init__.py
     |-- LICENSE
     |-- Makefile
