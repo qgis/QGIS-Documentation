@@ -18,8 +18,7 @@ geospatial datasets. They use a hierarchical structure to efficiently manage
 and display 3D content, optimising performance by dynamically loading
 appropriate levels of detail. This technology is widely used in urban 
 planning, architecture, simulation, gaming, and virtual reality, providing
-a standardised and interoperable solution for visualising complex geographical
-data.
+a standardised and interoperable solution for visualising complex geographical data.
 
 
 .. _figure_3d_tiles_example:
@@ -35,7 +34,7 @@ Data Sources
 
 Currently, QGIS supports two formats of 3D tiles:
 
-* `Ceisum 3D tiles <https://cesium.com/why-cesium/3d-tiles/>`_,
+* `Cesium 3D tiles <https://cesium.com/why-cesium/3d-tiles/>`_,
   used primarily for complex 3D models of buildings or whole cities.
 * `Quantized Mesh tiles <https://github.com/CesiumGS/quantized-mesh>`_,
   used for terrain elevation data.
