@@ -114,7 +114,7 @@ plugin will be unzipped inside the users plugins folder it must have it's own
 directory inside the .zip file to not interfere with other plugins. Mandatory
 files are: :file:`metadata.txt`,  :file:`__init__.py` and :file:`LICENSE`. 
 But it would be nice to have a :file:`README` and of course an icon to represent 
-the plugin (:file:`resources.qrc`). Following is an example of how a plugin.zip 
+the plugin. Following is an example of how a :file:`plugin.zip` 
 should look like.
 
 ::
