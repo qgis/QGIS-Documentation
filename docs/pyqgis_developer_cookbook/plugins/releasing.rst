@@ -102,8 +102,8 @@ a plugin on the official repository:
 #. all required metadata listed in :ref:`metadata table<plugin_metadata_table>`
    must be present
 #. the `version` metadata field must be unique
-#. a licence file must be included, saved as `LICENSE` with no extension (i.e. 
-   not `LICENSE.txt`)
+#. a licence file must be included, saved as ``LICENSE`` with no extension (i.e. 
+   not ``LICENSE.txt`` for example)
 
 Plugin structure
 ................
