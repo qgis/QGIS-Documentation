@@ -572,6 +572,19 @@ Point labels placement modes available are:
     The latter option is especially useful when the symbol size isn't fixed,
     e.g. if it's set by a data defined size or when using different symbols
     in a :ref:`categorized <categorized_renderer>` renderer.
+  * at a :guilabel:`Maximum Distance` from the feature, which is an optional setting
+    that allows you to control how far a label can be placed from the feature it's labeling.
+    This works alongside the :guilabel:`Distance` setting to create a range for label placement,
+    adding flexibility to position labels more effectively, especially on busy maps, ensuring
+    they fit neatly around their corresponding features.
+  * using the :guilabel:`Prioritize Placement` option, which decides what's more
+    important when placing labels. There are two options:
+    
+    * :guilabel:`Prefer closer labels`: By default, labels are kept close to the feature.
+    * :guilabel:`Prefer position ordering`: The label will try to stay in a specific position
+      (like top left or top right), even if it's a bit farther away from the feature. The label
+      only moves to other positions if there's no room within the maximum distance at your
+      preferred position.
   * following a :guilabel:`Position priority` that can be customized or set for
     an individual feature using a data defined list of prioritised positions.
     This also allows only certain placements to be used, so e.g.
@@ -591,8 +604,10 @@ Point labels placement modes available are:
     #. top, slightly right
     #. bottom, slightly left.
 
-* :guilabel:`Around Point`: labels are placed in a circle around the feature.
-  equal radius (set in :guilabel:`Distance`) circle around the feature.
+* :guilabel:`Around Point`: labels are placed in a circle around the feature
+  with an equal radius set in :guilabel:`Distance`.
+  Additionally you can set :guilabel:`Maximum Distance` from the feature,
+  to control how far a label can be placed from the feature it's labeling.
   The placement priority is clockwise from the "top right". The position can
   be constrained using the data-defined :guilabel:`Quadrant` option.
 
