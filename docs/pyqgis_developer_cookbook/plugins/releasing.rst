@@ -115,7 +115,7 @@ directory inside the .zip file to not interfere with other plugins. Mandatory
 files are: :file:`metadata.txt`,  :file:`__init__.py` and :file:`LICENSE`. 
 But it would be nice to have a :file:`README` and of course an icon to represent 
 the plugin. Following is an example of how a :file:`plugin.zip` 
-should look like.
+could look like.
 
 ::
 
@@ -133,7 +133,5 @@ should look like.
     |-- more_code.py
     |-- main_code.py
     |-- README
-    |-- resources.qrc
-    |-- resources_rc.py
-    `-- ui_Qt_user_interface_file.ui
+    |-- ui_Qt_user_interface_file.ui
 
