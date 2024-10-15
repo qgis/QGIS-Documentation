@@ -69,6 +69,9 @@ A typical plugin directory includes the following files:
   relative paths to resources used in the GUI forms.
 * :file:`resources.py` - *compiled resources, optional* - The translation of the .qrc file 
   described above to Python.
+* :file:`LICENSE` - *required* if plugin is to be published or updated in the 
+  QGIS Plugins Directory, otherwise *optional*. File should be a plain text file 
+  with no file extension in the filename.
 
 .. warning::
     If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
