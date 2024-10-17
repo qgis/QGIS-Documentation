@@ -312,6 +312,12 @@ each level of the dataset tree.
 .. [1] The different entries may also be available for some GDAL supported `vector file formats <https://gdal.org/drivers/vector/index.html>`_
  such as ESRI File Geodatabase, FlatGeobuf, GeoParquet, NetCDF, ... when compatible.
 
+.. note::
+
+  When loading vector layers into QGIS, fields with |sourceFields| :guilabel:`Field Domains`
+  (such as those defined in a GeoPackage or ESRI File Geodatabase) are automatically
+  detected. These domains are database-level constraints, meaning they are enforced
+  by the database itself and apply across different applications, not just QGIS.
 
 Tiles and Web Services
 ......................
@@ -450,6 +456,8 @@ Resources
 .. |oracle| image:: /static/common/mIconOracle.png
    :width: 1.5em
 .. |postgis| image:: /static/common/mIconPostgis.png
+   :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
