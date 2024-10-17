@@ -421,19 +421,6 @@ To load a layer from a file:
 .. index:: ArcInfo Binary Coverage, Tiger Format, UK National Transfer Format
 .. index:: US Census Bureau
 
-.. note::
-
- When loading vector layers into QGIS, fields with |sourceFields| :guilabel:`Field Domains`
- (such as those defined in a GeoPackage or ESRI File Geodatabase) are automatically
- detected. These domains are database-level constraints, meaning they are enforced
- by the database itself and apply across different applications, not just QGIS.
- This differs from the QGIS-only **Value Maps** widget, which is saved within QGIS project styles
- and is not enforced outside QGIS.
- For coded domains, which are similar to **Value Maps**, there is a set of
- predefined valid values. QGIS also supports range domains, enforcing minimum and maximum
- value constraints, and glob domains (specific to GeoPackage), which apply different constraints
- on the values acceptable in the associated fields.
-
 The |addOgrLayer| :sup:`Add Vector Layer` and |addRasterLayer| :sup:`Add Raster
 Layer` tabs allow loading of layers from source types other than :guilabel:`File`:
 
