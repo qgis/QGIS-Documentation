@@ -2577,6 +2577,13 @@ with the field type. The available widgets are:
   for fields of ``array`` type.
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
+
+  .. note::
+
+   Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined **range Field Domains**
+   will be automatically recognized by QGIS and assigned a **Range** widget for the relevant fields.
+   The widget will be prefilled with the minimum and maximum values specified in the domain.
+
 * **Relation Reference**: This is the default widget assigned to the referencing
   field (i.e., the foreign key in the child layer) when a :ref:`relation <vector_relations>`
   is set. It provides direct access to the parent feature's form which in turn
@@ -2592,6 +2599,12 @@ with the field type. The available widgets are:
 * **Value Map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
+  
+  .. note::
+
+   Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined **coded Field Domains**
+   will be automatically recognized by QGIS and assigned a **Value Map** widget for the relevant fields.
+
 * **Value Relation**: Offers values from a related table in a combobox. You can
   select layer, key column and value column. Several options are available to
   change the standard behaviors: allow null value, order by value, allow
