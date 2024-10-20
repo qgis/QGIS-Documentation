@@ -8,6 +8,7 @@
 # Harrissou Sant-anna, 2024
 # Transifex Bot <>, 2024
 # Joern G <j.gutzeit@umwelt-it.de>, 2024
+# Steffen Hollah, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2024\n"
+"Last-Translator: Steffen Hollah, 2024\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1295,6 +1296,26 @@ msgstr ""
 "Schwarze Linien stellen die Begrenzungslinien der einzelnen Polygonobjekte "
 "dar"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:541
+msgid "Buffer"
+msgstr "Puffer"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:542
+msgid ""
+"Computes a buffer area for all the features in an input layer, using a fixed"
+" or data defined distance."
+msgstr ""
+"Berechnet einen Pufferbereich für alle Objekte in einem Eingabelayer, wobei "
+"eine feste oder datendefinierte Distanz verwendet wird."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:545
+msgid ""
+"It is possible to use a negative distance for polygon input layers. In this "
+"case the buffer will result in a smaller polygon (setback)."
+msgstr ""
+"Es kann eine negative Distanz für Polygoneingabelayer verwendet werden. In "
+"diesem Fall führt der Puffer zu einem kleineren Polygon (Rücksprung)."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:551
 msgid ""
 "Buffer (in yellow) of points, line, polygon with positive buffer, and "
@@ -1302,6 +1323,15 @@ msgid ""
 msgstr ""
 "Puffer (in gelb) von Punkten, Linie, Polygon mit positivem Puffer und "
 "Polygon mit negativem Puffer"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:582
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3606
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4324
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4678
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5079
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6264
+msgid "**Distance**"
+msgstr "**Abstand**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:583
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1388
@@ -1316,6 +1346,14 @@ msgstr ""
 msgid "``DISTANCE``"
 msgstr "``DISTANCE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:592
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4334
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6281
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6988
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7335
+msgid "**Segments**"
+msgstr "**Segmente**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:593
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4077
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4335
@@ -1326,15 +1364,58 @@ msgstr "``DISTANCE``"
 msgid "``SEGMENTS``"
 msgstr "``SEGMENTS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:599
+msgid "**End cap style**"
+msgstr "**Endstil**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:600
 msgid "``END_CAP_STYLE``"
 msgstr "``END_CAP_STYLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:607
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:625
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4350
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6297
+msgid "0 --- Round"
+msgstr "0 --- Rund"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:608
+msgid "1 --- Flat"
+msgstr "1 --- Flach"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:609
+msgid "2 --- Square"
+msgstr "2 --- Quadratisch"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:616
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4341
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6288
+msgid "**Join style**"
+msgstr "**Verbindungsstil**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:617
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4342
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6289
 msgid "``JOIN_STYLE``"
 msgstr "``JOIN_STYLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:626
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4351
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6298
+msgid "1 --- Miter"
+msgstr "1 --- Eckig"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:627
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4352
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6299
+msgid "2 --- Bevel"
+msgstr "2 --- Abgefast"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:634
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4359
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6306
+msgid "**Miter limit**"
+msgstr "**Eckgrenze**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:635
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4360
@@ -1345,6 +1426,11 @@ msgstr "``MITER_LIMIT``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:650
 msgid "``DISSOLVE``"
 msgstr "``DISSOLVE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:675
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2189
+msgid "Advanced parameters"
+msgstr "Fortgeschrittene Parameter"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:686
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2200
