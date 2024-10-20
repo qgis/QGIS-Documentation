@@ -53,12 +53,38 @@ Returns a string representation of a color based on its cyan, magenta, yellow, b
 
 .. end_color_cmyka_section
 
+.. _expression_function_Color_color_cmykf:
+
+color_cmykf
+...........
+
+Returns a color object based on its cyan, magenta, yellow, black and alpha components.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - color_cmykf(cyan, magenta, yellow, black, [alpha=1.0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **cyan** - cyan component as a float value from 0.0 to 1.0
+       * **magenta** - magenta component as a float value from 0.0 to 1.0
+       * **yellow** - yellow component as a float value from 0.0 to 1.0
+       * **black** - black component as a float value from 0.0 to 1.0
+       * **alpha** - alpha component as a float value from 0.0 to 1.0
+   * - Examples
+     - * ``color_cmykf(1,0.9,0.81,0.62)`` → CMYKA: 1.00,0.90,0.81,0.62,1.00
+
+
+.. end_color_cmykf_section
+
 .. _expression_function_Color_color_grayscale_average:
 
 color_grayscale_average
 .......................
 
-Applies a grayscale filter and returns a string representation from a provided color.
+Applies a grayscale filter to a color and returns it. Returned type is the same as color argument, i.e. a color string representation or a color object.
 
 .. list-table::
    :widths: 15 85
@@ -66,9 +92,10 @@ Applies a grayscale filter and returns a string representation from a provided c
    * - Syntax
      - color_grayscale_average(color)
    * - Arguments
-     - * **color** - a color string
+     - * **color** - a color string representation or a color object
    * - Examples
      - * ``color_grayscale_average('255,100,50')`` → '135,135,135,255'
+       * ``color_grayscale_average(color_cmykf(0.6,0.5,0.1,0.8))`` → CMYKA: 0.40,0.40,0.40,0.80,1.00
 
 
 .. end_color_grayscale_average_section
@@ -118,6 +145,31 @@ Returns a string representation of a color based on its hue, saturation, lightne
 
 .. end_color_hsla_section
 
+.. _expression_function_Color_color_hslf:
+
+color_hslf
+..........
+
+Returns a color object based on its hue, saturation, and lightness attributes.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - color_hslf(hue, saturation, lightness, [alpha=1.0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **hue** - hue of the color, as a float value from 0.0 to 1.0
+       * **saturation** - saturation of the color as a float value from 0.0 to 1.0
+       * **lightness** - lightness of the color as a float value from 0.0 to 1.0
+       * **alpha** - alpha component as a float value from 0.0 to 1.0
+   * - Examples
+     - * ``color_hslf(0.3,0.52,0.7)`` → HSLA: 0.30,0.52,0.70,1.00
+
+
+.. end_color_hslf_section
+
 .. _expression_function_Color_color_hsv:
 
 color_hsv
@@ -163,6 +215,54 @@ Returns a string representation of a color based on its hue, saturation, value a
 
 .. end_color_hsva_section
 
+.. _expression_function_Color_color_hsvf:
+
+color_hsvf
+..........
+
+Returns a color object based on its hue, saturation, and value attributes.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - color_hsvf(hue, saturation, value, [alpha=1.0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **hue** - hue of the color, as a float value from 0.0 to 1.0
+       * **saturation** - saturation of the color as a float value from 0.0 to 1.0
+       * **value** - value of the color as as a float value from 0.0 to 1.0
+       * **alpha** - alpha component as a float value from 0.0 to 1.0
+   * - Examples
+     - * ``color_hsvf(0.4,1,0.6)`` → HSVA: 0.40,1.00,0.60,1.00
+
+
+.. end_color_hsvf_section
+
+.. _expression_function_Color_color_mix:
+
+color_mix
+.........
+
+Returns a color mixing the red, green, blue, and alpha values of two provided colors based on a given ratio. Returned type is the same as color arguments, i.e. a color string representation or a color object.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - color_mix(color1, color2, ratio)
+   * - Arguments
+     - * **color1** - a color string or a color object
+       * **color2** - a color string or a color object
+       * **ratio** - a ratio
+   * - Examples
+     - * ``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'
+       * ``color_mix(color_cmykf(0.9,0.9,0.9,0.9),color_cmykf(0.1,0.1,0.1,0.1),0.5)`` → CMYKA: 0.50,0.50,0.50,0.50,1.00
+
+
+.. end_color_mix_section
+
 .. _expression_function_Color_color_mix_rgb:
 
 color_mix_rgb
@@ -190,7 +290,7 @@ Returns a string representing a color mixing the red, green, blue, and alpha val
 color_part
 ..........
 
-Returns a specific component from a color string, e.g., the red component or alpha component.
+Returns a specific component from a color string or color object, e.g., the red component or alpha component.
 
 .. list-table::
    :widths: 15 85
@@ -198,7 +298,7 @@ Returns a specific component from a color string, e.g., the red component or alp
    * - Syntax
      - color_part(color, component)
    * - Arguments
-     - * **color** - a color string
+     - * **color** - a color string or a color object
        * **component** - a string corresponding to the color component to return. Valid options are:
 
          
@@ -221,6 +321,7 @@ Returns a specific component from a color string, e.g., the red component or alp
 
    * - Examples
      - * ``color_part('200,10,30','green')`` → 10
+       * ``to_int(color_part(color_cmykf(0.1,0.2,0.3,0.9),'black'))`` → 90
 
 
 .. end_color_part_section
@@ -270,6 +371,31 @@ Returns a string representation of a color based on its red, green, blue, and al
 
 .. end_color_rgba_section
 
+.. _expression_function_Color_color_rgbf:
+
+color_rgbf
+..........
+
+Returns a color object based on its red, green, blue and alpha components.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - color_rgbf(red, green, blue, [alpha=1.0])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **red** - red component as a float value from 0.0 to 1.0
+       * **green** - green component as a float value from 0.0 to 1.0
+       * **blue** - blue component as a float value from 0.0 to 1.0
+       * **alpha** - alpha component as a float value from 0.0 to 1.0
+   * - Examples
+     - * ``color_rgbf(1.0,0.5,0)`` → RGBA: 1.00,0.50,0.00,1.00
+
+
+.. end_color_rgbf_section
+
 .. _expression_function_Color_create_ramp:
 
 create_ramp
@@ -298,7 +424,7 @@ Returns a gradient ramp from a map of color strings and steps.
 darker
 ......
 
-Returns a darker (or lighter) color string
+Returns a darker (or lighter) color. Returned type is the same as color arguments, i.e. a color string representation or a color object.
 
 .. list-table::
    :widths: 15 85
@@ -306,7 +432,7 @@ Returns a darker (or lighter) color string
    * - Syntax
      - darker(color, factor)
    * - Arguments
-     - * **color** - a color string
+     - * **color** - a color string or a color object
        * **factor** - an integer corresponding to the darkening factor:
 
          * if the factor is greater than 100, this function returns a darker color (e.g., setting factor to 200 returns a color that is half the brightness);
@@ -325,7 +451,7 @@ Returns a darker (or lighter) color string
 lighter
 .......
 
-Returns a lighter (or darker) color string
+Returns a lighter (or darker) color. Returned type is the same as color arguments, i.e. a color string representation or a color object.
 
 .. list-table::
    :widths: 15 85
@@ -333,7 +459,7 @@ Returns a lighter (or darker) color string
    * - Syntax
      - lighter(color, factor)
    * - Arguments
-     - * **color** - a color string
+     - * **color** - a color string or a color object
        * **factor** - an integer corresponding to the lightening factor:
 
          * if the factor is greater than 100, this function returns a lighter color (e.g., setting factor to 150 returns a color that is 50% brighter);
@@ -366,6 +492,26 @@ Returns a color from the project's color scheme.
 
 
 .. end_project_color_section
+
+.. _expression_function_Color_project_color_object:
+
+project_color_object
+....................
+
+Returns a color from the project's color scheme. Contrary to project_color which returns a color string representation, project_color_object returns a color object.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - project_color_object(name)
+   * - Arguments
+     - * **name** - a color name
+   * - Examples
+     - * ``project_color_object('Logo color')`` → RGBA: 0.08,0.55,0.20,1.00
+
+
+.. end_project_color_object_section
 
 .. _expression_function_Color_ramp_color:
 
@@ -410,12 +556,55 @@ Returns a string representing a color from an expression-created ramp
 
 .. end_ramp_color_section
 
+.. _expression_function_Color_ramp_color_object:
+
+ramp_color_object
+.................
+
+Returns a color object from a color ramp. Contrary to ramp_color which returns a color string representation, ramp_color_object returns a color object.
+
+**Saved ramp variant**
+
+Returns a color object from a saved ramp
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - ramp_color_object(ramp_name, value)
+   * - Arguments
+     - * **ramp_name** - the name of the color ramp as a string, for example 'Spectral'
+       * **value** - the position on the ramp to select the color from as a real number between 0 and 1
+   * - Examples
+     - * ``ramp_color_object('Spectral',0.3)`` → RGBA: 0.99,0.75,0.45,1.00
+
+.. note:: The color ramps available vary between QGIS installations. This function may not give the expected results if you move your QGIS project between installations.
+
+
+**Expression-created ramp variant**
+
+Returns a color object from an expression-created ramp
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - ramp_color_object(ramp, value)
+   * - Arguments
+     - * **ramp** - the color ramp
+       * **value** - the position on the ramp to select the color from as a real number between 0 and 1
+   * - Examples
+     - * ``ramp_color_object(create_ramp(map(0,color_rgbf(0,0,0),1,color_rgbf(1,0,0))),1)`` → RGBA: 1.00,0.00,0.00,1.00
+
+
+.. end_ramp_color_object_section
+
 .. _expression_function_Color_set_color_part:
 
 set_color_part
 ..............
 
-Sets a specific color component for a color string, e.g., the red component or alpha component.
+Sets a specific color component for a color string or a color object, e.g., the red component or alpha component.
 
 .. list-table::
    :widths: 15 85
@@ -423,7 +612,7 @@ Sets a specific color component for a color string, e.g., the red component or a
    * - Syntax
      - set_color_part(color, component, value)
    * - Arguments
-     - * **color** - a color string
+     - * **color** - a color string or a color object
        * **component** - a string corresponding to the color component to set. Valid options are:
 
          
@@ -447,6 +636,7 @@ Sets a specific color component for a color string, e.g., the red component or a
        * **value** - new value for color component, respecting the ranges listed above
    * - Examples
      - * ``set_color_part('200,10,30','green',50)`` → '200,50,30,255'
+       * ``set_color_part(color_cmykf(0.21,0,0.92,0.70),'black',100)`` → CMYKA: 0.21,0.00,0.92,1.00,1.00
 
 
 .. end_set_color_part_section

@@ -120,8 +120,7 @@ Authors
 * Rüdiger Thiede - Rudi has written the QGIS instructional
   materials and parts of the PostGIS materials.
 * Tim Sutton (tim@kartoza.com) - Tim has overseen and guided the project and
-  co-authored the PostgreSQL and PostGIS parts. Tim also authored the custom
-  sphinx theme used for this manual.
+  co-authored the PostgreSQL and PostGIS parts.
 * Horst Düster (horst.duester@kappasys.ch ) - Horst co-authored the PostgreSQL
   and PostGIS parts
 * Marcelle Sutton - Marcelle provided proof-reading

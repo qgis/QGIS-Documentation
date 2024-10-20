@@ -890,7 +890,8 @@ Elevation Properties
 The |elevationscale| :guilabel:`Elevation` tab provides options to control
 the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
 and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
-Specifically, you can set:
+Specifically, you can choose to :guilabel:`Disable` this configuration if the layer
+does not contain elevation data or you can set:
 
 .. _figure_raster_elevation:
 
@@ -899,12 +900,27 @@ Specifically, you can set:
 
    Raster Elevation Properties
 
-* |unchecked| :guilabel:`Represents Elevation Surface`:
+* :guilabel:`Represents Elevation Surface`:
   whether the raster layer represents a height surface (e.g DEM) and the pixel
   values should be interpreted as elevations.
-  Check this option if you want to display a raster in an :ref:`elevation profile view <label_elevation_profile_view>`.
+  Choose this option if you want to display a raster in an :ref:`elevation profile view <label_elevation_profile_view>`.
   You will also need to fill in the :guilabel:`Band` to pick values from
   and can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`.
+* :guilabel:`Fixed Elevation Range`: The raster layer (or selected raster band)
+  is associated with a fixed elevation range.
+  This mode can be used when a layer has a single fixed elevation or a range (slice) of elevation values.
+  If a range is specified, pixels will be extruded over this range.
+  You can set the :guilabel:`Lower` and :guilabel:`Upper`
+  elevation range values for the layer, and specify whether the lower or upper :guilabel:`Limits` are inclusive or exclusive.
+* :guilabel:`Fixed Elevation Range Per Band`: Each band in the raster can have a fixed elevation range
+  associated with it. This is designed for data sources that expose elevation-related data in bands, such as NetCDF files.
+  For example, a raster with temperature data at different ocean depths.
+  When rendering, the uppermost matching band will be selected and used for the layer's data.
+  This feature is exposed as a user-editable table for raster bands with lower and upper values.
+  Users can either populate the lower and upper values manually
+  or use an |expression| :guilabel:`Expression` to auto-fill all band values based on expression.
+  The expression-based fill allows you to design expressions that extract useful information from band names.
+  For example, extracting the depth value from a band name like "Band 001: depth=-5500 (meters)".  
 * :guilabel:`Profile Chart Appearance`: controls the rendering
   of the raster elevation data in the profile chart.
   The profile :guilabel:`Style` can be set as:

@@ -244,7 +244,7 @@ To export a layout as PDF:
      * or :guilabel:`Lossless`, which creates bigger files in most cases, but is
        much more suitable for printing outputs or for post-production in external
        applications (requires Qt 5.13 or later).
-   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`:
+   * |unchecked| :guilabel:`Create Geospatial PDF`:
      Generate a georeferenced PDF file.
    * |unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting
      files, QGIS uses tiled based rendering that saves memory.
@@ -269,10 +269,10 @@ To export a layout as PDF:
 
    PDF Export Options
 
-.. note:: GeoPDF export is supported, and a number of GeoPDF specific options
+.. note:: Geospatial PDF export is supported, and a number of Geospatial PDF specific options
    are available:
    
-   * :guilabel:`Format` (GeoPDF format - there are some GeoPDF variations),
+   * :guilabel:`Format` (Geospatial PDF format - there are some variations),
    * :guilabel:`Include multiple map themes` (specify map themes to include),
    * :guilabel:`Include vector feature information` (choose the layers and
      group them into logical PDF groups).

@@ -2512,6 +2512,7 @@ Python code
 Raster layer unique values report
 ---------------------------------
 Returns the count and area of each unique value in a given raster layer.
+The calculation of the area is done in the area unit of the layer's CRS.
 
 Parameters
 ..........
@@ -2609,8 +2610,9 @@ Outputs
 
        * *value*: pixel value
        * *count*: count of pixels with this value
-       * *m*\ :sup:`2`: total area in square meters of pixels with
-         this value.
+       * *m2* or *deg2* or *ft2* or ... : total area of pixels with this value.
+         The column name depends on the area unit of the layer's CRS
+         and the calculation is done in that unit.
 
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``

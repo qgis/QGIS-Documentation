@@ -1271,21 +1271,21 @@ In the dialog that opens:
 
    * |checkbox| :guilabel:`Export RDF metadata` of the document such
      as the title, author, date, description...
-   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`: Generate a
+   * |unchecked| :guilabel:`Create Geospatial PDF`: Generate a
      `georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_.
      You can:
 
-     * Choose the GeoPDF :guilabel:`Format`
+     * Choose the Geospatial PDF :guilabel:`Format`
      * |checkbox| :guilabel:`Include vector feature information` in the
-       GeoPDF file: will include all the geometry and attribute
+       Geospatial PDF file: will include all the geometry and attribute
        information from features visible within the map in the output
-       GeoPDF file.
+       Geospatial PDF file.
 
      .. note::
 
-       A GeoPDF file can also be used as a data source.
-       For more on GeoPDF support in QGIS, see
-       https://north-road.com/2019/09/03/qgis-3-10-loves-geopdf/.
+       A Geospatial PDF file can also be used as a data source.
+       For more on Geospatial PDF support in QGIS, see
+       https://north-road.com/2019/09/03/qgis-3-10-loves-geospatialpdf/.
 
    * :guilabel:`Rasterize map`
    * |checkbox| :guilabel:`Simplify geometries to reduce output file

@@ -207,7 +207,7 @@ Line` border style, which we don't want. Clearly this symbol has to be changed.
 
 With the new :guilabel:`Simple Fill` symbol layer selected:
 
-#. Set the border style to :guilabel:`No Pen`, as before.
+#. Set the border style to :guilabel:`No Line`, as before.
 #. Change the fill style to something other than :guilabel:`Solid` or
    :guilabel:`No brush`. For example:
 

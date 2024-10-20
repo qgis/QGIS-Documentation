@@ -314,11 +314,18 @@ Python code
 Extract/clip by extent
 ----------------------
 Creates a new vector layer that only contains features which fall
-within a specified extent.
-
-Any features which intersect the extent will be included.
+within a specified extent. Any features which intersect the extent will be
+included by default.
 
 .. figure:: img/extractbyextent.png
+  :align: center
+
+  Extract operation between a three-feature input layer 'a' and a dashed extent (left) - 
+  resulting features with dashed extent for reference (right)
+
+Optionally, feature geometries can also be clipped to the extent.
+
+.. figure:: img/extractbyextent_clip.png
   :align: center
 
   Extract operation between a three-feature input layer 'a' and a dashed extent (left) - 
@@ -355,17 +362,10 @@ Parameters
      - [boolean]
        
        Default: False
-     - If checked, output geometries will be automatically converted
-       to multi geometries to ensure uniform output types.
-       Moreover the geometries will be clipped to the extent chosen
+     - If checked, the geometries will be clipped to the extent chosen
        instead of taking the whole geometry as output.
-       
-       .. figure:: img/extractbyextent_clip.png
-          :align: center
-
-          Extract operation between a three-feature input layer 'a' and a dashed extent (left) - 
-          resulting features with dashed extent for reference (right)
-
+       Moreover, output geometries will be automatically converted
+       to multi geometries to ensure uniform output types.
    * - **Extracted**
      - ``OUTPUT``
      - [same as input]
@@ -398,7 +398,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extractbyextent``
+**Algorithm ID**: ``native:extractbyextent``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

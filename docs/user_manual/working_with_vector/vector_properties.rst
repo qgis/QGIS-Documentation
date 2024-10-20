@@ -892,12 +892,21 @@ Heatmap Renderer
 
 With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live
 dynamic heatmaps for (multi)point layers.
-You can specify the heatmap radius in millimeters, points, pixels, map units or
-inches, choose and edit a color ramp for the heatmap style and use a slider for
+You can specify the heatmap :guilabel:`Radius` in millimeters, points, pixels, map units or
+inches, choose and edit a :guilabel:`Color ramp` for the heatmap style and use a slider for
 selecting a trade-off between render speed and quality. You can also define a
-maximum value limit and give a weight to points using a field or an expression.
+:guilabel:`Maximum value` limit and :guilabel:`Weight points by` using a field or an expression.
+
+Use |dataDefine| :sup:`Data defined override` to dynamically control :guilabel:`Radius` and
+:guilabel:`Maximum value` based on the attributes of your data.
+For example, the radius of a heatmap point could be determined by its population attribute,
+or the maximum value could be based on a temporal range.
+
 When adding or removing a feature the heatmap renderer updates the heatmap style
-automatically.
+automatically. The :guilabel:`Color ramp` will be shown as a legend bar and
+in the :guilabel:`Legend settings` you can set the :guilabel:`Labels` for the :guilabel:`Maximum`
+and :guilabel:`Minimum` values. You can also change the orientation and direction of the legend
+in the :guilabel:`Layout`.
 
 .. _figure_heatmap_symbology:
 
@@ -2583,6 +2592,13 @@ with the field type. The available widgets are:
   for fields of ``array`` type.
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
+
+  .. note::
+
+   Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined **range Field Domains**
+   will be automatically recognized by QGIS and assigned a **Range** widget for the relevant fields.
+   The widget will be prefilled with the minimum and maximum values specified in the domain.
+
 * **Relation Reference**: This is the default widget assigned to the referencing
   field (i.e., the foreign key in the child layer) when a :ref:`relation <vector_relations>`
   is set. It provides direct access to the parent feature's form which in turn
@@ -2599,6 +2615,12 @@ with the field type. The available widgets are:
 * **Value Map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
+  
+  .. note::
+
+   Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined **coded Field Domains**
+   will be automatically recognized by QGIS and assigned a **Value Map** widget for the relevant fields.
+
 * **Value Relation**: Offers values from a related table in a combobox. You can
   select layer, key column and value column. Several options are available to
   change the standard behaviors: allow null value, order by value, allow
@@ -2918,7 +2940,8 @@ that was selected from the identify results or attribute table (see :ref:`using_
 Double quote marks can be used to group text into a single argument to the program, script or command.
 Double quotes will be ignored if preceded by a backslash.
 
-Actions can invoke a single process, with arguments, so Boolean operators (such as ``&``, ``&&``, ``;``, ``|``) will not work.
+Actions can invoke a single process, with arguments, so Boolean operators
+(such as ``&``, ``&&``, ``;``, ``|``) will not work.
 In UNIX-like operating systems multiple commands can be executed via ``bash -c``.
 
 The :guilabel:`Action Scopes` allows you to define where the action should be available.
@@ -2972,6 +2995,24 @@ invoked.
 The second example uses the \%\% notation, which does not rely on a particular
 field for its value. When the action is invoked, the \%\% will be replaced by
 the value of the selected field in the identify results or attribute table.
+
+.. index:: Actions, Attribute Actions
+   single: Actions; Duplicate an action
+.. _duplicating_actions:
+
+Duplicating Actions
+-------------------
+
+QGIS allows you to duplicate existing actions. To duplicate an attribute action, 
+open the vector :guilabel:`Layer Properties` dialog and click on the :guilabel:`Actions` tab. 
+In the :guilabel:`Actions` tab, click the |duplicateAction| :sup:`Duplicate an action`
+to open the :guilabel:`Duplicate Action` dialog. You must have selected at least one existing action 
+in order to create a duplicate.
+
+In the dialogue that appears, make any changes that are necessary. See :ref:`adding_actions` 
+for further information. Once finished, press :guilabel:`OK` to create a duplicate of the action with 
+any changes that you made. If you did not edit the description, or if you changed it to be 
+identical to the description of any other existing action, "_1" will be added to the end of it.
 
 .. index::
    single: Actions; Using actions
@@ -3173,7 +3214,7 @@ feature identification:
     features in all layers
   * the feature identifier in the attribute table :ref:`form view <attribute_table_view>`
   * the feature identifier when the map or layout is exported to a layered
-    output format such as GeoPDF
+    output format such as Geospatial PDF
   * the map tip information, i.e. the message displayed in the map canvas
     when hovering over a feature of the active layer with the |mapTips| :sup:`Show Map Tips` icon pressed.
     Applicable when |checkbox| :guilabel:`Enable Map Tips` is active
@@ -3763,6 +3804,8 @@ To do so:
 .. |digitizing| image:: /static/common/digitizing.png
    :width: 1.5em
 .. |display| image:: /static/common/display.png
+   :width: 1.5em
+.. |duplicateAction| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em

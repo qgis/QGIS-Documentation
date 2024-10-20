@@ -8,7 +8,7 @@ the interface.
 **The goal for this lesson:** To understand the basics of the QGIS user
 interface.
 
-:abbr:`★☆☆ (Basic level)` Try Yourself:: The Basics
+:abbr:`★☆☆ (Basic level)` Try Yourself: The Basics
 -------------------------------------------------------------------------------
 
 .. _figure_gui_numbered:

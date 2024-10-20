@@ -72,7 +72,8 @@ The algorithm dialog
 
 Once you double-click on the name of the algorithm that you want to execute,
 a dialog similar to that in the :numref:`figure_parameters_dialog` below is shown
-(in this case, the dialog corresponds to the ``Centroids`` algorithm).
+(in this case, the dialog corresponds to the ``Centroids`` algorithm). Dialog title will include the group
+name from which the algorithm originates.
 
 .. _figure_parameters_dialog:
 

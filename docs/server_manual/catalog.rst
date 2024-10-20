@@ -4,10 +4,8 @@ Catalog
 The QGIS Server Catalog is a simple catalog that shows the list of QGIS projects
 served by the QGIS Server. It provides a user-friendly fully
 browsable website with basic mapping capabilities to quickly browse the
-datasets exposed through those QGIS projects.
-
-The QGIS Server catalog uses the variables QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES
-and  QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS (see :ref:`qgis-server-envvar`)
+datasets exposed through those QGIS projects. The catalog can be configured using
+the environment variables starting with ``QGIS_SERVER_LANDING_PAGE`` (see :ref:`qgis-server-envvar`).
 
 .. _figure_server_project_list:
 

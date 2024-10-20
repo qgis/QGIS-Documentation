@@ -7,6 +7,7 @@ Point Cloud Extraction
       :local:
       :depth: 1
 
+.. note:: These algorithms are only available if QGIS uses the PDAL library version 2.5.0 or newer.
 
 .. _pdalboundary:
 
@@ -240,7 +241,7 @@ Python code
 
 .. _pdalfilter:
 
-filter
+Filter
 ------
 
 Extracts point from the input point cloud which match PDAL expression and/or are inside of a cropping rectangle.

@@ -15,11 +15,12 @@ Authentication System Overview
 
    Anatomy of authentication system
 
+
 Authentication database
 -----------------------
 
-The new authentication system stores authentication configurations in an SQLite
-database file located, by default, at :file:`<profile directory>/qgis-auth.db`.
+The authentication system stores authentication configurations in an
+SQLite database file located, by default, at :file:`<profile directory>/qgis-auth.db`.
 
 This authentication database can be moved between QGIS installations without
 affecting other current QGIS user preferences, as it is completely separate from
@@ -34,6 +35,60 @@ without disclosure of its associated credentials.
    The parent directory of the `qgis-auth.db` can be set using the following
    environment variable, ``QGIS_AUTH_DB_DIR_PATH``, or set on the command line
    during launch with the ``--authdbdirectory`` option.
+
+
+Custom authentication databases
+-------------------------------
+
+QGIS can be configured to use a custom authentication database instead of the above
+mentioned default SQLite one: any database suppported by the Qt SQL module can be
+used (e.g. PostgreSQL, MySQL, etc), provided that the corresponding Qt SQL driver is
+available in the system.
+
+This can be useful in scenarios where a user wants to share the same authentication
+database between multiple QGIS installations, or when a user wants to use a different
+authentication database than the default SQLite one or when a centralized
+authentication database is used by QGIS server.
+
+The only way to configure a custom authentication database is by setting the
+``QGIS_AUTH_DB_URI`` environment variable to the URI of the connection, the URI
+is in the form of ``driver://username:password@hostname:port/database?options``.
+
+Where:
+    - ``driver`` is the name of the Qt SQL driver to use, e.g. ``QPSQL`` for PostgreSQL, ``QMYSQL`` for MySQL, etc.
+    - ``username`` is the username to use to connect to the database
+    - ``password`` is the password to use to connect to the database
+    - ``hostname`` is the hostname of the database server
+    - ``port`` is the port of the database server
+    - ``database`` is the name of the database to use
+    - ``options`` are the options to pass to the driver, e.g. ``sslmode=require`` for PostgreSQL
+
+.. note::
+
+    The ``schema`` can be specified in the URI options, e.g. ``QPSQL://username:password@hostname:port/database?schema=schema_name``
+
+    The database must exist before starting QGIS, and the user must have the necessary
+    permissions to connect to the database and to create the required tables if they
+    do not exist.
+
+.. warning::
+
+    The password in the URI is stored in plain text in the environment variable,
+    so it is recommended to use a passwordless user or a user with limited permissions
+    to connect to the database.
+
+.. warning::
+
+    Any database not based on SQLite is considered to be read-only (this can be changed by Python plugins if necessary).
+
+
+This is an advanced feature, designed to allow one or more custom authentication
+databases or even custom Python implementations of credentials storages to be used by QGIS.
+
+The system is also designed to allow for multiple authentication databases to be
+used but there is currently no user facing interface to manage multiple credential storages
+so its usage requires manual configuration and management, typically from a Python plugin.
+
 
 Master password
 ---------------
@@ -128,7 +183,7 @@ unless you need to do more comprehensive configuration management.
 .. figure:: img/auth-selector-wms-connection.png
    :align: center
 
-   WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and :guilabel:`Remove` 
+   WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and :guilabel:`Remove`
    authentication configuration buttons
 
 When creating or editing an authentication configuration, the info required is
@@ -227,24 +282,24 @@ authentication database and configurations:
 
    Utilities menu
 
-* **Input master password**: opens the master password input dialog, independent 
+* **Input master password**: opens the master password input dialog, independent
   of performing any authentication database command
-* **Clear cached master password**: unsets the master password if it has been 
+* **Clear cached master password**: unsets the master password if it has been
   set
-* **Reset master password**: opens a dialog to change the master password (the 
+* **Reset master password**: opens a dialog to change the master password (the
   current password must be known) and optionally back up the current database
 * **Clear network authentication access cache**: clears the authentication cache
   of all connections
 * **Automatically clear network authentication access cache on SSL errors**: the
   connection cache stores all authentication data for connections, also when the
   connection fails. If you change authentication configurations or certification authorities,
-  you should clear the authentication cache 
+  you should clear the authentication cache
   or restart QGIS. When this option is checked, the authentication cache will be
-  automatically cleared every time an SSL error occurs and you choose to abort 
+  automatically cleared every time an SSL error occurs and you choose to abort
   the connection
-* **Integrate master password with your Wallet/Keyring**: adds the master 
+* **Integrate master password with your Wallet/Keyring**: adds the master
   password to your personal Wallet/Keyring
-* **Store/update the master password in your Wallet/Keyring**: updates the 
+* **Store/update the master password in your Wallet/Keyring**: updates the
   changed master password in your Wallet/Keyring
 * **Clear the master password from your Wallet/Keyring**: deletes the master
   password from your Wallet/Keyring

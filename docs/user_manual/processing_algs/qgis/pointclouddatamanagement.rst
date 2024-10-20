@@ -7,6 +7,7 @@ Point Cloud Data Management
       :local:
       :depth: 1
 
+.. note:: These algorithms are only available if QGIS uses the PDAL library version 2.5.0 or newer.
 
 .. _pdalassignprojection:
 

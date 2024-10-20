@@ -132,8 +132,12 @@ displayed at the bottom of the frame.
   version of QGIS`. You can always open projects created with older version of
   QGIS but once the project is saved, trying to open with older release may fail
   because of features not available in that version.
-* :guilabel:`Enable macros` |selectString|. This option was created to handle
-  macros that are written to perform an action on project events. You can
+
+.. _load_project_code:
+
+* :guilabel:`Enable project's embedded Python code` |selectString|. This option
+  handles execution of macros that are written to perform an action on project
+  events, as well as custom Python functions to be used as expressions. You can
   choose between 'Never', 'Ask', 'For this session only' and
   'Always (not recommended)'.
 * :guilabel:`Default paths`: defines whether paths to files and layers used
@@ -176,7 +180,8 @@ plugin libraries`.
 
 Add or Remove :guilabel:`Documentation Path(s)` to use for QGIS help. By default,
 a link to the official online User Manual corresponding to the version being used
-is added. You can however add other links and prioritize them from top to bottom:
+is added (i.e. ``https://docs.qgis.org/§qgis_short_version/$qgis_locale/docs/user_manual/``).
+You can however add other links and prioritize them from top to bottom:
 each time you click on a :guilabel:`Help` button in a dialog, the topmost link
 is checked and if no corresponding page is found, the next one is tried,
 and so on.
@@ -1181,7 +1186,7 @@ Network settings
 * Define :guilabel:`Max retry in case of tile or feature request errors`
 * Define :guilabel:`User-Agent prefix` which defaults to ``Mozilla/5.0``.
   This value will be prepended to both QGIS and OS version
-  e.g.``Mozilla/5.0 QGIS/33801/Ubuntu 22.04.4 LTS`` to shape the user-agent.
+  e.g. ``Mozilla/5.0 QGIS/33801/Ubuntu 22.04.4 LTS`` to shape the user-agent.
 
 .. _figure_network_tab:
 
@@ -2138,7 +2143,9 @@ by the :ref:`elevation profile <label_elevation_profile_view>` tool.
 
    Project Elevation tab
 
-* :guilabel:`Vertical Reference System`
+* :guilabel:`Vertical Reference System`: If the CRS of your project is compound one (including a Z dimension),
+  then the vertical CRS used for the project will be the vertical component of the project CRS.
+  If your project CRS is horizontal, then you can select a specific vertical CRS by clicking on the |setProjection| :sup:`Select CRS`.
 * :guilabel:`Elevation Range`: helps you define the :guilabel:`Lower` and :guilabel:`Upper` limits
   for the elevation controller in the project.
 
@@ -2801,6 +2808,8 @@ in the QGIS user profile.
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |sensor| image:: /static/common/sensor.png
+   :width: 1.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |settings| image:: /static/common/settings.png
    :width: 1.5em

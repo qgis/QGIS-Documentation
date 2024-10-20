@@ -22,13 +22,13 @@ and often write a lot of formats:
   MapInfo and MicroStation file formats, AutoCAD DWG/DXF,
   GRASS and many more...
   Read the complete list of `supported vector formats
-  <https://gdal.org/drivers/vector/index.html>`_.
+  <https://gdal.org/drivers/vector/index.html>`__.
 * Raster data formats include GeoTIFF, JPEG, ASCII Gridded XYZ,
   MBTiles, R or Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data,
   ERDAS IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid, and
   many more...
   Read the complete list of `supported raster formats
-  <https://gdal.org/drivers/raster/index.html>`_.
+  <https://gdal.org/drivers/raster/index.html>`__.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle,
   MS SQL Server, SAP HANA, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
@@ -376,7 +376,16 @@ To load a layer from a file:
    Other formats can be loaded by selecting ``All files`` (the top item
    in the pull-down menu).
 #. Press :guilabel:`Open` to load the selected file into :guilabel:`Data
-   Source Manager` dialog
+   Source Manager` dialog.
+
+   Depending on the selected layer type, additional :guilabel:`Options`
+   (encoding, geometry type, table filtering, file locking, data formatting ...)
+   are available for configuring.
+   These options are described in detail in the specific GDAL
+   `vector <https://gdal.org/drivers/vector/>`__
+   or `raster <https://gdal.org/drivers/raster>`__ driver documentation.
+   At the top of the options, a text with hyperlink will directly lead to the documentation
+   of the appopriate driver for the selected file format.
 
    .. _figure_vector_layer_open_options:
 
@@ -404,13 +413,6 @@ To load a layer from a file:
 
       QGIS with Shapefile of Alaska loaded
 
-.. note::
-
- For loading vector and raster files the GDAL driver offers to define open
- actions. These will be shown when a file is selected. Options are described
- in detail on https://gdal.org/drivers/vector/, https://gdal.org/drivers/raster
- and if a file is selected in QGIS, a text with hyperlink will directly
- lead to the documentation of the selected file type.
 .. note::
 
  Because some formats like MapInfo (e.g., :file:`.tab`) or Autocad (:file:`.dxf`)
@@ -1601,11 +1603,14 @@ Once a connection to an ArcGIS REST Server is set, it's possible to:
 .. index:: 3D Tiles services
 .. _3d_tiles:
 
-Using 3D tiles services
------------------------
+Using 3D tiled scene services
+------------------------------
 
-To load a 3D tiles into QGIS, use the |addTiledSceneLayer| :guilabel:`Scene` tab
-in the :guilabel:`Data Source Manager` dialog. 
+QGIS supports multiple formats of 3D tiled datasets, grouped together as "tiled
+scenes". These include Cesium 3D Tiles and Quantized Mesh tiles.
+
+To load a tiled scene dataset into QGIS, use the |addTiledSceneLayer|
+:guilabel:`Scene` tab in the :guilabel:`Data Source Manager` dialog.
 
 .. _figure_scene:
 
@@ -1614,26 +1619,26 @@ in the :guilabel:`Data Source Manager` dialog.
 
    Data Source Manager - Scene
 
-Create a :guilabel:`New Cesium 3D Tiles Connection` by clicking on 
-:guilabel:`New`. Add :guilabel:`Name` and :guilabel:`URL` or add
-local tileset file.
+Create a connection by clicking on :guilabel:`New`. You can add a
+:guilabel:`New Cesium 3D Tiles Connection` or a :guilabel:`New Quantized Mesh
+Connection`.
 
-Support for 3D tiles:
+Choose a :guilabel:`Name` and set the :guilabel:`URL` to the URL of a layer description JSON file.
 
-* Remote source - ``http://example.com/tileset.json``
-* Local files - ``file:///path/to/tiles/tileset.json``
+The URL may be remote (e.g. ``http://example.com/tileset.json``) or local (e.g.
+``file:///path/to/tiles/tileset.json``).
 
 .. _figure_tiled_scene_connection:
 
 .. figure:: img/tiled_scene_connection.png
    :align: center
 
-   Tiled Scene Connection 
+   Tiled Scene Connection
 
 You can also add the service from :guilabel:`Browser Panel`.
 
 After creating new connection you are able to :guilabel:`Add` the new layer
-to your map. 
+to your map.
 
 .. _figure_3d_tiles_layer:
 
@@ -1642,6 +1647,12 @@ to your map.
 
    3D Tiles Layer - Textured
 
+.. _figure_quantized_mesh_layer:
+
+.. figure:: img/quantized_mesh_layer.png
+   :align: center
+
+   Quantized Mesh layer
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -1714,6 +1725,8 @@ to your map.
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em

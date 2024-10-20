@@ -64,11 +64,11 @@ Input types
      - ``alg.DATABASE_TABLE``
      - A database table
    * - Date
-     - :class:`ProcessingDateTimeParameterDataType.Date <qgis.gui.Qgis.ProcessingDateTimeParameterDataType>`
+     - :class:`ProcessingDateTimeParameterDataType.Date <qgis.core.Qgis.ProcessingDateTimeParameterDataType>`
      - ``alg.DATE``
      - A pure date
    * - Datetime
-     - :class:`ProcessingDateTimeParameterDataType.DateTime <qgis.gui.Qgis.ProcessingDateTimeParameterDataType>`
+     - :class:`ProcessingDateTimeParameterDataType.DateTime <qgis.core.Qgis.ProcessingDateTimeParameterDataType>`
      - ``alg.DATETIME``
      - A datetime
    * - Distance
@@ -122,7 +122,7 @@ Input types
      - ``alg.GEOMETRY``
      - A geometry
    * -
-     - :class:`ProcessingNumberParameterType.Integer <qgis.gui.Qgis.ProcessingNumberParameterType>`
+     - :class:`ProcessingNumberParameterType.Integer <qgis.core.Qgis.ProcessingNumberParameterType>`
      - ``alg.INT``
      - An integer
    * - Print Layout
@@ -162,7 +162,7 @@ Input types
      - ``alg.MULTILAYER``
      - A set of layers
    * - Number
-     - :class:`ProcessingNumberParameterType.Double <qgis.gui.Qgis.ProcessingNumberParameterType>`
+     - :class:`ProcessingNumberParameterType.Double <qgis.core.Qgis.ProcessingNumberParameterType>`
      - ``alg.NUMBER``
      - A numerical value
    * - Point
@@ -217,7 +217,7 @@ Input types
      - Selection of multiple layers to create a TIN with vertices
        and/or break lines
    * - Time
-     - :class:`ProcessingDateTimeParameterDataType.Time <qgis.gui.Qgis.ProcessingDateTimeParameterDataType>`
+     - :class:`ProcessingDateTimeParameterDataType.Time <qgis.core.Qgis.ProcessingDateTimeParameterDataType>`
      - ``alg.TIME``
      - A pure time
    * - Vector Features

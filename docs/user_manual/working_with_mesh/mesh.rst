@@ -327,6 +327,8 @@ Vectors Symbology
 
 .. note:: The |meshvectors| :sup:`Vectors` tab can be activated only if a
   vector dataset has been selected in the |general| :guilabel:`Datasets` tab.
+  Click on the |meshvectors| :sup:`Vectors` icon on the right side of the
+  |general| :guilabel:`Datasets` tab.
 
 In the |meshvectors| :sup:`Vectors` tab you can see and change the current
 visualization options of vectors for the selected group, as shown in
@@ -351,42 +353,50 @@ Mesh vector dataset can be styled using various types of :guilabel:`Symbology`:
   a user grid or randomly.
 * **Traces**: a nicer animation of the streamlines, the kind of effect you get
   when you randomly throws sand in the water and see where the sand items flows.
+* **Wind barbs**: vectors are represented with wind barbs, a common way to
+  represent wind speed and direction.
 
 Available properties depend on the selected symbology as shown in the following table.
 
 .. table:: Availability and meaning of the vectors symbology properties
 
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-  | Label                                  | Description and Properties                                                                | Arrow      | Streamlines | Traces     |
-  +========================================+===========================================================================================+============+=============+============+
-  | :guilabel:`Line width`                 | Width of the vector representation                                                        | |checkbox| | |checkbox|  | |checkbox| |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-  | :guilabel:`Coloring method`            | * a :guilabel:`Single color` assigned to all vectors                                      | |checkbox| | |checkbox|  | |checkbox| |
-  |                                        | * or a variable color based on vectors magnitude, using a                                 |            |             |            |
-  |                                        |   :ref:`Color ramp shader <color_ramp_shader>`                                            |            |             |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-  | :guilabel:`Filter by magnitude`        | Only vectors whose length for the selected dataset falls between a :guilabel:`Min`        | |checkbox| | |checkbox|  |            |
-  |                                        | and :guilabel:`Max` range are displayed                                                   |            |             |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-  | :guilabel:`Display on user grid`       | Places the vector on a grid with custom :guilabel:`X spacing` and :guilabel:`Y spacing`   | |checkbox| | |checkbox|  |            |
-  |                                        | and interpolates their length based on neighbours                                         |            |             |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-  | :guilabel:`Head options`               | :guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage of its shaft  | |checkbox| |             |            |
-  |                                        | length                                                                                    |            |             |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-  | :guilabel:`Arrow length`               | * **Defined by Min and Max**: You specify the minimum and maximum length for the arrows,  | |checkbox| |             |            |
-  |                                        |   QGIS will interpolate their size based on the underlying vector's magnitude             |            |             |            |
-  |                                        | * **Scale to magnitude**: arrow length is proportional to their vector's magnitude        |            |             |            |
-  |                                        | * **Fixed**: all the vectors are shown with the same length                               |            |             |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-  | :guilabel:`Streamlines seeding method` | * **On mesh/grid**: relies on the user grid to display the vectors                        |            | |checkbox|  |            |
-  |                                        | * **Randomly**: vector placement is randomly done with respect to a certain density       |            |             |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-  | :guilabel:`Particles count`            | The amount of "sand" you want to throw into visualisation                                 |            |             | |checkbox| |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-  | :guilabel:`Max tail length`            | The time until the particle fades out                                                     |            |             | |checkbox| |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+
-
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | Label                                  | Description and Properties                                                                | Arrow      | Streamlines | Traces     | Wind Barbs |
+  +========================================+===========================================================================================+============+=============+============+============+
+  | :guilabel:`Line width`                 | Width of the vector representation                                                        | |checkbox| | |checkbox|  | |checkbox| | |checkbox| |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Coloring method`            | * a :guilabel:`Single color` assigned to all vectors                                      | |checkbox| | |checkbox|  | |checkbox| | |checkbox| |
+  |                                        | * or a variable color based on vectors magnitude, using a                                 |            |             |            |            |
+  |                                        |   :ref:`Color ramp shader <color_ramp_shader>`                                            |            |             |            |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Filter by magnitude`        | Only vectors whose length for the selected dataset falls between a :guilabel:`Min`        | |checkbox| | |checkbox|  |            | |checkbox| |
+  |                                        | and :guilabel:`Max` range are displayed                                                   |            |             |            |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Display on user grid`       | Places the vector on a grid with custom :guilabel:`X spacing` and :guilabel:`Y spacing`   | |checkbox| | |checkbox|  |            | |checkbox| |
+  |                                        | and interpolates their length based on neighbours                                         |            |             |            |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Head options`               | :guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage of its shaft  | |checkbox| |             |            |            |
+  |                                        | length                                                                                    |            |             |            |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Arrow length`               | * **Defined by Min and Max**: You specify the minimum and maximum length for the arrows,  | |checkbox| |             |            |            |
+  |                                        |   QGIS will interpolate their size based on the underlying vector's magnitude             |            |             |            |            |
+  |                                        | * **Scale to magnitude**: arrow length is proportional to their vector's magnitude        |            |             |            |            |
+  |                                        | * **Fixed**: all the vectors are shown with the same length                               |            |             |            |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Streamlines seeding method` | * **On mesh/grid**: relies on the user grid to display the vectors                        |            | |checkbox|  |            |            |
+  |                                        | * **Randomly**: vector placement is randomly done with respect to a certain density       |            |             |            |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Particles count`            | The amount of "sand" you want to throw into visualisation                                 |            |             | |checkbox| |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Max tail length`            | The time until the particle fades out                                                     |            |             | |checkbox| |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Wind Barbs`                 | * **Length**: Specifies the length of the wind barbs. Choose the units from a drop-down   |            |             |            | |checkbox| |
+  |                                        |   menu.                                                                                   |            |             |            |            |
+  |                                        | * **Data Units**: Specifies the units of wind speed data. Wind barbs encode the wind      |            |             |            |            |
+  |                                        |   in knots (nautical miles per hour). Therefore, you should select the units that         |            |             |            |            |
+  |                                        |   your data are in, or use a custom :guilabel:`Multiplier` to convert your data units     |            |             |            |            |
+  |                                        |   to knots. This ensures that the wind speed is accurately represented.                   |            |             |            |            |
+  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
 
 .. _mesh_symbology_rendering:
 
@@ -647,9 +657,9 @@ Elevation Properties
 --------------------
 
 The |elevationscale| :guilabel:`Elevation` tab provides options to control
-the layer elevation properties within a :ref:`3D map view <label_3dmapview>`
+the layer elevation properties within a :ref:`3D map view <label_3dmapview>` and :ref:`2D map view <label_mapview>`
 and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
-Specifically, you can set:
+Specifically, you can configure how heights from your dataset are interpreted:
 
 .. _figure_mesh_elevation:
 
@@ -658,9 +668,29 @@ Specifically, you can set:
 
    Mesh Elevation properties
 
-* :guilabel:`Elevation Surface`: how the mesh layer vertices Z values
+* :guilabel:`From vertices`: how the mesh layer vertices Z values
   should be interpreted as terrain elevation.
   You can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`.
+  This setting is available for :ref:`3D map view <label_3dmapview>`
+  and :ref:`profile tool charts <label_elevation_profile_view>`.
+* :guilabel:`Fixed Elevation Range`: the mesh layer is linked to a fixed elevation range.
+  This mode is applicable when a layer has either a single fixed elevation or a range (slice)
+  of elevation values. If a range is specified, mesh values will be extruded over this range.
+  You can set the :guilabel:`Lower` and :guilabel:`Upper`
+  elevation range values for the layer, and specify whether the lower or upper :guilabel:`Limits`
+  are inclusive or exclusive.
+  When enabled, the layer will only be visible in :ref:`elevation filtered 2D maps <elevation_controller>`
+  when the layer's range is included in the map's Z range.
+* :guilabel:`Fixed Elevation Range Per Group`: each group in the mesh layer
+  is associated with a fixed elevation range. This mode can be used when a layer
+  has elevation data exposed through different dataset groups.
+  This feature is exposed as a user-editable table for dataset groups with lower and upper values.
+  You can either populate the lower and upper values manually
+  or use an |expression| :guilabel:`Expression` to auto-fill all group values based on an expression.
+  When enabled, the layer will be filtered in the :ref:`2D map view <label_mapview>`,
+  displaying only values within the map filter ranges.
+  In :ref:`3D map view <label_3dmapview>` or :ref:`profile tool charts <label_elevation_profile_view>`, 
+  the full extent of the layer will be displayed, ignoring the filtering.
 * :guilabel:`Profile Chart Appearance`: controls the rendering
   of the mesh elements elevation in the profile chart.
   The profile :guilabel:`Style` can be set as:
