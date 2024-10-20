@@ -1588,6 +1588,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |stackedBar| image:: /static/common/stacked-bar.png
    :width: 1.5em
+.. |stackedDiagram| image:: /static/common/stacked-diagram.png
+   :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |stopwatch| image:: /static/common/mIconStopwatch.png

@@ -3929,6 +3929,8 @@ To do so:
    :width: 1.5em
 .. |stackedBar| image:: /static/common/stacked-bar.png
    :width: 1.5em
+.. |stackedDiagram| image:: /static/common/stacked-diagram.png
+   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
