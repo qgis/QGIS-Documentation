@@ -1795,9 +1795,11 @@ The current core implementation of diagrams provides support for:
 * |text| :guilabel:`Text diagram`, a horizontally divided circle showing statistic
   values inside;
 * |histogram| :guilabel:`Histogram`, bars of varying colors for each attribute
-  aligned next to each other
-* |stackedBar| :guilabel:`Stacked bars`, Stacks bars of varying colors for each
-  attribute on top of each other vertically or horizontally
+  aligned next to each other;
+* |stackedBar| :guilabel:`Stacked bars`, stacks bars of varying colors for each
+  attribute on top of each other vertically or horizontally;
+* |stackedDiagram| :guilabel:`Stacked diagram`, stacks diagrams of equal or varying
+  types, next to each other, vertically or horizontally.
 
 In the top right corner of the :guilabel:`Diagrams` tab, the |autoPlacementSettings|
 :sup:`Automated placement settings (applies to all layers)` button provides
