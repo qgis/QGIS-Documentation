@@ -283,7 +283,7 @@ Icon                     Substitution                 Icon                     S
 |labelingRuleBased|      ``|labelingRuleBased|``      |labelingObstacle|       ``|labelingObstacle|``
 |piechart|               ``|piechart|``               |diagramNone|            ``|diagramNone|``
 |text|                   ``|text|``                   |histogram|              ``|histogram|``
-|stackedBar|             ``|stackedBar|``
+|stackedBar|             ``|stackedBar|``             |stackedDiagram|         ``|stackedDiagram|``
 |createAnnotationLayer|  ``|createAnnotationLayer|``  |annotationLayer|        ``|annotationLayer|``
 |textAnnotation|         ``|textAnnotation|``         |svgAnnotation|          ``|svgAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
