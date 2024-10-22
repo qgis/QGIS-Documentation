@@ -1801,7 +1801,8 @@ The current core implementation of diagrams provides support for:
 * |stackedBar| :guilabel:`Stacked bars`, stacks bars of varying colors for each
   attribute on top of each other vertically or horizontally;
 * |stackedDiagram| :guilabel:`Stacked diagram`, stacks diagrams of equal or varying
-  types, next to each other, vertically or horizontally.
+  types, next to each other, vertically or horizontally. More details at
+  :ref:`Stacked Diagrams <stacked_diagrams>`.
 
 In the top right corner of the :guilabel:`Diagrams` tab, the |autoPlacementSettings|
 :sup:`Automated placement settings (applies to all layers)` button provides
@@ -2001,6 +2002,32 @@ in the :ref:`Layers panel <label_legend>`, and in the :ref:`print layout legend
 
 When set, the diagram legend items (attributes with color and diagram size)
 are also displayed in the print layout legend, next to the layer symbology.
+
+.. _stacked_diagrams:
+
+Stacked Diagrams
+----------------
+
+Stacked diagrams allow users to create complex diagrams like population pyramids,
+where two subdiagrams, namely histograms, are located side by side and displayed
+horizontally.
+
+Multi-temporal diagrams can also be constructed as stacked diagrams. The number
+of subdiagrams, as well as the spacing between them can be configured.
+
+Moreover, subdiagrams can have different types (e.g., a pie chart alongside a
+histogram) and have their own independent settings like :ref:`Attributes <diagram_attributes>`,
+:ref:`Rendering <diagram_appearance>`, :ref:`Size <diagram_size>`,
+:ref:`Options <diagram_options>` and :ref:`Legend <diagram_legend>`.
+
+:ref:`Placement <diagram_placement>` settings in a stacked diagram, as well as
+some visibility settings (located in the :ref:`Rendering <diagram_appearance>`
+tab), are determined by the placement and visibility settings of the first
+subdiagram in the stack.
+
+Finally, subdiagram ordering is given by the item ordering in the Stacked Diagram's
+list. The first subdiagram appears to the left in a horizontal stacked diagram,
+or in the upper part of a vertical one.
 
 .. _vector_mask_menu:
 
