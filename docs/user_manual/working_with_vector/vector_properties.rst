@@ -1783,7 +1783,9 @@ Diagrams Properties
 ===================
 
 The |diagram| :guilabel:`Diagrams` tab allows you to add a graphic overlay to
-a vector layer (see :numref:`figure_diagrams_attributes`).
+a vector layer (see :numref:`figure_diagrams_attributes`). This
+dialog can also be accessed from the :guilabel:`Layer Styling` panel, or using
+the |diagram| :sup:`Layer Diagram Options` button of the **Labels toolbar**.
 
 The current core implementation of diagrams provides support for:
 
