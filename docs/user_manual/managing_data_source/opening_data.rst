@@ -450,9 +450,14 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * ``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required,
     an :ref:`authentication <authentication_index>`.
   * Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft
-    Azure Blob``, ``Alibaba OSS Cloud``, ``Open Stack Swift Storage``.
+    Azure Blob``, ``Microsoft Azure Data Lake Storage``, ``Alibaba OSS Cloud``, and
+    ``Open Stack Swift Storage`` supports direct control over VSI :guilabel:`Credential Options`
+    when adding OGR vector or GDAL raster layers.
     You need to fill in the :guilabel:`Bucket or container` and the
     :guilabel:`Object key`.
+    When credential options are found in a layer's URI, QGIS uses GDAL's `VSISetPathSpecificOption`
+    to set the credential option for that specific VSI driver and bucket.
+    This allows different layers to use different credentials.
   * service supporting OGC ``WFS 3`` (still experimental),
     using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
     ``CouchDB`` database.
