@@ -1654,6 +1654,35 @@ to your map.
 
    Quantized Mesh layer
 
+.. index:: Cloud connections
+.. _cloud_connections:
+
+Using Cloud Connections
+-----------------------
+
+QGIS supports connections to cloud services like Alibaba Cloud OSS, Amazon S3, Google Cloud Storage,
+Microsoft Azure Blob Storage, Microsoft Azure Data Lake Storage, and OpenStack Swift Object Storage.
+You can load vector and raster data from these services into QGIS.
+Set up a new |cloud| :guilabel:`Cloud` connection in the :guilabel:`Browser` panel by right-clicking
+on the :guilabel:`Cloud` entry and selecting :guilabel:`New Connection`. You will see a drop-down list of
+available cloud services.
+Select the service you want to connect to and fill in the required fields:
+
+.. _figure_cloud_connection:
+
+.. figure:: img/cloud_connection.png
+   :align: center
+
+   Cloud Connection Dialog
+
+* :guilabel:`Name`: A name for the connection.
+* :guilabel:`Bucket or Container`: The name of the bucket or container in the cloud service.
+* :guilabel:`Object Key` (optional): The key of the object in the bucket or container.
+* :guilabel:`Credentials`: The credentials to access the cloud service.
+
+You can also choose to :guilabel:`Save Connection` to an XML file
+or :guilabel:`Load Connection` from an XML file.
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -1692,6 +1721,8 @@ to your map.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |cloud| image:: /static/common/mIconCloud.png
+   :width: 1.5em   
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
