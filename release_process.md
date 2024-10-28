@@ -77,18 +77,11 @@ New releases are branched off the `master` branch and thus require a set of chan
 - [ ] ⚠️ Make sure that the [C++ API documentation](https://api.qgis.org/api) of the new version is available
   (normally done automatically during software release steps)
 - [ ] ⚠️ Make sure that the [PyQGIS documentation](https://qgis.org/pyqgis) of the new version is available.
-  - [ ] Update [build-docker.yml](https://github.com/qgis/QGIS/blob/master/.github/workflows/build-docker.yml)
-    with the latest release
-  - [ ] Update [pyqgis_conf.yml](https://github.com/qgis/pyqgis/blob/master/pyqgis_conf.yml)
-    with the latest version
+  This may require update of the `current_stable` value in [pyqgis_conf.yml](https://github.com/qgis/pyqgis/blob/master/pyqgis_conf.yml).
 - [ ] Add new labels to triage issues and pull requests: `backport <new_branch>`, new target versions
 - [ ] Create a new milestone for the new cycle of LTR that starts
-- [ ] Reference the new version in the [docs index page](https://docs.qgis.org) of QGIS main website
-  source file is available at [docs_index.html](https://github.com/qgis/QGIS-Website/blob/master/themes/qgis-theme/docs_index.html)
-  - [ ] Replace references of the 2 years old LTR with the new release (e.g. 3.22 --> 3.34)
-  - [ ] Mention the 2 years old lTR in the old versions list at the bottom of the page 
-  - [ ] Create appropriate version image using [doc.xcf](https://github.com/qgis/QGIS-Website/blob/master/themes/qgis-theme/static/images/doc.xcf) file.
-  You can find a how-to at [qgis/QGIS-Website#948 (comment)](https://github.com/qgis/QGIS-Website/issues/948#issuecomment-968113301)
+- [ ] Reference the new version in the [docs index page](https://www.qgis.org/resources/hub/#documentation) of QGIS main website.
+  Source file is available at [hub.md](https://github.com/qgis/QGIS-Website/blob/main/content/resources/hub.md)
 
 ### Server
 - [ ] Update commands to publish the new version (in English, as html, zip and pdf)
@@ -105,8 +98,7 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 <details>
 
 - [ ] In [conf.py](conf.py) file: set the html_context `outdated` option to `True`
-- [ ] Pull translations for all languages from transifex
-  (see instructions in [README](README.md) file)
+- [ ] Pull translations for all languages from transifex (see instructions in [README](README.md) file)
 - [ ] Build the docs one more time
 
 </details>
@@ -154,9 +146,10 @@ is being translated. So when a new LTR is published, we disconnect the old one a
 ### Repository and project configuration
 <details>
   
-- [ ] Make the new LTR the topmost version in the [docs page index](https:// docs.qgis.org) of QGIS main website.
-  Source file is available at [docs_index.html](https://github.com/qgis/QGIS-Website/blob/master/themes/qgis-theme/docs_index.html)
-  - [ ] You might want to switch versions references between the 2 latest LTR (e.g. 3.28 <--> 3.34)
+- [ ] Update the [docs index page](https://www.qgis.org/resources/hub/#documentation).
+  Source file is available [hub.md](https://github.com/qgis/QGIS-Website/blob/main/content/resources/hub.md)
+  - [ ] Reference the new version as current LTR
+  - [ ] Move the old lTR under the "archived releases" tab.
 
 </details>
 
