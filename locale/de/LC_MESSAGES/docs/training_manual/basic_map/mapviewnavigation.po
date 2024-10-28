@@ -6,9 +6,9 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# Alissa Müller, 2024
-# stefan wolff <wolff@mellum.de>, 2024
 # Joern G <j.gutzeit@umwelt-it.de>, 2024
+# stefan wolff <wolff@mellum.de>, 2024
+# Steffen Döring, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2024\n"
+"Last-Translator: Steffen Döring, 2024\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,9 +32,9 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"Übersetzen ist eine Gemeinschaftsleistung :ref:`Sie können mitmachen "
-"<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
-" übersetzt."
+"Übersetzen ist eine Gemeinschaftsarbeit :ref:`Sie können mitmachen "
+"<translation_guidelines>. Diese Seite befindet sich derzeit im "
+"|Übersetzungsfortschritt|."
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:2
 msgid "Lesson: Navigating the Map Canvas"
@@ -46,17 +46,22 @@ msgid ""
 "within the Map Canvas. These tools will allow you to visually explore the "
 "layers at different scales."
 msgstr ""
-"Dieser Abschnitt behandelt grundlegende Navigationswerkzeuge in QGIS, die "
-"zur Navigation in der Kartenansicht genutzt werden. Diese Werkzeuge erlauben"
-" es die Kartenlayer in verschiedenen Maßstäben visuell zu erkunden."
+"Dieser Abschnitt behandelt grundlegende Werkzeuge in QGIS, die zur "
+"Navigation in der Kartenansicht genutzt werden. Diese Werkzeuge erlauben es,"
+" die Layer in verschiedenen Maßstäben visuell zu erkunden."
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:7
 msgid ""
 "**The goal for this lesson:** Learn how to use Pan and Zoom tools within "
 "QGIS and learn about map scale."
 msgstr ""
-"**Ziel dieser Lerneinheit:** Lerne die Werkzeuge Pan und Zoom in QGIS zu "
-"nutzen und lerne etwas über Kartenmaßstäbe."
+"**Ziel dieser Lerneinheit:** Lerne die Werkzeuge Verschieben/Pan und Zoom in"
+" QGIS zu nutzen und etwas über Kartenmaßstäbe."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:11
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Basic Navigation Tools"
+msgstr ""
+":abbr:`★☆☆ (Leicht)` Machen Sie mit: Grundlegende Navigationswerkzeuge"
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:13
 msgid ""
@@ -64,7 +69,7 @@ msgid ""
 " that we can explore during this tutorial."
 msgstr ""
 "Bevor wir lernen, wie man in der Kartenansicht navigiert, fügen wir einige "
-"Ebenen hinzu, die wir im Laufe dieses Tutorials erkunden können."
+"Layer hinzu, die wir im Laufe dieses Tutorials erkunden können."
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:16
 msgid ""
@@ -74,19 +79,27 @@ msgid ""
 "similar to the snippet in :numref:`figure_roads_buildings_added` below "
 "(colors do not matter):"
 msgstr ""
-"Öffne ein neues Projekt und wende die Schritte an, die Du in  :ref:`Karte "
-"erstellen <tm_prepare_a_map>` gelernt hast, lade die bekannten  "
-"``protected_areas``, ``roads`` und ``buildings`` als Layer in das Projekt. "
-"Das Ergebnis sollte so aussehen wie im Screenshot unten "
-":numref:`figure_roads_buildings_added`  (Farbe können abweichen):"
+"Öffnen Sie ein neues leeres Projekt und laden Sie mithilfe der in "
+":ref:`Karte erstellen <tm_prepare_a_map>` gelernten Schritte die bekannten "
+"``Schutzgebiete``, ``Straßen`` und ``Gebäude`` als Layer in das Projekt. Das"
+" Ergebnis sollte so aussehen wie im Screenshot unten "
+":numref:`figure_roads_buildings_added` (Farbe können abweichen):"
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:27
 msgid "Protected areas, roads and buildings added"
-msgstr "Protected areas, roads und buildings hinzugefügt"
+msgstr "Hinzugefügte Schutzgebiete, Straßen und Gebäude"
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:29
 msgid "Let's first learn how to use the Pan Tool."
-msgstr "Lerne zunächst die Funktion 'Verschieben' zu nutzen."
+msgstr "Lerne zunächst die Funktion 'Verschieben/Pan' zu nutzen."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:31
+msgid ""
+"In the `Map Navigation Toolbar`, make sure the |pan| :sup:`Pan` button is "
+"activated."
+msgstr ""
+"Stellen Sie sicher, dass in der Symbolleiste für die Kartennavigation die "
+"Option   |pan| :sup:`Verschieben` aktiviert ist."
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:114
 msgid "pan"
@@ -96,41 +109,195 @@ msgstr "pan"
 msgid "Move the mouse to the center of the Map Canvas area."
 msgstr "Bewege den Mauscursor in die Mitte des Kartenbereiches."
 
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:33
+msgid ""
+"Left-click and hold, and drag the mouse in any direction to pan the map."
+msgstr ""
+"Klicken Sie mit der linken Maustaste, halten Sie sie gedrückt, und ziehen "
+"Sie die Maus in eine beliebige Richtung, um die Karte zu verschieben."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:35
+msgid "Next, let's zoom in and take a closer look at the layers we imported."
+msgstr ""
+"Als Nächstes zoomen wir hinein und werfen einen genaueren Blick auf die "
+"Layer, die wir importiert haben."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:37
+msgid ""
+"In the `Map Navigation Toolbar`, click on the |zoomIn| :sup:`Zoom In` "
+"button."
+msgstr ""
+"Klicken Sie in der Symbolleiste für die Kartennavigation auf das Symbol  "
+"|zoomIn| :sup:`Hineinzoomen`."
+
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:118
 msgid "zoomIn"
 msgstr "zoomIn"
 
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:38
+msgid ""
+"Move your mouse to approximately the top left area of where there is the "
+"highest density of buildings and roads."
+msgstr ""
+"Bewegen Sie Ihre Maus ungefähr in den oberen linken Bereich, wo sich die "
+"meisten Gebäude und Straßen befinden."
+
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:40
 msgid "Left click and hold."
-msgstr "Linksklicken und halten."
+msgstr ""
+"Klicken Sie mit der linken Maustaste und halten Sie die Maustaste gedrückt."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:41
+msgid ""
+"Then drag the mouse, which will create a rectangle, and cover the dense area"
+" of buildings and roads (:numref:`figure_zoom_in_mapview`)."
+msgstr ""
+"Ziehen Sie dann die Maus, wodurch ein Rechteck entsteht. Ziehen Sie das "
+"Rechteck über den Bereich mit den vielen Gebäuden und Straßen "
+"(:numref:`figure_zoom_in_mapview`) auf."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:49
+msgid "Zoom in"
+msgstr "Hineinzoomen"
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:51
+msgid ""
+"Release the left click.  This will zoom in to include the area that you "
+"selected with your rectangle."
+msgstr ""
+"Lassen Sie die linke Maustaste los. Dadurch wird der Bereich vergrößert, den"
+" Sie mit Ihrem Rechteck ausgewählt haben."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:57
+msgid ""
+"To zoom out, select the |zoomOut| :sup:`Zoom Out` button and perform the "
+"same action as you did for zooming in."
+msgstr ""
+"Um die Ansicht zu verkleinern, wählen Sie die Schaltfläche "
+":sup:`Hinauszoomen` und führen Sie die gleiche Aktion wie beim Vergrößern "
+"durch."
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:124
 msgid "zoomOut"
 msgstr "zoomOut"
 
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:60
+msgid ""
+"As you pan, zoom in, or zoom out, QGIS saves these views in a history.  This"
+" allows you to backtrack to a previous view."
+msgstr ""
+"Beim Verschieben, Hinein- oder Hinauszoomen speichert QGIS diese Ansichten "
+"in einem Verlaufsprotokoll. Dies ermöglicht es Ihnen, zu einer vorherigen "
+"Ansicht zurückzukehren."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:63
+msgid ""
+"In the `Map Navigation Toolbar`, click on |zoomLast| :sup:`Zoom Last` button"
+" to go to your previous view."
+msgstr ""
+"Klicken Sie in der `Symbolleiste für die Kartennavigation` auf |zoomLast| "
+":sup:`Zoom zurück`, um in die vorherige Ansicht zu wechseln."
+
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:120
 msgid "zoomLast"
 msgstr "zoomLast"
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:65
+msgid ""
+"Click on |zoomNext| :sup:`Zoom Next` button to proceed to move forward in "
+"your history."
+msgstr ""
+"Klicken Sie auf |zoomNext| :sup:`Zoom vor`, um in Ihrem Verlauf "
+"fortzufahren."
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:122
 msgid "zoomNext"
 msgstr "zoomNext"
 
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:68
+msgid ""
+"Sometimes after exploring the data, we need to reset our view to the extent "
+"of all the layers.  Instead of trying to use the Zoom Out tool multiple "
+"times, QGIS provides us with a button to do that action for us."
+msgstr ""
+"Manchmal müssen wir nach dem Untersuchen der Daten unsere Kartenansicht auf "
+"die Ausdehnung aller Layer zurücksetzen. Anstatt zu versuchen, das "
+"Hinauszoomen-Werkzeug mehrmals zu verwenden, bietet QGIS eine Schaltfläche, "
+"um diese Aktion auf einmal auszuführen."
+
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:72
 msgid "Click on the |zoomFullExtent| :sup:`Zoom Full Extent` button."
-msgstr "Klick auf die Schaltfläche |zoomFullExtent| :sup:`Volle Ausdehnung` "
+msgstr ""
+"Klicken SIe auf die Schaltfläche |zoomFullExtent| :sup:`Volle Ausdehnung`."
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:116
 msgid "zoomFullExtent"
 msgstr "zoomFullExtent"
 
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:74
+msgid ""
+"As you zoomed in and out, notice that the :guilabel:`Scale` value in the "
+"Status Bar changes. The :guilabel:`Scale` value represents the Map Scale. In"
+" general, the number to the right of :guilabel:`:` represents how many times"
+" smaller the object you are seeing in the Map Canvas is to the actual object"
+" in the real world."
+msgstr ""
+"Beachten Sie, dass sich beim Hinein- und Hinauszoomen der "
+":guilabel:`Maßstabs`-Wert in der Statusleiste ändert. Der "
+":guilabel:`Maßstabs`-Wert stellt den Kartenmaßstab dar. Im Allgemeinen gibt "
+"die Zahl rechts von :guilabel:`:` an, wie oft das Objekt, das Sie im "
+"Kartenausschnitt sehen, kleiner ist als das tatsächliche Objekt in der "
+"realen Welt."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:84
+msgid "You can also use this field to set the Map Scale manually."
+msgstr ""
+"Sie können dieses Feld auch verwenden, um den Kartenmaßstab manuell "
+"festzulegen."
+
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:86
 msgid "In the Status Bar, click on the :guilabel:`Scale` text field."
-msgstr "Klicke in der Status bar auf die Auswahl :guilabel:`Kartenmaßstab`"
+msgstr ""
+"Klicken Sie in der Statusleiste auf das :guilabel:`Kartenmaßstabs`-Textfeld."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:87
+msgid ""
+"Type in ``50000`` and press :kbd:`Enter`.  This will redraw the features in "
+"the Map Canvas to reflect the scale you typed in."
+msgstr ""
+"Geben Sie ``50000`` ein und drücken Sie :kbd:`Enter`. Dadurch werden die "
+"Objekte im Kartenausschnitt neu gezeichnet, um den von Ihnen eingegebenen "
+"Maßstab widerzuspiegeln."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:89
+msgid ""
+"Alternatively, click on the options arrow of the :guilabel:`Scale` field to "
+"see the preset map scales."
+msgstr ""
+"Alternativ können Sie auf den Optionspfeil des Feldes :guilabel:`Maßstab` "
+"klicken, um die voreingestellten Kartenmaßstäbe einzusehen."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:95
+msgid ""
+"Select :guilabel:`1:5000`.  This will also update the map scale in the Map "
+"Canvas."
+msgstr ""
+"Wählen Sie :guilabel:`1:5000` aus. Dadurch wird der Kartenmaßstab im "
+"Kartenausschnitt aktualisiert."
+
+#: ../../docs/training_manual/basic_map/mapviewnavigation.rst:97
+msgid ""
+"Now you know the basics of navigating the Map Canvas. Check out the User "
+"Manual on :ref:`Zooming and Panning <zoom_pan>` to learn about alternative "
+"ways of navigating the Map Canvas."
+msgstr ""
+"Jetzt kennen Sie die Grundlagen der Navigation im Kartenfeld. Lesen Sie das "
+"Benutzerhandbuch zum :ref:`Zoomen und Verschieben <zoom_pan>`, um "
+"alternative Möglichkeiten der Karten-Navigation kennenzulernen."
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:102
 msgid "In Conclusion"
-msgstr "Zusammengefasst"
+msgstr "Zusammenfassung"
 
 #: ../../docs/training_manual/basic_map/mapviewnavigation.rst:104
 msgid ""
@@ -138,7 +305,7 @@ msgid ""
 "explore and visually inspect the layers. This could be done for initial data"
 " exploration, or to validate output of a spatial analysis."
 msgstr ""
-"Es ist wichtig zu wissen, wie man in der Kartenansicht navigiert, das "
-"erlaubt so die Ebenen zu erkunden und visuell zu überprüfen. Dies kann für "
-"eine erste Sichtung der Daten oder zur Überprüfung der Ergebnisse einer "
-"räumlichen Analyse erfolgen."
+"Zu wissen, wie man in der Kartenansicht navigiert, ist wichtig, da man "
+"dadurch die Layer erkunden und visuell überprüfen kann. Dies kann für eine "
+"erste Sichtung der Daten oder zur Überprüfung der Ergebnisse einer "
+"räumlichen Analyse hilfreich sein."
