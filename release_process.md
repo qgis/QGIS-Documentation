@@ -70,10 +70,6 @@ New releases are branched off the `master` branch and thus require a set of chan
   - [ ] In [README.MD](README.MD) file, update the badges to point to the current branch instead of `master`,
     and current version instead of `testing`
   - [ ] In [Makefile](Makefile) file, set the `VERSION` number as in the conf.py file
-  - [ ] In [docker-world.sh](docker-world.sh) file: replace `QGIS-Documentation` with `QGIS-Documentation-x.y`
-  - [ ] In [cronjob.sh](cronjob.sh) file:
-    - [ ] replace `QGIS-Documentation` with `QGIS-Documentation-x.y`
-    - [ ] replace `qgis_docs_master_build` with `qgis_docs_x.y_build`
   - [ ] In [doctest.dockerfile](doctest.dockerfile): set the project container to pull QGIS sources from (i.e. `release-x_y`)
   - [ ] In main [index.rst](docs/index.rst) file: replace `testing` with `x.y` in the Table Of Contents
 </details>
@@ -174,5 +170,5 @@ Automating the process as much as possible would lower the risk and make it less
 
 * Some values are somehow copy-pasted across places while they could likely be put in a variable: 
 
-  * languages list: they are defined in docs_conf.yml, Makefile, docker-world.sh
-  * version number: it is defined in conf.py, Makefile, docker-world.sh, cronjob.sh, doctest.dockerfile
+  * languages list: they are defined in docs_conf.yml, Makefile
+  * version number: it is defined in conf.py, Makefile, doctest.dockerfile
