@@ -41,6 +41,8 @@ Otherwise, you will have to do the changes twice: in master and in the new branc
 - [ ] In [docs_conf.yml](docs_conf.yml) file: add the new release number to the `version_list` parameter
 - [ ] In [dependabot.yml](.github/dependabot.yml) file: Add label for backporting dependencies update to the new branch
 
+You can now create the `release_x.y` branch in the [repository](https://github.com/qgis/QGIS-Documentation/branches), based on `master`.
+
 #### After the new branch is created
 - [ ] In [substitutions.txt](substitutions.txt) file:
   - [ ] Remove intermediate versions substitutions and their occurrences in the rst files
@@ -60,17 +62,19 @@ Otherwise, you will have to do the changes twice: in master and in the new branc
 New releases are branched off the `master` branch and thus require a set of changes.
 
 - [ ] Ensure that changes to do in master before creating the new release branch are applied
-- [ ] In [conf.py](conf.py) file:
-  - [ ] set the `version` value (in the form x.y)
-  - [ ] set the html_context `isTesting` option to `False`
-- [ ] In [README.MD](README.MD) file, update the badges to point to the current branch instead of master
-- [ ] In [Makefile](Makefile) file, set the `VERSION` number as in the conf.py file
-- [ ] In [docker-world.sh](docker-world.sh) file: replace `QGIS-Documentation` with `QGIS-Documentation-x.y`
-- [ ] In [cronjob.sh](cronjob.sh) file:
-  - [ ] replace `QGIS-Documentation` with `QGIS-Documentation-x.y`
-  - [ ] replace `qgis_docs_master_build` with `qgis_docs_x.y_build`
-- [ ] In [doctest.dockerfile](doctest.dockerfile): set the project container to pull QGIS sources from (i.e. `release-x_y`)
-- [ ] In main [index.rst](docs/index.rst) file: replace `testing` with `x.y` in the Table Of Contents
+- [ ] If not yet done, create the `release_x.y` branch in [the repository](https://github.com/qgis/QGIS-Documentation/branches), based on `master`
+- [ ] Update the new branch, as follows:
+  - [ ] In [conf.py](conf.py) file:
+    - [ ] set the `version` value (in the form x.y)
+    - [ ] set the html_context `isTesting` option to `False`
+  - [ ] In [README.MD](README.MD) file, update the badges to point to the current branch instead of master
+  - [ ] In [Makefile](Makefile) file, set the `VERSION` number as in the conf.py file
+  - [ ] In [docker-world.sh](docker-world.sh) file: replace `QGIS-Documentation` with `QGIS-Documentation-x.y`
+  - [ ] In [cronjob.sh](cronjob.sh) file:
+    - [ ] replace `QGIS-Documentation` with `QGIS-Documentation-x.y`
+    - [ ] replace `qgis_docs_master_build` with `qgis_docs_x.y_build`
+  - [ ] In [doctest.dockerfile](doctest.dockerfile): set the project container to pull QGIS sources from (i.e. `release-x_y`)
+  - [ ] In main [index.rst](docs/index.rst) file: replace `testing` with `x.y` in the Table Of Contents
 </details>
 
 ### Repositories and project configuration
