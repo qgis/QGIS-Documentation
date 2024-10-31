@@ -7,9 +7,9 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # Transifex Bot <>, 2024
-# tomoya miyoshi, 2024
 # Keita UEMORI, 2024
 # fairtommy <fairtommy@gmail.com>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2145,6 +2145,19 @@ msgstr ""
 "サービスファイル内にパスワードを保存したくない場合には、 `.pg_pass "
 "<https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ オプションを使用します。"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:984
+msgid "**QGIS Server and service**"
+msgstr "**QGIS Serverとサービス**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:986
+msgid ""
+"When using a service file and QGIS Server, you must configure the service on"
+" the server side as well. You can follow the :ref:`QGIS Server <QGIS-Server-"
+"manual>` documentation."
+msgstr ""
+"サービスファイルとQGIS Serverを使用する場合、サーバー側でもそのサービスを設定する必要があります。:ref:`QGIS Server "
+"<QGIS-Server-manual>` のドキュメントに従ってください。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:989
 msgid ""
 "On \\*nix operating systems (GNU/Linux, macOS etc.) you can save the "
@@ -2341,6 +2354,121 @@ msgstr "選択ツールが正しく動作するようにするためには、テ
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1084
 msgid "Connecting to MS SQL Server"
 msgstr "MS SQLサーバーへの接続"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1086
+msgid ""
+"As mentioned in :ref:`vector_create_stored_connection` QGIS allows you to "
+"create MS SQL Server connection through :guilabel:`Data Source Manager`."
+msgstr ""
+":ref:`vector_create_stored_connection` で述べたように、QGISでは "
+":guilabel:`データソースマネージャ` を通じて MS SQL Server接続を作成することができます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1094
+msgid "MS SQL Server Connection"
+msgstr "MS SQL Server接続"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1096
+msgid ""
+"To create a new MS SQL Server connection, you need to provide some of the "
+"following information in the :guilabel:`Connection Details` dialog:"
+msgstr ""
+"新しいMS SQL Server接続を作成するには、:guilabel:`接続の詳細` ダイアログで以下のいくつかの情報を入力する必要があります:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1099
+msgid ":guilabel:`Connection name`"
+msgstr ":guilabel:`接続名`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1100
+msgid ":guilabel:`Provider/DNS`"
+msgstr ":guilabel:`プロバイダー/DNS`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1101
+msgid ":guilabel:`Host`"
+msgstr ":guilabel:`ホスト`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1102
+msgid ""
+":guilabel:`Login` information. You can choose to |checkbox| :guilabel:`Save`"
+" your credentials."
+msgstr ":guilabel:`ログイン` 情報。資格情報を |checkbox| :guilabel:`保存` するか選択できます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1105
+msgid ""
+"Navigate to the :guilabel:`Database Details` section and click the "
+":guilabel:`List Databases` button to view the available datasets. Select "
+"datasets that you want, then press :guilabel:`OK`. Optionally, you can also "
+"perform a :guilabel:`Test Connection`. Once you click :guilabel:`OK` the "
+":guilabel:`Create a New MS SQL Server Connection` dialog will close and in "
+"the :guilabel:`Data Source Manager` press :guilabel:`Connect`, select a "
+"layer and then click :guilabel:`Add`."
+msgstr ""
+":guilabel:`データベースの詳細` セクションに移動し、:guilabel:`データベースの一覧表示` "
+"ボタンをクリックして、利用可能なデータセットを表示します。必要なデータセットを選択し、:guilabel:`OK` "
+"をクリックします。オプションとして、:guilabel:`接続テスト` を実行することもできます。:guilabel:`OK` "
+"をクリックすると、`新規MS SQLサーバー接続を作成` ダイアログが閉じ、`データソースマネージャ` で :guilabel:`接続` "
+"をクリックし、レイヤを選択して :guilabel:`追加` をクリックします。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1113
+msgid "Optionally, you can activate the following options:"
+msgstr "オプションで、以下のオプションを有効にできます："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1115
+msgid ""
+"|checkbox| :guilabel:`Only look in the geometry_columns metadata table`."
+msgstr "|checkbox| :guilabel:`'geometry_columnsメタデータテーブルにあるテーブルのみ参照する'。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1116
+msgid ""
+"|checkbox| :guilabel:`Use layer extent from geometry_columns table`, this "
+"checkbox is dependent on the first one; it remains disabled unless the first"
+" option is checked."
+msgstr ""
+"|checkbox| "
+":guilabel:`geometry_columnsテーブルのレイヤ範囲を使用`、このチェックボックスは最初のものに依存しています。最初のオプションがチェックされない限り、これは無効のままです。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1119
+msgid "|checkbox| :guilabel:`Use primary key from geometry_columns table`"
+msgstr "|checkbox| :guilabel:`geometry_columnsテーブルのプライマリキーを使用`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1120
+msgid ""
+"|checkbox| :guilabel:`Also list table with no geometry`: tables without a "
+"geometry column attached will also be shown in the available table list."
+msgstr ""
+"|checkbox| :guilabel:`ジオメトリを持たないテーブルもリストする`: "
+"ジオメトリ列が付随しないテーブルも、利用可能なテーブルのリストに表示されます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1122
+msgid ""
+"|checkbox| :guilabel:`Use estimated table parameters`: only estimated table "
+"metadata will be used. This avoids a slow table scan, but may result in "
+"incorrect layer properties such as layer extent."
+msgstr ""
+"|checkbox| :guilabel:`推定されるテーブルパラメータを使う`: "
+"推定されるテーブルメタデータのみを使います。これにより、遅いテーブルスキャンを回避できますが、レイヤ範囲などのレイヤプロパティが不正確になる可能性があります。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1125
+msgid ""
+"|checkbox| :guilabel:`Skip invalid geometry handling`: all handling of "
+"records with invalid geometry will be disabled. This speeds up the provider,"
+" however, if any invalid geometries are present in a table then the result "
+"is unpredictable and may include missing records. Only check this option if "
+"you are certain that all geometries present in the database are valid, and "
+"any newly added geometries or tables will also be valid."
+msgstr ""
+"|checkbox| :guilabel:`不正なジオメトリの処理をスキップする`: "
+"不正なジオメトリを持つレコードの処理は全て無効になります。これによりプロバイダの処理速度は向上しますが、テーブルに不正なジオメトリが存在する場合、結果は予測できず、レコードが欠落する可能性もあります。データベース内のジオメトリが全て有効であり、新たに追加されるジオメトリやテーブルも有効であることが確実な場合にのみ、このオプションをチェックしてください。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1131
+msgid ""
+"|checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter"
+" schemas for MS SQL connection. If enabled, only checked schemas will be "
+"displayed. You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` "
+"any schema in the list."
+msgstr ""
+"|checkbox| :guilabel:`スキーマのサブセットのみ使用` は、MS "
+"SQL接続用のスキーマをフィルタリングすることができます。有効にした場合、チェックしたスキーマのみが表示されます。リスト内の任意のスキーマを右クリックして"
+" :guilabel:`チェック` または :guilabel:`チェックを外す` ことができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1139
 msgid "Connecting to SAP HANA"

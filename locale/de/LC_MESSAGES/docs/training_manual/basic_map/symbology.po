@@ -11,6 +11,7 @@
 # stefan wolff <wolff@mellum.de>, 2024
 # Andreas Kaufmann, 2024
 # Joern G <j.gutzeit@umwelt-it.de>, 2024
+# Steffen Döring, 2024
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-17 08:16+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2024\n"
+"Last-Translator: Steffen Döring, 2024\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -256,15 +257,173 @@ msgstr ""
 "eine kurze Linie und die Worte :guilabel:`Durchgezogene Linie` angezeigt "
 "werden."
 
+#: ../../docs/training_manual/basic_map/symbology.rst:91
+msgid "Change this to :guilabel:`No Line`."
+msgstr "Ändern Sie dies in `Keine Zeile`."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:96
 #: ../../docs/training_manual/basic_map/symbology.rst:161
 #: ../../docs/training_manual/basic_map/symbology.rst:217
 msgid "Click :guilabel:`OK`."
 msgstr "Klicken Sie :guilabel:`OK`."
 
+#: ../../docs/training_manual/basic_map/symbology.rst:98
+msgid "Now the ``landuse`` layer won't have any lines between areas."
+msgstr ""
+"Jetzt weist der Layer ``landuse`` keine Linien zwischen den Flächen auf."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:104
+msgid ""
+"Change the ``water`` layer's symbology again so that it has a darker blue "
+"outline."
+msgstr ""
+"Ändern Sie die Symbologie des ``Wasser``-Layers erneut, sodass er einen "
+"dunkelblauen Umriss hat."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:106
+msgid ""
+"Change the ``rivers`` layer's symbology to a sensible representation of "
+"waterways."
+msgstr ""
+"Andern Sie die Symbologie des `Flüsse``-Layer's in eine sinnvolle "
+"Darstellung der Wasserwege."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:109
+msgid ""
+"Remember: you can use the |symbology| :sup:`Open the Layer Styling panel` "
+"button and see all the changes instantly. That panel also allows you to undo"
+" individual changes while symbolizing a layer."
+msgstr ""
+"Denken Sie daran: Sie können die Schaltfläche |symbology| :sup:`Open the "
+"Layer Styling panel` verwenden und alle Änderungen sofort sehen. Außerdem "
+"können Sie über dieses Bedienfeld auch einzelne Änderungen rückgängig "
+"machen, während Sie einen Layer symbolisieren."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:113
+#: ../../docs/training_manual/basic_map/symbology.rst:236
+#: ../../docs/training_manual/basic_map/symbology.rst:331
+#: ../../docs/training_manual/basic_map/symbology.rst:376
+#: ../../docs/training_manual/basic_map/symbology.rst:497
+#: ../../docs/training_manual/basic_map/symbology.rst:566
+msgid "Answer"
+msgstr "Antwort "
+
+#: ../../docs/training_manual/basic_map/symbology.rst:116
+msgid "Your map should now look like this:"
+msgstr "Ihre Karte sollte nun so aussehen:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:121
+msgid "If you are a Beginner-level user, you may stop here."
+msgstr "Wenn Sie Anfänger sind, können Sie hier aufhören."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:123
+msgid ""
+"Use the method above to change the colors and styles for all the remaining "
+"layers."
+msgstr ""
+"Verwenden Sie die oben beschriebene Methode, um die Farben und Stile für "
+"alle verbleibenden Layer zu ändern."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:125
+msgid ""
+"Try using natural colors for the objects. For example, a road should not be "
+"red or blue, but can be gray or black."
+msgstr ""
+"Versuchen Sie, natürliche Farben für die Objekte zu verwenden. Eine Straße "
+"sollte beispielsweise nicht rot oder blau, sondern grau oder schwarz sein."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:127
+msgid ""
+"Also feel free to experiment with different :guilabel:`Fill style` and "
+":guilabel:`Stroke style` settings for the polygons."
+msgstr ""
+"Experimentieren Sie auch gerne mit verschiedenen :guilabel:`Füllstil` und "
+":guilabel:`Linienstil` Einstellungen  für die Polygone."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:135
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Scale-Based Visibility"
+msgstr ""
+":abbr:`★★☆ (Mittelschwer)` Machen Sie mit: Maßstabsabhängige Sichtbarkeit"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:137
+msgid ""
+"Sometimes you will find that a layer is not suitable for a given scale. For "
+"example, a dataset of all the continents may have low detail, and not be "
+"very accurate at street level. When that happens, you want to be able to "
+"hide the dataset at inappropriate scales."
+msgstr ""
+"Manchmal werden Sie feststellen, dass ein Layer für einen bestimmten Maßstab"
+" nicht geeignet ist. Beispielsweise kann ein Datensatz aller Kontinente nur "
+"wenige Details aufweisen und auf Straßenebene nicht sehr genau sein. In "
+"einem solchen Fall möchten Sie wahrscheinlich den Datensatz bei ungeeigneten"
+" Maßstäben ausblenden können."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:142
+msgid ""
+"In our case, we may decide to hide the buildings from view at small scales. "
+"This map, for example..."
+msgstr ""
+"In unserem Fall können wir uns entscheiden, die Gebäude in kleinen Maßstäben"
+" auszublenden. Diese Karte zum Beispiel …"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:148
+msgid ""
+"... is not very useful. The buildings are hard to distinguish at that scale."
+msgstr ""
+"… ist nicht sehr hilfreich. In diesem Maßstab sind die Gebäude schwer zu "
+"unterscheiden."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:150
+msgid "To enable scale-based rendering:"
+msgstr "So aktivieren Sie maßstabsbasiertes Rendering:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:152
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog for the ``buildings`` layer."
+msgstr ""
+"Öffnen Sie den :guilabel:`Layer-Eigenschaften`-Dialog für den "
+"``Gebäude``-Layer."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:153
+msgid "Activate the |rendering| :guilabel:`Rendering` tab."
+msgstr "Aktivieren Sie den |rendering| :guilabel:`Rendering`-Tab."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:696
 msgid "rendering"
 msgstr "rendering"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:154
+msgid ""
+"Enable scale-based rendering by clicking on the checkbox labeled "
+":guilabel:`Scale dependent visibility`:"
+msgstr ""
+"Aktivieren Sie die maßstabsabhängige Darstellung, indem Sie das "
+"Kontrollkästchen  :guilabel:`Maßstabsabhängige Sichtbarkeit` :aktivieren."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:156
+msgid "Change the :guilabel:`Minimum` value to ``1:10000``."
+msgstr "Ändern Sie den :guilabel:`Minimum`-Wert zu ``1:10000``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:163
+msgid ""
+"Test the effects of this by zooming in and out in your map, noting when the "
+"``buildings`` layer disappears and reappears."
+msgstr ""
+"Testen Sie die Auswirkungen, indem Sie in Ihrer Karte hinein- und "
+"herauszoomen und dabei darauf achten, wann der ``Gebäude``-Layer "
+"verschwindet und wieder erscheint."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:166
+msgid ""
+"You can use your mouse wheel to zoom in increments. Alternatively, use the "
+"zoom tools to zoom to a window:"
+msgstr ""
+"Sie können das Mausrad verwenden, um stufenweise zu zoomen. Alternativ "
+"können Sie die Zoom-Tools verwenden, um auf ein Fenster zu zoomen:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:169
+msgid "|zoomIn| |zoomOut|"
+msgstr "|zoomIn| |zoomOut|"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:702
 msgid "zoomIn"
@@ -274,13 +433,231 @@ msgstr "zoomIn"
 msgid "zoomOut"
 msgstr "zoomOut"
 
+#: ../../docs/training_manual/basic_map/symbology.rst:172
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Adding Symbol Layers"
+msgstr ":abbr:`★★☆ (Mittelschwer)` Machen Sie mit: Symbol-Layer hinzufügen "
+
+#: ../../docs/training_manual/basic_map/symbology.rst:174
+msgid ""
+"Now that you know how to change simple symbology for layers, the next step "
+"is to create more complex symbology. QGIS allows you to do this using symbol"
+" layers."
+msgstr ""
+"Nachdem Sie nun wissen, wie Sie eine einfache Symbologie für Layer ändern, "
+"besteht der nächste Schritt darin, komplexere Symbologien zu erstellen. QGIS"
+" ermöglicht Ihnen dies mithilfe von Symbol-Layern."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:178
+msgid ""
+"Go back to the ``landuse`` layer's symbol properties panel (by clicking "
+":guilabel:`Simple fill` in the symbol layers tree)."
+msgstr ""
+"Gehen Sie zurück zu den ``Landnuzungs``-Layer-Eigenschaften  indem Sie in "
+"der Seitenleiste unter Symbologie auf :guilabel:`Einfache Füllung` klicken."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:181
+msgid ""
+"In this example, the current symbol has no outline (i.e., it uses the "
+":guilabel:`No Line` border style)."
+msgstr ""
+"In diesem Beispiel hat das aktuelle Symbol keine Umrisslinie (d. h. es "
+"verwendet den Rahmenstil :guilabel:`Keine Linie`)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:187
+msgid ""
+"Select the :guilabel:`Fill` level in the tree and click the |symbologyAdd| "
+":sup:`Add symbol layer` button. The dialog will change to look something "
+"like this, with a new symbol layer added:"
+msgstr ""
+"Wählen Sie :guilabel:`Füllung` und klicken Sie auf die |symbologyAdd| "
+":sup:`Symbol-Ebene hinzufügen`. Das Dialogfeld ändert sich und sieht "
+"ungefähr so ​​aus, wobei eine neue Symbolebene hinzugefügt wurde:"
+
 #: ../../docs/training_manual/basic_map/symbology.rst:700
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/training_manual/basic_map/symbology.rst:195
+msgid ""
+"It may appear somewhat different in color, for example, but you're going to "
+"change that anyway."
+msgstr ""
+"Die Farbe mag etwas anders aussehen, aber das werden Sie sowieso ändern.."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:198
+msgid ""
+"Now there's a second symbol layer. Being a solid color, it will of course "
+"completely hide the previous kind of symbol. Plus, it has a :guilabel:`Solid"
+" Line` border style, which we don't want. Clearly this symbol has to be "
+"changed."
+msgstr ""
+"Jetzt gibt es eine zweite Symbolebene. Da sie eine Volltonfarbe hat, wird "
+"sie natürlich die vorherige Symbolart vollständig verbergen. Außerdem hat "
+"sie einen :guilabel:`Ganze Linie`-Stil, den wir nicht wollen. Dieses Symbol "
+"muss eindeutig geändert werden."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:202
+msgid ""
+"It's important not to get confused between a map layer and a symbol layer. A"
+" map layer is a vector (or raster) that has been loaded into the map. A "
+"symbol layer is part of the symbol used to represent a map layer. This "
+"course will usually refer to a map layer as just a layer, but a symbol layer"
+" will always be called a symbol layer, to prevent confusion."
+msgstr ""
+"Es ist wichtig, einen Kartenlayer nicht mit einer Symbolebene zu "
+"verwechseln. Eine Kartenebene ist ein Vektor (oder Raster), der in die Karte"
+" geladen wurde. Eine Symbolebene ist Teil des Symbols, das zur Darstellung "
+"eines Kartenlayers verwendet wird. In diesem Kurs wird ein Kartenlayer "
+"normalerweise nur als Layer bezeichnet, eine Symbolebene wird jedoch immer "
+"als Symbolebene bezeichnet, um Verwechslungen vorzubeugen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:208
+msgid "With the new :guilabel:`Simple Fill` symbol layer selected:"
+msgstr "Mit der ausgewählten neuen Symbolebene „Einfache Füllung“ :"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:210
+msgid "Set the border style to :guilabel:`No Line`, as before."
+msgstr "Stellen Sie den Rahmenstil wie zuvor auf guilabel:`Keine Line` ein."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:211
+msgid ""
+"Change the fill style to something other than :guilabel:`Solid` or "
+":guilabel:`No brush`. For example:"
+msgstr ""
+"Ändern Sie den Füllstil in einen anderen Stil als “ :guilabel:`Vollständig` "
+"or :guilabel:`Kein Pinsel`. Zum Beispiel:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:219
+msgid ""
+"Now you can see your results and tweak them as needed. You can even add "
+"multiple extra symbol layers and create a kind of texture for your layer "
+"that way."
+msgstr ""
+"Jetzt können Sie Ihre Ergebnisse sehen und sie nach Bedarf optimieren. Sie "
+"können sogar mehrere zusätzliche Symbolebenen hinzufügen und auf diese Weise"
+" eine Art Textur für Ihre Ebene erstellen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:226
+msgid "It's fun! But it probably has too many colors to use in a real map..."
+msgstr ""
+"Es macht Spaß! Aber es hat wahrscheinlich zu viele Farben, um es in einer "
+"echten Karte zu verwenden …"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:230
+#: ../../docs/training_manual/basic_map/symbology.rst:319
+#: ../../docs/training_manual/basic_map/symbology.rst:488
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
+msgstr ":abbr:`★★☆ (Mittelschwer)` Probieren Sie es selbst aus::"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:232
+msgid ""
+"Remembering to zoom in if necessary, create a simple, but not distracting "
+"texture for the ``buildings`` layer using the methods above."
+msgstr ""
+"Denken Sie daran, bei Bedarf hineinzuzoomen, und erstellen Sie mit den oben "
+"beschriebenen Methoden eine einfache, aber nicht störende Textur für den "
+"``Gebäude``-Layer."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:239
+msgid ""
+"Customize your ``buildings`` layer as you like, but remember that it has to "
+"be easy to tell different layers apart on the map."
+msgstr ""
+"Passen Sie Ihren ``Gebäude``-Layer nach Belieben an, aber denken Sie daran, "
+"dass die verschiedenen Layer auf der Karte leicht voneinander zu "
+"unterscheiden sein müssen."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:242
 msgid "Here's an example:"
 msgstr "Im Folgenden ein Beispiel:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:249
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Ordering Symbol Levels"
+msgstr ":abbr:`★★☆ (Mittelschwer)` Machen Sie mit: Symbolebenen anordnen"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:251
+msgid ""
+"When symbol layers are rendered, they are also rendered in a sequence, "
+"similar to the way the different map layers are rendered. This means that in"
+" some cases, having many symbol layers in one symbol can cause unexpected "
+"results."
+msgstr ""
+"Beim Rendern von Symbolebenen erfolgt dies ebenfalls in einer Sequenz, "
+"ähnlich der Renderung verschiedener Kartenlayern. Dies bedeutet, dass in "
+"einigen Fällen das Vorhandensein mehrerer Symbolebenen in einem Symbol zu "
+"unerwarteten Ergebnissen führen kann."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:255
+msgid ""
+"Give the ``roads`` layer an extra symbol layer (using the method for adding "
+"symbol layers demonstrated above)."
+msgstr ""
+"Geben Sie dem ``Straßen``-Layer eine zusätzliche Symbolebene (mithilfe der "
+"oben gezeigten Methode zum Hinzufügen von Symbolebenen)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:257
+msgid ""
+"Give the base line a :guilabel:`Stroke width` of ``1.5`` and a black color."
+msgstr ""
+"Geben Sie der Grundlinie eine :guilabel:`Strichstärke` of ``1.5`` und die "
+"Farbe Schwarz."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:258
+msgid ""
+"Give the new, uppermost layer a thickness of ``0.8`` and a white color."
+msgstr ""
+"Geben Sie der neuen, obersten Schicht eine Dicke von ``0.8`` und die Farbe "
+"Weiß."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:260
+msgid "You'll notice that this happens:"
+msgstr "Sie werden feststellen, dass Folgendes passiert:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:265
+msgid ""
+"Well, roads have now a *street* like symbology, but you see that lines are "
+"overlapping each others at each cross. That's not what we want at all!"
+msgstr ""
+"Nun, Straßen haben jetzt eine *straßenähnliche* Symbolik, aber Sie sehen, "
+"dass sich die Linien an jeder Kreuzung überlappen. Das ist überhaupt nicht "
+"das, was wir wollen!"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:268
+msgid ""
+"To prevent this from happening, you can sort the symbol levels and thereby "
+"control the order in which the different symbol layers are rendered."
+msgstr ""
+"Um dies zu verhindern, können Sie die Symbolebenen sortieren und deren "
+"Reihenfolge so ordnen, wie sie gerendert werden."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:271
+msgid "To change the order of the symbol layers:"
+msgstr "So ändern Sie die Reihenfolge der Symbolebenen:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:273
+msgid "Select the topmost :guilabel:`Line` layer in the symbol layers tree."
+msgstr ""
+"Wählen Sie die oberste :guilabel:`Linie`nebene im *Linienfenster* aus."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:274
+msgid ""
+"Click :menuselection:`Advanced --> Symbol levels...` in the bottom right-"
+"hand corner of the window."
+msgstr "Klicken Sie unten rechts im Fenster auf `Erweitert ► Symbolebenen…`."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:280
+msgid "This will open a dialog like this:"
+msgstr "Dadurch wird ein Dialogfenster wie dieses geöffnet:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:285
+msgid ""
+"Check |checkbox| :guilabel:`Enable symbol levels`. You can then set the "
+"layer order of each symbol by entering the corresponding level number. 0 is "
+"the bottom layer."
+msgstr ""
+"Aktivieren Sie |checkbox| :guilabel:`Symbolebenen aktivieren`. Anschließend "
+"können Sie die Ebenenreihenfolge der einzelnen Symbole festlegen, indem Sie "
+"die entsprechende Ebenennummer eingeben. 0 ist die unterste Ebene."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:693
 msgid "checkbox"
