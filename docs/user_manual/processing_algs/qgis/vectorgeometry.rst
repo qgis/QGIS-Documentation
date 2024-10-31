@@ -844,7 +844,7 @@ additional information (number of errors found and types of error):
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisfixgeometries` and the core plugin
-   :ref:`geometry_checker`
+   :ref:`geometry_checker`, :ref:`qgiscoveragevalidate`
 
 Parameters
 ..........
@@ -2134,7 +2134,7 @@ input feature that happens to be processed.
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
+.. seealso:: :ref:`qgiscoverageunion`, :ref:`qgisaggregate`, :ref:`qgiscollect`
 
 Parameters
 ..........
@@ -6152,7 +6152,7 @@ of line and polygon features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgissmoothgeometry`, :ref:`qgisdensifygeometries`,
+.. seealso:: :ref:`qgiscoveragesimplify`, :ref:`qgissmoothgeometry`, :ref:`qgisdensifygeometries`,
  :ref:`qgisdensifygeometriesgivenaninterval`
 
 Parameters
@@ -6393,9 +6393,8 @@ this will not be smoothed. For example, setting the maximum angle to
 :ref:`features in-place modification <processing_inplace_edit>`
 of line and polygon features
 
-.. seealso:: :ref:`qgissimplifygeometries`,
-   :ref:`qgisdensifygeometries`,
-   :ref:`qgisdensifygeometriesgivenaninterval`
+.. seealso:: :ref:`qgissimplifygeometries`, :ref:`qgiscoveragesimplify`,
+   :ref:`qgisdensifygeometries`, :ref:`qgisdensifygeometriesgivenaninterval`
 
 Parameters
 ..........
