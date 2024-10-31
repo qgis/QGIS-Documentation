@@ -33,6 +33,7 @@ algorithms.
      rasterterrainanalysis
      rastertools
      vectoranalysis
+     vectorcoverage
      vectorcreation
      vectorgeneral
      vectorgeometry
