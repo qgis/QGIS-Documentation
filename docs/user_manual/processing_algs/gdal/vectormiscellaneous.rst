@@ -853,13 +853,17 @@ OGR-supported data source.
 The output will be shown in a 'Result' window and can be written
 into a HTML-file.
 The information includes the geometry type, feature count, the spatial
-extent, the projection information and many more.
+extent, the projection information, the list of attributes and related type,
+list of relations and field domains, and many more.
 
 This algorithm is derived from the
 `GDAL ogrinfo utility <https://gdal.org/programs/ogrinfo.html>`_.
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -874,22 +878,28 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer
-   * - **Summary output only**
+   * - **Enable listing of all layers in the dataset**
+     - ``ALL_LAYERS``
+     - [boolean]
 
-       Optional
+       Default: False
+     - If checked, QGIS will output the information of all the layers in the input dataset
+       instead of information of the first layer only.
+       Convenient when a multi layer format (GeoPackage, GML, KML, SpatiaLite, SQLite, ...)
+       is used as input.
+   * - **Summary output only**
      - ``SUMMARY_ONLY``
      - [boolean]
 
        Default: True
-     - 
+     - Suppress listing of individual features and show only summary information
+       like projection, schema, feature count and extents.
    * - **Suppress metadata info**
-
-       Optional
      - ``NO_METADATA``
      - [boolean]
 
        Default: False
-     - 
+     - Suppress metadata printing. Some datasets may contain a lot of metadata strings.
    * - **Layer information**
      - ``OUTPUT``
      - [html]
@@ -905,6 +915,25 @@ Parameters
        If no HTML-file is defined the output will be written
        to a temporary file
 
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional command line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]
+
+       Default: '' (no additional options)
+     - Add extra GDAL command line options
 
 Outputs
 .......
@@ -926,6 +955,124 @@ Python code
 ...........
 
 **Algorithm ID**: ``gdal:ogrinfo``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _gdalogrinfojson:
+
+Vector Information (JSON)
+-------------------------
+Creates an information file that lists information about an
+OGR-supported data source.
+The output will be shown in a 'Result' window and can be written
+into a :file:`.JSON` file.
+The information includes the geometry type, feature count, the spatial
+extent, the projection information, the list of attributes and related type,
+list of relations and field domains, and many more.
+
+This algorithm is derived from the
+`GDAL ogrinfo utility <https://gdal.org/programs/ogrinfo.html>`_.
+
+**Requires version of GDAL >= 3.7**
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Enable listing of all layers in the dataset**
+     - ``ALL_LAYERS``
+     - [boolean]
+
+       Default: False
+     - If checked, QGIS will output the information of all the layers in the input dataset
+       instead of information of the first layer only.
+       Convenient when a multi layer format (GeoPackage, GML, KML, SpatiaLite, SQLite, ...)
+       is used as input.
+   * - **Enable listing of features**
+     - ``FEATURES``
+     - [boolean]
+
+       Default: False
+     -
+   * - **Suppress metadata info**
+     - ``NO_METADATA``
+     - [boolean]
+
+       Default: False
+     - Suppress metadata printing. Some datasets may contain a lot of metadata strings.
+   * - **Layer information**
+     - ``OUTPUT``
+     - [file]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output JSON file that includes the file
+       information. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+       If no JSON file is defined the output will be written
+       to a temporary file
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional command line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]
+
+       Default: '' (no additional options)
+     - Add extra GDAL command line options
+
+Outputs
+.......
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Layer information**
+     - ``OUTPUT``
+     - [file]
+     - The output `.JSON` file that includes the file information.
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:ogrinfojson``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
