@@ -15,13 +15,11 @@ Basic statistics for fields
 ---------------------------
 Generates basic statistics for a field of the attribute table of a
 vector layer.
-
 Numeric, date, time and string fields are supported.
-
 The statistics returned will depend on the field type.
 
-Statistics are generated as an HTML file and are available in the
-:menuselection:`Processing --> Results viewer`.
+Statistics can be generated as a table or an HTML file
+and are available in the :menuselection:`Processing --> Results viewer`.
 
 **Default menu**: :menuselection:`Vector --> Analysis Tools`
 
@@ -47,6 +45,19 @@ Parameters
    * - **Statistics**
 
        Optional
+     - ``OUTPUT``
+     - [table]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output table for the generated statistics. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+   * - **Statistics report**
+
+       Optional
      - ``OUTPUT_HTML_FILE``
      - [html]
 
@@ -70,6 +81,10 @@ Outputs
      - Type
      - Description
    * - **Statistics**
+     - ``OUTPUT``
+     - [table]
+     - Table containing the calculated statistics
+   * - **Statistics report**
      - ``OUTPUT_HTML_FILE``
      - [html]
      - HTML file with the calculated statistics
