@@ -495,6 +495,10 @@ Attributes are not checked, so in case two features have identical
 geometries but different attributes, only one of them will be added to
 the result layer.
 
+.. note::
+
+ This algorithm does not require valid geometries as input.
+
 .. seealso:: :ref:`qgisdropgeometries`,
    :ref:`qgisremovenullgeometries`,
    :ref:`qgisremoveduplicatesbyattribute`

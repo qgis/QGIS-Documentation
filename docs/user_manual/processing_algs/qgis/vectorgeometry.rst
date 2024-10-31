@@ -2512,6 +2512,13 @@ line.
 Each line in the resulting layer contains only a start and an end
 point, with no intermediate vertices between them.
 
+If the input layer consists of CircularStrings or CompoundCurves,
+the output layer will be of the same type and contain only single curve segments.
+
+.. note::
+
+ * This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+ * This algorithm does not require valid geometries as input.
 
 .. figure:: img/explode_lines.png
    :align: center
