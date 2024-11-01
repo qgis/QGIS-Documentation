@@ -26,6 +26,10 @@ Input types
      - :class:`QgsProcessingParameterAnnotationLayer <qgis.core.QgsProcessingParameterAnnotationLayer>`
      - ``alg.ANNOTATION_LAYER``
      - An annotation layer
+   * - Area
+     - :class:`QgsProcessingParameterArea <qgis.core.QgsProcessingParameterArea>`
+     -
+     - A numeric parameter representing an area measure
    * - Authentication Configuration
      - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
      - ``alg.AUTH_CFG``
@@ -238,6 +242,10 @@ Input types
      -
      - A vector tile layer destination parameter, for specifying the destination path
        for a vector tile layer created by the algorithm
+   * - Volume
+     - :class:`QgsProcessingParameterVolume <qgis.core.QgsProcessingParameterVolume>`
+     -
+     - A numeric parameter representing a volume measure
 
 
 Output types
