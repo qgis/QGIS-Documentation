@@ -67,7 +67,8 @@ New releases are branched off the `master` branch and thus require a set of chan
   - [ ] In [conf.py](conf.py) file:
     - [ ] set the `version` value (in the form x.y)
     - [ ] set the html_context `isTesting` option to `False`
-  - [ ] In [README.MD](README.MD) file, update the badges to point to the current branch instead of master
+  - [ ] In [README.MD](README.MD) file, update the badges to point to the current branch instead of `master`,
+    and current version instead of `testing`
   - [ ] In [Makefile](Makefile) file, set the `VERSION` number as in the conf.py file
   - [ ] In [docker-world.sh](docker-world.sh) file: replace `QGIS-Documentation` with `QGIS-Documentation-x.y`
   - [ ] In [cronjob.sh](cronjob.sh) file:
