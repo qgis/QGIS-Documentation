@@ -1097,7 +1097,7 @@ To create a new MS SQL Server connection, you need to provide some of the
 following information in the :guilabel:`Connection Details` dialog:
 
 * :guilabel:`Connection name`
-* :guilabel:`Provider/DNS`
+* :guilabel:`Provider/DSN`
 * :guilabel:`Host`
 * :guilabel:`Login` information. You can choose
   to |checkbox| :guilabel:`Save` your credentials.
