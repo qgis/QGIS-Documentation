@@ -2012,6 +2012,13 @@ Stacked diagrams allow users to create complex diagrams like population pyramids
 where two subdiagrams, namely histograms, are located side by side and displayed
 horizontally.
 
+.. _figure_stacked_diagrams:
+
+.. figure:: img/population_pyramids.png
+   :align: center
+
+   Population pyramids built for each layer feature
+
 Multi-temporal diagrams can also be constructed as stacked diagrams. The number
 of subdiagrams, as well as the spacing between them can be configured.
 
