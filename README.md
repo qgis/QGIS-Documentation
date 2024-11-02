@@ -2,7 +2,7 @@
 
 [![Docs Builds](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml/badge.svg?branch=release_3.40&event=push)](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml)
 [![Doctest Build](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml/badge.svg?branch=release_3.40&event=push)](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml)
-[![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/testing/)
+[![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/3.40/)
 
 
 This repository is meant to write and manage the Official Documentation of [QGIS](https://qgis.org),
