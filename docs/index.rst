@@ -65,8 +65,7 @@ you can download for offline reading. They are accessible from the
 
     * Submit an issue or pull request on the `GitHub repository
       <https://github.com/qgis/QGIS-Documentation/>`_,
-    * Help us `translate the documentation
-      <https://qgis.org/en/site/getinvolved/translate.html>`_ into your language
+    * Help us :ref:`translate the documentation <translation_guidelines>` into your language
     * Or talk to us on either the `qgis-community-team
       <https://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_ mailing-list,
       the `#qgis <http://webchat.freenode.net/?channels=#qgis>`_ channel on IRC

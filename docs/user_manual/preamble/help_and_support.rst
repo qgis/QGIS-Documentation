@@ -69,7 +69,7 @@ some QGIS communities are organized into QGIS User Groups.
 These groups are places to discuss local topics, organize regional
 or national user meetings, organize sponsoring of features...
 The list of current user groups is available at
-https://qgis.org/en/site/forusers/usergroups.html
+https://qgis.org/community/groups/
 
 You are welcome to subscribe to any of the lists. Please remember to
 contribute to the list by answering questions and sharing your
@@ -96,7 +96,7 @@ Commercial support
 ==================
 
 Commercial support for QGIS is also available. Check the website
-https://qgis.org/en/site/forusers/commercial_support.html for more information.
+https://qgis.org/resources/support/commercial-support/ for more information.
 
 BugTracker
 ==========
@@ -119,7 +119,7 @@ If you have found a bug and fixed it yourself, you can submit a
 Pull Request on the `Github QGIS Project <https://github.com/qgis/QGIS/pulls>`_.
 
 Read
-`Bugs, Features and Issues <https://qgis.org/en/site/getinvolved/development/bugreporting.html#bugs-features-and-issues>`_
+`Bugs, Features and Issues <https://qgis.org/resources/support/bug-reporting/>`_
 and :ref:`submit_patch` for more details.
 
 Blog
