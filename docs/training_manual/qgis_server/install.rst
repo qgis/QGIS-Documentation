@@ -17,7 +17,7 @@ any Debian based distribution like Ubuntu and its derivatives.
 -------------------------------------------------------------------------------
 
 In this lesson we're going to do only the install from packages as shown
-`here <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_ .
+`here <https://qgis.org/resources/installation-guide/#linux>`_ .
 
 Install QGIS Server with:
 

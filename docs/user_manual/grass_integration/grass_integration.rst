@@ -879,9 +879,7 @@ like this:
 
 
 The parser reads this definition and creates a new tab inside the Toolbox when
-you select the module. A more detailed description for adding new modules, changing
-a module's group, etc., can be found at 
-https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
+you select the module.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
