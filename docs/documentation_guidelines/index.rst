@@ -10,11 +10,11 @@ for all `supported versions <https://qgis.org/resources/roadmap/#release-schedul
 (testing, Long Term Release (LTR) and next-to-be LTR).
 
 QGIS Documentation source files are available at https://github.com/qgis/QGIS-Documentation.
-They are mainly written using the reStructuredText (reST) format syntax,
-coupled with some scripts from the Sphinx toolset to post-process the HTML output.
-For general information on these tools,
-see https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
-or https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
+They are mainly written using the `reStructuredText (reST) format
+<https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html>`_ syntax,
+coupled with some scripts from the `Sphinx toolset
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_
+to post-process the HTML output.
 
 The following chapters will guide you through learning:
 
