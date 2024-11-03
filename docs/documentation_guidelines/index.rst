@@ -6,7 +6,7 @@ Documentation Guidelines
 
 QGIS Documentation is available at https://docs.qgis.org.
 As the writing process is going on, a build is automatically run every day (see bottom of the page for exact time)
-for all `supported versions <https://qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule>`_
+for all `supported versions <https://qgis.org/resources/roadmap/#release-schedule>`_
 (testing, Long Term Release (LTR) and next-to-be LTR).
 
 QGIS Documentation source files are available at https://github.com/qgis/QGIS-Documentation.
@@ -25,7 +25,7 @@ The following chapters will guide you through learning:
 
 If you are looking for general information about how to contribute to the QGIS
 project, you may find help at `Get Involved in the QGIS Community
-<https://qgis.org/en/site/getinvolved/index.html>`_.
+<https://qgis.org/community/involve/>`_.
 
 
 .. toctree::

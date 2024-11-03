@@ -27,8 +27,7 @@ Translated versions of this document can be browsed and downloaded
 via the documentation area of the QGIS project as well.
 
 For more information about contributing to this document and about
-translation, please visit
-https://qgis.org/en/site/getinvolved/index.html.
+translation, please read :ref:`QGIS-documentation-guidelines`.
 
 **Links in this Document**
 
@@ -61,8 +60,8 @@ What is new in QGIS |version|
 
 This release of QGIS includes hundreds of bug fixes and many new
 features and enhancements, compared to |QGIS_CURRENT|_.
-For a list of new features, visit the visual changelogs at
-https://qgis.org/en/site/forusers/visualchangelogs.html.
+For a list of new features, visit the `visual changelogs
+<https://qgis.org/project/visual-changelogs/>`_.
 
 .. only:: not testing and not outdated
 
