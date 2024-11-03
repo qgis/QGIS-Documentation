@@ -53,7 +53,7 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
       && mkdir -m755 -p /etc/apt/keyrings \
       && wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg \
       # Add repository for latest version of qgis-server
-      # Please refer to QGIS repositories documentation if you want other version (https://qgis.org/en/site/forusers/alldownloads.html#repositories)
+      # Please refer to QGIS repositories documentation if you want other version (https://qgis.org/resources/installation-guide/#repositories)
       && echo "deb [signed-by=/etc/apt/keyrings/qgis-archive-keyring.gpg] https://qgis.org/debian bookworm main" | tee /etc/apt/sources.list.d/qgis.list \
       && apt-get update \
       && apt-get install --no-install-recommends --no-install-suggests --allow-unauthenticated -y \
