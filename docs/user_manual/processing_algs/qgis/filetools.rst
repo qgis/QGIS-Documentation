@@ -102,7 +102,7 @@ HTTP(S) POST/GET request
 ------------------------
 Performs a HTTP(S) POST/GET request and returns the HTTP status code and the reply data.
 If an error occurs then the error code and the message will be returned.
-Optionally, the result can be written to a file on disk.
+Optionally, the result can be written to a file on the disk.
 By default the algorithm will warn on errors. Optionally, the algorithm can be set to treat HTTP errors as failures.
 
 Parameters
@@ -149,7 +149,7 @@ Parameters
      - [boolean]
 
        Default: False
-     - If set, the algorithm will fail on encountering a HTTP error.
+     - If set, the algorithm will fail on encountering an HTTP error.
    * - **File destination**
 
        Optional
@@ -186,7 +186,7 @@ Outputs
    * - **Network error code**
      - ``ERROR_CODE``
      - [string]
-     - The error code When it fails (like as well on 404 HTTP Status etc.)
+     - The error code when it fails (like as well on 404 HTTP Status etc.)
    * - **Network error message**
      - ``ERROR_MESSAGE``
      - [string]
