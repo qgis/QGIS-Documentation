@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # Transifex Bot <>, 2024
-# tomoya miyoshi, 2024
 # fairtommy <fairtommy@gmail.com>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +35,10 @@ msgstr ""
 "翻訳は :ref:`あなたが参加できる <translation_guidelines>`  コミュニティの取り組みです。このページは現在 "
 "|translation progress| 翻訳されています。"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:6
+msgid "Connecting and Editing Data Across Layers"
+msgstr "レイヤをまたいでデータを接続・編集する"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:13
 msgid ""
 "Ability to connect data from different layers is one of the duties of a GIS "
@@ -42,7 +46,7 @@ msgid ""
 " the features, or on their shared attributes. QGIS provides tools to handle "
 "any of these associations, such as:"
 msgstr ""
-"異なるレイヤのデータを接続する能力は、GISソフトウェアの仕事の一つです。このような接続は、地物間の空間的関係、またはそれらが共有している属性に基づくことができます。QGISは、これらの関連付けを処理する次のようなツールを提供しています："
+"異なるレイヤのデータを接続する能力は、GISソフトウェアの手腕の一つです。このような接続は、地物間の空間的関係、またはそれらが共有している属性に基づくことができます。QGISは、これらの関連付けを処理する次のようなツールを提供しています："
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:18
 msgid ""
@@ -96,6 +100,15 @@ msgstr ""
 "QGISの **結合** "
 "では、現在のレイヤの地物を、読み込まれた別のベクタレイヤの地物に関連付けることができます。空間的に有効であるかどうかや、ジオメトリのタイプは関係ありません。結合は、レイヤが共有する属性に基づき、1対1の関係で行われます。"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:44
+msgid "To create a join on a layer (identified below as ``target layer``):"
+msgstr "レイヤ（以下 ``ターゲットレイヤ`` と表記）上で結合を作成するには："
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:46
+msgid ""
+"Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab"
+msgstr "レイヤの :menuselection:`プロパティ -->` |join| :guilabel:`テーブル結合` タブに移動します"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
 msgid "join"
 msgstr "join"
@@ -105,7 +118,7 @@ msgid ""
 "Click the |symbologyAdd| :sup:`Add new join` button. The :guilabel:`Add "
 "vector join` dialog appears."
 msgstr ""
-"|symbologyAdd| :sup:`新しい結合を追加` ボタンをクリックします。 :guilabel:`ベクタ結合を追加` ダイアログが現れます。"
+"|symbologyAdd| :sup:`新規結合を追加` ボタンをクリックします。 :guilabel:`ベクタ結合を追加` ダイアログが現れます。"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
 msgid "symbologyAdd"
@@ -117,6 +130,16 @@ msgid ""
 " layer"
 msgstr "ターゲットベクタレイヤと結合させたい :guilabel:`結合するレイヤ` を選択します。"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:50
+msgid ""
+"Specify the :guilabel:`Join field` (from the ``join layer``) and the "
+":guilabel:`Target field` (from the ``target layer``). These are the fields "
+"that are used to find matching feature in both layers hence they should have"
+" values in common."
+msgstr ""
+"（``結合するレイヤ`` の）:guilabel:`結合基準の属性` と （``ターゲットレイヤ`` の）:guilabel:`ターゲット属性` "
+"を指定します。これらは両方のレイヤで一致する地物を見つけるために使用されるフィールドなので、共通の値を持つ必要があります。"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:54
 msgid ""
 "Press :guilabel:`OK` and a summary of selected parameters is added to the "
@@ -127,6 +150,44 @@ msgstr ":guilabel:`OK` ボタンを押すと、選択したパラメータの概
 msgid "Join an attribute table to an existing vector layer"
 msgstr "既存のベクタレイヤに属性テーブルを結合する"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:63
+msgid ""
+"The steps above will create a join, where **ALL** the attributes of the "
+"**first matching feature** in the join layer is added to the target layer's "
+"feature. The following logic is used to pair features during a join process:"
+msgstr ""
+"上記のステップでは、結合レイヤで **最初に一致した地物** の **全ての** "
+"属性がターゲットレイヤの地物に追加される結合が作成されます。結合処理では以下のロジックを使って地物を組にします:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:68
+msgid ""
+"All the features in the target layer are returned, regardless they have a "
+"match"
+msgstr "一致するかどうかに関係なくターゲットレイヤの全ての地物が返されます"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:69
+msgid ""
+"If the target field contains duplicate values, these features are assigned "
+"the same feature from the join layer."
+msgstr "ターゲット属性に重複する値が含まれる場合、それらの地物には結合するレイヤの同じ地物が割り当てられます。"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:71
+msgid ""
+"If the join field contains duplicate matching values, only the first fetched"
+" feature is picked."
+msgstr "結合基準の属性に、重複して一致する値が含まれている場合、最初に取得された地物のみが選択されます。"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:73
+msgid ""
+"Joins in QGIS are based on a single field matching so most of the times, you"
+" would want to make sure that values in the matchable fields are unique."
+msgstr ""
+"QGISでの結合はひとつのフィールドの一致に基づいているため、たいていの場合、一致可能なフィールドの値が一意であることを確認したいでしょう。"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:76
+msgid "QGIS provides some more options to tweak the join:"
+msgstr "QGISでは、結合を微調整するためのオプションがいくつか用意されています:"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:78
 msgid ""
 "|checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to "
@@ -134,11 +195,17 @@ msgid ""
 "to speed up lookups."
 msgstr ""
 "|checkbox| :guilabel:`結合レイヤをキャッシュ` "
-"：ルックアップを高速化するために、結合レイヤの値を（ジオメトリなしで）メモリにキャッシュできるようになります。"
+"：探索を高速化するために、結合レイヤの値を（ジオメトリなしで）メモリにキャッシュできるようになります。"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:80
+msgid ""
+"|unchecked| :guilabel:`Create attribute index on the join field` to speed up"
+" lookups"
+msgstr "|unchecked| :guilabel:`結合属性にインデックスを作成` して探索を高速化"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
 msgid "unchecked"
@@ -152,8 +219,8 @@ msgid ""
 "default because it may be very time consuming if you have a lot of features "
 "or a myriad of joins."
 msgstr ""
-"|unchecked| :guilabel:`動的フォーム（結合レイヤと連動）` ： :guilabel:`ターゲットフィールド` "
-"の変更に応じて結合フィールドをオンザフライで同期できるようになります。これにより、結合フィールドの制約条件も適切に更新されます。多数の地物があったり無数の結合がある場合には非常に時間がかかることがあるため、この機能はデフォルトでは無効化されていることに注意してください。"
+"|unchecked| :guilabel:`動的フォーム（結合レイヤと連動）` ： :guilabel:`ターゲット属性` "
+"の変更に応じて結合属性をオンザフライで同期できるようになります。これにより、結合属性の制約条件も適切に更新されます。たくさんの地物や無数の結合がある場合には非常に時間がかかることがあるため、この機能はデフォルトでは無効化されていることに注意してください。"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:86
 msgid ""
@@ -184,6 +251,21 @@ msgstr "|joinedLayerNotEditable| ：結合レイヤは編集可能に設定さ�
 msgid "joinedLayerNotEditable"
 msgstr "joinedLayerNotEditable"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:94
+msgid ""
+"|joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization "
+"mechanisms are not activated. If you want to automatically add a feature in "
+"the join layer when a feature is created in the target layer, then you have "
+"to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically, "
+"the option |checkbox| :guilabel:`Delete cascade` may be activated if you  "
+"want to automatically delete join features."
+msgstr ""
+"|joinHasNotUpsertOnEdit| "
+"：結合レイヤは編集可能ですが、同期メカニズムは有効ではありません。ターゲットレイヤに地物が作成されたときに、結合レイヤに地物を自動的に追加したい場合には、"
+" |checkbox| :guilabel:`編集時Upsert` "
+"オプションにチェックを入れる必要があります。対称的に、結合した地物を自動的に削除したい場合には、 |checkbox| "
+":guilabel:`カスケード削除` を有効にする必要があります。"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
 msgid "joinHasNotUpsertOnEdit"
 msgstr "joinHasNotUpsertOnEdit"
@@ -193,8 +275,7 @@ msgid ""
 "|unchecked| :guilabel:`Joined fields`: instead of adding all the fields from"
 " the joined layer, you can specify a subset."
 msgstr ""
-"|unchecked| :guilabel:`結合フィールド` "
-"：結合するレイヤの全てのフィールドを追加するのではなく、その一部分を指定することができます。"
+"|unchecked| :guilabel:`結合属性` ：結合するレイヤの全てのフィールドを追加するのではなく、その一部分を指定することができます。"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:103
 msgid ""
