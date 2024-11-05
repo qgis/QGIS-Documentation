@@ -39,13 +39,77 @@ msgstr ""
 msgid "The HTML Frame Item"
 msgstr "Das HTML-Rahmen Element"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:12
+msgid ""
+"It is possible to add a frame that displays the contents of a website or "
+"even create and style your own HTML page and display it! You can add a "
+"picture with the |addHtml| :guilabel:`Add HTML` following :ref:`items "
+"creation instructions <create_layout_item>` and manipulate it the same way "
+"as exposed in :ref:`interact_layout_item`. Note that the HTML scale is "
+"controlled by the layout export resolution at the time the HTML frame is "
+"created."
+msgstr ""
+"Es ist möglich, einen Rahmen hinzuzufügen, der den Inhalt einer Website "
+"anzeigt, oder sogar eine eigene HTML-Seite zu erstellen und zu gestalten und"
+" sie anzuzeigen. Sie können ein HTML-Element mit dem Befehl |addHtml| "
+":guilabel:`HTML hinzufügen`, wie in der :ref:`Anleitung zum Erstellen von "
+"Elementen <create_layout_item>`erklärt, hinzufügen und es dann, wie in "
+":ref:`interact_layout_item` erklärt, bearbeiten. Beachten Sie, dass die "
+"HTML-Skalierung durch die Auflösung des Layout-Exports zum Zeitpunkt der "
+"Erstellung des HTML-Rahmens gesteuert wird."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:147
 msgid "addHtml"
 msgstr "addHtml"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:19
+msgid ""
+"The HTML item can be customized using its :guilabel:`Item Properties` panel."
+" Other than the :ref:`items common properties <item_common_properties>`, "
+"this feature has the following functionalities (see "
+":numref:`figure_layout_html`):"
+msgstr ""
+"Das HTML-Element kann über das Bedienfeld :guilabel:`Elementeigenschaften` "
+"angepasst werden. Abgesehen von den :ref:`gemeinsamen Eigenschaften "
+"<item_common_properties>`, hat dieses Element die folgenden Funktionen "
+"(siehe :numref:`figure_layout_html`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:29
+msgid "HTML Frame, the Item Properties Panel"
+msgstr "Übersicht über die Elementeigenschaften eines HTML-Elements"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:33
 msgid "HTML Source"
 msgstr "HTML-Quelle"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:35
+msgid ""
+"The :guilabel:`HTML Source` group of the HTML frame :guilabel:`Item "
+"Properties` panel provides the following functionalities (see "
+":numref:`figure_layout_html_ppt`):"
+msgstr ""
+"Die Gruppe :guilabel:`HTML-Quelle` des Bedienfeldes "
+":guilabel:`Elementeigenschaften` eines HTML-Rahmens bietet die folgenden "
+"Funktionen (siehe :numref:`figure_layout_html_ppt`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:43
+msgid "HTML frame, the HTML Source properties"
+msgstr "HTML-Rahmen, die Eigenschaften der HTML-Quelle"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:45
+msgid ""
+"In :guilabel:`URL` you can enter the URL of a webpage you copied from your "
+"Internet browser or select an HTML file using the :guilabel:`...` "
+":sup:`Browse` button. There is also the option to use the |dataDefine| "
+":sup:`Data-defined override` button, to provide a URL from the contents of "
+"an attribute field of a table or using a regular expression."
+msgstr ""
+"In :guilabel:`URL` können Sie die URL einer Webseite eingeben (z.B. indem "
+"Sie sie von Ihrem Internet-Browser kopieren) oder eine HTML-Datei mit der "
+"Schaltfläche :guilabel:`...` :sup:`Durchsuchen` auswählen. Es besteht auch "
+"die Möglichkeit, die Schaltfläche |dataDefine| :sup:`Datendefinierte "
+"Übersteuerung` zu verwenden, um eine URL aus dem Inhalt eines Attributfeldes"
+" einer Tabelle oder mithilfe eines regulären Ausdrucks anzugeben."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:151
 msgid "dataDefine"
@@ -56,8 +120,25 @@ msgid ""
 "In :guilabel:`Source` you can enter text in the textbox with some HTML tags "
 "or provide a full HTML page."
 msgstr ""
-"Unter :guilabel:`Quelle` können Sie Text mit einigen HTML-Tags ins "
-"Textfenster eingeben oder eine ganze HTML-Seite zur Verfügung zu stellen."
+"Unter :guilabel:`Quelle` können Sie einen Text mit HTML-Formatierungen "
+"direkt ins Textfenster eingeben oder eine ganze HTML-Seite zur Verfügung zu "
+"stellen."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:52
+msgid ""
+"The :guilabel:`Insert or Edit an Expression...` button can be used to add an"
+" expression like ``[%Year($now)%]`` in the Source textbox to display the "
+"current year. This button is only activated when radiobutton "
+":guilabel:`Source` is selected. After inserting the expression click "
+"somewhere in the textbox before refreshing the HTML frame, otherwise you "
+"will lose the expression."
+msgstr ""
+"Die Schaltfläche :guilabel:`Einen Ausdruck einfügen oder bearbeiten...` kann"
+" verwendet werden, um einen Ausdruck wie ``[%Year($now)%]`` in das Textfeld "
+"Quelle einzufügen, um das aktuelle Jahr anzuzeigen. Diese Schaltfläche wird "
+"nur aktiviert, wenn der Auswahlknopf :guilabel:`Quelle` ausgewählt ist. "
+"Klicken Sie nach dem Einfügen des Ausdrucks irgendwo in das Textfeld, bevor "
+"Sie den HTML-Rahmen aktualisieren, sonst geht der Ausdruck verloren."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:57
 msgid ""
@@ -66,23 +147,110 @@ msgid ""
 "the expression instead."
 msgstr ""
 "Aktivieren Sie |checkbox| :guilabel:`QGIS-Ausdrücke in HTML-Quelle "
-"auswerten` um das Ergebnis des Ausdrucks, den Sie eingefügt haben, zu sehen,"
-" andernfalls sehen Sie den Ausdruck."
+"auswerten`, um das Ergebnis des Ausdrucks, den Sie eingefügt haben, zu "
+"sehen, andernfalls sehen Sie den Ausdruck."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:149
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:60
+msgid ""
+"Use the :guilabel:`Refresh HTML` button to refresh the HTML frame(s) and see"
+" the result of changes."
+msgstr ""
+"Verwenden Sie die Schaltfläche :guilabel:`HTML aktualisieren`, um den/die "
+"HTML-Frame(s) zu aktualisieren und das Ergebnis der Änderungen zu sehen."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:65
 msgid "Frames"
 msgstr "Rahmen"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:67
+msgid ""
+"The :guilabel:`Frames` group of the HTML frame :guilabel:`Item Properties` "
+"panel provides the following functionalities (see "
+":numref:`figure_layout_html_frames`):"
+msgstr ""
+"Die Gruppe :guilabel:`Rahmen` im Bedienfeld HTML-Rahmen "
+":guilabel:`Elementeigenschaften` bietet folgende Funktionen (siehe "
+":numref:`figure_layout_html_frames`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:75
+msgid "HTML frame, the Frames properties"
+msgstr "HTML-Rahmen, die Eigenschaften des Rahmen"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:77
 msgid ""
 "With :guilabel:`Resize mode` you can select how to render the HTML contents:"
 msgstr ""
-"Mit dem :guilabel:`Resize-Modus` können Sie auswählen wie der HTMl Inhalt "
+"Mit dem :guilabel:`Größenmodus` können Sie auswählen, wie der HTML Inhalt "
 "gerendert wird:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:79
+msgid ""
+"``Use existing frames`` displays the result in the first frame and added "
+"frames only."
+msgstr ""
+"``Vorhandene Rahmen verwenden`` zeigt das Ergebnis nur im ersten Rahmen und "
+"den hinzugefügten Rahmen an."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:81
+msgid ""
+"``Extend to next page`` will create as many frames (and corresponding pages)"
+" as necessary to render the height of the web page. Each frame can be moved "
+"around on the layout. If you resize a frame, the webpage will be divided up "
+"between the other frames. The last frame will be trimmed to fit the web "
+"page."
+msgstr ""
+"``Auf die nächste Seite erweitern`` erzeugt so viele Rahmen (und "
+"entsprechende Seiten), wie nötig sind, um die Höhe der Webseite "
+"darzustellen. Jeder Rahmen kann auf dem Layout verschoben werden. Wenn Sie "
+"die Größe eines Rahmens ändern, wird die Webseite auf die anderen Rahmen "
+"aufgeteilt. Der letzte Rahmen wird so zugeschnitten, dass die Webseite "
+"passt."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:85
+msgid ""
+"``Repeat on every page`` will repeat the upper left of the web page on every"
+" page in frames of the same size."
+msgstr ""
+"``Auf jeder Seite wiederholen`` wiederholt die obere linke Seite der "
+"Webseite auf jeder Seite in Rahmen der gleichen Größe."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:87
+msgid ""
+"``Repeat until finished`` will also create as many frames as the ``Extend to"
+" next page`` option, except all frames will have the same size."
+msgstr ""
+"Die Option ``Bis zum Ende wiederholen`` erzeugt ebenso viele Rahmen wie die "
+"Option ``Bis zur nächsten Seite erweitern``, nur daß alle Rahmen die gleiche"
+" Größe haben."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:90
+msgid ""
+"Use the :guilabel:`Add Frame` button to add another frame with the same size"
+" as selected frame. If the HTML page does not fit in the first frame it will"
+" continue in the next frame when you use :guilabel:`Resize mode` or "
+":guilabel:`Use existing frames`."
+msgstr ""
+"Verwenden Sie die Schaltfläche :guilabel:`Rahmen hinzufügen`, um einen "
+"weiteren Rahmen mit der gleichen Größe wie der ausgewählte Rahmen "
+"hinzuzufügen. Wenn die HTML-Seite nicht in den ersten Rahmen passt, wird sie"
+" im nächsten Rahmen fortgesetzt, wenn Sie :guilabel:`Größenmodus` oder "
+":guilabel:`Vorhandene Rahmen verwenden` auswählen."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:94
+msgid ""
+"Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents"
+" the page from being exported when the frame has no HTML contents. This "
+"means all other layout items, maps, scale bars, legends etc. will not be "
+"visible in the result."
+msgstr ""
+"Aktivieren Sie |checkbox| :guilabel:`Seite nicht exportieren, wenn der "
+"Rahmen leer ist` verhindert, dass die Seite exportiert wird, wenn der Rahmen"
+" keinen HTML-Inhalt hat. Das bedeutet, dass alle anderen Layoutelemente, "
+"Karten, Maßstabsleisten, Legenden usw. im Ergebnis nicht sichtbar sind."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:98
 msgid ""
@@ -90,12 +258,28 @@ msgid ""
 "prevents the HTML frame being drawn if the frame is empty."
 msgstr ""
 "Das Aktivieren von |checkbox| :guilabel:`Hintergrund nicht anzeigen, wenn "
-"Rahmen leer ist` verhindert, dass der HTML-Rahmen gezeichnet wird wenn der "
+"Rahmen leer ist` verhindert, dass der HTML-Rahmen gezeichnet wird, wenn der "
 "Rahmen leer ist."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:103
 msgid "Use smart page breaks and User style sheet"
-msgstr "Intelligente Seitenumbrüche und Benutzer Stylesheet nutzen"
+msgstr "Intelligente Seitenumbrüche und Benutzer-Stylesheet nutzen"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:105
+msgid ""
+"The :guilabel:`Use smart page breaks` dialog and :guilabel:`User style "
+"sheet` dialog of the HTML frame :guilabel:`Item Properties` panel provides "
+"the following functionalities (see :numref:`figure_layout_html_breaks`):"
+msgstr ""
+"Die Bereiche :guilabel:`Intelligente Seitenumbrüche nutzen` und "
+":guilabel:`Benutzer Stylesheet` eines HTML-Elements bieten die folgenden "
+"Funktionalitäten (siehe :numref:`figure_layout_html_breaks`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:114
+msgid "HTML frame, Use smart page breaks and User style sheet properties"
+msgstr ""
+"HTML-Rahmen, Verwendung von intelligenten Seitenumbrüchen und Benutzer-"
+"Stylesheet-Eigenschaften"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:116
 msgid ""
@@ -103,9 +287,9 @@ msgid ""
 "frame contents from breaking mid-way a line of text so it continues nice and"
 " smooth in the next frame."
 msgstr ""
-"Aktivieren Sie |checkbox| :guilabel:`Intelligente Seitenumbrüche` um zu "
-"verhindern, dass der HTML-Rahmen inmitten einer Textzeile umbricht so dass "
-"er weiter schön und glatt im nächsten Rahmen weitergeht."
+"Aktivieren Sie |checkbox| :guilabel:`Intelligente Seitenumbrüche nutzen`, um"
+" zu verhindern, dass der HTML-Rahmen inmitten einer Textzeile umbricht, "
+"sodass er weiter schön und glatt im nächsten Rahmen weitergeht."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:119
 msgid ""
@@ -124,3 +308,24 @@ msgstr ""
 "Seitenumbruch, es resultiert aber auch in mehr nicht genutztem Platz am Fuß "
 "des Rahmens. Dies wird nur genutzt wenn :guilabel:`Intelligenter "
 "Seitenumbrüche nutzen` aktiviert ist. "
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:125
+msgid ""
+"Activate |checkbox| :guilabel:`User style sheet` to apply HTML styles that "
+"often is provided in cascading style sheets. An example of style code is "
+"provided below to set the color of ``<h1>`` header tag to green and set the "
+"font and font size of text included in paragraph tags ``<p>``."
+msgstr ""
+"Aktivieren Sie |checkbox| :guilabel:`Benutzer Stylesheet`, um HTML-Stile "
+"anzuwenden, die oft in kaskadierenden Stilvorlagen bereitgestellt werden. "
+"Nachfolgend ein Beispiel für Style Code, um die Farbe des ``<h1>`` Header-"
+"Tags auf grün zu setzen und die Schriftart und -größe des Textes in den "
+"Absatz-Tags ``<p>`` einzustellen."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:138
+msgid ""
+"Use the :guilabel:`Update HTML` button to see the result of the style sheet "
+"settings."
+msgstr ""
+"Verwenden Sie die Schaltfläche :guilabel:`HTML aktualisieren`, um das "
+"Ergebnis der Stylesheet-Einstellungen zu sehen."
