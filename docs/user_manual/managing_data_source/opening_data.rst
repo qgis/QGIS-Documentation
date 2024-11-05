@@ -1383,7 +1383,16 @@ Services can be either a :guilabel:`New Generic Connection...` or a
 You set up a service by adding:
 
 * a :guilabel:`Name`
-* the :guilabel:`URL`: of the type ``http://example.com/{z}/{x}/{y}.pbf`` for generic
+* a :guilabel:`Style URL`: a URL to a MapBox GL JSON style configuration.
+  If provided, then that style will be applied whenever the layers
+  from the connection are added to QGIS.
+  In the case of Arcgis vector tile service connections, the URL overrides
+  the default style configuration specified in the server configuration.
+
+  You can load vector tiles directly from a :guilabel:`Style URL`.
+  The data source is automatically parsed from the style, and URLs with multiple sources are supported.
+  That makes :guilabel:`Source URL` optional.
+* the :guilabel:`Source URL`: of the type ``http://example.com/{z}/{x}/{y}.pbf`` for generic
   services and ``http://example.com/arcgis/rest/services/Layer/VectorTileServer``
   for ArcGIS based services.
   The service must provide tiles in :file:`.pbf` format.
@@ -1395,23 +1404,18 @@ You set up a service by adding:
   For Mercator projection (used by OpenStreetMap Vector Tiles) Zoom Level 0
   represents the whole world at a scale of 1:500.000.000. Zoom Level 14
   represents the scale 1:35.000.
-* a :guilabel:`Style URL`: a URL to a MapBox GL JSON style configuration.
-  If provided, then that style will be applied whenever the layers
-  from the connection are added to QGIS.
-  In the case of Arcgis vector tile service connections, the URL overrides
-  the default style configuration specified in the server configuration.
 * the :ref:`authentication <authentication_index>` configuration if necessary
 * a :guilabel:`Referer`
 
-:numref:`figure_vector_tiles_maptilerplanet` shows the dialog with the
-MapTiler planet Vector Tiles service configuration.
+:numref:`figure_vector_tiles_configuration` shows the dialog with the
+Vector Tiles service configuration.
 
-.. _figure_vector_tiles_maptilerplanet:
+.. _figure_vector_tiles_configuration:
 
-.. figure:: img/vector_tiles_maptilerplanet.png
+.. figure:: img/vector_tiles_configuration.png
    :align: center
 
-   Vector Tiles - Maptiler Planet configuration
+   Vector Tiles - Service configuration
 
 Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
 through the :guilabel:`Vector Tiles` entry in :guilabel:`Data Source Manager`
