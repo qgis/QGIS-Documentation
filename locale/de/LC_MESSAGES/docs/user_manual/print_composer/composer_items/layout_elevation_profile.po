@@ -35,13 +35,73 @@ msgstr ""
 "<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
 " übersetzt."
 
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:5
+msgid "The Elevation Profile Item"
+msgstr "Das Geländehöhenprofil-Element"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:13
+msgid ""
+"The Elevation Profile item is used to display an :ref:`elevation profile "
+"view <label_elevation_profile_view>` in a layout. Use the |elevationProfile|"
+" :guilabel:`Add Elevation Profile` button, and follow :ref:`items creation "
+"instructions <create_layout_item>` to add a new elevation profile item that "
+"you can later manipulate the same way as demonstrated in "
+":ref:`interact_layout_item`."
+msgstr ""
+"Das Element Geländehöhenprofil wird verwendet, um eine "
+":ref:`Höhenprofilansicht <label_elevation_profile_view>` in einem Layout "
+"anzuzeigen. Verwenden Sie die Schaltfläche |elevationProfile| "
+":guilabel:`Geländehöhenprofil hinzufügen` und folgen Sie der :ref:`Anleitung"
+" zum Erstellen von LAyout-Elementen`, um ein neues Höhenprofil-Element "
+"hinzuzufügen. Dies können Sie dann, wie in :ref:`interact_layout_item` "
+"gezeigt, anpassen."
+
 #: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:101
 msgid "elevationProfile"
 msgstr "elevationProfile"
 
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:18
+msgid ""
+"A new elevation profile item has default settings that make it render an "
+"empty chart. You can customize its properties in the :guilabel:`Item "
+"Properties` panel. In addition to the :ref:`common properties "
+"<item_common_properties>`, this feature has the following functionalities:"
+msgstr ""
+"Ein neues Geländehöhenprofil hat Standardeinstellungen, die ein leeres "
+"Diagramm erzeugen. Sie können die Eigenschaften im Bedienfeld "
+":guilabel:`Elementeigenschaften` anpassen. Zusätzlich zu den "
+":ref:`gemeinsamen Elementeigenschaften <item_common_properties>` verfügt "
+"dieses Element über die folgenden Funktionalitäten:"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:33
+msgid ""
+"The Elevation profile :guilabel:`Item Properties` panel embeds a top toolbar"
+" with the following functionalities:"
+msgstr ""
+"Das Bedienfeld :guilabel:`Elementeigenschaften` enthält eine obere "
+"Symbolleiste mit den folgenden Funktionen:"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:36
+msgid ""
+"|refresh| :sup:`Update elevation profile` to refresh the item rendering"
+msgstr ""
+"|refresh| :sup:`Geländehöhenprofil aktualisieren` um die Darstellung des "
+"Elements zu aktualisieren"
+
 #: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:103
 msgid "refresh"
 msgstr "refresh"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:37
+msgid ""
+"|copyProfileSettings| :sup:`Copy from elevation profile`: a drop-down menu "
+"to select an elevation profile view from. The view settings are applied to "
+"the layout elevation profile item, and can be later modified."
+msgstr ""
+"|copyProfileSettings| :sup:`Aus Profil kopieren`: ein Dropdown-Menü, aus dem"
+" Sie eine Höhenprofilansicht auswählen können. Die Ansichtseinstellungen "
+"werden auf das Layout-Höhenprofil-Element angewendet und können später "
+"geändert werden."
 
 #: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:99
 msgid "copyProfileSettings"
@@ -51,6 +111,162 @@ msgstr "copyProfileSettings"
 msgid "Layers"
 msgstr "Layers"
 
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:43
+msgid ""
+"Under the :guilabel:`Layers` group, check in the tree view the layers you "
+"would like to render in the profile item. Remember to properly configure the"
+" :guilabel:`Elevation` properties of the selected layers."
+msgstr ""
+"Markieren Sie unter der Gruppe :guilabel:`Layer` in der Strukturansicht die "
+"Layer, die Sie im Profilelement darstellen möchten. Denken Sie daran, die "
+"Eigenschaften :guilabel:`Höhe` der ausgewählten Layer richtig zu "
+"konfigurieren."
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:48
+msgid "Profile curve"
+msgstr "Profilkurve"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:50
+msgid ""
+"|unchecked| :guilabel:`Controlled by atlas`: the :ref:`profile curve "
+"<elevation_profile_create>` will be taken from the current atlas feature and"
+" the elevation profile view updated as you walk through the atlas features. "
+"This is currently supported for an active layout atlas or report, using a "
+"line geometry type coverage layer."
+msgstr ""
+"|unchecked| :guilabel:`Gesteuert durch Atlas`: die :ref:`Profilkurve "
+"<elevation_profile_create>` wird aus dem aktuellen Atlas-Objekt übernommen "
+"und die Ansicht des Höhenprofils aktualisiert, während Sie durch die Atlas-"
+"Objekte gehen. Dies wird derzeit für einen aktiven Layout-Atlas oder "
+"-Bericht unterstützt, der einen Coverage-Layer vom Typ Liniengeometrie "
+"verwendet."
+
 #: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:105
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:54
+msgid ""
+"The :guilabel:`Tolerance` distance, which can be data-defined, helps you "
+"control how far a feature of the visible layers should be from the profile "
+"curve in order to display in the layout elevation view. Only point features "
+"are currently returned."
+msgstr ""
+"Der :guilabel:`Toleranz`-Abstand, der datendefiniert übersteuert werden "
+"kann, hilft Ihnen zu kontrollieren, wie weit ein Objekt der sichtbaren Layer"
+" von der Profilkurve entfernt sein soll, um in der Layout-Höhenansicht "
+"angezeigt zu werden. Derzeit werden nur punktförmige Objekte zurückgegeben."
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:59
+msgid "Chart ranges"
+msgstr "Diagrammbereich"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:61
+msgid ""
+"A layout elevation profile item does not necessarily display the full extent"
+" of the elevation profile view it is based on. You can limit the area to "
+"render, providing:"
+msgstr ""
+"Ein Layout-Höhenprofil-Element zeigt nicht notwendigerweise das gesamte "
+"Ausmaß der Höhenprofilansicht an, auf der es basiert. Sie können den zu "
+"rendernden Bereich einschränken, wenn Sie dies wünschen:"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:64
+msgid ""
+"on the X axis, the :guilabel:`Minimum distance` and :guilabel:`Maximum "
+"distance` from the profile curve starting point"
+msgstr ""
+"auf der X-Achse den :guilabel:`Minimalabstand` und "
+":guilabel:`Maximalabstand` vom Startpunkt der Profilkurve"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:65
+msgid ""
+"On the Y axis, the :guilabel:`Minimum elevation` and :guilabel:`Maximum "
+"elevation`"
+msgstr ""
+"Auf der Y-Achse die Werte :guilabel:`Minimale Geländehöhe` und "
+":guilabel:`Maximale Geländehöhe`"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:68
+msgid "Distance and elevation axes"
+msgstr "Distanzachse und Geländehöhenachse"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:70
+msgid ""
+"The :guilabel:`Distance axis` and :guilabel:`Elevation axis` groups give "
+"options to tweak the grid over the elevation profile item, respectively on "
+"the X and Y axes:"
+msgstr ""
+"Die Gruppen :guilabel:`Distanzachse` und :guilabel:`Geländehöhenachse` "
+"bieten Optionen, um das Raster über dem Höhenprofil auf der X- bzw. Y-Achse "
+"zu optimieren:"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:73
+msgid ""
+"the distance display :guilabel:`Unit`, allowing to override the map canvas "
+"unit"
+msgstr ""
+"die Entfernungsanzeige :guilabel:`Einheit`, mit der die Einheit der "
+"Kartenansicht überschrieben werden kann"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:74
+msgid ""
+"the graduation on the axis with both a :guilabel:`Major interval` and "
+":guilabel:`Minor interval`"
+msgstr ""
+"die Teilung auf der Achse mit einem :guilabel:`Hauptintervall` und "
+":guilabel:`Unterintervall`"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:75
+msgid ""
+"the line symbols to apply to the corresponding :guilabel:`Major grid lines` "
+"and :guilabel:`Minor grid lines`"
+msgstr ""
+"die Liniensymbole, die auf die entsprechenden :guilabel:`Hauptgitterlinien` "
+"und :guilabel:`Untergitterlinien` anzuwenden sind"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:76
+msgid ""
+"how regular the graduation items should be labeled (:guilabel:`Label "
+"interval`) as well as their :guilabel:`Label format` and :guilabel:`Label "
+"font`"
+msgstr ""
+"wie regelmäßig die Teilungselemente beschriftet werden sollen "
+"(:guilabel:`Beschriftungsintervall`) sowie deren "
+":guilabel:`Beschriftungsformat` und :guilabel:`Beschriftungsschrift`"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:78
+msgid ""
+"the :guilabel:`Distance labels`: configures whether the distance unit symbol"
+" should be placed next to :guilabel:`Every value`, :guilabel:`First value`, "
+":guilabel:`Last value`, :guilabel:`First and last values`, or skipped "
+"(:guilabel:`None`)"
+msgstr ""
+"die :guilabel:`Abstandsbeschriftungen`: legt fest, ob das Symbol für die "
+"Abstandseinheit neben :guilabel:`Jeder Wert`, :guilabel:`Erster Wert`, "
+":guilabel:`Letzter Wert`, :guilabel:`Erster und letzter Wert` oder gar nicht"
+" (:guilabel:`Keine`) platziert werden soll"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:83
+msgid "Chart area"
+msgstr "Diagrammbereich"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:85
+msgid ""
+"Under :guilabel:`Chart area`, you can configure the rendering of the area in"
+" which the elevation profile plot is actually displayed:"
+msgstr ""
+"Unter :guilabel:`Diagrammbereich` können Sie die Darstellung des Bereichs "
+"konfigurieren, in dem das Geländehöhenprofil angezeigt wird:"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:88
+msgid "a :guilabel:`Background` fill symbol"
+msgstr "ein :guilabel:`Hintergrund` Füllsymbol"
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:89
+msgid "a :guilabel:`Border` line symbol"
+msgstr "ein :guilabel:`Rand` Liniensymbol "
+
+#: ../../docs/user_manual/print_composer/composer_items/layout_elevation_profile.rst:90
+msgid "the margins from the elevation profile item border"
+msgstr "die Ränder vom Rand des Geländehöhenprofils"
