@@ -1388,8 +1388,10 @@ You set up a service by adding:
   from the connection are added to QGIS.
   In the case of Arcgis vector tile service connections, the URL overrides
   the default style configuration specified in the server configuration.
+
   You can load vector tiles directly from a :guilabel:`Style URL`.
   The data source is automatically parsed from the style, and URLs with multiple sources are supported.
+  That makes :guilabel:`Source URL` optional.
 * the :guilabel:`Source URL`: of the type ``http://example.com/{z}/{x}/{y}.pbf`` for generic
   services and ``http://example.com/arcgis/rest/services/Layer/VectorTileServer``
   for ArcGIS based services.
@@ -1405,15 +1407,15 @@ You set up a service by adding:
 * the :ref:`authentication <authentication_index>` configuration if necessary
 * a :guilabel:`Referer`
 
-:numref:`figure_vector_tiles_swisstopo` shows the dialog with the
-Swisstopo Base Layer Vector Tiles service configuration.
+:numref:`figure_vector_tiles_configuration` shows the dialog with the
+Vector Tiles service configuration.
 
-.. _figure_vector_tiles_swisstopo:
+.. _figure_vector_tiles_configuration:
 
-.. figure:: img/vector_tiles_swisstopo.png
+.. figure:: img/vector_tiles_configuration.png
    :align: center
 
-   Vector Tiles - Swisstopo configuration
+   Vector Tiles - Service configuration
 
 Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
 through the :guilabel:`Vector Tiles` entry in :guilabel:`Data Source Manager`
