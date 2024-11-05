@@ -35,13 +35,82 @@ msgstr ""
 "<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
 " übersetzt."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:4
+msgid "The Marker, Picture and North Arrow Items"
+msgstr "Die Elemente Markierung, Bild und Nordpfeil"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:11
+msgid ""
+"Along with the map or legend items in the print layout, you may want to "
+"decorate your realization with images or annotations. QGIS provides "
+"different tools to achieve this:"
+msgstr ""
+"Neben den Karten- oder Legenden-Elementen im Drucklayout können Sie Ihre "
+"Umsetzung mit Bildern oder Anmerkungen dekorieren. QGIS bietet verschiedene "
+"Werkzeuge, um dies zu erreichen:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:15
+msgid ""
+"the :ref:`picture item <layout_picture_item>`: decorates the layout with an "
+"image raster or SVG file (e.g. logos, pictures, north arrows, ...)"
+msgstr ""
+"das :ref:`Bild-Element <layout_picture_item>`: fügt dem Layout ein "
+"Bildraster oder einer SVG-Datei (z.B. Logos, Bilder, ...) hinzu"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:17
+msgid ""
+"the :ref:`north arrow item <layout_northarrow_item>`: a picture item "
+"predefined with a north arrow image"
+msgstr ""
+"das :ref:`Nordpfeil-Element <layout_northarrow_item>` ist ein Bild-Element, "
+"das mit einem Nordpfeil vordefiniert ist"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:19
+msgid ""
+"the :ref:`marker item <layout_marker_item>`: decorates the layout with QGIS "
+"vector :ref:`symbols <symbol-selector>`. It can be used to place markers "
+"over a map item or for creation of advanced custom legends."
+msgstr ""
+"das :ref:`Markierungs-Element <layout_marker_item>` fügt dem Layout ein QGIS"
+" :ref:`Markierungs-Symbol <symbol-selector>` hinzu. Es kann z.B. verwendet "
+"werden, um Markierungen über einem Kartenelement zu platzieren oder um "
+"erweiterte benutzerdefinierte Legenden zu erstellen."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:26
 msgid "The Picture Item"
-msgstr "Das Bildelement"
+msgstr "Das Bild-Element"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:28
+msgid ""
+"You can add a picture by dragging it from your file manager onto the canvas,"
+" pasting it directly into the layout by using :kbd:`Ctrl+V` or "
+":menuselection:`Edit --> Paste` and by using the |addImage| :sup:`Add "
+"Picture`, following :ref:`items creation instructions <create_layout_item>`."
+" Then you can manipulate it, as explained in :ref:`interact_layout_item`."
+msgstr ""
+"Sie können ein Bild hinzufügen, indem Sie es aus Ihrem Dateimanager auf die "
+"Kartenansicht ziehen, es mit :kbd:`Strg+V` oder :menuselection:`Bearbeiten "
+"--> Einfügen` direkt in das Layout einfügen und die Funktion |addImage| "
+":sup:`Bild hinzufügen` verwenden, wie in der :ref:`Anleitung zum Erstellung "
+"von Elementen <create_layout_item>`. Das Element kann dann bearbeitet "
+"werden, wie in :ref:`interact_layout_item` erklärt."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:220
 msgid "addImage"
 msgstr "addImage"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:37
+msgid ""
+"When using |addImage| :sup:`Add Picture`, the picture item will be a blank "
+"frame that you can customize using its :guilabel:`Item Properties` panel. "
+"Other than the :ref:`items common properties <item_common_properties>`, this"
+" feature has the following functionalities:"
+msgstr ""
+"Wenn Sie |addImage| :sup:`Bild hinzufügen` verwenden, wird das Bildelement "
+"ein leerer Rahmen sein, den Sie über das Bedienfeld "
+":guilabel:`Elementeigenschaften` anpassen können. Neben den "
+":ref:`gemeinsamen Elementeigenschaften <item_common_properties>` bietet "
+"dieses Element die folgenden Funktionalitäten:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:44
 msgid "Main properties"
@@ -50,6 +119,26 @@ msgstr "Haupteigenschaften"
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:51
 msgid "Picture Item Properties panel"
 msgstr "Elementeigenschaften für Bilder"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:53
+msgid "The picture item supports two types of images:"
+msgstr "Das Element Bild unterstützt zwei Arten von Bildern:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:55
+msgid ""
+":guilabel:`Raster Image`: a file selector widget can be used to fetch the "
+"data. Use the :guilabel:`...` :sup:`Browse` button to select a file on your "
+"computer or enter the path directly in the text field. You can even provide "
+"a remote URL that points to a picture. The associated image can also be "
+":ref:`embedded <embedded_file_selector>` in the layout."
+msgstr ""
+":guilabel:`Rasterbild`: Ein Dateiauswahl-Widget kann verwendet werden, um "
+"die Daten zu laden. Verwenden Sie die Schaltfläche :guilabel:`...` "
+":sup:`Durchsuchen`, um eine Datei auf Ihrem Computer auszuwählen oder geben "
+"Sie den Pfad direkt in das Textfeld ein. Sie können auch eine URL angeben, "
+"die auf ein Bild verweist. Das zugehörige Bild kann auch als "
+":ref:`einbettete Datei <embedded_file_selector>` in das Layout eingefügt "
+"werden."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:62
 msgid ""
@@ -64,6 +153,44 @@ msgstr ""
 msgid "dataDefine"
 msgstr "dataDefine"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:64
+msgid ""
+":guilabel:`SVG Image`: using by default the SVG libraries provided in "
+":menuselection:`Settings --> Options --> System --> SVG Paths`. You can "
+"however use any other file, and the file selection follows the same rules as"
+" for the raster image. The SVG parameters can as well be set dynamic."
+msgstr ""
+":guilabel:`SVG Bild`: verwendet standardmäßig die SVG-Bibliotheken, die "
+"unter :menuselection:`Einstellungen --> Optionen --> System --> SVG Pfade` "
+"zur Verfügung stehen. Sie können jedoch jede andere Datei verwenden, und die"
+" Dateiauswahl folgt den gleichen Regeln wie für das Rasterbild. Die SVG-"
+"Parameter können auch dynamisch gesetzt werden."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:71
+msgid ""
+"The QGIS provided (default) :file:`.SVG` files are customizable, meaning "
+"that you can easily apply other :guilabel:`Fill color`, :guilabel:`Stroke "
+"color` (including opacity) and :guilabel:`Stroke width` than the original, "
+"using their corresponding feature in the :guilabel:`SVG Parameters` group. "
+"These properties can also be :ref:`data-defined <data_defined>`."
+msgstr ""
+"Die von QGIS bereitgestellten (Standard-) :file:`.SVG`-Dateien sind "
+"anpassbar, d.h. Sie können ganz einfach andere :guilabel:`Füllfarbe`, "
+":guilabel:`Strichfarbe` (einschließlich Deckkraft) und "
+":guilabel:`Strichbreite` als das Original anwenden, indem Sie das "
+"entsprechende Objekt in der Gruppe :guilabel:`SVG-Parameter` verwenden. "
+"Diese Eigenschaften können auch :ref:`data-defined <data_defined>` sein."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:78
+msgid ""
+"If you add an :file:`.SVG` file that does not enable these properties, you "
+"may need to add the following tags to the file in order to add support e.g. "
+"for transparency:"
+msgstr ""
+"Wenn Sie eine :file:`.SVG\"-Datei hinzufügen, in der diese Eigenschaften "
+"nicht aktiviert sind, müssen Sie möglicherweise die folgenden Tags in die "
+"Datei einfügen, um z. B. Transparenz zu unterstützen:"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:82
 msgid "`fill-opacity=\"param(fill-opacity)\"`"
 msgstr "`fill-opacity=\"param(fill-opacity)\"`"
@@ -72,37 +199,255 @@ msgstr "`fill-opacity=\"param(fill-opacity)\"`"
 msgid "`stroke-opacity=\"param(outline-opacity)\"`"
 msgstr "`stroke-opacity=\"param(outline-opacity)\"`"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:85
+msgid "More details at :ref:`svg_symbol`."
+msgstr "Weitere Details unter :ref:`svg_symbol`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:87
+msgid ""
+"Drag-and-drop an image file (raster or SVG) into the layout page will create"
+" a layout picture item with corresponding settings."
+msgstr ""
+"Durch Ziehen und Ablegen einer Bilddatei (Raster oder SVG) auf die "
+"Layoutseite wird ein Layoutbildelement mit den entsprechenden Einstellungen "
+"erstellt."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:92
+msgid "Size and placement"
+msgstr "Größe und Platzierung"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:99
+msgid "Layout pictures size and placement properties"
+msgstr "Layoutbilder Größe und Platzierungseigenschaften"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:101
 msgid ""
 "With the :guilabel:`Resize mode` option, you can set how the image is "
 "displayed when the frame is resized:"
 msgstr ""
 "Mit der Einstellung :guilabel:`Größenmodus` können Sie festlegen, wie das "
-"Bld dargestellt wird, wenn sich die Größe des Rahmens ändert:"
+"Bild dargestellt wird, wenn sich die Größe des Rahmens ändert:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:104
+msgid ""
+"``Zoom``: enlarges/reduces the image to the frame while maintaining the "
+"aspect ratio of picture"
+msgstr ""
+"Zoom\": Vergrößert/verkleinert das Bild auf den Rahmen unter Beibehaltung "
+"des Seitenverhältnisses des Bildes"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:106
+msgid "``Stretch``: stretches the image to fit inside the frame"
+msgstr ""
+"``Strecken``: ändert die Seitenverhältnisse des Bildes, damit es in den "
+"Rahmen passt"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:107
+msgid ""
+"``Clip``: use this mode for raster images only, it sets the size of the "
+"image to the original image size without scaling, and the frame is used to "
+"clip the image. So only the part of the image that is inside the frame will "
+"be visible."
+msgstr ""
+"``Zuschneiden``: Verwenden Sie diesen Modus nur für Rasterbilder. Er setzt "
+"die Größe des Bildes auf die ursprüngliche Bildgröße, ohne Skalierung, und "
+"der Rahmen wird zum Beschneiden des Bildes verwendet. So wird nur der Teil "
+"des Bildes sichtbar, der sich innerhalb des Rahmens befindet."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:112
+msgid ""
+"``Zoom and resize frame``: enlarges the image to fit the frame, and then "
+"resizes frame to fit the resulting image dimensions"
+msgstr ""
+"``Rahmen zoomen und Größe anpassen``: vergrößert das Bild, damit es in den "
+"Rahmen passt, und passt dann die Größe des Rahmens an die resultierenden "
+"Bildabmessungen an"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:114
+msgid ""
+"``Resize frame to image size``: sets the size of the frame to match the "
+"original size of the image (no scaling)"
+msgstr ""
+"``Rahmen auf Bildgröße setzen``: setzt die Größe des Rahmens auf die "
+"Originalgröße des Bildes (keine Skalierung)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:117
+msgid ""
+"Depending on the selected :guilabel:`Resize mode`, the :guilabel:`Placement`"
+" and :guilabel:`Image rotation` options may be disabled. "
+":guilabel:`Placement` lets you select the position of the image inside its "
+"frame (top/middle/bottom and left/center/right)."
+msgstr ""
+"Je nach ausgewähltem :guilabel:`Größenmodus` können die Optionen "
+":guilabel:`Platzierung` und :guilabel:`Bilddrehung` deaktiviert sein. Mit "
+":guilabel:`Platzierung` können Sie die Position des Bildes innerhalb seines "
+"Rahmens auswählen (oben/mittig/unten und links/mittig/rechts)."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:126
+msgid "Image rotation"
+msgstr "Bilddrehung"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:128
+msgid ""
+"Images can be rotated with the :guilabel:`Image rotation` field. Activating "
+"the |checkbox| :guilabel:`Sync with map` checkbox synchronizes the rotation "
+"of the image with the rotation applied to the selected map item. This is a "
+"convenient feature to make any picture behave as a north arrow. The "
+":guilabel:`North alignment` can be:"
+msgstr ""
+"Bilder können mit dem Feld :guilabel:`Bilddrehung` gedreht werden. Durch "
+"Aktivieren des Kontrollkästchens :guilabel:`Mit Karte abgleichen` wird die "
+"Drehung des Bildes mit der Drehung des ausgewählten Kartenelements "
+"synchronisiert. Dies ist ein praktisches Objekt, um ein beliebiges Bild als "
+"Nordpfeil zu verwenden. Die :guilabel:`Nordausrichtung` kann sein:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:224
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:135
+msgid ""
+"**Grid north**: the direction of a grid line which is parallel to the "
+"central meridian of the national/local grid"
+msgstr ""
+"**Gitternorden**: die Richtung einer Gitterlinie, die parallel zum "
+"Zentralmeridian des nationalen/lokalen Gitters verläuft"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:137
+msgid "**True north**: direction of a meridian of longitude."
+msgstr "**Geographisch Norden**: Richtung eines Längenmeridians."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:139
 msgid ""
 "You can also apply a declination :guilabel:`Offset` to the picture rotation."
 msgstr ""
-"Sie können der Bilddrehung auch einen :guilabel:`Versatz` für die "
-"Missweisung hinzufügen."
+"Mit :guilabel:`Versatz` können Sie der Bilddrehung auch eine Abweichung "
+"hinzufügen."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:146
+msgid "Layout pictures image rotation properties"
+msgstr "Bildrotationseigenschaften eines Bild-Elements"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:153
 msgid "The North Arrow Item"
-msgstr "Das Nordpfeilelement"
+msgstr "Das Nordpfeil-Element"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:155
+msgid ""
+"You can add a north arrow with the |northArrow| :sup:`Add North Arrow` "
+"button, following :ref:`items creation instructions <create_layout_item>` "
+"and manipulate it the same way as exposed in :ref:`interact_layout_item`."
+msgstr ""
+"Sie können einen Nordpfeil mit der Schaltfläche |northArrow| :sup:`Nordpfeil"
+" hinzufügen` hinzufügen, indem Sie der :ref:`Anleitung zur Erstellung von "
+"Elementen <create_layout_item>` folgen und ihn dann, wie in "
+":ref:`interact_layout_item` beschrieben, bearbeiten."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:228
 msgid "northArrow"
 msgstr "northArrow"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:160
+msgid ""
+"Since north arrows are images, the :guilabel:`North Arrow` item has the same"
+" properties as the :ref:`picture item <layout_picture_item>`. The main "
+"differences are:"
+msgstr ""
+"Da Nordpfeile Bilder sind, hat das Element :guilabel:`Nordpfeil` "
+"grundsätzlich die gleichen Eigenschaften wie das Element :ref:`Bild "
+"<layout_picture_item>`. Die wichtigsten Unterschiede sind:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:164
+msgid ""
+"A default north arrow is used when adding the item, instead of a blank frame"
+msgstr ""
+"Beim Hinzufügen des Elements wird ein Standard-Nordpfeil anstelle eines "
+"leeren Rahmens verwendet."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:166
+msgid ""
+"The north arrow item is synced with a map item by default: the "
+":guilabel:`Sync with map` property is the map over which the north arrow "
+"item is drawn. If none, it falls back to the :ref:`reference map "
+"<reference_map>`."
+msgstr ""
+"Das Element Nordpfeil wird standardmäßig mit einem Karten-Element verbunden:"
+" Die Eigenschaft :guilabel:`Mit Karte abgleichen` ist die Karte, über der "
+"das Element Nordpfeil gezeichnet wurde. Wenn es nicht über einem Karten-"
+"Element gezeichnet wurde, wird statdessen die :ref:`Referenzkarte "
+"<reference_map>` verwendet."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:173
+msgid ""
+"Many of the north arrows do not have an 'N' added in the north arrow. This "
+"is done on purpose, since there are languages that do not use an 'N' for "
+"North."
+msgstr ""
+"Viele der Nordpfeile haben kein „N“ im Nordpfeil hinzugefügt. Dies geschieht"
+" absichtlich, da es Sprachen gibt, die kein „N“ für Norden verwenden."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:183
 msgid "North arrows available for selection in provided SVG library"
 msgstr "Nordpfeile, die von der SVG-Bibliothek zur Verfügung gestellt werden."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:188
+msgid "The Marker Item"
+msgstr "Das Markierungs-Element"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:190
+msgid ""
+"To add a marker item, select the |addMarker| :sup:`Add Marker` button, and "
+"click on the page. A default point marker symbol is added. Then you can "
+"manipulate it, as explained in :ref:`interact_layout_item`. But note that "
+"unlike most of the other items, you resize the item given that its size is "
+"controlled by the embedded symbols properties."
+msgstr ""
+"Um ein Markierungs-Element hinzuzufügen, wählen Sie die Schaltfläche "
+"|addMarker| :sup:`Markierung hinzufügen` und klicken Sie auf die Seite. Ein "
+"Standard-Punktmarkierungssymbol wird hinzugefügt. Dann können Sie es "
+"verändern, wie in :ref:`interact_layout_item` erklärt. Beachten Sie jedoch, "
+"dass Sie im Gegensatz zu den meisten anderen Elementen die Größe des "
+"Elements ändern können, da seine Größe durch die Eigenschaften der "
+"eingebetteten Symbole gesteuert wird."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:222
 msgid "addMarker"
 msgstr "addMarker"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:196
+msgid ""
+"The marker item can be customized from the :guilabel:`Item Properties` "
+"panel. Other than the :ref:`items common properties "
+"<item_common_properties>`, you can also:"
+msgstr ""
+"Das Markierungselement kann über das Bedienfeld "
+":guilabel:`Elementeigenschaften` angepasst werden. Neben den "
+":ref:`gemeinsamen Elementeigenschaften <item_common_properties>`, können Sie"
+" auch:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:200
+msgid ""
+"modify the :guilabel:`Symbol`, relying on all the symbol :ref:`widget "
+"capabilities <symbol-selector>`"
+msgstr ""
+"das :guilabel:`Symbol` ändern, unter der Verwendung der :ref:`Symbolauswahl "
+"<symbol-selector>`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:202
+msgid ""
+"sync the marker item rotation with the map's (see "
+":ref:`layout_images_rotation`), acting as a north arrow. The map rotation is"
+" added to any existing marker symbol level rotation (so .e.g if you have to "
+"rotate the triangle marker 90° to get it pointing straight up, it will still"
+" work nicely in north arrow mode!)"
+msgstr ""
+"die Drehung des Markierungselements mit der Karte synchronisieren (siehe "
+":ref:`layout_images_rotation`) um z.B. als Nordpfeil zu fungieren. Die "
+"Drehung der Karte wird zu jeder bestehenden Drehung der "
+"Markierungssymbolebene hinzugefügt (wenn Sie also z.B. die "
+"Dreiecksmarkierung um 90° drehen müssen, damit sie gerade nach oben zeigt, "
+"funktioniert sie immer noch gut im Nordpfeil-Modus)."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:212
+msgid "The marker item custom properties"
+msgstr "Die speziellen Eigenschaften eines Markierungs-Elements"
