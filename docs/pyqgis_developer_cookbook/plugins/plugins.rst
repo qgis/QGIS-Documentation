@@ -102,38 +102,56 @@ plugin such as its name, description etc. This information is stored in :file:`m
 
 .. _plugin_metadata_table:
 
-=====================  ========  =============================================================
-Metadata name          Required  Notes
-=====================  ========  =============================================================
-name                   True      a short string  containing the name of the plugin
-qgisMinimumVersion     True      dotted notation of minimum QGIS version
-qgisMaximumVersion     False     dotted notation of maximum QGIS version
-description            True      short text which describes the plugin, no HTML allowed
-about                  True      longer text which describes the plugin in details, no HTML allowed
-version                True      short string with the version dotted notation
-author                 True      author name
-email                  True      email of the author, only shown on the website to logged in users,
-                                 but visible in the Plugin Manager after the plugin is installed
-changelog              False     string, can be multiline, no HTML allowed
-experimental           False     boolean flag, :const:`True` or :const:`False` -
-                                 :const:`True` if this version is experimental
-deprecated             False     boolean flag, :const:`True` or :const:`False`, applies to
-                                 the whole plugin and not just to the uploaded version
-tags                   False     comma separated list, spaces are allowed inside individual tags
-homepage               False     a valid URL pointing to the homepage of your plugin
-repository             True      a valid URL for the source code repository
-tracker                False     a valid URL for tickets and bug reports
-icon                   False     a file name or a relative path (relative to
-                                 the base folder of the plugin's compressed
-                                 package) of a web friendly image (PNG, JPEG)
-category               False     one of ``Raster``, ``Vector``, ``Database``, ``Mesh`` and ``Web``
-plugin_dependencies    False     PIP-like comma separated list of other plugins to install, use
-                                 plugin names coming from their metadata's name field
-server                 False     boolean flag, :const:`True` or :const:`False`, determines if
-                                 the plugin has a server interface
-hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, determines if
-                                 the plugin provides processing algorithms
-=====================  ========  =============================================================
+=====================  ============  =============================================================
+Metadata name          Required      Notes
+=====================  ============  =============================================================
+name                   True          a short string  containing the name of the plugin
+qgisMinimumVersion     True          dotted notation of minimum QGIS version
+qgisMaximumVersion     False         dotted notation of maximum QGIS version
+description            True          short text which describes the plugin, no HTML allowed
+about                  True          longer text which describes the plugin in details, no HTML allowed
+version                True          short string with the version dotted notation
+author                 True          author name
+email                  True          email of the author, only shown on the website to logged in users,
+                                     but visible in the Plugin Manager after the plugin is installed
+changelog              False         string, can be multiline, no HTML allowed
+experimental           False         boolean flag, :const:`True` or :const:`False` -
+                                     :const:`True` if this version is experimental
+deprecated             False         boolean flag, :const:`True` or :const:`False`, applies to
+                                     the whole plugin and not just to the uploaded version
+tags                   False         comma separated list, spaces are allowed inside individual tags
+homepage               False         a valid URL pointing to the homepage of your plugin
+repository             True          a valid URL for the source code repository
+tracker                False         a valid URL for tickets and bug reports
+icon                   False         a file name or a relative path (relative to
+                                     the base folder of the plugin's compressed
+                                     package) of a web friendly image (PNG, JPEG)
+category               False         one of ``Raster``, ``Vector``, ``Database``, ``Mesh`` and ``Web``
+plugin_dependencies    False         PIP-like comma separated list of other plugins to install, use
+                                     plugin names coming from their metadata's name field
+server                 False         boolean flag, :const:`True` or :const:`False`, determines if
+                                     the plugin has a server interface
+hasProcessingProvider  False         boolean flag, :const:`True` or :const:`False`, determines if
+                                     the plugin provides processing algorithms
+payment                Conditionnal  :const:`True`, :const:`False` or ``Partial``. Must be set
+                                     if the use of the plugin involves some payment. :const:`True` means
+                                     that all functionality of the plugin requires payment.
+                                     ``Partial`` means that there is a mix of gratis and paid
+                                     features.
+authentication         Conditionnal  :const:`True`, :const:`False` or ``Partial``. Must be set
+                                     if the use of the plugin involves some authentication to a remote
+                                     service. :const:`True` means
+                                     that all functionality of the plugin requires authentication.
+                                     ``Partial`` means that there is a mix of un-authenticated and
+                                     authenticated features.
+countries              False         comma separated list of `2-letter country ISO 3166 A-2 code <https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes>`__
+                                     country codes to which the plugin applies to.
+                                     e.g. ``fr,be`` for France and Belgium. If not specified, the
+                                     plugin is presumed to not be tied to a geographical area of interest.
+languages              False         comma separated list of `Qt local names <https://doc.qt.io/qt-5/qlocale.html#uiLanguages>`_
+                                     for which the plugin has translations.`
+                                     e.g. ``fr,en`` for French and English.
+=====================  ============  =============================================================
 
 By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
 in the next section how to add a menu entry for your plugin) but they can also
@@ -213,6 +231,18 @@ An example for this metadata.txt
   ; name field
   plugin_dependencies=MyOtherPlugin==1.12,YetAnotherPlugin
 
+  ; Whether payment is required to use the plugin. If empty, unknown
+  payment=True
+
+  ;  Whether authentication is required to use the plugin. If empty, unknown
+  authentication=True
+
+  ; Countries for which the plugin is of interest. If empty, unknown/all
+  countries=be,fr
+
+  ; Languages for which the plugin has translations. If empty, unknown.
+  ; Having English is strongly recommended for wider audience.
+  languages=en,fr
 
 .. index:: Plugins; Initialisation
 
