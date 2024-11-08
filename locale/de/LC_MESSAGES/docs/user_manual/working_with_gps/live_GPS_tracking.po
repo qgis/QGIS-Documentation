@@ -37,75 +37,575 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:5
 msgid "Live GPS tracking"
-msgstr "Live GPS tracking"
+msgstr "Live-GPS-Verfolgung"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:12
+msgid ""
+"QGIS can help you do field mapping with a GPS receiver. Such a live tracking"
+" operation is done using the :ref:`GPS Toolbar <gps_toolbar>`. Some "
+":ref:`device configuration <gps_options>` may be needed before connecting "
+"QGIS and the GPS receiver."
+msgstr ""
+"QGIS kann Ihnen helfen, Feldkartierungen mit einem GPS-Empfänger "
+"durchzuführen. Eine solche Live-Tracking-Operation wird mit der :ref:`GPS "
+"Werkzeugleiste <gps_toolbar>` durchgeführt. Einige "
+":ref:`Gerätekonfigurationen <gps_options>` können erforderlich sein, bevor "
+"Sie QGIS und den GPS-Empfänger verbinden können."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:21
+msgid "GPS toolbar"
+msgstr "GPS Werkzeugleiste"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:23
+msgid ""
+"The :guilabel:`GPS Toolbar` provides the main tools to control a live "
+"tracking session. It can be activated from :menuselection:`View --> Toolbars"
+" --> GPS`. It follows the state of the project, GPS, and current GPS track, "
+"and enables actions only when they make sense. Once a device is detected by "
+"QGIS, you will be able to interact with it:"
+msgstr ""
+"Die :guilabel:`GPS-Werkzeugleiste` bietet die wichtigsten Werkzeuge zur "
+"Steuerung einer Live-Tracking-Sitzung. Sie kann über :menuselection:`Ansicht"
+" --> Werkzeugleisten --> GPS` aktiviert werden. Sie verfolgt den Status des "
+"Projekts, des GPS und des aktuellen GPS-Tracks und aktiviert Aktionen nur "
+"dann, wenn sie sinnvoll sind. Sobald ein Gerät von QGIS erkannt wird, können"
+" Sie mit ihm interagieren:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:29
+msgid "|gpsConnect| :sup:`Connect to GPS`"
+msgstr "|gpsConnect| :sup:`Mit GPS verbinden`"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:335
 msgid "gpsConnect"
 msgstr "gpsConnect"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:30
+msgid "|gpsDisconnect| :sup:`Disconnect from GPS`"
+msgstr "|gpsDisconnect| :sup:`Verbindung zum GPS-Gerät beenden`"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:339
 msgid "gpsDisconnect"
 msgstr "gpsDisconnect"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:31
+msgid ""
+"|recenter| :sup:`Recenter map on GPS location`: the map will immediately "
+"recenter on the current GPS position regardless of the :ref:`automatic "
+"recentering parameter <gps_recenter>`."
+msgstr ""
+"|recenter| :sup:`Karte auf GPS-Position zentrieren`: die Karte wird sofort "
+"auf der aktuellen GPS-Position neu zentriert, unabhängig vom Parameter "
+":ref:`automatische Neupositionierung <gps_recenter>`."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:351
 msgid "recenter"
 msgstr "recenter"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:34
+msgid ""
+"|gpsDestinationLayer| :sup:`Set destination layer for GPS digitized "
+"features`: By default, QGIS will :guilabel:`Follow active layer` for feature"
+" digitizing, meaning that GPS digitizing tools will adapt to the layer "
+"selected in :guilabel:`Layers` panel and created features will be stored in "
+"it accordingly. While this may be useful in some contexts, it also implies "
+"careful interaction with other layers to avoid storing inadvertently "
+"features in undesired layers. This option allows you to explicitly indicate "
+"a layer for the data storage during the live tracking session, and you could"
+" switch depending on your needs. Exposed tools will adapt as well to the "
+"selected layer type."
+msgstr ""
+"|gpsDestinationLayer| :sup:`Ziellayer für GPS-digitalisierte Objekte "
+"setzen`: Standardmäßig wird QGIS :guilabel:`Dem aktiven Layer folgen` für "
+"die Digitalisierung von Objekten verwenden. Das bedeutet, dass sich die GPS-"
+"Digitalisierungswerkzeuge an den Layer anpassen, der im Bedienfeld "
+":guilabel:`Layer` ausgewählt wurde, und die erstellten Objekte entsprechend "
+"in diesem Layer gespeichert werden. Dies kann zwar in manchen Kontexten "
+"nützlich sein, erfordert aber auch eine sorgfältige Interaktion mit anderen "
+"Layern, um zu vermeiden, dass Objekte versehentlich im falschen Layern "
+"gespeichert werden. Mit dieser Option können Sie während der Live-Tracking-"
+"Sitzung explizit einen Layer für die Datenspeicherung angeben, den Sie je "
+"nach Bedarf wechseln können. Exponierte Werkzeuge passen sich ebenfalls an "
+"den gewählten Layer-Typ an."
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:337
 msgid "gpsDestinationLayer"
 msgstr "gpsDestinationLayer"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:44
+msgid ""
+"The GPS destination layer is made automatically editable when a feature is "
+"being created, and the user is notified accordingly."
+msgstr ""
+"Der Layer für das GPS-Ziel wird automatisch editierbar gemacht, wenn ein "
+"Objekt erstellt wird, und der Benutzer wird entsprechend informiert."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:47
+msgid "actions for feature creation:"
+msgstr "Aktionen zur Erstellung von Objekten:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:49
+msgid ""
+"|addTrackPoint| :sup:`Add vertex to GPS track using GPS current location`"
+msgstr ""
+"|addTrackPoint| :sup:`Stützpunkt der aktuellen GPS-Position zur GPS-Spur "
+"hinzufügen`"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:327
 msgid "addTrackPoint"
 msgstr "addTrackPoint"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:50
+msgid ""
+"|capturePoint| :sup:`Create a new point feature at current GPS location`"
+msgstr ""
+"|capturePoint| :sup:`Neues Punktobjekt an der aktuellen GPS-Position "
+"erzeugen`"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:331
 msgid "capturePoint"
 msgstr "capturePoint"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:51
+msgid ""
+"|captureLine| :sup:`Create a new line feature using the current GPS track`"
+msgstr ""
+"|captureLine| :sup:`Neues Linienobjekt an der aktuellen GPS-Position "
+"erzeugen`"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:329
 msgid "captureLine"
 msgstr "captureLine"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:52
+msgid ""
+"|capturePolygon| :sup:`Create a new polygon feature using the current GPS "
+"track`"
+msgstr ""
+"|capturePolygon| :sup:`Neues Polygonobjekt an der aktuellen GPS-Position "
+"erzeugen`"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:333
 msgid "capturePolygon"
 msgstr "capturePolygon"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:53
+msgid "|reset| :sup:`Reset track`"
+msgstr "|reset| :sup:`Spur zurücksetzen`"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:353
 msgid "reset"
 msgstr "reset"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:55
+msgid ""
+"|metadata| :sup:`Show GPS information`: opens the :ref:`GPS Information "
+"<gps_information_panel>` panel"
+msgstr ""
+"|metadata| :sup:`GPS-Informationsfenster anzeigen`: üffent das :ref:`GPS-"
+"Information <gps_information_panel>` Bedienfeld"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:343
 msgid "metadata"
 msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:58
+msgid ""
+"a display box for quick access to some GPS information components you may "
+"need:"
+msgstr ""
+"ein Anzeigefeld für den schnellen Zugriff auf einige GPS-"
+"Informationskomponenten, die Sie möglicherweise benötigen:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:60
+msgid "|unchecked| :sup:`Show location`"
+msgstr "|unchecked| :sup:`Position anzeigen`"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:355
 msgid "unchecked"
 msgstr "unchecked"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:61
+msgid "|unchecked| :sup:`Show altitude (Geoid)`"
+msgstr "|unchecked| :sup:`Höhe anzeigen (geoid)`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:62
+msgid "|unchecked| :sup:`Show altitude (WGS 84 ellipsoid)`"
+msgstr "|unchecked| :sup:`Höhe anzeigen (WGS84-Ellipsoid)`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:63
+msgid "|unchecked| :sup:`Show ground speed`"
+msgstr "|unchecked| :sup:`Geschwindigkeit über Grund anzeigen`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:64
+msgid "|unchecked| :sup:`Show bearing`"
+msgstr "|unchecked| :sup:`Kurs anzeigen`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:65
+msgid "|unchecked| :sup:`Show total track length`"
+msgstr "|unchecked| :sup:`Spurgesamtlänge anzeigen`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:66
+msgid "|unchecked| :sup:`Show distance from start of track`"
+msgstr "|unchecked| :sup:`Entfernung zum Spurbeginn anzeigen`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:70
+msgid ""
+"The |options| :sup:`Settings` button opens a drop-down menu with common "
+"settings which are expected to be modified mid-session:"
+msgstr ""
+"Die Schaltfläche |options| :sup:`Einstellungen` öffnet ein Dropdown-Menü mit"
+" allgemeinen Einstellungen, die während der Sitzung geändert werden können:"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:345
 msgid "options"
 msgstr "options"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:73
+msgid "|unchecked| :guilabel:`Show location marker`"
+msgstr "|unchecked| :guilabel:`Positionsmarkierung anzeigen`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:74
+msgid "|unchecked| :guilabel:`Show bearing line`"
+msgstr "|unchecked| :guilabel:`Kurslinie anzeigen`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:75
+msgid "|unchecked| :guilabel:`Rotate map to match GPS direction`"
+msgstr "|unchecked| :guilabel:`Karte in GPS-Richtung drehen`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:79
+msgid "Options to control map recentering:"
+msgstr "Optionen zur Steuerung der Kartenneuausrichtung:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:81
+msgid ""
+"|radioButtonOff| :guilabel:`Always recenter map` when the GPS position is "
+"offset from the map canvas center by a certain distance (as a ratio of the "
+"map canvas extent)"
+msgstr ""
+"|radioButtonOff| :guilabel:`Karte immer neu zentrieren`, wenn die GPS-"
+"Position um einen bestimmten Abstand (im Verhältnis zur Kartenansicht) von "
+"der Mitte der Kartenansicht abweicht"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:347
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:83
+msgid "|radioButtonOn| :guilabel:`Recenter map when leaving extent`"
+msgstr ""
+"|radioButtonOn| :guilabel:`Karte beim Verlassen des Bereichs neu zentrieren`"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:349
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:84
+msgid "|radioButtonOff| :guilabel:`Never recenter`"
+msgstr "|radioButtonOff| :guilabel:`Niemals neu zentrieren`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:86
+msgid ""
+"|unchecked| :guilabel:`Automatically add track vertices` whenever new "
+"locations are received from the GPS device."
+msgstr ""
+"|unchecked| :guilabel:`Spurstützpunkte automatisch hinzufügen` wenn neue "
+"Standorte vom GPS-Gerät empfangen werden."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:88
+msgid ""
+"|unchecked| :guilabel:`Automatically save added features`: features created "
+"from GPS locations are immediately committed to their target layers "
+"(skipping the usual layer edit buffer)"
+msgstr ""
+"|unchecked| :guilabel:`Hinzugefügte Objekte automatisch speichern`: Objekte,"
+" die anhand von GPS-Positionen erstellt wurden, werden sofort auf die "
+"entsprechenden Layer übertragen (der übliche Layer-Bearbeitungspuffer wird "
+"übersprungen)."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:91
+msgid ""
+":guilabel:`Time stamp destination` to adjust the field for time fix storage"
+msgstr ""
+":guilabel:`Zeitstempelziel` legt das Feld fest, in dem ein Zeitstempel der "
+"Erfassung gespeichert wird"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:95
+msgid ""
+"|unchecked| :guilabel:`Log to GeoPackage/SpatiaLite...`: When activated, the"
+" user will be prompted to select an existing GeoPackage/SpatiaLite file or "
+"enter a new file name. A ``gps_points`` and ``gps_tracks`` table will be "
+"created in the file with a predefined structure."
+msgstr ""
+"|unchecked| :guilabel:`In GeoPackage/Spatialite protokollieren...`: Nach der"
+" Aktivierung wird der Benutzer aufgefordert, eine vorhandene "
+"GeoPackage/SpatiaLite-Datei auszuwählen oder einen neuen Dateinamen "
+"einzugeben. In der Datei wird eine Tabelle ``gps_points`` und ``gps_tracks``"
+" mit einer vordefinierten Struktur erstellt."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:101
+msgid ""
+"All incoming GPS messages will be logged to the ``gps_points`` layer, along "
+"with speed, bearing, altitude and accuracy information from the GPS."
+msgstr ""
+"Alle eingehenden GPS-Nachrichten werden im Layer ``gps_points`` "
+"aufgezeichnet, zusammen mit Informationen über Geschwindigkeit, Peilung, "
+"Höhe und Genauigkeit des GPS."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:104
+msgid ""
+"When the GPS is disconnected (or QGIS closed), the entire recorded GPS track"
+" will be added to the ``gps_tracks`` table (along with some calculated "
+"information like track length, start and end times)."
+msgstr ""
+"Wenn das GPS abgetrennt (oder QGIS geschlossen) wird, wird der gesamte "
+"aufgezeichnete GPS-Track in die Tabelle ``gps_tracks`` eingetragen (zusammen"
+" mit einigen berechneten Informationen wie Tracklänge, Start- und Endzeit)."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:108
+msgid ""
+"|unchecked| :guilabel:`Log NMEA sentences...`: enables logging all raw NMEA "
+"strings from the device to a text file"
+msgstr ""
+"|unchecked| :guilabel:`NMEA-Sätze protokollieren...`: ermöglicht die "
+"Aufzeichnung aller NMEA-Rohdaten des Geräts in eine Textdatei"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:110
+msgid ""
+"|options| :guilabel:`GPS settings...` to access the GPS :ref:`global options"
+" <gps_options>` dialog"
+msgstr ""
+"|options| :guilabel:`GPS Einstellungen...` für den Zugriff auf den GPS-"
+"Reiter in den  :ref:`globalen Optionen <gps_options>`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:114
+msgid "**Live status bar information on position**"
+msgstr "**Live-Statusleiste mit Informationen zur Position**"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:116
+msgid ""
+"When a GPS device is connected and the user moves the cursor over the map "
+"canvas, a live status bar message displays the distance and bearing from the"
+" cursor to the GPS position. Project distance and bearing settings are "
+"respected in this display. On a touch screen device, use a tap-and-hold "
+"event to trigger the live status bar message."
+msgstr ""
+"Wenn ein GPS-Gerät angeschlossen ist und der Benutzer den Cursor über die "
+"Kartenansicht bewegt, zeigt eine Live-Statusleiste die Entfernung und "
+"Peilung vom Cursor zur GPS-Position an. Die Einstellungen für "
+"Projektentfernung und -peilung werden in dieser Anzeige berücksichtigt. Auf "
+"einem Touchscreen-Gerät können Sie die Meldung in der Statusleiste durch "
+"Antippen und Halten auslösen."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:125
+msgid "GPS Information Panel"
+msgstr "Das Bedienfeld GPS-Information"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:127
+msgid ""
+"For full monitoring of a live GPS tracking in QGIS, you may need to enable "
+"the :guilabel:`GPS Information Panel` (:menuselection:`View --> Panels -->` "
+"or press :kbd:`Ctrl+0`)."
+msgstr ""
+"Für die vollständige Überwachung eines Live-GPS-Trackings in QGIS müssen Sie"
+" möglicherweise das Bedienfeld :guilabel:`GPS-Infomation` aktivieren "
+"(:menuselection:`Ansicht --> Bedienfelder -->` oder drücken Sie "
+":kbd:`Strg+0`)."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:131
+msgid ""
+"In the top right corner of the :guilabel:`GPS Information Panel`, you press "
+":guilabel:`Connect` to initiate connection between QGIS and a plugged-in GPS"
+" receiver, or :guilabel:`Disconnect` them."
+msgstr ""
+"In der oberen rechten Ecke des Bedienfelds :guilabel:`GPS-Information` "
+"können Sie QGIS durch Klicken mit einem angeschlossenen GPS-Empfänger "
+":guilabel:`Verbinden` oder die Verbindung zu diesem wieder "
+":guilabel:`Trennen`."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:135
+msgid "In the top left of the panel, following buttons are accessible:"
+msgstr "Oben links auf dem Bedienfeld sind folgende Schaltflächen zugänglich:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:137
+msgid ""
+"|metadata| :sup:`Position`: live details on the GPS position and sensors"
+msgstr ""
+"|metadata| :sup:`Position`: Live-Details zur GPS-Position und zu den "
+"Sensoren"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:138
+msgid ""
+"|gpsTrackBarChart| :sup:`Signal`: signal strength of satellite connections"
+msgstr ""
+"|gpsTrackBarChart| :sup:`Signal`: Signalstärke der Satellitenverbindung"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:341
 msgid "gpsTrackBarChart"
 msgstr "gpsTrackBarChart"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:139
+msgid ""
+"|options| :sup:`Settings`: drop-down menu to :ref:`live tracking options "
+"<tracking_settings>` you may need to modify during a session"
+msgstr ""
+"|Optionen| :sup:`Einstellungen`: Dropdown-Menü für :ref:`Live-Tracking-"
+"Optionen <tracking_settings>`, die Sie während einer Sitzung eventuell "
+"ändern müssen"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:144
 msgid "Position and additional attributes"
-msgstr "Positionskoordinaten"
+msgstr "Positionskoordinaten und weitere Attribute"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:146
+msgid ""
+"In the |metadata| :sup:`Position` tab, if the GPS is receiving signals from "
+"satellites, you will see your position in latitude, longitude and altitude "
+"together with additional attributes."
+msgstr ""
+"Auf der Registerkarte |Metadaten| :sup:`Position` sehen Sie, wenn das GPS "
+"Signale von Satelliten empfängt, Ihre Position in geografischer Breite, "
+"Länge und Höhe zusammen mit zusätzlichen Attributen."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:155
 msgid "GPS tracking position and additional attributes"
 msgstr "GPS Tracking Position und zusätzliche Attribute"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:158
+msgid ":guilabel:`Latitude`"
+msgstr ":guilabel:`Breitengrad`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:159
+msgid ":guilabel:`Longitude`"
+msgstr ":guilabel:`Längengrad`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:160
+msgid ""
+":guilabel:`Altitude (Geoid)`: Altitude/elevation above or below the mean sea"
+" level"
+msgstr ""
+":guilabel:`Höhe (geoid)`: Höhe/Höhenlage über oder unter dem mittleren "
+"Meeresspiegel"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:161
+msgid ""
+":guilabel:`Altitude (WGS 84 ellipsoid)`: Altitude/elevation above or below "
+"the WGS-84 Earth ellipsoid"
+msgstr ""
+":guilabel:`Höhe (WGS 84-Ellipsoid)`: Höhe/Höhenlage über oder unter dem "
+"WGS-84-Erdellipsoid"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:163
+msgid ""
+":guilabel:`Geoidal separation`: Difference between the WGS-84 Earth "
+"ellipsoid and mean sea level (geoid), ``-`` means mean sea level is below "
+"ellipsoid"
+msgstr ""
+":guilabel:`Geoidale Trennung`: Differenz zwischen dem WGS-84-Erdellipsoid "
+"und dem mittleren Meeresspiegel (Geoid), ``-`` bedeutet, dass der mittlere "
+"Meeresspiegel unter dem Ellipsoid liegt"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:165
+msgid ":guilabel:`Time of fix`"
+msgstr ":guilabel:`Zeit des Fix`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:166
+msgid ":guilabel:`Speed`: Ground speed"
+msgstr ":guilabel:`Geschwindigkeit`: Geschwindigkeit über Grund"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:167
+msgid ""
+":guilabel:`Direction`: Bearing measured in degrees clockwise from true north"
+" to the direction of travel"
+msgstr ""
+":guilabel:`Richtung`: Peilung, gemessen in Grad im Uhrzeigersinn vom "
+"geografischen Norden zur Fahrtrichtung"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:169
+msgid ":guilabel:`HDOP`: Horizontal dilution of precision"
+msgstr ""
+":guilabel:`HDOP`: Horizontale Verringerung der Genauigkeit ('Horizontal "
+"dilution of precision')"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:170
+msgid ":guilabel:`VDOP`: Vertical dilution of precision"
+msgstr ""
+":guilabel:`VDOP`: Vertikale Verringerung der Genauigkeit ('Vertical dilution"
+" of precision')"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:171
+msgid ":guilabel:`PDOP`: Dilution of precision"
+msgstr ""
+":guilabel:`PDOP`: Verringerung der Positionsgenauigkeit ('Positional "
+"Dilution of precision')"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:172
+msgid ":guilabel:`H accuracy`: Horizontal accuracy in meters"
+msgstr ":guilabel:`H-Genauigkeit`: Horizontale Genauigkeit in Metern"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:173
+msgid ":guilabel:`V accuracy`: Vertical accuracy in meters"
+msgstr ":guilabel:`V-Genauigkeit`: Vertikale Genauigkeit in Metern"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:174
+msgid ":guilabel:`3D accuracy`: 3D Root Mean Square (RMS) in meters"
+msgstr ":guilabel:`3D Genauigkeit`: 3D Root Mean Square (RMS) in Metern"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:175
+msgid ""
+":guilabel:`Mode`: GPS receiver configuration 2D/3D mode, can be "
+"``automatic`` or ``manual``"
+msgstr ""
+":guilabel:`Modus`: GPS-Empfängerkonfiguration 2D/3D-Modus, kann "
+"``automatisch`` oder ``manuell`` sein"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:176
+msgid ""
+":guilabel:`Dimensions`: Position fix dimension, can be ``2D``, ``3D`` or "
+"``No fix``"
+msgstr ""
+":guilabel:`Dimensionen`: Positionsfixierung, kann ``2D``, ``3D`` oder "
+"``Keine Fixierung`` sein"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:177
+msgid ":guilabel:`Quality`: Positioning quality indicator"
+msgstr ":guilabel:`Qualität`: Indikator für die Positionierungsqualität"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:178
+msgid ""
+":guilabel:`Status`: Position fix status, can be ``Valid`` or ``Invalid``"
+msgstr ""
+":guilabel:`Status`: Status der Positionsbestimmung, kann ``Gültig`` oder "
+"``Ungültig`` sein"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:179
+msgid ":guilabel:`Satellites`: Count of satellites used in obtaining the fix"
+msgstr ""
+":guilabel:`Satelliten`: Anzahl der Satelliten, die für die Ermittlung des "
+"Fixes verwendet wurden"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:180
+msgid ":guilabel:`Total track length`: Total distance of current GPS track"
+msgstr ":guilabel:`Spurengesamtlänge`: Gesamtlänge des aktuellen GPS-Tracks"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:181
+msgid ""
+":guilabel:`Distance from start of track`: Direct distance from first vertex "
+"in current GPS track to latest vertex"
+msgstr ""
+":guilabel:`Entfernung zum Spurbeginn`: Direkte Entfernung vom ersten Punkt "
+"des aktuellen GPS-Tracks zum letzten Punkt"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:186
+msgid "Signal"
+msgstr "Signal"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:188
+msgid ""
+"With |gpsTrackBarChart| :sup:`Signal` tab, you can see the signal strength "
+"of the satellites you are receiving signals from."
+msgstr ""
+"Mit |gpsTrackBarChart| :sup:`Signal` können Sie die Signalstärke der "
+"Satelliten sehen, von denen Sie Signale empfangen."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:196
 msgid "GPS tracking signal strength"
@@ -121,9 +621,9 @@ msgid ""
 "perform this task you need a GPS Bluetooth device and a Bluetooth receiver "
 "on your computer."
 msgstr ""
-"Mit |qg| können Sie ein Bluetooth GPS für das Aufnehmen von Felddaten "
-"anbinden. Um dies durchzuführen benötigen Sie ein Bluetooth Gerät und einen "
-"Bluetooth Empfänger auf Ihrem Computer."
+"Mit QGIS können Sie ein Bluetooth GPS für das Aufnehmen von Felddaten "
+"anbinden. Um dies durchzuführen, benötigen Sie ein GPS-Gerät mit Bluetooth-"
+"Funktion und einen Bluetooth Empfänger an Ihrem Computer."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:206
 msgid ""
@@ -131,17 +631,30 @@ msgid ""
 "computer. Turn on the GPS, go to the Bluetooth icon on your notification "
 "area and search for a New Device."
 msgstr ""
-"Als erstes müssen Sie Ihr GPS Gerät erkennen lassen und mit dem Computer "
+"Als Erstes müssen Sie Ihr GPS Gerät über Bluetooth mit dem Computer "
 "verbinden. Stellen Sie das GPS an, gehen Sie zum Bluetooth Icon in Ihrem "
-"Infobereich und suchen Sie nach einem Neuen Gerät."
+"Infobereich und suchen Sie nach einem neuen Gerät."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:210
+msgid ""
+"On the right side of the Device selection mask make sure that all devices "
+"are selected so your GPS unit will probably appear among those available. In"
+" the next step a serial connection service should be available, select it "
+"and click on :guilabel:`Configure` button."
+msgstr ""
+"Vergewissern Sie sich, dass auf der rechten Seite der Geräteauswahlmaske "
+"alle Geräte ausgewählt sind, damit Ihr GPS-Gerät auch unter den verfügbaren "
+"Geräten angezeigt wird. Im nächsten Schritt sollte ein serieller "
+"Verbindungsdienst verfügbar sein, wählen Sie ihn aus und klicken Sie auf die"
+" Schaltfläche :guilabel:`Konfigurieren`."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:215
 msgid ""
 "Remember the number of the COM port assigned to the GPS connection as "
 "resulting by the Bluetooth properties."
 msgstr ""
-"Denken Sie daran dass die an die GPS Verbindung angebundenen COM Ports aus "
-"den Bluetooth Eigenschaften resultieren."
+"Merken Sie sich die Nummer des COM-Ports, der der GPS-Verbindung zugewiesen "
+"ist, wie sie den Bluetooth-Eigenschaften zu entnehmen ist."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:218
 msgid ""
@@ -149,7 +662,19 @@ msgid ""
 "Usually the authorization code is ``0000``."
 msgstr ""
 "Machen Sie die Kopplung für die Verbindung nachdem das GPS erkannt wurde. "
-"Normalerweise ist der Authorisationskode ``0000``."
+"Meist ist der Authorisationskode ``0000`` oder ``1234``."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:221
+msgid ""
+"Now open :guilabel:`GPS information` panel and switch to |options| GPS "
+"options screen. Select the COM port assigned to the GPS connection and click"
+" the :guilabel:`Connect`. After a while a cursor indicating your position "
+"should appear."
+msgstr ""
+"Öffnen Sie nun das Bedienfeld :guilabel:`GPS-Information` und wechseln Sie "
+"zum Bildschirm |Optionen| GPS-Optionen. Wählen Sie den COM-Port, der der "
+"GPS-Verbindung zugewiesen ist, und klicken Sie auf :guilabel:`Verbinden`. "
+"Nach einer Weile sollte ein Cursor erscheinen, der Ihre Position anzeigt."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:226
 msgid ""
@@ -158,12 +683,16 @@ msgid ""
 "you receive again a connection error make sure you don't have another "
 "Bluetooth receiver near you, paired with the same GPS unit."
 msgstr ""
-"Wenn |qg| keine GPS Daten empfangen kann sollten Sie Ihr GPS Gerät "
+"Wenn QGIS keine GPS Daten empfangen kann, sollten Sie Ihr GPS Gerät "
 "neustarten, 5-10 Sekunden warten und dann wieder eine Verbindung versuchen. "
 "Normalerweise funktioniert diese Lösung. Wenn Sie wieder einen "
-"Verbindungsfehler erhalten vergewissern Sie sich dass kein anderer "
+"Verbindungsfehler erhalten, vergewissern Sie sich, dass kein anderer "
 "Bluetoothempfänger, der an die gleiche GPS Einheit gekoppelt ist, in Ihrer "
 "Nähe ist."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:232
+msgid "Examples of GPS devices connection in QGIS"
+msgstr "Beispiele für die Anbindung von GPS-Geräten in QGIS"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:235
 msgid "Using GPSMAP 60cs"
@@ -173,6 +702,37 @@ msgstr "GPSMAP 60cs verwenden"
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:288
 msgid "MS Windows"
 msgstr "MS Windows"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:240
+msgid ""
+"Easiest way to make it work is to use a middleware (freeware, not open) "
+"called `GPSGate <https://gpsgate.com/gpsgate-splitter>`_."
+msgstr ""
+"Der einfachste Weg, dies zu erreichen, ist die Verwendung einer Middleware "
+"(Freeware, nicht offen) namens `GPSGate <https://gpsgate.com/gpsgate-"
+"splitter>`_."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:243
+msgid ""
+"Launch the program, make it scan for GPS devices (works for both USB and BT "
+"ones) and then in QGIS:"
+msgstr ""
+"Starten Sie das Programm, lassen Sie es nach GPS-Geräten suchen "
+"(funktioniert sowohl für USB- als auch für BT-Geräte) und dann in QGIS:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:246
+msgid ""
+"In :menuselection:`Settings --> Options --> GPS`, detect the plugged-in "
+"device. You can use the |radioButtonOn| :guilabel:`Autodetect` mode."
+msgstr ""
+"In :menuselection:`Einstellungen --> Optionen --> GPS`, erkennen Sie das "
+"eingesteckte Gerät. Sie können den Modus |radioButtonOn| "
+":guilabel:`Autodetect` verwenden."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:248
+msgid "Press :guilabel:`Connect` in the :guilabel:`GPS Information` panel"
+msgstr ""
+"Drücken Sie :guilabel:`Verbinden` im Bedienfeld :guilabel:`GPS-Information`."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:251
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:296
@@ -185,15 +745,32 @@ msgid ""
 "case GPSD, so"
 msgstr ""
 "Wie unter Windows ist der einfachste Weg einen Server, in diesem Fall GPSD, "
-"dazwischen zu benutzen, also"
+"dazwischen zu benutzen, also:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:256
+msgid "Install the program"
+msgstr "Installieren Sie das Programm:"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:262
 msgid "Then load the ``garmin_gps`` kernel module"
 msgstr "Laden Sie dann das ``garmin_gps`` Kernelmodul"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:268
+msgid ""
+"And then connect the unit and check with ``dmesg`` the actual device being "
+"used by the unit, for example ``/dev/ttyUSB0``."
+msgstr ""
+"Dann schließen Sie das Gerät an und überprüfen mit ``dmesg`` das "
+"tatsächliche Laufwerk, das von dem Gerät benutzt wird, zum Beispiel "
+"``/dev/ttyUSB0``."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:271
+msgid "Now you can launch gpsd"
+msgstr "Jetzt können Sie gpsd starten"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:277
 msgid "And finally connect with the QGIS live tracking tool."
-msgstr "Und verbinden Sie sich zuletzt mit dem |qg| Live Tracking Tool."
+msgstr "Und verbinden Sie sich zuletzt mit dem QGIS Live Tracking Tool."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:280
 msgid "Using BTGP-38KM datalogger (only Bluetooth)"
@@ -209,6 +786,17 @@ msgstr ""
 msgid "Using BlueMax GPS-4044 datalogger (both BT and USB)"
 msgstr "BlueMax GPS-4044 Datenlogger verwenden (sowohl BT als auch USB)"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:290
+msgid ""
+"The live tracking works for both USB and BT modes, by using GPSGate or even "
+"without it, just use the |radioButtonOn| :guilabel:`Autodetect` mode, or "
+"point the tool to the right port."
+msgstr ""
+"Das Live-Tracking funktioniert sowohl für den USB- als auch für den BT-"
+"Modus, mit GPSGate oder auch ohne GPSGate, indem Sie einfach den Modus "
+"|radioButtonOn| :guilabel:`Autodetect` verwenden oder das Tool auf den "
+"richtigen Port richten."
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:298
 msgid "**For USB**"
 msgstr "**Für USB**"
@@ -223,7 +811,7 @@ msgid ""
 "or without it, by connecting the QGIS live tracking tool directly to the "
 "device (for example ``/dev/ttyACM3``)."
 msgstr ""
-"oder ohne es, indem man das |qg| Live Tracking Tool direkt mit dem Gerät "
+"alsauch ohne es, indem man das QGIS Live Tracking Tool direkt mit dem Gerät "
 "verbindet (zum Beispiel ``/dev/ttyACM3``)."
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:309
@@ -235,5 +823,5 @@ msgid ""
 "or without it, by connecting the QGIS live tracking tool directly to the "
 "device (for example ``/dev/rfcomm0``)."
 msgstr ""
-"oder ohne es, indem man das |qg| Live Tracking Tool direkt mit dem Gerät "
+"oder ohne es, indem man das QGIS Live Tracking Tool direkt mit dem Gerät "
 "verbindet (zum Beispiel ``/dev/rfcomm0``)."
