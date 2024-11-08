@@ -87,7 +87,7 @@ but invalid topology such as crossing edges will still be invalid.
 
 **Requires version of GEOS >= 3.12**
 
-.. seealso:: :ref:`qgissimplifygeometries`, `qgissmoothgeometry`
+.. seealso:: :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
 
 Parameters
 ..........
