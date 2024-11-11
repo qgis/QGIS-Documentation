@@ -1313,9 +1313,10 @@ The tool can be applied to the edited layer (the geometries are modified)
 or also to background layers (in which case it creates copies of the lines /
 rings and adds them to the edited layer).
 It is thus ideally suited for the creation of distance line layers.
-The :guilabel:`User Input` dialog pops-up, showing the displacement distance.
+The :guilabel:`User Input` dialog pops-up, showing the displacement distance
+and other settings.
 
-To create a shift of a line layer, you must first go into editing mode
+To create a shift of a line or polygon layer, you must first go into editing mode
 and activate the |offsetCurve| :sup:`Offset Curve` tool.
 Then click on a feature to shift it.
 Move the mouse and click where wanted or enter the desired distance in
@@ -1323,8 +1324,13 @@ the user input widget. Holding :kbd:`Ctrl` during the 2nd click will make an off
 Your changes may then be saved with the |saveEdits|
 :sup:`Save Layer Edits` tool.
 
+For geometries on background layers make sure that snapping is on and hold :kbd:`Ctrl`
+to select the geometry from the background. Also hold :kbd:`Ctrl` when doing the second click
+or when pressing enter after entering the desired distance.
+Geometries will be converted to line or polygon depending on the layer types. 
 
-QGIS options dialog (Digitizing tab then **Curve offset tools** section) allows
+QGIS options dialog (Digitizing tab then **Curve offset tools** section) or
+the gear icon in the :guilabel:`User Input` dialog allows
 you to configure some parameters like **Join style**, **Quadrant segments**,
 **Miter limit**.
 
