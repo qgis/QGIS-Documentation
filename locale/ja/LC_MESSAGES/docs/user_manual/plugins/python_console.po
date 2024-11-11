@@ -5,10 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoya miyoshi, 2024
 # Harrissou Sant-anna, 2024
 # Transifex Bot <>, 2024
 # fairtommy <fairtommy@gmail.com>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,9 +57,30 @@ msgstr ""
 "  :ref:`PyQGIS 開発者用クックブック <PyQGIS-Developer-Cookbook>`  を参照して下さい）。また QGIS "
 "にはPythonコンソールもあります。"
 
+#: ../../docs/user_manual/plugins/python_console.rst:22
+msgid ""
+"The QGIS Python Console is an interactive shell for Python command "
+"executions. It also has a Python file editor that allows you to edit and "
+"save your Python scripts. Both console and editor are based on PyQScintilla2"
+" package. To open the console go to :menuselection:`Plugins --> Python "
+"Console` (:kbd:`Ctrl+Alt+P`)."
+msgstr ""
+"QGIS "
+"PythonコンソールはPythonコマンド実行用の対話型シェルです。自分のPythonスクリプトを編集して保存するためのPythonファイルエディタも付属しています。コンソールとエディタはどちらもPyQScintilla2パッケージに基づいています。コンソールを開くには"
+" :menuselection:`プラグイン --> Python コンソール` (:kbd:`Ctrl+Alt+P`) を選択します。"
+
 #: ../../docs/user_manual/plugins/python_console.rst:30
 msgid "The Interactive Console"
 msgstr "対話型コンソール"
+
+#: ../../docs/user_manual/plugins/python_console.rst:32
+msgid ""
+"The console is a Python interpreter that allows you to execute Python "
+"commands. Modules from QGIS (analysis, core, gui, server, processing, 3d) "
+"and Qt (QtCore, QtGui, QtNetwork, QtWidgets, QtXml) as well as Python's "
+"math, os, re and sys modules are already imported and can be used directly."
+msgstr ""
+"コンソールはPythonインタープリターであり、Pythonコマンドを実行することができます。QGIS（analysis、core、gui、server、processing、3D）およびQt（QtCore、QtGui、QtNetwork、QtWidgets、QtXml）のモジュール、ならびにPythonのmath、os、re、sysモジュールはすでにインポートされており、直接使用することができます。"
 
 #: ../../docs/user_manual/plugins/python_console.rst:38
 msgid ""
@@ -77,7 +98,7 @@ msgstr "ツールバー"
 
 #: ../../docs/user_manual/plugins/python_console.rst:50
 msgid "The toolbar proposes the following tools:"
-msgstr "ツールバーからは以下のツールを利用することができます。"
+msgstr "ツールバーからは以下のツールを利用できます:"
 
 #: ../../docs/user_manual/plugins/python_console.rst:52
 msgid "|clearConsole| :sup:`Clear Console` to wipe the output area;"
@@ -86,6 +107,12 @@ msgstr "|clearConsole| :sup:`コンソールのクリア` ：出力エリアを�
 #: ../../docs/user_manual/plugins/python_console.rst:198
 msgid "clearConsole"
 msgstr "clearConsole"
+
+#: ../../docs/user_manual/plugins/python_console.rst:53
+msgid ""
+"|start| :sup:`Run Command` available in the input area: same as pressing "
+":kbd:`Enter`;"
+msgstr "入力エリアで使用できる |start| :sup:`コマンドの実行`: :kbd:`Enter` キーを押すのと同じです;"
 
 #: ../../docs/user_manual/plugins/python_console.rst:210
 msgid "start"
@@ -102,23 +129,62 @@ msgstr ""
 msgid "showEditorConsole"
 msgstr "showEditorConsole"
 
+#: ../../docs/user_manual/plugins/python_console.rst:57
+msgid ""
+"|options| :sup:`Options...`: opens a dialog to configure :ref:`console "
+"properties <console_options>`;"
+msgstr ""
+"|options| :sup:`オプション...` ： :ref:`コンソールのプロパティ <console_options>` "
+"を設定するためのダイアログを開きます;"
+
 #: ../../docs/user_manual/plugins/python_console.rst:204
 msgid "options"
 msgstr "options"
+
+#: ../../docs/user_manual/plugins/python_console.rst:59
+msgid ""
+"|helpContents| :sup:`Help...` provides a menu to access various "
+"documentation:"
+msgstr "|helpContents| :sup:`ヘルプ...` 様々なドキュメントにアクセスするためのメニューを提供します:"
 
 #: ../../docs/user_manual/plugins/python_console.rst:202
 msgid "helpContents"
 msgstr "helpContents"
 
+#: ../../docs/user_manual/plugins/python_console.rst:61
+msgid ":ref:`Python Console Help <console>` (the current page)"
+msgstr ":ref:`Pythonコンソールヘルプ <console>` （現在のページ）"
+
+#: ../../docs/user_manual/plugins/python_console.rst:62
+msgid ":pyqgis:`PyQGIS API documentation <>`"
+msgstr ":pyqgis:`PyQGIS APIドキュメント <>`"
+
+#: ../../docs/user_manual/plugins/python_console.rst:63
+msgid ":ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>`"
+msgstr ":ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>`"
+
+#: ../../docs/user_manual/plugins/python_console.rst:64
+msgid ""
+"|dock| :sup:`Dock Code Editor` to dock or undock the panel in QGIS interface"
+msgstr "|dock| :sup:`コードエディタをドッキング` は、QGISインターフェイスにパネルをドッキングしたり解除したりします"
+
 #: ../../docs/user_manual/plugins/python_console.rst:200
 msgid "dock"
 msgstr "dock"
+
+#: ../../docs/user_manual/plugins/python_console.rst:67
+msgid "Input area"
+msgstr "入力エリア"
+
+#: ../../docs/user_manual/plugins/python_console.rst:69
+msgid "The Console input area main features are:"
+msgstr "コンソール入力エリアの主な機能は以下のとおりです:"
 
 #: ../../docs/user_manual/plugins/python_console.rst:71
 #: ../../docs/user_manual/plugins/python_console.rst:145
 msgid ""
 "Code completion, highlighting syntax and calltips for the following APIs:"
-msgstr "コード補完、シンタックスハイライト、加えて以下のAPIには入力候補をポップアップで表示します。"
+msgstr "コード補完、シンタックスハイライト、加えて以下のAPIには入力候補をポップアップで表示します:"
 
 #: ../../docs/user_manual/plugins/python_console.rst:73
 #: ../../docs/user_manual/plugins/python_console.rst:147
@@ -157,7 +223,7 @@ msgid ""
 "Execute code snippets from the input area by typing and pressing "
 ":kbd:`Enter` or :guilabel:`Run Command`;"
 msgstr ""
-"キーボード入力し :kbd:`Enter` または :guilabel:`コマンドを実行` を押して入力領域からコードスニペットを実行します。"
+"キーボード入力し :kbd:`Enter` または :guilabel:`コマンドを実行` を押して入力エリアからコードスニペットを実行します;"
 
 #: ../../docs/user_manual/plugins/python_console.rst:83
 msgid ""
@@ -165,7 +231,7 @@ msgid ""
 "Selected` from the contextual menu or pressing :kbd:`Ctrl+E`;"
 msgstr ""
 "コンテキストメニューから :guilabel:`選択部分を入力` を使用するか、 :kbd:`Ctrlキー+ E` "
-"を押して、出力領域からコードスニペットを実行します。"
+"を押して、出力エリアからコードスニペットを実行します;"
 
 #: ../../docs/user_manual/plugins/python_console.rst:85
 msgid ""
@@ -188,8 +254,55 @@ msgid ""
 ":file:`console_history.txt` file under the active :ref:`user profile "
 "<user_profiles>` folder;"
 msgstr ""
-"コマンドの履歴を保存して消去します。履歴はアクティブな :ref:`user profile <user_profiles>` フォルダの下の "
+"コマンド履歴を保存して消去します。履歴はアクティブな :ref:`user profile <user_profiles>` フォルダの下の "
 ":file:`console_history.txt` ファイルに保存されます；"
+
+#: ../../docs/user_manual/plugins/python_console.rst:94
+msgid "Type the following special commands:"
+msgstr "以下の特殊コマンドを入力します:"
+
+#: ../../docs/user_manual/plugins/python_console.rst:96
+msgid "``?`` to show a help of the Python Console"
+msgstr "``?`` はPythonコンソールのヘルプを表示します"
+
+#: ../../docs/user_manual/plugins/python_console.rst:97
+msgid ""
+"``_api`` to open :api:`QGIS C++ API <>` documentation or ``_api(object)`` "
+"for a specific object documentation (in QGIS C++ API or Qt API "
+"documentation)"
+msgstr ""
+"``_api`` は :api:`QGIS C++ API <>` ドキュメントを開き、``_api(object)`` "
+"は特定のオブジェクトのドキュメント（QGIS C++ API または Qt API ドキュメント）を開きます"
+
+#: ../../docs/user_manual/plugins/python_console.rst:100
+msgid ""
+"``_pyqgis`` to open :pyqgis:`QGIS Python API <>` documentation or "
+"``_pyqgis(object)`` for a specific object documentation (in QGIS Python API "
+"or Qt API documentation)"
+msgstr ""
+"``_pyqgis`` は :pyqgis:`QGIS Python API <>` ドキュメントを開き、``_pyqgis(object)`` "
+"は特定のオブジェクトのドキュメント（QGIS Python API または Qt API ドキュメント）を開きます"
+
+#: ../../docs/user_manual/plugins/python_console.rst:103
+msgid ""
+"``_cookbook`` to open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>`."
+msgstr ""
+"``_cookbook`` は :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` を開きます。"
+
+#: ../../docs/user_manual/plugins/python_console.rst:104
+msgid ""
+"``!`` followed by a command to execute Shell commands from the Python "
+"Console. The console will start a subprocess, and forward its output to the "
+"Python Console Output. While the subprocess is running, the Python Console "
+"Input switches to STDIN mode and forwards entered character to the child "
+"process. This makes it possible to send confirmation when the child program "
+"asks for it. When the Console is in STDIN mode, pressing :kbd:`Ctrl+C` kills"
+" the subprocess. It is also possible to affect the result of a command to a "
+"variable with the syntax ``var = !cmd``"
+msgstr ""
+"``!`` "
+"にコマンドを続けるとPythonコンソールからシェルコマンドを実行します。コンソールはサブプロセスを開始し、その出力をPythonコンソール出力に転送します。サブプロセスが実行されている間、Pythonコンソール入力はSTDINモードに切り替わり、入力された文字を子プロセスに転送します。これにより、子プログラムが確認を要求する場合に、それを送ることができます。コンソールがSTDINモードの場合、:kbd:`Ctrlキー+C`"
+" を押すとサブプロセスが終了します。また、構文 ``var = !cmd`` により、コマンドの結果を変数に反映させることもできます"
 
 #: ../../docs/user_manual/plugins/python_console.rst:128
 msgid "**Reuse executed commands from the output panel**"
@@ -201,9 +314,9 @@ msgid ""
 "and pressing :kbd:`Ctrl+E`. No matter if selected text contains the "
 "interpreter prompt (``>>>``, ``...``)."
 msgstr ""
-":kbd:`Ctrlキー+ E` "
-"いくつかのテキストを選択し、を押すと出力パネルからコードスニペットを実行できます。選択したテキストは、インタープリタプロンプト( ``>>>``, "
-"``...`` )が含​​まれているかどうかは関係ありません。"
+"いくつかのテキストを選択し、:kbd:`Ctrlキー+ E` "
+"を押すと出力パネルからコードスニペットを実行できます。選択したテキストにインタープリタのプロンプト( ``>>>``, ``...`` "
+")が含​​まれていても問題ありません。"
 
 #: ../../docs/user_manual/plugins/python_console.rst:138
 msgid "The Code Editor"
@@ -216,7 +329,7 @@ msgid ""
 "functionalities to manage your code (comment and uncomment code, check "
 "syntax, share the code via GitHub and much more). Main features are:"
 msgstr ""
-"エディタウィジェットを有効にするには |showEditorConsole| :sup:`Show Editor` "
+"エディタウィジェットを有効にするには |showEditorConsole| :sup:`エディタの表示` "
 "ボタンを使います。Pythonファイルの編集と保存が可能で、コードを管理するための高度な機能を提供します "
 "(コードのコメントとアンコメント、文法のチェック、GitHub経由でのコードの共有など)。主な機能は以下の通りです： "
 
