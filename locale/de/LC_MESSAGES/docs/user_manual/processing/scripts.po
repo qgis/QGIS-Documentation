@@ -34,17 +34,555 @@ msgstr ""
 "<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
 " übersetzt."
 
+#: ../../docs/user_manual/processing/scripts.rst:6
+msgid "Writing new Processing algorithms as Python scripts"
+msgstr "Schreiben neuer Verarbeitungs-Algorithmen als Python-Skripte"
+
+#: ../../docs/user_manual/processing/scripts.rst:13
+msgid "There are two options for writing Processing algorithms using Python."
+msgstr ""
+"Es gibt zwei Möglichkeiten, Processing-Algorithmen mit Python zu schreiben."
+
+#: ../../docs/user_manual/processing/scripts.rst:15
+msgid ""
+":ref:`Extending <scripts_extend>` :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`"
+msgstr ""
+":ref:`Erweitern Sie <scripts_extend>` :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:17
+msgid ":ref:`Using the @alg decorator <scripts_alg>`"
+msgstr ":ref:`Verwenden Sie @alg decorator <scripts_alg>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:19
+msgid ""
+"Within QGIS, you can use :guilabel:`Create new script` in the "
+":guilabel:`Scripts` menu at the top of the :guilabel:`Processing Toolbox` to"
+" open the :guilabel:`Processing Script Editor` where you can write your "
+"code. To simplify the task, you can start with a script template by using "
+":guilabel:`Create new script from template` from the same menu. This opens a"
+" template that extends :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`."
+msgstr ""
+"In QGIS können Sie mit :guilabel:`Neues Skript erstellen` im Menü "
+":guilabel:`Skripte` oben in der :guilabel:`Verarbeitungs-Werkzeugkiste` den "
+":guilabel:`Verarbeitungsskript-Editor` öffnen, wo Sie Ihren Code schreiben "
+"können. Um die Aufgabe zu vereinfachen, können Sie mit einer Skriptvorlage "
+"beginnen, indem Sie :guilabel:`Neues Skript aus Vorlage erstellen` aus "
+"demselben Menü wählen. Dies öffnet eine Vorlage, die "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` "
+"erweitert."
+
+#: ../../docs/user_manual/processing/scripts.rst:28
+msgid ""
+"If you save the script in the :file:`scripts` folder (the default location) "
+"with a :file:`.py` extension, the algorithm will become available in the "
+":guilabel:`Processing Toolbox`."
+msgstr ""
+"Wenn Sie das Skript im Ordner :file:`scripts` (dem Standardspeicherort) mit "
+"der Erweiterung :file:`.py` speichern, wird der Algorithmus in der "
+":guilabel:`Verarbeitungs-Werkzeugkiste` verfügbar."
+
+#: ../../docs/user_manual/processing/scripts.rst:35
+msgid "Extending QgsProcessingAlgorithm"
+msgstr "Erweitern von QgsProcessingAlgorithm"
+
+#: ../../docs/user_manual/processing/scripts.rst:37
+msgid "The following code"
+msgstr "Der folgende Code"
+
+#: ../../docs/user_manual/processing/scripts.rst:39
+msgid "takes a vector layer as input"
+msgstr "verwendet einen Vektor Layer als Eingabe"
+
+#: ../../docs/user_manual/processing/scripts.rst:40
+msgid "counts the number of features"
+msgstr "zählt die Anzahl der Objekte"
+
+#: ../../docs/user_manual/processing/scripts.rst:41
+msgid "does a buffer operation"
+msgstr "führt eine Puffer-Operation durch"
+
+#: ../../docs/user_manual/processing/scripts.rst:42
+msgid "creates a raster layer from the result of the buffer operation"
+msgstr "erzeugt einen Raster Layer aus dem Ergebnis der Puffer-Operation"
+
+#: ../../docs/user_manual/processing/scripts.rst:43
+#: ../../docs/user_manual/processing/scripts.rst:316
+msgid "returns the buffer layer, raster layer and number of features"
+msgstr ""
+"gibt den Puffer-Layer, den Rasterlayer und die Anzahl der Objekte zurück"
+
+#: ../../docs/user_manual/processing/scripts.rst:233
+msgid "Processing algorithm standard functions:"
+msgstr "Standardfunktionen des Verarbeitungsalgorithmus:"
+
+#: ../../docs/user_manual/processing/scripts.rst:235
+msgid "createInstance (mandatory)"
+msgstr "createInstance (obligatorisch)"
+
+#: ../../docs/user_manual/processing/scripts.rst:236
+msgid ""
+"Must return a new copy of your algorithm. If you change the name of the "
+"class, make sure you also update the value returned here to match!"
+msgstr ""
+"Muss eine neue Kopie Ihres Algorithmus zurückgeben. Wenn Sie den Namen der "
+"Klasse ändern, stellen Sie sicher, dass Sie auch den hier zurückgegebenen "
+"Wert entsprechend aktualisieren!"
+
+#: ../../docs/user_manual/processing/scripts.rst:240
+msgid "name (mandatory)"
+msgstr "name (obligatorisch)"
+
+#: ../../docs/user_manual/processing/scripts.rst:241
+msgid "Returns the unique algorithm name, used for identifying the algorithm."
+msgstr ""
+"Gibt den eindeutigen Algorithmusnamen zurück, der zur Identifizierung des "
+"Algorithmus dient."
+
+#: ../../docs/user_manual/processing/scripts.rst:243
+msgid "displayName (mandatory)"
+msgstr "displayName (obligatorisch)"
+
+#: ../../docs/user_manual/processing/scripts.rst:244
+msgid "Returns the translated algorithm name."
+msgstr "Gibt den übersetzten Algorithmusnamen zurück."
+
+#: ../../docs/user_manual/processing/scripts.rst:246
+msgid "group"
+msgstr "group"
+
+#: ../../docs/user_manual/processing/scripts.rst:247
+msgid "Returns the name of the group this algorithm belongs to."
+msgstr "Gibt den Namen der Gruppe zurück, zu der dieser Algorithmus gehört."
+
+#: ../../docs/user_manual/processing/scripts.rst:249
+msgid "groupId"
+msgstr "groupId"
+
+#: ../../docs/user_manual/processing/scripts.rst:250
+msgid "Returns the unique ID of the group this algorithm belongs to."
+msgstr ""
+"Gibt die eindeutige ID der Gruppe zurück, zu der dieser Algorithmus gehört."
+
+#: ../../docs/user_manual/processing/scripts.rst:252
+msgid "shortHelpString"
+msgstr "shortHelpString"
+
+#: ../../docs/user_manual/processing/scripts.rst:253
+msgid "Returns a localised short help string for the algorithm."
+msgstr "Gibt eine kurze Hilfezeichenkette für den Algorithmus zurück."
+
+#: ../../docs/user_manual/processing/scripts.rst:255
+msgid "initAlgorithm (mandatory)"
+msgstr "initAlgorithm (obligatorisch)"
+
+#: ../../docs/user_manual/processing/scripts.rst:256
+msgid "Here we define the inputs and outputs of the algorithm."
+msgstr "Hier werden die Ein- und Ausgaben des Algorithmus definiert."
+
+#: ../../docs/user_manual/processing/scripts.rst:258
+msgid ""
+"``INPUT`` and ``OUTPUT`` are recommended names for the main input and main "
+"output parameters, respectively."
+msgstr ""
+"``INPUT`` und ``OUTPUT`` sind empfohlene Namen für die Haupteingabe- bzw. "
+"Hauptausgabeparameter."
+
+#: ../../docs/user_manual/processing/scripts.rst:261
+msgid ""
+"If a parameter depends on another parameter, ``parentParameterName`` is used"
+" to specify this relationship (could be the field / band of a layer or the "
+"distance units of a layer)."
+msgstr ""
+"Wenn ein Parameter von einem anderen Parameter abhängt, wird "
+"``parentParameterName`` verwendet, um diese Beziehung zu spezifizieren "
+"(könnte das Feld / Band eines Layers oder die Entfernungseinheiten eines "
+"Layers sein)."
+
+#: ../../docs/user_manual/processing/scripts.rst:265
+msgid "processAlgorithm (mandatory)"
+msgstr "processAlgorithm (obligatorisch)"
+
+#: ../../docs/user_manual/processing/scripts.rst:266
+msgid "This is where the processing takes place."
+msgstr "Hier findet die Verarbeitung statt."
+
+#: ../../docs/user_manual/processing/scripts.rst:268
+msgid ""
+"Parameters are retrieved using special purpose functions, for instance "
+"``parameterAsSource`` and ``parameterAsDouble``."
+msgstr ""
+"Parameter werden mit speziellen Funktionen abgerufen, zum Beispiel "
+"``parameterAsSource`` und ``parameterAsDouble``."
+
+#: ../../docs/user_manual/processing/scripts.rst:271
+msgid ""
+"``processing.run`` can be used to run other processing algorithms from a "
+"processing algorithm. The first parameter is the name of the algorithm, the "
+"second is a dictionary of the parameters to the algorithm. "
+"``is_child_algorithm`` is normally set to ``True`` when running an algorithm"
+" from within another algorithm. ``context`` and ``feedback`` inform the "
+"algorithm about the environment to run in and the channel for communicating "
+"with the user (catching cancel request, reporting progress, providing "
+"textual feedback). When using the (parent) algorithm's parameters as "
+"parameters to \"child\" algorithms, the original parameter values should be "
+"used (e.g. ``parameters['OUTPUT']``)."
+msgstr ""
+"``processing.run`` kann verwendet werden, um andere Verarbeitungsalgorithmen"
+" von einem Verarbeitungsalgorithmus auszuführen. Der erste Parameter ist der"
+" Name des Algorithmus, der zweite ist ein Wörterbuch mit den Parametern des "
+"Algorithmus. Der Parameter ``is_child_algorithm`` wird normalerweise auf "
+"``True`` gesetzt, wenn ein Algorithmus aus einem anderen Algorithmus heraus "
+"gestartet wird. ``Context`` und ``Feedback`` informieren den Algorithmus "
+"über die Umgebung, in der er laufen soll, und den Kanal für die "
+"Kommunikation mit dem Benutzer (Abbruch einer Anfrage, Meldung des "
+"Fortschritts, textuelles Feedback). Wenn die Parameter des (übergeordneten) "
+"Algorithmus als Parameter für „untergeordnete“ Algorithmen verwendet werden,"
+" sollten die ursprünglichen Parameterwerte verwendet werden (z.B. "
+"``parameters['OUTPUT']``)."
+
+#: ../../docs/user_manual/processing/scripts.rst:283
+msgid ""
+"It is good practice to check the feedback object for cancelation as much as "
+"is sensibly possible! Doing so allows for responsive cancelation, instead of"
+" forcing users to wait for unwanted processing to occur."
+msgstr ""
+"Es ist eine gute Praxis, das Feedback-Objekt so oft wie möglich auf Abbruch "
+"zu prüfen! Dies ermöglicht eine schnelle Beendigung, anstatt den Benutzer zu"
+" zwingen, auf eine unerwünschte Verarbeitung zu warten."
+
+#: ../../docs/user_manual/processing/scripts.rst:288
+msgid ""
+"The algorithm should return values for all the output parameters it has "
+"defined as a dictionary. In this case, that's the buffer and rasterized "
+"output layers, and the count of features processed. The dictionary keys must"
+" match the original parameter/output names."
+msgstr ""
+"Der Algorithmus sollte Werte für alle Ausgabeparameter zurückgeben, die er "
+"in einem Verzeichnis definiert hat. In diesem Fall sind das die Puffer- und "
+"gerasterten Output-Layer sowie die Anzahl der verarbeiteten Objekte. Die "
+"Verzeichnisschlüssel müssen mit den ursprünglichen Namen der "
+"Parameter/Ausgaben übereinstimmen."
+
+#: ../../docs/user_manual/processing/scripts.rst:297
+msgid "The @alg decorator"
+msgstr "Der @alg decorator"
+
+#: ../../docs/user_manual/processing/scripts.rst:299
+msgid ""
+"Using the @alg decorator, you can create your own algorithms by writing the "
+"Python code and adding a few extra lines to supply additional information "
+"needed to make it a proper Processing algorithm. This simplifies the "
+"creation of algorithms and the specification of inputs and outputs."
+msgstr ""
+"Mit dem @alg decorator können Sie Ihre eigenen Algorithmen erstellen, indem "
+"Sie den Python-Code schreiben und ein paar zusätzliche Zeilen hinzufügen, um"
+" zusätzliche Informationen zu liefern, die erforderlich sind, um ihn zu "
+"einem richtigen Processing-Algorithmus zu machen. Dies vereinfacht die "
+"Erstellung von Algorithmen und die Angabe von Eingaben und Ausgaben."
+
+#: ../../docs/user_manual/processing/scripts.rst:305
+msgid ""
+"One important limitation with the decorator approach is that algorithms "
+"created in this way will always be added to a user's Processing Scripts "
+"provider -- it is not possible to add these algorithms to a custom provider,"
+" e.g. for use in plugins."
+msgstr ""
+"Eine wichtige Einschränkung des Decorator-Ansatzes ist, dass Algorithmen, "
+"die auf diese Weise erstellt werden, immer zum Processing Scripts Provider "
+"eines Benutzers hinzugefügt werden -- es ist nicht möglich, diese "
+"Algorithmen zu einem benutzerdefinierten Provider hinzuzufügen, z.B. zur "
+"Verwendung in Plugins."
+
+#: ../../docs/user_manual/processing/scripts.rst:310
+msgid "The following code uses the @alg decorator to"
+msgstr "Der folgende Code verwendet den @alg decorater, um"
+
+#: ../../docs/user_manual/processing/scripts.rst:312
+msgid "use a vector layer as input"
+msgstr "einen Vektorlayer als Eingabe verwenden"
+
+#: ../../docs/user_manual/processing/scripts.rst:313
+msgid "count the number of features"
+msgstr "die Anzahl der Objekte zählen"
+
+#: ../../docs/user_manual/processing/scripts.rst:314
+msgid "do a buffer operation"
+msgstr "eine Puffer-Operation durchzuführen"
+
+#: ../../docs/user_manual/processing/scripts.rst:315
+msgid "create a raster layer from the result of the buffer operation"
+msgstr "einen Raster Layer aus dem Ergebnis der Pufferoperation erstellen"
+
+#: ../../docs/user_manual/processing/scripts.rst:383
+msgid ""
+"As you can see, it involves two algorithms ('native:buffer' and "
+"'qgis:rasterize'). The last one ('qgis:rasterize') creates a raster layer "
+"from the buffer layer that was generated by the first one ('native:buffer')."
+msgstr ""
+"Wie Sie sehen können, handelt es sich um zwei Algorithmen ('native:buffer' "
+"und 'qgis:rasterize'). Der letzte ('qgis:rasterize') erzeugt einen Raster "
+"Layer aus dem Puffer Layer, der durch den ersten ('native:buffer') erzeugt "
+"wurde."
+
+#: ../../docs/user_manual/processing/scripts.rst:388
+msgid ""
+"The part of the code where this processing takes place is not difficult to "
+"understand if you have read the previous chapter. The first lines, however, "
+"need some additional explanation. They provide the information that is "
+"needed to turn your code into an algorithm that can be run from any of the "
+"GUI components, like the toolbox or the model designer."
+msgstr ""
+"Der Teil des Codes, in dem diese Verarbeitung stattfindet, ist nicht schwer "
+"zu verstehen, wenn Sie das vorherige Kapitel gelesen haben. Die ersten "
+"Zeilen bedürfen jedoch einiger zusätzlicher Erläuterungen. Sie liefern die "
+"Informationen, die benötigt werden, um Ihren Code in einen Algorithmus zu "
+"verwandeln, der von jeder der GUI-Komponenten, wie der Toolbox oder dem "
+"Modelldesigner, ausgeführt werden kann."
+
+#: ../../docs/user_manual/processing/scripts.rst:395
+msgid ""
+"These lines are all calls to the ``@alg`` decorator functions that help "
+"simplify the coding of the algorithm."
+msgstr ""
+"Diese Zeilen sind allesamt Aufrufe der ``@alg``-decorator-Funktionen, die "
+"die Codierung des Algorithmus vereinfachen."
+
+#: ../../docs/user_manual/processing/scripts.rst:398
+msgid ""
+"The @alg decorator is used to define the name and location of the algorithm "
+"in the Toolbox."
+msgstr ""
+"Der @alg decorator wird verwendet, um den Namen und die Position des "
+"Algorithmus in der Werkzeugkiste zu definieren."
+
+#: ../../docs/user_manual/processing/scripts.rst:400
+msgid ""
+"The @alg.input decorator is used to define the inputs of the algorithm."
+msgstr ""
+"Der @alg.input decorator wird verwendet, um die Eingaben des Algorithmus zu "
+"definieren."
+
+#: ../../docs/user_manual/processing/scripts.rst:401
+msgid ""
+"The @alg.output decorator is used to define the outputs of the algorithm."
+msgstr ""
+"Der @alg.output decorator wird verwendet, um die Ausgaben des Algorithmus zu"
+" definieren."
+
+#: ../../docs/user_manual/processing/scripts.rst:403
+msgid ""
+"For existing parameters and their correspondance, read "
+":ref:`processing_algs_input_output`."
+msgstr ""
+"Für die vorhandenen Parameter und ihre Entsprechung lesen Sie bitte "
+":ref:`processing_algs_input_output`."
+
+#: ../../docs/user_manual/processing/scripts.rst:407
+msgid "Handing algorithm output"
+msgstr "Handhabung der Algorithmus-Ausgabe"
+
+#: ../../docs/user_manual/processing/scripts.rst:409
+msgid ""
+"When you declare an output representing a layer (raster or vector), the "
+"algorithm will try to add it to QGIS once it is finished."
+msgstr ""
+"Wenn Sie eine Ausgabe deklarieren, die einen Layer (Raster oder Vektor) "
+"darstellt, wird der Algorithmus versuchen, diesen in QGIS einzufügen, sobald"
+" er fertig ist."
+
+#: ../../docs/user_manual/processing/scripts.rst:412
+msgid ""
+"Raster layer output: QgsProcessingParameterRasterDestination / "
+"alg.RASTER_LAYER_DEST."
+msgstr ""
+"Ausgabe eines Rasterlayers: QgsProcessingParameterRasterDestination / "
+"alg.RASTER_LAYER_DEST."
+
+#: ../../docs/user_manual/processing/scripts.rst:414
+msgid ""
+"Vector layer output: QgsProcessingParameterVectorDestination / "
+"alg.VECTOR_LAYER_DEST."
+msgstr ""
+"Ausgabe eines Vektorlayers: QgsProcessingParameterVectorDestination / "
+"alg.VECTOR_LAYER_DEST."
+
+#: ../../docs/user_manual/processing/scripts.rst:417
+msgid ""
+"So even if the ``processing.run()`` method does not add the layers it "
+"creates to the user's current project, the two output layers (buffer and "
+"raster buffer) will be loaded, since they are saved to the destinations "
+"entered by the user (or to temporary destinations if the user does not "
+"specify destinations)."
+msgstr ""
+"Selbst wenn also die Methode ``processing.run()`` die von ihr erzeugten "
+"Layer nicht zum aktuellen Projekt des Benutzers hinzufügt, werden die beiden"
+" Ausgabelayer (Puffer und Rasterpuffer) geladen, da sie an den vom Benutzer "
+"eingegebenen Zielen gespeichert werden (oder an temporären Zielen, wenn der "
+"Benutzer keine Ziele angibt)."
+
+#: ../../docs/user_manual/processing/scripts.rst:423
+msgid ""
+"If a layer is created as output of an algorithm, it should be declared as "
+"such. Otherwise, you will not be able to properly use the algorithm in the "
+"modeler, since what is declared will not match what the algorithm really "
+"creates."
+msgstr ""
+"Wenn ein Layer als Ausgabe eines Algorithmus erstellt wird, sollte er auch "
+"als solcher deklariert werden. Andernfalls können Sie den Algorithmus im "
+"Modellierer nicht richtig verwenden, da das, was deklariert wird, nicht mit "
+"dem übereinstimmt, was der Algorithmus tatsächlich erzeugt."
+
+#: ../../docs/user_manual/processing/scripts.rst:429
+msgid ""
+"You can return strings, numbers and more by specifying them in the result "
+"dictionary (as demonstrated for \"NUMBEROFFEATURES\"), but they should "
+"always be explicitly defined as outputs from your algorithm. We encourage "
+"algorithms to output as many useful values as possible, since these can be "
+"valuable for use in later algorithms when your algorithm is used as part of "
+"a model."
+msgstr ""
+"Sie können Zeichenketten, Zahlen und mehr zurückgeben, indem Sie sie im "
+"Ergebniswörterbuch angeben (wie für „NUMBEROFFEATURES“ gezeigt), aber sie "
+"sollten immer ausdrücklich als Ausgaben Ihres Algorithmus definiert werden. "
+"Wir ermutigen Algorithmen, so viele nützliche Werte wie möglich auszugeben, "
+"da diese für die Verwendung in späteren Algorithmen wertvoll sein können, "
+"wenn Ihr Algorithmus als Teil eines Modells verwendet wird."
+
 #: ../../docs/user_manual/processing/scripts.rst:438
 msgid "Communicating with the user"
 msgstr "Kommunikation mit dem Nutzer."
+
+#: ../../docs/user_manual/processing/scripts.rst:440
+msgid ""
+"If your algorithm takes a long time to process, it is a good idea to inform "
+"the user about the progress.  You can use ``feedback`` "
+"(:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`) for this."
+msgstr ""
+"Wenn Ihr Algorithmus eine lange Zeit für die Verarbeitung benötigt, ist es "
+"eine gute Idee, den Benutzer über den Fortschritt zu informieren. Hierfür "
+"können Sie ``Feedback`` (:class:`QgsProcessingFeedback "
+"<qgis.core.QgsProcessingFeedback>`) verwenden."
+
+#: ../../docs/user_manual/processing/scripts.rst:444
+msgid ""
+"The progress text and progressbar can be updated using two methods: "
+":meth:`setProgressText(text) "
+"<qgis.core.QgsProcessingFeedback.setProgressText>` and "
+":meth:`setProgress(percent) <qgis.core.QgsFeedback.setProgress>`."
+msgstr ""
+"Der Fortschrittstext und die Fortschrittsleiste können mit zwei Methoden "
+"aktualisiert werden: :meth:`setProgressText(text) "
+"<qgis.core.QgsProcessingFeedback.setProgressText>` und "
+":meth:`setProgress(percent) <qgis.core.QgsFeedback.setProgress>`."
+
+#: ../../docs/user_manual/processing/scripts.rst:448
+msgid ""
+"You can provide more information by using :meth:`pushCommandInfo(text) "
+"<qgis.core.QgsProcessingFeedback.pushCommandInfo>`, "
+":meth:`pushDebugInfo(text) <qgis.core.QgsProcessingFeedback.pushDebugInfo>`,"
+" :meth:`pushInfo(text) <qgis.core.QgsProcessingFeedback.pushInfo>` and "
+":meth:`reportError(text) <qgis.core.QgsProcessingFeedback.reportError>`."
+msgstr ""
+"Sie können weitere Informationen bereitstellen, indem Sie "
+":meth:`pushCommandInfo(text) "
+"<qgis.core.QgsProcessingFeedback.pushCommandInfo>`, "
+":meth:`pushDebugInfo(text) <qgis.core.QgsProcessingFeedback.pushDebugInfo>`,"
+" :meth:`pushInfo(text) <qgis.core.QgsProcessingFeedback.pushInfo>` oder "
+":meth:`reportError(text) <qgis.core.QgsProcessingFeedback.reportError>` "
+"verwenden."
+
+#: ../../docs/user_manual/processing/scripts.rst:454
+msgid ""
+"If your script has a problem, the correct way of handling it is to raise a "
+":class:`QgsProcessingException <qgis.core.QgsProcessingException>`. You can "
+"pass a message as an argument to the constructor of the exception. "
+"Processing will take care of handling it and communicating with the user, "
+"depending on where the algorithm is being executed from (toolbox, modeler, "
+"Python console, ...)"
+msgstr ""
+"Wenn in Ihrem Skript ein Problem auftritt, besteht die korrekte Art der "
+"Behandlung darin, eine :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>` auszulösen. Sie können eine Nachricht "
+"als Argument an den Konstruktor der Ausnahme übergeben. Die Verarbeitung "
+"kümmert sich um die Behandlung und die Kommunikation mit dem Benutzer, je "
+"nachdem, von wo aus der Algorithmus ausgeführt wird (Toolbox, Modeler, "
+"Python-Konsole, ...)"
 
 #: ../../docs/user_manual/processing/scripts.rst:463
 msgid "Documenting your scripts"
 msgstr "Ihre Scripte dokumentieren"
 
+#: ../../docs/user_manual/processing/scripts.rst:465
+msgid ""
+"You can document your scripts by overloading the :meth:`helpString() "
+"<qgis.core.QgsProcessingAlgorithm.helpString>` and :meth:`helpUrl() "
+"<qgis.core.QgsProcessingAlgorithm.helpUrl>` methods of "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`."
+msgstr ""
+"Sie können Ihre Skripte unter Verwendung von :meth:`helpString() "
+"<qgis.core.QgsProcessingAlgorithm.helpString>` und :meth:`helpUrl() "
+"<qgis.core.QgsProcessingAlgorithm.helpUrl>`, Methoden von "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` "
+"dokumentieren."
+
+#: ../../docs/user_manual/processing/scripts.rst:471
+msgid "Flags"
+msgstr "Flags"
+
+#: ../../docs/user_manual/processing/scripts.rst:473
+msgid ""
+"You can override the :meth:`flags() "
+"<qgis.core.QgsProcessingAlgorithm.flags>` method of "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` to tell "
+"QGIS more about your algorithm. You can for instance tell QGIS that the "
+"script shall be hidden from the modeler, that it can be canceled, that it is"
+" not thread safe, and more."
+msgstr ""
+"Sie können die Methode :meth:`flags() "
+"<qgis.core.QgsProcessingAlgorithm.flags>` von :class:`QgsProcessingAlgorithm"
+" <qgis.core.QgsProcessingAlgorithm>` überschreiben, um QGIS mehr über Ihren "
+"Algorithmus zu erzählen. Sie können QGIS zum Beispiel mitteilen, dass das "
+"Skript vor dem Modellierer verborgen werden soll, dass es abgebrochen werden"
+" kann, dass es nicht thread-sicher ist und vieles mehr."
+
+#: ../../docs/user_manual/processing/scripts.rst:481
+msgid ""
+"By default, Processing runs algorithms in a separate thread in order to keep"
+" QGIS responsive while the processing task runs. If your algorithm is "
+"regularly crashing, you are probably using API calls which are not safe to "
+"do in a background thread. Try returning the "
+"QgsProcessingAlgorithm.FlagNoThreading flag from your algorithm's flags() "
+"method to force Processing to run your algorithm in the main thread instead."
+msgstr ""
+"Standardmäßig führt Processing Algorithmen in einem separaten Thread aus, "
+"damit QGIS während der Ausführung des Processing-Tasks ansprechbar bleibt. "
+"Wenn Ihr Algorithmus regelmäßig abstürzt, verwenden Sie wahrscheinlich API-"
+"Aufrufe, die nicht sicher in einem Hintergrund-Thread ausgeführt werden "
+"können. Versuchen Sie, das Flag QgsProcessingAlgorithm.FlagNoThreading aus "
+"der flags()-Methode Ihres Algorithmus zurückzugeben, um Processing zu "
+"zwingen, Ihren Algorithmus stattdessen im Hauptthread auszuführen."
+
 #: ../../docs/user_manual/processing/scripts.rst:490
 msgid "Best practices for writing script algorithms"
 msgstr "Bewährte Verfahren für das Schreiben von Skript-Algorithmen"
+
+#: ../../docs/user_manual/processing/scripts.rst:492
+msgid ""
+"Here's a quick summary of ideas to consider when creating your script "
+"algorithms and, especially, if you want to share them with other QGIS users."
+" Following these simple rules will ensure consistency across the different "
+"Processing elements such as the toolbox, the modeler or the batch processing"
+" interface."
+msgstr ""
+"Hier finden Sie eine kurze Zusammenfassung von Ideen, die Sie bei der "
+"Erstellung Ihrer Skript-Algorithmen berücksichtigen sollten, vor allem, wenn"
+" Sie sie mit anderen QGIS-Benutzern teilen möchten. Wenn Sie diese einfachen"
+" Regeln befolgen, wird die Konsistenz zwischen den verschiedenen "
+"Verarbeitungselementen wie der Werkzeugkiste, dem Modellierer oder der "
+"Stapelverarbeitungsschnittstelle gewährleistet."
 
 #: ../../docs/user_manual/processing/scripts.rst:498
 msgid ""
@@ -53,3 +591,29 @@ msgid ""
 msgstr ""
 "Laden Sie keine Ergebnislayer. Lassen Sie die Verarbeitung Ihrer Ergebnisse "
 "abarbeiten und laden Sie Ihre Layer, wenn nötig."
+
+#: ../../docs/user_manual/processing/scripts.rst:500
+msgid "Always declare the outputs your algorithm creates."
+msgstr "Geben Sie immer die Ausgaben an, die Ihr Algorithmus erzeugt."
+
+#: ../../docs/user_manual/processing/scripts.rst:501
+msgid ""
+"Do not show message boxes or use any GUI element from the script. If you "
+"want to communicate with the user, use the methods of the feedback object "
+"(:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`) or throw "
+"a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`."
+msgstr ""
+"Zeigen Sie keine Meldungsfelder an und verwenden Sie keine GUI-Elemente aus "
+"dem Skript. Wenn Sie mit dem Benutzer kommunizieren möchten, verwenden Sie "
+"die Methoden des Feedback-Objekts (:class:`QgsProcessingFeedback "
+"<qgis.core.QgsProcessingFeedback>`) oder werfen Sie eine "
+":class:`QgsProcessingException <qgis.core.QgsProcessingException>`."
+
+#: ../../docs/user_manual/processing/scripts.rst:507
+msgid ""
+"There are already many processing algorithms available in QGIS. You can find"
+" code on the :source:`QGIS <python/plugins/processing/algs/qgis>` repo."
+msgstr ""
+"Es sind bereits viele Verarbeitungsalgorithmen in QGIS verfügbar. Sie können"
+" Code auf der :source:`QGIS <python/plugins/processing/algs/qgis>` Repo "
+"finden."
