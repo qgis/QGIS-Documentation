@@ -32,3 +32,152 @@ msgstr ""
 "Übersetzen ist eine Gemeinschaftsleistung :ref:`Sie können mitmachen "
 "<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
 " übersetzt."
+
+#: ../../docs/user_manual/processing/standalone.rst:4
+msgid "Using processing from the command line"
+msgstr "Verarbeitung über die Befehlszeile"
+
+#: ../../docs/user_manual/processing/standalone.rst:11
+msgid ""
+"QGIS comes with a tool called ``QGIS Processing Executor`` which allows you "
+"to run Processing algorithms and models (built-in or provided by plugins) "
+"directly from the command line without starting QGIS Desktop itself."
+msgstr ""
+"QGIS wird mit einem Werkzeug namens ``QGIS Processing Executor`` "
+"ausgeliefert, das es Ihnen erlaubt, Processing-Algorithmen und -Modelle "
+"(eingebaut oder durch Plugins bereitgestellt) direkt von der Kommandozeile "
+"aus zu starten, ohne QGIS Desktop selbst zu starten."
+
+#: ../../docs/user_manual/processing/standalone.rst:15
+msgid "From a command line tool, run ``qgis_process`` and you should get:"
+msgstr ""
+"Führen Sie ``qgis_process`` in einem Kommandozeilenprogramm aus und Sie "
+"sollten folgendes erhalten:"
+
+#: ../../docs/user_manual/processing/standalone.rst:48
+msgid ""
+"Only installed plugins that advertise ``hasProcessingProvider=yes`` in their"
+" :file:`metadata.txt` file are recognized and can be activated or loaded by "
+"qgis_process tool."
+msgstr ""
+"Nur installierte Plugins, die in ihrer :file:`metadata.txt` Datei "
+"``hasProcessingProvider=yes`` angeben, werden erkannt und können vom "
+"qgis_process Tool aktiviert oder geladen werden."
+
+#: ../../docs/user_manual/processing/standalone.rst:52
+msgid ""
+"Before calling qgis_process on a system without window manager (e.g. a "
+"headless server), you should set::"
+msgstr ""
+"Bevor Sie qgis_process auf einem System ohne Fenstermanager (z.B. einem "
+"Headless Server) aufrufen, sollten Sie folgende Einstellung setzen::"
+
+#: ../../docs/user_manual/processing/standalone.rst:58
+msgid ""
+"The command ``list`` can be used to get a list of all available providers "
+"and algorithms."
+msgstr ""
+"Der Befehl ``list`` kann verwendet werden, um eine Liste aller verfügbaren "
+"Anbieter und Algorithmen zu erhalten:"
+
+#: ../../docs/user_manual/processing/standalone.rst:65
+msgid ""
+"The command ``help`` can be used to get further information about commands "
+"or algorithms."
+msgstr ""
+"Der Befehl ``help`` kann verwendet werden, um weitere Informationen über "
+"Befehle oder Algorithmen zu erhalten:"
+
+#: ../../docs/user_manual/processing/standalone.rst:71
+msgid ""
+"The command ``run`` can be used to run an algorithm or model. Specify the "
+"name of the algorithm or a path to a model as first parameter."
+msgstr ""
+"Der Befehl ``run`` kann verwendet werden, um einen Algorithmus oder ein "
+"Modell auszuführen. Geben Sie als ersten Parameter den Namen des Algorithmus"
+" oder einen Pfad zu einem Modell an:"
+
+#: ../../docs/user_manual/processing/standalone.rst:78
+msgid ""
+"Where a parameter accepts a list of values, set the same variable multiple "
+"times."
+msgstr ""
+"Wenn ein Parameter eine Liste von Werten akzeptiert, setzen Sie dieselbe "
+"Variable mehrfach:"
+
+#: ../../docs/user_manual/processing/standalone.rst:84
+msgid ""
+"While running an algorithm a text-based feedback bar is shown, and the "
+"operation can be cancelled via :kbd:`CTRL+C`."
+msgstr ""
+"Während der Ausführung eines Algorithmus wird eine textbasierte "
+"Rückmeldungsleiste angezeigt, und der Vorgang kann mit :kbd:`Strg+C` "
+"abgebrochen werden."
+
+#: ../../docs/user_manual/processing/standalone.rst:87
+msgid "The ``run`` command also supports further parameters."
+msgstr "Der Befehl ``run`` unterstützt auch weitere Parameter:"
+
+#: ../../docs/user_manual/processing/standalone.rst:89
+msgid "``--json`` will format stdout output in a JSON structured way."
+msgstr ""
+"``--json`` formatiert die stdout-Ausgabe in einer JSON-strukturierten Weise."
+
+#: ../../docs/user_manual/processing/standalone.rst:90
+msgid "``--ellipsoid`` will set the ellipsoid to the specified one."
+msgstr "``--ellipsoid`` setzt das Ellipsoid auf den angegebenen Wert."
+
+#: ../../docs/user_manual/processing/standalone.rst:91
+msgid "``--distance_units`` will use the specified distance units."
+msgstr ""
+"``--distance_units`` wird die angegebenen Entfernungseinheiten verwenden."
+
+#: ../../docs/user_manual/processing/standalone.rst:92
+msgid "``--area_units`` will use the specified area units."
+msgstr "``--area_units`` wird die angegebenen Flächeneinheiten verwenden."
+
+#: ../../docs/user_manual/processing/standalone.rst:93
+msgid ""
+"``--project_path`` will load the specified project for running the "
+"algorithm."
+msgstr ""
+"``--project_path`` lädt das angegebene Projekt zur Ausführung des "
+"Algorithmus."
+
+#: ../../docs/user_manual/processing/standalone.rst:95
+msgid ""
+"Complex input parameters, i.e. parameter types which are themselves "
+"specified as a dictionary type object for algorithms, are supported by "
+"qgis_process. To indicate that parameters will be specified via stdin, the "
+"qgis_process command must follow the format (with a trailing ``-`` in place "
+"of the usual arguments list)."
+msgstr ""
+"Auch komplexe Eingabeparameter werden von qgis_process unterstützt. Um "
+"anzuzeigen, dass die Parameter über stdin angegeben werden, muss der "
+"``qgis_process``-Befehl dem unten gezeigten Format folgen (mit einem "
+"abschließenden ``-`` anstelle der üblichen Argumentliste):"
+
+#: ../../docs/user_manual/processing/standalone.rst:106
+msgid ""
+"The JSON object must contain an \"inputs\" key, which is a map of the input "
+"parameter values. E.g."
+msgstr ""
+"Das JSON-Objekt muss einen „inputs“-Schlüssel enthalten, bei dem es sich um "
+"eine Abbildung der Werte der Eingabeparameter handelt, z.B.:"
+
+#: ../../docs/user_manual/processing/standalone.rst:113
+msgid ""
+"Additionally, extra settings like the distance units, area units, ellipsoid "
+"and project path can be included in this JSON object:"
+msgstr ""
+"Zusätzlich können zusätzliche Einstellungen wie Entfernungseinheiten, "
+"Flächeneinheiten, Ellipsoid und Projektpfad in dieses JSON-Objekt "
+"aufgenommen werden:"
+
+#: ../../docs/user_manual/processing/standalone.rst:126
+msgid ""
+"Specifying input parameters via stdin implies automatically the :file:`JSON`"
+" output format for results."
+msgstr ""
+"Die Angabe von Eingabeparametern über stdin impliziert automatisch das "
+"Ausgabeformat :file:`JSON` für die Ergebnisse."
