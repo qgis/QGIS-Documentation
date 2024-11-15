@@ -403,6 +403,7 @@ Data Sources settings
 **Feature attributes and table**
 
 * |checkbox| :guilabel:`Open attribute table as docked window`
+* |checkbox| :guilabel:`Autosize all columns by default when opening attribute table`
 * :guilabel:`Copy features as`: defines the format to use for data when pasting
   features in other applications.
 
