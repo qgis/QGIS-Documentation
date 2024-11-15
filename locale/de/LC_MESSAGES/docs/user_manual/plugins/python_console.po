@@ -39,34 +39,442 @@ msgstr ""
 msgid "QGIS Python console"
 msgstr "QGIS Python Konsole"
 
+#: ../../docs/user_manual/plugins/python_console.rst:15
+msgid ""
+"As you will see later in this chapter, QGIS has been designed with a plugin "
+"architecture. Plugins can be written in Python, a very famous language in "
+"the geospatial world."
+msgstr ""
+"Wie Sie später in diesem Kapitel sehen werden, wurde QGIS mit einer Plugin-"
+"Architektur entwickelt. Plugins können in Python geschrieben werden, einer "
+"sehr bekannten Sprache in der Welt der Geodaten."
+
+#: ../../docs/user_manual/plugins/python_console.rst:18
+msgid ""
+"QGIS brings a Python API (see :ref:`PyQGIS Developer Cookbook <PyQGIS-"
+"Developer-Cookbook>` for some code sample) to let the user interact with its"
+" objects (layers, feature or interface). QGIS also has a Python console."
+msgstr ""
+"QGIS verfügt über eine Python-API (siehe :ref:`PyQGIS Developer Cookbook "
+"<PyQGIS-Developer-Cookbook>` für einige Code-Beispiele), um dem Benutzer die"
+" Interaktion mit seinen Elementen (Layern, Objekten oder Schnittstellen) zu "
+"ermöglichen. QGIS hat auch eine Python-Konsole."
+
+#: ../../docs/user_manual/plugins/python_console.rst:22
+msgid ""
+"The QGIS Python Console is an interactive shell for Python command "
+"executions. It also has a Python file editor that allows you to edit and "
+"save your Python scripts. Both console and editor are based on PyQScintilla2"
+" package. To open the console go to :menuselection:`Plugins --> Python "
+"Console` (:kbd:`Ctrl+Alt+P`)."
+msgstr ""
+"Die QGIS Python-Konsole ist eine interaktive Shell für die Ausführung von "
+"Python-Befehlen. Sie verfügt auch über einen Python-Dateieditor, mit dem Sie"
+" Ihre Python-Skripte bearbeiten und speichern können. Sowohl die Konsole als"
+" auch der Editor basieren auf dem Paket PyQScintilla2. Um die Konsole zu "
+"öffnen, gehen Sie zu :menuselection:`Erweiterungen --> Python-Konsole` "
+"(:kbd:`Strg+Alt+P`)."
+
+#: ../../docs/user_manual/plugins/python_console.rst:30
+msgid "The Interactive Console"
+msgstr "Die interaktive Konsole"
+
+#: ../../docs/user_manual/plugins/python_console.rst:32
+msgid ""
+"The console is a Python interpreter that allows you to execute Python "
+"commands. Modules from QGIS (analysis, core, gui, server, processing, 3d) "
+"and Qt (QtCore, QtGui, QtNetwork, QtWidgets, QtXml) as well as Python's "
+"math, os, re and sys modules are already imported and can be used directly."
+msgstr ""
+"Die Konsole ist ein Python-Interpreter, mit dem Sie Python-Befehle ausführen"
+" können. Module von QGIS (analysis, core, gui, server, processing, 3d) und "
+"Qt (QtCore, QtGui, QtNetwork, QtWidgets, QtXml) sowie die Python-Module "
+"math, os, re und sys sind bereits importiert und können direkt verwendet "
+"werden."
+
+#: ../../docs/user_manual/plugins/python_console.rst:38
+msgid ""
+"The interactive console is composed of a toolbar, an input area and an "
+"output one."
+msgstr ""
+"Die interaktive Konsole besteht aus einer Symbolleiste, einem Eingabebereich"
+" und einem Ausgabebereich."
+
+#: ../../docs/user_manual/plugins/python_console.rst:45
+msgid "The Python Console"
+msgstr "Die Python-Konsole"
+
 #: ../../docs/user_manual/plugins/python_console.rst:48
 msgid "Toolbar"
 msgstr "Werkzeugleiste"
+
+#: ../../docs/user_manual/plugins/python_console.rst:50
+msgid "The toolbar proposes the following tools:"
+msgstr "Die Symbolleiste bietet folgende Werkzeuge:"
+
+#: ../../docs/user_manual/plugins/python_console.rst:52
+msgid "|clearConsole| :sup:`Clear Console` to wipe the output area;"
+msgstr ""
+"|clearConsole| :sup:`Konsole leeren`, um den Ausgabebereich zu löschen;"
 
 #: ../../docs/user_manual/plugins/python_console.rst:198
 msgid "clearConsole"
 msgstr "clearConsole"
 
+#: ../../docs/user_manual/plugins/python_console.rst:53
+msgid ""
+"|start| :sup:`Run Command` available in the input area: same as pressing "
+":kbd:`Enter`;"
+msgstr ""
+"|start| :sup:`Befehl ausführen` im Eingabebereich verfügbar: dasselbe wie "
+"das Drücken von :kbd:`Enter`;"
+
 #: ../../docs/user_manual/plugins/python_console.rst:210
 msgid "start"
 msgstr "start"
+
+#: ../../docs/user_manual/plugins/python_console.rst:55
+msgid ""
+"|showEditorConsole| :sup:`Show Editor`: toggles :ref:`console_editor` "
+"visibility;"
+msgstr ""
+"|showEditorConsole| :sup:`Editor anzeigen`: schaltet die Sichtbarkeit von "
+":ref:`console_editor` um;"
 
 #: ../../docs/user_manual/plugins/python_console.rst:208
 msgid "showEditorConsole"
 msgstr "showEditorConsole"
 
+#: ../../docs/user_manual/plugins/python_console.rst:57
+msgid ""
+"|options| :sup:`Options...`: opens a dialog to configure :ref:`console "
+"properties <console_options>`;"
+msgstr ""
+"|Optionen| :sup:`Optionen...`: öffnet den Dialog zur Konfiguration der "
+":ref:`Python-Konsole <console_options>` in den Optionen;"
+
 #: ../../docs/user_manual/plugins/python_console.rst:204
 msgid "options"
 msgstr "options"
+
+#: ../../docs/user_manual/plugins/python_console.rst:59
+msgid ""
+"|helpContents| :sup:`Help...` provides a menu to access various "
+"documentation:"
+msgstr ""
+"|helpContents| :sup:`Hilfe...` bietet ein Menü für den Zugriff auf "
+"verschiedene Dokumentationen:"
 
 #: ../../docs/user_manual/plugins/python_console.rst:202
 msgid "helpContents"
 msgstr "helpContents"
 
+#: ../../docs/user_manual/plugins/python_console.rst:61
+msgid ":ref:`Python Console Help <console>` (the current page)"
+msgstr ":ref:`Python-Konsole-Hilfe <console>` (diese Dokumentation)"
+
+#: ../../docs/user_manual/plugins/python_console.rst:62
+msgid ":pyqgis:`PyQGIS API documentation <>`"
+msgstr ":pyqgis:`PyQGIS API Dokumentation <>`"
+
+#: ../../docs/user_manual/plugins/python_console.rst:63
+msgid ":ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>`"
+msgstr ":ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>`"
+
+#: ../../docs/user_manual/plugins/python_console.rst:64
+msgid ""
+"|dock| :sup:`Dock Code Editor` to dock or undock the panel in QGIS interface"
+msgstr ""
+"|dock| :sup:`Dock Code Editor` zum Andocken bzw. Abdocken des Bedienfeldes "
+"in der QGIS-Oberfläche"
+
 #: ../../docs/user_manual/plugins/python_console.rst:200
 msgid "dock"
 msgstr "dock"
 
+#: ../../docs/user_manual/plugins/python_console.rst:67
+msgid "Input area"
+msgstr "Eingabebereich"
+
+#: ../../docs/user_manual/plugins/python_console.rst:69
+msgid "The Console input area main features are:"
+msgstr "Die wichtigsten Objekte des Eingabebereichs der Konsole sind:"
+
+#: ../../docs/user_manual/plugins/python_console.rst:71
+#: ../../docs/user_manual/plugins/python_console.rst:145
+msgid ""
+"Code completion, highlighting syntax and calltips for the following APIs:"
+msgstr ""
+"Code-Vervollständigung, Hervorhebung der Syntax und Calltips für die "
+"folgenden APIs:"
+
+#: ../../docs/user_manual/plugins/python_console.rst:73
+#: ../../docs/user_manual/plugins/python_console.rst:147
+msgid "Python"
+msgstr "Python"
+
+#: ../../docs/user_manual/plugins/python_console.rst:74
+#: ../../docs/user_manual/plugins/python_console.rst:148
+msgid "PyQGIS"
+msgstr "PyQGIS"
+
+#: ../../docs/user_manual/plugins/python_console.rst:75
+#: ../../docs/user_manual/plugins/python_console.rst:149
+msgid "PyQt5"
+msgstr "PyQt5"
+
+#: ../../docs/user_manual/plugins/python_console.rst:76
+#: ../../docs/user_manual/plugins/python_console.rst:150
+msgid "QScintilla2"
+msgstr "QScintilla2"
+
+#: ../../docs/user_manual/plugins/python_console.rst:77
+#: ../../docs/user_manual/plugins/python_console.rst:151
+msgid "osgeo-gdal-ogr"
+msgstr "osgeo-gdal-ogr"
+
+#: ../../docs/user_manual/plugins/python_console.rst:79
+msgid ""
+":kbd:`Ctrl+Alt+Space` to view the auto-completion list if enabled in the "
+":ref:`console_options`;"
+msgstr ""
+":kbd:`Strg+Alt+Leertaste`, um die Liste der automatischen Vervollständigung "
+"anzuzeigen, wenn sie in :ref:`console_options` aktiviert ist;"
+
+#: ../../docs/user_manual/plugins/python_console.rst:81
+msgid ""
+"Execute code snippets from the input area by typing and pressing "
+":kbd:`Enter` or :guilabel:`Run Command`;"
+msgstr ""
+"Führen Sie Code-Schnipsel aus dem Eingabebereich aus, indem Sie :kbd:`Enter`"
+" oder :guilabel:`Befehl ausführen` drücken;"
+
+#: ../../docs/user_manual/plugins/python_console.rst:83
+msgid ""
+"Execute code snippets from the output area using the :guilabel:`Enter "
+"Selected` from the contextual menu or pressing :kbd:`Ctrl+E`;"
+msgstr ""
+"Führen Sie Code-Schnipsel aus dem Ausgabebereich aus, indem Sie die Option "
+":guilabel:`Gewähltes eingeben` aus dem Kontextmenü verwenden oder "
+":kbd:`Strg+E` drücken;"
+
+#: ../../docs/user_manual/plugins/python_console.rst:85
+msgid ""
+"Browse the command history from the input area using the :kbd:`Up` and "
+":kbd:`Down` arrow keys and execute the command you want;"
+msgstr ""
+"Navigieren Sie vom Eingabebereich aus mit den Pfeiltasten :kbd:`Auf` und "
+":kbd:`Ab` durch den Befehlsverlauf und führen Sie den gewünschten Befehl "
+"aus;"
+
+#: ../../docs/user_manual/plugins/python_console.rst:87
+msgid ""
+":kbd:`Ctrl+Shift+Space` to view the command history: double-clicking a row "
+"will execute the command. The :guilabel:`Command History` dialog can also be"
+" accessed from context menu of input area;"
+msgstr ""
+":kbd:`Strg+Umschalt+Leertaste`, um die Befehlshistorie anzuzeigen: ein "
+"Doppelklick auf eine Zeile führt den Befehl aus. Der Dialog "
+":guilabel:`Befehlsverlauf` kann auch über das Kontextmenü des "
+"Eingabebereichs aufgerufen werden;"
+
+#: ../../docs/user_manual/plugins/python_console.rst:90
+msgid ""
+"Save and clear the command history. The history will be saved into the "
+":file:`console_history.txt` file under the active :ref:`user profile "
+"<user_profiles>` folder;"
+msgstr ""
+"Speichern und löschen Sie den Befehlsverlauf. Der Verlauf wird in der Datei "
+":file:`console_history.txt` unter dem aktiven :ref:`Benutzerprofil-Ordner "
+"<user_profiles>` gespeichert;"
+
+#: ../../docs/user_manual/plugins/python_console.rst:94
+msgid "Type the following special commands:"
+msgstr "Geben Sie die folgenden speziellen Befehle ein:"
+
+#: ../../docs/user_manual/plugins/python_console.rst:96
+msgid "``?`` to show a help of the Python Console"
+msgstr "``?`` um eine Hilfe der Python-Konsole anzuzeigen"
+
+#: ../../docs/user_manual/plugins/python_console.rst:97
+msgid ""
+"``_api`` to open :api:`QGIS C++ API <>` documentation or ``_api(object)`` "
+"for a specific object documentation (in QGIS C++ API or Qt API "
+"documentation)"
+msgstr ""
+"``_api`` um die :api:`QGIS C++ API <>` Dokumentation zu öffnen oder "
+"``_api(object)`` für eine spezifische Objektdokumentation (in QGIS C++ API "
+"oder Qt API Dokumentation)"
+
+#: ../../docs/user_manual/plugins/python_console.rst:100
+msgid ""
+"``_pyqgis`` to open :pyqgis:`QGIS Python API <>` documentation or "
+"``_pyqgis(object)`` for a specific object documentation (in QGIS Python API "
+"or Qt API documentation)"
+msgstr ""
+"``_pyqgis`` um die :pyqgis:`QGIS Python API <>` Dokumentation zu öffnen oder"
+" ``_pyqgis(object)`` für eine spezifische Objektdokumentation (in der QGIS "
+"Python API oder Qt API Dokumentation)"
+
+#: ../../docs/user_manual/plugins/python_console.rst:103
+msgid ""
+"``_cookbook`` to open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>`."
+msgstr ""
+"``_cookbook`` um das :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` zu "
+"öffnen."
+
+#: ../../docs/user_manual/plugins/python_console.rst:104
+msgid ""
+"``!`` followed by a command to execute Shell commands from the Python "
+"Console. The console will start a subprocess, and forward its output to the "
+"Python Console Output. While the subprocess is running, the Python Console "
+"Input switches to STDIN mode and forwards entered character to the child "
+"process. This makes it possible to send confirmation when the child program "
+"asks for it. When the Console is in STDIN mode, pressing :kbd:`Ctrl+C` kills"
+" the subprocess. It is also possible to affect the result of a command to a "
+"variable with the syntax ``var = !cmd``"
+msgstr ""
+"``!`` gefolgt von einem Befehl, um Shell-Befehle von der Python-Konsole "
+"auszuführen. Die Konsole startet einen Unterprozess und leitet dessen "
+"Ausgabe an den Python-Konsolen Ausgang weiter. Während der Unterprozess "
+"läuft, schaltet die Python- Konsole Input in den STDIN-Modus und leitet "
+"eingegebene Zeichen an den Kindprozess weiter. Dadurch ist es möglich, eine "
+"Bestätigung zu senden, wenn das untergeordnete Programm darum bittet. Wenn "
+"sich die Konsole im STDIN-Modus befindet, wird der Unterprozess durch "
+"Drücken von :kbd:`Strg+C` beendet. Es ist auch möglich, das Ergebnis eines "
+"Befehls in einer Variablen mit der Syntax ``var = !cmd`` zu beeinflussen."
+
+#: ../../docs/user_manual/plugins/python_console.rst:128
+msgid "**Reuse executed commands from the output panel**"
+msgstr "**Ausgeführte Befehle aus dem Bedienfeld wiederverwenden**"
+
+#: ../../docs/user_manual/plugins/python_console.rst:130
+msgid ""
+"You can execute code snippets from the output panel by selecting some text "
+"and pressing :kbd:`Ctrl+E`. No matter if selected text contains the "
+"interpreter prompt (``>>>``, ``...``)."
+msgstr ""
+"Sie können Codeschnipsel aus dem Bedienfeld ausführen, indem Sie einen Text "
+"auswählen und :kbd:`Strg+E` drücken. Es spielt keine Rolle, ob der "
+"ausgewählte Text den Interpreter-Prompt enthält (``>>>``, ``...``)."
+
+#: ../../docs/user_manual/plugins/python_console.rst:138
+msgid "The Code Editor"
+msgstr "Der Code-Editor"
+
+#: ../../docs/user_manual/plugins/python_console.rst:140
+msgid ""
+"Use the |showEditorConsole| :sup:`Show Editor` button to enable the editor "
+"widget. It allows editing and saving Python files and offers advanced "
+"functionalities to manage your code (comment and uncomment code, check "
+"syntax, share the code via GitHub and much more). Main features are:"
+msgstr ""
+"Verwenden Sie die Schaltfläche |showEditorConsole| :sup:`Editor anzeigen`, "
+"um das Editor-Widget zu aktivieren. Es ermöglicht das Bearbeiten und "
+"Speichern von Python-Dateien und bietet erweiterte Funktionen zur Verwaltung"
+" Ihres Codes (Kommentieren und Entkommentieren von Code, Prüfen der Syntax, "
+"Teilen des Codes über GitHub und vieles mehr). Die wichtigsten Objekte sind:"
+
+#: ../../docs/user_manual/plugins/python_console.rst:153
+msgid ":kbd:`Ctrl+Space` to view the auto-completion list."
+msgstr ""
+":kbd:`Strg+Leertaste`, um die Liste der automatischen Vervollständigung "
+"anzuzeigen."
+
+#: ../../docs/user_manual/plugins/python_console.rst:154
+msgid "Sharing code snippets via :ref:`GitHub <console_options>`."
+msgstr "Freigabe von Codeschnipseln über :ref:`GitHub <console_options>`."
+
+#: ../../docs/user_manual/plugins/python_console.rst:155
+msgid ":kbd:`Ctrl+4` Syntax check."
+msgstr ":kbd:`Strg+4` Syntaxprüfung."
+
+#: ../../docs/user_manual/plugins/python_console.rst:156
+msgid ""
+"Search bar (open it with the default Desktop Environment shortcut, usually "
+":kbd:`Ctrl+F`):"
+msgstr ""
+"Suchleiste (öffnen Sie sie mit der Standardverknüpfung der Desktop-Umgebung,"
+" normalerweise :kbd:`Strg+F`):"
+
+#: ../../docs/user_manual/plugins/python_console.rst:159
+msgid ""
+"Use the default Desktop Environment shortcut to find next/previous "
+"(:kbd:`Ctrl+G` and :kbd:`Shift+Ctrl+G`);"
+msgstr ""
+"Verwenden Sie die Standard-Verknüpfung der Desktop-Umgebung für die Suche "
+"nach dem Nächsten/Vorherigen (:kbd:`Strg+G` und :kbd:`Umschalt+Strg+G`);"
+
+#: ../../docs/user_manual/plugins/python_console.rst:161
+msgid "Automatically find first match when typing in find box;"
+msgstr ""
+"Automatische Suche nach der ersten Übereinstimmung bei der Eingabe in das "
+"Suchfeld;"
+
+#: ../../docs/user_manual/plugins/python_console.rst:162
+msgid "Set initial find string to selection when opening find;"
+msgstr ""
+"Setzt die anfängliche Suchzeichenfolge beim Öffnen der Suche auf die "
+"Auswahl;"
+
+#: ../../docs/user_manual/plugins/python_console.rst:163
+msgid "Pressing :kbd:`Esc` closes the find bar."
+msgstr "Durch Drücken von :kbd:`Esc` wird die Suchleiste geschlossen."
+
+#: ../../docs/user_manual/plugins/python_console.rst:165
+msgid "Object inspector: a class and function browser;"
+msgstr "Objektinspektor: ein Klassen- und Funktionsbrowser;"
+
+#: ../../docs/user_manual/plugins/python_console.rst:166
+msgid "Go to an object definition with a mouse click (from Object inspector);"
+msgstr ""
+"Gehen Sie mit einem Mausklick zu einer Objektdefinition (vom Objektinspektor"
+" aus);"
+
+#: ../../docs/user_manual/plugins/python_console.rst:167
+msgid ""
+"Execute code snippets with the |runConsole| :guilabel:`Run Selected` command"
+" in contextual menu;"
+msgstr ""
+"Ausführen von Codeschnipseln mit dem Befehl |runConsole| :guilabel:`Auswahl "
+"ausführen` im Kontextmenü;"
+
 #: ../../docs/user_manual/plugins/python_console.rst:206
 msgid "runConsole"
 msgstr "runConsole"
+
+#: ../../docs/user_manual/plugins/python_console.rst:169
+msgid ""
+"Execute the whole script with the |start| :guilabel:`Run Script` command "
+"(this creates a byte-compiled file with the extension :file:`.pyc`)."
+msgstr ""
+"Führen Sie das gesamte Skript mit dem Befehl |start| :guilabel:`Skript "
+"ausführen` aus (dies erzeugt eine byte-kompilierte Datei mit der Endung "
+":file:`.pyc`)."
+
+#: ../../docs/user_manual/plugins/python_console.rst:174
+msgid ""
+"Running partially or totally a script from the :guilabel:`Code Editor` "
+"outputs the result in the Console output area."
+msgstr ""
+"Die teilweise oder vollständige Ausführung eines Skripts aus dem "
+":guilabel:`Code-Editor` gibt das Ergebnis im Ausgabebereich der Konsole aus."
+
+#: ../../docs/user_manual/plugins/python_console.rst:182
+msgid "The Python Console editor"
+msgstr "Der Python-Konsolen-Editor"
+
+#: ../../docs/user_manual/plugins/python_console.rst:185
+msgid "**Save the options**"
+msgstr "**Speichern Sie die Einstellungen**"
+
+#: ../../docs/user_manual/plugins/python_console.rst:187
+msgid ""
+"To save the state of console's widgets you have to close the Python Console "
+"from the close button. This allows you to save the geometry to be restored "
+"to the next start."
+msgstr ""
+"Um den Zustand der Widgets der Konsole zu speichern, müssen Sie die Python-"
+"Konsole über die Schaltfläche „Schließen“ schließen. Dies ermöglicht es "
+"Ihnen, die Geometrie zu speichern, um sie beim nächsten Start "
+"wiederherzustellen."
