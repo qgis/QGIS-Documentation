@@ -194,6 +194,10 @@ A column size can also be changed by dragging the boundary on the right of its
 heading. The new size of the column is maintained for the layer, and restored at
 the next opening of the attribute table.
 
+In the :ref:`Data Source Settings <datasources_options>`, you can choose to
+|checkbox| :guilabel:`Autosize all columns by default when opening attribute table`,
+which will make "Autosize All Columns" the default view every time attribute tables are opened in QGIS. 
+
 .. _organize_columns:
 
 Hiding and organizing columns and enabling actions
