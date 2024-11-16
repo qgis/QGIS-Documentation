@@ -6,18 +6,18 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Transifex Bot <>, 2024
 # fairtommy <fairtommy@gmail.com>, 2024
+# tomoya miyoshi, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2024-10-09 05:13+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -489,6 +489,17 @@ msgstr "マップ上に表示するレイヤーを指定するパラメータで
 msgid "In addition, QGIS Server introduced some options to select layers by:"
 msgstr "さらに、QGIS Serverでは、レイヤを選択するためのオプションがいくつか導入されています:"
 
+#: ../../docs/server_manual/services/wms.rst:176
+msgid ""
+"the layer id: the project option allowing to select layers by their id is in"
+" :menuselection:`QGIS Server --> WMS` tab of the :menuselection:`Project -->"
+" Properties...` dialog. Check the :guilabel:`Use layer ids as names` "
+"checkbox to activate this option."
+msgstr ""
+"レイヤID：レイヤをIDで選択できるプロジェクトオプションは、:menuselection:`プロジェクト --> プロパティ...` ダイアログの "
+":menuselection:`QGISサーバー --> WMS` "
+"タブにあります。このオプションを有効にするには、:guilabel:`レイヤIDを名前に使う` チェックボックスにチェックを入れます。"
+
 #: ../../docs/server_manual/services/wms.rst:179
 msgid "a :ref:`short name <services_basics_short_name>`"
 msgstr ":ref:`短い名前 <services_basics_short_name>`"
@@ -859,6 +870,15 @@ msgstr "SELECTIONパラメーターを指定したGetMapリクエストに対す
 msgid "FORMAT_OPTIONS"
 msgstr "FORMAT_OPTIONS"
 
+#: ../../docs/server_manual/services/wms.rst:547
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/dxf`` in GetMap request. Takes a list of key:value "
+"pairs separated by semicolon:"
+msgstr ""
+"このパラメータは、選択された形式のオプションを指定するために使用できます。GetMapリクエストの ``FORMAT=application/dxf``"
+" の場合のみです。セミコロンで区切られた、キー:値 ペアのリストを受け取ります:"
+
 #: ../../docs/server_manual/services/wms.rst:551
 msgid ""
 "SCALE: to be used for symbology rules, filters and styles (not actual "
@@ -874,6 +894,15 @@ msgid ""
 msgstr ""
 "MODE: QGIS DesktopのDXFエクスポートダイアログで提供されるエクスポートオプションに対応します。可能な値は "
 "``NOSYMBOLOGY``、``FEATURESYMBOLOGY``、``SYMBOLLAYERSYMBOLOGY`` です。"
+
+#: ../../docs/server_manual/services/wms.rst:556
+msgid ""
+"LAYERATTRIBUTES: specify a field or in case of many layers a comma separated"
+" list of fields that contains values for DXF layer names - if not specified,"
+" the original QGIS layer names are used."
+msgstr ""
+"LAYERATTRIBUTES: ひとつのフィールドか、レイヤが多い場合は "
+"DXFレイヤ名に対応する値を含んだフィールドのカンマ区切りリストを指定します。指定しない場合は、元のQGISレイヤ名が使われます。"
 
 #: ../../docs/server_manual/services/wms.rst:558
 msgid ""
@@ -1066,6 +1095,10 @@ msgid ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`"
 msgstr ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Add the feature display name to the output"
+msgstr "出力に地物の表示名を追加します"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`WITH_MAPTIP <wms_withmaptip>`"
 msgstr ":ref:`WITH_MAPTIP <wms_withmaptip>`"
 
@@ -1233,6 +1266,11 @@ msgstr "このパラメータは、地物が交差しなければならないWKT
 #: ../../docs/server_manual/services/wms.rst:767
 msgid "WITH_DISPLAY_NAME"
 msgstr "WITH_DISPLAY_NAME"
+
+#: ../../docs/server_manual/services/wms.rst:769
+msgid ""
+"This parameter specifies whether to add feature display name to the output."
+msgstr "このパラメータは、出力に地物の表示名を加えるかどうかを指定します。"
 
 #: ../../docs/server_manual/services/wms.rst:771
 #: ../../docs/server_manual/services/wms.rst:783
@@ -1495,6 +1533,10 @@ msgstr "アイテムラベルの色"
 msgid ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
 msgstr ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Adds the layer groups to JSON output"
+msgstr "JSON出力にレイヤグループを追加する"
+
 #: ../../docs/server_manual/services/wms.rst:868
 msgid ""
 "This parameter can be used to specify the geographical area for which the "
@@ -1603,6 +1645,17 @@ msgstr "例:"
 #: ../../docs/server_manual/services/wms.rst:1014
 msgid "RULE"
 msgstr "RULE"
+
+#: ../../docs/server_manual/services/wms.rst:1016
+msgid ""
+"This parameter is available on layers with :guilabel:`Rule-based` rendering "
+"and allows to build a legend with only the named rule symbol. It cannot be "
+"combined with ``BBOX`` parameter nor the JSON format. ``HEIGHT`` and "
+"``WIDTH`` must be specified."
+msgstr ""
+"このパラメータは :guilabel:`Rule-based` "
+"レンダリングを持つレイヤで使用でき、指定したルールシンボルだけで凡例を作成することができるようになります。このパラメータは ``BBOX`` "
+"パラメータや JSON形式と組み合わせることはできません。``HEIGHT`` と ``WIDTH`` は指定する必要があります。"
 
 #: ../../docs/server_manual/services/wms.rst:1037
 msgid "RULELABEL"
@@ -1881,6 +1934,29 @@ msgstr "``ITEMFONTCOLOR=0x5f9930`` の凡例"
 msgid "ADDLAYERGROUPS"
 msgstr "ADDLAYERGROUPS"
 
+#: ../../docs/server_manual/services/wms.rst:1535
+msgid ""
+"This parameter specifies if the JSON output will also display the names of "
+"the layers groups (and subgroups) in the legend entry. Possible values are:"
+msgstr ""
+"このパラメータは、JSON出力に凡例エントリ内のレイヤグループ（およびサブグループ）の名称も表示するかどうかを指定します。 可能な値は次のとおりです:"
+
+#: ../../docs/server_manual/services/wms.rst:1539
+msgid "``TRUE``: display the groups labels"
+msgstr "``TRUE``: グループラベルを表示します"
+
+#: ../../docs/server_manual/services/wms.rst:1540
+msgid "``FALSE`` (default): hide the groups labels"
+msgstr "``FALSE`` （デフォルト）: グループラベルの非表示"
+
+#: ../../docs/server_manual/services/wms.rst:1545
+msgid "Legend without (left) and with (right) layer groups labels display"
+msgstr "レイヤグループラベル表示のない凡例（左）とある凡例（右）"
+
+#: ../../docs/server_manual/services/wms.rst:1547
+msgid "The corresponding JSON output showing groups name would look like:"
+msgstr "グループ名を示すJSON出力は次のようになります:"
+
 #: ../../docs/server_manual/services/wms.rst:1577
 msgid "GetStyle(s)"
 msgstr "GetStyle(s)"
@@ -1988,6 +2064,10 @@ msgstr ":ref:`FORMAT <wms_getprint_format>`"
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
 msgstr ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
+
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/pdf``"
+msgstr "``FORMAT=application/pdf`` の場合のみ"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ATLAS_PK <wms_atlaspk>`"
@@ -2107,6 +2187,101 @@ msgid ""
 "If the ``FORMAT`` parameter is different from one of these values, then an "
 "exception is returned."
 msgstr "もし ``FORMAT`` パラメータがこれらの値のいずれとも異なる場合は、例外が返されます。"
+
+#: ../../docs/server_manual/services/wms.rst:1790
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/pdf`` in GetPrint requests. Takes a list of "
+"key:value pairs separated by semicolon:"
+msgstr ""
+"このパラメータは、選択された形式のオプションを指定するために使用できます。GetPrintリクエストの "
+"``FORMAT=application/pdf`` の場合のみです。セミコロンで区切られた、キー:値 ペアのリストを受け取ります:"
+
+#: ../../docs/server_manual/services/wms.rst:1794
+msgid ""
+"``RASTERIZE_WHOLE_IMAGE``: whether the whole pdf should be exported as an "
+"image. Default: false."
+msgstr "``RASTERIZE_WHOLE_IMAGE``: PDF全体をひとつの画像としてエクスポートするかどうか。デフォルト: false。"
+
+#: ../../docs/server_manual/services/wms.rst:1795
+msgid ""
+"``FORCE_VECTOR_OUTPUT``: whether pdf should be exported as vector. Default: "
+"false."
+msgstr "``FORCE_VECTOR_OUTPUT``: pdfをベクタとしてエクスポートするかどうか。デフォルト: false。"
+
+#: ../../docs/server_manual/services/wms.rst:1796
+msgid ""
+"``APPEND_GEOREFERENCE``: whether georeference info shall be added to the "
+"pdf. Default: true."
+msgstr "``APPEND_GEOREFERENCE``: ジオリファレンス情報をpdfに追加するかどうか。デフォルト: true。"
+
+#: ../../docs/server_manual/services/wms.rst:1797
+msgid ""
+"``EXPORT_METADATA``: whether metadata shall be added to the pdf. Default: "
+"true."
+msgstr "``EXPORT_METADATA``: メタデータをpdfに追加するかどうか。デフォルト: true。"
+
+#: ../../docs/server_manual/services/wms.rst:1798
+msgid ""
+"``TEXT_RENDER_FORMAT``: sets the text render format for pdf export. It can "
+"be ``AlwaysOutlines`` (default) or ``AlwaysText``."
+msgstr ""
+"``TEXT_RENDER_FORMAT``: pdfエクスポート時のテキストのレンダリング形式を設定します。``AlwaysOutlines`` "
+"（デフォルト）または ``AlwaysText`` です。"
+
+#: ../../docs/server_manual/services/wms.rst:1800
+msgid ""
+"``SIMPLIFY_GEOMETRY``: whether features geometries shall be simplified. "
+"Default: true."
+msgstr "``SIMPLIFY_GEOMETRY``: 地物のジオメトリを簡略化するかどうか。デフォルト: true。"
+
+#: ../../docs/server_manual/services/wms.rst:1801
+msgid ""
+"``WRITE_GEO_PDF``: whether a Geospatial PDF shall be exported. Default: "
+"false."
+msgstr "``WRITE_GEO_PDF``: 地図情報PDFをエクスポートするかどうか。デフォルト: false。"
+
+#: ../../docs/server_manual/services/wms.rst:1802
+msgid ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: whether Iso32000 "
+"georeferencing shall be used. Default: false."
+msgstr ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: Iso32000 "
+"ジオリファレンスを使用するかどうか。デフォルト：false。"
+
+#: ../../docs/server_manual/services/wms.rst:1803
+msgid ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: whether OGC best practice "
+"georeferencing shall be used. Default: false."
+msgstr ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: "
+"OGCベストプラクティスのジオリファレンスを使用するかどうか。デフォルト：false。"
+
+#: ../../docs/server_manual/services/wms.rst:1804
+msgid ""
+"``EXPORT_THEMES``: a comma separated list of map themes to use for a "
+"Geospatial PDF export"
+msgstr "``EXPORT_THEMES``: 地図情報PDFのエクスポートで使用する地図テーマのコンマ区切りリスト"
+
+#: ../../docs/server_manual/services/wms.rst:1805
+msgid ""
+"``PREDEFINED_MAP_SCALES``: a comma separated list of map scales to render "
+"the map"
+msgstr "``PREDEFINED_MAP_SCALES``: 地図をレンダリングする地図の縮尺のカンマ区切りのリスト"
+
+#: ../../docs/server_manual/services/wms.rst:1806
+msgid ""
+"``LOSSLESS_IMAGE_COMPRESSION``: whether images embedded in pdf must be "
+"compressed using a lossless algorithm. Default: false."
+msgstr ""
+"``LOSSLESS_IMAGE_COMPRESSION``: "
+"pdfに埋め込まれた画像を、可逆アルゴリズムで圧縮しなければならないかどうか。デフォルト: false。"
+
+#: ../../docs/server_manual/services/wms.rst:1807
+msgid ""
+"``DISABLE_TILED_RASTER_RENDERING``: whether rasters shall be untiled in the "
+"pdf. Default: false."
+msgstr "``DISABLE_TILED_RASTER_RENDERING``: ラスタをpdfで非タイル化するかどうか。デフォルト：false。"
 
 #: ../../docs/server_manual/services/wms.rst:1828
 msgid "ATLAS_PK"
