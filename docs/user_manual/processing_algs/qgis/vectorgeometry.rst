@@ -587,8 +587,7 @@ Basic parameters
      - Buffer distance (from the boundary of each feature).
        You can use the Data Defined button on the right to choose
        a field from which the radius will be calculated.
-       This way you can have different radius for each feature
-       (see :ref:`qgisvariabledistancebuffer`).
+       This way you can have different radius for each feature.
    * - **Segments**
      - ``SEGMENTS``
      - [number]
