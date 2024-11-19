@@ -921,16 +921,22 @@ This tab helps you configure general settings when :ref:`editing vector layer
   transparent circle' or 'None')
 * Define vertex :guilabel:`Marker size (in millimeter)`
 
+.. _curve_offset_tool:
+
 **Curve offset tool**
 
-The next 3 options refer to the |offsetCurve| :sup:`Offset Curve` tool in
-:ref:`sec_advanced_edit`. Through the various settings, it is possible to
-influence the shape of the line offset. These options are possible starting
-from GEOS 3.3.
+The next options refer to the |offsetCurve| :sup:`Offset Curve` tool in :ref:`sec_advanced_edit`.
+Through the various settings, it is possible to influence the shape of the line offset.
 
-* :guilabel:`Join style`: 'Round', 'Mitre' or 'Bevel'
-* :guilabel:`Quadrant segments`
-* :guilabel:`Miter limit`
+* :guilabel:`Join style`: specifies whether 'Round', 'Miter' or 'Bevel' joins should be
+  used when offsetting corners
+* :guilabel:`Quadrant segments`: controls the number of line segments to use
+  to approximate a quarter circle when creating rounded offsets
+* :guilabel:`Miter limit`: Sets the maximum distance from the offset geometry to use
+  when creating a mitered join as a factor of the offset distance
+  (only applicable for miter join style)
+* :guilabel:`End cap style`: controls how line endings are handled;
+  they can be 'Round', 'Flat' or 'Square'.
 
 **Tracing**
 
