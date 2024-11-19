@@ -1327,12 +1327,12 @@ Your changes may then be saved with the |saveEdits|
 For geometries on background layers make sure that snapping is on and hold :kbd:`Ctrl`
 to select the geometry from the background. Also hold :kbd:`Ctrl` when doing the second click
 or when pressing enter after entering the desired distance.
-Geometries will be converted to line or polygon depending on the layer types. 
+Geometries will be converted to the target layer geometry type. 
 
 QGIS options dialog (Digitizing tab then **Curve offset tools** section) or
-the gear icon in the :guilabel:`User Input` dialog allows
-you to configure some parameters like **Join style**, **Quadrant segments**,
-**Miter limit**.
+the |settings| icon in the :guilabel:`User Input` dialog allows
+you to configure :ref:`some parameters <curve_offset_tool>` like **Join style**,
+**Quadrant segments**, **Miter limit** and **End cap style**.
 
 .. index::
    single: Digitizing tools; Reverse Line
