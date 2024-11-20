@@ -73,7 +73,7 @@ If you get the following output, the server is correctly installed.
     QFSFileEngine::open: No file name specified
     Content-Length: 102
     Content-Type: application/json
-    Server:  QGIS FCGI server - QGIS version 3.22.6-Białowieża
+    Server:  QGIS FCGI server - QGIS version 3.34.6-Prizren
     Status:  400
     [{"code":"Bad request error","description":"Requested URI does not match any registered API handler"}]
 
@@ -84,10 +84,10 @@ Let's add a sample project. You can use your own, or one from
 
     mkdir /home/qgis/projects/
     cd /home/qgis/projects/
-    wget https://github.com/qgis/QGIS-Training-Data/archive/release_3.22.zip
-    unzip release_3.22.zip
-    mv QGIS-Training-Data-release_3.22/exercise_data/qgis-server-tutorial-data/world.qgs .
-    mv QGIS-Training-Data-release_3.22/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .
+    wget https://github.com/qgis/QGIS-Training-Data/archive/release_3.34.zip
+    unzip release_3.34.zip
+    mv QGIS-Training-Data-release_3.34/exercise_data/qgis-server-tutorial-data/world.qgs .
+    mv QGIS-Training-Data-release_3.34/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .
 
 Of course, you can use your favorite GIS software to open this file and
 take a look at the configuration and available layers.
