@@ -3446,7 +3446,16 @@ Specifically, you can set:
 
    Vector layer elevation properties dialog
 
-
+* :guilabel:`Vertical Reference System`: If the CRS of your vector layer is a compound one
+  (including a Z dimension), then the vertical CRS used for the layer will be the vertical
+  component of the layer CRS. In this case, you cannot manually set a different vertical CRS.
+  If your layer CRS is horizontal (2D), then you can select a specific vertical CRS
+  by clicking on the |setProjection| :sup:`Select CRS`.
+  Vertical reference systems are supported for vector layers by:
+   
+   * :ref:`Elevation profiles <label_elevation_profile_view>`
+   * :ref:`Identify Tool Results <identify_results_dialog>`
+   * :ref:`3D map views <label_3dmapview>`
 * :guilabel:`Elevation Clamping`: defines how and whether the features altitude
   should be:
 
