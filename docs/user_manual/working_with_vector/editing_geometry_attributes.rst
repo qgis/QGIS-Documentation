@@ -1325,8 +1325,7 @@ Your changes may then be saved with the |saveEdits|
 :sup:`Save Layer Edits` tool.
 
 For geometries on background layers make sure that snapping is on and hold :kbd:`Ctrl`
-to select the geometry from the background. Also hold :kbd:`Ctrl` when doing the second click
-or when pressing enter after entering the desired distance.
+to select the geometry from the background. Also hold :kbd:`Ctrl` when doing the second click.
 Geometries will be converted to the target layer geometry type. 
 
 QGIS options dialog (Digitizing tab then **Curve offset tools** section) or
