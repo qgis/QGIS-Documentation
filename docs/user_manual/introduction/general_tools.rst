@@ -1054,6 +1054,7 @@ The identified item gets highlighted in the map canvas
 while the :guilabel:`Identify Results` dialog opens with detailed information on it.
 The dialog also shows a set of buttons for advanced configuration.
 
+.. _identify_results_dialog:
 
 The Identify Results dialog
 ...........................
