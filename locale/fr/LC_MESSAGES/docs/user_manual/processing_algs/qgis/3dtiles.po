@@ -34,9 +34,25 @@ msgstr ""
 "pouvez vous joindre <translation_guidelines>`. Cette page est actuellement "
 "traduite à |translation progress|."
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:2
+msgid "3D Tiles"
+msgstr "Tuiles 3D"
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:3
 msgid "|334|"
 msgstr "|334|"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:15
+msgid "Convert B3DM to GLTF"
+msgstr "Convertir de B3DM en GLTF"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:17
+msgid ""
+"Converts files from the legacy :file:`.B3DM` format to :file:`.GLTF` or "
+":file:`.GLB`."
+msgstr ""
+"Convertit les fichiers de l'ancien format :file:`.B3DM` au format "
+":file:`.GLTF` ou :file:`.GLB`."
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:80
@@ -71,10 +87,26 @@ msgstr "Type"
 msgid "Description"
 msgstr "Description"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:31
+msgid "**Input B3DM**"
+msgstr "**B3DM en entrée**"
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:32
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:92
 msgid "``INPUT``"
 msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:93
+msgid "[3D Tile]"
+msgstr "[Tuile 3D]"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:94
+msgid "Input file to convert."
+msgstr "Fichier en entrée à convertir."
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:35
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:57
@@ -90,6 +122,10 @@ msgstr "``OUTPUT``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Par défaut : ``[Enregistrer dans un fichier temporaire]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:40
+msgid "Specify the output 3D tile file. One of:"
+msgstr "Spécifiez le fichier de tuiles 3D en sortie. Un des:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Enregistrer dans un fichier temporaire"
@@ -103,6 +139,10 @@ msgstr "Enregistrer dans un fichier…"
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:121
 msgid "Outputs"
 msgstr "Les sorties"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:60
+msgid "Output layer in :file:`.GLTF` format."
+msgstr "Couche en sortie au format :file:`.GLTF`."
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:63
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:141
@@ -126,6 +166,27 @@ msgstr ""
 ":ref:`processing_console` pour plus de détails sur l'exécution d'algorithmes"
 " via la console Python."
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:75
+msgid "Convert GLTF to vector features"
+msgstr "Convertir GLTF en entités vectorielles"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:77
+msgid ""
+"Converts :file:`.GLTF` or :file:`.GLB` file contents to standard vector "
+"layer formats."
+msgstr ""
+"Convertit le contenu d'un fichier :file:`.GLTF` ou :file:`.GLB` vers les "
+"formats standards de couche vectorielle."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:91
+msgid "**Input GLTF**"
+msgstr "**GLTF en entrée**"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:95
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:131
+msgid "**Output polygons**"
+msgstr "**Polygones en sortie**"
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:97
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:109
 msgid "Optional"
@@ -145,6 +206,11 @@ msgstr "[vecteur : polygone]"
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:113
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Par défaut : ``[Créer une couche temporaire]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:102
+msgid "Specify the output vector layer to store polygon features. One of:"
+msgstr ""
+"Spécifiez la couche vecteur de sortie pour les entités polygones. Un des:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
@@ -166,6 +232,11 @@ msgstr "Enregistrer dans une table de base de données…"
 msgid "The file encoding can also be changed here."
 msgstr "L'encodage du fichier peut également être modifié ici."
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:107
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:135
+msgid "**Output lines**"
+msgstr "**Entités linéaires en sortie**"
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:110
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:136
 msgid "``OUTPUT_LINES``"
@@ -175,6 +246,23 @@ msgstr "``OUTPUT_LINES``"
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:137
 msgid "[vector: line]"
 msgstr "[vecteur : ligne]"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:114
+msgid "Specify the output vector layer to store line features. One of:"
+msgstr ""
+"Spécifiez la couche vecteur de sortie pour les entités linéaires. Un des:"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:134
+msgid "A vector layer storing the polygon features in input layer."
+msgstr ""
+"Une couche vectorielle stockant les entités polygonales issues de la couche "
+"en entrée."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:138
+msgid "A vector layer storing the line features in input layer."
+msgstr ""
+"Une couche vectorielle stockant les entités linéaires issues de la couche en"
+" entrée."
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:143
 msgid "**Algorithm ID**: ``native:gltftovector``"
