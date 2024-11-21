@@ -454,9 +454,11 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
     ``Open Stack Swift Storage`` supports direct control over VSI :guilabel:`Credential Options`
     when adding OGR vector or GDAL raster layers.
     You need to fill in the :guilabel:`Bucket or container` and the
-    :guilabel:`Object key`.
-    When credential options are found in a layer's URI, QGIS uses GDAL's `VSISetPathSpecificOption`
-    to set the credential option for that specific VSI driver and bucket.
+    :guilabel:`Object key` first. After that, you can add the necessary :guilabel:`Credential Options`.
+
+    When adding OGR vector or GDAL raster layers from the cloud based protocols,
+    you can also set additional :guilabel:`Credential options` for that specific driver and bucket.
+    When credential options are found in a layer's URI, they will also be automatically set.
     This allows different layers to use different credentials.
   * service supporting OGC ``WFS 3`` (still experimental),
     using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
