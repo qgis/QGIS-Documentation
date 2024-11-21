@@ -162,22 +162,15 @@ Procedure
     Code your changes in your local disk with your usual IDE.
     Remember to write tests suite for your modifications, when appropriate.
 
-#. Proper formatting and spell check
-    Make sure your code is properly formatted and spelled by running the prepare commit script 
-    **before** issuing ``git commit``.
+#. Proper formatting, spell check, and code quality control
+
+    Proper formatting, spell check, and code quality control are managed from a pre-commit git hook.
+
+    This can be automated by running:
 
     .. code-block:: bash
 
-      ./scripts/prepare_commit.sh
-
-    This can be automated by adding it to a pre-commit hook, for example:
-
-    .. code-block:: bash
-
-      # check if a pre-commit already exists and backup it
-      test -e .git/hooks/pre-commit && mv .git/hooks/pre-commit pre-commit.000
-      # copy prepare_commit.sh as new pre-commit hook
-      cp ./scripts/prepare_commit.sh .git/hooks/pre-commit
+      pre-commit install
 
     The spell checker script can also be run alone with: 
 
