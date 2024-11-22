@@ -34,7 +34,7 @@ you can accurately determine coordinates.
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |saveGCPPointsAs|              | Save GCP Points As           | |transformSettings|           | Transformation settings    |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |addGCPPoint|                  | Add Point                    | |deleteGCPPoint|              | Delete Point               |
+| |addGCPPoint|                  | Add GCP Point                | |deleteGCPPoint|              | Delete GCP Point           |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |moveGCPPoint|                 | Move GCP Point               | |pan|                         | Pan                        |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
@@ -70,7 +70,7 @@ The usual procedure for georeferencing an image involves selecting multiple
 points on the raster, specifying their coordinates, and choosing a relevant
 transformation type. Based on the input parameters and data, the Georeferencer will
 compute the world file parameters. The more coordinates you provide, the better
-the result will be.
+the result will be. After you provide a few points, you can use the |linkQGisToGeoref| "Link QGIS to Georeferencer" and/or |linkGeorefToQGis| "Link Georeferencer to QGIS" buttons that will adjust, respectively, the map extent of the main QGIS window to the present view in Georeferencer and/or vice versa.
 
 The first step is to start QGIS and click on :menuselection:`Layer -->` |georefRun|
 :menuselection:`Georeferencer`, which appears in the QGIS menu bar. The Georeferencer
@@ -145,6 +145,9 @@ form: ``mapX, mapY, pixelX, pixelY``. You can use the |loadGCPpoints|
 manage the files.
 
 .. _`georeferencer_transformation`:
+
+Tip: to avoid constant switching between a "hand" (Pan) and "Add / Move GCP point" buttons, you may use the keyboard arrow keys for moving and the mouse wheel for scaling the georeferenced map conveniently. 
+
 
 Defining the transformation settings
 ....................................
