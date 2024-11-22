@@ -152,9 +152,9 @@ Get all the buildings in the KwaZulu region:
 
 .. code-block:: sql
 
-  SELECT a.id, a.name, st_astext(a.the_geom) as point
+  SELECT a.id, a.name, st_astext(a.geom) as point
     FROM building a, region b
-      WHERE st_within(a.the_geom, b.the_geom)
+      WHERE st_within(a.geom, b.geom)
       AND b.name = 'KwaZulu';
 
 Result:
@@ -175,9 +175,9 @@ Or, if we create a view from it:
 .. code-block:: sql
 
   CREATE VIEW vw_select_location AS
-    SELECT a.gid, a.name, a.the_geom
+    SELECT a.gid, a.name, a.geom
       FROM building a, region b
-        WHERE st_within(a.the_geom, b.the_geom)
+        WHERE st_within(a.geom, b.geom)
         AND b.name = 'KwaZulu';
 
 Add the view as a layer and view it in QGIS:
@@ -194,7 +194,7 @@ Show a list of all the names of regions adjoining the Hokkaido region:
 
   SELECT b.name
     FROM region a, region b
-      WHERE st_touches(a.the_geom, b.the_geom)
+      WHERE st_touches(a.geom, b.geom)
       AND a.name = 'Hokkaido';
 
 Result:
@@ -213,9 +213,9 @@ As a view:
 .. code-block:: sql
 
   CREATE VIEW vw_regions_adjoining_hokkaido AS
-    SELECT b.gid, b.name, b.the_geom
+    SELECT b.gid, b.name, b.geom
       FROM region a, region b
-        WHERE st_touches(a.the_geom, b.the_geom)
+        WHERE st_touches(a.geom, b.geom)
         AND a.name = 'Hokkaido';
 
 In QGIS:
@@ -231,7 +231,7 @@ could use a buffer intersect instead:
 .. code-block:: sql
 
   CREATE VIEW vw_hokkaido_buffer AS
-    SELECT gid, ST_BUFFER(the_geom, 100) as the_geom
+    SELECT gid, ST_BUFFER(geom, 100) as geom
       FROM region
         WHERE name = 'Hokkaido';
 
@@ -247,18 +247,18 @@ Select using the buffer:
 .. code-block:: sql
 
   CREATE VIEW vw_hokkaido_buffer_select AS
-    SELECT b.gid, b.name, b.the_geom
+    SELECT b.gid, b.name, b.geom
       FROM
       (
         SELECT * FROM
           vw_hokkaido_buffer
       ) a,
       region b
-      WHERE ST_INTERSECTS(a.the_geom, b.the_geom)
+      WHERE ST_INTERSECTS(a.geom, b.geom)
       AND b.name != 'Hokkaido';
 
 In this query, the original buffer view is used as any other table would be. It
-is given the alias :kbd:`a`, and its geometry field, :kbd:`a.the_geom`, is used
+is given the alias :kbd:`a`, and its geometry field, :kbd:`a.geom`, is used
 to select any polygon in the :kbd:`region` table (alias :kbd:`b`) that
 intersects it. However, Hokkaido itself is excluded from this select statement,
 because we don't want it; we only want the regions adjoining it.
@@ -274,9 +274,9 @@ extra step of creating a buffer:
 .. code-block:: sql
 
   CREATE VIEW vw_hokkaido_distance_select AS
-    SELECT b.gid, b.name, b.the_geom
+    SELECT b.gid, b.name, b.geom
       FROM region a, region b
-        WHERE ST_DISTANCE (a.the_geom, b.the_geom) < 100
+        WHERE ST_DISTANCE (a.geom, b.geom) < 100
         AND a.name = 'Hokkaido'
         AND b.name != 'Hokkaido';
 
@@ -295,7 +295,7 @@ Show a list of unique town names for all buildings in the Queensland region:
 
   SELECT DISTINCT a.name
     FROM building a, region b
-      WHERE st_within(a.the_geom, b.the_geom)
+      WHERE st_within(a.geom, b.geom)
       AND b.name = 'Queensland';
 
 Result:
@@ -317,48 +317,48 @@ Further examples ...
 
   CREATE VIEW vw_shortestline AS
     SELECT b.gid AS gid,
-          ST_ASTEXT(ST_SHORTESTLINE(a.the_geom, b.the_geom)) as text,
-          ST_SHORTESTLINE(a.the_geom, b.the_geom) AS the_geom
+          ST_ASTEXT(ST_SHORTESTLINE(a.geom, b.geom)) as text,
+          ST_SHORTESTLINE(a.geom, b.geom) AS geom
       FROM road a, building b
         WHERE a.id=5 AND b.id=22;
 
   CREATE VIEW vw_longestline AS
     SELECT b.gid AS gid,
-           ST_ASTEXT(ST_LONGESTLINE(a.the_geom, b.the_geom)) as text,
-           ST_LONGESTLINE(a.the_geom, b.the_geom) AS the_geom
+           ST_ASTEXT(ST_LONGESTLINE(a.geom, b.geom)) as text,
+           ST_LONGESTLINE(a.geom, b.geom) AS geom
       FROM road a, building b
         WHERE a.id=5 AND b.id=22;
 
 .. code-block:: sql
 
   CREATE VIEW vw_road_centroid AS
-    SELECT a.gid as gid, ST_CENTROID(a.the_geom) as the_geom
+    SELECT a.gid as gid, ST_CENTROID(a.geom) as geom
       FROM road a
         WHERE a.id = 1;
 
   CREATE VIEW vw_region_centroid AS
-    SELECT a.gid as gid, ST_CENTROID(a.the_geom) as the_geom
+    SELECT a.gid as gid, ST_CENTROID(a.geom) as geom
       FROM region a
         WHERE a.name = 'Saskatchewan';
 
 .. code-block:: sql
 
-  SELECT ST_PERIMETER(a.the_geom)
+  SELECT ST_PERIMETER(a.geom)
     FROM region a
       WHERE a.name='Queensland';
 
-  SELECT ST_AREA(a.the_geom)
+  SELECT ST_AREA(a.geom)
     FROM region a
       WHERE a.name='Queensland';
 
 .. code-block:: sql
 
   CREATE VIEW vw_simplify AS
-    SELECT gid, ST_Simplify(the_geom, 20) AS the_geom
+    SELECT gid, ST_Simplify(geom, 20) AS geom
       FROM road;
 
   CREATE VIEW vw_simplify_more AS
-    SELECT gid, ST_Simplify(the_geom, 50) AS the_geom
+    SELECT gid, ST_Simplify(geom, 50) AS geom
       FROM road;
 
 .. code-block:: sql
@@ -367,7 +367,7 @@ Further examples ...
     SELECT
       ROW_NUMBER() over (order by a.name) as id,
       a.name as town,
-      ST_CONVEXHULL(ST_COLLECT(a.the_geom)) AS the_geom
+      ST_CONVEXHULL(ST_COLLECT(a.geom)) AS geom
       FROM building a
       GROUP BY a.name;
 
