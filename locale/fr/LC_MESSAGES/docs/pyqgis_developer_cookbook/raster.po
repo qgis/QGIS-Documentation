@@ -243,6 +243,19 @@ msgstr ""
 msgid "Multi Band Rasters"
 msgstr "Rasters multi-bandes"
 
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:250
+msgid ""
+"By default, QGIS maps the first three bands to red, green and blue to create"
+" a color image (this is the ``MultiBandColor`` drawing style). In some cases"
+" you might want to override these setting. The following code interchanges "
+"red band (1) and green band (2):"
+msgstr ""
+"Par défaut, QGIS apparie les trois premières bandes au rouge, vert et bleu "
+"pour créer une image en couleurs( c'est le rendu de style "
+"``MultiBandColor``). Dans certaines situations, vous pourriez vouloir les "
+"personnaliser. Le code ci-après interchange les bandes rouge (1) et vertes "
+"(2) :"
+
 #: ../../docs/pyqgis_developer_cookbook/raster.rst:261
 msgid ""
 "In case only one band is necessary for visualization of the raster, single "
@@ -309,3 +322,23 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/raster.rst:313
 msgid "Editing raster data"
 msgstr "Édition de données rasters"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:315
+msgid ""
+"You can create a raster layer using the :class:`QgsRasterBlock "
+"<qgis.core.QgsRasterBlock>` class. For example, to create a 2x2 raster block"
+" with one byte per pixel:"
+msgstr ""
+"Vous pouvez créer une couche raster à l'aide la classe "
+":class:`QgsRasterBlock <qgis.core.QgsRasterBlock>`. Par exemple, pour créer "
+"un bloc de raster 2x2 d'un bit par pixel :"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:323
+msgid ""
+"Raster pixels can be overwritten thanks to the :meth:`writeBlock() "
+"<qgis.core.QgsRasterDataProvider.writeBlock>` method. To overwrite existing "
+"raster data at position 0,0 by the 2x2 block:"
+msgstr ""
+"Les pixels de raster peuvent être modifiés à l'aide la méthode "
+":meth:`writeBlock() <qgis.core.QgsRasterDataProvider.writeBlock>`. Pour "
+"modifier un raster existant, en sa position 0,0 à l'aide d'un bloc 2x2 :"
