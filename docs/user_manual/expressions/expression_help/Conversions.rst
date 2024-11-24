@@ -120,6 +120,30 @@ Encodes a binary value into a string, using the Base64 encoding.
 
 .. end_to_base64_section
 
+.. _expression_function_Conversions_to_bool:
+
+to_bool
+.......
+
+Converts a given value to a boolean. The function will return false if the value is NULL, an empty string, an empty list, or 0.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - to_bool(value)
+   * - Arguments
+     - * **value** - value to convert to boolean
+   * - Examples
+     - * ``to_bool('')`` → false
+       * ``to_bool('123')`` → true
+       * ``to_bool(0)`` → false
+       * ``to_bool(1)`` → true
+       * ``to_bool(null)`` → false
+
+
+.. end_to_bool_section
+
 .. _expression_function_Conversions_to_date:
 
 to_date
