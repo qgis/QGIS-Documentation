@@ -7,8 +7,8 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # Transifex Bot <>, 2024
-# Joern G <j.gutzeit@umwelt-it.de>, 2024
 # Steffen Hollah, 2024
+# Joern G <j.gutzeit@umwelt-it.de>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Steffen Hollah, 2024\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2024\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -94,14 +94,39 @@ msgstr "Typ"
 msgid "Description"
 msgstr "Beschreibung"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:33
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:168
+msgid "**Input layer**"
+msgstr "**Eingabe-Layer**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:34
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:92
 msgid "``INPUT_LAYER``"
 msgstr "``INPUT_LAYER``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:35
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:55
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:93
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:170
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:218
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:323
+msgid "[raster]"
+msgstr "[Raster]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:37
+msgid "**Desired CRS**"
+msgstr "**Gewünschte KBS**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:38
 msgid "``CRS``"
 msgstr "``CRS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:39
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:176
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:182
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:285
+msgid "[crs]"
+msgstr "[KBS]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:43
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:108
@@ -121,9 +146,41 @@ msgstr "``OUTPUT``"
 msgid "Python code"
 msgstr "Pythoncode"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"Die *Algorithmus-Kennung* wird angezeigt, wenn Sie den Mauszeiger über den "
+"Algorithmus in der Verarbeitungs-Werkzeugkiste bewegen. Die Parameter-Liste "
+"(*parameter_dictionary*) enthält die Namen und Werte der Parameter. Siehe "
+":ref:`processing_console` für Details zur Ausführung von "
+"Verarbeitungsalgorithmen über die Python-Konsole."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:71
 msgid "Extract projection"
 msgstr "Projektion extrahieren"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:101
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:295
+msgid "[boolean]"
+msgstr "[Boolean]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:103
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:297
+msgid "Default: False"
+msgstr "Standard: falsch"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:120
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:125
+msgid "[file]"
+msgstr "[Datei]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:157
+msgid "Basic parameters"
+msgstr "Grundlegende Parameter"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:169
 msgid "``INPUT``"
@@ -144,6 +201,10 @@ msgstr "Optional"
 msgid "``SOURCE_CRS``"
 msgstr "``SOURCE_CRS``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:178
+msgid "**Target CRS**"
+msgstr "**Ziel KBS**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:181
 msgid "``TARGET_CRS``"
 msgstr "``TARGET_CRS``"
@@ -155,6 +216,25 @@ msgstr "``RESAMPLING``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:201
 msgid "``NODATA``"
 msgstr "``NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:202
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:212
+msgid "[number]"
+msgstr "[Zahl]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:216
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:321
+msgid "**Reprojected**"
+msgstr "**Reprojiziert**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:220
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:325
+msgid "Default: ``[Save to temporary file]``"
+msgstr "Standard: ``[Save to temporary file]``"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Save to a Temporary File"
+msgstr "Speichern in eine temporäre Datei"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to File…"
@@ -175,6 +255,53 @@ msgstr "``DATA_TYPE``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:270
 msgid "``TARGET_EXTENT``"
 msgstr "``TARGET_EXTENT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:271
+msgid "[extent]"
+msgstr "[Ausdehnung]"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Verfügbare Methoden sind:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Aus Layer berechnen...: verwendet die Ausdehnung eines im aktuellen Projekt "
+"geladenen Layers"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Berechne aus Layout-Karte...: verwendet die Ausdehnung eines :ref:`Layout-"
+"Kartenelements <layout_map_item>` im aktiven Projekt"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Berechne aus Lesezeichen...: verwendet den Bereich eines gespeicherten "
+":ref:`Lesezeichens <sec_bookmarks>`"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Ausdehnung der Kartenansicht verwenden"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Auf Karte zeichnen: Klicken und ziehen Sie ein Rechteck, das den zu "
+"berücksichtigenden Bereich abgrenzt"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Geben Sie die Koordinaten als ``xmin, xmax, ymin, ymax`` ein."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:284
 msgid "``TARGET_EXTENT_CRS``"
