@@ -310,7 +310,9 @@ tablespaces:
 
   CREATE TABLESPACE homespace LOCATION '/home/pg';
 
-When you create a database, you can then specify which tablespace to use e.g.::
+When you create a database, you can then specify which tablespace to use e.g.:
+
+.. code-block:: bash
 
   createdb --tablespace=homespace t4a
 
