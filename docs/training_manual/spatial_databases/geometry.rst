@@ -147,15 +147,15 @@ Your updated people schema should look something like this:
                3,
                '072 812 31 28',
                1,
-               'SRID=4326;POINT(33 33)');
+               'SRID=4326;POINT(13 -15)');
 
     insert into people (name,house_no, street_id, phone_no, city_id, the_geom)
        values ('IP Knightly',
                32,
                1,
                '071 812 31 28',
-               1,F
-               'SRID=4326;POINT(32 -34)');
+               1,
+               'SRID=4326;POINT(18 -24)');
 
     insert into people (name,house_no, street_id, phone_no, city_id, the_geom)
        values ('Rusty Bedsprings',
@@ -163,7 +163,7 @@ Your updated people schema should look something like this:
                1,
                '071 822 31 28',
                1,
-               'SRID=4326;POINT(34 -34)');
+               'SRID=4326;POINT(22 -25)');
 
   If you're getting the following error message:
 
