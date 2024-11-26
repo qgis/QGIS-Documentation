@@ -96,7 +96,7 @@ Modify the cities table so its geometry column is spatially indexed.
 .. admonition:: Answer
   :class: dropdown
 
-  ::
+   .. code-block:: psql
 
     CREATE INDEX cities_geo_idx
       ON cities

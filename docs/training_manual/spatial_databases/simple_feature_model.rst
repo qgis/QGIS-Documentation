@@ -69,7 +69,7 @@ sure it has a constraint enforcing geometries to be polygons.
 .. admonition:: Answer
    :class: dropdown
 
-   ::
+   .. code-block: sql
 
      create table cities (id serial not null primary key,
                           name varchar(50),
