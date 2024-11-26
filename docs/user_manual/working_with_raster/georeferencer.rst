@@ -70,7 +70,7 @@ The usual procedure for georeferencing an image involves selecting multiple
 points on the raster, specifying their coordinates, and choosing a relevant
 transformation type. Based on the input parameters and data, the Georeferencer will
 compute the world file parameters. The more coordinates you provide, the better
-the result will be. After you provide a few points, you can use the |linkQGisToGeoref| "Link QGIS to Georeferencer" and/or |linkGeorefToQGis| "Link Georeferencer to QGIS" buttons that will adjust, respectively, the map extent of the main QGIS window to the present view in Georeferencer and/or vice versa.
+the result will be.
 
 The first step is to start QGIS and click on :menuselection:`Layer -->` |georefRun|
 :menuselection:`Georeferencer`, which appears in the QGIS menu bar. The Georeferencer
@@ -98,7 +98,7 @@ Entering ground control points (GCPs)
    |addRasterLayer| button. The raster will show up in the main working
    area of the dialog. Once the raster is loaded, we can start to enter reference
    points.
-#. Using the |addGCPPoint| :sup:`Add Point` button, add points to the
+#. Using the |addGCPPoint| :sup:`Add GCP Point` button, add points to the
    main working area and enter their coordinates (see Figure :numref:`figure_georeferencer_add_points`).
    For this procedure you have the following options:
 
@@ -119,12 +119,20 @@ Entering ground control points (GCPs)
      point on the map canvas. 
      This option only takes effect when the georeferencer window is not docked 
      in the main interface. 
-
 #. Continue entering points. You should have at least four points, and the more
    coordinates you can provide, the better the result will be. There are
    additional tools for zooming and panning the working area in
    order to locate a relevant set of GCP points.
 
+   .. tip::
+
+    To avoid constant switching between |pan| :sup:`Pan`, |addGCPPoint| :sup:`Add GCP point`
+    and |moveGCPPoint| :sup:`Move GCP point` buttons,
+    you may use the keyboard arrow keys for moving and the mouse wheel for scaling the georeferenced map conveniently.
+
+#. After you provide a few points, you can use the |linkQGisToGeoref| :sup:`Link QGIS to Georeferencer`
+   and/or |linkGeorefToQGis| :sup:`Link Georeferencer to QGIS` buttons that will adjust, respectively,
+   the map extent of the main QGIS window to the present view in Georeferencer and/or vice versa.
 #. With the |moveGCPPoint| tool, you can move the GCPs in both the canvas and the
    georeferencing window, if you need to correct them.
 
@@ -135,7 +143,6 @@ Entering ground control points (GCPs)
 
    Add points to the raster image
 
-
 The points that are added to the map will be stored in a separate text file
 (:file:`[filename].points`) usually together with the raster image. This allows
 us to reopen the Georeferencer at a later date and add new points or delete
@@ -145,9 +152,6 @@ form: ``mapX, mapY, pixelX, pixelY``. You can use the |loadGCPpoints|
 manage the files.
 
 .. _`georeferencer_transformation`:
-
-Tip: to avoid constant switching between a "hand" (Pan) and "Add / Move GCP point" buttons, you may use the keyboard arrow keys for moving and the mouse wheel for scaling the georeferenced map conveniently. 
-
 
 Defining the transformation settings
 ....................................
