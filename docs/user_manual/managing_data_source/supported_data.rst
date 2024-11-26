@@ -517,7 +517,7 @@ The following example creates a GiST index::
          \q to quit
 
   gis_data=# CREATE INDEX sidx_alaska_lakes ON alaska_lakes
-  gis_data-# USING GIST (the_geom GIST_GEOMETRY_OPS);
+  gis_data-# USING GIST (geom GIST_GEOMETRY_OPS);
   CREATE INDEX
   gis_data=# VACUUM ANALYZE alaska_lakes;
   VACUUM
