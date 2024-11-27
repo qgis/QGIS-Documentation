@@ -19,18 +19,18 @@ point(X,Y) you can do this with:
 
   select *
   from people
-  where st_distance(the_geom,'SRID=4326;POINT(33 -34)') < 2;
+  where st_distance(geom,'SRID=4326;POINT(33 -34)') < 2;
 
 Result:
 
 .. code-block:: sql
 
-   id |     name     | house_no | street_id |   phone_no    |   the_geom
+   id |     name     | house_no | street_id |   phone_no    |   geom
   ----+--------------+----------+-----------+---------------+---------------
     6 | Fault Towers |       34 |         3 | 072 812 31 28 | 01010008040C0
   (1 row)
 
-.. note::  the_geom value above was truncated for space on this page. If you
+.. note::  geom value above was truncated for space on this page. If you
    want to see the point in human-readable coordinates, try something similar
    to what you did in the section "View a point as WKT", above.
 
@@ -60,7 +60,7 @@ much faster. To create a spatial index on the geometry column use:
   CREATE INDEX people_geo_idx
     ON people
     USING gist
-    (the_geom);
+    (geom);
 
   \d people
 
@@ -77,14 +77,14 @@ Result:
     house_no  | integer               | not null
     street_id | integer               | not null
     phone_no  | character varying     |
-    the_geom  | geometry              |
+    geom      | geometry              |
   Indexes:
     "people_pkey" PRIMARY KEY, btree (id)
-    "people_geo_idx" gist (the_geom)  <-- new spatial key added
+    "people_geo_idx" gist (geom)  <-- new spatial key added
     "people_name_idx" btree (name)
   Check constraints:
-    "people_geom_point_chk" CHECK (st_geometrytype(the_geom) = 'ST_Point'::text
-    OR the_geom IS NULL)
+    "people_geom_point_chk" CHECK (st_geometrytype(geom) = 'ST_Point'::text
+    OR geom IS NULL)
   Foreign-key constraints:
     "people_street_id_fkey" FOREIGN KEY (street_id) REFERENCES streets(id)
 
@@ -96,11 +96,11 @@ Modify the cities table so its geometry column is spatially indexed.
 .. admonition:: Answer
   :class: dropdown
 
-  ::
+   .. code-block:: psql
 
     CREATE INDEX cities_geo_idx
       ON cities
-      USING gist (the_geom);
+      USING gist (geom);
 
 
 
