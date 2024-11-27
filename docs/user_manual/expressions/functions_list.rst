@@ -125,6 +125,24 @@ This group contains functions to convert one data type to another
 
 .. include:: expression_help/Conversions.rst
    :start-after: :orphan:
+   :end-before: end_to_date_section
+
+Further reading: :ref:`expression_function_Date_and_Time_format_date`
+
+.. include:: expression_help/Conversions.rst
+   :start-after: end_to_date_section
+   :end-before: end_to_datetime_section
+
+Further reading: :ref:`expression_function_Date_and_Time_format_date`
+
+.. include:: expression_help/Conversions.rst
+   :start-after: end_to_datetime_section
+   :end-before: end_to_time_section
+
+Further reading: :ref:`expression_function_Date_and_Time_format_date`
+
+.. include:: expression_help/Conversions.rst
+   :start-after: end_to_time_section
 
 
 Custom Functions
@@ -163,6 +181,24 @@ This group shares several functions with the :ref:`conversion_functions`
 
 .. include:: expression_help/Date_and_Time.rst
    :start-after: :orphan:
+   :end-before: end_to_date_section
+
+Further reading: :ref:`expression_function_Date_and_Time_format_date`
+
+.. include:: expression_help/Date_and_Time.rst
+   :start-after: end_to_date_section
+   :end-before: end_to_datetime_section
+
+Further reading: :ref:`expression_function_Date_and_Time_format_date`
+
+.. include:: expression_help/Date_and_Time.rst
+   :start-after: end_to_datetime_section
+   :end-before: end_to_time_section
+
+Further reading: :ref:`expression_function_Date_and_Time_format_date`
+
+.. include:: expression_help/Date_and_Time.rst
+   :start-after: end_to_time_section
 
 
 **Some examples:**
