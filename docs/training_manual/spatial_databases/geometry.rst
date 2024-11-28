@@ -197,9 +197,9 @@ for that city and computing a buffer around that area.
 .. admonition:: Answer
   :class: dropdown
 
-   .. code-block:: psql
+  - Add some people in 'Tokyo Outer Wards' city
 
-   --* Add some people in 'Tokyo Outer Wards' city
+   .. code-block:: psql
 
     INSERT INTO people (name, house_no, street_id, phone_no, city_id, the_geom)
        VALUES ('Bad Aboum',
@@ -209,45 +209,50 @@ for that city and computing a buffer around that area.
                2,
                'SRID=4326;POINT(22 18)');
 
-   INSERT INTO people (name, house_no, street_id, phone_no, city_id, the_geom)
-      VALUES ('Pat Atra',
-              59,
-              2,
-              '074 712 31 25',
-              2,
-              'SRID=4326;POINT(23 14)');
+    INSERT INTO people (name, house_no, street_id, phone_no, city_id, the_geom)
+       VALUES ('Pat Atra',
+               59,
+               2,
+               '074 712 31 25',
+               2,
+               'SRID=4326;POINT(23 14)');
 
-   INSERT INTO people (name, house_no, street_id, phone_no, city_id, the_geom)
-      VALUES ('Kat Herin',
-              65,
-              2,
-              '074 722 31 28',
-              2,
-              'SRID=4326;POINT(29 18)');
+    INSERT INTO people (name, house_no, street_id, phone_no, city_id, the_geom)
+       VALUES ('Kat Herin',
+               65,
+               2,
+               '074 722 31 28',
+               2,
+               'SRID=4326;POINT(29 18)');
 
-   --* create myPolygonTable table  
+  - Create myPolygonTable table  
 
-   CREATE TABLE myPolygonTable (
-     id serial NOT NULL PRIMARY KEY,
-     city_id int NOT NULL REFERENCES cities(id),
-     geometry geometry NOT NULL
-   );
+   .. code-block:: psql
 
-   ALTER TABLE myPolygonTable
-     ADD CONSTRAINT cities_geom_point_chk
-     CHECK (st_geometrytype(geometry) = 'ST_Polygon'::text );
+    CREATE TABLE myPolygonTable (
+      id serial NOT NULL PRIMARY KEY,
+      city_id int NOT NULL REFERENCES cities(id),
+      geometry geometry NOT NULL
+    );
 
-   --* add buffered (with value 1) convex hulls
+    ALTER TABLE myPolygonTable
+      ADD CONSTRAINT cities_geom_point_chk
+      CHECK (st_geometrytype(geometry) = 'ST_Polygon'::text );
 
-   INSERT INTO myPolygonTable (city_id, geometry)
-     SELECT * FROM 
-     (
-	     SELECT 
-	       ROW_NUMBER() over (order by city_id) AS city_id,
-   	     ST_BUFFER(ST_CONVEXHULL(ST_COLLECT(the_geom)),1) AS geometry
-   	       FROM people
-   	       GROUP BY city_id
-     ) convexHulls;
+  - Add buffered (with value 1) convex hulls
+
+   .. code-block:: psql
+
+    INSERT INTO myPolygonTable (city_id, geometry)
+      SELECT * FROM 
+      (
+        SELECT 
+          ROW_NUMBER() over (order by city_id) AS city_id,
+          ST_BUFFER(ST_CONVEXHULL(ST_COLLECT(the_geom)),1) AS geometry
+            FROM people
+            GROUP BY city_id
+      ) convexHulls;
+
 
 
 
