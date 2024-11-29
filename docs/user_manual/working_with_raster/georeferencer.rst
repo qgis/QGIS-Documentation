@@ -34,7 +34,7 @@ you can accurately determine coordinates.
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |saveGCPPointsAs|              | Save GCP Points As           | |transformSettings|           | Transformation settings    |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |addGCPPoint|                  | Add Point                    | |deleteGCPPoint|              | Delete Point               |
+| |addGCPPoint|                  | Add GCP Point                | |deleteGCPPoint|              | Delete GCP Point           |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |moveGCPPoint|                 | Move GCP Point               | |pan|                         | Pan                        |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
@@ -98,7 +98,7 @@ Entering ground control points (GCPs)
    |addRasterLayer| button. The raster will show up in the main working
    area of the dialog. Once the raster is loaded, we can start to enter reference
    points.
-#. Using the |addGCPPoint| :sup:`Add Point` button, add points to the
+#. Using the |addGCPPoint| :sup:`Add GCP Point` button, add points to the
    main working area and enter their coordinates (see Figure :numref:`figure_georeferencer_add_points`).
    For this procedure you have the following options:
 
@@ -119,12 +119,20 @@ Entering ground control points (GCPs)
      point on the map canvas. 
      This option only takes effect when the georeferencer window is not docked 
      in the main interface. 
-
 #. Continue entering points. You should have at least four points, and the more
    coordinates you can provide, the better the result will be. There are
    additional tools for zooming and panning the working area in
    order to locate a relevant set of GCP points.
 
+   .. tip::
+
+    To avoid constant switching between |pan| :sup:`Pan`, |addGCPPoint| :sup:`Add GCP point`
+    and |moveGCPPoint| :sup:`Move GCP point` buttons,
+    you may use the keyboard arrow keys for moving and the mouse wheel for scaling the georeferenced map conveniently.
+
+#. After you provide a few points, you can use the |linkQGisToGeoref| :sup:`Link QGIS to Georeferencer`
+   and/or |linkGeorefToQGis| :sup:`Link Georeferencer to QGIS` buttons that will adjust, respectively,
+   the map extent of the main QGIS window to the present view in Georeferencer and/or vice versa.
 #. With the |moveGCPPoint| tool, you can move the GCPs in both the canvas and the
    georeferencing window, if you need to correct them.
 
@@ -134,7 +142,6 @@ Entering ground control points (GCPs)
    :align: center
 
    Add points to the raster image
-
 
 The points that are added to the map will be stored in a separate text file
 (:file:`[filename].points`) usually together with the raster image. This allows
