@@ -239,7 +239,7 @@ for that city and computing a buffer around that area.
       ADD CONSTRAINT myPolygonTable_geom_point_chk
       CHECK (st_geometrytype(geometry) = 'ST_Polygon'::text );
 
-  - Add buffered (with value 1) convex hulls
+  - Create and load the convex hulls
 
    .. code-block:: psql
 
