@@ -949,7 +949,23 @@ Parameters
 
        :guilabel:`Type` (``type``) [enumeration]
          Data type of the output field.
-         Available types depend on the output layer provider.
+         Available types may not be compatible with the output layer provider.
+         Depending on the field type, an additional ``sub_type`` parameter may be required.
+         One of:
+
+         * 1 --- Boolean
+         * 2 --- Integer (32bit)
+         * 4 --- Integer (64bit)
+         * 6 --- Decimal (double)
+         * 9 --- Integer list --- ``sub_type: 2``
+         * 9 --- Integer (64bit) list --- ``sub_type: 4``
+         * 9 --- Decimal (double) list --- ``sub_type: 6``
+         * 10 --- Text (string)
+         * 11 --- String list
+         * 12 --- Binary Object (BLOB)
+         * 14 --- Date
+         * 15 --- Time
+         * 16 --- Date & Time
 
        :guilabel:`Length` (``length``) [number]
          Length of the output field.
