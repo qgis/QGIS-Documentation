@@ -48,11 +48,11 @@ them here.
 Vector Layers
 =============
 
-To create and add a vector layer instance to the project, specify the layer's data source
-identifier. The data source identifier is a string and it is specific to each vector data
-provider. Layer's name is used in the layer list widget. It is important to
-check whether the layer has been loaded successfully. If it was not, an invalid
-layer instance is returned.
+To create and add a vector layer instance to the project, specify the layer's data source identifier.
+The data source identifier is a string and it is specific to each vector data provider.
+An optional layer name is used for identifying the layer in the :guilabel:`Layers` panel.
+It is important to check whether the layer has been loaded successfully.
+If it was not, an invalid layer instance is returned.
 
 For a geopackage vector layer:
 
@@ -70,7 +70,7 @@ For a geopackage vector layer:
 
 The quickest way to open and display a vector layer in QGIS is the
 :meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
-method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
+method of the :class:`QgisInterface <qgis.gui.QgisInterface>` class:
 
 .. testcode:: loadlayer
 
@@ -88,13 +88,22 @@ providers:
 .. index::
    pair: Loading; GDAL layers
 
-* The ogr provider from the GDAL library supports a `wide variety of formats <https://gdal.org/en/latest/drivers/vector/index.html>`_, 
+* The ogr provider from the GDAL library supports a `wide variety of formats
+  <https://gdal.org/en/latest/drivers/vector/index.html>`_,
   also called drivers in GDAL speak. 
-  Examples are Geopackage, Flatgeobuf, Geojson and also The-One-We-Shall-Not-Name.
+  Examples are ESRI Shapefile, Geopackage, Flatgeobuf, Geojson, ...
   For single-file formats the filepath usually suffices as uri.
-  For geopackages or dxf, a pipe separated suffix allows to specify the layername to load.
+  For geopackages or dxf, a pipe separated suffix allows to specify the layer to load.
 
-  * for Geopackage:
+  * for ESRI Shapefile:
+
+    .. code::
+
+      uri = "testdata/airports.shp"
+      vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
+      QgsProject.instance().addMapLayer(vlayer)
+
+  * for Geopackage (note the internal options in data source uri):
 
     .. testcode:: loadlayer
 
