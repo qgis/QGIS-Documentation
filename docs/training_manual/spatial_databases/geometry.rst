@@ -247,8 +247,8 @@ for that city and computing a buffer around that area.
       SELECT * FROM 
       (
         SELECT 
-          ROW_NUMBER() over (order by city_id) AS city_id,
-          ST_BUFFER(ST_CONVEXHULL(ST_COLLECT(the_geom)),1) AS geometry
+          ROW_NUMBER() over (order by city_id)::integer AS city_id,
+          ST_CONVEXHULL(ST_COLLECT(geom)) AS geom
             FROM people
             GROUP BY city_id
       ) convexHulls;
