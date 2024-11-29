@@ -201,7 +201,7 @@ for that city and computing a buffer around that area.
 
    .. code-block:: psql
 
-    INSERT INTO people (name, house_no, street_id, phone_no, city_id, the_geom)
+    INSERT INTO people (name, house_no, street_id, phone_no, city_id, geom)
        VALUES ('Bad Aboum',
                57,
                2,
@@ -209,7 +209,7 @@ for that city and computing a buffer around that area.
                2,
                'SRID=4326;POINT(22 18)');
 
-    INSERT INTO people (name, house_no, street_id, phone_no, city_id, the_geom)
+    INSERT INTO people (name, house_no, street_id, phone_no, city_id, geom)
        VALUES ('Pat Atra',
                59,
                2,
@@ -217,7 +217,7 @@ for that city and computing a buffer around that area.
                2,
                'SRID=4326;POINT(23 14)');
 
-    INSERT INTO people (name, house_no, street_id, phone_no, city_id, the_geom)
+    INSERT INTO people (name, house_no, street_id, phone_no, city_id, geom)
        VALUES ('Kat Herin',
                65,
                2,
@@ -232,7 +232,7 @@ for that city and computing a buffer around that area.
     CREATE TABLE myPolygonTable (
       id serial NOT NULL PRIMARY KEY,
       city_id int NOT NULL REFERENCES cities(id),
-      geometry geometry NOT NULL
+      geom geometry NOT NULL
     );
 
     ALTER TABLE myPolygonTable
