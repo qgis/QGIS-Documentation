@@ -1238,7 +1238,7 @@ arrangement)
   from qgis.PyQt import QtGui
 
   myVectorLayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
-  myTargetField = 'ELEV'
+  myTargetField = 'scalerank'
   myRangeList = []
   myOpacity = 1
   # Make our first symbol and range...
