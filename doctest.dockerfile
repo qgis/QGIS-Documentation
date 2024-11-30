@@ -1,4 +1,4 @@
-FROM qgis/qgis:release-3_40
+FROM qgis/qgis:3.40
 
 # Install requirement first to use caching
 COPY REQUIREMENTS.txt /documentation/REQUIREMENTS.txt
