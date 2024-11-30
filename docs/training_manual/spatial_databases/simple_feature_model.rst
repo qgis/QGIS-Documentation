@@ -40,7 +40,7 @@ Let's add a point field to our people table:
 
 .. code-block:: sql
 
-  alter table people add column the_geom geometry;
+  alter table people add column geom geometry;
 
 
 Add a constraint based on geometry type
@@ -53,8 +53,8 @@ You will notice that the geometry field type does not implicitly specify what
 
   alter table people
   add constraint people_geom_point_chk
-      check(st_geometrytype(the_geom) = 'ST_Point'::text
-            OR the_geom IS NULL);
+      check(st_geometrytype(geom) = 'ST_Point'::text
+            OR geom IS NULL);
 
 This adds a constraint to the table so that it will only accept a point geometry
 or a null value.
@@ -69,14 +69,14 @@ sure it has a constraint enforcing geometries to be polygons.
 .. admonition:: Answer
    :class: dropdown
 
-   ::
+   .. code-block: sql
 
      create table cities (id serial not null primary key,
                           name varchar(50),
-                          the_geom geometry not null);
+                          geom geometry not null);
       alter table cities
       add constraint cities_geom_point_chk
-      check (st_geometrytype(the_geom) = 'ST_Polygon'::text );
+      check (st_geometrytype(geom) = 'ST_Polygon'::text );
 
 
 
@@ -88,7 +88,7 @@ At this point you should also add an entry into the ``geometry_columns`` table:
 .. code-block:: sql
 
   insert into geometry_columns values
-    ('','public','people','the_geom',2,4326,'POINT');
+    ('','public','people','geom',2,4326,'POINT');
 
 Why? :kbd:`geometry_columns` is used by certain applications to be aware of
 which tables in the database contain geometry data.
@@ -124,7 +124,7 @@ Add an appropriate `geometry_columns` entry for your new cities layer
    ::
 
      insert into geometry_columns values
-           ('','public','cities','the_geom',2,4326,'POLYGON');
+           ('','public','cities','geom',2,4326,'POLYGON');
 
 
 
@@ -135,7 +135,7 @@ Now that our tables are geo-enabled, we can store geometries in them:
 
 .. code-block:: sql
 
-  insert into people (name,house_no, street_id, phone_no, the_geom)
+  insert into people (name,house_no, street_id, phone_no, geom)
           values ('Fault Towers',
                    34,
                    3,
@@ -195,7 +195,7 @@ and add layers to your project as usual.
 ...............................................................................
 
 Formulate a query that shows a person's name, street name and position (from the
-the_geom column) as plain text.
+geom column) as plain text.
 
 .. admonition:: Answer
    :class: dropdown
@@ -204,7 +204,7 @@ the_geom column) as plain text.
 
      select people.name,
             streets.name as street_name,
-            st_astext(people.the_geom) as geometry
+            st_astext(people.geom) as geometry
      from   streets, people
      where  people.street_id=streets.id;
 

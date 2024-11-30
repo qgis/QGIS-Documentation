@@ -153,14 +153,14 @@ rows).
 Each field in the attribute table contains a specific type of data –--
 text, numeric or date. Deciding what attributes to use for a feature requires some
 thought and planning. In our house example earlier on in this topic, we chose roof
-colour, presence of a balcony and month of construction as attributes of interest.
+colour, presence of a balcony and year of construction as attributes of interest.
 We could just as easily have chosen other aspects of a house such as:
 
 * number of levels
 * number of rooms
 * number of occupants
 * type of dwelling (RDP House, block of flats, shack, brick house, etc)
-* year the house was built
+* month the house was built
 * area of floor space in the house
 * and so on....
 

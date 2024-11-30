@@ -34,15 +34,15 @@ Try Yourself: :abbr:`★★☆ (Moderate level)`
 
   ::
 
-    alter table streets add column the_geom geometry;
+    alter table streets add column geom geometry;
     alter table streets add constraint streets_geom_point_chk check
-         (st_geometrytype(the_geom) = 'ST_LineString'::text OR the_geom IS NULL);
-    insert into geometry_columns values ('','public','streets','the_geom',2,4326,
+         (st_geometrytype(geom) = 'ST_LineString'::text OR geom IS NULL);
+    insert into geometry_columns values ('','public','streets','geom',2,4326,
          'LINESTRING');
     create index streets_geo_idx
       on streets
       using gist
-      (the_geom);
+      (geom);
 
 
 Now let's insert a linestring into our streets table. In this case we will
@@ -51,7 +51,7 @@ update an existing street record:
 .. code-block:: sql
 
   update streets
-  set the_geom = 'SRID=4326;LINESTRING(20 -33, 21 -34, 24 -33)'
+  set geom = 'SRID=4326;LINESTRING(20 -33, 21 -34, 24 -33)'
   where streets.id=2;
 
 Take a look at the results in QGIS. (You may need to right-click on the streets
@@ -69,7 +69,7 @@ polygons have at least four vertices, with the last and first being co-located:
 
 .. code-block:: sql
 
-    insert into cities (name, the_geom)
+    insert into cities (name, geom)
     values ('Tokyo', 'SRID=4326;POLYGON((10 -10, 5 -32, 30 -27, 10 -10))');
 
 .. note::  A polygon requires double brackets around its coordinate list; this
@@ -78,7 +78,7 @@ polygons have at least four vertices, with the last and first being co-located:
 
 .. code-block:: sql
 
-    insert into cities (name, the_geom)
+    insert into cities (name, geom)
     values ('Tokyo Outer Wards',
             'SRID=4326;POLYGON((20 10, 20 20, 35 20, 20 10),
                                (-10 -30, -5 0, -15 -15, -10 -30))'
@@ -116,14 +116,14 @@ Your updated people schema should look something like this:
     house_no  | integer               | not null
     street_id | integer               | not null
     phone_no  | character varying     |
-    the_geom  | geometry              |
+    geom      | geometry              |
     city_id   | integer               | not null
   Indexes:
     "people_pkey" PRIMARY KEY, btree (id)
     "people_name_idx" btree (name)
   Check constraints:
-    "people_geom_point_chk" CHECK (st_geometrytype(the_geom) =
-                         'ST_Point'::text OR the_geom IS NULL)
+    "people_geom_point_chk" CHECK (st_geometrytype(geom) =
+                         'ST_Point'::text OR geom IS NULL)
   Foreign-key constraints:
     "people_city_id_fkey" FOREIGN KEY (city_id) REFERENCES cities(id)
     "people_street_id_fkey" FOREIGN KEY (street_id) REFERENCES streets(id)
@@ -141,29 +141,29 @@ Your updated people schema should look something like this:
 
   ::
 
-    insert into people (name,house_no, street_id, phone_no, city_id, the_geom)
+    insert into people (name,house_no, street_id, phone_no, city_id, geom)
        values ('Faulty Towers',
                34,
                3,
                '072 812 31 28',
                1,
-               'SRID=4326;POINT(33 33)');
+               'SRID=4326;POINT(13 -15)');
 
-    insert into people (name,house_no, street_id, phone_no, city_id, the_geom)
+    insert into people (name,house_no, street_id, phone_no, city_id, geom)
        values ('IP Knightly',
                32,
                1,
                '071 812 31 28',
-               1,F
-               'SRID=4326;POINT(32 -34)');
+               1,
+               'SRID=4326;POINT(18 -24)');
 
-    insert into people (name,house_no, street_id, phone_no, city_id, the_geom)
+    insert into people (name,house_no, street_id, phone_no, city_id, geom)
        values ('Rusty Bedsprings',
                39,
                1,
                '071 822 31 28',
                1,
-               'SRID=4326;POINT(34 -34)');
+               'SRID=4326;POINT(22 -25)');
 
   If you're getting the following error message:
 
@@ -193,6 +193,67 @@ Try Yourself: :abbr:`★★★ (Advanced level)`
 
 Create city boundaries by computing the minimum convex hull of all addresses
 for that city and computing a buffer around that area.
+
+.. admonition:: Answer
+  :class: dropdown
+
+  - Add some people in 'Tokyo Outer Wards' city
+
+   .. code-block:: psql
+
+    INSERT INTO people (name, house_no, street_id, phone_no, city_id, geom)
+       VALUES ('Bad Aboum',
+               57,
+               2,
+               '073 712 31 21',
+               2,
+               'SRID=4326;POINT(22 18)');
+
+    INSERT INTO people (name, house_no, street_id, phone_no, city_id, geom)
+       VALUES ('Pat Atra',
+               59,
+               2,
+               '074 712 31 25',
+               2,
+               'SRID=4326;POINT(23 14)');
+
+    INSERT INTO people (name, house_no, street_id, phone_no, city_id, geom)
+       VALUES ('Kat Herin',
+               65,
+               2,
+               '074 722 31 28',
+               2,
+               'SRID=4326;POINT(29 18)');
+
+  - Create myPolygonTable table  
+
+   .. code-block:: psql
+
+    CREATE TABLE myPolygonTable (
+      id serial NOT NULL PRIMARY KEY,
+      city_id int NOT NULL REFERENCES cities(id),
+      geom geometry NOT NULL
+    );
+
+    ALTER TABLE myPolygonTable
+      ADD CONSTRAINT myPolygonTable_geom_polygon_chk
+      CHECK (st_geometrytype(geometry) = 'ST_Polygon'::text );
+
+  - Create and load the convex hulls
+
+   .. code-block:: psql
+
+    INSERT INTO myPolygonTable (city_id, geometry)
+      SELECT * FROM 
+      (
+        SELECT 
+          ROW_NUMBER() over (order by city_id)::integer AS city_id,
+          ST_CONVEXHULL(ST_COLLECT(geom)) AS geom
+            FROM people
+            GROUP BY city_id
+      ) convexHulls;
+
+
 
 
 Access Sub-Objects
@@ -234,17 +295,17 @@ To avoid empty geometries, use:
 
 .. code-block:: sql
 
-  where not st_isempty(st_intersection(a.the_geom, b.the_geom))
+  where not st_isempty(st_intersection(a.geom, b.geom))
 
 .. figure:: img/qgis_001.png
    :align: center
 
 .. code-block:: sql
 
-  select st_intersection(a.the_geom, b.the_geom), b.*
+  select st_intersection(a.geom, b.geom), b.*
   from clip as a, road_lines as b
-  where not st_isempty(st_intersection(st_setsrid(a.the_geom,32734),
-    b.the_geom));
+  where not st_isempty(st_intersection(st_setsrid(a.geom,32734),
+    b.geom));
 
 .. figure:: img/qgis_002.png
    :align: center
@@ -265,9 +326,9 @@ following command:
 
 .. code-block:: sql
 
-  select ST_LineFromMultiPoint(st_collect(the_geom)), 1 as id
+  select ST_LineFromMultiPoint(st_collect(geom)), 1 as id
   from (
-    select the_geom
+    select geom
     from points
     order by id
   ) as foo;
@@ -310,7 +371,9 @@ tablespaces:
 
   CREATE TABLESPACE homespace LOCATION '/home/pg';
 
-When you create a database, you can then specify which tablespace to use e.g.::
+When you create a database, you can then specify which tablespace to use e.g.:
+
+.. code-block:: bash
 
   createdb --tablespace=homespace t4a
 

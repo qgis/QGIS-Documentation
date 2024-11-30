@@ -219,6 +219,7 @@ a right-click shows a dedicated set of options presented below.
   |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`                                  |checkbox|
   :guilabel:`Stretch Using Current Extent`                                                   |checkbox|
   |dbManager| :guilabel:`Update SQL Layer...`                                |checkbox|
+  |dbManager| :guilabel:`Execute SQL...`                                     |checkbox|
   |addVirtualLayer| :guilabel:`Edit Virtual Layer...`                        |checkbox|
   |addGroup| :guilabel:`Add Group`                             |checkbox|
   |duplicateLayer| :guilabel:`Duplicate Layer`                               |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
