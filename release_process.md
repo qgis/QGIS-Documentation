@@ -69,7 +69,7 @@ New releases are branched off the `master` branch and thus require a set of chan
 - [ ] In [cronjob.sh](cronjob.sh) file:
   - [ ] replace `QGIS-Documentation` with `QGIS-Documentation-x.y`
   - [ ] replace `qgis_docs_master_build` with `qgis_docs_x.y_build`
-- [ ] In [doctest.dockerfile](doctest.dockerfile): set the project container to pull QGIS sources from (i.e. `release-x_y`)
+- [ ] In [doctest.dockerfile](doctest.dockerfile): set the project container to pull QGIS sources from (i.e. `x.y`)
 - [ ] In main [index.rst](docs/index.rst) file: replace `testing` with `x.y` in the Table Of Contents
 </details>
 
