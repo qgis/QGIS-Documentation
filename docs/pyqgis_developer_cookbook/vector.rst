@@ -509,7 +509,7 @@ Here you have some examples that demonstrate how to use these editing methods.
 
 .. testcode:: vectors
 
-  from qgis.PyQt.QtCore import QMetaType
+  from qgis.PyQt.QtCore import QVariant
 
   feat1 = feat2 = QgsFeature(layer.fields())
   fid = 99
@@ -529,7 +529,7 @@ Here you have some examples that demonstrate how to use these editing methods.
   layer.changeAttributeValue(fid, fieldIndex, value)
 
   # add new field
-  layer.addAttribute(QgsField("mytext", QMetaType.Type.QString))
+  layer.addAttribute(QgsField("mytext", QVariant.String))
   # remove a field
   layer.deleteAttribute(fieldIndex)
 
@@ -586,12 +586,12 @@ For deletion of fields just provide a list of field indexes.
 
 .. testcode:: vectors
 
- from qgis.PyQt.QtCore import QMetaType
+ from qgis.PyQt.QtCore import QVariant
 
  if caps & QgsVectorDataProvider.AddAttributes:
      res = layer.dataProvider().addAttributes(
-         [QgsField("mytext", QMetaType.Type.QString),
-         QgsField("myint", QMetaType.Type.Int)])
+         [QgsField("mytext", QVariant.String),
+         QgsField("myint", QVariant.Int)])
 
  if caps & QgsVectorDataProvider.DeleteAttributes:
      res = layer.dataProvider().deleteAttributes([0])
@@ -600,9 +600,9 @@ For deletion of fields just provide a list of field indexes.
 
  # Alternate methods for removing fields
  # first create temporary fields to be removed (f1-3)
- layer.dataProvider().addAttributes([QgsField("f1", QMetaType.Type.Int),
-                                     QgsField("f2", QMetaType.Type.Int),
-                                     QgsField("f3", QMetaType.Type.Int)])
+ layer.dataProvider().addAttributes([QgsField("f1", QVariant.Int),
+                                     QgsField("f2", QVariant.Int),
+                                     QgsField("f3", QVariant.Int)])
  layer.updateFields()
  count=layer.fields().count() # count of layer fields
  ind_list=list((count-3, count-2)) # create list
@@ -848,7 +848,7 @@ you can do the following:
     def fieldDefinition(self, field):
       idx = self.layer.fields().indexFromName(field.name())
       if idx == self.list_field_idx:
-        return QgsField(LIST_FIELD_NAME, QMetaType.Type.QString)
+        return QgsField(LIST_FIELD_NAME, QVariant.String)
       else:
         return self.layer.fields()[idx]
 
@@ -876,12 +876,12 @@ Directly from features
 
 .. testcode:: vectors
 
-  from qgis.PyQt.QtCore import QMetaType
+  from qgis.PyQt.QtCore import QVariant
 
   # define fields for feature attributes. A QgsFields object is needed
   fields = QgsFields()
-  fields.append(QgsField("first", QMetaType.Type.Int))
-  fields.append(QgsField("second", QMetaType.Type.QString))
+  fields.append(QgsField("first", QVariant.Int))
+  fields.append(QgsField("second", QVariant.String))
 
   """ create an instance of vector file writer, which will create the vector file.
   Arguments:
@@ -975,16 +975,16 @@ The following example code illustrates creating and populating a memory provider
 
 .. testcode:: vectors
 
-  from qgis.PyQt.QtCore import QMetaType
+  from qgis.PyQt.QtCore import QVariant
 
   # create layer
   vl = QgsVectorLayer("Point", "temporary_points", "memory")
   pr = vl.dataProvider()
 
   # add fields
-  pr.addAttributes([QgsField("name", QMetaType.Type.QString),
-                      QgsField("age",  QMetaType.Type.Int),
-                      QgsField("size", QMetaType.Type.Double)])
+  pr.addAttributes([QgsField("name", QVariant.String),
+                      QgsField("age",  QVariant.Int),
+                      QgsField("size", QVariant.Double)])
   vl.updateFields() # tell the vector layer to fetch changes from the provider
 
   # add a feature
