@@ -268,7 +268,7 @@ way:
 
   .. code-block:: sql
 
-    select st_boundary(geometry) from myPolygonTable;
+    select st_boundary(geom) from myPolygonTable;
 
 
 * Select the first vertex point of the resultant linestring:
@@ -277,7 +277,7 @@ way:
 
     select st_startpoint(myGeometry)
     from (
-        select st_boundary(geometry) as myGeometry
+        select st_boundary(geom) as myGeometry
         from myPolygonTable) as foo;
 
 
