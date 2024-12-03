@@ -154,13 +154,15 @@ Allow HTML Formatting
 With :guilabel:`Allow HTML Formatting` enabled, you need to provide the HTML code in the :guilabel:`Value` field.
 Use whitespaces instead of tabs for any kind of indentation.
 The expression is parsed and any supported HTML tag overrides its corresponding setting in the labels properties.
-An exhaustive list of the supported subset of HTML tags and CSS properties can be found `here <https://doc.qt.io/qt-5/richtext-html-subset.html>`_.
+Because it is impossible to list and detail every HTML tag and CSS property that QGIS currently supports,
+we invite you to explore and test in your labels
+`the ones supported <https://doc.qt.io/qt-5/richtext-html-subset.html>`_ by the underlying Qt library.
 
 Examples of supported HTML tags:
 
 * Text formatting, such as italic or bold, e.g.:
 
-  .. code:: html
+  .. code-block:: html
 
     <i>QGIS</i> <b>rocks!</b>
 
@@ -169,7 +171,7 @@ Examples of supported HTML tags:
   You can also set a fixed font size for the superscript/subscript
   by including css rules, e.g.:
 
-  .. code:: html
+  .. code-block:: html
 
     <sup style="font-size:33pt">my superscript text</sup>
 
@@ -180,19 +182,20 @@ Examples of supported CSS properties:
 * Text decorations such as underline, overline and line-through (``text-decoration``)
 * Text alignment (``vertical-align``)
 
-CSS properties can be set on HTML tags with the style attribute.
-The HTML tag span does not apply any formatting to text by itself and is ideal if you just want to apply CSS styling.
+CSS properties can be set on HTML tags with the ``style`` attribute.
+The HTML tag ``span`` does not apply any formatting to text by itself
+and is ideal if you just want to apply CSS styling.
 A CSS property name and its value are separated by a colon (``:``). 
 Multiple CSS properties are separated by semicolon (``;``), e.g.:
 
-.. code:: html
+.. code-block:: html
 
   <span style="text-decoration:underline;color:blue;word-spacing:20">I will be displayed as blue underlined text with increased space between words</span>
 
 Below an example of a HTML-based expression and rendering
 (applies different colors and underline to the same label):
 
-.. code:: html
+.. code-block:: html
 
   format(
     '<span style="color:blue">%1</span> ( <span style="color:red"><u>%2 ft</u></span> )',
