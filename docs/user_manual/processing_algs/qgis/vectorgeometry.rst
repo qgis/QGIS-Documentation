@@ -326,22 +326,13 @@ Parameters
        ``Type`` [enumeration] (``type``)
          Data type of the output field.
          Available types may not be compatible with the output layer provider.
-         Depending on the field type, an additional ``sub_type`` parameter may be required.
+         Depending on the field type, an additional ``sub_type`` parameter may be required
+         when running the algorithm in Python code or command line.
          One of:
 
-         * 1 --- Boolean
-         * 2 --- Integer (32bit)
-         * 4 --- Integer (64bit)
-         * 6 --- Decimal (double)
-         * 9 --- Integer list --- ``sub_type: 2``
-         * 9 --- Integer (64bit) list --- ``sub_type: 4``
-         * 9 --- Decimal (double) list --- ``sub_type: 6``
-         * 10 --- Text (string)
-         * 11 --- String list
-         * 12 --- Binary Object (BLOB)
-         * 14 --- Date
-         * 15 --- Time
-         * 16 --- Date & Time
+         .. include:: ../algs_include.rst
+            :start-after: **vector_field_types**
+            :end-before: **end_vector_field_types**
 
        ``Length`` [number] (``length``)
          Length of the output field.
@@ -365,7 +356,6 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
