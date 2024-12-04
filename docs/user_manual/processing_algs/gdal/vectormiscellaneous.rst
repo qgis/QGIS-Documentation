@@ -249,6 +249,13 @@ Parameters
        * 7 --- MULTIPOINT
        * 8 --- MULTIPOLYGON
        * 9 --- MULTILINESTRING
+       * 10 --- CIRCULARSTRING
+       * 11 --- COUMPOUNDCURVE
+       * 12 --- CURVEPOLYGON
+       * 13 --- MULTICURVE
+       * 14 --- MULTISURFACE
+       * 15 --- CONVERT_TO_LINEAR
+       * 16 --- CONVERT_TO_CURVE
 
    * - **Assign an output CRS**
 
@@ -328,11 +335,12 @@ Parameters
      - [enumeration]
 
        Default: 0 (2D)
-     - Defines if the vector file to be imported has 2D or 3D data.
+     - Defines the coordinate dimensions of the imported vector data.
        One of:
 
-       * 0 --- 2
-       * 1 --- 3
+       * 0 --- 2 (``XY``)
+       * 1 --- 3 (``XYZ``)
+       * 2 --- 4 (``XYZM``)
 
    * - **Distance tolerance for simplification**
 
@@ -456,7 +464,14 @@ Parameters
      - [boolean]
 
        Default: False
-     - 
+     - Continue after a failure, skipping the failed feature.
+   * - **Validate geometries based on Simple Features specification**
+     - ``MAKEVALID``
+     - [boolean]
+
+       Default: False
+     - Applies cleanup operations on geometries to ensure they are valid regarding the rules
+       of the `Simple Features specification <https://www.ogc.org/publications/standard/sfs/>`_.
    * - **Promote to Multipart**
 
        Optional
@@ -548,6 +563,13 @@ Parameters
        * 7 --- MULTIPOINT
        * 8 --- MULTIPOLYGON
        * 9 --- MULTILINESTRING
+       * 10 --- CIRCULARSTRING
+       * 11 --- COUMPOUNDCURVE
+       * 12 --- CURVEPOLYGON
+       * 13 --- MULTICURVE
+       * 14 --- MULTISURFACE
+       * 15 --- CONVERT_TO_LINEAR
+       * 16 --- CONVERT_TO_CURVE
 
    * - **Assign an output CRS**
 
@@ -666,11 +688,12 @@ Parameters
      - [enumeration]
 
        Default: 0 (2D)
-     - Defines if the vector file to be imported has 2D or 3D data.
+     - Defines the coordinate dimensions of the imported vector data.
        One of:
 
-       * 0 --- 2D
-       * 1 --- 3D
+       * 0 --- 2 (``XY``)
+       * 1 --- 3 (``XYZ``)
+       * 2 --- 4 (``XYZM``)
 
    * - **Distance tolerance for simplification**
 
@@ -803,7 +826,14 @@ Parameters
      - [boolean]
 
        Default: False
-     - 
+     - Continue after a failure, skipping the failed feature.
+   * - **Validate geometries based on Simple Features specification**
+     - ``MAKEVALID``
+     - [boolean]
+
+       Default: False
+     - Applies cleanup operations on geometries to ensure they are valid regarding the rules
+       of the `Simple Features specification <https://www.ogc.org/publications/standard/sfs/>`_.
    * - **Promote to Multipart**
 
        Optional
