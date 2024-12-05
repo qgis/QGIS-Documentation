@@ -244,13 +244,14 @@ with some convenient information.
  :menuselection:`Layouts -->`
  :guilabel:`Layout Properties...`                                                                        :ref:`layout_panel`
  :guilabel:`Rename Layout...`
+ :guilabel:`Page Properties...`                                                                          :ref:`page_properties`
  |newPage| :guilabel:`Add Pages...`                                           :guilabel:`Layout`         :ref:`page_properties`
  |fileOpen| :guilabel:`Add Items from Template`                               :guilabel:`Layout`         :ref:`create_layout_item`
  |fileSaveAs| :guilabel:`Save as Template...`                                 :guilabel:`Layout`         :ref:`layout_manager`
  |saveMapAsImage| :guilabel:`Export as Image...`                              :guilabel:`Layout`         :ref:`export_layout_image`
  |saveAsSVG| :guilabel:`Export as SVG...`                                     :guilabel:`Layout`         :ref:`export_layout_svg`
  |saveAsPDF| :guilabel:`Export as PDF...`                                     :guilabel:`Layout`         :ref:`export_layout_pdf`
- :guilabel:`Page Setup...`                         :kbd:`Ctrl+Shift+P`
+ :guilabel:`Printer Page Setup...`                 :kbd:`Ctrl+Shift+P`
  |filePrint| :guilabel:`Print...`                  :kbd:`Ctrl+P`              :guilabel:`Layout`         :ref:`create-output`
  :guilabel:`Close`                                 :kbd:`Ctrl+Q`
 ================================================= ========================== ========================== =====================================
@@ -646,8 +647,12 @@ Updating page properties
 ........................
 
 Any page can be later customized through the Page :guilabel:`Item Properties` panel.
-To access a page's properties, left-click on an empty section of the page
-or right-click on a page and select :guilabel:`Page Properties...`.
+To access a page's properties, either:
+
+* Left-click on an empty section of the page
+* Right-click on a page and select :guilabel:`Page Properties...`.
+* Go to :menuselection:`Layout --> Page properties...` while hovering over the page
+
 The :guilabel:`Item Properties` panel opens with settings such as:
 
 * for layouts with several pages, it displays the active page number
