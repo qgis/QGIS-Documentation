@@ -13,8 +13,6 @@ Vector miscellaneous
 Build virtual vector
 --------------------
 Creates a virtual vector layer that contains a set of vector layers.
-The output virtual vector layer will not be opened in the current
-project.
 
 This algorithm is especially useful in case another algorithm needs
 multiple layers but accept only one ``vrt`` in which the layers are
