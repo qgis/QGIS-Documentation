@@ -119,8 +119,15 @@ Appearance
 
   * :guilabel:`Left`, :guilabel:`Center`, :guilabel:`Right` or
     :guilabel:`Justify` for :guilabel:`Horizontal alignment`
-  * and :guilabel:`Top`, :guilabel:`Middle`, :guilabel:`Bottom` for
+  * and :guilabel:`Top`, :guilabel:`Vertical Center`, :guilabel:`Bottom` for
     :guilabel:`Vertical alignment`.
+
+.. _figure_layout_label_appearance:
+
+.. figure:: img/label_appearance.png
+   :align: center
+
+   Label Item Appearance Properties
 
 .. _layout_label_expressions:
 
