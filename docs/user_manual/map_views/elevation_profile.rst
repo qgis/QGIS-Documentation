@@ -197,14 +197,11 @@ To create a profile view, you can:
    This value is used to create a flat buffer around the elevation profile line, visible in the main map canvas.
    Any visible feature (point, line, polygon, etc.) overlapping that buffer will be captured in the plot canvas.
 
-.. note:: **Limitations - Line and polygon extrusion**
+.. note:: **Limitations with polygon extrusion**
 
-  In the |elevationscale| :guilabel:`Elevation` properties tab of a layer, it is possible to activate the extrusion.
-  This works fine for points or lines in any case.
-  However, when tolerance is enabled and for 3D lines or 3D polygons,
-  extrusion is not trivial because it is equivalent to representing a 3D object
-  (the 3D polygon is re-projected into a 2D polygon in the elevation profile view but with the extrusion dimension).
-  Thus, right now, polygon extrusion is disabled when tolerance is enabled.
+  Geometry extrusion can be set in the |elevationscale| :guilabel:`Elevation` properties of a layer,
+  and rendered in the profile view. When tolerance is enabled, it is however not trivial to render extruded polygons,
+  thus, for now, polygon extrusion is ignored.
 
 .. _`elevation_profile_interaction`:
 
