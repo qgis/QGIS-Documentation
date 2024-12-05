@@ -284,6 +284,9 @@ To export a layout as PDF:
    * :guilabel:`Include vector feature information` (choose the layers and
      group them into logical PDF groups).
 
+     .. When expanding on the Geospatial PDF description,
+      mention also the "Geospatial PDF group" property of layout items?
+
 .. note:: Exporting a print layout to formats that supports georeferencing
    (e.g. ``PDF`` and ``TIFF``) creates a georeferenced output by default.
 

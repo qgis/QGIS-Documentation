@@ -86,6 +86,11 @@ provides the functionalities to set the units of display and some text formattin
   QGIS locale, or when you would like to vary the style from the locale
   defaults (e.g. adding thousands separators when the locale default is to hide
   them).
+* Select the :guilabel:`Method` for scale bar calculation: Depending on the map CRS and extent,
+  the distance reported in the scale bar may not be the same measured over the map.
+  This option lets you specify the method you would like to use:
+  :guilabel:`Average Top, Middle and Bottom Scales`, :guilabel:`Calculate along Top of Map`,
+  :guilabel:`Calculate along Middle of Map` or :guilabel:`Calculate along Bottom of Map`.
 
 Segments
 --------
@@ -119,27 +124,26 @@ subdivisions (see :numref:`figure_layout_scalebar_segments`):
 * :guilabel:`Subdivision height` is used to define the height of the subdivision
   segment.
 
-Display
---------
+Appearance
+----------
 
-The :guilabel:`Display` group of the scale bar :guilabel:`Item Properties`
+The :guilabel:`Appearance` group of the scale bar :guilabel:`Item Properties`
 panel provides the following functionalities:
 
-.. _figure_layout_scalebar_display:
+.. _figure_layout_scalebar_appearance:
 
-.. figure:: img/scalebar_display.png
+.. figure:: img/scalebar_appearance.png
    :align: center
 
-   Scale Bar Display group
+   Scale Bar Appearance group
 
 You can define how the scale bar will be displayed in its frame.
 
 * :guilabel:`Box margin` : space between text and frame borders
 * :guilabel:`Label margin` : space between text and scale bar drawing
-* :guilabel:`Vertical label placement`: it can be above or below the scale bar
-  segment
-* :guilabel:`Horizontal label placement`: which would be centered at the scale
-  bar segment's edge or center
+* :guilabel:`Distance label placement` defines the position of the text relative to the scale bar segments:
+  :guilabel:`Above Segment Edges`, :guilabel:`Above Segment Centers`,
+  :guilabel:`Below Segment Edges` or :guilabel:`Below Segment Centers`
 * :guilabel:`Primary fill` and :guilabel:`Secondary fill` of the scale bar
   drawing using :ref:`fill symbols properties <vector_fill_symbols>`
   (color, opacity, patterns, effects...) --- for *Single Box*, *Double Box*
