@@ -467,6 +467,8 @@ Basic parameters
        Optional
      - ``SORTBY_REVERSE``
      - [boolean]
+
+       Default: False
      - Determines if sorting should be inverted.
        Used when a sort expression is provided.
    * - **Output filename expression**
@@ -607,6 +609,8 @@ Basic parameters
        Optional
      - ``SORTBY_REVERSE``
      - [boolean]
+
+       Default: False
      - Determines if sorting should be inverted.
        Used when a sort expression is provided.
    * - **Output filename**
@@ -779,6 +783,8 @@ Basic parameters
        Optional
      - ``SORTBY_REVERSE``
      - [boolean]
+
+       Default: False
      - Determines if sorting should be inverted.
        Used when a sort expression is provided.
    * - **PDF file**

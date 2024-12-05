@@ -367,8 +367,6 @@ Parameters
           :end-before: **end_extent_options**
 
    * - **Clip the input layer using the above (rectangle) extent**
-
-       Optional
      - ``CLIP``
      - [boolean]
 
@@ -395,8 +393,6 @@ Parameters
        defines the size.
        By default N limits the transaction size to 20000 features.
    * - **Overwrite existing table**
-
-       Optional
      - ``OVERWRITE``
      - [boolean]
 
@@ -405,8 +401,6 @@ Parameters
        and if this option is set to True, the table will be
        overwritten.
    * - **Append to existing table**
-
-       Optional
      - ``APPEND``
      - [boolean]
 
@@ -416,8 +410,6 @@ Parameters
        New fields found in the input layer are ignored.
        By default a new table will be created.
    * - **Append and add new fields to existing table**
-
-       Optional
      - ``ADDFIELDS``
      - [boolean]
 
@@ -428,8 +420,6 @@ Parameters
        table.
        By default a new table will be created.
    * - **Do not launder columns/table names**
-
-       Optional
      - ``LAUNDER``
      - [boolean]
 
@@ -438,8 +428,6 @@ Parameters
        behaviour (converting column names to lowercase,
        removing spaces and other invalid characters).
    * - **Do not create Spatial Index**
-
-       Optional
      - ``INDEX``
      - [boolean]
 
@@ -448,24 +436,18 @@ Parameters
        created.
        By default, a spatial index is added.
    * - **Continue after a failure, skipping the failed feature**
-
-       Optional
      - ``SKIPFAILURES``
      - [boolean]
 
        Default: False
      - 
    * - **Promote to Multipart**
-
-       Optional
      - ``PROMOTETOMULTI``
      - [boolean]
 
        Default: True
      - Casts features geometry type to multipart in the output table
    * - **Keep width and precision of input attributes**
-
-       Optional
      - ``PRECISION``
      - [boolean]
 
@@ -705,8 +687,6 @@ Parameters
           :end-before: **end_extent_options**
 
    * - **Clip the input layer using the above (rectangle) extent**
-
-       Optional
      - ``CLIP``
      - [boolean]
 
@@ -742,8 +722,6 @@ Parameters
        defines the size.
        By default N limits the transaction size to 20000 features.
    * - **Overwrite existing table**
-
-       Optional
      - ``OVERWRITE``
      - [boolean]
 
@@ -752,8 +730,6 @@ Parameters
        and if this option is set to True, the table will be
        overwritten.
    * - **Append to existing table**
-
-       Optional
      - ``APPEND``
      - [boolean]
 
@@ -763,8 +739,6 @@ Parameters
        New fields found in the input layer are ignored.
        By default a new table will be created.
    * - **Append and add new fields to existing table**
-
-       Optional
      - ``ADDFIELDS``
      - [boolean]
 
@@ -775,8 +749,6 @@ Parameters
        table.
        By default a new table will be created.
    * - **Do not launder columns/table names**
-
-       Optional
      - ``LAUNDER``
      - [boolean]
 
@@ -785,8 +757,6 @@ Parameters
        behaviour (converting column names to lowercase,
        removing spaces and other invalid characters).
    * - **Do not create Spatial Index**
-
-       Optional
      - ``INDEX``
      - [boolean]
 
@@ -795,24 +765,18 @@ Parameters
        created.
        By default, a spatial index is added.
    * - **Continue after a failure, skipping the failed feature**
-
-       Optional
      - ``SKIPFAILURES``
      - [boolean]
 
        Default: False
      - 
    * - **Promote to Multipart**
-
-       Optional
      - ``PROMOTETOMULTI``
      - [boolean]
 
        Default: True
      - Casts features geometry type to multipart in the output table
    * - **Keep width and precision of input attributes**
-
-       Optional
      - ``PRECISION``
      - [boolean]
 
