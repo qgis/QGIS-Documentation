@@ -11,10 +11,11 @@ The Table Items
 
 You can use table items to decorate and explain your map:
 
-* :ref:`Attribute table <layout_attribute_table_item>`: shows a subset of the
-  attributes of a layer, based on predefined rules
-* :ref:`Fixed table <layout_fixed_table_item>`: inserts a
-  manual text table where information can be independent from the layers.
+* :ref:`Attribute table <layout_attribute_table_item>`: automatically extracts
+  a subset of the attributes of a layer, based on predefined rules
+* :ref:`Fixed table <layout_fixed_table_item>`: allows for creation of tables
+  with contents manually entered (i.e. spreadsheet style), so that you can
+  create completely custom tables.
 
 .. _layout_attribute_table_item:
 
@@ -263,26 +264,51 @@ Main properties
 
    Fixed table Item Properties Panel with Table designer
 
-In :guilabel:`Main properties` you can work with the :guilabel:`Table designer`
-when clicking the :guilabel:`Edit table ...`:
+In :guilabel:`Main properties`, press :guilabel:`Edit table...`
+to open the :guilabel:`Table designer` dialog where you can build your table:
 
-* You can click into the table and insert texts manually.
-* Through the menus on top it is possible to:
+* On the left hand of the dialog, a table frame displays the active table item
+  with its content and settings.
+  Click or double-click on a cell and write a text to modify its contents.
+  Press :kbd:`Ctrl+Enter` to add linebreak (for a multiline text).
+  The logic for selecting multiple cells in the table
+  is the same as in the vector layer :ref:`attribute table <interacting_features_table>`.
+  Grab and move a row or column separator to resize the row above or the column before.
+  A double-click on the separator will resize the row above or the column before to fit their contents.
+  A right-click over column or row headers shows a contextual menu to insert
+  columns or rows around the selection or to delete them.
+* Through the menus on top of the dialog, it is possible to:
 
-  * :guilabel:`Import Content From Clipboard` by going to :guilabel:`File`
-    (it overrides given inputs).
-  * work with selection functionalities for rows and columns by going
-    to :guilabel:`Edit`.
-  * :guilabel:`Insert rows`, :guilabel:`Insert columns`,
-    :guilabel:`Delete Rows`, :guilabel:`Delete Columns` as well as
-    using the option to |checkbox| :guilabel:`Include Header Row`.
+  * :menuselection:`File --> Import Content From Clipboard`: it overrides contents of the table.
+  * :menuselection:`File --> Close editor`: it closes the :guilabel:`Table Designer` dialog.
+  * From the :menuselection:`Edit` menu, you can work with selection functionalities for rows and columns:
 
-* You can work with the :guilabel:`Cell Contents` section on the right and:
+    * :guilabel:`Select all` cells in the table
+    * :guilabel:`Select columns` or :guilabel:`Select Rows`: when cells are selected in the table,
+      you can extend the selection respectively to their column(s) or row(s) 
+    * :guilabel:`Clear Cells`: deletes the content of the selected cells
 
-  * Define the text format of selected cells in :guilabel:`Formatting`
+  * The :menuselection:`Table` menu is the place where you design the structure of the table.
+    You can:
+  
+    * :menuselection:`Insert rows -->` above or below the selection
+    * :menuselection:`Insert columns -->` before or after the selection
+    * :guilabel:`Delete Rows` or :guilabel:`Delete Columns` of selected cells
+    * :guilabel:`Merge selected cells`: select multiple cells in a rectangular shape
+      and you can concatenate their contents into the top left cell
+      (whole styling is also applied to the merged cell, unless there is a last row/column cell in the selection). 
+    * :guilabel:`Split selected cells`: spreads content of a merged cell into their original cell.
+      Each cell is reapplied its original styling.
+    * |checkbox| :guilabel:`Include Header Row` whose styling can only be controlled
+      from the :ref:`layout_table_fonts_and_styling` widget
 
-    * by clicking on the given |expression| expression button and using a
-      regular expression for the input of the cell
+* Select the cells and, on the right of the table frame, you can provide the :guilabel:`Cell Contents`:
+
+  * Either manually enter the contents of each cell,
+    or use an |expression| :guilabel:`Expression` to automatically populate it.
+  * Under the :guilabel:`Formatting` group, set specific options that apply to the selection
+    and take precedence over the `global table content styling <layout_table_fonts_and_styling>`:
+
     * by choosing the :guilabel:`Text format`
     * by |checkbox| :guilabel:`Format as number` (several formats are available)
     * by defining the :guilabel:`Horizontal alignment` and the
@@ -335,6 +361,7 @@ the following functionalities (see :numref:`figure_layout_table_grid`):
 * With :guilabel:`Line width` you can set the thickness of the lines used in the grid.
 * The :guilabel:`Color` of the grid can be set using the color selection widget.
 
+.. _layout_table_fonts_and_styling:
 
 Fonts and text styling
 ......................
@@ -358,7 +385,7 @@ provides the following functionalities (see :numref:`figure_layout_table_fonts`)
 * For :guilabel:`Table heading` you can additionally set the :guilabel:`Alignment`
   to ``Follow column alignment`` or override this setting by choosing ``Left``,
   ``Center`` or ``Right``. The column alignment is set using the :guilabel:`Select
-  Attributes` dialog (see :numref:`figure_layout_table_select` ).
+  Attributes` dialog (see :numref:`figure_layout_table_select`).
 
 
 Frames
