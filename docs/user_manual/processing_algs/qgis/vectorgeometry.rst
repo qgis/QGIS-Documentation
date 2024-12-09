@@ -4935,8 +4935,6 @@ Parameters
      - [vector: line]
      - Input line vector layer
    * - **Keep fields from the input layer**
-
-       Optional
      - ``KEEP_FIELDS``
      - [boolean]
 

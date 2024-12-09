@@ -463,8 +463,6 @@ Basic parameters
      - [expression]
      - Expression to use to sort the atlas features
    * - **Reverse sort order**
-
-       Optional
      - ``SORTBY_REVERSE``
      - [boolean]
 
@@ -605,8 +603,6 @@ Basic parameters
      - [expression]
      - Expression to use to sort the atlas features
    * - **Reverse sort order**
-
-       Optional
      - ``SORTBY_REVERSE``
      - [boolean]
 
@@ -779,8 +775,6 @@ Basic parameters
      - [expression]
      - Expression to use to sort the atlas features
    * - **Reverse sort order**
-
-       Optional
      - ``SORTBY_REVERSE``
      - [boolean]
 
@@ -1215,8 +1209,6 @@ Basic parameters
      - A map theme displaying the layers to extract the labels from.
        If unset, labels of the currently visible layers are extracted.
    * - **Include unplaced labels**
-
-       Optional
      - ``INCLUDE_UNPLACED``
      - [boolean]
 

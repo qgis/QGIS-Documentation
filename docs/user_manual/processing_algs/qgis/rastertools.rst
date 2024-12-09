@@ -585,8 +585,6 @@ Basic parameters
        Default: 256
      - Minimum 1, maximum 4096.
    * - **Use inverted tile Y axis (TMS conventions)**
-
-       Optional
      - ``TMS_CONVENTION``
      - [boolean]
 
@@ -648,8 +646,6 @@ Advanced parameters
      - Custom map attribution used for the Leaflet HTML output file.
        HTML links are possible.
    * - **Include OpenStreetMap basemap in Leaflet HTML output**
-
-       Optional
      - ``HTML_OSM``
      - [boolean]
 
