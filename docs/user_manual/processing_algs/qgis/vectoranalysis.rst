@@ -449,8 +449,6 @@ Advanced parameters
      - Type
      - Description
    * - **Treat border points as noise (DBSCAN\*)**
-
-       Optional
      - ``DBSCAN*``
      - [boolean]
 
@@ -1610,8 +1608,6 @@ Advanced parameters
      - Type
      - Description
    * - **Treat border points as noise (DBSCAN\*)**
-
-       Optional
      - ``DBSCAN*``
      - [boolean]
 
