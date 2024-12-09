@@ -771,8 +771,6 @@ Parameters
      - Field or expression providing the order to connect the points in the path.
        If not set, the feature ID (``$id``) is used.
    * - **Sort text containing numbers naturally**
-
-       Optional
      - ``NATURAL_SORT``
      - [boolean]
 

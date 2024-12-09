@@ -2283,8 +2283,6 @@ Basic parameters
        Default: ``EPSG:4326 - WGS 84``
      - Destination coordinate reference system
    * - **Convert curved geometries to straight segments**
-
-       Optional
      - ``CONVERT_CURVED_GEOMETRIES``
      - [boolean]
 
