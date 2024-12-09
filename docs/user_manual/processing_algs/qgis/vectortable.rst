@@ -949,7 +949,14 @@ Parameters
 
        :guilabel:`Type` (``type``) [enumeration]
          Data type of the output field.
-         Available types depend on the output layer provider.
+         Available types may not be compatible with the output layer provider.
+         Depending on the field type, an additional ``sub_type`` parameter may be required
+         when running the algorithm in Python code or command line.
+         One of:
+
+         .. include:: ../algs_include.rst
+            :start-after: **vector_field_types**
+            :end-before: **end_vector_field_types**
 
        :guilabel:`Length` (``length``) [number]
          Length of the output field.

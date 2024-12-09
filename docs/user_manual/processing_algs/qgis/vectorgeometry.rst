@@ -324,15 +324,17 @@ Parameters
          By default input field name is kept.
 
        ``Type`` [enumeration] (``type``)
-         Data type of the output field. One of:
+         Data type of the output field.
+         Available types may not be compatible with the output layer provider.
+         For certain field types, e.g. lists, an extra ``sub_type`` parameter helps refine the
+         the specific type of the data. 
+         This parameter is automatically set in the GUI but may be needed
+         if you're running the algorithm in Python or from the command line.
+         One of:
 
-         * 1 --- Boolean
-         * 2 --- Integer
-         * 4 --- Integer64
-         * 6 --- Double
-         * 10 --- String
-         * 14 --- Date
-         * 16 --- DateTime
+         .. include:: ../algs_include.rst
+            :start-after: **vector_field_types**
+            :end-before: **end_vector_field_types**
 
        ``Length`` [number] (``length``)
          Length of the output field.
@@ -356,7 +358,6 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
