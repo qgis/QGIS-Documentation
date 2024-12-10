@@ -660,8 +660,13 @@ in the :guilabel:`Custom transparency options` section:
 
   #. Click the |symbologyAdd| :sup:`Add values manually` button.
      A new row will appear in the pixel list.
-  #. Enter the **Red**, **Green** and **Blue** values of the pixel and
+  #. For single-band rasters (e.g. DEMs), enter the **From** and **To** values and
      adjust the **Percent Transparent** to apply.
+  #. For multi-band rasters (e.g. RGB images) enter the **Red**, **Green** and **Blue** values of the pixel and
+     adjust the **Percent Transparent** to apply.
+     QGIS supports **Tolerance** for pixel values, when defining transpareny.
+     This means that pixels with colors close to the specified RGB values can also
+     be made transparent. Note that this feature applies only to multi-band rasters.
   #. Alternatively, you can fetch the pixel values directly from the
      raster using the |contextHelp| :sup:`Add values from display`
      button.
@@ -676,6 +681,13 @@ in the :guilabel:`Custom transparency options` section:
   The button |fileOpen| :sup:`Import from file` loads your transparency
   settings and applies them to the current raster layer.
 
+    .. only:: html
+
+    .. figure:: img/tolerances_for_pixel_values.gif
+       :align: center
+       :width: 100%
+
+       Using tolerances for multi-band rasters
 
 .. index:: Histogram
 .. _raster_histogram:
