@@ -63,9 +63,9 @@ If you want to add your existing plugin to Processing, you need to add some code
         :skipif: True
 
         from qgis.core import QgsApplication
-        from processing_provider.provider import Provider
+        from .processing_provider.provider import Provider
 
-        class YourPluginName():
+        class YourPluginName:
 
             def __init__(self):
                 self.provider = None
@@ -92,7 +92,7 @@ If you want to add your existing plugin to Processing, you need to add some code
 
       from qgis.core import QgsProcessingProvider
 
-      from processing_provider.example_processing_algorithm import ExampleProcessingAlgorithm
+      from .example_processing_algorithm import ExampleProcessingAlgorithm
 
 
       class Provider(QgsProcessingProvider):
@@ -128,6 +128,19 @@ If you want to add your existing plugin to Processing, you need to add some code
      algorithm file. Copy/paste the content of the :source:`script template
      file <python/plugins/processing/script/ScriptTemplate.py>` and
      update it according to your needs.
+
+You should have a tree similar to this :
+
+.. code-block:: bash
+
+   └── your_plugin_root_folder
+      ├── __init__.py
+      ├── LICENSE
+      ├── metadata.txt
+      └── processing_provider
+            ├── example_processing_algorithm.py
+            ├── __init__.py
+            └── provider.py
 
 #. Now you can reload your plugin in QGIS and you should see your example
    script in the Processing toolbox and modeler.
