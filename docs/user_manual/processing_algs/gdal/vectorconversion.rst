@@ -341,8 +341,6 @@ Basic parameters
        Default: 0.0
      - A fixed value to burn into a band for all features.
    * - **Burn value extracted from the "Z" values of the feature**
-
-       Optional
      - ``USE_Z``
      - [boolean]
 
