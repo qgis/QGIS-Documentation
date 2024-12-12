@@ -463,10 +463,10 @@ Basic parameters
      - [expression]
      - Expression to use to sort the atlas features
    * - **Reverse sort order**
-
-       Optional
      - ``SORTBY_REVERSE``
      - [boolean]
+
+       Default: False
      - Determines if sorting should be inverted.
        Used when a sort expression is provided.
    * - **Output filename expression**
@@ -603,10 +603,10 @@ Basic parameters
      - [expression]
      - Expression to use to sort the atlas features
    * - **Reverse sort order**
-
-       Optional
      - ``SORTBY_REVERSE``
      - [boolean]
+
+       Default: False
      - Determines if sorting should be inverted.
        Used when a sort expression is provided.
    * - **Output filename**
@@ -775,10 +775,10 @@ Basic parameters
      - [expression]
      - Expression to use to sort the atlas features
    * - **Reverse sort order**
-
-       Optional
      - ``SORTBY_REVERSE``
      - [boolean]
+
+       Default: False
      - Determines if sorting should be inverted.
        Used when a sort expression is provided.
    * - **PDF file**
@@ -1209,8 +1209,6 @@ Basic parameters
      - A map theme displaying the layers to extract the labels from.
        If unset, labels of the currently visible layers are extracted.
    * - **Include unplaced labels**
-
-       Optional
      - ``INCLUDE_UNPLACED``
      - [boolean]
 
