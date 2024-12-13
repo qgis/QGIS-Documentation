@@ -280,6 +280,11 @@ QGIS allows advanced rendering for layout items just like vector and raster laye
 * |checkbox| :guilabel:`Exclude item from exports`: Combined with data-defined expressions,
   you can decide to make an item invisible in some exports.
   After activating this checkbox, the item will not be included in export to PDF, print etc..
+* :guilabel:`Geospatial PDF group`: When set, a matching layer tree group will be created
+  in the exported Geospatial PDF and the item will only be visible when this group is checked.
+  This allows content to be selectively displayed as a group by viewers of the Geospatial PDF.
+  E.g., it can allow extra layout content such as descriptive labels or legends to only be shown
+  when layers from the group are visible, making the file export much more flexible.
 
 Variables
 .........
