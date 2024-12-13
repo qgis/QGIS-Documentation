@@ -295,10 +295,12 @@ to open the :guilabel:`Table designer` dialog where you can build your table:
     * :menuselection:`Insert columns -->` before or after the selection
     * :guilabel:`Delete Rows` or :guilabel:`Delete Columns` of selected cells
     * :guilabel:`Merge selected cells`: select multiple cells in a rectangular shape
-      and you can concatenate their contents into the top left cell
-      (whole styling is also applied to the merged cell, unless there is a last row/column cell in the selection). 
-    * :guilabel:`Split selected cells`: spreads content of a merged cell into their original cell.
-      Each cell is reapplied its original styling.
+      and you can merge them and concatenate their contents into the top left cell
+      (whose styling is also applied to the merged cell, unless there is a last row/column cell in the selection). 
+    * :guilabel:`Split selected cells`: select a merged cell and you can split it back to its individual cells.
+      The current text is kept in the top left cell, and the other cells are filled with their contents
+      before they get merged.
+      They are also reapplied their original styling.
     * |checkbox| :guilabel:`Include Header Row` whose styling can only be controlled
       from the :ref:`layout_table_fonts_and_styling` widget
 
