@@ -158,7 +158,7 @@ Because it is impossible to list and detail every HTML tag and CSS property that
 we invite you to explore and test in your labels
 `the ones supported <https://doc.qt.io/qt-5/richtext-html-subset.html>`_ by the underlying Qt library.
 
-Examples of supported HTML tags:
+**Examples of supported HTML tags:**
 
 * Text formatting, such as italic or bold, e.g.:
 
@@ -175,12 +175,40 @@ Examples of supported HTML tags:
 
     <sup style="font-size:33pt">my superscript text</sup>
 
-Examples of supported CSS properties:
+* Text horizontal alignment, using either HTML the ``align="xxx"`` attribute or  ``center`` tag.
+  For HTML5 compatibility, prefer using the CSS property ``text-align``.
+
+  .. attention:: Horizontal alignment can not be used for curved labels.
+
+* Structuring a block of text using header tags (such as ``h1``, ``h2``, ...),
+  or paragraphs (with ``p``, ``div``, ``br``):
+
+  .. code-block:: html
+
+    <div class="myDiv">
+      <h2>QGIS always rocks!!</h2>
+      <p align="center">Let's dive into details of its nice features.</p>
+    </div>
+
+* Image insertion: any image format readable by QGIS can be used in HTML label content.
+  It can be served from local file paths, HTTP links, or base64 embedded content,
+  using the ``src="xxx"`` attribute.
+  Image sizes can be specified via the ``width="##"`` and ``height="##"`` attributes, in ``points`` unit.
+  If width or height is not specified it will automatically be calculated from the original image size.
+  Images are placed inline only, not as floating images, and not on curved text labels.
+
+  .. code-block:: html
+
+    <img src="qgis.png" width=40 height=60>
+
+
+**Examples of supported CSS properties:**
 
 * Font properties (``color``, ``font-family``, ``font-size``, ``font-weight``, ``font-style``, ``word-spacing``).
   Note that ``word-spacing`` will always use unit points.
 * Text decorations such as underline, overline and line-through (``text-decoration``)
-* Text alignment (``vertical-align``)
+* Text alignment (``vertical-align``, ``text-align``).
+  Horizontal alignment can not be used for curved labels.
 
 CSS properties can be set on HTML tags with the ``style`` attribute.
 The HTML tag ``span`` does not apply any formatting to text by itself
@@ -190,7 +218,8 @@ Multiple CSS properties are separated by semicolon (``;``), e.g.:
 
 .. code-block:: html
 
-  <span style="text-decoration:underline;color:blue;word-spacing:20">I will be displayed as blue underlined text with increased space between words</span>
+  <span style="text-decoration:underline;text-align:center;color:blue;word-spacing:20">I will be displayed as blue underlined and centered text with increased space between words</span>
+
 
 Below an example of a HTML-based expression and rendering
 (applies different colors and underline to the same label):
