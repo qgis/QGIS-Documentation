@@ -830,6 +830,8 @@ WMS capabilities
 
    Definitions in the WMS tab
 
+In the :guilabel:`WMS` tab, you can define the options for the WMS capabilities.
+
 In the :guilabel:`WMS capabilities` tab, check :guilabel:`Advertised extent`
 to define the extent advertised in the WMS GetCapabilities response.
 The :ref:`spatial extent selector <extent_selector>` widget helps you enter the extent
@@ -922,6 +924,12 @@ If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to show te
 expressions) this will be listed inside the GetFeatureInfo output. If the
 layer uses a Value Map for one of its attributes, this information will also
 be shown in the GetFeatureInfo output.
+
+* :guilabel:`Layer and Feature Options`
+
+
+* :guilabel:`Map and Legend Options`
+
 
 WMTS capabilities
 -----------------
