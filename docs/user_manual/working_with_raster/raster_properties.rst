@@ -312,8 +312,8 @@ This renderer allows you to render a raster layer using :guilabel:`Single color`
 This type of renderer is useful when you want to display a raster layer
 uniformly, without any variation in color based on pixel values.
 
-The single color renderer can be used with both single-band and multi-band raster layers.
-When used with multi-band rasters, you can select which band to apply the single color to,
+The single color renderer can be used with both single-band and multiband raster layers.
+When used with multiband rasters, you can select which band to apply the single color to,
 effectively displaying that specific band uniformly across the entire layer.
 
 .. _figure_raster_singlecolor:
@@ -660,13 +660,13 @@ in the :guilabel:`Custom transparency options` section:
 
   #. Click the |symbologyAdd| :sup:`Add values manually` button.
      A new row will appear in the pixel list.
-  #. For single-band rasters (e.g. DEMs), enter the **From** and **To** values and
+  #. For single-band based symbology (e.g. DEMs), enter the **From** and **To** values and
      adjust the **Percent Transparent** to apply.
-  #. For multi-band rasters (e.g. RGB images) enter the **Red**, **Green** and **Blue** values of the pixel and
+  #. For multiband based symbology (e.g. RGB images) enter the **Red**, **Green** and **Blue** values of the pixel and
      adjust the **Percent Transparent** to apply.
-     QGIS supports **Tolerance** for pixel values, when defining transpareny.
-     This means that pixels with colors close to the specified RGB values can also
-     be made transparent. Note that this feature applies only to multi-band rasters.
+     QGIS supports **Tolerance** for pixel values, when defining transparency.
+     This means that pixels with color close to the specified RGB values can also
+     be made transparent. Note that this feature applies only to multiband rasters.
   #. Alternatively, you can fetch the pixel values directly from the
      raster using the |contextHelp| :sup:`Add values from display`
      button.
@@ -687,7 +687,7 @@ in the :guilabel:`Custom transparency options` section:
        :align: center
        :width: 100%
 
-       Using tolerances for multi-band rasters
+       Using tolerances for multiband rasters
 
 .. index:: Histogram
 .. _raster_histogram:
