@@ -2005,10 +2005,11 @@ screen resolution, paper size, or the terrain). Available units are:
 Number Formatting
 -----------------
 
-Numeric formatters allow formatting of numeric values for display, using
-a variety of different formatting techniques (for instance scientific notation,
-currency values, percentage values, etc). One use of this is to set
-text in a layout scale bar or fixed table.
+Numeric formatters allow formatting of numeric values for display,
+using a variety of different formatting techniques
+(for instance scientific notation,
+currency values, percentage values, custom formatting, etc).
+One use of this is to set text in a layout scale bar or table, a color ramp legend, an elevation profile plot, ...
 
 .. _figure_number_formatting:
 
@@ -2028,6 +2029,11 @@ But they can also have their custom settings. Provided categories are:
 
 * :guilabel:`General`, the default category: has no setting and displays values
   as set in the parent widget properties or using the global settings.
+
+* :guilabel:`Custom expression`: allows you to craft a custom :ref:`QGIS expression <vector_expressions>` to format numbers.
+  The expression can use the ``@value`` variable to retrieve the value to be formatted,
+  and then use any standard QGIS expression function to format this as desired.
+
 * :guilabel:`Number`
 
   * The value can be :guilabel:`Round to` a self defined number of
