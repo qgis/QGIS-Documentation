@@ -3043,7 +3043,7 @@ Duplicating Actions
 
 QGIS allows you to duplicate existing actions. To duplicate an attribute action, 
 open the vector :guilabel:`Layer Properties` dialog and click on the :guilabel:`Actions` tab. 
-In the :guilabel:`Actions` tab, click the |duplicateAction| :sup:`Duplicate an action`
+In the :guilabel:`Actions` tab, click the |duplicateLayout| :sup:`Duplicate an action`
 to open the :guilabel:`Duplicate Action` dialog. You must have selected at least one existing action 
 in order to create a duplicate.
 
@@ -3854,7 +3854,7 @@ To do so:
    :width: 1.5em
 .. |display| image:: /static/common/display.png
    :width: 1.5em
-.. |duplicateAction| image:: /static/common/mActionDuplicateLayout.png
+.. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
