@@ -105,4 +105,4 @@ Please have a look into one of the documents below.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 3.34
+.. |CURRENT| replace:: 3.40
