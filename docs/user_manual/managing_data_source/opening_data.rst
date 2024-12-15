@@ -1733,7 +1733,7 @@ or :guilabel:`Load Connection` from an XML file.
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |cloud| image:: /static/common/mIconCloud.png
-   :width: 1.5em   
+   :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
@@ -1767,8 +1767,6 @@ or :guilabel:`Load Connection` from an XML file.
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
-   :width: 1.5em
-.. |sourceFields| image:: /static/common/mSourceFields.png
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
