@@ -1314,9 +1314,20 @@ Labels Properties
 =================
 
 The |labelingSingle| :guilabel:`Labels` properties provides you with all the needed
-and appropriate capabilities to configure smart labeling on vector layers. This
-dialog can also be accessed from the :guilabel:`Layer Styling` panel, or using
+and appropriate capabilities to configure smart labeling on vector layers.
+This dialog can also be accessed from the :guilabel:`Layer Styling` panel, or using
 the |labelingSingle| :sup:`Layer Labeling Options` button of the **Labels toolbar**.
+
+At the top of the dialog, you have:
+
+* a combobox for selecting the appropriate labeling method for the active layer
+* the |labelingRules| :sup:`Configure project labeling rules` button:
+  helps you control interactions between labels and features across the layers in the project.
+  More details at :ref:`labeling_rules`.
+* the |autoPlacementSettings| :sup:`Automated placement settings (applies to all layers)` button:
+  configure general properties on label placement and conflicts resolution.
+  More details at :ref:`automated_placement`.
+
 
 The first step is to choose the labeling method from the drop-down list.
 Available methods are:
@@ -1363,6 +1374,54 @@ Below are displayed options to customize the labels, under various tabs:
 
 Description of how to set each property is exposed at :ref:`showlabels`.
 
+.. _labeling_rules:
+
+Configuring project labeling rules
+----------------------------------
+
+Pressing the |labelingRules| :sup:`Configure project labeling rules` button
+next to the labeling method drop-down selector, you can create rules
+that controls how labels from a layer can interact with labels or features
+from another layer.
+
+#. Press the |symbologyAdd| :sup:`Add rule` button and in the drop-down menu,
+   select one of the rule types:
+
+   * :guilabel:`Prevent labels overlapping features`:
+     prevents labels being placed overlapping features from a different layer.
+   * :guilabel:`Pull labels towards features`:
+     prevents labels being placed too far from features from a different layer.
+     The maximum distance can be set in the unit of your choice.
+   * :guilabel:`Push labels away from features`:
+     prevents labels being placed too close to features from a different layer.
+     The minimum distance can be set in the unit of your choice,
+     as well as the rule's priority.
+   * :guilabel:`Push labels away from other labels`:
+     prevents labels being placed too close to labels from a different layer.
+
+   .. attention:: Because the last three require a build based on GEOS >= 3.10,
+    they may not be available on your QGIS installation depending on the underlying
+    GEOS version in use.
+
+#. Fill the properties at your will; you can provide a more meaningful name to the rule.
+#. Press :guilabel:`OK`.
+#. Add as many rules as necessary.
+#. If necessary, press |symbologyEdit| :sup:`Edit rule` to modify the selected rule
+   or |symbologyRemove| :sup:`Remove rule` to delete it from the project.
+
+The set rules are available from any layer :guilabel:`Labels` properties tab,
+pressing the |labelingRules| :sup:`Configure project labeling rules` button.
+You can temporary enable or disable any of them, using the checkbox next to the name.
+Hover over a rule to preview its details.
+
+.. only:: html
+
+   .. figure:: img/labelplacementrules.gif
+      :align: center
+
+      Overview of labeling rules interaction
+
+
 .. index:: Labels; Automated placement
 .. _automated_placement:
 
@@ -1404,7 +1463,7 @@ options:
 * |unchecked| :guilabel:`Show all labels for all layers (i.e. including
   colliding objects)`. Note that this option can be also set per layer (see
   :ref:`labels_rendering`)
-* |unchecked| :guilabel:`Show unplaced labels`: allows to determine whether any
+* |unchecked| :guilabel:`Show unplaced labels`: allows to detemine whether any
   important labels are missing from the maps (e.g. due to overlaps or other
   constraints). They are displayed using a customizable color.
 * |unchecked| :guilabel:`Show candidates (for debugging)`: controls whether boxes
@@ -3893,6 +3952,8 @@ To do so:
 .. |labelingObstacle| image:: /static/common/labelingObstacle.png
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
+   :width: 1.5em
+.. |labelingRules| image:: /static/common/mIconLabelingRules.png
    :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
