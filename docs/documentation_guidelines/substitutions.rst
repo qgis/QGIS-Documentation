@@ -298,6 +298,7 @@ Icon                     Substitution                 Icon                     S
 |moveLabel|              ``|moveLabel|``              |rotateLabel|            ``|rotateLabel|``
 |showPinnedLabels|       ``|showPinnedLabels|``       |showUnplacedLabel|      ``|showUnplacedLabel|``
 |changeLabelProperties|  ``|changeLabelProperties|``  |autoPlacementSettings|  ``|autoPlacementSettings|``
+|labelingRules|          ``|labelingRules|``
 =======================  ===========================  =======================  ===========================
 
 Decorations
@@ -1130,6 +1131,8 @@ Icon                            Substitution                        Icon        
 .. |labelingObstacle| image:: /static/common/labelingObstacle.png
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
+   :width: 1.5em
+.. |labelingRules| image:: /static/common/mIconLabelingRules.png
    :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
