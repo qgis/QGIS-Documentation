@@ -832,39 +832,36 @@ WMS capabilities
 
 In the :guilabel:`WMS` tab, you can define the options for the WMS capabilities.
 
-In the :guilabel:`WMS capabilities` tab, check :guilabel:`Advertised extent`
-to define the extent advertised in the WMS GetCapabilities response.
-The :ref:`spatial extent selector <extent_selector>` widget helps you enter the extent
-as a ``xmin, xmax, ymin, ymax`` text or pick it from the map canvas, layers, bookmarks...
+* Check :guilabel:`Advertised extent`
+  to define the extent advertised in the WMS GetCapabilities response.
+  The :ref:`spatial extent selector <extent_selector>` widget helps you enter the extent
+  as a ``xmin, xmax, ymin, ymax`` text or pick it from the map canvas, layers, bookmarks...
 
-By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
-in which coordinate reference systems (CRS) QGIS Server will offer
-to render maps. It is recommended that you restrict the offered CRS as this
-reduces the size of the WMS GetCapabilities response.
-Use the |symbologyAdd| button below to select those CRSs
-from the Coordinate Reference System Selector, or click :guilabel:`Used`
-to add the CRSs used in the QGIS project to the list.
+* By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
+  in which coordinate reference systems (CRS) QGIS Server will offer
+  to render maps. It is recommended that you restrict the offered CRS as this
+  reduces the size of the WMS GetCapabilities response.
+  Use the |symbologyAdd| button below to select those CRSs
+  from the Coordinate Reference System Selector, or click :guilabel:`Used`
+  to add the CRSs used in the QGIS project to the list.
 
-If you have print layouts defined in your project, they will be listed in the
-``GetProjectSettings`` response, and they can be used by the GetPrint request to
-create prints, using one of the print layouts as a template.
-This is a QGIS-specific extension to the WMS 1.3.0 specification.
-If you want to exclude any print layout from being published by the WMS,
-check |checkbox| :guilabel:`Exclude layouts` and click the
-|symbologyAdd| button below.
-Then, select a print layout from the :guilabel:`Select print layout` dialog
-in order to add it to the excluded layouts list.
+* If you have print layouts defined in your project, they will be listed in the
+  ``GetProjectSettings`` response, and they can be used by the GetPrint request to
+  create prints, using one of the print layouts as a template.
+  This is a QGIS-specific extension to the WMS 1.3.0 specification.
+  If you want to exclude any print layout from being published by the WMS,
+  check |checkbox| :guilabel:`Exclude layouts` and click the |symbologyAdd| button below.
+  Then, select a print layout from the :guilabel:`Select print layout` dialog
+  in order to add it to the excluded layouts list.
 
-If you want to exclude any layer or layer group from being published by the
-WMS, check |checkbox| :guilabel:`Exclude Layers` and click the
-|symbologyAdd| button below.
-This opens the :guilabel:`Select restricted layers and groups` dialog, which
-allows you to choose the layers and groups that you don't want to be published.
-Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries.
-It is recommended that you exclude from publishing the layers that you don't
-need as this reduces the size of the WMS GetCapabilities response which leads
-to faster loading times on the client side.
-
+* If you want to exclude any layer or layer group from being published by the WMS,
+  check |checkbox| :guilabel:`Exclude Layers` and click the |symbologyAdd| button below.
+  This opens the :guilabel:`Select restricted layers and groups` dialog,
+  which allows you to choose the layers and groups that you don't want to be published.
+  Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries.
+  It is recommended that you exclude from publishing the layers that you don't need
+  as this reduces the size of the WMS GetCapabilities response
+  which leads to faster loading times on the client side.
 If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be
 used to reference layers in the ``GetCapabilities`` response or ``GetMap LAYERS``
 parameter. If not, layer name or short name if defined (see :ref:`vectorservermenu`)
