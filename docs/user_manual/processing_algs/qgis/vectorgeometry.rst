@@ -303,27 +303,27 @@ Parameters
        For each of the fields you'd like to retrieve information from,
        you need to define the following:
 
-       ``Input expression`` [expression] (``input``)
+       :guilabel:`Input expression` (``input``) [expression]
          Field or expression from the input layer.
 
-       ``Aggregate function`` [enumeration] (``aggregate``)
+       :guilabel:`Aggregate function` (``aggregate``) [enumeration]
          :ref:`Function <aggregates_function>` to use on the input
          expression to return the aggregated value.
 
          Default: *concatenate* (for string data type), *sum* (for
          numeric data type)
 
-       ``Delimiter`` [string] (``delimiter``)
+       :guilabel:`Delimiter` (``delimiter``) [string]
          Text string to separate aggregated values, for example in
          case of concatenation.
 
          Default: *,*
 
-       ``Output field name`` [string] (``name``)
+       :guilabel:`Output field name` (``name``) [string]
          Name of the aggregated field in the output layer.
          By default input field name is kept.
 
-       ``Type`` [enumeration] (``type``)
+       :guilabel:`Type` (``type``) [enumeration]
          Data type of the output field.
          Available types may not be compatible with the output layer provider.
          One of:
@@ -347,10 +347,10 @@ Parameters
             :start-after: **vector_field_subtypes**
             :end-before: **end_vector_field_subtypes**
 
-       ``Length`` [number] (``length``)
+       :guilabel:`Length` (``length``) [number]
          Length of the output field.
 
-       ``Precision`` [number] (``precision``)
+       :guilabel:`Precision` (``precision``) [number]
          Precision of the output field.
 
    * - **Load fields from layer**
