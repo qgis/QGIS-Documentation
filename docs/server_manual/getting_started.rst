@@ -862,70 +862,73 @@ In the :guilabel:`WMS` tab, you can define the options for the WMS capabilities.
   It is recommended that you exclude from publishing the layers that you don't need
   as this reduces the size of the WMS GetCapabilities response
   which leads to faster loading times on the client side.
-If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be
-used to reference layers in the ``GetCapabilities`` response or ``GetMap LAYERS``
-parameter. If not, layer name or short name if defined (see :ref:`vectorservermenu`)
-is used.
-
-You can receive requested GetFeatureInfo as plain text, XML and GML. The default is XML.
-
-.. _`addGeometryToFeatureResponse` :
-
-If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
-This will include the bounding box for each feature in the GetFeatureInfo response.
-See also the :ref:`WITH_GEOMETRY <wms_getfeatureinfo>` parameter.
-
-As many web clients can’t display circular arcs in geometries you have the option
-to segmentize the geometry before sending it to the client in a GetFeatureInfo
-response. This allows such clients to still display a feature’s geometry
-(e.g. for highlighting the feature). You need to check the
-|checkbox| :guilabel:`Segmentize feature info geometry` to activate the option.
-
-When a layer group is passed to ``GetLegendGraphic`` request,
-all of its leaf layers are added to the legend picture (however without the groups' labels).
-Check the |checkbox| :guilabel:`Add layer groups in GetLegendGraphic` option
-if you want to also insert the layer groups (and subgroups) names
-into the layer tree, just like in QGIS Desktop legend.
-
-When QGIS project contains layer groups, they are listed in WMS capabilities document alongside with layers.
-If a group (its name as listed in capabilities) is included in WMS GetMap ``LAYERS`` parameter
-alongside with names of layers in that group, QGIS would duplicate the layers:
-once for the group and once for specific layer.
-If you check the |checkbox| :guilabel:`Skip name attribute for groups` option,
-GetCapabilities will only return title attribute for the group but not its name attribute,
-making it impossible to include groups in list of layers of GetMap request.
-
-You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
-set the precision of the GetFeatureInfo geometry. This enables you to save
-bandwidth when you don't need the full precision.
-
-If you want QGIS Server to advertise specific request URLs
-in the WMS GetCapabilities response, enter the corresponding URL in the
-:guilabel:`Advertised URL` field.
-
-Furthermore, you can restrict the maximum size of the maps returned by the
-GetMap request by entering the maximum width and height into the respective
-fields under :guilabel:`Maximums for GetMap request`.
-
-You can change the :guilabel:`Quality for JPEG images` factor. The quality factor must be
-in the range 0 to 100. Specify 0 for maximum compression, 100 for no compression.
-
-You can change the limit for atlas features to be printed in one request by setting the
-:guilabel:`Maximum features for Atlas print requests` field.
-
-When QGIS Server is used in tiled mode (see :ref:`TILED parameter <wms_tiled>`), you can set the
-:guilabel:`Tile buffer in pixels`. The recommended value is the size of the largest
-symbol or line width in your QGIS project.
-
-If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to show text using
-expressions) this will be listed inside the GetFeatureInfo output. If the
-layer uses a Value Map for one of its attributes, this information will also
-be shown in the GetFeatureInfo output.
 
 * :guilabel:`Layer and Feature Options`
 
+  * If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be used 
+    to reference layers in the ``GetCapabilities`` response or ``GetMap LAYERS`` parameter.
+    If not, layer name or short name if defined (see :ref:`vectorservermenu`) is used.
+
+  * You can receive requested GetFeatureInfo as plain text, XML and GML. The default is XML.
+
+  .. _`addGeometryToFeatureResponse` :
+
+  * If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
+    This will include the bounding box for each feature in the GetFeatureInfo response.
+    See also the :ref:`WITH_GEOMETRY <wms_getfeatureinfo>` parameter.
+
+  * As many web clients can’t display circular arcs in geometries you have the option
+    to segmentize the geometry before sending it to the client in a GetFeatureInfo
+    response. This allows such clients to still display a feature’s geometry
+    (e.g. for highlighting the feature). You need to check the
+    |checkbox| :guilabel:`Segmentize feature info geometry` to activate the option.
+
+  * You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
+    set the precision of the GetFeatureInfo geometry. This enables you to save
+    bandwidth when you don't need the full precision.
+
+  * If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to show text using
+    expressions) this will be listed inside the GetFeatureInfo output.
+    If the layer uses a Value Map for one of its attributes,
+    this information will also be shown in the GetFeatureInfo output.
+
+  * If you want QGIS Server to advertise specific request URLs in the WMS GetCapabilities response,
+    enter the corresponding URL in the :guilabel:`Advertised URL` field.
 
 * :guilabel:`Map and Legend Options`
+
+  * When a layer group is passed to ``GetLegendGraphic`` request,
+    all of its leaf layers are added to the legend picture (however without the groups' labels).
+    Check the |checkbox| :guilabel:`Add layer groups in GetLegendGraphic` option
+    if you want to also insert the layer groups (and subgroups) names
+    into the layer tree, just like in QGIS Desktop legend.
+
+  * When QGIS project contains layer groups, they are listed in WMS capabilities document alongside with layers.
+    If a group (its name as listed in capabilities) is included in WMS GetMap ``LAYERS`` parameter
+    alongside with names of layers in that group, QGIS would duplicate the layers:
+    once for the group and once for specific layer.
+    If you check the |checkbox| :guilabel:`Skip name attribute for groups` option,
+    GetCapabilities will only return title attribute for the group but not its name attribute,
+    making it impossible to include groups in list of layers of GetMap request.
+
+  * Furthermore, you can restrict the maximum size of the maps returned by the requests
+    by entering the maximum width and height into the respective fields
+    under :guilabel:`Maximum image size for GetMap and GetLegendGraphic requests`.
+
+  * You can change the :guilabel:`Quality for JPEG and WebP images` factor.
+    The quality factor must be in the range 0 to 100.
+    Specify 0 for maximum compression, 100 for no compression.
+
+  * You can change the limit for atlas features to be printed in one request
+    by setting the :guilabel:`Maximum features for Atlas print requests` field.
+
+  * When QGIS Server is used in tiled mode (see :ref:`TILED parameter <wms_tiled>`),
+    you can set the :guilabel:`Tile buffer in pixels`.
+    The recommended value is the size of the largest symbol or line width in your QGIS project.
+  * Depending on whether the map uses a projected CRS or a geographic CRS
+    and if there is no information to evaluate the map unit sized symbols,
+    you can provide reference for size through either a :guilabel:`Default scale for legend`
+    or :guilabel:`Default map units per mm in legend`.
 
 
 WMTS capabilities
