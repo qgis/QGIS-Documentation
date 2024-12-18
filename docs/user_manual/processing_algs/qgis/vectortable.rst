@@ -950,13 +950,26 @@ Parameters
        :guilabel:`Type` (``type``) [enumeration]
          Data type of the output field.
          Available types may not be compatible with the output layer provider.
-         Depending on the field type, an additional ``sub_type`` parameter may be required
-         when running the algorithm in Python code or command line.
          One of:
+
+         .. attention:: For certain field types, e.g. lists,
+          an extra ``sub_type`` parameter helps refine the the specific type of the data.
+          It is automatically set in the GUI but may be needed
+          if you're running the algorithm in Python or from the command line.
 
          .. include:: ../algs_include.rst
             :start-after: **vector_field_types**
             :end-before: **end_vector_field_types**
+
+       :guilabel:`Sub-type` (``sub_type``) [enumeration]
+         For certain field types, e.g. lists, this parameter helps refine the specific ``type`` of the data.
+         It is automatically set in the GUI but may be needed
+         if you're running the algorithm in Python or from the command line.
+         One of:
+
+         .. include:: ../algs_include.rst
+            :start-after: **vector_field_subtypes**
+            :end-before: **end_vector_field_subtypes**
 
        :guilabel:`Length` (``length``) [number]
          Length of the output field.
