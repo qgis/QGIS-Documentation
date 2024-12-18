@@ -1395,7 +1395,9 @@ from another layer.
    * :guilabel:`Push labels away from features`:
      prevents labels being placed too close to features from a different layer.
      The minimum distance can be set in the unit of your choice,
-     as well as the rule's priority.
+     as well as the :ref:`rule's priority <labels_priority>`
+     (The highest-priority rules are more important to respect
+     in the event of a label placement conflict).
    * :guilabel:`Push labels away from other labels`:
      prevents labels being placed too close to labels from a different layer.
 
