@@ -934,8 +934,8 @@ In the :guilabel:`WMS` tab, you can define the options for the WMS capabilities.
 WMTS capabilities
 -----------------
 
-In the :guilabel:`WMTS capabilities` tab you can select the layers you
-want to publish as WMTS and specify if you want to publish as PNG or JPEG.
+In the :guilabel:`WMTS` tab you can select the layers you want to publish as WMTS
+and specify if you want to publish as PNG or JPEG.
 
 .. _figure_wmts_definitions:
 
@@ -944,14 +944,13 @@ want to publish as WMTS and specify if you want to publish as PNG or JPEG.
 
    Definitions in the WMTS tab
 
-If you enter a URL in the :guilabel:`Advertised URL` field of the
-:guilabel:`WMTS capabilities` section, QGIS Server will advertise this specific
-URL in the WMTS GetCapabilities response.
+If you enter a URL in the :guilabel:`Advertised URL` field,
+QGIS Server will advertise this specific URL in the WMTS GetCapabilities response.
 
 WFS/OAPIF capabilities
 ----------------------
 
-In the :guilabel:`WFS/OAPIF capabilities` tab, you can select the layers you
+In the :guilabel:`WFS/OAPIF` tab, you can select the layers you
 want to publish as WFS or OAPIF, and specify if they will allow update, insert and
 delete operations.
 
@@ -962,15 +961,13 @@ delete operations.
 
    Definitions in the WFS/OAPIF tab
 
-If you enter a URL in the :guilabel:`Advertised URL` field of the
-:guilabel:`WFS capabilities` section, QGIS Server will advertise this specific
-URL in the WFS GetCapabilities response.
+If you enter a URL in the :guilabel:`Advertised URL` field,
+QGIS Server will advertise this specific URL in the WFS GetCapabilities response.
 
 WCS capabilities
 ----------------
 
-In the :guilabel:`WCS capabilities` tab, you can select the layers that you
-want to publish as WCS.
+In the :guilabel:`WCS` tab, you can select the layers that you want to publish as WCS.
 
 .. _figure_wcs_definitions:
 
@@ -986,25 +983,26 @@ this specific URL in the WCS GetCapabilities response.
 Fine tuning your OWS
 ----------------------
 
-For vector layers, the :guilabel:`Fields` menu of the :menuselection:`Layer -->
-Layer Properties` dialog allows you to define for each
-attribute if it will be published or not.
+For vector layers, the :guilabel:`Fields` tab of the :menuselection:`Layer -->
+Layer Properties` dialog allows you to define for each attribute if it will be published or not.
 By default, all the attributes are published by your WMS and WFS.
-If you don't want a specific attribute to be published, uncheck the corresponding
-checkbox in the :guilabel:`WMS` or :guilabel:`WFS` column.
+If you don't want a specific attribute to be published, uncheck the appropriate
+checkbox in the :guilabel:`Configuration` column:
+
+* :guilabel:`Do not expose in WFS`
+* :guilabel:`Do not expose in WMS`
 
 You can overlay watermarks over the maps produced by your WMS by adding text
 annotations or SVG annotations to the project file.
-See the :ref:`sec_annotations` section for instructions on
-creating annotations. For annotations to be displayed as watermarks on the WMS
-output, the :guilabel:`Fixed map position` checkbox in the
+See the :ref:`sec_annotations` section for instructions on creating annotations.
+For annotations to be displayed as watermarks on the WMS output,
+the :guilabel:`Fixed map position` checkbox in the
 :guilabel:`Annotation text` dialog must be unchecked.
-This can be accessed by double clicking the annotation while one of the
-annotation tools is active.
-For SVG annotations, you will need either to set the project to save absolute
-paths (in the :guilabel:`General` menu of the
-:menuselection:`Project --> Properties...` dialog) or to manually modify
-the path to the SVG image so that it represents a valid relative path.
+This can be accessed by double clicking the annotation
+while one of the annotation tools is active.
+For SVG annotations, you will need either to set the project to save absolute paths
+(in the :guilabel:`General` menu of the :menuselection:`Project --> Properties...` dialog)
+or to manually modify the path to the SVG image so that it represents a valid relative path.
 
 
 Integration with third parties
@@ -1016,15 +1014,15 @@ thus it can be used by a wide variety of end user tools.
 Integration with QGIS Desktop
 -----------------------------
 
-QGIS Desktop is the map designer where QGIS Server is the map server. The maps or
-QGIS projects will be served by the QGIS Server to provide OGC standards. These QGIS
-projects can either be files or entries in a database (by using
-:menuselection:`Project --> Save to --> PostgreSQL` in QGIS Desktop).
+QGIS Desktop is the map designer where QGIS Server is the map server.
+The maps or QGIS projects will be served by the QGIS Server to provide OGC standards.
+These QGIS projects can either be files or entries in a database
+(by using :menuselection:`Project --> Save to --> PostgreSQL` in QGIS Desktop).
 
 Furthermore, dedicated update workflow must be established to refresh a project used
-by a QGIS Server (ie. copy project files into server location and restart QGIS
-Server). For now, automated processes (as server reloading over message queue
-service) are not implemented yet.
+by a QGIS Server (ie. copy project files into server location and restart QGIS Server).
+For now, automated processes (as server reloading over message queue service)
+are not implemented yet.
 
 
 Integration with MapProxy
