@@ -2428,11 +2428,26 @@ They can be used to enhance the appearance of the form or to display dynamically
 
      A preview of your image is displayed on the right.
 
-* :guilabel:`QML Widget`: embeds a QML page, the QML source may contain the result of dynamically calculated expressions.
+* :guilabel:`QML Widget`: embeds a Qt QML_ document, displaying graphical elements in the attribute form.
+  Beside the custom :guilabel:`Title` of the added widget and whether it should be shown or not,
+  you can select from predefined :guilabel:`QML code` elements:
+
+  * :guilabel:`Free text...`: allows you to write from scratch or paste an existing code
+  * :guilabel:`Rectangle`: provides a minimal code for displaying a rectangle
+  * :guilabel:`Bar chart`: provides a minimal code for displaying a bar chart
+  * :guilabel:`Pie chart`: provides a minimal code for displaying a pie chart
+
+  You can extend the code with QML syntax, use layer fields or QGIS expressions
+  that are dynamically calculated.
+
+  .. Todo: Add a gif showing different types of QML widgets,
+   like in https://github.com/qgis/QGIS/pull/7801, but better sized
+
 * :guilabel:`Text Widget`: displays a text widget which supports basic HTML markup
   and may contain the result of dynamically calculated expressions.
 * :guilabel:`Spacer Widget`: inserts an empty transparent rectangle, increasing the vertical distance between two widgets.
 
+.. _QML: https://doc.qt.io/qt-5/qtqml-syntax-basics.html
 
 .. tip:: **Display Dynamic Content**
 
