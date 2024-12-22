@@ -502,12 +502,16 @@ msgid ""
 "System as well as the ``BBOX`` CRS and has to be formed like ``EPSG:XXXX``."
 msgstr ""
 "Ce paramètre permet d'indiquer le Système de Référence Spatial de sortie de "
-"la réponse ainsi que le SCR ``BBOX``` et doit être formé comme "
+"la réponse ainsi que le SCR de la ``BBOX`` et doit être formaté comme "
 "``EPSG:XXXX``."
 
 #: ../../docs/server_manual/services/wfs.rst:352
 msgid "FILTER"
 msgstr "FILTER"
+
+#: ../../docs/server_manual/services/wfs.rst:378
+msgid "Filter features that intersect with a polygon:"
+msgstr "Filtre les entités qui intersectent un polygone :"
 
 #: ../../docs/server_manual/services/wfs.rst:408
 msgid "BBOX"
@@ -527,7 +531,7 @@ msgid ""
 "The ``SRSNAME`` parameter may specify the CRS of the extent. If not "
 "specified, the CRS of the layer is used."
 msgstr ""
-"L paramètre ``SRSNAME``peut spécifier le SCR de l'étendue. S'il n'est pas "
+"Le paramètre ``SRSNAME`` peut spécifier le SCR de l'étendue. S'il n'est pas "
 "spécifié, le SCR de la couche est utilisé."
 
 #: ../../docs/server_manual/services/wfs.rst:427
@@ -614,6 +618,10 @@ msgstr "``extent``"
 msgid "``centroid``"
 msgstr "``centroid``"
 
+#: ../../docs/server_manual/services/wfs.rst:509
+msgid "``none``"
+msgstr "``none``"
+
 #: ../../docs/server_manual/services/wfs.rst:526
 msgid "STARTINDEX"
 msgstr "STARTINDEX"
@@ -638,6 +646,15 @@ msgstr ""
 #: ../../docs/server_manual/services/wfs.rst:550
 msgid "EXP_FILTER"
 msgstr "EXP_FILTER"
+
+#: ../../docs/server_manual/services/wfs.rst:552
+msgid ""
+"This parameter allows to filter the response with QGIS expressions. The "
+"``;`` character is used to separate filters in case of multiple typenames."
+msgstr ""
+"Ce paramètre permet de filtrer les réponses à l'aide d'expressions QGIS. Le "
+"caractère ``;`` est utilisé pour séparer les filtres lorsqu'il y en a "
+"plusieurs."
 
 #: ../../docs/server_manual/services/wfs.rst:569
 msgid "DescribeFeatureType"

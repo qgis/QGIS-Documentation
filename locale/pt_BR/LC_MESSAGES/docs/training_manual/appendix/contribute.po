@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
+# Gabryel Nóbrega, 2024
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Last-Translator: Gabryel Nóbrega, 2024\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +38,18 @@ msgstr ""
 msgid "Appendix: Contributing To This Manual"
 msgstr "Apêndice: Contribuindo para este manual"
 
+#: ../../docs/training_manual/appendix/contribute.rst:5
+msgid ""
+"To add materials to this course, you must follow the guidelines in this "
+"Appendix. You are not allowed to alter the conditions in this Appendix "
+"except for clarification. This is to ensure that the quality and consistency"
+" of this manual can be maintained."
+msgstr ""
+"Para adicionar materiais a este curso, você deve seguir as diretrizes neste "
+"Apêndice. Você não deve alterar as condições neste Apêndice, exceto para "
+"esclarecimentos. Isto é para garantir que a qualidade e consistência deste "
+"manual pode ser mantida."
+
 #: ../../docs/training_manual/appendix/contribute.rst:10
 msgid "Downloading Resources"
 msgstr "Download de recursos"
@@ -57,9 +70,72 @@ msgstr ""
 msgid "Manual Format"
 msgstr "Formato do Manual"
 
+#: ../../docs/training_manual/appendix/contribute.rst:19
+msgid ""
+"This manual is written using `Sphinx <https://www.sphinx-"
+"doc.org/en/master/>`_, a Python document generator using the "
+"`reStructuredText <https://docutils.sourceforge.io/rst.html>`_ markup "
+"language. Instructions on how to use these tools are available on their "
+"respective sites."
+msgstr ""
+"Este manual é escrito usando `Sphinx <https://www.sphinx-"
+"doc.org/en/master/>`_, um gerador de documentos Python usando linguagem de "
+"marcação `reStructuredText <http://docutils.sourceforge.net/rst.html>`_ . "
+"Instruções sobre como usar essas ferramentas estão disponíveis em seus "
+"respectivos sites."
+
 #: ../../docs/training_manual/appendix/contribute.rst:25
 msgid "Adding a Module"
 msgstr "Adicionando um módulo"
+
+#: ../../docs/training_manual/appendix/contribute.rst:27
+msgid "To add a new module:"
+msgstr "Para adicionar um novo módulo:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:29
+msgid ""
+"First create a new directory (directly under the  top-level of the "
+":file:`qgis-training-manual` directory) with the name of the new module."
+msgstr ""
+"Primeiramente crie um novo diretório (logo abaixo do nível mais alto do "
+"diretório do :arquivo:`qgis-training-manual`) com o nome do novo módulo."
+
+#: ../../docs/training_manual/appendix/contribute.rst:31
+msgid ""
+"Under this new directory, create a file called :file:`index.rst`. Leave this"
+" file blank for now."
+msgstr ""
+"Abaixo desse novo diretório, crie um arquivo chamado :arquivo:`index.rst`. "
+"Deixe em branco por enquanto."
+
+#: ../../docs/training_manual/appendix/contribute.rst:33
+msgid ""
+"Open the :file:`index.rst` file under the top-level directory. Its first "
+"lines are::"
+msgstr ""
+"Abra o :arquivo:`index.rst` abaixo do diretório no nível mais alto. As "
+"primeiras linhas são::"
+
+#: ../../docs/training_manual/appendix/contribute.rst:42
+msgid ""
+"You will note that this is a list of directory names, followed by the name "
+"``index``. This directs the top-level index file to the index files in each "
+"directory. The order in which they are listed determines the order they will"
+" have in the document."
+msgstr ""
+"Observarás que es uma lista de diretórios, seguido pelo nome ``index``. Isto"
+" determina o nível superior do arquivo índice a cada diretório. A ordem em "
+"que estão listados determina a ordem que terão no documento."
+
+#: ../../docs/training_manual/appendix/contribute.rst:46
+msgid ""
+"Add the name of your new module (i.e., the name you gave the new directory),"
+" followed by ``/index``, to this list, wherever you want your module to "
+"appear."
+msgstr ""
+"Adicione o nome do seu módulo (por exemplo, o nome que deu ao novo "
+"diretório), seguido por ``\\index``, para essa lista, sempre que quiser que "
+"seu módulo apareça."
 
 #: ../../docs/training_manual/appendix/contribute.rst:48
 msgid ""
@@ -68,6 +144,21 @@ msgid ""
 msgstr ""
 "Recuerda mantener el orden de los módulos de forma lógica, de forma que los "
 "módulos finales se basen en el conocimiento presentado por los iniciales."
+
+#: ../../docs/training_manual/appendix/contribute.rst:50
+msgid ""
+"Open your new module's own index file (:file:`{module_name}/index.rst`)."
+msgstr ""
+"Abra o arquivo índice do seu novo módulo "
+"(:arquivo:`{nome_do_modulo}/index.rst`)."
+
+#: ../../docs/training_manual/appendix/contribute.rst:51
+msgid "Along the top of the page, create the module heading:"
+msgstr "Junto com o topo da página, crie o cabeçalho do módulo:"
+
+#: ../../docs/training_manual/appendix/contribute.rst:53
+msgid "write a first line of asterisks (``*``)."
+msgstr "escreva a primeira linha com asteriscos (``*``)."
 
 #: ../../docs/training_manual/appendix/contribute.rst:61
 msgid "Leave a line open beneath this."
