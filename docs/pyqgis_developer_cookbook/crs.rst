@@ -126,7 +126,7 @@ Output:
    Ellipsoid Acronym: EPSG:7030
    Proj String: +proj=longlat +datum=WGS84 +no_defs
    Is geographic: True
-   Map units: DistanceUnit.Degrees
+   Map units: 6
 
 .. index:: Projections
 
