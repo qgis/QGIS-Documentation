@@ -450,6 +450,46 @@ layer types:
 
      Examples of raster lines
 
+
+.. _linear_referencing_symbol:
+
+* **Linear referencing**: allows placing text labels at regular intervals along a line,
+  or at positions corresponding to existing vertices.
+  Positions can be calculated using Cartesian distances, or interpolated from z/m values.
+  Parameters include:
+
+  * :guilabel:`Measure placement`: Labels can be placed at regular cartesian 2d distances,
+    at regular linearly interpolated spacing calculated using the Z or M values in geometries,
+    or at existing vertices.
+    A fixed or data-defined :guilabel:`Interval` is given.
+  * :guilabel:`Quantity`: Label displayed at each position represent the running distance along the line,
+    or the linearly interpolated Z or M value.
+    Labels are rendered using the full range of :ref:`text <text_format>`
+    and :ref:`number <number_formatting>` formatting functionalities available in QGIS.
+
+  .. note::
+
+    When using the distance-based placement or labels, the distances are calculated using 2D only.
+    Cartesian calculations are based on the original layer CRS.
+
+  * :guilabel:`Skip multiples of`: If set, labels which are a multiple of this value will be skipped over.
+    This allows construction of complex referencing labels, e.g. where a symbol has two linear referencing symbol layers,
+    one set to label every 100m in a small font, skipping multiples of 1000,
+    and a second set to label every 1000m in a big bold font.
+  * :guilabel:`Avergare angle over`: Labels are rendered using an angle calculated by averaging the linestring,
+    so sharp tiny jaggies don't result in unslightly label rotation
+  * :guilabel:`Show marker symbols`, at referenced points in the line feature, using a full QGIS marker symbol.
+    This allows e.g. showing a cross-hatch at the labeled point, for a "ruler" style line.
+
+  .. _figure_linear_referencing_symbol:
+
+  .. figure:: img/linearReferencingSymbol.png
+     :align: center
+     :width: 100%
+
+     Drawing linear labels along line feature
+
+
 .. _lineburst_symbol:
 
 * **Lineburst**: renders a gradient along the width of a line.
