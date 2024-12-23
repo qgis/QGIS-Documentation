@@ -209,6 +209,25 @@ we invite you to explore and test in your labels
 * Text decorations such as underline, overline and line-through (``text-decoration``)
 * Text alignment (``vertical-align``, ``text-align``).
   Horizontal alignment can not be used for curved labels.
+* Line height, in ``points`` or ``percent`` unit, e.g. "line-height: 40pt" or "line-height: 40%"
+* Background properties such as ``background-color`` and ``background-image``.
+  They are supported for block type items (e.g. ``div``) or inline items (e.g. ``span``).
+  For images, the CSS should be formatted as ``background-image: url(xx)``
+  and supports local file paths, HTTP links, or base64 embedded content.
+
+  .. attention:: Backgrounds are not supported for curved text and are always rendered
+   above any background shape for the label, and below drop shadows/buffers properties.
+
+* Margin properties, available for block type items only, such as ``div``, ``p``, ``h1``,...
+  They can be specified in either the longhand or shorthand way, in ``points`` unit only.
+  Negative values can be set for the bottom margin.
+
+  .. code-block:: html
+
+    <div class="myDiv">
+      <h2 style="margin-left: 5pt; margin-right: 10pt">QGIS still rocks...</h2>
+      <p style="margin: 5pt 0pt -10pt 0pt">Thanks to you!!</p>
+    </div>
 
 CSS properties can be set on HTML tags with the ``style`` attribute.
 The HTML tag ``span`` does not apply any formatting to text by itself
