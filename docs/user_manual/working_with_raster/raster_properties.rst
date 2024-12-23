@@ -1014,7 +1014,7 @@ pixels identification:
   You can check the result of your code sample in the :guilabel:`Preview` frame. You can also select and
   edit existing expressions using the :guilabel:`Insert/Edit Expression` button.
 
-   .. note:: Understanding the :guilabel:`Insert/Edit Expression` button behavior
+  .. note:: **Understanding the** :guilabel:`Insert/Edit Expression` **button behavior**
 
     If you select some text within an expression (between "[%" and "%]"),
     or if no text is selected but the cursor is inside an expression,
