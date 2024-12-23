@@ -52,8 +52,11 @@ You can enter any word or phrase on the text box. Notice that, as you type, the
 number of algorithms, models or scripts in the toolbox is reduced to just those
 that contain the text you have entered in their names or keywords.
 
-.. note:: At the top of the list of algorithms are displayed the most recent
- used tools; handy if you want to reexecute any.
+.. note:: The top of the algorithm list shows the most recently used tools,
+   making it convenient to reexecute them. Additionally, you can manually
+   add or remove Processing algorithms to/from your :guilabel:`Favorites` list. Unlike
+   the :guilabel:`Recently Used` list, the :guilabel:`Favorites` list remains static and is not
+   affected by which algorithms were executed.
 
 .. _figure_toolbox_search:
 
