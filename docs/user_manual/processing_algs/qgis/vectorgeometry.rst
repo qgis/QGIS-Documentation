@@ -307,8 +307,9 @@ Parameters
          Field or expression from the input layer.
 
        :guilabel:`Aggregate function` (``aggregate``) [enumeration]
-         :ref:`Function <aggregates_function>` to use on the input
-         expression to return the aggregated value.
+         Function to use on the input expression to return the aggregated value.
+         These are mainly the :ref:`aggregates_function`, plus dedicated
+         "first_value" and "last_value" functions for ordered list items.
 
          Default: *concatenate* (for string data type), *sum* (for
          numeric data type)
