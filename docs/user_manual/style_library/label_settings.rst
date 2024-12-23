@@ -268,6 +268,10 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
 
 * Under :guilabel:`Spacing`, change the space between words and between
   individual letters.
+* With :guilabel:`Tab distance` you can adjust the replacement spacing
+  for :kbd:`Tab` characters in the label, in any supported unit.
+  This allows e.g. to properly separate or vertically align elements
+  of a layout legend text.
 * :guilabel:`Stretch` ratio: allows text to be horizontally stretched or
   condensed by a factor. Handy for tweaking the widths of fonts to fit a bit
   of extra text into labels.
