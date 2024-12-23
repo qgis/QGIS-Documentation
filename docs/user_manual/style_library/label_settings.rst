@@ -272,6 +272,12 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
   for :kbd:`Tab` characters in the label, in any supported unit.
   This allows e.g. to properly separate or vertically align elements
   of a layout legend text.
+
+  Pressing the |options| :sup:`Configure tab stops` button on the right,
+  you can add a list of tab positions, instead of a single distance.
+  This allows e.g. the creation of table-like multiline labels,
+  where texts are split over different "columns" and lined up nicely,
+  based on the :kbd:`Tab` characters.
 * :guilabel:`Stretch` ratio: allows text to be horizontally stretched or
   condensed by a factor. Handy for tweaking the widths of fonts to fit a bit
   of extra text into labels.
@@ -1051,6 +1057,8 @@ Under :guilabel:`Feature options`:
    :width: 1.5em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
 .. |render| image:: /static/common/render.png
