@@ -118,15 +118,19 @@ You can setup some parameters that apply to the global symbol:
     geometry is unchanged. This allows for creation of fill symbols with consistent
     appearance, regardless of the dataset being rendered and the ring orientation
     of individual features.
+  * for marker symbols, the :guilabel:`Buffer settings...` enables addition of a halo effect
+    around the marker symbol in order to make it more readable against different backgrounds.
+    The buffer is calculated and drawn using the shape of ALL the symbol layers in the marker.
+    You can adjust the :guilabel:`Size`, :guilabel:`Join style` and :guilabel:`Symbol` of display. 
+
   * Depending on the :ref:`symbology <vector_style_menu>` of the layer a symbol is
-    being applied to, additional settings are available in the :guilabel:`Advanced`
-    menu:
+    being applied to, additional settings are available in the :guilabel:`Advanced` menu:
 
     * :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols rendering
     * :ref:`Data-defined Size Legend <data_defined_size_legend>`
     * :guilabel:`Match to Saved Symbols...` and :guilabel:`Match to Symbols from File...`
       to automatically :ref:`assign symbols to classes <categorized_advanced_menu>`
-    * :ref:`Animation settings <animation_settings>` 
+    * :ref:`Animation settings <animation_settings>`
 
 .. _symbol_layer:
 
