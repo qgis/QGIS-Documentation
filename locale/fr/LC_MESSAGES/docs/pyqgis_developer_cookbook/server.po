@@ -241,6 +241,22 @@ msgstr ""
 "Voici un exemple minimal d'utilisation de l'API QGIS Server (sans la partie "
 "HTTP) :"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:147
+msgid ""
+"Here is a complete standalone application example developed for the "
+"continuous integrations testing on QGIS source code repository, it showcases"
+" a wide set of different plugin filters and authentication schemes (not mean"
+" for production because they were developed for testing purposes only but "
+"still interesting for learning): :source:`qgis_wrapped_server.py "
+"<tests/src/python/qgis_wrapped_server.py>`"
+msgstr ""
+"Voici un exemple complet d'application autonome développée pour le test "
+"continu des intégrations sur le dépôt de code source de QGIS, il présente un"
+" large ensemble de filtres de plugins et de schémas d'authentification "
+"différents (non destinés à la production car ils ont été développés à des "
+"fins de test uniquement mais toujours intéressants pour l'apprentissage) : "
+":source:`qgis_wrapped_server.py <tests/src/python/qgis_wrapped_server.py>`"
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:154
 msgid "Server plugins"
 msgstr "Plugins de serveur"
@@ -404,6 +420,17 @@ msgstr ""
 "manipuler toutes ses propriétés (entrée/sortie) et lever des exceptions "
 "(mais d'une manière assez particulière comme nous le verrons plus loin)."
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:210
+msgid ""
+"All these methods return a boolean value indicating if the call should be "
+"propagated to the subsequent filters. If one of these method returns "
+":const:`False` then the chain stop, otherwise the call will propagate to the"
+" next filter."
+msgstr ""
+"Toutes ces méthodes renvoient un booléen indiquant si l'appel devrait être "
+"propagé aux filtres suivants. Si une de ces méthodes renvoie :const:`False` "
+"alors le processus s'arrête, sinon l'appel est transféré au filtre suivant."
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:214
 msgid ""
 "Here is the pseudo code showing how the server handles a typical request and"
@@ -464,9 +491,70 @@ msgstr ""
 msgid "onSendResponse"
 msgstr "onSendResponse"
 
+#: ../../docs/pyqgis_developer_cookbook/server.rst:255
+msgid ""
+"This is called whenever any partial output is flushed from response buffer "
+"(i.e to **FCGI** ``stdout`` if the fcgi server is used) and from there, to "
+"the client. This occurs when huge content is streamed (like WFS GetFeature)."
+" In this case :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` may be called multiple times."
+msgstr ""
+"Elle est appelée chaque fois qu'une sortie partielle est évacuée du tampon "
+"de réponse (c'est-à-dire vers **FCGI** ``stdout`` si le serveur fcgi est "
+"utilisé) et de là, vers le client. Cela se produit lorsque des contenus "
+"volumineux sont diffusés (comme WFS GetFeature). Dans ce cas "
+":meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` peut "
+"être appelé plusieurs fois."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:260
+msgid ""
+"Note that if the response is not streamed, then :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` will not be called at all."
+msgstr ""
+"Notez que si la réponse n'est pas streamée, alors :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` ne sera pas appelée du tout."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:262
+msgid ""
+"In all case, the last (or unique) chunk will be sent to client after a call "
+"to :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`."
+msgstr ""
+"Dans tous les cas, le dernier (ou unique) paquet sera envoyé après l'appel à"
+" :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:265
+msgid ""
+"Returning :const:`False` will prevent flushing of data to the client. This "
+"is desirable when a plugin wants to collect all chunks from a response and "
+"examine or change the response in :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`."
+msgstr ""
+"Renvoyer :const:`False` empêchera l'évacuation des données vers le client. "
+"Ceci est souhaitable lorsqu'une extension veut collecter tous les morceaux "
+"d'une réponse et examiner ou modifier la réponse dans "
+":meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>`."
+
 #: ../../docs/pyqgis_developer_cookbook/server.rst:271
 msgid "onResponseComplete"
 msgstr "onResponseComplete"
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:273
+msgid ""
+"This is called once when core services (if hit) finish their process and the"
+" request is ready to be sent to the client. As discussed above, this method "
+"will be called before the last (or unique) chunk of data is sent to the "
+"client. For streaming services, multiple calls to :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` might have been called."
+msgstr ""
+"Il est appelé une fois lorsque les services centraux (s'ils sont touchés) "
+"ont terminé leur processus et que la demande est prête à être envoyée au "
+"client. Comme indiqué ci-dessus, cette méthode est appelée avant l'envoi du "
+"dernier (ou unique) paquet de données au client. Pour les services de "
+"streaming, plusieurs appels à :meth:`onSendResponse() "
+"<qgis.server.QgsServerFilter.onSendResponse>` auraient pu être effectués."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:279
 msgid ""
@@ -482,6 +570,18 @@ msgstr ""
 "personnalisés) et pour effectuer une manipulation directe de la sortie "
 "provenant des services de base (par exemple pour ajouter un filigrane sur "
 "une image WMS)."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:284
+msgid ""
+"Note that returning :const:`False` will prevent the next plugins to execute "
+":meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` but, in any case, prevent "
+"response to be sent to the client."
+msgstr ""
+"A noter que renvoyer :const:`False` empêchera les extensions suivantes "
+"d'exécuter :meth:`onResponseComplete() "
+"<qgis.server.QgsServerFilter.onResponseComplete>` mais en aucun cas, "
+"n'empêchera l'envoi de la réponse au client.."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:290
 msgid "Raising exceptions from a plugin"
@@ -551,6 +651,21 @@ msgid ""
 msgstr ""
 "Seuls les plugins qui ont le jeu de métadonnées ``server=True`` seront "
 "chargés et exécutés par QGIS Server."
+
+#: ../../docs/pyqgis_developer_cookbook/server.rst:324
+msgid ""
+"The `qgis3-server-vagrant <https://github.com/elpaso/qgis3-server-"
+"vagrant/tree/master/resources/web/plugins>`_ example plugin discussed here "
+"(with many more) is available on github, a few server plugins are also "
+"published in the official `QGIS plugins repository "
+"<https://plugins.qgis.org/plugins/server>`_."
+msgstr ""
+"L'exemple de l'extension `qgis3-server-vagrant "
+"<https://github.com/elpaso/qgis3-server-"
+"vagrant/tree/master/resources/web/plugins>`_ discutée ici (ainsi que "
+"d'autres) est disponible sur GitHub, quelques extensions pour serveur sont "
+"aussi publiées sur le `dépôt officiel d'extensions de QGIS "
+"<https://plugins.qgis.org/plugins/server>`_."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:329
 #: ../../docs/pyqgis_developer_cookbook/server.rst:554
