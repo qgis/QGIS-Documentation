@@ -2639,11 +2639,12 @@ Default values
 Policies
 ^^^^^^^^
 
-:guilabel:`Policies` allows you to determine how values are assigned to the field when :guilabel:`Splitting features`:
+:guilabel:`Policies` allows you to determine how values are assigned to the field
+when :guilabel:`Splitting features` or :guilabel:`Duplicating features`:
 
-* :guilabel:`Duplicate Values`: Keeps the existing value of the field for the resulting split features.
+* :guilabel:`Duplicate Values`: Keeps the existing value of the field for the new features.
 * :guilabel:`Use Default Value`: Resets the field by recalculating its :ref:`default value <default_values>`.
-  If no default value clause exists, the existing value is kept for the resulting split features.
+  If no default value clause exists, the existing value is kept for the new features.
 * :guilabel:`Remove Value`: Clears the field to an unset state.
 * :guilabel:`Use Ratio Geometries`: Recalculates the field value for all split portions
   by multiplying the existing value by ratio of the split parts lengths or areas.
