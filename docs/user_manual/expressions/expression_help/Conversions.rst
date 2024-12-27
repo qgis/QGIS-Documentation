@@ -137,6 +137,7 @@ Converts a given value to a boolean. The function will return false if the value
    * - Examples
      - * ``to_bool('')`` → false
        * ``to_bool('123')`` → true
+       * ``to_bool('false')`` → true
        * ``to_bool(0)`` → false
        * ``to_bool(1)`` → true
        * ``to_bool(null)`` → false
