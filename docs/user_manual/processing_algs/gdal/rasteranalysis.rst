@@ -1728,17 +1728,15 @@ Basic parameters
 
        Default: 1
      - Band containing the elevation information
-   * - **A list of pixel values in the source image to be considered target pixels**
+   * - **List of target pixels**
 
        Optional
      - ``VALUES``
      - [string]
 
        Default: ''
-     - A list of target pixel values in the source image
-       to be considered target pixels.
-       If not specified, all non-zero pixels will be
-       considered target pixels.
+     - Comma-separated list of pixel values in the source image to consider as target pixels.
+       If not specified, all non-zero pixels will be considered target pixels.
    * - **Distance units**
      - ``UNITS``
      - [enumeration]
@@ -1750,7 +1748,7 @@ Basic parameters
        * 0 --- Georeferenced coordinates
        * 1 --- Pixel coordinates
 
-   * - **The maximum distance to be generated**
+   * - **The maximum distance to generate**
 
        Optional
      - ``MAX_DISTANCE``
@@ -1758,25 +1756,17 @@ Basic parameters
 
        Default: 0.0
      - The maximum distance to be generated.
-       The NoData value will be used for pixels beyond
-       this distance.
-       If a NoData value is not provided, the output
-       band will be queried for its NoData value.
-       If the output band does not have a NoData value,
-       then the value 65535 will be used.
-       Distance is interpreted according to the value of
-       *Distance units*.
-   * - **Value to be applied to all pixels that are within the maxdist of target pixels**
+       The NoData value will be used for pixels beyond this distance.
+       Distance is interpreted according to the value of the *Distance units* parameter.
+   * - **Value to apply to pixels within the maximum distance**
 
        Optional
      - ``REPLACE``
      - [number]
 
        Default: 0.0
-     - Specify a value to be applied to all pixels that
-       are closer than the maximum distance from target
-       pixels (including the target pixels) instead of
-       a distance value.
+     - Specify a value to apply to all pixels that are within the maximum distance
+       from target pixels (including the target pixels) instead of a distance value.
    * - **NoData value to use for the destination proximity raster**
 
        Optional
@@ -1784,7 +1774,9 @@ Basic parameters
      - [number]
 
        Default: 0.0
-     - Specify the NoData value to use for the output raster
+     - Specify the NoData value to use for the pixels beyond the maximum distance.
+       If a NoData value is not provided, the output band will be queried for its NoData value.
+       If the output band does not have a NoData value, then the value ``65535`` will be used.
    * - **Proximity map**
      - ``OUTPUT``
      - [raster]
@@ -2145,7 +2137,7 @@ Basic parameters
 
        Default: 1.0
      - The ratio of vertical units to horizontal units
-   * - **Slope expressed as percent (instead of degrees)**
+   * - **Express slope as percent (instead of degrees)**
      - ``AS_PERCENT``
      - [boolean]
 
