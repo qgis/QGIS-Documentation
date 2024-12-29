@@ -1719,7 +1719,7 @@ However, these values are really tied to the underlying projection settings.
 The :guilabel:`Measurements` frame lets you control these parameters.
 You can indeed choose:
 
-* the :guilabel:`Ellipsoid`, on which distance and area calculations are entirely based;
+* the :guilabel:`Ellipsoid`, on which distance, area and angle calculations are entirely based;
   it can be:
 
   * **None/Planimetric**: returned values are in this case cartesian measurements.
