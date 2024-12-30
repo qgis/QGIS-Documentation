@@ -2401,7 +2401,8 @@ Other Widgets
 The drag and drop designer offers a number of widgets that are not connected to a particular field.
 They can be used to enhance the appearance of the form or to display dynamically calculated values.
 
-* :guilabel:`HTML Widget`: embeds an HTML page, the HTML source may contain the result of dynamically calculated expressions.
+* :guilabel:`HTML Widget`: embeds an HTML page, the HTML source may contain the result
+  of dynamically calculated expressions.
 
   HTML widgets can be used for example to display images stored as BLOB in a field
   (let's call it ``photo``):
@@ -2440,8 +2441,12 @@ They can be used to enhance the appearance of the form or to display dynamically
   You can extend the code with QML syntax, use layer fields or QGIS expressions
   that are dynamically calculated.
 
-  .. Todo: Add a gif showing different types of QML widgets,
-   like in https://github.com/qgis/QGIS/pull/7801, but better sized
+  .. _figure_qml_widget:
+
+  .. figure:: img/qml_widget_dialog.png
+     :align: center
+
+     Setting a QML graph to display in attribute form
 
 * :guilabel:`Text Widget`: displays a text widget which supports basic HTML markup
   and may contain the result of dynamically calculated expressions.
