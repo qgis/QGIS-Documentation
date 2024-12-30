@@ -599,6 +599,10 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
     |                                                |                   | * :guilabel:`Centroid`                                                                |
     |                                                |                   |                                                                                       |
     +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+    | :guilabel:`End point marker`                   | Balloons          | A :ref:`marker symbol <vector_marker_symbols>` with full display capabilities         |
+    |                                                |                   | including layer effects, data-defined, ... for rendering a marker symbol below        |
+    |                                                |                   | the endpoint of the balloon callout.                                                  |
+    +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
     | :guilabel:`Blend mode`                         | All               | Controls the :ref:`blending <blend-modes>` of the callout.                            |
     +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
 
