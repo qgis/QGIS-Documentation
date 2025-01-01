@@ -11,10 +11,14 @@ SPHINXBUILD     ?= sphinx-build
 SPHINXINTL      ?= sphinx-intl
 SOURCEDIR       = .
 BUILDDIR        = build
-#SITEDIR         = /var/www/html/qgisdocs
-SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation-3.10/live/html
 VERSION         = 3.10
+#SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation/live/html
+#SITEDIR         = /var/www/qgisdata/QGIS-Documentation/live/html
+# to be able to run the Makefile in a docker you have to mount (with -v) your site dir on /site
+SITEDIR         = /site
 
+# needed for Sphinx > 4.5?
+export LC_ALL=C.UTF-8
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -41,15 +45,12 @@ gettext:
 
 html:
 	echo "$(SPHINXOPTS) $(SPHINXINTLOPTS)"
-	if [ $(LANG) != "en" ]; then \
-		$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html/$(LANG)" $(SPHINXINTLOPTS) $(0); \
-	else \
-		$(SPHINXBUILD) -b html -nW --keep-going "$(SOURCEDIR)" "$(BUILDDIR)/html/$(LANG)" $(SPHINXOPTS) $(0); \
-	fi
+	# allow builds with warnings
+	$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html/$(LANG)" $(SPHINXINTLOPTS) $(0); \
 
 latex:
-	# for LANG=ja overwrites the default latex_engine=xelatex by latex_engine=platex
-	$(eval SPHINXINTLOPTS += $(if $(filter $(LANG),ja),-D latex_engine=platex,))
+	# for LANG=ja overwrites the default latex_engine=xelatex by latex_engine=uplatex
+	$(eval SPHINXINTLOPTS += $(if $(filter $(LANG),ja),-D latex_engine=uplatex,))
 	# A tag -t $LANG is used in the building process to allow for dynamic
 	# settings in the conf.py. For example, for korean we need to use other
 	# latex_elements and we use a if tags.has('ko') expression to overwrite the defaults
@@ -58,39 +59,28 @@ latex:
 
 pdf: latex
 	# Choose the correct latex compiler, equivalent to:
-	# IF LANG=ja THEN LATEXCOMPILER = platex -kanji=euc ELSE LATEXCOMPILER = xelatex
-	$(eval LATEXCOMPILER := $(if $(filter $(LANG),ja),platex,xelatex))
+	# IF LANG=ja THEN LATEXCOMPILER = uplatex -kanji=euc ELSE LATEXCOMPILER = xelatex
+	$(eval LATEXCOMPILER := $(if $(filter $(LANG),ja),uplatex,xelatex))
 
 	# Compile the tex files into PDF, it runs 2x to fix hyperlinks
-	# notice that platex compiler needs an extra step to convert dvi to PDF
+	# notice that uplatex compiler needs an extra step to convert dvi to PDF
 	# using the dvipdfmx command
 	# -interaction=batchmode in latex compiler and -q im dvipdfmx will hide errors
 	# for debugging you need to remove them
-	cd $(BUILDDIR)/latex/$(LANG); \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISUserGuide.tex; \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISUserGuide.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ] && [ -f "QGISUserGuide2.dvi" ]; then \
-		dvipdfmx -q QGISUserGuide.dvi; fi; \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ] && [ -f "PyQGISDeveloperCookbook.dvi" ]; then \
-		dvipdfmx -q PyQGISDeveloperCookbook.dvi; fi; \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ] && [ -f "QGISTrainingManual.dvi" ]; then \
-		dvipdfmx -q QGISTrainingManual.dvi; fi; \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDocumentationGuidelines.tex; \
-	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISDocumentationGuidelines.tex; \
-	if [ "$(LATEXCOMPILER)" != "xelatex" ]  && [ -f "QGISDocumentationGuidelines.dvi" ]; then \
-		dvipdfmx -q QGISDocumentationGuidelines.dvi; fi;
-
-	# copy and rename PDF files to the pdf folder
+	# Then we copy and rename PDF files to the pdf folder
 	# || true allows the job to continue even if one of the files is missing
-	mkdir -p $(BUILDDIR)/pdf/$(LANG);
-	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf || true;
-	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf || true;
-	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-TrainingManual-$(LANG).pdf || true;
-	mv $(BUILDDIR)/latex/$(LANG)/QGISDocumentationGuidelines.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-DocumentationGuidelines-$(LANG).pdf || true;
+
+	for TEXFILE in $$(find $(BUILDDIR)/latex/$(LANG) -iname '*.tex' -exec basename {} .tex ';'); \
+		do \
+			cd $(BUILDDIR)/latex/$(LANG); \
+			echo $$TEXFILE; \
+			$(LATEXCOMPILER) -interaction=batchmode -shell-escape $$TEXFILE.tex; \
+			$(LATEXCOMPILER) -interaction=batchmode -shell-escape $$TEXFILE.tex; \
+			if [ "$(LATEXCOMPILER)" != "xelatex" ]  && [ -f "$$TEXFILE.dvi" ]; then \
+				dvipdfmx -q $$TEXFILE.dvi; fi; \
+			mkdir -p ../../pdf/$(LANG); \
+			mv $$TEXFILE.pdf ../../pdf/$(LANG)/QGIS-$(VERSION)-$$TEXFILE-$(LANG).pdf || true; \
+		done
 
 zip:
 	mkdir -p $(BUILDDIR)/zip;
@@ -99,7 +89,10 @@ zip:
 	mv $(BUILDDIR)/html/QGIS-$(VERSION)-Documentation-$(LANG).zip $(BUILDDIR)/zip/;
 
 site: html zip
-	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
+	rsync -hvrzc --delete --progress $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
+
+full: html zip
+	make LANG=$(LANG) pdf;
 
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server
@@ -107,12 +100,12 @@ all: springclean
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG site; \
 	done
-	rsync -az $(BUILDDIR)/zip $(SITEDIR)/;
+	rsync -hvrzc $(BUILDDIR)/zip $(SITEDIR)/;
 
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG pdf; \
 	done
-	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
+	rsync -hvrzc $(BUILDDIR)/pdf $(SITEDIR)/;
 
 # this will pull ALL translations (or at least from the languages we build for)
 # to your local disk, so it can be committed into github
