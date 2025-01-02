@@ -57,106 +57,106 @@ Statistics of translation
      - |stats_da|
      - Dutch
      - |stats_nl|
-     - Esperanto
-     - |stats_eo|
-   * - Estonian
+     - Estonian
      - |stats_et|
-     - Finnish
+   * - Finnish
      - |stats_fi|
      - French
      - |stats_fr|
-   * - Galician
+     - Galician
      - |stats_gl|
-     - Georgian
+   * - Georgian
      - |stats_ka|
      - German
      - |stats_de|
-   * - Greek
+     - Greek
      - |stats_el|
-     - Hebrew
+   * - Hebrew
      - |stats_he|
      - Hindi
      - |stats_hi|
-   * - Hungarian
+     - Hungarian
      - |stats_hu|
-     - Igbo
+   * - Igbo
      - |stats_ig|
      - Indonesian
      - |stats_id|
-   * - Italian
+     - Italian
      - |stats_it|
-     - Japanese
+   * - Japanese
      - |stats_ja|
      - Kabyle
      - |stats_kab|
-   * - Korean
+     - Korean
      - |stats_ko|
-     - Kurdish
+   * - Kurdish
      - |stats_ku|
-     - Kurmanji
-     - |stats_kmr|
-   * - Lithuanian
+     - Lithuanian
      - |stats_lt|
      - Macedonian
      - |stats_mk|
-     - Malay
+   * - Malay
      - |stats_ms|
-   * - Malayalam
+     - Malayalam
      - |stats_ml|
      - Marathi
      - |stats_mr|
-     - Mongolian
+   * - Mongolian
      - |stats_mn|
-   * - N'ko
+     - N'ko
      - |stats_nqo|
      - Norwegian Bokmål
      - |stats_nb|
-     - Persian
+   * - Persian
      - |stats_fa|
-   * - Polish
+     - Polish
      - |stats_pl|
      - Portuguese (Brazil)
      - |stats_pt_BR|
-     - Portuguese (Portugal)
+   * - Portuguese (Portugal)
      - |stats_pt_PT|
-   * - Romanian
+     - Romanian
      - |stats_ro|
      - Russian
      - |stats_ru|
-     - Serbian
+   * - Serbian
      - |stats_sr|
-   * - Slovak
+     - Slovak
      - |stats_sk|
      - Slovenian
      - |stats_sl|
-     - Spanish
+   * - Spanish
      - |stats_es|
-   * - Swedish
+     - Swedish
      - |stats_sv|
      - Tagalog
      - |stats_tl|
-     - Tamil
+   * - Tamil
      - |stats_ta|
-   * - Telugu
+     - Telugu
      - |stats_te|
      - Thai
      - |stats_th|
-     - Turkish
+   * - Turkish
      - |stats_tr|
-   * - Ukrainian
+     - Ukrainian
      - |stats_uk|
      - Urdu
      - |stats_ur|
-     - Vietnamese
+   * - Vietnamese
      - |stats_vi|
+     -
+     -
+     -
+     -
 
 
 .. list of substitutions for the statistics:
 
-.. |today| replace:: *2024-12-31*
+.. |today| replace:: *2025-01-02*
 .. |total_strings| replace:: **31118**
-.. |nb_languages| replace:: **60**
-.. |global_percentage| replace:: **13.69%**
+.. |nb_languages| replace:: **58**
+.. |global_percentage| replace:: **14.64%**
 
 .. |stats_ar| replace:: 3.56
 .. |stats_az| replace:: 0.02
@@ -167,7 +167,6 @@ Statistics of translation
 .. |stats_da| replace:: 0.69
 .. |stats_de| replace:: 56.15
 .. |stats_el| replace:: 0.38
-.. |stats_eo| replace:: -14.09
 .. |stats_es| replace:: 100.0
 .. |stats_et| replace:: 3.82
 .. |stats_eu| replace:: 1.07
@@ -185,7 +184,6 @@ Statistics of translation
 .. |stats_ja| replace:: 97.18
 .. |stats_ka| replace:: 0.12
 .. |stats_kab| replace:: 0.13
-.. |stats_kmr| replace:: -14.09
 .. |stats_ko| replace:: 100.0
 .. |stats_ku| replace:: -14.09
 .. |stats_lt| replace:: 14.09
