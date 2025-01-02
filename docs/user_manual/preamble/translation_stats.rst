@@ -156,7 +156,7 @@ Statistics of translation
 .. |today| replace:: *2025-01-02*
 .. |total_strings| replace:: **31118**
 .. |nb_languages| replace:: **58**
-.. |global_percentage| replace:: **14.64%**
+.. |global_percentage| replace:: **14.89%**
 
 .. |stats_ar| replace:: 3.56
 .. |stats_az| replace:: 0.02
@@ -185,7 +185,7 @@ Statistics of translation
 .. |stats_ka| replace:: 0.12
 .. |stats_kab| replace:: 0.13
 .. |stats_ko| replace:: 100.0
-.. |stats_ku| replace:: -14.09
+.. |stats_ku| replace:: 0.09
 .. |stats_lt| replace:: 14.09
 .. |stats_mk| replace:: 0.15
 .. |stats_ml| replace:: 0.12
