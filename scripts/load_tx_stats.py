@@ -63,7 +63,7 @@ def extract_language_stats(lang):
         f"filter[project]={project_id}&filter[language]=l:{lang}",
         headers=headers)
     all_resources = walk_pagination(resource_language_stats)
-    #print('all resources ', len(all_resources))
+    # print('all resources ', len(all_resources))
 
     translated_strings = 0
     total_strings = 0
@@ -93,7 +93,7 @@ def count_untranslatable_resources():
         headers=headers
         )
     all_project_resources = walk_pagination(project_resources)
-    #print('all_project_resources ', all_project_resources)
+    # print('all_project_resources ', all_project_resources)
 
     total_notranslate = 0
     for resource in all_project_resources:
@@ -129,7 +129,7 @@ def walk_pagination(results):
             ).json()
         results_data.extend(results['data'])
 
-    #print('end of while ', len(results_data))
+    # print('end of while ', len(results_data))
     return results_data
 
 
@@ -149,7 +149,7 @@ def project_stats(languages):
     global_percentage = round(
         total_translated_strings*100/(total_strings * nb_languages), 2)
 
-    # print('all ', languages_list)
+    # print('all ', language_rate)
     return {'nb_languages': nb_languages,
             'total_strings': total_strings,
             'translated_strings': total_translated_strings,
