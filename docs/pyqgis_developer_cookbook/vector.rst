@@ -73,18 +73,25 @@ by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a
 
 .. testcode:: vectors
 
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    vlayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
     for field in vlayer.fields():
         print(field.name(), field.typeName())
 
 
 .. testoutput:: vectors
 
-    ID Integer64
-    fk_region Integer64
-    ELEV Real
-    NAME String
-    USE String
+    fid Integer64
+    id Integer64
+    scalerank Integer64
+    featurecla String
+    type String
+    name String
+    abbrev String
+    location String
+    gps_code String
+    iata_code String
+    wikipedia String
+    natlscale Real
 
 The :meth:`displayField() <qgis.core.QgsVectorLayer.displayField>` and
 :meth:`mapTipTemplate() <qgis.core.QgsMapLayer.mapTipTemplate>` methods provide
@@ -96,13 +103,13 @@ methods you can easily get both:
 
 .. testcode:: vectors
 
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    vlayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
     print(vlayer.displayField())
 
 
 .. testoutput:: vectors
 
-    NAME
+    name
 
 .. note:: If you change the ``Display Name`` from a field to an expression, you have to
    use :meth:`displayExpression() <qgis.core.QgsVectorLayer.displayExpression>`
@@ -593,7 +600,9 @@ For deletion of fields just provide a list of field indexes.
 
  # Alternate methods for removing fields
  # first create temporary fields to be removed (f1-3)
- layer.dataProvider().addAttributes([QgsField("f1",QVariant.Int),QgsField("f2",QVariant.Int),QgsField("f3",QVariant.Int)])
+ layer.dataProvider().addAttributes([QgsField("f1", QVariant.Int),
+                                     QgsField("f2", QVariant.Int),
+                                     QgsField("f3", QVariant.Int)])
  layer.updateFields()
  count=layer.fields().count() # count of layer fields
  ind_list=list((count-3, count-2)) # create list
@@ -701,7 +710,7 @@ field:
 
 .. testcode:: vectors
 
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    vlayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
     feat = QgsVectorLayerUtils.createFeature(vlayer)
 
 
@@ -710,7 +719,7 @@ you to quickly get the values of a field or expression:
 
 .. testcode:: vectors
 
-    vlayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
+    vlayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
     # select only the first feature to make the output shorter
     vlayer.selectByIds([1])
     val = QgsVectorLayerUtils.getValues(vlayer, "NAME", selectedOnly=True)
@@ -718,7 +727,7 @@ you to quickly get the values of a field or expression:
 
 .. testoutput:: vectors
 
-    (['AMBLER'], True)
+    (['Sahnewal'], True)
 
 
 .. index:: Vector layers; Creating
@@ -981,7 +990,7 @@ The following example code illustrates creating and populating a memory provider
   # add a feature
   fet = QgsFeature()
   fet.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(10,10)))
-  fet.setAttributes(["Johny", 2, 0.3])
+  fet.setAttributes(["Johnny", 2, 0.3])
   pr.addFeatures([fet])
 
   # update layer's extent when new features have been added
@@ -1008,7 +1017,7 @@ Finally, let's check whether everything went well
     fields: 3
     features: 1
     extent: 10.0 10.0 10.0 10.0
-    F: 1 ['Johny', 2, 0.3] <QgsPointXY: POINT(10 10)>
+    F: 1 ['Johnny', 2, 0.3] <QgsPointXY: POINT(10 10)>
 
 .. index:: Vector layers; Symbology
 
@@ -1228,8 +1237,8 @@ arrangement)
 
   from qgis.PyQt import QtGui
 
-  myVectorLayer = QgsVectorLayer("testdata/airports.shp", "airports", "ogr")
-  myTargetField = 'ELEV'
+  myVectorLayer = QgsVectorLayer("testdata/data/data.gpkg|layername=airports", "Airports layer", "ogr")
+  myTargetField = 'scalerank'
   myRangeList = []
   myOpacity = 1
   # Make our first symbol and range...
