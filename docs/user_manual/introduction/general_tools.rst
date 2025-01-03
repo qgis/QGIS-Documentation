@@ -1342,6 +1342,10 @@ to duplicate any layer in the map legend.
 
    Right-click on the layer in the :guilabel:`Layers` panel to copy, paste, add
    or rename layer styles.
+   For both vector and raster layers, you can choose which style categories to copy/paste.
+   Choose :guilabel:`All Style Categories` or one of the available categories, depending on the layer type.
+   Note that that the :guilabel:`Symbology` and :guilabel:`Rendering` categories
+   are always copied thogether.
 
 .. _store_style:
 
@@ -1371,6 +1375,10 @@ This means that categorized or graduated styles are converted to rule-based.
 If you want to preserve those renderers, you have to use the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
+Previously, only Symbology, Rendering, and Custom Properties could be stored and
+loaded with QML/SLD files by selecting the Symbology category. Now, additional
+categories such as Layer Configuration, Temporal, and Elevation can also be
+saved and loaded.
 
 Save in database
 .................
