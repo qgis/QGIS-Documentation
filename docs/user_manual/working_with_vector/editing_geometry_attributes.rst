@@ -1177,6 +1177,14 @@ The |addPart| :sup:`Add Part` can also be used to add a geometry to a geometryle
 feature. First, select the feature in the attribute table and digitize the new
 geometry with the |addPart| :sup:`Add Part` tool.
 
+.. note:: **Order of vertices in polygon parts**
+
+  Unlike the OGC standards, QGIS doesn't constrain vertices
+  of the exterior boundary of a polygon feature to be ordered counterclockwise.
+  Thus, you can find both directions in a layer.
+  However, every parts of the same multipolygon feature
+  will have their outer vertices ordered following the same direction.
+
 
 .. index::
    single: Digitizing tools; Delete Part
@@ -1208,6 +1216,14 @@ as a ring polygon.
 .. FixMe: I think this tool should behave as below
 .. Like many digitizing tools, the |addRing| :sup:`Add Ring` tool adds ring to all
 .. selected features if any, otherwise all overlapping features are pierced.
+
+.. note:: **Order of vertices in polygon rings**
+
+  Unlike the OGC standards, QGIS doesn't constrain vertices
+  of the exterior boundary of a polygon feature to be ordered counterclockwise.
+  Thus, you can find both directions in a layer.
+  However, every rings of the same (multi)polygon feature
+  will have their vertices ordered in the opposite direction to the outer boundary's.
 
 
 .. index::
