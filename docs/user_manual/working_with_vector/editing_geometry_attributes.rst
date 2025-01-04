@@ -1207,15 +1207,20 @@ To delete a part, simply click within the target part.
 Add Ring
 --------
 
-You can create ring polygons using the |addRing|
-:sup:`Add Ring` icon in the toolbar. This means that inside an existing area, it
-is possible to digitize further polygons that will occur as a 'hole', so
-only the area between the boundaries of the outer and inner polygons remains
-as a ring polygon.
+You can create ring polygons using the |addRing| :sup:`Add Ring` icon in the toolbar.
+This means that inside an existing area, it is possible to digitize further polygons
+that will occur as a 'hole', so only the area between the boundaries
+of the outer and inner polygons remains as a ring polygon.
 
-.. FixMe: I think this tool should behave as below
-.. Like many digitizing tools, the |addRing| :sup:`Add Ring` tool adds ring to all
-.. selected features if any, otherwise all overlapping features are pierced.
+To add a ring:
+
+#. Select the feature(s) to modify
+#. Activate the |addRing| :sup:`Add Ring` tool
+#. Draw a polygon within the selected geometries,
+   using the aforementioned :ref:`techniques <drawing_methods>`.
+   A hole appears in the selected geometries.
+#. If no geometry is selected when the ring is drawn,
+   then a hole is added to each of the polygons the ring is drawn over.
 
 .. note:: **Order of vertices in polygon rings**
 
