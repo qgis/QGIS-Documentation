@@ -118,6 +118,9 @@ You can setup some parameters that apply to the global symbol:
     geometry is unchanged. This allows for creation of fill symbols with consistent
     appearance, regardless of the dataset being rendered and the ring orientation
     of individual features.
+
+  .. _marker_symbols_buffer:
+
   * for marker symbols, the :guilabel:`Buffer settings...` enables addition of a halo effect
     around the marker symbol in order to make it more readable against different backgrounds.
     The buffer is calculated and drawn using the shape of ALL the symbol layers in the marker.
