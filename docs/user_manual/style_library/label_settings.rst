@@ -541,66 +541,80 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    * :guilabel:`Balloons`: a speech bubble surrounding the label and pointing
      to the feature. It can have rounded corners.
 
-#. For a line-based callout:
+#. Set the properties of the callout.
+   The following table shows the different properties, with description
+   and compatible connector style.
 
-   #. Select the :guilabel:`Line style` with full capabilities of a :ref:`line
-      symbol <vector_line_symbols>` including layer effects, and data-defined
-      settings
-   #. If curved, you also define:
+   .. table:: Label callout properties
+    :widths: auto
 
-      * the percentage of :guilabel:`Curvature` of the connection line
-      * and its :guilabel:`Orientation`: starting from the label to the feature,
-        it can be :guilabel:`Clockwise` or :guilabel:`Counter-clockwise`, or
-        :guilabel:`Automatic` (determining an optimal orientation for each label)
-   #. Set the :guilabel:`Minimum length` of callout lines
-   #. Check whether to |checkbox| :guilabel:`Draw lines to all feature parts`
-      from the feature's label
-   #. Set the :guilabel:`Label anchor point`: controls where the connector
-      line should join to the label text. Available options:
+    +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+    | Property                                       | Style of callout  | Description                                                                           |
+    +================================================+===================+=======================================================================================+
+    | :guilabel:`Fill style`                         | Balloons          | A :ref:`fill symbol <vector_fill_symbols>` with full display capabilities,            |
+    |                                                |                   | including layer effects, data-defined settings, ... for drawing the balloon shape.    |
+    +------------------------------------------------+                   +---------------------------------------------------------------------------------------+
+    | :guilabel:`Corner radius`                      |                   | Corner radius of the speech bubble                                                    |
+    +------------------------------------------------+                   +---------------------------------------------------------------------------------------+
+    | :guilabel:`Wedge width`                        |                   | Sets how large the bubble speech connection with feature's pointer should be          |
+    +------------------------------------------------+                   +---------------------------------------------------------------------------------------+
+    | :guilabel:`Margins`                            |                   | Margins around the label's text, in the unit of your choice                           |
+    +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+    | :guilabel:`Line style`                         | All but balloons  | A :ref:`line symbol <vector_line_symbols>` with full display capabilities, including  |
+    |                                                |                   | layer effects, data-defined settings, ... for drawing the connector line.             |
+    +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+    | :guilabel:`Curvature`                          | Curved lines      | The percentage of curvature of the connection line                                    |
+    +------------------------------------------------+                   +---------------------------------------------------------------------------------------+
+    | :guilabel:`Orientation`                        |                   | Orientation, starting from the label to the feature.                                  |
+    |                                                |                   | It can be :guilabel:`Clockwise`, :guilabel:`Counter-clockwise`,                       |
+    |                                                |                   | or :guilabel:`Automatic` (determining an optimal orientation for each label).         |
+    +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+    | :guilabel:`Minimum length`                     | All but balloons  | Minimum length of the connector line                                                  |
+    +------------------------------------------------+                   +---------------------------------------------------------------------------------------+
+    | :guilabel:`Draw lines to all feature parts`    |                   | In case of a multi-part feature, indicates whether a connector line                   |
+    |                                                |                   | should be drawn from the label to each geometry part.                                 |
+    +------------------------------------------------+                   +---------------------------------------------------------------------------------------+
+    | :guilabel:`Label anchor point`                 |                   | Controls where the connector line should join to the label text.                      |
+    |                                                |                   | Available options:                                                                    |
+    |                                                |                   |                                                                                       |
+    |                                                |                   | * :guilabel:`Closest point`                                                           |
+    |                                                |                   | * :guilabel:`Centroid`                                                                |
+    |                                                |                   | * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,           |
+    |                                                |                   |   :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,           |
+    |                                                |                   |   :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).   |
+    |                                                |                   |                                                                                       |
+    +------------------------------------------------+                   +---------------------------------------------------------------------------------------+
+    | :guilabel:`Offset from label area`             |                   | Controls the distance from the label anchor point (where the callout line ends).      |
+    |                                                |                   | This avoids drawing lines right up against the text.                                  |
+    +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+    | :guilabel:`Offset from feature`                | All               | Controls the distance from the feature (or its anchor point if a polygon)             |
+    |                                                |                   | where callout lines end.                                                              |
+    |                                                |                   | E.g., this avoids drawing lines right up against the edges of the features.           |
+    +------------------------------------------------+                   +---------------------------------------------------------------------------------------+
+    | :guilabel:`Feature anchor point`               |                   | Where the connector line ends on the (polygon) feature. Available options:            |
+    |                                                |                   |                                                                                       |
+    |                                                |                   | * :guilabel:`Pole of inaccessibility`                                                 |
+    |                                                |                   | * :guilabel:`Point on exterior`                                                       |
+    |                                                |                   | * :guilabel:`Point on surface`                                                        |
+    |                                                |                   | * :guilabel:`Centroid`                                                                |
+    |                                                |                   |                                                                                       |
+    +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+    | :guilabel:`End point marker`                   | Balloons          | A :ref:`marker symbol <vector_marker_symbols>` with full display capabilities         |
+    |                                                |                   | including layer effects, data-defined, ... for rendering a marker symbol below        |
+    |                                                |                   | the endpoint of the balloon callout.                                                  |
+    +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+    | :guilabel:`Blend mode`                         | All               | Controls the :ref:`blending <blend-modes>` of the callout.                            |
+    +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
 
-      * :guilabel:`Closest point`
-      * :guilabel:`Centroid`
-      * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
-        :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
-        :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
-   #. Set the :guilabel:`Offset from label area` option: controls the distance
-      from the label anchor point (where the callout line ends).
-      This avoids drawing lines right up against the text.
 
-#. For a balloon callout, you'd need to set:
-
-   * the :guilabel:`Fill style` with full capabilities of a :ref:`fill
-     symbol <vector_fill_symbols>` including layer effects, and data-defined
-     settings
-   * the :guilabel:`Corner radius` of the speech bubble
-   * the :guilabel:`Wedge width`: how large the bubble speech connection with
-     feature's pointer should be
-   * the :guilabel:`Margins` around the label's text
-
-#. Set the :guilabel:`Offset from feature` option: controls the distance
-   from the feature (or its anchor point if a polygon) where callout lines end.
-   Eg, this avoids drawing lines right up against the edges of the features.
-#. Set the :guilabel:`Feature anchor point` for the (polygon) feature (the end
-   point of the connector line). Available options:
-
-   * :guilabel:`Pole of inaccessibility`
-   * :guilabel:`Point on exterior`
-   * :guilabel:`Point on surface`
-   * :guilabel:`Centroid`
-#. Set the :guilabel:`Blend mode`: controls the :ref:`blending <blend-modes>`
-   of the callout.
-
-Under the :guilabel:`Data defined placement` group, coordinates of the
-:guilabel:`Origin` (on the label side) and/or :guilabel:`Destination`
-(on the feature side) points of the callout can be controlled.
-Callouts can also be controlled manually by using the |moveLabel|
-:sup:`Move Label, Diagram or Callout` tool in the :ref:`Labeling Toolbar
-<label_toolbar>`.
-The start and end points of each callout can be moved this way.
-The nodes should be highlighted when the mouse pointer is nearby.
-If needed the :kbd:`Shift` Key can be held during the movement.
-This will snap the point in a way that the angle between the two callout points
-increments by 15 degrees.
+   Under the :guilabel:`Data defined placement` group, coordinates of the :guilabel:`Origin` (on the label side)
+   and/or :guilabel:`Destination` (on the feature side) points of the callout can be controlled.
+   Callouts can also be controlled manually by using the |moveLabel|
+   :sup:`Move Label, Diagram or Callout` tool in the :ref:`Labeling Toolbar <label_toolbar>`.
+   The start and end points of each callout can be moved this way.
+   The nodes should be highlighted when the mouse pointer is nearby.
+   If needed the :kbd:`Shift` Key can be held during the movement.
+   This will snap the point in a way that the angle between the two callout points increments by 15 degrees.
 
 .. _labels_placement:
 
