@@ -640,14 +640,66 @@ network settings (especially proxy). It is also possible to select cache mode
 ('always cache', 'prefer cache', 'prefer network', 'always network'), and the provider also
 supports selection of time position, if temporal domain is offered by the server.
 
-.. warning::
+**Loading a WCS Layer**
 
-   Entering **username** and **password** in the :guilabel:`Authentication` tab
-   will keep unprotected credentials in the connection configuration. Those
-   **credentials will be visible** if, for instance, you shared the project file
-   with someone. Therefore, it's advisable to save your credentials in a
-   *Authentication configuration* instead (:guilabel:`configurations` tab).
-   See :ref:`authentication_index` for more details.
+To be able to load a WCS Layer, first create a connection to the WCS server:
+
+#. Open the :guilabel:`Data Source Manager` dialog by pressing the
+   |dataSourceManager| :sup:`Open Data Source Manager` button
+#. Enable the |addWcsLayer| :guilabel:`WCS` tab
+#. Click on :guilabel:`New...` to open the :guilabel:`Create a New WCS
+   Connection` dialog
+
+   .. _figure_OGC_create_wcs_connection:
+
+   .. figure:: img/add_connection_wcs.png
+      :align: center
+
+      Creating a connection to a WCS server
+
+   * :guilabel:`Name`: A name for the connection. This name will be used in
+     the Server Connections drop-down box so that you can distinguish it from
+     other WCS servers.
+   * :guilabel:`URL`: URL of the server providing the data. This must be a
+     resolvable host name -- the same format as you would use to open a telnet
+     connection or ping a host, i.e. the base URL only.
+     For example, you shouldn't have fragments such as ``request=GetCapabilities``
+     or ``version=1.0.0`` in your URL.
+   * :guilabel:`Authentication` (optional): using a :ref:`stored configuration
+     <authentication_workflow>` or a basic authentication with
+     :guilabel:`Username` and :guilabel:`Password`.
+
+     .. warning::
+
+      Entering **username** and **password** in the :guilabel:`Authentication`
+      tab will keep unprotected credentials in the connection configuration.
+      Those **credentials will be visible** if, for instance, you shared the
+      project file with someone. Therefore, it's advisable to save your
+      credentials in an *Authentication configuration* instead
+      (:guilabel:`Configurations` tab).
+      See :ref:`authentication_index` for more details.
+
+   * HTTP :guilabel:`Referer`
+   * |unchecked| :guilabel:`Ignore GetCoverage URI reported in capabilities`:
+     if checked, use given URI from the :guilabel:`URL` field above.
+   * |unchecked| :guilabel:`Ignore reported layer extents`: because the extent
+     reported by raster layers may be smaller than the actual area which can
+     be rendered (notably for WMS servers with symbology which takes more space
+     than the data extent), check this option to avoid cropping raster layers
+     to their reported extents, resulting in truncated symbols on the borders
+     of these layers.
+   * |unchecked| :guilabel:`Ignore axis orientation (WMS 1.3/WMTS)`
+   * |unchecked| :guilabel:`Invert axis orientation`
+   * |unchecked| :guilabel:`Smooth pixmap transformation`
+
+#. Press :guilabel:`OK` to create the connection.
+
+Note that any proxy settings you may have set in your preferences are also recognized.
+Also note that it is possible to :guilabel:`Load` the connection parameters
+from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file. 
+
+Now we are ready to load WFS layers from the above connection.
+
 
 .. _`ogc-wfs`:
 
