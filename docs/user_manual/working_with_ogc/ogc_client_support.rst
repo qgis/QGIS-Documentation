@@ -832,6 +832,8 @@ features and view the attribute table.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addWcsLayer| image:: /static/common/mActionAddWcsLayer.png
+   :width: 1.5em
 .. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
    :width: 1.5em
 .. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
