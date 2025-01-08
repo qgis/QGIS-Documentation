@@ -209,6 +209,8 @@ You can fine tune MetaSearch with the following :guilabel:`Settings`:
   verification.
 * :guilabel:`Results paging`: when searching metadata catalogs, the
   number of results to show per page. Default value is 10.
+* :guilabel:`Log debugging messages`: option to enable the logging of
+  debugging messages in the :ref:`log_message_panel`.
 
 Catalog Server Errors
 ---------------------
