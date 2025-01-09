@@ -684,11 +684,11 @@ To be able to load a WCS Layer, first create a connection to the WCS server:
      if checked, use given URI from the :guilabel:`URL` field above.
    * |unchecked| :guilabel:`Ignore reported layer extents`: because the extent
      reported by raster layers may be smaller than the actual area which can
-     be rendered (notably for WMS servers with symbology which takes more space
+     be rendered (notably for WCS servers with symbology which takes more space
      than the data extent), check this option to avoid cropping raster layers
      to their reported extents, resulting in truncated symbols on the borders
      of these layers.
-   * |unchecked| :guilabel:`Ignore axis orientation (WMS 1.3/WMTS)`
+   * |unchecked| :guilabel:`Ignore axis orientation`
    * |unchecked| :guilabel:`Invert axis orientation`
    * |unchecked| :guilabel:`Smooth pixmap transformation`
 
@@ -698,7 +698,7 @@ Note that any proxy settings you may have set in your preferences are also recog
 Also note that it is possible to :guilabel:`Load` the connection parameters
 from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file. 
 
-Now we are ready to load WFS layers from the above connection.
+Now we are ready to load WCS layers from the above connection.
 
 
 .. _`ogc-wfs`:
