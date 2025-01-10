@@ -865,11 +865,11 @@ In the :guilabel:`WMS` tab, you can define the options for the WMS capabilities.
 
 * :guilabel:`Layer and Feature Options`
 
+  You can receive requested GetFeatureInfo as plain text, XML and GML. The default is XML.
+
   * If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be used 
     to reference layers in the ``GetCapabilities`` response or ``GetMap LAYERS`` parameter.
     If not, layer name or short name if defined (see :ref:`vectorservermenu`) is used.
-
-  * You can receive requested GetFeatureInfo as plain text, XML and GML. The default is XML.
 
   .. _`addGeometryToFeatureResponse` :
 
