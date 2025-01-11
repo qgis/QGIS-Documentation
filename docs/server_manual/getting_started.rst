@@ -830,104 +830,112 @@ WMS capabilities
 
    Definitions in the WMS tab
 
-In the :guilabel:`WMS capabilities` tab, check :guilabel:`Advertised extent`
-to define the extent advertised in the WMS GetCapabilities response.
-The :ref:`spatial extent selector <extent_selector>` widget helps you enter the extent
-as a ``xmin, xmax, ymin, ymax`` text or pick it from the map canvas, layers, bookmarks...
+In the :guilabel:`WMS` tab, you can define the options for the WMS capabilities.
 
-By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
-in which coordinate reference systems (CRS) QGIS Server will offer
-to render maps. It is recommended that you restrict the offered CRS as this
-reduces the size of the WMS GetCapabilities response.
-Use the |symbologyAdd| button below to select those CRSs
-from the Coordinate Reference System Selector, or click :guilabel:`Used`
-to add the CRSs used in the QGIS project to the list.
+* Check :guilabel:`Advertised extent`
+  to define the extent advertised in the WMS GetCapabilities response.
+  The :ref:`spatial extent selector <extent_selector>` widget helps you enter the extent
+  as a ``xmin, xmax, ymin, ymax`` text or pick it from the map canvas, layers, bookmarks...
 
-If you have print layouts defined in your project, they will be listed in the
-``GetProjectSettings`` response, and they can be used by the GetPrint request to
-create prints, using one of the print layouts as a template.
-This is a QGIS-specific extension to the WMS 1.3.0 specification.
-If you want to exclude any print layout from being published by the WMS,
-check |checkbox| :guilabel:`Exclude layouts` and click the
-|symbologyAdd| button below.
-Then, select a print layout from the :guilabel:`Select print layout` dialog
-in order to add it to the excluded layouts list.
+* By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
+  in which coordinate reference systems (CRS) QGIS Server will offer
+  to render maps. It is recommended that you restrict the offered CRS as this
+  reduces the size of the WMS GetCapabilities response.
+  Use the |symbologyAdd| button below to select those CRSs
+  from the Coordinate Reference System Selector, or click :guilabel:`Used`
+  to add the CRSs used in the QGIS project to the list.
 
-If you want to exclude any layer or layer group from being published by the
-WMS, check |checkbox| :guilabel:`Exclude Layers` and click the
-|symbologyAdd| button below.
-This opens the :guilabel:`Select restricted layers and groups` dialog, which
-allows you to choose the layers and groups that you don't want to be published.
-Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries.
-It is recommended that you exclude from publishing the layers that you don't
-need as this reduces the size of the WMS GetCapabilities response which leads
-to faster loading times on the client side.
+* If you have print layouts defined in your project, they will be listed in the
+  ``GetProjectSettings`` response, and they can be used by the GetPrint request to
+  create prints, using one of the print layouts as a template.
+  This is a QGIS-specific extension to the WMS 1.3.0 specification.
+  If you want to exclude any print layout from being published by the WMS,
+  check |checkbox| :guilabel:`Exclude layouts` and click the |symbologyAdd| button below.
+  Then, select a print layout from the :guilabel:`Select print layout` dialog
+  in order to add it to the excluded layouts list.
 
-If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be
-used to reference layers in the ``GetCapabilities`` response or ``GetMap LAYERS``
-parameter. If not, layer name or short name if defined (see :ref:`vectorservermenu`)
-is used.
+* If you want to exclude any layer or layer group from being published by the WMS,
+  check |checkbox| :guilabel:`Exclude Layers` and click the |symbologyAdd| button below.
+  This opens the :guilabel:`Select restricted layers and groups` dialog,
+  which allows you to choose the layers and groups that you don't want to be published.
+  Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries.
+  It is recommended that you exclude from publishing the layers that you don't need
+  as this reduces the size of the WMS GetCapabilities response
+  which leads to faster loading times on the client side.
 
-You can receive requested GetFeatureInfo as plain text, XML and GML. The default is XML.
+* :guilabel:`Layer and Feature Options`
 
-.. _`addGeometryToFeatureResponse` :
+  You can receive requested GetFeatureInfo as plain text, XML and GML. The default is XML.
 
-If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
-This will include the bounding box for each feature in the GetFeatureInfo response.
-See also the :ref:`WITH_GEOMETRY <wms_getfeatureinfo>` parameter.
+  * If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be used 
+    to reference layers in the ``GetCapabilities`` response or ``GetMap LAYERS`` parameter.
+    If not, layer name or short name if defined (see :ref:`vectorservermenu`) is used.
 
-As many web clients can’t display circular arcs in geometries you have the option
-to segmentize the geometry before sending it to the client in a GetFeatureInfo
-response. This allows such clients to still display a feature’s geometry
-(e.g. for highlighting the feature). You need to check the
-|checkbox| :guilabel:`Segmentize feature info geometry` to activate the option.
+  .. _`addGeometryToFeatureResponse` :
 
-When a layer group is passed to ``GetLegendGraphic`` request,
-all of its leaf layers are added to the legend picture (however without the groups' labels).
-Check the |checkbox| :guilabel:`Add layer groups in GetLegendGraphic` option
-if you want to also insert the layer groups (and subgroups) names
-into the layer tree, just like in QGIS Desktop legend.
+  * If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
+    This will include the bounding box for each feature in the GetFeatureInfo response.
+    See also the :ref:`WITH_GEOMETRY <wms_getfeatureinfo>` parameter.
 
-When QGIS project contains layer groups, they are listed in WMS capabilities document alongside with layers.
-If a group (its name as listed in capabilities) is included in WMS GetMap ``LAYERS`` parameter
-alongside with names of layers in that group, QGIS would duplicate the layers:
-once for the group and once for specific layer.
-If you check the |checkbox| :guilabel:`Skip name attribute for groups` option,
-GetCapabilities will only return title attribute for the group but not its name attribute,
-making it impossible to include groups in list of layers of GetMap request.
+  * As many web clients can’t display circular arcs in geometries you have the option
+    to segmentize the geometry before sending it to the client in a GetFeatureInfo
+    response. This allows such clients to still display a feature’s geometry
+    (e.g. for highlighting the feature). You need to check the
+    |checkbox| :guilabel:`Segmentize feature info geometry` to activate the option.
 
-You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
-set the precision of the GetFeatureInfo geometry. This enables you to save
-bandwidth when you don't need the full precision.
+  * You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
+    set the precision of the GetFeatureInfo geometry. This enables you to save
+    bandwidth when you don't need the full precision.
 
-If you want QGIS Server to advertise specific request URLs
-in the WMS GetCapabilities response, enter the corresponding URL in the
-:guilabel:`Advertised URL` field.
+  * If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to show text using
+    expressions) this will be listed inside the GetFeatureInfo output.
+    If the layer uses a Value Map for one of its attributes,
+    this information will also be shown in the GetFeatureInfo output.
 
-Furthermore, you can restrict the maximum size of the maps returned by the
-GetMap request by entering the maximum width and height into the respective
-fields under :guilabel:`Maximums for GetMap request`.
+  * If you want QGIS Server to advertise specific request URLs in the WMS GetCapabilities response,
+    enter the corresponding URL in the :guilabel:`Advertised URL` field.
 
-You can change the :guilabel:`Quality for JPEG images` factor. The quality factor must be
-in the range 0 to 100. Specify 0 for maximum compression, 100 for no compression.
+* :guilabel:`Map and Legend Options`
 
-You can change the limit for atlas features to be printed in one request by setting the
-:guilabel:`Maximum features for Atlas print requests` field.
+  * When a layer group is passed to ``GetLegendGraphic`` request,
+    all of its leaf layers are added to the legend picture (however without the groups' labels).
+    Check the |checkbox| :guilabel:`Add layer groups in GetLegendGraphic` option
+    if you want to also insert the layer groups (and subgroups) names
+    into the layer tree, just like in QGIS Desktop legend.
 
-When QGIS Server is used in tiled mode (see :ref:`TILED parameter <wms_tiled>`), you can set the
-:guilabel:`Tile buffer in pixels`. The recommended value is the size of the largest
-symbol or line width in your QGIS project.
+  * When QGIS project contains layer groups, they are listed in WMS capabilities document alongside with layers.
+    If a group (its name as listed in capabilities) is included in WMS GetMap ``LAYERS`` parameter
+    alongside with names of layers in that group, QGIS would duplicate the layers:
+    once for the group and once for specific layer.
+    If you check the |checkbox| :guilabel:`Skip name attribute for groups` option,
+    GetCapabilities will only return title attribute for the group but not its name attribute,
+    making it impossible to include groups in list of layers of GetMap request.
 
-If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to show text using
-expressions) this will be listed inside the GetFeatureInfo output. If the
-layer uses a Value Map for one of its attributes, this information will also
-be shown in the GetFeatureInfo output.
+  * Furthermore, you can restrict the maximum size of the maps returned by the requests
+    by entering the maximum width and height into the respective fields
+    under :guilabel:`Maximum image size for GetMap and GetLegendGraphic requests`.
+
+  * You can change the :guilabel:`Quality for JPEG and WebP images` factor.
+    The quality factor must be in the range 0 to 100.
+    Specify 0 for maximum compression, 100 for no compression.
+
+  * You can change the limit for atlas features to be printed in one request
+    by setting the :guilabel:`Maximum features for Atlas print requests` field.
+
+  * When QGIS Server is used in tiled mode (see :ref:`TILED parameter <wms_tiled>`),
+    you can set the :guilabel:`Tile buffer in pixels`.
+    The recommended value is the size of the largest symbol or line width in your QGIS project.
+  * Depending on whether the map uses a projected CRS or a geographic CRS
+    and if there is no information to evaluate the map unit sized symbols,
+    you can provide reference for size through either a :guilabel:`Default scale for legend`
+    or :guilabel:`Default map units per mm in legend`.
+
 
 WMTS capabilities
 -----------------
 
-In the :guilabel:`WMTS capabilities` tab you can select the layers you
-want to publish as WMTS and specify if you want to publish as PNG or JPEG.
+In the :guilabel:`WMTS` tab you can select the layers you want to publish as WMTS
+and specify if you want to publish as PNG or JPEG.
 
 .. _figure_wmts_definitions:
 
@@ -936,14 +944,13 @@ want to publish as WMTS and specify if you want to publish as PNG or JPEG.
 
    Definitions in the WMTS tab
 
-If you enter a URL in the :guilabel:`Advertised URL` field of the
-:guilabel:`WMTS capabilities` section, QGIS Server will advertise this specific
-URL in the WMTS GetCapabilities response.
+If you enter a URL in the :guilabel:`Advertised URL` field,
+QGIS Server will advertise this specific URL in the WMTS GetCapabilities response.
 
 WFS/OAPIF capabilities
 ----------------------
 
-In the :guilabel:`WFS/OAPIF capabilities` tab, you can select the layers you
+In the :guilabel:`WFS/OAPIF` tab, you can select the layers you
 want to publish as WFS or OAPIF, and specify if they will allow update, insert and
 delete operations.
 
@@ -954,15 +961,13 @@ delete operations.
 
    Definitions in the WFS/OAPIF tab
 
-If you enter a URL in the :guilabel:`Advertised URL` field of the
-:guilabel:`WFS capabilities` section, QGIS Server will advertise this specific
-URL in the WFS GetCapabilities response.
+If you enter a URL in the :guilabel:`Advertised URL` field,
+QGIS Server will advertise this specific URL in the WFS GetCapabilities response.
 
 WCS capabilities
 ----------------
 
-In the :guilabel:`WCS capabilities` tab, you can select the layers that you
-want to publish as WCS.
+In the :guilabel:`WCS` tab, you can select the layers that you want to publish as WCS.
 
 .. _figure_wcs_definitions:
 
@@ -978,25 +983,26 @@ this specific URL in the WCS GetCapabilities response.
 Fine tuning your OWS
 ----------------------
 
-For vector layers, the :guilabel:`Fields` menu of the :menuselection:`Layer -->
-Layer Properties` dialog allows you to define for each
-attribute if it will be published or not.
+For vector layers, the :guilabel:`Fields` tab of the :menuselection:`Layer -->
+Layer Properties` dialog allows you to define for each attribute if it will be published or not.
 By default, all the attributes are published by your WMS and WFS.
-If you don't want a specific attribute to be published, uncheck the corresponding
-checkbox in the :guilabel:`WMS` or :guilabel:`WFS` column.
+If you don't want a specific attribute to be published, uncheck the appropriate
+checkbox in the :guilabel:`Configuration` column:
+
+* :guilabel:`Do not expose in WFS`
+* :guilabel:`Do not expose in WMS`
 
 You can overlay watermarks over the maps produced by your WMS by adding text
 annotations or SVG annotations to the project file.
-See the :ref:`sec_annotations` section for instructions on
-creating annotations. For annotations to be displayed as watermarks on the WMS
-output, the :guilabel:`Fixed map position` checkbox in the
+See the :ref:`sec_annotations` section for instructions on creating annotations.
+For annotations to be displayed as watermarks on the WMS output,
+the :guilabel:`Fixed map position` checkbox in the
 :guilabel:`Annotation text` dialog must be unchecked.
-This can be accessed by double clicking the annotation while one of the
-annotation tools is active.
-For SVG annotations, you will need either to set the project to save absolute
-paths (in the :guilabel:`General` menu of the
-:menuselection:`Project --> Properties...` dialog) or to manually modify
-the path to the SVG image so that it represents a valid relative path.
+This can be accessed by double clicking the annotation
+while one of the annotation tools is active.
+For SVG annotations, you will need either to set the project to save absolute paths
+(in the :guilabel:`General` menu of the :menuselection:`Project --> Properties...` dialog)
+or to manually modify the path to the SVG image so that it represents a valid relative path.
 
 
 Integration with third parties
@@ -1008,15 +1014,15 @@ thus it can be used by a wide variety of end user tools.
 Integration with QGIS Desktop
 -----------------------------
 
-QGIS Desktop is the map designer where QGIS Server is the map server. The maps or
-QGIS projects will be served by the QGIS Server to provide OGC standards. These QGIS
-projects can either be files or entries in a database (by using
-:menuselection:`Project --> Save to --> PostgreSQL` in QGIS Desktop).
+QGIS Desktop is the map designer where QGIS Server is the map server.
+The maps or QGIS projects will be served by the QGIS Server to provide OGC standards.
+These QGIS projects can either be files or entries in a database
+(by using :menuselection:`Project --> Save to --> PostgreSQL` in QGIS Desktop).
 
 Furthermore, dedicated update workflow must be established to refresh a project used
-by a QGIS Server (ie. copy project files into server location and restart QGIS
-Server). For now, automated processes (as server reloading over message queue
-service) are not implemented yet.
+by a QGIS Server (ie. copy project files into server location and restart QGIS Server).
+For now, automated processes (as server reloading over message queue service)
+are not implemented yet.
 
 
 Integration with MapProxy
