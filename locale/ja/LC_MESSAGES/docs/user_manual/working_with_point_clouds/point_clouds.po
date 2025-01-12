@@ -10,6 +10,7 @@
 # Mihiro Takizawa, 2024
 # fairtommy <fairtommy@gmail.com>, 2024
 # Keita UEMORI, 2024
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: Keita UEMORI, 2024\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,7 +105,7 @@ msgid ""
 "<https://pdal.io/en/stable/>`_ (PDAL - similar to GDAL) offers you options "
 "to edit point clouds (PDAL is command line only)."
 msgstr ""
-"QGISでは（まだ）点群を編集することはできません。点群を操作したい場合は、オープンソースの点群処理ツールである`CloudCompare "
+"QGISでは（まだ）点群を編集することはできません。点群を操作したい場合は、オープンソースの点群処理ツールである `CloudCompare "
 "<https://www.cloudcompare.org/>`_ を使うことができます。また、`Point Data Abstraction "
 "Library <https://pdal.io/en/stable/>`_ （PDAL - "
 "GDALに似ている）は点群を編集するオプションを提供しています（PDALはコマンドラインのみです）。"
@@ -327,9 +328,99 @@ msgstr ""
 msgid "setProjection"
 msgstr "setProjection"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:151
+msgid ""
+":guilabel:`Provider Feature Filter`: allows to restrict data to use in the "
+"current project to a subset, using functions and expression at the PDAL data"
+" provider level. Press the :guilabel:`Query Builder` button at the bottom to"
+" start setting the filter."
+msgstr ""
+":guilabel:`プロバイダ地物フィルタ`: "
+"PDALデータプロバイダレベルの関数と式を使用して、現在のプロジェクトで使用するデータをサブセットに制限することができます。下部の "
+":guilabel:`クエリビルダ` ボタンを押してフィルタの設定を開始します。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:160
+msgid "Filtering point cloud layer to buildings at specific altitude"
+msgstr "点群レイヤを特定の高度にある建物にフィルタする"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:164
+msgid ""
+"In the bottom part of the dialog, you can type a :guilabel:`Provider "
+"specific filter expression`. Such an expression can be built thanks to:"
+msgstr "ダイアログの下部には、:guilabel:`プロバイダ特有のフィルタ式` を入力できます。このような式は、以下の機能により作成できます:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:167
+msgid ""
+":guilabel:`Fields`: the list contains all the attributes of the point cloud "
+"layer. To add an attribute to the expression, double-click its name or just "
+"type it into the text box."
+msgstr ""
+":guilabel:`属性`: このリストには、点群レイヤのすべての属性が含まれています。 "
+"式に属性を追加するには、その名前をダブルクリックするか、テキストボックスに直接入力します。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:169
+msgid ""
+":guilabel:`Values`: frame lists values or statistics of the currently "
+"selected attribute, as a ``key:value`` pair. To add a value to the "
+"expression field, double click its name in the list: depending on the type "
+"of attribute, either the key or the value will be added to the expression. "
+"Or type the value in the expression text box."
+msgstr ""
+":guilabel:`値`: フレームは、現在選択されている属性の値または統計情報を ``キー:値`` "
+"のペアでリスト表示します。値を式フィールドに追加するには、リスト内の名前をダブルクリックし、属性の型に応じて、キーまたは値を式に追加します。あるいは値を式のテキストボックスに入力します。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:173
+msgid ""
+":guilabel:`Operators`: this toolbar contains all usable operators. To add an"
+" operator to the expression field, click the appropriate button. Relational "
+"operators ( ``=`` , ``>`` , ...) and logical operators (``AND``, ``OR``, "
+"...) are available."
+msgstr ""
+":guilabel:`演算子`: "
+"このツールバーには使用可能な全ての演算子が含まれています。演算子を式フィールドに追加するには、該当するボタンをクリックします。関係演算子（ ``=`` "
+"、 ``>`` 、...）および論理演算子（``AND``、 ``OR``、...）が利用可能です。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:177
+msgid ""
+"The :guilabel:`Test` button helps you check the syntax of your query. Use "
+"the :guilabel:`Clear` button to wipe the query and revert the layer to its "
+"original state (i.e., fully load all the points in the layer). It is "
+"possible to :guilabel:`Save...` the query as a :file:`.QQF` file, or "
+":guilabel:`Load...` the query from a file into the dialog."
+msgstr ""
+":guilabel:`テスト` ボタンは、クエリの構文をチェックするのに役立ちます。:guilabel:`クリア` "
+"ボタンを使用してクエリを消去し、レイヤを元の状態（すなわち、レイヤ内の全ての点を完全に読み込んだ状態）に戻します。クエリを :file:`.QQF` "
+"ファイルとして :guilabel:`保存...` したり、ファイルからダイアログにクエリを :guilabel:`読み込み...` "
+"したりすることができます。"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:183
+msgid ""
+"When a filter is applied, QGIS treats the resulting subset as if it were the"
+" entire layer. For example if you applied the :ref:`filter above "
+"<figure_point_cloud_querybuilder>` for filtering buildings, you can not e.g."
+" display, query, save or edit points that are of vegetation classification "
+"because they are not part of the subset."
+msgstr ""
+"フィルタが適用されると、QGISは結果として得られるサブセットをあたかもレイヤ全体であるかのように扱います。例えば、建物をフィルタするために: "
+"ref:`filter above <figure_point_cloud_querybuilder>` "
+"を適用した場合、例えば、植生分類に属する点を表示、クエリ、保存、編集することはできません。なぜなら、それらはサブセットの一部ではないからです。"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:188
 msgid "**Filtered layers are indicated in the Layers Panel**"
 msgstr "**レイヤパネル内におけるフィルタされたレイヤの表示**"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:190
+msgid ""
+"In the :guilabel:`Layers` panel, a filtered layer is listed with a "
+"|indicatorFilter| :sup:`Filter` icon next to it indicating the query used "
+"when the mouse hovers over the icon. Double-click the icon to open the "
+":guilabel:`Query Builder` dialog for edit. This can also be achieved through"
+" the :menuselection:`Layer --> Filter...` menu."
+msgstr ""
+":guilabel:`レイヤ` パネルでは、フィルタされたレイヤがリスト表示され、その横に |indicatorFilter| :sup:`フィルタ` "
+"アイコンが表示されます。マウスをそのアイコン上に置くと、使われたクエリが示されます。アイコンをダブルクリックすると、編集用に "
+":guilabel:`クエリビルダ` ダイアログが開きます。この操作は、:menuselection:`レイヤ --> フィルタ...` "
+"メニューからも実行できます。"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:726
 msgid "indicatorFilter"
@@ -1247,7 +1338,7 @@ msgid ""
 "files and apply the same symbology."
 msgstr ""
 "データをタイル化すると、データのサイズに関する問題は解決されますが、1 "
-"つのタイルに完全に収まらない対象領域を処理または表示するときに問題が発生します。ユーザーは、複数のタイルを考慮したワークフローを開発する必要があり、出力に不要なノイズが発生しないように、タイルの端に近いデータの処理には特に注意が必要です。同様に、ポイントクラウドデータを表示する場合、多数の個別のファイルをロードして同じシンボルを適用するのは手間がかかります。"
+"つのタイルに完全に収まらない対象地域を処理または表示するときに問題が発生します。ユーザーは、複数のタイルを考慮したワークフローを開発する必要があり、出力に不要なノイズが発生しないように、タイルの端に近いデータの処理には特に注意が必要です。同様に、点群データを表示する場合、多数の個別のファイルをロードして同じシンボルを適用するのは手間がかかります。"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:679
 msgid ""
