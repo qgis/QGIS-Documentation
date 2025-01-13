@@ -1231,6 +1231,8 @@ default it will display the following information:
       closest vertex (and ``Z``/``M`` if applicable)
     * if you click on a curved segment,
       the radius of that section is also displayed.
+    * if both the vector layer and the project have vertical datums set and they differ,
+      the ``Z`` value will be displayed for both datums.
 
 * **Data attributes**: This is the list of attribute fields and values for the
   feature that has been clicked.
