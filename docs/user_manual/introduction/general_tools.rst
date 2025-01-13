@@ -1296,10 +1296,41 @@ You can achieve this by using the :menuselection:`Style` menu at the bottom
 of the Layer Properties dialog. This menu provides you with functions to
 create, load and manage styles.
 
-A style stores any information set in the layer properties dialog to render
-or interact with the layer (including symbology, labeling, fields and form definitions,
-actions, diagrams...) for vector layers, or the pixels (band or color rendering, transparency,
-pyramids, histogram ...) for raster.
+A style stores any information set in the layer properties dialog to render or interact with the layer.
+For vector layers, this includes:
+
+* |layerConfiguration|:sup:`Layer Configuration`
+* |symbology| :sup:`Symbology`
+* |3d| :sup:`3D Symbology`
+* |labelingSingle| :sup:`Labels`
+* |sourceFields| :sup:`Fields`
+* |formView| :sup:`Attributes Form`
+* |action| :sup:`Actions`
+* |mapTips| :sup:`Map Tips`
+* |diagram| :sup:`Diagrams`
+* |openTable| :sup:`Attribute Table Configuration`
+* |rendering| :sup:`Rendering`
+* |options| :sup:`Custom Properties`
+* :guilabel:`Geometry Options`
+* |relations| :sup:`Relations`
+* |temporal| :sup:`Temporal Properties`
+* |legend| :sup:`Legend Settings`
+* |elevationscale| :sup:`Elevation Properties`
+* |indicatorNotes| :sup:`Notes`
+
+For raster layers, this includes:
+
+* |layerConfiguration|:sup:`Layer Configuration`
+* |symbology| :sup:`Symbology`
+* |mapTips| :sup:`Map Tips`
+* |rendering| :sup:`Rendering`
+* |options| :sup:`Custom Properties`
+* |temporal| :sup:`Temporal Properties`
+* |elevationscale| :sup:`Elevation Properties`
+* |openTable| :sup:`Attribute Table Configuration`
+* |indicatorNotes| :sup:`Notes`
+
+
 
 
 .. _figure_manage_style:
@@ -1344,8 +1375,7 @@ to duplicate any layer in the map legend.
    or rename layer styles.
    For both vector and raster layers, you can choose which style categories to copy/paste.
    Choose :guilabel:`All Style Categories` or one of the available categories, depending on the layer type.
-   Note that that the :guilabel:`Symbology` and :guilabel:`Rendering` categories
-   are always copied thogether.
+   Note that for raster layers, the :guilabel:`Symbology` and :guilabel:`Rendering` categories are always copied together.
 
 .. _store_style:
 
@@ -1375,10 +1405,6 @@ This means that categorized or graduated styles are converted to rule-based.
 If you want to preserve those renderers, you have to use the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
-Previously, only Symbology, Rendering, and Custom Properties could be stored and
-loaded with QML/SLD files by selecting the Symbology category. Now, additional
-categories such as Layer Configuration, Temporal, and Elevation can also be
-saved and loaded.
 
 Save in database
 .................
@@ -2266,6 +2292,8 @@ The values presented in the varying size assistant above will set the size
 
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |action| image:: /static/common/action.png
+   :width: 2em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
    :width: 1.5em
 .. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
@@ -2304,6 +2332,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
+.. |diagram| image:: /static/common/diagram.png
+   :width: 2em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
@@ -2386,7 +2416,13 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |labelmask| image:: /static/common/labelmask.png
    :width: 1.5em
+.. |legend| image:: /static/common/legend.png
+   :width: 1.2em
+.. |layerConfiguration| image:: /static/common/layerconfiguration.png
+   :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
 .. |messageLog| image:: /static/common/mMessageLog.png
    :width: 1.5em
@@ -2404,7 +2440,11 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
+.. |relations| image:: /static/common/relations.png
+   :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
+   :width: 1.5em
+.. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
@@ -2432,6 +2472,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
 .. |stopwatch| image:: /static/common/mIconStopwatch.png
    :width: 1.5em
 .. |stylePreset| image:: /static/common/stylepreset.png
@@ -2441,6 +2483,8 @@ The values presented in the varying size assistant above will set the size
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
