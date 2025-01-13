@@ -231,11 +231,13 @@ each level of the dataset tree.
 |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 |               | :guilabel:`Load Connections…`              |              |              | |checkbox| | |checkbox| | |checkbox|    |            |
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
-| Connection    | :guilabel:`Refresh` a connection           |              |              | |checkbox| | |checkbox| | |checkbox|    |            |
+| Connection    | :guilabel:`Refresh` a connection           |              |              | |checkbox| | |checkbox| | |checkbox|    | |checkbox| |
 | / Database    +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
-|               | :guilabel:`Edit Connection…` settings      |              |              | |checkbox| | |checkbox| | |checkbox|    |            |
+|               | :guilabel:`Edit Connection…` settings      |              |              | |checkbox| | |checkbox| | |checkbox|    | |checkbox| |
 |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
-|               | :guilabel:`Remove Connection`              | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox|    |            |
+|               | :guilabel:`Duplicate Connection`           |              |              | |checkbox| | |checkbox| | |checkbox|    | |checkbox| |
+|               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
+|               | :guilabel:`Remove Connection…`             | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox|    | |checkbox| |
 |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 |               | :menuselection:`New Field Domain -->       |              |              |            |            |               |            |
 |               | New Range Domain`                          | |checkbox|   |              |            |            |               |            |
