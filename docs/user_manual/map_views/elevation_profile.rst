@@ -116,6 +116,9 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
      - Sets how far from the actual profile line a feature (point, line, polygon, etc.)
        can reside to be included in the results.
        Uses the map units and is ignored by other layer or geometry types.
+   * - :menuselection:`--> Rename Profile...`
+     -
+     - Allows to rename the profile view.
    * - |dock| :sup:`Dock Elevation Profile View`
      -
      - Switch between docked and floating status of the view
