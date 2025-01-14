@@ -1628,10 +1628,22 @@ User Profiles` menu. You can also run QGIS with a specific user profile from the
 
 .. tip:: **Run QGIS under a new user profile to check for bug persistence**
 
- When you encounter weird behavior with some functions in QGIS, create a new user
- profile and run the commands again. Sometimes, bugs are related to some leftovers
- in the current user profile and creating a new one may fix them as it restarts
- QGIS with the new (clean) profile.
+ Bugs you may encounter with functions in QGIS can be related to leftovers in the current user profile.
+ Running QGIS under another user profile can help you solve them or check the origin of the issue.
+ The general advice is to launch QGIS under a new user profile, thus a cleaner configuration,
+ and run the commands again.
+
+ If the bug prevents you to create a new user profile from within the :menuselection:`Settings --> User Profiles` menu,
+ you can either:
+
+ * Rename in the file explorer, the "broken" user profile folder in the :file:`QGIS3/profiles` folder
+   and restart QGIS.
+   A new ``default`` user profile will be created and executed.
+ * Start QGIS from the command line, using the new :ref:`profile name <profile_commandline>` argument:
+
+   .. code-block:: bash
+
+     qgis-ltr --profile newprofilename
 
 .. _user_profile_setting:
 
@@ -2620,10 +2632,13 @@ Takes screenshots for the user documentation. Can be used together with
 ``--screenshots-categories`` to filter which categories/sections of the
 documentation screenshots should be created (see QgsAppScreenShots::Categories).
 
+.. _profile_commandline:
+
 ``--profile``
 .............
 
 Loads QGIS using a specific profile from the user's profile folder.
+If the named profile doesn't exist, it will be created.
 This option takes precedence over :ref:`user profile startup setting <user_profile_setting>`.
 
 .. _profiles-path_option:
