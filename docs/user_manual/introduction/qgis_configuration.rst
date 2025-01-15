@@ -1204,7 +1204,9 @@ Network settings
 
 **Cache settings**
 
-Defines the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
+Defines the :guilabel:`Directory` and a :guilabel:`Size` for the cache specified in megabytes.
+You can clear the value to enable the :guilabel:`Smart cache size`,
+which sets the maximum cache size based on available disk space.
 Also offers tools to :guilabel:`automatically clear the connection authentication
 cache on SSL errors (recommended)`.
 
