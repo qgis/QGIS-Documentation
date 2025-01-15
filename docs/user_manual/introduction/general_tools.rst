@@ -1296,39 +1296,48 @@ You can achieve this by using the :menuselection:`Style` menu at the bottom
 of the Layer Properties dialog. This menu provides you with functions to
 create, load and manage styles.
 
-A style stores any information set in the layer properties dialog to render or interact with the layer.
-For vector layers, this includes:
+A style stores various information set in the layer or project properties dialog to render or interact with the layer.
+This includes:
 
-* |layerConfiguration|:sup:`Layer Configuration`
-* |symbology| :sup:`Symbology`
-* |3d| :sup:`3D Symbology`
-* |labelingSingle| :sup:`Labels`
-* |sourceFields| :sup:`Fields`
-* |formView| :sup:`Attributes Form`
-* |action| :sup:`Actions`
-* |mapTips| :sup:`Map Tips`
-* |diagram| :sup:`Diagrams`
-* |openTable| :sup:`Attribute Table Configuration`
-* |rendering| :sup:`Rendering`
-* |options| :sup:`Custom Properties`
-* :guilabel:`Geometry Options`
-* |relations| :sup:`Relations`
-* |temporal| :sup:`Temporal Properties`
-* |legend| :sup:`Legend Settings`
-* |elevationscale| :sup:`Elevation Properties`
-* |indicatorNotes| :sup:`Notes`
-
-For raster layers, this includes:
-
-* |layerConfiguration|:sup:`Layer Configuration`
-* |symbology| :sup:`Symbology`
-* |mapTips| :sup:`Map Tips`
-* |rendering| :sup:`Rendering`
-* |options| :sup:`Custom Properties`
-* |temporal| :sup:`Temporal Properties`
-* |elevationscale| :sup:`Elevation Properties`
-* |openTable| :sup:`Attribute Table Configuration`
-* |indicatorNotes| :sup:`Notes`
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| Category                                         | Vector                                      | Raster                                      |
++==================================================+=============================================+=============================================+
+| |layerConfiguration| :sup:`Layer Configuration`  | :ref:`project_properties`                   | :ref:`project_properties`                   |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |symbology| :sup:`Symbology`                     | :ref:`vector_style_menu`                    | :ref:`raster_symbology`                     |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |3d| :sup:`3D Symbology`                         | :ref:`sec_3_d_view`                         | N/A                                         |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |labelingSingle| :sup:`Labels`                   | :ref:`vector_labels_tab`                    | N/A                                         |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |sourceFieldsForms| :sup:`Fields`                | :ref:`vector_fields_menu`                   | N/A                                         |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |formView| :sup:`Attributes Form`                | :ref:`vector_attributes_menu`               | N/A                                         |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |action| :sup:`Actions`                          | :ref:`actions_menu`                         | N/A                                         |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |mapTips| :sup:`Map Tips`                        | :ref:`maptips`                              | :ref:`raster_display`                       |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |diagram| :sup:`Diagrams`                        | :ref:`sec_diagram`                          | N/A                                         |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |openTable| :sup:`Attribute Table Configuration` | :ref:`sec_attribute_table`                  |                                             |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |rendering| :sup:`Rendering`                     | :ref:`vectorrenderingmenu`                  | :ref:`raster_rendering`                     |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |options| :sup:`Custom Properties`               | :ref:`vectorinformationmenu`                | :ref:`raster_information`                   |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |digitizing| :sup:`Geometry Options`             | :ref:`digitizingmenu`                       | N/A                                         |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |relations| :sup:`Relations`                     | :ref:`vector_relations`                     | N/A                                         |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |temporal| :sup:`Temporal Properties`            | :ref:`vectortemporalmenu`                   | :ref:`raster_temporal`                      |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |legend| :sup:`Legend Settings`                  | :ref:`vectorlegendmenu`                     | N/A                                         |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |elevationscale| :sup:`Elevation Properties`     | :ref:`vectorelevationmenu`                  | :ref:`raster_elevation`                     |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+| |indicatorNotes| :sup:`Notes`                    | :ref:`layer_notes`                          | :ref:`layer_notes`                          |
++--------------------------------------------------+---------------------------------------------+---------------------------------------------+
 
 
 
@@ -2334,6 +2343,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
+.. |digitizing| image:: /static/common/digitizing.png
+   :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
@@ -2473,6 +2484,8 @@ The values presented in the varying size assistant above will set the size
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
 .. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
+.. |sourceFieldsForms| image:: /static/common/sourcefieldsandforms.png
    :width: 1.5em
 .. |stopwatch| image:: /static/common/mIconStopwatch.png
    :width: 1.5em
