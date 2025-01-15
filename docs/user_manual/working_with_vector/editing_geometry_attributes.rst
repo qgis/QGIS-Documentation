@@ -1365,7 +1365,10 @@ To split line or polygon features:
 #. Select the |splitFeatures| :sup:`Split Features` tool.
 #. Draw a line across the feature(s) you want to split.
    If a selection is active, only selected features are split.
-   Fields of resulting features are filled according to their :ref:`splitting policy <policies>`.
+   The original feature is then assigned the biggest geometry resulting from the splitting,
+   and new features are created for the remaining parts.
+   Fields of the features are filled/updated according to the datasource provider rules
+   or their :ref:`splitting policy <policies>`.
 #. You can then as usual modify any of the attributes of any resulting feature.
 
 .. tip:: **Split a polyline into new features in one-click**
