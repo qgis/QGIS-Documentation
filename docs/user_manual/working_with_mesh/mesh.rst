@@ -943,6 +943,11 @@ To add vertices to a mesh layer:
    * inside a face: splits the face into triangles whose edges connect
      the surrounding vertices to the new vertex.
 
+     With the :guilabel:`Refine neighboring faces when adding vertices` option enabled
+     in the |meshDigitizing| :sup:`Digitize mesh elements` button drop-down menu,
+     a check is applied to triangular faces that share at least one vertex with the face the new vertex is added to.
+     If their edges do not satisfy Delaunay triangulation rules, they are flipped accordingly.
+
 Adding faces
 ............
 
