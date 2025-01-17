@@ -2681,9 +2681,11 @@ with the field type. The available widgets are:
   database. This is currently only supported by the PostgreSQL provider, for
   fields of ``enum`` type.
 * **Attachment**: Uses a "Open file" dialog to store file path in a
-  relative or absolute mode. It can be used to display a hyperlink (to
-  document path), a picture or a web page. User can also configure an
-  :ref:`external storage system <external_storage>` to fetch/store resources.
+  relative or absolute mode. It can be used to display the document path as a hyperlink
+  or render the document within a dedicated widget in the form.
+  Supported document types are image, web page, audio and video,
+  and the supported file formats depend on the Operating System.
+  You can also configure an :ref:`external storage system <external_storage>` to fetch/store resources.
 
   .. tip:: **Relative Path in Attachment widget**
 
