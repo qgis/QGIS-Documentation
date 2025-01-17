@@ -951,10 +951,10 @@ To add faces to a mesh layer:
 #. Press the |meshDigitizing| :sup:`Digitize mesh elements` button
 #. A :guilabel:`Vertex Z value` widget appears on the top right corner of the map canvas.
    Set this value to the Z coordinate you would like to assign to the subsequent vertices.
-#. Hover over a vertex and click the small triangle that appears next it.
+#. Hover over a vertex and click the small triangle that appears next to it.
 #. Move the cursor to the next vertex position;
    you can snap to existing vertex or left-click to add a new one.
-#. Proceed as above to add as many vertices you wish for the face.
+#. Proceed as above to add as many vertices as you wish for the face.
    Press :kbd:`Backspace` button to undo the last vertex.
 #. While moving the mouse, a rubberband showing the shape of the face is displayed.
    If it is shown in green, then the expected face is valid
