@@ -2392,7 +2392,7 @@ returns::
           [-g, --globalsettingsfile path]     use the given ini file as Global Settings (defaults)
           [-a, --authdbdirectory path] use the given directory for authentication database
           [-f, --code path]   run the given python file on load
-          [-F, --py-args arguments]   arguments for python. These arguments will be available for each python execution via 'sys.argv' included the file specified by '--code'. All arguments till '--' are passed to python and ignored by QGIS.
+          [-F, --py-args arguments]   arguments for python. These arguments will be available for each python execution via 'sys.argv' including the file specified by '--code'. All arguments till '--' are passed to python and ignored by QGIS.
           [-d, --defaultui]   start by resetting user ui settings to default
           [--hide-browser]        hide the browser widget
           [--dxf-export filename.dxf]     emit dxf output of loaded datasets to given file
