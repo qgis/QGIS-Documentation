@@ -1310,6 +1310,34 @@ symbol, following some rules:
 
 .. _vector_labels_tab:
 
+Extent buffer
+.............
+
+You may set an extent buffer for a symbol. This means that a buffer is applied to
+the current map extent so that if a feature is outside of the actual map extent
+but inside the buffered extent it will still be rendered. This is useful for example
+with symbols which use the geometry generator where you would like to still see the
+generated geometries even if the actual feature is outside of the map extent.
+
+To edit the extent buffer you can utilize the :guilabel:`Extent buffer` panel.
+
+#. Start by going to the top symbol level and select :guilabel:`Advanced`
+   menu in the bottom right of the dialog
+#. Find :guilabel:`Extent buffer` option
+#. In the new panel you can set the buffer distance
+
+The buffer distance units can be changed. You can also control the distance value
+by using the data defined override widget. For example you can change the value
+based on the current map scale ``if(@map_scale > 50000, 5000, 0)``:
+
+ .. only:: html
+
+   .. figure:: img/extent_buffer.gif
+      :align: center
+      :width: 50%
+
+      Setting the symbol's extent buffer according to data defined expression
+
 Labels Properties
 =================
 
