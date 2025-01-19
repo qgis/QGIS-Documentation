@@ -2392,6 +2392,7 @@ returns::
           [-g, --globalsettingsfile path]     use the given ini file as Global Settings (defaults)
           [-a, --authdbdirectory path] use the given directory for authentication database
           [-f, --code path]   run the given python file on load
+          [-F, --py-args arguments]   arguments for python. These arguments will be available for each python execution via 'sys.argv' including the file specified by '--code'. All arguments till '--' are passed to python and ignored by QGIS.
           [-d, --defaultui]   start by resetting user ui settings to default
           [--hide-browser]        hide the browser widget
           [--dxf-export filename.dxf]     emit dxf output of loaded datasets to given file
@@ -2565,6 +2566,8 @@ several machines by only editing one file.
 This option is similar to ``--globalsettingsfile``, but defines the path to the
 directory where the authentication database will be stored and loaded.
 
+.. _code_commandline:
+
 ``--code``
 ..........
 
@@ -2583,9 +2586,28 @@ following content:
 
 Assuming you are in the directory where the file :file:`load_alaska.py` is
 located, you can start QGIS, load the raster file :file:`landcover.img` and give
-the layer the name 'Alaska' using the following command::
+the layer the name 'Alaska' using the following command:
 
-  qgis --code load_alaska.py
+.. code-block:: bash
+
+   qgis --code load_alaska.py
+
+``--py-args``
+.............
+
+This option allows to pass arguments to the script provided via the :ref:`--code <code_commandline>` parameter
+and more generally to each python execution.
+After ``--py-args``, it is not possible to pass any other parameter than :ref:`-- <file_commandline>` to QGIS.
+All arguments after ``--py-args`` till ``--`` are passed over to the python interpreter and ignored by QGIS.
+
+.. code-block:: bash
+
+   qgis --code /home/user/test.py --py-args --specialScriptArguments "a text arg" 'and another arg' -- layer1 layer2
+
+In the above code, :file:`test.py` will have this content in ``sys.argv``:
+['/home/user/test.py', '--specialScriptArguments', 'a text arg', 'and another arg'].
+``layer1`` and ``layer2`` will be normally handled by QGIS as layers to load.
+
 
 ``--defaultui``
 ...............
@@ -2672,6 +2694,20 @@ This is useful for developers while testing new versions of the programs
 without needing to replace the existing ones.
 
 The equivalent environment variable is ``QGIS_OPENCL_PROGRAM_FOLDER``.
+
+.. _file_commandline:
+
+``--``
+......
+
+This option allows to pass following arguments as files to open in QGIS.
+They can be supported rasters or vectors files, QGIS layer definition files or project files.
+
+.. code-block:: bash
+
+   qgis -- /home/user/project.qgs /home/user/path_to_data/layer1.gpkg
+
+The above code will start QGIS, open the :file:`project` file and load :file:`layer1` in it.
 
 .. _deploying_organization:
 
