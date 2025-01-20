@@ -1301,55 +1301,54 @@ create, load and manage styles.
 A style stores various information set in the layer or project properties dialog to render or interact with the layer.
 This includes:
 
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| Category                                         | Vector                                      | Raster                                      |
-+==================================================+=============================================+=============================================+
-| |layerConfiguration| :sup:`Layer Configuration`  | :ref:`project_properties`                   | :ref:`project_properties`                   |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |symbology| :sup:`Symbology`                     | :ref:`vector_style_menu`                    | :ref:`raster_symbology`                     |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |3d| :sup:`3D Symbology`                         | :ref:`sec_3_d_view`                         | N/A                                         |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |labelingSingle| :sup:`Labels`                   | :ref:`vector_labels_tab`                    | N/A                                         |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |sourceFieldsForms| :sup:`Fields`                | :ref:`vector_fields_menu`                   | N/A                                         |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |formView| :sup:`Attributes Form`                | :ref:`vector_attributes_menu`               | N/A                                         |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |action| :sup:`Actions`                          | :ref:`actions_menu`                         | N/A                                         |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |mapTips| :sup:`Map Tips`                        | :ref:`maptips`                              | :ref:`raster_display`                       |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |diagram| :sup:`Diagrams`                        | :ref:`sec_diagram`                          | N/A                                         |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |openTable| :sup:`Attribute Table Configuration` | :ref:`sec_attribute_table`                  |                                             |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |rendering| :sup:`Rendering`                     | :ref:`vectorrenderingmenu`                  | :ref:`raster_rendering`                     |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |options| :sup:`Custom Properties`               | :ref:`vectorinformationmenu`                | :ref:`raster_information`                   |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |digitizing| :sup:`Geometry Options`             | :ref:`digitizingmenu`                       | N/A                                         |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |relations| :sup:`Relations`                     | :ref:`vector_relations`                     | N/A                                         |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |temporal| :sup:`Temporal Properties`            | :ref:`vectortemporalmenu`                   | :ref:`raster_temporal`                      |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |legend| :sup:`Legend Settings`                  | :ref:`vectorlegendmenu`                     | N/A                                         |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |elevationscale| :sup:`Elevation Properties`     | :ref:`vectorelevationmenu`                  | :ref:`raster_elevation`                     |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-| |indicatorNotes| :sup:`Notes`                    | :ref:`layer_notes`                          | :ref:`layer_notes`                          |
-+--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+.. table:: Components of stored style and their references
 
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | Category                                         | Vector                                      | Raster                                      |
+   +==================================================+=============================================+=============================================+
+   | |layerConfiguration| :sup:`Layer Configuration`  | :ref:`Layers capabilities <project_layer_capabilities>`                                   |
+   +                                                  +---------------------------------------------+---------------------------------------------+
+   |                                                  | :ref:`maptips`                              | :ref:`raster_display`                       |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |symbology| :sup:`Symbology`                     | :ref:`vector_style_menu`                    | :ref:`raster_symbology` :sup:`[1]`          |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |3d| :sup:`3D Symbology`                         | :ref:`sec_3_d_view`                         | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |labelingSingle| :sup:`Labels`                   | :ref:`vector_labels_tab`                    | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |sourceFieldsForms| :sup:`Fields`                | :ref:`vector_fields_menu`                   | N/A                                         |
+   |                                                  | and :ref:`constraints`                      |                                             |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |formView| :sup:`Attributes Form`                | :ref:`vector_attributes_menu`               | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |action| :sup:`Actions`                          | :ref:`actions_menu`                         | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |mapTips| :sup:`Map Tips`                        | :ref:`maptips`                              | :ref:`raster_display`                       |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |diagram| :sup:`Diagrams`                        | :ref:`sec_diagram`                          | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |openTable| :sup:`Attribute Table Configuration` | :ref:`sec_attribute_table`                  |                                             |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |rendering| :sup:`Rendering`                     | :ref:`vectorrenderingmenu`                  | :ref:`raster_rendering` :sup:`[1]`          |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |options| :sup:`Custom Properties`               | :ref:`vectorinformationmenu`                | :ref:`raster_information`                   |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |digitizing| :sup:`Geometry Options`             | :ref:`digitizingmenu`                       | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |relations| :sup:`Relations`                     | :ref:`vector_relations`                     | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |temporal| :sup:`Temporal Properties`            | :ref:`vectortemporalmenu`                   | :ref:`raster_temporal`                      |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |legend| :sup:`Legend Settings`                  | :ref:`vectorlegendmenu`                     | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |elevationscale| :sup:`Elevation Properties`     | :ref:`vectorelevationmenu`                  | :ref:`raster_elevation`                     |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |indicatorNotes| :sup:`Notes`                    | :ref:`layer_notes`                                                                        |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
 
+:sup:`[1]`: For raster layers, symbology and rendering items are melted together,
+meaning that saving/loading one would also save/load items of/from the other.
 
-
-.. _figure_manage_style:
-
-.. figure:: img/style_combobox.png
-   :align: center
-
-   Vector layer style combo box options
 
 By default, the style applied to a loaded layer is named ``default``. Once you
 have got the ideal and appropriate rendering for your layer, you can save it by
@@ -1406,6 +1405,13 @@ save the style as a:
 
 * QGIS layer style file (:file:`.qml`)
 * SLD file (:file:`.sld`), only available for vector layers
+
+.. _figure_manage_style:
+
+.. figure:: img/style_combobox.png
+   :align: center
+
+   Vector layer style combo box options
 
 Used on file-based format layers (:file:`.shp`, :file:`.tab`...), :guilabel:`Save
 as Default` generates a :file:`.qml` file for the layer (with the same name).
@@ -2435,10 +2441,10 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |labelmask| image:: /static/common/labelmask.png
    :width: 1.5em
-.. |legend| image:: /static/common/legend.png
-   :width: 1.2em
 .. |layerConfiguration| image:: /static/common/layerconfiguration.png
    :width: 1.5em
+.. |legend| image:: /static/common/legend.png
+   :width: 1.2em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
@@ -2490,8 +2496,6 @@ The values presented in the varying size assistant above will set the size
 .. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
-   :width: 1.5em
-.. |sourceFields| image:: /static/common/mSourceFields.png
    :width: 1.5em
 .. |sourceFieldsForms| image:: /static/common/sourcefieldsandforms.png
    :width: 1.5em
