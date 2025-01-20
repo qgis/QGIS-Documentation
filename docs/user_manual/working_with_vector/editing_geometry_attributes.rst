@@ -1185,6 +1185,8 @@ geometry with the |addPart| :sup:`Add Part` tool.
   However, every parts of the same multipolygon feature
   will have their outer vertices ordered following the same direction.
 
+  You can however use the :ref:`qgisforcerhr` algorithm to constrain features of a layer
+  to have vertices of their outer boundaries ordered in the clockwise direction.
 
 .. index::
    single: Digitizing tools; Delete Part
@@ -1230,6 +1232,9 @@ To add a ring:
   However, every rings of the same (multi)polygon feature
   will have their vertices ordered in the opposite direction to the outer boundary's.
 
+  You can however use the :ref:`qgisforcerhr` algorithm to constrain features of a layer
+  to have vertices of their outer boundaries ordered in the clockwise direction,
+  and vertices of their interior rings ordered in the counter-clockwise direction.
 
 .. index::
    single: Digitizing tools; Fill Ring
