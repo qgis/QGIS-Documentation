@@ -1177,6 +1177,16 @@ The |addPart| :sup:`Add Part` can also be used to add a geometry to a geometryle
 feature. First, select the feature in the attribute table and digitize the new
 geometry with the |addPart| :sup:`Add Part` tool.
 
+.. note:: **Order of vertices in polygon parts**
+
+  Unlike the OGC standards, QGIS doesn't constrain vertices
+  of the exterior boundary of a polygon feature to be ordered counterclockwise.
+  Thus, you can find both directions in a layer.
+  However, every parts of the same multipolygon feature
+  will have their outer vertices ordered following the same direction.
+
+  You can however use the :ref:`qgisforcerhr` algorithm to constrain features of a layer
+  to have vertices of their outer boundaries ordered in the clockwise direction.
 
 .. index::
    single: Digitizing tools; Delete Part
@@ -1199,16 +1209,32 @@ To delete a part, simply click within the target part.
 Add Ring
 --------
 
-You can create ring polygons using the |addRing|
-:sup:`Add Ring` icon in the toolbar. This means that inside an existing area, it
-is possible to digitize further polygons that will occur as a 'hole', so
-only the area between the boundaries of the outer and inner polygons remains
-as a ring polygon.
+You can create ring polygons using the |addRing| :sup:`Add Ring` icon in the toolbar.
+This means that inside an existing area, it is possible to digitize further polygons
+that will occur as a 'hole', so only the area between the boundaries
+of the outer and inner polygons remains as a ring polygon.
 
-.. FixMe: I think this tool should behave as below
-.. Like many digitizing tools, the |addRing| :sup:`Add Ring` tool adds ring to all
-.. selected features if any, otherwise all overlapping features are pierced.
+To add a ring:
 
+#. Select the feature(s) to modify
+#. Activate the |addRing| :sup:`Add Ring` tool
+#. Draw a polygon within the selected geometries,
+   using the aforementioned :ref:`techniques <drawing_methods>`.
+   A hole appears in the selected geometries.
+#. If no geometry is selected when the ring is drawn,
+   then a hole is added to each of the polygons the ring is drawn over.
+
+.. note:: **Order of vertices in polygon rings**
+
+  Unlike the OGC standards, QGIS doesn't constrain vertices
+  of the exterior boundary of a polygon feature to be ordered counterclockwise.
+  Thus, you can find both directions in a layer.
+  However, every rings of the same (multi)polygon feature
+  will have their vertices ordered in the opposite direction to the outer boundary's.
+
+  You can however use the :ref:`qgisforcerhr` algorithm to constrain features of a layer
+  to have vertices of their outer boundaries ordered in the clockwise direction,
+  and vertices of their interior rings ordered in the counter-clockwise direction.
 
 .. index::
    single: Digitizing tools; Fill Ring
