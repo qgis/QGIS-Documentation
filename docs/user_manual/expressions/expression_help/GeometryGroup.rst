@@ -2408,7 +2408,7 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
          Read more on the underlying GEOS predicate, as described in PostGIS `ST_MaximumInscribedCircle <https://postgis.net/docs/ST_MaximumInscribedCircle.html>`_ function.
 
          This argument requires GEOS >= 3.9.
-       * **return_details** - Set this to true to return a list of maps containing (key names in quotes) the feature 'id', the expression 'result' and the 'overlap' value. The 'radius' of the maximum inscribed circle is also returned when the target layer is a polygon. Only valid when used with the expression parameter
+       * **return_details** - Set this to true to return a list of maps containing (key names in quotes) the feature 'id', the expression 'result' and the 'overlap' value (of the largest element in case of multipart). The 'radius' of the maximum inscribed circle is also returned when the target layer is a polygon. Only valid when used with the expression parameter
        * **sort_by_intersection_size** - only valid when used with an expression, set this to 'des' to return the results ordered by the overlap value in descending order or set this to 'asc' for ascending order.
    * - Examples
      - * ``overlay_intersects('regions')`` → TRUE if the current feature spatially intersects a region
