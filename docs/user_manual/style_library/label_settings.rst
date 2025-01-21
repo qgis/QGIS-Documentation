@@ -645,7 +645,7 @@ Point labels placement modes available are:
     The latter option is especially useful when the symbol size isn't fixed,
     e.g. if it's set by a data defined size or when using different symbols
     in a :ref:`categorized <categorized_renderer>` renderer.
-  * at a :guilabel:`Maximum Distance` from the feature, which is an optional setting
+  * within a :guilabel:`Maximum Distance` from the feature, which is an optional setting
     that allows you to control how far a label can be placed from the feature it's labeling.
     This works alongside the :guilabel:`Distance` setting to create a range for label placement,
     adding flexibility to position labels more effectively, especially on busy maps, ensuring
@@ -658,15 +658,12 @@ Point labels placement modes available are:
       (like top left or top right), even if it's a bit farther away from the feature. The label
       only moves to other positions if there's no room within the maximum distance at your
       preferred position.
-  * following a :guilabel:`Position priority` that can be customized or set for
-    an individual feature using a data defined list of prioritised positions.
-    This also allows only certain placements to be used, so e.g.
-    for coastal features you can prevent labels being placed over the land.
-
-    By default, cartographic mode placements are prioritised in the following
-    order (respecting the `guidelines from Krygier and Wood (2011)
+  * following a :guilabel:`Position priority` which dictates placement candidates
+    for anchoring labels around and (centered) over the point feature,
+    and the order in which the positions are tested.
+    The default order, based on `guidelines from Krygier and Wood (2011)
     <https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_
-    and other cartographic textbooks):
+    and other cartographic textbooks, is as follows:
 
     #. top right
     #. top left
@@ -676,6 +673,11 @@ Point labels placement modes available are:
     #. middle left
     #. top, slightly right
     #. bottom, slightly left.
+
+    Using the |dataDefine| :sup:`Data-defined override` button,
+    you can provide a comma separated list of placements in order of priority.
+    This also allows only certain placements to be used, for certain features only,
+    so e.g., for coastal features you can prevent labels being placed over the land.
 
 * :guilabel:`Around Point`: labels are placed in a circle around the feature
   with an equal radius set in :guilabel:`Distance`.
