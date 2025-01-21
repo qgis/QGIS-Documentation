@@ -1778,7 +1778,7 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
     It is even possible to hover over two different vertices, generating virtual
     coordinate lines for both, and snap to their intersection.
 * |circleIntersection| :sup:`2-circle Point Intersection`: allows you to
-  pick or digitize a point at the intersection of two circles.
+  digitize a point or vertex at the intersection of two circles.
   (more at :ref:`circle_intersection`).
 * |settings| :sup:`Snap to common angles`: when moving the cursor,
   displays a virtual line that you can snap to to add the next vertex.
@@ -2009,14 +2009,17 @@ Unlock the angle parameter to cancel their use in the middle of the process.
 2-circle point intersection
 ---------------------------
 
-To find the intersection point of two circles, click the
-|circleIntersection| :sup:`2-circle Point Intersection` icon.
-This will open a dialog where you can define the parametaers for
-:guilabel:`Circle #1` and :guilabel:`Circle #2`.
-The :guilabel:`X` and :guilabel:`Y` coordinates for both circles are automatically calculated
-based on your clicks on the map canvas.
-You will need to enter the distance :guilabel:`d` for each circle, the tool will then calculate
-and display the two intersection points of the circles.
+To add a vertex at the intersection of two circles, follow these steps:
+
+#. Click the |circleIntersection| :sup:`2-circle Point Intersection` icon in the
+   |extractVertices| :sup:`Construction Tools` drop-down menu.
+#. A dialog will open where you can define the parameters for
+   :guilabel:`Circle #1` and :guilabel:`Circle #2`.
+#. Click on the map canvas, and the tool will automatically calculate the
+   :guilabel:`X` and :guilabel:`Y` coordinates for the centers of both circles.
+#. Enter the distance :guilabel:`d` for each circle.
+#. The tool will calculate and display the two intersection points of the circles.
+#. Click one of the intersection points to add the new vertex.
 
    .. figure:: img/circles_intersection.png
       :align: center
