@@ -1780,7 +1780,7 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
     You can snap the vertex anywhere on this virtual line.
     It is even possible to hover over two different vertices, generating virtual
     coordinate lines for both, and snap to their intersection.
-* |circleIntersection| :sup:`2-circle Point Intersection`: allows you to
+* |circlesIntersection| :sup:`2-circle Point Intersection`: allows you to
   digitize a point or vertex at the intersection of two circles.
   (more at :ref:`circle_intersection`).
 * |settings| :sup:`Snap to common angles`: when moving the cursor,
@@ -2014,7 +2014,7 @@ Unlock the angle parameter to cancel their use in the middle of the process.
 
 To add a vertex at the intersection of two circles, follow these steps:
 
-#. Click the |circleIntersection| :sup:`2-circle Point Intersection` icon in the
+#. Click the |circlesIntersection| :sup:`2-circle Point Intersection` icon in the
    |extractVertices| :sup:`Construction Tools` drop-down menu.
 #. A dialog will open where you can define the parameters for
    :guilabel:`Circle #1` and :guilabel:`Circle #2`.
@@ -2185,7 +2185,7 @@ To edit features in-place:
    :width: 1.5em
 .. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
    :width: 1.5em
-.. |circleIntersection| image:: /static/common/circlesintersection.png
+.. |circlesIntersection| image:: /static/common/circlesintersection.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
