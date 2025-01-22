@@ -2014,8 +2014,7 @@ Unlock the angle parameter to cancel their use in the middle of the process.
 
 To add a vertex at the intersection of two circles, follow these steps:
 
-#. Click the |circlesIntersection| :sup:`2-circle Point Intersection` icon in the
-   |extractVertices| :sup:`Construction Tools` drop-down menu.
+#. Click the |circlesIntersection| :sup:`2-circle Point Intersection` icon.
 #. A dialog will open where you can define the parameters for
    :guilabel:`Circle #1` and :guilabel:`Circle #2`.
 #. Click on the map canvas, and the tool will automatically calculate the
