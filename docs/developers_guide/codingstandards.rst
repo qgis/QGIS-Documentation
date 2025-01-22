@@ -7,7 +7,8 @@
 .. contents::
    :local:
 
-These standards should be followed by all QGIS developers.
+QGIS coding standards are described in the policy document available at [QEP #314](https://github.com/qgis/QGIS-Enhancement-Proposals/blob/master/qep-314-coding-style.md).
+All developers are required to follow those policies. Please note that QEP #314 is a live document, and that these policies may change over time.
 
 Classes
 =======
