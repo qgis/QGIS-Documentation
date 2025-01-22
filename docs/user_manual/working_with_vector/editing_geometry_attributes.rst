@@ -1768,6 +1768,21 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   (more at :ref:`parallel_or_perpendicular`)
 * |cadPerpendicular| :sup:`Perpendicular` to draw a line perpendicular to an
   existing one (more at :ref:`parallel_or_perpendicular`)
+* |extractVertices| :sup:`Construction Tools` provides a couple of options that
+  constrain the vertices placement based on extrapolated coordinates of
+  existing elements:
+
+  * |unchecked| :guilabel:`Line Extension`: hover over a segment and you get
+    a purple dotted line extending the segment across the map canvas.
+    You can snap the vertex anywhere on this virtual line.
+  * |unchecked| :guilabel:`X/Y Point`: hover over a vertex and you get
+    a purple dotted line along its X or Y coordinate, across the map canvas.
+    You can snap the vertex anywhere on this virtual line.
+    It is even possible to hover over two different vertices, generating virtual
+    coordinate lines for both, and snap to their intersection.
+* |circlesIntersection| :sup:`2-circle Point Intersection`: allows you to
+  digitize a point or vertex at the intersection of two circles.
+  (more at :ref:`circle_intersection`).
 * |settings| :sup:`Snap to common angles`: when moving the cursor,
   displays a virtual line that you can snap to to add the next vertex.
   The snapping line is defined by the last added vertex
@@ -1798,18 +1813,6 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   * :guilabel:`Show bearing/azimuth`
   * :guilabel:`Show common snapping angle`
 
-* |extractVertices| :sup:`Construction Tools` provides a couple of options that
-  constrain the vertices placement based on extrapolated coordinates of
-  existing elements:
-
-  * |unchecked| :guilabel:`Line Extension`: hover over a segment and you get
-    a purple dotted line extending the segment across the map canvas.
-    You can snap the vertex anywhere on this virtual line.
-  * |unchecked| :guilabel:`X/Y Point`: hover over a vertex and you get
-    a purple dotted line along its X or Y coordinate, across the map canvas.
-    You can snap the vertex anywhere on this virtual line.
-    It is even possible to hover over two different vertices, generating virtual
-    coordinate lines for both, and snap to their intersection.
 
 Below the toolbar, you will find a number of text boxes whose value reflects
 by default the position or movement of the cursor in the map canvas.
@@ -2004,6 +2007,28 @@ These two tools just find the right angle of the perpendicular and
 parallel angle and lock this parameter during your editing.
 Unlock the angle parameter to cancel their use in the middle of the process.
 
+.. _circle_intersection:
+
+2-circle point intersection
+---------------------------
+
+To add a vertex at the intersection of two circles, follow these steps:
+
+#. Click the |circlesIntersection| :sup:`2-circle Point Intersection` icon.
+#. A dialog will open where you can define the parameters for
+   :guilabel:`Circle #1` and :guilabel:`Circle #2`.
+#. Click on the map canvas, and the tool will automatically calculate the
+   :guilabel:`X` and :guilabel:`Y` coordinates for the centers of both circles.
+#. Enter the distance :guilabel:`d` for each circle.
+#. The tool will calculate and display the two intersection points of the circles.
+#. Click one of the intersection points to add the new vertex.
+
+   .. figure:: img/circles_intersection.png
+      :align: center
+
+      2-circle Point Intersection
+
+
 .. _construction_mode:
 
 Construction mode
@@ -2158,6 +2183,8 @@ To edit features in-place:
 .. |circle3Tangents| image:: /static/common/mActionCircle3Tangents.png
    :width: 1.5em
 .. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
+   :width: 1.5em
+.. |circlesIntersection| image:: /static/common/circlesintersection.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
