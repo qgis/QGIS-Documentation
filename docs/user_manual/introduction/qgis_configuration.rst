@@ -1929,6 +1929,13 @@ i.e. whether selecting a color should by default be defined as ``RGB`` or ``CMYK
 Any color defined in a different color model than the one specified here
 will be converted to this color model when exporting a layout.
 
+Additionally, an option is available for selecting an :guilabel:`ICC Profile`
+which allows you to load a specific ICC profile that defines the color space
+for your project. Once applied, QGIS will enforce the selected color model to ensure
+consistent color representation.
+You can also control the :guilabel:`Opacity` of the color model and choose to :guilabel:`Assign a random color to symbols`.
+Note that the :guilabel:`ICC Profile` option
+will only be visible if QGIS is built with Qt 6.8.0. or higher.
 
 There is also an additional section where you can define specific colors for the
 running project. Like the :ref:`global colors <colors_options>`, you can:
