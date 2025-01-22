@@ -327,18 +327,6 @@ This will:
   thus making it harder to understand and maintain for others
 
 
-Prefer Having Constants First in Predicates
---------------------------------------------
-
-Prefer to put constants first in predicates.
-
-``0 == value`` instead of ``value == 0``
-
-This will help prevent programmers from accidentally using ``=`` when they meant
-to use ``==``, which can introduce very subtle logic bugs. The compiler will
-generate an error if you accidentally use ``=`` instead of ``==`` for comparisons
-since constants inherently cannot be assigned values.
-
 Whitespace Can Be Your Friend
 ------------------------------
 
