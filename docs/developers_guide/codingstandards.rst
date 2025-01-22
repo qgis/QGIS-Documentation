@@ -156,23 +156,6 @@ complete reindentation of the source, the script uses an old astyle version,
 that we include in our repository (enable ``WITH_ASTYLE`` in cmake to include
 it in the build).
 
-Braces
-------
-
-Braces should start on the line following the expression:
-
-.. code-block:: cpp
-
-  if( foo == 1 )
-  {
-    // do stuff
-    ...
-  }
-  else
-  {
-    // do something else
-    ...
-  }
 
 API Compatibility
 ==================
@@ -327,28 +310,6 @@ This will:
   thus making it harder to understand and maintain for others
 
 
-Whitespace Can Be Your Friend
-------------------------------
-
-Adding spaces between operators, statements, and functions makes it easier for
-humans to parse code.
-
-Which is easier to read, this:
-
-.. code-block:: cpp
-
-  if (!a&&b)
-
-or this:
-
-.. code-block:: cpp
-
-  if ( ! a && b )
-
-.. note:: :source:`prepare_commit.sh <scripts/prepare_commit.sh>` script will
- take care of this.
-
-
 Put commands on separate lines
 -------------------------------
 
@@ -375,24 +336,6 @@ Instead use
     
   baz();
   bar();
-
-Indent access modifiers
-------------------------
-
-Access modifiers structure a class into sections of public API, protected API
-and private API. Access modifiers themselves group the code into this structure.
-Indent the access modifier and declarations.
-
-.. code-block:: cpp
-
-  class QgsStructure
-  {
-    public:
-      /**
-       * Constructor
-       */
-       explicit QgsStructure();
-  }
 
 
 Book recommendations
