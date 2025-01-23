@@ -2066,6 +2066,20 @@ shortcut. While in construction mode, clicking the map canvas won't add new
 vertexes, but will capture the clicks' positions so that you can use them as
 reference points to then lock distance, angle or X, Y, Z, M relative values.
 
+In the |cadConstruction| :sup:`Construction mode` you will find a drop-down menu
+where you can choose to:
+
+* |checkbox| :guilabel:`Record Construction Guides`: All construction steps are
+  rendered as dashed lines. Each step that you perform is visually represented,
+  allowing you to trace the construction process. The guides are displayed as
+  long as :guilabel:`Advanced Digitizing` remains active.
+* |checkbox| :guilabel:`Show Construction Guides`: Allows you to make construction
+  guides visible or hidden on the canvas. When enabled, all active guides are displayed,
+  offering better spatial orientation and precision during the digitizing process.
+* |checkbox| :guilabel:`Snap to Visible Construction Guides`: The guides are snap-able,
+  allowing you to start new construction steps from any point along the existing guides.
+* Choose :guilabel:`Clear Construction Guides` to remove all the guides from the canvas.
+
 As an example, the construction mode can be used to draw some point
 at an exact distance from an existing point.
 
