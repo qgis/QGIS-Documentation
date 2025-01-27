@@ -660,10 +660,12 @@ The :guilabel:`Item Properties` panel opens with settings such as:
 * the :guilabel:`Page size` frame described above.
   You can modify each property using the data defined override options
   (see :ref:`atlas_data_defined_override` for a use case); 
-* the |unchecked| :guilabel:`Exclude page from exports` to control whether
-  the current page with its content should be included in the :ref:`layout output <create-output>`;
 * the :guilabel:`Background` of the current page using the :ref:`color <color-selector>`
   or :ref:`symbol <symbol-selector>` you want.
+* the :guilabel:`Apply to all Pages` button updates the current page properties to the 
+  other existing pages in the layout;
+* the |unchecked| :guilabel:`Exclude page from exports` to control whether
+  the current page with its content should be included in the :ref:`layout output <create-output>`;
 
 .. _figure_layout_page:
 
