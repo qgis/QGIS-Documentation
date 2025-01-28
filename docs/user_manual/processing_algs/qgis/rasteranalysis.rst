@@ -3083,6 +3083,82 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisrasterminmax:
+
+Raster minimum/maximum
+----------------------
+Extracts the minimum and maximum pixel values from a specified band of a raster layer.
+If multiple pixels share the same minimum or maximum value,
+only one of them will be included in the output.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Raster layer from which to extract the minimum and maximum pixel values.
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+
+       Default: 1
+     - The band of the raster to analyze. If the raster is multiband, specify the band number (starting from 1).
+   * - **Extract**
+     - ``EXTREMA``
+     - [enumeration]
+
+       Default: 0 (Minimum and Maximum)
+     - Choose which extrema to extract:
+     
+       - 0: Minimum and Maximum
+       - 1: Minimum only
+       - 2: Maximum only
+   * - **Output layer**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [vector: point]
+     - Vector layer with point features at the locations of the minimum and/or maximum pixel values.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:rasterminmax``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 .. _qgisrastersurfacevolume:
 
 Raster surface volume
