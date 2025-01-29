@@ -135,7 +135,7 @@ For each item of each provider, you can:
   :guilabel:`Processing Algorithms` toolbar
 * assign an :guilabel:`Icon` to the algorithm
 * set a :guilabel:`Menu path`: the algorithm will then be available through
-  an existing or a custom menu, e.g. ``Vect&or/MyTopAlgorithms``
+  an existing or a custom menu, e.g. ``Vector/MyTopAlgorithms``
 
 Restart QGIS to apply the settings.
 At any time, your changes can be :guilabel:`Reset to defaults`.
