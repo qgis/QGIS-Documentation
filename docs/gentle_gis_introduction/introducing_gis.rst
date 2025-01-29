@@ -259,7 +259,7 @@ tutorials that follow we will be exploring vector data in more detail.
    Vector data is used to represent points (e.g., towns), lines (e.g., rivers) and
    polygons (e.g., municipal boundaries).
 
-**Raster data** is stored as a grid of values. There are many satellites circling
+**Raster data** are stored as a grid of values. There are many satellites circling
 the earth and the photographs they take are a kind of raster data that can be
 viewed in a GIS. One important difference between raster and vector data is that
 if you zoom in too much on a raster image, it will start to appear 'blocky' (see
