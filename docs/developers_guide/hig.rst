@@ -11,7 +11,7 @@ guidelines are followed in layout and design of GUIs.
    Try to identify elements that can be grouped together and then use group
    boxes with a label to identify the topic of that group. Avoid using group
    boxes with only a single widget / item inside.
-#. Capitalise first letter only in labels, tool
+#. Capitalize first letter only in labels, tool
    tips, descriptive text, and other non-heading or title text:
    These should be written as a phrase with leading capital letter, and all
    remaining words written with lower case first letters, unless they are nouns
@@ -27,7 +27,7 @@ guidelines are followed in layout and design of GUIs.
    to each other e.g.: Label1 Plugin (Path:) Label2 [/path/to/plugins]
 #. Keep harmful actions away from harmless ones:
    If you have actions for 'delete', 'remove' etc, try to impose adequate space
-   between the harmful action and innocuous actions so that the users is less
+   between the harmful action and innocuous actions so that the user is less
    likely to inadvertently click on the harmful action.
 #. Always use a QButtonBox for 'OK', 'Cancel' etc buttons:
    Using a button box will ensure that the order of 'OK' and 'Cancel' etc,
@@ -35,11 +35,11 @@ guidelines are followed in layout and design of GUIs.
    environment that the user is using.
 #. Tabs should not be nested. If you use tabs, follow the style of the
    tabs used in QgsVectorLayerProperties / QgsProjectProperties etc.
-   i.e. tabs at top with icons at 22x22.
+   i.e., tabs at top with icons at 22x22.
 #. Widget stacks should be avoided if at all possible. They cause problems with
    layouts and inexplicable (to the user) resizing of dialogs to accommodate
    widgets that are not visible.
-#. Try to avoid technical terms and rather use a laymans equivalent e.g. use
+#. Try to avoid technical terms and rather use a layman's equivalent e.g., use
    the word 'Opacity' rather than 'Alpha Channel' (contrived example),
    'Text' instead of 'String' and so on.
 #. Use consistent iconography. If you need an icon or icon elements, please
