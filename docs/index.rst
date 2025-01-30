@@ -76,6 +76,19 @@ Please have a look into one of the documents below.
 
 .. toctree::
    :maxdepth: 2
+   :caption: About QGIS
+
+   about/preamble
+   about/foreword
+   about/conventions
+   about/features
+   about/help_and_support
+   about/contributors
+   about/GNU_GPL
+   about/GNU_FDL
+
+.. toctree::
+   :maxdepth: 2
    :caption: For Users
 
    QGIS Desktop User Guide/Manual (QGIS Testing) <user_manual/index>
