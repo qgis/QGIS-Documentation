@@ -3936,17 +3936,16 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-.. _zonalrasterminmaxpoint:
+.. _qgiszonalminmaxpoint:
 
 Zonal Minimum/Maximum Point
 ---------------------------
-Extracts point features corresponding to the minimum and maximum pixel values within polygon zones.
+The output will contain one point feature for the minimum and one for the maximum raster value
+for every individual zonal feature from a polygon layer.
+The created point layer will be in the same spatial reference system as the selected raster layer.
 
 Parameters
-..........  
-
-Basic parameters
-^^^^^^^^^^^^^^^^  
+..........   
 
 .. list-table::  
    :header-rows: 1  
@@ -3981,37 +3980,6 @@ Basic parameters
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
 
-Advanced parameters
-^^^^^^^^^^^^^^^^^^^  
-
-.. list-table::  
-   :header-rows: 1  
-   :widths: 20 20 20 40  
-
-   * - Label  
-     - Name  
-     - Type  
-     - Description  
-   * - **Invalid feature filtering**  
-     - ``INVALID_FEATURE_FILTERING``  
-     - [enumeration]  
-       
-       Default: ``use default``  
-     - Options:  
-         * 0 --- Use default  
-         * 1 --- Do not Filter (Better Performance)  
-         * 2 --- Skip (Ignore) Features with Invalid Geometries  
-         * 3 --- Stop Algorithm Execution When a Geometry is Invalid
-   * - **Limit features processed**  
-     - ``LIMIT_FEATURES``  
-     - [number]  
-       
-       Default: not set  
-     - Limit the number of features to process.
-   * - **Feature filter**  
-     - ``FEATURE_FILTER``  
-     - [expression]  
-     - Apply an expression to filter features.
 
 Outputs
 .......  
