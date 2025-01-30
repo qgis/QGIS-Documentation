@@ -4012,6 +4012,79 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgiszonalminmaxpoint:
+
+Zonal Minimum/Maximum Point
+---------------------------
+Extracts point features corresponding to the minimum and maximum pixel values within polygon zones.
+
+The output will contain one point feature for the minimum and one for the maximum raster value
+for every individual zonal feature from a polygon layer.
+The created point layer will be in the same spatial reference system as the selected raster layer.
+
+Parameters
+..........   
+
+.. list-table::  
+   :header-rows: 1  
+   :widths: 20 20 20 40  
+
+   * - Label  
+     - Name  
+     - Type  
+     - Description  
+   * - **Input Layer**  
+     - ``INPUT``  
+     - [vector: polygon]  
+     - Polygon layer defining the zones.
+   * - **Raster Layer**  
+     - ``RASTER``  
+     - [raster]  
+     - Raster layer to extract the minimum and maximum values from.
+   * - **Raster Band**  
+     - ``BAND``  
+     - [raster band]  
+       
+       Default: The first band of the raster layer  
+     - If the raster has multiple bands, select the band to process.
+   * - **Zonal extrema**  
+     - ``OUTPUT``  
+     - [vector: point]
+     
+       Default: ``[Create temporary layer]``  
+     - Specification of the output layer. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+
+Outputs
+.......  
+
+.. list-table::  
+   :header-rows: 1  
+   :widths: 20 20 20 40  
+
+   * - Label  
+     - Name  
+     - Type  
+     - Description  
+   * - **Zonal extrema**  
+     - ``OUTPUT``  
+     - [vector: point]  
+     - Output layer containing the minimum and maximum points for each zone.
+
+Python code
+...........  
+
+**Algorithm ID**: ``native:zonalminmaxpoint``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 
 .. _qgiszonalstatisticsfb:
 
