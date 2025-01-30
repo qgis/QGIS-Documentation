@@ -246,7 +246,7 @@ Submitting Pull Requests
 
 There are a few guidelines that will help you to get your patches and pull
 requests into QGIS easily, and help us deal with the patches that are sent to
-use easily.
+us easily.
 
 In general it is easier for developers if you submit GitHub pull
 requests. We do not describe Pull Requests here, but rather refer you to the
@@ -258,7 +258,7 @@ branch.
 
 Pull requests will cause various checks of the Continuous Integration (CI) system
 to run: building for different environments and running tests, running code
-linters, spell checkers, etc. Make sure to look at the results of those ckecks
+linters, spell checkers, etc. Make sure to look at the results of those checks
 and try to address issues they raise. Of course, you can ask a question in the
 pull request if you need help from other developers to understand and/or resolve
 an issue.
@@ -278,7 +278,7 @@ developer to help you and contact them asking them if they can look at your patc
 If you feel the PR is not receiving the attention it
 deserves your options to accelerate it should be (in order of priority):
 
-* Help review others pull requests to free the person assigned to yours.
+* Help review others' pull requests to free the person assigned to yours.
 * Send a message to the mailing list 'marketing' your PR and how wonderful it
   will be to have it included in the code base.
 * Send a message to the person your PR has been assigned to in the PR queue.
@@ -337,11 +337,11 @@ Pull Requests merge criteria
 Pull requests must be approved by at least one Core Developer (a developer with
 push rights to the qgis/QGIS GitHub repository). Before merging, the Core Developer
 must ensure that the PR passes all reasonable CI checks. Some exceptions exist
-to this rule, e.g. when a check is broken for unrelated reasons (such as broken
+to this rule, e.g., when a check is broken for unrelated reasons (such as broken
 third party services, or a lint/code analysis/spell check test failing from other
 parts of a modified file).
 
-Pull requests created by a Core Developper must also be approved by at least
+Pull requests created by a Core Developer must also be approved by at least
 another Core Developer.
 
 A PR must remain open for at least 24 hours following submission, even if it has
@@ -350,7 +350,7 @@ merge, and to permit pre-merge feedback from developers in other time zones.
 Exceptions to this policy are:
 
 - Approved pull requests for backports to stable branches
-- "Emergency" pull requests, eg those which fix broken master builds, CI
+- "Emergency" pull requests, e.g., those which fix broken master builds, CI
   infrastructure or which represent a time-sensitive security risk
 - Trivial fixes. The definition of "trivial" is left open to common sense and
   developer discretion, but is expected to include non-risky changes like typo
