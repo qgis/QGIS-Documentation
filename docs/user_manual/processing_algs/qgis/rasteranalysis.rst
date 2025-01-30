@@ -3940,6 +3940,8 @@ Python code
 
 Zonal Minimum/Maximum Point
 ---------------------------
+Extracts point features corresponding to the minimum and maximum pixel values within polygon zones.
+
 The output will contain one point feature for the minimum and one for the maximum raster value
 for every individual zonal feature from a polygon layer.
 The created point layer will be in the same spatial reference system as the selected raster layer.
