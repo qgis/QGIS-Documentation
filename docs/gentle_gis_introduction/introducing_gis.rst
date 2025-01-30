@@ -181,7 +181,7 @@ of over them.
    :align: center
    :width: 30em
 
-   GIS Software let you easily change symbology --- the way information is displayed.
+   GIS Software lets you easily change symbology --- the way information is displayed.
 
 
 .. _figure_map_legend_before:
@@ -246,7 +246,7 @@ data associated with places.
 
 GIS Systems work with many different types of data. **Vector data** is stored as
 a series of ``X, Y`` coordinate pairs inside the computer's memory. Vector data
-is used to represent points, lines and areas. Illustration :numref:`figure_vector_data`
+are used to represent points, lines and areas. Illustration :numref:`figure_vector_data`
 shows different types of vector data being viewed in a GIS application. In the
 tutorials that follow we will be exploring vector data in more detail.
 
@@ -256,8 +256,8 @@ tutorials that follow we will be exploring vector data in more detail.
    :align: center
    :width: 30em
 
-   Vector data is used to represent points (e.g. towns), lines (e.g. rivers) and
-   polygons (e.g. municipal boundaries).
+   Vector data are used to represent points (e.g., towns), lines (e.g., rivers) and
+   polygons (e.g., municipal boundaries).
 
 **Raster data** are stored as a grid of values. There are many satellites circling
 the earth and the photographs they take are a kind of raster data that can be
@@ -324,9 +324,9 @@ Here are some ideas for you to try with your learners:
     areas are.
     For example a recent satellite image taken during a flood can help to show
     where people may need rescuing.
-  - Sometimes people do bad things to the the environment, like dumping dangerous
+  - Sometimes people do bad things to the environment, like dumping dangerous
     chemicals that kill plants and animals. Using raster data from satellites can
-    help us to monitor for these type of problems.
+    help us to monitor for these types of problems.
   - Town planners can use raster data from satellites to see where informal
     settlements are and to help in planning infrastructure.
 
