@@ -40,7 +40,7 @@ Alternative: myproject.qgs with myproject_attachments.zip
 It is however also possible to not use .qgz, and instead save a project to .qgs. If choosing so, any sidecar files will be saved to a separate zip file. E.g. when saving to myproject.qgs, the sidecar files will be written to the archive myproject_attachments.zip, placed in the same folder. 
 
 One reason for choosing to use .qgs instead of .qgz is 
-that its more suited for running diff tools, e.g. if one wants to run version control on qgis project files. 
+that it's more suited for running diff tools, e.g., if one wants to run version control on qgis project files. 
 
 .qgs - The QGIS Project XML Format
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
