@@ -62,7 +62,7 @@ The .qgs is an XML format, which contains the most fundamental parts of the proj
 .qgd - Sidecar for storing auxiliary data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-One example of auxiliary data is when the project file contains data about individual features from a layer, ie data that is associated with a feature, and thus not simply associated with a layer. One example is if the user specifies label placement for individual features. 
+One example of auxiliary data is when the project file contains data about individual features from a layer, i.e., data that is associated with a feature, and thus not simply associated with a layer. One example is if the user specifies label placement for individual features. 
 
 If saving a project to foo.qgz, and the project contains any auxiliary data, then that aux data will be saved to foo.qgd which is added to the archive. If no auxiliary data is present, then this sidecar file won't be created. The d is short for database, and the file is an sqlite3 database. 
 
