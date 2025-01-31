@@ -15,7 +15,7 @@ Appendix C: QGIS File Formats
 
 When you see a file with either .qgz or .qgs extension, those are QGIS project files.  
 
-This file format does not itself contain any geodata, ie it does not contain aerial photos and it does not contain polygon or point features representing features on a map. It only contains data _about_ which layers to show and how to show them. 
+This file format does not itself contain any geodata, i.e., it does not contain aerial photos and it does not contain polygon or point features representing features on a map. It only contains data _about_ which layers to show and how to show them. 
 
 
 When you edit the name of a mountain in the layer called mountains and click `Save Layers Edit`, then that change is saved to the layer source, which might be a local GeoJson file or a remote database. But nothing is changed to the qgis project file. 
