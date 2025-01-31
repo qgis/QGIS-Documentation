@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2024
 # Joern G <j.gutzeit@umwelt-it.de>, 2024
+# Bernhard Ströbl <b.stroebl@stroweb.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2024\n"
+"Last-Translator: Bernhard Ströbl <b.stroebl@stroweb.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -317,6 +318,26 @@ msgstr ""
 "Karten sind oft statisch. Da die meisten Mapping-Clients bei jeder Abfrage "
 "WMS-Daten (Web Map Service) rendern, kann dies zu unnötiger Verarbeitung und"
 " längeren Wartezeiten führen."
+
+#: ../../docs/server_manual/faq.rst:153
+msgid ""
+"The tile cache optimizes this experience by saving (caching) map images, or "
+"tiles, as they are requested, in effect acting as a proxy between client "
+"(such as OpenLayers or Google Maps) and server (any WMS-compliant server). "
+"As new maps and tiles are requested, QGIS server intercepts these calls and "
+"returns pre-rendered tiles if stored, or calls the QGIS engine to render new"
+" tiles as necessary. Thus, once tiles are stored, the speed of map rendering"
+" increases by many times, creating a much improved user experience."
+msgstr ""
+"Der tile-Cache optimiert dieses Verfahren, indem er Kartenbilder oder "
+"Kacheln nach Bedarf speichert (caching) und so als Proxy zwischen Client "
+"(wie OpenLayers oder Google Maps) und Server (jedem WMS-kompatiblen Server) "
+"fungiert. Wenn neue Karten und Kacheln angefordert werden, fängt der QGIS-"
+"Server diese Aufrufe ab und gibt vorgerenderte Kacheln zurück, falls sie "
+"gespeichert sind, oder ruft die QGIS-Engine auf, um bei Bedarf neue Kacheln "
+"zu rendern. Sobald Kacheln gespeichert sind, erhöht sich die Geschwindigkeit"
+" des Karten-Renderings um ein Vielfaches, was zu einer erheblich "
+"verbesserten Benutzererfahrung führt."
 
 #: ../../docs/server_manual/faq.rst:161
 msgid "*What is PostgreSQL?*"
