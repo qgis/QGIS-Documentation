@@ -29,7 +29,7 @@ QGIS version 2 only knew of one project file format, which was XML with a .qgs e
 
 But XML has its limitations and eventually it was necessary to also store project data in other ways than plain XML. 
 
-With the introduction of QGIS 3 the default fileformat was .qgz, which is a zip archive containing the .qgs file. But because it's a zip file, it can also contain other files, so called *sidecar files*. Currently there are two official types of sidecar files:
+With the introduction of QGIS 3 the default file format was .qgz, which is a zip archive containing the .qgs file. But because it's a zip file, it can also contain other files, so called *sidecar files*. Currently there are two official types of sidecar files:
 
 - .qgd (see section below)  
 - XXXXXX_styles.db, (see section below)
