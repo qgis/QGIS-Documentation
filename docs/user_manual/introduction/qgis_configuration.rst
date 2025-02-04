@@ -180,7 +180,7 @@ plugin libraries`.
 
 Add or Remove :guilabel:`Documentation Path(s)` to use for QGIS help. By default,
 a link to the official online User Manual corresponding to the version being used
-is added (i.e. ``https://docs.qgis.org/§qgis_short_version/$qgis_locale/docs/user_manual/``).
+is added (i.e., ``https://docs.qgis.org/§qgis_short_version/$qgis_locale/docs/user_manual/``).
 You can however add other links and prioritize them from top to bottom:
 each time you click on a :guilabel:`Help` button in a dialog, the topmost link
 is checked and if no corresponding page is found, the next one is tried,
@@ -224,7 +224,7 @@ and the :guilabel:`Apply` method to use, among which:
 
 * :guilabel:`Overwrite`: replace any preexisting value of the variable
 * :guilabel:`If undefined`: use this value for the variable if not already defined at
-  a higher level (e.g. OS or application levels)
+  a higher level (e.g., OS or application levels)
 * :guilabel:`Unset`: remove the variable from the environment (the :guilabel:`Value` parameter is not used)
 * :guilabel:`Prepend`: prepend the value to the preexisting value of the variable
 * :guilabel:`Append`: append the value to the preexisting value of the variable
@@ -308,7 +308,7 @@ accuracy. The default is to ``Always show`` the warning if any inaccuracy.
 Requires a QGIS version using at least `PROJ 8.0 <https://proj.org/index.html>`_.
 
 |unchecked| :guilabel:`Show CRS accuracy warning for layers in project legend`:
-If checked, any layer with a CRS with accuracy issues (i.e. a dynamic crs with
+If checked, any layer with a CRS with accuracy issues (i.e., a dynamic crs with
 no coordinate epoch available, or a CRS based on a datum ensemble with inherent inaccuracy
 exceeding the user-set limit) will have the |indicatorLowAccuracy| warning icon
 in the :guilabel:`Layers` panel reflecting that it is a low-accuracy layer.
@@ -523,7 +523,7 @@ support read and write access:
 .. _gdal_createoptions:
 
 * :guilabel:`Edit create options`: allows you to edit or add different profiles
-  of file transformation, i.e. a set of predefined combinations of parameters
+  of file transformation, i.e., a set of predefined combinations of parameters
   (type and level of compression, blocks size, overview, colorimetry, alpha...)
   to use when outputting raster files. The parameters depend on the driver.
 
@@ -621,7 +621,7 @@ for rendering vector layers.
   * :guilabel:`Simplification algorithm`: This option performs a local
     "on-the-fly" simplification on feature's and speeds up geometry rendering. It
     doesn't change the geometry fetched from the data providers. This is important
-    when you have expressions that use the feature geometry (e.g. calculation of
+    when you have expressions that use the feature geometry (e.g., calculation of
     area) - it ensures that these calculations are done on the original geometry,
     not on the simplified one. For this purpose, QGIS provides three algorithms:
     'Distance' (default), 'SnapToGrid' and 'Visvalingam'.
@@ -738,7 +738,7 @@ These properties let you set:
     Feature count of classes, if any, is as well displayed.
     You can right-click on a layer to turn on/off its feature count.
   * |unchecked| :guilabel:`Display classification attribute names` in the Layers
-    panel, e.g. when applying a categorized or rule-based renderer
+    panel, e.g., when applying a categorized or rule-based renderer
     (see :ref:`vector_style_menu` for more information).
   * the :guilabel:`WMS getLegendGraphic Resolution`
   * :guilabel:`Minimum` and :guilabel:`Maximum legend symbol size`
@@ -747,7 +747,7 @@ These properties let you set:
 * Whether QGIS should |checkbox| :guilabel:`Respect screen DPI`: If enabled,
   QGIS will attempt to display the canvas with physically 
   accurate scale on screen, depending on the monitor's physical DPI. Symbology with specified 
-  display size will also be rendered accurately, e.g. a 10mm 
+  display size will also be rendered accurately, e.g., a 10mm 
   symbol will show as 10mm on screen. However, label font sizes on canvas may differ from those in 
   QGIS' UI or other applications. If this setting is turned off, QGIS will use the operating 
   system's logical DPI, which will be consistent with other applications on the system. However, 
@@ -817,7 +817,7 @@ Some of these options can be overridden at the :ref:`project level <measurements
 
 These settings allow you to control the behavior of the :guilabel:`Copy` button
 in the |measure| :sup:`Measure Line` window. You can choose to
-|checkbox| :guilabel:`Include header` to keep columns names, and you can also
+|checkbox| :guilabel:`Include header` to keep column names, and you can also
 select :guilabel:`Separator` of your choice. You can also choose
 |checkbox| :guilabel:`Always use decimal point` to keep your coordinates copied
 to the clipboard with a dot as a decimal separator, even if your language settings
@@ -878,7 +878,7 @@ This tab helps you configure general settings when :ref:`editing vector layer
   this choice can be overridden in each layer properties dialog.
 * |checkbox| :guilabel:`Reuse last entered attribute values`: remember the last 
   used value of every attribute and use it as default for the next feature being digitized. 
-  Works per layer. This behavior can also be controled on a per-field basis
+  Works per layer. This behavior can also be controlled on a per-field basis
   (see :ref:`configure_field`).
 * :guilabel:`Validate geometries`. Editing complex lines and polygons with many
   nodes can result in very slow rendering. This is because the default
@@ -960,7 +960,7 @@ Elevation settings
 
 In |elevationProfile| :guilabel:`Elevation` menu, you can set a specific color
 to use as the :guilabel:`Background color` for :ref:`elevation profiles <label_elevation_profile_view>`.
-This can make the chart more readable for certain datasets, e.g. point clouds with RGB coloring,
+This can make the chart more readable for certain datasets, e.g., point clouds with RGB coloring,
 where the default background color is too similar to point colors to be easily discernable.
 If unchanged, the elevation profiles will continue to display using the standard system background color.
 
@@ -1078,15 +1078,15 @@ Fonts Settings
 The :guilabel:`Fonts` tab provides support to manage fonts used across the projects:
 
 * :guilabel:`Font Replacements`: gives ability to populate a list of automatic font replacements to apply when loading projects or styles,
-  allowing better support for projects and styles to be used across different operating systems (e.g. replace "Arial" with "Helvetica").
+  allowing better support for projects and styles to be used across different operating systems (e.g., replace "Arial" with "Helvetica").
 * :guilabel:`User Fonts`: Allows you to place TTF or OTF fonts in the :file:`fonts` sub-folder of the :ref:`user profile <user_profiles>`.
   These fonts can be automatically loaded at QGIS startup time.
   This provides a way to use fonts without requiring them to be installed on an operating system level,
   which is often blocked in enterprise environments.
-  The panel lists all installed user fonts and allows you to manage (i.e. remove) previously installed user fonts.
+  The panel lists all installed user fonts and allows you to manage (i.e., remove) previously installed user fonts.
 
   It is also possible to |checkbox| :guilabel:`Automatically download missing, freely-licensed fonts`:
-  E.g. if you open a project or style, or try to load a vector tile layer that references fonts that aren’t currently available,
+  E.g., if you open a project or style, or try to load a vector tile layer that references fonts that aren’t currently available,
   then a hard-coded list of freely licensed fonts to download via URL is consulted to determine whether
   it’s possible to automatically download the font to the user profile font directory (with notification of the font license).
 
@@ -1193,7 +1193,7 @@ Network settings
 * Define :guilabel:`Max retry in case of tile or feature request errors`
 * Define :guilabel:`User-Agent prefix` which defaults to ``Mozilla/5.0``.
   This value will be prepended to both QGIS and OS version
-  e.g. ``Mozilla/5.0 QGIS/33801/Ubuntu 22.04.4 LTS`` to shape the user-agent.
+  e.g., ``Mozilla/5.0 QGIS/33801/Ubuntu 22.04.4 LTS`` to shape the user-agent.
 
 .. _figure_network_tab:
 
@@ -1377,7 +1377,7 @@ It provides some default filters (with prefix) to use:
 
 In the dialog, you can:
 
-* customize the filter :guilabel:`Prefix`, i.e. the keyword to use to trigger
+* customize the filter :guilabel:`Prefix`, i.e., the keyword to use to trigger
   the filter
 * set whether the filter is :guilabel:`Enabled`: the filter can be used in the
   searches and a shortcut is available in the locator bar menu
@@ -1771,7 +1771,7 @@ Available parameters are:
 
   * ``Map Units``, based on the project CRS
   * ``Map Geographic (degrees)``: based on the project CRS if it is of geographic type,
-    otherwise uses its associated geographic CRS. This is helpful e.g. for non-earth celestial bodies.
+    otherwise uses its associated geographic CRS. This is helpful e.g., for non-earth celestial bodies.
   * or ``Custom Projection Units``: allows to rely on any CRS you desire for coordinates display
 
 * In the :guilabel:`Coordinate CRS` option, you can view or define the CRS to use
@@ -1886,7 +1886,7 @@ The :guilabel:`Default Symbols` group lets you control how new layers will
 be drawn in the project when they do not have an existing :file:`.qml` style
 defined. You can set :guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill` to
 apply depending on the layer geometry type as well as default :guilabel:`Color
-Ramp` and :guilabel:`Text Format` (e.g. when enabling labeling).
+Ramp` and :guilabel:`Text Format` (e.g., when enabling labeling).
 Any of these items can be reset using the :guilabel:`Clear` entry from
 the corresponding drop-down widget.
 
@@ -1939,7 +1939,7 @@ Colors properties
    Colors tab
 
 In the |colorSwatches| :guilabel:`Colors` tab, you can select the  :guilabel:`Color model`,
-i.e. whether selecting a color should by default be defined as ``RGB`` or ``CMYK``.
+i.e., whether selecting a color should by default be defined as ``RGB`` or ``CMYK``.
 Any color defined in a different color model than the one specified here
 will be converted to this color model when exporting a layout.
 
@@ -2016,17 +2016,17 @@ In the |openTable| :guilabel:`Data Sources` tab, you can:
 
 * Configure the :guilabel:`Layers Capabilities`, i.e.:
 
-  * Set (or disable) which layers are ``identifiable``, i.e. will respond to the
+  * Set (or disable) which layers are ``identifiable``, i.e., will respond to the
     :ref:`identify tool <identify>`. By default, layers are set queryable.
   * Set whether a layer should appear as ``read-only``, meaning that
     it can not be edited by the user, regardless of the data provider's
     capabilities. Although this is a weak protection, it remains a quick and handy
     configuration to avoid end-users modifying data when working with file-based layers.
-  * Define which layers are ``searchable``, i.e. could be queried using the
+  * Define which layers are ``searchable``, i.e., could be queried using the
     :ref:`locator widget <locator_options>`. By default, layers are set searchable.
   * Define which layers are defined as ``required``. Checked layers in this list
     are protected from inadvertent removal from the project.
-  * Define which layers are ``private``, i.e. hidden from the :guilabel:`Layers`
+  * Define which layers are ``private``, i.e., hidden from the :guilabel:`Layers`
     panel. This is meant for accessory layers (basemap, join, lookups for
     value-relations, most probably aspatial layers, ...) that you still need
     in a project but you don't want them to pollute the legend tree and other
@@ -2069,8 +2069,8 @@ The |relations| :guilabel:`Relations` tab is used to define relations between la
 The relations can be of one to one, many to many or polymorphic type.
 They are defined in the project properties dialog.
 Once relations exist for a layer, a new user interface element in the form view
-(e.g. when identifying a feature and opening its form) will list the related entities.
-This provides a powerful way to express e.g. the inspection history on a length of pipeline or road segment.
+(e.g., when identifying a feature and opening its form) will list the related entities.
+This provides a powerful way to express e.g., the inspection history on a length of pipeline or road segment.
 You can find out more about relations support in section :ref:`vector_relations`.
 
 .. _figure_relations_tab:
@@ -2170,7 +2170,7 @@ by the :ref:`elevation profile <label_elevation_profile_view>` tool.
 * :guilabel:`Elevation Range`: helps you define the :guilabel:`Lower` and :guilabel:`Upper` limits
   for the elevation controller in the project.
 
-  .. todo: add url to elevation controller chapter, i.e.
+  .. todo: add url to elevation controller chapter, i.e.,
    for the :ref:`elevation controller <elevation_controller>` in the project.
 
 * :guilabel:`Terrain` and elevation options are available for:
@@ -2244,7 +2244,7 @@ will open and allow you to configure:
 * the :guilabel:`Sensor name`: used to retrieve sensor values in expressions and
   python scripts;
 * the :guilabel:`Sensor type`: TCP, UDP, serial port, etc.; and
-* additional type-specific details (e.g. host name and port).
+* additional type-specific details (e.g., host name and port).
   For serial port sensors, comboboxes with the system's available serial ports
   and connection baud rate are available for their selection.
 
@@ -2551,7 +2551,7 @@ only the first found file will be used:
   * |nix| :file:`$HOME/.local/share/QGIS/QGIS3/`
   * |win| :file:`C:\\Users\\<username>\\%AppData%\\Roaming\\QGIS\\QGIS3\\`
   * |osx| :file:`$HOME/Library/Application Support/QGIS/QGIS3/`
-* the installation directory, i.e. :file:`your_QGIS_package_path/resources/qgis_global_settings.ini`.
+* the installation directory, i.e., :file:`your_QGIS_package_path/resources/qgis_global_settings.ini`.
 
 Presently, there's no way to specify a file to write settings to; therefore,
 you can create a copy of an original settings file, rename, and adapt it.
@@ -2618,7 +2618,7 @@ Unless it's changed again, the default UI settings will be used in the following
 sessions.
 
 Notice that this option doesn't have any effect on :ref:`GUI customization <sec_customization>`.
-Items hidden by GUI customization (e.g. the status bar) will remain hidden
+Items hidden by GUI customization (e.g., the status bar) will remain hidden
 even using the ``--defaultui`` option.
 See also the ``--nocustomization`` option.
 
@@ -2745,7 +2745,7 @@ proxy settings, maptips, default values for algorithms parameters…
 For example, if you want to configure organization wide default values for some algorithms
 it would be handy if you could configure it in the prepared ini-file for all users.
 If the users then open the toolbox to execute an algorithm, the default values will be there.
-To set the default value e.g. for ``GRID_SIZE`` parameter for the ``native:intersection`` algorithm,
+To set the default value, e.g., for ``GRID_SIZE`` parameter for the ``native:intersection`` algorithm,
 you could write the following into the :file:`.INI` file:
 
 .. code-block:: ini
