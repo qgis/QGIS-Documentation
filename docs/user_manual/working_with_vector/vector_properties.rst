@@ -1145,9 +1145,6 @@ the symbol's frame rate:
       Setting the symbol's rotation to data defined expression
 
 
-
-.. index:: Paint effects
-
 .. _extent_buffer:
 
 Extent buffer
@@ -1175,8 +1172,10 @@ based on the current map scale ``if(@map_scale > 50000, 5000, 0)``:
       :align: center
       :width: 50%
 
-      Example of the using the extent buffer with a symbol using a geometry generator symbol level.
+      Example of the extent buffer with a symbol using a geometry generator symbol level.
 
+
+.. index:: Paint effects
 .. _draw_effects:
 
 Draw effects
