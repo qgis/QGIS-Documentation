@@ -934,6 +934,15 @@ To add vertices to a mesh layer:
 #. Press the |meshDigitizing| :sup:`Digitize mesh elements` button
 #. A :guilabel:`Vertex Z value` widget appears on the top right corner of the map canvas.
    Set this value to the Z coordinate you would like to assign to the subsequent vertices
+#. Choose the method for assigning Z values to new vertices from the drop-down menu in the
+   |meshDigitizing| :sup:`Digitize mesh elements` tool. The available options are:
+
+   * :guilabel:`Prefer mesh, then Z Widget`: Interpolates the Z value from the mesh if the vertex is inside a face of the mesh.
+     Uses the Z widget value otherwise.
+   * :guilabel:`Prefer mesh, then terrain`: Interpolates the Z value from the mesh if the vertex is inside a face of the mesh.
+     Uses the project terrain Z value otherwise.
+   * :guilabel:`Project terrain`: Always uses the project terrain Z value.
+   * :guilabel:`Z Widget`: Always uses the Z value from the widget.
 #. Then double-click:
 
    * outside a face: adds a "free vertex", that is a vertex not linked to any face.
@@ -1042,6 +1051,8 @@ thanks to expressions.
      apply the transformation until it is corrected.
 #. Press :guilabel:`Apply Transform` to modify the selected coordinates
    for the set of vertices.
+#. Press :guilabel:`Get Z value from project terrain` to set a Z value for selected vertices
+   from the project terrain. 
 
 Reshaping mesh geometry
 .......................
