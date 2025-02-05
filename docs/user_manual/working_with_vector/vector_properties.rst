@@ -2530,6 +2530,22 @@ and the values or range of values that are allowed to be added to each.
 
 .. index:: Default values, Fields constraints, Alias
 
+.. tip:: **Copy and paste widget configuration**
+
+   The field configuration can be copied to the clipboard and then pasted to
+   another field via right click on a field in the :guilabel:`Available widgets` panel.
+
+   This comes handy to save time and to make sure that common settings are
+   correctly applied to several related fields, e.g., when configuring latitude and
+   longitude field widgets.
+
+   Copy and paste of widget configuration can be done between fields of the same
+   layer, between fields from different layers in the QGIS project, or between fields
+   from layers in different QGIS instances.
+
+   Note that neither aliases nor comments are copied, since those are specific for
+   each particular field.
+
 Common settings
 ...............
 
