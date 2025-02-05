@@ -218,6 +218,15 @@ You then need to create connections to the server you are targeting:
      allows to scale up or down the tiles based on the device screen DPI.
      Available options are :guilabel:`Undefined (not scaled)`,
      :guilabel:`Standard (96 DPI)` and :guilabel:`High (192 DPI)`.
+
+   .. _max_feature_count:
+
+   * :guilabel:`Maximum number of GetFeatureInfo results`: specifies a default value
+     for the maximum number of results returned per layer by a GetFeatureInfo request
+     using this connection (see :ref:`FEATURE_COUNT <wms_featurecount>` parameter).
+     Default value is ``10``.
+     Set to ``0`` to use server default value (usually ``1``): no FEATURE_COUNT parameter will be added to the request.
+
    * |unchecked| :guilabel:`Ignore GetMap/GetTile/GetLegendGraphic URI reported in capabilities`:
      if checked, use given URI from the :guilabel:`URL` field above.
    * |unchecked| :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`:
@@ -311,7 +320,9 @@ You can define:
 * :guilabel:`Request step size`: if you want to reduce the effect of cut labels at tile borders,
   increasing the step size creates larger requests, fewer tiles and fewer borders.
   The default value is 2000.
-* The :guilabel:`Maximum number of GetFeatureInfo results` from the server
+* The :guilabel:`Maximum number of GetFeatureInfo results`: specifies the maximum number of results
+  returned by a GetFeatureInfo request, for the layer(s) being loaded.
+  Allows to override the :ref:`connection's default value <max_feature_count>` for specific layers.
 
 * Each WMS layer can be presented in multiple CRSs, depending on the capability of
   the WMS server. If you select a WMS from the list, a field with the default projection
