@@ -205,14 +205,19 @@ the selected mesh, including:
   Both regular datasets (i.e. their data is stored in the file) and virtual
   datasets (which are :ref:`calculated on the fly <mesh_calculator>`) are listed.
 
-  * Use the |add| :guilabel:`Assign extra dataset to mesh` button to add more
-    groups to the current mesh layer.
-  * |collapseTree| :guilabel:`Collapse all` and |expandTree| :guilabel:`Expand
+  * Use the |symbologyAdd| :sup:`Assign Extra Dataset to Mesh` button to add more
+    groups to the current mesh layer. You can add dataset group to a mesh layer with the same name,
+    but not from the same URI. Dataset group names are automatically renamed to
+    "Original Name_Number".
+  * Use |symbologyRemove| :sup:`Remove Extra Dataset from Mesh` to remove additional datasets
+    groups from the mesh layer. Note that only dataset groups not associated with the
+    mesh source file can be removed.
+  * |collapseTree| :sup:`Collapse all` and |expandTree| :sup:`Expand
     all` the dataset tree, in case of embedded groups
   * If you are interested in few datasets, you can uncheck the others and
     make them unavailable in the project
   * Double-click over a name and you can rename the dataset.
-  * |refresh| :guilabel:`Reset to defaults`: checks all the groups and
+  * |refresh| :sup:`Reset to defaults`: checks all the groups and
     renames them back to their original name in the provider.
   * Right-click over a virtual dataset group and you can:
 
@@ -229,7 +234,7 @@ the selected mesh, including:
   * :guilabel:`Display dataset`: e.g., for the "bed elevation" dataset which is
     not time aware
   * extract a particular date time: the dataset matching the provided time
-    is rendered and stay fixed during map navigation.
+    is rendered and stays fixed during map navigation.
 
 
 .. _meshsymbology:
@@ -1323,6 +1328,10 @@ the expression to execute.
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
