@@ -2527,9 +2527,6 @@ and the values or range of values that are allowed to be added to each.
 
    Dialog to select an edit widget for an attribute column
 
-
-.. index:: Default values, Fields constraints, Alias
-
 .. tip:: **Copy and paste widget configuration**
 
    The field configuration can be copied to the clipboard and then pasted to
@@ -2545,6 +2542,8 @@ and the values or range of values that are allowed to be added to each.
 
    Note that neither aliases nor comments are copied, since those are specific for
    each particular field.
+
+.. index:: Default values, Fields constraints, Alias
 
 Common settings
 ...............
