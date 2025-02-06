@@ -6,10 +6,10 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2024
 # fairtommy <fairtommy@gmail.com>, 2024
 # Transifex Bot <>, 2024
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-29 09:55+0000\n"
 "PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,6 +43,12 @@ msgstr "点群データ管理"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:4
 msgid "|332|"
 msgstr "|332|"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:12
+msgid ""
+"These algorithms are only available if QGIS uses the PDAL library version "
+"2.5.0 or newer."
+msgstr "これらのアルゴリズムは、QGISがPDALライブラリバージョン2.5.0以降を使用している場合のみ利用可能です。"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:17
 msgid "Assign projection"
@@ -496,6 +502,16 @@ msgstr "**Algorithm ID**: ``pdal:virtualpointcloud``"
 msgid "Clip"
 msgstr "切り抜く"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:178
+msgid ""
+"Clips a point cloud layer by a polygon layer so that the resulting point "
+"cloud contains only points within the polygons."
+msgstr "ポリゴンレイヤで点群レイヤを切り抜き、ポリゴン内の点のみが結果の点群に含まれるようにします。"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:184
+msgid "Clipping an input point cloud layer with a polygon coverage"
+msgstr "入力点群レイヤをポリゴンの範囲で切り抜く"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:190
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:434
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:618
@@ -503,6 +519,14 @@ msgstr "切り抜く"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:816
 msgid "Basic parameters"
 msgstr "基本パラメータ"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:203
+msgid "Input point cloud layer to clip"
+msgstr "切り抜く入力点群レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:204
+msgid "**Clipping polygons**"
+msgstr "**切り抜き範囲のポリゴン**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:205
 msgid "``OVERLAY``"
@@ -512,10 +536,18 @@ msgstr "``OVERLAY``"
 msgid "[vector: polygon]"
 msgstr "[ベクタ：ポリゴン]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:207
+msgid "Polygon vector layer to use as coverage for clipping the points"
+msgstr "点を切り抜く範囲として使うポリゴンベクタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:208
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:258
 msgid "**Clipped**"
 msgstr "**切り抜き結果**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:213
+msgid "Specify the point cloud file to export the clipped points to. One of:"
+msgstr "切り抜かれた点をエクスポートする点群ファイルを指定します。次のいずれかです:"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:220
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:460
@@ -560,6 +592,15 @@ msgstr "``FILTER_EXPRESSION``"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:763
 msgid "[expression]"
 msgstr "[式]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:235
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:475
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:665
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:764
+msgid ""
+"A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of "
+"features in the point cloud data"
+msgstr "点群データ内の地物のサブセットを選択するための :ref:`PDAL式 <pdal_expressions>`"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:239
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:479
