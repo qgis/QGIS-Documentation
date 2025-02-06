@@ -126,7 +126,7 @@ You can setup some parameters that apply to the global symbol:
     The buffer is calculated and drawn using the shape of ALL the symbol layers in the marker.
     You can adjust the :guilabel:`Size`, :guilabel:`Join style` and :guilabel:`Symbol` of display.
 
-  * for all symbol types, enable and configure a distance for the map canvas :ref:`Extent buffer <extent-buffer>`,
+  * for all symbol types, enable and configure a distance for the map canvas :ref:`Extent buffer <extent_buffer>`,
     or the :ref:`Animation settings <animation_settings>`.
 
   * Depending on the :ref:`symbology <vector_style_menu>` of the layer the symbol is
