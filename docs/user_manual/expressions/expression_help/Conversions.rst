@@ -338,7 +338,7 @@ Converts a string to a real number. If a value cannot be converted to real the e
 to_string
 .........
 
-Converts a number to string.
+Converts a number to string. The conversion is not locale-aware, see 'format_number' for a locale-aware alternative.
 
 .. list-table::
    :widths: 15 85
@@ -348,7 +348,7 @@ Converts a number to string.
    * - Arguments
      - * **number** - Integer or real value. The number to convert to string.
    * - Examples
-     - * ``to_string(123)`` → '123'
+     - * ``to_string(1.23)`` → '1.23'
 
 
 .. end_to_string_section
