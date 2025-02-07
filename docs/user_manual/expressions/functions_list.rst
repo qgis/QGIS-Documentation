@@ -58,7 +58,33 @@ is irrelevant and values are identified by their keys.
   <expression_function_Operators_index>` to get a value from an array. 
 
 .. include:: expression_help/Arrays.rst
-   :start-after: end_array_get_section
+   :start-after: .. end_array_get_section
+   :end-before: .. end_array_replace_section
+
+Further reading: :ref:`expression_function_String_replace`,
+:ref:`expression_function_String_regexp_replace`
+
+.. include:: expression_help/Arrays.rst
+   :start-after: .. end_array_replace_section
+   :end-before: .. end_array_to_string_section
+
+Further reading: :ref:`expression_function_Arrays_string_to_array`
+
+.. include:: expression_help/Arrays.rst
+   :start-after: .. end_array_to_string_section
+   :end-before: .. end_regexp_matches_section
+
+Further reading: :ref:`expression_function_String_substr`,
+:ref:`expression_function_String_regexp_substr`
+
+.. include:: expression_help/Arrays.rst
+   :start-after: .. end_regexp_matches_section
+   :end-before: .. end_string_to_array_section
+
+Further reading: :ref:`expression_function_Arrays_array_to_string`
+
+.. include:: expression_help/Arrays.rst
+   :start-after: .. end_string_to_array_section
 
 
 Color Functions
@@ -125,25 +151,30 @@ This group contains functions to convert one data type to another
 
 .. include:: expression_help/Conversions.rst
    :start-after: :orphan:
-   :end-before: end_to_date_section
+   :end-before: .. end_to_date_section
 
 Further reading: :ref:`expression_function_Date_and_Time_format_date`
 
 .. include:: expression_help/Conversions.rst
-   :start-after: end_to_date_section
-   :end-before: end_to_datetime_section
+   :start-after: .. end_to_date_section
+   :end-before: .. end_to_datetime_section
 
 Further reading: :ref:`expression_function_Date_and_Time_format_date`
 
 .. include:: expression_help/Conversions.rst
-   :start-after: end_to_datetime_section
-   :end-before: end_to_time_section
+   :start-after: .. end_to_datetime_section
+   :end-before: .. end_to_string_section
+
+Further reading: :ref:`expression_function_String_format_number`
+
+.. include:: expression_help/Conversions.rst
+   :start-after: .. end_to_string_section
+   :end-before: .. end_to_time_section
 
 Further reading: :ref:`expression_function_Date_and_Time_format_date`
 
 .. include:: expression_help/Conversions.rst
-   :start-after: end_to_time_section
-
+   :start-after: .. end_to_time_section
 
 Custom Functions
 -----------------
@@ -181,24 +212,24 @@ This group shares several functions with the :ref:`conversion_functions`
 
 .. include:: expression_help/Date_and_Time.rst
    :start-after: :orphan:
-   :end-before: end_to_date_section
+   :end-before: .. end_to_date_section
 
 Further reading: :ref:`expression_function_Date_and_Time_format_date`
 
 .. include:: expression_help/Date_and_Time.rst
-   :start-after: end_to_date_section
-   :end-before: end_to_datetime_section
+   :start-after: .. end_to_date_section
+   :end-before: .. end_to_datetime_section
 
 Further reading: :ref:`expression_function_Date_and_Time_format_date`
 
 .. include:: expression_help/Date_and_Time.rst
-   :start-after: end_to_datetime_section
-   :end-before: end_to_time_section
+   :start-after: .. end_to_datetime_section
+   :end-before: .. end_to_time_section
 
 Further reading: :ref:`expression_function_Date_and_Time_format_date`
 
 .. include:: expression_help/Date_and_Time.rst
-   :start-after: end_to_time_section
+   :start-after: .. end_to_time_section
 
 
 **Some examples:**
@@ -346,7 +377,7 @@ Further reading: :ref:`qgisboundary` algorithm
 Further reading: :ref:`qgisboundingboxes` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
-   :start-after: end_bounds_section
+   :start-after: .. end_bounds_section
    :end-before: .. end_buffer_section
 
 Further reading: :ref:`qgisbuffer` algorithm
@@ -881,39 +912,39 @@ Further reading: :ref:`expression_function_String_concat`,
 :ref:`expression_function_Operators_concat`
 
 .. include:: expression_help/Operators.rst
-   :start-after: end_+_section
-   :end-before: end_BETWEEN_section
+   :start-after: .. end_+_section
+   :end-before: .. end_BETWEEN_section
 
 Further reading: :ref:`expression_function_Operators_NOT_BETWEEN`
 
 .. include:: expression_help/Operators.rst
-   :start-after: end_BETWEEN_section
-   :end-before: end_NOT_BETWEEN_section
+   :start-after: .. end_BETWEEN_section
+   :end-before: .. end_NOT_BETWEEN_section
 
 Further reading: :ref:`expression_function_Operators_BETWEEN`
 
 .. include:: expression_help/Operators.rst
-   :start-after: end_NOT_BETWEEN_section
-   :end-before: end_[]_section
+   :start-after: .. end_NOT_BETWEEN_section
+   :end-before: .. end_[]_section
 
 Further reading: :ref:`expression_function_Arrays_array_get`,
 :ref:`expression_function_Maps_map_get`
 
 .. include:: expression_help/Operators.rst
-   :start-after: end_[]_section
-   :end-before: end_||_section
+   :start-after: .. end_[]_section
+   :end-before: .. end_||_section
 
 Further reading: :ref:`expression_function_String_concat`,
 :ref:`expression_function_Operators_plus`
 
 .. include:: expression_help/Operators.rst
-   :start-after: end_||_section
-   :end-before: end_~_section
+   :start-after: .. end_||_section
+   :end-before: .. end_~_section
 
 Further reading: :ref:`expression_function_String_regexp_match`
 
 .. include:: expression_help/Operators.rst
-   :start-after: end_~_section
+   :start-after: .. end_~_section
 
 
 .. _processing_functions:
@@ -1084,6 +1115,25 @@ further reading: :ref:`expression_function_Operators_concat`,
 
 .. include:: expression_help/String.rst
    :start-after: .. end_concat_section
+   :end-before: .. end_left_section
+
+Further reading: :ref:`expression_function_String_right`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_left_section
+   :end-before: .. end_lower_section
+
+Further reading: :ref:`expression_function_String_upper`,
+:ref:`expression_function_String_title`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_lower_section
+   :end-before: .. end_lpad_section
+
+Further reading: :ref:`expression_function_String_rpad`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_lpad_section
    :end-before: .. end_ltrim_section
 
 Further reading: :ref:`expression_function_String_rtrim`,
@@ -1091,6 +1141,44 @@ Further reading: :ref:`expression_function_String_rtrim`,
 
 .. include:: expression_help/String.rst
    :start-after: .. end_ltrim_section
+   :end-before: .. end_regexp_match_section
+
+Further reading: :ref:`expression_function_String_strpos`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_regexp_match_section
+   :end-before: .. end_regexp_replace_section
+
+Further reading: :ref:`expression_function_String_replace`,
+:ref:`expression_function_Arrays_array_replace`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_regexp_replace_section
+   :end-before: .. end_regexp_substr_section
+
+Further reading: :ref:`expression_function_String_substr`,
+:ref:`expression_function_Arrays_regexp_matches`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_regexp_substr_section
+   :end-before: .. end_replace_section
+
+Further reading: :ref:`expression_function_String_regexp_replace`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_replace_section
+   :end-before: .. end_right_section
+
+Further reading: :ref:`expression_function_String_left`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_right_section
+   :end-before: .. end_rpad_section
+
+Further reading: :ref:`expression_function_String_lpad`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_rpad_section
    :end-before: .. end_rtrim_section
 
 Further reading: :ref:`expression_function_String_ltrim`,
@@ -1098,6 +1186,32 @@ Further reading: :ref:`expression_function_String_ltrim`,
 
 .. include:: expression_help/String.rst
    :start-after: .. end_rtrim_section
+   :end-before: .. end_strpos_section
+
+Further reading: :ref:`expression_function_String_regexp_match`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_strpos_section
+   :end-before: .. end_substr_section
+
+Further reading: :ref:`expression_function_String_regexp_substr`,
+:ref:`expression_function_Arrays_regexp_matches`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_substr_section
+   :end-before: .. end_title_section
+
+Further reading: :ref:`expression_function_String_lower`,
+:ref:`expression_function_String_upper`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_title_section
+   :end-before: .. end_to_string_section
+
+Further reading: :ref:`expression_function_String_format_number`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_to_string_section
    :end-before: .. end_trim_section
 
 Further reading: :ref:`expression_function_String_ltrim`,
@@ -1105,6 +1219,13 @@ Further reading: :ref:`expression_function_String_ltrim`,
 
 .. include:: expression_help/String.rst
    :start-after: .. end_trim_section
+   :end-before: .. end_upper_section
+
+Further reading: :ref:`expression_function_String_lower`,
+:ref:`expression_function_String_title`
+
+.. include:: expression_help/String.rst
+   :start-after: .. end_upper_section
 
 User Expressions
 ----------------
