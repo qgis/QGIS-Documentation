@@ -2569,7 +2569,7 @@ and the values or range of values that are allowed to be added to each.
    layer, between fields from different layers in the QGIS project, or between fields
    from layers in different QGIS instances.
 
-   Note that neither aliases nor comments are copied, since those are specific for
+   Note that neither aliases nor comments are copied, since those are specific to
    each particular field.
 
 .. index:: Default values, Fields constraints, Alias
