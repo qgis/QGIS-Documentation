@@ -315,7 +315,7 @@ clicking on the :guilabel:`Data Filtering` in the :guilabel:`View` menu. The
 side of the map canvas. At the top of the slider, there is a |settings| :sup:`Settings` menu
 where you can:
 
-* Set the :guilabel:`Fixed Range Size` size to lock the elevation range to a specific size.
+* Set the :guilabel:`Fixed Range Size` value to lock the elevation range to a specific size.
   This setting is saved within the project and retained across sessions, ensuring consistency
   for your elevation filter. Use the |checkbox| :guilabel:`Invert Direction` option to reverse
   the elevation filter slider, so that it moves from high values at the bottom to low values at the top.
