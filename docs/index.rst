@@ -75,7 +75,7 @@ you can download for offline reading. They are accessible from the
 Please have a look into one of the documents below.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: About QGIS
 
    about/preamble
@@ -84,8 +84,7 @@ Please have a look into one of the documents below.
    about/features
    about/help_and_support
    about/contributors
-   about/GNU_GPL
-   about/GNU_FDL
+   about/license/index
 
 .. toctree::
    :maxdepth: 2
