@@ -1994,66 +1994,6 @@ and M constraints can be locked continuously by clicking the |lockRepeating|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
 
-.. _parallel_or_perpendicular:
-
-Parallel and perpendicular lines
---------------------------------
-
-All the tools described above can be combined with the |cadPerpendicular|
-:sup:`Perpendicular` and |cadParallel| :sup:`Parallel` tools. These two tools
-allow drawing segments perfectly perpendicular or parallel to another segment.
-The target segment can be on another layer, another feature within the layer or
-the feature being digitized (requires :ref:`self-snapping option <self_snapping>`).
-
-To draw a *perpendicular* segment:
-
-#. First add one of the segment vertices.
-#. Click the |cadPerpendicular| :sup:`Perpendicular` icon
-   (keyboard shortcut :kbd:`P`) to activate it.
-#. Click on the segment that you want to be perpendicular to.
-#. A virtual dotted line perpendicular to the segment through the previous
-   vertex appears. The angle property is locked, constraining the next vertex
-   on that line and, a cross indicates the projected position of the cursor on the line.
-   Click to place the new vertex.
-
-   .. figure:: img/advanced_digitizing_perpendicular.png
-      :align: center
-
-      Perpendicular digitizing
-
-To draw a *parallel* segment, the steps are the same except that you need to
-click on the |cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`P` twice).
-
-.. figure:: img/advanced_digitizing_parallel.png
-   :align: center
-
-   Parallel digitizing
-
-These two tools just find the right angle of the perpendicular and
-parallel angle and lock this parameter during your editing.
-Unlock the angle parameter to cancel their use in the middle of the process.
-
-.. _circle_intersection:
-
-2-circle point intersection
----------------------------
-
-To add a vertex at the intersection of two circles, follow these steps:
-
-#. Click the |circlesIntersection| :sup:`2-circle Point Intersection` icon.
-#. A dialog will open where you can define the parameters for
-   :guilabel:`Circle #1` and :guilabel:`Circle #2`.
-#. Click on the map canvas, and the tool will automatically calculate the
-   :guilabel:`X` and :guilabel:`Y` coordinates for the centers of both circles.
-#. Enter the distance :guilabel:`d` for each circle.
-#. The tool will calculate and display the two intersection points of the circles.
-#. Click one of the intersection points to add the new vertex.
-
-   .. figure:: img/circles_intersection.png
-      :align: center
-
-      2-circle Point Intersection
-
 
 .. _construction_mode:
 
@@ -2125,6 +2065,66 @@ and angle entered. Repeating the process, several points can be added.
    :align: center
 
    Points at given distance and angle
+
+.. _parallel_or_perpendicular:
+
+Parallel and perpendicular lines
+--------------------------------
+
+All the tools described above can be combined with the |cadPerpendicular|
+:sup:`Perpendicular` and |cadParallel| :sup:`Parallel` tools. These two tools
+allow drawing segments perfectly perpendicular or parallel to another segment.
+The target segment can be on another layer, another feature within the layer or
+the feature being digitized (requires :ref:`self-snapping option <self_snapping>`).
+
+To draw a *perpendicular* segment:
+
+#. First add one of the segment vertices.
+#. Click the |cadPerpendicular| :sup:`Perpendicular` icon
+   (keyboard shortcut :kbd:`P`) to activate it.
+#. Click on the segment that you want to be perpendicular to.
+#. A virtual dotted line perpendicular to the segment through the previous
+   vertex appears. The angle property is locked, constraining the next vertex
+   on that line and, a cross indicates the projected position of the cursor on the line.
+   Click to place the new vertex.
+
+   .. figure:: img/advanced_digitizing_perpendicular.png
+      :align: center
+
+      Perpendicular digitizing
+
+To draw a *parallel* segment, the steps are the same except that you need to
+click on the |cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`P` twice).
+
+.. figure:: img/advanced_digitizing_parallel.png
+   :align: center
+
+   Parallel digitizing
+
+These two tools just find the right angle of the perpendicular and
+parallel angle and lock this parameter during your editing.
+Unlock the angle parameter to cancel their use in the middle of the process.
+
+.. _circle_intersection:
+
+2-circle point intersection
+---------------------------
+
+To add a vertex at the intersection of two circles, follow these steps:
+
+#. Click the |circlesIntersection| :sup:`2-circle Point Intersection` icon.
+#. A dialog will open where you can define the parameters for
+   :guilabel:`Circle #1` and :guilabel:`Circle #2`.
+#. Click on the map canvas, and the tool will automatically calculate the
+   :guilabel:`X` and :guilabel:`Y` coordinates for the centers of both circles.
+#. Enter the distance :guilabel:`d` for each circle.
+#. The tool will calculate and display the two intersection points of the circles.
+#. Click one of the intersection points to add the new vertex.
+
+   .. figure:: img/circles_intersection.png
+      :align: center
+
+      2-circle Point Intersection
 
 
 .. index:: Edit in place
