@@ -428,10 +428,10 @@ tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
   It can be the :guilabel:`Lowest label component` or a particular
   component such as the :guilabel:`Text` itself, the :guilabel:`Buffer` or
   the :guilabel:`Background`.
-* Set the shadow's :guilabel:`Offset` from the item being shadowded, ie:
+* Set the shadow's :guilabel:`Offset` from the item being shadowed, ie:
 
   * The angle: clockwise, it depends on the underlying item orientation
-  * The distance of offset from the item being shadowded
+  * The distance of offset from the item being shadowed
   * The units of the offset
 
   If you tick the |checkbox| :guilabel:`Use global shadow` checkbox,
