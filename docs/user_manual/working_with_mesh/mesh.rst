@@ -1038,6 +1038,8 @@ thanks to expressions.
    :guilabel:`X coordinate`, :guilabel:`Y coordinate` and/or :guilabel:`Z value`.
 #. Then enter the target position in the box, either as a numeric value or
    an expression (using the |expression| :sup:`Expression dialog`)
+#. Use :guilabel:`Get Z value from project terrain` to set a Z value for selected vertices
+   from the project terrain.
 #. With the |vertexCoordinates| :sup:`Import Coordinates of the Selected Vertex`
    pressed, the X, Y and Z boxes are automatically filled with its coordinates
    whenever a single vertex is selected. A convenient and quick way to adjust
@@ -1051,8 +1053,7 @@ thanks to expressions.
      apply the transformation until it is corrected.
 #. Press :guilabel:`Apply Transform` to modify the selected coordinates
    for the set of vertices.
-#. Press :guilabel:`Get Z value from project terrain` to set a Z value for selected vertices
-   from the project terrain. 
+ 
 
 Reshaping mesh geometry
 .......................
