@@ -176,6 +176,20 @@ Further reading: :ref:`expression_function_Date_and_Time_format_date`
 .. include:: expression_help/Conversions.rst
    :start-after: .. end_to_time_section
 
+
+CRS Functions
+-----------------
+
+This group contains functions to operate on coordinate reference system objects.
+
+.. include:: text_include.rst
+   :start-after: .. functions_group_toc
+   :end-before: .. end_functions_group_toc
+
+.. include:: expression_help/CRS.rst
+   :start-after: :orphan:
+
+
 Custom Functions
 -----------------
 

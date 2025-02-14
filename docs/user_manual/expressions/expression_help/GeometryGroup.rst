@@ -170,7 +170,7 @@ Returns the north-based bearing as the angle in radians measured clockwise on th
    * - Arguments
      - * **point_a** - point geometry
        * **point_b** - point geometry
-       * **source_crs** - an optional string representing the source CRS of the points. By default the current layer's CRS is used.
+       * **source_crs** - an optional string or CRS object representing the source CRS of the points. By default the current layer's CRS is used.
        * **ellipsoid** - an optional string representing the acronym or the authority:ID (eg 'EPSG:7030') of the ellipsoid on which the bearing should be measured. By default the current project's ellipsoid setting is used.
    * - Examples
      - * ``degrees( bearing( make_point(16198544, -4534850), make_point(18736872, -1877769), 'EPSG:3857', 'EPSG:7030') )`` → 49.980071
@@ -3198,8 +3198,8 @@ Returns the geometry transformed from a source CRS to a destination CRS.
      - transform(geometry, source_auth_id, dest_auth_id)
    * - Arguments
      - * **geometry** - a geometry
-       * **source_auth_id** - the source auth CRS ID
-       * **dest_auth_id** - the destination auth CRS ID
+       * **source_auth_id** - the source CRS definition or CRS object
+       * **dest_auth_id** - the destination CRS definition or CRS object
    * - Examples
      - * ``geom_to_wkt( transform( make_point(488995.53240249, 7104473.38600835), 'EPSG:2154', 'EPSG:4326' ) )`` → 'POINT(0 51)'
 
