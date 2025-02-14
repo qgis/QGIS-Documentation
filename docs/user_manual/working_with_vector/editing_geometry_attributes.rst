@@ -1994,6 +1994,78 @@ and M constraints can be locked continuously by clicking the |lockRepeating|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
 
+
+.. _construction_mode:
+
+Construction mode
+-----------------
+
+You can enable and disable *construction mode* by clicking on the
+|cadConstruction| :sup:`Construction mode` icon or with the :kbd:`C` keyboard
+shortcut. While in construction mode, clicking the map canvas won't add new
+vertexes, but will capture the clicks' positions so that you can use them as
+reference points to then lock distance, angle or X, Y, Z, M relative values.
+
+In the |cadConstruction| :sup:`Construction mode` you will find a drop-down menu
+where you can choose to:
+
+* |checkbox| :guilabel:`Record Construction Guides`: All construction steps are
+  rendered as dashed lines. Each step that you perform is visually represented,
+  allowing you to trace the construction process. The guides are displayed as
+  long as :guilabel:`Advanced Digitizing` remains active.
+* |checkbox| :guilabel:`Show Construction Guides`: Allows you to make construction
+  guides visible or hidden on the canvas. When enabled, all active guides are displayed,
+  offering better spatial orientation and precision during the digitizing process.
+* |checkbox| :guilabel:`Snap to Visible Construction Guides`: The guides are snap-able,
+  allowing you to start new construction steps from any point along the existing guides.
+* Choose :guilabel:`Clear Construction Guides` to remove all the guides from the canvas.
+
+As an example, the construction mode can be used to draw some point
+at an exact distance from an existing point.
+
+With an existing point in the map canvas and the snapping mode correctly
+activated, you can easily draw other points at given distances and angles from
+it. In addition to the |cad| button, you have to activate also the
+*construction mode* by clicking the |cadConstruction| :sup:`Construction mode`
+icon or with the :kbd:`C` keyboard shortcut.
+
+Click next to the point from which you want to calculate the distance and click
+on the :guilabel:`d` box (:kbd:`D` shortcut) type the desired distance and press
+:kbd:`Enter` to lock the mouse position in the map canvas:
+
+.. figure:: img/advanced_digitizing_distance_point.png
+   :align: center
+
+   Distance from point
+
+Before adding the new point, press :kbd:`C` to exit the construction mode.
+Now, you can click on the map canvas, and the point will be placed at
+the distance entered.
+
+You can also use the angle constraint to, for example, create another point at
+the same distance of the original one, but at a particular angle from the newly
+added point. Click the |cadConstruction| :sup:`Construction mode` icon or with the
+:kbd:`C` keyboard shortcut to enter construction mode. Click the recently added
+point, and then the other one to set a direction segment. Then, click on the
+:guilabel:`d` text box (:kbd:`D` shortcut) type the desired distance and press
+:kbd:`Enter`. Click the :guilabel:`a` text box (:kbd:`A` shortcut) type the
+angle you want and press :kbd:`Enter`. The mouse position will be locked both in
+distance and angle.
+
+.. figure:: img/advanced_digitizing_distance_angle_point.png
+   :align: center
+
+   Distance and angle from points
+
+Before adding the new point, press :kbd:`C` to exit the construction mode. Now,
+you can click on the map canvas, and the point will be placed at the distance
+and angle entered. Repeating the process, several points can be added.
+
+.. figure:: img/advanced_digitizing_distance_point_final.png
+   :align: center
+
+   Points at given distance and angle
+
 .. _parallel_or_perpendicular:
 
 Parallel and perpendicular lines
@@ -2053,64 +2125,6 @@ To add a vertex at the intersection of two circles, follow these steps:
       :align: center
 
       2-circle Point Intersection
-
-
-.. _construction_mode:
-
-Construction mode
------------------
-
-You can enable and disable *construction mode* by clicking on the
-|cadConstruction| :sup:`Construction mode` icon or with the :kbd:`C` keyboard
-shortcut. While in construction mode, clicking the map canvas won't add new
-vertexes, but will capture the clicks' positions so that you can use them as
-reference points to then lock distance, angle or X, Y, Z, M relative values.
-
-As an example, the construction mode can be used to draw some point
-at an exact distance from an existing point.
-
-With an existing point in the map canvas and the snapping mode correctly
-activated, you can easily draw other points at given distances and angles from
-it. In addition to the |cad| button, you have to activate also the
-*construction mode* by clicking the |cadConstruction| :sup:`Construction mode`
-icon or with the :kbd:`C` keyboard shortcut.
-
-Click next to the point from which you want to calculate the distance and click
-on the :guilabel:`d` box (:kbd:`D` shortcut) type the desired distance and press
-:kbd:`Enter` to lock the mouse position in the map canvas:
-
-.. figure:: img/advanced_digitizing_distance_point.png
-   :align: center
-
-   Distance from point
-
-Before adding the new point, press :kbd:`C` to exit the construction mode.
-Now, you can click on the map canvas, and the point will be placed at
-the distance entered.
-
-You can also use the angle constraint to, for example, create another point at
-the same distance of the original one, but at a particular angle from the newly
-added point. Click the |cadConstruction| :sup:`Construction mode` icon or with the
-:kbd:`C` keyboard shortcut to enter construction mode. Click the recently added
-point, and then the other one to set a direction segment. Then, click on the
-:guilabel:`d` text box (:kbd:`D` shortcut) type the desired distance and press
-:kbd:`Enter`. Click the :guilabel:`a` text box (:kbd:`A` shortcut) type the
-angle you want and press :kbd:`Enter`. The mouse position will be locked both in
-distance and angle.
-
-.. figure:: img/advanced_digitizing_distance_angle_point.png
-   :align: center
-
-   Distance and angle from points
-
-Before adding the new point, press :kbd:`C` to exit the construction mode. Now,
-you can click on the map canvas, and the point will be placed at the distance
-and angle entered. Repeating the process, several points can be added.
-
-.. figure:: img/advanced_digitizing_distance_point_final.png
-   :align: center
-
-   Points at given distance and angle
 
 
 .. index:: Edit in place
