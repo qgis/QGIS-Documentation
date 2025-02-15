@@ -338,11 +338,6 @@ You can define:
   map view extent will be shown and thus will not include legend items for items
   you can't see in the current map.
 
-At the bottom of the dialog, a :guilabel:`Layer name` text field displays the
-selected item's :guilabel:`Title`. You can change the name at your will.
-This name will appear in the :guilabel:`Layers` panel after you pressed the
-:guilabel:`Add` button and loaded the layer(s) in QGIS.
-
 You can select several layers at once, but only one image style per layer.
 When several layers are selected, they will be combined at the WMS server
 and transmitted to QGIS in one go, as a single layer.
@@ -807,9 +802,6 @@ Now we are ready to load WFS layers from the above connection.
 #. Select the :guilabel:`Parks` layer in the list
 #. You can also choose whether to:
 
-   * |unchecked| :guilabel:`Use title for layer name`, showing the layer's
-     title as defined on the server in the :guilabel:`Layers` panel instead of
-     its :guilabel:`Name`
    * |checkbox| :guilabel:`Only request features overlapping the view extent`
    * :guilabel:`Change...` the layer's CRS to any other supported by the service
    * or build a query to specify particular features to retrieve from the service:
