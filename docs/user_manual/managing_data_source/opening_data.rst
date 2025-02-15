@@ -530,8 +530,6 @@ is designed for.
 #. Enable the |addDelimitedTextLayer| :guilabel:`Delimited Text` tab
 #. Select the delimited text file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
    by clicking on the :guilabel:`...` :sup:`Browse` button.
-#. In the :guilabel:`Layer name` field, provide the name to use for
-   the layer in the project (e.g. :file:`Elevation`).
 #. Configure the settings to meet your dataset and needs, as explained below.
 
 .. _figure_delimited_text:
