@@ -130,7 +130,7 @@ Parameters
      - ``OUTPUT_VALUE``
      - [enumeration]
 
-       Default: *Raw*
+       Default: *0*
      - Allow to change the values of the output heatmap raster.
        One of:
 
