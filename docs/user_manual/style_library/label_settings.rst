@@ -903,8 +903,10 @@ or an expression to set:
   * :guilabel:`Horizontal`: it can be **Left**, **Center** or **Right**
   * the text :guilabel:`Vertical`: it can be **Bottom**, **Base**, **Half**,
     **Cap** or **Top**
-* the text :guilabel:`Rotation`. Different units can be defined for the
-  labeling rotation (e.g. ``degrees``, ``minutes of arc``, ``turns``).
+* the text :guilabel:`Rotation`. Rotation is defined as clockwise angle with 0°
+  pointing in the direction of East for ``Horizontal`` oriented text and with 0°
+  pointing in North direction for ``Vertical`` oriented text. Different units can
+  be defined for the labeling rotation (e.g. ``degrees``, ``minutes of arc``, ``turns``).
   Check the :guilabel:`Preserve data rotation values` entry if you want to keep
   the rotation value in the associated field and apply it to the label, whether
   the label is pinned or not. If unchecked, unpinning the label rotation is
