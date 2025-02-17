@@ -11,7 +11,7 @@
 crs_from_text
 .............
 
-Creates a coordinate reference system from a string definition. The string can represent an auth:id code, a WKT definition, or a PROJ string definition of the CRS.
+Creates a coordinate reference system from a string definition. The string can represent an authority ID, a WKT definition, or a PROJ string definition of the CRS.
 
 .. list-table::
    :widths: 15 85
@@ -32,7 +32,7 @@ Creates a coordinate reference system from a string definition. The string can r
 crs_to_authid
 .............
 
-Returns the authority:id identifier string for a coordinate reference system.
+Returns the authority ID string for a coordinate reference system.
 
 .. list-table::
    :widths: 15 85
