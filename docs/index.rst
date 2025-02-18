@@ -75,6 +75,18 @@ you can download for offline reading. They are accessible from the
 Please have a look into one of the documents below.
 
 .. toctree::
+   :maxdepth: 1
+   :caption: About QGIS
+
+   about/preamble
+   about/foreword
+   about/conventions
+   about/features
+   about/help_and_support
+   about/contributors
+   about/license/index
+
+.. toctree::
    :maxdepth: 2
    :caption: For Users
 
