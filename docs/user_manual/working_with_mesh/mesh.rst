@@ -928,6 +928,19 @@ Another tool for mesh elements selection is |meshSelectExpression|
    * |selectAdd| :guilabel:`Add to current selection`
    * |selectRemove| :guilabel:`Remove from current selection`
 
+
+Using :guilabel:`Select Isolated Vertices`
+..........................................
+
+Activate the |meshSelectIsolatedVertices| :sup:`Select Isolated Vertices` tool,
+and all vertices that are not part of any mesh face will be selected.
+
+Using :guilabel:`Select All Vertices`
+.....................................
+
+Activate the |meshSelectAll| :sup:`Select All Vertices` tool to select
+all vertices of the mesh layer.
+
 Modifying mesh elements
 ------------------------
 
@@ -1290,7 +1303,11 @@ the expression to execute.
    :width: 1.5em
 .. |meshReindex| image:: /static/common/mActionMeshReindex.png
    :width: 1.5em
+.. |meshSelectAll| image:: /static/common/mActionMeshSelectAll.png
+   :width: 1.5em
 .. |meshSelectExpression| image:: /static/common/mActionMeshSelectExpression.png
+   :width: 1.5em
+.. |meshSelectIsolatedVertices| image:: /static/common/mActionMeshSelectIsolatedVertices.png
    :width: 1.5em
 .. |meshSelectPolygon| image:: /static/common/mActionMeshSelectPolygon.png
    :width: 1.5em
