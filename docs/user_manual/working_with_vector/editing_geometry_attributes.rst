@@ -606,6 +606,16 @@ The vertex tools also support the topological editing feature.
 They are selection persistent, so when some
 operation is done, selection stays active for this feature and tool.
 
+.. _tip_tracing_support:
+
+.. tip:: **Drawing a series of new vertices**
+
+   The vertex tool does not support automatic tracing and is optimised for 
+   editing individual vertices and moving or deleting an arbitrary selection
+   of multiple vertices.  Try using the |reshape|:sup:`Reshape Features`
+   tool when you need to replace or insert a series of new vertices,
+   especially if you want to trace other features.
+
 It is important to set the property :menuselection:`Settings -->` |options|
 :menuselection:`Options --> Digitizing -->` :guilabel:`Search Radius:`
 |selectNumber| to a number greater than zero. Otherwise, QGIS will
