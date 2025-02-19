@@ -896,14 +896,14 @@ tools:
    somewhere else accidentally and clear your selection.
 
 While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
-holding :kbd:`Shift` or :kbd:`Ctrl` (:kbd:`Cmd` on Mac) toggles whether a feature is selected
-(i.e. either adds to the current selection or removes from it).
+holding :kbd:`Shift` or :kbd:`Ctrl` (:kbd:`Cmd` on macOS) toggles whether a feature is selected
+(i.e., either adds to the current selection or removes from it).
 
 For the other tools, different behaviors can be performed by holding down:
 
 * :kbd:`Shift`: add features to the current selection
 * :kbd:`Ctrl`/:kbd:`Cmd`: subtract features from the current selection
-* :kbd:`Ctrl+Shift`/:kbd:`Cmd+Shift`: intersect with the current selection, i.e. only keep
+* :kbd:`Ctrl+Shift`/:kbd:`Cmd+Shift`: intersect with the current selection, i.e., only keep
   overlapping features from the current selection
 * :kbd:`Alt`: select features that are totally within the selection shape.
   Combined with :kbd:`Shift` or :kbd:`Ctrl`/:kbd:`Cmd` keys, you can add or subtract
