@@ -1104,14 +1104,15 @@ operators, with some special characteristics:
 
 * When any of the arguments is a NULL value, either ``||`` or ``+`` will
   return a NULL value. To return the other arguments regardless the NULL value,
-  you may want to use the ``concat`` function::
+  you may want to use the ``concat`` or ``array_to_string`` function::
 
     'My feature id is: ' + NULL ==> NULL 
     'My feature id is: ' || NULL => NULL 
     concat('My feature id is: ', NULL) => 'My feature id is: '
+    array_to_string( array('My feature id is:', NULL), ' ,') => 'My feature id is:'
 
-further reading: :ref:`expression_function_Operators_concat`,
-:ref:`expression_function_Operators_plus`
+further reading: :ref:`expression_function_Arrays_array_to_string`,
+:ref:`expression_function_Operators_concat`, :ref:`expression_function_Operators_plus`
 
 .. include:: expression_help/String.rst
    :start-after: .. end_concat_section
@@ -1163,7 +1164,8 @@ Further reading: :ref:`expression_function_String_substr`,
    :start-after: .. end_regexp_substr_section
    :end-before: .. end_replace_section
 
-Further reading: :ref:`expression_function_String_regexp_replace`
+Further reading: :ref:`expression_function_String_regexp_replace`,
+:ref:`expression_function_Arrays_array_replace`
 
 .. include:: expression_help/String.rst
    :start-after: .. end_replace_section
