@@ -869,6 +869,18 @@ coordinates).
 Selecting mesh elements
 -----------------------
 
+To select mesh elements, you can use the following tools:
+
+* |meshDigitizing| :sup:`Digitize Mesh Elements` to select different mesh elements, see more at :ref:`digitize_mesh_elements`.
+* |meshSelectPolygon| :sup:`Select Mesh Elements by Polygon` to select different mesh elements by polygon,
+  see more at :ref:`select_mesh_by_polygon`.
+* |meshSelectExpression| :sup:`Select Mesh Elements by Expression` to select different mesh elements by expression,
+  you can choose to :guilabel:`Select by vertices` or :guilabel:`Select by faces`, see more at :ref:`select_mesh_by_expression`.
+* |meshSelectIsolatedVertices| :sup:`Select Isolated Vertices`  to select all vertices that are not part of any mesh face.
+* |meshSelectAll| :sup:`Select All Vertices` to select all vertices of the mesh layer.
+
+.. _digitize_mesh_elements:
+
 Using :guilabel:`Digitize Mesh Elements`
 ........................................
 
@@ -887,6 +899,8 @@ Hover over an element and it gets highlighted, allowing you to select it.
 * To remove an element from the selection, press :kbd:`Ctrl` and reselect it.
   A deselected face will also deselect all their vertices.
 
+.. _select_mesh_by_polygon:
+
 Using :guilabel:`Select Mesh Elements by Polygon`
 .................................................
 
@@ -904,6 +918,8 @@ Activate the |meshSelectPolygon| :sup:`Select Mesh Elements by Polygon` tool and
 * To add elements to a selection, press :kbd:`Shift` while selecting them.
 * To remove an element from the selection, press :kbd:`Ctrl` while drawing
   over the selection polygon.
+
+.. _select_mesh_by_expression:
 
 Using :guilabel:`Select Mesh Elements by Expression`
 ....................................................
@@ -928,18 +944,6 @@ Another tool for mesh elements selection is |meshSelectExpression|
    * |selectAdd| :guilabel:`Add to current selection`
    * |selectRemove| :guilabel:`Remove from current selection`
 
-
-Using :guilabel:`Select Isolated Vertices`
-..........................................
-
-Activate the |meshSelectIsolatedVertices| :sup:`Select Isolated Vertices` tool,
-and all vertices that are not part of any mesh face will be selected.
-
-Using :guilabel:`Select All Vertices`
-.....................................
-
-Activate the |meshSelectAll| :sup:`Select All Vertices` tool to select
-all vertices of the mesh layer.
 
 Modifying mesh elements
 ------------------------
