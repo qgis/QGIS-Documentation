@@ -175,14 +175,8 @@ To export a layout as SVG:
      any redundant vertices which are not discernably different at the export
      resolution (e.g. if the export resolution is ``300 dpi``, vertices that are
      less than ``1/600 inch`` apart will be removed).
-   * Set the :guilabel:`Text export`: controls whether text labels are exported
-     as proper text objects (:guilabel:`Always export texts as text
-     objects`) or as paths only (:guilabel:`Always export texts as paths`).
-     If they are exported as text objects, they can be edited in external
-     applications (e.g. Inkscape) as normal text. BUT the side effect is that
-     the rendering quality is reduced, AND there are issues with rendering when
-     certain text settings like buffers are in place. That’s why exporting as
-     paths is recommended.
+   * Set the :guilabel:`Text export`: controls whether text labels are always
+     or preferably exported as :ref:`text or outline objects <render_labels_text>`.
    * Apply |checkbox| :guilabel:`Crop to content` :ref:`option <crop_to_content>`
    * |unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting
      files, QGIS uses a built-in raster layer tiled rendering that saves memory.
@@ -237,14 +231,8 @@ To export a layout as PDF:
      is on the first page.
    * |checkbox| :guilabel:`Export RDF metadata` of the document such as the
      title, author, date, description...
-   * Set the :guilabel:`Text export`: controls whether text labels are exported
-     as proper text objects (:guilabel:`Always export texts as text
-     objects`) or as paths only (:guilabel:`Always export texts as paths`).
-     If they are exported as text objects then they can be edited in external
-     applications (e.g. Inkscape) as normal text. BUT the side effect is that
-     the rendering quality is decreased, AND there are issues with rendering when
-     certain text settings like buffers are in place. That’s why exporting as
-     paths is recommended.
+   * Set the :guilabel:`Text export`: controls whether text labels are always
+     or preferably exported as :ref:`text or outline objects <render_labels_text>`.
    * Control the PDF :guilabel:`Image compression` using:
    
      * :guilabel:`Lossy (JPEG)`, which is the default compression mode
