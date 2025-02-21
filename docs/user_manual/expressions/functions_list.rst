@@ -1109,7 +1109,7 @@ operators, with some special characteristics:
     'My feature id is: ' + NULL ==> NULL 
     'My feature id is: ' || NULL => NULL 
     concat('My feature id is: ', NULL) => 'My feature id is: '
-    array_to_string( array('My feature id is:', NULL), ' ,') => 'My feature id is:'
+    array_to_string( array('My feature id is: ', NULL) ) => 'My feature id is: '
 
 further reading: :ref:`expression_function_Arrays_array_to_string`,
 :ref:`expression_function_Operators_concat`, :ref:`expression_function_Operators_plus`
