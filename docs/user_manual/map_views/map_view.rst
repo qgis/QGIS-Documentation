@@ -1291,24 +1291,15 @@ In the dialog that opens:
        https://north-road.com/2019/09/03/qgis-3-10-loves-geospatialpdf/.
 
    * :guilabel:`Rasterize map`
-   * |checkbox| :guilabel:`Simplify geometries to reduce output file
-     size`:
+   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`:
      Geometries will be simplified while exporting the map by removing
      vertices that are not discernibly different at the export
      resolution (e.g. if the export resolution is ``300 dpi``, vertices
      that are less than ``1/600 inch`` apart will be removed).
      This can reduce the size and complexity of the export file (very
      large files can fail to load in other applications).
-   * Set the :guilabel:`Text export`: controls whether text labels are
-     exported as proper text objects (:guilabel:`Always export texts
-     as text objects`) or as paths only (:guilabel:`Always export texts
-     as paths`).
-     If they are exported as text objects then they can be edited in
-     external applications (e.g. Inkscape) as normal text.
-     BUT the side effect is that the rendering quality is decreased,
-     AND there are issues with rendering when certain text settings
-     like buffers are in place.
-     That’s why exporting as paths is recommended.
+   * Set the :guilabel:`Text export`: controls whether text labels are always
+     or preferably exported as :ref:`text or outline objects <render_labels_text>`.
 
 #. Click :guilabel:`Save` to select file location, name and format.
 
