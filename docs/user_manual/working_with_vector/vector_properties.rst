@@ -1447,15 +1447,27 @@ options:
   polygon features the number of possible labels placement based on their size.
   The longer or wider a feature is, the more candidates it has, and its labels
   can be better placed with less risk of collision.
+
+.. _render_labels_text:
+
 * :guilabel:`Text rendering`: sets the default value for label rendering
   widgets when :ref:`exporting a map canvas <exportingmapcanvas>` or
   :ref:`a layout <create-output>` to PDF or SVG.
   If :guilabel:`Always render labels as text` is selected then labels can be
   edited in external applications (e.g. Inkscape) as normal text. BUT the side
   effect is that the rendering quality is decreased, and there are issues with
-  rendering when certain text settings like buffers are in place. That's why
-  :guilabel:`Always render labels as paths (recommended)` which exports labels
-  as outlines, is recommended.
+  rendering when certain text settings like buffers are in place.
+  That's why :guilabel:`Always render labels as paths (recommended)`
+  which exports labels as outlines but guarantees complete compatibility
+  with the full range of formatting options available, is recommended.
+  With :guilabel:`Prefer rendering labels as text` option, labels are rendered as text objects,
+  unless doing so results in rendering artifacts or poor quality rendering (depending on text format settings).
+
+  .. note:: When rendering labels as text to a vector based device (e.g. PDF or SVG),
+    care must be taken to ensure that the required fonts are available to users
+    when opening the created files, or default fallback fonts will be used to display the output instead.
+    (Although PDF exports MAY automatically embed some fonts when possible, depending on the user’s platform).
+
 * |checkbox| :guilabel:`Allow truncated labels on edges of map`: controls
   whether labels which fall partially outside of the map extent should be
   rendered. If checked, these labels will be shown (when there's no way to
@@ -1473,6 +1485,8 @@ options:
   Like the label says, it's useful only for debugging and testing the effect different
   labeling settings have. This could be handy for a better manual placement with
   tools from the :ref:`label toolbar <label_toolbar>`.
+* |unchecked| :guilabel:`Show label metrics (for debugging)`:
+  displays the text bounds of the label in red and baselines in blue
 * :guilabel:`Project labeling version`: QGIS supports two different versions of
   label automatic placement:
 
