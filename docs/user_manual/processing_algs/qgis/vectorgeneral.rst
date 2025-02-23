@@ -2034,7 +2034,7 @@ single one.
 The attribute table of the resulting layer will contain the fields from all
 input layers. If fields with the same name but different types are found then
 the exported field will be automatically converted into a string type field.
-New fields storing the original layer name and source are also added.
+Optionally, new fields storing the original layer name and source can be added.
 
 If any input layers contain Z or M values, then the output layer will
 also contain these values.
@@ -2078,6 +2078,12 @@ Parameters
      - Choose the CRS for the output layer.
        If not specified, the CRS of the first input
        layer is used.
+   * - **Add source layer information (layer name and path)**
+     - ``ADD_SOURCE_FIELDS``
+     - [boolean]
+
+       Default: True
+     - Add fields storing the original layer name and path
    * - **Merged**
      - ``OUTPUT``
      - [same as input]
