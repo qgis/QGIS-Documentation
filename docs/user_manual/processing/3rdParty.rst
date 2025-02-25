@@ -586,12 +586,10 @@ parameters.
 LAStools
 --------
 
-To use `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS,
-you need to download and install LAStools on your computer and
-install the LAStools plugin (available from the official repository) in QGIS.
+To use `LAStools`_ in QGIS, you need to download and install LAStools on your computer
+and install the LAStools plugin (available from the official repository) in QGIS.
 
-On Linux platforms, you will need `Wine <https://www.winehq.org/>`_
-to be able to run some of the tools.
+On Linux platforms, you will need `Wine`_ to be able to run some of the tools.
 
 LAStools is activated and configured in the Processing options
 (:menuselection:`Settings --> Options`, :guilabel:`Processing` tab,
@@ -608,8 +606,7 @@ OTB Applications
 
 OTB applications are fully supported within the QGIS Processing framework.
 
-
-`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox) is an image
+`OTB`_ (Orfeo ToolBox) is an image
 processing library for remote sensing data. It also provides
 applications that provide image processing functionalities.
 The list of applications and their documentation are available in
@@ -684,3 +681,7 @@ using the ``qgis`` label.
 
 Additional information about OTB and QGIS can be found in
 `OTB Cookbook <https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`__.
+
+.. _LAStools: https://rapidlasso.de/lastools-220107/
+.. _Wine: https://www.winehq.org/
+.. _OTB: https://www.orfeo-toolbox.org

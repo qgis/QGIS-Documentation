@@ -79,17 +79,18 @@ Data
 The sample data that accompanies this resource is freely available and comes
 from the following sources:
 
-* Streets and Places datasets from OpenStreetMap
-  (https://www.openstreetmap.org/)
-* Property boundaries (urban and rural), water bodies from NGI
-  (https://ngi.dalrrd.gov.za/)
-* SRTM DEM from the CGIAR-CGI (http://srtm.csi.cgiar.org/)
+* Streets and Places datasets from OpenStreetMap_
+* Property boundaries (urban and rural), water bodies from NGI_
+* SRTM DEM from the `CGIAR CSI`_
 
 Download the prepared dataset from the `Training data repository <training_data_>`_
 and unzip the file. All the necessary data are provided in the :file:`exercise_data`
 folder.
 
 .. _training_data: https://github.com/qgis/QGIS-Training-Data/archive/master.zip
+.. _NGI: https://ngi.dalrrd.gov.za/
+.. _CGIAR CSI: https://srtm.csi.cgiar.org/
+.. _OpenStreetMap: https://www.openstreetmap.org/
 
 If you are an instructor, and would like to use more relevant
 data, you will find instructions for creating local data

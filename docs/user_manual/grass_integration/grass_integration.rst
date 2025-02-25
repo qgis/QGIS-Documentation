@@ -33,8 +33,9 @@ raster elevation map. Create a new folder called :file:`grassdata`, download
 the QGIS 'Alaska' dataset :file:`qgis\_sample\_data.zip` from
 https://download.qgis.org//downloads/data/ and unzip the file into :file:`grassdata`.
 
-More sample GRASS :file:`LOCATIONs` are available at the GRASS website at
-https://grass.osgeo.org/download/data/.
+More sample GRASS :file:`LOCATIONs` are available at the GRASS_ website.
+
+.. _GRASS: https://grass.osgeo.org/download/data/
 
 .. _sec_load_grassdata:
 

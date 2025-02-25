@@ -1,7 +1,7 @@
 Other programs
 ===================
 
-Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
+Module contributed by Paolo Cavallini - `Faunalia`_
 
 .. note:: This chapter shows how to use additional programs from inside Processing. To complete it, you must have installed, with the tools of your operating system, the relevant packages.
 
@@ -81,3 +81,4 @@ Dissolve features based on a common attribute:
 .. _LecoS: https://conservationecology.wordpress.com/qgis-plugins-and-scripts/lecos-land-cover-statistics/
 .. _lwgeom: https://plugins.qgis.org/plugins/processinglwgeomprovider/
 .. _Animove: https://www.faunalia.eu/en/dev/animove
+.. _Faunalia: https://www.faunalia.eu/en

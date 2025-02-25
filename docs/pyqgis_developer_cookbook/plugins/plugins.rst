@@ -412,8 +412,7 @@ in different languages.
 Software requirements
 ---------------------
 
-The easiest way to create and manage all the translation files is to install
-`Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_.
+The easiest way to create and manage all the translation files is to install `Qt Linguist`_.
 In a Debian-based GNU/Linux environment you can install it typing::
 
   sudo apt install qttools5-dev-tools
@@ -566,12 +565,11 @@ with the :ref:`Plugin Manager <plugins>`.
 Automate packaging, release and translation with qgis-plugin-ci
 ---------------------------------------------------------------
 
-`qgis-plugin-ci <https://opengisch.github.io/qgis-plugin-ci/>`_ provides a command line interface
+`qgis-plugin-ci`_ provides a command line interface
 to perform automated packaging and deployment for QGIS plugins on your computer,
 or using continuous integration
-like `GitHub workflows <https://docs.github.com/en/actions/using-workflows>`_
-or `Gitlab-CI <https://docs.gitlab.com/ee/ci/>`_
-as well as `Transifex <https://www.transifex.com/>`_ for translation.
+like `GitHub workflows`_ or `Gitlab-CI`_
+as well as `Transifex`_ for translation.
 
 It allows releasing, translating, publishing or generating an XML plugin repository file via CLI or in CI actions. 
 
@@ -625,3 +623,9 @@ done with :command:`pyrcc5` command:
     modifying the PATH environment variable or specifiying the path to the
     executable explicitly you should be able to find it at
     :file:`<Your QGIS Install Directory>\\bin\\pyrcc5.exe`.
+
+.. _Qt Linguist: https://doc.qt.io/qt-5/qtlinguist-index.html
+.. _GitHub workflows: https://docs.github.com/en/actions/writing-workflows
+.. _Gitlab-CI: https://docs.gitlab.com/ci/
+.. _Transifex: https://www.transifex.com
+.. _qgis-plugin-ci: https://opengisch.github.io/qgis-plugin-ci/

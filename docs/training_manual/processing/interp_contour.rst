@@ -1,7 +1,7 @@
 Interpolation and contouring
 =============================
 
-Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
+Module contributed by Paolo Cavallini - `Faunalia`_
 
 .. note:: This chapter shows how to use different backends to calculate different interpolations.
 
@@ -37,3 +37,5 @@ Various methods to draw contour lines [always step= 10] on the *stddev* raster:
 - :menuselection:`GRASS --> r.contour.step`
 - :menuselection:`GDAL --> Contour`
 - :menuselection:`SAGA --> Contour lines from grid` [**NB:** in some older SAGA versions, output shp is not valid, known bug]
+
+.. _Faunalia: https://www.faunalia.eu/en

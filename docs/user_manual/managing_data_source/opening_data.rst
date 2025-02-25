@@ -588,8 +588,7 @@ Field type detection
 
 QGIS tries to detect the field types automatically (unless
 |checkbox|:guilabel:`Detect field types` is not checked) by examining
-the content of an optional sidecar CSVT file (see:
-`GeoCSV specification <https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_)
+the content of an optional sidecar CSVT file (see `GeoCSV specification`_)
 and by scanning the whole file to make sure that all values can actually
 be converted without errors, the fall-back field type is text.
 
@@ -1695,6 +1694,8 @@ Select the service you want to connect to and fill in the required fields:
 
 You can also choose to :guilabel:`Save Connection` to an XML file
 or :guilabel:`Load Connection` from an XML file.
+
+ .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

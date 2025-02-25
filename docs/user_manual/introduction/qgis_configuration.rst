@@ -305,7 +305,7 @@ or when a layer without a CRS is loaded.
 distance: occurs when you are explicitly creating or modifying a dataset and
 select a CRS based on a datum ensemble with lower
 accuracy. The default is to ``Always show`` the warning if any inaccuracy.
-Requires a QGIS version using at least `PROJ 8.0 <https://proj.org/index.html>`_.
+Requires a QGIS version using at least `PROJ 8.0`_.
 
 |unchecked| :guilabel:`Show CRS accuracy warning for layers in project legend`:
 If checked, any layer with a CRS with accuracy issues (i.e., a dynamic crs with
@@ -2765,6 +2765,8 @@ in the QGIS user profile.
 * Layout templates must be deployed in the :file:`composer_templates` directory.
 * Project templates must be deployed in the :file:`project_templates` directory.
 * Custom Python macros must be deployed in the :file:`python` directory.
+
+.. _`PROJ 8.0`: https://proj.org/en/8.0/
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
