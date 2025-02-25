@@ -300,7 +300,7 @@ or when a layer without a CRS is loaded.
 distance: occurs when you are explicitly creating or modifying a dataset and
 select a CRS based on a datum ensemble with lower
 accuracy. The default is to ``Always show`` the warning if any inaccuracy.
-Requires a QGIS version using at least `PROJ 8.0 <https://proj.org/index.html>`_.
+Requires a QGIS version using at least `PROJ 8.0 <https://proj.org/en/stable/index.html>`_.
 
 |unchecked| :guilabel:`Show CRS accuracy warning for layers in project legend`:
 If checked, any layer with a CRS with accuracy issues (i.e. a dynamic crs with
@@ -476,7 +476,7 @@ panel.
 GDAL Settings
 .............
 
-`GDAL <https://gdal.org>`_ is a data exchange library for geospatial data that supports a
+`GDAL <https://gdal.org/en/latest>`_ is a data exchange library for geospatial data that supports a
 large number of vector and raster formats.
 It provides drivers to read and (often) write data in these formats.
 The :guilabel:`GDAL` tab exposes the drivers for raster and vector
@@ -532,7 +532,7 @@ support read and write access:
     entered for the given format are valid
   * Use the :guilabel:`Help` button to find the parameters to use, or refer
     to the `GDAL raster drivers documentation
-    <https://gdal.org/drivers/raster/index.html>`_.
+    <https://gdal.org/en/latest/drivers/raster/index.html>`_.
 
 .. _gdal_pyramidsoptions:
 
@@ -1497,7 +1497,7 @@ For :guilabel:`APIs` you can specify:
 Under :guilabel:`GitHub access token`, you can generate a personal token
 allowing you to share code snippets from within the Python code editor.
 More details on `GitHub authentication
-<https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token>`_
+<https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_
 
 
 Processing settings

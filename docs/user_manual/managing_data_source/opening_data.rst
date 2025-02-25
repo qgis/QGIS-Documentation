@@ -22,13 +22,13 @@ and often write a lot of formats:
   MapInfo and MicroStation file formats, AutoCAD DWG/DXF,
   GRASS and many more...
   Read the complete list of `supported vector formats
-  <https://gdal.org/drivers/vector/index.html>`_.
+  <https://gdal.org/en/latest/drivers/vector/index.html>`_.
 * Raster data formats include GeoTIFF, JPEG, ASCII Gridded XYZ,
   MBTiles, R or Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data,
   ERDAS IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid, and
   many more...
   Read the complete list of `supported raster formats
-  <https://gdal.org/drivers/raster/index.html>`_.
+  <https://gdal.org/en/latest/drivers/raster/index.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle,
   MS SQL Server, SAP HANA, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
@@ -39,7 +39,7 @@ and often write a lot of formats:
   layers.
 
 More than 80 vector and 140 raster formats are supported by
-`GDAL <https://gdal.org/>`_ and QGIS native providers.
+`GDAL <https://gdal.org/en/latest/>`_ and QGIS native providers.
 
 .. note::
 
@@ -400,7 +400,7 @@ To load a layer from a file:
 
  For loading vector and raster files the GDAL driver offers to define open
  actions. These will be shown when a file is selected. Options are described
- in detail on https://gdal.org/drivers/vector/, https://gdal.org/drivers/raster
+ in detail on https://gdal.org/en/latest/drivers/vector/, https://gdal.org/en/latest/drivers/raster
  and if a file is selected in QGIS, a text with hyperlink will directly
  lead to the documentation of the selected file type.
 .. note::
@@ -562,7 +562,7 @@ Field type detection
 QGIS tries to detect the field types automatically (unless
 |checkbox|:guilabel:`Detect field types` is not checked) by examining
 the content of an optional sidecar CSVT file (see:
-`GeoCSV specification <https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_)
+`GeoCSV specification <https://giswiki.ch/GeoCSV#CSVT_file_format_specification>`_)
 and by scanning the whole file to make sure that all values can actually
 be converted without errors, the fall-back field type is text.
 

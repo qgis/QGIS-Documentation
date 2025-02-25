@@ -26,7 +26,7 @@ The datasets have been modified to adapt to the lessons needs.
 The general sample data (aerial images, LiDAR data, basic maps) has been
 obtained from the National Land Survey of Finland open data service, and adapted
 for the purposes of the exercises. The open data file download service can be
-accessed in English `here <https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en>`_.
+accessed in English `here <https://asiointi.maanmittauslaitos.fi/karttapaikka/tiedostopalvelu?lang=en>`_.
 
 
 .. warning::

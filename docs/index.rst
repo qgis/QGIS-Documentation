@@ -69,8 +69,8 @@ you can download for offline reading. They are accessible from the
       <https://qgis.org/en/site/getinvolved/translate.html>`_ into your language
     * Or talk to us on either the `qgis-community-team
       <https://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_ mailing-list,
-      the `#qgis <http://webchat.freenode.net/?channels=#qgis>`_ channel on IRC
-      or the `#qgis:matrix.org <http://matrix.to/#/#qgis:matrix.org>`_ room!
+      the `#qgis <https://web.libera.chat/?channels=#qgis>`_ channel on IRC
+      or the `#qgis:matrix.org <https://matrix.to/#/#qgis:osgeo.org>`_ room!
 
 
 Please have a look into one of the documents below.

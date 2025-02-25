@@ -1,7 +1,7 @@
 Interpolation and contouring
 =============================
 
-Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
+Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu/en>`_
 
 .. note:: This chapter shows how to use different backends to calculate different interpolations.
 

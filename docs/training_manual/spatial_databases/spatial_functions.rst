@@ -51,12 +51,12 @@ First Visit `the download page <https://www.postgresql.org/download/>`_. Then fo
 <https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_.
 
 More information about installing on Windows can be found on the `PostGIS
-website <https://postgis.net/windows_downloads>`_.
+website <https://postgis.net/documentation/getting_started/install_windows/>`_.
 
 Installing on Other Platforms
 -------------------------------------------------------------------------------
 
-The `PostGIS website download <https://postgis.net/install/>`_ has information about
+The `PostGIS website download <https://postgis.net/documentation/getting_started/>`_ has information about
 installing on other platforms including macOS and on other Linux distributions
 
 Configuring Databases to use PostGIS

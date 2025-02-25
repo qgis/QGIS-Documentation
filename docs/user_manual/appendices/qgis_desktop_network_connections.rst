@@ -80,7 +80,7 @@ from the user before they take place, others happen automatically.
    * - Styles
      - List user contributed styles
      - User initiated
-     - https://plugins.qgis.org/styles
+     - https://hub.qgis.org/styles/
      - IP, QGIS version, OS
      - Increase download counter by one
    * - **3rd party**

@@ -16,7 +16,7 @@ data and a hillshade raster.
 -------------------------------------------------------------------------------
 
 Managing LiDAR data within QGIS is possible using the Processing framework and
-the algorithms provided by `LAStools <https://rapidlasso.com/2013/09/29/how-to-install-lastools-toolbox-in-qgis>`_.
+the algorithms provided by `LAStools <https://rapidlasso.de/how-to-install-lastools-toolbox-in-qgis>`_.
 
 You can obtain a digital elevation model (DEM) from a LiDAR point cloud and then
 create a hillshade raster that is visually more intuitive for presentation purposes.
@@ -36,7 +36,7 @@ properly work with LAStools:
   the file :file:`QGIS_2_2_toolbox.zip`. Open it and extract the :kbd:`lidar`
   folder to replace the one you just deleted.
 * If you are using a different QGIS version, you can see more installation
-  instructions in `this tutorial <https://rapidlasso.com/2013/09/29/how-to-install-lastools-toolbox-in-qgis/>`_.
+  instructions in `this tutorial <https://rapidlasso.de/how-to-install-lastools-toolbox-in-qgis/>`_.
 
 Now you need to install the LAStools to your computer. Get the newest
 *lastools* version `here <https://lastools.github.io/download/LAStools.zip>`_
@@ -102,7 +102,7 @@ click and drag on the viewer to pan the LiDAR point cloud to see what it looks l
 
 .. note:: If you want to know further details on how the LAStools work, you can
   read the :file:`README` text files about each of the tools, in the :file:`C:\\lastools\\bin\\`
-  folder. Tutorials and other materials are available at the `Rapidlasso webpage <https://rapidlasso.com/>`_.
+  folder. Tutorials and other materials are available at the `Rapidlasso webpage <https://rapidlasso.de/>`_.
 
 * Close the viewer when you are ready.
 
@@ -130,7 +130,7 @@ you can click the letter :kbd:`g` to visualize only the ground points or the
 letter :kbd:`u` to see only the unclassified points. Click the letter :kbd:`a`
 to see all the points again. Check the :file:`lasview_README.txt` file for more
 commands. If you are interested, also this `tutorial
-<https://rapidlasso.com/2014/03/02/tutorial-manual-lidar-editing/>`_
+<https://rapidlasso.de/tutorial-manual-lidar-editing/>`_
 about editing LiDAR points manually will show you different operations within
 the viewer.
 

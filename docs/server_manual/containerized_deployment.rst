@@ -21,7 +21,7 @@ simple (simple Docker images) to sophisticated (Kubernetes and so on).
    build or already built from registries (private or public).
 
 .. note:: QGIS Debian-Ubuntu package downloads need a valid gpg authentication key.  
-   Please refer to the `installation pages <https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu>`_ 
+   Please refer to the `installation pages <https://www.qgis.org/resources/installation-guide/#debian--ubuntu>`_
    to update the following Dockerfile.
 
 .. _simple-docker-images:
@@ -49,11 +49,11 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
           locales \
       && localedef -i en_US -f UTF-8 en_US.UTF-8 \
       # Add the current key for package downloading
-      # Please refer to QGIS install documentation (https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu)
+      # Please refer to QGIS install documentation (https://www.qgis.org/resources/installation-guide/#debian--ubuntu)
       && mkdir -m755 -p /etc/apt/keyrings \
       && wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg \
       # Add repository for latest version of qgis-server
-      # Please refer to QGIS repositories documentation if you want other version (https://qgis.org/en/site/forusers/alldownloads.html#repositories)
+      # Please refer to QGIS repositories documentation if you want other version (https://qgis.org/resources/installation-guide/#repositories)
       && echo "deb [signed-by=/etc/apt/keyrings/qgis-archive-keyring.gpg] https://qgis.org/debian bookworm main" | tee /etc/apt/sources.list.d/qgis.list \
       && apt-get update \
       && apt-get install --no-install-recommends --no-install-suggests --allow-unauthenticated -y \
@@ -226,7 +226,7 @@ Swarm/docker-compose
 
 Docker now has its own orchestrator: Swarm (compatible with docker-compose
 files). You have to
-`enable it <https://docs.docker.com/get-started/orchestration/#enable-docker-swarm>`_
+`enable it <https://docs.docker.com/guides/orchestration/#enable-docker-swarm>`_
 (the Mac version will also work with Linux).
 
 .. _docker-compose-file:
@@ -235,7 +235,7 @@ Stack description
 ^^^^^^^^^^^^^^^^^
 
 Now that you have Swarm working, create the service file (see
-`Deploy to Swarm <https://docs.docker.com/get-started/swarm-deploy/>`_)
+`Deploy to Swarm <https://docs.docker.com/guides/swarm-deploy/>`_)
 :file:`qgis-stack.yaml`:
 
 .. code-block:: yaml
@@ -306,7 +306,7 @@ Installation
 
 If you have a **Docker Desktop** installation, using Kubernetes (aka
 k8s) is pretty straight forward:
-`enable k8s <https://docs.docker.com/get-started/orchestration/#enable-kubernetes>`_.
+`enable k8s <https://docs.docker.com/guides/orchestration/#turn-on-kubernetes>`_.
 
 If not, follow the
 `minikube tutorial <https://kubernetes.io/docs/tutorials/hello-minikube/>`_

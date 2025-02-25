@@ -353,7 +353,7 @@ FILTER
 
 This parameter allows to filter the response with the **Filter Encoding**
 language defined by the
-`OGC Filter Encoding standard <https://www.ogc.org/standards/filter>`_. For
+`OGC Filter Encoding standard <https://www.ogc.org/publications/standard/filter>`_. For
 example:
 
 .. code-block:: bash

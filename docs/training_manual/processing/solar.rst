@@ -1,7 +1,7 @@
 Planning a solar farm
 ======================
 
-Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
+Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu/en>`_
 
 .. note:: This chapter shows how to use several criteria to locate the areas suitable for installing a photovoltaic power station
 

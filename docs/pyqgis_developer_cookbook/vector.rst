@@ -1679,4 +1679,4 @@ Further Topics
 * exploring symbol layer and renderer registries
 
 
-.. _supported formats by OGR: https://gdal.org/drivers/vector/index.html
+.. _supported formats by OGR: https://gdal.org/en/latest/drivers/vector/index.html

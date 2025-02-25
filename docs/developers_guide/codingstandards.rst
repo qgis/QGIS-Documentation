@@ -628,7 +628,7 @@ contribution by:
     This feature was developed by: Chuck Norris https://chucknorris.kr
 
 * writing an article about the new feature on a blog, 
-  and add it to the QGIS planet https://plugins.qgis.org/planet/
+  and add it to the QGIS planet https://planet.qgis.org/
 * adding their name to:
 
   * :source:`doc/CONTRIBUTORS`

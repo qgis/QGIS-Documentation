@@ -22,13 +22,13 @@ We encourage you to report possible mistakes.
 This document has been typeset with reStructuredText.
 It is available as reST source code on
 `github <https://github.com/qgis/QGIS-Documentation>`_,
-and online as HTML and PDF via https://www.qgis.org/en/docs/.
+and online as HTML and PDF via https://www.qgis.org/resources/hub/#documentation.
 Translated versions of this document can be browsed and downloaded
 via the documentation area of the QGIS project as well.
 
 For more information about contributing to this document and about
 translation, please visit
-https://qgis.org/en/site/getinvolved/index.html.
+https://qgis.org/community/involve/.
 
 **Links in this Document**
 
@@ -62,7 +62,7 @@ What is new in QGIS |version|
 This release of QGIS includes hundreds of bug fixes and many new
 features and enhancements, compared to |QGIS_CURRENT|_.
 For a list of new features, visit the visual changelogs at
-https://qgis.org/en/site/forusers/visualchangelogs.html.
+https://qgis.org/project/visual-changelogs/.
 
 .. only:: not testing and not outdated
 

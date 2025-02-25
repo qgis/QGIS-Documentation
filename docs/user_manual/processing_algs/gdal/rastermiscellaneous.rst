@@ -17,7 +17,7 @@ be created. Overviews are lower resolution copies of the data which
 QGIS uses depending of the level of zoom.
 
 This algorithm is derived from the
-`GDAL addo utility <https://gdal.org/programs/gdaladdo.html>`_.
+`GDAL addo utility <https://gdal.org/en/latest/programs/gdaladdo.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Miscellaneous`
 
@@ -145,7 +145,7 @@ GDAL-supported rasters.
 With a mosaic you can merge several raster files.
 
 This algorithm is derived from the
-`GDAL buildvrt utility <https://gdal.org/programs/gdalbuildvrt.html>`_.
+`GDAL buildvrt utility <https://gdal.org/en/latest/programs/gdalbuildvrt.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Miscellaneous`
 
@@ -240,7 +240,7 @@ Advanced parameters
      - [enumeration]
 
        Default: 0
-     - The `resampling algorithm <https://gdal.org/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ to use.
+     - The `resampling algorithm <https://gdal.org/en/latest/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ to use.
        Options:
 
        * 0 --- Nearest Neighbour (``nearest``)
@@ -301,7 +301,7 @@ Generates a directory with small tiles and metadata, following the
 `OSGeo Tile Map Service Specification <https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_.
 See also the
 `OpenGIS Web Map Tile Service Implementation Standard
-<https://www.ogc.org/standards/wmts>`_.
+<https://www.ogc.org/publications/standardwmts>`_.
 Simple web pages with viewers based on Google Maps, OpenLayers and
 Leaflet are generated as well.
 To explore your maps on-line in the web browser, you only need to
@@ -316,7 +316,7 @@ generation, but you can publish a picture without proper
 georeferencing too.
 
 This algorithm is derived from the
-`GDAL gdal2tiles utility <https://gdal.org/programs/gdal2tiles.html>`_.
+`GDAL gdal2tiles utility <https://gdal.org/en/latest/programs/gdal2tiles.html>`_.
 
 Parameters
 ..........
@@ -516,7 +516,7 @@ table from an input raster and define the output raster type. All
 the images must be in the same coordinate system.
 
 This algorithm is derived from the
-`GDAL merge utility <https://gdal.org/programs/gdal_merge.html>`_.
+`GDAL merge utility <https://gdal.org/en/latest/programs/gdal_merge.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Miscellaneous`
 
@@ -659,7 +659,7 @@ Performs a pan-sharpening operation.
 It can create a "classic" output dataset (such as GeoTIFF),
 or a VRT dataset describing the pan-sharpening operation.
 
-See `GDAL Pansharpen <https://gdal.org/programs/gdal_pansharpen.html>`_.
+See `GDAL Pansharpen <https://gdal.org/en/latest/programs/gdal_pansharpen.html>`_.
 
 Parameters
 ..........
@@ -711,7 +711,7 @@ Advanced parameters
      - [enumeration]
 
        Default: 2
-     - The `resampling algorithm <https://gdal.org/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ to use.
+     - The `resampling algorithm <https://gdal.org/en/latest/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ to use.
        Options:
 
        * 0 --- Nearest Neighbour (``nearest``)
@@ -783,7 +783,7 @@ Note that all input rasters must have the same
 dimensions, but no projection checking is performed.
 
 See the
-`GDAL Raster Calculator utility docs <https://gdal.org/programs/gdal_calc.html>`_.
+`GDAL Raster Calculator utility docs <https://gdal.org/en/latest/programs/gdal_calc.html>`_.
 
 .. seealso:: :ref:`qgisrastercalc`, :ref:`qgisvirtualrastercalc`
 
@@ -914,7 +914,7 @@ Basic parameters
 
        Default: 0
      - Determines how to handle rasters with different extents. Only available with GDAL 3.3+.
-       `Supported options <https://gdal.org/programs/gdal_calc.html#cmdoption-extent>`_ are:
+       `Supported options <https://gdal.org/en/latest/programs/gdal_calc.html#cmdoption-extent>`_ are:
 
        * 0 --- Ignore
        * 1 --- Fail
@@ -1025,7 +1025,7 @@ The gdalinfo program lists various information about a GDAL supported
 raster dataset.
 
 This algorithm is derived from the
-`GDAL info utility <https://gdal.org/programs/gdalinfo.html>`_.
+`GDAL info utility <https://gdal.org/en/latest/programs/gdalinfo.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Miscellaneous`
 
@@ -1147,7 +1147,7 @@ coordinate system and have a matching number of bands.
 Optionally pyramid levels are generated.
 
 This algorithm is derived from the
-`GDAL Retile utility <https://gdal.org/programs/gdal_retile.html>`_.
+`GDAL Retile utility <https://gdal.org/en/latest/programs/gdal_retile.html>`_.
 
 Parameters
 ..........
@@ -1240,7 +1240,7 @@ Advanced parameters
      - [enumeration]
 
        Default: 0
-     - The `resampling algorithm <https://gdal.org/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ to use.
+     - The `resampling algorithm <https://gdal.org/en/latest/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ to use.
        Options:
 
        * 0 --- Nearest Neighbour (``nearest``)
@@ -1347,7 +1347,7 @@ the raster.
 This output is suitable for use with MapServer as a raster tileindex.
 
 This algorithm is derived from the
-`GDAL Tile Index utility <https://gdal.org/programs/gdaltindex.html>`_.
+`GDAL Tile Index utility <https://gdal.org/en/latest/programs/gdaltindex.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Miscellaneous`
 
@@ -1478,7 +1478,7 @@ Viewshed
 --------
 
 Calculates a viewshed raster from an input raster DEM using method defined in
-`Wang2000 <https://gdal.org/programs/gdal_viewshed.html#wang2000>`_ for a user
+`Wang2000 <https://gdal.org/en/latest/programs/gdal_viewshed.html#wang2000>`_ for a user
 defined point.
 
 Parameters

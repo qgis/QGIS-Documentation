@@ -91,7 +91,7 @@ Runs a simple or complex query with SQL syntax on the source layer.
 The result of the query will be added as a new layer.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -202,7 +202,7 @@ activated.
 Then you can use the algorithm.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -505,7 +505,7 @@ Imports vector layers inside a PostgreSQL database. A new connection
 to the PostGIS database must be created.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -856,7 +856,7 @@ The information includes the geometry type, feature count, the spatial
 extent, the projection information and many more.
 
 This algorithm is derived from the
-`GDAL ogrinfo utility <https://gdal.org/programs/ogrinfo.html>`_.
+`GDAL ogrinfo utility <https://gdal.org/en/latest/programs/ogrinfo.html>`_.
 
 Parameters
 ..........

@@ -14,7 +14,7 @@ Frequently Asked Question
 
   QGIS Desktop has a graphical user interface and allows you to create and modify maps.
   QGIS Server is a server application serving your QGIS project files to end user
-  applications via OGC web services like `WMS, WFS, etc. <https://www.ogc.org/docs/is>`_.
+  applications via OGC web services like `WMS, WFS, etc. <https://www.ogc.org/publications/>`_.
 
 * *What is OGC?*
 

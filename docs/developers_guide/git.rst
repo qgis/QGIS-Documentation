@@ -41,11 +41,11 @@ Environment
 
 To get started using and contributing to the QGIS repository, you need to:
 
-#. have a `GitHub account <https://github.com/join>`_
+#. have a `GitHub account <https://github.com/signup>`_
 #. make your own copy of the `QGIS repository <https://github.com/qgis/QGIS>`_
-   (see `fork <https://docs.github.com/en/get-started/quickstart/fork-a-repo>`_)
+   (see `fork <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo>`_)
 #. have a :ref:`git client installed <installing_git>` on your system
-#. set up your `git environment <https://docs.github.com/en/get-started/quickstart/set-up-git#setting-up-git>`_
+#. set up your `git environment <https://docs.github.com/en/get-started/getting-started-with-git/set-up-git>`_
 #. and have fun!
 
 

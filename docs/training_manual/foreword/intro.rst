@@ -83,7 +83,7 @@ from the following sources:
   (https://www.openstreetmap.org/)
 * Property boundaries (urban and rural), water bodies from NGI
   (https://ngi.dalrrd.gov.za/)
-* SRTM DEM from the CGIAR-CGI (http://srtm.csi.cgiar.org/)
+* SRTM DEM from the CGIAR-CGI (https://srtm.csi.cgiar.org/)
 
 Download the prepared dataset from the `Training data repository <training_data_>`_
 and unzip the file. All the necessary data are provided in the :file:`exercise_data`

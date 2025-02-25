@@ -180,7 +180,7 @@ Reference
 ----------------------------------------------------------------------
 
 The SRTM dataset was obtained from
-`http://srtm.csi.cgiar.org/ <http://srtm.csi.cgiar.org/>`_
+`https://srtm.csi.cgiar.org/ <https://srtm.csi.cgiar.org/>`_
 
 What's Next?
 ----------------------------------------------------------------------

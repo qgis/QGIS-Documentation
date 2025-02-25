@@ -150,7 +150,7 @@ Please report them at https://github.com/qgis/QGIS-Documentation/issues.
 Latest Version
 --------------
 You can always obtain the latest version of this document by visiting the online
-version which is part of the QGIS documentation website (https://docs.qgis.org).
+version which is part of the QGIS documentation website (https://www.qgis.org/resources/hub/#documentation).
 
 .. note::
    The documentation website contains links to both online and PDF versions of

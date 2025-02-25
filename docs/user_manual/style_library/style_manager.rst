@@ -271,7 +271,7 @@ Using the online repository
 ...........................
 
 The QGIS project maintains a repository with a collection of styles shared by
-QGIS users. This is available at https://plugins.qgis.org/styles and can be
+QGIS users. This is available at https://hub.qgis.org/styles/ and can be
 accessed from the :guilabel:`Style Manager` dialog, pressing the |search|
 :guilabel:`Browse Online Styles` button at the bottom.
 

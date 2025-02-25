@@ -586,7 +586,7 @@ parameters.
 LAStools
 --------
 
-To use `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS,
+To use `LAStools <https://rapidlasso.de/lastools-220107/>`_ in QGIS,
 you need to download and install LAStools on your computer and
 install the LAStools plugin (available from the official repository) in QGIS.
 
