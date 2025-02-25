@@ -312,9 +312,13 @@ visualization options of contours for the selected group, as shown in
   with the :ref:`interpolated line renderer <interpolated_line_symbol>`)
 * Use the slider or the spinbox to set the :guilabel:`Opacity` of the current
   group, if of a 2D mesh type.
-* Enter the range of values you want to represent on the current group:
+* |radioButtonOn| :guilabel:`User Defined` allows you to enter the range of values you want to represent on the current group:
   use |refresh| :sup:`Load` to fetch the min and max values of the current group
   or enter custom values if you want to exclude some.
+* Select |radioButtonOn| :guilabel:`Min/Max` to set the renderer's minimum and maximum values based on the chosen extent.
+* :guilabel:`Statictics extent` can be :guilabel:`Whole mesh`, :guilabel:`Current canvas` or :guilabel:`Updated canvas`.
+  :guilabel:`Updated canvas` means that min/max values used for the rendering
+  will change with the canvas extent (dynamic stretching).
 * For 2D/3D meshes, select the :guilabel:`Resampling method` to interpolate the
   values on the surrounding vertices to the faces (or from the surrounding faces
   to the vertices) using the :guilabel:`Neighbour average` method. Depending on
@@ -1330,6 +1334,8 @@ the expression to execute.
 .. |meshvectorsoff| image:: /static/common/meshvectorsoff.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
