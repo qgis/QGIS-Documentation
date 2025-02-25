@@ -2359,7 +2359,7 @@ Saves vector features to a specified file dataset.
 For dataset formats supporting layers, an optional layer name parameter
 can be used to specify a custom string. Optional GDAL-defined dataset and
 layer options can be specified. For more information on this, read the online
-`GDAL documentation <https://gdal.org/drivers/vector/index.html>`_ on the format.
+`GDAL documentation <https://gdal.org/en/latest/drivers/vector/index.html>`_ on the format.
 
 Parameters
 ..........

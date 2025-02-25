@@ -164,7 +164,7 @@ save your data:
 #. In :guilabel:`CRS` select :guilabel:`Selected CRS`.
 #. Browse for :guilabel:`EPSG:4326 - WGS 84`.
 
-   .. note:: The `GPX <https://gdal.org/drivers/vector/gpx.html>`_ format
+   .. note:: The `GPX <https://gdal.org/en/latest/drivers/vector/gpx.html>`_ format
     accepts only this CRS, if you select
     a different one, QGIS will give no error but you will get an empty file.
 

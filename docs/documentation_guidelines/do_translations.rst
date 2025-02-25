@@ -38,7 +38,7 @@ efforts.
 Transifex
 ---------
 
-The web-based translating platform `Transifex <https://app.transifex.com>`_ is used for all QGIS
+The web-based translating platform `Transifex <https://www.transifex.com>`_ is used for all QGIS
 translations: the desktop application itself (or GUI) and the documentation.
 So the first thing you need is an account to login and get started.
 

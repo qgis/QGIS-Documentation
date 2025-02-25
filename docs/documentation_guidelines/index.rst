@@ -4,7 +4,7 @@
 Documentation Guidelines
 ========================
 
-QGIS Documentation is available at https://docs.qgis.org.
+QGIS Documentation is available at https://www.qgis.org/resources/hub/#documentation.
 As the writing process is going on, a build is automatically run every day (see bottom of the page for exact time)
 for all `supported versions <https://qgis.org/resources/roadmap/#release-schedule>`_
 (testing, Long Term Release (LTR) and next-to-be LTR).

@@ -89,7 +89,7 @@ Runs a simple or complex query with SQL syntax on the source layer.
 The result of the query will be added as a new layer.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -200,7 +200,7 @@ activated.
 Then you can use the algorithm.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -500,7 +500,7 @@ Imports vector layers inside a PostgreSQL database. A new connection
 to the PostGIS database must be created.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -849,7 +849,7 @@ extent, the projection information, the list of attributes and related type,
 list of relations and field domains, and many more.
 
 This algorithm is derived from the
-`GDAL ogrinfo utility <https://gdal.org/programs/ogrinfo.html>`_.
+`GDAL ogrinfo utility <https://gdal.org/en/latest/programs/ogrinfo.html>`_.
 
 Parameters
 ..........
@@ -966,7 +966,7 @@ extent, the projection information, the list of attributes and related type,
 list of relations and field domains, and many more.
 
 This algorithm is derived from the
-`GDAL ogrinfo utility <https://gdal.org/programs/ogrinfo.html>`_.
+`GDAL ogrinfo utility <https://gdal.org/en/latest/programs/ogrinfo.html>`_.
 
 **Requires version of GDAL >= 3.7**
 

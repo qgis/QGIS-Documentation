@@ -99,7 +99,7 @@ Supported formats
 =================
 
 QGIS accesses mesh data using the `MDAL drivers <https://github.com/lutraconsulting/MDAL>`_,
-and natively supports a `variety of formats <https://github.com/lutraconsulting/MDAL#supported-formats>`__.
+and natively supports a `variety of formats <https://github.com/lutraconsulting/MDAL?tab=readme-ov-file#supported-formats>`__.
 Whether QGIS can edit a mesh layer depends on the format and the mesh
 structure type.
 
@@ -439,7 +439,7 @@ averaging/interpolation methods to handle this.
 You can select the method to derive the 2D datasets and corresponding parameters
 (level index, depth or height values). For each method, an example of application
 is shown in the dialog but you can read more on the methods at
-https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results.
+https://fvwiki.tuflow.com/Depth_Averaging_Results.
 
 
 .. _meshlabels:
@@ -732,7 +732,7 @@ if they still are necessary) or create a copy (only geometries) of the layer.
 .. note:: QGIS does not allow to digitize edges on mesh layers.
    Only vertices and faces are mesh elements that can be created.
    Also not all supported mesh formats can be edited in QGIS
-   (see `permissions <https://github.com/lutraconsulting/MDAL#supported-formats>`__).
+   (see `permissions <https://github.com/lutraconsulting/MDAL?tab=readme-ov-file#supported-formats>`__).
 
 
 Overview of the mesh digitizing tools

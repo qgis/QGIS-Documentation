@@ -16,7 +16,7 @@ Installing QtCreator
 =====================
 
 Qt Creator is available on all major platforms and can be downloaded from
-https://www.qt.io/download (Go the open source route).
+https://www.qt.io/download-dev (Go the open source route).
 The installation procedure depends on your platform.
 
 If you are running a Unix-like platform, you can use the command line,
