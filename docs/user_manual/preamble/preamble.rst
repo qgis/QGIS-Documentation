@@ -22,7 +22,7 @@ We encourage you to report possible mistakes.
 This document has been typeset with reStructuredText.
 It is available as reST source code on
 `github <https://github.com/qgis/QGIS-Documentation>`_,
-and online as HTML and PDF via https://www.qgis.org/en/docs/.
+and online as HTML and PDF via https://www.qgis.org/resources/hub/#documentation.
 Translated versions of this document can be browsed and downloaded
 via the documentation area of the QGIS project as well.
 

@@ -105,11 +105,12 @@ two types of nodes: group nodes (:class:`QgsLayerTreeGroup <qgis.core.QgsLayerTr
 and layer nodes (:class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>`).
 
 .. note:: for more information you can read these blog posts of Martin Dobias:
-  `Part 1 <https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-part-1/>`_
-  `Part 2 <https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-layer-tree-api-part-2/>`_
-  `Part 3 <https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-part-3/>`_
+  `Part 1 <https://www.lutraconsulting.co.uk/blogs/qgis-layer-tree-api-part-1/>`_
+  `Part 2 <https://www.lutraconsulting.co.uk/blogs/qgis-layer-tree-api-part-2/>`_
+  `Part 3 <https://www.lutraconsulting.co.uk/blogs/qgis-layer-tree-api-part-3/>`_
 
-The project layer tree can be accessed easily with the method :meth:`layerTreeRoot() <qgis.core.QgsProject.layerTreeRoot>`
+The project layer tree can be accessed easily with the method
+:meth:`layerTreeRoot() <qgis.core.QgsProject.layerTreeRoot>`
 of the :class:`QgsProject <qgis.core.QgsProject>` class:
 
 .. testcode:: legend

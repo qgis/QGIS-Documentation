@@ -8,7 +8,8 @@
    :local:
 
 QGIS coding standards are described in the policy document available at `QEP #314 <https://github.com/qgis/QGIS-Enhancement-Proposals/blob/master/qep-314-coding-style.md>`_.
-All developers are required to follow those policies. Please note that QEP #314 is a live document, and that these policies may change over time.
+All developers are required to follow those policies.
+Please note that QEP #314 is a live document, and that these policies may change over time.
 
 Classes
 =======
@@ -268,9 +269,8 @@ Improving sipify script
 
 If some improvements are required for sipify script, please add the missing bits
 to the demo file :source:`sipifyheader.h <tests/code_layout/sipify/sipifyheader.h>`
-and create the expected header :source:`sipifyheader.expected.sip
-<tests/code_layout/sipify/sipifyheader.expected.sip>`. This will also be
-automatically tested as a unit test of the script itself.
+and create the expected header :file:`sipifyheader.expected.sip` file.
+This will also be automatically tested as a unit test of the script itself.
 
 
 Settings
@@ -364,9 +364,8 @@ contribution by:
     This feature was developed by: Chuck Norris https://chucknorris.kr
 
 * writing an article about the new feature on a blog, 
-  and add it to the QGIS planet https://plugins.qgis.org/planet/
+  and add it to `QGIS Planet <https://planet.qgis.org/>`_
 * adding their name to:
 
   * :source:`doc/CONTRIBUTORS`
   * :source:`doc/AUTHORS`
-

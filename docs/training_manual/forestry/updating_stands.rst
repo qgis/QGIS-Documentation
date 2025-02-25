@@ -23,7 +23,7 @@ CIR aerial photographs and add information from other datasets.
 The National Land Survey of Finland has an open data policy that allows you
 downloading a variety of geographical data like aerial imagery, traditional
 topographic maps, DEM, LiDAR data, etc. The service can be accessed in
-English `here <https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en>`_.
+English `here <https://asiointi.maanmittauslaitos.fi/karttapaikka/tiedostopalvelu?lang=en>`_.
 The aerial image used in this exercise has been created from two orthorectified
 CIR images downloaded from that service (M4134F_21062012 and M4143E_21062012).
 

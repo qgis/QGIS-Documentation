@@ -32,7 +32,7 @@ QGIS supports the data formats Entwine Point Tile (EPT) and LAS/LAZ. To
 work with point clouds, QGIS always saves the data in EPT. EPT is a storage
 format that consists of several files stored in a common folder. To allow
 quick access to the data, EPT uses indexing. For more information on the EPT
-format, see `entwine homepage <https://entwine.io/entwine-point-tile.html>`_
+format, see `entwine homepage <https://entwine.io/en/latest/entwine-point-tile.html>`_
 
 If the data is in LAS or LAZ format, QGIS will convert it to EPT when it is
 loaded for the first time. Depending on the size of the file, this may take

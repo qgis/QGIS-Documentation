@@ -77,7 +77,7 @@ Dissolve features based on a common attribute:
 
 .. _GRASS: https://grass.osgeo.org/
 .. _R: https://www.r-project.org/
-.. _LASTools: https://rapidlasso.com/lastools/
+.. _LASTools: https://rapidlasso.de/lastools-220107/
 .. _LecoS: https://conservationecology.wordpress.com/qgis-plugins-and-scripts/lecos-land-cover-statistics/
 .. _lwgeom: https://plugins.qgis.org/plugins/processinglwgeomprovider/
 .. _Animove: https://www.faunalia.eu/en/dev/animove

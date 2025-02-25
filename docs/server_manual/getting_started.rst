@@ -444,8 +444,8 @@ QGIS Server needs a running X Server to be fully usable, in particular for print
 In the case you already have a running X Server, you can use systemd services.
 
 This method, to deploy QGIS Server, relies on two Systemd units to configure:
-a `Socket unit <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_
-and a `Service unit <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_.
+a `Socket unit <https://www.freedesktop.org/software/systemd/man/latest/systemd.socket.html>`_
+and a `Service unit <https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html>`_.
 
 #. The **QGIS Server Socket unit** defines and creates a file system socket,
    used by NGINX to start and communicate with QGIS Server.
@@ -1008,7 +1008,7 @@ or to manually modify the path to the SVG image so that it represents a valid re
 Integration with third parties
 ==============================
 
-QGIS Server provides standard OGC web services like `WMS, WFS, etc. <https://www.ogc.org/docs/is>`_
+QGIS Server provides standard OGC web services like `WMS, WFS, etc. <https://www.ogc.org/publications>`_
 thus it can be used by a wide variety of end user tools.
 
 Integration with QGIS Desktop
@@ -1028,7 +1028,7 @@ are not implemented yet.
 Integration with MapProxy
 -------------------------
 
-`MapProxy <https://mapproxy.org/>`_ is a tile cache server and as it can read and
+`MapProxy <https://www.mapproxy.org/>`_ is a tile cache server and as it can read and
 serve any WMS/WMTS map server, it can be directly connected to QGIS server web
 services and improve end user experience.
 
