@@ -23,7 +23,7 @@ On the northern hemisphere, the north side of slopes is often shaded
 solar radiation (higher azimuth from 180°-270°).
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/programs/gdaldem.html>`_.
+`GDAL DEM utility <https://gdal.org/en/latest/programs/gdaldem.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
@@ -160,7 +160,7 @@ By default, the colors between the given elevation values are blended
 smoothly and the result is a nice colorized elevation raster.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/programs/gdaldem.html>`_.
+`GDAL DEM utility <https://gdal.org/en/latest/programs/gdaldem.html>`_.
 
 Parameters
 ..........
@@ -283,7 +283,7 @@ It is generally not so great for interpolating a raster from sparse
 point data.
 
 This algorithm is derived from the
-`GDAL fillnodata utility <https://gdal.org/programs/gdal_fillnodata.html>`_.
+`GDAL fillnodata utility <https://gdal.org/en/latest/programs/gdal_fillnodata.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
@@ -417,11 +417,11 @@ Computes some data metrics using the specified window and output grid
 geometry.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/programs/gdal_grid.html>`_.
+`GDAL grid utility <https://gdal.org/en/latest/programs/gdal_grid.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
-.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
+.. seealso:: `GDAL grid tutorial <https://gdal.org/en/latest/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -603,9 +603,9 @@ nearest neighbor method.
 Ideal when a maximum number of data points to use is required.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/programs/gdal_grid.html>`_.
+`GDAL grid utility <https://gdal.org/en/latest/programs/gdal_grid.html>`_.
 
-.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
+.. seealso:: `GDAL grid tutorial <https://gdal.org/en/latest/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -765,11 +765,11 @@ including coordinates of every data point and output grid geometry.
 The function will compute interpolated value for the given position in output grid.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/programs/gdal_grid.html>`_.
+`GDAL grid utility <https://gdal.org/en/latest/programs/gdal_grid.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
-.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
+.. seealso:: `GDAL grid tutorial <https://gdal.org/en/latest/tutorials/gdal_grid_tut.html>`_
 
 
 Parameters
@@ -948,7 +948,7 @@ If the point is not in any triangle, depending on the radius, the
 algorithm will use the value of the nearest point or the NoData value.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/programs/gdal_grid.html>`_.
+`GDAL grid utility <https://gdal.org/en/latest/programs/gdal_grid.html>`_.
 
 Parameters
 ..........
@@ -1091,11 +1091,11 @@ are not enough points in window, the grid node considered empty and
 will be filled with specified NoData value.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/programs/gdal_grid.html>`_.
+`GDAL grid utility <https://gdal.org/en/latest/programs/gdal_grid.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
-.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
+.. seealso:: `GDAL grid tutorial <https://gdal.org/en/latest/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -1253,11 +1253,11 @@ If there are no points found, the specified NoData value will be
 returned.
 
 This algorithm is derived from the
-`GDAL grid utility <https://gdal.org/programs/gdal_grid.html>`_.
+`GDAL grid utility <https://gdal.org/en/latest/programs/gdal_grid.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
-.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
+.. seealso:: `GDAL grid tutorial <https://gdal.org/en/latest/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -1407,7 +1407,7 @@ source, a vertical exaggeration factor and a scaling factor to account
 for differences between vertical and horizontal units.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/programs/gdaldem.html>`__ .
+`GDAL DEM utility <https://gdal.org/en/latest/programs/gdaldem.html>`__ .
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
@@ -1577,7 +1577,7 @@ This is often used to "fix up" lossy compressed airphotos so that
 color pixels can be treated as transparent when mosaicking.
 
 This algorithm is derived from the
-`GDAL nearblack utility <https://gdal.org/programs/nearblack.html>`_.
+`GDAL nearblack utility <https://gdal.org/en/latest/programs/nearblack.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
@@ -1699,7 +1699,7 @@ Target pixels are those in the source raster for which the raster
 pixel value is in the set of target pixel values.
 
 This algorithm is derived from the
-`GDAL proximity utility <https://gdal.org/programs/gdal_proximity.html>`_.
+`GDAL proximity utility <https://gdal.org/en/latest/programs/gdal_proximity.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
@@ -1874,7 +1874,7 @@ terrain elevation data, it's useful for calculations of the river
 morphology, in climatology and physical geography in general.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/programs/gdaldem.html>`_.
+`GDAL DEM utility <https://gdal.org/en/latest/programs/gdaldem.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
@@ -1986,7 +1986,7 @@ It is useful if you have a large amount of small areas on your raster
 map.
 
 This algorithm is derived from the
-`GDAL sieve utility <https://gdal.org/programs/gdal_sieve.html>`_.
+`GDAL sieve utility <https://gdal.org/en/latest/programs/gdal_sieve.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
@@ -2102,7 +2102,7 @@ You have the option of specifying the type of slope value you want:
 degrees or percent slope.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/programs/gdaldem.html>`_.
+`GDAL DEM utility <https://gdal.org/en/latest/programs/gdaldem.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
@@ -2239,7 +2239,7 @@ as the mean difference between a central pixel and its
 surrounding cells.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/programs/gdaldem.html>`_.
+`GDAL DEM utility <https://gdal.org/en/latest/programs/gdaldem.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 
@@ -2350,7 +2350,7 @@ difference between a central pixel and the mean of its surrounding
 cells.
 
 This algorithm is derived from the
-`GDAL DEM utility <https://gdal.org/programs/gdaldem.html>`_.
+`GDAL DEM utility <https://gdal.org/en/latest/programs/gdaldem.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Analysis`
 

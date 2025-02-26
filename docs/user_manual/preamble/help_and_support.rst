@@ -84,7 +84,7 @@ Matrix (https://matrix.org) is a project for decentralised chat. QGIS has a room
 To use Matrix:
 
 #. Create an account (at matrix.org is easiest, but if you have an OSGeo account you can also use your OSGeo id as matrix id)
-#. Install a client (Elements is easiest, but see `Matrix clients <https://matrix.org/docs/projects/try-matrix-now/#clients>`_ for more),
+#. Install a client (Elements is easiest, but see `Matrix clients <https://matrix.org/ecosystem/clients/>`_ for more),
    OR point your browser to https://matrix.to/#/#qgis:osgeo.org
 
 To use IRC:
@@ -126,7 +126,7 @@ Blog
 ====
 
 The QGIS community also runs a weblog at
-https://plugins.qgis.org/planet/, which has some interesting articles
+https://planet.qgis.org/, which has some interesting articles
 for users and developers.
 Many other QGIS blogs exist, and you are invited to contribute
 with your own QGIS blog!

@@ -121,7 +121,7 @@ in the QGIS code repository:
 
 :meth:`iconPath() <qgis.core.QgsApplication.iconPath>` is another method to call QGIS
 icons. Find examples of calls to theme icons at `QGIS embedded images - Cheatsheet
-<https://static.geotribu.fr/toc_nav_ignored/qgis_resources_preview_table/>`_.
+<https://geotribu.fr/toc_nav_ignored/qgis_resources_preview_table/>`_.
 
 
 .. index:: Plugins; Customization

@@ -315,7 +315,8 @@ each level of the dataset tree.
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 
 
-.. [1] The different entries may also be available for some GDAL supported `vector file formats <https://gdal.org/drivers/vector/index.html>`_
+.. [1] The different entries may also be available for some GDAL supported
+ `vector file formats <https://gdal.org/en/latest/drivers/vector/index.html>`_
  such as ESRI File Geodatabase, FlatGeobuf, GeoParquet, NetCDF, ... when compatible.
 
 .. note::
