@@ -1,7 +1,7 @@
 Planning a solar farm
 ======================
 
-Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
+Module contributed by Paolo Cavallini - `Faunalia`_
 
 .. note:: This chapter shows how to use several criteria to locate the areas suitable for installing a photovoltaic power station
 
@@ -29,3 +29,5 @@ Finally, we convert to a vector:
 - :menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: yes]
 
 **Exercise for the reader**: repeat the analysis, replacing GRASS commands with analogous from other programs.
+
+.. _Faunalia: https://www.faunalia.eu/en

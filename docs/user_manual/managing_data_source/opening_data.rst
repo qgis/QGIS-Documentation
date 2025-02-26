@@ -22,13 +22,13 @@ and often write a lot of formats:
   MapInfo and MicroStation file formats, AutoCAD DWG/DXF,
   GRASS and many more...
   Read the complete list of `supported vector formats
-  <https://gdal.org/drivers/vector/index.html>`__.
+  <https://gdal.org/en/latest/drivers/vector/index.html>`__.
 * Raster data formats include GeoTIFF, JPEG, ASCII Gridded XYZ,
   MBTiles, R or Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data,
   ERDAS IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid, and
   many more...
   Read the complete list of `supported raster formats
-  <https://gdal.org/drivers/raster/index.html>`__.
+  <https://gdal.org/en/latest/drivers/raster/index.html>`__.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle,
   MS SQL Server, SAP HANA, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
@@ -39,7 +39,7 @@ and often write a lot of formats:
   layers.
 
 More than 80 vector and 140 raster formats are supported by
-`GDAL <https://gdal.org/>`_ and QGIS native providers.
+`GDAL <https://gdal.org/en/latest/>`_ and QGIS native providers.
 
 .. note::
 
@@ -382,8 +382,8 @@ To load a layer from a file:
    (encoding, geometry type, table filtering, file locking, data formatting ...)
    are available for configuring.
    These options are described in detail in the specific GDAL
-   `vector <https://gdal.org/drivers/vector/>`__
-   or `raster <https://gdal.org/drivers/raster>`__ driver documentation.
+   `vector <https://gdal.org/en/latest/drivers/vector/>`__
+   or `raster <https://gdal.org/en/latest/drivers/raster>`__ driver documentation.
    At the top of the options, a text with hyperlink will directly lead to the documentation
    of the appopriate driver for the selected file format.
 
@@ -467,8 +467,10 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * For all vector source types it is possible to define the :guilabel:`Encoding` or
     to use the :menuselection:`Automatic -->` setting.
 
-* The |radioButtonOn| :guilabel:`OGC API` source type allows you to access `vector <https://gdal.org/drivers/vector/oapif.html>`_
-  and `raster <https://gdal.org/drivers/raster/ogcapi.html>`_ data from servers that implement the OGC API standards.
+* The |radioButtonOn| :guilabel:`OGC API` source type allows you to access
+  `vector <https://gdal.org/en/latest/drivers/vector/oapif.html>`_
+  and `raster <https://gdal.org/en/latest/drivers/raster/ogcapi.html>`_ data
+  from servers that implement the OGC API standards.
   To use this option:
   
   #. Select |radioButtonOn| :guilabel:`OGC API` from the :guilabel:`Data Source Manager`
@@ -586,8 +588,7 @@ Field type detection
 
 QGIS tries to detect the field types automatically (unless
 |checkbox|:guilabel:`Detect field types` is not checked) by examining
-the content of an optional sidecar CSVT file (see:
-`GeoCSV specification <https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_)
+the content of an optional sidecar CSVT file (see `GeoCSV specification`_)
 and by scanning the whole file to make sure that all values can actually
 be converted without errors, the fall-back field type is text.
 
@@ -1693,6 +1694,8 @@ Select the service you want to connect to and fill in the required fields:
 
 You can also choose to :guilabel:`Save Connection` to an XML file
 or :guilabel:`Load Connection` from an XML file.
+
+ .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

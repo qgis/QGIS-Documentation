@@ -179,8 +179,9 @@ hillshade effect (useful only with DEM raster files).
 Reference
 ----------------------------------------------------------------------
 
-The SRTM dataset was obtained from
-`http://srtm.csi.cgiar.org/ <http://srtm.csi.cgiar.org/>`_
+The SRTM dataset was obtained from `CGIAR CSI`_ website.
+
+.. _CGIAR CSI: https://srtm.csi.cgiar.org/
 
 What's Next?
 ----------------------------------------------------------------------

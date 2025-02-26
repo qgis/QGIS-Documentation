@@ -225,7 +225,7 @@ Catalog servers.
 
 
 .. _`OGC API - Records`: https://ogcapi.ogc.org/records
-.. _`CSW (Catalog Service for the Web)`: https://www.ogc.org/standards/cat
+.. _`CSW (Catalog Service for the Web)`: https://www.ogc.org/publications/standard/cat
 .. _`OGC (Open Geospatial Consortium)`: https://www.ogc.org
 .. _`pycsw FAQ item`: https://pycsw.org/faq/#my-pycsw-install-doesnt-work-at-all-with-qgis
 
