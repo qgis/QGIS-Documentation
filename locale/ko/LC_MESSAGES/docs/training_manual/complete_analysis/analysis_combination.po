@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"번역은 :ref:`여러분이 참여할 수 있는 <translation_guidelines>` 커뮤니티 활동입니다. 이 페이지는 현재 "
+"|translation progress| 번역되었습니다."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:2
+msgid "Lesson: Combining the Analyses"
+msgstr "수업: 분석 결합하기"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:4
+msgid ""
+"Using the vectorized results of the raster analysis will allow you to select"
+" only those buildings on suitable terrain."
+msgstr "래스터 분석을 벡터화한 결과물을 사용하면 적합한 지형에 있는 건물들만 선택할 수 있게 됩니다."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:7
+msgid ""
+"**The goal for this lesson:** To use the vectorized terrain results to "
+"select suitable plots."
+msgstr "**이 수업의 목표:** 벡터화된 지형 분석 결과를 이용해서 적합한 계획을 선택하기."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:11
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:13
+msgid "Save your current map (:file:`raster_analysis.qgs`)."
+msgstr "현재 맵(:file:`raster_analysis.qgs`)을 저장하십시오."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:14
+msgid ""
+"Open the map which you created during the vector analysis earlier (you "
+"should have saved the file as :file:`analysis.qgs`)."
+msgstr "이전 벡터 분석 도중 생성했던 (:file:`analysis.qgs` 라는 파일로 저장되어 있을) 맵을 엽니다."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:16
+msgid "In the :guilabel:`Layers` panel, enable these layers:"
+msgstr ":guilabel:`Layers` 패널에서 다음 레이어들을 활성화하십시오:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
+msgid ":guilabel:`hillshade`,"
+msgstr "``hillshade``"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
+msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
+msgstr "``solution`` (또는 ``buildings_over_100``)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
+msgid ""
+"In addition to these layers, which should already be loaded in the map from "
+"when you worked on it before, also add the :file:`suitable_terrain.shp` "
+"dataset."
+msgstr ""
+"이전에 작업했을 때부터 이미 맵에 불러와져 있어야 하는 이 레이어들 외에, :file:`suitable_terrain.shp` 데이터셋도"
+" 추가하십시오."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:24
+msgid ""
+"If you are missing some layers, you should find them in "
+":file:`exercise_data/residential_development/`"
+msgstr ""
+"일부 레이어가 보이지 않을 경우 :file:`exercise_data/residential_development/` 디렉터리에서 찾을 수"
+" 있을 것입니다."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
+msgid ""
+"Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> "
+"Geoprocessing Tools`) to create a new vector layer called "
+":file:`new_solution.shp` which contains only those buildings which intersect"
+" the :guilabel:`suitable_terrain` layer."
+msgstr ""
+":guilabel:`Intersection` 도구(:menuselection:`Vector --> Geoprocessing "
+"Tools`)를 사용해서 ``suitable_terrain`` 레이어와 교차하는 건물들만 담고 있는 "
+":file:`new_solution.shp` 라는 새 벡터 레이어를 생성하십시오."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
+msgid ""
+"You should now have a layer showing certain buildings as your solution, for "
+"example:"
+msgstr "이제 해답으로 다음과 같이 특정한 건물들만 보이는 레이어를 생성했을 것입니다:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:38
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Inspecting the Results"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 결과물 검사하기"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
+msgid ""
+"Look at each of the buildings in your :guilabel:`new_solution` layer. "
+"Compare them with the :guilabel:`suitable_terrain` layer by changing the "
+"symbology for the :guilabel:`new_solution` layer so that it has outlines "
+"only. What do you notice about some of the buildings? Are they all suitable "
+"just because they intersect with the :guilabel:`suitable_terrain` layer? Why"
+" or why not? Which ones would you deem to be unsuitable?"
+msgstr ""
+"``new_solution`` 레이어에 있는 건물을 하나 하나 살펴보십시오. ``new_solution`` 레이어의 심볼을 변경해서 "
+"윤곽선만 보이도록 한 다음, ``suitable_terrain`` 레이어와 비교해보십시오. 어떤 건물에 눈에 띄는 점이 있습니까? 단지 "
+"``suitable_terrain`` 레이어와 교차한다고 해서 모든 건물이 적합한가요? 아니라면 그 이유는 무엇일까요? 어떤 건물이 "
+"적합하지 않아 보입니까?"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
+msgid "Answer"
+msgstr "해답"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:50
+msgid ""
+"You may notice that some of the buildings in your :file:`new_solution` layer"
+" have been \"sliced\" by the :guilabel:`Intersection` tool. This shows that "
+"only part of the building - and therefore only part of the property - lies "
+"on suitable terrain. We can therefore sensibly eliminate those buildings "
+"from our dataset."
+msgstr ""
+"``new_solution`` 레이어에 있는 건물들 가운데 일부가 :guilabel:`Intersection` 도구로 인해 \"잘라져\""
+" 있다는 사실을 알아차렸을 수도 있겠네요. 이 사실은 건물의 일부분만 --- 다시 말해 부지의 일부분만 --- 적합한 지형 위에 "
+"위치한다는 것을 알려줍니다. 따라서 데이터셋에서 이런 건물들을 제거하는 것이 말이 되겠죠."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:58
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Refining the Analysis"
+msgstr ":abbr:`★★☆ (중급 수준)` 혼자서 해보세요: 분석 개선하기"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
+msgid ""
+"You can see from the results that some buildings which were included were "
+"not really suitable, so we can now refine the analysis."
+msgstr "결과물에 포함된 건물들 가운데 실제로는 적합하지 않은 건물을 볼 수 있습니다. 따라서 이제 분석을 개선할 수 있습니다."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:63
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the :guilabel:`suitable_terrain` layer. How would you "
+"achieve this? Use one or more Vector Analysis tools and remember that our "
+"buildings are all over 100m squared in size."
+msgstr ""
+"우리는 ``suitable_terrain`` 레이어 안에 완전히 들어가는 건물들만 반환하도록 분석하고자 합니다. 어떻게 하면 될까요? "
+"우리가 원하는 건물은 면적이 100평방미터 이상이어야 한다는 점을 기억하면서 하나 또는 그 이상의 벡터 분석 도구를 사용해보십시오."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:71
+msgid "At the moment, your analysis should look something like this:"
+msgstr "이 시점에서, 여러분의 분석은 다음과 비슷하게 보여야 합니다:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:76
+msgid "Consider a circular area, continuous for 100 meters in all directions."
+msgstr "모든 방향으로 100미터 계속되는 원형 영역을 가정해보십시오."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:81
+msgid ""
+"If it is greater than 100 meters in radius, then subtracting 100 meters from"
+" its size (from all directions) will result in a part of it being left in "
+"the middle."
+msgstr "반경이 100미터를 초과하는 경우, (모든 방향에서) 100미터를 빼면 한가운데 그 일부가 남게 될 것입니다."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:88
+msgid ""
+"Therefore, you can run an *interior buffer* of 100 meters on your existing "
+":guilabel:`suitable_terrain` vector layer. In the output of the buffer "
+"function, whatever remains of the original layer will represent areas where "
+"there is suitable terrain for 100 meters beyond."
+msgstr ""
+"즉, 기존 ``suitable_terrain`` 벡터 레이어에 대해 100미터의 *내부 버퍼(interior buffer)* 를 실행하면"
+" 됩니다. 버퍼 함수의 산출물에 남아 있는 원본 레이어의 모든 부분이 100미터 이상에 걸쳐 적합한 지형이 있는 영역들을 나타낼 "
+"것입니다."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:93
+msgid "To demonstrate:"
+msgstr "이를 시연해봅시다:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:95
+msgid ""
+"Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open "
+"the Buffer(s) dialog."
+msgstr ""
+":menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` 메뉴 항목을 선택해서 "
+":guilabel:`Buffer(s)` 대화창을 여십시오."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:97
+msgid "Set it up like this:"
+msgstr "다음과 같이 설정하십시오:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:102
+msgid ""
+"Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a buffer"
+" distance of ``-100``. (The distance is automatically in meters because your"
+" map is using a projected CRS.)"
+msgstr ""
+"``suitable_terrain`` 레이어를 사용하고, 선분을 ``10`` 개 그리고 버퍼 거리를 ``-100`` 으로 설정하십시오. "
+"(여러분의 맵이 투영 좌표계를 사용하고 있기 때문에, 거리 단위는 자동으로 미터가 됩니다.)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:105
+msgid ""
+"Save the output in :file:`exercise_data/residential_development/` as "
+":file:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+":file:`exercise_data/residential_development/` 디렉터리에 산출물을 "
+":file:`suitable_terrain_continuous100m.shp` 로 저장하십시오."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:107
+msgid ""
+"If necessary, move the new layer above your original "
+":guilabel:`suitable_terrain` layer."
+msgstr "필요한 경우, 새 레이어를 원본 ``suitable_terrain`` 레이어 위로 옮기십시오."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:110
+msgid "Your results will look like something like this:"
+msgstr "결과물이 다음과 비슷하게 보일 것입니다:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:115
+msgid ""
+"Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector --> "
+"Research Tools --> Select by location`)."
+msgstr ""
+"이제 :guilabel:`Select by Location` 도구를 사용하십시오. (:menuselection:`Vector --> "
+"Research Tools --> Select by location`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:117
+msgid "Set up like this:"
+msgstr "다음과 같이 설정하십시오:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:122
+msgid ""
+"Select features in :guilabel:`new_solution` that intersect features in "
+":guilabel:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"``new_solution`` 레이어에 있는 피처들 가운데 ``suitable_terrain_continuous100m.shp`` "
+"레이어의 피처들과 교차하는 피처들을 선택하십시오."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:125
+msgid "This is the result:"
+msgstr "결과는 다음과 같습니다:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:130
+msgid ""
+"The yellow buildings are selected. Although some of the buildings fall "
+"partly outside the new :guilabel:`suitable_terrain_continuous100m` layer, "
+"they lie well within the original :guilabel:`suitable_terrain` layer and "
+"therefore meet all of our requirements."
+msgstr ""
+"선택된 건물들은 노란색입니다. 몇몇 건물들이 새 ``suitable_terrain_continuous100m`` 레이어 바깥으로 살짝 "
+"나가 있긴 하지만, 원본 ``suitable_terrain`` 레이어 안에 완전히 들어오기 때문에 모든 요구 사항을 만족시킵니다."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:135
+msgid ""
+"Save the selection under :file:`exercise_data/residential_development/` as "
+":file:`final_answer.shp`."
+msgstr ""
+":file:`exercise_data/residential_development/` 디렉터리에 이 선택 집합을 "
+":file:`final_answer.shp` 파일로 저장하십시오."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:139
+msgid "In Conclusion"
+msgstr "결론"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:141
+msgid ""
+"You have now answered the original research question, and can offer an "
+"opinion (with reasons, backed by analysis) for a recommendation regarding "
+"which property to develop."
+msgstr ""
+"이제 처음의 연구 문제에 해답을 내놓았고, 어떤 부지를 개발해야 할지에 대한 (분석 결과가 뒷받침하는 논리적인) 추천 의견을 제시할 수도"
+" 있습니다."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:146
+msgid "What's Next?"
+msgstr "다음은 무엇을 배우게 될까요?"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:148
+msgid "Next you will present these results as part of your second assignment."
+msgstr "다음은 여러분의 두 번째 과제의 일부로써 이 결과물을 제출하게 될 것입니다."

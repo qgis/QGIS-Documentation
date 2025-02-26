@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"번역은 :ref:`여러분이 참여할 수 있는 <translation_guidelines>` 커뮤니티 활동입니다. 이 페이지는 현재 "
+"|translation progress| 번역되었습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:12
+msgid "Projections Support"
+msgstr "투영체 지원"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:14
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:33
+msgid "Coordinate reference systems"
+msgstr "좌표계"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:35
+msgid ""
+"Coordinate reference systems (CRS) are encapsulated by the "
+":class:`QgsCoordinateReferenceSystem "
+"<qgis.core.QgsCoordinateReferenceSystem>` class. Instances of this class can"
+" be created in several different ways:"
+msgstr ""
+":class:`QgsCoordinateReferenceSystem "
+"<qgis.core.QgsCoordinateReferenceSystem>` 클래스가 좌표계를 캡슐화합니다. 이 클래스의 인스턴스를 몇 "
+"가지 서로 다른 방법으로 생성할 수 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:39
+msgid "specify CRS by its ID"
+msgstr "좌표계 ID로 좌표계 지정하기"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:51
+msgid "QGIS supports different CRS identifiers with the following formats:"
+msgstr "QGIS는 다음 서식을 가진 서로 다른 좌표계 식별자들을 지원합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:53
+msgid ""
+"``EPSG:<code>`` --- ID assigned by the EPSG organization - handled with "
+":meth:`createFromOgcWms() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromOgcWmsCrs>`"
+msgstr ""
+"``EPSG:<code>`` --- EPSG 기관이 할당한 ID입니다. :meth:`createFromOgcWms() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromOgcWmsCrs>` 메소드로 처리합니다. "
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:54
+msgid ""
+"``POSTGIS:<srid>``--- ID used in PostGIS databases - handled with "
+":meth:`createFromSrid() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrid>`"
+msgstr ""
+"``POSTGIS:<srid>``--- PostGIS 데이터베이스에서 쓰이는 ID입니다. :meth:`createFromSrid() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrid>` 메소드로 처리합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:55
+msgid ""
+"``INTERNAL:<srsid>`` --- ID used in the internal QGIS database - handled "
+"with :meth:`createFromSrsId() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrsId>`"
+msgstr ""
+"``INTERNAL:<srsid>`` --- QGIS 데이터베이스에서 쓰이는 ID입니다. :meth:`createFromSrsId() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrsId>` 메소드로 처리합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:56
+msgid ""
+"``PROJ:<proj>`` - handled with :meth:`createFromProj() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromProj>`"
+msgstr ""
+"``PROJ:<proj>`` --- :meth:`createFromProj() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromProj>` 메소드로 처리합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:57
+msgid ""
+"``WKT:<wkt>`` - handled with :meth:`createFromWkt() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromWkt>`"
+msgstr ""
+"``WKT:<wkt>`` --- :meth:`createFromWkt() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromWkt>` 메소드로 처리합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:59
+msgid "If no prefix is specified, WKT definition is assumed."
+msgstr "접두어를 지정하지 않는 경우, WKT(well-known text) 정의라고 가정합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:61
+msgid "specify CRS by its well-known text (WKT)"
+msgstr "WKT로 좌표계 지정하기"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:75
+msgid ""
+"create an invalid CRS and then use one of the ``create*`` functions to "
+"initialize it. In the following example we use a Proj string to initialize "
+"the projection."
+msgstr ""
+"무결하지 않은 좌표계를 생성한 다음 ``create*`` 함수들 가운데 하나를 사용해서 초기 설정합니다. 다음 예시에서는 투영체를 초기 "
+"설정하는 데 Proj 문자열을 사용합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:89
+msgid ""
+"It's wise to check whether creation (i.e. lookup in the database) of the CRS"
+" has been successful: :meth:`isValid() "
+"<qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`."
+msgstr ""
+"좌표계를 성공적으로 생성했는지 여부를 (예: 데이터베이스 검색) 확인하는 편이 좋습니다: :meth:`isValid() "
+"<qgis.core.QgsCoordinateReferenceSystem.isValid>` 메소드가 :const:`True` 를 반환해야만"
+" 합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:93
+msgid ""
+"Note that for initialization of spatial reference systems QGIS needs to look"
+" up appropriate values in its internal database :file:`srs.db`. Thus in case"
+" you create an independent application you need to set paths correctly with "
+":meth:`QgsApplication.setPrefixPath() "
+"<qgis.core.QgsApplication.setPrefixPath>`, otherwise it will fail to find "
+"the database. If you are running the commands from the QGIS Python console "
+"or developing a plugin you do not care: everything is already set up for "
+"you."
+msgstr ""
+"공간 참조 시스템(spatial reference system)을 초기 설정하기 위해 QGIS가  :file:`srs.db` 내부 "
+"데이터베이스에서 알맞은 값을 검색해야 한다는 사실을 기억하십시오. 즉 여러분이 독립 응용 프로그램을 생성한 경우 "
+":meth:`QgsApplication.setPrefixPath() "
+"<qgis.core.QgsApplication.setPrefixPath>` 메소드로 경로를 정확하게 설정해야 합니다. 그렇지 않을 경우 "
+"이 데이터베이스를 찾지 못할 것입니다. 여러분이 QGIS 파이썬 콘솔에서 명령어를 실행하거나 또는 플러그인을 개발하는 중이라면 "
+"상관없습니다. 이미 모든 것이 설정되어 있기 때문입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:101
+msgid "Accessing spatial reference system information:"
+msgstr "공간 참조 시스템 정보에 접근하기:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:118
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:160
+msgid "Output:"
+msgstr "산출물:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:134
+msgid "CRS Transformation"
+msgstr "좌표계 변환"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:136
+msgid ""
+"You can do transformation between different spatial reference systems by "
+"using the :class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>`"
+" class. The easiest way to use it is to create a source and destination CRS "
+"and construct a :class:`QgsCoordinateTransform "
+"<qgis.core.QgsCoordinateTransform>` instance with them and the current "
+"project. Then just repeatedly call :meth:`transform() "
+"<qgis.core.QgsCoordinateTransform.transform>` function to do the "
+"transformation. By default it does forward transformation, but it is capable"
+" to do also inverse transformation."
+msgstr ""
+":class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>` 클래스를 사용해서"
+" 서로 다른 공간 참조 시스템들을 변환시킬 수 있습니다. 이 클래스를 가장 쉽게 사용하는 방법은 소스 및 대상 좌표계를 생성한 다음 이 "
+"좌표계들과 현재 프로젝트를 가진 :class:`QgsCoordinateTransform "
+"<qgis.core.QgsCoordinateTransform>` 인스턴스를 작성하는 것입니다. 그 다음 :meth:`transform()"
+" <qgis.core.QgsCoordinateTransform.transform>` 함수를 반복 호출해서 변환을 수행합니다. 이 함수는 "
+"기본적으로 정방향 변환을 하지만, 역방향 변환도 할 수 있습니다."

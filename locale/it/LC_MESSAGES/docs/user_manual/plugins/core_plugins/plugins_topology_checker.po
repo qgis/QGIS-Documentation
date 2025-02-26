@@ -1,0 +1,448 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2024
+# Transifex Bot <>, 2024
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"unireLa traduzione è uno sforzo comunitario :ref:`you can join "
+"<translation_guidelines>`. Questa pagina è attualmente tradotta al "
+"|translation progress|."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:6
+msgid "Topology Checker Plugin"
+msgstr "Plugin Validatore topologico"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:13
+msgid "The Topology Checker Plugin"
+msgstr "Il Plugin Validatore Topologico"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:15
+msgid ""
+"Topology describes the relationships between points, lines and polygons that"
+" represent the features of a geographic region. With the Topology Checker "
+"plugin, you can look over your vector files and check the topology with "
+"several topology rules. These rules check with spatial relations whether "
+"your features 'Equal', 'Contain', 'Cover', are 'CoveredBy', 'Cross', are "
+"'Disjoint', 'Intersect', 'Overlap', 'Touch' or are 'Within' each other. It "
+"depends on your individual questions which topology rules you apply to your "
+"vector data (e.g., normally you won't accept overshoots in line layers, but "
+"if they depict dead-end streets you won't remove them from your vector "
+"layer)."
+msgstr ""
+"La topologia tratta le relazioni spaziali tra punti, linee e poligoni, che "
+"rappresentano le geometrie di una regione geografica. Con il Plugin "
+"Validatore Topologico puoi verificare se i tuoi vettori rispettano le regole"
+" topologiche. Queste regole verificano se le relazioni spaziale delle "
+"geometrie di un vettore sono 'Uguali', 'Contenute', 'Coperte', 'Coperte da',"
+" 'Incrociate', o se i vettori sono 'Disgiunti', 'Intersecano', 'Sovrapposti'"
+" o 'Toccano' altri vettori. Dipende dalle tue richieste su quali regole di "
+"topologia applicherai per i vettori (ad esempio, normalmente non accetterai "
+"superamento in vettori di linee se non nel caso di raffigurazione di strade "
+"senza uscita)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:25
+msgid ""
+"QGIS has a built-in topological editing feature, which is great for creating"
+" new features without errors. But existing data errors and user-induced "
+"errors are hard to find. This plugin helps you find such errors through a "
+"list of rules."
+msgstr ""
+"QGIS ha integrata una funzione di editing topologico molto utile per la "
+"creazione di nuove geometrie senza errori. Ma gli errori di dati esistenti e"
+" gli errori degli utenti sono difficili da trovare. Questo plugin ti aiuta a"
+" trovare tali errori attraverso un elenco di regole topologiche."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:29
+msgid "To enable the :guilabel:`Topology checker` plugin:"
+msgstr "Per abilitare il plugin :guilabel:`Validatore Topologico`:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:31
+msgid "Go to :guilabel:`Plugins` menu"
+msgstr "Vai al menu :guilabel:`Plugins`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:32
+msgid ""
+"Open |showPluginManager| :guilabel:`Manage and Install plugins` and choose "
+"|pluginInstalled| :guilabel:`Installed`"
+msgstr ""
+"Apri |showPluginManager| :guilabel:`Gestisci ed Installa Plugin...` e scegli"
+" |pluginInstalled| :guilabel:`Installati`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:137
+msgid "showPluginManager"
+msgstr "showPluginManager"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:135
+msgid "pluginInstalled"
+msgstr "pluginInstalled"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:34
+msgid "Enable |checkbox| |topologyChecker| :guilabel:`Topology checker`"
+msgstr ""
+"Abilita |checkbox| |topologyChecker| :guilabel:`Validatore topologico`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:131
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:143
+msgid "topologyChecker"
+msgstr "topologyChecker"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:35
+msgid ""
+"Close the :guilabel:`Plugin manager` dialog. A |topologyChecker| "
+":guilabel:`Topology checker` entry is added to the :guilabel:`Vector` menu."
+msgstr ""
+"Chiudi la finestra di dialogo :guilabel:`Cerca...`. Al menu "
+":guilabel:`Vettore` viene aggiunta la voce :guilabel:`Validatore "
+"topologico`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:39
+msgid ""
+"After you enabled |topologyChecker| :guilabel:`Topology checker` open it and"
+" choose |options| :guilabel:`Configure` to create your topology rules."
+msgstr ""
+"Dopo aver attivato |topologyChecker| :guilabel:`Validatore topologico`, "
+"aprilo e scegli |options| :guilabel:`Configura` per creare le regole della "
+"topologia."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:133
+msgid "options"
+msgstr "options"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:42
+msgid "On **point layers** the following rules are available:"
+msgstr "Sui **vettori di punti** puoi utilizzare le seguenti condizioni:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:44
+msgid ""
+":guilabel:`Must be covered by`: Here you can choose a vector layer from your"
+" project. Points that aren't covered by the given vector layer occur in the "
+"'Error' field."
+msgstr ""
+":guilabel:`deve essere coperto da`: Qui puoi scegliere un layer vettoriale "
+"dal tuo progetto. I punti che non sono coperti dal layer vettoriale indicato"
+" vengono visualizzati nel campo 'Errore'."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:46
+msgid ""
+":guilabel:`Must be covered by endpoints of`: Here you can choose a line "
+"layer from your project."
+msgstr ""
+":guilabel:`Deve essere coperto dai punti terminali di`: Qui puoi scegliere "
+"un vettore lineare dal tuo progetto."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:47
+msgid ""
+":guilabel:`Must be inside`: Here you can choose a polygon layer from your "
+"project. The points must be inside a polygon. Otherwise, QGIS writes an "
+"'Error' for the point."
+msgstr ""
+":guilabel:`deve essere dentro`: Qui puoi scegliere un vettore poligonale dal"
+" tuo progetto. I punti devono essere all'interno di un  poligono. "
+"Altrimenti, QGIS scrive un 'Errore' per il punto."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:49
+msgid ""
+":guilabel:`Must not have duplicates`: Whenever a point is represented twice "
+"or more, it will occur in the 'Error' field."
+msgstr ""
+":guilabel:`non deve avere duplicati`: Ogni volta che un punto è "
+"rappresentato due o più volte, verrà visualizzato nel campo 'Errore'."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:51
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:61
+msgid ""
+":guilabel:`Must not have invalid geometries`: Checks whether the geometries "
+"are valid."
+msgstr ""
+":guilabel:`non deve avere geometrie non valide`: Controlla se le geometrie "
+"sono valide."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:52
+msgid ""
+":guilabel:`Must not have multi-part-geometries`: All multi-part points are "
+"written into the 'Error' field."
+msgstr ""
+":guilabel:`non deve avere geometrie multi-part`: Tutti i punti multiparte "
+"vengono scritti nel campo 'Errore'."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:55
+msgid "On **line layers**, the following rules are available:"
+msgstr ""
+"Sui **vettori di linee** hai a disposizione le seguenti regole topologiche:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:57
+msgid ""
+":guilabel:`End points must be covered by`: Here you can select a point layer"
+" from your project."
+msgstr ""
+":guilabel:`I punti finali devono essere coperti da`: Qui puoi selezionare un"
+" layer di punti dal tuo progetto."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:58
+msgid ""
+":guilabel:`Must not have dangles`: This will show the overshoots in the line"
+" layer."
+msgstr ""
+":guilabel:`non deve avere nodi sospesi`: Verrano mostrate le eccedenze nel "
+"vettore lineare."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:59
+msgid ""
+":guilabel:`Must not have duplicates`: Whenever a line feature is represented"
+" twice or more, it will occur in the 'Error' field."
+msgstr ""
+":guilabel:`non deve avere duplicati`: Ogni volta che un tratto di un vettore"
+" lineare viene rappresentato due o più volte, verrà visualizzato nel campo "
+"'Errore'."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:62
+msgid ""
+":guilabel:`Must not have multi-part geometries`: Sometimes, a geometry is "
+"actually a collection of simple (single-part) geometries. Such a geometry is"
+" called multi-part geometry. If it contains just one type of simple "
+"geometry, we call it multi-point, multi-linestring or multi-polygon. All "
+"multi-part lines are written into the 'Error' field."
+msgstr ""
+":guilabel:`non deve avere geometrie multi-part`: A volte, una geometria è in"
+" realtà un insieme di geometrie semplici (a parti singole). Una geometria di"
+" questo tipo è chiamata geometria multiparte. Se contiene un solo tipo di "
+"geometria semplice, la si chiama multi-punto, multi-linea o multi-poligono. "
+"Tutte le linee a più parti vengono scritte nel campo 'Errore'."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:67
+msgid ""
+":guilabel:`Must not have pseudos`: A line geometry's endpoint should be "
+"connected to the endpoints of two other geometries. If the endpoint is "
+"connected to only one other geometry's endpoint, the endpoint is called a "
+"pseudo node."
+msgstr ""
+":guilabel:`non deve avere pseudo`: Il punto finale di una geometria di linea"
+" deve essere collegato ai punti finali di altre due geometrie. Se l'estremo "
+"è collegato a un solo estremo di un'altra geometria, l'estremo è chiamato "
+"pseudonodo."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:71
+msgid "On **polygon layers**, the following rules are available:"
+msgstr "Per i vettori poligono hai a disposizione le seguenti regole:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:73
+msgid ""
+":guilabel:`Must contain`: Polygon layer must contain at least one point "
+"geometry from the second layer."
+msgstr ""
+":guilabel:`deve contenere`: Il vettore poligonale deve contenere almeno una "
+"geometria puntiforme del secondo layer."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:75
+msgid ""
+":guilabel:`Must not have duplicates`: Polygons from the same layer must not "
+"have identical geometries. Whenever a polygon feature is represented twice "
+"or more it will occur in the 'Error' field."
+msgstr ""
+":guilabel:`non deve avere duplicati`: I poligoni del layer stesso non devono"
+" avere geometrie identiche. Ogni volta che un elemento poligonale è "
+"rappresentato due o più volte, verrà visualizzato nel campo 'Errore'."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:78
+msgid ""
+":guilabel:`Must not have gaps`: Adjacent polygons should not form gaps "
+"between them. Administrative boundaries could be mentioned as an example (US"
+" state polygons do not have any gaps between them...)."
+msgstr ""
+":guilabel:`Non deve avere vuoti`: I poligoni adiacenti non devono avere "
+"spazi vuoti tra loro. I confini amministrativi possono essere citati come "
+"esempio (i poligoni degli Stati Uniti non hanno spazi vuoti tra loro...)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:81
+msgid ""
+":guilabel:`Must not have invalid geometries`: Checks whether the geometries "
+"are valid. Some of the rules that define a valid geometry are:"
+msgstr ""
+":guilabel:`non deve avere geometrie non valide`: Controlla se le geometrie "
+"sono valide. Alcune delle regole che definiscono una geometria valida sono:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:84
+msgid "Polygon rings must close."
+msgstr "I poligoni anello devono essere chiusi."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:85
+msgid ""
+"Rings that define holes should be inside rings that define exterior "
+"boundaries."
+msgstr ""
+"Anelli che definiscono i buchi devono essere all'interno di anelli che "
+"definiscono i confini esterni."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:86
+msgid ""
+"Rings may not self-intersect (they may neither touch nor cross one another)."
+msgstr ""
+"Gli anelli non possono auto-intersecarsi (non si possono né toccare né "
+"incrociare l'un l'altro). "
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:87
+msgid "Rings may not touch other rings, except at a point."
+msgstr "Gli anelli non tocchino altri anelli, tranne che in un punto."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:89
+msgid ""
+":guilabel:`Must not have multi-part geometries`: Sometimes, a geometry is "
+"actually a collection of simple (single-part) geometries. Such a geometry is"
+" called multi-part geometry. If it contains just one type of simple "
+"geometry, we call it multi-point, multi-linestring or multi-polygon. For "
+"example, a country consisting of multiple islands can be represented as a "
+"multi-polygon."
+msgstr ""
+":guilabel:`non deve avere geometrie multi-part`: A volte, una geometria è in"
+" realtà un insieme di geometrie semplici (a parti singole). Una geometria di"
+" questo tipo è chiamata geometria multiparte. Se contiene un solo tipo di "
+"geometria semplice, la si chiama multi-punto, multi-linea o multi-poligono. "
+"Ad esempio, un paese composto da più isole può essere rappresentato come un "
+"multipoligono."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:94
+msgid ""
+":guilabel:`Must not overlap`: Adjacent polygons should not share common "
+"area."
+msgstr ""
+":guilabel:`non deve sovrapporsi`: I poligoni adiacenti non devono "
+"condividere un'area comune."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:95
+msgid ""
+":guilabel:`Must not overlap with`: Adjacent polygons from one layer should "
+"not share common area with polygons from another layer."
+msgstr ""
+":guilabel:`non deve sovrapporsi`: I poligoni adiacenti di un layer non "
+"devono condividere l'area comune con i poligoni di un altro layer."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:98
+msgid ""
+"When you create a :guilabel:`New rule` click on the |symbologyAdd| :sup:`Add"
+" rule` to include it to the :guilabel:`Current rules`. You can enable or "
+"disable individual rules by clicking on the checkbox. Right-clicking over a "
+"rule provides the following options:"
+msgstr ""
+"Quando crei una :guilabel:`Nuova regola`, fai clic su |symbologyAdd| "
+":sup:`Aggiungi regola` per includerla nella :guilabel:`Regole in uso`. Puoi "
+"attivare o disattivare singole regole facendo clic sulla casella di "
+"controllo. Facendo clic con il tasto destro del mouse su una regola, si "
+"ottengono le seguenti opzioni:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:139
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:103
+msgid ":guilabel:`Select All` the rules"
+msgstr ":guilabel:`Seleziona tutte` le regole"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:104
+msgid ":guilabel:`Activate` or :guilabel:`Deactivate` the selected rules"
+msgstr ":guilabel:`Attivare` o :guilabel:`Disattivere` le regole selezionate"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:105
+msgid ":guilabel:`Toggle activation` of selected rules"
+msgstr ":guilabel:`Attivare` le regole selezionate"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:106
+msgid ""
+":guilabel:`Delete` selected rules. This can also be achieved with the "
+"|symbologyRemove| :sup:`Delete selected rules` button."
+msgstr ""
+":guilabel:`Elimina` le regole selezionate`. Questo può anche essere ottenuto"
+" con il pulsante |symbologyRemove| :sup:`Elimina le regole selezionate`. le "
+"regole selezionate`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:141
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:109
+msgid ""
+"Press :guilabel:`OK` and then choose from the :guilabel:`Topology checker` "
+"panel:"
+msgstr ""
+"Premi :guilabel:`OK` e poi scegli nel pannello :guilabel:`Validatore "
+"topologico`:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:111
+msgid ""
+"|validateAll| :sup:`Validate All`: applies the active rules to all the "
+"features of the involved layer(s)"
+msgstr ""
+"|validateAll| :sup:`Verifica tutto`: applica le regole attive a tutte gli "
+"elementi dei layer coinvolti."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:145
+msgid "validateAll"
+msgstr "validateAll"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:113
+msgid ""
+"or |validateExtent| :sup:`Validate Extent`: applies the active rules to the "
+"features of the involved layer(s), within the current map canvas. The button"
+" is kept pushed and the results will update as the map canvas extent "
+"changes."
+msgstr ""
+"o |validateExtent| :sup:`Verifica l'estensione`: applica le regole attive "
+"agli elementi del(i) layer coinvolti, all'interno dell'area di disegno "
+"corrente. Il pulsante viene mantenuto premuto e i risultati si aggiornano al"
+" variare dell'estensione dell'area di disegno."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:147
+msgid "validateExtent"
+msgstr "validateExtent"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:117
+msgid ""
+"Errors will show up in the table of results containing type of error, layer "
+"and feature ID. Use :guilabel:`Filter errors by rule` menu to filter the "
+"errors to a specific error type."
+msgstr ""
+"Gli errori vengono visualizzati nella tabella dei risultati con il tipo di "
+"errore, il livello e l'ID dell'elemento. Usa il menu :guilabel:`Filtra gli "
+"errori con regola` per filtrare gli errori su un tipo specifico di errore."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:120
+msgid ""
+"Check |checkbox|:guilabel:`Show errors on the canvas` to show error location"
+" on the canvas. Clicking a row in the table will zoom the map canvas to the "
+"concerned feature, where you can use :ref:`QGIS digitizing tools "
+"<editingvector>` to fix the error."
+msgstr ""
+"Seleziona |checkbox|:guilabel:`Mostra gli errori sulla mappa` per mostrare "
+"la posizione degli errori sulla mappa. Facendo clic su una riga della "
+"tabella ingrandisci la visualizzazione della mappa fino all'elemento "
+"interessato, dove puoi utilizzare :ref:`QGIS digitizing tools "
+"<editingvector>` per correggere l'errore."

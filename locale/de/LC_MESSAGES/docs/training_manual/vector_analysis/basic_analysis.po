@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2024
+# Transifex Bot <>, 2024
+# Leberkas Lover, 2024
+# Andreas Kaufmann, 2024
+# Joern G <j.gutzeit@umwelt-it.de>, 2024
+# Steffen Döring, 2024
+# stefan wolff <wolff@mellum.de>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: stefan wolff <wolff@mellum.de>, 2025\n"
+"Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Übersetzen ist eine Gemeinschaftsleistung :ref:`Sie können mitmachen "
+"<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
+" übersetzt."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:2
+msgid "Lesson: Vector Analysis"
+msgstr "Lektion: Vektoranalyse"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:4
+msgid ""
+"Vector data can also be analyzed to reveal how different features interact "
+"with each other in space. There are many different analysis-related "
+"functions, so we won't go through them all. Rather, we will pose a question "
+"and try to solve it using the tools that QGIS provides."
+msgstr ""
+"Vektordaten können auch analysiert werden, um herauszufinden, wie "
+"verschiedene Elemente miteinander im Raum interagieren. Es gibt viele "
+"verschiedene Analysefunktionen, daher werden wir sie nicht alle durchgehen. "
+"Vielmehr werden wir eine Frage stellen und versuchen, sie mit den Werkzeugen"
+" zu lösen, die QGIS bietet."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:10
+msgid ""
+"**The goal for this lesson:** To ask a question and solve it using analysis "
+"tools."
+msgstr ""
+"**Das Ziel dieser Lektion:** Eine Frage stellen und sie mit Hilfe von "
+"Analysewerkzeugen lösen."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:15
+msgid ":abbr:`★☆☆ (Basic level)` The GIS Process"
+msgstr ":abbr:`★☆☆ (Basic level)` Der GIS-Prozess"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:17
+msgid ""
+"Before we start, it would be useful to give a brief overview of a process "
+"that can be used to solve a problem. The way to go about it is:"
+msgstr ""
+"Bevor wir beginnen, ist es sinnvoll, einen kurzen Überblick über ein Prozess"
+" zu geben, der zur Lösung einer Aufgabe verwendet werden kann. Der Weg "
+"dorthin ist folgender:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:21
+msgid "State the Problem"
+msgstr "Beschreibe die Aufgabe"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:22
+msgid "Get the Data"
+msgstr "Beschaffe die Daten"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:23
+msgid "Analyze the Problem"
+msgstr "Analysiere die Aufgabe"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:24
+msgid "Present the Results"
+msgstr "Präsentiere die Ergebnisse"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:28
+msgid ":abbr:`★☆☆ (Basic level)` The Problem"
+msgstr ":abbr:`★☆☆ (Basic level)` Das Problem"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:30
+msgid ""
+"Let's start off the process by deciding on a problem to solve. For example, "
+"you are an estate agent and you are looking for a residential property in "
+"|majorUrbanName| for clients who have the following criteria:"
+msgstr ""
+"Beginnen wir den Prozess, indem wir uns für eine zu lösende Aufgabe "
+"entscheiden. Sie sind zum Beispiel ein Immobilienmakler und suchen für einen"
+" Kunden eine Wohnimmobilie in |großerStadtName|, die die folgenden Kriterien"
+" erfüllt:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:35
+msgid "It needs to be in |majorUrbanName|"
+msgstr "Es muss in |majorUrbanName| sein"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:36
+msgid "It must be within reasonable driving distance of a school (say 1km)"
+msgstr ""
+"Der Standort muss in angemessener Entfernung zu einer Schule liegen (etwa 1 "
+"km)."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:37
+msgid "It must be more than 100m squared in size"
+msgstr "Es muss größer als 100 Quadratmeter sein"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:38
+msgid "Closer than 50m to a main road"
+msgstr "Näher als 50 m an einer Hauptstraße"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:39
+msgid "Closer than 500m to a restaurant"
+msgstr "Näher als 500 m an einem Restaurant"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:43
+msgid ":abbr:`★☆☆ (Basic level)` The Data"
+msgstr ":abbr:`★☆☆ (Basic level)` Die Daten"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:45
+msgid "To answer these questions, we are going to need the following data:"
+msgstr "Um die Fragen zu beantworten, benötigen wir folgende Daten:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:47
+msgid "The residential properties (buildings) in the area"
+msgstr "Die Wohnimmobilien (Gebäude) in der Umgebung"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:48
+msgid "The roads in and around the town"
+msgstr "Die Straßen in und um die Stadt"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:49
+msgid "The location of schools and restaurants"
+msgstr "Die Lage von Schulen und Restaurants"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:50
+msgid "The size of buildings"
+msgstr "Die Größe eines Gebäudes"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:69
+msgid "We first need to load the data to work with."
+msgstr "Zuerst müssen die Daten geladen werden, um damit arbeiten zu können."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:71
+msgid "Start a new QGIS project"
+msgstr "Starte ein neues QGIS-Projekt"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:82
+msgid "``buildings``"
+msgstr "``Gebäude``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:83
+msgid "``roads``"
+msgstr "``Straßen``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:84
+msgid "``restaurants``"
+msgstr "``Restaurants``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:85
+msgid "``schools``"
+msgstr "``Schulen``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:486
+msgid "indicatorFilter"
+msgstr "indicatorFilter"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:280
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:392
+msgid "Answer"
+msgstr "Antwort "
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:328
+msgid "Click :guilabel:`Run`."
+msgstr "Klicken Sie auf :guilabel:`Starten`."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:484
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:489
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:450
+msgid "Click :guilabel:`OK`."
+msgstr "Klicken Sie :guilabel:`OK`."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:457
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
+msgstr ":abbr:`★☆☆ (Basisniveau)` Probieren Sie es selbst:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:465
+msgid "In Conclusion"
+msgstr "Zusammengefasst"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:472
+msgid "What's Next?"
+msgstr "Was als nächstes?"

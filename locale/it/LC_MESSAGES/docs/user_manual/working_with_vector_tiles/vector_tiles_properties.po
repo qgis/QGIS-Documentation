@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:53+0000\n"
+"Last-Translator: Transifex Bot <>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:6
+msgid "Working with Vector Tiles"
+msgstr "Lavorare con i Tasselli Vettoriali"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:14
+msgid "What are Vector Tiles?"
+msgstr "Cosa sono i Tasselli Vettoriali?"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:16
+msgid ""
+"Vector tiles are packets of geographic data, packaged into pre-defined "
+"roughly-square shaped \"tiles\" for transfer over the web. They combine pre-"
+"rendered raster map tiles and vector map tiles. The vector tile server "
+"returns vector map data, which has been clipped to the boundaries of each "
+"tile, instead of a pre-rendered map image. The clipped tiles represent the "
+"zoom-levels of the vector tile service, derived from a pyramid approach. "
+"Using this structure, the data-transfer is reduced in comparison to un-tiled"
+" vector maps. Only data within the current map view, and at the current zoom"
+" level need to be transferred. Also, compared to a tiled raster map, data "
+"transfer is also greatly reduced, as vector data is typically much smaller "
+"than a rendered bitmap. Vector tiles do not have any styling information "
+"assigned so QGIS needs to apply a cartographic style in order to display the"
+" data."
+msgstr ""
+"I tasselli vettoriali sono pacchetti di dati geografici, impacchettati in "
+"\"tasselli\" predefiniti di forma approssimativamente quadrata per il "
+"trasferimento sul web. Combinano tasselli di mappe raster prerenderizzate e "
+"tasselli di mappe vettoriali. Il server di tasselli vettoriali restituisce "
+"dati di mappe vettoriali, che sono stati ritagliati ai confini di ogni "
+"tassello, invece di un'immagine di mappa prerenderizzata. I tasselli "
+"ritagliati rappresentano i livelli di zoom del servizio di tasselli "
+"vettoriali, derivati da un approccio piramidale. Usando questa struttura, il"
+" trasferimento dei dati è ridotto rispetto alle mappe vettoriali senza "
+"tasselli. Solo i dati all'interno della vista corrente della mappa e al "
+"livello di zoom corrente devono essere trasferiti. Inoltre, rispetto a una "
+"mappa raster tassellata, anche il trasferimento dei dati è notevolmente "
+"ridotto, poiché i dati vettoriali sono tipicamente molto più piccoli di una "
+"bitmap renderizzata. I tasselli vettoriali non hanno alcuna informazione di "
+"stile assegnata, quindi QGIS ha bisogno di applicare uno stile cartografico "
+"per visualizzare i dati."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:36
+msgid "Pyramid structure of vector tiles with zoom-levels"
+msgstr "Struttura a piramide di tasselli vettoriali con livelli di zoom"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:40
+msgid "Supported Formats"
+msgstr "Formati supportati"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:42
+msgid "There is support for vector tiles through:"
+msgstr "C'è il supporto per i tasselli vettoriali attraverso:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:44
+msgid ""
+"remote sources (HTTP/S) - with XYZ template - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+msgstr ""
+"fonti remote (HTTP/S) - con modello XYZ - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:45
+msgid ""
+"local files - with XYZ template - e.g. "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+msgstr ""
+"file locali - con modello XYZ - per esempio "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:46
+msgid ""
+"local MBTiles database - e.g. "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``"
+msgstr ""
+"database locale di MBTiles - per esempio "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:48
+msgid ""
+"To load a vector tiles dataset into QGIS, use the |addVectorTileLayer| "
+":guilabel:`Vector Tile` tab in the :guilabel:`Data Source Manager` dialog. "
+"Read :ref:`vector_tiles` for more details."
+msgstr ""
+"Per caricare un datset di tasselli vettoriali in QGIS, utilizza la scheda "
+"|addVectorTileLayer| :guilabel:`Aggiungere layer XYZ` nella finestra di "
+"dialogo :guilabel:`Gestore delle Sorgenti Dati`. Leggi :ref:`vector_tiles` "
+"per maggiori dettagli."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:121
+msgid "addVectorTileLayer"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:55
+msgid "Vector Tiles Dataset Properties"
+msgstr "Proprietà Dataset Tasselli Vettoriali"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:58
+msgid "Information Properties"
+msgstr "Proprietà informazioni"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:60
+msgid ""
+"The :guilabel:`Information` tab is read-only and represents an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. Provided information are:"
+msgstr ""
+"La scheda :guilabel:`Informazioni` è di sola lettura e rappresenta un luogo "
+"utile per ottenere rapidamente informazioni sintetiche e metadati sul layer "
+"corrente. Le informazioni fornite sono:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:64
+msgid ""
+"based on the provider of the layer: name, URI, source type and path, number "
+"of zoom levels"
+msgstr ""
+"in base al fornitore del layer: nome, URI, tipo di sorgente e percorso, "
+"numero di livelli di zoom"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:66
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr ""
+"il Sistema di riferimento delle coordinate: nome, unità, metodo, precisione,"
+" riferimento (cioè se è statico o dinamico)"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:68
+msgid ""
+"picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access, "
+"extents, links, contacts, history..."
+msgstr ""
+"prelevati dai :ref:`filled metadata <vectortilesmetadatamenu>`: accesso, "
+"estensioni, collegamenti, contatti, cronologia..."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:72
+msgid "Symbology and Label Properties"
+msgstr "Simbologia e proprietà Etichette"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:79
+msgid "Vector Tile Layer Symbology"
+msgstr "Simbologia Layer Tasselli Vettoriali"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:81
+msgid ""
+"As vector tiles consist of point, line and polygon geometries, the "
+"respective symbols are available. To apply a cartographic style you need to "
+"use a :guilabel:`Style URL` when creating the :guilabel:`Vector Tiles "
+"Connection`. The symbology will be shown immediately in the |symbology| "
+":guilabel:`Symbology` tab after clicking the :guilabel:`OK` button."
+msgstr ""
+"Poiché i tasselli vettoriali sono costituiti da geometrie di punti, linee e "
+"poligoni, sono disponibili i rispettivi simboli. Per applicare uno stile "
+"cartografico è necessario utilizzare un :guilabel:`Style URL` quando si crea"
+" la :guilabel:`Connessione Tasselli Vettoriali`. La simbologia verrà "
+"visualizzata immediatamente nella scheda :guilabel:`Simbologia` dopo aver "
+"fatto clic sul pulsante :guilabel:`OK`."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:125
+msgid "symbology"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:87
+msgid ""
+"To create your own cartographic style you can define a set of :ref:`rules "
+"<rule_based_rendering>` for features and apply style and label. In "
+":numref:`figure_vector_tile_symbology` we set up style and labeling for the "
+"OpenStreetMap ``landuse`` layer. The settings are made for the class "
+"``suburb`` here. For better visibility most of the rules are deselected."
+msgstr ""
+"Per creare il proprio stile cartografico è possibile definire un insieme di "
+":ref:`regole <rule_based_rendering>` per gli elementi e applicare stile ed "
+"etichetta. In :numref:`figure_vector_tile_symbology` abbiamo impostato lo "
+"stile e l'etichettatura per il layer OpenStreetMap ``landuse``. Le "
+"impostazioni sono fatte per la classe ``suburb``. Per una migliore "
+"visibilità, la maggior parte delle regole sono deselezionate."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:93
+msgid ""
+"At the bottom the :guilabel:`Current Zoom` is shown. Check the "
+":guilabel:`Visible rules only` option to filter the list of rules to only "
+"those that are visible at the given zoom level. This makes it easier to work"
+" with complex vector styling and to locate troublesome rules. Style and "
+"labelling can be dependent on the zoom level."
+msgstr ""
+"In basso viene visualizzata l'opzione :guilabel:`Zoom corrente`. Seleziona "
+"l'opzione :guilabel:`Solo regole visibili` per filtrare l'elenco delle "
+"regole solo su quelle visibili al livello di zoom indicato. In questo modo è"
+" più facile lavorare con stili vettoriali complessi e individuare le regole "
+"problematiche. Lo stile e l'etichettatura possono dipendere dal livello di "
+"zoom."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:99
+msgid ""
+"There is also the option to import styles. Those styles can be supplied as:"
+msgstr ""
+"Esiste anche l'opzione di importare gli stili. Questi stili possono essere "
+"forniti come:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:101
+msgid ":guilabel:`QML` files (:ref:`qgisstylefile`)"
+msgstr ":guilabel:`QML` file (:ref:`qgisstylefile`)"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:102
+msgid ":guilabel:`MapBox GL Json` style configuration files"
+msgstr "File di configurazione di stile :guilabel:`MapBox GL Json`"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:108
+msgid "Metadata Properties"
+msgstr "Proprietà metadati"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:110
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"La scheda |editMetadata| :guilabel:`Metadati` fornisce le opzioni per creare"
+" e modificare un report sui metadati del layer. Per ulteriori informazioni, "
+"vedi :ref:`metadatamenu`."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:123
+msgid "editMetadata"
+msgstr ""

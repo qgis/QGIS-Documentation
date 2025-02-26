@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Transifex Bot <>, 2024
+# Harrissou Sant-anna, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"La traduction est le fruit d'un effort communautaire auquel :ref:`vous "
+"pouvez vous joindre <translation_guidelines>`. Cette page est actuellement "
+"traduite à |translation progress|."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:6
+msgid "Topology Checker Plugin"
+msgstr "Extension Vérificateur de topologie"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:13
+msgid "The Topology Checker Plugin"
+msgstr "Extension Vérificateur de topologie"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:15
+msgid ""
+"Topology describes the relationships between points, lines and polygons that"
+" represent the features of a geographic region. With the Topology Checker "
+"plugin, you can look over your vector files and check the topology with "
+"several topology rules. These rules check with spatial relations whether "
+"your features 'Equal', 'Contain', 'Cover', are 'CoveredBy', 'Cross', are "
+"'Disjoint', 'Intersect', 'Overlap', 'Touch' or are 'Within' each other. It "
+"depends on your individual questions which topology rules you apply to your "
+"vector data (e.g., normally you won't accept overshoots in line layers, but "
+"if they depict dead-end streets you won't remove them from your vector "
+"layer)."
+msgstr ""
+"La topologie décrit les relations entre les points, lignes et polygones qui "
+"représentent des entités dans une région géographique. Avec l'extension "
+"Vérificateur de topologie vous pouvez analyser vos couches vectorielles et "
+"leur topologie en testant différentes règles de topologie. Ces règles "
+"permettent de vérifier les relations spatiales entre entités, si elles 'se "
+"superposent', 'se contiennent', 'se recouvrent', 'sont disjointes', 'se "
+"touchent', etc. La règle à vérifier dépend de votre problématique (par "
+"exemple, en temps normal, les lignes d'une même couche ne doivent pas se "
+"terminer en croisant une autre ligne mais elles peuvent représenter des "
+"impasses et avoir un sens dans votre couche)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:25
+msgid ""
+"QGIS has a built-in topological editing feature, which is great for creating"
+" new features without errors. But existing data errors and user-induced "
+"errors are hard to find. This plugin helps you find such errors through a "
+"list of rules."
+msgstr ""
+"QGIS dispose d'un outil d'édition topologique qui permet de créer de "
+"nouvelles entités sans erreur. Mais des erreurs sur des géométries de "
+"données existantes sont difficiles à identifier. Cette extension permet de "
+"les trouver en établissant une liste de règles."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:137
+msgid "showPluginManager"
+msgstr "showPluginManager"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:135
+msgid "pluginInstalled"
+msgstr "pluginInstalled"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:131
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:143
+msgid "topologyChecker"
+msgstr "topologyChecker"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:133
+msgid "options"
+msgstr "options"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:42
+msgid "On **point layers** the following rules are available:"
+msgstr ""
+"Sur les **couches de points**, les règles suivantes sont disponibles :"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:55
+msgid "On **line layers**, the following rules are available:"
+msgstr ""
+"Sur les **couches de lignes**, les règles suivantes sont disponibles :"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:71
+msgid "On **polygon layers**, the following rules are available:"
+msgstr ""
+"Sur les **couches de polygones**, les règles suivantes sont disponibles :"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:84
+msgid "Polygon rings must close."
+msgstr "Les anneaux formant des trous dans des polygones doivent être fermés."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:85
+msgid ""
+"Rings that define holes should be inside rings that define exterior "
+"boundaries."
+msgstr ""
+"Les anneaux formant des trous doivent être entièrement inclus dans des "
+"polygones."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:86
+msgid ""
+"Rings may not self-intersect (they may neither touch nor cross one another)."
+msgstr ""
+"Les anneaux ne doivent pas s'intersecter (ni se toucher ni se croiser)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:87
+msgid "Rings may not touch other rings, except at a point."
+msgstr ""
+"Les anneaux ne doivent pas toucher d'autres anneaux, sauf en un unique "
+"sommet."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:139
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:141
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:145
+msgid "validateAll"
+msgstr "validateAll"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:147
+msgid "validateExtent"
+msgstr "validateExtent"

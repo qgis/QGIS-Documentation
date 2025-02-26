@@ -1,0 +1,310 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2024
+# Transifex Bot <>, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2024-03-02 11:57+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"번역은 :ref:`여러분이 참여할 수 있는 <translation_guidelines>` 커뮤니티 활동입니다. 이 페이지는 현재 "
+"|translation progress| 번역되었습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:38
+msgid "Using Raster Layers"
+msgstr "래스터 레이어 사용하기"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:40
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr "PyQGIS 콘솔을 사용하지 않는 경우 이 페이지에 있는 코드 조각들을 다음과 같이 가져와야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:68
+msgid "Layer Details"
+msgstr "레이어 상세 정보"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:70
+msgid ""
+"A raster layer consists of one or more raster bands --- referred to as "
+"single band and multi band rasters. One band represents a matrix of values. "
+"A color image (e.g. aerial photo) is a raster consisting of red, blue and "
+"green bands. Single band rasters typically represent either continuous "
+"variables (e.g. elevation) or discrete variables (e.g. land use). In some "
+"cases, a raster layer comes with a palette and the raster values refer to "
+"the colors stored in the palette."
+msgstr ""
+"래스터 레이어는 하나 또는 그 이상의 래스터 밴드로 이루어져 있습니다 --- 이를 단일 밴드 그리고 다중 밴드 래스터라고 합니다. 밴드 "
+"하나는 값들의 행렬을 표현합니다. 컬러 이미지(예: 항공 사진)는 적색, 청색, 녹색 밴드로 이루어진 래스터입니다. 단일 밴드 래스터는 "
+"일반적으로 연속적인 변수들(예: 표고) 또는 불연속적인 변수들(예: 토지 이용도) 가운데 하나를 표현합니다. 또는 래스터 레이어에 "
+"색상표가 첨부되어 래스터 값들이 색상표에 저장된 색상들을 참조하는 경우도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:78
+msgid ""
+"The following code assumes ``rlayer`` is a :class:`QgsRasterLayer "
+"<qgis.core.QgsRasterLayer>` object."
+msgstr ""
+"다음 코드는 ``rlayer`` 가 :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>` 클래스 "
+"객체라고 가정합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:149
+msgid "Renderer"
+msgstr "렌더링 작업자"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:151
+msgid ""
+"When a raster layer is loaded, it gets a default renderer based on its type."
+" It can be altered either in the layer properties or programmatically."
+msgstr ""
+"래스터 레이어를 불러왔을 때, 그 유형을 기반으로 기본 렌더링 작업자가 할당됩니다. 레이어 속성에서 또는 프로그래밍 방식으로 렌더랑 "
+"작업자를 변경할 수 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:154
+msgid "To query the current renderer:"
+msgstr "현재 렌더링 작업자를 쿼리하려면:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:173
+msgid ""
+"To set a renderer, use the :meth:`setRenderer() "
+"<qgis.core.QgsRasterLayer.setRenderer>` method of :class:`QgsRasterLayer "
+"<qgis.core.QgsRasterLayer>`. There are a number of renderer classes (derived"
+" from :class:`QgsRasterRenderer <qgis.core.QgsRasterRenderer>`):"
+msgstr ""
+"렌더링 작업자를 설정하려면 :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>` 클래스의 "
+":meth:`setRenderer() <qgis.core.QgsRasterLayer.setRenderer>` 메소드를 사용하십시오. "
+"(:class:`QgsRasterRenderer <qgis.core.QgsRasterRenderer>` 클래스에서 파생된) 렌더링 작업자"
+" 클래스가 여러 개 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:178
+msgid ":class:`QgsHillshadeRenderer <qgis.core.QgsHillshadeRenderer>`"
+msgstr ":class:`QgsHillshadeRenderer <qgis.core.QgsHillshadeRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:179
+msgid ""
+":class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`"
+msgstr ""
+":class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:180
+msgid ""
+":class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`"
+msgstr ""
+":class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:181
+msgid ":class:`QgsRasterContourRenderer <qgis.core.QgsRasterContourRenderer>`"
+msgstr ""
+":class:`QgsRasterContourRenderer <qgis.core.QgsRasterContourRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:182
+msgid ""
+":class:`QgsSingleBandColorDataRenderer "
+"<qgis.core.QgsSingleBandColorDataRenderer>`"
+msgstr ""
+":class:`QgsSingleBandColorDataRenderer "
+"<qgis.core.QgsSingleBandColorDataRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:183
+msgid ""
+":class:`QgsSingleBandGrayRenderer <qgis.core.QgsSingleBandGrayRenderer>`"
+msgstr ""
+":class:`QgsSingleBandGrayRenderer <qgis.core.QgsSingleBandGrayRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:184
+msgid ""
+":class:`QgsSingleBandPseudoColorRenderer "
+"<qgis.core.QgsSingleBandPseudoColorRenderer>`"
+msgstr ""
+":class:`QgsSingleBandPseudoColorRenderer "
+"<qgis.core.QgsSingleBandPseudoColorRenderer>`"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:186
+msgid ""
+"Single band raster layers can be drawn either in gray colors (low values = "
+"black, high values = white) or with a pseudocolor algorithm that assigns "
+"colors to the values. Single band rasters with a palette can also be drawn "
+"using the palette. Multiband layers are typically drawn by mapping the bands"
+" to RGB colors. Another possibility is to use just one band for drawing."
+msgstr ""
+"단일 밴드 래스터는 회색조(낮은 값은 검정색, 높은 값은 흰색) 또는 값에 색상을 할당하는 의사 색상(pseudocolor) 알고리즘 "
+"가운데 하나로 그릴 수 있습니다. 색상표를 가진 단일 밴드 래스터는 색상표를 사용해서도 그릴 수 있습니다. 다중 밴드 래스터는 일반적으로"
+" RGB 색상에 밴드들을 매핑시켜서 그립니다. 또는 밴드 단 한 개만 사용해서 그릴 수도 있습니다."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:197
+msgid "Single Band Rasters"
+msgstr "단일 밴드 래스터"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:199
+msgid ""
+"Let's say we want a render single band raster layer with colors ranging from"
+" green to yellow (corresponding to pixel values from 0 to 255). In the first"
+" stage we will prepare a :class:`QgsRasterShader "
+"<qgis.core.QgsRasterShader>` object and configure its shader function:"
+msgstr ""
+"단일 밴드 래스터 레이어를 (0에서 255까지의 픽셀 값들에 대응하는) 초록색에서 노란색 범위의 색상을 사용해서 렌더링하려 한다고 "
+"해봅시다. 첫 번째 단계는 :class:`QgsRasterShader <qgis.core.QgsRasterShader>` 클래스 객체를 "
+"준비해서 그 셰이더(shader) 함수를 환경설정하는 것입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:215
+msgid ""
+"The shader maps the colors as specified by its color map. The color map is "
+"provided as a list of pixel values with associated colors. There are three "
+"modes of interpolation:"
+msgstr ""
+"셰이더는 자체 색상표가 지정하는 대로 색상을 매핑합니다. 이 색상표가 픽셀 값들과 그 관련 색상들의 목록을 제공합니다. 세 가지 보간 "
+"모드가 있습니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:219
+msgid ""
+"linear (``Interpolated``): the color is linearly interpolated from the color"
+" map entries above and below the pixel value"
+msgstr "선형 (``Interpolated``): 픽셀 값 위아래 있는 색상표 항목들로부터 색상을 선형적으로 보간합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:221
+msgid ""
+"discrete (``Discrete``): the color is taken from the closest color map entry"
+" with equal or higher value"
+msgstr ""
+"불연속 (``Discrete``): 픽셀 값 이상의 값을 가진 색상표 항목들 가운데 픽셀 값과 가장 가까이 있는 색상표 항목의 색상을 "
+"사용합니다."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:223
+msgid ""
+"exact (``Exact``): the color is not interpolated, only pixels with values "
+"equal to color map entries will be drawn"
+msgstr "정확 (``Exact``): 색상을 보간하지 않고, 색상표 항목들과 동등한 값을 가진 픽셀들만 그릴 것입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:226
+msgid ""
+"In the second step we will associate this shader with the raster layer:"
+msgstr "두 번째 단계에서는 래스터 레이어에 이 셰이더를 할당할 것입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:233
+msgid ""
+"The number ``1`` in the code above is the band number (raster bands are "
+"indexed from one)."
+msgstr "앞의 코드에 있는 숫자 ``1`` 은 밴드 번호입니다. (래스터 밴드의 인덱스는 1부터 시작합니다.)"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:236
+msgid ""
+"Finally we have to use the :meth:`triggerRepaint() "
+"<qgis.core.QgsMapLayer.triggerRepaint>` method to see the results:"
+msgstr ""
+"마지막으로 결과물을 보려면 :meth:`triggerRepaint() "
+"<qgis.core.QgsMapLayer.triggerRepaint>` 메소드를 사용해야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:248
+msgid "Multi Band Rasters"
+msgstr "다중 밴드 래스터"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:250
+msgid ""
+"By default, QGIS maps the first three bands to red, green and blue to create"
+" a color image (this is the ``MultiBandColor`` drawing style). In some cases"
+" you might want to override these setting. The following code interchanges "
+"red band (1) and green band (2):"
+msgstr ""
+"QGIS는 컬러 이미지를 생성하기 위해 기본적으로 처음 3개의 밴드를 적색, 녹색, 청색으로 매핑합니다. (이를 "
+"``MultiBandColor`` 그리기 스타일이라 합니다.) 그러나 이 설정을 무시하고 싶은 경우가 있을 수도 있습니다. 다음은 적색 "
+"밴드(1)와 녹색 밴드(2)를 교환하는 코드입니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:261
+msgid ""
+"In case only one band is necessary for visualization of the raster, single "
+"band drawing can be chosen, either gray levels or pseudocolor."
+msgstr "래스터를 가시화하는 데 밴드 하나만 필요한 경우, 단일 밴드 그리기를 회색조 또는 의사 색상 가운데 하나로 선택하면 됩니다."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:264
+msgid ""
+"We have to use :meth:`triggerRepaint() "
+"<qgis.core.QgsMapLayer.triggerRepaint>` to update the map and see the "
+"result:"
+msgstr ""
+"맵을 업데이트해서 결과물을 보려면 :meth:`triggerRepaint() "
+"<qgis.core.QgsMapLayer.triggerRepaint>` 메소드를 사용해야 합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:278
+msgid "Query Values"
+msgstr "값 쿼리하기"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:280
+msgid ""
+"Raster values can be queried using the :meth:`sample() "
+"<qgis.core.QgsRasterDataProvider.sample>` method of the "
+":class:`QgsRasterDataProvider <qgis.core.QgsRasterDataProvider>` class. You "
+"have to specify a :class:`QgsPointXY <qgis.core.QgsPointXY>` and the band "
+"number of the raster layer you want to query. The method returns a tuple "
+"with the value and :const:`True` or :const:`False` depending on the results:"
+msgstr ""
+":class:`QgsRasterDataProvider <qgis.core.QgsRasterDataProvider>` 클래스의 "
+":meth:`sample() <qgis.core.QgsRasterDataProvider.sample>` 메소드를 사용하면 래스터 값을 "
+"쿼리할 수 있습니다. :class:`QgsPointXY <qgis.core.QgsPointXY>` 클래스와 여러분이 쿼리하려는 래스터 "
+"레이어의 밴드 번호를 지정해야 합니다. 이 메소드는 래스터 값과 쿼리 결과에 따라 :const:`True` 또는 "
+":const:`False` 를 가진 투플(tuple)을 반환합니다:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:291
+msgid ""
+"Another method to query raster values is using the :meth:`identify() "
+"<qgis.core.QgsRasterDataProvider.identify>` method that returns a "
+":class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>` object."
+msgstr ""
+"래스터 값을 쿼리할 수 있는 또다른 메소드는 :class:`QgsRasterIdentifyResult "
+"<qgis.core.QgsRasterIdentifyResult>` 클래스 객체를 반환하는 :meth:`identify() "
+"<qgis.core.QgsRasterDataProvider.identify>` 메소드입니다."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:306
+msgid ""
+"In this case, the :meth:`results() "
+"<qgis.core.QgsRasterIdentifyResult.results>` method returns a dictionary, "
+"with band indices as keys, and band values as values. For instance, "
+"something like ``{1: 323.0}``"
+msgstr ""
+"이 경우, :meth:`results() <qgis.core.QgsRasterIdentifyResult.results>` 메소드가 밴드 "
+"인덱스를 키로 그리고 밴드 값을 값으로 가지는 목록(dictionary)을 반환합니다. 예를 들면 ``{1: 323.0}`` 같은 식으로"
+" 말이죠."
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:313
+msgid "Editing raster data"
+msgstr "래스터 데이터 편집하기"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:315
+msgid ""
+"You can create a raster layer using the :class:`QgsRasterBlock "
+"<qgis.core.QgsRasterBlock>` class. For example, to create a 2x2 raster block"
+" with one byte per pixel:"
+msgstr ""
+":class:`QgsRasterBlock <qgis.core.QgsRasterBlock>` 클래스를 사용하면 래스터 레이어를 생성할 수 "
+"있습니다. 예를 들어 픽셀 당 1바이트를 가진 2x2 래스터 블록을 생성하려면:"
+
+#: ../../docs/pyqgis_developer_cookbook/raster.rst:323
+msgid ""
+"Raster pixels can be overwritten thanks to the :meth:`writeBlock() "
+"<qgis.core.QgsRasterDataProvider.writeBlock>` method. To overwrite existing "
+"raster data at position 0,0 by the 2x2 block:"
+msgstr ""
+":meth:`writeBlock() <qgis.core.QgsRasterDataProvider.writeBlock>` 메소드 덕분에 "
+"래스터 픽셀을 덮어쓸 수 있습니다. 2x2 블록의 0,0 위치에 있는 기존 래스터 데이터를 덮어쓰려면:"

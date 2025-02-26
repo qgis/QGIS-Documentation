@@ -1,0 +1,3253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2024
+# Transifex Bot <>, 2024
+# Tomas Straupis, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-09 05:13+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Tomas Straupis, 2024\n"
+"Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Vertimas yra bendruomenės pastangos, prie kurių :ref:`jūs galite prisijungti"
+" <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
+"progress|."
+
+#: ../../docs/user_manual/map_views/map_view.rst:6
+msgid "2D Map View"
+msgstr "2D žemėlapio vaizdas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:14
+msgid ""
+"The 2D map view (also called **Map canvas**) is the central place where maps"
+" are displayed. QGIS opens by default with a single map view (called ``main "
+"map``), showing layers in 2D, and tightly bound to the :guilabel:`Layers` "
+"panel. That window reflects the rendering (symbology, labeling, "
+"visibilities...) you applied to the loaded layers."
+msgstr ""
+"2D žemėlapio vaizdas (dar vadinamas **Žemėlapio drobė**) yra pagrindinė "
+"vieta, kur rodomi žemėlapiai. QGIS pagal nutylėjimą atidaromas su vienu "
+"žemėlapio vaizdu (vadinamu ``pagrindiniu žemėlapiu``), kuriame sluoksniai "
+"rodomi 2D ir kuris glaudžiai susijęs su skydeliu :guilabel:`Sluoksniai`. Tas"
+" langas atspindi braižymą (simbologiją, užrašus, matomumus...), kurį jūs "
+"pritaikėte įkeltiems sluoksniams."
+
+#: ../../docs/user_manual/map_views/map_view.rst:26
+msgid "QGIS GUI"
+msgstr "QGIS naudotojo sąsaja"
+
+#: ../../docs/user_manual/map_views/map_view.rst:33
+msgid "Exploring the map view"
+msgstr "Žemėlapio vaizdo tyrinėjimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:35
+msgid ""
+"When you add a layer (see e.g. :ref:`opening_data`), QGIS automatically "
+"looks for its CRS. If a different CRS is set by default for the project (see"
+" :ref:`project_crs`) then the layer extent is \"on-the-fly\" translated to "
+"that CRS, and the map view is zoomed to that extent if you start with a "
+"blank QGIS project. If there are already layers in the project, no map "
+"canvas resize is performed, so only features falling within the current map "
+"canvas extent will be visible."
+msgstr ""
+"Kai pridedate sluoksnį (žr. :ref:`opening_data`), QGIS automatiškai ieško jo"
+" CRS. Jei pagal nutylėjimą projekte nustatytas kitas CRS (žr. "
+":ref:`project_crs`), tai sluoksnio apimtis yra automatiškai verčiama į tą "
+"CRS, o žemėlapio vaizdas yra keičiamas į tą apimtį, jei pradedate tuščiu "
+"QGIS projektu. Jei projekte jau yra sluoksnių, žemėlapio drobė niekaip "
+"nekeičiama, tik pasirodys geoobjektai, patenkantys į dabartinį rodinį."
+
+#: ../../docs/user_manual/map_views/map_view.rst:44
+msgid ""
+"Click on the map view and you should be able to interact with it, panning or"
+" zooming to different areas of the map. Dedicated tools are provided in the "
+":guilabel:`Navigation Toolbar` and in the :menuselection:`View` menu, with "
+"handful shortcuts from the keyboard or the mouse buttons."
+msgstr ""
+"Spauskite ant žemėlapio vaizdo ir turėtumėte galėti su juo santykiauti, "
+"pastumdami į kitą plotą ar pakeisdami mastelį. guilabel:`Navigacijos "
+"įrankinėje` ir meniu :menuselection:`Rodymas`  pateikiami reikiami įrankiai "
+"kartu su rinkiniu klavišų ar pelės mygtukų kombinacijų."
+
+#: ../../docs/user_manual/map_views/map_view.rst:51
+msgid "Map canvas navigation tools"
+msgstr "Žemėlapio drobės navigacijos įrankiai"
+
+#: ../../docs/user_manual/map_views/map_view.rst:56
+#: ../../docs/user_manual/map_views/map_view.rst:750
+msgid "Tool"
+msgstr "Įrankis"
+
+#: ../../docs/user_manual/map_views/map_view.rst:57
+#: ../../docs/user_manual/map_views/map_view.rst:750
+msgid "Usage"
+msgstr "Naudojimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:58
+msgid "|pan| :sup:`Pan Map`"
+msgstr "|pan| :sup:`Paslinkti žemėlapį`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1352
+msgid "pan"
+msgstr "pan"
+
+#: ../../docs/user_manual/map_views/map_view.rst:59
+msgid ""
+"Single left click: the map is centered on the clicked point, at the same "
+"scale"
+msgstr ""
+"Vienas kairys paspaudimas: žemėlapis centruojamas paspaustame taške tuo "
+"pačiu masteliu"
+
+#: ../../docs/user_manual/map_views/map_view.rst:60
+msgid "Hold down the left mouse button and drag the map canvas."
+msgstr "Laikykite paspaudę kairį pelės mygtuką ir tempkite žemėlapio drobę."
+
+#: ../../docs/user_manual/map_views/map_view.rst:62
+msgid "|zoomIn| :sup:`Zoom In`"
+msgstr "|zoomIn| :sup:`Didinti`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1413
+msgid "zoomIn"
+msgstr "zoomIn"
+
+#: ../../docs/user_manual/map_views/map_view.rst:63
+msgid ""
+"Single left click: the map is centered on the clicked point, while the scale"
+" gets doubled"
+msgstr ""
+"Vienas kairys paspaudimas: žemėlapis centruojamas paspaustame taške, o "
+"mastelis dvigubinamas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:65
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom in to "
+"an area."
+msgstr ""
+"Tempkite stačiakampį žemėlapio drobėje su kairiu pelės mygtuku, kad "
+"padidintumėte plotą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:67
+msgid ""
+"Hold the :kbd:`Alt` key to switch to the |zoomOut| :sup:`Zoom Out` tool."
+msgstr ""
+"Laikykite mygtuką :kbd:`Alt`, kad persijungtumėte į įrankį |zoomOut| "
+":sup:`Mažinti`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1419
+msgid "zoomOut"
+msgstr "zoomOut"
+
+#: ../../docs/user_manual/map_views/map_view.rst:69
+msgid "|zoomOut| :sup:`Zoom Out`"
+msgstr "|zoomOut| :sup:`Mažinti`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:70
+msgid ""
+"Single left click: the map is centered on the clicked point, while the scale"
+" gets halved"
+msgstr ""
+"Vienas kairys paspaudimas: žemėlapis centruojamas paspaustame taške, o "
+"mastelis mažinamas per pusę"
+
+#: ../../docs/user_manual/map_views/map_view.rst:72
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom out "
+"from an area."
+msgstr ""
+"Tempkite stačiakampį žemėlapio drobėje su kairiu pelės mygtuku, kad "
+"sumažintumėte plotą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:74
+msgid "Hold the :kbd:`Alt` key to switch to the |zoomIn| :sup:`Zoom In` tool."
+msgstr ""
+"Laikykite mygtuką :kbd:`Alt`, kad persijungtumėte į įrankį |zoomIn| "
+":sup:`Didinti`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:76
+msgid "|panToSelected| :sup:`Pan Map to Selection`"
+msgstr "|panToSelected| :sup:`Pastumti žemėlapį ties žymėjimu`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1354
+msgid "panToSelected"
+msgstr "panToSelected"
+
+#: ../../docs/user_manual/map_views/map_view.rst:77
+msgid ""
+"Pan the map to the selected features of all the selected layers in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Pastumti žemėlapį link visų skydelyje :guilabel:`Sluoksniai` pažymėtų "
+"sluoksnių pažymėtų geoobjektų."
+
+#: ../../docs/user_manual/map_views/map_view.rst:79
+msgid "|zoomToSelected| :sup:`Zoom To Selection`"
+msgstr "|zoomToSelected| :sup:`Didinti iki pažymėjimo`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1425
+msgid "zoomToSelected"
+msgstr "zoomToSelected"
+
+#: ../../docs/user_manual/map_views/map_view.rst:80
+msgid ""
+"Zoom to the selected features of all the selected layers in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Padidinti skydelyje :guilabel:`Sluoksniai` pažymėtų sluoksnių pažymėtus "
+"geoobjektus."
+
+#: ../../docs/user_manual/map_views/map_view.rst:83
+#: ../../docs/user_manual/map_views/map_view.rst:88
+#: ../../docs/user_manual/map_views/map_view.rst:100
+msgid "*Also available in the layer contextual menu*"
+msgstr "*Taipogi prieinama per sluoksnio kontekstinį meniu*"
+
+#: ../../docs/user_manual/map_views/map_view.rst:84
+msgid "|zoomToLayer| :sup:`Zoom To Layer(s)`"
+msgstr "|zoomToLayer| :sup:`Didinti iki sluoksnio`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1423
+msgid "zoomToLayer"
+msgstr "zoomToLayer"
+
+#: ../../docs/user_manual/map_views/map_view.rst:85
+msgid ""
+"Zoom to the extent of all the selected layers in the :guilabel:`Layers` "
+"panel."
+msgstr ""
+"Didinti iki visų skydelyje :guilabel:`Sluoksniai` pažymėtų sluoksnių "
+"apimties."
+
+#: ../../docs/user_manual/map_views/map_view.rst:89
+msgid "|zoomFullExtent| :sup:`Zoom Full`"
+msgstr "|zoomFullExtent| :sup:`Pilnai padidinti`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1411
+msgid "zoomFullExtent"
+msgstr "zoomFullExtent"
+
+#: ../../docs/user_manual/map_views/map_view.rst:90
+msgid ""
+"Zoom to the extent of all the layers in the project or to the :ref:`project "
+"full extent <project_full_extent>`."
+msgstr ""
+"Didinti iki visų projekto sluoksnių apimties arba iki :ref:`pilnos projekto "
+"apimties <project_full_extent>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:92
+msgid "|zoomLast| :sup:`Zoom Last`"
+msgstr "|zoomLast| :sup:`Didinti praėjusį`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1415
+msgid "zoomLast"
+msgstr "zoomLast"
+
+#: ../../docs/user_manual/map_views/map_view.rst:93
+msgid "Zoom the map to the previous extent in history."
+msgstr "Didina žemėlapį iki paskutinės naudotos apimties."
+
+#: ../../docs/user_manual/map_views/map_view.rst:94
+msgid "|zoomNext| :sup:`Zoom Next`"
+msgstr "|zoomNext| :sup:`Didinti kitą`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1417
+msgid "zoomNext"
+msgstr "zoomNext"
+
+#: ../../docs/user_manual/map_views/map_view.rst:95
+msgid "Zoom the map to the next extent in history."
+msgstr "Didinti žemėlapį iki kitos naudotos apimties."
+
+#: ../../docs/user_manual/map_views/map_view.rst:96
+msgid "|zoomActual| :sup:`Zoom to Native Resolution`"
+msgstr "|zoomActual| :sup:`Didinti iki savos rezoliucijos`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1409
+msgid "zoomActual"
+msgstr "zoomActual"
+
+#: ../../docs/user_manual/map_views/map_view.rst:97
+msgid ""
+"Zoom the map to a level where one pixel of the active raster layer covers "
+"one screen pixel."
+msgstr ""
+"Didinti žemėlapį iki tokio mastelio, kur vienas aktyvaus rastro sluoksnio "
+"pikselis dengia vieną ekrano pikselį."
+
+#: ../../docs/user_manual/map_views/map_view.rst:101
+msgid "Mouse wheel"
+msgstr "Pelės ratukas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:102
+msgid "Pan map: Hold and drag the mouse wheel."
+msgstr "Stumti žemėlapį: laikykite ir tempkite pelės ratuką."
+
+#: ../../docs/user_manual/map_views/map_view.rst:103
+msgid ""
+"Zoom: Roll the mouse wheel to zoom in or zoom out. With :kbd:`Ctrl` key "
+"pressed while rolling the mouse wheel results in a finer zoom."
+msgstr ""
+"Didinti: sukite pelės ratuką kad keistumėte mastelį. Laikant paspaudus "
+":kbd:`Ctrl` kol sukamas ratukas, mastelis bus keičiamas glotniau."
+
+#: ../../docs/user_manual/map_views/map_view.rst:106
+msgid ""
+"Press the back or forward button to browse the map canvas zoom history."
+msgstr ""
+"Spauskite mygtukus atgal ir pirmyn, kad naršytumėte žemėlapio drobės "
+"priartinimo istoriją."
+
+#: ../../docs/user_manual/map_views/map_view.rst:107
+msgid "Keyboard"
+msgstr "Klaviatūra"
+
+#: ../../docs/user_manual/map_views/map_view.rst:108
+msgid ""
+"Pan map: Hold down the :kbd:`Space` key and move the mouse. Press the arrow "
+"keys to pan up, down, left and right."
+msgstr ""
+"Stumti žemėlapį: laikykite paspaudę mygtuką :kbd:`Tarpas` ir judinkite pelę."
+" Spauskite rodyklių mygtukus, kad stumtumėte žemėlapį aukštyn, žemyn, kairėn"
+" ir dešinėn."
+
+#: ../../docs/user_manual/map_views/map_view.rst:110
+msgid "Zoom in: Press :kbd:`PgUp` or :kbd:`Ctrl++`"
+msgstr "Priartinti: Spauskite :kbd:`PgUp` ar :kbd:`Ctrl++`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:111
+msgid "Zoom out: Press :kbd:`PgDown` or :kbd:`Ctrl+-`"
+msgstr "Nutolinti: Spauskite :kbd:`PgDown` ar :kbd:`Ctrl+-`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:112
+msgid ""
+"Zoom to area: When certain map tools are active (Identify, Measure...), hold"
+" down :kbd:`Shift` and drag a rectangle on the map to zoom to that area. Not"
+" compatible with active selection or edit tools."
+msgstr ""
+"Priartinti plotą: Kai aktyvūs kokie nors žemėlapio įrankiai "
+"(Identifikavimas, Matavimas...), laikykite paspaudę :kbd:`Shift` ir tempkite"
+" stačiakampį ant žemėlapio, kad priartintumėte plotą. Nesuderinama su "
+"aktyviu parinkimu ar redagavimo įrankiais."
+
+#: ../../docs/user_manual/map_views/map_view.rst:116
+msgid ""
+"Right-click over the map and you should be able to |editCopy| "
+":guilabel:`Copy coordinates` of the clicked point in the map CRS, in WGS84 "
+"or in a custom CRS. The copied information can then be pasted in an "
+"expression, a script, text editor or spreadsheet..."
+msgstr ""
+"Spauskite dešinį pelės mygtuką žemėlapyje ir turėtumėte galėti |editCopy| "
+":guilabel:`Kopijuoti koordinates` paspausto taško žemėlapio CRS, WGS84 arba "
+"savo CRS. Nukopijuota informacija vėliau gali būti įkelta į išraišką, "
+"scenarijų, tekstinį redaktorių ar skaičiuoklę..."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1324
+msgid "editCopy"
+msgstr "editCopy"
+
+#: ../../docs/user_manual/map_views/map_view.rst:127
+msgid "Controlling map rendering"
+msgstr "Žemėlapio braižymo kontrolė"
+
+#: ../../docs/user_manual/map_views/map_view.rst:129
+msgid ""
+"By default, QGIS renders all visible layers whenever the map canvas is "
+"refreshed. The events that trigger a refresh of the map canvas include:"
+msgstr ""
+"Pagal nutylėjimą QGIS braižo visus matomus sluoksnius, kai tik atnaujinama "
+"žemėlapio drobė. Įvykiai, kurie sukelia žemėlapio drobės atnaujinimą:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:132
+msgid "changing the visibility of a layer"
+msgstr "sluoksnio matomumo keitimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:133
+msgid "modifying symbology of a visible layer"
+msgstr "matomo sluoksnio simbologijos keitimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:134
+msgid "adding a layer"
+msgstr "sluoksnio pridėjimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:135
+msgid "panning or zooming"
+msgstr "pastūmimas ar mastelio keitimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:136
+msgid "resizing the QGIS window"
+msgstr "QGIS lango dydžio keitimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:138
+msgid "QGIS allows you to control the rendering process in a number of ways."
+msgstr "QGIS leidžia jums valdyti braižymo procesą keliais būdais."
+
+#: ../../docs/user_manual/map_views/map_view.rst:140
+msgid "at the :ref:`global level <rendering_options>`"
+msgstr ":ref:`globaliame lygyje <rendering_options>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:141
+msgid ""
+"per layer, using e.g. the :ref:`scale dependent rendering "
+"<label_scaledepend>`"
+msgstr ""
+"sluoksniui, naudojant pvz. :ref:`nuo mastelio priklausomą braižymą "
+"<label_scaledepend>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:142
+msgid "or with dedicated tools in the GUI."
+msgstr "arba tam skirtais GUI įrankiais."
+
+#: ../../docs/user_manual/map_views/map_view.rst:144
+msgid ""
+"To stop the map drawing, press the :kbd:`Esc` key. This will halt the "
+"refresh of the map canvas and leave the map partially drawn. It may however "
+"take a bit of time after pressing :kbd:`Esc` for the map drawing to halt."
+msgstr ""
+"Norėdami sustabdyti žemėlapio braižymo procesą spauskite mygtuką :kbd:`Esc`."
+" Taip bus sustabdytas žemėlapio drobės atnaujinimas ir žemėlapis bus "
+"paliktas dalinai nubraižytas. Po :kbd:`Esc` paspaudimo gali užtrukti šiek "
+"tiek laiko iki braižymo sustojimo."
+
+#: ../../docs/user_manual/map_views/map_view.rst:148
+msgid ""
+"To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in "
+"the bottom-right corner of the status bar. When |checkbox| "
+":guilabel:`Render` is unchecked, QGIS does not redraw the canvas in response"
+" to any of the usual triggers mentioned earlier. Examples of when you might "
+"want to suspend rendering include:"
+msgstr ""
+"Norėdami sustabdyti braižymą, spauskite būsenos juostos apatiniame dešiniame"
+" kampe esančią varnelę |checkbox| :guilabel:`Braižyti`. Išjungus varnelę "
+"|checkbox| :guilabel:`Braižyti`, QGIS nebeperpaišo drobės po bet kurios iš "
+"aukščiau minėtų priežasčių. Situacijos, kada jums gali prireikti sustabdyti "
+"braižymą:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1316
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/map_views/map_view.rst:154
+msgid "adding many layers and symbolizing them prior to drawing"
+msgstr "pridėjus daug sluoksnių ir simbolizuojant juos iki braižymo"
+
+#: ../../docs/user_manual/map_views/map_view.rst:155
+msgid ""
+"adding one or more large layers and setting scale dependency before drawing"
+msgstr ""
+"pridėjus vieną ar daugiau didelių sluoksnių ir nustačius mastelių "
+"priklausomybę iki braižymo"
+
+#: ../../docs/user_manual/map_views/map_view.rst:156
+msgid ""
+"adding one or more large layers and zooming to a specific view before "
+"drawing"
+msgstr ""
+"pridėjus vieną ar daugiau didelių sluoksnių ir keičiant mastelį iki reikiamo"
+" prieš braižant"
+
+#: ../../docs/user_manual/map_views/map_view.rst:157
+msgid "any combination of the above"
+msgstr "bet kokia aukščiau paminėtų situacijų kombinacija"
+
+#: ../../docs/user_manual/map_views/map_view.rst:159
+msgid ""
+"Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and "
+"causes an immediate refresh of the map canvas."
+msgstr ""
+"Įjungus varnelę |checkbox| :guilabel:`Braižyti` įjungiamas braižymas bei iš "
+"karto atnaujinama žemėlapio drobė."
+
+#: ../../docs/user_manual/map_views/map_view.rst:166
+msgid "Time-based control on the map canvas"
+msgstr "Nuo laiko priklausantis žemėlapio drobės valdymas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:168
+msgid ""
+"QGIS can handle temporal control on loaded layers, i.e. modify the map "
+"canvas rendering based on a time variation. To achieve this, you need:"
+msgstr ""
+"QGIS gali valdyti įkeltus sluoksnius pagal laiką, t.y. keisti žemėlapio "
+"drobę, braižant priklausomai nuo laiko kitimo. Norėdami tai pasiekti, jums "
+"reikia:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:171
+msgid ""
+"Layers that have dynamic temporal properties set. QGIS supports temporal "
+"control for different data providers, with custom settings. It's mainly "
+"about setting the time range in which the layer would display:"
+msgstr ""
+"Sluoksnių, kurie turi nustatytas dinamines laiko savybes. QGIS palaiko laiko"
+" valdymą skirtingiems duomenų tiekėjams su savais nustatymais. Svarbiausia "
+"nustatyti laiko periodą, kuriame sluoksnyje rodoma:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:175
+msgid ""
+":ref:`raster layers <raster_temporal>`: controls whether to display or not "
+"the layer."
+msgstr ""
+":ref:`rastro sluoksniai <raster_temporal>`: valdo rodyti ar nerodyti "
+"sluoksnį."
+
+#: ../../docs/user_manual/map_views/map_view.rst:177
+msgid ""
+":ref:`WMTS layers <wmts_temporal>`: controls whether the data should be "
+"rendered based on a static time range or following a dynamic temporal range"
+msgstr ""
+":ref:`WMTS sluoksniai <wmts_temporal>`: valdo ar duomenys turi būti braižomi"
+" pagal statinį laiko diapazoną arba seka dinaminį laiko diapazoną"
+
+#: ../../docs/user_manual/map_views/map_view.rst:179
+msgid ""
+":ref:`vector layers <vectortemporalmenu>`: features are filtered based on "
+"time values associated to their attributes"
+msgstr ""
+":ref:`vektoriniai sluoksniai <vectortemporalmenu>`: geoobjektai filtruojami "
+"priklausomai nuo susijusių laiko reikšmių atributuose"
+
+#: ../../docs/user_manual/map_views/map_view.rst:181
+msgid ""
+":ref:`mesh layers <meshtemporal>`: displays dynamically the active dataset "
+"groups values"
+msgstr ""
+":ref:`tinklelio sluoksniai <meshtemporal>`: dinamiškai rodo aktyvios duomenų"
+" aibės grupės reikšmes"
+
+#: ../../docs/user_manual/map_views/map_view.rst:184
+msgid ""
+"When dynamic temporal options are enabled for a layer, an "
+"|indicatorTemporal| icon is displayed next to the layer in the "
+":guilabel:`Layers` panel to remind you that the layer is temporally "
+"controlled. Click the icon to update the temporal settings."
+msgstr ""
+"Įjungus sluoksniui dinamines laiko parinktis, |indicatorTemporal| piktograma"
+" rodoma greta sluoksnio :guilabel:`Sluoksnių` skydelyje, kad primintų jums, "
+"kad sluoksnis valdomas pagal laiką. Spauskite piktogramą, jei norite keisti "
+"laiko nustatymus."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1332
+msgid "indicatorTemporal"
+msgstr "indicatorTemporal"
+
+#: ../../docs/user_manual/map_views/map_view.rst:189
+msgid ""
+"Enable the temporal navigation of the map canvas using the :ref:`Temporal "
+"controller panel <temporal_controller>`. The panel is activated:"
+msgstr ""
+"Įjunkite laiko navigaciją žemėlapio drobėje naudodami skydelį :ref:`Laiko "
+"valdymas <temporal_controller>`. Skydelis įjungiamas:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:192
+msgid ""
+"using the |temporal| :sup:`Temporal controller panel` icon located in the "
+":guilabel:`Map Navigation` toolbar"
+msgstr ""
+"naudojant piktogramą |temporal| :sup:`Laiko valdymo skydelis`, kurią rasite "
+":guilabel:`Žemėlapio navigacijos` įrankinėje"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1391
+msgid "temporal"
+msgstr "temporal"
+
+#: ../../docs/user_manual/map_views/map_view.rst:194
+msgid ""
+"or from the :menuselection:`View --> Panels --> Temporal controller panel` "
+"menu"
+msgstr ""
+"arba per meniu :menuselection:`Nustatymai --> Skydeliai --> Laiko valdymas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:200
+msgid "The temporal controller panel"
+msgstr "Laiko valdymo skydelis"
+
+#: ../../docs/user_manual/map_views/map_view.rst:202
+msgid "The :guilabel:`Temporal controller` panel has the following modes:"
+msgstr ":guilabel:`Laiko valdymo` skydelis turi šiuos režimus:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:207
+msgid "Temporal Controller Panel in navigation mode"
+msgstr "Laiko valdymo skydelis navigacijos režime"
+
+#: ../../docs/user_manual/map_views/map_view.rst:209
+msgid ""
+"|temporalNavigationOff| :sup:`Turn off temporal navigation`: all the "
+"temporal settings are disabled and visible layers are rendered as usual"
+msgstr ""
+"|temporalNavigationOff| :sup:`Išjungti laiko navigaciją`: visi laiko "
+"nustatymai išjungiami ir matomi sluoksniai braižomi kaip įprasta"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1397
+msgid "temporalNavigationOff"
+msgstr "temporalNavigationOff"
+
+#: ../../docs/user_manual/map_views/map_view.rst:211
+msgid ""
+"|temporalNavigationFixedRange| :sup:`Fixed range temporal navigation`: a "
+"time range is set and only layers (or features) whose temporal range "
+"overlaps with this range are displayed on the map."
+msgstr ""
+"|temporalNavigationFixedRange| :sup:`Fiksuoto diapazono laiko navigacija`: "
+"nustatomas laiko diapazonas ir tik sluoksniai (ar geoobjektai), kurių laiko "
+"diapazonas persidengia su šituo diapazonu yra braižomi žemėlapyje."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1395
+msgid "temporalNavigationFixedRange"
+msgstr "temporalNavigationFixedRange"
+
+#: ../../docs/user_manual/map_views/map_view.rst:214
+msgid ""
+"|temporalNavigationAnimated| :sup:`Animated temporal navigation`: a time "
+"range is set, split into steps, and only layers (or features) whose temporal"
+" range overlaps with each frame are displayed on the map"
+msgstr ""
+"|temporalNavigationAnimated| :sup:`Animuota laiko navigacija`: nustatomas "
+"laiko diapazonas, padalintas į žingsnius ir tik sluoksniai (ar geoobjektai),"
+" kurių laiko diapazonas persidengia su kiekvienu kadru braižomi žemėlapyje"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1393
+msgid "temporalNavigationAnimated"
+msgstr "temporalNavigationAnimated"
+
+#: ../../docs/user_manual/map_views/map_view.rst:217
+msgid "|settings| :sup:`Settings` for general control of the animation"
+msgstr "|settings| :sup:`Nustatymai` bendram animacijos valdymui"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1377
+msgid "settings"
+msgstr "settings"
+
+#: ../../docs/user_manual/map_views/map_view.rst:219
+msgid ":guilabel:`Frames rate`: number of steps that are shown per second"
+msgstr ":guilabel:`Kadrų dažnis`: per sekundę parodomų žingsnių skaičius"
+
+#: ../../docs/user_manual/map_views/map_view.rst:221
+msgid ""
+"|unchecked| :guilabel:`Cumulative range`: all animation frames will have the"
+" same start date-time but different end dates and times. This is useful if "
+"you wish to accumulate data in your temporal visualization instead of "
+"showing a ‘moving time window’ across your data."
+msgstr ""
+"|unchecked| :guilabel:`Kaupiamasis diapazonas`: visi animacijos kadrai turės"
+" tą pačią pradžios datą ir laiką, bet skirtingas pabaigos datas ir laikus. "
+"Tai naudinga, jei norite akumuliuoti duomenis jūsų laiko vizualizacijoje, o "
+"ne rodyti per jūsų duomenis „judantį laiko langą“."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1407
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/map_views/map_view.rst:229
+msgid "Animating a temporal navigation"
+msgstr "Laiko navigacijos animacija"
+
+#: ../../docs/user_manual/map_views/map_view.rst:231
+msgid ""
+"An animation is based on a varying set of visible layers at particular times"
+" within a time range. To create a temporal animation:"
+msgstr ""
+"Animacija remiasi skirtingais matomų sluoksnių rinkiniais konkrečiu laiku "
+"laiko diapazone. Norėdami sukurti laiko animaciją:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:235
+msgid ""
+"Toggle on the |temporalNavigationAnimated| :sup:`Animated temporal "
+"navigation`, displaying the animation player widget"
+msgstr ""
+"Įjunkite |temporalNavigationAnimated| :sup:`Animuota laiko navigacija`, kad "
+"būtų parodytas animacijos grotuvo valdiklis"
+
+#: ../../docs/user_manual/map_views/map_view.rst:237
+msgid ""
+"Enter the :guilabel:`Time range` to consider. Using the |refresh| button, "
+"this can be defined as:"
+msgstr ""
+"Įveskite reikiamą :guilabel:`Animacijos diapazoną`. Naudojant mygtuką "
+"|refresh|, jį galima apibrėžti kaip:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1362
+msgid "refresh"
+msgstr "refresh"
+
+#: ../../docs/user_manual/map_views/map_view.rst:240
+msgid ":guilabel:`Set to full range` of all the time enabled layers"
+msgstr ":guilabel:`Nustatyti pilną diapazoną` pagal visus sluoksnius su laiku"
+
+#: ../../docs/user_manual/map_views/map_view.rst:241
+msgid ""
+":guilabel:`Set to preset project range` as defined in the :ref:`project "
+"properties <project_temporal>`"
+msgstr ""
+":guilabel:`Nustatyti į išankstinį projekto diapazoną` kaip nurodyta "
+":ref:`projekto nustatymuose <project_temporal>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:243
+msgid ""
+":guilabel:`Set to single layer's range` taken from a time-enabled layer"
+msgstr ""
+":guilabel:`Nustatyti į vieno sluoksnio diapazoną`, paimtą iš sluoksnio su "
+"laiku"
+
+#: ../../docs/user_manual/map_views/map_view.rst:244
+msgid ""
+"Fill in the time :guilabel:`Step` to split the time range. Different units "
+"are supported, from ``seconds`` to ``centuries``. A ``source timestamps`` "
+"option is also available as step: when selected, this causes the temporal "
+"navigation to step between all available time ranges from layers in the "
+"project. It’s useful when a project contains layers with non-contiguous "
+"available times, such as a WMS-T service which provides images that are "
+"available at irregular dates. This option will allow you to only step "
+"between time ranges where the next available image is shown."
+msgstr ""
+"Įrašykite :guilabel:`žingsnį` laiko diapazono dalinimui. Palaikomi keli "
+"skirtingi matavimo vienetai, nuo ``milisekundžių`` iki ``amžių``. Yra ir "
+"``šaltinio laiko`` variantas, kurį parinkus laiko navigacija naudoja visus "
+"galimus projekto sluoksnio laiko diapazonus. Tai naudinga, kai projekte yra "
+"sluoksniai su laiko trūkiais, pavyzdžiui WMS-T paslauga, kuri teikia "
+"nuotraukas nepastoviomis datomis. Ši parinktis taipogi leidžia jums žengti "
+"tik per laiko diapazonus, kai rodomas kita turima nuotrauka."
+
+#: ../../docs/user_manual/map_views/map_view.rst:253
+msgid ""
+"Click the |play| button to preview the animation. QGIS will generate scenes "
+"using the layers rendering at the set times. Layers display depends on "
+"whether they overlap any individual time frame."
+msgstr ""
+"Spauskite mygtuką |play| norėdami peržiūrėti animaciją. QGIS sukurs scenas "
+"braižant sluoksnius nurodytais laikais. Sluoksnių rodymas priklauso nuo to, "
+"ar jie persidengia su konkrečiu laiko kadru."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1356
+msgid "play"
+msgstr "play"
+
+#: ../../docs/user_manual/map_views/map_view.rst:262
+msgid "Temporal navigation through a layer"
+msgstr "Laiko navigacija per sluoksnį"
+
+#: ../../docs/user_manual/map_views/map_view.rst:264
+msgid ""
+"The animation can also be previewed by moving the time slider. Checking the "
+"|unchecked| :guilabel:`Loop` checkbox will repeatedly run the animation "
+"while clicking |play| stops a running animation. A full set of video player "
+"buttons is available."
+msgstr ""
+"Animaciją taipogi galima peržiūrėti tempiant laiko slankiklį. Pažymėjus "
+"varnelę |unchecked| :guilabel:`Ciklas`, animacija suksis pakartotinai, kol "
+"bus paspaustas |play| animacijos sustabdymui. Pateikiamas pilnas video "
+"grotuvo mygtukų rinkinys."
+
+#: ../../docs/user_manual/map_views/map_view.rst:269
+msgid ""
+"Horizontal scrolling using the mouse wheel (where supported) with the cursor"
+" on the map canvas will also allow you to navigate, or “scrub”, the temporal"
+" navigation slider backwards and forwards."
+msgstr ""
+"Horizontalus slinkimas su pelės ratuku (kai palaikoma) su žymekliu ant "
+"žemėlapio drobės taipogi leis jums naviguoti arba slinkti laiko navigacijos "
+"slankiklį atgal ir pirmyn."
+
+#: ../../docs/user_manual/map_views/map_view.rst:273
+msgid ""
+"Click the |fileSave| :sup:`Export animation` button if you want to generate "
+"a series of images representing the scene. They can be later combined in a "
+"video editor software:"
+msgstr ""
+"Spauskite mygtuką |fileSave| :sup:`Eksportuoti animaciją`, jei norite "
+"sukurti sceną reprezentuojančią eilę piešinių. Juos vėliau galima sujungti "
+"naudojant vaizdo redagavimo programinę įrangą:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1326
+msgid "fileSave"
+msgstr "fileSave"
+
+#: ../../docs/user_manual/map_views/map_view.rst:280
+msgid "Exporting map canvas animation scenes to images"
+msgstr "Žemėlapio drobės animacijos scenų eksportavimas į piešinius"
+
+#: ../../docs/user_manual/map_views/map_view.rst:282
+msgid ""
+"The filename :guilabel:`Template`: the ``####`` are replaced with frame "
+"sequence number"
+msgstr ""
+"Failo pavadinimo :guilabel:`Šablonas`: ``####`` bus pakeisti kadro sekos "
+"numeriu"
+
+#: ../../docs/user_manual/map_views/map_view.rst:284
+msgid "The :guilabel:`Output directory`"
+msgstr ":guilabel:`Išvesties aplankas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:285
+msgid "Under :guilabel:`Map settings`, you can:"
+msgstr ":guilabel:`Žemėlapio nustatymų` skiltyje jūs galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:287
+msgid "redefine the :ref:`spatial extent <extent_selector>` to use"
+msgstr "nustatyti naudojamą :ref:`erdvinę apimtį <extent_selector>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:288
+msgid ""
+"control the :guilabel:`Resolution` of the image (:guilabel:`Output width` "
+"and :guilabel:`Output height`)"
+msgstr ""
+"valdyti piešinių :guilabel:`Rezoliuciją` (:guilabel:`Išvesties plotį` ir "
+":guilabel:`Išvesties aukštį`)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:290
+msgid ""
+":guilabel:`Draw active decorations`: whether active :ref:`decorations "
+"<decorations>` should be kept in the output"
+msgstr ""
+":guilabel:`Paišyti aktyvias dekoracijas`: nurodo ar aktyvios "
+":ref:`dekoracijos <decorations>` turėtų būti įtraukiamos į išvestį"
+
+#: ../../docs/user_manual/map_views/map_view.rst:292
+msgid "Under :guilabel:`Temporal settings`, you can redefine:"
+msgstr ":guilabel:`Laiko nustatymų` skiltyje, jūs galite nurodyti:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:294
+msgid "the time :guilabel:`Range` for the animation"
+msgstr "animacijos :guilabel:`Ribas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:295
+msgid "the :guilabel:`Step (frame length)` in the unit of your choice"
+msgstr ":guilabel:`Žingsnį (kadro ilgį)` jūsų pasirinktais vienetais"
+
+#: ../../docs/user_manual/map_views/map_view.rst:304
+msgid "Bookmarking extents on the map"
+msgstr "Žemėlapio apimčių žymelės"
+
+#: ../../docs/user_manual/map_views/map_view.rst:306
+msgid ""
+"Spatial Bookmarks allow you to \"bookmark\" a geographic location and return"
+" to it later. By default, bookmarks are saved in the user's profile (as "
+":guilabel:`User Bookmarks`), meaning that they are available from any "
+"project the user opens. They can also be saved for a single project (named "
+":guilabel:`Project Bookmarks`) and stored within the project file, which can"
+" be helpful if the project is to be shared with other users."
+msgstr ""
+"Erdvinės žymelės leidžia jums „pasižymėti“ geografinę vietą ir grįžti į ją "
+"vėliau. Pagal nutylėjimą žymelės įrašomos į naudotojo profilį (kaip "
+":guilabel:`Naudotojo žymelės`), tai reiškia, kad jos matomos visuose "
+"naudotojo atvertuose projektuose. Jos taipogi gali būti įrašytos į konkretų "
+"projektą (kaip :guilabel:`Projekto žymelės`) ir laikomos projekto faile, tai"
+" gali būti naudinga, jei projektu dalinamasi su kitais naudotojais."
+
+#: ../../docs/user_manual/map_views/map_view.rst:314
+msgid "Creating a Bookmark"
+msgstr "Žymelės sukūrimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:316
+msgid "To create a bookmark:"
+msgstr "Norėdami sukurti žymelę:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:318
+msgid "Zoom and pan to the area of interest."
+msgstr "Pritraukite norimą vietą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:319
+msgid ""
+"Select the menu option :menuselection:`View -->` |newBookmark| "
+":menuselection:`New Spatial Bookmark...`, press :kbd:`Ctrl+B` or right-click"
+" the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the "
+":guilabel:`Browser` panel and select :guilabel:`New Spatial Bookmark`. The "
+":guilabel:`Bookmark Editor` dialog opens."
+msgstr ""
+"Parinkite meniu :menuselection:`Rodymas -->` |newBookmark| "
+":menuselection:`Nauja erdvinė žymelė...`, spauskite :kbd:`Ctrl+B` arba "
+"dešiniu mygtuku paspauskite |showBookmarks| :guilabel:`Erdvinių žymelių` "
+"įrašą :guilabel:`Naršyklės` skydelyje ir parinkite :guilabel:`Nauja erdvinė "
+"žymelė`. Atidaromas dialogas :guilabel:`Žymelių redaktorius`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1344
+msgid "newBookmark"
+msgstr "newBookmark"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1385
+msgid "showBookmarks"
+msgstr "showBookmarks"
+
+#: ../../docs/user_manual/map_views/map_view.rst:331
+msgid "The Bookmark Editor Dialog"
+msgstr "Žymelių redagavimo dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:333
+msgid "Enter a descriptive name for the bookmark"
+msgstr "Įveskite žymelę aprašantį pavadinimą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:334
+msgid "Enter or select a group name in which to store related bookmarks"
+msgstr ""
+"Įveskite ar parinkite pavadinimą grupės, kurioje reikia laikyti susijusias "
+"žymeles"
+
+#: ../../docs/user_manual/map_views/map_view.rst:335
+msgid ""
+"Select the extent of the area you wish to save, using the :ref:`extent "
+"selector <extent_selector>` widget"
+msgstr ""
+"Parinkite apimtį vietos, kurią norite įrašyti, naudodami valdiklį "
+":ref:`apimties parinkiklis <extent_selector>` widget"
+
+#: ../../docs/user_manual/map_views/map_view.rst:337
+msgid "Change the map :guilabel:`Rotation`"
+msgstr "Pakeiskite žemėlapio :guilabel:`Pasukimą`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:338
+msgid "Indicate the :guilabel:`CRS` to use for the extent"
+msgstr "Naudokite apimčiai naudojamą :guilabel:`CRS`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:339
+msgid ""
+"Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User "
+"Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list"
+" is set to :guilabel:`User Bookmarks`)"
+msgstr ""
+"Parinkite, ar žymelę :guilabel:`Įrašyti` į :guilabel:`Naudotojo žymeles` ar "
+":guilabel:`Projekto žymeles` (pagal nutylėjimą šio iškrentančio sąrašo "
+"reikšmė yra :guilabel:`Naudotojo žymelės`)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:342
+msgid "Press :guilabel:`Save` to add the bookmark to the list"
+msgstr "Spauskite :guilabel:`Įrašyti`, kad pridėtumėte žymelę į sąrašą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:344
+msgid "Note that you can have multiple bookmarks with the same name."
+msgstr "Pastebėtina, kad galite turėti kelias žymeles tokiu pačiu pavadinimu."
+
+#: ../../docs/user_manual/map_views/map_view.rst:347
+msgid "Working with Bookmarks"
+msgstr "Darbas su žymėlėmis"
+
+#: ../../docs/user_manual/map_views/map_view.rst:349
+msgid ""
+"To use and manage bookmarks, you can either use the :guilabel:`Spatial "
+"Bookmarks` panel or :guilabel:`Browser`."
+msgstr ""
+"Norėdami naudoti ir tvarkyti žymeles, jūs galite naudoti arba skydelį "
+":guilabel:`Erdvinės žymelės` arba :guilabel:`Naršyklę`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:352
+msgid ""
+"Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show "
+"Spatial Bookmark Manager` or press :kbd:`Ctrl+7` to open the "
+":guilabel:`Spatial Bookmarks Manager` panel. Select :menuselection:`View "
+"-->` |showBookmarks| :menuselection:`Show Bookmarks` or :kbd:`Ctrl+Shift+B` "
+"to show the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the "
+":guilabel:`Browser` panel."
+msgstr ""
+"Parinkite :menuselection:`Rodymas -->` |showBookmarks| "
+":menuselection:`Rodyti erdvinių žymelių tvarkyklę` arba spauskite "
+":kbd:`Ctrl+7`, kad atvertumėte skydelį :guilabel:`Erdvinių žymelių "
+"tvarkyklė`. Parinkite :menuselection:`Rodymas -->` |showBookmarks| "
+":menuselection:`Rodyti erdvines žymeles` arba :kbd:`Ctrl+Shift+B`, kad "
+"parodytumėte |showBookmarks| :guilabel:`Erdvinių žymelių` įrašą skydelyje "
+":guilabel:`Naršyklė`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:360
+msgid "You can perform the following tasks:"
+msgstr "Jūs galite vykdyti tokias užduotis:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:362
+msgid "Managing bookmark actions"
+msgstr "Žymelių valdymo veiksmai"
+
+#: ../../docs/user_manual/map_views/map_view.rst:367
+msgid "Task"
+msgstr "Užduotis"
+
+#: ../../docs/user_manual/map_views/map_view.rst:368
+msgid "Spatial Bookmark Manager"
+msgstr "Erdvinių žymėlių tvarkyklė"
+
+#: ../../docs/user_manual/map_views/map_view.rst:369
+msgid "Browser"
+msgstr "Naršyklė"
+
+#: ../../docs/user_manual/map_views/map_view.rst:370
+msgid "**Zoom to a Bookmark**"
+msgstr "**Priartinti žymelę**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:371
+msgid ""
+"Double-click on it, or select the bookmark and press the |zoomToBookmark| "
+":guilabel:`Zoom to bookmark` button."
+msgstr ""
+"Spauskite du kartus ant žymelės arba pažymėkite žymelę ir spauskite mygtuką "
+"|zoomToBookmark| :guilabel:`Didinti ties žymele`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1421
+msgid "zoomToBookmark"
+msgstr "zoomToBookmark"
+
+#: ../../docs/user_manual/map_views/map_view.rst:373
+msgid ""
+"Double-click on it, drag and drop it to the map canvas, or right-click the "
+"bookmark and select :guilabel:`Zoom to Bookmark`."
+msgstr ""
+"Spauskite du kartus ant žymelės arba tempkite ir numeskite ją į žemėlapio "
+"drobę, arba spauskite dešiniu mygtuku ant žymelės ir parinkite "
+":guilabel:`Didinti ties žymele`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:375
+msgid "**Delete a bookmark**"
+msgstr "**Trinti žymelę**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:376
+msgid ""
+"Select the bookmark and click the |deleteSelected| :guilabel:`Delete "
+"bookmark` button. Confirm your choice."
+msgstr ""
+"Parinkite žymelę ir spauskite mygtuką |deleteSelected| :guilabel:`Trinti "
+"erdvinę žymelę`. Patvirtinkite jūsų pasirinkimą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1322
+msgid "deleteSelected"
+msgstr "deleteSelected"
+
+#: ../../docs/user_manual/map_views/map_view.rst:378
+msgid ""
+"Right-click the bookmark and select :guilabel:`Delete Spatial Bookmark`. "
+"Confirm your choice."
+msgstr ""
+"Spauskite dešinį mygtuką ant žymelės ir parinkite :guilabel:`Trinti erdvinę "
+"žymelę`. Patvirtinkite jūsų pasirinkimą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:380
+msgid "**Export bookmarks to XML**"
+msgstr "**Eksportuoti žymeles į XML**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:381
+msgid ""
+"Click the |sharing| :guilabel:`Import/Export Bookmarks` button and select "
+"|sharingExport| :guilabel:`Export`. All the bookmarks (user or project) are "
+"saved in an xml file."
+msgstr ""
+"Spauskite mygtuką |sharing| :guilabel:`Importuoti/Eksportuoti žymeles` ir "
+"parinkite |sharingExport| :guilabel:`Eksportuoti`. Visos žymelės (naudotojo "
+"ar projekto) bus įrašytos į xml failą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1379
+msgid "sharing"
+msgstr "sharing"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1381
+msgid "sharingExport"
+msgstr "sharingExport"
+
+#: ../../docs/user_manual/map_views/map_view.rst:384
+msgid ""
+"Select one or more folders (user or project) or subfolders (groups), then "
+"right-click and select |sharingExport| :guilabel:`Export Spatial "
+"Bookmarks...`. The selected bookmark subset is saved."
+msgstr ""
+"Parinkite vieną ar daugiau aplankų (naudotojo ar projekto) arba poaplankius "
+"(grupes), tada spauskite dešiniu mygtuku ir parinkite |sharingExport| "
+":guilabel:`Eksportuoti erdvines žymeles...`. Įrašomas parinktas žymelių "
+"poaibis."
+
+#: ../../docs/user_manual/map_views/map_view.rst:387
+msgid "**Import bookmarks from XML**"
+msgstr "**Importuoti žymeles iš XML**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:388
+msgid ""
+"Click the |sharing| :guilabel:`Import/Export Bookmarks` button and select "
+"|sharingImport| :guilabel:`Import`. All bookmarks in the XML file are "
+"imported as user bookmarks."
+msgstr ""
+"Spauskite mygtuką |sharing| :guilabel:`Importuoti/Eksportuoti žymeles` ir "
+"parinkite |sharingImport| :guilabel:`Importuoti`. Visos žymelės XML faile "
+"importuojamos kaip naudotojo žymelės."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1383
+msgid "sharingImport"
+msgstr "sharingImport"
+
+#: ../../docs/user_manual/map_views/map_view.rst:391
+msgid ""
+"Right-click the :guilabel:`Spatial Bookmarks` entry or one of its folders "
+"(user or project) or subfolders (groups) to determine where to import the "
+"bookmarks, then select |sharingImport| :guilabel:`Import Spatial Bookmarks`."
+" If performed on the :guilabel:`Spatial Bookmarks` entry, the bookmarks are "
+"added to :guilabel:`User Bookmarks`."
+msgstr ""
+"Spauskite dešinį mygtuką ant :guilabel:`Erdvinės žymelės` arba vieno iš jo "
+"aplankų (naudotojo ar projekto) arba poaplankių (grupių), kad nurodytumėte, "
+"kur reikia importuoti žymeles. Tada parinkite |sharingImport| "
+":guilabel:`Importuoti erdvins žymeles`. Jei vykdoma įrašui "
+":guilabel:`Erdvinės žymelės`, žymelės pridedamos į :guilabel:`Naudotojo "
+"žymeles`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:396
+msgid "**Edit bookmark**"
+msgstr "**Keisti žymelę**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:397
+msgid ""
+"You can change a bookmark by changing the values in the table. You can edit "
+"the name, the group, the extent and if it is stored in the project or not."
+msgstr ""
+"Jūs galite pakeisti žymelę, keisdami reikšmes lentelėje. Jūs galite pakeisti"
+" pavadinimą, grupę, apimtį ir ar ji laikoma projekte, ar ne."
+
+#: ../../docs/user_manual/map_views/map_view.rst:400
+msgid ""
+"Right-click the desired bookmark and select :guilabel:`Edit Spatial "
+"Bookmark...`. The :guilabel:`Bookmark Editor` will open, allowing you to "
+"redefine every aspect of the bookmark as if you were creating it for the "
+"first time."
+msgstr ""
+"Spauskite dešinį mygtuką ant norimos žymelės ir parinkite :guilabel:`Keisti "
+"erdvinę žymelę...`. Bus atidarytas :guilabel:`Žymeklių redaktorius`, kuriame"
+" jūs galėsite pakeisti bet kurį žymelės aspektą taip, tarsi kurtumėte naują "
+"žymelę."
+
+#: ../../docs/user_manual/map_views/map_view.rst:405
+msgid ""
+"You can also drag and drop the bookmark between folders (user and project) "
+"and subfolders (groups)."
+msgstr ""
+"Jūs taipogi galite tempti žymelę iš vieno į kitą aplanką (naudotojo ar "
+"projekto) ar poaplankį (grupę)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:408
+msgid ""
+"You can manage bookmark actions by right-click on the desired bookmark in "
+"the :guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by"
+" typing the bookmark name in the :ref:`locator <label_statusbar>`."
+msgstr ""
+"Jūs galite valdyti žymelių veiksmus paspaudę dešinį mygtuką ant norimos "
+":guilabel:`Erdvinių žymelių tvarkyklės` žymelės. Jūs taipogi galite "
+"priartinti žymeles įrašę žymelės pavadinimą į :ref:`lokatorių "
+"<label_statusbar>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:416
+msgid "Decorating the map"
+msgstr "Žemėlapio dekoravimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:418
+msgid ""
+"Decorations include Grid, Title Label, Copyright Label, Image, North Arrow, "
+"Scale Bar and Layout Extents. They are used to 'decorate' the map by adding "
+"cartographic elements."
+msgstr ""
+"Dekoracijomis vadinamas tinklelis, antraštė, autorių teisės, piešiniai, "
+"šiaurės rodyklė, mastelio juosta ir išdėstymo apimtys. Jie naudojami "
+"žemėlapio „dekoravimui“ pridedant kartografinius elementus."
+
+#: ../../docs/user_manual/map_views/map_view.rst:425
+msgid "Grid"
+msgstr "Tinklelis"
+
+#: ../../docs/user_manual/map_views/map_view.rst:427
+msgid ""
+"|addGrid| :guilabel:`Grid` allows you to add a coordinate grid and "
+"coordinate annotations to the map canvas."
+msgstr ""
+"|addGrid| :guilabel:`Tinklelis` leidžia jums pridėti į žemėlapio drobę "
+"koordinačių tinklelį ir koordinačių anotacijas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1302
+msgid "addGrid"
+msgstr "addGrid"
+
+#: ../../docs/user_manual/map_views/map_view.rst:430
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Grid...` to open"
+" the dialog."
+msgstr ""
+"Parinkite meniu :menuselection:`Rodymas --> Dekoracijos --> Tinklelis...`, "
+"kad atvertumėte dialogą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:437
+msgid "The Grid Dialog"
+msgstr "Tinklelio dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:439
+msgid ""
+"Tick |checkbox| :guilabel:`Enable grid` and set grid definitions according "
+"to the layers loaded in the map canvas:"
+msgstr ""
+"Pažymėkite |checkbox| :guilabel:`Įjungti tinklelį` ir nurodykite tinklelio "
+"parametrus pagal sluoksnius, įkeltus į žemėlapio drobę:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:442
+msgid ""
+"The :guilabel:`Grid type`: it can be :guilabel:`Line` or :guilabel:`Marker`"
+msgstr ""
+":guilabel:`Tinklelio tipas`: gali būti :guilabel:`Linija` arba "
+":guilabel:`Žymeklis`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:443
+msgid ""
+"The associated :ref:`Line symbol <vector_line_symbols>` or :ref:`marker "
+"symbol <vector_marker_symbols>` used to represent the grid marks"
+msgstr ""
+"Susijęs :ref:`Linijos simbois <vector_line_symbols>` arba :ref:`žymeklio "
+"simbolis <vector_marker_symbols>` naudojamas tinklelio žymėms"
+
+#: ../../docs/user_manual/map_views/map_view.rst:445
+msgid ""
+"The :guilabel:`Interval X` and :guilabel:`Interval Y` between the grid "
+"marks, in map units"
+msgstr ""
+":guilabel:`Intervalas X` ir :guilabel:`Intervalas Y` tarp tinklelio žymų "
+"žemėlapio vienetais"
+
+#: ../../docs/user_manual/map_views/map_view.rst:447
+msgid ""
+"An :guilabel:`Offset X` and :guilabel:`Offset Y` distance of the grid marks "
+"from the bottom left corner of the map canvas, in map units"
+msgstr ""
+":guilabel:`Poslinkis X` ir :guilabel:`Poslinkis Y` - tinklelio žymų atstumai"
+" nuo apatinio kairiojo žemėlapio drobės kampo, žemėlapio vienetais"
+
+#: ../../docs/user_manual/map_views/map_view.rst:449
+msgid "The interval and offset parameters can be set based on the:"
+msgstr "Intervalo ir poslinkio parametrus galima nurodyti priklausomus nuo:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:451
+msgid ""
+":guilabel:`Canvas Extents`: generates a grid with an interval that is "
+"approximatively 1/5 of the canvas width"
+msgstr ""
+":guilabel:`Drobės apimties`: kuria tinklelį su intervalais, kurie yra "
+"daugmaž 1/5 drobės pločio"
+
+#: ../../docs/user_manual/map_views/map_view.rst:453
+msgid ":guilabel:`Active Raster Layer` resolution"
+msgstr ":guilabel:`Aktyvaus rastro sluoksnio` rezoliucijos"
+
+#: ../../docs/user_manual/map_views/map_view.rst:454
+msgid ""
+"Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates of "
+"the grid marks and set:"
+msgstr ""
+"Įjunkite |checkbox| :guilabel:`Piešti anotaciją`, jei norite ant tinklelio "
+"rodyti koordinates, nurodykite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:457
+msgid ""
+"The :guilabel:`Annotation direction`, ie how the labels would be placed "
+"relative to their grid line. It can be:"
+msgstr ""
+":guilabel:`Anotacijos kryptį`, t.y. kaip reikia dėti užrašus tinklelio "
+"atžvilgiu. Tai gali būti:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:460
+msgid ":guilabel:`Horizontal` or :guilabel:`Vertical` for all the labels"
+msgstr ""
+":guilabel:`Horizontaliai` arba :guilabel:`Vertikaliai` visiems užrašams"
+
+#: ../../docs/user_manual/map_views/map_view.rst:461
+msgid ""
+":guilabel:`Horizontal and Vertical`, ie each label is parallel to the grid "
+"mark it refers to"
+msgstr ""
+":guilabel:`Horizontaliai ir vertikaliai`, t.y. kiekvienas užrašas yra "
+"lygiagretus su juo susijusiai tinklelio žymai"
+
+#: ../../docs/user_manual/map_views/map_view.rst:463
+msgid ""
+":guilabel:`Boundary direction`, ie each label follows the canvas boundary, "
+"and is perpendicular to the grid mark it refers to"
+msgstr ""
+":guilabel:`Ribos kryptis`, t.y. kiekvienas užrašas seka drobės ribą ir yra "
+"statmenas savo tinklelio žymai"
+
+#: ../../docs/user_manual/map_views/map_view.rst:465
+msgid ""
+"The :guilabel:`Annotation font` (text formatting, buffer, shadow...) using "
+"the :ref:`font selector widget <font_selector>`"
+msgstr ""
+":guilabel:`Anotacijos šriftas` (teksto formatavimas, buferis, šešėlis...) "
+"naudojant valdiklį :ref:`šrifto parinkimas <font_selector>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:467
+msgid ""
+"The :guilabel:`Distance to map frame`, margin between annotations and map "
+"canvas limits. Convenient when :ref:`exporting the map canvas "
+"<exportingmapcanvas>` eg to an image format or PDF, and avoid annotations to"
+" be on the \"paper\" limits."
+msgstr ""
+":guilabel:`Atstumas iki žemėlapio rėmo`, paraštė tarp anotacijų ir žemėlapio"
+" drobės krašto. Patogu, kai :ref:`žemėlapio drobė eksportuojama "
+"<exportingmapcanvas>` pvz. į piešinio formatą ar PDF, siekiant išvengti "
+"anotacijų ant „popieriaus“ ribų."
+
+#: ../../docs/user_manual/map_views/map_view.rst:470
+msgid "The :guilabel:`Coordinate precision`"
+msgstr ":guilabel:`Koordinačių tikslumas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:472
+#: ../../docs/user_manual/map_views/map_view.rst:512
+#: ../../docs/user_manual/map_views/map_view.rst:551
+#: ../../docs/user_manual/map_views/map_view.rst:658
+msgid ""
+"Click :guilabel:`Apply` to verify that it looks as expected or "
+":guilabel:`OK` if you're satisfied."
+msgstr ""
+"Spauskite :guilabel:`Taikyti`, kad patikrintumėte, ar atrodo taip, kaip "
+"norėjote arba :guilabel:`Gerai`, jei jums viskas tinka."
+
+#: ../../docs/user_manual/map_views/map_view.rst:479
+msgid "Title Label"
+msgstr "Antraštės užrašas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:481
+msgid ""
+"|titleLabel| :guilabel:`Title Label` allows you to decorate your map with a "
+"**Title**."
+msgstr ""
+"|titleLabel| :guilabel:`Antraštės užrašas` leidžia jums dekoruoti jūsų "
+"žemėlapį su **Antrašte**."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1403
+msgid "titleLabel"
+msgstr "titleLabel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:483
+msgid "To add a Title Label decoration:"
+msgstr "Norėdami pridėti Antraštės užrašo dekoraciją:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:485
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Title Label...` "
+"to open the dialog."
+msgstr ""
+"Parinkite meniu :menuselection:`Rodymas --> Dekoracijos --> Antraštės "
+"užrašas...`, kad atvertumėte dialogą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:493
+msgid "The Title Decoration Dialog"
+msgstr "Antraštės dekoracijos dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:495
+msgid "Make sure |checkbox| :guilabel:`Enable Title Label` is checked"
+msgstr ""
+"Įsitikinkite, kad įjungta varnelė |checkbox| :guilabel:`Įjungti antraštės "
+"užrašą`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:496
+msgid ""
+"Enter the title text you want to place on the map. You can make it dynamic "
+"using the :guilabel:`Insert or Edit an Expression...` button."
+msgstr ""
+"Įveskite antraštės tekstą, kurį norite įdėti į žemėlapį. Galite padaryti jį "
+"dinamišku, naudodami mygtuką :guilabel:`Įterpti ar keisti išraišką...`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:499
+#: ../../docs/user_manual/map_views/map_view.rst:540
+msgid ""
+"Choose the :guilabel:`Font` for the label using the :ref:`font selector "
+"widget <font_selector>` with full access to QGIS :ref:`text formatting "
+"<text_format>` options. Quickly set the font color and opacity by clicking "
+"the black arrow to the right of the font combo box."
+msgstr ""
+"Parinkite užrašo :guilabel:`Šriftą` naudodami :ref:`šrifto parinkimo "
+"valdiklį <font_selector>` su pilna prieiga prie QGIS :ref:`teksto "
+"formatavimo <text_format>` parinkčių. Greitai nustatykite šrifto spalvą, "
+"permatomumą spausdami juodą rodyklę šrifto iškrentančio sąrašo dešinėje."
+
+#: ../../docs/user_manual/map_views/map_view.rst:503
+msgid ""
+"Select the :ref:`color <color-selector>` to apply to the title's "
+":guilabel:`Background bar color`."
+msgstr ""
+"Parinkite :ref:`spalvą <color-selector>`, kuri bus naudojama antraštės "
+":guilabel:`Fono juostai`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:505
+msgid ""
+"Choose the :guilabel:`Placement` of the label in the canvas: options are "
+":guilabel:`Top left`, :guilabel:`Top Center` (default), :guilabel:`Top "
+"Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center` and "
+":guilabel:`Bottom Right`."
+msgstr ""
+"Parinkite užrašo :guilabel:`Vietą` drobėje: galimi variantai yra "
+":guilabel:`Viršuje kairėje`, :guilabel:`Viršuje centre` (numatytoji "
+"parinktis), :guilabel:`Viršuje dešinėje`, :guilabel:`Apačioje kairėje`, "
+":guilabel:`Apačioje centre` ir :guilabel:`Apačioje dešinėje`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:509
+#: ../../docs/user_manual/map_views/map_view.rst:548
+msgid ""
+"Refine the placement of the item by setting a horizontal and/or vertical "
+":guilabel:`Margin from Edge`. These values can be in **Millimeters** or "
+"**Pixels** or set as a **Percentage** of the width or height of the map "
+"canvas."
+msgstr ""
+"Patikslinkite elemento vietą parinkdami horizontalią ir/arba vertikalią "
+":guilabel:`Paraštę nuo krašto`. Jas galima nurodyti **Milimetrais** arba "
+"**Taškais (pikseliais)** ar nurodyti kaip **Procentus** žemėlapio drobės "
+"pločio ar aukščio."
+
+#: ../../docs/user_manual/map_views/map_view.rst:519
+msgid "Copyright Label"
+msgstr "Autorių teisių užrašas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:521
+msgid ""
+"|copyrightLabel| :guilabel:`Copyright Label` can be used to decorate your "
+"map with a **Copyright** label."
+msgstr ""
+"|copyrightLabel| :guilabel:`Autorių teisių užrašą` galima naudoti jūsų "
+"žemėlapio dekoravimui su **Autorių teisių** užrašu."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1318
+msgid "copyrightLabel"
+msgstr "copyrightLabel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:524
+msgid "To add this decoration:"
+msgstr "Norėdami pridėti šią dekoraciją:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:526
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Copyright "
+"Label...` to open the dialog."
+msgstr ""
+"Parinkite meniu :menuselection:`Rodymas --> Dekoracijos --> Autorių teisių "
+"užrašas...`, kad atvertumėte dialogą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:534
+msgid "The Copyright Decoration Dialog"
+msgstr "Autorių teisių dekoracijos dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:536
+msgid "Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked"
+msgstr ""
+"Įsitikinkite, kad įjungta varnelė |checkbox| :guilabel:`Įjungti autorių "
+"teisių užrašą`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:537
+msgid ""
+"Enter the copyright text you want to place on the map. You can make it "
+"dynamic using the :guilabel:`Insert or Edit an Expression...` button."
+msgstr ""
+"Įveskite autorių teisių tekstą, kurį norite įdėti į žemėlapį. Galite "
+"padaryti jį dinamišku, naudodami mygtuką :guilabel:`Įterpti ar keisti "
+"išraišką...`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:544
+msgid ""
+"Choose the :guilabel:`Placement` of the label in the canvas: options are "
+":guilabel:`Top left`, :guilabel:`Top Center`, :guilabel:`Top Right`, "
+":guilabel:`Bottom left`, :guilabel:`Bottom Center`, and :guilabel:`Bottom "
+"Right` (default for Copyright decoration)"
+msgstr ""
+"Parinkite užrašo :guilabel:`Vietą` drobėje: galimi variantai yra "
+":guilabel:`Viršuje kairėje`, :guilabel:`Viršuje centre`, :guilabel:`Viršuje "
+"dešinėje`, :guilabel:`Apačioje kairėje`, :guilabel:`Apačioje centre`, and "
+":guilabel:`Apačioje dešinėje` (numatyta autorių teisių užrašo parinktis)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:558
+msgid "Image Decoration"
+msgstr "Piešinio dekoracija"
+
+#: ../../docs/user_manual/map_views/map_view.rst:560
+msgid ""
+"|addImage| :guilabel:`Image` allows you to add an image (logo, legend, ..) "
+"on the map canvas."
+msgstr ""
+"|addImage| :guilabel:`Piešinys` leidžia jums žemėlapio drobėje pridėti "
+"piešinį (logotipą, legendą, ..)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1304
+msgid "addImage"
+msgstr "addImage"
+
+#: ../../docs/user_manual/map_views/map_view.rst:562
+msgid "To add an image:"
+msgstr "Norėdami pridėti piešinį:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:564
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Image...` to "
+"open the dialog."
+msgstr ""
+"Parinkite meniu :menuselection:`Rodymas --> Dekoracijos --> Piešinys...`, "
+"kad atvertumėte dialogą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:572
+msgid "The Image Decoration Dialog"
+msgstr "Piešinio dekoracijos dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:574
+msgid "Make sure |checkbox| :guilabel:`Enable Image` is checked"
+msgstr ""
+"Įsitikinkite, kad įjungta varnelė |checkbox| :guilabel:`Įjungti piešinį`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:575
+msgid ""
+"Select a bitmap (e.g. png or jpg) or SVG image using the :guilabel:`...` "
+":sup:`Browse` button"
+msgstr ""
+"Parinkite rastro (pvz. png ar jpg) ar SVG piešinį, naudojant mygtuką "
+":guilabel:`...` :sup:`Naršyti`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:577
+msgid ""
+"If you have chosen a parameter enabled SVG then you can also set a "
+":guilabel:`Fill` or :guilabel:`Stroke` (outline) color. For bitmap images, "
+"the color settings are disabled."
+msgstr ""
+"Jei parinkote nuo parametrų priklausomą SVG, tada galite taipogi nustatyti "
+":guilabel:`Užpildymo` ar :guilabel:`Brėžimo` (kontūro) spalvą. Rastro "
+"piešiniams spalvų nustatymai išjungti."
+
+#: ../../docs/user_manual/map_views/map_view.rst:580
+msgid ""
+"Set a :guilabel:`Size` of the image in mm. The width of selected image is "
+"used to resize it to given :guilabel:`Size`."
+msgstr ""
+"Nustatykite piešinio :guilabel:`Dydį` milimetrais. Parinkto piešinio plotis "
+"naudojamas keičiant piešinio dydį į nurodytą :guilabel:`Dydį`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:582
+msgid ""
+"Choose where you want to place the image on the map canvas with the "
+":guilabel:`Placement` combo box. The default position is :guilabel:`Top "
+"Left`."
+msgstr ""
+"Parinkite, kur norite padėti piešinį žemėlapio drobėje, naudodami "
+"iškrentantį sąrašą :guilabel:`Vieta`. Numatytoji vieta yra "
+":guilabel:`Viršuje kairėje`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:584
+msgid ""
+"Set the :guilabel:`Horizontal` and :guilabel:`Vertical Margin from (Canvas) "
+"Edge`. These values can be set in **Millimeters**, **Pixels** or as a "
+"**Percentage** of the width or height of the map canvas."
+msgstr ""
+"Nustatykite the :guilabel:`Horizontalią` ir :guilabel:`Vertikalią` paraštes "
+"nuo (drobės) krašto. Šias reikšmes galima nurodyti **Milimetrais**, "
+"**Taškais (pikseliais)** arba nurodyti **Procentus** drobės pločio ar "
+"aukščio."
+
+#: ../../docs/user_manual/map_views/map_view.rst:587
+#: ../../docs/user_manual/map_views/map_view.rst:618
+#: ../../docs/user_manual/map_views/map_view.rst:696
+msgid ""
+"Click :guilabel:`Apply` to verify that it looks as expected and "
+":guilabel:`OK` if you're satisfied."
+msgstr ""
+"Spauskite :guilabel:`Taikyti`, kad patikrintumėte, ar atrodo taip, kaip "
+"norėjote ir :guilabel:`Gerai`, jei jums viskas tinka."
+
+#: ../../docs/user_manual/map_views/map_view.rst:594
+msgid "North Arrow"
+msgstr "Šiaurės rodyklė"
+
+#: ../../docs/user_manual/map_views/map_view.rst:596
+msgid ""
+"|northArrow| :guilabel:`North Arrow` allows you to add a north arrow on the "
+"map canvas."
+msgstr ""
+"|northArrow| :guilabel:`Šiaurės rodyklė` leidžia jums pridėti šiaurės "
+"rodyklę į žemėlapio drobę."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1348
+msgid "northArrow"
+msgstr "northArrow"
+
+#: ../../docs/user_manual/map_views/map_view.rst:598
+msgid "To add a north arrow:"
+msgstr "Kad pridėtumėte šiaurės rodyklę:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:600
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> North Arrow...` "
+"to open the dialog."
+msgstr ""
+"Parinkite meniu :menuselection:`Rodymas --> Dekoracijos --> Šiaurės "
+"rodyklė...`, kad atvertumėte dialogą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:608
+msgid "The North Arrow Dialog"
+msgstr "Šiaurės rodyklės dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:610
+msgid "Make sure |checkbox| :guilabel:`Enable north arrow` is checked"
+msgstr ""
+"Įsitikinkite, kad įjungta varnelė |checkbox| :guilabel:`Įjungti Šiaurės "
+"rodyklę`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:611
+msgid "Optionally change the color and size, or choose a custom SVG"
+msgstr "Pasirinktinai pakeiskite spalvą ir dydį arba parinkite savo SVG"
+
+#: ../../docs/user_manual/map_views/map_view.rst:612
+msgid ""
+"Optionally change the angle or choose **Automatic** to let QGIS determine "
+"the direction"
+msgstr ""
+"Pasirinktinai pakeiskite kampą ar pasirinkite **Automatinis**, kad QGIS "
+"nustatytų kryptį"
+
+#: ../../docs/user_manual/map_views/map_view.rst:614
+msgid "Optionally choose the placement from the Placement combo box"
+msgstr ""
+"Pasirinktinai pasirinkite vietos iškrentančiame sąraše pasirinkite vietą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:615
+msgid ""
+"Optionally refine the placement of the arrow by setting a horizontal and/or "
+"vertical `Margin from (Canvas) Edge`. These values can be in **Millimeters**"
+" or **Pixels** or set as a **Percentage** of the width or height of the map "
+"canvas."
+msgstr ""
+"Pasirinktinai patikslinkite rodyklės vietą nurodydami horizontalią ir/ar "
+"vertikalią `Paraštę nuo (drobės) krašto`. Šias reikšmes galima nurodyti "
+"**Milimetrais** ar **Taškais (pikseliais)** arba nurodyti **Procentą** nuo "
+"drobės pločio ar aukščio."
+
+#: ../../docs/user_manual/map_views/map_view.rst:625
+msgid "Scale Bar"
+msgstr "Mastelio juosta"
+
+#: ../../docs/user_manual/map_views/map_view.rst:627
+msgid ""
+"|scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas. "
+"You can control the style and placement, as well as the labelling of the "
+"bar. The scale bar respects the active :ref:`project's distance unit "
+"<measurements_ellipsoid>` as defined in :menuselection:`Project properties "
+"--> General --> Units for distance measurement`."
+msgstr ""
+"|scaleBar| :guilabel:`Mastelio juosta` prideda į žemėlapio drobę paprastą "
+"mastelio juostą. Jūs galite valdyti  juostos stilių, vietą bei užrašus. "
+"Mastelio juosta atsižvelgia į aktyvius :ref:`projekto atstumo vienetus "
+"<measurements_ellipsoid>`, kaip nurodyta :menuselection:`Projekto savybėse "
+"--> Bendra --> Atstumo matavimo vienetai`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1368
+msgid "scaleBar"
+msgstr "scaleBar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:632
+msgid "To add a scale bar:"
+msgstr "Norėdami pridėti mastelio juostą:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:634
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Scale Bar...` to"
+" open the dialog"
+msgstr ""
+"Parinkite meniu :menuselection:`Rodymas --> Dekoracijos --> Mastelio "
+"juosta...`, kad atvertumėte dialogą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:642
+msgid "The Scale Bar Dialog"
+msgstr "Mastelio juostos dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:644
+msgid "Make sure |checkbox| :guilabel:`Enable scale bar` is checked"
+msgstr ""
+"Įsitikinkite, kad įjungta varnelė |checkbox| :guilabel:`Įjungti mastelio "
+"juostą`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:645
+msgid ""
+"Choose a style from the :guilabel:`Scale bar style` |selectString| combo box"
+msgstr ""
+"Iškrentančiame sąraše parinkite :guilabel:`Mastelio stilių` |selectString|"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1373
+msgid "selectString"
+msgstr "selectString"
+
+#: ../../docs/user_manual/map_views/map_view.rst:646
+msgid ""
+"Select the :guilabel:`Color of bar` |selectColor| by choosing a fill color "
+"(default: black) and an outline color (default: white). The scale bar fill "
+"and outline can be made opaque by clicking on the down arrow to the right of"
+" the color input."
+msgstr ""
+"Parinkite :guilabel:`Juostos spalvą` |selectColor|, parinkdami užpildymo "
+"spalvą (pagal nutylėjimą juoda) ir rėmo spalvą (pagal nutylėjimą balta). "
+"Mastelio juostos užpildymą ir rėmą galima padaryti permatomą, spaudžiant ant"
+" rodyklės žemyn spalvos parinkimo valdiklyje."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1372
+msgid "selectColor"
+msgstr "selectColor"
+
+#: ../../docs/user_manual/map_views/map_view.rst:650
+msgid ""
+"Select the font for the scale bar from the :guilabel:`Font of bar` "
+"|selectString| combo box"
+msgstr ""
+"Mastelio juostos šriftą parinkite iškrentančiame sąraše :guilabel:`Juostos "
+"šriftas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:651
+msgid "Set the :guilabel:`Size of bar` in the active unit"
+msgstr "Nustatykite :guilabel:`Juostos dydį` aktyviais vienetais"
+
+#: ../../docs/user_manual/map_views/map_view.rst:652
+msgid ""
+"Optionally check |checkbox| :guilabel:`Automatically snap to round number on"
+" resize` to display easy-to-read values"
+msgstr ""
+"Pasirinktinai įjunkite |checkbox| :guilabel:`Automatiškai pritraukti prie "
+"apvalaus skaičiaus keičiant dydį`, jei norite gauti lengviau skaitomas "
+"reikšmes"
+
+#: ../../docs/user_manual/map_views/map_view.rst:654
+msgid ""
+"Choose the placement from the :guilabel:`Placement` |selectString| combo box"
+msgstr ""
+"Iškrentančiame sąraše :guilabel:`Vieta` |selectString| parinkite juostos "
+"vietą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:655
+msgid ""
+"You can refine the placement of the item by setting a horizontal and/or "
+"vertical `Margin from (Canvas) Edge`. These values can be in **Millimeters**"
+" or **Pixels** or set as a **Percentage** of the width or height of the map "
+"canvas."
+msgstr ""
+"Galite patikslinti elemento vietą nurodydami horizontalią ir/ar vertikalią "
+"`Paraštė nuo (drobės) krašto`. Šias reikšmes galima nurodyti **Milimetrais**"
+" ar **Taškais (pikseliais)**, arba galite nurodyti žemėlapio drobės pločio "
+"ar aukščio **Procentus**."
+
+#: ../../docs/user_manual/map_views/map_view.rst:664
+msgid "Layout Extents"
+msgstr "Išdėstymų apimtys"
+
+#: ../../docs/user_manual/map_views/map_view.rst:666
+msgid ""
+"|addMap| :guilabel:`Layout Extents` adds the extents of :ref:`map item(s) "
+"<layout_map_item>` in print layout(s) to the canvas. When enabled, the "
+"extents of all map items within all print layouts are shown using a lightly "
+"dotted border labeled with the name of the print layout and map item. You "
+"can control the style and labeling of the displayed layout extents. This "
+"decoration is useful when you are tweaking the positioning of map elements "
+"such as labels, and need to know the actual visible region of print layouts."
+msgstr ""
+"|addMap| :guilabel:`Išdėstymo apimtys` prideda į drobę spausdinimo maketo "
+":ref:`žemėlapio elementų <layout_map_item>` apimtis. Įjungus šią parinktį, "
+"visų spausdinimo maketų, visų išdėstymų žemėlapių elementų apimtys bus "
+"rodomi lengvai taškuotu kontūru su spausdinimo maketo žemėlapio elemento "
+"pavadinimu. Galite valdyti rodomų išdėstymo elementų užrašų stilių. Ši "
+"dekoracija naudinga, kai tvarkote pozicijas žemėlapio elementų, tokių kaip "
+"užrašai, kai jums reikia suprasti realias spausdinimo išdėstymuose matomų "
+"elementų apimtis."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1306
+msgid "addMap"
+msgstr "addMap"
+
+#: ../../docs/user_manual/map_views/map_view.rst:678
+msgid ""
+"Example of layout extents displayed in a QGIS project with two print "
+"layouts. The print layout named 'Sights' contains two map items, while the "
+"other print layout contains one map item."
+msgstr ""
+"Išdėstymo apimčių, rodomų QGIS projekte su dviem spausdinimo išdėstymais, "
+"pavyzdys. Spausdinimo išdėstymas vardu „Vaizdai“ turi du žemėlapio "
+"elementus, o kitame spausdinimo išdėstyme yra tik vienas žemėlapio "
+"elementas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:682
+msgid "To add layout extent(s):"
+msgstr "Norėdami pridėti išdėstymo apimtį(is):"
+
+#: ../../docs/user_manual/map_views/map_view.rst:684
+msgid ""
+"Select :menuselection:`View --> Decorations --> Layout Extents` to open the "
+"dialog"
+msgstr ""
+"Parinkite :menuselection:`Rodymas --> Dekoracijos --> Išdėstymų apimtys`, "
+"kad atvertumėte dialogą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:692
+msgid "The Layout Extents Dialog"
+msgstr "Išdėstymo apimčių dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:694
+msgid "Make sure |checkbox| :guilabel:`Show layout extents` is checked."
+msgstr ""
+"Įsitikinkite, kad įjungta varnelė |checkbox| :guilabel:`Rodyti išdėstymo "
+"apimtis`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:695
+msgid "Optionally change the symbol and labeling of the extents."
+msgstr "Pasirinktinai galite keisti apimčių simbolį ir užrašus."
+
+#: ../../docs/user_manual/map_views/map_view.rst:702
+msgid "**Decorations Settings**"
+msgstr "**Dekoracijų nustatymai**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:704
+msgid ""
+"When you save a QGIS project file, any changes you have made to Grid, North "
+"Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project "
+"and restored the next time you load the project."
+msgstr ""
+"Kai įrašote QGIS projekto failą, bet kokie jūsų padaryti Tinklelio, Šiaurės "
+"rodyklės, Mastelio juostos, Autorių teisių ar Išdėstymų apimčių pakeitimai "
+"bus įrašyti į projektą ir atstatyti kitą kartą įkėlus projektą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:715
+msgid "Annotation Tools"
+msgstr "Anotacijų įrankiai"
+
+#: ../../docs/user_manual/map_views/map_view.rst:717
+msgid ""
+"Annotations are another type of elements added onto the map canvas to "
+"provide additional information that can not be depicted by the rendered "
+"layers. Unlike :ref:`labels <vector_labels_tab>` that rely on attribute "
+"values stored in vector layers, annotations are independent details, stored "
+"within the project file itself."
+msgstr ""
+"Anotacijos - tai dar vienas tipas elementų, kuriuos galima pridėti į "
+"žemėlapio drobę norint suteikti papildomą informaciją, kurios negali "
+"atvaizduoti braižomi sluoksniai. Priešingai nei :ref:`užrašai "
+"<vector_labels_tab>`, kuriems reikia vektoriniuose sluoksniuose esančių "
+"atributų reikšmių, anotacijos yra nepriklausomos detalės, saugomos pačiame "
+"projekto faile."
+
+#: ../../docs/user_manual/map_views/map_view.rst:723
+msgid "Two families of annotations are available in QGIS:"
+msgstr "QGIS turi dvi anotacijų šeimas:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:725
+msgid ""
+"**Feature annotations**: they are actual georeferenced features of text, "
+"marker, line or polygon type stored within a special layer type called "
+"\"annotation layer\". They are tied to a particular geographic location, "
+"meaning that moving your map, changing the scale or changing projection "
+"won’t cause your annotations to jump around the map. Rather, they’ll be "
+"locked in place to the location you’ve drawn them."
+msgstr ""
+"**Geoobjektų anotacijos**: tai tikri teksto, žymeklių, linijų ar poligonų "
+"geoobjektai su geografinėmis pozicijomis, saugomi specialiame sluoksnyje, "
+"pavadintame „anotacijų sluoksnis“. Jie pririšti prie konkrečios geografinės "
+"vietos, tai reiškia, kad paslinkus jūsų žemėlapį, pakeitus mastelį ar "
+"projekciją, anotacijos nešokinės po jūsų žemėlapį. Jos visada bus fiksuotos "
+"konkrečioje vietoje, kurioje jas nubraižėte."
+
+#: ../../docs/user_manual/map_views/map_view.rst:730
+msgid ""
+"**Balloon annotations**: these are individuals annotations of text, form or "
+"image type placed inside a bubble. They can be associated to any layer for "
+"their visibility, are drawn on top of the map canvas. The size is dependent "
+"from the map canvas scale, and its position can be anchored."
+msgstr ""
+"**Balionų anotacijos**: tai individualios teksto, formos ar piešinių "
+"anotacijos, kurias padedate burbulo viduje. Jas galima susieti su bet kuriuo"
+" sluoksniu matomumui. Jos braižomos virš žemėlapio drobės. Dydis priklauso "
+"nuo žemėlapio drobės mastelio, o poziciją galima fiksuoti."
+
+#: ../../docs/user_manual/map_views/map_view.rst:735
+msgid "**Layout the map with annotations**"
+msgstr "**Žemėlapio išdėstymas su anotacijomis**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:737
+msgid ""
+"You can print or export annotations with your map to various formats using:"
+msgstr ""
+"Jūs galite spausdinti ar eksportuoti anotacijas kartu su jūsų žemėlapiu į "
+"skirtingus formatus naudojant:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:739
+msgid "map canvas export tools available in the :menuselection:`Project` menu"
+msgstr ""
+"žemėlapio drobės eksportavimo įrankius, kuriuos rasite meniu "
+":menuselection:`Projektas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:740
+msgid ""
+":ref:`print layout <create-output>`, in which case you need to check "
+":guilabel:`Draw map canvas items` in the corresponding map item properties"
+msgstr ""
+":ref:`spausdinimo išdėstymą <create-output>`, kur jums gali tekti atitinkamo"
+" žemėlapio elemento savybėse įjungti parinktį :guilabel:`Braižyti žemėlapio "
+"drobės elementus`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:744
+msgid ""
+"The :guilabel:`Annotations Toolbar` provides a set of tools to create and "
+"interact with both families of annotations."
+msgstr ""
+":guilabel:`Anotacijų įrankinė` teikia aibę įrankių, leidžiančių kurti ir "
+"valdyti abi anotacijų šeimas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:747
+msgid "The Annotations Toolbar actions"
+msgstr "Anotacijų įrankinės veiksmai"
+
+#: ../../docs/user_manual/map_views/map_view.rst:750
+msgid "Scope"
+msgstr "Sritis"
+
+#: ../../docs/user_manual/map_views/map_view.rst:752
+msgid "|createAnnotationLayer| :sup:`New Annotation Layer`"
+msgstr "|createAnnotationLayer| :sup:`Naujas anotacijų sluoksnis`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1320
+msgid "createAnnotationLayer"
+msgstr "createAnnotationLayer"
+
+#: ../../docs/user_manual/map_views/map_view.rst:752
+msgid "Create a new layer to store annotations"
+msgstr "Kurti naują sluoksnį anotacijų saugojimui"
+
+#: ../../docs/user_manual/map_views/map_view.rst:752
+msgid "Feature annotations"
+msgstr "Geoobjektų anotacijos"
+
+#: ../../docs/user_manual/map_views/map_view.rst:754
+msgid ":sup:`Main Annotation Layer Properties`"
+msgstr ":sup:`Pagrindinio anotacijų sluoksnio savybės`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:754
+msgid "Control settings of the Main Annotation Layer"
+msgstr "Valdo pagrindinio anotacijų sluoksnio savybes"
+
+#: ../../docs/user_manual/map_views/map_view.rst:756
+msgid "|select| :sup:`Modify Annotations`"
+msgstr "|select| :sup:`Keisti anotacijas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1370
+msgid "select"
+msgstr "select"
+
+#: ../../docs/user_manual/map_views/map_view.rst:756
+msgid "Select, move, resize and modify symbology properties of annotations"
+msgstr ""
+"Parinkti, perkelti, keisti dydį ar keisti anotacijų simbolizavimo savybes"
+
+#: ../../docs/user_manual/map_views/map_view.rst:758
+#: ../../docs/user_manual/map_views/map_view.rst:854
+msgid "|addPolygon| :sup:`Create Polygon Annotation`"
+msgstr "|addPolygon| :sup:`Kurti poligono anotaciją`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1310
+msgid "addPolygon"
+msgstr "addPolygon"
+
+#: ../../docs/user_manual/map_views/map_view.rst:758
+msgid "Create an annotation as a polygon feature"
+msgstr "Kurti anotaciją kaip poligono geoobjektą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:760
+#: ../../docs/user_manual/map_views/map_view.rst:855
+msgid "|addPolyline| :sup:`Create Line Annotation`"
+msgstr "|addPolyline| :sup:`Kurti linijos anotaciją`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1312
+msgid "addPolyline"
+msgstr "addPolyline"
+
+#: ../../docs/user_manual/map_views/map_view.rst:760
+msgid "Create an annotation as a polyline feature"
+msgstr "Kurti anotaciją kaip poli-linijos geoobjektą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:762
+#: ../../docs/user_manual/map_views/map_view.rst:856
+msgid "|addMarker| :sup:`Create Marker Annotation`"
+msgstr "|addMarker| :sup:`Kurti žymeklio anotaciją`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1308
+msgid "addMarker"
+msgstr "addMarker"
+
+#: ../../docs/user_manual/map_views/map_view.rst:762
+msgid "Create an annotation as a point feature"
+msgstr "Kurti anotaciją kaip taško geoobjektą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:764
+#: ../../docs/user_manual/map_views/map_view.rst:857
+msgid "|actionText| :sup:`Create Text Annotation at Point`"
+msgstr "|actionText| :sup:`Kurti teksto anotaciją taške`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1300
+msgid "actionText"
+msgstr "actionText"
+
+#: ../../docs/user_manual/map_views/map_view.rst:764
+msgid "Create an annotation as a text label"
+msgstr "Kurti anotaciją kaip tekstinį užrašą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:766
+#: ../../docs/user_manual/map_views/map_view.rst:858
+msgid "|textAlongLine| :sup:`Create Text Annotation along Line`"
+msgstr "|textAlongLine| :sup:`Kurti tekstinę anotaciją palei liniją`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1399
+msgid "textAlongLine"
+msgstr "textAlongLine"
+
+#: ../../docs/user_manual/map_views/map_view.rst:766
+msgid "Create an annotation as a curved text along a linestring"
+msgstr "Kurti anotaciją kaip palei liniją išlenktą tekstą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "|textAnnotation| :sup:`Text Annotation`"
+msgstr "|textAnnotation| :sup:`Teksto anotacija`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1401
+msgid "textAnnotation"
+msgstr "textAnnotation"
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+msgid "Select and create a text formatted annotation"
+msgstr "Parinkti ir kurti formatuoto teksto anotaciją"
+
+#: ../../docs/user_manual/map_views/map_view.rst:769
+#: ../../docs/user_manual/map_views/map_view.rst:923
+msgid "Balloon annotations"
+msgstr "Balionų anotacijos"
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "|htmlAnnotation| :sup:`HTML Annotation`"
+msgstr "|htmlAnnotation| :sup:`HTML anotacija`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1330
+msgid "htmlAnnotation"
+msgstr "htmlAnnotation"
+
+#: ../../docs/user_manual/map_views/map_view.rst:771
+msgid "Select and create annotation with an :file:`HTML` file's content"
+msgstr "Pažymėti ir kurti anotaciją su :file:`HTML` failo turiniu"
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid "|svgAnnotation| :sup:`SVG Annotation`"
+msgstr "|svgAnnotation| :sup:`SVG anotacija`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1389
+msgid "svgAnnotation"
+msgstr "svgAnnotation"
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid "Select and create annotation showing an :file:`SVG` file"
+msgstr "Pažymėti ir kurti anotaciją, rodančią :file:`SVG` failą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:775
+msgid "|formAnnotation| :sup:`Form Annotation`"
+msgstr "|formAnnotation| :sup:`Formos anotacija`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1328
+msgid "formAnnotation"
+msgstr "formAnnotation"
+
+#: ../../docs/user_manual/map_views/map_view.rst:775
+msgid ""
+"Select and create annotation showing attributes of a vector layer in a "
+"custom form file"
+msgstr ""
+"Pažymėti ir kurti anotaciją, rodančią savo formos failo vektorinio sluoksnio"
+" atributus"
+
+#: ../../docs/user_manual/map_views/map_view.rst:782
+msgid "Feature Annotations"
+msgstr "Geoobjektų anotacijos"
+
+#: ../../docs/user_manual/map_views/map_view.rst:784
+msgid ""
+"Feature annotations are stored in **annotation layers**. Unlike conventional"
+" layers, an annotation layer is available only in the current project and "
+"can contain features of different types (text, marker, line, polygon). The "
+"layer has no attributes and no symbology associated, but instead each "
+"feature can be symbolized on an item-by-item basis, through :guilabel:`Layer"
+" Styling` panel."
+msgstr ""
+"Geoobjektų anotacijos saugomos **anotacijų sluoksniuose**. Priešingai nei "
+"standartiniai sluoksniai, anotacijų sluoksnis prieinamas tik dabartiniame "
+"projekte ir jame gali būti skirtingų tipų geoobjektai (tekstas, žymekliai, "
+"linijos, poligonai). Sluoksnis neturi atributų ir susijusios simbologijos, "
+"vietoje to kiekvienas geoobjektas gali būti simbolizuojamas atskirai per "
+"skydelį :guilabel:`Sluoksnio stilius`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:790
+msgid "Two types of annotation layer are available in QGIS:"
+msgstr "QGIS turi du anotacijų sluoksnių tipus:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:792
+msgid ""
+"A common :guilabel:`Annotation Layer`: you can create one using the "
+"|createAnnotationLayer| :sup:`New Annotation Layer` tool. It is listed in "
+"the :guilabel:`Layers` panel, allowing you to control its features' "
+"visibility, move it to show above or below particular layers in your map, "
+"like any common layer. Double-click the layer and you can access its "
+"properties."
+msgstr ""
+"Bendras :guilabel:`Anotacijų sluoksnis`: jūs galite jį sukurti su įrankiu "
+"|createAnnotationLayer| :sup:`Naujas anotacijų sluoksnis`. Sukurtą sluoksnį "
+"rasite :guilabel:`Sluoksnių` skydelyje, kur galėsite valdyti jo geoobjektų "
+"matomumą, perkelti jo matomumą virš ar po kitų jūsų žemėlapio sluoksnių, "
+"kaip bet kuriam kitam sluoksniui. Du kartus paspaudus ant sluoksnio "
+"pasieksite jo savybes."
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+msgid ""
+"The :guilabel:`Main Annotation Layer`: By default, this is where annotations"
+" are stored when no annotation layer is available in the project or is "
+"selected at creation time. This layer is always drawn on the very top of "
+"your map and you won't see it listed in the :guilabel:`Layers` panel "
+"alongside the other layers in your project, meaning that its features are "
+"always visible. The :guilabel:`Main Annotation Layer Properties` entry on "
+"the :guilabel:`Annotations` toolbar helps you open its properties dialog."
+msgstr ""
+":guilabel:`Pagrindinis anotacijų sluoksnis`: Pagal nutylėjimą anotacijos "
+"laikomos šiame sluoksnyje, kai projekte nėra anotacijų sluoksnio anotacijos "
+"sukūrimo metu nepažymėtas nei vienas anotacijų sluoksnis. Šis sluoksnis "
+"visada rodomas pačiame žemėlapio viršuje ir jūs nepamatysite jo skydelyje "
+":guilabel:`Sluoksniai` su kitais projekto sluoksniais, tai reiškia, kad jo "
+"geoobjektai visada matomi. :guilabel:`Anotacijų`  įrankinės mygtukas "
+":guilabel:`Pagrindinio anotacijų sluoksnio savybės` padeda jums atverti jo "
+"savybių dialogą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:807
+msgid "Layer Properties"
+msgstr "Sluoksnio savybės"
+
+#: ../../docs/user_manual/map_views/map_view.rst:809
+msgid ""
+"The properties dialog of an annotation layer provides the following tabs:"
+msgstr "Anotacijų sluoksnio savybių dialoge yra šios kortelės:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:811
+msgid ""
+":guilabel:`Information`: a read-only dialog representing an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. This may include the layer extent, count of items per annotation type"
+" and total count, CRS details, ..."
+msgstr ""
+":guilabel:`Informacija`: tik skaitymui skirtas dialogas, kuriame yra įdomi "
+"vieta greitai peržvelgti dabartinio sluoksnio apibendrintą informaciją ir "
+"metaduomenis. Čia gali būti sluoksnio apimtis, bendras ir skirtingų "
+"anotacijų tipų elementų skaičius, CRS detalės, ..."
+
+#: ../../docs/user_manual/map_views/map_view.rst:815
+msgid ""
+":guilabel:`Source`: defines general settings for the annotation layer. You "
+"can:"
+msgstr ""
+":guilabel:`Šaltinis`: apibrėžia bendrus anotacijos sluoksnio nustatymus. Jūs"
+" galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:817
+msgid ""
+"Set a :guilabel:`Layer name` that will be used to identify the layer in the "
+"project (in the :guilabel:`Layers Panel`, with expressions, ...)"
+msgstr ""
+"Nustatyti :guilabel:`Sluoksnio pavadinimą` kuris bus naudojamas sluoksnio "
+"identifikavimui projekte (:guilabel:`Sluoksnių skydelyje`, išraiškose, ...)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:819
+msgid ""
+"Display the layer's :ref:`Assigned Coordinate Reference System (CRS) "
+"<layer_crs>`: you can change the layer's CRS, selecting a recently used one "
+"in the drop-down list or clicking on |setProjection| :sup:`Select CRS` "
+"button (see :ref:`crs_selector`). Use this process only if the CRS applied "
+"to the layer is a wrong one or if none was applied."
+msgstr ""
+"Rodyti sluoksnio :ref:`Priskirtą koordinačių atskaitos sistemą (CRS) "
+"<layer_crs>`: jūs galite pakeisti sluoksnio CRS, pažymėdami neseniai naudotą"
+" iškrentantčiame sąraše arba paspaudę mygtuką |setProjection| :sup:`Parinkti"
+" CRS` (žr. :ref:`crs_selector`). Naudokite šį procesą tik jei sluoksniui "
+"taikoma CRS yra netinkama arba nėra nurodyta apskritai."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1375
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/map_views/map_view.rst:827
+msgid ":guilabel:`Rendering`:"
+msgstr ":guilabel:`Braižymas`:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:829
+msgid ""
+"You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum "
+"(exclusive)` scale, defining a range of scale in which features will be "
+"visible. Out of this range, they are hidden. The |mapIdentification| "
+":sup:`Set to current canvas scale` button helps you use the current map "
+"canvas scale as boundary of the range visibility. See "
+":ref:`label_scaledepend` for more information."
+msgstr ""
+"Galite nurodyti :guilabel:`Maksimalų (imtinai)` ir :guilabel:`Minimalų "
+"(išskirtinai)` mastelį, taip nurodydami, kuriuose masteliuose bus rodomi "
+"geoobjektai. Nepatekę į šį diapazoną objektai paslepiami. Mygtukas "
+"|mapIdentification| :sup:`Nustatyti pagal dabartinį drobės mastelį` padeda "
+"jums panaudoti dabartinį žemėlapio drobės mastelį kaip matomumo ribą. "
+"Daugiau informacijos rasite :ref:`label_scaledepend`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1334
+msgid "mapIdentification"
+msgstr "mapIdentification"
+
+#: ../../docs/user_manual/map_views/map_view.rst:835
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your "
+"vector layer to your needs. You can also make a precise definition of the "
+"percentage of visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`Nepermatomumas`: Naudodami šį įrankį jūs galite žemiau esantį "
+"sluoksnį matomu. Naudokite slankiklį, kad pritaikytumėte jūsų vektorinio "
+"sluoksnio matomumą pagal poreikius. Jūs taipogi galite tiksliai nurodyti "
+"matomumo procentą laukelyje greta slankiklio."
+
+#: ../../docs/user_manual/map_views/map_view.rst:839
+msgid ""
+":guilabel:`Blending mode` at the :guilabel:`Layer` level: You can achieve "
+"special rendering effects with these tools that you may previously only know"
+" from graphics programs. The pixels of your overlaying and underlying layers"
+" are mixed through the settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`Suliejimo režimas` :guilabel:`Sluoksnio` lygyje: Naudodami šiuos "
+"įrankius jūs galite pasiekti specialius braižymo efektus, kuriuos anksčiau "
+"žinojote tik grafikos programose. Aukščiau ir žemiau esančių sluoksnių "
+"taškai maišomi pagal nustatymus, aprašytus :ref:`blend-modes`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:843
+msgid ""
+"Apply :ref:`paint effects <draw_effects>` on all the layer features with the"
+" :guilabel:`Draw Effects` button."
+msgstr ""
+"Pritaikyti :ref:`paišymo efektus <draw_effects>` visiems sluoksnio "
+"geoobjektams mygtuku :guilabel:`Paišyti efektus`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:846
+msgid ""
+"Some of these options are accessible from the feature annotation "
+":guilabel:`Symbology` properties."
+msgstr ""
+"Kai kurios iš šių parinkčių prieinamos iš geoobjektų anotacijų "
+":guilabel:`Simbologijos` savybių."
+
+#: ../../docs/user_manual/map_views/map_view.rst:850
+msgid "Interacting with features"
+msgstr "Sąveika su geoobjektais"
+
+#: ../../docs/user_manual/map_views/map_view.rst:852
+msgid ""
+"The Feature annotations have dedicated tools for creation depending on their"
+" type:"
+msgstr ""
+"Kiekvienas anotacijų tipas turi specialiai jam skirtą sukūrimo įrankį:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:860
+msgid ""
+"All the usual QGIS shortcuts for creating features apply when creating "
+"annotation items. A line or polygon annotation is drawn by left-clicking "
+"once for each vertex, with a final right mouse click to complete the shape. "
+"Snapping can be enabled while you draw, you can use the :guilabel:`Advanced "
+"Digitizing Tools` to precisely place vertices, and even switch the "
+":ref:`drawing tools <drawing_methods>` to the streaming mode for completely "
+"free-form shapes."
+msgstr ""
+"Kuriant anotacijų elementus veikia visos įprastos QGIS klavišų kombinacijos."
+" Linijos ar poligono anotacijos braižomos kairiu pelės paspaudimu kiekvienos"
+" viršūnės vietoje, braižymą baigiant dešiniu pelės paspaudimu. Galima "
+"įjungti pritraukimą braižant, tikslioms viršūnių pozicijoms galite naudoti "
+":guilabel:`Sudėtingesnio skaitmenizavimo įrankinę`, be to galite perjungti "
+":ref:`braižymo įrankius <drawing_methods>` į tęstinį režimą visiškai "
+"laisvoms formoms."
+
+#: ../../docs/user_manual/map_views/map_view.rst:867
+msgid ""
+"Unlike common layers, an annotation layer does not need to be active before "
+"you select its features. Simply grab the |select| :sup:`Modify Annotations` "
+"tool and you will be able to interact with any feature annotation:"
+msgstr ""
+"Priešingai nei bendri sluoksniai, anotacijų sluoksnio nereikia aktyvuoti, "
+"kad galėtumėte pažymėti jo geoobjektus. Tiesiog čiupkite įrankį |select| "
+":sup:`Keisti anotacijas` ir galėsite sąveikauti su bet kuria anotacija:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:871
+msgid ""
+"**Selection**: left-click on the annotation. By default, annotations are "
+"rendered in the order of creation, meaning that recent annotations will be "
+"placed on top of older. You may need to play with the Z-index property of "
+"features in order to select ones they would sit above."
+msgstr ""
+"**Pažymėjimas**: spauskite kairį mygtuką ant anotacijos. Pagal nutylėjimą "
+"anotacijos braižomos sukūrimo tvarka, tai reiškia, kad paskutinės sukurtos "
+"anotacijos bus braižomos virš senesnių. Jums gali reikėti pažaisti su "
+"geoobjektų Z-index savybe, jei norite nurodyti, kas turi būti viršuje."
+
+#: ../../docs/user_manual/map_views/map_view.rst:876
+msgid ""
+"**Moving**: Left click on a selected annotation item to start moving it. A "
+"right-click or pressing :kbd:`Esc` key cancels the move, while a second left"
+" click will confirm the move. The displacement can also be controlled "
+"pressing the cursor keys:"
+msgstr ""
+"**Perkelimas**: Spauskite kairę mygtuką ant pažymėtos anotacijos, kad "
+"pradėtumėte jos perkėlimą. Dešinys paspaudimas arba mygtukas :kbd:`Esc` "
+"nutraukia perkėlimą, o antras kairys paspaudimas patvirtina perkėlimą. "
+"Perkėlimą taipogi galima valdyti ir rodyklių klavišais:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:881
+msgid ":kbd:`Shift+key` for big movement"
+msgstr ":kbd:`Shift+key` dideliam perkėlimui"
+
+#: ../../docs/user_manual/map_views/map_view.rst:882
+msgid ":kbd:`Alt+key` for ``1 px`` movement"
+msgstr ":kbd:`Alt+key` for ``1 tšk`` perkėlimui"
+
+#: ../../docs/user_manual/map_views/map_view.rst:883
+msgid ""
+"**Geometry modification**: for line or polygon annotations, left-click on a "
+"vertex of the geometry, move and click again. Double-click a segment to add "
+"a new vertex."
+msgstr ""
+"**Geometrijos modifikavimas**: linijų ar poligonų anotacijoms, spauskite "
+"kairį mygtuką ant geometrijos viršūnės, tada spauskite dar kartą, kad "
+"perkeltumėte. Du kartus paspauskite ant atkarpos, kad pridėtumėte naują "
+"viršūnę."
+
+#: ../../docs/user_manual/map_views/map_view.rst:886
+msgid ""
+"**Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while an "
+"annotation is selected will delete that annotation"
+msgstr ""
+"**Ištrynimas**: Paspaudus :kbd:`Del` ar :kbd:`Backspace` mygtuką, kai "
+"anotacija pažymėta, ji bus ištrinta"
+
+#: ../../docs/user_manual/map_views/map_view.rst:888
+msgid ":ref:`Change feature symbology <annotation_feature_symbology>`"
+msgstr ":ref:`Keisti geoobjekto simbologiją <annotation_feature_symbology>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:893
+msgid "Feature symbology"
+msgstr "Geoobjekto simbologija"
+
+#: ../../docs/user_manual/map_views/map_view.rst:895
+msgid ""
+"A selected annotation will display its :guilabel:`Symbology` properties in "
+"the :guilabel:`Layer styling` panel. You can:"
+msgstr ""
+"Pažymėtos anotacijos :guilabel:`Simbologijos` savybės bus rodomos skydelyje "
+":guilabel:`Sluoksnio stilius`. Jūs galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:898
+msgid "Modify the appearance using full capabilities of:"
+msgstr "Keisti išvaizdą naudodami visas galimybes:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:900
+msgid ""
+"the :ref:`symbol properties <symbol-selector>` for polygon, polyline and "
+"marker annotations"
+msgstr ""
+":ref:`simbolių savybes <symbol-selector>` poligonams, polilinijoms ir "
+"žymeklių anotacijoms"
+
+#: ../../docs/user_manual/map_views/map_view.rst:901
+msgid ""
+"the :ref:`text format properties <text_format>` for text-based annotations. "
+"A text area allows you to construct the string to display using QGIS "
+"expression functions. It is also possible to set the :guilabel:`Alignment` "
+"for text annotation at point (left, center or right of the text point)."
+msgstr ""
+":ref:`teksto formato savybės <text_format>` tekstinėms anotacijoms. Teksto "
+"plotas leidžia jums konstruoti rodomą eilutę naudojant QGIS išraiškos "
+"funkcijas. Taipogi galima nustatyti anotacijos teksto :guilabel:`Lygiavimą` "
+"taške (kairėje, centre ar dešinėje nuo teksto taško)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid ""
+"For text annotation at point, also configure whether it should "
+":guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`. In both "
+"cases, a custom :guilabel:`Angle` can be set for the feature orientation."
+msgstr ""
+"Tekstinėms anotacijoms taške taipogi galima nurodyti, ar jos turėtų "
+":guilabel:`Ignoruoti žemėlapio pasukimą` ar :guilabel:`Suktis su žemėlapiu`."
+" Abiem atvejais galima nurodyti ir savo :guilabel:`Kampą` geoobjektų "
+"orientacijai."
+
+#: ../../docs/user_manual/map_views/map_view.rst:908
+msgid ""
+"For text annotation along a line, configure an :guilabel:`Offset from line` "
+"in the unit of your choice"
+msgstr ""
+"Tekstinėms anotacijoms pagal liniją, konfigūruokite :guilabel:`Poslinkį nuo "
+"linijos` jūsų pasirinktais vienetais"
+
+#: ../../docs/user_manual/map_views/map_view.rst:910
+msgid ""
+"Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale"
+" at which symbol or text sizes which uses paper-based units (such as "
+"millimeters or points) relate to. The sizes will be scaled accordingly "
+"whenever the map is viewed at a different scale. For instance, a line "
+"feature wide of 2mm at 1:2000 :guilabel:`Reference scale` will be rendered "
+"using 4mm when the map is viewed at 1:1000."
+msgstr ""
+"Konfigūruokite |unchecked| :guilabel:`Atskaitos mastelį`: nurodo žemėlapio "
+"mastelį, ties kuriuo simbolių ar teksto dydžiai naudoja popieriumi-paremtus "
+"vienetus (tokius kaip milimetrus ar taškus). Dydžiai bus atitinkamai "
+"pakeisti, kai žemėlapis bus žiūrimas skirtinguose masteliuose. Pavyzdžiui, "
+"2mm pločio linijos geoobjektas 1:2000 :guilabel:`Atskaitos mastelyje` bus "
+"braižomas 4mm, kai žemėlapis žiūrimas mastelyje 1:1000."
+
+#: ../../docs/user_manual/map_views/map_view.rst:915
+msgid ""
+"Set a :guilabel:`Z-index`: a feature with a higher index is placed on top of"
+" features with lower index. A convenient setting for both feature display "
+"and selection."
+msgstr ""
+"Nustatykite :guilabel:`Z-index`: geoobjektai su didesniu indeksu dedami virš"
+" geoobjektų su mažesniu indeksu. Patogus nustatymas tiek geoobjekto rodymui,"
+" tiek ir pažymėjimui."
+
+#: ../../docs/user_manual/map_views/map_view.rst:918
+msgid ""
+"Modify some of the :ref:`Layer rendering <annotationslayer_rendering>` "
+"settings"
+msgstr ""
+"Keiskite kai kuriuos :ref:`Sluoksnio braižymo <annotationslayer_rendering>` "
+"nustatymus"
+
+#: ../../docs/user_manual/map_views/map_view.rst:925
+msgid ""
+"You can add balloon annotations through :menuselection:`Edit --> Add "
+"Annotation -->` menu or from the :guilabel:`Annotations Toolbar`:"
+msgstr ""
+"Balionų anotacijas galite pridėti per meniu :menuselection:`Keisti --> "
+"Pridėti anotaciją -->` arba naudojant :guilabel:`Anotacijų įrankinė`:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:928
+msgid "|textAnnotation| :sup:`Text Annotation` for custom formatted text"
+msgstr "|textAnnotation| :sup:`Tekstinė anotacija` formatuotam tekstui"
+
+#: ../../docs/user_manual/map_views/map_view.rst:929
+msgid ""
+"|htmlAnnotation| :sup:`HTML Annotation` to place the content of an "
+":file:`html` file"
+msgstr ""
+"|htmlAnnotation| :sup:`HTML anotacija`, kad pridėtumėte :file:`html` failo "
+"turinį"
+
+#: ../../docs/user_manual/map_views/map_view.rst:930
+msgid "|svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol"
+msgstr ""
+"|svgAnnotation| :sup:`SVG anotacija`, kad pridėtumėte :file:`SVG` simbolį"
+
+#: ../../docs/user_manual/map_views/map_view.rst:931
+msgid ""
+"|formAnnotation| :sup:`Form Annotation`: useful to display attributes of a "
+"vector layer in a customized :file:`ui` file (see "
+":numref:`figure_custom_annotation`). This is similar to the :ref:`custom "
+"attribute forms <provide_ui_file>`, but displayed in an annotation item. "
+"Also see this video "
+"https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s from "
+"Tim Sutton for more information."
+msgstr ""
+"|formAnnotation| :sup:`Formos anotacija`: naudinga rodant vektorinio "
+"sluoksnio atributus tinkintame :file:`ui` faile (žr. "
+":numref:`figure_custom_annotation`). Tai panašu į :ref:`tinkintas atributų "
+"formas <provide_ui_file>`, tik rodomas anotacijos elemente. Daugiau "
+"informacijos galite rasti šiame Tim Sutton video "
+"https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s."
+
+#: ../../docs/user_manual/map_views/map_view.rst:947
+msgid "Examples of balloon annotations"
+msgstr "Balionų anotacijų pavyzdžiai"
+
+#: ../../docs/user_manual/map_views/map_view.rst:950
+msgid ""
+"To add a balloon annotation, select the corresponding tool and click on the "
+"map canvas. An empty balloon is added. Double-click on it and a dialog opens"
+" with various options. This dialog is almost the same for all the annotation"
+" types:"
+msgstr ""
+"Kad pridėtumėte balionų anotaciją, parinkite atitinkamą įrankį ir spauskite "
+"žemėlapio drobėje. Pridedamas tuščias balionas. Du kartus jį paspauskite - "
+"atsivers dialogas su įvairiomis parinktimis. Šis dialogas beveik toks pat "
+"visiems anotacijų tipams:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:954
+msgid ""
+"At the top, a file selector to fill with the path to an :file:`html`, "
+":file:`svg` or :file:`ui` file depending on the type of annotation. For text"
+" annotation, you can enter your message in a text box and set its rendering "
+"with the normal font tools."
+msgstr ""
+"Viršuje yra failų parinkiklis, kuriame galima įrašyti kelia iki "
+":file:`html`, :file:`svg` ar :file:`ui` failo, priklausomai nuo anotacijos "
+"tipo. Teksto anotacijai jūs galite įvesti savo pranešimą teksto langelyje ir"
+" nustatyti jo įprastas braižymo šrifto savybes."
+
+#: ../../docs/user_manual/map_views/map_view.rst:958
+msgid ""
+"|checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon "
+"placement is based on a screen position (instead of the map), meaning that "
+"it's always shown regardless the map canvas extent."
+msgstr ""
+"|checkbox| :guilabel:`Fiksuota vieta žemėlapyje`: išjungus šią parinktį "
+"baliono pozicija priklauso nuo ekrano pozicijos (o ne žemėlapio), t.y. ji "
+"visada romo nepriklausomai nuo žemėlapio drobės apimties."
+
+#: ../../docs/user_manual/map_views/map_view.rst:961
+msgid ""
+":guilabel:`Linked layer`: associates the annotation with a map layer, making"
+" it visible only when that layer is visible."
+msgstr ""
+":guilabel:`Susijęs sluoksnis`: susieja anotaciją su žemėlapio sluoksniu, "
+"todėl anotacija matoma tik tada, kai rodomas susietas sluoksnis."
+
+#: ../../docs/user_manual/map_views/map_view.rst:963
+msgid ""
+":guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, sets "
+"the symbol to display at the balloon anchor position (shown only when "
+":guilabel:`Fixed map position` is checked)."
+msgstr ""
+":guilabel:`Simbolis`: naudojant :ref:`QGIS simbolius <symbol-selector>`, "
+"nustato baliono susiejimo pozicijoje rodomą simbolį (rodomą tik kai įjungta "
+"parinktis :guilabel:`Fiksuota vieta žemėlapyje`)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:966
+msgid ""
+":guilabel:`Frame style`: sets the frame background color, transparency, "
+"stroke color or width of the balloon using QGIS symbols."
+msgstr ""
+":guilabel:`Rėmo stilius`: nustato baliono rėmo fono spalvą, permatomumą, "
+"brėžimo spalvą ar plotį naudojant QGIS simbolius."
+
+#: ../../docs/user_manual/map_views/map_view.rst:968
+msgid ""
+":guilabel:`Contents margins`: sets interior margins of the annotation frame."
+msgstr ""
+":guilabel:`Turinio paraštės`: nustato vidines anotacijos rėmo paraštes."
+
+#: ../../docs/user_manual/map_views/map_view.rst:969
+msgid ""
+"|checkbox| :guilabel:`Live update` allows you to live preview your changes."
+msgstr ""
+"|checkbox| :guilabel:`Gyvas atnaujinimas` leidžia iš karto matyti jūsų "
+"pakeitimus."
+
+#: ../../docs/user_manual/map_views/map_view.rst:976
+msgid "A ballon annotation text dialog"
+msgstr "Baliono anotacijų teksto dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:978
+msgid "When a balloon annotation tool is active, you can also:"
+msgstr "Kai aktyvus baliono anotavimo įrankis, jūs taipogi galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:980
+msgid "Select an annotation"
+msgstr "Pažymėti anotaciją"
+
+#: ../../docs/user_manual/map_views/map_view.rst:981
+msgid "Resize an annotation"
+msgstr "Keisti anotacijos dydį"
+
+#: ../../docs/user_manual/map_views/map_view.rst:982
+msgid ""
+"Move an annotation by map position (by dragging the map marker) or by moving"
+" only the balloon."
+msgstr ""
+"Perkelti anotaciją į žemėlapio poziciją (pertempiant žemėlapio žymeklį) arba"
+" perkelti tik balioną."
+
+#: ../../docs/user_manual/map_views/map_view.rst:983
+msgid ""
+"Delete an annotation: select it and either press the :kbd:`Del` or "
+":kbd:`Backspace` button, or double-click it and press the :guilabel:`Delete`"
+" button in the properties dialog."
+msgstr ""
+"Ištrinti anotaciją: parinkite ją ir arba spauskite mygtuką :kbd:`Del` ar "
+":kbd:`Backspace`, arba du kartus spauskite anotaciją ir savybių dialoge "
+"naudokite mygtuką :guilabel:`Trinti`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:985
+msgid "Right-click and in the contextual menu:"
+msgstr "Paspaudus dešinį pelės mygtuką, per kontekstinį meniu galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:987
+msgid ""
+"|editCopy| :guilabel:`Copy coordinate` of the annotation's map marker in "
+"various CRS"
+msgstr ""
+"|editCopy| :guilabel:`Kopijuoti koordinates` iš anotacijos žemėlapio "
+"žymeklio į skirtingas CRS"
+
+#: ../../docs/user_manual/map_views/map_view.rst:988
+msgid ""
+"|toggleEditing| :guilabel:`Edit` properties of the annotation. Same as "
+"double-clicking the annotation."
+msgstr ""
+"|toggleEditing| :guilabel:`Keisti` anotacijos savybes. Tas pats, kas du "
+"kartus paspaudus anotaciją."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1405
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/user_manual/map_views/map_view.rst:989
+msgid "|deleteSelected| :guilabel:`Delete` the annotation"
+msgstr "|deleteSelected| :guilabel:`Trinti` anotaciją"
+
+#: ../../docs/user_manual/map_views/map_view.rst:997
+msgid "Measuring"
+msgstr "Matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1000
+msgid "General information"
+msgstr "Bendra informacija"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1002
+msgid "QGIS provides four means of measuring geometries:"
+msgstr "QGIS teikia keturis geometrijų matavimo būdus:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1004
+msgid "interactive measurement tools |measure|"
+msgstr "Interaktyvius matavimo įrankius |measure|"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1336
+msgid "measure"
+msgstr "measure"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1005
+msgid "measuring in the |calculateField| :sup:`Field Calculator`"
+msgstr "matavimą naudojant |calculateField| :sup:`Laukų skaičiuotuvą`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1314
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1006
+msgid "derived measurements in the :ref:`identify` tool"
+msgstr "išvestinius matavimus :ref:`identifikavimo` įrankyje"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1007
+msgid ""
+"the vector analysis tool: :menuselection:`Vector --> Geometry Tools --> "
+"Export/Add Geometry Columns`"
+msgstr ""
+"vektorinės analizės įrankius: :menuselection:`Vektorius --> Geometrijos "
+"įrankiai --> Pridėti geometrijos stulpelius`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1010
+msgid ""
+"Measuring works within projected coordinate systems (e.g., UTM) and "
+"unprojected data. The first three measuring tools behave equally to global "
+"project settings:"
+msgstr ""
+"Matavimas veikia tiek projektuotose koordinačių sistemose (pvz. UTM), tiek "
+"ir neprojektuotuose duomenyse. Pirmi trys matavimo įrankiai elgiasi pagal "
+"globalius projekto nustatymus:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1013
+msgid ""
+"Unlike most other GIS, the default measurement metric is ellipsoidal, using "
+"the ellipsoid defined in :menuselection:`Project --> Properties... --> "
+"General`. This is true both when geographic and projected coordinate systems"
+" are defined for the project."
+msgstr ""
+"Kitaip nei dauguma GIS, numatytoji matavimo metrika yra elipsoidinė, "
+"naudojant elipsoidą, apibrėžtą :menuselection:`Projektas --> Savybės... --> "
+"Bendra`. Tai galioja tiek geografinėms, tiek ir projektuotoms sistemoms, "
+"apibrėžtoms projekte."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1017
+msgid ""
+"If you want to calculate the projected/planimetric area or distance using "
+"cartesian maths, the measurement ellipsoid has to be set to "
+"\"None/Planimetric\" (:menuselection:`Project --> Properties... --> "
+"General`). However, with a geographic (ie unprojected) CRS defined for the "
+"data and project, area and distance measurement will be ellipsoidal."
+msgstr ""
+"Jei norite skaičiuoti projektuotą/planimetrinį plotą ar atstumą naudojant "
+"dekarto matematiką, matavimo elipsoidą reikia nurodyti „Jokio/Planimetrinis“"
+" (:menuselection:`Projektas --> Savybės... --> Bendra`). Kaip ten bebūtų, "
+"nustačius duomenims ir projektui geografinę (t.y. neprojektuotą) CRS, ploto "
+"ir atstumo matavimai bus elipsoidiniai."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1023
+msgid ""
+"However, neither the identify tool nor the field calculator will transform "
+"your data to the project CRS before measuring. If you want to achieve this, "
+"you have to use the vector analysis tool: :menuselection:`Vector --> "
+"Geometry Tools --> Add Geometry Attributes...`. Here, measurement is "
+"planimetric, unless you choose the ellipsoidal measurement."
+msgstr ""
+"Nei identifikavimo įrankis, nei laukų skaičiuotuvas netransformuos jūsų "
+"duomenų į projekto CRS prieš matavimą. Jei norite tai pasiekti, jums reikės "
+"vektorinės analizės įrankio: :menuselection:`Vektorius --> Geometrijos "
+"įrankiai --> Pridėti geometrijos atributus...`. Čia matavimai bus "
+"planimetriniai, nebent pasirinksite elipsoidinį matavimą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1030
+msgid "Measure length, areas, bearings and angles interactively"
+msgstr "Interaktyvus ilgio, ploto, krypties ir kampo matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1032
+msgid ""
+"Click the |measure| icon in the Attribute toolbar to begin measurements. The"
+" down arrow near the icon switches between |measure| length, |measureArea| "
+"area, |measureBearing| bearing or |measureAngle| angle. The default unit "
+"used in the dialog is the one set in :menuselection:`Project --> "
+"Properties... --> General` menu."
+msgstr ""
+"Norėdami pradėti matavimą spauskite Atributų įrankinės piktogramą |measure|."
+" Rodyklė žemyn greta piktogramos leidžia persijungti tarp |measure| ilgio, "
+"|measureArea| ploto, |measureBearing| krypties ar |measureAngle| kampo "
+"matavimo. Pagal nutylėjimą dialoge naudojamas vienetas, nurodytas meniu "
+":menuselection:`Projektas --> Savybės... --> Bendra`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1340
+msgid "measureArea"
+msgstr "measureArea"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1342
+msgid "measureBearing"
+msgstr "measureBearing"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1338
+msgid "measureAngle"
+msgstr "measureAngle"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1038
+msgid ""
+"For the :guilabel:`Measure Line` and the :guilabel:`Measure Area` the "
+"measurements can be done in |radioButtonOn| :guilabel:`Cartesian` or "
+"|radioButtonOn| :guilabel:`Ellipsoidal` measure."
+msgstr ""
+":guilabel:`Matuoti liniją` ir the :guilabel:`Matuoti plotą` matavimai gali "
+"būti atliekami |radioButtonOn| :guilabel:`Dekarto` arba |radioButtonOn| "
+":guilabel:`Elipsoidiniais` matavimais."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1360
+msgid "radioButtonOn"
+msgstr "radioButtonOn"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1042
+msgid "**Configuring the measure tool**"
+msgstr "**Matavimo įrankio konfigūravimas**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1044
+msgid ""
+"While measuring length or area, clicking the :guilabel:`Configuration` "
+"button at the bottom of the widget opens the :menuselection:`Settings --> "
+"Options --> Map Tools` menu, where you can select the rubberband color, the "
+"precision of the measurements and the unit behavior. You can also choose "
+"your preferred measurement or angle units, but keep in mind that those "
+"values are overridden in the current project by the selection made in the "
+":menuselection:`Project --> Properties... --> General` menu, and by the "
+"selection made in the measurement widget."
+msgstr ""
+"Matuojant ilgį arba plotą, paspaudus dialogo apačioje mygtuką "
+":guilabel:`Nustatymai`, atidaromas meniu :menuselection:`Nustatymai --> "
+"Parinktys --> Žemėlapio įrankiai`, kur jūs galite parinkti gumelės spalvą, "
+"matavimų tikslumą bei vienetų elgseną. Taipogi galite parinkti norimus "
+"matavimo ar kampo vienetus, bet turėkite omenyje, kad šios reikšmės yra "
+"permušamos dabartinio projekto parinkime :menuselection:`Projektas --> "
+"Savybės... --> Bendra`, taip pat ir matavimo valdiklio valdiklio "
+"parinkimuose."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1053
+msgid ""
+"All measuring modules use the snapping settings from the digitizing module "
+"(see section :ref:`snapping_tolerance`). So, if you want to measure exactly "
+"along a line feature, or around a polygon feature, first set its layer "
+"snapping tolerance. Now, when using the measuring tools, each mouse click "
+"(within the tolerance setting) will snap to that layer."
+msgstr ""
+"Visi matavimo moduliai naudoja skaitmeninimo modulio pritraukimo nustatymus "
+"(žr. skiltį :ref:`snapping_tolerance`). Taigi jei norite tiksliai matuoti "
+"palei linijos geoobjektą arba aplink poligono geoobektą, visų pirma "
+"nustatykite to sluoksnio pritraukimo toleranciją. Tada, naudojant matavimo "
+"įrankius, kiekvienas pelės paspaudimas (tolerancijos nustatymo ribose) bus "
+"pritrauktas prie sluoksnio."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1065
+msgid ""
+"The |measure| :sup:`Measure Line` measures distances between given points. "
+"The tool then allows you to click points on the map. Each segment length, as"
+" well as the total, shows up in the measure window. In the measure window, "
+"you will see coordinates for all your points and distances. Keep in mind "
+"that the first row will contain only coordinates, as it represents your "
+"starting point. Now it is possible to copy all your line measurements at "
+"once to the clipboard using the :guilabel:`Copy` button. Clicking the "
+":guilabel:`Configuration` button you will access to :guilabel:`Measure Tool "
+"Copy Settings` where you can set up :ref:`copy options "
+"<measure_copy_settings>`. To stop measuring, click the right mouse button."
+msgstr ""
+"|measure| :sup:`Matuoti liniją` matuoja atstumą tarp nurodytų taškų. Įrankis"
+" leidžia jums spausti taškus žemėlapyje. Matavimo lange rodomas kiekvieno "
+"segmento ir bendras ilgis. Matavimo lange jūs matote visų taškų koordinates "
+"ir atstumus. Turėkite omenyje, kad pirma eilutė turės tik koordinates, nes "
+"ji reprezentuoja pradžios tašką. Dabar galima kopijuoti iš karto visus jūsų "
+"matavimus į iškarpinę naudojant mygtuką :guilabel:`Kopijuoti`. Paspaudę "
+"mygtuką :guilabel:`Konfigūracija` pasieksite :guilabel:`Matavimo įrankių "
+"kopijavimo nustatymai`, kur galėsite nustatyti :ref:`kopijavimo parinktis "
+"<measure_copy_settings>`. Norėdami baigti matavimą spauskite dešinį pelės "
+"mygtuką."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1076
+msgid ""
+"Note that you can use the drop-down list near the total to change the "
+":ref:`measurement units <measurements_ellipsoid>` interactively while "
+"working with the measure tool. This unit is retained for the widget until a "
+"new project is created or another project is opened."
+msgstr ""
+"Pastebėtina, kad galite naudoti iškrentantį sąrašą, esantį greta bendros "
+"sumos, jei norite interaktyviai pakeisti :ref:`matavimo vienetus "
+"<measurements_ellipsoid>`, kol dirbate su matavimo įrankiu. Šie vienetai "
+"grąžinami valdiklyje kol sukuriamas naujas projektas arba atveriamas kitas "
+"projektas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1082
+msgid ""
+"The :guilabel:`Info` section in the dialog explains how calculations are "
+"made according to the CRS settings available."
+msgstr ""
+"Dialogo skiltis :guilabel:`Informacija` paaiškina kaip vykdomi skaičiavimai "
+"pagal turimus CRS nustatymus."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1091
+msgid "Measure Distance"
+msgstr "Atstumo matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1093
+msgid ""
+"|measureArea| :sup:`Measure Area`: Areas can also be measured. In the "
+"measure window, the accumulated area size appears. Right-click to stop "
+"drawing. The Info section is also available as well as the ability to switch"
+" between different :ref:`area units <measurements_ellipsoid>`."
+msgstr ""
+"|measureArea| :sup:`Matuoti plotą`: Galima matuoti ir plotus. Matavimo lange"
+" rodomas suminis plotas. Norėdami baigti braižyti spauskite dešinį mygtuką. "
+"Taipogi matoma ir informacijos skiltis bei yra galimybė perjungti skirtingus"
+" :ref:`matavimo vienetus <measurements_ellipsoid>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1103
+msgid "Measure Area"
+msgstr "Ploto matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1105
+msgid ""
+"|measureBearing| :sup:`Measure Bearing`: You can also measure bearings. The "
+"cursor becomes cross-shaped. Click to draw the first point of the bearing, "
+"then move the cursor to draw the second point. The measurement is displayed "
+"in a pop-up dialog."
+msgstr ""
+"|measureBearing| :sup:`Matuoti kryptį`: Jūs galite matuoti kryptis. Žymeklio"
+" forma pasikeičia į kryžių. Spauskite, kad nubrėžtumėte pirmą krypties "
+"tašką, tada perkelkite žymeklį, kad nubrėžtumėte antrą tašką. Matavimas "
+"rodomas iššokančiame dialoge."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1116
+msgid "Measure Bearing"
+msgstr "Krypties matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1118
+msgid ""
+"|measureAngle| :sup:`Measure Angle`: You can also measure angles. The cursor"
+" becomes cross-shaped. Click to draw the first segment of the angle you wish"
+" to measure, then move the cursor to draw the desired angle. The measurement"
+" is displayed in a pop-up dialog."
+msgstr ""
+"|measureAngle| :sup:`Matuoti kampą`: Jūs taip pat galite matuoti kampus. "
+"Žymeklis tampa kryžiuku. Spauskite, kad nubrėžtumėte pirmą matuojamo kampo "
+"segmentą, tada tempkite žymeklį, kad nubraižytumėte norimą kampą. Matavimai "
+"rodomi iššokančiame dialoge."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1129
+msgid "Measure Angle"
+msgstr "Kampo matavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1135
+msgid "Setting additional map views"
+msgstr "Papildomų žemėlapio vaizdų kūrimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1137
+msgid ""
+"It is also possible to open additional map views whose content could diverge"
+" from the :guilabel:`Layers` panel current state. To add a new map view, go "
+"to :menuselection:`View -->` |newMap| :menuselection:`New Map View`. A new "
+"floating widget, mimicking the main map view's rendering, is added to QGIS. "
+"You can add as many map views as you need. They can be kept floating, placed"
+" side by side or stacked on top of each other."
+msgstr ""
+"Taipogi galima pridėti papildomus žemėlapio vaizdus, kurių turinys gali "
+"nukrypti nuo :guilabel:`Sluoksnių` skydelio esamos būsenos. Kad pridėtumėte "
+"naują žemėlapio vaizdą, eikite į :menuselection:`Rodymas -->` |newMap| "
+":menuselection:`Naujas žemėlapio vaizdas`. Į QGIS bus pridėtas naujas "
+"plaukiojantis valdiklis, atkartojantis pagrindinio žemėlapio vaizdą. Jūs "
+"galite pridėti tiek vaizdų, kiek tik norite. Juos galima palikti plaukioti, "
+"pridėti vieną greta kito ar vieną virš kito."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1346
+msgid "newMap"
+msgstr "newMap"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1151
+msgid "Multiple map views with different settings"
+msgstr "Keli žemėlapio vaizdai su skirtingais nustatymais"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1153
+msgid ""
+"At the top of an additional map canvas, there's a toolbar with the following"
+" capabilities:"
+msgstr ""
+"Papildomos žemėlapio drobės viršuje yra įrankinė su tokiomis galimybėmis:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1156
+msgid ""
+"|zoomFullExtent| :sup:`Zoom Full`, |zoomToSelected| :sup:`Zoom to Selection`"
+" and |zoomToLayer| :sup:`Zoom to Layer(s)` to navigate within the view"
+msgstr ""
+"|zoomFullExtent| :sup:`Pilnai padidinti`, |zoomToSelected| :sup:`Didinti iki"
+" pažymėjimo` ir |zoomToLayer| :sup:`Didinti iki sluoksnio`, navigacijai "
+"rodinyje"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1158
+msgid ""
+"|showPresets| :sup:`Set View Theme` to select the :ref:`map theme "
+"<map_themes>` to display in the map view. If set to ``(none)``, the view "
+"will follow the :guilabel:`Layers` panel changes."
+msgstr ""
+"|showPresets| :sup:`Nustatyti rodymo temą` vaizdo :ref:`žemėlapio temos "
+"<map_themes>` parinkimui. Nurodžius ``(joks)``, vaizdas seks "
+":guilabel:`Sluoksnių` skydelio pokyčius."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1387
+msgid "showPresets"
+msgstr "showPresets"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1161
+msgid "|options| :sup:`View settings` to configure the map view:"
+msgstr "|options| :sup:`Rodymo nustatymai` žemėlapio vaizdo konfigūravimui:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1350
+msgid "options"
+msgstr "options"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1163
+msgid ""
+"|radioButtonOn| :guilabel:`Synchronize view center with main map`: syncs the"
+" center of the map views without changing the scale. This allows you to have"
+" an overview style or magnified map which follows the main canvas center."
+msgstr ""
+"|radioButtonOn| :guilabel:`Sinchronizuoti rodinio centrą su pagrindiniu "
+"žemėlapiu`: sinchronizuoja žemėlapio vaizdų centrus nekeičiant mastelio. Tai"
+" leidžia turėti peržiūros stilių ar padidintą žemėlapį, kuris seka "
+"pagrindinės drobės centrą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1167
+msgid ""
+"|radioButtonOff| :guilabel:`Synchronize view to selection`: same as zoom to "
+"selection"
+msgstr ""
+"|radioButtonOff| :guilabel:`Sinchronizuoti rodinį su pažymėjimu`: tas pats, "
+"kas priartinti pažymėjimą"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1358
+msgid "radioButtonOff"
+msgstr "radioButtonOff"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1169
+msgid ":guilabel:`Scale`"
+msgstr ":guilabel:`Mastelis`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1170
+msgid ":guilabel:`Rotation`"
+msgstr ":guilabel:`Pasukimas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1171
+msgid ":guilabel:`Magnification`"
+msgstr ":guilabel:`Didinimas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1172
+msgid ""
+"|unchecked| :guilabel:`Synchronize scale` with the main map scale. A "
+":guilabel:`Scale factor` can then be applied, allowing you to have a view "
+"which is e.g. always 2x the scale of the main canvas."
+msgstr ""
+"|unchecked| :guilabel:`Sinchronizuoti mastelį` su pagrindinio žemėlapio "
+"masteliu. :guilabel:`Mastelio daugiklis` gali būti pritaikytas, leidžiant "
+"jums pavyzdžiui turėti vaizdą, 2x stambesniu masteliu už pagrindinės drobės."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1175
+msgid "|checkbox| :guilabel:`Show annotations`"
+msgstr "|checkbox| :guilabel:`Rodyti anotacijas`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1176
+msgid "|checkbox| :guilabel:`Show cursor position`"
+msgstr "|checkbox| :guilabel:`Rodyti kursoriaus poziciją`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1177
+msgid "|unchecked| :guilabel:`Show main canvas extent`"
+msgstr "|unchecked| :guilabel:`Rodyti pagrindinės drobės apimtį`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1178
+msgid ""
+"|checkbox| :guilabel:`Show labels`: allows to hide labels regardless they "
+"are set in the displayed layers' properties"
+msgstr ""
+"|checkbox| :guilabel:`Rodyti etiketes`: leidžia paslėpti etiketes "
+"nepriklausomai nuo to, ar jos įjungtos sluoksnio nustatymuose"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1180
+msgid ":guilabel:`Change map CRS...`"
+msgstr ":guilabel:`Keisti žemėlapio CRS...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1181
+msgid ":guilabel:`Rename view...`"
+msgstr ":guilabel:`Pervadinti rodinį...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1187
+msgid "Exporting the map view"
+msgstr "Žemėlapio vaizdo eksportavimas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1189
+msgid ""
+"Maps you make can be layout and exported to various formats using the "
+"advanced capabilities of the :ref:`print layout or report "
+"<label_printlayout>`. It's also possible to directly export the current "
+"rendering, without a layout. This quick \"screenshot\" of the map view has "
+"some convenient features."
+msgstr ""
+"Jūsų sukurti žemėlapiai gali būti išdėlioti ir eksportuoti į įvairius "
+"formatus naudojant išmaniąsias :ref:`spausdinimo išdėstymų ar ataskaitų "
+"<label_printlayout>` galimybes. Taipogi galima tiesiogiai eksportuoti šiuo "
+"metu nubraižytą vaizdą. Šis greitas žemėlapio vaizdo „fotografavimas“ turi "
+"keletą patogių savybių."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1196
+msgid "To export the map canvas with the current rendering:"
+msgstr "Eksportuoti dabartinio vaizdo žemėlapio drobę:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1198
+msgid "Go to :menuselection:`Project --> Import/Export`"
+msgstr "Eikite į :menuselection:`Proktas --> Importuoti/Eksportuoti`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1199
+msgid "Depending on your output format, select either"
+msgstr "Priklausomai nuo jūsų išvesties formato, parinkite arba"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1201
+msgid "|saveMapAsImage| :guilabel:`Export Map to Image...`"
+msgstr "|saveMapAsImage| :guilabel:`Eksportuoti žemėlapį į piešinį...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1366
+msgid "saveMapAsImage"
+msgstr "saveMapAsImage"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1202
+msgid "or |saveAsPDF| :guilabel:`Export Map to PDF...`"
+msgstr "ar |saveAsPDF| :guilabel:`Eksportuoti žemėlapį į PDF...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1364
+msgid "saveAsPDF"
+msgstr "saveAsPDF"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1204
+msgid ""
+"The two tools provide you with a common set of options. In the dialog that "
+"opens:"
+msgstr ""
+"Šie du įrankiai atsidariusiame dialoge suteikia jums pagrindines parinktis:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1212
+msgid "The Save Map as Image dialog"
+msgstr "Žemėlapio įrašymo į piešinį dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1214
+msgid ""
+"Choose the :guilabel:`Extent` to export: it can be the current view extent "
+"(the default), the extent of a layer or a custom extent drawn over the map "
+"canvas. Coordinates of the selected area are displayed and manually "
+"editable."
+msgstr ""
+"Parinkite eksportuojamą :guilabel:`Apimtį`: tai gali būti dabar matomas "
+"vaizdas (numatytoji parinktis), sluoksnio apimtis, arba sava žemėlapyje "
+"nubraižyta apimtis. Parodomos parinkto ploto koordinatės ir jas galima "
+"keisti."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1218
+msgid ""
+"Enter the :guilabel:`Scale` of the map or select it from the "
+":ref:`predefined scales <predefinedscales>`: changing the scale will resize "
+"the extent to export (from the center)."
+msgstr ""
+"Įveskite žemėlapio :guilabel:`Mastelį` arba parinkite jį iš :ref:`iš anksto "
+"apibrėžtų mastelių <predefinedscales>`: pakeitus mastelį bus perskaičiuota "
+"eksporto apimtis (nuo centro)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1221
+msgid "Set the :guilabel:`Resolution` of the output"
+msgstr "Nustatykite išvesties :guilabel:`Rezoliuciją`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1222
+msgid ""
+"Control the :guilabel:`Output width` and :guilabel:`Output height` in pixels"
+" of the image: based by default on the current resolution and extent, they "
+"can be customized and will resize the map extent (from the center). The size"
+" ratio can be locked, which may be particularly convenient when drawing the "
+"extent on the canvas."
+msgstr ""
+"Valdykite :guilabel:`Išvesties plotį` ir :guilabel:`Išvesties aukštį` "
+"piešinio taškais: pagal nutylėjimą nurodoma pagal dabartinę rezoliuciją ir "
+"apimtį, bet gali būti pakeista ir tada pakeis žemėlapio apimtį (nuo centro)."
+" Dydžio santykis gali būti užrakintas, kas gali būti ypač patogu braižant "
+"apimtį drobėje."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1228
+msgid ""
+"|checkbox| :guilabel:`Draw active decorations`: in use :ref:`decorations "
+"<decorations>` (scale bar, title, grid, north arrow...) are exported with "
+"the map"
+msgstr ""
+"|checkbox| :guilabel:`Paišyti aktyvias dekoracijas`: :ref:`dekoracijos "
+"<decorations>` (mastelio juosta, pavadinimas, tinklelis, šiaurės rodyklė...)"
+" eksportuojamos kartu su žemėlapiu"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1231
+msgid ""
+"|checkbox| :guilabel:`Draw annotations` to export any :ref:`annotation "
+"<sec_annotations>`"
+msgstr ""
+"|checkbox| :guilabel:`Paišyti anotacijas`, jei norite eksportuoti visas "
+":ref:`anotacijas <sec_annotations>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1233
+msgid ""
+"|checkbox| :guilabel:`Append georeference information (embedded or via world"
+" file)`: depending on the output format, a world file of the same name (with"
+" extension ``PNGW`` for ``PNG`` images, ``JPGW`` for ``JPG``, ...) is saved "
+"in the same folder as your image. The ``PDF`` format embeds the information "
+"in the PDF file."
+msgstr ""
+"|checkbox| :guilabel:`Pridėti geopririšimo informaciją (įtraukta arba per "
+"pasaulio failą)`: priklausomai nuo išvesties formato, tame pačiame aplanke "
+"ir tokiu pačiu pavadinimu, kaip ir piešinys, bus įrašytas pasaulio failas "
+"(su priesaga ``PNGW`` ``PNG`` piešiniams, ``JPGW`` ``JPG``, ...). ``PDF`` "
+"formate ši informacija įdedama į PDF failo vidų."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1238
+msgid ""
+"When exporting to PDF, more options are available in the :guilabel:`Save map"
+" as PDF...` dialog:"
+msgstr ""
+"Eksportuojant į PDF pateikiama daugiau parinkčių :guilabel:`Įrašyti žemėlapį"
+" į PDF...` dialoge:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1246
+msgid "The Save Map as PDF dialog"
+msgstr "Žemėlapio įrašymo į PDF dialogas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1248
+msgid ""
+"|checkbox| :guilabel:`Export RDF metadata` of the document such as the "
+"title, author, date, description..."
+msgstr ""
+"|checkbox| :guilabel:`Eksportuoti RDF metaduomenis` - pridedami dokumento "
+"duomenys, tokie kaip pavadinimas, autorius, data, aprašymas..."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1250
+msgid ""
+"|unchecked| :guilabel:`Create Geospatial PDF`: Generate a `georeferenced PDF"
+" file <https://gdal.org/en/latest/drivers/raster/pdf.html>`_. You can:"
+msgstr ""
+"|unchecked| :guilabel:`Kurti geoerdvinį PDF`: Sukuria `geografiškai pririštą"
+" PDF failą <https://gdal.org/en/latest/drivers/raster/pdf.html>`_. Jūs galite:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1254
+msgid "Choose the Geospatial PDF :guilabel:`Format`"
+msgstr "Parinkti Geoerdvinį PDF :guilabel:`Formatą`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1255
+msgid ""
+"|checkbox| :guilabel:`Include vector feature information` in the Geospatial "
+"PDF file: will include all the geometry and attribute information from "
+"features visible within the map in the output Geospatial PDF file."
+msgstr ""
+"|checkbox| :guilabel:`Įtraukti vektorinių geoobjektų informaciją` Geoerdvinį"
+" PDF faile: įtrauks visus geometrijų atributus iš geoobjektų, matomų "
+"išvesties Geoerdvinį PDF faile."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1262
+msgid ""
+"A Geospatial PDF file can also be used as a data source. For more on "
+"Geospatial PDF support in QGIS, see https://north-"
+"road.com/2019/09/03/qgis-3-10-loves-geospatialpdf/."
+msgstr ""
+"Geoerdvinį PDF failą taipogi galima naudoti kaip duomenų šaltinį. Daugiau "
+"informacijos apie Geoerdvinių PDF palaikymą QGIS'e, žiūrėkite https://north-"
+"road.com/2019/09/03/qgis-3-10-loves-geospatialpdf/."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1266
+msgid ":guilabel:`Rasterize map`"
+msgstr ":guilabel:`Rastrizuoti žemėlapį`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1267
+msgid ""
+"|checkbox| :guilabel:`Simplify geometries to reduce output file size`: "
+"Geometries will be simplified while exporting the map by removing vertices "
+"that are not discernibly different at the export resolution (e.g. if the "
+"export resolution is ``300 dpi``, vertices that are less than ``1/600 inch``"
+" apart will be removed). This can reduce the size and complexity of the "
+"export file (very large files can fail to load in other applications)."
+msgstr ""
+"|checkbox| :guilabel:`Paprastinti geometrijas failo dydžio sumažinimui`: "
+"Geometrijos bus supaprastintos pašalinant viršūnes, kurios nekeičia vaizdo "
+"eksporto rezoliucijoje (pvz. jei eksporto rezoliucija yra ``300 dpi``, "
+"viršūnės, kurios yra arčiau viena kitos nei ``1/600 colio``, bus "
+"pašalintos). Tai gali sumažinti eksportuojamo failo dydį ir sudėtingumą "
+"(labai didelių failų kai kurios programos gali nesugebėti atidaryti)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1275
+msgid ""
+"Set the :guilabel:`Text export`: controls whether text labels are exported "
+"as proper text objects (:guilabel:`Always export texts as text objects`) or "
+"as paths only (:guilabel:`Always export texts as paths`). If they are "
+"exported as text objects then they can be edited in external applications "
+"(e.g. Inkscape) as normal text. BUT the side effect is that the rendering "
+"quality is decreased, AND there are issues with rendering when certain text "
+"settings like buffers are in place. That’s why exporting as paths is "
+"recommended."
+msgstr ""
+":guilabel:`Teksto eksportas`: nurodo, ar teksto etiketės eksportuojamos kaip"
+" tikras tekstas (:guilabel:`Visada eksportuoti tekstą kaip teksto "
+"objektus`), ar tik kaip kelius (:guilabel:`Visada eksportuoti tekstą kaip "
+"kelius`). Jei eksportuojami kaip teksto objektai, juos galima bus keisti "
+"išorinės aplikacijose (pvz. Inkscape) kaip normalų tekstą. BET pašalinis "
+"efektas yra tas, kad gali sumažėti braižymo kokybė IR gali būti problemų su "
+"kai kurių teksto efektų, tokių kaip buferių, braižymu. Todėl rekomenduojama "
+"eksportuoti kaip kelius."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1286
+msgid "Click :guilabel:`Save` to select file location, name and format."
+msgstr ""
+"Spauskite :guilabel:`Įrašyti` ir parinkite failo vietą, pavadinimą ir "
+"formatą."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1288
+msgid ""
+"When exporting to image, it's also possible to :guilabel:`Copy to clipboard`"
+" the expected result of the above settings and paste the map in another "
+"application such as LibreOffice, GIMP..."
+msgstr ""
+"Eksportuojant į piešinį galime :guilabel:`Kopijuoti į iškarpinę` aukščiau "
+"parinktų parametrų rezultatą, o tada kitoje aplikacijoje, tarkim LibreOffice"
+" ar GIMP, tiesiog jį įkelti..."

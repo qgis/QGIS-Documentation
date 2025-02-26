@@ -1,0 +1,209 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2024
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
+"Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: it\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"unireLa traduzione è uno sforzo comunitario :ref:`you can join "
+"<translation_guidelines>`. Questa pagina è attualmente tradotta al "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/log.rst:2
+msgid "The processing log"
+msgstr "Il log di Processing"
+
+#: ../../docs/training_manual/processing/log.rst:4
+msgid "This lesson describes the processing log."
+msgstr "Questa lezione descrive il log di processing."
+
+#: ../../docs/training_manual/processing/log.rst:6
+msgid ""
+"All the analysis performed with the processing framework is logged in QGIS "
+"logging system. This allows you to know more about what has been done with "
+"the processing tools, to solve problems when they happen, and also to re--"
+"run previous operations, since the logging system also implements some "
+"interactivity."
+msgstr ""
+"Tutte le analisi eseguite con il framework di processing sono registrate nel"
+" sistema di log di QGIS. Questo permette di sapere di più su ciò che è stato"
+" fatto con gli strumenti di processing, di risolvere i problemi quando "
+"accadono, e anche di rieseguire operazioni precedenti, dato che il sistema "
+"di log implementa anche una certa interattività."
+
+#: ../../docs/training_manual/processing/log.rst:11
+msgid ""
+"To open the log, click on the balloon at the bottom right, on the QGIS "
+"status bar. Some algorithms might leave here information about their "
+"execution. For instance, those algorithms that call an external application "
+"usually log the console output of that application to this entry. If you "
+"have a look at it, you will see that the output of the SAGA algorithm that "
+"we just run (and that fails to execute because input data was not correct) "
+"is stored here."
+msgstr ""
+"Per aprire il log, fai clic sul fumetto in basso a destra, sulla barra di "
+"stato di QGIS. Alcuni algoritmi possono lasciare qui informazioni sulla loro"
+" esecuzione. Ad esempio, gli algoritmi che chiamano un'applicazione esterna "
+"di solito registrano il risultato della console di tale applicazione in "
+"questa voce. Se dai un'occhiata, vedrai che il risultato dell'algoritmo SAGA"
+" che abbiamo appena eseguito (e che non è stato eseguito perché i dati di "
+"input non erano corretti) è memorizzato qui."
+
+#: ../../docs/training_manual/processing/log.rst:18
+msgid ""
+"This is helpful to understand what is going on. Advanced users will be able "
+"to analyze that output to find out why the algorithm failed. If you are not "
+"an advanced user, this will be useful for others to help you diagnose the "
+"problem you are having, which might be a problem in the installation of the "
+"external software or an issue with the data you provided."
+msgstr ""
+"Questo è utile per capire cosa sta succedendo. Gli utenti avanzati saranno "
+"in grado di analizzare il risultato per scoprire perché l'algoritmo è "
+"fallito. Se non sei un utente avanzato, questo sarà utile agli altri per "
+"aiutarti a diagnosticare il problema che stai avendo, che potrebbe essere un"
+" problema nell'installazione del software esterno o un problema con i dati "
+"che hai fornito."
+
+#: ../../docs/training_manual/processing/log.rst:23
+msgid ""
+"Even if the algorithm could be executed, some algorithms might leave "
+"warnings in case the result might not be right. For instance, when executing"
+" an interpolation algorithm with a very small amount of points, the "
+"algorithm can run and will produce a result, but it is likely that it will "
+"not be correct, since more points should be used. It's a good idea to "
+"regularly check for this type of warnings if you are not sure about some "
+"aspect of a given algorithm."
+msgstr ""
+"Anche se l'algoritmo potrebbe essere eseguito, alcuni algoritmi potrebbero "
+"lasciare degli avvisi nel caso in cui il risultato potrebbe non essere "
+"corretto. Per esempio, quando si esegue un algoritmo di interpolazione con "
+"una quantità molto piccola di punti, l'algoritmo può essere eseguito e "
+"produrrà un risultato, ma è probabile che non sia corretto, poiché "
+"dovrebbero essere usati più punti. È una buona idea controllare regolarmente"
+" questo tipo di avvisi se non si è sicuri di qualche aspetto di un dato "
+"algoritmo."
+
+#: ../../docs/training_manual/processing/log.rst:28
+msgid ""
+"From the :menuselection:`Processing --> History...` menu, you'll find "
+"*algorithms* that are executed, regardless of they are executed from the GUI"
+" or from the console (which will be explained later in this manual). The "
+"execution is stored in this dialog as a console call. That means that "
+"everytime you run an algorithm, a console command is added to the log, and "
+"you have the full history of your working session. Here is how that history "
+"looks like:"
+msgstr ""
+"Dal menu :menuselection:`Processing --> Cronologia`, trovi gli *algoritmi* "
+"che sono stati eseguiti, indipendentemente dal fatto che siano stati "
+"eseguiti dalla GUI o dalla console (cosa che verrà spiegata più avanti in "
+"questo manuale). L'esecuzione viene memorizzata in questa finestra di "
+"dialogo come una chiamata alla console. Ciò significa che ogni volta che "
+"esegui un algoritmo, un comando da console viene aggiunto al log e hai la "
+"storia completa della sessione di lavoro. Ecco come appare la cronologia:"
+
+#: ../../docs/training_manual/processing/log.rst:37
+msgid ""
+"This can be very useful when starting working with the console, to learn "
+"about the syntax of algorithms. We will use it when we discuss how to run "
+"analysis commands from the console."
+msgstr ""
+"Questo può essere molto utile quando si inizia a lavorare con la console, "
+"per imparare la sintassi degli algoritmi. Lo useremo quando parleremo di "
+"come eseguire comandi di analisi dalla console."
+
+#: ../../docs/training_manual/processing/log.rst:41
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along"
+msgstr ":abbr:`★☆☆ (Livello Base)` Segui passo dopo passo"
+
+#: ../../docs/training_manual/processing/log.rst:43
+msgid ""
+"The history is also interactive, and you can run any previous algorithm just"
+" by double-clicking on its entry. This is an easy way of replicating the "
+"work we already did before."
+msgstr ""
+"La cronologia è anche interattiva e puoi eseguire qualsiasi algoritmo "
+"precedente semplicemente facendo doppio clic sulla sua voce. Questo è un "
+"modo semplice per replicare il lavoro già svolto in precedenza."
+
+#: ../../docs/training_manual/processing/log.rst:46
+msgid "For instance, try the following:"
+msgstr "Per esempio, prova a fare quanto segue:"
+
+#: ../../docs/training_manual/processing/log.rst:48
+msgid ""
+"Open the data corresponding to the first chapter of this manual and run the "
+"algorithm explained there."
+msgstr ""
+"Apri i dati riportati nel primo capitolo di questo manuale ed esegui "
+"l'algoritmo ivi illustrato."
+
+#: ../../docs/training_manual/processing/log.rst:50
+msgid ""
+"Now go to the History dialog and locate the last algorithm in the list, "
+"which corresponds to the algorithm you have just run."
+msgstr ""
+"Passa ora alla finestra di dialogo del log e individua l'ultimo algoritmo "
+"dell'elenco, che corrisponde all'algoritmo che hai appena eseguito"
+
+#: ../../docs/training_manual/processing/log.rst:52
+msgid ""
+"Double-click on it and a new result should be produced, just like when you "
+"run it using the normal dialog and calling it from the toolbox."
+msgstr ""
+"Facendo doppio clic su di esso, otterrai un nuovo risultato, proprio come "
+"quando lo esegui utilizzando la normale finestra di dialogo e richiamandolo "
+"dalla casella degli strumenti."
+
+#: ../../docs/training_manual/processing/log.rst:56
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along"
+msgstr ":abbr:`★☆☆ (Livello Base)` Segui passo dopo passo"
+
+#: ../../docs/training_manual/processing/log.rst:58
+msgid "You can also modify the algorithm."
+msgstr "Puoi anche modificare l'algoritmo."
+
+#: ../../docs/training_manual/processing/log.rst:60
+msgid "Copy the algorithm call"
+msgstr "Copia la chiamata all'algoritmo"
+
+#: ../../docs/training_manual/processing/log.rst:61
+msgid "Open the :menuselection:`Plugins --> Python console`"
+msgstr "Apri :menuselection:`Plugins --> Console Python`"
+
+#: ../../docs/training_manual/processing/log.rst:62
+msgid "Paste your copy to run the analysis; change the parameters at will."
+msgstr ""
+"Incolla la tua copia per eseguire l'analisi; modifica il testo a piacere."
+
+#: ../../docs/training_manual/processing/log.rst:63
+msgid ""
+"To display the resulting file, you may want to replace ``processing.run`` in"
+" the pasted command with ``processing.runAndLoadResults``."
+msgstr ""
+"Per visualizzare il file risultante, puoi sostituire ``processing.run`` nel "
+"comando incollato con ``processing.runAndLoadResults``."

@@ -1,0 +1,526 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2024
+# tomoya miyoshi, 2024
+# fairtommy <fairtommy@gmail.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2024\n"
+"Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"翻訳は :ref:`あなたが参加できる <translation_guidelines>`  コミュニティの取り組みです。このページは現在 "
+"|translation progress| 翻訳されています。"
+
+#: ../../docs/user_manual/processing/scripts.rst:6
+msgid "Writing new Processing algorithms as Python scripts"
+msgstr "新たなプロセシングアルゴリズムをPythonスクリプトで作成する"
+
+#: ../../docs/user_manual/processing/scripts.rst:13
+msgid "There are two options for writing Processing algorithms using Python."
+msgstr "Pythonを使ってプロセシングアルゴリズムを書くためには、ふたつの選択肢があります。"
+
+#: ../../docs/user_manual/processing/scripts.rst:15
+msgid ""
+":ref:`Extending <scripts_extend>` :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`"
+msgstr ""
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` クラスを "
+":ref:`拡張する<scripts_extend>` "
+
+#: ../../docs/user_manual/processing/scripts.rst:17
+msgid ":ref:`Using the @alg decorator <scripts_alg>`"
+msgstr ":ref:`@alg デコレータを使う<scripts_alg>`"
+
+#: ../../docs/user_manual/processing/scripts.rst:19
+msgid ""
+"Within QGIS, you can use :guilabel:`Create new script` in the "
+":guilabel:`Scripts` menu at the top of the :guilabel:`Processing Toolbox` to"
+" open the :guilabel:`Processing Script Editor` where you can write your "
+"code. To simplify the task, you can start with a script template by using "
+":guilabel:`Create new script from template` from the same menu. This opens a"
+" template that extends :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`."
+msgstr ""
+"QGIS内では、 :guilabel:`プロセシングツールボックス` の上部にある :guilabel:`スクリプト` メニューの "
+":guilabel:`新しいスクリプトを作成` を使用して、自分のコードを書ける :guilabel:`プロセシングスクリプトエディタ` "
+"を開いて作成できます。タスクを簡素化するには、同じメニューの :guilabel:`テンプレートから新しいスクリプトを作成する` "
+"を使用して、スクリプトテンプレートから開始できます。これにより :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>` を拡張するテンプレートが開きます。"
+
+#: ../../docs/user_manual/processing/scripts.rst:28
+msgid ""
+"If you save the script in the :file:`scripts` folder (the default location) "
+"with a :file:`.py` extension, the algorithm will become available in the "
+":guilabel:`Processing Toolbox`."
+msgstr ""
+"スクリプトを :file:`scripts` フォルダ(デフォルトの場所) に :file:`.py` という拡張子で保存するとそのアルゴリズムは "
+":guilabel:`プロセシングツールボックス` で利用できるようになります。"
+
+#: ../../docs/user_manual/processing/scripts.rst:35
+msgid "Extending QgsProcessingAlgorithm"
+msgstr "QgsProcessingAlgorithmを拡張する"
+
+#: ../../docs/user_manual/processing/scripts.rst:37
+msgid "The following code"
+msgstr "以下のコードの内容です"
+
+#: ../../docs/user_manual/processing/scripts.rst:39
+msgid "takes a vector layer as input"
+msgstr "ベクタレイヤを入力に指定します"
+
+#: ../../docs/user_manual/processing/scripts.rst:40
+msgid "counts the number of features"
+msgstr "地物の数を数えます"
+
+#: ../../docs/user_manual/processing/scripts.rst:41
+msgid "does a buffer operation"
+msgstr "バッファの操作を行います"
+
+#: ../../docs/user_manual/processing/scripts.rst:42
+msgid "creates a raster layer from the result of the buffer operation"
+msgstr "バッファ操作の結果を使ってラスタレイヤを作ります"
+
+#: ../../docs/user_manual/processing/scripts.rst:43
+#: ../../docs/user_manual/processing/scripts.rst:316
+msgid "returns the buffer layer, raster layer and number of features"
+msgstr "バッファレイヤ,ラスタレイヤと地物の数を返します"
+
+#: ../../docs/user_manual/processing/scripts.rst:233
+msgid "Processing algorithm standard functions:"
+msgstr "プロセシングアルゴリズムの標準関数:"
+
+#: ../../docs/user_manual/processing/scripts.rst:235
+msgid "createInstance (mandatory)"
+msgstr "createInstance (必須)"
+
+#: ../../docs/user_manual/processing/scripts.rst:236
+msgid ""
+"Must return a new copy of your algorithm. If you change the name of the "
+"class, make sure you also update the value returned here to match!"
+msgstr "自作のアルゴリズムの新しいコピーを返さなければいけません。クラスの名前を変更する場合はここで返す値も必ず一致するように更新して下さい!"
+
+#: ../../docs/user_manual/processing/scripts.rst:240
+msgid "name (mandatory)"
+msgstr "name (必須)"
+
+#: ../../docs/user_manual/processing/scripts.rst:241
+msgid "Returns the unique algorithm name, used for identifying the algorithm."
+msgstr "アルゴリズムの識別に使う、ユニークなアルゴリズムの名前を返します。"
+
+#: ../../docs/user_manual/processing/scripts.rst:243
+msgid "displayName (mandatory)"
+msgstr "displayName (必須)"
+
+#: ../../docs/user_manual/processing/scripts.rst:244
+msgid "Returns the translated algorithm name."
+msgstr "変換されたアルゴリズム名を返します."
+
+#: ../../docs/user_manual/processing/scripts.rst:246
+msgid "group"
+msgstr "group"
+
+#: ../../docs/user_manual/processing/scripts.rst:247
+msgid "Returns the name of the group this algorithm belongs to."
+msgstr "このアルゴリズムが所属しているグループ名を返します."
+
+#: ../../docs/user_manual/processing/scripts.rst:249
+msgid "groupId"
+msgstr "groupId"
+
+#: ../../docs/user_manual/processing/scripts.rst:250
+msgid "Returns the unique ID of the group this algorithm belongs to."
+msgstr "このアルゴリズムが所属しているグループのユニークIDを返します."
+
+#: ../../docs/user_manual/processing/scripts.rst:252
+msgid "shortHelpString"
+msgstr "shortHelpString"
+
+#: ../../docs/user_manual/processing/scripts.rst:253
+msgid "Returns a localised short help string for the algorithm."
+msgstr "このアルゴリズムの翻訳された短縮ヘルプ文字列を返します."
+
+#: ../../docs/user_manual/processing/scripts.rst:255
+msgid "initAlgorithm (mandatory)"
+msgstr "initAlgorithm (必須)"
+
+#: ../../docs/user_manual/processing/scripts.rst:256
+msgid "Here we define the inputs and outputs of the algorithm."
+msgstr "ここでアルゴリズムの入力と出力を定義します."
+
+#: ../../docs/user_manual/processing/scripts.rst:258
+msgid ""
+"``INPUT`` and ``OUTPUT`` are recommended names for the main input and main "
+"output parameters, respectively."
+msgstr "``INPUT`` と ``OUTPUT`` はそれぞれメインの入力と出力パラメータ用の推奨名称です."
+
+#: ../../docs/user_manual/processing/scripts.rst:261
+msgid ""
+"If a parameter depends on another parameter, ``parentParameterName`` is used"
+" to specify this relationship (could be the field / band of a layer or the "
+"distance units of a layer)."
+msgstr ""
+"もしパラメータが他のパラメータに依存する場合, ``parentParameterName`` がこの関係を示します "
+"(フィールド/レイヤのバンドまたはレイヤの距離単位は利用できません)."
+
+#: ../../docs/user_manual/processing/scripts.rst:265
+msgid "processAlgorithm (mandatory)"
+msgstr "processAlgorithm (必須)"
+
+#: ../../docs/user_manual/processing/scripts.rst:266
+msgid "This is where the processing takes place."
+msgstr "ここで処理が実行されます."
+
+#: ../../docs/user_manual/processing/scripts.rst:268
+msgid ""
+"Parameters are retrieved using special purpose functions, for instance "
+"``parameterAsSource`` and ``parameterAsDouble``."
+msgstr ""
+"パラメータはインスタンスによって ``parameterAsSource`` や ``parameterAsDouble`` "
+"のような特別な用途の関数を使って取得されます."
+
+#: ../../docs/user_manual/processing/scripts.rst:271
+msgid ""
+"``processing.run`` can be used to run other processing algorithms from a "
+"processing algorithm. The first parameter is the name of the algorithm, the "
+"second is a dictionary of the parameters to the algorithm. "
+"``is_child_algorithm`` is normally set to ``True`` when running an algorithm"
+" from within another algorithm. ``context`` and ``feedback`` inform the "
+"algorithm about the environment to run in and the channel for communicating "
+"with the user (catching cancel request, reporting progress, providing "
+"textual feedback). When using the (parent) algorithm's parameters as "
+"parameters to \"child\" algorithms, the original parameter values should be "
+"used (e.g. ``parameters['OUTPUT']``)."
+msgstr ""
+"``processing.run`` "
+"を使うとプロセシングアルゴリズムから他のアルゴリズムを実行できます。最初のパラメータはアルゴリズムの名前です。２つめのパラメータはそのアルゴリズム用のパラメータの辞書です。他のアルゴリズム内で実行される場合"
+" ``is_child_algorithm``  は通常 ``True`` に設定します。``context`` と ``feedback`` "
+"は実行環境とユーザとのやりとりのチャンネルをアルゴリズムに伝えます（キャンセルリクエストのキャッチ、実行状況のレポート、テキストによるフィードバックの提供）。"
+" (親) アルゴリズムのパラメータが \"子\" アルゴリズムのパラメータとして利用される場合、オリジナルの値を利用する必要があります(例. "
+"``parameters['OUTPUT']``)。"
+
+#: ../../docs/user_manual/processing/scripts.rst:283
+msgid ""
+"It is good practice to check the feedback object for cancelation as much as "
+"is sensibly possible! Doing so allows for responsive cancelation, instead of"
+" forcing users to wait for unwanted processing to occur."
+msgstr ""
+"可能な限りキャンセルのためにフィードバックオブジェクトをチェックすることをお勧めします！そうすることで、不要な処理が発生するまでユーザーを待たせずに、すぐにキャンセルすることが可能になります。"
+
+#: ../../docs/user_manual/processing/scripts.rst:288
+msgid ""
+"The algorithm should return values for all the output parameters it has "
+"defined as a dictionary. In this case, that's the buffer and rasterized "
+"output layers, and the count of features processed. The dictionary keys must"
+" match the original parameter/output names."
+msgstr ""
+"アルゴリズムは、辞書として定義したすべての出力パラメータの値を返す必要があります。この場合、それはバッファとラスタライズされた出力レイヤ、および処理された地物数です。辞書キーは、元のパラメータ/出力名と一致する必要があります。"
+
+#: ../../docs/user_manual/processing/scripts.rst:297
+msgid "The @alg decorator"
+msgstr "@alg デコレータ"
+
+#: ../../docs/user_manual/processing/scripts.rst:299
+msgid ""
+"Using the @alg decorator, you can create your own algorithms by writing the "
+"Python code and adding a few extra lines to supply additional information "
+"needed to make it a proper Processing algorithm. This simplifies the "
+"creation of algorithms and the specification of inputs and outputs."
+msgstr ""
+"@algデコレータを使用すると、独自のアルゴリズムを作ることができます。Pythonコードを書き、それを適切なプロセシングアルゴリズムにする追加情報を提供する数行を加えます。この手法はアルゴリズムの作成、および入力と出力の指定を簡単にします。"
+
+#: ../../docs/user_manual/processing/scripts.rst:305
+msgid ""
+"One important limitation with the decorator approach is that algorithms "
+"created in this way will always be added to a user's Processing Scripts "
+"provider -- it is not possible to add these algorithms to a custom provider,"
+" e.g. for use in plugins."
+msgstr ""
+"アルゴリズム作成にデコレータを使う手法には一つの重要な制約があります．それは作成されたアルゴリズムが常にユーザープロセシングスクリプトプロバイダに追加されることです"
+" -- アルゴリズムをカスタムプロバイダに追加して、例えばプラグイン内で使うことはできません．"
+
+#: ../../docs/user_manual/processing/scripts.rst:310
+msgid "The following code uses the @alg decorator to"
+msgstr "以下のコードは @alg デコレータを使って次の機能を実装してます"
+
+#: ../../docs/user_manual/processing/scripts.rst:312
+msgid "use a vector layer as input"
+msgstr "ベクタレイヤを入力として利用します"
+
+#: ../../docs/user_manual/processing/scripts.rst:313
+msgid "count the number of features"
+msgstr "地物の数を数えます"
+
+#: ../../docs/user_manual/processing/scripts.rst:314
+msgid "do a buffer operation"
+msgstr "バッファ操作を実行します"
+
+#: ../../docs/user_manual/processing/scripts.rst:315
+msgid "create a raster layer from the result of the buffer operation"
+msgstr "バッファ操作の結果を使ってラスタレイヤを作ります"
+
+#: ../../docs/user_manual/processing/scripts.rst:383
+msgid ""
+"As you can see, it involves two algorithms ('native:buffer' and "
+"'qgis:rasterize'). The last one ('qgis:rasterize') creates a raster layer "
+"from the buffer layer that was generated by the first one ('native:buffer')."
+msgstr ""
+"ご覧の通りこのコードには２つのアルゴリズム('native:buffer' と 'qgis:rasterize')が含まれています. 後の物 "
+"('qgis:rasterize') は最初のもの ('native:buffer') が作成したバッファレイヤを利用してラスタレイヤを作成します."
+
+#: ../../docs/user_manual/processing/scripts.rst:388
+msgid ""
+"The part of the code where this processing takes place is not difficult to "
+"understand if you have read the previous chapter. The first lines, however, "
+"need some additional explanation. They provide the information that is "
+"needed to turn your code into an algorithm that can be run from any of the "
+"GUI components, like the toolbox or the model designer."
+msgstr ""
+"この処理が行われるコードの部分は、前の章を読んでいれば理解するのは難しくありません。しかし、最初の行には補足説明が必要です。それらは、あなたのコードをツールボックスやモデルデザイナーなどのGUIコンポーネントから実行できるアルゴリズムにするために必要な情報を提供します。"
+
+#: ../../docs/user_manual/processing/scripts.rst:395
+msgid ""
+"These lines are all calls to the ``@alg`` decorator functions that help "
+"simplify the coding of the algorithm."
+msgstr "これらの行は ``@alg`` デコレータ関数を呼び出しています。その結果アルゴリズムを簡単にコーディングできます。"
+
+#: ../../docs/user_manual/processing/scripts.rst:398
+msgid ""
+"The @alg decorator is used to define the name and location of the algorithm "
+"in the Toolbox."
+msgstr "@alg デコレータはツールボックス内でのアルゴリズムの名前と場所を定義するのに利用されます。"
+
+#: ../../docs/user_manual/processing/scripts.rst:400
+msgid ""
+"The @alg.input decorator is used to define the inputs of the algorithm."
+msgstr "@alg.input デコレータはアルゴリズムの入力を定義するのに使われます。"
+
+#: ../../docs/user_manual/processing/scripts.rst:401
+msgid ""
+"The @alg.output decorator is used to define the outputs of the algorithm."
+msgstr "@alg.output デコレータはアルゴリズムの出力を定義するのに使われます。"
+
+#: ../../docs/user_manual/processing/scripts.rst:403
+msgid ""
+"For existing parameters and their correspondance, read "
+":ref:`processing_algs_input_output`."
+msgstr "既存のパラメータとその対応については、:ref:`processing_algs_input_output` を参照のこと。"
+
+#: ../../docs/user_manual/processing/scripts.rst:407
+msgid "Handing algorithm output"
+msgstr "アルゴリズムの出力を渡す"
+
+#: ../../docs/user_manual/processing/scripts.rst:409
+msgid ""
+"When you declare an output representing a layer (raster or vector), the "
+"algorithm will try to add it to QGIS once it is finished."
+msgstr "出力としてレイヤ（ラスタまたはベクタ）を指定すると、アルゴリズムは終了後にそれをQGISに追加しようとします。"
+
+#: ../../docs/user_manual/processing/scripts.rst:412
+msgid ""
+"Raster layer output: QgsProcessingParameterRasterDestination / "
+"alg.RASTER_LAYER_DEST."
+msgstr ""
+"ラスタレイヤ出力: QgsProcessingParameterRasterDestination / alg.RASTER_LAYER_DEST."
+
+#: ../../docs/user_manual/processing/scripts.rst:414
+msgid ""
+"Vector layer output: QgsProcessingParameterVectorDestination / "
+"alg.VECTOR_LAYER_DEST."
+msgstr ""
+"ベクタレイヤ出力: QgsProcessingParameterVectorDestination / alg.VECTOR_LAYER_DEST."
+
+#: ../../docs/user_manual/processing/scripts.rst:417
+msgid ""
+"So even if the ``processing.run()`` method does not add the layers it "
+"creates to the user's current project, the two output layers (buffer and "
+"raster buffer) will be loaded, since they are saved to the destinations "
+"entered by the user (or to temporary destinations if the user does not "
+"specify destinations)."
+msgstr ""
+"したがって ``processing.run()`` メソッドが作成したレイヤをユーザの現在のプロジェクトに加えない場合でも、２つの出力レイヤ "
+"(バッファとラスタバッファ)が読み込まれます．これらはユーザが入力した保存先  "
+"(またはユーザが保存先を指定しない場合は一時的な保存先)に保存されるからです."
+
+#: ../../docs/user_manual/processing/scripts.rst:423
+msgid ""
+"If a layer is created as output of an algorithm, it should be declared as "
+"such. Otherwise, you will not be able to properly use the algorithm in the "
+"modeler, since what is declared will not match what the algorithm really "
+"creates."
+msgstr ""
+"レイヤがアルゴリズムの出力として作成される場合、そのように宣言する必要があります。そうしないと、宣言されたものがアルゴリズムが実際に作成するものと一致しないため、モデラーでアルゴリズムを適切に使用できません。"
+
+#: ../../docs/user_manual/processing/scripts.rst:429
+msgid ""
+"You can return strings, numbers and more by specifying them in the result "
+"dictionary (as demonstrated for \"NUMBEROFFEATURES\"), but they should "
+"always be explicitly defined as outputs from your algorithm. We encourage "
+"algorithms to output as many useful values as possible, since these can be "
+"valuable for use in later algorithms when your algorithm is used as part of "
+"a model."
+msgstr ""
+"結果の辞書で文字列、数値などを指定することで返すことができます（「NUMBEROFFEATURES」で示したとおり）が、それらは常にアルゴリズムからの出力として明示的に定義する必要があります。アルゴリズムがモデルの一部として使用される場合、これらのアルゴリズムは後のアルゴリズムで使用するのに役立つ可能性があるため、アルゴリズムではできるだけ多くの有用な値を出力することをを推奨します。"
+
+#: ../../docs/user_manual/processing/scripts.rst:438
+msgid "Communicating with the user"
+msgstr "ユーザーとコミュニケーションする"
+
+#: ../../docs/user_manual/processing/scripts.rst:440
+msgid ""
+"If your algorithm takes a long time to process, it is a good idea to inform "
+"the user about the progress.  You can use ``feedback`` "
+"(:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`) for this."
+msgstr ""
+"あなたのアルゴリズムが処理に長い時間を必要とする場合、ユーザに進捗状況を知らせるのは良い考えです.   ``feedback`` "
+"(:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`) "
+"を利用するとそれを実現できます."
+
+#: ../../docs/user_manual/processing/scripts.rst:444
+msgid ""
+"The progress text and progressbar can be updated using two methods: "
+":meth:`setProgressText(text) "
+"<qgis.core.QgsProcessingFeedback.setProgressText>` and "
+":meth:`setProgress(percent) <qgis.core.QgsFeedback.setProgress>`."
+msgstr ""
+"処理状況テキストとプログレスバーは２つのメソッドを使って更新できます: :meth:`setProgressText(text) "
+"<qgis.core.QgsProcessingFeedback.setProgressText>` と "
+":meth:`setProgress(percent) <qgis.core.QgsFeedback.setProgress>` です."
+
+#: ../../docs/user_manual/processing/scripts.rst:448
+msgid ""
+"You can provide more information by using :meth:`pushCommandInfo(text) "
+"<qgis.core.QgsProcessingFeedback.pushCommandInfo>`, "
+":meth:`pushDebugInfo(text) <qgis.core.QgsProcessingFeedback.pushDebugInfo>`,"
+" :meth:`pushInfo(text) <qgis.core.QgsProcessingFeedback.pushInfo>` and "
+":meth:`reportError(text) <qgis.core.QgsProcessingFeedback.reportError>`."
+msgstr ""
+"次のメソッドを使うとさらに多くの情報を提供できます :meth:`pushCommandInfo(text) "
+"<qgis.core.QgsProcessingFeedback.pushCommandInfo>`, "
+":meth:`pushDebugInfo(text) <qgis.core.QgsProcessingFeedback.pushDebugInfo>`,"
+" :meth:`pushInfo(text) <qgis.core.QgsProcessingFeedback.pushInfo>`  と  "
+":meth:`reportError(text) <qgis.core.QgsProcessingFeedback.reportError>`."
+
+#: ../../docs/user_manual/processing/scripts.rst:454
+msgid ""
+"If your script has a problem, the correct way of handling it is to raise a "
+":class:`QgsProcessingException <qgis.core.QgsProcessingException>`. You can "
+"pass a message as an argument to the constructor of the exception. "
+"Processing will take care of handling it and communicating with the user, "
+"depending on where the algorithm is being executed from (toolbox, modeler, "
+"Python console, ...)"
+msgstr ""
+"スクリプトに問題がある場合、それを処理する正しい方法は :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>` "
+"を発生させることです。メッセージを引数として例外のコンストラクタに渡すことができます。プロセシングでは、アルゴリズムの実行元（ツールボックス、モデラー、Pythonコンソールなど）に応じてプロセシングとユーザーとの通信を処理します。"
+
+#: ../../docs/user_manual/processing/scripts.rst:463
+msgid "Documenting your scripts"
+msgstr "スクリプトのドキュメントを作成する"
+
+#: ../../docs/user_manual/processing/scripts.rst:465
+msgid ""
+"You can document your scripts by overloading the :meth:`helpString() "
+"<qgis.core.QgsProcessingAlgorithm.helpString>` and :meth:`helpUrl() "
+"<qgis.core.QgsProcessingAlgorithm.helpUrl>` methods of "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`."
+msgstr ""
+"以下のものをオーバーロードするとあなたのスクリプトのドキュメントを作れます :meth:`helpString() "
+"<qgis.core.QgsProcessingAlgorithm.helpString>` と :meth:`helpUrl() "
+"<qgis.core.QgsProcessingAlgorithm.helpUrl>` methods of "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`."
+
+#: ../../docs/user_manual/processing/scripts.rst:471
+msgid "Flags"
+msgstr "フラグ"
+
+#: ../../docs/user_manual/processing/scripts.rst:473
+msgid ""
+"You can override the :meth:`flags() "
+"<qgis.core.QgsProcessingAlgorithm.flags>` method of "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` to tell "
+"QGIS more about your algorithm. You can for instance tell QGIS that the "
+"script shall be hidden from the modeler, that it can be canceled, that it is"
+" not thread safe, and more."
+msgstr ""
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` の "
+":meth:`flags() <qgis.core.QgsProcessingAlgorithm.flags>` "
+"メソッドをオーバーライドすると、QGISにアルゴリズムについてより詳しく伝えることができます。例えば、スクリプトをモデラーから隠すこと、キャンセルすること、スレッドセーフでないこと、などをQGISに伝えることができます。"
+
+#: ../../docs/user_manual/processing/scripts.rst:481
+msgid ""
+"By default, Processing runs algorithms in a separate thread in order to keep"
+" QGIS responsive while the processing task runs. If your algorithm is "
+"regularly crashing, you are probably using API calls which are not safe to "
+"do in a background thread. Try returning the "
+"QgsProcessingAlgorithm.FlagNoThreading flag from your algorithm's flags() "
+"method to force Processing to run your algorithm in the main thread instead."
+msgstr ""
+"デフォルトでは、処理タスクの実行中にQGISの応答性を維持するために、Processingはアルゴリズムを別のスレッドで実行します。アルゴリズムが定期的にクラッシュする場合は、おそらくバックグラウンドスレッドで安全に実行できないAPI呼び出しを使用している可能性があります。アルゴリズムのflags()"
+" "
+"メソッドからQgsProcessingAlgorithm.FlagNoThreadingフラグを返して、代わりにメインスレッドでアルゴリズムを実行するように強制します。"
+
+#: ../../docs/user_manual/processing/scripts.rst:490
+msgid "Best practices for writing script algorithms"
+msgstr "スクリプトアルゴリズムを書くためのベストプラクティス"
+
+#: ../../docs/user_manual/processing/scripts.rst:492
+msgid ""
+"Here's a quick summary of ideas to consider when creating your script "
+"algorithms and, especially, if you want to share them with other QGIS users."
+" Following these simple rules will ensure consistency across the different "
+"Processing elements such as the toolbox, the modeler or the batch processing"
+" interface."
+msgstr ""
+"スクリプトアルゴリズムを作成する際、特に他のQGISユーザーと共有したい場合に考慮すべきアイデアの簡単な概要を以下に示します。これらの単純な規則に従うことで、ツールボックス、モデラー、バッチ処理インターフェースなどのさまざまな処理要素間で一貫性が確保されます。"
+
+#: ../../docs/user_manual/processing/scripts.rst:498
+msgid ""
+"Do not load resulting layers. Let Processing handle your results and load "
+"your layers if needed."
+msgstr "結果のレイヤは読み込まないでください。結果はプロセシングに処理させ、必要であればレイヤを読み込ませてください。"
+
+#: ../../docs/user_manual/processing/scripts.rst:500
+msgid "Always declare the outputs your algorithm creates."
+msgstr "あなたのアルゴリズム作成する出力について常に宣言して下さい."
+
+#: ../../docs/user_manual/processing/scripts.rst:501
+msgid ""
+"Do not show message boxes or use any GUI element from the script. If you "
+"want to communicate with the user, use the methods of the feedback object "
+"(:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`) or throw "
+"a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`."
+msgstr ""
+"メッセージボックスを表示したり、スクリプトのGUI要素を使用したりしないでください。ユーザーと通信する場合は、フィードバックオブジェクトのメソッド（ "
+":class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>` ）を使用するか、 "
+":class:`QgsProcessingException <qgis.core.QgsProcessingException>` をスローします。"
+
+#: ../../docs/user_manual/processing/scripts.rst:507
+msgid ""
+"There are already many processing algorithms available in QGIS. You can find"
+" code on the :source:`QGIS <python/plugins/processing/algs/qgis>` repo."
+msgstr ""
+"QGISにはすでに多くのプロセシングアルゴリズムが用意されています。コードは :source:`QGIS "
+"<python/plugins/processing/algs/qgis>` のレポにあります。"

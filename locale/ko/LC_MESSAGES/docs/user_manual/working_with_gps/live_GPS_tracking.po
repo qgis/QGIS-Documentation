@@ -1,0 +1,760 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Transifex Bot <>, 2024
+# Harrissou Sant-anna, 2024
+# Kwon.Yongchan <ruvyn@naver.com>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2024\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"번역은 :ref:`여러분이 참여할 수 있는 <translation_guidelines>` 커뮤니티 활동입니다. 이 페이지는 현재 "
+"|translation progress| 번역되었습니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:5
+msgid "Live GPS tracking"
+msgstr "실시간 GPS 추적"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:12
+msgid ""
+"QGIS can help you do field mapping with a GPS receiver. Such a live tracking"
+" operation is done using the :ref:`GPS Toolbar <gps_toolbar>`. Some "
+":ref:`device configuration <gps_options>` may be needed before connecting "
+"QGIS and the GPS receiver."
+msgstr ""
+"QGIS는 사용자가 GPS 수신기를 가지고 현장 지도를 제작하는 일을 도울 수 있습니다. 이런 실시간 추적 작업은 :ref:`GPS 툴바"
+" <gps_toolbar>` 를 통해 이루어집니다. QGIS와 GPS 수신기를 연결하기 전에 :ref:`기기 환경설정 "
+"<gps_options>` 을 해야 할 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:21
+msgid "GPS toolbar"
+msgstr "GPS 툴바"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:23
+msgid ""
+"The :guilabel:`GPS Toolbar` provides the main tools to control a live "
+"tracking session. It can be activated from :menuselection:`View --> Toolbars"
+" --> GPS`. It follows the state of the project, GPS, and current GPS track, "
+"and enables actions only when they make sense. Once a device is detected by "
+"QGIS, you will be able to interact with it:"
+msgstr ""
+":guilabel:`GPS Toolbar` 에는 실시간 추적 세션을 제어할 수 있는 주요 도구들이 있습니다. "
+":menuselection:`View --> Toolbars --> GPS` 메뉴에서 이 툴바를 활성화시킬 수 있습니다. 이 툴바는 "
+"프로젝트의 상태, GPS, 그리고 현재 GPS 트랙을 따라가면서 합당한 경우에만 액션들을 활성화시킵니다. QGIS가 기기를 탐지하고 "
+"나면, 해당 기기와 쌍방향 작업을 할 수 있을 것입니다:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:29
+msgid "|gpsConnect| :sup:`Connect to GPS`"
+msgstr "|gpsConnect| :sup:`Connect to GPS`: GPS 연결"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:335
+msgid "gpsConnect"
+msgstr "gpsConnect"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:30
+msgid "|gpsDisconnect| :sup:`Disconnect from GPS`"
+msgstr "|gpsDisconnect| :sup:`Disconnect from GPS`: GPS 연결 해제"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:339
+msgid "gpsDisconnect"
+msgstr "gpsDisconnect"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:31
+msgid ""
+"|recenter| :sup:`Recenter map on GPS location`: the map will immediately "
+"recenter on the current GPS position regardless of the :ref:`automatic "
+"recentering parameter <gps_recenter>`."
+msgstr ""
+"|recenter| :sup:`Recenter map on GPS location`: :ref:`자동 중심 정렬 파라미터 "
+"<gps_recenter>` 에 상관없이, 즉시 맵의 중심을 현재 GPS 위치로 이동시킬 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:351
+msgid "recenter"
+msgstr "recenter"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:34
+msgid ""
+"|gpsDestinationLayer| :sup:`Set destination layer for GPS digitized "
+"features`: By default, QGIS will :guilabel:`Follow active layer` for feature"
+" digitizing, meaning that GPS digitizing tools will adapt to the layer "
+"selected in :guilabel:`Layers` panel and created features will be stored in "
+"it accordingly. While this may be useful in some contexts, it also implies "
+"careful interaction with other layers to avoid storing inadvertently "
+"features in undesired layers. This option allows you to explicitly indicate "
+"a layer for the data storage during the live tracking session, and you could"
+" switch depending on your needs. Exposed tools will adapt as well to the "
+"selected layer type."
+msgstr ""
+"|gpsDestinationLayer| :sup:`Set destination layer for GPS digitized "
+"features`: QGIS는 기본적으로 피처 디지타이즈 작업에 대해 :guilabel:`Follow active layer` 활성 "
+"레이어를 따를 것입니다. 다시 말해 GPS 디지타이즈 작업 도구가 :guilabel:`Layers` 패널에서 선택한 레이어에 맞춰 "
+"조정되며 그에 따라 해당 레이어에 생성한 피처를 저장할 것이라는 뜻입니다. 어떤 맥락에서는 이 습성이 유용할 수도 있는 반면, 원하지 "
+"않는 레이어에 피처를 실수로 저장하는 일을 피하려면 다른 레이어들과의 쌍방향 작업을 신중하게 해야 한다는 의미입니다. 이 옵션은 사용자가"
+" 실시간 추적 세션 동안 데이터를 저장하기 위한 레이어를 명확하게 지정할 수 있고, 필요에 따라 바꿀 수 있게 해줍니다. 보이는 도구들 "
+"또한 선택한 레이어 유형에 맞게 조정될 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:337
+msgid "gpsDestinationLayer"
+msgstr "gpsDestinationLayer"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:44
+msgid ""
+"The GPS destination layer is made automatically editable when a feature is "
+"being created, and the user is notified accordingly."
+msgstr "GPS 대상 레이어는 피처 생성 시 자동으로 편집 가능 상태가 되며, 이를 사용자에게 알려줍니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:47
+msgid "actions for feature creation:"
+msgstr "피처 생성 관련 액션:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:49
+msgid ""
+"|addTrackPoint| :sup:`Add vertex to GPS track using GPS current location`"
+msgstr ""
+"|addTrackPoint| :sup:`Add vertex to GPS track using GPS current location`: "
+"GPS 트랙에 꼭짓점을 현재 GPS 위치를 사용해서 추가합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:327
+msgid "addTrackPoint"
+msgstr "addTrackPoint"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:50
+msgid ""
+"|capturePoint| :sup:`Create a new point feature at current GPS location`"
+msgstr ""
+"|capturePoint| :sup:`Create a new point feature at current GPS location`: 현재"
+" GPS 위치에 새 포인트 피처를 생성합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:331
+msgid "capturePoint"
+msgstr "capturePoint"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:51
+msgid ""
+"|captureLine| :sup:`Create a new line feature using the current GPS track`"
+msgstr ""
+"|captureLine| :sup:`Create a new line feature using the current GPS track`: "
+"새 라인 피처를 현재 GPS 트랙을 사용해서 생성합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:329
+msgid "captureLine"
+msgstr "captureLine"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:52
+msgid ""
+"|capturePolygon| :sup:`Create a new polygon feature using the current GPS "
+"track`"
+msgstr ""
+"|capturePolygon| :sup:`Create a new polygon feature using the current GPS "
+"track`: 새 폴리곤 피처를 현재 GPS 트랙을 사용해서 생성합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:333
+msgid "capturePolygon"
+msgstr "capturePolygon"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:53
+msgid "|reset| :sup:`Reset track`"
+msgstr "|reset| :sup:`Reset track`: 트랙을 리셋합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:353
+msgid "reset"
+msgstr "reset"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:55
+msgid ""
+"|metadata| :sup:`Show GPS information`: opens the :ref:`GPS Information "
+"<gps_information_panel>` panel"
+msgstr ""
+"|metadata| :sup:`Show GPS information`: :ref:`GPS 정보 "
+"<gps_information_panel>` 패널을 엽니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:343
+msgid "metadata"
+msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:58
+msgid ""
+"a display box for quick access to some GPS information components you may "
+"need:"
+msgstr "사용자에게 필요할 수도 있는 몇몇 GPS 정보에 빠르게 접근하기 위한 표시 상자:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:60
+msgid "|unchecked| :sup:`Show location`"
+msgstr "|unchecked| :sup:`Show location`: 위치 보이기"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:355
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:61
+msgid "|unchecked| :sup:`Show altitude (Geoid)`"
+msgstr "|unchecked| :sup:`Show altitude (Geoid)`: 고도 보이기 (지오이드)"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:62
+msgid "|unchecked| :sup:`Show altitude (WGS 84 ellipsoid)`"
+msgstr ""
+"|unchecked| :sup:`Show altitude (WGS 84 ellipsoid)`: 고도 보이기 (WGS 84 타원체)"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:63
+msgid "|unchecked| :sup:`Show ground speed`"
+msgstr "|unchecked| :sup:`Show ground speed`: 지상 속도 보이기"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:64
+msgid "|unchecked| :sup:`Show bearing`"
+msgstr "|unchecked| :sup:`Show bearing`: 방위 보이기"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:65
+msgid "|unchecked| :sup:`Show total track length`"
+msgstr "|unchecked| :sup:`Show total track length`: 총 트랙 길이 보이기"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:66
+msgid "|unchecked| :sup:`Show distance from start of track`"
+msgstr ""
+"|unchecked| :sup:`Show distance from start of track`: 트랙의 시작점으로부터의 거리 보이기"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:70
+msgid ""
+"The |options| :sup:`Settings` button opens a drop-down menu with common "
+"settings which are expected to be modified mid-session:"
+msgstr ""
+"|options| :sup:`Settings` 버튼을 클릭하면 세션 도중 수정할 것이라고 예상되는 공통 설정을 담고 있는 드롭다운 메뉴를"
+" 엽니다:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:345
+msgid "options"
+msgstr "options"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:73
+msgid "|unchecked| :guilabel:`Show location marker`"
+msgstr "|unchecked| :guilabel:`Show location marker`: 위치 마커 보이기"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:74
+msgid "|unchecked| :guilabel:`Show bearing line`"
+msgstr "|unchecked| :guilabel:`Show bearing line`: 방위선 보이기"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:75
+msgid "|unchecked| :guilabel:`Rotate map to match GPS direction`"
+msgstr ""
+"|unchecked| :guilabel:`Rotate map to match GPS direction`: 맵을 GPS 방향과 일치하도록 "
+"회전시키기"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:79
+msgid "Options to control map recentering:"
+msgstr "맵 중심 재정렬을 제어하기 위한 옵션들:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:81
+msgid ""
+"|radioButtonOff| :guilabel:`Always recenter map` when the GPS position is "
+"offset from the map canvas center by a certain distance (as a ratio of the "
+"map canvas extent)"
+msgstr ""
+"|radioButtonOff| :guilabel:`Always recenter map`: GPS 위치가 맵 캔버스의 중심으로부터 (맵 "
+"캔버스 범위의 비율로서의) 일정 거리만큼 오프셋되었을 때 항상 맵의 중심을 다시 정렬합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:347
+msgid "radioButtonOff"
+msgstr "radioButtonOff"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:83
+msgid "|radioButtonOn| :guilabel:`Recenter map when leaving extent`"
+msgstr ""
+"|radioButtonOn| :guilabel:`Recenter map when leaving extent`: GPS 위치가 맵 캔버스 "
+"범위를 벗어났을 때 맵의 중심을 다시 정렬합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:349
+msgid "radioButtonOn"
+msgstr "radioButtonOn"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:84
+msgid "|radioButtonOff| :guilabel:`Never recenter`"
+msgstr "|radioButtonOff| :guilabel:`Never recenter`: 맵의 중심을 다시 정렬하지 않습니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:86
+msgid ""
+"|unchecked| :guilabel:`Automatically add track vertices` whenever new "
+"locations are received from the GPS device."
+msgstr ""
+"|unchecked| :guilabel:`Automatically add track vertices`: GPS 기기에서 새 위치를 "
+"수신받을 때마다 트랙 꼭짓점을 자동으로 추가합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:88
+msgid ""
+"|unchecked| :guilabel:`Automatically save added features`: features created "
+"from GPS locations are immediately committed to their target layers "
+"(skipping the usual layer edit buffer)"
+msgstr ""
+"|unchecked| :guilabel:`Automatically save added features`: 피처가 GPS 위치로부터 "
+"생성되는 즉시 (일반적인 레이어 편집 버퍼를 건너뛰고) 대상 레이어에 커밋합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:91
+msgid ""
+":guilabel:`Time stamp destination` to adjust the field for time fix storage"
+msgstr ""
+":guilabel:`Time stamp destination`: 대상 레이어에 시간 수정 저장 용 필드를 조정하기 위한 타임스탬프를 "
+"기록합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:95
+msgid ""
+"|unchecked| :guilabel:`Log to GeoPackage/SpatiaLite...`: When activated, the"
+" user will be prompted to select an existing GeoPackage/SpatiaLite file or "
+"enter a new file name. A ``gps_points`` and ``gps_tracks`` table will be "
+"created in the file with a predefined structure."
+msgstr ""
+"|unchecked| :guilabel:`Log to GeoPackage/SpatiaLite...`: 이 옵션을 체크하면, 사용자에게 "
+"기존 GeoPackage/SpatiaLite 파일을 선택하라는 또는 새 파일 이름을 입력하라는 메시지가 뜰 것입니다. 이 파일 안에 사전"
+" 정의 구조를 가진 ``gps_points`` 및 ``gps_tracks`` 테이블이 생성될 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:101
+msgid ""
+"All incoming GPS messages will be logged to the ``gps_points`` layer, along "
+"with speed, bearing, altitude and accuracy information from the GPS."
+msgstr ""
+"수신되는 모든 GPS 메시지는 GPS에서 나온 속도, 방위, 고도 및 정확도 정보와 함께 ``gps_points`` 레이어에 로그로 "
+"작성될 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:104
+msgid ""
+"When the GPS is disconnected (or QGIS closed), the entire recorded GPS track"
+" will be added to the ``gps_tracks`` table (along with some calculated "
+"information like track length, start and end times)."
+msgstr ""
+"GPS를 연결 해제 했을 때 (또는 QGIS를 종료했을 때) ``gps_tracks`` 테이블에 기록된 전체 GPS 트랙을 (트랙 길이,"
+" 시작 및 종료 시간 같은 몇몇 계산된 정보와 함께) 추가할 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:108
+msgid ""
+"|unchecked| :guilabel:`Log NMEA sentences...`: enables logging all raw NMEA "
+"strings from the device to a text file"
+msgstr ""
+"|unchecked| :guilabel:`Log NMEA sentences...`: 이 옵션을 체크하면, 텍스트 파일에 기기에서 나온 "
+"모든 원시(raw) NMEA 문자열을 로그로 작성합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:110
+msgid ""
+"|options| :guilabel:`GPS settings...` to access the GPS :ref:`global options"
+" <gps_options>` dialog"
+msgstr ""
+"|options| :guilabel:`GPS settings...`: GPS의 :ref:`전체 수준 옵션 <gps_options>` "
+"대화창을 엽니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:114
+msgid "**Live status bar information on position**"
+msgstr "**위치에 대한 실시간 상태 바 정보**"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:116
+msgid ""
+"When a GPS device is connected and the user moves the cursor over the map "
+"canvas, a live status bar message displays the distance and bearing from the"
+" cursor to the GPS position. Project distance and bearing settings are "
+"respected in this display. On a touch screen device, use a tap-and-hold "
+"event to trigger the live status bar message."
+msgstr ""
+"GPS 기기를 연결하고 사용자가 맵 캔버스 위로 커서를 이동시키면, 실시간 상태 바 메시지가 커서로부터 GPS 위치까지의 거리와 방위를 "
+"표시합니다. 이 표시는 프로젝트 수준 거리 및 방위 설정을 준수합니다. 터치 스크린 기기의 경우 '길게 탭하기' 이벤트로 실시간 상태 바"
+" 메시지를 촉발합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:125
+msgid "GPS Information Panel"
+msgstr "GPS 정보 패널"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:127
+msgid ""
+"For full monitoring of a live GPS tracking in QGIS, you may need to enable "
+"the :guilabel:`GPS Information Panel` (:menuselection:`View --> Panels -->` "
+"or press :kbd:`Ctrl+0`)."
+msgstr ""
+"QGIS에서 실시간 GPS 추척을 완전하게 모니터링하려면, :guilabel:`GPS Information Panel` 을 "
+"(:menuselection:`View --> Panels -->` 메뉴 또는 :kbd:`Ctrl+0` 키 조합으로) 활성화시켜야 할 "
+"수도 있습니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:131
+msgid ""
+"In the top right corner of the :guilabel:`GPS Information Panel`, you press "
+":guilabel:`Connect` to initiate connection between QGIS and a plugged-in GPS"
+" receiver, or :guilabel:`Disconnect` them."
+msgstr ""
+":guilabel:`GPS Information Panel` 의 우상단에 있는 :guilabel:`Connect` 버튼을 클릭하면 "
+"QGIS와 플러그인된 GPS 수신기 사이에 연결을 시작하고, 그 후 :guilabel:`Disconnect` 로 바뀐 버튼을 클릭하면 "
+"연결을 해제합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:135
+msgid "In the top left of the panel, following buttons are accessible:"
+msgstr "패널의 좌상단에서는 다음 버튼들을 사용할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:137
+msgid ""
+"|metadata| :sup:`Position`: live details on the GPS position and sensors"
+msgstr "|metadata| :sup:`Position`: GPS 위치와 센서에 대한 실시간 상세 정보를 보여줍니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:138
+msgid ""
+"|gpsTrackBarChart| :sup:`Signal`: signal strength of satellite connections"
+msgstr "|gpsTrackBarChart| :sup:`Signal`: 연결된 위성의 GPS 신호 강도를 표시합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:341
+msgid "gpsTrackBarChart"
+msgstr "gpsTrackBarChart"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:139
+msgid ""
+"|options| :sup:`Settings`: drop-down menu to :ref:`live tracking options "
+"<tracking_settings>` you may need to modify during a session"
+msgstr ""
+"|options| :sup:`Settings`: 세션 도중 수정해야 할 수도 있는 :ref:`실시간 추적 옵션 "
+"<tracking_settings>` 을 담고 있는 드롭다운 메뉴입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:144
+msgid "Position and additional attributes"
+msgstr "위치 및 추가 속성"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:146
+msgid ""
+"In the |metadata| :sup:`Position` tab, if the GPS is receiving signals from "
+"satellites, you will see your position in latitude, longitude and altitude "
+"together with additional attributes."
+msgstr ""
+"GPS가 위성으로부터 신호를 수신받고 있는 경우, |metadata| :sup:`Position` 탭에서 사용자의 위치를 위도, 경도 "
+"그리고 고도로 ─ 추가 속성들과 함께 ─ 볼 수 있을 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:155
+msgid "GPS tracking position and additional attributes"
+msgstr "GPS 위치 추적 및 추가 속성"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:158
+msgid ":guilabel:`Latitude`"
+msgstr ":guilabel:`Latitude`: 위도"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:159
+msgid ":guilabel:`Longitude`"
+msgstr ":guilabel:`Longitude`: 경도"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:160
+msgid ""
+":guilabel:`Altitude (Geoid)`: Altitude/elevation above or below the mean sea"
+" level"
+msgstr ":guilabel:`Altitude (Geoid)`: 평균 해수면 위 또는 아래 방향 고도/표고"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:161
+msgid ""
+":guilabel:`Altitude (WGS 84 ellipsoid)`: Altitude/elevation above or below "
+"the WGS-84 Earth ellipsoid"
+msgstr ""
+":guilabel:`Altitude (WGS 84 ellipsoid)`: WGS-84 지구 타원체 위 또는 아래 방향 고도/표고"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:163
+msgid ""
+":guilabel:`Geoidal separation`: Difference between the WGS-84 Earth "
+"ellipsoid and mean sea level (geoid), ``-`` means mean sea level is below "
+"ellipsoid"
+msgstr ""
+":guilabel:`Geoidal separation`: WGS-84 지구 타원체와 평균 해수면(지오이드)의 차이로, ``-`` 부호는 "
+"평균 해수면이 타원체 아래 있다는 의미입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:165
+msgid ":guilabel:`Time of fix`"
+msgstr ":guilabel:`Time of fix`: 수정 시간"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:166
+msgid ":guilabel:`Speed`: Ground speed"
+msgstr ":guilabel:`Speed`: 지상 속도"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:167
+msgid ""
+":guilabel:`Direction`: Bearing measured in degrees clockwise from true north"
+" to the direction of travel"
+msgstr ":guilabel:`Direction`: 진북에서부터 여행 방향을 시계 방향으로 측정한 도 단위 방위"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:169
+msgid ":guilabel:`HDOP`: Horizontal dilution of precision"
+msgstr ":guilabel:`HDOP`: 수평 정밀도 희석(Horizontal dilution of precision)"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:170
+msgid ":guilabel:`VDOP`: Vertical dilution of precision"
+msgstr ":guilabel:`VDOP`: 수직 정밀도 희석(Vertical dilution of precision)"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:171
+msgid ":guilabel:`PDOP`: Dilution of precision"
+msgstr ":guilabel:`PDOP`: 위치 정밀도 희석(Dilution of precision)"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:172
+msgid ":guilabel:`H accuracy`: Horizontal accuracy in meters"
+msgstr ":guilabel:`H accuracy`: 미터 단위 수평 정확도"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:173
+msgid ":guilabel:`V accuracy`: Vertical accuracy in meters"
+msgstr ":guilabel:`V accuracy`: 미터 단위 수직 정확도"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:174
+msgid ":guilabel:`3D accuracy`: 3D Root Mean Square (RMS) in meters"
+msgstr ":guilabel:`3D accuracy`: 미터 단위 3차원 제곱평균제곱근(RMS; Root Mean Square)"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:175
+msgid ""
+":guilabel:`Mode`: GPS receiver configuration 2D/3D mode, can be "
+"``automatic`` or ``manual``"
+msgstr ""
+":guilabel:`Mode`: GPS 수신기의 2차원/3차원 모드 환경설정입니다. ``automatic`` 또는 ``manual`` "
+"가운데 하나일 수 있습니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:176
+msgid ""
+":guilabel:`Dimensions`: Position fix dimension, can be ``2D``, ``3D`` or "
+"``No fix``"
+msgstr ""
+":guilabel:`Dimensions`: 위치 수정 차원입니다. ``2D``, ``3D`` 또는 ``No fix`` 가운데 하나일 수 "
+"있습니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:177
+msgid ":guilabel:`Quality`: Positioning quality indicator"
+msgstr ":guilabel:`Quality`: 위치정보 품질 지표"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:178
+msgid ""
+":guilabel:`Status`: Position fix status, can be ``Valid`` or ``Invalid``"
+msgstr ""
+":guilabel:`Status`: 위치 수정 상태입니다. ``Valid`` 또는 ``Invalid`` 가운데 하나일 수 있습니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:179
+msgid ":guilabel:`Satellites`: Count of satellites used in obtaining the fix"
+msgstr ":guilabel:`Satellites`: 수정 정보를 얻는 데 사용된 위성의 개수"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:180
+msgid ":guilabel:`Total track length`: Total distance of current GPS track"
+msgstr ":guilabel:`Total track length`: 현재 GPS 트랙의 총 길이"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:181
+msgid ""
+":guilabel:`Distance from start of track`: Direct distance from first vertex "
+"in current GPS track to latest vertex"
+msgstr ""
+":guilabel:`Distance from start of track`: 현재 GPS 트랙의 첫 번째 꼭짓점에서 최신 꼭짓점까지의 직선"
+" 거리"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:186
+msgid "Signal"
+msgstr "신호"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:188
+msgid ""
+"With |gpsTrackBarChart| :sup:`Signal` tab, you can see the signal strength "
+"of the satellites you are receiving signals from."
+msgstr "|gpsTrackBarChart| :sup:`Signal` 탭에서 신호를 수신받고 있는 위성의 신호 강도를 볼 수 있습니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:196
+msgid "GPS tracking signal strength"
+msgstr "GPS 추적 신호 강도"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:200
+msgid "Connect to a Bluetooth GPS for live tracking"
+msgstr "실시간 추적을 위해 블루투스 GPS 기기에 연결"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:202
+msgid ""
+"With QGIS you can connect a Bluetooth GPS for field data collection. To "
+"perform this task you need a GPS Bluetooth device and a Bluetooth receiver "
+"on your computer."
+msgstr ""
+"현장 데이터 수집을 위헤 QGIS에 블루투스 GPS 기기를 연결할 수 있습니다. 이 작업을 하려면 블루투스 GPS 기기와 사용자 컴퓨터 "
+"상에 있는 블루투스 수신기가 필요합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:206
+msgid ""
+"At first you must let your GPS device be recognized and paired to the "
+"computer. Turn on the GPS, go to the Bluetooth icon on your notification "
+"area and search for a New Device."
+msgstr ""
+"먼저 사용자 컴퓨터가 GPS 기기를 인식하고 페어링해야만 합니다. GPS 기기의 전원을 켠 다음, 사용자 컴퓨터의 알림 영역에 있는 "
+"블루투스 아이콘을 클릭하고 새 장치를 검색하십시오."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:210
+msgid ""
+"On the right side of the Device selection mask make sure that all devices "
+"are selected so your GPS unit will probably appear among those available. In"
+" the next step a serial connection service should be available, select it "
+"and click on :guilabel:`Configure` button."
+msgstr ""
+"장치 선택 화면의 우측에서 모든 장치 유형을 선택해서 사용자의 GPS 기기가 연결할 수 있는 장치 목록에 나타나도록 하십시오. 다음 "
+"단계에서 시리얼 연결 서비스를 선택할 수 있을 겁니다. 해당 연결을 선택한 다음 :guilabel:`Configure` 버튼을 "
+"누르십시오."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:215
+msgid ""
+"Remember the number of the COM port assigned to the GPS connection as "
+"resulting by the Bluetooth properties."
+msgstr "블루투스 속성에서 GPS 연결에 할당된 COM 포트 번호를 확인해서 기억해두십시오."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:218
+msgid ""
+"After the GPS has been recognized, make the pairing for the connection. "
+"Usually the authorization code is ``0000``."
+msgstr "GPS 기기를 인식한 후, 페어링해서 연결하십시오. 대부분의 경우 인증 코드는 ``0000`` 입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:221
+msgid ""
+"Now open :guilabel:`GPS information` panel and switch to |options| GPS "
+"options screen. Select the COM port assigned to the GPS connection and click"
+" the :guilabel:`Connect`. After a while a cursor indicating your position "
+"should appear."
+msgstr ""
+"이제 QGIS에서 :guilabel:`GPS information` 패널을 열고 |options| GPS 옵션 화면으로 전환하십시오. "
+"GPS 연결에 할당된 COM 포트 번호를 선택한 다음 :guilabel:`Connect` 버튼을 클릭하십시오. 잠시 후 사용자의 위치를 "
+"나타내는 커서가 나타날 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:226
+msgid ""
+"If QGIS can't receive GPS data, then you should restart your GPS device, "
+"wait 5-10 seconds then try to connect again. Usually this solution work. If "
+"you receive again a connection error make sure you don't have another "
+"Bluetooth receiver near you, paired with the same GPS unit."
+msgstr ""
+"QGIS가 GPS 데이터를 받지 못 하는 경우, 사용자 GPS 기기를 재시작하고 5 ~ 10초 동안 기다린 다음 다시 연결을 시도해야 "
+"합니다. 대부분의 경우 이렇게 하면 해결됩니다. 다시 연결 오류가 발생한다면 사용자 GPS 기기와 연결된 다른 블루투스 수신기가 근처에 "
+"있는지 확인해보십시오."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:232
+msgid "Examples of GPS devices connection in QGIS"
+msgstr "QGIS에서의 GPS 기기 연결 예시"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:235
+msgid "Using GPSMAP 60cs"
+msgstr "GPSMAP 60cs 사용법"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:238
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:288
+msgid "MS Windows"
+msgstr "MS 윈도우"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:240
+msgid ""
+"Easiest way to make it work is to use a middleware (freeware, not open) "
+"called `GPSGate <https://gpsgate.com/gpsgate-splitter>`_."
+msgstr ""
+"이 GPS 기기를 가장 쉽게 사용하는 방법은 `GPSGate <https://gpsgate.com/gpsgate-splitter>`_ "
+"라는 (공개 소프트웨어는 아니지만 자유 소프트웨어인) 미들웨어를 사용하는 것입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:243
+msgid ""
+"Launch the program, make it scan for GPS devices (works for both USB and BT "
+"ones) and then in QGIS:"
+msgstr "프로그램을 구동하고 GPS 기기를 스캔한 다음 (USB와 블루투스 연결 둘 다 스캔합니다) QGIS로 가서:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:246
+msgid ""
+"In :menuselection:`Settings --> Options --> GPS`, detect the plugged-in "
+"device. You can use the |radioButtonOn| :guilabel:`Autodetect` mode."
+msgstr ""
+":menuselection:`Settings --> Options --> GPS` 메뉴 항목을 선택해서 플러그인된 기기를 탐지하십시오. "
+"|radioButtonOn| :guilabel:`Autodetect` 를 선택하면 자동 탐지 모드를 사용할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:248
+msgid "Press :guilabel:`Connect` in the :guilabel:`GPS Information` panel"
+msgstr ":guilabel:`GPS Information` 패널에서 :guilabel:`Connect` 버튼을 클릭하십시오."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:251
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:296
+msgid "Ubuntu/Mint GNU/Linux"
+msgstr "우분투/민트 GNU/리눅스"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:253
+msgid ""
+"As for Windows the easiest way is to use a server in the middle, in this "
+"case GPSD, so"
+msgstr ""
+"윈도우와 마찬가지로 미들웨어를 사용하는 것이 가장 쉬운 방법입니다. 이 경우에는 ``gpsd`` 를 다음과 같이 설치하십시오:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:256
+msgid "Install the program"
+msgstr "프로그램을 설치합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:262
+msgid "Then load the ``garmin_gps`` kernel module"
+msgstr "그리고 ``garmin_gps`` 커널 모듈을 다음과 같이 불러오십시오:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:268
+msgid ""
+"And then connect the unit and check with ``dmesg`` the actual device being "
+"used by the unit, for example ``/dev/ttyUSB0``."
+msgstr ""
+"그 다음 기기를 연결하고, ``dmesg`` 명령어로 실제 기기가 연결됐는지, 예를 들어 ``/dev/ttyUSB0`` 처럼 마운트됐는지"
+" 확인하십시오."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:271
+msgid "Now you can launch gpsd"
+msgstr "이제 다음과 같이 ``gpsd`` 를 구동할 준비가 끝났습니다:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:277
+msgid "And finally connect with the QGIS live tracking tool."
+msgstr "마지막으로 QGIS의 실시간 GPS 추적 도구와 연결하십시오."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:280
+msgid "Using BTGP-38KM datalogger (only Bluetooth)"
+msgstr "BTGP-38KM DataLogger (블루투스 전용)"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:282
+msgid "Using GPSD (under Linux) or GPSGate (under Windows) is effortless."
+msgstr "``gpsd`` (리눅스) 또는 GPSGate (윈도우) 프로그램을 사용하는 것이 가장 쉬운 방법입니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:285
+msgid "Using BlueMax GPS-4044 datalogger (both BT and USB)"
+msgstr "BlueMax GPS-4044 DataLogger (블루투스 및 USB 둘 다)"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:290
+msgid ""
+"The live tracking works for both USB and BT modes, by using GPSGate or even "
+"without it, just use the |radioButtonOn| :guilabel:`Autodetect` mode, or "
+"point the tool to the right port."
+msgstr ""
+"GPSGate를 사용하든 사용하지 않든, |radioButtonOn| :guilabel:`Autodetect` 모드를 선택하거나 또는 "
+"올바른 포트를 지정하는 것만으로도 USB 및 블루투스 연결 둘 다 실시간 추적이 가능합니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:298
+msgid "**For USB**"
+msgstr "**USB 연결**"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:300
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:311
+msgid "The live tracking works both with GPSD"
+msgstr "다음과 같이 ``gpsd`` 를 통해 실시간 추적을 할 수도 있고:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:306
+msgid ""
+"or without it, by connecting the QGIS live tracking tool directly to the "
+"device (for example ``/dev/ttyACM3``)."
+msgstr ""
+"또는 ``gpsd`` 를 사용하지 않고 QGIS 실시간 GPS 추적 도구에 기기를 직접 (예: ``/dev/ttyACM3``) 연결해서 "
+"실시간 추적을 할 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:309
+msgid "**For Bluetooth**"
+msgstr "**블루투스 연결**"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:317
+msgid ""
+"or without it, by connecting the QGIS live tracking tool directly to the "
+"device (for example ``/dev/rfcomm0``)."
+msgstr ""
+"또는 ``gpsd`` 를 사용하지 않고 QGIS 실시간 GPS 추적 도구에 기기를 직접 (예: ``/dev/rfcomm0``) 연결해서 "
+"실시간 추적을 할 수도 있습니다."

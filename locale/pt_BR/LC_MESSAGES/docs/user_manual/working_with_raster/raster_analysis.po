@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Transifex Bot <>, 2024
+# Harrissou Sant-anna, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2024-03-02 11:58+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2024\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"A tradução é um esforço comunitário :ref:`você pode contribuir "
+"<translation_guidelines>`. Esta página está atualmente traduzida em "
+"|translation progress|."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:6
+msgid "Raster Analysis"
+msgstr "Análise raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:17
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:29
+msgid "Raster Calculator"
+msgstr "Calculadora raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:37
+msgid ""
+"In the :guilabel:`Result layer` section, you will need to define an output "
+"layer. You can:"
+msgstr ""
+"Na seção :guilabel:'camada de resultado', você precisará definir uma camada "
+"de saída. Você pode:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:160
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:108
+msgid "Examples"
+msgstr "Exemplos"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:110
+msgid "**Convert elevation values from meters to feet**"
+msgstr "**Converter valores de elevação de metros para pés**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:112
+msgid ""
+"Creating an elevation raster in feet from a raster in meters, you need to "
+"use the conversion factor for meters to feet: 3.28. The expression is:"
+msgstr ""
+"Para criar um raster de elevação em pés a partir de um raster em metros, "
+"você precisa usar o fator de conversão de metros para pés: 3,28. A expressão"
+" é:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:119
+msgid "**Using a mask**"
+msgstr "**Usando uma máscara**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:121
+msgid ""
+"If you want to mask out parts of a raster -- say, for instance, because you "
+"are only interested in elevations above 0 meters -- you can use the "
+"following expression to create a mask and apply the result to a raster in "
+"one step."
+msgstr ""
+"Se você deseja mascarar partes de um raster -- digamos, por exemplo, porque "
+"você só está interessado em elevações acima de 0 metros -- você pode usar a "
+"seguinte expressão para criar uma máscara e aplicar o resultado a um raster "
+"em um passo."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:129
+msgid ""
+"In other words, for every cell greater than or equal to 0 the conditional "
+"expression evaluates to 1, which keeps the original value by multiplying it "
+"by 1. Otherwise the conditional expression evaluates to 0, which sets the "
+"raster value to 0. This creates the mask on the fly."
+msgstr ""
+"Em outras palavras, para cada célula maior ou igual a 0, a expressão "
+"condicional é avaliada como 1, o que mantém o valor original multiplicando-o"
+" por 1. Caso contrário, a expressão condicional é avaliada como 0, que "
+"define o valor raster como 0. Isso cria a máscara em vôo."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:134
+msgid "**Classify a Raster**"
+msgstr "**Classificar um Raster**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:136
+msgid ""
+"If you want to classify a raster -- say, for instance into two elevation "
+"classes, you can use the following expression to create a raster with two "
+"values 1 and 2 in one step."
+msgstr ""
+"Se você deseja classificar um raster -- por exemplo, em duas classes de "
+"elevação, é possível usar a expressão a seguir para criar um raster com dois"
+" valores 1 e 2 em um passo."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:144
+msgid ""
+"In other words, for every cell less than 50 set its value to 1. For every "
+"cell greater than or equal 50 set its value to 2."
+msgstr ""
+"Em outras palavras, para cada célula menor que 50, defina seu valor como 1. "
+"Para cada célula maior ou igual a 50, defina seu valor como 2."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:147
+msgid "Or you can use the ``IF`` operator."
+msgstr "Ou você pode utilizar o operador ``SE``."
