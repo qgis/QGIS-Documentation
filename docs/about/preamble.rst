@@ -4,11 +4,10 @@
 Preamble
 ********
 
-This is the user guide for the geographical information system (GIS)
+Welcome to the documentation of the geographical information system (GIS)
 software QGIS.
-QGIS is subject to the GNU General Public License.
-More information is available on the QGIS homepage,
-https://www.qgis.org.
+QGIS is subject to the GNU General Public License version 2, or any later version.
+More information is available on the `QGIS website <https://www.qgis.org/license>`_.
 
 The contents of this document have been written and verified to the
 best of the knowledge of the authors and editors.
@@ -41,7 +40,7 @@ The list of the persons who have contributed with writing, reviewing
 and translating the following documentation is available
 at :ref:`doc_contributors`.
 
-Copyright (c) 2004 - 2020 QGIS Development Team
+Copyright (c) 2004 - 2025 QGIS Development Team
 
 **Internet:** https://www.qgis.org
 
