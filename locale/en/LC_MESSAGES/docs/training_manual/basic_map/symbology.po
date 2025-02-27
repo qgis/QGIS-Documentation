@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-17 08:16+0000\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -93,7 +93,7 @@ msgid ""
 "immediately!"
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:698
+#: ../../docs/training_manual/basic_map/symbology.rst:814
 msgid "symbology"
 msgstr ""
 
@@ -292,7 +292,7 @@ msgstr ""
 msgid "Activate the |rendering| :guilabel:`Rendering` tab."
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:696
+#: ../../docs/training_manual/basic_map/symbology.rst:812
 msgid "rendering"
 msgstr ""
 
@@ -322,11 +322,11 @@ msgstr ""
 msgid "|zoomIn| |zoomOut|"
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:702
+#: ../../docs/training_manual/basic_map/symbology.rst:820
 msgid "zoomIn"
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:704
+#: ../../docs/training_manual/basic_map/symbology.rst:822
 msgid "zoomOut"
 msgstr ""
 
@@ -360,7 +360,7 @@ msgid ""
 "look something like this, with a new symbol layer added:"
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:700
+#: ../../docs/training_manual/basic_map/symbology.rst:816
 msgid "symbologyAdd"
 msgstr ""
 
@@ -505,7 +505,7 @@ msgid ""
 "is the bottom layer."
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:693
+#: ../../docs/training_manual/basic_map/symbology.rst:805
 msgid "checkbox"
 msgstr ""
 
@@ -866,7 +866,7 @@ msgid ""
 "button."
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:691
+#: ../../docs/training_manual/basic_map/symbology.rst:801
 msgid "arrowDown"
 msgstr ""
 
@@ -1035,31 +1035,233 @@ msgid ""
 msgstr ""
 
 #: ../../docs/training_manual/basic_map/symbology.rst:660
-msgid "In Conclusion"
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Masking"
 msgstr ""
 
 #: ../../docs/training_manual/basic_map/symbology.rst:662
+msgid ""
+"Masking feature allows you to mask some symbol layer using another symbol"
+" layer or label."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:664
+msgid ""
+"In the following exercise, we want to configure rendering so that polygon"
+" labels will mask the black part of lines layer."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:667
+msgid ""
+"Load the :file:`selective_masking.qgs` from dataset in directory "
+":file:`exercise_data/masking`."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:669
+msgid "Open the :guilabel:`Layer Properties` window for the ``polys`` layer."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:672
+msgid ""
+"Under the |labelingSingle| :guilabel:`Labels` tab, you will see that "
+"|labelingSingle| :guilabel:`Single Labels` have already been defined."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:807
+msgid "labelingSingle"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:675
+msgid ""
+"From the :guilabel:`Labels` tab, select the |labelmask| :guilabel:`Mask` "
+"(and not :guilabel:`Masks` in general category list)"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:809
+msgid "labelmask"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:677
+msgid ""
+"Enable label mask by checking the |unchecked| :guilabel:`Enable mask` "
+"option"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:818
+msgid "unchecked"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:679
+msgid ""
+"A message tells you that the now defined label mask shape can be later "
+"selected as a mask source to mask other symbol layers. Let's do that."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:682
+#: ../../docs/training_manual/basic_map/symbology.rst:700
+#: ../../docs/training_manual/basic_map/symbology.rst:750
+#: ../../docs/training_manual/basic_map/symbology.rst:761
+msgid "Click :guilabel:`OK`"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:683
+#: ../../docs/training_manual/basic_map/symbology.rst:751
+msgid "Open the :guilabel:`Layer Properties` window for the ``lines`` layer."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:686
+msgid "Go to the |labelmask| :guilabel:`Masks` tab"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:688
+msgid "Click on the black line part of lines checkbox from masked symbol layers"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:690
+msgid ""
+"A message warns you that you have to select both masking and masked "
+"symbol layers to be able to save masking configuration. Again, let's do "
+"that."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:693
+msgid "Click on ``polys`` :guilabel:`Label mask` checkbox"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:695
+msgid "The message disappears, you can now safely save your configuration."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:703
+msgid ""
+"You can see now that labels are masking the black part of lines, leaving "
+"only the yellow part."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:710
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Masking using points symbols"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:712
+msgid ""
+"We want now to mask the black part of lines using only black planes that "
+"represent the ``points`` layer (i.e. ``B52`` and ``Jet`` points "
+"categories). For the sake of visibility, you can switch off ``polys`` "
+"layer visibility."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:715
+msgid "Open the :guilabel:`Layer Properties` window for the ``points`` layer."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:718
+msgid ""
+"Under the |symbology| :guilabel:`Symbology` tab, you will see that a "
+"|categorizedSymbol| :guilabel:`Categorized` renderer has been defined "
+"with 3 different symbols depending on the ``Class`` field value."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:803
+msgid "categorizedSymbol"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:721
+msgid "Double click on ``B52`` plane icon, within the :guilabel:`Symbol` column"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:726
+msgid ""
+"Click the |symbologyAdd| :sup:`Add symbol layer` button and select the "
+"``Mask`` :guilabel:`Symbol layer type`"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:728
+msgid ""
+"A new hierarchy ``Mask`` (`symbol layer`) > ``Marker`` (`symbol`) > "
+"``Simple Marker`` (`symbol layer`) appear below the root symbol "
+"``Marker``."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:733
+msgid ""
+"Now, let's define a mask that is identical to our plane marker but a "
+"little bit bigger."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:735
+msgid ""
+"Select the newly created ``Simple Marker`` symbol layer and change its "
+":guilabel:`Symbol layer type` to ``SVG marker``"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:737
+msgid ""
+"Set the SVG file path to be the same as the already existing SVG marker, "
+"and the size to be bigger (24 millimeters is a pretty good choice for "
+"this use case)."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:740
+msgid ""
+"Mask color doesn't matter here, only the shape is used in masking. Symbol"
+" layer order is also irrelevant in that situation."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:743
+msgid "You should get something like that:"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:748
+msgid "Repeat the same operations on ``Jet`` symbol."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:754
+msgid "Go to the |labelmask| :guilabel:`Masks` tab."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:756
+msgid ""
+"The black line part of lines checkbox from masked symbol layers is "
+"already checked from our previous configuration."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:759
+msgid ""
+"Uncheck the :guilabel:`Label mask` ``polys`` checkbox and check both "
+"``B52`` and ``Jet`` :guilabel:`Mask symbol layer`"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:763
+msgid ""
+"You now see that black planes are masking the black part of lines, with "
+"only the yellow part visible."
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:770
+msgid "In Conclusion"
+msgstr ""
+
+#: ../../docs/training_manual/basic_map/symbology.rst:772
 msgid ""
 "Changing the symbology for the different layers has transformed a "
 "collection of vector files into a legible map. Not only can you see "
 "what's happening, it's even nice to look at!"
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:667
+#: ../../docs/training_manual/basic_map/symbology.rst:777
 msgid "Further Reading"
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:669
+#: ../../docs/training_manual/basic_map/symbology.rst:779
 msgid ""
 "`Examples of Beautiful Maps <https://gis.stackexchange.com/questions/3083"
 "/seeking-examples-of-beautiful-maps>`_"
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:673
+#: ../../docs/training_manual/basic_map/symbology.rst:783
 msgid "What's Next?"
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:675
+#: ../../docs/training_manual/basic_map/symbology.rst:785
 msgid ""
 "Changing symbols for whole layers is useful, but the information "
 "contained within each layer is not yet available to someone reading these"
@@ -1069,7 +1271,7 @@ msgid ""
 "explain how to represent this data on your map."
 msgstr ""
 
-#: ../../docs/training_manual/basic_map/symbology.rst:682
+#: ../../docs/training_manual/basic_map/symbology.rst:792
 msgid "Did you remember to save your map recently?"
 msgstr ""
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -698,31 +698,55 @@ msgid ""
 msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:707
-msgid "Debugging unit tests"
+msgid "Sandboxing test run"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:710
-msgid "C++ Tests"
+#: ../../docs/developers_guide/unittesting.rst:709
+msgid ""
+"By default all test temporary files are written to the system temp "
+"directory (for example ``/tmp/`` on Linux systems or ``C:\\temp`` on "
+"Windows). A lot of files can be created in this directory during the test"
+" run."
 msgstr ""
 
 #: ../../docs/developers_guide/unittesting.rst:712
+msgid ""
+"If you do not want to mix up with the common system temp directory (for "
+"example on a multi user server or in case of permission issue), you can "
+"create your own temp directory and specify it to ``ctest`` by setting the"
+" ``TMPDIR`` environment variable with your new directory."
+msgstr ""
+
+#: ../../docs/developers_guide/unittesting.rst:715
+msgid "On Linux you could do it with:"
+msgstr ""
+
+#: ../../docs/developers_guide/unittesting.rst:724
+msgid "Debugging unit tests"
+msgstr ""
+
+#: ../../docs/developers_guide/unittesting.rst:727
+msgid "C++ Tests"
+msgstr ""
+
+#: ../../docs/developers_guide/unittesting.rst:729
 msgid ""
 "For C++ unit tests, QtCreator automatically adds run targets, so you can "
 "start them from the debugger."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:715
+#: ../../docs/developers_guide/unittesting.rst:732
 msgid ""
 "If you go to *Projects* and there to the *Build & Run* --> Desktop *Run* "
 "tab, you can also specify command line parameters that will allow a "
 "subset of the tests to be run inside a .cpp file in the debugger."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:720
+#: ../../docs/developers_guide/unittesting.rst:737
 msgid "Python Tests"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:722
+#: ../../docs/developers_guide/unittesting.rst:739
 msgid ""
 "It's also possible to start Python unit tests from QtCreator with GDB. "
 "For this, you need to go to :guilabel:`Projects` and choose "
@@ -732,53 +756,53 @@ msgid ""
 ":file:`/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py`."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:730
+#: ../../docs/developers_guide/unittesting.rst:747
 msgid "Now also change the ``Run Environment`` and add 3 new variables:"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:733
+#: ../../docs/developers_guide/unittesting.rst:750
 msgid "Variable"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:733
+#: ../../docs/developers_guide/unittesting.rst:750
 msgid "Value"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:735
+#: ../../docs/developers_guide/unittesting.rst:752
 msgid "PYTHONPATH"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:735
+#: ../../docs/developers_guide/unittesting.rst:752
 msgid "[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:737
+#: ../../docs/developers_guide/unittesting.rst:754
 msgid "QGIS_PREFIX_PATH"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:737
+#: ../../docs/developers_guide/unittesting.rst:754
 msgid "[build]/output"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:739
+#: ../../docs/developers_guide/unittesting.rst:756
 msgid "LD_LIBRARY_PATH"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:739
+#: ../../docs/developers_guide/unittesting.rst:756
 msgid "[build]/output/lib"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:742
+#: ../../docs/developers_guide/unittesting.rst:759
 msgid ""
 "Replace ``[build]`` with your build directory and ``[source]`` with your "
 "source directory."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:746
+#: ../../docs/developers_guide/unittesting.rst:763
 msgid "Have fun"
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:748
+#: ../../docs/developers_guide/unittesting.rst:765
 msgid ""
 "Well that concludes this section on writing unit tests in QGIS. We hope "
 "you will get into the habit of writing test to test new functionality and"

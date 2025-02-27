@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -110,10 +110,9 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:107
 msgid ""
 "for more information you can read these blog posts of Martin Dobias: "
-"`Part 1 <https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-"
-"tree-api-part-1/>`_ `Part 2 "
-"<https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-layer-tree-api-"
-"part-2/>`_ `Part 3 <https://www.lutraconsulting.co.uk/blog/2015/01/30"
+"`Part 1 <https://www.lutraconsulting.co.uk/blogs/qgis-layer-tree-api-"
+"part-1/>`_ `Part 2 <https://www.lutraconsulting.co.uk/blogs/qgis-layer-"
+"tree-api-part-2/>`_ `Part 3 <https://www.lutraconsulting.co.uk/blogs"
 "/qgis-layer-tree-api-part-3/>`_"
 msgstr ""
 
@@ -124,60 +123,60 @@ msgid ""
 ":class:`QgsProject <qgis.core.QgsProject>` class:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:119
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:120
 msgid "``root`` is a group node and has *children*:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:125
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:126
 msgid ""
 "A list of direct children is returned. Sub group children should be "
 "accessed from their own direct parent."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:128
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:129
 msgid "We can retrieve one of the children:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:139
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:140
 msgid "Layers can also be retrieved using their (unique) ``id``:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:147
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:148
 msgid "And groups can also be searched using their names:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:154
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:155
 msgid ""
 ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` has many other "
 "useful methods that can be used to obtain more information about the TOC:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:167
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:168
 msgid ""
 "Now let’s add some layers to the project’s layer tree. There are two ways"
 " of doing that:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:170
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:171
 msgid ""
 "**Explicit addition** using the :meth:`addLayer() "
 "<qgis.core.QgsLayerTreeGroup.addLayer>` or :meth:`insertLayer() "
 "<qgis.core.QgsLayerTreeGroup.insertLayer>` functions:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:183
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:184
 msgid ""
 "**Implicit addition**: since the project's layer tree is connected to the"
 " layer registry it is enough to add a layer to the map layer registry:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:191
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:192
 msgid ""
 "You can switch between :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`"
 " and :class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` easily:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:207
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:208
 msgid ""
 "Groups can be added with the :meth:`addGroup() "
 "<qgis.core.QgsLayerTreeGroup.addGroup>` method. In the example below, the"
@@ -185,37 +184,37 @@ msgid ""
 "can add another group within an existing one:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:218
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:219
 msgid "To moving nodes and groups there are many useful methods."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:220
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:221
 msgid "Moving an existing node is done in three steps:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:222
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:223
 msgid "cloning the existing node"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:223
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:224
 msgid "moving the cloned node to the desired position"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:224
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:225
 msgid "deleting the original node"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:235
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:236
 msgid ""
 "It is a little bit more *complicated* to move a layer around in the "
 "legend:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:252
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:253
 msgid "or moving it to an existing group:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:272
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:273
 msgid "Some other methods that can be used to modify the groups and layers:"
 msgstr ""
 
