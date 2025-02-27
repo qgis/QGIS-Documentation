@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 
 # This script is used to register QGIS-Documentation translatable resources with Transifex
 # https://app.transifex.com
