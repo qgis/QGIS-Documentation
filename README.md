@@ -164,6 +164,8 @@ We rely on the [Transifex platform](https://www.transifex.com) to store and coor
 our translation efforts. To be part of the translation team, please follow
 [becoming a translator](https://www.qgis.org/en/site/getinvolved/translate.html#becoming-a-translator).
 
+## GitHub workflow
+
 The process is automated using the [Transifex - GitHub integration system](https://help.transifex.com/en/articles/6265125-github-via-transifex-ui)
 and some custom scripts:
 
@@ -206,6 +208,8 @@ the instructions in earlier sections:
 make html LANG=yourlanguage
 ```
 
+## Managing translations locally
+
 Sometimes, you may want to build the docs with really new strings in a partially translated file
 and the above workflow may fail to work.
 In that case, you need to manually pull the translations from Transifex to your local repository:
@@ -217,10 +221,16 @@ In that case, you need to manually pull the translations from Transifex to your 
    source ./venv/bin/activate
    pip install -r REQUIREMENTS.txt
    ```
-1. Install [Transifex command line client](https://github.com/transifex/cli/)
+1. Install [Transifex command line client](https://github.com/transifex/cli/).
+   On Linux or macOS:
    ```
    curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
+   # and restart the terminal
    ```
+
+   Another way (including on Windows) is to download and locally unzip the latest binary.
+   Read [more instructions](https://github.com/transifex/cli/?tab=readme-ov-file#download-from-github-releases-linuxmacwindows).
+
 1. Download the translated strings using the [minimize_translation script](scripts/minimize_translation.sh).
    By default this pulls all the languages.
    ```
