@@ -8,10 +8,6 @@ QGIS User Guide
     :maxdepth: 2
     :numbered: 4
 
-    preamble/preamble
-    preamble/foreword
-    preamble/conventions
-    preamble/features
     introduction/getting_started
     introduction/project_files
     introduction/qgis_gui
@@ -37,7 +33,5 @@ QGIS User Guide
     processing/index
     processing_algs/index
     plugins/index
-    preamble/help_and_support
-    preamble/contributors
     appendices/index
     literature_web/literature_and_web_references

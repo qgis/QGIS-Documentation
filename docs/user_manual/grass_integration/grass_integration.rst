@@ -31,10 +31,11 @@ As an example, we will use the QGIS Alaska dataset (see section :ref:`label_samp
 It includes a small sample GRASS :file:`LOCATION` with three vector layers and one
 raster elevation map. Create a new folder called :file:`grassdata`, download
 the QGIS 'Alaska' dataset :file:`qgis\_sample\_data.zip` from
-https://qgis.org/downloads/data/ and unzip the file into :file:`grassdata`.
+https://download.qgis.org//downloads/data/ and unzip the file into :file:`grassdata`.
 
-More sample GRASS :file:`LOCATIONs` are available at the GRASS website at
-https://grass.osgeo.org/download/data/.
+More sample GRASS :file:`LOCATIONs` are available at the GRASS_ website.
+
+.. _GRASS: https://grass.osgeo.org/download/data/
 
 .. _sec_load_grassdata:
 

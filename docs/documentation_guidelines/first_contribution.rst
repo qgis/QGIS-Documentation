@@ -51,7 +51,7 @@ The GitHub web interface allows you to do the following:
 * create, update, or delete branches
 
 If you are not yet familiar with git and GitHub vocabulary, you may want to
-read the GitHub `Hello-world <https://docs.github.com/en/get-started/quickstart/hello-world>`_
+read the GitHub `Hello-world <https://docs.github.com/en/get-started/start-your-journey/hello-world>`_
 project to learn some basic vocabulary and actions that will be used below.
 
 .. note:: **If you are fixing a reported issue**
@@ -64,7 +64,7 @@ project to learn some basic vocabulary and actions that will be used below.
 Fork QGIS-Documentation
 --------------------------
 
-Assuming you already have a `GitHub account <https://github.com/join>`_,
+Assuming you already have a `GitHub account <https://github.com/signup>`_,
 you first need to fork the source files of the documentation.
 
 Navigate to the `QGIS-Documentation repository

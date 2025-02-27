@@ -628,7 +628,7 @@ By default, all unique keys are added.
 
 The PostgreSQL `HStore <https://www.postgresql.org/docs/10/hstore.html>`_
 is a simple key-value store used in PostgreSQL and GDAL (when reading
-an `OSM file <https://gdal.org/drivers/vector/osm.html#other-tags-field>`_
+an `OSM file <https://gdal.org/en/latest/drivers/vector/osm.html#other-tags-field>`_
 with the ``other_tags`` field.
 
 Parameters

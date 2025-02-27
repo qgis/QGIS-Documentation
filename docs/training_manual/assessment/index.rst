@@ -9,7 +9,7 @@ Use your own data for this section. You will need:
 - a line vector dataset of roads
 - a polygon vector dataset of land use (using property boundaries)
 - a visual-spectrum image (such as an aerial photograph)
-- a DEM (downloadable from `the CGIAR-CSI <http://srtm.csi.cgiar.org/>`_ if you
+- a DEM (downloadable from `the CGIAR-CSI <https://srtm.csi.cgiar.org/>`_ if you
   don't have your own)
 
 Create a base map
