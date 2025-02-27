@@ -610,7 +610,7 @@ operation is done, selection stays active for this feature and tool.
 
 .. tip:: **Drawing a series of new vertices**
 
-   The vertex tool does not support automatic tracing and is optimised for 
+   The vertex tool does not support :ref:`automatic tracing <tracing>` and is optimized for 
    editing individual vertices and moving or deleting an arbitrary selection
    of multiple vertices.  Try using the |reshape|:sup:`Reshape Features`
    tool when you need to replace or insert a series of new vertices,
