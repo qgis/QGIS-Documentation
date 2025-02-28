@@ -6,14 +6,17 @@
 # With po files, the idea is to replace the strings in the repo at once
 # and avoid pushing strings translators would have to fix in their languages.
 
-# **Todo: Make folder and format parameters callable**
+# Usage: Run from the repository main folder
+#   scripts/strings_fixer.sh -- will replace strings in po files in the "locale" folder
+#   scripts/strings_fixer.sh docs/about rst -- will replace strings in rst files in the "docs/about" folder
 
 # Harrissou Sant-anna, february 2025
 
-# target file format to update, default to po (or rst?)
-TARGETFORMAT="po"
+# Folder to browse for text replacement, defaults to locale
+SOURCEFILES=${1:-"locale"}
+# target file format to update, defaults to po
+TARGETFORMAT=${2:-"po"}
 
-#echo $TARGETFORMAT
 declare -A MATCHING_STRINGS
 
 MATCHING_STRINGS=(
@@ -36,18 +39,16 @@ MATCHING_STRINGS=(
        [":menuselection : "]=":menuselection:"
        [": menuselection :"]=":menuselection:"
        # complete specific strings to update, e.g., urls from make linkcheck output
-       #["oldstringtoreplace"]="newstringforreplacement"
-       )
+       # ["oldstringtoreplace"]="newstringforreplacement"
+)
 
-SOURCEFILES='locale'
-
-for FILE in `find $SOURCEFILES -type f -name "*.$TARGETFORMAT"`
+for FILE in `find ${SOURCEFILES} -type f -name "*.${TARGETFORMAT}"`
 do
-  echo $FILE;
+  echo "${FILE}";
 
   for string in "${!MATCHING_STRINGS[@]}"
   do
     #echo "$string - ${MATCHING_STRINGS[$string]}"
-    sed -i -e "s@$string@${MATCHING_STRINGS[$string]}@g" "$FILE"
+    sed -i -e "s@${string}@${MATCHING_STRINGS[${string}]}@g" "${FILE}"
   done
 done
