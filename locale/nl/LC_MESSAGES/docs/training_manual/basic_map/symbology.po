@@ -5,17 +5,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# DiGro, 2024
+# Harrissou Sant-anna, 2025
+# DiGro, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-17 08:16+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: DiGro, 2024\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: DiGro, 2025\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -125,7 +125,7 @@ msgstr ""
 "enkele eigenschappen van de laag te wijzigen: standaard zullen wijzigingen "
 "direct worden toegepast."
 
-#: ../../docs/training_manual/basic_map/symbology.rst:698
+#: ../../docs/training_manual/basic_map/symbology.rst:814
 msgid "symbology"
 msgstr "symbology"
 
@@ -378,7 +378,7 @@ msgstr ""
 msgid "Activate the |rendering| :guilabel:`Rendering` tab."
 msgstr "Activeer de tab :guilabel:`Rendering`."
 
-#: ../../docs/training_manual/basic_map/symbology.rst:696
+#: ../../docs/training_manual/basic_map/symbology.rst:812
 msgid "rendering"
 msgstr "rendering"
 
@@ -414,11 +414,11 @@ msgstr ""
 msgid "|zoomIn| |zoomOut|"
 msgstr "|zoomIn| |zoomOut|"
 
-#: ../../docs/training_manual/basic_map/symbology.rst:702
+#: ../../docs/training_manual/basic_map/symbology.rst:820
 msgid "zoomIn"
 msgstr "zoomIn"
 
-#: ../../docs/training_manual/basic_map/symbology.rst:704
+#: ../../docs/training_manual/basic_map/symbology.rst:822
 msgid "zoomOut"
 msgstr "zoomOut"
 
@@ -462,7 +462,7 @@ msgstr ""
 "|symbologyAdd| :sup:`Symboollaag toevoegen`. Het dialoogvenster zal wijzigen"
 " en er ongeveer uitzien zoals hier, met een nieuw toegevoegde symboollaag:"
 
-#: ../../docs/training_manual/basic_map/symbology.rst:700
+#: ../../docs/training_manual/basic_map/symbology.rst:816
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
@@ -648,7 +648,7 @@ msgstr ""
 "van de lagen van elk symbool instellen door het overeenkomende nummer voor "
 "het niveau in te voeren. 0 is de onderste laag."
 
-#: ../../docs/training_manual/basic_map/symbology.rst:693
+#: ../../docs/training_manual/basic_map/symbology.rst:805
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -1113,7 +1113,7 @@ msgstr ""
 "Verplaats het nieuwe symbool naar de onderzijde van de lijst door te klikken"
 " op de knop |arrowDown|."
 
-#: ../../docs/training_manual/basic_map/symbology.rst:691
+#: ../../docs/training_manual/basic_map/symbology.rst:801
 msgid "arrowDown"
 msgstr "arrowDown"
 
@@ -1328,10 +1328,267 @@ msgstr ""
 "eigenschappen van de laag."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:660
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Masking"
+msgstr ":abbr:`★★☆ (Gemiddeld niveau)` Volgen: Maskeren"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:662
+msgid ""
+"Masking feature allows you to mask some symbol layer using another symbol "
+"layer or label."
+msgstr ""
+"De mogelijkheid Maskeren stelt u in staat een symboollaag te maskeren met "
+"een andere symboollaag of label."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:664
+msgid ""
+"In the following exercise, we want to configure rendering so that polygon "
+"labels will mask the black part of lines layer."
+msgstr ""
+"In de volgende oefening zullen we rendering configureren, zodat "
+"polygoonlabels het zwarte gedeelte van een lijnenlaag maskeren."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:667
+msgid ""
+"Load the :file:`selective_masking.qgs` from dataset in directory "
+":file:`exercise_data/masking`."
+msgstr ""
+"Laad het bestand :file:`selective_masking.qgs` uit de gegevensset in de map "
+":file:`exercise_data/masking`."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:669
+msgid "Open the :guilabel:`Layer Properties` window for the ``polys`` layer."
+msgstr ""
+"Open het venster :guilabel:`Laageigenschappen` voor de laag ``polys``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:672
+msgid ""
+"Under the |labelingSingle| :guilabel:`Labels` tab, you will see that "
+"|labelingSingle| :guilabel:`Single Labels` have already been defined."
+msgstr ""
+"Op de tab |labelingSingle| :guilabel:`Labels` zult u zien dat "
+"|labelingSingle| :guilabel:`Enkele labels` al zijn gedefinieerd."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:807
+msgid "labelingSingle"
+msgstr "labelingSingle"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:675
+msgid ""
+"From the :guilabel:`Labels` tab, select the |labelmask| :guilabel:`Mask` "
+"(and not :guilabel:`Masks` in general category list)"
+msgstr ""
+"Vanaf de tab :guilabel:`Labels`, selecteer het |labelmask| "
+":guilabel:`Masker` (en niet :guilabel:`Maskers` in de lijst van de algemene "
+"categorie)"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:809
+msgid "labelmask"
+msgstr "labelmask"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:677
+msgid ""
+"Enable label mask by checking the |unchecked| :guilabel:`Enable mask` option"
+msgstr ""
+"Schakel labelmasker in door de optie |unchecked| :guilabel:`Masker "
+"inschakelen` te selecteren"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:818
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:679
+msgid ""
+"A message tells you that the now defined label mask shape can be later "
+"selected as a mask source to mask other symbol layers. Let's do that."
+msgstr ""
+"Een bericht vertelt u dat het nu gedefinieerde labelmasker later kan worden "
+"geselecteerd als bronmasker om andere symboollagen te maskeren. Laten we dat"
+" doen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:682
+#: ../../docs/training_manual/basic_map/symbology.rst:700
+#: ../../docs/training_manual/basic_map/symbology.rst:750
+#: ../../docs/training_manual/basic_map/symbology.rst:761
+msgid "Click :guilabel:`OK`"
+msgstr "Klik op :guilabel:`OK`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:683
+#: ../../docs/training_manual/basic_map/symbology.rst:751
+msgid "Open the :guilabel:`Layer Properties` window for the ``lines`` layer."
+msgstr ""
+"Open het venster :guilabel:`Laageigenschappen` voor de laag ``lines``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:686
+msgid "Go to the |labelmask| :guilabel:`Masks` tab"
+msgstr "Ga naar de tab |labelmask| :guilabel:`Maskers`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:688
+msgid ""
+"Click on the black line part of lines checkbox from masked symbol layers"
+msgstr ""
+"Klik op het keuzevak voor de zwarte gedeelten van de lijn in de gemaskeerde "
+"symboollagen"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:690
+msgid ""
+"A message warns you that you have to select both masking and masked symbol "
+"layers to be able to save masking configuration. Again, let's do that."
+msgstr ""
+"Een bericht waarschuwt u dat u zowel de maskerlaag als de te maskeren "
+"symboollagen moet selecteren om in staat te zijn de configuratie voor het "
+"maskeren op te slaan. Nogmaals, laten we dat doen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:693
+msgid "Click on ``polys`` :guilabel:`Label mask` checkbox"
+msgstr "Klik op ``polys`` keuzevak :guilabel:`Label masker`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:695
+msgid "The message disappears, you can now safely save your configuration."
+msgstr "Het bericht verdwijnt, u kunt nu uw configuratie veilig opslaan."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:703
+msgid ""
+"You can see now that labels are masking the black part of lines, leaving "
+"only the yellow part."
+msgstr ""
+"U kunt nu zien dat labels de zwarte gedeelten van de lijnen maskeren, alleen"
+" het gele gedeelte nog zichtbaar."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:710
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Masking using points symbols"
+msgstr ":abbr:`★★☆ (Gemiddeld niveau)` Volgen: Maskeren met symbolen punt"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:712
+msgid ""
+"We want now to mask the black part of lines using only black planes that "
+"represent the ``points`` layer (i.e. ``B52`` and ``Jet`` points categories)."
+" For the sake of visibility, you can switch off ``polys`` layer visibility."
+msgstr ""
+"We willen nu het zwarte gedeelte van de lijnen maskeren die alleen zwarte "
+"vliegtuigen gebruiken, die de laag ``points`` weergeven (d.i. categorieën "
+"punten ``B52`` en ``Jet``). Voor de zichtbaarheid kunt u de zichtbaarheid "
+"van de laag ``polys`` uitschakelen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:715
+msgid "Open the :guilabel:`Layer Properties` window for the ``points`` layer."
+msgstr ""
+"Open het venster :guilabel:`Laageigenschappen` voor de laag ``points``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:718
+msgid ""
+"Under the |symbology| :guilabel:`Symbology` tab, you will see that a "
+"|categorizedSymbol| :guilabel:`Categorized` renderer has been defined with 3"
+" different symbols depending on the ``Class`` field value."
+msgstr ""
+"Op de tab |symbology| :guilabel:`Symbologie` zult u zien dat een renderer "
+"|categorizedSymbol| :guilabel:`Categorieën` is gedefinieerd  met 3 "
+"verschillende symbolen, afhankelijk van de waarde voor het veld ``Class``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:803
+msgid "categorizedSymbol"
+msgstr "categorizedSymbol"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:721
+msgid ""
+"Double click on ``B52`` plane icon, within the :guilabel:`Symbol` column"
+msgstr ""
+"Dubbelklik op het pictogram voor het vliegtuig ``B52``, in de kolom "
+":guilabel:`Symbool`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:726
+msgid ""
+"Click the |symbologyAdd| :sup:`Add symbol layer` button and select the "
+"``Mask`` :guilabel:`Symbol layer type`"
+msgstr ""
+"Klik op de knop |symbologyAdd| :sup:`Symboollaag toevoegen` en selecteer het"
+" :guilabel:`Symboollaagtype` ``Masker`` "
+
+#: ../../docs/training_manual/basic_map/symbology.rst:728
+msgid ""
+"A new hierarchy ``Mask`` (`symbol layer`) > ``Marker`` (`symbol`) > ``Simple"
+" Marker`` (`symbol layer`) appear below the root symbol ``Marker``."
+msgstr ""
+"Een nieuwe hiërarchie ``Masker`` (`symboollaag`) > ``Markering`` (`symbool`)"
+" > ``Eenvoudige markering`` (`symboollaag`) verschijnt nu onder het "
+"bronsymbool ``Markering``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:733
+msgid ""
+"Now, let's define a mask that is identical to our plane marker but a little "
+"bit bigger."
+msgstr ""
+"Laten we nu een masker definiëren dat identiek is aan onze markering voor "
+"het vliegtuig, maar iets groter."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:735
+msgid ""
+"Select the newly created ``Simple Marker`` symbol layer and change its "
+":guilabel:`Symbol layer type` to ``SVG marker``"
+msgstr ""
+"Selecteer de nieuw gemaakte symboollaag ``Eenvoudige markering`` en wijzig "
+"zijn :guilabel:`Symboollaagtype` naar ``SVG-markering``"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:737
+msgid ""
+"Set the SVG file path to be the same as the already existing SVG marker, and"
+" the size to be bigger (24 millimeters is a pretty good choice for this use "
+"case)."
+msgstr ""
+"Stel het pad naar het SVG-bestand in als hetzelfde als voor de reeds "
+"bestaande SVG-markering en de grootte iets groter (24 millimeter is een vrij"
+" goede keuze voor dit gebruiksgeval)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:740
+msgid ""
+"Mask color doesn't matter here, only the shape is used in masking. Symbol "
+"layer order is also irrelevant in that situation."
+msgstr ""
+"De kleur voor het masker maakt hier niets uit, alleen de vorm wordt voor het"
+" maskeren gebruikt. De volgorde van de symboollagen is in die situatie ook "
+"niet relevant."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:743
+msgid "You should get something like that:"
+msgstr "U zult iets krijgen zoals dit:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:748
+msgid "Repeat the same operations on ``Jet`` symbol."
+msgstr "Herhaal dezelfde bewerkingen voor het symbool ``Jet``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:754
+msgid "Go to the |labelmask| :guilabel:`Masks` tab."
+msgstr "Ga naar de tab |labelmask| :guilabel:`Maskers`."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:756
+msgid ""
+"The black line part of lines checkbox from masked symbol layers is already "
+"checked from our previous configuration."
+msgstr ""
+"Het keuzevak voor de zwarte gedeelten van de lijnen voor de gemaskeerde "
+"symboollagen is al geselecteerd uit onze eerdere configuratie."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:759
+msgid ""
+"Uncheck the :guilabel:`Label mask` ``polys`` checkbox and check both ``B52``"
+" and ``Jet`` :guilabel:`Mask symbol layer`"
+msgstr ""
+"Deselecteer het keuzevak voor :guilabel:`Label masker` ``polys`` en "
+"selecteer zowel :guilabel:`Masker symboollaag` ``B52`` als ``Jet``"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:763
+msgid ""
+"You now see that black planes are masking the black part of lines, with only"
+" the yellow part visible."
+msgstr ""
+"U kunt nu zien dat zwarte vliegtuigen de zwarte gedeelten van de lijnen "
+"maskeren, met alleen het gele gedeelte nog zichtbaar."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:770
 msgid "In Conclusion"
 msgstr "Conclusie"
 
-#: ../../docs/training_manual/basic_map/symbology.rst:662
+#: ../../docs/training_manual/basic_map/symbology.rst:772
 msgid ""
 "Changing the symbology for the different layers has transformed a collection"
 " of vector files into a legible map. Not only can you see what's happening, "
@@ -1341,11 +1598,11 @@ msgstr ""
 "vectorbestanden getransformeerd naar een leesbare kaart. Niet alleen kunt u "
 "zien wat er gebeurt, het ziet er ook leuk uit!"
 
-#: ../../docs/training_manual/basic_map/symbology.rst:667
+#: ../../docs/training_manual/basic_map/symbology.rst:777
 msgid "Further Reading"
 msgstr "Lees verder"
 
-#: ../../docs/training_manual/basic_map/symbology.rst:669
+#: ../../docs/training_manual/basic_map/symbology.rst:779
 msgid ""
 "`Examples of Beautiful Maps "
 "<https://gis.stackexchange.com/questions/3083/seeking-examples-of-beautiful-"
@@ -1355,11 +1612,11 @@ msgstr ""
 "<https://gis.stackexchange.com/questions/3083/seeking-examples-of-beautiful-"
 "maps>`_"
 
-#: ../../docs/training_manual/basic_map/symbology.rst:673
+#: ../../docs/training_manual/basic_map/symbology.rst:783
 msgid "What's Next?"
 msgstr "Wat volgt?"
 
-#: ../../docs/training_manual/basic_map/symbology.rst:675
+#: ../../docs/training_manual/basic_map/symbology.rst:785
 msgid ""
 "Changing symbols for whole layers is useful, but the information contained "
 "within each layer is not yet available to someone reading these maps. What "
@@ -1375,6 +1632,6 @@ msgstr ""
 "boerderijen? Al deze informatie is nog steeds verborgen. De volgende les zal"
 " uitleggen hoe u deze gegevens op uw kaart weergeeft."
 
-#: ../../docs/training_manual/basic_map/symbology.rst:682
+#: ../../docs/training_manual/basic_map/symbology.rst:792
 msgid "Did you remember to save your map recently?"
 msgstr "Heeft u onthouden om uw kaart regelmatig op te slaan?"
