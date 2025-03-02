@@ -5,17 +5,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# DiGro, 2024
+# Harrissou Sant-anna, 2025
+# DiGro, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: DiGro, 2024\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:35+0000\n"
+"Last-Translator: DiGro, 2025\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,12 +115,13 @@ msgstr "een `GitHub account <https://github.com/signup>`_ hebben"
 #: ../../docs/developers_guide/git.rst:45
 msgid ""
 "make your own copy of the `QGIS repository <https://github.com/qgis/QGIS>`_ "
-"(see `fork <https://docs.github.com/en/get-started/quickstart/fork-a-"
-"repo>`_)"
+"(see `fork <https://docs.github.com/en/pull-requests/collaborating-with-"
+"pull-requests/working-with-forks/fork-a-repo>`_)"
 msgstr ""
 "maak uw eigen kopie van de `opslagplaats van QGIS "
 "<https://github.com/qgis/QGIS>`_ (bekijk `fork "
-"<https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo>`_)"
+"<https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/working-with-forks/fork-a-repo>`_)"
 
 #: ../../docs/developers_guide/git.rst:47
 msgid "have a :ref:`git client installed <installing_git>` on your system"
@@ -130,10 +131,10 @@ msgstr ""
 #: ../../docs/developers_guide/git.rst:48
 msgid ""
 "set up your `git environment <https://docs.github.com/en/get-"
-"started/quickstart/set-up-git#setting-up-git>`_"
+"started/getting-started-with-git/set-up-git>`_"
 msgstr ""
 "stel uw eigen `omgeving voor git in <https://docs.github.com/en/get-"
-"started/quickstart/set-up-git#setting-up-git>`_"
+"started/getting-started-with-git/set-up-git>`_"
 
 #: ../../docs/developers_guide/git.rst:49
 msgid "and have fun!"
@@ -316,7 +317,7 @@ msgstr ""
 msgid "Procedure"
 msgstr "Procedure"
 
-#: ../../docs/developers_guide/git.rst:144
+#: ../../docs/developers_guide/git.rst:150
 msgid "Initial announcement on mailing list or issues repo:"
 msgstr ""
 "Initiële aankondiging op de mailinglijst of bij bestaand probleem in "
@@ -339,7 +340,7 @@ msgstr ""
 "`QGIS Enhancement Proposal (QEP) <https://github.com/qgis/QGIS-Enhancement-"
 "Proposals/>`_ nodig."
 
-#: ../../docs/developers_guide/git.rst:152
+#: ../../docs/developers_guide/git.rst:159
 msgid "Create a branch in your local repository:"
 msgstr "Een branch maken in uw lokale opslagplaats:"
 
@@ -351,7 +352,7 @@ msgstr ""
 "Maak een nieuwe Git branch aan voor de ontwikkeling van de nieuwe "
 "functionaliteit, gebaseerd op de laatste status van de branch master."
 
-#: ../../docs/developers_guide/git.rst:161
+#: ../../docs/developers_guide/git.rst:163
 msgid "Now you can start developing:"
 msgstr "Nu kunt u beginnen met ontwikkelen:"
 
@@ -364,10 +365,30 @@ msgstr ""
 "testsuites te schrijven voor uw aanpassingen, indien van toepassing."
 
 #: ../../docs/developers_guide/git.rst:165
+msgid "Proper formatting, spell check, and code quality control"
+msgstr "Juiste opmaak, spellingscontrole en kwaliteitscontrole voor code"
+
+#: ../../docs/developers_guide/git.rst:167
+msgid ""
+"Proper formatting, spell check, and code quality control are managed from a "
+"pre-commit git hook."
+msgstr ""
+"Juiste opmaak, spellingscontrole en kwaliteitscontrole voor code worden "
+"beheerd met een pre-commit git hook."
+
+#: ../../docs/developers_guide/git.rst:169
+msgid "This can be automated by running:"
+msgstr "Dit kan worden geautomatiseerd door uit te voeren:"
+
+#: ../../docs/developers_guide/git.rst:175
+msgid "The spell checker script can also be run alone with:"
+msgstr "Het script voor de spellingscontrole kan ook worden uitgevoerd met:"
+
+#: ../../docs/developers_guide/git.rst:194
 msgid "Commit your changes to the git repo:"
 msgstr "Commit uw wijzigingen in de opslagplaats van git:"
 
-#: ../../docs/developers_guide/git.rst:166
+#: ../../docs/developers_guide/git.rst:182
 msgid ""
 "When making a commit, put a descriptive comment and rather do several small "
 "commits if the changes across a number of files are unrelated. Conversely we"
@@ -378,7 +399,25 @@ msgstr ""
 "bestanden niet gerelateerd zijn. Daarnaast prefereren we om gerelateerde "
 "wijzigingen wel in één enkele commit te groeperen, indien mogelijk."
 
-#: ../../docs/developers_guide/git.rst:175
+#: ../../docs/developers_guide/git.rst:191
+msgid ""
+"Without the ``-m`` option, a new editor window will open for you to write "
+"your commit message."
+msgstr ""
+"Zonder de optie ``-m``, een nieuw venster van de bewerker zal voor u openen "
+"om uw bericht voor de commit in te voeren."
+
+#: ../../docs/developers_guide/git.rst:193
+msgid ""
+"`Here are some recommendations "
+"<https://www.conventionalcommits.org/en/v1.0.0/#summary>`_ about commit "
+"description format."
+msgstr ""
+"`Hier zijn enkele aanbevelingen "
+"<https://www.conventionalcommits.org/en/v1.0.0/#summary>`_ over de indeling "
+"van de beschrijving van de commit."
+
+#: ../../docs/developers_guide/git.rst:196
 msgid ""
 "Now, you may want to share your work with QGIS community members. Push your "
 "new feature up to your online fork repository by doing:"
@@ -386,7 +425,7 @@ msgstr ""
 "Nu zou u uw werk willen delen met leden van de gemeenschap van QGIS. Push uw"
 " nieuwe functionaliteit naar uw online fork-opslagplaats door:"
 
-#: ../../docs/developers_guide/git.rst:182
+#: ../../docs/developers_guide/git.rst:203
 msgid ""
 "If the branch already exists, your changes will be pushed into it, "
 "otherwise, it is created."
@@ -394,11 +433,11 @@ msgstr ""
 "Als de branch al bestaat zullen uw wijzigingen daarin worden gepusht. anders"
 " wordt hij gemaakt."
 
-#: ../../docs/developers_guide/git.rst:185
+#: ../../docs/developers_guide/git.rst:216
 msgid ":ref:`Submit your changes <submit_patch>` with a pull-request"
 msgstr ":ref:`Dien uw wijzigingen in <submit_patch>` met een pull-request"
 
-#: ../../docs/developers_guide/git.rst:186
+#: ../../docs/developers_guide/git.rst:207
 msgid ""
 "With opening the pull-request, the automated test suite is triggered and "
 "checks whether your changes follow the coding guidelines of QGIS and do not "
@@ -411,7 +450,7 @@ msgstr ""
 "gerapporteerde problemen moeten repareren voordat uw branch met upstream "
 "wordt samengevoegd."
 
-#: ../../docs/developers_guide/git.rst:191
+#: ../../docs/developers_guide/git.rst:212
 msgid ""
 "We use `GitHub actions <https://docs.github.com/en/actions>`_ to manage the "
 "tests to be run on the repository. For convenience, you can enable the "
@@ -426,11 +465,11 @@ msgstr ""
 "moeten openen nadat ze allemaal zijn uitgevoerd, wat het proces van nakijken"
 " efficiënter maakt."
 
-#: ../../docs/developers_guide/git.rst:197
+#: ../../docs/developers_guide/git.rst:227
 msgid "Rebase to upstream master regularly:"
 msgstr "Rebase regelmatig naar upstream master:"
 
-#: ../../docs/developers_guide/git.rst:198
+#: ../../docs/developers_guide/git.rst:219
 msgid ""
 "It is recommended to rebase to incorporate the changes in master to the "
 "branch on a regular basis. This makes it easier to merge the branch back to "
@@ -443,29 +482,29 @@ msgstr ""
 "in de master branch. Gebruik, na een 'rebase', ``git push -f``  naar uw "
 "geforkte repository."
 
-#: ../../docs/developers_guide/git.rst:208
+#: ../../docs/developers_guide/git.rst:229
 msgid "See the following sites for information on becoming a GIT master."
 msgstr "De volgende websites bevatten informatie om een Git master te worden."
 
-#: ../../docs/developers_guide/git.rst:210
+#: ../../docs/developers_guide/git.rst:231
 msgid "https://git-scm.com/book/en/v2"
 msgstr "https://git-scm.com/book/en/v2"
 
-#: ../../docs/developers_guide/git.rst:211
+#: ../../docs/developers_guide/git.rst:232
 msgid "https://gitready.com"
 msgstr "https://gitready.com"
 
-#: ../../docs/developers_guide/git.rst:212
+#: ../../docs/developers_guide/git.rst:233
 msgid "https://support.github.com/"
 msgstr "https://support.github.com/"
 
-#: ../../docs/developers_guide/git.rst:215
+#: ../../docs/developers_guide/git.rst:236
 msgid "Testing before merging back to master"
 msgstr ""
 "Testen voor het uitvoeren van een 'merge' om wijzigingen terug naar master "
 "te brengen"
 
-#: ../../docs/developers_guide/git.rst:217
+#: ../../docs/developers_guide/git.rst:238
 msgid ""
 "When you are finished with the new feature and happy with the stability, "
 "make an announcement on the developer list. Before merging back, the changes"
@@ -476,21 +515,21 @@ msgstr ""
 "ontwikkelaars. Vóór het terug mergen van wijzigingen, zullen de wijzigingen "
 "worden getest door ontwikkelaars en gebruikers."
 
-#: ../../docs/developers_guide/git.rst:224
+#: ../../docs/developers_guide/git.rst:245
 msgid "Submitting Pull Requests"
 msgstr "Pull Requests indienen"
 
-#: ../../docs/developers_guide/git.rst:226
+#: ../../docs/developers_guide/git.rst:247
 msgid ""
 "There are a few guidelines that will help you to get your patches and pull "
 "requests into QGIS easily, and help us deal with the patches that are sent "
-"to use easily."
+"to us easily."
 msgstr ""
 "Er zijn een aantal richtlijnen, die u helpen om uw patches en pull requests "
 "eenvoudig in QGIS te krijgen, en ons helpen met het verwerken van patches "
 "die naar ons worden gestuurd."
 
-#: ../../docs/developers_guide/git.rst:230
+#: ../../docs/developers_guide/git.rst:251
 msgid ""
 "In general it is easier for developers if you submit GitHub pull requests. "
 "We do not describe Pull Requests here, but rather refer you to the `GitHub "
@@ -505,7 +544,7 @@ msgstr ""
 "requests/proposing-changes-to-your-work-with-pull-requests/about-pull-"
 "requests>`_."
 
-#: ../../docs/developers_guide/git.rst:234
+#: ../../docs/developers_guide/git.rst:255
 msgid ""
 "If you make a pull request we ask that you please merge master to your PR "
 "branch regularly so that your PR is always mergeable to the upstream master "
@@ -516,7 +555,25 @@ msgstr ""
 "zodat wijzigingen vanuit uw PR branch altijd upstream zijn samen te voegen "
 "naar de master branch."
 
-#: ../../docs/developers_guide/git.rst:238
+#: ../../docs/developers_guide/git.rst:259
+msgid ""
+"Pull requests will cause various checks of the Continuous Integration (CI) "
+"system to run: building for different environments and running tests, "
+"running code linters, spell checkers, etc. Make sure to look at the results "
+"of those checks and try to address issues they raise. Of course, you can ask"
+" a question in the pull request if you need help from other developers to "
+"understand and/or resolve an issue."
+msgstr ""
+"Pull requests zullen ervoor zorgen dat verscheidene controles van het "
+"systeem Continuous Integration (CI) worden uitgevoerd: bouwen voor "
+"verschillende omgevingen en testen uitvoeren, correcties voor code "
+"uitvoeren, spellingscontroles, etc. Zorg ervoor dat u naar de resultaten van"
+" deze controles kijkt en probeert problemen die zij opwerpen op te lossen. "
+"Natuurlijk mag u vragen stellen in het pull request als u hulp nodig hebt "
+"van andere ontwikkelaars om een probleem te kunnen begrijpen en/of op te "
+"lossen."
+
+#: ../../docs/developers_guide/git.rst:266
 msgid ""
 "If you are a developer and wish to evaluate the pull request queue, there is"
 " a very nice `tool that lets you do this from the command line "
@@ -528,7 +585,7 @@ msgstr ""
 "<https://changelog.com/posts/git-pulls-command-line-tool-for-github-pull-"
 "requests>`_"
 
-#: ../../docs/developers_guide/git.rst:242
+#: ../../docs/developers_guide/git.rst:270
 msgid ""
 "In general when you submit a PR you should take the responsibility to follow"
 " it through to completion - respond to queries posted by other developers, "
@@ -555,13 +612,14 @@ msgstr ""
 "aandacht krijgt die het verdient, zijn uw opties om daar wat vaart in te "
 "brengen (in volgorde van prioriteit):"
 
-#: ../../docs/developers_guide/git.rst:253
-msgid "Help review others pull requests to free the person assigned to yours."
+#: ../../docs/developers_guide/git.rst:281
+msgid ""
+"Help review others' pull requests to free the person assigned to yours."
 msgstr ""
 "Help bij het nakijken van pull requests van anderen, om de persoon, die aan "
 "het uwe is toegewezen, vrij te houden."
 
-#: ../../docs/developers_guide/git.rst:254
+#: ../../docs/developers_guide/git.rst:282
 msgid ""
 "Send a message to the mailing list 'marketing' your PR and how wonderful it "
 "will be to have it included in the code base."
@@ -569,14 +627,14 @@ msgstr ""
 "Stuur een bericht naar de mailinglijst om uw PR 'aan de man te brengen' en "
 "hoe mooi het zou zijn om die onderdeel te maken van de basis code."
 
-#: ../../docs/developers_guide/git.rst:256
+#: ../../docs/developers_guide/git.rst:284
 msgid ""
 "Send a message to the person your PR has been assigned to in the PR queue."
 msgstr ""
 "Stuur een bericht naar de persoon aan wie jouw PR is toegewezen in de PR "
 "lijst."
 
-#: ../../docs/developers_guide/git.rst:257
+#: ../../docs/developers_guide/git.rst:285
 msgid ""
 "Send a message to the project steering committee asking them to help see "
 "your PR incorporated into the code base."
@@ -585,17 +643,17 @@ msgstr ""
 "met de vraag of zij hulp kunnen bieden bij het opnemen van jouw PR in de "
 "basis code."
 
-#: ../../docs/developers_guide/git.rst:262
+#: ../../docs/developers_guide/git.rst:289
 msgid "Best practice for creating a pull request"
 msgstr "Beste manier voor het aanmaken van een pull request."
 
-#: ../../docs/developers_guide/git.rst:264
+#: ../../docs/developers_guide/git.rst:291
 msgid "Always start a feature branch from current master."
 msgstr ""
 "Start altijd met het aanmaken van een 'feature branch', branch waarin de "
 "nieuwe functionaliteit wordt ontwikkeld, vanuit master."
 
-#: ../../docs/developers_guide/git.rst:265
+#: ../../docs/developers_guide/git.rst:292
 msgid ""
 "If you are coding a feature branch, don't \"merge\" anything into that "
 "branch, rather rebase as described in the next point to keep your history "
@@ -605,7 +663,7 @@ msgstr ""
 "het bijwerken van die branch, maar een rebase zoals beschreven in volgende "
 "punt, om zo jouw geschiedenis schoon te houden."
 
-#: ../../docs/developers_guide/git.rst:267
+#: ../../docs/developers_guide/git.rst:294
 msgid ""
 "Before you create a pull request do ``git fetch upstream`` and ``git rebase "
 "upstream/master`` (given upstream is the remote for qgis user and not your "
@@ -618,7 +676,7 @@ msgstr ""
 "``.git/config`` of geef de opdracht ``git remote -v | grep "
 "github.com/qgis``)."
 
-#: ../../docs/developers_guide/git.rst:271
+#: ../../docs/developers_guide/git.rst:298
 msgid ""
 "You may do a git rebase like in the last line repeatedly without doing any "
 "damage (as long as the only purpose of your branch is to get merged into "
@@ -628,7 +686,7 @@ msgstr ""
 "uitvoeren zonder schade (zolang als het enige doel is om de wijzigingen uit "
 "uw branch gemerged te krijgen in master)."
 
-#: ../../docs/developers_guide/git.rst:274
+#: ../../docs/developers_guide/git.rst:301
 msgid ""
 "Attention: After a rebase you need to ``git push -f`` to your forked repo. "
 "**CORE DEVS: DO NOT DO THIS ON THE QGIS PUBLIC REPOSITORY!**"
@@ -636,11 +694,11 @@ msgstr ""
 "Attentie: Na een rebase dient u ``git push -f`` uit te voeren op uw gevorkte"
 " repository. **CORE DEVS: DOE DIT NIET OP DE QGIS PUBLIC REPOSITORY!**"
 
-#: ../../docs/developers_guide/git.rst:279
+#: ../../docs/developers_guide/git.rst:306
 msgid "Special labels to notify documentors"
 msgstr "Speciale labels om schrijvers van documentatie te informeren"
 
-#: ../../docs/developers_guide/git.rst:281
+#: ../../docs/developers_guide/git.rst:308
 msgid ""
 "There is a special label (``Needs Documentation``) that can be assigned by "
 "reviewers to your pull request to automatically generate issue reports in "
@@ -653,7 +711,7 @@ msgstr ""
 "gemergd. Vergeet niet te vermelden of uw functionaliteit een dergelijk label"
 " verdient."
 
-#: ../../docs/developers_guide/git.rst:286
+#: ../../docs/developers_guide/git.rst:313
 msgid ""
 "Moreover, you can add special tags to your commit messages to provide more "
 "information to documenters. The commit message is then added to the "
@@ -663,7 +721,7 @@ msgstr ""
 "meer informatie te verschaffen aan schrijvers van documentatie. Het bericht "
 "voor de commit wordt dan toegevoegd aan het gemaakte issue-rapport:"
 
-#: ../../docs/developers_guide/git.rst:289
+#: ../../docs/developers_guide/git.rst:316
 msgid ""
 "``[needs-docs]`` to instruct doc writers to please add some extra "
 "documentation after a fix or addition to an already existing functionality."
@@ -672,7 +730,7 @@ msgstr ""
 "aanvullende documentatie toe te voegen na een reparatie of uitbreiding op "
 "een bestaande functionaliteit."
 
-#: ../../docs/developers_guide/git.rst:291
+#: ../../docs/developers_guide/git.rst:318
 msgid ""
 "``[feature]`` in case of new functionality. Filling a good description in "
 "your PR will be a good start."
@@ -680,7 +738,7 @@ msgstr ""
 "``[feature]`` in het geval van nieuwe functionaliteit. Het invullen van een "
 "goede beschrijving van uw PR is een goed begin."
 
-#: ../../docs/developers_guide/git.rst:294
+#: ../../docs/developers_guide/git.rst:321
 msgid ""
 "Please devs use these labels (case insensitive) so doc writers have issues "
 "to work on and have an overview of things to do. BUT please also take time "
@@ -692,11 +750,11 @@ msgstr ""
 " de tijd om een beschrijving toe te voegen, ofwel in de commit of in de "
 "documentatie."
 
-#: ../../docs/developers_guide/git.rst:300
+#: ../../docs/developers_guide/git.rst:327
 msgid "Due Diligence"
 msgstr "Betracht gepaste zorgvuldigheid"
 
-#: ../../docs/developers_guide/git.rst:302
+#: ../../docs/developers_guide/git.rst:329
 msgid ""
 "QGIS is licensed under the GPL. You should make every effort to ensure you "
 "only submit patches which are unencumbered by conflicting intellectual "
@@ -709,11 +767,79 @@ msgstr ""
 "geen broncode in wanneer u niet tevreden met de gedachte dat deze eveneens "
 "beschikbaar komt onder de GPL licentie."
 
-#: ../../docs/developers_guide/git.rst:309
+#: ../../docs/developers_guide/git.rst:335
+msgid "Pull Requests merge criteria"
+msgstr "Criteria voor het samenvoegen van pull requests (PR's) "
+
+#: ../../docs/developers_guide/git.rst:337
+msgid ""
+"Pull requests must be approved by at least one Core Developer (a developer "
+"with push rights to the qgis/QGIS GitHub repository). Before merging, the "
+"Core Developer must ensure that the PR passes all reasonable CI checks. Some"
+" exceptions exist to this rule, e.g., when a check is broken for unrelated "
+"reasons (such as broken third party services, or a lint/code analysis/spell "
+"check test failing from other parts of a modified file)."
+msgstr ""
+"Pull requests moeten zijn goedgekeurd door ten minste een Core Developer "
+"(een ontwikkelaar met rechten om naar d eopslagplaats van qgis/QGIS GitHub "
+"te pushen). Voor het samenvoegen moet de Core Developer er voor zorgen dat "
+"het PR alle redelijke controles CI heeft doorstaan. Er bestaan enkele "
+"uitzonderingen op deze regel, bijv. als een controle defect is door "
+"onbekende redenen (zoals een defecte service van derde partijen, of een test"
+" van lint/code analyse/spellingscontrole faalt in andere delen van een "
+"aangepast bestand)."
+
+#: ../../docs/developers_guide/git.rst:344
+msgid ""
+"Pull requests created by a Core Developer must also be approved by at least "
+"another Core Developer."
+msgstr ""
+"Pull requests die zijn gemaakt door een Core Developer moeten ook worden "
+"goedgekeurd door ten minste een andere Core Developer."
+
+#: ../../docs/developers_guide/git.rst:347
+msgid ""
+"A PR must remain open for at least 24 hours following submission, even if it"
+" has already been approved. This is to allow wider feedback to be gathered "
+"prior to merge, and to permit pre-merge feedback from developers in other "
+"time zones. Exceptions to this policy are:"
+msgstr ""
+"Een PR moet ten minste open blijven staan voor ten minste 24 uur, volgende "
+"op het indienen, zelfs als hij al is goedgekeurd. Dat is om het mogelijk te "
+"maken bredere terugkoppeling te verkrijgen voorafgaande aan het samenvoegen,"
+" en om terugkoppeling te krijgen van ontwikkelaars in andere tijdzones, "
+"voorafgaande aan het samenvoegen. Uitzonderingen op dit beleid zijn:"
+
+#: ../../docs/developers_guide/git.rst:352
+msgid "Approved pull requests for backports to stable branches"
+msgstr ""
+"Goedgekeurde pull requests voor achterwaarts porteren naar stabiele branches"
+
+#: ../../docs/developers_guide/git.rst:353
+msgid ""
+"\"Emergency\" pull requests, e.g., those which fix broken master builds, CI "
+"infrastructure or which represent a time-sensitive security risk"
+msgstr ""
+"\"Nood\" pull requests, bijv. die welke defecte master builds of CI "
+"infrastructuur repareren of die een tijdgevoelig beveiligingsrisico vormen"
+
+#: ../../docs/developers_guide/git.rst:355
+msgid ""
+"Trivial fixes. The definition of \"trivial\" is left open to common sense "
+"and developer discretion, but is expected to include non-risky changes like "
+"typo fixes, translation string fixes, tab order changes, or similar."
+msgstr ""
+"Triviale reparaties. De definitie van \"triviaal\" is overgelaten aan het "
+"gezonde verstand en discretie van de ontwikkelaar, maar wordt verwacht om "
+"niet risicovolle wijzigingen te omvatten, zoals reparaties van typefouten, "
+"reparaties van vertaalde tekenreeksen, wijzigingen in volgorde van tabs, of "
+"dergelijke."
+
+#: ../../docs/developers_guide/git.rst:361
 msgid "Obtaining GIT Write Access"
 msgstr "Het verkrijgen van Git schrijftoegang"
 
-#: ../../docs/developers_guide/git.rst:311
+#: ../../docs/developers_guide/git.rst:363
 msgid ""
 "Write access to QGIS source tree is by invitation. Typically when a person "
 "submits several (there is no fixed number here) substantial patches that "
@@ -741,7 +867,7 @@ msgstr ""
 "wijzigingen kan maken in de basis repository zonder nieuwe problemen te "
 "introduceren, enz."
 
-#: ../../docs/developers_guide/git.rst:323
+#: ../../docs/developers_guide/git.rst:375
 msgid ""
 "Since moving to GIT, we are less likely to grant write access to new "
 "developers since it is trivial to share code within github by forking QGIS "
@@ -753,7 +879,7 @@ msgstr ""
 "GitHub) aan te maken en vervolgens wijzigingen via pull requests in te "
 "dienen."
 
-#: ../../docs/developers_guide/git.rst:327
+#: ../../docs/developers_guide/git.rst:379
 msgid ""
 "Always check that everything compiles before making any commits / pull "
 "requests. Try to be aware of possible breakages your commits may cause for "
