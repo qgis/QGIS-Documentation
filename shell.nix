@@ -1,5 +1,5 @@
 let
-  pinnedHash = "933d7dc155096e7575d207be6fb7792bc9f34f6d"; 
+  pinnedHash = "f03c983c83471408ef16fcb9f47078491070064f"; 
   pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/${pinnedHash}.tar.gz") { };
   pythonPackages = pkgs.python3Packages;
 in pkgs.mkShell rec {
