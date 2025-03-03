@@ -193,6 +193,7 @@ Apache HTTP Server
    .. code-block:: bash
 
     a2enmod fcgid
+    a2enmod rewrite
     a2ensite qgis.demo
 
 #. Now restart Apache for the new configuration to be taken into account:
@@ -814,7 +815,7 @@ some information about the OWS in the :guilabel:`Service Capabilities` tab.
 
    Definitions for a QGIS Server WMS/WFS/WCS project
 
-You have to :guilabel:`Enable Service Capabilities` first, if it is deactivated. 
+You have to :guilabel:`Enable Service Capabilities` first, if it is deactivated.
 This will appear in the GetCapabilities response of the WMS, WFS or WCS.
 If you don't check |checkbox| :guilabel:`Enable Service capabilities`,
 QGIS Server will use the information given in the :file:`wms_metadata.xml` file
@@ -867,7 +868,7 @@ In the :guilabel:`WMS` tab, you can define the options for the WMS capabilities.
 
   You can receive requested GetFeatureInfo as plain text, XML and GML. The default is XML.
 
-  * If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be used 
+  * If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be used
     to reference layers in the ``GetCapabilities`` response or ``GetMap LAYERS`` parameter.
     If not, layer name or short name if defined (see :ref:`vectorservermenu`) is used.
 
