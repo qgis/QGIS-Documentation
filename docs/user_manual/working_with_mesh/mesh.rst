@@ -452,7 +452,7 @@ https://fvwiki.tuflow.com/Depth_Averaging_Results.
 Labels Properties
 -----------------
 
-The |labelingSingle| :guilabel:`Labels` offers you dynamic labeling of mesh vertices
+The |labelingSingle| :guilabel:`Labels` tab offers you dynamic labeling of mesh vertices
 and native mesh faces based on geometric properties and custom expressions. This
 dialog can also be accessed from the :guilabel:`Layer Styling` panel.
 
