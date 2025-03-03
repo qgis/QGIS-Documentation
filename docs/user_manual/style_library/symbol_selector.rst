@@ -485,7 +485,7 @@ layer types:
     This allows construction of complex referencing labels, e.g. where a symbol has two linear referencing symbol layers,
     one set to label every 100m in a small font, skipping multiples of 1000,
     and a second set to label every 1000m in a big bold font.
-  * :guilabel:`Avergare angle over`: Labels are rendered using an angle calculated by averaging the linestring,
+  * :guilabel:`Average angle over`: Labels are rendered using an angle calculated by averaging the linestring,
     so sharp tiny jaggies don't result in unslightly label rotation
   * :guilabel:`Show marker symbols`, at referenced points in the line feature, using a full QGIS marker symbol.
     This allows e.g. showing a cross-hatch at the labeled point, for a "ruler" style line.
