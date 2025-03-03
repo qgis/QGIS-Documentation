@@ -45,7 +45,7 @@ To create a new GeoPackage layer, press the |newGeoPackageLayer|
 :menuselection:`New GeoPackage Layer...` button in the
 :menuselection:`Layer --> Create Layer -->` menu or from the
 :guilabel:`Data Source Manager` toolbar.
-You can also create a new GeoPackage layer trough the :guilabel:`Browser Panel`
+You can also create a new GeoPackage layer through the :guilabel:`Browser Panel`
 by selecting the :guilabel:`Create Database and Layer...`. 
 The :guilabel:`New GeoPackage Layer` dialog will be displayed as shown in
 :numref:`figure_create_geopackage`.
