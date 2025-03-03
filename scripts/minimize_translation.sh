@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script is used to pull translated resources of QGIS-Documentation
 # from Transifex, clean and keep only the translated strings in them.
