@@ -1494,7 +1494,7 @@ options:
 * |unchecked| :guilabel:`Show all labels for all layers (i.e. including
   colliding objects)`. Note that this option can be also set per layer (see
   :ref:`labels_rendering`)
-* |unchecked| :guilabel:`Show unplaced labels`: allows to detemine whether any
+* |unchecked| :guilabel:`Show unplaced labels`: allows to determine whether any
   important labels are missing from the maps (e.g. due to overlaps or other
   constraints). They are displayed using a customizable color.
 * |unchecked| :guilabel:`Show candidates (for debugging)`: controls whether boxes
