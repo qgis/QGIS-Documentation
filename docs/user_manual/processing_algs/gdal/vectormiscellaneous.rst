@@ -13,8 +13,6 @@ Vector miscellaneous
 Build virtual vector
 --------------------
 Creates a virtual vector layer that contains a set of vector layers.
-The output virtual vector layer will not be opened in the current
-project.
 
 This algorithm is especially useful in case another algorithm needs
 multiple layers but accept only one ``vrt`` in which the layers are
@@ -91,7 +89,7 @@ Runs a simple or complex query with SQL syntax on the source layer.
 The result of the query will be added as a new layer.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -202,7 +200,7 @@ activated.
 Then you can use the algorithm.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -249,6 +247,13 @@ Parameters
        * 7 --- MULTIPOINT
        * 8 --- MULTIPOLYGON
        * 9 --- MULTILINESTRING
+       * 10 --- CIRCULARSTRING
+       * 11 --- COUMPOUNDCURVE
+       * 12 --- CURVEPOLYGON
+       * 13 --- MULTICURVE
+       * 14 --- MULTISURFACE
+       * 15 --- CONVERT_TO_LINEAR
+       * 16 --- CONVERT_TO_CURVE
 
    * - **Assign an output CRS**
 
@@ -328,11 +333,12 @@ Parameters
      - [enumeration]
 
        Default: 0 (2D)
-     - Defines if the vector file to be imported has 2D or 3D data.
+     - Defines the coordinate dimensions of the imported vector data.
        One of:
 
-       * 0 --- 2
-       * 1 --- 3
+       * 0 --- 2 (``XY``)
+       * 1 --- 3 (``XYZ``)
+       * 2 --- 4 (``XYZM``)
 
    * - **Distance tolerance for simplification**
 
@@ -369,8 +375,6 @@ Parameters
           :end-before: **end_extent_options**
 
    * - **Clip the input layer using the above (rectangle) extent**
-
-       Optional
      - ``CLIP``
      - [boolean]
 
@@ -397,8 +401,6 @@ Parameters
        defines the size.
        By default N limits the transaction size to 20000 features.
    * - **Overwrite existing table**
-
-       Optional
      - ``OVERWRITE``
      - [boolean]
 
@@ -407,8 +409,6 @@ Parameters
        and if this option is set to True, the table will be
        overwritten.
    * - **Append to existing table**
-
-       Optional
      - ``APPEND``
      - [boolean]
 
@@ -418,8 +418,6 @@ Parameters
        New fields found in the input layer are ignored.
        By default a new table will be created.
    * - **Append and add new fields to existing table**
-
-       Optional
      - ``ADDFIELDS``
      - [boolean]
 
@@ -430,8 +428,6 @@ Parameters
        table.
        By default a new table will be created.
    * - **Do not launder columns/table names**
-
-       Optional
      - ``LAUNDER``
      - [boolean]
 
@@ -440,8 +436,6 @@ Parameters
        behaviour (converting column names to lowercase,
        removing spaces and other invalid characters).
    * - **Do not create Spatial Index**
-
-       Optional
      - ``INDEX``
      - [boolean]
 
@@ -450,24 +444,25 @@ Parameters
        created.
        By default, a spatial index is added.
    * - **Continue after a failure, skipping the failed feature**
-
-       Optional
      - ``SKIPFAILURES``
      - [boolean]
 
        Default: False
-     - 
-   * - **Promote to Multipart**
+     - Continue after a failure, skipping the failed feature.
+   * - **Validate geometries based on Simple Features specification**
+     - ``MAKEVALID``
+     - [boolean]
 
-       Optional
+       Default: False
+     - Applies cleanup operations on geometries to ensure they are valid regarding the rules
+       of the `Simple Features specification <https://www.ogc.org/publications/standard/sfs/>`_.
+   * - **Promote to Multipart**
      - ``PROMOTETOMULTI``
      - [boolean]
 
        Default: True
      - Casts features geometry type to multipart in the output table
    * - **Keep width and precision of input attributes**
-
-       Optional
      - ``PRECISION``
      - [boolean]
 
@@ -505,7 +500,7 @@ Imports vector layers inside a PostgreSQL database. A new connection
 to the PostGIS database must be created.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -548,6 +543,13 @@ Parameters
        * 7 --- MULTIPOINT
        * 8 --- MULTIPOLYGON
        * 9 --- MULTILINESTRING
+       * 10 --- CIRCULARSTRING
+       * 11 --- COUMPOUNDCURVE
+       * 12 --- CURVEPOLYGON
+       * 13 --- MULTICURVE
+       * 14 --- MULTISURFACE
+       * 15 --- CONVERT_TO_LINEAR
+       * 16 --- CONVERT_TO_CURVE
 
    * - **Assign an output CRS**
 
@@ -666,11 +668,12 @@ Parameters
      - [enumeration]
 
        Default: 0 (2D)
-     - Defines if the vector file to be imported has 2D or 3D data.
+     - Defines the coordinate dimensions of the imported vector data.
        One of:
 
-       * 0 --- 2D
-       * 1 --- 3D
+       * 0 --- 2 (``XY``)
+       * 1 --- 3 (``XYZ``)
+       * 2 --- 4 (``XYZM``)
 
    * - **Distance tolerance for simplification**
 
@@ -707,8 +710,6 @@ Parameters
           :end-before: **end_extent_options**
 
    * - **Clip the input layer using the above (rectangle) extent**
-
-       Optional
      - ``CLIP``
      - [boolean]
 
@@ -744,8 +745,6 @@ Parameters
        defines the size.
        By default N limits the transaction size to 20000 features.
    * - **Overwrite existing table**
-
-       Optional
      - ``OVERWRITE``
      - [boolean]
 
@@ -754,8 +753,6 @@ Parameters
        and if this option is set to True, the table will be
        overwritten.
    * - **Append to existing table**
-
-       Optional
      - ``APPEND``
      - [boolean]
 
@@ -765,8 +762,6 @@ Parameters
        New fields found in the input layer are ignored.
        By default a new table will be created.
    * - **Append and add new fields to existing table**
-
-       Optional
      - ``ADDFIELDS``
      - [boolean]
 
@@ -777,8 +772,6 @@ Parameters
        table.
        By default a new table will be created.
    * - **Do not launder columns/table names**
-
-       Optional
      - ``LAUNDER``
      - [boolean]
 
@@ -787,8 +780,6 @@ Parameters
        behaviour (converting column names to lowercase,
        removing spaces and other invalid characters).
    * - **Do not create Spatial Index**
-
-       Optional
      - ``INDEX``
      - [boolean]
 
@@ -797,24 +788,25 @@ Parameters
        created.
        By default, a spatial index is added.
    * - **Continue after a failure, skipping the failed feature**
-
-       Optional
      - ``SKIPFAILURES``
      - [boolean]
 
        Default: False
-     - 
-   * - **Promote to Multipart**
+     - Continue after a failure, skipping the failed feature.
+   * - **Validate geometries based on Simple Features specification**
+     - ``MAKEVALID``
+     - [boolean]
 
-       Optional
+       Default: False
+     - Applies cleanup operations on geometries to ensure they are valid regarding the rules
+       of the `Simple Features specification <https://www.ogc.org/publications/standard/sfs/>`_.
+   * - **Promote to Multipart**
      - ``PROMOTETOMULTI``
      - [boolean]
 
        Default: True
      - Casts features geometry type to multipart in the output table
    * - **Keep width and precision of input attributes**
-
-       Optional
      - ``PRECISION``
      - [boolean]
 
@@ -853,13 +845,17 @@ OGR-supported data source.
 The output will be shown in a 'Result' window and can be written
 into a HTML-file.
 The information includes the geometry type, feature count, the spatial
-extent, the projection information and many more.
+extent, the projection information, the list of attributes and related type,
+list of relations and field domains, and many more.
 
 This algorithm is derived from the
-`GDAL ogrinfo utility <https://gdal.org/programs/ogrinfo.html>`_.
+`GDAL ogrinfo utility <https://gdal.org/en/latest/programs/ogrinfo.html>`_.
 
 Parameters
 ..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -874,22 +870,28 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer
-   * - **Summary output only**
+   * - **Enable listing of all layers in the dataset**
+     - ``ALL_LAYERS``
+     - [boolean]
 
-       Optional
+       Default: False
+     - If checked, QGIS will output the information of all the layers in the input dataset
+       instead of information of the first layer only.
+       Convenient when a multi layer format (GeoPackage, GML, KML, SpatiaLite, SQLite, ...)
+       is used as input.
+   * - **Summary output only**
      - ``SUMMARY_ONLY``
      - [boolean]
 
        Default: True
-     - 
+     - Suppress listing of individual features and show only summary information
+       like projection, schema, feature count and extents.
    * - **Suppress metadata info**
-
-       Optional
      - ``NO_METADATA``
      - [boolean]
 
        Default: False
-     - 
+     - Suppress metadata printing. Some datasets may contain a lot of metadata strings.
    * - **Layer information**
      - ``OUTPUT``
      - [html]
@@ -905,6 +907,25 @@ Parameters
        If no HTML-file is defined the output will be written
        to a temporary file
 
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional command line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]
+
+       Default: '' (no additional options)
+     - Add extra GDAL command line options
 
 Outputs
 .......
@@ -926,6 +947,124 @@ Python code
 ...........
 
 **Algorithm ID**: ``gdal:ogrinfo``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _gdalogrinfojson:
+
+Vector Information (JSON)
+-------------------------
+Creates an information file that lists information about an
+OGR-supported data source.
+The output will be shown in a 'Result' window and can be written
+into a :file:`.JSON` file.
+The information includes the geometry type, feature count, the spatial
+extent, the projection information, the list of attributes and related type,
+list of relations and field domains, and many more.
+
+This algorithm is derived from the
+`GDAL ogrinfo utility <https://gdal.org/en/latest/programs/ogrinfo.html>`_.
+
+**Requires version of GDAL >= 3.7**
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Enable listing of all layers in the dataset**
+     - ``ALL_LAYERS``
+     - [boolean]
+
+       Default: False
+     - If checked, QGIS will output the information of all the layers in the input dataset
+       instead of information of the first layer only.
+       Convenient when a multi layer format (GeoPackage, GML, KML, SpatiaLite, SQLite, ...)
+       is used as input.
+   * - **Enable listing of features**
+     - ``FEATURES``
+     - [boolean]
+
+       Default: False
+     -
+   * - **Suppress metadata info**
+     - ``NO_METADATA``
+     - [boolean]
+
+       Default: False
+     - Suppress metadata printing. Some datasets may contain a lot of metadata strings.
+   * - **Layer information**
+     - ``OUTPUT``
+     - [file]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output JSON file that includes the file
+       information. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+       If no JSON file is defined the output will be written
+       to a temporary file
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional command line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]
+
+       Default: '' (no additional options)
+     - Add extra GDAL command line options
+
+Outputs
+.......
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Layer information**
+     - ``OUTPUT``
+     - [file]
+     - The output `.JSON` file that includes the file information.
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:ogrinfojson``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

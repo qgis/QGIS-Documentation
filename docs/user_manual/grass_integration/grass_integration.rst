@@ -31,10 +31,11 @@ As an example, we will use the QGIS Alaska dataset (see section :ref:`label_samp
 It includes a small sample GRASS :file:`LOCATION` with three vector layers and one
 raster elevation map. Create a new folder called :file:`grassdata`, download
 the QGIS 'Alaska' dataset :file:`qgis\_sample\_data.zip` from
-https://qgis.org/downloads/data/ and unzip the file into :file:`grassdata`.
+https://download.qgis.org//downloads/data/ and unzip the file into :file:`grassdata`.
 
-More sample GRASS :file:`LOCATIONs` are available at the GRASS website at
-https://grass.osgeo.org/download/data/.
+More sample GRASS :file:`LOCATIONs` are available at the GRASS_ website.
+
+.. _GRASS: https://grass.osgeo.org/download/data/
 
 .. _sec_load_grassdata:
 
@@ -879,9 +880,7 @@ like this:
 
 
 The parser reads this definition and creates a new tab inside the Toolbox when
-you select the module. A more detailed description for adding new modules, changing
-a module's group, etc., can be found at 
-https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
+you select the module.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -890,7 +889,7 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 3.34
+.. |CURRENT| replace:: 3.40
 .. |captureBoundary| image:: /static/common/mActionCaptureBoundary.png
    :width: 1.5em
 .. |captureCentroid| image:: /static/common/mActionCaptureCentroid.png

@@ -16,7 +16,7 @@ Converts any OGR-supported vector layer into another OGR-supported
 format.
 
 This algorithm is derived from the
-`ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -113,7 +113,7 @@ New values are assigned based on the attribute value of
 the overlapping vector feature.
 
 This algorithm is derived from the
-`GDAL rasterize utility <https://gdal.org/programs/gdal_rasterize.html>`_.
+`GDAL rasterize utility <https://gdal.org/en/latest/programs/gdal_rasterize.html>`_.
 
 Parameters
 ..........
@@ -208,7 +208,7 @@ The pixels to overwrite are chosen based on the supplied (overlapping)
 vector layer.
 
 This algorithm is derived from the
-`GDAL rasterize utility <https://gdal.org/programs/gdal_rasterize.html>`_.
+`GDAL rasterize utility <https://gdal.org/en/latest/programs/gdal_rasterize.html>`_.
 
 Parameters
 ..........
@@ -302,7 +302,7 @@ Converts vector geometries (points, lines and polygons) into a raster
 image.
 
 This algorithm is derived from the
-`GDAL rasterize utility <https://gdal.org/programs/gdal_rasterize.html>`_.
+`GDAL rasterize utility <https://gdal.org/en/latest/programs/gdal_rasterize.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Conversion`
 
@@ -341,8 +341,6 @@ Basic parameters
        Default: 0.0
      - A fixed value to burn into a band for all features.
    * - **Burn value extracted from the "Z" values of the feature**
-
-       Optional
      - ``USE_Z``
      - [boolean]
 

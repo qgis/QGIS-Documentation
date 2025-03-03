@@ -219,6 +219,7 @@ a right-click shows a dedicated set of options presented below.
   |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`                                  |checkbox|
   :guilabel:`Stretch Using Current Extent`                                                   |checkbox|
   |dbManager| :guilabel:`Update SQL Layer...`                                |checkbox|
+  |dbManager| :guilabel:`Execute SQL...`                                     |checkbox|
   |addVirtualLayer| :guilabel:`Edit Virtual Layer...`                        |checkbox|
   |addGroup| :guilabel:`Add Group`                             |checkbox|
   |duplicateLayer| :guilabel:`Duplicate Layer`                               |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
@@ -895,17 +896,17 @@ tools:
    somewhere else accidentally and clear your selection.
 
 While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
-holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether a feature is selected
-(ie either adds to the current selection or remove from it).
+holding :kbd:`Shift` or :kbd:`Ctrl` (:kbd:`Cmd` on macOS) toggles whether a feature is selected
+(i.e., either adds to the current selection or removes from it).
 
 For the other tools, different behaviors can be performed by holding down:
 
 * :kbd:`Shift`: add features to the current selection
-* :kbd:`Ctrl`: substract features from the current selection
-* :kbd:`Ctrl+Shift`: intersect with current selection, ie only keep
+* :kbd:`Ctrl`/:kbd:`Cmd`: subtract features from the current selection
+* :kbd:`Ctrl+Shift`/:kbd:`Cmd+Shift`: intersect with the current selection, i.e., only keep
   overlapping features from the current selection
 * :kbd:`Alt`: select features that are totally within the selection shape.
-  Combined with :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract
+  Combined with :kbd:`Shift` or :kbd:`Ctrl`/:kbd:`Cmd` keys, you can add or subtract
   features to/from the current selection.
 
 .. _automatic_selection:
@@ -1054,6 +1055,7 @@ The identified item gets highlighted in the map canvas
 while the :guilabel:`Identify Results` dialog opens with detailed information on it.
 The dialog also shows a set of buttons for advanced configuration.
 
+.. _identify_results_dialog:
 
 The Identify Results dialog
 ...........................
@@ -1230,6 +1232,8 @@ default it will display the following information:
       closest vertex (and ``Z``/``M`` if applicable)
     * if you click on a curved segment,
       the radius of that section is also displayed.
+    * if both the vector layer and the project have vertical datums set and they differ,
+      the ``Z`` value will be displayed for both datums.
 
 * **Data attributes**: This is the list of attribute fields and values for the
   feature that has been clicked.
@@ -1294,18 +1298,57 @@ You can achieve this by using the :menuselection:`Style` menu at the bottom
 of the Layer Properties dialog. This menu provides you with functions to
 create, load and manage styles.
 
-A style stores any information set in the layer properties dialog to render
-or interact with the layer (including symbology, labeling, fields and form definitions,
-actions, diagrams...) for vector layers, or the pixels (band or color rendering, transparency,
-pyramids, histogram ...) for raster.
+A style stores various information set in the layer or project properties dialog to render or interact with the layer.
+This includes:
 
+.. table:: Components of stored style and their references
 
-.. _figure_manage_style:
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | Category                                         | Vector                                      | Raster                                      |
+   +==================================================+=============================================+=============================================+
+   | |layerConfiguration| :sup:`Layer Configuration`  | :ref:`Layers capabilities <project_layer_capabilities>`                                   |
+   +                                                  +---------------------------------------------+---------------------------------------------+
+   |                                                  | :ref:`maptips`                              | :ref:`raster_display`                       |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |symbology| :sup:`Symbology`                     | :ref:`vector_style_menu`                    | :ref:`raster_symbology` :sup:`[1]`          |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |3d| :sup:`3D Symbology`                         | :ref:`sec_3_d_view`                         | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |labelingSingle| :sup:`Labels`                   | :ref:`vector_labels_tab`                    | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |sourceFieldsForms| :sup:`Fields`                | :ref:`vector_fields_menu`                   | N/A                                         |
+   |                                                  | and :ref:`constraints`                      |                                             |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |formView| :sup:`Attributes Form`                | :ref:`vector_attributes_menu`               | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |action| :sup:`Actions`                          | :ref:`actions_menu`                         | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |mapTips| :sup:`Map Tips`                        | :ref:`maptips`                              | :ref:`raster_display`                       |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |diagram| :sup:`Diagrams`                        | :ref:`sec_diagram`                          | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |openTable| :sup:`Attribute Table Configuration` | :ref:`sec_attribute_table`                  |                                             |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |rendering| :sup:`Rendering`                     | :ref:`vectorrenderingmenu`                  | :ref:`raster_rendering` :sup:`[1]`          |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |options| :sup:`Custom Properties`               | :ref:`vectorinformationmenu`                | :ref:`raster_information`                   |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |digitizing| :sup:`Geometry Options`             | :ref:`digitizingmenu`                       | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |relations| :sup:`Relations`                     | :ref:`vector_relations`                     | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |temporal| :sup:`Temporal Properties`            | :ref:`vectortemporalmenu`                   | :ref:`raster_temporal`                      |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |legend| :sup:`Legend Settings`                  | :ref:`vectorlegendmenu`                     | N/A                                         |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |elevationscale| :sup:`Elevation Properties`     | :ref:`vectorelevationmenu`                  | :ref:`raster_elevation`                     |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
+   | |indicatorNotes| :sup:`Notes`                    | :ref:`layer_notes`                                                                        |
+   +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
 
-.. figure:: img/style_combobox.png
-   :align: center
+:sup:`[1]`: For raster layers, symbology and rendering items are melted together,
+meaning that saving/loading one would also save/load items of/from the other.
 
-   Vector layer style combo box options
 
 By default, the style applied to a loaded layer is named ``default``. Once you
 have got the ideal and appropriate rendering for your layer, you can save it by
@@ -1340,6 +1383,9 @@ to duplicate any layer in the map legend.
 
    Right-click on the layer in the :guilabel:`Layers` panel to copy, paste, add
    or rename layer styles.
+   For both vector and raster layers, you can choose which style categories to copy/paste.
+   Choose :guilabel:`All Style Categories` or one of the available categories, depending on the layer type.
+   Note that for raster layers, the :guilabel:`Symbology` and :guilabel:`Rendering` categories are always copied together.
 
 .. _store_style:
 
@@ -1359,6 +1405,13 @@ save the style as a:
 
 * QGIS layer style file (:file:`.qml`)
 * SLD file (:file:`.sld`), only available for vector layers
+
+.. _figure_manage_style:
+
+.. figure:: img/style_combobox.png
+   :align: center
+
+   Vector layer style combo box options
 
 Used on file-based format layers (:file:`.shp`, :file:`.tab`...), :guilabel:`Save
 as Default` generates a :file:`.qml` file for the layer (with the same name).
@@ -2003,10 +2056,11 @@ screen resolution, paper size, or the terrain). Available units are:
 Number Formatting
 -----------------
 
-Numeric formatters allow formatting of numeric values for display, using
-a variety of different formatting techniques (for instance scientific notation,
-currency values, percentage values, etc). One use of this is to set
-text in a layout scale bar or fixed table.
+Numeric formatters allow formatting of numeric values for display,
+using a variety of different formatting techniques
+(for instance scientific notation,
+currency values, percentage values, custom formatting, etc).
+One use of this is to set text in a layout scale bar or table, a color ramp legend, an elevation profile plot, ...
 
 .. _figure_number_formatting:
 
@@ -2026,6 +2080,11 @@ But they can also have their custom settings. Provided categories are:
 
 * :guilabel:`General`, the default category: has no setting and displays values
   as set in the parent widget properties or using the global settings.
+
+* :guilabel:`Custom expression`: allows you to craft a custom :ref:`QGIS expression <vector_expressions>` to format numbers.
+  The expression can use the ``@value`` variable to retrieve the value to be formatted,
+  and then use any standard QGIS expression function to format this as desired.
+
 * :guilabel:`Number`
 
   * The value can be :guilabel:`Round to` a self defined number of
@@ -2256,6 +2315,8 @@ The values presented in the varying size assistant above will set the size
 
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |action| image:: /static/common/action.png
+   :width: 2em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
    :width: 1.5em
 .. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
@@ -2293,6 +2354,10 @@ The values presented in the varying size assistant above will set the size
 .. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
+   :width: 1.5em
+.. |diagram| image:: /static/common/diagram.png
+   :width: 2em
+.. |digitizing| image:: /static/common/digitizing.png
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
@@ -2376,7 +2441,13 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |labelmask| image:: /static/common/labelmask.png
    :width: 1.5em
+.. |layerConfiguration| image:: /static/common/layerconfiguration.png
+   :width: 1.5em
+.. |legend| image:: /static/common/legend.png
+   :width: 1.2em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
 .. |messageLog| image:: /static/common/mMessageLog.png
    :width: 1.5em
@@ -2394,7 +2465,11 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
+.. |relations| image:: /static/common/relations.png
+   :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
+   :width: 1.5em
+.. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
@@ -2422,6 +2497,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
+.. |sourceFieldsForms| image:: /static/common/sourcefieldsandforms.png
+   :width: 1.5em
 .. |stopwatch| image:: /static/common/mIconStopwatch.png
    :width: 1.5em
 .. |stylePreset| image:: /static/common/stylepreset.png
@@ -2431,6 +2508,8 @@ The values presented in the varying size assistant above will set the size
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em

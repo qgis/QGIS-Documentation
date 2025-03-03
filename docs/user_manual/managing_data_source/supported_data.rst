@@ -55,7 +55,7 @@ However, because of the differences in format specifications
 AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL Server,
 SAP HANA Spatial databases and many more), QGIS may handle some of
 their properties differently. Support is provided by the
-`GDAL vector drivers <https://gdal.org/drivers/vector/index.html>`_.
+`GDAL vector drivers <https://gdal.org/en/latest/drivers/vector/index.html>`_.
 This section describes how to work with these specifics.
 
 .. note::
@@ -277,7 +277,7 @@ This file is saved in the same folder as the :file:`.csv` file, with
 the same name, but :file:`.csvt` as the extension.
 
 *You can find more information at*
-`GDAL CSV Driver <https://gdal.org/drivers/vector/csv.html>`_.
+`GDAL CSV Driver <https://gdal.org/en/latest/drivers/vector/csv.html>`_.
 
 .. _tip_detect_field_types:
 
@@ -517,7 +517,7 @@ The following example creates a GiST index::
          \q to quit
 
   gis_data=# CREATE INDEX sidx_alaska_lakes ON alaska_lakes
-  gis_data-# USING GIST (the_geom GIST_GEOMETRY_OPS);
+  gis_data-# USING GIST (geom GIST_GEOMETRY_OPS);
   CREATE INDEX
   gis_data=# VACUUM ANALYZE alaska_lakes;
   VACUUM
@@ -540,7 +540,7 @@ Also, you can select ``SQLite`` as format and then add
 ``SPATIALITE=YES`` in the
 :menuselection:`Custom Options --> Data source` field.
 This tells GDAL to create a SpatiaLite database.
-See also https://gdal.org/drivers/vector/sqlite.html.
+See also https://gdal.org/en/latest/drivers/vector/sqlite.html.
 
 QGIS also supports editable views in SpatiaLite.
 For SpatiaLite data management, you can also use the core plugin
@@ -568,7 +568,7 @@ come from GDAL which is responsible for the writing of the file:
 * :guilabel:`RFC7946` by default GeoJSON 2008 will be used.
   If set to YES, the updated RFC 7946 standard will be used.
   Default is NO (thus GeoJSON 2008).
-  See https://gdal.org/drivers/vector/geojson.html#rfc-7946-write-support for
+  See https://gdal.org/en/latest/drivers/vector/geojson.html#rfc-7946-write-support for
   the main differences, in short: only EPSG:4326 is allowed, other crs's will
   be transformed, polygons will be written such as to follow the right-hand
   rule for orientation, values of a "bbox" array are
@@ -581,7 +581,7 @@ come from GDAL which is responsible for the writing of the file:
 
 Besides GeoJSON there is also an option to export to
 "GeoJSON - Newline Delimited"
-(see https://gdal.org/drivers/vector/geojsonseq.html).
+(see https://gdal.org/en/latest/drivers/vector/geojsonseq.html).
 Instead of a FeatureCollection with Features, you can stream one type
 (probably only Features) sequentially separated with newlines.
 
@@ -673,7 +673,7 @@ Solving in PostGIS
 ------------------
 
 A work-around is to transform the longitude values using PostGIS and the
-`ST_ShiftLongitude <https://postgis.net/docs/ST_Shift_Longitude.html>`_ function.
+`ST_ShiftLongitude <https://postgis.net/docs/ST_ShiftLongitude.html>`_ function.
 This function reads every point/vertex in every component of every feature in a geometry,
 and shifts its longitude coordinate from -180..0° to 180..360° and vice versa if between these ranges.
 This function is symmetrical so the result is a 0..360° representation of a -180..180° data

@@ -628,7 +628,7 @@ By default, all unique keys are added.
 
 The PostgreSQL `HStore <https://www.postgresql.org/docs/10/hstore.html>`_
 is a simple key-value store used in PostgreSQL and GDAL (when reading
-an `OSM file <https://gdal.org/drivers/vector/osm.html#other-tags-field>`_
+an `OSM file <https://gdal.org/en/latest/drivers/vector/osm.html#other-tags-field>`_
 with the ``other_tags`` field.
 
 Parameters
@@ -949,7 +949,27 @@ Parameters
 
        :guilabel:`Type` (``type``) [enumeration]
          Data type of the output field.
-         Available types depend on the output layer provider.
+         Available types may not be compatible with the output layer provider.
+         One of:
+
+         .. attention:: For certain field types, e.g. lists,
+          an extra ``sub_type`` parameter helps refine the the specific type of the data.
+          It is automatically set in the GUI but may be needed
+          if you're running the algorithm in Python or from the command line.
+
+         .. include:: ../algs_include.rst
+            :start-after: **vector_field_types**
+            :end-before: **end_vector_field_types**
+
+       :guilabel:`Sub-type` (``sub_type``) [enumeration]
+         For certain field types, e.g. lists, this parameter helps refine the specific ``type`` of the data.
+         It is automatically set in the GUI but may be needed
+         if you're running the algorithm in Python or from the command line.
+         One of:
+
+         .. include:: ../algs_include.rst
+            :start-after: **vector_field_subtypes**
+            :end-before: **end_vector_field_subtypes**
 
        :guilabel:`Length` (``length``) [number]
          Length of the output field.

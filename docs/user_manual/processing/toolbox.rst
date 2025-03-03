@@ -52,8 +52,19 @@ You can enter any word or phrase on the text box. Notice that, as you type, the
 number of algorithms, models or scripts in the toolbox is reduced to just those
 that contain the text you have entered in their names or keywords.
 
-.. note:: At the top of the list of algorithms are displayed the most recent
- used tools; handy if you want to reexecute any.
+The top of the algorithm list shows the most |processingHistory| :sup:`Recently Used` tools and the |favorites| :sup:`Favorites` tools,
+making it convenient to reexecute them. The |processingHistory| :sup:`Recently Used` list is there by default, showing the algorithms you have recently executed.
+The |favorites| :sup:`Favorites` list is created when you manually add an algorithm to it.
+
+You can right-click on any algorithm in the toolbox and choose from the contextual menu to:
+
+* :guilabel:`Execute...` to run the algorithm.
+* :guilabel:`Execute as Batch Process...` to run the algorithm in batch mode.
+* :guilabel:`Edit Rendering Styles for Outputs...` to customize the rendering styles for the algorithm's outputs.
+* :guilabel:`Add to Favorites` to add the algorithm to the Favorites list.
+* :guilabel:`Remove from Favorites` to remove the algorithm from the Favorites list.
+
+Unlike the Recently Used list, the Favorites list remains static and is not affected by which algorithms were executed.
 
 .. _figure_toolbox_search:
 
@@ -481,6 +492,8 @@ to a temporary file and deleted once you exit QGIS).
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |favorites| image:: /static/common/mIconFavorites.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em

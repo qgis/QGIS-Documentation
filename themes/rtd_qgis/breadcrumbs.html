@@ -1,0 +1,18 @@
+{%- extends "sphinx_rtd_theme/breadcrumbs.html" %}
+{% block breadcrumbs_aside %}
+{% if not meta or meta.get('github_url') != 'hide' %}
+    <li style="float: right; text-align: right;">
+	<ul>
+		{{ super() }}
+	</ul>
+
+        <!-- Add a button to guide potential contributors
+	     To do: add a more generic page for contributing in QGIS docs to keep users in the same website
+	     <a class="qgis-edit-guidelines" href="https://docs.qgis.org/{{ version }}/{{ language }}/docs/documentation_guidelines/index.html">
+	-->
+	<a class="qgis-edit-guidelines" href="https://qgis.org/community/involve/">
+		{{ _( "Learn how to contribute!" ) }}
+	</a>
+    </li>
+{% endif %}
+{% endblock %}

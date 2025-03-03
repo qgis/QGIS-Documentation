@@ -170,8 +170,8 @@ Returns the north-based bearing as the angle in radians measured clockwise on th
    * - Arguments
      - * **point_a** - point geometry
        * **point_b** - point geometry
-       * **source_crs** - an optional string representing the source CRS of the points. By default the current layer's CRS is used.
-       * **ellipsoid** - an optional string representing the acronym or the authority:ID (eg 'EPSG:7030') of the ellipsoid on which the bearing should be measured. By default the current project's ellipsoid setting is used.
+       * **source_crs** - an optional string or CRS object representing the source CRS of the points. By default the current layer's CRS is used.
+       * **ellipsoid** - an optional string representing the acronym or the authority ID (e.g., 'EPSG:7030') of the ellipsoid on which the bearing should be measured. By default the current project's ellipsoid setting is used.
    * - Examples
      - * ``degrees( bearing( make_point(16198544, -4534850), make_point(18736872, -1877769), 'EPSG:3857', 'EPSG:7030') )`` → 49.980071
        * ``degrees( bearing( make_point(18736872, -1877769), make_point(16198544, -4534850), 'EPSG:3857', 'WGS84') )`` → 219.282386
@@ -2408,7 +2408,7 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
          Read more on the underlying GEOS predicate, as described in PostGIS `ST_MaximumInscribedCircle <https://postgis.net/docs/ST_MaximumInscribedCircle.html>`_ function.
 
          This argument requires GEOS >= 3.9.
-       * **return_details** - Set this to true to return a list of maps containing (key names in quotes) the feature 'id', the expression 'result' and the 'overlap' value. The 'radius' of the maximum inscribed circle is also returned when the target layer is a polygon. Only valid when used with the expression parameter
+       * **return_details** - Set this to true to return a list of maps containing (key names in quotes) the feature 'id', the expression 'result' and the 'overlap' value (of the largest element in case of multipart). The 'radius' of the maximum inscribed circle is also returned when the target layer is a polygon. Only valid when used with the expression parameter
        * **sort_by_intersection_size** - only valid when used with an expression, set this to 'des' to return the results ordered by the overlap value in descending order or set this to 'asc' for ascending order.
    * - Examples
      - * ``overlay_intersects('regions')`` → TRUE if the current feature spatially intersects a region
@@ -3198,8 +3198,8 @@ Returns the geometry transformed from a source CRS to a destination CRS.
      - transform(geometry, source_auth_id, dest_auth_id)
    * - Arguments
      - * **geometry** - a geometry
-       * **source_auth_id** - the source auth CRS ID
-       * **dest_auth_id** - the destination auth CRS ID
+       * **source_auth_id** - the source CRS definition or CRS object
+       * **dest_auth_id** - the destination CRS definition or CRS object
    * - Examples
      - * ``geom_to_wkt( transform( make_point(488995.53240249, 7104473.38600835), 'EPSG:2154', 'EPSG:4326' ) )`` → 'POINT(0 51)'
 

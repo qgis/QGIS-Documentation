@@ -4,17 +4,17 @@
 Documentation Guidelines
 ========================
 
-QGIS Documentation is available at https://docs.qgis.org.
+QGIS Documentation is available at https://www.qgis.org/resources/hub/#documentation.
 As the writing process is going on, a build is automatically run every day (see bottom of the page for exact time)
-for all `supported versions <https://qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule>`_
+for all `supported versions <https://qgis.org/resources/roadmap/#release-schedule>`_
 (testing, Long Term Release (LTR) and next-to-be LTR).
 
 QGIS Documentation source files are available at https://github.com/qgis/QGIS-Documentation.
-They are mainly written using the reStructuredText (reST) format syntax,
-coupled with some scripts from the Sphinx toolset to post-process the HTML output.
-For general information on these tools,
-see https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html
-or https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
+They are mainly written using the `reStructuredText (reST) format
+<https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html>`_ syntax,
+coupled with some scripts from the `Sphinx toolset
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_
+to post-process the HTML output.
 
 The following chapters will guide you through learning:
 
@@ -25,7 +25,7 @@ The following chapters will guide you through learning:
 
 If you are looking for general information about how to contribute to the QGIS
 project, you may find help at `Get Involved in the QGIS Community
-<https://qgis.org/en/site/getinvolved/index.html>`_.
+<https://qgis.org/community/involve/>`_.
 
 
 .. toctree::

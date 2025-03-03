@@ -478,10 +478,10 @@ Transforms a given value from an input domain to an output range using an expone
        * **range_max** - Specifies the maximum value in the output range, the largest value which should be output by the function.
        * **exponent** - A positive value (greater than 0), which dictates the way input values are mapped to the output range. Large exponents will cause the output values to 'ease in', starting slowly before accelerating as the input values approach the domain maximum. Smaller exponents (less than 1) will cause output values to 'ease out', where the mapping starts quickly but slows as it approaches the domain maximum.
    * - Examples
-     - * ``scale_exp(5,0,10,0,100,2)`` → 25
+     - * ``scale_exponential(5,0,10,0,100,2)`` → 3.030
 
          easing in, using an exponent of 2
-       * ``scale_exp(3,0,10,0,100,0.5)`` → 54.772
+       * ``scale_exponential(3,0,10,0,100,0.5)`` → 87.585
 
          easing out, using an exponent of 0.5
 

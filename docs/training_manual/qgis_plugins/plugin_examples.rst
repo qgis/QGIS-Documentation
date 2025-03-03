@@ -66,6 +66,9 @@ It is also possible to search trough the now available data providers
 With an incredible simple interface, the QuickOSM plugin allows you to download
 `OpenStreetMap <https://www.openstreetmap.org/>`_ data.
 
+:abbr:`★☆☆ (Basic level)` Follow Along: Using the Quick Query
+...............................................................................
+
 #. Start a new empty project and add the :guilabel:`roads` layer from the
    :file:`training_data` GeoPackage.
 #. Install the **QuickOSM** plugin.
@@ -102,11 +105,11 @@ canvas.
 .. warning:: QuickOSM creates temporary layer when downloading the data. If you
   want to save them permanently, click on the |indicatorMemory| icon next to the
   layer and choose the options you prefer. Alternatively you can open the
-  :kbd:`Advanced` menu in QuickOSM and choose where to save the data in the
+  :guilabel:`Advanced` menu in QuickOSM and choose where to save the data in the
   :guilabel:`Directory` menu.
 
 :abbr:`★★★ (Advanced level)` Follow Along: The QuickOSM Query engine
--------------------------------------------------------------------------------
+...............................................................................
 
 The quickest way to download data from QuickOSM plugin is using the :guilabel:`Quick query`
 tab and set some small parameters. But if you need some more specific data?

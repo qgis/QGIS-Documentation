@@ -63,9 +63,9 @@ If you want to add your existing plugin to Processing, you need to add some code
         :skipif: True
 
         from qgis.core import QgsApplication
-        from processing_provider.provider import Provider
+        from .processing_provider.provider import Provider
 
-        class YourPluginName():
+        class YourPluginName:
 
             def __init__(self):
                 self.provider = None
@@ -91,18 +91,22 @@ If you want to add your existing plugin to Processing, you need to add some code
       :skipif: True
 
       from qgis.core import QgsProcessingProvider
+      from qgis.PyQt.QtGui import QIcon
 
-      from processing_provider.example_processing_algorithm import ExampleProcessingAlgorithm
+      from .example_processing_algorithm import ExampleProcessingAlgorithm
 
 
       class Provider(QgsProcessingProvider):
 
-          def loadAlgorithms(self, *args, **kwargs):
+          """ The provider of our plugin. """
+
+          def loadAlgorithms(self):
+              """ Load each algorithm into the current provider. """
               self.addAlgorithm(ExampleProcessingAlgorithm())
               # add additional algorithms here
               # self.addAlgorithm(MyOtherAlgorithm())
 
-          def id(self, *args, **kwargs):
+          def id(self) -> str:
               """The ID of your plugin, used for identifying the provider.
 
               This string should be a unique, short, character only string,
@@ -110,7 +114,7 @@ If you want to add your existing plugin to Processing, you need to add some code
               """
               return 'yourplugin'
 
-          def name(self, *args, **kwargs):
+          def name(self) -> str:
               """The human friendly name of your plugin in Processing.
 
               This string should be as short as possible (e.g. "Lastools", not
@@ -118,7 +122,7 @@ If you want to add your existing plugin to Processing, you need to add some code
               """
               return self.tr('Your plugin')
 
-          def icon(self):
+          def icon(self) -> QIcon:
               """Should return a QIcon which is used for your provider inside
               the Processing toolbox.
               """
@@ -128,6 +132,19 @@ If you want to add your existing plugin to Processing, you need to add some code
      algorithm file. Copy/paste the content of the :source:`script template
      file <python/plugins/processing/script/ScriptTemplate.py>` and
      update it according to your needs.
+
+You should have a tree similar to this :
+
+.. code-block:: bash
+
+   └── your_plugin_root_folder
+      ├── __init__.py
+      ├── LICENSE
+      ├── metadata.txt
+      └── processing_provider
+            ├── example_processing_algorithm.py
+            ├── __init__.py
+            └── provider.py
 
 #. Now you can reload your plugin in QGIS and you should see your example
    script in the Processing toolbox and modeler.

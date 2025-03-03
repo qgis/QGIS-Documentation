@@ -218,6 +218,15 @@ You then need to create connections to the server you are targeting:
      allows to scale up or down the tiles based on the device screen DPI.
      Available options are :guilabel:`Undefined (not scaled)`,
      :guilabel:`Standard (96 DPI)` and :guilabel:`High (192 DPI)`.
+
+   .. _max_feature_count:
+
+   * :guilabel:`Maximum number of GetFeatureInfo results`: specifies a default value
+     for the maximum number of results returned per layer by a GetFeatureInfo request
+     using this connection (see :ref:`FEATURE_COUNT <wms_featurecount>` parameter).
+     Default value is ``10``.
+     Set to ``0`` to use server default value (usually ``1``): no FEATURE_COUNT parameter will be added to the request.
+
    * |unchecked| :guilabel:`Ignore GetMap/GetTile/GetLegendGraphic URI reported in capabilities`:
      if checked, use given URI from the :guilabel:`URL` field above.
    * |unchecked| :guilabel:`Ignore GetFeatureInfo URI reported in capabilities`:
@@ -311,7 +320,9 @@ You can define:
 * :guilabel:`Request step size`: if you want to reduce the effect of cut labels at tile borders,
   increasing the step size creates larger requests, fewer tiles and fewer borders.
   The default value is 2000.
-* The :guilabel:`Maximum number of GetFeatureInfo results` from the server
+* The :guilabel:`Maximum number of GetFeatureInfo results`: specifies the maximum number of results
+  returned by a GetFeatureInfo request, for the layer(s) being loaded.
+  Allows to override the :ref:`connection's default value <max_feature_count>` for specific layers.
 
 * Each WMS layer can be presented in multiple CRSs, depending on the capability of
   the WMS server. If you select a WMS from the list, a field with the default projection
@@ -326,11 +337,6 @@ You can define:
   WMS Server supports this feature. Then only the relevant legend for your current
   map view extent will be shown and thus will not include legend items for items
   you can't see in the current map.
-
-At the bottom of the dialog, a :guilabel:`Layer name` text field displays the
-selected item's :guilabel:`Title`. You can change the name at your will.
-This name will appear in the :guilabel:`Layers` panel after you pressed the
-:guilabel:`Add` button and loaded the layer(s) in QGIS.
 
 You can select several layers at once, but only one image style per layer.
 When several layers are selected, they will be combined at the WMS server
@@ -640,14 +646,66 @@ network settings (especially proxy). It is also possible to select cache mode
 ('always cache', 'prefer cache', 'prefer network', 'always network'), and the provider also
 supports selection of time position, if temporal domain is offered by the server.
 
-.. warning::
+**Loading a WCS Layer**
 
-   Entering **username** and **password** in the :guilabel:`Authentication` tab
-   will keep unprotected credentials in the connection configuration. Those
-   **credentials will be visible** if, for instance, you shared the project file
-   with someone. Therefore, it's advisable to save your credentials in a
-   *Authentication configuration* instead (:guilabel:`configurations` tab).
-   See :ref:`authentication_index` for more details.
+To be able to load a WCS Layer, first create a connection to the WCS server:
+
+#. Open the :guilabel:`Data Source Manager` dialog by pressing the
+   |dataSourceManager| :sup:`Open Data Source Manager` button
+#. Enable the |addWcsLayer| :guilabel:`WCS` tab
+#. Click on :guilabel:`New...` to open the :guilabel:`Create a New WCS
+   Connection` dialog
+
+   .. _figure_OGC_create_wcs_connection:
+
+   .. figure:: img/add_connection_wcs.png
+      :align: center
+
+      Creating a connection to a WCS server
+
+   * :guilabel:`Name`: A name for the connection. This name will be used in
+     the Server Connections drop-down box so that you can distinguish it from
+     other WCS servers.
+   * :guilabel:`URL`: URL of the server providing the data. This must be a
+     resolvable host name -- the same format as you would use to open a telnet
+     connection or ping a host, i.e. the base URL only.
+     For example, you shouldn't have fragments such as ``request=GetCapabilities``
+     or ``version=1.0.0`` in your URL.
+   * :guilabel:`Authentication` (optional): using a :ref:`stored configuration
+     <authentication_workflow>` or a basic authentication with
+     :guilabel:`Username` and :guilabel:`Password`.
+
+     .. warning::
+
+      Entering **username** and **password** in the :guilabel:`Authentication`
+      tab will keep unprotected credentials in the connection configuration.
+      Those **credentials will be visible** if, for instance, you shared the
+      project file with someone. Therefore, it's advisable to save your
+      credentials in an *Authentication configuration* instead
+      (:guilabel:`Configurations` tab).
+      See :ref:`authentication_index` for more details.
+
+   * HTTP :guilabel:`Referer`
+   * |unchecked| :guilabel:`Ignore GetCoverage URI reported in capabilities`:
+     if checked, use given URI from the :guilabel:`URL` field above.
+   * |unchecked| :guilabel:`Ignore reported layer extents`: because the extent
+     reported by raster layers may be smaller than the actual area which can
+     be rendered (notably for WCS servers with symbology which takes more space
+     than the data extent), check this option to avoid cropping raster layers
+     to their reported extents, resulting in truncated symbols on the borders
+     of these layers.
+   * |unchecked| :guilabel:`Ignore axis orientation`
+   * |unchecked| :guilabel:`Invert axis orientation`
+   * |unchecked| :guilabel:`Smooth pixmap transformation`
+
+#. Press :guilabel:`OK` to create the connection.
+
+Note that any proxy settings you may have set in your preferences are also recognized.
+Also note that it is possible to :guilabel:`Load` the connection parameters
+from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file. 
+
+Now we are ready to load WCS layers from the above connection.
+
 
 .. _`ogc-wfs`:
 
@@ -744,9 +802,6 @@ Now we are ready to load WFS layers from the above connection.
 #. Select the :guilabel:`Parks` layer in the list
 #. You can also choose whether to:
 
-   * |unchecked| :guilabel:`Use title for layer name`, showing the layer's
-     title as defined on the server in the :guilabel:`Layers` panel instead of
-     its :guilabel:`Name`
    * |checkbox| :guilabel:`Only request features overlapping the view extent`
    * :guilabel:`Change...` the layer's CRS to any other supported by the service
    * or build a query to specify particular features to retrieve from the service:
@@ -780,6 +835,8 @@ features and view the attribute table.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addWcsLayer| image:: /static/common/mActionAddWcsLayer.png
+   :width: 1.5em
 .. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
    :width: 1.5em
 .. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png

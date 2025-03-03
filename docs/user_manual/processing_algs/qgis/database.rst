@@ -522,6 +522,7 @@ SpatiaLite execute SQL
 ----------------------
 
 Allows a SQL database query to be performed on a SpatiaLite database.
+The database is determined by an input layer or file.
 The algorithm **won't** create a new layer: it is designed to run
 queries on the layer itself.
 
@@ -541,9 +542,9 @@ Parameters
      - Name
      - Type
      - Description
-   * - **File Database**
+   * - **Database layer (or file)**
      - ``DATABASE``
-     - [vector]
+     - [file]
      - The SQLite/SpatiaLite database file to connect to
    * - **SQL query**
      - ``SQL``

@@ -63,7 +63,7 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['./themes']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -259,6 +259,8 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
+    ('docs/about/index', 'aboutQGIS.tex',
+     f'About QGIS {version}', u'QGIS Project', 'manual'),
     ('docs/user_manual/index', 'DesktopUserGuide.tex',
      f'QGIS Desktop {version} User Guide', u'QGIS Project', 'manual'),
     ('docs/server_manual/index', 'ServerUserGuide.tex',
@@ -309,13 +311,13 @@ latex_elements = {
     \\newunicodechar{Ț}{\\cb{T}}
     \\newunicodechar{ț}{\\cb{t}}
     \\newunicodechar{≠}{$\\neq$}
-    \\newunicodechar{≥}{$\geq$}
-    \\newunicodechar{≤}{$\leq$}
-    \\newunicodechar{π}{$\pi$}
+    \\newunicodechar{≥}{$\\geq$}
+    \\newunicodechar{≤}{$\\leq$}
+    \\newunicodechar{π}{$\\pi$}
     \\newunicodechar{㎡}{$m^2$}
     \\newunicodechar{\u25BA}{$\u25BA$}
-    \\newunicodechar{′}{\ensuremath{^{\prime}}}
-    \\newunicodechar{″}{\ensuremath{^{\prime\prime}}}
+    \\newunicodechar{′}{\\ensuremath{^{\\prime}}}
+    \\newunicodechar{″}{\\ensuremath{^{\\prime\\prime}}}
     \\newunicodechar{​}{ }''',
 
     # Latex figure float alignment
@@ -331,7 +333,7 @@ if tags.has('ko'):
         'preamble': '''
         \\usepackage{fontspec}
         \\usepackage[space]{xeCJK}
-        \\renewcommand\CJKglue{}
+        \\renewcommand\\CJKglue{}
         \\setCJKmainfont{NanumMyeongjo}''',
     }
 

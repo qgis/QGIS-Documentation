@@ -4,11 +4,10 @@
 Preamble
 ********
 
-This is the user guide for the geographical information system (GIS)
+Welcome to the documentation of the geographical information system (GIS)
 software QGIS.
-QGIS is subject to the GNU General Public License.
-More information is available on the QGIS homepage,
-https://www.qgis.org.
+QGIS is subject to the GNU General Public License version 2, or any later version.
+More information is available on the `QGIS website <https://www.qgis.org/license>`_.
 
 The contents of this document have been written and verified to the
 best of the knowledge of the authors and editors.
@@ -22,13 +21,12 @@ We encourage you to report possible mistakes.
 This document has been typeset with reStructuredText.
 It is available as reST source code on
 `github <https://github.com/qgis/QGIS-Documentation>`_,
-and online as HTML and PDF via https://www.qgis.org/en/docs/.
+and online as HTML and PDF via https://www.qgis.org/resources/hub/#documentation.
 Translated versions of this document can be browsed and downloaded
 via the documentation area of the QGIS project as well.
 
 For more information about contributing to this document and about
-translation, please visit
-https://qgis.org/en/site/getinvolved/index.html.
+translation, please read :ref:`QGIS-documentation-guidelines`.
 
 **Links in this Document**
 
@@ -42,7 +40,7 @@ The list of the persons who have contributed with writing, reviewing
 and translating the following documentation is available
 at :ref:`doc_contributors`.
 
-Copyright (c) 2004 - 2020 QGIS Development Team
+Copyright (c) 2004 - 2025 QGIS Development Team
 
 **Internet:** https://www.qgis.org
 
@@ -61,12 +59,12 @@ What is new in QGIS |version|
 
 This release of QGIS includes hundreds of bug fixes and many new
 features and enhancements, compared to |QGIS_CURRENT|_.
-For a list of new features, visit the visual changelogs at
-https://qgis.org/en/site/forusers/visualchangelogs.html.
+For a list of new features, visit the `visual changelogs
+<https://qgis.org/project/visual-changelogs/>`_.
 
 .. only:: not testing and not outdated
 
   We recommend that you use this version over previous releases.
 
-.. |QGIS_CURRENT| replace:: QGIS 3.34
-.. _QGIS_CURRENT: https://docs.qgis.org/3.34/en/docs/
+.. |QGIS_CURRENT| replace:: QGIS 3.40
+.. _QGIS_CURRENT: https://docs.qgis.org/3.40/en/docs/

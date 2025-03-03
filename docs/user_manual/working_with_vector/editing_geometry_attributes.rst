@@ -1177,6 +1177,16 @@ The |addPart| :sup:`Add Part` can also be used to add a geometry to a geometryle
 feature. First, select the feature in the attribute table and digitize the new
 geometry with the |addPart| :sup:`Add Part` tool.
 
+.. note:: **Order of vertices in polygon parts**
+
+  Unlike the OGC standards, QGIS doesn't constrain vertices
+  of the exterior boundary of a polygon feature to be ordered counterclockwise.
+  Thus, you can find both directions in a layer.
+  However, every parts of the same multipolygon feature
+  will have their outer vertices ordered following the same direction.
+
+  You can however use the :ref:`qgisforcerhr` algorithm to constrain features of a layer
+  to have vertices of their outer boundaries ordered in the clockwise direction.
 
 .. index::
    single: Digitizing tools; Delete Part
@@ -1199,16 +1209,32 @@ To delete a part, simply click within the target part.
 Add Ring
 --------
 
-You can create ring polygons using the |addRing|
-:sup:`Add Ring` icon in the toolbar. This means that inside an existing area, it
-is possible to digitize further polygons that will occur as a 'hole', so
-only the area between the boundaries of the outer and inner polygons remains
-as a ring polygon.
+You can create ring polygons using the |addRing| :sup:`Add Ring` icon in the toolbar.
+This means that inside an existing area, it is possible to digitize further polygons
+that will occur as a 'hole', so only the area between the boundaries
+of the outer and inner polygons remains as a ring polygon.
 
-.. FixMe: I think this tool should behave as below
-.. Like many digitizing tools, the |addRing| :sup:`Add Ring` tool adds ring to all
-.. selected features if any, otherwise all overlapping features are pierced.
+To add a ring:
 
+#. Select the feature(s) to modify
+#. Activate the |addRing| :sup:`Add Ring` tool
+#. Draw a polygon within the selected geometries,
+   using the aforementioned :ref:`techniques <drawing_methods>`.
+   A hole appears in the selected geometries.
+#. If no geometry is selected when the ring is drawn,
+   then a hole is added to each of the polygons the ring is drawn over.
+
+.. note:: **Order of vertices in polygon rings**
+
+  Unlike the OGC standards, QGIS doesn't constrain vertices
+  of the exterior boundary of a polygon feature to be ordered counterclockwise.
+  Thus, you can find both directions in a layer.
+  However, every rings of the same (multi)polygon feature
+  will have their vertices ordered in the opposite direction to the outer boundary's.
+
+  You can however use the :ref:`qgisforcerhr` algorithm to constrain features of a layer
+  to have vertices of their outer boundaries ordered in the clockwise direction,
+  and vertices of their interior rings ordered in the counter-clockwise direction.
 
 .. index::
    single: Digitizing tools; Fill Ring
@@ -1313,9 +1339,10 @@ The tool can be applied to the edited layer (the geometries are modified)
 or also to background layers (in which case it creates copies of the lines /
 rings and adds them to the edited layer).
 It is thus ideally suited for the creation of distance line layers.
-The :guilabel:`User Input` dialog pops-up, showing the displacement distance.
+The :guilabel:`User Input` dialog pops-up, showing the displacement distance
+and other settings.
 
-To create a shift of a line layer, you must first go into editing mode
+To create a shift of a line or polygon layer, you must first go into editing mode
 and activate the |offsetCurve| :sup:`Offset Curve` tool.
 Then click on a feature to shift it.
 Move the mouse and click where wanted or enter the desired distance in
@@ -1323,10 +1350,14 @@ the user input widget. Holding :kbd:`Ctrl` during the 2nd click will make an off
 Your changes may then be saved with the |saveEdits|
 :sup:`Save Layer Edits` tool.
 
+For geometries on background layers make sure that snapping is on and hold :kbd:`Ctrl`
+to select the geometry from the background. Also hold :kbd:`Ctrl` when doing the second click.
+Geometries will be converted to the target layer geometry type. 
 
-QGIS options dialog (Digitizing tab then **Curve offset tools** section) allows
-you to configure some parameters like **Join style**, **Quadrant segments**,
-**Miter limit**.
+QGIS options dialog (Digitizing tab then **Curve offset tools** section) or
+the |settings| icon in the :guilabel:`User Input` dialog allows
+you to configure :ref:`some parameters <curve_offset_tool>` like **Join style**,
+**Quadrant segments**, **Miter limit** and **End cap style**.
 
 .. index::
    single: Digitizing tools; Reverse Line
@@ -1360,7 +1391,10 @@ To split line or polygon features:
 #. Select the |splitFeatures| :sup:`Split Features` tool.
 #. Draw a line across the feature(s) you want to split.
    If a selection is active, only selected features are split.
-   Fields of resulting features are filled according to their :ref:`splitting policy <policies>`.
+   The original feature is then assigned the biggest geometry resulting from the splitting,
+   and new features are created for the remaining parts.
+   Fields of the features are filled/updated according to the datasource provider rules
+   or their :ref:`splitting policy <policies>`.
 #. You can then as usual modify any of the attributes of any resulting feature.
 
 .. tip:: **Split a polyline into new features in one-click**
@@ -1760,6 +1794,21 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   (more at :ref:`parallel_or_perpendicular`)
 * |cadPerpendicular| :sup:`Perpendicular` to draw a line perpendicular to an
   existing one (more at :ref:`parallel_or_perpendicular`)
+* |extractVertices| :sup:`Construction Tools` provides a couple of options that
+  constrain the vertices placement based on extrapolated coordinates of
+  existing elements:
+
+  * |unchecked| :guilabel:`Line Extension`: hover over a segment and you get
+    a purple dotted line extending the segment across the map canvas.
+    You can snap the vertex anywhere on this virtual line.
+  * |unchecked| :guilabel:`X/Y Point`: hover over a vertex and you get
+    a purple dotted line along its X or Y coordinate, across the map canvas.
+    You can snap the vertex anywhere on this virtual line.
+    It is even possible to hover over two different vertices, generating virtual
+    coordinate lines for both, and snap to their intersection.
+* |circlesIntersection| :sup:`2-circle Point Intersection`: allows you to
+  digitize a point or vertex at the intersection of two circles.
+  (more at :ref:`circle_intersection`).
 * |settings| :sup:`Snap to common angles`: when moving the cursor,
   displays a virtual line that you can snap to to add the next vertex.
   The snapping line is defined by the last added vertex
@@ -1790,18 +1839,6 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   * :guilabel:`Show bearing/azimuth`
   * :guilabel:`Show common snapping angle`
 
-* |extractVertices| :sup:`Construction Tools` provides a couple of options that
-  constrain the vertices placement based on extrapolated coordinates of
-  existing elements:
-
-  * |unchecked| :guilabel:`Line Extension`: hover over a segment and you get
-    a purple dotted line extending the segment across the map canvas.
-    You can snap the vertex anywhere on this virtual line.
-  * |unchecked| :guilabel:`X/Y Point`: hover over a vertex and you get
-    a purple dotted line along its X or Y coordinate, across the map canvas.
-    You can snap the vertex anywhere on this virtual line.
-    It is even possible to hover over two different vertices, generating virtual
-    coordinate lines for both, and snap to their intersection.
 
 Below the toolbar, you will find a number of text boxes whose value reflects
 by default the position or movement of the cursor in the map canvas.
@@ -1957,44 +1994,6 @@ and M constraints can be locked continuously by clicking the |lockRepeating|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
 
-.. _parallel_or_perpendicular:
-
-Parallel and perpendicular lines
---------------------------------
-
-All the tools described above can be combined with the |cadPerpendicular|
-:sup:`Perpendicular` and |cadParallel| :sup:`Parallel` tools. These two tools
-allow drawing segments perfectly perpendicular or parallel to another segment.
-The target segment can be on another layer, another feature within the layer or
-the feature being digitized (requires :ref:`self-snapping option <self_snapping>`).
-
-To draw a *perpendicular* segment:
-
-#. First add one of the segment vertices.
-#. Click the |cadPerpendicular| :sup:`Perpendicular` icon
-   (keyboard shortcut :kbd:`P`) to activate it.
-#. Click on the segment that you want to be perpendicular to.
-#. A virtual dotted line perpendicular to the segment through the previous
-   vertex appears. The angle property is locked, constraining the next vertex
-   on that line and, a cross indicates the projected position of the cursor on the line.
-   Click to place the new vertex.
-
-   .. figure:: img/advanced_digitizing_perpendicular.png
-      :align: center
-
-      Perpendicular digitizing
-
-To draw a *parallel* segment, the steps are the same except that you need to
-click on the |cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`P` twice).
-
-.. figure:: img/advanced_digitizing_parallel.png
-   :align: center
-
-   Parallel digitizing
-
-These two tools just find the right angle of the perpendicular and
-parallel angle and lock this parameter during your editing.
-Unlock the angle parameter to cancel their use in the middle of the process.
 
 .. _construction_mode:
 
@@ -2006,6 +2005,20 @@ You can enable and disable *construction mode* by clicking on the
 shortcut. While in construction mode, clicking the map canvas won't add new
 vertexes, but will capture the clicks' positions so that you can use them as
 reference points to then lock distance, angle or X, Y, Z, M relative values.
+
+In the |cadConstruction| :sup:`Construction mode` you will find a drop-down menu
+where you can choose to:
+
+* |checkbox| :guilabel:`Record Construction Guides`: All construction steps are
+  rendered as dashed lines. Each step that you perform is visually represented,
+  allowing you to trace the construction process. The guides are displayed as
+  long as :guilabel:`Advanced Digitizing` remains active.
+* |checkbox| :guilabel:`Show Construction Guides`: Allows you to make construction
+  guides visible or hidden on the canvas. When enabled, all active guides are displayed,
+  offering better spatial orientation and precision during the digitizing process.
+* |checkbox| :guilabel:`Snap to Visible Construction Guides`: The guides are snap-able,
+  allowing you to start new construction steps from any point along the existing guides.
+* Choose :guilabel:`Clear Construction Guides` to remove all the guides from the canvas.
 
 As an example, the construction mode can be used to draw some point
 at an exact distance from an existing point.
@@ -2052,6 +2065,66 @@ and angle entered. Repeating the process, several points can be added.
    :align: center
 
    Points at given distance and angle
+
+.. _parallel_or_perpendicular:
+
+Parallel and perpendicular lines
+--------------------------------
+
+All the tools described above can be combined with the |cadPerpendicular|
+:sup:`Perpendicular` and |cadParallel| :sup:`Parallel` tools. These two tools
+allow drawing segments perfectly perpendicular or parallel to another segment.
+The target segment can be on another layer, another feature within the layer or
+the feature being digitized (requires :ref:`self-snapping option <self_snapping>`).
+
+To draw a *perpendicular* segment:
+
+#. First add one of the segment vertices.
+#. Click the |cadPerpendicular| :sup:`Perpendicular` icon
+   (keyboard shortcut :kbd:`P`) to activate it.
+#. Click on the segment that you want to be perpendicular to.
+#. A virtual dotted line perpendicular to the segment through the previous
+   vertex appears. The angle property is locked, constraining the next vertex
+   on that line and, a cross indicates the projected position of the cursor on the line.
+   Click to place the new vertex.
+
+   .. figure:: img/advanced_digitizing_perpendicular.png
+      :align: center
+
+      Perpendicular digitizing
+
+To draw a *parallel* segment, the steps are the same except that you need to
+click on the |cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`P` twice).
+
+.. figure:: img/advanced_digitizing_parallel.png
+   :align: center
+
+   Parallel digitizing
+
+These two tools just find the right angle of the perpendicular and
+parallel angle and lock this parameter during your editing.
+Unlock the angle parameter to cancel their use in the middle of the process.
+
+.. _circle_intersection:
+
+2-circle point intersection
+---------------------------
+
+To add a vertex at the intersection of two circles, follow these steps:
+
+#. Click the |circlesIntersection| :sup:`2-circle Point Intersection` icon.
+#. A dialog will open where you can define the parameters for
+   :guilabel:`Circle #1` and :guilabel:`Circle #2`.
+#. Click on the map canvas, and the tool will automatically calculate the
+   :guilabel:`X` and :guilabel:`Y` coordinates for the centers of both circles.
+#. Enter the distance :guilabel:`d` for each circle.
+#. The tool will calculate and display the two intersection points of the circles.
+#. Click one of the intersection points to add the new vertex.
+
+   .. figure:: img/circles_intersection.png
+      :align: center
+
+      2-circle Point Intersection
 
 
 .. index:: Edit in place
@@ -2150,6 +2223,8 @@ To edit features in-place:
 .. |circle3Tangents| image:: /static/common/mActionCircle3Tangents.png
    :width: 1.5em
 .. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
+   :width: 1.5em
+.. |circlesIntersection| image:: /static/common/circlesintersection.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em

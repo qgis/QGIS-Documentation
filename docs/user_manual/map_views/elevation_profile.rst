@@ -113,8 +113,12 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
      - Allows to render distances in the profile chart with units other than the map canvas units.
    * - :menuselection:`--> Tolerance`
      -
-     - Sets how far from the actual profile line a point can reside within to be included in the results.
+     - Sets how far from the actual profile line a feature (point, line, polygon, etc.)
+       can reside to be included in the results.
        Uses the map units and is ignored by other layer or geometry types.
+   * - :menuselection:`--> Rename Profile...`
+     -
+     - Allows to rename the profile view.
    * - |dock| :sup:`Dock Elevation Profile View`
      -
      - Switch between docked and floating status of the view
@@ -194,8 +198,13 @@ To create a profile view, you can:
 
 #. Under |options| :sup:`Options` drop-down menu, you can set the :guilabel:`Tolerance` value.
    This value is used to create a flat buffer around the elevation profile line, visible in the main map canvas.
-   Any visible point feature overlapping that buffer will be captured in the plot canvas.
+   Any visible feature (point, line, polygon, etc.) overlapping that buffer will be captured in the plot canvas.
 
+.. note:: **Limitations with polygon extrusion**
+
+  Geometry extrusion can be set in the |elevationscale| :guilabel:`Elevation` properties of a layer,
+  and rendered in the profile view. When tolerance is enabled, it is however not trivial to render extruded polygons,
+  thus, for now, polygon extrusion is ignored.
 
 .. _`elevation_profile_interaction`:
 
@@ -320,6 +329,8 @@ to export an elevation profile, allowing you to reuse the plots in another softw
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
+   :width: 1.5em
+.. |elevationscale| image:: /static/common/elevationscale.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em

@@ -22,13 +22,13 @@ and often write a lot of formats:
   MapInfo and MicroStation file formats, AutoCAD DWG/DXF,
   GRASS and many more...
   Read the complete list of `supported vector formats
-  <https://gdal.org/drivers/vector/index.html>`__.
+  <https://gdal.org/en/latest/drivers/vector/index.html>`__.
 * Raster data formats include GeoTIFF, JPEG, ASCII Gridded XYZ,
   MBTiles, R or Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data,
   ERDAS IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid, and
   many more...
   Read the complete list of `supported raster formats
-  <https://gdal.org/drivers/raster/index.html>`__.
+  <https://gdal.org/en/latest/drivers/raster/index.html>`__.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle,
   MS SQL Server, SAP HANA, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
@@ -39,7 +39,7 @@ and often write a lot of formats:
   layers.
 
 More than 80 vector and 140 raster formats are supported by
-`GDAL <https://gdal.org/>`_ and QGIS native providers.
+`GDAL <https://gdal.org/en/latest/>`_ and QGIS native providers.
 
 .. note::
 
@@ -382,8 +382,8 @@ To load a layer from a file:
    (encoding, geometry type, table filtering, file locking, data formatting ...)
    are available for configuring.
    These options are described in detail in the specific GDAL
-   `vector <https://gdal.org/drivers/vector/>`__
-   or `raster <https://gdal.org/drivers/raster>`__ driver documentation.
+   `vector <https://gdal.org/en/latest/drivers/vector/>`__
+   or `raster <https://gdal.org/en/latest/drivers/raster>`__ driver documentation.
    At the top of the options, a text with hyperlink will directly lead to the documentation
    of the appopriate driver for the selected file format.
 
@@ -450,9 +450,16 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * ``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required,
     an :ref:`authentication <authentication_index>`.
   * Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft
-    Azure Blob``, ``Alibaba OSS Cloud``, ``Open Stack Swift Storage``.
+    Azure Blob``, ``Microsoft Azure Data Lake Storage``, ``Alibaba OSS Cloud``, and
+    ``Open Stack Swift Storage`` supports direct control over VSI :guilabel:`Credential Options`
+    when adding OGR vector or GDAL raster layers.
     You need to fill in the :guilabel:`Bucket or container` and the
-    :guilabel:`Object key`.
+    :guilabel:`Object key` first. After that, you can add the necessary :guilabel:`Credential Options`.
+
+    When adding OGR vector or GDAL raster layers from the cloud based protocols,
+    you can also set additional :guilabel:`Credential options` for that specific driver and bucket.
+    When credential options are found in a layer's URI, they will also be automatically set.
+    This allows different layers to use different credentials.
   * service supporting OGC ``WFS 3`` (still experimental),
     using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
     ``CouchDB`` database.
@@ -460,8 +467,10 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   * For all vector source types it is possible to define the :guilabel:`Encoding` or
     to use the :menuselection:`Automatic -->` setting.
 
-* The |radioButtonOn| :guilabel:`OGC API` source type allows you to access `vector <https://gdal.org/drivers/vector/oapif.html>`_
-  and `raster <https://gdal.org/drivers/raster/ogcapi.html>`_ data from servers that implement the OGC API standards.
+* The |radioButtonOn| :guilabel:`OGC API` source type allows you to access
+  `vector <https://gdal.org/en/latest/drivers/vector/oapif.html>`_
+  and `raster <https://gdal.org/en/latest/drivers/raster/ogcapi.html>`_ data
+  from servers that implement the OGC API standards.
   To use this option:
   
   #. Select |radioButtonOn| :guilabel:`OGC API` from the :guilabel:`Data Source Manager`
@@ -523,8 +532,6 @@ is designed for.
 #. Enable the |addDelimitedTextLayer| :guilabel:`Delimited Text` tab
 #. Select the delimited text file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
    by clicking on the :guilabel:`...` :sup:`Browse` button.
-#. In the :guilabel:`Layer name` field, provide the name to use for
-   the layer in the project (e.g. :file:`Elevation`).
 #. Configure the settings to meet your dataset and needs, as explained below.
 
 .. _figure_delimited_text:
@@ -579,8 +586,7 @@ Field type detection
 
 QGIS tries to detect the field types automatically (unless
 |checkbox|:guilabel:`Detect field types` is not checked) by examining
-the content of an optional sidecar CSVT file (see:
-`GeoCSV specification <https://giswiki.hsr.ch/GeoCSV#CSVT_file_format_specification>`_)
+the content of an optional sidecar CSVT file (see `GeoCSV specification`_)
 and by scanning the whole file to make sure that all values can actually
 be converted without errors, the fall-back field type is text.
 
@@ -1115,7 +1121,7 @@ To create a new MS SQL Server connection, you need to provide some of the
 following information in the :guilabel:`Connection Details` dialog:
 
 * :guilabel:`Connection name`
-* :guilabel:`Provider/DNS`
+* :guilabel:`Provider/DSN`
 * :guilabel:`Host`
 * :guilabel:`Login` information. You can choose
   to |checkbox| :guilabel:`Save` your credentials.
@@ -1383,7 +1389,16 @@ Services can be either a :guilabel:`New Generic Connection...` or a
 You set up a service by adding:
 
 * a :guilabel:`Name`
-* the :guilabel:`URL`: of the type ``http://example.com/{z}/{x}/{y}.pbf`` for generic
+* a :guilabel:`Style URL`: a URL to a MapBox GL JSON style configuration.
+  If provided, then that style will be applied whenever the layers
+  from the connection are added to QGIS.
+  In the case of Arcgis vector tile service connections, the URL overrides
+  the default style configuration specified in the server configuration.
+
+  You can load vector tiles directly from a :guilabel:`Style URL`.
+  The data source is automatically parsed from the style, and URLs with multiple sources are supported.
+  That makes :guilabel:`Source URL` optional.
+* the :guilabel:`Source URL`: of the type ``http://example.com/{z}/{x}/{y}.pbf`` for generic
   services and ``http://example.com/arcgis/rest/services/Layer/VectorTileServer``
   for ArcGIS based services.
   The service must provide tiles in :file:`.pbf` format.
@@ -1395,23 +1410,18 @@ You set up a service by adding:
   For Mercator projection (used by OpenStreetMap Vector Tiles) Zoom Level 0
   represents the whole world at a scale of 1:500.000.000. Zoom Level 14
   represents the scale 1:35.000.
-* a :guilabel:`Style URL`: a URL to a MapBox GL JSON style configuration.
-  If provided, then that style will be applied whenever the layers
-  from the connection are added to QGIS.
-  In the case of Arcgis vector tile service connections, the URL overrides
-  the default style configuration specified in the server configuration.
 * the :ref:`authentication <authentication_index>` configuration if necessary
 * a :guilabel:`Referer`
 
-:numref:`figure_vector_tiles_maptilerplanet` shows the dialog with the
-MapTiler planet Vector Tiles service configuration.
+:numref:`figure_vector_tiles_configuration` shows the dialog with the
+Vector Tiles service configuration.
 
-.. _figure_vector_tiles_maptilerplanet:
+.. _figure_vector_tiles_configuration:
 
-.. figure:: img/vector_tiles_maptilerplanet.png
+.. figure:: img/vector_tiles_configuration.png
    :align: center
 
-   Vector Tiles - Maptiler Planet configuration
+   Vector Tiles - Service configuration
 
 Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
 through the :guilabel:`Vector Tiles` entry in :guilabel:`Data Source Manager`
@@ -1654,6 +1664,37 @@ to your map.
 
    Quantized Mesh layer
 
+.. index:: Cloud connections
+.. _cloud_connections:
+
+Using Cloud Connections
+-----------------------
+
+QGIS supports connections to cloud services like Alibaba Cloud OSS, Amazon S3, Google Cloud Storage,
+Microsoft Azure Blob Storage, Microsoft Azure Data Lake Storage, and OpenStack Swift Object Storage.
+You can load vector and raster data from these services into QGIS.
+Set up a new |cloud| :guilabel:`Cloud` connection in the :guilabel:`Browser` panel by right-clicking
+on the :guilabel:`Cloud` entry and selecting :guilabel:`New Connection`. You will see a drop-down list of
+available cloud services.
+Select the service you want to connect to and fill in the required fields:
+
+.. _figure_cloud_connection:
+
+.. figure:: img/cloud_connection.png
+   :align: center
+
+   Cloud Connection Dialog
+
+* :guilabel:`Name`: A name for the connection.
+* :guilabel:`Bucket or Container`: The name of the bucket or container in the cloud service.
+* :guilabel:`Object Key` (optional): The key of the object in the bucket or container.
+* :guilabel:`Credentials`: The credentials to access the cloud service.
+
+You can also choose to :guilabel:`Save Connection` to an XML file
+or :guilabel:`Load Connection` from an XML file.
+
+ .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -1692,6 +1733,8 @@ to your map.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |cloud| image:: /static/common/mIconCloud.png
+   :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
@@ -1725,8 +1768,6 @@ to your map.
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
-   :width: 1.5em
-.. |sourceFields| image:: /static/common/mSourceFields.png
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em

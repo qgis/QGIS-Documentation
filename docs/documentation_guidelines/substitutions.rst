@@ -283,7 +283,7 @@ Icon                     Substitution                 Icon                     S
 |labelingRuleBased|      ``|labelingRuleBased|``      |labelingObstacle|       ``|labelingObstacle|``
 |piechart|               ``|piechart|``               |diagramNone|            ``|diagramNone|``
 |text|                   ``|text|``                   |histogram|              ``|histogram|``
-|stackedBar|             ``|stackedBar|``
+|stackedBar|             ``|stackedBar|``             |stackedDiagram|         ``|stackedDiagram|``
 |createAnnotationLayer|  ``|createAnnotationLayer|``  |annotationLayer|        ``|annotationLayer|``
 |textAnnotation|         ``|textAnnotation|``         |svgAnnotation|          ``|svgAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
@@ -298,6 +298,7 @@ Icon                     Substitution                 Icon                     S
 |moveLabel|              ``|moveLabel|``              |rotateLabel|            ``|rotateLabel|``
 |showPinnedLabels|       ``|showPinnedLabels|``       |showUnplacedLabel|      ``|showUnplacedLabel|``
 |changeLabelProperties|  ``|changeLabelProperties|``  |autoPlacementSettings|  ``|autoPlacementSettings|``
+|labelingRules|          ``|labelingRules|``
 =======================  ===========================  =======================  ===========================
 
 Decorations
@@ -1131,6 +1132,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
    :width: 1.5em
+.. |labelingRules| image:: /static/common/mIconLabelingRules.png
+   :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |labelmask| image:: /static/common/labelmask.png
@@ -1587,6 +1590,8 @@ Icon                            Substitution                        Icon        
 .. |sqlQueryBuilder| image:: /static/common/sqlquerybuilder.png
    :width: 1.5em
 .. |stackedBar| image:: /static/common/stacked-bar.png
+   :width: 1.5em
+.. |stackedDiagram| image:: /static/common/stacked-diagram.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em

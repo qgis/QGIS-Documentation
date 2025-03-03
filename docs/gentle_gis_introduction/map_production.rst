@@ -58,7 +58,7 @@ A map is a simplified representation of the real world and **map symbols** are
 used to represent real objects. Without symbols, we wouldn't understand maps.
 To ensure that a person can correctly read a map, a map legend is used to provide
 a key to all the symbols used on the map. It is like a dictionary that allows you
-to understand the meaning of what the map shows. A map legend is usually shown a
+to understand the meaning of what the map shows. A map legend is usually shown as
 a little box in a corner of the map. It contains icons, each of which will
 represent a type of feature. For example, a *house* icon will show you how to
 identify houses on the map (see :numref:`figure_map_legend`).
@@ -143,7 +143,7 @@ For example, if we want to measure a distance of 100mm on a map with a scale of
    100 mm x 25,000 = 2,500,000 mm
 
 This means that 100 mm on the map is equivalent to 2,500,000 mm (2500 m) in the
-real word.
+real world.
 
 Another interesting aspect of a map scale, is that the lower the map scale, the
 more detailed the feature information in the map will be. In

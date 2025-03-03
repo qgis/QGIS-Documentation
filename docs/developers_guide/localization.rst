@@ -65,7 +65,7 @@ methods available in QT classes because these methods ignore locale settings.
 The same consideration applies to integral types and ``::toInt()`` or
 ``::toLongLong()`` methods.
 
-``QLocale().toDouble()`` or ``QLocale().toInt()`` and the others ``QLocale()``
+``QLocale().toDouble()`` or ``QLocale().toInt()`` and the other ``QLocale()``
 conversion methods can be used in this situation.
 
 As a better alternative, QGIS API provides a few classes that
@@ -87,7 +87,7 @@ The general recommendation is to use :class:`QgsDoubleSpinBox <qgis.gui.QgsDoubl
 for all floating point types I/O whenever it is possible because it is very well tested and
 it validates the input correctly. As an alternative it is possible
 to use the :class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` class
-independently on a string obtained from another widget (e.g. a simple
+independently on a string obtained from another widget (e.g., a simple
 ``QLineEdit`` widget).
 
 

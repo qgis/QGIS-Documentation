@@ -335,3 +335,42 @@ Resampling methods
 * 11 --- Third quartile (Q3)
 
 .. **end_raster_resampling_methods**
+
+
+Vector field types
+==================
+
+.. **vector_field_types**
+
+.. The following section is included in vector based algorithms such as
+  qgisaggregate, qgisrefactorfields
+
+* 1 --- Boolean
+* 2 --- Integer (32bit)
+* 4 --- Integer (64bit)
+* 6 --- Decimal (double)
+* 9 --- Integer list
+* 9 --- Integer (64bit) list
+* 9 --- Decimal (double) list
+* 10 --- Text (string)
+* 11 --- String list
+* 12 --- Binary Object (BLOB)
+* 14 --- Date
+* 15 --- Time
+* 16 --- Date & Time
+
+.. **end_vector_field_types**
+
+
+.. **vector_field_subtypes**
+
+.. The following section is included in vector based algorithms such as
+  qgisaggregate, qgisrefactorfields
+
+* 2 --- Integer list
+* 4 --- Integer (64bit) list
+* 6 --- Decimal (double) list
+* 10 --- String list
+* 0 --- Any other types
+
+.. **end_vector_field_subtypes**

@@ -184,15 +184,17 @@ To generate statistics on the distances between points in the two
 layers:
 
 #. Open the :menuselection:`Vector Analysis --> Distance matrix` tool.
-#. Select the ``distance_points`` layer as the input layer, and the
-   ``Sampled Points`` layer as the target layer.
-#. Set it up like this:
+#. Select the ``distance_points`` layer as the input layer,
+   and the ``Sampled Points`` layer as the target layer.
+#. Set their ``id`` field as unique field references
+#. Change the :guilabel:`Output matrix type` option into :guilabel:`Summary distance matrix`.
+#. set value of :guilabel:`Use only the nearest (k) target points` to ``2``.
+#. If you want you can save the output layer as a file or just run the
+   algorithm and save the temporary output layer later.
 
    .. figure:: img/distance_matrix_setup.png
       :align: center
 
-#. If you want you can save the output layer as a file or just run the
-   algorithm and save the temporary output layer later.
 #. Click :guilabel:`Run` to generate the distance matrix layer.
 #. Open the attribute table of the generated layer: values refer to
    the distances between the :guilabel:`distance_points` features and
@@ -202,12 +204,13 @@ layers:
       :align: center
 
 With these parameters, the *Distance Matrix* tool calculates distance
-statistics for each point of the input layer with respect to the
-nearest points of the target layer.
+statistics for each point of the input layer with respect to their
+two nearest points in the target layer.
 The fields of the output layer contain the mean, standard deviation,
-minimum and maximum for the distances to the nearest neighbors of the
-points in the input layer.
+minimum and maximum for the calculated distances.
 
+For further testing, you may want to modify the :guilabel:`Output matrix type` option
+or the number of target points.
 
 :abbr:`★☆☆ (Basic level)` Follow Along: Nearest Neighbor Analysis (within layer)
 ---------------------------------------------------------------------------------
@@ -291,8 +294,8 @@ compressed vertically.
 By zooming in to cover everything but the peak at ``0``, you will see
 more details:
 
-   .. figure:: img/histogram_export_zoom.png
-      :align: center
+.. figure:: img/histogram_export_zoom.png
+   :align: center
 
 .. note:: If the mean and maximum values are not the same as above, it
    can be due to the min/max value calculation.

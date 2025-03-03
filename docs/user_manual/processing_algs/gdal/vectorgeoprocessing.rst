@@ -59,8 +59,8 @@ Basic parameters
 
        Default: False
      - If set, the result is dissolved.
-	    If no field is set for dissolving, all the buffers are
-	    dissolved into one feature.
+       If no field is set for dissolving, all the buffers are
+       dissolved into one feature.
    * - **Produce one feature for each geometry in any kind of
        geometry collection in the source file**
      - ``EXPLODE_COLLECTIONS``
@@ -133,7 +133,7 @@ Clip vector by extent
 Clips any OGR-supported vector file to a given extent.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/programs/ogr2ogr.html>`_.
+`GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -230,7 +230,7 @@ Clip vector by mask layer
 Clips any OGR-supported vector layer by a mask polygon layer.
 
 This algorithm is derived from the `GDAL ogr2ogr utility
-<https://gdal.org/programs/ogr2ogr.html>`_.
+<https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -403,7 +403,7 @@ Advanced parameters
 
        Default: False
      - Compute the area and perimeter of dissolved features and
-	   include them in the output layer
+       include them in the output layer
    * - **Compute min/max/sum/mean for attribute**
      - ``COMPUTE_STATISTICS``
      - [boolean]
@@ -440,8 +440,7 @@ Outputs
    * - **Dissolved**
      - ``OUTPUT``
      - [same as input]
-     - The output multipart geometry layer (with dissolved
-	   geometries)
+     - The output multipart geometry layer (with dissolved geometries)
 
 Python code
 ...........
@@ -680,8 +679,7 @@ Python code
 
 Points along lines
 ------------------
-Generates a point on each line of a line vector layer at a distance
-from start.
+Generates a point on each line of a line vector layer at a distance from start.
 The distance is provided as a fraction of the line length.
 
 Parameters

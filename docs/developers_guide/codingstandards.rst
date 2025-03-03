@@ -7,86 +7,24 @@
 .. contents::
    :local:
 
-These standards should be followed by all QGIS developers.
+QGIS coding standards are described in the policy document available at `QEP #314 <https://github.com/qgis/QGIS-Enhancement-Proposals/blob/master/qep-314-coding-style.md>`_.
+All developers are required to follow those policies.
+Please note that QEP #314 is a live document, and that these policies may change over time.
 
 Classes
 =======
 
 
-Names
------
-
-Class in QGIS begin with Qgs and are formed using camel case.
-
-Examples:
-
-* ``QgsPoint``
-* ``QgsMapCanvas``
-* ``QgsRasterLayer``
-
-
-Members
--------
-
-
-Class member names begin with a lower case m and are formed using mixed
-case.
-
-* ``mMapCanvas``
-* ``mCurrentExtent``
-
-All class members should be private.
-Public class members are STRONGLY discouraged. Protected members should
-be avoided when the member may need to be accessed from Python subclasses,
-since protected members cannot be used from the Python bindings.
-
-Mutable static class member names should begin with a lower case ``s``,
-but constant static class member names should be all caps:
-
-* ``sRefCounter``
-* ``DEFAULT_QUEUE_SIZE``
-
-
 Accessor Functions
 ------------------
-
-
-Class member values should be obtained through accesssor functions. The
-function should be named without a get prefix. Accessor functions for the
-two private members above would be:
-
-* ``mapCanvas()``
-* ``currentExtent()``
 
 Ensure that accessors are correctly marked with ``const``. Where appropriate,
 this may require that cached value type member variables are marked with
 ``mutable``.
 
-Functions
----------
-
-
-Function names begin with a lowercase letter and are formed using mixed case.
-The function name should convey something about the purpose of the function.
-
-* ``updateMapExtent()``
-* ``setUserOptions()``
-
-For consistency with the existing QGIS API and with the Qt API, abbreviations
-should be avoided. E.g. ``setDestinationSize`` instead of ``setDestSize``,
-``setMaximumValue`` instead of ``setMaxVal``.
-
-Acronyms should also be camel cased for consistency. E.g. ``setXml`` instead
-of ``setXML``.
-
 
 Function Arguments
 ------------------
-
-
-Function arguments should use descriptive names. Do not use single letter
-arguments (e.g. ``setColor( const QColor& color )`` instead of
-``setColor( const QColor& c )``).
 
 Pay careful attention to when arguments should be passed by reference.
 Unless argument objects are small and trivially copied (such as QPoint
@@ -125,29 +63,6 @@ that give a reader information about what to expect, what happens in edge cases
 and give hints about other interfaces he could be looking for, best
 practices and code samples.
 
-Methods
--------
-
-Method descriptions should be written in a descriptive form, using the 3rd
-person. Methods require a ``\since`` tag that defines when they have been
-introduced. You should add additional ``\since`` tags for important changes
-that were introduced later on.
-
-.. code-block:: cpp
-
-  /**
-   * Cleans the laundry by using water and fast rotation.
-   * It will use the provided \a detergent during the washing programme.
-   *
-   * \returns True if everything was successful. If false is returned, use
-   * \link error() \endlink to get more information.
-   *
-   * \note Make sure to manually call dry() after this method.
-   *
-   * \since QGIS 3.0
-   * \see dry()
-   */
-
 Members Variables
 -----------------
 
@@ -155,30 +70,6 @@ Member variables should normally be in the ``private`` section and made
 available via getters and setters. One exception to this is for data
 containers like for error reporting. In such cases do not prefix the member
 with an ``m``.
-
-.. code-block:: cpp
-
-  /**
-   * \ingroup core
-   * Represents points on the way along the journey to a destination.
-   *
-   * \since QGIS 2.20
-   */
-  class QgsWaypoint
-  {
-    /**
-     * Holds information about results of an operation on a QgsWaypoint.
-     *
-     * \since QGIS 3.0
-     */
-    struct OperationResult
-    {
-      QgsWaypoint::ResultCode resultCode; //!< Indicates if the operation completed successfully.
-      QString message; //!< A human readable localized error message. Only set if the resultCode is not QgsWaypoint::Success.
-      QVariant result; //!< The result of the operation. The content depends on the method that returned it. \since QGIS 3.2
-    };
-  };
-
 
 Qt Designer
 ===========
@@ -209,23 +100,6 @@ of a dialog changes.
 C++ Files
 =========
 
-Names
------
-
-C++ implementation and header files should have a .cpp and .h extension
-respectively. Filename should be all lowercase and, in the case of classes,
-match the class name.
-
-Example:
-Class ``QgsFeatureAttribute`` source files are
-:file:`qgsfeatureattribute.cpp` and :file:`qgsfeatureattribute.h`
-
-.. note:: In case it is not clear from the statement above, for a filename
-  to match a class name it implicitly means that each class should be declared
-  and implemented in its own file. This makes it much easier for newcomers to
-  identify where the code is relating to specific class.
-
-
 Standard Header and License
 ----------------------------
 
@@ -255,74 +129,6 @@ example:
   mail address and - if required - the name and configure QtCreator to use it:
   :menuselection:`Tools --> Options --> C++ --> File Naming`.
 
-
-Variable Names
-===============
-
-Local variable names begin with a lower case letter and are formed using mixed
-case. Do not use prefixes like ``my`` or ``the``.
-
-Examples:
-
-* ``mapCanvas``
-* ``currentExtent``
-
-
-Enumerated Types
-=================
-
-Enumerated types should be named in CamelCase with a leading capital e.g.:
-
-.. code-block:: cpp
-
-  enum UnitType
-  {
-    Meters,
-    Feet,
-    Degrees,
-    UnknownUnit
-  };
-
-Do not use generic type names that will conflict with other types. e.g. use
-``UnknownUnit`` rather than ``Unknown``
-
-Global Constants & Macros
-==========================
-
-Global constants and macros should be written in upper case underscore separated
-e.g.:
-
-.. code-block:: cpp
-
-  const long GEOCRS_ID = 3344;
-
-Comments
-========
-
-Comments to class methods should use a third person indicative style instead
-of the imperative style:
-
-.. code-block:: cpp
-
-    /**
-     * Creates a new QgsFeatureFilterModel, optionally specifying a \a parent.
-     */
-    explicit QgsFeatureFilterModel( QObject *parent = nullptr );
-    ~QgsFeatureFilterModel() override;
-
-
-Qt Signals and Slots
-====================
-
-All signal/slot connects should be made using the "new style" connects available
-in Qt5. Futher information on this requirement is available in
-`QEP #77 <https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_.
-
-Avoid use of Qt auto connect slots (i.e. those named
-``void on_mSpinBox_valueChanged``). Auto connect slots are fragile and
-prone to breakage without warning if dialogs are refactored.
-
-
 Editing
 =======
 
@@ -351,23 +157,6 @@ complete reindentation of the source, the script uses an old astyle version,
 that we include in our repository (enable ``WITH_ASTYLE`` in cmake to include
 it in the build).
 
-Braces
-------
-
-Braces should start on the line following the expression:
-
-.. code-block:: cpp
-
-  if( foo == 1 )
-  {
-    // do stuff
-    ...
-  }
-  else
-  {
-    // do something else
-    ...
-  }
 
 API Compatibility
 ==================
@@ -480,9 +269,8 @@ Improving sipify script
 
 If some improvements are required for sipify script, please add the missing bits
 to the demo file :source:`sipifyheader.h <tests/code_layout/sipify/sipifyheader.h>`
-and create the expected header :source:`sipifyheader.expected.sip
-<tests/code_layout/sipify/sipifyheader.expected.sip>`. This will also be
-automatically tested as a unit test of the script itself.
+and create the expected header :file:`sipifyheader.expected.sip` file.
+This will also be automatically tested as a unit test of the script itself.
 
 
 Settings
@@ -522,40 +310,6 @@ This will:
   thus making it harder to understand and maintain for others
 
 
-Prefer Having Constants First in Predicates
---------------------------------------------
-
-Prefer to put constants first in predicates.
-
-``0 == value`` instead of ``value == 0``
-
-This will help prevent programmers from accidentally using ``=`` when they meant
-to use ``==``, which can introduce very subtle logic bugs. The compiler will
-generate an error if you accidentally use ``=`` instead of ``==`` for comparisons
-since constants inherently cannot be assigned values.
-
-Whitespace Can Be Your Friend
-------------------------------
-
-Adding spaces between operators, statements, and functions makes it easier for
-humans to parse code.
-
-Which is easier to read, this:
-
-.. code-block:: cpp
-
-  if (!a&&b)
-
-or this:
-
-.. code-block:: cpp
-
-  if ( ! a && b )
-
-.. note:: :source:`prepare_commit.sh <scripts/prepare_commit.sh>` script will
- take care of this.
-
-
 Put commands on separate lines
 -------------------------------
 
@@ -582,24 +336,6 @@ Instead use
     
   baz();
   bar();
-
-Indent access modifiers
-------------------------
-
-Access modifiers structure a class into sections of public API, protected API
-and private API. Access modifiers themselves group the code into this structure.
-Indent the access modifier and declarations.
-
-.. code-block:: cpp
-
-  class QgsStructure
-  {
-    public:
-      /**
-       * Constructor
-       */
-       explicit QgsStructure();
-  }
 
 
 Book recommendations
@@ -628,9 +364,8 @@ contribution by:
     This feature was developed by: Chuck Norris https://chucknorris.kr
 
 * writing an article about the new feature on a blog, 
-  and add it to the QGIS planet https://plugins.qgis.org/planet/
+  and add it to `QGIS Planet <https://planet.qgis.org/>`_
 * adding their name to:
 
   * :source:`doc/CONTRIBUTORS`
   * :source:`doc/AUTHORS`
-

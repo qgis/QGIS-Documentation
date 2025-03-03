@@ -312,8 +312,8 @@ This renderer allows you to render a raster layer using :guilabel:`Single color`
 This type of renderer is useful when you want to display a raster layer
 uniformly, without any variation in color based on pixel values.
 
-The single color renderer can be used with both single-band and multi-band raster layers.
-When used with multi-band rasters, you can select which band to apply the single color to,
+The single color renderer can be used with both single-band and multiband raster layers.
+When used with multiband rasters, you can select which band to apply the single color to,
 effectively displaying that specific band uniformly across the entire layer.
 
 .. _figure_raster_singlecolor:
@@ -660,8 +660,13 @@ in the :guilabel:`Custom transparency options` section:
 
   #. Click the |symbologyAdd| :sup:`Add values manually` button.
      A new row will appear in the pixel list.
-  #. Enter the **Red**, **Green** and **Blue** values of the pixel and
+  #. For single-band based symbology (e.g. DEMs), enter the **From** and **To** values and
      adjust the **Percent Transparent** to apply.
+  #. For multiband based symbology (e.g. RGB images) enter the **Red**, **Green** and **Blue** values of the pixel and
+     adjust the **Percent Transparent** to apply.
+     QGIS supports **Tolerance** for pixel values, when defining transparency.
+     This means that pixels with color close to the specified RGB values can also
+     be made transparent. Note that this feature applies only to multiband rasters.
   #. Alternatively, you can fetch the pixel values directly from the
      raster using the |contextHelp| :sup:`Add values from display`
      button.
@@ -676,6 +681,13 @@ in the :guilabel:`Custom transparency options` section:
   The button |fileOpen| :sup:`Import from file` loads your transparency
   settings and applies them to the current raster layer.
 
+    .. only:: html
+
+    .. figure:: img/tolerances_for_pixel_values.gif
+       :align: center
+       :width: 100%
+
+       Using tolerances for multiband rasters
 
 .. index:: Histogram
 .. _raster_histogram:
@@ -1002,7 +1014,7 @@ pixels identification:
   You can check the result of your code sample in the :guilabel:`Preview` frame. You can also select and
   edit existing expressions using the :guilabel:`Insert/Edit Expression` button.
 
-   .. note:: Understanding the :guilabel:`Insert/Edit Expression` button behavior
+  .. note:: **Understanding the** :guilabel:`Insert/Edit Expression` **button behavior**
 
     If you select some text within an expression (between "[%" and "%]"),
     or if no text is selected but the cursor is inside an expression,
@@ -1163,5 +1175,3 @@ such as:
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/unchecked.png
-   :width: 1.3em

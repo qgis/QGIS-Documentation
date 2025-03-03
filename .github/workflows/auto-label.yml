@@ -13,13 +13,16 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       BODY: "${{ github.event.issue.body }}"
-      MILESTONE: 18 # See https://api.github.com/repos/qgis/QGIS-Documentation/milestones
+      MILESTONE: 19 # See https://api.github.com/repos/qgis/QGIS-Documentation/milestones
     runs-on: ubuntu-latest
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@91182cccc01eb5e619899d80e4e971d6181294a7 # v2.10.1
+        uses: step-security/harden-runner@cb605e52c26070c328afc4562f0b4ada7618a84e # v2.10.4
         with:
-          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+          disable-sudo: true
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
 
       - id: find_version_label
         name: Find Target version

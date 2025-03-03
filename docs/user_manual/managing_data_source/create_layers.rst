@@ -45,6 +45,8 @@ To create a new GeoPackage layer, press the |newGeoPackageLayer|
 :menuselection:`New GeoPackage Layer...` button in the
 :menuselection:`Layer --> Create Layer -->` menu or from the
 :guilabel:`Data Source Manager` toolbar.
+You can also create a new GeoPackage layer trought the :guilabel:`Browser Panel`
+by selecting the :guilabel:`Create Database and Layer...`. 
 The :guilabel:`New GeoPackage Layer` dialog will be displayed as shown in
 :numref:`figure_create_geopackage`.
 
@@ -445,7 +447,7 @@ Depending on the format of export, some of these options may be available:
      the data as a hidden attribute. Only some formats can handle this kind of
      information. KML, DXF and TAB file formats are such formats. For advanced
      details, you can read the `OGR Feature Styles specification
-     <https://gdal.org/user/ogr_feature_style.html>`_ document.
+     <https://gdal.org/en/latest/user/ogr_feature_style.html>`_ document.
 
 * :guilabel:`Geometry`: you can configure the geometry capabilities of the
   output layer
@@ -468,10 +470,10 @@ Depending on the format of export, some of these options may be available:
 * :guilabel:`Datasource Options`, :guilabel:`Layer Options` or
   :guilabel:`Custom Options` which allow you to configure advanced parameters
   depending on the output format. Some are described in :ref:`supported_format`
-  but for full details, see the `GDAL <https://gdal.org>`_ driver documentation.
+  but for full details, see the `GDAL <https://gdal.org/en/latest>`_ driver documentation.
   Each file format has its own custom parameters, e.g. for the ``GeoJSON`` format
   have a look at the
-  `GDAL GeoJSON <https://gdal.org/drivers/vector/geojson.html#layer-creation-options>`_
+  `GDAL GeoJSON <https://gdal.org/en/latest/drivers/vector/geojson.html#layer-creation-options>`_
   documentation.
 
 .. _figure_save_vector:

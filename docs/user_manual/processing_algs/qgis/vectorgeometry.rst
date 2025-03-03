@@ -303,41 +303,55 @@ Parameters
        For each of the fields you'd like to retrieve information from,
        you need to define the following:
 
-       ``Input expression`` [expression] (``input``)
+       :guilabel:`Input expression` (``input``) [expression]
          Field or expression from the input layer.
 
-       ``Aggregate function`` [enumeration] (``aggregate``)
-         :ref:`Function <aggregates_function>` to use on the input
-         expression to return the aggregated value.
+       :guilabel:`Aggregate function` (``aggregate``) [enumeration]
+         Function to use on the input expression to return the aggregated value.
+         These are mainly the :ref:`aggregates_function`, plus dedicated
+         "first_value" and "last_value" functions for ordered list items.
 
          Default: *concatenate* (for string data type), *sum* (for
          numeric data type)
 
-       ``Delimiter`` [string] (``delimiter``)
+       :guilabel:`Delimiter` (``delimiter``) [string]
          Text string to separate aggregated values, for example in
          case of concatenation.
 
          Default: *,*
 
-       ``Output field name`` [string] (``name``)
+       :guilabel:`Output field name` (``name``) [string]
          Name of the aggregated field in the output layer.
          By default input field name is kept.
 
-       ``Type`` [enumeration] (``type``)
-         Data type of the output field. One of:
+       :guilabel:`Type` (``type``) [enumeration]
+         Data type of the output field.
+         Available types may not be compatible with the output layer provider.
+         One of:
 
-         * 1 --- Boolean
-         * 2 --- Integer
-         * 4 --- Integer64
-         * 6 --- Double
-         * 10 --- String
-         * 14 --- Date
-         * 16 --- DateTime
+         .. attention:: For certain field types, e.g. lists,
+          an extra ``sub_type`` parameter helps refine the specific type of the data.
+          It is automatically set in the GUI but may be needed
+          if you're running the algorithm in Python or from the command line.
 
-       ``Length`` [number] (``length``)
+         .. include:: ../algs_include.rst
+            :start-after: **vector_field_types**
+            :end-before: **end_vector_field_types**
+
+       :guilabel:`Sub-type` (``sub_type``) [enumeration]
+         For certain field types, e.g. lists, this parameter helps refine the specific ``type`` of the data.
+         It is automatically set in the GUI but may be needed
+         if you're running the algorithm in Python or from the command line.
+         One of:
+
+         .. include:: ../algs_include.rst
+            :start-after: **vector_field_subtypes**
+            :end-before: **end_vector_field_subtypes**
+
+       :guilabel:`Length` (``length``) [number]
          Length of the output field.
 
-       ``Precision`` [number] (``precision``)
+       :guilabel:`Precision` (``precision``) [number]
          Precision of the output field.
 
    * - **Load fields from layer**
@@ -356,7 +370,6 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-
 
 Outputs
 .......
@@ -587,8 +600,7 @@ Basic parameters
      - Buffer distance (from the boundary of each feature).
        You can use the Data Defined button on the right to choose
        a field from which the radius will be calculated.
-       This way you can have different radius for each feature
-       (see :ref:`qgisvariabledistancebuffer`).
+       This way you can have different radius for each feature.
    * - **Segments**
      - ``SEGMENTS``
      - [number]
@@ -844,7 +856,7 @@ additional information (number of errors found and types of error):
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisfixgeometries` and the core plugin
-   :ref:`geometry_checker`
+   :ref:`geometry_checker`, :ref:`qgiscoveragevalidate`
 
 Parameters
 ..........
@@ -2134,7 +2146,7 @@ input feature that happens to be processed.
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
+.. seealso:: :ref:`qgiscoverageunion`, :ref:`qgisaggregate`, :ref:`qgiscollect`
 
 Parameters
 ..........
@@ -2512,6 +2524,13 @@ line.
 Each line in the resulting layer contains only a start and an end
 point, with no intermediate vertices between them.
 
+If the input layer consists of CircularStrings or CompoundCurves,
+the output layer will be of the same type and contain only single curve segments.
+
+.. note::
+
+ * This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+ * This algorithm does not require valid geometries as input.
 
 .. figure:: img/explode_lines.png
    :align: center
@@ -4929,8 +4948,6 @@ Parameters
      - [vector: line]
      - Input line vector layer
    * - **Keep fields from the input layer**
-
-       Optional
      - ``KEEP_FIELDS``
      - [boolean]
 
@@ -6152,7 +6169,7 @@ of line and polygon features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgissmoothgeometry`, :ref:`qgisdensifygeometries`,
+.. seealso:: :ref:`qgiscoveragesimplify`, :ref:`qgissmoothgeometry`, :ref:`qgisdensifygeometries`,
  :ref:`qgisdensifygeometriesgivenaninterval`
 
 Parameters
@@ -6393,9 +6410,8 @@ this will not be smoothed. For example, setting the maximum angle to
 :ref:`features in-place modification <processing_inplace_edit>`
 of line and polygon features
 
-.. seealso:: :ref:`qgissimplifygeometries`,
-   :ref:`qgisdensifygeometries`,
-   :ref:`qgisdensifygeometriesgivenaninterval`
+.. seealso:: :ref:`qgissimplifygeometries`, :ref:`qgiscoveragesimplify`,
+   :ref:`qgisdensifygeometries`, :ref:`qgisdensifygeometriesgivenaninterval`
 
 Parameters
 ..........

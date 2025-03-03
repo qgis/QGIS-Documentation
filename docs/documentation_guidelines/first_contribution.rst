@@ -19,8 +19,8 @@ follow, the tricks you can use and the traps you should be aware of.
 
 For any help, do not hesitate to either ask in a comment on the issue report you
 are trying to fix or write to the `QGIS-community-team list
-<https://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_. More details at
-`Get involved in documentation <https://qgis.org/en/site/getinvolved/document.html>`_.
+<https://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_.
+Read general information on `QGIS community support <https://qgis.org/resources/support/>`_.
 
 Let's now dive into the process.
 
@@ -51,7 +51,7 @@ The GitHub web interface allows you to do the following:
 * create, update, or delete branches
 
 If you are not yet familiar with git and GitHub vocabulary, you may want to
-read the GitHub `Hello-world <https://docs.github.com/en/get-started/quickstart/hello-world>`_
+read the GitHub `Hello-world <https://docs.github.com/en/get-started/start-your-journey/hello-world>`_
 project to learn some basic vocabulary and actions that will be used below.
 
 .. note:: **If you are fixing a reported issue**
@@ -64,7 +64,7 @@ project to learn some basic vocabulary and actions that will be used below.
 Fork QGIS-Documentation
 --------------------------
 
-Assuming you already have a `GitHub account <https://github.com/join>`_,
+Assuming you already have a `GitHub account <https://github.com/signup>`_,
 you first need to fork the source files of the documentation.
 
 Navigate to the `QGIS-Documentation repository

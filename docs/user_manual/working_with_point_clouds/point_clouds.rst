@@ -32,7 +32,7 @@ QGIS supports the data formats Entwine Point Tile (EPT) and LAS/LAZ. To
 work with point clouds, QGIS always saves the data in EPT. EPT is a storage
 format that consists of several files stored in a common folder. To allow
 quick access to the data, EPT uses indexing. For more information on the EPT
-format, see `entwine homepage <https://entwine.io/entwine-point-tile.html>`_
+format, see `entwine homepage <https://entwine.io/en/latest/entwine-point-tile.html>`_
 
 If the data is in LAS or LAZ format, QGIS will convert it to EPT when it is
 loaded for the first time. Depending on the size of the file, this may take
@@ -623,6 +623,17 @@ the Z-values of the data. This may be necessary to adjust the elevation of
 the data in 3D maps and its appearance in the :ref:`profile tool charts <label_elevation_profile_view>`.
 There are following options:
 
+* :guilabel:`Vertical Reference System`: If the CRS of your point cloud layer is a compound one
+  (including a Z dimension), then the vertical CRS used for the layer will be automatically derived from
+  the vertical component of the layer's CRS.
+  In this case, you cannot manually set a different vertical CRS, and the option to change it will be disabled.
+  If your point cloud layer uses a horizontal (2D) CRS (though uncommon),
+  you can manually select a specific vertical CRS by clicking on the |setProjection|:sup:`Select CRS`.
+  Vertical reference systems are supported for point cloud layers in:
+
+   * :ref:`Elevation profiles <label_elevation_profile_view>`
+   * :ref:`Identify Tool Results <identify_results_dialog>`
+   * :ref:`3D map views <label_3dmapview>`
 * Under :guilabel:`Elevation` group:
 
   * You can set a :guilabel:`Scale`: If ``10`` is entered here, a point that has a
