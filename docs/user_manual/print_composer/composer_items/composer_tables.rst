@@ -309,7 +309,7 @@ to open the :guilabel:`Table designer` dialog where you can build your table:
   * Either manually enter the contents of each cell,
     or use an |expression| :guilabel:`Expression` to automatically populate it.
   * Under the :guilabel:`Formatting` group, set specific options that apply to the selection
-    and take precedence over the `global table content styling <layout_table_fonts_and_styling>`:
+    and take precedence over the :ref:`global table content styling <layout_table_fonts_and_styling>`:
 
     * by choosing the :guilabel:`Text format`
     * by |checkbox| :guilabel:`Format as number` (several formats are available)

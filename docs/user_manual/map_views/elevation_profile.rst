@@ -40,7 +40,7 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
    :widths: 20 10 70
 
    * - Tool
-     - Shorcut
+     - Shortcut
      - Description
    * - |addLayer| :sup:`Add Layers`
      - hold :kbd:`Ctrl` while drag-and-drop
