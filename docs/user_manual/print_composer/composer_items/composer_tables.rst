@@ -283,7 +283,7 @@ to open the :guilabel:`Table designer` dialog where you can build your table:
   * :menuselection:`File --> Close editor`: it closes the :guilabel:`Table Designer` dialog.
   * From the :menuselection:`Edit` menu, you can work with selection functionalities for rows and columns:
 
-    * :guilabel:`Select all` cells in the table
+    * :guilabel:`Select all`: cells in the table
     * :guilabel:`Select columns` or :guilabel:`Select Rows`: when cells are selected in the table,
       you can extend the selection respectively to their column(s) or row(s) 
     * :guilabel:`Clear Cells`: deletes the content of the selected cells
