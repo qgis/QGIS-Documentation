@@ -953,7 +953,7 @@ Parameters
          One of:
 
          .. attention:: For certain field types, e.g. lists,
-          an extra ``sub_type`` parameter helps refine the the specific type of the data.
+          an extra ``sub_type`` parameter helps refine the specific type of the data.
           It is automatically set in the GUI but may be needed
           if you're running the algorithm in Python or from the command line.
 
