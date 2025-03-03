@@ -5,10 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
-# tomoya miyoshi, 2024
-# fairtommy <fairtommy@gmail.com>, 2024
+# Harrissou Sant-anna, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,8 +14,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2024\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -323,9 +321,8 @@ msgid ""
 "would be better if the naming would be something like ``p_1, p_2...``. You "
 "can create a new column for the ``systematic_plots_clip`` layer:"
 msgstr ""
-"それにしても、``id`` "
-"フィールドの数値はあまりよくありません。``p_1、p_2...``のような命名が良いでしょう。``systematic_plots_clip`` "
-"レイヤに新しい列を作成することができます:"
+"それにしても、``id`` フィールドの数値はあまりよくありません。``p_1、p_2...`` "
+"のような命名が良いでしょう。``systematic_plots_clip`` レイヤに新しい列を作成することができます:"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:123
 msgid "Go to the :guilabel:`Attribute table` for ``systematic_plots_clip``."
@@ -358,6 +355,19 @@ msgstr ":guilabel:`出力する属性（フィールド）の名前` に ``Plot_
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:129
 msgid "Set the :guilabel:`Output field type` to :guilabel:`Text (string)`."
 msgstr ":guilabel:`フィールド型` に :guilabel:`テキスト(string)` を設定します。"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:130
+msgid ""
+"In the :guilabel:`Expression` field, write, copy or construct this formula "
+"``concat('P_', @row_number )``. Remember that you can also double click on "
+"the elements inside the :guilabel:`Function list`. The ``concat`` function "
+"can be found under :guilabel:`String` and ``@row_number`` is under the "
+":guilabel:`Variables` group."
+msgstr ""
+":guilabel:`式` フィールドに、この式 ``concat('P_', @row_number )`` "
+"を書くか、コピーするか、構成します。:guilabel:`関数リスト` "
+"の中の要素をダブルクリックすることもできることを思い出してください。``concat`` 関数は "
+":guilabel:`文字列(String)`の下に、``@row_number``は :guilabel:`変数と値`グループの下にあります。"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:135
 msgid "Disable the edit mode and save your changes."
@@ -422,9 +432,9 @@ msgstr ":guilabel:`EPSG:4326 - WGS 84` をブラウズします。"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:167
 msgid ""
-"The `GPX <https://gdal.org/en/latest/drivers/vector/gpx.html>`_ format accepts only "
-"this CRS, if you select a different one, QGIS will give no error but you "
-"will get an empty file."
+"The `GPX <https://gdal.org/en/latest/drivers/vector/gpx.html>`_ format "
+"accepts only this CRS, if you select a different one, QGIS will give no "
+"error but you will get an empty file."
 msgstr ""
 "`GPX <https://gdal.org/en/latest/drivers/vector/gpx.html>`_ "
 "形式はこのCRSしか受け付けません。違うものを選ぶと、QGISはエラーを返しませんが、空のファイルができます。"
