@@ -5,18 +5,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
-# DiGro, 2024
+# Harrissou Sant-anna, 2025
+# DiGro, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: DiGro, 2024\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:35+0000\n"
+"Last-Translator: DiGro, 2025\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1027,14 +1026,46 @@ msgstr ""
 " voeren:"
 
 #: ../../docs/developers_guide/unittesting.rst:707
+msgid "Sandboxing test run"
+msgstr "Zandbak test uitvoeren"
+
+#: ../../docs/developers_guide/unittesting.rst:709
+msgid ""
+"By default all test temporary files are written to the system temp directory"
+" (for example ``/tmp/`` on Linux systems or ``C:\\temp`` on Windows). A lot "
+"of files can be created in this directory during the test run."
+msgstr ""
+"Standaard worden alle tijdelijke testbestanden weggeschreven naar de map "
+"temp van het systeem (bijvoorbeeld ``/tmp/`` op Linux systemen of "
+"``C:\\temp`` op Windows). Bij het uitvoeren van een test uitvoering zouden "
+"veel bestanden in deze map kunnen worden gemaakt."
+
+#: ../../docs/developers_guide/unittesting.rst:712
+msgid ""
+"If you do not want to mix up with the common system temp directory (for "
+"example on a multi user server or in case of permission issue), you can "
+"create your own temp directory and specify it to ``ctest`` by setting the "
+"``TMPDIR`` environment variable with your new directory."
+msgstr ""
+"Als u de algemene map temp van het systeem niet te veel wilt belasten "
+"(bijvoorbeeld op een server met meerdere gebruikers of in het geval van een "
+"probleem met rechten), kunt u uw eigen map temp maken en die specificeren "
+"naar ``ctest`` door de omgevingsvariabele ``TMPDIR`` in te stellen op uw "
+"nieuwe map."
+
+#: ../../docs/developers_guide/unittesting.rst:715
+msgid "On Linux you could do it with:"
+msgstr "Op Linux zou u dat kunnen doen met:"
+
+#: ../../docs/developers_guide/unittesting.rst:724
 msgid "Debugging unit tests"
 msgstr "Debuggen met eenheidstesten"
 
-#: ../../docs/developers_guide/unittesting.rst:710
+#: ../../docs/developers_guide/unittesting.rst:727
 msgid "C++ Tests"
 msgstr "C++-testen"
 
-#: ../../docs/developers_guide/unittesting.rst:712
+#: ../../docs/developers_guide/unittesting.rst:729
 msgid ""
 "For C++ unit tests, QtCreator automatically adds run targets, so you can "
 "start them from the debugger."
@@ -1042,7 +1073,7 @@ msgstr ""
 "Voor eenheidstesten in C++ voegt QtCreator automatisch doelen voor "
 "uitvoering toe, dus u kunt ze vanuit de debugger starten."
 
-#: ../../docs/developers_guide/unittesting.rst:715
+#: ../../docs/developers_guide/unittesting.rst:732
 msgid ""
 "If you go to *Projects* and there to the *Build & Run* --> Desktop *Run* "
 "tab, you can also specify command line parameters that will allow a subset "
@@ -1053,11 +1084,11 @@ msgstr ""
 " dat een subset van de testen worden uitgevoerd binnen een bestand .cpp in "
 "de debugger."
 
-#: ../../docs/developers_guide/unittesting.rst:720
+#: ../../docs/developers_guide/unittesting.rst:737
 msgid "Python Tests"
 msgstr "Python-testen"
 
-#: ../../docs/developers_guide/unittesting.rst:722
+#: ../../docs/developers_guide/unittesting.rst:739
 msgid ""
 "It's also possible to start Python unit tests from QtCreator with GDB. For "
 "this, you need to go to :guilabel:`Projects` and choose :guilabel:`Run` "
@@ -1074,45 +1105,45 @@ msgstr ""
 "Python van de eenheidstest, bijv. "
 ":file:`/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py`."
 
-#: ../../docs/developers_guide/unittesting.rst:730
+#: ../../docs/developers_guide/unittesting.rst:747
 msgid "Now also change the ``Run Environment`` and add 3 new variables:"
 msgstr "Wijzig nu ook de ``Run Environment`` en voeg 3 nieuwe variabelen toe:"
 
-#: ../../docs/developers_guide/unittesting.rst:733
+#: ../../docs/developers_guide/unittesting.rst:750
 msgid "Variable"
-msgstr "Variable"
+msgstr "Variabele"
 
-#: ../../docs/developers_guide/unittesting.rst:733
+#: ../../docs/developers_guide/unittesting.rst:750
 msgid "Value"
 msgstr "Waarde"
 
-#: ../../docs/developers_guide/unittesting.rst:735
+#: ../../docs/developers_guide/unittesting.rst:752
 msgid "PYTHONPATH"
 msgstr "PYTHONPATH"
 
-#: ../../docs/developers_guide/unittesting.rst:735
+#: ../../docs/developers_guide/unittesting.rst:752
 msgid ""
 "[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
 msgstr ""
 "[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
 
-#: ../../docs/developers_guide/unittesting.rst:737
+#: ../../docs/developers_guide/unittesting.rst:754
 msgid "QGIS_PREFIX_PATH"
 msgstr "QGIS_PREFIX_PATH"
 
-#: ../../docs/developers_guide/unittesting.rst:737
+#: ../../docs/developers_guide/unittesting.rst:754
 msgid "[build]/output"
 msgstr "[build]/output"
 
-#: ../../docs/developers_guide/unittesting.rst:739
+#: ../../docs/developers_guide/unittesting.rst:756
 msgid "LD_LIBRARY_PATH"
 msgstr "LD_LIBRARY_PATH"
 
-#: ../../docs/developers_guide/unittesting.rst:739
+#: ../../docs/developers_guide/unittesting.rst:756
 msgid "[build]/output/lib"
 msgstr "[build]/output/lib"
 
-#: ../../docs/developers_guide/unittesting.rst:742
+#: ../../docs/developers_guide/unittesting.rst:759
 msgid ""
 "Replace ``[build]`` with your build directory and ``[source]`` with your "
 "source directory."
@@ -1120,11 +1151,11 @@ msgstr ""
 "Vervang ``[build]`` door de map van uw build en ``[source]`` door de map van"
 " uw bron."
 
-#: ../../docs/developers_guide/unittesting.rst:746
+#: ../../docs/developers_guide/unittesting.rst:763
 msgid "Have fun"
 msgstr "Veel plezier"
 
-#: ../../docs/developers_guide/unittesting.rst:748
+#: ../../docs/developers_guide/unittesting.rst:765
 msgid ""
 "Well that concludes this section on writing unit tests in QGIS. We hope you "
 "will get into the habit of writing test to test new functionality and to "
