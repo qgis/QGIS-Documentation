@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #This script is used to clean no longer needed images from sources
 # Run from repository root
