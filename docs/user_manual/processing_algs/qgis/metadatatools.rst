@@ -177,3 +177,57 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _qgissetlayermetadata:
+
+Set Layer Metadata
+------------------
+
+Applies metadata to a layer from a QMD file.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer**
+     - ``INPUT``
+     - [layer]
+     - The layer to which the metadata will be applied.
+   * - **Metadata file**
+     - ``METADATA``
+     - [file]
+     - The QMD file containing the metadata to be applied.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+     - The input layer with the metadata replaced by the metadata from the QMD file.
+
+
+Python code
+...........
+
+**Algorithm ID**: ``native:setlayermetadata``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
