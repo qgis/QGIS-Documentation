@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script is used to batch replace strings in the repo, either rst or po files
 # It can be used to fix e.g. broken or redirected URLs (spotted using linkcheck),
