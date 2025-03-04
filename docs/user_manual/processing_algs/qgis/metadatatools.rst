@@ -117,3 +117,63 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _qgisexportlayermetadata:
+
+Export Layer Metadata
+---------------------
+
+Exports the metadata of a layer to a QMD file.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer**
+     - ``INPUT``
+     - [layer]
+     - The layer whose metadata will be exported.
+   * - **Output**
+     - ``OUTPUT``
+     - [file]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output file. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output file**
+     - ``OUTPUT``
+     - [file]
+     - The QMD file containing the exported metadata. This file can be used to import metadata into another layer.
+
+
+Python code
+...........
+
+**Algorithm ID**: ``native:exportlayermetadata``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
