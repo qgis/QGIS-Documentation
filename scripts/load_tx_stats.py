@@ -234,7 +234,7 @@ print('language_rate', language_rate)
 # Store the stats as a table in a rst file
 statsfile = path.join(path.dirname(__file__),
                       '..',
-                      'docs/user_manual/preamble/translation_stats.rst'
+                      'docs/about/translation_stats.rst'
                       )
 with open(statsfile, 'w') as f:
     f.write(f":orphan:\n\n"
