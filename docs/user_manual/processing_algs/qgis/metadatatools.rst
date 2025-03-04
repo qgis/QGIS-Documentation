@@ -46,9 +46,9 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Output layer**
+   * - **Output**
      - ``OUTPUT``
-     - [layer: any]
+     - [same as input]
      - The resulting layer with the updated history metadata in its **Information properties**. 
 
 
