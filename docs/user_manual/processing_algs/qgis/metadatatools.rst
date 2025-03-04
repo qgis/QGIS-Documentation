@@ -60,3 +60,60 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _qgiscopylayermetadata:
+
+Copy Layer Metadata
+-------------------
+
+Copies metadata from a source layer to a target layer.
+Any existing metadata in the target layer will be replaced with the metadata from the source layer.
+This includes all metadata fields, such as history, abstract, and other properties.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Source layer**
+     - ``SOURCE``
+     - [layer]
+     - The layer from which metadata will be copied.
+   * - **Target layer**
+     - ``TARGET``
+     - [layer]
+     - The layer to which metadata will be copied. Any existing metadata in this layer will be replaced.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [layer]
+     - The target layer with the metadata replaced by the metadata from the source layer.
+       This includes all metadata fields, such as history, abstract, and other properties.
+
+
+Python code
+...........
+
+**Algorithm ID**: ``native:copylayermetadata``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
