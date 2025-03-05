@@ -80,6 +80,8 @@ To export a layout as an image:
 
    * You can override the print layout :guilabel:`Export resolution` and the
      exported page dimensions (as set in :guilabel:`Layout` panel).
+   * For JPEG and JPG image formats, you can set the :guilabel:`JPEG Quality`
+     of the output image.
    * Image rendering can also be improved with the :guilabel:`Enable
      antialiasing` option.
    * If you want to export your layout as a **georeferenced image** (e.g., to
