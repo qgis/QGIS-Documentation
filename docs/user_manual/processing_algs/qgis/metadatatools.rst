@@ -231,3 +231,161 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _qgissetmetadatafields:
+
+Set Metadata Fields
+-------------------
+Sets various metadata fields for a layer.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer**
+     - ``INPUT``
+     - [layer]
+     - The layer whose metadata fields will be updated
+   * - **Identifier**
+
+       Optional
+     - ``IDENTIFIER``
+     - [string]
+     - A unique identifier for the layer
+   * - **Parent identifier**
+
+       Optional
+     - ``PARENT_IDENTIFIER``
+     - [string]
+     - The identifier of the parent resource, if applicable
+   * - **Title**
+
+       Optional
+     - ``TITLE``
+     - [string]
+     - The title of the layer
+   * - **Type**
+
+       Optional
+     - ``TYPE``
+     - [string]
+     - The type of the layer
+   * - **Language**
+
+       Optional
+     - ``LANGUAGE``
+     - [string]
+     - The language of the metadata
+   * - **Encoding**
+
+       Optional
+     - ``ENCODING``
+     - [string]
+     - The character encoding used in the metadata
+   * - **Abstract**
+
+       Optional
+     - ``ABSTRACT``
+     - [string]
+     - A brief description or abstract of the layer
+   * - **Coordinate reference system**
+
+       Optional
+     - ``CRS``
+     - [crs]
+     - The coordinate reference system of the layer
+   * - **Fees**
+
+       Optional
+     - ``FEES``
+     - [string]
+     - Information about any fees associated with accessing the layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [same as input]
+     - The input layer with the specified metadata fields updated.
+
+
+Python code
+...........
+
+**Algorithm ID**: ``native:setmetadatafields``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisupdatelayermetadata:
+
+Update Layer Metadata
+---------------------
+Copies all non-empty metadata fields from an source layer to a target layer.
+Leaves empty input fields unchanged in the target.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Source layer**
+     - ``SOURCE``
+     - [layer]
+     - The layer from which non-empty metadata fields will be copied
+   * - **Target layer**
+     - ``TARGET``
+     - [layer]
+     - The layer to which non-empty metadata fields will be copied.
+       Empty fields in the source layer will not overwrite existing metadata in the target layer.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Target layer**
+     - ``OUTPUT``
+     - [layer]
+     - The target layer with updated metadata.
+
+
+Python code
+...........
+
+**Algorithm ID**: ``native:updatelayermetadata``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
