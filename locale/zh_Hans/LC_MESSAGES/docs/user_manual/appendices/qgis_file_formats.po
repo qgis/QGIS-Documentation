@@ -5,23 +5,37 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
+# Harrissou Sant-anna, 2025
+# Li Hongsheng, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Li Hongsheng, 2025\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"翻译是一项社区工作：ref：`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
+"progress|。"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:5
+msgid "Appendix C: QGIS File Formats"
+msgstr "附录C： QGIS文件格式"
 
 #: ../../docs/user_manual/appendices/qgis_file_formats.rst:14
 msgid "QGS/QGZ - The QGIS Project File Format"
@@ -75,9 +89,34 @@ msgstr "工程模型"
 msgid "legend"
 msgstr "图例"
 
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:34
+msgid "mapview docks (2D and 3D)"
+msgstr "地图视图停靠（二维和三维）"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:35
+msgid ""
+"the layers with links to the underlying datasets (data sources) and other "
+"layer properties including extent, SRS, joins, styles, renderer, blend mode,"
+" opacity and more."
+msgstr "与底层数据集（数据源）链接的图层和其他图层属性，包括范围、空间参考系统、连接、样式、渲染器、混合模式、不透明度等。"
+
 #: ../../docs/user_manual/appendices/qgis_file_formats.rst:38
 msgid "project properties"
 msgstr "工程属性"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:40
+msgid ""
+"The figures below show the top level tags in a QGS file and the expanded "
+"``ProjectLayers`` tag."
+msgstr "下图展示了QGIS文件中的顶层标签和展开的``ProjectLayers``标签。"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:48
+msgid "The top level tags in a QGS file"
+msgstr "QGIS文件中的顶层标签"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:55
+msgid "The expanded top level ProjectLayers tag of a QGS file"
+msgstr "QGIS文件中展开的顶层``ProjectLayers``标签"
 
 #: ../../docs/user_manual/appendices/qgis_file_formats.rst:63
 msgid "QLR - The QGIS Layer Definition file"
@@ -89,9 +128,30 @@ msgid ""
 "layer data source in addition to QGIS style information for the layer."
 msgstr "图层定义文件（QLR）是一种包含图层数据源的指针和次图层的QGIS样式信息的XML文件"
 
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:69
+msgid ""
+"The use case for this file is simple: To have a single file for opening a "
+"data source and bringing in all the related style information. QLR files "
+"also allow you to mask the underlying datasource in an easy to open file."
+msgstr "此文件的使用场景很简单：使用单个文件打开数据源并引入所有相关样式信息。QLR 文件还允许您在易于打开的文件中屏蔽底层数据源。"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:75
+msgid ""
+"An example of QLR usage is for opening MS SQL layers. Rather than having to "
+"go to the MS SQL connection dialog, connect, select, load and finally style,"
+" you can simply add a .qlr file that points to the correct MS SQL layer with"
+" all the necessary style included."
+msgstr ""
+"QLR 使用场景的一个示例是打开 MS SQL 图层。您无需进入 MS SQL 连接对话框，连接、选择、加载并最终设置样式。您只需要添加指向正确 MS "
+"SQL 图层的 .qlr 文件并包含所有必要的样式即可。"
+
 #: ../../docs/user_manual/appendices/qgis_file_formats.rst:81
 msgid "In the future a .qlr file may hold a reference to more than one layer."
 msgstr "未来，一个qlr文件将会支持引用多个图层"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:88
+msgid "The top level tags of a QLR file"
+msgstr "QLR文件的顶层标签"
 
 #: ../../docs/user_manual/appendices/qgis_file_formats.rst:96
 msgid "QML - The QGIS Style File Format"
@@ -107,3 +167,15 @@ msgid ""
 " feature geometries including symbol definitions, sizes and rotations, "
 "labelling, opacity and blend mode and more."
 msgstr "QML文件包含了GIS能够处理的所有信息(用于渲染几何要素的信息)，包括符号定义、尺寸、旋转、标注、不透明度、混合模式等"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:104
+msgid ""
+"The figure below shows the top level tags of a QML file (with only "
+"``renderer_v2`` and its ``symbol`` tag expanded)."
+msgstr "下图展示了QML文件中的顶层标签（仅展开了 renderer_v2 标签和它的symbol 标签）。"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:112
+msgid ""
+"The top level tags of a QML file (only the renderer_v2 tag with its symbol "
+"tag is expanded)"
+msgstr "QML文件的顶层标签（仅展开了 renderer_v2 标签和它的symbol 标签）"
