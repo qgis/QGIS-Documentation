@@ -22,6 +22,7 @@ algorithms.
      interpolation
      layertools
      mesh
+     metadatatools
      modelertools
      networkanalysis
      plots
