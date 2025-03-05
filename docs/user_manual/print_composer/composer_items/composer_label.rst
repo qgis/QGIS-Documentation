@@ -17,8 +17,12 @@ You can add a label with the |label| :guilabel:`Add Label` tool following
 same way as exposed in :ref:`interact_layout_item`.
  
 By default, the label item provides a default text that you can customize using
-its :guilabel:`Item Properties` panel. Other than the :ref:`items common
-properties <item_common_properties>`, this feature has the following
+its :guilabel:`Item Properties` panel.
+To automatically resize a label so it fits the text inside it perfectly,
+double-click one of the handles on the label. The label will adjust its size to match the text,
+either expanding or reducing as needed, while the opposite side of the label remains fixed in place.
+This allows you to quickly ensure the label fits the text without manually resizing it.
+Other than the :ref:`items common properties <item_common_properties>`, this feature has the following
 functionalities (see :numref:`figure_layout_label`):
 
 .. _figure_layout_label:
