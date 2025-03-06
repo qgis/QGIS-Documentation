@@ -28,7 +28,7 @@ Parameters
      - Description
    * - **Layer**
      - ``INPUT``
-     - [layer: any]
+     - [layer]
      - The input layer (vector, raster, etc.) to which the history entry will be added.
    * - **History entry**
      - ``HISTORY``
