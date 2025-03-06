@@ -8,7 +8,7 @@ Metadata tools
       :depth: 1
 
 
-.. _addhistorymetadata:
+.. _qgisaddhistorymetadata:
 
 Add history metadata
 --------------------
