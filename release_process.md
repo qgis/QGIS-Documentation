@@ -150,7 +150,7 @@ is being translated. So when a new LTR is published, we disconnect the old one a
 - [ ] Update the [docs index page](https://www.qgis.org/resources/hub/#documentation).
   Source file is available [hub.md](https://github.com/qgis/QGIS-Website/blob/main/content/resources/hub.md)
   - [ ] Reference the new version as current LTR
-  - [ ] Move the old lTR under the "archived releases" tab.
+  - [ ] Move the old LTR under the "archived releases" tab.
 
 </details>
 
@@ -170,5 +170,5 @@ Automating the process as much as possible would lower the risk and make it less
 
 * Some values are somehow copy-pasted across places while they could likely be put in a variable: 
 
-  * languages list: they are defined in docs_conf.yml, Makefile
+  * languages list: they are defined in docs_conf.yml, Makefile, docker-world.sh
   * version number: it is defined in conf.py, Makefile, doctest.dockerfile
