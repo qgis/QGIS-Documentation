@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # replacing |nix| |qg| |win| |osx|
 rpl -qi '|qg|' 'QGIS' $1
