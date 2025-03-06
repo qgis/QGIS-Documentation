@@ -340,7 +340,7 @@ Python code
 
 Update Layer Metadata
 ---------------------
-Copies all non-empty metadata fields from an source layer to a target layer.
+Copies all non-empty metadata fields from a source layer to a target layer.
 Leaves empty input fields unchanged in the target.
 
 Parameters
