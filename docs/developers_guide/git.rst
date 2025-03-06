@@ -334,7 +334,7 @@ under the GPL.
 Pull Requests merge criteria
 ============================
 
-Please see [QEP 323 - Change submission and merge policies](https://github.com/qgis/QGIS-Enhancement-Proposals/blob/master/qep-323-code-submission-policy.md)
+Please see `QEP 323 - Change submission and merge policies <https://github.com/qgis/QGIS-Enhancement-Proposals/blob/master/qep-323-code-submission-policy.md>`_
 for the current policies regarding acceptable pull request submission.
 
 Obtaining GIT Write Access
