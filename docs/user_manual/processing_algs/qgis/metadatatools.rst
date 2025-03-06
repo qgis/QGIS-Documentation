@@ -361,7 +361,7 @@ Parameters
    * - **Target layer**
      - ``TARGET``
      - [layer]
-     - The layer to which non-empty metadata fields will be copied.
+     - The layer to which non-empty metadata fields will be pasted.
        Empty fields in the source layer will not overwrite existing metadata in the target layer.
 
 Outputs
