@@ -38,7 +38,7 @@ The best way to build the documentation is within a Python Virtual Environment (
 
 You can use your own virtual env by creating it first:
 
-```
+```sh
 # you NEED python >=3.9. Depending on distro either use `python3` or `python`
 # common name is 'venv' but call it whatever you like
 
@@ -47,25 +47,25 @@ python3 -m venv venv  # using the venv module, create a venv named 'venv'
 
 Then activate the venv:
 
-```
+```sh
 source ./venv/bin/activate
 ```
 
 With 'activated' virtualenv, you should see 'venv' in the prompt. Install the requirements via the REQUIREMENTS.txt:
 
-```
+```sh
 pip install -r REQUIREMENTS.txt
 ```
 
 And run the build from within that venv:
 
-```
+```sh
 make html
 ```
 
 Want to build your own language? Note that you will use the translations from the po files from git! For example for 'nl' do:
 
-```
+```sh
 make LANG=nl html
 ```
 
@@ -75,14 +75,14 @@ make LANG=nl html
   The `venv.mk` file will create/update a virtual env (if not available) in current dir/venv
   AND run the html build in it.
 
-  ```
+  ```sh
   make -f venv.mk html
   ```
 </details>
 
 If, for some reason, you want to (re)start from scratch:
 
-```
+```sh
 make -f venv.mk cleanall
 ```
 
@@ -91,32 +91,32 @@ make -f venv.mk cleanall
 Create a virtual environment called 'venv' in that directory (search the Internet for Python Virtual
 Env on Windows for more details), but in short: use the module 'venv' to create a virtual environment called 'venv'
 
-```
+```cmd
 # in dos box:
 python -m venv venv
 ```
 
 Then activate the venv:
 
-```
+```cmd
 venv\Scripts\activate.bat
 ```
 
 With 'activated' virtualenv, you should see 'venv' in the prompt. Install the requirements via the REQUIREMENTS.txt:
 
-```
+```cmd
 pip install -r REQUIREMENTS.txt
 ```
 
 And run the build from within that venv, using the make.bat script with the html argument to locally build the docs:
 
-```
+```cmd
 make.bat html
 ```
 
 Want to build your own language? Note that you will use the translations from the po files from git! For example 'nl' do:
 
-```
+```cmd
 set SPHINXOPTS=-D language=nl
 make.bat html
 ```
@@ -125,25 +125,25 @@ make.bat html
 
 In Linux, you can also build the PDF versions of the main documents.
 
-```
+```sh
 make -f venv.mk pdf
 ```
 
 Or after you enabled the venv:
 
-```
+```sh
 make pdf
 ```
 
 If you want to build PDFs in a language other than English, you can use a similar syntax:
 
-```
+```sh
 make LANG=fr pdf
 ```
 
 For building PDFs in English you will need to install the XeLaTex compiler package `texlive-xetex` and GNU Freefont.
 
-```
+```sh
 sudo apt install texlive-xetex fonts-freefont-otf
 ```
 
@@ -164,6 +164,8 @@ We rely on the [Transifex platform](https://www.transifex.com) to store and coor
 our translation efforts. To be part of the translation team, please follow
 [becoming a translator](https://www.qgis.org/en/site/getinvolved/translate.html#becoming-a-translator).
 
+## GitHub workflow
+
 The process is automated using the [Transifex - GitHub integration system](https://help.transifex.com/en/articles/6265125-github-via-transifex-ui)
 and some custom scripts:
 
@@ -181,7 +183,7 @@ and some custom scripts:
       source files and their translation in the GitHub repository and link them to
       the resources in Transifex.
    1. Force-push the translation files to Transifex
-      ```
+      ```sh
        tx push -f -t --no-interactive
       ```
   ---
@@ -202,9 +204,11 @@ and some custom scripts:
 Based on the above, translated strings are automatically available in released
 branch so building the docs in any translated locale is possible following
 the instructions in earlier sections:
-```
+```sh
 make html LANG=yourlanguage
 ```
+
+## Managing translations locally
 
 Sometimes, you may want to build the docs with really new strings in a partially translated file
 and the above workflow may fail to work.
@@ -212,22 +216,28 @@ In that case, you need to manually pull the translations from Transifex to your 
 
 1. Checkout locally the repository and target branch in git
 1. Prepare the environment
-   ```
+   ```sh
    python3 -m venv venv
    source ./venv/bin/activate
    pip install -r REQUIREMENTS.txt
    ```
-1. Install [Transifex command line client](https://github.com/transifex/cli/)
-   ```
+1. Install [Transifex command line client](https://github.com/transifex/cli/).
+   On Linux or macOS:
+   ```sh
    curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
+   # and restart the terminal
    ```
+
+   Another way (including on Windows) is to download and locally unzip the latest binary.
+   Read [more instructions](https://github.com/transifex/cli/?tab=readme-ov-file#download-from-github-releases-linuxmacwindows).
+
 1. Download the translated strings using the [minimize_translation script](scripts/minimize_translation.sh).
    By default this pulls all the languages.
-   ```
+   ```sh
    ./scripts/minimize_translation.sh
    ```
    To pull a specific language (e.g. italian), do
-   ```
+   ```sh
    ./scripts/minimize_translation.sh -l it
    ```
 
@@ -240,7 +250,7 @@ In that case, you need to manually pull the translations from Transifex to your 
    token = yourtransifextoken
    ```
 1. Build the docs in your language
-   ```
+   ```sh
    make html LANG=yourlanguage
    ```
 1. Share the changes by opening a pull-request, allowing us to integrate
@@ -253,14 +263,14 @@ For this there are many options:
 
 * You can use your system *QGIS* installation with *Sphinx* from Python virtual environment:
 
-  ```
+  ```sh
   make -f venv.mk doctest
   ```
 * You can use a manually built installation of *QGIS*. To do so, you need to:
   1. Create a custom ``Makefile`` extension on top of the ``venv.mk`` file,
      for example a ``user.mk`` file with the following content:
 
-     ```
+     ```sh
      # Root installation folder
      QGIS_PREFIX_PATH = /home/user/apps/qgis-master
 
@@ -272,19 +282,19 @@ For this there are many options:
 
   1. Then use it to run target ``doctest``:
 
-     ```
+     ```sh
      make -f user.mk doctest
      ```
 * Or you can run target ``doctest`` inside the official *QGIS* docker image:
 
-  ```
+  ```sh
   make -f docker.mk doctest
   ```
 
 Note that only code blocks with directive ``testcode`` are tested and it is possible to run tests setup code
 which does not appear in documentation with directive ``testsetup``, for example:
 
-```
+```py
  .. testsetup::
 
      from qgis.core import QgsCoordinateReferenceSystem
