@@ -89,7 +89,7 @@ Parameters
    * - **Target layer**
      - ``TARGET``
      - [layer]
-     - The layer to which metadata will be copied. Any existing metadata in this layer will be replaced.
+     - The layer to which metadata will be pasted. Any existing metadata in this layer will be replaced.
 
 Outputs
 .......
