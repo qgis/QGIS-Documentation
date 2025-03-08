@@ -114,13 +114,13 @@ Z and M values (if present) can be translated and scaled.
 .. figure:: img/affinetransform.png
    :align: center
 
-   Vector point layer (green dots) before (left), and after (right) an affine transformation (translation). 
+   Vector point layer (green dots) before (left), and after (right) an affine transformation (translation).
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>` 
+:ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
 
-.. seealso:: :ref:`qgistranslategeometry` 
+.. seealso:: :ref:`qgistranslategeometry`
 
 Parameters
 ..........
@@ -167,7 +167,7 @@ Parameters
      - [number |dataDefine|]
 
        Default: 1
-     - Scaling value (expansion or contraction) to apply on the X axis. 
+     - Scaling value (expansion or contraction) to apply on the X axis.
    * - **Scale factor (y-axis)**
      - ``SCALE_Y``
      - [number |dataDefine|]
@@ -191,7 +191,7 @@ Parameters
      - [number |dataDefine|]
 
        Default: 0
-     - Angle of the rotation in degrees.	
+     - Angle of the rotation in degrees.
 
    * - **Transformed**
      - ``OUTPUT``
@@ -204,7 +204,7 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
           :end-before: **end_layer_output_types_append**
-   
+
 Outputs
 .......
 
@@ -488,7 +488,7 @@ Polygon and line geometries are supported.
    Black lines represent the bounding boxes of each polygon feature
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>` 
+:ref:`features in-place modification <processing_inplace_edit>`
 of polygon features
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
@@ -561,11 +561,11 @@ In this case the buffer will result in a smaller polygon (setback).
 .. figure:: img/buffer.png
    :align: center
 
-   Buffer (in yellow) of points, line, polygon with positive buffer, 
-   and polygon with negative buffer 
+   Buffer (in yellow) of points, line, polygon with positive buffer,
+   and polygon with negative buffer
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>` 
+:ref:`features in-place modification <processing_inplace_edit>`
 of polygon features
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
@@ -652,11 +652,11 @@ Basic parameters
        when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
        Minimum: 1.0
-              
+
        .. figure:: img/buffer_miter_limit.png
           :align: center
           :width: 100%
-         
+
           A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1
    * - **Dissolve result**
      - ``DISSOLVE``
@@ -699,7 +699,7 @@ Advanced parameters
      - [boolean]
 
        Default: False
-     - If ``True`` (checked) and dissolved is checked, features that do not overlap or touch will be exported as 
+     - If ``True`` (checked) and dissolved is checked, features that do not overlap or touch will be exported as
        separate features
        (instead of parts of a multipart feature).
 
@@ -2130,7 +2130,7 @@ All output geometries will be converted to multi geometries.
 In case the input is a polygon layer, common boundaries of adjacent
 polygons being dissolved will get erased.
 If enabled, the optional "Keep disjoint features separate" setting will
-cause features and parts that do not overlap or touch to be exported as 
+cause features and parts that do not overlap or touch to be exported as
 separate features (instead of parts of a single multipart feature).
 
 The resulting attribute table will have the same fields as the input
@@ -3071,7 +3071,7 @@ the minimum value is tested.
 
    The red line represents the black line with only vertices whose M
    value is <=10.
-   
+
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line and polygon features with M enabled
@@ -3171,7 +3171,7 @@ the minimum value is tested.
 
    The red line represents the black line with only vertices whose Z
    value is <=10.
-   
+
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line and polygon features with Z enabled
@@ -4383,12 +4383,12 @@ Parameters
      - Sets the maximum distance from the offset geometry to use
        when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
-       Minimum: 1.0              
+       Minimum: 1.0
 
        .. figure:: img/buffer_miter_limit.png
           :align: center
           :width: 100%
-         
+
           A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1
    * - **Offset**
      - ``OUTPUT``
@@ -5445,7 +5445,7 @@ Parameters
    * - **Also remove empty geometries**
      - ``REMOVE_EMPTY``
      - [boolean]
-     - 
+     -
    * - **Non null geometries**
      - ``OUTPUT``
 
@@ -5890,7 +5890,7 @@ with the new value.
 If no M values exist, the geometry will be upgraded to include M
 values and the specified value used as the initial M value for all
 geometries.
-    
+
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features with M enabled
@@ -6077,7 +6077,7 @@ with the new value.
 If no Z values exist, the geometry will be upgraded to include Z
 values and the specified value used as the initial Z value for all
 geometries.
- 
+
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features with Z enabled
@@ -6287,7 +6287,7 @@ Parameters
    * - **Side**
      - ``SIDE``
      - [enumeration]
-  
+
        Default: 0
      - Which side to create the buffer on.
        One of:
@@ -6314,7 +6314,7 @@ Parameters
        * 0 --- Round
        * 1 --- Miter
        * 2 --- Bevel
-  
+
        .. figure:: img/buffer_join_style.png
           :align: center
           :width: 100%
@@ -6329,11 +6329,11 @@ Parameters
        when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
        Minimum: 1.0
-                     
+
        .. figure:: img/buffer_miter_limit.png
           :align: center
           :width: 100%
-         
+
           A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1
    * - **Buffer**
      - ``OUTPUT``
@@ -6815,7 +6815,7 @@ Curved geometries will be segmentized before subdivision.
    maximum value is 200
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>` 
+:ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
 
 .. note:: Subdividing a geometry can generate geometry parts that may
@@ -7231,7 +7231,7 @@ Z and M values present in the geometry can also be translated.
 .. figure:: img/translate_geometry.png
    :align: center
 
-   Dashed lines represent the translated geometry of the input layer
+   Features in red represent the translated geometry of the input (blue) layer
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
