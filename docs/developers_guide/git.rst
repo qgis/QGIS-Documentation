@@ -334,28 +334,8 @@ under the GPL.
 Pull Requests merge criteria
 ============================
 
-Pull requests must be approved by at least one Core Developer (a developer with
-push rights to the qgis/QGIS GitHub repository). Before merging, the Core Developer
-must ensure that the PR passes all reasonable CI checks. Some exceptions exist
-to this rule, e.g., when a check is broken for unrelated reasons (such as broken
-third party services, or a lint/code analysis/spell check test failing from other
-parts of a modified file).
-
-Pull requests created by a Core Developer must also be approved by at least
-another Core Developer.
-
-A PR must remain open for at least 24 hours following submission, even if it has
-already been approved. This is to allow wider feedback to be gathered prior to
-merge, and to permit pre-merge feedback from developers in other time zones.
-Exceptions to this policy are:
-
-- Approved pull requests for backports to stable branches
-- "Emergency" pull requests, e.g., those which fix broken master builds, CI
-  infrastructure or which represent a time-sensitive security risk
-- Trivial fixes. The definition of "trivial" is left open to common sense and
-  developer discretion, but is expected to include non-risky changes like typo
-  fixes, translation string fixes, tab order changes, or similar.
-
+Please see `QEP 323 - Change submission and merge policies <https://github.com/qgis/QGIS-Enhancement-Proposals/blob/master/qep-323-code-submission-policy.md>`_
+for the current policies regarding acceptable pull request submission.
 
 Obtaining GIT Write Access
 ===========================
