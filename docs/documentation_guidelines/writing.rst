@@ -68,7 +68,7 @@ also possible to create block quotes with indentation. See the
 
 .. code-block::
 
-   #. In a numbered list, there should be 
+   #. In a numbered list, there should be
       three spaces when you break lines
    #. And next items directly follow
 
@@ -126,10 +126,10 @@ You can use tags to emphasize items.
      :kbd:`Ctrl+B`
 
   will show :kbd:`Ctrl+B`
-  
+
   When describing keyboard shortcuts, the following conventions
   should be used:
-  
+
   * Letter keys are displayed using uppercase: :kbd:`S`
   * Special keys are displayed with an uppercase first letter: :kbd:`Esc`
   * Key combinations are displayed with a ``+`` sign between keys,
@@ -331,7 +331,7 @@ see :ref:`figure_logo`
 
 
 Tables
-......
+------
 
 A simple table can be coded like this
 
@@ -560,9 +560,9 @@ is located in the same folder as the referencing :file:`.rst` file.
 
 .. tip:: If you are on Ubuntu, you can use the following command to remove the
   global menu function and create smaller application screens with menus:
-  
+
   .. code-block:: bash
-  
+
     sudo apt autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
 
 
@@ -607,7 +607,7 @@ guidelines:
   the Processing toolbox.
 * Avoid using "This algorithm does this and that..." as the first sentence in the
   algorithm description. Try to use more general expressions like::
-  
+
     Takes a point layer and generates a polygon layer containing the...
 
 * Avoid describing what the algorithm does by replicating its name and please
@@ -670,7 +670,7 @@ guidelines:
   File                                      ``file``
   Matrix                                    ``matrix``
   Layer                                     ``layer``
-  Same output type as input type            ``same as input``  
+  Same output type as input type            ``same as input``
   Definition                                ``definition``
   Point                                     ``point``
   MultipleLayers                            ``multipleLayers``
@@ -767,14 +767,14 @@ to help you with the layout and the description::
        - Specification of the output layer type (temporary, file,
          GeoPackage or PostGIS table).
          Encoding can also be specified.
-  
+
   Outputs
   .......
-  
+
   .. list-table::
      :header-rows: 1
      :widths: 20 20 20 40
-  
+
      * - Label
        - Name
        - Type
