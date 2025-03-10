@@ -333,6 +333,9 @@ see :ref:`figure_logo`
 Tables
 ------
 
+Simple Tables and Grid Tables
+.............................
+
 A simple table can be coded like this
 
 .. code-block:: rst
@@ -389,6 +392,9 @@ My drawn table, mind you this is unfortunately not regarded as a caption
 
 You can reference to it like this my_drawn_table_.
 
+List Tables
+...........
+
 For even more complex tables, it is easier to use ``list-table``:
 
 .. code-block:: rst
@@ -426,6 +432,131 @@ The result:
 
        * Point
        * Line
+
+List tables are better option than drawn tables because they are easier to work with
+in the long run and they are much better fit for following changes using ``DIFF``.
+
+
+Flat Tables
+...........
+
+Flat tables extend possibilities of List Tables, for cases when it's needed to span columns and rows you can use ``flat-table``:
+
+.. code-block:: rst
+
+    .. flat-table::
+      :header-rows: 3
+      :widths: 10 10 40 40
+
+      * - :cspan:`3` WKB examples
+
+      * - :cspan:`2` INPUT
+        - OUTPUT
+
+      * - DataType
+        - Variant
+        - SpatiaLite SQL
+        - WKB (Hex notation)
+
+      * - :rspan:`1` POINT
+        - POINT
+        - .. code-block:: sql
+
+           ST_AsBinary(
+             ST_GeomFromText('POINT(1 1)')
+           );
+        - | 01 01 00 00 00 00 00 00 00 00 00 F0 3F 00 00 00
+          | 00 00 00 F0 3F
+
+      * - POINTZ
+        - .. code-block:: sql
+
+           ST_AsBinary(
+             ST_GeomFromText('POINTZ (1 1 1)')
+           );
+        - | 01 E9 03 00 00 00 00 00 00 00 00 F0 3F 00 00 00
+          | 00 00 00 F0 3F 00 00 00 00 00 00 F0 3F
+
+      * - :rspan:`1` LINESTRING
+        - LINESTRING
+        - .. code-block:: sql
+
+           ST_AsBinary(
+             ST_GeomFromText('LINESTRING (1 1, 2 2)')
+           );
+        - | 01 02 00 00 00 02 00 00 00 00 00 00 00 00 00 F0
+          | 3F 00 00 00 00 00 00 F0 3F 00 00 00 00 00 00 00
+          | 40 00 00 00 00 00 00 00 40
+
+      * - LINESTRINGZ
+        - .. code-block:: sql
+
+           ST_AsBinary(
+             ST_GeomFromText('LINESTRINGZ (1 1 1, 2 2 2)')
+           );
+        - | 01 EA 03 00 00 02 00 00 00 00 00 00 00 00 00 F0
+          | 3F 00 00 00 00 00 00 F0 3F 00 00 00 00 00 00 F0
+          | 3F 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00
+          | 40 00 00 00 00 00 00 00 40
+
+The result:
+
+.. flat-table::
+  :header-rows: 3
+  :widths: 10 10 40 40
+
+  * - :cspan:`3` WKB examples
+
+  * - :cspan:`2` INPUT
+    - OUTPUT
+
+  * - DataType
+    - Variant
+    - SpatiaLite SQL
+    - WKB (Hex notation)
+
+  * - :rspan:`1` POINT
+    - POINT
+    - .. code-block:: sql
+
+        ST_AsBinary(
+          ST_GeomFromText('POINT(1 1)')
+        );
+    - | 01 01 00 00 00 00 00 00 00 00 00 F0 3F 00 00 00
+      | 00 00 00 F0 3F
+
+  * - POINTZ
+    - .. code-block:: sql
+
+        ST_AsBinary(
+          ST_GeomFromText('POINTZ (1 1 1)')
+        );
+    - | 01 E9 03 00 00 00 00 00 00 00 00 F0 3F 00 00 00
+      | 00 00 00 F0 3F 00 00 00 00 00 00 F0 3F
+
+  * - :rspan:`1` LINESTRING
+    - LINESTRING
+    - .. code-block:: sql
+
+        ST_AsBinary(
+          ST_GeomFromText('LINESTRING (1 1, 2 2)')
+        );
+    - | 01 02 00 00 00 02 00 00 00 00 00 00 00 00 00 F0
+      | 3F 00 00 00 00 00 00 F0 3F 00 00 00 00 00 00 00
+      | 40 00 00 00 00 00 00 00 40
+
+  * - LINESTRINGZ
+    - .. code-block:: sql
+
+        ST_AsBinary(
+          ST_GeomFromText('LINESTRINGZ (1 1 1, 2 2 2)')
+        );
+    - | 01 EA 03 00 00 02 00 00 00 00 00 00 00 00 00 F0
+      | 3F 00 00 00 00 00 00 F0 3F 00 00 00 00 00 00 F0
+      | 3F 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00
+      | 40 00 00 00 00 00 00 00 40
+
+For other possibilities please visit following link: `FlatTables <https://return42.github.io/linuxdoc/linuxdoc-howto/table-markup.html#flat-table>`_
 
 Index
 -----
