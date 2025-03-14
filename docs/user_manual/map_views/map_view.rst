@@ -789,7 +789,7 @@ with both families of annotations.
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  | |actionText| :sup:`Create Text Annotation at Point` | Create an annotation as a text label                                |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
- | |textAlongLine| :sup:`Create Text Annotation along  | Create an annotation as a curved text along a linestring            |                     |
+ | |textAlongLine| :sup:`Create Text Annotation along  | Create an annotation as a curved text along a line feature          |                     |
  | Line`                                               |                                                                     |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
@@ -882,20 +882,29 @@ The properties dialog of an annotation layer provides the following tabs:
 Interacting with features
 .........................
 
-The Feature annotations have dedicated tools for creation depending on their type:
+The Feature annotations have dedicated tools for creation depending on their type.
 
-* |addPolygon| :sup:`Create Polygon Annotation`
-* |addPolyline| :sup:`Create Line Annotation`
-* |addMarker| :sup:`Create Marker Annotation`
-* |actionText| :sup:`Create Text Annotation at Point`
-* |textAlongLine| :sup:`Create Text Annotation along Line`
+.. table:: Creating feature annotation
 
-All the usual QGIS shortcuts for creating features apply when creating annotation
-items. A line or polygon annotation is drawn by left-clicking once for each vertex,
-with a final right mouse click to complete the shape. Snapping can be enabled
-while you draw, you can use the :guilabel:`Advanced Digitizing Tools` to precisely
-place vertices, and even switch the :ref:`drawing tools <drawing_methods>`
-to the streaming mode for completely free-form shapes.
+ +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
+ | Family / | Annotation tool                                     | Procedure                                                                           |
+ | based on |                                                     |                                                                                     |
+ +==========+=====================================================+=====================================================================================+
+ | Geometry | |addPolygon| :sup:`Create Polygon Annotation`       | This is like digitizing a point, line or polygon vector feature.                    |
+ |          |                                                     |                                                                                     |
+ |          +-----------------------------------------------------+ All the usual shortcuts for creating features apply when creating annotation items. |
+ |          | |addPolyline| :sup:`Create Line Annotation`         | A line or polygon annotation is drawn by left-clicking once for each vertex,        |
+ |          |                                                     | with a final right mouse click to complete the shape. Snapping can be enabled       |
+ |          +-----------------------------------------------------+ while you draw, you can use the :guilabel:`Advanced Digitizing Tools` to precisely  |
+ |          | |addMarker| :sup:`Create Marker Annotation`         | place vertices, and even switch the :ref:`drawing tools <drawing_methods>`          |
+ |          |                                                     | to for example the streaming mode for completely free-form shapes.                  |
+ +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
+ | Text     | |actionText| :sup:`Create Text Annotation at Point` | Left-click on the map canvas.                                                       |
+ |          +-----------------------------------------------------+-------------------------------------------------------------------------------------+
+ |          | |textAlongLine| :sup:`Create Text Annotation        | Left-click to add vertices to the text basement line geometry,                      |
+ |          | along Line`                                         | and right-click to end.                                                             |
+ |          |                                                     | As above, digitizing features capabilities are also available.                      |
+ +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
 
 Unlike common layers, an annotation layer does not need to be active before you
 select its features. Simply grab the |select| :sup:`Modify Annotations` tool and
@@ -913,9 +922,10 @@ you will be able to interact with any feature annotation:
 
   * :kbd:`Shift+key` for big movement
   * :kbd:`Alt+key` for ``1 px`` movement
-* **Geometry modification**: for line or polygon annotations, left-click on
-  a vertex of the geometry, move and click again.
-  Double-click a segment to add a new vertex.
+* **Geometry modification**: move over an annotation and purple squares are displayed
+  on nodes of its underlying geometry.
+  Left-click on the square, move and click again.
+  For linear or polygonal annotations, double-clicking a segment will add a new vertex.
 * **Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while
   an annotation is selected will delete that annotation
 * :ref:`Change feature symbology <annotation_feature_symbology>`
@@ -926,22 +936,27 @@ Feature symbology
 .................
 
 A selected annotation will display its :guilabel:`Symbology` properties
-in the :guilabel:`Layer styling` panel. You can:
+in the :guilabel:`Layer styling` panel.
 
-* Modify the appearance using full capabilities of:
+* For polygon, polyline and marker annotations, you can modify the appearance
+  using full capabilities of the :ref:`symbol properties <symbol-selector>`
+* For text-based annotations, an area with text editing tools helps you construct the string to display.
+  It can be multiline, use HTML formatting and rely on QGIS expression functions.
+  You can moreover modify the appearance using full capabilities
+  of the :ref:`text format properties <text_format>`.
 
-  * the :ref:`symbol properties <symbol-selector>` for polygon, polyline and marker annotations
-  * the :ref:`text format properties <text_format>` for text-based annotations.
-    A text area allows you to construct the string to display using QGIS expression functions.
-    It is also possible to set the :guilabel:`Alignment` for text annotation at point
-    (left, center or right of the text point).
-* For text annotation at point, also configure whether it should :guilabel:`Ignore map rotation`
-  or :guilabel:`Rotate with map`.
-  In both cases, a custom :guilabel:`Angle` can be set for the feature orientation.
-* For text annotation along a line, configure an :guilabel:`Offset from line` in the unit
-  of your choice
+  Depending on the type of annotation, additional options are available.
+
+  * For text annotation at point, it is also possible to:
+
+    * set the text :guilabel:`Alignment` (left, center or right of the anchor point)
+    * configure whether the text should :guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`.
+      In both cases, a custom :guilabel:`Angle` can be set for the feature orientation.
+  * For text annotation along a line, configure an :guilabel:`Offset from line` in the unit
+    of your choice
+
 * Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale
-  at which symbol or text sizes which uses paper-based units (such as millimeters or points) relate to.
+  at which symbol or text sizes which use paper-based units (such as millimeters or points) relate to.
   The sizes will be scaled accordingly whenever the map is viewed at a different scale.
   For instance, a line feature wide of 2mm at 1:2000 :guilabel:`Reference scale`
   will be rendered using 4mm when the map is viewed at 1:1000.
