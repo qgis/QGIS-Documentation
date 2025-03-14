@@ -792,6 +792,8 @@ with both families of annotations.
  | |textAlongLine| :sup:`Create Text Annotation along  | Create an annotation as a curved text along a line feature          |                     |
  | Line`                                               |                                                                     |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |textInsideRect| :sup:`Create Text Annotation In    | Create a text formatted annotation bound within a rectangle         |                     |
+ | Rectangle`                                          |                                                                     |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
  | |htmlAnnotation| :sup:`HTML Annotation`             | Select and create annotation with an :file:`HTML` file's content    | Balloon annotations |
@@ -904,6 +906,9 @@ The Feature annotations have dedicated tools for creation depending on their typ
  |          | |textAlongLine| :sup:`Create Text Annotation        | Left-click to add vertices to the text basement line geometry,                      |
  |          | along Line`                                         | and right-click to end.                                                             |
  |          |                                                     | As above, digitizing features capabilities are also available.                      |
+ |          +-----------------------------------------------------+-------------------------------------------------------------------------------------+
+ |          | |textInsideRect| :sup:`Create Text Annotation       | Draw the rectangle box of the text, by left-clicking to add a first corner          |
+ |          | In Rectangle`                                       | and left-clicking again to add the opposite one.                                    |
  +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
 
 Unlike common layers, an annotation layer does not need to be active before you
@@ -954,6 +959,12 @@ in the :guilabel:`Layer styling` panel.
       In both cases, a custom :guilabel:`Angle` can be set for the feature orientation.
   * For text annotation along a line, configure an :guilabel:`Offset from line` in the unit
     of your choice
+  * For text annotation in rectangle, it is also possible to:
+
+    * set the text :guilabel:`Horizontal alignment` (left, center, right or justify)
+      and :guilabel:`Vertical alignment` (top, vertical center or bottom) in the rectangle box
+    * configure for the rectangle, the :guilabel:`Margins` distance in the units of your choice,
+      the :guilabel:`Frame` and :guilabel:`Background` colors.
 
 * Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale
   at which symbol or text sizes which use paper-based units (such as millimeters or points) relate to.
@@ -1435,6 +1446,7 @@ In the dialog that opens:
    :width: 1.5em
 .. |textAlongLine| image:: /static/common/mActionTextAlongLine.png
    :width: 1.5em
+.. |textInsideRect| image:: /static/common/mActionTextInsideRect.png
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em

@@ -287,6 +287,7 @@ Icon                     Substitution                 Icon                     S
 |createAnnotationLayer|  ``|createAnnotationLayer|``  |annotationLayer|        ``|annotationLayer|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
 |actionText|             ``|actionText|``             |textAlongLine|          ``|textAlongLine|``
+|addImage|               ``|addImage|``               |textInsideRect|         ``|textInsideRect|``
 |labelbackground|        ``|labelbackground|``        |labelbuffer|            ``|labelbuffer|``
 |labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
 |labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
@@ -1640,6 +1641,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |textAlongLine| image:: /static/common/mActionTextAlongLine.png
    :width: 1.5em
+.. |textInsideRect| image:: /static/common/mActionTextInsideRect.png
    :width: 1.5em
 .. |tiledSceneLayer| image:: /static/common/mIconTiledSceneLayer.png
    :width: 1.5em
