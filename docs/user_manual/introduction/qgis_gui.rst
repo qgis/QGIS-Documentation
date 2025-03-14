@@ -355,19 +355,11 @@ menu options you need to switch to editing mode by clicking on |toggleEditing|
      -
      -
      - :ref:`sec_annotations`
-   * - :menuselection:`-->` |textAnnotation| :menuselection:`Text Annotation`
-     -
-     - :guilabel:`Annotations`
-     - :ref:`sec_annotations`
    * - :menuselection:`-->` |formAnnotation| :menuselection:`Form Annotation`
      -
      - :guilabel:`Annotations`
      - :ref:`sec_annotations`
    * - :menuselection:`-->` |htmlAnnotation| :menuselection:`HTML Annotation`
-     -
-     - :guilabel:`Annotations`
-     - :ref:`sec_annotations`
-   * - :menuselection:`-->` |svgAnnotation| :menuselection:`SVG Annotation`
      -
      - :guilabel:`Annotations`
      - :ref:`sec_annotations`
@@ -2502,13 +2494,9 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |sumPoints| image:: /static/common/mAlgorithmSumPoints.png
    :width: 1.5em
-.. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
-   :width: 1.5em
 .. |symmetricalDifference| image:: /static/common/mAlgorithmSymmetricalDifference.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
-   :width: 1.5em
-.. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
 .. |tiles| image:: /static/common/tiles.png
    :width: 1.5em

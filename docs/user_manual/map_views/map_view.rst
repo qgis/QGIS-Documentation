@@ -754,10 +754,9 @@ Two families of annotations are available in QGIS:
   They are tied to a particular geographic location, meaning that moving your map,
   changing the scale or changing projection won’t cause your annotations to jump
   around the map. Rather, they’ll be locked in place to the location you’ve drawn them.
-* **Balloon annotations**: these are individuals annotations of text, form or image
-  type placed inside a bubble. They can be associated to any layer for their visibility,
-  are drawn on top of the map canvas. The size is dependent from the map canvas scale,
-  and its position can be anchored.
+* **Balloon annotations**: these are individual HTML or form annotations inside a bubble.
+  They can be associated to any layer for their visibility and drawn on top of the map canvas.
+  The size is dependent from the map canvas scale, and its position can be anchored.
 
 .. tip:: **Layout the map with annotations**
 
@@ -792,16 +791,20 @@ with both families of annotations.
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  | |textAlongLine| :sup:`Create Text Annotation along  | Create an annotation as a curved text along a linestring            |                     |
  | Line`                                               |                                                                     |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
- | |textAnnotation| :sup:`Text Annotation`             | Select and create a text formatted annotation                       | Balloon annotations |
- +-----------------------------------------------------+---------------------------------------------------------------------+                     +
- | |htmlAnnotation| :sup:`HTML Annotation`             | Select and create annotation with an :file:`HTML` file's content    |                     |
- +-----------------------------------------------------+---------------------------------------------------------------------+                     +
- | |svgAnnotation| :sup:`SVG Annotation`               | Select and create annotation showing an :file:`SVG` file            |                     |
+ | |htmlAnnotation| :sup:`HTML Annotation`             | Select and create annotation with an :file:`HTML` file's content    | Balloon annotations |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  | |formAnnotation| :sup:`Form Annotation`             | Select and create annotation showing attributes of a vector layer   |                     |
  |                                                     | in a custom form file                                               |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
+
+.. note::
+
+   Starting with QGIS 3.40, it is no longer possible to create balloon annotations of SVG or text type.
+   When loading old projects, any of these annotations will automatically be converted
+   to the newer picture and rectangular text annotation item types.
 
 .. _annotation_layer:
 
@@ -952,19 +955,17 @@ Balloon annotations
 You can add balloon annotations through :menuselection:`Edit --> Add Annotation -->`
 menu or from the :guilabel:`Annotations Toolbar`:
 
-* |textAnnotation| :sup:`Text Annotation` for custom formatted text
 * |htmlAnnotation| :sup:`HTML Annotation` to place the content of an :file:`html` file
-* |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
   of a vector layer in a customized :file:`ui` file (see :numref:`figure_custom_annotation`).
   This is similar to the :ref:`custom attribute forms <provide_ui_file>`,
-  but displayed in an annotation item. Also see this video
-  https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s
+  but displayed in an annotation item.
+  Also watch `this video <https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s>`
   from Tim Sutton for more information.
 
-.. raw:: html
+  .. raw:: html
 
-  <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="Working with annotations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+    <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="Working with balloon annotations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 .. _figure_custom_annotation:
 
@@ -978,10 +979,8 @@ To add a balloon annotation, select the corresponding tool and click on the map 
 An empty balloon is added. Double-click on it and a dialog opens with various
 options. This dialog is almost the same for all the annotation types:
 
-* At the top, a file selector to fill with the path to an :file:`html`, :file:`svg`
-  or :file:`ui` file depending on the type of annotation. For text annotation,
-  you can enter your message in a text box and set its rendering with
-  the normal font tools.
+* At the top, a file selector to fill with the path to an :file:`html` or :file:`ui` file
+  depending on the type of annotation.
 * |checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon placement
   is based on a screen position (instead of the map), meaning that it's always shown
   regardless the map canvas extent.
@@ -1406,8 +1405,6 @@ In the dialog that opens:
    :width: 1.5em
 .. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
-.. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
-   :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |temporalNavigationAnimated| image:: /static/common/mTemporalNavigationAnimated.png
@@ -1420,7 +1417,6 @@ In the dialog that opens:
    :width: 1.5em
 .. |textAlongLine| image:: /static/common/mActionTextAlongLine.png
    :width: 1.5em
-.. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
