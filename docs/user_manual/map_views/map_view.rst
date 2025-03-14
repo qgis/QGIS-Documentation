@@ -821,9 +821,8 @@ Two types of annotation layer are available in QGIS:
 
 * A common :guilabel:`Annotation Layer`: you can create one using
   the |createAnnotationLayer| :sup:`New Annotation Layer` tool. It is listed
-  in the :guilabel:`Layers` panel, allowing you to control its features'
-  visibility, move it to show above or below particular layers in your map,
-  like any common layer.
+  in the :guilabel:`Layers` panel, allowing you to control its features' visibility,
+  move it to show above or below particular layers in your map, like any common layer.
   Double-click the layer and you can access its properties.
 * The :guilabel:`Main Annotation Layer`: By default, this is where annotations
   are stored when no annotation layer is available in the project or is selected
@@ -862,6 +861,10 @@ The properties dialog of an annotation layer provides the following tabs:
     :sup:`Set to current canvas scale` button helps you use the current map
     canvas scale as boundary of the range visibility.
     See :ref:`label_scaledepend` for more information.
+  * :guilabel:`Linked layer`: allows you to optionally set a linked visibility
+    layer for the annotation layer.
+    If set, then the annotations will only be drawn when the linked layer is visible
+    in the map.
   * :guilabel:`Opacity`: You can make the underlying layer in
     the map canvas visible with this tool. Use the slider to adapt the visibility
     of your vector layer to your needs. You can also make a precise definition of
