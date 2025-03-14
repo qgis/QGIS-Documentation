@@ -987,6 +987,18 @@ in the :guilabel:`Layer styling` panel.
   Moreover, you can enable display of the :guilabel:`Frame` and :guilabel:`Background` of the rectangle box,
   and configure them using :ref:`fill symbols <vector_fill_symbols>`.
 
+* For text at point, text inside rectangle and picture annotations, you can :guilabel:`Show callout`
+  when the picture or text anchor point is offset from its default placement.
+  To create a callout for an annotation:
+
+  #. Select the annotation item
+  #. Move the anchor point, i.e., click the central and green :kbd:`X` node and click at the new placement
+  #. In the annotation properties, press the :guilabel:`...` button to configure
+     the :ref:`callout properties <labels_callouts>`.
+
+  .. tip:: Applying a balloon callout to a text or picture annotation
+    will make you get their old-style balloon annotation display.
+
 * Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale
   at which symbol or text sizes which use paper-based units (such as millimeters or points) relate to.
   The sizes will be scaled accordingly whenever the map is viewed at a different scale.
