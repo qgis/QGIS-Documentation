@@ -795,6 +795,7 @@ with both families of annotations.
  | |textInsideRect| :sup:`Create Text Annotation In    | Create a text formatted annotation bound within a rectangle         |                     |
  | Rectangle`                                          |                                                                     |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |addImage| :sup:`Create Picture Annotation`         | Create an annotation showing an :file:`.SVG` or raster image        |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
  | |htmlAnnotation| :sup:`HTML Annotation`             | Select and create annotation with an :file:`HTML` file's content    | Balloon annotations |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
@@ -815,7 +816,7 @@ Feature Annotations
 
 Feature annotations are stored in **annotation layers**. Unlike conventional
 layers, an annotation layer is available only in the current project and can
-contain features of different types (text, marker, line, polygon).
+contain features of different types (text, marker, line, polygon, picture).
 The layer has no attributes and no symbology associated, but instead each feature
 can be symbolized on an item-by-item basis, through :guilabel:`Layer Styling` panel.
 
@@ -910,6 +911,10 @@ The Feature annotations have dedicated tools for creation depending on their typ
  |          | |textInsideRect| :sup:`Create Text Annotation       | Draw the rectangle box of the text, by left-clicking to add a first corner          |
  |          | In Rectangle`                                       | and left-clicking again to add the opposite one.                                    |
  +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
+ | Picture  | |addImage| :sup:`Create Picture Annotation`         | Draw the rectangle box of the picture, by left-clicking to add a first corner       |
+ |          |                                                     | and left-clicking again to add the opposite one.                                    |
+ |          |                                                     | Then pick an image or SVG file from the file explorer.                              |
+ +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
 
 Unlike common layers, an annotation layer does not need to be active before you
 select its features. Simply grab the |select| :sup:`Modify Annotations` tool and
@@ -965,6 +970,22 @@ in the :guilabel:`Layer styling` panel.
       and :guilabel:`Vertical alignment` (top, vertical center or bottom) in the rectangle box
     * configure for the rectangle, the :guilabel:`Margins` distance in the units of your choice,
       the :guilabel:`Frame` and :guilabel:`Background` colors.
+* Picture annotations allow you to display a :guilabel:`Raster image` or an :guilabel:`SVG image`,
+  using the :ref:`embedded_file_selector`.
+  The placement and size of the picture can be set as:
+
+  .. the description below should ABSOLUTELY be REVIEWED!!!
+     And I don't get why there's "Lock aspect ratio" vs dedicated "width/height/lock apect ratio"
+     depending on the drop-down item
+
+  * :guilabel:`Scale dependent size`: the picture annotation will always be rendered at the same size, ???
+  * :guilabel:`Fixed size`: the picture annotation will always be rendered on screen at the same size,
+    regardless of the map scale.
+  * :guilabel:`Relative to map`: the picture annotation will always be rendered at the same position
+    relative to the map canvas bounds, regardless of the map scale
+
+  Moreover, you can enable display of the :guilabel:`Frame` and :guilabel:`Background` of the rectangle box,
+  and configure them using :ref:`fill symbols <vector_fill_symbols>`.
 
 * Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale
   at which symbol or text sizes which use paper-based units (such as millimeters or points) relate to.
