@@ -8,7 +8,7 @@ Metadata tools
       :depth: 1
 
 
-.. _addhistorymetadata:
+.. _qgisaddhistorymetadata:
 
 Add history metadata
 --------------------
@@ -28,7 +28,7 @@ Parameters
      - Description
    * - **Layer**
      - ``INPUT``
-     - [layer: any]
+     - [layer]
      - The input layer (vector, raster, etc.) to which the history entry will be added.
    * - **History entry**
      - ``HISTORY``
@@ -89,7 +89,7 @@ Parameters
    * - **Target layer**
      - ``TARGET``
      - [layer]
-     - The layer to which metadata will be copied. Any existing metadata in this layer will be replaced.
+     - The layer to which metadata will be pasted. Any existing metadata in this layer will be replaced.
 
 Outputs
 .......
@@ -340,7 +340,7 @@ Python code
 
 Update Layer Metadata
 ---------------------
-Copies all non-empty metadata fields from an source layer to a target layer.
+Copies all non-empty metadata fields from a source layer to a target layer.
 Leaves empty input fields unchanged in the target.
 
 Parameters
@@ -361,7 +361,7 @@ Parameters
    * - **Target layer**
      - ``TARGET``
      - [layer]
-     - The layer to which non-empty metadata fields will be copied.
+     - The layer to which non-empty metadata fields will be pasted.
        Empty fields in the source layer will not overwrite existing metadata in the target layer.
 
 Outputs
