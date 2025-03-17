@@ -49,7 +49,7 @@ Outputs
    * - **Output**
      - ``OUTPUT``
      - [same as input]
-     - The resulting layer with the updated history metadata in its **Information properties**. 
+     - The resulting layer with the updated history in its **Metadata properties**. 
 
 
 Python code
