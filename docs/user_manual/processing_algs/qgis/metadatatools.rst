@@ -212,6 +212,13 @@ Parameters
      - ``METADATA``
      - [file]
      - The QMD file containing the metadata to be applied.
+   * - **Save metadata as default**
+     - ``DEFAULT``
+     - [boolean]
+
+       Default: False
+     - If checked, the metadata information will be saved with the layer,
+        hence available in subsequent projects.
 
 Outputs
 .......
