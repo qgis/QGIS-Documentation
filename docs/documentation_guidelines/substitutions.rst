@@ -501,7 +501,7 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |processingAlgorithm|           ``|processingAlgorithm|``           |processingModel|               ``|processingModel|``
 |processingHistory|             ``|processingHistory|``             |processingResult|              ``|processingResult|``
-|menu|                          ``|menu|``
+|menu|                          ``|menu|``                          |runSelected|                   ``|runSelected|``
 |processSelected|               ``|processSelected|``               |editHelpContent|               ``|editHelpContent|``  
 |saveAsPython|                  ``|saveAsPython|``                  |modelOutput|                   ``|modelOutput|``  
 |qgsProjectFile|                ``|qgsProjectFile|``                |addToProject|                  ``|addToProject|``
@@ -1459,6 +1459,8 @@ Icon                            Substitution                        Icon        
 .. |ruleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png
    :width: 1.5em
 .. |runConsole| image:: /static/common/iconRunConsole.png
+   :width: 1.5em
+.. |runSelected| image:: /static/common/mActionRunSelected.png
    :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em

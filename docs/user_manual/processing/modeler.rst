@@ -57,6 +57,10 @@ Model menu
      - :kbd:`F5`
      - |checkbox|
      - Executes the model
+   * - |runSelected| :guilabel:`Run Selected Steps...`
+     - :kbd:`Shift+F5`
+     -
+     - Runs only the selected steps in a model, allowing to run a subset of the model
    * - :guilabel:`Reorder Model Inputs...`
      -
      -
@@ -479,14 +483,26 @@ model comments. Comments are visible only in the modeler canvas and not
 in the final algorithm dialog; they can be hidden by deactivating
 :menuselection:`View --> Show Comments`.
 
-You can run your algorithm any time by clicking on the |start| :sup:`Run model` button.
-When using the editor to execute a model, any non-default values will be
-saved in the inputs. This means that executing the model at a later time from
-the editor will have the dialog prefilled with those values on any subsequent run.
+Your model can be run in various ways:
 
-In order to use the algorithm from the toolbox, it has to be saved
-and the modeler dialog closed, to allow the toolbox to refresh its
-contents.
+* You can run the whole model by clicking on |start| :sup:`Run Model...` from the toolbar
+  or :menuselection:`Model -->` |start| :menuselection:`Run Model...`:
+  when using the editor to execute a model, any non-default values will be saved in the inputs.
+  This means that executing the model at a later time from the editor
+  will have the dialog prefilled with those values on any subsequent run.
+* You can select elements of the model and run only that subset of the model:
+  press the |runSelected| :guilabel:`Run Selected Steps...` option
+  from the :menuselection:`Models -->` menu or from the contextual menu of a selected algorithm.
+  The initial state will be taken from any previous executions of the model through the editor,
+  so results from previous steps in the model are available for the selected steps.
+  This makes it possible to fix parts of a large model,
+  without having to constantly run the entire model to test.
+  Especially useful when earlier steps in the model are time consuming.
+* You can run a subset of the model, starting from a specific algorithm:
+  right-click the algorithm and select |start| :guilabel:`Run from Here...`.
+  Likewise, values are taken from previous executions.
+* In order to use the algorithm from the Processing Toolbox, it has to be saved
+  and the modeler dialog closed, to allow the toolbox to refresh its contents.
 
 
 Documenting your model
@@ -694,6 +710,8 @@ it.
 .. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |runSelected| image:: /static/common/mActionRunSelected.png
    :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
