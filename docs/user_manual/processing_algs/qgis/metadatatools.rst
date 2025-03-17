@@ -90,6 +90,13 @@ Parameters
      - ``TARGET``
      - [layer]
      - The layer to which metadata will be pasted. Any existing metadata in this layer will be replaced.
+   * - **Save metadata as default**
+     - ``DEFAULT``
+     - [boolean]
+
+       Default: False
+     - If checked, the metadata information will be saved with the layer,
+        hence available in subsequent projects.
 
 Outputs
 .......
