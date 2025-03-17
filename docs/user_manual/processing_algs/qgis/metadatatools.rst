@@ -315,6 +315,12 @@ Parameters
      - ``FEES``
      - [string]
      - Information about any fees associated with accessing the layer
+   * - **Ignore empty fields**
+     - ``IGNORE_EMPTY``
+     - [boolean]
+
+       Default: False
+     - If checked, no update will be done to metadata fields that are not filled
 
 Outputs
 .......
