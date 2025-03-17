@@ -284,7 +284,7 @@ Parameters
        Optional
      - ``TYPE``
      - [string]
-     - The type of the layer
+     - The type of data stored in the layer
    * - **Language**
 
        Optional
