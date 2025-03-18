@@ -59,7 +59,8 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinxext.rediraffe',
     'sphinx_togglebutton',
-    'sphinx_copybutton'
+    'sphinx_copybutton',
+    'linuxdoc.rstFlatTable',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
