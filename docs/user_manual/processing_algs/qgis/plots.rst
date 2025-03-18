@@ -166,6 +166,9 @@ Creates an elevation profile image from a list of map layers and an optional ter
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -180,7 +183,7 @@ Parameters
      - The line layer representing the profile curve along which the elevation profile will be generated
    * - **Map layers**
      - ``MAP_LAYERS``
-     - [multipleLayers]
+     - [layer] [list]
      - The list of map layers to include in the elevation profile
    * - **Chart width (in pixels)**
      - ``WIDTH``
@@ -205,8 +208,8 @@ Parameters
      - [raster]
      - A terrain layer (e.g., DEM) to use for elevation data. If not provided, elevation data will be derived from the map layers.
 
-Advanced Parameters
-...................
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -265,7 +268,9 @@ Advanced Parameters
        Default: 5
 
        Minimum value: 0
-     - The tolerance for sampling points along the profile curve.
+     - Defines how far a feature (vector point, line, polygon, or point cloud)
+       can be from the profile line to be included in the results. It uses map units
+       and does not affect other layer types.
    * - **Chart DPI**
      - ``DPI``
      - [number]
