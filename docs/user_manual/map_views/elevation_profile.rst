@@ -113,7 +113,7 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
      - Allows to render distances in the profile chart with units other than the map canvas units.
    * - :menuselection:`--> Tolerance`
      -
-     - Sets how far from the actual profile line a feature (point, line, polygon, etc.)
+     - Sets how far from the actual profile line a feature (vector point, line or polygon, point cloud)
        can reside to be included in the results.
        Uses the map units and is ignored by other layer or geometry types.
    * - :menuselection:`--> Rename Profile...`

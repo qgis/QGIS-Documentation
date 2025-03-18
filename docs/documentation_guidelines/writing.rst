@@ -673,7 +673,7 @@ guidelines:
   Same output type as input type            ``same as input``
   Definition                                ``definition``
   Point                                     ``point``
-  MultipleLayers                            ``multipleLayers``
+  Map layers                                ``layer`` ``list``
   Range                                     ``range``
   AuthConfig                                ``authconfig``
   Mesh                                      ``mesh``
