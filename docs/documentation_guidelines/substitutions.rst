@@ -285,9 +285,9 @@ Icon                     Substitution                 Icon                     S
 |text|                   ``|text|``                   |histogram|              ``|histogram|``
 |stackedBar|             ``|stackedBar|``             |stackedDiagram|         ``|stackedDiagram|``
 |createAnnotationLayer|  ``|createAnnotationLayer|``  |annotationLayer|        ``|annotationLayer|``
-|textAnnotation|         ``|textAnnotation|``         |svgAnnotation|          ``|svgAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
 |actionText|             ``|actionText|``             |textAlongLine|          ``|textAlongLine|``
+|addImage|               ``|addImage|``               |textInsideRect|         ``|textInsideRect|``
 |labelbackground|        ``|labelbackground|``        |labelbuffer|            ``|labelbuffer|``
 |labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
 |labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
@@ -1611,8 +1611,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |sumPoints| image:: /static/common/mAlgorithmSumPoints.png
    :width: 1.5em
-.. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
-   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
@@ -1643,7 +1641,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |textAlongLine| image:: /static/common/mActionTextAlongLine.png
    :width: 1.5em
-.. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
+.. |textInsideRect| image:: /static/common/mActionTextInsideRect.png
    :width: 1.5em
 .. |tiledSceneLayer| image:: /static/common/mIconTiledSceneLayer.png
    :width: 1.5em

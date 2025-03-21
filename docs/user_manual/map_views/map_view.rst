@@ -754,10 +754,9 @@ Two families of annotations are available in QGIS:
   They are tied to a particular geographic location, meaning that moving your map,
   changing the scale or changing projection won’t cause your annotations to jump
   around the map. Rather, they’ll be locked in place to the location you’ve drawn them.
-* **Balloon annotations**: these are individuals annotations of text, form or image
-  type placed inside a bubble. They can be associated to any layer for their visibility,
-  are drawn on top of the map canvas. The size is dependent from the map canvas scale,
-  and its position can be anchored.
+* **Balloon annotations**: these are individual HTML or form annotations inside a bubble.
+  They can be associated to any layer for their visibility and drawn on top of the map canvas.
+  The size is dependent from the map canvas scale, and its position can be anchored.
 
 .. tip:: **Layout the map with annotations**
 
@@ -790,18 +789,25 @@ with both families of annotations.
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  | |actionText| :sup:`Create Text Annotation at Point` | Create an annotation as a text label                                |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
- | |textAlongLine| :sup:`Create Text Annotation along  | Create an annotation as a curved text along a linestring            |                     |
+ | |textAlongLine| :sup:`Create Text Annotation along  | Create an annotation as a curved text along a line feature          |                     |
  | Line`                                               |                                                                     |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |textInsideRect| :sup:`Create Text Annotation In    | Create a text formatted annotation bound within a rectangle         |                     |
+ | Rectangle`                                          |                                                                     |                     |
+ +-----------------------------------------------------+---------------------------------------------------------------------+                     +
+ | |addImage| :sup:`Create Picture Annotation`         | Create an annotation showing an :file:`.SVG` or raster image        |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
- | |textAnnotation| :sup:`Text Annotation`             | Select and create a text formatted annotation                       | Balloon annotations |
- +-----------------------------------------------------+---------------------------------------------------------------------+                     +
- | |htmlAnnotation| :sup:`HTML Annotation`             | Select and create annotation with an :file:`HTML` file's content    |                     |
- +-----------------------------------------------------+---------------------------------------------------------------------+                     +
- | |svgAnnotation| :sup:`SVG Annotation`               | Select and create annotation showing an :file:`SVG` file            |                     |
+ | |htmlAnnotation| :sup:`HTML Annotation`             | Select and create annotation with an :file:`HTML` file's content    | Balloon annotations |
  +-----------------------------------------------------+---------------------------------------------------------------------+                     +
  | |formAnnotation| :sup:`Form Annotation`             | Select and create annotation showing attributes of a vector layer   |                     |
  |                                                     | in a custom form file                                               |                     |
  +-----------------------------------------------------+---------------------------------------------------------------------+---------------------+
+
+.. note::
+
+   Starting with QGIS 3.40, it is no longer possible to create balloon annotations of SVG or text type.
+   When loading old projects, any of these annotations will automatically be converted
+   to the newer picture and rectangular text annotation item types.
 
 .. _annotation_layer:
 
@@ -810,7 +816,7 @@ Feature Annotations
 
 Feature annotations are stored in **annotation layers**. Unlike conventional
 layers, an annotation layer is available only in the current project and can
-contain features of different types (text, marker, line, polygon).
+contain features of different types (text, marker, line, polygon, picture).
 The layer has no attributes and no symbology associated, but instead each feature
 can be symbolized on an item-by-item basis, through :guilabel:`Layer Styling` panel.
 
@@ -818,9 +824,8 @@ Two types of annotation layer are available in QGIS:
 
 * A common :guilabel:`Annotation Layer`: you can create one using
   the |createAnnotationLayer| :sup:`New Annotation Layer` tool. It is listed
-  in the :guilabel:`Layers` panel, allowing you to control its features'
-  visibility, move it to show above or below particular layers in your map,
-  like any common layer.
+  in the :guilabel:`Layers` panel, allowing you to control its features' visibility,
+  move it to show above or below particular layers in your map, like any common layer.
   Double-click the layer and you can access its properties.
 * The :guilabel:`Main Annotation Layer`: By default, this is where annotations
   are stored when no annotation layer is available in the project or is selected
@@ -859,6 +864,10 @@ The properties dialog of an annotation layer provides the following tabs:
     :sup:`Set to current canvas scale` button helps you use the current map
     canvas scale as boundary of the range visibility.
     See :ref:`label_scaledepend` for more information.
+  * :guilabel:`Linked layer`: allows you to optionally set a linked visibility
+    layer for the annotation layer.
+    If set, then the annotations will only be drawn when the linked layer is visible
+    in the map.
   * :guilabel:`Opacity`: You can make the underlying layer in
     the map canvas visible with this tool. Use the slider to adapt the visibility
     of your vector layer to your needs. You can also make a precise definition of
@@ -876,20 +885,36 @@ The properties dialog of an annotation layer provides the following tabs:
 Interacting with features
 .........................
 
-The Feature annotations have dedicated tools for creation depending on their type:
+The Feature annotations have dedicated tools for creation depending on their type.
 
-* |addPolygon| :sup:`Create Polygon Annotation`
-* |addPolyline| :sup:`Create Line Annotation`
-* |addMarker| :sup:`Create Marker Annotation`
-* |actionText| :sup:`Create Text Annotation at Point`
-* |textAlongLine| :sup:`Create Text Annotation along Line`
+.. table:: Creating feature annotation
 
-All the usual QGIS shortcuts for creating features apply when creating annotation
-items. A line or polygon annotation is drawn by left-clicking once for each vertex,
-with a final right mouse click to complete the shape. Snapping can be enabled
-while you draw, you can use the :guilabel:`Advanced Digitizing Tools` to precisely
-place vertices, and even switch the :ref:`drawing tools <drawing_methods>`
-to the streaming mode for completely free-form shapes.
+ +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
+ | Family / | Annotation tool                                     | Procedure                                                                           |
+ | based on |                                                     |                                                                                     |
+ +==========+=====================================================+=====================================================================================+
+ | Geometry | |addPolygon| :sup:`Create Polygon Annotation`       | This is like digitizing a point, line or polygon vector feature.                    |
+ |          |                                                     |                                                                                     |
+ |          +-----------------------------------------------------+ All the usual shortcuts for creating features apply when creating annotation items. |
+ |          | |addPolyline| :sup:`Create Line Annotation`         | A line or polygon annotation is drawn by left-clicking once for each vertex,        |
+ |          |                                                     | with a final right mouse click to complete the shape. Snapping can be enabled       |
+ |          +-----------------------------------------------------+ while you draw, you can use the :guilabel:`Advanced Digitizing Tools` to precisely  |
+ |          | |addMarker| :sup:`Create Marker Annotation`         | place vertices, and even switch the :ref:`drawing tools <drawing_methods>`          |
+ |          |                                                     | to for example the streaming mode for completely free-form shapes.                  |
+ +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
+ | Text     | |actionText| :sup:`Create Text Annotation at Point` | Left-click on the map canvas.                                                       |
+ |          +-----------------------------------------------------+-------------------------------------------------------------------------------------+
+ |          | |textAlongLine| :sup:`Create Text Annotation        | Left-click to add vertices to the text basement line geometry,                      |
+ |          | along Line`                                         | and right-click to end.                                                             |
+ |          |                                                     | As above, digitizing features capabilities are also available.                      |
+ |          +-----------------------------------------------------+-------------------------------------------------------------------------------------+
+ |          | |textInsideRect| :sup:`Create Text Annotation       | Draw the rectangle box of the text, by left-clicking to add a first corner          |
+ |          | In Rectangle`                                       | and left-clicking again to add the opposite one.                                    |
+ +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
+ | Picture  | |addImage| :sup:`Create Picture Annotation`         | Draw the rectangle box of the picture, by left-clicking to add a first corner       |
+ |          |                                                     | and left-clicking again to add the opposite one.                                    |
+ |          |                                                     | Then pick an image or SVG file from the file explorer.                              |
+ +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
 
 Unlike common layers, an annotation layer does not need to be active before you
 select its features. Simply grab the |select| :sup:`Modify Annotations` tool and
@@ -907,9 +932,10 @@ you will be able to interact with any feature annotation:
 
   * :kbd:`Shift+key` for big movement
   * :kbd:`Alt+key` for ``1 px`` movement
-* **Geometry modification**: for line or polygon annotations, left-click on
-  a vertex of the geometry, move and click again.
-  Double-click a segment to add a new vertex.
+* **Geometry modification**: move over an annotation and purple squares are displayed
+  on nodes of its underlying geometry.
+  Left-click on the square, move and click again.
+  For linear or polygonal annotations, double-clicking a segment will add a new vertex.
 * **Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while
   an annotation is selected will delete that annotation
 * :ref:`Change feature symbology <annotation_feature_symbology>`
@@ -920,22 +946,52 @@ Feature symbology
 .................
 
 A selected annotation will display its :guilabel:`Symbology` properties
-in the :guilabel:`Layer styling` panel. You can:
+in the :guilabel:`Layer styling` panel.
 
-* Modify the appearance using full capabilities of:
+* For polygon, polyline and marker annotations, you can modify the appearance
+  using full capabilities of the :ref:`symbol properties <symbol-selector>`
+* For text-based annotations, an area with text editing tools helps you construct the string to display.
+  It can be multiline, use HTML formatting and rely on QGIS expression functions.
+  You can moreover modify the appearance using full capabilities
+  of the :ref:`text format properties <text_format>`.
 
-  * the :ref:`symbol properties <symbol-selector>` for polygon, polyline and marker annotations
-  * the :ref:`text format properties <text_format>` for text-based annotations.
-    A text area allows you to construct the string to display using QGIS expression functions.
-    It is also possible to set the :guilabel:`Alignment` for text annotation at point
-    (left, center or right of the text point).
-* For text annotation at point, also configure whether it should :guilabel:`Ignore map rotation`
-  or :guilabel:`Rotate with map`.
-  In both cases, a custom :guilabel:`Angle` can be set for the feature orientation.
-* For text annotation along a line, configure an :guilabel:`Offset from line` in the unit
-  of your choice
+  Depending on the type of annotation, additional options are available.
+
+  * For text annotation at point, it is also possible to:
+
+    * set the text :guilabel:`Alignment` (left, center or right of the anchor point)
+    * configure whether the text should :guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`.
+      In both cases, a custom :guilabel:`Angle` can be set for the feature orientation.
+  * For text annotation along a line, configure an :guilabel:`Offset from line` in the unit
+    of your choice
+  * For text annotation in rectangle, it is also possible to:
+
+    * set the text :guilabel:`Horizontal alignment` (left, center, right or justify)
+      and :guilabel:`Vertical alignment` (top, vertical center or bottom) in the rectangle box
+    * configure for the rectangle, the :guilabel:`Margins` distance in the units of your choice,
+      the :guilabel:`Frame` and :guilabel:`Background` colors.
+* Picture annotations allow you to display a :guilabel:`Raster image` or an :guilabel:`SVG image`,
+  using the :ref:`embedded_file_selector`.
+  The placement and size of the picture can be set as :guilabel:`Scale dependent size`,
+  :guilabel:`Fixed size` or :guilabel:`Relative to map`.
+
+  Moreover, you can enable display of the :guilabel:`Frame` and :guilabel:`Background` of the rectangle box,
+  and configure them using :ref:`fill symbols <vector_fill_symbols>`.
+
+* For text at point, text inside rectangle and picture annotations, you can :guilabel:`Show callout`
+  when the picture or text anchor point is offset from its default placement.
+  To create a callout for an annotation:
+
+  #. Select the annotation item
+  #. Move the anchor point, i.e., click the central and green :kbd:`X` node and click at the new placement
+  #. In the annotation properties, press the :guilabel:`...` button to configure
+     the :ref:`callout properties <labels_callouts>`.
+
+  .. tip:: Applying a balloon callout to a text or picture annotation
+    will make you get their old-style balloon annotation display.
+
 * Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale
-  at which symbol or text sizes which uses paper-based units (such as millimeters or points) relate to.
+  at which symbol or text sizes which use paper-based units (such as millimeters or points) relate to.
   The sizes will be scaled accordingly whenever the map is viewed at a different scale.
   For instance, a line feature wide of 2mm at 1:2000 :guilabel:`Reference scale`
   will be rendered using 4mm when the map is viewed at 1:1000.
@@ -952,19 +1008,17 @@ Balloon annotations
 You can add balloon annotations through :menuselection:`Edit --> Add Annotation -->`
 menu or from the :guilabel:`Annotations Toolbar`:
 
-* |textAnnotation| :sup:`Text Annotation` for custom formatted text
 * |htmlAnnotation| :sup:`HTML Annotation` to place the content of an :file:`html` file
-* |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
   of a vector layer in a customized :file:`ui` file (see :numref:`figure_custom_annotation`).
   This is similar to the :ref:`custom attribute forms <provide_ui_file>`,
-  but displayed in an annotation item. Also see this video
-  https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s
+  but displayed in an annotation item.
+  Also watch `this video <https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s>`
   from Tim Sutton for more information.
 
-.. raw:: html
+  .. raw:: html
 
-  <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="Working with annotations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+    <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/0pDBuSbQ02o?start=145" title="Working with balloon annotations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 .. _figure_custom_annotation:
 
@@ -978,10 +1032,8 @@ To add a balloon annotation, select the corresponding tool and click on the map 
 An empty balloon is added. Double-click on it and a dialog opens with various
 options. This dialog is almost the same for all the annotation types:
 
-* At the top, a file selector to fill with the path to an :file:`html`, :file:`svg`
-  or :file:`ui` file depending on the type of annotation. For text annotation,
-  you can enter your message in a text box and set its rendering with
-  the normal font tools.
+* At the top, a file selector to fill with the path to an :file:`html` or :file:`ui` file
+  depending on the type of annotation.
 * |checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon placement
   is based on a screen position (instead of the map), meaning that it's always shown
   regardless the map canvas extent.
@@ -1406,8 +1458,6 @@ In the dialog that opens:
    :width: 1.5em
 .. |showPresets| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
-.. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
-   :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
    :width: 1.5em
 .. |temporalNavigationAnimated| image:: /static/common/mTemporalNavigationAnimated.png
@@ -1420,7 +1470,7 @@ In the dialog that opens:
    :width: 1.5em
 .. |textAlongLine| image:: /static/common/mActionTextAlongLine.png
    :width: 1.5em
-.. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
+.. |textInsideRect| image:: /static/common/mActionTextInsideRect.png
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
