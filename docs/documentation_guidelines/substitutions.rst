@@ -90,7 +90,7 @@ Manage Layers and overview
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |dataSourceManager|             ``|dataSourceManager|``             \                               \
-|addOgrLayer|                   ``|addOgrLayer|``
+|addOgrLayer|                   ``|addOgrLayer|``                   |addSensorThingsLayer|          ``|addSensorThingsLayer|``
 |addRasterLayer|                ``|addRasterLayer|``                |addMssqlLayer|                 ``|addMssqlLayer|``
 |addDelimitedTextLayer|         ``|addDelimitedTextLayer|``         |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
 |addPostgisLayer|               ``|addPostgisLayer|``               |addOracleLayer|                ``|addOracleLayer|``
@@ -659,6 +659,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addRing| image:: /static/common/mActionAddRing.png
    :width: 2em
+.. |addSensorThingsLayer| image:: /static/common/mActionAddSensorThingsLayer.png
+   :width: 1.5em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
 .. |addTable| image:: /static/common/mActionAddTable.png
