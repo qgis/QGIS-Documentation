@@ -1702,6 +1702,106 @@ or :guilabel:`Load Connection` from an XML file.
 
  .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
 
+.. index:: SensorThings
+.. _Sensor_things:
+
+About SensorThings 
+------------------
+
+QGIS supports connections to OGC SensorThings API, a standardised protocol to interact with sensor
+networks. Read more about the protocol at the `website of OGC
+<https://www.ogc.org/publications/standard/sensorthings/>`__. The SensorThings API is based on the 
+`Observations and Measurements <https://www.ogc.org/publications/standard/om/>`__ data model. A 
+standardised model to capture observations on features of interest, using a procedure, resulting 
+in a result with a certain unit. These relations are expressed in the diagram below.  
+
+.. figure:: img/sta_uml_diagram.png
+   :align: center
+
+   Datamodel Observations and Measurements.
+
+In above diagram, only Location and Feature of Interest have a geometry and can be used as a layer in 
+QGIS. SensorThings provides a mechanism of expansion of the results to related entities, similar to 
+how tables are joined together in a relational database. Using this approach, you can expand the QGIS layer 
+to include properties from Things, Observations or Datastreams. Notice that the Observed Property 
+contains which property is observed, which is relevant if the sensor of interest monitors many 
+properties (temperature, speed, angle, etc).
+
+Using SensorThings
+------------------
+
+Use the |addSensorThingsLayer| :guilabel:`SensorThings` tab in the :guilabel:`Data Source Manager` dialog
+or use the contextual menu of the :guilabel:`SensorThings` entry in the :guilabel:`Browser` panel to add
+a new SensorThings connection.
+
+To add a new service, press :guilabel:`New` (or :guilabel:`New SensorThings Connection`
+from the Browser panel) and provide the following:
+
+.. figure:: img/sensorThings_connection.png
+   :align: center
+
+   SensorThings Connection dialog
+
+* a :guilabel:`Name`
+* the :guilabel:`URL`
+
+You can also provide advanced options to further control the behaviour of the service:
+
+* the :ref:`authentication <authentication_index>` configuration if necessary
+* a :guilabel:`Referer`
+* a :guilabel:`Entity Type`
+* a :guilabel:`Geometry Type`
+* a :guilabel:`Page Size`
+* a :guilabel:`Feature Limit` sets a maximum number of features to request from the service
+* a :guilabel:`Extent Limit` sets a maximum extent limit for the layer, so that only features
+  within the extent are requested
+* a :guilabel:`Filter` where you can build a query to filter the data, using SensorThings filter syntax.
+
+Press :guilabel:`OK` to establish the connection.
+Then you will be able to:
+
+* :guilabel:`Add` a new layer or table to the project; it is loaded with the name given in the settings. 
+  Notice that only :guilabel:`Location` and :guilabel:`Feature of Interest` contain a geometry, other 
+  entities will be added as a table.
+* :guilabel:`Edit` the SensorThings connection settings
+* :guilabel:`Remove` the connection
+* From the :guilabel:`Browser` panel, right-click over the entry
+  and you can also:
+
+  * :menuselection:`Export layer... --> To File`, :ref:`saving it as a vector
+    <general_saveas>`
+  * :guilabel:`Add layer to project`: a double-click also adds the layer
+  * View the :guilabel:`Layer Properties...` and get access to metadata and a preview of the data 
+    provided by the service. Notice that on this panel you have an option to :guilabel:`expand` the 
+    results to other entities in the SensorThings model. The additional properties are added as columns
+    in the attribute table.
+
+Notice that the result property of a SensorThings Observation is a String field. In case you want to use 
+its numerical representation in for example a graduated style, use an expression to convert the value to 
+real and try() in case this fails (eg. :guilabel:`try(to_real("Observation_result"),Null)`) 
+
+In case you want to create a chart of the observations at one or more locations, you can install the QGIS plugin
+:guilabel:`Data Plotly`. Now select the observations at a point location in the map view. Open the plotly panel 
+and activate the :guilabel:`Use only selected features` checkbox. Select on the x-column a date-time property 
+and on the y-column the :guilabel:`Observation_result`. This will plot the observations at that location over 
+time. Verify to filter by a single Observed Property. Notice that the chart changes as soon as you select other 
+locations on the map.
+
+.. figure:: img/sensorthings-plotly-airquality.png
+   :align: center
+
+   Use Data plotly to plot the airquality observations at a location
+
+Configurations can be saved to an :file:`.XML` file (:guilabel:`Save Connections`)
+through the :guilabel:`SensorThings` entry in :guilabel:`Data Source Manager` dialog
+or its contextual menu in the :guilabel:`Browser` panel.
+Likewise, configurations can be added from a file (:guilabel:`Load Connections`).
+
+Through the Layer Source Properties dialog, you can set the :guilabel:`Page Size`,
+:guilabel:`Entity Type`, :guilabel:`Geometry Type`, :guilabel:`Extent Limit`, and :guilabel:`Feature Limit`
+for the existing layer in the project without having to add a new layer.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
