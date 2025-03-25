@@ -261,7 +261,7 @@ same file lower down. First our init and cleanup functions:
 
   void TestQgsRasterLayer::initTestCase()
   {
-    // init QGIS's paths - true means that all path will be inited from prefix
+    // init QGIS's paths - true means that all paths will be inited from prefix
     QString qgisPath = QCoreApplication::applicationDirPath ();
     QgsApplication::setPrefixPath(qgisPath, TRUE);
   #ifdef Q_OS_LINUX
@@ -305,10 +305,10 @@ Qt also provides some other interesting mechanisms for data driven
 testing, so if you are interested to know more on the topic, consult
 the Qt documentation.
 
-Next lets look at our functional test. The ``isValid()`` test simply checks the
-raster layer was correctly loaded in the initTestCase. QVERIFY is a Qt macro
+Next lets look at our functional test. The ``isValid()`` test simply checks if the
+raster layer was loaded correctly in the initTestCase. QVERIFY is a Qt macro
 that you can use to evaluate a test condition. There are a few other use
-macros Qt provide for use in your tests including:
+macros Qt provides for use in your tests including:
 
 * QCOMPARE ( *actual, expected* )
 * QEXPECT_FAIL ( *dataIndex, comment, mode* )
@@ -763,7 +763,7 @@ Have fun
 --------
 
 Well that concludes this section on writing unit tests in QGIS. We hope you
-will get into the habit of writing test to test new functionality and to check
+will get into the habit of writing tests to test new functionality and to check
 for regressions. Some aspects of the test system (in particular the
 :file:`CMakeLists.txt` parts) are still being worked on so that the testing framework
 works in a truly platform independent way.
