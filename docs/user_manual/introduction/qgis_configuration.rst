@@ -1370,7 +1370,8 @@ It provides some default filters (with prefix) to use:
   The coordinate is expected in WGS 84 (``epsg:4326``) and/or map canvas CRS.
 * :guilabel:`Nominatim Geocoder` (``>``): geocodes using the `Nominatim <https://nominatim.org>`_
   geocoding service of the OpenStreetMap Foundation.
-  Press |settings| to limit results to one or more countries using list of country codes.
+  Press |settings| to limit results to one or more countries using list of `country codes
+  <https://wiki.openstreetmap.org/wiki/Nominatim/Country_Codes/>`_.
 * Processing Algorithms (``a``): searches and opens a Processing algorithm dialog.
 * :guilabel:`Edit Selected Features` (``ef``): gives quick access and runs a compatible
   :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
