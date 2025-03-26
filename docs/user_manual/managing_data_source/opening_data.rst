@@ -1705,7 +1705,7 @@ or :guilabel:`Load Connection` from an XML file.
 .. index:: SensorThings
 .. _Sensor_things:
 
-About SensorThings 
+Using SensorThings 
 ------------------
 
 QGIS supports connections to OGC SensorThings API, a standardised protocol to interact with sensor
@@ -1727,24 +1727,13 @@ to include properties from Things, Observations or Datastreams. Notice that the 
 contains which property is observed, which is relevant if the sensor of interest monitors many 
 properties (temperature, speed, angle, etc).
 
-Using SensorThings
-------------------
+To add SensorThings data to the QGIS use the |addSensorThingsLayer| :guilabel:`SensorThings`
+tab in the :guilabel:`Data Source Manager` dialog.
 
-Use the |addSensorThingsLayer| :guilabel:`SensorThings` tab in the :guilabel:`Data Source Manager` dialog
-or use the contextual menu of the :guilabel:`SensorThings` entry in the :guilabel:`Browser` panel to add
-a new SensorThings connection.
-
-To add a new service, press :guilabel:`New` (or :guilabel:`New SensorThings Connection`
-from the Browser panel) and provide the following:
-
-
-* a :guilabel:`Name`
-* the :guilabel:`URL`
-
-You can also provide advanced options to further control the behaviour of the service:
-
-* the :ref:`authentication <authentication_index>` configuration if necessary
-* a :guilabel:`Referer`
+To establish a new connecetion, press :guilabel:`New` (or :guilabel:`New SensorThings Connection`
+from the Browser panel) and provide :guilabel:`Name` and :guilabel:`URL`.
+Advanced options, such as :ref:`authentication <authentication_index>` and
+a :guilabel:`Referer`, can also be configured.
 
 Press :guilabel:`OK` to establish the connection.
 Then you will be able to:
@@ -1757,34 +1746,30 @@ Then you will be able to:
 
    SensorThings Connection dialog
    
-You can provide additional :guilabel:`Layer Settings`:
+Thera are also additional :guilabel:`Layer Settings` that can be configured:
+
 * a :guilabel:`Entity Type`
 * a :guilabel:`Geometry Type`
 * a :guilabel:`Page Size`
 * a :guilabel:`Feature Limit` sets a maximum number of features to request from the service
 * a :guilabel:`Extent Limit` sets a maximum extent limit for the layer, so that only features
   within the extent are requested
-* a :guilabel:`Filter` where you can build a query to filter the data, using SensorThings filter syntax.
+* a :guilabel:`Expansions` where you can choose to expand the results to other entities in the SensorThings model.
+  The additional properties are added as columns in the attribute table.
 
-You can now press :guilabel:`Add` to load the layer specified by the above options to the project.
-Press :guilabel:`OK` to establish the connection.
-Then you will be able to:
+Use :guilabel:`Filter` to build a query to filter the data, using SensorThings filter syntax.
 
-* :guilabel:`Add` a new layer or table to the project; it is loaded with the name given in the settings. 
-  Notice that only :guilabel:`Location` and :guilabel:`Feature of Interest` contain a geometry, other 
-  entities will be added as a table.
-* :guilabel:`Edit` the SensorThings connection settings
-* :guilabel:`Remove` the connection
-* From the :guilabel:`Browser` panel, right-click over the entry
-  and you can also:
+Notice that only :guilabel:`Location` and :guilabel:`Feature of Interest` contain a geometry, other 
+entities will be added as a table.
+
+From the :guilabel:`Browser` panel, right-click over the entry
+and you can also:
 
   * :menuselection:`Export layer... --> To File`, :ref:`saving it as a vector
     <general_saveas>`
   * :guilabel:`Add layer to project`: a double-click also adds the layer
   * View the :guilabel:`Layer Properties...` and get access to metadata and a preview of the data 
-    provided by the service. Notice that on this panel you have an option to :guilabel:`expand` the 
-    results to other entities in the SensorThings model. The additional properties are added as columns
-    in the attribute table.
+    provided by the service.
 
 Notice that the result property of a SensorThings Observation is a String field. In case you want to use 
 its numerical representation in for example a graduated style, use an expression to convert the value to 
