@@ -1730,10 +1730,6 @@ a new SensorThings connection.
 To add a new service, press :guilabel:`New` (or :guilabel:`New SensorThings Connection`
 from the Browser panel) and provide the following:
 
-.. figure:: img/sensorThings_connection.png
-   :align: center
-
-   SensorThings Connection dialog
 
 * a :guilabel:`Name`
 * the :guilabel:`URL`
