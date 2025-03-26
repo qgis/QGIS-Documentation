@@ -1759,6 +1759,7 @@ You can provide additional :guilabel:`Layer Settings`:
   within the extent are requested
 * a :guilabel:`Filter` where you can build a query to filter the data, using SensorThings filter syntax.
 
+You can now press :guilabel:`Add` to load the layer specified by the above options to the project.
 Press :guilabel:`OK` to establish the connection.
 Then you will be able to:
 
