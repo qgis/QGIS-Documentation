@@ -352,7 +352,7 @@ Tiles and Web Services
 |               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+--------------------+---------------------+-------------------+
 |               | :guilabel:`Edit…` connection settings        | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox|         | |checkbox|          | |checkbox|        |
 |               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+--------------------+---------------------+-------------------+
-|               | :guilabel:`Duplicate` connection             | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox|         | |checkbox|          | |checkbox|  |
+|               | :guilabel:`Duplicate` connection             | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox|         | |checkbox|          | |checkbox|        |
 |               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+--------------------+---------------------+-------------------+
 |               | :guilabel:`Delete` connection                | |checkbox| | |checkbox|        | |checkbox| | |checkbox| | |checkbox|     | |checkbox|  | |checkbox|         | |checkbox|          | |checkbox|        |
 |               +----------------------------------------------+------------+-------------------+------------+------------+----------------+-------------+--------------------+---------------------+-------------------+
