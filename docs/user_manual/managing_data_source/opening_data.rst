@@ -1738,6 +1738,19 @@ You can also provide advanced options to further control the behaviour of the se
 
 * the :ref:`authentication <authentication_index>` configuration if necessary
 * a :guilabel:`Referer`
+
+Press :guilabel:`OK` to establish the connection.
+Then you will be able to:
+
+* :guilabel:`Edit` the SensorThings connection settings
+* :guilabel:`Remove` the SensorThings connection
+
+.. figure:: img/sensorThings_connection.png
+   :align: center
+
+   SensorThings Connection dialog
+   
+You can provide additional :guilabel:`Layer Settings`:
 * a :guilabel:`Entity Type`
 * a :guilabel:`Geometry Type`
 * a :guilabel:`Page Size`
