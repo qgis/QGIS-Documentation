@@ -436,6 +436,10 @@ applying an expression to each feature.
 
 The expression is defined as a Python function.
 
+.. warning::
+ This algorithm is a potential security risk if executed with unchecked inputs,
+ and may result in system damage or data leaks.
+
 Parameters
 ..........
 

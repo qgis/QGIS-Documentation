@@ -823,6 +823,8 @@ rendering of the lines.
 Additionally, the distance between vertices can be specified.
 A smaller distance results in a denser, more accurate line.
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. figure:: img/join_lines.png
   :align: center
