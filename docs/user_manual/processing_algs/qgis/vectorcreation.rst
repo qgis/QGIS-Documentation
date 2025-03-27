@@ -28,6 +28,9 @@ distances will offset them to the right.
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 of line features
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 .. seealso:: :ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`
 
 Parameters
@@ -171,6 +174,9 @@ M values present in the geometry can also be translated.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`
 
@@ -401,6 +407,9 @@ coordinates fields.
 
 Besides X and Y coordinates you can also specify Z and M fields.
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 Parameters
 ..........
 
@@ -561,6 +570,9 @@ Generates a point vector layer from an input raster and polygon layer.
 
 The points correspond to the pixel centroids that intersect the
 polygon layer.
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 
 .. figure:: img/points_centroids_polygon.png
@@ -873,6 +885,9 @@ the lines).
 A minimum distance can be specified, to avoid points being too close
 to each other.
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 .. seealso:: :ref:`qgisrandompointsonlines`
 
 Parameters
@@ -1061,6 +1076,9 @@ A minimum distance can be specified, to avoid points being too
 close to each other.
 
 **Default menu**: :menuselection:`Vector --> Research Tools`
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 Parameters
 ..........
@@ -1324,6 +1342,9 @@ A minimum distance can be specified, to avoid points being too close
 to each other.
 
 **Default menu**: :menuselection:`Vector --> Research Tools`
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgisrandompointsinpolygons`
 

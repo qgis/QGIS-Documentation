@@ -4022,6 +4022,9 @@ The output will contain one point feature for the minimum and one for the maximu
 for every individual zonal feature from a polygon layer.
 The created point layer will be in the same spatial reference system as the selected raster layer.
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 Parameters
 ..........   
 
