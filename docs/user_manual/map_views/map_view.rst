@@ -972,8 +972,17 @@ in the :guilabel:`Layer styling` panel.
       the :guilabel:`Frame` and :guilabel:`Background` colors.
 * Picture annotations allow you to display a :guilabel:`Raster image` or an :guilabel:`SVG image`,
   using the :ref:`embedded_file_selector`.
-  The placement and size of the picture can be set as :guilabel:`Scale dependent size`,
-  :guilabel:`Fixed size` or :guilabel:`Relative to map`.
+  The placement and size of the picture can be set as:
+
+  .. the description below should ABSOLUTELY be REVIEWED!!!
+     And I don't get why there's "Lock aspect ratio" vs dedicated "width/height/lock apect ratio"
+     depending on the drop-down item
+
+  * :guilabel:`Scale dependent size`: the picture annotation will always be rendered at the same size, ???
+  * :guilabel:`Fixed size`: the picture annotation will always be rendered on screen at the same size,
+    regardless of the map scale
+  * :guilabel:`Relative to map`: the picture annotation will always be rendered at the same position
+    relative to the map canvas bounds, regardless of the map scale.
 
   Moreover, you can enable display of the :guilabel:`Frame` and :guilabel:`Background` of the rectangle box,
   and configure them using :ref:`fill symbols <vector_fill_symbols>`.
