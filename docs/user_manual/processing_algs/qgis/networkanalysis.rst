@@ -455,6 +455,9 @@ Shortest path (point to layer)
 Computes the optimal (shortest or fastest) routes between a given
 start point and multiple end points defined by a point vector layer.
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 Parameters
 ..........
 

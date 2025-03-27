@@ -1174,6 +1174,9 @@ Extracted label information include: position (served as point geometries),
 the associated layer name and feature ID, label text, rotation (in degree,
 clockwise), multiline alignment, and font details.
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 Parameters
 ..........
 

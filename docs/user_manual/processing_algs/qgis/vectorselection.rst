@@ -486,6 +486,9 @@ The subset is defined randomly, based on feature IDs, using a
 percentage or count value to define the total number of features in
 the subset.
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerate them in output layers.
+
 .. seealso:: :ref:`qgisrandomselection`
 
 Parameters

@@ -428,6 +428,9 @@ overlapping features from both the input and overlay layers.
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 .. seealso:: :ref:`qgismultiintersection`, :ref:`qgisclip`, :ref:`qgisdifference`
 
 Parameters
@@ -567,6 +570,9 @@ features from both the input and overlay layers.
   feature overlay layers 'b' and 'c' (left) - overlapping areas become a new two-feature layer 
   with all layers' attributes (right)
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerate them in output layers.
+
 .. seealso:: :ref:`qgisintersection`, :ref:`qgisclip`, :ref:`qgisdifference`
 
 Parameters
@@ -656,6 +662,9 @@ Creates point features where the lines from the two layers intersect.
   Points of intersection
 
 **Default menu**: :menuselection:`Vector --> Analysis Tools`
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerate them in output layers.
 
 Parameters
 ..........
@@ -777,6 +786,9 @@ Output will contain multi geometries for split features.
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 of line and polygon features
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerate them in output layers.
+
 Parameters
 ..........
 
@@ -859,6 +871,9 @@ attributes and fields from both the input and overlay layers.
   resulting three-feature layer with both layers' attributes (right)
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerate them in output layers.
 
 .. seealso:: :ref:`qgisdifference`, :ref:`qgisclip`,
    :ref:`qgisintersection`
@@ -994,6 +1009,9 @@ attribute values from both layers for overlapping features.
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerate them in output layers.
+
 .. seealso:: :ref:`qgismultiunion`, :ref:`qgisclip`, :ref:`qgisdifference`,
    :ref:`qgisintersection`
 
@@ -1127,6 +1145,9 @@ attribute values from overlay layers for overlapping features.
    If you want to split overlaps on the same layer as well as other layers,
    first run the algorithm with multiple layers then run the algorithm
    again with only the previous output.
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerate them in output layers.
 
 .. seealso:: :ref:`qgisunion`, :ref:`qgisclip`, :ref:`qgisdifference`,
    :ref:`qgisintersection`
