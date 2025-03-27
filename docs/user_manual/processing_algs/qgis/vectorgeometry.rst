@@ -570,6 +570,10 @@ of polygon features
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. warning::
+ This algorithm may drop existing primary keys or FID values and regenerate them in output layers,
+ depending on the input parameters.
+
 .. seealso:: :ref:`qgisvariabledistancebuffer`,
    :ref:`qgismultiringconstantbuffer`, :ref:`qgisbufferbym`
 
@@ -759,6 +763,10 @@ as for the original features.
 of point features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
+
+.. warning::
+ This algorithm may drop existing primary keys or FID values and regenerate them in output layers,
+ depending on the input parameters.
 
 .. seealso:: :ref:`qgispointonsurface`
 
@@ -1133,6 +1141,9 @@ See the 'Promote to multipart' or 'Aggregate' algorithms for
 alternative options.
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`,
    :ref:`qgisdissolve`
@@ -2146,6 +2157,9 @@ input feature that happens to be processed.
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 .. seealso:: :ref:`qgiscoverageunion`, :ref:`qgisaggregate`, :ref:`qgiscollect`
 
 Parameters
@@ -2808,6 +2822,9 @@ vertex for the original geometry.
 :ref:`features in-place modification <processing_inplace_edit>`
 of point features
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 .. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`,
    :ref:`qgisfilterverticesbyz`
 
@@ -2896,6 +2913,9 @@ geometry and bisector angle of vertex for original geometry.
 of point features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgisextractspecificvertices`,
    :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
@@ -3076,9 +3096,8 @@ the minimum value is tested.
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line and polygon features with M enabled
 
-.. note:: Depending on the input geometry attributes and the filters
-   used, the resultant geometries created by this algorithm may no
-   longer be valid.
+.. warning:: Depending on the input geometry attributes and the filters used,
+   the geometries created by this algorithm may no longer be valid.
 
 .. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
@@ -3176,9 +3195,8 @@ the minimum value is tested.
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line and polygon features with Z enabled
 
-.. note:: Depending on the input geometry attributes and the filters
-   used, the resultant geometries created by this algorithm may no
-   longer be valid.
+.. warning:: Depending on the input geometry attributes and the filters used,
+   the geometries created by this algorithm may no longer be valid.
    You may need to run the :ref:`qgisfixgeometries` algorithm to
    ensure their validity.
 
@@ -3268,7 +3286,7 @@ Always outputs multi-geometry layer.
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features without M enabled
 
-.. note:: M values will be dropped from the output.
+.. warning:: M values will be dropped from the output.
 
 .. seealso:: :ref:`qgischeckvalidity`
 
@@ -4152,10 +4170,11 @@ input layer, using a fixed or dynamic distance and number of rings.
 :ref:`features in-place modification <processing_inplace_edit>`
 of polygon features
 
-.. seealso:: :ref:`qgisbuffer`,
-   :ref:`qgisvariabledistancebuffer`,
-   :ref:`qgisrectanglesovalsdiamonds`,
-   :ref:`qgissinglesidedbuffer`
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
+.. seealso:: :ref:`qgisbuffer`, :ref:`qgisvariabledistancebuffer`,
+   :ref:`qgisrectanglesovalsdiamonds`, :ref:`qgissinglesidedbuffer`
 
 Parameters
 ..........
@@ -4249,6 +4268,9 @@ but divided into single features.
 of point, line, and polygon features
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgiscollect`, :ref:`qgispromotetomulti`
 
@@ -4600,6 +4622,10 @@ guaranteed to lie on the surface of the feature geometry.
 :ref:`features in-place modification <processing_inplace_edit>`
 of point features
 
+.. warning::
+ This algorithm may drop existing primary keys or FID values and regenerate them in output layers,
+ depending on the input parameters.
+
 .. seealso:: :ref:`qgiscentroids`
 
 Parameters
@@ -4675,6 +4701,9 @@ created.
    :align: center
 
    Points created along the source line layer
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgisinterpolatepoint`
 
@@ -6637,7 +6666,7 @@ Snapping can be performed on the X, Y, Z or M axis. A grid spacing of
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
 
-.. note:: Snapping to grid may generate an invalid geometry in some
+.. warning:: Snapping to grid may generate an invalid geometry in some
    corner cases.
 
 .. seealso:: :ref:`qgissnapgeometries`
@@ -6732,6 +6761,9 @@ linearly interpolated from existing values.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of line features
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 Parameters
 ..........
@@ -7138,6 +7170,9 @@ new fields:
 * TR_LENGTH: Total length of the transect returned
 * TR_ORIENT: Side of the transect (only on the left or right of
   the line, or both side)
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. figure:: img/transect.png
    :align: center

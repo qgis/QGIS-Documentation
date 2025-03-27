@@ -496,7 +496,6 @@ geometries but different attributes, only one of them will be added to
 the result layer.
 
 .. note::
-
  This algorithm does not require valid geometries as input.
 
 .. seealso:: :ref:`qgisdropgeometries`,
@@ -1360,6 +1359,9 @@ related child feature. This master feature contains all the
 attributes for the related features.
 This allows to have the relation as a plain table that can be e.g. exported to CSV.
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 .. figure:: img/flatten_relationship.png
   :align: center
   :width: 100%
@@ -1434,8 +1436,10 @@ The additional attributes and their values are taken from a second
 vector layer.
 An attribute is selected in each of them to define the join criteria.
 
-.. seealso:: :ref:`qgisjoinbynearest`,
-   :ref:`qgisjoinattributesbylocation`
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
+.. seealso:: :ref:`qgisjoinbynearest`, :ref:`qgisjoinattributesbylocation`
 
 Parameters
 ..........
@@ -1589,6 +1593,9 @@ A spatial criteria is applied to select the values from the second
 layer that are added to each feature from the first layer.
 
 **Default menu**: :menuselection:`Vector --> Data Management Tools`
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgisjoinbynearest`,
    :ref:`qgisjoinattributestable`, :ref:`qgisjoinbylocationsummary`
@@ -1906,6 +1913,9 @@ join to the k-nearest neighboring features.
 If a maximum distance is specified, only features which are closer
 than this distance will be matched.
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 .. seealso:: :ref:`qgisnearestneighbouranalysis`,
    :ref:`qgisjoinattributestable`,
    :ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`
@@ -2051,6 +2061,9 @@ All layers will be reprojected to match this CRS.
 
 **Default menu**: :menuselection:`Vector --> Data Management Tools`
 
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
 .. seealso:: :ref:`qgissplitvectorlayer`
 
 Parameters
@@ -2125,6 +2138,9 @@ index according to an expression.
 
 Be careful, it might not work as expected with some providers, the
 order might not be kept every time.
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 Parameters
 ..........
@@ -2542,6 +2558,9 @@ for added flexibility.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>` 
 of point, line, and polygon features
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 Parameters
 ..........
