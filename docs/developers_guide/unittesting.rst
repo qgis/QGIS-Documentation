@@ -307,7 +307,7 @@ the Qt documentation.
 
 Next lets look at our functional test. The ``isValid()`` test simply checks if the
 raster layer was loaded correctly in the initTestCase. QVERIFY is a Qt macro
-that you can use to evaluate a test condition. There are a few other use
+that you can use to evaluate a test condition. There are a few other
 macros Qt provides for use in your tests including:
 
 * QCOMPARE ( *actual, expected* )
