@@ -345,7 +345,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisaddxyfieldstolayer:
+.. _qgisaddxyfields:
 
 Add X/Y fields to layer
 ----------------------------
@@ -420,7 +420,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``native:addxyfieldstolayer``
+**Algorithm ID**: ``native:addxyfields``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
