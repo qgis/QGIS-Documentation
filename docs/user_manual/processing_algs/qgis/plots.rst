@@ -18,6 +18,9 @@ Creates a bar plot from a category and a layer field.
 Parameters
 ..........
 
+Basic Parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -48,6 +51,44 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced Parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Title**
+
+       Optional
+     - ``TITLE``
+     - [string]
+
+       Default: ""
+     - Title of the plot
+   * - **X-axis Title**
+
+       Optional
+     - ``XAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the name of the category field is used. 
+       With a single space, the axis title is hidden.
+   * - **Y-axis Title**
+
+       Optional
+     - ``YAXIS_TITLE``
+     - [string]
+       
+       Default: ""
+     - If empty, the name of the value field is used.
+       With a single space, the axis title is hidden.
 
 Outputs
 .......
@@ -85,6 +126,9 @@ Creates a box plot from a category field and a numerical layer field.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -104,7 +148,7 @@ Parameters
      - Categorical field to use for grouping the boxes (X axis)
    * - **Value field**
      - ``VALUE_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Value to use for the plot (Y axis).
    * - **Additional statistic lines**
      - ``MSD``
@@ -128,6 +172,44 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Title**
+
+       Optional
+     - ``TITLE``
+     - [string]
+  
+       Default: ""
+     - Title of the plot
+   * - **X-axis Title**
+
+       Optional
+     - ``XAXIS_TITLE``
+     - [string]
+           
+       Default: ""
+     - If empty, the name of the category field is used.
+       With a single space, the axis title is not shown.
+   * - **Y-axis Title**
+
+       Optional
+     - ``YAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the name of the value field is used.
+       With a single space, the axis title is not shown.
 
 Outputs
 .......
@@ -607,6 +689,9 @@ Creates a simple ``X`` - ``Y`` scatter plot for a vector layer.
 Parameters
 ..........
 
+Basic Parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -637,6 +722,60 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced Parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Title**
+
+       Optional
+     - ``TITLE``
+     - [string]
+
+       Default: ""
+     - Title of the plot
+   * - **X-axis Title**
+
+       Optional
+     - ``XAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the field name of the x attribute is used.
+       With a single space, the axis title is not shown.
+   * - **Y-axis Title**
+
+       Optional
+     - ``YAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the field name of the y attribute is used.
+       With a single space, the axis title is not shown.
+   * - **Use logarithmic scale for x-axis**
+
+       Optional
+     - ``XAXIS_LOG``
+     - [boolean]
+
+       Default: False
+     - When enabled, uses logarithmic scale for the x-axis
+   * - **Use logarithmic scale for y-axis**
+
+       Optional
+     - ``YAXIS_LOG``
+     - [boolean]
+
+       Default: False
+     - When enabled, uses logarithmic scale for the y-axis
 
 Outputs
 .......
@@ -671,9 +810,11 @@ Vector layer scatterplot 3D
 ---------------------------
 Creates a 3D scatter plot for a vector layer.
 
-
 Parameters
 ..........
+
+Basic Parameters
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -699,7 +840,7 @@ Parameters
      - ``ZFIELD``
      - [tablefield: any]
      - Field to use for the Z axis
-   * - **Histogram**
+   * - **Scatterplot 3D**
      - ``OUTPUT``
      - [html]
 
@@ -709,6 +850,50 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced Parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Title**
+
+       Optional
+     - ``TITLE``
+     - [string]
+
+       Default: ""
+     - Title of the plot
+   * - **X-axis Title**
+
+       Optional
+     - ``XAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the field name of the X attribute is used.
+   * - **Y-axis Title**
+
+       Optional
+     - ``YAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the field name of the Y attribute is used.
+   * - **Z-axis Title**
+
+       Optional
+     - ``ZAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the field name of the Z attribute is used.
 
 Outputs
 .......
@@ -721,7 +906,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Histogram**
+   * - **Scatterplot 3D**
      - ``OUTPUT``
      - [html]
      - HTML file with the plot.
