@@ -734,6 +734,14 @@ Advanced Parameters
      - Name
      - Type
      - Description
+   * - **Hover text**
+
+       Optional
+     - ``HOVERTEXT``
+     - [string]
+
+       Default: ""
+     - Text to be shown when hovering with the mouse over data points
    * - **Title**
 
        Optional
