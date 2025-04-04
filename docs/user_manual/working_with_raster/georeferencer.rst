@@ -23,31 +23,33 @@ you can accurately determine coordinates.
 
 .. _table_georeferencer_tools:
 
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| Icon                           | Purpose                      | Icon                          | Purpose                    |
-+================================+==============================+===============================+============================+
-| |addRasterLayer|               | Open raster                  | |addOgrLayer|                 | Open vector                |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |start|                        | Start georeferencing         |                               |                            |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |gdalScript|                   | Generate GDAL Script         | |loadGCPpoints|               | Load GCP Points            |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |saveGCPPointsAs|              | Save GCP Points As           | |transformSettings|           | Transformation settings    |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |addGCPPoint|                  | Add GCP Point                | |deleteGCPPoint|              | Delete GCP Point           |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |moveGCPPoint|                 | Move GCP Point               | |pan|                         | Pan                        |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |zoomIn|                       | Zoom In                      | |zoomOut|                     | Zoom Out                   |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |zoomToLayer|                  | Zoom To Layer                | |zoomLast|                    | Zoom Last                  |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |zoomNext|                     | Zoom Next                    | |linkGeorefToQGis|            | Link Georeferencer to QGIS |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |linkQGisToGeoref|             | Link QGIS to Georeferencer   | |fullHistogramStretch|        | Full histogram stretch     |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |localHistogramStretch|        | Local histogram stretch      |                               |                            |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| Icon                           | Purpose                      | Icon                          | Purpose                       |
++================================+==============================+===============================+===============================+
+| |addRasterLayer|               | Open raster                  | |addOgrLayer|                 | Open vector                   |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |start|                        | Start georeferencing         | |gdalScript|                  | Generate GDAL Script          |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |loadGCPpoints|                | Load GCP Points              | |saveGCPPointsAs|             | Save GCP Points As            |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |transformSettings|            | Transformation settings      |                               |                               |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |addGCPPoint|                  | Add GCP Point                | |deleteGCPPoint|              | Delete GCP Point              |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |moveGCPPoint|                 | Move GCP Point               | |snapping|                    | Snapping Type                 |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |cad|                          | Show Advanced Digitizing Dock| |pan|                         | Pan                           |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |zoomIn|                       | Zoom In                      | |zoomOut|                     | Zoom Out                      |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |zoomToLayer|                  | Zoom To Layer                | |zoomLast|                    | Zoom Last                     |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |zoomNext|                     | Zoom Next                    | |linkGeorefToQGis|            | Link Georeferencer to QGIS    |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |linkQGisToGeoref|             | Link QGIS to Georeferencer   | |fullHistogramStretch|        | Full histogram stretch        |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |localHistogramStretch|        | Local histogram stretch      |                               |                               |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
 
 Table Georeferencer: Georeferencer Tools
 
@@ -228,6 +230,25 @@ It is possible to choose between five different resampling methods:
 #. Cubic B-Spline (4x4 kernel)
 #. Lanczos (6x6 kernel)
 
+Define the Raster creation options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When exporting a raster, |checkbox| :guilabel:`Raster creation options` allows you to define
+additional options that control how the output file is structured and compressed.
+
+Under the :guilabel:`Profile` drop-down menu, you can choose between the following options:
+
+* :guilabel:`Default` uses the standard settings without any compression.
+* :guilabel:`No compression` saves the file without any compression.
+* :guilabel:`Low compression` uses a mild compression setting.
+* :guilabel:`High compression` applies stronger compression settings.
+* :guilabel:`JPEG compression` uses COMPRESS=JPEG with JPEG_QUALITY set to the default value of 75.
+
+Access the full list of available options by clicking the :guilabel:`Help` button.
+This opens a dialog displaying format details, including a link to the GDAL documentation
+and a list of all supported creation options for the selected format. Use button :guilabel:`Validate`
+to check the selected options.
+
 Define the transformation settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -306,6 +327,8 @@ the new georeferenced raster.
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
+.. |cad| image:: /static/common/cad.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |deleteGCPPoint| image:: /static/common/mActionDeleteGCPPoint.png
@@ -331,6 +354,8 @@ the new georeferenced raster.
 .. |pencil| image:: /static/common/pencil.png
    :width: 1.5em
 .. |saveGCPPointsAs| image:: /static/common/mActionSaveGCPpointsAs.png
+   :width: 1.5em
+.. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
