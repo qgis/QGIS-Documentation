@@ -467,6 +467,8 @@ Resources
    :width: 1.5em
 .. |postgis| image:: /static/common/mIconPostgis.png
    :width: 1.5em
+.. |sensor| image:: /static/common/sensor.png
+   :width: 1.5em
 .. |sourceFields| image:: /static/common/mSourceFields.png
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
