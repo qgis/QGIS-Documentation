@@ -34,6 +34,7 @@ Important OGC specifications supported by QGIS are:
 * **CSW** --- Catalog Service for the Web
 * **SFS** --- Simple Features for SQL (:ref:`label_postgis`)
 * **GML** --- Geography Markup Language
+* **SensorThings API** --- SensorThings API (:ref:`sensor_things`)
 
 OGC services are increasingly being used to exchange geospatial data between
 different GIS implementations and data stores. QGIS can deal with the above
@@ -835,32 +836,20 @@ features and view the attribute table.
 SensorThings 
 ============
 
-QGIS supports connections to OGC SensorThings API, a standardised protocol to interact with sensor
-networks. Read more about the protocol at the `website of OGC
-<https://www.ogc.org/publications/standard/sensorthings/>`__. The SensorThings API is based on the 
-`Observations and Measurements <https://www.ogc.org/publications/standard/om/>`__ data model. A 
-standardised model to capture observations on features of interest, using a procedure, resulting 
-in a result with a certain unit. These relations are expressed in the diagram below.  
+QGIS supports connections to `OGC SensorThings API <https://www.ogc.org/publications/standard/sensorthings/>`_,
+a standard providing an open and unified framework to interconnect IoT sensing devices,
+data, and applications over the Web.
+It is an open standard addressing the syntactic and semantic interoperability of the Internet of Things.
+It is based on the `Observations and Measurements <https://www.ogc.org/publications/standard/om/>`_ data model,
+a standardized model for observations, and for features involved in sampling when making observations.
 
-.. figure:: img/sta_uml_diagram.png
-   :align: center
-
-   Datamodel Observations and Measurements.
-
-In above diagram, only Location and Feature of Interest have a geometry and can be used as a layer in 
-QGIS. SensorThings provides a mechanism of expansion of the results to related entities, similar to 
-how tables are joined together in a relational database. Using this approach, you can expand the QGIS layer 
-to include properties from Things, Observations or Datastreams. Notice that the Observed Property 
-contains which property is observed, which is relevant if the sensor of interest monitors many 
-properties (temperature, speed, angle, etc).
-
-Loading SensorThings data
+Setting connection
 -------------------------
 
-To add SensorThings data to the QGIS use the |addSensorThingsLayer| :guilabel:`SensorThings`
+To add SensorThings data to QGIS use the |addSensorThingsLayer| :guilabel:`SensorThings`
 tab in the :guilabel:`Data Source Manager` dialog.
 
-To establish a new connecetion, press :guilabel:`New` (or :guilabel:`New SensorThings Connection`
+To establish a new connection, press :guilabel:`New` (or :guilabel:`New SensorThings Connection`
 from the Browser panel) and provide :guilabel:`Name` and :guilabel:`URL`.
 Advanced options, such as :ref:`authentication <authentication_index>` and
 a :guilabel:`Referer`, can also be configured.
@@ -875,57 +864,84 @@ Then you will be able to:
    :align: center
 
    SensorThings Connection dialog
-   
-Thera are also additional :guilabel:`Layer Settings` that can be configured:
 
-* a :guilabel:`Entity Type`
-* a :guilabel:`Geometry Type`
-* a :guilabel:`Page Size`
-* a :guilabel:`Feature Limit` sets a maximum number of features to request from the service
-* a :guilabel:`Extent Limit` sets a maximum extent limit for the layer, so that only features
+Configurations can be saved to an :file:`.XML` file (:guilabel:`Save`)
+through the :guilabel:`SensorThings` entry in :guilabel:`Data Source Manager` dialog
+or its contextual menu in the :guilabel:`Browser` panel (:guilabel:`Save Connections`).
+Likewise, configurations can be added from a file (:guilabel:`Load`).
+
+Loading SensorThings data
+-------------------------
+
+Relations between layers (so-called entities) stored in a SensorThings dataset
+are expressed in the diagram below.
+
+.. figure:: img/sta_uml_diagram.png
+   :align: center
+
+   Data model Observations and Measurements
+
+Any type of entity can be loaded in QGIS, but not all are spatial data.
+To load an entity, there are :guilabel:`Layer Settings` that can be configured:
+
+* :guilabel:`Entity Type`: the entity to load from the data model as layer in QGIS
+* :guilabel:`Geometry Type`: the geometry type of the selected entity to load.
+  Press |refresh| :sup:`Check available types` to limit the list to the actually
+  supported geometry types.
+* :guilabel:`Page Size`
+* :guilabel:`Feature Limit` sets a maximum number of features to request from the service
+* :guilabel:`Extent Limit` sets a maximum extent limit for the layer, so that only features
   within the extent are requested
-* a :guilabel:`Expansions` where you can choose to expand the results to other entities in the SensorThings model.
-  The additional properties are added as columns in the attribute table.
+* :guilabel:`Expansions`: The data model of SensorThings provides a mechanism of expansion
+  of the results to related entities, similar to how tables are joined together in a relational database.
+  Using this approach, you can expand the selected layer to include data from other items.
+  This will flatten the relationship, creating as many parent features as children,
+  and additional properties are added as columns in the attribute table.
+
+..
+  Notice that the Observed Property contains which property is observed,
+  which is relevant if the sensor of interest monitors many properties
+  (temperature, speed, angle, etc).
+  where you can choose to expand the results to other entities in the SensorThings model.
 
 Use :guilabel:`Filter` to build a query to filter the data, using SensorThings filter syntax.
 
-Notice that only :guilabel:`Location` and :guilabel:`Feature of Interest` contain a geometry, other 
-entities will be added as a table.
+.. note:: The above settings and filtering options are also available
+  for update in the layer properties dialog, :guilabel:`Source` tab, once loaded in QGIS. 
 
-From the :guilabel:`Browser` panel, right-click over the entry
-and you can also:
+Press :guilabel:`Add` to load the selected entity type as layer in QGIS.
 
-  * :menuselection:`Export layer... --> To File`, :ref:`saving it as a vector
-    <general_saveas>`
-  * :guilabel:`Add layer to project`: a double-click also adds the layer
-  * View the :guilabel:`Layer Properties...` and get access to metadata and a preview of the data 
-    provided by the service.
+..
+  Notice that only :guilabel:`Location` and :guilabel:`Feature of Interest` contain a geometry, other
+  entities will be added as a table.
 
-Notice that the result property of a SensorThings Observation is a String field. In case you want to use 
-its numerical representation in for example a graduated style, use an expression to convert the value to 
-real and try() in case this fails (eg. :guilabel:`try(to_real("Observation_result"),Null)`) 
+Working with a vector layer from SensorThings
+------------------------------------------------
 
-In case you want to create a chart of the observations at one or more locations, you can install the QGIS plugin
-:guilabel:`Data Plotly`. Now select the observations at a point location in the map view. Open the plotly panel 
-and activate the :guilabel:`Use only selected features` checkbox. Select on the x-column a date-time property 
-and on the y-column the :guilabel:`Observation_result`. This will plot the observations at that location over 
-time. Verify to filter by a single Observed Property. Notice that the chart changes as soon as you select other 
-locations on the map.
+A SensorThings layer is loaded in QGIS as a vector layer.
+As such, it displays the same tabs in the :ref:`layer properties <vector_properties_dialog>`
+and allows same feature interactions using the selection or identify tools.
+There are however some specificities you should consider while working with SensorThings data.
 
-.. figure:: img/sensorthings-plotly-airquality.png
-   :align: center
+Because of the data model, the result property of a SensorThings Observation is a string field.
+In case you want to use its numerical representation in for example a graduated style,
+use an expression to convert the value to real and try() in case this fails
+(e.g., ``try( to_real("Observation_result"), Null)``).
 
-   Use Data plotly to plot the airquality observations at a location
+In case you want to create a chart of the observations at one or more locations,
+you can install the QGIS plugin :guilabel:`Data Plotly`.
 
-Configurations can be saved to an :file:`.XML` file (:guilabel:`Save Connections`)
-through the :guilabel:`SensorThings` entry in :guilabel:`Data Source Manager` dialog
-or its contextual menu in the :guilabel:`Browser` panel.
-Likewise, configurations can be added from a file (:guilabel:`Load Connections`).
+#. Now select the observations at a point location in the map view.
+#. Open the plotly panel and activate the :guilabel:`Use only selected features` checkbox.
+#. Select on the x-column a date-time property and on the y-column the :guilabel:`Observation_result`.
+   This will plot the observations at that location over time.
+#. Verify to filter by a single Observed Property.
+#. Notice that the chart changes as soon as you select other locations on the map.
 
-Through the Layer Source Properties dialog, you can set the :guilabel:`Page Size`,
-:guilabel:`Entity Type`, :guilabel:`Geometry Type`, :guilabel:`Extent Limit`, and :guilabel:`Feature Limit`
-for the existing layer in the project without having to add a new layer.
+   .. figure:: img/sensorthings-plotly-airquality.png
+      :align: center
 
+      Use Data plotly to plot the air quality observations at a location
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -953,6 +969,8 @@ for the existing layer in the project without having to add a new layer.
 .. |indicatorTemporal| image:: /static/common/mIndicatorTemporal.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em

@@ -1693,7 +1693,7 @@ Select the service you want to connect to and fill in the required fields:
 You can also choose to :guilabel:`Save Connection` to an XML file
 or :guilabel:`Load Connection` from an XML file.
 
- .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
+.. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
