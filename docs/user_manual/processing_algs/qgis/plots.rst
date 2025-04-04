@@ -18,9 +18,6 @@ Creates a bar plot from a category and a layer field.
 Parameters
 ..........
 
-Basic Parameters
-^^^^^^^^^^^^^^^^
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -39,30 +36,8 @@ Basic Parameters
      - Categorical field to use for grouping the bars (X axis)
    * - **Value field**
      - ``VALUE_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Value to use for the plot (Y axis).
-   * - **Bar plot**
-     - ``OUTPUT``
-     - [html]
-
-       Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
-Advanced Parameters
-^^^^^^^^^^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
    * - **Title**
 
        Optional
@@ -89,6 +64,16 @@ Advanced Parameters
        Default: ""
      - If empty, the name of the value field is used.
        With a single space, the axis title is hidden.
+   * - **Bar plot**
+     - ``OUTPUT``
+     - [html]
+
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -126,9 +111,6 @@ Creates a box plot from a category field and a numerical layer field.
 Parameters
 ..........
 
-Basic parameters
-^^^^^^^^^^^^^^^^
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -161,29 +143,6 @@ Basic parameters
        * 0 --- Show Mean
        * 1 --- Show Standard Deviation
        * 2 --- Don't show mean and standard deviation
-
-   * - **Box plot**
-     - ``OUTPUT``
-     - [html]
-
-       Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
-Advanced parameters
-^^^^^^^^^^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
    * - **Title**
 
        Optional
@@ -210,6 +169,16 @@ Advanced parameters
        Default: ""
      - If empty, the name of the value field is used.
        With a single space, the axis title is not shown.
+   * - **Box plot**
+     - ``OUTPUT``
+     - [html]
+
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -689,9 +658,6 @@ Creates a simple ``X`` - ``Y`` scatter plot for a vector layer.
 Parameters
 ..........
 
-Basic Parameters
-^^^^^^^^^^^^^^^^
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -706,42 +672,21 @@ Basic Parameters
      - Input vector layer
    * - **X attribute**
      - ``XFIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field to use for the X axis
    * - **Y attribute**
      - ``YFIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field to use for the Y axis
-   * - **Scatterplot**
-     - ``OUTPUT``
-     - [html]
-
-       Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
-Advanced Parameters
-^^^^^^^^^^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
    * - **Hover text**
 
        Optional
      - ``HOVERTEXT``
-     - [string]
+     - [expression]
 
        Default: ""
-     - Text to be shown when hovering with the mouse over data points
+     - Text to be shown when hovering with the mouse over data points.
+       It can be picked from a field or based on an expression.
    * - **Title**
 
        Optional
@@ -770,7 +715,6 @@ Advanced Parameters
        With a single space, the axis title is not shown.
    * - **Use logarithmic scale for x-axis**
 
-       Optional
      - ``XAXIS_LOG``
      - [boolean]
 
@@ -778,12 +722,21 @@ Advanced Parameters
      - When enabled, uses logarithmic scale for the x-axis
    * - **Use logarithmic scale for y-axis**
 
-       Optional
      - ``YAXIS_LOG``
      - [boolean]
 
        Default: False
      - When enabled, uses logarithmic scale for the y-axis
+   * - **Scatterplot**
+     - ``OUTPUT``
+     - [html]
+
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
@@ -821,9 +774,6 @@ Creates a 3D scatter plot for a vector layer.
 Parameters
 ..........
 
-Basic Parameters
-^^^^^^^^^^^^^^^^
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -838,38 +788,16 @@ Basic Parameters
      - Input vector layer
    * - **X attribute**
      - ``XFIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field to use for the X axis
    * - **Y attribute**
      - ``YFIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field to use for the Y axis
    * - **Z attribute**
      - ``ZFIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field to use for the Z axis
-   * - **Scatterplot 3D**
-     - ``OUTPUT``
-     - [html]
-
-       Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
-Advanced Parameters
-^^^^^^^^^^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-
-   * - Label
-     - Name
-     - Type
-     - Description
    * - **Title**
 
        Optional
@@ -902,6 +830,16 @@ Advanced Parameters
 
        Default: ""
      - If empty, the field name of the Z attribute is used.
+   * - **Scatterplot 3D**
+     - ``OUTPUT``
+     - [html]
+
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Outputs
 .......
