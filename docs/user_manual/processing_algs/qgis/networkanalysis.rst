@@ -83,6 +83,19 @@ Basic parameters
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
 
+   * - **Non-routable features**
+     - ``OUTPUT_NON_ROUTABLE``
+     - [vector: point]
+
+       Default: ``[Skip output]``
+     - Specify the output which will be used to store any input features
+       which could not be routed (e.g., those which are too far from the network layer).
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
 
@@ -112,8 +125,7 @@ Advanced parameters
        
        The values used in this field are specified with the three
        parameters ``Value for forward direction``,
-       ``Value for backward direction`` and
-       ``Value for both directions``.
+       ``Value for backward direction`` and ``Value for both directions``.
        Forward and reverse directions correspond to a one-way edge,
        "both directions" indicates a two-way edge.
        If a feature does not have a value in this field, or no field
@@ -197,6 +209,15 @@ Advanced parameters
      - Creates a point layer output with two points for each
        edge at the boundaries of the service area.
        One point is the start of that edge, the other is the end.
+   * - **Maximum point distance from network**
+     - ``POINT_TOLERANCE``
+     - [number]
+
+       Default: Not set
+     - Specifies an optional limit on the distance from the points to the network layer.
+       If a point is further from the network than this distance it will be treated as non-routable.
+       If not set, endpoints will be snapped to the nearest point on the network layer,
+       regardless of how far away from the network they actually are.
 
 Outputs
 .......
@@ -218,8 +239,12 @@ Outputs
      - ``OUTPUT_LINES``
      - [vector: line]
      - Line layer representing the parts of the network
-       that can be serviced by the start points, for the
-       given cost.
+       that can be serviced by the start points, for the given cost.
+   * - **Non routable features**
+     - ``OUTPUT_NON_ROUTABLE``
+     - [vector: point]
+     - An optional output which will be used to store any input features
+       which could not be routed (e.g., those which are too far from the network layer).
 
 Python code
 ...........
@@ -318,6 +343,15 @@ Advanced parameters
 .. list-table::
    :widths: 20 20 20 40
 
+   * - **Maximum point distance from network**
+     - ``POINT_TOLERANCE``
+     - [number]
+
+       Default: Not set
+     - Specifies an optional limit on the distance from the start point to the network layer.
+       If the point is further from the network than this distance an error will be raised.
+       If not set, the point will be snapped to the nearest point on the network layer,
+       regardless of how far away from the network it actually is.
    * - **Include upper/lower bound points**
      - ``INCLUDE_BOUNDS``
      - [boolean]
@@ -407,6 +441,8 @@ Basic parameters
    * - **Shortest path**
      - ``OUTPUT``
      - [vector: line]
+
+       Default: ``[Create temporary layer]``
      - Specify the output line layer for the shortest paths.
        One of:
 
@@ -414,12 +450,41 @@ Basic parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
+   * - **Non-routable features**
+     - ``OUTPUT_NON_ROUTABLE``
+     - [vector: point]
+
+       Default: ``[Skip output]``
+     - Specify the output which will be used to store any input features
+       which could not be routed (e.g., those which are too far from the network layer).
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
 
 .. include:: ./networkanalysis.rst
   :start-after: .. **network_advanced_parameters**
   :end-before: .. **end_network_advanced_parameters**
+
+
+.. list-table::
+   :widths: 20 20 20 40
+
+   * - **Maximum point distance from network**
+     - ``POINT_TOLERANCE``
+     - [number]
+
+       Default: Not set
+     - Specifies an optional limit on the distance from the start and end points to the network layer.
+       If a start feature is further from the network than this distance it will be treated as non-routable.
+       If the end point is further from the network than this distance an error will be raised.
+       If not set, points will be snapped to the nearest point on the network layer,
+       regardless of how far away from the network they actually are.
 
 Outputs
 .......
@@ -437,6 +502,11 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
+   * - **Non routable features**
+     - ``OUTPUT_NON_ROUTABLE``
+     - [vector: point]
+     - An optional output layer which will be used to store any input features
+       which could not be routed (e.g., those which are too far from the network layer).
 
 Python code
 ...........
@@ -498,6 +568,8 @@ Basic parameters
    * - **Shortest path**
      - ``OUTPUT``
      - [vector: line]
+
+       Default: ``[Create temporary layer]``
      - Specify the output line layer for the shortest paths.
        One of:
 
@@ -505,12 +577,40 @@ Basic parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
+   * - **Non-routable features**
+     - ``OUTPUT_NON_ROUTABLE``
+     - [vector: point]
+
+       Default: ``[Skip output]``
+     - Specify the output which will be used to store any input features
+       which could not be routed (e.g., those which are too far from the network layer).
+       One of:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
 
 .. include:: ./networkanalysis.rst
   :start-after: .. **network_advanced_parameters**
   :end-before: .. **end_network_advanced_parameters**
+
+
+.. list-table::
+   :widths: 20 20 20 40
+
+   * - **Maximum point distance from network**
+     - ``POINT_TOLERANCE``
+     - [number]
+
+       Default: Not set
+     - Specifies an optional limit on the distance from the start and end points to the network layer.
+       If the start point is further from the network than this distance an error will be raised.
+       If an end feature is further from the network than this distance it will be treated as non-routable.
+       If not set, points will be snapped to the nearest point on the network layer,
+       regardless of how far away from the network they actually are.
 
 Outputs
 .......
@@ -528,6 +628,11 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
+   * - **Non routable features**
+     - ``OUTPUT_NON_ROUTABLE``
+     - [vector: point]
+     - An optional output layer which will be used to store any input features
+       which could not be routed (e.g., those which are too far from the network layer).
 
 Python code
 ...........
@@ -598,6 +703,19 @@ Advanced parameters
 .. include:: ./networkanalysis.rst
   :start-after: .. **network_advanced_parameters**
   :end-before: .. **end_network_advanced_parameters**
+
+.. list-table::
+   :widths: 20 20 20 40
+
+   * - **Maximum point distance from network**
+     - ``POINT_TOLERANCE``
+     - [number]
+
+       Default: Not set
+     - Specifies an optional limit on the distance from the start and end points to the network layer.
+       If either point is further from the network than this distance an error will be raised.
+       If not set, points will be snapped to the nearest point on the network layer,
+       regardless of how far away from the network they actually are.
 
 Outputs
 .......

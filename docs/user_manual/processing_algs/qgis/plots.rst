@@ -36,8 +36,34 @@ Parameters
      - Categorical field to use for grouping the bars (X axis)
    * - **Value field**
      - ``VALUE_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Value to use for the plot (Y axis).
+   * - **Title**
+
+       Optional
+     - ``TITLE``
+     - [string]
+
+       Default: ""
+     - Title of the plot
+   * - **X-axis Title**
+
+       Optional
+     - ``XAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the name of the category field is used. 
+       With a single space, the axis title is hidden.
+   * - **Y-axis Title**
+
+       Optional
+     - ``YAXIS_TITLE``
+     - [string]
+       
+       Default: ""
+     - If empty, the name of the value field is used.
+       With a single space, the axis title is hidden.
    * - **Bar plot**
      - ``OUTPUT``
      - [html]
@@ -104,7 +130,7 @@ Parameters
      - Categorical field to use for grouping the boxes (X axis)
    * - **Value field**
      - ``VALUE_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Value to use for the plot (Y axis).
    * - **Additional statistic lines**
      - ``MSD``
@@ -117,7 +143,32 @@ Parameters
        * 0 --- Show Mean
        * 1 --- Show Standard Deviation
        * 2 --- Don't show mean and standard deviation
+   * - **Title**
 
+       Optional
+     - ``TITLE``
+     - [string]
+  
+       Default: ""
+     - Title of the plot
+   * - **X-axis Title**
+
+       Optional
+     - ``XAXIS_TITLE``
+     - [string]
+           
+       Default: ""
+     - If empty, the name of the category field is used.
+       With a single space, the axis title is not shown.
+   * - **Y-axis Title**
+
+       Optional
+     - ``YAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the name of the value field is used.
+       With a single space, the axis title is not shown.
    * - **Box plot**
      - ``OUTPUT``
      - [html]
@@ -621,12 +672,61 @@ Parameters
      - Input vector layer
    * - **X attribute**
      - ``XFIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field to use for the X axis
    * - **Y attribute**
      - ``YFIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field to use for the Y axis
+   * - **Hover text**
+
+       Optional
+     - ``HOVERTEXT``
+     - [expression]
+
+       Default: ""
+     - Text to be shown when hovering with the mouse over data points.
+       It can be picked from a field or based on an expression.
+   * - **Title**
+
+       Optional
+     - ``TITLE``
+     - [string]
+
+       Default: ""
+     - Title of the plot
+   * - **X-axis Title**
+
+       Optional
+     - ``XAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the field name of the x attribute is used.
+       With a single space, the axis title is not shown.
+   * - **Y-axis Title**
+
+       Optional
+     - ``YAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the field name of the y attribute is used.
+       With a single space, the axis title is not shown.
+   * - **Use logarithmic scale for x-axis**
+
+     - ``XAXIS_LOG``
+     - [boolean]
+
+       Default: False
+     - When enabled, uses logarithmic scale for the x-axis
+   * - **Use logarithmic scale for y-axis**
+
+     - ``YAXIS_LOG``
+     - [boolean]
+
+       Default: False
+     - When enabled, uses logarithmic scale for the y-axis
    * - **Scatterplot**
      - ``OUTPUT``
      - [html]
@@ -671,7 +771,6 @@ Vector layer scatterplot 3D
 ---------------------------
 Creates a 3D scatter plot for a vector layer.
 
-
 Parameters
 ..........
 
@@ -689,17 +788,49 @@ Parameters
      - Input vector layer
    * - **X attribute**
      - ``XFIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field to use for the X axis
    * - **Y attribute**
      - ``YFIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field to use for the Y axis
    * - **Z attribute**
      - ``ZFIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field to use for the Z axis
-   * - **Histogram**
+   * - **Title**
+
+       Optional
+     - ``TITLE``
+     - [string]
+
+       Default: ""
+     - Title of the plot
+   * - **X-axis Title**
+
+       Optional
+     - ``XAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the field name of the X attribute is used.
+   * - **Y-axis Title**
+
+       Optional
+     - ``YAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the field name of the Y attribute is used.
+   * - **Z-axis Title**
+
+       Optional
+     - ``ZAXIS_TITLE``
+     - [string]
+
+       Default: ""
+     - If empty, the field name of the Z attribute is used.
+   * - **Scatterplot 3D**
      - ``OUTPUT``
      - [html]
 
@@ -721,7 +852,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Histogram**
+   * - **Scatterplot 3D**
      - ``OUTPUT``
      - [html]
      - HTML file with the plot.
