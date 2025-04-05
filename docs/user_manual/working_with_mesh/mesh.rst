@@ -1257,8 +1257,6 @@ the expression to execute.
 
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
-.. |add| image:: /static/common/mActionAdd.png
-   :width: 1.5em
 .. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
