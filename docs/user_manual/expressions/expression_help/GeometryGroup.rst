@@ -2709,6 +2709,25 @@ Tests whether the DE-9IM relationship between two geometries matches a specified
 reverse
 .......
 
+Reverses the direction of a line string or reverses a string of text.
+
+**String variant**
+
+Reverses the order of characters in a string.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - reverse(string)
+   * - Arguments
+     - * **string** - string to reverse
+   * - Examples
+     - * ``reverse('hello')`` → 'olleh'
+
+
+**Geometry variant**
+
 Reverses the direction of a line string by reversing the order of its vertices.
 
 .. list-table::

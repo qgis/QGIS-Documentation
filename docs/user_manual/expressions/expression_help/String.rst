@@ -379,6 +379,27 @@ Returns the portion of a string which matches a supplied regular expression.
 
 .. end_regexp_substr_section
 
+.. _expression_function_String_repeat:
+
+repeat
+......
+
+Repeats a string a specified number of times.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - repeat(string, number)
+   * - Arguments
+     - * **string** - string to repeat
+       * **number** - number of times to repeat string
+   * - Examples
+     - * ``repeat('Hello', 3)`` → 'HelloHelloHello'
+
+
+.. end_repeat_section
+
 .. _expression_function_String_replace:
 
 replace
@@ -423,6 +444,45 @@ Returns a string with the supplied map keys replaced by paired values. Longer ma
 
 
 .. end_replace_section
+
+.. _expression_function_String_reverse:
+
+reverse
+.......
+
+Reverses the direction of a line string or reverses a string of text.
+
+**String variant**
+
+Reverses the order of characters in a string.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - reverse(string)
+   * - Arguments
+     - * **string** - string to reverse
+   * - Examples
+     - * ``reverse('hello')`` → 'olleh'
+
+
+**Geometry variant**
+
+Reverses the direction of a line string by reversing the order of its vertices.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - reverse(geometry)
+   * - Arguments
+     - * **geometry** - a geometry
+   * - Examples
+     - * ``geom_to_wkt(reverse(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2)')))`` → 'LINESTRING(2 2, 1 1, 0 0)'
+
+
+.. end_reverse_section
 
 .. _expression_function_String_right:
 
