@@ -604,12 +604,11 @@ purposes) by clicking |saveMapAsImage|:sup:`Export as image`,
 Editing a model
 ---------------
 
-You can edit the model you are currently creating, redefining the
-workflow and the relationships between the algorithms and inputs that
-define the model.
+You can edit the model you are currently creating, redefining the workflow
+and the relationships between the algorithms and inputs that define the model.
 
-If you right-click on an algorithm in the canvas, you will see a context
-menu like the one shown next:
+If you right-click on an algorithm in the canvas, you will see a context menu
+like the one shown next:
 
 .. _figure_model_right_click:
 
@@ -624,15 +623,9 @@ An algorithm can be removed only if there are no other algorithms
 depending on it.
 That is, if no output from the algorithm is used in a different one as
 input.
-If you try to remove an algorithm that has others depending on it, a
-warning message like the one you can see below will be shown:
 
-.. _figure_cannot_delete_alg:
 
-.. figure:: img/cannot_delete_alg.png
-   :align: center
 
-   Cannot Delete Algorithm
 
 Selecting the :guilabel:`Edit...` option will show the parameter dialog
 of the algorithm, so you can change the inputs and parameter values.
