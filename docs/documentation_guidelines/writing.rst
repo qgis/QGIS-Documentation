@@ -472,7 +472,7 @@ Special Comments
 
 Sometimes, you may want to emphasize some points of the description, either to
 warn, remind or give some hints to the user. In QGIS Documentation, we use reST
-special directives such as ``.. warning::``, ``.. seealso::`, ``.. note::`` and ``.. tip::``.
+special directives such as ``.. warning::``, ``.. seealso::``, ``.. note::`` and ``.. tip::``.
 These directives generate frames that highlight your comments. See `Paragraph Level markup
 <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#paragraph-level-markup>`_
 for more information.
