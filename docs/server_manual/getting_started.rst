@@ -838,6 +838,8 @@ In the :guilabel:`WMS` tab, you can define the options for the WMS capabilities.
   The :ref:`spatial extent selector <extent_selector>` widget helps you enter the extent
   as a ``xmin, xmax, ymin, ymax`` text or pick it from the map canvas, layers, bookmarks...
 
+.. _restricted_crs:
+
 * By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
   in which coordinate reference systems (CRS) QGIS Server will offer
   to render maps. It is recommended that you restrict the offered CRS as this
@@ -938,15 +940,23 @@ WMTS capabilities
 In the :guilabel:`WMTS` tab you can select the layers you want to publish as WMTS
 and specify if you want to publish as PNG or JPEG.
 
+Under :guilabel:`Grids`, for each :ref:`restricted CRS <restricted_crs>`,
+you can indicate whether the tile matrices should be published
+and configure their top-left corner, minimum and maximum scales
+and the last level of the tile matrices.
+Note that for ``EPSG:3857`` and ``EPSG:4326`` CRS, only the last level of the tile matrices can be edited.
+
+You can also set a :guilabel:`Minimum scale` for the tiles display.
+
+If you enter a URL in the :guilabel:`Advertised URL` field,
+QGIS Server will advertise this specific URL in the WMTS GetCapabilities response.
+
 .. _figure_wmts_definitions:
 
 .. figure:: img/ows_server_wmts.png
    :align: center
 
    Definitions in the WMTS tab
-
-If you enter a URL in the :guilabel:`Advertised URL` field,
-QGIS Server will advertise this specific URL in the WMTS GetCapabilities response.
 
 WFS/OAPIF capabilities
 ----------------------
