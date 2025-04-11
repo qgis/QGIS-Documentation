@@ -892,6 +892,11 @@ For the other database types, see their differences at
   * :guilabel:`Disable`: I don't care about security, and I don't want to pay the overhead
     of encryption.
 
+* :guilabel:`Session role`: used to set the current user identifier of the current session.
+  This is useful to automatically give the ownership of a new object (table, view, function)
+  to the session_role group and thus share ownership and associated rights with all members
+  of the session_role group.
+  Read more about `session role <https://www.postgresql.org/docs/current/sql-set-role.html>`_.
 * :guilabel:`Authentication`, basic.
 
   * :guilabel:`User name`: User name used to log in to the database.
@@ -936,6 +941,7 @@ checkboxes:
   - more details :ref:`here <saveprojecttodb>`
 * |checkbox| :guilabel:`Allow saving/loading QGIS layer metadata in the database`
   - more details :ref:`here <savemetadatatodb>`
+* |checkbox| :guilabel:`Also list raster overview tables`
 
 .. tip:: **Use estimated table metadata to speed up operations**
 
