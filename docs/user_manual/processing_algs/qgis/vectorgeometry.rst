@@ -3849,10 +3849,12 @@ Python code
 
 Lines to polygons
 -----------------
-Generates a polygon layer using LineString geometry with more than
-three vertices as polygon rings. Result is always promoted to MultiPolygon.
+Generates a polygon layer from line layer, considering LineString geometry with three
+or more vertices as polygon rings. Input LineString geometry doesn't need to close a loop,
+algorithm will automatically connect last to first point when forming a polygon.
+Result is always promoted to MultiPolygon.
 LineString geometry that have less than three vertices will produce
-new polygon features with EMPTY MultiPolygon geometry, attributes are kept.
+new polygon features with **EMPTY** MultiPolygon geometry, attributes are kept.
 
 The attribute table of the output layer is the same as the one of
 the input layer.
@@ -3955,7 +3957,7 @@ Features with 3 or more vertices are expected on input: **start point - vertex/v
 
           MultiPolygon parts should not intersect.
 
-       .. tip:: **Invalid geometry fixing**
+       .. tip:: **Options for fixing intersecting parts of MultiPolygon invalid geometry**
 
           This can be fixed by using :ref:`qgisfixgeometries` algorithm with two possible scenarios:
 
@@ -3978,12 +3980,42 @@ Features with 3 or more vertices are expected on input: **start point - vertex/v
           :width: 25 em
           :align: center
 
-          Output is two single parts MultiPolygons
+          Output are two single part MultiPolygons
 
      - | Algorithm creates two new features as MultiPolygons, each having one part, each of them kept all attributes from source features.
        |
        | **Output has a valid geometry.**
 
+   * - **Feature g**: LineString
+
+       .. figure:: img/lines_to_polygons_from_linestr_input_6.png
+          :width: 25 em
+          :align: center
+
+          LineString in wave form
+
+     - **Feature g**: MultiPolygon
+
+       .. figure:: img/lines_to_polygons_from_linestr_output_6.png
+          :width: 25 em
+          :align: center
+
+          Single part MultiPolygon with invalid geometry
+
+     - | Algorithm creates one new feature as MultiPolygon with one self-intersecting part, all attributes from source feature are kept.
+
+       .. warning:: **Output geometry is invalid!**
+
+          MultiPolygon part should not self-intersect.
+
+       .. tip:: **Options for fixing self-intersection parts of MultiPolygon invalid geometry**
+
+          This can be fixed by using :ref:`qgisfixgeometries` algorithm:
+
+          1. *Fixing by structure repair method* or
+          2. *Fixing by linework repair method*
+
+          In both cases, self-intersecting part will be splitted into two individual parts
 
 Lines to polygons on lines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
