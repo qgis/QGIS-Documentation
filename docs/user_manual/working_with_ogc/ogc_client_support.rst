@@ -830,13 +830,13 @@ Loading SensorThings data
 -------------------------
 
 Relations between layers (so-called entities) stored in a SensorThings dataset
-are expressed in the diagram (Source: `SensorThings API Example Requests <https://sist.pages.in2p3.fr/anf21-sos52north/hands-on/09_sta-example-request/>`_) below.
+are expressed in the diagram below.
 
 .. figure:: img/sta_uml_diagram.png
    :align: center
 
    Data model Observations and Measurements
-
+   (Source: `Sensor Web Tutorial by SIST network <https://sist.pages.in2p3.fr/anf21-sos52north/hands-on/09_sta-example-request/>`_)
 
 Any type of entity can be loaded in QGIS, but not all are spatial data.
 To load an entity, there are :guilabel:`Layer Settings` that can be configured:
