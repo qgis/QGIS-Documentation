@@ -872,6 +872,12 @@ In the :guilabel:`WMS` tab, you can define the options for the WMS capabilities.
     to reference layers in the ``GetCapabilities`` response or ``GetMap LAYERS`` parameter.
     If not, layer name or short name if defined (see :ref:`vectorservermenu`) is used.
 
+    By default, layer names are used to expose layers through WMS.
+    If multiple layers have the same name, they will be merged to a single WMS layer
+    and cannot be requested individually.
+    You need to take care of these layers being compatible each other.
+    Using the :guilabel:`Use layer ids as name` option ensures that mutiple layers with the same name can be requested as individual layers.
+
   .. _`addGeometryToFeatureResponse` :
 
   * If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
