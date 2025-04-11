@@ -941,6 +941,7 @@ checkboxes:
   - more details :ref:`here <saveprojecttodb>`
 * |checkbox| :guilabel:`Allow saving/loading QGIS layer metadata in the database`
   - more details :ref:`here <savemetadatatodb>`
+* |checkbox| :guilabel:`Also list raster overview tables`
 
 .. tip:: **Use estimated table metadata to speed up operations**
 
