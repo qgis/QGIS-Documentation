@@ -2242,8 +2242,14 @@ will open and allow you to configure:
   python scripts;
 * the :guilabel:`Sensor type`: TCP, UDP, serial port, etc.; and
 * additional type-specific details (e.g., host name and port).
+
   For serial port sensors, comboboxes with the system's available serial ports
   and connection baud rate are available for their selection.
+  A :guilabel:`Data frame delimiter` can be used to properly parse returned data.
+  In case multiple data frames are found in the last chunk of data pushed by the serial port,
+  all the data frames are returned.
+  You can then use an expression to further split the returned sensor last data value
+  into individual frames (e.g., using :ref:`string_to_array <expression_function_Arrays_string_to_array>` function).
 
 .. _figure_sensors_configuration:
 
