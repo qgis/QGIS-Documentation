@@ -5,23 +5,37 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
+# Harrissou Sant-anna, 2025
+# Asdfgr Wertyu, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:35+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:2
+msgid "Lesson: Raster to Vector Conversion"
+msgstr "Урок: Преобразование растровых изображений в векторные"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:4
 msgid ""
@@ -54,6 +68,14 @@ msgid ""
 msgstr ""
 "**Цель этого урока:** Перевести результаты работы с растровыми данными в "
 "векторный, которые можно использовать для завершения анализа."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:18
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: The :guilabel:`Raster to Vector` "
+"Tool"
+msgstr ""
+":abbr:`★★☆ (Умеренный уровень)` Follow Along: Инструмент :guilabel:`Raster "
+"to Vector`"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:20
 msgid ""
@@ -105,6 +127,10 @@ msgstr ""
 "значение :guilabel:`suitable` является ``1``. Вы можете изменить стиль этого"
 " слоя, если хотите более четко его визуализировать."
 
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:43
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
+msgstr ":abbr:`★★★☆ (Умеренный уровень)` Попробуйте себя:"
+
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:45
 msgid "Refer back to the module on vector analysis."
 msgstr "Вернитесь к модулю векторного анализа."
@@ -124,6 +150,52 @@ msgid ""
 msgstr ""
 "Сохраните новый файл в :file:`exercise_data/residential_development/` как "
 ":file:`suitable_terrain.shp`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:52
+msgid "Answer"
+msgstr "Ответить"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:56
+msgid ""
+"Open the :guilabel:`Query Builder` by right-clicking on the "
+":guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting"
+" the :menuselection:`Properties --> Source` tab."
+msgstr ""
+"Откройте :guilabel:`Query Builder`, щелкнув правой кнопкой мыши на слое "
+":guilabel:`all_terrain` в панели :guilabel:`Layers` и выбрав вкладку "
+":menuselection:`Properties --> Source`."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:59
+msgid "Then build the query ``\"suitable\" = 1``."
+msgstr "Затем постройте запрос ``\"подходит\" = 1``."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:60
+msgid ""
+"Click :guilabel:`OK` to filter out all the polygons where this condition "
+"isn't met. When viewed over the original raster, the areas should overlap "
+"perfectly:"
+msgstr ""
+"Нажмите :guilabel:`OK`, чтобы отфильтровать все полигоны, где это условие не"
+" выполняется. При просмотре исходного растра области должны идеально "
+"перекрываться:"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:67
+msgid ""
+"You can save this layer by right-clicking on the :guilabel:`all_terrain` "
+"layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`, "
+"then continue as per the instructions."
+msgstr ""
+"Вы можете сохранить этот слой, щелкнув правой кнопкой мыши на слое "
+":guilabel:`all_terrain` в панели :guilabel:`Layers` и выбрав :guilabel:`Save"
+" As...`, а затем продолжить работу в соответствии с инструкциями."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:72
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: The :guilabel:`Vector to Raster` "
+"Tool"
+msgstr ""
+":abbr:`★★★☆ (Умеренный уровень)` Follow Along: Инструмент :guilabel:`Vector "
+"to Raster`."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:74
 msgid ""
@@ -204,6 +276,10 @@ msgstr ""
 "Когда процесс будет завершен, оцените его успех, сравнив новый растр с "
 "исходным. Они должны быть полностью одинаковыми, пиксель к пикселю."
 
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:103
+msgid "In Conclusion"
+msgstr "В заключение"
+
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:105
 msgid ""
 "Converting between raster and vector formats allows you to widen the "
@@ -212,6 +288,10 @@ msgstr ""
 "Преобразование между растровыми и векторными форматами даст вам возможность "
 "более шире применять данные и это не должно приводить к ухудшению качества "
 "данных."
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:109
+msgid "What's Next?"
+msgstr "Что дальше?"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:111
 msgid ""
