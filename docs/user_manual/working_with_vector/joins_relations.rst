@@ -554,7 +554,7 @@ for mushrooms, birds etc.
 Polymorphic relations solve this problem as all the referencing features are stored
 in the same table ``documents``.
 For each feature the referenced layer is stored in the ``referenced_layer`` field
-and the referenced feature id in the ``referenced_fk`` field.
+and the referenced feature id in the ``referenced_id`` field.
 
 Defining polymorphic relations
 ..............................
@@ -582,7 +582,7 @@ from the newly appeared dropdown.
   is the one with the foreign key field on it.
   In our case, this is the ``documents`` layer.
   For this layer you need to add a referencing field which points to the other layer,
-  so this is ``referenced_fk``.
+  so this is ``referenced_id``.
 
   .. note:: Sometimes, you need more than a single field to uniquely identify features in a layer.
    Creating a relation with such a layer requires a **composite key**,
@@ -653,7 +653,7 @@ The example above uses the following database schema:
    (
       fid serial NOT NULL,
       referenced_layer text NOT NULL,
-      referenced_fk integer NOT NULL,
+      referenced_id integer NOT NULL,
       image_filename text NOT NULL,
       CONSTRAINT documents_pkey PRIMARY KEY (fid)
    );
