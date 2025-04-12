@@ -731,6 +731,8 @@ like the one shown next:
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
+.. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
+   :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |success| image:: /static/common/mIconSuccess.png
