@@ -14,9 +14,15 @@ Check Geometry
 Check geometry (Angle)
 ----------------------
 
-Checks the angles of line or polygon geometries.
+Compares the angles within line or polygon geometries to a specified threshold,
+and reports as error any angle below that value.
 
-:seealso: :ref:`qgisfixgeometryangle`
+.. figure:: img/check_geometry_angle.png
+   :align: center
+
+   Reporting errors on a line feature for angles lower than 15°.
+
+.. seealso:: :ref:`qgisfixgeometryangle`
 
 Parameters
 ..........
@@ -60,10 +66,10 @@ Basic parameters
 
    * - **Output layer**
      - ``OUTPUT``
-     - [vector: any]
+     - [vector: same as input]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output layer contained erroneous input features.
+     - Specification of the output layer containing erroneous input features only.
        One of:
 
        .. include:: ../algs_include.rst
@@ -103,14 +109,19 @@ Outputs
      - Description
    * - **Error layer**
      - ``ERRORS``
-     - [vector: any]
+     - [vector: point]
      - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the ID, geometry part, ring and vertex index of the erroneous feature,
-       x and y coordinates and value of the erroneous angle)
+       (the ID and name of the input layer, the ID, geometry part,
+       ring and vertex index of the erroneous feature,
+       x and y coordinates of the error and the value of the erroneous angle).
    * - **Output layer**
      - ``OUTPUT``
      - [same as input]
-     - Output layer with the erroneous features from the input layer
+     - Output layer with the erroneous features from the input layer.
+       An input feature is added for each error found, with associated information
+       (the ID and name of the input layer, the ID, geometry part,
+       ring and vertex index of the erroneous feature,
+       x and y coordinates of the error and the value of the erroneous angle).
 
 Python code
 ...........
