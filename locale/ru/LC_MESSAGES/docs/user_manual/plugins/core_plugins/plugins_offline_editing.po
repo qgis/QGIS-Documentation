@@ -1,0 +1,204 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Asdfgr Wertyu, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:35+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:5
+msgid "Offline Editing Plugin"
+msgstr "Плагин для автономного редактирования"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:7
+msgid ""
+"For data collection, it is a common situation to work with a laptop or a "
+"cell phone offline in the field. Upon returning to the network, the changes "
+"need to be synchronized with the master datasource (e.g., a PostGIS "
+"database). If several persons are working simultaneously on the same "
+"datasets, it is difficult to merge the edits by hand, even if people don’t "
+"change the same features."
+msgstr ""
+"При сборе данных часто приходится работать с ноутбуком или мобильным "
+"телефоном в автономном режиме в полевых условиях. После возвращения в сеть "
+"изменения необходимо синхронизировать с основным источником данных "
+"(например, базой данных PostGIS). Если несколько человек одновременно "
+"работают над одним и тем же набором данных, сложно объединить правки "
+"вручную, даже если люди не изменяют одни и те же элементы."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:13
+msgid ""
+"The |offlineEditingCopy| :sup:`Offline Editing` Plugin automates the "
+"synchronisation by copying the content of the datasource to a SpatiaLite or "
+"GeoPackage database and storing the offline edits to dedicated tables. After"
+" being connected to the network again, it is possible to apply the offline "
+"edits to the master dataset."
+msgstr ""
+"Плагин |offlineEditingCopy| :sup:`Оффлайн-редактирование` автоматизирует "
+"синхронизацию, копируя содержимое источника данных в базу данных SpatiaLite "
+"или GeoPackage и сохраняя оффлайн-редактирование в специальных таблицах. "
+"После повторного подключения к сети можно применить оффлайн-редактирование к"
+" основному набору данных."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:77
+msgid "offlineEditingCopy"
+msgstr "offlineEditingCopy"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:19
+msgid "To use the plugin:"
+msgstr "Чтобы использовать плагин:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:21
+msgid ""
+"Open a project with some vector layers (e.g., from an Esri Shapefile, "
+"PostGIS or WFS-T datasource)."
+msgstr ""
+"Откройте проект с некоторыми векторными слоями (например, из источника "
+"данных Esri Shapefile, PostGIS или WFS-T)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:23
+msgid ""
+"Assuming you have already enabled the plugin (see "
+":ref:`core_and_external_plugins`) go to :menuselection:`Database --> Offline"
+" Editing -->` |offlineEditingCopy| :guilabel:`Convert to offline project`. "
+"The eponym dialog opens."
+msgstr ""
+"Если вы уже включили плагин (см. :ref:`core_and_external_plugins`), "
+"перейдите в :menuselection:`базу данных --> автономное редактирование -->` "
+"|offlineEditingCopy| :guilabel:`конвертировать в автономный проект`. "
+"Откроется диалог эпонима."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:26
+msgid ""
+"Select the :guilabel:`Storage type`. It can be of :guilabel:`GeoPackage` or "
+":guilabel:`SpatiaLite` database type."
+msgstr ""
+"Выберите тип хранилища :guilabel:`Тип хранилища`. Это может быть тип базы "
+"данных :guilabel:`GeoPackage` или :guilabel:`SpatiaLite`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:28
+msgid ""
+"Use the :guilabel:`Browse` button to indicate the location of the database "
+"in which to store the :guilabel:`Offline data`. It can be an existing file "
+"or one to create."
+msgstr ""
+"Используйте кнопку :guilabel:`Обзор`, чтобы указать местоположение базы "
+"данных, в которой будут храниться :guilabel:`Оффлайн-данные`. Это может быть"
+" существующий файл или файл, который нужно создать."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:31
+msgid ""
+"In the :guilabel:`Select remote layers` section, check the layers you'd like"
+" to save. The content of the layers is saved to database tables."
+msgstr ""
+"В разделе :guilabel:`Выбор удаленных слоев` отметьте слои, которые вы хотите"
+" сохранить. Содержимое слоев сохраняется в таблицах базы данных."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:35
+msgid ""
+"Since target database formats do not have native list support, the offline "
+"editing plugin transforms {string, number} list fields into string fields "
+"where values are separated by commas. This allows reading and edit of the "
+"contents of those fields when offline."
+msgstr ""
+"Поскольку целевые форматы баз данных не имеют встроенной поддержки списков, "
+"плагин для автономного редактирования преобразует поля списков {string, "
+"number} в строковые поля, в которых значения разделяются запятыми. Это "
+"позволяет читать и редактировать содержимое этих полей в автономном режиме."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:40
+msgid ""
+"If you would like to handle both the field from the original layer and the "
+"offline layer, you can rely on the :ref:`try() "
+"<expression_function_Conditionals_try>` and :ref:`array <array_functions>` "
+"expression functions, e.g.::"
+msgstr ""
+"Если вы хотите обрабатывать как поля из исходного слоя, так и из автономного"
+" слоя, вы можете воспользоваться функциями выражения "
+":ref:`try()<expression_function_Conditionals_try>` и "
+":ref:`array<array_functions>`, например::"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:46
+msgid ""
+"You can check |checkbox| :guilabel:`Only synchronize selected features if a "
+"selection is present` allowing to only save and work on a subset. It can be "
+"invaluable in case of large layers."
+msgstr ""
+"Вы можете установить флажок |checkbox| :guilabel:`Однако синхронизировать "
+"выбранные черты, если присутствует выделение`, что позволит сохранять и "
+"работать только с подмножеством. Это может оказаться неоценимым в случае "
+"больших слоев."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:73
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:50
+msgid "This is all!"
+msgstr "Вот и все!"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:51
+msgid "Save your project and bring it on the field."
+msgstr "Сохраните свой проект и принесите его на поле."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:52
+msgid "Edit the layers offline."
+msgstr "Редактируйте слои в автономном режиме."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:53
+msgid ""
+"After being connected again, upload the changes using "
+":menuselection:`Database --> Offline Editing -->` |offlineEditingSync| "
+":guilabel:`Synchronize`."
+msgstr ""
+"После повторного подключения загрузите изменения с помощью "
+":menuselection:`База данных --> Автономное редактирование -->` "
+"|offlineEditingSync| :guilabel:`Синхронизировать`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:79
+msgid "offlineEditingSync"
+msgstr "offlineEditingSync"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:56
+msgid ""
+"Layers that are used offline are marked with the |indicatorOffline| icon in "
+"the :guilabel:`Layers` panel."
+msgstr ""
+"Слои, используемые в автономном режиме, помечаются значком "
+"|indicatorOffline| на панели :guilabel:`Слои`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:75
+msgid "indicatorOffline"
+msgstr "indicatorOffline"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:64
+msgid "Create an offline project"
+msgstr "Создать автономный проект"
