@@ -21,7 +21,9 @@ To set snapping options:
 
 #. Navigate to the menu entry
    :menuselection:`Project --> Snapping Options...`.
-#. Set up your :guilabel:`Snapping options` dialog to activate the
+#. Set up your :guilabel:`Snapping options` dialog to: enable snapping using the
+   |snapping| :sup:`Enable Snapping` button, choose the
+   :guilabel:`Advanced Configuration`, activate the
    ``landuse`` layer with :guilabel:`Type` *vertex* and tolerance
    ``12`` pixels:
 
