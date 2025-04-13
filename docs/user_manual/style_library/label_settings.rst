@@ -9,8 +9,9 @@
    .. contents::
       :local:
 
-Labels are textual information you can display on vector features, mesh layers or maps.
-They add details you could not necessarily represent using symbols.
+Labels are textual information you can display on maps.
+They add details you could not necessarily represent using symbols,
+and may refer to vector features, raster cells, mesh elements, or simple annotations on the map...
 Two types of text-related items are available in QGIS:
 
 * :guilabel:`Text Format`: defines the appearance of the text, including
@@ -40,7 +41,7 @@ Two types of text-related items are available in QGIS:
 * :guilabel:`Label Settings`: extend the text format settings with properties
   related to the location or the interaction with other texts or features
   (:ref:`callouts <labels_callouts>`, :ref:`placement <labels_placement>`,
-  :ref:`overlay, scale visibility <labels_rendering>`, mask ...).
+  :ref:`overlay, scale visibility <labels_rendering>`, :ref:`mask <labels_mask>` ...).
 
   They are used to configure smart labelling for vector and mesh layers through the
   |labelingSingle| :guilabel:`Labels` tab of the vector or mesh :guilabel:`Layer Properties`
@@ -71,8 +72,8 @@ Two types of text-related items are available in QGIS:
 Formatting the label text
 =========================
 
-Whether you are configuring a :guilabel:`Text Format` or :guilabel:`Label Settings`
-item, you will be given the following options:
+Whether you are configuring a :guilabel:`Text Format` or :guilabel:`Label Settings` item,
+and depending on the type of layer you are configuring, you will be given the following options:
 
 .. list-table::
    :header-rows: 1
@@ -81,34 +82,57 @@ item, you will be given the following options:
    * - Properties tab
      - Text format
      - Label settings
+     - Vector or mesh layer
+     - raster layer
    * - :guilabel:`Text`
+     - |checkbox|
+     - |checkbox|
      - |checkbox|
      - |checkbox|
    * - :guilabel:`Formatting`
      - |checkbox|
      - |checkbox|
+     - |checkbox|
+     - |checkbox|
    * - :guilabel:`Buffer`
+     - |checkbox|
+     - |checkbox|
      - |checkbox|
      - |checkbox|
    * - :guilabel:`Mask`
      - 
      - |checkbox|
+     - |checkbox|
+     -
    * - :guilabel:`Background`
+     - |checkbox|
+     - |checkbox|
      - |checkbox|
      - |checkbox|
    * - :guilabel:`Shadow`
      - |checkbox|
      - |checkbox|
+     - |checkbox|
+     - |checkbox|
    * - :guilabel:`Callout`
      -
      - |checkbox|
+     - |checkbox|
+     -
    * - :guilabel:`Placement`
      -
+     - |checkbox|
+     - |checkbox|
      - |checkbox|
    * - :guilabel:`Rendering`
      -
      - |checkbox|
+     - |checkbox|
+     - |checkbox|
 
+.. attention:: While for legibility, "feature" is the name used below
+ to indicate the item being labeled, depending on the underlying layer type,
+ it can be replaced by "pixel", "face" or "vertex".
 
 .. _labels_text:
 
