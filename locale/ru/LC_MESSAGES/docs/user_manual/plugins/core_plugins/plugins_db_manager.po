@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Asdfgr Wertyu, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:5
+msgid "DB Manager Plugin"
+msgstr "Плагин для управления базами данных"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:7
+msgid ""
+"The DB Manager Plugin is intended to be the main tool to integrate and "
+"manage spatial database formats supported by QGIS (PostGIS, SpatiaLite, "
+"GeoPackage, Oracle Spatial, Virtual layers) in one user interface. The "
+"|dbManager| :sup:`DB Manager` Plugin provides several features. You can drag"
+" layers from the QGIS Browser into the DB Manager, and it will import your "
+"layer into your spatial database. You can drag and drop tables between "
+"spatial databases and they will get imported."
+msgstr ""
+"Плагин DB Manager предназначен для интеграции и управления форматами "
+"пространственных баз данных, поддерживаемых QGIS (PostGIS, SpatiaLite, "
+"GeoPackage, Oracle Spatial, Virtual layers), в едином пользовательском "
+"интерфейсе. Плагин |dbManager| :sup:`DB Manager` предоставляет несколько "
+"возможностей. Вы можете перетащить слои из QGIS Browser в DB Manager, и он "
+"импортирует слой в вашу пространственную базу данных. Вы можете "
+"перетаскивать таблицы между пространственными базами данных, и они будут "
+"импортированы."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:116
+msgid "dbManager"
+msgstr "dbManager"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:21
+msgid "DB Manager dialog"
+msgstr "Диалог менеджера БД"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:24
+msgid ""
+"The :menuselection:`Database` menu allows you to connect to an existing "
+"database, to start the SQL window and to exit the DB Manager Plugin. Once "
+"you are connected to an existing database, the menus :menuselection:`Schema`"
+" (relevant for DBMSs, such as PostGIS / PostgreSQL) and "
+":menuselection:`Table` will appear."
+msgstr ""
+"Меню :menuselection:`База данных` позволяет подключиться к существующей базе"
+" данных, запустить окно SQL и выйти из DB Manager Plugin. После подключения "
+"к существующей базе данных появятся меню :menuselection:`Schema` (актуально "
+"для таких СУБД, как PostGIS / PostgreSQL) и :menuselection:`Table`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:31
+msgid ""
+"The :menuselection:`Schema` menu includes tools to create and delete (only "
+"if empty) schemas and, if topology is available (e.g. with PostGIS "
+"topology), to start a :guilabel:`TopoViewer`."
+msgstr ""
+"Меню :menuselection:`Schema` включает инструменты для создания и удаления "
+"(только если пусто) схем и, если доступна топология (например, с топологией "
+"PostGIS), для запуска :guilabel:`TopoViewer`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:35
+msgid ""
+"The :menuselection:`Table` menu allows you to create and edit tables and to "
+"delete tables and views. It is also possible to empty tables and to move "
+"tables between schemas. You can :guilabel:`Run Vacuum Analyze` for the "
+"selected table. *Vacuum* reclaims space and makes it available for reuse, "
+"and *analyze* updates statistics that is used to determine the most "
+"efficient way to execute a query. :guilabel:`Change Logging...` allows you "
+"to add change logging support to a table. Finally, you can :guilabel:`Import"
+" Layer/File...` and :guilabel:`Export to File...`."
+msgstr ""
+"Меню :menuselection:`Table` позволяет создавать и редактировать таблицы, а "
+"также удалять таблицы и представления. Также можно опустошать таблицы и "
+"перемещать таблицы между схемами. Вы можете :guilabel:`Запустить вакуумный "
+"анализ` для выбранной таблицы. Функция *Vacuum* освобождает пространство и "
+"делает его доступным для повторного использования, а функция *analyze* "
+"обновляет статистику, которая используется для определения наиболее "
+"эффективного способа выполнения запроса. :guilabel:`Change Logging...` "
+"позволяет добавить поддержку ведения журнала изменений в таблицу. Наконец, "
+"вы можете :guilabel:`Импортировать слой/файл...` и :guilabel:`Экспортировать"
+" в файл...`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:49
+msgid ""
+"Using the DB Manager it is possible to add comments for tables and columns "
+"of a PostgreSQL Database."
+msgstr ""
+"С помощью DB Manager можно добавлять комментарии к таблицам и столбцам базы "
+"данных PostgreSQL."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:52
+msgid ""
+"The :guilabel:`Providers` window lists all existing databases supported by "
+"QGIS. With a double-click, you can connect to the database. With the right "
+"mouse button, you can rename and delete existing schemas and tables. Tables "
+"can also be added to the QGIS canvas with the context menu."
+msgstr ""
+"В окне :guilabel:`Providers` перечислены все существующие базы данных, "
+"поддерживаемые QGIS. Двойным щелчком мыши можно подключиться к базе данных. "
+"С помощью правой кнопки мыши можно переименовывать и удалять существующие "
+"схемы и таблицы. Таблицы также можно добавлять на холст QGIS с помощью "
+"контекстного меню."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:59
+msgid ""
+"If connected to a database, the **main** window of the DB Manager offers "
+"four tabs. The :guilabel:`Info` tab provides information about the table and"
+" its geometry, as well as about existing fields, constraints and indexes. It"
+" allows you to create a spatial index on a the selected table. The "
+":guilabel:`Table` tab shows the table, and the :guilabel:`Preview` tab "
+"renders the geometries as preview. When you open an :guilabel:`SQL Window`, "
+"it will be placed in a new tab."
+msgstr ""
+"При подключении к базе данных в главном окне DB Manager открываются четыре "
+"вкладки. Вкладка :guilabel:`Info` предоставляет информацию о таблице и ее "
+"геометрии, а также о существующих полях, ограничениях и индексах. Она "
+"позволяет создать пространственный индекс для выбранной таблицы. Вкладка "
+":guilabel:`Table` отображает таблицу, а вкладка :guilabel:`Preview` "
+"отображает геометрию в виде предварительного просмотра. Когда вы открываете "
+"окно :guilabel:`SQL Window`, оно будет помещено в новую вкладку."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:70
+msgid "Working with the SQL Window"
+msgstr "Работа с окном SQL"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:72
+msgid ""
+"You can use the DB Manager to execute SQL queries against your spatial "
+"database. Queries can be saved and loaded, and there the :guilabel:`SQL "
+"Query Builder` will help you formulate your queries. You can even view "
+"spatial output by checking :guilabel:`Load as new layer` and specifying "
+":guilabel:`Column(s) with unique values` (IDs), :guilabel:`Geometry column` "
+"and :guilabel:`Layer name (prefix)`. It is possible to highlight a portion "
+"of the SQL to only execute that portion when pressing :kbd:`Ctrl+R` or "
+"clicking the :guilabel:`Execute` button."
+msgstr ""
+"Вы можете использовать DB Manager для выполнения SQL-запросов к вашей "
+"пространственной базе данных. Запросы можно сохранять и загружать, а "
+":guilabel:`SQL Query Builder` поможет вам сформулировать запросы. Вы даже "
+"можете просмотреть пространственный вывод, отметив :guilabel:`Загрузить как "
+"новый слой` и указав :guilabel:`Колонки с уникальными значениями` (IDs), "
+":guilabel:`Геометрический столбец` и :guilabel:`Имя слоя (префикс)`. Можно "
+"выделить часть SQL, чтобы при нажатии :kbd:`Ctrl+R` или нажатии кнопки "
+":guilabel:`Execute` выполнялась только эта часть."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:83
+msgid ""
+"After executing your query, you can select specific cells in the result set."
+" Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the clipboard."
+" The copied data is available as a formatted table. This allows you to paste"
+" the data into other applications, such as spreadsheet where it will show up"
+" as a table."
+msgstr ""
+"После выполнения запроса вы можете выбрать определенные ячейки в наборе "
+"результатов. Используйте сочетание клавиш :kbd:`Ctrl+C`, чтобы скопировать "
+"выделенные ячейки в буфер обмена. Скопированные данные доступны в виде "
+"отформатированной таблицы. Это позволит вам вставить данные в другие "
+"приложения, например в электронную таблицу, где они будут отображаться в "
+"виде таблицы."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:89
+msgid ""
+"The :guilabel:`Query History` button stores the last 20 queries of each "
+"database and provider."
+msgstr ""
+"Кнопка :guilabel:`История запросов` хранит последние 20 запросов к каждой "
+"базе данных и провайдеру."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:92
+msgid "Double clicking on an entry will add the string to the SQL window."
+msgstr "Двойной щелчок по записи добавит строку в окно SQL."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:99
+msgid "Executing SQL queries in the DB Manager SQL window"
+msgstr "Выполнение SQL-запросов в окне SQL DB Manager"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:103
+msgid ""
+"The SQL Window can also be used to create Virtual Layers. In that case, "
+"instead of selecting a database, select **QGIS Layers** under **Virtual "
+"Layers** before opening the SQL Window. See :ref:`vector_virtual_layers` for"
+" instructions on the SQL syntax to use."
+msgstr ""
+"Окно SQL также можно использовать для создания виртуальных слоев. В этом "
+"случае вместо выбора базы данных выберите **QGIS Layers** в разделе "
+"**Virtual Layers** перед открытием окна SQL. Инструкции по использованию "
+"синтаксиса SQL см. в :ref:`vector_virtual_layers`."
