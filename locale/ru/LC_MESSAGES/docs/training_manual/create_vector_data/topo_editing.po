@@ -5,24 +5,38 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Asdfgr Wertyu, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"POT-Creation-Date: 2025-04-14 08:33+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:2
+msgid "Lesson: Feature Topology"
+msgstr "Урок: Топология функций"
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:4
 msgid ""
@@ -49,6 +63,10 @@ msgstr ""
 msgid "**The goal for this lesson:** To understand topology using examples."
 msgstr "**Цель данного занятия:** понять топологию с помощью примеров."
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:15
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Snapping"
+msgstr ":abbr:`★★☆ (Умеренный уровень)` Следуй за мной: Щелкунчик"
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:17
 msgid ""
 "Snapping makes topological editing easier. This will allow your mouse cursor"
@@ -65,32 +83,39 @@ msgstr "Перейдите к меню :menuselection:`Project --> Snapping Opti
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:24
 msgid ""
-"Set up your :guilabel:`Snapping options` dialog to activate the ``landuse`` "
-"layer with :guilabel:`Type` *vertex* and tolerance ``12`` pixels:"
+"Set up your :guilabel:`Snapping options`: enable snapping using the "
+"|snapping| :sup:`Enable Snapping` button, choose the :guilabel:`Advanced "
+"Configuration`, activate the ``landuse`` layer with :guilabel:`Type` "
+"*vertex* and tolerance ``12`` pixels:"
 msgstr ""
-"Настройте диалоговое окно :guilabel:`Snapping options`, чтобы активировать "
-"слой ``landuse`` с помощью *вершины* :guilabel:`Type` *vertex* и допуск в "
-"``12`` пикселей:"
+"Настройте параметры :guilabel:`Привязка`: включите привязку с помощью кнопки"
+" |snapping| :sup:`Включить привязку`, выберите :guilabel:`Дополнительная "
+"конфигурация`, активируйте слой ``Земля`` с :guilabel:`Типом`` *вершина* и "
+"допуском ``12`` пикселей:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:31
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:369
+msgid "snapping"
+msgstr "snapping"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:33
 msgid ""
 "Make sure that the box in the :guilabel:`Avoid overlap` column is checked."
 msgstr "Убедитесь что поле в колонке :guilabel:`Avoid overlap` проверено."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:33
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:35
 msgid "Leave the dialog."
 msgstr "Выйдите из окна диалога."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:34
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:36
 msgid ""
 "Select the :guilabel:`landuse` layer and enter edit mode (|toggleEditing|)"
 msgstr "Выберите слой :guilabel:`landuse` и введите режим  (|toggleEditing|)"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:371
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:373
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:36
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:38
 msgid ""
 "Check (under :menuselection:`View --> Toolbars`) that the "
 ":guilabel:`Advanced Digitizing` toolbar is enabled."
@@ -98,12 +123,16 @@ msgstr ""
 "Проверьте (в :menuselection:`View --> Toolbars`) что   :guilabel:`Advanced "
 "Digitizing` инструмент активирован."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:38
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:40
 msgid "Zoom to this area (enable layers and labels if necessary):"
 msgstr ""
 "Зумирование этой местности (включайте слои и надписи при необходимости):"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:48
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:45
+msgid "Digitize this new (fictional) area shown in red:"
+msgstr "Оцифруйте эту новую (вымышленную) область, показанную красным цветом:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:50
 msgid ""
 "When prompted, give it an *OGC_FID* of :kbd:`999`, but feel free to leave "
 "the other values unchanged."
@@ -111,7 +140,7 @@ msgstr ""
 "В ответ на запрос, присвойте ему *OGC_FID* :kbd:`999`, но можете оставить "
 "остальные значения без изменений."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:51
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:53
 msgid ""
 "If you are careful while digitizing, and allow the cursor to snap to the "
 "vertices of adjoining areas, you'll notice that there won't be any gaps "
@@ -121,7 +150,7 @@ msgstr ""
 "вершинам смежных местностей, то вы заметите, что между новой местностью и "
 "существующими смежными местностями не будет никаких промежутков."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:55
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:57
 msgid ""
 "Note the |undo| :sup:`undo` and |redo| :sup:`redo` tools in the "
 ":guilabel:`Advanced Digitizing` toolbar."
@@ -129,15 +158,22 @@ msgstr ""
 "Обратите внимание на инструменты |undo| :sup:`undo` и |redo| :sup:`redo` в "
 ":guilabel:`Advanced Digitizing` на панели инструментов."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:373
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:375
 msgid "undo"
 msgstr "undo"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:359
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:361
 msgid "redo"
 msgstr "redo"
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:63
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Correct Topological Features"
+msgstr ""
+":abbr:`★★☆ (Умеренный уровень)` Следуй за мной: Правильные топологические "
+"особенности"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:65
 msgid ""
 "Topology features can sometimes need to be updated. In our study area, an "
 "area has been turned into forest, so the ``landuse`` layer need an update. "
@@ -148,7 +184,7 @@ msgstr ""
 "``landuse`` нуждается в обновлении. Поэтому мы будем расширять и "
 "присоединять некоторые лесные функции на этой местности:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:72
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:74
 msgid ""
 "Instead of creating new polygons to join the forest areas, we are going to "
 "use the *Vertex Tool* to edit and join existing polygons."
@@ -157,19 +193,19 @@ msgstr ""
 " использовать *Инструмент Vertex* для редактирования и присоединения "
 "существующих полигонов."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:75
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:77
 msgid "Enter edit mode (if it is not active already)"
 msgstr "Переход в режим редактирования (если он еще не активен)."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:76
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:78
 msgid "Select the |vertexToolActiveLayer| :sup:`Vertex Tool` tool."
 msgstr "Выберите инструмент |vertexToolActiveLayer| :sup:`Vertex Tool`."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:375
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:377
 msgid "vertexToolActiveLayer"
 msgstr "vertexToolActiveLayer"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:77
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:79
 msgid ""
 "Choose an area of forest, select a vertex, and move it to an adjoining "
 "vertex so that the two forest features meet:"
@@ -177,21 +213,21 @@ msgstr ""
 "Выберите участок леса, выберите вершину и переместите ее на смежную вершину,"
 " чтобы две функции леса совместились:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:83
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:85
 msgid "Click on the other vertices and snap them into place."
 msgstr "Кликните на другие вершины и привяжите их к месту."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:85
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:87
 msgid "The topologically correct border looks like this:"
 msgstr "Топологически правильная граница выглядит следующим образом:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:90
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:92
 msgid "Go ahead and join a few more areas using the *Vertex Tool*."
 msgstr ""
 "Продолжайте и присоедините еще несколько местностей с помощью *Инструмента "
 "Vertex*."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:92
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:94
 msgid ""
 "You can also use the |capturePolygon| :sup:`Add Polygon Feature` tool to "
 "fill the gap between the two forest polygons. If you have enabled *Avoid "
@@ -204,11 +240,11 @@ msgstr ""
 "будут добавляться автоматически, если ваш новый полигон перекрывает "
 "существующие."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:348
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:350
 msgid "capturePolygon"
 msgstr "capturePolygon"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:98
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:100
 msgid ""
 "If you are using our example data, you should have a forest area looking "
 "something like this:"
@@ -216,7 +252,7 @@ msgstr ""
 "Если вы используете наш пример данных, то ваш лесной участок должен "
 "выглядеть примерно так:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:104
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:106
 msgid ""
 "Don't worry if you have joined more, less or different areas of forest."
 msgstr ""
@@ -224,6 +260,12 @@ msgstr ""
 "участкам леса."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:110
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Tool: Simplify Feature"
+msgstr ""
+":abbr:`★★☆ (Умеренный уровень)` Следуй за мной: Инструмент: Упростить "
+"функцию"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:112
 msgid ""
 "Continuing on the same layer, we will test the |simplify| :sup:`Simplify "
 "Feature` tool:"
@@ -231,15 +273,15 @@ msgstr ""
 "Продолжаем на том же слое, протестируем инструмент Упрощение функции "
 "|simplify| :sup:`Simplify Feature`:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:365
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:367
 msgid "simplify"
 msgstr "simplify"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:113
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:115
 msgid "Click on it to activate it."
 msgstr "Кликните на него и активируйте."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:114
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:116
 msgid ""
 "Click on one of the areas which you joined using either the *Vertex Tool* or"
 " *Add Feature* tool. You will see this dialog:"
@@ -248,19 +290,33 @@ msgstr ""
 "*Инструмента Vertex* или инструмента *Add Feature*, вы увидите это "
 "диалоговое окно:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:121
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:123
 msgid "Modify the :guilabel:`Tolerance` and watch what happens:"
 msgstr "Измените :guilabel:`Tolerance` и вы увидите что произойдет:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:126
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:128
 msgid "This allows you to reduce the number of vertices."
 msgstr "Это позволяет уменьшить число вершин."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:128
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:130
 msgid "Click :guilabel:`OK`"
-msgstr "Кликните :guilabel:`OK`"
+msgstr "Кликните :guilabel:`OK`."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:137
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:132
+msgid ""
+"The advantage of this tool is that it provides you with a simple and "
+"intuitive interface for generalization. But notice that the tool ruins "
+"topology. The simplified polygon no longer shares boundaries with its "
+"adjacent polygons, as it should. So this tool is better suited for stand-"
+"alone features."
+msgstr ""
+"Преимущество этого инструмента в том, что он предоставляет вам простой и "
+"интуитивно понятный интерфейс для обобщения. Но обратите внимание, что "
+"инструмент разрушает топологию. Упрощенный многоугольник больше не имеет "
+"общих границ с соседними многоугольниками, как это должно быть. Поэтому этот"
+" инструмент лучше использовать для создания отдельных элементов."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:139
 msgid ""
 "Before you go on, set the polygon back to its original state by undoing the "
 "last change."
@@ -269,6 +325,11 @@ msgstr ""
 "последнее изменение."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:144
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Tool: Add Ring"
+msgstr ""
+":abbr:`★★☆ (Умеренный уровень)` Попробуй себя: Инструмент: Добавить кольцо"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:146
 msgid ""
 "The |addRing| :sup:`Add Ring` tool allows you to add an interior ring to a "
 "polygon feature (cut a hole in the polygon), as long as the hole is "
@@ -282,11 +343,11 @@ msgstr ""
 "если вы оцифровали внешние границы Южной Африки и вам нужно добавить "
 "отверстие для Лесото, вы бы использовали это инструмент."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:346
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:348
 msgid "addRing"
 msgstr "addRing"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:152
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:154
 msgid ""
 "If you experiment with the tool, you may notice that the snapping options "
 "can prevent you from creating a ring inside a polygon. So you are advised to"
@@ -296,7 +357,7 @@ msgstr ""
 " помешать созданию кольца внутри полигона. Поэтому рекомендуется отключить "
 "привязку перед вырезанием отверстия."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:156
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:158
 msgid ""
 "Disable snapping for the ``landuse`` layer using the |snapping| :sup:`Enable"
 " Snapping` button (or use the shortcut :kbd:`s`)."
@@ -304,11 +365,7 @@ msgstr ""
 "Отключить привязку для слоя ``landuse`` с помощью кнопки |snapping| "
 ":sup:`Enable Snapping` (или используйте ярлыки :kbd:`s`)."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:367
-msgid "snapping"
-msgstr "snapping"
-
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:158
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:160
 msgid ""
 "Use the |addRing| :sup:`Add Ring` tool to create a hole in the middle of a "
 "polygon geometry."
@@ -316,7 +373,7 @@ msgstr ""
 "Используйте инструмент |addRing| :sup:`Add Ring` для создания отверстия с "
 "середине геометрии полигона."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:160
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:162
 msgid ""
 "Draw a polygon over the target feature, as if you were using the "
 "|capturePolygon| :sup:`Add polygon` tool."
@@ -324,15 +381,50 @@ msgstr ""
 "Нарисуйте полигон над целевой функцией, как если бы вы использовали "
 "инструмент Добавить полигон  |capturePolygon| :sup:`Add polygon`."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:162
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:164
 msgid "When you right-click, the hole will be visible."
 msgstr "Когда вы нажмете правый клик, отверстие станет видимым."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:352
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:165
+msgid ""
+"Remove the hole you just created using the |deleteRing| :sup:`Delete Ring` "
+"tool. Click inside the hole to delete it."
+msgstr ""
+"Удалите отверстие, которое вы только что создали, с помощью инструмента "
+"|deleteRing| :sup:`Удалить кольцо`. Щелкните внутри отверстия, чтобы удалить"
+" его."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:354
 msgid "deleteRing"
 msgstr "deleteRing"
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:169
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:199
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:304
+msgid "Answer"
+msgstr "Ответить"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:172
+msgid ""
+"The exact shape doesn't matter, but you should be getting a hole in the "
+"middle of your feature, like this one:"
+msgstr ""
+"Точная форма не имеет значения, но у вас должно получиться отверстие в "
+"центре, как здесь:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:178
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:212
+msgid "Undo your edit before continuing with the exercise for the next tool."
+msgstr ""
+"Отмените правку, прежде чем продолжить выполнение упражнения для следующего "
+"инструмента."
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:182
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Tool: Add Part"
+msgstr ""
+":abbr:`★★☆ (Умеренный уровень)` Попробуй себя: Инструмент: Добавить часть"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:184
 msgid ""
 "The |addPart| :sup:`Add Part` tool allows you to add a new part to a "
 "feature, that is not directly connected to the main feature. For example, if"
@@ -345,11 +437,11 @@ msgstr ""
 "вы оцифровали границы материковой части Южной Африки, но еще не добавили "
 "острова Принца Эдуарда, вы бы использовали этот инструмент для их создания."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:344
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:346
 msgid "addPart"
 msgstr "addPart"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:188
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:190
 msgid ""
 "Select the polygon to which you wish to add the part by using the "
 "|selectRectangle| :sup:`Select Features by area or single click` tool."
@@ -358,16 +450,16 @@ msgstr ""
 "инструмента Выберите функцию по местности или одним кликом |selectRectangle|"
 " :sup:`Select Features by area or single click`."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:363
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:365
 msgid "selectRectangle"
 msgstr "selectRectangle"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:191
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:193
 msgid "Use the :guilabel:`Add Part` tool to add an outlying area."
 msgstr ""
 "Используйте инструмент :guilabel:`Add Part` для добавления внешней области."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:192
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:194
 msgid ""
 "Delete the part you just created using the |deletePart| :sup:`Delete Part` "
 "tool."
@@ -375,15 +467,28 @@ msgstr ""
 "Удалите только что созданную часть с помощью инструмента |deletePart| "
 ":sup:`Delete Part`."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:350
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:352
 msgid "deletePart"
 msgstr "deletePart"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:195
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:197
 msgid "Click inside the part to delete it."
 msgstr "Кликните внутри детали, чтобы удалить ее."
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:202
+msgid "First select the |largeLandUseArea|:"
+msgstr "Сначала выберите область |largeLandUseArea|:"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:207
+msgid "Now add your new part:"
+msgstr "Теперь добавьте новую часть:"
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:216
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Tool: Reshape Features"
+msgstr ""
+":abbr:`★★☆ (Умеренный уровень)` Следуй за мной: Инструмент: Изменить форму"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:218
 msgid ""
 "The |reshape| :sup:`Reshape Features` tool is used to extend a polygon "
 "feature or cut away a part of it (along the boundary)."
@@ -391,16 +496,16 @@ msgstr ""
 "Инструмент  |reshape| :sup:`Reshape Features` используется для расширения "
 "функции полигона или вырезания его части (вдоль границы)."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:361
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:363
 msgid "reshape"
 msgstr "reshape"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:219
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:221
 msgid "Extending:"
 msgstr "Расширение:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:221
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:238
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:223
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:240
 msgid ""
 "Select the polygon using the |selectRectangle| :sup:`Select Features by area"
 " or single click` tool."
@@ -408,11 +513,11 @@ msgstr ""
 "Выберите полигон с помощью инструмента  |selectRectangle| :sup:`Select "
 "Features by area or single click`."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:223
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:225
 msgid "Left-click inside the polygon to start drawing."
 msgstr "Кликните левой кнопкой мыши внутри полигона, чтобы начать рисование."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:224
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:226
 msgid ""
 "Draw a shape outside the polygon. The last vertex should be back inside the "
 "polygon."
@@ -420,23 +525,23 @@ msgstr ""
 "Нарисуйте форму вне полигона. Последняя вершина должна быть снова внутри "
 "полигона."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:226
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:228
 msgid "Right-click to finish the shape:"
 msgstr "Кликните правой кнопкой мыши для завершения фигуры:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:231
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:233
 msgid "This will give a result similar to:"
 msgstr "Это даст результат, аналогичный нижеследующему:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:236
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:238
 msgid "Cut away a part:"
 msgstr "Вырежьте часть:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:240
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:242
 msgid "Click outside the polygon."
 msgstr "Кликните за пределами полигона."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:241
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:243
 msgid ""
 "Draw a shape inside the polygon. The last vertex must be back outside the "
 "polygon."
@@ -444,15 +549,21 @@ msgstr ""
 "Нарисуйте фигуру внутри полигона. Последняя вершина должна быть возвращена "
 "за пределы полигона."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:243
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:245
 msgid "Right-click outside the polygon:"
 msgstr "Кликните правой кнопкой мыши вне полигона:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:248
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:250
 msgid "The result of the above:"
 msgstr "Результат того, что было выше:"
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:257
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Tool: Split Features"
+msgstr ""
+":abbr:`★★☆ (Умеренный уровень)` Попробуй себя: Инструмент: Разделить "
+"особенности"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:259
 msgid ""
 "The |splitFeatures| :sup:`Split Features` tool is similar to the |reshape| "
 ":sup:`Reshape Features` tool, except that it does not delete either of the "
@@ -462,20 +573,20 @@ msgstr ""
 "|reshape| :sup:`Reshape Features` кроме одного, того что он не удаляет ни "
 "одной из двух частей. И наоборот, сохраняет обе."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:369
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:371
 msgid "splitFeatures"
 msgstr "splitFeatures"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:262
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:264
 msgid "We will use the tool to split a corner from a polygon."
 msgstr "Мы будем использовать инструмент, чтобы отделить угол от полигона."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:264
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:266
 msgid "First, select the ``landuse`` layer and re-enable snapping for it."
 msgstr ""
 "Сначала выберите слой ``landuse`` и повторно включите для него привязку."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:266
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:268
 msgid ""
 "Select the |splitFeatures| :sup:`Split Features` tool and click on a vertex "
 "to begin drawing a line."
@@ -483,11 +594,11 @@ msgstr ""
 "Выберите инструмент |splitFeatures| :sup:`Split Features` и кликните на "
 "вершину для того, чтобы начать рисовать линию."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:269
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:271
 msgid "Draw the bounding line."
 msgstr "Нарисуйте ограничивающую линию."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:271
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:273
 msgid ""
 "Click a vertex on the \"opposite\" side of the polygon you wish to split and"
 " right-click to complete the line:"
@@ -495,7 +606,7 @@ msgstr ""
 "Кликните вершину на \"противоположной\" стороне полигона, который вы хотите "
 "разделить, и кликните правой кнопкой мыши для завершения линии:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:277
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:279
 msgid ""
 "At this point, it may seem as if nothing has happened. But remember that the"
 " ``landuse`` layer is rendered without border lines, so the new division "
@@ -505,7 +616,7 @@ msgstr ""
 "слой ``landuse`` визуализируется без линий границы, поэтому новая линия "
 "разделения не будет показана."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:280
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:282
 msgid ""
 "Use the |selectRectangle| :sup:`Select Features by area or single click` "
 "tool to select the part you just split out; the new feature will now be "
@@ -516,6 +627,12 @@ msgstr ""
 "новый элемент будет выделен:"
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:293
+msgid ":abbr:`★★★ (Advanced level)` Try Yourself: Tool: Merge Features"
+msgstr ""
+":abbr:`★★★ (продвинутый уровень)` Попробуй себя: Инструмент: Особенности "
+"слияния"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:295
 msgid ""
 "Now we will re-join the feature you just split out to the remaining part of "
 "the polygon:"
@@ -523,7 +640,7 @@ msgstr ""
 "Теперь мы снова присоединим элемент, который вы только что разделили, к "
 "оставшейся части полигона:"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:296
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:298
 msgid ""
 "Experiment with  the |mergeFeatures|:sup:`Merge Selected Features` and "
 "|mergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tools."
@@ -532,19 +649,60 @@ msgstr ""
 "Features` и |mergeFeatureAttributes| :sup:`Merge Attributes of Selected "
 "Features`."
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:357
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:359
 msgid "mergeFeatures"
 msgstr "mergeFeatures"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:355
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:357
 msgid "mergeFeatureAttributes"
 msgstr "mergeFeatureAttributes"
 
-#: ../../docs/training_manual/create_vector_data/topo_editing.rst:299
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:301
 msgid "Note the differences."
 msgstr "Отметьте разницу."
 
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:307
+msgid ""
+"Use the :guilabel:`Merge Selected Features` tool, making sure to first "
+"select both of the polygons you wish to merge."
+msgstr ""
+"Используйте инструмент :guilabel:`Слияние выделенных объектов`, "
+"предварительно выделив оба полигона, которые вы хотите объединить."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:309
+msgid ""
+"Use the feature with the :guilabel:`OGC_FID` of ``1`` as the source of your "
+"attributes (click on its entry in the dialog, then click the :guilabel:`Take"
+" attributes from selected feature` button):"
+msgstr ""
+"Используйте функцию с :guilabel:`OGC_FID` ``1`` в качестве источника "
+"атрибутов (щелкните на ее записи в диалоге, затем нажмите кнопку "
+":guilabel:`Взять атрибуты из выбранной функции``):"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:313
+msgid ""
+"If you're using a different dataset, it is highly likely that your original "
+"polygon's :guilabel:`OGC_FID` will not be ``1``. Just choose the feature "
+"which has an :guilabel:`OGC_FID`."
+msgstr ""
+"Если вы используете другой набор данных, велика вероятность, что "
+":guilabel:`OGC_FID` вашего исходного полигона не будет ``1``. Просто "
+"выберите функцию, которая имеет :guilabel:`OGC_FID`."
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:320
+msgid ""
+"Using the :guilabel:`Merge Attributes of Selected Features` tool will keep "
+"the geometries distinct, but give them the same attributes."
+msgstr ""
+"Использование инструмента :guilabel:`Слияние атрибутов выбранных "
+"характеристик` позволит сохранить геометрии разными, но дать им одинаковые "
+"атрибуты."
+
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:324
+msgid "In Conclusion"
+msgstr "В заключение"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:326
 msgid ""
 "Topology editing is a powerful tool that allows you to create and modify "
 "objects quickly and easily, while ensuring that they remain topologically "
@@ -555,6 +713,10 @@ msgstr ""
 "корректность."
 
 #: ../../docs/training_manual/create_vector_data/topo_editing.rst:332
+msgid "What's Next?"
+msgstr "Что дальше?"
+
+#: ../../docs/training_manual/create_vector_data/topo_editing.rst:334
 msgid ""
 "Now you know how to digitize the shape of the objects easily, but adding "
 "attributes is still a bit of a headache! Next we will show you how to use "
