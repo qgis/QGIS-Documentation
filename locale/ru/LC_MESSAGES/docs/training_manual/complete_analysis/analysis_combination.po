@@ -5,23 +5,37 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
+# Harrissou Sant-anna, 2025
+# Asdfgr Wertyu, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:2
+msgid "Lesson: Combining the Analyses"
+msgstr "Урок: Объединение анализов"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:4
 msgid ""
@@ -38,6 +52,10 @@ msgid ""
 msgstr ""
 "**Цель этого урока:** Использовать результаты анализа векторизованного "
 "ландшафта для выбора подходящих участков."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:11
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
+msgstr ":abbr:`★★★☆ (Умеренный уровень)` Попробуйте себя:"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:13
 msgid "Save your current map (:file:`raster_analysis.qgs`)."
@@ -101,6 +119,10 @@ msgstr ""
 "У вас теперь должен быть слой, показывающий ваш вариант определенных зданий,"
 " например:"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:38
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Inspecting the Results"
+msgstr ":abbr:`★★☆ (Умеренный уровень)` Испытай себя: Проверка результатов"
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
 msgid ""
 "Look at each of the buildings in your :guilabel:`new_solution` layer. "
@@ -116,6 +138,29 @@ msgstr ""
 "заметили в некоторых зданиях? Все ли они подходят только потому, что "
 "пересекаются со слоем :guilabel:`suitable_terrain`? Почему или почему нет? "
 "Какие из них вы считаете не подходят?"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
+msgid "Answer"
+msgstr "Ответить"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:50
+msgid ""
+"You may notice that some of the buildings in your :file:`new_solution` layer"
+" have been \"sliced\" by the :guilabel:`Intersection` tool. This shows that "
+"only part of the building - and therefore only part of the property - lies "
+"on suitable terrain. We can therefore sensibly eliminate those buildings "
+"from our dataset."
+msgstr ""
+"Вы можете заметить, что некоторые здания в слое :file:`new_solution` были "
+"«нарезаны» инструментом :guilabel:`Intersection`. Это показывает, что только"
+" часть здания - и, следовательно, только часть объекта - лежит на подходящей"
+" местности. Поэтому мы можем разумно исключить эти здания из нашего набора "
+"данных."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:58
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Refining the Analysis"
+msgstr ":abbr:`★★☆ (Умеренный уровень)` Попробуй себя: Уточнение анализа"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
 msgid ""
@@ -138,9 +183,130 @@ msgstr ""
 "анализа и помните, что все наши здания имеют площадь более 100 квадратных "
 "метров."
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:71
+msgid "At the moment, your analysis should look something like this:"
+msgstr "На данный момент ваш анализ должен выглядеть примерно так:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:76
+msgid "Consider a circular area, continuous for 100 meters in all directions."
+msgstr ""
+"Рассмотрим круглую область, непрерывную на 100 метров во всех направлениях."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:81
+msgid ""
+"If it is greater than 100 meters in radius, then subtracting 100 meters from"
+" its size (from all directions) will result in a part of it being left in "
+"the middle."
+msgstr ""
+"Если его радиус превышает 100 метров, то при вычитании 100 метров из его "
+"размера (со всех сторон) часть его останется посередине."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:88
+msgid ""
+"Therefore, you can run an *interior buffer* of 100 meters on your existing "
+":guilabel:`suitable_terrain` vector layer. In the output of the buffer "
+"function, whatever remains of the original layer will represent areas where "
+"there is suitable terrain for 100 meters beyond."
+msgstr ""
+"Поэтому вы можете запустить *внутренний буфер* в 100 метров на существующем "
+"векторном слое :guilabel:`suitable_terrain`. На выходе функции буфера все, "
+"что осталось от исходного слоя, будет представлять области, где есть "
+"подходящая местность на 100 метров дальше."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:93
+msgid "To demonstrate:"
+msgstr "Чтобы продемонстрировать:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:95
+msgid ""
+"Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open "
+"the Buffer(s) dialog."
+msgstr ""
+"Перейдите в :menuselection:``Вектор --> Инструменты геопроцессинга --> "
+"Буфер(ы)``, чтобы открыть диалог Буфер(ы)."
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:97
 msgid "Set it up like this:"
-msgstr "Сделайте это так:"
+msgstr "Настройте его таким образом:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:102
+msgid ""
+"Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a buffer"
+" distance of ``-100``. (The distance is automatically in meters because your"
+" map is using a projected CRS.)"
+msgstr ""
+"Используйте слой :guilabel:`suitable_terrain` с ``10`` сегментами и буферным"
+" расстоянием ``-100``. (Расстояние автоматически указывается в метрах, "
+"поскольку на вашей карте используется проецируемая CRS)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:105
+msgid ""
+"Save the output in :file:`exercise_data/residential_development/` as "
+":file:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"Сохраните результат в :file:`exercise_data/residential_development/` как "
+":file:`suitable_terrain_continuous100m.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:107
+msgid ""
+"If necessary, move the new layer above your original "
+":guilabel:`suitable_terrain` layer."
+msgstr ""
+"При необходимости переместите новый слой выше исходного слоя "
+":guilabel:`suitable_terrain`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:110
+msgid "Your results will look like something like this:"
+msgstr "Ваши результаты будут выглядеть примерно так:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:115
+msgid ""
+"Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector --> "
+"Research Tools --> Select by location`)."
+msgstr ""
+"Теперь воспользуйтесь инструментом :guilabel:``Выбор по местоположению`` "
+"(:menuselection:``Вектор --> Инструменты исследования --> Выбрать по "
+"местоположению``)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:117
+msgid "Set up like this:"
+msgstr "Установите его так:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:122
+msgid ""
+"Select features in :guilabel:`new_solution` that intersect features in "
+":guilabel:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"Выберите особенности в :guilabel:`new_solution`, которые пересекаются с "
+"особенностями в :guilabel:`suitable_terrain_continuous100m.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:125
+msgid "This is the result:"
+msgstr "Вот результат:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:130
+msgid ""
+"The yellow buildings are selected. Although some of the buildings fall "
+"partly outside the new :guilabel:`suitable_terrain_continuous100m` layer, "
+"they lie well within the original :guilabel:`suitable_terrain` layer and "
+"therefore meet all of our requirements."
+msgstr ""
+"Выбраны желтые здания. Хотя некоторые здания частично выходят за пределы "
+"нового слоя :guilabel:`suitable_terrain_continuous100m`, они находятся в "
+"пределах исходного слоя :guilabel:`suitable_terrain` и поэтому отвечают всем"
+" нашим требованиям."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:135
+msgid ""
+"Save the selection under :file:`exercise_data/residential_development/` as "
+":file:`final_answer.shp`."
+msgstr ""
+"Сохраните выбор в папке :file:`exercise_data/residential_development/` как "
+":file:`final_answer.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:139
+msgid "In Conclusion"
+msgstr "В заключение"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:141
 msgid ""
@@ -151,6 +317,10 @@ msgstr ""
 "Вы теперь ответили на исходный вопрос исследования и можете высказать свое "
 "мнение (с указанием причин, подкрепленных анализом) относительно того, какой"
 " объект недвижимости следует улучшить."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:146
+msgid "What's Next?"
+msgstr "Что дальше?"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:148
 msgid "Next you will present these results as part of your second assignment."
