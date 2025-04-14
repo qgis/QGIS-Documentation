@@ -2256,7 +2256,7 @@ will open and allow you to configure:
 
   For serial port sensors, comboboxes with the system's available serial ports
   and connection baud rate are available for their selection.
-  A :guilabel:`Data frame delimiter` can be used to properly parse returned data.
+  A :guilabel:`Data frame delimiter` can be used to parse returned data.
   In case multiple data frames are found in the last chunk of data pushed by the serial port,
   all the data frames are returned.
   You can then use an expression to further split the returned sensor last data value
