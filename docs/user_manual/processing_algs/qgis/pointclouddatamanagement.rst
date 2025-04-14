@@ -629,7 +629,7 @@ Basic parameters
      - Input point cloud layer to create a thinned version from
    * - **Sampling radius (in map units)**
      - ``SAMPLING_RADIUS``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - Distance within which points are sampled to a unique point
@@ -728,7 +728,7 @@ Basic parameters
      - Input point cloud layer to create a thinned version from
    * - **Number of points to skip**
      - ``POINTS_NUMBER``
-     - [number]
+     - [numeric: integer]
 
        Default: 1
      - Keep only every N-th point in the input layer
@@ -827,7 +827,7 @@ Basic parameters
      - Input point cloud layers to create tiles from
    * - **Tile length**
      - ``LENGTH``
-     - [number]
+     - [numeric: double]
 
        Default: 1000.0
      - Size of the edge of each generated tile

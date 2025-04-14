@@ -47,7 +47,7 @@ Parameters
 
        Optional
      - ``INCREMENT``
-     - [number]
+     - [numeric: double]
 
        Default: *Not set*
      - Interval between generated levels.
@@ -55,15 +55,16 @@ Parameters
 
        Optional
      - ``MINIMUM``
-     - [number]
+     - [numeric: double]
 
        Default: *Not set*
      - Starting level values of contours.
+       No generated levels will be lower than this value.
    * - **Maximum contour level**
 
        Optional
      - ``MAXIMUM``
-     - [number]
+     - [numeric: double]
 
        Default: *Not set*
      - Maximum values of contours, i.e. no generated levels will be greater than this value.
@@ -71,10 +72,10 @@ Parameters
 
        Optional
      - ``CONTOUR_LEVEL_LIST``
-     - [number]
+     - [string]
 
        Default: *Not set*
-     - List of wanted levels of contours (separated by commas).
+     - List of desired levels of contours (separated by commas).
        If filled, the increment, minimum, and maximum fields will not be considered.
    * - **Output coordinate system**
 
@@ -181,17 +182,24 @@ Parameters
      - Lines where the data will be extracted from the dataset mesh
    * - **Line segmentation resolution**
      - ``RESOLUTION``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      - The distance between points on the lines where the data
        will be extracted from the dataset mesh.
-   * - **Digits count for dataset value**
-     - ``DATASET_DIGITS``
-     - [number]
+       Units can be selected.
+   * - **Digits count for coordinates**
+     - ``COORDINATES_DIGITS``
+     - [numeric: integer]
 
        Default: 2
-     - Number of digits to round dataset values
+     - Number of digits for rounding the coordinate values
+   * - **Digits count for dataset value**
+     - ``DATASET_DIGITS``
+     - [numeric: integer]
+
+       Default: 2
+     - Number of digits for rounding the dataset values
    * - **Exported data CSV file**
      - ``OUTPUT``
      - [file]
@@ -461,7 +469,7 @@ Parameters
 
        Optional
      - ``GRID_SPACING``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      - Spacing between the sample points to use
@@ -655,7 +663,7 @@ Parameters
 
        Optional
      - ``TIME_STEP``
-     - [number]
+     - [numeric: double]
 
        Default: 0
      - Time between two consecutive steps to extract.
@@ -667,16 +675,16 @@ Parameters
      - Vector layer containing points where the data will be extracted from the dataset mesh
    * - **Digits count for coordinates**
      - ``COORDINATES_DIGITS``
-     - [number]
-     - Number of digits to round coordinate values
+     - [numeric: integer]
+     - Number of digits for rounding coordinate values
 
        Default: 2
    * - **Digits count for dataset value**
      - ``DATASET_DIGITS``
-     - [number]
+     - [numeric: integer]
 
        Default: 2
-     - Number of digits to round dataset values
+     - Number of digits for rounding dataset values
    * - **Exported data CSV file**
      - ``OUTPUT``
      - [file]
@@ -771,7 +779,7 @@ Basic parameters
 
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - Pixel size of the output raster layer.
@@ -812,10 +820,9 @@ Advanced parameters
 
        Default: ''
      - For adding one or more creation options that control the
-       raster to be created (colors, block size, file
-       compression...).
-       For convenience, you can rely on predefined profiles (see
-       :ref:`GDAL driver options section <gdal_createoptions>`).
+       raster to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
 
        Batch Process and Model Designer: separate multiple options with a pipe
        character (``|``).
@@ -899,6 +906,7 @@ Parameters
        * 1 --- SELAFIN
        * 2 --- PLY
        * 3 --- Ugrid
+       * 4 --- Mike21
    * - **Output coordinate system**
 
        Optional

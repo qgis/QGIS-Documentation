@@ -13,8 +13,7 @@ Vector selection
 Extract by attribute
 --------------------
 Creates two vector layers from an input layer: one will contain only
-matching features while the second will contain all the non-matching
-features.
+matching features while the second will contain all the non-matching features.
 
 The criteria for adding features to the resulting layer is based on
 the values of an attribute from the input layer.
@@ -105,13 +104,11 @@ Outputs
    * - **Extracted (attribute)**
      - ``OUTPUT``
      - [same as input]
-     - Vector layer with matching features from the input
-       layer
+     - Vector layer with matching features from the input layer
    * - **Extracted (non-matching)**
      - ``FAIL_OUTPUT``
      - [same as input]
-     - Vector layer with non-matching features from the
-       input layer
+     - Vector layer with non-matching features from the input layer
 
 Python code
 ...........
@@ -128,13 +125,10 @@ Python code
 Extract by expression
 ---------------------
 Creates two vector layers from an input layer: one will contain only
-matching features while the second will contain all the non-matching
-features.
+matching features while the second will contain all the non-matching features.
 
-The criteria for adding features to the resulting layer is based on a
-QGIS expression.
-For more information about expressions see the
-:ref:`vector_expressions`.
+The criteria for adding features to the resulting layer is based on a QGIS expression.
+For more information about expressions see the :ref:`vector_expressions`.
 
 .. seealso:: :ref:`qgisselectbyexpression`
 
@@ -218,12 +212,10 @@ Python code
 
 Extract by location
 -------------------
-Creates a new vector layer that only contains matching features from
-an input layer.
+Creates a new vector layer that only contains matching features from an input layer.
 
 The criteria for adding features to the resulting layer is based on
-the spatial relationship between each feature and the features in an
-additional layer.
+the spatial relationship between each feature and the features in an additional layer.
 
 .. seealso:: :ref:`qgisselectbylocation`, :ref:`qgisextractwithindistance`
 
@@ -248,7 +240,7 @@ Parameters
      - Description
    * - **Extract features from**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Where the features (geometric predicate)**
      - ``PREDICATE``
@@ -268,11 +260,10 @@ Parameters
        * 7 --- cross
 
        If more than one condition is chosen, at least one
-       of them (OR operation) has to be met for a feature
-       to be extracted.
+       of them (OR operation) has to be met for a feature to be extracted.
    * - **By comparing to the features from**
      - ``INTERSECT``
-     - [vector: any]
+     - [vector: geometry]
      - Intersection vector layer
    * - **Extracted (location)**
      - ``OUTPUT``
@@ -341,17 +332,17 @@ Parameters
      - Description
    * - **Extract features from**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer to copy features from
    * - **By comparing to the features from**
      - ``REFERENCE``
-     - [vector: any]
+     - [vector: geometry]
      - Vector layer whose features closeness is used
    * - **Where the features are within**
      - ``DISTANCE``
-     - [number]
+     - [numeric: double] |dataDefine|
 
-       Default: 100
+       Default: 100.0
      - The maximum distance around reference features
        to select input features within
    * - **Modify current selection by**
@@ -462,7 +453,7 @@ Outputs
 
        Optional
      - ``NO_GEOMETRY``
-     - [table]
+     - [vector: table]
      - Geometry-less vector layer
 
 Python code
@@ -519,13 +510,13 @@ Parameters
 
    * - **Number/percentage of selected features**
      - ``NUMBER``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - Number or percentage of features to select
    * - **Extracted (random)**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the randomly
@@ -611,7 +602,7 @@ Parameters
 
    * - **Number/percentage of selected features**
      - ``NUMBER``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - Number or percentage of features to select
@@ -697,7 +688,7 @@ Parameters
 
    * - **Number/percentage of selected features**
      - ``NUMBER``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - Number or percentage of features to select
@@ -782,7 +773,7 @@ Parameters
 
    * - **Number/percentage of selected features**
      - ``NUMBER``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - Number or percentage of features to select
@@ -1013,7 +1004,7 @@ Parameters
      - Description
    * - **Select features from**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Where the features (geometric predicate)**
      - ``PREDICATE``
@@ -1037,7 +1028,7 @@ Parameters
        to be extracted.
    * - **By comparing to the features from**
      - ``INTERSECT``
-     - [vector: any]
+     - [vector: geometry]
      - Intersection vector layer
    * - **Modify current selection by**
      - ``METHOD``
@@ -1103,17 +1094,17 @@ Parameters
      - Description
    * - **Select features from**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer to select features from
    * - **By comparing to the features from**
      - ``REFERENCE``
-     - [vector: any]
+     - [vector: geometry]
      - Vector layer whose features closeness is used
    * - **Where the features are within**
      - ``DISTANCE``
-     - [number]
+     - [numeric: double] |dataDefine|
 
-       Default: 100
+       Default: 100.0
      - The maximum distance around reference features
        to select input features
    * - **Modify current selection by**
@@ -1153,3 +1144,13 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |dataDefine| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em

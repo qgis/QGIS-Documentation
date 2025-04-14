@@ -714,7 +714,7 @@ Parameters
      - Attribute for the distance radius of the buffer
    * - **Segments**
      - ``SEGMENTS``
-     - [number]
+     - [numeric: integer]
 
        Default: *5*
      - Controls the number of line segments to use to approximate a
@@ -751,7 +751,7 @@ Parameters
        when offsetting corners in a line.
    * - **Miter limit**
      - ``MITER_LIMIT``
-     - [number]
+     - [numeric: double]
 
        Default: 2.0
      - Only applicable for mitered join styles, and controls the
