@@ -688,10 +688,11 @@ Advanced parameters
 
        Default: 0
      - Determines if text should be exported as path or text objects.
-       Possible options are:
+       :ref:`Possible options <render_labels_text>` are:
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
+       * 2 - Prefer exporting texts as text objects
    * - **Image compression**
      - ``IMAGE_COMPRESSION``
      - [enumeration]
@@ -860,10 +861,11 @@ Advanced parameters
 
        Default: 0
      - Determines if text should be exported as path or text objects.
-       Possible options are:
+       :ref:`Possible options <render_labels_text>` are:
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
+       * 2 - Prefer exporting texts as text objects
    * - **Image compression**
      - ``IMAGE_COMPRESSION``
      - [enumeration]
@@ -1110,10 +1112,11 @@ Advanced parameters
 
        Default: 0
      - Determines if text should be exported as path or text objects.
-       Possible options are:
+       :ref:`Possible options <render_labels_text>` are:
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
+       * 2 - Prefer exporting texts as text objects
    * - **Image compression**
      - ``IMAGE_COMPRESSION``
      - [enumeration]
