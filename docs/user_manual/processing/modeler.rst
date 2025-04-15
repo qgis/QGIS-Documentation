@@ -483,6 +483,8 @@ model comments. Comments are visible only in the modeler canvas and not
 in the final algorithm dialog; they can be hidden by deactivating
 :menuselection:`View --> Show Comments`.
 
+.. _running_model:
+
 Your model can be run in various ways:
 
 * You can run the whole model by clicking on |start| :sup:`Run Model...` from the toolbar
@@ -604,12 +606,11 @@ purposes) by clicking |saveMapAsImage|:sup:`Export as image`,
 Editing a model
 ---------------
 
-You can edit the model you are currently creating, redefining the
-workflow and the relationships between the algorithms and inputs that
-define the model.
+You can edit the model you are currently creating, redefining the workflow
+and the relationships between the algorithms and inputs that define the model.
 
-If you right-click on an algorithm in the canvas, you will see a context
-menu like the one shown next:
+If you right-click on an algorithm in the canvas, you will see a context menu
+like the one shown next:
 
 .. _figure_model_right_click:
 
@@ -618,53 +619,58 @@ menu like the one shown next:
 
    Modeler Right Click
 
-Selecting the :guilabel:`Remove` option will cause the selected
-algorithm to be removed.
-An algorithm can be removed only if there are no other algorithms
-depending on it.
-That is, if no output from the algorithm is used in a different one as
-input.
-If you try to remove an algorithm that has others depending on it, a
-warning message like the one you can see below will be shown:
+* Options for :ref:`running part of the model <running_model>` have been exposed earlier.
 
-.. _figure_cannot_delete_alg:
+* Selecting the :guilabel:`Remove` option will cause the selected algorithm to be removed.
+  An algorithm can be removed only if there are no other algorithms depending on it.
+  That is, if no output from the algorithm is used as input in a different one.
 
-.. figure:: img/cannot_delete_alg.png
-   :align: center
+* Selecting the :guilabel:`Edit...` option will show the parameter dialog
+  so you can change the inputs and parameter values.
+  Not all input elements available in the model will appear as available inputs.
+  Layers or values generated at a more advanced step in the workflow
+  defined by the model will not be available if they cause circular dependencies.
 
-   Cannot Delete Algorithm
+  Select the new values and click on the :guilabel:`OK` button as usual.
+  The connections between the model elements will change in the modeler canvas accordingly.
 
-Selecting the :guilabel:`Edit...` option will show the parameter dialog
-of the algorithm, so you can change the inputs and parameter values.
-Not all input elements available in the model will appear as
-available inputs.
-Layers or values generated at a more advanced step in the workflow
-defined by the model will not be available if they cause circular
-dependencies.
+* The :guilabel:`Add comment...` allows you to add a comment to the algorithm
+  to better describe the behavior.
 
-Select the new values and click on the :guilabel:`OK` button as usual.
-The connections between the model elements will change in the modeler
-canvas accordingly.
+.. note:: Right-clicking an input parameter will also allow you to
+  :guilabel:`Remove`, :guilabel:`Edit..` and :guilabel:`Add comment...`
 
-The :guilabel:`Add comment...` allows you to add a comment to the algorithm to
-better describe the behavior.
+* A model can be run partially by deactivating some of its algorithms.
+  To do it, select the :guilabel:`Deactivate` option in the context menu
+  that appears when right-clicking on an algorithm element.
+  The selected algorithm, and all the ones in the model that depend on it
+  will be displayed in grey and will not be executed as part of the model.
 
-A model can be run partially by deactivating some of its algorithms.
-To do it, select the :guilabel:`Deactivate` option in the context menu
-that appears when right-clicking on an algorithm element.
-The selected algorithm, and all the ones in the model that depend on it
-will be displayed in grey and will not be executed as part of the model.
+  .. _figure_cannot_model_deactivate:
 
-.. _figure_cannot_model_deactivate:
+  .. figure:: img/deactivated.png
+     :align: center
 
-.. figure:: img/deactivated.png
-   :align: center
+     Model with a deactivated algorithm
 
-   Model With Deactivated Algorithms
+  When right-clicking on an algorithm that is not active, you will
+  see an :guilabel:`Activate` menu option that you can use to reactivate it.
 
-When right-clicking on an algorithm that is not active, you will
-see a :guilabel:`Activate` menu option that you can use to reactivate
-it.
+* When editing a model through the designer (and after having run that model),
+  right-clicking any child step in the model allows to select |showSelectedLayers| :guilabel:`View Output Layers`.
+  This will add the output layers from that step as new layers in the current QGIS project.
+
+  This action is available for all child algorithms in the model,
+  even if the model is not configured to use the outputs from those children as model outputs.
+  This is designed as a helpful debugging action. If a model fails (or gives unexpected results),
+  you can then trace through the model and view the outputs for suspected problematic steps.
+  It avoids the need to add temporary outputs to a model and re-run to test.
+
+  Additionally, this action is always available after running the model,
+  even if the model itself failed (e.g., because of a misconfigured step later in the model).
+
+* The :guilabel:`View Log` action helps you see the log for each child algorithm
+  after you've closed down the algorithm dialog.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -724,6 +730,8 @@ it.
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
+   :width: 1.5em
+.. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
