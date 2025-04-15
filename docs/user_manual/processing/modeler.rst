@@ -638,7 +638,7 @@ like the one shown next:
   to better describe the behavior.
 
 .. note:: Right-clicking an input parameter will also allow you to
-  :guilabel:`Remove`, :guilabel:`Edit..` and :guilabel:`Add comment...`
+  :guilabel:`Remove`, :guilabel:`Edit…` and :guilabel:`Add comment…`
 
 * A model can be run partially by deactivating some of its algorithms.
   To do it, select the :guilabel:`Deactivate` option in the context menu
