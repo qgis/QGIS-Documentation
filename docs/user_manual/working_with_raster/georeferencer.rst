@@ -10,9 +10,10 @@ Georeferencer
    .. contents::
       :local:
 
-The |georefRun| Georeferencer is a tool for generating world files for layers.
-It allows you to reference rasters or vectors to geographic or projected coordinate systems by
-creating a new GeoTiff or by adding a world file to the existing image. The basic
+The |georefRun| Georeferencer is a tool for aligning unreferenced raster or vector layers 
+to known coordinate systems using Ground Control Points (GCPs). 
+It supports exporting transformed rasters (GeoTIFF) and vectors (shapefiles, geopackages, etc.) 
+or writing accompanying world files (for raster only). The basic
 approach to georeferencing a layer is to locate points on it for which
 you can accurately determine coordinates.
 
@@ -53,8 +54,8 @@ you can accurately determine coordinates.
 
 Table Georeferencer: Georeferencer Tools
 
-Usual procedure
----------------
+Georeferencing raster layer
+---------------------------
 
 As X and Y coordinates (DMS (dd mm ss.ss), DD (dd.dd) or projected coordinates
 (mmmm.mm)), which correspond with the selected point on the image, two
@@ -269,17 +270,82 @@ raster.
 * Finally, |checkbox| :guilabel:`Load in project when done` loads the output raster
   automatically into the QGIS map canvas when the transformation is done.
 
-Show and adapt raster properties
-................................
 
-Clicking on the :guilabel:`Raster properties` option in the :guilabel:`Settings`
-menu opens the :ref:`Layer properties <raster_properties_dialog>` dialog of the
-raster file that you want to georeference.
+.. _`georeferencer_running`:
+
+Running the transformation
+..........................
+
+After all GCPs have been collected and all transformation settings are defined,
+just press the |start| :sup:`Start georeferencing` button to create
+the new georeferenced raster.
+
+
+Georeferencing Vector Layer
+---------------------------
+
+Georeferencing vector layers works similarly to raster georeferencing, but instead of matching image pixels,
+you match vector geometries (points, lines, or polygons) to known spatial references.
+
+The standard procedure starts the same as for raster georeferencing:
+open QGIS and add a layer to the map canvas to use as a reference.
+This can be a georeferenced raster or vector layer, or a WMS layer.
+
+Open the Georeferencer dialog from :menuselection:`Layer -->` |georefRun| :menuselection:`Georeferencer`.
+
+Start georeferencing by following these steps (in this example, we use an unreferenced ``alaska.shp``):
+
+.. _figure_vector_georeferencer_dialog:
+
+.. figure:: img/vector_georeferencer_dialog.png
+   :align: center
+
+   Vector Georeferencer Dialog
+
+#. Load the unreferenced vector layer using the |addOgrLayer| button.
+   The vector layer will appear in the main working area of the dialog.
+
+#. Activate snapping by clicking the |snapping| button and selecting the desired snapping type(s).
+   This enables snapping to the reference layer when placing GCPs.
+
+   You can also use the |cad| :sup:`Advanced Digitizing` dock to ensure high-precision
+   point selection. For more information, refer to the
+   :ref:`Advanced Digitizing <advanced_digitizing_panel>` section.
+
+#. Use the |addGCPPoint| :sup:`Add GCP Point` button to add a point to the working area.
+   Enter its coordinates manually and set the CRS, or click the |pencil| :sup:`From map canvas` button
+   to pick the coordinates from a georeferenced layer in the main QGIS map canvas.
+   In that case, the CRS will be set automatically.
+
+#. Define the transformation settings:
+
+   * Select the :guilabel:`Transformation type`.
+     The transformation algorithms are the same as those for raster georeferencing.
+     See :ref:`georeferencer_transformation` for more details.
+   * Define the :guilabel:`Target CRS` (Coordinate Reference System) for the georeferenced vector
+     (see :ref:`label_projections`).
+   * Set the output file format and path (e.g., GeoPackage, Shapefile).
+     By default, a new file with suffix ``_modified`` will be created in the same folder
+     as the original vector file.
+   * Optionally, enable **Generate PDF map** and **Generate PDF report**.
+     The report includes transformation parameters, GCP residuals, and a summary of RMS errors.
+   * Enable |checkbox| :guilabel:`Save GCP Points` to store GCPs in a file alongside the output vector layer.
+   * Enable |checkbox| :guilabel:`Load in project when done` to add the result directly to the map canvas.
+
+#. Click |start| :sup:`Start georeferencing` to run the transformation and generate the georeferenced vector layer.
+
+Show and adapt layer properties
+--------------------------------
+
+Clicking on the :guilabel:`Source properties` option in the :guilabel:`Settings`
+menu opens the :ref:`Raster Layer properties <raster_properties_dialog>`
+or :ref:`Vector Layer properties <vector_properties_dialog>` depending on the
+type of layer you are georeferencing.
 
 .. _configure_georeferencer:
 
 Configure the georeferencer
-...........................
+---------------------------
 
 You can customize the behavior of the georeferencer in :menuselection:`Settings 
 --> Configure Georeferencer` (or use keyboard shortcut :kbd:`Ctrl+P`). 
@@ -295,14 +361,6 @@ You can customize the behavior of the georeferencer in :menuselection:`Settings
   This will dock the Georeferencer window in the main QGIS window rather than 
   showing it as a separate window that can be minimized. 
 
-.. _`georeferencer_running`:
-
-Running the transformation
-..........................
-
-After all GCPs have been collected and all transformation settings are defined,
-just press the |start| :sup:`Start georeferencing` button to create
-the new georeferenced raster.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
