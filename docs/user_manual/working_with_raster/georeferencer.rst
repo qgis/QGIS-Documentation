@@ -235,19 +235,9 @@ Define the Raster creation options
 
 When exporting a raster, |checkbox| :guilabel:`Raster creation options` allows you to define
 additional options that control how the output file is structured and compressed.
+See more at :ref:`Raster driver options <gdal_createoptions>`.
 
-Under the :guilabel:`Profile` drop-down menu, you can choose between the following options:
-
-* :guilabel:`Default` uses the standard settings without any compression.
-* :guilabel:`No compression` saves the file without any compression.
-* :guilabel:`Low compression` uses a mild compression setting.
-* :guilabel:`High compression` applies stronger compression settings.
-* :guilabel:`JPEG compression` uses COMPRESS=JPEG with JPEG_QUALITY set to the default value of 75.
-
-Access the full list of available options by clicking the :guilabel:`Help` button.
-This opens a dialog displaying format details, including a link to the GDAL documentation
-and a list of all supported creation options for the selected format. Use button :guilabel:`Validate`
-to check the selected options.
+.. tip:: Select an empty entry if you want to create your own custom combination of parameters.
 
 Define the transformation settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

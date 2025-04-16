@@ -524,7 +524,7 @@ support read and write access:
 
 * :guilabel:`Edit create options`: allows you to edit or add different profiles
   of file transformation, i.e., a set of predefined combinations of parameters
-  (type and level of compression, blocks size, overview, colorimetry, alpha...)
+  (type and level of compression, BIGTIFF support, blocks size, overview, colorimetry, alpha...)
   to use when outputting raster files. The parameters depend on the driver.
 
   .. _figure_gdal_create_settings:
