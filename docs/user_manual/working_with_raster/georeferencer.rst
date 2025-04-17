@@ -10,9 +10,10 @@ Georeferencer
    .. contents::
       :local:
 
-The |georefRun| Georeferencer is a tool for generating world files for layers.
-It allows you to reference rasters or vectors to geographic or projected coordinate systems by
-creating a new GeoTiff or by adding a world file to the existing image. The basic
+The |georefRun| Georeferencer is a tool for aligning unreferenced raster or vector layers 
+to known coordinate systems using Ground Control Points (GCPs). 
+It supports exporting transformed rasters (GeoTIFF) and vectors (shapefiles, geopackages, etc.) 
+or writing accompanying world files (for raster only). The basic
 approach to georeferencing a layer is to locate points on it for which
 you can accurately determine coordinates.
 
@@ -23,36 +24,38 @@ you can accurately determine coordinates.
 
 .. _table_georeferencer_tools:
 
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| Icon                           | Purpose                      | Icon                          | Purpose                    |
-+================================+==============================+===============================+============================+
-| |addRasterLayer|               | Open raster                  | |addOgrLayer|                 | Open vector                |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |start|                        | Start georeferencing         |                               |                            |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |gdalScript|                   | Generate GDAL Script         | |loadGCPpoints|               | Load GCP Points            |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |saveGCPPointsAs|              | Save GCP Points As           | |transformSettings|           | Transformation settings    |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |addGCPPoint|                  | Add GCP Point                | |deleteGCPPoint|              | Delete GCP Point           |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |moveGCPPoint|                 | Move GCP Point               | |pan|                         | Pan                        |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |zoomIn|                       | Zoom In                      | |zoomOut|                     | Zoom Out                   |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |zoomToLayer|                  | Zoom To Layer                | |zoomLast|                    | Zoom Last                  |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |zoomNext|                     | Zoom Next                    | |linkGeorefToQGis|            | Link Georeferencer to QGIS |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |linkQGisToGeoref|             | Link QGIS to Georeferencer   | |fullHistogramStretch|        | Full histogram stretch     |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |localHistogramStretch|        | Local histogram stretch      |                               |                            |
-+--------------------------------+------------------------------+-------------------------------+----------------------------+
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| Icon                           | Purpose                      | Icon                          | Purpose                       |
++================================+==============================+===============================+===============================+
+| |addRasterLayer|               | Open raster                  | |addOgrLayer|                 | Open vector                   |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |start|                        | Start georeferencing         | |gdalScript|                  | Generate GDAL Script          |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |loadGCPpoints|                | Load GCP Points              | |saveGCPPointsAs|             | Save GCP Points As            |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |transformSettings|            | Transformation settings      |                               |                               |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |addGCPPoint|                  | Add GCP Point                | |deleteGCPPoint|              | Delete GCP Point              |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |moveGCPPoint|                 | Move GCP Point               | |snapping|                    | Snapping Type                 |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |cad|                          | Show Advanced Digitizing Dock| |pan|                         | Pan                           |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |zoomIn|                       | Zoom In                      | |zoomOut|                     | Zoom Out                      |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |zoomToLayer|                  | Zoom To Layer                | |zoomLast|                    | Zoom Last                     |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |zoomNext|                     | Zoom Next                    | |linkGeorefToQGis|            | Link Georeferencer to QGIS    |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |linkQGisToGeoref|             | Link QGIS to Georeferencer   | |fullHistogramStretch|        | Full histogram stretch        |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
+| |localHistogramStretch|        | Local histogram stretch      |                               |                               |
++--------------------------------+------------------------------+-------------------------------+-------------------------------+
 
 Table Georeferencer: Georeferencer Tools
 
-Usual procedure
----------------
+Georeferencing raster layer
+---------------------------
 
 As X and Y coordinates (DMS (dd mm ss.ss), DD (dd.dd) or projected coordinates
 (mmmm.mm)), which correspond with the selected point on the image, two
@@ -228,6 +231,15 @@ It is possible to choose between five different resampling methods:
 #. Cubic B-Spline (4x4 kernel)
 #. Lanczos (6x6 kernel)
 
+Define the Raster creation options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When exporting a raster, |checkbox| :guilabel:`Raster creation options` allows you to define
+additional options that control how the output file is structured and compressed.
+See more at :ref:`Raster driver options <gdal_createoptions>`.
+
+.. tip:: Select an empty entry if you want to create your own custom combination of parameters.
+
 Define the transformation settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -258,17 +270,82 @@ raster.
 * Finally, |checkbox| :guilabel:`Load in project when done` loads the output raster
   automatically into the QGIS map canvas when the transformation is done.
 
-Show and adapt raster properties
-................................
 
-Clicking on the :guilabel:`Raster properties` option in the :guilabel:`Settings`
-menu opens the :ref:`Layer properties <raster_properties_dialog>` dialog of the
-raster file that you want to georeference.
+.. _`georeferencer_running`:
+
+Running the transformation
+..........................
+
+After all GCPs have been collected and all transformation settings are defined,
+just press the |start| :sup:`Start georeferencing` button to create
+the new georeferenced raster.
+
+
+Georeferencing vector layer
+---------------------------
+
+Georeferencing vector layers works similarly to raster georeferencing, but instead of matching image pixels,
+you match vector geometries (points, lines, or polygons) to known spatial references.
+
+The standard procedure starts the same as for raster georeferencing:
+open QGIS and add a layer to the map canvas to use as a reference.
+This can be a georeferenced raster or vector layer, or a WMS layer.
+
+Open the Georeferencer dialog from :menuselection:`Layer -->` |georefRun| :menuselection:`Georeferencer`.
+
+Start georeferencing by following these steps (in this example, we use an unreferenced ``alaska.shp``):
+
+.. _figure_vector_georeferencer_dialog:
+
+.. figure:: img/vector_georeferencer_dialog.png
+   :align: center
+
+   Vector Georeferencer Dialog
+
+#. Load the unreferenced vector layer using the |addOgrLayer| button.
+   The vector layer will appear in the main working area of the dialog.
+
+#. Activate snapping by clicking the |snapping| button and selecting the desired snapping type(s).
+   This enables snapping to the reference layer when placing GCPs.
+
+   You can also use the |cad| :sup:`Advanced Digitizing` dock to ensure high-precision
+   point selection. For more information, refer to the
+   :ref:`Advanced Digitizing <advanced_digitizing_panel>` section.
+
+#. Use the |addGCPPoint| :sup:`Add GCP Point` button to add a point to the working area.
+   Enter its coordinates manually and set the CRS, or click the |pencil| :sup:`From map canvas` button
+   to pick the coordinates from a georeferenced layer in the main QGIS map canvas.
+   In that case, the CRS will be set automatically.
+
+#. Define the transformation settings:
+
+   * Select the :guilabel:`Transformation type`.
+     The transformation algorithms are the same as those for raster georeferencing.
+     See :ref:`georeferencer_transformation` for more details.
+   * Define the :guilabel:`Target CRS` (Coordinate Reference System) for the georeferenced vector
+     (see :ref:`label_projections`).
+   * Set the output file format and path (e.g., GeoPackage, Shapefile).
+     By default, a new file with suffix ``_modified`` will be created in the same folder
+     as the original vector file.
+   * Optionally, enable **Generate PDF map** and **Generate PDF report**.
+     The report includes transformation parameters, GCP residuals, and a summary of RMS errors.
+   * Enable |checkbox| :guilabel:`Save GCP Points` to store GCPs in a file alongside the output vector layer.
+   * Enable |checkbox| :guilabel:`Load in project when done` to add the result directly to the map canvas.
+
+#. Click |start| :sup:`Start georeferencing` to run the transformation and generate the georeferenced vector layer.
+
+Show and adapt layer properties
+--------------------------------
+
+Clicking on the :guilabel:`Source properties` option in the :guilabel:`Settings`
+menu opens the :ref:`Raster Layer properties <raster_properties_dialog>`
+or :ref:`Vector Layer properties <vector_properties_dialog>` depending on the
+type of layer you are georeferencing.
 
 .. _configure_georeferencer:
 
 Configure the georeferencer
-...........................
+---------------------------
 
 You can customize the behavior of the georeferencer in :menuselection:`Settings 
 --> Configure Georeferencer` (or use keyboard shortcut :kbd:`Ctrl+P`). 
@@ -284,14 +361,6 @@ You can customize the behavior of the georeferencer in :menuselection:`Settings
   This will dock the Georeferencer window in the main QGIS window rather than 
   showing it as a separate window that can be minimized. 
 
-.. _`georeferencer_running`:
-
-Running the transformation
-..........................
-
-After all GCPs have been collected and all transformation settings are defined,
-just press the |start| :sup:`Start georeferencing` button to create
-the new georeferenced raster.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -305,6 +374,8 @@ the new georeferenced raster.
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |cad| image:: /static/common/cad.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
@@ -331,6 +402,8 @@ the new georeferenced raster.
 .. |pencil| image:: /static/common/pencil.png
    :width: 1.5em
 .. |saveGCPPointsAs| image:: /static/common/mActionSaveGCPpointsAs.png
+   :width: 1.5em
+.. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
