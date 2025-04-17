@@ -281,7 +281,7 @@ just press the |start| :sup:`Start georeferencing` button to create
 the new georeferenced raster.
 
 
-Georeferencing Vector Layer
+Georeferencing vector layer
 ---------------------------
 
 Georeferencing vector layers works similarly to raster georeferencing, but instead of matching image pixels,
