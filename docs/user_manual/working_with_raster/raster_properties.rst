@@ -1014,6 +1014,9 @@ pixels identification:
   You can check the result of your code sample in the :guilabel:`Preview` frame. You can also select and
   edit existing expressions using the :guilabel:`Insert/Edit Expression` button.
 
+  You might look for expressions located in :guilabel:`Rasters` group or
+  the ``@layer_cursor_point`` variable in the :guilabel:`Expressions` dialog.
+
   .. note:: **Understanding the** :guilabel:`Insert/Edit Expression` **button behavior**
 
     If you select some text within an expression (between "[%" and "%]"),
