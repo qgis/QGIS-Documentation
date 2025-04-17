@@ -1013,8 +1013,9 @@ pixels identification:
   mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
   You can check the result of your code sample in the :guilabel:`Preview` frame. You can also select and
   edit existing expressions using the :guilabel:`Insert/Edit Expression` button.
-* You might look for expressions located in :guilabel:`Rasters` group or also ``@layer_cursor_point`` in the
-  :guilabel:`Expressions` dialog.
+
+  You might look for expressions located in :guilabel:`Rasters` group or
+  the ``@layer_cursor_point`` variable in the :guilabel:`Expressions` dialog.
 
   .. note:: **Understanding the** :guilabel:`Insert/Edit Expression` **button behavior**
 
