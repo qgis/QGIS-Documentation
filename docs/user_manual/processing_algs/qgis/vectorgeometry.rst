@@ -995,129 +995,86 @@ Python code
 Types of error messages and their meanings
 ..........................................
 
-.. list-table:: If the GEOS method is used the following error messages can occur:
+.. list-table:: Some examples of geometry check failures in QGIS
    :widths: 30 30 40
    :header-rows: 1
    :class: longtable
 
-   * - Error message
-     - Explanation
-     - Example
+   * - Geometry context
+     - GEOS validation and error message
+     - QGIS validation and error message
+   * - **Consecutive points on a line have the same coordinates**
 
-   * - Repeated point
-     - This error happens when a given vertex is repeated.
-     - .. figure:: img/geos_rep_point.png
+       .. figure:: img/geos_rep_point.png
           :align: center
+          
+     - |taskCancel| *Repeated point*
+     - |taskCancel| *Line a contains x duplicate node(s) at b*
+   * - **Segments of a line intersect each other**
 
-   * - Ring self-intersection
-     - This error happens when a geometry touches itself and generates
-       a ring.
-     - .. figure:: img/geos_ring_inter.png
+       .. figure:: img/qgis_seg_line_int.png
           :align: center
+          
+     -
+     - |taskCancel| *Segments a and b of line c intersect at d*
+   * - **Polygon geometry touches itself and generates a ring**
 
-   * - Self-intersection
-     - This error happens when a geometry touches itself.
-     - .. figure:: img/geos_self_inter.png
+       .. figure:: img/geos_ring_inter.png
           :align: center
+          
+     - |taskCancel| *Ring self-intersection*
+     - |taskCancel| *Ring self-intersection*
+   * - **Two rings (exterior or interior) of a
+       polygon geometry are identical**
 
-   * - Topology validation error
-     -
-     -
-
-   * - Hole lies outside shell
-     -
-     -
-
-   * - Holes are nested
-     -
-     -
-
-   * - Interior is disconnected
-     -
-     -
-
-   * - Nested shells
-     - This error happens when a polygon geometry is on top of another
-       polygon geometry.
-     - .. figure:: img/geos_nest_shell.png
+       .. figure:: img/geos_dupl_rings.png
           :align: center
+          
+     - |taskCancel| *Duplicate rings*
+     -
+   * - **Geometry touches itself**
 
-   * - Duplicate rings
-     - This error happens when two rings (exterior or interior) of a
-       polygon geometry are identical
-
-     - .. figure:: img/geos_dupl_rings.png
+       .. figure:: img/geos_self_inter.png
           :align: center
-
-   * - Too few points in geometry component
+          
+     - |taskCancel| *Self-intersection*
      -
+   * - **A polygon geometry is on top of another polygon geometry**
+
+       .. figure:: img/geos_nest_shell.png
+          :align: center
+          
+     - |taskCancel| *Nested shell*
+     -
+   * - **Part of a MultiPolygon geometry is within a hole of a MultiPolygon geometry**
+
+       .. figure:: img/qgis_poliinside_.png
+          :align: center
+          
+     -
+     - |taskCancel| *Polygon a lies inside polygon b*
+   * - Point geometry does not have a proper coordinate pair.
+       The coordinate pair does not contain a latitude value and a longitude value in that order.
+     - |taskCancel| *Invalid coordinate*
      -
 
-   * - Invalid coordinate
-     - For a point geometry, this error happens when the geometry does
-       not have a proper coordinate pair.
-       The coordinate pair does not contain a latitude value and a
-       longitude value in that order.
-     -
+.. use |success| when context is valid for a specificator
 
-   * - Ring is not closed
-     -
-     -
-
-
-.. list-table:: If the QGIS method is used the following error messages can occur:
-   :widths: 50 50 50
-   :header-rows: 1
-   :class: longtable
-
-   * - Error message
-     - Explanation
-     - Example
-
-   * - Segment %1 of ring %2 of polygon %3 intersects segment %4
+.. to do list:
+     GEOS:
+     - Topology validation error
+     - Hole lies outside shell
+     - Holes are nested
+     - Interior is disconnected
+     - Ring is not closed
+     - Too few points in geometry component
+     QGIS:
+     - Segment %1 of ring %2 of polygon %3 intersects segment %4
        of ring %5 of polygon %6 at %7
-     -
-     -
-
-   * - Ring %1 with less than four points
-     -
-     -
-
-   * - Ring %1 not closed
-     -
-     -
-
-   * - Line %1 with less than two points
-     -
-     -
-
-   * - Line %1 contains %n duplicate node(s) at %2
-     - This error happens when consecutive points on a line have the
-       same coordinates.
-     - .. figure:: img/geos_rep_point.png
-          :align: center
-
-   * - Segments %1 and %2 of line %3 intersect at %4
-     - This error happens when a line self intersects (two segments
-       of the line intersect each other).
-     - .. figure:: img/qgis_seg_line_int.png
-          :align: center
-
-   * - Ring self-intersection
-     - This error happens when an outer or inner (island) ring /
-       boundary of a polygon geometry intersects itself.
-     - .. figure:: img/geos_ring_inter.png
-          :align: center
-
-   * - Ring %1 of polygon %2 not in exterior ring
-     -
-     -
-
-   * - Polygon %1 lies inside polygon %2
-     - This error happens when a part of a MultiPolygon geometry is
-       inside a hole of a MultiPolygon geometry.
-     - .. figure:: img/qgis_poliinside_.png
-          :align: center
+     - Ring %1 with less than four points
+     - Ring %1 not closed
+     - Line %1 with less than two points
+     - Ring %1 of polygon %2 not in exterior ring
 
 
 .. _qgiscollect:
@@ -7544,4 +7501,10 @@ Python code
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
+.. |remove| image:: /static/common/mActionRemove.png
+   :width: 1.5em
+.. |success| image:: /static/common/mIconSuccess.png
+   :width: 1em
+.. |taskCancel| image:: /static/common/mTaskCancel.png
    :width: 1.5em
