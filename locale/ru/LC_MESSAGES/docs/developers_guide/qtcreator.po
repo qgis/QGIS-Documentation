@@ -1,0 +1,320 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Asdfgr Wertyu, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:36+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/developers_guide/qtcreator.rst:4
+msgid "Getting up and running with QtCreator and QGIS"
+msgstr "Начало работы с QtCreator и QGIS"
+
+#: ../../docs/developers_guide/qtcreator.rst:10
+msgid ""
+"QtCreator is an IDE from the makers of the `Qt library "
+"<https://www.qt.io>`_. With QtCreator you can build any C++ project, but "
+"it's really optimised for people working on Qt based applications (including"
+" mobile apps)."
+msgstr ""
+"QtCreator - это IDE от создателей библиотеки Qt <https://www.qt.io>`_. С "
+"помощью QtCreator вы можете создавать любые проекты на C++, но она "
+"действительно оптимизирована для людей, работающих над приложениями на "
+"основе Qt (включая мобильные приложения)."
+
+#: ../../docs/developers_guide/qtcreator.rst:16
+msgid "Installing QtCreator"
+msgstr "Установка QtCreator"
+
+#: ../../docs/developers_guide/qtcreator.rst:18
+msgid ""
+"Qt Creator is available on all major platforms and can be downloaded from "
+"https://www.qt.io/download-dev (Go the open source route). The installation "
+"procedure depends on your platform."
+msgstr ""
+"Qt Creator доступен для всех основных платформ и может быть загружен с сайта"
+" https://www.qt.io/download-dev («Идем по пути открытого кода»). Процедура "
+"установки зависит от вашей платформы."
+
+#: ../../docs/developers_guide/qtcreator.rst:22
+msgid ""
+"If you are running a Unix-like platform, you can use the command line, eg on"
+" Debian:"
+msgstr ""
+"Если вы работаете на Unix-подобной платформе, вы можете использовать "
+"командную строку, например, в Debian:"
+
+#: ../../docs/developers_guide/qtcreator.rst:29
+msgid "After installing you should find it in your menu."
+msgstr "После установки вы должны найти его в своем меню."
+
+#: ../../docs/developers_guide/qtcreator.rst:33
+msgid "Setting up your project"
+msgstr "Настройка вашего проекта"
+
+#: ../../docs/developers_guide/qtcreator.rst:35
+msgid ""
+"We assume you have already got a local QGIS clone containing the source "
+"code, and have installed all needed build dependencies etc. There are "
+"detailed instructions for :ref:`git access <git_access>` and "
+":source:`dependency requirements <INSTALL.md>`."
+msgstr ""
+"Мы предполагаем, что у вас уже есть локальный клон QGIS, содержащий исходный"
+" код, и вы установили все необходимые зависимости для сборки и т.д. Есть "
+"подробные инструкции по :ref:`гит-доступ<git_access>` и : "
+"источник:`требования к зависимостям <INSTALL.md>`."
+
+#: ../../docs/developers_guide/qtcreator.rst:40
+msgid ""
+"On our system we have checked out the code into ``$HOME/dev/cpp/QGIS`` and "
+"the rest of the article is written assuming that. You should update these "
+"paths as appropriate for your local system."
+msgstr ""
+"В нашей системе мы проверили код в ``$HOME/dev/cpp/QGIS``, и остальная часть"
+" статьи написана исходя из этого. Вы должны обновить эти пути в соответствии"
+" с вашей локальной системой."
+
+#: ../../docs/developers_guide/qtcreator.rst:44
+msgid ""
+"After launching QtCreator do :menuselection:`File --> Open File or Project`"
+msgstr ""
+"После запуска QtCreator выполните :menuselection:`Файл --> Открыть файл или "
+"проект`."
+
+#: ../../docs/developers_guide/qtcreator.rst:46
+msgid ""
+"Then use the resulting file selection dialog to browse to and open this "
+"file:"
+msgstr ""
+"Затем используйте появившееся диалоговое окно выбора файла, чтобы найти и "
+"открыть этот файл:"
+
+#: ../../docs/developers_guide/qtcreator.rst:54
+msgid ""
+"QtCreator will parse the project and you will be prompted for a build "
+"location and options in the :guilabel:`Configure Project` dialog."
+msgstr ""
+"QtCreator разберет проект, и вам будет предложено указать место сборки и "
+"опции в диалоге :guilabel:`Сконфигурировать проект`."
+
+#: ../../docs/developers_guide/qtcreator.rst:57
+msgid ""
+"Since we want QGIS to have debugging capabilities we will only enable the "
+"debug entry and fill it with our build location:"
+msgstr ""
+"Поскольку мы хотим, чтобы QGIS имел возможности отладки, мы включим только "
+"запись отладки и заполним ее местоположением нашей сборки:"
+
+#: ../../docs/developers_guide/qtcreator.rst:60
+msgid ""
+"Check |checkbox| :guilabel:`Select all kits` enabling the "
+":guilabel:`Desktop` entry"
+msgstr ""
+"Установите флажок |checkbox| :guilabel:`Выбрать все комплекты`, включив "
+"запись :guilabel:`Desktop`."
+
+#: ../../docs/developers_guide/qtcreator.rst:231
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/developers_guide/qtcreator.rst:62
+msgid "Uncheck all but the |checkbox| :guilabel:`Debug` sub item"
+msgstr ""
+"Снимите флажки со всех пунктов, кроме пункта |checkbox| :guilabel:`Отладка`"
+
+#: ../../docs/developers_guide/qtcreator.rst:63
+msgid ""
+"Fill the path with the build directory. For our purpose, we create a "
+"specific build dir for QtCreator:"
+msgstr ""
+"Заполните путь каталогом сборки. Для нашей цели мы создадим специальную "
+"директорию сборки для QtCreator:"
+
+#: ../../docs/developers_guide/qtcreator.rst:70
+msgid ""
+"It's probably a good idea to create separate build directories for different"
+" branches if you can afford the disk space."
+msgstr ""
+"Вероятно, если вы можете позволить себе дисковое пространство, имеет смысл "
+"создать отдельные каталоги сборки для разных веток."
+
+#: ../../docs/developers_guide/qtcreator.rst:76
+msgid ""
+"That's the basics of it. Press the :guilabel:`Configure Project` button and "
+"QtCreator will start scanning the source tree for autocompletion support and"
+" do some other housekeeping stuff in the background."
+msgstr ""
+"Вот и все основы. Нажмите кнопку :guilabel:`Конфигурировать проект` и "
+"QtCreator начнет сканировать дерево исходных текстов на предмет поддержки "
+"автозаполнения и делать некоторые другие дела в фоновом режиме."
+
+#: ../../docs/developers_guide/qtcreator.rst:83
+msgid "We want to tweak a few things before we start to build."
+msgstr "Прежде чем приступить к строительству, мы хотим кое-что подправить."
+
+#: ../../docs/developers_guide/qtcreator.rst:87
+msgid "Setting up your build environment"
+msgstr "Настройка среды сборки"
+
+#: ../../docs/developers_guide/qtcreator.rst:89
+msgid ""
+"Click on the :guilabel:`Projects` icon on the left of the QtCreator window."
+msgstr "Щелкните на значке :guilabel:`Проекты` в левой части окна QtCreator."
+
+#: ../../docs/developers_guide/qtcreator.rst:93
+msgid ""
+"Select the :guilabel:`Build` settings tab (normally active by default)."
+msgstr ""
+"Выберите вкладку настроек :guilabel:`Строить` (обычно активна по умолчанию)."
+
+#: ../../docs/developers_guide/qtcreator.rst:97
+msgid ""
+"The dialog shows the ``Debug`` build configuration and allows you to edit "
+"settings under the :guilabel:`CMake` section. While the default "
+"configuration should be enough for a first pass, depending on your needs, "
+"you may want to enable more features such as:"
+msgstr ""
+"Диалог показывает конфигурацию сборки ``Отладка`` и позволяет редактировать "
+"настройки в разделе :guilabel:`CMake``. Хотя конфигурации по умолчанию "
+"должно быть достаточно для первого прохода, в зависимости от ваших "
+"потребностей, вы можете захотеть включить дополнительные возможности, такие "
+"как:"
+
+#: ../../docs/developers_guide/qtcreator.rst:102
+msgid "**WITH_3D = ON** for 3D rendering"
+msgstr "**WITH_3D = ON** для 3D-рендеринга"
+
+#: ../../docs/developers_guide/qtcreator.rst:103
+msgid ""
+"**WITH_CUSTOM_WIDGETS = ON** to add QGIS custom widgets for interface design"
+msgstr ""
+"**WITH_CUSTOM_WIDGETS = ON** для добавления пользовательских виджетов QGIS "
+"для оформления интерфейса"
+
+#: ../../docs/developers_guide/qtcreator.rst:105
+msgid "Press :guilabel:`Apply Configuration Changes`."
+msgstr "Нажмите :guilabel:`Применить изменения конфигурации`."
+
+#: ../../docs/developers_guide/qtcreator.rst:107
+msgid ""
+"You are now ready to build. Press the |build| :sup:`Build` button at the "
+"left bottom of the dialog (or :kbd:`Ctrl+B`) to launch the project build! Qt"
+" Creator will begin compiling and this may take some time the first time, "
+"depending on your device."
+msgstr ""
+"Теперь вы готовы к сборке. Нажмите кнопку |build| :sup:`Сборка` в левой "
+"нижней части диалога (или :kbd:`Ctrl+B`), чтобы запустить сборку проекта! Qt"
+" Creator начнет компиляцию, которая может занять некоторое время в первый "
+"раз, в зависимости от вашего устройства."
+
+#: ../../docs/developers_guide/qtcreator.rst:220
+msgid "build"
+msgstr "build"
+
+#: ../../docs/developers_guide/qtcreator.rst:112
+msgid ""
+"At the end of the compilation, you can run QGIS by pressing the |runInstall|"
+" :sup:`Run` button."
+msgstr ""
+"По окончании компиляции вы можете запустить QGIS, нажав кнопку |runInstall| "
+":sup:`Запустить`."
+
+#: ../../docs/developers_guide/qtcreator.rst:222
+msgid "runInstall"
+msgstr "runInstall"
+
+#: ../../docs/developers_guide/qtcreator.rst:115
+msgid ""
+"The compilation of QGIS also generates binaries in the build directory. "
+"Hence you can execute QGIS from the command line using:"
+msgstr ""
+"При компиляции QGIS также создаются двоичные файлы в каталоге сборки. "
+"Поэтому вы можете запустить QGIS из командной строки, используя:"
+
+#: ../../docs/developers_guide/qtcreator.rst:123
+msgid ""
+"Sometimes you may want to install QGIS as an executable, outside the build "
+"directory."
+msgstr ""
+"Иногда вам может понадобиться установить QGIS как исполняемый файл, вне "
+"каталога сборки."
+
+#: ../../docs/developers_guide/qtcreator.rst:126
+msgid ""
+"Set the ``CMAKE_INSTALL_PREFIX`` to somewhere you have write access to (we "
+"use :file:`${HOME}/apps`). This would avoid overwriting an existing QGIS "
+"installs (by your package manager for example)."
+msgstr ""
+"Установите ``CMAKE_INSTALL_PREFIX`` в место, к которому у вас есть доступ на"
+" запись (мы используем :file:`${HOME}/apps`). Это позволит избежать "
+"перезаписи существующей установки QGIS (например, менеджером пакетов)."
+
+#: ../../docs/developers_guide/qtcreator.rst:132
+msgid "Press :guilabel:`Apply Configuration Changes` to update the settings"
+msgstr ""
+"Нажмите :guilabel:`Применить изменения конфигурации`, чтобы обновить "
+"настройки"
+
+#: ../../docs/developers_guide/qtcreator.rst:133
+msgid "Press the |build| button"
+msgstr "Нажмите кнопку |build|"
+
+#: ../../docs/developers_guide/qtcreator.rst:134
+msgid ""
+"When the build is complete, you'll find the :file:`qgis` executable in the "
+":file:`${HOME}/apps/bin` folder."
+msgstr ""
+"Когда сборка будет завершена, вы найдете исполняемый файл :file:`qgis` в "
+"папке :file:`${HOME}/apps/bin`."
+
+#: ../../docs/developers_guide/qtcreator.rst:209
+msgid "Running and debugging"
+msgstr "Запуск и отладка"
+
+#: ../../docs/developers_guide/qtcreator.rst:211
+msgid ""
+"Now you are ready to run and debug QGIS. To set a break point, simply open a"
+" source file and click in the left column."
+msgstr ""
+"Теперь вы готовы к запуску и отладке QGIS. Чтобы установить точку останова, "
+"просто откройте исходный файл и щелкните в левой колонке."
+
+#: ../../docs/developers_guide/qtcreator.rst:216
+msgid ""
+"Now launch QGIS under the debugger by clicking the |runDebug| :sup:`Start "
+"Debugging` in the bottom left of the window."
+msgstr ""
+"Теперь запустите QGIS в отладчике, нажав на кнопку |runDebug| :sup:`Начать "
+"отладку` в левом нижнем углу окна."
+
+#: ../../docs/developers_guide/qtcreator.rst:221
+msgid "runDebug"
+msgstr "runDebug"
