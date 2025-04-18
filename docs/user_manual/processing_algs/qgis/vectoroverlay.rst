@@ -53,7 +53,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Layer containing the features to be clipped
    * - **Overlay layer**
      - ``OVERLAY``
@@ -87,8 +87,7 @@ Outputs
    * - **Clipped**
      - ``OUTPUT``
      - [same as input]
-     - Layer containing features from the input layer split by the
-       overlay layer.
+     - Layer containing features from the input layer split by the overlay layer.
 
 Python code
 ...........
@@ -146,11 +145,11 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Layer to extract (parts of) features from.
    * - **Overlay layer**
      - ``OVERLAY``
-     - [vector: any]
+     - [vector: geometry]
      
      - Layer containing the geometries that will be subtracted from
        the input layer geometries.
@@ -186,7 +185,7 @@ Advanced parameters
 
        Optional
      - ``GRID_SIZE``
-     - [number]
+     - [numeric: double]
 
        Default: Not set
      - If provided, the input geometries are snapped to a grid of the given size,
@@ -260,11 +259,11 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Layer to extract (parts of) features from.
    * - **Overlay layers**
      - ``OVERLAYS``
-     - [vector: any] [list]
+     - [vector: geometry] [list]
      - List of layers containing the geometries that will be subtracted from
        the input layer geometries.
        They are expected to have at least as many dimensions (point: 0D,
@@ -346,7 +345,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Layer to extract (parts of) features from.
    * - **Extent (xmin, xmax, ymin, ymax)**
      - ``EXTENT``
@@ -450,11 +449,11 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Layer to extract (parts of) features from.
    * - **Overlay layer**
      - ``OVERLAY``
-     - [vector: any]
+     - [vector: geometry]
      - Layer containing the features to check for overlap.
        Its features' geometry is expected to have at least as many
        dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D)
@@ -515,7 +514,7 @@ Advanced parameters
 
        Optional
      - ``GRID_SIZE``
-     - [number]
+     - [numeric: double]
 
        Default: Not set
      - If provided, the input geometries are snapped to a grid of the given size,
@@ -592,11 +591,11 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Layer to extract (parts of) features from.
    * - **Overlay layers**
      - ``OVERLAYS``
-     - [vector: any] [list]
+     - [vector: geometry] [list]
      - Layers containing the features to check for overlap.
        The features' geometry is expected to have at least as many
        dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D)
@@ -894,11 +893,11 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - First layer to extract (parts of) features from.
    * - **Overlay layer**
      - ``OVERLAY``
-     - [vector: any]
+     - [vector: geometry]
      - Second layer to extract (parts of) features from.
        Ideally the geometry type should be the same as input layer.
    * - **Symmetrical difference**
@@ -938,7 +937,7 @@ Advanced parameters
 
        Optional
      - ``GRID_SIZE``
-     - [number]
+     - [numeric: double]
 
        Default: Not set
      - If provided, the input geometries are snapped to a grid of the given size,
@@ -1031,13 +1030,13 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer to split at any intersections.
    * - **Overlay layer**
 
        Optional
      - ``OVERLAY``
-     - [vector: any]
+     - [vector: geometry]
      - Layer that will be combined to the first one.
        Ideally the geometry type should be the same as input layer.
    * - **Union**
@@ -1076,7 +1075,7 @@ Advanced parameters
 
        Optional
      - ``GRID_SIZE``
-     - [number]
+     - [numeric: double]
 
        Default: Not set
      - If provided, the input geometries are snapped to a grid of the given size,
@@ -1168,13 +1167,13 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer to split at any intersections.
    * - **Overlay layers**
 
        Optional
      - ``OVERLAYS``
-     - [vector: any] [list]
+     - [vector: geometry] [list]
      - Layers that will be combined to the first one.
        Ideally the geometry type should be the same as input layer.
    * - **Union**

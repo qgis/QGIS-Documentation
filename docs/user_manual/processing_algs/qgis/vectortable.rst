@@ -50,7 +50,7 @@ Parameters
 
        Optional
      - ``START``
-     - [number]
+     - [numeric: integer]
 
        Default: 0
      - Choose the initial number of the incremental count
@@ -58,7 +58,7 @@ Parameters
        
        Optional
      - ``MODULUS``
-     - [number]
+     - [numeric: integer]
        
        Default: 0
      - Specifying an optional modulus value will restart the count to START
@@ -186,13 +186,13 @@ Parameters
        
    * - **Field length**
      - ``FIELD_LENGTH``
-     - [number]
+     - [numeric: integer]
        
        Default: 10
      - Length of the field
    * - **Field precision**
      - ``FIELD_PRECISION``
-     - [number]
+     - [numeric: integer]
        
        Default: 0
      - Precision of the field. Useful with Float field type.
@@ -291,7 +291,7 @@ Parameters
      - Name of the new field containing the indexes.
    * - **Layer with index field**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Vector layer with the numeric field containing indexes.
@@ -303,7 +303,7 @@ Parameters
 
    * - **Class summary**
      - ``SUMMARY_OUTPUT``
-     - [table]
+     - [vector: table]
        
        Default: ``[Skip output]``
      - Specify the table to contain the summary of the class field
@@ -331,7 +331,7 @@ Outputs
      - Vector layer with the numeric field containing indexes.
    * - **Class summary**
      - ``SUMMARY_OUTPUT``
-     - [table]
+     - [vector: table]
      - Table with summary of the class field mapped to the
        corresponding unique value.  
 
@@ -483,13 +483,13 @@ Parameters
        
    * - **Field length**
      - ``FIELD_LENGTH``
-     - [number]
+     - [numeric: integer]
        
        Default: 10
      - Length of the field
    * - **Field precision**
      - ``FIELD_PRECISION``
-     - [number]
+     - [numeric: integer]
        
        Default: 3
      - Precision of the field. Useful with Float field type.
@@ -649,7 +649,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **HStore field**
      - ``FIELD``
@@ -780,8 +780,7 @@ You can use all the supported expressions and functions.
 
 A new layer is created with the result of the expression.
 
-The field calculator is very useful when used in
-:ref:`processing.modeler`.
+The field calculator is very useful when used in :ref:`processing.modeler`.
 
 Parameters
 ..........
@@ -824,15 +823,15 @@ Parameters
        
    * - **Output field width**
      - ``FIELD_LENGTH``
-     - [number]
+     - [numeric: integer]
        
-       Default: 10
+       Default: 0
      - The length of the result field (minimum 0)
    * - **Field precision**
      - ``FIELD_PRECISION``
-     - [number]
+     - [numeric: integer]
        
-       Default: 3
+       Default: 0
      - The precision of the result field (minimum 0, maximum 15)
    * - **Create new field**
      - ``NEW_FIELD``
@@ -844,9 +843,9 @@ Parameters
      - ``FORMULA``
      - [expression]
      - The formula to use to calculate the result
-   * - **Output file**
+   * - **Calculated**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
@@ -868,7 +867,7 @@ Outputs
      - Description
    * - **Calculated**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Output layer with the calculated field values
 
 Python code
@@ -947,7 +946,7 @@ Parameters
        :guilabel:`Source expression` (``expression``) [expression]
          Field or expression from the input layer.
 
-       :guilabel:`Field name` (``name``) [string]
+       :guilabel:`Name` (``name``) [string]
          Name of the field in the output layer.
          By default input field name is kept.
 
@@ -975,21 +974,21 @@ Parameters
             :start-after: **vector_field_subtypes**
             :end-before: **end_vector_field_subtypes**
 
-       :guilabel:`Length` (``length``) [number]
+       :guilabel:`Length` (``length``) [numeric: integer]
          Length of the output field.
 
-       :guilabel:`Precision` (``precision``) [number]
+       :guilabel:`Precision` (``precision``) [numeric: integer]
          Precision of the output field.
 
        :guilabel:`Constraints` (``constraints``) [string]
          When using a template layer, indicates whether there are constraints
          applied to the template field. Hover over the cell to display the constraints.
 
-       :guilabel:`Field alias` (``field_alias``) [string]
+       :guilabel:`Alias` (``field_alias``) [string]
          Set a name to use as alias for the field. Not supported by all format types.
          Existing aliases are displayed and will be copied to the destination layer if supported.
 
-       :guilabel:`Field comment` (``field_comment``) [string]
+       :guilabel:`Comment` (``field_comment``) [string]
          Store a comment describing the field. Not supported by all format types.
          Existing comments are displayed and will be copied to the destination layer if supported.
 
@@ -1000,7 +999,7 @@ Parameters
 
    * - **Refactored**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
@@ -1023,7 +1022,7 @@ Outputs
      - Description
    * - **Refactored**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Output layer with refactored fields
 
 Python code
@@ -1073,7 +1072,7 @@ Parameters
      - The new field name
    * - **Renamed**
      - ``OUTPUT``
-     - [vector: same as input]
+     - [same as input]
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
@@ -1096,7 +1095,7 @@ Outputs
      - Description
    * - **Renamed**
      - ``OUTPUT``
-     - [vector: same as input]
+     - [same as input]
      - Output layer with the renamed field
 
 Python code
@@ -1141,7 +1140,7 @@ Parameters
      - List of fields to keep in the layer
    * - **Retained fields**
      - ``OUTPUT``
-     - [vector: same as input]
+     - [same as input]
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
@@ -1164,7 +1163,7 @@ Outputs
      - Description
    * - **Retained fields**
      - ``OUTPUT``
-     - [vector: same as input]
+     - [same as input]
      - Output layer with the retained fields
 
 Python code
