@@ -9,4 +9,5 @@
 
     opening_data
     create_layers
+    georeferencer
     supported_data
