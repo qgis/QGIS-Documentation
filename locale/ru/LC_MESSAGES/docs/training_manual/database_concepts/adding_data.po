@@ -5,24 +5,344 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
+# Harrissou Sant-anna, 2025
+# Asdfgr Wertyu, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:2
+msgid "Lesson: Adding Data to the Model"
+msgstr "Урок: Добавление данных в модель"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:4
+msgid ""
+"The models we've created will now need to be populated with the data they're"
+" intended to contain."
+msgstr ""
+"Теперь созданные нами модели необходимо заполнить данными, которые они "
+"должны содержать."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:7
+msgid ""
+"**The goal for this lesson:** To learn how to insert new data into the "
+"database models."
+msgstr "**Цель урока:** Научиться вставлять новые данные в модели баз данных."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:11
+msgid "Insert statement"
+msgstr "Вставить заявление"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:13
+msgid ""
+"How do you add data to a table? The sql :kbd:`INSERT` statement provides the"
+" functionality for this:"
+msgstr ""
+"Как добавить данные в таблицу? Оператор sql :kbd:`INSERT` обеспечивает "
+"функциональность для этого:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:20
+msgid "A couple of things to note:"
+msgstr "Следует отметить несколько моментов:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:22
+msgid ""
+"After the table name (:kbd:`streets`), you list the column names that you "
+"will be populating (in this case only the :kbd:`name` column)."
+msgstr ""
+"После имени таблицы (:kbd:`улицы`) перечисляются имена столбцов, которые вы "
+"будете заполнять (в данном случае только столбец :kbd:`имя`)."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:24
+msgid "After the :kbd:`values` keyword, place the list of field values."
+msgstr ""
+"После ключевого слова :kbd:`значения` поместите список значений полей."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:25
+msgid "Strings should be quoted using single quotes."
+msgstr "Строки следует заключать в одинарные кавычки."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:26
+msgid ""
+"Note that we did not insert a value for the :kbd:`id` column; this is "
+"because it is a sequence and will be auto-generated."
+msgstr ""
+"Обратите внимание, что мы не вставили значение для столбца :kbd:`id`; это "
+"потому, что он является последовательностью и будет сгенерирован "
+"автоматически."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:28
+msgid ""
+"If you do manually set the :kbd:`id`, you may cause serious problems with "
+"the integrity of your database."
+msgstr ""
+"Если вы вручную установите :kbd:`id`, это может привести к серьезным "
+"проблемам с целостностью вашей базы данных."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:31
+msgid "You should see :kbd:`INSERT 0 1` if it is successful."
+msgstr "Вы должны увидеть :kbd:`INSERT 0 1`, если все прошло успешно."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:33
+msgid ""
+"You can see the result of your insert action by selecting all the data in "
+"the table:"
+msgstr ""
+"Вы можете увидеть результат действия вставки, выделив все данные в таблице:"
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:40
 msgid "Result:"
 msgstr "Результат:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:52
+msgid "Try Yourself: :abbr:`★☆☆ (Basic level)`"
+msgstr "Попробуйте сами: :abbr:`★☆☆ (базовый уровень)`"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:54
+msgid ""
+"Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` "
+"table."
+msgstr ""
+"Используйте команду :kbd:`INSERT`, чтобы добавить новую улицу в таблицу "
+":kbd:`улицы`."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:56
+#: ../../docs/training_manual/database_concepts/adding_data.rst:96
+msgid "Answer"
+msgstr "Ответить"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:59
+msgid ""
+"The SQL command you should use looks like this (you can replace the street "
+"name with a name of your choice)::"
+msgstr ""
+"Команда SQL, которую вы должны использовать, выглядит следующим образом (вы "
+"можете заменить название улицы на любое другое название по вашему выбору)::"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:66
+msgid "Sequencing Data Addition According to Constraints"
+msgstr "Добавление данных секвенирования в соответствии с ограничениями"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:69
+msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
+msgstr "Попробуйте сами: :abbr:`★★☆ (умеренный уровень)`"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:71
+msgid ""
+"Try to add a person object to the :kbd:`people` table with the following "
+"details::"
+msgstr ""
+"Попробуйте добавить объект person в таблицу :kbd:`people` со следующими "
+"данными::"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:78
+msgid ""
+"Recall that in this example, we defined phone numbers as strings, not "
+"integers."
+msgstr ""
+"Напомним, что в этом примере мы определили телефонные номера как строки, а "
+"не целые числа."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:81
+msgid ""
+"At this point, you should have an error report if you try to do this without"
+" first creating a record for Main Street in the :kbd:`streets` table."
+msgstr ""
+"На этом этапе вы должны получить сообщение об ошибке, если попытаетесь "
+"сделать это без предварительного создания записи для Главной улицы в таблице"
+" :kbd:`улицы`."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:84
+msgid "You should have also noticed that:"
+msgstr "Вы тоже должны были это заметить:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:86
+msgid "You can't add the street using its name"
+msgstr "Вы не можете добавить улицу, используя ее название"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:87
+msgid ""
+"You can't add a street using a street :kbd:`id` before first creating the "
+"street record on the streets table"
+msgstr ""
+"Вы не можете добавить улицу, используя улицу :kbd:`id`, прежде чем создать "
+"запись об улице в таблице улиц."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:90
+msgid ""
+"Remember that our two tables are linked via a Primary/Foreign Key pair. This"
+" means that no valid person can be created without there also being a valid "
+"corresponding street record."
+msgstr ""
+"Помните, что наши две таблицы связаны между собой парой "
+"первичных/отрицательных ключей. Это означает, что ни один человек не может "
+"быть создан без наличия соответствующей записи об улице."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:94
+msgid "Using the above knowledge, add the new person to the database."
+msgstr "Используя полученные знания, добавьте нового человека в базу данных."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:99
+msgid "Here is the correct SQL statement::"
+msgstr "Вот правильный SQL-оператор::"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:105
+msgid ""
+"If you look at the streets table again (using a select statement as before),"
+" you'll see that the :guilabel:`id` for the ``Main Road`` entry is *2*."
+msgstr ""
+"Если вы снова посмотрите на таблицу улиц (используя оператор выбора, как и "
+"раньше), вы увидите, что :guilabel:`id` для записи ``Главная дорога`` - это "
+"*2*."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:108
+msgid ""
+"That's why we could merely enter the number ``2`` above. Even though we're "
+"not seeing ``Main Road`` written out fully in the entry above, the database "
+"will be able to associate that with the :guilabel:`street_id` value of *2*."
+msgstr ""
+"Поэтому выше мы можем просто ввести число ``2``. Несмотря на то, что в "
+"приведенной выше записи ``Главная дорога'„ записана не полностью, база "
+"данных сможет связать ее со значением :guilabel:`street_id“', равным *2*."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:112
+msgid ""
+"If you have already added a new street object, you might find that the new "
+"``Main Road`` has an :guilabel:`id` of *3* not *2*."
+msgstr ""
+"Если вы уже добавили новый объект улицы, вы можете обнаружить, что новая "
+"``Главная дорога`` имеет :guilabel:``id`` *3*, а не *2*."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:117
+msgid "Select data"
+msgstr "Выбор данных"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:119
+msgid ""
+"We have already shown you the syntax for selecting records. Let's look at a "
+"few more examples:"
+msgstr ""
+"Мы уже показывали вам синтаксис для выбора записей. Давайте рассмотрим еще "
+"несколько примеров:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:135
+msgid ""
+"In later sessions we will go into more detail on how to select and filter "
+"data."
+msgstr ""
+"На последующих занятиях мы более подробно рассмотрим, как выбирать и "
+"фильтровать данные."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:138
+msgid "Update data"
+msgstr "Обновление данных"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:140
+msgid ""
+"What if you want to make a change to some existing data? For example, a "
+"street name is changed:"
+msgstr ""
+"Что делать, если вы хотите внести изменения в существующие данные? Например,"
+" изменить название улицы:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:147
+msgid ""
+"Be very careful using such update statements - if more than one record "
+"matches your :kbd:`WHERE` clause, they will all be updated!"
+msgstr ""
+"Будьте очень осторожны, используя такие операторы обновления - если более "
+"одной записи соответствуют вашему предложению :kbd:`WHERE`, они все будут "
+"обновлены!"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:150
+msgid ""
+"A better solution is to use the primary key of the table to reference the "
+"record to be changed:"
+msgstr ""
+"Лучшее решение - использовать первичный ключ таблицы для ссылки на "
+"изменяемую запись:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:157
+msgid "It should return :kbd:`UPDATE 1`."
+msgstr "Он должен вернуть :kbd:`UPDATE 1`."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:159
+msgid ""
+"the :kbd:`WHERE` statement criteria are case sensitive :kbd:`Main Road` is "
+"not the same as :kbd:`Main road`"
+msgstr ""
+"Критерии оператора :kbd:`WHERE` чувствительны к регистру :kbd:`Главная "
+"дорога` не то же самое, что :kbd:`Главная дорога`"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:163
+msgid "Delete Data"
+msgstr "Удалить данные"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:165
+msgid ""
+"In order to delete an object from a table, use the :kbd:`DELETE` command:"
+msgstr "Чтобы удалить объект из таблицы, используйте команду :kbd:`DELETE`:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:171
+msgid "Let's look at our people table now:"
+msgstr "Давайте посмотрим на нашу таблицу людей:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:182
+msgid "Try Yourself: :abbr:`★★★ (Advanced level)`"
+msgstr "Попробуйте себя: :abbr:`★★★ (продвинутый уровень)`"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:184
+msgid ""
+"Use the skills you have learned to add some new friends to your database:"
+msgstr ""
+"Используйте полученные навыки, чтобы добавить новых друзей в свою базу "
+"данных:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:197
+msgid "In Conclusion"
+msgstr "В заключение"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:199
+msgid ""
+"Now you know how to add new data to the existing models you created "
+"previously. Remember that if you want to add new kinds of data, you may want"
+" to modify and/or create new models to contain that data."
+msgstr ""
+"Теперь вы знаете, как добавлять новые данные в существующие модели, "
+"созданные ранее. Помните, что если вы хотите добавить новые типы данных, "
+"вам, возможно, потребуется изменить и/или создать новые модели, которые "
+"будут содержать эти данные."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:204
+msgid "What's Next?"
+msgstr "Что дальше?"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:206
+msgid ""
+"Now that you've added some data, you'll learn how to use queries to access "
+"this data in various ways."
+msgstr ""
+"Теперь, когда вы добавили некоторые данные, вы узнаете, как использовать "
+"запросы для доступа к этим данным различными способами."
