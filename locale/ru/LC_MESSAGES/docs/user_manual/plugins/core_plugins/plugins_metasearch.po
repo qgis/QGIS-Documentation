@@ -5,37 +5,435 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Asdfgr Wertyu, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
-"PO-Revision-Date: 2024-03-02 11:57+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:31+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:6
+msgid "MetaSearch Catalog Client"
+msgstr "Клиент каталога MetaSearch"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:15
 msgid "Introduction"
 msgstr "Введение"
 
-#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:237
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:17
+msgid ""
+"MetaSearch is a QGIS plugin to interact with metadata catalog services, "
+"supporting both the OGC API - Records and OGC Catalog Service for the Web "
+"(CSW) standards."
+msgstr ""
+"MetaSearch - это плагин QGIS для взаимодействия со службами каталогов "
+"метаданных, поддерживающий стандарты OGC API - Records и OGC Catalog Service"
+" for the Web (CSW)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:21
+msgid ""
+"MetaSearch provides an easy and intuitive approach and user-friendly "
+"interface to searching metadata catalogs within QGIS."
+msgstr ""
+"MetaSearch обеспечивает простой и интуитивно понятный подход и удобный "
+"интерфейс для поиска каталогов метаданных в QGIS."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:29
+msgid "Search and results of Services in MetaSearch"
+msgstr "Поиск и результаты услуг в Метапоиске"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:33
+msgid "Working with Metadata Catalogs in QGIS"
+msgstr "Работа с каталогами метаданных в QGIS"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:35
+msgid ""
+"MetaSearch is included by default in QGIS, with all of its dependencies, and"
+" can be enabled from the QGIS Plugin Manager."
+msgstr ""
+"MetaSearch по умолчанию включен в QGIS со всеми его зависимостями и может "
+"быть включен из Менеджера плагинов QGIS."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:39
+msgid "OGC API - Records"
+msgstr "API OGC - Записи"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:41
+msgid ""
+"`OGC API - Records`_ is an `OGC (Open Geospatial Consortium)`_ standard for "
+"the discovery of geospatial resources on the Web."
+msgstr ""
+"`OGC API - Записи` - это стандарт `OGC (Open Geospatial Consortium)`_ для "
+"обнаружения геопространственных ресурсов в Сети."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:45
+msgid "CSW (Catalog Service for the Web)"
+msgstr "CSW (Служба каталогов для Web)"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:47
+msgid ""
+"`CSW (Catalog Service for the Web)`_ is an `OGC (Open Geospatial "
+"Consortium)`_ specification that defines common interfaces to discover, "
+"browse and query metadata about data, services, and other potential "
+"resources."
+msgstr ""
+"`CSW ( Служба каталогов для Web)`_ - это спецификация `OGC ( Открытого "
+"геопространственного консорциума)`_, определяющая общие интерфейсы для "
+"обнаружения, просмотра и запроса метаданных о данных, сервисах и других "
+"потенциальных ресурсах."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:53
+msgid "Startup"
+msgstr "Стартап"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:55
+msgid ""
+"To start MetaSearch, click the |metasearch| icon or select "
+":menuselection:`Web --> MetaSearch --> MetaSearch` via the QGIS main menu. "
+"The MetaSearch dialog will appear. The main GUI consists of three tabs: "
+":guilabel:`Services`, :guilabel:`Search` and :guilabel:`Settings`."
+msgstr ""
+"Чтобы запустить MetaSearch, нажмите на иконку |metasearch| или выберите "
+":menuselection:`Web --> MetaSearch --> MetaSearch` в главном меню QGIS. "
+"Появится диалоговое окно MetaSearch. Основной графический интерфейс состоит "
+"из трех вкладок: :guilabel:`Сервисы`, :guilabel:`Поиск` и "
+":guilabel:`Настройки`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:239
 msgid "metasearch"
 msgstr "metasearch"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:62
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:69
+msgid "Managing Catalog Services"
+msgstr "Управление службами каталога"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:71
+msgid ""
+"The :guilabel:`Services` tab allows the user to manage all available catalog"
+" services. MetaSearch provides a default list of Catalog Services, which can"
+" be added by pressing the :guilabel:`Add Default Services` button."
+msgstr ""
+"Вкладка :guilabel:`Услуги` позволяет пользователю управлять всеми доступными"
+" службами каталога. MetaSearch предоставляет список служб каталога по "
+"умолчанию, который можно добавить, нажав кнопку :guilabel:`Добавить службы "
+"по умолчанию`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:76
+msgid ""
+"To find all listed Catalog Service entries, click the dropdown select box."
+msgstr ""
+"Чтобы найти все перечисленные записи службы каталогов, нажмите на выпадающее"
+" поле выбора."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:78
+msgid "To add a Catalog Service entry:"
+msgstr "Чтобы добавить запись службы каталога, выполните следующие действия:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:80
+msgid "Click the :guilabel:`New` button"
+msgstr "Нажмите кнопку :guilabel:`Новый`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:81
+msgid ""
+"Enter a :guilabel:`Name` for the service, as well as the :guilabel:`URL` "
+"(endpoint). Note that for OGC CSW 2.0.2 Catalogs, only the base URL is "
+"required (not a full GetCapabilities URL).  For OGC API - Records Catalogs, "
+"the URL should be the path to the collection endpoint"
+msgstr ""
+"Введите :guilabel:`Название` для службы, а также :guilabel:`URL` (конечную "
+"точку). Обратите внимание, что для каталогов OGC CSW 2.0.2 требуется только "
+"базовый URL (не полный URL GetCapabilities). Для каталогов OGC API - Записи,"
+" URL должен быть путем к конечной точке коллекции"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:86
+msgid ""
+"If the Catalog requires authentication, enter the appropriate "
+":guilabel:`User name` and :guilabel:`Password` credentials."
+msgstr ""
+"Если каталог требует аутентификации, введите соответствующие учетные данные "
+":guilabel:`Имя пользователя` и :guilabel:`Пароль`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:88
+msgid "Click :guilabel:`OK` to add the service to the list of entries."
+msgstr "Нажмите :guilabel:`OK`, чтобы добавить службу в список записей."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:90
+msgid "To edit an existing Catalog Service entry:"
+msgstr ""
+"Чтобы отредактировать существующую запись службы каталога, выполните "
+"следующие действия:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:92
+msgid "Select the entry you would like to edit"
+msgstr "Выберите запись, которую вы хотите отредактировать"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:93
+msgid "Click the :guilabel:`Edit` button"
+msgstr "Нажмите кнопку :guilabel:`Редактировать`"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:94
+msgid "And modify the :guilabel:`Name` or :guilabel:`URL` values"
+msgstr "И измените значения :guilabel:`Название` или :guilabel:`URL`"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:95
 msgid "Click :guilabel:`OK`."
 msgstr "Кликните на кнопку :guilabel:`OK`."
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:97
+msgid ""
+"To delete a Catalog Service entry, select the entry you would like to delete"
+" and click the :guilabel:`Delete` button. You will be asked to confirm "
+"deleting the entry."
+msgstr ""
+"Чтобы удалить запись службы каталога, выберите запись, которую вы хотите "
+"удалить, и нажмите кнопку :guilabel:`Удалить`. Вам будет предложено "
+"подтвердить удаление записи."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:101
+msgid ""
+"MetaSearch allows loading and saving connections to an XML file. This is "
+"useful when you need to share settings between applications. Below is an "
+"example of the XML file format."
+msgstr ""
+"MetaSearch позволяет загружать и сохранять соединения в XML-файле. Это "
+"удобно, когда необходимо обмениваться настройками между приложениями. Ниже "
+"приведен пример формата XML-файла."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:120
+msgid "To load a list of entries:"
+msgstr "Чтобы загрузить список записей:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:122
+msgid "Click the :guilabel:`Load` button. A new window will appear."
+msgstr "Нажмите кнопку :guilabel:`Загрузить`. Появится новое окно."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:123
+msgid ""
+"Click the :guilabel:`Browse` button and navigate to the XML file of entries "
+"you wish to load."
+msgstr ""
+"Нажмите кнопку :guilabel:`Обзор` и перейдите к XML-файлу записей, который вы"
+" хотите загрузить."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:125
+msgid "Click :guilabel:`Open`. The list of entries will be displayed."
+msgstr "Нажмите кнопку :guilabel:`Открыть`. Отобразится список записей."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:126
+msgid ""
+"Select the entries you wish to add from the list and click :guilabel:`Load`."
+msgstr ""
+"Выберите из списка записи, которые вы хотите добавить, и нажмите "
+":guilabel:`Загрузить`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:129
+msgid ""
+"Click the :guilabel:`Service Info` button to display information about the "
+"selected Catalog Service such as service identification, service provider "
+"and contact information. If you would like to view the raw API response, "
+"click the :guilabel:`Raw API Response` button. A separate window will open "
+"displaying server information in raw JSON or XML format."
+msgstr ""
+"Нажмите кнопку :guilabel:`Информация об услуге`, чтобы отобразить информацию"
+" о выбранной услуге каталога, такую как идентификация услуги, поставщик "
+"услуги и контактная информация. Если вы хотите просмотреть необработанный "
+"ответ API, нажмите кнопку :guilabel:`Обработанный ответ API`. Откроется "
+"отдельное окно, в котором будет отображена информация о сервере в "
+"необработанном формате JSON или XML."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:138
+msgid "Searching Catalog Services"
+msgstr "Поиск по каталогу"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:145
+msgid "Searching catalog services"
+msgstr "Поиск по каталогу услуг"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:147
+msgid ""
+"The :guilabel:`Search` tab allows the user to query Catalog Services for "
+"data and services, set various search parameters and view results."
+msgstr ""
+"Вкладка :guilabel:`Поиск` позволяет пользователю запрашивать у Службы "
+"Каталога данные и услуги, задавать различные параметры поиска и "
+"просматривать результаты."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:150
+msgid "The following search parameters are available:"
+msgstr "Доступны следующие параметры поиска:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:152
+msgid ":guilabel:`Keywords`: free text search keywords;"
+msgstr ""
+":guilabel:``Ключевые слова``: ключевые слова для свободного поиска текста;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:153
+msgid ":guilabel:`From`: the Catalog Service to perform the query against;"
+msgstr ":guilabel:`Формат`: служба каталога для выполнения запроса;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:154
+msgid ""
+"**Bounding box**: the spatial area of interest to filter, defined by "
+":guilabel:`Xmax`, :guilabel:`Xmin`, :guilabel:`Ymax`, and :guilabel:`Ymin`. "
+"Click :guilabel:`Set  Global` to do a  global search, click :guilabel:`Map "
+"Extent` to do a search in the visible area, or enter values manually."
+msgstr ""
+"**Ограничительная область**: интересующая область фильтрации, определяемая "
+":guilabel:`Xmax`, :guilabel:`Xmin`, :guilabel:`Ymax` и :guilabel:`Ymin`. "
+"Нажмите :guilabel:`Set Global`, чтобы выполнить глобальный поиск, нажмите "
+":guilabel:`Map Extent`, чтобы выполнить поиск в видимой области, или введите"
+" значения вручную."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:161
+msgid ""
+"Clicking the :guilabel:`Search` button will search the selected Metadata "
+"Catalog. Search results are displayed in a list, and can be sorted by "
+"clicking on the column header. You can navigate through search results with "
+"the directional buttons below the search results."
+msgstr ""
+"Нажатие на кнопку :guilabel:`Поиск` приводит к поиску в выбранном каталоге "
+"метаданных. Результаты поиска отображаются в виде списка, который можно "
+"отсортировать, нажав на заголовок столбца. Вы можете перемещаться по "
+"результатам поиска с помощью кнопок направления, расположенных под "
+"результатами поиска."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:167
+msgid "Select a result and:"
+msgstr "Выберите результат и:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:169
+msgid ""
+"Click the :guilabel:`View Raw API Response` button to open a window with the"
+" service response in raw JSON or XML format."
+msgstr ""
+"Нажмите на кнопку :guilabel:`Просмотреть сырой ответ API`, чтобы открыть "
+"окно с ответом сервиса в сыром формате JSON или XML."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:171
+msgid ""
+"If the metadata record has an associated bounding box, a footprint of the "
+"bounding box will be displayed on the map."
+msgstr ""
+"Если запись метаданных имеет связанную с ней ограничительную рамку, на карте"
+" будет отображен ее отпечаток."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:173
+msgid ""
+"Double-click the record to display the record metadata with any associated "
+"access links. Clicking a link opens the link in the user's web browser."
+msgstr ""
+"Дважды щелкните запись, чтобы отобразить метаданные записи со всеми "
+"связанными ссылками доступа. При нажатии на ссылку она открывается в веб-"
+"браузере пользователя."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:176
+msgid ""
+"If the record is a supported web service (WMS/WMTS, WFS, WCS, ArcGIS REST "
+"Service, etc.) or a GIS File, the :guilabel:`Add Data` button will be "
+"enabled. When clicking this button, MetaSearch will verify if this is a "
+"valid OWS. The service will then be added to the appropriate QGIS connection"
+" list, and the appropriate connection dialog will appear. If you choose "
+":guilabel:`Add GIS File` the linked GIS file will be added to the current "
+"project."
+msgstr ""
+"Если запись является поддерживаемым веб-сервисом (WMS/WMTS, WFS, WCS, ArcGIS"
+" REST Service и т.д.) или ГИС-файлом, будет включена кнопка "
+":guilabel:`Добавить данные`. При нажатии на эту кнопку MetaSearch проверит, "
+"является ли данный сервис действительным OWS. Затем служба будет добавлена в"
+" соответствующий список соединений QGIS, и появится соответствующий диалог "
+"подключения. Если вы выберете :guilabel:`Добавить файл ГИС`, связанный файл "
+"ГИС будет добавлен в текущий проект."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:191
+msgid "Metadata record display"
+msgstr "Отображение записей метаданных"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:194
 msgid "Settings"
 msgstr "Установки"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:201
+msgid "MetaSearch settings"
+msgstr "Настройки метапоиска"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:203
+msgid "You can fine tune MetaSearch with the following :guilabel:`Settings`:"
+msgstr ""
+"Вы можете точно настроить MetaSearch с помощью следующих "
+":guilabel:`Настроек`:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:205
+msgid ""
+":guilabel:`Server Timeout`: when searching metadata catalogs, the number of "
+"seconds for blocking connection attempt. Default value is 10."
+msgstr ""
+":guilabel:`Серверный таймаут`: при поиске в каталогах метаданных количество "
+"секунд для блокировки попытки соединения. Значение по умолчанию - 10."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:208
+msgid ""
+":guilabel:`Disable SSL verification`: option to switch off ssl verification."
+msgstr ""
+":guilabel:`Отключить проверку SSL`: опция для отключения проверки ssl."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:210
+msgid ""
+":guilabel:`Results paging`: when searching metadata catalogs, the number of "
+"results to show per page. Default value is 10."
+msgstr ""
+":guilabel:`Пагинация результатов`: при поиске по каталогам метаданных "
+"количество результатов, которые должны отображаться на одной странице. "
+"Значение по умолчанию - 10."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:212
+msgid ""
+":guilabel:`Log debugging messages`: option to enable the logging of "
+"debugging messages in the :ref:`log_message_panel`."
+msgstr ""
+":guilabel:`Запись отладочных сообщений`: опция, позволяющая включить запись "
+"отладочных сообщений в :ref:`log_message_panel`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:216
+msgid "Catalog Server Errors"
+msgstr "Ошибки сервера каталогов"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:218
+msgid ""
+"In some cases, the Catalog will work in a web browser, but not in "
+"MetaSearch. This may be due to the Catalog server's configuration/setup. "
+"Catalog server providers should ensure URLs are consistent and up to date in"
+" their configuration (this is common in HTTP -> HTTPS redirection "
+"scenarios). Please see the `pycsw FAQ item`_ for a deeper explanation of the"
+" issue and fix. Although the FAQ item is pycsw specific it can also apply in"
+" general to other Catalog servers."
+msgstr ""
+"В некоторых случаях Каталог работает в веб-браузере, но не работает в "
+"MetaSearch. Это может быть связано с конфигурацией/настройкой сервера "
+"Каталога. Поставщики серверов Каталога должны убедиться, что URL-адреса в их"
+" конфигурации последовательны и актуальны (это часто встречается в сценариях"
+" перенаправления HTTP -> HTTPS). Более подробное объяснение проблемы и ее "
+"исправление см. в разделе `pycsw FAQ`_. Хотя этот пункт FAQ относится к "
+"pycsw, он может быть применим и к другим серверам Каталога."
