@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-31 09:36+0200\n"
+"POT-Creation-Date: 2025-04-17 20:03+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -906,7 +906,7 @@ msgstr ""
 "Server utilizará la información dada en el archivo :file:`wms_metadata.xml` "
 "ubicado en la carpeta :file:`cgi-bin`."
 
-#: ../../docs/server_manual/getting_started.rst:1053
+#: ../../docs/server_manual/getting_started.rst:1070
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -939,7 +939,7 @@ msgstr ""
 " ``xmin, xmax, ymin, ymax`` o a seleccionarla del lienzo del mapa, capas, "
 "marcadores..."
 
-#: ../../docs/server_manual/getting_started.rst:841
+#: ../../docs/server_manual/getting_started.rst:843
 msgid ""
 "By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict in "
 "which coordinate reference systems (CRS) QGIS Server will offer to render "
@@ -957,11 +957,11 @@ msgstr ""
 "referencia de coordenadas, o haga clic en :guilabel:`Usado` para añadir a la"
 " lista los CRS utilizados en el proyecto QGIS."
 
-#: ../../docs/server_manual/getting_started.rst:1055
+#: ../../docs/server_manual/getting_started.rst:1072
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/server_manual/getting_started.rst:849
+#: ../../docs/server_manual/getting_started.rst:851
 msgid ""
 "If you have print layouts defined in your project, they will be listed in "
 "the ``GetProjectSettings`` response, and they can be used by the GetPrint "
@@ -982,7 +982,7 @@ msgstr ""
 "el cuadro de diálogo :guilabel:`Seleccionar diseño de impresión` para "
 "agregarlo a la lista de diseños excluidos."
 
-#: ../../docs/server_manual/getting_started.rst:858
+#: ../../docs/server_manual/getting_started.rst:860
 msgid ""
 "If you want to exclude any layer or layer group from being published by the "
 "WMS, check |checkbox| :guilabel:`Exclude Layers` and click the "
@@ -1004,11 +1004,11 @@ msgstr ""
 "respuesta de WMS GetCapabilities, lo que conduce a tiempos de carga más "
 "rápidos en el lado del cliente."
 
-#: ../../docs/server_manual/getting_started.rst:867
+#: ../../docs/server_manual/getting_started.rst:869
 msgid ":guilabel:`Layer and Feature Options`"
 msgstr ":guilabel:`Opciones de capa y objetos espaciales`"
 
-#: ../../docs/server_manual/getting_started.rst:869
+#: ../../docs/server_manual/getting_started.rst:871
 msgid ""
 "You can receive requested GetFeatureInfo as plain text, XML and GML. The "
 "default is XML."
@@ -1016,7 +1016,7 @@ msgstr ""
 "Puede recibir GetFeatureInfo solicitado como texto sin formato, XML y GML. "
 "El predeterminado es XML."
 
-#: ../../docs/server_manual/getting_started.rst:871
+#: ../../docs/server_manual/getting_started.rst:873
 msgid ""
 "If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be"
 " used to reference layers in the ``GetCapabilities`` response or ``GetMap "
@@ -1031,6 +1031,22 @@ msgstr ""
 
 #: ../../docs/server_manual/getting_started.rst:877
 msgid ""
+"By default, layer names are used to expose layers through WMS. If multiple "
+"layers have the same name, they will be merged to a single WMS layer and "
+"cannot be requested individually. You need to take care of these layers "
+"being compatible with each other. Using the :guilabel:`Use layer ids as "
+"name` option ensures that multiple layers with the same name can be "
+"requested as individual layers."
+msgstr ""
+"De forma predeterminada, los nombres de las capas se utilizan para exponer "
+"las capas a través de WMS. Si varias capas tienen el mismo nombre, se "
+"fusionarán en una única capa WMS y no podrán solicitarse individualmente. Es"
+" necesario tener cuidado de que estas capas sean compatibles entre sí. El "
+"uso de la opción :guilabel:`Use layer ids as name` asegura que múltiples "
+"capas con el mismo nombre puedan ser solicitadas como capas individuales."
+
+#: ../../docs/server_manual/getting_started.rst:886
+msgid ""
 "If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
 "response`. This will include the bounding box for each feature in the "
 "GetFeatureInfo response. See also the :ref:`WITH_GEOMETRY "
@@ -1041,7 +1057,7 @@ msgstr ""
 "respuesta de GetFeatureInfo. Consulte también el parámetro "
 ":ref:`WITH_GEOMETRY <wms_getfeatureinfo>`."
 
-#: ../../docs/server_manual/getting_started.rst:881
+#: ../../docs/server_manual/getting_started.rst:890
 msgid ""
 "As many web clients can’t display circular arcs in geometries you have the "
 "option to segmentize the geometry before sending it to the client in a "
@@ -1057,7 +1073,7 @@ msgstr ""
 "entidad). Debe marcar la casilla de verificación |checkbox| "
 ":guilabel:`Segmentize feature info geometry` para activar la opción."
 
-#: ../../docs/server_manual/getting_started.rst:887
+#: ../../docs/server_manual/getting_started.rst:896
 msgid ""
 "You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
 " set the precision of the GetFeatureInfo geometry. This enables you to save "
@@ -1068,7 +1084,7 @@ msgstr ""
 " Esto le permite ahorrar ancho de banda cuando no necesita toda la "
 "precisión."
 
-#: ../../docs/server_manual/getting_started.rst:891
+#: ../../docs/server_manual/getting_started.rst:900
 msgid ""
 "If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
 "show text using expressions) this will be listed inside the GetFeatureInfo "
@@ -1080,7 +1096,7 @@ msgstr ""
 "GetFeatureInfo. Si la capa usa un mapa de valor para uno de sus atributos, "
 "esta información también se mostrará en la salida de GetFeatureInfo."
 
-#: ../../docs/server_manual/getting_started.rst:896
+#: ../../docs/server_manual/getting_started.rst:905
 msgid ""
 "If you want QGIS Server to advertise specific request URLs in the WMS "
 "GetCapabilities response, enter the corresponding URL in the "
@@ -1090,11 +1106,11 @@ msgstr ""
 "respuesta WMS GetCapabilities, ingrese la URL correspondiente en el campo "
 ":guilabel:`URL anunciada`."
 
-#: ../../docs/server_manual/getting_started.rst:899
+#: ../../docs/server_manual/getting_started.rst:908
 msgid ":guilabel:`Map and Legend Options`"
 msgstr ":guilabel:`Opciones de mapa y leyenda`."
 
-#: ../../docs/server_manual/getting_started.rst:901
+#: ../../docs/server_manual/getting_started.rst:910
 msgid ""
 "When a layer group is passed to ``GetLegendGraphic`` request, all of its "
 "leaf layers are added to the legend picture (however without the groups' "
@@ -1109,7 +1125,7 @@ msgstr ""
 "de los grupos de capas (y subgrupos) en el árbol de capas, al igual que en "
 "la leyenda de QGIS Desktop."
 
-#: ../../docs/server_manual/getting_started.rst:907
+#: ../../docs/server_manual/getting_started.rst:916
 msgid ""
 "When QGIS project contains layer groups, they are listed in WMS capabilities"
 " document alongside with layers. If a group (its name as listed in "
@@ -1130,7 +1146,7 @@ msgstr ""
 "atributo name, lo que hace imposible incluir grupos en la lista de capas de "
 "la solicitud GetMap."
 
-#: ../../docs/server_manual/getting_started.rst:915
+#: ../../docs/server_manual/getting_started.rst:924
 msgid ""
 "Furthermore, you can restrict the maximum size of the maps returned by the "
 "requests by entering the maximum width and height into the respective fields"
@@ -1142,7 +1158,7 @@ msgstr ""
 "respectivos bajo :guilabel:`Tamaño máximo de imagen para peticiones GetMap y"
 " GetLegendGraphic`."
 
-#: ../../docs/server_manual/getting_started.rst:919
+#: ../../docs/server_manual/getting_started.rst:928
 msgid ""
 "You can change the :guilabel:`Quality for JPEG and WebP images` factor. The "
 "quality factor must be in the range 0 to 100. Specify 0 for maximum "
@@ -1152,7 +1168,7 @@ msgstr ""
 "factor de calidad debe estar en el rango de 0 a 100. Especifique 0 para "
 "máxima compresión, 100 para ninguna compresión."
 
-#: ../../docs/server_manual/getting_started.rst:923
+#: ../../docs/server_manual/getting_started.rst:932
 msgid ""
 "You can change the limit for atlas features to be printed in one request by "
 "setting the :guilabel:`Maximum features for Atlas print requests` field."
@@ -1161,7 +1177,7 @@ msgstr ""
 "solicitud configurando el campo :guilabel:`Entidades máximas para "
 "solicitudes de impresión de Atlas`."
 
-#: ../../docs/server_manual/getting_started.rst:926
+#: ../../docs/server_manual/getting_started.rst:935
 msgid ""
 "When QGIS Server is used in tiled mode (see :ref:`TILED parameter "
 "<wms_tiled>`), you can set the :guilabel:`Tile buffer in pixels`. The "
@@ -1173,7 +1189,7 @@ msgstr ""
 "valor recomendado es el tamaño del símbolo más grande o ancho de línea en su"
 " proyecto QGIS."
 
-#: ../../docs/server_manual/getting_started.rst:929
+#: ../../docs/server_manual/getting_started.rst:938
 msgid ""
 "Depending on whether the map uses a projected CRS or a geographic CRS and if"
 " there is no information to evaluate the map unit sized symbols, you can "
@@ -1186,11 +1202,11 @@ msgstr ""
 ":guilabel:`Escala por defecto para la leyenda` o :guilabel:`Unidades "
 "cartográficas por defecto por mm en la leyenda`."
 
-#: ../../docs/server_manual/getting_started.rst:936
+#: ../../docs/server_manual/getting_started.rst:945
 msgid "WMTS capabilities"
 msgstr "Capacidades WMTS"
 
-#: ../../docs/server_manual/getting_started.rst:938
+#: ../../docs/server_manual/getting_started.rst:947
 msgid ""
 "In the :guilabel:`WMTS` tab you can select the layers you want to publish as"
 " WMTS and specify if you want to publish as PNG or JPEG."
@@ -1198,11 +1214,28 @@ msgstr ""
 "En la pestaña :guilabel:`WMTS` puede seleccionar las capas que desea "
 "publicar como WMTS y especificar si desea publicarlas como PNG o JPEG."
 
-#: ../../docs/server_manual/getting_started.rst:946
-msgid "Definitions in the WMTS tab"
-msgstr "Definiciones en la pestaña WMTS"
+#: ../../docs/server_manual/getting_started.rst:950
+msgid ""
+"Under :guilabel:`Grids`, for each :ref:`restricted CRS <restricted_crs>`, "
+"you can indicate whether the tile matrices should be published and configure"
+" their top-left corner, minimum and maximum scales and the last level of the"
+" tile matrices. Note that for ``EPSG:3857`` and ``EPSG:4326`` CRS, only the "
+"last level of the tile matrices can be edited."
+msgstr ""
+"En :guilabel:`Cuadrículas`, para cada :ref:`SRC restringido "
+"<restricted_crs>`, puede indicar si las matrices de teselas deben publicarse"
+" y configurar su esquina superior izquierda, las escalas mínima y máxima y "
+"el último nivel de las matrices de teselas. Tenga en cuenta que para los SRC"
+" ``EPSG:3857`` y ``EPSG:4326`` sólo se puede editar el último nivel de las "
+"matrices de teselas."
 
-#: ../../docs/server_manual/getting_started.rst:948
+#: ../../docs/server_manual/getting_started.rst:956
+msgid "You can also set a :guilabel:`Minimum scale` for the tiles display."
+msgstr ""
+"También puede establecer una :guilabel:`Escala mínima` para la visualización"
+" de las teselas."
+
+#: ../../docs/server_manual/getting_started.rst:958
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field, QGIS Server will"
 " advertise this specific URL in the WMTS GetCapabilities response."
@@ -1210,11 +1243,15 @@ msgstr ""
 "Si introduce una URL en el campo :guilabel:`URL anunciada`, QGIS Server "
 "anunciará esta URL específica en la respuesta GetCapabilities de WMTS."
 
-#: ../../docs/server_manual/getting_started.rst:952
+#: ../../docs/server_manual/getting_started.rst:966
+msgid "Definitions in the WMTS tab"
+msgstr "Definiciones en la pestaña WMTS"
+
+#: ../../docs/server_manual/getting_started.rst:969
 msgid "WFS/OAPIF capabilities"
 msgstr "Capacidades WFS/OAPIF"
 
-#: ../../docs/server_manual/getting_started.rst:954
+#: ../../docs/server_manual/getting_started.rst:971
 msgid ""
 "In the :guilabel:`WFS/OAPIF` tab, you can select the layers you want to "
 "publish as WFS or OAPIF, and specify if they will allow update, insert and "
@@ -1224,11 +1261,11 @@ msgstr ""
 "publicar como WFS u OAPIF, y especificar si permitirán operaciones de "
 "actualización, inserción y eliminación."
 
-#: ../../docs/server_manual/getting_started.rst:963
+#: ../../docs/server_manual/getting_started.rst:980
 msgid "Definitions in the WFS/OAPIF tab"
 msgstr "Definiciones en la pestaña WFS/OAPIF"
 
-#: ../../docs/server_manual/getting_started.rst:965
+#: ../../docs/server_manual/getting_started.rst:982
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field, QGIS Server will"
 " advertise this specific URL in the WFS GetCapabilities response."
@@ -1236,11 +1273,11 @@ msgstr ""
 "Si introduce una URL en el campo :guilabel:`URL anunciada`, QGIS Server "
 "anunciará esta URL específica en la respuesta WFS GetCapabilities."
 
-#: ../../docs/server_manual/getting_started.rst:969
+#: ../../docs/server_manual/getting_started.rst:986
 msgid "WCS capabilities"
 msgstr "Capacidades WCS"
 
-#: ../../docs/server_manual/getting_started.rst:971
+#: ../../docs/server_manual/getting_started.rst:988
 msgid ""
 "In the :guilabel:`WCS` tab, you can select the layers that you want to "
 "publish as WCS."
@@ -1248,11 +1285,11 @@ msgstr ""
 "En la pestaña :guilabel:`WCS` puede seleccionar las capas que desea publicar"
 " como WCS."
 
-#: ../../docs/server_manual/getting_started.rst:978
+#: ../../docs/server_manual/getting_started.rst:995
 msgid "Definitions in the WCS tab"
 msgstr "Definiciones en la pestaña WCS"
 
-#: ../../docs/server_manual/getting_started.rst:980
+#: ../../docs/server_manual/getting_started.rst:997
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WCS capabilities` section, QGIS Server will advertise this "
@@ -1262,11 +1299,11 @@ msgstr ""
 ":guilabel:`Capacidades del WCS`, QGIS Server anunciará esta URL específica "
 "en la respuesta WCS GetCapabilities."
 
-#: ../../docs/server_manual/getting_started.rst:985
+#: ../../docs/server_manual/getting_started.rst:1002
 msgid "Fine tuning your OWS"
 msgstr "Ajuste fino de OWS"
 
-#: ../../docs/server_manual/getting_started.rst:987
+#: ../../docs/server_manual/getting_started.rst:1004
 msgid ""
 "For vector layers, the :guilabel:`Fields` tab of the :menuselection:`Layer "
 "--> Layer Properties` dialog allows you to define for each attribute if it "
@@ -1281,15 +1318,15 @@ msgstr ""
 "específico, desmarque la casilla correspondiente en la columna "
 ":guilabel:`Configuración`:"
 
-#: ../../docs/server_manual/getting_started.rst:993
+#: ../../docs/server_manual/getting_started.rst:1010
 msgid ":guilabel:`Do not expose in WFS`"
 msgstr ":guilabel:`No exponer en WFS`"
 
-#: ../../docs/server_manual/getting_started.rst:994
+#: ../../docs/server_manual/getting_started.rst:1011
 msgid ":guilabel:`Do not expose in WMS`"
 msgstr ":guilabel:`No exponer en WMS`."
 
-#: ../../docs/server_manual/getting_started.rst:996
+#: ../../docs/server_manual/getting_started.rst:1013
 msgid ""
 "You can overlay watermarks over the maps produced by your WMS by adding text"
 " annotations or SVG annotations to the project file. See the "
@@ -1316,11 +1353,11 @@ msgstr ""
 ":menuselection:`Proyecto -> Propiedades... `) o modificar manualmente la "
 "ruta para la imagen SVG para que represente una ruta relativa válida."
 
-#: ../../docs/server_manual/getting_started.rst:1010
+#: ../../docs/server_manual/getting_started.rst:1027
 msgid "Integration with third parties"
 msgstr "Integración con terceras partes"
 
-#: ../../docs/server_manual/getting_started.rst:1012
+#: ../../docs/server_manual/getting_started.rst:1029
 msgid ""
 "QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
 "<https://www.ogc.org/publications>`_ thus it can be used by a wide variety "
@@ -1330,11 +1367,11 @@ msgstr ""
 "<https://www.ogc.org/publications>`_ por lo que puede ser utilizado por una "
 "amplia variedad de herramientas de usuario final."
 
-#: ../../docs/server_manual/getting_started.rst:1016
+#: ../../docs/server_manual/getting_started.rst:1033
 msgid "Integration with QGIS Desktop"
 msgstr "Integración con QGIS Desktop"
 
-#: ../../docs/server_manual/getting_started.rst:1018
+#: ../../docs/server_manual/getting_started.rst:1035
 msgid ""
 "QGIS Desktop is the map designer where QGIS Server is the map server. The "
 "maps or QGIS projects will be served by the QGIS Server to provide OGC "
@@ -1348,7 +1385,7 @@ msgstr ""
 "entradas en una base de datos (usando :menuselection:`Proyecto -> Guardar en"
 " -> PostgreSQL` en QGIS Desktop)."
 
-#: ../../docs/server_manual/getting_started.rst:1023
+#: ../../docs/server_manual/getting_started.rst:1040
 msgid ""
 "Furthermore, dedicated update workflow must be established to refresh a "
 "project used by a QGIS Server (ie. copy project files into server location "
@@ -1361,11 +1398,11 @@ msgstr ""
 "QGIS). Por ahora, los procesos automatizados (como la recarga del servidor a"
 " través del servicio de cola de mensajes) aún no están implementados."
 
-#: ../../docs/server_manual/getting_started.rst:1030
+#: ../../docs/server_manual/getting_started.rst:1047
 msgid "Integration with MapProxy"
 msgstr "Integración con MapProxy"
 
-#: ../../docs/server_manual/getting_started.rst:1032
+#: ../../docs/server_manual/getting_started.rst:1049
 msgid ""
 "`MapProxy <https://www.mapproxy.org/>`_ is a tile cache server and as it can"
 " read and serve any WMS/WMTS map server, it can be directly connected to "
@@ -1376,11 +1413,11 @@ msgstr ""
 "conectarse directamente a los servicios web del servidor QGIS y mejorar la "
 "experiencia del usuario final."
 
-#: ../../docs/server_manual/getting_started.rst:1038
+#: ../../docs/server_manual/getting_started.rst:1055
 msgid "Integration with QWC2"
 msgstr "Integración con QWC2"
 
-#: ../../docs/server_manual/getting_started.rst:1040
+#: ../../docs/server_manual/getting_started.rst:1057
 msgid ""
 "`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application "
 "dedicated to QGIS Server. It helps you to build a highly customized map "
