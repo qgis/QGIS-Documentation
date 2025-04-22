@@ -1,3 +1,5 @@
+.. _gdal_algorithms:
+
 ***********************
 GDAL algorithm provider
 ***********************
