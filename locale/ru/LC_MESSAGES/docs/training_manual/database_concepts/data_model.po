@@ -5,24 +5,497 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
+# Harrissou Sant-anna, 2025
+# Asdfgr Wertyu, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 01:50+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:31+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:2
+msgid "Lesson: Implementing the Data Model"
+msgstr "Урок: Реализация модели данных"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:4
+msgid ""
+"Now that we've covered all the theory, let's create a new database. This "
+"database will be used for our exercises for the lessons that will follow "
+"afterwards."
+msgstr ""
+"Теперь, когда мы рассмотрели всю теорию, давайте создадим новую базу данных."
+" Эта база данных будет использоваться для наших упражнений в последующих "
+"уроках."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:8
+msgid ""
+"**The goal for this lesson:** To install the required software and use it to"
+" implement our example database."
+msgstr ""
+"**Цель урока:** Установить необходимое программное обеспечение и "
+"использовать его для реализации нашего примера базы данных."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:12
+msgid "Install PostgreSQL"
+msgstr "Установить PostgreSQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:14
+msgid ""
+"You can find PostgreSQL packages and installation instructions for your "
+"operating system at https://www.postgresql.org/download/. Please note that "
+"the documentation will assume users are running QGIS under Ubuntu."
+msgstr ""
+"Пакеты PostgreSQL и инструкции по установке для вашей операционной системы "
+"можно найти на сайте https://www.postgresql.org/download/. Обратите "
+"внимание, что в документации предполагается, что пользователи работают с "
+"QGIS под управлением Ubuntu."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:19
+#: ../../docs/training_manual/database_concepts/data_model.rst:56
+msgid "Under Ubuntu:"
+msgstr "Под Ubuntu:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:25
+msgid "You should get a message like this:"
+msgstr "Вы должны получить сообщение следующего содержания:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:44
+msgid ""
+"Press :kbd:`Y` and :kbd:`Enter` and wait for the download and installation "
+"to finish."
+msgstr ""
+"Нажмите :kbd:`Y` и :kbd:`Enter` и дождитесь окончания загрузки и установки."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:48
 msgid "Help"
 msgstr "Справка"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:50
+msgid ""
+"PostgreSQL has very good `online "
+"<https://www.postgresql.org/docs/9.1/index.html>`_ documentation."
+msgstr ""
+"PostgreSQL имеет очень хорошую документацию в Интернете "
+"<https://www.postgresql.org/docs/9.1/index.html>`_."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:54
+msgid "Create a database user"
+msgstr "Создать пользователя базы данных"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:58
+msgid ""
+"After the installation is complete, run this command to become the postgres "
+"user and then create a new database user:"
+msgstr ""
+"После завершения установки выполните эту команду, чтобы стать пользователем "
+"postgres, а затем создайте нового пользователя базы данных:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:65
+msgid ""
+"Type in your normal log in password when prompted (you need to have sudo "
+"rights)."
+msgstr ""
+"Введите свой обычный пароль для входа в систему, когда появится запрос (у "
+"вас должны быть права sudo)."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:67
+msgid ""
+"Now, at the postgres user's bash prompt, create the database user. Make sure"
+" the user name matches your unix login name: it will make your life much "
+"easier, as postgres will automatically authenticate you when you are logged "
+"in as that user:"
+msgstr ""
+"Теперь в приглашении bash пользователя postgres создайте пользователя базы "
+"данных. Убедитесь, что имя пользователя совпадает с вашим именем входа в "
+"систему unix: это значительно облегчит вам жизнь, поскольку postgres будет "
+"автоматически аутентифицировать вас, когда вы войдете в систему под этим "
+"пользователем:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:76
+msgid ""
+"Enter a password when prompted. You should use a different password to your "
+"login password."
+msgstr ""
+"Введите пароль, когда появится запрос. Вы должны использовать пароль, "
+"отличный от пароля для входа в систему."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:79
+msgid "What do those options mean?"
+msgstr "Что означают эти варианты?"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:91
+msgid ""
+"Now you should leave the postgres user's bash shell environment by typing:"
+msgstr ""
+"Теперь вы должны выйти из среды оболочки bash пользователя postgres, набрав:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:99
+msgid "Verify the new account"
+msgstr "Подтвердите новую учетную запись"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:105
+msgid "Should return something like this::"
+msgstr "Должно получиться что-то вроде этого::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:115
+#: ../../docs/training_manual/database_concepts/data_model.rst:145
+msgid "Type :kbd:`Q` to exit."
+msgstr "Введите :kbd:`Q`, чтобы выйти."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:118
+msgid "Create a database"
+msgstr "Создать базу данных"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:120
+msgid ""
+"The ``createdb`` command is used to create a new database. It should be run "
+"from the bash shell prompt:"
+msgstr ""
+"Команда ``createdb`` используется для создания новой базы данных. Ее следует"
+" запускать из приглашения оболочки bash:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:127
+msgid ""
+"You can verify the existence of your new database by using this command:"
+msgstr ""
+"Вы можете проверить существование новой базы данных с помощью этой команды:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:133
+msgid "Which should return something like this:"
+msgstr "В результате должно получиться что-то вроде этого:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:148
+msgid "Starting a database shell session"
+msgstr "Запуск сеанса оболочки базы данных"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:150
+msgid "You can connect to your database easily like this::"
+msgstr "Вы можете подключиться к своей базе данных следующим образом:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:154
+msgid "To exit out of the psql database shell, type::"
+msgstr "Чтобы выйти из оболочки базы данных psql, введите::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:158
+msgid "For help in using the shell, type::"
+msgstr "Чтобы получить помощь в использовании оболочки, введите::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:162
+msgid "For help in using sql commands, type::"
+msgstr "Чтобы получить помощь в использовании команд sql, введите::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:166
+msgid "To get help on a specific command, type (for example)::"
+msgstr "Чтобы получить справку по конкретной команде, введите (например)::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:170
+msgid ""
+"See also the `Psql cheat sheet "
+"<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_."
+msgstr ""
+"См. также `Шпаргалку по Psql "
+"<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:173
+msgid "Make Tables in SQL"
+msgstr "Создание таблиц в SQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:175
+msgid ""
+"Let's start making some tables! We will use our ER Diagram as a guide. "
+"First, connect to the address db:"
+msgstr ""
+"Давайте начнем создавать таблицы! В качестве руководства мы будем "
+"использовать нашу ER-диаграмму. Сначала подключитесь к базе данных адресов:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:182
+msgid "Then create a :file:`streets` table:"
+msgstr "Затем создайте таблицу :file:`улицы`:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:188
+msgid ""
+":kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells "
+"PostgreSQL to start an integer sequence (auto-number) to populate the "
+":kbd:`id` automatically for every new record. :kbd:`varchar(50)` tells "
+"PostgreSQL to create a character field of 50 characters in length."
+msgstr ""
+":kbd:`серийный` и :kbd:`varchar` - это **типы данных**. :kbd:`serial` "
+"указывает PostgreSQL начать последовательность целых чисел (auto-number) для"
+" автоматического заполнения :kbd:`id` для каждой новой записи. "
+":kbd:`varchar(50)` указывает PostgreSQL создать символьное поле длиной 50 "
+"символов."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:193
+msgid ""
+"You will notice that the command ends with a :kbd:`;` - all SQL commands "
+"should be terminated this way. When you press :kbd:`Enter`, psql will report"
+" something like this:"
+msgstr ""
+"Вы заметите, что команда заканчивается символом :kbd:`;` - все команды SQL "
+"должны завершаться таким образом. Когда вы нажмете :kbd:`Enter`, psql "
+"сообщит примерно следующее:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:205
+msgid ""
+"That means your table was created successfully, with a primary key "
+":kbd:`streets_pkey` using :kbd:`streets.id`."
+msgstr ""
+"Это означает, что ваша таблица была создана успешно, с первичным ключом "
+":kbd:`streets_pkey`, использующим :kbd:`streets.id`."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:208
+msgid ""
+"Note: If you hit return without entering a :kbd:`;`, then you will get a "
+"prompt like this: :kbd:`address-#`. This is because PG is expecting you to "
+"enter more. Enter :kbd:`;` to run your command."
+msgstr ""
+"Примечание: Если вы нажмете return, не введя :kbd:`;`, то получите "
+"подсказку, подобную этой: :kbd:`address-#`. Это происходит потому, что PG "
+"ожидает, что вы введете больше. Введите :kbd:`;`, чтобы выполнить команду."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:212
+msgid "To view your table schema, you can do this:"
+msgstr "Чтобы просмотреть схему таблицы, можно сделать следующее:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:218
+#: ../../docs/training_manual/database_concepts/data_model.rst:237
+msgid "Which should show something like this:"
+msgstr "В результате должно получиться что-то вроде этого:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:231
+msgid "To view your table contents, you can do this:"
+msgstr "Чтобы просмотреть содержимое таблицы, можно сделать следующее:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:245
+msgid "As you can see, our table is currently empty."
+msgstr "Как видите, наш стол в настоящее время пуст."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:248
+msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
+msgstr "Попробуйте сами: :abbr:`★★☆ (умеренный уровень)`"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:250
+msgid "Use the approach shown above to make a table called people:"
+msgstr ""
+"Используйте подход, показанный выше, чтобы создать таблицу с названием "
+"\"Люди\":"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:252
+msgid ""
+"Add fields such as phone number, home address, name, etc. (these aren't all "
+"valid names: change them to make them valid). Make sure you give the table "
+"an ID column with the same data-type as above."
+msgstr ""
+"Добавьте такие поля, как номер телефона, домашний адрес, имя и т. д. (это не"
+" все допустимые имена: измените их, чтобы они стали допустимыми). Убедитесь,"
+" что в таблице есть столбец ID с тем же типом данных, что и выше."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:256
+#: ../../docs/training_manual/database_concepts/data_model.rst:385
+msgid "Answer"
+msgstr "Ответить"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:259
+msgid "The SQL required to create the correct people table is::"
+msgstr ""
+"SQL, необходимый для создания правильной таблицы людей, выглядит так::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:267
+msgid "The schema for the table (enter ``\\\\d people``) looks like this::"
+msgstr ""
+"Схема для таблицы (введите ``\\\\\\d человека``) выглядит следующим "
+"образом::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:282
+msgid ""
+"For illustration purposes, we have purposely omitted the fkey constraint."
+msgstr "В целях иллюстрации мы намеренно опустили ограничение fkey."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:285
+msgid "Create Keys in SQL"
+msgstr "Создание ключей в SQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:287
+msgid ""
+"The problem with our solution above is that the database doesn't know that "
+"people and streets have a logical relationship. To express this "
+"relationship, we have to define a foreign key that points to the primary key"
+" of the streets table."
+msgstr ""
+"Проблема нашего решения заключается в том, что база данных не знает, что "
+"между людьми и улицами существует логическая связь. Чтобы выразить эту "
+"связь, мы должны определить внешний ключ, который указывает на первичный "
+"ключ таблицы Улицы."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:295
+msgid "There are two ways to do this:"
+msgstr "Есть два способа сделать это:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:297
+msgid "Add the key after the table has been created"
+msgstr "Добавьте ключ после создания таблицы"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:298
+msgid "Define the key at time of table creation"
+msgstr "Определите ключ во время создания таблицы"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:300
+msgid "Our table has already been created, so let's do it the first way:"
+msgstr ""
+"Наша таблица уже создана, поэтому давайте сделаем это первым способом:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:308
+msgid ""
+"That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
+"match a valid street :kbd:`id` from the :kbd:`streets` table."
+msgstr ""
+"Это сообщает таблице :kbd:`people`, что ее поля :kbd:`street_id` должны "
+"соответствовать действительной улице :kbd:`id` из таблицы :kbd:`streets`."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:311
+msgid ""
+"The more usual way to create a constraint is to do it when you create the "
+"table:"
+msgstr ""
+"Более привычный способ создать ограничение - сделать это при создании "
+"таблицы:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:323
+msgid "After adding the constraint, our table schema looks like this now:"
+msgstr ""
+"После добавления ограничений схема нашей таблицы выглядит следующим образом:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:343
+msgid "Create Indexes in SQL"
+msgstr "Создание индексов в SQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:345
+msgid ""
+"We want lightning fast searches on peoples names. To provide for this, we "
+"can create an index on the name column of our people table:"
+msgstr ""
+"Нам нужен молниеносный поиск по именам людей. Чтобы обеспечить это, мы можем"
+" создать индекс на столбце имени нашей таблицы Люди:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:354
+msgid "Which results in:"
+msgstr "Что приводит к:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:375
+msgid "Dropping Tables in SQL"
+msgstr "Сбрасывание таблиц в SQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:377
+msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
+msgstr ""
+"Если вы хотите избавиться от таблицы, вы можете использовать команду "
+":kbd:`drop`:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:383
+msgid "In our current example, the above command would not work. Why not?"
+msgstr "В нашем примере приведенная выше команда не сработает. Почему?"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:388
+msgid ""
+"The reason the DROP command would not work in this case is because the "
+"*people* table has a Foreign Key constraint to the *streets* table. This "
+"means that dropping (or deleting) the *streets* table would leave the "
+"*people* table with references to non-existent *streets* data."
+msgstr ""
+"Причина, по которой команда DROP не сработает в этом случае, заключается в "
+"том, что таблица *people* имеет ограничение Внешний ключ к таблице "
+"*streets*. Это означает, что удаление таблицы *улицы* приведет к тому, что "
+"таблица *люди* будет содержать ссылки на несуществующие данные *улицы*."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:393
+msgid ""
+"It is possible to 'force' the *streets* table to be deleted by using the "
+"``CASCADE`` command, but this would also delete the *people* and any other "
+"table which had a relationship to the *streets* table. Use with caution!"
+msgstr ""
+"Можно \"принудительно\" удалить таблицу *улицы* с помощью команды "
+"``CASCADE``, но это также приведет к удалению таблицы *люди* и любой другой "
+"таблицы, связанной с таблицей *улицы*. Используйте с осторожностью!"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:398
+msgid ""
+"If you used the same :kbd:`drop table` command on the `people` table, it "
+"would be successful:"
+msgstr ""
+"Если использовать ту же команду :kbd:`drop table` для таблицы `people`, она "
+"будет успешной:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:406
+msgid ""
+"If you actually did enter that command and dropped the :kbd:`people` table, "
+"now would be a good time to rebuild it, as you will need it in the next "
+"exercises."
+msgstr ""
+"Если вы действительно ввели эту команду и сбросили таблицу :kbd:`people`, "
+"сейчас самое время ее восстановить, поскольку она понадобится вам в "
+"следующих упражнениях."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:411
+msgid "A word on pgAdmin III"
+msgstr "Несколько слов о pgAdmin III"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:413
+msgid ""
+"We are showing you the SQL commands from the `psql` prompt because it's a "
+"very useful way to learn about databases. However, there are quicker and "
+"easier ways to do a lot of what we are showing you. Install pgAdmin III and "
+"you can create, drop, alter etc tables using 'point and click' operations in"
+" a GUI."
+msgstr ""
+"Мы показываем вам команды SQL из приглашения `psql`, потому что это очень "
+"полезный способ изучения баз данных. Однако есть более быстрые и простые "
+"способы сделать многое из того, что мы вам показываем. Установите pgAdmin "
+"III, и вы сможете создавать, удалять, изменять и т. д. таблицы с помощью "
+"операций \"укажи и щелкни\" в графическом интерфейсе."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:418
+msgid "Under Ubuntu, you can install it like this:"
+msgstr "В Ubuntu вы можете установить его следующим образом:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:424
+msgid "pgAdmin III will be covered in more detail in another module."
+msgstr "Более подробно pgAdmin III будет рассмотрен в другом модуле."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:427
+msgid "In Conclusion"
+msgstr "В заключение"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:429
+msgid ""
+"You have now seen how to create a brand new database, starting completely "
+"from scratch."
+msgstr ""
+"Теперь вы увидели, как создать совершенно новую базу данных, начиная с нуля."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:433
+msgid "What's Next?"
+msgstr "Что дальше?"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:435
+msgid "Next you'll learn how to use the DBMS to add new data."
+msgstr "Далее вы узнаете, как использовать СУБД для добавления новых данных."
