@@ -261,7 +261,7 @@ Parameters
      - ``A_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Defines the output CRS of the database table
    * - **Reproject to this CRS on output**
 
@@ -269,7 +269,7 @@ Parameters
      - ``T_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Reprojects/transforms to this CRS on output
    * - **Override source CRS**
 
@@ -277,7 +277,7 @@ Parameters
      - ``S_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Overrides the input layer CRS
    * - **Schema (schema name)**
 
@@ -314,7 +314,7 @@ Parameters
      - ``PRIMARY_KEY``
      - [tablefield: any]
 
-       Default: None
+       Default: Not set
      - Defines which attribute field in the exported layer will be
        the primary key of the database table
    * - **Geometry column name**
@@ -366,7 +366,7 @@ Parameters
      - ``SPAT``
      - [extent]
 
-       Default: None
+       Default: Not set
      - You can select features from a given extent that will be in
        the output table.
 
@@ -557,7 +557,7 @@ Parameters
      - ``A_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Defines the output CRS of the database table
    * - **Reproject to this CRS on output**
 
@@ -565,7 +565,7 @@ Parameters
      - ``T_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Reprojects/transforms to this CRS on output
    * - **Override source CRS**
 
@@ -573,7 +573,7 @@ Parameters
      - ``S_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Overrides the input layer CRS
    * - **Host**
 
@@ -649,7 +649,7 @@ Parameters
      - ``PRIMARY_KEY``
      - [tablefield: any]
 
-       Default: None
+       Default: Not set
      - Defines which attribute field in the exported layer will be
        the primary key of the database table
    * - **Geometry column name**
@@ -701,7 +701,7 @@ Parameters
      - ``SPAT``
      - [extent]
 
-       Default: None
+       Default: Not set
      - You can select features from a given extent that will be in
        the output table.
 
