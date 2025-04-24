@@ -199,7 +199,7 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [number: double]
 
        Default: None
      - Sets NoData value for output bands.
@@ -209,7 +209,7 @@ Basic parameters
 
        Optional
      - ``TARGET_RESOLUTION``
-     - [number]
+     - [number: double]
 
        Default: None
      - Defines the output file resolution of reprojection result
