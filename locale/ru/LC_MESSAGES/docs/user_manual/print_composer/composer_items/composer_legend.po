@@ -5,73 +5,716 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Asdfgr Wertyu, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Transifex Bot <>, 2024\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:315
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:5
+msgid "The Legend Item"
+msgstr "Предмет легенды"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:13
+msgid ""
+"The :guilabel:`Legend` item is a box or a table that explains the meanings "
+"of the symbols used on the map. A legend is then bound to a map item. You "
+"can add a legend item with the |addLegend| :guilabel:`Add Legend` tool "
+"following :ref:`items creation instructions <create_layout_item>` and "
+"manipulate it the same way as exposed in :ref:`interact_layout_item`."
+msgstr ""
+"Элемент :guilabel:`Легенда` - это поле или таблица, объясняющая значения "
+"символов, используемых на карте. Легенда привязывается к элементу карты. Вы "
+"можете добавить элемент легенды с помощью инструмента |addLegend| "
+":guilabel:`Добавить легенду`, следуя :ref:`инструкции по созданию "
+"элементов<create_layout_item>`, и манипулировать им так же, как это делается"
+" в :ref:`interact_layout_item`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:318
 msgid "addLegend"
 msgstr "addLegend"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:321
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:19
+msgid ""
+"By default, the legend item displays all available layers and can be refined"
+" using its :guilabel:`Item Properties` panel. Other than the :ref:`items "
+"common properties <item_common_properties>`, this feature has the following "
+"functionalities (see :numref:`figure_layout_legend`):"
+msgstr ""
+"По умолчанию элемент легенды отображает все доступные слои и может быть "
+"уточнен с помощью панели :guilabel:`Свойства элемента`. Помимо :ref:`общих "
+"свойств элементов`, эта функция обладает следующими функциональными "
+"возможностями (см. :numref:`figure_layout_legend`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:32
+msgid "Legend Item Properties Panel"
+msgstr "Панель свойств элементов легенды"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:35
+msgid "Main properties"
+msgstr "Основные свойства"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:37
+msgid ""
+"The :guilabel:`Main properties` group of the legend :guilabel:`Item "
+"Properties` panel provides the following functionalities (see "
+":numref:`figure_layout_legend_ppt`):"
+msgstr ""
+"Группа :guilabel:`Основные свойства` панели легенды :guilabel:`Свойства "
+"элементов` предоставляет следующие функциональные возможности (см. "
+":numref:`figure_layout_legend_ppt`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:45
+msgid "Legend Main properties group"
+msgstr "Легенда Основная группа свойств"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:47
+msgid "In Main properties you can:"
+msgstr "В основных свойствах вы можете:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:49
+msgid ""
+"Change the :guilabel:`Title` of the legend. It can be made dynamic using the"
+" :ref:`data-defined override <data_defined>` setting, useful for example "
+"when generating an atlas;"
+msgstr ""
+"Изменяет :guilabel:`заголовок` легенды. Его можно сделать динамическим с "
+"помощью настройки :ref:`data-defined override<data_defined>`, что полезно, "
+"например, при создании атласа;"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:52
+msgid ""
+"Choose which :guilabel:`Map` item the current legend will refer to. By "
+"default, the map over which the legend item is drawn is picked. If none, "
+"then it falls back to the :ref:`reference map <reference_map>`."
+msgstr ""
+"Выберите, на какой элемент :guilabel:`Map` будет ссылаться текущая легенда. "
+"По умолчанию выбирается карта, над которой нарисован элемент легенды. Если "
+"таковой нет, то происходит возврат к :ref:`карте ссылок<reference_map>`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:56
+msgid ""
+":ref:`Variables <expression_variables>` of the linked map item (@map_id, "
+"@map_scale, @map_extent...) are also accessible from data-defined properties"
+" of the legend."
+msgstr ""
+":ref:`Переменные<expression_variables>` связанного элемента карты (@map_id, "
+"@map_scale, @map_extent...) также доступны из определяемых данными свойств "
+"легенды."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:60
+msgid ""
+"Wrap the text of the legend on a given character: each time the character "
+"appears, it's replaced with a line break;"
+msgstr ""
+"Оберните текст легенды по заданному символу: каждый раз, когда появляется "
+"этот символ, он заменяется переносом строки;"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:62
+msgid ""
+"Set the symbols and text placement in the legend: the "
+":guilabel:`Arrangement` can be :guilabel:`Symbols on left` or "
+":guilabel:`Symbols on right`. The default value depends on the locale in use"
+" (right-to-left based or not)."
+msgstr ""
+"Устанавливает расположение символов и текста в легенде: параметр "
+":guilabel:`Расположение` может быть :guilabel:`Символы слева` или "
+":guilabel:`Символы справа`. Значение по умолчанию зависит от используемой "
+"локали (справа налево или нет)."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:65
+msgid ""
+"Use |checkbox| :guilabel:`Resize to fit contents` to control whether or not "
+"a legend should be automatically resized to fit its contents. If unchecked, "
+"then the legend will never resize and instead just stick to whatever size "
+"the user has set. Any content which doesn't fit the size is cropped out."
+msgstr ""
+"Используйте |checkbox| :guilabel:`Размер под содержимое` для управления тем,"
+" должна ли легенда автоматически изменяться в соответствии с размером ее "
+"содержимого. Если флажок снят, то легенда никогда не будет изменять размер, "
+"а просто будет придерживаться того размера, который задал пользователь. "
+"Любое содержимое, не соответствующее размеру, будет обрезано."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:324
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:319
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:72
+msgid "Legend items"
+msgstr "Предметы легенды"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:74
+msgid ""
+"The :guilabel:`Legend items` group of the legend :guilabel:`Item Properties`"
+" panel provides the following functionalities (see "
+":numref:`figure_layout_legend_items`):"
+msgstr ""
+"Группа :guilabel:`Легенда элементов` панели легенды :guilabel:`Свойства "
+"элементов` предоставляет следующие функциональные возможности (см. "
+":numref:`figure_layout_legend_items`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:82
+msgid "Legend Items group"
+msgstr "Группа элементов легенды"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:84
+msgid ""
+"The legend will be updated automatically if |checkbox| :guilabel:`Auto "
+"update` is checked. When :guilabel:`Auto update` is unchecked this will give"
+" you more control over the legend items. All the icons below the legend "
+"items list will be activated."
+msgstr ""
+"Легенда будет обновляться автоматически, если установлен флажок |checkbox| "
+":guilabel:`Автообновление`. Если флажок :guilabel:`Автообновление` снят, это"
+" даст вам больше контроля над элементами легенды. Все значки под списком "
+"элементов легенды будут активированы."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:88
+msgid ""
+"The legend items window lists all legend items and allows you to change item"
+" order, group layers, remove and restore items in the list, edit layer names"
+" and symbology and add a filter."
+msgstr ""
+"Окно элементов легенды содержит список всех элементов легенды и позволяет "
+"изменять порядок элементов, группировать слои, удалять и восстанавливать "
+"элементы в списке, редактировать имена слоев и символы, а также добавлять "
+"фильтр."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:92
+msgid ""
+"Use the |expandTree| :sup:`Expand all` and |collapseTree| :sup:`Collapse "
+"all` buttons to respectively expand or collapse all the groups and subgroups"
+" in the legend tree. Ensure that the :guilabel:`Auto update` is unchecked to"
+" use these buttons."
+msgstr ""
+"Используйте кнопки |expandTree| :sup:`Расширить все` и |collapseTree| "
+":sup:`Свернуть все`, чтобы соответственно развернуть или свернуть все группы"
+" и подгруппы в дереве легенды. Убедитесь, что флажок "
+":guilabel:`Автообновление` снят, чтобы использовать эти кнопки."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:328
+msgid "expandTree"
+msgstr "expandTree"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:326
+msgid "collapseTree"
+msgstr "collapseTree"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:95
+msgid ""
+"The item order can be changed using the |arrowUp| and |arrowDown| buttons or"
+" with 'drag-and-drop' functionality. The order can not be changed for WMS "
+"legend graphics."
+msgstr ""
+"Порядок элементов можно изменить с помощью кнопок |arrowUp| и |arrowDown| "
+"или с помощью функции \"перетаскивания\". Порядок не может быть изменен для "
+"графики легенды WMS."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:322
 msgid "arrowUp"
 msgstr "arrowUp"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:317
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:320
 msgid "arrowDown"
 msgstr "arrowDown"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:313
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:98
+msgid "Use the |addGroup| button to add a legend group."
+msgstr "Используйте кнопку |addGroup|, чтобы добавить группу легенд."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:316
 msgid "addGroup"
 msgstr "addGroup"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:331
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:99
+msgid ""
+"Use the |symbologyAdd| button to add layers and |symbologyRemove| button to "
+"remove groups, layers or symbol classes."
+msgstr ""
+"Используйте кнопку |symbologyAdd| для добавления слоев и |symbologyRemove| "
+"для удаления групп, слоев или классов символов."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:338
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:335
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:342
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:333
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:101
+msgid ""
+"The |symbologyEdit| button is used to edit the layer, group name or title. "
+"First you need to select the legend item. Double-clicking the item also "
+"opens the text box to rename it."
+msgstr ""
+"Кнопка |symbologyEdit| используется для редактирования названия слоя, группы"
+" или заголовка. Сначала необходимо выбрать элемент легенды. Двойной щелчок "
+"по элементу также открывает текстовое поле для его переименования."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:340
 msgid "symbologyEdit"
 msgstr "symbologyEdit"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:323
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:104
+msgid ""
+"The |expression| button uses expressions to customize each symbol label of "
+"the selected layer (see :ref:`legend_items_data_defined`)"
+msgstr ""
+"Кнопка |expression| использует выражения для настройки каждой метки символа "
+"выбранного слоя (см. :ref:`legend_items_data_defined`)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:330
 msgid "expression"
 msgstr "expression"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:329
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:106
+msgid "The |sum| button adds a feature count for each class of vector layer."
+msgstr ""
+"Кнопка |sum| добавляет количество признаков для каждого класса векторного "
+"слоя."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:336
 msgid "sum"
 msgstr "sum"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:325
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:107
+msgid ""
+"The |expressionFilter| :sup:`Filter legend by expression` helps you filter "
+"which of the legend items of a layer will be displayed, i.e. using a layer "
+"that has different legend items (e.g., from a rule-based or categorized "
+"symbology), you can specify a boolean expression to remove from the legend "
+"tree, styles that have no feature satisfying a condition. Note that the "
+"features are nevertheless kept and shown in the layout map item."
+msgstr ""
+"Фильтр |expressionFilter| :sup:`Фильтровать легенду по выражению` помогает "
+"отфильтровать, какие элементы легенды слоя будут отображены, т. е. используя"
+" слой, имеющий различные элементы легенды (например, основанные на правилах "
+"или категоризированной симбологии), вы можете указать логическое выражение "
+"для удаления из дерева легенд стилей, в которых нет признаков, "
+"удовлетворяющих условию. Обратите внимание, что особенности, тем не менее, "
+"сохраняются и отображаются в элементе карты раскладки."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:332
 msgid "expressionFilter"
 msgstr "expressionFilter"
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:155
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:114
+msgid ""
+"While the default behavior of the legend item is to mimic the "
+":guilabel:`Layers` panel tree, displaying the same groups, layers and "
+"classes of symbology, right-click any item offers you options to hide "
+"layer's name or raise it as a group or subgroup. In case you have made some "
+"changes to a layer, you can revert them by choosing :guilabel:`Reset to "
+"defaults` from the contextual menu of the legend entry."
+msgstr ""
+"Хотя по умолчанию элемент легенды имитирует дерево панели :guilabel:`Слои`, "
+"отображая те же группы, слои и классы символики, щелчок правой кнопкой мыши "
+"на любом элементе позволяет скрыть название слоя или поднять его как группу "
+"или подгруппу. Если вы внесли изменения в слой, вы можете вернуть их, выбрав"
+" :guilabel:`Сбросить к значениям по умолчанию` из контекстного меню элемента"
+" легенды."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:121
+msgid ""
+"After changing the symbology in the QGIS main window, you can click on "
+":guilabel:`Update All` to adapt the changes in the legend element of the "
+"print layout."
+msgstr ""
+"После изменения символики в главном окне QGIS вы можете нажать на "
+":guilabel:`Обновить все`, чтобы адаптировать изменения в элементе легенды "
+"макета печати."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:125
+msgid ""
+"With the |checkbox| :guilabel:`Only show items inside linked maps`, only the"
+" legend items visible in the linked map will be listed in the legend. If you"
+" have more than one map you can click on :guilabel:`...` and select other "
+"maps from your layout. This tool remains available when |checkbox| "
+":guilabel:`Auto-update` is active."
+msgstr ""
+"Если установить флажок |checkbox| :guilabel:`Отображать только элементы "
+"внутри связанных карт`, в легенде будут отображаться только элементы "
+"легенды, видимые на связанной карте. Если у вас более одной карты, вы можете"
+" нажать на :guilabel:`...` и выбрать другие карты из вашего макета. Этот "
+"инструмент остается доступным, если активен флажок |checkbox| "
+":guilabel:`Автообновление`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:130
+msgid ""
+"While generating an atlas with polygon features, you can filter out legend "
+"items that lie outside the current atlas feature. To do that, check the "
+"|checkbox| :guilabel:`Only show items inside current atlas feature` option."
+msgstr ""
+"При создании атласа с полигональными характеристиками можно отфильтровать "
+"элементы легенды, которые находятся за пределами текущей характеристики "
+"атласа. Для этого отметьте опцию |checkbox| :guilabel:`Отображать элементы "
+"только внутри текущей черты атласа`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:137
+msgid "Data-define the legend labels"
+msgstr "Определите данные для меток легенды"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:139
+msgid ""
+"|expression| allows you to add :ref:`expressions <vector_expressions>` to "
+"each symbol label of a given layer. New variables (``@symbol_label``, "
+"``@symbol_id`` and ``@symbol_count``) help you interact with the legend "
+"entry."
+msgstr ""
+"|expression| позволяет добавлять :ref:`выражения<vector_expressions>` к "
+"каждой метке символа данного слоя. Новые переменные (``@symbol_label``, "
+"``@symbol_id`` и ``@symbol_count``) помогают взаимодействовать с записью "
+"легенды."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:143
+msgid ""
+"For example, given a ``regions`` layer categorized by its ``type`` field, "
+"you can append to each class in the legend their number of features and "
+"total area, e.g. ``Borough (3) - 850ha``:"
+msgstr ""
+"Например, если слой ``регионов`` классифицирован по полю ``тип``, вы можете "
+"добавить к каждому классу в легенде количество объектов и общую площадь, "
+"например, ``Борро (3) - 850 га``:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:147
+msgid "Select the layer entry in the legend tree"
+msgstr "Выберите элемент слоя в дереве легенд"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:148
+msgid ""
+"Press the |expression| button, opening the :guilabel:`Expression String "
+"Builder` dialog"
+msgstr ""
+"Нажмите кнопку |expression|, открыв диалог :guilabel:`Построитель строк "
+"выражений`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:150
+msgid ""
+"Enter the following expression (*assuming symbol labels have not been "
+"edited*)::"
+msgstr ""
+"Введите следующее выражение (*при условии, что метки символов не были "
+"отредактированы*)::"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:158
 msgid "Press :guilabel:`OK`"
 msgstr "Кликните :guilabel:`OK`."
 
-#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:327
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:163
+msgid "Customizing legend items"
+msgstr "Настройка элементов легенды"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:170
+msgid ""
+"Legend items can also be customized individually in the :guilabel:`Legend "
+"Items Properties`. But these customization can only be done with |checkbox| "
+":guilabel:`Auto update` disabled."
+msgstr ""
+"Элементы легенды также могут быть настроены индивидуально в "
+":guilabel:`Свойства элементов легенды`. Но эти настройки можно выполнить "
+"только при отключенном флажке |checkbox| :guilabel:`Автообновление`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:173
+msgid ""
+"Double-clicking on an item or pressing |symbologyEdit| :sup:`Edit selected "
+"item properties` allows for futher customization."
+msgstr ""
+"Двойной щелчок на элементе или нажатие кнопки |symbologyEdit| "
+":sup:`Редактировать свойства выбранного элемента` позволяет выполнить "
+"дальнейшую настройку."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:176
+msgid ":guilabel:`Label`"
+msgstr ":guilabel:`Метки`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:178
+#, python-format
+msgid ""
+"For all item types it allows to modify the label text by typing in or by "
+"inserting expressions using the |expression| :guilabel:`Insert or Edit an "
+"Expression`. Expressions can also be added directly anywhere in the item's "
+"label by using the [% expression %] notation."
+msgstr ""
+"Для всех типов элементов он позволяет изменять текст метки, вводя или "
+"вставляя выражения с помощью команды |expression| :guilabel:`Вставить или "
+"отредактировать выражение`. Выражения также могут быть добавлены "
+"непосредственно в любое место метки элемента с помощью нотации [% expression"
+" %]."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:183
+msgid ":guilabel:`Columns`"
+msgstr ":guilabel:`Колонки`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:185
+msgid ""
+"The Legend Item Property also allows you to control the column splitting "
+"behaviour by forcing the column split to occur after a specific item or all "
+"symbols of a layer. Automatic splitting of a layer and its child can also be"
+" allowed or blocked on a layer-basis in this widget."
+msgstr ""
+"Свойство \"Элемент легенды\" также позволяет управлять поведением разделения"
+" столбцов, заставляя разделение столбцов происходить после определенного "
+"элемента или всех символов слоя. Автоматическое разделение слоя и его "
+"дочерних элементов также может быть разрешено или заблокировано на основе "
+"слоя в этом виджете."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:189
+msgid ":guilabel:`Patch`"
+msgstr ":guilabel:`Заплатка`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:191
+msgid ""
+"For items with a symbol, the Legend Item Property allows you to specify the "
+"maximum height and width that a symbol can occupy."
+msgstr ""
+"Для элементов с символом свойство \"Элемент легенды\" позволяет указать "
+"максимальную высоту и ширину, которую может занимать символ."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:194
+msgid ""
+"For vector symbols, you can specify a custom shape for the symbol. The "
+"shapes are usually defined by an expression to represent the geometry in a "
+"simple plane, but those symbols can also be saved in the style manager and "
+"imported later. The default symbol for each geometry type can also be "
+"controlled via the style manager."
+msgstr ""
+"Для векторных символов можно задать пользовательскую форму. Обычно формы "
+"определяются выражением для представления геометрии в простой плоскости, но "
+"эти символы можно также сохранить в менеджере стилей и импортировать позже. "
+"Символом по умолчанию для каждого типа геометрии также можно управлять с "
+"помощью менеджера стилей."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:199
+msgid ":guilabel:`Custom Symbol`"
+msgstr ":guilabel:`Заказной символ`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:201
+msgid ""
+"A custom symbol can also be specified for vector symbols. This can be useful"
+" to tweak the render of a specific symbol, to enhance it in the legend or "
+"have a symbol independent from its true symbol preview. This custom symbol "
+"will override the legend symbol, but will take into account the symbol "
+":guilabel:`Patch` specified."
+msgstr ""
+"Для векторных символов также можно указать пользовательский символ. Это "
+"может быть полезно для настройки рендеринга определенного символа, для "
+"улучшения его в легенде или для того, чтобы символ не зависел от его "
+"истинного предварительного просмотра. Этот пользовательский символ будет "
+"переопределять символ легенды, но будет учитывать указанный символ "
+":guilabel:`Заплатка`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:207
+msgid "Fonts and text formatting"
+msgstr "Шрифты и форматирование текста"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:209
+msgid ""
+"The :guilabel:`Fonts and text formatting` group of the legend "
+":guilabel:`Item Properties` panel provides the following functionalities:"
+msgstr ""
+"Группа :guilabel:`Шрифты и форматирование текста` панели легенды "
+":guilabel:`Свойства элемента` предоставляет следующие функциональные "
+"возможности:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:217
+msgid "Legend Fonts properties"
+msgstr "Свойства шрифтов легенды"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:219
+msgid ""
+"You can change the font of the legend title, group, subgroup and item "
+"(feature) in the legend item using the :ref:`font selector <font_selector>` "
+"widget, providing all the capabilities of :ref:`text formatting "
+"<text_format>` (font spacing control, mixed HTML formatting, coloring, "
+"blending, background, text buffer, shadow, ...)"
+msgstr ""
+"Вы можете изменить шрифт заголовка легенды, группы, подгруппы и элемента "
+"(характеристики) в элементе легенды с помощью виджета :ref:`шрифт "
+"селектор<font_selector>`, предоставляющего все возможности "
+":ref:`форматирование текста<text_format>` (управление интервалом между "
+"шрифтами, смешанное HTML-форматирование, раскраска, смешивание, фон, "
+"текстовый буфер, тень, ...)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:223
+msgid ""
+"For each of these levels you can set the text :guilabel:`Alignment`: it can "
+"be :guilabel:`Left` (default for left-to-right based locales), "
+":guilabel:`Center` or :guilabel:`Right` (default for right-to-left based "
+"locales)."
+msgstr ""
+"Для каждого из этих уровней вы можете задать текст :guilabel:`Выравнивание`:"
+" это может быть :guilabel:`Левый` (по умолчанию для локалей, основанных на "
+"лево-правой ориентации), :guilabel:`Центр` или :guilabel:`Правый` (по "
+"умолчанию для локалей, основанных на право-левой ориентации)."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:229
+msgid "Columns"
+msgstr "Колонны"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:231
+msgid ""
+"Under the :guilabel:`Columns` group of the legend :guilabel:`Item "
+"Properties` panel, legend items can be arranged over several columns:"
+msgstr ""
+"В группе :guilabel:`Колонки` панели легенды :guilabel:`Свойства элемента` "
+"элементы легенды могут быть расположены в нескольких колонках:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:234
+msgid ""
+"Set the number of columns in the :guilabel:`Count` |selectNumber| field. "
+"This value can be made dynamic e.g., following atlas features, legend "
+"contents, the frame size..."
+msgstr ""
+"Устанавливает количество столбцов в поле :guilabel:`Счет` |selectNumber|. "
+"Это значение можно сделать динамическим, например, в соответствии с "
+"особенностями атласа, содержанием легенды, размером рамки..."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:334
 msgid "selectNumber"
 msgstr "selectNumber"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:237
+msgid ""
+"|checkbox| :guilabel:`Equal column widths` sets how legend columns should be"
+" adjusted."
+msgstr ""
+"|checkbox| :guilabel:`Равная ширина столбцов` устанавливает, как должны быть"
+" настроены столбцы легенды."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:239
+msgid ""
+"The |checkbox| :guilabel:`Split layers` option allows a categorized or a "
+"graduated layer legend to be divided between columns."
+msgstr ""
+"Опция |checkbox| :guilabel:`Разделить слои` позволяет разделить легенду "
+"категоризированного или градуированного слоя между колонками."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:247
+msgid "Legend Columns settings"
+msgstr "Настройки столбцов легенды"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:251
+msgid "Symbol"
+msgstr "Символ"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:253
+msgid ""
+"The :guilabel:`Symbol` group of the legend :guilabel:`Item Properties` panel"
+" configures the size of symbols displayed next to the legend labels. You "
+"can:"
+msgstr ""
+"Группа :guilabel:`Символ` панели легенды :guilabel:`Свойства элемента` "
+"настраивает размер символов, отображаемых рядом с метками легенды. Вы "
+"можете:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:257
+msgid "Set the :guilabel:`Symbol width` and :guilabel:`Symbol height`"
+msgstr "Установите ширину :guilabel:`символ` и высоту :guilabel:`символ`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:258
+msgid ""
+"Set the markers' :guilabel:`Min symbol size` and :guilabel:`Max symbol "
+"size`: ``0.00mm`` means there is no value set."
+msgstr ""
+"Установите для маркеров :guilabel:`Минимальный размер символа` и "
+":guilabel:`Максимальный размер символа`: ``0,00 мм`` означает, что значение "
+"не установлено."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:260
+msgid ""
+"|checkbox| :guilabel:`Draw stroke for raster symbols`: this adds an outline "
+"to the symbol representing the band color of the raster layer; you can set "
+"both the :guilabel:`Stroke color` and :guilabel:`Tickness`."
+msgstr ""
+"|checkbox| :guilabel:`Нарисовать обводку для растровых символов`: добавляет "
+"контур к символу, представляющий цвет полосы растрового слоя; вы можете "
+"установить как :guilabel:`Цвет обводки`, так и :guilabel:`Толщину`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:269
+msgid "Legend Symbol configuration"
+msgstr "Легенда Конфигурация символа"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:273
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:284
+msgid "WMS LegendGraphic"
+msgstr "WMS ЛегендаГрафик"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:275
+msgid ""
+"The :guilabel:`WMS LegendGraphic` section of the legend :guilabel:`Item "
+"Properties` panel provide the following functionalities (see "
+":numref:`figure_layout_legend_wms`):"
+msgstr ""
+"Раздел :guilabel:`WMS LegendGraphic` панели легенды :guilabel:`Свойства "
+"элемента` предоставляет следующие функциональные возможности (см. "
+":numref:`figure_layout_legend_wms`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:286
+msgid ""
+"When you have added a WMS layer and you insert a legend item, a request will"
+" be sent to the WMS server to provide a WMS legend. This Legend will only be"
+" shown if the WMS server provides the GetLegendGraphic capability. The WMS "
+"legend content will be provided as a raster image."
+msgstr ""
+"Когда вы добавили слой WMS и вставили элемент легенды, на сервер WMS будет "
+"отправлен запрос на предоставление легенды WMS. Легенда будет показана "
+"только в том случае, если сервер WMS предоставляет возможность "
+"GetLegendGraphic. Содержимое легенды WMS будет предоставлено в виде "
+"растрового изображения."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:291
+msgid ""
+":guilabel:`WMS LegendGraphic` is used to be able to adjust the "
+":guilabel:`Legend width` and the :guilabel:`Legend height` of the WMS legend"
+" raster image."
+msgstr ""
+":guilabel:`WMS LegendGraphic` используется для настройки ширины "
+":guilabel:`Ширина легенды` и высоты :guilabel:`Высота легенды` растрового "
+"изображения легенды WMS."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:295
+msgid "Spacing"
+msgstr "Расстояние"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:303
+msgid ""
+"The :guilabel:`Spacing` section allows you to customize the spacing within "
+"the legend. Spacing can greatly help denote the groupement of items in the "
+"legend and their relation."
+msgstr ""
+"Раздел :guilabel:`Расстояние` позволяет настроить интервал между элементами "
+"легенды. Расстояние между элементами может значительно помочь обозначить "
+"группировку элементов в легенде и их взаимосвязь."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:306
+msgid ""
+":guilabel:`Spacing` around and before title, groups, subgroups, symbols, "
+"labels, boxes, columns and lines can be customized through this dialog."
+msgstr ""
+":guilabel:`Расстояние` вокруг и перед заголовком, группами, подгруппами, "
+"символами, метками, рамками, столбцами и линиями можно настроить с помощью "
+"этого диалога."
