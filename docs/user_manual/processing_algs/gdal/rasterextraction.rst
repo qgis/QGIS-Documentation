@@ -61,7 +61,7 @@ Basic parameters
      - ``NODATA``
      - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Clipped (extent)**
@@ -121,7 +121,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -209,7 +209,7 @@ Basic parameters
      - ``NODATA``
      - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Create an output alpha band**
@@ -243,7 +243,7 @@ Basic parameters
      - ``X_RESOLUTION``
      - [numeric: double]
 
-       Default: None
+       Default: Not set
      - The width of the cells in the output raster
    * - **Y Resolution to output band**
 
@@ -251,7 +251,7 @@ Basic parameters
      - ``Y_RESOLUTION``
      - [numeric: double]
 
-       Default: None
+       Default: Not set
      - The height of the cells in the output raster
    * - **Use multithreaded warping implementation**
      - ``MULTITHREADING``
@@ -318,7 +318,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -449,7 +449,7 @@ Advanced parameters
      - ``NODATA``
      - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Additional command-line parameters**
@@ -458,7 +458,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options.
        Refer to the corresponding GDAL utility documentation.
 
@@ -600,7 +600,7 @@ Advanced parameters
      - ``NODATA``
      - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Additional command-line parameters**
@@ -609,7 +609,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options.
        Refer to the corresponding GDAL utility documentation.
 

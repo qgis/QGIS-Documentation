@@ -51,7 +51,7 @@ Basic parameters
      - ``FIELD``
      - [tablefield: any]
 
-       Default: None
+       Default: Not set
      - Field to use for dissolving
    * - **Dissolve results**
      - ``DISSOLVE``
@@ -601,7 +601,7 @@ Basic parameters
      - ``FIELD``
      - [tablefield: any]
 
-       Default: None
+       Default: Not set
      - Field to use for dissolving
    * - **Dissolve all results**
      - ``DISSOLVE``

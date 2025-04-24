@@ -107,7 +107,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -232,7 +232,7 @@ Advanced parameters
      - ``ASSIGN_CRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Overrides the projection for the output file.
        No reprojection is done.
    * - **Resampling algorithm**
@@ -256,13 +256,13 @@ Advanced parameters
      - ``SRC_NODATA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Space separated NoData value(s) for input band(s)
    * - **Additional command-line parameters**
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -428,7 +428,7 @@ Advanced parameters
      - ``SOURCE_CRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      -
    * - **Transparency value to assign to the input data**
 
@@ -593,7 +593,7 @@ Advanced parameters
      - ``NODATA_INPUT``
      - [number: double]
 
-       Default: None
+       Default: Not set
      - Ignores pixels from files being merged in with this pixel value
    * - **Assign specified "NoData" value to output**
 
@@ -601,7 +601,7 @@ Advanced parameters
      - ``NODATA_OUTPUT``
      - [number: double]
 
-       Default: None
+       Default: Not set
      - Assigns the specified NoData value to output bands.
    * - **Additional creation options**
 
@@ -622,7 +622,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -742,7 +742,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -816,7 +816,7 @@ Basic parameters
      - ``INPUT_B``
      - [raster]
 
-       Default: None
+       Default: Not set
      - Second input raster layer
    * - **Number of raster band for B**
 
@@ -830,7 +830,7 @@ Basic parameters
      - ``INPUT_C``
      - [raster]
 
-       Default: None
+       Default: Not set
      - Third input raster layer
    * - **Number of raster band for C**
 
@@ -844,7 +844,7 @@ Basic parameters
      - ``INPUT_D``
      - [raster]
 
-       Default: None
+       Default: Not set
      - Fourth input raster layer
    * - **Number of raster band for D**
 
@@ -858,7 +858,7 @@ Basic parameters
      - ``INPUT_E``
      - [raster]
 
-       Default: None
+       Default: Not set
      - Fifth input raster layer
    * - **Number of raster band for E**
 
@@ -878,7 +878,7 @@ Basic parameters
      - ``BAND_F``
      - [raster band]
 
-       Default: None
+       Default: Not set
      - Band for input layer F
    * - **Calculation in gdalnumeric syntax using +-/\* or any numpy array functions (i.e. logical_and())**
      - ``FORMULA``
@@ -906,7 +906,7 @@ Basic parameters
      - ``NO_DATA``
      - [number: double]
 
-       Default: None
+       Default: Not set
      - Value to use for NoData
    * - **Handling of extent differences**
      - ``EXTENT_OPT``
@@ -1107,7 +1107,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -1233,7 +1233,7 @@ Advanced parameters
      - ``SOURCE_CRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      -
    * - **Resampling method**
      - ``RESAMPLING``
@@ -1571,7 +1571,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
