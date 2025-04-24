@@ -44,7 +44,7 @@ Parameters
      - ``NODATA_INPUT``
      - [numeric: integer]
 
-       Default: None
+       Default: Not set
      - Input pixel value to treat as "NoData" (GDAL >= 3.7).
    * - **Destination NoData**
 
@@ -52,7 +52,7 @@ Parameters
      - ``NODATA_OUTPUT``
      - [numeric: integer]
 
-       Default: None
+       Default: Not set
      - Assign specified "NoData" value to output (GDAL >= 3.7).
    * - **Do not output NoData values**
      - ``SKIP_NODATA``
@@ -268,7 +268,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -331,7 +331,7 @@ Basic parameters
      - ``BANDS``
      - [raster band] [list]
 
-       Default: None
+       Default: Not set
      - Ordered list of the bands to use to create the new raster
    * - **Converted**
      - ``OUTPUT``
@@ -583,7 +583,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
    * - **Output data type**
      - ``DATA_TYPE``

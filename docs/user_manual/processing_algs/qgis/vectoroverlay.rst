@@ -464,7 +464,7 @@ Basic parameters
      - ``INPUT_FIELDS``
      - [tablefield: any] [list]
 
-       Default: None
+       Default: Not set
      - Field(s) of the input layer to keep in the output.
        If no fields are chosen all fields are taken.
    * - **Overlay fields to keep (leave empty to keep all fields)**
@@ -473,7 +473,7 @@ Basic parameters
      - ``OVERLAY_FIELDS``
      - [tablefield: any] [list]
 
-       Default: None
+       Default: Not set
      - Field(s) of the overlay layer to keep in the output.
        If no fields are chosen all fields are taken.
        Duplicate field names will be appended a count suffix to avoid collision.
@@ -694,7 +694,7 @@ Basic parameters
      - ``INPUT_FIELDS``
      - [tablefield: any] [list]
        
-       Default: None
+       Default: Not set
      - Field(s) of the input layer to keep in the output.
        If no fields are chosen all fields are taken.
    * - **Intersect fields to keep (leave empty to keep all fields)**
@@ -703,7 +703,7 @@ Basic parameters
      - ``INTERSECT_FIELDS``
      - [tablefield: any] [list]
        
-       Default: None
+       Default: Not set
      - Field(s) of the intersect layer to keep in the output.
        If no fields are chosen all fields are taken.
        Duplicate field names will be appended a count suffix to avoid collision.

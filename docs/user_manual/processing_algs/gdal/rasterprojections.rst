@@ -201,7 +201,7 @@ Basic parameters
      - ``NODATA``
      - [number: double]
 
-       Default: None
+       Default: Not set
      - Sets NoData value for output bands.
        If not provided, then NoData values will be copied from
        the source dataset.
@@ -211,7 +211,7 @@ Basic parameters
      - ``TARGET_RESOLUTION``
      - [number: double]
 
-       Default: None
+       Default: Not set
      - Defines the output file resolution of reprojection result
    * - **Reprojected**
      - ``OUTPUT``
@@ -304,7 +304,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options.
 
 Outputs
