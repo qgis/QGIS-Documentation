@@ -127,7 +127,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -305,7 +305,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -485,7 +485,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -671,7 +671,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -829,7 +829,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -991,7 +991,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -1132,7 +1132,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -1279,7 +1279,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -1420,7 +1420,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -1570,7 +1570,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -1710,7 +1710,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -1899,7 +1899,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -2137,7 +2137,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -2307,7 +2307,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -3400,7 +3400,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -3544,7 +3544,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -3673,7 +3673,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -3811,7 +3811,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
