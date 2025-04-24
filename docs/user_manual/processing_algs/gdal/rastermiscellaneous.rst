@@ -434,7 +434,7 @@ Advanced parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      -
@@ -591,7 +591,7 @@ Advanced parameters
 
        Optional
      - ``NODATA_INPUT``
-     - [number]
+     - [number: double]
 
        Default: None
      - Ignores pixels from files being merged in with this pixel value
@@ -599,7 +599,7 @@ Advanced parameters
 
        Optional
      - ``NODATA_OUTPUT``
-     - [number]
+     - [number: double]
 
        Default: None
      - Assigns the specified NoData value to output bands.
@@ -904,7 +904,7 @@ Basic parameters
 
        Optional
      - ``NO_DATA``
-     - [number]
+     - [number: double]
 
        Default: None
      - Value to use for NoData
@@ -1170,25 +1170,25 @@ Basic parameters
      - The input raster files
    * - **Tile width**
      - ``TILE_SIZE_X``
-     - [number]
+     - [number: integer]
 
        Default: 256
      - Width of the tiles in pixels (minimum 0)
    * - **Tile height**
      - ``TILE_SIZE_Y``
-     - [number]
+     - [number: integer]
 
        Default: 256
      - Height of the tiles in pixels (minimum 0)
    * - **Overlap in pixels between consecutive tiles**
      - ``OVERLAP``
-     - [number]
+     - [number: integer]
 
        Default: 0
      -
    * - **Number of pyramid levels to build**
      - ``LEVELS``
-     - [number]
+     - [number: integer]
 
        Default: 1
      - Minimum: 0
@@ -1512,19 +1512,19 @@ Basic parameters
      - The location of the observer
    * - **Observer height**
      - ``OBSERVER_HEIGHT``
-     - [number]
+     - [number: double]
 
        Default: 1.0
      - The altitude of the observer, in the DEM units
    * - **Target height**
      - ``TARGET_HEIGHT``
-     - [number]
+     - [number: double]
 
        Default: 1.0
      - The altitude of the target element, in the DEM units
    * - **Maximum distance from observer to compute visibility**
      - ``MAX_DISTANCE``
-     - [number]
+     - [number: double]
 
        Default: 100.0
      - Maximum distance from observer to compute visibility,

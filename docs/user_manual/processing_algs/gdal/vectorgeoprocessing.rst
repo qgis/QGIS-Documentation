@@ -31,7 +31,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - The input vector layer
    * - **Geometry column name**
      - ``GEOMETRY``
@@ -41,7 +41,7 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Buffer distance**
      - ``DISTANCE``
-     - [number]
+     - [number: double]
 
        Default: 10.0
      - Minimum: 0.0
@@ -152,7 +152,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - The input vector layer
    * - **Clip extent**
      - ``EXTENT``
@@ -248,7 +248,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - The input vector layer
    * - **Mask layer**
      - ``MASK``
@@ -338,7 +338,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - The input layer to dissolve
    * - **Dissolve field**
 
@@ -487,7 +487,7 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Offset distance (left-sided: positive, right-sided: negative)**
      - ``DISTANCE``
-     - [number]
+     - [number: double]
 
        Default: 10.0
      -
@@ -582,7 +582,7 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Buffer distance**
      - ``DISTANCE``
-     - [number]
+     - [number: double]
 
        Default: 10.0
      -
@@ -709,9 +709,9 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Distance from line start represented as a fraction of line length**
      - ``DISTANCE``
-     - [number]
+     - [number: double]
 
-       Default: 0.5 (middle of the line)
+       Default: 0.5
      -
    * - **Points along lines**
      - ``OUTPUT``

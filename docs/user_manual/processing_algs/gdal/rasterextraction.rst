@@ -59,7 +59,7 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: None
      - Defines a value that should be inserted for the NoData
@@ -207,7 +207,7 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: None
      - Defines a value that should be inserted for the NoData
@@ -241,7 +241,7 @@ Basic parameters
 
        Optional
      - ``X_RESOLUTION``
-     - [number]
+     - [numeric: double]
 
        Default: None
      - The width of the cells in the output raster
@@ -249,7 +249,7 @@ Basic parameters
 
        Optional
      - ``Y_RESOLUTION``
-     - [number]
+     - [numeric: double]
 
        Default: None
      - The height of the cells in the output raster
@@ -386,7 +386,7 @@ Basic parameters
      - Raster band to create the contours from
    * - **Interval between contour lines**
      - ``INTERVAL``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      - Defines the interval between the contour lines in the given
@@ -403,7 +403,7 @@ Basic parameters
 
        Optional
      - ``OFFSET``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      -
@@ -447,7 +447,7 @@ Advanced parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: None
      - Defines a value that should be inserted for the NoData
@@ -525,7 +525,7 @@ Basic parameters
      - Raster band to create the contours from
    * - **Interval between contour lines**
      - ``INTERVAL``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      - Defines the interval between the contour lines in the given
@@ -534,7 +534,7 @@ Basic parameters
 
        Optional
      - ``OFFSET``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      -
@@ -598,7 +598,7 @@ Advanced parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: None
      - Defines a value that should be inserted for the NoData

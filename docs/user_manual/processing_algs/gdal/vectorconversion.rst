@@ -12,8 +12,7 @@ Vector conversion
 
 Convert format
 --------------
-Converts any OGR-supported vector layer into another OGR-supported
-format.
+Converts any OGR-supported vector layer into another OGR-supported format.
 
 This algorithm is derived from the
 `ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.
@@ -132,7 +131,7 @@ Basic parameters
       - Description
    *  - **Input layer**
       - ``INPUT``
-      - [vector: any]
+      - [vector: geometry]
       - Input vector layer
    *  - **Input raster layer**
       - ``INPUT_RASTER``
@@ -227,7 +226,7 @@ Basic parameters
       - Description
    *  - **Input layer**
       - ``INPUT``
-      - [vector: any]
+      - [vector: geometry]
       - Input vector layer
    *  - **Input raster layer**
       - ``INPUT_RASTER``
@@ -235,7 +234,7 @@ Basic parameters
       - Input raster layer
    *  - **A fixed value to burn**
       - ``BURN``
-      - [number]
+      - [number: double]
 
         Default: 0.0
       - The value to burn
@@ -298,8 +297,7 @@ Python code
 
 Rasterize (vector to raster)
 ----------------------------
-Converts vector geometries (points, lines and polygons) into a raster
-image.
+Converts vector geometries (points, lines and polygons) into a raster image.
 
 This algorithm is derived from the
 `GDAL rasterize utility <https://gdal.org/en/latest/programs/gdal_rasterize.html>`_.
@@ -323,7 +321,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Field to use for a burn-in value**
 
@@ -336,7 +334,7 @@ Basic parameters
 
        Optional
      - ``BURN``
-     - [number]
+     - [number: double]
 
        Default: 0.0
      - A fixed value to burn into a band for all features.
@@ -361,7 +359,7 @@ Basic parameters
 
    * - **Width/Horizontal resolution**
      - ``WIDTH``
-     - [number]
+     - [number: double]
 
        Default: 0.0
      - Sets the width (if size units is "Pixels") or horizontal
@@ -369,7 +367,7 @@ Basic parameters
        output raster. Minimum value: 0.0.
    * - **Height/Vertical resolution**
      - ``HEIGHT``
-     - [number]
+     - [number: double]
 
        Default: 0.0
      - Sets the height (if size units is "Pixels") or vertical
@@ -392,7 +390,7 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [number: double]
 
        Default: 0.0
      - Assigns a specified NoData value to output bands
@@ -456,7 +454,7 @@ Advanced parameters
 
        Optional
      - ``INIT``
-     - [number]
+     - [number: double]
      - Pre-initializes the output image bands with this value.
        Not marked as the NoData value in the output file.
        The same value is used in all the bands.
