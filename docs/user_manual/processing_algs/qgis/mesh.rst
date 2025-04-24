@@ -49,7 +49,7 @@ Parameters
      - ``INCREMENT``
      - [numeric: double]
 
-       Default: *Not set*
+       Default: Not set
      - Interval between generated levels.
    * - **Minimum contour level**
 
@@ -57,7 +57,7 @@ Parameters
      - ``MINIMUM``
      - [numeric: double]
 
-       Default: *Not set*
+       Default: Not set
      - Starting level values of contours.
        No generated levels will be lower than this value.
    * - **Maximum contour level**
@@ -66,7 +66,7 @@ Parameters
      - ``MAXIMUM``
      - [numeric: double]
 
-       Default: *Not set*
+       Default: Not set
      - Maximum values of contours, i.e. no generated levels will be greater than this value.
    * - **List of contours level**
 
@@ -74,7 +74,7 @@ Parameters
      - ``CONTOUR_LEVEL_LIST``
      - [string]
 
-       Default: *Not set*
+       Default: Not set
      - List of desired levels of contours (separated by commas).
        If filled, the increment, minimum, and maximum fields will not be considered.
    * - **Output coordinate system**

@@ -2439,7 +2439,7 @@ Parameters
      - ``MODE``
      - [enumeration]
 
-       Default: None
+       Default: Not set
      - Choose the parameter to use in order to get rid of
        the selected polygons:
 
@@ -3083,7 +3083,7 @@ Parameters
      - ``MIN``
      - [numeric: double] |dataDefine|
 
-       Default: *Not set*
+       Default: Not set
      - Minimum of M values allowed
    * - **Maximum**
 
@@ -3091,7 +3091,7 @@ Parameters
      - ``MAX``
      - [numeric: double] |dataDefine|
 
-       Default: *Not set*
+       Default: Not set
      - Maximum of M values allowed
    * - **Filtered**
      - ``OUTPUT``
@@ -3184,7 +3184,7 @@ Parameters
      - ``MIN``
      - [numeric: double] |dataDefine|
 
-       Default: *Not set*
+       Default: Not set
      - Minimum of Z values allowed
    * - **Maximum**
 
@@ -3192,7 +3192,7 @@ Parameters
      - ``MAX``
      - [numeric: double] |dataDefine|
 
-       Default: *Not set*
+       Default: Not set
      - Maximum of Z values allowed
    * - **Filtered**
      - ``OUTPUT``
@@ -5602,7 +5602,7 @@ Parameters
      - ``ANCHOR``
      - [point]
 
-       Default: None
+       Default: Not set
      - X,Y coordinates of the point to rotate the
        features around.
        If not set the rotation occurs around each
