@@ -33,14 +33,198 @@ msgstr ""
 "Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
 "страница в настоящее время переводится |прогресс перевода|."
 
+#: ../../docs/training_manual/database_concepts/db_intro.rst:2
+msgid "Lesson: Introduction to Databases"
+msgstr "Урок: Введение в базы данных"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:4
+msgid ""
+"Before using PostgreSQL, let's make sure of our ground by covering general "
+"database theory. You will not need to enter any of the example code; it's "
+"only there for illustration purposes."
+msgstr ""
+"Прежде чем приступить к работе с PostgreSQL, давайте разберемся с общей "
+"теорией баз данных. Вам не понадобится вводить код примеров, он приведен "
+"только для наглядности."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:8
+msgid ""
+"**The goal for this lesson:** To understand fundamental database concepts."
+msgstr "**Цель этого урока:** Понять фундаментальные концепции баз данных."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:11
+msgid "What is a Database?"
+msgstr "Что такое база данных?"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:13
+msgid ""
+"A database consists of an organized collection of data for one or more uses,"
+" typically in digital form. *- Wikipedia*"
+msgstr ""
+"База данных представляет собой организованную коллекцию данных для одного "
+"или нескольких видов использования, обычно в цифровой форме. *- Википедия*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:18
+msgid ""
+"A database management system (DBMS) consists of software that operates "
+"databases, providing storage, access, security, backup and other facilities."
+" *- Wikipedia*"
+msgstr ""
+"Система управления базами данных (СУБД) состоит из программного обеспечения,"
+" которое управляет базами данных, обеспечивая хранение, доступ, "
+"безопасность, резервное копирование и другие возможности. *- Википедия*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:23
+msgid "Tables"
+msgstr "Таблицы"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:25
+msgid ""
+"In relational databases and flat file databases, a table is a set of data "
+"elements (values) that is organized using a model of vertical columns (which"
+" are identified by their name) and horizontal rows. A table has a specified "
+"number of columns, but can have any number of rows. Each row is identified "
+"by the values appearing in a particular column subset which has been "
+"identified as a candidate key. *- Wikipedia*"
+msgstr ""
+"В реляционных базах данных и базах данных с плоскими файлами таблица - это "
+"набор элементов данных (значений), организованный по модели вертикальных "
+"столбцов (которые идентифицируются по их имени) и горизонтальных строк. "
+"Таблица имеет определенное количество столбцов, но может иметь любое "
+"количество строк. Каждая строка идентифицируется значениями, появляющимися в"
+" определенном подмножестве столбцов, которое было определено как ключ-"
+"кандидат. *- Википедия*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:40
+msgid "In SQL databases a table is also known as a **relation.**"
+msgstr "В базах данных SQL таблица также известна как **отношение*."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:43
+msgid "Columns / Fields"
+msgstr "Колонки / Поля"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:45
+msgid ""
+"A column is a set of data values of a particular simple type, one for each "
+"row of the table. The columns provide the structure according to which the "
+"rows are composed. The term field is often used interchangeably with column,"
+" although many consider it more correct to use field (or field value) to "
+"refer specifically to the single item that exists at the intersection "
+"between one row and one column. *- Wikipedia*"
+msgstr ""
+"Столбец - это набор значений данных определенного простого типа, по одному "
+"на каждую строку таблицы. Столбцы обеспечивают структуру, в соответствии с "
+"которой формируются строки. Термин поле часто используется как "
+"взаимозаменяемый со столбцом, хотя многие считают более правильным "
+"использовать поле (или значение поля) для обозначения единственного "
+"элемента, который существует на пересечении одной строки и одного столбца. "
+"*- Википедия*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:52
+msgid "A column:"
+msgstr "Колонка:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:61
+msgid "A field:"
+msgstr "Поле:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:68
+msgid "Records"
+msgstr "Записи"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:70
+msgid ""
+"A record is the information stored in a table row. Each record will have a "
+"field for each of the columns in the table."
+msgstr ""
+"Запись - это информация, хранящаяся в строке таблицы. В каждой записи есть "
+"поле для каждого столбца таблицы."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:78
+msgid "Datatypes"
+msgstr "Типы данных"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:80
+msgid ""
+"Datatypes restrict the kind of information that can be stored in a column. "
+"*- Tim and Horst*"
+msgstr ""
+"Типы данных ограничивают тип информации, которая может храниться в столбце. "
+"*- Тим и Хорст*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:83
+msgid "There are many kinds of datatypes. Let's focus on the most common:"
+msgstr ""
+"Существует множество типов данных. Давайте остановимся на самых "
+"распространенных:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:85
+msgid "``String`` - to store free-form text data"
+msgstr "``Строка`` - для хранения текстовых данных произвольной формы"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:86
+msgid "``Integer`` - to store whole numbers"
+msgstr "``Integer`` - для хранения целых чисел"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:87
+msgid "``Real`` - to store decimal numbers"
+msgstr "``Real`` - для хранения десятичных чисел"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:88
+msgid "``Date`` - to store Horst's birthday so no one forgets"
+msgstr "``Date`` - хранить дату рождения Хорста, чтобы никто не забыл"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:89
+msgid "``Boolean`` - to store simple true/false values"
+msgstr "``Boolean`` - для хранения простых значений true/false"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:91
+msgid ""
+"You can tell the database to allow you to also store nothing in a field. If "
+"there is nothing in a field, then the field content is referred to as a "
+"**'null' value**:"
+msgstr ""
+"Вы можете указать базе данных, чтобы она также позволяла хранить в поле "
+"ничего. Если в поле ничего нет, то содержимое поля называется **«нулевым» "
+"значением**:"
+
 #: ../../docs/training_manual/database_concepts/db_intro.rst:101
 msgid "Result:"
 msgstr "Результат:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:112
+msgid ""
+"There are many more datatypes you can use - `check the PostgreSQL manual! "
+"<https://www.postgresql.org/docs/current/datatype.html>`_"
+msgstr ""
+"Существует множество других типов данных, которые вы можете использовать - "
+"`посмотрите руководство по PostgreSQL! "
+"<https://www.postgresql.org/docs/current/datatype.html>`_"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:116
+msgid "Modelling an Address Database"
+msgstr "Моделирование базы данных адресов"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:118
+msgid ""
+"Let's use a simple case study to see how a database is constructed. We want "
+"to create an address database."
+msgstr ""
+"Давайте на простом примере посмотрим, как создается база данных. Мы хотим "
+"создать базу данных адресов."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:122
 #: ../../docs/training_manual/database_concepts/db_intro.rst:209
 msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
 msgstr ":abbr:`★☆☆ (Базовый уровень)` Попробуй себя:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:124
+msgid ""
+"Write down the properties which make up a simple address and which we would "
+"want to store in our database."
+msgstr ""
+"Запишите свойства, из которых состоит простой адрес и которые мы хотели бы "
+"хранить в нашей базе данных."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:127
 #: ../../docs/training_manual/database_concepts/db_intro.rst:216
@@ -48,14 +232,406 @@ msgstr ":abbr:`★☆☆ (Базовый уровень)` Попробуй се�
 msgid "Answer"
 msgstr "Ответить"
 
+#: ../../docs/training_manual/database_concepts/db_intro.rst:130
+msgid ""
+"For our theoretical address table, we might want to store the following "
+"properties::"
+msgstr ""
+"Для нашей теоретической таблицы адресов мы, возможно, захотим хранить "
+"следующие свойства::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:140
+msgid ""
+"When creating the table to represent an address object, we would create "
+"columns to represent each of these properties and we would name them with "
+"SQL-compliant and possibly shortened names::"
+msgstr ""
+"При создании таблицы для представления объекта адреса мы создадим столбцы "
+"для представления каждого из этих свойств и назовем их именами, "
+"соответствующими стандарту SQL и, возможно, сокращенными::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:152
+msgid "Address Structure"
+msgstr "Структура адреса"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:154
+msgid ""
+"The properties that describe an address are the columns. The type of "
+"information stored in each column is its datatype. In the next section we "
+"will analyse our conceptual address table to see how we can make it better!"
+msgstr ""
+"Свойства, описывающие адрес, - это столбцы. Тип информации, хранящейся в "
+"каждом столбце, является его типом данных. В следующем разделе мы "
+"проанализируем нашу концептуальную таблицу адресов и посмотрим, как сделать "
+"ее лучше!"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:159
+msgid "Database Theory"
+msgstr "Теория баз данных"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:161
+msgid ""
+"The process of creating a database involves creating a model of the real "
+"world; taking real world concepts and representing them in the database as "
+"entities."
+msgstr ""
+"Процесс создания базы данных включает в себя создание модели реального мира;"
+" взятие понятий реального мира и представление их в базе данных в виде "
+"сущностей."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:165
+msgid "Normalisation"
+msgstr "Нормализация"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:167
+msgid ""
+"One of the main ideas in a database is to avoid data duplication / "
+"redundancy. The process of removing redundancy from a database is called "
+"Normalisation."
+msgstr ""
+"Одна из основных идей базы данных - избегать дублирования/избыточности "
+"данных. Процесс удаления избыточности из базы данных называется "
+"нормализацией."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:170
+msgid ""
+"Normalization is a systematic way of ensuring that a database structure is "
+"suitable for general-purpose querying and free of certain undesirable "
+"characteristics - insertion, update, and deletion anomalies - that could "
+"lead to a loss of data integrity. *- Wikipedia*"
+msgstr ""
+"Нормализация - это систематический способ обеспечения того, чтобы структура "
+"базы данных была пригодна для выполнения запросов общего назначения и не "
+"содержала некоторых нежелательных характеристик - аномалий вставки, "
+"обновления и удаления, - которые могут привести к потере целостности данных."
+" *- Википедия*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:175
+msgid "There are different kinds of normalisation 'forms'."
+msgstr "Существуют различные виды «форм» нормализации."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:177
+msgid "Let's take a look at a simple example:"
+msgstr "Давайте рассмотрим простой пример:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:204
+msgid ""
+"Imagine you have many friends with the same street name or city. Every time "
+"this data is duplicated, it consumes space. Worse still, if a city name "
+"changes, you have to do a lot of work to update your database."
+msgstr ""
+"Представьте, что у вас много друзей с одинаковым названием улицы или города."
+" Каждый раз, когда эти данные дублируются, они занимают много места. Хуже "
+"того, если название города меняется, вам придется проделать большую работу, "
+"чтобы обновить базу данных."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:210
+msgid ""
+"Redesign the theoretical `people` table above to reduce duplication and to "
+"normalise the data structure."
+msgstr ""
+"Переработайте теоретическую таблицу `Люди`, приведенную выше, чтобы "
+"уменьшить дублирование и нормализовать структуру данных."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:213
+msgid ""
+"You can read more about database normalisation `here "
+"<https://en.wikipedia.org/wiki/Database_normalization>`_"
+msgstr ""
+"Подробнее о нормализации баз данных вы можете прочитать здесь "
+"<https://en.wikipedia.org/wiki/Database_normalization>`_"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:219
+msgid ""
+"The major problem with the *people* table is that there is a single address "
+"field which contains a person's entire address. Thinking about our "
+"theoretical *address* table earlier in this lesson, we know that an address "
+"is made up of many different properties. By storing all these properties in "
+"one field, we make it much harder to update and query our data. We therefore"
+" need to split the address field into the various properties. This would "
+"give us a table which has the following structure::"
+msgstr ""
+"Основная проблема таблицы *люди* заключается в том, что в ней есть "
+"единственное поле адреса, которое содержит весь адрес человека. Вспоминая "
+"нашу теоретическую таблицу *адрес*, о которой мы говорили ранее в этом "
+"уроке, мы знаем, что адрес состоит из множества различных свойств. Храня все"
+" эти свойства в одном поле, мы значительно усложняем обновление и запрос "
+"данных. Поэтому нам нужно разделить поле адреса на различные свойства. В "
+"результате у нас получится таблица со следующей структурой::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:233
+msgid ""
+"In the next section, you will learn about Foreign Key relationships which "
+"could be used in this example to further improve our database's structure."
+msgstr ""
+"В следующем разделе вы узнаете о связях внешнего ключа, которые можно "
+"использовать в данном примере для дальнейшего улучшения структуры нашей базы"
+" данных."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:237
+msgid "Indexes"
+msgstr "Индексы"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:239
+msgid ""
+"A database index is a data structure that improves the speed of data "
+"retrieval operations on a database table. *- Wikipedia*"
+msgstr ""
+"Индекс базы данных - это структура данных, которая повышает скорость "
+"операций по поиску данных в таблице базы данных. *- Википедия*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:242
+msgid ""
+"Imagine you are reading a textbook and looking for the explanation of a "
+"concept - and the textbook has no index! You will have to start reading at "
+"one cover and work your way through the entire book until you find the "
+"information you need. The index at the back of a book helps you to jump "
+"quickly to the page with the relevant information:"
+msgstr ""
+"Представьте, что вы читаете учебник и ищете объяснение какой-то концепции, а"
+" в учебнике нет указателя! Вам придется начать читать с одной обложки и "
+"пролистать всю книгу, пока вы не найдете нужную информацию. Указатель в "
+"конце книги поможет вам быстро перейти на страницу с нужной информацией:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:252
+msgid "Now searches on name will be faster:"
+msgstr "Теперь поиск по имени будет осуществляться быстрее:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:271
+msgid "Sequences"
+msgstr "Последовательности"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:273
+msgid ""
+"A sequence is a unique number generator. It is normally used to create a "
+"unique identifier for a column in a table."
+msgstr ""
+"Последовательность - это генератор уникальных чисел. Обычно он используется "
+"для создания уникального идентификатора для столбца в таблице."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:276
+msgid ""
+"In this example, id is a sequence - the number is incremented each time a "
+"record is added to the table:"
+msgstr ""
+"В данном примере id представляет собой последовательность - число "
+"увеличивается каждый раз, когда в таблицу добавляется запись:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:287
+msgid "Entity Relationship Diagramming"
+msgstr "Диаграммы отношений между сущностями"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:289
+msgid ""
+"In a normalised database, you typically have many relations (tables). The "
+"entity-relationship diagram (ER Diagram) is used to design the logical "
+"dependencies between the relations. Consider our non-normalised `people` "
+"table from earlier in the lesson:"
+msgstr ""
+"В нормализованной базе данных, как правило, имеется множество отношений "
+"(таблиц). Диаграмма «сущность-связь» (ER-диаграмма) используется для "
+"определения логических зависимостей между отношениями. Рассмотрим нашу "
+"ненормализованную таблицу `people` из предыдущего урока:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:304
+msgid ""
+"With a little work we can split it into two tables, removing the need to "
+"repeat the street name for individuals who live in the same street:"
+msgstr ""
+"Немного поработав, мы можем разделить его на две таблицы, избавившись от "
+"необходимости повторять название улицы для людей, живущих на одной и той же "
+"улице:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:316
+msgid "and:"
+msgstr "и:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:327
+msgid ""
+"We can then link the two tables using the 'keys' :kbd:`streets.id` and "
+":kbd:`people.streets_id`."
+msgstr ""
+"Затем мы можем связать эти две таблицы с помощью «ключей» :kbd:`streets.id` "
+"и :kbd:`people.streets_id`."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:330
+msgid ""
+"If we draw an ER Diagram for these two tables it would look something like "
+"this:"
+msgstr ""
+"Если мы нарисуем ER-диаграмму для этих двух таблиц, она будет выглядеть "
+"примерно так:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:336
+msgid ""
+"The ER Diagram helps us to express 'one to many' relationships. In this case"
+" the arrow symbol show that one street can have many people living on it."
+msgstr ""
+"ER-диаграмма помогает нам выразить отношения «один ко многим». В данном "
+"случае символ стрелки показывает, что на одной улице может жить много людей."
+
 #: ../../docs/training_manual/database_concepts/db_intro.rst:340
 msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
 msgstr ":abbr:`★★★☆ (Умеренный уровень)` Попробуйте себя:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:342
+msgid ""
+"Our `people` model still has some normalisation issues - try to see if you "
+"can normalise it further and show your thoughts by means of an ER Diagram."
+msgstr ""
+"Наша модель `людей` все еще имеет некоторые проблемы с нормализацией - "
+"попробуйте посмотреть, сможете ли вы нормализовать ее еще больше и показать "
+"свои мысли с помощью ER-диаграммы."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:349
+msgid "Our *people* table currently looks like this::"
+msgstr "В настоящее время наша таблица *люди* выглядит следующим образом::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:355
+msgid ""
+"The :guilabel:`street_id` column represents a 'one to many' relationship "
+"between the people object and the related street object, which is in the "
+"*streets* table."
+msgstr ""
+"Столбец :guilabel:`street_id` представляет собой отношение «один ко многим» "
+"между объектом люди и связанным с ним объектом улица, который находится в "
+"таблице *улицы*."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:358
+msgid ""
+"One way to further normalise the table is to split the name field into "
+"*first_name* and *last_name*::"
+msgstr ""
+"Один из способов дальнейшей нормализации таблицы - разделить поле имени на "
+"*first_name* и *last_name*::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:365
+msgid ""
+"We can also create separate tables for the town or city name and country, "
+"linking them to our *people* table via 'one to many' relationships::"
+msgstr ""
+"Мы также можем создать отдельные таблицы для названия города и страны, "
+"связав их с нашей таблицей *люди* с помощью отношений «один ко многим»::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:373
+msgid "An ER Diagram to represent this would look like this:"
+msgstr "ER-диаграмма для представления этого выглядит следующим образом:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:379
+msgid "Constraints, Primary Keys and Foreign Keys"
+msgstr "Ограничения, первичные ключи и внешние ключи"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:381
+msgid ""
+"A database constraint is used to ensure that data in a relation matches the "
+"modeller's view of how that data should be stored. For example a constraint "
+"on your postal code could ensure that the number falls between :kbd:`1000` "
+"and :kbd:`9999`."
+msgstr ""
+"Ограничение базы данных используется для того, чтобы данные в отношении "
+"соответствовали представлениям разработчика модели о том, как эти данные "
+"должны храниться. Например, ограничение на ваш почтовый индекс может "
+"гарантировать, что номер находится между :kbd:`1000` и :kbd:`9999`."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:386
+msgid ""
+"A Primary key is one or more field values that make a record unique. Usually"
+" the primary key is called id and is a sequence."
+msgstr ""
+"Первичный ключ - это одно или несколько значений поля, которые делают запись"
+" уникальной. Обычно первичный ключ называется id и представляет собой "
+"последовательность."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:389
+msgid ""
+"A Foreign key is used to refer to a unique record on another table (using "
+"that other table's primary key)."
+msgstr ""
+"Внешний ключ используется для ссылки на уникальную запись в другой таблице "
+"(с использованием первичного ключа этой таблицы)."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:392
+msgid ""
+"In ER Diagramming, the linkage between tables is normally based on Foreign "
+"keys linking to Primary keys."
+msgstr ""
+"В ER-диаграммах связь между таблицами обычно основана на внешних ключах, "
+"связанных с первичными ключами."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:395
+msgid ""
+"If we look at our people example, the table definition shows that the street"
+" column is a foreign key that references the primary key on the streets "
+"table:"
+msgstr ""
+"Если мы посмотрим на наш пример с людьми, то в определении таблицы видно, "
+"что столбец улицы является внешним ключом, который ссылается на первичный "
+"ключ в таблице улиц:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:416
+msgid "Transactions"
+msgstr "Транзакции"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:418
+msgid ""
+"When adding, changing, or deleting data in a database, it is always "
+"important that the database is left in a good state if something goes wrong."
+" Most databases provide a feature called transaction support. Transactions "
+"allow you to create a rollback position that you can return to if your "
+"modifications to the database did not run as planned."
+msgstr ""
+"При добавлении, изменении или удалении данных в базе данных всегда важно, "
+"чтобы база данных оставалась в хорошем состоянии, если что-то пойдет не так."
+" Большинство баз данных предоставляют функцию, называемую поддержкой "
+"транзакций. Транзакции позволяют создать позицию отката, на которую можно "
+"вернуться, если изменения в базе данных прошли не так, как планировалось."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:424
+msgid ""
+"Take a scenario where you have an accounting system. You need to transfer "
+"funds from one account and add them to another. The sequence of steps would "
+"go like this:"
+msgstr ""
+"Возьмем сценарий, в котором у вас есть бухгалтерская система. Вам нужно "
+"перевести средства с одного счета и добавить их на другой. "
+"Последовательность действий будет выглядеть следующим образом:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:428
+msgid "remove R20 from Joe"
+msgstr "удалить R20 из Джо"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:429
+msgid "add R20 to Anne"
+msgstr "добавить R20 Анне"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:431
+msgid ""
+"If something goes wrong during the process (e.g. power failure), the "
+"transaction will be rolled back."
+msgstr ""
+"Если во время процесса что-то пойдет не так (например, отключение питания), "
+"транзакция будет откачена."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:435
 msgid "In Conclusion"
 msgstr "В заключение"
 
+#: ../../docs/training_manual/database_concepts/db_intro.rst:437
+msgid ""
+"Databases allow you to manage data in a structured way using simple code "
+"structures."
+msgstr ""
+"Базы данных позволяют управлять данными в структурированном виде, используя "
+"простые структуры кода."
+
 #: ../../docs/training_manual/database_concepts/db_intro.rst:441
 msgid "What's Next?"
 msgstr "Что дальше?"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:443
+msgid ""
+"Now that we've looked at how databases work in theory, let's create a new "
+"database to implement the theory we've covered."
+msgstr ""
+"Теперь, когда мы рассмотрели, как базы данных работают в теории, давайте "
+"создадим новую базу данных, чтобы реализовать изученную теорию."
