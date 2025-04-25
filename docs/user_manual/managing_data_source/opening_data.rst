@@ -1073,6 +1073,13 @@ Optionally, you can activate the following checkboxes:
 * |checkbox| :guilabel:`Only existing geometry types`:
   only lists the existing geometry types and don't offer to add others.
 * |checkbox| :guilabel:`Include additional geometry attributes`.
+* |checkbox| :guilabel:`Allow saving/loading QGIS projects in the database`
+  - more details :ref:`here <saveprojecttodb>`
+* :guilabel:`Schema`: Allows to specify a single schema to limit a connection to.
+  When set, only tables from the matching schema will be included in the browser panel
+  and data source select for the connection.
+  This can be used to limit the database work required to populate tables
+  for a connection pointing to a large database store.
 
 .. _tip_ORACLE_Spatial_layers:
 
