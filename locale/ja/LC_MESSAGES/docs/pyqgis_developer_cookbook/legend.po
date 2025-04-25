@@ -5,18 +5,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoya miyoshi, 2024
-# Harrissou Sant-anna, 2024
-# fairtommy <fairtommy@gmail.com>, 2024
+# tomoya miyoshi, 2025
+# Harrissou Sant-anna, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2024\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -122,22 +121,6 @@ msgstr ""
 ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` ）とレイヤノード（ "
 ":class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` ）。"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:107
-msgid ""
-"for more information you can read these blog posts of Martin Dobias: `Part 1"
-" <https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-"
-"part-1/>`_ `Part 2 <https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-"
-"layer-tree-api-part-2/>`_ `Part 3 "
-"<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
-"part-3/>`_"
-msgstr ""
-"詳細については、MartinDobiasのこれらのブログ投稿を読むことができます： `Part 1 "
-"<https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-"
-"part-1/>`_ `Part 2 <https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-"
-"layer-tree-api-part-2/>`_ `Part 3 "
-"<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
-"part-3/>`_"
-
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:112
 msgid ""
 "The project layer tree can be accessed easily with the method "
@@ -148,29 +131,29 @@ msgstr ""
 ":meth:`layerTreeRoot() <qgis.core.QgsProject.layerTreeRoot>` "
 "メソッドで容易にアクセスすることができます:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:119
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:120
 msgid "``root`` is a group node and has *children*:"
 msgstr "``root`` はグループノードであり、 *子* を持っています："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:125
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:126
 msgid ""
 "A list of direct children is returned. Sub group children should be accessed"
 " from their own direct parent."
 msgstr "直接の子のリストが返されます。サブグループの子には、自分の直接の親からアクセスする必要があります。"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:128
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:129
 msgid "We can retrieve one of the children:"
 msgstr "子の一人を検索することができます:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:139
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:140
 msgid "Layers can also be retrieved using their (unique) ``id``:"
 msgstr "レイヤは、その（ユニークな） ``id`` を使用して取得することもできます:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:147
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:148
 msgid "And groups can also be searched using their names:"
 msgstr "また、グループは名前を使用して検索することもできます："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:154
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:155
 msgid ""
 ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` has many other "
 "useful methods that can be used to obtain more information about the TOC:"
@@ -178,13 +161,13 @@ msgstr ""
 ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` "
 "はTOCに関するより多くの情報を得るために使用できる多くの便利なメソッドを備えています:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:167
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:168
 msgid ""
 "Now let’s add some layers to the project’s layer tree. There are two ways of"
 " doing that:"
 msgstr "では、プロジェクトのレイヤツリーにいくつかのレイヤを追加してみましょう。これには2つの方法があります:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:170
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:171
 msgid ""
 "**Explicit addition** using the :meth:`addLayer() "
 "<qgis.core.QgsLayerTreeGroup.addLayer>` or :meth:`insertLayer() "
@@ -194,14 +177,14 @@ msgstr ""
 "または :meth:`insertLayer() <qgis.core.QgsLayerTreeGroup.insertLayer>` "
 "関数を使用します:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:183
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:184
 msgid ""
 "**Implicit addition**: since the project's layer tree is connected to the "
 "layer registry it is enough to add a layer to the map layer registry:"
 msgstr ""
 "**暗黙の追加**：プロジェクトのレイヤツリーはレイヤレジストリに接続されているので、マップレイヤレジストリにレイヤを追加するだけで十分です:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:191
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:192
 msgid ""
 "You can switch between :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` "
 "and :class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` easily:"
@@ -209,7 +192,7 @@ msgstr ""
 ":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` と "
 ":class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` は簡単に切り替えて使うことができます:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:207
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:208
 msgid ""
 "Groups can be added with the :meth:`addGroup() "
 "<qgis.core.QgsLayerTreeGroup.addGroup>` method. In the example below, the "
@@ -219,35 +202,35 @@ msgstr ""
 "グループは :meth:`addGroup() <qgis.core.QgsLayerTreeGroup.addGroup>` "
 "メソッドで追加できます。以下の例では、前者はTOCの最後にグループを追加し、後者の場合は既存のグループ内に別のグループを追加できます："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:218
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:219
 msgid "To moving nodes and groups there are many useful methods."
 msgstr "ノードとグループを移動するには、多くの便利な方法があります。"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:220
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:221
 msgid "Moving an existing node is done in three steps:"
 msgstr "既存のノードの移動は、次の3つのステップで実行されます："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:222
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:223
 msgid "cloning the existing node"
 msgstr "既存ノードをクローニングする"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:223
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:224
 msgid "moving the cloned node to the desired position"
 msgstr "クローンしたノードを動かしたい位置に移動する"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:224
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:225
 msgid "deleting the original node"
 msgstr "元のノードを削除する"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:235
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:236
 msgid ""
 "It is a little bit more *complicated* to move a layer around in the legend:"
 msgstr "レイヤを凡例の中で動かすのは少し *ややこしい** です:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:252
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:253
 msgid "or moving it to an existing group:"
 msgstr "または既存のグループへ移動させます:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:272
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:273
 msgid "Some other methods that can be used to modify the groups and layers:"
 msgstr "グループやレイヤの変更に使えるその他いくつかのメソッド:"

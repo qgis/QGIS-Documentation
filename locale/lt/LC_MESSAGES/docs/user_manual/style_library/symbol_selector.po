@@ -5,23 +5,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
-# Tomas Straupis, 2024
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Tomas Straupis, 2024\n"
+"POT-Creation-Date: 2025-04-08 10:04+0000\n"
+"PO-Revision-Date: 2025-02-27 21:35+0000\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -35,58 +35,216 @@ msgstr ""
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:912
+#: ../../docs/user_manual/style_library/symbol_selector.rst:5
+msgid "The Symbol Selector"
+msgstr "Simbolių parinkiklis"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:13
+msgid ""
+"The Symbol selector is the main dialog to design a symbol. You can create or"
+" edit Marker, Line or Fill Symbols."
+msgstr ""
+"Simbolių parinkiklis yra pagrindinis simbolio kūrimo dialogas. Jūs galite "
+"kurti ar keisti žymeklių, linijų ar pildymo simbolius."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:21
+msgid "Designing a Line symbol"
+msgstr "Linijos simbolio kūrimas"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:24
+msgid "Two main components structure the symbol selector dialog:"
+msgstr ""
+"Simbolio parinkimo dialogą sudaro du pagrindiniai struktūriniai komponentai:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:26
+msgid ""
+"the symbol tree, showing symbol layers that are combined afterwards to shape"
+" a new global symbol"
+msgstr ""
+"simbolių medis, rodantis simbolio sluoksnius, kurie vėliau kombinuojami, kad"
+" sukurtų naują globalų simbolį"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:28
+msgid "and settings to configure the selected symbol layer in the tree."
+msgstr "ir medyje pažymėto simbolio sluoksnio konfigūravimo nustatymai."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:33
+msgid "The symbol layer tree"
+msgstr "Simbolio sluoksnių medis"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:35
+msgid ""
+"A symbol can consist of several :guilabel:`Symbol layers`. The symbol tree "
+"shows the overlay of these symbol layers that are combined afterwards to "
+"shape a new global symbol. Besides, a dynamic symbol representation is "
+"updated as soon as symbol properties change."
+msgstr ""
+"Simbolį gali sudaryti keli :guilabel:`Simbolio sluoksniai`. Simbolio medis "
+"rodo šiuos simbolių sluoksnius, kurie vėliau kombinuojami, kad suformuotų "
+"naują globalų simbolį. Bet to, simbolio vaizdas dinamiškai atnaujinamas kai "
+"tik pakeičiamos simbolio savybės."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:40
+msgid ""
+"Depending on the level selected in the symbol tree items, various tools are "
+"made available to help you manage the tree:"
+msgstr ""
+"Priklausomai nuo simbolio medyje parinkto elemento lygio, galima naudoti "
+"įvairius įrankius, leidžiančius valdyti medį:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:43
+msgid ""
+"|symbologyAdd| add new symbol layer: you can stack as many symbols as you "
+"want"
+msgstr ""
+"|symbologyAdd| pridėti naują simbolio sluoksnį: galite sukrauti kiek tik "
+"norite simbolių"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:977
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:914
+#: ../../docs/user_manual/style_library/symbol_selector.rst:44
+msgid "|symbologyRemove| remove the selected symbol layer"
+msgstr "|symbologyRemove| išimti pažymėti simbolio sluoksnį"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:979
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:898
+#: ../../docs/user_manual/style_library/symbol_selector.rst:45
+msgid ""
+"lock colors of symbol layer: a |locked| locked color stays unchanged when "
+"user changes the color at the global (or upper) symbol level"
+msgstr ""
+"užrakinti simbolio sluoksnio spalvas: |locked| užrakinta spalva nesikeičia, "
+"kai naudotojas keičia spalvą globaliame (ar aukštesniame) simbolio lygyje"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:963
 msgid "locked"
 msgstr "locked"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:894
+#: ../../docs/user_manual/style_library/symbol_selector.rst:47
+msgid "|duplicateLayer| duplicate a (group of) symbol layer(s)"
+msgstr "|duplicateLayer| kurti simbolio sluoksnio(ių) (grupės) kopiją"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:959
 msgid "duplicateLayer"
 msgstr "duplicateLayer"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:910
+#: ../../docs/user_manual/style_library/symbol_selector.rst:48
+msgid "move up or down the symbol layer"
+msgstr "perkelti simbolio sluoksnį aukštyn ar žemyn"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:53
+msgid "Configuring a symbol"
+msgstr "Simbolio konfigūravimas"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:55
+msgid ""
+"In QGIS, configuring a symbol is done in two steps: the symbol and then the "
+"symbol layer."
+msgstr ""
+"QGIS'e simbolio konfigūravimas atliekamas dviem žingsniais: simbolio ir tada"
+" simbolio sluoksnio."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:59
+msgid "The symbol"
+msgstr "Simbolis"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:61
+msgid ""
+"At the top level of the tree, it depends on the layer geometry and can be of"
+" **Marker**, **Line** or **Fill** type. Each symbol can embed one or more "
+"symbols (including, of any other type) or symbol layers."
+msgstr ""
+"Viršutinis medžio lygis priklauso nuo sluoksnio geometrijos ir gali būti "
+"**Žymeklis**, **Linija** arba **Užpildymas**. Kiekvienas simbolis gali "
+"įtraukti vieną ar daugiau simbolių (įskaitant ir bet kurio kito tipo) ar "
+"simbolio sluoksnių."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:65
+msgid "You can setup some parameters that apply to the global symbol:"
+msgstr ""
+"Jūs galite konfigūruoti keletą parametrų, kurie taikomi globaliam simboliui:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:67
+msgid ""
+":guilabel:`Unit`: it can be **Millimeters**, **Points**, **Pixels**, "
+"**Meters at Scale**, **Map units** or **Inches** (see :ref:`unit_selector` "
+"for more details)"
+msgstr ""
+":guilabel:`Vienetai`: gali būti **Milimetrai**, **Taškai**, **Pikseliai**, "
+"**Metrai pagal mastelį**, **Žemėlapio vienetai** ar **Coliai** (daugiau "
+"informacijos rasite :ref:`unit_selector`)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:70
+msgid ":guilabel:`Opacity`"
+msgstr ":guilabel:`Nepermatomumas`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:71
+msgid ""
+":guilabel:`Color`: when this parameter is changed by the user, its value is "
+"echoed to all unlocked sub-symbols color"
+msgstr ""
+":guilabel:`Spalva`: kai naudotojas pakeičia šį parametrą, jo reikšmė "
+"atsispindi visose atrakintų sub-simbolių spalvose"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:73
+msgid ":guilabel:`Size` and :guilabel:`Rotation` for marker symbols"
+msgstr ":guilabel:`Dydis` ir :guilabel:`Pasukimas` žymeklių simboliams"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:74
+msgid ":guilabel:`Width` for line symbols"
+msgstr ":guilabel:`Plotis` linijų simboliams"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:78
+msgid ""
+"Use the :guilabel:`Size` (for marker symbols) or the :guilabel:`Width` (for "
+"line symbols) properties at the symbol level to proportionally resize all of"
+" its embedded :ref:`symbol layers <symbol_layer>` dimensions."
+msgstr ""
+"Naudokite :guilabel:`Dydžio` (žymeklių simboliams) ar :guilabel:`Pločio` "
+"(linijų simboliams) savybes simbolių sluoksnyje, kad proporcingai keistumėte"
+" dydį visuose įtrauktuose :ref:`simbolio sluoksnių <symbol_layer>` "
+"matmenyse."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:975
 msgid "styleManager"
 msgstr "styleManager"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:902
+#: ../../docs/user_manual/style_library/symbol_selector.rst:967
 msgid "openTable"
 msgstr "openTable"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:896
+#: ../../docs/user_manual/style_library/symbol_selector.rst:961
 msgid "iconView"
 msgstr "iconView"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:890
+#: ../../docs/user_manual/style_library/symbol_selector.rst:955
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:908
+#: ../../docs/user_manual/style_library/symbol_selector.rst:973
 msgid "selectString"
 msgstr "selectString"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:904
+#: ../../docs/user_manual/style_library/symbol_selector.rst:969
 msgid "paintEffects"
 msgstr "paintEffects"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:892
+#: ../../docs/user_manual/style_library/symbol_selector.rst:957
 msgid "dataDefine"
 msgstr "dataDefine"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:200
+#: ../../docs/user_manual/style_library/symbol_selector.rst:207
 msgid ":guilabel:`Rotation`"
 msgstr ":guilabel:`Pasukimas`"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:900
+#: ../../docs/user_manual/style_library/symbol_selector.rst:965
 msgid "lockedGray"
 msgstr "lockedGray"
 
-#: ../../docs/user_manual/style_library/symbol_selector.rst:906
+#: ../../docs/user_manual/style_library/symbol_selector.rst:971
 msgid "refresh"
 msgstr "refresh"

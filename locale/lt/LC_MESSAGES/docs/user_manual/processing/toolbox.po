@@ -5,23 +5,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
-# Tomas Straupis, 2024
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:59+0000\n"
-"Last-Translator: Tomas Straupis, 2024\n"
+"POT-Creation-Date: 2025-03-31 09:36+0200\n"
+"PO-Revision-Date: 2025-02-27 21:35+0000\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.14.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -62,70 +62,139 @@ msgstr ""
 msgid "Processing Toolbox"
 msgstr "Apdorojimo įrankinės"
 
-#: ../../docs/user_manual/processing/toolbox.rst:495
+#: ../../docs/user_manual/processing/toolbox.rst:27
+msgid ""
+"Providers can be (de)activated in the :ref:`Processing settings dialog "
+"<processing.options>`. By default, only providers that do not rely on third-"
+"party applications (that is, those that only require QGIS elements to be "
+"run) are active. Algorithms requiring external applications might need "
+"additional configuration. Configuring providers is explained in a "
+":ref:`later chapter <processing.results>` in this manual."
+msgstr ""
+"Tiekėjus galima (de)aktyvuoti :ref:`Apdorojimo nustatymų dialoge "
+"<processing.options>`. Pagal nutylėjimą aktyvūs tik tiekėjai, kuriems "
+"nereikia trečiųjų šalių aplikacijų (t.y. tie, kurių veikimui reikia tik QGIS"
+" elementų). Algoritmams, kuriems reikia išorinių aplikacijų, gali prireikti "
+"papildomo konfigūravimo. Tiekėjų konfigūravimas aprašomas šio vadovo "
+":ref:`kitame skyriuje <processing.results>`."
+
+#: ../../docs/user_manual/processing/toolbox.rst:34
+msgid ""
+"In the upper part of the toolbox dialog, you will find a set of tools to:"
+msgstr "Viršutinėje įrankinės dialogo dalyje rasite įrankius, kurie leidžia:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:36
+msgid ""
+"work with |processingModel| :sup:`Models`: :guilabel:`Create New Model...`, "
+":guilabel:`Open Existing Model...` and :guilabel:`Add Model to Toolbox...`;"
+msgstr ""
+"dirbti su |processingModel| :sup:`Modeliais`: :guilabel:`Kurti naują "
+"modelį...`, :guilabel:`Atidaryti esamą modelį...` ir :guilabel:`Pridėti "
+"modelį į įrankinę...`;"
+
+#: ../../docs/user_manual/processing/toolbox.rst:510
 msgid "processingModel"
 msgstr "processingModel"
 
-#: ../../docs/user_manual/processing/toolbox.rst:499
+#: ../../docs/user_manual/processing/toolbox.rst:38
+msgid ""
+"work with |pythonFile| :sup:`Scripts`: :guilabel:`Create New Script...`, "
+":guilabel:`Create New Script from Template...`, :guilabel:`Open Existing "
+"Script...` and :guilabel:`Add Script to Toolbox...`;"
+msgstr ""
+"dirbti su |pythonFile| :sup:`Scenarijais`: :guilabel:`Kurti naują "
+"scenarijų...`, :guilabel:`Kurti naują scenarijų pagal šabloną...`, "
+":guilabel:`Atidaryti esamą scenarijų...` ir :guilabel:`Pridėti scenarijų į "
+"įrankinę...`;"
+
+#: ../../docs/user_manual/processing/toolbox.rst:514
 msgid "pythonFile"
 msgstr "pythonFile"
 
-#: ../../docs/user_manual/processing/toolbox.rst:493
+#: ../../docs/user_manual/processing/toolbox.rst:41
+msgid "open the |processingHistory| :sup:`History` panel;"
+msgstr "atverti |processingHistory| :sup:`Istorijos` skydelį;"
+
+#: ../../docs/user_manual/processing/toolbox.rst:508
 msgid "processingHistory"
 msgstr "processingHistory"
 
-#: ../../docs/user_manual/processing/toolbox.rst:497
+#: ../../docs/user_manual/processing/toolbox.rst:42
+msgid "open the |processingResult| :sup:`Results Viewer` panel;"
+msgstr "atverti |processingResult| :sup:`Rezultatų vaizdo` skydelį;"
+
+#: ../../docs/user_manual/processing/toolbox.rst:512
 msgid "processingResult"
 msgstr "processingResult"
 
-#: ../../docs/user_manual/processing/toolbox.rst:491
+#: ../../docs/user_manual/processing/toolbox.rst:43
+msgid ""
+"toggle the toolbox to the :ref:`in-place modification mode "
+"<processing_inplace_edit>` using the |processSelected| :sup:`Edit Features "
+"In-Place` button: only the algorithms that are suitable to be executed on "
+"the active layer without outputting a new layer are displayed;"
+msgstr ""
+"perjungti įrankinę į :ref:`keitimo vietoje režimą <processing_inplace_edit>`"
+" naudojant mygtuką |processSelected| :sup:`Keisti geoobjektus vietoje`: "
+"rodomi tik tik algoritmai, kurie tinka būtų vykdomais aktyviame sluoksnyje "
+"nesukurdami naujo sluoksnio;"
+
+#: ../../docs/user_manual/processing/toolbox.rst:506
 msgid "processSelected"
 msgstr "processSelected"
 
-#: ../../docs/user_manual/processing/toolbox.rst:489
+#: ../../docs/user_manual/processing/toolbox.rst:47
+msgid "open the |options| :sup:`Options` dialog."
+msgstr "atverti dialogą |options| :sup:`Parinktys`."
+
+#: ../../docs/user_manual/processing/toolbox.rst:504
 msgid "options"
 msgstr "options"
 
-#: ../../docs/user_manual/processing/toolbox.rst:501
+#: ../../docs/user_manual/processing/toolbox.rst:516
 msgid "search"
 msgstr "search"
 
-#: ../../docs/user_manual/processing/toolbox.rst:485
+#: ../../docs/user_manual/processing/toolbox.rst:496
+msgid "favorites"
+msgstr "favorites"
+
+#: ../../docs/user_manual/processing/toolbox.rst:500
 msgid "iterate"
 msgstr "iterate"
 
-#: ../../docs/user_manual/processing/toolbox.rst:477
+#: ../../docs/user_manual/processing/toolbox.rst:490
 msgid "dataDefine"
 msgstr "dataDefine"
 
-#: ../../docs/user_manual/processing/toolbox.rst:191
+#: ../../docs/user_manual/processing/toolbox.rst:202
 msgid "Expression based input"
 msgstr "Išraiška paremta įvestis"
 
-#: ../../docs/user_manual/processing/toolbox.rst:487
+#: ../../docs/user_manual/processing/toolbox.rst:502
 msgid "mapIdentification"
 msgstr "mapIdentification"
 
-#: ../../docs/user_manual/processing/toolbox.rst:483
+#: ../../docs/user_manual/processing/toolbox.rst:498
 msgid "fileSave"
 msgstr "fileSave"
 
-#: ../../docs/user_manual/processing/toolbox.rst:479
+#: ../../docs/user_manual/processing/toolbox.rst:492
 msgid "editCopy"
 msgstr "editCopy"
 
-#: ../../docs/user_manual/processing/toolbox.rst:475
+#: ../../docs/user_manual/processing/toolbox.rst:488
 msgid "clearConsole"
 msgstr "clearConsole"
 
-#: ../../docs/user_manual/processing/toolbox.rst:503
+#: ../../docs/user_manual/processing/toolbox.rst:518
 msgid "settings"
 msgstr "settings"
 
-#: ../../docs/user_manual/processing/toolbox.rst:505
+#: ../../docs/user_manual/processing/toolbox.rst:520
 msgid "terminal"
 msgstr "terminal"
 
-#: ../../docs/user_manual/processing/toolbox.rst:481
+#: ../../docs/user_manual/processing/toolbox.rst:494
 msgid "editPaste"
 msgstr "editPaste"

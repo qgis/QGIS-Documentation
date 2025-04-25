@@ -5,17 +5,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024
+# Harrissou Sant-anna, 2025
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2024\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -107,6 +107,7 @@ msgstr " Crea un indice spaziale sulla nuova colonna geometrica"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:32
 #: ../../docs/training_manual/spatial_databases/geometry.rst:132
+#: ../../docs/training_manual/spatial_databases/geometry.rst:197
 msgid "Answer"
 msgstr "Soluzione"
 
@@ -246,11 +247,11 @@ msgstr ""
 "Crea limiti di città calcolando il minimopoligono convesso di tutti gli "
 "indirizzi per quella città e calcolando un buffer attorno a quell'area."
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:199
+#: ../../docs/training_manual/spatial_databases/geometry.rst:260
 msgid "Access Sub-Objects"
 msgstr "Accedi agli oggetti"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:201
+#: ../../docs/training_manual/spatial_databases/geometry.rst:262
 msgid ""
 "With the SFS-Model functions, you have a wide variety of options to access "
 "sub-objects of SFS Geometries. When you want to select the first vertex "
@@ -261,19 +262,19 @@ msgstr ""
 "accedere agli oggetti di Geometrie SFS. Se vuoi selezionare il primo vertice"
 " di ogni poligono nella tabella myPolygonTable, devi fare in questo modo:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:206
+#: ../../docs/training_manual/spatial_databases/geometry.rst:267
 msgid "Transform the polygon boundary to a linestring:"
 msgstr "Trasforma il policono di confine in una linea:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:213
+#: ../../docs/training_manual/spatial_databases/geometry.rst:274
 msgid "Select the first vertex point of the resultant linestring:"
 msgstr "Seleziona il primo vertice della linea risultante:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:224
+#: ../../docs/training_manual/spatial_databases/geometry.rst:285
 msgid "Data Processing"
 msgstr " Elaborazione"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:226
+#: ../../docs/training_manual/spatial_databases/geometry.rst:287
 msgid ""
 "PostGIS supports all OGC SFS/MM standard conform functions. All these "
 "functions start with ``ST_``."
@@ -281,11 +282,11 @@ msgstr ""
 "PostGIS supporta tutte le funzioni conformi agli standard OGC SFS/MM. Tutte "
 "queste funzioni iniziano ``ST_``."
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:230
+#: ../../docs/training_manual/spatial_databases/geometry.rst:291
 msgid "Clipping"
 msgstr " Ritaglio"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:232
+#: ../../docs/training_manual/spatial_databases/geometry.rst:293
 msgid ""
 "To clip a subpart of your data you can use the ``ST_INTERSECT()`` function. "
 "To avoid empty geometries, use:"
@@ -293,11 +294,11 @@ msgstr ""
 "Per ritagliare una parte dei ati puoi usare la funzione ``ST_INTERSECT()``. "
 "Per evitare geometrie vuote usa:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:253
+#: ../../docs/training_manual/spatial_databases/geometry.rst:314
 msgid "Building Geometries from Other Geometries"
 msgstr "Costruisci geometrie da altre geometrie"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:255
+#: ../../docs/training_manual/spatial_databases/geometry.rst:316
 msgid ""
 "From a given point table, you want to generate a linestring. The order of "
 "the points is defined by their :kbd:`id`. Another ordering method could be a"
@@ -309,7 +310,7 @@ msgstr ""
 "essere una tabella oraria, come quello che si ottiene quando si acquisiscono"
 " punti con un ricevitore GPS."
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:263
+#: ../../docs/training_manual/spatial_databases/geometry.rst:324
 msgid ""
 "To create a linestring from a new point layer called 'points', you can run "
 "the following command:"
@@ -317,7 +318,7 @@ msgstr ""
 "Per creare una linea da un vettore punti chiamato 'points', puoi eseguire il"
 " seguente comando:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:275
+#: ../../docs/training_manual/spatial_databases/geometry.rst:336
 msgid ""
 "To see how it works without creating a new layer, you could also run this "
 "command on the 'people' layer, although of course it would make little real-"
@@ -327,11 +328,11 @@ msgstr ""
 " questo comando anche sul livello 'people', anche se ovviamente sarebbe poco"
 " consueto."
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:283
+#: ../../docs/training_manual/spatial_databases/geometry.rst:344
 msgid "Geometry Cleaning"
 msgstr "Pulire la geometria"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:285
+#: ../../docs/training_manual/spatial_databases/geometry.rst:346
 msgid ""
 "You can get more information for this topic in `this blog entry "
 "<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_."
@@ -339,11 +340,11 @@ msgstr ""
 "Puoi ottenere maggiori informazioni su questo argomento in `this blog entry "
 "<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_."
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:289
+#: ../../docs/training_manual/spatial_databases/geometry.rst:350
 msgid "Differences between tables"
 msgstr "Differenze tra tabelle"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:291
+#: ../../docs/training_manual/spatial_databases/geometry.rst:352
 msgid ""
 "To detect the difference between two tables with the same structure, you can"
 " use the PostgreSQL keyword ``EXCEPT``:"
@@ -351,7 +352,7 @@ msgstr ""
 "Per rilevare la differenza tra due tabelle con la stessa struttura, è "
 "possibile utilizzare la parola PostgreSQL ``EXCEPT``:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:300
+#: ../../docs/training_manual/spatial_databases/geometry.rst:361
 msgid ""
 "As the result, you will get all records from table_a which are not stored in"
 " table_b."
@@ -359,11 +360,11 @@ msgstr ""
 "Come risultato, otterrai tutti i record di table_a che non sono memorizzati "
 "in table_b."
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:304
+#: ../../docs/training_manual/spatial_databases/geometry.rst:365
 msgid "Tablespaces"
 msgstr "Archiviazione delle tabelle"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:306
+#: ../../docs/training_manual/spatial_databases/geometry.rst:367
 msgid ""
 "You can define where postgres should store its data on disk by creating "
 "tablespaces:"
@@ -371,19 +372,19 @@ msgstr ""
 "Puoi definire dove postgres deve memorizzare i propri dati su disco creando "
 "tablespaces:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:313
+#: ../../docs/training_manual/spatial_databases/geometry.rst:374
 msgid ""
 "When you create a database, you can then specify which tablespace to use "
-"e.g.::"
+"e.g.:"
 msgstr ""
-"Se crei un database puoi allora specificare quale spazio di archiviazione "
-"usare ad esempio:"
+"Quando crei un database puoi specificare quale spazio di archiviazione usare"
+" ad esempio:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:318
+#: ../../docs/training_manual/spatial_databases/geometry.rst:381
 msgid "In Conclusion"
 msgstr "In Conclusione"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:320
+#: ../../docs/training_manual/spatial_databases/geometry.rst:383
 msgid ""
 "You've learned how to create more complex geometries using PostGIS "
 "statements. Keep in mind that this is mostly to improve your tacit knowledge"

@@ -5,23 +5,33 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
+# Harrissou Sant-anna, 2025
+# Li Hongsheng, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 10:51+0100\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Li Hongsheng, 2025\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"翻译是一项社区工作：ref：`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
+"progress|。"
 
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:24
 msgid "Accessing the Table Of Contents (TOC)"
@@ -108,22 +118,6 @@ msgstr ""
 "<qgis.core.QgsLayerTreeGroup>`）和图层节点（:class:`QgsLayerTreeLayer "
 "<qgis.core.QgsLayerTreeLayer>`）。"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:107
-msgid ""
-"for more information you can read these blog posts of Martin Dobias: `Part 1"
-" <https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-"
-"part-1/>`_ `Part 2 <https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-"
-"layer-tree-api-part-2/>`_ `Part 3 "
-"<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
-"part-3/>`_"
-msgstr ""
-"想了解更多信息，可以阅读Martin Dobias的博客文章： `Part 1 "
-"<https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-"
-"part-1/>`_ `Part 2 <https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-"
-"layer-tree-api-part-2/>`_ `Part 3 "
-"<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
-"part-3/>`_"
-
 #: ../../docs/pyqgis_developer_cookbook/legend.rst:112
 msgid ""
 "The project layer tree can be accessed easily with the method "
@@ -133,29 +127,29 @@ msgstr ""
 "使用:class:`QgsProject <qgis.core.QgsProject>`的:meth:`layerTreeRoot() "
 "<qgis.core.QgsProject.layerTreeRoot>`方法可以方便地访问项目图层树："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:119
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:120
 msgid "``root`` is a group node and has *children*:"
 msgstr "``root``是组节点，有 *子节点*："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:125
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:126
 msgid ""
 "A list of direct children is returned. Sub group children should be accessed"
 " from their own direct parent."
 msgstr "返回直接子节点的列表。子组应该从它们自己的直接父级节点访问。"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:128
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:129
 msgid "We can retrieve one of the children:"
 msgstr "我们可以检索其中一个子节点："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:139
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:140
 msgid "Layers can also be retrieved using their (unique) ``id``:"
 msgstr "也可以用唯一 (unique) ``id``来检索图层："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:147
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:148
 msgid "And groups can also be searched using their names:"
 msgstr "也可以用组名称来查找组："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:154
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:155
 msgid ""
 ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` has many other "
 "useful methods that can be used to obtain more information about the TOC:"
@@ -163,13 +157,13 @@ msgstr ""
 ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` "
 "有许多其他有用的方法，可以用来获取更多关于目录的信息："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:167
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:168
 msgid ""
 "Now let’s add some layers to the project’s layer tree. There are two ways of"
 " doing that:"
 msgstr "现在，我们来给项目图层树增加一些图层。有两种方法："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:170
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:171
 msgid ""
 "**Explicit addition** using the :meth:`addLayer() "
 "<qgis.core.QgsLayerTreeGroup.addLayer>` or :meth:`insertLayer() "
@@ -178,13 +172,13 @@ msgstr ""
 "**显式添加**使用：  :meth:`addLayer() <qgis.core.QgsLayerTreeGroup.addLayer>` 或者 "
 ":meth:`insertLayer() <qgis.core.QgsLayerTreeGroup.insertLayer>`函数："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:183
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:184
 msgid ""
 "**Implicit addition**: since the project's layer tree is connected to the "
 "layer registry it is enough to add a layer to the map layer registry:"
 msgstr "**隐式增加**:因为项目的图层树是连接到图层注册表的，所以添加一个图层到地图图层注册表就可以了:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:191
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:192
 msgid ""
 "You can switch between :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` "
 "and :class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` easily:"
@@ -192,7 +186,7 @@ msgstr ""
 "您可以很容易地在 :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` 和 "
 ":class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` 之间转换："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:207
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:208
 msgid ""
 "Groups can be added with the :meth:`addGroup() "
 "<qgis.core.QgsLayerTreeGroup.addGroup>` method. In the example below, the "
@@ -202,35 +196,35 @@ msgstr ""
 "可以用方法 :meth:`addGroup() <qgis.core.QgsLayerTreeGroup.addGroup>` "
 "来增加组节点。在下面的例子中，前者会在目录的末尾加入一个组节点，而对于后者，您可以在现有组中添加另一个组："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:218
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:219
 msgid "To moving nodes and groups there are many useful methods."
 msgstr "很多有用的方法可以用于移动节点和组。"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:220
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:221
 msgid "Moving an existing node is done in three steps:"
 msgstr "移动一个现有的节点需要三个步骤："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:222
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:223
 msgid "cloning the existing node"
 msgstr "克隆现有节点"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:223
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:224
 msgid "moving the cloned node to the desired position"
 msgstr "将克隆节点移动到所需位置"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:224
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:225
 msgid "deleting the original node"
 msgstr "删除原始节点"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:235
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:236
 msgid ""
 "It is a little bit more *complicated* to move a layer around in the legend:"
 msgstr "在图例中移动一个图层有点“复杂”："
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:252
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:253
 msgid "or moving it to an existing group:"
 msgstr "或者将它移动到一个现有的组:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:272
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:273
 msgid "Some other methods that can be used to modify the groups and layers:"
 msgstr "一些可以用来修改组和图层的其他方法："

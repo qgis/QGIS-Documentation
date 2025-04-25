@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Mayeul Kauffmann, 2024
-# Harrissou Sant-anna, 2024
+# MarieSilvestre, 2025
+# Harrissou Sant-anna, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2024\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2025\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,27 +95,6 @@ msgstr ""
 msgid "Vector Data"
 msgstr "Données Vecteur"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:51
-msgid ""
-"Many of the features and tools available in QGIS work the same, regardless "
-"the vector data source. However, because of the differences in format "
-"specifications (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file "
-"formats, AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL Server, "
-"SAP HANA Spatial databases and many more), QGIS may handle some of their "
-"properties differently. Support is provided by the `GDAL vector drivers "
-"<https://gdal.org/en/latest/drivers/vector/index.html>`_. This section describes how "
-"to work with these specifics."
-msgstr ""
-"La plupart des fonctions de QGIS fonctionnent de la même façon pour toutes "
-"les sources de données vectorielles. Cependant, à cause de différences entre"
-" les formats de données (GeoPackage, Shapefile ESRI, fichiers MapInfo et "
-"MicroStation, AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL "
-"Server, bases de données spatiales SAP HANA et de nombreux autres), QGIS "
-"gère de façon différenciée certaines de leurs propriétés. La fonction "
-"d'accès aux données est permise par les `pilotes vectoriels GDAL "
-"<https://gdal.org/en/latest/drivers/vector/index.html>`_. Cette section en décrit les "
-"spécificités."
-
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:63
 msgid ""
 "QGIS supports (multi)point, (multi)line, (multi)polygon, CircularString, "
@@ -147,7 +126,7 @@ msgid ""
 "used to store both vector and raster data. The format was defined by the "
 "Open Geospatial Consortium (OGC), and was published in 2014."
 msgstr ""
-"Le format `GeoPackage <https://www.geopackage.org/>`_ (GPKG) est "
+"Le format `GeoPackage <https://www.geopackage.org/>` _ (GPKG) est "
 "indépendant de la plate-forme et est implémenté en tant que conteneur de "
 "base de données SQLite et peut être utilisé pour stocker des données vecteur"
 " et raster. Le format a été défini par l'Open Geospatial Consortium (OGC) et"
@@ -566,14 +545,6 @@ msgstr ""
 "Ce fichier est sauvegardé dans le même dossier que le fichier :file:`.csv`, "
 "avec le même nom, mais en tant qu'extension :file:`.csvt`"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:279
-msgid ""
-"*You can find more information at* `GDAL CSV Driver "
-"<https://gdal.org/en/latest/drivers/vector/csv.html>`_."
-msgstr ""
-"*Vous trouverez plus d'informations dans la documentation du* `pilote CSV de"
-" GDAL <https://gdal.org/en/latest/drivers/vector/csv.html>`_."
-
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:295
 msgid "PostGIS Layers"
 msgstr "Couches PostGIS"
@@ -751,7 +722,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:409
 msgid "DB Manager"
-msgstr "DB Manager"
+msgstr "Le Gestionnaire de Bases de Données"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:411
 msgid ""
@@ -938,18 +909,6 @@ msgstr ""
 ":guilabel:`Format` et entrez les deux :guilabel:`Nom de fichier` et "
 ":guilabel:`Nom de coouche`."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:539
-msgid ""
-"Also, you can select ``SQLite`` as format and then add ``SPATIALITE=YES`` in"
-" the :menuselection:`Custom Options --> Data source` field. This tells GDAL "
-"to create a SpatiaLite database. See also "
-"https://gdal.org/en/latest/drivers/vector/sqlite.html."
-msgstr ""
-"Vous pouvez également sélectionner ``SQLite`` comme format, puis ajouter "
-"``SPATIALITE=YES`` dans le :menuselection:`Options personnalisées -> Source "
-"de données`. Cela indique à GDAL de créer une base de données SpatiaLite. "
-"Voir également https://gdal.org/en/latest/drivers/vector/sqlite.html."
-
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:545
 msgid ""
 "QGIS also supports editable views in SpatiaLite. For SpatiaLite data "
@@ -993,29 +952,6 @@ msgstr ""
 "(remarque: pour les coordonnées de Lat Lon, 6 est considéré comme "
 "suffisant). Une troncature se produira pour supprimer les zéros de fin."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:568
-msgid ""
-":guilabel:`RFC7946` by default GeoJSON 2008 will be used. If set to YES, the"
-" updated RFC 7946 standard will be used. Default is NO (thus GeoJSON 2008). "
-"See https://gdal.org/en/latest/drivers/vector/geojson.html#rfc-7946-write-support for "
-"the main differences, in short: only EPSG:4326 is allowed, other crs's will "
-"be transformed, polygons will be written such as to follow the right-hand "
-"rule for orientation, values of a \"bbox\" array are [west, south, east, "
-"north], not [minx, miny, maxx, maxy]. Some extension member names are "
-"forbidden in FeatureCollection, Feature and Geometry objects, the default "
-"coordinate precision is 7 decimal digits"
-msgstr ""
-":guilabel:`RFC7946` par défaut GeoJSON 2008 sera utilisé. S'il est défini "
-"sur OUI, la norme RFC 7946 mise à jour sera utilisée. La valeur par défaut "
-"est NO (donc GeoJSON 2008). Voir "
-"https://gdal.org/en/latest/drivers/vector/geojson.html#rfc-7946-write-support pour les"
-" principales différences, en bref : seul EPSG: 4326 est autorisé, les autres"
-" SCR seront transformés, les polygones seront écrits comme pour suivre la "
-"règle de droite pour l'orientation, les valeurs d'un tableau \"bbox\" sont "
-"[ouest, sud, est, nord], pas [minx, miny, maxx, maxy]. Certains noms "
-"d'extension sont interdits dans les objets FeatureCollection, Feature et "
-"Geometry, la précision des coordonnées par défaut est de 7 chiffres décimaux"
-
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:579
 msgid ""
 ":guilabel:`WRITE_BBOX` set to YES to include the bounding box of the "
@@ -1023,19 +959,6 @@ msgid ""
 msgstr ""
 ":guilabel:`WRITE_BBOX` défini sur YES pour inclure la boîte englobante des "
 "géométries au niveau de l'entité et de la collection d'entités"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:582
-msgid ""
-"Besides GeoJSON there is also an option to export to \"GeoJSON - Newline "
-"Delimited\" (see https://gdal.org/en/latest/drivers/vector/geojsonseq.html). Instead "
-"of a FeatureCollection with Features, you can stream one type (probably only"
-" Features) sequentially separated with newlines."
-msgstr ""
-"Outre GeoJSON, il existe également une option d'exportation vers \"GeoJSON -"
-" Newline Delimited\" (voir https://gdal.org/en/latest/drivers/vector/geojsonseq.html)."
-" Au lieu d'une FeatureCollection avec des Features, vous pouvez diffuser un "
-"type (probablement uniquement Features) séparés séquentiellement avec des "
-"retours à la ligne."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:588
 msgid ""

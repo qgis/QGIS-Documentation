@@ -5,18 +5,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# tomoya miyoshi, 2024
-# fairtommy <fairtommy@gmail.com>, 2024
+# fairtommy <fairtommy@gmail.com>, 2025
+# tomoyuki arai <tarai.3367@gmail.com>, 2025
+# tomoya miyoshi, 2025
+# Harrissou Sant-anna, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2024\n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,20 +43,11 @@ msgstr "認証システムの概要"
 msgid "Anatomy of authentication system"
 msgstr "認証システムの構造"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:19
+#: ../../docs/user_manual/auth_system/auth_overview.rst:20
 msgid "Authentication database"
 msgstr "認証データベース"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:21
-msgid ""
-"The new authentication system stores authentication configurations in an "
-"SQLite database file located, by default, at :file:`<profile "
-"directory>/qgis-auth.db`."
-msgstr ""
-"新しい認証システムは、デフォルトでは :file:`<profile directory>/qgis-auth.db` "
-"にあるSQLiteデータベースファイルに認証設定を保存します。"
-
-#: ../../docs/user_manual/auth_system/auth_overview.rst:24
+#: ../../docs/user_manual/auth_system/auth_overview.rst:25
 msgid ""
 "This authentication database can be moved between QGIS installations without"
 " affecting other current QGIS user preferences, as it is completely separate"
@@ -67,7 +59,7 @@ msgid ""
 msgstr ""
 "この認証データベースは、それは通常のQGIS設定から完全に分離されているので、他の現在のQGISユーザーの好みに影響を与えることなく、QGISのインストール間で移動できます。最初にデータベースに設定を格納する際に、構成ID（ランダム7文字の英数字文字列）が生成されます。これは設定を表し、これによりIDがその関連する資格情報の開示することなく、プレーンテキストアプリケーションコンポーネント（例えば、プロジェクト、プラグイン、または設定ファイルなど）に格納することを可能にします。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:34
+#: ../../docs/user_manual/auth_system/auth_overview.rst:35
 msgid ""
 "The parent directory of the `qgis-auth.db` can be set using the following "
 "environment variable, ``QGIS_AUTH_DB_DIR_PATH``, or set on the command line "
@@ -76,11 +68,11 @@ msgstr ""
 "`qgis-auth.db` の親ディレクトリは、以下の環境変数、 ``QGIS_AUTH_DB_DIR_PATH`` を使用して設定、または "
 "``--authdbdirectory`` オプションでの起動時にコマンドラインで設定できます。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:39
+#: ../../docs/user_manual/auth_system/auth_overview.rst:94
 msgid "Master password"
 msgstr "マスターパスワード"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:41
+#: ../../docs/user_manual/auth_system/auth_overview.rst:96
 msgid ""
 "To store or access sensitive information within the database, a user must "
 "define a `master password`. A new master password is requested and verified "
@@ -97,28 +89,28 @@ msgstr ""
 "を定義しなければなりません。暗号化されたデータをデータベースに初めて保存する際には、新しいマスターパスワードが要求され、確認されます。機密情報がアクセスされるとき、ユーザーはマスターパスワードの入力を求められます。その後、ユーザがキャッシュされた値をクリアするアクションを手動で選択しない限り、パスワードはセッションの終わりまで（アプリケーションが終了するまで）キャッシュされます。既存の認証設定を選択するときや、サーバー構成に設定を適用するとき（WMS"
 " レイヤを追加するときなど）など、認証システムを使用するインスタンスによっては、マスターパスワードの入力を必要としません。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:51
+#: ../../docs/user_manual/auth_system/auth_overview.rst:106
 msgid ""
 "You can choose to save the password in the ``Wallet/Keyring`` of your "
 "computer."
 msgstr "パスワードをあなたのコンピュータの ``Wallet/Keyring`` に保存することもできます。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:59
+#: ../../docs/user_manual/auth_system/auth_overview.rst:114
 msgid "Input new master password"
 msgstr "新しいマスターパスワードの入力"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:63
+#: ../../docs/user_manual/auth_system/auth_overview.rst:118
 msgid ""
 "A path to a file containing the master password can be set using the "
 "following environment variable, ``QGIS_AUTH_PASSWORD_FILE``."
 msgstr ""
 "マスターパスワードを含むファイルへのパスは、以下の環境変数、 ``QGIS_AUTH_PASSWORD_FILE`` を使用して設定できます。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:67
+#: ../../docs/user_manual/auth_system/auth_overview.rst:122
 msgid "Managing the master password"
 msgstr "マスターパスワードの管理"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:69
+#: ../../docs/user_manual/auth_system/auth_overview.rst:124
 msgid ""
 "Once set, the master password can be reset; the current master password will"
 " be needed prior to resetting. During this process, there is an option to "
@@ -126,11 +118,11 @@ msgid ""
 msgstr ""
 "一度設定すると、マスターパスワードはリセットできます。現在のマスターパスワードはリセットする前に必要になるでしょう。このプロセスの間には、現在のデータベースの完全なバックアップを作成するオプションがあります。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:78
+#: ../../docs/user_manual/auth_system/auth_overview.rst:133
 msgid "Resetting master password"
 msgstr "マスターパスワードのリセット"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:80
+#: ../../docs/user_manual/auth_system/auth_overview.rst:135
 msgid ""
 "If the user forgets the master password, there is no way to retrieve or "
 "override it. There is also no means of retrieving encrypted information "
@@ -138,21 +130,21 @@ msgid ""
 msgstr ""
 "ユーザーがマスターパスワードを忘れた場合は、それを取得したり、上書きする方法はありません。マスターパスワードを知らずに暗号化された情報を検索する手立てもありません。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:84
+#: ../../docs/user_manual/auth_system/auth_overview.rst:139
 msgid ""
 "If a user inputs their existing password incorrectly three times, the dialog"
 " will offer to erase the database."
 msgstr "ユーザーが既存のパスワードを誤って3回入力すると、ダイアログがデータベースを消去しようとします。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:92
+#: ../../docs/user_manual/auth_system/auth_overview.rst:147
 msgid "Password prompt after three invalid attempts"
 msgstr "3つの無効な試みの後にパスワードのプロンプト"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:95
+#: ../../docs/user_manual/auth_system/auth_overview.rst:150
 msgid "Authentication Configurations"
 msgstr "認証設定"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:97
+#: ../../docs/user_manual/auth_system/auth_overview.rst:152
 msgid ""
 "You can manage authentication configurations from :guilabel:`Configurations`"
 " in the :guilabel:`Authentication` tab of the QGIS Options dialog "
@@ -161,11 +153,11 @@ msgstr ""
 "認証設定はQGISオプションダイアログ （ :menuselection:`設定 --> オプション` ）の :guilabel:`認証` タブ中の "
 ":guilabel:`設定` から管理できます。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:106
+#: ../../docs/user_manual/auth_system/auth_overview.rst:161
 msgid "Configurations editor"
 msgstr "設定エディタ"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:108
+#: ../../docs/user_manual/auth_system/auth_overview.rst:163
 msgid ""
 "Use the |symbologyAdd| button to add a new configuration, the "
 "|symbologyRemove| button to remove configurations, and the |symbologyEdit| "
@@ -174,23 +166,23 @@ msgstr ""
 "新しい設定を追加する |symbologyAdd| ボタン、設定を削除する |symbologyRemove| ボタン、および既存のものを変更する "
 "|symbologyEdit| ボタンを使用できます。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:322
+#: ../../docs/user_manual/auth_system/auth_overview.rst:377
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:326
+#: ../../docs/user_manual/auth_system/auth_overview.rst:381
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:324
+#: ../../docs/user_manual/auth_system/auth_overview.rst:379
 msgid "symbologyEdit"
 msgstr "symbologyEdit"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:116
+#: ../../docs/user_manual/auth_system/auth_overview.rst:171
 msgid "Adding config from within Configuration editor"
 msgstr "設定エディタから設定を追加"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:118
+#: ../../docs/user_manual/auth_system/auth_overview.rst:173
 msgid ""
 "The same type of operations for authentication configuration management "
 "(Add, Edit and Remove) can be done when configuring a given service "
@@ -204,13 +196,13 @@ msgstr ""
 "認証設定管理のための同じタイプの操作（追加、編集、削除）は、OWSサービス接続を設定するように、所与のサービス接続を設定するときに行うことができます。そのため、認証データベース内で見つかった設定を完全に管理するためのアクションボタンが構成セレクタ内にあります。この場合、より包括的な構成管理を行う必要がない限り、QGISオプションの"
 " :guilabel:`認証` タブ中の :guilabel:`設定` に行く必要はありません。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:131
+#: ../../docs/user_manual/auth_system/auth_overview.rst:186
 msgid ""
 "WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and "
 ":guilabel:`Remove` authentication configuration buttons"
 msgstr ":guilabel:`新規追加`、:guilabel:`編集`、:guilabel:`削除` 認証設定ボタンを示す WMS 接続ダイアログ"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:134
+#: ../../docs/user_manual/auth_system/auth_overview.rst:189
 msgid ""
 "When creating or editing an authentication configuration, the info required "
 "is a name, an authentication method and any other info that the "
@@ -220,11 +212,11 @@ msgstr ""
 "認証設定を作成または編集するときに、必要な情報には、名前、認証方法および認証方法が必要であること、他の情報（利用可能な認証の種類についての詳細は "
 ":ref:`authentication_methods` を参照）。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:142
+#: ../../docs/user_manual/auth_system/auth_overview.rst:197
 msgid "Authentication Methods"
 msgstr "認証方式"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:144
+#: ../../docs/user_manual/auth_system/auth_overview.rst:199
 msgid ""
 "Available authentications are provided by C++ plugins much in the same way "
 "data provider plugins are supported by QGIS. The method of authentication "
@@ -242,15 +234,15 @@ msgstr ""
 " :menuselection:`設定 --> オプション` にアクセスし、 :guilabel:`認証` タブの |options| "
 ":guilabel:`インストール済みプラグイン` ボタンをクリックすると表示されます。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:320
+#: ../../docs/user_manual/auth_system/auth_overview.rst:375
 msgid "options"
 msgstr "options"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:160
+#: ../../docs/user_manual/auth_system/auth_overview.rst:215
 msgid "Available method plugins list"
 msgstr "利用可能なメソッドプラグイン一覧"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:162
+#: ../../docs/user_manual/auth_system/auth_overview.rst:217
 msgid ""
 "Plugins can be created for new authentication methods that do not require "
 "QGIS to be recompiled. Since the support for plugins is currently C++-only, "
@@ -262,31 +254,31 @@ msgstr ""
 "プラグインは、QGIS "
 "の再コンパイルを必要とせずに新しい認証方法用に作成できます。現在、プラグインのサポートはC++のみであるため、ドロップインした新しいプラグインをユーザーが使用できるようにするには、QGISを再起動する必要があります。プラグインを既存のターゲットインストールに追加する場合は、プラグインがQGISの同じターゲットバージョンに対してコンパイルされていることを確認してください。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:173
+#: ../../docs/user_manual/auth_system/auth_overview.rst:228
 msgid "Basic HTTP authentication configs"
 msgstr "基本HTTP認証構成"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:180
+#: ../../docs/user_manual/auth_system/auth_overview.rst:235
 msgid "ESRI Token authentication configs"
 msgstr "ESRIトークン認証構成"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:187
+#: ../../docs/user_manual/auth_system/auth_overview.rst:242
 msgid "OAuth2 authentication configs"
 msgstr "OAuth2認証構成"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:194
+#: ../../docs/user_manual/auth_system/auth_overview.rst:249
 msgid "PKI paths authentication configs"
 msgstr "PKIパス認証構成"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:201
+#: ../../docs/user_manual/auth_system/auth_overview.rst:256
 msgid "PKI PKCS#12 file paths authentication configs"
 msgstr "PKI PKCS＃12ファイルのパス認証構成"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:208
+#: ../../docs/user_manual/auth_system/auth_overview.rst:263
 msgid "Stored Identity authentication configs"
 msgstr "保存されたアイデンティティ認証構成"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:212
+#: ../../docs/user_manual/auth_system/auth_overview.rst:267
 msgid ""
 "The Resource URL is currently an *unimplemented* feature that will "
 "eventually allow a particular configuration to be auto-chosen when "
@@ -294,11 +286,11 @@ msgid ""
 msgstr ""
 "リソースのURLは現在 *未実装* の機能で、最終的には指定されたURLにあるリソースへの接続時に特定の構成が自動選択できるようになります。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:217
+#: ../../docs/user_manual/auth_system/auth_overview.rst:272
 msgid "Master Password and Auth Config Utilities"
 msgstr "マスターパスワードと認証構成ユーティリティ"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:219
+#: ../../docs/user_manual/auth_system/auth_overview.rst:274
 msgid ""
 "Under the Options menu (:menuselection:`Settings --> Options`) in the "
 ":guilabel:`Authentication` tab, there are several utility actions to manage "
@@ -307,23 +299,23 @@ msgstr ""
 "（ :menuselection:`設定 --> オプション` ）オプションメニューの下にある :guilabel:`認証` "
 "タブ、認証データベースと構成を管理するには、いくつかのユーティリティアクションがあります。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:228
+#: ../../docs/user_manual/auth_system/auth_overview.rst:283
 msgid "Utilities menu"
 msgstr "ユーティリティメニュー"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:230
+#: ../../docs/user_manual/auth_system/auth_overview.rst:285
 msgid ""
 "**Input master password**: opens the master password input dialog, "
 "independent of performing any authentication database command"
 msgstr "**マスターパスワードを入力する**: 認証データベースコマンドの実行とは無関係に、マスターパスワードの入力ダイアログを開きます"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:232
+#: ../../docs/user_manual/auth_system/auth_overview.rst:287
 msgid ""
 "**Clear cached master password**: unsets the master password if it has been "
 "set"
 msgstr "**キャッシュされたマスターパスワードを消去する**: マスターパスワードがセットされているときにそれを外します"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:234
+#: ../../docs/user_manual/auth_system/auth_overview.rst:289
 msgid ""
 "**Reset master password**: opens a dialog to change the master password (the"
 " current password must be known) and optionally back up the current database"
@@ -331,13 +323,13 @@ msgstr ""
 "**マスターパスワードをリセットする**: "
 "マスターパスワードを変更するダイアログを開き（現在のパスワードが判っている必要があります）、オプションで現在のデータベースをバックアップします"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:236
+#: ../../docs/user_manual/auth_system/auth_overview.rst:291
 msgid ""
 "**Clear network authentication access cache**: clears the authentication "
 "cache of all connections"
 msgstr "**ネットワーク認証アクセスキャッシュをクリアする**: すべての接続の認証キャッシュをクリアします"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:238
+#: ../../docs/user_manual/auth_system/auth_overview.rst:293
 msgid ""
 "**Automatically clear network authentication access cache on SSL errors**: "
 "the connection cache stores all authentication data for connections, also "
@@ -349,33 +341,33 @@ msgid ""
 msgstr ""
 "**SSLエラーでネットワーク認証アクセスキャッシュを自動的にクリアする**：接続キャッシュは、接続に失敗した場合にも、接続のすべての認証データを保存します。認証設定や認証局を変更した場合は、認証キャッシュをクリアするか、QGISを再起動する必要があります。このオプションをオンにすると、SSLエラーが発生し、接続を中止することを選択するたびに、認証キャッシュが自動的にクリアされます。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:245
+#: ../../docs/user_manual/auth_system/auth_overview.rst:300
 msgid ""
 "**Integrate master password with your Wallet/Keyring**: adds the master "
 "password to your personal Wallet/Keyring"
 msgstr ""
 "**あなたのWallet/Keyringとマスターパスワードを統合する**: マスターパスワードを個人のWallet/Keyringに追加します"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:247
+#: ../../docs/user_manual/auth_system/auth_overview.rst:302
 msgid ""
 "**Store/update the master password in your Wallet/Keyring**: updates the "
 "changed master password in your Wallet/Keyring"
 msgstr "**Wallet/Keyringのマスターパスワードを保存更新**: 変更したマスターパスワードをWallet/Keyringに保存します"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:249
+#: ../../docs/user_manual/auth_system/auth_overview.rst:304
 msgid ""
 "**Clear the master password from your Wallet/Keyring**: deletes the master "
 "password from your Wallet/Keyring"
 msgstr ""
 "**あなたのWallet/Keyringからマスターパスワードをクリアする**：Wallet/Keyringからマスターパスワードを削除します"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:251
+#: ../../docs/user_manual/auth_system/auth_overview.rst:306
 msgid ""
 "**Enable password helper debug log**: enables a debug tool that will contain"
 " all the log information of the authentication methods"
 msgstr "**パスワードヘルパーデバッグログを有効にする**: 認証方法のすべてのログ情報を格納するデバッグツールを有効にします"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:253
+#: ../../docs/user_manual/auth_system/auth_overview.rst:308
 msgid ""
 "**Clear cached authentication configurations**: clears the internal lookup "
 "cache for configurations, used to speed up network connections. This does "
@@ -385,13 +377,13 @@ msgstr ""
 "**キャッシュされた認証構成をクリアする**: "
 "ネットワーク接続を高速化するために使用される設定の内部キャッシュをクリアします。これはQGISのコアネットワークアクセスマネージャのキャッシュをクリアしません。それにはQGISの再起動が必要です。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:256
+#: ../../docs/user_manual/auth_system/auth_overview.rst:311
 msgid ""
 "**Remove all authentication configurations**: clears the database of all "
 "configuration records, without removing other stored records."
 msgstr "**すべての認証設定を削除する**: すべての設定レコードのデータベースをクリアします。その他のレコードは削除されません。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:258
+#: ../../docs/user_manual/auth_system/auth_overview.rst:313
 msgid ""
 "**Erase authentication database**: schedules a backup of the current "
 "database and complete rebuild of the database table structure. The actions "
@@ -402,15 +394,15 @@ msgstr ""
 "**認証データベースを消去する**: "
 "現在のデータベースのバックアップと、データベーステーブル構造の完全な再構築をスケジュールします。このアクションは、プロジェクトの読み込みのような、他の操作が一時的にデータベースが見つからないために中断やエラーが起きないよう、後の時間にスケジュールされます。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:269
+#: ../../docs/user_manual/auth_system/auth_overview.rst:324
 msgid "DB erase verification menu"
 msgstr "DB消去検証メニュー"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:272
+#: ../../docs/user_manual/auth_system/auth_overview.rst:327
 msgid "Using authentication configurations"
 msgstr "認証設定を使用する"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:274
+#: ../../docs/user_manual/auth_system/auth_overview.rst:329
 msgid ""
 "Typically, an authentication configuration is selected in a configuration "
 "dialog for a network services (such as WMS). However, the selector widget "
@@ -420,7 +412,7 @@ msgstr ""
 "典型的には、認証構成は、（例えば、WMSのような）ネットワークサービスのための設定ダイアログで選択されています。しかし、セレクタウィジェットは、サードパーティのPyQGISまたはC"
 " ++プラグインのように、認証が必要などこにでも、または非コア機能中に、埋め込むことができます。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:279
+#: ../../docs/user_manual/auth_system/auth_overview.rst:334
 msgid ""
 "When using the selector, :guilabel:`No authentication` is displayed in the "
 "pop-up menu control when nothing is selected, when there are no "
@@ -433,19 +425,19 @@ msgstr ""
 ":guilabel:`認証なし` がポップアップメニューコントロールに表示されます。 :guilabel:`type` と :guilabel:`Id`"
 " フィールドは読み取り専用とそれぞれの認証方法の説明と構成のIDを提供しています。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:291
+#: ../../docs/user_manual/auth_system/auth_overview.rst:346
 msgid "Authentication configuration selector with no authentication"
 msgstr "認証なしの認証設定セレクタ"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:298
+#: ../../docs/user_manual/auth_system/auth_overview.rst:353
 msgid "Authentication configuration selector with selected config"
 msgstr "構成が選択された認証設定セレクタ"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:301
+#: ../../docs/user_manual/auth_system/auth_overview.rst:356
 msgid "Python bindings"
 msgstr "Pythonバインディング"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:303
+#: ../../docs/user_manual/auth_system/auth_overview.rst:358
 msgid ""
 "All classes and public functions have sip bindings, except "
 "``QgsAuthCrypto``, since management of the master password hashing and auth "
@@ -454,7 +446,7 @@ msgstr ""
 "マスターパスワードのハッシュ化と認証データベースの暗号化の管理は、Pythonを経由してではなく、メインのアプリによって処理されるべきなので、``QgsAuthCrypto``"
 " を除く全てのクラスとパブリック関数はsipバインディングを持っています。"
 
-#: ../../docs/user_manual/auth_system/auth_overview.rst:307
+#: ../../docs/user_manual/auth_system/auth_overview.rst:362
 msgid ""
 "Once the master password is entered, the API is open to access "
 "authentication configs in the authentication database, similar to how "

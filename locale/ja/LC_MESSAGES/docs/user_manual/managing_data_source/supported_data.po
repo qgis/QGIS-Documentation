@@ -5,9 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoya miyoshi, 2024
-# Harrissou Sant-anna, 2024
-# fairtommy <fairtommy@gmail.com>, 2024
+# Harrissou Sant-anna, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,8 +14,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: fairtommy <fairtommy@gmail.com>, 2024\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,23 +83,6 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:49
 msgid "Vector Data"
 msgstr "ベクタデータ"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:51
-msgid ""
-"Many of the features and tools available in QGIS work the same, regardless "
-"the vector data source. However, because of the differences in format "
-"specifications (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file "
-"formats, AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL Server, "
-"SAP HANA Spatial databases and many more), QGIS may handle some of their "
-"properties differently. Support is provided by the `GDAL vector drivers "
-"<https://gdal.org/en/latest/drivers/vector/index.html>`_. This section describes how "
-"to work with these specifics."
-msgstr ""
-"QGISで利用できる機能やツールの多くは、ベクタデータのソースに関係なく同じように動作します。ただし、フォーマット（GeoPackage、ESRIシェープファイル、MapInfoやMicroStationファイル形式、AutoCAD"
-" DXF、PostGIS、SpatiaLite、DB2、Oracle Spatial、MS SQL Server、SAP "
-"HANA空間データベース、その他多数）の仕様が異なるため、QGISでは一部のプロパティの扱いが異なる場合があります。フォーマットのサポートは `GDAL"
-" vector drivers <https://gdal.org/en/latest/drivers/vector/index.html>`_ "
-"によって提供されています。このセクションでは、この差異をどのように扱うかについて説明します。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:63
 msgid ""
@@ -428,7 +410,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Type"
-msgstr "タイプ"
+msgstr "データ型"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Name"
@@ -444,7 +426,7 @@ msgstr "整数値"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "Integer"
-msgstr "Integer"
+msgstr "整数"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:1
 msgid "4"
@@ -557,14 +539,6 @@ msgid ""
 "This file is saved in the same folder as the :file:`.csv` file, with the "
 "same name, but :file:`.csvt` as the extension."
 msgstr "このファイルは :file:`.csv` ファイルと同じフォルダに同じ名前で保存されますが、拡張子は :file:`.csvt` です。"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:279
-msgid ""
-"*You can find more information at* `GDAL CSV Driver "
-"<https://gdal.org/en/latest/drivers/vector/csv.html>`_."
-msgstr ""
-"*更なる情報については* `GDAL CSV Driver <https://gdal.org/en/latest/drivers/vector/csv.html>`_ "
-"を参照してください。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:284
 msgid "**Detect Field Types**"
@@ -769,7 +743,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:409
 msgid "DB Manager"
-msgstr "DBマネージャ"
+msgstr "DB Manager"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:411
 msgid ""
@@ -948,17 +922,6 @@ msgstr ""
 ":guilabel:`形式` として ``SpatiaLite`` を選択し、 :guilabel:`ファイル名` と :guilabel:`レイヤ名`"
 " を入力してください。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:539
-msgid ""
-"Also, you can select ``SQLite`` as format and then add ``SPATIALITE=YES`` in"
-" the :menuselection:`Custom Options --> Data source` field. This tells GDAL "
-"to create a SpatiaLite database. See also "
-"https://gdal.org/en/latest/drivers/vector/sqlite.html."
-msgstr ""
-"また、形式として ``SQLite`` を選択し、 :menuselection:`カスタムオプション --> データソース` フィールドに "
-"``SPATIALITE=YES``を追加することでもSpatiaLite形式で保存できます。このカスタムオプションは、GDALにSpatiaLiteデータベースを作成するように指示します。"
-" https://gdal.org/en/latest/drivers/vector/sqlite.html も参照してください。"
-
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:545
 msgid ""
 "QGIS also supports editable views in SpatiaLite. For SpatiaLite data "
@@ -996,43 +959,12 @@ msgstr ""
 ":guilabel:`COORDINATE_PRECISION` "
 "座標を書き込む際の小数点区切り文字以下の最大桁数を指定します。デフォルトは15です（注：緯度経度座標の場合には6で十分です）。末尾に続くゼロは切り捨てられます。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:568
-msgid ""
-":guilabel:`RFC7946` by default GeoJSON 2008 will be used. If set to YES, the"
-" updated RFC 7946 standard will be used. Default is NO (thus GeoJSON 2008). "
-"See https://gdal.org/en/latest/drivers/vector/geojson.html#rfc-7946-write-support for "
-"the main differences, in short: only EPSG:4326 is allowed, other crs's will "
-"be transformed, polygons will be written such as to follow the right-hand "
-"rule for orientation, values of a \"bbox\" array are [west, south, east, "
-"north], not [minx, miny, maxx, maxy]. Some extension member names are "
-"forbidden in FeatureCollection, Feature and Geometry objects, the default "
-"coordinate precision is 7 decimal digits"
-msgstr ""
-":guilabel:`RFC7946` デフォルトではGeoJSON 2008が使用されます。この値がYESに設定されると、更新されたRFC "
-"7946標準が使用されます。デフォルトはNOです（従ってGeoJSON 2008が使用されます）。 主な違いについては "
-"https://gdal.org/en/latest/drivers/vector/geojson.html#rfc-7946-write-support "
-"を参照してください。簡単に言えば、RFC "
-"7946標準ではEPSG:4326のみが許可され、他のCRSは変換されます。また、ポリゴンは向きの右手ルールに従うように書かれ、\"bbox\" "
-"配列の値は [west, south, east, north] であり、[minx, miny, maxx, maxy] "
-"ではありません。そして、FeatureCollection、Feature、Geometryオブジェクトではいくつかの拡張メンバ名が禁止されており、デフォルトの座標精度は10進数で7桁です。"
-
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:579
 msgid ""
 ":guilabel:`WRITE_BBOX` set to YES to include the bounding box of the "
 "geometries at the feature and feature collection level"
 msgstr ""
 ":guilabel:`WRITE_BBOX` をYESに設定すると、地物や地物コレクションのレベルでジオメトリのバウンディングボックスを含めます。"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:582
-msgid ""
-"Besides GeoJSON there is also an option to export to \"GeoJSON - Newline "
-"Delimited\" (see https://gdal.org/en/latest/drivers/vector/geojsonseq.html). Instead "
-"of a FeatureCollection with Features, you can stream one type (probably only"
-" Features) sequentially separated with newlines."
-msgstr ""
-"GeoJSONの他に、\"GeoJSON - Newline Delimited\" （ "
-"https://gdal.org/en/latest/drivers/vector/geojsonseq.html "
-"参照）へと出力するオプションもあります。フィーチャーコレクションのフィーチャーの代わりに、1種類のもの（おそらくは単一のフィーチャー）を改行区切りで連続的に並べます。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:588
 msgid ""
@@ -1173,23 +1105,6 @@ msgstr "180° 経線をまたぐ緯度経度による地図"
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:673
 msgid "Solving in PostGIS"
 msgstr "PostGISで解決する"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:675
-msgid ""
-"A work-around is to transform the longitude values using PostGIS and the "
-"`ST_ShiftLongitude <https://postgis.net/docs/ST_ShiftLongitude.html>`_ "
-"function. This function reads every point/vertex in every component of every"
-" feature in a geometry, and shifts its longitude coordinate from -180..0° to"
-" 180..360° and vice versa if between these ranges. This function is "
-"symmetrical so the result is a 0..360° representation of a -180..180° data "
-"and a -180..180° representation of a 0..360° data."
-msgstr ""
-"回避策として、PostGIS と `ST_ShiftLongitude "
-"<https://postgis.net/docs/ST_ShiftLongitude.html>`_ "
-"関数を使用して経度値を変換する方法があります。この関数は、ジオメトリ内のすべての地物のすべてのコンポーネントのすべての点/頂点を読み取り、その経度座標を"
-" "
-"-180...0°から180...360°に、そしてその逆にシフトします。この関数は対称であるため、結果は-180...180°のデータを0...360°で表現し、0...360°のデータを-180...180°で表現します。"
-" "
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:688
 msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"

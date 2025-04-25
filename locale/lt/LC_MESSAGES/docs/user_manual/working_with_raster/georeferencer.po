@@ -5,23 +5,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2024
-# Transifex Bot <>, 2024
-# Tomas Straupis, 2024
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2024-03-02 11:58+0000\n"
-"Last-Translator: Tomas Straupis, 2024\n"
+"POT-Creation-Date: 2025-04-17 16:11+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -35,178 +35,505 @@ msgstr ""
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:310
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:6
+msgid "Georeferencer"
+msgstr "Geo-koordinavimas"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:13
+msgid ""
+"The |georefRun| Georeferencer is a tool for aligning unreferenced raster or "
+"vector layers to known coordinate systems using Ground Control Points "
+"(GCPs). It supports exporting transformed rasters (GeoTIFF) and vectors "
+"(shapefiles, geopackages, etc.) or writing accompanying world files (for "
+"raster only). The basic approach to georeferencing a layer is to locate "
+"points on it for which you can accurately determine coordinates."
+msgstr ""
+"|georefRun| Geo-koordinatorius yra įrankis, skirtas nekoordinuotų rastro ar "
+"vektorinių sluoksnių pririšimui prie žinomų koordinačių sistemų naudojant "
+"žemės kontrolės taškus (GCP). Jis leidžia eksportuoti transformuotus rastrus"
+" (GeoTIFF) ir vektorius (shape failus, geopackages ir t.t.) ar įrašyti "
+"atitinkamus pasaulio failus (tik rastrams). Bazinis sluoksnio geo-"
+"koordinavimo būdas yra surasti jo taškus, kuriems jūs galite tiksliai "
+"nurodyti koordinates."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:366
 msgid "georefRun"
 msgstr "georefRun"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:27
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:20
+msgid "**Features**"
+msgstr "**Savybės**"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:28
 msgid "Icon"
 msgstr "Piktograma"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:29
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:28
+msgid "Purpose"
+msgstr "Tikslas"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:30
 msgid "|addRasterLayer|"
 msgstr "|addRasterLayer|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:300
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:356
 msgid "addRasterLayer"
 msgstr "addRasterLayer"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:29
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:30
+msgid "Open raster"
+msgstr "Atverti rastrą"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:30
 msgid "|addOgrLayer|"
 msgstr "|addOgrLayer|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:298
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:354
 msgid "addOgrLayer"
 msgstr "addOgrLayer"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:31
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:30
+msgid "Open vector"
+msgstr "Atverti vektorių"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:32
 msgid "|start|"
 msgstr "|start|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:328
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:384
 msgid "start"
 msgstr "start"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:33
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:32
+msgid "Start georeferencing"
+msgstr "Pradėti geo-koordinavimą"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:34
 msgid "|gdalScript|"
 msgstr "|gdalScript|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:308
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:364
 msgid "gdalScript"
 msgstr "gdalScript"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:33
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:34
+msgid "Generate GDAL Script"
+msgstr "Kurti GDAL skriptą"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:34
 msgid "|loadGCPpoints|"
 msgstr "|loadGCPpoints|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:316
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:372
 msgid "loadGCPpoints"
 msgstr "loadGCPpoints"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:35
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:34
+msgid "Load GCP Points"
+msgstr "Įkelti GCP taškus"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:36
 msgid "|saveGCPPointsAs|"
 msgstr "|saveGCPPointsAs|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:326
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:382
 msgid "saveGCPPointsAs"
 msgstr "saveGCPPointsAs"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:35
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:36
+msgid "Save GCP Points As"
+msgstr "Įrašyti GCP taškus kaip"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:36
 msgid "|transformSettings|"
 msgstr "|transformSettings|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:330
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:386
 msgid "transformSettings"
 msgstr "transformSettings"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:37
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:36
+msgid "Transformation settings"
+msgstr "Transformavimo nustatymai"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:38
 msgid "|addGCPPoint|"
 msgstr "|addGCPPoint|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:296
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:352
 msgid "addGCPPoint"
 msgstr "addGCPPoint"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:37
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:38
+msgid "Add GCP Point"
+msgstr "Pridėti GCP tašką"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:38
 msgid "|deleteGCPPoint|"
 msgstr "|deleteGCPPoint|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:304
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:360
 msgid "deleteGCPPoint"
 msgstr "deleteGCPPoint"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:39
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:38
+msgid "Delete GCP Point"
+msgstr "Trinti GCP tašką"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:40
 msgid "|moveGCPPoint|"
 msgstr "|moveGCPPoint|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:320
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:376
 msgid "moveGCPPoint"
 msgstr "moveGCPPoint"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:39
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:40
+msgid "Move GCP Point"
+msgstr "Perkelti GCP tašką"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:40
 msgid "|pan|"
 msgstr "|pan|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:322
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:378
 msgid "pan"
 msgstr "pan"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:41
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:40
+msgid "Pan"
+msgstr "Pastumti"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:42
 msgid "|zoomIn|"
 msgstr "|zoomIn|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:332
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:388
 msgid "zoomIn"
 msgstr "zoomIn"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:41
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:42
+msgid "Zoom In"
+msgstr "Priartinti"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:42
 msgid "|zoomOut|"
 msgstr "|zoomOut|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:338
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:394
 msgid "zoomOut"
 msgstr "zoomOut"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:43
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:42
+msgid "Zoom Out"
+msgstr "Nutolinti"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:44
 msgid "|zoomToLayer|"
 msgstr "|zoomToLayer|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:340
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:396
 msgid "zoomToLayer"
 msgstr "zoomToLayer"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:43
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:44
+msgid "Zoom To Layer"
+msgstr "Priartinti prie sluoksnio"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:44
 msgid "|zoomLast|"
 msgstr "|zoomLast|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:334
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:390
 msgid "zoomLast"
 msgstr "zoomLast"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:45
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:44
+msgid "Zoom Last"
+msgstr "Paskutinis mastelis"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:46
 msgid "|zoomNext|"
 msgstr "|zoomNext|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:336
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:392
 msgid "zoomNext"
 msgstr "zoomNext"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:45
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:46
+msgid "Zoom Next"
+msgstr "Kitas mastelis"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:46
 msgid "|linkGeorefToQGis|"
 msgstr "|linkGeorefToQGis|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:312
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:368
 msgid "linkGeorefToQGis"
 msgstr "linkGeorefToQGis"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:47
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:46
+msgid "Link Georeferencer to QGIS"
+msgstr "Susieti geo-koordinatorių su QGIS"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:48
 msgid "|linkQGisToGeoref|"
 msgstr "|linkQGisToGeoref|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:314
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:370
 msgid "linkQGisToGeoref"
 msgstr "linkQGisToGeoref"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:47
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:48
+msgid "Link QGIS to Georeferencer"
+msgstr "Susieti QGIS su geo-koordinatoriumi"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:48
 msgid "|fullHistogramStretch|"
 msgstr "|fullHistogramStretch|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:306
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:362
 msgid "fullHistogramStretch"
 msgstr "fullHistogramStretch"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:49
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:48
+msgid "Full histogram stretch"
+msgstr "Pilna histogramos apimtis"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:50
 msgid "|localHistogramStretch|"
 msgstr "|localHistogramStretch|"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:318
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:374
 msgid "localHistogramStretch"
 msgstr "localHistogramStretch"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:324
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:50
+msgid "Local histogram stretch"
+msgstr "Vietinė histogramos apimtis"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:53
+msgid "Table Georeferencer: Georeferencer Tools"
+msgstr "Lentelė geo-koordinatorius: geo-koordinavimo įrankiai"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:56
+msgid "Georeferencing raster layer"
+msgstr "Rastro sluoksnio geo-koordinavimas"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:58
+msgid ""
+"As X and Y coordinates (DMS (dd mm ss.ss), DD (dd.dd) or projected "
+"coordinates (mmmm.mm)), which correspond with the selected point on the "
+"image, two alternative procedures can be used:"
+msgstr ""
+"Nurodant X ir Y kordinates (DMS (dd mm ss.ss), DD (dd.dd) ar projektuotos "
+"koordinatės (mmmm.mm)), kurios atitinka piešinyje parinktą tašką, galima "
+"naudoti vieną iš dviejų būdų:"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:62
+msgid ""
+"The raster itself sometimes provides crosses with coordinates \"written\" on"
+" the image. In this case, you can enter the coordinates manually."
+msgstr ""
+"Kartais pačiame rastre yra kryžiukai su koordinatėmis „užrašytomis“ ant "
+"piešinio. Tokiu atveju jūs galite įvesti koordinates rankiniu būdu."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:64
+msgid ""
+"Using already georeferenced layers. This can be either vector or raster data"
+" that contain the same objects/features that you have on the image that you "
+"want to georeference and with the projection that you want for your image. "
+"In this case, you can enter the coordinates by clicking on the reference "
+"dataset loaded in the QGIS map canvas."
+msgstr ""
+"Galima naudoti jau geo-koordinuotus sluoksnius. Tai gali būti vektoriniai "
+"arba rastro duomenys, kuriuose yra tie patys objektai/geoobjektai, kaip ir "
+"piešinyje, kurį jūs norite geo-koordinuoti. Tokiu atveju galite įvesti "
+"koordinates paspausdami atskaitos duomenų rinkinį, įkeltą į QGIS žemėlapio "
+"drobę."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:70
+msgid ""
+"The usual procedure for georeferencing an image involves selecting multiple "
+"points on the raster, specifying their coordinates, and choosing a relevant "
+"transformation type. Based on the input parameters and data, the "
+"Georeferencer will compute the world file parameters. The more coordinates "
+"you provide, the better the result will be."
+msgstr ""
+"Įprastinė piešinio geo-koordinavimo procedūra yra parinkti kelis taškus "
+"rastre, nurodant jų koordinates, tada parenkant transformacijos tipą. "
+"Priklausomai nuo įvesties parametrų ir duomenų, Geo-koordinatorius "
+"paskaičiuos pasaulio failo parametrus. Kuo daugiau pateiksite koordinačių, "
+"tuo geresnis bus rezultatas."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:76
+msgid ""
+"The first step is to start QGIS and click on :menuselection:`Layer -->` "
+"|georefRun| :menuselection:`Georeferencer`, which appears in the QGIS menu "
+"bar. The Georeferencer dialog appears as shown in "
+":numref:`figure_georeferencer_dialog`."
+msgstr ""
+"Pirmas žingsnis yra paleisti QGIS ir spausti :menuselection:`Sluoksnis -->` "
+"|georefRun| :menuselection:`Geo-koordinatorius`, kurį jūs rasite QGIS meniu "
+"juostoje. Pasirodys geo-koordinatoriaus dialogas, kaip pavaizduota "
+":numref:`figure_georeferencer_dialog`."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:80
+msgid ""
+"For this example, we are using a topo sheet of South Dakota from SDGS. It "
+"can later be visualized together with the data from the GRASS "
+":file:`spearfish60` location. You can download the topo sheet here: "
+"https://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz."
+msgstr ""
+"Šiam pavyzdžiui mes naudojame Šiaurės Dakotos SDGS topo lapą. Jį vėliau "
+"galima vizualizuoti kartu su duomenimis iš GRASS vietos :file:`spearfish60`."
+" Galite atsisiųsti topo lapą iš čia: "
+"https://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:90
+msgid "Georeferencer Dialog"
+msgstr "Geo-koordinavimo dialogas"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:96
+msgid "Entering ground control points (GCPs)"
+msgstr "Žemės kontrolinių taškų (GCP) įvedimas"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:98
+msgid ""
+"To start georeferencing an unreferenced raster, we must load it using the "
+"|addRasterLayer| button. The raster will show up in the main working area of"
+" the dialog. Once the raster is loaded, we can start to enter reference "
+"points."
+msgstr ""
+"Norėdami pradėti geo-koordinuoti nepririštą rastrą, mes visų pirma turime jį"
+" įsikelti mygtuku |addRasterLayer|. Rastras pasirodys pagrindiniame dialogo "
+"darbo plote. Įkėlus rastrą mes galime pradėti įvedinėti kontrolinius taškus."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:102
+msgid ""
+"Using the |addGCPPoint| :sup:`Add GCP Point` button, add points to the main "
+"working area and enter their coordinates (see Figure "
+":numref:`figure_georeferencer_add_points`). For this procedure you have the "
+"following options:"
+msgstr ""
+"Naudodami mygtuką |addGCPPoint| :sup:`Pridėti GCP tašką`, pridėkite taškus į"
+" pagrindinį darbo plotą ir įveskite jų koordinates (žr. iliustraciją "
+":numref:`figure_georeferencer_add_points`). Tam turite kelis būdus:"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:106
+msgid ""
+"Click on a point in the raster image and enter the X and Y coordinates "
+"manually, along with the CRS of the point."
+msgstr ""
+"Spauskite tašką rastro piešyje ir tada įveskite X ir Y koordinates rankiniu "
+"būdu, kartu su taško CRS."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:108
+msgid ""
+"Click on a point in the raster image and choose the |pencil| :sup:`From map "
+"canvas` button to add the X and Y coordinates with the help of a "
+"georeferenced map already loaded in the QGIS map canvas. The CRS will be set"
+" automatically."
+msgstr ""
+"Spauskite tašką rastro piešinyje ir parinkite mygtuką |pencil| :sup:`Iš "
+"žemėlapio drobės`, kad pridėtumėte X ir Y koordinates, naudodami jau geo-"
+"koordinuotą žemėlapį, kuris įkeltas QGIS žemėlapio drobėje. CRS bus "
+"nustatyta automatiškai."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:380
 msgid "pencil"
 msgstr "pencil"
 
-#: ../../docs/user_manual/working_with_raster/georeferencer.rst:302
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:112
+msgid ""
+"When entering GCPs from the main map canvas, you have the option to hide the"
+" georeferencer window while selecting points from the main canvas. If the "
+"|checkbox| :guilabel:`Automatically hide georeferencer window` checkbox is "
+"ticked, after clicking |pencil| :guilabel:`From Map Canvas`, the main "
+"georeferencer window will be hidden until a point is added on the map "
+"canvas. The :guilabel:`Enter Map Coordinates` dialog will remain open. If "
+"the box is unchecked, both windows will remain open while selecting a point "
+"on the map canvas. This option only takes effect when the georeferencer "
+"window is not docked in the main interface."
+msgstr ""
+"Įvesdami GCP iš pagrindinės žemėlapio drobės, galite pasirinkti paslėpti "
+"geo-koordinatoriaus langą, kol parenkate taškus pagrindinėje drobėje. Jei "
+"įjungta parinktis |checkbox| :guilabel:`Automatiškai slėpti geo-"
+"koordinatoriaus langą`, paspaudus |pencil| :guilabel:`Iš žemėlapio drobės`, "
+"geo-koordinatoriaus langas bus paslėptas, kol žemėlapio drobėje nepridėsite "
+"taško. Dialogas :guilabel:`Įveskite žemėlapio koordinates` liks atvertas. "
+"Jei parinktis neįjungta, abu langai liks atidaryti parenkant taškus "
+"žemėlapio drobėje. Ši parinktis įsigalioja tik kai geo-koordinavimo langas "
+"nėra prisegtas pagrindinėje naudotojo sąsajoje."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:358
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:123
+msgid ""
+"Continue entering points. You should have at least four points, and the more"
+" coordinates you can provide, the better the result will be. There are "
+"additional tools for zooming and panning the working area in order to locate"
+" a relevant set of GCP points."
+msgstr ""
+"Toliau pridėkite taškus. Turtėtumėte pridėti bent keturis taškus, kuo "
+"daugiau koordinačių galėsite pateikti, tuo geresnis bus rezultatas. Yra "
+"papildomi įrankiai darbo ploto priartinimui ar pastūmimui, kad galėtumėte "
+"rasti atitinkamus GCP taškus."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:130
+msgid ""
+"To avoid constant switching between |pan| :sup:`Pan`, |addGCPPoint| "
+":sup:`Add GCP point` and |moveGCPPoint| :sup:`Move GCP point` buttons, you "
+"may use the keyboard arrow keys for moving and the mouse wheel for scaling "
+"the georeferenced map conveniently."
+msgstr ""
+"Kad išvengtumėte pastovaus persijunginėjimo tarp mygyukų |pan| "
+":sup:`Pastumti`, |addGCPPoint| :sup:`Pridėti GCP tašką` ir |moveGCPPoint| "
+":sup:`Perkelti GCP tašką`, jūs galite naudoti klavišus judėjimui ir pelės "
+"ratuką patogiam geo-koordinavimo žemėlapio mastelio keitimui."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:134
+msgid ""
+"After you provide a few points, you can use the |linkQGisToGeoref| "
+":sup:`Link QGIS to Georeferencer` and/or |linkGeorefToQGis| :sup:`Link "
+"Georeferencer to QGIS` buttons that will adjust, respectively, the map "
+"extent of the main QGIS window to the present view in Georeferencer and/or "
+"vice versa."
+msgstr ""
+"Kai pateiksite kelis taškus, galite naudoti mygtukus |linkQGisToGeoref| "
+":sup:`Susieti QGIS su geo-koordinatoriumi` ir/ar |linkGeorefToQGis| "
+":sup:`Susieti geo-koordinatorių su QGIS`, kad atitinkamai pakeistumėte "
+"pagrindinio QGIS lango vaizdą, kad jis rodytų geo-koordinatoriaus vaizdą "
+"arba atvirkščiai."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:137
+msgid ""
+"With the |moveGCPPoint| tool, you can move the GCPs in both the canvas and "
+"the georeferencing window, if you need to correct them."
+msgstr ""
+"Su įrankiu |moveGCPPoint| jūs galite perkelti GCP tiek drobėje, tiek ir geo-"
+"koordinavimo lange, jei jums reikia juos patikslinti."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:145
+msgid "Add points to the raster image"
+msgstr "Pridėti taškus rastro piešinyje"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:147
+msgid ""
+"The points that are added to the map will be stored in a separate text file "
+"(:file:`[filename].points`) usually together with the raster image. This "
+"allows us to reopen the Georeferencer at a later date and add new points or "
+"delete existing ones to optimize the result. The points file contains values"
+" of the form: ``mapX, mapY, pixelX, pixelY``. You can use the "
+"|loadGCPpoints| :sup:`Load GCP points` and |saveGCPPointsAs| :sup:`Save GCP "
+"points as` buttons to manage the files."
+msgstr ""
+"Į žemėlapį pridėti taškai bus saugomi atskirame tekstiniame faile "
+"(:file:`[failovardas].points`), paprastai kartu su rastro piešiniu. Tai leis"
+" mums vėliau iš naujo atidaryti geo-koordinatorių ir pridėti naujus taškus "
+"arba ištrinti esamus, kad pagerintumėme rezultatą. Taškų faile yra reikšmės "
+"iš: ``mapX, mapY, pixelX, pixelY``. Jūs galite naudoti mygtukus "
+"|loadGCPpoints| :sup:`Įkelti GCP taškus` ir |saveGCPPointsAs| :sup:`Įrašyti "
+"GCP taškus kaip`, kad tvarkytumėte šiuos failus."
