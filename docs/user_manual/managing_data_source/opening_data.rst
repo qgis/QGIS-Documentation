@@ -947,6 +947,11 @@ checkboxes:
 * |checkbox| :guilabel:`Allow saving/loading QGIS layer metadata in the database`
   - more details :ref:`here <savemetadatatodb>`
 * |checkbox| :guilabel:`Also list raster overview tables`
+* :guilabel:`Schema`: Allows to specify a single schema to limit a connection to.
+  When set, only tables from the matching schema will be included in the browser panel
+  and data source select for the connection.
+  This can be used to limit the database work required to populate tables
+  for a connection pointing to a large database store.
 
 Once all parameters and options are set, you can test the connection by
 clicking the :guilabel:`Test Connection` button or apply it by clicking
