@@ -1748,7 +1748,11 @@ You can indeed choose:
   and the :guilabel:`Units for area measurements`.
   These settings which default to their corresponding :ref:`global options <global_measure_tool>`
   override them in the current project.
-  They are used in:
+
+.. note:: The measurement units are not automatically based on the project's CRS. 
+   You must set them manually in this dialog, and they will remain unchanged even if the project's CRS is modified.
+
+They are used in:
 
   * Attribute table field update bar
   * Field calculator calculations
