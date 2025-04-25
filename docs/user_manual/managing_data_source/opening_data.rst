@@ -867,30 +867,30 @@ For the other database types, see their differences at
 :ref:`db_requirements`.
 
 * :guilabel:`Name`: A name for this connection. It can be the same as :guilabel:`Database`.
-* :guilabel:`Service`: Service parameter to be used alternatively to hostname/port (and
-  potentially database). This can be defined in :file:`pg_service.conf`.
+* :guilabel:`Service`: Service parameter to be used alternatively to hostname/port
+  (and potentially database). This can be defined in :file:`pg_service.conf`.
   Check the :ref:`pg-service-file` section for more details.
 * :guilabel:`Host`: Name of the database host. This must be a resolvable host name
-  such as would be used to open a TCP/IP connection or ping the host. If the
-  database is on the same computer as QGIS, simply enter *localhost* here.
-* :guilabel:`Port`: Port number the PostgreSQL database server listens on. The default
-  port for PostGIS is ``5432``.
+  such as would be used to open a TCP/IP connection or ping the host.
+  If the database is on the same computer as QGIS, simply enter *localhost* here.
+* :guilabel:`Port`: Port number the PostgreSQL database server listens on.
+  The default port for PostGIS is ``5432``.
 * :guilabel:`Database`: Name of the database.
 * :guilabel:`SSL mode`: SSL encryption setup
   The following options are available:
 
-  * :guilabel:`Prefer` (the default): I don't care about encryption, but I wish to pay
-    the overhead of encryption if the server supports it.
-  * :guilabel:`Require`: I want my data to be encrypted, and I accept the overhead. I trust
-    that the network will make sure I always connect to the server I want.
-  * :guilabel:`Verify CA`: I want my data encrypted, and I accept the overhead. I want to
-    be sure that I connect to a server that I trust.
-  * :guilabel:`Verify Full`: I want my data encrypted, and I accept the overhead. I want to
-    be sure that I connect to a server I trust, and that it's the one I specify.
-  * :guilabel:`Allow`: I don't care about security, but I will pay the overhead of
-    encryption if the server insists on it.
-  * :guilabel:`Disable`: I don't care about security, and I don't want to pay the overhead
-    of encryption.
+  * :guilabel:`Prefer` (the default): I don't care about encryption,
+    but I wish to pay the overhead of encryption if the server supports it.
+  * :guilabel:`Require`: I want my data to be encrypted, and I accept the overhead.
+    I trust that the network will make sure I always connect to the server I want.
+  * :guilabel:`Verify CA`: I want my data encrypted, and I accept the overhead.
+    I want to be sure that I connect to a server that I trust.
+  * :guilabel:`Verify Full`: I want my data encrypted, and I accept the overhead.
+    I want to be sure that I connect to a server I trust, and that it's the one I specify.
+  * :guilabel:`Allow`: I don't care about security,
+    but I will pay the overhead of encryption if the server insists on it.
+  * :guilabel:`Disable`: I don't care about security,
+    and I don't want to pay the overhead of encryption.
 
 * :guilabel:`Session role`: used to set the current user identifier of the current session.
   This is useful to automatically give the ownership of a new object (table, view, function)
@@ -980,8 +980,8 @@ The service connection file allows PostgreSQL connection parameters to be
 associated with a single service name. That service name can then be specified
 by a client and the associated settings will be used.
 
-It's called :file:`.pg_service.conf` under \*nix systems (GNU/Linux,
-macOS etc.) and :file:`pg_service.conf` on Windows.
+It's called :file:`.pg_service.conf` under \*nix systems (GNU/Linux, macOS etc.)
+and :file:`pg_service.conf` on Windows.
 
 The service file can look like this::
 
@@ -1006,10 +1006,8 @@ The service file can look like this::
   You can find all the PostgreSQL parameters
   `here <https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
 
-.. note:: If you don't want to save the passwords in the service file you can
-  use the
-  `.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_
-  option.
+.. note:: If you don't want to save the passwords in the service file you can use
+  the `.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ option.
 
 .. note:: **QGIS Server and service**
 
@@ -1026,8 +1024,7 @@ specifying any other environment variables).
 You can specify the location of the service file by creating a
 ``PGSERVICEFILE`` environment variable (e.g. run the
 ``export PGSERVICEFILE=/home/web/.pg_service.conf``
-command under your \*nix OS to temporarily set the ``PGSERVICEFILE``
-variable)
+command under your \*nix OS to temporarily set the ``PGSERVICEFILE`` variable).
 
 You can also make the service file available system-wide (all users) either by
 placing the :file:`.pg_service.conf` file in ``pg_config --sysconfdir`` or by
@@ -1077,24 +1074,24 @@ the connection dialog proposes:
 Optionally, you can activate the following checkboxes:
 
 * |checkbox| :guilabel:`Only look in metadata table`: restricts the displayed
-  tables to those that are in the ``all_sdo_geom_metadata`` view. This can
-  speed up the initial display of spatial tables.
-* |checkbox| :guilabel:`Only look for user's tables`: when searching for spatial
-  tables, restricts the search to tables that are owned by the user.
-* |checkbox| :guilabel:`Also list tables with no geometry`: indicates that
-  tables without geometry should also be listed by default.
+  tables to those that are in the ``all_sdo_geom_metadata`` view.
+  This can speed up the initial display of spatial tables.
+* |checkbox| :guilabel:`Only look for user's tables`: when searching for spatial tables,
+  restricts the search to tables that are owned by the user.
+* |checkbox| :guilabel:`Also list tables with no geometry`:
+  indicates that tables without geometry should also be listed by default.
 * |checkbox| :guilabel:`Use estimated table statistics for the layer metadata`:
   when the layer is set up, various metadata are required for the Oracle table.
   This includes information such as the table row count, geometry type and
-  spatial extents of the data in the geometry column. If the table contains a
-  large number of rows, determining this metadata can be time-consuming. By
-  activating this option, the following fast table metadata operations are
-  done: Row count is determined from ``all_tables.num_rows``. Table extents
-  are always determined with the SDO_TUNE.EXTENTS_OF function, even if a layer
-  filter is applied. Table geometry is determined from the first 100
-  non-null geometry rows in the table.
-* |checkbox| :guilabel:`Only existing geometry types`: only lists the existing
-  geometry types and don't offer to add others.
+  spatial extents of the data in the geometry column.
+  If the table contains a large number of rows, determining this metadata can be time-consuming.
+  By activating this option, the following fast table metadata operations are done:
+  Row count is determined from ``all_tables.num_rows``.
+  Table extents are always determined with the SDO_TUNE.EXTENTS_OF function,
+  even if a layer filter is applied.
+  Table geometry is determined from the first 100 non-null geometry rows in the table.
+* |checkbox| :guilabel:`Only existing geometry types`:
+  only lists the existing geometry types and don't offer to add others.
 * |checkbox| :guilabel:`Include additional geometry attributes`.
 
 .. _tip_ORACLE_Spatial_layers:
@@ -1311,11 +1308,9 @@ To load a layer from a database, you can perform the following steps:
   sometimes be time consuming as QGIS fetches statistics and
   properties (e.g. geometry type and field, CRS, number of features)
   for each table beforehand.
-  To avoid this, once
-  :ref:`the connection is set <vector_create_stored_connection>`,
+  To avoid this, once :ref:`the connection is set <vector_create_stored_connection>`,
   it is better to use the :ref:`Browser Panel <browser_panel>` or the
-  :ref:`DB Manager <dbmanager>` to drag and drop the database tables
-  into the map canvas.
+  :ref:`DB Manager <dbmanager>` to drag and drop the database tables into the map canvas.
 
 .. _layer_metadata_search_panel:
 
