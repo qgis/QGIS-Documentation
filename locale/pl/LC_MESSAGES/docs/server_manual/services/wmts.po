@@ -39,6 +39,22 @@ msgstr ""
 msgid "Web Map Tile Service (WMTS)"
 msgstr "Web Map Tile Service (WMTS)"
 
+#: ../../docs/server_manual/services/wmts.rst:4
+msgid ""
+"The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP "
+"interface to request tiled map images generated from a QGIS project. A "
+"typical WMTS request defined the QGIS project to use, some WMS parameters "
+"like layers to render, as well as tile parameters."
+msgstr ""
+"Standard WMTS **1.0.0** zaimplementowany w narzędziu QGIS Server, zapewnia "
+"interfejs HTTP do żądania obrazów kafli map generowanych z projektu QGIS. "
+"Typowe żądanie WMTS definiuje projekt QGIS, jaki ma być użyty, niektóre "
+"parametry WMS, takie jak warstwy do renderowania, a także parametry kafli."
+
+#: ../../docs/server_manual/services/wmts.rst:9
+msgid "Specifications document of the service:"
+msgstr "Dokument specyfikacji usługi:"
+
 #: ../../docs/server_manual/services/wmts.rst:11
 msgid "`WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_"
 msgstr "`WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_"
@@ -68,6 +84,10 @@ msgid ":ref:`GetTile <wmts_gettile>`"
 msgstr ":ref:`GetTile <wmts_gettile>`"
 
 #: ../../docs/server_manual/services/wmts.rst:1
+msgid "Returns a tile"
+msgstr "Zwraca kafel"
+
+#: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`"
 msgstr ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`"
 
@@ -78,6 +98,14 @@ msgstr "Pobiera dane (geometrię i wartości) dla lokalizacji piksela"
 #: ../../docs/server_manual/services/wmts.rst:27
 msgid "GetCapabilities"
 msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wmts.rst:29
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMTS 1.0.0 specifications:"
+msgstr ""
+"Standardowe parametry żądania **GetCapabilities** zgodnie ze specyfikacją "
+"OGC WMTS 1.0.0:"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "Parameter"
@@ -107,6 +135,16 @@ msgstr ":ref:`REQUEST <services_basics_request>`"
 msgid "Name of the request (**GetCapabilities**)"
 msgstr "Nazwa zapytania (**GetCapabilities**)"
 
+#: ../../docs/server_manual/services/wmts.rst:40
+#: ../../docs/server_manual/services/wmts.rst:83
+#: ../../docs/server_manual/services/wmts.rst:186
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr ""
+"Oprócz standardowych parametrów, QGIS Server obsługuje następujące parametry"
+" dodatkowe:"
+
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`MAP <services_basics_map>`"
 msgstr ":ref:`MAP <services_basics_map>`"
@@ -124,6 +162,14 @@ msgstr "Przykład URL:"
 #: ../../docs/server_manual/services/wmts.rst:64
 msgid "GetTile"
 msgstr "GetTile"
+
+#: ../../docs/server_manual/services/wmts.rst:66
+msgid ""
+"Standard parameters for the **GetTile** request according to the OGC WMTS "
+"1.0.0 specifications:"
+msgstr ""
+"Standardowe parametry żądania **GetTile** zgodnie ze specyfikacją OGC WMTS "
+"1.0.0:"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "Name of the request (**GetTile**)"
@@ -158,16 +204,36 @@ msgid ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`"
 msgstr ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`"
 
 #: ../../docs/server_manual/services/wmts.rst:1
+msgid "Meshing"
+msgstr "Podział na kafle"
+
+#: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`TILEROW <wmts_gettile_tilerow>`"
 msgstr ":ref:`TILEROW <wmts_gettile_tilerow>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Row coordinate in the mesh"
+msgstr "Współrzędne wiersza w siatce podziału na kafle"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`TILECOL <wmts_gettile_tilecol>`"
 msgstr ":ref:`TILECOL <wmts_gettile_tilecol>`"
 
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Column coordinate in the mesh"
+msgstr "Współrzędne kolumny w siatce podziału na kafle"
+
 #: ../../docs/server_manual/services/wmts.rst:112
 msgid "FORMAT"
 msgstr "FORMAT"
+
+#: ../../docs/server_manual/services/wmts.rst:114
+msgid ""
+"This parameter may be used to specify the format of tile image. Available "
+"values are:"
+msgstr ""
+"Ten parametr może być użyty do określenia formatu obrazu kafla. Dostępne "
+"wartości to:"
 
 #: ../../docs/server_manual/services/wmts.rst:117
 msgid "``jpg``"
@@ -185,25 +251,67 @@ msgstr "``image/jpeg``"
 msgid "``image/png``"
 msgstr "``image/png``"
 
+#: ../../docs/server_manual/services/wmts.rst:122
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then the "
+"default format PNG is used instead."
+msgstr ""
+"Jeżeli parametr ``FORMAT`` różni się od powyższych wartości, używany jest "
+"domyślny format PNG."
+
 #: ../../docs/server_manual/services/wmts.rst:129
 msgid "TILEMATRIXSET"
 msgstr "TILEMATRIXSET"
+
+#: ../../docs/server_manual/services/wmts.rst:131
+msgid ""
+"This parameter defines the CRS to use when computing the underlying pyramid."
+" Format: ``EPSG:XXXX``."
+msgstr ""
+"Ten parametr definiuje układ współrzędnych, jaki ma być użyty do obliczania "
+"podstawowej piramidy. Format: ``EPSG:XXXX``."
 
 #: ../../docs/server_manual/services/wmts.rst:138
 msgid "TILEMATRIX"
 msgstr "TILEMATRIX"
 
+#: ../../docs/server_manual/services/wmts.rst:140
+msgid "This parameter allows to define the matrix to use for the output tile."
+msgstr ""
+"Ten parametr umożliwia zdefiniowanie macierzy, która będzie używana do "
+"wytworzenia kafla wyjściowego."
+
 #: ../../docs/server_manual/services/wmts.rst:146
 msgid "TILEROW"
 msgstr "TILEROW"
+
+#: ../../docs/server_manual/services/wmts.rst:148
+msgid ""
+"This parameter allows to select the row of the tile to get within the "
+"matrix."
+msgstr "Ten parametr pozwala wybrać wiersz kafla, do wytworzenia w macierzy."
 
 #: ../../docs/server_manual/services/wmts.rst:155
 msgid "TILECOL"
 msgstr "TILECOL"
 
+#: ../../docs/server_manual/services/wmts.rst:157
+msgid ""
+"This parameter allows to select the column of the tile to get within the "
+"matrix."
+msgstr "Ten parametr pozwala wybrać kolumnę kafla, do wytworzenia w macierzy."
+
 #: ../../docs/server_manual/services/wmts.rst:165
 msgid "GetFeatureInfo"
 msgstr "GetFeatureInfo"
+
+#: ../../docs/server_manual/services/wmts.rst:167
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMTS 1.0.0 specification:"
+msgstr ""
+"Standardowe parametry żądania **GetFeatureInfo** zgodnie ze specyfikacją OGC"
+" WMTS 1.0.0:"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "Name of the request (**GetFeatureInfo**)"
@@ -241,6 +349,14 @@ msgstr "Współrzędne Y piksela"
 msgid "INFOFORMAT"
 msgstr "INFOFORMAT"
 
+#: ../../docs/server_manual/services/wmts.rst:216
+msgid ""
+"This parameter allows to define the output format of the result. Available "
+"values are:"
+msgstr ""
+"Ten parametr pozwala zdefiniować format wyjściowy wyniku. Dostępne wartości "
+"to:"
+
 #: ../../docs/server_manual/services/wmts.rst:219
 msgid "``text/xml``"
 msgstr "``text/xml``"
@@ -265,6 +381,22 @@ msgstr "Domyślna wartość to ``text/plain``."
 msgid "I"
 msgstr "I"
 
+#: ../../docs/server_manual/services/wmts.rst:232
+msgid ""
+"This parameter allows to define the X coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr ""
+"Ten parametr pozwala zdefiniować współrzędną X piksela, dla którego chcemy "
+"pobrać informacje."
+
 #: ../../docs/server_manual/services/wmts.rst:239
 msgid "J"
 msgstr "J"
+
+#: ../../docs/server_manual/services/wmts.rst:241
+msgid ""
+"This parameter allows to define the Y coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr ""
+"Ten parametr pozwala zdefiniować współrzędną Y piksela, dla którego chcemy "
+"pobrać informacje."
