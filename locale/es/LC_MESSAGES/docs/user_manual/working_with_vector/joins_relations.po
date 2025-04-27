@@ -1221,6 +1221,19 @@ msgstr ""
 "mesas, pero imagina si queremos tomar fotos separadas para hongos, pájaros, "
 "etc."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:554
+msgid ""
+"Polymorphic relations solve this problem as all the referencing features are"
+" stored in the same table ``documents``. For each feature the referenced "
+"layer is stored in the ``referenced_layer`` field and the referenced feature"
+" id in the ``referenced_id`` field."
+msgstr ""
+"Las relaciones polimórficas resuelven este problema, ya que todos los "
+"objetos espaciales referenciados se almacenan en la misma tabla "
+"``documents``. Para cada objeto espacial, la capa referenciada se almacena "
+"en el campo ``referenced_layer`` y el id del objeto espacial referenciado en"
+" el campo ``referenced_id``."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
 msgid "Defining polymorphic relations"
 msgstr "Definición de relaciones polimórficas"
@@ -1248,6 +1261,18 @@ msgid ""
 msgstr ""
 "Agregar una relación polimórfica usando la capa ``documents`` como "
 "referencia y ``animals`` y ``plantas`` como capas referenciadas."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:581
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``documents`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``referenced_id``."
+msgstr ""
+"**Capa de referencia (hija)** también considerada como capa hija, es la que "
+"tiene el campo de clave foránea en ella. En nuestro caso, es la capa "
+"``documents``. Para esta capa es necesario añadir un campo de referencia que"
+" apunta a la otra capa, por lo que este es ``referenced_id``."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:593
 msgid ""
