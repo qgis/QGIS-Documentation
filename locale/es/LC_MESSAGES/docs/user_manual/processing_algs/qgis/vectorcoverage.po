@@ -5,10 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 # 
 # Translators:
-# Eric Armijo, 2025
 # Andrés Betancourt, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +35,26 @@ msgstr ""
 "La traducción es un esfuerzo comunitario :ref:`puede unirse "
 "<translation_guidelines>`. Esta página está actualmente traducida en "
 "|progreso de traducción|."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:2
+msgid "Vector coverage"
+msgstr "Cobertura vectorial"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:14
+msgid "Dissolve coverage"
+msgstr "Disolver la cobertura"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:16
+msgid ""
+"Operates on a coverage (represented as a set of polygon features with "
+"exactly matching edge geometry) to dissolve (union) the geometries. It "
+"provides a heavily optimized approach for unioning these features compared "
+"with the standard Dissolve tools."
+msgstr ""
+"Opera sobre una cobertura (representada como un conjunto de características "
+"poligonales con geometría de bordes que coinciden exactamente) para disolver"
+" (unir) las geometrías. Ofrece un enfoque muy optimizado para unir estas "
+"características en comparación con las herramientas de disolución estándar."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:20
 msgid ":ref:`qgisdissolve`"
@@ -166,11 +186,19 @@ msgstr "El fichero codificado también puede ser cambiado aquí."
 msgid "Outputs"
 msgstr "Salidas"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:62
+msgid "The output polygon vector layer with dissolved geometries."
+msgstr "La capa vectorial de polígonos de salida con geometrías disueltas."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:65
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:147
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:222
 msgid "Python code"
 msgstr "Código Python"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:67
+msgid "**Algorithm ID**: ``native:coverageunion``"
+msgstr "**ID del algoritmo**: ``native:coverageunion``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -183,6 +211,45 @@ msgstr ""
 " Herramientas de Procesamiento. El *parámetro diccionario* suministra los "
 "NOMBREs y valores de los parámetros. Ver :ref:`consola_procesamiento` para "
 "detalles sobre como ejecutar algoritmos desde la consola Python."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:77
+msgid "Simplify coverage"
+msgstr "Simplificar la cobertura"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:79
+msgid ""
+"Operates on a coverage (represented as a set of polygon features with "
+"exactly matching edge geometry) to apply a Visvalingam–Whyatt simplification"
+" to the edges, reducing complexity in proportion with the provided "
+"tolerance, while retaining a valid coverage (i.e. no edges will cross or "
+"touch after the simplification). Geometries will never be removed, but they "
+"may be simplified down to just a triangle. Also, some geometries (such as "
+"polygons which have too few non-repeated points) will be returned unchanged."
+msgstr ""
+"Opera sobre una cobertura (representada como un conjunto de objetos "
+"espaciales polígono con una geometría de aristas que coincide exactamente) "
+"para aplicar una simplificación Visvalingam-Whyatt a las aristas, reduciendo"
+" la complejidad en proporción con la tolerancia proporcionada, al tiempo que"
+" se conserva una cobertura válida (es decir, ninguna arista se cruzará o "
+"tocará después de la simplificación). Las geometrías nunca se eliminan, pero"
+" pueden simplificarse hasta reducirse a un triángulo. Además, algunas "
+"geometrías (como los polígonos que tienen muy pocos puntos no repetidos) se "
+"devolverán sin cambios."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:85
+msgid ""
+"If the input dataset is not a valid coverage due to overlaps, it will still "
+"be simplified, but invalid topology such as crossing edges will still be "
+"invalid."
+msgstr ""
+"Si el conjunto de datos de entrada no es una cobertura válida debido a "
+"solapamientos, seguirá simplificándose, pero la topología no válida, como "
+"los bordes que se cruzan, seguirá siendo inválida."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:88
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:165
+msgid "**Requires version of GEOS >= 3.12**"
+msgstr "**Requiere una versión de GEOS >= 3.12**."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:90
 msgid ":ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`"
@@ -207,6 +274,18 @@ msgstr "[número]"
 msgid "Default: 0.0"
 msgstr "Predeterminado: 0.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:112
+msgid ""
+"The maximum distance (in unit of choice) between two consecutive vertices to"
+" get merged."
+msgstr ""
+"La distancia máxima (en unidad de elección) entre dos vértices consecutivos "
+"a fusionar."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:113
+msgid "**Preserve boundary**"
+msgstr "**Preservar el límite**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:114
 msgid "``PRESERVE_BOUNDARY``"
 msgstr "``PRESERVE_BOUNDARY``"
@@ -215,18 +294,65 @@ msgstr "``PRESERVE_BOUNDARY``"
 msgid "Default: False"
 msgstr "Predeterminado: False"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:118
+msgid ""
+"When enabled, the outside edges of the coverage will be preserved without "
+"simplification"
+msgstr ""
+"Si esta opción está activada, los bordes exteriores de la cobertura se "
+"conservarán sin simplificación."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:119
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:141
 msgid "**Simplified**"
 msgstr "**Simplificado**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:144
+msgid "The output polygon vector layer, with a lower number of vertices."
+msgstr ""
+"La capa vectorial de polígonos de salida, con un número menor de vértices."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:149
+msgid "**Algorithm ID**: ``native:coveragesimplify``"
+msgstr "**ID del algoritmo**: ``native:coveragesimplify``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:159
+msgid "Validate coverage"
+msgstr "Validar la cobertura"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:161
+msgid ""
+"Analyzes a coverage (represented as a set of polygon features with exactly "
+"matching edge geometry) to find places where the assumption of exactly "
+"matching edges is not met. Invalidity includes polygons that overlap or that"
+" have gaps smaller than the specified gap width."
+msgstr ""
+"Analiza una cobertura (representada como un conjunto de objetos espaciales "
+"polígono con geometría de aristas exactamente coincidentes) para encontrar "
+"lugares en los que no se cumple el supuesto de aristas exactamente "
+"coincidentes. La invalidez incluye polígonos que se solapan o que tienen "
+"huecos menores que la anchura de hueco especificada."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:167
 msgid ":ref:`qgischeckvalidity`"
 msgstr ":ref:`qgischeckvalidity`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:184
+msgid "**Gap width**"
+msgstr "**Ancho de separación**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:185
 msgid "``GAP_WIDTH``"
 msgstr "``GAP_WIDTH``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:189
+msgid "The maximum width of gap to detect"
+msgstr "Anchura máxima del espacio a detectar"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:190
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:212
+msgid "**Invalid edges**"
+msgstr "**Bordes no válidos**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:191
 msgid "``INVALID_EDGES``"
@@ -241,6 +367,17 @@ msgstr "[vectorial: lineal]"
 msgid "Skip Output"
 msgstr "Saltar salida"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:215
+msgid ""
+"The output line vector layer showing error edges for each invalid polygon."
+msgstr ""
+"La capa vectorial de líneas de salida que muestra las aristas de error de "
+"cada polígono no válido."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:216
+msgid "**Validity result**"
+msgstr "**Resultado de validez**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:217
 msgid "``IS_VALID``"
 msgstr "``IS_VALID``"
@@ -248,3 +385,11 @@ msgstr "``IS_VALID``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:218
 msgid "[boolean]"
 msgstr "[booleano]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:219
+msgid "Returns whether the coverage is valid or not."
+msgstr "Devuelve si la cobertura es válida o no."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:224
+msgid "**Algorithm ID**: ``native:coveragevalidate``"
+msgstr "**ID del algoritmo**: ``native:coveragevalidate``"
