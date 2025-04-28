@@ -882,6 +882,11 @@ or an expression to set:
   pointing in the direction of East for ``Horizontal`` oriented text and with 0°
   pointing in North direction for ``Vertical`` oriented text. Different units can
   be defined for the labeling rotation (e.g. ``degrees``, ``minutes of arc``, ``turns``).
+  QGIS prioratizes screen display rotation angles by default and always rotates text
+  to be most readable on screen, so "upside-down" rotation angles are overrided while
+  rendering. To change this behavior and force QGIS to always render exact data-defined 
+  rotation angles there is a setting in |render| :guilabel:`Rendering` tab, under
+  :guilabel:`Show upside-down labels`.
   Check the :guilabel:`Preserve data rotation values` entry if you want to keep
   the rotation value in the associated field and apply it to the label, whether
   the label is pinned or not. If unchecked, unpinning the label rotation is
@@ -993,8 +998,30 @@ Under :guilabel:`Label options`:
   center point.
 * With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
   you can fine tune which labels should be rendered.
-* Allow to :guilabel:`Show upside-down labels`: alternatives are **Never**,
+* Allow to :guilabel:`Show upside-down labels`: alternatives are **never**,
   **when rotation defined** or **always**.
+
+  * never show upside-down labels - default setting, screen readability is prioritized,
+
+    .. _figure_show_upside-down_labels_default:
+
+    .. figure:: img/show_upside-down_labels_defualt.png
+       :align: center
+
+       Label rotation examples - upside-down labels set to "never"
+
+  * when rotation defined - label rotation should be defined under |labelplacement| :guilabel:`Placement` tab,
+    within the :guilabel:`Data Defined` group
+
+    .. _figure_show_upside-down_labels_allowed:
+
+    .. figure:: img/show_upside-down_labels_allowed.png
+       :align: center
+
+       Label rotation examples - upside-down labels allowed and exact rotations are data-defined
+
+  * always - upside-down labels are allowed
+
 * The :guilabel:`Overlapping labels` group allows you to control whether
   overlapping labels are permitted for features in the layer and
   how each of them should be handled:
