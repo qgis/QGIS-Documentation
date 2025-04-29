@@ -31,8 +31,8 @@ Parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [vector: any] [list]
-     - Input vector layers to get information on.
+     - [layer] [list]
+     - Input layers to get information on.
    * - **Output**
      - ``OUTPUT``
      - [vector: polygon]
@@ -165,8 +165,7 @@ Extract layer extent
 Generates a vector layer with the minimum bounding box (rectangle with
 N-S orientation) that covers all the input features.
 
-The output layer contains a single bounding box for the whole input
-layer.
+The output layer contains a single bounding box for the whole input layer.
 
 .. figure:: img/extract_layer_extent.png
    :align: center
@@ -204,6 +203,7 @@ Parameters
 
 Outputs
 .......
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40

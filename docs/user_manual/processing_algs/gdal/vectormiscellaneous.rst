@@ -868,7 +868,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Enable listing of all layers in the dataset**
      - ``ALL_LAYERS``
@@ -987,7 +987,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Enable listing of all layers in the dataset**
      - ``ALL_LAYERS``

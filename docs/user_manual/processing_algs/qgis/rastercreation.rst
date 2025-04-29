@@ -52,15 +52,15 @@ Basic parameters
      - CRS for the output raster layer
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      - Pixel size (X=Y) in map units.
    * - **Constant value**
      - ``NUMBER``
-     - [number]
+     - [numeric: double]]
 
-       Default: 1
+       Default: 1.0
      - Constant pixel value for the output raster layer.
    * - **Constant**
      - ``OUTPUT``
@@ -187,7 +187,7 @@ Basic parameters
      - CRS for the output raster layer
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      - Pixel size (X=Y) in map units.
@@ -228,13 +228,13 @@ Advanced parameters
        * 5 --- Float64
    * - **N**
      - ``N``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      -
    * - **Probability**
      - ``PROBABILITY``
-     - [number]
+     - [numeric: double]]
 
        Default: 0.5
      -
@@ -326,7 +326,7 @@ Basic parameters
      - CRS for the output raster layer
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      - Pixel size (X=Y) in map units.
@@ -363,7 +363,7 @@ Advanced parameters
        * 1 --- Float64
    * - **Lambda**
      - ``LAMBDA``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      -
@@ -455,7 +455,7 @@ Basic parameters
      - CRS for the output raster layer
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      - Pixel size (X=Y) in map units.
@@ -492,13 +492,13 @@ Advanced parameters
        * 1 --- Float64
    * - **Alpha**
      - ``ALPHA``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      -
    * - **Beta**
      - ``BETA``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      -
@@ -591,7 +591,7 @@ Basic parameters
      - CRS for the output raster layer
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      - Pixel size (X=Y) in map units.
@@ -632,7 +632,7 @@ Advanced parameters
        * 5 --- Float64
    * - **Probability**
      - ``PROBABILITY``
-     - [number]
+     - [numeric: double]]
 
        Default: 0.5
      -
@@ -725,7 +725,7 @@ Basic parameters
      - CRS for the output raster layer
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      - Pixel size (X=Y) in map units.
@@ -766,13 +766,13 @@ Advanced parameters
        * 5 --- Float64
    * - **Distribution parameter k**
      - ``K_PARAMETER``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      -
    * - **Probability**
      - ``PROBABILITY``
-     - [number]
+     - [numeric: double]]
 
        Default: 0.5
      -
@@ -864,7 +864,7 @@ Basic parameters
      - CRS for the output raster layer
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      - Pixel size (X=Y) in map units.
@@ -901,13 +901,13 @@ Advanced parameters
        * 1 --- Float64
    * - **Mean of normal distribution**
      - ``MEAN``
-     - [number]
+     - [numeric: double]]
 
        Default: 0.0
      -
    * - **Standard deviation of normal distribution**
      - ``STDDEV``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      -
@@ -1000,7 +1000,7 @@ Basic parameters
      - CRS for the output raster layer
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      - Pixel size (X=Y) in map units.
@@ -1041,7 +1041,7 @@ Advanced parameters
        * 5 --- Float64
    * - **Mean**
      - ``MEAN``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      -
@@ -1135,7 +1135,7 @@ Basic parameters
      - CRS for the output raster layer
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]]
 
        Default: 1.0
      - Pixel size (X=Y) in map units.
@@ -1177,13 +1177,13 @@ Advanced parameters
        * 6 --- Float64
    * - **Lower bound for random number range**
      - ``LOWER_BOUND``
-     - [number]
+     - [numeric: double]]
 
        Default: 0.0
      -
    * - **Upper bound for random number range**
      - ``UPPER_BOUND``
-     - [number]
+     - [numeric: double]]
 
        Default: 0.0
      -
