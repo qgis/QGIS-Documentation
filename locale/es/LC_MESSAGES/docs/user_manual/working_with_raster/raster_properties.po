@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-17 20:03+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -275,6 +276,25 @@ msgstr ""
 "archivos auxiliares, el tiempo y el tamaño del último guardado, el proveedor"
 " utilizado"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:83
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties include "
+":guilabel:`Identify/format`, which influences how the results from using the"
+" |identify| :ref:`Identify features <raster_identify>` tool over a raster "
+"layer are formatted. More properties can be created and managed using "
+"PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"propiedades personalizadas, utilizadas para almacenar en el proyecto activo "
+"información adicional sobre la capa. Las propiedades personalizadas por "
+"defecto incluyen :guilabel:`Identify/format`, que influye en la forma en que"
+" los resultados del uso de la herramienta |identify| :ref:`Identificar "
+"objetos espaciales<raster_identify>` sobre una capa raster se formatean. Se "
+"pueden crear y gestionar más propiedades utilizando PyQGIS, concretamente a "
+"través del método :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1145
 msgid "identify"
 msgstr "identify"
@@ -436,6 +456,14 @@ msgstr ""
 ":ref:`Pseudocolor Monobanda<label_colormaptab>` - este renderizador se puede"
 " utilizar para archivos con una paleta continua o un mapa de colores (por "
 "ejemplo, un mapa de elevación)."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:159
+msgid ""
+":ref:`Single color <singlecolor>` - the raster layer will be rendered with a"
+" single color."
+msgstr ""
+":ref:`Color único <singlecolor>` - la capa de trama se renderizará con un "
+"solo color."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:161
 msgid ":ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a band."
@@ -669,6 +697,37 @@ msgstr ""
 "color continua. Pulse :guilabel:`Configuración de leyenda...` si desea "
 "ajustar la configuración o, en su lugar, utilizar una leyenda con clases "
 "separadas (y colores). Más detalles en :ref:`raster_legend_settings`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:309
+msgid "Single color"
+msgstr "Color único"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:311
+msgid ""
+"This renderer allows you to render a raster layer using :guilabel:`Single "
+"color`. This type of renderer is useful when you want to display a raster "
+"layer uniformly, without any variation in color based on pixel values."
+msgstr ""
+"Este renderizador permite representar una capa de trama utilizando "
+":guilabel:`Color único`. Este tipo de renderizador es útil cuando se desea "
+"mostrar una capa rasterizada uniformemente, sin ninguna variación de color "
+"basada en los valores de los píxeles."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:315
+msgid ""
+"The single color renderer can be used with both single-band and multiband "
+"raster layers. When used with multiband rasters, you can select which band "
+"to apply the single color to, effectively displaying that specific band "
+"uniformly across the entire layer."
+msgstr ""
+"El renderizador de color único puede utilizarse tanto con capas ráster de "
+"banda única como multibanda. Cuando se utiliza con rásters multibanda, puede"
+" seleccionar a qué banda aplicar el color único, mostrando de forma eficaz "
+"esa banda específica de manera uniforme en toda la capa."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:324
+msgid "Raster Symbology - Single color rendering"
+msgstr "Simbología de ráster - Representación monocolor"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:330
 msgid "Hillshade"
@@ -1469,6 +1528,32 @@ msgstr ""
 "Haga clic en el botón |symbologyAdd| :sup:`Agregar valores manualmente`. "
 "Aparecerá una nueva fila en la lista de píxeles."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:663
+msgid ""
+"For single-band based symbology (e.g. DEMs), enter the **From** and **To** "
+"values and adjust the **Percent Transparent** to apply."
+msgstr ""
+"Para simbología basada en una sola banda (por ejemplo, MDE), introduzca los "
+"valores **Desde** y **Hasta** y ajuste el **Porcentaje de transparencia** a "
+"aplicar."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:665
+msgid ""
+"For multiband based symbology (e.g. RGB images) enter the **Red**, **Green**"
+" and **Blue** values of the pixel and adjust the **Percent Transparent** to "
+"apply. QGIS supports **Tolerance** for pixel values, when defining "
+"transparency. This means that pixels with color close to the specified RGB "
+"values can also be made transparent. Note that this feature applies only to "
+"multiband rasters."
+msgstr ""
+"Para simbología multibanda (por ejemplo, imágenes RGB) introduzca los "
+"valores **Rojo**, **Verde** y **Azul** del píxel y ajuste el **Porcentaje de"
+" Transparencia** a aplicar. QGIS soporta **Tolerancia** para los valores de "
+"los píxeles, cuando se define la transparencia. Esto significa que los "
+"píxeles con colores cercanos a los valores RGB especificados también pueden "
+"hacerse transparentes. Tenga en cuenta que esta característica sólo se "
+"aplica a rásters multibanda."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:670
 msgid ""
 "Alternatively, you can fetch the pixel values directly from the raster using"
@@ -1509,6 +1594,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1141
 msgid "fileSave"
 msgstr "fileSave"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:690
+msgid "Using tolerances for multiband rasters"
+msgstr "Uso de tolerancias para rásters multibanda"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:696
 msgid "Histogram Properties"
@@ -1707,9 +1796,75 @@ msgstr ""
 "de animación está dentro de un rango de :guilabel:`Fecha de inicio` y "
 ":guilabel:`Fecha de finalización`"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:803
+msgid ""
+":guilabel:`Fixed Time Range Per Band`: only shows a band when the current "
+"animation time is between its :guilabel:`Begin` and :guilabel:`End` date "
+"range. This option allows you to either manually set these time ranges for "
+"each band or use the |expression| button to automatically generate datetime "
+"values, enabling detailed temporal analysis and visualization. This mode is "
+"particularly useful for working with raster layers where each band "
+"corresponds to a specific time period, such as NetCDF files."
+msgstr ""
+":guilabel:`Rango de tiempo fijo por banda`: sólo muestra una banda cuando el"
+" tiempo de animación actual se encuentra entre su rango de fechas "
+":guilabel:`Inicio` y :guilabel:`Fin`. Esta opción le permite establecer "
+"manualmente estos intervalos de tiempo para cada banda o utilizar el botón "
+"|expression| para generar automáticamente valores de fecha-hora, permitiendo"
+" un análisis y visualización temporal detallados. Este modo es especialmente"
+" útil para trabajar con capas ráster en las que cada banda corresponde a un "
+"periodo de tiempo específico, como los archivos NetCDF."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1137
 msgid "expression"
 msgstr "expression"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:816
+msgid "Example of using the Fixed Time Range Per Band mode"
+msgstr "Ejemplo de utilización del modo Intervalo de tiempo fijo por banda"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:818
+msgid ""
+":guilabel:`Represents Temporal Values`: interprets each pixel in the raster "
+"layer as a datetime value. When this temporal mode is active, pixels that do"
+" not fall within the temporal range specified in the render context will be "
+"hidden, ensuring that only temporally relevant data is displayed. This mode "
+"is effective for:"
+msgstr ""
+":guilabel:`Representa Valores Temporales`: interpreta cada píxel de la capa "
+"ráster como un valor fecha-hora. Cuando este modo temporal está activo, los "
+"píxeles que no caen dentro del rango temporal especificado en el contexto de"
+" renderizado se ocultarán, asegurando que sólo se muestren los datos "
+"temporalmente relevantes. Este modo es efectivo para:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:823
+msgid "Analyzing land use changes, like observing deforestation patterns."
+msgstr ""
+"Analizar los cambios en el uso del suelo, como la observación de los "
+"patrones de deforestación."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:824
+msgid "Studying flooding by comparing water coverage across different times."
+msgstr ""
+"Estudiar las inundaciones comparando la cobertura de agua en distintas "
+"épocas."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:825
+msgid ""
+"Evaluating movement costs in terrain analysis, for example, using GRASS "
+"GIS's r.walk tool to calculate travel costs across a landscape."
+msgstr ""
+"Evaluación de los costes de desplazamiento en el análisis del terreno, por "
+"ejemplo, utilizando la herramienta r.walk de GRASS GIS para calcular los "
+"costes de desplazamiento a través de un paisaje."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:834
+msgid ""
+"Application of the Represents Temporal Values mode - analyzing GLAD "
+"deforestation alerts"
+msgstr ""
+"Aplicación del modo Representa Valores Temporales - análisis de las alertas "
+"de deforestación GLAD"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:836
 msgid ""
@@ -1839,9 +1994,90 @@ msgstr "Pirámides Ráster"
 msgid "Elevation Properties"
 msgstr "Propiedades de elevación"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:902
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and its appearance in the :ref:`profile tool charts "
+"<label_elevation_profile_view>`. Specifically, you can choose to "
+":guilabel:`Disable` this configuration if the layer does not contain "
+"elevation data or you can set:"
+msgstr ""
+"La pestaña |elevationscale| :guilabel:`Elevación` proporciona opciones para "
+"controlar las propiedades de elevación de la capa dentro de una :ref:`vista "
+"de mapa 3D <label_3dmapview>` y su aparición en los :ref:`gráficos de la "
+"herramienta de perfil <label_elevation_profile_view>`. En concreto, puede "
+"elegir :guilabel:`Desactivar` esta configuración si la capa no contiene "
+"datos de elevación o puede establecer:"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:913
 msgid "Raster Elevation Properties"
 msgstr "Propiedades de elevación raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:915
+msgid ""
+":guilabel:`Represents Elevation Surface`: whether the raster layer "
+"represents a height surface (e.g DEM) and the pixel values should be "
+"interpreted as elevations. Choose this option if you want to display a "
+"raster in an :ref:`elevation profile view <label_elevation_profile_view>`. "
+"You will also need to fill in the :guilabel:`Band` to pick values from and "
+"can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`."
+msgstr ""
+":guilabel:`Representa superficie de elevación`: si la capa ráster representa"
+" una superficie de altura (por ejemplo, DEM) y los valores de píxel deben "
+"interpretarse como elevaciones. Elija esta opción si desea mostrar un ráster"
+" en una vista :ref:`perfil de elevación <label_elevation_profile_view>`. "
+"También tendrá que rellenar la :guilabel:`Banda` para elegir los valores y "
+"puede aplicar un factor :guilabel:`Escala` y un :guilabel:`Desplazamiento`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:921
+msgid ""
+":guilabel:`Fixed Elevation Range`: The raster layer (or selected raster "
+"band) is associated with a fixed elevation range. This mode can be used when"
+" a layer has a single fixed elevation or a range (slice) of elevation "
+"values. If a range is specified, pixels will be extruded over this range. "
+"You can set the :guilabel:`Lower` and :guilabel:`Upper` elevation range "
+"values for the layer, and specify whether the lower or upper "
+":guilabel:`Limits` are inclusive or exclusive."
+msgstr ""
+":guilabel:`Gama de elevación fija`: La capa ráster (o banda ráster "
+"seleccionada) está asociada a un rango de elevación fijo. Este modo puede "
+"utilizarse cuando una capa tiene una única elevación fija o un rango "
+"(rebanada) de valores de elevación. Si se especifica un rango, los píxeles "
+"se extruirán sobre este rango. Puede establecer los valores de rango de "
+"elevación :guilabel:`Inferior` y :guilabel:`Superior` para la capa, y "
+"especificar si los :guilabel:`Límites` inferior o superior son inclusivos o "
+"exclusivos."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:927
+msgid ""
+":guilabel:`Fixed Elevation Range Per Band`: Each band in the raster can have"
+" a fixed elevation range associated with it. This is designed for data "
+"sources that expose elevation-related data in bands, such as NetCDF files. "
+"For example, a raster with temperature data at different ocean depths. When "
+"rendering, the uppermost matching band will be selected and used for the "
+"layer's data. This feature is exposed as a user-editable table for raster "
+"bands with lower and upper values. Users can either populate the lower and "
+"upper values manually or use an |expression| :guilabel:`Expression` to auto-"
+"fill all band values based on expression. The expression-based fill allows "
+"you to design expressions that extract useful information from band names. "
+"For example, extracting the depth value from a band name like \"Band 001: "
+"depth=-5500 (meters)\"."
+msgstr ""
+":guilabel:`Rango de elevación fijo por banda`: Cada banda del ráster puede "
+"tener asociado un rango de elevación fijo. Está diseñado para fuentes de "
+"datos que exponen datos relacionados con la elevación en bandas, como los "
+"archivos NetCDF. Por ejemplo, un raster con datos de temperatura a "
+"diferentes profundidades oceánicas. Al renderizar, se seleccionará la banda "
+"superior y se utilizará para los datos de la capa. Esta función se presenta "
+"como una tabla editable por el usuario para bandas ráster con valores "
+"inferiores y superiores. Los usuarios pueden rellenar los valores inferior y"
+" superior manualmente o utilizar una expresión :guilabel:`Expression` para "
+"rellenar automáticamente todos los valores de banda basándose en la "
+"expresión. El relleno basado en expresiones permite diseñar expresiones que "
+"extraigan información útil de los nombres de las bandas. Por ejemplo, "
+"extraer el valor de profundidad de un nombre de banda como «Banda 001: "
+"profundidad=-5500 (metros)»."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:936
 msgid ""
@@ -1974,6 +2210,50 @@ msgid ""
 msgstr ""
 "|checkbox| :guilabel:`Habilitar consejos de mapa` controla si se muestran "
 "consejos de mapa para la capa"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1012
+msgid ""
+"The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor "
+"for map tips, mixing QGIS expressions and html styles and tags (multiline, "
+"fonts, images, hyperlink, tables, ...). You can check the result of your "
+"code sample in the :guilabel:`Preview` frame. You can also select and edit "
+"existing expressions using the :guilabel:`Insert/Edit Expression` button."
+msgstr ""
+"El :guilabel:`Consejo de mapa HTML` proporciona un complejo y completo "
+"editor de texto HTML para consejos de mapa, mezclando expresiones QGIS y "
+"estilos y etiquetas html (multilínea, fuentes, imágenes, hipervínculo, "
+"tablas, ...). Puede comprobar el resultado de su muestra de código en el "
+"marco :guilabel:`Vista previa`. También puede seleccionar y editar "
+"expresiones existentes utilizando el botón :guilabel:`Insertar/Editar "
+"expresión`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1017
+msgid ""
+"You might look for expressions located in :guilabel:`Rasters` group or the "
+"``@layer_cursor_point`` variable in the :guilabel:`Expressions` dialog."
+msgstr ""
+"Puede buscar expresiones situadas en el grupo :guilabel:`Rasters` o en la "
+"variable ``@layer_cursor_point`` del diálogo :guilabel:`Expresiones`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1020
+msgid ""
+"**Understanding the** :guilabel:`Insert/Edit Expression` **button behavior**"
+msgstr ""
+"**Entender el comportamiento del motor** :guilabel:`Insertar/Editar "
+"Expresión` "
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1022
+msgid ""
+"If you select some text within an expression (between \"[%\" and \"%]\"), or"
+" if no text is selected but the cursor is inside an expression, the whole "
+"expression will be automatically selected for editing. If the cursor or a "
+"selected text is outside an expression, the dialog opens with the selection."
+msgstr ""
+"Si selecciona algún texto dentro de una expresión (entre «[%» y «%]»), o si "
+"no hay ningún texto seleccionado pero el cursor está dentro de una "
+"expresión, se seleccionará automáticamente toda la expresión para editarla. "
+"Si el cursor o un texto seleccionado está fuera de una expresión, el diálogo"
+" se abre con la selección."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1032
 msgid "Map tips with raster layer"
@@ -2122,6 +2402,43 @@ msgstr ""
 msgid "Click on the point in the raster layer that you want to identify."
 msgstr "Haga clic en el punto de la capa ráster que desee identificar."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1094
+msgid ""
+"The Identify Results panel will open in its default ``Tree`` view and "
+"display information about the clicked point. Formatting of the results vary "
+"depending on the provider of the layer. For example:"
+msgstr ""
+"El panel Identificar resultados se abrirá en su vista predeterminada "
+"``Árbol`` y mostrará información sobre el punto seleccionado. El formato de "
+"los resultados varía en función del proveedor de la capa. Por ejemplo:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1098
+msgid ""
+"For a local raster layer: below the name of the layer, you have on the left "
+"the band(s) of the clicked pixel, and on the right their respective value."
+msgstr ""
+"Para una capa raster local: debajo del nombre de la capa, tiene a la "
+"izquierda la(s) banda(s) del píxel pulsado, y a la derecha su valor "
+"respectivo."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1101
+msgid ""
+"For a remote layer such as WMS, a :guilabel:`Format` menu allows you to "
+"select whether the information should be displayed as :guilabel:`HTML`, "
+":guilabel:`Feature` or :guilabel:`Text`."
+msgstr ""
+"Para una capa remota como WMS, un menú :guilabel:`Formato` permite "
+"seleccionar si la información debe mostrarse como :guilabel:`HTML`, "
+":guilabel:`Objeto espacial` o :guilabel:`Texto`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1105
+msgid ""
+"These values can also be rendered (from the :guilabel:`View` menu located at"
+" the bottom of the panel) in:"
+msgstr ""
+"Estos valores también se pueden representar (desde el menú :guilabel:`Vista`"
+" situado en la parte inferior del panel) en:"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1107
 msgid ""
 "a ``Table`` view - organizes the information about the identified features "
@@ -2149,3 +2466,7 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1115
 msgid "``X`` and ``Y`` coordinate values of the point clicked"
 msgstr "Valores de las coordenadas ``X`` e ``Y`` del punto clickado"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1116
+msgid "Column and row of the point clicked (pixel) when compatible"
+msgstr "Columna y fila del punto pulsado (píxel) cuando es compatible"
