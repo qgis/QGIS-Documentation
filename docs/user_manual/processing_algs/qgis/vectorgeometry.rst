@@ -983,7 +983,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:checkvalidity``
+**Algorithm ID**: ``native:checkvalidity``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
