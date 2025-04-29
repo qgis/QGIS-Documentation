@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-04-29 09:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
@@ -39,7 +39,7 @@ msgid ""
 " blocks that you can select on the left-hand side of the dialog."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:169
+#: ../../docs/user_manual/processing/configuration.rst:191
 msgid "processingAlgorithm"
 msgstr ""
 
@@ -223,7 +223,7 @@ msgid ""
 " providers are not concerned."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:167
+#: ../../docs/user_manual/processing/configuration.rst:189
 msgid "menu"
 msgstr ""
 
@@ -270,30 +270,86 @@ msgstr ""
 #: ../../docs/user_manual/processing/configuration.rst:147
 msgid ""
 "In the |processingModel| :guilabel:`Models` and |pythonFile| "
-":guilabel:`Scripts` blocks, you can set a default folder to store, and "
-"look for models and scripts respectively."
+":guilabel:`Scripts` blocks, a default path, set under the active "
+":ref:`User profile <user_profiles>` folder, is provided for storing "
+"models and scripts respectively. As for the other options, you can modify"
+" the path, e.g., to lead to a remote or shared folder for all your users."
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:171
+#: ../../docs/user_manual/processing/configuration.rst:193
 msgid "processingModel"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:173
+#: ../../docs/user_manual/processing/configuration.rst:195
 msgid "pythonFile"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:151
+#: ../../docs/user_manual/processing/configuration.rst:154
 msgid "Providers"
 msgstr ""
 
-#: ../../docs/user_manual/processing/configuration.rst:153
+#: ../../docs/user_manual/processing/configuration.rst:156
 msgid ""
 "You will also find a block for algorithm |processingAlgorithm| "
 ":guilabel:`Providers`. This is the place where installed providers expose"
-" their settings. For example, built-in providers contain an "
-":guilabel:`Activate` item that you can use to make their algorithms "
-"appear or not in the toolbox. Some algorithm providers have their own "
-"configuration items, which will be explained when covering particular "
-"algorithm providers."
+" their settings."
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:159
+msgid "By default, QGIS is installed with two algorithm providers:"
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:161
+msgid ""
+":guilabel:`GDAL` whose algorithms you may :guilabel:`Activate` (or not) "
+"in this dialog. Read more about the :ref:`GDAL algorithms "
+"<gdal_algorithms>`."
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:163
+msgid ""
+":guilabel:`GRASS` whose algorithms require the installation of the "
+":guilabel:`GRASS GIS Processing Provider` from the :guilabel:`Plugins "
+"Manager`. You could then set some dedicated settings such as:"
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:167
+msgid ""
+"|checkbox| :guilabel:`For raster layers, use r.external (faster) instead "
+"of r.in.gdal`"
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:187
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:168
+msgid ""
+"|checkbox| :guilabel:`For vector layers, use v.external (faster) instead "
+"of v.in.ogr`"
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:169
+msgid ""
+":guilabel:`Location of GRASS docs`: by default, and depending on your OS,"
+" QGIS utilizes a hardcoded list of paths for finding the local GRASS "
+"documentation and opening it whenever you hit the :guilabel:`Help` button"
+" of a GRASS algorithm dialog. Filling this option will override the "
+"default path, allowing you to use a custom location, or remote "
+"documentation."
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:174
+msgid "|checkbox| :guilabel:`Log console output`"
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:175
+msgid "|checkbox| :guilabel:`Log execution commands`"
+msgstr ""
+
+#: ../../docs/user_manual/processing/configuration.rst:177
+msgid ""
+"Installed plugins that provide Processing algorithms may also have their "
+"provider listed in this group, with custom settings."
 msgstr ""
 
