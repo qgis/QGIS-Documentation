@@ -421,9 +421,12 @@ Python code
 
 .. _qgisdefinecurrentprojection:
 
-Define projection
------------------
-Sets an existing layer's projection to the provided CRS without reprojecting features.
+Define Shapefile projection
+---------------------------
+Sets the CRS (projection) of an existing Shapefile format dataset to
+the provided CRS.
+It is very useful when a Shapefile format dataset is missing the
+``prj`` file and you know the correct projection.
 
 Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the
 current layer and will not output a new layer.
