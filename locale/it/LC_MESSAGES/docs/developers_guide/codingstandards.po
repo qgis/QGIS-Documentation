@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +37,20 @@ msgstr ""
 #: ../../docs/developers_guide/codingstandards.rst:5
 msgid "QGIS Coding Standards"
 msgstr "Standard di programmazione QGIS"
+
+#: ../../docs/developers_guide/codingstandards.rst:10
+msgid ""
+"QGIS coding standards are described in the policy document available at `QEP"
+" #314 <https://github.com/qgis/QGIS-Enhancement-"
+"Proposals/blob/master/qep-314-coding-style.md>`_. All developers are "
+"required to follow those policies. Please note that QEP #314 is a live "
+"document, and that these policies may change over time."
+msgstr ""
+"Gli standard di codifica di QGIS sono descritti nel documento programmatico "
+"disponibile all'indirizzo `QEP #314 <https://github.com/qgis/QGIS-"
+"Enhancement-Proposals/blob/master/qep-314-coding-style.md>`_. Tutti gli "
+"sviluppatori sono tenuti a seguire tali norme. Si noti che QEP #314 è un "
+"documento in vigore e che queste politiche possono cambiare nel tempo."
 
 #: ../../docs/developers_guide/codingstandards.rst:15
 msgid "Classes"
@@ -449,6 +463,22 @@ msgstr ""
 "Per generare automaticamente il file SIP di un nuovo file C++ aggiunto è "
 "necessario eseguire :source:`sip_include.sh <scripts/sip_include.sh>`."
 
+#: ../../docs/developers_guide/codingstandards.rst:257
+msgid ""
+"As soon as a SIP file is added to one of the source file "
+"(:source:`core_auto.sip <python/core/core_auto.sip>`, :source:`gui_auto.sip "
+"<python/gui/gui_auto.sip>` or :source:`analysis_auto.sip "
+"<python/analysis/analysis_auto.sip>`), it will be considered as generated "
+"automatically. A test will ensure that this file is up to date with its "
+"corresponding header."
+msgstr ""
+"Non appena un file SIP viene aggiunto a uno dei file sorgente "
+"(:source:`core_auto.sip <python/core/core_auto.sip>`, :source:`gui_auto.sip "
+"<python/gui/gui_auto.sip>` o :source:`analysis_auto.sip "
+"<python/analysis/analysis_auto.sip>`), sarà considerato come generato "
+"automaticamente. Un test assicurerà che questo file sia aggiornato con "
+"l'intestazione corrispondente."
+
 #: ../../docs/developers_guide/codingstandards.rst:264
 msgid ""
 "To force recreation of SIP files, :source:`sipify_all.sh "
@@ -460,6 +490,20 @@ msgstr ""
 #: ../../docs/developers_guide/codingstandards.rst:268
 msgid "Improving sipify script"
 msgstr "Miglioramento dello script sipify"
+
+#: ../../docs/developers_guide/codingstandards.rst:270
+msgid ""
+"If some improvements are required for sipify script, please add the missing "
+"bits to the demo file :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>` and create the expected header "
+":file:`sipifyheader.expected.sip` file. This will also be automatically "
+"tested as a unit test of the script itself."
+msgstr ""
+"Se sono necessari alcuni miglioramenti per lo script sipify, aggiungire le "
+"parti mancanti al file demo :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>` e crea l'intestazione prevista "
+":file:`sipifyheader.expected.sip`. Anche questo verrà automaticamente "
+"testato come unit test dello script stesso."
 
 #: ../../docs/developers_guide/codingstandards.rst:277
 msgid "Settings"
@@ -643,6 +687,14 @@ msgid ""
 msgstr ""
 "aggiungendo una nota al changelog della prima versione in cui il codice è "
 "stato incorporato, del tipo::"
+
+#: ../../docs/developers_guide/codingstandards.rst:366
+msgid ""
+"writing an article about the new feature on a blog, and add it to `QGIS "
+"Planet <https://planet.qgis.org/>`_"
+msgstr ""
+"scrivere un articolo sulla nuova funzionalità su un blog e aggiungerlo a "
+"`QGIS Planet <https://planet.qgis.org/>`_"
 
 #: ../../docs/developers_guide/codingstandards.rst:368
 msgid "adding their name to:"
