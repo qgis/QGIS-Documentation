@@ -1,0 +1,1130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Asdfgr Wertyu, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-31 15:59+0000\n"
+"PO-Revision-Date: 2025-02-27 21:35+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/developers_guide/unittesting.rst:6
+msgid "Unit Testing"
+msgstr "Модульное тестирование"
+
+#: ../../docs/developers_guide/unittesting.rst:11
+msgid ""
+"As of November 2007 we require all new features going into master to be "
+"accompanied with a unit test. Initially we have limited this requirement to "
+"qgis_core, and we will extend this requirement to other parts of the code "
+"base once people are familiar with the procedures for unit testing explained"
+" in the sections that follow."
+msgstr ""
+"С ноября 2007 года мы требуем, чтобы все новые функции, выходящие в мастер, "
+"сопровождались модульным тестированием. Изначально мы ограничили это "
+"требование qgis_core, и мы распространим его на другие части кодовой базы, "
+"как только люди ознакомятся с процедурами модульного тестирования, "
+"описанными в последующих разделах."
+
+#: ../../docs/developers_guide/unittesting.rst:19
+msgid "The QGIS testing framework - an overview"
+msgstr "Система тестирования QGIS - обзор"
+
+#: ../../docs/developers_guide/unittesting.rst:21
+msgid ""
+"Unit testing is carried out using a combination of QTestLib (the Qt testing "
+"library) and CTest (a framework for compiling and running tests as part of "
+"the CMake build process). Lets take an overview of the process before we "
+"delve into the details:"
+msgstr ""
+"Юнит-тестирование выполняется с помощью комбинации QTestLib (библиотека "
+"тестирования Qt) и CTest (фреймворк для компиляции и запуска тестов как "
+"часть процесса сборки CMake). Прежде чем перейти к деталям, давайте сделаем "
+"обзор процесса:"
+
+#: ../../docs/developers_guide/unittesting.rst:26
+msgid ""
+"There is some code you want to test, e.g. a class or function. Extreme "
+"programming advocates suggest that the code should not even be written yet "
+"when you start building your tests, and then as you implement your code you "
+"can immediately validate each new functional part you add with your test. In"
+" practice you will probably need to write tests for pre-existing code in "
+"QGIS since we are starting with a testing framework well after much "
+"application logic has already been implemented."
+msgstr ""
+"У вас есть код, который вы хотите протестировать, например класс или "
+"функция. Сторонники экстремального программирования считают, что код еще "
+"даже не должен быть написан, когда вы начинаете создавать тесты, а затем, по"
+" мере реализации кода, вы сможете сразу же проверять каждую новую "
+"функциональную часть, которую вы добавляете с помощью теста. На практике "
+"вам, скорее всего, придется писать тесты для уже существующего кода в QGIS, "
+"поскольку мы начинаем работу с фреймворком тестирования уже после того, как "
+"большая часть логики приложения была реализована."
+
+#: ../../docs/developers_guide/unittesting.rst:34
+msgid ""
+"You create a unit test. This happens under ``<QGIS Source "
+"Dir>/tests/src/core`` in the case of the core lib. The test is basically a "
+"client that creates an instance of a class and calls some methods on that "
+"class. It will check the return from each method to make sure it matches the"
+" expected value. If any one of the calls fails, the unit will fail."
+msgstr ""
+"Вы создаете модульный тест. В случае с основной библиотекой это происходит в"
+" разделе ``<QGIS Source Dir>/tests/src/core``. По сути, тест представляет "
+"собой клиент, который создает экземпляр класса и вызывает некоторые методы "
+"этого класса. Он будет проверять возврат от каждого метода, чтобы убедиться,"
+" что он соответствует ожидаемому значению. Если хотя бы один из вызовов не "
+"сработает, модуль завершится неудачей."
+
+#: ../../docs/developers_guide/unittesting.rst:40
+msgid ""
+"You include QtTestLib macros in your test class. This macro is processed by "
+"the Qt meta object compiler (moc) and expands your test class into a "
+"runnable application."
+msgstr ""
+"Вы включаете макросы QtTestLib в свой тестовый класс. Эти макросы "
+"обрабатываются компилятором метаобъектов Qt (moc) и превращают ваш тестовый "
+"класс в запускаемое приложение."
+
+#: ../../docs/developers_guide/unittesting.rst:44
+msgid ""
+"You add a section to the CMakeLists.txt in your tests directory that will "
+"build your test."
+msgstr ""
+"Вы добавляете раздел в CMakeLists.txt в каталоге tests, который будет "
+"собирать ваш тест."
+
+#: ../../docs/developers_guide/unittesting.rst:47
+msgid ""
+"You ensure you have ``ENABLE_TESTING`` enabled in ccmake / cmakesetup. This "
+"will ensure your tests actually get compiled when you type make."
+msgstr ""
+"Убедитесь, что в ccmake / cmakesetup включена опция ``ENABLE_TESTING``. Это "
+"обеспечит реальную компиляцию ваших тестов при вводе make."
+
+#: ../../docs/developers_guide/unittesting.rst:50
+msgid ""
+"You optionally add test data to ``<QGIS Source Dir>/tests/testdata`` if your"
+" test is data driven (e.g. needs to load a shapefile). These test data "
+"should be as small as possible and wherever possible you should use the "
+"existing datasets already there. Your tests should never modify this data in"
+" situ, but rather make a temporary copy somewhere if needed."
+msgstr ""
+"Вы можете добавить тестовые данные в ``<QGIS Source Dir>/tests/testdata``, "
+"если ваш тест основан на данных (например, требуется загрузить шейп-файл). "
+"Эти тестовые данные должны быть как можно меньше, и по возможности вы должны"
+" использовать уже существующие наборы данных. Ваши тесты никогда не должны "
+"изменять эти данные на месте, а лишь создавать временную копию, если это "
+"необходимо."
+
+#: ../../docs/developers_guide/unittesting.rst:56
+msgid ""
+"You compile your sources and install. Do this using normal ``make && (sudo)"
+"  make install`` procedure."
+msgstr ""
+"Скомпилируйте исходные тексты и установите. Для этого используйте обычную "
+"процедуру ``make && (sudo) make install``."
+
+#: ../../docs/developers_guide/unittesting.rst:59
+msgid ""
+"You run your tests. This is normally done simply by doing ``make test`` "
+"after the ``make install`` step, though we will explain other approaches "
+"that offer more fine grained control over running tests."
+msgstr ""
+"Вы запускаете свои тесты. Обычно для этого достаточно выполнить ``make "
+"test`` после шага ``make install``, хотя мы расскажем о других подходах, "
+"которые обеспечивают более тонкий контроль над запуском тестов."
+
+#: ../../docs/developers_guide/unittesting.rst:64
+msgid ""
+"Right with that overview in mind, we will delve into a bit of detail. We've "
+"already done much of the configuration for you in CMake and other places in "
+"the source tree so all you need to do are the easy bits - writing unit "
+"tests!"
+msgstr ""
+"После этого обзора мы перейдем к деталям. Мы уже сделали большую часть "
+"настройки за вас в CMake и других местах в дереве исходных текстов, так что "
+"вам осталось сделать только самое простое - написать модульные тесты!"
+
+#: ../../docs/developers_guide/unittesting.rst:70
+msgid "Creating a unit test"
+msgstr "Создание модульного теста"
+
+#: ../../docs/developers_guide/unittesting.rst:72
+msgid ""
+"Creating a unit test is easy - typically you will do this by just creating a"
+" single :file:`.cpp` file (no :file:`.h` file is used) and implement all "
+"your test methods as private methods that return void. We'll use a simple "
+"test class for ``QgsRasterLayer`` throughout the section that follows to "
+"illustrate. By convention we will name our test with the same name as the "
+"class they are testing but prefixed with 'Test'. So our test implementation "
+"goes in a file called :file:`testqgsrasterlayer.cpp` and the class itself "
+"will be ``TestQgsRasterLayer``. First we add our standard copyright banner:"
+msgstr ""
+"Создать модульный тест очень просто - обычно для этого достаточно создать "
+"единственный файл :file:`.cpp` (файл :file:`.h` не используется) и "
+"реализовать все методы теста как приватные методы, возвращающие void. Мы "
+"будем использовать простой тестовый класс для ``QgsRasterLayer`` во всем "
+"последующем разделе для иллюстрации. По традиции мы будем называть наш тест "
+"тем же именем, что и класс, который он тестирует, но с префиксом 'Test'. "
+"Таким образом, реализация нашего теста будет находиться в файле с именем "
+":file:`testqgsrasterlayer.cpp`, а сам класс будет ``TestQgsRasterLayer``. "
+"Сначала мы добавим наш стандартный баннер с копирайтом:"
+
+#: ../../docs/developers_guide/unittesting.rst:98
+msgid ""
+"Next we start our includes needed for the tests we plan to run. There is one"
+" special include all tests should have:"
+msgstr ""
+"Далее мы начинаем собирать инклюды, необходимые для тестов, которые мы "
+"планируем запустить. Есть один специальный include, который должен быть у "
+"всех тестов:"
+
+#: ../../docs/developers_guide/unittesting.rst:105
+msgid ""
+"Beyond that you just continue implementing your class as per normal, pulling"
+" in whatever headers you may need:"
+msgstr ""
+"После этого вы просто продолжаете реализовывать свой класс, как обычно, "
+"добавляя все необходимые заголовки:"
+
+#: ../../docs/developers_guide/unittesting.rst:123
+msgid ""
+"Since we are combining both class declaration and implementation in a single"
+" file the class declaration comes next. We start with our doxygen "
+"documentation. Every test case should be properly documented. We use the "
+"doxygen ingroup directive so that all the UnitTests appear as a module in "
+"the generated Doxygen documentation. After that comes a short description of"
+" the unit test and the class must inherit from QObject and include the "
+"Q_OBJECT macro."
+msgstr ""
+"Поскольку мы объединяем объявление класса и реализацию в одном файле, "
+"следующим идет объявление класса. Мы начинаем с документации doxygen. Каждый"
+" тестовый пример должен быть должным образом задокументирован. Мы используем"
+" директиву doxygen ingroup, чтобы все юнит-тесты отображались как модуль в "
+"сгенерированной документации Doxygen. После этого следует краткое описание "
+"юнит-теста, а класс должен наследоваться от QObject и включать макрос "
+"Q_OBJECT."
+
+#: ../../docs/developers_guide/unittesting.rst:140
+msgid ""
+"All our test methods are implemented as private slots. The QtTest framework "
+"will sequentially call each private slot method in the test class. There are"
+" four 'special' methods which if implemented will be called at the start of "
+"the unit test (``initTestCase``), at the end of the unit test "
+"(``cleanupTestCase``). Before each test method is called, the ``init()`` "
+"method will be called and after each test method is called the ``cleanup()``"
+" method is called. These methods are handy in that they allow you to "
+"allocate and cleanup resources prior to running each test, and the test unit"
+" as a whole."
+msgstr ""
+"Все наши тестовые методы реализованы как приватные слоты. Фреймворк QtTest "
+"будет последовательно вызывать каждый метод приватного слота в тестовом "
+"классе. Есть четыре \"специальных\" метода, которые, если они реализованы, "
+"будут вызываться в начале модульного теста (``initTestCase``) и в конце "
+"модульного теста (``cleanupTestCase``). Перед вызовом каждого метода теста "
+"вызывается метод ``init()``, а после вызова каждого метода теста вызывается "
+"метод ``cleanup()``. Эти методы удобны тем, что позволяют выделять и очищать"
+" ресурсы перед запуском каждого теста и тестового блока в целом."
+
+#: ../../docs/developers_guide/unittesting.rst:161
+msgid ""
+"Then come your test methods, all of which should take no parameters and "
+"should return void. The methods will be called in order of declaration. We "
+"are implementing two methods here which illustrate two types of testing."
+msgstr ""
+"Затем идут тестовые методы, все из которых не должны принимать никаких "
+"параметров и возвращать void. Методы будут вызываться в порядке их "
+"объявления. Здесь мы реализуем два метода, которые иллюстрируют два типа "
+"тестирования."
+
+#: ../../docs/developers_guide/unittesting.rst:165
+msgid ""
+"In the first case we want to generally test if the various parts of the "
+"class are working, We can use a functional testing approach. Once again, "
+"extreme programmers would advocate writing these tests before implementing "
+"the class. Then as you work your way through your class implementation you "
+"iteratively run your unit tests. More and more test functions should "
+"complete successfully as your class implementation work progresses, and when"
+" the whole unit test passes, your new class is done and is now complete with"
+" a repeatable way to validate it."
+msgstr ""
+"В первом случае мы хотим проверить, работают ли различные части класса, и "
+"можем использовать подход функционального тестирования. Опять же, "
+"экстремальные программисты советуют писать эти тесты до реализации класса. "
+"Затем, по мере реализации класса, вы итеративно запускаете свои модульные "
+"тесты. По мере реализации класса все больше и больше тестовых функций должны"
+" успешно завершаться, и когда весь модульный тест пройдет, ваш новый класс "
+"будет завершен, и теперь у вас есть повторяемый способ его проверки."
+
+#: ../../docs/developers_guide/unittesting.rst:173
+msgid ""
+"Typically your unit tests would only cover the public API of your class, and"
+" normally you do not need to write tests for accessors and mutators. If it "
+"should happen that an accessor or mutator is not working as expected you "
+"would normally implement a :ref:`regression test <regression_test>` to check"
+" for this."
+msgstr ""
+"Как правило, ваши модульные тесты охватывают только публичный API вашего "
+"класса, и обычно вам не нужно писать тесты для аксессоров и мутаторов. Если "
+"вдруг окажется, что аксессор или мутатор работает не так, как ожидалось, вы "
+"обычно реализуете :ref:`регрессионный тест<regression_test>` для проверки "
+"этого."
+
+#: ../../docs/developers_guide/unittesting.rst:193
+msgid "Implementing a regression test"
+msgstr "Выполнение регрессионного теста"
+
+#: ../../docs/developers_guide/unittesting.rst:195
+msgid ""
+"Next we implement our regression tests. Regression tests should be "
+"implemented to replicate the conditions of a particular bug. For example:"
+msgstr ""
+"Далее мы реализуем наши регрессионные тесты. Регрессионные тесты должны быть"
+" реализованы таким образом, чтобы воспроизводить условия конкретной ошибки. "
+"Например:"
+
+#: ../../docs/developers_guide/unittesting.rst:198
+msgid ""
+"We received a report by email that the cell count by rasters was off by 1, "
+"throwing off all the statistics for the raster bands."
+msgstr ""
+"Мы получили сообщение по электронной почте о том, что количество ячеек в "
+"растрах было смещено на 1, что отбрасывало всю статистику по растровым "
+"полосам."
+
+#: ../../docs/developers_guide/unittesting.rst:200
+msgid ""
+"We opened a bug report (`ticket #832 <https://issues.qgis.org/issues/832>`_)"
+msgstr ""
+"Мы открыли отчет об ошибке (`ticket #832 "
+"<https://issues.qgis.org/issues/832>`_)"
+
+#: ../../docs/developers_guide/unittesting.rst:201
+msgid ""
+"We created a regression test that replicated the bug using a small test "
+"dataset (a 10x10 raster)."
+msgstr ""
+"Мы создали регрессионный тест, который воспроизводил ошибку, используя "
+"небольшой тестовый набор данных (растр 10x10)."
+
+#: ../../docs/developers_guide/unittesting.rst:203
+msgid ""
+"We ran the test, verifying that it did indeed fail (the cell count was 99 "
+"instead of 100)."
+msgstr ""
+"Мы запустили тест и убедились, что он действительно завершился неудачей "
+"(количество клеток составило 99 вместо 100)."
+
+#: ../../docs/developers_guide/unittesting.rst:205
+msgid ""
+"Then we went to fix the bug and reran the unit test and the regression test "
+"passed. We committed the regression test along with the bug fix. Now if "
+"anybody breakes this in the source code again in the future, we can "
+"immediately identify that the code has regressed."
+msgstr ""
+"Затем мы исправили ошибку и повторно выполнили юнит-тест, и регрессионный "
+"тест прошел. Мы зафиксировали регрессионный тест вместе с исправлением "
+"ошибки. Теперь, если в будущем кто-то снова нарушит это в исходном коде, мы "
+"сможем сразу определить, что код регрессировал."
+
+#: ../../docs/developers_guide/unittesting.rst:210
+msgid ""
+"Better yet, before committing any changes in the future, running our tests "
+"will ensure our changes don't have unexpected side effects - like breaking "
+"existing functionality."
+msgstr ""
+"А еще лучше, если перед тем, как вносить изменения в будущем, мы проведем "
+"тесты и убедимся, что наши изменения не приведут к неожиданным побочным "
+"эффектам - например, к поломке существующей функциональности."
+
+#: ../../docs/developers_guide/unittesting.rst:214
+msgid ""
+"There is one more benefit to regression tests - they can save you time. If "
+"you ever fixed a bug that involved making changes to the source, and then "
+"running the application and performing a series of convoluted steps to "
+"replicate the issue, it will be immediately apparent that simply "
+"implementing your regression test before fixing the bug will let you "
+"automate the testing for bug resolution in an efficient manner."
+msgstr ""
+"Есть еще одно преимущество регрессионных тестов - они могут сэкономить ваше "
+"время. Если вы когда-нибудь исправляли ошибку, которая предполагала внесение"
+" изменений в исходный код, а затем запуск приложения и выполнение ряда "
+"сложных шагов для воспроизведения проблемы, то сразу станет ясно, что "
+"простое выполнение регрессионного теста перед исправлением ошибки позволит "
+"вам эффективно автоматизировать тестирование для ее устранения."
+
+#: ../../docs/developers_guide/unittesting.rst:221
+msgid ""
+"To implement your regression test, you should follow the naming convention "
+"of **regression<TicketID>** for your test functions. If no ticket exists for"
+" the regression, you should create one first. Using this approach allows the"
+" person running a failed regression test easily go and find out more "
+"information."
+msgstr ""
+"Чтобы реализовать регрессионный тест, вам следует придерживаться соглашения "
+"об именовании **регрессия<TicketID>** для своих тестовых функций. Если для "
+"регрессии не существует тикета, сначала создайте его. Такой подход позволит "
+"человеку, выполняющему неудачный регрессионный тест, легко перейти к поиску "
+"дополнительной информации."
+
+#: ../../docs/developers_guide/unittesting.rst:240
+msgid ""
+"Finally in your test class declaration you can declare privately any data "
+"members and helper methods your unit test may need. In our case we will "
+"declare a ``QgsRasterLayer *`` which can be used by any of our test methods."
+" The raster layer will be created in the ``initTestCase()`` function which "
+"is run before any other tests, and then destroyed using "
+"``cleanupTestCase()`` which is run after all tests. By declaring helper "
+"methods (which may be called by various test functions) privately, you can "
+"ensure that they won't be automatically run by the QTest executable that is "
+"created when we compile our test."
+msgstr ""
+"Наконец, в объявлении вашего тестового класса вы можете объявить частным "
+"образом все члены данных и вспомогательные методы, которые могут "
+"понадобиться вашему модульному тесту. В нашем случае мы объявим "
+"``QgsRasterLayer *``, который может быть использован любым из наших тестовых"
+" методов. Растровый слой будет создан в функции ``initTestCase()``, которая "
+"запускается до всех остальных тестов, а затем уничтожен с помощью "
+"``cleanupTestCase()``, которая запускается после всех тестов. Объявляя "
+"вспомогательные методы (которые могут быть вызваны различными тестовыми "
+"функциями) в частном порядке, вы можете гарантировать, что они не будут "
+"автоматически запущены исполняемым файлом QTest, который создается при "
+"компиляции нашего теста."
+
+#: ../../docs/developers_guide/unittesting.rst:257
+msgid ""
+"That ends our class declaration. The implementation is simply inlined in the"
+" same file lower down. First our init and cleanup functions:"
+msgstr ""
+"На этом объявление нашего класса заканчивается. Реализация просто вставлена "
+"в тот же файл ниже. Сначала наши функции init и cleanup:"
+
+#: ../../docs/developers_guide/unittesting.rst:290
+msgid "The above init function illustrates a couple of interesting things."
+msgstr ""
+"Приведенная выше функция init иллюстрирует несколько интересных моментов."
+
+#: ../../docs/developers_guide/unittesting.rst:292
+msgid ""
+"We needed to manually set the QGIS application data path so that resources "
+"such as :file:`srs.db` can be found properly."
+msgstr ""
+"Нам нужно было вручную задать путь к данным приложения QGIS, чтобы такие "
+"ресурсы, как :file:`srs.db`, были найдены правильно."
+
+#: ../../docs/developers_guide/unittesting.rst:294
+msgid ""
+"Secondly, this is a data driven test so we needed to provide a way to "
+"generically locate the :file:`tenbytenraster.asc` file. This was achieved by"
+" using the compiler define ``TEST_DATA_PATH``. The define is created in the "
+"``CMakeLists.txt`` configuration file under :file:`<QGIS Source "
+"Root>/tests/CMakeLists.txt` and is available to all QGIS unit tests. If you "
+"need test data for your test, commit it under :file:`<QGIS Source "
+"Root>/tests/testdata`. You should only commit very small datasets here. If "
+"your test needs to modify the test data, it should make a copy of it first."
+msgstr ""
+"Во-вторых, это тест, управляемый данными, поэтому нам нужно было "
+"предоставить способ общего определения местоположения файла "
+":file:`tenbytenraster.asc`. Это было достигнуто с помощью определения "
+"компилятора ``TEST_DATA_PATH``. Определение создается в конфигурационном "
+"файле ``CMakeLists.txt`` в :file:`<QGIS Source Root>/tests/CMakeLists.txt`` "
+"и доступно всем модульным тестам QGIS. Если вам нужны тестовые данные для "
+"вашего теста, зафиксируйте их в :file:`<QGIS Source Root>/tests/testdata`. "
+"Сюда следует фиксировать только очень маленькие наборы данных. Если вашему "
+"тесту нужно изменить тестовые данные, он должен сначала сделать их копию."
+
+#: ../../docs/developers_guide/unittesting.rst:304
+msgid ""
+"Qt also provides some other interesting mechanisms for data driven testing, "
+"so if you are interested to know more on the topic, consult the Qt "
+"documentation."
+msgstr ""
+"Qt также предоставляет некоторые другие интересные механизмы для "
+"тестирования на основе данных, поэтому если вам интересно узнать больше по "
+"этой теме, обратитесь к документации Qt."
+
+#: ../../docs/developers_guide/unittesting.rst:308
+msgid ""
+"Next lets look at our functional test. The ``isValid()`` test simply checks "
+"if the raster layer was loaded correctly in the initTestCase. QVERIFY is a "
+"Qt macro that you can use to evaluate a test condition. There are a few "
+"other macros Qt provides for use in your tests including:"
+msgstr ""
+"Далее рассмотрим наш функциональный тест. Тест ``isValid()`` просто "
+"проверяет, правильно ли был загружен растровый слой в initTestCase. QVERIFY "
+"- это макрос Qt, который можно использовать для оценки условия теста. Есть "
+"несколько других макросов, которые Qt предоставляет для использования в "
+"ваших тестах, включая:"
+
+#: ../../docs/developers_guide/unittesting.rst:313
+msgid "QCOMPARE ( *actual, expected* )"
+msgstr "QCOMPARE ( *actual, expected* )"
+
+#: ../../docs/developers_guide/unittesting.rst:314
+msgid "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
+msgstr "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
+
+#: ../../docs/developers_guide/unittesting.rst:315
+msgid "QFAIL ( *message* )"
+msgstr "QFAIL ( *message* )"
+
+#: ../../docs/developers_guide/unittesting.rst:316
+msgid "QFETCH ( *type, name* )"
+msgstr "QFETCH ( *type, name* )"
+
+#: ../../docs/developers_guide/unittesting.rst:317
+msgid "QSKIP ( *description, mode* )"
+msgstr "QSKIP ( *description, mode* )"
+
+#: ../../docs/developers_guide/unittesting.rst:318
+msgid "QTEST ( *actual, testElement* )"
+msgstr "QTEST ( *actual, testElement* )"
+
+#: ../../docs/developers_guide/unittesting.rst:319
+msgid "QTEST_APPLESS_MAIN ( *TestClass* )"
+msgstr "QTEST_APPLESS_MAIN ( *TestClass* )"
+
+#: ../../docs/developers_guide/unittesting.rst:320
+msgid "QTEST_MAIN ( *TestClass* )"
+msgstr "QTEST_MAIN ( *TestClass* )"
+
+#: ../../docs/developers_guide/unittesting.rst:321
+msgid "QTEST_NOOP_MAIN ()"
+msgstr "QTEST_NOOP_MAIN ()"
+
+#: ../../docs/developers_guide/unittesting.rst:322
+msgid "QVERIFY2 ( *condition, message* )"
+msgstr "QVERIFY2 ( *condition, message* )"
+
+#: ../../docs/developers_guide/unittesting.rst:323
+msgid "QVERIFY ( *condition* )"
+msgstr "QVERIFY ( *condition* )"
+
+#: ../../docs/developers_guide/unittesting.rst:324
+msgid "QWARN ( *message* )"
+msgstr "QWARN ( *message* )"
+
+#: ../../docs/developers_guide/unittesting.rst:326
+msgid ""
+"Some of these macros are useful only when using the Qt framework for data "
+"driven testing (see the Qt docs for more detail)."
+msgstr ""
+"Некоторые из этих макросов полезны только при использовании фреймворка Qt "
+"для тестирования на основе данных (подробнее см. в документации по Qt)."
+
+#: ../../docs/developers_guide/unittesting.rst:336
+msgid ""
+"Normally your functional tests would cover all the range of functionality of"
+" your classes public API where feasible. With our functional tests out the "
+"way, we can look at our regression test example."
+msgstr ""
+"Обычно функциональные тесты охватывают весь спектр функциональности "
+"публичного API ваших классов, если это возможно. С функциональными тестами "
+"покончено, теперь мы можем рассмотреть пример регрессионного теста."
+
+#: ../../docs/developers_guide/unittesting.rst:340
+msgid ""
+"Since the issue in bug #832 is a misreported cell count, writing our test is"
+" simply a matter of using QVERIFY to check that the cell count meets the "
+"expected value:"
+msgstr ""
+"Поскольку проблема в ошибке #832 заключается в неправильном сообщении о "
+"количестве ячеек, написание нашего теста сводится к использованию QVERIFY "
+"для проверки того, что количество ячеек соответствует ожидаемому значению:"
+
+#: ../../docs/developers_guide/unittesting.rst:355
+msgid ""
+"With all the unit test functions implemented, there's one final thing we "
+"need to add to our test class:"
+msgstr ""
+"Когда все функции юнит-тестов реализованы, осталось добавить еще одну вещь в"
+" наш тестовый класс:"
+
+#: ../../docs/developers_guide/unittesting.rst:363
+msgid ""
+"The purpose of these two lines is to signal to Qt's moc that this is a "
+"QtTest (it will generate a main method that in turn calls each test "
+"function. The last line is the include for the MOC generated sources. You "
+"should replace ``testqgsrasterlayer`` with the name of your class in lower "
+"case."
+msgstr ""
+"Цель этих двух строк - дать сигнал Qt's moc, что это QtTest (он сгенерирует "
+"метод main, который, в свою очередь, вызовет каждую тестовую функцию. "
+"Последняя строка - это include для исходников, сгенерированных MOC. Вы "
+"должны заменить ``testqgsrasterlayer`` на имя вашего класса в нижнем "
+"регистре."
+
+#: ../../docs/developers_guide/unittesting.rst:369
+msgid "Comparing images for rendering tests"
+msgstr "Сравнение изображений для тестов рендеринга"
+
+#: ../../docs/developers_guide/unittesting.rst:371
+msgid ""
+"Rendering images on different environments can produce subtle differences "
+"due to platform-specific implementations (e.g. different font rendering and "
+"antialiasing algorithms), to the fonts available on the system and for other"
+" obscure reasons."
+msgstr ""
+"Рендеринг изображений в разных средах может давать тонкие различия из-за "
+"специфики платформы (например, разных алгоритмов рендеринга и сглаживания "
+"шрифтов), из-за шрифтов, доступных в системе, и по другим неясным причинам."
+
+#: ../../docs/developers_guide/unittesting.rst:375
+msgid ""
+"When a rendering test runs on Travis and fails, look for the dash link at "
+"the very bottom of the Travis log. This link will take you to a cdash page "
+"where you can see the rendered vs expected images, along with a "
+"\"difference\" image which highlights in red any pixels which did not match "
+"the reference image."
+msgstr ""
+"Когда тест рендеринга запускается в Travis и терпит неудачу, найдите ссылку "
+"dash в самом низу журнала Travis. По этой ссылке вы перейдете на страницу "
+"cdash, где можно увидеть рендеренные и ожидаемые изображения, а также "
+"\"разницу\", которая выделяет красным цветом все пиксели, не совпадающие с "
+"эталонным изображением."
+
+#: ../../docs/developers_guide/unittesting.rst:380
+msgid ""
+"The QGIS unit test system has support for adding \"mask\" images, which are "
+"used to indicate when a rendered image may differ from the reference image. "
+"A mask image is an image (with the same name as the reference image, but "
+"including a **_mask.png** suffix), and should be the same dimensions as the "
+"reference image. In a mask image the pixel values indicate how much that "
+"individual pixel can differ from the reference image, so a black pixel "
+"indicates that the pixel in the rendered image must exactly match the same "
+"pixel in the reference image. A pixel with RGB 2, 2, 2 means that the "
+"rendered image can vary by up to 2 in its RGB values from the reference "
+"image, and a fully white pixel (255, 255, 255) means that the pixel is "
+"effectively ignored when comparing the expected and rendered images."
+msgstr ""
+"Система модульного тестирования QGIS поддерживает добавление изображений "
+"\"масок\", которые используются для указания, когда отрисованное изображение"
+" может отличаться от эталонного. Изображение маски - это изображение (с тем "
+"же именем, что и эталонное изображение, но с суффиксом **_mask.png**), "
+"которое должно иметь те же размеры, что и эталонное изображение. В "
+"изображении-маске значения пикселей указывают, насколько каждый пиксель "
+"может отличаться от эталонного изображения, поэтому черный пиксель означает,"
+" что пиксель на отрисованном изображении должен точно совпадать с пикселем "
+"на эталонном изображении. Пиксель с RGB 2, 2, 2 означает, что отрисованное "
+"изображение может отличаться от эталонного на 2 значения RGB, а полностью "
+"белый пиксель (255, 255, 255) означает, что пиксель фактически игнорируется "
+"при сравнении ожидаемого и отрисованного изображений."
+
+#: ../../docs/developers_guide/unittesting.rst:392
+msgid ""
+"A utility script to generate mask images is available as "
+"``scripts/generate_test_mask_image.py``. This script is used by passing it "
+"the path of a reference image (e.g. "
+"``tests/testdata/control_images/annotations/expected_annotation_fillstyle/expected_annotation_fillstyle.png``)"
+" and the path to your rendered image."
+msgstr ""
+"Утилита для создания изображений масок доступна в виде скрипта "
+"``scripts/generate_test_mask_image.py``. Этот скрипт используется путем "
+"передачи ему пути к эталонному изображению (например, "
+"``tests/testdata/control_images/annotations/expected_annotation_fillstyle/expected_annotation_fillstyle.png``)"
+" и пути к вашему отрисованному изображению."
+
+#: ../../docs/developers_guide/unittesting.rst:397
+msgid "E.g."
+msgstr "Например"
+
+#: ../../docs/developers_guide/unittesting.rst:403
+msgid ""
+"You can shortcut the path to the reference image by passing a partial part "
+"of the test name instead, e.g."
+msgstr ""
+"Вы можете сократить путь к эталонному изображению, передав вместо него "
+"частичную часть имени теста, например"
+
+#: ../../docs/developers_guide/unittesting.rst:410
+msgid ""
+"(This shortcut only works if a single matching reference image is found. If "
+"multiple matches are found you will need to provide the full path to the "
+"reference image.)"
+msgstr ""
+"(Этот ярлык работает только в том случае, если найдено одно совпадающее "
+"эталонное изображение. Если найдено несколько совпадений, необходимо указать"
+" полный путь к эталонному изображению)."
+
+#: ../../docs/developers_guide/unittesting.rst:414
+msgid ""
+"The script also accepts http urls for the rendered image, so you can "
+"directly copy a rendered image url from the cdash results page and pass it "
+"to the script."
+msgstr ""
+"Скрипт также принимает http-урлы для отрисованного изображения, поэтому вы "
+"можете напрямую скопировать url отрисованного изображения со страницы "
+"результатов cdash и передать его скрипту."
+
+#: ../../docs/developers_guide/unittesting.rst:417
+msgid ""
+"Be careful when generating mask images - you should always view the "
+"generated mask image and review any white areas in the image. Since these "
+"pixels are ignored, make sure that these white images do not cover any "
+"important portions of the reference image -- otherwise your unit test will "
+"be meaningless!"
+msgstr ""
+"Будьте внимательны при генерации изображений масок - всегда просматривайте "
+"сгенерированное изображение маски и изучайте все белые области на нем. "
+"Поскольку эти пиксели игнорируются, убедитесь, что эти белые области не "
+"закрывают важные части эталонного изображения - иначе ваш модульный тест "
+"будет бессмысленным!"
+
+#: ../../docs/developers_guide/unittesting.rst:422
+msgid ""
+"Similarly, you can manually \"white out\" portions of the mask if you "
+"deliberately want to exclude them from the test. This can be useful e.g. for"
+" tests which mix symbol and text rendering (such as legend tests), where the"
+" unit test is not designed to test the rendered text and you don't want the "
+"test to be subject to cross-platform text rendering differences."
+msgstr ""
+"Аналогично, вы можете вручную \"закрасить\" части маски, если вы намеренно "
+"хотите исключить их из теста. Это может быть полезно, например, для тестов, "
+"в которых смешаны рендеринг символов и текста (например, тесты легенд), "
+"когда модульный тест не предназначен для проверки рендеринга текста, и вы не"
+" хотите, чтобы тест был подвержен кросс-платформенным различиям в рендеринге"
+" текста."
+
+#: ../../docs/developers_guide/unittesting.rst:428
+msgid ""
+"To compare images in QGIS unit tests you should use the class "
+"``QgsMultiRenderChecker`` or one of its subclasses."
+msgstr ""
+"Для сравнения изображений в модульных тестах QGIS следует использовать класс"
+" ``QgsMultiRenderChecker`` или один из его подклассов."
+
+#: ../../docs/developers_guide/unittesting.rst:431
+msgid "To improve tests robustness here are few tips:"
+msgstr "Чтобы повысить устойчивость тестов, приведем несколько советов:"
+
+#: ../../docs/developers_guide/unittesting.rst:433
+msgid ""
+"Disable antialiasing if you can, as this minimizes cross-platform rendering "
+"differences."
+msgstr ""
+"Отключите сглаживание, если можете, так как это минимизирует различия в "
+"кроссплатформенном рендеринге."
+
+#: ../../docs/developers_guide/unittesting.rst:435
+msgid ""
+"Make sure your reference images are \"chunky\"... i.e. don't have 1 px wide "
+"lines or other fine features, and use large, bold fonts (14 points or more "
+"is recommended)."
+msgstr ""
+"Убедитесь, что ваши эталонные изображения \"крупные\"... т.е. не имеют линий"
+" шириной 1 px или других мелких деталей, и используйте крупные, жирные "
+"шрифты (рекомендуется 14 пунктов или более)."
+
+#: ../../docs/developers_guide/unittesting.rst:438
+msgid ""
+"Sometimes tests generate slightly different sized images (e.g. legend "
+"rendering tests, where the image size is dependent on font rendering size - "
+"which is subject to cross-platform differences). To account for this, use "
+"``QgsMultiRenderChecker::setSizeTolerance()`` and specify the maximum number"
+" of pixels that the rendered image width and height differ from the "
+"reference image."
+msgstr ""
+"Иногда тесты генерируют изображения немного разного размера (например, тесты"
+" рендеринга легенды, где размер изображения зависит от размера рендеринга "
+"шрифта - что подвержено кроссплатформенным различиям). Чтобы учесть это, "
+"используйте ``QgsMultiRenderChecker::setSizeTolerance()`` и укажите "
+"максимальное количество пикселей, на которое ширина и высота отрисованного "
+"изображения отличается от эталонного."
+
+#: ../../docs/developers_guide/unittesting.rst:444
+msgid ""
+"Don't use transparent backgrounds in reference images (CDash does not "
+"support them). Instead, use ``QgsMultiRenderChecker::drawBackground()`` to "
+"draw a checkboard pattern for the reference image background."
+msgstr ""
+"Не используйте прозрачные фоны в опорных изображениях (CDash их не "
+"поддерживает). Вместо этого используйте "
+"``QgsMultiRenderChecker::drawBackground()``, чтобы нарисовать шаблон для "
+"фона опорного изображения."
+
+#: ../../docs/developers_guide/unittesting.rst:447
+msgid ""
+"When fonts are required, use the font specified in "
+"``QgsFontUtils::standardTestFontFamily()`` (\"QGIS Vera Sans\")."
+msgstr ""
+"Если требуются шрифты, используйте шрифт, указанный в "
+"``QgsFontUtils::standardTestFontFamily()`` (\"QGIS Vera Sans\")."
+
+#: ../../docs/developers_guide/unittesting.rst:450
+msgid ""
+"If travis reports errors for new images (for instance due to antialiasing or"
+" font differences), the script :source:`parse_dash_results.py "
+"<scripts/parse_dash_results.py>` can help you when you are updating the "
+"local test masks."
+msgstr ""
+"Если travis сообщает об ошибках для новых изображений (например, из-за "
+"сглаживания или различий в шрифтах), скрипт :source:`parse_dash_results.py "
+"<scripts/parse_dash_results.py>` может помочь вам при обновлении локальных "
+"тестовых масок."
+
+#: ../../docs/developers_guide/unittesting.rst:456
+msgid "Adding your unit test to CMakeLists.txt"
+msgstr "Добавление вашего модульного теста в CMakeLists.txt"
+
+#: ../../docs/developers_guide/unittesting.rst:459
+msgid ""
+"Adding your unit test to the build system is simply a matter of editing the "
+":file:`CMakeLists.txt` in the test directory, cloning one of the existing "
+"test blocks, and then replacing your test class name into it. For example:"
+msgstr ""
+"Добавление вашего юнит-теста в систему сборки - это просто редактирование "
+":file:`CMakeLists.txt` в каталоге test, клонирование одного из существующих "
+"тестовых блоков, а затем замена в нем имени вашего тестового класса. "
+"Например:"
+
+#: ../../docs/developers_guide/unittesting.rst:470
+msgid "The ADD_QGIS_TEST macro explained"
+msgstr "Объяснение макроса ADD_QGIS_TEST"
+
+#: ../../docs/developers_guide/unittesting.rst:472
+msgid ""
+"We'll run through these lines briefly to explain what they do, but if you "
+"are not interested, just do the step explained in the above section."
+msgstr ""
+"Мы вкратце расскажем об этих строках, чтобы объяснить, что они делают, но "
+"если вам это неинтересно, просто выполните действия, описанные в разделе "
+"выше."
+
+#: ../../docs/developers_guide/unittesting.rst:507
+msgid ""
+"Let's look a little more in detail at the individual lines. First we define "
+"the list of sources for our test. Since we have only one source file "
+"(following the methodology described above where class declaration and "
+"definition are in the same file) its a simple statement:"
+msgstr ""
+"Давайте рассмотрим отдельные строки немного подробнее. Сначала мы определим "
+"список источников для нашего теста. Поскольку у нас только один исходный "
+"файл (в соответствии с описанной выше методикой, когда объявление и "
+"определение класса находятся в одном файле), это простое утверждение:"
+
+#: ../../docs/developers_guide/unittesting.rst:516
+msgid ""
+"Since our test class needs to be run through the Qt meta object compiler "
+"(moc) we need to provide a couple of lines to make that happen too:"
+msgstr ""
+"Поскольку наш тестовый класс должен быть запущен через компилятор мета-"
+"объектов Qt (moc), нам нужно добавить пару строк, чтобы это тоже произошло:"
+
+#: ../../docs/developers_guide/unittesting.rst:525
+msgid ""
+"Next we tell cmake that it must make an executable from the test class. "
+"Remember in the previous section on the last line of the class "
+"implementation we included the moc outputs directly into our test class, so "
+"that will give it (among other things) a main method so the class can be "
+"compiled as an executable:"
+msgstr ""
+"Далее мы сообщаем cmake, что он должен создать исполняемый файл из тестового"
+" класса. Помните, в предыдущем разделе в последней строке реализации класса "
+"мы включили выводы moc непосредственно в наш тестовый класс, так что это "
+"даст ему (помимо всего прочего) метод main, чтобы класс можно было "
+"скомпилировать как исполняемый файл:"
+
+#: ../../docs/developers_guide/unittesting.rst:536
+msgid ""
+"Next we need to specify any library dependencies. At the moment, classes "
+"have been implemented with a catch-all QT_LIBRARIES dependency, but we will "
+"be working to replace that with the specific Qt libraries that each class "
+"needs only. Of course you also need to link to the relevant qgis libraries "
+"as required by your unit test."
+msgstr ""
+"Далее нам нужно указать все библиотечные зависимости. На данный момент "
+"классы реализованы с общей зависимостью QT_LIBRARIES, но мы будем работать "
+"над тем, чтобы заменить ее на конкретные библиотеки Qt, которые нужны только"
+" каждому классу. Конечно, вам также нужно связать соответствующие библиотеки"
+" qgis, как того требует ваш юнит-тест."
+
+#: ../../docs/developers_guide/unittesting.rst:546
+msgid ""
+"Next we tell cmake to install the tests to the same place as the qgis "
+"binaries itself. This is something we plan to remove in the future so that "
+"the tests can run directly from inside the source tree."
+msgstr ""
+"Далее мы указываем cmake установить тесты в то же место, что и сам двоичный "
+"файл qgis. В будущем мы планируем это убрать, чтобы тесты можно было "
+"запускать прямо из дерева исходных текстов."
+
+#: ../../docs/developers_guide/unittesting.rst:573
+msgid ""
+"Finally the above uses ``ADD_TEST`` to register the test with cmake / ctest."
+" Here is where the best magic happens - we register the class with ctest. If"
+" you recall in the overview we gave in the beginning of this section, we are"
+" using both QtTest and CTest together. To recap, QtTest adds a main method "
+"to your test unit and handles calling your test methods within the class. It"
+" also provides some macros like ``QVERIFY`` that you can use as to test for "
+"failure of the tests using conditions. The output from a QtTest unit test is"
+" an executable which you can run from the command line. However when you "
+"have a suite of tests and you want to run each executable in turn, and "
+"better yet integrate running tests into the build process, the CTest is what"
+" we use."
+msgstr ""
+"Наконец, выше используется ``ADD_TEST`` для регистрации теста в cmake / "
+"ctest. Здесь происходит самое интересное - мы регистрируем класс в ctest. "
+"Если вы помните, в обзоре, который мы делали в начале этого раздела, мы "
+"используем QtTest и CTest вместе. Напомним, что QtTest добавляет главный "
+"метод в ваш тестовый модуль и обрабатывает вызов тестовых методов внутри "
+"класса. Он также предоставляет некоторые макросы, такие как ``QVERIFY'', "
+"которые вы можете использовать для проверки на провал тестов с помощью "
+"условий. Результатом модульного теста QtTest является исполняемый файл, "
+"который вы можете запустить из командной строки. Однако если у вас есть "
+"набор тестов, и вы хотите запускать каждый исполняемый файл по очереди, а "
+"еще лучше интегрировать запуск тестов в процесс сборки, мы используем CTest."
+
+#: ../../docs/developers_guide/unittesting.rst:586
+msgid "Building your unit test"
+msgstr "Создание модульного теста"
+
+#: ../../docs/developers_guide/unittesting.rst:588
+msgid ""
+"To build the unit test you need only to make sure that ``ENABLE_TESTS=true``"
+" in the cmake configuration. There are two ways to do this:"
+msgstr ""
+"Чтобы собрать юнит-тест, достаточно убедиться, что ``ENABLE_TESTS=true`` в "
+"конфигурации cmake. Это можно сделать двумя способами:"
+
+#: ../../docs/developers_guide/unittesting.rst:591
+msgid ""
+"Run ``ccmake ..`` ( or ``cmakesetup ..`` under windows) and interactively "
+"set the ``ENABLE_TESTS`` flag to ``ON``."
+msgstr ""
+"Запустите ``ccmake ..`` (или ``cmakesetup ..`` под windows) и интерактивно "
+"установите флаг ``ENABLE_TESTS`` на ``ON``."
+
+#: ../../docs/developers_guide/unittesting.rst:593
+msgid "Add a command line flag to cmake e.g. ``cmake -DENABLE_TESTS=true ..``"
+msgstr ""
+"Добавьте флаг командной строки в cmake, например, ``cmake "
+"-DENABLE_TESTS=true ..``"
+
+#: ../../docs/developers_guide/unittesting.rst:595
+msgid ""
+"Other than that, just build QGIS as per normal and the tests should build "
+"too."
+msgstr ""
+"В остальном просто соберите QGIS, как обычно, и тесты тоже должны собраться."
+
+#: ../../docs/developers_guide/unittesting.rst:599
+msgid "Run your tests"
+msgstr "Запустите свои тесты"
+
+#: ../../docs/developers_guide/unittesting.rst:602
+msgid ""
+"The simplest way to run the tests is as part of your normal build process:"
+msgstr ""
+"Самый простой способ запустить тесты - это сделать их частью обычного "
+"процесса сборки:"
+
+#: ../../docs/developers_guide/unittesting.rst:608
+msgid ""
+"The ``make test`` command will invoke CTest which will run each test that "
+"was registered using the ADD_TEST CMake directive described above. Typical "
+"output from ``make test`` will look like this:"
+msgstr ""
+"Команда ``make test`` вызовет CTest, который запустит каждый тест, "
+"зарегистрированный с помощью директивы ADD_TEST CMake, описанной выше. "
+"Типичный вывод команды ``make test`` будет выглядеть следующим образом:"
+
+#: ../../docs/developers_guide/unittesting.rst:628
+msgid ""
+"If a test fails, you can use the ctest command to examine more closely why "
+"it failed. Use the ``-R`` option to specify a regex for which tests you want"
+" to run and ``-V`` to get verbose output:"
+msgstr ""
+"Если тест не сработал, вы можете использовать команду ctest для более "
+"детального изучения причин неудачи. Используйте опцию ``-R``, чтобы указать "
+"regex для запуска тестов, и ``-V``, чтобы получить подробный вывод:"
+
+#: ../../docs/developers_guide/unittesting.rst:673
+msgid "Running individual tests"
+msgstr "Выполнение отдельных тестов"
+
+#: ../../docs/developers_guide/unittesting.rst:675
+msgid ""
+"C++ tests are ordinary applications. You can run them from the build folder "
+"like any executable."
+msgstr ""
+"Тесты C++ - это обычные приложения. Вы можете запускать их из папки сборки, "
+"как любой исполняемый файл."
+
+#: ../../docs/developers_guide/unittesting.rst:691
+msgid ""
+"These tests also take `command line arguments <https://doc.qt.io/qt-5/qtest-"
+"overview.html#qt-test-command-line-arguments>`_. This makes it possible to "
+"run a specific subset of tests:"
+msgstr ""
+"Эти тесты также принимают аргументы командной строки "
+"<https://doc.qt.io/qt-5/qtest-overview.html#qt-test-command-line-"
+"arguments>`_. Это позволяет запускать определенное подмножество тестов:"
+
+#: ../../docs/developers_guide/unittesting.rst:707
+msgid "Sandboxing test run"
+msgstr "Тестовый запуск в песочнице"
+
+#: ../../docs/developers_guide/unittesting.rst:709
+msgid ""
+"By default all test temporary files are written to the system temp directory"
+" (for example ``/tmp/`` on Linux systems or ``C:\\temp`` on Windows). A lot "
+"of files can be created in this directory during the test run."
+msgstr ""
+"По умолчанию все временные файлы теста записываются в системный каталог temp"
+" (например, ``/tmp/`` в системах Linux или ``C:\\temp`` в Windows). Во время"
+" выполнения теста в этом каталоге может быть создано множество файлов."
+
+#: ../../docs/developers_guide/unittesting.rst:712
+msgid ""
+"If you do not want to mix up with the common system temp directory (for "
+"example on a multi user server or in case of permission issue), you can "
+"create your own temp directory and specify it to ``ctest`` by setting the "
+"``TMPDIR`` environment variable with your new directory."
+msgstr ""
+"Если вы не хотите путаться с общим системным temp-каталогом (например, на "
+"многопользовательском сервере или в случае проблем с правами), вы можете "
+"создать свой собственный temp-каталог и указать его ``ctest``, установив "
+"переменную окружения ``TMPDIR`` с вашим новым каталогом."
+
+#: ../../docs/developers_guide/unittesting.rst:715
+msgid "On Linux you could do it with:"
+msgstr "В Linux вы можете сделать это с помощью:"
+
+#: ../../docs/developers_guide/unittesting.rst:724
+msgid "Debugging unit tests"
+msgstr "Отладка модульных тестов"
+
+#: ../../docs/developers_guide/unittesting.rst:727
+msgid "C++ Tests"
+msgstr "Тесты C++"
+
+#: ../../docs/developers_guide/unittesting.rst:729
+msgid ""
+"For C++ unit tests, QtCreator automatically adds run targets, so you can "
+"start them from the debugger."
+msgstr ""
+"Для модульных тестов C++ QtCreator автоматически добавляет цели запуска, "
+"чтобы вы могли запускать их из отладчика."
+
+#: ../../docs/developers_guide/unittesting.rst:732
+msgid ""
+"If you go to *Projects* and there to the *Build & Run* --> Desktop *Run* "
+"tab, you can also specify command line parameters that will allow a subset "
+"of the tests to be run inside a .cpp file in the debugger."
+msgstr ""
+"Если вы перейдете в *Проекты* и там на вкладку *Сборка и выполнение* --> "
+"Рабочий стол *Выполнить*, вы также можете указать параметры командной "
+"строки, которые позволят запускать подмножество тестов внутри .cpp-файла в "
+"отладчике."
+
+#: ../../docs/developers_guide/unittesting.rst:737
+msgid "Python Tests"
+msgstr "Тесты Python"
+
+#: ../../docs/developers_guide/unittesting.rst:739
+msgid ""
+"It's also possible to start Python unit tests from QtCreator with GDB. For "
+"this, you need to go to :guilabel:`Projects` and choose :guilabel:`Run` "
+"under :guilabel:`Build & Run`. Then add a new ``Run configuration`` with the"
+" executable ``/usr/bin/python3`` and the Command line arguments set to the "
+"path of the unit test python file, e.g. "
+":file:`/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py`."
+msgstr ""
+"Также можно запускать юнит-тесты Python из QtCreator с помощью GDB. Для "
+"этого вам нужно перейти в :guilabel:`Проекты` и выбрать :guilabel:`Run` в "
+"разделе :guilabel:`Сборка и запуск`. Затем добавьте новую конфигурацию "
+"``Запустить`` с исполняемым файлом ``/usr/bin/python3`` и аргументами "
+"командной строки, установленными на путь к python-файлу юнит-теста, например"
+" "
+":file:`/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py``."
+
+#: ../../docs/developers_guide/unittesting.rst:747
+msgid "Now also change the ``Run Environment`` and add 3 new variables:"
+msgstr ""
+"Теперь также измените ``Запуск окружения`` и добавьте 3 новые переменные:"
+
+#: ../../docs/developers_guide/unittesting.rst:750
+msgid "Variable"
+msgstr "Variable"
+
+#: ../../docs/developers_guide/unittesting.rst:750
+msgid "Value"
+msgstr "Значение"
+
+#: ../../docs/developers_guide/unittesting.rst:752
+msgid "PYTHONPATH"
+msgstr "PYTHONPATH"
+
+#: ../../docs/developers_guide/unittesting.rst:752
+msgid ""
+"[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
+msgstr ""
+"[build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python"
+
+#: ../../docs/developers_guide/unittesting.rst:754
+msgid "QGIS_PREFIX_PATH"
+msgstr "QGIS_PREFIX_PATH"
+
+#: ../../docs/developers_guide/unittesting.rst:754
+msgid "[build]/output"
+msgstr "[build]/output"
+
+#: ../../docs/developers_guide/unittesting.rst:756
+msgid "LD_LIBRARY_PATH"
+msgstr "LD_LIBRARY_PATH"
+
+#: ../../docs/developers_guide/unittesting.rst:756
+msgid "[build]/output/lib"
+msgstr "[build]/output/lib"
+
+#: ../../docs/developers_guide/unittesting.rst:759
+msgid ""
+"Replace ``[build]`` with your build directory and ``[source]`` with your "
+"source directory."
+msgstr ""
+"Замените ``[сборка]`` на каталог сборки, а ``[источник]`` на каталог "
+"исходного кода."
+
+#: ../../docs/developers_guide/unittesting.rst:763
+msgid "Have fun"
+msgstr "Хорошего настроения"
+
+#: ../../docs/developers_guide/unittesting.rst:765
+msgid ""
+"Well that concludes this section on writing unit tests in QGIS. We hope you "
+"will get into the habit of writing tests to test new functionality and to "
+"check for regressions. Some aspects of the test system (in particular the "
+":file:`CMakeLists.txt` parts) are still being worked on so that the testing "
+"framework works in a truly platform independent way."
+msgstr ""
+"На этом мы завершаем этот раздел о написании модульных тестов в QGIS. Мы "
+"надеемся, что у вас войдет в привычку писать тесты для проверки новой "
+"функциональности и регрессий. Некоторые аспекты тестовой системы (в "
+"частности, части :file:`CMakeLists.txt`) все еще дорабатываются, чтобы "
+"система тестирования работала действительно независимо от платформы."
