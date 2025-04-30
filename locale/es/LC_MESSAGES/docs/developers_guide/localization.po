@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,6 +151,14 @@ msgstr ""
 "la configuración regional. La misma consideración se aplica a los tipos "
 "integrales y a los métodos ``::toInt()`` o ``::toLongLong()``."
 
+#: ../../docs/developers_guide/localization.rst:68
+msgid ""
+"``QLocale().toDouble()`` or ``QLocale().toInt()`` and the other "
+"``QLocale()`` conversion methods can be used in this situation."
+msgstr ""
+"En esta situación se pueden utilizar ``QLocale().toDouble()`` o "
+"``QLocale().toInt()`` y los demás métodos de conversión ``QLocale()``."
+
 #: ../../docs/developers_guide/localization.rst:71
 msgid ""
 "As a better alternative, QGIS API provides a few classes that should be used"
@@ -185,3 +194,21 @@ msgstr ""
 "La clase del validador es tolerante e intentará interpretar la entrada "
 "comprobando primero la configuración regional del usuario y recurriendo a la"
 " configuración regional ``C`` si no hay ninguna coincidencia."
+
+#: ../../docs/developers_guide/localization.rst:86
+msgid ""
+"The general recommendation is to use :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` for all floating point types I/O whenever it is"
+" possible because it is very well tested and it validates the input "
+"correctly. As an alternative it is possible to use the "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` class "
+"independently on a string obtained from another widget (e.g., a simple "
+"``QLineEdit`` widget)."
+msgstr ""
+"La recomendación general es utilizar :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` para todas las E/S de tipos de coma flotante "
+"siempre que sea posible porque está muy bien probado y valida la entrada "
+"correctamente. Como alternativa es posible utilizar la clase "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` independientemente"
+" sobre una cadena obtenida de otro widget (por ejemplo, un simple widget "
+"``QLineEdit``)."
