@@ -261,7 +261,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:climbalongline``
+**Algorithm ID**: ``native:climbalongline``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
