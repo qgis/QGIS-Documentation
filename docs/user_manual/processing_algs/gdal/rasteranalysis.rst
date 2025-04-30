@@ -1987,11 +1987,9 @@ Python code
 
 Sieve
 -----
-Removes raster polygons smaller than a provided threshold size (in
-pixels) and replaces them with the pixel value of the largest
-neighbour polygon.
-It is useful if you have a large amount of small areas on your raster
-map.
+Removes raster polygons smaller than a provided threshold size (in pixels)
+and replaces them with the pixel value of the largest neighbour polygon.
+It is useful if you have a large amount of small areas on your raster map.
 
 This algorithm is derived from the
 `GDAL sieve utility <https://gdal.org/en/latest/programs/gdal_sieve.html>`_.
@@ -2029,7 +2027,8 @@ Basic parameters
      - [boolean]
 
        Default: False
-     - Use eight connectedness instead of four connectedness
+     - If False, consider as neighbours only the (4) pixels that connect the edges horizontally or vertically.
+       If True, every pixel that touches an edge or a corner is considered as neighbour.
    * - **Do not use the default validity mask for the input band**
      - ``NO_MASK``
      - [boolean]
