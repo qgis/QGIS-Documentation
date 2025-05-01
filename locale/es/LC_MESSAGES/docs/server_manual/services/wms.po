@@ -6,9 +6,9 @@
 # 
 # Translators:
 # Federico, 2025
-# Eric Armijo, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1402,6 +1402,18 @@ msgid "This parameter specifies whether to add map tips to the output."
 msgstr ""
 "Este parámetro especifica si agregar sugerencias de mapas a la salida."
 
+#: ../../docs/server_manual/services/wms.rst:787
+msgid ""
+"``HTML_FI_ONLY_MAPTIP``: like ``TRUE``, with the difference that the HTML "
+"response to the feature info request only contains the maptip. This gives "
+"full control over the HTML response using e.g. the built-in layer maptip "
+"editor."
+msgstr ""
+"``HTML_FI_ONLY_MAPTIP``: como ``TRUE``, con la diferencia de que la "
+"respuesta HTML a la solicitud de información de características sólo "
+"contiene el maptip. Esto permite un control total sobre la respuesta HTML "
+"utilizando, por ejemplo, el editor maptip de capas integrado."
+
 #: ../../docs/server_manual/services/wms.rst:794
 msgid "WITH_GEOMETRY"
 msgstr "WITH_GEOMETRY"
@@ -1653,6 +1665,10 @@ msgid ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`"
 msgstr ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Adds the rule text to JSON output"
+msgstr "Añade el texto de la regla a la salida JSON"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
 msgstr ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
 
@@ -1785,6 +1801,18 @@ msgstr "Por ejemplo:"
 #: ../../docs/server_manual/services/wms.rst:1019
 msgid "RULE"
 msgstr "RULE"
+
+#: ../../docs/server_manual/services/wms.rst:1021
+msgid ""
+"This parameter is available on layers with :guilabel:`Rule-based` rendering "
+"and allows to build a legend with only the named rule symbol. It cannot be "
+"combined with ``BBOX`` parameter. ``HEIGHT`` and ``WIDTH`` must be "
+"specified."
+msgstr ""
+"Este parámetro está disponible en capas con :guilabel:`Rule-based` rendering"
+" y permite construir una leyenda sólo con el símbolo de regla nombrado. No "
+"puede combinarse con el parámetro ``BBOX``. Es necesario especificar "
+"``HEIGHT`` y ``WIDTH``."
 
 #: ../../docs/server_manual/services/wms.rst:1041
 msgid "RULELABEL"
@@ -2099,6 +2127,16 @@ msgstr "Leyenda con ``ITEMFONTCOLOR=0x5f9930``"
 #: ../../docs/server_manual/services/wms.rst:1537
 msgid "SHOWRULEDETAILS"
 msgstr "SHOWRULEDETAILS"
+
+#: ../../docs/server_manual/services/wms.rst:1539
+msgid ""
+"This parameter specifies if the JSON output will also contain the details "
+"about the rule that generated the legend entry. This parameter only has "
+"effect when the renderer is rule-based or categorized."
+msgstr ""
+"Este parámetro especifica si la salida JSON también contendrá los detalles "
+"sobre la regla que generó la entrada de la leyenda. Este parámetro sólo "
+"tiene efecto cuando el renderizador está basado en reglas o categorías."
 
 #: ../../docs/server_manual/services/wms.rst:1574
 msgid "ADDLAYERGROUPS"
