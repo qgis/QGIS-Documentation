@@ -106,13 +106,13 @@ Parameters
      - Input polygon vector layer
    * - **Tolerance**
      - ``TOLERANCE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The maximum distance (in unit of choice) between two consecutive vertices to get merged.
    * - **Preserve boundary**
      - ``PRESERVE_BOUNDARY``
-     - [number]
+     - [boolean]
 
        Default: False
      - When enabled, the outside edges of the coverage will be preserved without simplification
@@ -183,7 +183,7 @@ Parameters
      - Input polygon vector layer
    * - **Gap width**
      - ``GAP_WIDTH``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The maximum width of gap to detect

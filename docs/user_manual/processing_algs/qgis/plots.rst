@@ -14,7 +14,6 @@ Bar plot
 --------
 Creates a bar plot from a category and a layer field.
 
-
 Parameters
 ..........
 
@@ -28,7 +27,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Category field name**
      - ``NAME_FIELD``
@@ -96,7 +95,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Category name field**
      - ``NAME_FIELD``
@@ -162,7 +161,6 @@ Mean and standard deviation plot
 --------------------------------
 Creates a box plot with mean and standard deviation values.
 
-
 Parameters
 ..........
 
@@ -176,7 +174,7 @@ Parameters
      - Description
    * - **Input table**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Category name field**
      - ``NAME_FIELD``
@@ -184,7 +182,7 @@ Parameters
      - Categorical field to use for grouping the boxes (X axis)
    * - **Value field**
      - ``VALUE_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Value to use for the plot (Y axis).
    * - **Plot**
      - ``OUTPUT``
@@ -247,7 +245,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Category name field**
      - ``NAME_FIELD``
@@ -255,7 +253,7 @@ Parameters
      - Categorical field to use for grouping the features (X axis)
    * - **Value field**
      - ``VALUE_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Value to use for the plot (Y axis).
    * - **Polar plot**
      - ``OUTPUT``
@@ -322,7 +320,7 @@ Parameters
      - Raster band to use for the histogram
    * - **number of bins**
      - ``BINS``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - The number of bins to use in the histogram (X axis).
@@ -390,11 +388,11 @@ Parameters
      - Input vector layer
    * - **Attribute**
      - ``FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Value to use for the plot (Y axis).
    * - **number of bins**
      - ``BINS``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - The number of bins to use in the histogram (X axis).
@@ -457,7 +455,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **X attribute**
      - ``XFIELD``
@@ -525,7 +523,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **X attribute**
      - ``XFIELD``

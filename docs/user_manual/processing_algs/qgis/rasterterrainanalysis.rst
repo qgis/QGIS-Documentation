@@ -48,7 +48,7 @@ Parameters
      - Digital Terrain Model raster layer
    * - **Z factor**
      - ``Z_FACTOR``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - Vertical exaggeration.       
@@ -137,20 +137,20 @@ Basic parameters
      - Digital Terrain Model raster layer
    * - **Band number**
      - ``BAND``
-     - [number] [list]
+     - [raster band]
      - The band of the DEM to consider
    * - **Kernel radius (pixels)**
      - ``RADIUS``
-     - [number]
+     - [numeric: integer]
 
        Default: 5
      - The radius of the filter kernel (in pixels).
        Must be large enough to reach ground cells next to non-ground objects.
    * - **Terrain slope (%, pixel size/vertical units)**
      - ``TERRAIN_SLOPE``
-     - [number]
+     - [numeric: double]
 
-       Default: 30
+       Default: 30.0
      - The approximate terrain slope in ``%``.
        The terrain slope must be adjusted to account for the ratio of height units vs raster pixel dimensions.
        Used to relax the filter criterium in steeper terrain.
@@ -167,7 +167,7 @@ Basic parameters
        * 2 - Amplify
    * - **Standard deviation**
      - ``STANDARD_DEVIATION``
-     - [number]
+     - [numeric: double]
 
        Default: 0.1
      - The standard deviation used to calculate a 5% confidence interval applied to the height threshold.
@@ -309,7 +309,7 @@ Parameters
      - Digital Terrain Model raster layer
    * - **Z factor**
      - ``Z_FACTOR``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - Vertical exaggeration.       
@@ -321,14 +321,14 @@ Parameters
        The default is 1 (no exaggeration).
    * - **Azimuth (horizontal angle)**
      - ``AZIMUTH``
-     - [number]
+     - [numeric: double]
 
        Default: 300.0
      - Set the horizontal angle (in degrees) of the sun (clockwise
        direction). Range: 0 to 360. 0 is north.
    * - **Vertical angle**
      - ``V_ANGLE``
-     - [number]
+     - [numeric: double]
 
        Default: 40.0
      - Set the vertical angle (in degrees) of the sun, that is the
@@ -410,7 +410,7 @@ Parameters
        to calculate hypsometric curves
    * - **Step**
      - ``STEP``
-     - [number]
+     - [numeric: double]
 
        Default: 100.0
      - Vertical distance between curves
@@ -498,7 +498,7 @@ Parameters
      - Digital Terrain Model raster layer
    * - **Z factor**
      - ``Z_FACTOR``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - Vertical exaggeration.       
@@ -552,7 +552,7 @@ Parameters
 
        Optional
      - ``FREQUENCY_DISTRIBUTION``
-     - [table]
+     - [vector: table]
        
        Default: ``[Skip output]``
      - Specify the CSV table for the output frequency distribution.
@@ -579,7 +579,7 @@ Outputs
      - The output relief raster layer
    * - **Frequency distribution**
      - ``OUTPUT``
-     - [table]
+     - [vector: table]
      - The output frequency distribution
 
 Python code
@@ -626,7 +626,7 @@ Parameters
      - Digital Terrain Model raster layer
    * - **Z factor**
      - ``Z_FACTOR``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - Vertical exaggeration.       
@@ -702,7 +702,7 @@ Parameters
      - Digital Terrain Model raster layer
    * - **Z factor**
      - ``Z_FACTOR``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - Vertical exaggeration.       

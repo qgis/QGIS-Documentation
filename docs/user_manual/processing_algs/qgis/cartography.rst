@@ -46,13 +46,13 @@ Parameters
      - Point features to calculate the rotation for
    * - **Reference layer**
      - ``REFERENCE_LAYER``
-     - [vector: any]
+     - [vector: geometry]
      - Layer to find the closest feature from for rotation calculation
    * - **Maximum distance to consider**
 
        Optional
      - ``MAX_DISTANCE``
-     - [number]
+     - [numeric: double]
 
        Default: Not set
      - If no reference feature is found within this distance, no rotation
@@ -169,11 +169,11 @@ Outputs
      - Description
    * - **Color ramp count**
      - ``COLORRAMPS``
-     - [number]
+     - [numeric: integer]
      - 
    * - **Label settings count**
      - ``LABELSETTINGS``
-     - [number]
+     - [numeric: integer]
      - 
    * - **Output style database**
      - ``OUTPUT``
@@ -181,11 +181,11 @@ Outputs
      - Output :file:`.XML` file combining the selected style items
    * - **Symbol count**
      - ``SYMBOLS``
-     - [number]
+     - [numeric: integer]
      - 
    * - **Text format count**
      - ``TEXTFORMATS``
-     - [number]
+     - [numeric: integer]
      - 
 
 Python code
@@ -262,7 +262,7 @@ Parameters
 
        Optional
      - ``NON_MATCHING_CATEGORIES``
-     - [table]
+     - [vector: table]
 
        Default: ``[Skip output]``
      - Output table for categories which do not match any symbol in
@@ -276,7 +276,7 @@ Parameters
 
        Optional
      - ``NON_MATCHING_SYMBOLS``
-     - [table]
+     - [vector: table]
 
        Default: ``[Skip output]``
      - Output table for symbols from the provided style database which
@@ -299,12 +299,12 @@ Outputs
      - Description
    * - **Non-matching categories**
      - ``NON_MATCHING_CATEGORIES``
-     - [table]
+     - [vector: table]
      - Lists categories which could not be matched to any symbol in
        the provided style database
    * - **Non-matching symbol names**
      - ``NON_MATCHING_SYMBOLS``
-     - [table]
+     - [vector: table]
      - Lists symbols from the provided style database which could
        not match any category
    * - **Categorized layer**
@@ -389,11 +389,11 @@ Outputs
      - Description
    * - **Color ramp count**
      - ``COLORRAMPS``
-     - [number]
+     - [numeric: integer]
      - Number of color ramps
    * - **Label settings count**
      - ``LABELSETTINGS``
-     - [number]
+     - [numeric: integer]
      - Number of label settings
    * - **Output style database**
      - ``OUTPUT``
@@ -401,11 +401,11 @@ Outputs
      - Output :file:`.XML` file for the selected style items
    * - **Symbol count**
      - ``SYMBOLS``
-     - [number]
+     - [numeric: integer]
      - Number of symbols
    * - **Text format count**
      - ``TEXTFORMATS``
-     - [number]
+     - [numeric: integer]
      - Number of text formats
 
 Python code
@@ -450,7 +450,7 @@ Basic parameters
 
        Optional
      - ``COVERAGE_LAYER``
-     - [vector: any]
+     - [vector: geometry]
      - Layer to use to generate the atlas
    * - **Filter expression**
      - ``FILTER_EXPRESSION``
@@ -510,7 +510,7 @@ Advanced parameters
      - ``DPI``
 
        Default: Not set
-     - [number]
+     - [numeric: double]
      - DPI of the output file(s). If not set, the value in the print layout settings will be used.
    * - **Generate world file**
      - ``GEOREFERENCE``
@@ -590,7 +590,7 @@ Basic parameters
 
        Optional
      - ``COVERAGE_LAYER``
-     - [vector: any]
+     - [vector: geometry]
      - Layer to use to generate the atlas
    * - **Filter expression**
      - ``FILTER_EXPRESSION``
@@ -643,7 +643,7 @@ Advanced parameters
      - ``DPI``
 
        Default: Not set
-     - [number]
+     - [numeric: double]
      - DPI of the output file(s). If not set, the value in the print layout settings will be used.
    * - **Always export as vectors**
      - ``FORCE_VECTOR``
@@ -763,7 +763,7 @@ Basic parameters
 
        Optional
      - ``COVERAGE_LAYER``
-     - [vector: any]
+     - [vector: geometry]
      - Layer to use to generate the atlas
    * - **Filter expression**
      - ``FILTER_EXPRESSION``
@@ -816,7 +816,7 @@ Advanced parameters
      - ``DPI``
 
        Default: Not set
-     - [number]
+     - [numeric: double]
      - DPI of the output file(s). If not set, the value in the print layout settings will be used.
    * - **Always export as vectors**
      - ``FORCE_VECTOR``
@@ -962,7 +962,7 @@ Advanced parameters
      - ``DPI``
 
        Default: Not set
-     - [number]
+     - [numeric: double]
      - DPI of the output file(s). If not set, the value in the print layout settings will be used.
    * - **Generate world file**
      - ``GEOREFERENCE``
@@ -1067,7 +1067,7 @@ Advanced parameters
      - ``DPI``
 
        Default: Not set
-     - [number]
+     - [numeric: double]
      - DPI of the output file(s). If not set, the value in the print layout settings will be used.
    * - **Always export as vectors**
      - ``FORCE_VECTOR``
@@ -1249,7 +1249,7 @@ Advanced parameters
      - ``DPI``
 
        Default: 96.0
-     - [number]
+     - [numeric: double]
      -
 
 Outputs
@@ -1374,7 +1374,7 @@ Outputs
      - Description
    * - **Map height**
      - ``HEIGHT``
-     - [number]
+     - [numeric: double]
      - 
    * - **Extent**
      - ``OUTPUT``
@@ -1383,15 +1383,15 @@ Outputs
        the input layout map item(s)
    * - **Map rotation**
      - ``ROTATION``
-     - [number]
+     - [numeric: double]
      - 
    * - **Map scale**
      - ``SCALE``
-     - [number]
+     - [numeric: double]
      - 
    * - **Map width**
      - ``WIDTH``
-     - [number]
+     - [numeric: double]
      - 
 
 Python code
@@ -1498,14 +1498,14 @@ Parameters
      - The input polygon layer
    * - **Minimum number of colors**
      - ``MIN_COLORS``
-     - [number]
+     - [numeric: integer]
 
        Default: 4
      - The minimum number of colors to assign.
        Minimum 1, maximum 1000.
    * - **Minimum distance between features**
      - ``MIN_DISTANCE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Prevent nearby (but non-touching) features from

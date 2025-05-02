@@ -44,13 +44,13 @@ Basic parameters
 
        Optional
      - ``RESOLUTION``
-     - [number]
+     - [numeric: double]
      - Resolution of cells used to calculate boundary
    * - **Minimal number of points in a cell to consider cell occupied**
 
        Optional
      - ``THRESHOLD``
-     - [number]
+     - [numeric: integer]
      - Minimal number of points in a cell to consider cell occupied
    * - **Boundary**
      - ``OUTPUT``
@@ -151,13 +151,13 @@ Basic parameters
      - Input point cloud layer to export
    * - **Resolution of the density raster**
      - ``RESOLUTION``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - Cell size of the output raster
    * - **Tile size for parallel runs**
      - ``TILE_SIZE``
-     - [number]
+     - [numeric: integer]
 
        Default: 1000
      - Size of the tiles to split the data into for parallel runs
@@ -204,13 +204,13 @@ Advanced parameters
 
        Optional
      - ``ORIGIN_X``
-     - [number]
+     - [numeric: double]
      -
    * - **Y origin of a tile for parallel runs**
 
        Optional
      - ``ORIGIN_Y``
-     - [number]
+     - [numeric: double]
      -
 
 Outputs

@@ -38,11 +38,11 @@ Parameters
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to
        convert
-   * - **Source NoData**
+   * - **Input pixel value to treat as NoData**
 
        Optional
      - ``NODATA_INPUT``
-     - [number]
+     - [numeric: integer]
 
        Default: None
      - Input pixel value to treat as "NoData" (GDAL >= 3.7).
@@ -50,7 +50,7 @@ Parameters
 
        Optional
      - ``NODATA_OUTPUT``
-     - [number]
+     - [numeric: integer]
 
        Default: None
      - Assign specified "NoData" value to output (GDAL >= 3.7).
@@ -446,7 +446,7 @@ Parameters
      - Input (RGB) raster layer
    * - **Number of colors**
      - ``NCOLORS``
-     - [number]
+     - [numeric: integer]
 
        Default: 2
      - The number of colors the resulting image will contain.
@@ -529,7 +529,7 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: Not set
      - Defines the value to use for NoData in the output raster

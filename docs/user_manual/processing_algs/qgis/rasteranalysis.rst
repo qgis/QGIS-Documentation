@@ -78,7 +78,7 @@ Basic parameters
        * 1 --- Exclusive linear interpolation (PERCENTRANK.EXC)
    * - **Value**
      - ``VALUE``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      - Value to rank among the respective values in the stack of all overlaid
@@ -120,7 +120,7 @@ Advanced parameters
      - Description
    * - **Output NoData value**
      - ``OUTPUT_NODATA_VALUE``
-     - [number]
+     - [numeric: double]
 
        Default: -9999.0
      - Value to use for NoData in the output layer
@@ -165,15 +165,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
 
 Python code
@@ -256,7 +256,7 @@ Basic parameters
        * 2 --- Exclusive linear interpolation (PERCENTILE.EXC)
    * - **Percentile**
      - ``VALUE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.25
      - Value to rank among the respective values in the stack of all overlaid
@@ -298,7 +298,7 @@ Advanced parameters
      - Description
    * - **Output NoData value**
      - ``OUTPUT_NODATA_VALUE``
-     - [number]
+     - [numeric: double]
 
        Default: -9999.0
      - Value to use for NoData in the output layer
@@ -343,15 +343,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
 
 Python code
@@ -428,7 +428,7 @@ Basic parameters
      - The layer to rank the values among the stack of all overlaid layers
    * - **Value raster band**
      - ``VALUE_RASTER_BAND``
-     - [integer]
+     - [numeric: integer]
 
        Default: 1
      - Band of the "value raster layer" to compare to
@@ -478,7 +478,7 @@ Advanced parameters
      - Description
    * - **Output NoData value**
      - ``OUTPUT_NODATA_VALUE``
-     - [number]
+     - [numeric: double]
 
        Default: -9999.0
      - Value to use for NoData in the output layer
@@ -523,15 +523,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
 
 Python code
@@ -664,7 +664,7 @@ Advanced parameters
 
        Optional
      - ``OUTPUT_NO_DATA_VALUE``
-     - [number]
+     - [numeric: double]
 
        Default: -9999.0
      - Value to use for NoData in the output layer
@@ -705,7 +705,7 @@ Outputs
     - The spatial extent of the output raster layer
   * - **Height in pixels**
     - ``HEIGHT_IN_PIXELS``
-    - [integer]
+    - [numeric: integer]
     - The number of rows in the output raster layer
   * - **Output raster**
     - ``OUTPUT``
@@ -713,11 +713,11 @@ Outputs
     - Output raster layer containing the result
   * - **Total pixel count**
     - ``TOTAL_PIXEL_COUNT``
-    - [integer]
+    - [numeric: integer]
     - The count of pixels in the output raster layer
   * - **Width in pixels**
     - ``WIDTH_IN_PIXELS``
-    - [integer]
+    - [numeric: integer]
     - The number of columns in the output raster layer
 
 Python code
@@ -822,7 +822,7 @@ Advanced parameters
 
        Optional
      - ``OUTPUT_NO_DATA_VALUE``
-     - [number]
+     - [numeric: double]
 
        Default: -9999.0
      - Value to use for NoData in the output layer
@@ -867,27 +867,27 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Count of cells with equal value occurrences**
      - ``FOUND_LOCATIONS_COUNT``
-     - [number]
+     - [numeric: integer]
      -
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [number]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
    * - **Mean frequency at valid cell locations**
      - ``MEAN_FREQUENCY_PER_LOCATION``
-     - [number]
+     - [numeric: double]
      -
    * - **Count of value occurrences**
      - ``OCCURRENCE_COUNT``
-     - [number]
+     - [numeric: integer]
      -
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
 
 .. **endfrequencyparams**
@@ -955,13 +955,13 @@ Basic parameters
        you want to fuzzify.
    * - **Function midpoint**
      - ``FUZZYMIDPOINT``
-     - [number]
+     - [numeric: double]
 
-       Default: 10
+       Default: 10.0
      - Midpoint of the gaussian function
    * - **Function spread**
      - ``FUZZYSPREAD``
-     - [number]
+     - [numeric: double]
 
        Default: 0.01
      - Spread of the gaussian function
@@ -1029,15 +1029,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
 
 Python code
@@ -1096,15 +1096,15 @@ Basic parameters
        fuzzify.
    * - **Function midpoint**
      - ``FUZZYMIDPOINT``
-     - [number]
+     - [numeric: double]
 
-       Default: 50
+       Default: 50.0
      - Midpoint of the large function
    * - **Function spread**
      - ``FUZZYSPREAD``
-     - [number]
+     - [numeric: double]
 
-       Default: 5
+       Default: 5.0
      - Spread of the large function
    * - **Fuzzified raster**
      - ``OUTPUT``
@@ -1171,15 +1171,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
 
 Python code
@@ -1243,15 +1243,15 @@ Basic parameters
        fuzzify.
    * - **Low fuzzy membership bound**
      - ``FUZZYLOWBOUND``
-     - [number]
+     - [numeric: double]
 
-       Default: 0
+       Default: 0.0
      - Low bound of the linear function
    * - **High fuzzy membership bound**
      - ``FUZZYHIGHBOUND``
-     - [number]
+     - [numeric: double]
 
-       Default: 1
+       Default: 1.0
      - High bound of the linear function
    * - **Fuzzified raster**
      - ``OUTPUT``
@@ -1317,15 +1317,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
 
 Python code
@@ -1384,13 +1384,13 @@ Basic parameters
        fuzzify.
    * - **Function midpoint**
      - ``FUZZYMIDPOINT``
-     - [number]
+     - [numeric: double]
 
-       Default: 50
+       Default: 50.0
      - Midpoint of the near function
    * - **Function spread**
      - ``FUZZYSPREAD``
-     - [number]
+     - [numeric: double]
 
        Default: 0.01
      - Spread of the near function
@@ -1458,15 +1458,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
 
 Python code
@@ -1528,21 +1528,21 @@ Basic parameters
        fuzzify.
    * - **Low fuzzy membership bound**
      - ``FUZZYLOWBOUND``
-     - [number]
+     - [numeric: double]
 
-       Default: 0
+       Default: 0.0
      - Low bound of the power function
    * - **High fuzzy membership bound**
      - ``FUZZYHIGHBOUND``
-     - [number]
+     - [numeric: double]
 
-       Default: 1
+       Default: 1.0
      - High bound of the power function
    * - **High fuzzy membership bound**
      - ``FUZZYEXPONENT``
-     - [number]
+     - [numeric: double]
 
-       Default: 2
+       Default: 2.0
      - Exponent of the power function
    * - **Fuzzified raster**
      - ``OUTPUT``
@@ -1608,15 +1608,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
 
 Python code
@@ -1671,19 +1671,18 @@ Basic parameters
      - [raster band]
 
        Default: The first band of the raster layer
-     - If the raster is multiband, choose the band that you want to
-       fuzzify.
+     - If the raster is multiband, choose the band that you want to fuzzify.
    * - **Function midpoint**
      - ``FUZZYMIDPOINT``
-     - [number]
+     - [numeric: double]
 
-       Default: 50
+       Default: 50.0
      - Midpoint of the small function
    * - **Function spread**
      - ``FUZZYSPREAD``
-     - [number]
+     - [numeric: double]
 
-       Default: 5
+       Default: 5.0
      - Spread of the small function
    * - **Fuzzified raster**
      - ``OUTPUT``
@@ -1749,15 +1748,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
 
 Python code
@@ -1893,7 +1892,7 @@ Advanced parameters
      - Description
    * - **Output NoData value**
      - ``OUTPUT_NODATA_VALUE``
-     - [number]
+     - [numeric: double]
 
        Default: -9999.0
      - Value to use for NoData in the output layer
@@ -1938,15 +1937,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
 
 .. **endpositionparams**
@@ -2120,7 +2119,7 @@ Advanced parameters
      - Description
    * - **Output NoData value**
      - ``NO_DATA``
-     - [number]
+     - [numeric: double]
 
        Default: -9999.0
      - Value to use for NoData in the output layer
@@ -2173,27 +2172,27 @@ Outputs
      - The coordinate reference system of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
    * - **NoData pixel count**
      - ``NODATA_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of NoData pixels in the output raster layer
    * - **True pixel count**
      - ``TRUE_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of True pixels (value = 1) in the output raster layer
    * - **False pixel count**
      - ``FALSE_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of False pixels (value = 0) in the output raster
        layer
    * - **Output layer**
@@ -2290,7 +2289,7 @@ Advanced parameters
      - Description
    * - **Output NoData value**
      - ``NO_DATA``
-     - [number]
+     - [numeric: double]
 
        Default: -9999.0
      - Value to use for NoData in the output layer
@@ -2343,27 +2342,27 @@ Outputs
      - The coordinate reference system of the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
    * - **NoData pixel count**
      - ``NODATA_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of NoData pixels in the output raster layer
    * - **True pixel count**
      - ``TRUE_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of True pixels (value = 1) in the output raster layer
    * - **False pixel count**
      - ``FALSE_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of False pixels (value = 0) in the output raster layer
    * - **Output layer**
      - ``OUTPUT``
@@ -2440,7 +2439,7 @@ Parameters
 
        Optional
      - ``CELLSIZE``
-     - [number]
+     - [numeric: double]
      - Cell size of the output raster layer.
        If the cell size is not specified, the minimum cell size of
        the selected reference layer(s) will be used.
@@ -2547,7 +2546,7 @@ Parameters
 
        Optional
      - ``CELLSIZE``
-     - [number]
+     - [numeric: double]
      - Cell size of the output raster layer.
        If the cell size is not specified, the minimum cell size of
        the selected reference layer(s) will be used.
@@ -2645,7 +2644,7 @@ Outputs
      - Description
    * - **Number of bands in raster**
      - ``BAND_COUNT``
-     - [number]
+     - [numeric: integer]
      - The number of bands in the raster
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
@@ -2662,39 +2661,39 @@ Outputs
        in the selected band
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the raster layer
    * - **Band NoData value**
      - ``NODATA_VALUE``
-     - [number]
+     - [numeric: double]
      - The value (if set) of the NoData pixels in the selected band
    * - **Pixel size (height) in map units**
      - ``PIXEL_HEIGHT``
-     - [integer]
+     - [numeric: integer]
      - Vertical size in map units of the pixel
    * - **Pixel size (width) in map units**
      - ``PIXEL_WIDTH``
-     - [integer]
+     - [numeric: integer]
      - Horizontal size in map units of the pixel
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the raster layer
    * - **Maximum x-coordinate**
      - ``X_MAX``
-     - [number]
+     - [numeric: double]
      -
    * - **Minimum x-coordinate**
      - ``X_MIN``
-     - [number]
+     - [numeric: double]
      -
    * - **Maximum y-coordinate**
      - ``Y_MAX``
-     - [number]
+     - [numeric: double]
      -
    * - **Minimum y-coordinate**
      - ``Y_MIN``
-     - [number]
+     - [numeric: double]
      -
 
 Python code
@@ -2763,15 +2762,15 @@ Outputs
      - Description
    * - **Maximum value**
      - ``MAX``
-     - [number]
+     - [numeric: double]
      -
    * - **Mean value**
      - ``MEAN``
-     - [number]
+     - [numeric: double]
      -
    * - **Minimum value**
      - ``MIN``
-     - [number]
+     - [numeric: double]
      -
    * - **Statistics**
      - ``OUTPUT_HTML_FILE``
@@ -2790,19 +2789,19 @@ Outputs
 
    * - **Range**
      - ``RANGE``
-     - [number]
+     - [numeric: double]
      -
    * - **Standard deviation**
      - ``STD_DEV``
-     - [number]
+     - [numeric: double]
      -
    * - **Sum**
      - ``SUM``
-     - [number]
+     - [numeric: double]
      -
    * - **Sum of the squares**
      - ``SUM_OF_SQUARES``
-     - [number]
+     - [numeric: double]
      -
 
 Python code
@@ -2858,7 +2857,7 @@ Parameters
 
    * - **Unique values table**
      - ``OUTPUT_TABLE``
-     - [table]
+     - [vector: table]
 
        Default: ``[Skip output]``
      - Specification of the table for unique values:
@@ -2889,15 +2888,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **NoData pixel count**
      - ``NODATA_PIXEL_COUNT``
-     - [number]
+     - [numeric: integer]
      - The number of NoData pixels in the output raster layer
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [integer]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
    * - **Unique values report**
      - ``OUTPUT_HTML_FILE``
@@ -2913,7 +2912,7 @@ Outputs
        * NoData pixel count: count of pixels with NoData value
    * - **Unique values table**
      - ``OUTPUT_TABLE``
-     - [table]
+     - [vector: table]
      - A table with three columns:
 
        * *value*: pixel value
@@ -2924,7 +2923,7 @@ Outputs
 
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of columns in the output raster layer
 
 Python code
@@ -2987,7 +2986,7 @@ Basic parameters
        the zones
    * - **Statistics**
      - ``OUTPUT_TABLE``
-     - [table]
+     - [vector: table]
 
        Default: ``[Create temporary layer]``
      - Specification of the output report. One of:
@@ -3046,15 +3045,15 @@ Outputs
      - The spatial extent of the output raster layer
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
-     - [integer]
+     - [numeric: integer]
      - The number of rows in the output raster layer
    * - **NoData pixel count**
      - ``NODATA_PIXEL_COUNT``
-     - [number]
+     - [numeric: integer]
      - The number of NoData pixels in the output raster layer
    * - **Statistics**
      - ``OUTPUT_TABLE``
-     - [table]
+     - [vector: table]
      - The output layer contains the following information
        **for each zone**:
 
@@ -3066,11 +3065,11 @@ Outputs
        * Mean: the mean of the pixel values in the zone;
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
-     - [number]
+     - [numeric: integer]
      - The count of pixels in the output raster layer
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
-     - [number]
+     - [numeric: integer]
      - The number of columns in the output raster layer
 
 Python code
@@ -3115,7 +3114,7 @@ Parameters
        the surface.
    * - **Base level**
      - ``LEVEL``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Define a base or reference value.
@@ -3156,7 +3155,7 @@ Parameters
 
    * - **Surface volume table**
      - ``OUTPUT_TABLE``
-     - [table]
+     - [vector: table]
 
        Default: ``[Skip output]``
      - Specification of the output table. One of:
@@ -3178,15 +3177,15 @@ Outputs
      - Description
    * - **Volume**
      - ``VOLUME``
-     - [number]
+     - [numeric: double]
      - The calculated volume
    * - **Area**
      - ``AREA``
-     - [number]
+     - [numeric: double]
      - The area in square map units
    * - **Pixel_count**
      - ``PIXEL_COUNT``
-     - [number]
+     - [numeric: integer]
      - The total number of pixels that have been analyzed
    * - **Surface volume report**
      - ``OUTPUT_HTML_FILE``
@@ -3195,7 +3194,7 @@ Outputs
        pixel count) in HTML format
    * - **Surface volume table**
      - ``OUTPUT_TABLE``
-     - [table]
+     - [vector: table]
      - The output table (containing volume, area and
        pixel count)
 
@@ -3260,8 +3259,8 @@ Basic parameters
      - ``VALUE_FIELD``
      - [tablefield: numeric]
      - Field with the value that will be assigned to the pixels that
-       fall in the class (between the corresponding min and max
-       values). Use ``nan`` to set the value of the range to NoData. 
+       fall in the class (between the corresponding min and max values).
+       Use ``nan`` to set the value of the range to NoData.
    * - **Reclassified raster**
      - ``OUTPUT``
      - [raster]
@@ -3287,7 +3286,7 @@ Advanced parameters
      - Description
    * - **Output NoData value**
      - ``NO_DATA``
-     - [number]
+     - [numeric: double]
 
        Default: -9999.0
      - Value to apply to NoData values.
@@ -3308,8 +3307,7 @@ Advanced parameters
      - [boolean]
 
        Default: False
-     - Applies the NoData value to band values that do not fall in
-       any class.
+     - Applies the NoData value to band values that do not fall in any class.
        If False, the original value is kept.
    * - **Output data type**
      - ``DATA_TYPE``
@@ -3399,7 +3397,7 @@ Basic parameters
      - Raster band for which you want to recalculate values.
    * - **Reclassification table**
      - ``TABLE``
-     - [table]
+     - [vector: table]
      - A 3-columns table to fill with the values to set the boundaries
        of each class (``Minimum`` and ``Maximum``) and the new
        ``Value`` to assign to the band values that fall in the class.
@@ -3431,7 +3429,7 @@ Advanced parameters
      - Description
    * - **Output NoData value**
      - ``NO_DATA``
-     - [number]
+     - [numeric: double]
 
        Default: -9999.0
      - Value to apply to NoData values.
@@ -3553,13 +3551,13 @@ Basic parameters
      - If the raster is multiband, choose a band.
    * - **New minimum value**
      - ``MINIMUM``
-     - [number]
+     - [numeric: double]
 
        Default value: 0.0
      - Minimum pixel value to use in the rescaled layer
    * - **New maximum value**
      - ``MAXIMUM``
-     - [number]
+     - [numeric: double]
 
        Default value: 255.0
      - Maximum pixel value to use in the rescaled layer
@@ -3567,7 +3565,7 @@ Basic parameters
    
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
      
        Default value: Not set
      - Value to assign to the NoData pixels.
@@ -3683,7 +3681,7 @@ Basic parameters
      - The raster to process.
    * - **Band number**
      - ``BAND``
-     - [number]
+     - [raster band]
 
        Default: 1
      - The band of the raster
@@ -3699,7 +3697,7 @@ Basic parameters
        * 2 --- Round down
    * - **Number of decimals places**
      - ``DECIMAL_PLACES``
-     - [number]
+     - [numeric: integer]
 
        Default: 2
      - Number of decimals places to round to.
@@ -3729,7 +3727,7 @@ Advanced parameters
      - Description
    * - **Base n for rounding to multiples of n**
      - ``BASE_N``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - When the ``DECIMAL_PLACES`` parameter is negative,
@@ -3800,7 +3798,7 @@ Parameters
    * - **Input Layer**
      - ``INPUT``
      - [vector: point]
-     - Point vector layer to use for  sampling
+     - Point vector layer to use for sampling
    * - **Raster Layer**
      - ``RASTERCOPY``
      - [raster]
