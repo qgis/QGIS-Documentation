@@ -89,7 +89,7 @@ Advanced parameters
      - Description
    * - **Segments**
      - ``SEGMENTS``
-     - [[numeric: double]]
+     - [numeric: double]
 
        Default: 8
      - Number of line segments to use to approximate a quarter
