@@ -26,7 +26,7 @@ from the user before they take place, others happen automatically.
    * - Python API help
      - Browser PyQGIS documentation
      - User initiated
-     - https://qgis.org/pyqgis/%1/search.html?q=%2
+     - :pyqgis:`search`
      - IP, QGIS version, OS
      - IP in server log
    * - **version.qgis.org**
