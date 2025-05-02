@@ -931,8 +931,8 @@ or an expression to set:
   pointing in the direction of East for ``Horizontal`` oriented text and with 0°
   pointing in North direction for ``Vertical`` oriented text. Different units can
   be defined for the labeling rotation (e.g. ``degrees``, ``minutes of arc``, ``turns``).
-  QGIS prioratizes screen display rotation angles by default and always rotates text
-  to be most readable on screen, so "upside-down" rotation angles are overrided while
+  QGIS prioritizes screen display rotation angles by default and always rotates text
+  to be most readable on screen, so "upside-down" rotation angles are overridden while
   rendering. To change this behavior and force QGIS to render exact data-defined
   rotation angles there is an option in |render| :guilabel:`Rendering` tab, under
   :guilabel:`Show upside-down labels`.
