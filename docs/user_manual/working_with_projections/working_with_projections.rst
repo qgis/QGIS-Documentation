@@ -183,13 +183,14 @@ Available options are:
   to overlay them regardless of their original CRS. Use of units and ellipsoid setting
   are available and make sense and you can perform calculations accordingly.
 
-.. note:: Some coordinate reference systems (CRS) use units such as feet instead of meters.
-   However, changing the project's CRS does not automatically update the :guilabel:`Units for distance measurement`
-   and :guilabel:`Units for area measurement` settings in the :guilabel:`General` tab of the
-   :guilabel:`Project Properties` dialog (:menuselection:`Project --> Properties...`). 
-   You must manually configure the measurement units in the :ref:`Measurements<measurements_ellipsoid>` frame.
-   While the :guilabel:`Display coordinates using` setting reflects the CRS units,
-   tools like measurement tools, expressions, and calculations will use the manually configured units.
+If you change your project's CRS and want the units (for distance, area, and coordinates)
+to match the units defined by the CRS, make sure you have selected :guilabel:`Map units` in the relevant settings.
+These include the :guilabel:`Units for distance measurement` and :guilabel:`Units for area measurement`
+in the :guilabel:`General` tab of the :menuselection:`Project --> Properties…`,
+as well as the global settings under :menuselection:`Settings --> Options --> Map Tools`.
+Some CRSs, for instance, define their units in feet instead of meters — selecting :guilabel:`Map units`
+ensures that such changes are reflected throughout your project.
+
 
 .. tip:: **Setting the project CRS from a layer**
 
