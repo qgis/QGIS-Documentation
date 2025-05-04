@@ -34,22 +34,215 @@ msgstr ""
 "Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
 "страница в настоящее время переводится |прогресс перевода|."
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:5
+msgid "The Table Items"
+msgstr "Элементы таблицы"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:12
+msgid "You can use table items to decorate and explain your map:"
+msgstr ""
+"Вы можете использовать настольные предметы, чтобы украсить и объяснить свою "
+"карту:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:14
+msgid ""
+":ref:`Attribute table <layout_attribute_table_item>`: automatically extracts"
+" a subset of the attributes of a layer, based on predefined rules"
+msgstr ""
+":ref:`Таблица атрибутов<layout_attribute_table_item>`: автоматически "
+"извлекает подмножество атрибутов слоя, основываясь на предопределенных "
+"правилах"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:16
+msgid ""
+":ref:`Fixed table <layout_fixed_table_item>`: allows for creation of tables "
+"with contents manually entered (i.e. spreadsheet style), so that you can "
+"create completely custom tables."
+msgstr ""
+":ref:`Фиксированная таблица<layout_fixed_table_item>`: позволяет создавать "
+"таблицы с содержимым, введенным вручную (т.е. в стиле электронной таблицы), "
+"так что вы можете создавать полностью пользовательские таблицы."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:23
+msgid "The attribute table item"
+msgstr "Элемент таблицы атрибутов"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:25
+msgid ""
+"Any layer in the project can have its attributes shown in the print layout. "
+"Use the |addTable| :guilabel:`Add Attribute Table` tool following "
+":ref:`items creation instructions <create_layout_item>` to add a new table "
+"item that you can later manipulate the same way as exposed in "
+":ref:`interact_layout_item`."
+msgstr ""
+"Любой слой в проекте может иметь свои атрибуты, отображаемые в макете "
+"печати. Используйте инструмент |addTable| :guilabel:`Добавить таблицу "
+"атрибутов` после :ref:`инструкции по созданию элементов<create_layout_item>`"
+" для добавления нового элемента таблицы, которым впоследствии можно будет "
+"управлять так же, как это делается в :ref:`interact_layout_item`."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:436
 msgid "addTable"
 msgstr "addTable"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:30
+msgid ""
+"By default, a new attribute table item loads first rows of the first "
+"(alphabetically sorted) layer, with all the fields. You can however "
+"customize the table thanks to its :guilabel:`Item Properties` panel. Other "
+"than the :ref:`items common properties <item_common_properties>`, this "
+"feature has the following functionalities (see "
+":numref:`figure_layout_table`):"
+msgstr ""
+"По умолчанию новый элемент таблицы атрибутов загружает первые строки первого"
+" (отсортированного по алфавиту) слоя со всеми полями. Однако вы можете "
+"настроить таблицу благодаря панели :guilabel:`Свойства "
+"элемента<item_common_properties>`. Помимо :ref:`общих свойств элементов`, "
+"эта функция обладает следующими функциональными возможностями (см. "
+":numref:`figure_layout_table`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:41
+msgid "Attribute table Item Properties Panel"
+msgstr "Таблица атрибутов Панель свойств элемента"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:45
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:258
 msgid "Main properties"
 msgstr "Основные свойства"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:47
+msgid ""
+"The :guilabel:`Main properties` group of the attribute table provides the "
+"following functionalities (see :numref:`figure_layout_table_ppt`):"
+msgstr ""
+"Группа :guilabel:`Основные свойства` таблицы атрибутов предоставляет "
+"следующие функциональные возможности (см. "
+":numref:`figure_layout_table_ppt`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:55
+msgid "Attribute table Main properties Group"
+msgstr "Таблица атрибутов Основные свойства Группа"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:57
+msgid ""
+"For :guilabel:`Source` you can by default only select **Layer features** "
+"allowing you to select a :guilabel:`Layer` from the vector layers loaded in "
+"the project."
+msgstr ""
+"Для :guilabel:`Источник` по умолчанию можно выбрать только **Особенности "
+"слоя**, что позволит вам выбрать :guilabel:`Слой` из векторных слоев, "
+"загруженных в проект."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:61
+msgid ""
+"The |dataDefine| :sup:`Data-defined override` button near the layer list "
+"allows you to dynamically change the layer which is used to populate the "
+"table, e.g. you could fill the attribute table with different layer "
+"attributes per atlas page. Note that the table structure used "
+"(:numref:`figure_layout_table_select`) is the one of the layer shown in the "
+":guilabel:`Layer` drop-down list and it is left intact, meaning that setting"
+" a data defined table to a layer with different field(s) will result in "
+"empty column(s) in the table."
+msgstr ""
+"Кнопка |dataDefine| :sup:`Определить данные` рядом со списком слоев "
+"позволяет динамически изменять слой, который используется для заполнения "
+"таблицы, например, вы можете заполнить таблицу атрибутов разными атрибутами "
+"слоя для каждой страницы атласа. Обратите внимание, что используемая "
+"структура таблицы (:numref:`figure_layout_table_select`) - это структура "
+"слоя, указанного в выпадающем списке :guilabel:`Слой`, и она остается "
+"нетронутой, то есть установка таблицы, определяемой данными, на слой с "
+"другим полем (полями) приведет к появлению пустых колонок в таблице."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:444
 msgid "dataDefine"
 msgstr "dataDefine"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:70
+msgid ""
+"In case you activate the |checkbox|:guilabel:`Generate an atlas` option in "
+"the :guilabel:`Atlas` panel (see :ref:`atlas_generation`), there are two "
+"additional :guilabel:`Source` possible:"
+msgstr ""
+"Если вы активируете опцию |checkbox|:guilabel:`Генерировать атлас` на панели"
+" :guilabel:`Атлас` (см. :ref:`atlas_generation`), возможны два "
+"дополнительных :guilabel:`Источника`:"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:442
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:74
+msgid ""
+"**Current atlas feature** (see :numref:`figure_layout_table_atlas`): you "
+"won't see any option to choose the layer, and the table item will only show "
+"a row with the attributes from the current feature of the atlas coverage "
+"layer."
+msgstr ""
+"**Текущая особенность атласа** (см. :numref:`figure_layout_table_atlas`): вы"
+" не увидите опции выбора слоя, а в элементе таблицы будет отображаться "
+"только строка с атрибутами текущей особенности слоя покрытия атласа."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:77
+msgid ""
+"and **Relation children** (see :numref:`figure_layout_table_relation`): an "
+"option with the relation names will show up. This feature can only be used "
+"if you have defined a :ref:`relation <vector_relations>` using your atlas "
+"coverage layer as parent, and the table will show the children rows of the "
+"atlas coverage layer's current feature."
+msgstr ""
+"и **Дочерние отношения** (см. :numref:`figure_layout_table_relation`): "
+"появится опция с именами отношений. Эту возможность можно использовать, "
+"только если вы определили :ref:`отношения<vector_relations>`, используя слой"
+" покрытия атласа в качестве родительского, и в таблице будут показаны "
+"дочерние строки текущей характеристики слоя покрытия атласа."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:83
+msgid ""
+"The button :guilabel:`Refresh Table Data` can be used to refresh the table "
+"when the actual contents of the table has changed."
+msgstr ""
+"Кнопка :guilabel:`Обновить данные таблицы` может использоваться для "
+"обновления таблицы, когда фактическое содержимое таблицы изменилось."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:92
+msgid "Attribute table Main properties for 'Current atlas feature'"
+msgstr ""
+"Таблица атрибутов Основные свойства для „'Текущей характеристики атласа“'"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:100
+msgid "Attribute table Main properties for 'Relation children'"
+msgstr "Таблица атрибутов Основные свойства для ' Реальные дети'"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:103
+msgid ""
+"The button :guilabel:`Attributes...` starts the :guilabel:`Select "
+"Attributes` dialog, (see :numref:`figure_layout_table_select`) that can be "
+"used to change the visible contents of the table. The upper part of the "
+"window shows the list of the attributes to display and the lower part helps "
+"you sort the data."
+msgstr ""
+"Кнопка :guilabel:`Атрибуты...` запускает диалог :guilabel:`Выбор атрибутов` "
+"(см. :numref:`figure_layout_table_select`), который можно использовать для "
+"изменения видимого содержимого таблицы. В верхней части окна отображается "
+"список отображаемых атрибутов, а нижняя часть помогает сортировать данные."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:113
+msgid "Attribute table Select attributes Dialog"
+msgstr "Таблица атрибутов Выбор атрибутов Диалоговое окно"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:115
+msgid "In the :guilabel:`Columns` section you can:"
+msgstr "В разделе :guilabel:`Колонки` вы можете:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:117
+msgid ""
+"Move attributes up or down the list by selecting the rows and then using the"
+" |arrowUp| and |arrowDown| buttons to shift the rows. Multiple rows can be "
+"selected and moved at any one time."
+msgstr ""
+"Перемещайте атрибуты вверх или вниз по списку, выделяя строки, а затем "
+"используя кнопки |arrowUp| и |arrowDown| для перемещения строк. Одновременно"
+" можно выбрать и переместить несколько строк."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:440
 msgid "arrowUp"
@@ -59,30 +252,753 @@ msgstr "arrowUp"
 msgid "arrowDown"
 msgstr "arrowDown"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:120
+msgid ""
+"Add an attribute with the |symbologyAdd| button. This will add an empty row "
+"at the bottom of the table where you can select a field to be the attribute "
+"value or create an attribute via a regular expression."
+msgstr ""
+"Добавьте атрибут с помощью кнопки |symbologyAdd|. Это добавит пустую строку "
+"в нижней части таблицы, где вы можете выбрать поле, которое будет значением "
+"атрибута, или создать атрибут с помощью регулярного выражения."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:448
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:123
+msgid ""
+"Remove an attribute with the |symbologyRemove| button. Multiple rows can be "
+"selected and removed at any one time."
+msgstr ""
+"Удалите атрибут с помощью кнопки |symbologyRemove|. Одновременно можно "
+"выбрать и удалить несколько строк."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:450
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:125
+msgid ""
+"Reset the attribute table back to its default state with the "
+":guilabel:`Reset` button."
+msgstr ""
+"Верните таблицу атрибутов в состояние по умолчанию с помощью кнопки "
+":guilabel:`Сброс`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:126
+msgid ""
+"Clear the table using the :guilabel:`Clear` button. This is useful when you "
+"have a large table but only want to show a small number of attributes. "
+"Instead of manually removing each row, it may be quicker to clear the table "
+"and add the rows needed."
+msgstr ""
+"Очистите таблицу с помощью кнопки :guilabel:`Очистить`. Это полезно, если у "
+"вас большая таблица, но вы хотите показать только небольшое количество "
+"атрибутов. Вместо того чтобы вручную удалять каждую строку, может быть "
+"быстрее очистить таблицу и добавить необходимые строки."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:130
+msgid ""
+"Cell headings can be altered by adding the custom text in the "
+":guilabel:`Heading` column."
+msgstr ""
+"Заголовки ячеек можно изменить, добавив пользовательский текст в столбец "
+":guilabel:`Заголовок`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:131
+msgid ""
+"Cell alignment can be managed with the :guilabel:`Alignment` column which "
+"will dictate the texts position within the table cell."
+msgstr ""
+"Выравниванием ячеек можно управлять с помощью колонки "
+":guilabel:`Выравнивание`, которая будет определять положение текста в ячейке"
+" таблицы."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:133
+msgid ""
+"Cell width can be manually managed by adding custom values to the "
+":guilabel:`width` column."
+msgstr ""
+"Шириной ячеек можно управлять вручную, добавляя пользовательские значения в "
+"столбец :guilabel:`ширина`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:135
+msgid "In the :guilabel:`Sorting` section you can:"
+msgstr "В разделе :guilabel:`Сортировка` вы можете:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:137
+msgid ""
+"Add an attribute to sort the table with: press the |symbologyAdd| button and"
+" a new empty row is added. Insert a field or an expression in the "
+":guilabel:`Attribute` column and set the :guilabel:`Sort order` to "
+"**Ascending** or **Descending**."
+msgstr ""
+"Добавьте атрибут для сортировки таблицы: нажмите кнопку |symbologyAdd|, и "
+"добавится новая пустая строка. Вставьте поле или выражение в столбец "
+":guilabel:`Атрибут` и установите :guilabel:`Порядок сортировки` на "
+"**Восходящий** или **Нисходящий**."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:140
+msgid ""
+"Select a row in the list and use the |arrowUp| and |arrowDown| buttons to "
+"change the sort priority on attribute level. Selecting a cell in the "
+":guilabel:`Sort Order` column helps you change the sorting order of the "
+"attribute field."
+msgstr ""
+"Выберите строку в списке и используйте кнопки |arrowUp| и |arrowDown|, чтобы"
+" изменить приоритет сортировки на уровне атрибутов. Выбрав ячейку в столбце "
+":guilabel:``Порядок сортировки``, вы можете изменить порядок сортировки поля"
+" атрибута."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:144
+msgid ""
+"Use the |symbologyRemove| button to remove an attribute from the sorting "
+"list."
+msgstr ""
+"Используйте кнопку |symbologyRemove|, чтобы удалить атрибут из списка "
+"сортировки."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:148
+msgid "Feature filtering"
+msgstr "Фильтрация характеристик"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:150
+msgid ""
+"The :guilabel:`Feature filtering` group of the attribute table provides the "
+"following functionalities (see :numref:`figure_layout_table_filter`):"
+msgstr ""
+"Группа :guilabel:`Фильтрация характеристик` таблицы атрибутов предоставляет "
+"следующие функциональные возможности (см. "
+":numref:`figure_layout_table_filter`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:158
+msgid "Attribute table Feature filtering Group"
+msgstr "Таблица атрибутов Фильтрация характеристик Группа"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:160
+msgid "You can:"
+msgstr "Вы можете:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:162
+msgid "Define the :guilabel:`Maximum rows` to be displayed."
+msgstr ""
+"Определите отображаемое значение :guilabel:`Максимальное количество строк`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:163
+msgid ""
+"Activate |checkbox| :guilabel:`Remove duplicate rows from table` to show "
+"unique records only."
+msgstr ""
+"Активируйте |checkbox| :guilabel:`Удалять дубликаты строк из таблицы`, чтобы"
+" показывать только уникальные записи."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:164
+msgid ""
+"Activate |checkbox| :guilabel:`Show only visible features within a map` and "
+"select the corresponding :guilabel:`Linked map` whose visible features "
+"attributes will be displayed."
+msgstr ""
+"Активируйте флажок |checkbox| :guilabel:`Показывать только видимые объекты в"
+" пределах карты` и выберите соответствующую :guilabel:`Связанную карту`, "
+"атрибуты видимых объектов которой будут отображаться."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:166
+msgid ""
+"Activate |checkbox| :guilabel:`Show only features intersecting Atlas "
+"feature` is only available when |checkbox| :guilabel:`Generate an atlas` is "
+"activated. When activated it will show a table with only the features which "
+"intersect the current atlas feature."
+msgstr ""
+"Активация |checkbox| :guilabel:`Показать только черты, пересекающие черту "
+"атласа` доступна только при активации |checkbox| :guilabel:`Генерировать "
+"атлас`. При активации этой опции будет показана таблица, содержащая только "
+"те объекты, которые пересекаются с текущим объектом атласа."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:169
+msgid ""
+"Activate |checkbox| :guilabel:`Filter with` and provide a filter by typing "
+"in the input line or insert a regular expression using the given "
+"|expression| expression button. A few examples of filtering statements you "
+"can use when you have loaded the airports layer from the Sample dataset:"
+msgstr ""
+"Активируйте |checkbox| :guilabel:`Фильтровать с` и задайте фильтр, введя его"
+" в строку ввода, или вставьте регулярное выражение с помощью кнопки "
+"выражения |expression|. Несколько примеров операторов фильтрации, которые "
+"можно использовать после загрузки слоя аэропортов из набора данных Образец:"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:446
 msgid "expression"
 msgstr "expression"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:174
+msgid "``ELEV > 500``"
+msgstr "``ЭЛЕВАТОР > 500``"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:175
+msgid "``NAME = 'ANIAK'``"
+msgstr "``НАЗВАНИЕ = ``АНИАК``"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:176
+msgid "``NAME NOT LIKE 'AN%'``"
+msgstr "``НАЗВАНИЕ НЕ ТАКОЕ, КАК «АН%»``"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:177
+msgid "``regexp_match( attribute( $currentfeature, 'USE' )  , '[i]')``"
+msgstr "``regexp_match( attribute( $currentfeature, 'USE' )  , '[i]')``"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:179
+msgid ""
+"The last regular expression will include only the airports that have a "
+"letter 'i' in the attribute field 'USE'."
+msgstr ""
+"Последнее регулярное выражение будет включать только те аэропорты, которые "
+"имеют букву „i“ в поле атрибута „USE“."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:183
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:324
 msgid "Appearance"
 msgstr "Внешний вид"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:185
+msgid ""
+"The :guilabel:`Appearance` group of the attribute table provides the "
+"following functionalities (see :numref:`figure_layout_table_appearance`):"
+msgstr ""
+"Группа :guilabel:`Внешний вид` таблицы атрибутов предоставляет следующие "
+"функциональные возможности (см. :numref:`figure_layout_table_appearance`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:193
+msgid "Attribute table appearance Group"
+msgstr "Внешний вид таблицы атрибутов Группа"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:195
+msgid ""
+"Click |checkbox| :guilabel:`Show empty rows` to fill the attribute table "
+"with empty cells. This option can also be used to provide additional empty "
+"cells when you have a result to show!"
+msgstr ""
+"Щелкните |checkbox| :guilabel:`Показывать пустые строки`, чтобы заполнить "
+"таблицу атрибутов пустыми ячейками. Эту опцию также можно использовать для "
+"создания дополнительных пустых ячеек, если вам нужно показать результат!"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:197
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:329
+msgid ""
+"With :guilabel:`Cell margins` you can define the margin around text in each "
+"cell of the table."
+msgstr ""
+"С помощью :guilabel:`Поля ячеек` вы можете определить поля вокруг текста в "
+"каждой ячейке таблицы."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:198
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:330
+msgid ""
+"With :guilabel:`Display header` you can select from a list one of 'On first "
+"frame', 'On all frames' default option, or 'No header'."
+msgstr ""
+"С помощью :guilabel:`Отображать заголовок` вы можете выбрать из списка один "
+"из вариантов: «На первом кадре», «На всех кадрах» по умолчанию или «Без "
+"заголовка»."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:200
+msgid ""
+"The option :guilabel:`Empty table` controls what will be displayed when the "
+"result selection is empty."
+msgstr ""
+"Опция :guilabel:`Пустая таблица` управляет тем, что будет отображаться, если"
+" выборка результатов пуста."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:202
+msgid ""
+"**Draw headers only**, will only draw the header except if you have chosen "
+"'No header' for :guilabel:`Display header`."
+msgstr ""
+"**Отображать только заголовки**, будет отображаться только заголовок, за "
+"исключением случаев, когда вы выбрали «Без заголовка» для параметра "
+":guilabel:`Отображать заголовок`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:204
+msgid ""
+"**Hide entire table**, will only draw the background of the table. You can "
+"activate |checkbox| :guilabel:`Don't draw background if frame is empty` in "
+":guilabel:`Frames` to completely hide the table."
+msgstr ""
+"**Скрыть всю таблицу**, будет отрисован только фон таблицы. Вы можете "
+"активировать |checkbox| :guilabel:`Без рисования фона, если рамка пуста` в "
+":guilabel:`Фреймы`, чтобы полностью скрыть таблицу."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:207
+msgid ""
+"**Show set message**, will draw the header and adds a cell spanning all "
+"columns and display a message like 'No result' that can be provided in the "
+"option :guilabel:`Message to display`"
+msgstr ""
+"**Показать установленное сообщение**, нарисует заголовок и добавит ячейку, "
+"охватывающую все столбцы, и выведет сообщение типа « Нет результата», "
+"которое можно указать в опции :guilabel:`Сообщение для отображения`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:210
+msgid ""
+"The option :guilabel:`Message to display` is only activated when you have "
+"selected **Show set message** for :guilabel:`Empty table`. The message "
+"provided will be shown in the table in the first row, when the result is an "
+"empty table."
+msgstr ""
+"Опция :guilabel:`Сообщение для отображения` активируется только в том "
+"случае, если вы выбрали **Показать установленное сообщение** для "
+":guilabel:`Пустая таблица`. Сообщение будет показано в таблице в первой "
+"строке, если в результате получилась пустая таблица."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:213
+msgid ""
+"With :guilabel:`Background color` you can set the background color of the "
+"table using the :ref:`color selector <color-selector>` widget. The "
+":guilabel:`Advanced customization` option helps you define different "
+"background colors for each cell (see "
+":numref:`figure_layout_table_background`)"
+msgstr ""
+"С помощью :guilabel:`Цвет фона` вы можете установить цвет фона таблицы, "
+"используя виджет :ref:`Селектор цвета<color-selector>`. Опция "
+":guilabel:`Дополнительная настройка` поможет вам задать разные цвета фона "
+"для каждой ячейки (см. :numref:`figure_layout_table_background`)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:223
+msgid "Attribute table Advanced Background Dialog"
+msgstr "Таблица атрибутов Расширенный диалог фона"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:225
+msgid ""
+"|checkbox| :guilabel:`Apply layer conditional styling colors`: the "
+":ref:`conditional table formatting <conditional_formatting>` present in the "
+"layer is applied inside the layout attribute table (background color, font "
+"family and properties such as bold, italic, strikeout, underline, color, "
+"...). Conditional formatting rules take precedence over other layout table "
+"formatting settings, e.g. they will override other cell background color "
+"settings such as alternating row colors."
+msgstr ""
+"|checkbox| :guilabel:`Применять цвета условного форматирования слоя`: "
+"присутствующее в слое :ref:`условное форматирование "
+"таблицы<conditional_formatting>` применяется внутри таблицы атрибутов макета"
+" (цвет фона, семейство шрифтов и такие свойства, как полужирный, курсив, "
+"вычеркивание, подчеркивание, цвет, ...). Правила условного форматирования "
+"имеют приоритет над другими настройками форматирования таблицы макета, "
+"например, они отменяют другие настройки цвета фона ячеек, такие как "
+"чередование цветов строк."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:233
+msgid ""
+"With the :guilabel:`Wrap text on` option, you can define a character on "
+"which the cell content will be wraped each time it is met"
+msgstr ""
+"С помощью опции :guilabel:`Вернуть текст на` вы можете определить символ, на"
+" который будет заворачиваться содержимое ячейки при каждой встрече"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:235
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:335
+msgid ""
+"With :guilabel:`Oversized text` you define the behavior when the width set "
+"for a column is  smaller than its content's length. It can be **Wrap text** "
+"or **Truncate text**."
+msgstr ""
+"С помощью :guilabel:`Объемный текст` вы определяете поведение, когда ширина "
+"колонки меньше длины ее содержимого. Это может быть **Вернуть текст** или "
+"**Усечь текст**."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:239
+msgid ""
+"More properties of the attribute table item are described in the "
+":ref:`tables_common_properties` section."
+msgstr ""
+"Другие свойства элемента таблицы атрибутов описаны в разделе "
+":ref:`tables_common_properties`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:245
+msgid "The fixed table item"
+msgstr "Элемент фиксированной таблицы"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:247
+msgid ""
+"Additional information about the map can be inserted manually into a table "
+"by choosing |addManualTable| :guilabel:`Add Fixed Table` and by following "
+":ref:`items creation instructions <create_layout_item>` to add a new table "
+"item that you can later manipulate the same way as exposed in "
+":ref:`interact_layout_item`."
+msgstr ""
+"Дополнительную информацию о карте можно вставить в таблицу вручную, выбрав "
+"|addManualTable| :guilabel:`Добавить фиксированную таблицу` и следуя "
+":ref:`инструкции по созданию элементов<create_layout_item>` для добавления "
+"нового элемента таблицы, которым впоследствии можно будет управлять так же, "
+"как это делается в :ref:`interact_layout_item`."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:434
 msgid "addManualTable"
 msgstr "addManualTable"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:252
+msgid ""
+"By default, an empty table with two minimized columns and rows appears in "
+"the map layout. You have to customize the table in the :guilabel:`Item "
+"Properties` panel. Other than the :ref:`items common properties "
+"<item_common_properties>`, this feature has the following functionalities:"
+msgstr ""
+"По умолчанию в макете карты появляется пустая таблица с двумя свернутыми "
+"столбцами и строками. Вы должны настроить таблицу в панели "
+":guilabel:`Свойства элементов`. Помимо :ref:`общих свойств "
+"элементов<item_common_properties>`, эта функция обладает следующими "
+"функциональными возможностями:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:265
+msgid "Fixed table Item Properties Panel with Table designer"
+msgstr "Исправлена панель свойств элементов таблицы в дизайнере таблиц"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:267
+msgid ""
+"In :guilabel:`Main properties`, press :guilabel:`Edit table...` to open the "
+":guilabel:`Table designer` dialog where you can build your table:"
+msgstr ""
+"В :guilabel:`Основные свойства` нажмите :guilabel:`Редактировать "
+"таблицу...`, чтобы открыть диалог :guilabel:`Дизайнер таблиц`, в котором вы "
+"можете создать свою таблицу:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:270
+msgid ""
+"On the left hand of the dialog, a table frame displays the active table item"
+" with its content and settings. Click or double-click on a cell and write a "
+"text to modify its contents. Press :kbd:`Ctrl+Enter` to add linebreak (for a"
+" multiline text). The logic for selecting multiple cells in the table is the"
+" same as in the vector layer :ref:`attribute table "
+"<interacting_features_table>`. Grab and move a row or column separator to "
+"resize the row above or the column before. A double-click on the separator "
+"will resize the row above or the column before to fit their contents. A "
+"right-click over column or row headers shows a contextual menu to insert "
+"columns or rows around the selection or to delete them."
+msgstr ""
+"В левой части диалога в рамке таблицы отображается активный элемент таблицы "
+"с его содержимым и настройками. Щелкните или дважды щелкните по ячейке и "
+"напишите текст, чтобы изменить ее содержимое. Нажмите :kbd:`Ctrl+Enter`, "
+"чтобы добавить перенос строки (для многострочного текста). Логика выделения "
+"нескольких ячеек в таблице такая же, как и в векторном слое :ref:`таблица "
+"атрибутов<interacting_features_table>`. Захватите и переместите разделитель "
+"строк или столбцов, чтобы изменить размер строки над или столбца перед ней. "
+"Двойной щелчок на разделителе изменит размер строки выше или столбца раньше,"
+" чтобы подогнать их содержимое. Щелчок правой кнопкой мыши по заголовкам "
+"столбцов или строк вызывает контекстное меню для вставки столбцов или строк "
+"вокруг выделения или для их удаления."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:280
+msgid "Through the menus on top of the dialog, it is possible to:"
+msgstr "С помощью меню, расположенных в верхней части диалога, можно:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:282
+msgid ""
+":menuselection:`File --> Import Content From Clipboard`: it overrides "
+"contents of the table."
+msgstr ""
+":menuselection:`Файл --> Импорт содержимого из буфера обмена`: он "
+"переопределяет содержимое таблицы."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:283
+msgid ""
+":menuselection:`File --> Close editor`: it closes the :guilabel:`Table "
+"Designer` dialog."
+msgstr ""
+":menuselection:`Файл --> Закрыть редактор`: закрывает диалог "
+":guilabel:`Дизайнер таблиц`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:284
+msgid ""
+"From the :menuselection:`Edit` menu, you can work with selection "
+"functionalities for rows and columns:"
+msgstr ""
+"В меню :menuselection:`Редактировать` вы можете работать с функциями "
+"выделения для строк и столбцов:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:286
+msgid ":guilabel:`Select all` cells in the table"
+msgstr ":guilabel:`Выделить все` ячейки в таблице"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:287
+msgid ""
+":guilabel:`Select columns` or :guilabel:`Select Rows`: when cells are "
+"selected in the table, you can extend the selection respectively to their "
+"column(s) or row(s)"
+msgstr ""
+":guilabel:`Выбрать столбцы` или :guilabel:`Выбрать строки`: когда ячейки "
+"выделены в таблице, вы можете расширить выделение соответственно на их "
+"столбец(ы) или строку(ы)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:289
+msgid ":guilabel:`Clear Cells`: deletes the content of the selected cells"
+msgstr ":guilabel:`Очистить ячейки`: удаляет содержимое выделенных ячеек"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:291
+msgid ""
+"The :menuselection:`Table` menu is the place where you design the structure "
+"of the table. You can:"
+msgstr ""
+"Меню :menuselection:`Таблица` - это место, где вы создаете структуру "
+"таблицы. Вы можете:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:294
+msgid ":menuselection:`Insert rows -->` above or below the selection"
+msgstr ":menuselection:`Вставить строки -->` выше или ниже выделения"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:295
+msgid ":menuselection:`Insert columns -->` before or after the selection"
+msgstr ":menuselection:`Вставить столбцы -->` до или после выделения"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:296
+msgid ""
+":guilabel:`Delete Rows` or :guilabel:`Delete Columns` of selected cells"
+msgstr ""
+":guilabel:`Удалить строки` или :guilabel:`Удалить столбцы` выбранных ячеек"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:297
+msgid ""
+":guilabel:`Merge selected cells`: select multiple cells in a rectangular "
+"shape and you can merge them and concatenate their contents into the top "
+"left cell (whose styling is also applied to the merged cell, unless there is"
+" a last row/column cell in the selection)."
+msgstr ""
+":guilabel:`Слияние выделенных ячеек`: выделите несколько ячеек прямоугольной"
+" формы и объедините их содержимое в верхнюю левую ячейку (чей стиль также "
+"применяется к объединенной ячейке, если в выделении нет последней ячейки "
+"строки/столбца)."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:300
+msgid ""
+":guilabel:`Split selected cells`: select a merged cell and you can split it "
+"back to its individual cells. The current text is kept in the top left cell,"
+" and the other cells are filled with their contents before they get merged. "
+"They are also reapplied their original styling."
+msgstr ""
+":guilabel:`Разделить выделенные ячейки`: выберите объединенную ячейку и "
+"разделите ее на отдельные ячейки. Текущий текст сохраняется в левой верхней "
+"ячейке, а остальные ячейки заполняются их содержимым перед объединением. Им "
+"также возвращается их первоначальный стиль."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:304
+msgid ""
+"|checkbox| :guilabel:`Include Header Row` whose styling can only be "
+"controlled from the :ref:`layout_table_fonts_and_styling` widget"
+msgstr ""
+"|checkbox| :guilabel:`Включить строку заголовка`, чей стиль можно "
+"контролировать только с помощью виджета "
+":ref:`layout_table_fonts_and_styling`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:307
+msgid ""
+"Select the cells and, on the right of the table frame, you can provide the "
+":guilabel:`Cell Contents`:"
+msgstr ""
+"Выделите ячейки и справа от рамки таблицы укажите :guilabel:`Содержание "
+"ячеек`:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:309
+msgid ""
+"Either manually enter the contents of each cell, or use an |expression| "
+":guilabel:`Expression` to automatically populate it."
+msgstr ""
+"Либо введите содержимое каждой ячейки вручную, либо используйте |expression|"
+" :guilabel:`Выражение` для ее автоматического заполнения."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:311
+msgid ""
+"Under the :guilabel:`Formatting` group, set specific options that apply to "
+"the selection and take precedence over the :ref:`global table content "
+"styling <layout_table_fonts_and_styling>`:"
+msgstr ""
+"В группе :guilabel:`Форматирование` задайте конкретные параметры, которые "
+"применяются к выделению и имеют приоритет над :ref:`глобальным стилем "
+"содержимого таблицы<layout_table_fonts_and_styling>`:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:314
+msgid "by choosing the :guilabel:`Text format`"
+msgstr "выбрав :guilabel:`Текстовый формат`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:315
+msgid ""
+"by |checkbox| :guilabel:`Format as number` (several formats are available)"
+msgstr ""
+"by |checkbox| :guilabel:`Формат как число` (доступно несколько форматов)"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:316
+msgid ""
+"by defining the :guilabel:`Horizontal alignment` and the :guilabel:`Vertical"
+" alignment`"
+msgstr ""
+"определив :guilabel:`Горизонтальное выравнивание` и :guilabel:`Вертикальное "
+"выравнивание`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:318
+msgid "by choosing a :guilabel:`Background color`"
+msgstr "выбрав :guilabel:`Цвет фона`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:320
+msgid ""
+"Define the :guilabel:`Cell Size` with :guilabel:`Row height` and "
+":guilabel:`Column width`."
+msgstr ""
+"Определите :guilabel:`Размер ячейки` с помощью :guilabel:`Высота строки` и "
+":guilabel:`Ширина столбца`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:326
+msgid ""
+"The :guilabel:`Appearance` group of the fixed table provides the following "
+"functionalities:"
+msgstr ""
+"Группа :guilabel:`Внешний вид` фиксированной таблицы предоставляет следующие"
+" функциональные возможности:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:328
+msgid ""
+"Click |checkbox| :guilabel:`Show empty rows` to fill the attribute table "
+"with empty cells."
+msgstr ""
+"Щелкните |checkbox| :guilabel:`Показывать пустые строки`, чтобы заполнить "
+"таблицу атрибутов пустыми ячейками."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:332
+msgid ""
+"With :guilabel:`Background color` you can set the background color of the "
+"table using the :ref:`color selector <color-selector>` widget. The "
+":guilabel:`Advanced customization` option helps you define different "
+"background colors for each cell."
+msgstr ""
+"С помощью :guilabel:`Цвет фона` вы можете установить цвет фона таблицы, "
+"используя виджет :ref:`селектор цвета<color-selector>`. Опция "
+":guilabel:`Дополнительная настройка` поможет вам определить различные цвета "
+"фона для каждой ячейки."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:339
+msgid ""
+"More properties of the fixed table item are described in the "
+":ref:`tables_common_properties` section."
+msgstr ""
+"Другие свойства фиксированного элемента таблицы описаны в разделе "
+":ref:`tables_common_properties`."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:345
+msgid "Tables common functionalities"
+msgstr "Общие функциональные возможности таблиц"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:348
+msgid "Show grid"
+msgstr "Показать сетку"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:350
+msgid ""
+"The :guilabel:`Show grid` group of the table items provides the following "
+"functionalities (see :numref:`figure_layout_table_grid`):"
+msgstr ""
+"Группа элементов таблицы :guilabel:`Показать сетку` предоставляет следующие "
+"функциональные возможности (см. :numref:`figure_layout_table_grid`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:358
+msgid "Attribute table Show grid Group"
+msgstr "Таблица атрибутов Показать сетку Группа"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:360
+msgid ""
+"Activate |checkbox| :guilabel:`Show grid` when you want to display the grid,"
+" the outlines of the table cells. You can also select to either "
+":guilabel:`Draw horizontal lines` or :guilabel:`Draw vertical lines` or "
+"both."
+msgstr ""
+"Активируйте флажок |checkbox| :guilabel:`Показывать сетку`, если хотите "
+"отобразить сетку - контуры ячеек таблицы. Вы также можете выбрать либо "
+":guilabel:`Рисунок горизонтальных линий`, либо :guilabel:`Рисунок "
+"вертикальных линий`, либо оба варианта."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:363
+msgid ""
+"With :guilabel:`Line width` you can set the thickness of the lines used in "
+"the grid."
+msgstr ""
+"С помощью :guilabel:`Ширина линии` вы можете задать толщину линий, "
+"используемых в сетке."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:364
+msgid ""
+"The :guilabel:`Color` of the grid can be set using the color selection "
+"widget."
+msgstr ""
+"Цвет :guilabel:`Цвет` сетки может быть установлен с помощью виджета выбора "
+"цвета."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:369
+msgid "Fonts and text styling"
+msgstr "Шрифты и оформление текста"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:371
+msgid ""
+"The :guilabel:`Fonts and text styling` group of the table items provides the"
+" following functionalities (see :numref:`figure_layout_table_fonts`):"
+msgstr ""
+"Группа :guilabel:`Шрифты и стилизация текста` элементов таблицы "
+"предоставляет следующие функциональные возможности (см. "
+":numref:`figure_layout_table_fonts`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:379
+msgid "Attribute table Fonts and text styling Group"
+msgstr "Таблица атрибутов Шрифты и стилизация текста Группа"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:381
+msgid ""
+"You can define :guilabel:`Font` properties for :guilabel:`Table heading` and"
+" :guilabel:`Table contents`, using the advanced :ref:`text settings "
+"<text_format>` widget (with buffer, shadow, paint effects, transparence, "
+"background, coloring, ...). Note that these changes do not affect the cells "
+"that have custom font assigned, either from the :guilabel:`Appearance` "
+"section or the :guilabel:`Table Designer` dialog. Only cells with the "
+"default rendering are overwritten."
+msgstr ""
+"Вы можете определить свойства :guilabel:`Шрифт` для :guilabel:`Заголовок "
+"таблицы` и :guilabel:`Содержимое таблицы`, используя расширенный виджет "
+":ref:`Настройки текста<text_format>` (с буфером, тенью, эффектами рисования,"
+" прозрачностью, фоном, раскраской, ...). Обратите внимание, что эти "
+"изменения не влияют на ячейки, которым назначен пользовательский шрифт, либо"
+" из раздела :guilabel:`Внешний вид`, либо из диалога :guilabel:`Дизайнер "
+"таблиц`. Переписываются только ячейки с рендерингом по умолчанию."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:387
+msgid ""
+"For :guilabel:`Table heading` you can additionally set the "
+":guilabel:`Alignment` to ``Follow column alignment`` or override this "
+"setting by choosing ``Left``, ``Center`` or ``Right``. The column alignment "
+"is set using the :guilabel:`Select Attributes` dialog (see "
+":numref:`figure_layout_table_select`)."
+msgstr ""
+"Для :guilabel:`Заголовок таблицы` вы можете дополнительно установить "
+":guilabel:`Выравнивание` на ``Последующее выравнивание столбцов`` или "
+"отменить эту настройку, выбрав ``Левое``, ``Центр`` или ``Правое``. "
+"Выравнивание столбцов задается с помощью диалога :guilabel:`Выбор атрибутов`"
+" (см. :numref:`figure_layout_table_select`)."
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:394
 msgid "Frames"
 msgstr "Рамки"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:396
+msgid ""
+"The :guilabel:`Frames` group of the table item properties provides the "
+"following functionalities (see :numref:`figure_layout_table_frames`):"
+msgstr ""
+"Группа :guilabel:`Фреймы` свойств элементов таблицы предоставляет следующие "
+"функциональные возможности (см. :numref:`figure_layout_table_frames`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:404
+msgid "Attribute table Frames Group"
+msgstr "Таблица атрибутов Группа кадров"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:406
+msgid ""
+"With :guilabel:`Resize mode` you can select how to render the attribute "
+"table contents:"
+msgstr ""
+"С помощью :guilabel:`Режим изменения размера` вы можете выбрать способ "
+"отображения содержимого таблицы атрибутов:"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:409
 msgid ""
@@ -91,3 +1007,58 @@ msgid ""
 msgstr ""
 "``Использовать существующие кадры`` отображает результат только в первом и "
 "добавленных кадрах."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:410
+msgid ""
+"``Extend to next page`` will create as many frames (and corresponding pages)"
+" as necessary to display the full selection of attribute table. Each frame "
+"can be moved around on the layout. If you resize a frame, the resulting "
+"table will be divided up between the other frames. The last frame will be "
+"trimmed to fit the table."
+msgstr ""
+"``Расширить на следующую страницу`` создаст столько фреймов (и "
+"соответствующих страниц), сколько необходимо для отображения полного выбора "
+"таблицы атрибутов. Каждый фрейм можно перемещать по макету. Если вы измените"
+" размер фрейма, результирующая таблица будет разделена между остальными "
+"фреймами. Последний кадр будет обрезан, чтобы вместить таблицу."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:415
+msgid ""
+"``Repeat until finished`` will also create as many frames as the `Extend to "
+"next page` option, except all frames will have the same size."
+msgstr ""
+"``Повторять до конца`` также создаст столько же фреймов, как и опция "
+"``Расширить на следующую страницу``, только все фреймы будут иметь "
+"одинаковый размер."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:418
+msgid ""
+"Use the :guilabel:`Add Frame` button to add another frame with the same size"
+" as selected frame. The result of the table that will not fit in the first "
+"frame will continue in the next frame when you use the Resize mode ``Use "
+"existing frames``."
+msgstr ""
+"Используйте кнопку :guilabel:`Добавить рамку`, чтобы добавить еще одну рамку"
+" того же размера, что и выбранная. Результат таблицы, не поместившийся в "
+"первый кадр, будет продолжен в следующем кадре при использовании режима "
+"изменения размера ``Использовать существующие кадры``."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:421
+msgid ""
+"Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents"
+" the page to be exported when the table frame has no contents. This means "
+"all other layout items, maps, scalebars, legends etc. will not be visible in"
+" the result."
+msgstr ""
+"Активация |checkbox| :guilabel:`Не экспортировать страницу, если рамка "
+"пуста` предотвращает экспорт страницы, если рамка таблицы не имеет "
+"содержимого. Это означает, что все остальные элементы макета, карты, "
+"масштабные линейки, легенды и т. д. не будут видны в результате."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_tables.rst:424
+msgid ""
+"Activate |checkbox| :guilabel:`Don't draw background if frame is empty` "
+"prevents the background to be drawn when the table frame has no contents."
+msgstr ""
+"Активация |checkbox| :guilabel:`Не рисовать фон, если рамка пуста` "
+"предотвращает рисование фона, когда рамка таблицы не имеет содержимого."
