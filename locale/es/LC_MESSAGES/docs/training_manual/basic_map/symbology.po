@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Lucía Betancourt, 2025
-# Eric Armijo, 2025
 # Harrissou Sant-anna, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1327,17 +1327,82 @@ msgstr ""
 "posible que tenga que hacer zoom en el lienzo del mapa o establecer en las "
 "propiedades de la capa un mayor :guilabel:`Anchura de la textura`."
 
+#: ../../docs/training_manual/basic_map/symbology.rst:660
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Masking"
+msgstr ":abbr:`★★☆ (Nivel moderado)` Seguir: Enmascarar"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:662
+msgid ""
+"Masking feature allows you to mask some symbol layer using another symbol "
+"layer or label."
+msgstr ""
+"La función de enmascaramiento le permite enmascarar una capa de símbolos "
+"utilizando otra capa de símbolos o etiqueta."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:664
+msgid ""
+"In the following exercise, we want to configure rendering so that polygon "
+"labels will mask the black part of lines layer."
+msgstr ""
+"En el siguiente ejercicio, queremos configurar el renderizado para que las "
+"etiquetas de polígonos enmascaren la parte negra de la capa de líneas."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:667
+msgid ""
+"Load the :file:`selective_masking.qgs` from dataset in directory "
+":file:`exercise_data/masking`."
+msgstr ""
+"Carga el fichero :file:`selective_masking.qgs` del conjunto de datos en el "
+"directorio :file:`exercise_data/masking`."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:669
+msgid "Open the :guilabel:`Layer Properties` window for the ``polys`` layer."
+msgstr "Abra la ventana :guilabel:`Propiedades de capa` de la capa ``polys``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:672
+msgid ""
+"Under the |labelingSingle| :guilabel:`Labels` tab, you will see that "
+"|labelingSingle| :guilabel:`Single Labels` have already been defined."
+msgstr ""
+"En la pestaña |labelingSingle| :guilabel:`Etiquetas`, verá que ya se ha "
+"definido |labelingSingle| :guilabel:`Etiquetas individuales`."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:807
 msgid "labelingSingle"
 msgstr "labelingSingle"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:675
+msgid ""
+"From the :guilabel:`Labels` tab, select the |labelmask| :guilabel:`Mask` "
+"(and not :guilabel:`Masks` in general category list)"
+msgstr ""
+"En la pestaña :guilabel:`Etiquetas`, seleccione la |labelmask| "
+":guilabel:`Máscara` (y no :guilabel:`Máscaras` en la lista general de "
+"categorías)"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:809
 msgid "labelmask"
 msgstr "labelmask"
 
+#: ../../docs/training_manual/basic_map/symbology.rst:677
+msgid ""
+"Enable label mask by checking the |unchecked| :guilabel:`Enable mask` option"
+msgstr ""
+"Active la máscara de etiqueta marcando la opción |unchecked| "
+":guilabel:`Habilitar máscara"
+
 #: ../../docs/training_manual/basic_map/symbology.rst:818
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:679
+msgid ""
+"A message tells you that the now defined label mask shape can be later "
+"selected as a mask source to mask other symbol layers. Let's do that."
+msgstr ""
+"Un mensaje le indica que la forma de máscara de etiqueta ahora definida "
+"puede seleccionarse posteriormente como origen de máscara para enmascarar "
+"otras capas de símbolos. Hagámoslo."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:682
 #: ../../docs/training_manual/basic_map/symbology.rst:700
@@ -1346,9 +1411,179 @@ msgstr "unchecked"
 msgid "Click :guilabel:`OK`"
 msgstr "Haz clic en :guilabel:`Aceptar`."
 
+#: ../../docs/training_manual/basic_map/symbology.rst:683
+#: ../../docs/training_manual/basic_map/symbology.rst:751
+msgid "Open the :guilabel:`Layer Properties` window for the ``lines`` layer."
+msgstr "Abra la ventana :guilabel:`Propiedades de capa` de la capa ``lines``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:686
+msgid "Go to the |labelmask| :guilabel:`Masks` tab"
+msgstr "Vaya a la pestaña |labelmask| :guilabel:`Máscaras`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:688
+msgid ""
+"Click on the black line part of lines checkbox from masked symbol layers"
+msgstr ""
+"Haga clic en la casilla de verificación línea negra parte de las líneas de "
+"las capas de símbolos enmascarados"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:690
+msgid ""
+"A message warns you that you have to select both masking and masked symbol "
+"layers to be able to save masking configuration. Again, let's do that."
+msgstr ""
+"Un mensaje le advierte de que tiene que seleccionar tanto la capa de "
+"enmascaramiento como la de símbolos enmascarados para poder guardar la "
+"configuración de enmascaramiento. De nuevo, vamos a hacerlo."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:693
+msgid "Click on ``polys`` :guilabel:`Label mask` checkbox"
+msgstr "Haga clic en la casilla ``polys`` :guilabel:`Máscara de etiqueta`."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:695
+msgid "The message disappears, you can now safely save your configuration."
+msgstr ""
+"El mensaje desaparece, ahora puede guardar su configuración con seguridad."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:703
+msgid ""
+"You can see now that labels are masking the black part of lines, leaving "
+"only the yellow part."
+msgstr ""
+"Ahora puede ver que las etiquetas enmascaran la parte negra de las líneas, "
+"dejando sólo la parte amarilla."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:710
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Masking using points symbols"
+msgstr ""
+":abbr:`★★☆ (Nivel moderado)` Seguir: Enmascaramiento mediante símbolos de "
+"puntos"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:712
+msgid ""
+"We want now to mask the black part of lines using only black planes that "
+"represent the ``points`` layer (i.e. ``B52`` and ``Jet`` points categories)."
+" For the sake of visibility, you can switch off ``polys`` layer visibility."
+msgstr ""
+"Ahora queremos enmascarar la parte negra de las líneas utilizando sólo los "
+"planos negros que representan la capa ``points`` (es decir, las categorías "
+"de puntos ``B52`` y ``Jet``). Por razones de visibilidad, puede desactivar "
+"la visibilidad de la capa ``polys``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:715
+msgid "Open the :guilabel:`Layer Properties` window for the ``points`` layer."
+msgstr ""
+"Abra la ventana :guilabel:`Propiedades de capa` de la capa ``points``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:718
+msgid ""
+"Under the |symbology| :guilabel:`Symbology` tab, you will see that a "
+"|categorizedSymbol| :guilabel:`Categorized` renderer has been defined with 3"
+" different symbols depending on the ``Class`` field value."
+msgstr ""
+"En la pestaña |symbology| :guilabel:`Simbología`, verá que se ha definido un"
+" renderizador |categorizedSymbol| :guilabel:`Categorizado` con 3 símbolos "
+"diferentes dependiendo del valor del campo ``Class``."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:803
 msgid "categorizedSymbol"
 msgstr "categorizedSymbol"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:721
+msgid ""
+"Double click on ``B52`` plane icon, within the :guilabel:`Symbol` column"
+msgstr ""
+"Haga doble clic en el icono del avión ``B52``, dentro de la columna "
+":guilabel:`Símbolo`"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:726
+msgid ""
+"Click the |symbologyAdd| :sup:`Add symbol layer` button and select the "
+"``Mask`` :guilabel:`Symbol layer type`"
+msgstr ""
+"Haga clic en el botón |symbologyAdd| :sup:`Añadir capa de símbolos` y "
+"seleccione la etiqueta :guilabel:`Tipo de capa de símbolos`."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:728
+msgid ""
+"A new hierarchy ``Mask`` (`symbol layer`) > ``Marker`` (`symbol`) > ``Simple"
+" Marker`` (`symbol layer`) appear below the root symbol ``Marker``."
+msgstr ""
+"Debajo del símbolo raíz ``Marker`` aparece una nueva jerarquía ``Mask`` "
+"(`symbol layer`) > ``Marker`` (`symbol`) > ``Simple Marker`` (`symbol "
+"layer`)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:733
+msgid ""
+"Now, let's define a mask that is identical to our plane marker but a little "
+"bit bigger."
+msgstr ""
+"Ahora, vamos a definir una máscara que es idéntica a nuestro marcador de "
+"plano pero un poco más grande."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:735
+msgid ""
+"Select the newly created ``Simple Marker`` symbol layer and change its "
+":guilabel:`Symbol layer type` to ``SVG marker``"
+msgstr ""
+"Seleccione la capa de símbolos recién creada ``Simple Marker`` y cambie su "
+":guilabel:`Tipo de capa de símbolos` a ``SVG marker``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:737
+msgid ""
+"Set the SVG file path to be the same as the already existing SVG marker, and"
+" the size to be bigger (24 millimeters is a pretty good choice for this use "
+"case)."
+msgstr ""
+"Configure la ruta del archivo SVG para que sea la misma que la del marcador "
+"SVG ya existente, y el tamaño para que sea mayor (24 milímetros es una "
+"opción bastante buena para este caso de uso)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:740
+msgid ""
+"Mask color doesn't matter here, only the shape is used in masking. Symbol "
+"layer order is also irrelevant in that situation."
+msgstr ""
+"El color de la máscara no importa aquí, sólo la forma se utiliza en la "
+"máscara. Orden de la capa de símbolos también es irrelevante en esa "
+"situación."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:743
+msgid "You should get something like that:"
+msgstr "Deberías conseguir algo así:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:748
+msgid "Repeat the same operations on ``Jet`` symbol."
+msgstr "Repita las mismas operaciones con el símbolo ``Jet``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:754
+msgid "Go to the |labelmask| :guilabel:`Masks` tab."
+msgstr "Vaya a la pestaña |labelmask| :guilabel:`Máscaras`."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:756
+msgid ""
+"The black line part of lines checkbox from masked symbol layers is already "
+"checked from our previous configuration."
+msgstr ""
+"La casilla de verificación de la parte negra de las líneas de las capas de "
+"símbolos enmascaradas ya está marcada desde nuestra configuración anterior."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:759
+msgid ""
+"Uncheck the :guilabel:`Label mask` ``polys`` checkbox and check both ``B52``"
+" and ``Jet`` :guilabel:`Mask symbol layer`"
+msgstr ""
+"Desmarque la casilla :guilabel:`Máscara etiqueta` ``polys`` y marque tanto "
+"``B52`` como ``Jet`` :guilabel:`Máscara capa símbolo``."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:763
+msgid ""
+"You now see that black planes are masking the black part of lines, with only"
+" the yellow part visible."
+msgstr ""
+"Ahora se ve que los planos negros enmascaran la parte negra de las líneas, "
+"quedando visible sólo la parte amarilla."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:770
 msgid "In Conclusion"
