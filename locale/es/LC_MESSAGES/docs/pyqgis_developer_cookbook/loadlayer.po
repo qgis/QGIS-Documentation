@@ -6,6 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Federico, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,9 +59,36 @@ msgstr ""
 msgid "Vector Layers"
 msgstr "Capas Vectoriales"
 
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:51
+msgid ""
+"To create and add a vector layer instance to the project, specify the "
+"layer's data source identifier. The data source identifier is a string and "
+"it is specific to each vector data provider. An optional layer name is used "
+"for identifying the layer in the :guilabel:`Layers` panel. It is important "
+"to check whether the layer has been loaded successfully. If it was not, an "
+"invalid layer instance is returned."
+msgstr ""
+"Para crear y añadir una instancia de capa vectorial al proyecto, especifique"
+" el identificador de fuente de datos de la capa. El identificador de fuente "
+"de datos es una cadena y es específico de cada proveedor de datos "
+"vectoriales. Se utiliza un nombre de capa opcional para identificar la capa "
+"en el panel :guilabel:`Capas`. Es importante comprobar si la capa se ha "
+"cargado correctamente. Si no es así, se devuelve una instancia de capa no "
+"válida."
+
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:57
 msgid "For a geopackage vector layer:"
 msgstr "Para una capa vectorial creada mediante un geopackage: "
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:71
+msgid ""
+"The quickest way to open and display a vector layer in QGIS is the "
+":meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>` method of "
+"the :class:`QgisInterface <qgis.gui.QgisInterface>` class:"
+msgstr ""
+"La forma más rápida de abrir y mostrar una capa vectorial en QGIS es el "
+"método :meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>` de "
+"la clase :class:`QgisInterface <qgis.gui.QgisInterface>`:"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:81
 msgid ""
@@ -78,6 +107,32 @@ msgid ""
 msgstr ""
 "La siguiente lista muestra cómo acceder a varias fuentes de datos utilizando"
 " los proveedores de datos vectoriales:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:91
+msgid ""
+"The ogr provider from the GDAL library supports a `wide variety of formats "
+"<https://gdal.org/en/latest/drivers/vector/index.html>`_, also called "
+"drivers in GDAL speak. Examples are ESRI Shapefile, Geopackage, Flatgeobuf, "
+"Geojson, ... For single-file formats the filepath usually suffices as uri. "
+"For geopackages or dxf, a pipe separated suffix allows to specify the layer "
+"to load."
+msgstr ""
+"El proveedor ogr de la biblioteca GDAL soporta una `amplia variedad de "
+"formatos <https://gdal.org/en/latest/drivers/vector/index.html>`_, también "
+"llamados drivers en el lenguaje GDAL. Algunos ejemplos son ESRI Shapefile, "
+"Geopackage, Flatgeobuf, Geojson, ... Para formatos de un solo archivo, la "
+"ruta del archivo suele ser suficiente como uri. Para geopackages o dxf, un "
+"sufijo separado por una tubería permite especificar la capa a cargar."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:98
+msgid "for ESRI Shapefile:"
+msgstr "para Shapefile de ESRI:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:106
+msgid "for Geopackage (note the internal options in data source uri):"
+msgstr ""
+"para Geopackage (tenga en cuenta las opciones internas en la uri de la "
+"fuente de datos):"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:114
 msgid "for dxf (note the internal options in data source uri):"
