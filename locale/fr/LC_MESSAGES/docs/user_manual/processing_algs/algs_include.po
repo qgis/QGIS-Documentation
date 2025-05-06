@@ -26,6 +26,10 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Algorithms Include"
+msgstr "Textes d'inclusion pour les algorithmes"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:17
 msgid "Python Code Sample"
 msgstr "Exemple de code Python"
@@ -46,6 +50,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/algs_include.rst:38
 msgid "Output Types"
 msgstr "Types de sortie"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:44
+msgid "Directory"
+msgstr "Répertoire"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:48
 #: ../../docs/user_manual/processing_algs/algs_include.rst:57
@@ -112,6 +120,10 @@ msgstr "L'encodage du fichier peut également être modifié ici."
 msgid "Append to Layer…"
 msgstr "Ajouter à la couche..."
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:123
+msgid "Extent Dropdown"
+msgstr "Liste déroulante pour l'emprise"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:129
 msgid "Available methods are:"
 msgstr "Les méthodes disponibles sont :"
@@ -154,6 +166,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/algs_include.rst:137
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Entrer les  coordonnées ``xmin, xmax, ymin, ymax``"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:143
+msgid "Geometric predicates"
+msgstr "Prédicats géométriques"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:151
 msgid ""
@@ -299,9 +315,35 @@ msgstr ""
 "(vrai). Deux polygones s’entrecroiseront en tant que polygone (faux). Dans "
 "l'image, aucun cercle ne sera renvoyé."
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:209
+msgid "Notes on algorithms"
+msgstr "Notes à propos des algorithmes"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:213
 msgid "**Geometry modification only**"
 msgstr "**Modification de géométrie seulement**"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:215
+msgid ""
+"This operation modifies only the features geometry. The attribute values of "
+"the features are **not modified**, although properties such as area or "
+"length of the features will be modified by the overlay operation. If such "
+"properties are stored as attributes, those attributes will have to be "
+"manually updated."
+msgstr ""
+"Cette opération modifie seulement les géométries. Les attributs des entités "
+"ne sont **pas modifiés**, bien que les propriétés telles que la surface ou "
+"la longueur des entités soient modifiées par l'opération de superposition. "
+"Si ces propriétés sont stockées en tant qu'attributs, ces attributs devront "
+"être mis à jour manuellement."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:226
+msgid "Raster data types"
+msgstr "Types de données raster"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:229
+msgid "Without user input (native)"
+msgstr "Sans intervention de l'utilisateur (native)"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:237
 #: ../../docs/user_manual/processing_algs/algs_include.rst:267
@@ -372,6 +414,22 @@ msgstr ""
 "Les options disponibles dépendent de la version de GDAL compilée avec votre "
 "version de QGIS (voir le menu :menuselection:`Aide --> A propos`)"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:257
+msgid "Without user input"
+msgstr "Sans intervention de l'utilisateur"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:270
+msgid "3 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr "3 --- UInt32      (Entier 32 bit non signé (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:271
+msgid "4 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "4 --- Int32       (Entier 32 bit signé (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:287
+msgid "With user input"
+msgstr "Avec intervention de l'utilisateur"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:296
 msgid "0 --- Use Input Layer Data Type"
 msgstr "0 --- Utiliser le type de données de la couche d'entrée"
@@ -416,9 +474,17 @@ msgstr "10 --- CFloat32   (Complexe Float32)"
 msgid "11 --- CFloat64   (Complex Float64)"
 msgstr "11 --- CFloat64   (Complexe Float64)"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:308
+msgid "12 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "12 --- Int8       (Entier 8 bit signé (qint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:317
+msgid "Resampling methods"
+msgstr "Méthode de rééchantillonnage"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:324
 msgid "0 --- Nearest Neighbour"
-msgstr "0 --- Voisin le plus proche"
+msgstr "0 --- Plus proche voisin"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:325
 msgid "1 --- Bilinear (2x2 kernel)"
@@ -427,6 +493,10 @@ msgstr "1 --- Bilinéaire (noyau de 2x2)"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:326
 msgid "2 --- Cubic (4x4 kernel)"
 msgstr "2 --- Cubique (noyau de 4x4)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:327
+msgid "3 --- Cubic B-Spline (4x4 kernel)"
+msgstr "3 --- Cubique B-Spline (noyau de 4x4)"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:328
 msgid "4 --- Lanczos (6x6 kernel)"
@@ -460,10 +530,78 @@ msgstr "10 --- Premier quartile (Q1)"
 msgid "11 --- Third quartile (Q3)"
 msgstr "11 --- Troisième quartile (Q3)"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:341
+msgid "Vector field types"
+msgstr "Types de champs vectoriels"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:348
 msgid "1 --- Boolean"
 msgstr "1 --- Booléen"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:349
+msgid "2 --- Integer (32bit)"
+msgstr "2 --- Entier (32bit)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:350
+msgid "4 --- Integer (64bit)"
+msgstr "4 --- Entier (64bit)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:351
+msgid "6 --- Decimal (double)"
+msgstr "6 --- Decimal (double)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:352
+msgid "9 --- Integer list"
+msgstr "9 --- Liste d'entiers"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:353
+msgid "9 --- Integer (64bit) list"
+msgstr "9 --- Liste d'entiers (64bit)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:354
+msgid "9 --- Decimal (double) list"
+msgstr "9 --- Liste de décimaux (double)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:355
+msgid "10 --- Text (string)"
+msgstr "10 --- Chaîne de texte"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:356
+msgid "11 --- String list"
+msgstr "11 --- Liste de chaînes de texte"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:357
+msgid "12 --- Binary Object (BLOB)"
+msgstr "12 --- Objet binaire (BLOB)"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:358
 msgid "14 --- Date"
 msgstr "14 --- Date"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:359
+msgid "15 --- Time"
+msgstr "15 --- Temps"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:360
+msgid "16 --- Date & Time"
+msgstr "16 --- Date & Temps"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:370
+msgid "2 --- Integer list"
+msgstr "2 --- Liste d'entiers"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:371
+msgid "4 --- Integer (64bit) list"
+msgstr "4 --- Liste d'entiers (64bit)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:372
+msgid "6 --- Decimal (double) list"
+msgstr "6 --- Liste de décimaux (double)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:373
+msgid "10 --- String list"
+msgstr "10 --- Liste de chaînes de texte"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:374
+msgid "0 --- Any other types"
+msgstr "0 --- Tous autres types"
