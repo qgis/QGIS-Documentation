@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Harrissou Sant-anna, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Harrissou Sant-anna, 2025\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,6 +60,20 @@ msgstr ""
 "au bon endroit! Ce document vous guidera à travers les différentes façons "
 "d'atteindre cet objectif, vous indiquant les étapes principales, les astuces"
 " que vous pouvez utiliser et les pièges dont vous devez vous méfier."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:20
+msgid ""
+"For any help, do not hesitate to either ask in a comment on the issue report"
+" you are trying to fix or write to the `QGIS-community-team list "
+"<https://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_. Read "
+"general information on `QGIS community support "
+"<https://qgis.org/resources/support/>`_."
+msgstr ""
+"Pour toute aide, n'hésitez pas à laisser un commentaire sur le ticket du "
+"problème que vous essayez de corriger ou à écrire dans la `liste QGIS-"
+"community-team <https://lists.osgeo.org/mailman/listinfo/qgis-community-"
+"team>`_. Découvrez les différents canaux dans `QGIS community support "
+"<https://qgis.org/resources/support/>`_."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:25
 msgid "Let's now dive into the process."
@@ -130,6 +144,18 @@ msgstr ""
 msgid "create, update, or delete branches"
 msgstr "Créer, mettre à jour ou supprimer des branches"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:53
+msgid ""
+"If you are not yet familiar with git and GitHub vocabulary, you may want to "
+"read the GitHub `Hello-world <https://docs.github.com/en/get-started/start-"
+"your-journey/hello-world>`_ project to learn some basic vocabulary and "
+"actions that will be used below."
+msgstr ""
+"Si vous n'êtes pas encore familier avec le vocabulaire git et GitHub, vous "
+"pouvez lire le projet `Hello-world <https://docs.github.com/en/get-"
+"started/start-your-journey/hello-world>`_ de Github pour apprendre le "
+"vocabulaire de base et les actions qui seront utilisées ci-dessous."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:57
 msgid "**If you are fixing a reported issue**"
 msgstr "**Si vous corrigez un problème signalé**"
@@ -149,6 +175,15 @@ msgstr ""
 #: ../../docs/documentation_guidelines/first_contribution.rst:65
 msgid "Fork QGIS-Documentation"
 msgstr "Cloner la documentation de QGIS"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:67
+msgid ""
+"Assuming you already have a `GitHub account <https://github.com/signup>`_, "
+"you first need to fork the source files of the documentation."
+msgstr ""
+"Dans l'hypothèse où vous avez déjà un `compte GitHub "
+"<https://github.com/signup>`_, il vous faudra d'abord cloner les fichiers "
+"source de la documentation."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:70
 msgid ""
@@ -313,6 +348,92 @@ msgid "You can edit files directly from your fork of the QGIS Documentation."
 msgstr ""
 "Vous pouvez modifier des fichiers directement à partir de votre fork de la "
 "documentation QGIS."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:130
+msgid ""
+"First, make sure that your ``master`` branch is up to date with "
+"``qgis:master`` branch. To do so:"
+msgstr ""
+"D'abord, assurez-vous que la branche ``master`` est à jour avec la branche "
+"``qgis:master``. Pour cela :"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:133
+msgid ""
+"Go to the main page of your repository, i.e. "
+"``https://github.com/<YourName>/QGIS-Documentation``. The ``master`` branch "
+"should be active with a mention whether it is up to date with ``qgis/QGIS-"
+"Documentation:master`` or not."
+msgstr ""
+"Rendez-vous à la page principale de votre dépôt, c'est-à-dire. "
+"``https://github.com/<YourName>/QGIS-Documentation``. La branche ``master`` "
+"devrait être active avec une mention indiquant si elle est à jour ou pas "
+"avec la branche ``master`` de ``qgis/QGIS-Documentation``."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:137
+msgid ""
+"If it has commits ahead the upstream branch, you better use the previous "
+":ref:`shortcut button alternative <edit_on_github>` until you align your "
+"``master`` branch."
+msgstr ""
+"Si elle contient des commits en avance sur la branche officielle, il est "
+"préférable que vous utilisiez la méthode :ref:`alternative du bouton "
+"d'édition <edit_on_github>` jusqu'à ce que vous ayez aligné votre branche "
+"``master``."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:140
+msgid "If it only has commits behind:"
+msgstr "Si votre branche a des commits de retard :"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:142
+msgid ""
+"Expand the :guilabel:`Fetch Upstream` drop-down menu on the right. You can"
+msgstr ""
+"Dépliez le menu déroulant :guilabel:`Sync Fork` sur la droite. Vous pouvez :"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:144
+msgid ""
+":guilabel:`Compare` the branches and see new changes in the main repository"
+msgstr ""
+":guilabel:`Compare`: comparer les deux branches et voir les nouvelles "
+"modifications apportées au dépôt principal"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:145
+msgid ""
+":guilabel:`Fetch and merge`: takes changes from the upstream branch to "
+"yours."
+msgstr ""
+":guilabel:`Fetch and merge`: copie les modifications présentes dans la "
+"branche distante vers la vôtre."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:146
+msgid ""
+"Let's click :guilabel:`Fetch and merge`: after the process, your branch is "
+"mentioned as up to date with ``qgis/QGIS-Documentation:master``."
+msgstr ""
+"Si on clique sur :guilabel:`Fetch and merge`, à la fin du processus, votre "
+"branche est indiquée à jour avec ``qgis/QGIS-Documentation:master``."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:149
+msgid ""
+"Click on |githubBranch| in the upper left corner of your forked QGIS-"
+"Documentation repository and enter a unique name in the text field to create"
+" a new `branch <https://docs.github.com/en/pull-requests/collaborating-with-"
+"pull-requests/proposing-changes-to-your-work-with-pull-requests/about-"
+"branches>`_ . The name of the new branch should relate to the problem you "
+"intend to fix. The |githubBranch| button should now say :guilabel:`Branch: "
+"branch_name`"
+msgstr ""
+"Cliquez sur |githubBranch| dans le coin supérieur gauche de votre copie de "
+"dépôt QGIS-Documentation et entrez un nom unique dans le champ de texte pour"
+" créer une nouvelle `branche <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/proposing-changes-to-your-work-"
+"with-pull-requests/about-branches>`_. Le nom de la nouvelle branche doit "
+"être lié au problème que vous souhaitez résoudre. Le bouton |githubBranch| "
+"devrait maintenant indiquer :guilabel:`Branch: nom_branche`"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:154
+msgid "You are ready to start new changes on top of it."
+msgstr "Vous êtes fin prêt.e à apporter de nouvelles modifications."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:156
 msgid ""
