@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 05:53+0000\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
 "Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
@@ -296,12 +296,11 @@ msgid "``REFERENCE_LAYER``"
 msgstr "``REFERENCE_LAYER``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:49
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:231
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:453
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:593
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:766
-msgid "[vector: any]"
-msgstr "[vectorial: cualquiera]"
+msgid "[vector: geometry]"
+msgstr "[vector: geometría]"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:50
 msgid "Layer to find the closest feature from for rotation calculation"
@@ -345,14 +344,6 @@ msgid "``MAX_DISTANCE``"
 msgstr "``MAX_DISTANCE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:55
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:172
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:176
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:184
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:188
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:392
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:396
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:404
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:408
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:513
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:646
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:819
@@ -363,10 +354,9 @@ msgstr "``MAX_DISTANCE``"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1386
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1390
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1394
-#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1501
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1508
-msgid "[number]"
-msgstr "[número]"
+msgid "[numeric: double]"
+msgstr "[numérico: doble]"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:57
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:512
@@ -721,6 +711,18 @@ msgstr "**Recuento de rampas de color**"
 msgid "``COLORRAMPS``"
 msgstr "``COLORRAMPS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:172
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:176
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:184
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:188
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:392
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:396
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:404
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:408
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1501
+msgid "[numeric: integer]"
+msgstr "[numérico: entero]"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:174
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:394
 msgid "**Label settings count**"
@@ -800,6 +802,10 @@ msgstr ""
 "Si se desea, los resultados también pueden ser tablas que contengan listas "
 "de las categorías que no pudieron coincidir con los símbolos, y símbolos que"
 " no coincidieron con las categorías."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:231
+msgid "[vector: any]"
+msgstr "[vectorial: cualquiera]"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:232
 msgid "Vector layer to apply a categorized style to"
@@ -919,8 +925,8 @@ msgstr "``NON_MATCHING_CATEGORIES``"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:279
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:302
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:307
-msgid "[table]"
-msgstr "[tabla]"
+msgid "[vector: table]"
+msgstr "[vector: tabla]"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:267
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:281
@@ -1562,6 +1568,16 @@ msgstr "``TEXT_FORMAT``"
 msgid "Default: 0"
 msgstr "Predeterminado: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:690
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:863
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1114
+msgid ""
+"Determines if text should be exported as path or text objects. "
+":ref:`Possible options <render_labels_text>` are:"
+msgstr ""
+"Determina si el texto debe exportarse como ruta u objeto de texto. "
+":ref:`Opciones posibles <render_labels_text>` son:"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:693
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:866
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1117
@@ -1573,6 +1589,12 @@ msgstr "0 - Exportar siempre el texto como rutas (recomendado)"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1118
 msgid "1 - Always export texts as text objects"
 msgstr "1 - Exportar siempre los textos como objetos de texto"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:695
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:868
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1119
+msgid "2 - Prefer exporting texts as text objects"
+msgstr "2 - Preferir la exportación de textos como objetos de texto"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:696
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:869
