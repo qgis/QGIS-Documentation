@@ -183,12 +183,14 @@ Available options are:
   to overlay them regardless of their original CRS. Use of units and ellipsoid setting
   are available and make sense and you can perform calculations accordingly.
 
-Whenever you select a new CRS for your QGIS project, the measurement units will automatically be
-changed in the :guilabel:`General` tab of the :guilabel:`Project properties` dialog
-(:menuselection:`Project --> Properties...`) to match the selected CRS. For instance,
-some CRSs define their coordinates in feet instead of meters, so setting your QGIS
-project to one of these CRSs will also set your project to measure using feet by
-default.
+If you change your project's CRS and want the units (for distance, area, and coordinates)
+to match the units defined by the CRS, make sure you have selected :guilabel:`Map units` in the relevant settings.
+These include the :guilabel:`Units for distance measurement` and :guilabel:`Units for area measurement`
+in the :guilabel:`General` tab of the :menuselection:`Project --> Properties…`,
+as well as the global settings under :menuselection:`Settings --> Options --> Map Tools`.
+Some CRSs, for instance, define their units in feet instead of meters — selecting :guilabel:`Map units`
+ensures that such changes are reflected throughout your project.
+
 
 .. tip:: **Setting the project CRS from a layer**
 
