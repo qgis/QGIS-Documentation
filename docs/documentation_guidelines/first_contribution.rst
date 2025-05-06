@@ -90,7 +90,8 @@ Alternative 1: Use the ``Edit on GitHub`` shortcut
 ..................................................
 
 Pages on the QGIS documentation website can be edited quickly and easily by clicking on the
-``Edit on GitHub`` link at the top right of each page.
+``Edit on GitHub`` link at the top right of each page,
+or in the drop-down menu at the bottom of the left sidebar.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo
@@ -100,34 +101,32 @@ Pages on the QGIS documentation website can be edited quickly and easily by clic
    syntax, depending on your changes, you may need to rely on the :ref:`writing
    guidelines <QGIS-documentation-guidelines>`.
 
-#. When you finish, make a short comment about your changes and click on
-   :guilabel:`Propose changes`. This will generate a new `branch
+#. Once you have finished modifying the file, press :guilabel:`Commit changes...`
+   and add a short title explaining your changes.
+   You can also provide a more detailed explanation, if necessary.
+#. Press :guilabel:`Propose changes`, saving the modifications to your repository.
+   This will generate a dedicated `branch
    <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches>`_
-   (``patch-xxx``) in your repository.
+   (``patch-xxx``) in your repository
+   and the web browser will open the :guilabel:`Comparing changes` page.
 
-#. After you click on :guilabel:`Propose changes`, github will navigate to
-   the :guilabel:`Comparing changes` page.
-
-   * If you're done making changes, skip to :ref:`Compare changes <compare_changes>`
-     in the :ref:`Share your changes via Pull Request <sharing_changes>` section below.
+   * If the issue you are addressing does not need any further changes,
+     jump to the :ref:`Share your changes via Pull Request <sharing_changes>` section below.
    * If there are additional changes that you want to make before submitting
      them to QGIS, follow these steps:
 
      #. Navigate to your fork of QGIS-Documentation (``https://github.com/<YourName>/QGIS-Documentation``)
-     #. Click on |githubBranch| and search for the ``patch-xxx`` branch. Select
-        this patch branch. The |githubBranch| button will now say
-        :guilabel:`Branch: patch-xxx`
-     #. Jump down to :ref:`Modify files <modify_files>` below.
-
-.. note:: The ``Edit on GitHub`` shortcut is also available in the drop-down
-  menu at the bottom of the left sidebar.
+     #. Click on |githubBranch| and search for the new ``patch-xxx`` branch.
+     #. Select it. The |githubBranch| button will now display :guilabel:`Branch: patch-xxx`.
+     #. Jump down to the :ref:`Modify files <modify_files>` section below.
 
 Alternative 2: Create an ad hoc branch in your documentation repository
 .......................................................................
 
 You can edit files directly from your fork of the QGIS Documentation.
 
-First, make sure that your ``master`` branch is up to date with ``qgis:master`` branch.
+First, make sure that your ``master`` branch is up to date with upstream,
+i.e. ``qgis/QGIS-Documentation:master`` branch.
 To do so:
 
 #. Go to the main page of your repository, i.e. ``https://github.com/<YourName>/QGIS-Documentation``.
@@ -139,19 +138,22 @@ To do so:
 
    If it only has commits behind:
 
-   #. Expand the :guilabel:`Fetch Upstream` drop-down menu on the right. You can
+   #. Expand the :guilabel:`Sync fork` drop-down menu on the right. You can:
 
-      * :guilabel:`Compare` the branches and see new changes in the main repository
-      * :guilabel:`Fetch and merge`: takes changes from the upstream branch to yours.
-   #. Let's click :guilabel:`Fetch and merge`: after the process, your branch is
+      * :guilabel:`Compare` the branches and see new changes in the upstream branch
+        you do not yet have in yours
+      * :guilabel:`Fetch and merge`: brings changes from the upstream branch into yours.
+   #. Click :guilabel:`Fetch and merge`: after the process, your branch is
       mentioned as up to date with ``qgis/QGIS-Documentation:master``.
 
 #. Click on |githubBranch| in the upper left corner of your forked
    QGIS-Documentation repository and enter a unique name in the text field to create a
-   new `branch <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches>`_ .
-   The name of the new branch should relate to the problem you intend to fix. The
-   |githubBranch| button should now say :guilabel:`Branch: branch_name`
-#. You are ready to start new changes on top of it.
+   new `branch <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches>`_.
+   It is advised that the name of the new branch relates to the problem you intend to fix.
+   Convenient for identifying the branch later.
+#. Press :guilabel:`Create branch <branch_name> from master`.
+   The |githubBranch| button should now display :guilabel:`branch_name`.
+#. You are ready to start new changes on top of your new branch.
 
 .. attention:: **Do your changes in an ad hoc branch, never in the** ``master`` **branch**
 
@@ -160,45 +162,51 @@ To do so:
    into your copy of the QGIS-Documentation repository.
    Separate branches allow you to work on multiple problems at the same time
    without interfering with other branches. If you make a mistake you can
-   always delete a branch and start over by creating a new one from the master
-   branch.
+   always delete a branch and start over by creating a new one from the master branch.
 
 .. _modify_files:
 
 Modify files
 ---------------
 
-#. Browse the source files of your fork of QGIS-Documentation to the file that
-   needs to be modified
-#. Make your modifications following the :ref:`writing guidelines
-   <QGIS-documentation-guidelines>`
-#. When you finish, navigate to the **Commit Changes** frame at the bottom of
-   the page, make a short comment about your changes, and click on
-   :guilabel:`Commit Changes` to commit the changes directly to your branch.
-   Make sure :guilabel:`Commit directly to the branch_name branch.` is selected.
-#. Repeat the previous steps for any other file that needs to be updated to
-   fix the issue
+#. Make sure the branch you want to modify is active:
+   its name is displayed in the top left menu or in the page URL.
+#. Browse the source files to the file that needs modifications.
+#. Press the |githubEditPencil| :sup:`Edit this file` button.
+#. Update the text following the :ref:`writing guidelines <QGIS-documentation-guidelines>`
+#. Once you have finished modifying the file, press :guilabel:`Commit changes...`
+   and add a short title explaining your changes.
+   You can also provide a more detailed explanation, if necessary.
+#. Make sure :guilabel:`Commit directly to the <branch_name> branch` is selected.
+#. Press :guilabel:`Commit changes` to save your modifications in the branch.
+#. To update or add a new image file:
+
+   #. Browse your branch to the folder of the file to update or add.
+   #. Top right, use the :menuselection:`Add files --> Upload files` menu
+      to select and load files from your drive.
+      You can find hints for formatting an image for the docs at :ref:`managing_screenshots`.
+   #. If a file of the same name already exists, it gets overwritten.
+   #. Commit once again your changes to the target branch.
+
+#. Repeat the previous steps for any other files that need to be updated to fix the issue.
 
 .. _sharing_changes:
 
 Share your changes via Pull Request
 --------------------------------------
 
-You need to make a pull request to integrate your changes into the official documentation.
-
-.. note:: **If you used an** ``Edit on GitHub`` **link**
-
-  After you commit your changes GitHub will automatically open a new page
-  comparing the changes you made in your ``patch-xxx`` branch to the ``qgis/QGIS-Documentation``
-  master branch.
-
-  Skip to :ref:`Step 2 <compare_changes>` below.
+You need to make a `pull request <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests>`_
+to integrate your changes into the official documentation.
 
 Start a new pull request
 ...........................
 
-Navigate to the main page of the `QGIS-Documentation <https://github.com/qgis/QGIS-Documentation>`_
-repository and click on :guilabel:`New pull request`.
+#. If you used the ``Edit on GitHub`` link, after you commit your changes,
+   GitHub automatically opens a new page comparing the changes you made
+   in your ``patch-xxx`` branch to the ``qgis/QGIS-Documentation:master`` branch.
+#. In all the cases, the comparing changes page can be reached by going to the "Pull requests" page
+   of your 
+   repository and click on :guilabel:`New pull request`.
 
 .. _compare_changes:
 
@@ -255,13 +263,12 @@ Click the :guilabel:`Create pull request` button.
 Describe your pull request
 .............................
 
-A text box will open: fill in any relevant comments for the issue you are
-addressing.
+A text box will open: fill in a title and any relevant description of the changes you are proposing.
 
 If this relates to a particular `issue <https://github.com/qgis/QGIS-Documentation/issues>`_,
 add the issue number to your comments. This is done by entering # and the issue
-number (*e.g.* ``#1234``). If preceded by terms like ``fix`` or ``close``, the
-concerned issue will be closed as soon as the pull request is merged.
+number (*e.g.* ``#1234``). If preceded by terms like ``fix`` or ``close``,
+the concerned issue will be closed as soon as the pull request is merged.
 
 Add links to any documentation pages that you are changing.
 
@@ -272,11 +279,10 @@ Review and comment pull request
 
 As seen above, anyone can submit modifications to the documentation through pull
 requests. Likewise anyone can review pull requests with questions and `comments
-<https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request>`_. Perhaps the
-writing style doesn't match the project guidelines, the change is missing some major
+<https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request>`_.
+Perhaps the writing style doesn't match the project guidelines, the change is missing some major
 details or screenshots, or maybe everything looks great and is in order.
-Reviewing helps to improve the quality of the contribution, both in form and
-substance.
+Reviewing helps to improve the quality of the contribution, both in form and substance.
 
 To review a pull request:
 
@@ -287,8 +293,7 @@ To review a pull request:
 #. To add comments about specific lines,
 
    #. Click on |githubFilesChanged| and find the file you want to comment on.
-      You may have to click on :guilabel:`Display the source diff` to see the
-      changes.
+      You may have to click on :guilabel:`< >` :sup:`Display the source diff` to see the changes.
    #. Scroll to the line you want to comment on and click on the |githubBluePlus|.
       That will open a text box allowing you to leave a comment.
 
@@ -355,11 +360,12 @@ any reported errors or warnings before your changes are committed to the
 
 You can make modifications to your pull request until it is merged with the
 main repository, either to improve your request, to address requested
-modifications, or to fix a build error.
+modifications, or to fix a build error:
 
-To make changes click on the |githubFilesChanged| tab in your pull request
-page and click the pencil button |githubEditPencil| next to the filename that
-you want to modify.
+#. Click on the |githubFilesChanged| tab in your pull request page
+#. Press :guilabel:`...` menu on the right of the filename that you want to modify,
+   and select :guilabel:`Edit file`.
+#. The file opens in edit mode; add your modifications and commit.
 
 Any additional changes will be automatically added to your pull request if you
 make those changes to the same branch that you submitted in your pull request.
