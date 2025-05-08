@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-08 20:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
@@ -345,8 +345,8 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:243
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:19
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:41
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:76
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:13
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:23
@@ -758,8 +758,8 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:245
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:21
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:43
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:78
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:25
@@ -1260,8 +1260,8 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:248
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:25
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:58
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:81
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:82
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
@@ -4558,6 +4558,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:110
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:16
+#, python-brace-format
 msgid ""
 "**string** - a string representing an interval. Allowable formats include"
 " {n} days {n} hours {n} months."
@@ -11990,12 +11991,14 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:27
+#, python-brace-format
 msgid ""
 "``decode_uri(@layer)`` → {'layerId': '0', 'layerName': '', 'path': "
 "'/home/qgis/shapefile.shp'}"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:28
+#, python-brace-format
 msgid ""
 "``decode_uri(@layer)`` → {'layerId': NULL, 'layerName': 'layer', 'path': "
 "'/home/qgis/geopackage.gpkg'}"
@@ -12018,7 +12021,7 @@ msgid "layer_property(layer, property)"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:46
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:47
 msgid ""
 "**property** - a string corresponding to the property to return. Valid "
 "options are:"
@@ -12194,6 +12197,7 @@ msgid "**string** - JSON string"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:24
+#, python-brace-format
 msgid ""
 "``from_json('{\"1\":\"one\",\"2\":\"two\"}')`` → { '1': 'one', '2': 'two'"
 " }"
@@ -12216,6 +12220,7 @@ msgid "hstore_to_map(string)"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:45
+#, python-brace-format
 msgid "``hstore_to_map('qgis=>rocks')`` → { 'qgis': 'rocks' }"
 msgstr ""
 
@@ -12238,6 +12243,7 @@ msgid "**key** - a key (string)"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:66
+#, python-brace-format
 msgid "``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }"
 msgstr ""
 
@@ -12303,6 +12309,7 @@ msgid "map_concat(map1, map2, ...)"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:127
+#, python-brace-format
 msgid ""
 "``map_concat(map('1','one', '2','overridden'),map('2','two', "
 "'3','three'))`` → { '1': 'one', '2': 'two', '3': 'three' }"
@@ -12325,6 +12332,7 @@ msgid "**key** - the key to delete"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:148
+#, python-brace-format
 msgid "``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }"
 msgstr ""
 
@@ -12398,10 +12406,12 @@ msgid "**key** - the key to add"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:20
+#, python-brace-format
 msgid "``map_insert(map('1','one'),'3','three')`` → { '1': 'one', '3': 'three' }"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:21
+#, python-brace-format
 msgid ""
 "``map_insert(map('1','one','2','overridden'),'2','two')`` → { '1': 'one',"
 " '2': 'two' }"
@@ -12424,6 +12434,7 @@ msgid "**prefix** - a string"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:42
+#, python-brace-format
 msgid ""
 "``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
 "'one', 'prefix-2': 'two' }"
@@ -12506,6 +12517,7 @@ msgid "**value** - The input value"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:122
+#, python-brace-format
 msgid "``to_json(map('1','one','2','two'))`` → {\"1\":\"one\",\"2\":\"two\"}"
 msgstr ""
 
@@ -14344,7 +14356,7 @@ msgid "raster_attributes(layer, band, value)"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:22
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:79
 msgid "**layer** - the name or id of a raster layer"
 msgstr ""
 
@@ -14357,93 +14369,105 @@ msgid "**value** - raster value"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:26
+#, python-brace-format
 msgid ""
 "``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
 "make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:34
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:27
+#, python-brace-format
+msgid ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"@layer_cursor_point))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:35
 msgid "raster_statistic"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:36
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:37
 msgid "Returns statistics from a raster layer."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:43
 msgid "raster_statistic(layer, band, property)"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:45
 msgid "**layer** - a string, representing either a raster layer name or layer ID"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:45
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:46
 msgid ""
 "**band** - integer representing the band number from the raster layer, "
 "starting at 1"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:50
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:51
 msgid "min: minimum value"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:51
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:52
 msgid "max: maximum value"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:52
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:53
 msgid "avg: average (mean) value"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:53
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:54
 msgid "stdev: standard deviation of values"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:54
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:55
 msgid "range: range of values (max - min)"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:55
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:56
 msgid "sum: sum of all values from raster"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:60
 msgid ""
 "``raster_statistic('lc',1,'avg')`` → Average value from band 1 from 'lc' "
 "raster layer"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:60
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:61
 msgid ""
 "``raster_statistic('ac2010',3,'min')`` → Minimum value from band 3 from "
 "'ac2010' raster layer"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:69
 msgid "raster_value"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:71
 msgid "Returns the raster value found at the provided point."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:77
 msgid "raster_value(layer, band, point)"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:79
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:80
 msgid "**band** - the band number to sample the value from."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:80
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:81
 msgid ""
 "**point** - point geometry (for multipart geometries having more than one"
 " part, a NULL value will be returned)"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:82
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:83
 msgid "``raster_value('dem', 1, make_point(1,1))`` → 25"
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:84
+msgid "``raster_value('ndvi', 2, @layer_cursor_point)`` → 25"
 msgstr ""
 
 #: ../../docs/user_manual/expressions/functions_list.rst:983
@@ -15327,6 +15351,7 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
+#, python-brace-format
 msgid "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
 msgstr ""
 
