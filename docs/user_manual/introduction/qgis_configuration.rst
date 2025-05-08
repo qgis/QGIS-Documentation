@@ -1409,6 +1409,11 @@ libraries to enable OpenCL acceleration.
 IDE settings
 ------------
 
+Under :guilabel:`GitHub access token`, you can generate a personal token
+allowing you to share code snippets from within the Python code editor.
+More details on `GitHub authentication
+<https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_
+
 .. _code_editor_options:
 
 Code Editor settings
@@ -1444,10 +1449,10 @@ JavaScript). A convenient way to adjust settings.
 
 .. _console_options:
 
-Python Console settings
-.......................
+Python settings
+...............
 
-The |runConsole| :guilabel:`Python Console` settings help you manage and control
+The |runConsole| :guilabel:`Python` settings help you manage and control
 the behavior of the Python editors (:ref:`interactive console <interactive_console>`,
 :ref:`code editor <console_editor>`, :ref:`project macros <project_macros>`,
 :ref:`custom expressions <function_editor>`, ...).
@@ -1462,7 +1467,7 @@ It can also be accessed using the |options| :sup:`Options...` button from:
 .. figure:: img/options_pythonconsole.png
    :align: center
 
-   Python Console settings
+   Python settings
 
 You can specify:
 
@@ -1519,11 +1524,9 @@ For :guilabel:`APIs` you can specify:
   file you have to load at least one ``*.api`` file and then compile it by
   clicking the :guilabel:`Compile APIs...` button.
 
-Under :guilabel:`GitHub access token`, you can generate a personal token
-allowing you to share code snippets from within the Python code editor.
-More details on `GitHub authentication
-<https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_
-
+The :guilabel:`External Editor` group allows you to provide command line instructions
+to launch an external Python code editor, given a file name, a line and column number.
+If empty, the default system editor will be used.
 
 Processing settings
 -------------------
