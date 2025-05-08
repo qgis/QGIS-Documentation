@@ -24,6 +24,7 @@ Returns a map with the fields names as keys and the raster attribute table value
        * **value** - raster value
    * - Examples
      - * ``raster_attributes('vegetation', 1, raster_value('vegetation', 1, make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}
+       * ``raster_attributes('vegetation', 1, raster_value('vegetation', 1, @layer_cursor_point))`` → {'class': 'Vegetated', 'subclass': 'Trees'}
 
 
 .. end_raster_attributes_section
@@ -80,6 +81,7 @@ Returns the raster value found at the provided point.
        * **point** - point geometry (for multipart geometries having more than one part, a NULL value will be returned)
    * - Examples
      - * ``raster_value('dem', 1, make_point(1,1))`` → 25
+       * ``raster_value('ndvi', 2, @layer_cursor_point)`` → 25
 
 
 .. end_raster_value_section
