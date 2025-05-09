@@ -38,7 +38,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output layer with information. One of:
+     - Specification of the output layer with information. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -121,7 +121,7 @@ Parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Output spreadsheet with a sheet for every layer. One of:
+     - Output spreadsheet with a sheet for every layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -195,7 +195,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the polygon vector layer for the output extent.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**

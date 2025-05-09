@@ -65,7 +65,7 @@ Basic parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output line layer for the service area.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -77,7 +77,7 @@ Basic parameters
 
        Default: ``[Skip output]``
      - Specify the output point layer for the service area
-       boundary nodes. One of:
+       boundary nodes. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -90,7 +90,7 @@ Basic parameters
        Default: ``[Skip output]``
      - Specify the output which will be used to store any input features
        which could not be routed (e.g., those which are too far from the network layer).
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -314,7 +314,7 @@ Basic parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output line layer for the service area.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -328,7 +328,7 @@ Basic parameters
 
        Default: ``[Skip output]``
      - Specify the output point layer for the service area
-       boundary nodes. One of:
+       boundary nodes. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -448,7 +448,7 @@ Basic parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output line layer for the shortest paths.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -463,7 +463,7 @@ Basic parameters
        Default: ``[Skip output]``
      - Specify the output which will be used to store any input features
        which could not be routed (e.g., those which are too far from the network layer).
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -579,7 +579,7 @@ Basic parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output line layer for the shortest paths.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -594,7 +594,7 @@ Basic parameters
        Default: ``[Skip output]``
      - Specify the output which will be used to store any input features
        which could not be routed (e.g., those which are too far from the network layer).
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -709,7 +709,7 @@ Basic parameters
      - ``OUTPUT``
      - [vector: line]
      - Specify the output line layer for the shortest paths.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
