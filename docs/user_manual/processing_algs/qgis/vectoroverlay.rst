@@ -66,7 +66,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the features from the input layer
        that are inside the overlay (clipping) layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -163,7 +163,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the (parts of) features from the
        input layer that are not inside the overlay layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -275,7 +275,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the (parts of) features from the
        input layer that do not overlap features of the overlay layers.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -372,7 +372,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the features from the input layer
        that are inside the clip extent.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -485,7 +485,7 @@ Basic parameters
      - Specify the layer to contain (the parts of) the features from
        the input layer that overlap one or more features from the
        overlay layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -714,7 +714,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the intersection points of the
        lines from the input and overlay layers.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -815,7 +815,7 @@ Parameters
      - Specify the layer to contain the splitted (in case they are
        intersected by a line in the split layer) line/polygon features
        from the input layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -908,7 +908,7 @@ Basic parameters
      - Specify the layer to contain (the parts of) the features from
        the input and overlay layers that do not overlap features from
        the other layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1046,7 +1046,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the (split and duplicated)
        features from the input layer and the overlay layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1183,7 +1183,7 @@ Basic parameters
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the (split and duplicated)
        features from the input layer and the overlay layers.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**

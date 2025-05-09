@@ -102,7 +102,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer with the auto increment
        field.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -214,7 +214,7 @@ Parameters
        
        Default: ``[Create temporary layer]``
      - Specify the output vector layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -295,7 +295,7 @@ Parameters
        
        Default: ``[Create temporary layer]``
      - Vector layer with the numeric field containing indexes.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -308,7 +308,7 @@ Parameters
        Default: ``[Skip output]``
      - Specify the table to contain the summary of the class field
        mapped to the corresponding unique value.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -394,7 +394,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -585,7 +585,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer with the remaining fields.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -739,7 +739,7 @@ Parameters
      - [folder]
 
        Default: ``[Save to temporary folder]``
-     - Folder in which to store the output files. One of:
+     - Folder in which to store the output files. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types**
@@ -968,7 +968,7 @@ Parameters
          For certain field types, e.g. lists, this parameter helps refine the specific ``type`` of the data.
          It is automatically set in the GUI but may be needed
          if you're running the algorithm in Python or from the command line.
-         One of:
+         :ref:`One of <output_parameter_widget>`:
 
          .. include:: ../algs_include.rst
             :start-after: **vector_field_subtypes**
@@ -1003,7 +1003,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -1076,7 +1076,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -1144,7 +1144,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -1215,7 +1215,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create Temporary Layer]``
-     - Specify the output layer. One of:
+     - Specify the output layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**

@@ -70,7 +70,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -267,7 +267,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -413,7 +413,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output vector layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -564,7 +564,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output vector layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**

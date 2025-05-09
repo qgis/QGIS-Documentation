@@ -327,7 +327,7 @@ Parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output raster. One of:
+     - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -410,7 +410,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output raster. One of:
+     - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -595,7 +595,7 @@ Basic parameters
      - [folder]
 
        Default: ``[Save to temporary folder]``
-     - Specification of the output directory (for the tiles). One of:
+     - Specification of the output directory (for the tiles). :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types_skip**
@@ -608,7 +608,7 @@ Basic parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output HTML file. One of:
+     - Specification of the output HTML file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
@@ -779,7 +779,7 @@ Parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**

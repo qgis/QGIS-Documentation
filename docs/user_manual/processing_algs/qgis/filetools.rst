@@ -37,7 +37,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the file destination.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -158,7 +158,7 @@ Parameters
 
        Default: ``[Skip Output]``
      - The result can be written to a file instead of being returned as a string.
-       Specification of the file destination. One of:
+       Specification of the file destination. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
