@@ -1598,6 +1598,11 @@ In order to trim or extend existing geometries:
    In the case of a trim, you must select the part that should be shortened.
 #. When both segments are in 3D, the tool performs an interpolation on
    the limit segment to get the Z value.
+#. If you need to use the same target segment for trimming or extending many features:
+
+   #. Press :kbd:`Shift` while selecting the target limit segment.
+   #. Click consecutively on the segments to modify and each will be trimmed
+      or extended accordingly.
 
 .. attention:: Pay attention to the modified geometry while using the |trimExtend|
   :sup:`Trim/Extend` tool. Depending on the inputs, it can create invalid
