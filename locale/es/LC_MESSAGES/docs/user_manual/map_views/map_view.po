@@ -10,8 +10,9 @@
 # Abigaíl García, 2025
 # Andrés Betancourt, 2025
 # Harrissou Sant-anna, 2025
-# Eric Armijo, 2025
 # Transifex Bot <>, 2025
+# Federico, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -20,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -591,6 +592,14 @@ msgstr ""
 "desde :menuselection:`Ver --> Paneles --> Menú del panel del controlador "
 "temporal"
 
+#: ../../docs/user_manual/map_views/map_view.rst:196
+msgid ""
+"or from the :menuselection:`View --> Data Filtering --> Temporal controller "
+"panel` menu"
+msgstr ""
+"o desde el menú :menuselection:`Ver --> Filtrado de datos --> Panel del "
+"controlador temporal"
+
 #: ../../docs/user_manual/map_views/map_view.rst:202
 msgid "The temporal controller panel"
 msgstr "El panel del controlador temporal"
@@ -645,6 +654,18 @@ msgstr ""
 #: ../../docs/user_manual/map_views/map_view.rst:1463
 msgid "temporalNavigationAnimated"
 msgstr "temporalNavigationAnimated"
+
+#: ../../docs/user_manual/map_views/map_view.rst:219
+msgid ""
+"|temporalNavigationMovie| :sup:`Animated movie`: a total number of frames is"
+" set for the animation, with the map settings advancing at each step, "
+"displaying the progression frame by frame without any time-based filtering "
+"of data."
+msgstr ""
+"|temporalNavigationMovie| :sup:`Película animada`: se establece un número "
+"total de fotogramas para la animación, con la configuración del mapa "
+"avanzando en cada paso, mostrando la progresión fotograma a fotograma sin "
+"ningún filtro de datos basado en el tiempo."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1467
 msgid "temporalNavigationMovie"
@@ -862,9 +883,73 @@ msgstr "El tiempo :guilabel:`Range` para la animación"
 msgid "the :guilabel:`Step (frame length)` in the unit of your choice"
 msgstr "El :guilabel:`Paso (longitud del marco)` en la unidad de su elección"
 
+#: ../../docs/user_manual/map_views/map_view.rst:306
+msgid "The Elevation Controller panel"
+msgstr "El panel del controlador de elevación"
+
+#: ../../docs/user_manual/map_views/map_view.rst:308
+msgid ""
+"|elevation| :guilabel:`Elevation Controller` allows you to handle elevation "
+"z-range data in 2D maps. This option currently supports point cloud layers "
+"and raster DEMs. Use the panel to visualize and interact with elevation data"
+" in the map canvas."
+msgstr ""
+"|elevation| :guilabel:`Controlador de elevación` permite manejar datos de "
+"rango z de elevación en mapas 2D. Esta opción admite actualmente capas de "
+"nubes de puntos y MDE ráster. Utilice el panel para visualizar e interactuar"
+" con los datos de elevación en el lienzo del mapa."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1396
 msgid "elevation"
 msgstr "elevation"
+
+#: ../../docs/user_manual/map_views/map_view.rst:312
+msgid ""
+"Activate the |elevation| :guilabel:`Elevation Controller` panel in the map "
+"canvas by clicking on the :guilabel:`Data Filtering` in the :guilabel:`View`"
+" menu. The |elevation| :guilabel:`Elevation Controller` appears as a range "
+"slider on the left side of the map canvas. At the top of the slider, there "
+"is a |settings| :sup:`Settings` menu where you can:"
+msgstr ""
+"Active el panel |elevation| :guilabel:`Controlador de elevación` en el "
+"lienzo del mapa haciendo clic en :guilabel:`Filtrado de datos` en el menú "
+":guilabel:`Ver`. La |elevación| :guilabel:`Controlador de elevación` aparece"
+" como un deslizador de rango en la parte izquierda del lienzo del mapa. En "
+"la parte superior del deslizador, hay un menú |configuración| "
+":sup:`Configuración` en el que puede:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:318
+msgid ""
+"Set the :guilabel:`Fixed Range Size` value to lock the elevation range to a "
+"specific size. This setting is saved within the project and retained across "
+"sessions, ensuring consistency for your elevation filter. Use the |checkbox|"
+" :guilabel:`Invert Direction` option to reverse the elevation filter slider,"
+" so that it moves from high values at the bottom to low values at the top."
+msgstr ""
+"Establezca el valor :guilabel:`Tamaño de rango fijo` para bloquear el rango "
+"de elevación a un tamaño específico. Esta configuración se guarda en el "
+"proyecto y se mantiene en todas las sesiones, garantizando la coherencia de "
+"su filtro de elevación. Utilice la opción |checkbox| :guilabel:`Invertir "
+"dirección` para invertir el deslizador del filtro de elevación, de forma que"
+" se mueva desde los valores altos en la parte inferior hasta los valores "
+"bajos en la parte superior."
+
+#: ../../docs/user_manual/map_views/map_view.rst:322
+msgid ""
+":guilabel:`Set Elevation Range` to open the project elevation tab, where you"
+" can set dedicated lower and upper bounds for the elevation range"
+msgstr ""
+":guilabel:`Establecer rango de elevación` para abrir la pestaña de elevación"
+" del proyecto, donde puede establecer los límites inferior y superior "
+"dedicados para el rango de elevación."
+
+#: ../../docs/user_manual/map_views/map_view.rst:323
+msgid ""
+":guilabel:`Disable Elevation Filter` to remove the elevation filter from the"
+" map canvas"
+msgstr ""
+":guilabel:`Desactivar filtro de elevación` para eliminar el filtro de "
+"elevación del lienzo del mapa"
 
 #: ../../docs/user_manual/map_views/map_view.rst:331
 msgid "Bookmarking extents on the map"
@@ -1893,6 +1978,18 @@ msgstr ""
 "anotaciones salten por el mapa. Por el contrario, permanecerán fijas en el "
 "lugar donde las hayas dibujado."
 
+#: ../../docs/user_manual/map_views/map_view.rst:757
+msgid ""
+"**Balloon annotations**: these are individual HTML or form annotations "
+"inside a bubble. They can be associated to any layer for their visibility "
+"and drawn on top of the map canvas. The size is dependent from the map "
+"canvas scale, and its position can be anchored."
+msgstr ""
+"**Anotaciones de globo**: son anotaciones individuales HTML o de formulario "
+"dentro de una burbuja. Pueden asociarse a cualquier capa para su visibilidad"
+" y dibujarse sobre el lienzo del mapa. El tamaño depende de la escala del "
+"lienzo del mapa, y su posición puede anclarse."
+
 #: ../../docs/user_manual/map_views/map_view.rst:761
 msgid "**Layout the map with annotations**"
 msgstr "**Diseño del mapa con anotaciones**"
@@ -2034,9 +2131,32 @@ msgstr ""
 msgid "textAlongLine"
 msgstr "textAlongLine"
 
+#: ../../docs/user_manual/map_views/map_view.rst:792
+msgid "Create an annotation as a curved text along a line feature"
+msgstr ""
+"Crear una anotación como texto curvo a lo largo de un objeto espacial línea"
+
+#: ../../docs/user_manual/map_views/map_view.rst:795
+#: ../../docs/user_manual/map_views/map_view.rst:911
+msgid "|textInsideRect| :sup:`Create Text Annotation In Rectangle`"
+msgstr "|textInsideRect| :sup:`Crear anotación de texto en rectángulo`."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1473
 msgid "textInsideRect"
 msgstr "textInsideRect"
+
+#: ../../docs/user_manual/map_views/map_view.rst:795
+msgid "Create a text formatted annotation bound within a rectangle"
+msgstr "Crear una anotación con formato de texto dentro de un rectángulo"
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+#: ../../docs/user_manual/map_views/map_view.rst:914
+msgid "|addImage| :sup:`Create Picture Annotation`"
+msgstr "|addImage| :sup:`Crear anotación de imagen`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+msgid "Create an annotation showing an :file:`.SVG` or raster image"
+msgstr "Crear una anotación que muestre una :file:`.SVG` o imagen raster"
 
 #: ../../docs/user_manual/map_views/map_view.rst:800
 msgid "|htmlAnnotation| :sup:`HTML Annotation`"
@@ -2072,9 +2192,38 @@ msgstr ""
 "Seleccionar y crear una anotación que muestre los atributos de una capa "
 "vectorial en un archivo de formulario personalizado"
 
+#: ../../docs/user_manual/map_views/map_view.rst:808
+msgid ""
+"Starting with QGIS 3.40, it is no longer possible to create balloon "
+"annotations of SVG or text type. When loading old projects, any of these "
+"annotations will automatically be converted to the newer picture and "
+"rectangular text annotation item types."
+msgstr ""
+"A partir de QGIS 3.40, ya no es posible crear anotaciones de globo de tipo "
+"SVG o texto. Al cargar proyectos antiguos, cualquiera de estas anotaciones "
+"se convertirá automáticamente a los nuevos tipos de elementos de anotación "
+"de imagen y texto rectangular."
+
 #: ../../docs/user_manual/map_views/map_view.rst:815
 msgid "Feature Annotations"
 msgstr "Anotaciones de objetos espaciales"
+
+#: ../../docs/user_manual/map_views/map_view.rst:817
+msgid ""
+"Feature annotations are stored in **annotation layers**. Unlike conventional"
+" layers, an annotation layer is available only in the current project and "
+"can contain features of different types (text, marker, line, polygon, "
+"picture). The layer has no attributes and no symbology associated, but "
+"instead each feature can be symbolized on an item-by-item basis, through "
+":guilabel:`Layer Styling` panel."
+msgstr ""
+"Las anotaciones de objetos espaciales se almacenan en **capas de "
+"anotación**. A diferencia de las capas convencionales, una capa de anotación"
+" sólo está disponible en el proyecto actual y puede contener características"
+" de diferentes tipos (texto, marcador, línea, polígono, imagen). La capa no "
+"tiene atributos ni simbología asociada, sino que cada característica puede "
+"simbolizarse elemento por elemento, a través del panel :guilabel:`Estilos de"
+" capa`."
 
 #: ../../docs/user_manual/map_views/map_view.rst:823
 msgid "Two types of annotation layer are available in QGIS:"
@@ -2200,6 +2349,17 @@ msgstr ""
 msgid "mapIdentification"
 msgstr "mapIdentification"
 
+#: ../../docs/user_manual/map_views/map_view.rst:867
+msgid ""
+":guilabel:`Linked layer`: allows you to optionally set a linked visibility "
+"layer for the annotation layer. If set, then the annotations will only be "
+"drawn when the linked layer is visible in the map."
+msgstr ""
+":guilabel:`Capa vinculada`: permite establecer opcionalmente una capa de "
+"visibilidad vinculada para la capa de anotaciones. Si se establece, las "
+"anotaciones sólo se dibujarán cuando la capa vinculada sea visible en el "
+"mapa."
+
 #: ../../docs/user_manual/map_views/map_view.rst:871
 msgid ""
 ":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
@@ -2246,6 +2406,26 @@ msgstr ""
 msgid "Interacting with features"
 msgstr "Interactuando con entidades"
 
+#: ../../docs/user_manual/map_views/map_view.rst:888
+msgid ""
+"The Feature annotations have dedicated tools for creation depending on their"
+" type."
+msgstr ""
+"Las anotaciones de objetos espaciales disponen de herramientas específicas "
+"para su creación en función de su tipo."
+
+#: ../../docs/user_manual/map_views/map_view.rst:890
+msgid "Creating feature annotation"
+msgstr "Creación de anotación de objeto espacial"
+
+#: ../../docs/user_manual/map_views/map_view.rst:893
+msgid "Family / based on"
+msgstr "Familia / basado en"
+
+#: ../../docs/user_manual/map_views/map_view.rst:893
+msgid "Annotation tool"
+msgstr "Herramienta de Anotación"
+
 #: ../../docs/user_manual/map_views/map_view.rst:893
 msgid "Procedure"
 msgstr "Procedimiento"
@@ -2253,6 +2433,73 @@ msgstr "Procedimiento"
 #: ../../docs/user_manual/map_views/map_view.rst:896
 msgid "Geometry"
 msgstr "Geometría"
+
+#: ../../docs/user_manual/map_views/map_view.rst:896
+msgid "This is like digitizing a point, line or polygon vector feature."
+msgstr ""
+"Es como digitalizar un objeto espacial vectorial de punto, línea o polígono."
+
+#: ../../docs/user_manual/map_views/map_view.rst:898
+msgid ""
+"All the usual shortcuts for creating features apply when creating annotation"
+" items. A line or polygon annotation is drawn by left-clicking once for each"
+" vertex, with a final right mouse click to complete the shape. Snapping can "
+"be enabled while you draw, you can use the :guilabel:`Advanced Digitizing "
+"Tools` to precisely place vertices, and even switch the :ref:`drawing tools "
+"<drawing_methods>` to for example the streaming mode for completely free-"
+"form shapes."
+msgstr ""
+"Todos los métodos abreviados habituales para crear objetos espaciales se "
+"aplican al crear elementos de anotación. Una anotación lineal o poligonal se"
+" dibuja haciendo clic con el botón izquierdo del ratón una vez para cada "
+"vértice, y un último clic con el botón derecho para completar la forma. Se "
+"puede activar el ajuste mientras dibuja, puede utilizar la "
+":guilabel:`Herramientas avanzadas de digitalización` para colocar los "
+"vértices con precisión, e incluso cambiar las :ref:`herramientas de dibujo "
+"<drawing_methods>` a, por ejemplo, el modo streaming para formas "
+"completamente libres."
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid "Text"
+msgstr "Texto"
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid "Left-click on the map canvas."
+msgstr "Haz clic con el botón izquierdo del ratón en el lienzo del mapa."
+
+#: ../../docs/user_manual/map_views/map_view.rst:907
+msgid ""
+"Left-click to add vertices to the text basement line geometry, and right-"
+"click to end. As above, digitizing features capabilities are also available."
+msgstr ""
+"Haga clic con el botón izquierdo para añadir vértices a la geometría de la "
+"línea de base de texto y haga clic con el botón derecho para terminar. Como "
+"en el caso anterior, también están disponibles las funciones de "
+"digitalización."
+
+#: ../../docs/user_manual/map_views/map_view.rst:911
+msgid ""
+"Draw the rectangle box of the text, by left-clicking to add a first corner "
+"and left-clicking again to add the opposite one."
+msgstr ""
+"Dibuje la caja rectangular del texto, haciendo clic con el botón izquierdo "
+"para añadir una primera esquina y haciendo clic de nuevo con el botón "
+"izquierdo para añadir la opuesta."
+
+#: ../../docs/user_manual/map_views/map_view.rst:914
+msgid "Picture"
+msgstr "Imágen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:914
+msgid ""
+"Draw the rectangle box of the picture, by left-clicking to add a first "
+"corner and left-clicking again to add the opposite one. Then pick an image "
+"or SVG file from the file explorer."
+msgstr ""
+"Dibuje la caja rectangular de la imagen, haciendo clic con el botón "
+"izquierdo para añadir una primera esquina y haciendo clic de nuevo con el "
+"botón izquierdo para añadir la opuesta. A continuación, seleccione una "
+"imagen o un archivo SVG del explorador de archivos."
 
 #: ../../docs/user_manual/map_views/map_view.rst:919
 msgid ""
@@ -2299,6 +2546,19 @@ msgstr ":kbd:`Mayús+tecla` para grandes movimientos"
 msgid ":kbd:`Alt+key` for ``1 px`` movement"
 msgstr ":kbd:`Alt+tecla` para movimiento ``1 px``"
 
+#: ../../docs/user_manual/map_views/map_view.rst:935
+msgid ""
+"**Geometry modification**: move over an annotation and purple squares are "
+"displayed on nodes of its underlying geometry. Left-click on the square, "
+"move and click again. For linear or polygonal annotations, double-clicking a"
+" segment will add a new vertex."
+msgstr ""
+"**Modificación de la geometría**: desplázate sobre una anotación y "
+"aparecerán cuadrados morados en los nodos de su geometría subyacente. Haga "
+"clic con el botón izquierdo en el cuadrado, desplácese y vuelva a hacer "
+"clic. Para las anotaciones lineales o poligonales, al hacer doble clic en un"
+" segmento se añadirá un nuevo vértice."
+
 #: ../../docs/user_manual/map_views/map_view.rst:939
 msgid ""
 "**Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while an "
@@ -2317,6 +2577,63 @@ msgstr ""
 msgid "Feature symbology"
 msgstr "Simbología de los objetos espaciales"
 
+#: ../../docs/user_manual/map_views/map_view.rst:948
+msgid ""
+"A selected annotation will display its :guilabel:`Symbology` properties in "
+"the :guilabel:`Layer styling` panel."
+msgstr ""
+"Una anotación seleccionada mostrará sus propiedades :guilabel:`Simbología` "
+"en el panel :guilabel:`Estilos de capa`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:951
+msgid ""
+"For polygon, polyline and marker annotations, you can modify the appearance "
+"using full capabilities of the :ref:`symbol properties <symbol-selector>`"
+msgstr ""
+"Para las anotaciones de polígonos, polilíneas y marcadores, puede modificar "
+"la apariencia utilizando todas las capacidades de las propiedades "
+":ref:`symbol <symbol-selector>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:953
+msgid ""
+"For text-based annotations, an area with text editing tools helps you "
+"construct the string to display. It can be multiline, use HTML formatting "
+"and rely on QGIS expression functions. You can moreover modify the "
+"appearance using full capabilities of the :ref:`text format properties "
+"<text_format>`."
+msgstr ""
+"Para las anotaciones basadas en texto, un área con herramientas de edición "
+"de texto le ayuda a construir la cadena a mostrar. Puede ser multilínea, "
+"utilizar formato HTML y basarse en funciones de expresión de QGIS. Además, "
+"puede modificar el aspecto utilizando todas las funciones de las "
+":ref:`propiedades de formato de texto<text_format>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:958
+msgid "Depending on the type of annotation, additional options are available."
+msgstr "Dependiendo del tipo de anotación, existen opciones adicionales."
+
+#: ../../docs/user_manual/map_views/map_view.rst:960
+msgid "For text annotation at point, it is also possible to:"
+msgstr "Para la anotación de texto en un punto, también es posible:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:962
+msgid ""
+"set the text :guilabel:`Alignment` (left, center or right of the anchor "
+"point)"
+msgstr ""
+"establece el texto :guilabel:`Alineación` (izquierda, centro o derecha del "
+"punto de anclaje)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:963
+msgid ""
+"configure whether the text should :guilabel:`Ignore map rotation` or "
+":guilabel:`Rotate with map`. In both cases, a custom :guilabel:`Angle` can "
+"be set for the feature orientation."
+msgstr ""
+"configura si el texto debe :guilabel:`Ignorar la rotación del mapa` o "
+":guilabel:`Rotar con el mapa`. En ambos casos, se puede establecer un "
+":guilabel:`Ángulo` personalizado para la orientación de la característica."
+
 #: ../../docs/user_manual/map_views/map_view.rst:965
 msgid ""
 "For text annotation along a line, configure an :guilabel:`Offset from line` "
@@ -2324,6 +2641,107 @@ msgid ""
 msgstr ""
 "Para anotaciones de texto a lo largo de una línea, configure un "
 ":guilabel:`Desplazamiento desde línea` en la unidad de su elección"
+
+#: ../../docs/user_manual/map_views/map_view.rst:967
+msgid "For text annotation in rectangle, it is also possible to:"
+msgstr "Para la anotación de texto en rectángulo, también es posible:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:969
+msgid ""
+"set the text :guilabel:`Horizontal alignment` (left, center, right or "
+"justify) and :guilabel:`Vertical alignment` (top, vertical center or bottom)"
+" in the rectangle box"
+msgstr ""
+"establece el texto :guilabel:`Alineación horizontal` (izquierda, centro, "
+"derecha o justificar) y :guilabel:`Alineación vertical` (arriba, centro "
+"vertical o abajo) en la caja rectángulo"
+
+#: ../../docs/user_manual/map_views/map_view.rst:971
+msgid ""
+"configure for the rectangle, the :guilabel:`Margins` distance in the units "
+"of your choice, the :guilabel:`Frame` and :guilabel:`Background` colors."
+msgstr ""
+"configure para el rectángulo, la distancia :guilabel:`Márgenes` en las "
+"unidades de su elección, los colores :guilabel:`Marco` y :guilabel:`Fondo`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:973
+msgid ""
+"Picture annotations allow you to display a :guilabel:`Raster image` or an "
+":guilabel:`SVG image`, using the :ref:`embedded_file_selector`. The "
+"placement and size of the picture can be set as :guilabel:`Scale dependent "
+"size`, :guilabel:`Fixed size` or :guilabel:`Relative to map`."
+msgstr ""
+"Las anotaciones de imagen permiten mostrar una imagen :guilabel:`Raster` o "
+"una imagen :guilabel:`SVG`, utilizando el selector "
+":ref:`embedded_file_selector`. La ubicación y el tamaño de la imagen pueden "
+"establecerse como :guilabel:`Tamaño dependiente de la escala`, "
+":guilabel:`Tamaño fijo` o :guilabel:`Relativo al mapa`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:978
+msgid ""
+"Moreover, you can enable display of the :guilabel:`Frame` and "
+":guilabel:`Background` of the rectangle box, and configure them using "
+":ref:`fill symbols <vector_fill_symbols>`."
+msgstr ""
+"Además, puede activar la visualización de :guilabel:`Marco` y "
+":guilabel:`Fondo` de la caja rectangular, y configurarlos mediante "
+":ref:`símbolos de relleno <vector_fill_symbols>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:981
+msgid ""
+"For text at point, text inside rectangle and picture annotations, you can "
+":guilabel:`Show callout` when the picture or text anchor point is offset "
+"from its default placement. To create a callout for an annotation:"
+msgstr ""
+"Para las anotaciones de texto en un punto, texto dentro de un rectángulo e "
+"imagen, puede :guilabel:`Mostrar llamada` cuando el punto de anclaje de la "
+"imagen o el texto se desplaza de su ubicación predeterminada. Para crear una"
+" llamada para una anotación:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:985
+msgid "Select the annotation item"
+msgstr "Seleccione el elemento de anotación"
+
+#: ../../docs/user_manual/map_views/map_view.rst:986
+msgid ""
+"Move the anchor point, i.e., click the central and green :kbd:`X` node and "
+"click at the new placement"
+msgstr ""
+"Mueva el punto de anclaje, es decir, haga clic en el nodo central y verde "
+":kbd:`X` y haga clic en la nueva colocación"
+
+#: ../../docs/user_manual/map_views/map_view.rst:987
+msgid ""
+"In the annotation properties, press the :guilabel:`...` button to configure "
+"the :ref:`callout properties <labels_callouts>`."
+msgstr ""
+"En las propiedades de la anotación, pulse el botón :guilabel:`...` para "
+"configurar las :ref:`propiedades de la llamada <labels_callouts>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:990
+msgid ""
+"Applying a balloon callout to a text or picture annotation will make you get"
+" their old-style balloon annotation display."
+msgstr ""
+"Al aplicar una llamada de globo a una anotación de texto o imagen, obtendrá "
+"su visualización de anotación de globo al estilo antiguo."
+
+#: ../../docs/user_manual/map_views/map_view.rst:993
+msgid ""
+"Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale"
+" at which symbol or text sizes which use paper-based units (such as "
+"millimeters or points) relate to. The sizes will be scaled accordingly "
+"whenever the map is viewed at a different scale. For instance, a line "
+"feature wide of 2mm at 1:2000 :guilabel:`Reference scale` will be rendered "
+"using 4mm when the map is viewed at 1:1000."
+msgstr ""
+"Configure una etiqueta :guilabel:`Escala de referencia`: indica la escala "
+"del mapa a la que se refieren los tamaños de símbolos o texto que utilizan "
+"unidades basadas en papel (como milímetros o puntos). Los tamaños se "
+"escalarán en consecuencia siempre que el mapa se visualice a una escala "
+"diferente. Por ejemplo, una línea de 2 mm de ancho a 1:2000 "
+":guilabel:`Escala de referencia` se representará con 4 mm cuando el mapa se "
+"visualice a 1:1000."
 
 #: ../../docs/user_manual/map_views/map_view.rst:998
 msgid ""
@@ -2361,6 +2779,24 @@ msgstr ""
 "|htmlAnnotation| :sup:`Anotación HTML` para ubicar el contenido en un "
 "archivo :file:`html`"
 
+#: ../../docs/user_manual/map_views/map_view.rst:1012
+msgid ""
+"|formAnnotation| :sup:`Form Annotation`: useful to display attributes of a "
+"vector layer in a customized :file:`ui` file (see "
+":numref:`figure_custom_annotation`). This is similar to the :ref:`custom "
+"attribute forms <provide_ui_file>`, but displayed in an annotation item. "
+"Also watch `this video "
+"<https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s>` from"
+" Tim Sutton for more information."
+msgstr ""
+"|formAnnotation| :sup:`Anotación de formulario`: útil para mostrar atributos"
+" de una capa vectorial en un archivo personalizado :file:`ui` (véase "
+":numref:`figure_custom_annotation`). Es similar al :ref:`formulario "
+"personalizado de atributos <provide_ui_file>`, pero se muestra en un "
+"elemento de anotación. Vea también `este vídeo "
+"<https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s>` de "
+"Tim Sutton para obtener más información."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1028
 msgid "Examples of balloon annotations"
 msgstr "Ejemplos de anotaciones de globos"
@@ -2376,6 +2812,14 @@ msgstr ""
 "correspondiente y haga clic en el lienzo del mapa. Se añade un globo vacío. "
 "Haga doble clic sobre él y se abrirá un cuadro de diálogo con varias "
 "opciones. Este diálogo es casi el mismo para todos los tipos de anotación:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1035
+msgid ""
+"At the top, a file selector to fill with the path to an :file:`html` or "
+":file:`ui` file depending on the type of annotation."
+msgstr ""
+"En la parte superior, un selector de archivo para rellenar con la ruta a un "
+"archivo :file:`html` o :file:`ui` dependiendo del tipo de anotación."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1037
 msgid ""
@@ -3065,6 +3509,15 @@ msgstr ""
 "|checkbox| :guilabel:`Exportar metadatos RDF` del documento, como el título,"
 " autor, fecha, descripción..."
 
+#: ../../docs/user_manual/map_views/map_view.rst:1329
+msgid ""
+"|unchecked| :guilabel:`Create Geospatial PDF`: Generate a `georeferenced PDF"
+" file <https://gdal.org/en/latest/drivers/raster/pdf.html>`_. You can:"
+msgstr ""
+"|unchecked| :guilabel:`Crear PDF geoespacial`: Genera un `archivo PDF "
+"georreferenciado <https://gdal.org/en/latest/drivers/raster/pdf.html>`_. "
+"Puede:"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1333
 msgid "Choose the Geospatial PDF :guilabel:`Format`"
 msgstr "Elija el formato PDF geoespacial :guilabel:`Format`."
@@ -3112,6 +3565,15 @@ msgstr ""
 "pulgadas`` de distancia). Esto puede reducir el tamaño y la complejidad del "
 "archivo de exportación (los archivos muy grandes pueden no cargarse en otras"
 " aplicaciones)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1353
+msgid ""
+"Set the :guilabel:`Text export`: controls whether text labels are always or "
+"preferably exported as :ref:`text or outline objects <render_labels_text>`."
+msgstr ""
+"Establecer la :guilabel:`Exportación de texto`: controla si las etiquetas de"
+" texto se exportan siempre o preferentemente como :ref:`objetos texto o "
+"contorno. <render_labels_text>`."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1356
 msgid "Click :guilabel:`Save` to select file location, name and format."
