@@ -813,11 +813,10 @@ Some of these options can be overridden at the :ref:`project level <measurements
 
 .. note::
 
-   In the Measure Tool, to ensure the reported distances and areas follow the project's CRS,
-   choose :guilabel:`Map units` from the :guilabel:`Preferred distance units` and :guilabel:`Preferred area units`
-   drop-down menu in the tool's settings.
+   To ensure the reported distance and area units follow the project's CRS,
+   choose :guilabel:`Units for distance measurements` and :guilabel:`Units for area measurements`
+   from the drop-down menu in the :menuselection:`Project --> Properties… --> General --> Measurements`.
    This setting makes the measurement results dynamically adapt to the project's CRS.
-   If a fixed unit is selected instead, results will always be reported in that unit, regardless of CRS changes.
 
 .. _measure_copy_settings:
 
@@ -1759,11 +1758,10 @@ You can indeed choose:
 
 .. note::
 
-   To make sure measurement units (for distance and area) automatically reflect the units of the current project's CRS,
-   you must select the :guilabel:`Map Units` option in both the project settings and the global settings:
-
-   * the :guilabel:`Measurements` section of the :guilabel:`Project Properties` dialog,  
-   * the global settings under :menuselection:`Settings --> Options --> Map Tools`.
+   To ensure measurement units (for distance and area) reflect the units of the current project's CRS,
+   select the corresponding unit from the drop-down menu.
+   If you are unsure which unit your desired CRS uses for its coordinates,
+   you can choose :guilabel:`Map Units`, which will use the units of the current project's CRS.
 
 They are used in:
 
