@@ -2440,10 +2440,10 @@ Advanced parameters
        Default: 0
      - How to manage existing features. Valid methods are:
 
-       0 --- Create or overwrite file
-       1 --- Create or overwrite layer
-       2 --- Append features to existing layer, but do not create new fields
-       3 --- Append features to existing layer, and create new fields if needed  
+       * 0 --- Create or overwrite file
+       * 1 --- Create or overwrite layer
+       * 2 --- Append features to existing layer, but do not create new fields
+       * 3 --- Append features to existing layer, and create new fields if needed  
 
 Outputs
 .......
