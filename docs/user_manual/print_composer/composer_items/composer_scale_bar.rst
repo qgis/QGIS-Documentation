@@ -88,9 +88,8 @@ provides the functionalities to set the units of display and some text formattin
   them).
 * Select the :guilabel:`Method` for scale bar calculation: Depending on the map CRS and extent,
   the distance reported in the scale bar may not be the same measured over the map.
-  This option lets you specify the method you would like to use:
-  :guilabel:`Average Top, Middle and Bottom Scales`, :guilabel:`Calculate along Top of Map`,
-  :guilabel:`Calculate along Middle of Map` or :guilabel:`Calculate along Bottom of Map`.
+  This option, which defaults to the :ref:`project's scale calculation method <scale_calculation_method>`,
+  helps you specify the one you would like to use for this particular scale bar.
 
 Segments
 --------
