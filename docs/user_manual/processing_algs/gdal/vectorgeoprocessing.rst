@@ -41,7 +41,7 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Buffer distance**
      - ``DISTANCE``
-     - [number: double]
+     - [numeric: double]
 
        Default: 10.0
      - Minimum: 0.0
@@ -487,7 +487,7 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Offset distance (left-sided: positive, right-sided: negative)**
      - ``DISTANCE``
-     - [number: double]
+     - [numeric: double]
 
        Default: 10.0
      -
@@ -582,7 +582,7 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Buffer distance**
      - ``DISTANCE``
-     - [number: double]
+     - [numeric: double]
 
        Default: 10.0
      -
@@ -709,7 +709,7 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Distance from line start represented as a fraction of line length**
      - ``DISTANCE``
-     - [number: double]
+     - [numeric: double]
 
        Default: 0.5
      -
