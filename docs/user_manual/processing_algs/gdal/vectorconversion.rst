@@ -234,7 +234,7 @@ Basic parameters
       - Input raster layer
    *  - **A fixed value to burn**
       - ``BURN``
-      - [number: double]
+      - [numeric: double]
 
         Default: 0.0
       - The value to burn
@@ -334,7 +334,7 @@ Basic parameters
 
        Optional
      - ``BURN``
-     - [number: double]
+     - [numeric: double]
 
        Default: 0.0
      - A fixed value to burn into a band for all features.
@@ -359,7 +359,7 @@ Basic parameters
 
    * - **Width/Horizontal resolution**
      - ``WIDTH``
-     - [number: double]
+     - [numeric: double]
 
        Default: 0.0
      - Sets the width (if size units is "Pixels") or horizontal
@@ -367,7 +367,7 @@ Basic parameters
        output raster. Minimum value: 0.0.
    * - **Height/Vertical resolution**
      - ``HEIGHT``
-     - [number: double]
+     - [numeric: double]
 
        Default: 0.0
      - Sets the height (if size units is "Pixels") or vertical
@@ -390,7 +390,7 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number: double]
+     - [numeric: double]
 
        Default: 0.0
      - Assigns a specified NoData value to output bands
@@ -454,7 +454,7 @@ Advanced parameters
 
        Optional
      - ``INIT``
-     - [number: double]
+     - [numeric: double]
      - Pre-initializes the output image bands with this value.
        Not marked as the NoData value in the output file.
        The same value is used in all the bands.
