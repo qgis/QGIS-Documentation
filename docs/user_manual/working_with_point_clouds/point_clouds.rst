@@ -481,7 +481,7 @@ identify actual holes in the data.
 Virtual Point Cloud Options
 ...........................
 
-The :guilabel:`Virtual Point Cloud Options` are available only when the layer is a :ref:`virtual point cloud <virtual_point_cloud>`.
+The :guilabel:`Virtual Point Cloud Options` are available only when the layer is a :ref:`virtual point cloud (VPC) <virtual_point_cloud>`.
 QGIS renders the overview of the VPC when zoomed out, if an overview is present.
 This provides a seamless transition from the overview to the detailed display of individual point clouds as you zoom in.
 
