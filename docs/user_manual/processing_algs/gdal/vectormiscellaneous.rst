@@ -47,7 +47,7 @@ Parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output layer containing only the duplicates.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -129,7 +129,7 @@ Basic parameters
      - ``OUTPUT``
      - [vector: any]
      - Specification of the output layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -898,7 +898,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output HTML file that includes the file
-       information. One of:
+       information. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1016,7 +1016,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output JSON file that includes the file
-       information. One of:
+       information. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**

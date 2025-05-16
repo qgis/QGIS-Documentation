@@ -69,7 +69,7 @@ Basic parameters
      - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Specify the output line layer with offset features. One of:
+     - Specify the output line layer with offset features. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -233,7 +233,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Output vector layer with translated (moved) copies
        of the features.
-       The original features are also copied. One of:
+       The original features are also copied. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -358,7 +358,7 @@ Parameters
      - [vector: geometry]
 
        Default: ``[Create temporary layer]``
-     - Resulting vector grid layer. One of:
+     - Resulting vector grid layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -459,7 +459,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specify the resulting point layer. One of:
+     - Specify the resulting point layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -530,7 +530,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Resulting point layer with pixel centroids. One of:
+     - Resulting point layer with pixel centroids. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -604,7 +604,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Resulting point layer of pixel centroids. One of:
+     - Resulting point layer of pixel centroids. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -682,7 +682,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the point vector layer for the geotagged photos.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -696,7 +696,7 @@ Parameters
 
        Default: ``[Skip output]``
      - Specify the table of unreadable or non-geotagged photos.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -802,7 +802,7 @@ Parameters
      - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Specify the line vector layer of the path. One of:
+     - Specify the line vector layer of the path. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -816,7 +816,7 @@ Parameters
 
        Default: ``[Skip output]``
      - Specify the directory that will contain the description
-       files of points and paths. One of:
+       files of points and paths. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types_skip**
@@ -922,7 +922,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - The output random points. One of:
+     - The output random points. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1014,7 +1014,7 @@ Basic parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - The output random points. One of:
+     - The output random points. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1112,7 +1112,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - The output random points. One of:
+     - The output random points. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1228,7 +1228,7 @@ Basic parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - The output random points. One of:
+     - The output random points. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1392,7 +1392,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - The output random points. One of:
+     - The output random points. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1508,7 +1508,7 @@ Basic parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - The output random points. One of:
+     - The output random points. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1648,7 +1648,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the resulting point layer of pixels centroids.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1722,7 +1722,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the resulting polygon layer of pixel extents.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1830,7 +1830,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specify the output regular point layer. One of:
+     - Specify the output regular point layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**

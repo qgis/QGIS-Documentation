@@ -89,7 +89,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output line layer representing the contours
-       of the mesh layer. One of:
+       of the mesh layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -101,7 +101,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output polygon layer representing the contours
-       of the mesh layer. One of:
+       of the mesh layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -205,7 +205,7 @@ Parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -292,7 +292,7 @@ Parameters
      - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -380,7 +380,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -492,7 +492,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -580,7 +580,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -690,7 +690,7 @@ Parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -794,7 +794,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -888,7 +888,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -986,7 +986,7 @@ Parameters
      - [mesh]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**

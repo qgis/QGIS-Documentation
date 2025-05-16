@@ -54,7 +54,7 @@ Parameters
      - [vector: any]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output GPX file. One of:
+     - Specification of the output GPX file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -128,7 +128,7 @@ Parameters
      - [vector: point or line]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -209,7 +209,7 @@ Parameters
      - [vector: any]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**

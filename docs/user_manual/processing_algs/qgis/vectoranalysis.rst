@@ -49,7 +49,7 @@ Parameters
      - [vector: table]
 
        Default: ``[Create temporary layer]``
-     - Specify the output table for the generated statistics. One of:
+     - Specify the output table for the generated statistics. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -62,7 +62,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specification of the file for the calculated statistics. One of:
+     - Specification of the file for the calculated statistics. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
@@ -217,7 +217,7 @@ Parameters
      - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output (line) layer. One of:
+     - Specification of the output (line) layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -346,7 +346,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output layer. One of:
+     - Specification of the output layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -428,7 +428,7 @@ Basic parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specify the vector layer for the result of the clustering. One of:
+     - Specify the vector layer for the result of the clustering. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -575,7 +575,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output vector layer. One of:
+     - Specification of the output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -673,7 +673,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output line vector layer connecting the matching points.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -765,7 +765,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output point vector layer with the nearest hub.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -886,7 +886,7 @@ Basic parameters
      - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Specify the output hub line vector layer. One of:
+     - Specify the output hub line vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -994,7 +994,7 @@ Parameters
 
        Default:``[Create temporary layer]``
      - Specify the output vector layer for generated the clusters.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1087,7 +1087,7 @@ Parameters
      - [vector: table]
 
        Default:``[Create temporary layer]``
-     - Specify the summary table layer with unique values. One of:
+     - Specify the summary table layer with unique values. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -1101,7 +1101,7 @@ Parameters
 
        Default:``[Save to temporary file]``
      - HTML report of unique values in the
-       :menuselection:`Processing --> Results viewer`. One of:
+       :menuselection:`Processing --> Results viewer`. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
@@ -1196,7 +1196,7 @@ Parameters
      - [vector: point]
 
        Default:``[Create temporary layer]``
-     - Specify the (point vector) layer for the result. One of:
+     - Specify the (point vector) layer for the result. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1279,7 +1279,7 @@ Parameters
 
        Default:``[Save to temporary file]``
      - Specification of the HTML file for the computed statistics.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
@@ -1370,7 +1370,7 @@ Basic parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1494,7 +1494,7 @@ Parameters
      - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1588,7 +1588,7 @@ Basic parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specify the vector layer for the result of the clustering. One of:
+     - Specify the vector layer for the result of the clustering. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1697,7 +1697,7 @@ Parameters
      - [vector: table]
 
        Default: ``[Create temporary layer]``
-     - Specify the output table for the generated statistics. One of:
+     - Specify the output table for the generated statistics. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1876,7 +1876,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the output polygon layer with generated statistics. One of:
+     - Specify the output polygon layer with generated statistics. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**

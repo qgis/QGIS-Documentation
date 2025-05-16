@@ -36,7 +36,7 @@ Parameters
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the point cloud file to use as output. One of:
+     - Specify the point cloud file to use as output. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -121,7 +121,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the raster file to export the data to. One of:
+     - Specify the raster file to export the data to. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -245,7 +245,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the raster file to export the data to. One of:
+     - Specify the raster file to export the data to. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -361,7 +361,7 @@ Basic parameters
      - [vector]
 
        Default: ``[Save to temporary file]``
-     - Specify the vector file to export the data to. One of:
+     - Specify the vector file to export the data to. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
