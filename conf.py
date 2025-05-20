@@ -259,7 +259,7 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-    ('docs/about/index', 'aboutQGIS.tex',
+    ('docs/about/index', 'AboutQGIS.tex',
      f'About QGIS {version}', u'QGIS Project', 'manual'),
     ('docs/user_manual/index', 'DesktopUserGuide.tex',
      f'QGIS Desktop {version} User Guide', u'QGIS Project', 'manual'),
