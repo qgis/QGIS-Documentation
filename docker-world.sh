@@ -32,7 +32,7 @@ if [[ "$TARGETBRANCH" != "master" ]]; then \
 fi;
 
 # only languages which have translations in transifex
-: ${langs:=en cs de es fr hu it ja ko lt nl pt_BR pt_PT ro ru zh-Hans}
+: ${langs:=en cs de es fr hu it ja ko lt nl pl pt_BR pt_PT ro ru zh-Hans}
 #: ${langs:=en}
 
 # if you only want to build one language, do:
