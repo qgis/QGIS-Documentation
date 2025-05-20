@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-11 13:54+0000\n"
+"POT-Creation-Date: 2025-05-02 02:14+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -95,83 +95,222 @@ msgstr ""
 "kaladėlės, ArcGIS paslaugos, ...) taipogi palaikomos QGIS tiekėjų. Daugiau "
 "informacijos apie kai kuriuos iš jų rasite skyriuje :ref:`working_with_ogc`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1747
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:37
+msgid ""
+"You can read supported files from archived folders and use QGIS native "
+"formats such as QML files (:ref:`qgisstylefile`) and virtual and memory "
+"layers."
+msgstr ""
+"Jūs galite skaityti palaikomus failus iš archyvų aplankų ir naudoti QGIS "
+"vidinius formatus, tokius kaip QML failus (:ref:`qgisstylefile`) ir "
+"virtualius bei atminties sluoksnius."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:41
+msgid ""
+"More than 80 vector and 140 raster formats are supported by `GDAL "
+"<https://gdal.org/en/latest/>`_ and QGIS native providers."
+msgstr ""
+"`GDAL <https://gdal.org/en/latest/>`_ ir vidiniai QGIS tiekėjai palaiko "
+"daugiau nei 80 vektorinių ir 140 rastro formatų."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:46
+msgid ""
+"Not all of the listed formats may work in QGIS for various reasons. For "
+"example, some require external proprietary libraries, or the GDAL/OGR "
+"installation of your OS may not have been built to support the format you "
+"want to use. To see the list of available formats, run the command line "
+"``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster), "
+"or check the :menuselection:`Settings --> Options --> GDAL` menu in QGIS."
+msgstr ""
+"Ne visi išvardinti formatai gali veiktu QGIS dėl įvairių priežasčių. "
+"Pavyzdžiui kai kuriems reikia išorinių nuosavybinių bibliotekų ar jūsų OS "
+"GDAL/OGR bibliotekų versijos gali nepalaikyti jums reikiamo formato. "
+"Norėdami pažiūrėti galimų formatų sąrašą, komandinėje eilutėje paleiskite "
+"``ogrinfo --formats`` (vektoriniams) ir ``gdalinfo --formats`` (rastrams) "
+"arba žiūrėkite QGIS meniu punktą :menuselection:`Nustatymai --> Parinktys "
+"--> GDAL`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:55
+msgid ""
+"In QGIS, depending on the data format, there are different tools to open a "
+"dataset, mainly available in the :menuselection:`Layer --> Add Layer -->` "
+"menu or from the :guilabel:`Manage Layers` toolbar (enabled through "
+":menuselection:`View --> Toolbars` menu). However, all these tools point to "
+"a unique dialog, the :guilabel:`Data Source Manager` dialog, that you can "
+"open with the |dataSourceManager| :sup:`Open Data Source Manager` button, "
+"available on the :guilabel:`Data Source Manager Toolbar`, or by pressing "
+":kbd:`Ctrl+L`. The :guilabel:`Data Source Manager` dialog "
+"(:numref:`figure_datasource_manager`) offers a unified interface to open "
+"file-based data as well as databases or web services supported by QGIS."
+msgstr ""
+"Priklausomai nuo duomenų formato, QGIS yra keli įrankiai, leidžiantis "
+"atidaryti duomenų rinkinį, pagrinde juos galima rasti meniu:`Sluoksnis --> "
+"Pridėti sluoksnį -->` ar įrankinėje :guilabel:`Tvarkyti sluoksnius` "
+"(įjungiama per meniu :menuselection:`Vaizdas --> Įrankinės`). Bet visi šie "
+"įrankiai veda į tą patį dialogą: :guilabel:`Duomenų šaltinių tvarkyklė`, "
+"kurį jūs galite atidaryti mygtuku |dataSourceManager| :sup:`Atverti duomenų "
+"šaltinių tvarkyklę`, o rasite jį :guilabel:`Duomenų šaltinių tvarkymo "
+"įrankinėje` ar spausdami :kbd:`Ctrl+L`. Dialogas :guilabel:`Duomenų šaltinių"
+" tvarkyklė` (:numref:`figure_datasource_manager`) teikia bendrą sąsają "
+"failais paremtiems duomenimis bei duomenų bazėms ar žiniatinklio paslaugoms,"
+" palaikomoms QGIS."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1729
 msgid "dataSourceManager"
 msgstr "dataSourceManager"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1749
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:73
+msgid "QGIS Data Source Manager dialog"
+msgstr "QGIS duomenų šaltinių tvarkyklės dialogas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:76
+msgid ""
+"Beside this main entry point, you also have the |dbManager| :guilabel:`DB "
+"Manager` plugin that offers advanced capabilities to analyze and manipulate "
+"connected databases. More information on DB Manager capabilities can be "
+"found in :ref:`dbmanager`."
+msgstr ""
+"Be šio bendro pradžios taško, dar yra priedas |dbManager| :guilabel:`DB "
+"tvarkyklė`, kuris teikia galimybę analizuoti ir manipuliuoti prijungtas "
+"duomenų bazes. Daugiau informacijos apie DB tvarkyklės galimybes rasite "
+"skyriuje :ref:`dbmanager`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1731
 msgid "dbManager"
 msgstr "dbManager"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1757
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:81
+msgid ""
+"There are many other tools, native or third-party plugins, that help you "
+"open various data formats."
+msgstr ""
+"Yra daug kitų įrankių, vidinių ar trečiųjų-šalių priedų, kurie padės jums "
+"atverti įvairius duomenų formatus."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:84
+msgid ""
+"This chapter will describe only the tools provided by default in QGIS for "
+"loading data. It will mainly focus on the :guilabel:`Data Source Manager` "
+"dialog but more than describing each tab, it will also explore the tools "
+"based on the data provider or format specificities."
+msgstr ""
+"Šiame skyriuje aprašomi tik pagal nutylėjimą QGIS esantys duomenų įkėlimo "
+"įrankiai. Pagrindinis dėmesys bus skiriamas dialogui :guilabel:`Duomenų "
+"šaltinių tvarkyklė`, bet be visų kortelių aprašymo taipogi bus tyrinėjami "
+"įrankiai pagal duomenų tiekėją ar formato specifiką."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:95
+msgid "The Browser Panel"
+msgstr "Naršyklės skydelis"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:97
+msgid ""
+"The :guilabel:`Browser` is one of the main ways to quickly and easily add "
+"your data to projects. It's available as:"
+msgstr ""
+":guilabel:`Naršyklė` - tai vienas iš pagrindinių būdų greitai ir lengvai "
+"pridėti duomenis į jūsų projektus. Jis veikia kaip:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:100
+msgid ""
+"a :guilabel:`Data Source Manager` tab, enabled pressing the "
+"|dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);"
+msgstr ""
+":guilabel:`Duomenų šaltinių tvarkyklės` kortelė, įjungiama paspaudus mygtuką"
+" |dataSourceManager| :sup:`Atverti duomenų šaltinių tvarkyklę` "
+"(:kbd:`Ctrl+L`);"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:102
+msgid ""
+"as a QGIS panel you can open from the menu :menuselection:`View --> Panels` "
+"(or |kde| :menuselection:`Settings --> Panels`) or by pressing "
+":kbd:`Ctrl+2`."
+msgstr ""
+"QGIS skydelis, kurį jūs galite atverti per meniu :menuselection:`Vaizdas -->"
+" Skydeliai` (ar |kde| :menuselection:`Nustatymai --> Skydeliai`) arba "
+"paspaudę :kbd:`Ctrl+2`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1739
 msgid "kde"
 msgstr "kde"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1717
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:105
+msgid ""
+"In both cases, the :guilabel:`Browser` helps you navigate in your file "
+"system and manage geodata, regardless the type of layer (raster, vector, "
+"table), or the datasource format (plain or compressed files, databases, web "
+"services)."
+msgstr ""
+"Abiem atvejais :guilabel:`Naršyklė` padeda jums naršyti po jūsų failų "
+"sistemą ir tvarkyti geoduomenis, nepriklausomai nuo sluoksnio tipo (rastras,"
+" vektorius, lentelė) ar duomenų šaltinio formato (paprasti ar suspausti "
+"failai, duomenų bazės, žiniatinklio šaltiniai)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1699
 msgid "addLayer"
 msgstr "addLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1775
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1757
 msgid "refresh"
 msgstr "refresh"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1751
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1733
 msgid "filterMap"
 msgstr "filterMap"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1745
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1727
 msgid "collapseTree"
 msgstr "collapseTree"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1759
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1741
 msgid "metadata"
 msgstr "metadata"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1753
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1735
 msgid "geoPackage"
 msgstr "geoPackage"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1779
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1761
 msgid "spatialite"
 msgstr "spatialite"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1769
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1751
 msgid "postgis"
 msgstr "postgis"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1755
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1737
 msgid "hana"
 msgstr "hana"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1761
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1743
 msgid "mssql"
 msgstr "mssql"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1765
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1747
 msgid "oracle"
 msgstr "oracle"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1791
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1773
 msgid "wms"
 msgstr "wms"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1783
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1765
 msgid "vectorTileLayer"
 msgstr "vectorTileLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1793
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1775
 msgid "xyz"
 msgstr "xyz"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1785
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1767
 msgid "wcs"
 msgstr "wcs"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1787
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1769
 msgid "wfs"
 msgstr "wfs"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1739
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1721
 msgid "afs"
 msgstr "afs"
 
@@ -183,39 +322,39 @@ msgstr ":guilabel:`Savybės...`"
 msgid ":menuselection:`Export Layer --> To File...`"
 msgstr ":menuselection:`Eksportuoti sluoksnį --> Į failą...`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1723
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1705
 msgid "addOgrLayer"
 msgstr "addOgrLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1729
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1711
 msgid "addRasterLayer"
 msgstr "addRasterLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1773
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1755
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1741
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1723
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1719
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1701
 msgid "addMeshLayer"
 msgstr "addMeshLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1713
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1695
 msgid "addDelimitedTextLayer"
 msgstr "addDelimitedTextLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1771
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1753
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1777
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1759
 msgid "setProjection"
 msgstr "setProjection"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1731
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1713
 msgid "addSpatiaLiteLayer"
 msgstr "addSpatiaLiteLayer"
 
@@ -227,66 +366,54 @@ msgstr "GPS"
 msgid "GRASS"
 msgstr "GRASS"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1727
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1709
 msgid "addPostgisLayer"
 msgstr "addPostgisLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1721
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1703
 msgid "addMssqlLayer"
 msgstr "addMssqlLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1725
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1707
 msgid "addOracleLayer"
 msgstr "addOracleLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1715
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1697
 msgid "addHanaLayer"
 msgstr "addHanaLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:847
-msgid ":ref:`create_ms_sql_server_connection`;"
-msgstr ":ref:`create_ms_sql_server_connection`;"
-
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:848
-msgid ":ref:`create_oracle_connection`;"
-msgstr ":ref:`create_oracle_connection`;"
-
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:849
-msgid ":ref:`create_hana_connection`."
-msgstr ":ref:`create_hana_connection`."
-
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1781
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1763
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1789
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1771
 msgid "win"
 msgstr "win"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1763
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1745
 msgid "nix"
 msgstr "nix"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1767
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1749
 msgid "osx"
 msgstr "osx"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1735
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1717
 msgid "addVectorTileLayer"
 msgstr "addVectorTileLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1737
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1719
 msgid "addXyzLayer"
 msgstr "addXyzLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1711
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1693
 msgid "addAfsLayer"
 msgstr "addAfsLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1733
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1715
 msgid "addTiledSceneLayer"
 msgstr "addTiledSceneLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1743
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1725
 msgid "cloud"
 msgstr "cloud"

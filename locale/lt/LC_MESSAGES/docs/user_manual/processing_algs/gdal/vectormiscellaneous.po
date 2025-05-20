@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:45+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -42,6 +42,19 @@ msgstr "Įvairūs vektoriniai"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:14
 msgid "Build virtual vector"
 msgstr "Kurti virtualų vektorių"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:15
+msgid "Creates a virtual vector layer that contains a set of vector layers."
+msgstr ""
+"Kuria virtualų vektorinį sluoksnį, kuriame yra vektorinių sluoksnių aibė."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:17
+msgid ""
+"This algorithm is especially useful in case another algorithm needs multiple"
+" layers but accept only one ``vrt`` in which the layers are specified."
+msgstr ""
+"Šis algoritmas ypatingai naudingas, kai kitam algoritmui reikia kelių "
+"sluoksnių, bet jis priima tik vieną ``vrt``, kuriame nurodyti sluoksniai."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:22
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:95
@@ -116,6 +129,10 @@ msgstr "Tipas"
 msgid "Description"
 msgstr "Aprašymas"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:32
+msgid "**Input datasources**"
+msgstr "**Įvesties duomenų šaltiniai**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:33
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:110
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:222
@@ -124,6 +141,20 @@ msgstr "Aprašymas"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:989
 msgid "``INPUT``"
 msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:34
+msgid "[vector: any] [list]"
+msgstr "[vektorius: bet koks] [sąrašas]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:35
+msgid "Select the vector layers you want to use to build the virtual vector"
+msgstr ""
+"Parinkite vektorinius sluoksnius, kuriuos norite naudoti kuriant virtualų "
+"vektorių"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:37
+msgid "**Create \"unioned\" VRT**"
+msgstr "**Kurti „sąjungos“ VRT**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:38
 msgid "``UNIONED``"
@@ -182,6 +213,15 @@ msgstr "[boolean]"
 msgid "Default: False"
 msgstr "Numatytas: ne"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:42
+msgid "Check if you want to unite all the vectors in a single ``vrt`` file"
+msgstr "Įjunkite, jei norite apjungti visus vektorius į vieną ``vrt`` failą"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:44
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:68
+msgid "**Virtual vector**"
+msgstr "**Virtualus vektorius**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:45
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:69
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:129
@@ -202,6 +242,10 @@ msgstr "[toks pat, kaip įvestis]"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1017
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:49
+msgid "Specify the output layer containing only the duplicates. One of:"
+msgstr "Nurodykite išvesties sluoksnį, kuriame yra tik dublikatai. Vienas iš:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -226,10 +270,12 @@ msgstr "Išvestys"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:176
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:223
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:519
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:871
-#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:990
 msgid "[vector: any]"
 msgstr "[vector: any]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:71
+msgid "The output virtual vector made from the chosen sources"
+msgstr "Išvesties vektorinis sluoksnis, sukurtas iš parinktų šaltinių"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:74
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:180
@@ -239,6 +285,10 @@ msgstr "[vector: any]"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1065
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:76
+msgid "**Algorithm ID**: ``gdal:buildvirtualvector``"
+msgstr "**Algoritmo ID**: ``gdal:buildvirtualvector``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -251,6 +301,16 @@ msgstr ""
 "įrankinėje. *parametrų žodynas* teikia parametrų pavadinimus ir reikšmes. "
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:91
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:202
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:502
+msgid ""
+"This algorithm is derived from the `GDAL ogr2ogr utility "
+"<https://gdal.org/en/latest/programs/ogr2ogr.html>`_."
+msgstr ""
+"Šis algoritmas kilęs iš `GDAL ogr2ogr įrankio "
+"<https://gdal.org/en/latest/programs/ogr2ogr.html>`_."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:98
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:858
@@ -321,6 +381,18 @@ msgstr "[sąrašas]"
 msgid "Default: 0"
 msgstr "Numatytas: 0"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:144
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:911
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1029
+msgid "Advanced parameters"
+msgstr "Išmanesni parametrai"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:154
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:471
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:815
+msgid "**Additional creation options**"
+msgstr "**Papildomos kūrimo parinktys**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:156
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:227
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:260
@@ -371,6 +443,20 @@ msgstr "Pasirinktinis"
 msgid "``OPTIONS``"
 msgstr "``OPTIONS``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:160
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:477
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:821
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:927
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1045
+msgid "Default: '' (no additional options)"
+msgstr "Numatytas: '' (jokių papildomų parinkčių)"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:161
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:478
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:822
+msgid "Additional GDAL creation options."
+msgstr "Papildomos GDAL kūrimo parinktys."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:218
 msgid "``DATABASE``"
 msgstr "``DATABASE``"
@@ -379,6 +465,24 @@ msgstr "``DATABASE``"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:524
 msgid "``SHAPE_ENCODING``"
 msgstr "``SHAPE_ENCODING``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:231
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:296
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:349
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:359
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:390
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:399
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:527
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:600
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:608
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:616
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:632
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:684
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:694
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:734
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:743
+msgid "Default: ''"
+msgstr "Numatytas: ''"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:234
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:530
@@ -409,7 +513,7 @@ msgstr "[crs]"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:576
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:652
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:704
-msgid "Default: None"
+msgid "Default: Not set"
 msgstr "Numatytas: jokio"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:269
@@ -476,6 +580,54 @@ msgstr "``SEGMENTIZE``"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:701
 msgid "``SPAT``"
 msgstr "``SPAT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:367
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:702
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:378
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:713
@@ -571,6 +723,11 @@ msgstr "``PASSWORD``"
 msgid "``FIELDS``"
 msgstr "``FIELDS``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:871
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:990
+msgid "[vector: geometry]"
+msgstr "[vektorius: geometrija]"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:872
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:991
 msgid "Input vector layer"
@@ -590,10 +747,20 @@ msgstr "``SUMMARY_ONLY``"
 msgid "``NO_METADATA``"
 msgstr "``NO_METADATA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:897
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:943
+msgid "[html]"
+msgstr "[html]"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:924
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1042
 msgid "``EXTRA``"
 msgstr "``EXTRA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:928
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1046
+msgid "Add extra GDAL command line options"
+msgstr "Pridėkite papildomas GDAL komandinės eilutės parinktis"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1002
 msgid "``FEATURES``"

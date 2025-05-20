@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-31 15:59+0000\n"
+"POT-Creation-Date: 2025-05-02 12:20+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -60,9 +60,39 @@ msgid ""
 msgstr ""
 "Teigiamas atstumas paslinks linijas į kairę, o neigiami atstumai - į dešinę."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:26
+msgid "In blue the source layer, in red the offset one"
+msgstr "Mėlynas - pradinis sluoksnis, raudonas - paslinktasis"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:28
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>` of line features"
+msgstr ""
+"|checkbox| Leidžia linijų :ref:`geoobjektus keisti vietoje "
+"<processing_inplace_edit>`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1871
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:32
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:179
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:411
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:575
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:889
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1081
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1347
+msgid ""
+"This algorithm drops existing primary keys or FID values and regenerates "
+"them in output layers."
+msgstr ""
+"Šis algoritmas išmeta esamus pirminius raktus ar FID reikšmes ir perkuria "
+"jas išvesties sluoksniuose."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:34
+msgid ":ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`"
+msgstr ":ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:37
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:184
@@ -287,18 +317,81 @@ msgstr "``INPUT``"
 msgid "[vector: line]"
 msgstr "[vektorius: linija]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:54
+msgid "Input line vector layer to use for the offsets."
+msgstr ""
+"Įvesties linijų vektorinis sluoksnis, kurį reikia naudoti poslinkiams."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:55
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:199
+msgid "**Number of features to create**"
+msgstr "**Kuriamų geoobjektų skaičius**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:56
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:200
 msgid "``COUNT``"
 msgstr "``COUNT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:201
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1214
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1263
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1494
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1543
+msgid "[numeric: integer] |dataDefine|"
+msgstr "[skaičius: sveikas skaičius] |dataDefine|"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1873
 msgid "dataDefine"
 msgstr "dataDefine"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:203
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1265
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1545
+msgid "Default: 10"
+msgstr "Numatytas: 10"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:60
+msgid "Number of offset copies to generate for each feature"
+msgstr "Kiekvienam geoobjektui kuriamų paslinktų kopijų skaičius"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:61
+msgid "**Offset step distance**"
+msgstr "**Poslinkio žingsnio atstumas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:62
 msgid "``OFFSET``"
 msgstr "``OFFSET``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:207
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:213
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:219
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:225
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1222
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1253
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1379
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1502
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1533
+msgid "[numeric: double] |dataDefine|"
+msgstr "[skaičius: slankaus kablelio] |dataDefine|"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:65
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:328
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:334
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1381
+msgid "Default: 1.0"
+msgstr "Numatytas: 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:66
+msgid "Distance between two consecutive offset copies"
+msgstr "Atstumas tarp dviejų viena po kitos einančių paslinktų kopijų"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:141
+msgid "**Offset lines**"
+msgstr "**Paslinktos linijos**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:68
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:142
@@ -357,6 +450,11 @@ msgstr "``OUTPUT``"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Numatytas: ``[Kurti laikiną sluoksnį]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:72
+msgid "Specify the output line layer with offset features. One of:"
+msgstr ""
+"Nurodykite išvesties linijų sluoksnį su paslinktais geoobjektais. Vienas iš:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -384,7 +482,18 @@ msgstr "Pridėti į sluoksnį..."
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 #: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "The file encoding can also be changed here."
-msgstr "Šia taipogi galima pakeisti failo koduotę."
+msgstr "Čia taipogi galima pakeisti failo koduotę."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1024
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1238
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1518
+msgid "Advanced parameters"
+msgstr "Išmanesni parametrai"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:90
+msgid "**Segments**"
+msgstr "**Segmentai**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:91
 msgid "``SEGMENTS``"
@@ -396,28 +505,29 @@ msgstr "``SEGMENTS``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:332
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:338
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:345
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:910
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:916
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:996
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1002
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1037
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1100
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1106
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1273
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1303
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1307
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1311
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1316
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1386
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1553
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1583
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1587
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1591
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1595
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1798
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1805
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:94
+msgid "Default: 8"
+msgstr "Numatyta: 8"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:95
+msgid ""
+"Number of line segments to use to approximate a quarter circle when creating"
+" rounded offsets"
+msgstr ""
+"Linijos segmentų skaičius, kurį naudoti aproksimuojant apskritimo ketvirtį "
+"kuriant apvalius poslinkius"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:97
+msgid "**Join style**"
+msgstr "**Jungimo stilius**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:98
 msgid "``JOIN_STYLE``"
@@ -435,9 +545,55 @@ msgstr "[sąrašas]"
 msgid "Default: 0"
 msgstr "Numatytas: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:102
+msgid ""
+"Specify whether round, miter or beveled joins should be used when offsetting"
+" corners in a line. One of:"
+msgstr ""
+"Nurodykite, kokie turi būti naudojami jungimai paslenkant linijų kampus: "
+"apvalūs, nukirsti ar nuožulnūs. Vienas iš:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:105
+msgid "0 --- Round"
+msgstr "0 --- Apvalūs"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:106
+msgid "1 --- Miter"
+msgstr "1 --- Mitra"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:107
+msgid "2 --- Bevel"
+msgstr "2 --- Kampas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:113
+msgid "Round, miter, and bevel join styles"
+msgstr "Apvalūs, mitros ir kampo jungimo stiliai"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:114
+msgid "**Miter limit**"
+msgstr "**Mitros riba**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:115
 msgid "``MITER_LIMIT``"
 msgstr "``MITER_LIMIT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:118
+msgid "Default: 2.0"
+msgstr "Numatyta: 2.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:119
+msgid ""
+"Sets the maximum distance from the offset geometry to use when creating a "
+"mitered join as a factor of the offset distance (only applicable for miter "
+"join styles). Minimum: 1.0"
+msgstr ""
+"Nustato maksimalų atstumą nuo paslenkamos geometrijos kuriant mitros jungtį."
+" Nurodomas kaip poslinkio atstumo koeficientas (taikoma tik mitros jungimo "
+"stiliui). Minimalus: 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:128
+msgid "A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1"
+msgstr "10m buferis su 2 riba ir 10m buferis su 1 riba"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:131
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:243
@@ -459,6 +615,14 @@ msgstr "``MITER_LIMIT``"
 msgid "Outputs"
 msgstr "Išvestys"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:144
+msgid ""
+"Output line layer with offset features. The original features are also "
+"copied."
+msgstr ""
+"Išvesties linijų sluoksnis su paslinktais geoobjektais. Nukopijuoti ir "
+"pradiniai geoobjektai."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:148
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:261
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:392
@@ -479,6 +643,10 @@ msgstr "Išvestys"
 msgid "Python code"
 msgstr "Pythono kodas"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:150
+msgid "**Algorithm ID**: ``native:arrayoffsetlines``"
+msgstr "**Algoritmo ID**: ``native:arrayoffsetlines``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -491,6 +659,31 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:160
+msgid "Array of translated features"
+msgstr "Pakeistų geoobjektų masyvas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:161
+msgid ""
+"Creates copies of features in a layer by creating multiple translated "
+"versions of each. Each copy is incrementally displaced by a preset amount in"
+" the X, Y and/or Z axis."
+msgstr ""
+"Sukuria sluoksnyje kelias pakeistas geoobjektų kopijas. Kiekviena kopija "
+"inkrementiškai pastumta nurodytu atstumu X, Y ir/ar Z ašyse."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:166
+msgid "M values present in the geometry can also be translated."
+msgstr "Geometrijoje esančias M reikšmes taipogi galima keisti."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:171
+msgid ""
+"Input layers in blue tones, output layers with translated features in red "
+"tones"
+msgstr ""
+"Įvesties sluoksnis mėlynas, išvesties sluoksnis su pakeistais geoobjektais -"
+" raudonas"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:174
 msgid ""
 "|checkbox| Allows :ref:`features in-place modification "
@@ -499,33 +692,119 @@ msgstr ""
 "|checkbox| Leidžia taškų, linijų ir poligonų :ref:`geoobjektus keisti "
 "vietoje <processing_inplace_edit>`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:181
+msgid ":ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`"
+msgstr ":ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:197
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:358
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:380
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:427
-msgid "[vector: any]"
-msgstr "[vector: any]"
+msgid "[vector: geometry]"
+msgstr "[vektorius: geometrija]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:198
+msgid "Input vector layer to translate"
+msgstr "Keičiamas įvesties sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:204
+msgid "Number of copies to generate for each feature"
+msgstr "Kiekvieno geoobjekto kuriamų kopijų skaičius"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:205
+msgid "**Step distance (x-axis)**"
+msgstr "**Žingsnio atstumas (x-ašis)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:206
 msgid "``DELTA_X``"
 msgstr "``DELTA_X``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:209
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:215
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:221
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:227
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:340
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:347
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:918
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1004
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1108
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1224
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1255
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1388
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1504
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1535
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1807
+msgid "Default: 0.0"
+msgstr "Numatytas: 0.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:210
+msgid "Displacement to apply on the X axis"
+msgstr "X ašyje taikomas poslinkis"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:211
+msgid "**Step distance (y-axis)**"
+msgstr "**Žingsnio atstumas (y-ašis)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:212
 msgid "``DELTA_Y``"
 msgstr "``DELTA_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:216
+msgid "Displacement to apply on the Y axis"
+msgstr "Y ašyje taikomas poslinkis"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:217
+msgid "**Step distance (z-axis)**"
+msgstr "**Žingsnio atstumas (z-ašis)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:218
 msgid "``DELTA_Z``"
 msgstr "``DELTA_Z``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:222
+msgid "Displacement to apply on the Z axis"
+msgstr "Z ašyje taikomas poslinkis"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:223
+msgid "**Step distance (m values)**"
+msgstr "**Žingsnio atstumas (m reikšmės)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:224
 msgid "``DELTA_M``"
 msgstr "``DELTA_M``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:228
+msgid "Displacement to apply on M"
+msgstr "M taikomas poslinkis"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:229
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:253
+msgid "**Translated**"
+msgstr "**Pakeista**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:231
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:255
 msgid "[same as input]"
 msgstr "[toks pat, kaip įvestis]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:234
+msgid ""
+"Output vector layer with translated (moved) copies of the features. The "
+"original features are also copied. One of:"
+msgstr ""
+"Išvesties vektorinis sluoksnis su pakeistomis (paslinktomis) geoobjektų "
+"kopijomis. Nukopijuojami ir pradiniai geoobjektai. Vienas iš:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:256
+msgid ""
+"Output vector layer with translated (moved) copies of the features. The "
+"original features are also copied."
+msgstr ""
+"Išvesties vektorinis sluoksnis su pakeistomis (paslinktomis) geoobjektų "
+"kopijomis. Pradiniai geoobjektai irgi nukopijuojami."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:263
+msgid "**Algorithm ID**: ``native:arraytranslatedfeatures``"
+msgstr "**Algoritmo ID**: ``native:arraytranslatedfeatures``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:303
 msgid "``TYPE``"
@@ -536,6 +815,55 @@ msgstr "``TYPE``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1788
 msgid "``EXTENT``"
 msgstr "``EXTENT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:317
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:987
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1789
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:325
 msgid "``HSPACING``"
@@ -564,6 +892,10 @@ msgstr "``CRS``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1824
 msgid "[crs]"
 msgstr "[crs]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:427
+msgid "[vector: any]"
+msgstr "[vector: any]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:430
 msgid "``XFIELD``"
@@ -607,6 +939,11 @@ msgstr "``ZFIELD``"
 msgid "``MFIELD``"
 msgstr "``MFIELD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:449
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1006
+msgid "**Target CRS**"
+msgstr "**Paskirties CRS**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:450
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1007
 msgid "``TARGET_CRS``"
@@ -647,6 +984,20 @@ msgstr "[vector: point]"
 msgid "``INPUT_RASTER``"
 msgstr "``INPUT_RASTER``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:522
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:596
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1633
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1707
+msgid "[raster]"
+msgstr "[rastras]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:523
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:597
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1634
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1708
+msgid "Input raster layer"
+msgstr "Įvesties rastro sluoksnis"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:525
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:599
 msgid "``INPUT_VECTOR``"
@@ -659,6 +1010,12 @@ msgstr "``INPUT_VECTOR``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1744
 msgid "[vector: polygon]"
 msgstr "[vektorius: poligonas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:601
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1211
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1366
+msgid "Input polygon vector layer"
+msgstr "Įvesties poligonų vektorinis sluoksnis"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:668
 msgid "``FOLDER``"
@@ -693,6 +1050,11 @@ msgstr "Praleisti išvestį"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:725
 msgid "``INVALID``"
 msgstr "``INVALID``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:695
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:726
+msgid "[vector: table]"
+msgstr "[vektorius: lentelė]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:697
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:817
@@ -736,6 +1098,32 @@ msgstr ":ref:`qgisrandompointsonlines`"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1493
 msgid "``POINTS_NUMBER``"
 msgstr "``POINTS_NUMBER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:910
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:996
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1037
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1100
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1273
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1303
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1307
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1311
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1316
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1553
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1583
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1587
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1591
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1595
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1798
+msgid "[numeric: integer]"
+msgstr "[skaičius: sveikas skaičius]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:912
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:998
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1102
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1216
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1496
+msgid "Default: 1"
+msgstr "Numatytas: 1"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:915
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1001
@@ -830,10 +1218,20 @@ msgstr "``LINES_WITH_MISSED_POINTS``"
 msgid "``POINTS_GENERATED``"
 msgstr "``POINTS_GENERATED``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1635
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1709
+msgid "**Band number**"
+msgstr "**Juostos numeris**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1636
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1710
 msgid "``RASTER_BAND``"
 msgstr "``RASTER_BAND``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1637
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1711
+msgid "[raster band]"
+msgstr "[rastro juosta]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1639
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1713
@@ -853,6 +1251,10 @@ msgstr "[string]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1797
 msgid "``SPACING``"
 msgstr "``SPACING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1800
+msgid "Default: 100"
+msgstr "Numatytas: 100"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1804
 msgid "``INSET``"

@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -35,98 +35,196 @@ msgstr ""
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:2
+msgid "Interpolation"
+msgstr "Interpoliacija"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:14
+msgid "Heatmap (kernel density estimation)"
+msgstr "Intensyvumo žemėlapis (branduolio tankio įvertinimas)"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:15
+msgid ""
+"Creates a density (heatmap) raster of an input point vector layer using "
+"kernel density estimation."
+msgstr ""
+"Sukuria įvesties vektorinio taškų sluoksnio tankio (intensyvumo) rastrą "
+"naudojant branduolio tankio įvertinimą."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:18
+msgid ""
+"The density is calculated based on the number of points in a location, with "
+"larger numbers of clustered points resulting in larger values. Heatmaps "
+"allow easy identification of *hotspots* and clustering of points."
+msgstr ""
+"Tankis skaičiuojamas pagal taškų skaičių vietoje, kur didesni susispietusių "
+"taškų skaičiai reiškia didesnes reikšmes. Intensyvumo žemėlapiai leidžia "
+"lengvai identifikuoti taškų susispietimo „karštus taškus“."
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:24
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:270
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:403
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:524
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:402
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:523
 msgid "Parameters"
 msgstr "Parametrai"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:31
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:160
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:277
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:365
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:413
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:459
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:487
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:531
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:632
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:364
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:412
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:458
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:486
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:530
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:629
 msgid "Label"
 msgstr "Užrašas"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:32
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:161
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:278
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:366
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:414
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:460
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:488
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:532
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:633
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:365
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:413
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:459
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:487
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:531
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:630
 msgid "Name"
 msgstr "Pavadinimas"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:33
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:162
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:279
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:367
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:415
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:461
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:489
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:533
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:634
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:366
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:414
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:460
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:488
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:532
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:631
 msgid "Type"
 msgstr "Tipas"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:34
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:163
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:280
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:368
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:416
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:462
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:490
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:534
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:635
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:367
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:415
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:461
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:489
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:533
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:632
 msgid "Description"
 msgstr "Aprašymas"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:35
+msgid "**Point layer**"
+msgstr "**Taškų sluoksnis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:36
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:418
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:417
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:37
 msgid "[vector: point]"
-msgstr "[vector: point]"
+msgstr "[vektorius: taškai]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:38
+msgid "Point vector layer to use for the heatmap"
+msgstr ""
+"Vektorinis taškų sluoksnis, kurį reikia naudoti intensyvumo žemėlapiui"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:39
+msgid "**Radius**"
+msgstr "**Spindulys**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:40
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:427
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:426
 msgid "``RADIUS``"
 msgstr "``RADIUS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:41
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:51
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:109
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:313
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:329
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:423
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:428
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:435
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:586
-msgid "[number]"
-msgstr "[number]"
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:312
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:328
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:427
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:434
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:584
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:43
+msgid "Default: 100.0"
+msgstr "Numatytas: 100.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:44
+msgid ""
+"Heatmap search radius (or kernel bandwidth) in map units. The radius "
+"specifies the distance around a point at which the influence of the point "
+"will be felt. Larger values result in greater smoothing, but smaller values "
+"may show finer details and variation in point density."
+msgstr ""
+"Intensyvumo žemėlapio paieškos spindulys (ar branduolio pralaidumas) "
+"žemėlapio vienetais. Spindulys nurodo atstumą aplinką tašką, kuriuo bus "
+"juntama taško įtaką. Didesnės reikšmės reikš didesnį glotninimą, o mažesnės "
+"reikšmės rodys mažesnes taškų tankumo detales."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:326
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:582
+msgid "**Output raster size**"
+msgstr "**Išvesties rastro dydis**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:50
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:328
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:434
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:585
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:327
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:433
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:583
 msgid "``PIXEL_SIZE``"
 msgstr "``PIXEL_SIZE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:53
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:330
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:586
+msgid "Default: 0.1"
+msgstr "Numatytas: 0.1"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:54
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:331
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:587
+msgid "Pixel size of the output raster layer in layer units."
+msgstr "Išvesties rastro sluoksnio pikselio dydis sluoksnio vienetais."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:333
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:589
+msgid ""
+"In the GUI, the size can be specified by the number of rows (``Number of "
+"rows``) / columns (``Number of columns``) **or** the pixel size( ``Pixel "
+"Size X`` / ``Pixel Size Y``). Increasing the number of rows or columns will "
+"decrease the cell size and increase the file size of the output raster. The "
+"values in ``Rows``, ``Columns``, ``Pixel Size X`` and ``Pixel Size Y`` will "
+"be updated simultaneously - doubling the number of rows will double the "
+"number of columns, and the cell size will be halved. The extent of the "
+"output raster will remain the same (approximately)."
+msgstr ""
+"Naudotojo sąsajoje dydį galima nurodyti skaičių eilučių (``Eilučių "
+"skaičius``) / stulpelių (``Stulpelių skaičius``) **ar** pikselio dydį( "
+"``Pikselio dydis X`` / ``Pikselio dydis Y``). Didinat eilučių ar stulpelių "
+"skaičių mažės celės dydis ir didės išvesties rastro failo dydis. Atitinkamai"
+" bus keičiamos reikšmės ``Eilutės``, ``Stulpeliai``, ``Pikselio dydis X`` ir"
+" ``Pikselio dydis Y` - dvigubinant eilučių skaičių dvigubės ir stulpeliai, o"
+" celės dydis bus padalintas per pusę. Išvesties rastro apimtis liks tokia "
+"pati (daugmaž)."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:67
+msgid "**Radius from field**"
+msgstr "**Spindulys iš lauko**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:69
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:76
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:107
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:465
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:464
 msgid "Optional"
 msgstr "Pasirinktinis"
 
@@ -134,9 +232,40 @@ msgstr "Pasirinktinis"
 msgid "``RADIUS_FIELD``"
 msgstr "``RADIUS_FIELD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:71
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:78
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:422
+msgid "[tablefield: numeric]"
+msgstr "[lentelės laukas: skaičius]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:72
+msgid ""
+"Sets the search radius for each feature from an attribute field in the input"
+" layer."
+msgstr ""
+"Nustato kiekvieno geoobjekto paieškos spindulį pagal įvesties sluoksnio "
+"atributų lauką."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:74
+msgid "**Weight from field**"
+msgstr "**Svoris iš lauko**"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:77
 msgid "``WEIGHT_FIELD``"
 msgstr "``WEIGHT_FIELD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:79
+msgid ""
+"Allows input features to be weighted by an attribute field. This can be used"
+" to increase the influence certain features have on the resultant heatmap."
+msgstr ""
+"Leidžia įvesties geoobjektams taikyti svorį iš atributų lauko. Tai gali būti"
+" naudojama didinat kai kurių geoobjektų įtaką gaunamame intensyvumo "
+"žemėlapyje."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:82
+msgid "**Kernel shape**"
+msgstr "**Branduolio forma**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:83
 msgid "``KERNEL``"
@@ -144,35 +273,170 @@ msgstr "``KERNEL``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:84
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:131
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:567
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:565
 msgid "[enumeration]"
 msgstr "[sąrašas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:86
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:133
+msgid "Default: *0*"
+msgstr "Numatyta: *0*"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:87
+msgid ""
+"Controls the rate at which the influence of a point decreases as the "
+"distance from the point increases. Different kernels decay at different "
+"rates, so a triweight kernel gives features greater weight for distances "
+"closer to the point then the Epanechnikov kernel does. Consequently, "
+"triweight results in “sharper” hotspots and Epanechnikov results in "
+"“smoother” hotspots."
+msgstr ""
+"Valdo greitį, kuriuo taško įtaka mažėja didėjant atstumui nuo taško. "
+"Skirtingi branduoliai silpnėja skirtingais greičiais, taigi trigubo svorio "
+"branduolys reikš geoobjektus su didesniu svoriu atstumams arčiau taško nei "
+"Epanechnikovo branduolys. Tai reiškia, kad trigubo svorio branduolys sukurs "
+"„tikslesnius“ karštus taškus nei Epanechnikovo „glotnesni“ karštieji taškai."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:95
+msgid ""
+"There are many shapes available (please see the `Wikipedia page "
+"<https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_"
+" for further information):"
+msgstr ""
+"Yra daug skirtingų formų (daugiau informacijos rasite `Wikipedia puslapyje "
+"<https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_):"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:99
+msgid "0 --- Quartic"
+msgstr "0 --- Ketvirtinis"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:100
+msgid "1 --- Triangular"
+msgstr "1 --- Trikampis"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:101
+msgid "2 --- Uniform"
+msgstr "2 --- Vienodas"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:102
+msgid "3 --- Triweight"
+msgstr "3 --- Trigubo svorio"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:103
+msgid "4 --- Epanechnikov"
+msgstr "4 --- Epanechnikovo"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:105
+msgid "**Decay ratio (Triangular kernels only)**"
+msgstr "**Mažėjimo greitis (tik trikampiams branduoliams)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:108
 msgid "``DECAY``"
 msgstr "``DECAY``"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:111
+msgid "Default: *0.0*"
+msgstr "Numatytas: *0.0*"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:112
+msgid ""
+"Can be used with Triangular kernels to further control how heat from a "
+"feature decreases with distance from the feature."
+msgstr ""
+"Gali būti naudojamas su trikampiais branduoliais, norint dar labiau valdyti,"
+" kaip geoobjekto intensyvumas mažėja tolstant nuo geoobjekto."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:116
+msgid ""
+"A value of 0 (=minimum) indicates that the heat will be concentrated in the "
+"center of the given radius and completely extinguished at the edge."
+msgstr ""
+"Reikšmė 0 (=minimali) rodo, kad intensyvumas bus koncentruojamas nurodyto "
+"spindulio viduryje ir bus visiškai išnykęs kraštuose."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:119
+msgid ""
+"A value of 0.5 indicates that pixels at the edge of the radius will be given"
+" half the heat as pixels at the center of the search radius."
+msgstr ""
+"Reikšmė 0.5 nurodo, kad pikseliai spindulio krašte bus per pusę mažesnio "
+"intensyvumo nei nurodyto paieškos spindulio centre."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:122
+msgid ""
+"A value of 1 means the heat is spread evenly over the whole search radius "
+"circle. (This is equivalent to the ‘Uniform’ kernel.)"
+msgstr ""
+"Reikšmė 1 reiškia, kad intensyvumas per visą paieškos spindulį paskirstytas "
+"tolygiai. (Tai analogiška branduoliui „Tolygus“.)"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:125
+msgid ""
+"A value greater than 1 indicates that the heat is higher towards the edge of"
+" the search radius than at the center."
+msgstr ""
+"Už 1 didesnė reikšmė nurodo, kad intensyvumas didesnis ties paieškos "
+"spindulio kraštu, lyginant su centru."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:129
+msgid "**Output value scaling**"
+msgstr "**Išvesties reikšmių mastelio keitimas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:130
 msgid "``OUTPUT_VALUE``"
 msgstr "``OUTPUT_VALUE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:134
+msgid "Allow to change the values of the output heatmap raster. One of:"
+msgstr "Leidžia keisti išvesties intensyvumo rastro reikšmes. Viena iš:"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:137
+msgid "0 --- Raw"
+msgstr "0 --- Pradinis"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:138
+msgid "1 --- Scaled"
+msgstr "1 --- Pakeistas"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:140
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:164
+msgid "**Heatmap**"
+msgstr "**Intensyvumo žemėlapis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:141
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:165
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:345
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:369
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:440
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:491
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:600
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:634
+msgid "``OUTPUT``"
+msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:142
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:166
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:346
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:370
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:441
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:492
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:603
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:637
-msgid "``OUTPUT``"
-msgstr "``OUTPUT``"
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:601
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:635
+msgid "[raster]"
+msgstr "[rastras]"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:144
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:349
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:444
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:606
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:348
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:443
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:603
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:145
+msgid "Specify the output raster layer with kernel density values. One of:"
+msgstr ""
+"Nurodykite išvesties rastro sluoksnį su branduolio tankio reikšmėmis. Viena "
+"iš:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -184,22 +448,161 @@ msgid "Save to File…"
 msgstr "Įrašyti į failą..."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:153
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:358
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:480
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:625
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:357
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:479
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:622
 msgid "Outputs"
 msgstr "Išvestys"
 
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:661
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:167
+msgid "Raster layer with kernel density values"
+msgstr "Rastro sluoksnis su branduolio tankio reikšmėmis"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:170
+msgid "Example: Creating a Heatmap"
+msgstr "Pavyzdys: intensyvumo žemėlapio kūrimas"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:171
+msgid ""
+"For the following example, we will use the ``airports`` vector point layer "
+"from the QGIS sample dataset (see :ref:`label_sampledata`). Another "
+"excellent QGIS tutorial on making heatmaps can be found at "
+"`http://qgistutorials.com "
+"<http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_."
+msgstr ""
+"Šis pavyzdys naudos vektorinį taškų sluoksnį ``airports`` iš QGIS pavyzdinio"
+" duomenų rinkinio (žr. :ref:`label_sampledata`). Kitą puikią intensyvumo "
+"žemėlapių kūrimo QGIS pamoką galima rasti `http://qgistutorials.com "
+"<http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:177
+msgid ""
+"In :numref:`Figure_Heatmap_data_processing`, the airports of Alaska are "
+"shown."
+msgstr ":numref:`Figure_Heatmap_data_processing`, rodomi Aliaskos oro uostai."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:184
+msgid "Airports of Alaska"
+msgstr "Aliaskos oro uostai"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:187
+msgid ""
+"Open the :guilabel:`Heatmap (Kernel Density Estimation)` algorithm from the "
+"QGIS :guilabel:`Interpolation` group"
+msgstr ""
+"Atverkite algoritmą :guilabel:`Intensyvumas (branduolio tankio įvertinimas)`"
+" iš QGIS grupės :guilabel:`Interpoliacija`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:189
+msgid ""
+"In the :guilabel:`Point layer` |selectString| field, select ``airports`` "
+"from the list of point layers loaded in the current project."
+msgstr ""
+"Lauke :guilabel:`Taškų sluoksnis` |selectString| parinkite iš dabartiniame "
+"projekte įkeltų taškų sluoksnių sąrašo ``airports``."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:658
 msgid "selectString"
 msgstr "selectString"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:192
+msgid "Change the :guilabel:`Radius` to ``1000000`` meters."
+msgstr "Pakeiskite :guilabel:`Spindulį` į ``1000000`` metrų."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:193
+msgid ""
+"Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel size "
+"Y`, :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated."
+msgstr ""
+"Pakeiskite :guilabel:`Taško dydis X` į ``1000``. :guilabel:`Taško dydis Y`, "
+":guilabel:`Eilutės` ir :guilabel:`Stulpeliai` bus automatiškai pakeisti."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:196
+msgid ""
+"Click on :guilabel:`Run` to create and load the airports heatmap (see "
+":numref:`Figure_Heatmap_created_processing`)."
+msgstr ""
+"Spauskite :guilabel:`Vykdyti`, kad sukurtumėte ir įkeltumėte oro uostų "
+"intensyvumo žemėlapį (žr. :numref:`Figure_Heatmap_created_processing`)."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:204
+msgid "The Heatmap Dialog"
+msgstr "Intensyvumo žemėlapio dialogas"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:206
+msgid ""
+"QGIS will generate the heatmap and add it to your map window. By default, "
+"the heatmap is shaded in greyscale, with lighter areas showing higher "
+"concentrations of airports. The heatmap can now be styled in QGIS to improve"
+" its appearance."
+msgstr ""
+"QGIS sukurs intensyvumo žemėlapį ir pridės jį į jūsų žemėlapio langą. Pagal "
+"nutylėjimą intensyvumo žemėlapis yra juodai baltas, kur šviesesnės zonos "
+"rodo didesnę oro uostų koncentraciją. Intensyvumo žemėlapio stilių dabar "
+"galima pakeisti, kad pagerintumėte jo išvaizdą."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:216
+msgid "The heatmap after loading looks like a grey surface"
+msgstr "Po įkėlimo intensyvumo žemėlapis atrodo kaip pilkas paviršius"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:219
+msgid ""
+"Open the properties dialog of the ``heatmap_airports`` layer (select the "
+"layer ``heatmap_airports``, open the context menu with the right mouse "
+"button and select :guilabel:`Properties`)."
+msgstr ""
+"Atverkite sluoksnio ``heatmap_airports`` savybių dialogą (parinkite sluoksnį"
+" ``heatmap_airports``, atidarykite kontekstinį meniu su dešiniu pelės "
+"mygtuku ir spauskite :guilabel:`Savybės`)."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:222
+msgid "Select the :guilabel:`Symbology` tab."
+msgstr "Pereikite į kortelę :guilabel:`Simbologija`."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:223
+msgid ""
+"Change the :guilabel:`Render type` |selectString| to 'Singleband "
+"pseudocolor'."
+msgstr ""
+"Pakeiskite :guilabel:`Braižymo tipą` |selectString| į 'Vienos juostos "
+"pseudospalva'."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:225
+msgid ""
+"Select a suitable :guilabel:`Color ramp` |selectString|, for instance "
+"``YlOrRd``."
+msgstr ""
+"Parinkite tinkamą :guilabel:`Spalvų rampą` |selectString|, pavyzdžiui "
+"``YlOrRd``."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:227
+msgid "Click the :guilabel:`Classify` button."
+msgstr "Spauskite mygtuką :guilabel:`Klasifikuoti`."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:228
+msgid "Press :guilabel:`OK` to update the layer."
+msgstr "Spauskite :guilabel:`Gerai`, kad atnaujintumėte sluoksnį."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:230
+msgid ""
+"The final result is shown in :numref:`Figure_Heatmap_styled_processing`."
+msgstr ""
+"Galutinis rezultatas matomas :numref:`Figure_Heatmap_styled_processing`."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:237
+msgid "Styled heatmap of airports of Alaska"
+msgstr "Stilizuotas Aliaskos oro uostų intensyvumo žemėlapis"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:242
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:375
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:497
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:646
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:374
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:496
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:643
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:244
+msgid "**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``"
+msgstr "**Algoritmo ID**: ``qgis:heatmapkerneldensityestimation``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -214,60 +617,155 @@ msgstr ""
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:283
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:537
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:536
 msgid "``INTERPOLATION_DATA``"
 msgstr "``INTERPOLATION_DATA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:284
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:467
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:538
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:466
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:537
 msgid "[string]"
 msgstr "[string]"
 
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:312
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:302
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:555
+msgid ":guilabel:`Points`"
+msgstr ":guilabel:`Taškai`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:311
 msgid "``DISTANCE_COEFFICIENT``"
 msgstr "``DISTANCE_COEFFICIENT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:319
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:576
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:314
+msgid "Default: 2.0"
+msgstr "Numatyta: 2.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:318
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:574
 msgid "``EXTENT``"
 msgstr "``EXTENT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:406
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:319
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:575
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:405
 msgid "Basic parameters"
 msgstr "Baziniai parametrai"
 
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:419
-msgid "[vector: any]"
-msgstr "[vector: any]"
-
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:422
-msgid "``WEIGHT``"
-msgstr "``WEIGHT``"
-
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:466
-msgid "``CREATE_OPTIONS``"
-msgstr "``CREATE_OPTIONS``"
-
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:566
-msgid "``METHOD``"
-msgstr "``METHOD``"
-
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:569
-msgid "Default: 0"
-msgstr "Numatytas: 0"
-
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:614
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:641
-msgid "``TRIANGULATION``"
-msgstr "``TRIANGULATION``"
-
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:615
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:642
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:418
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:612
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:639
 msgid "[vector: line]"
 msgstr "[vektorius: linija]"
 
-#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:617
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:421
+msgid "``WEIGHT``"
+msgstr "``WEIGHT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:429
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:436
+msgid "Default: 10.0"
+msgstr "Numatytas: 10.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:432
+msgid "**Pixel size**"
+msgstr "**Taško dydis**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:451
+msgid "Advanced parameters"
+msgstr "Išmanesni parametrai"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:462
+msgid "**Creation options**"
+msgstr "**Kūrimo parinktys**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:465
+msgid "``CREATE_OPTIONS``"
+msgstr "``CREATE_OPTIONS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:468
+msgid "Default: ''"
+msgstr "Numatytas: ''"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:469
+msgid ""
+"For adding one or more creation options that control the raster to be "
+"created (colors, block size, file compression...). For convenience, you can "
+"rely on predefined profiles (see :ref:`GDAL driver options section "
+"<gdal_createoptions>`)."
+msgstr ""
+"Norint pridėti vieną ar daugiau kūrimo parinkčių, valdančių rastro kūrimą "
+"(spalvos, bloko dydis, failo suspaudimas...). Patogumui jūs galite remtis iš"
+" anksto sukurtais profiliais (žiūrėkite :ref:`GDAL tvarkyklės parinkčių "
+"skiltį <gdal_createoptions>`)."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:475
+msgid ""
+"Batch Process and Model Designer: separate multiple options with a pipe "
+"character (``|``)."
+msgstr ""
+"Paketinis apdorojimas ir Modelių kūrimas: atskirkite kelias parinktis "
+"statmenu brūkšniu (``|``)."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:564
+msgid "``METHOD``"
+msgstr "``METHOD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:567
+msgid "Default: 0"
+msgstr "Numatytas: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:611
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:638
+msgid "``TRIANGULATION``"
+msgstr "``TRIANGULATION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:614
 msgid "Default: ``[Skip output]``"
 msgstr "Numatytas: ``[Praleisti išvestį]``"
 

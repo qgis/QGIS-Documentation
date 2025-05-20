@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Zoltan Siki <siki.zoltan@epito.bme.hu>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Zoltan Siki <siki.zoltan@epito.bme.hu>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,6 +34,90 @@ msgstr ""
 "<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
 "részét fordítottuk le."
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:5
+msgid "DB Manager Plugin"
+msgstr "Adatbázis-kezelő modul"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:7
+msgid ""
+"The DB Manager Plugin is intended to be the main tool to integrate and "
+"manage spatial database formats supported by QGIS (PostGIS, SpatiaLite, "
+"GeoPackage, Oracle Spatial, Virtual layers) in one user interface. The "
+"|dbManager| :sup:`DB Manager` Plugin provides several features. You can drag"
+" layers from the QGIS Browser into the DB Manager, and it will import your "
+"layer into your spatial database. You can drag and drop tables between "
+"spatial databases and they will get imported."
+msgstr ""
+"Az adatbázis-kezelő modul célja, hogy a QGIS által támogatott téradatbázisok"
+" (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, virtuális rétegek) "
+"integrálásának és kezelésének fő eszköze legyen egyetlen felhasználói "
+"felületen. A |dbManager| :sup:`adatbázis-kezelő` modul számos funkciót "
+"kínál. A QGIS böngészőből az adatbázis-kezelőbe húzhatja a rétegeket, és az "
+"importálja a réteget a térbeli adatbázisába. A táblázatokat áthúzhatja a "
+"téradatbázisok között, az importálás érdekében."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:116
 msgid "dbManager"
 msgstr "dbManager"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:21
+msgid "DB Manager dialog"
+msgstr "Adatbázis-kezelő párbeszédablak"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:24
+msgid ""
+"The :menuselection:`Database` menu allows you to connect to an existing "
+"database, to start the SQL window and to exit the DB Manager Plugin. Once "
+"you are connected to an existing database, the menus :menuselection:`Schema`"
+" (relevant for DBMSs, such as PostGIS / PostgreSQL) and "
+":menuselection:`Table` will appear."
+msgstr ""
+"A :menuselection:`Adatbázis` menü lehetővé teszi egy meglévő adatbázishoz "
+"való csatlakozást, az SQL ablak elindítását és az adatbázis-kezelő modul "
+"bezárását. Miután csatlakozott egy létező adatbázishoz, megjelennek a "
+":menuselection:`Séma` (DBMS-ek, például a PostGIS / PostgreSQL esetében "
+"releváns) és a :menuselection:`Tábla` menük."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:31
+msgid ""
+"The :menuselection:`Schema` menu includes tools to create and delete (only "
+"if empty) schemas and, if topology is available (e.g. with PostGIS "
+"topology), to start a :guilabel:`TopoViewer`."
+msgstr ""
+"A :menuselection:`Séma` menü eszközöket tartalmaz sémák létrehozásához és "
+"törléséhez (csak ha üres), valamint ha van topológia (pl. PostGIS "
+"topológiával), egy :guilabel:`TopoViewer` elindításához."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:35
+msgid ""
+"The :menuselection:`Table` menu allows you to create and edit tables and to "
+"delete tables and views. It is also possible to empty tables and to move "
+"tables between schemas. You can :guilabel:`Run Vacuum Analyze` for the "
+"selected table. *Vacuum* reclaims space and makes it available for reuse, "
+"and *analyze* updates statistics that is used to determine the most "
+"efficient way to execute a query. :guilabel:`Change Logging...` allows you "
+"to add change logging support to a table. Finally, you can :guilabel:`Import"
+" Layer/File...` and :guilabel:`Export to File...`."
+msgstr ""
+"A :menuselection:`Tábla` menü lehetővé teszi táblázatok létrehozását és "
+"szerkesztését, valamint táblázatok és nézetek törlését. Lehetőség van táblák"
+" ürítésére és táblák sémák közötti mozgatására is. A kiválasztott táblához "
+"használhatod a :guilabel:`vacuum analyse` parancsot. A *Vacuum* parancs "
+"helyet szabadít fel és újrafelhasználhatóvá teszi, az *elemzés* pedig "
+"frissíti a statisztikákat, amelyek segítségével meghatározható a lekérdezés "
+"végrehajtásának leghatékonyabb módja. A :guilabel:`Változásnaplózás...` "
+"parancs lehetővé teszi a változásnaplózás támogatásának hozzáadását egy "
+"táblázathoz. Végül használhatod a :guilabel:`Réteg/Fájl importálása...` és a"
+" :guilabel:`Exportálás fájlba...` parancsot."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:49
+msgid ""
+"Using the DB Manager it is possible to add comments for tables and columns "
+"of a PostgreSQL Database."
+msgstr ""
+"Az adatbázis-kezelő használatával lehetőség van PostgreSQL adatbázis "
+"táblákhoz és oszlopokhoz megjegyzést fűzni."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:70
+msgid "Working with the SQL Window"
+msgstr "Munka az SQL ablakban"

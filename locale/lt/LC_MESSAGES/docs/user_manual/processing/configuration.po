@@ -6,22 +6,22 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Tomas Straupis, 2025
 # Transifex Bot <>, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-04-29 09:12+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -51,7 +51,7 @@ msgstr ""
 "konfigūruoti, kaip veikia algoritmai. Konfigūracijos parametrų struktūroje "
 "yra atskiri blokai, kuriuos jūs galite parinkti kairėje dialogo pusėje."
 
-#: ../../docs/user_manual/processing/configuration.rst:169
+#: ../../docs/user_manual/processing/configuration.rst:191
 msgid "processingAlgorithm"
 msgstr "processingAlgorithm"
 
@@ -59,14 +59,91 @@ msgstr "processingAlgorithm"
 msgid "General"
 msgstr "Bendra"
 
-#: ../../docs/user_manual/processing/configuration.rst:167
+#: ../../docs/user_manual/processing/configuration.rst:22
+msgid ""
+"The :guilabel:`General` block contains the default settings to control how "
+"the algorithm dialog as well as input or output parameters should behave. "
+"Some of the settings can however be overridden at the algorithm level, per "
+":ref:`algorithm run <alg_override_setting>` or for :ref:`individual "
+"parameters <alg_parameter_types>`."
+msgstr ""
+"Skiltyje :guilabel:`Bendra` yra numatytieji nustatymai, valdantys algoritmų "
+"dialogų bei įvesties ar išvesties parametrų elgseną. Kai kuriuos nustatymus "
+"visgi galima permušti algoritmų lygyje konkrečiam :ref:`algoritmo paleidimui"
+" <alg_override_setting>` ar :ref:`individualiems parametrams "
+"<alg_parameter_types>`."
+
+#: ../../docs/user_manual/processing/configuration.rst:28
+msgid ""
+":guilabel:`Default output raster layer extension` is by default ``tif``"
+msgstr ""
+":guilabel:`Numatytas išvesties rastro sluoksnio išplėtimas` pagal nutylėjimą"
+" yra ``tif``"
+
+#: ../../docs/user_manual/processing/configuration.rst:29
+msgid ""
+":guilabel:`Default output vector layer extension` is by default ``gpkg``"
+msgstr ""
+":guilabel:`Numatytasis išvesties vektoriaus sluoksnio išplėtimas` pagal "
+"nutylėjimą yra ``gpkg``"
+
+#: ../../docs/user_manual/processing/configuration.rst:30
+msgid ":guilabel:`Invalid features filtering` when executing algorithm:"
+msgstr ":guilabel:`Neteisingų geoobjektų filtravimas` vykdant algoritmą:"
+
+#: ../../docs/user_manual/processing/configuration.rst:32
+msgid ""
+":guilabel:`Do not filter (better performance)`: all the features (with valid"
+" and invalid geometries) are processed, but the result may be erroneous "
+"depending on how the geometry invalidity affects the operations"
+msgstr ""
+":guilabel:`Nefiltruoti (geresnė greitaveika)`: apdorojami visi geoobjektai "
+"(su tinkamomis ir netinkamomis geometrijomis), bet rezultatas gali būti "
+"klaidingas priklausomai nuo to, kaip geometrijos netinkamumas įtakoja "
+"veiksmus"
+
+#: ../../docs/user_manual/processing/configuration.rst:35
+msgid ""
+":guilabel:`Skip (ignore) features with invalid geometries`, meaning that "
+"only a subset of your dataset (the valid geometry features) will be "
+"processed"
+msgstr ""
+":guilabel:`Praleisti (ignoruoti) geoobjektus su netinkamomis geometrijomis`,"
+" tai reiškia, kad bus apdorotas tik jūsų duomenų aibės poaibis (geoobjektai "
+"su tinkama geometrija)"
+
+#: ../../docs/user_manual/processing/configuration.rst:38
+msgid ""
+":guilabel:`Stop algorithm execution when a geometry is invalid`: you'll need"
+" to track and fix the invalid geometries if you want the algorithm to "
+"process the whole layer. Algorithms like :ref:`qgischeckvalidity` or "
+":ref:`qgisfixgeometries` can help you achieve this."
+msgstr ""
+":guilabel:`Stabdyti algoritmo vykdymą, kai geometrija yra netinkama`: jums "
+"reikės sekti ir taisyti netinkamas geometrijas, jei norėsite, kad algoritmas"
+" apdorotų visą sluoksnį. Algoritmai, tokie kaip :ref:`qgischeckvalidity` ar "
+":ref:`qgisfixgeometries` jums gali padėti tai padaryti."
+
+#: ../../docs/user_manual/processing/configuration.rst:43
+msgid ""
+"The :guilabel:`Invalid features filtering` setting can be overridden on a "
+"per-input basis, at algorithm runtime."
+msgstr ""
+":guilabel:`Netinkamų geoobjektų filtravimo` nustatymą galima permušti "
+"algoritmo vykdymo metu kiekvienam įvesties rinkiniui."
+
+#: ../../docs/user_manual/processing/configuration.rst:189
 msgid "menu"
 msgstr "menu"
 
-#: ../../docs/user_manual/processing/configuration.rst:171
+#: ../../docs/user_manual/processing/configuration.rst:193
 msgid "processingModel"
 msgstr "processingModel"
 
-#: ../../docs/user_manual/processing/configuration.rst:173
+#: ../../docs/user_manual/processing/configuration.rst:195
 msgid "pythonFile"
 msgstr "pythonFile"
+
+#: ../../docs/user_manual/processing/configuration.rst:187
+msgid "checkbox"
+msgstr "checkbox"

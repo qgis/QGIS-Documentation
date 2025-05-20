@@ -6,20 +6,21 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:30+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -37,17 +38,131 @@ msgstr ""
 msgid "Setting a label"
 msgstr "Užrašo nustatymas"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1076
+#: ../../docs/user_manual/style_library/label_settings.rst:12
+msgid ""
+"Labels are textual information you can display on vector features, mesh "
+"layers or maps. They add details you could not necessarily represent using "
+"symbols. Two types of text-related items are available in QGIS:"
+msgstr ""
+"Užrašai yra tekstinė informacija, kurią galite rodyti prie vektorinių "
+"geoobjektų, tinklelio sluoksnių ar žemėlapių. Jie prideda detales, kurių jūs"
+" galbūt negalėjote perduoti simboliais. QGIS yra dviejų tipų su tekstu "
+"susiję elementai:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:16
+msgid ""
+":guilabel:`Text Format`: defines the appearance of the text, including "
+":ref:`font, size, colors <labels_text>`, :ref:`shadow <labels_shadow>`, "
+":ref:`background <labels_background>`, :ref:`buffer <labels_buffer>`, ..."
+msgstr ""
+":guilabel:`Teksto formatas`: apibrėžia teksto išvaizdą, įskaitant "
+":ref:`šriftą, dydį, spalvas <labels_text>`, :ref:`šešėlį <labels_shadow>`, "
+":ref:`foną <labels_background>`, :ref:`buferį <labels_buffer>`, ..."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:20
+msgid ""
+"They can be used to render texts over the map (layout/map title, "
+"decorations, scale bar, ...), usually through the :ref:`font "
+"<font_selector>` widget."
+msgstr ""
+"Juos galima naudoti braižant tekstą virš žemėlapio (išdėstymo/žemėlapio "
+"pavadinimas, dekoracijos, mastelio juosta, ...), paprastai naudojant "
+"valdiklį :ref:`šriftas <font_selector>`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:24
+msgid "To create a :guilabel:`Text Format` item:"
+msgstr "Norėdami sukurti :guilabel:`Teksto formato` elementą:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:26
+#: ../../docs/user_manual/style_library/label_settings.rst:52
+msgid "Open the |styleManager| :guilabel:`Style Manager` dialog"
+msgstr "Atverkite dialogą |styleManager| :guilabel:`Stilių tvarkyklė`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1096
 msgid "styleManager"
 msgstr "styleManager"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1078
+#: ../../docs/user_manual/style_library/label_settings.rst:27
+msgid "Activate the :guilabel:`Text format` tab"
+msgstr "Įjunkite kortelę :guilabel:`Teksto formatas`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:34
+msgid "Text formats in Style Manager dialog"
+msgstr "Teksto formatai Stilių tvarkyklės dialoge"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:36
+msgid ""
+"Press the |symbologyAdd| :sup:`Add item` button. The :guilabel:`Text Format`"
+" dialog opens for :ref:`configuration <text_format>`. As usual, these "
+"properties are :ref:`data-definable <data_defined>`."
+msgstr ""
+"Spauskite mygtuką |symbologyAdd| :sup:`Pridėti elementą`. Atveriamas "
+"dialogas :guilabel:`Teksto formatas` su :ref:`konfigūracija <text_format>`. "
+"Kaip paprastai, šias savybes galima :ref:`apibrėžti priklausomai nuo duomenų"
+" <data_defined>`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1098
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1062
+#: ../../docs/user_manual/style_library/label_settings.rst:40
+msgid ""
+":guilabel:`Label Settings`: extend the text format settings with properties "
+"related to the location or the interaction with other texts or features "
+"(:ref:`callouts <labels_callouts>`, :ref:`placement <labels_placement>`, "
+":ref:`overlay, scale visibility <labels_rendering>`, mask ...)."
+msgstr ""
+":guilabel:`Užrašų nustatymai`: papildo teksto formato nustatymus savybėmis, "
+"kurios susijusios su vieta ar sąveika su kitais tekstais ar geoobjektais "
+"(:ref:`išnešimai <labels_callouts>`, :ref:`vieta <labels_placement>`, "
+":ref:`perdengimas, mastelio matomumas <labels_rendering>`, slėpimas ...)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:45
+msgid ""
+"They are used to configure smart labelling for vector and mesh layers "
+"through the |labelingSingle| :guilabel:`Labels` tab of the vector or mesh "
+":guilabel:`Layer Properties` dialog or :guilabel:`Layer Styling` panel or "
+"using the |labelingSingle| :sup:`Layer Labeling Options` button of the "
+":ref:`Label toolbar <label_toolbar>`."
+msgstr ""
+"Jie naudojami konfigūruojant išmanius vektorinių ir tinklelio sluoksnių "
+"užrašus naudojant kortelę |labelingSingle| :guilabel:`Užrašai`, esančią "
+"vektorinių ir tinklo :guilabel:`Sluoksnio savybių` dialoge, ar "
+":guilabel:`Sluoksnio stiliaus` skydelį, ar naudojant mygtuką "
+"|labelingSingle| :sup:`Sluoksnio užrašų parinktys`, esantį :ref:`Užrašų "
+"įrankinėje <label_toolbar>`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1082
 msgid "labelingSingle"
 msgstr "labelingSingle"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:50
+msgid "To create a :guilabel:`Label Settings` item:"
+msgstr "Norėdami sukurti :guilabel:`Užrašų nustatymų` elementą:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:53
+msgid "Activate the :guilabel:`Label Settings` tab"
+msgstr "Įjunkite kortelę :guilabel:`Užrašų nustatymai`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:60
+msgid "Label Settings in Style Manager dialog"
+msgstr "Užrašų nustatymai stiliaus tvarkyklės dialoge"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:62
+msgid ""
+"Press the |symbologyAdd| :sup:`Add item` menu and select the entry "
+"corresponding to the geometry type of the features you want to label."
+msgstr ""
+"Spauskite mygtuką |symbologyAdd| :sup:`Pridėti elementą` ir parinkite įrašą,"
+" atitinkantį geometrijos tipą geoobjektų, kurių užrašus norite konfigūruoti."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:65
+msgid ""
+"The :guilabel:`Label Settings` dialog opens with the following properties. "
+"As usual, these properties are :ref:`data-definable <data_defined>`."
+msgstr ""
+"Atidaromas dialogas :guilabel:`Užrašų nustatymai`. Kaip įprasta, savybės "
+"gali būti :ref:`priklausomos nuo duomenų <data_defined>`."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:85
 #: ../../docs/user_manual/style_library/label_settings.rst:86
@@ -66,43 +181,43 @@ msgstr "labelingSingle"
 msgid "|checkbox|"
 msgstr "|checkbox|"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1042
+#: ../../docs/user_manual/style_library/label_settings.rst:1062
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1080
+#: ../../docs/user_manual/style_library/label_settings.rst:1100
 msgid "text"
 msgstr "text"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1060
+#: ../../docs/user_manual/style_library/label_settings.rst:1080
 msgid "labelformatting"
 msgstr "labelformatting"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1082
+#: ../../docs/user_manual/style_library/label_settings.rst:1102
 msgid "unchecked"
 msgstr "unchecked"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1056
+#: ../../docs/user_manual/style_library/label_settings.rst:1076
 msgid "labelbuffer"
 msgstr "labelbuffer"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1072
+#: ../../docs/user_manual/style_library/label_settings.rst:1092
 msgid "paintEffects"
 msgstr "paintEffects"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1054
+#: ../../docs/user_manual/style_library/label_settings.rst:1074
 msgid "labelbackground"
 msgstr "labelbackground"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1068
+#: ../../docs/user_manual/style_library/label_settings.rst:1088
 msgid "labelshadow"
 msgstr "labelshadow"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1064
+#: ../../docs/user_manual/style_library/label_settings.rst:1084
 msgid "labelmask"
 msgstr "labelmask"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1058
+#: ../../docs/user_manual/style_library/label_settings.rst:1078
 msgid "labelcallout"
 msgstr "labelcallout"
 
@@ -110,34 +225,34 @@ msgstr "labelcallout"
 msgid "Description"
 msgstr "Aprašymas"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1070
+#: ../../docs/user_manual/style_library/label_settings.rst:1090
 msgid "moveLabel"
 msgstr "moveLabel"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1066
+#: ../../docs/user_manual/style_library/label_settings.rst:1086
 msgid "labelplacement"
 msgstr "labelplacement"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1044
+#: ../../docs/user_manual/style_library/label_settings.rst:1064
 msgid "dataDefine"
 msgstr "dataDefine"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1046
+#: ../../docs/user_manual/style_library/label_settings.rst:1066
 msgid "labelAnchorCenter"
 msgstr "labelAnchorCenter"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1052
+#: ../../docs/user_manual/style_library/label_settings.rst:1072
 msgid "labelAnchorStart"
 msgstr "labelAnchorStart"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1050
+#: ../../docs/user_manual/style_library/label_settings.rst:1070
 msgid "labelAnchorEnd"
 msgstr "labelAnchorEnd"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1048
+#: ../../docs/user_manual/style_library/label_settings.rst:1068
 msgid "labelAnchorCustom"
 msgstr "labelAnchorCustom"
 
-#: ../../docs/user_manual/style_library/label_settings.rst:1074
+#: ../../docs/user_manual/style_library/label_settings.rst:1094
 msgid "render"
 msgstr "render"

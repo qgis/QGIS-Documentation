@@ -6,9 +6,9 @@
 # 
 # Translators:
 # Federico, 2025
-# Eric Armijo, 2025
 # Transifex Bot <>, 2025
 # Harrissou Sant-anna, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -384,6 +384,17 @@ msgstr "|fileSaveAs| :sup:`Exportar resultados`"
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:100
+msgid ""
+"Exports plots as 3D features, 2D Profile and Distance/Elevation Table. (The "
+"results can be saved as DXF files, CSV files or any of the standard writable"
+" vector spatial formats). More details at :ref:`export_elevation_profile`."
+msgstr ""
+"Exporta gráficos como características 3D, perfil 2D y tabla de "
+"distancia/elevación. (Los resultados pueden guardarse como archivos DXF, CSV"
+" o cualquiera de los formatos espaciales vectoriales estándar). Más "
+"información en :ref:`export_elevation_profile`."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:104
 msgid "|options| :sup:`Options` :menuselection:`-->`"
 msgstr "|options| :sup:`Options` :menuselection:`-->`"
@@ -435,6 +446,25 @@ msgstr ""
 #: ../../docs/user_manual/map_views/elevation_profile.rst:114
 msgid ":menuselection:`--> Tolerance`"
 msgstr ":menuselection:`--> Tolerancia`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:116
+msgid ""
+"Sets how far from the actual profile line a feature (vector point, line or "
+"polygon, point cloud) can reside to be included in the results. Uses the map"
+" units and is ignored by other layer or geometry types."
+msgstr ""
+"Establece a qué distancia de la línea de perfil real puede residir una "
+"característica (punto vectorial, línea o polígono, nube de puntos) para ser "
+"incluida en los resultados. Utiliza las unidades del mapa y es ignorado por "
+"otros tipos de capa o geometría."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:119
+msgid ":menuselection:`--> Rename Profile...`"
+msgstr ":menuselection:`--> Renombrar Perfil...`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:121
+msgid "Allows to rename the profile view."
+msgstr "Permite cambiar el nombre de la vista de perfil."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:122
 msgid "|dock| :sup:`Dock Elevation Profile View`"
@@ -667,6 +697,38 @@ msgstr ""
 " de las capas activas que cruzan la curva de perfil dada, tan pronto como "
 "tengan configuradas las propiedades de elevación."
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:199
+msgid ""
+"Under |options| :sup:`Options` drop-down menu, you can set the "
+":guilabel:`Tolerance` value. This value is used to create a flat buffer "
+"around the elevation profile line, visible in the main map canvas. Any "
+"visible feature (point, line, polygon, etc.) overlapping that buffer will be"
+" captured in the plot canvas."
+msgstr ""
+"En el menú desplegable |options| :sup:`Opciones`, puede establecer el valor "
+"de :guilabel:`Tolerancia`. Este valor se utiliza para crear un búfer plano "
+"alrededor de la línea del perfil de elevación, visible en el lienzo "
+"principal del mapa. Cualquier característica visible (punto, línea, "
+"polígono, etc.) que se superponga a ese búfer será capturada en el lienzo de"
+" trazado."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:203
+msgid "**Limitations with polygon extrusion**"
+msgstr "**Limitaciones con la extrusión de polígonos**"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:205
+msgid ""
+"Geometry extrusion can be set in the |elevationscale| :guilabel:`Elevation` "
+"properties of a layer, and rendered in the profile view. When tolerance is "
+"enabled, it is however not trivial to render extruded polygons, thus, for "
+"now, polygon extrusion is ignored."
+msgstr ""
+"La extrusión de geometría puede establecerse en las propiedades "
+"|elevationscale| :guilabel:`Elevación` de una capa, y renderizarse en la "
+"vista de perfil. Cuando la tolerancia está activada, no es trivial "
+"renderizar polígonos extruidos, por lo que, por ahora, la extrusión de "
+"polígonos se ignora."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:333
 msgid "elevationscale"
 msgstr "elevationscale"
@@ -856,6 +918,10 @@ msgstr ""
 "¡Para más detalles, consulte `QGIS elevation profile/cross section tool -- a"
 " deep dive! <https://www.youtube.com/watch?v=AknJjNPystU>`_, una "
 "presentación realizada por Nyall Dawson."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:271
+msgid "Exporting from the elevation profile"
+msgstr "Exportar desde el perfil de elevación"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:283
 msgid ""

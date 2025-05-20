@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -37,7 +37,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:2
 msgid "Point Cloud Extraction"
-msgstr "Taškų debesies ištraukimas"
+msgstr "Taškų masyvo ištraukimas"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:10
 msgid ""
@@ -56,16 +56,16 @@ msgid ""
 "Exports a polygon file containing point cloud layer boundary. It may contain"
 " holes and it may be a multi-part polygon."
 msgstr ""
-"Eksportuoja poligono failą su taškų debesies sluoksnio ribomis. Jame gali "
-"būti skylės ir tai gali būti kelių dalių poligonas."
+"Eksportuoja poligono failą su taškų masyvo sluoksnio ribomis. Jame gali būti"
+" skylės ir tai gali būti kelių dalių poligonas."
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:23
 msgid ""
 "Extracting high vegetation and building polygons from an input point cloud "
 "layer"
 msgstr ""
-"Aukštos augmenijos ir pastatų poligonų ištraukimas iš įvesties taškų "
-"debesies sluoksnio"
+"Aukštos augmenijos ir pastatų poligonų ištraukimas iš įvesties taškų masyvo "
+"sluoksnio"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:26
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:135
@@ -146,6 +146,10 @@ msgstr "[taškų debesis]"
 msgid "Input point cloud layer to calculate boundary for"
 msgstr "Įvesties taškų debesies sluoksnis ribų skaičiavimui"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:43
+msgid "**Resolution of cells used to calculate boundary**"
+msgstr "**Ribos skaičiavimui naudojamų celių rezoliucija**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:45
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:51
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:79
@@ -165,17 +169,37 @@ msgid "``RESOLUTION``"
 msgstr "``RESOLUTION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:47
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:154
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:160
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:207
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:213
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:48
+msgid "Resolution of cells used to calculate boundary"
+msgstr "Ribos skaičiavimui naudojamų celių rezoliucija"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:49
+msgid "**Minimal number of points in a cell to consider cell occupied**"
+msgstr "**Minimalus skaičius taškų celėje, kad ji būtų laikoma užimta**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:52
 msgid "``THRESHOLD``"
 msgstr "``THRESHOLD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:53
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:160
+msgid "[numeric: integer]"
+msgstr "[skaičius: sveikas skaičius]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:54
+msgid "Minimal number of points in a cell to consider cell occupied"
+msgstr "Minimalus skaičius taškų celėje, kad ji būtų laikoma užimta"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:55
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:105
+msgid "**Boundary**"
+msgstr "**Riba**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:56
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:106
@@ -210,6 +234,17 @@ msgstr "Įrašyti į laikiną failą"
 msgid "Save to File…"
 msgstr "Įrašyti į failą..."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:176
+msgid "Advanced parameters"
+msgstr "Išmanesni parametrai"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:186
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:269
+msgid "**Filter expression**"
+msgstr "**Filtro išraiška**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:80
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:189
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:272
@@ -222,11 +257,83 @@ msgstr "``FILTER_EXPRESSION``"
 msgid "[expression]"
 msgstr "[išraiška]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:82
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:191
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:274
+msgid ""
+"A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of "
+"features in the point cloud data"
+msgstr ""
+":ref:`PDAL išraiška <pdal_expressions>` parenkant taškų masyvo duomenų "
+"geoobjektų poaibį"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:83
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:275
+msgid "**Cropping extent**"
+msgstr "**Apkarpymo apimtis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:86
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:195
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:278
 msgid "``FILTER_EXTENT``"
 msgstr "``FILTER_EXTENT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:87
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:196
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:279
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:88
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:280
+msgid ""
+"A map extent for selecting a subset of features in the point cloud data"
+msgstr "Žemėlapio apimtis, parenkant taškų masyvo duomenų geoobjektų poaibį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:95
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:217
@@ -234,11 +341,23 @@ msgstr "``FILTER_EXTENT``"
 msgid "Outputs"
 msgstr "Išvestys"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:108
+msgid ""
+"Output polygon vector layer with the point cloud boundary. Currently "
+"supported format is :file:`.GPKG`."
+msgstr ""
+"Išvesties poligonų vektorinis sluoksnis su taškų masyvo ribomis. Šiuo metu "
+"palaikomas formatas yra :file:`.GPKG`."
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:112
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:234
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:315
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:114
+msgid "**Algorithm ID**: ``pdal:boundary``"
+msgstr "**Algoritmo ID**: ``pdal:boundary``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -252,13 +371,55 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:151
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:268
+msgid "Input point cloud layer to export"
+msgstr "Įvesties taškų masyvo sluoksnis eksportavimui"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:152
+msgid "**Resolution of the density raster**"
+msgstr "**Tankio rastro rezoliucija**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:156
+msgid "Default: 1.0"
+msgstr "Numatytas: 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:157
+msgid "Cell size of the output raster"
+msgstr "Išvesties rastro celės dydis"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:158
+msgid "**Tile size for parallel runs**"
+msgstr "**Paralelinio vykdymo kaladėlės dydis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:159
 msgid "``TILE_SIZE``"
 msgstr "``TILE_SIZE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:162
+msgid "Default: 1000"
+msgstr "Numatytas: 1000"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:166
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:229
+msgid "[raster]"
+msgstr "[rastras]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:169
+msgid "Specify the raster file to export the data to. One of:"
+msgstr "Nurodykite rastro failą, į kurį eksportuoti duomenis. Vienas iš:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:203
+msgid "**X origin of a tile for parallel runs**"
+msgstr "**Paralelinio vykdymo kaladėlių X pradžia**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:206
 msgid "``ORIGIN_X``"
 msgstr "``ORIGIN_X``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:209
+msgid "**Y origin of a tile for parallel runs**"
+msgstr "**Paralelinio vykdymo kaladėlių Y pradžia**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:212
 msgid "``ORIGIN_Y``"

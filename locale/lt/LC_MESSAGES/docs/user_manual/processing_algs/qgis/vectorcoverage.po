@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.40\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -34,6 +34,26 @@ msgstr ""
 "Vertimas yra bendruomenės pastangos, prie kurių :ref:`jūs galite prisijungti"
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:2
+msgid "Vector coverage"
+msgstr "Vektorių padengimas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:14
+msgid "Dissolve coverage"
+msgstr "Sulieti padengimą"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:16
+msgid ""
+"Operates on a coverage (represented as a set of polygon features with "
+"exactly matching edge geometry) to dissolve (union) the geometries. It "
+"provides a heavily optimized approach for unioning these features compared "
+"with the standard Dissolve tools."
+msgstr ""
+"Veikia su padengimu (išreikštu poligonų geoobjektų aibe su tiksliai "
+"atitinkančiomis kraštų geometrijomis), kuriame suliejamos (sąjunga) "
+"geometrijos. Teikia stipriai optimizuotą būdą skaičiuoti geoobjektų sąjungą "
+"lyginant su standartiniais suliejimo įrankiais."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:20
 msgid ":ref:`qgisdissolve`"
@@ -103,6 +123,17 @@ msgstr "``INPUT``"
 msgid "[vector: polygon]"
 msgstr "[vektorius: poligonas]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:106
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:183
+msgid "Input polygon vector layer"
+msgstr "Įvesties poligonų vektorinis sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:59
+msgid "**Dissolved**"
+msgstr "**Sulietas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:38
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:60
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:120
@@ -154,11 +185,19 @@ msgstr "Šia taipogi galima pakeisti failo koduotę."
 msgid "Outputs"
 msgstr "Išvestys"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:62
+msgid "The output polygon vector layer with dissolved geometries."
+msgstr "Išvesties poligonų vektorinis sluoksnis su sulietomis geometrijomis."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:65
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:147
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:222
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:67
+msgid "**Algorithm ID**: ``native:coverageunion``"
+msgstr "**Algoritmo ID**: ``native:coverageunion``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -181,14 +220,23 @@ msgid "``TOLERANCE``"
 msgstr "``TOLERANCE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:109
-#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:115
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:186
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:111
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:188
+msgid "Default: 0.0"
+msgstr "Numatytas: 0.0"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:114
 msgid "``PRESERVE_BOUNDARY``"
 msgstr "``PRESERVE_BOUNDARY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:115
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:218
+msgid "[boolean]"
+msgstr "[boolean]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:117
 msgid "Default: False"
@@ -218,7 +266,3 @@ msgstr "Praleisti išvestį"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:217
 msgid "``IS_VALID``"
 msgstr "``IS_VALID``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:218
-msgid "[boolean]"
-msgstr "[boolean]"

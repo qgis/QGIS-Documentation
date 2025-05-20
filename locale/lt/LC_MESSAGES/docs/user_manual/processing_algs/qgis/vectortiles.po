@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -34,6 +34,22 @@ msgstr ""
 "Vertimas yra bendruomenės pastangos, prie kurių :ref:`jūs galite prisijungti"
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:2
+msgid "Vector Tiles"
+msgstr "Vektorinės kaladėlės"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:14
+msgid "Download vector tiles"
+msgstr "Atsiųsti vektorines kaladėles"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:16
+msgid ""
+"Downloads vector tiles of an input vector tile layer and saves them in a "
+"local vector tile file."
+msgstr ""
+"Atsiunčia įvesties vektorinių kaladėlių sluoksnio vektorines kaladėles ir "
+"įrašo jas į vietinį vektorinių kaladėlių failą."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:19
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:104
@@ -87,11 +103,89 @@ msgstr "**Įvesties sluoksnis**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:31
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:181
+msgid "[vector tiles]"
+msgstr "[vektorinės kaladėlės]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:32
+msgid "A vector tile layer to extract some tiles from"
+msgstr "Vektorinių kaladėlių sluoksnis, kurio kaladėles reikia ištraukti"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:132
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:259
+msgid "**Extent**"
+msgstr "**Apimtis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:34
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:135
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:262
 msgid "``EXTENT``"
 msgstr "``EXTENT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:35
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:136
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:263
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:36
+msgid ""
+"Specify the spatial extent of the downloaded area. It will internally be "
+"extended to a multiple of the tile size."
+msgstr ""
+"Nurodykite atsiunčiamo ploto erdvinę apimtį. Ji viduje bus praplėsta iki "
+"kaladėlės dydžio kartotinio."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:43
+msgid "**Maximum zoom level to download**"
+msgstr "**Maksimalus atsiunčiamas mastelio lygis**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:44
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:126
@@ -105,12 +199,41 @@ msgstr "``MAX_ZOOM``"
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:127
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:247
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:254
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: integer]"
+msgstr "[skaičius: sveikas skaičius]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:47
+msgid "Default: 10"
+msgstr "Numatytas: 10"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:48
+msgid "Defines how far to zoom in and fetch data from the tiles"
+msgstr "Nurodo kiek giliai reikia siųsti kaladėlių duomenis"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:49
+msgid "**Tile limit**"
+msgstr "**Kaladėlių riba**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:50
 msgid "``TILE_LIMIT``"
 msgstr "``TILE_LIMIT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:53
+msgid "Default: 100"
+msgstr "Numatytas: 100"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:54
+msgid ""
+"Maximum number of tiles to download, considering the zoom levels and the "
+"extent."
+msgstr ""
+"Maksimalus atsiunčiamų kaladėlių skaičius, atsižvelgiant į mastelius ir "
+"apimtį."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:55
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:77
+msgid "**Output**"
+msgstr "**Išvestis**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:56
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:78
@@ -118,6 +241,15 @@ msgstr "``TILE_LIMIT``"
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:202
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:183
+msgid "Default: [Save to temporary file]"
+msgstr "Numatytas: [įrašyti į laikiną failą]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:60
+msgid "Specification of the output vector tile file. One of:"
+msgstr "Išvesties vektorinių kaladėlių failo specifikacija. Vienas iš:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -133,11 +265,20 @@ msgstr "Įrašyti į failą..."
 msgid "Outputs"
 msgstr "Išvestys"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:80
+msgid "A local vector tile file storing the downloaded tiles."
+msgstr ""
+"Vietinis vektorinių kaladėlių failas, į kurį įrašytos atsiųstos kaladėlės."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:83
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:207
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:297
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:85
+msgid "**Algorithm ID**: ``native:downloadvectortiles``"
+msgstr "**Algoritmo ID**: ``native:downloadvectortiles``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -150,6 +291,16 @@ msgstr ""
 "įrankinėje. *parametrų žodynas* teikia parametrų pavadinimus ir reikšmes. "
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:114
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:241
+msgid "**Input layers**"
+msgstr "**Įvesties sluoksniai**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:116
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:243
+msgid "[vector: any] [list]"
+msgstr "[vektorius: bet koks] [sąrašas]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:119
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:246

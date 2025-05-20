@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -208,6 +208,10 @@ msgstr ""
 msgid "Python code"
 msgstr "Pythono kodas"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:65
+msgid "**Algorithm ID**: ``pdal:convertformat``"
+msgstr "**Algoritmo ID**: ``pdal:convertformat``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -220,16 +224,56 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:75
+msgid "Export to raster"
+msgstr "Eksportuoti į rastrą"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:77
+msgid ""
+"Exports point cloud data to a 2D raster grid having cell size of given "
+"resolution, writing values from the specified attribute."
+msgstr ""
+"Eksportuoja taškų masyvo duomenis į 2D rastro gardelę su nurodytos "
+"rezoliucijos celės dydžiu, įrašant reikšmes iš nurodyto atributo."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:83
+msgid "Raster output using Intensity attribute of points"
+msgstr "Rastro išvestis naudojant taškų intensyvumo atributą"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:89
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:217
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:339
 msgid "Basic parameters"
 msgstr "Baziniai parametrai"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:102
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:230
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:352
+msgid "Input point cloud layer to export"
+msgstr "Įvesties taškų masyvo sluoksnis eksportavimui"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:353
+msgid "**Attribute**"
+msgstr "**Atributas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:104
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:356
 msgid "``ATTRIBUTE``"
 msgstr "``ATTRIBUTE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:105
+msgid "[field] [enumeration]"
+msgstr "[laukas] [sąrašas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:106
+msgid "A Field of the point cloud layer to extract the values from"
+msgstr "Taškų masyvo sluoksnio laukas, iš kurio reikia ištraukti reikšmes"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:107
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:231
+msgid "**Resolution of the density raster**"
+msgstr "**Tankio rastro rezoliucija**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:108
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:232
@@ -237,20 +281,75 @@ msgid "``RESOLUTION``"
 msgstr "``RESOLUTION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:109
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:115
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:162
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:168
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:233
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:239
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:286
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:292
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:111
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:235
+msgid "Default: 1.0"
+msgstr "Numatytas: 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:112
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:236
+msgid "Cell size of the output raster"
+msgstr "Išvesties rastro celės dydis"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:113
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:237
+msgid "**Tile size for parallel runs**"
+msgstr "**Paralelinio vykdymo kaladėlės dydis**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:114
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:238
 msgid "``TILE_SIZE``"
 msgstr "``TILE_SIZE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:115
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:239
+msgid "[numeric: integer]"
+msgstr "[skaičius: sveikas skaičius]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:241
+msgid "Default: 1000"
+msgstr "Numatytas: 1000"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:182
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:243
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:359
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:409
+msgid "**Exported**"
+msgstr "**Eksportuota**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:121
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:184
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:245
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:308
+msgid "[raster]"
+msgstr "[rastras]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:124
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:248
+msgid "Specify the raster file to export the data to. One of:"
+msgstr "Nurodykite rastro failą, į kurį eksportuoti duomenis. Vienas iš:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:131
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:255
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:371
+msgid "Advanced parameters"
+msgstr "Išmanesni parametrai"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:141
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:265
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:381
+msgid "**Filter expression**"
+msgstr "**Filtro išraiška**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:143
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:149
@@ -278,18 +377,113 @@ msgstr "``FILTER_EXPRESSION``"
 msgid "[expression]"
 msgstr "[išraiška]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:146
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:270
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:386
+msgid ""
+"A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of "
+"features in the point cloud data"
+msgstr ""
+":ref:`PDAL išraiška <pdal_expressions>` parenkant taškų masyvo duomenų "
+"geoobjektų poaibį"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:147
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:271
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:387
+msgid "**Cropping extent**"
+msgstr "**Apkarpymo apimtis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:150
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:274
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:390
 msgid "``FILTER_EXTENT``"
 msgstr "``FILTER_EXTENT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:151
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:275
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:391
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:152
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:276
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:392
+msgid ""
+"A map extent for selecting a subset of features in the point cloud data"
+msgstr "Žemėlapio apimtis, parenkant taškų masyvo duomenų geoobjektų poaibį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:158
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:282
+msgid "**X origin of a tile for parallel runs**"
+msgstr "**Paralelinio vykdymo kaladėlių X pradžia**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:161
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:285
 msgid "``ORIGIN_X``"
 msgstr "``ORIGIN_X``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:164
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:288
+msgid "**Y origin of a tile for parallel runs**"
+msgstr "**Paralelinio vykdymo kaladėlių Y pradžia**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:167
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:291
 msgid "``ORIGIN_Y``"
 msgstr "``ORIGIN_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:309
+msgid ""
+"Output raster layer features of the point cloud layer are exported to. "
+"Currently supported format is :file:`.TIF`."
+msgstr ""
+"Išvesties rastro sluoksnio geoobjektai eksportuoti iš taškų masyvo "
+"sluoksnio. Šiuo metu palaikomas formatas yra :file:`.TIF`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:191
+msgid "**Algorithm ID**: ``pdal:exportraster``"
+msgstr "**Algoritmo ID**: ``pdal:exportraster``"

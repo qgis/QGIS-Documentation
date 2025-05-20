@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -56,7 +56,7 @@ msgid ""
 "Assigns a Coordinate Reference System to a point cloud layer, if it is "
 "missing or wrong. A new layer is created."
 msgstr ""
-"Priskiria taškų debesies sluoksniui koordinačių atskaitos sistemą, jei jos "
+"Priskiria taškų masyvo sluoksniui koordinačių atskaitos sistemą, jei jos "
 "nėra ar ji neteisinga. Sukuriamas naujas sluoksnis."
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:20
@@ -229,7 +229,15 @@ msgstr "``INPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:737
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:787
 msgid "[point cloud]"
-msgstr "[taškų debesis]"
+msgstr "[taškų masyvas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:36
+msgid "Input point cloud layer to assign a CRS to"
+msgstr "Įvesties taškų masyvo sluoksnis, kuriam reikia priskirti CRS"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:37
+msgid "**Desired CRS**"
+msgstr "**Norima CRS**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:38
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:536
@@ -242,6 +250,16 @@ msgstr "``CRS``"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:860
 msgid "[crs]"
 msgstr "[crs]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:538
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:861
+msgid "The CRS to apply to the layer"
+msgstr "Sluoksniui priskiriama CRS"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:41
+msgid "**Output layer**"
+msgstr "**Išvesties sluoksnis**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:42
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:64
@@ -307,6 +325,14 @@ msgstr "Išvestys"
 msgid "**Converted**"
 msgstr "**Pakeistas**"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:66
+msgid ""
+"Output point cloud layer with a new CRS. Currently supported formats are "
+":file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` and :file:`.VPC`."
+msgstr ""
+"Išvesties taškų masyvo sluoksnis su nauja CRS. Šiuo metu palaikomi formatai "
+"yra: :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` ir :file:`.VPC`."
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:70
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:163
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:262
@@ -319,6 +345,10 @@ msgstr "**Pakeistas**"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:880
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:72
+msgid "**Algorithm ID**: ``pdal:assignprojection``"
+msgstr "**Algoritmo ID**: ``pdal:assignprojection``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -335,6 +365,13 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:96
 msgid ":ref:`pdalmerge`"
 msgstr ":ref:`pdalmerge`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:109
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:289
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:442
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:824
+msgid "**Input layers**"
+msgstr "**Įvesties sluoksniai**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:110
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:290
@@ -367,6 +404,11 @@ msgstr "``STATISTICS``"
 msgid "``OVERVIEW``"
 msgstr "``OVERVIEW``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:159
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:258
+msgid "[raster]"
+msgstr "[rastras]"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:174
 msgid "Clip"
 msgstr "Apkirpti"
@@ -391,6 +433,22 @@ msgstr "[vektorius: poligonas]"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:256
 msgid "**Clipped**"
 msgstr "**Apkirpta**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:218
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:458
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:551
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:648
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:747
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:846
+msgid "Advanced parameters"
+msgstr "Išmanesni parametrai"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:228
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:468
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:658
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:757
+msgid "**Filter expression**"
+msgstr "**Filtro išraiška**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:230
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:236
@@ -420,12 +478,88 @@ msgstr "``FILTER_EXPRESSION``"
 msgid "[expression]"
 msgstr "[išraiška]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:233
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:473
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:663
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:762
+msgid ""
+"A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of "
+"features in the point cloud data"
+msgstr ""
+":ref:`PDAL išraiška <pdal_expressions>` parenkant taškų masyvo duomenų "
+"geoobjektų poaibį"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:234
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:474
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:664
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:763
+msgid "**Cropping extent**"
+msgstr "**Apkarpymo apimtis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:237
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:477
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:667
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:766
 msgid "``FILTER_EXTENT``"
 msgstr "``FILTER_EXTENT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:238
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:478
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:668
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:767
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:239
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:479
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:669
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:768
+msgid ""
+"A map extent for selecting a subset of features in the point cloud data"
+msgstr "Žemėlapio apimtis, parenkant taškų masyvo duomenų geoobjektų poaibį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:299
 msgid "Default: ``[Skip output]``"
@@ -447,6 +581,10 @@ msgstr ":ref:`pdalvirtualpointcloud`"
 msgid ":ref:`pdalassignprojection`"
 msgstr ":ref:`pdalassignprojection`"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:535
+msgid "**Target CRS**"
+msgstr "**Paskirties CRS**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:564
 msgid "``OPERATION``"
 msgstr "``OPERATION``"
@@ -460,10 +598,13 @@ msgid "``SAMPLING_RADIUS``"
 msgstr "``SAMPLING_RADIUS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:632
-#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:731
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:830
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:634
+msgid "Default: 1.0"
+msgstr "Numatytas: 1.0"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:709
 msgid ":ref:`pdalthinbyradius`"
@@ -472,6 +613,14 @@ msgstr ":ref:`pdalthinbyradius`"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:730
 msgid "``POINTS_NUMBER``"
 msgstr "``POINTS_NUMBER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:731
+msgid "[numeric: integer]"
+msgstr "[skaičius: sveikas skaičius]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:733
+msgid "Default: 1"
+msgstr "Numatytas: 1"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:808
 msgid ":ref:`pdalvirtualpointcloud`, :ref:`pdalcreatecopc`"

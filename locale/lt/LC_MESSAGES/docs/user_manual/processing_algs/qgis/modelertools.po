@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -38,6 +38,34 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:2
 msgid "Modeler tools"
 msgstr "Modeliuotojo įrankiai"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:6
+msgid ""
+"These tools are only available in the model designer. They are not available"
+" in the Processing Toolbox."
+msgstr ""
+"Šiuos įrankius galima naudoti tik modelių dizaineryje. Jų nėra apdorojimo "
+"įrankinėje."
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:20
+msgid "Calculate expression"
+msgstr "Skaičiuoti išraišką"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:22
+msgid ""
+"It calculates the result of a QGIS expression and eliminates the need to use"
+" the same expression multiple times throughout a model when the same result "
+"is required more than once. Additionally, it enables use cases that would "
+"otherwise not be possible. For instance, you can generate a timestamp value "
+"once and use it multiple times within the model, if the timestamp were "
+"recalculated every time, the values would vary during the model's runtime."
+msgstr ""
+"Skaičiuoja QGIS išraiškos rezultatą ir panaikina poreikį naudoti modelyje tą"
+" pačią išraišką kelis kartus, kai tas pats rezultatas reikalingas daugiau "
+"nei vieną kartą. Taipogi tai atveria galimybes, kurios kitu atveju būtų "
+"neįmanomos. Pavyzdžiui, jūs galite kurti laiko žymos reikšmę vieną kartą ir "
+"naudoti ją modelyje kelis kartus. Jei laiko žyma būtų skaičiuojama kiekvieną"
+" kartą, reikšmės būtų skirtingos."
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:32
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:86
@@ -160,6 +188,10 @@ msgstr "Tipas"
 msgid "Description"
 msgstr "Aprašymas"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:42
+msgid "**Input**"
+msgstr "**Įvestis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:43
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:193
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:251
@@ -176,6 +208,10 @@ msgstr "``INPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:466
 msgid "[expression]"
 msgstr "[išraiška]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:45
+msgid "Expression to calculate"
+msgstr "Skaičiuojama išraiška"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:48
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:106
@@ -207,6 +243,18 @@ msgstr "**Reikšmė**"
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:60
+msgid "[Result Value]"
+msgstr "[Gauta reikšmė]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:61
+msgid ""
+"Calculated result value, the data type of the output will vary based on the "
+"specific expression used in the algorithm."
+msgstr ""
+"Paskaičiuota rezultato reikšmė. Išvesties duomenų tipas kis priklausomai nuo"
+" konkrečios algoritme naudojamos išraiškos."
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:66
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:111
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:162
@@ -223,6 +271,10 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:778
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:68
+msgid "**Algorithm ID**: ``native:calculateexpression``"
+msgstr "**Algoritmo ID**: ``native:calculateexpression``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -267,6 +319,11 @@ msgstr "``CONDITION``"
 msgid "``PATH``"
 msgstr "``PATH``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:156
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:214
+msgid "**Output**"
+msgstr "**Išvestis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:192
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:250
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:707
@@ -300,6 +357,10 @@ msgstr "``VECTOR``"
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:276
 msgid "``RASTER``"
 msgstr "``RASTER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:277
+msgid "[raster]"
+msgstr "[rastras]"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:312
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:506
@@ -349,14 +410,21 @@ msgstr "Įvesties vektorinis sluoksnis"
 msgid "``DISTANCE``"
 msgstr "``DISTANCE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:713
+msgid "[tablefield: numeric]"
+msgstr "[lentelės laukas: skaičius]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:715
+msgid "**Segments**"
+msgstr "**Segmentai**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:716
 msgid "``SEGMENTS``"
 msgstr "``SEGMENTS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:717
-#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:754
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: integer]"
+msgstr "[skaičius: sveikas skaičius]"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:723
 msgid "``DISSOLVE``"
@@ -375,13 +443,33 @@ msgstr "``END_CAP_STYLE``"
 msgid "[enumeration]"
 msgstr "[sąrašas]"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:745
+msgid "**Join style**"
+msgstr "**Jungimo stilius**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:746
 msgid "``JOIN_STYLE``"
 msgstr "``JOIN_STYLE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:752
+msgid "**Miter limit**"
+msgstr "**Mitros riba**"
+
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:753
 msgid "``MITER_LIMIT``"
 msgstr "``MITER_LIMIT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:754
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:756
+msgid "Default: 2.0"
+msgstr "Numatyta: 2.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:772
+msgid "**Buffer**"
+msgstr "**Buferis**"
 
 #: ../../docs/user_manual/processing_algs/qgis/modelertools.rst:774
 msgid "[vector: polygon]"

@@ -5,23 +5,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Keita UEMORI, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Akinobu Masumura, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Akinobu Masumura, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -33,6 +33,10 @@ msgid ""
 msgstr ""
 "翻訳は :ref:`あなたが参加できる <translation_guidelines>`  コミュニティの取り組みです。このページは現在 "
 "|translation progress| 翻訳されています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:2
+msgid "Point Cloud Extraction"
+msgstr "点群の抽出"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:10
 msgid ""
@@ -48,7 +52,14 @@ msgstr "トポロジカル境界"
 msgid ""
 "Exports a polygon file containing point cloud layer boundary. It may contain"
 " holes and it may be a multi-part polygon."
-msgstr "ポイントクラウドレイヤ境界を含むポリゴンファイルをエクスポートします。穴が含まれる場合や、マルチパートポリゴンである場合があります。"
+msgstr ""
+"点群レイヤーの境界を含むポリゴンファイルをエクスポートします。 ポリゴンファイルには穴が含まれている場合やマルチパートポリゴンである場合があります。"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:23
+msgid ""
+"Extracting high vegetation and building polygons from an input point cloud "
+"layer"
+msgstr "入力点群レイヤーから高い植生と建物のポリゴンを抽出する"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:26
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:135
@@ -123,7 +134,15 @@ msgstr "``INPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:288
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:310
 msgid "[point cloud]"
-msgstr "[point cloud]"
+msgstr "[点群]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:42
+msgid "Input point cloud layer to calculate boundary for"
+msgstr "トポロジカル境界を算出する点群レイヤを指定"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:43
+msgid "**Resolution of cells used to calculate boundary**"
+msgstr "**トポロジカル境界の算出に使用するセルの解像度**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:45
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:51
@@ -143,18 +162,21 @@ msgstr "オプション"
 msgid "``RESOLUTION``"
 msgstr "``RESOLUTION``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:47
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:53
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:154
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:160
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:207
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:213
-msgid "[number]"
-msgstr "[数値]"
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:48
+msgid "Resolution of cells used to calculate boundary"
+msgstr "トポロジカル境界の算出に使用するセルの解像度"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:49
+msgid "**Minimal number of points in a cell to consider cell occupied**"
+msgstr "**セルが占有されているとみなすための、セル内の最小点数**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:52
 msgid "``THRESHOLD``"
 msgstr "``THRESHOLD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:54
+msgid "Minimal number of points in a cell to consider cell occupied"
+msgstr "セルが占有されているとみなすための、セル内の点の数の最小値"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:55
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:105
@@ -224,6 +246,12 @@ msgid ""
 "features in the point cloud data"
 msgstr "点群データ内の地物のサブセットを選択するための :ref:`PDAL式 <pdal_expressions>`"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:83
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:275
+msgid "**Cropping extent**"
+msgstr "**切り抜く範囲**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:86
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:195
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:278
@@ -235,6 +263,13 @@ msgstr "``FILTER_EXTENT``"
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:279
 msgid "[extent]"
 msgstr "[範囲]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:88
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:280
+msgid ""
+"A map extent for selecting a subset of features in the point cloud data"
+msgstr "点群データ内の地物のサブセットを選択するためのマップ範囲"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"

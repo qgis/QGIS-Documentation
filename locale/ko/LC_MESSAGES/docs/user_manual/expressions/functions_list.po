@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-14 21:23+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Transifex Bot <>, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -352,8 +352,8 @@ msgstr "다른 레이어의 피처를 이용해서 계산한 집계값을 반환
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:243
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:19
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:41
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:76
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:13
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:23
@@ -767,8 +767,8 @@ msgstr "[] 괄호는 선택적인 인자를 표시합니다"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:245
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:21
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:43
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:78
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:25
@@ -1264,8 +1264,8 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:248
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:25
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:58
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:81
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:82
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
@@ -4499,6 +4499,7 @@ msgstr "to_interval(string)"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:110
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:16
+#, python-brace-format
 msgid ""
 "**string** - a string representing an interval. Allowable formats include "
 "{n} days {n} hours {n} months."
@@ -7192,15 +7193,6 @@ msgid ""
 msgstr ""
 "**target_percent** - 이 함수가 도달하려 하는 볼록 껍질 면적의 백분율. target_percent가 1이면 볼록 껍질과"
 " 동일한 결과를 산출합니다. target_percent가 0에서 0.99 사이라면 볼록 껍질보다 적은 면적을 산출합니다."
-
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
-msgid ""
-"**allow_holes** - optional argument specifying whether to allow holes within"
-" the output geometry. Defaults to FALSE, set to TRUE to avoid including "
-"holes in the output geometry."
-msgstr ""
-"**allow_holes** - 산출 도형 안에 구멍을 포함할 수 있는지 여부를 지정하는 선택적인 인자. 기본값은 FALSE로, 산출 "
-"도형 안에 구멍이 포함되는 걸 피하려면 TRUE로 설정하세요."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
 msgid ""
@@ -12650,6 +12642,7 @@ msgid ""
 msgstr "**part** - 반환할 URI 부분. 지정하지 않으면 모든 URI 부분을 가진 맵을 반환할 것입니다."
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:27
+#, python-brace-format
 msgid ""
 "``decode_uri(@layer)`` → {'layerId': '0', 'layerName': '', 'path': "
 "'/home/qgis/shapefile.shp'}"
@@ -12658,6 +12651,7 @@ msgstr ""
 "'/home/qgis/shapefile.shp'}"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:28
+#, python-brace-format
 msgid ""
 "``decode_uri(@layer)`` → {'layerId': NULL, 'layerName': 'layer', 'path': "
 "'/home/qgis/geopackage.gpkg'}"
@@ -12682,7 +12676,7 @@ msgid "layer_property(layer, property)"
 msgstr "layer_property(layer, property)"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:46
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:47
 msgid ""
 "**property** - a string corresponding to the property to return. Valid "
 "options are:"
@@ -12880,6 +12874,7 @@ msgid "hstore_to_map(string)"
 msgstr "hstore_to_map(string)"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:45
+#, python-brace-format
 msgid "``hstore_to_map('qgis=>rocks')`` → { 'qgis': 'rocks' }"
 msgstr "``hstore_to_map('qgis=>rocks')`` → { 'qgis': 'rocks' }"
 
@@ -12902,6 +12897,7 @@ msgid "**key** - a key (string)"
 msgstr "**key** - 키(문자열)"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:66
+#, python-brace-format
 msgid "``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }"
 msgstr "``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }"
 
@@ -12967,6 +12963,7 @@ msgid "map_concat(map1, map2, ...)"
 msgstr "map_concat(map1, map2, ...)"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:127
+#, python-brace-format
 msgid ""
 "``map_concat(map('1','one', '2','overridden'),map('2','two', '3','three'))``"
 " → { '1': 'one', '2': 'two', '3': 'three' }"
@@ -12991,6 +12988,7 @@ msgid "**key** - the key to delete"
 msgstr "**key** - 삭제할 키"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:148
+#, python-brace-format
 msgid "``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }"
 msgstr "``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }"
 
@@ -13068,12 +13066,14 @@ msgid "**key** - the key to add"
 msgstr "**key** - 추가할 키"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:20
+#, python-brace-format
 msgid ""
 "``map_insert(map('1','one'),'3','three')`` → { '1': 'one', '3': 'three' }"
 msgstr ""
 "``map_insert(map('1','one'),'3','three')`` → { '1': 'one', '3': 'three' }"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:21
+#, python-brace-format
 msgid ""
 "``map_insert(map('1','one','2','overridden'),'2','two')`` → { '1': 'one', "
 "'2': 'two' }"
@@ -13098,6 +13098,7 @@ msgid "**prefix** - a string"
 msgstr "**prefix** - 문자열"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:42
+#, python-brace-format
 msgid ""
 "``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
 "'one', 'prefix-2': 'two' }"
@@ -15025,7 +15026,7 @@ msgid "raster_attributes(layer, band, value)"
 msgstr "raster_attributes(layer, band, value)"
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:22
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:79
 msgid "**layer** - the name or id of a raster layer"
 msgstr "**layer** - 래스터 레이어의 이름 또는 ID"
 
@@ -15038,6 +15039,7 @@ msgid "**value** - raster value"
 msgstr "**value** - 래스터 값"
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:26
+#, python-brace-format
 msgid ""
 "``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
 "make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
@@ -15045,88 +15047,88 @@ msgstr ""
 "``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
 "make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:34
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:35
 msgid "raster_statistic"
 msgstr "raster_statistic"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:36
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:37
 msgid "Returns statistics from a raster layer."
 msgstr "래스터 레이어의 통계를 반환합니다."
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:43
 msgid "raster_statistic(layer, band, property)"
 msgstr "raster_statistic(layer, band, property)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:45
 msgid ""
 "**layer** - a string, representing either a raster layer name or layer ID"
 msgstr "**layer** - 래스터 레이어 이름 또는 레이어 ID 가운데 하나를 나타내는 문자열"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:45
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:46
 msgid ""
 "**band** - integer representing the band number from the raster layer, "
 "starting at 1"
 msgstr "**band** - 래스터 레이어의 1로 시작하는 밴드 번호를 나타내는 정수"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:50
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:51
 msgid "min: minimum value"
 msgstr "min: 최소값"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:51
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:52
 msgid "max: maximum value"
 msgstr "max: 최대값"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:52
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:53
 msgid "avg: average (mean) value"
 msgstr "avg: 평균값"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:53
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:54
 msgid "stdev: standard deviation of values"
 msgstr "stdev: 값들의 표준 편차"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:54
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:55
 msgid "range: range of values (max - min)"
 msgstr "range: 값의 범위(최대 - 최소)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:55
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:56
 msgid "sum: sum of all values from raster"
 msgstr "sum: 래스터에서 나온 모든 값들의 합계"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:60
 msgid ""
 "``raster_statistic('lc',1,'avg')`` → Average value from band 1 from 'lc' "
 "raster layer"
 msgstr "``raster_statistic('lc',1,'avg')`` → 'lc' 래스터 레이어의 밴드 1의 평균값"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:60
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:61
 msgid ""
 "``raster_statistic('ac2010',3,'min')`` → Minimum value from band 3 from "
 "'ac2010' raster layer"
 msgstr "``raster_statistic('ac2010',3,'min')`` → 'ac2010' 래스터 레이어의 밴드 3의 최소값"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:69
 msgid "raster_value"
 msgstr "raster_value"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:71
 msgid "Returns the raster value found at the provided point."
 msgstr "입력 포인트 위치의 래스터 값을 반환합니다."
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:77
 msgid "raster_value(layer, band, point)"
 msgstr "raster_value(layer, band, point)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:79
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:80
 msgid "**band** - the band number to sample the value from."
 msgstr "**band** - 값을 가져올 밴드 번호"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:80
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:81
 msgid ""
 "**point** - point geometry (for multipart geometries having more than one "
 "part, a NULL value will be returned)"
 msgstr "**point** - 포인트 도형 (하나 이상의 부분을 가진 다중 부분 도형의 경우, NULL 값을 반환할 것입니다)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:82
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:83
 msgid "``raster_value('dem', 1, make_point(1,1))`` → 25"
 msgstr "``raster_value('dem', 1, make_point(1,1))`` → 25"
 
@@ -16096,6 +16098,7 @@ msgstr ""
 "하나로 지정할 수 있습니다."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
+#, python-brace-format
 msgid "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
 msgstr "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
 

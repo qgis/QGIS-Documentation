@@ -15,14 +15,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2025\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -36,6 +36,10 @@ msgstr ""
 "pouvez vous joindre <translation_guidelines>`. Cette page est actuellement "
 "traduite à |translation progress|."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:2
+msgid "Point Cloud Conversion"
+msgstr "Conversion de nuages de points"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:10
 msgid ""
 "These algorithms are only available if QGIS uses the PDAL library version "
@@ -47,6 +51,14 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:15
 msgid "Convert format"
 msgstr "Convertir le format"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:17
+msgid ""
+"Converts a point cloud to a different file format, e.g. creates a compressed"
+" :file:`.LAZ`."
+msgstr ""
+"Convertit un nuage de points dans un format différent, pour par exemple "
+"créer un fichier :file:`.LAZ` compressé."
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:86
@@ -134,6 +146,10 @@ msgstr "``INPUT``"
 msgid "[point cloud]"
 msgstr "[nuage de points]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:33
+msgid "Input point cloud layer to convert"
+msgstr "Couche de nuage de points en entrée à convertir"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:34
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:56
 msgid "**Converted**"
@@ -201,6 +217,10 @@ msgstr ""
 ":ref:`processing_console` pour plus de détails sur l'exécution d'algorithmes"
 " via la console Python."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:75
+msgid "Export to raster"
+msgstr "Exporter en raster"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:89
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:217
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:339
@@ -223,6 +243,10 @@ msgstr "**Attribut**"
 msgid "``ATTRIBUTE``"
 msgstr "``ATTRIBUTE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:105
+msgid "[field] [enumeration]"
+msgstr "[champ] [énumeration]"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:107
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:231
 msgid "**Resolution of the density raster**"
@@ -234,15 +258,13 @@ msgid "``RESOLUTION``"
 msgstr "``RESOLUTION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:109
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:115
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:162
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:168
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:233
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:239
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:286
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:292
-msgid "[number]"
-msgstr "[nombre]"
+msgid "[numeric: double]"
+msgstr "[numérique: décimal]"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:111
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:235
@@ -264,10 +286,23 @@ msgstr "**Taille de tuile pour les exécutions parallèles**"
 msgid "``TILE_SIZE``"
 msgstr "``TILE_SIZE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:115
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:239
+msgid "[numeric: integer]"
+msgstr "[numérique : entier]"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:117
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:241
 msgid "Default: 1000"
 msgstr "Par défaut : 1000"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:182
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:243
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:359
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:409
+msgid "**Exported**"
+msgstr "**Exporté**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:121
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:184
@@ -329,6 +364,12 @@ msgid ""
 msgstr ""
 "Une :ref:`expression PDAL <pdal_expressions>` permettant la sélection d'un "
 "ensemble d'entités dans les données de nuage de points"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:147
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:271
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:387
+msgid "**Cropping extent**"
+msgstr "**Étendue de recadrage**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:150
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:274
@@ -399,9 +440,17 @@ msgstr "``ORIGIN_Y``"
 msgid "**Algorithm ID**: ``pdal:exportraster``"
 msgstr "**ID de l'algorithme** : ``pdal:exportraster``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:306
+msgid "**Exported (using triangulation)**"
+msgstr "**Exporté (via triangulation)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:315
 msgid "**Algorithm ID**: ``pdal:exportrastertin``"
 msgstr "**ID de l'algorithme** : ``pdal:exportrastertin``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:357
+msgid "[field] [list]"
+msgstr "[champ] [liste]"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:361
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudconversion.rst:411

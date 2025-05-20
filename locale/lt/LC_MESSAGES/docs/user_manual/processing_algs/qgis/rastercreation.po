@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-02 12:20+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -34,6 +34,32 @@ msgstr ""
 "Vertimas yra bendruomenės pastangos, prie kurių :ref:`jūs galite prisijungti"
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:2
+msgid "Raster Creation"
+msgstr "Rastro kūrimas"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:14
+msgid "Create constant raster layer"
+msgstr "Kurti konstantų rastro sluoksnį"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:16
+msgid ""
+"Generates raster layer for given extent and cell size filled with the "
+"specified value."
+msgstr ""
+"Sukuria nurodytos apimties ir celės dydžio rastro sluoksnį, užpildytą "
+"nurodyta reikšme."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:19
+msgid ""
+"Additionally an output data type can be specified. The algorithm will abort "
+"if a value has been entered that cannot be represented by the selected "
+"output raster data type."
+msgstr ""
+"Papildomai galima nurodyti išvesties duomenų tipą. Algoritmas nutrauks "
+"darbą, jei įvesta reikšmė negali būti išreikšta parinktu išvesties rastro "
+"duomenų tipu."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:24
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:159
@@ -179,6 +205,18 @@ msgstr "Tipas"
 msgid "Description"
 msgstr "Aprašymas"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:172
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:311
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:440
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:576
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:710
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:849
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:985
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1120
+msgid "**Desired extent**"
+msgstr "**Norima apimtis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:38
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:173
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:312
@@ -190,6 +228,89 @@ msgstr "Aprašymas"
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1121
 msgid "``EXTENT``"
 msgstr "``EXTENT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:174
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:313
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:442
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:578
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:712
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:851
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:987
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1122
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:175
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:314
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:443
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:579
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:713
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:852
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:988
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1123
+msgid ""
+"Specify the spatial extent of the output raster layer. It will internally be"
+" extended to a multiple of the tile size."
+msgstr ""
+"Nurodykite išvesties rastro sluoksnio erdvinę apimtį. Ji viduje bus išplėsta"
+" iki kaladėlės dydžio kartotinio."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:47
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:182
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:321
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:450
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:586
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:720
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:859
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:995
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1130
+msgid "**Target CRS**"
+msgstr "**Paskirties CRS**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:48
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:183
@@ -215,6 +336,42 @@ msgstr "``TARGET_CRS``"
 msgid "[crs]"
 msgstr "[crs]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:51
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:186
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:325
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:590
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:724
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:863
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:999
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1134
+msgid "Default: Project CRS"
+msgstr "Numatyta: projekto CRS"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:52
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:187
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:326
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:455
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:591
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:725
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:864
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1000
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1135
+msgid "CRS for the output raster layer"
+msgstr "Išvesties rastro sluoksnio CRS"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:53
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:188
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:327
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:592
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:726
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:865
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1001
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1136
+msgid "**Pixel size**"
+msgstr "**Taško dydis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:54
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:189
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:328
@@ -230,7 +387,6 @@ msgstr "``PIXEL_SIZE``"
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:55
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:61
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:190
-#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:231
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:237
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:329
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:366
@@ -240,7 +396,6 @@ msgstr "``PIXEL_SIZE``"
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:594
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:635
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:728
-#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:769
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:775
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:867
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:904
@@ -250,12 +405,55 @@ msgstr "``PIXEL_SIZE``"
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1138
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1180
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1186
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:331
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:368
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:460
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:497
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:503
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:596
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:730
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:869
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:912
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1005
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1046
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1140
+msgid "Default: 1.0"
+msgstr "Numatytas: 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:58
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:193
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:332
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:461
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:597
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:731
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:870
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1006
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1141
+msgid "Pixel size (X=Y) in map units."
+msgstr "Taško dydis (X=Y) žemėlapio vienetais."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:59
+msgid "**Constant value**"
+msgstr "**Konstantos reikšmė**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:60
 msgid "``NUMBER``"
 msgstr "``NUMBER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:64
+msgid "Constant pixel value for the output raster layer."
+msgstr "Nekintanti taško reikšmė išvesties rastro sluoksniui."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:65
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:128
+msgid "**Constant**"
+msgstr "**Konstanta**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:66
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:129
@@ -278,6 +476,27 @@ msgstr "``NUMBER``"
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:130
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:196
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:270
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:335
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:399
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:464
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:534
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:600
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:668
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:734
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:808
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:873
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:943
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1009
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1077
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1144
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1219
+msgid "[raster]"
+msgstr "[rastras]"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:69
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:198
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:337
@@ -290,6 +509,18 @@ msgstr "``OUTPUT``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:70
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:199
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:338
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:467
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:603
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:737
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:876
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1012
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1147
+msgid "Specification of the output raster. One of:"
+msgstr "Išvesties rastro specifikacija. Vienas iš:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Įrašyti į laikiną failą"
@@ -297,6 +528,30 @@ msgstr "Įrašyti į laikiną failą"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to File…"
 msgstr "Įrašyti į failą..."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:206
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:345
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:474
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:610
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:744
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:883
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1019
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1154
+msgid "Advanced parameters"
+msgstr "Išmanesni parametrai"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:87
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:216
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:355
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:484
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:620
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:754
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:893
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1029
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1164
+msgid "**Output raster data type**"
+msgstr "**Išvesties rastro duomenų tipas**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:88
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:217
@@ -310,6 +565,11 @@ msgstr "Įrašyti į failą..."
 msgid "``OUTPUT_TYPE``"
 msgstr "``OUTPUT_TYPE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:90
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1167
+msgid "Default: 5"
+msgstr "Numatytas: 5"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:91
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:220
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:359
@@ -321,6 +581,65 @@ msgstr "``OUTPUT_TYPE``"
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1168
 msgid "[enumeration]"
 msgstr "[sąrašas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:92
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:221
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:360
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:489
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:625
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:759
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:898
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1034
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1169
+msgid "Defines the data type of the output raster file. Options:"
+msgstr "Nurodo išvesties rastro failo duomenų tipą. Parinktys:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:94
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1171
+msgid "0 --- Byte"
+msgstr "0 --- Byte"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:95
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1172
+msgid "1 --- Integer16"
+msgstr "1 --- Integer16"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:96
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1173
+msgid "2 --- Unsigned Integer16"
+msgstr "2 --- Unsigned Integer16"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:97
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1174
+msgid "3 --- Integer32"
+msgstr "3 --- Integer32"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:98
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1175
+msgid "4 --- Unsigned Integer32"
+msgstr "4 --- Unsigned Integer32"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:99
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1176
+msgid "5 --- Float32"
+msgstr "5 --- Float32"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:100
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1177
+msgid "6 --- Float64"
+msgstr "6 --- Float64"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:101
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:241
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:370
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:505
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:639
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:779
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:914
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1048
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1190
+msgid "**Creation options**"
+msgstr "**Kūrimo parinktys**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:103
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:243
@@ -358,6 +677,54 @@ msgstr "``CREATE_OPTIONS``"
 msgid "[string]"
 msgstr "[string]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:107
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:247
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:376
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:511
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:645
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:785
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:920
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1054
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1196
+msgid "Default: ''"
+msgstr "Numatytas: ''"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:108
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:248
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:377
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:512
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:646
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:786
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:921
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1055
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1197
+msgid ""
+"For adding one or more creation options that control the raster to be "
+"created (colors, block size, file compression...). For convenience, you can "
+"rely on predefined profiles (see :ref:`GDAL driver options section "
+"<gdal_createoptions>`)."
+msgstr ""
+"Norint pridėti vieną ar daugiau kūrimo parinkčių, valdančių rastro kūrimą "
+"(spalvos, bloko dydis, failo suspaudimas...). Patogumui jūs galite remtis iš"
+" anksto sukurtais profiliais (žiūrėkite :ref:`GDAL tvarkyklės parinkčių "
+"skiltį <gdal_createoptions>`)."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:114
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:254
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:383
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:518
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:652
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:792
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:927
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1061
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1203
+msgid ""
+"Batch Process and Model Designer: separate multiple options with a pipe "
+"character (``|``)."
+msgstr ""
+"Paketinis apdorojimas ir Modelių kūrimas: atskirkite kelias parinktis "
+"statmenu brūkšniu (``|``)."
+
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:118
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:258
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:387
@@ -369,6 +736,11 @@ msgstr "[string]"
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1207
 msgid "Outputs"
 msgstr "Išvestys"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:131
+msgid ""
+"Raster covering the desired extent with the specified pixel size and value."
+msgstr "Nurodyto taško dydžio ir reikšmės rastras, dengiantis norimą apimtį."
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:135
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:275
@@ -382,6 +754,10 @@ msgstr "Išvestys"
 msgid "Python code"
 msgstr "Pythono kodas"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:137
+msgid "**Algorithm ID**: ``native:createconstantrasterlayer``"
+msgstr "**Algoritmo ID**: ``native:createconstantrasterlayer``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -394,6 +770,53 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:147
+msgid "Create random raster layer (binomial distribution)"
+msgstr "Kurti atsitiktinį rastro sluoksnį (binominis pasiskirstymas)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:149
+msgid ""
+"Generates a raster layer for given extent and cell size filled with "
+"binomially distributed random values."
+msgstr ""
+"Sukuria nurodytos apimties ir celės dydžio rastro sluoksnį užpildytą "
+"binomiškai pasiskirsčiusiomis atsitiktinėmis reikšmėmis."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:152
+msgid ""
+"By default, the values will be chosen given an N of 10 and a probability of "
+"0.5. This can be overridden by using the advanced parameter for N and "
+"probability. The raster data type is set to Integer types (Integer16 by "
+"default). The binomial distribution random values are defined as positive "
+"integer numbers. A floating point raster will represent a cast of integer "
+"values to floating point."
+msgstr ""
+"Pagal nutylėjimą reikšmės parenkamus su N=10 ir tikimybe 0,5. Tai galima "
+"pakeisti naudojant sudėtingesnį parametrą, nurodant N ir tikimybę. Rastro "
+"duomenų tipas yra sveikų skaičių (pagal nutylėjimą Integer16). Binominio "
+"pasiskirstymo atsitiktinės reikšmės apibrėžiamos kaip teigiami sveiki "
+"skaičiai. Slankaus kablelio rastras reprezentuos sveikus skaičius pakeistus "
+"į slankaus kablelio skaičius."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:268
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:333
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:397
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:462
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:532
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:598
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:666
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:732
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:806
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:871
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:941
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1007
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1075
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1142
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1217
+msgid "**Output raster**"
+msgstr "**Išvesties rastras**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:219
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:358
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:487
@@ -404,15 +827,96 @@ msgstr ""
 msgid "Default: 0"
 msgstr "Numatytas: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:223
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:627
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:761
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1036
+msgid "0 --- Integer16"
+msgstr "0 --- Integer16"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:224
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:628
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:762
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1037
+msgid "1 --- Unsigned Integer16"
+msgstr "1 --- Unsigned Integer16"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:225
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:629
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:763
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1038
+msgid "2 --- Integer32"
+msgstr "2 --- Integer32"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:226
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:630
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:764
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1039
+msgid "3 --- Unsigned Integer32"
+msgstr "3 --- Unsigned Integer32"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:227
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:631
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:765
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1040
+msgid "4 --- Float32"
+msgstr "4 --- Float32"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:228
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:632
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:766
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1041
+msgid "5 --- Float64"
+msgstr "5 --- Float64"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:229
+msgid "**N**"
+msgstr "**N**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:230
 msgid "``N``"
 msgstr "``N``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:231
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:769
+msgid "[numeric: integer]"
+msgstr "[skaičius: sveikas skaičius]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:233
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:771
+msgid "Default: 10"
+msgstr "Numatytas: 10"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:235
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:633
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:773
+msgid "**Probability**"
+msgstr "**Tikimybė**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:236
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:634
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:774
 msgid "``PROBABILITY``"
 msgstr "``PROBABILITY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:239
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:637
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:777
+msgid "Default: 0.5"
+msgstr "Numatyta: 0.5"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:271
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:400
+msgid ""
+"Raster covering the desired extent with the cell size filled with random "
+"values"
+msgstr ""
+"Nurodyto taško dydžio ir dengiantis norimą apimtį rastras, užpildytas "
+"atsitiktinėmis reikšmėmis."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:277
+msgid "**Algorithm ID**: ``native:createrandombinomialrasterlayer``"
+msgstr "**Algoritmo ID**: ``native:createrandombinomialrasterlayer``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:365
 msgid "``LAMBDA``"
@@ -434,6 +938,12 @@ msgstr "``K_PARAMETER``"
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1043
 msgid "``MEAN``"
 msgstr "``MEAN``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:906
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1182
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1188
+msgid "Default: 0.0"
+msgstr "Numatytas: 0.0"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:909
 msgid "``STDDEV``"

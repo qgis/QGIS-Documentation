@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-31 09:36+0200\n"
+"POT-Creation-Date: 2025-05-15 17:10+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -187,8 +187,8 @@ msgstr "``INPUT``"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:155
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:251
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:341
-msgid "[vector: any]"
-msgstr "[vector: any]"
+msgid "[vector: geometry]"
+msgstr "[vektorius: geometrija]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:35
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:156
@@ -225,7 +225,7 @@ msgstr "``GEOMETRY``"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:706
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:743
 msgid "[string]"
-msgstr "[string]"
+msgstr "[tekstas]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:40
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:353
@@ -258,8 +258,8 @@ msgstr "``DISTANCE``"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:490
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:585
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:712
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:46
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:492
@@ -300,11 +300,11 @@ msgstr "``FIELD``"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:347
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:602
 msgid "[tablefield: any]"
-msgstr "[tablefield: any]"
+msgstr "[lentelės laukas: bet koks]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:54
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:604
-msgid "Default: None"
+msgid "Default: Not set"
 msgstr "Numatytas: jokio"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:55
@@ -331,7 +331,7 @@ msgstr "``DISSOLVE``"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:608
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:617
 msgid "[boolean]"
-msgstr "[boolean]"
+msgstr "[loginis]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:60
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:69
@@ -353,11 +353,26 @@ msgstr ""
 "Nustačius rezultatas bus sulietas. Jei nenurodytas joks suliejimo laukas, "
 "visi buferiai suliejami į vieną geoobjektą."
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:64
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:379
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:614
+msgid ""
+"**Produce one feature for each geometry in any kind of geometry collection "
+"in the source file**"
+msgstr ""
+"**Kurti vieną geoobjektą kiekvienai geometrijai bet kokio tipo geometrijų "
+"rinkiniui pradiniame faile**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:66
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:381
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:616
 msgid "``EXPLODE_COLLECTIONS``"
 msgstr "``EXPLODE_COLLECTIONS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:71
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:114
+msgid "**Buffer**"
+msgstr "**Buferis**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:72
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:115
@@ -394,6 +409,11 @@ msgstr "[vektorius: poligonas]"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:76
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:626
+msgid "Specify the output buffer layer. One of:"
+msgstr "Nurodykite išvesties buferių sluoksnį. Vienas iš:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Įrašyti į laikiną failą"
@@ -401,6 +421,26 @@ msgstr "Įrašyti į laikiną failą"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to File…"
 msgstr "Įrašyti į failą..."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:83
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:180
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:269
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:368
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:506
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:633
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:729
+msgid "Advanced parameters"
+msgstr "Išmanesni parametrai"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:94
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:190
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:279
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:420
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:516
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:643
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:739
+msgid "**Additional creation options**"
+msgstr "**Papildomos kūrimo parinktys**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:97
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:193
@@ -412,6 +452,26 @@ msgstr "Įrašyti į failą..."
 msgid "``OPTIONS``"
 msgstr "``OPTIONS``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:100
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:196
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:285
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:426
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:522
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:649
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:745
+msgid "Default: '' (no additional options)"
+msgstr "Numatytas: '' (jokių papildomų parinkčių)"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:101
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:197
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:286
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:427
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:523
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:650
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:746
+msgid "Additional GDAL creation options."
+msgstr "Papildomos GDAL kūrimo parinktys."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:104
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:200
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:289
@@ -422,6 +482,11 @@ msgstr "``OPTIONS``"
 msgid "Outputs"
 msgstr "Išvestys"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:117
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:666
+msgid "The output buffer layer"
+msgstr "Išvesties buferių sluoksnis"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:120
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:217
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:306
@@ -431,6 +496,10 @@ msgstr "Išvestys"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:765
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:122
+msgid "**Algorithm ID**: ``gdal:buffervectors``"
+msgstr "**Algoritmo ID**: ``gdal:buffervectors``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -444,9 +513,91 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:132
+msgid "Clip vector by extent"
+msgstr "Apkirpti vektorių pagal apimtį"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:133
+msgid "Clips any OGR-supported vector file to a given extent."
+msgstr "Apkerpa bet kokį OGR palaikomą vektorinį failą pagal pateiktą apimtį."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:135
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:232
+msgid ""
+"This algorithm is derived from the `GDAL ogr2ogr utility "
+"<https://gdal.org/en/latest/programs/ogr2ogr.html>`_."
+msgstr ""
+"Šis algoritmas kilęs iš `GDAL ogr2ogr įrankio "
+"<https://gdal.org/en/latest/programs/ogr2ogr.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:157
+msgid "**Clip extent**"
+msgstr "**Apkirpimo apimtis**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:158
 msgid "``EXTENT``"
 msgstr "``EXTENT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:159
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:160
+msgid ""
+"Defines the bounding box that should be used for the output vector file. It "
+"has to be defined in target CRS coordinates."
+msgstr ""
+"Apibrėžia apimties stačiakampį, kuris turi būti naudojamas išvesties "
+"vektoriniam failui. Jis turi būti apibrėžtas naudojant paskirties CRS "
+"koordinates."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:168
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:210
+msgid "**Clipped (extent)**"
+msgstr "**Apkarpytas (apimtis)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:170
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:212
@@ -457,9 +608,27 @@ msgstr "``EXTENT``"
 msgid "[same as input]"
 msgstr "[toks pat, kaip įvestis]"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:173
+msgid "Specify the output (clipped) layer. One of:"
+msgstr "Nurodykite išvesties (apkarpytą) sluoksnį. Vienas iš:"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:213
+msgid "The output (clipped) layer. The default format is \"ESRI Shapefile\"."
+msgstr ""
+"Išvesties (apkarpytas) sluoksnis. Numatytasis formatas yra „ESRI Shapefile“."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:219
+msgid "**Algorithm ID**: ``gdal:clipvectorbyextent``"
+msgstr "**Algoritmo ID**: ``gdal:clipvectorbyextent``"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:254
 msgid "``MASK``"
 msgstr "``MASK``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:356
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:440
+msgid "**Dissolved**"
+msgstr "**Sulietas**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:388
 msgid "``KEEP_ATTRIBUTES``"
@@ -481,6 +650,10 @@ msgstr "``COMPUTE_STATISTICS``"
 msgid "``STATISTICS_ATTRIBUTE``"
 msgstr "``STATISTICS_ATTRIBUTE``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:418
+msgid "[tablefield: numeric]"
+msgstr "[lentelės laukas: skaičius]"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:480
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:496
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:538
@@ -500,6 +673,10 @@ msgstr "[sąrašas]"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:593
 msgid "Default: 0"
 msgstr "Numatytas: 0"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:714
+msgid "Default: 0.5"
+msgstr "Numatyta: 0.5"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:718
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:761

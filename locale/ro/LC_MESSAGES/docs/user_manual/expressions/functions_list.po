@@ -6,22 +6,22 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Sorin Călinică <scalinica@gmail.com>, 2025
 # Transifex Bot <>, 2025
+# Sorin Călinică <scalinica@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-05-14 21:23+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2025\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
@@ -333,8 +333,8 @@ msgstr "aggregate"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:243
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:19
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:41
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:76
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:13
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:23
@@ -661,8 +661,8 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:245
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:21
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:43
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:78
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:25
@@ -1068,8 +1068,8 @@ msgstr "majority"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:248
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:25
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:58
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:81
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:82
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
@@ -1899,6 +1899,16 @@ msgstr ""
 " 3 2, 5 8)),LineString (3 2, 4 2))'))`` → o matrice de geometrii poligonale "
 "și liniare"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:45
+msgid ""
+"``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon"
+" ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
+"1, 3 2, 5 8))'"
+msgstr ""
+"``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon"
+" ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
+"1, 3 2, 5 8))'"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:46
 msgid ""
 "``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 "
@@ -2080,6 +2090,14 @@ msgstr "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
 msgid "color_cmykf"
 msgstr "color_cmykf"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:67
+msgid "color_cmykf(cyan, magenta, yellow, black, [alpha=1.0])"
+msgstr "color_cmykf(cyan, magenta, yellow, black, [alpha=1.0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:77
+msgid "``color_cmykf(1,0.9,0.81,0.62)`` → CMYKA: 1.00,0.90,0.81,0.62,1.00"
+msgstr "``color_cmykf(1,0.9,0.81,0.62)`` → CMYKA: 1.00,0.90,0.81,0.62,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:85
 msgid "color_grayscale_average"
 msgstr "color_grayscale_average"
@@ -2091,6 +2109,14 @@ msgstr "color_grayscale_average(color)"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:97
 msgid "``color_grayscale_average('255,100,50')`` → '135,135,135,255'"
 msgstr "``color_grayscale_average('255,100,50')`` → '135,135,135,255'"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:98
+msgid ""
+"``color_grayscale_average(color_cmykf(0.6,0.5,0.1,0.8))`` → CMYKA: "
+"0.40,0.40,0.40,0.80,1.00"
+msgstr ""
+"``color_grayscale_average(color_cmykf(0.6,0.5,0.1,0.8))`` → CMYKA: "
+"0.40,0.40,0.40,0.80,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:106
 msgid "color_hsl"
@@ -2163,6 +2189,14 @@ msgstr "``color_hsla(100,50,70,200)`` → '166,217,140,200'"
 msgid "color_hslf"
 msgstr "color_hslf"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:159
+msgid "color_hslf(hue, saturation, lightness, [alpha=1.0])"
+msgstr "color_hslf(hue, saturation, lightness, [alpha=1.0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:168
+msgid "``color_hslf(0.3,0.52,0.7)`` → HSLA: 0.30,0.52,0.70,1.00"
+msgstr "``color_hslf(0.3,0.52,0.7)`` → HSLA: 0.30,0.52,0.70,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:176
 msgid "color_hsv"
 msgstr "color_hsv"
@@ -2221,6 +2255,14 @@ msgstr "``color_hsva(40,100,100,200)`` → '255,170,0,200'"
 msgid "color_hsvf"
 msgstr "color_hsvf"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:229
+msgid "color_hsvf(hue, saturation, value, [alpha=1.0])"
+msgstr "color_hsvf(hue, saturation, value, [alpha=1.0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:238
+msgid "``color_hsvf(0.4,1,0.6)`` → HSVA: 0.40,1.00,0.60,1.00"
+msgstr "``color_hsvf(0.4,1,0.6)`` → HSVA: 0.40,1.00,0.60,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:246
 msgid "color_mix"
 msgstr "color_mix"
@@ -2238,6 +2280,14 @@ msgstr "**ratio** - rezultatul raportului dintre două valori"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:283
 msgid "``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'"
 msgstr "``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:261
+msgid ""
+"``color_mix(color_cmykf(0.9,0.9,0.9,0.9),color_cmykf(0.1,0.1,0.1,0.1),0.5)``"
+" → CMYKA: 0.50,0.50,0.50,0.50,1.00"
+msgstr ""
+"``color_mix(color_cmykf(0.9,0.9,0.9,0.9),color_cmykf(0.1,0.1,0.1,0.1),0.5)``"
+" → CMYKA: 0.50,0.50,0.50,0.50,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:269
 msgid "color_mix_rgb"
@@ -2354,6 +2404,10 @@ msgstr "black: codul CMYK al componentei negre (0-100)"
 msgid "``color_part('200,10,30','green')`` → 10"
 msgstr "``color_part('200,10,30','green')`` → 10"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:324
+msgid "``to_int(color_part(color_cmykf(0.1,0.2,0.3,0.9),'black'))`` → 90"
+msgstr "``to_int(color_part(color_cmykf(0.1,0.2,0.3,0.9),'black'))`` → 90"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:332
 msgid "color_rgb"
 msgstr "color_rgb"
@@ -2412,6 +2466,14 @@ msgstr "``color_rgba(255,127,0,200)`` → '255,127,0,200'"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:377
 msgid "color_rgbf"
 msgstr "color_rgbf"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:385
+msgid "color_rgbf(red, green, blue, [alpha=1.0])"
+msgstr "color_rgbf(red, green, blue, [alpha=1.0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:394
+msgid "``color_rgbf(1.0,0.5,0)`` → RGBA: 1.00,0.50,0.00,1.00"
+msgstr "``color_rgbf(1.0,0.5,0)`` → RGBA: 1.00,0.50,0.00,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:402
 msgid "create_ramp"
@@ -2646,9 +2708,21 @@ msgstr "ramp_color_object"
 msgid "ramp_color_object(ramp_name, value)"
 msgstr "ramp_color_object(ramp_name, value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:23
+msgid "``ramp_color_object('Spectral',0.3)`` → RGBA: 0.99,0.75,0.45,1.00"
+msgstr "``ramp_color_object('Spectral',0.3)`` → RGBA: 0.99,0.75,0.45,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:36
 msgid "ramp_color_object(ramp, value)"
 msgstr "ramp_color_object(ramp, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:41
+msgid ""
+"``ramp_color_object(create_ramp(map(0,color_rgbf(0,0,0),1,color_rgbf(1,0,0))),1)``"
+" → RGBA: 1.00,0.00,0.00,1.00"
+msgstr ""
+"``ramp_color_object(create_ramp(map(0,color_rgbf(0,0,0),1,color_rgbf(1,0,0))),1)``"
+" → RGBA: 1.00,0.00,0.00,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:49
 msgid "set_color_part"
@@ -2677,6 +2751,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:82
 msgid "``set_color_part('200,10,30','green',50)`` → '200,50,30,255'"
 msgstr "``set_color_part('200,10,30','green',50)`` → '200,50,30,255'"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:83
+msgid ""
+"``set_color_part(color_cmykf(0.21,0,0.92,0.70),'black',100)`` → CMYKA: "
+"0.21,0.00,0.92,1.00,1.00"
+msgstr ""
+"``set_color_part(color_cmykf(0.21,0,0.92,0.70),'black',100)`` → CMYKA: "
+"0.21,0.00,0.92,1.00,1.00"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:128
 msgid "Conditional Functions"
@@ -7407,6 +7489,7 @@ msgid "decode_uri(layer, [part])"
 msgstr "decode_uri(layer, [part])"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:27
+#, python-brace-format
 msgid ""
 "``decode_uri(@layer)`` → {'layerId': '0', 'layerName': '', 'path': "
 "'/home/qgis/shapefile.shp'}"
@@ -7415,6 +7498,7 @@ msgstr ""
 "'/home/qgis/shapefile.shp'}"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:28
+#, python-brace-format
 msgid ""
 "``decode_uri(@layer)`` → {'layerId': NULL, 'layerName': 'layer', 'path': "
 "'/home/qgis/geopackage.gpkg'}"
@@ -7495,6 +7579,7 @@ msgid "hstore_to_map(string)"
 msgstr "hstore_to_map(string)"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:45
+#, python-brace-format
 msgid "``hstore_to_map('qgis=>rocks')`` → { 'qgis': 'rocks' }"
 msgstr "``hstore_to_map('qgis=>rocks')`` → { 'qgis': 'rocks' }"
 
@@ -7519,6 +7604,7 @@ msgid "**key** - a key (string)"
 msgstr "**key** - o cheie (șir)"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:66
+#, python-brace-format
 msgid "``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }"
 msgstr "``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }"
 
@@ -7586,6 +7672,7 @@ msgid "map_concat(map1, map2, ...)"
 msgstr "map_concat(map1, map2, ...)"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:127
+#, python-brace-format
 msgid ""
 "``map_concat(map('1','one', '2','overridden'),map('2','two', '3','three'))``"
 " → { '1': 'one', '2': 'two', '3': 'three' }"
@@ -7611,6 +7698,7 @@ msgid "**key** - the key to delete"
 msgstr "**key** - cheia de șters"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:148
+#, python-brace-format
 msgid "``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }"
 msgstr "``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }"
 
@@ -7680,12 +7768,14 @@ msgid "**key** - the key to add"
 msgstr "**key** - cheia de adăugat"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:20
+#, python-brace-format
 msgid ""
 "``map_insert(map('1','one'),'3','three')`` → { '1': 'one', '3': 'three' }"
 msgstr ""
 "``map_insert(map('1','one'),'3','three')`` → { '1': 'one', '3': 'three' }"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:21
+#, python-brace-format
 msgid ""
 "``map_insert(map('1','one','2','overridden'),'2','two')`` → { '1': 'one', "
 "'2': 'two' }"
@@ -7702,6 +7792,7 @@ msgid "map_prefix_keys(map, prefix)"
 msgstr "map_prefix_keys(map, prefix)"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:42
+#, python-brace-format
 msgid ""
 "``map_prefix_keys(map('1','one','2','two'), 'prefix-')`` → { 'prefix-1': "
 "'one', 'prefix-2': 'two' }"
@@ -8927,23 +9018,23 @@ msgstr "raster_attributes"
 msgid "raster_attributes(layer, band, value)"
 msgstr "raster_attributes(layer, band, value)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:34
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:35
 msgid "raster_statistic"
 msgstr "raster_statistic"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:43
 msgid "raster_statistic(layer, band, property)"
 msgstr "raster_statistic(layer, band, property)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:69
 msgid "raster_value"
 msgstr "raster_value"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:77
 msgid "raster_value(layer, band, point)"
 msgstr "raster_value(layer, band, point)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:82
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:83
 msgid "``raster_value('dem', 1, make_point(1,1))`` → 25"
 msgstr "``raster_value('dem', 1, make_point(1,1))`` → 25"
 
@@ -8957,9 +9048,19 @@ msgstr ""
 msgid "attribute"
 msgstr "attribute"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:56
+msgid "**Variant 1**"
+msgstr "**Varianta 1**"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:24
 msgid "attribute(attribute_name)"
 msgstr "attribute(attribute_name)"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:31
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:69
+msgid "**Variant 2**"
+msgstr "**Varianta 2**"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:39
 msgid "attribute(feature, attribute_name)"
@@ -9182,6 +9283,7 @@ msgid "uuid([format='WithBraces'])"
 msgstr "uuid([format='WithBraces'])"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
+#, python-brace-format
 msgid "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
 msgstr "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
 
@@ -9329,6 +9431,14 @@ msgstr "ltrim"
 msgid "ltrim(string, [characters=' '])"
 msgstr "ltrim(string, [characters=' '])"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:21
+msgid "``ltrim('   hello world  ')`` → 'hello world  '"
+msgstr "``ltrim('   hello world  ')`` → 'hello world  '"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:22
+msgid "``ltrim('zzzytest', 'xyz')`` → 'test'"
+msgstr "``ltrim('zzzytest', 'xyz')`` → 'test'"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "regexp_replace"
 msgstr "regexp_replace"
@@ -9445,6 +9555,14 @@ msgstr "rtrim"
 msgid "rtrim(string, [characters=' '])"
 msgstr "rtrim(string, [characters=' '])"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:21
+msgid "``rtrim('   hello world  ')`` → '   hello world'"
+msgstr "``rtrim('   hello world  ')`` → '   hello world'"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:22
+msgid "``rtrim('testxxzx', 'xyz')`` → 'test'"
+msgstr "``rtrim('testxxzx', 'xyz')`` → 'test'"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "strpos"
 msgstr "strpos"
@@ -9512,6 +9630,10 @@ msgstr "trim"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:14
 msgid "trim(string)"
 msgstr "trim(string)"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:18
+msgid "``trim('   hello world  ')`` → 'hello world'"
+msgstr "``trim('   hello world  ')`` → 'hello world'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "upper"

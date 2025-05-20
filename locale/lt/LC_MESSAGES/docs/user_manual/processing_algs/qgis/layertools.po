@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2025-05-02 02:18+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -35,9 +35,35 @@ msgstr ""
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:2
+msgid "Layer tools"
+msgstr "Sluoksnio įrankiai"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:14
+msgid "Export layer(s) information"
+msgstr "Eksportuoti sluoksnio(ių) informaciją"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:16
+msgid ""
+"Creates a polygon layer with features corresponding to the extent of "
+"selected layer(s)."
+msgstr ""
+"Sukuria poligonų sluoksnį su geoobjektais, atitinkančiais parinkto "
+"sluoksnio(ių) apimtį."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:18
+msgid ""
+"Additional layer details (CRS, provider name, file path, layer name, subset "
+"filter, abstract and attribution) are attached as attributes to each "
+"feature."
+msgstr ""
+"Prie kiekvieno geoobjekto pridedama papildoma sluoksnio finormacija (CRS, "
+"tiekėjo pavadinimas, failo kelias, sluoksnio pavadinimas, poaibio filtras, "
+"aprašymas ir autorių teisės)."
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:22
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:83
-#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:179
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:178
 msgid "Parameters"
 msgstr "Parametrai"
 
@@ -45,7 +71,7 @@ msgstr "Parametrai"
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:54
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:89
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:137
-#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:184
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:211
 msgid "Label"
 msgstr "Užrašas"
@@ -54,7 +80,7 @@ msgstr "Užrašas"
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:55
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:90
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:138
-#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:186
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:185
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:212
 msgid "Name"
 msgstr "Pavadinimas"
@@ -63,7 +89,7 @@ msgstr "Pavadinimas"
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:56
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:91
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:139
-#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:187
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:186
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:213
 msgid "Type"
 msgstr "Tipas"
@@ -72,36 +98,58 @@ msgstr "Tipas"
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:57
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:92
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:140
-#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:188
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:187
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:214
 msgid "Description"
 msgstr "Aprašymas"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:32
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:93
+msgid "**Input layers**"
+msgstr "**Įvesties sluoksniai**"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:33
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:94
 msgid "``LAYERS``"
 msgstr "``LAYERS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:34
+msgid "[layer] [list]"
+msgstr "[sluoksnis] [sąrašas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:35
+msgid "Input layers to get information on."
+msgstr "Įvesties sluoksniai, apie kuriuos reikia gauti informaciją."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:58
+msgid "**Output**"
+msgstr "**Išvestis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:37
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:59
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:120
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:142
-#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:193
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:216
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:38
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:60
-#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:195
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:194
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:217
 msgid "[vector: polygon]"
 msgstr "[vektorius: poligonas]"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:40
-#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:196
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Numatytas: ``[Kurti laikiną sluoksnį]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:41
+msgid "Specification of the output layer with information. One of:"
+msgstr "Išvesties sluoksnio su informacija specifikacija. Vienas iš:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -125,15 +173,27 @@ msgstr "Šia taipogi galima pakeisti failo koduotę."
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:48
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:131
-#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:206
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:205
 msgid "Outputs"
 msgstr "Išvestys"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:61
+msgid ""
+"Polygon vector layer showing extent of input layers and associated "
+"information in attributes."
+msgstr ""
+"Vektorinis poligonų sluoksnis, rodantis įvesties sluoksnių apimtį ir "
+"susijusią informaciją atributuose."
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:65
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:151
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:222
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:67
+msgid "**Algorithm ID**: ``native:exportlayersinformation``"
+msgstr "**Algoritmo ID**: ``native:exportlayersinformation``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -146,6 +206,10 @@ msgstr ""
 "įrankinėje. *parametrų žodynas* teikia parametrų pavadinimus ir reikšmes. "
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:95
+msgid "[vector: any] [list]"
+msgstr "[vektorius: bet koks] [sąrašas]"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:99
 msgid "``USE_ALIAS``"
@@ -191,6 +255,15 @@ msgstr "Įrašyti į laikiną failą"
 msgid "``OUTPUT_LAYERS``"
 msgstr "``OUTPUT_LAYERS``"
 
-#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:190
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:147
+msgid "[list]"
+msgstr "[sąrašas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:189
 msgid "``INPUT``"
 msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:215
+msgid "**Extent**"
+msgstr "**Apimtis**"

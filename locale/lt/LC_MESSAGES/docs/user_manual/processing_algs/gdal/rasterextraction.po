@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2025-05-02 02:45+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -34,6 +34,32 @@ msgstr ""
 "Vertimas yra bendruomenės pastangos, prie kurių :ref:`jūs galite prisijungti"
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:2
+msgid "Raster extraction"
+msgstr "Rastro ištraukimas"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:14
+msgid "Clip raster by extent"
+msgstr "Apkarpyti rastrą pagal apimtį"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:15
+msgid "Clips any GDAL-supported raster file to a given extent."
+msgstr "Apkarpo bet kokį GDAL palaikomą rastrą pagal pateiktą apimtį."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:17
+msgid ""
+"This algorithm is derived from the `GDAL translate utility "
+"<https://gdal.org/en/latest/programs/gdal_translate.html>`_."
+msgstr ""
+"Šis algoritmas kilęs iš `GDAL translate įrankio "
+"<https://gdal.org/en/latest/programs/gdal_translate.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:20
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:162
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:360
+msgid "**Default menu**: :menuselection:`Raster --> Extraction`"
+msgstr "**Numatytas meniu**: :menuselection:`Rastras --> Ištraukimas`"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:23
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:165
@@ -123,9 +149,89 @@ msgstr "**Įvesties sluoksnis**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:39
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:69
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:140
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:181
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:266
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:337
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:379
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:518
+msgid "[raster]"
+msgstr "[rastras]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:40
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:182
+msgid "The input raster"
+msgstr "Įvesties rastras"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:41
+msgid "**Clipping extent**"
+msgstr "**Apkarpymo apimtis**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:42
 msgid "``EXTENT``"
 msgstr "``EXTENT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:43
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:199
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:44
+msgid ""
+"Extent that should be used for the output raster. Only pixels within the "
+"specified bounding box will be included in the output."
+msgstr ""
+"Apimtis, kuri turi būti naudojama išvesties rastrui. Tik pikseliai, esantys "
+"nurodyto apibrėžiančio stačiakampio viduje, bus įtraukti į išvestį."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:52
+msgid "**Override the projection for the output file**"
+msgstr "**Permušti išvesties failo projekciją**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:53
 msgid "``OVERCRS``"
@@ -155,6 +261,16 @@ msgstr "[boolean]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:595
 msgid "Default: False"
 msgstr "Numatytas: ne"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:57
+msgid "If checked, the output file is assigned the input layer CRS."
+msgstr ""
+"Įjungus šią parinktį, išvesties failui priskiriama įvesties failo CRS."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:58
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:206
+msgid "**Assign a specified NoData value to output bands**"
+msgstr "**Priskirti nurodytą NėraDuomenų reikšmę išvesties juostoms**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:60
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:92
@@ -194,8 +310,8 @@ msgstr "``NODATA``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:528
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:537
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:601
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:64
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:124
@@ -207,8 +323,24 @@ msgstr "[number]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:461
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:603
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:612
-msgid "Default: None"
+msgid "Default: Not set"
 msgstr "Numatytas: jokio"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:65
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:213
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:453
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:604
+msgid ""
+"Defines a value that should be inserted for the NoData values in the output "
+"raster"
+msgstr ""
+"Nustato reikšmę, kuri turi būti įterpta išvesties rastro NėraDuomenų "
+"reikšmėms"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:67
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:138
+msgid "**Clipped (extent)**"
+msgstr "**Apkarpytas (apimtis)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:68
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:139
@@ -228,6 +360,11 @@ msgstr "``OUTPUT``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:72
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:269
+msgid "Specification of the output raster layer. One of:"
+msgstr "Išvesties rastro sluoksnio specifikacija. Vienas iš:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Įrašyti į laikiną failą"
@@ -235,6 +372,18 @@ msgstr "Įrašyti į laikiną failą"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to File…"
 msgstr "Įrašyti į failą..."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:80
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:277
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:423
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:574
+msgid "Advanced parameters"
+msgstr "Išmanesni parametrai"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:90
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:287
+msgid "**Additional creation options**"
+msgstr "**Papildomos kūrimo parinktys**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:93
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:290
@@ -253,6 +402,38 @@ msgstr "``OPTIONS``"
 msgid "[string]"
 msgstr "[string]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:96
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:293
+msgid "Default: ''"
+msgstr "Numatytas: ''"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:97
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:294
+msgid ""
+"For adding one or more creation options that control the raster to be "
+"created (colors, block size, file compression...). For convenience, you can "
+"rely on predefined profiles (see :ref:`GDAL driver options section "
+"<gdal_createoptions>`)."
+msgstr ""
+"Norint pridėti vieną ar daugiau kūrimo parinkčių, valdančių rastro kūrimą "
+"(spalvos, bloko dydis, failo suspaudimas...). Patogumui jūs galite remtis iš"
+" anksto sukurtais profiliais (žiūrėkite :ref:`GDAL tvarkyklės parinkčių "
+"skiltį <gdal_createoptions>`)."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:103
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:300
+msgid ""
+"Batch Process and Model Designer: separate multiple options with a pipe "
+"character (``|``)."
+msgstr ""
+"Paketinis apdorojimas ir Modelių kūrimas: atskirkite kelias parinktis "
+"statmenu brūkšniu (``|``)."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:105
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:302
+msgid "**Output data type**"
+msgstr "**Išvesties duomenų tipas**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:106
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:303
 msgid "``DATA_TYPE``"
@@ -268,12 +449,104 @@ msgstr "[sąrašas]"
 msgid "Default: 0"
 msgstr "Numatytas: 0"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:110
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:307
+msgid "Defines the format of the output raster file."
+msgstr "Nustato išvesties rastro failo formatą."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:112
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:309
+msgid "Options:"
+msgstr "Parinktys:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "0 --- Use Input Layer Data Type"
+msgstr "0 --- Naudoti įvesties sluoksnio duomenų tipa"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "1 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "1 --- Byte        (aštuonių bitų sveikas skaičius be ženklo (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "2 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr ""
+"2 --- Int16       (Šešiolikos bitų sveikas skaičius su ženklu (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "3 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr ""
+"3 --- UInt16      (Šešiolikos bitų sveikas skaičius be ženklo (quint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr ""
+"4 --- UInt32      (Trisdešimt dviejų bitų sveikas skaičius be ženklo "
+"(quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "5 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr ""
+"5 --- Int32       (Trisdešimt dviejų bitų sveikas skaičius su ženklu "
+"(qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:14
+msgid "6 --- Float32     (Thirty two bit floating point (float))"
+msgstr ""
+"6 --- Float32     (Trisdešimt dviejų bitų slankaus kablelio skaičius "
+"(float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:15
+msgid "7 --- Float64     (Sixty four bit floating point (double))"
+msgstr ""
+"7 --- Float64     (Šešiasdešimt keturių bitų slankaus kablelio skaičius "
+"(double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "8 --- CInt16      (Complex Int16)"
+msgstr "8 --- CInt16      (Kompleksinis Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "9 --- CInt32      (Complex Int32)"
+msgstr "9 --- CInt32      (Kompleksinis Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "10 --- CFloat32   (Complex Float32)"
+msgstr "10 --- CFloat32   (Kompleksinis Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:19
+msgid "11 --- CFloat64   (Complex Float64)"
+msgstr "11 --- CFloat64   (Kompleksinis Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:20
+msgid "12 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "12 --- Int8       (Aštuonių bitų sveikas skaičius su ženklu (qint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:22
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"Galimi variantai priklauso nuo GDAL versijos, su kuria sukurtas QGIS "
+"(žiūrėkite meniu :menuselection:`Pagalba --> Apie`)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:118
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:315
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:455
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:606
+msgid "**Additional command-line parameters**"
+msgstr "**Papildomi komandinės eilutės parametrai**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:121
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:318
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:458
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:609
 msgid "``EXTRA``"
 msgstr "``EXTRA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:125
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:322
+msgid "Add extra GDAL command line options"
+msgstr "Pridėkite papildomas GDAL komandinės eilutės parinktis"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:128
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:325
@@ -282,12 +555,20 @@ msgstr "``EXTRA``"
 msgid "Outputs"
 msgstr "Išvestys"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:141
+msgid "Output raster layer clipped by the given extent"
+msgstr "Išvesties rastro sluoksnis, apkarpytas pagal pateiktą apimtį"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:144
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:341
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:482
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:633
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:146
+msgid "**Algorithm ID**: ``gdal:cliprasterbyextent``"
+msgstr "**Algoritmo ID**: ``gdal:cliprasterbyextent``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -319,6 +600,10 @@ msgstr "``SOURCE_CRS``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:193
 msgid "[crs]"
 msgstr "[crs]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:191
+msgid "**Target CRS**"
+msgstr "**Paskirties CRS**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:192
 msgid "``TARGET_CRS``"
@@ -360,10 +645,25 @@ msgstr "``Y_RESOLUTION``"
 msgid "``MULTITHREADING``"
 msgstr "``MULTITHREADING``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:381
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:520
+msgid "**Band number**"
+msgstr "**Juostos numeris**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:382
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:521
 msgid "``BAND``"
 msgstr "``BAND``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:383
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:522
+msgid "[raster band]"
+msgstr "[rastro juosta]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:385
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:524
+msgid "Default: 1"
+msgstr "Numatytas: 1"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:388
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:527
@@ -384,10 +684,20 @@ msgstr "``FIELD_NAME``"
 msgid "``OFFSET``"
 msgstr "``OFFSET``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:408
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:539
+msgid "Default: 0.0"
+msgstr "Numatytas: 0.0"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:412
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:478
 msgid "[vector: line]"
 msgstr "[vektorius: linija]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:415
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:566
+msgid "Specification of the output vector layer. One of:"
+msgstr "Išvesties vektorinio sluoksnio specifikacija. Vienas iš:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:434
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:585

@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2025-05-15 17:10+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -34,6 +34,40 @@ msgstr ""
 "Vertimas yra bendruomenės pastangos, prie kurių :ref:`jūs galite prisijungti"
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:2
+msgid "Raster miscellaneous"
+msgstr "Rastro įvairūs"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:14
+msgid "Build overviews (pyramids)"
+msgstr "Kurti apžvalgas (piramides)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:15
+msgid ""
+"To speed up rendering time of raster layers overviews (pyramids) can be "
+"created. Overviews are lower resolution copies of the data which QGIS uses "
+"depending of the level of zoom."
+msgstr ""
+"Norint pagreitinti braižymą, galima sukurti rastro sluoksnių apžvalgas "
+"(piramides). Apžvalgos yra žemesnės rezoliucijos duomenų kopijos, kurias "
+"QGIS naudoja priklausomai nuo mastelio."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:19
+msgid ""
+"This algorithm is derived from the `GDAL addo utility "
+"<https://gdal.org/en/latest/programs/gdaladdo.html>`_."
+msgstr ""
+"Šis algoritmas kilęs iš `GDAL addo įrankio "
+"<https://gdal.org/en/latest/programs/gdaladdo.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:22
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:150
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:521
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1030
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1352
+msgid "**Default menu**: :menuselection:`Raster --> Miscellaneous`"
+msgstr "**Numatytas meniu**: :menuselection:`Rastras --> Įvairūs`"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:25
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:153
@@ -211,6 +245,41 @@ msgstr "**Įvesties sluoksnis**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:41
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:126
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:201
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:282
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:338
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:569
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:641
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:681
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:685
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:689
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:761
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:807
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:817
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:831
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:845
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:859
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:873
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:948
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1007
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1049
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1501
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1534
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1590
+msgid "[raster]"
+msgstr "[rastras]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:42
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1050
+msgid "Input raster layer"
+msgstr "Įvesties rastro sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:43
+msgid "**Remove all existing overviews**"
+msgstr "**Išimti visas esamas apžvalgas**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:44
 msgid "``CLEAN``"
 msgstr "``CLEAN``"
@@ -255,6 +324,30 @@ msgstr "[boolean]"
 msgid "Default: False"
 msgstr "Numatytas: ne"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:48
+msgid ""
+"Removes existing overviews from the raster. By default these are not "
+"removed."
+msgstr ""
+"Išima iš rastro visas esamas apžvalgas. Pagal nutylėjimą jos nėra išimamos."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:52
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:212
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:399
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:580
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:699
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:958
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1093
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1219
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1411
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1544
+msgid "Advanced parameters"
+msgstr "Išmanesni parametrai"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:62
+msgid "**Overview levels**"
+msgstr "**Apžvalgos lygiai**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:63
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1190
 msgid "``LEVELS``"
@@ -286,7 +379,26 @@ msgstr "``LEVELS``"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1559
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1572
 msgid "[string]"
-msgstr "[string]"
+msgstr "[tekstas]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:66
+msgid "Default: '2 4 8 16'"
+msgstr "Numatyta: „2 4 8 16“"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:67
+msgid ""
+"Defines the number of overview levels calculated by the original resolution "
+"of the input raster layer. By default 4 levels will be taken into "
+"consideration."
+msgstr ""
+"Nustato skaičių apžvalgos lygių, kurie skaičiuojami pagal pradinę įvesties "
+"rastro sluoksnio rezoliuciją.  Pagal nutylėjimą vertinami 4 lygiai."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:70
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:409
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1238
+msgid "**Resampling method**"
+msgstr "**Perrinkimo metodas**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:72
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:91
@@ -368,9 +480,90 @@ msgstr "[sąrašas]"
 msgid "Default: 0"
 msgstr "Numatytas: 0"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:77
+msgid ""
+"Calculates the overviews with a defined resampling method. Possible "
+"resampling methods are:"
+msgstr ""
+"Skaičiuoja apžvalgas naudojant nurodytą perrinkimo metodą. Galimi perrinkimo"
+" metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:80
+msgid "0 -- Nearest Neighbour (``nearest``)"
+msgstr "0 -- Artimiausio kaimyno (``nearest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:81
+msgid "1 -- Average (``average``)"
+msgstr "1 -- Vidurkio (``average``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:82
+msgid "2 -- Gaussian (``gauss``)"
+msgstr "2 -- Gauso (``gauss``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:83
+msgid "3 -- Cubic (4x4 kernel) (``cubic``)"
+msgstr "3 -- Kubinis (4x4 branduolio) (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:84
+msgid "4 -- Cubic B-Spline (4x4 kernel) (``cubicspline``)"
+msgstr "4 -- Kubinis B-kreivės (4x4 branduolio) (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:85
+msgid "5 -- Lanczos (6x6 kernel) (``lanczos``)"
+msgstr "5 -- Lanczos (6x6 branduolio) (``lanczos``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:86
+msgid "6 -- Average MP (``average_mp``)"
+msgstr "6 -- Vidutinio MP (``average_mp``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:87
+msgid "7 -- Average in Mag/Phase Space (``average_magphase``)"
+msgstr "7 -- VIdutinio Mag/Phase erdvėje (``average_magphase``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:88
+msgid "8 -- Mode (``mode``)"
+msgstr "8 -- Režimas (``mode``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:89
+msgid "**Overviews format**"
+msgstr "**Apžvalgos formatas**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:92
 msgid "``FORMAT``"
 msgstr "``FORMAT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:96
+msgid ""
+"The overviews can be stored internally, or externally as GTiff or ERDAS "
+"Imagine file. By default the overviews are stored in the output raster. "
+"Possible formats methods are:"
+msgstr ""
+"Apžvalgas galima laikyti viduje arba išorėje kaip GTiff ar ERDAS piešinių "
+"failus. Pagal nutylėjimą apžvalgos laikomos išvesties rastre. Galimi formato"
+" metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:101
+msgid "0 -- Internal (if possible)"
+msgstr "0 -- Vidinis (jei įmanoma)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:102
+msgid "1 -- External (GTiff .ovr)"
+msgstr "1 -- Išorinis (GTiff .ovr)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:103
+msgid "2 -- External (ERDAS Imagine .aux)"
+msgstr "2 -- Išorinis (ERDAS piešinys .aux)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:104
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:261
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:621
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:739
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:984
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1104
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1276
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1570
+msgid "**Additional command-line parameters**"
+msgstr "**Papildomi komandinės eilutės parametrai**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:107
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:262
@@ -401,8 +594,19 @@ msgstr "``EXTRA``"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1110
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1236
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1574
-msgid "Default: None"
+msgid "Default: Not set"
 msgstr "Numatytas: jokio"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:111
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:266
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:626
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:746
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:991
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1111
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1283
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1575
+msgid "Add extra GDAL command line options"
+msgstr "Pridėkite papildomas GDAL komandinės eilutės parinktis"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:114
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:269
@@ -416,6 +620,10 @@ msgstr "Numatytas: jokio"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1578
 msgid "Outputs"
 msgstr "Išvestys"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:124
+msgid "**Pyramidized**"
+msgstr "**Piramidizuotas**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:125
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:200
@@ -439,6 +647,10 @@ msgstr "Išvestys"
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:127
+msgid "Output raster layer with overviews"
+msgstr "Išvesties rastro sluoksnis su apžvalgomis"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:130
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:286
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:501
@@ -452,6 +664,10 @@ msgstr "``OUTPUT``"
 msgid "Python code"
 msgstr "Pythono kodas"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:132
+msgid "**Algorithm ID**: ``gdal:overviews``"
+msgstr "**Algoritmo ID**: ``gdal:overviews``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -464,19 +680,114 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:142
+msgid "Build virtual raster"
+msgstr "Kurti virtualų rastrą"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:143
+msgid ""
+"Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-"
+"supported rasters. With a mosaic you can merge several raster files."
+msgstr ""
+"Kuria VRT (virtualią duomenų aibę), kuri yra įvesties GDAL-palaikomų rastrų "
+"sąrašo mozaika. Naudodami mozaiką jūs galite sulieti kelis rastro failus."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:147
+msgid ""
+"This algorithm is derived from the `GDAL buildvrt utility "
+"<https://gdal.org/en/latest/programs/gdalbuildvrt.html>`_."
+msgstr ""
+"Šis algoritmas kilęs iš `GDAL buildvrt įrankio "
+"<https://gdal.org/en/latest/programs/gdalbuildvrt.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:167
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:538
+msgid "**Input layers**"
+msgstr "**Įvesties sluoksniai**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:169
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:540
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1169
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1371
+msgid "[raster] [list]"
+msgstr "[rastras] [sąrašas]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:170
+msgid "GDAL-supported raster layers."
+msgstr "GDAL-palaikomi rastro sluoksniai."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:171
+msgid "**Resolution**"
+msgstr "**Rezoliucija**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:172
 msgid "``RESOLUTION``"
 msgstr "``RESOLUTION``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:176
+msgid ""
+"The output resolution of the mosaic. By default the average resolution of "
+"the raster files will be chosen."
+msgstr ""
+"Mozaikos išvesties rezoliucija. Pagal nutylėjimą bus parinkta vidutinė "
+"rastro failų rezoliucija."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:180
+msgid "Options:"
+msgstr "Parinktys:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:182
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:417
+msgid "0 --- Average (``average``)"
+msgstr "0 --- Vidutinė (``average``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:183
+msgid "1 --- Highest (``highest``)"
+msgstr "1 --- Aukščiausia (``highest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:184
+msgid "2 --- Lowest (``lowest``)"
+msgstr "2 --- Žemiausia (``lowest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:185
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:549
+msgid "**Place each input file into a separate band**"
+msgstr "**Padėti kiekvieną įvesties failą į atskirą juostą**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:186
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:550
 msgid "``SEPARATE``"
 msgstr "``SEPARATE``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:190
+msgid ""
+"With 'True' you can define that each raster file goes into a separated "
+"stacked band in the VRT band."
+msgstr ""
+"Su „True“ jūs galite nurodyti, kad kiekvienas rastro failas eina į atskirą "
+"juostą VRT juostose."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:192
+msgid "**Allow projection difference**"
+msgstr "**Leisti projekcijų skirtumą**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:193
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1391
 msgid "``PROJ_DIFFERENCE``"
 msgstr "``PROJ_DIFFERENCE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:197
+msgid ""
+"Allows that the output bands have different projections derived from the "
+"projection of the input raster layers."
+msgstr ""
+"Leidžia išvesties juostoms turėti skirtingas projekcijas, išskaičiuotas iš "
+"įvesties rastro sluoksnių projekcijų."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:199
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:280
+msgid "**Virtual**"
+msgstr "**Virtualus**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:203
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:571
@@ -488,6 +799,11 @@ msgstr "``PROJ_DIFFERENCE``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:204
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:572
+msgid "Specification of the output raster layer. One of:"
+msgstr "Išvesties rastro sluoksnio specifikacija. Vienas iš:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to a Temporary File"
@@ -498,9 +814,23 @@ msgstr "Įrašyti į laikiną failą"
 msgid "Save to File…"
 msgstr "Įrašyti į failą..."
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:222
+msgid "**Add alpha mask band to VRT when source raster has none**"
+msgstr ""
+"**Pridėti alfa slėpimo juostą į VRT, kai šaltinio rastras jokios neturi**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:223
 msgid "``ADD_ALPHA``"
 msgstr "``ADD_ALPHA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:227
+msgid "Adds an alpha mask band to the VRT when the source raster has none."
+msgstr ""
+"Prideda alfa slėpimo juostą į VRT, kai šaltinio rastras jokios neturi."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:229
+msgid "**Override projection for the output file**"
+msgstr "**Permušti išvesties failo projekciją**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:232
 msgid "``ASSIGN_CRS``"
@@ -513,9 +843,86 @@ msgstr "``ASSIGN_CRS``"
 msgid "[crs]"
 msgstr "[crs]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:236
+msgid "Overrides the projection for the output file. No reprojection is done."
+msgstr "Permuša išvesties failo projekciją. Perprojektavimas nedaromas."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:238
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:709
+msgid "**Resampling algorithm**"
+msgstr "**Perrinkimo algoritmas**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:243
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:714
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1243
+msgid ""
+"The `resampling algorithm "
+"<https://gdal.org/en/latest/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ "
+"to use. Options:"
+msgstr ""
+"Naudojamas `perrinkimo algoritmas "
+"<https://gdal.org/en/latest/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_. "
+"Parinktys:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:246
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:717
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1246
+msgid "0 --- Nearest Neighbour (``nearest``)"
+msgstr "0 --- Artimiausio kaimyno (``nearest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:247
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:718
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1247
+msgid "1 --- Bilinear (2x2 kernel) (``bilinear``)"
+msgstr "1 --- Bitiesinis (2x2 branduolio) (``bilinear``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:248
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:719
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1248
+msgid "2 --- Cubic (4x4 kernel) (``cubic``)"
+msgstr "2 --- Kubinis (4x4 branduolio) (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:249
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:720
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1249
+msgid "3 --- Cubic B-Spline (4x4 kernel) (``cubicspline``)"
+msgstr "3 --- Kubinis B-kreivės (4x4 branduolio) (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:250
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:721
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1250
+msgid "4 --- Lanczos (6x6 kernel) (``lanczos``)"
+msgstr "4 --- Lanczos (6x6 branduolio) (``lanczos``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:251
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:722
+msgid "5 --- Average (``average``)"
+msgstr "5 --- Vidutinis (``average``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:252
+msgid "6 --- Mode (``mode``)"
+msgstr "6 --- Režimas (``mode``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:253
+msgid "**NoData value(s) for input bands (space separated)**"
+msgstr "**NėraDuomenų reikšmė(s) įvesties juostoms (atskirtos tarpais)**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:256
 msgid "``SRC_NODATA``"
 msgstr "``SRC_NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:260
+msgid "Space separated NoData value(s) for input band(s)"
+msgstr "Tarpais atskirtos NėraDuomenų reikšmė(s) įvesties juostai(oms)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:283
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:642
+msgid "Output raster layer"
+msgstr "Išvesties rastro sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:288
+msgid "**Algorithm ID**: ``gdal:buildvirtualraster``"
+msgstr "**Algoritmo ID**: ``gdal:buildvirtualraster``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:341
 msgid "``PROFILE``"
@@ -524,6 +931,23 @@ msgstr "``PROFILE``"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:354
 msgid "``ZOOM``"
 msgstr "``ZOOM``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:357
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:378
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:384
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:447
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:455
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:463
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:612
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:730
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:887
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:975
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:990
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1267
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1282
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1561
+msgid "Default: ''"
+msgstr "Numatytas: ''"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:360
 msgid "``VIEWER``"
@@ -550,15 +974,15 @@ msgstr "``NODATA``"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:594
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:602
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:907
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1173
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1179
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1185
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1191
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1515
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1521
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1527
-msgid "[number]"
-msgstr "[number]"
+msgid "[numeric: double]"
+msgstr "[skaičius: slankaus kablelio]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:439
+msgid "Default: 0.0"
+msgstr "Numatytas: 0.0"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:444
 msgid "``URL``"
@@ -588,10 +1012,29 @@ msgstr "``NO_KML``"
 msgid "``PCT``"
 msgstr "``PCT``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:555
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1284
+msgid "**Output data type**"
+msgstr "**Išvesties duomenų tipas**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:556
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1285
 msgid "``DATA_TYPE``"
 msgstr "``DATA_TYPE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:559
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:938
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1288
+msgid "Default: 5"
+msgstr "Numatytas: "
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:22
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"Galimi variantai priklauso nuo GDAL versijos, su kuria sukurtas QGIS "
+"(žiūrėkite meniu :menuselection:`Pagalba --> Apie`)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:593
 msgid "``NODATA_INPUT``"
@@ -601,6 +1044,14 @@ msgstr "``NODATA_INPUT``"
 msgid "``NODATA_OUTPUT``"
 msgstr "``NODATA_OUTPUT``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:606
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:724
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:969
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1261
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1555
+msgid "**Additional creation options**"
+msgstr "**Papildomos kūrimo parinktys**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:609
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:727
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:972
@@ -608,6 +1059,34 @@ msgstr "``NODATA_OUTPUT``"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1558
 msgid "``OPTIONS``"
 msgstr "``OPTIONS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:613
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:731
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:976
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1268
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1562
+msgid ""
+"For adding one or more creation options that control the raster to be "
+"created (colors, block size, file compression...). For convenience, you can "
+"rely on predefined profiles (see :ref:`GDAL driver options section "
+"<gdal_createoptions>`)."
+msgstr ""
+"Norint pridėti vieną ar daugiau kūrimo parinkčių, valdančių rastro kūrimą "
+"(spalvos, bloko dydis, failo suspaudimas...). Patogumui jūs galite remtis iš"
+" anksto sukurtais profiliais (žiūrėkite :ref:`GDAL tvarkyklės parinkčių "
+"skiltį <gdal_createoptions>`)."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:619
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:737
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:982
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1274
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1568
+msgid ""
+"Batch Process and Model Designer: separate multiple options with a pipe "
+"character (``|``)."
+msgstr ""
+"Paketinis apdorojimas ir Modelių kūrimas: atskirkite kelias parinktis "
+"statmenu brūkšniu (``|``)."
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:680
 msgid "``SPECTRAL``"
@@ -617,6 +1096,17 @@ msgstr "``SPECTRAL``"
 msgid "``PANCHROMATIC``"
 msgstr "``PANCHROMATIC``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:687
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:759
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1532
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1588
+msgid "**Output**"
+msgstr "**Išvestis**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:713
+msgid "Default: 2"
+msgstr "Numatyta: 2"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:806
 msgid "``INPUT_A``"
 msgstr "``INPUT_A``"
@@ -624,6 +1114,16 @@ msgstr "``INPUT_A``"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:810
 msgid "``BAND_A``"
 msgstr "``BAND_A``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:811
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:825
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:839
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:853
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:867
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:879
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1505
+msgid "[raster band]"
+msgstr "[rastro juosta]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:816
 msgid "``INPUT_B``"
@@ -677,9 +1177,60 @@ msgstr "``NO_DATA``"
 msgid "``EXTENT_OPT``"
 msgstr "``EXTENT_OPT``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:927
+msgid "[extent]"
+msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Galimi metodai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Skaičiuoti pagal sluoksnį...: naudoja dabartiniame projekte įkelto sluoksnio"
+" apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Skaičiuoti pagal išdėstymo žemėlapį…: naudoja aktyvaus projekto "
+":ref:`išdėstymo žemėlapio elemento <layout_map_item>` apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Skaičiuoti pagal žymelę…: naudoja įrašytos :ref:`žymelės <sec_bookmarks>` "
+"apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Naudoti žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Braižyti drobėje: spauskite ir tempkite stačiakampį, apibrėžianti norimą "
+"plotą"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:935
 msgid "``RTYPE``"
 msgstr "``RTYPE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:939
+msgid "Defines the data type of the output raster file. Options:"
+msgstr "Nurodo išvesties rastro failo duomenų tipą. Parinktys:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1052
 msgid "``MIN_MAX``"
@@ -697,9 +1248,21 @@ msgstr "``NO_GCP``"
 msgid "``NO_METADATA``"
 msgstr "``NO_METADATA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1082
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1126
+msgid "[html]"
+msgstr "[html]"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1172
 msgid "``TILE_SIZE_X``"
 msgstr "``TILE_SIZE_X``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1173
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1179
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1185
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1191
+msgid "[numeric: integer]"
+msgstr "[skaičius: sveikas skaičius]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1178
 msgid "``TILE_SIZE_Y``"
@@ -708,6 +1271,11 @@ msgstr "``TILE_SIZE_Y``"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1184
 msgid "``OVERLAP``"
 msgstr "``OVERLAP``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1193
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1507
+msgid "Default: 1"
+msgstr "Numatytas: 1"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1208
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1326
@@ -768,9 +1336,21 @@ msgstr "``CRS_FORMAT``"
 msgid "Viewshed"
 msgstr "Viewshed"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1502
+msgid "Input elevation raster layer"
+msgstr "Įvesties aukščio rastro sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1503
+msgid "**Band number**"
+msgstr "**Juostos numeris**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1504
 msgid "``BAND``"
 msgstr "``BAND``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1508
+msgid "The number of the band to use as elevation"
+msgstr "Juostos, kurią reikia naudoti kaip aukštį, numeris"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1510
 msgid "``OBSERVER``"
@@ -780,6 +1360,11 @@ msgstr "``OBSERVER``"
 msgid "``OBSERVER_HEIGHT``"
 msgstr "``OBSERVER_HEIGHT``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1517
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1523
+msgid "Default: 1.0"
+msgstr "Numatytas: 1.0"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1520
 msgid "``TARGET_HEIGHT``"
 msgstr "``TARGET_HEIGHT``"
@@ -787,3 +1372,11 @@ msgstr "``TARGET_HEIGHT``"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1526
 msgid "``MAX_DISTANCE``"
 msgstr "``MAX_DISTANCE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1529
+msgid "Default: 100.0"
+msgstr "Numatytas: 100.0"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1537
+msgid "Output raster layer. One of:"
+msgstr "Išvesties rastro sluoksnis. Vienas iš:"
