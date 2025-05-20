@@ -681,7 +681,7 @@ in the :guilabel:`Custom transparency options` section:
   The button |fileOpen| :sup:`Import from file` loads your transparency
   settings and applies them to the current raster layer.
 
-    .. only:: html
+  .. only:: html
 
     .. figure:: img/tolerances_for_pixel_values.gif
        :align: center
