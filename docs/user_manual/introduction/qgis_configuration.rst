@@ -811,12 +811,15 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 
 Some of these options can be overridden at the :ref:`project level <measurements_ellipsoid>`.
 
-.. note::
+.. tip::
 
-   To ensure the reported distance and area units follow the project's CRS,
-   choose :guilabel:`Units for distance measurements` and :guilabel:`Units for area measurements`
-   from the drop-down menu in the :menuselection:`Project --> Properties… --> General --> Measurements`.
-   This setting makes the measurement results dynamically adapt to the project's CRS.
+ To ensure the reported distance and area units follow the project's CRS,
+ choose the appropriate :guilabel:`Units for distance measurements` and :guilabel:`Units for area measurements`
+ from the drop-down menu in :menuselection:`Project --> Properties… --> General --> Measurements`.
+ You can select from various distance units (such as meters, feet, miles, etc.)
+ and area units (such as square meters, acres, square miles, etc.),
+ or choose :guilabel:`Map Units` to automatically match the project's CRS units.
+ This setting makes the measurement results dynamically adapt to the project's CRS.
 
 .. _measure_copy_settings:
 
@@ -1758,10 +1761,8 @@ You can indeed choose:
 
 .. note::
 
-   To ensure measurement units (for distance and area) reflect the units of the current project's CRS,
-   select the corresponding unit from the drop-down menu.
-   If you are unsure which unit your desired CRS uses for its coordinates,
-   you can choose :guilabel:`Map Units`, which will use the units of the current project's CRS.
+   To ensure measurement units (for distance and area) always reflect the units of the current project's CRS,
+   select :guilabel:`Map Units` for these options.
 
 They are used in:
 

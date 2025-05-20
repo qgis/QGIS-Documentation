@@ -183,10 +183,9 @@ Available options are:
   to overlay them regardless of their original CRS. Use of units and ellipsoid setting
   are available and make sense and you can perform calculations accordingly.
 
-If you change your project's CRS and want the units (for distance, area, and coordinates)
-to match the units defined by the CRS, make sure you have selected the corresponding unit in the relevant settings.
-These include the :guilabel:`Units for distance measurement` and :guilabel:`Units for area measurement`
-in the :guilabel:`General` tab of the :menuselection:`Project --> Properties…`.
+If you change your project's CRS and want the units (for distance and area)
+to match the units defined by the CRS, make sure you have selected :guilabel:`Map units` in the relevant settings,
+in the :guilabel:`General` tab of the :menuselection:`Project --> Properties…` dialog.
 
 
 .. tip:: **Setting the project CRS from a layer**
