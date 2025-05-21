@@ -1763,7 +1763,7 @@ You can indeed choose:
   depending on the latitude at which the calculation is done.
   This setting helps you define the area you want the calculation to be taken from:
 
-  * :guilabel:`Average top, middle and bottom Scales`
+  * :guilabel:`Average top, middle and bottom scales`
   * :guilabel:`Calculate along top of map`
   * :guilabel:`Calculate along middle of map` (the default)
   * :guilabel:`Calculate along bottom of map`
@@ -1773,7 +1773,7 @@ You can indeed choose:
     when rendering relies on scale based visibility or calculations).
     Otherwise a project in e.g. ``EPSG:4326`` which uses scale based visibility
     of layers and symbols will see layers and features "randomly" disappear as the map is panned,
-    even though the user has not zoomed in or out of the map.
+    even though you have not zoomed in or out of the map.
 
     .. note:: This method is only applicable when calculating scales
      with a degree based reference system, and while it ensures that the scale remains constant
