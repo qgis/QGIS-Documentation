@@ -358,7 +358,7 @@ Basic parameters
      -
    * - **Web viewer to generate**
      - ``VIEWER``
-     - [enumerate]
+     - [enumeration]
 
        Default: 0
      - One of:
