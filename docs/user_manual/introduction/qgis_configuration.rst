@@ -1775,6 +1775,41 @@ They are used in:
   * :ref:`measure dialog <sec_measure>`
   * :ref:`scale bar decoration <scalebar_decoration>`
 
+.. _scale_calculation_method:
+
+* the :guilabel:`Scale calculation method`: when working on large map extents,
+  especially with geographic CRS, the scale bar may not reflect actual distance measurement
+  depending on the latitude at which the calculation is done.
+  This setting helps you define the area you want the calculation to be taken from:
+
+  * :guilabel:`Average top, middle and bottom scales`
+  * :guilabel:`Calculate along top of map`
+  * :guilabel:`Calculate along middle of map` (the default)
+  * :guilabel:`Calculate along bottom of map`
+  * :guilabel:`Always calculate at equator`, regardless of the actual visible map extent.
+    It can be used to provide a consistent, static scale for maps in geographic reference systems,
+    regardless of the latitudes actually visible in the map (permitting consistent appearance of these maps
+    when rendering relies on scale based visibility or calculations).
+    Otherwise a project in e.g. ``EPSG:4326`` which uses scale based visibility
+    of layers and symbols will see layers and features "randomly" disappear as the map is panned,
+    even though you have not zoomed in or out of the map.
+
+    .. note:: This method is only applicable when calculating scales
+     with a degree based reference system, and while it ensures that the scale remains constant
+     and does not change as the map is panned, it will calculate misleading scales
+     when the map extent is not close to the equator.
+
+  Changing the scale calculation method has the following impacts:
+
+  * New layout scale bars will default to the project's scale calculation method
+  * The scale calculations for the status bar widget and map renders will be changed
+    (including flow on impacts like the value of ``@map_scale`` variable,
+    scale based visibility of layers and symbols) 
+  * This also affects QGIS server map rendering
+  * Processing algorithms which render maps will respect the project's scale calculation method
+
+  .. note:: Symbology sizes in map units are NOT affected by this setting.
+
 .. _coordinate_and_bearing:
 
 The :guilabel:`Coordinate and Bearing display` allows you to customize
