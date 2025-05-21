@@ -974,13 +974,12 @@ in the :guilabel:`Layer styling` panel.
   using the :ref:`embedded_file_selector`.
   The placement and size of the picture can be set as:
 
-  .. the description below should ABSOLUTELY be REVIEWED!!!
-     And I don't get why there's "Lock aspect ratio" vs dedicated "width/height/lock apect ratio"
-     depending on the drop-down item
-
-  * :guilabel:`Scale dependent size`: the picture annotation will always be rendered at the same size, ???
-  * :guilabel:`Fixed size`: the picture annotation will always be rendered on screen at the same size,
-    regardless of the map scale
+  * :guilabel:`Scale dependent size`: the picture scales with the map,
+    appearing larger when zooming in and smaller when zooming out.
+    The size is defined by a single reference size in map units
+    (e.g. meters or degrees, depending on the layer’s CRS).
+  * :guilabel:`Fixed size`: the picture maintains a constant size in screen or output units
+    (e.g. pixels or millimeters), regardless of map scale.
   * :guilabel:`Relative to map`: the picture annotation will always be rendered at the same position
     relative to the map canvas bounds, regardless of the map scale.
 
