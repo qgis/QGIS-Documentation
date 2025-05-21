@@ -811,6 +811,16 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 
 Some of these options can be overridden at the :ref:`project level <measurements_ellipsoid>`.
 
+.. tip::
+
+ To ensure the reported distance and area units follow the project's CRS,
+ choose the appropriate :guilabel:`Units for distance measurements` and :guilabel:`Units for area measurements`
+ from the drop-down menu in :menuselection:`Project --> Properties… --> General --> Measurements`.
+ You can select from various distance units (such as meters, feet, miles, etc.)
+ and area units (such as square meters, acres, square miles, etc.),
+ or choose :guilabel:`Map Units` to automatically match the project's CRS units.
+ This setting makes the measurement results dynamically adapt to the project's CRS.
+
 .. _measure_copy_settings:
 
 **Measure Tool Copy Settings**
@@ -1746,9 +1756,15 @@ You can indeed choose:
     New International 1967, WGS 84...).
 * the :guilabel:`Units for distance measurements` for length and perimeter,
   and the :guilabel:`Units for area measurements`.
-  These settings which default to their corresponding :ref:`global options <global_measure_tool>`
-  override them in the current project.
-  They are used in:
+  These settings default to their corresponding :ref:`global options <global_measure_tool>`
+  and can be manually changed for the current project.
+
+.. note::
+
+   To ensure measurement units (for distance and area) always reflect the units of the current project's CRS,
+   select :guilabel:`Map Units` for these options.
+
+They are used in:
 
   * Attribute table field update bar
   * Field calculator calculations
