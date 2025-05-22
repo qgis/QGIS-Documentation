@@ -11,8 +11,8 @@ Check Geometry
 
 .. _qgischeckgeometryangle:
 
-Check geometry (Angle)
-----------------------
+Small angles
+------------
 
 Compares the angles within line or polygon geometries to a specified threshold,
 and reports as error any angle below that value.
@@ -52,7 +52,7 @@ Basic parameters
      - [numeric: double]
      - Allowed minimum angle between adjacent segments in a feature's geometry.
        Any angle below this threshold is reported as error.
-   * - **Error layer**
+   * - **Small angle errors**
      - ``ERRORS``
      - [vector: point]
 
@@ -60,17 +60,6 @@ Basic parameters
      - Specification of the output layer containing the errors location.
        One of:
 
-       .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
-
-   * - **Output layer**
-     - ``OUTPUT``
-     - [vector: same as input]
-
-       Default: ``[Create temporary layer]``
-     - Specification of the output layer containing erroneous input features only.
-       One of:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -93,7 +82,9 @@ Advanced parameters
      - [numeric: integer]
 
        Default: 8
-     - 
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
 
 Outputs
 .......
@@ -107,18 +98,10 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Error layer**
+   * - **Small angle errors**
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the ID, geometry part,
-       ring and vertex index of the erroneous feature,
-       x and y coordinates of the error and the value of the erroneous angle).
-   * - **Output layer**
-     - ``OUTPUT``
-     - [same as input]
-     - Output layer with the erroneous features from the input layer.
-       An input feature is added for each error found, with associated information
        (the ID and name of the input layer, the ID, geometry part,
        ring and vertex index of the erroneous feature,
        x and y coordinates of the error and the value of the erroneous angle).

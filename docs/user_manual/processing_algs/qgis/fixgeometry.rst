@@ -11,7 +11,7 @@ Fix Geometry
 
 .. _qgisfixgeometryangle:
 
-Fix geometry (Angle)
+Delete small angles
 --------------------
 
 Deletes vertices based on an error layer from the :ref:`qgischeckgeometryangle` algorithm.
@@ -55,23 +55,23 @@ Basic parameters
        as set in the check algorithm
    * - **Field of part index**
      - ``PART_IDX``
-     - [numeric: integer]
+     - [tablefield: integer]
  
        Default: ``gc_partidx``
      - Field storing the erroneous feature's geometry part number.
    * - **Field of ring index**
      - ``RING_IDX``
-     - [numeric: integer]
+     - [tablefield: integer]
 
        Default: ``gc_ringidx``
      - Field storing the erroneous feature's geometry ring number.
    * - **Field of vertex index**
      - ``VERTEX_IDX``
-     - [numeric: integer]
+     - [tablefield: integer]
 
        Default: ``gc_vertidx``
      - Field storing the erroneous feature's geometry vertex number.
-   * - **Output layer**
+   * - **Small angle fixed layer**
      - ``OUTPUT``
      - [vector: same as input]
 
@@ -83,7 +83,7 @@ Basic parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
 
-   * - **Report layer**
+   * - **Report layer from fixing small angles**
      - ``REPORT``
      - [vector: point]
 
@@ -112,7 +112,9 @@ Advanced parameters
      - [numeric: integer]
 
        Default: 8
-     - 
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
 
 Outputs
 .......
@@ -126,13 +128,13 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Report layer**
+   * - **Report layer from fixing small angles**
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied
        (the ID and name of the input layer, the ID, geometry part, ring and vertex index of the erroneous feature,
        x and y coordinates and value of the erroneous angle, the applied fix and its successfulness).
-   * - **Output layer**
+   * - **Small angle fixed layer**
      - ``OUTPUT``
      - [same as input]
      - Output layer with the geometry fix applied to the input features
