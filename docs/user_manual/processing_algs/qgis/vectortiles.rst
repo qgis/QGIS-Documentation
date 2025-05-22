@@ -57,7 +57,7 @@ Parameters
      - [vector tiles]
 
        Default: [Save to temporary file]
-     - Specification of the output vector tile file. One of:
+     - Specification of the output vector tile file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -181,7 +181,7 @@ Parameters
      - [vector tiles]
 
        Default: [Save to temporary file]
-     - Specification of the output MBTiles file. One of:
+     - Specification of the output MBTiles file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -270,7 +270,7 @@ Parameters
      - [folder]
 
        Default: [Save to temporary folder]
-     - Specification of the output vector tiles folder. One of:
+     - Specification of the output vector tiles folder. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types**

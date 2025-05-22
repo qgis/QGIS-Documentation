@@ -74,7 +74,7 @@ Parameters
      - [vector: point]
        
        Default: ``[Save to temporary file]``
-     - Specify the rotated output vector layer. One of:
+     - Specify the rotated output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -150,7 +150,7 @@ Parameters
        
        Default: ``[Save to temporary file]``
      - Output :file:`.XML` file combining the selected style items.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -266,7 +266,7 @@ Parameters
 
        Default: ``[Skip output]``
      - Output table for categories which do not match any symbol in
-       the database. One of:
+       the database. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -280,7 +280,7 @@ Parameters
 
        Default: ``[Skip output]``
      - Output table for symbols from the provided style database which
-       do not match any category. One of:
+       do not match any category. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -370,7 +370,7 @@ Parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output :file:`.XML` file for the selected style items.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -787,7 +787,7 @@ Basic parameters
      - [file]
 
        Default: [Save to temporary file]
-     - Name (including path) of the output file. One of:
+     - Name (including path) of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -933,7 +933,7 @@ Basic parameters
      - [file]
 
        Default: [Save to temporary file]
-     - Name (including path) of the output file. One of:
+     - Name (including path) of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1038,7 +1038,7 @@ Basic parameters
      - [file]
 
        Default: [Save to temporary file]
-     - Name (including path) of the output file. One of:
+     - Name (including path) of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1226,7 +1226,7 @@ Basic parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer for the extent(s). One of:
+     - Specify the output vector layer for the extent(s). :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1334,7 +1334,7 @@ Basic parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer for the extent(s). One of:
+     - Specify the output vector layer for the extent(s). :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1544,7 +1544,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the output layer. One of:
+     - Specify the output layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**

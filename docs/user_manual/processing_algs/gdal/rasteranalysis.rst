@@ -80,7 +80,7 @@ Parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Output raster layer. One of:
+     - Output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -233,7 +233,7 @@ Parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Output raster layer. One of:
+     - Output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -341,7 +341,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output raster layer. One of:
+     - Specification of the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -508,7 +508,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -668,7 +668,7 @@ Parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -851,7 +851,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -992,7 +992,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1157,7 +1157,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1311,7 +1311,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1496,7 +1496,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1620,7 +1620,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1782,7 +1782,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1914,7 +1914,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -2039,7 +2039,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -2160,7 +2160,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -2279,7 +2279,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -2390,7 +2390,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
