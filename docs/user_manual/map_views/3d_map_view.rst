@@ -350,27 +350,38 @@ Advanced
 * :guilabel:`Zoom levels`: Shows the number of zoom levels (depends on
   the map tile resolution and max. ground error).
 * |unchecked| :guilabel:`Show labels`: Toggles map labels on/off
-* |unchecked| :guilabel:`Show map tile info`: Include border and tile
-  numbers for the terrain tiles (useful for troubleshooting terrain issues)
-* |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes
-  of the terrain tiles (useful for troubleshooting terrain issues)
-* |unchecked| :guilabel:`Show camera's view center`
-* |unchecked| :guilabel:`Show camera's rotation center`
-* |unchecked| :guilabel:`Show light sources`: shows a sphere at light source origins,
-  allowing easier repositioning and placement of light sources relative to the scene contents
 * |unchecked| :guilabel:`Show frames per second (FPS)`
-* |unchecked| :guilabel:`Show debug overlay`: visual overlay which displays
-  some useful debugging and profiling information.
-  This allows in particular to quickly see the frame graph and the scene graph.
-* |unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black image
-  from the point of view of the light used for shadows (for troubleshooting). 
-  The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
-  and docked in a :guilabel:`Corner`.
-* |unchecked| :guilabel:`Debug Depth Map`: renders the scene's depth map as an  image
-  with nearer pixels being darker (for troubleshooting).
-  The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
-  and docked in a :guilabel:`Corner`.
+* |unchecked| :guilabel:`Show debug panel`: side panel which displays
+  all debug information about the 3D map view:
 
+  * |unchecked| :guilabel:`Show map tile info`: Include border and tile
+    numbers for the terrain tiles (useful for troubleshooting terrain issues)
+  * |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes
+    of the terrain tiles (useful for troubleshooting terrain issues)
+  * |unchecked| :guilabel:`Show camera's view center`
+  * |unchecked| :guilabel:`Show camera's rotation center`
+  * |unchecked| :guilabel:`Show light sources`: shows a sphere at light source origins,
+    allowing easier repositioning and placement of light sources relative to the scene contents
+  * |unchecked| :guilabel:`Stop scene updates`
+  * |unchecked| :guilabel:`Show debug overlay`: visual overlay which displays some useful debugging
+    and profiling information. This allows in particular to quickly see the frame graph and the scene graph
+  * |unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black image
+    from the point of view of the light used for shadows (for troubleshooting). 
+    The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
+    and docked in a :guilabel:`Corner`.
+  * |unchecked| :guilabel:`Debug Depth Map`: renders the scene's depth map as an  image
+    with nearer pixels being darker (for troubleshooting).
+    The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
+    and docked in a :guilabel:`Corner`.
+  * :guilabel:`Show camera info`:
+
+     * |unchecked| :guilabel:`Far plane`: controls how far from the camera rendering stops
+     * |unchecked| :guilabel:`Near plane`: controls how close to the camera rendering starts
+     * |unchecked| :guilabel:`Camera X/Y/Z pos`: sets the camera’s position in 3D space
+     * |unchecked| :guilabel:`Looking at X/Y/Z`: sets the target point the camera is looking at
+
+.. note:: When your 3D map view is open in a standalone window, you can
+   use :kbd:`CTRL + SHIFT + d` keyboard shortcut to access the debug panel.
 
 .. _`3d_navigation`:
 
