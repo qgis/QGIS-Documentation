@@ -45,7 +45,7 @@ fi;
 
 for l in $langs
   do
-    docker run -v $PWD:/build -w="/build" --rm=true --name="qgis_docs_"$TARGETBRANCH"_build" qgis/sphinx_pdf_3 make $TARGET $l
+    docker run -v $PWD:/build -w="/build" --rm=true --name="qgis_docs_"$TARGETBRANCH"_build" qgis/sphinx_pdf_3 make LANG=$l $TARGET
     build_ok=$?
     if [[ "$build_ok" = "0" ]]; then
       echo "Build OK: syncing to web"
