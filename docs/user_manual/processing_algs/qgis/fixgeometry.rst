@@ -18,6 +18,9 @@ Deletes vertices based on an error layer from the :ref:`qgischeckgeometryangle` 
 When deletion of a vertex results in a duplicate vertex (when a spike vertex is deleted),
 the duplicate vertex is deleted to keep a single vertex and preserve topology.
 
+.. attention:: This algorithm removes the vertex at the reported small angles,
+    generating new segments that may form a new small angle.
+
 .. figure:: img/fix_geometry_angle.png
    :align: center
 
@@ -77,7 +80,7 @@ Basic parameters
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer containing fixed features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -89,7 +92,7 @@ Basic parameters
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer containing the fixes location.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**

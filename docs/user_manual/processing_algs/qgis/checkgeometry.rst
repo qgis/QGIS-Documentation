@@ -58,8 +58,7 @@ Basic parameters
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer containing the errors location.
-       One of:
-
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
