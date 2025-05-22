@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script is used to build QGIS documentation to various formats and languages
+# and store them in appropriate folders on the servers.
+
 # cd to script dir
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
@@ -40,7 +43,7 @@ fi;
 
 for l in $langs
   do
-    ./docker-run.sh $TARGET LANG=$l
+    docker run -v $pwd:/build -w="/build" --rm=true --name="qgis_docs_"$TARGETBRANCH"_build" qgis/sphinx_pdf_3 make $TARGET LANG =$l
     build_ok=$?
     if [[ "$build_ok" = "0" ]]; then
       echo "Build OK: syncing to web"
