@@ -39,7 +39,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -121,7 +121,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -192,7 +192,7 @@ Parameters
      - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**

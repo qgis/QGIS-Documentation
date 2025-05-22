@@ -202,7 +202,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -389,7 +389,7 @@ Basic parameters
      - [folder]
 
        Default: ``[Save to temporary folder]``
-     - Specify the output folder for the tiles. One of:
+     - Specify the output folder for the tiles. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types**
@@ -570,7 +570,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -689,7 +689,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output (sharpened) raster layer. One of:
+     - Specify the output (sharpened) raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -948,7 +948,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output (calculated) raster layer. One of:
+     - Specify the output (calculated) raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1083,7 +1083,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the HTML file for output.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1198,7 +1198,7 @@ Basic parameters
 
        Default: ``[Save to temporary folder]``
      - Specify the output folder for the tiles.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types**
@@ -1209,7 +1209,7 @@ Basic parameters
      - [file]
 
        Default: ``[Skip output]``
-     - Specify the output file for the tiles. One of:
+     - Specify the output file for the tiles. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
@@ -1401,7 +1401,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the polygon vector layer to write the index to.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1534,7 +1534,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Output raster layer. One of:
+     - Output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**

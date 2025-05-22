@@ -61,7 +61,7 @@ Parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output aspect raster layer. One of:
+     - Specify the output aspect raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -179,7 +179,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the filtered DEM containing only cells classified as ground.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
@@ -193,7 +193,7 @@ Basic parameters
 
        Default: ``[Skip output]``
      - Specify the non-ground objects removed by the filter.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
@@ -340,7 +340,7 @@ Parameters
      - [raster]
 
        Default: ``Save to temporary file``
-     - Specify the output hillshade raster layer. One of:
+     - Specify the output hillshade raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -425,7 +425,7 @@ Parameters
      - ``OUTPUT_DIRECTORY``
      - [folder]
      - Specify the output folder for the hypsometric curves.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types**
@@ -542,7 +542,7 @@ Parameters
      - [raster]
        
        Default: ``[Save to temporary file]``
-     - Specify the output relief raster layer. One of:
+     - Specify the output relief raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -556,7 +556,7 @@ Parameters
        
        Default: ``[Skip output]``
      - Specify the CSV table for the output frequency distribution.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
@@ -641,7 +641,7 @@ Parameters
      - [raster]
        
        Default: ``[Save to temporary file]``
-     - Specify the output ruggedness raster layer. One of:
+     - Specify the output ruggedness raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -717,7 +717,7 @@ Parameters
      - [raster]
        
        Default: ``[Save to temporary file]``
-     - Specify the output slope raster layer. One of:
+     - Specify the output slope raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**

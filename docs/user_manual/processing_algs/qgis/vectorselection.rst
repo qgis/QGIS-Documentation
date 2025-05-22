@@ -71,7 +71,7 @@ Parameters
 
        Default: ``[Create Temporary Layer]``
      - Specify the output vector layer for matching features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -84,7 +84,7 @@ Parameters
        Default: ``[Skip output]``
      - Specify the output vector layer for non-matching
        features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -157,7 +157,7 @@ Parameters
 
        Default: ``[Create Temporary Layer]``
      - Specify the output vector layer for matching features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -170,7 +170,7 @@ Parameters
        Default: ``[Skip output]``
      - Specify the output vector layer for non-matching
        features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -273,7 +273,7 @@ Parameters
      - Specify the output vector layer for the features that
        have the chosen spatial relationship(s) with one or more
        features in the comparison layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -364,7 +364,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the features that
        are within the set distance from reference features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -521,7 +521,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the randomly
        selected features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -613,7 +613,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the randomly
        selected features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**

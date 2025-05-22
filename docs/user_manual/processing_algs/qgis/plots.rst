@@ -42,7 +42,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -122,7 +122,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -189,7 +189,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -260,7 +260,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -330,7 +330,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -402,7 +402,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -470,7 +470,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -542,7 +542,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
