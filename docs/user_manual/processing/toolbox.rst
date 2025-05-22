@@ -439,8 +439,6 @@ and a drop-down :menuselection:`...` button for additional options
   and :file:`.gpkg` for vector layers.
   These can be modified in the setting dialog, selecting any other of the formats supported by QGIS.
 
-  .. I'm unable to confirm the paragraph below
-
   You can set a default folder for output data objects. Go to the settings dialog
   (you can open it from the :menuselection:`Settings --> Options --> Processing` menu),
   and in the :guilabel:`General` group, you will find a parameter named :guilabel:`Output folder`.
