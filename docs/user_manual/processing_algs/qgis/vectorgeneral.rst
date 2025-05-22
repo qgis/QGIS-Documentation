@@ -56,7 +56,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -131,7 +131,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output layer containing only the geocoded addresses.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -273,7 +273,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the output layer. One of:
+     - Specify the output layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -522,7 +522,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output layer. One of:
+     - Specify the output layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -604,7 +604,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output layer containing the unique features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -618,7 +618,7 @@ Parameters
 
        Default: ``[Skip output]``
      - Specify the output layer containing only the duplicates.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -731,7 +731,7 @@ Parameters
      - ``UNCHANGED``
      - [vector: same as Original layer]
      - Specify the output vector layer containing the unchanged
-       features. One of:
+       features. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -743,7 +743,7 @@ Parameters
      - ``ADDED``
      - [vector: same as Original layer]
      - Specify the output vector layer containing the added features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -755,7 +755,7 @@ Parameters
      - ``DELETED``
      - [vector: same as Original layer]
      - Specify the output vector layer containing the deleted
-       features. One of:
+       features. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -843,7 +843,7 @@ Parameters
    * - **Dropped geometries**
      - ``OUTPUT``
      - [vector: table]
-     - Specify the output geometryless layer. One of:
+     - Specify the output geometryless layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -964,7 +964,7 @@ Parameters
      - [vector: geometry]
 
        Default: ``[Create temporary layer]``
-     - Specify the output layer created by the query. One of:
+     - Specify the output layer created by the query. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1110,7 +1110,7 @@ Parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output DXF file.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1172,7 +1172,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the vector layer for the selected features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1315,7 +1315,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the table (geometryless layer) for the CRS
-       suggestions (EPSG codes). One of:
+       suggestions (EPSG codes). :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1391,7 +1391,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output (flattened) layer. One of:
+     - Specify the output (flattened) layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1514,7 +1514,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the join.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -1529,7 +1529,7 @@ Parameters
        Default: ``[Skip output]``
      - Specify the output vector layer for unjoinable
        features from first layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -1690,7 +1690,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the join.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -1705,7 +1705,7 @@ Parameters
        Default: ``[Skip output]``
      - Specify the output vector layer for unjoinable
        features from first layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -1865,7 +1865,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the join.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -1974,7 +1974,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the vector layer containing the joined features.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -1986,7 +1986,7 @@ Parameters
 
        Default: ``[Skip output]``
      - Specify the vector layer containing the features that could
-       not be joined. One of:
+       not be joined. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -2091,7 +2091,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -2174,7 +2174,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -2305,7 +2305,7 @@ Basic parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -2395,7 +2395,7 @@ Basic parameters
      - [same as input]
 
        Default: ``[Save to temporary file]``
-     - Specify the file to save the features to. One of:
+     - Specify the file to save the features to. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -2592,7 +2592,7 @@ Parameters
      - [same as input]
        
        Default: ``Create temporary layer``
-     - Specify output vector layer. One of:
+     - Specify output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
@@ -2670,7 +2670,7 @@ Basic parameters
        
        Default: ``[Save to temporary folder]``
      - Specify the directory for the output layers.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types**

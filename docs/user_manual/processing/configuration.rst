@@ -52,6 +52,9 @@ or for :ref:`individual parameters <alg_parameter_types>`.
   is provided for the Processing execution outputs, this is the folder in which
   they will be saved. Default is :file:`processing/outputs` under the active
   :ref:`user profile <user_profiles>` directory.
+
+.. _overidden_temp_folder:
+
 * :guilabel:`Override temporary output folder path`: Temporary outputs are
   saved by default in the :file:`tmp` folder on the machine.
   This option helps you set a different place for storage.
