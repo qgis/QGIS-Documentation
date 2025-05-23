@@ -993,7 +993,7 @@ Parameters
      - [vector: same as input]
 
        Default:``[Create temporary layer]``
-     - Specify the output vector layer for generated the clusters.
+     - Specify the output vector layer for the generated clusters.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
