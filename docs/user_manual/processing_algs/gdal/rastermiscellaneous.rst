@@ -107,7 +107,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -202,7 +202,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -232,7 +232,7 @@ Advanced parameters
      - ``ASSIGN_CRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Overrides the projection for the output file.
        No reprojection is done.
    * - **Resampling algorithm**
@@ -256,13 +256,13 @@ Advanced parameters
      - ``SRC_NODATA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Space separated NoData value(s) for input band(s)
    * - **Additional command-line parameters**
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -358,7 +358,7 @@ Basic parameters
      -
    * - **Web viewer to generate**
      - ``VIEWER``
-     - [enumerate]
+     - [enumeration]
 
        Default: 0
      - One of:
@@ -389,7 +389,7 @@ Basic parameters
      - [folder]
 
        Default: ``[Save to temporary folder]``
-     - Specify the output folder for the tiles. One of:
+     - Specify the output folder for the tiles. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types**
@@ -428,13 +428,13 @@ Advanced parameters
      - ``SOURCE_CRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      -
    * - **Transparency value to assign to the input data**
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      -
@@ -570,7 +570,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -591,22 +591,22 @@ Advanced parameters
 
        Optional
      - ``NODATA_INPUT``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Ignores pixels from files being merged in with this pixel value
    * - **Assign specified "NoData" value to output**
 
        Optional
      - ``NODATA_OUTPUT``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Assigns the specified NoData value to output bands.
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -622,7 +622,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -689,7 +689,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output (sharpened) raster layer. One of:
+     - Specify the output (sharpened) raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -724,7 +724,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -742,7 +742,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -816,7 +816,7 @@ Basic parameters
      - ``INPUT_B``
      - [raster]
 
-       Default: None
+       Default: Not set
      - Second input raster layer
    * - **Number of raster band for B**
 
@@ -830,7 +830,7 @@ Basic parameters
      - ``INPUT_C``
      - [raster]
 
-       Default: None
+       Default: Not set
      - Third input raster layer
    * - **Number of raster band for C**
 
@@ -844,7 +844,7 @@ Basic parameters
      - ``INPUT_D``
      - [raster]
 
-       Default: None
+       Default: Not set
      - Fourth input raster layer
    * - **Number of raster band for D**
 
@@ -858,7 +858,7 @@ Basic parameters
      - ``INPUT_E``
      - [raster]
 
-       Default: None
+       Default: Not set
      - Fifth input raster layer
    * - **Number of raster band for E**
 
@@ -878,7 +878,7 @@ Basic parameters
      - ``BAND_F``
      - [raster band]
 
-       Default: None
+       Default: Not set
      - Band for input layer F
    * - **Calculation in gdalnumeric syntax using +-/\* or any numpy array functions (i.e. logical_and())**
      - ``FORMULA``
@@ -904,9 +904,9 @@ Basic parameters
 
        Optional
      - ``NO_DATA``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Value to use for NoData
    * - **Handling of extent differences**
      - ``EXTENT_OPT``
@@ -948,7 +948,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output (calculated) raster layer. One of:
+     - Specify the output (calculated) raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -969,7 +969,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -1083,7 +1083,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the HTML file for output.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1107,7 +1107,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -1170,25 +1170,25 @@ Basic parameters
      - The input raster files
    * - **Tile width**
      - ``TILE_SIZE_X``
-     - [number]
+     - [numeric: integer]
 
        Default: 256
      - Width of the tiles in pixels (minimum 0)
    * - **Tile height**
      - ``TILE_SIZE_Y``
-     - [number]
+     - [numeric: integer]
 
        Default: 256
      - Height of the tiles in pixels (minimum 0)
    * - **Overlap in pixels between consecutive tiles**
      - ``OVERLAP``
-     - [number]
+     - [numeric: integer]
 
        Default: 0
      -
    * - **Number of pyramid levels to build**
      - ``LEVELS``
-     - [number]
+     - [numeric: integer]
 
        Default: 1
      - Minimum: 0
@@ -1198,7 +1198,7 @@ Basic parameters
 
        Default: ``[Save to temporary folder]``
      - Specify the output folder for the tiles.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types**
@@ -1209,7 +1209,7 @@ Basic parameters
      - [file]
 
        Default: ``[Skip output]``
-     - Specify the output file for the tiles. One of:
+     - Specify the output file for the tiles. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
@@ -1233,7 +1233,7 @@ Advanced parameters
      - ``SOURCE_CRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      -
    * - **Resampling method**
      - ``RESAMPLING``
@@ -1261,7 +1261,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -1401,7 +1401,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the polygon vector layer to write the index to.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1512,19 +1512,19 @@ Basic parameters
      - The location of the observer
    * - **Observer height**
      - ``OBSERVER_HEIGHT``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - The altitude of the observer, in the DEM units
    * - **Target height**
      - ``TARGET_HEIGHT``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - The altitude of the target element, in the DEM units
    * - **Maximum distance from observer to compute visibility**
      - ``MAX_DISTANCE``
-     - [number]
+     - [numeric: double]
 
        Default: 100.0
      - Maximum distance from observer to compute visibility,
@@ -1534,7 +1534,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Output raster layer. One of:
+     - Output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1555,7 +1555,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -1571,7 +1571,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs

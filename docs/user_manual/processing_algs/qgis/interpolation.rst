@@ -38,7 +38,7 @@ Parameters
      - Point vector layer to use for the heatmap
    * - **Radius**
      - ``RADIUS``
-     - [number]
+     - [numeric: double]
 
        Default: 100.0
      - Heatmap search radius (or kernel bandwidth) in map units.
@@ -48,7 +48,7 @@ Parameters
        may show finer details and variation in point density.
    * - **Output raster size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.1
      - Pixel size of the output raster layer in layer units.
@@ -106,7 +106,7 @@ Parameters
 
        Optional
      - ``DECAY``
-     - [number]
+     - [numeric: double]
 
        Default: *0.0*
      - Can be used with Triangular kernels to further control
@@ -143,7 +143,7 @@ Parameters
        
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with kernel density values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -283,8 +283,7 @@ Parameters
      - ``INTERPOLATION_DATA``
      - [string]
      - Vector layer(s) and field(s) to use for the interpolation,
-       coded
-       in a string (see the ``ParameterInterpolationData`` class in
+       coded in a string (see the ``ParameterInterpolationData`` class in
        :source:`InterpolationWidgets <python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`
        for more details).
 
@@ -310,7 +309,7 @@ Parameters
        ``'::~::'``.
    * - **Distance coefficient P**
      - ``DISTANCE_COEFFICIENT``
-     - [number]
+     - [numeric: double]
 
        Default: 2.0
      - Sets the distance coefficient for the interpolation.
@@ -326,7 +325,7 @@ Parameters
 
    * - **Output raster size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.1
      - Pixel size of the output raster layer in layer units.
@@ -348,7 +347,7 @@ Parameters
        
        Default: ``[Save to temporary file]``
      - Raster layer of interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -416,25 +415,25 @@ Basic parameters
      - Description
    * - **Input line layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: line]
      - Input vector layer containing line features
    * - **Weight field**
      - ``WEIGHT``
-     - [number]
-     - Field of the layer containing the weight factor to use during
-       the calculation
+     - [tablefield: numeric]
+     - Field of the layer containing the weight factor to use
+       during the calculation
    * - **Search Radius**
      - ``RADIUS``
-     - [number]
+     - [numeric: double]
 
-       Default: 10
+       Default: 10.0
      - Radius of the circular neighbourhood. Units can be specified
        here.
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]
 
-       Default: 10
+       Default: 10.0
      - Pixel size of the output raster layer in layer units.
        The raster has square pixels.
    * - **Line density raster**
@@ -442,7 +441,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - The output as a raster layer. One of:
+     - The output as a raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -463,7 +462,7 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
@@ -537,8 +536,7 @@ Parameters
      - ``INTERPOLATION_DATA``
      - [string]
      - Vector layer(s) and field(s) to use for the interpolation,
-       coded in a string (see the ``ParameterInterpolationData``
-       class in
+       coded in a string (see the ``ParameterInterpolationData`` class in
        :source:`InterpolationWidgets <python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`
        for more details).
 
@@ -583,7 +581,7 @@ Parameters
 
    * - **Output raster size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.1
      - Pixel size of the output raster layer in layer units.
@@ -597,14 +595,13 @@ Parameters
        ``Pixel Size Y`` will be updated simultaneously - doubling the
        number of rows will double the number of columns, and the cell
        size will be halved.
-       The extent of the output raster will remain the same
-       (approximately).       
+       The extent of the output raster will remain the same (approximately).
    * - **Interpolated**
      - ``OUTPUT``
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - The output TIN interpolation as a raster layer. One of:
+     - The output TIN interpolation as a raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -615,7 +612,7 @@ Parameters
      - [vector: line]
 
        Default: ``[Skip output]``
-     - The output TIN as a vector layer. One of:
+     - The output TIN as a vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**

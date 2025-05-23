@@ -33,7 +33,8 @@ Parameters
    * - **History entry**
      - ``HISTORY``
      - [string]
-     - The text to be appended as a new entry in the layer's history metadata. This will be added to any existing history entries.
+     - The text to be appended as a new entry in the layer's history metadata.
+       This will be added to any existing history entries.
 
 Outputs
 .......
@@ -50,7 +51,6 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The resulting layer with the updated history in its **Metadata properties**. 
-
 
 Python code
 ...........
@@ -96,7 +96,7 @@ Parameters
 
        Default: False
      - If checked, the metadata information will be saved with the layer,
-        hence available in subsequent projects.
+       hence available by default in subsequent projects.
 
 Outputs
 .......
@@ -114,7 +114,6 @@ Outputs
      - [layer]
      - The target layer with the metadata replaced by the metadata from the source layer.
        This includes all metadata fields, such as history, abstract, and other properties.
-
 
 Python code
 ...........
@@ -153,7 +152,7 @@ Parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -173,8 +172,8 @@ Outputs
    * - **Output file**
      - ``OUTPUT``
      - [file]
-     - The QMD file containing the exported metadata. This file can be used to import metadata into another layer.
-
+     - The :file:`.qmd` file containing the exported metadata.
+       This file can be used to import metadata into another layer.
 
 Python code
 ...........
@@ -191,7 +190,7 @@ Python code
 Set Layer Metadata
 ------------------
 
-Applies metadata to a layer from a QMD file.
+Applies metadata to a layer from a :file:`.qmd` file.
 
 Parameters
 ..........
@@ -211,14 +210,14 @@ Parameters
    * - **Metadata file**
      - ``METADATA``
      - [file]
-     - The QMD file containing the metadata to be applied.
+     - The :file:`.qmd` file containing the metadata to be applied.
    * - **Save metadata as default**
      - ``DEFAULT``
      - [boolean]
 
        Default: False
      - If checked, the metadata information will be saved with the layer,
-        hence available in subsequent projects.
+       hence available by default in subsequent projects.
 
 Outputs
 .......
@@ -234,8 +233,7 @@ Outputs
    * - **Output layer**
      - ``OUTPUT``
      - [same as input]
-     - The input layer with the metadata replaced by the metadata from the QMD file.
-
+     - The input layer with the metadata replaced by the metadata from the :file:`.qmd` file.
 
 Python code
 ...........

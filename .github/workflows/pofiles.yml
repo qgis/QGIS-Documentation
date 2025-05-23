@@ -23,9 +23,9 @@ jobs:
 
     steps:
     - name: Harden Runner
-      uses: step-security/harden-runner@4d991eb9b905ef189e4c376166672c3f2f230481 # v2.11.0
+      uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.12.0
       with:
-        disable-sudo: true
+        disable-sudo-and-containers: true
         egress-policy: block
         allowed-endpoints: >
           files.pythonhosted.org:443
@@ -39,7 +39,7 @@ jobs:
         ref: release_3.40
 
     - name: Set up Python 3.12
-      uses: actions/setup-python@8d9ed9ac5c53483de85588cdf95a591a75ab9f55 # v5.5.0
+      uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
       with:
         python-version: '3.12'
 
@@ -58,7 +58,7 @@ jobs:
 
     - name: Commit the changes in the PO files      
       id: "auto-commit-action"
-      uses: stefanzweifel/git-auto-commit-action@e348103e9026cc0eee72ae06630dbe30c8bf7a79 # v5.1.0
+      uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5.2.0
       with:
         commit_message: Update English PO files
 

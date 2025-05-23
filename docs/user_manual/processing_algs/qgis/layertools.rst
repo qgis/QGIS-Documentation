@@ -31,14 +31,14 @@ Parameters
      - Description
    * - **Input layers**
      - ``LAYERS``
-     - [vector: any] [list]
-     - Input vector layers to get information on.
+     - [layer] [list]
+     - Input layers to get information on.
    * - **Output**
      - ``OUTPUT``
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output layer with information. One of:
+     - Specification of the output layer with information. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -121,7 +121,7 @@ Parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Output spreadsheet with a sheet for every layer. One of:
+     - Output spreadsheet with a sheet for every layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -165,8 +165,7 @@ Extract layer extent
 Generates a vector layer with the minimum bounding box (rectangle with
 N-S orientation) that covers all the input features.
 
-The output layer contains a single bounding box for the whole input
-layer.
+The output layer contains a single bounding box for the whole input layer.
 
 .. figure:: img/extract_layer_extent.png
    :align: center
@@ -196,7 +195,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the polygon vector layer for the output extent.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -204,6 +203,7 @@ Parameters
 
 Outputs
 .......
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40

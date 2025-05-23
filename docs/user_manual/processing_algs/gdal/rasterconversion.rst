@@ -38,21 +38,21 @@ Parameters
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to
        convert
-   * - **Source NoData**
+   * - **Input pixel value to treat as NoData**
 
        Optional
      - ``NODATA_INPUT``
-     - [number]
+     - [numeric: integer]
 
-       Default: None
+       Default: Not set
      - Input pixel value to treat as "NoData" (GDAL >= 3.7).
    * - **Destination NoData**
 
        Optional
      - ``NODATA_OUTPUT``
-     - [number]
+     - [numeric: integer]
 
-       Default: None
+       Default: Not set
      - Assign specified "NoData" value to output (GDAL >= 3.7).
    * - **Do not output NoData values**
      - ``SKIP_NODATA``
@@ -73,7 +73,7 @@ Parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output file.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -153,7 +153,7 @@ Parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output file.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -245,7 +245,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output (polygon) vector layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -268,7 +268,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -331,14 +331,14 @@ Basic parameters
      - ``BANDS``
      - [raster band] [list]
 
-       Default: None
+       Default: Not set
      - Ordered list of the bands to use to create the new raster
    * - **Converted**
      - ``OUTPUT``
      - [raster]
 
        Default:  ``[Save to temporary file]``
-     - Specification of the output raster. One of:
+     - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -358,7 +358,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -446,7 +446,7 @@ Parameters
      - Input (RGB) raster layer
    * - **Number of colors**
      - ``NCOLORS``
-     - [number]
+     - [numeric: integer]
 
        Default: 2
      - The number of colors the resulting image will contain.
@@ -456,7 +456,7 @@ Parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output raster. One of:
+     - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -529,7 +529,7 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: Not set
      - Defines the value to use for NoData in the output raster
@@ -545,7 +545,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output (translated) raster layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -565,7 +565,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -583,7 +583,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
    * - **Output data type**
      - ``DATA_TYPE``

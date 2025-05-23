@@ -43,7 +43,7 @@ Parameters
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the point cloud file to use as output. One of:
+     - Specify the point cloud file to use as output. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -137,7 +137,7 @@ Parameters
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the point cloud file to build the data into. One of:
+     - Specify the point cloud file to build the data into. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -208,7 +208,7 @@ Basic parameters
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the point cloud file to export the clipped points to. One of:
+     - Specify the point cloud file to export the clipped points to. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -297,7 +297,7 @@ Parameters
      - [folder]
 
        Default: ``[Skip output]``
-     - Specify the folder to create the new files in. One of:
+     - Specify the folder to create the new files in. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types_skip**
@@ -385,7 +385,7 @@ Parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specify the file to store the metadata information. One of:
+     - Specify the file to store the metadata information. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -448,7 +448,7 @@ Basic parameters
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the output point cloud merging input files. One of:
+     - Specify the output point cloud merging input files. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -541,7 +541,7 @@ Parameters
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the reprojected point cloud file. One of:
+     - Specify the reprojected point cloud file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -629,7 +629,7 @@ Basic parameters
      - Input point cloud layer to create a thinned version from
    * - **Sampling radius (in map units)**
      - ``SAMPLING_RADIUS``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - Distance within which points are sampled to a unique point
@@ -638,7 +638,7 @@ Basic parameters
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the output point cloud with reduced points. One of:
+     - Specify the output point cloud with reduced points. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -728,7 +728,7 @@ Basic parameters
      - Input point cloud layer to create a thinned version from
    * - **Number of points to skip**
      - ``POINTS_NUMBER``
-     - [number]
+     - [numeric: integer]
 
        Default: 1
      - Keep only every N-th point in the input layer
@@ -737,7 +737,7 @@ Basic parameters
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the output point cloud with reduced points. One of:
+     - Specify the output point cloud with reduced points. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -827,7 +827,7 @@ Basic parameters
      - Input point cloud layers to create tiles from
    * - **Tile length**
      - ``LENGTH``
-     - [number]
+     - [numeric: double]
 
        Default: 1000.0
      - Size of the edge of each generated tile
@@ -836,7 +836,7 @@ Basic parameters
      - [folder]
 
        Default: ``[Save to temporary folder]``
-     - Specify the folder to store the generated tiles. One of:
+     - Specify the folder to store the generated tiles. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types**

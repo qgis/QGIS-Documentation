@@ -36,7 +36,7 @@ Parameters
      - [3D Tile]
 
        Default: ``[Save to temporary file]``
-     - Specify the output 3D tile file. One of:
+     - Specify the output 3D tile file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -98,7 +98,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer to store polygon features. One of:
+     - Specify the output vector layer to store polygon features. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
@@ -110,7 +110,7 @@ Parameters
      - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer to store line features. One of:
+     - Specify the output vector layer to store line features. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**

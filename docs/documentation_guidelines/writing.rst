@@ -520,6 +520,7 @@ Which will point to:
 
 .. [1] Updates of core plugins
 
+.. _managing_screenshots:
 
 Managing Screenshots
 ====================
@@ -573,7 +574,7 @@ Here are some additional hints for those that want to create
 screenshots for a translated user guide:
 
 Translated images should be placed in a :file:`img/<your_language>/`
-folder.  Use the same filename as the english 'original' screenshot.
+folder. Use the same filename as the english 'original' screenshot.
 
 
 Documenting Processing algorithms
@@ -635,7 +636,7 @@ guidelines:
 
     * - **Number of points**
       - ``NUMBER_OF_POINTS``
-      - [number]
+      - [numeric: integer]
 
         Default: 1
       - Number of points to create
@@ -649,6 +650,8 @@ guidelines:
   Point vector layer                        ``vector: point``          |pointLayer|
   Line vector layer                         ``vector: line``           |lineLayer|
   Polygon vector layer                      ``vector: polygon``        |polygonLayer|
+  All spatial vector layers                 ``vector: geometry``
+  Geometryless vector layer                 ``vector: table``          |tableLayer|
   Generic vector layer                      ``vector: any``
   Vector field numeric                      ``tablefield: numeric``    |fieldFloat|
   Vector field string                       ``tablefield: string``     |fieldText|
@@ -656,14 +659,14 @@ guidelines:
   Raster layer                              ``raster``                 |rasterLayer|
   Raster band                               ``raster band``
   HTML file                                 ``html``
-  Table layer                               ``table``                  |tableLayer|
   Expression                                ``expression``             |expression|
   Point geometry                            ``coordinates``
   Extent                                    ``extent``
   CRS                                       ``crs``                    |setProjection|
   Enumeration                               ``enumeration``            |selectString|
   List                                      ``list``
-  Number                                    ``number``                 |selectNumber|
+  Integer value                             ``numeric: integer``       |selectNumber|
+  Decimal value                             ``numeric: double``        |selectNumber|
   String                                    ``string``                 |inputText|
   Boolean                                   ``boolean``                |checkbox|
   Folder path                               ``folder``

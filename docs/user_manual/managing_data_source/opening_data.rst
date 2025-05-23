@@ -837,22 +837,22 @@ Connecting to SpatiaLite database is described at :ref:`label_spatialite`.
    tree, right-clicking and choosing connect will provide you
    with the database connection dialog.
 
-Most of the connection dialogs follow a common basis that will be described
-below using the PostgreSQL database tool as an example.
-For additional settings specific to other providers, you can find
-corresponding descriptions at:
+Most of the connection dialogs follow a common structure:
 
-* :ref:`create_ms_sql_server_connection`;
-* :ref:`create_oracle_connection`;
-* :ref:`create_hana_connection`.
+* a section with credentials information to connect to the database
+* a section with options to tune which data can be requested in the database
 
-The first time you use a PostGIS data source, you must create a connection to a
-database that contains the data. Begin by clicking the appropriate button as
-exposed above, opening an :guilabel:`Add PostGIS Table(s)` dialog
-(see :numref:`figure_add_postgis_tables`).
-To access the connection manager, click on the :guilabel:`New`
-button to display the
-:guilabel:`Create a New PostGIS Connection` dialog.
+.. _create_postgresql_connection:
+
+Connecting to PostgreSQL
+........................
+
+The first time you use a PostGIS data source, you must create a connection
+to a database that contains the data.
+Press the appropriate button as exposed above, opening the :guilabel:`PostgreSQL` tab
+of the :guilabel:`Data Source Manager` dialog.
+To access the connection manager, click on the :guilabel:`New` button
+to display the :guilabel:`Create a New PostGIS Connection` dialog.
 
 .. _figure_new_postgis_connection:
 
@@ -861,36 +861,31 @@ button to display the
 
    Create a New PostGIS Connection Dialog
 
-
-The parameters required for a PostGIS connection are explained below.
-For the other database types, see their differences at
-:ref:`db_requirements`.
-
 * :guilabel:`Name`: A name for this connection. It can be the same as :guilabel:`Database`.
-* :guilabel:`Service`: Service parameter to be used alternatively to hostname/port (and
-  potentially database). This can be defined in :file:`pg_service.conf`.
+* :guilabel:`Service`: Service parameter to be used alternatively to hostname/port
+  (and potentially database). This can be defined in :file:`pg_service.conf`.
   Check the :ref:`pg-service-file` section for more details.
 * :guilabel:`Host`: Name of the database host. This must be a resolvable host name
-  such as would be used to open a TCP/IP connection or ping the host. If the
-  database is on the same computer as QGIS, simply enter *localhost* here.
-* :guilabel:`Port`: Port number the PostgreSQL database server listens on. The default
-  port for PostGIS is ``5432``.
+  such as would be used to open a TCP/IP connection or ping the host.
+  If the database is on the same computer as QGIS, simply enter *localhost* here.
+* :guilabel:`Port`: Port number the PostgreSQL database server listens on.
+  The default port for PostGIS is ``5432``.
 * :guilabel:`Database`: Name of the database.
-* :guilabel:`SSL mode`: SSL encryption setup
+* :guilabel:`SSL mode`: SSL encryption setup.
   The following options are available:
 
-  * :guilabel:`Prefer` (the default): I don't care about encryption, but I wish to pay
-    the overhead of encryption if the server supports it.
-  * :guilabel:`Require`: I want my data to be encrypted, and I accept the overhead. I trust
-    that the network will make sure I always connect to the server I want.
-  * :guilabel:`Verify CA`: I want my data encrypted, and I accept the overhead. I want to
-    be sure that I connect to a server that I trust.
-  * :guilabel:`Verify Full`: I want my data encrypted, and I accept the overhead. I want to
-    be sure that I connect to a server I trust, and that it's the one I specify.
-  * :guilabel:`Allow`: I don't care about security, but I will pay the overhead of
-    encryption if the server insists on it.
-  * :guilabel:`Disable`: I don't care about security, and I don't want to pay the overhead
-    of encryption.
+  * :guilabel:`Prefer` (the default): I don't care about encryption,
+    but I wish to pay the overhead of encryption if the server supports it.
+  * :guilabel:`Require`: I want my data to be encrypted, and I accept the overhead.
+    I trust that the network will make sure I always connect to the server I want.
+  * :guilabel:`Verify CA`: I want my data encrypted, and I accept the overhead.
+    I want to be sure that I connect to a server that I trust.
+  * :guilabel:`Verify Full`: I want my data encrypted, and I accept the overhead.
+    I want to be sure that I connect to a server I trust, and that it's the one I specify.
+  * :guilabel:`Allow`: I don't care about security,
+    but I will pay the overhead of encryption if the server insists on it.
+  * :guilabel:`Disable`: I don't care about security,
+    and I don't want to pay the overhead of encryption.
 
 * :guilabel:`Session role`: used to set the current user identifier of the current session.
   This is useful to automatically give the ownership of a new object (table, view, function)
@@ -935,41 +930,32 @@ checkboxes:
 * |checkbox| :guilabel:`Only show layers in the layer registries`
 * |checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`
 * |checkbox| :guilabel:`Only look in the 'public' schema`
-* |checkbox| :guilabel:`Also list tables with no geometry`
-* |checkbox| :guilabel:`Use estimated table metadata`
+* |checkbox| :guilabel:`Also list tables with no geometry`:
+  indicates that tables without geometry should also be listed by default.
+* |checkbox| :guilabel:`Use estimated table metadata`: When initializing layers,
+  various queries may be needed to establish the characteristics of the geometries
+  stored in the database table.
+  When this option is checked, these queries examine only a sample of the rows
+  and use the table statistics, rather than the entire table.
+  This can drastically speed up operations on large datasets,
+  but may result in incorrect characterization of layers
+  (e.g. the feature count of filtered layers will not be accurately determined)
+  and may even cause strange behaviour if columns that are supposed to be unique
+  actually are not.
 * |checkbox| :guilabel:`Allow saving/loading QGIS projects in the database`
   - more details :ref:`here <saveprojecttodb>`
 * |checkbox| :guilabel:`Allow saving/loading QGIS layer metadata in the database`
   - more details :ref:`here <savemetadatatodb>`
 * |checkbox| :guilabel:`Also list raster overview tables`
-
-.. tip:: **Use estimated table metadata to speed up operations**
-
-   When initializing layers, various queries may be needed to establish the
-   characteristics of the geometries stored in the database table. When the
-   :guilabel:`Use estimated table metadata` option is checked, these queries
-   examine only a sample of the rows and use the table statistics, rather than
-   the entire table. This can drastically speed up operations on large
-   datasets, but may result in incorrect characterization of layers
-   (e.g. the feature count of filtered layers will not be accurately
-   determined) and may even cause strange behaviour if columns
-   that are supposed to be unique actually are not.
+* :guilabel:`Schema`: Allows to specify a single schema to limit a connection to.
+  When set, only tables from the matching schema will be included in the browser panel
+  and data source select for the connection.
+  This can be used to limit the database work required to populate tables
+  for a connection pointing to a large database store.
 
 Once all parameters and options are set, you can test the connection by
 clicking the :guilabel:`Test Connection` button or apply it by clicking
 the :guilabel:`OK` button.
-From :guilabel:`Add PostGIS Table(s)`, click now on :guilabel:`Connect`,
-and the dialog is filled with tables from the selected database
-(as shown in :numref:`figure_add_postgis_tables`).
-
-
-.. _db_requirements:
-
-Particular Connection requirements
-..................................
-
-Because of database type particularities, provided options are not
-the same. Database specific options are described below.
 
 .. _pg-service-file:
 
@@ -980,8 +966,8 @@ The service connection file allows PostgreSQL connection parameters to be
 associated with a single service name. That service name can then be specified
 by a client and the associated settings will be used.
 
-It's called :file:`.pg_service.conf` under \*nix systems (GNU/Linux,
-macOS etc.) and :file:`pg_service.conf` on Windows.
+It's called :file:`.pg_service.conf` under \*nix systems (GNU/Linux, macOS etc.)
+and :file:`pg_service.conf` on Windows.
 
 The service file can look like this::
 
@@ -1006,10 +992,8 @@ The service file can look like this::
   You can find all the PostgreSQL parameters
   `here <https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
 
-.. note:: If you don't want to save the passwords in the service file you can
-  use the
-  `.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_
-  option.
+.. note:: If you don't want to save the passwords in the service file you can use
+  the `.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ option.
 
 .. note:: **QGIS Server and service**
 
@@ -1026,8 +1010,7 @@ specifying any other environment variables).
 You can specify the location of the service file by creating a
 ``PGSERVICEFILE`` environment variable (e.g. run the
 ``export PGSERVICEFILE=/home/web/.pg_service.conf``
-command under your \*nix OS to temporarily set the ``PGSERVICEFILE``
-variable)
+command under your \*nix OS to temporarily set the ``PGSERVICEFILE`` variable).
 
 You can also make the service file available system-wide (all users) either by
 placing the :file:`.pg_service.conf` file in ``pg_config --sysconfdir`` or by
@@ -1062,8 +1045,7 @@ Connecting to Oracle Spatial
 
 The spatial features in Oracle Spatial aid users in managing geographic and
 location data in a native type within an Oracle database.
-In addition to some of the options in :ref:`vector_create_stored_connection`,
-the connection dialog proposes:
+The connection dialog proposes:
 
 * **Database**: SID or SERVICE_NAME of the Oracle instance;
 * **Port**: Port number the Oracle database server listens on. The default
@@ -1077,25 +1059,32 @@ the connection dialog proposes:
 Optionally, you can activate the following checkboxes:
 
 * |checkbox| :guilabel:`Only look in metadata table`: restricts the displayed
-  tables to those that are in the ``all_sdo_geom_metadata`` view. This can
-  speed up the initial display of spatial tables.
-* |checkbox| :guilabel:`Only look for user's tables`: when searching for spatial
-  tables, restricts the search to tables that are owned by the user.
-* |checkbox| :guilabel:`Also list tables with no geometry`: indicates that
-  tables without geometry should also be listed by default.
+  tables to those that are in the ``all_sdo_geom_metadata`` view.
+  This can speed up the initial display of spatial tables.
+* |checkbox| :guilabel:`Only look for user's tables`: when searching for spatial tables,
+  restricts the search to tables that are owned by the user.
+* |checkbox| :guilabel:`Also list tables with no geometry`:
+  indicates that tables without geometry should also be listed by default.
 * |checkbox| :guilabel:`Use estimated table statistics for the layer metadata`:
   when the layer is set up, various metadata are required for the Oracle table.
   This includes information such as the table row count, geometry type and
-  spatial extents of the data in the geometry column. If the table contains a
-  large number of rows, determining this metadata can be time-consuming. By
-  activating this option, the following fast table metadata operations are
-  done: Row count is determined from ``all_tables.num_rows``. Table extents
-  are always determined with the SDO_TUNE.EXTENTS_OF function, even if a layer
-  filter is applied. Table geometry is determined from the first 100
-  non-null geometry rows in the table.
-* |checkbox| :guilabel:`Only existing geometry types`: only lists the existing
-  geometry types and don't offer to add others.
+  spatial extents of the data in the geometry column.
+  If the table contains a large number of rows, determining this metadata can be time-consuming.
+  By activating this option, the following fast table metadata operations are done:
+  Row count is determined from ``all_tables.num_rows``.
+  Table extents are always determined with the SDO_TUNE.EXTENTS_OF function,
+  even if a layer filter is applied.
+  Table geometry is determined from the first 100 non-null geometry rows in the table.
+* |checkbox| :guilabel:`Only existing geometry types`:
+  only lists the existing geometry types and don't offer to add others.
 * |checkbox| :guilabel:`Include additional geometry attributes`.
+* |checkbox| :guilabel:`Allow saving/loading QGIS projects in the database`
+  - more details :ref:`here <saveprojecttodb>`
+* :guilabel:`Schema`: Allows to specify a single schema to limit a connection to.
+  When set, only tables from the matching schema will be included in the browser panel
+  and data source select for the connection.
+  This can be used to limit the database work required to populate tables
+  for a connection pointing to a large database store.
 
 .. _tip_ORACLE_Spatial_layers:
 
@@ -1274,9 +1263,8 @@ PostGIS database.
 
 To load a layer from a database, you can perform the following steps:
 
-#. Open the "Add <database> table(s)" dialog
-   (see :ref:`vector_create_stored_connection`).
-#. Choose the connection from the drop-down list and click :guilabel:`Connect`.
+#. Open the corresponding tab of the database in the :guilabel:`Data Source Manager` dialog.
+#. Choose the connection name from the drop-down list and press :guilabel:`Connect`.
 #. Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`.
 #. Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the
    list of tables to those matching your search. You can also set this option
@@ -1311,11 +1299,9 @@ To load a layer from a database, you can perform the following steps:
   sometimes be time consuming as QGIS fetches statistics and
   properties (e.g. geometry type and field, CRS, number of features)
   for each table beforehand.
-  To avoid this, once
-  :ref:`the connection is set <vector_create_stored_connection>`,
+  To avoid this, once :ref:`the connection is set <vector_create_stored_connection>`,
   it is better to use the :ref:`Browser Panel <browser_panel>` or the
-  :ref:`DB Manager <dbmanager>` to drag and drop the database tables
-  into the map canvas.
+  :ref:`DB Manager <dbmanager>` to drag and drop the database tables into the map canvas.
 
 .. _layer_metadata_search_panel:
 

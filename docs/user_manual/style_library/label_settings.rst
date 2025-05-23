@@ -9,8 +9,9 @@
    .. contents::
       :local:
 
-Labels are textual information you can display on vector features, mesh layers or maps.
-They add details you could not necessarily represent using symbols.
+Labels are textual information you can display on maps.
+They add details you could not necessarily represent using symbols,
+and may refer to vector features, raster cells, mesh elements, or simple annotations on the map...
 Two types of text-related items are available in QGIS:
 
 * :guilabel:`Text Format`: defines the appearance of the text, including
@@ -40,7 +41,7 @@ Two types of text-related items are available in QGIS:
 * :guilabel:`Label Settings`: extend the text format settings with properties
   related to the location or the interaction with other texts or features
   (:ref:`callouts <labels_callouts>`, :ref:`placement <labels_placement>`,
-  :ref:`overlay, scale visibility <labels_rendering>`, mask ...).
+  :ref:`overlay, scale visibility <labels_rendering>`, :ref:`mask <labels_mask>` ...).
 
   They are used to configure smart labelling for vector and mesh layers through the
   |labelingSingle| :guilabel:`Labels` tab of the vector or mesh :guilabel:`Layer Properties`
@@ -71,8 +72,8 @@ Two types of text-related items are available in QGIS:
 Formatting the label text
 =========================
 
-Whether you are configuring a :guilabel:`Text Format` or :guilabel:`Label Settings`
-item, you will be given the following options:
+Whether you are configuring a :guilabel:`Text Format` or :guilabel:`Label Settings` item,
+and depending on the type of layer you are configuring, you will be given the following options:
 
 .. list-table::
    :header-rows: 1
@@ -81,34 +82,57 @@ item, you will be given the following options:
    * - Properties tab
      - Text format
      - Label settings
+     - Vector or mesh layer
+     - raster layer
    * - :guilabel:`Text`
+     - |checkbox|
+     - |checkbox|
      - |checkbox|
      - |checkbox|
    * - :guilabel:`Formatting`
      - |checkbox|
      - |checkbox|
+     - |checkbox|
+     - |checkbox|
    * - :guilabel:`Buffer`
      - |checkbox|
      - |checkbox|
-   * - :guilabel:`Mask`
-     - 
      - |checkbox|
+     - |checkbox|
+   * - :guilabel:`Mask`
+     -
+     - |checkbox|
+     - |checkbox|
+     -
    * - :guilabel:`Background`
+     - |checkbox|
+     - |checkbox|
      - |checkbox|
      - |checkbox|
    * - :guilabel:`Shadow`
      - |checkbox|
      - |checkbox|
+     - |checkbox|
+     - |checkbox|
    * - :guilabel:`Callout`
      -
      - |checkbox|
+     - |checkbox|
+     -
    * - :guilabel:`Placement`
      -
+     - |checkbox|
+     - |checkbox|
      - |checkbox|
    * - :guilabel:`Rendering`
      -
      - |checkbox|
+     - |checkbox|
+     - |checkbox|
 
+.. attention:: While for legibility, "feature" is the name used below
+ to indicate the item being labeled, depending on the underlying layer type,
+ it can be replaced by "pixel", "face" or "vertex".
 
 .. _labels_text:
 
@@ -166,7 +190,7 @@ we invite you to explore and test in your labels
 
     <i>QGIS</i> <b>rocks!</b>
 
-* Superscript and subscript, where the text will be vertically :sup:`super` or 
+* Superscript and subscript, where the text will be vertically :sup:`super` or
   :sub:`sub` aligned and automatically sized to 2/3 of the parent font size.
   You can also set a fixed font size for the superscript/subscript
   by including css rules, e.g.:
@@ -232,7 +256,7 @@ we invite you to explore and test in your labels
 CSS properties can be set on HTML tags with the ``style`` attribute.
 The HTML tag ``span`` does not apply any formatting to text by itself
 and is ideal if you just want to apply CSS styling.
-A CSS property name and its value are separated by a colon (``:``). 
+A CSS property name and its value are separated by a colon (``:``).
 Multiple CSS properties are separated by semicolon (``;``), e.g.:
 
 .. code-block:: html
@@ -320,10 +344,10 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
     option. The size can represent either the :guilabel:`Maximum line length`
     or the :guilabel:`Minimum line length`.
   * Decide the :guilabel:`Line Height`: values can be set to be in
-    :guilabel:`Millimeters`, :guilabel:`Points`, :guilabel:`Pixels`, 
+    :guilabel:`Millimeters`, :guilabel:`Points`, :guilabel:`Pixels`,
     :guilabel:`Percentage`, or :guilabel:`Inches`.
-    When line height is set to percentage it is the percentage of the 
-    default text line spacing of that font family. Typically 1.2 to 1.5 times the text size.  
+    When line height is set to percentage it is the percentage of the
+    default text line spacing of that font family. Typically 1.2 to 1.5 times the text size.
   * Format the :guilabel:`Alignment`: typical values available are
     :guilabel:`Left`, :guilabel:`Right`, :guilabel:`Justify` and :guilabel:`Center`.
 
@@ -506,20 +530,20 @@ Mask tab
 
 The |labelmask| :guilabel:`Mask` tab allows you to define a mask area around
 the labels. This feature is very useful when you have overlapping symbols and
-labels with similar colors, and you want to make the labels visible. A label mask 
-prevents specified features from drawing within the boundary set for the mask. 
-For example, you could set a label mask so that a specified layer does not draw 
-within 2mm of the label, but allow features from another layer to still show. 
-Label masks are similar to label buffers in that they allow control of the legibility 
+labels with similar colors, and you want to make the labels visible. A label mask
+prevents specified features from drawing within the boundary set for the mask.
+For example, you could set a label mask so that a specified layer does not draw
+within 2mm of the label, but allow features from another layer to still show.
+Label masks are similar to label buffers in that they allow control of the legibility
 of labels that cover other features. The label buffer draws on top of any underlying
-features, while the label mask selectively stops other layers from drawing. 
+features, while the label mask selectively stops other layers from drawing.
 
 .. _figure_label_mask:
 
 .. figure:: img/label_mask.png
    :align: center
 
-   Labels settings - Mask tab (with the text sample showing a green background 
+   Labels settings - Mask tab (with the text sample showing a green background
    representing another layer being excluded)
 
 To create masking effects on labels:
@@ -677,7 +701,7 @@ Point labels placement modes available are:
     they fit neatly around their corresponding features.
   * using the :guilabel:`Prioritize Placement` option, which decides what's more
     important when placing labels. There are two options:
-    
+
     * :guilabel:`Prefer closer labels`: By default, labels are kept close to the feature.
     * :guilabel:`Prefer position ordering`: The label will try to stay in a specific position
       (like top left or top right), even if it's a bit farther away from the feature. The label
@@ -907,11 +931,16 @@ or an expression to set:
   pointing in the direction of East for ``Horizontal`` oriented text and with 0°
   pointing in North direction for ``Vertical`` oriented text. Different units can
   be defined for the labeling rotation (e.g. ``degrees``, ``minutes of arc``, ``turns``).
+  QGIS prioritizes screen display rotation angles by default and always rotates text
+  to be most readable on screen, so "upside-down" rotation angles are overridden while
+  rendering. To change this behavior and force QGIS to render exact data-defined
+  rotation angles there is an option in |render| :guilabel:`Rendering` tab, under
+  :guilabel:`Show upside-down labels`.
   Check the :guilabel:`Preserve data rotation values` entry if you want to keep
   the rotation value in the associated field and apply it to the label, whether
   the label is pinned or not. If unchecked, unpinning the label rotation is
   reset and its value cleared from the attribute table.
-  
+
   .. note:: Data-defined rotation with polygon features is currently supported
    only with the :guilabel:`Around centroid` placement mode.
 
@@ -1018,8 +1047,23 @@ Under :guilabel:`Label options`:
   center point.
 * With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
   you can fine tune which labels should be rendered.
-* Allow to :guilabel:`Show upside-down labels`: alternatives are **Never**,
+* Allow to :guilabel:`Show upside-down labels`: alternatives are **never**,
   **when rotation defined** or **always**.
+
+  * **never** - default setting, screen readability is prioritized,
+
+  * **when rotation defined** - label rotation should be defined under |labelplacement| :guilabel:`Placement` tab,
+    within the :guilabel:`Data Defined` group
+
+  * **always** - upside-down labels are allowed
+
+.. _figure_show_upside-down_labels:
+
+.. figure:: img/show_upside-down_labels.png
+    :align: center
+
+    Data defined label rotation with show upside-down labels option set to: "never" (left), "when rotation defined" (right)
+
 * The :guilabel:`Overlapping labels` group allows you to control whether
   overlapping labels are permitted for features in the layer and
   how each of them should be handled:

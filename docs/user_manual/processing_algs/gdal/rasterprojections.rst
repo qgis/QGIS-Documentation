@@ -199,9 +199,9 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Sets NoData value for output bands.
        If not provided, then NoData values will be copied from
        the source dataset.
@@ -209,9 +209,9 @@ Basic parameters
 
        Optional
      - ``TARGET_RESOLUTION``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Defines the output file resolution of reprojection result
    * - **Reprojected**
      - ``OUTPUT``
@@ -219,7 +219,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -240,7 +240,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -304,7 +304,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options.
 
 Outputs

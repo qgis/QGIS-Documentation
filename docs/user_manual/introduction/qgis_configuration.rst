@@ -811,6 +811,16 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 
 Some of these options can be overridden at the :ref:`project level <measurements_ellipsoid>`.
 
+.. tip::
+
+ To ensure the reported distance and area units follow the project's CRS,
+ choose the appropriate :guilabel:`Units for distance measurements` and :guilabel:`Units for area measurements`
+ from the drop-down menu in :menuselection:`Project --> Properties… --> General --> Measurements`.
+ You can select from various distance units (such as meters, feet, miles, etc.)
+ and area units (such as square meters, acres, square miles, etc.),
+ or choose :guilabel:`Map Units` to automatically match the project's CRS units.
+ This setting makes the measurement results dynamically adapt to the project's CRS.
+
 .. _measure_copy_settings:
 
 **Measure Tool Copy Settings**
@@ -1411,6 +1421,11 @@ libraries to enable OpenCL acceleration.
 IDE settings
 ------------
 
+Under :guilabel:`GitHub access token`, you can generate a personal token
+allowing you to share code snippets from within the Python code editor.
+More details on `GitHub authentication
+<https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_
+
 .. _code_editor_options:
 
 Code Editor settings
@@ -1446,10 +1461,10 @@ JavaScript). A convenient way to adjust settings.
 
 .. _console_options:
 
-Python Console settings
-.......................
+Python settings
+...............
 
-The |runConsole| :guilabel:`Python Console` settings help you manage and control
+The |runConsole| :guilabel:`Python` settings help you manage and control
 the behavior of the Python editors (:ref:`interactive console <interactive_console>`,
 :ref:`code editor <console_editor>`, :ref:`project macros <project_macros>`,
 :ref:`custom expressions <function_editor>`, ...).
@@ -1464,7 +1479,7 @@ It can also be accessed using the |options| :sup:`Options...` button from:
 .. figure:: img/options_pythonconsole.png
    :align: center
 
-   Python Console settings
+   Python settings
 
 You can specify:
 
@@ -1521,11 +1536,9 @@ For :guilabel:`APIs` you can specify:
   file you have to load at least one ``*.api`` file and then compile it by
   clicking the :guilabel:`Compile APIs...` button.
 
-Under :guilabel:`GitHub access token`, you can generate a personal token
-allowing you to share code snippets from within the Python code editor.
-More details on `GitHub authentication
-<https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_
-
+The :guilabel:`External Editor` group allows you to provide command line instructions
+to launch an external Python code editor, given a file name, a line and column number.
+If empty, the default system editor will be used.
 
 Processing settings
 -------------------
@@ -1746,15 +1759,56 @@ You can indeed choose:
     New International 1967, WGS 84...).
 * the :guilabel:`Units for distance measurements` for length and perimeter,
   and the :guilabel:`Units for area measurements`.
-  These settings which default to their corresponding :ref:`global options <global_measure_tool>`
-  override them in the current project.
-  They are used in:
+  These settings default to their corresponding :ref:`global options <global_measure_tool>`
+  and can be manually changed for the current project.
+
+.. note::
+
+   To ensure measurement units (for distance and area) always reflect the units of the current project's CRS,
+   select :guilabel:`Map Units` for these options.
+
+They are used in:
 
   * Attribute table field update bar
   * Field calculator calculations
   * :ref:`Identify tool <identify>` derived length, perimeter and area values
   * :ref:`measure dialog <sec_measure>`
   * :ref:`scale bar decoration <scalebar_decoration>`
+
+.. _scale_calculation_method:
+
+* the :guilabel:`Scale calculation method`: when working on large map extents,
+  especially with geographic CRS, the scale bar may not reflect actual distance measurement
+  depending on the latitude at which the calculation is done.
+  This setting helps you define the area you want the calculation to be taken from:
+
+  * :guilabel:`Average top, middle and bottom scales`
+  * :guilabel:`Calculate along top of map`
+  * :guilabel:`Calculate along middle of map` (the default)
+  * :guilabel:`Calculate along bottom of map`
+  * :guilabel:`Always calculate at equator`, regardless of the actual visible map extent.
+    It can be used to provide a consistent, static scale for maps in geographic reference systems,
+    regardless of the latitudes actually visible in the map (permitting consistent appearance of these maps
+    when rendering relies on scale based visibility or calculations).
+    Otherwise a project in e.g. ``EPSG:4326`` which uses scale based visibility
+    of layers and symbols will see layers and features "randomly" disappear as the map is panned,
+    even though you have not zoomed in or out of the map.
+
+    .. note:: This method is only applicable when calculating scales
+     with a degree based reference system, and while it ensures that the scale remains constant
+     and does not change as the map is panned, it will calculate misleading scales
+     when the map extent is not close to the equator.
+
+  Changing the scale calculation method has the following impacts:
+
+  * New layout scale bars will default to the project's scale calculation method
+  * The scale calculations for the status bar widget and map renders will be changed
+    (including flow on impacts like the value of ``@map_scale`` variable,
+    scale based visibility of layers and symbols) 
+  * This also affects QGIS server map rendering
+  * Processing algorithms which render maps will respect the project's scale calculation method
+
+  .. note:: Symbology sizes in map units are NOT affected by this setting.
 
 .. _coordinate_and_bearing:
 

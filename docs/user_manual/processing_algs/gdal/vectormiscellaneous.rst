@@ -47,7 +47,7 @@ Parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output layer containing only the duplicates.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -129,7 +129,7 @@ Basic parameters
      - ``OUTPUT``
      - [vector: any]
      - Specification of the output layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -154,7 +154,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: '' (no additional options)
@@ -261,7 +261,7 @@ Parameters
      - ``A_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Defines the output CRS of the database table
    * - **Reproject to this CRS on output**
 
@@ -269,7 +269,7 @@ Parameters
      - ``T_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Reprojects/transforms to this CRS on output
    * - **Override source CRS**
 
@@ -277,7 +277,7 @@ Parameters
      - ``S_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Overrides the input layer CRS
    * - **Schema (schema name)**
 
@@ -314,7 +314,7 @@ Parameters
      - ``PRIMARY_KEY``
      - [tablefield: any]
 
-       Default: None
+       Default: Not set
      - Defines which attribute field in the exported layer will be
        the primary key of the database table
    * - **Geometry column name**
@@ -366,7 +366,7 @@ Parameters
      - ``SPAT``
      - [extent]
 
-       Default: None
+       Default: Not set
      - You can select features from a given extent that will be in
        the output table.
 
@@ -471,7 +471,7 @@ Parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: '' (no additional options)
@@ -557,7 +557,7 @@ Parameters
      - ``A_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Defines the output CRS of the database table
    * - **Reproject to this CRS on output**
 
@@ -565,7 +565,7 @@ Parameters
      - ``T_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Reprojects/transforms to this CRS on output
    * - **Override source CRS**
 
@@ -573,7 +573,7 @@ Parameters
      - ``S_SRS``
      - [crs]
 
-       Default: None
+       Default: Not set
      - Overrides the input layer CRS
    * - **Host**
 
@@ -649,7 +649,7 @@ Parameters
      - ``PRIMARY_KEY``
      - [tablefield: any]
 
-       Default: None
+       Default: Not set
      - Defines which attribute field in the exported layer will be
        the primary key of the database table
    * - **Geometry column name**
@@ -701,7 +701,7 @@ Parameters
      - ``SPAT``
      - [extent]
 
-       Default: None
+       Default: Not set
      - You can select features from a given extent that will be in
        the output table.
 
@@ -815,7 +815,7 @@ Parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: '' (no additional options)
@@ -868,7 +868,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Enable listing of all layers in the dataset**
      - ``ALL_LAYERS``
@@ -898,7 +898,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output HTML file that includes the file
-       information. One of:
+       information. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -987,7 +987,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Enable listing of all layers in the dataset**
      - ``ALL_LAYERS``
@@ -1016,7 +1016,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output JSON file that includes the file
-       information. One of:
+       information. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**

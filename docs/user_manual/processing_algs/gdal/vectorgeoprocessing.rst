@@ -31,7 +31,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - The input vector layer
    * - **Geometry column name**
      - ``GEOMETRY``
@@ -41,7 +41,7 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Buffer distance**
      - ``DISTANCE``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      - Minimum: 0.0
@@ -51,7 +51,7 @@ Basic parameters
      - ``FIELD``
      - [tablefield: any]
 
-       Default: None
+       Default: Not set
      - Field to use for dissolving
    * - **Dissolve results**
      - ``DISSOLVE``
@@ -73,7 +73,7 @@ Basic parameters
      - [vector: polygon]
 
        Default: ``[Save to temporary file]``
-     - Specify the output buffer layer. One of:
+     - Specify the output buffer layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -94,7 +94,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: '' (no additional options)
@@ -152,7 +152,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - The input vector layer
    * - **Clip extent**
      - ``EXTENT``
@@ -170,7 +170,7 @@ Basic parameters
      - [same as input]
 
        Default: ``[Save to temporary file]``
-     - Specify the output (clipped) layer. One of:
+     - Specify the output (clipped) layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -190,7 +190,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: '' (no additional options)
@@ -248,7 +248,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - The input vector layer
    * - **Mask layer**
      - ``MASK``
@@ -259,7 +259,7 @@ Basic parameters
      - [same as input]
 
        Default: ``[Save to temporary file]``
-     - The output (masked) layer. One of:
+     - The output (masked) layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -279,7 +279,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: '' (no additional options)
@@ -338,7 +338,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - The input layer to dissolve
    * - **Dissolve field**
 
@@ -358,7 +358,7 @@ Basic parameters
      - [same as input]
 
        Default: ``[Save to temporary file]``
-     - Specify the output layer. One of:
+     - Specify the output layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
          :start-after: **file_output_types**
@@ -420,7 +420,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: '' (no additional options)
@@ -487,7 +487,7 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Offset distance (left-sided: positive, right-sided: negative)**
      - ``DISTANCE``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      -
@@ -496,7 +496,7 @@ Basic parameters
      - [vector: line]
 
        Default: ``[Save to temporary file]``
-     - Specify the output line layer. One of:
+     - Specify the output line layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -516,7 +516,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: '' (no additional options)
@@ -582,7 +582,7 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Buffer distance**
      - ``DISTANCE``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      -
@@ -601,7 +601,7 @@ Basic parameters
      - ``FIELD``
      - [tablefield: any]
 
-       Default: None
+       Default: Not set
      - Field to use for dissolving
    * - **Dissolve all results**
      - ``DISSOLVE``
@@ -623,7 +623,7 @@ Basic parameters
      - [vector: polygon]
 
        Default: ``[Save to temporary file]``
-     - Specify the output buffer layer. One of:
+     - Specify the output buffer layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -643,7 +643,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: '' (no additional options)
@@ -709,9 +709,9 @@ Basic parameters
      - The name of the input layer geometry column to use
    * - **Distance from line start represented as a fraction of line length**
      - ``DISTANCE``
-     - [number]
+     - [numeric: double]
 
-       Default: 0.5 (middle of the line)
+       Default: 0.5
      -
    * - **Points along lines**
      - ``OUTPUT``
@@ -719,7 +719,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output point layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -739,7 +739,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: '' (no additional options)

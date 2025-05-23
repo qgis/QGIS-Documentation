@@ -80,7 +80,7 @@ Parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Output raster layer. One of:
+     - Output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -101,7 +101,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -119,7 +119,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -208,7 +208,7 @@ Parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -226,14 +226,14 @@ Parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
    * - **Color relief**
      - ``OUTPUT``
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Output raster layer. One of:
+     - Output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -320,14 +320,14 @@ Basic parameters
        represented by the value 0.
    * - **Maximum distance (in pixels) to search out for values to interpolate**
      - ``DISTANCE``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - The number of pixels to search in all directions to find values
        to interpolate from
    * - **Number of smoothing iterations to run after the interpolation**
      - ``ITERATIONS``
-     - [number]
+     - [numeric: integer]
 
        Default: 0
      - The number of 3x3 filter passes to run (0 or more) to smoothen
@@ -341,7 +341,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output raster layer. One of:
+     - Specification of the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -362,7 +362,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -380,7 +380,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -468,28 +468,28 @@ Basic parameters
 
    * - **The first radius of search ellipse**
      - ``RADIUS_1``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The first radius (X axis if rotation angle is 0) of
        the search ellipse
    * - **The second radius of search ellipse**
      - ``RADIUS_2``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The second radius (Y axis if rotation angle is 0)
        of the search ellipse
    * - **Angle of search ellipse rotation in degrees (counter clockwise)**
      - ``ANGLE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Angle of ellipse rotation in degrees.
        Ellipse rotated counter clockwise.
    * - **Minimum number of data points to use**
      - ``MIN_POINTS``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Minimum number of data points to average.
@@ -498,7 +498,7 @@ Basic parameters
        NoData marker.
    * - **NoData**
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - NoData marker to fill empty points
@@ -508,7 +508,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -535,7 +535,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -553,7 +553,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
    * - **Output data type**
      - ``DATA_TYPE``
@@ -625,31 +625,31 @@ Parameters
      - Input point vector layer
    * - **Weighting power**
      - ``POWER``
-     - [number]
+     - [numeric: double]
 
        Default: 2.0
      - Weighting power
    * - **Smoothing**
      - ``SMOOTHING``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Smoothing parameter
    * - **The radius of the search circle**
      - ``RADIUS``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - The radius of the search circle
    * - **Maximum number of data points to use**
      - ``MAX_POINTS``
-     - [number]
+     - [numeric: integer]
 
        Default: 12
      - Do not search for more points than this number.
    * - **Minimum number of data points to use**
      - ``MIN_POINTS``
-     - [number]
+     - [numeric: integer]
 
        Default: 0
      - Minimum number of data points to average.
@@ -658,7 +658,7 @@ Parameters
        NoData marker.
    * - **NoData**
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - NoData marker to fill empty points
@@ -668,7 +668,7 @@ Parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -695,7 +695,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -713,7 +713,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
    * - **Output data type**
      - ``DATA_TYPE``
@@ -793,46 +793,46 @@ Basic parameters
      - Input point vector layer
    * - **Weighting power**
      - ``POWER``
-     - [number]
+     - [numeric: double]
 
        Default: 2.0
      - Weighting power
    * - **Smothing**
      - ``SMOOTHING``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Smoothing parameter
    * - **The first radius of search ellipse**
      - ``RADIUS_1``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The first radius (X axis if rotation angle is 0) of
        the search ellipse
    * - **The second radius of search ellipse**
      - ``RADIUS_2``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The second radius (Y axis if rotation angle is 0)
        of the search ellipse
    * - **Angle of search ellipse rotation in degrees (counter clockwise)**
      - ``ANGLE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Angle of ellipse rotation in degrees.
        Ellipse rotated counter clockwise.
    * - **Maximum number of data points to use**
      - ``MAX_POINTS``
-     - [number]
+     - [numeric: integer]
 
        Default: 0
      - Do not search for more points than this number.
    * - **Minimum number of data points to use**
      - ``MIN_POINTS``
-     - [number]
+     - [numeric: integer]
 
        Default: 0
      - Minimum number of data points to average.
@@ -841,7 +841,7 @@ Basic parameters
        NoData marker.
    * - **NoData**
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - NoData marker to fill empty points
@@ -851,7 +851,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -878,7 +878,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -896,7 +896,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
    * - **Output data type**
      - ``DATA_TYPE``
@@ -971,7 +971,7 @@ Basic parameters
      - Input point vector layer
    * - **Search distance**
      - ``RADIUS``
-     - [number]
+     - [numeric: double]
 
        Default: -1.0
      - In case the point to be interpolated does not fit into a 
@@ -982,7 +982,7 @@ Basic parameters
        If set to ``0``, NoData value will be used.
    * - **NoData**
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - NoData marker to fill empty points
@@ -992,7 +992,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1019,7 +1019,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -1037,7 +1037,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
    * - **Output data type**
      - ``DATA_TYPE``
@@ -1118,37 +1118,37 @@ Basic parameters
      - Input point vector layer
    * - **The first radius of search ellipse**
      - ``RADIUS_1``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The first radius (X axis if rotation angle is 0) of
        the search ellipse
    * - **The second radius of search ellipse**
      - ``RADIUS_2``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The second radius (Y axis if rotation angle is 0)
        of the search ellipse
    * - **Angle of search ellipse rotation in degrees (counter clockwise)**
      - ``ANGLE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Angle of ellipse rotation in degrees.
        Ellipse rotated counter clockwise.
    * - **Minimum number of data points to use**
      - ``MIN_POINTS``
-     - [number]
+     - [numeric: integer]
 
-       Default: 0.0
+       Default: 0
      - Minimum number of data points to average.
        If less amount of points found the grid node
        considered empty and will be filled with
        NoData marker.
    * - **NoData**
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - NoData marker to fill empty points
@@ -1157,7 +1157,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1184,7 +1184,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -1202,7 +1202,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
    * - **Output data type**
      - ``DATA_TYPE``
@@ -1280,28 +1280,28 @@ Basic parameters
      - Input point vector layer
    * - **The first radius of search ellipse**
      - ``RADIUS_1``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The first radius (X axis if rotation angle is 0) of
        the search ellipse
    * - **The second radius of search ellipse**
      - ``RADIUS_2``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The second radius (Y axis if rotation angle is 0)
        of the search ellipse
    * - **Angle of search ellipse rotation in degrees (counter clockwise)**
      - ``ANGLE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Angle of ellipse rotation in degrees.
        Ellipse rotated counter clockwise.
    * - **NoData**
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - NoData marker to fill empty points
@@ -1311,7 +1311,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1338,7 +1338,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -1356,7 +1356,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
    * - **Output data type**
      - ``DATA_TYPE``
@@ -1438,20 +1438,20 @@ Basic parameters
      - Band containing the elevation information
    * - **Z factor (vertical exaggeration)**
      - ``Z_FACTOR``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - The factor exaggerates the height of the output elevation
        raster
-   * - **Scale (ratio of vert. units to horiz.)**
+   * - **Scale (ratio of vertical units to horizontal)**
      - ``SCALE``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - The ratio of vertical units to horizontal units
    * - **Azimuth of the light**
      - ``AZIMUTH``
-     - [number]
+     - [numeric: double]
 
        Default: 315.0
      - Defines the azimuth of the light shining on the elevation
@@ -1460,7 +1460,7 @@ Basic parameters
        comes from the east it is 90 a.s.o.
    * - **Altitude of the light**
      - ``ALTITUDE``
-     - [number]
+     - [numeric: double]
 
        Default: 45.0
      - Defines the altitude of the light, in degrees.
@@ -1496,7 +1496,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with interpolated values.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1517,7 +1517,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -1535,7 +1535,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -1602,7 +1602,7 @@ Basic parameters
      - Input Elevation raster layer
    * - **How far from black (white)**
      - ``NEAR``
-     - [number]
+     - [numeric: integer]
 
        Default: 15
      - Select how far from black, white or custom colors the pixel
@@ -1620,7 +1620,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1641,7 +1641,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -1659,7 +1659,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -1752,7 +1752,7 @@ Basic parameters
 
        Optional
      - ``MAX_DISTANCE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - The maximum distance to be generated.
@@ -1762,7 +1762,7 @@ Basic parameters
 
        Optional
      - ``REPLACE``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Specify a value to apply to all pixels that are within the maximum distance
@@ -1771,7 +1771,7 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      - Specify the NoData value to use for the pixels beyond the maximum distance.
@@ -1782,7 +1782,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1803,7 +1803,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -1821,7 +1821,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
    * - **Output data type**
      - ``DATA_TYPE``
@@ -1914,7 +1914,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1935,7 +1935,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -2011,7 +2011,7 @@ Basic parameters
      - Input elevation raster layer
    * - **Threshold**
      - ``THRESHOLD``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - Only raster polygons smaller than this size
@@ -2039,7 +2039,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -2063,7 +2063,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -2133,7 +2133,7 @@ Basic parameters
      - Band containing the elevation information
    * - **Ratio of vertical units to horizontal**
      - ``SCALE``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - The ratio of vertical units to horizontal units
@@ -2160,7 +2160,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -2181,7 +2181,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -2199,7 +2199,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -2279,7 +2279,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -2300,7 +2300,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -2390,7 +2390,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output raster layer. One of:
+     - Specify the output raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -2411,7 +2411,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''

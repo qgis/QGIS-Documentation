@@ -59,9 +59,9 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Clipped (extent)**
@@ -70,7 +70,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -90,7 +90,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -121,7 +121,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -207,9 +207,9 @@ Basic parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Create an output alpha band**
@@ -241,17 +241,17 @@ Basic parameters
 
        Optional
      - ``X_RESOLUTION``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - The width of the cells in the output raster
    * - **Y Resolution to output band**
 
        Optional
      - ``Y_RESOLUTION``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - The height of the cells in the output raster
    * - **Use multithreaded warping implementation**
      - ``MULTITHREADING``
@@ -267,7 +267,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -287,7 +287,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
      - [string]
 
        Default: ''
@@ -318,7 +318,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options
 
 Outputs
@@ -386,7 +386,7 @@ Basic parameters
      - Raster band to create the contours from
    * - **Interval between contour lines**
      - ``INTERVAL``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      - Defines the interval between the contour lines in the given
@@ -403,7 +403,7 @@ Basic parameters
 
        Optional
      - ``OFFSET``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      -
@@ -413,7 +413,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output vector layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -447,9 +447,9 @@ Advanced parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Additional command-line parameters**
@@ -458,7 +458,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options.
        Refer to the corresponding GDAL utility documentation.
 
@@ -525,7 +525,7 @@ Basic parameters
      - Raster band to create the contours from
    * - **Interval between contour lines**
      - ``INTERVAL``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      - Defines the interval between the contour lines in the given
@@ -534,7 +534,7 @@ Basic parameters
 
        Optional
      - ``OFFSET``
-     - [number]
+     - [numeric: double]
 
        Default: 0.0
      -
@@ -564,7 +564,7 @@ Basic parameters
 
        Default: ``[Save to temporary file]``
      - Specification of the output vector layer.
-       One of:
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -598,9 +598,9 @@ Advanced parameters
 
        Optional
      - ``NODATA``
-     - [number]
+     - [numeric: double]
 
-       Default: None
+       Default: Not set
      - Defines a value that should be inserted for the NoData
        values in the output raster
    * - **Additional command-line parameters**
@@ -609,7 +609,7 @@ Advanced parameters
      - ``EXTRA``
      - [string]
 
-       Default: None
+       Default: Not set
      - Add extra GDAL command line options.
        Refer to the corresponding GDAL utility documentation.
 

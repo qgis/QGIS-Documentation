@@ -52,6 +52,9 @@ or for :ref:`individual parameters <alg_parameter_types>`.
   is provided for the Processing execution outputs, this is the folder in which
   they will be saved. Default is :file:`processing/outputs` under the active
   :ref:`user profile <user_profiles>` directory.
+
+.. _overidden_temp_folder:
+
 * :guilabel:`Override temporary output folder path`: Temporary outputs are
   saved by default in the :file:`tmp` folder on the machine.
   This option helps you set a different place for storage.
@@ -145,17 +148,37 @@ Models and Scripts
 ==================
 
 In the |processingModel| :guilabel:`Models` and |pythonFile| :guilabel:`Scripts` blocks,
-you can set a default folder to store, and look for models and scripts respectively.
+a default path, set under the active :ref:`User profile <user_profiles>` folder,
+is provided for storing models and scripts respectively.
+As for the other options, you can modify the path, e.g., to lead to a remote or shared folder
+for all your users.
 
 Providers
 =========
 
 You will also find a block for algorithm |processingAlgorithm| :guilabel:`Providers`.
 This is the place where installed providers expose their settings.
-For example, built-in providers contain an :guilabel:`Activate` item
-that you can use to make their algorithms appear or not in the toolbox.
-Some algorithm providers have their own configuration items,
-which will be explained when covering particular algorithm providers.
+
+By default, QGIS is installed with two algorithm providers:
+
+* :guilabel:`GDAL` whose algorithms you may :guilabel:`Activate` (or not) in this dialog.
+  Read more about the :ref:`GDAL algorithms <gdal_algorithms>`.
+* :guilabel:`GRASS` whose algorithms require the installation
+  of the :guilabel:`GRASS GIS Processing Provider` from the :guilabel:`Plugins Manager`.
+  You could then set some dedicated settings such as:
+
+  * |checkbox| :guilabel:`For raster layers, use r.external (faster) instead of r.in.gdal`
+  * |checkbox| :guilabel:`For vector layers, use v.external (faster) instead of v.in.ogr`
+  * :guilabel:`Location of GRASS docs`: by default, and depending on your OS,
+    QGIS utilizes a hardcoded list of paths for finding the local GRASS documentation
+    and opening it whenever you hit the :guilabel:`Help` button of a GRASS algorithm dialog.
+    Filling this option will override the default path, allowing you to use a custom location,
+    or remote documentation.
+  * |checkbox| :guilabel:`Log console output`
+  * |checkbox| :guilabel:`Log execution commands`
+
+Installed plugins that provide Processing algorithms may also have their provider 
+listed in this group, with custom settings.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -164,6 +187,8 @@ which will be explained when covering particular algorithm providers.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |menu| image:: /static/common/menu.png
    :width: 1.5em
 .. |processingAlgorithm| image:: /static/common/processingAlgorithm.png

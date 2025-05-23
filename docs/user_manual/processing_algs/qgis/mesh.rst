@@ -47,34 +47,35 @@ Parameters
 
        Optional
      - ``INCREMENT``
-     - [number]
+     - [numeric: double]
 
-       Default: *Not set*
+       Default: Not set
      - Interval between generated levels.
    * - **Minimum contour level**
 
        Optional
      - ``MINIMUM``
-     - [number]
+     - [numeric: double]
 
-       Default: *Not set*
+       Default: Not set
      - Starting level values of contours.
+       No generated levels will be lower than this value.
    * - **Maximum contour level**
 
        Optional
      - ``MAXIMUM``
-     - [number]
+     - [numeric: double]
 
-       Default: *Not set*
+       Default: Not set
      - Maximum values of contours, i.e. no generated levels will be greater than this value.
    * - **List of contours level**
 
        Optional
      - ``CONTOUR_LEVEL_LIST``
-     - [number]
+     - [string]
 
-       Default: *Not set*
-     - List of wanted levels of contours (separated by commas).
+       Default: Not set
+     - List of desired levels of contours (separated by commas).
        If filled, the increment, minimum, and maximum fields will not be considered.
    * - **Output coordinate system**
 
@@ -88,7 +89,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output line layer representing the contours
-       of the mesh layer. One of:
+       of the mesh layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -100,7 +101,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the output polygon layer representing the contours
-       of the mesh layer. One of:
+       of the mesh layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -181,23 +182,30 @@ Parameters
      - Lines where the data will be extracted from the dataset mesh
    * - **Line segmentation resolution**
      - ``RESOLUTION``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      - The distance between points on the lines where the data
        will be extracted from the dataset mesh.
-   * - **Digits count for dataset value**
-     - ``DATASET_DIGITS``
-     - [number]
+       Units can be selected.
+   * - **Digits count for coordinates**
+     - ``COORDINATES_DIGITS``
+     - [numeric: integer]
 
        Default: 2
-     - Number of digits to round dataset values
+     - Number of digits for rounding the coordinate values
+   * - **Digits count for dataset value**
+     - ``DATASET_DIGITS``
+     - [numeric: integer]
+
+       Default: 2
+     - Number of digits for rounding the dataset values
    * - **Exported data CSV file**
      - ``OUTPUT``
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -284,7 +292,7 @@ Parameters
      - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -372,7 +380,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -461,7 +469,7 @@ Parameters
 
        Optional
      - ``GRID_SPACING``
-     - [number]
+     - [numeric: double]
 
        Default: 10.0
      - Spacing between the sample points to use
@@ -484,7 +492,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -572,7 +580,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -655,7 +663,7 @@ Parameters
 
        Optional
      - ``TIME_STEP``
-     - [number]
+     - [numeric: double]
 
        Default: 0
      - Time between two consecutive steps to extract.
@@ -667,22 +675,22 @@ Parameters
      - Vector layer containing points where the data will be extracted from the dataset mesh
    * - **Digits count for coordinates**
      - ``COORDINATES_DIGITS``
-     - [number]
-     - Number of digits to round coordinate values
+     - [numeric: integer]
+     - Number of digits for rounding coordinate values
 
        Default: 2
    * - **Digits count for dataset value**
      - ``DATASET_DIGITS``
-     - [number]
+     - [numeric: integer]
 
        Default: 2
-     - Number of digits to round dataset values
+     - Number of digits for rounding dataset values
    * - **Exported data CSV file**
      - ``OUTPUT``
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -771,7 +779,7 @@ Basic parameters
 
    * - **Pixel size**
      - ``PIXEL_SIZE``
-     - [number]
+     - [numeric: double]
 
        Default: 1.0
      - Pixel size of the output raster layer.
@@ -786,7 +794,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -807,15 +815,14 @@ Advanced parameters
    * - **Creation options**
 
        Optional
-     - ``CREATE_OPTIONS``
+     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
        Default: ''
      - For adding one or more creation options that control the
-       raster to be created (colors, block size, file
-       compression...).
-       For convenience, you can rely on predefined profiles (see
-       :ref:`GDAL driver options section <gdal_createoptions>`).
+       raster to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
 
        Batch Process and Model Designer: separate multiple options with a pipe
        character (``|``).
@@ -845,7 +852,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
 
 
 .. _qgissurfacetopolygon:
@@ -882,7 +888,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
@@ -968,6 +974,7 @@ Parameters
        * 1 --- SELAFIN
        * 2 --- PLY
        * 3 --- Ugrid
+       * 4 --- Mike21
    * - **Output coordinate system**
 
        Optional
@@ -979,7 +986,7 @@ Parameters
      - [mesh]
 
        Default: ``[Save to temporary file]``
-     - Specification of the output file. One of:
+     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**

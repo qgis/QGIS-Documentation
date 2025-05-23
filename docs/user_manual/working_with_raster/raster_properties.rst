@@ -34,17 +34,17 @@ There are several tabs in the dialog:
     - |system| :ref:`Source <raster_sourcetab>`
     - |symbology| :ref:`Symbology <raster_symbology>`:sup:`[1]`
   * - |transparency| :ref:`Transparency <raster_transparency>`:sup:`[1]`
+    - |labelingSingle| :ref:`Labels <raster_labels>`:sup:`[1]`
     - |rasterHistogram| :ref:`Histogram <raster_histogram>`:sup:`[1]`
-    - |rendering| :ref:`Rendering <raster_rendering>`
-  * - |temporal| :ref:`Temporal <raster_temporal>`
+  * - |rendering| :ref:`Rendering <raster_rendering>`
+    - |temporal| :ref:`Temporal <raster_temporal>`
     - |pyramids| :ref:`Pyramids <raster_pyramids>`
-    - |elevationscale| :ref:`Elevation <raster_elevation>`
-  * - |editMetadata| :ref:`Metadata <raster_metadata>`
+  * - |elevationscale| :ref:`Elevation <raster_elevation>`
+    - |editMetadata| :ref:`Metadata <raster_metadata>`
     - |legend| :ref:`Legend <raster_server>`
-    - |display| :ref:`Display <raster_display>`
-  * - |overlay| :ref:`QGIS Server <raster_server>`
+  * - |display| :ref:`Display <raster_display>`
+    - |overlay| :ref:`QGIS Server <raster_server>`
     - :ref:`External plugins <plugins>`:sup:`[2]` tabs
-    -
 
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
@@ -681,13 +681,80 @@ in the :guilabel:`Custom transparency options` section:
   The button |fileOpen| :sup:`Import from file` loads your transparency
   settings and applies them to the current raster layer.
 
-    .. only:: html
+  .. only:: html
 
     .. figure:: img/tolerances_for_pixel_values.gif
        :align: center
        :width: 100%
 
        Using tolerances for multiband rasters
+
+
+.. index:: Labels
+.. _raster_labels:
+
+Labels Properties
+==================
+
+The |labelingSingle| :guilabel:`Labels` properties provides you with all the needed
+and appropriate capabilities to configure smart labeling on raster layers.
+This dialog can also be accessed from the :guilabel:`Layer Styling` panel.
+
+At the top of the dialog, you have:
+
+* a combobox for selecting the appropriate labeling method for the active layer
+* the |labelingRules| :sup:`Configure project labeling rules` button:
+  helps you control interactions between labels and features across the layers in the project.
+  More details at :ref:`labeling_rules`.
+* the |autoPlacementSettings| :sup:`Automated placement settings (applies to all layers)` button:
+  configure general properties on label placement and conflicts resolution.
+  More details at :ref:`automated_placement`.
+
+
+The first step is to choose the labeling method from the drop-down list.
+Available methods are:
+
+* |labelingNone| :guilabel:`No labels`: the default value, showing no labels
+  from the layer
+* |labelingSingle| :guilabel:`Label with pixel values`: Show labels on the map using a band.
+
+Using the |labelingSingle| :guilabel:`Label with pixel values` option, the following dialog opens.
+
+
+.. _figure_raster_labels:
+
+.. figure:: img/rasterLabels.png
+   :align: center
+
+   Raster layer labeling settings
+
+At the top of the dialog:
+
+* A :guilabel:`Value` drop-down list allows you to select the band to take the values from
+* Press :guilabel:`Customize` to configure a :ref:`proper number formatting <number_formatting>`
+* By default, the displayed value represents individual pixel band value.
+  With :guilabel:`Resample over`, you can compute the  value from the neighbouring pixels
+  (setting ``2`` means ``2*2=4`` pixels) using a statistical method
+  set in the :guilabel:`Resample using` widget.
+
+  .. _figure_raster_pixelslabeled:
+
+  .. figure:: img/pixels_labeled.png
+     :align: center
+
+     Pixels labeled using various resampling options
+
+Below are displayed options to customize the labels, under various tabs:
+
+* |text| :ref:`Text <labels_text>`
+* |labelformatting| :ref:`Formatting <labels_formatting>`
+* |labelbuffer| :ref:`Buffer <labels_buffer>`
+* |labelbackground| :ref:`Background <labels_background>`
+* |labelshadow| :ref:`Shadow <labels_shadow>`
+* |labelplacement| :ref:`Placement <labels_placement>`
+* |render| :ref:`Rendering <labels_rendering>`
+
+Description of how to set each property is exposed at :ref:`showlabels`.
 
 .. index:: Histogram
 .. _raster_histogram:
@@ -1124,6 +1191,8 @@ such as:
 
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
+.. |autoPlacementSettings| image:: /static/common/mIconAutoPlacementSettings.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
@@ -1144,6 +1213,22 @@ such as:
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
+.. |labelbackground| image:: /static/common/labelbackground.png
+   :width: 1.5em
+.. |labelbuffer| image:: /static/common/labelbuffer.png
+   :width: 1.5em
+.. |labelformatting| image:: /static/common/labelformatting.png
+   :width: 1.5em
+.. |labelingNone| image:: /static/common/labelingNone.png
+   :width: 1.5em
+.. |labelingRules| image:: /static/common/mIconLabelingRules.png
+   :width: 1.5em
+.. |labelingSingle| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |labelplacement| image:: /static/common/labelplacement.png
+   :width: 1.5em
+.. |labelshadow| image:: /static/common/labelshadow.png
+   :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.2em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
@@ -1162,6 +1247,8 @@ such as:
    :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
+.. |render| image:: /static/common/render.png
+   :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
@@ -1175,6 +1262,8 @@ such as:
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |temporal| image:: /static/common/temporal.png
+   :width: 1.5em
+.. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em

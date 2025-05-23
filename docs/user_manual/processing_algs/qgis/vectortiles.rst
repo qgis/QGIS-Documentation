@@ -42,13 +42,13 @@ Parameters
 
    * - **Maximum zoom level to download**
      - ``MAX_ZOOM``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - Defines how far to zoom in and fetch data from the tiles
    * - **Tile limit**
      - ``TILE_LIMIT``
-     - [number]
+     - [numeric: integer]
 
        Default: 100
      - Maximum number of tiles to download, considering the zoom levels and the extent.
@@ -57,7 +57,7 @@ Parameters
      - [vector tiles]
 
        Default: [Save to temporary file]
-     - Specification of the output vector tile file. One of:
+     - Specification of the output vector tile file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -117,14 +117,14 @@ Parameters
      - A list of layers to combine to generate the vector tiles
    * - **Minimum zoom level**
      - ``MIN_ZOOM``
-     - [number]
+     - [numeric: integer]
 
        Default: 0
      - The lowest zoom level for which the tileset provides data.
        Set between 0 and 24.
    * - **Maximum zoom level**
      - ``MAX_ZOOM``
-     - [number]
+     - [numeric: integer]
 
        Default: 3
      - The highest zoom level for which the tileset provides data.
@@ -181,7 +181,7 @@ Parameters
      - [vector tiles]
 
        Default: [Save to temporary file]
-     - Specification of the output MBTiles file. One of:
+     - Specification of the output MBTiles file. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -244,14 +244,14 @@ Parameters
      - A list of layers to combine to generate the vector tiles
    * - **Minimum zoom level**
      - ``MIN_ZOOM``
-     - [number]
+     - [numeric: integer]
 
        Default: 0
      - The lowest zoom level for which the tileset provides data.
        Set between 0 and 24.
    * - **Maximum zoom level**
      - ``MAX_ZOOM``
-     - [number]
+     - [numeric: integer]
 
        Default: 3
      - The highest zoom level for which the tileset provides data.
@@ -270,7 +270,7 @@ Parameters
      - [folder]
 
        Default: [Save to temporary folder]
-     - Specification of the output vector tiles folder. One of:
+     - Specification of the output vector tiles folder. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **directory_output_types**

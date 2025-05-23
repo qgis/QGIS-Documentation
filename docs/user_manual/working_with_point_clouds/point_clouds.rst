@@ -476,6 +476,22 @@ identify actual holes in the data.
 
    Rendering data as a surface with map shading (left) and with map shading, filtering large triangles (right)
 
+.. _vpc_render:
+
+Virtual Point Cloud Options
+...........................
+
+The :guilabel:`Virtual Point Cloud Options` are available only when the layer is a :ref:`virtual point cloud (VPC) <virtual_point_cloud>`.
+QGIS renders the overview of the VPC when zoomed out, if an overview is present.
+This provides a seamless transition from the overview to the detailed display of individual point clouds as you zoom in.
+
+You can control how the VPC is displayed when zoomed out using the available options:
+
+* :guilabel:`Show Extents Only`: Only the extents of the underlying point clouds are displayed.
+* :guilabel:`Show Overview Only`: Only the overview is displayed (if available).
+* :guilabel:`Show Extents Over Overview`: The extents are displayed on top of the overview.
+
+You can also choose to |checkbox| :guilabel:`Show tile labels` to display the tile names and set the label format.
 
 Layer Rendering
 ...............

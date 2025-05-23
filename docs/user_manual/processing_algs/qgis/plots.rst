@@ -14,7 +14,6 @@ Bar plot
 --------
 Creates a bar plot from a category and a layer field.
 
-
 Parameters
 ..........
 
@@ -28,7 +27,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Category field name**
      - ``NAME_FIELD``
@@ -69,7 +68,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -122,7 +121,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Category name field**
      - ``NAME_FIELD``
@@ -174,7 +173,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -238,7 +237,7 @@ Basic parameters
      - The list of map layers to include in the elevation profile
    * - **Chart width (in pixels)**
      - ``WIDTH``
-     - [number]
+     - [numeric: integer]
 
        Default: 400
 
@@ -246,7 +245,7 @@ Basic parameters
      - The width of the output chart in pixels.
    * - **Chart height (in pixels)**
      - ``HEIGHT``
-     - [number]
+     - [numeric: integer]
 
        Default: 300
 
@@ -274,25 +273,25 @@ Advanced parameters
 
        Optional
      - ``MINIMUM_DISTANCE``
-     - [number]
+     - [numeric: double]
      - The minimum distance (X axis) to display on the chart. If not specified, the chart will auto-scale.
    * - **Chart maximum distance (X axis)**
 
        Optional
      - ``MAXIMUM_DISTANCE``
-     - [number]
+     - [numeric: double]
      - The maximum distance (X axis) to display on the chart. If not specified, the chart will auto-scale.
    * - **Chart minimum elevation (Y axis)**
 
        Optional
      - ``MINIMUM_ELEVATION``
-     - [number]
+     - [numeric: double]
      - The minimum elevation (Y axis) to display on the chart. If not specified, the chart will auto-scale.
    * - **Chart maximum elevation (Y axis)**
 
        Optional
      - ``MAXIMUM_ELEVATION``
-     - [number]
+     - [numeric: double]
      - The maximum elevation (Y axis) to display on the chart. If not specified, the chart will auto-scale.
    * - **Chart text color**
 
@@ -314,9 +313,9 @@ Advanced parameters
      - The color of the chart border.
    * - **Profile tolerance**
      - ``TOLERANCE``
-     - [number]
+     - [numeric: double]
 
-       Default: 5
+       Default: 5.0
 
        Minimum value: 0
      - Defines how far a feature (vector point, line, polygon, or point cloud)
@@ -324,7 +323,7 @@ Advanced parameters
        and does not affect other layer types.
    * - **Chart DPI**
      - ``DPI``
-     - [number]
+     - [numeric: integer]
 
        Default: 96
 
@@ -335,7 +334,7 @@ Advanced parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specify the image file for the plot. One of:
+     - Specify the image file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -373,7 +372,6 @@ Mean and standard deviation plot
 --------------------------------
 Creates a box plot with mean and standard deviation values.
 
-
 Parameters
 ..........
 
@@ -387,7 +385,7 @@ Parameters
      - Description
    * - **Input table**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Category name field**
      - ``NAME_FIELD``
@@ -395,14 +393,14 @@ Parameters
      - Categorical field to use for grouping the boxes (X axis)
    * - **Value field**
      - ``VALUE_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Value to use for the plot (Y axis).
    * - **Plot**
      - ``OUTPUT``
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -458,7 +456,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **Category name field**
      - ``NAME_FIELD``
@@ -466,14 +464,14 @@ Parameters
      - Categorical field to use for grouping the features (X axis)
    * - **Value field**
      - ``VALUE_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Value to use for the plot (Y axis).
    * - **Polar plot**
      - ``OUTPUT``
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -533,7 +531,7 @@ Parameters
      - Raster band to use for the histogram
    * - **number of bins**
      - ``BINS``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - The number of bins to use in the histogram (X axis).
@@ -543,7 +541,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -601,11 +599,11 @@ Parameters
      - Input vector layer
    * - **Attribute**
      - ``FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Value to use for the plot (Y axis).
    * - **number of bins**
      - ``BINS``
-     - [number]
+     - [numeric: integer]
 
        Default: 10
      - The number of bins to use in the histogram (X axis).
@@ -615,7 +613,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -668,7 +666,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **X attribute**
      - ``XFIELD``
@@ -714,14 +712,12 @@ Parameters
      - If empty, the field name of the y attribute is used.
        With a single space, the axis title is not shown.
    * - **Use logarithmic scale for x-axis**
-
      - ``XAXIS_LOG``
      - [boolean]
 
        Default: False
      - When enabled, uses logarithmic scale for the x-axis
    * - **Use logarithmic scale for y-axis**
-
      - ``YAXIS_LOG``
      - [boolean]
 
@@ -732,7 +728,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -784,7 +780,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [vector: geometry]
      - Input vector layer
    * - **X attribute**
      - ``XFIELD``
@@ -835,7 +831,7 @@ Parameters
      - [html]
 
        Default: ``[Save to temporary file]``
-     - Specify the HTML file for the plot. One of:
+     - Specify the HTML file for the plot. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
