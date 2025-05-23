@@ -2603,7 +2603,7 @@ Parameters
      - [same as input]
        
        Default: ``Create temporary layer``
-     - Specify output vector layer. One of:
+     - Specify the output vector layer. One of:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
