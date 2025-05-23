@@ -2595,7 +2595,7 @@ Parameters
      - [same as input]
        
        Default: ``Create temporary layer``
-     - Specify output vector layer. :ref:`One of <output_parameter_widget>`:
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_append**
