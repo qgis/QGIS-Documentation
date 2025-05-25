@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-15 17:10+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -455,6 +455,7 @@ msgstr "``RESAMPLING``"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:173
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:240
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:342
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:361
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:411
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:557
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:711
@@ -518,7 +519,7 @@ msgstr "6 -- Vidutinio MP (``average_mp``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:87
 msgid "7 -- Average in Mag/Phase Space (``average_magphase``)"
-msgstr "7 -- VIdutinio Mag/Phase erdvėje (``average_magphase``)"
+msgstr "7 -- Vidutinio Mag/Phase erdvėje (``average_magphase``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:88
 msgid "8 -- Mode (``mode``)"
@@ -801,8 +802,12 @@ msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:204
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:572
-msgid "Specification of the output raster layer. One of:"
-msgstr "Išvesties rastro sluoksnio specifikacija. Vienas iš:"
+msgid ""
+"Specification of the output raster layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"I6vesties rastro sluoksnio specifikacija. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
@@ -924,9 +929,86 @@ msgstr "Išvesties rastro sluoksnis"
 msgid "**Algorithm ID**: ``gdal:buildvirtualraster``"
 msgstr "**Algoritmo ID**: ``gdal:buildvirtualraster``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:298
+msgid "gdal2tiles"
+msgstr "gdal2tiles"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:300
+msgid ""
+"Generates a directory with small tiles and metadata, following the `OSGeo "
+"Tile Map Service Specification "
+"<https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_. See also the"
+" `OpenGIS Web Map Tile Service Implementation Standard "
+"<https://www.ogc.org/publications/standard/wmts>`_. Simple web pages with "
+"viewers based on Google Maps, OpenLayers and Leaflet are generated as well. "
+"To explore your maps on-line in the web browser, you only need to upload the"
+" generated directory onto a web server."
+msgstr ""
+"Kuria aplanką su mažomis kaladėlėmis ir metaduomenis pagal `OSGeo Kaladėlių "
+"Žemėlapio Paslaugos (TMS) specifikaciją "
+"<https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_. Taipogi "
+"žiūrėkite `OpenGIS Žiniatinklio žemėlapio kaladėlių paslaugos įgyvendinimo "
+"standartą <https://www.ogc.org/publications/standard/wmts>`_. Taipogi "
+"sukuriami paprasti puslapiai su žiūryklėmis, paremtomis Google Maps, "
+"OpenLayers ir Leaflet. Norėdami tyrinėti jūsų žemėlapius internete "
+"naršyklėje, jums tik reikia įkelti sukurtą aplanką į serverį."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:310
+msgid ""
+"This algorithm also creates the necessary metadata for Google Earth (KML "
+"SuperOverlay), in case the supplied map uses ``EPSG:4326`` projection."
+msgstr ""
+"Šis algoritmas taipogi sukuria reikiamus metaduomenis, skirtus Google Earth "
+"(KML SuperOverlay), jei žemėlapis naudoja projekciją ``EPSG:4326``."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:314
+msgid ""
+"ESRI world files and embedded georeferencing is used during tile generation,"
+" but you can publish a picture without proper georeferencing too."
+msgstr ""
+"ESRI pasaulio failai ir įtrauktas orientavimas naudojamas kaladėlių kūrimui,"
+" bet jūs galite publikuoti paveiksliuką ir be tinkamos orientacijos."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:318
+msgid ""
+"This algorithm is derived from the `GDAL gdal2tiles utility "
+"<https://gdal.org/en/latest/programs/gdal2tiles.html>`_."
+msgstr ""
+"Šis algoritmas kilęs iš `GDAL gdal2tiles įrankio "
+"<https://gdal.org/en/latest/programs/gdal2tiles.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:339
+msgid "GDAL-supported raster layer."
+msgstr "GDAL-palaikomas rastro sluoksnis."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:340
+msgid "**Tile cutting profile**"
+msgstr "**Kaladėlių karpymo profilis**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:341
 msgid "``PROFILE``"
 msgstr "``PROFILE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:345
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:364
+msgid "One of:"
+msgstr "Vienas iš:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:347
+msgid "0 --- Mercator (``mercator``)"
+msgstr "0 --- Merkatorius (``mercator``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:348
+msgid "1 --- Geodetic (``geodetic``)"
+msgstr "1 --- Geodezinis (``geodetic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:349
+msgid "2 --- Raster (``raster``)"
+msgstr "2 --- Rastro (``raster``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:351
+msgid "**Zoom levels to render**"
+msgstr "**Braižomų mastelių skaičius**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:354
 msgid "``ZOOM``"
@@ -949,22 +1031,126 @@ msgstr "``ZOOM``"
 msgid "Default: ''"
 msgstr "Numatytas: ''"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:359
+msgid "**Web viewer to generate**"
+msgstr "**Kurti žiniatinklio žiūryklę**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:360
 msgid "``VIEWER``"
 msgstr "``VIEWER``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:366
+msgid "0 --- All (``all``)"
+msgstr "0 --- Visas (``all``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:367
+msgid "1 --- GoogleMaps (``google``)"
+msgstr "1 --- GoogleMaps (``google``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:368
+msgid "2 --- OpenLayers (``openlayers``)"
+msgstr "2 --- OpenLayers (``openlayers``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:369
+msgid "3 --- Leaflet (``leaflet``)"
+msgstr "3 --- Leaflet (``leaflet``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:370
+msgid "4 --- None (``none``)"
+msgstr "4 --- Jokios (``none``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:372
+msgid "**Title of the map**"
+msgstr "**Žemėlapio pavadinimas**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:375
 msgid "``TITLE``"
 msgstr "``TITLE``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:380
+msgid "**Copyright of the map**"
+msgstr "**Žemėlapio autorinės teisės**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:381
 msgid "``COPYRIGHT``"
 msgstr "``COPYRIGHT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:387
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:495
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1195
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1321
+msgid "**Output directory**"
+msgstr "**Išvesties aplankas**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:389
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:497
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1197
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1323
+msgid "[folder]"
+msgstr "[aplankas]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:391
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1199
+msgid "Default: ``[Save to temporary folder]``"
+msgstr "Numatytas: ``[Įrašyti į laikiną aplanką]``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:392
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1200
+msgid ""
+"Specify the output folder for the tiles. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Įrašykite failų išvesties aplanką. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Save to a Temporary Directory"
+msgstr "Įrašyti į laikiną aplanką"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to Directory"
+msgstr "Įrašyti į aplanką"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:414
+msgid "The resampling algorithm to use. Options:"
+msgstr "Naudojamas perrinkimo algoritmas. Parinktys:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:418
+msgid "1 --- Nearest Neighbour (``near``)"
+msgstr "1 --- Artimiausio kaimyno (``near``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:419
+msgid "2 --- Bilinear (2x2 kernel) (``bilinear``)"
+msgstr "2 --- Bitiesinis (2x2 branduolio) (``bilinear``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:420
+msgid "3 --- Cubic (4x4 kernel) (``cubic``)"
+msgstr "3 --- Kubinis (4x4 branduolio) (``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:421
+msgid "4 --- Cubic B-Spline (4x4 kernel) (``cubicspline``)"
+msgstr "4 --- Kubinis B-kreivės (4x4 branduolio) (``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:422
+msgid "5 --- Lanczos (6x6 kernel) (``lanczos``)"
+msgstr "5 --- Lanczos (6x6 branduolio) (``lanczos``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:423
+msgid "6 --- Antialias (``antialias``)"
+msgstr "6 --- Antialias (``antialias``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:425
+msgid "**The spatial reference system used for the source input data**"
+msgstr "**Erdvinė atskaitos sistema, naudojama šaltinio įvesties duomenims**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:428
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1233
 msgid "``SOURCE_CRS``"
 msgstr "``SOURCE_CRS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:433
+msgid "**Transparency value to assign to the input data**"
+msgstr "**Įvesties duomenims priskiriama permatomumo reikšmė**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:436
 msgid "``NODATA``"
@@ -984,29 +1170,70 @@ msgstr "[skaičius: slankaus kablelio]"
 msgid "Default: 0.0"
 msgstr "Numatytas: 0.0"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:441
+msgid "**URL address where the generated tiles are going to be published**"
+msgstr "**URL adresas, kur bus publikuojamos sukurtos kaladėlės**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:444
 msgid "``URL``"
 msgstr "``URL``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:449
+msgid "**Google Maps API key (http://code.google.com/apis/maps/signup.html)**"
+msgstr ""
+"**Google Maps API raktas (http://code.google.com/apis/maps/signup.html)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:452
 msgid "``GOOGLE_KEY``"
 msgstr "``GOOGLE_KEY``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:456
+msgid "Your Google maps API key."
+msgstr "Jūsų Google maps API raktas."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:457
+msgid "**Bing Maps API key (https://www.bingmapsportal.com/)**"
+msgstr "**Bing Maps API raktas (https://www.bingmapsportal.com/)**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:460
 msgid "``BING_KEY``"
 msgstr "``BING_KEY``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:464
+msgid "Your Bing maps API key."
+msgstr "Jūsų Bing maps API raktas."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:465
+msgid "**Generate only missing files**"
+msgstr "**Kurti tik trūkstamus failus**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:466
 msgid "``RESUME``"
 msgstr "``RESUME``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:471
+msgid "**Generate KML for Google Earth**"
+msgstr "**Kurti Google Earth KML**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:472
 msgid "``KML``"
 msgstr "``KML``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:477
+msgid "**Avoid automatic generation of KML files for EPSG:4326**"
+msgstr "**Vengti automatinio KML kūrimo EPSG:4326**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:478
 msgid "``NO_KML``"
 msgstr "``NO_KML``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:498
+msgid "The output folder (for the tiles)"
+msgstr "Išvesties aplankas (kaladėlėms)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:503
+msgid "**Algorithm ID**: ``gdal:gdal2tiles``"
+msgstr "**Algoritmo ID**: ``gdal:gdal2tiles``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:543
 msgid "``PCT``"
@@ -1378,5 +1605,6 @@ msgid "Default: 100.0"
 msgstr "Numatytas: 100.0"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1537
-msgid "Output raster layer. One of:"
-msgstr "Išvesties rastro sluoksnis. Vienas iš:"
+msgid "Output raster layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Išvesties rastro sluoksnis. :ref:`Vienas iš <output_parameter_widget>`:"

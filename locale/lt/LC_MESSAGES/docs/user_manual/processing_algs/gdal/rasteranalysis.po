@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:45+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -501,7 +501,7 @@ msgstr "``TRIG_ANGLE``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2281
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2392
 msgid "[boolean]"
-msgstr "[boolean]"
+msgstr "[loginis]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:56
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:63
@@ -658,8 +658,9 @@ msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:83
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:236
-msgid "Output raster layer. One of:"
-msgstr "Išvesties rastro sluoksnis. Vienas iš:"
+msgid "Output raster layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Išvesties rastro sluoksnis. :ref:`Vienas iš <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -1002,6 +1003,29 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:154
+msgid "Color relief"
+msgstr "Spalvotas reljefas"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:155
+msgid ""
+"Generates a color relief map from any GDAL-supported elevation raster. Color"
+" reliefs can particularly be used to depict elevations. The Algorithm "
+"outputs a 4-band raster with values computed from the elevation and a text-"
+"based color configuration file. By default, the colors between the given "
+"elevation values are blended smoothly and the result is a nice colorized "
+"elevation raster."
+msgstr ""
+"Kuria spalvoto reljefo žemėlapį iš bet kokio GDAL-palaikomo aukščio rastro. "
+"Spalvotą reljefą galima naudoti aukščio vaizdavimui. Algoritmas sukuria 4 "
+"juostų rastrą su reikšmėmis, paskaičiuotomis iš aukščio ir tekstinio spalvų "
+"konfigūracijos failo. Pagal nutylėjimą spalvos tarp nurodytų aukščių "
+"suliejamos tolygiai, todėl gaunamas gražiai nuspalvintas aukščio rastras."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:193
+msgid "**Color configuration file**"
+msgstr "**Spalvų konfigūracijos failas**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:194
 msgid "``COLOR_TABLE``"
 msgstr "``COLOR_TABLE``"
@@ -1009,6 +1033,14 @@ msgstr "``COLOR_TABLE``"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:195
 msgid "[file]"
 msgstr "[file]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:196
+msgid "A text-based color configuration file"
+msgstr "Tekstinis spalvų konfigūracijos failas"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:197
+msgid "**Matching mode**"
+msgstr "**Atitikimo režimas**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:198
 msgid "``MATCH_MODE``"
@@ -1030,6 +1062,36 @@ msgstr "[sąrašas]"
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:201
 msgid "Default: 2"
 msgstr "Numatyta: 2"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:202
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:450
+msgid "One of:"
+msgstr "Vienas iš:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:204
+msgid "0 --- Use strict color matching"
+msgstr "0 --- Naudoti griežtą spalvos atitikimą"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:205
+msgid "1 --- Use closest RGBA quadruples"
+msgstr "1 --- Naudoti artimiausią RGBA ketvertą"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:206
+msgid "2 --- Use smoothly blended colours"
+msgstr "2 --- Naudoti tolygiai sulietas spalvas"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:231
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:254
+msgid "**Color relief**"
+msgstr "**Spalvotas reljefas**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:257
+msgid "A 4-band output raster"
+msgstr "4 juostų išvesties rastras"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:262
+msgid "**Algorithm ID**: ``gdal:colorrelief``"
+msgstr "**Algoritmo ID**: ``gdal:colorrelief``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:294
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:430
@@ -1092,8 +1154,12 @@ msgid "``MASK_LAYER``"
 msgstr "``MASK_LAYER``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:344
-msgid "Specification of the output raster layer. One of:"
-msgstr "Išvesties rastro sluoksnio specifikacija. Vienas iš:"
+msgid ""
+"Specification of the output raster layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"I6vesties rastro sluoksnio specifikacija. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:441
 #: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:622

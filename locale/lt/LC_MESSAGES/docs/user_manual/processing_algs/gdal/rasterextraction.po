@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:45+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -248,7 +248,7 @@ msgstr "``OVERCRS``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:586
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:593
 msgid "[boolean]"
-msgstr "[boolean]"
+msgstr "[loginis]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:56
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:219
@@ -362,8 +362,12 @@ msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:72
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:269
-msgid "Specification of the output raster layer. One of:"
-msgstr "Išvesties rastro sluoksnio specifikacija. Vienas iš:"
+msgid ""
+"Specification of the output raster layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"I6vesties rastro sluoksnio specifikacija. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -582,6 +586,26 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:156
+msgid "Clip raster by mask layer"
+msgstr "Apkarpyti rastrą pagal šablono sluoksnį"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:157
+msgid "Clips any GDAL-supported raster by a vector mask layer."
+msgstr "Apkerpa bet kokį GDAL palaikomą rastrą pagal vektorinį šabloną."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:159
+msgid ""
+"This algorithm is derived from the `GDAL warp utility "
+"<https://gdal.org/en/latest/programs/gdalwarp.html>`_."
+msgstr ""
+"Šis algoritmas kilęs iš `GDAL warp įrankio "
+"<https://gdal.org/en/latest/programs/gdalwarp.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:183
+msgid "**Mask layer**"
+msgstr "**Šablono sluoksnis**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:184
 msgid "``MASK``"
 msgstr "``MASK``"
@@ -592,6 +616,14 @@ msgstr "``MASK``"
 msgid "[vector: polygon]"
 msgstr "[vektorius: poligonas]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:186
+msgid "Vector mask for clipping the raster"
+msgstr "Vektorinis šablonas rastro apkirpimui"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:187
+msgid "**Source CRS**"
+msgstr "**Šaltinio CRS**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:188
 msgid "``SOURCE_CRS``"
 msgstr "``SOURCE_CRS``"
@@ -601,6 +633,10 @@ msgstr "``SOURCE_CRS``"
 msgid "[crs]"
 msgstr "[crs]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:190
+msgid "Set the coordinate reference to use for the input raster"
+msgstr "Nustato įvesties rastrui naudojamą koordinačių atskaitos sistemą"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:191
 msgid "**Target CRS**"
 msgstr "**Paskirties CRS**"
@@ -609,13 +645,42 @@ msgstr "**Paskirties CRS**"
 msgid "``TARGET_CRS``"
 msgstr "``TARGET_CRS``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:194
+msgid "Set the coordinate reference to use for the mask layer"
+msgstr "Nustato šablono sluoksniui naudojamą koordinačių atskaitos sistemą"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:195
+msgid "**Target extent**"
+msgstr "**Paskirties apimtis**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:198
 msgid "``TARGET_EXTENT``"
 msgstr "``TARGET_EXTENT``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:200
+msgid "Extent of the output file to be created"
+msgstr "Kuriamos išvesties failo apimtis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:215
+msgid "**Create an output alpha band**"
+msgstr "**Kurti išvesties alfa juostą**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:216
 msgid "``ALPHA_BAND``"
 msgstr "``ALPHA_BAND``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:220
+msgid ""
+"Creates an alpha band for the result. The alpha band then includes the "
+"transparency values of the pixels."
+msgstr ""
+"Kuria rezultate alfa juostą. Alfa juostoje tada yra pikselių permatomumo "
+"reikšmės."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:222
+msgid ""
+"**Match the extent of the clipped raster to the extent of the mask layer**"
+msgstr "**Atitikti apkirpto rastro apimtį pagal šablono sluoksnio apimtį**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:223
 msgid "``CROP_TO_CUTLINE``"
@@ -625,25 +690,88 @@ msgstr "``CROP_TO_CUTLINE``"
 msgid "Default: True"
 msgstr "Numatytas: Taip"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:227
+msgid "Applies the vector layer extent to the output raster if checked."
+msgstr "Jei įjungta, pritaiko vektorinio sluoksnio apimtį išvesties rastrui."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:228
+msgid "**Keep resolution of input raster**"
+msgstr "**Palikti įvesties rastro raišką**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:229
 msgid "``KEEP_RESOLUTION``"
 msgstr "``KEEP_RESOLUTION``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:233
+msgid "The resolution of the output raster will not be changed"
+msgstr "Išvesties rastro raiška nebus keičiama"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:234
+msgid "**Set output file resolution**"
+msgstr "**Nustatyti išvesties failo raišką**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:235
 msgid "``SET_RESOLUTION``"
 msgstr "``SET_RESOLUTION``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:239
+msgid "Shall the output resolution (cell size) be specified"
+msgstr "Ar turi būti nurodyta išvesties raiška (celės dydis)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:240
+msgid "**X Resolution to output bands**"
+msgstr "**Išvesties juostų X raiška**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:243
 msgid "``X_RESOLUTION``"
 msgstr "``X_RESOLUTION``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:247
+msgid "The width of the cells in the output raster"
+msgstr "Išvesties rastro celių plotis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:248
+msgid "**Y Resolution to output band**"
+msgstr "**Išvesties juostų Y raiška**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:251
 msgid "``Y_RESOLUTION``"
 msgstr "``Y_RESOLUTION``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:255
+msgid "The height of the cells in the output raster"
+msgstr "Išvesties rastro celių aukštis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:256
+msgid "**Use multithreaded warping implementation**"
+msgstr "**Naudoti kelių gijų lankstymo variantą**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:257
 msgid "``MULTITHREADING``"
 msgstr "``MULTITHREADING``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:261
+msgid ""
+"Two threads will be used to process chunks of image and perform input/output"
+" operation simultaneously. Note that computation is not multithreaded "
+"itself."
+msgstr ""
+"Dvi gijos bus naudojamos piešinio gabalų apdorojimui ir įvesties/išvesties "
+"veiksmams vienu metu. Pastebėtina, kad pats skaičiavimas nėra dalinamas į "
+"gijas."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:264
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:335
+msgid "**Clipped (mask)**"
+msgstr "**Apkarpytas (pagal šabloną)**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:338
+msgid "Output raster layer clipped by the vector layer"
+msgstr "Išvesties rastro sluoksnis, apkarpytas pagal vektorinį sluoksnį"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:343
+msgid "**Algorithm ID**: ``gdal:cliprasterbymasklayer``"
+msgstr "**Algoritmo ID**: ``gdal:cliprasterbymasklayer``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:381
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:520
@@ -693,11 +821,6 @@ msgstr "Numatytas: 0.0"
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:478
 msgid "[vector: line]"
 msgstr "[vektorius: linija]"
-
-#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:415
-#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:566
-msgid "Specification of the output vector layer. One of:"
-msgstr "Išvesties vektorinio sluoksnio specifikacija. Vienas iš:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:434
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:585

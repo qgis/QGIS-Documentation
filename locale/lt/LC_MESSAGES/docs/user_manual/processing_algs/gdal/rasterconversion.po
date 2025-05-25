@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:45+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -264,7 +264,7 @@ msgstr "``SKIP_NODATA``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:235
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:538
 msgid "[boolean]"
-msgstr "[boolean]"
+msgstr "[loginis]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:61
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:67
@@ -327,8 +327,10 @@ msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:75
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:155
-msgid "Specification of the output file. One of:"
-msgstr "Išvesties failo specifikacija. Vienas iš:"
+msgid ""
+"Specification of the output file. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Išvesties failo specifikacija. :ref:`Vienas iš <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -380,9 +382,61 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:111
+msgid "PCT to RGB"
+msgstr "PCT į RGB"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:112
+msgid ""
+"Converts an 8 bit paletted image to a 24 bit RGB. It will convert a "
+"pseudocolor band from the input file to an RGB file of the desired format."
+msgstr ""
+"Keičia 8 bitų paletės pietinį į 24 bitų RGB. Pakeis įvesties failo pseudo-"
+"spalvos juostą į norimo formatą RGB failą."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:116
+msgid ""
+"This algorithm is derived from the `GDAL pct2rgb utility "
+"<https://gdal.org/en/latest/programs/pct2rgb.html>`_."
+msgstr ""
+"Šis algoritmas kilęs iš `GDAL pct2rgb įrankio "
+"<https://gdal.org/en/latest/programs/pct2rgb.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:119
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:199
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:429
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:501
+msgid "**Default menu**: :menuselection:`Raster --> Conversion`"
+msgstr "**Numatytas meniu**: :menuselection:`Rastras --> Keitimas`"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:136
+msgid "Input 8 bit raster image"
+msgstr "Įvesties 8 bitų rastro pietinys"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:144
+msgid "**Generate a RGBA file**"
+msgstr "**Kurti RGBA failą**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:145
 msgid "``RGBA``"
 msgstr "``RGBA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:149
+msgid "Sets whether the output file should be of type RGBA."
+msgstr "Nurodo, ar išvesties failas turėtų būti RGBA tipo."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:150
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:173
+msgid "**PCT to RGB**"
+msgstr "**PCT į RGB**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:176
+msgid "24 bit RGB raster image"
+msgstr "24 bitų RGB rastro piešinys"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:181
+msgid "**Algorithm ID**: ``gdal:pcttorgb``"
+msgstr "**Algoritmo ID**: ``gdal:pcttorgb``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:205
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:315
@@ -457,11 +511,6 @@ msgstr "``BANDS``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:611
 msgid "**Converted**"
 msgstr "**Pakeistas**"
-
-#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:341
-#: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:459
-msgid "Specification of the output raster. One of:"
-msgstr "Išvesties rastro specifikacija. Vienas iš:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:358
 #: ../../docs/user_manual/processing_algs/gdal/rasterconversion.rst:565
