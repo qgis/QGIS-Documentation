@@ -222,7 +222,7 @@ msgid ""
 "file. Using a non-file raster layer will lead to an error."
 msgstr ""
 "Įvesties rastras. Rastro sluoksnis turi būti paremtas failu, nes algoritmas "
-"naudoja kelia iki rastro failo kaip vieta kuriamam failui :file:`.wld`. "
+"naudoja kelią iki rastro failo kaip vietą kuriamam failui :file:`.wld`. "
 "Naudojant ne-failo rastro sluoksnį įvyks klaida."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:99
@@ -236,7 +236,7 @@ msgstr "``PRJ_FILE_CREATE``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:101
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:295
 msgid "[boolean]"
-msgstr "[boolean]"
+msgstr "[loginis]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:103
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:297
@@ -262,7 +262,7 @@ msgstr "``WORLD_FILE``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:120
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:125
 msgid "[file]"
-msgstr "[file]"
+msgstr "[failas]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:121
 msgid ""
@@ -292,6 +292,18 @@ msgstr ""
 msgid "**Algorithm ID**: ``gdal:extractprojection``"
 msgstr "**Algoritmo ID**: ``gdal:extractprojection``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:143
+msgid "Warp (reproject)"
+msgstr "Kraipymas (perprojektavimas)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:144
+msgid ""
+"Reprojects a raster layer into another Coordinate Reference System (CRS). "
+"The output file resolution and the resampling method can be chosen."
+msgstr ""
+"Perprojektuoja rastro sluoksnį į kitą koordinačių atskaitos sistemą (CRS). "
+"Galima parinkti išvesties failo raišką ir perrinkimo metodą."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:148
 msgid ""
 "This algorithm is derived from the `GDAL warp utility "
@@ -307,6 +319,10 @@ msgstr "Baziniai parametrai"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:169
 msgid "``INPUT``"
 msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:171
+msgid "Input raster layer to reproject"
+msgstr "Perprojektuojamas įvesties rastras"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:172
 msgid "**Source CRS**"
@@ -327,6 +343,10 @@ msgstr "Pasirinktinis"
 msgid "``SOURCE_CRS``"
 msgstr "``SOURCE_CRS``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:177
+msgid "Defines the CRS of the input raster layer"
+msgstr "Apibrėžia įvesties rastro sluoksnio CRS"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:178
 msgid "**Target CRS**"
 msgstr "**Paskirties CRS**"
@@ -334,6 +354,18 @@ msgstr "**Paskirties CRS**"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:181
 msgid "``TARGET_CRS``"
 msgstr "``TARGET_CRS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:184
+msgid "Default: ``EPSG:4326``"
+msgstr "Numatytoji: ``EPSG:4326``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:185
+msgid "The CRS of the output layer"
+msgstr "Išvesties sluoksnio CRS"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:186
+msgid "**Resampling method to use**"
+msgstr "**Naudojamas perrinkimo metodas**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:187
 msgid "``RESAMPLING``"
@@ -348,6 +380,10 @@ msgstr "[sąrašas]"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:259
 msgid "Default: 0"
 msgstr "Numatytas: 0"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:191
+msgid "Pixel value resampling method to use. Options:"
+msgstr "Naudojamas pikselių reikšmių perrinkimo metodas. Parinktys:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:6
 msgid "0 --- Nearest Neighbour"
@@ -397,6 +433,10 @@ msgstr "10 --- Pirmas kvartilis (Q1)"
 msgid "11 --- Third quartile (Q3)"
 msgstr "11 --- Trečias kvartilis (Q3)"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:198
+msgid "**NoData value for output bands**"
+msgstr "**NėraDuomenų reikšmė išvesties juostose**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:201
 msgid "``NODATA``"
 msgstr "``NODATA``"
@@ -412,9 +452,30 @@ msgstr "[skaičius: slankaus kablelio]"
 msgid "Default: Not set"
 msgstr "Numatytas: jokio"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:205
+msgid ""
+"Sets NoData value for output bands. If not provided, then NoData values will"
+" be copied from the source dataset."
+msgstr ""
+"Nustato išvesties juostų NėraDuomenų reikšmę. Nenurodžius, NėraDuomenų "
+"reikšmės bus kopijuojamos iš šaltinio duomenų aibės."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:208
+msgid "**Output file resolution in target georeferenced units**"
+msgstr "**Išvesties failo raiška paskirties geoorientuotais vienetais**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:211
 msgid "``TARGET_RESOLUTION``"
 msgstr "``TARGET_RESOLUTION``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:215
+msgid "Defines the output file resolution of reprojection result"
+msgstr "Apibrėžia perprojektavimo rezultato išvesties failo raišką"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:216
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:321
+msgid "**Reprojected**"
+msgstr "**Perprojektuota**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:220
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:325
@@ -486,6 +547,10 @@ msgstr "**Išvesties duomenų tipas**"
 msgid "``DATA_TYPE``"
 msgstr "``DATA_TYPE``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:260
+msgid "Defines the format of the output raster file. Options:"
+msgstr "Apibrėžia išvesties rastro failo formatą. Parinktys:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid "0 --- Use Input Layer Data Type"
 msgstr "0 --- Naudoti įvesties sluoksnio duomenų tipa"
@@ -556,6 +621,10 @@ msgstr ""
 "Galimi variantai priklauso nuo GDAL versijos, su kuria sukurtas QGIS "
 "(žiūrėkite meniu :menuselection:`Pagalba --> Apie`)"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:267
+msgid "**Georeferenced extents of output file to be created**"
+msgstr "**Kuriamo išvesties failo geoorientota apimtis**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:270
 msgid "``TARGET_EXTENT``"
 msgstr "``TARGET_EXTENT``"
@@ -563,6 +632,16 @@ msgstr "``TARGET_EXTENT``"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:271
 msgid "[extent]"
 msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:272
+msgid ""
+"Sets the georeferenced extent of the output file to be created (in the "
+":guilabel:`Target CRS` by default. In the :guilabel:`CRS of the target "
+"raster extent`, if specified)."
+msgstr ""
+"Nustato kuriamo išvesties failo geoorientotą apimtį (pagal nutylėjimą "
+"naudojant :guilabel:`Paskirties CRS`. Jei nurodyta, naudojant "
+":guilabel:`paskirties rastro apimties CRS`)."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -607,9 +686,27 @@ msgstr ""
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:281
+msgid "**CRS of the target raster extent**"
+msgstr "**Paskirties rastro apimties CRS**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:284
 msgid "``TARGET_EXTENT_CRS``"
 msgstr "``TARGET_EXTENT_CRS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:286
+msgid ""
+"Specifies the CRS in which to interpret the coordinates given for the extent"
+" of the output file. This must not be confused with the target CRS of the "
+"output dataset. It is instead a convenience e.g. when knowing the output "
+"coordinates in a geodetic long/lat CRS, but wanting a result in a projected "
+"coordinate system."
+msgstr ""
+"Nurodo CRS, kurioje reikia interpretuoti koordinates, nurodytas išvesties "
+"failo apimtyje. Nereikia šito painioti su išvesties duomenų aibės paskirties"
+" CRS. Vietoje to, tai yra patogus, pavyzdžiui kai išvesties koordinatės "
+"žinomos geografinėje ilgumos/platumos CRS, o rezultato norima projektuotoje "
+"koordinačių sistemoje."
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:293
 msgid "**Use multithreaded warping implementation**"
@@ -619,6 +716,16 @@ msgstr "**Naudoti kelių gijų lankstymo variantą**"
 msgid "``MULTITHREADING``"
 msgstr "``MULTITHREADING``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:298
+msgid ""
+"Two threads will be used to process chunks of the image and perform "
+"input/output operations simultaneously. Note that the computation itself is "
+"not multithreaded."
+msgstr ""
+"Dvi gijos bus naudojamos piešinio gabalų apdorojimui ir įvesties/išvesties "
+"veiksmams vienu metu. Pastebėtina, kad pats skaičiavimas nėra dalinamas į "
+"gijas."
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:301
 msgid "**Additional command-line parameters**"
 msgstr "**Papildomi komandinės eilutės parametrai**"
@@ -626,3 +733,15 @@ msgstr "**Papildomi komandinės eilutės parametrai**"
 #: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:304
 msgid "``EXTRA``"
 msgstr "``EXTRA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:308
+msgid "Add extra GDAL command line options."
+msgstr "Pridėti papildomas GDAL komandinės eilutės parinktis."
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:326
+msgid "Reprojected output raster layer"
+msgstr "Perprojektuoti išvesties rastro sluoksnį"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterprojections.rst:331
+msgid "**Algorithm ID**: ``gdal:warpreproject``"
+msgstr "**Algoritmo ID**: ``gdal:warpreproject``"
