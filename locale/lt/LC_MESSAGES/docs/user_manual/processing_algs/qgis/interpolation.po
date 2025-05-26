@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:18+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -167,7 +167,7 @@ msgid ""
 msgstr ""
 "Intensyvumo žemėlapio paieškos spindulys (ar branduolio pralaidumas) "
 "žemėlapio vienetais. Spindulys nurodo atstumą aplinką tašką, kuriuo bus "
-"juntama taško įtaką. Didesnės reikšmės reikš didesnį glotninimą, o mažesnės "
+"juntama taško įtaka. Didesnės reikšmės reikš didesnį glotninimą, o mažesnės "
 "reikšmės rodys mažesnes taškų tankumo detales."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:49
@@ -208,14 +208,14 @@ msgid ""
 "number of columns, and the cell size will be halved. The extent of the "
 "output raster will remain the same (approximately)."
 msgstr ""
-"Naudotojo sąsajoje dydį galima nurodyti skaičių eilučių (``Eilučių "
-"skaičius``) / stulpelių (``Stulpelių skaičius``) **ar** pikselio dydį( "
+"Naudotojo sąsajoje dydį galima nurodyti kaip skaičių eilučių (``Eilučių "
+"skaičius``) / stulpelių (``Stulpelių skaičius``) **ar** pikselio dydį ( "
 "``Pikselio dydis X`` / ``Pikselio dydis Y``). Didinat eilučių ar stulpelių "
-"skaičių mažės celės dydis ir didės išvesties rastro failo dydis. Atitinkamai"
-" bus keičiamos reikšmės ``Eilutės``, ``Stulpeliai``, ``Pikselio dydis X`` ir"
-" ``Pikselio dydis Y` - dvigubinant eilučių skaičių dvigubės ir stulpeliai, o"
-" celės dydis bus padalintas per pusę. Išvesties rastro apimtis liks tokia "
-"pati (daugmaž)."
+"skaičių, mažės celės dydis ir didės išvesties rastro failo dydis. "
+"Atitinkamai bus keičiamos reikšmės ``Eilutės``, ``Stulpeliai``, ``Pikselio "
+"dydis X`` ir ``Pikselio dydis Y` - dvigubinant eilučių skaičių dvigubės ir "
+"stulpeliai, o celės dydis bus padalintas per pusę. Išvesties rastro apimtis "
+"liks tokia pati (daugmaž)."
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:67
 msgid "**Radius from field**"
@@ -433,10 +433,12 @@ msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:145
-msgid "Specify the output raster layer with kernel density values. One of:"
+msgid ""
+"Specify the output raster layer with kernel density values. :ref:`One of "
+"<output_parameter_widget>`:"
 msgstr ""
-"Nurodykite išvesties rastro sluoksnį su branduolio tankio reikšmėmis. Viena "
-"iš:"
+"Nurodykite išvesties rastro sluoksnį su branduolio tankio reikšmėmis. "
+":ref:`Vienas iš <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -616,6 +618,50 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:254
+msgid "IDW Interpolation"
+msgstr "Atvirkštinio atstumo svorio (IDW) interpoliacija"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:255
+msgid ""
+"Generates an Inverse Distance Weighted (IDW) interpolation of a point vector"
+" layer."
+msgstr ""
+"Kuria vektorinio taškų sluoksnio atvirkštinio atstumo svorio (IDW) "
+"interpoliaciją."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:258
+msgid ""
+"Sample points are weighted during interpolation such that the influence of "
+"one point relative to another declines with distance from the unknown point "
+"you want to create."
+msgstr ""
+"Pavyzdiniams taškams svoris priskiriamas taip interpoliuojant, kad vieno "
+"taško įtaką kitam mažėja su atstumu nuo nežinomo taško, kurį norite sukurti."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:262
+msgid ""
+"The IDW interpolation method also has some disadvantages: the quality of the"
+" interpolation result can decrease, if the distribution of sample data "
+"points is uneven."
+msgstr ""
+"IDW interpoliacijos būdas taipogi turi kelis trūkumus: interpoliacijos "
+"rezultato kokybė gali kristi, jei turimų taškų duomenų pasiskirstymas yra "
+"netolygus."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:266
+msgid ""
+"Furthermore, maximum and minimum values in the interpolated surface can only"
+" occur at sample data points."
+msgstr ""
+"Taipogi, maksimalios ir minimalios reikšmės interpoliuotame paviršiuje galis"
+" pasirodyti tik pradinių taškų vietose."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:282
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:535
+msgid "**Input layer(s)**"
+msgstr "**Įvesties sluoksnis(iai)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:283
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:536
 msgid "``INTERPOLATION_DATA``"
@@ -627,10 +673,83 @@ msgstr "``INTERPOLATION_DATA``"
 msgid "[string]"
 msgstr "[string]"
 
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:285
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:538
+msgid ""
+"Vector layer(s) and field(s) to use for the interpolation, coded in a string"
+" (see the ``ParameterInterpolationData`` class in "
+":source:`InterpolationWidgets "
+"<python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>` for more "
+"details)."
+msgstr ""
+"Vektorinis sluoksnis(iai) ir laukas(ai), kuriuos reikia naudoti "
+"interpoliacijai, užkoduoti į tekstą (daugiau informacijos rasite klasės "
+"``ParameterInterpolationData`` šaltinyje :source:`InterpolationWidgets "
+"<python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`)."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:290
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:543
+msgid ""
+"The following GUI elements are provided to compose the interpolation data "
+"string:"
+msgstr "Šie GUI elementai teikiami interpoliacijos duomenų tekstui kurti:"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:293
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:546
+msgid "**Vector layer** [vector: any]"
+msgstr "**Vektorinis sluoksnis** [vektorius: bet koks]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:294
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:547
+msgid ""
+"**Interpolation attribute** [tablefield: numeric]: Attribute to use in the "
+"interpolation"
+msgstr ""
+"**Interpoliacijos atributas** [lentelės laukas: skaitinis]: Interpoliacijai "
+"naudojamas atributas"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:296
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:549
+msgid ""
+"**Use Z-coordinate for interpolation** [boolean]: Uses the layer's stored Z "
+"values (Default: False)"
+msgstr ""
+"**Interpoliacijai naudoti Z-koordinatę** [loginis]: Naudoja sluoksnyje "
+"įrašytas Z reikšmes (Numatyta: False)"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:299
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:552
+msgid "For each of the added layer-field combinations, a type can be chosen:"
+msgstr ""
+"Kiekvienai pridėtai sluoksnio-lauko kombinacijai, galima pasirinkti tipą:"
+
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:302
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:555
 msgid ":guilabel:`Points`"
 msgstr ":guilabel:`Taškai`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:303
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:556
+msgid ":guilabel:`Structured lines`"
+msgstr ":guilabel:`Struktūrinės linijos`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:304
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:557
+msgid ":guilabel:`Break lines`"
+msgstr ":guilabel:`Lūžio linijos`"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:306
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:559
+msgid ""
+"In the string, the layer-field elements are separated by ``'::|::'``. The "
+"sub-elements of the layer-field elements are separated by ``'::~::'``."
+msgstr ""
+"Sluoksnio-laiko elementai tekste atskiriami ``'::|::'``. Sluoksnio-lauko "
+"sub-elementai atskiriami ``'::~::'``."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:310
+msgid "**Distance coefficient P**"
+msgstr "**Atstumo koeficientas P**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:311
 msgid "``DISTANCE_COEFFICIENT``"
@@ -639,6 +758,19 @@ msgstr "``DISTANCE_COEFFICIENT``"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:314
 msgid "Default: 2.0"
 msgstr "Numatyta: 2.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:315
+msgid ""
+"Sets the distance coefficient for the interpolation. Minimum: 0.0, maximum: "
+"100.0."
+msgstr ""
+"Nustato interpoliacijos atstumo koeficientą. Minimalus: 0.0, maksimalus: "
+"100.0."
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:317
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:573
+msgid "**Extent (xmin, xmax, ymin, ymax)**"
+msgstr "**Apimtis (xmin, xmax, ymin, ymax)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:318
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:574
@@ -649,6 +781,11 @@ msgstr "``EXTENT``"
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:575
 msgid "[extent]"
 msgstr "[apimtis]"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:320
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:576
+msgid "Extent of the output raster layer."
+msgstr "Išvesties rastro sluoksnio apimtis."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Available methods are:"
@@ -692,6 +829,29 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/algs_include.rst:11
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:344
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:368
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:599
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:633
+msgid "**Interpolated**"
+msgstr "**Interpoliuotas**"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:349
+msgid ""
+"Raster layer of interpolated values. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Rastro sluoksnis su interpoliuotomis reikšmėmis. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:371
+msgid "Raster layer of interpolated values"
+msgstr "Interpoliuotų reikšmių rastro sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:376
+msgid "**Algorithm ID**: ``qgis:idwinterpolation``"
+msgstr "**Algoritmo ID**: ``qgis:idwinterpolation``"
 
 #: ../../docs/user_manual/processing_algs/qgis/interpolation.rst:405
 msgid "Basic parameters"

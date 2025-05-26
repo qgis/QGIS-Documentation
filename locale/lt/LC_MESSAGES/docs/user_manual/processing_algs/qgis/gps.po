@@ -35,6 +35,22 @@ msgstr ""
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
 
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:4
+msgid "GPS"
+msgstr "GPS"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:15
+msgid "Convert GPS data"
+msgstr "Keisti GPS duomenis"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:17
+msgid ""
+"Uses the `GPSBabel tool <https://www.gpsbabel.org/index.html>`_ to convert a"
+" GPS data file from a range of formats to the GPX standard format."
+msgstr ""
+"Naudoja `GPSBabel įrankį <https://www.gpsbabel.org/index.html>`_ įvairių GPS"
+" duomenų failų keitimui į GPX standarto formatą."
+
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:21
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:99
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:173
@@ -98,7 +114,16 @@ msgstr "``INPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:112
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:267
 msgid "[file]"
-msgstr "[file]"
+msgstr "[failas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:35
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:113
+msgid "File containing the data to convert"
+msgstr "Failas su keičiamais duomenimis"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:36
+msgid "**Format**"
+msgstr "**Formatas**"
 
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:37
 msgid "``FORMAT``"
@@ -116,6 +141,20 @@ msgstr "``FORMAT``"
 msgid "[enumeration]"
 msgstr "[sąrašas]"
 
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:39
+msgid ""
+"Format of the file to convert, from `this list "
+"<https://www.gpsbabel.org/capabilities.html>`_."
+msgstr ""
+"Keičiamo failo formatas, iš `šio sąrašo "
+"<https://www.gpsbabel.org/capabilities.html>`_."
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:196
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:281
+msgid "**Feature type**"
+msgstr "**Geoobjektų tipas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:42
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:197
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:282
@@ -128,6 +167,29 @@ msgstr "``FEATURE_TYPE``"
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:285
 msgid "Default: 0"
 msgstr "Numatytas: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:201
+msgid "The type of data to convert"
+msgstr "Keičiamų duomenų tipas"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:203
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:288
+msgid "0 --- Waypoints"
+msgstr "0 --- Kelio taškai"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:204
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:289
+msgid "1 --- Routes"
+msgstr "1 --- Maršrutai"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:205
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:290
+msgid "2 --- Tracks"
+msgstr "2 --- Pėdsakai"
 
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:52
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:126
@@ -157,6 +219,14 @@ msgstr "[vector: any]"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:57
+msgid ""
+"Specification of the output GPX file. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Išvesties GPX failio specifikacija. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Įrašyti į laikiną failą"
@@ -182,12 +252,21 @@ msgstr "**Išvesties sluoksnis**"
 msgid "``OUTPUT_LAYER``"
 msgstr "``OUTPUT_LAYER``"
 
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:78
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:233
+msgid "Output layer with data in GPX standard format"
+msgstr "Išvesties sluoksnis su GPX standarto formato duomenimis"
+
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:81
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:155
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:236
 #: ../../docs/user_manual/processing_algs/qgis/gps.rst:298
 msgid "Python code"
 msgstr "Pythono kodas"
+
+#: ../../docs/user_manual/processing_algs/qgis/gps.rst:83
+msgid "**Algorithm ID**: ``native:convertgpsdata``"
+msgstr "**Algoritmo ID**: ``native:convertgpsdata``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
