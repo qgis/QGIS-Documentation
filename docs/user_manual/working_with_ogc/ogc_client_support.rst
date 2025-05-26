@@ -769,6 +769,8 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
 
    * Indicate the WFS version of the server.
      If unknown, press the :guilabel:`Detect` button to automatically retrieve it.
+   * Select the :guilabel:`Preferred HTTP method` to use for requests.
+     The default is :guilabel:`GET`, but you can also select :guilabel:`POST`.
    * Define the :guilabel:`maximum number of features` retrieved in a single GetFetFeature request.
      If empty, no limit is set.
    * And depending on the WFS version, indicate whether to:
