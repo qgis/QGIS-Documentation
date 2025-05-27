@@ -231,6 +231,16 @@ msgstr ""
 msgid "Alternative 1: Use the ``Edit on GitHub`` shortcut"
 msgstr "Alternative 1: Utiliser le lien ``Edit on GitHub``"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:92
+msgid ""
+"Pages on the QGIS documentation website can be edited quickly and easily by "
+"clicking on the ``Edit on GitHub`` link at the top right of each page, or in"
+" the drop-down menu at the bottom of the left sidebar."
+msgstr ""
+"Chaque page de la documentation QGIS peut être modifiée rapidement et "
+"facilement en cliquant sur le lien ``Editer sur GitHub`` en haut à droite de"
+" celle-ci, ou via le menu déroulant en bas à gauche."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:96
 msgid ""
 "This will open the file in the ``qgis:master`` branch with a message at the "
@@ -253,6 +263,44 @@ msgstr ""
 "devrez peut-être vous baser sur les :ref:`Recommandations pour la "
 "documentation <QGIS-documentation-guidelines>`."
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:104
+#: ../../docs/documentation_guidelines/first_contribution.rst:177
+msgid ""
+"Once you have finished modifying the file, press :guilabel:`Commit "
+"changes...` and add a short title explaining your changes. You can also "
+"provide a more detailed explanation, if necessary."
+msgstr ""
+"Une fois les modifications terminées sur le fichier, appuyez sur "
+":guilabel:`Commit changes...` et ajoutez un titre court expliquant l'objet "
+"des modifications. Vous pouvez également fournir dans l'encart en dessous "
+"une explication plus détaillée, lorsque nécessaire."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:107
+msgid ""
+"Press :guilabel:`Propose changes`, saving the modifications to your "
+"repository. This will generate a dedicated `branch "
+"<https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/proposing-changes-to-your-work-with-pull-requests/about-branches>`_"
+" (``patch-xxx``) in your repository and the web browser will open the "
+":guilabel:`Comparing changes` page."
+msgstr ""
+"Appuyez sur :guilabel:`Propose changes` afin de sauvegarder vos "
+"modifications. Cela va générer une nouvelle `branche "
+"<https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/proposing-changes-to-your-work-with-pull-requests/about-branches>`_"
+" (``patch-xxx``) dans votre dépôt et le navigateur ouvrira la page "
+":guilabel:`Comparing changes`."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:113
+msgid ""
+"If the issue you are addressing does not need any further changes, jump to "
+"the :ref:`Share your changes via Pull Request <sharing_changes>` section "
+"below."
+msgstr ""
+"Si le problème que vous tentez de résoudre ne requiert pas d'autres "
+"modifications, vous pouvez passer à la section :ref:`Partager vos "
+"modifications via Pull Request <sharing_changes>` ci-dessous."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:115
 msgid ""
 "If there are additional changes that you want to make before submitting them"
@@ -269,9 +317,27 @@ msgstr ""
 "Accédez à votre fork de documentation QGIS "
 "(``https://github.com/<YourName>/QGIS-Documentation``)"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:119
+msgid "Click on |githubBranch| and search for the new ``patch-xxx`` branch."
+msgstr ""
+"Appuyez sur |githubBranch| et cherchez la nouvelle branche ``patch-xxx``."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:665
 msgid "githubBranch"
 msgstr "githubBranch"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:120
+msgid ""
+"Select it. The |githubBranch| button will now display :guilabel:`Branch: "
+"patch-xxx`."
+msgstr ""
+"Sélectionnez-la. Le bouton |githubBranch| affiche désormais "
+":guilabel:`Branch: patch-xxx`."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:121
+msgid "Jump down to the :ref:`Modify files <modify_files>` section below."
+msgstr ""
+"Passez à la section :ref:`Modifier des fichiers <modify_files>` ci-dessous."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:124
 msgid ""
@@ -284,6 +350,15 @@ msgid "You can edit files directly from your fork of the QGIS Documentation."
 msgstr ""
 "Vous pouvez modifier des fichiers directement à partir de votre fork de la "
 "documentation QGIS."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:128
+msgid ""
+"First, make sure that your ``master`` branch is up to date with upstream, "
+"i.e. ``qgis/QGIS-Documentation:master`` branch. To do so:"
+msgstr ""
+"D'abord, assurez-vous que la branche ``master`` est à jour avec son "
+"homologue dans le dépôt original (aussi dénommé upstream), c'est-à-dire avec"
+" ``qgis:master``. Pour cela :"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:132
 msgid ""
@@ -311,6 +386,67 @@ msgstr ""
 #: ../../docs/documentation_guidelines/first_contribution.rst:139
 msgid "If it only has commits behind:"
 msgstr "Si votre branche a des commits de retard :"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:141
+msgid "Expand the :guilabel:`Sync fork` drop-down menu on the right. You can:"
+msgstr ""
+"Dépliez le menu déroulant :guilabel:`Sync Fork` sur la droite. Vous pouvez :"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:143
+msgid ""
+":guilabel:`Compare` the branches and see new changes in the upstream branch "
+"you do not yet have in yours"
+msgstr ""
+":guilabel:`Compare` : comparer les deux branches et voir les nouvelles "
+"modifications apportées à la branche dans le dépôt upstream que vous n'avez "
+"pas encore dans la vôtre."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:145
+msgid ""
+":guilabel:`Fetch and merge`: brings changes from the upstream branch into "
+"yours."
+msgstr ""
+":guilabel:`Fetch and merge` : copie les modifications présentes dans la "
+"branche distante vers la vôtre."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:146
+msgid ""
+"Click :guilabel:`Fetch and merge`: after the process, your branch is "
+"mentioned as up to date with ``qgis/QGIS-Documentation:master``."
+msgstr ""
+"Appuyez sur :guilabel:`Fetch and merge` : à la fin du processus, votre "
+"branche est indiquée à jour avec ``qgis/QGIS-Documentation:master``."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:149
+msgid ""
+"Click on |githubBranch| in the upper left corner of your forked QGIS-"
+"Documentation repository and enter a unique name in the text field to create"
+" a new `branch <https://docs.github.com/en/pull-requests/collaborating-with-"
+"pull-requests/proposing-changes-to-your-work-with-pull-requests/about-"
+"branches>`_. It is advised that the name of the new branch relates to the "
+"problem you intend to fix. Convenient for identifying the branch later."
+msgstr ""
+"Cliquez sur |githubBranch| dans le coin supérieur gauche de votre copie de "
+"dépôt QGIS-Documentation et entrez un nom unique dans le champ de texte pour"
+" créer une nouvelle `branche <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/proposing-changes-to-your-work-"
+"with-pull-requests/about-branches>`_. Il est recommandé de nommer la "
+"nouvelle branche en lien avec le problème que vous souhaitez résoudre. "
+"Pratique pour rapidement l'identifier à l'avenir."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:154
+msgid ""
+"Press :guilabel:`Create branch <branch_name> from master`. The "
+"|githubBranch| button should now display :guilabel:`branch_name`."
+msgstr ""
+"Appuyez sur :guilabel:`Create branch <nom_branche> from master`. Le bouton "
+"|githubBranch| devrait maintenant indiquer :guilabel:`nom_branche`."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:156
+msgid "You are ready to start new changes on top of your new branch."
+msgstr ""
+"Vous êtes fin prêt.e à apporter de nouvelles modifications à votre nouvelle "
+"branche."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:158
 msgid ""
@@ -341,17 +477,126 @@ msgstr ""
 msgid "Modify files"
 msgstr "Modifier des fichiers"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:172
+msgid ""
+"Make sure the branch you want to modify is active: its name is displayed in "
+"the top left menu or in the page URL."
+msgstr ""
+"Assurez-vous que la branche à modifier est active, c'est-à-dire que son nom "
+"est affiché dans le menu en haut à gauche, ou dans l'URL de la page."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:174
+msgid "Browse the source files to the file that needs modifications."
+msgstr "Parcourez les fichiers source jusqu'au fichier à modifier."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:175
+msgid "Press the |githubEditPencil| :sup:`Edit this file` button."
+msgstr "Appuyez sur le bouton |githubEditPencil| :sup:`Edit this file`."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:669
 msgid "githubEditPencil"
 msgstr "githubEditPencil"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:176
+msgid ""
+"Update the text following the :ref:`writing guidelines <QGIS-documentation-"
+"guidelines>`"
+msgstr ""
+"Procédez à vos modifications en suivant les :ref:`règles d'écriture <QGIS-"
+"documentation-guidelines>`."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:180
+msgid ""
+"Make sure :guilabel:`Commit directly to the <branch_name> branch` is "
+"selected."
+msgstr ""
+"Assurez-vous que l'option :guilabel:`Commit directly to the <nom_branche> "
+"branch` est sélectionnée."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:181
+msgid ""
+"Press :guilabel:`Commit changes` to save your modifications in the branch."
+msgstr ""
+"Appuyez sur :guilabel:`Commit changes` afin de sauvegarder vos modifications"
+" dans la branche."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:182
+msgid "To update or add a new image file:"
+msgstr "Pour mettre à jour ou ajouter une image :"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:184
+msgid "Browse your branch to the folder of the file to update or add."
+msgstr ""
+"Parcourez votre branche jusqu'au dossier du fichier à mettre à jour ou "
+"ajouter."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:185
+msgid ""
+"Top right, use the :menuselection:`Add files --> Upload files` menu to "
+"select and load files from your drive. You can find hints for formatting an "
+"image for the docs at :ref:`managing_screenshots`."
+msgstr ""
+"En haut à droite, utilisez le menu :menuselection:`Add files --> Upload "
+"files` pour sélectionner et charger le ou les fichiers depuis votre disque "
+"dur. Pour ce qui est du formatage du fichier image à utiliser, vous "
+"trouverez des conseils dans la documentation à :ref:`managing_screenshots`."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:188
+msgid "If a file of the same name already exists, it gets overwritten."
+msgstr "Si un fichier de même nom existe déjà, il sera écrasé."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:189
+msgid "Commit once again your changes to the target branch."
+msgstr "Validez une fois encore vos modifications dans la branche cible."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:191
+msgid ""
+"Repeat the previous steps for any other files that need to be updated to fix"
+" the issue."
+msgstr ""
+"Répétez les étapes précédentes pour tout autre fichier qui doit être mis à "
+"jour pour résoudre le problème."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:196
 msgid "Share your changes via Pull Request"
 msgstr "Partagez vos modifications via les demandes d'amelioration"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:198
+msgid ""
+"You need to make a `pull request <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/proposing-changes-to-your-work-"
+"with-pull-requests/about-pull-requests>`_ to integrate your changes into the"
+" official documentation."
+msgstr ""
+"Vous devrez créer une `pull request <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/proposing-changes-to-your-work-"
+"with-pull-requests/about-pull-requests>`_ afin d'intégrer vos modifications "
+"dans la documentation officielle."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:202
 msgid "Start a new pull request"
 msgstr "Démarrer une nouvelle demande d'amélioration"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:204
+msgid ""
+"If you used the ``Edit on GitHub`` link, after you commit your changes, "
+"GitHub automatically opens a new page comparing the changes you made in your"
+" ``patch-xxx`` branch to the ``qgis/QGIS-Documentation:master`` branch."
+msgstr ""
+"Si vous avez utilisé le lien ``Éditer sur GitHub`` link, en validant vos "
+"modifications, GitHub ouvrira automatiquement une nouvelle page comparant "
+"les modifications que vous avez apportées dans votre branche ``patch-xxx`` à"
+" la branche principale ``qgis/QGIS-Documentation:master``."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:207
+msgid ""
+"In all the cases, the comparing changes page can be reached by going to the "
+"\"Pull requests\" page of your repository and click on :guilabel:`New pull "
+"request`."
+msgstr ""
+"Dans tous les cas, la page de comparaison des modifications est accessible "
+"depuis la page des \"Pull requests\" de votre dépôt, en cliquant sur "
+"guilabel:`New pull request`."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:214
 msgid "Compare changes"
@@ -487,6 +732,14 @@ msgstr ""
 msgid "Describe your pull request"
 msgstr "Décrivez votre demande amélioration"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:266
+msgid ""
+"A text box will open: fill in a title and any relevant description of the "
+"changes you are proposing."
+msgstr ""
+"Une zone de texte s'ouvrira : indiquez-y un titre et tous commentaires "
+"pertinents pour comprendre les modifications que vous proposez."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:268
 msgid ""
 "If this relates to a particular `issue <https://github.com/qgis/QGIS-"
@@ -561,6 +814,16 @@ msgstr ""
 #: ../../docs/documentation_guidelines/first_contribution.rst:293
 msgid "To add comments about specific lines,"
 msgstr "Pour ajouter des commentaires sur des lignes spécifiques,"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:295
+msgid ""
+"Click on |githubFilesChanged| and find the file you want to comment on. You "
+"may have to click on :guilabel:`< >` :sup:`Display the source diff` to see "
+"the changes."
+msgstr ""
+"Cliquez sur |githubFilesChanged| et recherchez le fichier que vous souhaitez"
+" commenter. Vous devrez peut-être cliquer sur :guilabel:`< >` :sup:`Display "
+"the source diff` pour voir les changements."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:671
 msgid "githubFilesChanged"
@@ -733,6 +996,35 @@ msgstr ""
 "l'erreur. Vous devrez corriger toutes les erreurs ou avertissements signalés"
 " avant que vos modifications ne soient validées dans le référentiel "
 "``qgis/QGIS-Documentation``."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:361
+msgid ""
+"You can make modifications to your pull request until it is merged with the "
+"main repository, either to improve your request, to address requested "
+"modifications, or to fix a build error:"
+msgstr ""
+"Vous pouvez apporter des modifications à votre pull request jusqu'à ce "
+"qu'elle soit fusionnée avec le dépôt principal, soit pour améliorer votre "
+"demande, pour répondre aux modifications demandées, soit pour corriger une "
+"erreur de génération :"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:365
+msgid "Click on the |githubFilesChanged| tab in your pull request page"
+msgstr ""
+"Passez sur l'onglet |githubFilesChanged| de votre page de pull request"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:366
+msgid ""
+"Press :guilabel:`...` menu on the right of the filename that you want to "
+"modify, and select :guilabel:`Edit file`."
+msgstr ""
+"Appuyez sur le menu :guilabel:`...` à droite du nom du fichier à modifier, "
+"et sélectionnez :guilabel:`Edit file`."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:368
+msgid "The file opens in edit mode; add your modifications and commit."
+msgstr ""
+"Le fichier s'ouvre en mode édition; ajoutez vos modifications et validez/"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:370
 msgid ""
