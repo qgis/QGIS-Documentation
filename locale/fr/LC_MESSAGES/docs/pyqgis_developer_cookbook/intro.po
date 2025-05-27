@@ -254,6 +254,12 @@ msgstr ""
 msgid "Running Python code when QGIS starts"
 msgstr "Exécuter du code python quand QGIS démarre"
 
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:137
+msgid "There are different methods to run Python code every time QGIS starts."
+msgstr ""
+"Il y a différentes façons d'exécuter un programme Python chaque fois que "
+"QGIS démarre."
+
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:140
 msgid "Creating a startup.py script"
 msgstr "Créer un script startup.py"
@@ -265,9 +271,32 @@ msgid ""
 msgstr ""
 "Définir la variable d'environnement ``PYQGIS_STARTUP`` sur un fichier python"
 
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:145
+msgid ""
+"Specifying a startup script using the ``--code init_qgis.py`` parameter."
+msgstr ""
+"Spécifiez un script de démarrage à l'aide du paramètre `--code "
+"init_qgis.py``."
+
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:150
 msgid "The :file:`startup.py` file"
 msgstr "Le fichier :file:`startup.py`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:152
+msgid ""
+"Every time QGIS starts, the user's Python home directory and a list of "
+"system paths are searched for a file named :file:`startup.py`. If that file "
+"exists, it is executed by the embedded Python interpreter."
+msgstr ""
+"A chaque démarrage de QGIS, un fichier :file:`startup.py` est recherché dans"
+" le répertoire home de l'utilisateur et une liste de chemins système. S'il "
+"est trouvé, il est exécuté par l'interpréteur Python embarqué."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:156
+msgid "The path in the user's home directory usually is found under:"
+msgstr ""
+"Le chemin dans le répertoire home de l'utilisateur correspond généralement à"
+" : "
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:158
 msgid "Linux: :file:`.local/share/QGIS/QGIS3`"
@@ -280,6 +309,26 @@ msgstr "Windows: :file:`AppData\\\\Roaming\\\\QGIS\\\\QGIS3`"
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:160
 msgid "macOS: :file:`Library/Application Support/QGIS/QGIS3`"
 msgstr "macOS: :file:`Library/Application Support/QGIS/QGIS3`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:162
+msgid ""
+"The default system paths depend on the operating system. To find the paths "
+"that work for you, open the Python Console and run "
+"``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)`` to see "
+"the list of default directories."
+msgstr ""
+"Le chemin système par défaut dépend du système d'exploitation. Pour trouver "
+"le chemin qui fonctionne chez vous, ouvrez la console Python et exécutez "
+"``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)`` pour "
+"voir la liste des répertoires par défaut. "
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:167
+msgid ""
+"The ``startup.py`` script is executed immediately upon initializing python "
+"in QGIS, early on in the start of the application."
+msgstr ""
+"Le script :file:`startup.py` est exécuté immédiatement à l'initialisation de"
+" Python dans QGIS, tout au début du démarrage de l'application."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:174
 msgid "The PYQGIS_STARTUP environment variable"
@@ -307,6 +356,65 @@ msgstr ""
 "pollué par d'autres chemins, ou pour isoler ou charger un environnement "
 "initial sans recourir à un environnement virtuel, par exemple homebrew ou "
 "MacPorts sur MacOS. "
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:191
+msgid "The ``--code`` parameter"
+msgstr "Le paramètre ``--code``"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:193
+msgid ""
+"You can provide custom code to execute as startup parameter to QGIS. To do "
+"so, create a python file, for example ``qgis_init.py``, to execute and start"
+" QGIS from the command line using ``qgis --code qgis_init.py``."
+msgstr ""
+"Vous pouvez fournir du code personnalisé en paramètre de démarrage de QGIS. "
+"Pour cela, créez un fichier Python, par exemple ``qgis_init.py``, et "
+"démarrez QGIS depuis la ligne de commande en tapant ``qgis --code "
+"qgis_init.py``."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:197
+msgid ""
+"Code provided via ``--code`` is executed late in the QGIS initialization "
+"phase, after the application components have been loaded."
+msgstr ""
+"Le code fourni via le paramètre ``--code`` est exécuté tard dans la phase "
+"d'initialisation de QGIS, après le chargement des composantes de "
+"l'application."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:201
+msgid "Additional arguments for Python"
+msgstr "Arguments supplémentaires pour Python"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:203
+msgid ""
+"To provide additional arguments for your ``--code`` script or for other "
+"python code that is executed, you can use the ``--py-args`` argument. Any "
+"argument coming after ``--py-args`` and before a ``--`` arg (if present) "
+"will be passed to Python but ignored by the QGIS application itself."
+msgstr ""
+"Pour fournir des arguments supplémentaires à votre script utilisant "
+"``--code`` ou à tout autre code Python exécuté, vous pouvez utiliser "
+"l'argument ``--py-args``. Toute valeur passée entre ``--py-args`` et ``--`` "
+"(si fourni) sera transmise à Python et ignorée par l'application QGIS elle-"
+"même."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:209
+msgid ""
+"In the following example, ``myfile.tif`` will be available via ``sys.argv`` "
+"in Python but will not be loaded by QGIS. Whereas ``otherfile.tif`` will be "
+"loaded by QGIS but is not present in ``sys.argv``."
+msgstr ""
+"Dans l'exemple suivant, ``myfile.tif`` sera disponible pour Python via "
+"``sys.argv`` mais ne sera pas chargé par QGIS. Et au contraire, "
+"``otherfile.tif`` sera chargé par QGIS mais absent dans ``sys.argv``."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:218
+msgid ""
+"If you want access to every command line parameter from within Python, you "
+"can use ``QCoreApplication.arguments()``"
+msgstr ""
+"Si vous souhaitez accéder à tous les paramètres de ligne de commande depuis "
+"Python, vous pouvez utiliser ``QCoreApplication.arguments()``."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:228
 msgid "Python Applications"
