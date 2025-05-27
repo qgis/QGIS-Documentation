@@ -16,8 +16,10 @@ algorithms.
 
      3dtiles
      cartography
+     checkgeometry
      database
      filetools
+     fixgeometry
      gps
      interpolation
      layertools
