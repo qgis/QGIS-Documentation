@@ -6,8 +6,8 @@
 # 
 # Translators:
 # 11dd9edfe0fe5da46916717288863194_5d3afa8 <a57ab60a70091cd1b2320bd922f7b0aa_552359>, 2025
-# Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Harrissou Sant-anna, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-15 20:01+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Harrissou Sant-anna, 2025\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -202,6 +202,14 @@ msgstr ""
 #: ../../docs/documentation_guidelines/writing.rst:138
 msgid "**User text**"
 msgstr "**Texte utilisateur**"
+
+#: ../../docs/documentation_guidelines/writing.rst:144
+msgid "**Layer names**"
+msgstr "**Nom de couche**"
+
+#: ../../docs/documentation_guidelines/writing.rst:146
+msgid "When referring to layers, format as inline code:"
+msgstr "Lorsque vous mentionnez des couches, formatez-les comme ci-après :"
 
 #: ../../docs/documentation_guidelines/writing.rst:156
 msgid "Labels/references"
@@ -672,6 +680,28 @@ msgstr ""
 msgid "Special Comments"
 msgstr "Commentaires Spéciaux"
 
+#: ../../docs/documentation_guidelines/writing.rst:473
+msgid ""
+"Sometimes, you may want to emphasize some points of the description, either "
+"to warn, remind or give some hints to the user. In QGIS Documentation, we "
+"use reST special directives such as ``.. warning::``, ``.. seealso::``, ``.."
+" note::`` and ``.. tip::``. These directives generate frames that highlight "
+"your comments. See `Paragraph Level markup <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#paragraph-level-"
+"markup>`_ for more information. A clear and appropriate title is required "
+"for both warnings and tips."
+msgstr ""
+"Parfois, vous souhaiterez peut-être mettre l'accent sur certains points de "
+"la description, soit pour avertir, rappeler ou donner des conseils à "
+"l'utilisateur. Dans la documentation QGIS, nous utilisons des directives "
+"spéciales reST telles que ``.. warning::``, ``.. seealso::``, `​​`.. "
+"note::`` et ``.. tip::``. Ces directives génèrent des cadres qui mettent en "
+"valeur vos commentaires. Voir `Balisage de niveau de paragraphe "
+"<https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html# paragraph-level-"
+"markup>`_ pour plus d'informations. Un titre clair et approprié est requis "
+"pour les avertissements et les conseils."
+
 #: ../../docs/documentation_guidelines/writing.rst:491
 msgid "Code Snippets"
 msgstr "Extraits de code"
@@ -850,6 +880,15 @@ msgid ""
 msgstr ""
 "Voici quelques conseils supplémentaires pour ceux qui souhaitent créer des "
 "captures d'écran pour un guide d'utilisateur traduit:"
+
+#: ../../docs/documentation_guidelines/writing.rst:576
+msgid ""
+"Translated images should be placed in a :file:`img/<your_language>/` folder."
+" Use the same filename as the english 'original' screenshot."
+msgstr ""
+"Les images traduites doivent être placées dans un dossier "
+":file:`img/<your_language>/`. Utilisez le même nom de fichier que la capture"
+" d'écran «originale» en anglais."
 
 #: ../../docs/documentation_guidelines/writing.rst:581
 msgid "Documenting Processing algorithms"
@@ -1068,6 +1107,22 @@ msgstr "|polygonLayer|"
 msgid "polygonLayer"
 msgstr "polygonLayer"
 
+#: ../../docs/documentation_guidelines/writing.rst:653
+msgid "All spatial vector layers"
+msgstr "Toutes couches vectorielles spatiales"
+
+#: ../../docs/documentation_guidelines/writing.rst:653
+msgid "``vector: geometry``"
+msgstr "``vecteur: géométrie``"
+
+#: ../../docs/documentation_guidelines/writing.rst:654
+msgid "Geometryless vector layer"
+msgstr "Couche vectorielle non géométrique"
+
+#: ../../docs/documentation_guidelines/writing.rst:654
+msgid "``vector: table``"
+msgstr "``vecteur : table``"
+
 #: ../../docs/documentation_guidelines/writing.rst:654
 msgid "|tableLayer|"
 msgstr "|tableLayer|"
@@ -1229,6 +1284,14 @@ msgid "``list``"
 msgstr "``liste``"
 
 #: ../../docs/documentation_guidelines/writing.rst:668
+msgid "Integer value"
+msgstr "Valeur de type entier"
+
+#: ../../docs/documentation_guidelines/writing.rst:668
+msgid "``numeric: integer``"
+msgstr "``numérique : entier``"
+
+#: ../../docs/documentation_guidelines/writing.rst:668
 #: ../../docs/documentation_guidelines/writing.rst:669
 msgid "|selectNumber|"
 msgstr "|selectNumber|"
@@ -1236,6 +1299,14 @@ msgstr "|selectNumber|"
 #: ../../docs/documentation_guidelines/writing.rst:819
 msgid "selectNumber"
 msgstr "selectNumber"
+
+#: ../../docs/documentation_guidelines/writing.rst:669
+msgid "Decimal value"
+msgstr "Valeur décimale"
+
+#: ../../docs/documentation_guidelines/writing.rst:669
+msgid "``numeric: double``"
+msgstr "``numérique: décimal``"
 
 #: ../../docs/documentation_guidelines/writing.rst:670
 msgid "String"
@@ -1321,6 +1392,14 @@ msgstr "``definition``"
 msgid "``point``"
 msgstr "``point``"
 
+#: ../../docs/documentation_guidelines/writing.rst:679
+msgid "Map layers"
+msgstr "Couches cartographiques"
+
+#: ../../docs/documentation_guidelines/writing.rst:679
+msgid "``layer`` ``list``"
+msgstr "``couche`` ``liste``"
+
 #: ../../docs/documentation_guidelines/writing.rst:680
 msgid "Range"
 msgstr "Portée"
@@ -1376,6 +1455,14 @@ msgstr "Échelle"
 #: ../../docs/documentation_guidelines/writing.rst:686
 msgid "``scale``"
 msgstr "``scale``"
+
+#: ../../docs/documentation_guidelines/writing.rst:687
+msgid "Map theme"
+msgstr "Thème de carte"
+
+#: ../../docs/documentation_guidelines/writing.rst:687
+msgid "``map theme``"
+msgstr "``thème de carte``"
 
 #: ../../docs/documentation_guidelines/writing.rst:691
 msgid ""
