@@ -972,8 +972,22 @@ in the :guilabel:`Layer styling` panel.
       the :guilabel:`Frame` and :guilabel:`Background` colors.
 * Picture annotations allow you to display a :guilabel:`Raster image` or an :guilabel:`SVG image`,
   using the :ref:`embedded_file_selector`.
-  The placement and size of the picture can be set as :guilabel:`Scale dependent size`,
-  :guilabel:`Fixed size` or :guilabel:`Relative to map`.
+  The placement and size of the picture can be set as:
+
+  * :guilabel:`Scale dependent size`: the picture scales with the map,
+    appearing larger when zooming in and smaller when zooming out.
+    The size is defined by a single reference size in map units
+    (e.g. meters or degrees, depending on the layer’s CRS).
+    With |checkbox| :guilabel:`Lock aspect ratio`, you can keep the annotation size
+    proportional to the embedded picture size, or stretch the picture to fill the annotation extent.
+  * :guilabel:`Fixed size`: the picture annotation maintains a constant size in screen or output units
+    (e.g. pixels or millimeters), regardless of the map scale.
+    The :guilabel:`Width` and :guilabel:`Height` of the annotation can be filled separatey
+    or adjusted proportionally to the embedded picture size.
+  * :guilabel:`Relative to map`: the picture annotation will always be rendered at the same position
+    relative to the map canvas bounds, regardless of the map scale.
+    The :guilabel:`Width` and :guilabel:`Height` of the annotation can be filled separatey
+    or adjusted proportionally to the embedded picture size.
 
   Moreover, you can enable display of the :guilabel:`Frame` and :guilabel:`Background` of the rectangle box,
   and configure them using :ref:`fill symbols <vector_fill_symbols>`.
