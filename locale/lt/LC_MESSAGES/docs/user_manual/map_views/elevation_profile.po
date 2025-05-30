@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Tomas Straupis, 2025
 # Transifex Bot <>, 2025
 # Harrissou Sant-anna, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -375,6 +375,17 @@ msgstr "|fileSaveAs| :sup:`Eksportuoti rezultatus`"
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:100
+msgid ""
+"Exports plots as 3D features, 2D Profile and Distance/Elevation Table. (The "
+"results can be saved as DXF files, CSV files or any of the standard writable"
+" vector spatial formats). More details at :ref:`export_elevation_profile`."
+msgstr ""
+"Eksportuoja brėžinius kaip 3D geoobjektus, 2D profilį ir Atstumo/Aukščio "
+"lentelę. (Rezultatus galima įrašyti kaip DXF failus, CSV failus ar į bet "
+"kokį kitą standartinį įrašomą vektorinių erdvinių duomenų formatą). Daugiau "
+"informacijos rasite skyriuje :ref:`export_elevation_profile`."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:104
 msgid "|options| :sup:`Options` :menuselection:`-->`"
 msgstr "|options| :sup:`Parinktys` :menuselection:`-->`"
@@ -424,6 +435,25 @@ msgstr ""
 #: ../../docs/user_manual/map_views/elevation_profile.rst:114
 msgid ":menuselection:`--> Tolerance`"
 msgstr ":menuselection:`--> Tolerancija`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:116
+msgid ""
+"Sets how far from the actual profile line a feature (vector point, line or "
+"polygon, point cloud) can reside to be included in the results. Uses the map"
+" units and is ignored by other layer or geometry types."
+msgstr ""
+"Nustato, kiek toli nuo profilio linijos gali būti geoobjektas (vektorinis "
+"taškas, linija, poligonas, taškų masyvas), kad jis būtų įtrauktas į "
+"rezultatus. Naudoja žemėlapio vienetus ir yra ignoruojamas kitų sluoksnių ar"
+" geometrijos tipų."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:119
+msgid ":menuselection:`--> Rename Profile...`"
+msgstr ":menuselection:`--> Pervadinti profilį...`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:121
+msgid "Allows to rename the profile view."
+msgstr "Leidžia pervadinti profilio vaizdą"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:122
 msgid "|dock| :sup:`Dock Elevation Profile View`"
@@ -648,6 +678,36 @@ msgstr ""
 "braižyti aktyvių sluoksnių paviršius ar geoobjektai, kertantys profilio "
 "kreivę."
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:199
+msgid ""
+"Under |options| :sup:`Options` drop-down menu, you can set the "
+":guilabel:`Tolerance` value. This value is used to create a flat buffer "
+"around the elevation profile line, visible in the main map canvas. Any "
+"visible feature (point, line, polygon, etc.) overlapping that buffer will be"
+" captured in the plot canvas."
+msgstr ""
+"Iškrentančiame meniu |options| :sup:`Parinktys` jūs galite parinkti "
+":guilabel:`Tolerancijos` reikšmę. Ši reikšmė naudojama kuriant plokščią "
+"buferį aplink aukščio profilio liniją, matomą pagrindinėje žemėlapio "
+"drobėje. Bet kokie matomi geoobjektai (taškai, linijos, poligonai ir pan.), "
+"patenkantys į tą buferį, bus įtraukti į brėžinio drobę."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:203
+msgid "**Limitations with polygon extrusion**"
+msgstr "**Poligono išsikišimo apribojimai**"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:205
+msgid ""
+"Geometry extrusion can be set in the |elevationscale| :guilabel:`Elevation` "
+"properties of a layer, and rendered in the profile view. When tolerance is "
+"enabled, it is however not trivial to render extruded polygons, thus, for "
+"now, polygon extrusion is ignored."
+msgstr ""
+"Sluoksnio |elevationscale| :guilabel:`Aukščio` savybėse galima nurodyti "
+"geometrijos išsikišimą, ir jis braižomas profilio vaizde. Deja, įjungus "
+"toleranciją, yra netrivialu braižyti išsikišusius poligonus, todėl, kol kas,"
+" poligonų išsikišimai ignoruojami."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:333
 msgid "elevationscale"
 msgstr "elevationscale"
@@ -826,3 +886,132 @@ msgstr ""
 "Daugiau informacijos rasite `QGIS aukščio profilio/susikirtimo įrankis -- "
 "detaliau! <https://www.youtube.com/watch?v=AknJjNPystU>`_, Nyall Dawson "
 "pristatymas."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:271
+msgid "Exporting from the elevation profile"
+msgstr "Aukščio profilio eksportavimas"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:273
+msgid ""
+"The top toolbar of the :guilabel:`Elevation profile` dialog provides a "
+"variety of tools to export an elevation profile, allowing you to reuse the "
+"plots in another software:"
+msgstr ""
+":guilabel:`Aukščio profilio` dialogo savybių viršutinę įrankinė teikia aibę "
+"įrankių, suteikiančių galimybę eksportuoti aukščio profilį, tai leidžia jums"
+" panaudoti brėžinius kitoje programinėje įrangoje:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:276
+msgid ""
+"|saveAsPDF| :sup:`Export As PDF`: Exports plots to PDF (as high quality "
+"vector objects). Following options are requested for generating the output "
+"file:"
+msgstr ""
+"|saveAsPDF| :sup:`Eksportuoti kaip PDF`: Eksportuoja brėžinius kaip PDF "
+"(kaip aukštos kokybės vektorinius objektus). Prašoma šių parinkčių, "
+"išvesties failo kūrimui:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:279
+msgid ""
+"The :guilabel:`Page size`, selecting a page from a predefined list or "
+"setting custom dimensions, and the page orientation"
+msgstr ""
+":guilabel:`Puslapio dydis`, parenkate puslapį iš apibrėžto sąrašo arba "
+"nurodote savo matmenis, bei puslapio orientaciją"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:281
+msgid ""
+"The :guilabel:`Chart ranges` to control the extent of the chart to export:"
+msgstr ""
+":guilabel:`Diagramos diapazonu` valdote eksportuojamos diagramos apimtį:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:283
+msgid ""
+"on the X axis, the :guilabel:`Minimum distance` and :guilabel:`Maximum "
+"distance` from the profile curve starting point"
+msgstr ""
+"X ašyje :guilabel:`Minimalus atstumas` ir :guilabel:`Maksimalus atstumas` "
+"nuo profilio kreivės pradžios taško"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:285
+msgid ""
+"On the Y axis, the :guilabel:`Minimum elevation` and :guilabel:`Maximum "
+"elevation`"
+msgstr ""
+"Y ašyje :guilabel:`Minimalus aukštis` ir :guilabel:`Maksimalus aukštis`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:286
+msgid ""
+"The :guilabel:`Distance axis settings`: helps you configure the horizontal "
+"graduation of the grid over which the elevation profile is rendered. You can"
+" customize the :guilabel:`Label interval`, the :guilabel:`Major grid line "
+"interval` and the :guilabel:`Minor grid line interval`."
+msgstr ""
+":guilabel:`Atstumo ašies nustatymai`: padeda jums konfigūruoti horizontalią "
+"tinklelio gradaciją virš kurios braižomas aukščio profilis. Jūs galite "
+"keisti :guilabel:`Užrašų intervalą`, :guilabel:`Pagrindinio tinklelio "
+"intervalą` ir :guilabel:`Antrinio tinklelio intervalą`."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:290
+msgid ""
+"The :guilabel:`Elevation axis settings`, same as above, for vertical "
+"graduation"
+msgstr ""
+":guilabel:`Aukščio ašies nustatymai`, tas pats, kaip aukščiau, tik "
+"vertikaliam gradavimui"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:294
+msgid ""
+"|saveMapAsImage| :sup:`Export As Image`: Exports plots to an image file "
+"format. Specific :guilabel:`Export options` such as the :guilabel:`Image "
+"width` and :guilabel:`Image height` are requested, along with the "
+":guilabel:`Chart ranges`, :guilabel:`Distance axis settings` and "
+":guilabel:`Elevation axis settings` previously mentioned."
+msgstr ""
+"|saveMapAsImage| :sup:`Eksportuoti kaip piešinį`: Eksportuoja brėžinius į "
+"piešinių formato failą. Paprašoma įvesti konkrečias :guilabel:`Eksportavimo "
+"parinktis`, tokias kaip :guilabel:`Piešinio plotį` ir :guilabel:`Piešinio "
+"aukštį`, kartu su :guilabel:`Brėžinio intervalus`, :guilabel:`Atstumo ašių "
+"nustatymus` ir anksčiau minėtus :guilabel:`Aukščio ašies nustatymus`."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:299
+msgid ""
+"|fileSaveAs| :sup:`Export results`: Exports the profile results as a set of "
+"features of a vector layer (:file:`.DXF`, :file:`.CSV`, :file:`.SHP`, "
+":file:`.GPKG`, ...). Depending on the output format, multiple layers may be "
+"returned when the geometry types of exported features differ."
+msgstr ""
+"|fileSaveAs| :sup:`Eksportuoti rezultatus`: Eksportuoti profilio rezultatus "
+"kaip aibę vektorinio sluoksnio geoobjektų (:file:`.DXF`, :file:`.CSV`, "
+":file:`.SHP`, :file:`.GPKG`, ...). Priklausomai nuo išvesties formato, gali "
+"būti grąžinti keli sluoksniai, kai eksportuojamų geoobjektų geometrijų tipai"
+" skiriasi."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:304
+msgid ""
+":menuselection:`Export 3D features`: Exports profile lines as 3D features, "
+"with elevation values taken from the elevation slices and stored in exported"
+" geometry Z values."
+msgstr ""
+":menuselection:`Eksportuoti 3D geoobjektus`: Eksportuoja profilio linijas "
+"kaip 3D geoobjektus, aukščio reikšmės imamos iš aukščio pjūvių ir laikomos "
+"eksportuotų geometrijų Z reikšmėse."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:306
+msgid ""
+":menuselection:`Export 2D profile`: Exports profiles as 2D profile lines, "
+"with elevation stored in exported geometry Y dimension and distance in X "
+"dimension (as shown in the elevation profile widget)."
+msgstr ""
+":menuselection:`Eksportuoti 2D profilį`: Eksportuoja profilį kaip 2D "
+"profilio linijas, kur aukštis saugomas eksportuojamos geometrijos Y "
+"matmenyje, o atstumas - X matmenyje (kaip rodoma aukščio profilio "
+"valdiklyje)."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:309
+msgid ""
+":menuselection:`Export distance/elevation table`: Exports profiles as a "
+"table of sampled distance vs elevation values."
+msgstr ""
+":menuselection:`Eksportuoti atstumo/aukščio lentelę`: Eksportuoja profilį "
+"kaip lentelę su atstumo ir aukščio reikšmėmis."
