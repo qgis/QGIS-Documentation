@@ -229,6 +229,16 @@ msgstr ""
 msgid "Alternative 1: Use the ``Edit on GitHub`` shortcut"
 msgstr "Альтернатива 1: Используйте ярлык ``Редактировать на GitHub``"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:92
+msgid ""
+"Pages on the QGIS documentation website can be edited quickly and easily by "
+"clicking on the ``Edit on GitHub`` link at the top right of each page, or in"
+" the drop-down menu at the bottom of the left sidebar."
+msgstr ""
+"Страницы на сайте документации QGIS можно легко и быстро редактировать, "
+"нажав на ссылку ``Редактировать на GitHub`` в правом верхнем углу каждой "
+"страницы или в выпадающем меню в нижней части левой боковой панели."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:96
 msgid ""
 "This will open the file in the ``qgis:master`` branch with a message at the "
@@ -250,6 +260,43 @@ msgstr ""
 "понадобиться руководствоваться :ref:`Руководством по написанию<QGIS-"
 "documentation-guidelines>`."
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:104
+#: ../../docs/documentation_guidelines/first_contribution.rst:177
+msgid ""
+"Once you have finished modifying the file, press :guilabel:`Commit "
+"changes...` and add a short title explaining your changes. You can also "
+"provide a more detailed explanation, if necessary."
+msgstr ""
+"Закончив изменение файла, нажмите :guilabel:`Коммитировать изменения...` и "
+"добавьте короткий заголовок, объясняющий ваши изменения. При необходимости "
+"вы можете дать более подробное объяснение."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:107
+msgid ""
+"Press :guilabel:`Propose changes`, saving the modifications to your "
+"repository. This will generate a dedicated `branch "
+"<https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/proposing-changes-to-your-work-with-pull-requests/about-branches>`_"
+" (``patch-xxx``) in your repository and the web browser will open the "
+":guilabel:`Comparing changes` page."
+msgstr ""
+"Нажмите :guilabel:`Предложить изменения`, сохранив модификации в вашем "
+"репозитории. В результате в вашем репозитории будет создана выделенная ветвь"
+" <https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/proposing-changes-to-your-work-with-pull-requests/about-branches>`_"
+" (``patch-xxx``), а в веб-браузере откроется страница :guilabel:``Сравнение "
+"изменений``."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:113
+msgid ""
+"If the issue you are addressing does not need any further changes, jump to "
+"the :ref:`Share your changes via Pull Request <sharing_changes>` section "
+"below."
+msgstr ""
+"Если проблема, которую вы решаете, не нуждается в дальнейших изменениях, "
+"перейдите к разделу :ref:`Поделиться своими изменениями через Pull "
+"Request<sharing_changes>` ниже."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:115
 msgid ""
 "If there are additional changes that you want to make before submitting them"
@@ -266,9 +313,25 @@ msgstr ""
 "Перейдите к вашему форку QGIS-документации "
 "(``https://github.com/<YourName>/QGIS-Documentation``)"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:119
+msgid "Click on |githubBranch| and search for the new ``patch-xxx`` branch."
+msgstr "Нажмите на |githubBranch| и найдите новую ветку ``patch-xxx``."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:665
 msgid "githubBranch"
 msgstr "githubBranch"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:120
+msgid ""
+"Select it. The |githubBranch| button will now display :guilabel:`Branch: "
+"patch-xxx`."
+msgstr ""
+"Выберите его. Кнопка |githubBranch| теперь будет отображать "
+":guilabel:`Ветвь: patch-xxx`."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:121
+msgid "Jump down to the :ref:`Modify files <modify_files>` section below."
+msgstr "Перейдите к разделу :ref:`Изменение файлов<modify_files> ` ниже."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:124
 msgid ""
@@ -278,6 +341,14 @@ msgstr "Альтернатива 2: Создайте специальную ве
 #: ../../docs/documentation_guidelines/first_contribution.rst:126
 msgid "You can edit files directly from your fork of the QGIS Documentation."
 msgstr "Вы можете редактировать файлы прямо из форка Документации QGIS."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:128
+msgid ""
+"First, make sure that your ``master`` branch is up to date with upstream, "
+"i.e. ``qgis/QGIS-Documentation:master`` branch. To do so:"
+msgstr ""
+"Сначала убедитесь, что ваша ветка ``master`` обновлена до последней версии, "
+"т. е. ветки ``qgis/QGIS-Documentation:master``. Для этого:"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:132
 msgid ""
@@ -304,6 +375,65 @@ msgstr ""
 #: ../../docs/documentation_guidelines/first_contribution.rst:139
 msgid "If it only has commits behind:"
 msgstr "Если за ним стоят только коммиты:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:141
+msgid "Expand the :guilabel:`Sync fork` drop-down menu on the right. You can:"
+msgstr ""
+"Раскройте раскрывающееся меню :guilabel:«Синхронизация форка» справа. Вы "
+"можете:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:143
+msgid ""
+":guilabel:`Compare` the branches and see new changes in the upstream branch "
+"you do not yet have in yours"
+msgstr ""
+":guilabel:`Сравните` ветки и посмотрите новые изменения в верхней ветке, "
+"которых еще нет в вашей."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:145
+msgid ""
+":guilabel:`Fetch and merge`: brings changes from the upstream branch into "
+"yours."
+msgstr ""
+":guilabel:`Fetch and merge`: переносит изменения из вышестоящей ветки в "
+"вашу."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:146
+msgid ""
+"Click :guilabel:`Fetch and merge`: after the process, your branch is "
+"mentioned as up to date with ``qgis/QGIS-Documentation:master``."
+msgstr ""
+"Нажмите :guilabel:`Fetch и merge`: после завершения процесса ваша ветка "
+"будет указана как обновленная до ``qgis/QGIS-Documentation:master``."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:149
+msgid ""
+"Click on |githubBranch| in the upper left corner of your forked QGIS-"
+"Documentation repository and enter a unique name in the text field to create"
+" a new `branch <https://docs.github.com/en/pull-requests/collaborating-with-"
+"pull-requests/proposing-changes-to-your-work-with-pull-requests/about-"
+"branches>`_. It is advised that the name of the new branch relates to the "
+"problem you intend to fix. Convenient for identifying the branch later."
+msgstr ""
+"Щелкните |githubBranch| в верхнем левом углу вашего форка репозитория QGIS-"
+"Documentation и введите уникальное имя в текстовое поле, чтобы создать новую"
+" ветвь `branch <https://docs.github.com/en/pull-requests/collaborating-with-"
+"pull-requests/proposing-changes-to-your-work-with-pull-requests/about-"
+"branches>`_. Рекомендуется, чтобы название новой ветки было связано с "
+"проблемой, которую вы собираетесь исправить. Это удобно для идентификации "
+"ветки в дальнейшем."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:154
+msgid ""
+"Press :guilabel:`Create branch <branch_name> from master`. The "
+"|githubBranch| button should now display :guilabel:`branch_name`."
+msgstr ""
+"Нажмите :guilabel:`Создать ветвь<branch_name> из master`. Кнопка "
+"|githubBranch| теперь должна отображать :guilabel:`branch_name`."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:156
+msgid "You are ready to start new changes on top of your new branch."
+msgstr "Вы готовы начать новые изменения в новой ветке."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:158
 msgid ""
@@ -332,17 +462,125 @@ msgstr ""
 msgid "Modify files"
 msgstr "Изменение файлов"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:172
+msgid ""
+"Make sure the branch you want to modify is active: its name is displayed in "
+"the top left menu or in the page URL."
+msgstr ""
+"Убедитесь, что ветвь, которую вы хотите изменить, активна: ее название "
+"отображается в верхнем левом меню или в URL-адресе страницы."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:174
+msgid "Browse the source files to the file that needs modifications."
+msgstr ""
+"Просмотрите исходные файлы и найдите файл, который необходимо изменить."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:175
+msgid "Press the |githubEditPencil| :sup:`Edit this file` button."
+msgstr "Нажмите кнопку |githubEditPencil| :sup:`Изменить этот файл`."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:669
 msgid "githubEditPencil"
 msgstr "githubEditPencil"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:176
+msgid ""
+"Update the text following the :ref:`writing guidelines <QGIS-documentation-"
+"guidelines>`"
+msgstr ""
+"Обновите текст, следуя :ref:`рекомендациям по написанию<QGIS-documentation-"
+"guidelines> `"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:180
+msgid ""
+"Make sure :guilabel:`Commit directly to the <branch_name> branch` is "
+"selected."
+msgstr ""
+"Убедитесь, что выбран параметр :guilabel:«Зафиксировать непосредственно "
+"в<branch_name> ветке»."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:181
+msgid ""
+"Press :guilabel:`Commit changes` to save your modifications in the branch."
+msgstr ""
+"Нажмите :guilabel:`Commit изменения`, чтобы сохранить ваши изменения в "
+"ветке."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:182
+msgid "To update or add a new image file:"
+msgstr "Чтобы обновить или добавить новый файл изображения:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:184
+msgid "Browse your branch to the folder of the file to update or add."
+msgstr "Перейдите в папку с файлом, который необходимо обновить или добавить."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:185
+msgid ""
+"Top right, use the :menuselection:`Add files --> Upload files` menu to "
+"select and load files from your drive. You can find hints for formatting an "
+"image for the docs at :ref:`managing_screenshots`."
+msgstr ""
+"В правом верхнем углу используйте меню :menuselection:`Добавить файлы --> "
+"Загрузить файлы`, чтобы выбрать и загрузить файлы с вашего диска. Советы по "
+"форматированию изображений для документации можно найти в разделе "
+":ref:`управление_скриншотами`."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:188
+msgid "If a file of the same name already exists, it gets overwritten."
+msgstr "Если файл с таким же именем уже существует, он будет перезаписан."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:189
+msgid "Commit once again your changes to the target branch."
+msgstr "Еще раз зафиксируйте свои изменения в целевой ветке."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:191
+msgid ""
+"Repeat the previous steps for any other files that need to be updated to fix"
+" the issue."
+msgstr ""
+"Повторите предыдущие шаги для всех других файлов, которые необходимо "
+"обновить, чтобы устранить проблему."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:196
 msgid "Share your changes via Pull Request"
 msgstr "Поделитесь своими изменениями через Pull Request"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:198
+msgid ""
+"You need to make a `pull request <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/proposing-changes-to-your-work-"
+"with-pull-requests/about-pull-requests>`_ to integrate your changes into the"
+" official documentation."
+msgstr ""
+"Вам необходимо создать `запрос на извлечение "
+"<https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/proposing-changes-to-your-work-with-pull-requests/about-pull-"
+"requests>`_, чтобы интегрировать ваши изменения в официальную документацию."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:202
 msgid "Start a new pull request"
 msgstr "Начните новый запрос на привлечение ресурсов"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:204
+msgid ""
+"If you used the ``Edit on GitHub`` link, after you commit your changes, "
+"GitHub automatically opens a new page comparing the changes you made in your"
+" ``patch-xxx`` branch to the ``qgis/QGIS-Documentation:master`` branch."
+msgstr ""
+"Если вы использовали ссылку ``Edit on GitHub``, после фиксации изменений "
+"GitHub автоматически откроет новую страницу, на которой будут сравниваться "
+"изменения, внесенные вами в ветку ``patch-xxx``, с веткой ``qgis/QGIS-"
+"Documentation:master``."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:207
+msgid ""
+"In all the cases, the comparing changes page can be reached by going to the "
+"\"Pull requests\" page of your repository and click on :guilabel:`New pull "
+"request`."
+msgstr ""
+"Во всех случаях страницу сравнения изменений можно открыть, перейдя на "
+"страницу \"Запросы на слияние\" вашего репозитория и нажав на "
+":guilabel:`Новый запрос на слияние`."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:214
 msgid "Compare changes"
@@ -473,6 +711,14 @@ msgstr ""
 msgid "Describe your pull request"
 msgstr "Опишите ваш запрос на притяжение"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:266
+msgid ""
+"A text box will open: fill in a title and any relevant description of the "
+"changes you are proposing."
+msgstr ""
+"Откроется текстовое поле: введите название и любое соответствующее описание "
+"предлагаемых вами изменений."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:268
 msgid ""
 "If this relates to a particular `issue <https://github.com/qgis/QGIS-"
@@ -545,6 +791,16 @@ msgstr ""
 #: ../../docs/documentation_guidelines/first_contribution.rst:293
 msgid "To add comments about specific lines,"
 msgstr "Чтобы добавить комментарии к определенным строкам,"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:295
+msgid ""
+"Click on |githubFilesChanged| and find the file you want to comment on. You "
+"may have to click on :guilabel:`< >` :sup:`Display the source diff` to see "
+"the changes."
+msgstr ""
+"Нажмите на |githubFilesChanged| и найдите файл, который хотите "
+"прокомментировать. Возможно, вам придется нажать на :guilabel:`< >` "
+":sup:`Отобразить разницу в исходном коде`, чтобы увидеть изменения."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:671
 msgid "githubFilesChanged"
@@ -713,6 +969,35 @@ msgstr ""
 "предупреждениях до того, как ваши изменения будут зафиксированы в "
 "репозитории ``qgis/QGIS-Documentation``."
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:361
+msgid ""
+"You can make modifications to your pull request until it is merged with the "
+"main repository, either to improve your request, to address requested "
+"modifications, or to fix a build error:"
+msgstr ""
+"Вы можете вносить изменения в свой пулл-реквест до тех пор, пока он не будет"
+" объединен с основным репозиторием, чтобы улучшить свой запрос, учесть "
+"запрошенные изменения или исправить ошибку сборки:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:365
+msgid "Click on the |githubFilesChanged| tab in your pull request page"
+msgstr ""
+"Нажмите на вкладку |githubFilesChanged| на странице вашего запроса на "
+"извлечение."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:366
+msgid ""
+"Press :guilabel:`...` menu on the right of the filename that you want to "
+"modify, and select :guilabel:`Edit file`."
+msgstr ""
+"Нажмите :guilabel:`...` меню справа от имени файла, который вы хотите "
+"изменить, и выберите :guilabel:`Редактировать файл`."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:368
+msgid "The file opens in edit mode; add your modifications and commit."
+msgstr ""
+"Файл откроется в режиме редактирования; внесите изменения и сохраните их."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:370
 msgid ""
 "Any additional changes will be automatically added to your pull request if "
@@ -766,10 +1051,420 @@ msgstr ""
 "Перейдите к вашему форку репозитория QGIS-документация "
 "(``https://github.com/<YourName>/QGIS-Documentation``)."
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:390
+msgid ""
+"Click on the :guilabel:`Branches` tab. Below :guilabel:`Your branches` "
+"you'll see a list of your branches."
+msgstr ""
+"Нажмите на вкладку :guilabel:`Ветки`. Под :guilabel:`Ваши ветки` вы увидите "
+"список ваших веток."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:392
+msgid ""
+"Click on the |deleteSelected| :sup:`Delete this branch` icon to delete any "
+"unwanted branches."
+msgstr ""
+"Нажмите на значок |deleteSelected| :sup:`Удалить эту ветвь`, чтобы удалить "
+"ненужные ветви."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:661
 msgid "deleteSelected"
 msgstr "deleteSelected"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:398
+msgid "Using Git command line tools"
+msgstr "Использование командной строки Git"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:400
+msgid ""
+"The GitHub web interface is an easy way to update the QGIS-documentation "
+"repo with your contributions, but it doesn't offer tools to:"
+msgstr ""
+"Веб-интерфейс GitHub — это простой способ обновить репозиторий документации "
+"QGIS с помощью ваших вкладов, но он не предлагает инструментов для:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:403
+msgid "group your commits and clean your change history"
+msgstr "группируйте свои коммиты и очищайте историю изменений"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:404
+msgid "fix possible conflicts with the main repo"
+msgstr "устранить возможные конфликты с основным репозиторием"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:405
+msgid "build the documentation to test your changes"
+msgstr "создать документацию для тестирования ваших изменений"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:407
+msgid ""
+"You need to `install git <https://git-scm.com/downloads>`_ on your hard "
+"drive in order to get access to more advanced and powerful tools and have a "
+"local copy of the repository. Some basics you may often need are exposed "
+"below. You'll also find rules to care about even if you opt for the web "
+"interface."
+msgstr ""
+"Вам необходимо `установить git <https://git-scm.com/downloads>`_ на жесткий "
+"диск, чтобы получить доступ к более продвинутым и мощным инструментам и "
+"иметь локальную копию репозитория. Ниже приведены некоторые основные "
+"моменты, которые могут вам часто понадобиться. Вы также найдете правила, "
+"которые следует соблюдать, даже если вы выберете веб-интерфейс."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:412
+msgid ""
+"In the code samples below, lines beginning with ``$`` show commands you "
+"should type while ``#`` are comments."
+msgstr ""
+"В приведенных ниже примерах кода строки, начинающиеся с символа «$», "
+"обозначают команды, которые необходимо ввести, а символы «#» — комментарии."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:418
+msgid "Local repository"
+msgstr "Локальный репозиторий"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:420
+msgid ""
+"Now you are ready to get a local clone of **your** QGIS-Documentation "
+"repository."
+msgstr ""
+"Теперь вы готовы получить локальную копию **вашего** репозитория QGIS-"
+"Documentation."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:422
+msgid "You can clone  your QGIS repository using the web URL as follows:"
+msgstr ""
+"Вы можете клонировать свой репозиторий QGIS, используя веб-URL, следующим "
+"образом:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:430
+msgid ""
+"The former command line is simply an example. You should adapt both the path"
+" and the repository URL, replacing ``<YourName>`` with your github user "
+"name."
+msgstr ""
+"Предыдущая командная строка является лишь примером. Вам необходимо "
+"адаптировать как путь, так и URL-адрес репозитория, заменив ``<YourName>`` "
+"на свое имя пользователя github."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:434
+msgid "Check the following:"
+msgstr "Проверьте следующее:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:446
+msgid ""
+"*origin* is the name of the remote repository of your QGIS-Documentation "
+"repository."
+msgstr ""
+"*origin* — это имя удаленного репозитория вашего репозитория QGIS-"
+"Documentation."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:448
+msgid ""
+"*master* is the default main branch. You should never use it to contribute! "
+"**Never!**"
+msgstr ""
+"*master* — это основная ветвь по умолчанию. Ни в коем случае не используйте "
+"ее для внесения изменений! **Ни в коем случае!**"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:451
+msgid ""
+"Alternatively you can clone your QGIS repository using the SSH protocol:"
+msgstr ""
+"В качестве альтернативы вы можете клонировать репозиторий QGIS с помощью "
+"протокола SSH:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:459
+msgid "**Permission denied (publickey) error?**"
+msgstr "**Ошибка «Доступ запрещен (открытый ключ)»?**"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:461
+msgid ""
+"If you get a Permission denied (publickey) error with the former command, "
+"there may be a problem with your SSH key. See `GitHub help "
+"<https://docs.github.com/en/authentication/troubleshooting-ssh/error-"
+"permission-denied-publickey>`_ for details."
+msgstr ""
+"Если при выполнении предыдущей команды вы получаете ошибку «Permission "
+"denied (publickey)», возможно, проблема связана с вашим SSH-ключом. "
+"Подробности см. в `Справке GitHub "
+"<https://docs.github.com/en/authentication/troubleshooting-ssh/error-"
+"permission-denied-publickey>`_."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:465
+msgid "Check the following if you used the SSH protocol:"
+msgstr "Если вы использовали протокол SSH, проверьте следующее:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:477
+msgid ""
+"You can start to work here but in the long term process you will get a lot "
+"of issues when you will push your contribution (called Pull Request in "
+"github process) as the master branch of the qgis/QGIS-Documentation "
+"repository will diverge from your local/remote repository. You then need to "
+"keep track of the main remote repository and work with branches."
+msgstr ""
+"Вы можете начать работать здесь, но в долгосрочной перспективе у вас "
+"возникнет много проблем, когда вы будете отправлять свой вклад (в процессе "
+"github это называется Pull Request), поскольку основная ветвь репозитория "
+"qgis/QGIS-Documentation будет отличаться от вашего локального/удаленного "
+"репозитория. Затем вам нужно будет отслеживать основной удаленный "
+"репозиторий и работать с ветвями."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:484
+msgid "Add another remote repository"
+msgstr "Добавить еще один удаленный репозиторий"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:486
+msgid ""
+"To be able to follow the work in the main project, add a new remote "
+"repository in your local repository. This new remote repository is the QGIS-"
+"Documentation repository from QGIS project:"
+msgstr ""
+"Чтобы иметь возможность следить за работой в основном проекте, добавьте "
+"новый удаленный репозиторий в свой локальный репозиторий. Этот новый "
+"удаленный репозиторий — репозиторий QGIS-Documentation из проекта QGIS:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:499
+msgid ""
+"Similarly, you can use the SSH protocol to add a remote repository in your "
+"local repository:"
+msgstr ""
+"Аналогичным образом, вы можете использовать протокол SSH для добавления "
+"удаленного репозитория в ваш локальный репозиторий:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:511
+msgid "So now you have the choice between two remote repository:"
+msgstr "Теперь у вас есть выбор между двумя удаленными репозиториями:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:513
+msgid "*origin* to push your local branch in **your** remote repository"
+msgstr ""
+"*origin* для отправки вашей локальной ветки в **ваш** удаленный репозиторий"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:514
+msgid ""
+"*upstream* to merge (if you have right to do so) your contribution to the "
+"official one OR to update your master branch of local repository from the "
+"master branch of the official repository."
+msgstr ""
+"*upstream* для объединения (если у вас есть на это право) вашего вклада с "
+"официальным ИЛИ для обновления вашей основной ветки локального репозитория "
+"из основной ветки официального репозитория."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:518
+msgid ""
+"*upstream* is just a label, a kind of standard name but you can call it as "
+"you want."
+msgstr ""
+"*upstream* — это всего лишь ярлык, своего рода стандартное название, но вы "
+"можете называть его как хотите."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:523
+msgid "Update your base branch"
+msgstr "Обновить базовую ветвь"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:525
+msgid ""
+"Before working on a new contribution, you should always update your master "
+"branch in your local repository. Assuming you are willing to push changes to"
+" the testing documentation, run the following command lines:"
+msgstr ""
+"Перед тем как приступить к работе над новым вкладом, всегда обновляйте "
+"основную ветвь в локальном репозитории. Предполагая, что вы хотите отправить"
+" изменения в тестовую документацию, выполните следующие команды:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:542
+msgid ""
+"Now you have your local and remote repositories which both have their "
+"``master`` branch up to date with the official ``master`` branch of QGIS-"
+"Documentation. You can start to work on your contribution."
+msgstr ""
+"Теперь у вас есть локальный и удаленный репозитории, в которых ветка "
+"«master» обновлена до официальной ветки «master» QGIS-Documentation. Вы "
+"можете приступить к работе над своим вкладом."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:546
+msgid "Switch the branch if you wish to contribute to released doc"
+msgstr ""
+"Переключитесь на ветку, если хотите внести свой вклад в выпущенную "
+"документацию."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:548
+msgid ""
+"Along with the testing documentation, we continue to fix issues in the "
+"`latest release <https://docs.qgis.org/latest>`_, meaning that you can also "
+"contribute to it. Follow the previous section sample code, replacing "
+"``master`` with the corresponding branch of the latest documentation."
+msgstr ""
+"Наряду с тестовой документацией, мы продолжаем исправлять ошибки в "
+"`последней версии <https://docs.qgis.org/latest>`_, что означает, что вы "
+"также можете внести свой вклад в ее развитие. Следуйте примеру кода из "
+"предыдущего раздела, заменив ``master`` на соответствующую ветвь последней "
+"версии документации."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:556
+msgid "Contribute to your production branch"
+msgstr "Внесите свой вклад в производство"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:558
+msgid ""
+"Now that your base branch is updated, you need to create a dedicated branch "
+"in which you add your contribution. Always work on a branch other than the "
+"base branch! Always!"
+msgstr ""
+"Теперь, когда ваша базовая ветвь обновлена, вам нужно создать специальную "
+"ветвь, в которую вы добавите свой вклад. Всегда работайте на ветви, отличной"
+" от базовой! Всегда!"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:581
+msgid "Few words about commit/push commands:"
+msgstr "Несколько слов о командах commit/push:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:583
+msgid ""
+"try to commit only one contribution (atomic change) i.e. address only one "
+"issue"
+msgstr ""
+"старайтесь вносить только одно изменение (атомарное изменение), т. е. "
+"решайте только одну проблему"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:584
+msgid ""
+"try to explain carefully what you change in the title of your commit and in "
+"the description. The first line is a title and should start by an upper case"
+" letter and have 80 characters length, don't end with a ``.``. Be concise. "
+"Your description can be longer, end with a ``.`` and you can give much more "
+"details."
+msgstr ""
+"постарайтесь тщательно объяснить, что вы изменили, в названии вашего коммита"
+" и в описании. Первая строка является названием и должна начинаться с "
+"заглавной буквы и иметь длину 80 символов, не заканчиваться точкой «.». "
+"Будьте лаконичны. Ваше описание может быть длиннее, заканчиваться точкой «.»"
+" и содержать гораздо больше деталей."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:588
+msgid ""
+"use a ``#`` with a number to refer to an issue. Prefix with ``Fix`` if you "
+"fix the ticket: your commit will close the ticket."
+msgstr ""
+"Используйте символ «#» с номером для ссылки на проблему. Если вы исправили "
+"проблему, добавьте префикс «Fix»: ваша фиксация закроет проблему."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:591
+msgid ""
+"Now that your changes are saved and committed in your local branch, you need"
+" to send them to your remote repository in order to create pull request:"
+msgstr ""
+"Теперь, когда ваши изменения сохранены и зафиксированы в локальной ветке, "
+"вам необходимо отправить их в удаленный репозиторий, чтобы создать запрос на"
+" слияние:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:600
+msgid "Share your Changes"
+msgstr "Поделитесь своими изменениями"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:602
+msgid ""
+"Now you can go to your github repository and :ref:`create a Pull Request "
+"<sharing_changes>` as exposed in a previous section. Ensure you create a PR "
+"from your branch to the remote branch you are targetting in the official "
+"QGIS-Documentation repository."
+msgstr ""
+"Теперь вы можете перейти в свой репозиторий github и :ref:`создать Pull "
+"Request<sharing_changes> `, как описано в предыдущем разделе. Убедитесь, что"
+" вы создаете PR из своей ветки в удаленную ветку, на которую вы нацелены в "
+"официальном репозитории QGIS-Documentation."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:610
+msgid "Clean-up your local and remote repository"
+msgstr "Очистите локальный и удаленный репозитории"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:612
+msgid ""
+"After your PR has been merged into the official QGIS-Documentation, you can "
+"delete your branch. If you work a lot this way, in few weeks you will get a "
+"lot of unuseful branches. So keep your repository clean this way:"
+msgstr ""
+"После того, как ваш PR был включен в официальную документацию QGIS, вы "
+"можете удалить свою ветвь. Если вы часто работаете таким образом, через "
+"несколько недель у вас накопится много ненужных веток. Поэтому поддерживайте"
+" чистоту своего репозитория следующим образом:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:623
+msgid ""
+"And do not forget to update the ``master`` branch in your local repository!"
+msgstr "И не забудьте обновить ветку «master» в вашем локальном репозитории!"
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:626
 msgid "Further reading"
 msgstr "Дополнительная литература"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:628
+msgid ""
+"Other than the Github web interface and the git command line tools exposed "
+"above, there are also `GUI applications <https://git-"
+"scm.com/downloads/guis>`_ you can use to create and manage your "
+"contributions to the documentation."
+msgstr ""
+"Помимо веб-интерфейса Github и командных инструментов git, описанных выше, "
+"существуют также `GUI-приложения <https://git-scm.com/downloads/guis>`_, "
+"которые можно использовать для создания и управления своими вкладами в "
+"документацию."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:634
+msgid ""
+"When the changes in the pull request are conflicting with recent changes "
+"pushed to the target branch, the conflicts need to be resolved before a "
+"merge is possible:"
+msgstr ""
+"Когда изменения в пул-реквесте конфликтуют с недавними изменениями, "
+"отправленными в целевую ветвь, конфликты необходимо разрешить, прежде чем "
+"будет возможна слияние:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:638
+msgid ""
+"if the conflict relates to few competing lines, a :guilabel:`Resolve "
+"conflicts` button is available in the GitHub pull request page. Press the "
+"button and resolve the issue as explained at `Resolving a merge conflict on "
+"GitHub <https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github>`_"
+msgstr ""
+"Если конфликт касается нескольких конкурирующих строк, на странице запроса "
+"на слияние GitHub доступна кнопка :guilabel:`Разрешить конфликты`. Нажмите "
+"кнопку и разрешите проблему, как описано в разделе «Разрешение конфликта "
+"слияния на GitHub <https://docs.github.com/en/pull-requests/collaborating-"
+"with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-"
+"github>»_."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:642
+msgid ""
+"if the conflict involves files renaming or removal, then you'd need to "
+"resolve the conflict using git command lines. Typically, you have to first "
+"rebase your branch over the target branch using ``git rebase targetBranch`` "
+"call and fix the conflicts that are reported. Read more at `Resolving a "
+"merge conflict using the command line <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/addressing-merge-"
+"conflicts/resolving-a-merge-conflict-using-the-command-line>`_"
+msgstr ""
+"Если конфликт связан с переименованием или удалением файлов, то вам нужно "
+"будет разрешить конфликт с помощью командной строки git. Обычно сначала "
+"необходимо перебазировать свою ветку на целевую ветку с помощью команды «git"
+" rebase targetBranch» и устранить обнаруженные конфликты. Подробнее читайте "
+"в разделе «Устранение конфликта слияния с помощью командной строки "
+"<https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-"
+"command-line>»_."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:648
+msgid ""
+"Sometimes, at the end of the proofreading process, you may end up with "
+"changes split into multiple commits that are not necessarily worth it. Git "
+"command lines help you squash these commits to a smaller number and more "
+"meaningful commit messages. Some details at `Using git rebase on the command"
+" line <https://docs.github.com/en/get-started/using-git/using-git-rebase-on-"
+"the-command-line>`_"
+msgstr ""
+"Иногда в конце процесса корректуры вы можете получить изменения, разбитые на"
+" несколько коммитов, которые не всегда оправданы. Командная строка Git "
+"поможет вам сжать эти коммиты до меньшего количества и более значимых "
+"сообщений коммитов. Некоторые подробности в `Использование git rebase в "
+"командной строке <https://docs.github.com/en/get-started/using-git/using-"
+"git-rebase-on-the-command-line>`_"
