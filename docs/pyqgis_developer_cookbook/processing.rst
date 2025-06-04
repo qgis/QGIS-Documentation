@@ -1,7 +1,6 @@
 .. highlight:: python
    :linenothreshold: 5
 
-
 .. Tests are skipped because they fail to import from processing_provider under CI
 .. everything runs fine when testing locally with make -f docker.mk doctest
 
@@ -95,37 +94,18 @@ If you want to add your existing plugin to Processing, you need to add some code
 
       from .example_processing_algorithm import ExampleProcessingAlgorithm
 
-
       class Provider(QgsProcessingProvider):
 
-          """ The provider of our plugin. """
-
           def loadAlgorithms(self):
-              """ Load each algorithm into the current provider. """
               self.addAlgorithm(ExampleProcessingAlgorithm())
-              # add additional algorithms here
-              # self.addAlgorithm(MyOtherAlgorithm())
 
           def id(self) -> str:
-              """The ID of your plugin, used for identifying the provider.
-
-              This string should be a unique, short, character only string,
-              eg "qgis" or "gdal". This string should not be localised.
-              """
               return 'yourplugin'
 
           def name(self) -> str:
-              """The human friendly name of your plugin in Processing.
-
-              This string should be as short as possible (e.g. "Lastools", not
-              "Lastools version 1.0.1 64-bit") and localised.
-              """
               return self.tr('Your plugin')
 
           def icon(self) -> QIcon:
-              """Should return a QIcon which is used for your provider inside
-              the Processing toolbox.
-              """
               return QgsProcessingProvider.icon(self)
 
    * :file:`example_processing_algorithm.py` which contains the example
@@ -133,7 +113,7 @@ If you want to add your existing plugin to Processing, you need to add some code
      file <python/plugins/processing/script/ScriptTemplate.py>` and
      update it according to your needs.
 
-You should have a tree similar to this :
+You should have a tree similar to this:
 
 .. code-block:: bash
 
@@ -148,3 +128,175 @@ You should have a tree similar to this :
 
 #. Now you can reload your plugin in QGIS and you should see your example
    script in the Processing toolbox and modeler.
+
+Implementing Custom Processing Algorithms
+=========================================
+
+Creating a Custom Algorithm
+---------------------------
+
+Here's a simple example of a custom buffer algorithm:
+
+.. code-block:: python
+
+    from qgis.core import (
+        QgsProcessingAlgorithm,
+        QgsProcessingParameterFeatureSource,
+        QgsProcessingParameterNumber,
+        QgsProcessingParameterFeatureSink,
+        QgsFeatureSink,
+        QgsProcessingContext,
+        QgsFeature
+    )
+
+    class BufferAlgorithm(QgsProcessingAlgorithm):
+
+        INPUT = 'INPUT'
+        DISTANCE = 'DISTANCE'
+        OUTPUT = 'OUTPUT'
+
+        def initAlgorithm(self, config=None):
+            self.addParameter(QgsProcessingParameterFeatureSource(self.INPUT, 'Input layer'))
+            self.addParameter(QgsProcessingParameterNumber(self.DISTANCE, 'Buffer distance', defaultValue=100.0))
+            self.addParameter(QgsProcessingParameterFeatureSink(self.OUTPUT, 'Output layer'))
+
+        def processAlgorithm(self, parameters, context, feedback):
+            source = self.parameterAsSource(parameters, self.INPUT, context)
+            distance = self.parameterAsDouble(parameters, self.DISTANCE, context)
+            (sink, dest_id) = self.parameterAsSink(parameters, self.OUTPUT, context,
+                                                   source.fields(), source.wkbType(), source.sourceCrs())
+
+            for f in source.getFeatures():
+                f.setGeometry(f.geometry().buffer(distance, 5))
+                sink.addFeature(f, QgsFeatureSink.FastInsert)
+
+            return {self.OUTPUT: dest_id}
+
+        def name(self):
+            return 'buffer'
+
+        def displayName(self):
+            return 'Buffer Features'
+
+        def group(self):
+            return 'Examples'
+
+        def groupId(self):
+            return 'examples'
+
+        def createInstance(self):
+            return BufferAlgorithm()
+
+Customizing the Algorithm Dialog
+--------------------------------
+
+Custom dialogs are especially useful when working with nested or dynamic inputs, 
+when parameters depend on external data sources such as APIs (e.g. dynamically populated dropdowns), 
+or when you need advanced validation and custom layout behavior that isn’t supported by the default Processing dialog.
+
+To override the default UI (e.g. for complex parameter types or dynamic logic),
+subclass `QgsProcessingAlgorithmDialogBase`. Here's a minimal example:
+
+.. code-block:: python
+
+    from qgis.PyQt.QtWidgets import QWidget, QVBoxLayout, QLabel, QLineEdit
+    from qgis.PyQt.QtCore import Qt, QT_VERSION_STR
+    from qgis.core import (
+        QgsProcessingAlgorithm,
+        QgsProcessingContext,
+        QgsProcessingFeedback,
+        Qgis
+    )
+    from qgis import gui, processing
+    from datetime import datetime
+    from typing import Dict, Optional
+    from osgeo import gdal
+
+    class CustomAlgorithmDialog(gui.QgsProcessingAlgorithmDialogBase):
+        def __init__(
+            self,
+            algorithm: QgsProcessingAlgorithm,
+            parent: Optional[QWidget] = None,
+            title: Optional[str] = None,
+        ):
+            super().__init__(
+                parent,
+                flags=Qt.WindowFlags(),
+                mode=gui.QgsProcessingAlgorithmDialogBase.DialogMode.Single,
+            )
+            self.context = QgsProcessingContext()
+            self.setAlgorithm(algorithm)
+            self.setModal(True)
+            self.setWindowTitle(title or algorithm.displayName())
+
+            self.panel = gui.QgsPanelWidget()
+            layout = self.buildDialog()
+            self.panel.setLayout(layout)
+            self.setMainWidget(self.panel)
+
+            self.cancelButton().clicked.connect(self.reject)
+
+        def buildDialog(self) -> QWidget:
+            layout = QVBoxLayout()
+            self.label = QLabel("Buffer distance:")
+            self.input = QLineEdit()
+            layout.addWidget(self.label)
+            layout.addWidget(self.input)
+            wrapper = QWidget()
+            wrapper.setLayout(layout)
+            return layout
+
+        def getParameters(self) -> Dict:
+            try:
+                return {'DISTANCE': float(self.input.text())}
+            except ValueError:
+                raise ValueError("Invalid buffer distance")
+
+        def processingContext(self):
+            return self.context
+
+        def createFeedback(self):
+            return QgsProcessingFeedback()
+
+        def runAlgorithm(self):
+            context = self.processingContext()
+            feedback = self.createFeedback()
+            params = self.getParameters()
+
+            self.pushDebugInfo(f"QGIS version: {Qgis.QGIS_VERSION}")
+            self.pushDebugInfo(f"QGIS code revision: {Qgis.QGIS_DEV_VERSION}")
+            self.pushDebugInfo(f"Qt version: {QT_VERSION_STR}")
+            self.pushDebugInfo(f"GDAL version: {gdal.VersionInfo('--version')}")
+            self.pushCommandInfo(f"Algorithm started at: {datetime.now().isoformat(timespec='seconds')}")
+            self.pushCommandInfo(f"Algorithm '{self.algorithm().displayName()}' starting…")
+            self.pushCommandInfo("Input parameters:")
+            for k, v in params.items():
+                self.pushCommandInfo(f"  {k}: {v}")
+
+            results = processing.run(self.algorithm(), params, context=context, feedback=feedback)
+            self.setResults(results)
+            self.showLog()
+
+Managing Qt Signals
+^^^^^^^^^^^^^^^^^^^
+
+When building custom event-driven dialogs, manage signal connections carefully. 
+This avoids excessive updates and prevents signal accumulation which can cause QGIS to hang.
+A good pattern is to debounce user input with `QTimer`:
+
+.. code-block:: python
+
+    from qgis.PyQt.QtCore import QTimer
+
+    class MyDialog(BaseAlgorithmDialog):
+        def __init__(self, algorithm, parent=None):
+            super().__init__(algorithm, parent=parent)
+            self._update_timer = QTimer(self, singleShot=True)
+            self._update_timer.timeout.connect(self._on_id_ready)
+            self.input_field.textChanged.connect(self._on_text_changed)
+
+        def _on_text_changed(self):
+            self._update_timer.start(500)
+
+        def _on_id_ready(self):
+            self.refresh_dropdown()
