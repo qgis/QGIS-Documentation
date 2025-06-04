@@ -30,7 +30,7 @@ added: ``instance``, ``offset``.
    In blue the source layer, in red the offset one
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
-of line features. This will not change the attribute table.
+of line features
 
 .. warning::
  This algorithm drops existing primary keys or FID values and regenerates them in output layers.

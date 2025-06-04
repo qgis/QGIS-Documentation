@@ -4134,7 +4134,7 @@ input layer, using a fixed or dynamic distance and number of rings.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of polygon features. This will not change the attribute table.
+of polygon features
 
 .. warning::
  This algorithm drops existing primary keys or FID values and regenerates them in output layers.
@@ -4435,7 +4435,7 @@ the bounding boxes, based on the selected CRS, will be added:
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of polygon features. This will not change the attribute table.
+of polygon features
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
