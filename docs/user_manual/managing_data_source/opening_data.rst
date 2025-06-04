@@ -929,7 +929,6 @@ checkboxes:
 
 * |checkbox| :guilabel:`Only show layers in the layer registries`
 * |checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`
-* |checkbox| :guilabel:`Only look in the 'public' schema`
 * |checkbox| :guilabel:`Also list tables with no geometry`:
   indicates that tables without geometry should also be listed by default.
 * |checkbox| :guilabel:`Use estimated table metadata`: When initializing layers,
@@ -947,6 +946,7 @@ checkboxes:
 * |checkbox| :guilabel:`Allow saving/loading QGIS layer metadata in the database`
   - more details :ref:`here <savemetadatatodb>`
 * |checkbox| :guilabel:`Also list raster overview tables`
+* |checkbox| :guilabel:`Only look in the 'public' schema`
 * :guilabel:`Schema`: Allows to specify a single schema to limit a connection to.
   When set, only tables from the matching schema will be included in the browser panel
   and data source select for the connection.
