@@ -4419,8 +4419,9 @@ Calculates the minimum area rotated rectangle for each feature in the
 input layer.
 
 Attributes of the input features will be copied to the corresponding output
-feature, but with additional attributes containing geometric measurements of
-the bounding boxes based on the selected CRS.
+feature. The following attributes containing geometric measurements of
+the bounding boxes, based on the selected CRS, will be added: ``width``,
+``height``, ``angle``, ``area``, ``perimeter``.
 
 .. figure:: img/oriented_minimum_bounding_box.png
    :align: center
