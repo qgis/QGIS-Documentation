@@ -2439,7 +2439,9 @@ application on your OS.
 QGIS provides command line options for more advanced use cases (in some cases
 you can use an environment variable instead of the command line option).
 To get a list of the options, enter ``qgis --help`` on the command line, which
-returns::
+returns:
+
+.. code-block:: text
 
   QGIS is a user friendly Open Source Geographic Information System.
   Usage: /usr/bin/qgis.bin [OPTION] [FILE]
