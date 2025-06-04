@@ -4430,7 +4430,7 @@ the bounding boxes, based on the selected CRS, will be added: ``width``,
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of polygon features. In that case, the attribute-table will be copied as-is.
+of polygon features. This will not change the attribute table.
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
