@@ -4418,6 +4418,10 @@ Oriented minimum bounding box
 Calculates the minimum area rotated rectangle for each feature in the
 input layer.
 
+Attributes of the input features will be copied to the corresponding output
+feature, but with additional attributes containing geometric measurements of
+the bounding boxes based on the selected CRS.
+
 .. figure:: img/oriented_minimum_bounding_box.png
    :align: center
 
@@ -4425,7 +4429,7 @@ input layer.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-of polygon features
+of polygon features. In that case, the attribute-table will be copied as-is.
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
