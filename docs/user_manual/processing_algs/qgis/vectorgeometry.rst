@@ -4420,9 +4420,7 @@ input layer.
 
 Attributes of the input features will be copied to the corresponding output
 feature. The following attributes containing geometric measurements of
-the bounding boxes, based on the selected CRS, will be added: ``width``,
-``height``, ``angle``, ``area``, ``perimeter``.
-
+the bounding boxes, based on the selected CRS, will be added:
 .. figure:: img/oriented_minimum_bounding_box.png
    :align: center
 
@@ -4475,6 +4473,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+       Other than the input attributes, the output layer also contains the following fields:
+       ``width``, ``height``, ``angle``, ``area`` and ``perimeter`` of the generated polygon.
+
 
 Python code
 ...........
