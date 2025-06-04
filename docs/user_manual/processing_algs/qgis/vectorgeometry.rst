@@ -6789,9 +6789,10 @@ Outputs
    * - **Split**
      - ``OUTPUT``
      - [vector: line]
-     - The new line vector layer - the length of the feature geometries
-       is less than or equal to the length specified in
-       the LENGTH parameter.
+     - The new line vector layer.
+       The length of the feature geometries is less than or equal to the length
+       specified in the LENGTH parameter. An additional field containing the
+       ``order`` will be added.
 
 Python code
 ...........
