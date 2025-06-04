@@ -4906,7 +4906,7 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output point vector layer.
-       It will contain a new attribute with the ``distance`` from the
+       It will contain a new attribute with the distance ``dist_pole`` from the
        calculated pole to the polygon boundary.
 
 Python code
@@ -5666,7 +5666,7 @@ Python code
 Roundness
 ---------
 
-Calculates the roundness of each feature and stores it as a new field. The input vector layer must contain polygons.
+Calculates the roundness of each feature and stores it as a new field ``roundness``. The input vector layer must contain polygons.
 
 The roundness of a polygon is defined as 4π × polygon area / perimeter².
 The roundness value varies between 0 and 1. A perfect circle has a roundness of 1,
