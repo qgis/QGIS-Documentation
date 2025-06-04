@@ -20,6 +20,10 @@ Each new version is incrementally offset by a specified distance.
 Positive distance will offset lines to the left, and negative
 distances will offset them to the right.
 
+Attributes of the input features will be copied to the corresponding output
+feature. The following attributes related to the input parameters will be
+added: ``instance``, ``offset``.
+
 .. figure:: img/offset_lines_array.png
    :align: center
 
