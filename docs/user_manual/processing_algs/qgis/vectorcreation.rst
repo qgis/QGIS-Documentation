@@ -26,7 +26,7 @@ distances will offset them to the right.
    In blue the source layer, in red the offset one
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
-of line features
+of line features. This will not change the attribute table.
 
 .. warning::
  This algorithm drops existing primary keys or FID values and regenerates them in output layers.
