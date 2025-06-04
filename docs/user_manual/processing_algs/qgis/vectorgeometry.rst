@@ -1482,7 +1482,9 @@ Outputs
    * - **Convex hull**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output (convex hull) vector layer
+     - The output (convex hull) vector layer.
+       Other than the input attributes, the output layer also contains the following fields:
+       ``area`` and ``perimeter`` of the generated polygon.
 
 Python code
 ...........
