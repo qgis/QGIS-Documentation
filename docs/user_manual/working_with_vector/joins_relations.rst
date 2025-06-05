@@ -368,8 +368,8 @@ an airport receives several airline companies
 and an airline company flies to several airports.
 
 This SQL code creates the three tables we need for an N-M relationship
-in a PostgreSQL/PostGIS schema named *locations*.
-You can run the code using the :menuselection:`Database --> DB Manager…` for PostGIS
+in a PostgreSQL schema named *locations*.
+You can run the code using the :menuselection:`Database --> DB Manager…` for PostgreSQL
 or external tools such as `pgAdmin <https://www.pgadmin.org>`_.
 The airports table stores the ``airports`` layer and the airline table stores the ``airlines`` layer.
 In both tables few fields are used for clarity.

@@ -626,7 +626,7 @@ for rendering vector layers.
     not on the simplified one. For this purpose, QGIS provides three algorithms:
     'Distance' (default), 'SnapToGrid' and 'Visvalingam'.
   * |unchecked| :guilabel:`Simplify on provider side if possible`: the geometries
-    are simplified by the provider (PostGIS, Oracle...) and unlike the
+    are simplified by the provider (PostgreSQL, Oracle...) and unlike the
     local-side simplification, geometry-based calculations may be affected
   * :guilabel:`Maximum scale at which the layer should be simplified
     (1:1 always simplifies)`
@@ -2808,7 +2808,7 @@ If you want to add a custom variable in the global scope:
    [variables]
    organisation="Your organization"
 
-A lot of settings can be set using the :file:`.INI` file such as WMS/WMTS, PostGIS connections,
+A lot of settings can be set using the :file:`.INI` file such as WMS/WMTS, PostgreSQL connections,
 proxy settings, maptips, default values for algorithms parameters…
 For example, if you want to configure organization wide default values for some algorithms
 it would be handy if you could configure it in the prepared ini-file for all users.

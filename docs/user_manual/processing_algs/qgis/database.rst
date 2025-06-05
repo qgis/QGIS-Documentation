@@ -72,7 +72,7 @@ Parameters
 
        Default: 'geom'
      - Defines the name of the geometry column in the
-       new PostGIS table.
+       new PostgreSQL table.
        Geometry information for the features is stored
        in this column.
    * - **Encoding**
@@ -528,7 +528,7 @@ queries on the layer itself.
 
 .. seealso:: :ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`
 
- For some SQL query examples see :ref:`PostGIS SQL Query Examples
+ For some SQL query examples see :ref:`PostgreSQL Query Examples
  <qgis_postgis_execute_sql_example>`.
 
 Parameters
@@ -582,7 +582,7 @@ queries on the layer itself.
 
 .. seealso:: :ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`
 
- For some SQL query examples see :ref:`PostGIS SQL Query Examples
+ For some SQL query examples see :ref:`PostgreSQL Query Examples
  <qgis_postgis_execute_sql_example>`.
 
 Parameters

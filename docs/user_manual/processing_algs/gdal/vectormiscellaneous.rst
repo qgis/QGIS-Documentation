@@ -497,7 +497,7 @@ Python code
 Export to PostgreSQL (new connection)
 -------------------------------------
 Imports vector layers inside a PostgreSQL database. A new connection
-to the PostGIS database must be created.
+to the PostgreSQL database must be created.
 
 This algorithm is derived from the
 `GDAL ogr2ogr utility <https://gdal.org/en/latest/programs/ogr2ogr.html>`_.

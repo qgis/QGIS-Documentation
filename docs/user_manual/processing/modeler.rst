@@ -401,7 +401,7 @@ algorithm, that implicitly sets the previous algorithm as parent of the
 current one (and places the corresponding arrow in the modeler canvas).
 However, in some cases an algorithm might depend on another one even if
 it does not use any output object from it (for instance, an algorithm
-that executes a SQL sentence on a PostGIS database and another one that
+that executes a SQL sentence on a PostgreSQL database and another one that
 imports a layer into that same database).
 In that case, just select the previous algorithm in the
 *Dependencies* parameter and they will be executed in the correct

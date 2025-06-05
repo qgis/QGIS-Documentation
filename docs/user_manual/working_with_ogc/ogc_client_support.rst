@@ -39,7 +39,7 @@ Important OGC specifications supported by QGIS are:
 OGC services are increasingly being used to exchange geospatial data between
 different GIS implementations and data stores. QGIS can deal with the above
 specifications as a client, being **SFS** (through support of the PostgreSQL
-/ PostGIS data provider, see section :ref:`label_postgis`).
+data provider, see section :ref:`label_postgis`).
 
 You can also share your maps and data through the WMS, WMTS, WFS, WFS-T and WCS protocols
 using a webserver with :ref:`QGIS Server <QGIS-Server-manual>`, UMN MapServer or
