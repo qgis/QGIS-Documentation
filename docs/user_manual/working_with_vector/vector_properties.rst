@@ -421,7 +421,7 @@ To use categorized symbology for a layer:
 Further tweaks can be done to the default classification:
 
 * You can |symbologyAdd| :sup:`Add` new categories, |symbologyRemove| :sup:`Remove`
-  selected categories or :guilabel:`Delete All` of them.
+  selected categories, :guilabel:`Delete All` of them or :guilabel:`Delete Unused` categories.
 * A class can be disabled by unchecking the checkbox to the left of the
   class name; the corresponding features are hidden on the map.
 * Drag-and-drop the rows to reorder the classes
