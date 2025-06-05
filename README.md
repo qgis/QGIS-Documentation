@@ -94,15 +94,12 @@ locale.Error: unsupported locale setting
 make: *** [html] Error 1
 ```
 
-A solution is to open the python file build.py inside venv folder with the internal pico editor.
-Use in path your installed python version, I installed python 3.10.
+A solution is to edit the Python file `build.py` inside your `venv` folder with a text editor (pico, textEdit, vscode,...).
+The file is stored at `./venv/lib/python3.10/site-packages/sphinx/cmd/build.py`
+(replace `python3.10` with your installed Python version).
 
-```sh
-pico ./venv/lib/python3.10/site-packages/sphinx/cmd/build.py
-```
-
-Goto function main, in pico use **Ctrl-W** and use: 'def main' as search string.
-Change the 1st line in function main from:
+1. Open the file in the text editor
+2. Search and replace:
 
 ```
 def main(argv: Sequence[str] = (), /) -> int:
