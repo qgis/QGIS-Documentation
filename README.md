@@ -86,6 +86,7 @@ If, for some reason, you want to (re)start from scratch:
 make -f venv.mk cleanall
 ```
 
+### Fixing build locale error on macOS
 When the build on the macOS fails with:
 
 ```sh
