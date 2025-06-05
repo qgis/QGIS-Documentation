@@ -34,17 +34,429 @@ msgstr ""
 "Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
 "страница в настоящее время переводится |прогресс перевода|."
 
+#: ../../docs/documentation_guidelines/writing.rst:5
+msgid "Writing Guidelines"
+msgstr "Рекомендации по написанию"
+
+#: ../../docs/documentation_guidelines/writing.rst:10
+msgid ""
+"In general, when creating reST documentation for the QGIS project, please "
+"follow the `Python documentation style guidelines "
+"<https://devguide.python.org/documenting/>`_. For convenience, we provide a "
+"set of general rules we rely on for writing QGIS documentation below."
+msgstr ""
+"В целом, при создании документации reST для проекта QGIS, пожалуйста, "
+"следуйте `рекомендациям по стилю документации Python "
+"<https://devguide.python.org/documenting/>`_. Для удобства ниже приводим "
+"набор общих правил, которыми мы руководствуемся при написании документации "
+"QGIS."
+
+#: ../../docs/documentation_guidelines/writing.rst:17
+msgid "Writing Documentation"
+msgstr "Написание документации"
+
+#: ../../docs/documentation_guidelines/writing.rst:20
+msgid "Headlines"
+msgstr "Заголовки"
+
+#: ../../docs/documentation_guidelines/writing.rst:22
+msgid "To each webpage of the documentation corresponds a ``.rst`` file."
+msgstr "Каждой веб-странице документации соответствует файл ``.rst``."
+
+#: ../../docs/documentation_guidelines/writing.rst:24
+msgid ""
+"Sections used to structure the text are identified through their title which"
+" is underlined (and overlined for the first level). Same level titles must "
+"use same character for underline adornment. In QGIS Documentation, you "
+"should use following styles for chapter, section, subsection and minisec."
+msgstr ""
+"Разделы, используемые для структурирования текста, обозначаются подчёркнутым"
+" заголовком (и надчёркнутым для первого уровня). Заголовки одного уровня "
+"должны использовать одинаковый символ для подчёркивания. В документации QGIS"
+" следует использовать следующие стили для глав, разделов, подразделов и "
+"миниразделов."
+
+#: ../../docs/documentation_guidelines/writing.rst:49
+msgid "Lists"
+msgstr "Списки"
+
+#: ../../docs/documentation_guidelines/writing.rst:51
+msgid ""
+"Lists are useful for structuring the text.  Here are some simple rules "
+"common to all lists:"
+msgstr ""
+"Списки полезны для структурирования текста. Вот несколько простых правил, "
+"общих для всех списков:"
+
+#: ../../docs/documentation_guidelines/writing.rst:54
+msgid "Start all list items with a capital letter"
+msgstr "Начинайте все элементы списка с заглавной буквы"
+
+#: ../../docs/documentation_guidelines/writing.rst:56
+msgid ""
+"Do not use punctuation after list items that only contain a single simple "
+"sentence"
+msgstr ""
+"Не используйте знаки препинания после элементов списка, которые содержат "
+"только одно простое предложение."
+
+#: ../../docs/documentation_guidelines/writing.rst:59
+msgid ""
+"Use period ( ``.`` ) as punctuation for list items that consist of several "
+"sentences or a single compound sentence"
+msgstr ""
+"Используйте точку ( «.») в качестве разделителя элементов списка, состоящих "
+"из нескольких предложений или одного сложного предложения."
+
 #: ../../docs/documentation_guidelines/writing.rst:63
 msgid "Indentation"
 msgstr "Индентирование"
+
+#: ../../docs/documentation_guidelines/writing.rst:65
+msgid ""
+"Indentation in ReStructuredText should be aligned with the list or markup "
+"*marker*. It is also possible to create block quotes with indentation. See "
+"the `Specification "
+"<https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#indentation>`__"
+msgstr ""
+"Отступы в ReStructuredText должны быть выровнены по списку или разметке "
+"*marker*. Также можно создавать блочные цитаты с отступами. См. "
+"`Спецификация "
+"<https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#indentation>`__"
+
+#: ../../docs/documentation_guidelines/writing.rst:89
+msgid "Inline Tags"
+msgstr "Встроенные теги"
+
+#: ../../docs/documentation_guidelines/writing.rst:91
+msgid "You can use tags to emphasize items."
+msgstr "Вы можете использовать теги, чтобы выделить элементы."
+
+#: ../../docs/documentation_guidelines/writing.rst:93
+msgid ""
+"**Menu GUI**: to mark a complete sequence of menu selections, including "
+"selecting submenus and choosing a specific operation, or any subsequence of "
+"such a sequence."
+msgstr ""
+"**Меню GUI**: для обозначения полной последовательности выбора пунктов меню,"
+" включая выбор подменю и выбор конкретной операции, или любой "
+"подпоследовательности такой последовательности."
+
+#: ../../docs/documentation_guidelines/writing.rst:101
+msgid ""
+"**Dialogs and Tab titles**: Labels presented as part of an interactive user "
+"interface including window titles, tab titles, button and option labels."
+msgstr ""
+"**Диалоги и названия вкладок**: метки, представленные как часть "
+"интерактивного пользовательского интерфейса, включая названия окон, названия"
+" вкладок, метки кнопок и опций."
+
+#: ../../docs/documentation_guidelines/writing.rst:108
+msgid "**Filenames and directories**"
+msgstr "**Имена файлов и каталоги**"
+
+#: ../../docs/documentation_guidelines/writing.rst:114
+msgid "**Icons with popup text**"
+msgstr "**Значки с всплывающим текстом**"
+
+#: ../../docs/documentation_guidelines/writing.rst:120
+msgid "(see `image`_ below)."
+msgstr "(см. «изображение» ниже)."
+
+#: ../../docs/documentation_guidelines/writing.rst:122
+msgid "**Keyboard shortcuts**"
+msgstr "**Горячие клавиши**"
+
+#: ../../docs/documentation_guidelines/writing.rst:128
+msgid "will show :kbd:`Ctrl+B`"
+msgstr "покажет :kbd:`Ctrl+B`"
+
+#: ../../docs/documentation_guidelines/writing.rst:130
+msgid ""
+"When describing keyboard shortcuts, the following conventions should be "
+"used:"
+msgstr ""
+"При описании сочетаний клавиш следует использовать следующие условные "
+"обозначения:"
+
+#: ../../docs/documentation_guidelines/writing.rst:133
+msgid "Letter keys are displayed using uppercase: :kbd:`S`"
+msgstr "Буквенные клавиши отображаются заглавными буквами: :kbd:`S`"
+
+#: ../../docs/documentation_guidelines/writing.rst:134
+msgid "Special keys are displayed with an uppercase first letter: :kbd:`Esc`"
+msgstr ""
+"Специальные клавиши отображаются с заглавной первой буквой: :kbd:`Esc`"
+
+#: ../../docs/documentation_guidelines/writing.rst:135
+msgid ""
+"Key combinations are displayed with a ``+`` sign between keys, without "
+"spaces: :kbd:`Shift+R`"
+msgstr ""
+"Комбинации клавиш отображаются со знаком «+» между клавишами, без пробелов: "
+":kbd:`Shift+R`"
+
+#: ../../docs/documentation_guidelines/writing.rst:138
+msgid "**User text**"
+msgstr "**Текст пользователя**"
+
+#: ../../docs/documentation_guidelines/writing.rst:144
+msgid "**Layer names**"
+msgstr "**Названия слоев**"
+
+#: ../../docs/documentation_guidelines/writing.rst:146
+msgid "When referring to layers, format as inline code:"
+msgstr "При упоминании слоев форматируйте как встроенный код:"
+
+#: ../../docs/documentation_guidelines/writing.rst:156
+msgid "Labels/references"
+msgstr "Этикетки/ссылки"
+
+#: ../../docs/documentation_guidelines/writing.rst:158
+msgid ""
+"Anchors inside the text can be used to create hyperlinks to sections or "
+"pages."
+msgstr ""
+"Якоря внутри текста можно использовать для создания гиперссылок на разделы "
+"или страницы."
+
+#: ../../docs/documentation_guidelines/writing.rst:161
+msgid ""
+"The example below creates the anchor of a section (e.g., Label/reference "
+"title)"
+msgstr ""
+"В примере ниже создается анкор раздела (например, метка/название ссылки)."
+
+#: ../../docs/documentation_guidelines/writing.rst:170
+msgid "To call the reference in the **same page**, use"
+msgstr "Чтобы вызвать ссылку на **той же странице**, используйте"
+
+#: ../../docs/documentation_guidelines/writing.rst:176
+msgid "which will return:"
+msgstr "что вернет:"
+
+#: ../../docs/documentation_guidelines/writing.rst:178
+msgid "see my_anchor_ for more information."
+msgstr "См. my_anchor_ для получения дополнительной информации."
+
+#: ../../docs/documentation_guidelines/writing.rst:180
+msgid ""
+"Notice that it will jump to the line/thing following the 'anchor'. You do "
+"not need to use apostrophes, but you do need to have empty lines after the "
+"anchor."
+msgstr ""
+"Обратите внимание, что он перейдет к строке/элементу, следующему за "
+"«якорем». Апострофы использовать не нужно, но после якоря должны быть пустые"
+" строки."
+
+#: ../../docs/documentation_guidelines/writing.rst:184
+msgid ""
+"Another way to jump to the same place **from anywhere in the documentation**"
+" is to use the ``:ref:`` role."
+msgstr ""
+"Другой способ перейти в одно и то же место **из любой точки документации** —"
+" использовать роль ``:ref:``."
+
+#: ../../docs/documentation_guidelines/writing.rst:191
+msgid ""
+"which will create a link with the caption instead (in this case the title of"
+" this section!):"
+msgstr ""
+"что создаст ссылку с подписью (в данном случае с названием этого раздела!):"
+
+#: ../../docs/documentation_guidelines/writing.rst:194
+msgid "see :ref:`my_anchor` for more information."
+msgstr "См. :ref:`my_anchor` для получения дополнительной информации."
+
+#: ../../docs/documentation_guidelines/writing.rst:196
+msgid ""
+"So, reference 1 (my_anchor_) and reference 2 (:ref:`my_anchor`). Because the"
+" reference often displays a full caption, it is not really necessary to use "
+"the word *section*. Note that you can also use a custom caption to describe "
+"the reference:"
+msgstr ""
+"Итак, ссылка 1 (my_anchor_) и ссылка 2 (:ref:`my_anchor`). Поскольку ссылка "
+"часто отображает полную подпись, нет необходимости использовать слово "
+"*section*. Обратите внимание, что вы также можете использовать настраиваемую"
+" подпись для описания ссылки:"
+
+#: ../../docs/documentation_guidelines/writing.rst:205
+msgid "which returns:"
+msgstr "который возвращает:"
+
+#: ../../docs/documentation_guidelines/writing.rst:207
+msgid "see :ref:`Label and reference <my_anchor>` for more information."
+msgstr ""
+"См. :ref:`Метка и ссылка<my_anchor> ` для получения дополнительной "
+"информации."
+
+#: ../../docs/documentation_guidelines/writing.rst:213
+msgid "Figures and Images"
+msgstr "Цифры и изображения"
+
+#: ../../docs/documentation_guidelines/writing.rst:217
+msgid "Pictures"
+msgstr "Фотографии"
+
+#: ../../docs/documentation_guidelines/writing.rst:219
+msgid "To insert an image, use"
+msgstr "Чтобы вставить изображение, используйте"
+
+#: ../../docs/documentation_guidelines/writing.rst:226
+msgid "which returns"
+msgstr "который возвращает"
+
+#: ../../docs/documentation_guidelines/writing.rst:232
+msgid "Replacement"
+msgstr "Замена"
+
+#: ../../docs/documentation_guidelines/writing.rst:234
+msgid ""
+"You can put an image inside text or add an alias to use everywhere. To use "
+"an image inside a paragraph, first create an alias in the "
+":file:`source/substitutions.txt` file:"
+msgstr ""
+"Вы можете вставить изображение в текст или добавить псевдоним для "
+"использования в любом месте. Чтобы использовать изображение в абзаце, "
+"сначала создайте псевдоним в файле :file:`source/substitutions.txt`:"
+
+#: ../../docs/documentation_guidelines/writing.rst:244
+msgid "and then call it in your paragraph:"
+msgstr "а затем вызовите его в своем абзаце:"
+
+#: ../../docs/documentation_guidelines/writing.rst:250
+msgid "This is how the example will be displayed:"
+msgstr "Вот как будет отображаться пример:"
+
+#: ../../docs/documentation_guidelines/writing.rst:255
+msgid "My paragraph begins here with a nice logo |nice_logo|."
+msgstr "Мой абзац начинается здесь с красивого логотипа |nice_logo|."
 
 #: ../../docs/documentation_guidelines/writing.rst:252
 msgid "nice_logo"
 msgstr "nice_logo"
 
+#: ../../docs/documentation_guidelines/writing.rst:257
+msgid ""
+"To allow preview rendering in GitHub that is as close as possible to HTML "
+"rendering, you will also need to add the image replacement call at the end "
+"of the file you changed. This can be done by copy-pasting it from "
+":file:`substitutions.txt` or by executing the "
+":file:`scripts/find_set_subst.py` script."
+msgstr ""
+"Чтобы сделать предварительный просмотр в GitHub максимально приближенным к "
+"отображению HTML, вам также необходимо добавить вызов замены изображения в "
+"конец измененного файла. Это можно сделать, скопировав его из файла "
+":file:`substitutions.txt` или выполнив скрипт "
+":file:`scripts/find_set_subst.py`."
+
+#: ../../docs/documentation_guidelines/writing.rst:266
+msgid ""
+"Currently, to ensure consistency and help in the use of QGIS icons, a list "
+"of aliases is built and available in the :ref:`substitutions` chapter."
+msgstr ""
+"В настоящее время, чтобы обеспечить согласованность и помочь в использовании"
+" значков QGIS, создан список псевдонимов, который доступен в главе "
+":ref:«Подстановки»."
+
+#: ../../docs/documentation_guidelines/writing.rst:270
+msgid "Figure"
+msgstr "Рисунок"
+
+#: ../../docs/documentation_guidelines/writing.rst:283
+msgid "The result looks like this:"
+msgstr "Результат выглядит следующим образом:"
+
+#: ../../docs/documentation_guidelines/writing.rst:291
+msgid "A caption: A logo I like"
+msgstr "Подпись: Логотип, который мне нравится"
+
+#: ../../docs/documentation_guidelines/writing.rst:293
+msgid ""
+"To avoid conflicts with other references, always begin figure anchors with "
+"``_figure_`` and use terms that easily connect to the figure caption. While "
+"only the centered alignment is mandatory for the image, feel free to use any"
+" other options for figures (such as ``width``, ``height``, ``scale``...) if "
+"needed."
+msgstr ""
+"Чтобы избежать конфликтов с другими ссылками, всегда начинайте якоря "
+"рисунков с «_figure_» и используйте термины, которые легко связываются с "
+"подписью к рисунку. Хотя для изображения обязательным является только "
+"выравнивание по центру, при необходимости можно использовать любые другие "
+"параметры для рисунков (такие как ширина, высота, масштаб и т. д.)."
+
+#: ../../docs/documentation_guidelines/writing.rst:299
+msgid ""
+"The scripts will insert an automatically generated number before the caption"
+" of the figure in the generated HTML and PDF versions of the documentation."
+msgstr ""
+"Скрипты будут вставлять автоматически сгенерированный номер перед подписью к"
+" рисунку в сгенерированных HTML- и PDF-версиях документации."
+
+#: ../../docs/documentation_guidelines/writing.rst:302
+msgid ""
+"To use a caption (*see My caption*) just insert indented text after a blank "
+"line in the figure block."
+msgstr ""
+"Чтобы использовать подпись (*см. Моя подпись*), просто вставьте "
+"отформатированный текст после пустой строки в блоке рисунка."
+
+#: ../../docs/documentation_guidelines/writing.rst:305
+msgid "A figure can be referenced using the reference label like this:"
+msgstr "На рисунок можно сослаться с помощью ссылки, например так:"
+
+#: ../../docs/documentation_guidelines/writing.rst:311
+#: ../../docs/documentation_guidelines/writing.rst:328
+msgid "renders like this:"
+msgstr "отображается следующим образом:"
+
+#: ../../docs/documentation_guidelines/writing.rst:313
+msgid "see :numref:`figure_logo`"
+msgstr "см.:numref:`figure_logo`"
+
+#: ../../docs/documentation_guidelines/writing.rst:315
+msgid "This is the preferred way of referencing figures."
+msgstr "Это предпочтительный способ ссылки на рисунки."
+
+#: ../../docs/documentation_guidelines/writing.rst:319
+msgid "For ``:numref:`` to work, the figure **must have a caption**."
+msgstr "Чтобы ``:numref:`` работал, рисунок **должен иметь подпись**."
+
+#: ../../docs/documentation_guidelines/writing.rst:321
+msgid ""
+"It is possible to use ``:ref:`` instead of ``:numref:`` for reference, but "
+"this returns the full caption of the image."
+msgstr ""
+"Вместо ``:numref:`` для ссылки можно использовать ``:ref:``, но в этом "
+"случае будет возвращаться полная подпись к изображению."
+
+#: ../../docs/documentation_guidelines/writing.rst:330
+msgid "see :ref:`figure_logo`"
+msgstr "см.: :ref:`figure_logo`"
+
 #: ../../docs/documentation_guidelines/writing.rst:334
 msgid "Tables"
 msgstr "Таблицы"
+
+#: ../../docs/documentation_guidelines/writing.rst:336
+msgid "A simple table can be coded like this"
+msgstr "Простая таблица может быть закодирована следующим образом"
+
+#: ../../docs/documentation_guidelines/writing.rst:347
+msgid "It will render like this:"
+msgstr "Результат будет выглядеть так:"
+
+#: ../../docs/documentation_guidelines/writing.rst:350
+msgid "x"
+msgstr "x"
+
+#: ../../docs/documentation_guidelines/writing.rst:350
+msgid "y"
+msgstr "y"
+
+#: ../../docs/documentation_guidelines/writing.rst:350
+msgid "z"
+msgstr "z"
 
 #: ../../docs/documentation_guidelines/writing.rst:352
 msgid "1"
@@ -66,6 +478,17 @@ msgstr "4"
 msgid "5"
 msgstr "5"
 
+#: ../../docs/documentation_guidelines/writing.rst:356
+msgid ""
+"Use a ``\\`` (backslash) followed by an empty space to leave an empty space."
+msgstr ""
+"Используйте символ «\\» (обратный слеш), за которым следует пустое "
+"пространство, чтобы оставить пустое пространство."
+
+#: ../../docs/documentation_guidelines/writing.rst:358
+msgid "You can also make more complicated tables and reference them:"
+msgstr "Вы также можете создавать более сложные таблицы и ссылаться на них:"
+
 #: ../../docs/documentation_guidelines/writing.rst:376
 #: ../../docs/documentation_guidelines/writing.rst:412
 msgid "The result:"
@@ -74,6 +497,10 @@ msgstr "Результат:"
 #: ../../docs/documentation_guidelines/writing.rst:381
 msgid "Windows"
 msgstr "Windows"
+
+#: ../../docs/documentation_guidelines/writing.rst:381
+msgid "macOS"
+msgstr "macOS"
 
 #: ../../docs/documentation_guidelines/writing.rst:383
 msgid "|win|"
@@ -91,27 +518,533 @@ msgstr "|osx|"
 msgid "osx"
 msgstr "osx"
 
+#: ../../docs/documentation_guidelines/writing.rst:385
+msgid "and of course not to forget |nix|"
+msgstr "и, конечно же, не забыть |nix|"
+
 #: ../../docs/documentation_guidelines/writing.rst:809
 msgid "nix"
 msgstr "nix"
 
+#: ../../docs/documentation_guidelines/writing.rst:388
+msgid ""
+"My drawn table, mind you this is unfortunately not regarded as a caption"
+msgstr ""
+"Моя нарисованная таблица, заметьте, к сожалению, это не считается подписью."
+
+#: ../../docs/documentation_guidelines/writing.rst:390
+msgid "You can reference to it like this my_drawn_table_."
+msgstr "Вы можете ссылаться на него следующим образом: my_drawn_table_."
+
+#: ../../docs/documentation_guidelines/writing.rst:392
+msgid "For even more complex tables, it is easier to use ``list-table``:"
+msgstr "Для еще более сложных таблиц проще использовать ``list-table``:"
+
+#: ../../docs/documentation_guidelines/writing.rst:418
+msgid "What"
+msgstr "Что"
+
 #: ../../docs/documentation_guidelines/writing.rst:419
 msgid "Purpose"
 msgstr "Назначение"
+
+#: ../../docs/documentation_guidelines/writing.rst:420
+msgid "Key word"
+msgstr "Ключевое слово"
 
 #: ../../docs/documentation_guidelines/writing.rst:421
 #: ../../docs/documentation_guidelines/writing.rst:648
 msgid "Description"
 msgstr "Описание"
 
+#: ../../docs/documentation_guidelines/writing.rst:422
+msgid "**Test**"
+msgstr "**Тест**"
+
+#: ../../docs/documentation_guidelines/writing.rst:423
+msgid "``Useful test``"
+msgstr "«Полезный тест»"
+
+#: ../../docs/documentation_guidelines/writing.rst:424
+msgid "complexity"
+msgstr "сложность"
+
+#: ../../docs/documentation_guidelines/writing.rst:425
+msgid "Geometry.  One of:"
+msgstr "Геометрия. Одно из следующих:"
+
 #: ../../docs/documentation_guidelines/writing.rst:427
 #: ../../docs/documentation_guidelines/writing.rst:678
 msgid "Point"
 msgstr "Точка"
 
+#: ../../docs/documentation_guidelines/writing.rst:428
+msgid "Line"
+msgstr "Линия"
+
 #: ../../docs/documentation_guidelines/writing.rst:431
 msgid "Index"
 msgstr "Index"
+
+#: ../../docs/documentation_guidelines/writing.rst:433
+msgid ""
+"An index is a handy way to help the reader find information in a document. "
+"QGIS documentation provides some essential indices. There are a few rules "
+"that help us provide a set of indices that are really useful (coherent, "
+"consistent and really connected to each other):"
+msgstr ""
+"Указатель — это удобный способ помочь читателю найти информацию в документе."
+" Документация QGIS содержит несколько важных указателей. Существует "
+"несколько правил, которые помогают нам создать набор действительно полезных "
+"указателей (согласованных, последовательных и действительно связанных друг с"
+" другом):"
+
+#: ../../docs/documentation_guidelines/writing.rst:438
+msgid ""
+"An index should be human readable, understandable and translatable; an index"
+" can be made from many words but you should avoid any unneeded ``_``, "
+"``-``... characters to link them i.e., ``Loading layers`` instead of "
+"``loading_layers`` or ``loadingLayers``."
+msgstr ""
+"Индекс должен быть удобочитаемым, понятным и переводимым; индекс может "
+"состоять из многих слов, но следует избегать ненужных символов «_», «-» и т."
+" д. для их соединения, например, «Loading layers» вместо «loading_layers» "
+"или «loadingLayers»."
+
+#: ../../docs/documentation_guidelines/writing.rst:442
+msgid ""
+"Capitalize only the first letter of the index unless the word has a "
+"particular spelling. E.g., ``Loading layers``, ``Atlas generation``, "
+"``WMS``, ``pgsql2shp``."
+msgstr ""
+"Пишите с большой буквы только первую букву индекса, если только слово не "
+"имеет особого написания. Например, «Загрузка слоев», «Создание атласа», "
+"«WMS», «pgsql2shp»."
+
+#: ../../docs/documentation_guidelines/writing.rst:445
+msgid ""
+"Keep an eye on the existing `Index list "
+"<https://docs.qgis.org/testing/en/genindex.html>`_ in order to reuse the "
+"most convenient expression with the right spelling and avoid unnecessary "
+"duplicates."
+msgstr ""
+"Следите за существующим `Списком индексов "
+"<https://docs.qgis.org/testing/en/genindex.html>`_, чтобы повторно "
+"использовать наиболее удобное выражение с правильным написанием и избежать "
+"ненужных дубликатов."
+
+#: ../../docs/documentation_guidelines/writing.rst:449
+msgid ""
+"Several index tags exist in RST. You can use the inline ``:index:`` tag "
+"within normal text:"
+msgstr ""
+"В RST существует несколько тегов индекса. Вы можете использовать встроенный "
+"тег ``:index:`` в обычном тексте:"
+
+#: ../../docs/documentation_guidelines/writing.rst:456
+msgid ""
+"Or you can use the ``.. index::`` block-level markup which links to the "
+"beginning of the next paragraph. Because of the rules mentioned above, it is"
+" recommended to use the block-level tag:"
+msgstr ""
+"Или вы можете использовать блок-уровень разметки ``.. index::``, который "
+"связывает с началом следующего абзаца. Из-за упомянутых выше правил "
+"рекомендуется использовать блок-уровень тега:"
+
+#: ../../docs/documentation_guidelines/writing.rst:464
+msgid ""
+"It is also recommended to use index parameters such as ``single``, ``pair`` "
+"and ``see``, in order to build a more structured and interconnected index "
+"table. See `Index generating <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#index-generating-"
+"markup>`_ for more information on index creation."
+msgstr ""
+"Также рекомендуется использовать такие параметры индекса, как «single», "
+"«pair» и «see», чтобы создать более структурированную и взаимосвязанную "
+"таблицу индекса. Дополнительную информацию о создании индекса см. в разделе "
+"«Создание индекса <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#index-generating-"
+"markup>»_."
+
+#: ../../docs/documentation_guidelines/writing.rst:471
+msgid "Special Comments"
+msgstr "Особые комментарии"
+
+#: ../../docs/documentation_guidelines/writing.rst:473
+msgid ""
+"Sometimes, you may want to emphasize some points of the description, either "
+"to warn, remind or give some hints to the user. In QGIS Documentation, we "
+"use reST special directives such as ``.. warning::``, ``.. seealso::``, ``.."
+" note::`` and ``.. tip::``. These directives generate frames that highlight "
+"your comments. See `Paragraph Level markup <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#paragraph-level-"
+"markup>`_ for more information. A clear and appropriate title is required "
+"for both warnings and tips."
+msgstr ""
+"Иногда может возникнуть необходимость выделить некоторые моменты описания, "
+"чтобы предупредить, напомнить или дать пользователю подсказку. В "
+"документации QGIS мы используем специальные директивы reST, такие как «.. "
+"warning::», «.. seealso::», «.. note::» и «.. tip::». Эти директивы создают "
+"рамки, которые выделяют ваши комментарии. Дополнительную информацию см. в "
+"разделе «Разметка на уровне абзаца <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#paragraph-level-"
+"markup>»_. Для предупреждений и советов требуется четкий и подходящий "
+"заголовок."
+
+#: ../../docs/documentation_guidelines/writing.rst:491
+msgid "Code Snippets"
+msgstr "Фрагменты кода"
+
+#: ../../docs/documentation_guidelines/writing.rst:493
+msgid ""
+"You may also want to give examples and insert code snippets. In this case, "
+"write the comment below a line with the ``::`` directive inserted.  For a "
+"better rendering, especially to apply color highlighting to code according "
+"to its language, use the code-block directive, e.g. ``.. code-block:: xml``."
+" More details at `Showing code <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#showing-code-"
+"examples>`_."
+msgstr ""
+"Вы также можете привести примеры и вставить фрагменты кода. В этом случае "
+"напишите комментарий под строкой с вставленной директивой ``::``. Для "
+"лучшего отображения, в частности для применения цветовой подсветки кода в "
+"соответствии с его языком, используйте директиву code-block, например ``.. "
+"code-block:: xml``. Более подробная информация в разделе `Отображение кода "
+"<https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#showing-code-"
+"examples>`_."
+
+#: ../../docs/documentation_guidelines/writing.rst:502
+msgid ""
+"While texts in note, tip and warning frames are translatable, be aware that "
+"code block frames do not allow translation. So avoid comments not related to"
+" the code and keep comments as short as possible."
+msgstr ""
+"Хотя тексты в рамках «Примечание», «Совет» и «Предупреждение» подлежат "
+"переводу, следует помнить, что рамки «Блок кода» не допускают перевода. "
+"Поэтому избегайте комментариев, не связанных с кодом, и старайтесь, чтобы "
+"комментарии были как можно короче."
+
+#: ../../docs/documentation_guidelines/writing.rst:507
+msgid "Footnotes"
+msgstr "Сноски"
+
+#: ../../docs/documentation_guidelines/writing.rst:509
+msgid ""
+"Please note: Footnotes are not recognized by any translation software and it"
+" is also not converted to pdf format properly. So, if possible, don't use "
+"footnotes within any documentation."
+msgstr ""
+"Обратите внимание: сноски не распознаются никаким программным обеспечением "
+"для перевода и также не конвертируются в формат pdf должным образом. "
+"Поэтому, по возможности, не используйте сноски в документации."
+
+#: ../../docs/documentation_guidelines/writing.rst:513
+msgid "This is for creating a footnote (showing as example [1]_)"
+msgstr "Это для создания сноски (отображается как пример [1]_)."
+
+#: ../../docs/documentation_guidelines/writing.rst:519
+msgid "Which will point to:"
+msgstr "Что будет указывать на:"
+
+#: ../../docs/documentation_guidelines/writing.rst:521
+msgid "Updates of core plugins"
+msgstr "Обновления основных плагинов"
+
+#: ../../docs/documentation_guidelines/writing.rst:526
+msgid "Managing Screenshots"
+msgstr "Управление снимками экрана"
+
+#: ../../docs/documentation_guidelines/writing.rst:529
+msgid "Add new Screenshots"
+msgstr "Добавить новые скриншоты"
+
+#: ../../docs/documentation_guidelines/writing.rst:531
+msgid ""
+"Here are some hints to create new, nice looking screenshots. The images "
+"should be placed in an image (:file:`img/`) folder that is located in the "
+"same folder as the referencing :file:`.rst` file."
+msgstr ""
+"Вот несколько советов по созданию новых, красивых скриншотов. Изображения "
+"должны быть помещены в папку image (:file:`img/`), которая находится в той "
+"же папке, что и ссылочный файл :file:`.rst`."
+
+#: ../../docs/documentation_guidelines/writing.rst:535
+msgid ""
+"You can find some prepared QGIS-projects that are used to create screenshots"
+" in the :file:`./qgis-projects` folder of this repository. This makes it "
+"easier to reproduce screenshots for the next version of QGIS. These projects"
+" use the QGIS `Sample Data <https://github.com/qgis/QGIS-Sample-"
+"Data/archive/master.zip>`_ (aka Alaska Dataset), which should be unzipped "
+"and placed in the same folder as the QGIS-Documentation Repository."
+msgstr ""
+"Вы можете найти несколько готовых проектов QGIS, которые используются для "
+"создания скриншотов, в папке :file:`./qgis-projects` этого репозитория. Это "
+"упрощает воспроизведение скриншотов для следующей версии QGIS. Эти проекты "
+"используют `Sample Data <https://github.com/qgis/QGIS-Sample-"
+"Data/archive/master.zip>`_ (также известный как Alaska Dataset) QGIS, "
+"который необходимо распаковать и поместить в ту же папку, что и репозиторий "
+"документации QGIS."
+
+#: ../../docs/documentation_guidelines/writing.rst:541
+msgid ""
+"Reduce the window to the minimal space needed to show the feature (taking "
+"the whole screen for a small modal window > overkill)"
+msgstr ""
+"Уменьшите окно до минимального размера, необходимого для отображения функции"
+" (занимать весь экран для небольшого модального окна — это перебор)."
+
+#: ../../docs/documentation_guidelines/writing.rst:543
+msgid "The less clutter, the better (no need to activate all the toolbars)"
+msgstr ""
+"Чем меньше беспорядка, тем лучше (нет необходимости активировать все панели "
+"инструментов)"
+
+#: ../../docs/documentation_guidelines/writing.rst:544
+msgid ""
+"Don't resize them in an image editor; the size will be set into the "
+":file:`.rst` files if necessary (downscaling the dimensions without properly"
+" upping the resolution > ugly)"
+msgstr ""
+"Не изменяйте их размер в графическом редакторе; размер будет установлен в "
+"файлах :file:`.rst`, если это необходимо (уменьшение размеров без "
+"соответствующего увеличения разрешения > некрасиво)."
+
+#: ../../docs/documentation_guidelines/writing.rst:547
+msgid "Cut the background"
+msgstr "Вырезать фон"
+
+#: ../../docs/documentation_guidelines/writing.rst:548
+msgid "Make the top corners transparent if the background is not white"
+msgstr "Сделать верхние углы прозрачными, если фон не белый"
+
+#: ../../docs/documentation_guidelines/writing.rst:549
+msgid ""
+"Set print size resolution to ``135 dpi`` (e.g. in Gimp set the print "
+"resolution :menuselection:`Image --> Print size` and save). This way, images"
+" will be at original size in html and at a good print resolution in the PDF."
+" You can also use ImageMagick convert command to do a batch of images:"
+msgstr ""
+"Установите разрешение печати на «135 dpi» (например, в Gimp установите "
+"разрешение печати: меню «Изображение» --> «Размер печати» и сохраните). "
+"Таким образом, изображения будут иметь исходный размер в html и хорошее "
+"разрешение печати в PDF. Вы также можете использовать команду ImageMagick "
+"convert для пакетной обработки изображений:"
+
+#: ../../docs/documentation_guidelines/writing.rst:558
+msgid "Save them as :file:`.png` (to avoid :file:`.jpeg` artifacts)"
+msgstr ""
+"Сохраните их как :file:`.png` (чтобы избежать :file:`.jpeg` артефактов)"
+
+#: ../../docs/documentation_guidelines/writing.rst:559
+msgid ""
+"The screenshot should show the content according to what is described in the"
+" text"
+msgstr ""
+"Скриншот должен отображать содержимое в соответствии с описанием в тексте."
+
+#: ../../docs/documentation_guidelines/writing.rst:562
+msgid ""
+"If you are on Ubuntu, you can use the following command to remove the global"
+" menu function and create smaller application screens with menus:"
+msgstr ""
+"Если вы используете Ubuntu, вы можете использовать следующую команду, чтобы "
+"удалить функцию глобального меню и создать меньшие экраны приложений с меню:"
+
+#: ../../docs/documentation_guidelines/writing.rst:571
+msgid "Translated Screenshots"
+msgstr "Переведенные скриншоты"
+
+#: ../../docs/documentation_guidelines/writing.rst:573
+msgid ""
+"Here are some additional hints for those that want to create screenshots for"
+" a translated user guide:"
+msgstr ""
+"Вот несколько дополнительных советов для тех, кто хочет создать скриншоты "
+"для переведенного руководства пользователя:"
+
+#: ../../docs/documentation_guidelines/writing.rst:576
+msgid ""
+"Translated images should be placed in a :file:`img/<your_language>/` folder."
+" Use the same filename as the english 'original' screenshot."
+msgstr ""
+"Переведенные изображения должны быть помещены в папку "
+":file:`img/<your_language>/`. Используйте то же имя файла, что и у "
+"«оригинального» скриншота на английском языке."
+
+#: ../../docs/documentation_guidelines/writing.rst:581
+msgid "Documenting Processing algorithms"
+msgstr "Документирование алгоритмов обработки"
+
+#: ../../docs/documentation_guidelines/writing.rst:583
+msgid ""
+"If you want to write documentation for Processing algorithms, consider these"
+" guidelines:"
+msgstr ""
+"Если вы хотите написать документацию для алгоритмов обработки, примите во "
+"внимание следующие рекомендации:"
+
+#: ../../docs/documentation_guidelines/writing.rst:586
+msgid ""
+"Processing algorithm help files are part of QGIS User Guide, so use the same"
+" formatting as User Guide and other documentation."
+msgstr ""
+"Файлы справки по алгоритмам обработки являются частью руководства "
+"пользователя QGIS, поэтому используйте то же форматирование, что и в "
+"руководстве пользователя и другой документации."
+
+#: ../../docs/documentation_guidelines/writing.rst:589
+msgid ""
+"Each algorithm documentation should be placed in the corresponding "
+"**provider** folder and **group** file, e.g. the algorithm `Voronoi polygon`"
+" belongs to the `QGIS` provider and to the group `vectorgeometry`. So the "
+"correct file to add the description is: "
+":file:`source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst`."
+msgstr ""
+"Документация каждого алгоритма должна быть размещена в соответствующей папке"
+" **провайдера** и файле **группы**, например, алгоритм `Voronoi polygon` "
+"принадлежит провайдеру `QGIS` и группе `vectorgeometry`. Таким образом, "
+"правильный файл для добавления описания: "
+":file:`source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst`."
+
+#: ../../docs/documentation_guidelines/writing.rst:594
+msgid ""
+"Before starting to write the guide, check if the algorithm is already "
+"described. In this case, you can enhance the existing description."
+msgstr ""
+"Перед тем как приступить к написанию руководства, проверьте, не описан ли "
+"алгоритм уже. В этом случае вы можете дополнить существующее описание."
+
+#: ../../docs/documentation_guidelines/writing.rst:597
+msgid ""
+"It is **extremely** important that each algorithm has an *anchor* that "
+"corresponds to the provider name + the unique name of the algorithm itself. "
+"This allows the Help button to open the Help page of the correct section. "
+"The anchor should be placed **above** the title, e.g. (see also the "
+":ref:`my_anchor` section)::"
+msgstr ""
+"Очень важно, чтобы каждый алгоритм имел *якорь*, соответствующий имени "
+"поставщика + уникальному имени самого алгоритма. Это позволяет кнопке "
+"«Справка» открывать страницу справки нужного раздела. Якорь должен быть "
+"размещен **над** заголовком, например (см. также раздел :ref:`my_anchor`)::"
+
+#: ../../docs/documentation_guidelines/writing.rst:607
+msgid ""
+"To find out the algorithm name you can just hover the mouse on the algorithm"
+" in the Processing toolbox."
+msgstr ""
+"Чтобы узнать название алгоритма, просто наведите курсор мыши на алгоритм в "
+"панели инструментов обработки."
+
+#: ../../docs/documentation_guidelines/writing.rst:609
+msgid ""
+"Avoid using \"This algorithm does this and that...\" as the first sentence "
+"in the algorithm description. Try to use more general expressions like::"
+msgstr ""
+"Избегайте использования фразы «Этот алгоритм делает то-то и то-то...» в "
+"качестве первого предложения в описании алгоритма. Постарайтесь использовать"
+" более общие выражения, такие как:"
+
+#: ../../docs/documentation_guidelines/writing.rst:614
+msgid ""
+"Avoid describing what the algorithm does by replicating its name and please "
+"don't replicate the name of the parameter in the description of the "
+"parameter itself. For example if the algorithm is ``Voronoi polygon`` "
+"consider to describe the ``Input layer`` as ``Layer to calculate the polygon"
+" from``."
+msgstr ""
+"Избегайте описания того, что делает алгоритм, повторяя его название, и не "
+"повторяйте название параметра в описании самого параметра. Например, если "
+"алгоритм называется «Полигон Вороного», рассмотрите возможность описать "
+"«Входной слой» как «Слой для вычисления полигона»."
+
+#: ../../docs/documentation_guidelines/writing.rst:618
+msgid ""
+"Indicate in the description whether the algorithm has a default shortcut in "
+"QGIS or supports in-place editing."
+msgstr ""
+"Укажите в описании, имеет ли алгоритм стандартное сокращение в QGIS или "
+"поддерживает редактирование на месте."
+
+#: ../../docs/documentation_guidelines/writing.rst:620
+msgid ""
+"Add images! A picture is worth a thousand words! Use :file:`.png` format and"
+" follow the general guidelines for documentation (see the :ref:`image` "
+"section for more info). Put the image file in the correct folder, i.e. the "
+":file:`img` folder next to the :file:`.rst` file you are editing."
+msgstr ""
+"Добавляйте изображения! Картинка стоит тысячи слов! Используйте формат "
+":file:`.png` и следуйте общим рекомендациям по документированию (подробнее "
+"см. раздел :ref:«Изображения») . Поместите файл изображения в "
+"соответствующую папку, т. е. в папку :file:`img` рядом с файлом "
+":file:`.rst`, который вы редактируете."
+
+#: ../../docs/documentation_guidelines/writing.rst:624
+msgid ""
+"If necessary, add links in the \"See also\" section that provide additional "
+"information about the algorithm  (e.g., publications or web-pages).  Only "
+"add the \"See also\" section if there is really something to see. As a good "
+"practice, the \"See also\" section can be filled with links to similar "
+"algorithms."
+msgstr ""
+"При необходимости добавьте в раздел «См. также» ссылки, содержащие "
+"дополнительную информацию об алгоритме (например, публикации или веб-"
+"страницы). Добавляйте раздел «См. также» только в том случае, если там "
+"действительно есть что посмотреть. В качестве хорошей практики раздел «См. "
+"также» можно заполнить ссылками на похожие алгоритмы."
+
+#: ../../docs/documentation_guidelines/writing.rst:628
+msgid ""
+"Give clear explanation for algorithm parameters and outputs: take "
+"inspiration from existing algorithms."
+msgstr ""
+"Дайте четкое объяснение параметров и результатов алгоритма: вдохновляйтесь "
+"существующими алгоритмами."
+
+#: ../../docs/documentation_guidelines/writing.rst:630
+msgid ""
+"Avoid duplicating detailed description of algorithm options. Add this "
+"information in the parameter description."
+msgstr ""
+"Избегайте дублирования подробного описания опций алгоритма. Добавьте эту "
+"информацию в описание параметров."
+
+#: ../../docs/documentation_guidelines/writing.rst:632
+msgid ""
+"Avoid adding information about the vector geometry type in the algorithm or "
+"parameter description, as this information is already available in the "
+"parameter descriptions."
+msgstr ""
+"Не добавляйте информацию о типе геометрии вектора в алгоритм или описание "
+"параметра, так как эта информация уже доступна в описаниях параметров."
+
+#: ../../docs/documentation_guidelines/writing.rst:635
+msgid "Add the default value of the parameter, e.g.::"
+msgstr "Добавьте значение по умолчанию для параметра, например:"
+
+#: ../../docs/documentation_guidelines/writing.rst:644
+msgid ""
+"Describe the *type* of input supported the parameters. There are several "
+"types available you can pick one from:"
+msgstr ""
+"Опишите *тип* ввода, поддерживаемый параметрами. Доступно несколько типов, "
+"из которых вы можете выбрать один:"
+
+#: ../../docs/documentation_guidelines/writing.rst:648
+msgid "Parameter/Output type"
+msgstr "Параметр/Тип вывода"
+
+#: ../../docs/documentation_guidelines/writing.rst:648
+msgid "Visual indicator"
+msgstr "Визуальный индикатор"
+
+#: ../../docs/documentation_guidelines/writing.rst:650
+msgid "Point vector layer"
+msgstr "Векторный слой точек"
+
+#: ../../docs/documentation_guidelines/writing.rst:650
+msgid "``vector: point``"
+msgstr "``вектор: точка``"
 
 #: ../../docs/documentation_guidelines/writing.rst:650
 msgid "|pointLayer|"
@@ -122,12 +1055,28 @@ msgid "pointLayer"
 msgstr "pointLayer"
 
 #: ../../docs/documentation_guidelines/writing.rst:651
+msgid "Line vector layer"
+msgstr "Векторный слой линии"
+
+#: ../../docs/documentation_guidelines/writing.rst:651
+msgid "``vector: line``"
+msgstr "``вектор: линия``"
+
+#: ../../docs/documentation_guidelines/writing.rst:651
 msgid "|lineLayer|"
 msgstr "|lineLayer|"
 
 #: ../../docs/documentation_guidelines/writing.rst:807
 msgid "lineLayer"
 msgstr "lineLayer"
+
+#: ../../docs/documentation_guidelines/writing.rst:652
+msgid "Polygon vector layer"
+msgstr "Векторный слой полигонов"
+
+#: ../../docs/documentation_guidelines/writing.rst:652
+msgid "``vector: polygon``"
+msgstr "``вектор: многоугольник``"
 
 #: ../../docs/documentation_guidelines/writing.rst:652
 msgid "|polygonLayer|"
@@ -137,6 +1086,22 @@ msgstr "|polygonLayer|"
 msgid "polygonLayer"
 msgstr "polygonLayer"
 
+#: ../../docs/documentation_guidelines/writing.rst:653
+msgid "All spatial vector layers"
+msgstr "Все пространственные векторные слои"
+
+#: ../../docs/documentation_guidelines/writing.rst:653
+msgid "``vector: geometry``"
+msgstr "``вектор: геометрия``"
+
+#: ../../docs/documentation_guidelines/writing.rst:654
+msgid "Geometryless vector layer"
+msgstr "Векторный слой без геометрии"
+
+#: ../../docs/documentation_guidelines/writing.rst:654
+msgid "``vector: table``"
+msgstr "``вектор: таблица``"
+
 #: ../../docs/documentation_guidelines/writing.rst:654
 msgid "|tableLayer|"
 msgstr "|tableLayer|"
@@ -144,6 +1109,22 @@ msgstr "|tableLayer|"
 #: ../../docs/documentation_guidelines/writing.rst:825
 msgid "tableLayer"
 msgstr "tableLayer"
+
+#: ../../docs/documentation_guidelines/writing.rst:655
+msgid "Generic vector layer"
+msgstr "Общий векторный слой"
+
+#: ../../docs/documentation_guidelines/writing.rst:655
+msgid "``vector: any``"
+msgstr "``вектор: любой``"
+
+#: ../../docs/documentation_guidelines/writing.rst:656
+msgid "Vector field numeric"
+msgstr "Числовое векторное поле"
+
+#: ../../docs/documentation_guidelines/writing.rst:656
+msgid "``tablefield: numeric``"
+msgstr "``поле таблицы: числовое``"
 
 #: ../../docs/documentation_guidelines/writing.rst:656
 msgid "|fieldFloat|"
@@ -154,12 +1135,32 @@ msgid "fieldFloat"
 msgstr "fieldFloat"
 
 #: ../../docs/documentation_guidelines/writing.rst:657
+msgid "Vector field string"
+msgstr "Векторное поле строк"
+
+#: ../../docs/documentation_guidelines/writing.rst:657
+msgid "``tablefield: string``"
+msgstr "``поле таблицы: строка``"
+
+#: ../../docs/documentation_guidelines/writing.rst:657
 msgid "|fieldText|"
 msgstr "|fieldText|"
 
 #: ../../docs/documentation_guidelines/writing.rst:804
 msgid "fieldText"
 msgstr "fieldText"
+
+#: ../../docs/documentation_guidelines/writing.rst:658
+msgid "Vector field generic"
+msgstr "Векторное поле общего типа"
+
+#: ../../docs/documentation_guidelines/writing.rst:658
+msgid "``tablefield: any``"
+msgstr "``поле таблицы: любое``"
+
+#: ../../docs/documentation_guidelines/writing.rst:659
+msgid "Raster layer"
+msgstr "Растровый слой"
 
 #: ../../docs/documentation_guidelines/writing.rst:659
 msgid "``raster``"
@@ -173,9 +1174,29 @@ msgstr "|rasterLayer|"
 msgid "rasterLayer"
 msgstr "rasterLayer"
 
+#: ../../docs/documentation_guidelines/writing.rst:660
+msgid "Raster band"
+msgstr "Растровая полоса"
+
+#: ../../docs/documentation_guidelines/writing.rst:660
+msgid "``raster band``"
+msgstr "``растровый диапазон``"
+
+#: ../../docs/documentation_guidelines/writing.rst:661
+msgid "HTML file"
+msgstr "HTML-файл"
+
 #: ../../docs/documentation_guidelines/writing.rst:661
 msgid "``html``"
 msgstr "``html``"
+
+#: ../../docs/documentation_guidelines/writing.rst:662
+msgid "Expression"
+msgstr "Выражение"
+
+#: ../../docs/documentation_guidelines/writing.rst:662
+msgid "``expression``"
+msgstr "``выражение``"
 
 #: ../../docs/documentation_guidelines/writing.rst:662
 msgid "|expression|"
@@ -185,9 +1206,25 @@ msgstr "|expression|"
 msgid "expression"
 msgstr "expression"
 
+#: ../../docs/documentation_guidelines/writing.rst:663
+msgid "Point geometry"
+msgstr "Геометрия точки"
+
+#: ../../docs/documentation_guidelines/writing.rst:663
+msgid "``coordinates``"
+msgstr "``координаты``"
+
 #: ../../docs/documentation_guidelines/writing.rst:664
 msgid "Extent"
 msgstr "охват (extent)"
+
+#: ../../docs/documentation_guidelines/writing.rst:664
+msgid "``extent``"
+msgstr "``степень``"
+
+#: ../../docs/documentation_guidelines/writing.rst:665
+msgid "CRS"
+msgstr "CRS"
 
 #: ../../docs/documentation_guidelines/writing.rst:665
 msgid "``crs``"
@@ -202,12 +1239,36 @@ msgid "setProjection"
 msgstr "setProjection"
 
 #: ../../docs/documentation_guidelines/writing.rst:666
+msgid "Enumeration"
+msgstr "Перечисление"
+
+#: ../../docs/documentation_guidelines/writing.rst:666
+msgid "``enumeration``"
+msgstr "``перечисление``"
+
+#: ../../docs/documentation_guidelines/writing.rst:666
 msgid "|selectString|"
 msgstr "|selectString|"
 
 #: ../../docs/documentation_guidelines/writing.rst:821
 msgid "selectString"
 msgstr "selectString"
+
+#: ../../docs/documentation_guidelines/writing.rst:667
+msgid "List"
+msgstr "Список"
+
+#: ../../docs/documentation_guidelines/writing.rst:667
+msgid "``list``"
+msgstr "``список``"
+
+#: ../../docs/documentation_guidelines/writing.rst:668
+msgid "Integer value"
+msgstr "Целое значение"
+
+#: ../../docs/documentation_guidelines/writing.rst:668
+msgid "``numeric: integer``"
+msgstr "``числовой: целое число``"
 
 #: ../../docs/documentation_guidelines/writing.rst:668
 #: ../../docs/documentation_guidelines/writing.rst:669
@@ -217,6 +1278,14 @@ msgstr "|selectNumber|"
 #: ../../docs/documentation_guidelines/writing.rst:819
 msgid "selectNumber"
 msgstr "selectNumber"
+
+#: ../../docs/documentation_guidelines/writing.rst:669
+msgid "Decimal value"
+msgstr "Десятичное значение"
+
+#: ../../docs/documentation_guidelines/writing.rst:669
+msgid "``numeric: double``"
+msgstr "``числовой: двойной``"
 
 #: ../../docs/documentation_guidelines/writing.rst:670
 msgid "String"
@@ -250,9 +1319,25 @@ msgstr "|checkbox|"
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/documentation_guidelines/writing.rst:672
+msgid "Folder path"
+msgstr "Путь к папке"
+
+#: ../../docs/documentation_guidelines/writing.rst:672
+msgid "``folder``"
+msgstr "``папка``"
+
 #: ../../docs/documentation_guidelines/writing.rst:673
 msgid "File"
 msgstr "Файл"
+
+#: ../../docs/documentation_guidelines/writing.rst:673
+msgid "``file``"
+msgstr "``файл``"
+
+#: ../../docs/documentation_guidelines/writing.rst:674
+msgid "Matrix"
+msgstr "Матрица"
 
 #: ../../docs/documentation_guidelines/writing.rst:674
 msgid "``matrix``"
@@ -262,6 +1347,22 @@ msgstr "``matrix``"
 msgid "Layer"
 msgstr "Слой"
 
+#: ../../docs/documentation_guidelines/writing.rst:675
+msgid "``layer``"
+msgstr "``слой``"
+
+#: ../../docs/documentation_guidelines/writing.rst:676
+msgid "Same output type as input type"
+msgstr "Тип вывода такой же, как тип ввода"
+
+#: ../../docs/documentation_guidelines/writing.rst:676
+msgid "``same as input``"
+msgstr "``то же, что и входные данные``"
+
+#: ../../docs/documentation_guidelines/writing.rst:677
+msgid "Definition"
+msgstr "Определение"
+
 #: ../../docs/documentation_guidelines/writing.rst:677
 msgid "``definition``"
 msgstr "``definition``"
@@ -270,6 +1371,14 @@ msgstr "``definition``"
 msgid "``point``"
 msgstr "``point``"
 
+#: ../../docs/documentation_guidelines/writing.rst:679
+msgid "Map layers"
+msgstr "Слои карты"
+
+#: ../../docs/documentation_guidelines/writing.rst:679
+msgid "``layer`` ``list``"
+msgstr "``слой`` ``список``"
+
 #: ../../docs/documentation_guidelines/writing.rst:680
 msgid "Range"
 msgstr "Range/Диапазон"
@@ -277,6 +1386,10 @@ msgstr "Range/Диапазон"
 #: ../../docs/documentation_guidelines/writing.rst:680
 msgid "``range``"
 msgstr "``range``"
+
+#: ../../docs/documentation_guidelines/writing.rst:681
+msgid "AuthConfig"
+msgstr "Автоконфигурация"
 
 #: ../../docs/documentation_guidelines/writing.rst:681
 msgid "``authconfig``"
@@ -291,17 +1404,66 @@ msgid "``mesh``"
 msgstr "``mesh``"
 
 #: ../../docs/documentation_guidelines/writing.rst:683
+msgid "Layout"
+msgstr "Макет"
+
+#: ../../docs/documentation_guidelines/writing.rst:683
 msgid "``layout``"
 msgstr "``layout``"
+
+#: ../../docs/documentation_guidelines/writing.rst:684
+msgid "LayoutItem"
+msgstr "Элемент макета"
 
 #: ../../docs/documentation_guidelines/writing.rst:684
 msgid "``layoutitem``"
 msgstr "``layoutitem``"
 
 #: ../../docs/documentation_guidelines/writing.rst:685
+msgid "Color"
+msgstr "Цвет"
+
+#: ../../docs/documentation_guidelines/writing.rst:685
 msgid "``color``"
 msgstr "``color``"
 
 #: ../../docs/documentation_guidelines/writing.rst:686
+msgid "Scale"
+msgstr "Масштаб"
+
+#: ../../docs/documentation_guidelines/writing.rst:686
 msgid "``scale``"
 msgstr "``scale``"
+
+#: ../../docs/documentation_guidelines/writing.rst:687
+msgid "Map theme"
+msgstr "Тема карты"
+
+#: ../../docs/documentation_guidelines/writing.rst:687
+msgid "``map theme``"
+msgstr "``тема карты``"
+
+#: ../../docs/documentation_guidelines/writing.rst:691
+msgid ""
+"Study an existing and well documented algorithm, and copy all the useful "
+"layouts."
+msgstr ""
+"Изучите существующий и хорошо документированный алгоритм и скопируйте все "
+"полезные макеты."
+
+#: ../../docs/documentation_guidelines/writing.rst:693
+msgid ""
+"When you are finished, just follow the guidelines described in "
+":ref:`step_by_step` to commit your changes and make a Pull Request"
+msgstr ""
+"Когда вы закончите, просто следуйте инструкциям, описанным в "
+":ref:`step_by_step`, чтобы зафиксировать изменения и создать Pull Request."
+
+#: ../../docs/documentation_guidelines/writing.rst:696
+msgid ""
+"Here is an example of an :ref:`existing algorithm "
+"<qgiscountpointsinpolygon>` to help you with the layout and the "
+"description::"
+msgstr ""
+"Вот пример :ref:`существующего алгоритма<qgiscountpointsinpolygon>`, который"
+" поможет вам с макетом и описанием::"
