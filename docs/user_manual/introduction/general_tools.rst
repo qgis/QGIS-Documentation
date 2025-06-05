@@ -200,8 +200,8 @@ Also a layer or a group of layers can be dragged across several QGIS instances.
 .. note:: The Z-ordering behavior can be overridden by the
    :ref:`Layer Order <layer_order>` panel.
 
-Depending on the item selected in the panel,
-a right-click shows a dedicated set of options presented below.
+Depending on the item selected in the panel, a right-click shows a dedicated set of options presented below.
+Some of these entries are not available when multiple selections are made (e.g. Edit, Rename).
 
 .. table updated with https://tableconvert.com/excel-to-restructuredtext
 .. table:: Contextual menus from :guilabel:`Layers` panel items
