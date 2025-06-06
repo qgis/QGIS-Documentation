@@ -213,17 +213,18 @@ when parameters depend on external data sources such as APIs (e.g. dynamically p
 or when you need advanced validation and custom layout behavior that isn’t supported by the default Processing dialog.
 
 To override the default UI (e.g. for complex parameter types or dynamic logic),
-subclass `QgsProcessingAlgorithmDialogBase`. Here's a minimal example:
+subclass `QgsProcessingAlgorithmDialogBase`. To render your custom UI in the standard Processing dialog window, you must call `self.setMainWidget(panel)`, where `panel` is a `QgsPanelWidget` containing your custom layout. 
+This ensures your interface is correctly displayed and interacts properly with the Processing framework. Here is an example that integrates signal management using QTimer for debounced input:
 
 .. code-block:: python
 
     from qgis.PyQt.QtWidgets import QWidget, QVBoxLayout, QLabel, QLineEdit
-    from qgis.PyQt.QtCore import Qt, QT_VERSION_STR
+    from qgis.PyQt.QtCore import Qt, QT_VERSION_STR, QTimer
     from qgis.core import (
         QgsProcessingAlgorithm,
         QgsProcessingContext,
         QgsProcessingFeedback,
-        Qgis
+        Qgis,
     )
     from qgis import gui, processing
     from datetime import datetime
@@ -256,13 +257,28 @@ subclass `QgsProcessingAlgorithmDialogBase`. Here's a minimal example:
 
         def buildDialog(self) -> QWidget:
             layout = QVBoxLayout()
-            self.label = QLabel("Buffer distance:")
+
+            self.label = QLabel("Image Collection ID:")
             self.input = QLineEdit()
+
+            # Set up a debounced signal using QTimer
+            self._update_timer = QTimer(self, singleShot=True)
+            self._update_timer.timeout.connect(self._on_collection_id_ready)
+            self.input.textChanged.connect(self._on_collection_id_changed)
+
             layout.addWidget(self.label)
             layout.addWidget(self.input)
-            wrapper = QWidget()
-            wrapper.setLayout(layout)
+
+            container = QWidget()
+            container.setLayout(layout)
             return layout
+
+        def _on_collection_id_changed(self):
+            self._update_timer.start(500)  # Debounce input
+
+        def _on_collection_id_ready(self):
+            self.pushInfo("Fetching metadata for collection ID…")
+            # self.updateDropdownsFromCollectionID(self.input.text())
 
         def getParameters(self) -> Dict:
             try:
@@ -298,23 +314,7 @@ subclass `QgsProcessingAlgorithmDialogBase`. Here's a minimal example:
 Managing Qt Signals
 ^^^^^^^^^^^^^^^^^^^
 
-When building custom event-driven dialogs, manage signal connections carefully. 
-This avoids excessive updates and prevents signal accumulation which can cause QGIS to hang.
-A good pattern is to debounce user input with `QTimer`:
-
-.. code-block:: python
-
-    from qgis.PyQt.QtCore import QTimer
-
-    class MyDialog(BaseAlgorithmDialog):
-        def __init__(self, algorithm, parent=None):
-            super().__init__(algorithm, parent=parent)
-            self._update_timer = QTimer(self, singleShot=True)
-            self._update_timer.timeout.connect(self._on_id_ready)
-            self.input_field.textChanged.connect(self._on_text_changed)
-
-        def _on_text_changed(self):
-            self._update_timer.start(500)
-
-        def _on_id_ready(self):
-            self.refresh_dropdown()
+When building reactive dialogs, manage signal connections carefully. 
+The above pattern uses a `QTimer` to debounce input from the text field, preventing rapid repeated calls. 
+This is especially useful when fetching metadata or updating UI elements based on user input. 
+Always connect signals once (typically in `__init__`) and use `singleShot=True` to ensure the slot is triggered only once after a delay.
