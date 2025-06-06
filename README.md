@@ -86,6 +86,41 @@ If, for some reason, you want to (re)start from scratch:
 make -f venv.mk cleanall
 ```
 
+### Fixing build locale error on macOS
+When the build on macOS fails with:
+
+```sh
+locale.Error: unsupported locale setting
+make: *** [html] Error 1
+```
+
+A solution is to edit the Python file `build.py` inside your `venv` folder with a text editor (pico, textEdit, vscode,...).
+The file is stored at `./venv/lib/python3.10/site-packages/sphinx/cmd/build.py`
+(replace `python3.10` with your installed Python version).
+
+1. Open the file in the text editor
+2. Search and replace:
+
+```
+def main(argv: Sequence[str] = (), /) -> int:
+    locale.setlocale(locale.LC_ALL, '')
+```
+
+to:
+
+```
+def main(argv: Sequence[str] = (), /) -> int:
+    locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+```
+
+Save the file and leave the pico editor with **Ctrl-X Y**
+
+Now you should be able to build the documentation with:
+
+```sh
+make html
+```
+
 ## Build on Windows
 
 Create a virtual environment called 'venv' in that directory (search the Internet for Python Virtual
