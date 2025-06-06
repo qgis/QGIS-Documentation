@@ -17,6 +17,7 @@ get imported.
 
 .. figure:: img/db_manager.png
    :align: center
+   :width: 30em
 
    DB Manager dialog
 
