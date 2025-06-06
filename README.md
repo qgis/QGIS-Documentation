@@ -113,9 +113,7 @@ def main(argv: Sequence[str] = (), /) -> int:
     locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 ```
 
-Save the file and leave the pico editor with **Ctrl-X Y**
-
-Now you should be able to build the documentation with:
+3. Save and close the file, now you should be able to build the documentation with:
 
 ```sh
 make html
