@@ -1303,6 +1303,43 @@ To load a layer from a database, you can perform the following steps:
   it is better to use the :ref:`Browser Panel <browser_panel>` or the
   :ref:`DB Manager <dbmanager>` to drag and drop the database tables into the map canvas.
 
+.. _execute_sql:
+
+Execute SQL queries
+...................
+
+With a right click on your Database or SQL Table you get a `Execute SQL...`
+entry in your context menu. It opens the :guilabel:`SQL Execute` Window where you can
+write and execute SQL queries.
+Queries can be saved and loaded, and the builtin "SQL Query Builder" will
+help you formulate your queries.
+It is possible to highlight a portion of the SQL to only execute that
+portion when pressing :kbd:`Ctrl+R` or clicking the :guilabel:`Execute`
+button.
+
+After executing your query, you can select specific cells in the result set.
+Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the clipboard.
+The copied data is available as a formatted table. This allows
+you to paste the data into other applications, such as spreadsheet where it will
+show up as a table.
+
+The :guilabel:`Query History` button stores the last queries of each database
+and provider.  
+
+Double clicking on an entry will add the string to the SQL window.
+
+.. _figure_execute_sql_queries:
+
+.. figure:: img/executesqlwindow.png
+   :align: center
+   :width: 30 em
+
+   Executing SQL queries in the Execute SQL window
+
+You can even view spatial output by checking
+:guilabel:`Load as new layer` and specifying :guilabel:`Column(s) with unique values` (IDs),
+:guilabel:`Geometry column` and :guilabel:`Layer name`.
+
 .. _layer_metadata_search_panel:
 
 The Layer Metadata Search Panel
