@@ -8,7 +8,7 @@ understanding how they are formulated can be handy for writing queries and
 understanding how the database is assembled.
 
 **The goal of this lesson:** To better understand how to create spatial
-entities directly in PostgreSQL/PostGIS.
+entities directly in PostgreSQL.
 
 
 Creating Linestrings

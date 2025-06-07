@@ -346,8 +346,8 @@ layer in the :guilabel:`Layers panel` and selecting:
 * :menuselection:`Export --> Save Features As...` or
   :menuselection:`Export --> Save Selected Features As...` for vector
   layers.
-* Drag and drop the layer from the layer tree to the PostGIS entry in the
-  :guilabel:`Browser Panel`. Note that you must have a PostGIS
+* Drag and drop the layer from the layer tree to the PostgreSQL entry in the
+  :guilabel:`Browser Panel`. Note that you must have a PostgreSQL
   connection in the :guilabel:`Browser Panel`.
 
 Common parameters

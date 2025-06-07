@@ -158,7 +158,7 @@ Now is probably a good time to open QGIS and try to view your :kbd:`people`
 table. Also, we should try editing / adding / deleting records and then
 performing select queries in the database to see how the data has changed.
 
-To load a PostGIS layer in QGIS, use the :menuselection:`Layer --> Add PostGIS
+To load a PostgreSQL layer in QGIS, use the :menuselection:`Layer --> Add PostgreSQL
 Layers` menu option or toolbar button:
 
   |addPostgisLayer|
@@ -188,7 +188,7 @@ username and password are correct, click :guilabel:`Test Connect`. If it works,
 check the boxes next to :guilabel:`Save Username` and :guilabel:`Save Password`.
 Then click :guilabel:`OK` to create this connection.
 
-Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`
+Back in the :guilabel:`Add PostgreSQL Layers` dialog, click :guilabel:`Connect`
 and add layers to your project as usual.
 
 :abbr:`★★☆ (Moderate level)` Try Yourself:

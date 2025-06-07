@@ -45,8 +45,8 @@ Layer Coordinate Reference Systems
 
 In order to correctly project data into a specific target CRS, either your data
 must contain information about its coordinate reference system or you will need
-to manually assign the correct CRS to the layer. For PostGIS layers, QGIS uses
-the spatial reference identifier that was specified when that PostGIS layer was
+to manually assign the correct CRS to the layer. For PostgreSQL layers, QGIS uses
+the spatial reference identifier that was specified when that PostgreSQL layer was
 created. For data supported by GDAL, QGIS relies on the presence of a
 recognized means of specifying the CRS. For instance, for the Shapefile format
 this is a file containing an ESRI Well-Known Text (:index:`WKT`)

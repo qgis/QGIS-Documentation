@@ -3,13 +3,13 @@ Lesson: Import and Export
 
 Of course, a database with no easy way to migrate data into it and out of it
 would not be of much use. Fortunately, there are a number
-of tools that will let you easily move data into and out of PostGIS.
+of tools that will let you easily move data into and out of PostgreSQL.
 
 shp2pgsql
 -------------------------------------------------------------------------------
 
 shp2pgsql is a commandline tool to import ESRI Shapefile to the database.
-Under Unix, you can use the following command for importing a new PostGIS
+Under Unix, you can use the following command for importing a new PostgreSQL
 table:
 
 .. code-block:: bash
@@ -40,7 +40,7 @@ of a spatial index will be covered in the next lesson.)
 pgsql2shp
 -------------------------------------------------------------------------------
 
-pgsql2shp is a commandline tool to export PostGIS Tables, Views or SQL select
+pgsql2shp is a commandline tool to export PostgreSQL Tables, Views or SQL select
 queries. To do this under Unix:
 
 .. code-block:: bash
@@ -58,21 +58,21 @@ To export the data using a query:
 ogr2ogr
 -------------------------------------------------------------------------------
 
-ogr2ogr is a very powerful tool to convert data into and from postgis to many
+ogr2ogr is a very powerful tool to convert data into and from PostgreSQL to many
 data formats. ogr2ogr is part of the GDAL library and has to be installed
-separately. To export a table from PostGIS to GML, you can use this command:
+separately. To export a table from PostgreSQL to GML, you can use this command:
 
 .. code-block:: bash
 
   ogr2ogr -f GML export.gml PG:'dbname=<databasename> user=<username>
-          host=<hostname>' <Name of PostGIS-Table>
+          host=<hostname>' <Name of PostgreSQL-Table>
 
 DB Manager
 -------------------------------------------------------------------------------
 
 You may have noticed another option in the :guilabel:`Database` menu labeled
 :guilabel:`DB Manager`. This is a tool that provides a
-unified interface for interacting with spatial databases including PostGIS. It
+unified interface for interacting with spatial databases including PostgreSQL. It
 also allows you to import and export from databases to other formats. Since the
 next module is largely devoted to using this tool, we will only briefly mention
 it here.

@@ -1,5 +1,5 @@
 .. index:: Vector, OGR, Raster, GDAL, Data, Format, QLR
-.. index:: PostGreSQL, PostGIS, GeoPackage, SpatiaLite, GRASS, DXF
+.. index:: PostgreSQL, PostGIS, GeoPackage, SpatiaLite, GRASS, DXF
 .. index:: ArcInfo Binary Grid, ArcInfo ASCII Grid, GeoTIFF, Erdas Imagine
 
 .. _opening_data:
@@ -29,7 +29,7 @@ and often write a lot of formats:
   many more...
   Read the complete list of `supported raster formats
   <https://gdal.org/en/latest/drivers/raster/index.html>`__.
-* Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle,
+* Database formats include PostgreSQL, SQLite/SpatiaLite, Oracle,
   MS SQL Server, SAP HANA, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
   services, ...) are also handled by QGIS providers.
@@ -294,7 +294,7 @@ The DB Manager
 
 The :guilabel:`DB Manager` Plugin is another tool
 for integrating and managing spatial database formats supported by
-QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MS SQL Server, Virtual
+QGIS (PostgreSQL, SpatiaLite, GeoPackage, Oracle Spatial, MS SQL Server, Virtual
 layers). It can be activated from the
 :menuselection:`Plugins --> Manage and Install Plugins...` menu.
 
@@ -440,8 +440,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   Pressing the :guilabel:`New` button opens the
   :guilabel:`Create a New OGR Database Connection` dialog whose parameters
   are among the ones you can find in :ref:`vector_create_stored_connection`.
-  Pressing :guilabel:`Open` lets you select from the available tables, for
-  example of PostGIS enabled databases.
+  Pressing :guilabel:`Open` lets you select from the available tables.
 * The |radioButtonOn| :guilabel:`Protocol: HTTP(S), cloud, etc.` source type
   opens data stored locally or on the network, either publicly accessible,
   or in private buckets of commercial cloud storage services.
@@ -819,11 +818,11 @@ Panel <browser_panel>` is the simplest and recommanded way to connect to
 and use databases, QGIS provides other tools to connect to each
 of them and load their tables:
 
-* |addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing
+* |addPostgisLayer| :menuselection:`Add PostgreSQL Layer...` or by typing
   :kbd:`Ctrl+Shift+D`
-* |addMssqlLayer| :menuselection:`Add MS SQL Server Layer`
 * |addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing
   :kbd:`Ctrl+Shift+O`
+* |addMssqlLayer| :menuselection:`Add MS SQL Server Layer`
 * |addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` or by typing
   :kbd:`Ctrl+Shift+G`
 
@@ -845,31 +844,31 @@ Most of the connection dialogs follow a common structure:
 .. _create_postgresql_connection:
 
 Connecting to PostgreSQL
-........................
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-The first time you use a PostGIS data source, you must create a connection
+The first time you use a PostgreSQL data source, you must create a connection
 to a database that contains the data.
 Press the appropriate button as exposed above, opening the :guilabel:`PostgreSQL` tab
 of the :guilabel:`Data Source Manager` dialog.
 To access the connection manager, click on the :guilabel:`New` button
-to display the :guilabel:`Create a New PostGIS Connection` dialog.
+to display the :guilabel:`Create a New PostgreSQL Connection` dialog.
 
 .. _figure_new_postgis_connection:
 
 .. figure:: img/newpostgisconnection.png
    :align: center
 
-   Create a New PostGIS Connection Dialog
+   Create a New PostgreSQL Connection Dialog
 
 * :guilabel:`Name`: A name for this connection. It can be the same as :guilabel:`Database`.
 * :guilabel:`Service`: Service parameter to be used alternatively to hostname/port
   (and potentially database). This can be defined in :file:`pg_service.conf`.
-  Check the :ref:`pg-service-file` section for more details.
+  Check the :ref:`PostgreSQL Service connection file <pg-service-file>` section for more details.
 * :guilabel:`Host`: Name of the database host. This must be a resolvable host name
   such as would be used to open a TCP/IP connection or ping the host.
   If the database is on the same computer as QGIS, simply enter *localhost* here.
 * :guilabel:`Port`: Port number the PostgreSQL database server listens on.
-  The default port for PostGIS is ``5432``.
+  The default port for PostgreSQL is ``5432``.
 * :guilabel:`Database`: Name of the database.
 * :guilabel:`SSL mode`: SSL encryption setup.
   The following options are available:
@@ -913,7 +912,7 @@ to display the :guilabel:`Create a New PostGIS Connection` dialog.
    with someone. Therefore, it is advisable to save your credentials in an
    *Authentication configuration* instead (:guilabel:`Configurations` tab -
    See :ref:`authentication_index` for more details) or in a service connection
-   file (see :ref:`pg-service-file` for example).
+   file (see :ref:`PostgreSQL Service connection file <pg-service-file>` for example).
 
 * :guilabel:`Authentication`, configurations.
   Choose an authentication configuration. You can add configurations using
@@ -959,8 +958,7 @@ the :guilabel:`OK` button.
 
 .. _pg-service-file:
 
-PostgreSQL Service connection file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**PostgreSQL Service connection file**
 
 The service connection file allows PostgreSQL connection parameters to be
 associated with a single service name. That service name can then be specified
@@ -1259,7 +1257,7 @@ Once you have one or more connections defined to a database (see section
 :ref:`vector_create_stored_connection`), you can load layers from it.
 Of course, this requires that data are available. See section
 :ref:`vector_import_data_in_postgis` for a discussion on importing data into a
-PostGIS database.
+PostgreSQL database.
 
 To load a layer from a database, you can perform the following steps:
 
@@ -1290,7 +1288,7 @@ To load a layer from a database, you can perform the following steps:
 .. figure:: img/addpostgistables.png
    :align: center
 
-   Add PostGIS Table(s) Dialog
+   Add PostgreSQL Table(s) Dialog
 
 
 .. tip:: **Use the Browser Panel to speed up loading of database table(s)**
