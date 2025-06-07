@@ -1568,10 +1568,8 @@ some external :ref:`plugins <plugins>`.
 Database
 --------
 
-This is what the :guilabel:`Database` menu looks like if all the core
-plugins are enabled.
-If no database plugins are enabled, there will be no
-:guilabel:`Database` menu.
+The :menuselection:`Database` menu provides tools for Database interaction.
+This is what the :menuselection:`Database` menu looks like if all the core plugins are enabled. 
 
 .. list-table:: The Database menu items
    :header-rows: 1
@@ -1595,6 +1593,10 @@ If no database plugins are enabled, there will be no
      -
      - :guilabel:`Database`
      - :ref:`offlinedit`
+   * - |queryHistory| :guilabel:`Query History...`
+     - 
+     - :guilabel:`Database`
+     - 
    * - |dbManager| :guilabel:`DB Manager...`
      -
      - :guilabel:`Database`
@@ -2400,6 +2402,8 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
    :width: 1.5em
+.. |queryHistory| image:: /static/common/queryhistory.png
+   :width: 1.5em   
 .. |randomPointsInPolygons| image:: /static/common/mAlgorithmRandomPointsInPolygons.png
    :width: 1.5em
 .. |randomPointsOnLines| image:: /static/common/mAlgorithmRandomPointsOnLines.png
