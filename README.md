@@ -101,14 +101,14 @@ The file is stored at `./venv/lib/python3.10/site-packages/sphinx/cmd/build.py`
 1. Open the file in the text editor
 2. Search and replace:
 
-```
+```py
 def main(argv: Sequence[str] = (), /) -> int:
     locale.setlocale(locale.LC_ALL, '')
 ```
 
 to:
 
-```
+```py
 def main(argv: Sequence[str] = (), /) -> int:
     locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 ```
