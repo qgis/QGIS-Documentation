@@ -45,6 +45,15 @@ msgstr "인증 시스템 개념도"
 msgid "Authentication database"
 msgstr "인증 데이터베이스"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:22
+msgid ""
+"The authentication system stores authentication configurations in an SQLite "
+"database file located, by default, at :file:`<profile directory>/qgis-"
+"auth.db`."
+msgstr ""
+"인증 시스템은 기본적으로 :file:`<profile directory>/qgis-auth.db` 위치에 있는 SQLite 데이터베이스 "
+"파일에 인증 환경 설정을 저장합니다."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:25
 msgid ""
 "This authentication database can be moved between QGIS installations without"
@@ -69,6 +78,135 @@ msgstr ""
 "환경 변수 ``QGIS_AUTH_DB_DIR_PATH`` 를 사용하거나 또는 QGIS 구동 시 명령 줄에서 "
 "``--authdbdirectory`` 옵션을 설정해서 :file:`qgis-auth.db` 의 상위(부모) 디렉터리를 설정할 수 "
 "있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:41
+msgid "Custom authentication databases"
+msgstr "사용자 정의 인증 데이터베이스"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:43
+msgid ""
+"QGIS can be configured to use a custom authentication database instead of "
+"the above mentioned default SQLite one: any database suppported by the Qt "
+"SQL module can be used (e.g. PostgreSQL, MySQL, etc), provided that the "
+"corresponding Qt SQL driver is available in the system."
+msgstr ""
+"QGIS가 앞에서 이야기한 기본 SQLite 데이터베이스 대신 사용자 정의 인증 데이터베이스를 사용하도록 환경설정할 수 있습니다. Qt "
+"SQL 모듈이 지원하는 모든 데이터베이스(예: PostgreSQL, MySQL 등등)를 사용할 수 있습니다. 물론 시스템 상에 해당 "
+"데이터베이스의 Qt SQL 드라이버가 설치되어 있어야 하겠죠."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:48
+msgid ""
+"This can be useful in scenarios where a user wants to share the same "
+"authentication database between multiple QGIS installations, or when a user "
+"wants to use a different authentication database than the default SQLite one"
+" or when a centralized authentication database is used by QGIS server."
+msgstr ""
+"사용자가 여러 QGIS 설치본들 사이에서 동일한 인증 데이터베이스를 공유하길 원한다거나, 기본 SQLite 데이터베이스가 아닌 다른 인증"
+" 데이터베이스를 사용하길 원한다거나, 또는 QGIS 서버가 중앙 집중형(centralized) 인증 데이터베이스를 사용하고 있는 경우 이"
+" 기능이 유용할 수 있습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:53
+msgid ""
+"The only way to configure a custom authentication database is by setting the"
+" ``QGIS_AUTH_DB_URI`` environment variable to the URI of the connection, the"
+" URI is in the form of "
+"``driver://username:password@hostname:port/database?options``."
+msgstr ""
+"사용자 정의 인증 데이터베이스를 환경설정할 수 있는 유일한 방법은 "
+"``driver://username:password@hostname:port/database?options`` 형식의 연결 URI에 환경"
+" 변수 ``QGIS_AUTH_DB_URI`` 를 설정하는 것입니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:64
+msgid "Where:"
+msgstr "이때:"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:58
+msgid ""
+"``driver`` is the name of the Qt SQL driver to use, e.g. ``QPSQL`` for "
+"PostgreSQL, ``QMYSQL`` for MySQL, etc."
+msgstr ""
+"``driver``: 사용할 Qt SQL 드라이버의 이름, 예: PostgreSQL은 ``QPSQL``, MySQL은 ``QMYSQL``"
+" 등등"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:59
+msgid "``username`` is the username to use to connect to the database"
+msgstr "``username``: 데이터베이스에 연결하기 위해 쓰이는 사용자명"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:60
+msgid "``password`` is the password to use to connect to the database"
+msgstr "``password``: 데이터베이스에 연결하기 위해 쓰이는 비밀번호"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:61
+msgid "``hostname`` is the hostname of the database server"
+msgstr "``hostname``: 데이터베이스 서버의 호스트명"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:62
+msgid "``port`` is the port of the database server"
+msgstr "``port``: 데이터베이스 서버의 포트 번호"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:63
+msgid "``database`` is the name of the database to use"
+msgstr "``database``: 사용할 데이터베이스의 이름"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:64
+msgid ""
+"``options`` are the options to pass to the driver, e.g. ``sslmode=require`` "
+"for PostgreSQL"
+msgstr "``options``: 드라이버로 전송할 옵션들, 예: PostgreSQL의 경우 ``sslmode=require`` 등등"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:68
+msgid ""
+"The ``schema`` can be specified in the URI options, e.g. "
+"``QPSQL://username:password@hostname:port/database?schema=schema_name``"
+msgstr ""
+"URI 옵션에서 ``schema`` 를 지정할 수 있습니다. 예: "
+"``QPSQL://username:password@hostname:port/database?schema=schema_name``"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:70
+msgid ""
+"The database must exist before starting QGIS, and the user must have the "
+"necessary permissions to connect to the database and to create the required "
+"tables if they do not exist."
+msgstr ""
+"QGIS를 시작하기 전에 데이터베이스가 존재하고 있어야만 하며, 사용자는 데이터베이스에 연결하기 위해 필요한 권한과 필수 테이블이 "
+"존재하지 않을 경우 생성할 수 있는 권한을 가지고 있어야만 합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:76
+msgid ""
+"The password in the URI is stored in plain text in the environment variable,"
+" so it is recommended to use a passwordless user or a user with limited "
+"permissions to connect to the database."
+msgstr ""
+"URI에서 비밀번호는 환경 변수 안에 평문으로 저장되기 때문에, 비밀번호가 없는 사용자명 또는 데이터베이스에 제한적인 권한으로 연결되는 "
+"사용자명을 사용할 것을 권장합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:82
+msgid ""
+"Any database not based on SQLite is considered to be read-only (this can be "
+"changed by Python plugins if necessary)."
+msgstr ""
+"SQLite을 기반으로 하지 않는 모든 데이터베이스는 읽기 전용으로 간주될 것입니다. (필요한 경우 파이썬 플러그인을 통해 변경할 수 "
+"있습니다.)"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:85
+msgid ""
+"This is an advanced feature, designed to allow one or more custom "
+"authentication databases or even custom Python implementations of "
+"credentials storages to be used by QGIS."
+msgstr ""
+"이 고급 기능은 QGIS가 하나 이상의 사용자 정의 인증 데이터베이스를 사용할 수 있도록, 또는 QGIS가 사용할 자격 증명 저장소를 "
+"사용자가 직접 파이썬으로 구현할 수 있도록 설계되었습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:88
+msgid ""
+"The system is also designed to allow for multiple authentication databases "
+"to be used but there is currently no user facing interface to manage "
+"multiple credential storages so its usage requires manual configuration and "
+"management, typically from a Python plugin."
+msgstr ""
+"이 시스템은 여러 개의 인증 데이터베이스를 사용할 수 있도록 설계되었지만, 지금으로써는 여러 자격 증명 저장소를 관리할 수 있는 사용자향"
+" 인터페이스가 존재하지 않습니다. 즉 인증 데이터베이스를 여러 개 사용하고 싶다면, 대부분의 경우 파이썬 플러그인을 통해 수동으로 "
+"환경설정하고 관리해야 합니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:94
 msgid "Master password"
