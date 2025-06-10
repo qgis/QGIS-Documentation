@@ -1,6 +1,6 @@
 let
-  pinnedHash = "f03c983c83471408ef16fcb9f47078491070064f"; 
-  pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/${pinnedHash}.tar.gz") { };
+  pinnedHash = "9ff2edbd1da172269d9dd58bcb482676d89b6d5b"; 
+  pinnedPkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/${pinnedHash}.tar.gz") { };
   pythonPackages = pkgs.python3Packages;
 in pkgs.mkShell rec {
   name = "impurePythonEnv";
