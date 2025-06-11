@@ -302,7 +302,7 @@ by adding support for storing, indexing, and querying geospatial data.
 
 To enable PostGIS in your database you have to activate the extension
 in your database (open database and run ``CREATE EXTENSION postgis;``).
-PostGIS enabled databases also often named "PostGIS layer".
+PostGIS enabled databases are also often named "PostGIS layer".
 Using PostGIS, vector functions such as select and identify work more
 accurately than they do with GDAL layers in QGIS.
 
