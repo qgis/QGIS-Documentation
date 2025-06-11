@@ -960,6 +960,8 @@ features.
 If input geometries are lines or polygons, the clustering is based on
 the centroid of the feature.
 
+*References: Arthur, David & Vassilvitskii, Sergei. (2007). K-Means++: The Advantages of Careful Seeding. Proc. of the Annu. ACM-SIAM Symp. on Discrete Algorithms. 8.*
+
 .. figure:: img/kmeans.png
   :align: center
 
@@ -988,6 +990,18 @@ Parameters
 
        Default: 5
      - Number of clusters to create with the features
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 0
+     - Initial centers selection method.
+       Possible values are:
+
+       * 0 --- Farthest points: the initial centers are selected
+         as the farthest points from each other.
+       * 1 --- Kmeans++: the initial centers are selected
+         using the Kmeans++ algorithm.      
    * - **Clusters**
      - ``OUTPUT``
      - [vector: same as input]
