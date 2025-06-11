@@ -54,8 +54,8 @@ by using queries that we learned about in previous sections.
 * Click the :guilabel:`Add PostgreSQL Layers` button or select :menuselection:`Layer
   --> Add PostgreSQL Layers` from the menu.
 * In the :guilabel:`Add PostgreSQL Table(s)` dialog that comes up, connect to the
-  :kbd:`postgis_demo` connection.
-* Expand the :kbd:`public schema` and you should find the three tables we were
+  :guilabel:`postgis_demo` connection.
+* Expand the :guilabel:`public schema` and you should find the three tables we were
   working with previously.
 * Click the :kbd:`lines` layer to select it, but instead of adding it, click
   the :guilabel:`Set Filter` button to bring up the :guilabel:`Query Builder`
