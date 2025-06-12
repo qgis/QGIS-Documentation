@@ -9,7 +9,7 @@
    :local:
 
 .. note:: Though QGIS-Documentation is used to demonstrate the process, all
-   commands and steps shown below also apply to QGIS-Website.
+   commands and steps shown below also apply to QGIS-Website. fgt
 
 If you are reading these lines, it is certainly because you are willing
 to contribute to writing QGIS documentation and are looking for a how-to.
