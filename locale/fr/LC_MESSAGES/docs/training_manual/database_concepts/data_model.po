@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Isabel Kiefer, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Isabel Kiefer, 2025\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -322,6 +323,21 @@ msgstr ""
 msgid "Answer"
 msgstr "Réponse"
 
+#: ../../docs/training_manual/database_concepts/data_model.rst:259
+msgid "The SQL required to create the correct people table is::"
+msgstr "Le SQL nécessaire pour créer la table correcte des personnes est ::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:267
+msgid "The schema for the table (enter ``\\\\d people``) looks like this::"
+msgstr "Le schéma pour la table (entrer ``\\\\d people``) ressemble à cela ::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:282
+msgid ""
+"For illustration purposes, we have purposely omitted the fkey constraint."
+msgstr ""
+"À des fins d'illustration, nous avons volontairement omis la contrainte "
+"fkey."
+
 #: ../../docs/training_manual/database_concepts/data_model.rst:285
 msgid "Create Keys in SQL"
 msgstr "Créer des clefs en SQL"
@@ -400,6 +416,36 @@ msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
 msgstr ""
 "Si vous voulez supprimer une table, vous pouvez utiliser la commande "
 ":kbd:`drop`:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:383
+msgid "In our current example, the above command would not work. Why not?"
+msgstr ""
+"Dans notre exemple actuel, la commande ci-dessus ne fonctionnerait pas. "
+"Pourquoi ?"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:388
+msgid ""
+"The reason the DROP command would not work in this case is because the "
+"*people* table has a Foreign Key constraint to the *streets* table. This "
+"means that dropping (or deleting) the *streets* table would leave the "
+"*people* table with references to non-existent *streets* data."
+msgstr ""
+"La raison pour laquelle la commande DROP ne fonctionnerait pas dans ce cas "
+"est que la table *people* possède une contrainte de clé étrangère vers la "
+"table *streets*. Cela signifie que l'abandon (ou la suppression) de la table"
+" *streets* laisserait la table *people* avec des références à des données "
+"*streets* inexistantes."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:393
+msgid ""
+"It is possible to 'force' the *streets* table to be deleted by using the "
+"``CASCADE`` command, but this would also delete the *people* and any other "
+"table which had a relationship to the *streets* table. Use with caution!"
+msgstr ""
+"Il est possible de « forcer » la table *streets* à être supprimée en "
+"utilisant la commande ``CASCADE``, mais cela supprimerait également la table"
+" *people* et toute autre table ayant une relation avec la table *streets*. A"
+" utiliser avec précaution !"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:398
 msgid ""
