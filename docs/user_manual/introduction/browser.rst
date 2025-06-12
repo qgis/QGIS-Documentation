@@ -28,7 +28,7 @@ editing in an external editor and the graphical modeller.
 
 You can drag and drop layers from the :guilabel:`Layers` panel
 to the :guilabel:`Browser` panel, for instance into a GeoPackage or a
-PostGIS database.
+PostgreSQL database.
 
 .. _figure_browser_panel:
 
@@ -216,7 +216,7 @@ each level of the dataset tree.
 | Level         | Context menu                               |                                  Type of database                                  |
 |               |                                            +--------------+--------------+------------+------------+---------------+------------+
 |               |                                            | |geoPackage| | |spatialite| | |postgis|  | |hana|     | |mssql|       | |oracle|   |
-|               |                                            | GeoPackage   | SpatiaLite   | PostGIS    | SAP HANA   | MS SQL Server | Oracle     |
+|               |                                            | GeoPackage   | SpatiaLite   | PostgreSQL | SAP HANA   | MS SQL Server | Oracle     |
 |               |                                            | ([1]_)       |              |            |            |               |            |
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 | Top menu      | Create a :guilabel:`New Connection…`       | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox|    | |checkbox| |

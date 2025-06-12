@@ -207,7 +207,7 @@ work), you get the following description:
      		- str: destination vector file, e.g. 'd:/test.shp'
      		- str: 'memory:' to store result in temporary memory layer
      		- str: using vector provider ID prefix and destination URI,
-                       e.g. 'postgres:...' to store result in PostGIS table
+                       e.g. 'postgres:...' to store result in PostgreSQL table
      		- QgsProcessingOutputLayerDefinition
      		- QgsProperty
      

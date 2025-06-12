@@ -5,7 +5,7 @@ DB Manager Plugin
 =================
 
 The DB Manager Plugin is intended to be the main tool to integrate and
-manage spatial database formats supported by QGIS (PostGIS, SpatiaLite,
+manage spatial database formats supported by QGIS (PostgreSQL, SpatiaLite,
 GeoPackage, Oracle Spatial, Virtual layers) in one user interface.
 The |dbManager| :sup:`DB Manager` Plugin provides several features.
 You can drag layers from the QGIS Browser into the DB Manager, and it
@@ -17,6 +17,7 @@ get imported.
 
 .. figure:: img/db_manager.png
    :align: center
+   :width: 30em
 
    DB Manager dialog
 
@@ -25,8 +26,8 @@ The :menuselection:`Database` menu allows you to connect to an
 existing database, to start the SQL window and to exit the DB Manager
 Plugin.
 Once you are connected to an existing database, the menus
-:menuselection:`Schema` (relevant for DBMSs, such as PostGIS /
-PostgreSQL) and :menuselection:`Table` will appear.
+:menuselection:`Schema` (relevant for DBMSs, such as PostgreSQL)
+and :menuselection:`Table` will appear.
 
 The :menuselection:`Schema` menu includes tools to create and delete
 (only if empty) schemas and, if topology is available (e.g. with

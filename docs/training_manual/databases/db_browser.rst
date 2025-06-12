@@ -20,7 +20,7 @@ interface.
 * Start a new empty map in QGIS.
 * Open the Browser by clicking the :guilabel:`Browser` tab at the bottom of the
   *Layer Panel*
-* Open the PostGIS portion of the tree and you should find your previously
+* Open the PostgreSQL portion of the tree and you should find your previously
   configured connection available (you may need to click the Refresh button at
   the top of the browser window).
 
@@ -37,9 +37,9 @@ interface.
 .. figure:: img/postgis_layer_properties.png
    :align: center
 
-.. note:: Of course you can also use this interface to connect to PostGIS 
+.. note:: Of course you can also use this interface to connect to PostgreSQL 
    databases hosted on a server external to your workstation. Right clicking
-   on the PostGIS entry in the tree will allow you to specify connection
+   on the PostgreSQL entry in the tree will allow you to specify connection
    parameters for a new connection.
 
 
@@ -51,11 +51,11 @@ nice to learn how to add a filtered set of records from a table as a layer
 by using queries that we learned about in previous sections.
 
 * Start a new empty map with no layers
-* Click the :guilabel:`Add PostGIS Layers` button or select :menuselection:`Layer
-  --> Add PostGIS Layers` from the menu.
-* In the :guilabel:`Add PostGIS Table(s)` dialog that comes up, connect to the
-  :kbd:`postgis_demo` connection.
-* Expand the :kbd:`public schema` and you should find the three tables we were
+* Click the :guilabel:`Add PostgreSQL Layers` button or select :menuselection:`Layer
+  --> Add PostgreSQL Layers` from the menu.
+* In the :guilabel:`Add PostgreSQL Table(s)` dialog that comes up, connect to the
+  :guilabel:`postgis_demo` connection.
+* Expand the :guilabel:`public schema` and you should find the three tables we were
   working with previously.
 * Click the :kbd:`lines` layer to select it, but instead of adding it, click
   the :guilabel:`Set Filter` button to bring up the :guilabel:`Query Builder`

@@ -67,5 +67,5 @@ changes in other parts of the database.
 What's Next?
 -------------------------------------------------------------------------------
 
-The next module will introduce you to Spatial Database using PostGIS,
-which takes these database concepts and applies them to GIS data.
+The next module will introduce you to Spatial Database using PostgreSQL with PostGIS
+extension, which takes these database concepts and applies them to GIS data.

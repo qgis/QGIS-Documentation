@@ -9,7 +9,7 @@
    .. contents::
       :local:
 
-QGIS has various capabilities for editing OGR, SpatiaLite, PostGIS,
+QGIS has various capabilities for editing OGR, SpatiaLite, PostgreSQL,
 MS SQL Server and Oracle Spatial vector layers and tables.
 They can be of 2D or 3D geometry type.
 
@@ -1652,7 +1652,7 @@ on the curve and a radius:
 .. note:: **Curved geometries are stored as such only in compatible data provider**
 
    Although QGIS allows to digitize curved geometries within any editable
-   data format, you need to be using a data provider (e.g. PostGIS, memory
+   data format, you need to be using a data provider (e.g. PostgreSQL, memory
    layer, GML or WFS) that supports curves to have features stored as
    curved, otherwise QGIS segmentizes the circular arcs.
 

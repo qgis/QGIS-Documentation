@@ -10,8 +10,8 @@ as more management oriented tools.
 **The goal for this lesson:** To learn how to interact with spatial
 databases using the QGIS DB Manager. 
 
-:abbr:`★☆☆ (Basic level)` Follow Along: Managing PostGIS Databases with DB Manager
-------------------------------------------------------------------------------------
+:abbr:`★☆☆ (Basic level)` Follow Along: Managing PostgreSQL Databases with DB Manager
+---------------------------------------------------------------------------------------
 
 You should first open the DB Manager interface by selecting
 :menuselection:`Database --> DB Manager --> DB Manager` on the menu

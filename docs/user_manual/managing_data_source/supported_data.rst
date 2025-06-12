@@ -52,7 +52,7 @@ Many of the features and tools available in QGIS work the same,
 regardless the vector data source.
 However, because of the differences in format specifications
 (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file formats,
-AutoCAD DXF, PostGIS, SpatiaLite, Oracle Spatial, MS SQL Server,
+AutoCAD DXF, PostgreSQL, SpatiaLite, Oracle Spatial, MS SQL Server,
 SAP HANA Spatial databases and many more), QGIS may handle some of
 their properties differently. Support is provided by the
 `GDAL vector drivers <https://gdal.org/en/latest/drivers/vector/index.html>`_.
@@ -291,12 +291,18 @@ the same name, but :file:`.csvt` as the extension.
 .. index:: PostGIS, PostgreSQL
 .. _label_postgis:
 
-PostGIS Layers
---------------
+PostgreSQL Database
+-------------------
 
-PostGIS layers are stored in a PostgreSQL database.
-The advantages of PostGIS are spatial indexing, filtering and
-querying capabilities.
+
+In order to process geographical information in a PostgreSQL database,
+the PostGIS extension must first be installed.
+PostGIS extends the capabilities of the PostgreSQL relational database
+by adding support for storing, indexing, and querying geospatial data.
+
+To enable PostGIS in your database you have to activate the extension
+in your database (open database and run ``CREATE EXTENSION postgis;``).
+PostGIS enabled databases are also often named "PostGIS layer".
 Using PostGIS, vector functions such as select and identify work more
 accurately than they do with GDAL layers in QGIS.
 
@@ -305,10 +311,8 @@ accurately than they do with GDAL layers in QGIS.
 
 .. tip:: **PostGIS Layers**
 
-   Normally, a PostGIS layer is identified by an entry in the
-   geometry_columns table.
-   QGIS can load layers that do not have an entry in the
-   geometry_columns table.
+   Normally, a PostGIS layer is identified by an entry in the geometry_columns table.
+   QGIS can load layers that do not have an entry in the geometry_columns table.
    This includes both tables and views.
    Refer to your PostgreSQL manual for information on creating views.
 
@@ -364,7 +368,7 @@ It can make sense to disable this option when you use expensive views.
 QGIS layer_style table and database backup
 ..........................................
 
-If you want to make a backup of your PostGIS database using the
+If you want to make a backup of your PostgreSQL database using the
 :file:`pg_dump` and :file:`pg_restore` commands, and the default layer
 styles as saved by QGIS fail to restore afterwards, you need to set
 the XML option to :file:`DOCUMENT` before the restore command:
@@ -395,25 +399,25 @@ integer, float, boolean, binary object, varchar, geometry, timestamp,
 array, hstore and json.
 
 .. index:: shp2pgsql
-   single: PostGIS; shp2pgsql
+   single: PostgreSQL; PostGIS; shp2pgsql
 .. _vector_import_data_in_postgis:
 
 Importing Data into PostgreSQL
-------------------------------
+..............................
 
-Data can be imported into PostgreSQL/PostGIS using several tools,
-including the DB Manager plugin and the command line tools shp2pgsql
-and ogr2ogr.
+Data can be imported into PostgreSQL using several tools,
+including the Browser, DB Manager plugin and the command line tools
+shp2pgsql and ogr2ogr.
 
 DB Manager
-..........
+^^^^^^^^^^
 
 QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`.
 It can be used to load data, and it includes support for schemas.
 See section :ref:`dbmanager` for more information.
 
 shp2pgsql
-.........
+^^^^^^^^^
 
 PostGIS includes a utility called **shp2pgsql**, that can be used to import
 Shapefile format datasets into a PostGIS-enabled database.
@@ -432,32 +436,32 @@ reference systems and projections.
 
 .. _tip_export_from_postgis:
 
-.. tip:: **Exporting datasets from PostGIS**
+.. tip:: **Exporting datasets from PostgreSQL**
 
-   There is also a tool for exporting
-   PostGIS datasets to Shapefile format: **pgsql2shp**.
+   There is also a tool for exporting postgreSQL
+   datasets wth geographic data to Shapefile format: **pgsql2shp**.
    It is shipped within your PostGIS distribution.
 
 .. index:: ogr2ogr
-   single: PostGIS; ogr2ogr
+   single: PostgreSQL; PostGIS; ogr2ogr
 
 ogr2ogr
-.......
+^^^^^^^
 
 In addition to **shp2pgsql** and **DB Manager**, there is another tool
-for feeding geographical data in PostGIS: **ogr2ogr**.
+for feeding geographical data in PostgreSQL: **ogr2ogr**.
 It is part of your GDAL installation.
 
-To import a Shapefile format dataset into PostGIS, do the following::
+To import a Shapefile format dataset into PostgreSQL, do the following::
 
   ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres
   password=topsecret" alaska.shp
 
 This will import the Shapefile format dataset :file:`alaska.shp` into the
-PostGIS database *postgis* using the user *postgres* with the password
-*topsecret* on the host server *myhost.de*.
+database *postgis* using the user *postgres* with the password *topsecret*
+on the host server *myhost.de*.
 
-Note that GDAL must be built with PostgreSQL to support PostGIS.
+Note that GDAL must be built with PostgreSQL.
 You can verify this by typing (in |nix|)::
 
   ogrinfo --formats | grep -i post
@@ -475,7 +479,7 @@ afterwards, as an extra step (as described in the next section
 :ref:`vector_improving_performance`).
 
 .. index:: Spatial index; GiST index
-   single: PostGIS; Spatial index
+   single: PostgreSQL; PostGIS; Spatial index
 .. _vector_improving_performance:
 
 Improving Performance
@@ -483,8 +487,8 @@ Improving Performance
 
 Retrieving features from a PostgreSQL database can be time-consuming, especially
 over a network. You can improve the drawing performance of PostgreSQL layers by
-ensuring that a PostGIS spatial index exists on each layer in the
-database. PostGIS supports creation of a GiST (Generalized Search Tree)
+ensuring that a spatial index exists on each layer in the database.
+PostGIS supports creation of a GiST (Generalized Search Tree)
 index to speed up spatial searching (GiST index information is taken
 from the PostGIS documentation available at https://postgis.net).
 
@@ -649,7 +653,7 @@ selecting the columns in the :guilabel:`Feature id` column. For best
 performance, the :guilabel:`Feature id` value should be a single ``INTEGER``
 column.
 
-.. index:: PostGIS; ST_Shift_Longitude
+.. index:: PostgreSQL; PostGIS; ST_Shift_Longitude
 
 Layers crossing 180° longitude
 ==============================
@@ -669,10 +673,10 @@ the New Zealand main islands.
 
    Map in lat/lon crossing the 180° longitude line
 
-Solving in PostGIS
-------------------
+Solving in PostgreSQL
+---------------------
 
-A work-around is to transform the longitude values using PostGIS and the
+A work-around is to transform the longitude values using PostgreSQL and the
 `ST_ShiftLongitude <https://postgis.net/docs/ST_ShiftLongitude.html>`_ function.
 This function reads every point/vertex in every component of every feature in a geometry,
 and shifts its longitude coordinate from -180..0° to 180..360° and vice versa if between these ranges.
@@ -688,13 +692,13 @@ and a -180..180° representation of a 0..360° data.
    Crossing 180° longitude applying the **ST_ShiftLongitude** function
 
 
-#. Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using,
+#. Import data into PostgreSQL (:ref:`vector_import_data_in_postgis`) using,
    for example, the DB Manager plugin.
-#. Use the PostGIS command line interface to issue the following command:
+#. Use the PostgreSQL command line interface to issue the following command:
 
    .. code-block:: sql
 
-      -- In this example, "TABLE" is the actual name of your PostGIS table
+      -- In this example, "TABLE" is the actual name of your PostgreSQL table
       update TABLE set geom=ST_ShiftLongitude(geom);
 
 #. If everything went well, you should receive a confirmation about

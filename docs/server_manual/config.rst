@@ -381,7 +381,7 @@ Connection to service file
 ==========================
 
 In order to make apache aware of the PostgreSQL service file (see the
-:ref:`pg-service-file` section) you need to make
+:ref:`PostgreSQL Service connection file <pg-service-file>` section) you need to make
 your :file:`*.conf` file look like:
 
 .. code-block:: apache
