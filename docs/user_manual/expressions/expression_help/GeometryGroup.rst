@@ -630,6 +630,11 @@ Returns a geometry that represents that part of geometry1 that does not intersec
      - * ``geom_to_wkt( difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → 'LINESTRING(4 4, 5 5)'
 
 
+.. figure:: /docs/user_manual/processing_algs/qgis/img/difference.png
+   :align: center
+
+   Difference operation between a two-features input layer ‘a’ and a single feature overlay layer ‘b’ (left) - resulting in a new layer with the modified ‘a’ features (right)
+
 .. end_difference_section
 
 .. _expression_function_GeometryGroup_disjoint:
