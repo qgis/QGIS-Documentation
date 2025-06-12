@@ -1000,8 +1000,8 @@ Parameters
 
        * 0 --- Farthest points: the initial centers are selected
          as the farthest points from each other.
-       * 1 --- Kmeans++: the initial centers are selected
-         using the Kmeans++ algorithm.      
+       * 1 --- K-means++: the initial centers are selected
+         using the K-means++ algorithm.      
    * - **Clusters**
      - ``OUTPUT``
      - [vector: same as input]
