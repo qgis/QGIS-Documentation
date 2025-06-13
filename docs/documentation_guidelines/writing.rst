@@ -546,10 +546,11 @@ is located in the same folder as the referencing :file:`.rst` file.
   resolution > ugly)
 * Cut the background
 * Make the top corners transparent if the background is not white
-* Set print size resolution to ``135 dpi`` (e.g., in GIMP scale the image down
-  :menuselection:`Image --> Scale Image` set X/Y to 135 pixels/in and export
-  it :menuselection:`File --> Export..`). This way, images will be at
-  original size in html and at a good print resolution in the PDF.
+* Set print size resolution to ``135 dpi`` (e.g., in GIMP scale down the image
+  using :menuselection:`Image --> Scale Image` and setting "X/Y" to ``135 pixels/in``,
+  and export it through :menuselection:`File --> Export...`).
+  This way, images will be at original size in html and at a good print resolution in the PDF.
+
   You can also use ImageMagick convert command to do a batch of images:
 
   .. code-block:: bash
