@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-14 21:23+0000\n"
+"POT-Creation-Date: 2025-06-13 08:26+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Asdfgr Wertyu, 2025\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
@@ -34,6 +34,28 @@ msgstr ""
 "Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
 "страница в настоящее время переводится |прогресс перевода|."
 
+#: ../../docs/user_manual/expressions/functions_list.rst:5
+msgid "List of functions"
+msgstr "Список функций"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:7
+msgid ""
+"The functions, operators and variables available in QGIS are listed below, "
+"grouped by categories."
+msgstr ""
+"Ниже перечислены функции, операторы и переменные, доступные в QGIS, "
+"сгруппированные по категориям."
+
+#: ../../docs/user_manual/expressions/functions_list.rst:20
+msgid "Aggregates Functions"
+msgstr "Агрегатные функции"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:22
+msgid ""
+"This group contains functions which aggregate values over layers and fields."
+msgstr ""
+"Эта группа содержит функции, которые агрегируют значения по слоям и полям."
+
 #: ../../docs/user_manual/expressions/text_include.rst:7
 msgid "Show/hide list of functions"
 msgstr "Показать/скрыть список функций"
@@ -42,6 +64,337 @@ msgstr "Показать/скрыть список функций"
 msgid "aggregate"
 msgstr "aggregate"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:14
+msgid ""
+"Returns an aggregate value calculated using features from another layer."
+msgstr ""
+"Возвращает совокупное значение, рассчитанное с использованием объектов "
+"другого слоя."
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:13
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:37
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:79
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:104
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:129
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:155
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:181
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:205
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:229
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:253
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:277
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:301
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:325
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:349
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:373
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:397
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:421
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:445
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:469
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:493
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:517
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:541
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:13
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:33
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:35
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:38
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:40
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:56
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:61
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:62
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:83
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:85
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:96
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:103
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:105
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:124
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:134
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:145
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:154
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:165
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:175
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:190
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:196
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:212
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:216
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:232
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:254
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:255
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:275
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:297
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:318
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:344
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:363
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:13
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:35
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:37
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:55
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:56
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:92
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:113
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:135
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:158
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:183
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:205
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:228
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:253
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:276
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:298
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:339
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:361
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:384
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:409
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:432
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:58
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:81
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:109
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:132
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:154
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:13
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:33
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:39
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:60
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:73
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:87
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:93
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:107
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:113
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:129
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:133
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:149
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:13
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:32
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:33
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:35
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:55
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:57
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:72
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:79
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:94
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:116
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:136
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:156
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:227
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:242
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:264
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:286
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:311
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:341
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:367
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:382
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:408
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:423
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:444
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:466
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:481
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:503
+#: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:39
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:62
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:82
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:102
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:122
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:142
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:162
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:183
+#: ../../docs/user_manual/expressions/expression_help/Form.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Form.rst:39
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:45
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:91
+#: ../../docs/user_manual/expressions/expression_help/General.rst:13
+#: ../../docs/user_manual/expressions/expression_help/General.rst:19
+#: ../../docs/user_manual/expressions/expression_help/General.rst:41
+#: ../../docs/user_manual/expressions/expression_help/General.rst:62
+#: ../../docs/user_manual/expressions/expression_help/General.rst:82
+#: ../../docs/user_manual/expressions/expression_help/General.rst:102
+#: ../../docs/user_manual/expressions/expression_help/General.rst:123
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:13
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:53
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:56
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:57
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:73
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:75
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:78
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:82
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:92
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:93
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:94
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:96
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:103
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:106
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:112
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:116
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:118
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:124
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:126
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:133
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:136
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:142
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:144
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:157
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:158
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:166
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:174
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:179
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:190
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:192
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:210
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:214
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:237
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:240
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:259
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:264
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:283
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:285
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:309
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:335
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:357
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:380
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:13
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:13
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:13
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:36
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:40
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:57
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:60
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:82
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:97
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:102
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:117
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:122
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:140
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:142
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:163
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:184
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:39
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:79
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:99
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:120
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:141
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:171
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:191
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:212
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:232
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:253
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:274
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:296
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:317
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:338
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:359
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:377
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:398
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:422
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:446
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:471
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:501
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:531
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:561
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:581
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:601
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:37
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:55
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:73
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:91
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:109
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:127
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:13
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:36
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:39
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:48
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:58
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:79
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:96
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:102
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:119
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:125
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:149
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:170
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:173
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:196
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:219
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:243
+#: ../../docs/user_manual/expressions/expression_help/Processing.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:13
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:23
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:30
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:34
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:35
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:38
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:39
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:47
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:48
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:55
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:63
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:73
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:86
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:88
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:101
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:126
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:153
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:166
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:181
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:19
+#: ../../docs/user_manual/expressions/expression_help/String.rst:13
+#: ../../docs/user_manual/expressions/expression_help/String.rst:17
+#: ../../docs/user_manual/expressions/expression_help/String.rst:19
+#: ../../docs/user_manual/expressions/expression_help/String.rst:32
+#: ../../docs/user_manual/expressions/expression_help/String.rst:35
+#: ../../docs/user_manual/expressions/expression_help/String.rst:36
+#: ../../docs/user_manual/expressions/expression_help/String.rst:39
+#: ../../docs/user_manual/expressions/expression_help/String.rst:52
+#: ../../docs/user_manual/expressions/expression_help/String.rst:59
+#: ../../docs/user_manual/expressions/expression_help/String.rst:102
+#: ../../docs/user_manual/expressions/expression_help/String.rst:129
+msgid "Syntax"
+msgstr "Синтаксис"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:20
 msgid ""
 "aggregate(layer, aggregate, expression, [filter], [concatenator=''], "
@@ -49,6 +402,427 @@ msgid ""
 msgstr ""
 "aggregate(layer, aggregate, expression, [filter], [concatenator=''], "
 "[order_by])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:40
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:82
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:107
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:132
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:158
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:184
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:208
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:232
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:256
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:280
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:304
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:328
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:352
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:376
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:400
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:424
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:448
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:472
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:496
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:520
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:544
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:99
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:108
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:168
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:219
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:69
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:161
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:231
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:387
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:412
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:157
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:36
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:63
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:136
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:38
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:159
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:314
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:506
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:42
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:22
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:81
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:96
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:97
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:99
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:119
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:129
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:145
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:161
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:169
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:213
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:217
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:262
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:286
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:312
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:383
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:401
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:425
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:449
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:104
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:129
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:22
+#: ../../docs/user_manual/expressions/expression_help/String.rst:16
+#: ../../docs/user_manual/expressions/expression_help/String.rst:38
+#: ../../docs/user_manual/expressions/expression_help/String.rst:105
+msgid "[] marks optional arguments"
+msgstr "[] обозначает необязательные аргументы"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:23
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:41
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:83
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:108
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:133
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:159
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:185
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:209
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:233
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:257
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:281
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:305
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:329
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:353
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:377
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:401
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:425
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:449
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:473
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:497
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:521
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:545
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:15
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:35
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:37
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:40
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:58
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:85
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:87
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:100
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:105
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:109
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:126
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:136
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:147
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:156
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:169
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:177
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:192
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:198
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:214
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:220
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:234
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:256
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:257
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:277
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:299
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:320
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:346
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:365
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:15
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:37
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:39
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:57
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:58
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:94
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:115
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:137
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:162
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:185
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:207
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:232
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:255
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:278
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:300
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:341
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:363
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:388
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:413
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:434
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:35
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:60
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:83
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:111
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:134
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:158
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:15
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:37
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:41
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:89
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:95
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:109
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:115
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:131
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:137
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:151
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:15
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:34
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:35
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:39
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:57
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:74
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:81
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:96
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:118
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:138
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:160
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:229
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:244
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:266
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:288
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:315
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:343
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:369
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:384
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:410
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:425
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:468
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:483
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:507
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:43
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:84
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:104
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:124
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:144
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:164
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:185
+#: ../../docs/user_manual/expressions/expression_help/Form.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Form.rst:41
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:47
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:93
+#: ../../docs/user_manual/expressions/expression_help/General.rst:15
+#: ../../docs/user_manual/expressions/expression_help/General.rst:21
+#: ../../docs/user_manual/expressions/expression_help/General.rst:43
+#: ../../docs/user_manual/expressions/expression_help/General.rst:64
+#: ../../docs/user_manual/expressions/expression_help/General.rst:84
+#: ../../docs/user_manual/expressions/expression_help/General.rst:104
+#: ../../docs/user_manual/expressions/expression_help/General.rst:125
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:15
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:21
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:53
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:56
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:57
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:63
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:75
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:76
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:82
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:84
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:94
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:97
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:98
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:100
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:105
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:114
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:120
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:126
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:130
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:135
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:138
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:146
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:159
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:160
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:162
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:170
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:176
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:181
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:192
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:194
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:214
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:218
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:239
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:242
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:263
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:266
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:287
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:313
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:337
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:359
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:384
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:15
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:23
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:46
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:15
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:38
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:62
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:79
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:84
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:99
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:104
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:119
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:124
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:142
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:144
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:165
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:186
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:41
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:61
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:81
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:101
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:122
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:143
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:173
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:193
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:214
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:234
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:255
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:276
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:298
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:319
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:340
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:379
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:402
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:426
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:450
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:473
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:503
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:533
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:563
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:583
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:603
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:15
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:38
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:41
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:45
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:50
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:60
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:67
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:72
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:81
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:98
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:104
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:121
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:127
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:151
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:172
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:175
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:198
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:221
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:245
+#: ../../docs/user_manual/expressions/expression_help/Processing.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:25
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:32
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:36
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:40
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:43
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:49
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:50
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:57
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:67
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:88
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:90
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:105
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:130
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:168
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:183
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:23
+#: ../../docs/user_manual/expressions/expression_help/String.rst:15
+#: ../../docs/user_manual/expressions/expression_help/String.rst:17
+#: ../../docs/user_manual/expressions/expression_help/String.rst:19
+#: ../../docs/user_manual/expressions/expression_help/String.rst:21
+#: ../../docs/user_manual/expressions/expression_help/String.rst:34
+#: ../../docs/user_manual/expressions/expression_help/String.rst:38
+#: ../../docs/user_manual/expressions/expression_help/String.rst:39
+#: ../../docs/user_manual/expressions/expression_help/String.rst:41
+#: ../../docs/user_manual/expressions/expression_help/String.rst:54
+#: ../../docs/user_manual/expressions/expression_help/String.rst:61
+#: ../../docs/user_manual/expressions/expression_help/String.rst:106
+#: ../../docs/user_manual/expressions/expression_help/String.rst:131
+msgid "Arguments"
+msgstr "Аргументы"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:24
+#: ../../docs/user_manual/expressions/expression_help/General.rst:85
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:47
+msgid "**layer** - a string, representing either a layer name or layer ID"
+msgstr ""
+"**слой** — строка, представляющая либо имя слоя, либо его идентификатор"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:25
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:547
+msgid ""
+"**aggregate** - a string corresponding to the aggregate to calculate. Valid "
+"options are:"
+msgstr ""
+"**aggregate** — строка, соответствующая агрегату для вычисления. Допустимые "
+"варианты:"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:29
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:174
@@ -67,6 +841,16 @@ msgstr "count_distinct"
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:553
 msgid "count_missing"
 msgstr "count_missing"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:32
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:554
+msgid "minimum or min"
+msgstr "минимальный или минимальное"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:33
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:555
+msgid "maximum or max"
+msgstr "максимальный или макс."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:30
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:34
@@ -114,6 +898,88 @@ msgstr "minority"
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:563
 msgid "majority"
 msgstr "majority"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:564
+msgid "q1: first quartile"
+msgstr "q1: первый квартиль"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:43
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:565
+msgid "q3: third quartile"
+msgstr "q3: третий квартиль"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:566
+msgid "iqr: inter quartile range"
+msgstr "iqr: межквартильный размах"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:45
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:567
+msgid "min_length: minimum string length"
+msgstr "min_length: минимальная длина строки"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:46
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:568
+msgid "max_length: maximum string length"
+msgstr "max_length: максимальная длина строки"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:47
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:569
+msgid "concatenate: join strings with a concatenator"
+msgstr "конкатенация: соединение строк с помощью конкатенатора"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:48
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:570
+msgid "concatenate_unique: join unique strings with a concatenator"
+msgstr ""
+"concatenate_unique: соединение уникальных строк с помощью конкатенатора"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:49
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:571
+msgid "collect: create an aggregated multipart geometry"
+msgstr "собрать: создать агрегированную многочастную геометрию"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:50
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:572
+msgid "array_agg: create an array of aggregated values"
+msgstr "array_agg: создать массив агрегированных значений"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:53
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:575
+msgid "**expression** - sub expression or field name to aggregate"
+msgstr "**выражение** — подвыражение или имя поля для агрегирования"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:54
+msgid ""
+"**filter** - optional filter expression to limit the features used for "
+"calculating the aggregate. Fields and geometry are from the features on the "
+"joined layer. The source feature can be accessed with the variable @parent."
+msgstr ""
+"**фильтр** — необязательное выражение фильтра для ограничения объектов, "
+"используемых для вычисления агрегата. Поля и геометрия взяты из объектов на "
+"соединенном слое. Доступ к исходному объекту можно получить с помощью "
+"переменной @parent."
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:55
+msgid ""
+"**concatenator** - optional string to use to join values for 'concatenate' "
+"and 'concatenate_unique' aggregates"
+msgstr ""
+"**concatenator** — необязательная строка, используемая для объединения "
+"значений для агрегатов «concatenate» и «concatenate_unique»"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:56
+msgid ""
+"**order_by** - optional filter expression to order the features used for "
+"calculating the aggregate. Fields and geometry are from the features on the "
+"joined layer. By default, the features will be returned in an unspecified "
+"order."
+msgstr ""
+"**order_by** — необязательное выражение фильтра для упорядочивания объектов,"
+" используемых для вычисления агрегата. Поля и геометрия взяты из объектов на"
+" соединенном слое. По умолчанию объекты будут возвращаться в неуказанном "
+"порядке."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:45
@@ -466,25 +1332,231 @@ msgstr "majority"
 msgid "Examples"
 msgstr "Примеры"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:58
+msgid ""
+"``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\")``"
+" → sum of all values from the passengers field in the rail_stations layer"
+msgstr ""
+"``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\")``"
+" → сумма всех значений из поля пассажиров в слое rail_stations"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:59
+msgid ""
+"``aggregate('rail_stations','sum', \"passengers\"/7)`` → calculates a daily "
+"average of \"passengers\" by dividing the \"passengers\" field by 7 before "
+"summing the values"
+msgstr ""
+"``aggregate('rail_stations','sum', \"passengers\"/7)`` → вычисляет "
+"среднесуточное значение «passengers», деля поле «passengers» на 7 перед "
+"суммированием значений."
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:60
+msgid ""
+"``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\",filter:=\"class\">3)``"
+" → sums up all values from the \"passengers\" field from features where the "
+"\"class\" attribute is greater than 3 only"
+msgstr ""
+"``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\",filter:=\"class\">3)``"
+" → суммирует все значения из поля «passengers» только из объектов, у которых"
+" атрибут «class» больше 3."
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:61
+msgid ""
+"``aggregate(layer:='rail_stations',aggregate:='concatenate', "
+"expression:=\"name\", concatenator:=',')`` → comma separated list of the "
+"name field for all features in the rail_stations layer"
+msgstr ""
+"``aggregate(layer:='rail_stations',aggregate:='concatenate', "
+"expression:=\"name\", concatenator:=',')`` → список полей name для всех "
+"объектов в слое rail_stations, разделенный запятыми"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:62
+msgid ""
+"``aggregate(layer:='countries', aggregate:='max', expression:=\"code\", "
+"filter:=intersects( @geometry, geometry(@parent) ) )`` → The country code of"
+" an intersecting country on the layer 'countries'"
+msgstr ""
+"``aggregate(layer:='countries', aggregate:='max', expression:=\"code\", "
+"filter:=intersects( @geometry, geometry(@parent) ) )`` → Код страны, "
+"пересекающейся со слоем «countries»"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:63
+msgid ""
+"``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\",filter:=contains("
+" @atlas_geometry, @geometry ) )`` → sum of all values from the passengers "
+"field in the rail_stations within the current atlas feature"
+msgstr ""
+"``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\",filter:=contains("
+" @atlas_geometry, @geometry ) )`` → сумма всех значений из поля пассажиров в"
+" rail_stations в пределах текущего объекта атласа"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:64
+msgid ""
+"``aggregate(layer:='rail_stations', aggregate:='collect', "
+"expression:=centroid(@geometry), filter:=\"region_name\" = "
+"attribute(@parent,'name') )`` → aggregates centroid geometries of the "
+"rail_stations of the same region as current feature"
+msgstr ""
+"``aggregate(layer:='rail_stations', aggregate:='collect', "
+"expression:=centroid(@geometry), filter:=\"region_name\" = "
+"attribute(@parent,'name') )`` → агрегирует геометрии центроидов "
+"железнодорожных станций того же региона, что и текущий объект"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:72
 msgid "array_agg"
 msgstr "array_agg"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:74
+msgid "Returns an array of aggregated values from a field or expression."
+msgstr "Возвращает массив агрегированных значений из поля или выражения."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:80
 msgid "array_agg(expression, [group_by], [filter], [order_by])"
 msgstr "array_agg(expression, [group_by], [filter], [order_by])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:18
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:84
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:134
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:160
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:186
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:210
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:234
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:258
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:282
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:306
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:330
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:354
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:378
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:402
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:426
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:450
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:474
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:498
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:522
+msgid "**expression** - sub expression of field to aggregate"
+msgstr "**выражение** — подвыражение поля для агрегирования"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:19
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:43
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:85
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:110
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:135
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:161
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:187
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:211
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:235
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:259
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:283
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:307
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:331
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:355
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:379
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:403
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:427
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:451
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:475
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:499
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:523
+msgid ""
+"**group_by** - optional expression to use to group aggregate calculations"
+msgstr ""
+"**group_by** — необязательное выражение, используемое для группировки "
+"агрегированных вычислений"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:20
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:86
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:111
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:136
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:162
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:188
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:212
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:236
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:260
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:284
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:308
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:332
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:356
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:380
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:404
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:428
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:452
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:476
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:500
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:524
+msgid ""
+"**filter** - optional expression to use to filter features used to calculate"
+" aggregate"
+msgstr ""
+"**фильтр** — необязательное выражение, используемое для фильтрации "
+"атрибутов, используемых для расчета агрегата"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:87
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:138
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:164
+msgid ""
+"**order_by** - optional expression to use to order features used to "
+"calculate aggregate. By default, the features will be returned in an "
+"unspecified order."
+msgstr ""
+"**order_by** — необязательное выражение, используемое для упорядочивания "
+"функций, используемых для вычисления агрегата. По умолчанию функции будут "
+"возвращаться в неуказанном порядке."
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:89
+msgid ""
+"``array_agg(\"name\",group_by:=\"state\")`` → list of name values, grouped "
+"by state field"
+msgstr ""
+"``array_agg(\"name\",group_by:=\"state\")`` → список значений имени, "
+"сгруппированных по полю штата"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:97
 msgid "collect"
 msgstr "collect"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:99
+msgid ""
+"Returns the multipart geometry of aggregated geometries from an expression"
+msgstr ""
+"Возвращает многокомпонентную геометрию агрегированных геометрий из выражения"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:105
 msgid "collect(expression, [group_by], [filter])"
 msgstr "collect(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:109
+msgid "**expression** - geometry expression to aggregate"
+msgstr "**выражение** — геометрическое выражение для агрегирования"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:113
+msgid "``collect( @geometry )`` → multipart geometry of aggregated geometries"
+msgstr ""
+"``collect( @geometry )`` → многокомпонентная геометрия агрегированных "
+"геометрий"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:114
+msgid ""
+"``collect( centroid(@geometry), group_by:=\"region\", filter:= \"use\" = "
+"'civilian' )`` → aggregated centroids of the civilian features based on "
+"their region value"
+msgstr ""
+"``collect( centroid(@geometry), group_by:=\"region\", filter:= \"use\" = "
+"'civilian' )`` → агрегированные центроиды гражданских объектов на основе их "
+"регионального значения"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:122
 msgid "concatenate"
 msgstr "concatenate"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:124
+msgid ""
+"Returns all aggregated strings from a field or expression joined by a "
+"delimiter."
+msgstr ""
+"Возвращает все агрегированные строки из поля или выражения, соединенные "
+"разделителем."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:130
 msgid ""
@@ -492,9 +1564,32 @@ msgid ""
 msgstr ""
 "concatenate(expression, [group_by], [filter], [concatenator], [order_by])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:137
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:163
+msgid ""
+"**concatenator** - optional string to use to join values. Empty by default."
+msgstr ""
+"**concatenator** — необязательная строка, используемая для объединения "
+"значений. По умолчанию пустая."
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:140
+msgid ""
+"``concatenate(\"town_name\",group_by:=\"state\",concatenator:=',')`` → comma"
+" separated list of town_names, grouped by state field"
+msgstr ""
+"``concatenate(\"town_name\",group_by:=\"state\",concatenator:=',')`` → "
+"список названий городов, разделенных запятыми, сгруппированных по полю штата"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:148
 msgid "concatenate_unique"
 msgstr "concatenate_unique"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:150
+msgid ""
+"Returns all unique strings from a field or expression joined by a delimiter."
+msgstr ""
+"Возвращает все уникальные строки из поля или выражения, соединенные "
+"разделителем."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:156
 msgid ""
@@ -504,97 +1599,307 @@ msgstr ""
 "concatenate_unique(expression, [group_by], [filter], [concatenator], "
 "[order_by])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:166
+msgid ""
+"``concatenate_unique(\"town_name\",group_by:=\"state\",concatenator:=',')`` "
+"→ comma separated list of unique town_names, grouped by state field"
+msgstr ""
+"``concatenate_unique(\"town_name\",group_by:=\"state\",concatenator:=',')`` "
+"→ список уникальных названий городов, разделенных запятыми, сгруппированных "
+"по полю штата"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:176
+msgid "Returns the count of matching features."
+msgstr "Возвращает количество совпадающих признаков."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:182
 msgid "count(expression, [group_by], [filter])"
 msgstr "count(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:190
+msgid ""
+"``count(\"stations\",group_by:=\"state\")`` → count of stations, grouped by "
+"state field"
+msgstr ""
+"``count(\"stations\",group_by:=\"state\")`` → количество станций, "
+"сгруппированных по полю state"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:200
+msgid "Returns the count of distinct values."
+msgstr "Возвращает количество уникальных значений."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:206
 msgid "count_distinct(expression, [group_by], [filter])"
 msgstr "count_distinct(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:214
+msgid ""
+"``count_distinct(\"stations\",group_by:=\"state\")`` → count of distinct "
+"stations values, grouped by state field"
+msgstr ""
+"``count_distinct(\"stations\",group_by:=\"state\")`` → количество уникальных"
+" значений станций, сгруппированных по полю state"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:224
+msgid "Returns the count of missing (NULL) values."
+msgstr "Возвращает количество отсутствующих (NULL) значений."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:230
 msgid "count_missing(expression, [group_by], [filter])"
 msgstr "count_missing(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:238
+msgid ""
+"``count_missing(\"stations\",group_by:=\"state\")`` → count of missing "
+"(NULL) station values, grouped by state field"
+msgstr ""
+"``count_missing(\"stations\",group_by:=\"state\")`` → количество "
+"отсутствующих (NULL) значений станций, сгруппированных по полю state"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:246
 msgid "iqr"
 msgstr "iqr"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:248
+msgid ""
+"Returns the calculated inter quartile range from a field or expression."
+msgstr "Возвращает рассчитанный межквартильный размах из поля или выражения."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:254
 msgid "iqr(expression, [group_by], [filter])"
 msgstr "iqr(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:262
+msgid ""
+"``iqr(\"population\",group_by:=\"state\")`` → inter quartile range of "
+"population value, grouped by state field"
+msgstr ""
+"``iqr(\"population\",group_by:=\"state\")`` → межквартильный размах значения"
+" population, сгруппированный по полю state"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:272
+msgid ""
+"Returns the aggregate majority of values (most commonly occurring value) "
+"from a field or expression."
+msgstr ""
+"Возвращает совокупное большинство значений (наиболее часто встречающееся "
+"значение) из поля или выражения."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:278
 msgid "majority(expression, [group_by], [filter])"
 msgstr "majority(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:286
+msgid ""
+"``majority(\"class\",group_by:=\"state\")`` → most commonly occurring class "
+"value, grouped by state field"
+msgstr ""
+"``majority(\"class\",group_by:=\"state\")`` → наиболее часто встречающееся "
+"значение класса, сгруппированное по полю state"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:294
 msgid "max_length"
 msgstr "max_length"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:296
+msgid "Returns the maximum length of strings from a field or expression."
+msgstr "Возвращает максимальную длину строк из поля или выражения."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:302
 msgid "max_length(expression, [group_by], [filter])"
 msgstr "max_length(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:310
+msgid ""
+"``max_length(\"town_name\",group_by:=\"state\")`` → maximum length of "
+"town_name, grouped by state field"
+msgstr ""
+"``max_length(\"town_name\",group_by:=\"state\")`` → максимальная длина "
+"town_name, сгруппированная по полю state"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:318
 msgid "maximum"
 msgstr "maximum"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:320
+msgid "Returns the aggregate maximum value from a field or expression."
+msgstr "Возвращает совокупное максимальное значение из поля или выражения."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:326
 msgid "maximum(expression, [group_by], [filter])"
 msgstr "maximum(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:334
+msgid ""
+"``maximum(\"population\",group_by:=\"state\")`` → maximum population value, "
+"grouped by state field"
+msgstr ""
+"``maximum(\"population\",group_by:=\"state\")`` → максимальное значение "
+"населения, сгруппированное по полю штата"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:344
+msgid "Returns the aggregate mean value from a field or expression."
+msgstr "Возвращает совокупное среднее значение из поля или выражения."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:350
 msgid "mean(expression, [group_by], [filter])"
 msgstr "mean(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:358
+msgid ""
+"``mean(\"population\",group_by:=\"state\")`` → mean population value, "
+"grouped by state field"
+msgstr ""
+"``mean(\"population\",group_by:=\"state\")`` → среднее значение населения, "
+"сгруппированное по полю штата"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:368
+msgid "Returns the aggregate median value from a field or expression."
+msgstr "Возвращает совокупное медианное значение из поля или выражения."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:374
 msgid "median(expression, [group_by], [filter])"
 msgstr "median(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:382
+msgid ""
+"``median(\"population\",group_by:=\"state\")`` → median population value, "
+"grouped by state field"
+msgstr ""
+"``median(\"population\",group_by:=\"state\")`` → медиана значения "
+"population, сгруппированная по полю state"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:390
 msgid "min_length"
 msgstr "min_length"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:392
+msgid "Returns the minimum length of strings from a field or expression."
+msgstr "Возвращает минимальную длину строк из поля или выражения."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:398
 msgid "min_length(expression, [group_by], [filter])"
 msgstr "min_length(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:406
+msgid ""
+"``min_length(\"town_name\",group_by:=\"state\")`` → minimum length of "
+"town_name, grouped by state field"
+msgstr ""
+"``min_length(\"town_name\",group_by:=\"state\")`` → минимальная длина "
+"town_name, сгруппированная по полю state"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:414
 msgid "minimum"
 msgstr "minimum"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:416
+msgid "Returns the aggregate minimum value from a field or expression."
+msgstr "Возвращает совокупное минимальное значение из поля или выражения."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:422
 msgid "minimum(expression, [group_by], [filter])"
 msgstr "minimum(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:430
+msgid ""
+"``minimum(\"population\",group_by:=\"state\")`` → minimum population value, "
+"grouped by state field"
+msgstr ""
+"``minimum(\"population\",group_by:=\"state\")`` → минимальное значение "
+"населения, сгруппированное по полю штата"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:440
+msgid ""
+"Returns the aggregate minority of values (least occurring value) from a "
+"field or expression."
+msgstr ""
+"Возвращает совокупное меньшинство значений (наименее встречающееся значение)"
+" из поля или выражения."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:446
 msgid "minority(expression, [group_by], [filter])"
 msgstr "minority(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:454
+msgid ""
+"``minority(\"class\",group_by:=\"state\")`` → least occurring class value, "
+"grouped by state field"
+msgstr ""
+"``minority(\"class\",group_by:=\"state\")`` → наименее встречающееся "
+"значение класса, сгруппированное по полю state"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:462
 msgid "q1"
 msgstr "q1"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:464
+msgid "Returns the calculated first quartile from a field or expression."
+msgstr "Возвращает рассчитанный первый квартиль из поля или выражения."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:470
 msgid "q1(expression, [group_by], [filter])"
 msgstr "q1(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:478
+msgid ""
+"``q1(\"population\",group_by:=\"state\")`` → first quartile of population "
+"value, grouped by state field"
+msgstr ""
+"``q1(\"population\",group_by:=\"state\")`` → первый квартиль значения "
+"population, сгруппированный по полю state"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:486
 msgid "q3"
 msgstr "q3"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:488
+msgid "Returns the calculated third quartile from a field or expression."
+msgstr "Возвращает рассчитанный третий квартиль из поля или выражения."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:494
 msgid "q3(expression, [group_by], [filter])"
 msgstr "q3(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:502
+msgid ""
+"``q3(\"population\",group_by:=\"state\")`` → third quartile of population "
+"value, grouped by state field"
+msgstr ""
+"``q3(\"population\",group_by:=\"state\")`` → третий квартиль значения "
+"population, сгруппированный по полю state"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:512
+msgid ""
+"Returns the aggregate range of values (maximum - minimum) from a field or "
+"expression."
+msgstr ""
+"Возвращает совокупный диапазон значений (максимум - минимум) из поля или "
+"выражения."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:518
 msgid "range(expression, [group_by], [filter])"
 msgstr "range(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:526
+msgid ""
+"``range(\"population\",group_by:=\"state\")`` → range of population values, "
+"grouped by state field"
+msgstr ""
+"``range(\"population\",group_by:=\"state\")`` → диапазон значений населения,"
+" сгруппированных по полю штата"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:534
 msgid "relation_aggregate"
 msgstr "relation_aggregate"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:536
+msgid ""
+"Returns an aggregate value calculated using all matching child features from"
+" a layer relation."
+msgstr ""
+"Возвращает совокупное значение, рассчитанное с использованием всех "
+"соответствующих дочерних объектов из отношения слоя."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:542
 msgid ""
@@ -604,502 +1909,2527 @@ msgstr ""
 "relation_aggregate(relation, aggregate, expression, [concatenator=''], "
 "[order_by])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:546
+msgid "**relation** - a string, representing a relation ID"
+msgstr "**relation** — строка, представляющая идентификатор отношения"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:576
+msgid ""
+"**concatenator** - optional string to use to join values for 'concatenate' "
+"aggregate"
+msgstr ""
+"**concatenator** — необязательная строка, используемая для объединения "
+"значений для агрегата «concatenate»"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:577
+msgid ""
+"**order_by** - optional expression to order the features used for "
+"calculating the aggregate. Fields and geometry are from the features on the "
+"joined layer. By default, the features will be returned in an unspecified "
+"order."
+msgstr ""
+"**order_by** — необязательное выражение для упорядочивания объектов, "
+"используемых для вычисления агрегата. Поля и геометрия взяты из объектов на "
+"соединенном слое. По умолчанию объекты будут возвращаться в неуказанном "
+"порядке."
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:579
+msgid ""
+"``relation_aggregate(relation:='my_relation',aggregate:='mean',expression:=\"passengers\")``"
+" → mean value of all matching child features using the 'my_relation' "
+"relation"
+msgstr ""
+"``relation_aggregate(relation:='my_relation',aggregate:='mean',expression:=\"passengers\")``"
+" → среднее значение всех соответствующих дочерних характеристик с "
+"использованием отношения 'my_relation'"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:580
+msgid ""
+"``relation_aggregate('my_relation','sum', \"passengers\"/7)`` → sum of the "
+"passengers field divided by 7 for all matching child features using the "
+"'my_relation' relation"
+msgstr ""
+"``relation_aggregate('my_relation','sum', \"passengers\"/7)`` → сумма поля "
+"«passengers» деленная на 7 для всех соответствующих дочерних объектов, "
+"использующих отношение «my_relation»"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:581
+msgid ""
+"``relation_aggregate('my_relation','concatenate', \"towns\", "
+"concatenator:=',')`` → comma separated list of the towns field for all "
+"matching child features using the 'my_relation' relation"
+msgstr ""
+"``relation_aggregate('my_relation','concatenate', \"towns\", "
+"concatenator:=',')`` → список полей «towns» для всех соответствующих "
+"дочерних объектов, разделенный запятыми, с использованием отношения "
+"«my_relation»"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:582
+msgid ""
+"``relation_aggregate('my_relation','array_agg', \"id\")`` → array of the id "
+"field from all matching child features using the 'my_relation' relation"
+msgstr ""
+"``relation_aggregate('my_relation','array_agg', \"id\")`` → массив полей id "
+"из всех соответствующих дочерних объектов, использующих отношение "
+"'my_relation'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:32
+msgid "Further reading: :ref:`vector_relations`"
+msgstr "Дополнительная информация: :ref:`vector_relations`"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:8
+msgid ""
+"Returns the aggregate standard deviation value from a field or expression."
+msgstr ""
+"Возвращает совокупное значение стандартного отклонения из поля или "
+"выражения."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:14
 msgid "stdev(expression, [group_by], [filter])"
 msgstr "stdev(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:22
+msgid ""
+"``stdev(\"population\",group_by:=\"state\")`` → standard deviation of "
+"population value, grouped by state field"
+msgstr ""
+"``stdev(\"population\",group_by:=\"state\")`` → стандартное отклонение "
+"значения population, сгруппированное по полю state"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:32
+msgid "Returns the aggregate summed value from a field or expression."
+msgstr "Возвращает совокупное суммарное значение из поля или выражения."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:38
 msgid "sum(expression, [group_by], [filter])"
 msgstr "sum(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:46
+msgid ""
+"``sum(\"population\",group_by:=\"state\")`` → summed population value, "
+"grouped by state field"
+msgstr ""
+"``sum(\"population\",group_by:=\"state\")`` → суммарное значение населения, "
+"сгруппированное по полю штата"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:42
+msgid "Array Functions"
+msgstr "Функции массива"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:44
+msgid ""
+"This group contains functions to create and manipulate arrays (also known as"
+" list data structures). The order of values within the array matters, unlike"
+" the :ref:`'map' data structure <maps_functions>`, where the order of key-"
+"value pairs is irrelevant and values are identified by their keys."
+msgstr ""
+"Эта группа содержит функции для создания и манипулирования массивами (также "
+"известными как структуры данных списка). Порядок значений в массиве имеет "
+"значение, в отличие от структуры данных :ref:`'map'<maps_functions> `, где "
+"порядок пар ключ-значение не имеет значения, а значения идентифицируются по "
+"их ключам."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:12
 msgid "array"
 msgstr "array"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:14
+msgid "Returns an array containing all the values passed as parameter."
+msgstr ""
+"Возвращает массив, содержащий все значения, переданные в качестве параметра."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:20
+msgid "array(value1, value2, ...)"
+msgstr "массив(значение1, значение2, ...)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:64
+msgid "**value** - a value"
+msgstr "**значение** - значение"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:24
+msgid "``array(2,10)`` → [ 2, 10 ]"
+msgstr "``массив(2,10)`` → [ 2, 10 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:25
+msgid "``array(2,10)[0]`` → 2"
+msgstr "``массив(2,10)[0]`` → 2"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:33
 msgid "array_all"
 msgstr "array_all"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:35
+msgid "Returns TRUE if an array contains all the values of a given array."
+msgstr "Возвращает TRUE, если массив содержит все значения заданного массива."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:41
 msgid "array_all(array_a, array_b)"
 msgstr "array_all(array_a, array_b)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:43
+msgid "**array_a** - an array"
+msgstr "**array_a** — массив"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:44
+msgid "**array_b** - the array of values to search"
+msgstr "**array_b** — массив значений для поиска"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:46
+msgid "``array_all(array(1,2,3),array(2,3))`` → TRUE"
+msgstr "``array_all(массив(1,2,3),массив(2,3))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:47
+msgid "``array_all(array(1,2,3),array(1,2,4))`` → FALSE"
+msgstr "``array_all(массив(1,2,3),массив(1,2,4))`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:55
 msgid "array_append"
 msgstr "array_append"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:57
+msgid "Returns an array with the given value added at the end."
+msgstr "Возвращает массив с добавлением заданного значения в конец."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:63
 msgid "array_append(array, value)"
 msgstr "array_append(array, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:36
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:67
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:79
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:86
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:88
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:101
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:106
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:127
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:137
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:148
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:157
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:170
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:178
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:193
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:199
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:215
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:221
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:235
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:257
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:258
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:278
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:300
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:321
+msgid "**array** - an array"
+msgstr "**массив** — массив"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:18
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:258
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:18
+msgid "**value** - the value to add"
+msgstr "**value** — добавляемое значение"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:68
+msgid "``array_append(array(1,2,3),4)`` → [ 1, 2, 3, 4 ]"
+msgstr "``array_append(массив(1,2,3),4)`` → [ 1, 2, 3, 4 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:76
 msgid "array_cat"
 msgstr "array_cat"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:78
+msgid "Returns an array containing all the given arrays concatenated."
+msgstr ""
+"Возвращает массив, содержащий все заданные массивы, соединенные вместе."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:84
+msgid "array_cat(array1, array2, ...)"
+msgstr "array_cat(массив1, массив2, ...)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:88
+msgid "``array_cat(array(1,2),array(2,3))`` → [ 1, 2, 2, 3 ]"
+msgstr "``array_cat(массив(1,2),массив(2,3))`` → [ 1, 2, 2, 3 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:96
 msgid "array_contains"
 msgstr "array_contains"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:98
+msgid "Returns TRUE if an array contains the given value."
+msgstr "Возвращает TRUE, если массив содержит заданное значение."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:104
 msgid "array_contains(array, value)"
 msgstr "array_contains(array, value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:107
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:194
+msgid "**value** - the value to search"
+msgstr "**значение** — значение для поиска"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:109
+msgid "``array_contains(array(1,2,3),2)`` → TRUE"
+msgstr "``array_contains(массив(1,2,3),2)`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:117
 msgid "array_count"
 msgstr "array_count"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:119
+msgid "Counts the number of occurrences of a given value in an array."
+msgstr "Подсчитывает количество вхождений заданного значения в массиве."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:125
 msgid "array_count(array, value)"
 msgstr "array_count(array, value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:128
+msgid "**value** - the value to count"
+msgstr "**значение** — значение для подсчета"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:130
+msgid "``array_count(array('a', 'b', 'c', 'b'), 'b')`` → 2"
+msgstr "``array_count(массив(«a», «b», «c», «b»), «b»)`` → 2"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:138
 msgid "array_distinct"
 msgstr "array_distinct"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:140
+msgid "Returns an array containing distinct values of the given array."
+msgstr "Возвращает массив, содержащий уникальные значения заданного массива."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:146
 msgid "array_distinct(array)"
 msgstr "array_distinct(array)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:150
+msgid "``array_distinct(array(1,2,3,2,1))`` → [ 1, 2, 3 ]"
+msgstr "``array_distinct(массив(1,2,3,2,1))`` → [ 1, 2, 3 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:158
 msgid "array_filter"
 msgstr "array_filter"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:160
+msgid ""
+"Returns an array with only the items for which the expression evaluates to "
+"true."
+msgstr ""
+"Возвращает массив, содержащий только те элементы, для которых выражение "
+"имеет значение true."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:166
+msgid "array_filter(array, expression, [limit=0])"
+msgstr "array_filter(массив, выражение, [limit=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:171
+msgid ""
+"**expression** - an expression to evaluate on each item. The variable "
+"`@element` will be replaced by the current value."
+msgstr ""
+"**выражение** — выражение, которое будет вычисляться для каждого элемента. "
+"Переменная `@element` будет заменена текущим значением."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:172
+msgid ""
+"**limit** - maximum number of elements to be returned. Use 0 to return all "
+"values."
+msgstr ""
+"**limit** — максимальное количество элементов, которые будут возвращены. "
+"Используйте 0, чтобы вернуть все значения."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:174
+msgid "``array_filter(array(1,2,3),@element < 3)`` → [ 1, 2 ]"
+msgstr "``array_filter(массив(1,2,3),@элемент < 3)`` → [ 1, 2 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:175
+msgid "``array_filter(array(1,2,3),@element < 3, 1)`` → [ 1 ]"
+msgstr "``array_filter(array(1,2,3),@element < 3, 1)`` → [ 1 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:183
 msgid "array_find"
 msgstr "array_find"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:185
+msgid ""
+"Returns the lowest index (0 for the first one) of a value within an array. "
+"Returns -1 if the value is not found."
+msgstr ""
+"Возвращает наименьший индекс (0 для первого) значения в массиве. Возвращает "
+"-1, если значение не найдено."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:191
 msgid "array_find(array, value)"
 msgstr "array_find(array, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:196
+msgid "``array_find(array('a', 'b', 'c'), 'b')`` → 1"
+msgstr "``array_find(массив(«a», «b», «c»), «b»)`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:197
+msgid "``array_find(array('a', 'b', 'c', 'b'), 'b')`` → 1"
+msgstr "``array_find(массив(«a», «b», «c», «b»), «b»)`` → 1"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:205
 msgid "array_first"
 msgstr "array_first"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:207
+msgid "Returns the first value of an array."
+msgstr "Возвращает первое значение массива."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:213
 msgid "array_first(array)"
 msgstr "array_first(array)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:217
+msgid "``array_first(array('a','b','c'))`` → 'a'"
+msgstr "``array_first(массив(«a», «b», «c»))`` → «a»"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:225
 msgid "array_foreach"
 msgstr "array_foreach"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:227
+msgid "Returns an array with the given expression evaluated on each item."
+msgstr ""
+"Возвращает массив с вычисленным значением заданного выражения для каждого "
+"элемента."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:233
 msgid "array_foreach(array, expression)"
 msgstr "array_foreach(array, expression)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:236
+msgid ""
+"**expression** - an expression to evaluate on each item. The variable "
+"`@element` will be replaced by the current value and the variable `@counter`"
+" by the current index (starting with 0)."
+msgstr ""
+"**выражение** — выражение, которое будет вычисляться для каждого элемента. "
+"Переменная `@element` будет заменена текущим значением, а переменная "
+"`@counter` — текущим индексом (начиная с 0)."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:238
+msgid ""
+"``array_foreach(array('a','b','c'),upper(@element))`` → [ 'A', 'B', 'C' ]"
+msgstr ""
+"``array_foreach(array('a','b','c'),upper(@element))`` → [ 'A', 'B', 'C' ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:239
+msgid "``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]"
+msgstr "``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:240
+msgid "``array_foreach(array(1,2,3),@element + @counter)`` → [ 1, 3, 5 ]"
+msgstr "``array_foreach(array(1,2,3),@element + @counter)`` → [ 1, 3, 5 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:248
 msgid "array_get"
 msgstr "array_get"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:250
+msgid ""
+"Returns the Nth value (0 for the first one) or the last -Nth value (-1 for "
+"the last one) of an array."
+msgstr ""
+"Возвращает N-е значение (0 для первого) или последнее -N-е значение (-1 для "
+"последнего) массива."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:256
 msgid "array_get(array, pos)"
 msgstr "array_get(array, pos)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:259
+msgid "**pos** - the index to get (0 based)"
+msgstr "**pos** — индекс для получения (начиная с 0)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:261
+msgid "``array_get(array('a','b','c'),1)`` → 'b'"
+msgstr "``array_get(array('a','b','c'),1)`` → 'b'"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:262
+msgid "``array_get(array('a','b','c'),-1)`` → 'c'"
+msgstr "``array_get(array('a','b','c'),-1)`` → 'c'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:57
+msgid ""
+"You can also use the :ref:`index operator ([]) "
+"<expression_function_Operators_index>` to get a value from an array."
+msgstr ""
+"Вы также можете использовать оператор :ref:`index "
+"([])<expression_function_Operators_index> ` для получения значения из "
+"массива."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:6
 msgid "array_insert"
 msgstr "array_insert"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:8
+msgid "Returns an array with the given value added at the given position."
+msgstr ""
+"Возвращает массив с добавлением заданного значения в заданной позиции."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:14
 msgid "array_insert(array, pos, value)"
 msgstr "array_insert(array, pos, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:17
+msgid "**pos** - the position where to add (0 based)"
+msgstr "**pos** — позиция, в которую нужно добавить (начиная с 0)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:20
+msgid "``array_insert(array(1,2,3),1,100)`` → [ 1, 100, 2, 3 ]"
+msgstr "``array_insert(array(1,2,3),1,100)`` → [ 1, 100, 2, 3 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:28
 msgid "array_intersect"
 msgstr "array_intersect"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:30
+msgid "Returns TRUE if at least one element of array1 exists in array2."
+msgstr ""
+"Возвращает TRUE, если хотя бы один элемент массива array1 присутствует в "
+"массиве array2."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:36
 msgid "array_intersect(array1, array2)"
 msgstr "array_intersect(array1, array2)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:38
+msgid "**array1** - an array"
+msgstr "**array1** — массив"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:39
+msgid "**array2** - another array"
+msgstr "**array2** — другой массив"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:41
+msgid "``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → TRUE"
+msgstr "``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:49
 msgid "array_last"
 msgstr "array_last"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:51
+msgid "Returns the last value of an array."
+msgstr "Возвращает последнее значение массива."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:57
 msgid "array_last(array)"
 msgstr "array_last(array)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:61
+msgid "``array_last(array('a','b','c'))`` → 'c'"
+msgstr "``array_last(array('a','b','c'))`` → 'c'"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:69
 msgid "array_length"
 msgstr "array_length"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:71
+msgid "Returns the number of elements of an array."
+msgstr "Возвращает количество элементов массива."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:77
 msgid "array_length(array)"
 msgstr "array_length(array)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:81
+msgid "``array_length(array(1,2,3))`` → 3"
+msgstr "``array_length(array(1,2,3))`` → 3"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:89
 msgid "array_majority"
 msgstr "array_majority"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:91
+msgid "Returns the most common values in an array."
+msgstr "Возвращает наиболее распространенные значения в массиве."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:97
 msgid "array_majority(array, [option='all'])"
 msgstr "array_majority(array, [option='all'])"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:102
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:222
+msgid ""
+"**option='all'** - a string specifying the return values handling. Valid "
+"options are:"
+msgstr ""
+"**option=„all“** — строка, определяющая обработку возвращаемых значений. "
+"Допустимые варианты:"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:106
+msgid "all: Default, all most common values are returned in an array."
+msgstr ""
+"all: По умолчанию все наиболее распространенные значения возвращаются в "
+"массиве."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:107
+msgid "any: Returns one of the most common values."
+msgstr "any: Возвращает одно из наиболее распространенных значений."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:108
+msgid ""
+"median: Returns the median of the most common values. Non arithmetic values "
+"are ignored."
+msgstr ""
+"median: Возвращает медиану наиболее распространенных значений. "
+"Неарифметические значения игнорируются."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:109
+msgid ""
+"real_majority: Returns the value which occurs more than half the size of the"
+" array."
+msgstr ""
+"real_majority: Возвращает значение, которое встречается более чем в половине"
+" массива."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:113
+msgid "``array_majority(array(0,1,42,42,43), 'all')`` → [ 42 ]"
+msgstr "``array_majority(array(0,1,42,42,43), 'all')`` → [ 42 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:114
+msgid "``array_majority(array(0,1,42,42,43,1), 'all')`` → [ 42, 1 ]"
+msgstr "``array_majority(array(0,1,42,42,43,1), 'all')`` → [ 42, 1 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:115
+msgid "``array_majority(array(0,1,42,42,43,1), 'any')`` → 1 or 42"
+msgstr ""
+"``array_majority(array(0,1,42,42,43,1), 'any')`` → 1 or "
+"42``array_majority(array(0,1,42,42,43,1), „any“)`` → 1 или 42"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:116
+msgid "``array_majority(array(0,1,1,2,2), 'median')`` → 1.5"
+msgstr "``array_majority(array(0,1,1,2,2), 'median')`` → 1.5"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:117
+msgid "``array_majority(array(0,1,42,42,43), 'real_majority')`` → NULL"
+msgstr "``array_majority(array(0,1,42,42,43), 'real_majority')`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:118
+msgid "``array_majority(array(0,1,42,42,43,42), 'real_majority')`` → NULL"
+msgstr "``array_majority(array(0,1,42,42,43,42), 'real_majority')`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:119
+msgid "``array_majority(array(0,1,42,42,43,42,42), 'real_majority')`` → 42"
+msgstr "``array_majority(array(0,1,42,42,43,42,42), 'real_majority')`` → 42"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:127
 msgid "array_max"
 msgstr "array_max"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:129
+msgid "Returns the maximum value of an array."
+msgstr "Возвращает максимальное значение массива."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:135
 msgid "array_max(array)"
 msgstr "array_max(array)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:139
+msgid "``array_max(array(0,42,4,2))`` → 42"
+msgstr "``array_max(array(0,42,4,2))`` → 42"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:147
 msgid "array_mean"
 msgstr "array_mean"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:149
+msgid ""
+"Returns the mean of arithmetic values in an array. Non numeric values in the"
+" array are ignored."
+msgstr ""
+"Возвращает среднее арифметическое значение массива. Нечисловые значения в "
+"массиве игнорируются."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:155
 msgid "array_mean(array)"
 msgstr "array_mean(array)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:159
+msgid "``array_mean(array(0,1,7,66.6,135.4))`` → 42"
+msgstr "``array_mean(array(0,1,7,66.6,135.4))`` → 42"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:160
+msgid "``array_mean(array(0,84,'a','b','c'))`` → 42"
+msgstr "``array_mean(array(0,84,'a','b','c'))`` → 42"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:168
 msgid "array_median"
 msgstr "array_median"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:170
+msgid ""
+"Returns the median of arithmetic values in an array. Non arithmetic values "
+"in the array are ignored."
+msgstr ""
+"Возвращает медиану арифметических значений в массиве. Неарифметические "
+"значения в массиве игнорируются."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:176
 msgid "array_median(array)"
 msgstr "array_median(array)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:180
+msgid "``array_median(array(0,1,42,42,43))`` → 42"
+msgstr "``array_median(array(0,1,42,42,43))`` → 42"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:181
+msgid "``array_median(array(0,1,2,42,'a','b'))`` → 1.5"
+msgstr "``array_median(array(0,1,2,42,'a','b'))`` → 1.5"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:189
 msgid "array_min"
 msgstr "array_min"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:191
+msgid "Returns the minimum value of an array."
+msgstr "Возвращает минимальное значение массива."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:197
 msgid "array_min(array)"
 msgstr "array_min(array)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:201
+msgid "``array_min(array(43,42,54))`` → 42"
+msgstr "``array_min(array(43,42,54))`` → 42"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:209
 msgid "array_minority"
 msgstr "array_minority"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:211
+msgid "Returns the less common values in an array."
+msgstr "Возвращает менее распространенные значения в массиве."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:217
 msgid "array_minority(array, [option='all'])"
 msgstr "array_minority(array, [option='all'])"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:226
+msgid "all: Default, all less common values are returned in an array."
+msgstr ""
+"все: По умолчанию все менее распространенные значения возвращаются в "
+"массиве."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:227
+msgid "any: Returns one of the less common values."
+msgstr "any: Возвращает одно из менее распространенных значений."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:228
+msgid ""
+"median: Returns the median of the less common values. Non arithmetic values "
+"are ignored."
+msgstr ""
+"median: Возвращает медиану менее распространенных значений. Неарифметические"
+" значения игнорируются."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:229
+msgid ""
+"real_minority: Returns values which occur less than half the size of the "
+"array."
+msgstr ""
+"real_minority: Возвращает значения, которые встречаются менее половины "
+"размера массива."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:233
+msgid "``array_minority(array(0,42,42), 'all')`` → [ 0 ]"
+msgstr "``array_minority(array(0,42,42), 'all')`` → [ 0 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:234
+msgid "``array_minority(array(0,1,42,42), 'all')`` → [ 0, 1 ]"
+msgstr "``array_minority(array(0,1,42,42), 'all')`` → [ 0, 1 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:235
+msgid "``array_minority(array(0,1,42,42,43,1), 'any')`` → 0 or 43"
+msgstr "``array_minority(array(0,1,42,42,43,1), „any“)`` → 0 или 43"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:236
+msgid "``array_minority(array(1,2,3,3), 'median')`` → 1.5"
+msgstr "``array_minority(array(1,2,3,3), 'median')`` → 1.5"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:237
+msgid ""
+"``array_minority(array(0,1,42,42,43), 'real_minority')`` → [ 42, 43, 0, 1 ]"
+msgstr ""
+"``array_minority(array(0,1,42,42,43), 'real_minority')`` → [ 42, 43, 0, 1 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:238
+msgid ""
+"``array_minority(array(0,1,42,42,43,42), 'real_minority')`` → [ 42, 43, 0, 1"
+" ]"
+msgstr ""
+"``array_minority(array(0,1,42,42,43,42), 'real_minority')`` → [ 42, 43, 0, 1"
+" ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:239
+msgid ""
+"``array_minority(array(0,1,42,42,43,42,42), 'real_minority')`` → [ 43, 0, 1 "
+"]"
+msgstr ""
+"``array_minority(array(0,1,42,42,43,42,42), 'real_minority')`` → [ 43, 0, 1 "
+"]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:247
 msgid "array_prepend"
 msgstr "array_prepend"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:249
+msgid "Returns an array with the given value added at the beginning."
+msgstr "Возвращает массив с добавлением заданного значения в начало."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:255
 msgid "array_prepend(array, value)"
 msgstr "array_prepend(array, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:260
+msgid "``array_prepend(array(1,2,3),0)`` → [ 0, 1, 2, 3 ]"
+msgstr "``array_prepend(array(1,2,3),0)`` → [ 0, 1, 2, 3 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:268
 msgid "array_prioritize"
 msgstr "array_prioritize"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:270
+msgid ""
+"Returns an array sorted using the ordering specified in another array. "
+"Values which are present in the first array but are missing from the second "
+"array will be added to the end of the result."
+msgstr ""
+"Возвращает массив, отсортированный по порядку, указанному в другом массиве. "
+"Значения, которые присутствуют в первом массиве, но отсутствуют во втором, "
+"будут добавлены в конец результата."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:276
 msgid "array_prioritize(array, array_prioritize)"
 msgstr "array_prioritize(array, array_prioritize)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:279
+msgid "**array_prioritize** - an array with values ordered by priority"
+msgstr ""
+"**array_prioritize** — массив со значениями, упорядоченными по приоритету"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:281
+msgid ""
+"``array_prioritize(array(1, 8, 2, 5), array(5, 4, 2, 1, 3, 8))`` → [ 5, 2, "
+"1, 8 ]"
+msgstr ""
+"``array_prioritize(array(1, 8, 2, 5), array(5, 4, 2, 1, 3, 8))`` → [ 5, 2, "
+"1, 8 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:282
+msgid ""
+"``array_prioritize(array(5, 4, 2, 1, 3, 8), array(1, 8, 6, 5))`` → [ 1, 8, "
+"5, 4, 2, 3 ]"
+msgstr ""
+"``array_prioritize(array(5, 4, 2, 1, 3, 8), array(1, 8, 6, 5))`` → [ 1, 8, "
+"5, 4, 2, 3 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:290
 msgid "array_remove_all"
 msgstr "array_remove_all"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:292
+msgid "Returns an array with all the entries of the given value removed."
+msgstr ""
+"Возвращает массив, из которого удалены все элементы с заданным значением."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:298
 msgid "array_remove_all(array, value)"
 msgstr "array_remove_all(array, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:301
+msgid "**value** - the values to remove"
+msgstr "**value** — значения, которые необходимо удалить"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:303
+msgid "``array_remove_all(array('a','b','c','b'),'b')`` → [ 'a', 'c' ]"
+msgstr "``array_remove_all(array('a','b','c','b'),'b')`` → [ 'a', 'c' ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:311
 msgid "array_remove_at"
 msgstr "array_remove_at"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:313
+msgid ""
+"Returns an array with the item at the given index removed. Supports positive"
+" (0 for the first element) and negative (the last -Nth value, -1 for the "
+"last element) index."
+msgstr ""
+"Возвращает массив, из которого удален элемент с указанным индексом. "
+"Поддерживает положительные (0 для первого элемента) и отрицательные "
+"(последнее -N-е значение, -1 для последнего элемента) индексы."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:319
 msgid "array_remove_at(array, pos)"
 msgstr "array_remove_at(array, pos)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:322
+msgid "**pos** - the position to remove (0 based)"
+msgstr "**pos** — позиция для удаления (начиная с 0)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:324
+msgid "``array_remove_at(array(1, 2, 3), 1)`` → [1, 3 ]"
+msgstr "``array_remove_at(array(1, 2, 3), 1)`` → [1, 3 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:325
+msgid "``array_remove_at(array(1, 2, 3), -1)`` → [1, 2 ]"
+msgstr "``array_remove_at(array(1, 2, 3), -1)`` → [1, 2 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:333
 msgid "array_replace"
 msgstr "array_replace"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:335
+msgid ""
+"Returns an array with the supplied value, array, or map of values replaced."
+msgstr ""
+"Возвращает массив с замененным заданным значением, массивом или картой "
+"значений."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:337
+msgid "**Value & array variant**"
+msgstr "**Вариант значения и массива**"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:339
+msgid ""
+"Returns an array with the supplied value or array of values replaced by "
+"another value or an array of values."
+msgstr ""
+"Возвращает массив, в котором указанное значение или массив значений заменено"
+" другим значением или массивом значений."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:345
 msgid "array_replace(array, before, after)"
 msgstr "array_replace(array, before, after)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:110
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:347
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:366
+msgid "**array** - the input array"
+msgstr "**array** — входной массив"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:348
+msgid "**before** - the value or array of values to replace"
+msgstr ""
+"**before** — значение или массив значений, которые необходимо заменить"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:349
+msgid "**after** - the value or array of values to use as a replacement"
+msgstr ""
+"**after** — значение или массив значений, которые будут использоваться в "
+"качестве замены."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:351
+msgid ""
+"``array_replace(array('QGIS','SHOULD','ROCK'),'SHOULD','DOES')`` → [ 'QGIS',"
+" 'DOES', 'ROCK' ]"
+msgstr ""
+"``array_replace(array('QGIS','SHOULD','ROCK'),'SHOULD','DOES')`` → [ 'QGIS',"
+" 'DOES', 'ROCK' ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:352
+msgid ""
+"``array_replace(array(3,2,1),array(1,2,3),array(7,8,9))`` → [ 9, 8, 7 ]"
+msgstr ""
+"``array_replace(array(3,2,1),array(1,2,3),array(7,8,9))`` → [ 9, 8, 7 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:353
+msgid ""
+"``array_replace(array('Q','G','I','S'),array('Q','S'),'-')`` → [ '-', 'G', "
+"'I', '-' ]"
+msgstr ""
+"``array_replace(array('Q','G','I','S'),array('Q','S'),'-')`` → [ '-', 'G', "
+"'I', '-' ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:356
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:27
+#: ../../docs/user_manual/expressions/expression_help/String.rst:29
+msgid "**Map variant**"
+msgstr "**Вариант карты**"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:358
+msgid ""
+"Returns an array with the supplied map keys replaced by their paired values."
+msgstr ""
+"Возвращает массив, в котором ключи предоставленной карты заменены их "
+"сопряженными значениями."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:364
 msgid "array_replace(array, map)"
 msgstr "array_replace(array, map)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:367
+#: ../../docs/user_manual/expressions/expression_help/String.rst:40
+msgid "**map** - the map containing keys and values"
+msgstr "**map** — карта, содержащая ключи и значения"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:369
+msgid ""
+"``array_replace(array('APP', 'SHOULD', "
+"'ROCK'),map('APP','QGIS','SHOULD','DOES'))`` → [ 'QGIS', 'DOES', 'ROCK' ]"
+msgstr ""
+"``array_replace(array('APP', 'SHOULD', "
+"'ROCK'),map('APP','QGIS','SHOULD','DOES'))`` → [ 'QGIS', 'DOES', 'ROCK' ]"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:64
+msgid ""
+"Further reading: :ref:`expression_function_String_replace`, "
+":ref:`expression_function_String_regexp_replace`"
+msgstr ""
+"Дополнительная информация: :ref:`expression_function_String_replace`, "
+":ref:`expression_function_String_regexp_replace`"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:6
 msgid "array_reverse"
 msgstr "array_reverse"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:8
+msgid "Returns the given array with array values in reversed order."
+msgstr "Возвращает заданный массив со значениями массива в обратном порядке."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:14
 msgid "array_reverse(array)"
 msgstr "array_reverse(array)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:18
+msgid "``array_reverse(array(2,4,0,10))`` → [ 10, 0, 4, 2 ]"
+msgstr "``array_reverse(array(2,4,0,10))`` → [ 10, 0, 4, 2 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:26
 msgid "array_slice"
 msgstr "array_slice"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:28
+msgid ""
+"Returns a portion of the array. The slice is defined by the start_pos and "
+"end_pos arguments."
+msgstr ""
+"Возвращает часть массива. Фрагмент определяется аргументами start_pos и "
+"end_pos."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:34
 msgid "array_slice(array, start_pos, end_pos)"
 msgstr "array_slice(array, start_pos, end_pos)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:37
+msgid ""
+"**start_pos** - the index of the start position of the slice (0 based). The "
+"start_pos index is included in the slice. If you use a negative start_pos, "
+"the index is counted from the end of the list (-1 based)."
+msgstr ""
+"**start_pos** — индекс начальной позиции фрагмента (с нулевым индексом). "
+"Индекс start_pos включается в фрагмент. Если вы используете отрицательное "
+"значение start_pos, индекс отсчитывается от конца списка (с индексом -1)."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:38
+msgid ""
+"**end_pos** - the index of the end position of the slice (0 based). The "
+"end_pos index is included in the slice. If you use a negative end_pos, the "
+"index is counted from the end of the list (-1 based)."
+msgstr ""
+"**end_pos** — индекс конечной позиции фрагмента (с нулевым индексом). Индекс"
+" end_pos включен в фрагмент. Если вы используете отрицательное значение "
+"end_pos, индекс считается от конца списка (с индексом -1)."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:40
+msgid "``array_slice(array(1,2,3,4,5),0,3)`` → [ 1, 2, 3, 4 ]"
+msgstr "``array_slice(array(1,2,3,4,5),0,3)`` → [ 1, 2, 3, 4 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:41
+msgid "``array_slice(array(1,2,3,4,5),0,-1)`` → [ 1, 2, 3, 4, 5 ]"
+msgstr "``array_slice(array(1,2,3,4,5),0,-1)`` → [ 1, 2, 3, 4, 5 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:42
+msgid "``array_slice(array(1,2,3,4,5),-5,-1)`` → [ 1, 2, 3, 4, 5 ]"
+msgstr "``array_slice(array(1,2,3,4,5),-5,-1)`` → [ 1, 2, 3, 4, 5 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:43
+msgid "``array_slice(array(1,2,3,4,5),0,0)`` → [ 1 ]"
+msgstr "``array_slice(array(1,2,3,4,5),0,0)`` → [ 1 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:44
+msgid "``array_slice(array(1,2,3,4,5),-2,-1)`` → [ 4, 5 ]"
+msgstr "``array_slice(array(1,2,3,4,5),-2,-1)`` → [ 4, 5 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:45
+msgid "``array_slice(array(1,2,3,4,5),-1,-1)`` → [ 5 ]"
+msgstr "``array_slice(array(1,2,3,4,5),-1,-1)`` → [ 5 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:46
+msgid ""
+"``array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),1,2)`` → [ "
+"'Valmiera', 'Chugiak' ]"
+msgstr ""
+"``array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),1,2)`` → [ "
+"'Valmiera', 'Chugiak' ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:47
+msgid ""
+"``array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1)`` → [ "
+"'Chugiak', 'Brighton' ]"
+msgstr ""
+"``array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1)`` → [ "
+"'Chugiak', 'Brighton' ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:55
 msgid "array_sort"
 msgstr "array_sort"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:57
+msgid "Returns the provided array with its elements sorted."
+msgstr "Возвращает предоставленный массив с отсортированными элементами."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:63
 msgid "array_sort(array, [ascending=true])"
 msgstr "array_sort(array, [ascending=true])"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:68
+msgid ""
+"**ascending** - set this parameter to false to sort the array in descending "
+"order"
+msgstr ""
+"по возрастанию** — установите для этого параметра значение false, чтобы "
+"отсортировать массив в порядке убывания."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:70
+msgid "``array_sort(array(3,2,1))`` → [ 1, 2, 3 ]"
+msgstr "``array_sort(array(3,2,1))`` → [ 1, 2, 3 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:78
 msgid "array_sum"
 msgstr "array_sum"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:80
+msgid ""
+"Returns the sum of arithmetic values in an array. Non numeric values in the "
+"array are ignored."
+msgstr ""
+"Возвращает сумму арифметических значений в массиве. Нечисловые значения в "
+"массиве игнорируются."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:86
 msgid "array_sum(array)"
 msgstr "array_sum(array)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:90
+msgid "``array_sum(array(0,1,39.4,1.6,'a'))`` → 42.0"
+msgstr "``array_sum(array(0,1,39.4,1.6,'a'))`` → 42.0"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:98
 msgid "array_to_string"
 msgstr "array_to_string"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:100
+msgid ""
+"Concatenates array elements into a string separated by a delimiter and using"
+" optional string for empty values."
+msgstr ""
+"Объединяет элементы массива в строку, разделенную разделителем, и использует"
+" опциональную строку для пустых значений."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:106
 msgid "array_to_string(array, [delimiter=','], [empty_value=''])"
 msgstr "array_to_string(array, [delimiter=','], [empty_value=''])"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:111
+msgid ""
+"**delimiter** - the string delimiter used to separate concatenated array "
+"elements"
+msgstr ""
+"**разделитель** — строковый разделитель, используемый для разделения "
+"соединенных элементов массива"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:20
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:112
+msgid ""
+"**empty_value** - the optional string to use as replacement for empty (zero "
+"length) matches"
+msgstr ""
+"**empty_value** — необязательная строка, используемая в качестве замены для "
+"пустых (нулевой длины) совпадений."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:114
+msgid "``array_to_string(array('1','2','3'))`` → '1,2,3'"
+msgstr "``array_to_string(array('1','2','3'))`` → '1,2,3'"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:115
+msgid "``array_to_string(array(1,2,3),'-')`` → '1-2-3'"
+msgstr "``array_to_string(array(1,2,3),'-')`` → '1-2-3'"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:116
+msgid "``array_to_string(array('1','','3'),',','0')`` → '1,0,3'"
+msgstr "``array_to_string(array('1','','3'),',','0')`` → '1,0,3'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:71
+msgid "Further reading: :ref:`expression_function_Arrays_string_to_array`"
+msgstr ""
+"Дополнительная информация: :ref:`expression_function_Arrays_string_to_array`"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:6
 msgid "generate_series"
 msgstr "generate_series"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:8
+msgid "Creates an array containing a sequence of numbers."
+msgstr "Создает массив, содержащий последовательность чисел."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:14
 msgid "generate_series(start, stop, [step=1])"
 msgstr "generate_series(start, stop, [step=1])"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:18
+msgid "**start** - first value of the sequence"
+msgstr "**start** — первое значение последовательности"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:19
+msgid "**stop** - value that ends the sequence once reached"
+msgstr ""
+"**stop** — значение, при достижении которого последовательность "
+"заканчивается"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:20
+msgid "**step** - value used as the increment between values"
+msgstr ""
+"**step** — значение, используемое в качестве приращения между значениями"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:22
+msgid "``generate_series(1,5)`` → [ 1, 2, 3, 4, 5 ]"
+msgstr "``generate_series(1,5)`` → [ 1, 2, 3, 4, 5 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:23
+msgid "``generate_series(5,1,-1)`` → [ 5, 4, 3, 2, 1 ]"
+msgstr "``generate_series(5,1,-1)`` → [ 5, 4, 3, 2, 1 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:31
 msgid "geometries_to_array"
 msgstr "geometries_to_array"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:33
+msgid "Splits a geometry into simpler geometries in an array."
+msgstr "Разделяет геометрию на более простые геометрические фигуры в массиве."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:39
 msgid "geometries_to_array(geometry)"
 msgstr "geometries_to_array(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:41
+msgid "**geometry** - the input geometry"
+msgstr "**геометрия** — входная геометрия"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:43
+msgid ""
+"``geometries_to_array(geom_from_wkt('MultiPoint (1 2, 5 21)'))`` → An array "
+"containing 'Point (1 2)' and 'Point (5 21)'"
+msgstr ""
+"``geometries_to_array(geom_from_wkt(„MultiPoint (1 2, 5 21)“))`` → Массив, "
+"содержащий „Point (1 2)“ и „Point (5 21)“."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:44
+msgid ""
+"``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1,"
+" 3 2, 5 8)),LineString (3 2, 4 2))'))`` → an array of a polygon and a line "
+"geometries"
+msgstr ""
+"``geometries_to_array(geom_from_wkt(„GeometryCollection (Polygon ((5 8, 4 1,"
+" 3 2, 5 8)),LineString (3 2, 4 2))“))`` → массив геометрий многоугольника и "
+"линии"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:45
+msgid ""
+"``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon"
+" ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
+"1, 3 2, 5 8))'"
+msgstr ""
+"``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon"
+" ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
+"1, 3 2, 5 8))'"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:46
+msgid ""
+"``geometries_to_array(geom_from_wkt('MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 "
+"5,10 10,10 0,5 5))'))`` → an array of two polygon geometries"
+msgstr ""
+"``geometries_to_array(geom_from_wkt(„MULTIPOLYGON(((5 5,0 0,0 10,5 5)),((5 "
+"5,10 10,10 0,5 5))“))`` → массив из двух геометрий многоугольников"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:54
 msgid "regexp_matches"
 msgstr "regexp_matches"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:56
+msgid ""
+"Returns an array of all strings captured by capturing groups, in the order "
+"the groups themselves appear in the supplied regular expression against a "
+"string."
+msgstr ""
+"Возвращает массив всех строк, захваченных группами захвата, в том порядке, в"
+" котором сами группы появляются в предоставленном регулярном выражении по "
+"отношению к строке."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:62
 msgid "regexp_matches(string, regex, [empty_value=''])"
 msgstr "regexp_matches(string, regex, [empty_value=''])"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:66
+msgid ""
+"**string** - the string to capture groups from against the regular "
+"expression"
+msgstr ""
+"**string** — строка, из которой необходимо извлечь группы, соответствующие "
+"регулярному выражению."
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:67
+msgid "**regex** - the regular expression used to capture groups"
+msgstr "**regex** — регулярное выражение, используемое для захвата групп"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:70
+msgid "``regexp_matches('QGIS=>rocks','(.*)=>(.*)')`` → [ 'QGIS', 'rocks' ]"
+msgstr "``regexp_matches('QGIS=>rocks','(.*)=>(.*)')`` → [ 'QGIS', 'rocks' ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:71
+msgid ""
+"``regexp_matches('key=>','(.*)=>(.*)','empty value')`` → [ 'key', 'empty "
+"value' ]"
+msgstr ""
+"``regexp_matches('key=>','(.*)=>(.*)','empty value')`` → [ 'key', 'empty "
+"value' ]"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:77
+msgid ""
+"Further reading: :ref:`expression_function_String_substr`, "
+":ref:`expression_function_String_regexp_substr`"
+msgstr ""
+"Дополнительная информация: :ref:`expression_function_String_substr`, "
+":ref:`expression_function_String_regexp_substr`"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:6
 msgid "string_to_array"
 msgstr "string_to_array"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:8
+msgid ""
+"Splits string into an array using supplied delimiter and optional string for"
+" empty values."
+msgstr ""
+"Разделяет строку на массив, используя указанный разделитель и опциональную "
+"строку для пустых значений."
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:14
 msgid "string_to_array(string, [delimiter=','], [empty_value=''])"
 msgstr "string_to_array(string, [delimiter=','], [empty_value=''])"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:18
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:43
+#: ../../docs/user_manual/expressions/expression_help/String.rst:20
+#: ../../docs/user_manual/expressions/expression_help/String.rst:39
+msgid "**string** - the input string"
+msgstr "**string** — входная строка"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:19
+msgid "**delimiter** - the string delimiter used to split the input string"
+msgstr ""
+"**разделитель** — строковый разделитель, используемый для разделения входной"
+" строки"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:22
+msgid "``string_to_array('1,2,3',',')`` → [ '1', '2', '3' ]"
+msgstr "``string_to_array('1,2,3',',')`` → [ '1', '2', '3' ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:23
+msgid "``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]"
+msgstr "``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:84
+msgid "Further reading: :ref:`expression_function_Arrays_array_to_string`"
+msgstr ""
+"Дополнительная информация: :ref:`expression_function_Arrays_array_to_string`"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:91
+msgid "Color Functions"
+msgstr "Цветовые функции"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:93
+msgid "This group contains functions for manipulating colors."
+msgstr "Эта группа содержит функции для работы с цветами."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:12
 msgid "color_cmyk"
 msgstr "color_cmyk"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:14
+msgid ""
+"Returns a string representation of a color based on its cyan, magenta, "
+"yellow and black components"
+msgstr ""
+"Возвращает строковое представление цвета на основе его компонентов голубого,"
+" пурпурного, желтого и черного цветов."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:20
 msgid "color_cmyk(cyan, magenta, yellow, black)"
 msgstr "color_cmyk(cyan, magenta, yellow, black)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:45
+msgid ""
+"**cyan** - cyan component of the color, as a percentage integer value from 0"
+" to 100"
+msgstr ""
+"**cyan** — голубой компонент цвета, выраженный в виде целого числа от 0 до "
+"100."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:23
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:46
+msgid ""
+"**magenta** - magenta component of the color, as a percentage integer value "
+"from 0 to 100"
+msgstr ""
+"**маджента** — маджента-компонент цвета, выраженный в виде целого числа от 0"
+" до 100"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:24
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:47
+msgid ""
+"**yellow** - yellow component of the color, as a percentage integer value "
+"from 0 to 100"
+msgstr ""
+"**желтый** — желтый компонент цвета, выраженный в виде целого числа от 0 до "
+"100"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:25
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:48
+msgid ""
+"**black** - black component of the color, as a percentage integer value from"
+" 0 to 100"
+msgstr ""
+"**черный** — черный компонент цвета, выраженный в виде целого числа от 0 до "
+"100"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:27
+msgid "``color_cmyk(100,50,0,10)`` → '0,115,230'"
+msgstr "``color_cmyk(100,50,0,10)`` → '0,115,230'"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:35
 msgid "color_cmyka"
 msgstr "color_cmyka"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:37
+msgid ""
+"Returns a string representation of a color based on its cyan, magenta, "
+"yellow, black and alpha (transparency) components"
+msgstr ""
+"Возвращает строковое представление цвета на основе его компонентов голубого,"
+" пурпурного, желтого, черного и альфа (прозрачность)"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:43
 msgid "color_cmyka(cyan, magenta, yellow, black, alpha)"
 msgstr "color_cmyka(cyan, magenta, yellow, black, alpha)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:49
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:141
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:367
+msgid ""
+"**alpha** - alpha component as an integer value from 0 (completely "
+"transparent) to 255 (opaque)."
+msgstr ""
+"**alpha** — альфа-компонент в виде целого числа от 0 (полностью прозрачный) "
+"до 255 (непрозрачный)."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:51
+msgid "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
+msgstr "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:59
 msgid "color_cmykf"
 msgstr "color_cmykf"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:61
+msgid ""
+"Returns a color object based on its cyan, magenta, yellow, black and alpha "
+"components."
+msgstr ""
+"Возвращает объект цвета на основе его компонентов голубого, пурпурного, "
+"желтого, черного и альфа."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:67
+msgid "color_cmykf(cyan, magenta, yellow, black, [alpha=1.0])"
+msgstr "color_cmykf(голубой, пурпурный, желтый, черный, [альфа=1,0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:71
+msgid "**cyan** - cyan component as a float value from 0.0 to 1.0"
+msgstr ""
+"**cyan** — компонент cyan в виде числа с плавающей запятой от 0,0 до 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:72
+msgid "**magenta** - magenta component as a float value from 0.0 to 1.0"
+msgstr ""
+"**маджента** — компонент маджента в виде числа с плавающей запятой от 0,0 до"
+" 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:73
+msgid "**yellow** - yellow component as a float value from 0.0 to 1.0"
+msgstr ""
+"**yellow** — желтый компонент в виде числа с плавающей запятой от 0,0 до 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:74
+msgid "**black** - black component as a float value from 0.0 to 1.0"
+msgstr "**black** — черный компонент в виде значения типа float от 0,0 до 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:166
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:236
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:392
+msgid "**alpha** - alpha component as a float value from 0.0 to 1.0"
+msgstr "**alpha** — альфа-компонент в виде значения типа float от 0,0 до 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:77
+msgid "``color_cmykf(1,0.9,0.81,0.62)`` → CMYKA: 1.00,0.90,0.81,0.62,1.00"
+msgstr "``color_cmykf(1,0.9,0.81,0.62)`` → CMYKA: 1.00,0.90,0.81,0.62,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:85
 msgid "color_grayscale_average"
 msgstr "color_grayscale_average"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:87
+msgid ""
+"Applies a grayscale filter to a color and returns it. Returned type is the "
+"same as color argument, i.e. a color string representation or a color "
+"object."
+msgstr ""
+"Применяет фильтр оттенков серого к цвету и возвращает его. Возвращаемый тип "
+"совпадает с аргументом цвета, т. е. представляет собой строковое "
+"представление цвета или объект цвета."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:93
 msgid "color_grayscale_average(color)"
 msgstr "color_grayscale_average(color)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:95
+msgid "**color** - a color string representation or a color object"
+msgstr "**color** — строковое представление цвета или объект цвета"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:97
+msgid "``color_grayscale_average('255,100,50')`` → '135,135,135,255'"
+msgstr "``color_grayscale_average('255,100,50')`` → '135,135,135,255'"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:98
+msgid ""
+"``color_grayscale_average(color_cmykf(0.6,0.5,0.1,0.8))`` → CMYKA: "
+"0.40,0.40,0.40,0.80,1.00"
+msgstr ""
+"``color_grayscale_average(color_cmykf(0.6,0.5,0.1,0.8))`` → CMYKA: "
+"0.40,0.40,0.40,0.80,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:106
 msgid "color_hsl"
 msgstr "color_hsl"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:108
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, and"
+" lightness attributes."
+msgstr ""
+"Возвращает строковое представление цвета на основе его атрибутов оттенка, "
+"насыщенности и яркости."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:114
 msgid "color_hsl(hue, saturation, lightness)"
 msgstr "color_hsl(hue, saturation, lightness)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:116
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:138
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:186
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:208
+msgid "**hue** - hue of the color, as an integer value from 0 to 360"
+msgstr "**hue** — оттенок цвета, выраженный целым числом от 0 до 360"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:117
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:139
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:187
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:209
+msgid ""
+"**saturation** - saturation percentage of the color as an integer value from"
+" 0 to 100"
+msgstr ""
+"**насыщенность** — процент насыщенности цвета в виде целого числа от 0 до "
+"100"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:118
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:140
+msgid ""
+"**lightness** - lightness percentage of the color as an integer value from 0"
+" to 100"
+msgstr ""
+"**lightness** — процент яркости цвета в виде целого числа от 0 до 100."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:120
+msgid "``color_hsl(100,50,70)`` → '166,217,140'"
+msgstr "``color_hsl(100,50,70)`` → '166,217,140'"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:128
 msgid "color_hsla"
 msgstr "color_hsla"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:130
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, "
+"lightness and alpha (transparency) attributes"
+msgstr ""
+"Возвращает строковое представление цвета на основе его атрибутов оттенка, "
+"насыщенности, яркости и альфа (прозрачности)."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:136
 msgid "color_hsla(hue, saturation, lightness, alpha)"
 msgstr "color_hsla(hue, saturation, lightness, alpha)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:143
+msgid "``color_hsla(100,50,70,200)`` → '166,217,140,200'"
+msgstr "``color_hsla(100,50,70,200)`` → '166,217,140,200'"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:151
 msgid "color_hslf"
 msgstr "color_hslf"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:153
+msgid ""
+"Returns a color object based on its hue, saturation, and lightness "
+"attributes."
+msgstr ""
+"Возвращает объект цвета на основе его атрибутов оттенка, насыщенности и "
+"яркости."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:159
+msgid "color_hslf(hue, saturation, lightness, [alpha=1.0])"
+msgstr "color_hslf(оттенок, насыщенность, яркость, [альфа=1,0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:163
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:233
+msgid "**hue** - hue of the color, as a float value from 0.0 to 1.0"
+msgstr "**hue** — оттенок цвета, в виде значения типа float от 0,0 до 1,0."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:164
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:234
+msgid ""
+"**saturation** - saturation of the color as a float value from 0.0 to 1.0"
+msgstr ""
+"**насыщенность** — насыщенность цвета в виде числа с плавающей запятой от "
+"0,0 до 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:165
+msgid ""
+"**lightness** - lightness of the color as a float value from 0.0 to 1.0"
+msgstr ""
+"**lightness** — светлота цвета в виде числа с плавающей запятой от 0,0 до "
+"1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:168
+msgid "``color_hslf(0.3,0.52,0.7)`` → HSLA: 0.30,0.52,0.70,1.00"
+msgstr "``color_hslf(0.3,0.52,0.7)`` → HSLA: 0.30,0.52,0.70,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:176
 msgid "color_hsv"
 msgstr "color_hsv"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:178
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, and"
+" value attributes."
+msgstr ""
+"Возвращает строковое представление цвета на основе его атрибутов оттенка, "
+"насыщенности и яркости."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:184
 msgid "color_hsv(hue, saturation, value)"
 msgstr "color_hsv(hue, saturation, value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:188
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:210
+msgid "**value** - value percentage of the color as an integer from 0 to 100"
+msgstr ""
+"**значение** — процентное значение цвета в виде целого числа от 0 до 100"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:190
+msgid "``color_hsv(40,100,100)`` → '255,170,0'"
+msgstr "``color_hsv(40,100,100)`` → '255,170,0'"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:198
 msgid "color_hsva"
 msgstr "color_hsva"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:200
+msgid ""
+"Returns a string representation of a color based on its hue, saturation, "
+"value and alpha (transparency) attributes."
+msgstr ""
+"Возвращает строковое представление цвета на основе его атрибутов оттенка, "
+"насыщенности, яркости и альфа-канала (прозрачности)."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:206
 msgid "color_hsva(hue, saturation, value, alpha)"
 msgstr "color_hsva(hue, saturation, value, alpha)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:211
+msgid ""
+"**alpha** - alpha component as an integer value from 0 (completely "
+"transparent) to 255 (opaque)"
+msgstr ""
+"**alpha** — альфа-компонент в виде целого числа от 0 (полностью прозрачный) "
+"до 255 (непрозрачный)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:213
+msgid "``color_hsva(40,100,100,200)`` → '255,170,0,200'"
+msgstr "``color_hsva(40,100,100,200)`` → '255,170,0,200'"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:221
 msgid "color_hsvf"
 msgstr "color_hsvf"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:223
+msgid ""
+"Returns a color object based on its hue, saturation, and value attributes."
+msgstr ""
+"Возвращает объект цвета на основе его атрибутов оттенка, насыщенности и "
+"яркости."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:229
+msgid "color_hsvf(hue, saturation, value, [alpha=1.0])"
+msgstr "color_hsvf(оттенок, насыщенность, значение, [альфа=1,0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:235
+msgid "**value** - value of the color as as a float value from 0.0 to 1.0"
+msgstr ""
+"**значение** — значение цвета в виде числа с плавающей запятой от 0,0 до 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:238
+msgid "``color_hsvf(0.4,1,0.6)`` → HSVA: 0.40,1.00,0.60,1.00"
+msgstr "``color_hsvf(0.4,1,0.6)`` → HSVA: 0.40,1.00,0.60,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:246
 msgid "color_mix"
 msgstr "color_mix"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:248
+msgid ""
+"Returns a color mixing the red, green, blue, and alpha values of two "
+"provided colors based on a given ratio. Returned type is the same as color "
+"arguments, i.e. a color string representation or a color object."
+msgstr ""
+"Возвращает цвет, смешивающий значения красного, зеленого, синего и альфа-"
+"канала двух заданных цветов на основе заданного соотношения. Возвращаемый "
+"тип совпадает с типами аргументов цвета, т. е. представляет собой строковое "
+"представление цвета или объект цвета."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:254
 msgid "color_mix(color1, color2, ratio)"
 msgstr "color_mix(color1, color2, ratio)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:256
+msgid "**color1** - a color string or a color object"
+msgstr "**color1** — строка цвета или объект цвета"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:257
+msgid "**color2** - a color string or a color object"
+msgstr "**color2** — строка цвета или объект цвета"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:258
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:281
+msgid "**ratio** - a ratio"
+msgstr "**коэффициент** - соотношение"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:260
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:283
+msgid "``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'"
+msgstr "``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:261
+msgid ""
+"``color_mix(color_cmykf(0.9,0.9,0.9,0.9),color_cmykf(0.1,0.1,0.1,0.1),0.5)``"
+" → CMYKA: 0.50,0.50,0.50,0.50,1.00"
+msgstr ""
+"``color_mix(color_cmykf(0.9,0.9,0.9,0.9),color_cmykf(0.1,0.1,0.1,0.1),0.5)``"
+" → CMYKA: 0.50,0.50,0.50,0.50,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:269
 msgid "color_mix_rgb"
 msgstr "color_mix_rgb"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:271
+msgid ""
+"Returns a string representing a color mixing the red, green, blue, and alpha"
+" values of two provided colors based on a given ratio."
+msgstr ""
+"Возвращает строку, представляющую цвет, полученный путем смешивания значений"
+" красного, зеленого, синего и альфа-канала двух заданных цветов в "
+"соответствии с заданным соотношением."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:277
 msgid "color_mix_rgb(color1, color2, ratio)"
 msgstr "color_mix_rgb(color1, color2, ratio)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:279
+msgid "**color1** - a color string"
+msgstr "**color1** — строка цвета"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:280
+msgid "**color2** - a color string"
+msgstr "**color2** — строка цвета"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:291
 msgid "color_part"
 msgstr "color_part"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:293
+msgid ""
+"Returns a specific component from a color string or color object, e.g., the "
+"red component or alpha component."
+msgstr ""
+"Возвращает определенный компонент из цветовой строки или цветового объекта, "
+"например, красный компонент или альфа-компонент."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:299
 msgid "color_part(color, component)"
 msgstr "color_part(color, component)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:301
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:435
+msgid "**color** - a color string or a color object"
+msgstr "**color** — строка цвета или объект цвета"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:302
+msgid ""
+"**component** - a string corresponding to the color component to return. "
+"Valid options are:"
+msgstr ""
+"**component** — строка, соответствующая цветовому компоненту, который "
+"необходимо вернуть. Допустимые варианты:"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:306
+msgid "red: RGB red component (0-255)"
+msgstr "красный: красный компонент RGB (0-255)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:307
+msgid "green: RGB green component (0-255)"
+msgstr "зеленый: зеленый компонент RGB (0-255)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:308
+msgid "blue: RGB blue component (0-255)"
+msgstr "синий: компонент RGB синего цвета (0-255)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:67
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:309
+msgid "alpha: alpha (transparency) value (0-255)"
+msgstr "alpha: значение альфа (прозрачность) (0-255)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:310
+msgid "hue: HSV hue (0-360)"
+msgstr "оттенок: оттенок HSV (0-360)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:69
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:311
+msgid "saturation: HSV saturation (0-100)"
+msgstr "насыщенность: насыщенность HSV (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:312
+msgid "value: HSV value (0-100)"
+msgstr "значение: значение HSV (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:71
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:313
+msgid "hsl_hue: HSL hue (0-360)"
+msgstr "hsl_hue: оттенок HSL (0-360)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:72
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:314
+msgid "hsl_saturation: HSL saturation (0-100)"
+msgstr "hsl_saturation: насыщенность HSL (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:73
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:315
+msgid "lightness: HSL lightness (0-100)"
+msgstr "яркость: яркость HSL (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:74
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:316
+msgid "cyan: CMYK cyan component (0-100)"
+msgstr "голубой: компонент CMYK голубого цвета (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:317
+msgid "magenta: CMYK magenta component (0-100)"
+msgstr "пурпурный: компонент CMYK пурпурного цвета (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:318
+msgid "yellow: CMYK yellow component (0-100)"
+msgstr "желтый: желтый компонент CMYK (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:319
+msgid "black: CMYK black component (0-100)"
+msgstr "черный: компонент CMYK черного цвета (0-100)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:323
+msgid "``color_part('200,10,30','green')`` → 10"
+msgstr "``color_part('200,10,30','green')`` → 10"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:324
+msgid "``to_int(color_part(color_cmykf(0.1,0.2,0.3,0.9),'black'))`` → 90"
+msgstr "``to_int(color_part(color_cmykf(0.1,0.2,0.3,0.9),'black'))`` → 90"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:332
 msgid "color_rgb"
 msgstr "color_rgb"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:334
+msgid ""
+"Returns a string representation of a color based on its red, green, and blue"
+" components."
+msgstr ""
+"Возвращает строковое представление цвета на основе его красного, зеленого и "
+"синего компонентов."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:340
 msgid "color_rgb(red, green, blue)"
 msgstr "color_rgb(red, green, blue)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:342
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:364
+msgid "**red** - red component as an integer value from 0 to 255"
+msgstr "**red** — красный компонент в виде целого числа от 0 до 255"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:343
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:365
+msgid "**green** - green component as an integer value from 0 to 255"
+msgstr "**зеленый** — зеленый компонент в виде целого числа от 0 до 255"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:344
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:366
+msgid "**blue** - blue component as an integer value from 0 to 255"
+msgstr "**синий** — синий компонент в виде целого числа от 0 до 255"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:346
+msgid "``color_rgb(255,127,0)`` → '255,127,0'"
+msgstr "``color_rgb(255,127,0)`` → '255,127,0'"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:354
 msgid "color_rgba"
 msgstr "color_rgba"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:356
+msgid ""
+"Returns a string representation of a color based on its red, green, blue, "
+"and alpha (transparency) components."
+msgstr ""
+"Возвращает строковое представление цвета на основе его красного, зеленого, "
+"синего и альфа-компонентов (прозрачности)."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:362
 msgid "color_rgba(red, green, blue, alpha)"
 msgstr "color_rgba(red, green, blue, alpha)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:369
+msgid "``color_rgba(255,127,0,200)`` → '255,127,0,200'"
+msgstr "``color_rgba(255,127,0,200)`` → '255,127,0,200'"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:377
 msgid "color_rgbf"
 msgstr "color_rgbf"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:379
+msgid ""
+"Returns a color object based on its red, green, blue and alpha components."
+msgstr ""
+"Возвращает объект цвета на основе его красного, зеленого, синего и альфа-"
+"компонентов."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:385
+msgid "color_rgbf(red, green, blue, [alpha=1.0])"
+msgstr "color_rgbf(красный, зеленый, синий, [альфа=1,0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:389
+msgid "**red** - red component as a float value from 0.0 to 1.0"
+msgstr ""
+"**red** — красный компонент в виде числа с плавающей запятой от 0,0 до 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:390
+msgid "**green** - green component as a float value from 0.0 to 1.0"
+msgstr ""
+"**зеленый** — зеленый компонент в виде числа с плавающей запятой от 0,0 до "
+"1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:391
+msgid "**blue** - blue component as a float value from 0.0 to 1.0"
+msgstr ""
+"**blue** — синий компонент в виде числа с плавающей запятой от 0,0 до 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:394
+msgid "``color_rgbf(1.0,0.5,0)`` → RGBA: 1.00,0.50,0.00,1.00"
+msgstr "``color_rgbf(1.0,0.5,0)`` → RGBA: 1.00,0.50,0.00,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:402
 msgid "create_ramp"
 msgstr "create_ramp"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:404
+msgid "Returns a gradient ramp from a map of color strings and steps."
+msgstr "Возвращает градиентную рампу из карты цветовых строк и шагов."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:410
 msgid "create_ramp(map, [discrete=false])"
 msgstr "create_ramp(map, [discrete=false])"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:414
+msgid "**map** - a map of color strings and steps"
+msgstr "**Карта** — карта цветовых строк и шагов"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:415
+msgid ""
+"**discrete** - set this parameter to true to create a discrete color ramp"
+msgstr ""
+"**дискретный** — установите для этого параметра значение true, чтобы создать"
+" дискретный цветовой переход."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:61
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:417
+msgid ""
+"``ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1)`` → '255,0,0,255'"
+msgstr ""
+"``ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1)`` → '255,0,0,255'"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:425
 msgid "darker"
 msgstr "darker"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:427
+msgid ""
+"Returns a darker (or lighter) color. Returned type is the same as color "
+"arguments, i.e. a color string representation or a color object."
+msgstr ""
+"Возвращает более темный (или более светлый) цвет. Возвращаемый тип совпадает"
+" с аргументами цвета, т. е. представляет собой строковое представление цвета"
+" или объект цвета."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:433
 msgid "darker(color, factor)"
 msgstr "darker(color, factor)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:436
+msgid "**factor** - an integer corresponding to the darkening factor:"
+msgstr "**фактор** — целое число, соответствующее коэффициенту затемнения:"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:438
+msgid ""
+"if the factor is greater than 100, this function returns a darker color "
+"(e.g., setting factor to 200 returns a color that is half the brightness);"
+msgstr ""
+"если коэффициент превышает 100, эта функция возвращает более темный цвет "
+"(например, при установке коэффициента равным 200 возвращается цвет, яркость "
+"которого в два раза меньше);"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:439
+msgid ""
+"if the factor is less than 100, the return color is lighter, but using the "
+"lighter() function for this purpose is recommended;"
+msgstr ""
+"если коэффициент меньше 100, цвет возврата становится светлее, но для этой "
+"цели рекомендуется использовать функцию lighter();"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:440
+msgid "if the factor is 0 or negative, the return value is unspecified."
+msgstr ""
+"если коэффициент равен 0 или отрицателен, возвращаемое значение не "
+"определено."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:444
+msgid "``darker('200,10,30', 200)`` → '100,5,15,255'"
+msgstr "``darker('200,10,30', 200)`` → '100,5,15,255'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:103
+msgid "Further reading: :ref:`expression_function_Color_lighter`"
+msgstr "Дополнительная информация: :ref:`expression_function_Color_lighter`"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:6
 msgid "lighter"
 msgstr "lighter"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:8
+msgid ""
+"Returns a lighter (or darker) color. Returned type is the same as color "
+"arguments, i.e. a color string representation or a color object."
+msgstr ""
+"Возвращает более светлый (или более темный) цвет. Возвращаемый тип совпадает"
+" с аргументами цвета, т. е. представляет собой строковое представление цвета"
+" или объект цвета."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:14
 msgid "lighter(color, factor)"
 msgstr "lighter(color, factor)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:17
+msgid "**factor** - an integer corresponding to the lightening factor:"
+msgstr "**фактор** — целое число, соответствующее коэффициенту освещения:"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:19
+msgid ""
+"if the factor is greater than 100, this function returns a lighter color "
+"(e.g., setting factor to 150 returns a color that is 50% brighter);"
+msgstr ""
+"если коэффициент превышает 100, эта функция возвращает более светлый цвет "
+"(например, при установке коэффициента равным 150 возвращается цвет, который "
+"на 50 % ярче);"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:20
+msgid ""
+"if the factor is less than 100, the return color is darker, but using the "
+"darker() function for this purpose is recommended;"
+msgstr ""
+"если коэффициент меньше 100, цвет возврата становится темнее, но для этой "
+"цели рекомендуется использовать функцию darker();"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:25
+msgid "``lighter('200,10,30', 200)`` → '255,158,168,255'"
+msgstr "``lighter('200,10,30', 200)`` → '255,158,168,255'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:109
+msgid "Further reading: :ref:`expression_function_Color_darker`"
+msgstr "Дополнительная информация: :ref:`expression_function_Color_darker`"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:6
 msgid "project_color"
 msgstr "project_color"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:8
+msgid "Returns a color from the project's color scheme."
+msgstr "Возвращает цвет из цветовой схемы проекта."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:14
 msgid "project_color(name)"
 msgstr "project_color(name)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:16
+msgid "**name** - a color name"
+msgstr "**name** — название цвета"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:18
+msgid "``project_color('Logo color')`` → '20,140,50'"
+msgstr "``project_color(„Цвет логотипа“)`` → '20,140,50'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:115
+msgid "Further reading: :ref:`setting project colors <project_colors>`"
+msgstr ""
+"Дополнительная информация: :ref:`Настройка цветов проекта<project_colors> `"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:6
 msgid "project_color_object"
 msgstr "project_color_object"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:8
+msgid ""
+"Returns a color from the project's color scheme. Contrary to project_color "
+"which returns a color string representation, project_color_object returns a "
+"color object."
+msgstr ""
+"Возвращает цвет из цветовой схемы проекта. В отличие от project_color, "
+"который возвращает строковое представление цвета, project_color_object "
+"возвращает объект цвета."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:14
 msgid "project_color_object(name)"
 msgstr "project_color_object(name)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:18
+msgid "``project_color_object('Logo color')`` → RGBA: 0.08,0.55,0.20,1.00"
+msgstr ""
+"``project_color_object(„Цвет логотипа“)`` → RGBA: 0,08; 0,55; 0,20; 1,00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:26
 msgid "ramp_color"
 msgstr "ramp_color"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:28
+msgid "Returns a string representing a color from a color ramp."
+msgstr "Возвращает строку, представляющую цвет из цветовой гаммы."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:10
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:30
+msgid "**Saved ramp variant**"
+msgstr "**Сохраненный вариант рампы**"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:32
+msgid "Returns a string representing a color from a saved ramp"
+msgstr "Возвращает строку, представляющую цвет из сохраненного градиента."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:38
 msgid "ramp_color(ramp_name, value)"
 msgstr "ramp_color(ramp_name, value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:20
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:40
+msgid ""
+"**ramp_name** - the name of the color ramp as a string, for example "
+"'Spectral'"
+msgstr "**ramp_name** — имя цветовой рампы в виде строки, например «Spectral»"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:21
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:39
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:41
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:59
+msgid ""
+"**value** - the position on the ramp to select the color from as a real "
+"number between 0 and 1"
+msgstr ""
+"**значение** — положение на рампе для выбора цвета в виде действительного "
+"числа от 0 до 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:43
+msgid "``ramp_color('Spectral',0.3)`` → '253,190,115,255'"
+msgstr "``ramp_color(„'Спектральный“', 0,3)„“ → '253,190,115,255'"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:25
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:45
+msgid ""
+"The color ramps available vary between QGIS installations. This function may"
+" not give the expected results if you move your QGIS project between "
+"installations."
+msgstr ""
+"Доступные цветовые градиенты различаются в зависимости от установки QGIS. "
+"Эта функция может не дать ожидаемых результатов, если вы перемещаете проект "
+"QGIS между установками."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:28
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:48
+msgid "**Expression-created ramp variant**"
+msgstr "**Вариант рампы, созданный с помощью выражения**"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:50
+msgid "Returns a string representing a color from an expression-created ramp"
+msgstr ""
+"Возвращает строку, представляющую цвет из градиента, созданного выражением."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:56
 msgid "ramp_color(ramp, value)"
 msgstr "ramp_color(ramp, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:38
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:58
+msgid "**ramp** - the color ramp"
+msgstr "**ramp** — цветовая градиентная шкала"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:121
+msgid "Further reading: :ref:`color-ramp`, :ref:`color_ramp_widget`"
+msgstr ""
+"Дополнительная информация: :ref:`color-ramp`, :ref:`color_ramp_widget`"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:6
 msgid "ramp_color_object"
 msgstr "ramp_color_object"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:8
+msgid ""
+"Returns a color object from a color ramp. Contrary to ramp_color which "
+"returns a color string representation, ramp_color_object returns a color "
+"object."
+msgstr ""
+"Возвращает объект цвета из цветовой шкалы. В отличие от ramp_color, который "
+"возвращает строковое представление цвета, ramp_color_object возвращает "
+"объект цвета."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:12
+msgid "Returns a color object from a saved ramp"
+msgstr "Возвращает объект цвета из сохраненного градиента"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:18
 msgid "ramp_color_object(ramp_name, value)"
 msgstr "ramp_color_object(ramp_name, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:23
+msgid "``ramp_color_object('Spectral',0.3)`` → RGBA: 0.99,0.75,0.45,1.00"
+msgstr ""
+"``ramp_color_object(\"Спектральный\", 0,3)`` → RGBA: 0,99; 0,75; 0,45; 1,00"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:30
+msgid "Returns a color object from an expression-created ramp"
+msgstr "Возвращает объект цвета из градиента, созданного выражением."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:36
 msgid "ramp_color_object(ramp, value)"
 msgstr "ramp_color_object(ramp, value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:41
+msgid ""
+"``ramp_color_object(create_ramp(map(0,color_rgbf(0,0,0),1,color_rgbf(1,0,0))),1)``"
+" → RGBA: 1.00,0.00,0.00,1.00"
+msgstr ""
+"``ramp_color_object(create_ramp(map(0,color_rgbf(0,0,0),1,color_rgbf(1,0,0))),1)``"
+" → RGBA: 1.00,0.00,0.00,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:49
 msgid "set_color_part"
 msgstr "set_color_part"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:51
+msgid ""
+"Sets a specific color component for a color string or a color object, e.g., "
+"the red component or alpha component."
+msgstr ""
+"Устанавливает определенный цветовой компонент для цветовой строки или "
+"цветового объекта, например, красный компонент или альфа-компонент."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:57
 msgid "set_color_part(color, component, value)"
 msgstr "set_color_part(color, component, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:60
+msgid ""
+"**component** - a string corresponding to the color component to set. Valid "
+"options are:"
+msgstr ""
+"**component** — строка, соответствующая цветовому компоненту, который "
+"необходимо установить. Допустимые варианты:"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:80
+msgid ""
+"**value** - new value for color component, respecting the ranges listed "
+"above"
+msgstr ""
+"**значение** — новое значение для цветового компонента с учетом диапазонов, "
+"указанных выше"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:82
+msgid "``set_color_part('200,10,30','green',50)`` → '200,50,30,255'"
+msgstr "``set_color_part('200,10,30','green',50)`` → '200,50,30,255'"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:83
+msgid ""
+"``set_color_part(color_cmykf(0.21,0,0.92,0.70),'black',100)`` → CMYKA: "
+"0.21,0.00,0.92,1.00,1.00"
+msgstr ""
+"``set_color_part(color_cmykf(0.21,0,0.92,0.70),'black',100)`` → CMYKA: "
+"0.21,0.00,0.92,1.00,1.00"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:128
+msgid "Conditional Functions"
+msgstr "Условные функции"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:130
+msgid ""
+"This group contains functions to handle conditional checks in expressions."
+msgstr ""
+"Эта группа содержит функции для обработки условных проверок в выражениях."
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:12
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:18
 msgid "CASE"
 msgstr "CASE"
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:14
+msgid ""
+"CASE is used to evaluate a series of conditions and return a result for the "
+"first condition met. The conditions are evaluated sequentially, and if a "
+"condition is true, the evaluation stops, and the corresponding result is "
+"returned. If none of the conditions are true, the value in the ELSE clause "
+"is returned. Furthermore, if no ELSE clause is set and none of the "
+"conditions are met, NULL is returned."
+msgstr ""
+"CASE используется для оценки ряда условий и возврата результата для первого "
+"выполненного условия. Условия оцениваются последовательно, и если условие "
+"истинно, оценка останавливается и возвращается соответствующий результат. "
+"Если ни одно из условий не истинно, возвращается значение в предложении "
+"ELSE. Кроме того, если предложение ELSE не задано и ни одно из условий не "
+"выполняется, возвращается NULL."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:20
+msgid "WHEN *condition* THEN *result*"
+msgstr "КОГДА *условие* ТО *результат*"
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:22
 msgid "[ …n ]"
 msgstr "[ …n ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:24
+msgid "[ ELSE *result* ]"
+msgstr "[ ELSE *результат* ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:26
 msgid "END"
 msgstr "END"
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:28
+msgid "[ ] marks optional components"
+msgstr "[ ] обозначает необязательные компоненты"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:36
+msgid "**WHEN condition** - A condition expression to evaluate"
+msgstr "**Условие WHEN** — выражение условия для оценки"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:37
+msgid ""
+"**THEN result** - If *condition* evaluates to True then *result* is "
+"evaluated and returned."
+msgstr ""
+"**THEN результат** - Если *условие* оценивается как True, то *результат* "
+"оценивается и возвращается."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:38
+msgid ""
+"**ELSE result** - If none of the above conditions evaluated to True then "
+"*result* is evaluated and returned."
+msgstr ""
+"**Результат ELSE** — если ни одно из вышеуказанных условий не оценивается "
+"как True, то *результат* оценивается и возвращается."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:40
+msgid ""
+"``CASE WHEN \"name\" IS NULL THEN 'None' END`` → Returns the string 'None' "
+"if the \"name\" field is NULL"
+msgstr ""
+"``CASE WHEN «name» IS NULL THEN „None“ END`` → Возвращает строку „None“, "
+"если поле «name» имеет значение NULL."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:41
+msgid ""
+"``CASE WHEN $area > 10000 THEN 'Big property' WHEN $area > 5000 THEN 'Medium"
+" property' ELSE 'Small property' END`` → Returns the string 'Big property' "
+"if the area is bigger than 10000, 'Medium property' if the area is between "
+"5000 and 10000, and 'Small property' for others"
+msgstr ""
+"``CASE WHEN $area > 10000 THEN „Большая недвижимость“ WHEN $area > 5000 THEN"
+" „Средняя недвижимость“ ELSE „Маленькая недвижимость“ END`` → Возвращает "
+"строку „Большая недвижимость“, если площадь больше 10000, „Средняя "
+"недвижимость“, если площадь находится в диапазоне от 5000 до 10000, и "
+"„Маленькая недвижимость“ для всех остальных случаев."
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:49
 msgid "coalesce"
 msgstr "coalesce"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:51
+msgid "Returns the first non-NULL value from the expression list."
+msgstr "Возвращает первое значение, отличное от NULL, из списка выражений."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:53
+msgid "This function can take any number of arguments."
+msgstr "Эта функция может принимать любое количество аргументов."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:59
+msgid "coalesce(expression1, expression2, ...)"
+msgstr "coalesce(выражение1, выражение2, ...)"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:61
+msgid "**expression** - any valid expression or value, regardless of type."
+msgstr ""
+"**выражение** — любое допустимое выражение или значение, независимо от типа."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:63
+msgid "``coalesce(NULL, 2)`` → 2"
+msgstr "``coalesce(NULL, 2)`` → 2"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:64
+msgid "``coalesce(NULL, 2, 3)`` → 2"
+msgstr "``coalesce(NULL, 2, 3)`` → 2"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:65
+msgid "``coalesce(7, NULL, 3*2)`` → 7"
+msgstr "``coalesce(7, NULL, 3*2)`` → 7"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:66
+msgid ""
+"``coalesce(\"fieldA\", \"fallbackField\", 'ERROR')`` → value of fieldA if it"
+" is non-NULL else the value of \"fallbackField\" or the string 'ERROR' if "
+"both are NULL"
+msgstr ""
+"``coalesce(«fieldA», „fallbackField“, „ERROR“)`` → значение fieldA, если оно"
+" не равно NULL, в противном случае значение «fallbackField» или строка "
+"„ERROR“, если оба значения равны NULL."
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:74
 msgid "if"
 msgstr "if"
 
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:76
+msgid ""
+"Tests a condition and returns a different result depending on the "
+"conditional check."
+msgstr ""
+"Проверяет условие и возвращает разный результат в зависимости от результата "
+"проверки."
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:82
 msgid "if(condition, result_when_true, result_when_false)"
 msgstr "if(condition, result_when_true, result_when_false)"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:84
+msgid "**condition** - the condition which should be checked"
+msgstr "**условие** — условие, которое необходимо проверить"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:85
+msgid ""
+"**result_when_true** - the result which will be returned when the condition "
+"is true or another value that does not convert to false."
+msgstr ""
+"**result_when_true** — результат, который будет возвращен, когда условие "
+"будет истинным, или другое значение, которое не преобразуется в ложное."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:86
+msgid ""
+"**result_when_false** - the result which will be returned when the condition"
+" is false or another value that converts to false like 0 or ''. NULL will "
+"also be converted to false."
+msgstr ""
+"**result_when_false** — результат, который будет возвращен, когда условие "
+"будет ложным, или другое значение, которое преобразуется в ложное, например "
+"0 или „“. NULL также будет преобразовано в ложное."
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:88
+msgid "``if( 1+1=2, 'Yes', 'No' )`` → 'Yes'"
+msgstr "``if( 1+1=2, „Да“, „Нет“ )`` → 'Да'"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:89
+msgid "``if( 1+1=3, 'Yes', 'No' )`` → 'No'"
+msgstr "``if( 1+1=3, „Да“, „Нет“ )`` → 'Нет'"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:90
+msgid "``if( 5 > 3, 1, 0)`` → 1"
+msgstr "``if( 5 > 3, 1, 0)`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:91
+msgid ""
+"``if( '', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is false"
+" (empty)'"
+msgstr ""
+"``if( „“, „Это правда (не пусто)“, „Это ложь (пусто)“ )`` → 'Это ложь "
+"(пусто)'"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:92
+msgid ""
+"``if( ' ', 'It is true (not empty)', 'It is false (empty)' )`` → 'It is true"
+" (not empty)'"
+msgstr ""
+"``if( „ “, „Это правда (не пусто)“, „Это ложь (пусто)“ )`` → 'Это правда (не"
+" пусто)'"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:93
+msgid "``if( 0, 'One', 'Zero' )`` → 'Zero'"
+msgstr "«if( 0, „Один“, „Ноль“ )» → «Ноль»"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:94
+msgid "``if( 10, 'One', 'Zero' )`` → 'One'"
+msgstr "``if( 10, „Один“, „Ноль“ )`` → 'Один'"
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:102
 msgid "nullif"
@@ -1450,6 +4780,11 @@ msgstr "format_date"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:36
 msgid "format_date(datetime, format, [language])"
 msgstr "format_date(datetime, format, [language])"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
+#: ../../docs/user_manual/expressions/expression_help/String.rst:1
+msgid "Expression"
+msgstr "Выражение"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:1
 #: ../../docs/user_manual/expressions/expression_help/String.rst:1

@@ -7,18 +7,19 @@
 # Translators:
 # fairtommy <fairtommy@gmail.com>, 2025
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
-# tomoya miyoshi, 2025
 # Transifex Bot <>, 2025
 # Harrissou Sant-anna, 2025
+# 藤本理弘 <mfujimot@gmail.com>, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:45+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,7 +49,7 @@ msgstr "ジオメトリ属性を追加"
 msgid ""
 "Computes geometric properties of the features in a vector layer and includes"
 " them in the output layer."
-msgstr "ベクタレイヤの地物のジオメトリのプロパティを計算し、出力レイヤにそれらを含めて出力します。"
+msgstr "ベクタレイヤの地物のジオメトリプロパティを計算し、それらを含めて出力レイヤに出力します。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:19
 msgid ""
@@ -56,7 +57,7 @@ msgid ""
 "with additional attributes, containing geometric measurements based on a "
 "selected CRS."
 msgstr ""
-"このアルゴリズムは入力ベクタレイヤと同じ内容の新しいベクタレイヤを作成しますが、選択したCRSに基づいた幾何学的な測量値を追加の属性として持ちます。"
+"このアルゴリズムは、入力ベクタレイヤと同じ内容と、選択したCRSに基づく幾何学的な測定結果を格納した追加の属性を持つ新しいベクタレイヤを作成します。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:23
 msgid ""
@@ -69,7 +70,7 @@ msgid ""
 "for **point** layers: X (``xcoord``), Y (``ycoord``), Z (``zcoord``) "
 "coordinates and/or M value (``mvalue``)"
 msgstr ""
-"**ポイント** レイヤの場合：  X (``xcoord``), Y (``ycoord``), Z (``zcoord``) 座標、M値 "
+"**ポイント** レイヤの場合：  X (``xcoord``), Y (``ycoord``), Z (``zcoord``) 座標及び／又はM値 "
 "(``mvalue``)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:28
@@ -1015,6 +1016,50 @@ msgstr "**入力レイヤ**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:139
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:597
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:786
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:883
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1121
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1283
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1301
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1325
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1458
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2138
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2259
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2352
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2684
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2803
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2895
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2964
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3077
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3178
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3265
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3529
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3551
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3981
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4072
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4154
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4251
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4445
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4605
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5161
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5346
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5432
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5591
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5907
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5988
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6094
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6510
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6514
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6648
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6832
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6910
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7252
+msgid "[vector: geometry]"
+msgstr "[vector: geometry]"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:50
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:140
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:276
@@ -1444,8 +1489,12 @@ msgid "Default: ``[Create temporary layer]``"
 msgstr "デフォルト： ``[一時レイヤを作成]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:68
-msgid "Specify the output (input copy with geometry) layer. One of:"
-msgstr "出力結果レイヤ（入力レイヤのコピーにジオメトリの属性値を持たせたもの）を指定します。次のいずれかです："
+msgid ""
+"Specify the output (input copy with geometry) layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"出力結果レイヤ（入力レイヤのコピーにジオメトリの属性値を持たせたもの）を指定します。:ref:`次のいずれかです "
+"<output_parameter_widget>`："
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
@@ -1717,6 +1766,73 @@ msgstr "**平行移動（X軸）**"
 msgid "``DELTA_X``"
 msgstr "``DELTA_X``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:143
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:149
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:155
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:161
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:167
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:173
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:179
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:191
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:601
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1674
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1680
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1694
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1704
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1869
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2046
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2273
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2280
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2287
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2609
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2615
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3084
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3092
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3185
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3193
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3604
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3762
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3768
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4167
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4328
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4688
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4694
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4701
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5081
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5087
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5242
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5248
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5256
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5350
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5595
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5752
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5827
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5911
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6002
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6009
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6015
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6098
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6193
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6272
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6430
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6437
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6652
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6658
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6664
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6670
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6745
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6984
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6991
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7160
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7166
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7256
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7262
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7268
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7274
+msgid "[numeric: double] |dataDefine|"
+msgstr "[数値: double] |dataDefine|"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7500
 msgid "dataDefine"
 msgstr "dataDefine"
@@ -1922,8 +2038,9 @@ msgstr "**変形済みシェープ**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6107
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6917
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7283
-msgid "Specify the output vector layer. One of:"
-msgstr "出力ベクタレイヤを指定します。次のいずれかです："
+msgid ""
+"Specify the output vector layer. :ref:`One of <output_parameter_widget>`:"
+msgstr "出力ベクタレイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:7
 msgid "Append to Layer…"
@@ -1951,19 +2068,19 @@ msgstr "ベクタレイヤまたはテーブルレイヤを入力とし、 ``式
 msgid ""
 "Features for which ``group by`` expression returns the same value are "
 "grouped together."
-msgstr "``グループ化`` の式で同じ値を返す地物は一つのグループにまとめられます。"
+msgstr "``グループ化のための式`` で同じ値を返す地物は同じグループにまとめられます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:245
 msgid ""
 "It is possible to group all source features together using constant value in"
 " ``group by`` parameter, example: NULL."
-msgstr "``式によるグループ化`` パラメータに定数値、例えばNULL を使用することで、全てのソース地物を一つにグループ化することができます。"
+msgstr "``グループ化のための式`` パラメータに定数値、例えばNULL を使用することで、全てのソース地物を一つにまとめることができます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:248
 msgid ""
 "It is also possible to group features by multiple fields using Array "
 "function, example: Array(\"Field1\", \"Field2\")."
-msgstr "配列関数を使用して、複数のフィールドに基づいたグループ化もできます。例： Array(\"Field1\", \"Field2\")"
+msgstr "Array関数を使用して、複数のフィールドに基づいたグループ化もできます。例： Array(\"Field1\", \"Field2\")"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:251
 msgid ""
@@ -2084,16 +2201,37 @@ msgstr "clearText"
 msgid ""
 "For each of the fields you'd like to retrieve information from, you need to "
 "define the following:"
-msgstr "情報を検索したいフィールドそれぞれについて、以下を定義する必要があります："
+msgstr "情報を取得したいフィールドそれぞれについて、以下を定義する必要があります："
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:306
+msgid ":guilabel:`Input expression` (``input``) [expression]"
+msgstr ":guilabel:`入力式` (``input``) [式]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:307
 msgid "Field or expression from the input layer."
 msgstr "入力レイヤのフィールドまたは式"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:309
+msgid ":guilabel:`Aggregate function` (``aggregate``) [enumeration]"
+msgstr ":guilabel:`集約関数` (``aggregate``) [列挙型]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:310
+msgid ""
+"Function to use on the input expression to return the aggregated value. "
+"These are mainly the :ref:`aggregates_function`, plus dedicated "
+"\"first_value\" and \"last_value\" functions for ordered list items."
+msgstr ""
+"入力式に適用して集約値を返す関数です。主に :ref:`aggregates_function` "
+"関数に加え、順序付きリストの要素用に専用の\"first_value\"と\"last_value\"関数が用意されています。"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:314
 msgid ""
 "Default: *concatenate* (for string data type), *sum* (for numeric data type)"
 msgstr "デフォルト： *concatenate* （文字列型の場合）、 *sum* （数値型の場合）"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:317
+msgid ":guilabel:`Delimiter` (``delimiter``) [string]"
+msgstr ":guilabel:`区切り文字` (``delimiter``) [文字列]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:318
 msgid ""
@@ -2105,6 +2243,10 @@ msgstr "連結の場合など、集計値を区切るためのテキスト文字
 msgid "Default: *,*"
 msgstr "デフォルト： *,*"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:323
+msgid ":guilabel:`Output field name` (``name``) [string]"
+msgstr ":guilabel:`出力フィールド名` (``name``) [文字列]"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:324
 msgid ""
 "Name of the aggregated field in the output layer. By default input field "
@@ -2115,17 +2257,81 @@ msgstr "出力レイヤでの集約フィールドの名前。デフォルトは
 msgid ":guilabel:`Type` (``type``) [enumeration]"
 msgstr ":guilabel:`データ型` (``type``) [列挙]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:328
+msgid ""
+"Data type of the output field. Available types may not be compatible with "
+"the output layer provider. One of:"
+msgstr "出力フィールドのデータ型。利用可能な型は、出力レイヤのプロバイダと互換性がない場合があります。次のいずれかです:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:332
+msgid ""
+"For certain field types, e.g. lists, an extra ``sub_type`` parameter helps "
+"refine the specific type of the data. It is automatically set in the GUI but"
+" may be needed if you're running the algorithm in Python or from the command"
+" line."
+msgstr ""
+"特定のフィールド型（例：リスト）では、データの具体的なタイプを指定するために追加の ``sub_type`` "
+"パラメータが役立ちます。このパラメータはGUIでは自動的に設定されますが、Pythonでアルゴリズムを実行する場合やコマンドラインから実行する場合に必要になる場合があります。"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:6
 msgid "1 --- Boolean"
 msgstr "1 --- ブール値（boolean）"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "2 --- Integer (32bit)"
+msgstr "2 --- 整数 (32bit)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "4 --- Integer (64bit)"
+msgstr "4 --- 整数 (64bit)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "6 --- Decimal (double)"
+msgstr "6 --- Decimal (double)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "9 --- Integer list"
+msgstr "9 --- 整数リスト"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "9 --- Integer (64bit) list"
+msgstr "9 --- 整数 (64bit) リスト"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "9 --- Decimal (double) list"
+msgstr "9 --- Decimal (double) リスト"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "10 --- Text (string)"
+msgstr "10 --- テキスト (string)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:14
+msgid "11 --- String list"
+msgstr "11 --- 文字列リスト"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:16
 msgid "14 --- Date"
-msgstr "14 --- 日付（Date）"
+msgstr "14 --- 日付"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "15 --- Time"
+msgstr "15 --- 時刻"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "16 --- Date & Time"
+msgstr "16 --- 日付と時刻"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "2 --- Integer list"
+msgstr "2 --- 整数リスト"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:352
 msgid "Length of the output field."
 msgstr "出力フィールドの長さ"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:354
+msgid ":guilabel:`Precision` (``precision``) [numeric: integer]"
+msgstr ":guilabel:`精度` (``precision``) [数値: 整数]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:355
 msgid "Precision of the output field."
@@ -2150,8 +2356,10 @@ msgid "**Aggregated**"
 msgstr "**集計出力**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:367
-msgid "Specify the output (aggregate) layer One of:"
-msgstr "（集約値の）出力レイヤを指定します。次のいずれかです："
+msgid ""
+"Specify the output (aggregate) layer :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "出力（集約）レイヤを指定します。 :ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:388
 msgid "Multigeometry vector layer with the aggregated values"
@@ -2232,8 +2440,10 @@ msgid "[vector: point, line]"
 msgstr "[ベクタ：ポイント、ライン]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:444
-msgid "Specify the output (boundary) layer. One of:"
-msgstr "（トポロジカル境界の）出力レイヤを指定します。次のいずれかです："
+msgid ""
+"Specify the output (boundary) layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "出力（境界）レイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:465
 msgid "Boundaries from the input layer (point for line, and line for polygon)"
@@ -2341,8 +2551,10 @@ msgid "[vector: polygon]"
 msgstr "[ベクタ：ポリゴン]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:516
-msgid "Specify the output (bounding box) layer. One of:"
-msgstr "（バウンディングボックスの）出力レイヤを指定します。次のいずれかです："
+msgid ""
+"Specify the output (bounding box) layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "出力（バウンディングボックス）レイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:537
 msgid ""
@@ -2628,13 +2840,6 @@ msgstr "標準（３つのシングルパート地物 - 左）、融合（２つ
 msgid "**Buffered**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:683
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6332
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7008
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7360
-msgid "Specify the output (buffer) layer. One of:"
-msgstr "（バッファの）出力レイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:691
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2172
 msgid "Advanced parameters"
@@ -2767,10 +2972,6 @@ msgstr "**重心**"
 msgid "[vector: point]"
 msgstr "[ベクタ：ポイント]"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:800
-msgid "Specify the output (centroid) layer. One of:"
-msgstr "（重心の）出力レイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:821
 msgid "Output point vector layer (centroids)"
 msgstr "（重心の）出力ポイントベクタレイヤ"
@@ -2888,12 +3089,6 @@ msgstr "**有効なジオメトリの出力レイヤ**"
 msgid "``VALID_OUTPUT``"
 msgstr "``VALID_OUTPUT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:907
-msgid ""
-"Specify the vector layer to contain a copy of the valid features of the "
-"source layer. One of:"
-msgstr "ソースレイヤのうち、有効なジオメトリを持つ地物のコピーが含まれるベクタレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "出力をスキップ"
@@ -2908,15 +3103,6 @@ msgstr "**不正なジオメトリの出力レイヤ**"
 msgid "``INVALID_OUTPUT``"
 msgstr "``INVALID_OUTPUT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:919
-msgid ""
-"Vector layer containing copy of the invalid features of the source layer "
-"with the field  ``_errors`` listing the summary of the error(s) found. One "
-"of:"
-msgstr ""
-"ソースレイヤのうち、不正なジオメトリを持つ地物のコピーが含まれるベクタレイヤを指定します。 ``_errors`` "
-"フィールドには見つかったエラーの概要が含まれます。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:927
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:957
 msgid "**Error output**"
@@ -2926,14 +3112,6 @@ msgstr "**エラー部分の出力レイヤ**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:958
 msgid "``ERROR_OUTPUT``"
 msgstr "``ERROR_OUTPUT``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:932
-msgid ""
-"Point layer of the exact position of the validity problems detected with the"
-" ``message`` field describing the error(s) found. One of:"
-msgstr ""
-"ジオメトリ有効性の問題が検出された正確な位置を表すポイントレイヤを指定します。 ``message`` "
-"フィールドには見つかったエラーの説明が含まれます。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:953
 msgid "**Count of errors**"
@@ -3068,10 +3246,6 @@ msgstr "**出力レイヤ**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1130
 msgid "Vector layer with collected geometries"
 msgstr "集約されたジオメトリのベクタレイヤ"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1148
-msgid "Specify the output vector layer for the collected geometries. One of:"
-msgstr "集約されたジオメトリの出力ベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1159
 msgid "**Algorithm ID**: ``native:collect``"
@@ -3489,13 +3663,6 @@ msgstr "CRSが指定されない場合、プロジェクトのCRSが使用され
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1599
 msgid "The point can be specified by clicking on the map canvas."
 msgstr "ポイントは、マップキャンバス上をクリックすることでも指定できます。"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1605
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2722
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3002
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7081
-msgid "Specify the output layer. One of:"
-msgstr "出力レイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1626
 msgid "The output point vector layer containing the input point."
@@ -4084,12 +4251,6 @@ msgstr "オフセット値：「縮尺係数」を適用した後、代数的に
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6043
 msgid "**Updated**"
 msgstr "**ドレープ出力**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2297
-msgid ""
-"Specify the output vector layer (with Z values from the raster layer). One "
-"of:"
-msgstr "（ラスタレイヤからZ値を設定した）出力ベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2318
 msgid "The output vector layer with Z values from the raster layer"
@@ -4982,15 +5143,6 @@ msgstr "入力ジオメトリがM値やZ値を持つ場合、経度180度線上�
 msgid "**Split**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3430
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3777
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3910
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5021
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5531
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6754
-msgid "Specify the output line vector layer. One of:"
-msgstr "出力ラインベクタレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3450
 msgid "The output line vector layer split at the antimeridian."
 msgstr "経度180度線でラインが分割された出力ラインベクタレイヤ"
@@ -5206,19 +5358,6 @@ msgstr "残したいパートの数。1 とすると、地物の最大パート�
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3705
 msgid "**Parts**"
 msgstr "**出力ファイル**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3688
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3843
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4009
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4086
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4179
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4258
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4452
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4543
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4875
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4950
-msgid "Specify the output polygon vector layer. One of:"
-msgstr "出力ポリゴンベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3708
 msgid ""
@@ -5577,10 +5716,6 @@ msgstr ""
 msgid "Default: 8"
 msgstr "デフォルト： 8"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4381
-msgid "Specify the output (offset) layer. One of:"
-msgstr "（オフセットの）出力レイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4402
 msgid "Output (offset) line layer"
 msgstr "（オフセットの）出力ラインレイヤ"
@@ -5696,11 +5831,6 @@ msgstr "**マルチパートの場合に各パートに点を作成**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4610
 msgid "If checked, a point will be created for each part of the geometry."
 msgstr "チェックした場合、ジオメトリの各パートにポイントを作成します。"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4616
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5096
-msgid "Specify the output point vector layer. One of:"
-msgstr "出力ポイントベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4636
 msgid "The output point vector layer."
@@ -6037,10 +6167,6 @@ msgstr ":ref:`qgisaggregate` 、 :ref:`qgiscollect`"
 msgid "**Multiparts**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5168
-msgid "Specify the output multipart vector layer. One of:"
-msgstr "出力結果のマルチパートベクタレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5188
 msgid "The output multipart vector layer"
 msgstr "出力結果のマルチパートベクタレイヤ"
@@ -6266,12 +6392,6 @@ msgstr "``REMOVE_EMPTY``"
 msgid "**Non null geometries**"
 msgstr "**NULLジオメトリでない地物の出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5445
-msgid ""
-"Specify the output vector layer for the non-NULL (and non-empty) geometries."
-" One of:"
-msgstr "NULLでない（かつ空でない）ジオメトリの出力ベクタレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5453
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5478
 msgid "**Null geometries**"
@@ -6285,11 +6405,6 @@ msgstr "``NULL_OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5459
 msgid "Default: ``[Skip output]``"
 msgstr "デフォルト： ``[出力をスキップ]``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5460
-msgid ""
-"Specify the output vector layer for the NULL (and empty) geometries. One of:"
-msgstr "NULLジオメトリ（あるいは空ジオメトリ）の出力ベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5481
 msgid "Output vector layer (for NULL and, if chosen, empty geometries)"
@@ -6377,10 +6492,6 @@ msgstr "地物の回転中心となる点のXY座標。指定されていない�
 msgid "**Rotated**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5615
-msgid "Specify the output vector layer (with rotated geometries). One of:"
-msgstr "（ジオメトリが回転した）出力ベクタレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5636
 msgid "The output vector layer with rotated geometries"
 msgstr "回転したジオメトリの出力ベクタレイヤ"
@@ -6415,10 +6526,6 @@ msgstr "アルゴリズムはマルチパートポリゴン地物にNULLを返�
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5681
 msgid "**Roundness**"
 msgstr "**丸み係数**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5686
-msgid "Specify the output vector layer (with roundness field). One of:"
-msgstr "（丸み係数フィールドを持った）出力ベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5707
 msgid "The output vector layer with roundness value in a field"
@@ -6476,11 +6583,6 @@ msgstr "直線化されたジオメトリ上の頂点間の最大許容中心角
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5856
 msgid "**Segmentized**"
 msgstr "**出力レイヤ**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5762
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5838
-msgid "Specify the output vector layer (with segmentized geometries). One of:"
-msgstr "（セグメント化されたジオメトリの）出力ベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5783
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5859
@@ -6626,10 +6728,6 @@ msgstr "M値となるラスタレイヤ"
 msgid "The raster band from which the M values are taken"
 msgstr "M値を取得するラスタのバンド"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6025
-msgid "Specify the output vector layer (with updated M values). One of:"
-msgstr "（ラスタレイヤからM値を設定した）出力ベクタレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6046
 msgid "The output vector layer (with updated M values)"
 msgstr "（M値を設定した）出力ベクタレイヤ"
@@ -6759,10 +6857,6 @@ msgstr "許容量の閾値（レイヤの距離単位）。2つの頂点間の�
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6223
 msgid "**Simplified**"
 msgstr "**出力レイヤ**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6205
-msgid "Specify the output (simplified) vector layer. One of:"
-msgstr "（簡素化された）出力ベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6226
 msgid "The output (simplified) vector layer"
@@ -6926,10 +7020,6 @@ msgstr "この値よりも小さい角度の頂点がスムージングされま
 msgid "**Smoothed**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6446
-msgid "Specify the output (smoothed) layer. One of:"
-msgstr "（スムージングされた）出力レイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6467
 msgid "Output (smoothed) vector layer"
 msgstr "（スムージングされた）出力ベクタレイヤ"
@@ -7072,11 +7162,6 @@ msgstr "7 --- アンカーノードにスナップする（単一レイヤの場
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6597
 msgid "**Snapped geometry**"
 msgstr "**出力レイヤ**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6579
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6679
-msgid "Specify the output (snapped) layer. One of:"
-msgstr "（スナップした）出力レイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6600
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6700
@@ -7278,10 +7363,6 @@ msgstr "新しい各ジオメトリパートが持つことのできる最大頂
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6866
 msgid "**Subdivided**"
 msgstr "**出力レイヤ**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6847
-msgid "Specify the output (subdivided) vector layer. One of:"
-msgstr "（空間分割された）出力ベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6869
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7304
@@ -7505,10 +7586,6 @@ msgstr "2 --- 両側"
 msgid "**Transect**"
 msgstr "**トランセクト**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7184
-msgid "Specify the output line layer. One of:"
-msgstr "出力ラインレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7205
 msgid "Output line layer"
 msgstr "出力のラインレイヤ"
@@ -7674,10 +7751,6 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7471
 msgid "**Voronoi polygons**"
 msgstr "**ボロノイ多角形**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7453
-msgid "Specify the output layer (with the Voronoi polygons). One of:"
-msgstr "（ボロノイポリゴンの）出力レイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7474
 msgid "Voronoi polygons of the input point vector layer"

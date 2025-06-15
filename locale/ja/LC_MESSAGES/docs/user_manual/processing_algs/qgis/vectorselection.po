@@ -8,15 +8,17 @@
 # Transifex Bot <>, 2025
 # Harrissou Sant-anna, 2025
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
+# 藤本理弘 <mfujimot@gmail.com>, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:18+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -449,11 +451,6 @@ msgstr "[入力レイヤと同じ]"
 msgid "Default: ``[Create Temporary Layer]``"
 msgstr "デフォルト： ``[一時レイヤを作成]``"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:73
-#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:159
-msgid "Specify the output vector layer for matching features. One of:"
-msgstr "合致した地物の出力ベクタレイヤを指定します。次のいずれかです:"
-
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -495,11 +492,6 @@ msgstr "``FAIL_OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:170
 msgid "Default: ``[Skip output]``"
 msgstr "デフォルト： ``[出力をスキップ]``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:85
-#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:171
-msgid "Specify the output vector layer for non-matching features. One of:"
-msgstr "合致しない地物の出力ベクタレイヤを指定します。次のいずれかです:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
@@ -773,6 +765,17 @@ msgstr ""
 msgid "**Extract features from**"
 msgstr "**抽出する地物のあるレイヤ**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:243
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:266
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:335
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:339
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1007
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1031
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1097
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1101
+msgid "[vector: geometry]"
+msgstr "[vector: geometry]"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:245
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1009
 msgid "**Where the features (geometric predicate)**"
@@ -878,13 +881,6 @@ msgstr "**出力レイヤ**"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "デフォルト： ``[一時レイヤを作成]``"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:273
-msgid ""
-"Specify the output vector layer for the features that have the chosen "
-"spatial relationship(s) with one or more features in the comparison layer. "
-"One of:"
-msgstr "比較レイヤの1つ以上の地物と選択された空間的関係を持つ地物の出力ベクタレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:296
 msgid ""
 "Vector layer with features from the input layer that have the chosen spatial"
@@ -934,6 +930,11 @@ msgstr "**地物がある範囲**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1104
 msgid "``DISTANCE``"
 msgstr "``DISTANCE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:343
+#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1105
+msgid "[numeric: double] |dataDefine|"
+msgstr "[数値: double] |dataDefine|"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1155
 msgid "dataDefine"
@@ -1005,12 +1006,6 @@ msgstr "2 -- 現在の選択の中から選択する"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:1121
 msgid "3 --- removing from current selection"
 msgstr "3 -- 現在の選択から除く"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:365
-msgid ""
-"Specify the output vector layer for the features that are within the set "
-"distance from reference features. One of:"
-msgstr "参照地物から設定された距離以内にある地物の出力ベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:387
 msgid ""
@@ -1185,12 +1180,6 @@ msgstr "選択する地物の数または百分率"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:541
 msgid "**Extracted (random)**"
 msgstr "**ランダム抽出出力**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:522
-#: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:614
-msgid ""
-"Specify the output vector layer for the randomly selected features. One of:"
-msgstr "ランダムに選択した地物の出力ベクタレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:544
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:636

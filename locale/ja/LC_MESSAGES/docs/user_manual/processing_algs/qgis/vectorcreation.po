@@ -5,18 +5,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoya miyoshi, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# 藤本理弘 <mfujimot@gmail.com>, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 12:20+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -335,6 +336,19 @@ msgstr "**ステップ距離**"
 msgid "``OFFSET``"
 msgstr "``OFFSET``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:207
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:213
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:219
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:225
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1222
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1253
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1379
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1502
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1533
+msgid "[numeric: double] |dataDefine|"
+msgstr "[数値: double] |dataDefine|"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:65
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:328
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:334
@@ -407,10 +421,6 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1832
 msgid "Default: ``[Create temporary layer]``"
 msgstr "デフォルト： ``[一時レイヤを作成]``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:72
-msgid "Specify the output line layer with offset features. One of:"
-msgstr "オフセット地物の出力ラインレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
@@ -627,6 +637,12 @@ msgstr ""
 msgid ":ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`"
 msgstr ":ref:`qgistranslategeometry` 、 :ref:`qgisarrayoffsetlines`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:358
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:380
+msgid "[vector: geometry]"
+msgstr "[vector: geometry]"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:198
 msgid "Input vector layer to translate"
 msgstr "平行移動させたい入力ベクタレイヤ"
@@ -710,12 +726,6 @@ msgstr "**出力レイヤ**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:255
 msgid "[same as input]"
 msgstr "[入力レイヤと同じ]"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:234
-msgid ""
-"Output vector layer with translated (moved) copies of the features. The "
-"original features are also copied. One of:"
-msgstr "平行移動させた地物の出力ベクタレイヤ。元の地物もコピーされます。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:256
 msgid ""
@@ -927,10 +937,6 @@ msgstr "グリッドに適用する座標参照系"
 msgid "**Grid**"
 msgstr "**グリッド**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:361
-msgid "Resulting vector grid layer. One of:"
-msgstr "結果のグリッドベクタレイヤ。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:381
 msgid ""
 "Resulting vector grid layer. The output geometry type (point, line or "
@@ -1109,10 +1115,6 @@ msgstr "**テーブルによる点**"
 msgid "[vector: point]"
 msgstr "[ベクタ：ポイント]"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:462
-msgid "Specify the resulting point layer. One of:"
-msgstr "結果のポイントレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:482
 msgid "The resulting point layer"
 msgstr "結果のポイントレイヤ"
@@ -1188,10 +1190,6 @@ msgstr "入力ラインベクタレイヤ"
 msgid "**Points along line**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:533
-msgid "Resulting point layer with pixel centroids. One of:"
-msgstr "結果のピクセル中心のポイントレイヤ。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:553
 msgid "Resulting point layer with pixel centroids"
 msgstr "結果のピクセル中心のポイントレイヤ"
@@ -1232,10 +1230,6 @@ msgstr "入力ポリゴンベクタレイヤ"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:624
 msgid "**Points inside polygons**"
 msgstr "**ピクセル重心**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:607
-msgid "Resulting point layer of pixel centroids. One of:"
-msgstr "結果のピクセル中心のポイントレイヤ。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:627
 msgid "Resulting point layer of pixel centroids"
@@ -1324,10 +1318,6 @@ msgstr "チェックされた場合、フォルダ内のフォルダも検索し
 msgid "**Photos**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:684
-msgid "Specify the point vector layer for the geotagged photos. One of:"
-msgstr "ジオタグ付き写真のポイントベクタレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "出力をスキップ"
@@ -1346,10 +1336,6 @@ msgstr "``INVALID``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:817
 msgid "Default: ``[Skip output]``"
 msgstr "デフォルト： ``[出力をスキップ]``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:698
-msgid "Specify the table of unreadable or non-geotagged photos. One of:"
-msgstr "読み込めない、またはジオタグが付いていない写真の結果テーブルを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:719
 msgid ""
@@ -1466,10 +1452,6 @@ msgstr ""
 msgid "**Paths**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:805
-msgid "Specify the line vector layer of the path. One of:"
-msgstr "パスのラインベクタレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:811
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:840
 msgid "**Directory for text output**"
@@ -1479,12 +1461,6 @@ msgstr "**テキスト出力先ディレクトリ**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:841
 msgid "``OUTPUT_TEXT_DIR``"
 msgstr "``OUTPUT_TEXT_DIR``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:818
-msgid ""
-"Specify the directory that will contain the description files of points and "
-"paths. One of:"
-msgstr "ポイントとパスの説明ファイルの出力先ディレクトリを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to a Temporary Directory"
@@ -1634,15 +1610,6 @@ msgstr "ポイント間の最小距離"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1412
 msgid "**Random points**"
 msgstr "**ランダム点群出力**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:925
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1017
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1115
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1231
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1395
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1511
-msgid "The output random points. One of:"
-msgstr "ランダム点群の出力。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:945
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1056
@@ -2168,10 +2135,6 @@ msgstr "ラスタのバンドの値を格納するフィールドの名前"
 msgid "**Vector points**"
 msgstr "**点ベクタ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1650
-msgid "Specify the resulting point layer of pixels centroids. One of:"
-msgstr "結果のピクセル中心のポイントレイヤを指定します。次のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1671
 msgid "Resulting point layer with pixels centroids"
 msgstr "結果のピクセル中心のポイントレイヤ"
@@ -2202,10 +2165,6 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1742
 msgid "**Vector polygons**"
 msgstr "**ポリゴンベクタ**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1724
-msgid "Specify the resulting polygon layer of pixel extents. One of:"
-msgstr "結果のピクセル範囲のポリゴンレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1745
 msgid "Resulting polygon layer of pixel extents"
@@ -2310,10 +2269,6 @@ msgstr "**出力の座標参照系（CRS）**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1850
 msgid "**Regular points**"
 msgstr "**規則的な点群**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1833
-msgid "Specify the output regular point layer. One of:"
-msgstr "規則的な点群レイヤの出力の指定。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:1853
 msgid "The output regular point layer."
