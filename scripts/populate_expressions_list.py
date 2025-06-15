@@ -204,16 +204,21 @@ def find_img_path(anchor):
     """
 
     img_path=''
-    # For image files in the expression help img folder
     if anchor['img']:
+        # For image files in the expression help img folder
         temp_path = path.join(output_folder, 'img', anchor['img']+'.*')
         if glob.glob(temp_path):
             img_path = temp_path.split('..')[-1]
-    # For image files from the algorithm folder
-    elif anchor['alg_img']:
-        temp_path = path.join(algorithm_folder, '**', anchor['alg_img']+'.*')
-        if glob.glob(temp_path, recursive=True):
-            img_path = glob.glob(temp_path, recursive=True)[0].split('..')[-1]
+        else:
+            # For image files from the algorithm folder
+            temp_path = path.join(algorithm_folder, '**', anchor['img']+'.*')
+            if glob.glob(temp_path, recursive=True):
+                img_path = glob.glob(temp_path, recursive=True)[0].split('..')[-1]
+            else:
+                print(f'No image named {anchor["img"]} in expression and algorithms folders. '
+                     'Please add one.')
+    else:
+        print(f'No image filled for {anchor} expression function.')
 
     return img_path
 
