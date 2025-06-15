@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-15 17:10+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
@@ -347,6 +347,15 @@ msgstr "[booleano]"
 msgid "Default: False"
 msgstr "Predeterminado: Falso"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:61
+msgid ""
+"If set, the result is dissolved. If no field is set for dissolving, all the "
+"buffers are dissolved into one feature."
+msgstr ""
+"Si se establece, el resultado se disuelve. Si no se establece ningún campo "
+"para la disolución, todos los búferes se disuelven en una sola "
+"característica."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:64
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:379
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:614
@@ -405,8 +414,11 @@ msgstr "Predeterinado: ``[Save to temporary file]``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:76
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:626
-msgid "Specify the output buffer layer. One of:"
-msgstr "Especifica la capa de bufer saliente. Una de:"
+msgid ""
+"Specify the output buffer layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Especifique la capa del búfer de salida. :ref:`Una de "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -604,8 +616,11 @@ msgid "[same as input]"
 msgstr "[la misma que la entrada]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:173
-msgid "Specify the output (clipped) layer. One of:"
-msgstr "Especifica la capa saliente (cortada). Una de:"
+msgid ""
+"Specify the output (clipped) layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Especifique la capa de salida (recortada). :ref:`Una de "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:213
 msgid "The output (clipped) layer. The default format is \"ESRI Shapefile\"."
@@ -645,8 +660,9 @@ msgid "**Clipped (mask)**"
 msgstr "**Cortado (mascara)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:262
-msgid "The output (masked) layer. One of:"
-msgstr "La capa saliente (mascarada). Una de:"
+msgid "The output (masked) layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"La capa de salida (enmascarada). :ref:`Una de <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:302
 msgid "The output (masked) layer. The default format is \"ESRI Shapefile\"."
@@ -694,8 +710,9 @@ msgid "**Dissolved**"
 msgstr "**Disuelto**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:361
-msgid "Specify the output layer. One of:"
-msgstr "Especificar la capa saliente. una de:"
+msgid "Specify the output layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Especifica la capa de salida. :ref:`Una de <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:385
 msgid ""
@@ -737,6 +754,14 @@ msgstr "**Calcular área y perímetro de entidades disueltas**"
 msgid "``COMPUTE_AREA``"
 msgstr "``COMPUTE_AREA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:405
+msgid ""
+"Compute the area and perimeter of dissolved features and include them in the"
+" output layer"
+msgstr ""
+"Calcular el área y el perímetro de los objetos espaciales disueltos e "
+"incluirlos en la capa de salida."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:407
 msgid "**Compute min/max/sum/mean for attribute**"
 msgstr "**Calcular min/max/sum/media para atributo**"
@@ -768,6 +793,10 @@ msgstr "[campo de tabla: numérico]"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:419
 msgid "The numeric attribute to calculate statistics on"
 msgstr "El atributo numérico para calcular las estadísticas"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:443
+msgid "The output multipart geometry layer (with dissolved geometries)"
+msgstr "La capa de geometría multiparte de salida (con geometrías disueltas)"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:448
 msgid "**Algorithm ID**: ``gdal:dissolve``"
@@ -812,8 +841,11 @@ msgid "**Offset curve**"
 msgstr "**Desplazamiento de curva**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:499
-msgid "Specify the output line layer. One of:"
-msgstr "Especifica la cappa lineal saliente. Una de:"
+msgid ""
+"Specify the output line layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Especifique la capa de la línea de salida. :ref:`Una de "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:539
 msgid "The output offset curve layer"
@@ -921,8 +953,11 @@ msgid "[vector: point]"
 msgstr "[vector: punto]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:721
-msgid "Specify the output point layer. One of:"
-msgstr "Especifica la capa de puntos saliente. Una de:"
+msgid ""
+"Specify the output point layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Especifique la capa de puntos de salida. :ref:`Una de "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:759
 msgid "**Points along line**"
