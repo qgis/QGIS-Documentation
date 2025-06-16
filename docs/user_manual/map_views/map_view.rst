@@ -675,8 +675,7 @@ To add a scale bar:
    bar fill and outline can be made opaque by clicking on the down arrow to the right
    of the color input.
 #. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box
-#. Set the :guilabel:`Size of bar` with a desired value referring to the active distance units 
-   in the :guilabel:`Map Units` (maximum value is 10000). This value will show up as long as your zoom level fits to it.
+#. Set the :guilabel:`Size of bar` based on the active distance units set in :guilabel:`Map Units` (maximum allowed value is 10,000). The scale bar will display this value when the current zoom level allows it.
 #. Set the :guilabel:`Max Width` (values ranging from 1-80%) as the maximum width of the scale bar as a percentage of the width of the map canvas
 #. Optionally check |checkbox| :guilabel:`Automatically snap to round number on resize`
    to display easy-to-read values
