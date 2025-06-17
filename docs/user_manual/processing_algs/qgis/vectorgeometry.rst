@@ -4425,9 +4425,6 @@ Oriented minimum bounding box
 Calculates the minimum area rotated rectangle for each feature in the
 input layer.
 
-Attributes of the input features will be copied to the corresponding output
-feature. The following attributes containing geometric measurements of
-the bounding boxes, based on the selected CRS, will be added:
 .. figure:: img/oriented_minimum_bounding_box.png
    :align: center
 
