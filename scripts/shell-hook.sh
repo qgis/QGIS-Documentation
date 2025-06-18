@@ -190,7 +190,7 @@ function main_menu {
         "💡 About")
             # Convert the image to ASCII and pass it directly to gum
             # Generate ASCII art
-            chafa ./flake/qgis-icon-128x128.png --size=10x10
+            chafa ./scripts/qgis-icon-128x128.png --size=10x10
 
             # Display ASCII art and message using gum
             $(echo "$QGIS_ASCII")
