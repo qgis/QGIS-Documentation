@@ -20,10 +20,6 @@ Each new version is incrementally offset by a specified distance.
 Positive distance will offset lines to the left, and negative
 distances will offset them to the right.
 
-Attributes of the input features will be copied to the corresponding output
-feature. The following attributes related to the input parameters will be
-added: ``instance``, ``offset``.
-
 .. figure:: img/offset_lines_array.png
    :align: center
 
@@ -145,8 +141,11 @@ Outputs
    * - **Offset lines**
      - ``OUTPUT``
      - [vector: line]
-     - Output line layer with offset features.
+     - Output line layer with offset features. Attributes will be copied to the corresponding output.
        The original features are also copied.
+       The following attributes related to the input parameters will be added:
+       ``instance`` indexing the ``COUNT`` offset lines and ``offset``
+       designating the offset from the original line.
 
 Python code
 ...........
