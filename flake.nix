@@ -38,12 +38,27 @@
           pkgs.chafa
           pkgs.pre-commit
           pkgs.nixfmt-rfc-style
-          (pkgs.python3.withPackages (ps: [ ps.pip ps.setuptools ]))
+          (pkgs.python3.withPackages (ps: [
+            ps.pip
+            ps.setuptools
+            ps.sphinx
+            ps.sphinx_rtd_theme
+            ps.recommonmark
+            ps.myst-parser
+            ps.sphinx-autobuild
+            ps.docutils
+            ps.rstcheck
+            ps.sphinxext-rediraffe
+            ps.sphinx-togglebutton
+            ps.sphinx-copybutton
+          ]))
           pkgs.vscode
           pkgs.transifex-cli
+          pkgs.texlive.combined.scheme-full
         ];
         shellHook = ''
-          source ${./scripts/shell-hook.sh}
+          
+          #source ${./scripts/shell-hook.sh}
         '';
       };
     };
