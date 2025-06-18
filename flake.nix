@@ -44,14 +44,6 @@
         ];
         shellHook = ''
           source ${./scripts/shell-hook.sh}
-          if [ -f REQUIREMENTS.txt ]; then
-            if [ ! -d .venv ]; then
-              python -m venv .venv
-            fi
-            . .venv/bin/activate
-            pip install --upgrade pip
-            pip install -r REQUIREMENTS.txt
-          fi
         '';
       };
     };

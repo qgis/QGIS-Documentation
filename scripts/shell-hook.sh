@@ -8,29 +8,12 @@ echo dev >environment.txt
 function dev-help {
     echo "USAGE:"
     echo
-    echo "- Get list of available hosts:"
-    echo
-    echo "     nix eval .#all-hosts"
-    echo
-    echo "- Run host in VM:"
-    echo
-    echo "     nix run .#<hostname>-vm"
-    echo "     (set '--option sandbox relaxed --builders \"\"' for Django hosts)"
-    echo
-    echo "- Run test:"
-    echo
-    echo "     nix build .#checks.x86_64-linux.<hostname>"
-    echo "     (set '--option sandbox relaxed --builders \"\"' for Django hosts)"
-    echo
-    echo "- Launch interactive test environment:"
-    echo
-    echo "     nix run .#checks.x86_64-linux.<hostname>.driverInteractive -- --interactive"
-    echo "     start_all()"
+    echo "nix develop
 }
 
 function setup_gum {
     # Choose
-    export GUM_CHOOSE_CURSOR_FOREGROUND="#F1C069"
+    export GUM_CHOOSE_CURSOR_FOREGROUND=" #F1C069"
     export GUM_CHOOSE_HEADER_FOREGROUND="#F1C069"
     export GUM_CHOOSE_ITEM_FOREGROUND="#F1C069"
     export GUM_CHOOSE_SELECTED_FOREGROUND="#F1C069"
@@ -107,11 +90,7 @@ function main_menu {
         gum choose \
             "🐚 Bash shell" \
             "🐠 Fish shell" \
-            "🚀 List hosts" \
-            "💻️ Run host in VM" \
-            "💻️ Run test" \
-            "💻️ Run interactive test" \
-            "📃 VSCodium IDE" \
+            "📃 VSCode IDE" \
             "🎬️ Make history video" \
             "💡 About" \
             "🛑 Exit"
@@ -136,40 +115,18 @@ function main_menu {
             /usr/bin/env fish
             main_menu
             ;;
-        "🚀 List hosts")
-            hosts=$(nix eval .#all-hosts --json | jq -r '.[]')
-            gum style --border double --padding "1 2" --margin "1" \
-                --align center --width 50 "Available hosts"
-            echo "$hosts" | gum style --padding "0 2" --align left
-            prompt_to_continue
-            main_menu
-            ;;
-        "💻️ Run host in VM")
-            gum style "💻️ Run host in VM"
-            selected_host=$(gum filter "Select a host:" $(nix eval .#all-hosts --json | jq -r '.[]'))
-            nix run --option sandbox relaxed --builders "" .#"$selected_host"-vm
-            prompt_to_continue
-            main_menu
-            ;;
-        "💻️ Run test")
-            gum style "💻️ Run test"
-            selected_host=$(gum filter "Select a host:" $(nix eval .#all-hosts --json | jq -r '.[]'))
-            nix build --option sandbox relaxed --builders "" .#checks.x86_64-linux."$selected_host"
-            prompt_to_continue
-            main_menu
-            ;;
-        "💻️ Run interactive test")
-            gum style "🖥️ Run interactive test"
-            selected_host=$(gum filter "Select a host:" $(nix eval .#all-hosts --json | jq -r '.[]'))
-            nix run --option sandbox relaxed --builders "" .#checks.x86_64-linux."$selected_host".driverInteractive -- --interactive
-            # start_all()
-            prompt_to_continue
-            main_menu
-            ;;
-        "📃 VSCodium IDE")
-            echo "Opening a codium (free version of VSCode) session.:"
+        "📃 VSCode IDE")
+            echo "Opening a VSCode session.:"
             echo ""
-            prompt_to_continue
+
+            if [ -f REQUIREMENTS.txt ]; then
+                if [ ! -d .venv ]; then
+                    python -m venv .venv
+                fi
+                . .venv/bin/activate
+                pip install --upgrade pip
+                pip install -r REQUIREMENTS.txt
+            fi
             ./flake/vscode.sh &
             main_menu
             ;;
