@@ -2,13 +2,10 @@
 
 set -e
 
-# Activate development configuration
-echo dev >environment.txt
-
 function dev-help {
     echo "USAGE:"
     echo
-    echo "nix develop
+    echo "nix develop"
 }
 
 function setup_gum {
@@ -123,7 +120,7 @@ function main_menu {
                 if [ ! -d .venv ]; then
                     python -m venv .venv
                 fi
-                . .venv/bin/activate
+                .venv/bin/activate
                 pip install --upgrade pip
                 pip install -r REQUIREMENTS.txt
             fi
