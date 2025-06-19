@@ -1000,8 +1000,9 @@ Parameters
 
        * 0 --- Farthest points: the initial centers are selected
          as the farthest points from each other.
-       * 1 --- K-means++: the initial centers are selected
-         using the K-means++ algorithm.      
+       * 1 --- K-means++: The first center is selected uniformly at random from the set of input features. 
+         Subsequent centers are chosen based on a weighted probability distribution that favors features farther from existing centers. 
+         This ensures that the initial centers are well-dispersed, reducing the likelihood of poor clustering and improving the algorithm's performance.    
    * - **Clusters**
      - ``OUTPUT``
      - [vector: same as input]
