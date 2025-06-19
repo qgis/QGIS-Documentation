@@ -141,11 +141,11 @@ Outputs
    * - **Offset lines**
      - ``OUTPUT``
      - [vector: line]
-     - Output line layer with offset features. Attributes will be copied to the corresponding output.
-       The original features are also copied.
+     - Output line layer with the original and offset features.
+       Attributes will be copied to the corresponding outputs.
        The following attributes related to the input parameters will be added:
        ``instance`` indexing the ``COUNT`` offset lines and ``offset``
-       designating the offset from the original line.
+       designating the offset distance from the original line.
 
 Python code
 ...........
