@@ -1482,7 +1482,9 @@ Outputs
    * - **Convex hull**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output (convex hull) vector layer
+     - The output (convex hull) vector layer.
+       Other than the input attributes, the output layer also contains the following fields:
+       ``area`` and ``perimeter`` of the generated polygon.
 
 Python code
 ...........
@@ -4104,6 +4106,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+       Other than the input attributes, the output layer also contains the following fields:
+       ``area`` and ``radius`` of the generated polygon.
+
 
 Python code
 ...........
@@ -4197,6 +4202,8 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+       Other than the input attributes, the output layer also contains the following fields:
+       ``ringId`` and ``distance`` of the generated buffer polygon.
 
 Python code
 ...........
@@ -4470,6 +4477,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+       Other than the input attributes, the output layer also contains the following fields:
+       ``width``, ``height``, ``angle``, ``area`` and ``perimeter`` of the generated polygon.
+
 
 Python code
 ...........
@@ -4730,6 +4740,9 @@ Outputs
      - [vector: point]
      - Point vector layer with features placed along lines or polygon
        boundaries of the input layer.
+       Other than the input attributes on every related point, the output layer
+       also contains the following fields:
+       ``distance`` and ``angle`` of the generated point.
 
 Python code
 ...........
@@ -4838,9 +4851,6 @@ of inaccessibility within a specified tolerance.
 A more precise tolerance (lower value) requires more iterations and
 will take longer to calculate.
 
-The distance from the calculated pole to the polygon boundary will be
-stored as a new attribute in the output layer.
-
 .. figure:: img/pole_inaccessibility.png
    :align: center
 
@@ -4892,7 +4902,9 @@ Outputs
    * - **Point**
      - ``OUTPUT``
      - [vector: point]
-     - The output point vector layer
+     - The output point vector layer.
+       It will contain a new attribute with the distance ``dist_pole`` from the
+       calculated pole to the polygon boundary.
 
 Python code
 ...........
@@ -4968,6 +4980,7 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer from lines
+
 
 Python code
 ...........
@@ -5650,7 +5663,7 @@ Python code
 Roundness
 ---------
 
-Calculates the roundness of each feature and stores it as a new field. The input vector layer must contain polygons.
+Calculates the roundness of each feature and stores it as a new field ``roundness``. The input vector layer must contain polygons.
 
 The roundness of a polygon is defined as 4π × polygon area / perimeter².
 The roundness value varies between 0 and 1. A perfect circle has a roundness of 1,
@@ -6773,9 +6786,10 @@ Outputs
    * - **Split**
      - ``OUTPUT``
      - [vector: line]
-     - The new line vector layer - the length of the feature geometries
-       is less than or equal to the length specified in
-       the LENGTH parameter.
+     - The new line vector layer.
+       The length of the feature geometries is less than or equal to the length
+       specified in the LENGTH parameter. An additional field containing the
+       ``order`` will be added.
 
 Python code
 ...........
