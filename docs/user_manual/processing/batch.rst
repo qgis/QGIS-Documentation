@@ -155,7 +155,7 @@ as a single process. Depending on the algorithm, the output can be:
      '/home/me/stuff/buffer_' || left(@INPUT, 30) || '_' || @DISTANCE || '.shp'
 
   You can also type the file path directly or use the file chooser dialog that
-  appears when clicking on the accompanying :guilabel:`...` button.
+  appears when clicking on the accompanying :guilabel:`Select File/Folder...` button.
   Once you select the file, a new dialog is shown to allow for auto-completion of
   other cells in the same column (same parameter).
 
