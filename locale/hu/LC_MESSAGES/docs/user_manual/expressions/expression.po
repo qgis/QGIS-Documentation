@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Báthory Péter <bathory86p@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,9 +30,9 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"A fordítás közösségi munka eredménye, amelyhez itt tudsz :ref:`csatlakozni "
-"<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
-"részét fordítottuk le."
+"A fordítás közösségi munka eredménye, amelyhez :ref:`itt tud csatlakozni "
+"<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
+"van lefordítva."
 
 #: ../../docs/user_manual/expressions/expression.rst:7
 msgid "Expressions"
@@ -135,6 +135,14 @@ msgstr "valamilyen :ref:`geoprocessing <label_processing>` elvégzése."
 #: ../../docs/user_manual/expressions/expression.rst:42
 msgid "The Expression builder dialog offers access to the:"
 msgstr "A Kifejezésszerkesztő párbeszédablakból elérhető:"
+
+#: ../../docs/user_manual/expressions/expression.rst:44
+msgid ""
+":guilabel:`Expression` tab which, thanks to a list of :ref:`predefined "
+"functions <functions_list>`, helps to write and check the expression to use;"
+msgstr ""
+"A :guilabel:`Kifejezés` fül, amely az :ref:`előre definiált függvényeknek "
+"<functions_list>` köszönhetően segít megírni és ellenőrizni a kifejezést;"
 
 #: ../../docs/user_manual/expressions/expression.rst:46
 msgid ""
@@ -538,20 +546,30 @@ msgstr ""
 "Az előző kifejezés arra is használható, hogy meghatározzuk, hogy mely elemek"
 " legyenek címkézve vagy megjelenítve a térképen."
 
+#: ../../docs/user_manual/expressions/expression.rst:253
+msgid "Select features that overlap a natural zone from the \"lands\" layer::"
+msgstr ""
+"Azon elemek kiválasztása, amelyek átfedésben vannak egy természeti zónával a"
+" „lands” rétegből:"
+
+#: ../../docs/user_manual/expressions/expression.rst:257
+msgid "Count for each feature the number of buildings they contain::"
+msgstr "Megszámolja az egyes elemekhez a bennük található épületek számát::"
+
 #: ../../docs/user_manual/expressions/expression.rst:261
 msgid ""
 "Create a different symbol (type) for the layer, using the geometry "
 "generator::"
 msgstr ""
-"Hozzon létre egy eltérő szimbólumot (típust) a réteghez a geometriagenerátor"
-" segítségével::"
+"Egy eltérő szimbólum (típus) létrehozása a réteghez a geometriagenerátor "
+"segítségével::"
 
 #: ../../docs/user_manual/expressions/expression.rst:265
 msgid ""
 "Given a point feature, generate a closed line (using ``make_line``) around "
 "its geometry::"
 msgstr ""
-"Adott egy pontelem, hozzon létre egy zárt vonalat (a ``make_line`` "
+"Egy adott pontelemhez létrehoz egy zárt vonalat (a ``make_line`` "
 "segítségével) a geometriája körül::"
 
 #: ../../docs/user_manual/expressions/expression.rst:278
@@ -559,7 +577,7 @@ msgid ""
 "In a print layout label, display the name of the \"airports\" features that "
 "are within the layout \"Map 1\" item::"
 msgstr ""
-"A nyomtatási elrendezés címkéjén jelenítse meg az \"airports\" elemeinek "
+"A nyomtatási elrendezés címkéjén megjeleníti az \"airports\" elemeinek "
 "neveit, amelyek az elrendezés \"Térkép 1\" elemén belül vannak::"
 
 #: ../../docs/user_manual/expressions/expression.rst:293
@@ -686,6 +704,42 @@ msgstr "Nyomja meg az |symbologyAdd| :sup:`Új fájl` gombot."
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/expressions/expression.rst:338
+msgid ""
+"Select where to store the new function. You can choose to save it either in "
+"a :guilabel:`Function file` or in :guilabel:`Project functions`."
+msgstr ""
+"Válassza ki, hol legyen eltárolva az új függvény. Választhat, hogy egy "
+":guilabel:`Függvényfájlba` vagy a :guilabel:`Projekt függvényei` közé menti "
+"el."
+
+#: ../../docs/user_manual/expressions/expression.rst:341
+msgid ""
+"If you select :guilabel:`Function file`, you need to enter a name for the "
+"Python :file:`.py` file, which is based on a QGIS template file and is "
+"stored in the :file:`/python/expressions` folder under the active :ref:`user"
+" profile <user_profiles>` directory."
+msgstr ""
+"Ha a :guilabel:`Függvényfájl` lehetőséget választja, akkor meg kell adnia a "
+"Python :file:`.py` fájl nevét, amely egy QGIS sablonfájlon alapul, és az "
+"aktív :ref:`felhasználói profil <user_profiles>` könyvtár alatti "
+":file:`/python/expressions` mappában található."
+
+#: ../../docs/user_manual/expressions/expression.rst:345
+msgid ""
+"If you select :guilabel:`Project functions`, the new function is stored in "
+"the project file."
+msgstr ""
+"Ha a :guilabel:`Projektfüggvények` lehetőséget választja, az új függvény a "
+"projektfájlban lesz eltárolva."
+
+#: ../../docs/user_manual/expressions/expression.rst:347
+msgid ""
+"A new item is added in the left panel of the :guilabel:`Function Editor` "
+"tab."
+msgstr ""
+"A :guilabel:`Függvényszerkesztő` fül bal oldali panelje új elemmel bővül."
+
 #: ../../docs/user_manual/expressions/expression.rst:349
 msgid ""
 "The right panel displays the content of the file: a python script template. "
@@ -724,6 +778,35 @@ msgstr ""
 "kattintson ismét a |start| :guilabel:`Függvények mentése és betöltése` "
 "gombra, hogy azok bekerüljenek a fájlba, és vele együtt a kifejezések fülre."
 
+#: ../../docs/user_manual/expressions/expression.rst:360
+msgid ""
+"Custom Python functions stored as Function files are stored under the user "
+"profile directory, meaning that at each QGIS startup, it will auto load all "
+"the functions defined with the current user profile. Be aware that for "
+"sharing Python functions stored in Function files you need to share the "
+":file:`.py` file in the :file:`/python/expressions` folder."
+msgstr ""
+"Az egyéni Python függvények a felhasználói profil könyvtárában tárolódnak, "
+"ami azt jelenti, hogy a QGIS minden egyes indításkor automatikusan betölti "
+"az aktuális felhasználói profilhoz megadott összes függvényt. Ne feledje, "
+"hogy a Függvényfájlokban tárolt Python függvények megosztásához a "
+":file:`.py` fájlt kell megosztania a :file:`/python/expressions` mappában."
+
+#: ../../docs/user_manual/expressions/expression.rst:365
+msgid ""
+"On the other hand, custom Python functions stored as Project functions can "
+"be easily shared by sharing the project file where they were saved. When "
+"opening a project with project functions, QGIS can load or ignore them "
+"depending on whether :ref:`embedded Python code is enabled "
+"<load_project_code>` in General settings."
+msgstr ""
+"Másrészt a projektfüggvényként tárolt egyéni Python-függvények könnyen "
+"megoszthatók a projektfájl megosztásával, ahová az el lett mentve. Egy "
+"projektfüggvényeket tartalmazó projekt megnyitásakor a QGIS be tudja tölteni"
+" vagy figyelmen kívül tudja hagyni azokat, attól függően, hogy az Általános "
+"beállításoknál engedélyezve van-e a :ref:`beépített Python kód "
+"<load_project_code>`."
+
 #: ../../docs/user_manual/expressions/expression.rst:370
 msgid "To delete a custom function:"
 msgstr "Egyéni függvény törléséhez:"
@@ -736,9 +819,31 @@ msgstr "Váltson a :guilabel:`Függvényszerkesztő` fülre"
 msgid "Select the function in the list"
 msgstr "Jelölje ki a függvényt a listában"
 
+#: ../../docs/user_manual/expressions/expression.rst:374
+msgid ""
+"Press the |symbologyRemove| :sup:`Remove selected function`. The function is"
+" removed from the list and, depending on the storage, the corresponding "
+"``.py`` file is deleted from the user profile folder, or the Python "
+"functions are removed from the project file."
+msgstr ""
+"Nyomja meg a |symbologyRemove| :sup:`Kiválasztott függvény eltávolítása` "
+"gombot. A függvényt eltávolítja a listából, és a tárolástól függően a "
+"megfelelő ``.py`` fájlt törli a felhasználói profil mappából, vagy a Python "
+"függvényeket eltávolítja a projektfájlból."
+
 #: ../../docs/user_manual/expressions/expression.rst:480
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/expressions/expression.rst:379
+msgid ""
+"When a project file with Project functions is closed, the corresponding "
+"Project functions are unloaded and are no longer available in the QGIS "
+"session."
+msgstr ""
+"Amikor egy projektfüggvényeket tartalmazó projektfájl bezárásra kerül, a "
+"benne lévő projektfüggvényeket a QGIS elfelejti, és a további munkamenetben "
+"már nem fognak rendelkezésre állni."
 
 #: ../../docs/user_manual/expressions/expression.rst:382
 msgid "**Example**"
