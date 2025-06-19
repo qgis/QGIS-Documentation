@@ -137,10 +137,16 @@ Output data parameter exposes the same capabilities as when executing the algori
 as a single process. Depending on the algorithm, the output can be:
 
 * skipped, if the cell is left empty
-* saved as a temporary layer: fill the cell with ``TEMPORARY_OUTPUT`` and remember
+* saved as a temporary layer: fill the cell with your chosen output name,
+  select |checkbox| :guilabel:`Create Temporary Layer` from the :guilabel:`...` drop-down, and remember
   to tick the |checkbox| :guilabel:`Load layers on completion` checkbox.
-* saved as a plain file (:file:`.SHP`, :file:`.GPKG`, :file:`.XML`, :file:`.PDF`, :file:`.JPG`,...)
-  whose path could be set with the :guilabel:`Autofill` options exposed beforehand.
+  For temporary layers, the value you provide will be used as the layer name.
+  You can use the :ref:`Autofill <batch_parameters>` options to construct that name.
+* saved as a plain file (:file:`.SHP`, :file:`.GPKG`, :file:`.XML`, :file:`.PDF`, :file:`.JPG`,...):
+  choose :guilabel:`Select File/Folder...` from the :guilabel:`...` drop-down.
+  For plain files, you can set the path using the
+  :ref:`Autofill <batch_parameters>` options exposed beforehand.
+
   E.g. use :guilabel:`Calculate by Expression...` to set output file names
   to complex expressions like:
 
