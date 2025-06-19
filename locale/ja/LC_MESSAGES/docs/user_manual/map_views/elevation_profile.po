@@ -9,6 +9,7 @@
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
 # Transifex Bot <>, 2025
 # Harrissou Sant-anna, 2025
+# KATO YUDAI, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: KATO YUDAI, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -347,6 +348,14 @@ msgstr "|fileSaveAs| :sup:`結果を出力`"
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:100
+msgid ""
+"Exports plots as 3D features, 2D Profile and Distance/Elevation Table. (The "
+"results can be saved as DXF files, CSV files or any of the standard writable"
+" vector spatial formats). More details at :ref:`export_elevation_profile`."
+msgstr ""
+"プロットを3Dフィーチャ、2Dプロファイル、距離/標高テーブルとして出力します。(結果はDXFファイル、CSVファイル、または標準の書き込み可能なベクタ空間フォーマットのいずれかで保存できます)。詳細は:ref:`標高断面図から出力する`をご覧ください。"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:104
 msgid "|options| :sup:`Options` :menuselection:`-->`"
 msgstr "|options| :sup:`オプション` :menuselection:`-->`"
@@ -390,6 +399,22 @@ msgstr "標高断面図内の距離をマップキャンバスの距離単位以
 #: ../../docs/user_manual/map_views/elevation_profile.rst:114
 msgid ":menuselection:`--> Tolerance`"
 msgstr ":menuselection:`--> 許容範囲`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:116
+msgid ""
+"Sets how far from the actual profile line a feature (vector point, line or "
+"polygon, point cloud) can reside to be included in the results. Uses the map"
+" units and is ignored by other layer or geometry types."
+msgstr ""
+"地物（ベクタ点、線、ポリゴン、点群）が、実際のプロファイルラインからどれだけ離れていても結果に含まれるかを設定します。マップ単位を使用し、他のレイヤーやジオメトリタイプでは無視されます。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:119
+msgid ":menuselection:`--> Rename Profile...`"
+msgstr ":menuselection:`--> プロファイル名を変更...`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:121
+msgid "Allows to rename the profile view."
+msgstr "プロファイルビューの名前を変更できます。"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:122
 msgid "|dock| :sup:`Dock Elevation Profile View`"
@@ -580,6 +605,31 @@ msgid ""
 msgstr ""
 "標高プロパティが設定されると、標高断面図ビューは設定したプロファイル曲線と交差するアクティブなレイヤの地形または地物のレンダリングを開始します。"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:199
+msgid ""
+"Under |options| :sup:`Options` drop-down menu, you can set the "
+":guilabel:`Tolerance` value. This value is used to create a flat buffer "
+"around the elevation profile line, visible in the main map canvas. Any "
+"visible feature (point, line, polygon, etc.) overlapping that buffer will be"
+" captured in the plot canvas."
+msgstr ""
+"|options| :sup:`オプション`ドロップダウンメニューで、:guilabel:許容範囲 "
+"の値を設定できます。この値は、メインのマップキャンバスに表示される標高断面図ラインの周囲に平坦なバッファを作成するために使用されます。このバッファと重なる可視の地物（点、線、ポリゴンなど）は、プロットキャンバスに取り込まれます。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:203
+msgid "**Limitations with polygon extrusion**"
+msgstr "**ポリゴン押し出しの制限**"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:205
+msgid ""
+"Geometry extrusion can be set in the |elevationscale| :guilabel:`Elevation` "
+"properties of a layer, and rendered in the profile view. When tolerance is "
+"enabled, it is however not trivial to render extruded polygons, thus, for "
+"now, polygon extrusion is ignored."
+msgstr ""
+"レイヤーの|elevationscale| "
+":guilabel:`標高`プロパティでジオメトリの押し出しを設定し、プロファイルビューでレンダリングできます。ただし、許容範囲を有効にした場合、押し出されたポリゴンをレンダリングするのは簡単ではないため、現在のところポリゴンの押し出しは無視されます。"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:333
 msgid "elevationscale"
 msgstr "elevationscale"
@@ -732,3 +782,110 @@ msgstr ""
 "更なる詳細については、Nyall Dawson氏によるプレゼンテーション  `QGIS elevation profile/cross section "
 "tool -- a deep dive! <https://www.youtube.com/watch?v=AknJjNPystU>`_ "
 "をご覧ください。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:271
+msgid "Exporting from the elevation profile"
+msgstr "標高断面図からの出力"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:273
+msgid ""
+"The top toolbar of the :guilabel:`Elevation profile` dialog provides a "
+"variety of tools to export an elevation profile, allowing you to reuse the "
+"plots in another software:"
+msgstr ""
+":guilabel:`標高断面図` "
+"ダイアログのトップツールバーには、標高断面図を出力するためのさまざまなツールがあり、他のソフトウェアでプロットを再利用できます。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:276
+msgid ""
+"|saveAsPDF| :sup:`Export As PDF`: Exports plots to PDF (as high quality "
+"vector objects). Following options are requested for generating the output "
+"file:"
+msgstr ""
+"|saveAsPDF| :sup:`PDF形式で出力`: "
+"プロットをPDF（高品質のベクタオブジェクトとして）に出力します。出力ファイルの生成には、以下のオプションが求められます。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:279
+msgid ""
+"The :guilabel:`Page size`, selecting a page from a predefined list or "
+"setting custom dimensions, and the page orientation"
+msgstr ":guilabel:`ページサイズ`では、定義済みのリストからページを選択するか、カスタムの寸法とページの向きを設定できます。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:281
+msgid ""
+"The :guilabel:`Chart ranges` to control the extent of the chart to export:"
+msgstr ":guilabel:`チャート範囲`は、出力するチャートの範囲を制御するためのものです。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:283
+msgid ""
+"on the X axis, the :guilabel:`Minimum distance` and :guilabel:`Maximum "
+"distance` from the profile curve starting point"
+msgstr "X軸では、プロファイル曲線の開始点からの:guilabel:`最小距離` と:guilabel:`最大距離` を設定します。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:285
+msgid ""
+"On the Y axis, the :guilabel:`Minimum elevation` and :guilabel:`Maximum "
+"elevation`"
+msgstr "Y軸では、:guilabel:`最小標高` と:guilabel:`最大標高`を設定します。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:286
+msgid ""
+"The :guilabel:`Distance axis settings`: helps you configure the horizontal "
+"graduation of the grid over which the elevation profile is rendered. You can"
+" customize the :guilabel:`Label interval`, the :guilabel:`Major grid line "
+"interval` and the :guilabel:`Minor grid line interval`."
+msgstr ""
+":guilabel:`距離軸の設定`は、標高断面図が描画されるグリッドの水平方向の目盛りを設定するのに役立ちます。:guilabel:`ラベル間隔`、:guilabel:`主グリッド線間隔`、:guilabel:`副グリッド線間隔`をカスタマイズできます。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:290
+msgid ""
+"The :guilabel:`Elevation axis settings`, same as above, for vertical "
+"graduation"
+msgstr ":guilabel:`標高軸の設定`は、上記と同様に、垂直方向の目盛りを設定します。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:294
+msgid ""
+"|saveMapAsImage| :sup:`Export As Image`: Exports plots to an image file "
+"format. Specific :guilabel:`Export options` such as the :guilabel:`Image "
+"width` and :guilabel:`Image height` are requested, along with the "
+":guilabel:`Chart ranges`, :guilabel:`Distance axis settings` and "
+":guilabel:`Elevation axis settings` previously mentioned."
+msgstr ""
+"|saveMapAsImage| :sup:`画像として出力`: "
+"プロットを画像ファイル形式で出力します。以前に言及された:guilabel:`チャート範囲`、:guilabel:`距離軸の設定`、:guilabel:`標高軸の設定`に加え、:guilabel:`画像幅`や:guilabel:`画像高さ`などの具体的な:guilabel:`出力オプション`が求められます。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:299
+msgid ""
+"|fileSaveAs| :sup:`Export results`: Exports the profile results as a set of "
+"features of a vector layer (:file:`.DXF`, :file:`.CSV`, :file:`.SHP`, "
+":file:`.GPKG`, ...). Depending on the output format, multiple layers may be "
+"returned when the geometry types of exported features differ."
+msgstr ""
+"|fileSaveAs| :sup:`結果を出力`: "
+"プロファイルの解析結果を、ベクタレイヤーの地物セットとして出力します（:file:`.DXF`、:file:`.CSV`、:file:`.SHP`、:file:`.GPKG`"
+" など）。出力フォーマットによっては、出力される地物のジオメトリタイプが異なる場合に複数のレイヤーが返されることがあります。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:304
+msgid ""
+":menuselection:`Export 3D features`: Exports profile lines as 3D features, "
+"with elevation values taken from the elevation slices and stored in exported"
+" geometry Z values."
+msgstr ""
+":menuselection:`3D地物を出力`: "
+"標高断面図のラインを3D地物として出力します。標高値は標高スライスから取得され、出力されたジオメトリのZ値に格納されます。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:306
+msgid ""
+":menuselection:`Export 2D profile`: Exports profiles as 2D profile lines, "
+"with elevation stored in exported geometry Y dimension and distance in X "
+"dimension (as shown in the elevation profile widget)."
+msgstr ""
+":menuselection:`2Dプロファイルを出力`: "
+"プロファイルを2Dプロファイルラインとして出力します。標高は出力されたジオメトリのY次元に、距離はX次元に（標高断面図ウィジェットに表示されている通りに）格納されます。"
+" "
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:309
+msgid ""
+":menuselection:`Export distance/elevation table`: Exports profiles as a "
+"table of sampled distance vs elevation values."
+msgstr ":menuselection:`距離/標高テーブルを出力`: プロファイルを、サンプリングされた距離と標高値のテーブルとして出力します。"
