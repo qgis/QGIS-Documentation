@@ -676,20 +676,13 @@ The :guilabel:`Debugging/Development Tools` panel (:kbd:`F12`) provides
 a unified place for handling and debugging actions within QGIS.
 Available tools are organized under following tabs:
 
-* |networkAndProxy| :guilabel:`Network Logger`
-* |dbManager| :guilabel:`Query Logger`
-* |stopwatch| :guilabel:`Profiler` - under this tab you can choose one out
-  of these categories:
+* |networkAndProxy| :guilabel:`Network Logger`: records and displays network requests
+  and interactions
+* |dbManager| :guilabel:`Query Logger`: logs SQL commands issued by data providers
+  and duration of execution
+* |stopwatch| :guilabel:`Profiler`: provides load times for every actions
+  in order to detect causes of slow down
   
-    * :guilabel:`Startup` helps you diagnose (and fix) occasional long startup 
-      times of QGIS.
-    * :guilabel:`Project Load` allows you to get a breakdown of the various 
-      stages of project load, in order to identify the causes of slow project 
-      load times.
-    * :guilabel:`Map Render` tool allows you to identify pain points in your
-      map rendering and track down exactly which layers are causing long map 
-      redraws.
-
 .. note:: Plugin authors can extend the panel with custom tabs
  for debugging and developping their own plugins.
  This is done using :meth:`registerDevToolWidgetFactory
@@ -717,7 +710,6 @@ From its top toolbar, you can:
   every request has to be performed.
 * |search| :guilabel:`Filter requests` based on URL string subsets
   or request status
-
 
 By right clicking on a request you can:
 
@@ -772,11 +764,13 @@ the context, these operations can be settings reading, menu, map canvas or 3D
 views creation, resolving map layers reference, bookmark or layout loading, ...
 This helps identify causes of slow load times.
 
-Default supported actions can be selected from the :guilabel:`Categories`
-drop-down menu:
+Default supported actions can be selected from the :guilabel:`Category` drop-down menu:
 
-* QGIS :guilabel:`Startup`
-* :guilabel:`Project Load`
+* :guilabel:`Startup` helps you diagnose (and fix) occasional long startup times of QGIS.
+* :guilabel:`Project Load` allows you to get a breakdown of the various stages
+  of project load, in order to identify the causes of slow project load times.
+* :guilabel:`Map Render` tool allows you to identify pain points in your
+  map rendering and track down exactly which layers are causing long map redraws.
 
 .. figure:: img/profiler.png
    :align: center
