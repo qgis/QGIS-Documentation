@@ -3849,15 +3849,16 @@ Python code
 
 Lines to polygons
 -----------------
-Generates a polygon layer from line layer, considering LineString geometry with three
-or more vertices as polygon rings. Input LineString geometry doesn't need to close a loop,
+Generates a polygon layer using as polygon rings the individual line features from an input line layer.
+Input LineString geometry doesn't need to close a loop,
 algorithm will automatically connect last to first point when forming a polygon.
 Result is always promoted to MultiPolygon.
-LineString geometry that have less than three vertices will produce
+LineString geometry that has less than three vertices will produce
 new polygon features with **EMPTY** MultiPolygon geometry, attributes are kept.
 
 The attribute table of the output layer is the same as the one of
 the input layer.
+Attributes of the input line feature are ALWAYS kept in the output polygon geometry.
 
 Examples
 ........
@@ -3870,12 +3871,13 @@ Features with 3 or more vertices are expected on input: **start point - vertex/v
 .. list-table::
    :header-rows: 1
    :widths: 30 30 40
+   :class: longtable
 
    * - INPUT
      - OUTPUT
      - NOTE
 
-   * - **Feature a**: Single line LineString
+   * - **Feature a**: Single segment LineString
 
        .. figure:: img/lines_to_polygons_from_linestr_input_1.png
           :width: 25 em
@@ -3915,13 +3917,13 @@ Features with 3 or more vertices are expected on input: **start point - vertex/v
        |
        | **Output has a valid geometry.**
 
-   * - **Feature c**: LineString with four vertices
+   * - **Feature c**: LineString that closes a loop
 
        .. figure:: img/lines_to_polygons_from_linestr_input_3.png
           :width: 25 em
           :align: center
 
-          Closed loop LineString with four vertices
+          Closed loop LineString
 
      - **Feature c**: MultiPolygon
 
@@ -3929,7 +3931,7 @@ Features with 3 or more vertices are expected on input: **start point - vertex/v
           :width: 25 em
           :align: center
 
-          Output is a quadrilateral shaped MultiPolygon
+          Output is a shaped MultiPolygon
 
      - | Algorithm creates one new feature as MultiPolygon with one part, with all attributes from source feature.
        |
@@ -3962,7 +3964,7 @@ Features with 3 or more vertices are expected on input: **start point - vertex/v
           This can be fixed by using :ref:`qgisfixgeometries` algorithm with two possible scenarios:
 
           1. *Fixing by structure repair method* - two parts will dissolve into MultiPolygon geometry with one part
-          2. *Fixing by linework repair method* - equal to symmetrical difference of two parts which results MultiPolygon geometry with one part (doughnut shape in this case)
+          2. *Fixing by linework repair method* - equal to symmetrical difference of two parts which results in MultiPolygon geometry with one part (doughnut shape in this case)
 
    * - | **Feature e**: LineString
        | **Feature f**: LineString
