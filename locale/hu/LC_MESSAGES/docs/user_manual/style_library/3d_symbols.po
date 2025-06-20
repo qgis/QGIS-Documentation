@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Báthory Péter <bathory86p@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,9 +30,9 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"A fordítás közösségi munka eredménye, amelyhez itt tudsz :ref:`csatlakozni "
-"<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
-"részét fordítottuk le."
+"A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
+"<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
+"van lefordítva."
 
 #: ../../docs/user_manual/style_library/3d_symbols.rst:5
 msgid "Creating 3D Symbols"
@@ -126,6 +126,20 @@ msgid ""
 msgstr ""
 ":guilabel:`Tórusz` egy :guilabel:`Sugár` és egy :guilabel:`Kisebb sugár` "
 "paraméterrel"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:46
+msgid ""
+":guilabel:`3D Model`, using a 3D model file: supported formats include "
+"wavefront :file:`.obj`, :file:`.glTF` and :file:`.fbx`. Models can be a file"
+" on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. Community-created models are shared on the `QGIS "
+"Hub <https://hub.qgis.org/wavefronts>`_."
+msgstr ""
+":guilabel:`3D Modell` egy 3D modellfájllal: a támogatott formátumok a "
+"következők: wavefront :file:`.obj`, :file:`.glTF` és :file:`.fbx`. A modell "
+"lehet egy fájl a lemezen, egy távoli URL vagy :ref:`beágyazva a projektbe "
+"<embedded_file_selector>`. A közösség által készített modelleket a `QGIS "
+"Hubon <https://hub.qgis.org/wavefronts>`_ lehet megosztani."
 
 #: ../../docs/user_manual/style_library/3d_symbols.rst:51
 msgid ""
@@ -386,6 +400,27 @@ msgstr ""
 "A QGIS-ben különféle árnyalási technikákat alkalmazunk, ezek elérhetősége a "
 "szimbólum geometriatípusától függ:"
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:163
+msgid ""
+":guilabel:`Realistic (Phong)`: describes the way a surface reflects light as"
+" a combination of the :guilabel:`Diffuse` reflection of rough surfaces with "
+"the :guilabel:`Specular` reflection of shiny surfaces "
+"(:guilabel:`Shininess`). It also includes an :guilabel:`Ambient` option to "
+"account for the small amount of light that is scattered about the entire "
+"scene. Use the :guilabel:`Opacity` slider to render semi-transparent objects"
+" in 3D. Read more at `Phong reflection description "
+"<https://en.wikipedia.org/wiki/Phong_reflection_model>`_."
+msgstr ""
+":guilabel:`Realisztikus (Phong)`: leírja, hogy egy felület hogyan tükrözi "
+"vissza a fényt a durva felületek :guilabel:`Szórt` visszaverődése és a "
+"fényes felületek :guilabel:`Tükröződő` visszaverődése ( "
+":guilabel:`Fényesség`) kombinációjaként. Tartalmaz egy "
+":guilabel:`Környezeti` opciót is, amely figyelembe veszi azt a kis "
+"mennyiségű fényt, amely a teljes jeleneten. Az :guilabel:`Átlátszatlanság` "
+"csúszkával félig átlátszó objektumokat jeleníthet meg 3D-ben. Olvasson "
+"bővebben a `Phong visszaverődési modellről "
+"<https://en.wikipedia.org/wiki/Phong_reflection_model>`_."
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:170
 msgid ""
 ":guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic "
@@ -402,6 +437,40 @@ msgstr ""
 "méretezése` és :guilabel:`Textúra forgatása` kötelezők. Az "
 ":guilabel:`Átlátszatlanság` csúszkával félig átlátszó objektumokat "
 "jeleníthet meg 3D-ben."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:176
+msgid ""
+":guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-"
+"tones so that edge lines and highlights remain visually prominent. Along "
+"with the :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` "
+"options, you need to provide a :guilabel:`Warm` color (for surface facing "
+"toward the light) and a :guilabel:`Cool` color (for the ones facing away). "
+"Also, the relative contributions to the cool and warm colors by the diffuse "
+"color are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties "
+"respectively. See also `Gooch shading "
+"<https://en.wikipedia.org/wiki/Gooch_shading>`_."
+msgstr ""
+":guilabel:`CAD (Gooch)`: ez a technika lehetővé teszi az árnyalást csak a "
+"középtónusoknál, így az élek vonalai és a csúcsfények vizuálisan "
+"hangsúlyosak maradnak. A :guilabel:`Szórt`, :guilabel:`Tükröződő`, "
+":guilabel:`Fényesség` beállításokon kívül meg kell adnia :guilabel:`Meleg` "
+"színt (a fény felé néző felülethez) és :guilabel:`Hideg` színt (fénnyel "
+"szembeniekhez). A szórt szín relatív hozzájárulását a hideg és meleg "
+"színekhez az :guilabel:`Alfa` és :guilabel:`Béta` tulajdonságok "
+"szabályozzák. Lásd még a `Gooch-árnyalás leírását "
+"https://en.wikipedia.org/wiki/Gooch_shading`_."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:184
+msgid ""
+":guilabel:`Metal Roughness`: a physically based rendering material that "
+"provides an accurate representation of how light interacts with surfaces. "
+"Options are available for setting the material :guilabel:`Base color`, "
+":guilabel:`Metalness` and :guilabel:`Roughness`."
+msgstr ""
+":guilabel:`Fém érdesség`: egy fizikai alapú renderelő anyag, amely pontosan "
+"ábrázolja a fény kölcsönhatását a felületekkel. Az anyag "
+":guilabel:`Alapszín`, :guilabel:`Fémesség` és :guilabel:`Érdesség` "
+"tulajdonságainak beállítására van lehetőség."
 
 #: ../../docs/user_manual/style_library/3d_symbols.rst:188
 msgid ":guilabel:`Embedded Textures` with 3D models shape"
