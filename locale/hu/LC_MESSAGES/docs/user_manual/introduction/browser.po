@@ -5,10 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Báthory Péter <bathory86p@gmail.com>, 2025
 # misibacsi, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-12 07:02+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,9 +32,9 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"A fordítás közösségi munka eredménye, amelyhez itt tudsz :ref:`csatlakozni "
-"<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
-"részét fordítottuk le."
+"A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
+"<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
+"van lefordítva."
 
 #: ../../docs/user_manual/introduction/browser.rst:8
 #: ../../docs/user_manual/introduction/browser.rst:38
@@ -532,6 +532,10 @@ msgstr "Helyi menü"
 msgid "Type of database"
 msgstr "Adatbázis típusa"
 
+#: ../../docs/user_manual/introduction/browser.rst:218
+msgid "|geoPackage| GeoPackage ([1]_)"
+msgstr "|geoPackage| GeoPackage ([1]_)"
+
 #: ../../docs/user_manual/introduction/browser.rst:456
 msgid "geoPackage"
 msgstr "geoPackage"
@@ -646,6 +650,10 @@ msgstr "|checkbox|"
 msgid ":guilabel:`Create Database…`"
 msgstr ":guilabel:`Adatbázis létrehozása…`"
 
+#: ../../docs/user_manual/introduction/browser.rst:227
+msgid ":guilabel:`Create Database and Layer…`"
+msgstr ":guilabel:`Új adatbázis és réteg…`"
+
 #: ../../docs/user_manual/introduction/browser.rst:229
 #: ../../docs/user_manual/introduction/browser.rst:346
 msgid ":guilabel:`Save Connections…` details to a file"
@@ -667,6 +675,27 @@ msgstr "Egy kapcsolat :guilabel:`Frissítése`"
 #: ../../docs/user_manual/introduction/browser.rst:236
 msgid ":guilabel:`Edit Connection…` settings"
 msgstr ":guilabel:`Kapcsolat szerkesztése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:238
+msgid ":guilabel:`Duplicate Connection`"
+msgstr ":guilabel:`Kapcsolat duplikálása`"
+
+#: ../../docs/user_manual/introduction/browser.rst:240
+msgid ":guilabel:`Remove Connection…`"
+msgstr ":guilabel:`Kapcsolat eltávolítása…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:242
+msgid ":menuselection:`New Field Domain --> New Range Domain`"
+msgstr ":menuselection:`Új mezőtartomány --> Új határolt tartomány`"
+
+#: ../../docs/user_manual/introduction/browser.rst:245
+msgid ":menuselection:`New Field Domain --> New Coded Values Domain`"
+msgstr ""
+":menuselection:`Új mezőtartomány --> Új tartomány beégetett értékekkel`"
+
+#: ../../docs/user_manual/introduction/browser.rst:248
+msgid ":menuselection:`New Field Domain --> New Glob Domain`"
+msgstr ":menuselection:`Új mezőtartomány --> Új glob-alapú tartomány`"
 
 #: ../../docs/user_manual/introduction/browser.rst:251
 msgid ":guilabel:`Delete <database_name>`"
@@ -753,6 +782,10 @@ msgstr ":guilabel:`Réteg tulajdonságai…` párbeszédablak megnyitása"
 msgid "Open :guilabel:`File Properties…` dialog"
 msgstr ":guilabel:`Fájl tulajdonságai…` párbeszédablak megnyitása"
 
+#: ../../docs/user_manual/introduction/browser.rst:302
+msgid ":guilabel:`Open with Data Source Manager`"
+msgstr ":guilabel:`Megnyitás az adatforrás-kezelőben`"
+
 #: ../../docs/user_manual/introduction/browser.rst:304
 msgid "Fields"
 msgstr "Mezők"
@@ -765,9 +798,52 @@ msgstr ":guilabel:`Új mező hozzáadása…`"
 msgid "Field"
 msgstr "Mező"
 
+#: ../../docs/user_manual/introduction/browser.rst:306
+msgid ":guilabel:`Set Field Domain`"
+msgstr ":guilabel:`Mezőtartomány beállítása`"
+
+#: ../../docs/user_manual/introduction/browser.rst:308
+msgid ":guilabel:`Rename Field`"
+msgstr ":guilabel:`Mező átnevezése`"
+
+#: ../../docs/user_manual/introduction/browser.rst:310
+msgid ":guilabel:`Set Alias…`"
+msgstr ":guilabel:`Álnév beállítása…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:312
+msgid ":guilabel:`Set Comment…`"
+msgstr ":guilabel:`Megjegyzés beállítása…`"
+
 #: ../../docs/user_manual/introduction/browser.rst:314
 msgid ":guilabel:`Delete Field…`"
 msgstr ":guilabel:`Mező törlése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:318
+msgid ""
+"The different entries may also be available for some GDAL supported `vector "
+"file formats <https://gdal.org/en/latest/drivers/vector/index.html>`_ such "
+"as ESRI File Geodatabase, FlatGeobuf, GeoParquet, NetCDF, ... when "
+"compatible."
+msgstr ""
+"A bizonyos bejegyzések a GDAL által támogatott más `vektoros "
+"fájlformátumokhoz <https://gdal.org/en/latest/drivers/vector/index.html>`_ "
+"is rendelkezésre állhatnak, mint például ESRI File Geodatabase, FlatGeobuf, "
+"GeoParquet, NetCDF, …, ha kompatibilisek."
+
+#: ../../docs/user_manual/introduction/browser.rst:324
+msgid ""
+"When loading vector layers into QGIS, fields with |sourceFields| "
+":guilabel:`Field Domains` (such as those defined in a GeoPackage or ESRI "
+"File Geodatabase) are automatically detected. These domains are database-"
+"level constraints, meaning they are enforced by the database itself and "
+"apply across different applications, not just QGIS."
+msgstr ""
+"Amikor vektoros rétegeket tölt be a QGIS-be, a |sourceFields| "
+":guilabel:`Mezőtartományokat` tartalmazó mezők (például GeoPackage-ben vagy "
+"ESRI File Geodatabase-ben) automatikusan felismerésre kerülnek. Ezek a "
+"tartományok adatbázis-szintű korlátozások, ami azt jelenti, hogy maga az "
+"adatbázis kényszeríti ki őket, és nem csak a QGIS-ben, hanem a minden más "
+"alkalmazásban is érvényesek."
 
 #: ../../docs/user_manual/introduction/browser.rst:472
 msgid "sourceFields"
@@ -829,13 +905,29 @@ msgstr "|afs| ArcGIS REST Szerver"
 msgid "afs"
 msgstr "afs"
 
+#: ../../docs/user_manual/introduction/browser.rst:335
+msgid "|tiledSceneLayer| Scene"
+msgstr "|tiledSceneLayer| Jelenet"
+
 #: ../../docs/user_manual/introduction/browser.rst:476
 msgid "tiledSceneLayer"
 msgstr "tiledSceneLayer"
 
+#: ../../docs/user_manual/introduction/browser.rst:335
+msgid "|cloud| Cloud"
+msgstr "|cloud| Felhő"
+
 #: ../../docs/user_manual/introduction/browser.rst:450
 msgid "cloud"
 msgstr "cloud"
+
+#: ../../docs/user_manual/introduction/browser.rst:335
+msgid "|sensor| SensorThings"
+msgstr "|sensor| SensorThings"
+
+#: ../../docs/user_manual/introduction/browser.rst:470
+msgid "sensor"
+msgstr "sensor"
 
 #: ../../docs/user_manual/introduction/browser.rst:339
 msgid "Create a :guilabel:`New Connection…`"
@@ -861,6 +953,10 @@ msgstr "Kapcsolat :guilabel:`Frissítése`"
 #: ../../docs/user_manual/introduction/browser.rst:353
 msgid ":guilabel:`Edit…` connection settings"
 msgstr "Kapcsolat beállításainak :guilabel:`Szerkesztése…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:355
+msgid ":guilabel:`Duplicate` connection"
+msgstr "Kapcsolat :guilabel:`duplikálása`"
 
 #: ../../docs/user_manual/introduction/browser.rst:357
 msgid ":guilabel:`Delete` connection"
@@ -889,7 +985,7 @@ msgstr "Erőforrások"
 
 #: ../../docs/user_manual/introduction/browser.rst:374
 msgid "Project files. The context menu for QGIS project files allows you to:"
-msgstr "Projektfájlok. A QGIS projektfájlokat a környezeti menüjükből:"
+msgstr "Projektfájlok. A QGIS-projektfájlokat a környezeti menüjükből:"
 
 #: ../../docs/user_manual/introduction/browser.rst:377
 msgid "open it (:guilabel:`Open Project`)"
