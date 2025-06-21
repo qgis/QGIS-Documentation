@@ -1533,12 +1533,7 @@ Processing settings
 
 The |processingAlgorithm| :guilabel:`Processing` tab provides you with general settings
 of tools and data providers that are used in the QGIS Processing framework.
-More information at :ref:`label_processing`.
-
-.. comment for writers:
- Actually, there seems to not be a real section describing the Processing options
- dialog. So the link above should be redirected if ever such a section is
- created, preferably in Processing chapter.
+More information at :ref:`processing.options`.
 
 .. _figure_processing_settings:
 
