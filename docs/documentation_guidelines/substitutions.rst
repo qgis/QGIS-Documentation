@@ -58,7 +58,7 @@ Platform Icons
 ==========  ===============  ==========  ===============
 Icon        Substitution     Icon        Substitution
 ==========  ===============  ==========  ===============
-|logo|      ``|logo|``
+|logo|      ``|logo|``       |qt|        ``|qt|``
 |kde|       ``|kde|``        |nix|       ``|nix|``
 |osx|       ``|osx|``        |win|       ``|win|``
 ==========  ===============  ==========  ===============
@@ -1379,6 +1379,8 @@ Icon                            Substitution                        Icon        
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
    :width: 1.5em
 .. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
+   :width: 1.5em
+.. |qt| image:: /static/common/mIconQt.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
