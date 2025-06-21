@@ -362,6 +362,8 @@ To create a new function:
 #. Uncomment the code block and start editing it according to your needs.
    You can rely on code autocompletion, code formatting and typing helpers,
    as defined in :ref:`console_options`.
+   Online API documentation for Qt_ and :pyqgis:`PyQGIS <>` objects is also accessible
+   pressing the :kbd:`F1` key.
 
    You will find in the :guilabel:`Help` widget general information
    for setting the @qgsfunction decorator.
@@ -449,6 +451,7 @@ The previous example function can then be used in expressions:
 Further information about creating Python code can be found in the
 :ref:`PyQGIS-Developer-Cookbook`.
 
+.. _Qt: https://doc.qt.io/qt-6.8/
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
