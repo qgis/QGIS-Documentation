@@ -1198,6 +1198,10 @@ msgstr ""
 " egy QGIS jelölőszimbólummal. Ez lehetővé teszi például, hogy egy „vonalzó” "
 "stílusú vonal esetében a megjelölt ponton kereszthúzás jelenjen meg."
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:497
+msgid "Drawing linear labels along line feature"
+msgstr "Lineáris címkék rajzolása a vonalelem mentén"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:502
 msgid ""
 "**Lineburst**: renders a gradient along the width of a line. You can choose "
@@ -1614,6 +1618,29 @@ msgstr ""
 " határának közelében megjelenített jelölőket a határnál le kell-e vágni vagy"
 " sem"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:682
+msgid ""
+"**Raster image fill**: fills the polygon with tiles from a raster image "
+"(:file:`PNG` :file:`JPG`, :file:`BMP` ...). The image can be a file on the "
+"disk, a remote URL or an embedded file encoded as a string (:ref:`more "
+"details <embedded_file_selector>`). Options include (data defined) opacity, "
+"size, coordinate mode (object or viewport), rotation and offset. Under the "
+"option Size you can independently adjust the width and height of the fill "
+"pattern, enabling stretched raster fills in either the horizontal or "
+"vertical directions. The image width and height can be set using any of the "
+":ref:`common units <unit_selector>` or as a percentage of the original size."
+msgstr ""
+"**Kitöltés raszteres képpel**: a felületet egy raszteres kép csempéivel "
+"tölti ki (:file:`PNG` :file:`JPG`, :file:`BMP` ...). A kép lehet egy fájl a "
+"lemezen, egy távoli URL vagy egy beágyazott, karakterlánccá kódolt fájl "
+"(:ref:`további részletek <embedded_file_selector>`). Az opciók közé tartozik"
+" az (adatvezérelt) átlátszatlanság, képméret, koordinátamód (objektum vagy "
+"nézet), elforgatás és eltolás. A Méret beállítás alatt egymástól függetlenül"
+" beállíthatja a kitöltési minta szélességét és magasságát, lehetővé téve a "
+"vízszintes vagy függőleges irányban megnyújtott raszteres kitöltést. A "
+"képméret beállítható a szokásos :ref:`mértékegységekben <unit_selector>` "
+"vagy az eredeti kép méretének arányában."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:691
 msgid ""
 "**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>` of a "
@@ -1708,6 +1735,22 @@ msgstr ""
 msgid "Parametrizable SVG"
 msgstr "Paraméterezhető SVG"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:729
+msgid ""
+"You have the possibility to change the colors of a :guilabel:`SVG marker`. "
+"You have to add the placeholders ``param(fill)`` for fill color, "
+"``param(fill-opacity)`` for fill opacity, ``param(outline)`` and "
+"``param(outline-opacity)`` for stroke color and opacity respectively, and "
+"``param(outline-width)`` for stroke width. These placeholders can optionally"
+" be followed by a default value, e.g.:"
+msgstr ""
+"Lehetősége van megváltoztatni az :guilabel:`SVG szimbólumok` színét. Az "
+"egyes tulajdonságok paraméterezhetőségéhez a következő helyettesítő kódokat "
+"használhatja: kitöltési szín ``param(fill)``, kitöltés átlátszatlansága "
+"``param(fill-opacity)``, körvonalszín és -átlátszatlanság ``param(outline)``"
+" és ``param(outline-opacity)``, körvonalszélesség ``param(outline-width)``. "
+"Ezeket a kódokat opcionálisan követheti egy alapértelmezett érték, például:"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:742
 msgid ""
 "More generally, SVG can be freely parametrized using ``param(param_name)``. "
@@ -1729,9 +1772,42 @@ msgstr ""
 msgid "Dynamic SVG parameters table"
 msgstr "A Dinamikus SVG-paraméterek tábla"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:761
+msgid ""
+"QGIS is looking for a complete SVG node. So if your parameter is within a "
+"more complex node, you need to inject the complete node with the expression."
+" For instance, ``transform=\"rotate(param(angle)\"`` will not work. Instead,"
+" you need to do ``transform=\"param(rotation)\"`` and ``rotation`` parameter"
+" will be defined with the expression ``'rotate(' || coalesce(my_field, 0) ||"
+" ')'``."
+msgstr ""
+"A QGIS egy teljes SVG csomópontot keres. Ha tehát a paramétere egy "
+"összetettebb csomóponton belül van, akkor a kifejezéssel együtt a teljes "
+"csomópontot is be kell injektálnia. Például a "
+"``transform=\"rotate(param(angle)\"`` nem fog működni. Ehelyett a "
+"``transform=\"param(rotation)\"-t kell megadni, és a ``rotation`` paramétert"
+" a ``'rotate(' || coalesce(my_field, 0) || ')'`` kifejezéssel kell "
+"definiálni."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:770
 msgid "The Geometry Generator"
 msgstr "A geometriagenerátor"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:772
+msgid ""
+"Available with all types of symbols, the :guilabel:`geometry generator` "
+"symbol layer allows to use :ref:`expression syntax <expression_builder>` to "
+"generate a geometry on the fly during the rendering process. The resulting "
+"geometry does not have to match with the original :guilabel:`Geometry type` "
+"and you can add several differently modified symbol layers on top of each "
+"other."
+msgstr ""
+"Az összes szimbólumtípushoz elérhető :guilabel:`geometriagenerátor` "
+"szimbólumréteg lehetővé teszi geometriák létrehozását :ref:`kifejezések "
+"használatával <expression_builder>`, a megjelenítés során valós időben. A "
+"létrehozott geometria típusának nem kell megegyeznie az eredeti "
+":guilabel:`Geometriatípussal`, és több ilyen, módosított geometriájú "
+"szimbólumréteget is egymásra helyezhet."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:778
 msgid ""
@@ -1746,6 +1822,42 @@ msgstr ""
 #: ../../docs/user_manual/style_library/symbol_selector.rst:782
 msgid "Some examples:"
 msgstr "Néhány példa:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:785
+msgid "Render symbol as the centroid of a feature"
+msgstr "Szimbólum megjelenítése egy elem középpontjaként"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:791
+msgid ""
+"Visually overlap features within a 100 map units distance from a point "
+"feature, i.e generate a 100m buffer around the point"
+msgstr ""
+"Egy pontelemtől 100 térképegység távolságon belül lévő jellemzők vizuális "
+"átfedése, azaz egy 100 m-es övezet létrehozása a pont körül."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:798
+msgid ""
+"Create a radial effect of points surrounding the central feature point when "
+"used as a MultiPoint geometry generator"
+msgstr ""
+"MultiPoint geometriagenerátorként használva az elem középpontja körül "
+"jelenít meg pontokat"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:816
+msgid ""
+"Create a radial effect of points surrounding the central feature point. The "
+"number of points varies based on a field."
+msgstr ""
+"Az elem középpontja körül jelenít meg pontokat. A pontok száma egy mező "
+"értékétől függ."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:838
+msgid ""
+"Create a curved arrow line connecting features of two layers based on their "
+":ref:`relation <project_relations>`"
+msgstr ""
+"Két réteg elemeit összekötő íves nyilakat hoz létre a köztük lévő "
+":ref:`kapcsolat <project_relations>` alapján."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:876
 msgid "The Vector Field Marker"
@@ -1805,3 +1917,93 @@ msgid ""
 "viewing the field."
 msgstr ""
 "A mező méretezésével felfelé vagy lefelé skálázható a megfelelő méretre."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:903
+msgid "Animated marker"
+msgstr "Animált szimbólum"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:905
+msgid ""
+"Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,"
+" :file:`.MNG`, etc. animation file to represent points on your map. You can "
+"specify:"
+msgstr ""
+"Az animált jelölő szimbólum lehetővé teszi, hogy egy :file:`.GIF`, "
+":file:`.WebP`, :file:`.MNG`, stb. animációs fájlt használjon a térképen lévő"
+" pontok ábrázolásához. Megadhatja:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:909
+msgid ":guilabel:`File` path,"
+msgstr "a :guilabel:`Fájl` elérési útja,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:910
+msgid ""
+":guilabel:`Frame rate`: number of steps that are shown per second, "
+"indicating how fast the animation is played,"
+msgstr ""
+":guilabel:`Képkockasebesség`: a másodpercenként megjelenített lépések száma,"
+" ami jelzi, hogy milyen gyorsan játszódik le az animáció,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:912
+msgid ":guilabel:`Size` in any :ref:`supported unit <unit_selector>`,"
+msgstr ""
+":guilabel:`Méret` bármely :ref:`támogatott mértékegységben <unit_selector>`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:913
+msgid ":guilabel:`Opacity`,"
+msgstr ":guilabel:`Átlátszatlanság`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:914
+msgid ":guilabel:`Rotation`,"
+msgstr ":guilabel:`Forgatás`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:915
+msgid ""
+":guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions from the "
+"marker position,"
+msgstr ""
+":guilabel:`Eltolás` a jelölő helyétől :guilabel:`x` és :guilabel:`y` "
+"irányba,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:917
+msgid ":guilabel:`Anchor point`"
+msgstr ":guilabel:`Horgonypont`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:919
+msgid "There are two ways to handle animated symbols:"
+msgstr "Az animált szimbólumok kezelésének két módja van:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:921
+msgid ""
+"**When your map is not configured as an animation** (i.e. it's a standard "
+"QGIS project without animations), the frame for the animated markers will be"
+" determined solely by the current timestamp."
+msgstr ""
+"**Ha a térkép nincs animáltként beállítva** (azaz ez egy normál QGIS projekt"
+" animációk nélkül), az animált jelölők képkockáját kizárólag az aktuális "
+"időbélyeg határozza meg."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:931
+msgid "Animated marker when map is not configured as animation"
+msgstr "Animált jelölő, ha a térkép nincs animáltként beállítva"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:933
+msgid ""
+"**When your map is** :ref:`configured as an animation <maptimecontrol>`, the"
+" animated markers will sync with the animation's timeline. This means that "
+"animated markers will pause when the animation is paused, progress with the "
+"animation, and so forth. The map will also be redrawn according to the frame"
+" rate established for temporal animation. This mode is also applied when "
+"exporting an animation using the temporal controller."
+msgstr ""
+"**Ha a térkép** :ref:`animáltként van beállítva <maptimecontrol>`, akkor az "
+"animált jelölők szinkronizálódnak az animáció idővonalával. Ez azt jelenti, "
+"hogy az animált jelölők szünetet tartanak, amikor az animáció szünetel, "
+"együtt haladnak az animációval, és így tovább. A térkép is az időbeli "
+"animációhoz meghatározott képkockasebességnek megfelelően rajzolódik újra. "
+"Ez az üzemmód akkor is érvényesül, ha időbeli vezérlőt használó animációt "
+"exportál."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:946
+msgid "Animated marker when map is configured as animation"
+msgstr "Animált jelölő, ha a térkép animáltként van beállítva"
