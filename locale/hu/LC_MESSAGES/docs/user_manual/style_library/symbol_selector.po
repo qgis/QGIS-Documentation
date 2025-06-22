@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-08 10:04+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,9 +30,9 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"A fordítás közösségi munka eredménye, amelyhez itt tudsz :ref:`csatlakozni "
-"<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
-"részét fordítottuk le."
+"A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
+"<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
+"van lefordítva."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:5
 msgid "The Symbol Selector"
@@ -265,6 +266,21 @@ msgstr "vagy ikon előnézetként az |iconView| :sup:`Ikonnézet` gombbal."
 msgid "iconView"
 msgstr "iconView"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:102
+msgid ""
+"Press the :guilabel:`Save Symbol` button to open the :guilabel:`Save New "
+"Symbol` dialog. Here, you can choose the :guilabel:`Destination` where you "
+"want to add the symbol being edited, give it a :guilabel:`Name` and add "
+":guilabel:`Tag(s)`. You also have the option to |checkbox| :sup:`Add to "
+"favorites` your new symbol."
+msgstr ""
+"Nyomja meg a :guilabel:`Szimbólum mentése` gombot a :guilabel:`Új szimbólum "
+"mentése` párbeszédablak megnyitásához. Itt kiválaszthatja a "
+":guilabel:`Célt`, ahová a szerkesztt szimbólumot hozzá kívánja adni, adhat "
+"neki :guilabel:`Nevet` és hozzáadhat a :guilabel:`Címké(ke)t`. Lehetősége "
+"van arra is, hogy az új szimbólumot |checkbox| :sup:`Hozzáadja a "
+"kedvencekhez`."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:955
 msgid "checkbox"
 msgstr "checkbox"
@@ -309,6 +325,21 @@ msgstr ""
 "kitöltési szimbólumok létrehozását, függetlenül a megjelenített "
 "adathalmaztól és az egyes elemek gyűrűinek irányától."
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:124
+msgid ""
+"for marker symbols, the :guilabel:`Buffer settings...` enables addition of a"
+" halo effect around the marker symbol in order to make it more readable "
+"against different backgrounds. The buffer is calculated and drawn using the "
+"shape of ALL the symbol layers in the marker. You can adjust the "
+":guilabel:`Size`, :guilabel:`Join style` and :guilabel:`Symbol` of display."
+msgstr ""
+"jelölő szimbólumok esetében az :guilabel:`Övezet beállítása…` lehetővé teszi"
+" a szimbólum körüli halo effektus hozzáadását, hogy az jobban olvasható "
+"legyen a különböző hátterek előtt. Az övezet kiszámítása és kirajzolása a "
+"jelölő összes szimbólumrétegének alakja alapján történik. Beállíthatja a "
+":guilabel:`Mért`, az :guilabel:`Összekötési stílus` és a "
+":guilabel:`Szimbólum` megjelenítést."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:129
 msgid ""
 "Depending on the :ref:`symbology <vector_style_menu>` of the layer a symbol "
@@ -340,6 +371,10 @@ msgstr ""
 ":guilabel:`Társítás mentett szimbólumokkal…` és :guilabel:`Társítás "
 "szimbólumokkal fájlból...` :ref:`szimbólumok automatikus osztályokhoz "
 "rendeléséhez <categorized_advanced_menu>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:136
+msgid ":ref:`Animation settings <animation_settings>`"
+msgstr ":ref:`Animációs beállítások <animation_settings>`"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:141
 msgid "The symbol layer"
@@ -529,6 +564,10 @@ msgstr ""
 ":guilabel:`Horgonypont`: meghatározza a szimbólum negyedpontját az "
 "elhelyezés origójához.  Ez az a pont, amire az :guilabel:`Eltolás` "
 "alkalmazva lesz."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:213
+msgid "**Animated marker** (see :ref:`animated_marker`)"
+msgstr "**Animált szimbólum** (see :ref:`animated_marker`)"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:214
 msgid ""
@@ -1074,6 +1113,91 @@ msgstr ""
 msgid "Examples of raster lines"
 msgstr "Példák rasztervonalra"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:463
+msgid ""
+"**Linear referencing**: allows placing text labels at regular intervals "
+"along a line, or at positions corresponding to existing vertices. Positions "
+"can be calculated using Cartesian distances, or interpolated from z/m "
+"values. Parameters include:"
+msgstr ""
+"**Lineáris referencia**: lehetővé teszi szöveges címkék rendszeres "
+"távolságonként történő elhelyezését a vonal mentén, vagy a meglévő "
+"töréspontok helyén. A pozíciók kiszámíthatók derékszögű koordináta-"
+"rendszerbeli távolságként, vagy interpolálhatók z/m értékekből. A "
+"paraméterek a következők:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:468
+msgid ""
+":guilabel:`Measure placement`: Labels can be placed at regular cartesian 2d "
+"distances, at regular linearly interpolated spacing calculated using the Z "
+"or M values in geometries, or at existing vertices. A fixed or data-defined "
+":guilabel:`Interval` is given."
+msgstr ""
+":guilabel:`Mérés elhelyezése`: A címkék elhelyezhetők szabályos derékszögű "
+"koordináta-rendszerbeli 2D távolságonként, a geometriák Z vagy M értékei "
+"alapján kiszámított szabályos lineárisan interpolált távolságokra, vagy a "
+"meglévő töréspontokra. Megadható rögzített vagy az adatok által "
+"meghatározott :guilabel:`Intervallum`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:472
+msgid ""
+":guilabel:`Quantity`: Label displayed at each position represent the running"
+" distance along the line, or the linearly interpolated Z or M value. Labels "
+"are rendered using the full range of :ref:`text <text_format>` and "
+":ref:`number <number_formatting>` formatting functionalities available in "
+"QGIS."
+msgstr ""
+":guilabel:`Mennyiség`: Az egyes pozíciókban megjelenített címkék a vonal "
+"mentén futó távolságot vagy a lineárisan interpolált Z vagy M értéket "
+"jelölik. A címkék a :ref:`text <text_format>` és :ref:`number "
+"<number_formatting>` összes formázási lehetőségét tudják használni, ami csak"
+" elérhető a QGIS-ben."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:479
+msgid ""
+"When using the distance-based placement or labels, the distances are "
+"calculated using 2D only. Cartesian calculations are based on the original "
+"layer CRS."
+msgstr ""
+"A távolságalapú elhelyezés vagy címkék használata esetén a távolságok "
+"kiszámítása csak 2D-ben történik. A derékszögű koordináta-rendszerbeli "
+"számítások a réteg CRS-e alapján történnek."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:482
+msgid ""
+":guilabel:`Skip multiples of`: If set, labels which are a multiple of this "
+"value will be skipped over. This allows construction of complex referencing "
+"labels, e.g. where a symbol has two linear referencing symbol layers, one "
+"set to label every 100m in a small font, skipping multiples of 1000, and a "
+"second set to label every 1000m in a big bold font."
+msgstr ""
+":guilabel:`Többszörösök kihagyása`: Ha be van állítva, akkor azok a címkék, "
+"amelyek ennek az értéknek a többszörösei, ki lesznek hagyva. Segítségével "
+"összetett referenciacímkék hozhatóak létre, pl. ha egy szimbólum két "
+"lineáris  szimbólumrétegből épül fel, ahol az egyik 100 méterenként kis "
+"betűtípussal, 1000 többszörösét kihagyva, a másik pedig 1000 méterenként "
+"nagy, vastag betűtípussal jelenik meg."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:486
+msgid ""
+":guilabel:`Average angle over`: Labels are rendered using an angle "
+"calculated by averaging the linestring, so sharp tiny jaggies don't result "
+"in unslightly label rotation."
+msgstr ""
+":guilabel:`Szögátlagolási táv`: A címkék forgatása a vonalvezetés "
+"átlagolásával kiszámított szöggel történik, így az éles apró szaggatottság "
+"nem eredményezi a címke elfordulását."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:488
+msgid ""
+":guilabel:`Show marker symbols`, at referenced points in the line feature, "
+"using a full QGIS marker symbol. This allows e.g. showing a cross-hatch at "
+"the labeled point, for a \"ruler\" style line."
+msgstr ""
+":guilabel:`Jelölőszimbólumok megjelenítése` a vonalelem hivatkozott pontjain"
+" egy QGIS jelölőszimbólummal. Ez lehetővé teszi például, hogy egy „vonalzó” "
+"stílusú vonal esetében a megjelölt ponton kereszthúzás jelenjen meg."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:502
 msgid ""
 "**Lineburst**: renders a gradient along the width of a line. You can choose "
@@ -1090,6 +1214,22 @@ msgstr ""
 #: ../../docs/user_manual/style_library/symbol_selector.rst:513
 msgid "Examples of lineburst lines"
 msgstr "Példák vonalsorozatos vonalra"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:517
+msgid ""
+"**Filled line**: renders the interior of the lines using a fill symbol "
+"allowing for lines filled with gradients, line hatches, etc. The "
+":guilabel:`Stroke width`, :guilabel:`Offset`, :guilabel:`Join style`, "
+":guilabel:`Cap style` can be adjusted."
+msgstr ""
+"**Kitöltött vonal**: a vonalak belsejét kitöltési szimbólummal jeleníti meg,"
+" amely lehetővé teszi a színátmenettel, sraffozással stb. kitöltött "
+"vonalakat. Beállítható a :guilabel:`Vonalvastagság`, :guilabel:`Eltolás`, "
+":guilabel:`Összekötési stílus`, :guilabel:`Vonalvég stílusa`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:528
+msgid "Examples of filled lines"
+msgstr "Példák kitöltött vonalakra"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:534
 msgid "Fill Symbols"
