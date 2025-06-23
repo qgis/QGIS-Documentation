@@ -5,19 +5,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Zoltan Siki <siki.zoltan@epito.bme.hu>, 2025
-# Báthory Péter <bathory86p@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:18+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,13 +31,25 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"A fordítás közösségi munka eredménye, amelyhez itt tudsz :ref:`csatlakozni "
-"<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
-"részét fordítottuk le."
+"A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
+"<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
+"van lefordítva."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:2
 msgid "Vector Tiles"
 msgstr "Vektorcsempék"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:14
+msgid "Download vector tiles"
+msgstr "Vektorcsempék letöltése"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:16
+msgid ""
+"Downloads vector tiles of an input vector tile layer and saves them in a "
+"local vector tile file."
+msgstr ""
+"Letölti egy bemeneti vektorcsemperéteg vektorcsempéit, és elmenti azokat egy"
+" helyi vektorcsempefájlba."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:19
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:104
@@ -84,7 +95,7 @@ msgstr "Leírás"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:29
 msgid "**Input layer**"
-msgstr "**Input réteg**"
+msgstr "**Bemeneti réteg**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:30
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:115
@@ -98,6 +109,10 @@ msgstr "``INPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:181
 msgid "[vector tiles]"
 msgstr "[vektorcsempék]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:32
+msgid "A vector tile layer to extract some tiles from"
+msgstr "Egy vektorcsemperéteg, amelyből néhány csempét le kell tölteni"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:33
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:132
@@ -117,15 +132,110 @@ msgstr "``EXTENT``"
 msgid "[extent]"
 msgstr "[terjedelem]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:36
+msgid ""
+"Specify the spatial extent of the downloaded area. It will internally be "
+"extended to a multiple of the tile size."
+msgstr ""
+"Adja meg a letöltött terület térbeli kiterjedését. Ez belsőleg a csempe "
+"méretének többszörösére lesz kiterjesztve."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "A rendelkezésre álló módszerek a következők:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Számítás egy rétegből…: használja az aktuális projektben betöltött rétegek "
+"egyikének terjedelmét"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Számítás egy elrendezés térképéből…: az aktív projektben lévő "
+":ref:`térképelrendezés-elem <layout_map_item>` terjedelmét használja"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Számítás egy könyvjelzőből…: egy elmentett :ref:`könyvjelző <sec_bookmarks>`"
+" terjedelmét használja"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "A térképvászon terjedelmét használja"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Kijelölés a térképvásznon: kattintson és rajzolja meg a figyelembe veendő "
+"területet határoló téglalapot"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr ""
+"Megadhatja vagy szerkesztheti az ``xmin, xmax, ymin, ymax`` koordinátákat"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:43
+msgid "**Maximum zoom level to download**"
+msgstr "A letöltendő **Maximális nagyítási szint*"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:44
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:126
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:253
 msgid "``MAX_ZOOM``"
 msgstr "``MAX_ZOOM``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:45
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:51
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:120
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:127
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:247
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:254
+msgid "[numeric: integer]"
+msgstr "[numerikus: egész szám]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:47
+msgid "Default: 10"
+msgstr "Alapértelmezett: 10"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:48
+msgid "Defines how far to zoom in and fetch data from the tiles"
+msgstr ""
+"Meghatározza, hogy meddig nagyítson bele és kérjen le adatokat a csempékből"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:49
+msgid "**Tile limit**"
+msgstr "**Csempekorlát**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:50
 msgid "``TILE_LIMIT``"
 msgstr "``TILE_LIMIT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:53
+msgid "Default: 100"
+msgstr "Alapértelmezett: 100"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:54
+msgid ""
+"Maximum number of tiles to download, considering the zoom levels and the "
+"extent."
+msgstr ""
+"A letöltendő csempék maximális száma, figyelembe véve a nagyítási szinteket "
+"és a terjedelmet."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:55
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:77
+msgid "**Output**"
+msgstr "**Kimenet**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:56
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:78
@@ -139,6 +249,14 @@ msgstr "``OUTPUT``"
 msgid "Default: [Save to temporary file]"
 msgstr "Alapértelmezett: [Mentés ideiglenes fájlba]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:60
+msgid ""
+"Specification of the output vector tile file. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"A kimeneti vektorcsempefájl specifikációja. :ref:`Egyike ezeknek "
+"<output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Mentés ideiglenes fájlba"
@@ -151,13 +269,21 @@ msgstr "Mentés fájlba…"
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:191
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:280
 msgid "Outputs"
-msgstr "Eredmények"
+msgstr "Kimenetek"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:80
+msgid "A local vector tile file storing the downloaded tiles."
+msgstr "A letöltött csempéket tároló helyi vektorcsempefájl."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:83
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:207
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:297
 msgid "Python code"
 msgstr "Python kód"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:85
+msgid "**Algorithm ID**: ``native:downloadvectortiles``"
+msgstr "**Algoritmus azonosítója**: ``native:downloadvectortiles``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -166,10 +292,10 @@ msgid ""
 "and values. See :ref:`processing_console` for details on how to run "
 "processing algorithms from the Python console."
 msgstr ""
-"Az *algoritmus azonosító* akkor jelenik meg, ha az egérmutatót az algoritmus"
-" fölé viszi a Feldolgozás eszköztáron. A *paraméterszótár* tartalmazza a "
-"paraméter NAME-eket és érékeket. A feldolgozási algoritmusok Python "
-"konzolról történő futtatásával kapcsolatos részletekért lásd a "
+"Az *algoritmus azonosítója* akkor jelenik meg, ha az egérmutatót az "
+"algoritmus fölé viszi a Feldolgozás eszköztáron. A *paraméterszótár* "
+"tartalmazza a paraméter NAME-eket és érékeket. A feldolgozási algoritmusok "
+"Python konzolról történő futtatásával kapcsolatos részletekért lásd a "
 ":ref:`processing_console` fejezetet."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:95
@@ -197,7 +323,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:114
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:241
 msgid "**Input layers**"
-msgstr "**Input rétegek**"
+msgstr "**Bemeneti rétegek**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:116
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:243
@@ -380,8 +506,12 @@ msgid "**Destination MBTiles**"
 msgstr "**Cél MBTiles**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:184
-msgid "Specification of the output MBTiles file. One of:"
-msgstr "Az eredmény MBTiles fájl megadása. Ezek egyike:"
+msgid ""
+"Specification of the output MBTiles file. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"A kimeneti MBTiles fájl specifikációja. :ref:`Egyike ezeknek "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:203
 msgid "[file]"
@@ -389,7 +519,7 @@ msgstr "[fájl]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:204
 msgid "Output vector tiles :file:`.mbtiles` file."
-msgstr "Eredmény :file:`.mbtiles` vektorcsempe fájl."
+msgstr "Kimeneti :file:`.mbtiles` vektorcsempe fájl."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:209
 msgid "**Algorithm ID**: ``native:writevectortiles_mbtiles``"
@@ -419,7 +549,7 @@ msgstr "A vektorcsempe url előállítására szolgáló sablon"
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:268
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:290
 msgid "**Output directory**"
-msgstr "**Eredmény könyvtár**"
+msgstr "**Kimeneti könyvtár**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:269
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:291
@@ -436,8 +566,12 @@ msgid "Default: [Save to temporary folder]"
 msgstr "Alapértelmezett: [Mentés ideiglenes mappába]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:273
-msgid "Specification of the output vector tiles folder. One of:"
-msgstr "Az eredmény vektorcsempe fájl megadása. Ezek egyike:"
+msgid ""
+"Specification of the output vector tiles folder. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"A kimeneti vektorcsempefájlok könyvtárának specifikációja. :ref:`Egyike "
+"ezeknek <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary Directory"
