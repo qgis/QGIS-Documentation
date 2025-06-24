@@ -429,7 +429,24 @@ Resources
 
   For some formats you can also
   :guilabel:`Open <file type> Externally...`
+* Database connections. The following actions are available from the context menu:
 
+  * :guilabel:`Manage-->` to rename or delete the connection
+  * :guilabel:`New Table...` to create a new table in the database
+  * :guilabel:`Execute SQL...` to open the SQL window and run a query
+  * :guilabel:`Compact Database (VACUUM)` to compact the database
+
+**Execute SQL... dialog**
+
+For supported database connections (GeoPackage, SpatiaLite, PostgreSQL and SAP HANA),
+the :guilabel:`Execute SQL...` dialog allows you to run SQL queries against the database.
+In this dialog, you can:
+
+* |fileOpen| :guilabel:`Open Query` from the existing `.sql` file
+* |fileSave| :guilabel:`Save Query` to a `.sql` file
+* |fileSaveAs| :guilabel:`Save Query as...`
+* |storedqueries| :guilabel:`Store Current Query` in the local
+  :guilabel:`User Profile` or :guilabel:`Current Project`.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -450,6 +467,12 @@ Resources
 .. |cloud| image:: /static/common/mIconCloud.png
    :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
@@ -472,6 +495,8 @@ Resources
 .. |sourceFields| image:: /static/common/mSourceFields.png
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
+   :width: 1.5em
+.. |storedqueries| image:: /static/common/mIconStoredQueries.png
    :width: 1.5em
 .. |tiledSceneLayer| image:: /static/common/mIconTiledSceneLayer.png
    :width: 1.5em
