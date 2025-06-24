@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:18+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
@@ -43,6 +43,20 @@ msgstr "Análisis de Red"
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:14
 msgid "Service area (from layer)"
 msgstr "Área de servicio (a partir de capa)"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:15
+msgid ""
+"Returns all the edges or parts of edges of a network that can be reached "
+"within a distance or a time, starting from a point layer. This allows "
+"evaluation of accessibility within a network, e.g., what are the places I "
+"can navigate to on a road network without spending cost greater than a given"
+" value (the cost can be distance or time)."
+msgstr ""
+"Devuelve todos los bordes o partes de bordes de una red a los que se puede "
+"llegar dentro de una distancia o un tiempo determinados, partiendo de una "
+"capa de puntos. Esto permite evaluar la accesibilidad dentro de una red, por"
+" ejemplo, a qué lugares puedo llegar en una red de carreteras sin gastar más"
+" de un valor determinado (el coste puede ser distancia o tiempo)."
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:22
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:267
@@ -318,9 +332,12 @@ msgstr "Predeterminado: ``[Crear capa temporal]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:67
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:316
-msgid "Specify the output line layer for the service area. One of:"
+msgid ""
+"Specify the output line layer for the service area. :ref:`One of "
+"<output_parameter_widget>`:"
 msgstr ""
-"Especifique la capa de la línea de salida para el área de servicio. Una de:"
+"Especifique la capa de línea de salida para el área de servicio. :ref:`Una "
+"de <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
@@ -382,10 +399,39 @@ msgstr "Predeterminado: ``[Omitir salida]``"
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:79
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:330
 msgid ""
-"Specify the output point layer for the service area boundary nodes. One of:"
+"Specify the output point layer for the service area boundary nodes. "
+":ref:`One of <output_parameter_widget>`:"
 msgstr ""
-"Especifica la capa de punto de salida para los nodos de límite del área de "
-"servicio. Uno de:"
+"Especifique la capa de puntos de salida para los nodos del límite del área "
+"de servicio. :ref:`Una de <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:86
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:457
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:588
+msgid "**Non-routable features**"
+msgstr "**Objetos espaciales no enrutables*"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:87
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:241
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:460
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:512
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:589
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:644
+msgid "``OUTPUT_NON_ROUTABLE``"
+msgstr "``OUTPUT_NON_ROUTABLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:464
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:595
+msgid ""
+"Specify the output which will be used to store any input features which "
+"could not be routed (e.g., those which are too far from the network layer). "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Especifique la salida que se utilizará para almacenar cualquier objeto "
+"espacial de entrada que no se haya podido enrutar (por ejemplo, aquellas que"
+" están demasiado lejos de la capa de red). :ref:`Una de "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:100
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:338
@@ -436,6 +482,26 @@ msgstr "[campo de tabla: cualquiera]"
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:122
 msgid "The field used to specify directions for the network edges."
 msgstr "El campo usado para especificar direcciones para las trazaos de red."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:23
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:124
+msgid ""
+"The values used in this field are specified with the three parameters "
+"``Value for forward direction``, ``Value for backward direction`` and "
+"``Value for both directions``. Forward and reverse directions correspond to "
+"a one-way edge, \"both directions\" indicates a two-way edge. If a feature "
+"does not have a value in this field, or no field is set then the default "
+"direction setting (provided with the ``Default direction`` parameter) is "
+"used."
+msgstr ""
+"Los valores utilizados en este campo se especifican con los tres parámetros "
+"``Valor para la dirección hacia adelante``, ``Valor para la dirección hacia "
+"atrás`` y ``Valor para ambas direcciones``. Las direcciones hacia adelante y"
+" hacia atrás corresponden a un borde unidireccional, mientras que ``ambas "
+"direcciones`` indica un borde bidireccional. Si una característica no tiene "
+"un valor en este campo, o si no se ha establecido ningún campo, se utiliza "
+"la configuración de dirección predeterminada (proporcionada con el parámetro"
+" ``Dirección predeterminada``)."
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:30
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:131
@@ -598,6 +664,15 @@ msgstr "``DEFAULT_SPEED``"
 msgid "Default: 50.0"
 msgstr "Predeterminada: 50.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:84
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:185
+msgid ""
+"Value to use to calculate the travel time if no speed value is provided for "
+"an edge in the specified field"
+msgstr ""
+"Valor que se utilizará para calcular el tiempo de viaje si no se proporciona"
+" ningún valor de velocidad para un borde en el campo especificado."
+
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:86
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:187
 msgid "**Topology tolerance**"
@@ -648,12 +723,42 @@ msgstr ""
 "límites del área de servicio. Un punto es el comienzo de ese tramo, el otro "
 "es el final."
 
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:208
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:347
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:482
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:614
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:728
+msgid "**Maximum point distance from network**"
+msgstr "**Distancia máxima en puntos desde la red**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:211
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:350
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:485
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:617
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:731
+msgid "``POINT_TOLERANCE``"
+msgstr "``POINT_TOLERANCE``"
+
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:214
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:488
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:620
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:734
 msgid "Default: Not set"
 msgstr "Predeterminado: No establecido"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:215
+msgid ""
+"Specifies an optional limit on the distance from the points to the network "
+"layer. If a point is further from the network than this distance it will be "
+"treated as non-routable. If not set, endpoints will be snapped to the "
+"nearest point on the network layer, regardless of how far away from the "
+"network they actually are."
+msgstr ""
+"Especifica un límite opcional en la distancia desde los puntos hasta la capa"
+" de red. Si un punto está más lejos de la red que esta distancia, se tratará"
+" como no enrutable. Si no se establece, los puntos finales se ajustarán al "
+"punto más cercano en la capa de red, independientemente de lo lejos que "
+"estén realmente de la red."
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:221
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:368
@@ -676,6 +781,21 @@ msgid ""
 msgstr ""
 "Capa lineal que representa las partes de la red que pueden ser atendidas por"
 " los puntos de inicio, para el costo dado."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:240
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:511
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:643
+msgid "**Non routable features**"
+msgstr "**Objetos espaciales no enrutables**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:243
+msgid ""
+"An optional output which will be used to store any input features which "
+"could not be routed (e.g., those which are too far from the network layer)."
+msgstr ""
+"Una salida opcional que se utilizará para almacenar cualquier característica"
+" de entrada que no haya podido enrutarse (por ejemplo, aquellas que se "
+"encuentran demasiado lejos de la capa de red)."
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:247
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:389
@@ -705,9 +825,28 @@ msgstr ""
 msgid "Service area (from point)"
 msgstr "ärea de servicio (desde punto)"
 
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:260
+msgid ""
+"Returns all the edges or parts of edges of a network that can be reached "
+"within a given distance or time, starting from a point feature. This allows "
+"the evaluation of accessibility within a network, e.g., what are the places "
+"I can navigate to on a road network without spending a cost greater than a "
+"given value (the cost can be distance or time)."
+msgstr ""
+"Devuelve todos los bordes o partes de bordes de una red a los que se puede "
+"llegar dentro de una distancia o tiempo determinados, partiendo de un objeto"
+" espacial punto. Esto permite evaluar la accesibilidad dentro de una red, "
+"por ejemplo, a qué lugares puedo llegar en una red de carreteras sin gastar "
+"más de un valor determinado (el coste puede ser distancia o tiempo)."
+
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:281
 msgid "**Vector layer representing the network**"
 msgstr "**Capa vectorial representando la red**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:294
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:565
+msgid "**Start point**"
+msgstr "**Punto de partida**"
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:295
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:566
@@ -727,6 +866,37 @@ msgstr "[coordenadas]"
 msgid "Coordinate of the point to calculate the service area around."
 msgstr ""
 "Coordenadas del punto alrededor del cual calcular el área de servicio."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:299
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:443
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:570
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:699
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:706
+msgid ""
+"Press the :guilabel:`...` button next to the option and click on the canvas "
+"to fill the parameter with the clicked point coordinate."
+msgstr ""
+"Pulse el botón :guilabel:`...` situado junto a la opción y haga clic en el "
+"lienzo para rellenar el parámetro con la coordenada del punto en el que ha "
+"hecho clic."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:305
+msgid "Default: 0.O"
+msgstr "Predeterminado: 0.O"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:354
+msgid ""
+"Specifies an optional limit on the distance from the start point to the "
+"network layer. If the point is further from the network than this distance "
+"an error will be raised. If not set, the point will be snapped to the "
+"nearest point on the network layer, regardless of how far away from the "
+"network it actually is."
+msgstr ""
+"Especifica un límite opcional para la distancia desde el punto de inicio "
+"hasta la capa de red. Si el punto se encuentra más lejos de la red que esta "
+"distancia, se generará un error. Si no se establece, el punto se ajustará al"
+" punto más cercano de la capa de red, independientemente de la distancia "
+"real a la que se encuentre de la red."
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:385
 msgid ""
@@ -785,8 +955,29 @@ msgstr "**Ruta mas corta**"
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:450
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:581
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:711
-msgid "Specify the output line layer for the shortest paths. One of:"
-msgstr "Especifica la capa lineal saliente para las rutas mas cortas. Una de:"
+msgid ""
+"Specify the output line layer for the shortest paths. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Especifique la capa de línea de salida para las rutas más cortas. :ref:`Una "
+"de <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:489
+msgid ""
+"Specifies an optional limit on the distance from the start and end points to"
+" the network layer. If a start feature is further from the network than this"
+" distance it will be treated as non-routable. If the end point is further "
+"from the network than this distance an error will be raised. If not set, "
+"points will be snapped to the nearest point on the network layer, regardless"
+" of how far away from the network they actually are."
+msgstr ""
+"Especifica un límite opcional en la distancia entre los puntos inicial y "
+"final y la capa de red. Si una característica inicial se encuentra más lejos"
+" de la red que esta distancia, se considerará no enrutable. Si el punto "
+"final se encuentra más lejos de la red que esta distancia, se generará un "
+"error. Si no se establece, los puntos se ajustarán al punto más cercano de "
+"la capa de red, independientemente de la distancia real a la que se "
+"encuentren de la red."
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:509
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:641
@@ -796,6 +987,17 @@ msgid ""
 msgstr ""
 "Capa lineal de la ruta mas corta o mas rápida desde cada uno de los puntos "
 "de inicio hasta el punto final"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:514
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:646
+msgid ""
+"An optional output layer which will be used to store any input features "
+"which could not be routed (e.g., those which are too far from the network "
+"layer)."
+msgstr ""
+"Una capa de salida opcional que se utilizará para almacenar cualquier objeto"
+" espacial de entrada que no haya podido ser enrutada (por ejemplo, aquellas "
+"que se encuentran demasiado lejos de la capa de red)."
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:520
 msgid "**Algorithm ID**: ``native:shortestpathlayertopoint``"
@@ -840,6 +1042,23 @@ msgstr ""
 "Capa de vector de puntos cuyas entidades se utilizan como puntos finales de "
 "las rutas"
 
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:621
+msgid ""
+"Specifies an optional limit on the distance from the start and end points to"
+" the network layer. If the start point is further from the network than this"
+" distance an error will be raised. If an end feature is further from the "
+"network than this distance it will be treated as non-routable. If not set, "
+"points will be snapped to the nearest point on the network layer, regardless"
+" of how far away from the network they actually are."
+msgstr ""
+"Especifica un límite opcional en la distancia entre los puntos inicial y "
+"final y la capa de red. Si el punto inicial se encuentra más lejos de la red"
+" que esta distancia, se generará un error. Si una característica final se "
+"encuentra más lejos de la red que esta distancia, se considerará no "
+"enrutable. Si no se establece, los puntos se ajustarán al punto más cercano "
+"de la capa de red, independientemente de la distancia real a la que se "
+"encuentren de la red."
+
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:652
 msgid "**Algorithm ID**: ``native:shortestpathpointtolayer``"
 msgstr "**Algoritmo ID**: ``native:shortestpathpointtolayer``"
@@ -859,6 +1078,28 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:694
 msgid "**Start point (x, y)**"
 msgstr "**Punto inicial (x, y)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:697
+msgid "Point feature representing the start point of the routes."
+msgstr "Punto que representa el punto de inicio de las rutas."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:704
+msgid "Point feature representing the end point of the routes."
+msgstr "Punto que representa el punto final de las rutas."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:735
+msgid ""
+"Specifies an optional limit on the distance from the start and end points to"
+" the network layer. If either point is further from the network than this "
+"distance an error will be raised. If not set, points will be snapped to the "
+"nearest point on the network layer, regardless of how far away from the "
+"network they actually are."
+msgstr ""
+"Especifica un límite opcional en la distancia entre los puntos inicial y "
+"final y la capa de red. Si cualquiera de los dos puntos se encuentra más "
+"lejos de la red que esta distancia, se generará un error. Si no se "
+"establece, los puntos se ajustarán al punto más cercano de la capa de red, "
+"independientemente de la distancia real a la que se encuentren de la red."
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:754
 msgid ""
