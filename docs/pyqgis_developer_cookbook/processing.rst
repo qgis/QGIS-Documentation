@@ -86,8 +86,8 @@ If you want to add your existing plugin to Processing, you need to add some code
    * :file:`provider.py` which will create the Processing provider and expose
      your algorithms.
 
-     .. testcode:: processing
-      :skipif: True
+    .. testcode:: processing
+    :skipif: True
 
         from qgis.core import QgsProcessingProvider
         from qgis.PyQt.QtGui import QIcon
@@ -147,15 +147,15 @@ You should have a tree similar to this:
 #. Now you can reload your plugin in QGIS and you should see your example
    script in the Processing toolbox and modeler.
 
-Implementing Custom Processing Algorithms
+Implementing custom Processing algorithms
 =========================================
 
-Creating a Custom Algorithm
----------------------------
+Creating a custom algorithm
+--------------------------
 
 Here's a simple example of a custom buffer algorithm:
 
-.. code-block:: python
+.. testcode:: processing
 
     from qgis.core import (
         QgsProcessingAlgorithm,
@@ -163,8 +163,6 @@ Here's a simple example of a custom buffer algorithm:
         QgsProcessingParameterNumber,
         QgsProcessingParameterFeatureSink,
         QgsFeatureSink,
-        QgsProcessingContext,
-        QgsFeature
     )
 
     class BufferAlgorithm(QgsProcessingAlgorithm):
@@ -205,20 +203,21 @@ Here's a simple example of a custom buffer algorithm:
         def createInstance(self):
             return BufferAlgorithm()
 
-Customizing the Algorithm Dialog
+Customizing the algorithm dialog
 --------------------------------
 
 Custom dialogs are especially useful when working with nested or dynamic inputs, 
 when parameters depend on external data sources such as APIs (e.g. dynamically populated dropdowns), 
 or when you need advanced validation and custom layout behavior that isn’t supported by the default Processing dialog.
-
 To override the default UI (e.g. for complex parameter types or dynamic logic),
-subclass `QgsProcessingAlgorithmDialogBase`. To render your custom UI in the standard Processing dialog window, you must call `self.setMainWidget(panel)`, where `panel` is a `QgsPanelWidget` containing your custom layout. 
-This ensures your interface is correctly displayed and interacts properly with the Processing framework. Here is an example that integrates signal management using QTimer for debounced input:
+subclass :class:`QgsProcessingAlgorithmDialogBase <qgis.gui.QgsProcessingAlgorithmDialogBase>`.
+To render your custom UI in the standard Processing dialog window, you must call ``self.setMainWidget(panel)``,
+where ``panel`` is a :class:`QgsPanelWidget <qgis.gui.QgsPanelWidget>` containing your custom layout.
+This ensures your interface is correctly displayed and interacts properly with the Processing framework.
 
-.. code-block:: python
+Here is an example that integrates signal management using QTimer_ for debounced input:
+.. testcode:: processing
 
-    from qgis.PyQt.QtWidgets import QWidget, QVBoxLayout, QLabel, QLineEdit
     from qgis.PyQt.QtCore import Qt, QT_VERSION_STR, QTimer
     from qgis.core import (
         QgsProcessingAlgorithm,
@@ -255,10 +254,9 @@ This ensures your interface is correctly displayed and interacts properly with t
 
             self.cancelButton().clicked.connect(self.reject)
 
-        def buildDialog(self) -> QWidget:
+        def buildDialog(self) -> QVBoxLayout:
             layout = QVBoxLayout()
 
-            self.label = QLabel("Image Collection ID:")
             self.input = QLineEdit()
 
             # Set up a debounced signal using QTimer
@@ -266,11 +264,8 @@ This ensures your interface is correctly displayed and interacts properly with t
             self._update_timer.timeout.connect(self._on_collection_id_ready)
             self.input.textChanged.connect(self._on_collection_id_changed)
 
-            layout.addWidget(self.label)
             layout.addWidget(self.input)
 
-            container = QWidget()
-            container.setLayout(layout)
             return layout
 
         def _on_collection_id_changed(self):
@@ -311,10 +306,25 @@ This ensures your interface is correctly displayed and interacts properly with t
             self.setResults(results)
             self.showLog()
 
+.. figure:: img/custom_algorithm_dialog.png
+   :align: center
+
+   Example custom dialog rendered with ``CustomAlgorithmDialog``
+
+To launch the custom dialog for a given algorithm, simply instantiate
+``CustomAlgorithmDialog`` with your algorithm instance and call ``exec()``:
+
+.. testcode:: processing
+   :skipif: True
+
+   dlg = CustomAlgorithmDialog(BufferAlgorithm())
+   dlg.exec()
+
 Managing Qt Signals
 ^^^^^^^^^^^^^^^^^^^
 
 When building reactive dialogs, manage signal connections carefully. 
-The above pattern uses a `QTimer` to debounce input from the text field, preventing rapid repeated calls. 
+The above pattern uses a `QTimer_` to debounce input from the text field, preventing rapid repeated calls. 
 This is especially useful when fetching metadata or updating UI elements based on user input. 
 Always connect signals once (typically in `__init__`) and use `singleShot=True` to ensure the slot is triggered only once after a delay.
+\n.. _QTimer: https://doc.qt.io/archives/qt-5.15/qtimer.html
