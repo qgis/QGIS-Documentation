@@ -5,10 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Báthory Péter <bathory86p@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
 # Zoltan Siki <siki.zoltan@epito.bme.hu>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Zoltan Siki <siki.zoltan@epito.bme.hu>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,9 +32,13 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"A fordítás közösségi munka eredménye, amelyhez itt tudsz :ref:`csatlakozni "
-"<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
-"részét fordítottuk le."
+"A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
+"<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
+"van lefordítva."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:2
+msgid "Lesson: Symbology"
+msgstr "Lecke: Jelrendszer"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:4
 msgid ""
@@ -59,8 +63,8 @@ msgstr ""
 "Ezért a térkép vizuális megjelenítése (mely az egyes rétegek jelrendszerétől"
 " függ) nagyon fontos. Az ön által készített térképek végfelhasználólóinak "
 "könnyen értelmezhetővé kell tenni mit ábrázol a térkép. Ugyanilyen fontos, "
-"hogy képes legyen az adatok felfedezésére, miközben dolgozik velük, és a jó "
-"szimbolika sokat segít ebben."
+"hogy képes legyen az adatok átlátására, miközben dolgozik velük, amiben a jó"
+" szimbólumrendszer sokat segít."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:15
 msgid ""
@@ -68,9 +72,9 @@ msgid ""
 "have. In fact, it's essential for you to use a GIS properly and produce maps"
 " and information that people will be able to use."
 msgstr ""
-"Más szavakkal, a megfelelő szimbólumok használata nem luxus, vagy egyszerűen"
-" csak jó. Valójában elengedhetetlen, hogy megfelelően használja a GIS-t, "
-"hogy olyan térképeket és adatokat készítsen, amelyeket az emberek használni "
+"Más szavakkal, a megfelelő szimbólumok használata nem luxus, és nem is csak "
+"jó ha van. Valójában elengedhetetlen a GIS megfelelő használatához, hogy "
+"olyan térképeket és adatokat készítsen, amelyeket az emberek használni "
 "tudnak."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:19
@@ -78,22 +82,38 @@ msgid ""
 "**The goal for this lesson:** To be able to create any symbology you want "
 "for any vector layer."
 msgstr ""
-"**Ennek a leckének a célja:** képes legyen bármilyen vektorréteghez "
+"**Ennek a leckének a célja:** Képes legyen bármilyen vektorréteghez "
 "tetszőleges szimbólumot létrehozni."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:23
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Changing Colors"
+msgstr ":abbr:`★☆☆ (alapszint)` Kövesse végig: Színek módosítása"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:25
+msgid ""
+"To change a layer's symbology, open its :guilabel:`Layer Properties`. Let's "
+"begin by changing the color of the ``landuse`` layer."
+msgstr ""
+"A réteg jelrendszerének módosításához nyissa meg a "
+":guilabel:`Rétegtulajdonságokat`. Kezdjük a ``landuse`` réteg színének "
+"módosításával."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:28
+msgid "Right-click on the ``landuse`` layer in the layers list."
+msgstr "Jobb gombbal kattintson a ``landuse`` rétegre a réteglistában."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:29
 msgid ""
 "Select the menu item :guilabel:`Properties...` in the menu that appears."
-msgstr ""
-"A megjelenő menüben válassza a :guilabel:`Tulajdonságok...` menüpontot."
+msgstr "A megjelenő menüben válassza a :guilabel:`Tulajdonságok…` menüpontot."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:31
 msgid ""
 "By default, you can also access a layer's properties by double-clicking on "
 "the layer in the Layers list."
 msgstr ""
-"Alapértelmezés szerint a réteg tulajdonságokat, a rétegnévre dupla "
-"egérkattintással is elérheti a réteglistában."
+"Alapértelmezés szerint a rétegtulajdonságokat a rétegnévre duplán kattintva "
+"is elérheti a réteglistából."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:34
 msgid ""
@@ -101,10 +121,10 @@ msgid ""
 "the :guilabel:`Layer Styling` panel. You can use this panel to change some "
 "properties of the layer: by default, changes will be applied immediately!"
 msgstr ""
-"A |jelrendszer| gomb a :guilabel:`Rétegek` panel tetején a :guilabel:`Réteg "
-"stílus` panelt nyitja meg. Ezt a panel használhatja a réteg néhány "
-"tulajdonságának módosítására: alapértelmezés szerint a módosítások azonnal "
-"megjelennek a térképen!"
+"A :guilabel:`Rétegek` panel tetején a |symbology| gomb a "
+":guilabel:`Rétegstílus` panelt nyitja meg. Ezt a panel használhatja a réteg "
+"néhány tulajdonságának módosítására: alapértelmezés szerint a módosítások "
+"azonnal megjelennek a térképen!"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:814
 msgid "symbology"
@@ -115,33 +135,43 @@ msgid ""
 "In the :guilabel:`Layer Properties` window, select the |symbology| "
 ":guilabel:`Symbology` tab:"
 msgstr ""
-":guilabel:`Réteg tulajdonságok` ablakban válassza a |jelrendszer|  "
-":guilabel:`jelrendszer` tab: fület:"
+":guilabel:`Rétegtulajdonságok` ablakban válassza a |symbology|| "
+":guilabel:`Jelrendszer` fület:"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:45
 msgid ""
 "Click the color select button next to the :guilabel:`Color` label. A "
 "standard color dialog will appear."
 msgstr ""
-"Kattintson a szín választó gombra a :guilabel:`Szín` címke mellett. A "
-"szabványos szín párbeszédablak jelenik meg."
+"Kattintson a színválasztó gombra a :guilabel:`Szín` felirat mellett. A "
+"szokásos színválasztó párbeszédablak jelenik meg."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:47
 msgid "Choose a gray color and click :guilabel:`OK`."
-msgstr "Válasszon egy szürke színt és kattintson az  :guilabel:`OK` gombra."
+msgstr "Válasszon egy szürke színt és kattintson az :guilabel:`OK` gombra."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:48
 msgid ""
 "Click :guilabel:`OK` again in the :guilabel:`Layer Properties` window, and "
 "you will see the color change being applied to the layer."
 msgstr ""
-"Kattintson a :guilabel:`OK` gombra ismét a :guilabel:`Réteg tulajdonságok` "
-"ablakban és látni fogja szín megváltozását a rétegen."
+"Kattintson az :guilabel:`OK` gombra ismét a :guilabel:`Rétegtulajdonságok` "
+"ablakban, és látni fogja, ahogyan a szín megváltozik a rétegen."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:52
 #: ../../docs/training_manual/basic_map/symbology.rst:102
 msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
 msgstr ":abbr:`★☆☆ (alapszint)` Próbálja ki önállóan:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:54
+msgid ""
+"Change the color of the ``water`` layer to light blue. Try to use the "
+":guilabel:`Layer Styling` panel instead of the :guilabel:`Layer Properties` "
+"menu."
+msgstr ""
+"Változtassa meg a ``water`` réteg színét világos kékre. Próbálja ki a "
+":guilabel:`Rétegstílus` panelt a :guilabel:`Rétegtulajdonságok` menü "
+"helyett."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:57
 msgid "Solution"
@@ -151,11 +181,118 @@ msgstr "Megoldás"
 msgid "Verify that the colors are changing as you expect them to change."
 msgstr "Ellenőrizze, hogy a színek a várakozásának megfelelően módosultak-e."
 
+#: ../../docs/training_manual/basic_map/symbology.rst:61
+msgid ""
+"It is enough to select the ``water`` layer in the legend and then click on "
+"the |symbology| :sup:`Open the Layer Styling panel` button. Change the color"
+" to one that fits the water layer."
+msgstr ""
+"Elég, ha kijelöli a ``water`` réteget a réteglistában, majd rákattint a "
+"|symbology| :sup:`Rétegstílus panel megnyitása` gombra. Változtassa meg a "
+"színt a víz réteghez illőre."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:68
+msgid ""
+"If you want to work on only one layer at a time and don't want the other "
+"layers to distract you, you can hide a layer by clicking in the checkbox "
+"next to its name in the layers list. If the box is blank, then the layer is "
+"hidden."
+msgstr ""
+"Ha egyszerre csak egy rétegen szeretne dolgozni, és nem szeretné, hogy a "
+"többi réteg elvonja a figyelmét, akkor a rétegek listájában a név melletti "
+"jelölőnégyzetre kattintva elrejthet egy réteget. Ha a négyzet üres, akkor a "
+"réteg el van rejtve."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:75
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Changing Symbol Structure"
+msgstr ""
+":abbr:`★☆☆ (alapszint)` Kövesse végig: A szimbólumok felépítésének "
+"módosítása"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:77
+msgid ""
+"This is good stuff so far, but there's more to a layer's symbology than just"
+" its color. Next we want to eliminate the lines between the different land "
+"use areas so as to make the map less visually cluttered."
+msgstr ""
+"Ez eddig nem rossz, de egy réteg jelrendszere többről szól, mint a színéről."
+" A következőkben el akarjuk tüntetni a különböző földhasználati területek "
+"közötti vonalakat, hogy a térkép vizuálisan kevésbé legyen zavaros."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:81
+msgid ""
+"Open the :guilabel:`Layer Properties` window for the ``landuse`` layer."
+msgstr ""
+"Nyissa meg a ``landuse`` réteg :guilabel:`Rétegtulajdonságok` "
+"párbeszédablakát."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:84
+msgid ""
+"Under the |symbology| :guilabel:`Symbology` tab, you will see the same kind "
+"of dialog as before. This time, however, you're doing more than just quickly"
+" changing the color."
+msgstr ""
+"A |symbology| :guilabel:`Jelrendszer` fül alatt ugyanaz a párbeszédablak "
+"jelenik meg, mint korábban. Ezúttal azonban nem csak a szín gyors "
+"megváltoztatását fogjuk elvégezni."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:87
+msgid ""
+"In the symbol layers tree, expand the :guilabel:`Fill` dropdown and select "
+"the :guilabel:`Simple fill` option."
+msgstr ""
+"A szimbólumrétegek fájában bontsa ki a :guilabel:`Kitöltés` legördülő "
+"listát, és válassza ki az :guilabel:`Egyszerű kitöltés` elemet."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:89
+msgid ""
+"Click on the :guilabel:`Stroke style` dropdown. At the moment, it should be "
+"showing a short line and the words :guilabel:`Solid Line`."
+msgstr ""
+"Kattintson a :guilabel:`Körvonalstílus` legördülő menüpontra. Jelenleg egy "
+"rövid vonalat és a :guilabel:`Folytonos vonal` feliratot kell látnia."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:91
+msgid "Change this to :guilabel:`No Line`."
+msgstr "Változtassa ezt :guilabel:`Nincs vonal`-ra."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:96
 #: ../../docs/training_manual/basic_map/symbology.rst:161
 #: ../../docs/training_manual/basic_map/symbology.rst:217
 msgid "Click :guilabel:`OK`."
 msgstr "Kattintson az :guilabel:`OK` gombra."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:98
+msgid "Now the ``landuse`` layer won't have any lines between areas."
+msgstr ""
+"Mostantól a ``landuse`` rétegen nem jelennek meg vonalak a területek között."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:104
+msgid ""
+"Change the ``water`` layer's symbology again so that it has a darker blue "
+"outline."
+msgstr ""
+"Most módosítsa a ``water`` réteg jelrendszerét, hogy sötétebb kék körvonala "
+"legyen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:106
+msgid ""
+"Change the ``rivers`` layer's symbology to a sensible representation of "
+"waterways."
+msgstr ""
+"Módosítsa ``rivers`` réteg jelrendszerét a vízfolyások jellemző "
+"ábrázolására."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:109
+msgid ""
+"Remember: you can use the |symbology| :sup:`Open the Layer Styling panel` "
+"button and see all the changes instantly. That panel also allows you to undo"
+" individual changes while symbolizing a layer."
+msgstr ""
+"Ne feledje: használhatja a |symbology| :sup:`Rétegstílus panel megnyitása` "
+"gombot, amin azonnal láthatja az összes módosítást. Ez a panel azt is "
+"lehetővé teszi, hogy a réteg szimbolizálása közben visszavonja az egyes "
+"változtatásokat."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:113
 #: ../../docs/training_manual/basic_map/symbology.rst:236
@@ -166,9 +303,114 @@ msgstr "Kattintson az :guilabel:`OK` gombra."
 msgid "Answer"
 msgstr "Válasz"
 
+#: ../../docs/training_manual/basic_map/symbology.rst:116
+msgid "Your map should now look like this:"
+msgstr "A térképnek most így kell kinéznie:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:121
+msgid "If you are a Beginner-level user, you may stop here."
+msgstr "Ha Ön kezdő szintű felhasználó, itt megállhat."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:123
+msgid ""
+"Use the method above to change the colors and styles for all the remaining "
+"layers."
+msgstr ""
+"A fenti módszerrel változtassa meg az összes többi réteg színét és stílusát."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:125
+msgid ""
+"Try using natural colors for the objects. For example, a road should not be "
+"red or blue, but can be gray or black."
+msgstr ""
+"Próbáljon természetes színeket használni az egyes objektumokhoz. Például egy"
+" út ne legyen piros vagy kék, hanem legyen szürke vagy fekete."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:127
+msgid ""
+"Also feel free to experiment with different :guilabel:`Fill style` and "
+":guilabel:`Stroke style` settings for the polygons."
+msgstr ""
+"Kísérletezzen bátran a felületek különböző :guilabel:`Kitöltési stílusa` és "
+":guilabel:`Körvonalstílusa` beállításaival is."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:135
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Scale-Based Visibility"
+msgstr ":abbr:`★★★☆ (középszint)` Kövesse végig: Méretarány-alapú láthatóság"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:137
+msgid ""
+"Sometimes you will find that a layer is not suitable for a given scale. For "
+"example, a dataset of all the continents may have low detail, and not be "
+"very accurate at street level. When that happens, you want to be able to "
+"hide the dataset at inappropriate scales."
+msgstr ""
+"Néha előfordulhat, hogy egy réteg nem alkalmas egy adott méretarányon való "
+"használathoz. Például az összes kontinenst tartalmazó adathalmaz alacsony "
+"részletességű lehet, és utcaszinten nem túl pontos. Ha ez megtörténik, el "
+"kell tudni rejteni az adathalmazt a nem megfelelő méretarányokban."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:142
+msgid ""
+"In our case, we may decide to hide the buildings from view at small scales. "
+"This map, for example..."
+msgstr ""
+"Esetünkben dönthetünk úgy, hogy kis léptékben elrejtjük szem elől az "
+"épületeket. Ez a térkép például…"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:148
+msgid ""
+"... is not very useful. The buildings are hard to distinguish at that scale."
+msgstr ""
+"… nem túl hasznos. Az épületeket nehéz felismerni ebben a méretarányban."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:150
+msgid "To enable scale-based rendering:"
+msgstr "A méretarány-alapú megjelenítés engedélyezéséhez:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:152
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog for the ``buildings`` layer."
+msgstr ""
+"Nyissa meg a ``buildings`` réteg :guilabel:`Rétegtulajdonságok` "
+"párbeszédablakát."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:153
+msgid "Activate the |rendering| :guilabel:`Rendering` tab."
+msgstr "Váltson át a |rendering| :guilabel:`Megjelenítés` fülre."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:812
 msgid "rendering"
 msgstr "rendering"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:154
+msgid ""
+"Enable scale-based rendering by clicking on the checkbox labeled "
+":guilabel:`Scale dependent visibility`:"
+msgstr ""
+"Engedélyezze a méretarány-alapú megjelenítést a :guilabel:`Méretarányfüggő "
+"láthatóság` jelölőnégyzettel:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:156
+msgid "Change the :guilabel:`Minimum` value to ``1:10000``."
+msgstr "Módosítsa a :guilabel:`Minimum` értéket ``1:10000``-re."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:163
+msgid ""
+"Test the effects of this by zooming in and out in your map, noting when the "
+"``buildings`` layer disappears and reappears."
+msgstr ""
+"Tesztelje le ennek hatását a térképen való nagyítással és kicsinyítéssel, és"
+" figyelje meg, hogy az ``buildings`` réteg mikor tűnik el és mikor jelenik "
+"meg újra."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:166
+msgid ""
+"You can use your mouse wheel to zoom in increments. Alternatively, use the "
+"zoom tools to zoom to a window:"
+msgstr ""
+"Az egérgörgővel fokozatosan nagyíthat, vagy használhatja a nagyítóeszközöket"
+" is:"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:169
 msgid "|zoomIn| |zoomOut|"
@@ -182,29 +424,988 @@ msgstr "zoomIn"
 msgid "zoomOut"
 msgstr "zoomOut"
 
+#: ../../docs/training_manual/basic_map/symbology.rst:172
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Adding Symbol Layers"
+msgstr ":abbr:`★★★☆ (középszint)` Kövesse végig: Szimbólumrétegek hozzáadása"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:174
+msgid ""
+"Now that you know how to change simple symbology for layers, the next step "
+"is to create more complex symbology. QGIS allows you to do this using symbol"
+" layers."
+msgstr ""
+"Most, hogy már tudja, hogyan változtathatja meg a rétegek egyszerű "
+"jelrendszerét, a következő lépés az összetettebb jelrendszer készítése. A "
+"QGIS ezt a szimbólumrétegek használatával teszi lehetővé."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:178
+msgid ""
+"Go back to the ``landuse`` layer's symbol properties panel (by clicking "
+":guilabel:`Simple fill` in the symbol layers tree)."
+msgstr ""
+"Menjünk vissza a ``landuse`` réteg szimbólumtulajdonságok paneljére (a "
+"szimbólumrétegek fájában az :guilabel:`Egyszerű kitöltésre` kattintva)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:181
+msgid ""
+"In this example, the current symbol has no outline (i.e., it uses the "
+":guilabel:`No Line` border style)."
+msgstr ""
+"Ebben a példában az aktuális szimbólumnak nincs körvonala (azaz a "
+":guilabel:`Nincs vonal` körvonalstílust használja)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:187
+msgid ""
+"Select the :guilabel:`Fill` level in the tree and click the |symbologyAdd| "
+":sup:`Add symbol layer` button. The dialog will change to look something "
+"like this, with a new symbol layer added:"
+msgstr ""
+"Válassza ki a :guilabel:`Kitöltés` szintet a fában, és kattintson a "
+"|symbologyAdd| :sup:`Szimbólumréteg hozzáadása` gombra. A párbeszédablak "
+"valahogy így fog kinézni az új szimbólumréteg hozzáadása után:"
+
 #: ../../docs/training_manual/basic_map/symbology.rst:816
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:195
+msgid ""
+"It may appear somewhat different in color, for example, but you're going to "
+"change that anyway."
+msgstr ""
+"Lehet, hogy például a színe kissé eltérőnek tűnik, de ezt úgyis meg fogjuk "
+"változtatni."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:198
+msgid ""
+"Now there's a second symbol layer. Being a solid color, it will of course "
+"completely hide the previous kind of symbol. Plus, it has a :guilabel:`Solid"
+" Line` border style, which we don't want. Clearly this symbol has to be "
+"changed."
+msgstr ""
+"Most már van egy második szimbólumréteg is. Mivel egyszínű, természetesen "
+"teljesen elrejti az előző típusú szimbólumot. Ráadásul :guilabel:`Folytonos`"
+" körvonalstílusa van, amit nem akarunk. Nyilvánvaló, hogy ezt a szimbólumot "
+"meg kell változtatnunk."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:202
+msgid ""
+"It's important not to get confused between a map layer and a symbol layer. A"
+" map layer is a vector (or raster) that has been loaded into the map. A "
+"symbol layer is part of the symbol used to represent a map layer. This "
+"course will usually refer to a map layer as just a layer, but a symbol layer"
+" will always be called a symbol layer, to prevent confusion."
+msgstr ""
+"Fontos, hogy ne keverjük össze a térképrétegeket a szimbólumrétegekkel. A "
+"térképréteg egy vektor (vagy raszter), amely be lett töltve a térképre. A "
+"szimbólumréteg a térképréteg ábrázolására használt szimbólum része. Ebben a "
+"kurzusban a térképrétegre általában csak rétegként fogunk hivatkozni, de a "
+"szimbólumréteget a félreértések elkerülése érdekében mindig "
+"szimbólumrétegnek fogjuk nevezni."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:208
+msgid "With the new :guilabel:`Simple Fill` symbol layer selected:"
+msgstr "Az új :guilabel:`Egyszerű kitöltés` szimbólumréteg kiválasztása után:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:210
+msgid "Set the border style to :guilabel:`No Line`, as before."
+msgstr ""
+"Állítsa be a körvonal stílusát :guilabel:`Nincs vonal`-ra, mint korábban."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:211
+msgid ""
+"Change the fill style to something other than :guilabel:`Solid` or "
+":guilabel:`No brush`. For example:"
+msgstr ""
+"Módosítsa a kitöltési stílust :guilabel:`Tömör` vagy :guilabel:`Nincs ecset`"
+" helyett valami másra. Például:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:219
+msgid ""
+"Now you can see your results and tweak them as needed. You can even add "
+"multiple extra symbol layers and create a kind of texture for your layer "
+"that way."
+msgstr ""
+"Most már láthatja az eredményt, és szükség szerint módosíthatja is. Akár "
+"több további szimbólumréteget is felvehet, és így létrehozhat egyfajta "
+"textúrát a réteghez."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:226
+msgid "It's fun! But it probably has too many colors to use in a real map..."
+msgstr ""
+"Ez jó móka! De valószínűleg túl sok színből áll ahhoz, hogy egy igazi "
+"térképen használjuk…"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:230
+#: ../../docs/training_manual/basic_map/symbology.rst:319
+#: ../../docs/training_manual/basic_map/symbology.rst:488
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
+msgstr ":abbr:`★★☆ (középszint)` Próbálja ki önállóan:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:232
+msgid ""
+"Remembering to zoom in if necessary, create a simple, but not distracting "
+"texture for the ``buildings`` layer using the methods above."
+msgstr ""
+"Ha szükséges, nagyítson a rétegre, majd hozzon létre egy egyszerű, de nem "
+"zavaró textúrát a ``buildings`` réteghez a fenti módszerrel."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:239
+msgid ""
+"Customize your ``buildings`` layer as you like, but remember that it has to "
+"be easy to tell different layers apart on the map."
+msgstr ""
+"A ``buildings`` réteget tetszés szerint alakíthatja, de ne feledje, hogy a "
+"térképen könnyen megkülönböztethetőek kell legyenek egymástól a különböző "
+"rétegek."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:242
+msgid "Here's an example:"
+msgstr "Itt látható egy példa:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:249
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Ordering Symbol Levels"
+msgstr ":abbr:`★★★☆ (középszint)` Kövesse végig: Szimbólumréteg rendezése"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:251
+msgid ""
+"When symbol layers are rendered, they are also rendered in a sequence, "
+"similar to the way the different map layers are rendered. This means that in"
+" some cases, having many symbol layers in one symbol can cause unexpected "
+"results."
+msgstr ""
+"A szimbólumrétegek megjelenítésekor azok is sorrendben kerülnek "
+"megjelenítésre, hasonlóan a különböző térképrétegek megjelenítéséhez. Ez azt"
+" jelenti, hogy bizonyos esetekben váratlan eredményeket okozhat, ha egy "
+"szimbólum több szimbólumrétegből áll."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:255
+msgid ""
+"Give the ``roads`` layer an extra symbol layer (using the method for adding "
+"symbol layers demonstrated above)."
+msgstr ""
+"Adjon az ``roads`` réteghez egy további szimbólumréteget (a szimbólumrétegek"
+" hozzáadásának fent bemutatott módszerével)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:257
+msgid ""
+"Give the base line a :guilabel:`Stroke width` of ``1.5`` and a black color."
+msgstr ""
+"Állítsunk be az alapvonalnak ``1,5``-ös :guilabel:`Körvonalszélességet` és "
+"fekete színt."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:258
+msgid ""
+"Give the new, uppermost layer a thickness of ``0.8`` and a white color."
+msgstr ""
+"Állítsunk be az új, legfelső rétegnek ``0,8`` vastagságot és fehér színt."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:260
+msgid "You'll notice that this happens:"
+msgstr "Észre fogja venni, hogy ez történik:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:265
+msgid ""
+"Well, roads have now a *street* like symbology, but you see that lines are "
+"overlapping each others at each cross. That's not what we want at all!"
+msgstr ""
+"Nos, az utaknak most van ugyan egy *utcaszerű* kinézetük, de látható, hogy a"
+" vonalak minden egyes kereszteződésnél átfedik egymást. Ez egyáltalán nem "
+"az, amit mi akartunk!"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:268
+msgid ""
+"To prevent this from happening, you can sort the symbol levels and thereby "
+"control the order in which the different symbol layers are rendered."
+msgstr ""
+"Ennek megakadályozására a szimbólumszinteket rendezheti, és ezáltal "
+"szabályozhatja a különböző szimbólumrétegek megjelenítési sorrendjét."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:271
+msgid "To change the order of the symbol layers:"
+msgstr "A szimbólumrétegek sorrendjének megváltoztatásához:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:273
+msgid "Select the topmost :guilabel:`Line` layer in the symbol layers tree."
+msgstr ""
+"Válassza ki a legfelső :guilabel:`Vonal` réteget a szimbólumrétegek fájában."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:274
+msgid ""
+"Click :menuselection:`Advanced --> Symbol levels...` in the bottom right-"
+"hand corner of the window."
+msgstr ""
+"Kattintson a :menuselection:`Speciális --> Szimbólumrétegek…` gombra az "
+"ablak jobb alsó sarkában."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:280
+msgid "This will open a dialog like this:"
+msgstr "Ez egy ilyen párbeszédablak nyílik meg:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:285
+msgid ""
+"Check |checkbox| :guilabel:`Enable symbol levels`. You can then set the "
+"layer order of each symbol by entering the corresponding level number. 0 is "
+"the bottom layer."
+msgstr ""
+"Jelölje be a |checkbox| :guilabel:`Szimbólumszintek engedélyezését`. Ezután "
+"beállíthatja az egyes szimbólumok rétegsorrendjét a megfelelő rétegszám "
+"megadásával. A 0 az alsó réteg."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:805
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/training_manual/basic_map/symbology.rst:289
+msgid "In our case, we just want to activate the option, like this:"
+msgstr "A mi esetünkben elég csak aktiválni a funkciót, így:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:294
+msgid "This will render the white line above the thick black line borders:"
+msgstr "Ezáltal a fehér vonal a vastag fekete vonal határai fölé kerül:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:296
+msgid "Click :guilabel:`OK` twice to return to the map."
+msgstr "Kattintson a :guilabel:`OK` gombra a térképhez való visszatéréshez."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:298
+msgid "The map will now look like this:"
+msgstr "A térkép mostantól így fog kinézni:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:303
+msgid ""
+"When you're done, remember to save the symbol itself so as not to lose your "
+"work if you change the symbol again in the future. You can save your current"
+" symbol style by clicking the :guilabel:`Save Style...` button at the bottom"
+" of the :guilabel:`Layer Properties` dialog. We will be using the "
+":guilabel:`QGIS QML Style File` format."
+msgstr ""
+"Ha végzett, ne feledje elmenteni magát a szimbólumot, hogy ne veszítse el a "
+"munkáját, ha a jövőben újra megváltoztatná a szimbólumot. Az aktuális "
+"szimbólum stílusát a :guilabel:`Stílus mentése…` gombra kattintva mentheti "
+"el a :guilabel:`Rétegtulajdonságok` párbeszédablak alján. A :guilabel:`QGIS "
+"QML-stílusfájl` formátumot fogjuk használni."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:312
+msgid ""
+"Save your style in the :file:`solution/styles/better_roads.qml` folder. You "
+"can load a previously saved style at any time by clicking the "
+":guilabel:`Load Style...` button. Before you change a style, keep in mind "
+"that any unsaved style you are replacing will be lost."
+msgstr ""
+"Mentse el a stílust a :file:`solution/styles/better_roads.qml` mappába. A "
+"korábban elmentett stílus bármikor betölthető a :guilabel:`Stílus "
+"betöltése…` gombra kattintva. Mielőtt megváltoztatna egy stílust, ne "
+"feledje, hogy minden nem mentett stílus, amelyet lecserél, elveszik."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:321
+msgid "Change the appearance of the ``roads`` layer again."
+msgstr "Változtassa meg újra a ``roads`` réteg kinézetét."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:323
+msgid ""
+"Make the roads narrow and yellow, with a thin, pale gray outline and a thin "
+"black line in the middle. Remember that you may need to change the layer "
+"rendering order via the :menuselection:`Advanced --> Symbol levels...` "
+"dialog."
+msgstr ""
+"Az utak legyenek keskenyek és sárgák, vékony, halványszürke körvonallal és "
+"egy vékony fekete vonallal a közepén. Ne feledje, hogy a szimbólumrétegek "
+"megjelenítési sorrendjét a :menuselection:`Speciális --> Szimbólumszintek…` "
+"párbeszédablakon keresztül kell megváltoztatnia."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:334
+msgid "To make the required symbol, you need three symbol layers:"
+msgstr "A kívánt szimbólum elkészítéséhez három szimbólumrétegre van szükség:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:339
+msgid ""
+"The lowest symbol layer is a broad, solid gray line. On top of it there is a"
+" slightly thinner solid yellow line and finally another thinner solid black "
+"line."
+msgstr ""
+"A legalsó szimbólumréteg egy széles, folytonos szürke vonal. Ezen van egy "
+"kissé vékonyabb folytonos sárga vonal, és végül egy másik vékonyabb "
+"folytonos fekete vonal."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:342
+msgid ""
+"If your symbol layers resemble the above but you're not getting the result "
+"you want:"
+msgstr ""
+"Ha a szimbólumrétegei hasonlítanak a fentiekre, de nem kapja meg a kívánt "
+"eredményt:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:345
+msgid "Check that your symbol levels look something like this:"
+msgstr "Ellenőrizze, hogy a szimbólumszintek valahogy így néznek-e ki:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:350
+msgid "Now your map should look like this:"
+msgstr "A térképnek most így kell kinéznie:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:357
+#: ../../docs/training_manual/basic_map/symbology.rst:553
+msgid ":abbr:`★★★ (Advanced level)` Try Yourself:"
+msgstr ":abbr:`★★★ (haladó szint)` Próbálja ki önállóan:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:359
+msgid ""
+"Symbol levels also work for classified layers (i.e., layers having multiple "
+"symbols). Since we haven't covered classification yet, you will work with "
+"some rudimentary pre-classified data."
+msgstr ""
+"A szimbólumszintek az osztályozott rétegek (azaz a több szimbólumból álló "
+"rétegek) esetében is működnek. Mivel még nem foglalkoztunk a besorolással, "
+"néhány kezdetleges, előre besorolt adattal fogunk most dolgozni."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:363
+msgid "Create a new project and add only the ``roads`` dataset."
+msgstr ""
+"Hozzon létre egy új projektet, és csak a ``roads`` adathalmazt adja hozzá."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:364
+msgid ""
+"Apply the style file :file:`advanced_levels_demo.qml` provided in "
+":file:`exercise_data/styles` to the layer. This can be done through the "
+":menuselection:`Style --> Load Style...` combobox at the bottom of the "
+":guilabel:`Layer Properties` dialog."
+msgstr ""
+"Alkalmazza az :file:`advanced_levels_demo.qml` fájlban található "
+":file:`exercise_data/styles` stílusfájlt a rétegre. Ezt a "
+":menuselection:`Stílus --> Stílus betöltése…` legördülő listából teheti meg "
+"a :guilabel:`Rétegtulajdonságok` párbeszédablak alján."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:368
+msgid "Zoom in to the |majorUrbanName| area."
+msgstr "Nagyítson rá |majorUrbanName| területére."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:369
+msgid ""
+"Using symbol layers, ensure that the outlines of layers flow into one "
+"another as per the image below:"
+msgstr ""
+"A szimbólumrétegek használatával gondoskodjon arról, hogy a rétegek "
+"körvonalai az alábbi képen látható módon folyjanak egymásba:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:379
+msgid "Adjust your symbol levels to these values:"
+msgstr "Állítsa a szimbólumszinteket ezekre az értékekre:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:384
+msgid "Experiment with different values to get different results."
+msgstr "Kísérletezhet más értékekkel is, hogy különböző eredményeket kapjon."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:385
+msgid "Open your original map again before continuing with the next exercise."
+msgstr "A következő feladat előtt nyissa meg újra az eredeti térképet."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:389
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Symbol layer types"
+msgstr ":abbr:`★★★☆ (középszint)` Kövesse végig: Szimbólumrétegek típusai"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:391
+msgid ""
+"In addition to setting fill colors and using predefined patterns, you can "
+"use different symbol layer types entirely. The only type we've been using up"
+" to now was the :guilabel:`Simple Fill` type. The more advanced symbol layer"
+" types allow you to customize your symbols even further."
+msgstr ""
+"A kitöltési színek és az előre definiált minták használata mellett teljesen "
+"más típusú szimbólumrétegeket is használhat. Az egyetlen típus, amelyet "
+"eddig használtunk, az :guilabel:`Egyszerű kitöltés` típus volt. A fejlettebb"
+" szimbólumréteg-típusok lehetővé teszik, hogy még jobban testre szabja a "
+"szimbólumokat."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:396
+msgid ""
+"Each type of vector (point, line and polygon) has its own set of symbol "
+"layer types. First we will look at the types available for points."
+msgstr ""
+"Minden vektortípusnak (pont, vonal és sokszög) saját szimbólumréteg-típusai "
+"vannak. Először a pontokhoz rendelkezésre álló típusokat nézzük meg."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:400
+msgid "Point Symbol Layer Types"
+msgstr "Pontok szimbólumréteg-típusai"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:402
+msgid "Uncheck all the layers except for ``places``."
+msgstr "Vegye ki a pipát az összes réteg elől, kivéve a ``places`` réteget."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:403
+msgid "Change the symbol properties for the ``places`` layer:"
+msgstr "Módosítsa a ``places`` réteg szimbólumának tulajdonságait:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:408
+msgid ""
+"You can access the various symbol layer types by selecting the "
+":guilabel:`Simple marker` layer in the symbol layers tree, then click the "
+":guilabel:`Symbol layer type` dropdown:"
+msgstr ""
+"A különböző szimbólumréteg-típusokat úgy érheti el, ha a szimbólumrétegek "
+"fájában kiválasztja az :guilabel:`Egyszerű szimbólum` réteget, majd a "
+":guilabel:`Szimbólumréteg-típus` legördülő listára kattint:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:415
+msgid ""
+"Investigate the various options available to you, and choose a symbol with "
+"styling you think is appropriate."
+msgstr ""
+"Vizsgálja meg a rendelkezésre álló különböző lehetőségeket, és válasszon egy"
+" olyan szimbólumot, amelynek stílusát megfelelőnek tartja."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:417
+msgid ""
+"If in doubt, use a round :guilabel:`Simple marker` with a white border and "
+"pale green fill, with a :guilabel:`Size` of ``3.00`` and a :guilabel:`Stroke"
+" width` of ``0.5``."
+msgstr ""
+"Ha nem tud dönteni, válasszon egy kerek :guilabel:`Egyszerű szimbólumot` "
+"fehér szegéllyel és halványzöld kitöltéssel, a :guilabel:`Méret` értéke "
+"``3.00``, a :guilabel:`Körvonalszélesség` pedig ``0.5`` legyen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:423
+msgid "Line Symbol Layer Types"
+msgstr "Vonalak szimbólumréteg-típusai"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:425
+msgid "To see the various options available for line data:"
+msgstr "A vonalakhoz rendelkezésre álló lehetőségek megtekintéséhez:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:427
+msgid ""
+"Change the :guilabel:`Symbol layer type` for the ``roads`` layer's topmost "
+"symbol layer to :guilabel:`Marker line`:"
+msgstr ""
+"Módosítsa a ``roads`` réteg legfelső szimbólumrétegének "
+":guilabel:`Szimbólumréteg-típusát`  :guilabel:`Szimbólumvonalra`:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:433
+msgid ""
+"Select the :guilabel:`Simple marker` layer in the symbol layers tree. Change"
+" the symbol properties to match this dialog:"
+msgstr ""
+"Válassza ki az :guilabel:`Egyszerű szimbólum` réteget a szimbólum rétegek "
+"fájában. Módosítsa a szimbólum tulajdonságait ennek a párbeszédablaknak "
+"megfelelően:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:439
+msgid ""
+"Select the :guilabel:`Marker line` layer and change the interval to "
+"``1.00``:"
+msgstr ""
+"Válassza ki a :guilabel:`Szimbólumvonal` réteget, és módosítsa az "
+"intervallumot ``1,00``-ra:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:444
+msgid ""
+"Ensure that the symbol levels are correct (via the :menuselection:`Advanced "
+"--> Symbol levels` dialog we used earlier) before applying the style."
+msgstr ""
+"A stílus alkalmazása előtt győződjön meg arról, hogy a szimbólumszintek "
+"megfelelőek (a korábban használt :menuselection:`Speciális --> "
+"Szimbólumszintek` párbeszédablakon keresztül)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:448
+msgid ""
+"Once you have applied the style, take a look at its results on the map. As "
+"you can see, these symbols change direction along with the road but don't "
+"always bend along with it. This is useful for some purposes, but not for "
+"others. If you prefer, you can change the symbol layer in question back to "
+"the way it was before."
+msgstr ""
+"Miután alkalmazta a stílust, nézze meg az eredményt a térképen. Amint "
+"láthatja, ezek a szimbólumok az úttal együtt változtatják az irányukat, de "
+"nem mindig kanyarodnak vele együtt. Ez bizonyos esetekben hasznos, máskor "
+"viszont nem. Ha szeretné, visszaállíthatja a szóban forgó szimbólumréteget a"
+" korábbi állapotába."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:455
+msgid "Polygon Symbol Layer Types"
+msgstr "Felületek szimbólumréteg-típusai"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:457
+msgid "To see the various options available for polygon data:"
+msgstr "A felületekhez rendelkezésre álló lehetőségek megtekintéséhez:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:459
+msgid ""
+"Change the :guilabel:`Symbol layer type` for the ``water`` layer, as before "
+"for the other layers."
+msgstr ""
+"Módosítsa a ``water`` réteg :guilabel:`Szimbólumréteg-típusát` a korábbi "
+"rétegekhez hasonlóan."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:461
+msgid "Investigate what the different options on the list can do."
+msgstr "Nézze át a listán szereplő különböző típusokban rejlő lehetőségeket."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:462
+msgid "Choose one of them that you find suitable."
+msgstr "Válasszon közülük egyet, amelyiket megfelelőnek találja."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:463
+msgid ""
+"If in doubt, use the :guilabel:`Point pattern fill` with the following "
+"options:"
+msgstr ""
+"Ha nem tud dönteni, használja a :guilabel:`Kitöltés pontmintával` típust a "
+"következő beállításokkal:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:472
+msgid "Add a new symbol layer with a normal :guilabel:`Simple fill`."
+msgstr ""
+"Adjon hozzá egy új szimbólumréteget egy normál :guilabel:`Egyszerű kitöltés`"
+" szimbólummal."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:473
+msgid "Make it the same light blue with a darker blue border."
+msgstr "Legyen ugyanolyan világoskék, sötétebb kék szegéllyel."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:474
+msgid ""
+"Move it underneath the point pattern symbol layer with the :guilabel:`Move "
+"down` button:"
+msgstr ""
+"A :guilabel:`Mozgatás lefelé` gombbal mozgassa a pontmintás szimbólumréteg "
+"alá:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:480
+msgid ""
+"As a result, you have a textured symbol for the water layer, with the added "
+"benefit that you can change the size, shape and distance of the individual "
+"dots that make up the texture."
+msgstr ""
+"Ennek eredményeképpen egy textúrázott szimbólumot kapunk a vizek réteghez, "
+"amelynek további előnye, hogy megváltoztathatjuk a textúrát alkotó egyes "
+"pontok méretét, alakját és távolságát."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:490
+msgid ""
+"Apply a green transparent fill color to the ``protected_areas`` layer, and "
+"change the outline to look like this:"
+msgstr ""
+"Állítson be egy zöld, átlátszó kitöltőszínt a ``protected_areas`` rétegre, "
+"és változtassa meg a körvonalát, hogy így nézzen ki:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:500
+msgid "Here are examples of the symbol structure:"
+msgstr "Íme példák a szimbólumszerkezetre:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:510
+msgid ""
+":abbr:`★★★ (Advanced level)` Follow Along: Geometry generator symbology"
+msgstr ""
+":abbr:`★★★ (haladó szint)` Kövesse végig: Geometriagenerátor jelrendszer"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:512
+msgid ""
+"You can use the Geometry generator symbology with all layer types (points, "
+"lines and polygons). The resulting symbol depends directly on the layer "
+"type."
+msgstr ""
+"A geometriagenerátor jelrendszert mindegyik rétegtípussal (pontok, vonalak "
+"és felületek) használhatja. A kapott szimbólum közvetlenül a rétegtípustól "
+"függ."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:515
+msgid ""
+"Very briefly, the Geometry generator symbology allows you to run some "
+"spatial operations within the symbology itself. For example you can run a "
+"real centroid spatial operation on a polygon layer without creating a point "
+"layer."
+msgstr ""
+"Nagyon röviden, a geometriagenerátor jelrendszer lehetővé teszi néhány "
+"térbeli művelet végrehajtását magán a jelrendszeren belül. Például valódi "
+"térbeli centrális műveletet futtathat egy felületrétegen anélkül, hogy "
+"pontréteget hozna létre."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:519
+msgid ""
+"Moreover, you have all the styling options to change the appearance of the "
+"resulting symbol."
+msgstr ""
+"Ezenfelül a kapott szimbólum megjelenésének megváltoztatásához az összes "
+"stílusozási lehetőség is rendelkezésre áll."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:522
+msgid "Let's give it a try!"
+msgstr "Próbáljuk ki!"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:524
+msgid "Select the ``water`` layer."
+msgstr "Válassza ki a ``water`` réteget."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:525
+msgid ""
+"Click on :guilabel:`Simple fill` and change the :guilabel:`Symbol layer "
+"type` to :guilabel:`Geometry generator`."
+msgstr ""
+"Kattintson az :guilabel:`Egyszerű kitöltésre`, és módosítsa a "
+":guilabel:`Szimbólumréteg-típus` típust :guilabel:`Geometriagenerátor`-ra."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:531
+msgid ""
+"Before to start writing the spatial query we have to choose the Geometry "
+"Type in output. In this example we are going to create centroids for each "
+"feature, so change the Geometry Type to :guilabel:`Point / Multipoint`."
+msgstr ""
+"Mielőtt elkezdenénk írni a térbeli lekérdezést, ki kell választanunk a "
+"kimenet geometriatípusát. Ebben a példában minden egyes elem centrálisát "
+"fogjuk létrehozni, ezért a geometriatípust :guilabel:`Pont / multipontra`-ra"
+" változtatjuk."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:534
+msgid "Now let's write the query in the query panel::"
+msgstr "Most írjuk meg a lekérdezést a lekérdezési panelen::"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:541
+msgid ""
+"When you click on :guilabel:`OK` you will see that the ``water`` layer is "
+"rendered as a point layer! We have just run a spatial operation within the "
+"layer symbology itself, isn't that amazing?"
+msgstr ""
+"Amikor az :guilabel:`OK` gombra kattint, látni fogja, hogy a ``water`` réteg"
+" pontrétegként jelenik meg! Épp most futtattunk egy térbeli műveletet "
+"magában a réteg jelrendszerében! Hát nem csodálatos?"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:548
+msgid ""
+"With the Geometry generator symbology you can really go over the edge of "
+"*normal* symbology."
+msgstr ""
+"A geometriagenerátor jelrendszerrel valóban a *normális* jelrendszer "
+"határait feszegetheti."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:555
+msgid ""
+"Geometry generator are just another symbol level. Try to add another "
+":guilabel:`Simple fill` underneath the :guilabel:`Geometry generator` one."
+msgstr ""
+"A geometriagenerátor csak egy újabb szimbólumszint. Próbáljon meg hozzáadni "
+"egy másik :guilabel:`Egyszerű kitöltést` a :guilabel:`Geometriagenerátor` "
+"alá."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:558
+msgid ""
+"Change also the appearance of the Simple marker of the Geometry generator "
+"symbology."
+msgstr ""
+"Változtassa meg a geometriagenerátor jelrendszer Egyszerű szimbólumának "
+"megjelenését is."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:560
+msgid "The final result should look like this:"
+msgstr "A végeredménynek így kell kinéznie:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:569
+msgid "Click on the |symbologyAdd| button to add another Symbol level."
+msgstr ""
+"Kattintson a |symbologyAdd| gombra egy újabb szimbólumszint hozzáadásához."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:570
+msgid ""
+"Move the new symbol at the bottom of the list clicking the |arrowDown| "
+"button."
+msgstr ""
+"Mozgassa az új szimbólumot a lista aljára a |arrowDown| gombra kattintva."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:801
 msgid "arrowDown"
 msgstr "arrowDown"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:571
+msgid "Choose a good color to fill the water polygons."
+msgstr "Válasszon egy jó színt a vízfelületek kitöltéséhez."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:572
+msgid ""
+"Click on :guilabel:`Marker` of the Geometry generator symbology and change "
+"the circle with another shape as your wish."
+msgstr ""
+"Kattintson a geometriagenerátor jelrendszer :guilabel:`Szimbólum` elemére, "
+"és cserélje ki a kört egy másik alakzatra, amilyet szeretne."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:574
+msgid "Try experimenting other options to get more useful results."
+msgstr "Kísérletezzen más beállításokkal, hogy hasznosabb eredményt kapjon."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:578
+msgid ":abbr:`★★★ (Advanced level)` Follow Along: Creating a Custom SVG Fill"
+msgstr ""
+":abbr:`★★★ (haladó szint)` Kövesse végig: Egyéni SVG-kitöltés készítése"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:580
+msgid ""
+"To do this exercise, you will need to have the free vector editing software "
+"`Inkscape <https://inkscape.org/>`_ installed."
+msgstr ""
+"Ehhez a feladathoz telepíteni kell az ingyenes vektorgrafikus "
+"képszerkesztőt, az `Inkscape-et <https://inkscape.org/>`_."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:583
+msgid "Start the Inkscape program. You will see the following interface:"
+msgstr "Indítsa el az Inkscape programot. A következő felületet fogja látni:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:589
+msgid ""
+"You should find this familiar if you have used other vector image editing "
+"programs, like Corel."
+msgstr ""
+"Ha már használtál más vektoros képszerkesztő programot, például a Corelt, "
+"akkor ez ismerős lehet."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:592
+msgid ""
+"First, we'll change the canvas to a size appropriate for a small texture."
+msgstr ""
+"Először is, változtassuk meg a vásznat egy kicsi textúrának megfelelő "
+"méretűre."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:594
+msgid ""
+"Click on the menu item :menuselection:`File --> Document Properties`. This "
+"will give you the :guilabel:`Document Properties` dialog."
+msgstr ""
+"Kattintson a :menuselection:`Fájl --> Dokumentumbeállítások` menüpontra. "
+"Ekkor megjelenik a :guilabel:`Dokumentumbeállítások` párbeszédablak."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:596
+msgid "Change the :guilabel:`Units` to :guilabel:`px`."
+msgstr "Állítsa át a :guilabel:`Mértékegység`-et :guilabel:`px`-re."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:597
+msgid "Change the :guilabel:`Width` and :guilabel:`Height` to ``100``."
+msgstr ""
+"Módosítsa a :guilabel:`Szélesség` és :guilabel:`Magasság` értékeket "
+"``100``-ra."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:598
+msgid "Close the dialog when you are done."
+msgstr "Ha végzett, zárja be a párbeszédablakot."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:599
+msgid ""
+"Click on the menu item :menuselection:`View --> Zoom --> Page` to see the "
+"page you are working with."
+msgstr ""
+"Kattintson a :menuselection:`Nézet --> Nagyítás --> Nagyítás az oldalra` "
+"menüpontra, hogy láthassa az oldalt, amellyel éppen dolgozik."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:601
+msgid "Select the :guilabel:`Circle` tool:"
+msgstr "Válassza ki a :guilabel:`Körök rajzolása` eszközt:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:606
+msgid ""
+"Click and drag on the page to draw an ellipse. To make the ellipse turn into"
+" a circle, hold the :kbd:`Ctrl` button while you're drawing it."
+msgstr ""
+"Kattintson és húzza az egeret az oldalon egy ellipszis rajzolásához. Ahhoz, "
+"hogy az ellipszis körré alakuljon, tartsa lenyomva a :kbd:`Ctrl` gombot "
+"rajzolás közben."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:608
+msgid ""
+"Right-click on the circle you just created and open its :guilabel:`Fill and "
+"Stroke` options. You can modify its rendering, such as:"
+msgstr ""
+"Kattintson a jobb gombbal az imént létrehozott körre, és nyissa meg a "
+":guilabel:`Kitöltés és körvonal` beállításokat. Módosíthatja a "
+"megjelenítését, például:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:611
+msgid "Change the :guilabel:`Fill` color to a somehow pale grey-blue,"
+msgstr "Változtassa meg a :guilabel:`Kitöltés` színét halvány szürkéskékre,"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:612
+msgid "Assign to the border a darker color in :guilabel:`Stroke paint` tab,"
+msgstr ""
+"Válasszon a szegélynek egy sötétebb színt a :guilabel:`Körvonalrajzolat` "
+"lapon,"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:613
+msgid "And reduce the border thickness under :guilabel:`Stroke style` tab."
+msgstr ""
+"És csökkentse a körvonal vastagságát a :guilabel:`Körvonalstílus` lapon."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:618
+msgid "Draw a line using the :guilabel:`Pencil` tool:"
+msgstr "Rajzoljon egy vonalat a :guilabel:`Ceruza` eszközzel:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:620
+msgid ""
+"Click once to start the line. Hold :kbd:`Ctrl` to make it snap to increments"
+" of 15 degrees."
+msgstr ""
+"Kattintson egyszer a vonal elindításához. Tartsa lenyomva a :kbd:`Ctrl` "
+"billentyűt a 15 fokonkénti szögekhez illesztéshez."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:622
+msgid "Move the pointer horizontally and place a point with a simple click."
+msgstr ""
+"Mozgassa a kurzort vízszintesen, és helyezzen el egy pontot egyetlen "
+"kattintással."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:623
+msgid ""
+"Click and snap to the vertex of the line and trace a vertical line, ended by"
+" a simple click."
+msgstr ""
+"Kattintson a vonal csúcspontjára, és rajzoljon egy függőleges vonalat, "
+"amelyet egy egyszerű kattintással befejezhet."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:625
+msgid "Now join the two end vertices."
+msgstr "Most kösse össze a két végpontot."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:626
+msgid ""
+"Change the color and width of the triangle symbol to match the circle's "
+"stroke and move it around as necessary, so that you end up with a symbol "
+"like this one:"
+msgstr ""
+"Változtassa meg a háromszög szimbólum színét és szélességét, hogy "
+"megegyezzen a kör körvonalával, és szükség szerint mozgassa el, hogy végül "
+"egy ilyen szimbólumot kapjon:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:632
+msgid ""
+"If the symbol you get satisfies you, then save it as ``landuse_symbol`` "
+"under the directory that the course is in, under "
+":file:`exercise_data/symbols`, as SVG file."
+msgstr ""
+"Ha a kapott szimbólum megfelel, akkor mentse el SVG fájlként "
+"``landuse_symbol`` néven abba a könyvtárba, amelyben a kurzus van, a "
+":file:`exercise_data/symbols` alatt."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:636
+msgid "In QGIS:"
+msgstr "QGIS-ben:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:638
+msgid "Open the :guilabel:`Layer Properties` for the ``landuse`` layer."
+msgstr ""
+"Nyissa meg a ``landuse`` réteg :guilabel:`Rétegtulajdonságok` "
+"párbeszédablakát."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:639
+msgid ""
+"In the |symbology| :guilabel:`Symbology` tab, change the symbol structure by"
+" changing the :guilabel:`Symbol Layer Type` to :guilabel:`SVG Fill` shown "
+"below."
+msgstr ""
+"A |symbology| :guilabel:`Jelrendszer` lapon változtassa meg a "
+"szimbólumszerkezetet a :guilabel:`Szimbólumréteg-típust` :guilabel:`SVG "
+"kitöltés`-re állítva, ahogy alább látható."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:642
+msgid ""
+"Click the :guilabel:`...` button and then :guilabel:`Select File...` to "
+"select your SVG image."
+msgstr ""
+"Kattintson a :guilabel:`...` gombra, majd a :guilabel:`Fájl kiválasztása...`"
+" menüpontra az SVG kép kiválasztásához."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:645
+msgid ""
+"It's added to the symbol tree and you can now customize its different "
+"characteristics (colors, angle, effects, units...)."
+msgstr ""
+"Hozzá lett adva a szimbólumfához, és most már testre szabhatja a különböző "
+"jellemzőit (színek, szög, hatások, mértékegység.…)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:651
+msgid ""
+"Once you validate the dialog, features in ``landuse`` layer should now be "
+"covered by a set of symbols, showing a texture like the one on the following"
+" map. If textures are not visible, you may need to zoom in the map canvas or"
+" set in the layer properties a bigger :guilabel:`Texture width`."
+msgstr ""
+"A párbeszédablak jóváhagyása után a ``landuse`` réteg elemeit egy sor "
+"szimbólumnak kell lefednie, és a következő térképen látható textúrát kell "
+"megjelenítenie. Ha a textúrák nem látszanak, akkor a térképvásznat nagyítani"
+" kell, vagy a réteg tulajdonságaiban nagyobb :guilabel:`Textúra szélessége` "
+"értéket kell beállítani."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:660
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Masking"
+msgstr ":abbr:`★★★☆ (középszint)` Kövesse végig: Maszkolás"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:662
+msgid ""
+"Masking feature allows you to mask some symbol layer using another symbol "
+"layer or label."
+msgstr ""
+"A maszkolás funkció lehetővé teszi, hogy egy szimbólumréteget egy másik "
+"szimbólumréteg vagy címke segítségével maszkoljon ki."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:664
+msgid ""
+"In the following exercise, we want to configure rendering so that polygon "
+"labels will mask the black part of lines layer."
+msgstr ""
+"A következő feladatban úgy szeretnénk beállítani a megjelenítést, hogy a "
+"felületek címkéi maszkolják ki a vonalréteg fekete kontúrját."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:667
+msgid ""
+"Load the :file:`selective_masking.qgs` from dataset in directory "
+":file:`exercise_data/masking`."
+msgstr ""
+"Töltse be a :file:`selective_masking.qgs` adathalmazt az "
+":file:`exercise_data/masking` könyvtárból."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:669
+msgid "Open the :guilabel:`Layer Properties` window for the ``polys`` layer."
+msgstr ""
+"Nyissa meg a ``polys`` réteg :guilabel:`Rétegtulajdonságok` "
+"párbeszédablakát."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:672
+msgid ""
+"Under the |labelingSingle| :guilabel:`Labels` tab, you will see that "
+"|labelingSingle| :guilabel:`Single Labels` have already been defined."
+msgstr ""
+"A |labelingSingle| :guilabel:`Címkék` fül alatt látni fogja, hogy az "
+"|labelingSingle| :guilabel:`Egyszerű címkék` már be van állítva."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:807
 msgid "labelingSingle"
 msgstr "labelingSingle"
 
+#: ../../docs/training_manual/basic_map/symbology.rst:675
+msgid ""
+"From the :guilabel:`Labels` tab, select the |labelmask| :guilabel:`Mask` "
+"(and not :guilabel:`Masks` in general category list)"
+msgstr ""
+"A :guilabel:`Címkék` panelen válassza ki a |labelmask| :guilabel:`Maszk` "
+"fület (és ne :guilabel:`Maszkok`-at az oldalsávon)."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:809
 msgid "labelmask"
 msgstr "labelmask"
 
+#: ../../docs/training_manual/basic_map/symbology.rst:677
+msgid ""
+"Enable label mask by checking the |unchecked| :guilabel:`Enable mask` option"
+msgstr ""
+"A címkemaszk a |unchecked| :guilabel:`Maszk engedélyezése` bejelölésével "
+"kapcsolható be."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:818
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:679
+msgid ""
+"A message tells you that the now defined label mask shape can be later "
+"selected as a mask source to mask other symbol layers. Let's do that."
+msgstr ""
+"Egy üzenet tájékoztat arról, hogy a most definiált címkemaszk alakja később "
+"maszkforrásként választható ki más szimbólumrétegek maszkolásához. Tegyük "
+"ezt meg."
 
 #: ../../docs/training_manual/basic_map/symbology.rst:682
 #: ../../docs/training_manual/basic_map/symbology.rst:700
@@ -213,14 +1414,229 @@ msgstr "unchecked"
 msgid "Click :guilabel:`OK`"
 msgstr "Kattintson az :guilabel:`OK` gombra"
 
+#: ../../docs/training_manual/basic_map/symbology.rst:683
+#: ../../docs/training_manual/basic_map/symbology.rst:751
+msgid "Open the :guilabel:`Layer Properties` window for the ``lines`` layer."
+msgstr ""
+"Nyissa meg a ``lines`` réteg :guilabel:`Rétegtulajdonságok` "
+"párbeszédablakát."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:686
+msgid "Go to the |labelmask| :guilabel:`Masks` tab"
+msgstr "Váltson át a |labelmask| :guilabel:`Maszkok` panelre"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:688
+msgid ""
+"Click on the black line part of lines checkbox from masked symbol layers"
+msgstr ""
+"Kattintson a ``lines`` réteg fekete vonalrésze melletti jelölőnégyzetre a "
+"maszkolt szimbólumrétegeknél."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:690
+msgid ""
+"A message warns you that you have to select both masking and masked symbol "
+"layers to be able to save masking configuration. Again, let's do that."
+msgstr ""
+"Egy üzenet figyelmeztet arra, hogy a maszkoló és a maszkolt "
+"szimbólumrétegeket is ki kell választania ahhoz, hogy el tudja menteni a "
+"maszkolási beállítást. Ezt is tegyük meg."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:693
+msgid "Click on ``polys`` :guilabel:`Label mask` checkbox"
+msgstr ""
+"Kattintson a ``polys`` réteg :guilabel:`Címke maszkja` jelölőnégyzetére."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:695
+msgid "The message disappears, you can now safely save your configuration."
+msgstr "Az üzenet eltűnik, most már nyugodtan mentheti a beállítást."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:703
+msgid ""
+"You can see now that labels are masking the black part of lines, leaving "
+"only the yellow part."
+msgstr ""
+"Most láthatja, hogy a címkék elfedik a vonalak fekete kontúrját, és csak a "
+"sárga részt hagyják meg."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:710
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Masking using points symbols"
+msgstr ":abbr:`★★★☆ (középszint)` Kövesse végig: Maszkolás pontszimbólumokkal"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:712
+msgid ""
+"We want now to mask the black part of lines using only black planes that "
+"represent the ``points`` layer (i.e. ``B52`` and ``Jet`` points categories)."
+" For the sake of visibility, you can switch off ``polys`` layer visibility."
+msgstr ""
+"Most is a vonalak fekete körvonalát akarjuk maszkolni, csak a ``points`` "
+"réteg fekete repülőgépeit használva (azaz a ``B52`` és a ``Jet`` "
+"pontkategóriákat). A átláthatóság érdekében kikapcsolhatjuk a ``polys`` "
+"réteg láthatóságát."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:715
+msgid "Open the :guilabel:`Layer Properties` window for the ``points`` layer."
+msgstr ""
+"Nyissa meg a ``points`` réteg :guilabel:`Rétegtulajdonságok` "
+"párbeszédablakát."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:718
+msgid ""
+"Under the |symbology| :guilabel:`Symbology` tab, you will see that a "
+"|categorizedSymbol| :guilabel:`Categorized` renderer has been defined with 3"
+" different symbols depending on the ``Class`` field value."
+msgstr ""
+"A |symbology| :guilabel:`Jelrendszer` panelen látható, hogy egy "
+"|categorizedSymbol| :guilabel:`Kategorizált` megjelenítési szabályt "
+"definiáltunk 3 különböző szimbólummal a ``Class`` mező értékétől függően."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:803
 msgid "categorizedSymbol"
 msgstr "categorizedSymbol"
 
+#: ../../docs/training_manual/basic_map/symbology.rst:721
+msgid ""
+"Double click on ``B52`` plane icon, within the :guilabel:`Symbol` column"
+msgstr ""
+"Kattintson duplán a ``B52`` repülőgép ikonjára a :guilabel:`Szimbólum` "
+"oszlopban."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:726
+msgid ""
+"Click the |symbologyAdd| :sup:`Add symbol layer` button and select the "
+"``Mask`` :guilabel:`Symbol layer type`"
+msgstr ""
+"Kattintson a |symbologyAdd| :sup:`Szimbólumréteg hozzáadása` gombra, és "
+"válassza ki a :guilabel:`Szimbólumréteg-típus` listában a ``Maszk`` opciót."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:728
+msgid ""
+"A new hierarchy ``Mask`` (`symbol layer`) > ``Marker`` (`symbol`) > ``Simple"
+" Marker`` (`symbol layer`) appear below the root symbol ``Marker``."
+msgstr ""
+"Egy új hierarchia ``Maszk`` (`szimbólum réteg`) > ``Szimbólum`` > ``Egyszerű"
+" szimbólum`` (`szimbólumréteg`) jelenik meg a ``Szimbólum`` gyökérszimbólum "
+"alatt."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:733
+msgid ""
+"Now, let's define a mask that is identical to our plane marker but a little "
+"bit bigger."
+msgstr ""
+"Most definiáljunk egy maszkot, amely megegyezik a repülőgép szimbólumunkkal,"
+" csak egy kicsit nagyobb."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:735
+msgid ""
+"Select the newly created ``Simple Marker`` symbol layer and change its "
+":guilabel:`Symbol layer type` to ``SVG marker``"
+msgstr ""
+"Válassza ki az újonnan létrehozott ``Egyszerű szimbólum`` szimbólumréteget, "
+"és módosítsa a :guilabel:`Szimbólumréteg-típust`` ``SVG szimbólum``-ra."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:737
+msgid ""
+"Set the SVG file path to be the same as the already existing SVG marker, and"
+" the size to be bigger (24 millimeters is a pretty good choice for this use "
+"case)."
+msgstr ""
+"Állítsa be az SVG fájl elérési útját úgy, hogy az megegyezzen a már meglévő "
+"SVG jelölővel, a méret pedig legyen nagyobb (24 milliméter egy elég jó "
+"választás jelen esetben)."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:740
+msgid ""
+"Mask color doesn't matter here, only the shape is used in masking. Symbol "
+"layer order is also irrelevant in that situation."
+msgstr ""
+"A maszk színe itt nem számít, csak a forma lesz használva a maszkoláshoz. A "
+"szimbólumréteg sorrendje ebben a helyzetben szintén lényegtelen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:743
+msgid "You should get something like that:"
+msgstr "Valami ilyesmit kellene kapnia:"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:748
+msgid "Repeat the same operations on ``Jet`` symbol."
+msgstr "Ismételje meg ugyanezeket a műveleteket a ``Jet`` szimbólummal."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:754
+msgid "Go to the |labelmask| :guilabel:`Masks` tab."
+msgstr "Lépjen a |labelmask| :guilabel:`Maszkok` panelre."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:756
+msgid ""
+"The black line part of lines checkbox from masked symbol layers is already "
+"checked from our previous configuration."
+msgstr ""
+"A maszkolt szimbólumrétegekben a ``lines`` réteg fekete vonalrészének "
+"jelölőnégyzete már be van jelölve az előző konfigurációnkból."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:759
+msgid ""
+"Uncheck the :guilabel:`Label mask` ``polys`` checkbox and check both ``B52``"
+" and ``Jet`` :guilabel:`Mask symbol layer`"
+msgstr ""
+"Vegye ki a jelölőnégyzetet a ``polys`` réteg :guilabel:`Címke maszkja` "
+"jelölőnégyzetből, és jelölje be mind a ``B52``, mind a ``Jet`` "
+":guilabel:`Maszkoló szimbólumréteg`` jelölőnégyzetét."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:763
+msgid ""
+"You now see that black planes are masking the black part of lines, with only"
+" the yellow part visible."
+msgstr ""
+"Most láthatja, hogy a fekete repülőgépek elfedik a vonalak fekete részét, "
+"csak a sárga rész látható alattuk."
+
 #: ../../docs/training_manual/basic_map/symbology.rst:770
 msgid "In Conclusion"
-msgstr "Befejezésül"
+msgstr "Összefoglalva"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:772
+msgid ""
+"Changing the symbology for the different layers has transformed a collection"
+" of vector files into a legible map. Not only can you see what's happening, "
+"it's even nice to look at!"
+msgstr ""
+"A különböző rétegek jelrendszerének megváltoztatásával a vektoros fájlok "
+"olvasható térképpé alakultak át. Nem csak látni lehet, hogy mi történik, de "
+"még jó is ránézni!"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:777
+msgid "Further Reading"
+msgstr "További olvasnivaló"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:779
+msgid ""
+"`Examples of Beautiful Maps "
+"<https://gis.stackexchange.com/questions/3083/seeking-examples-of-beautiful-"
+"maps>`_"
+msgstr ""
+"`Példák gyönyörű térképekre "
+"<https://gis.stackexchange.com/questions/3083/seeking-examples-of-beautiful-"
+"maps>`_"
 
 #: ../../docs/training_manual/basic_map/symbology.rst:783
 msgid "What's Next?"
-msgstr "Mi következik?"
+msgstr "Hogyan tovább?"
+
+#: ../../docs/training_manual/basic_map/symbology.rst:785
+msgid ""
+"Changing symbols for whole layers is useful, but the information contained "
+"within each layer is not yet available to someone reading these maps. What "
+"are the streets called? Which administrative regions do certain areas belong"
+" to? What are the relative surface areas of the farms? All of this "
+"information is still hidden. The next lesson will explain how to represent "
+"this data on your map."
+msgstr ""
+"A rétegek szimbólumainak megváltoztatása hasznos, de az egyes rétegekben "
+"található információk még nem állnak a térkép olvasója rendelkezésére. Hogy "
+"hívják az utcákat? Mely közigazgatási régiókhoz tartoznak bizonyos "
+"területek? Mekkora a farmok relatív területe? Mindezek az információk most "
+"még rejtve vannak. A következő leckében elmagyarázzuk, hogyan ábrázolhatja "
+"ezeket az adatokat a térképen."
+
+#: ../../docs/training_manual/basic_map/symbology.rst:792
+msgid "Did you remember to save your map recently?"
+msgstr "Ugye nem felejtette el menteni a térképét?"
