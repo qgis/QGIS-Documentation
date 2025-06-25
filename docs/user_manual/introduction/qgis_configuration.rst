@@ -1505,6 +1505,20 @@ You can specify:
   * |unchecked| :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
     Enables insertion of 'import' when specifying imports
 
+.. _python_contextual_help:
+
+* :guilabel:`Contextual Help (F1)` provides options to control QGIS behavior when requesting help
+  on a PyQGIS or Qt object in a Python code sample.
+  When pressing :kbd:`F1`, QGIS will open the API page (or a search results page) matching:
+
+  #. the selected text if any OR
+  #. the word at the mouse position (if |checkbox| :guilabel:`F1 works on hovered words` is enabled) OR
+  #. the word at the text cursor position
+
+  This works for both Qt_ and :pyqgis:`PyQGIS <>` API documentation.
+  The page is opened either in QGIS, as an :guilabel:`Embedded webview (developer tools)`,
+  or in the :guilabel:`Default system web browser`.
+
 * under :guilabel:`Formatting`, you can add automated tools to reformat the code you are writing:
 
   * |unchecked| :guilabel:`Reformat on save`: formatting is applied just before saving the script
@@ -2835,6 +2849,7 @@ in the QGIS user profile.
 * Custom Python macros must be deployed in the :file:`python` directory.
 
 .. _`PROJ 8.0`: https://proj.org/en/8.0/
+.. _Qt: https://doc.qt.io/qt-6.8/
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

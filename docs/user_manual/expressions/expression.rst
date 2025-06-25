@@ -340,32 +340,40 @@ To create a new function:
 
    * If you select :guilabel:`Function file`, you need to enter a name for the Python :file:`.py` file,
      which is based on a QGIS template file and is stored in the :file:`/python/expressions` folder
-     under the active :ref:`user profile <user_profiles>` directory.
+     under the active :ref:`user profile <user_profiles>` directory,
+     thus available for all projects you may open with that profile.
 
-   * If you select :guilabel:`Project functions`, the new function is stored in the project file.
+     Custom Python functions stored as Function files are auto loaded
+     whenever you start a new project under the user profile.
+     Be aware that for sharing such Python functions,
+     you need to share the :file:`.py` file in the :file:`/python/expressions` folder.
+
+   * If you select :guilabel:`Project functions`, the new function is stored in the project file
+     and only available for that project.
+
+     Custom Python functions stored as Project functions can be easily shared
+     by sharing the project file where they were saved.
+     When opening a project with project functions, QGIS can load or ignore them
+     depending on whether :ref:`embedded Python code is enabled <load_project_code>`.
 
    A new item is added in the left panel of the :guilabel:`Function Editor` tab.
 
 #. The right panel displays the content of the file: a python script template.
-   Update the code and its help according to your needs.
+#. Uncomment the code block and start editing it according to your needs.
+   You can rely on code autocompletion, code formatting and typing helpers,
+   as defined in :ref:`console_options`.
+   Online API documentation for Qt_ and :pyqgis:`PyQGIS <>` objects is also accessible
+   pressing the :kbd:`F1` key.
+
+   You will find in the :guilabel:`Help` widget general information
+   for setting the @qgsfunction decorator.
 #. Press the |start| :guilabel:`Save and Load Functions` button.
-   The function you wrote is added to the functions tree in the :guilabel:`Expression`
-   tab, by default under the ``Custom`` group.
+   The function you wrote is added to the functions tree in the :guilabel:`Expression` tab,
+   by default under the ``Custom`` group.
 #. Enjoy your new function.
-#. If the function requires improvements, enable the :guilabel:`Function Editor`
-   tab, do the changes and press again the |start| :guilabel:`Save and Load
-   Functions` button to make them available in the file, hence in any expression
-   tab.
-
-Custom Python functions stored as Function files are stored under the user profile
-directory, meaning that at each QGIS startup, it will auto load all the functions
-defined with the current user profile. Be aware that for sharing Python functions stored
-in Function files you need to share the :file:`.py` file in the :file:`/python/expressions` folder.
-
-On the other hand, custom Python functions stored as Project functions can be easily
-shared by sharing the project file where they were saved. When opening a project
-with project functions, QGIS can load or ignore them depending on whether
-:ref:`embedded Python code is enabled <load_project_code>` in General settings.
+#. If the function requires improvements, enable the :guilabel:`Function Editor` tab,
+   do the changes and press again the |start| :guilabel:`Save and Load Functions` button
+   to make them available in the file, hence in any expression tab.
 
 To delete a custom function:
 
@@ -376,8 +384,9 @@ To delete a custom function:
    file is deleted from the user profile folder, or the Python functions are removed
    from the project file.
 
-When a project file with Project functions is closed, the corresponding Project
-functions are unloaded and are no longer available in the QGIS session.
+.. note::
+ When a project file with Project functions is closed, the corresponding Project
+ functions are unloaded and are no longer available in the QGIS session.
 
 **Example**
 
@@ -442,6 +451,7 @@ The previous example function can then be used in expressions:
 Further information about creating Python code can be found in the
 :ref:`PyQGIS-Developer-Cookbook`.
 
+.. _Qt: https://doc.qt.io/qt-6.8/
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
