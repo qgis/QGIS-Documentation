@@ -946,6 +946,132 @@ you can install the QGIS plugin :guilabel:`Data Plotly`.
 
       Use Data plotly to plot the air quality observations at a location
 
+STAC (SpatioTemporal Asset Catalogs)
+====================================
+
+.. index:: STAC
+.. _stac:
+
+STAC (SpatioTemporal Asset Catalog) is a specification for describing geospatial
+data in a consistent and accessible way. It defines a standard structure for organizing
+and indexing spatial-temporal assets such as satellite imagery, drone photos, or sensor data
+so that you can search, preview, and use these datasets across different platforms and tools.
+
+STAC enables QGIS users to connect to and browse geospatial datasets, either from static catalogs
+or dynamic APIs, and download or stream assets such as imagery or other spatial data.
+
+More information at https://stacspec.org/en.
+
+Key components of STAC in QGIS include:
+
+* **STAC Items**: The basic unit of a STAC catalog. Each item represents one geospatial
+  asset or a group of related assets (e.g. image bands) at a specific time and location.
+  It includes metadata such as geometry, datetime, links to assets (e.g., TIFFs, JSON, COG), and properties.
+* **STAC Collections**: A grouping of items that share common characteristics and metadata (e.g. satellite mission).
+  Collections may define spatial and temporal extents, licensing, and keywords.
+* **STAC Catalogs**: A hierarchical container that organizes items and/or collections.
+  Catalogs allow navigation of STAC datasets but do not necessarily include search capabilities.
+* **STAC API**: An implementation of the STAC specification that allows querying and filtering of STAC items using spatial
+  and temporal based filters, as well as searching within specific collections.
+  STAC APIs follow the OGC API - Features pattern and support dynamic access to datasets.
+
+There is an important distinction between static STAC catalogs and STAC API endpoints:
+
+* **Static STAC Catalogs**: are collections of JSON files without search capabilities.
+  They can be browsed via the Browser panel.
+* **STAC API**: provide search capabilities and can be accessed in QGIS through both
+  the Browser panel and the Data Source Manager.
+
+
+Setting connection
+------------------
+
+STAC connections can be added in QGIS using either the :guilabel:`Browser panel` or the :guilabel:`Data Source Manager`:
+
+* **Browser Panel:**
+  In the :guilabel:`Browser panel`, right-click on the |stac| :guilabel:`STAC` entry and select :guilabel:`New STAC Connection...`.
+  In the dialog that appears, enter a :guilabel:`Name` for the connection, the :guilabel:`URL` of the STAC catalog
+  and optionally fill in :guilabel:`Authentication` credentials and a :guilabel:`Referer`.
+  Then click :guilabel:`OK`.
+ 
+  Use this method for browsing static STAC catalogs that do not support search or filtering. 
+
+* **Data Source Manager:**
+  For STAC APIs you can use |dataSourceManager| :guilabel:`Data Source Manager` dialog.
+
+  Open the |dataSourceManager| :guilabel:`Data Source Manager`, choose the |stac| :guilabel:`STAC` tab
+  and click the :guilabel:`New` button.
+  Fill in the :guilabel:`Name` and :guilabel:`URL` fields, and (optional)
+  the :guilabel:`Authentication` credentials and a :guilabel:`Referer`.
+  Press :guilabel:`OK` and then
+  :guilabel:`Connect` to establish the connection, after that you will be able to:
+
+   * :guilabel:`Edit` the STAC connection settings
+   * :guilabel:`Remove` the STAC connection
+
+  .. figure:: img/stac_connection.png
+     :align: center
+
+     Creating a connection to a STAC server
+
+Browsing STAC Catalogs
+----------------------
+
+Static STAC catalogs are displayed as hierarchical structures within the :guilabel:`Browser panel`.
+Once connected, the STAC catalog appears under |stac|:guilabel:`STAC` in the :guilabel:`Browser` panel.
+You can expand the catalog node to see its :guilabel:`Collections`.
+Expanding a collection reveals the individual :guilabel:`Items` it contains.
+
+ .. figure:: img/stac_browser.png
+    :align: center
+
+    STAC connection expanded in the Browser, showing Collections and Items
+
+Right-click any STAC :guilabel:`Item` and choose :guilabel:`Details...` to view its metadata.
+The details panel shows the item’s JSON content and a map of its coverage.
+If an item’s asset is a cloud-optimized format (e.g. a COG), you can add it directly to the map canvas.
+Otherwise, :guilabel:`Download Assets...` to save it locally before use.
+
+Filtering and Searching STAC Items
+----------------------------------
+
+For STAC API endpoints, QGIS supports spatial and temporal filtering, as well as limiting searches to specific collections.
+
+To search for items:
+
+#. Open :guilabel:`Data Source Manager` and go to the :guilabel:`STAC`
+#. Select the STAC connection you created earlier and click :guilabel:`Filters…`
+
+   .. figure:: img/stac_filters.png
+      :align: center
+
+      Define spatial and temporal filters for a STAC catalog search
+
+#. In the filter dialog, you can:
+
+   * Enable |checkbox| :guilabel:`Spatial Extent` to restrict results to a bounding box or drawn area.
+   * Enable |checkbox| :guilabel:`Temporal Extent` and define a date or range.
+   * Limit to specific collections using |checkbox| :guilabel:`Only search within specific collections`
+
+#. After applying filters, results will be listed in the main :guilabel:`Data Source Manager` panel.
+#. Optionally check |checkbox|:guilabel:`Show Footprints` to display the footprints of the results on the map.
+
+Right-click a result item to access actions:
+
+* :guilabel:`Zoom to Item`
+* :guilabel:`Pan to Item`
+* :guilabel:`Download Assets`
+* :guilabel:`Details...`
+
+If the item’s asset requires download, use the :guilabel:`Download Assets` option.
+
+ .. figure:: img/stac_download.png
+    :align: center
+
+    Download STAC item assets
+
+Downloaded assets include the main dataset and any auxiliary files such as thumbnails or style files.
+After download, use standard QGIS tools (e.g., |raster|:guilabel:`Add Raster Layer...`) to load and display the data.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -973,6 +1099,8 @@ you can install the QGIS plugin :guilabel:`Data Plotly`.
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
+.. |raster| image:: /static/common/mIconRaster.png
+   :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |search| image:: /static/common/search.png
@@ -980,6 +1108,8 @@ you can install the QGIS plugin :guilabel:`Data Plotly`.
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |stac| image:: /static/common/mIconStac.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
