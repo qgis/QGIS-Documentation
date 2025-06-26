@@ -7,8 +7,8 @@
 # Translators:
 # Andrés Betancourt, 2025
 # Lucía Betancourt, 2025
-# Eric Armijo, 2025
 # Harrissou Sant-anna, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,6 +47,16 @@ msgstr "Anatomía del sistema de Autenticación"
 #: ../../docs/user_manual/auth_system/auth_overview.rst:20
 msgid "Authentication database"
 msgstr "Base de datos de autenticación"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:22
+msgid ""
+"The authentication system stores authentication configurations in an SQLite "
+"database file located, by default, at :file:`<profile directory>/qgis-"
+"auth.db`."
+msgstr ""
+"El sistema de autenticación almacena las configuraciones de autenticación en"
+" un archivo de base de datos SQLite ubicado, por defecto, en :file:`<profile"
+" directory>/qgis-auth.db`."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:25
 msgid ""
@@ -78,6 +88,153 @@ msgstr ""
 "siguiente variable de entorno, ``QGIS_AUTH_DB_DIR_PATH``, o se puede "
 "configurar en la línea de comando durante el lanzamiento con la opción "
 "``--authdbdirectory``."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:41
+msgid "Custom authentication databases"
+msgstr "Bases de datos de autenticación personalizadas"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:43
+msgid ""
+"QGIS can be configured to use a custom authentication database instead of "
+"the above mentioned default SQLite one: any database suppported by the Qt "
+"SQL module can be used (e.g. PostgreSQL, MySQL, etc), provided that the "
+"corresponding Qt SQL driver is available in the system."
+msgstr ""
+"QGIS se puede configurar para utilizar una base de datos de autenticación "
+"personalizada en lugar de la base de datos SQLite predeterminada mencionada "
+"anteriormente: se puede utilizar cualquier base de datos compatible con el "
+"módulo Qt SQL (por ejemplo, PostgreSQL, MySQL, etc.), siempre que el "
+"controlador Qt SQL correspondiente esté disponible en el sistema."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:48
+msgid ""
+"This can be useful in scenarios where a user wants to share the same "
+"authentication database between multiple QGIS installations, or when a user "
+"wants to use a different authentication database than the default SQLite one"
+" or when a centralized authentication database is used by QGIS server."
+msgstr ""
+"Esto puede resultar útil en situaciones en las que un usuario desea "
+"compartir la misma base de datos de autenticación entre varias instalaciones"
+" de QGIS, o cuando un usuario desea utilizar una base de datos de "
+"autenticación diferente a la base de datos SQLite predeterminada, o cuando "
+"el servidor QGIS utiliza una base de datos de autenticación centralizada."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:53
+msgid ""
+"The only way to configure a custom authentication database is by setting the"
+" ``QGIS_AUTH_DB_URI`` environment variable to the URI of the connection, the"
+" URI is in the form of "
+"``driver://username:password@hostname:port/database?options``."
+msgstr ""
+"La única forma de configurar una base de datos de autenticación "
+"personalizada es estableciendo la variable de entorno ``QGIS_AUTH_DB_URI`` "
+"con la URI de la conexión, que tiene el formato "
+"``driver://username:password@hostname:port/database?options``."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:64
+msgid "Where:"
+msgstr "Dónde:"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:58
+msgid ""
+"``driver`` is the name of the Qt SQL driver to use, e.g. ``QPSQL`` for "
+"PostgreSQL, ``QMYSQL`` for MySQL, etc."
+msgstr ""
+"``driver`` es el nombre del controlador SQL de Qt que se va a utilizar, por "
+"ejemplo, ``QPSQL`` para PostgreSQL, ``QMYSQL`` para MySQL, etc."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:59
+msgid "``username`` is the username to use to connect to the database"
+msgstr ""
+"``username`` es el nombre de usuario que se utilizará para conectarse a la "
+"base de datos."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:60
+msgid "``password`` is the password to use to connect to the database"
+msgstr ""
+"``password`` es la contraseña que se debe utilizar para conectarse a la base"
+" de datos."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:61
+msgid "``hostname`` is the hostname of the database server"
+msgstr "``hostname`` es el nombre de host del servidor de la base de datos"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:62
+msgid "``port`` is the port of the database server"
+msgstr "``port`` es el puerto del servidor de la base de datos"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:63
+msgid "``database`` is the name of the database to use"
+msgstr "``database`` es el nombre de la base de datos que se va a utilizar."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:64
+msgid ""
+"``options`` are the options to pass to the driver, e.g. ``sslmode=require`` "
+"for PostgreSQL"
+msgstr ""
+"``options`` Son las opciones que se pasan al controlador, por ejemplo, "
+"``sslmode=require`` para PostgreSQL."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:68
+msgid ""
+"The ``schema`` can be specified in the URI options, e.g. "
+"``QPSQL://username:password@hostname:port/database?schema=schema_name``"
+msgstr ""
+"El ``schema`` se puede especificar en las opciones URI, por ejemplo, "
+"``QPSQL://nombre_usuario:contraseña@nombre_host:puerto/base_datos?esquema=nombre_esquema``"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:70
+msgid ""
+"The database must exist before starting QGIS, and the user must have the "
+"necessary permissions to connect to the database and to create the required "
+"tables if they do not exist."
+msgstr ""
+"La base de datos debe existir antes de iniciar QGIS, y el usuario debe tener"
+" los permisos necesarios para conectarse a la base de datos y crear las "
+"tablas requeridas si no existen."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:76
+msgid ""
+"The password in the URI is stored in plain text in the environment variable,"
+" so it is recommended to use a passwordless user or a user with limited "
+"permissions to connect to the database."
+msgstr ""
+"La contraseña en la URI se almacena en texto sin formato en la variable de "
+"entorno, por lo que se recomienda utilizar un usuario sin contraseña o un "
+"usuario con permisos limitados para conectarse a la base de datos."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:82
+msgid ""
+"Any database not based on SQLite is considered to be read-only (this can be "
+"changed by Python plugins if necessary)."
+msgstr ""
+"Cualquier base de datos que no esté basada en SQLite se considera de solo "
+"lectura (esto se puede cambiar mediante complementos de Python si es "
+"necesario)."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:85
+msgid ""
+"This is an advanced feature, designed to allow one or more custom "
+"authentication databases or even custom Python implementations of "
+"credentials storages to be used by QGIS."
+msgstr ""
+"Esta es una función avanzada, diseñada para permitir que QGIS utilice una o "
+"más bases de datos de autenticación personalizadas o incluso "
+"implementaciones personalizadas de Python para el almacenamiento de "
+"credenciales."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:88
+msgid ""
+"The system is also designed to allow for multiple authentication databases "
+"to be used but there is currently no user facing interface to manage "
+"multiple credential storages so its usage requires manual configuration and "
+"management, typically from a Python plugin."
+msgstr ""
+"El sistema también está diseñado para permitir el uso de múltiples bases de "
+"datos de autenticación, pero actualmente no existe una interfaz de usuario "
+"para gestionar múltiples almacenes de credenciales, por lo que su uso "
+"requiere una configuración y gestión manuales, normalmente desde un "
+"complemento de Python."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:94
 msgid "Master password"
