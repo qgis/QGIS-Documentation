@@ -5,10 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Báthory Péter <bathory86p@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
-# Zoltan Siki <siki.zoltan@epito.bme.hu>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Zoltan Siki <siki.zoltan@epito.bme.hu>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,13 +31,94 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"A fordítás közösségi munka eredménye, amelyhez itt tudsz :ref:`csatlakozni "
-"<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
-"részét fordítottuk le."
+"A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
+"<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
+"van lefordítva."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:2
+msgid "Lesson: Labels"
+msgstr "Lecke: Címkék"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:4
+msgid ""
+"Labels can be added to a map to show any information about an object. Any "
+"vector layer can have labels associated with it. These labels rely on the "
+"attribute data of a layer for their content."
+msgstr ""
+"A térképhez címkék adhatók hozzá, hogy bármilyen információt megjelenítsenek"
+" egy objektumról. Bármely vektoros réteghez társíthatók címkék. E címkék "
+"tartalma a réteg attribútumadataira támaszkodik."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:8
+msgid ""
+"**The goal for this lesson:** To apply useful and good-looking labels to a "
+"layer."
+msgstr ""
+"**A lecke célja:** Hasznos és jól kinéző címkék készítése egy réteghez."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:13
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Using Labels"
+msgstr ":abbr:`★☆☆ (alapszint)` Kövesse végig: Címkék használata"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:15
+msgid "First, ensure that the |labelingSingle| button is visible in the GUI:"
+msgstr ""
+"Először is győződjön meg arról, hogy a |labelingSingle| gomb látható a "
+"felhasználói felületen:"
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:397
 msgid "labelingSingle"
 msgstr "labelingSingle"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:17
+msgid "Go to the menu item :menuselection:`View --> Toolbars`"
+msgstr "Kattintson a :menuselection:`Nézet --> Eszköztárak` menüre."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:18
+msgid ""
+"Ensure that the :guilabel:`Label Toolbar` item has a check mark next to it. "
+"If it doesn't, click on the :guilabel:`Label Toolbar` item to activate it."
+msgstr ""
+"Ellenőrizze, hogy a :guilabel:`Címkézés eszköztár` elem mellett van-e pipa. "
+"Ha nincs, kattintson a :guilabel:`Címkézés eszköztár` menüpontra."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:20
+msgid ""
+"Click on the ``places`` layer in the :guilabel:`Layers` panel so that it is "
+"highlighted"
+msgstr ""
+"Kattintson a :guilabel:`Rétegek` panelen a ``places`` rétegre, hogy az ki "
+"legyen jelölve."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:22
+msgid ""
+"Click on the |labelingSingle| toolbar button to open the :guilabel:`Labels` "
+"tab of the :guilabel:`Layer Styling` panel"
+msgstr ""
+"Kattintson az eszköztár |labelingSingle| gombjára a :guilabel:`Rétegstílus` "
+"panel :guilabel:`Címkék` lapjának megnyitásához."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:25
+msgid ""
+"Switch from :guilabel:`No Labels` to |labelingSingle| :guilabel:`Single "
+"Labels`"
+msgstr ""
+"Váltáson át :guilabel:`Nincsenek címkék`-ről |labelingSingle| "
+":guilabel:`Egyszerű címkék`-re."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:27
+msgid ""
+"You'll need to choose which field in the attributes will be used for the "
+"labels. In the previous lesson, you decided that the ``name`` field was the "
+"most suitable one for this purpose."
+msgstr ""
+"Ki kell választania, hogy az attribútumok melyik mezőjét használja a "
+"címkékhez. Az előző leckében úgy találtuk, hogy a ``name`` mező a "
+"legmegfelelőbb erre a célra."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:31
+msgid "Select ``name`` from the Value list:"
+msgstr "Válassza ki a ``name`` mezőt az Érték listából:"
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:36
 #: ../../docs/training_manual/vector_classification/label_tool.rst:66
@@ -47,9 +127,240 @@ msgstr "labelingSingle"
 msgid "Click :guilabel:`Apply`"
 msgstr "Kattintson az :guilabel:`Alkalmaz` gombra"
 
+#: ../../docs/training_manual/vector_classification/label_tool.rst:38
+msgid "The map should now have labels like this:"
+msgstr "A térképen most már ilyen címkéket kell lásson:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:45
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Changing Label Options"
+msgstr ""
+":abbr:`★☆☆ (alapszint)` Kövesse végig: Címkék beállításainak módosítása"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:47
+msgid ""
+"Depending on the styles you chose for your map in earlier lessons, you might"
+" find that the labels are not appropriately formatted and either overlap or "
+"are too far away from their point markers."
+msgstr ""
+"Attól függően, hogy a korábbi leckékben milyen stílusokat választott a "
+"térképhez, előfordulhat, hogy a címkék nem megfelelően vannak formázva, és "
+"vagy átfedik egymást, vagy túl messze vannak a pontszimbólumoktól."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:51
+msgid ""
+"Above, you used the |labelingSingle| button in the :guilabel:`Label Toolbar`"
+" to open the :guilabel:`Layer Styling` panel. As with :guilabel:`Symbology`,"
+" the same label options are available via both the :guilabel:`Layer Styling`"
+" panel and the :guilabel:`Layer Properties` dialog. Here, you'll use the "
+":guilabel:`Layer Properties` dialog."
+msgstr ""
+"A fentiekben a :guilabel:`Címkézés eszköztárban` található |labelingSingle| "
+"gombot használtuk a :guilabel:`Rétegstílus` panel megnyitásához. A "
+":guilabel:`Szimbólumokhoz` hasonlóan a :guilabel:`Rétegstílus` panelen és a "
+":guilabel:`Rétegtulajdonságok` párbeszédablakon keresztül is ugyanazok a "
+"címkézési lehetőségek állnak rendelkezésre. Most itt a "
+":guilabel:`Rétegtulajdonságok` párbeszédpanelt fogjuk használni."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:57
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog by double-clicking on the "
+"``places`` layer"
+msgstr ""
+"Nyissa meg a :guilabel:`Rétegtulajdonságok` párbeszédablakot a ``places`` "
+"rétegre duplán kattintva."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:59
+msgid "Select the |labelingSingle| :guilabel:`Labels` tab"
+msgstr "Válassza ki a |labelingSingle| :guilabel:`Címkék` lapot."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:60
+msgid ""
+"Make sure :guilabel:`Text` is selected in the left-hand options list, then "
+"update the text formatting options to match those shown here:"
+msgstr ""
+"Győződjön meg róla, hogy a :guilabel:`Szöveg` fül van kiválasztva a bal "
+"oldali listában, majd frissítse a szövegformázási beállításokat az itt "
+"láthatóaknak megfelelően:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:68
+msgid ""
+"That font may be larger and more familiar to users, but its readability is "
+"still dependent on what layers are rendered beneath it. To solve this, let's"
+" take a look at the :guilabel:`Buffer` option."
+msgstr ""
+"Lehet, hogy ez a betűtípus nagyobb és ismerősebb a felhasználók számára, de "
+"olvashatósága még mindig attól függ, hogy milyen rétegek vannak alatta "
+"megjelenítve. Ennek megoldására nézzük meg az :guilabel:`Övezet` készítését."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:72
+msgid "Select :guilabel:`Buffer` from the left-hand options list"
+msgstr "Válassza ki az :guilabel:`Övezet`-et a bal oldali listából."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:73
+msgid ""
+"Select the checkbox next to :guilabel:`Draw text buffer`, then choose "
+"options to match those shown here:"
+msgstr ""
+"Jelölje be a :guilabel:`Szövegövezet kirajzolása` melletti jelölőnégyzetet, "
+"majd válassza ki az itt látható beállításokat:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:81
+msgid ""
+"You'll see that this adds a colored buffer or border to the place labels, "
+"making them easier to pick out on the map:"
+msgstr ""
+"Látni fogja, hogy a helyek címkéi körül egy színes körvonal vagy szegély "
+"jelenik meg, így azok könnyebben kivehetők a térképen:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:87
+msgid ""
+"Now we can address the positioning of the labels in relation to their point "
+"markers."
+msgstr ""
+"Most már foglalkozhatunk a címkék szimbólumokhoz viszonyított "
+"elhelyezésével."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:90
+msgid "Select :guilabel:`Placement` from the left-hand options list"
+msgstr "Válassza ki az :guilabel:`Elhelyezés`-t a bal oldali listából."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:91
+msgid ""
+"Select :guilabel:`Around point` and change the value of :guilabel:`Distance`"
+" to ``2.0`` Millimeters:"
+msgstr ""
+"Válassza ki a :guilabel:`Pont körül` módot, és módosítsa a "
+":guilabel:`Távolság` értékét ``2,0`` milliméterre:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:99
+msgid ""
+"You'll see that the labels are no longer overlapping their point markers."
+msgstr "Látni fogja, hogy a címkék már nem lógnak rá a pontszimbólumra."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:103
+msgid ""
+":abbr:`★★☆ (Moderate level)` Follow Along: Using Labels Instead of Layer "
+"Symbology"
+msgstr ""
+":abbr:`★★★☆ (középszint)` Kövesse végig: Címkék használata a réteg "
+"jelrendszere helyett"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:105
+msgid ""
+"In many cases, the location of a point doesn't need to be very specific. For"
+" example, most of the points in the ``places`` layer refer to entire towns "
+"or suburbs, and the specific point associated with such features is not that"
+" specific on a large scale. In fact, giving a point that is too specific is "
+"often confusing for someone reading a map."
+msgstr ""
+"Sok esetben a pont helyének nem kell nagyon pontosnak lennie. Például a "
+"``places`` rétegben a legtöbb pont egész városokra vagy kerületekre "
+"vonatkozik, és az ilyen elemekhez tartozó konkrét pont nagy méretarányban "
+"nem annyira releváns. Valójában a túl specifikus pont megadása gyakran "
+"zavaró a térképolvasó számára."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:111
+msgid ""
+"To name an example: on a map of the world, the point given for the European "
+"Union may be somewhere in Poland, for instance. To someone reading the map, "
+"seeing a point labeled *European Union* in Poland, it may seem that the "
+"capital of the European Union is therefore in Poland."
+msgstr ""
+"Hogy egy példát említsünk: egy világtérképen az Európai Uniót jelző pont "
+"például valahol Lengyelországban lenne. Ha valaki a térképet olvasva "
+"Lengyelországban látja az *Európai Unió* feliratú pontot, úgy tűnhet, hogy "
+"az Európai Unió fővárosa Lengyelországban van."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:116
+msgid ""
+"So, to prevent this kind of misunderstanding, it's often useful to "
+"deactivate the point symbols and replace them completely with labels."
+msgstr ""
+"Az ilyen jellegű félreértések elkerülése érdekében tehát gyakran hasznos, ha"
+" a pontszimbólumokat kikapcsoljuk, és teljesen címkékkel helyettesítjük "
+"őket."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:119
+msgid ""
+"In QGIS, you can do this by changing the position of the labels to be "
+"rendered directly over the points they refer to."
+msgstr ""
+"A QGIS-ben ezt úgy teheti meg, hogy megváltoztatja a címkék pozícióját, hogy"
+" azok közvetlenül a pontok felett jelenjenek meg."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:122
+msgid ""
+"Open the |labelingSingle| :guilabel:`Labels` tab of the :guilabel:`Layer "
+"Properties` dialog for the ``places`` layer"
+msgstr ""
+"Nyissa meg a |labelingSingle| :guilabel:`Címkék` lapot a ``places`` réteg "
+":guilabel:`Rétegtulajdonságok` párbeszédablakában."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:124
+msgid "Select the :guilabel:`Placement` option from the options list"
+msgstr "Válassza ki a :guilabel:`Elhelyezés` opciót a bal oldali listából."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:125
+msgid "Click on the :guilabel:`Offset from point` button"
+msgstr "Válassza ki az :guilabel:`Eltolás a ponttól` módot."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:127
+msgid ""
+"This will reveal the :guilabel:`Quadrant` options which you can use to set "
+"the position of the label in relation to the point marker. In this case, we "
+"want the label to be centered on the point, so choose the center quadrant:"
+msgstr ""
+"Ekkor megjelennek a :guilabel:`Negyed` opciók, amelyekkel beállíthatja a "
+"címke pozícióját a pontszimbólumhoz képest. Ebben az esetben azt szeretnénk,"
+" hogy a címke a pont közepén legyen, ezért válasszuk a középső negyedet:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:134
+msgid ""
+"Hide the point symbols by editing the layer :guilabel:`Symbology` as usual, "
+"and setting the size of the :guilabel:`Marker` size to ``0.0``:"
+msgstr ""
+"Rejtse el a pontszimbólumokat a réteg :guilabel:`Jelrendszerének` "
+"szerkesztésével a szokásos módon, és állítsa a :guilabel:`Szimbólum` méretét"
+" ``0,0``-ra:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:140
+msgid "Click :guilabel:`Apply` and you'll see this result:"
+msgstr ""
+"Kattintson az :guilabel:`Alkalmaz` gombra, és ezt az eredményt fogja látni:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:145
+msgid ""
+"If you were to zoom out on the map, you would see that some of the labels "
+"disappear at larger scales to avoid overlapping. Sometimes this is what you "
+"want when dealing with datasets that have many points, but at other times "
+"you will lose useful information this way. There is another possibility for "
+"handling cases like this, which we'll cover in a later exercise in this "
+"lesson. For now, zoom out and click on the |showUnplacedLabel| button in the"
+" toolbar and see what happens."
+msgstr ""
+"Ha kicsinyítené a térképet, láthatná, ahogy a címkék egy része eltűnik a "
+"nagyobb méretarányoknál, hogy elkerülje az átfedéseket. Néha, ha sok pontot "
+"tartalmazó adathalmazokkal dolgozik, ezt szeretné, máskor azonban hasznos "
+"információkat veszít ezzel. Van egy másik lehetőség is az ilyen esetek "
+"kezelésére, amellyel a lecke egy későbbi gyakorlatában foglalkozunk. "
+"Egyelőre távolítson el, és kattintson az eszköztáron a |showUnplacedLabel| "
+"gombra, és nézze meg, mi történik."
+
 #: ../../docs/training_manual/vector_classification/label_tool.rst:414
 msgid "showUnplacedLabel"
 msgstr "showUnplacedLabel"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:155
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Customize the Labels"
+msgstr " :abbr:`★★☆ (középszint)` Próbálja ki önállóan: Címkék testreszabása"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:157
+msgid ""
+"Reset the label and symbol settings to have a point marker and a label "
+"offset of ``2.0`` Millimeters."
+msgstr ""
+"Állítsa vissza a címke- és szimbólumbeállításokat úgy, hogy a pontszimbólum "
+"és a címke eltolása ``2,0`` milliméter legyen."
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:160
 #: ../../docs/training_manual/vector_classification/label_tool.rst:174
@@ -57,25 +368,402 @@ msgstr "showUnplacedLabel"
 msgid "Answer"
 msgstr "Válasz"
 
+#: ../../docs/training_manual/vector_classification/label_tool.rst:163
+msgid ""
+"Your map should now show the marker points and the labels should be offset "
+"by 2mm. The style of the markers and labels should allow both to be clearly "
+"visible on the map:"
+msgstr ""
+"A térképen most már meg kell jelenítenie a pontszimbólumoknak, és a "
+"címkéknek 2 mm-rel eltolva kell lenniük. A szimbólumok és a címkék stílusa "
+"olyan kell legyen, hogy mindkettő jól látható legyen a térképen:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:170
+msgid ""
+"Set the map to the scale ``1:100000``. You can do this by typing it into the"
+" :guilabel:`Scale` box in the :guilabel:`Status Bar`. Modify your labels to "
+"be suitable for viewing at this scale."
+msgstr ""
+"Állítsa be a térkép méretarányát ``1:100 000``-re. Ezt úgy teheti meg, hogy "
+"beírja az :guilabel:`Állapotsoron` a :guilabel:`Méretarány` mezőbe. "
+"Módosítsa a címkéket úgy, hogy alkalmasak legyenek az ilyen méretarányú "
+"megjelenítésre."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:177
+msgid "One possible solution has this final product:"
+msgstr "Az egyik lehetséges megoldásnak ez a kimenete:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:182
+msgid "To arrive at this result:"
+msgstr "Hogy erre az eredményre jussunk:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:184
+msgid "Use a font size of ``10``"
+msgstr "Használjon ``10``-es betűméretet"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:185
+msgid "Use an around point placement distance of ``1.5 mm``"
+msgstr "Állítson be ``1,5 mm``-es távolságot a pont körül"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:186
+msgid "Use a marker size of ``3.0 mm``"
+msgstr "Használjon ``3,0 mm``-es szimbólumméretet."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:187
+msgid ""
+"In addition, this example uses the :guilabel:`Wrap on character` option:"
+msgstr ""
+"Ezen kívül ez a példa a :guilabel:`Sortörés karakter` opciót is használja:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:192
+msgid ""
+"Enter a ``space`` in this field and click :guilabel:`Apply` to achieve the "
+"same effect. In our case, some of the place names are very long, resulting "
+"in names with multiple lines which is not very user friendly. You might find"
+" this setting to be more appropriate for your map."
+msgstr ""
+"Ugyanezt a hatást érheti el, ha beír egy ``space`` karakter ebbe a mezőbe, "
+"és rákattint az :guilabel:`Alkalmaz` gombra. Esetünkben néhány helynév "
+"nagyon hosszú, ami többsoros neveket eredményez, ami nem túl "
+"felhasználóbarát. Lehet, hogy ez a beállítás az Ön térképénél megfelelőbb."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:200
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Labeling Lines"
+msgstr ":abbr:`★★★☆ (középszint)` Kövesse végig: Vonalak címkézése"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:202
+msgid ""
+"Now that you know how labeling works, there's an additional problem. Points "
+"and polygons are easy to label, but what about lines? If you label them the "
+"same way as the points, your results would look like this:"
+msgstr ""
+"Most, hogy már tudja, hogyan működik a címkézés, van egy további probléma. A"
+" pontokat és a poligonokat könnyű felcímkézni, de mi a helyzet a vonalakkal?"
+" Ha ugyanúgy címkézzük őket, mint a pontokat, akkor az eredmény így nézne "
+"ki:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:209
+msgid ""
+"We will now reformat the ``roads`` layer labels so that they are easy to "
+"understand."
+msgstr ""
+"Most átformázzuk a ``roads`` réteg címkéit, hogy azok könnyen érthetőek "
+"legyenek."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:212
+msgid "Hide the ``places`` layer so that it doesn't distract you"
+msgstr "Rejtse el a ``places`` réteget, hogy ne vonja el a figyelmet."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:213
+msgid ""
+"Activate |labelingSingle| :guilabel:`Single Labels` for the ``roads`` layer "
+"as you did above for ``places``"
+msgstr ""
+"Aktiválja az |labelingSingle| :guilabel:`Egyszerű címkéket` a ``roads`` "
+"réteghez, ahogyan azt a ``places`` rétegnél is tette."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:215
+msgid ""
+"Set the font :guilabel:`Size` to ``10`` so that you can see more labels"
+msgstr ""
+"Állítsa a betűtípust ``10``-es :guilabel:`Méretűre`, hogy több címkét "
+"láthasson."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:216
+msgid "Zoom in on the |majorUrbanName| town area"
+msgstr "Nagyítson rá |majorUrbanName| város területére."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:217
+msgid ""
+"In the :guilabel:`Labels` tab's :guilabel:`Placement` tab, choose the "
+"following settings:"
+msgstr ""
+"A :guilabel:`Címkék` fül :guilabel:`Elhelyezés` lapján válassza ki a "
+"következő beállításokat:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:223
+msgid ""
+"You'll probably find that the text styling has used default values and the "
+"labels are consequently very hard to read. Update the :guilabel:`Text` to "
+"use a dark-grey or black :guilabel:`Color` and the :guilabel:`Buffer` to use"
+" a light-yellow :guilabel:`Color`."
+msgstr ""
+"Valószínűleg azt fogja tapasztalni, hogy a szövegformázás alapértelmezett "
+"értékeket használt, és a címkék ennek következtében nagyon nehezen "
+"olvashatók. Frissítse a :guilabel:`Szöveget` úgy, hogy sötétszürke vagy "
+"fekete legyen a :guilabel:`Színe`, az :guilabel:`Övezet` pedig világossárga."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:228
+msgid "The map will look somewhat like this, depending on scale:"
+msgstr "A térkép a méretaránytól függően valahogy így fog kinézni:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:233
+msgid ""
+"You'll see that some of the road names appear more than once and that's not "
+"always necessary. To prevent this from happening:"
+msgstr ""
+"Látni fogja, hogy néhány utcanév többször is szerepel, és ez nem mindig "
+"szükséges. Ennek elkerülése érdekében:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:236
+msgid ""
+"In the :guilabel:`Labels` tab of the :guilabel:`Layer Properties` dialog, "
+"choose the :guilabel:`Rendering` option and select :guilabel:`Merge "
+"connected lines to avoid duplicate labels` as shown:"
+msgstr ""
+"A :guilabel:`Rétegtulajdonságok` :guilabel:`Címkék` párbeszédpanel lapján "
+"válassza a :guilabel:`Megjelenítést`, és itt jelölje be a "
+":guilabel:`Csatlakozó vonalak összevonása a dupla címkék elkerülése "
+"érdekében` opciót a képen látható módon:"
+
 #: ../../docs/training_manual/vector_classification/label_tool.rst:243
 msgid "Click :guilabel:`OK`"
 msgstr "Kattintson az :guilabel:`OK` gombra"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:245
+msgid ""
+"Another useful function is to prevent labels being drawn for features too "
+"short to be of notice."
+msgstr ""
+"Egy másik hasznos funkció az olyan elemek címkézésének megakadályozása, "
+"amelyek túl rövidek ahhoz, hogy észrevehetők legyenek."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:248
+msgid ""
+"In the same :guilabel:`Rendering` panel, set the value of "
+":guilabel:`Suppress labeling of features smaller than ...` to ``5.00 mm`` "
+"and note the results when you click :guilabel:`Apply`"
+msgstr ""
+"Ugyanezen a :guilabel:`Megjelenítés` panelen állítsa a :guilabel:`Ennél "
+"kisebb elemek címkéjének kihagyása…` értékét ``5,00 mm``-re, és figyelje az "
+"eredményt, amikor az :guilabel:`Alkalmaz` gombra kattint."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:252
+msgid ""
+"Try out different :guilabel:`Placement` settings as well. As we've seen "
+"before, the :guilabel:`Horizontal` option is not a good idea in this case, "
+"so let's try the :guilabel:`Curved` option instead."
+msgstr ""
+"Próbáljon ki a különböző :guilabel:`Elhelyezési` beállításokat is. Mint már "
+"láttuk, a :guilabel:`Vízszintes` mód nem jó ötlet ebben az esetben, ezért "
+"próbáljuk ki helyette az :guilabel:`Íves` módot."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:256
+msgid ""
+"Select the :guilabel:`Curved` option in the :guilabel:`Placement` panel of "
+"the :guilabel:`Labels` tab"
+msgstr ""
+"Válassza ki az :guilabel:`Íves` módot a :guilabel:`Címkék` lap "
+":guilabel:`Elhelyezés` paneljén."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:259
+msgid "Here's the result:"
+msgstr "Íme az eredmény:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:264
+msgid ""
+"As you can see, this hides some labels that were previously visible, because"
+" of the difficulty of making some of them follow twisting street lines while"
+" still being legible. It makes other labels much more useful since they "
+"track the roads rather than float in space between them. You can decide "
+"which of these options to use, depending on what you think seems more useful"
+" or what looks better."
+msgstr ""
+"Amint láthatja, ez elrejt néhány korábban látható feliratot, mivel nehéz "
+"volt elérni, hogy némelyikük úgy kövesse a kanyargós utcavonalakat, hogy "
+"közben olvasható maradjon. Ezzel a többi címke sokkal hasznosabbá válik, "
+"mivel követik az utakat, ahelyett, hogy valahol közöttük lebegnének a "
+"térben. Eldöntheti melyiket használja attól függően, hogy mit tart "
+"hasznosabbnak, vagy mi néz ki jobban."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:273
+msgid ":abbr:`★★★ (Advanced level)` Follow Along: Data Defined Settings"
+msgstr ":abbr:`★★★ (haladó szint)` Kövesse végig: Adatvezérelt beállítások"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:275
+msgid "Deactivate labeling for the ``roads`` layer"
+msgstr "Kapcsolja ki a ``roads`` réteg címkézését"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:276
+msgid "Reactivate labeling for the ``places`` layer"
+msgstr "Engedélyezze újra a ``places`` réteg címkézését"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:277
+msgid "Open the attribute table for ``places`` via the |openTable| button"
+msgstr "Nyissa meg a ``places`` attribútumtábláját a |openTable| gombbal"
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:404
 msgid "openTable"
 msgstr "openTable"
 
+#: ../../docs/training_manual/vector_classification/label_tool.rst:279
+msgid ""
+"It has one *field* which is of interest to us now: ``place`` which defines "
+"the type of urban area for each *record*. We can use this data to influence "
+"the label styles."
+msgstr ""
+"Van egy *mezője*, ami most érdekes számunkra: a ``place``, amely "
+"meghatározza a városi terület típusát minden egyes *rekordhoz*. Ezeket az "
+"adatokat felhasználhatjuk a címke stílusának befolyásolására."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:283
+msgid ""
+"Navigate to the :guilabel:`Text` panel in the ``places`` :guilabel:`Labels` "
+"panel"
+msgstr ""
+"Váltson át a :guilabel:`Szöveg` lapra a ``place`` réteg :guilabel:`Címkék` "
+"panelében"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:285
+msgid ""
+"Click the |dataDefine| button next to the Italic text button beneath "
+":guilabel:`Style` and select :menuselection:`Edit...` to open the "
+":guilabel:`Expression String Builder`:"
+msgstr ""
+"Kattintson a :guilabel:`Stílus` alatti sorban lévő Dőlt szöveg gomb melletti"
+" |dataDefine| gombra, és válassza a :menuselection:`Szerkesztés…` menüpontot"
+" a :guilabel:`Kifejezésszerkesztő` megnyitásához:"
+
 #: ../../docs/training_manual/vector_classification/label_tool.rst:395
 msgid "dataDefine"
 msgstr "dataDefine"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:292
+msgid ""
+"Under :menuselection:`Fields and Values`, double click on ``place`` and then"
+" click :guilabel:`All Unique`. This will list all unique values of the "
+"``place`` field of this layer. Add a ``=`` in the text editor and then "
+"double click on ``town``."
+msgstr ""
+"A :menuselection:`Mezők és értékek` alatt kattintson duplán a ``place`` "
+"elemre, majd kattintson a :guilabel:`Minden egyedi` gombra. Ez a réteg "
+"``place`` mezőjének összes egyedi értékét felsorolja. Adjon hozzá egy ``=`` "
+"jelet a szövegszerkesztőben, majd kattintson duplán a ``town`` elemre."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:297
+msgid ""
+"Alternatively, you can type: ``\"place\" = 'town'`` directly in the text "
+"editor."
+msgstr ""
+"Vagy akár kézzel is beírhatja közvetlenül a szövegmezőbe: ``\"place\" = "
+"'town'``"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:300
+msgid "Click :guilabel:`OK` twice:"
+msgstr "Kattintson kétszer az :guilabel:`OK` gombra:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:305
+msgid ""
+"Notice that the labels for all places whose ``place`` field matches ``town``"
+" are displayed in italics."
+msgstr ""
+"Figyeljük meg, hogy minden olyan hely címkéje, amelynek a ``place`` mezője "
+"megegyezik a ``town`` szóval, dőlt betűvel jelenik meg."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:313
+msgid ":abbr:`★★★ (Advanced level)` Try Yourself: Using Data Defined Settings"
+msgstr ""
+":abbr:`★★★ (haladó szint)` Próbálja ki önállóan: Adatvezérelt beállítások "
+"használata"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:315
+msgid ""
+"We're jumping ahead a bit here to demonstrate some advanced labeling "
+"settings. At the advanced level, it's assumed that you'll know what the "
+"following means. If you don't, feel free to leave out this section and come "
+"back later when you've covered the requisite materials."
+msgstr ""
+"Itt egy kicsit előreugrunk, hogy bemutassunk néhány speciális címkézési "
+"beállítást. Haladó szinten feltételezzük, hogy tudja, mit jelentenek a "
+"következők. Ha mégsem tudná, nyugodtan hagyja ki ezt a részt, és térjen "
+"vissza később, amikor már feldolgozta a szükséges anyagokat."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:320
+msgid "Open the Attribute Table for ``places``"
+msgstr "Nyissa meg a ``places`` attribútumtábláját"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:321
+msgid "Enter edit mode by clicking the |toggleEditing| button"
+msgstr "Lépjen szerkesztési módba a |toggleEditing| gombra kattintva"
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:416
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
+#: ../../docs/training_manual/vector_classification/label_tool.rst:322
+msgid "Add a new column with the |newAttribute| button"
+msgstr "Adjon hozzá egy új oszlopot a |newAttribute| gombbal"
+
 #: ../../docs/training_manual/vector_classification/label_tool.rst:402
 msgid "newAttribute"
 msgstr "newAttribute"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:323
+msgid "Configure it like this:"
+msgstr "Állítsa be így:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:328
+msgid ""
+"Use this to set custom font sizes for each different type of place (each key"
+" in the ``place`` field)"
+msgstr ""
+"Állítson be vele egyéni betűméretet minden egyes helytípushoz (a ``place`` "
+"mező minden egyes kulcsához)."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:334
+msgid ""
+"Still in edit mode, set the ``FONT_SIZE`` values to whatever you prefer. The"
+" example uses ``16`` for towns, ``14`` for suburbs, ``12`` for localities, "
+"and ``10`` for hamlets."
+msgstr ""
+"Még mindig szerkesztési módban állítsa be a ``FONT_SIZE`` értékeket a kívánt"
+" értékre. A példa a következő értékeket használja: town: ``16``, suburb: "
+"``14``, locality: ``12``, hamlet: ``10``."
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:337
+msgid "Remember to save changes and exit edit mode"
+msgstr ""
+"Ne felejtse elmenteni a módosításokat és kilépni a szerkesztési módból"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:338
+msgid ""
+"Return to the :guilabel:`Text` formatting options for the ``places`` layer "
+"and select ``FONT_SIZE`` in the :guilabel:`Attribute field` of the font size"
+" |dataDefine| data defined override dropdown:"
+msgstr ""
+"Térjen vissza a :guilabel:`Szöveg` formázási beállításaihoz a ``places`` "
+"rétegen, és a Betűméret melletti |dataDefine| adatvezérelt felülbírálás "
+"legördülő menüjében válassza ki a :guilabel:`Mezőtípuson` belül a "
+"``FONT_SIZE`` mezőt:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:345
+msgid "Your results, if using the above values, should be this:"
+msgstr ""
+"Ha a fenti értékeket használja, az eredménynek a következőképp kell "
+"kinéznie:"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:352
+msgid ":abbr:`★★★ (Advanced level)` Further Possibilities With Labeling"
+msgstr ":abbr:`★★★ (haladó szint)` A címkézés további lehetőségei"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:354
+msgid ""
+"We can't cover every option in this course, but be aware that the "
+":guilabel:`Label` tab has many other useful functions. You can set scale-"
+"based rendering, alter the rendering priority for labels in a layer, and set"
+" every label option using layer attributes. You can even set the rotation, "
+"XY position, and other properties of a label (if you have attribute fields "
+"allocated for the purpose), then edit these properties using the tools "
+"adjacent to the main :guilabel:`Layer Labeling Options` button:"
+msgstr ""
+"Ebben a kurzusban nem tudunk minden lehetőséggel foglalkozni, de ne feledje,"
+" hogy a :guilabel:`Címek` fülnek sok más hasznos funkciója is van. "
+"Beállíthat méretarányos megjelenítést, megváltoztathatja a rétegben lévő "
+"címkék megjelenítési prioritását, és beállíthat minden címketulajdonságot a "
+"réteg attribútumai segítségével. Még a címke elforgatását, XY-pozícióját és "
+"egyéb tulajdonságait is beállíthatja (ha vannak erre a célra használható "
+"attribútummezők), majd szerkesztheti ezeket a tulajdonságokat a "
+":guilabel:`Réteg címkézési beállításai` gomb melletti eszközökkel:"
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:362
 msgid ""
@@ -109,10 +797,41 @@ msgstr "rotateLabel"
 msgid "changeLabelProperties"
 msgstr "changeLabelProperties"
 
+#: ../../docs/training_manual/vector_classification/label_tool.rst:366
+msgid ""
+"(These tools will be active if the required attribute fields exist and you "
+"are in edit mode.)"
+msgstr ""
+"(Ezek az eszközök akkor lesznek aktívak, ha a szükséges attribútummezők "
+"léteznek, és a réteg szerkesztési módban van.)"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:369
+msgid "Feel free to explore more possibilities of the labeling system."
+msgstr "Nyugodtan fedezze fel a címkézési rendszer további lehetőségeit."
+
 #: ../../docs/training_manual/vector_classification/label_tool.rst:373
 msgid "In Conclusion"
-msgstr "Befejezésül"
+msgstr "Összefoglalva"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:375
+msgid ""
+"You've learned how to use layer attributes to create dynamic labels. This "
+"can make your map a lot more informative and stylish!"
+msgstr ""
+"Megtanulta, hogyan használhatja a réteg attribútumait dinamikus címkék "
+"létrehozásához. Ezzel sokkal informatívabbá és stílusosabbá teheti a "
+"térképét!"
 
 #: ../../docs/training_manual/vector_classification/label_tool.rst:380
 msgid "What's Next?"
-msgstr "Mi következik?"
+msgstr "Hogyan tovább?"
+
+#: ../../docs/training_manual/vector_classification/label_tool.rst:382
+msgid ""
+"Now that you know how attributes can make a visual difference for your map, "
+"how about using them to change the symbology of objects themselves? That's "
+"the topic for the next lesson!"
+msgstr ""
+"Most, hogy már tudja, hogy az attribútumok hogyan változtathatják meg a "
+"térkép vizuális megjelenését, mi lenne, ha használná őket az objektumok "
+"jelrendszerének megváltoztatására is? Ez a következő lecke témája!"
