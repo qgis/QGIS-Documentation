@@ -5,9 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Báthory Péter <bathory86p@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
-# Zoltan Siki <siki.zoltan@epito.bme.hu>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Zoltan Siki <siki.zoltan@epito.bme.hu>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,30 +30,429 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"A fordítás közösségi munka eredménye, amelyhez itt tudsz :ref:`csatlakozni "
-"<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
-"részét fordítottuk le."
+"A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
+"<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
+"van lefordítva."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:4
+msgid "Lesson: Vector Attribute Data"
+msgstr "Lecke: Vektorok attribútumadatai"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:6
+msgid ""
+"Vector data is arguably the most common kind of data in the daily use of "
+"GIS. The vector model represents the location and shape of geographic "
+"features using points, lines and polygons (and for 3D data also surfaces and"
+" volumes), while their other properties are included as attributes (often "
+"presented as a table in QGIS)."
+msgstr ""
+"A vektoros adatok vitathatatlanul a leggyakoribb adattípusok a "
+"térinformatikai rendszerek mindennapi használatában. A vektoros modell a "
+"földrajzi objektumok helyét és alakját pontok, vonalak és sokszögek (3D-s "
+"adatok esetén pedig felületek és testek) segítségével ábrázolja, míg egyéb "
+"tulajdonságait attribútumokként tartalmazza (a QGIS-ben gyakran táblázat "
+"formájában)."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:12
+msgid ""
+"Up to now, none of the changes we have made to the map have been influenced "
+"by the objects that are being shown. In other words, all the land use areas "
+"look alike, and all the roads look alike. When looking at the map, the "
+"viewers don't know anything about the roads they are seeing; only that there"
+" is a road of a certain shape in a certain area."
+msgstr ""
+"Mostanáig a térképi módosításainkat egyáltalán nem befolyásolták maguk a "
+"megjelenített objektumok. Más szóval, minden földhasználati terület "
+"egyformán néz ki, és minden út is egyformán néz ki. A térképet nézve semmit "
+"sem tudunk meg az utakról, csak azt, hogy egy adott területen egy bizonyos "
+"alakú út van."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:18
+msgid ""
+"But the whole strength of GIS is that all the objects that are visible on "
+"the map also have attributes. Maps in a GIS aren't just pictures. They "
+"represent not only objects in locations, but also information about those "
+"objects."
+msgstr ""
+"A térinformatikai rendszerek erőssége azonban éppen abban rejlik, hogy a "
+"térképen látható összes objektumnak vannak attribútumai is. A "
+"térinformatikában a térképek nem csak képek. Nemcsak az objektumokat "
+"ábrázolják a helyükön, hanem az objektumokra vonatkozó információkat is."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:23
+msgid ""
+"**The goal for this lesson:** To learn about the structure of vector data "
+"and explore the attribute data of an object"
+msgstr ""
+"**A lecke célja:** A vektoros adatok szerkezetének megismerése és egy "
+"objektum attribútumadatainak feltárása."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:27
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Viewing Layer Attributes"
+msgstr ""
+":abbr:`★☆☆ (alapszint)` Kövesse végig: Réteg attribútumainak megtekintése"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:29
+msgid ""
+"It's important to know that the data you will be working with does not only "
+"represent **where** objects are in space, but also tells you **what** those "
+"objects are."
+msgstr ""
+"Fontos tudni, hogy az adatok, amelyekkel dolgozni fog, nem csak azt mutatják"
+" meg, hogy **hol** vannak az objektumok a térben, hanem azt is, hogy **mik**"
+" ezek az objektumok."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:33
+msgid ""
+"From the previous exercise, you should have the ``protected_areas`` layer "
+"loaded in your map. If it is not loaded, then you can find the "
+":file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory "
+":file:`exercise_data/shapefile`."
+msgstr ""
+"Az előző feladat alapján a ``protected_areas`` réteget már be kell töltenie "
+"a térképére. Ha nincs betöltve, akkor az *ESRI Shapefile* formátumú "
+":file:`protected_areas.shp` adathalmazt a :file:`exercise_data/shapefile` "
+"könyvtárban találja."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:38
+msgid ""
+"The polygons representing the protected areas constitute the **spatial "
+"data**, but we can learn more about the protected areas by exploring the "
+"**attribute table**."
+msgstr ""
+"A védett területeket ábrázoló poligonok alkotják a **térbeli adatokat**, de "
+"a védett területekről többet tudhatunk meg a **attribútumtábla** "
+"felfedezésével."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:42
+msgid ""
+"In the :guilabel:`Layers` panel, click on the ``protected_areas`` layer to "
+"select it."
+msgstr ""
+"A :guilabel:`Rétegek` panelen kattintással jelölje ki a ``protected_areas`` "
+"réteget."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:44
+msgid ""
+"In the :menuselection:`Layer` menu, click the |openTable| :sup:`Open "
+"Attribute Table` button (also accessible from top toolbars buttons). This "
+"will open a new window showing the attribute table of the "
+"``protected_areas`` layer."
+msgstr ""
+"A :menuselection:`Réteg` menüben kattintson az |openTable| "
+":sup:`Attribútumtábla megnyitása` gombra (a felső eszköztár gombjairól is "
+"elérhető). Ez megnyit egy új ablakot, amiben a ``protected_areas`` réteg "
+"attribútumtáblája látható."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:191
 msgid "openTable"
 msgstr "openTable"
 
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:51
+msgid ""
+"A row is called a **record** and is associated with a **feature** in the "
+"Canvas Map, such as a polygon. A column is called a **field** (or an "
+"**attribute**), and has a name that helps describe it, such as ``name`` or "
+"``id``. Values in the cells are known as **attribute values**. These "
+"definitions are commonly used in GIS, so it is good to become familiar with "
+"them."
+msgstr ""
+"Egy sort **rekordnak** nevezünk, ami a térképvászon egy **eleméhez**, "
+"például egy poligonhoz kapcsolódik. Az oszlopot **mezőnek** (vagy "
+"**attribútumnak**) nevezzük, aminek van egy neve, amely segít azonosítani, "
+"például ``név`` vagy ``id``. A cellákban lévő értékeket "
+"**attribútumértékeknek** nevezzük. Ezeket a definíciókat a GIS-ben gyakran "
+"használják, ezért nem árt megismerkedni velük."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:59
+msgid ""
+"In the ``protected_areas`` layer, there are two **features**, which are "
+"represented by the two polygons we see on the Map Canvas."
+msgstr ""
+"A ``protected_areas`` rétegben két **elem** van, amelyeket a térképvásznon "
+"látható két poligon ábrázol."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:62
+msgid ""
+"In order to understand what the **fields** and **attribute values** "
+"represent, one may need to find documentation (or metadata) describing the "
+"meaning of the attribute values. This is usually available from the creator "
+"of the data set."
+msgstr ""
+"Ahhoz, hogy megértsük, mit jelentenek a **mezők** és **attribútumértékek**, "
+"szükség lehet az attribútumértékek jelentését leíró dokumentációra (vagy "
+"metaadatokra). Ez általában az adathalmaz készítőjénél érhető el."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:67
+msgid ""
+"Next, let's see how a record in the attribute table is linked to a polygon "
+"feature that we see on the Map Canvas."
+msgstr ""
+"Ezután nézzük meg, hogyan kapcsolódik az attribútumtábla egy rekordja egy "
+"poligonelemhez, amelyet a térképvásznon látunk."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:70
+msgid "Go back to the main QGIS window."
+msgstr "Térjen vissza a QGIS fő ablakába."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:71
+msgid ""
+"In the :menuselection:`Edit --> Select` menu, click on the |selectRectangle|"
+" :guilabel:`Select Feature(s)` button."
+msgstr ""
+"A :menuselection:`Szerkesztés --> Kiválasztás` menüben kattintson az "
+"|selectRectangle| :guilabel:`Elemek kiválasztása` menüpontra."
+
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:193
 msgid "selectRectangle"
 msgstr "selectRectangle"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:72
+msgid ""
+"Make sure the ``protected_areas`` layer is still selected in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Győződjön meg róla, hogy a ``protected_areas`` réteg még mindig ki van "
+"jelölve a :guilabel:`Rétegek` panelen."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:73
+msgid ""
+"Move your mouse to the Map Canvas and left click on the smaller of the two "
+"polygons. The polygon will turn yellow indicating it is selected."
+msgstr ""
+"Vigye az egeret a térképvászonra, és kattintson a bal gombbal a két poligon "
+"közül a kisebbikre. A poligon sárga színűvé válik, jelezve, hogy ki van "
+"jelölve."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:79
+msgid ""
+"Go back to the :guilabel:`Attribute Table` window, and you should see a "
+"record (row) highlighted. These are the attribute values of the selected "
+"polygon."
+msgstr ""
+"Menjen vissza a :guilabel:`Attribútumtábla` ablakba, ahol látnia kell egy "
+"rekordot (sort) kiemelve. Ezek a kiválasztott poligonhoz tartozó "
+"attribútumértékek."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:86
+msgid "You can also select a feature using the Attribute Table."
+msgstr "Az elemet az Attribútumtábla segítségével is kiválaszthatja."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:88
+msgid ""
+"In the :guilabel:`Attribute Table` window, on the far left, click on the row"
+" number of the record that is currently not selected."
+msgstr ""
+"A :guilabel:`Attribútumtábla` ablakban, a bal szélső részen kattintson az "
+"éppen nem kiválasztott rekord sorszámára."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:94
+msgid ""
+"Go back to the main QGIS window and look at the Map Canvas. You should see "
+"the larger of the two polygons colored yellow."
+msgstr ""
+"Térjen vissza a QGIS fő ablakába, és nézze meg a térképvásznat. A két "
+"poligon közül a nagyobbat sárgára színezve kell látnia."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:96
+msgid ""
+"To deselect the feature, go to the :guilabel:`Attribute Table` window and "
+"click on |deselectActiveLayer| :sup:`Deselect all features from the layer` "
+"button."
+msgstr ""
+"Az elem kijelölésének megszüntetéséhez lépjen a :guilabel:`Attribútumtábla` "
+"ablakba, és kattintson a |deselectActiveLayer| :sup:`A réteg minden eleme "
+"kiválasztásának megszűntetése` gombra."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:189
 msgid "deselectActiveLayer"
 msgstr "deselectActiveLayer"
 
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:99
+msgid ""
+"Sometimes there are many features shown on the Map Canvas and it might be "
+"difficult to see which feature is selected from the Attribute Table.  "
+"Another way to identify the location of a feature is to use the "
+":guilabel:`Flash Feature` tool."
+msgstr ""
+"Néha sok elem jelenik meg a térképvásznon, és nehéz lehet látni, hogy melyik"
+" elem van kiválasztva az attribútumtáblából. Egy másik módja az elem "
+"helyének azonosítására az :guilabel:`Elem felvillantása` eszköz használata."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:104
+msgid ""
+"In the :guilabel:`Attribute Table`, right-click on any cell in the row that "
+"has the attribute value ``r2855697`` for the field ``full_id``."
+msgstr ""
+"A :guilabel:`Attribútumtáblában` kattintson jobb gombbal bármelyik cellára "
+"abban a sorban, amelyiknek ``full_id`` mezőjében ``r2855697`` "
+"attribútumérték található."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:106
+msgid ""
+"In the context menu, click on :guilabel:`Flash Feature` and watch the Map "
+"Canvas."
+msgstr ""
+"Kattintson a felbukkanó menüben az :guilabel:`Elem felvillantása` "
+"menüpontra, és nézze meg a térképvásznat."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:112
+msgid ""
+"You should see the polygon flash red a few times.  If you missed it, try it "
+"again."
+msgstr ""
+"Látnia kell, hogy a poligon néhányszor pirosan felvillan. Ha nem vette "
+"észre, próbálja meg újra."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:115
+msgid ""
+"Another useful tool is the :guilabel:`Zoom to Feature` tool, that tells QGIS"
+" to zoom to the feature of interest."
+msgstr ""
+"Egy másik hasznos eszköz a :guilabel:`Nagyítás az elemre` eszköz, amire "
+"kattintva a QGIS ráközelít az adott elemre."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:118
+msgid ""
+"In the :guilabel:`Attribute Table`, right-click on  any cell in the row that"
+" has the attribute value ``r2855697`` for the field ``full_id``."
+msgstr ""
+"A :guilabel:`Attribútumtáblában` kattintson jobb gombbal bármelyik cellára "
+"abban a sorban, amelyiknek ``full_id`` mezőjében ``r2855697`` "
+"attribútumérték található."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:120
+msgid "In the context menu, click on :guilabel:`Zoom to Feature`"
+msgstr ""
+"A felbukkanó menü kattintson a :guilabel:`Nagyítás az elemre` menüpontra."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:125
+msgid ""
+"Look at the Map Canvas. The polygon should now occupy the extent of the Map "
+"Canvas area."
+msgstr ""
+"Nézze meg a térképvásznat. A poligonnak most már ki kell töltenie a "
+"térképvászon területét."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:128
+msgid "You may now close the attribute table."
+msgstr "Most már bezárhatja az attribútumtáblát."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:133
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Exploring Vector Data Attributes"
+msgstr ""
+":abbr:`★☆☆ (alapszint)` Próbálja ki: Vektoros adatok attribútumainak "
+"felfedezése"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:135
+msgid "How many fields are available in the :guilabel:`rivers` layer?"
+msgstr "Hány mező van a :guilabel:`rivers` rétegben?"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:136
+msgid "Tell us a bit about the ``town`` places in your dataset."
+msgstr "Meséljen egy kicsit az adathalmaz ``town`` rétegének helyeiről."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:137
+msgid ""
+"Open the attribute table for the :guilabel:`places` layer. Which field would"
+" be the most useful to represent in label form, and why?"
+msgstr ""
+"Nyissa meg a :guilabel:`places` réteg attribútumtábláját. Melyik mezőt lenne"
+" a leghasznosabb címke formájában feltünteni a térképen, és miért?"
+
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:140
 msgid "Answer"
 msgstr "Válasz"
 
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:143
+msgid "There should be 9 fields in the :guilabel:`rivers` layer:"
+msgstr "A :guilabel:`rivers` rétegben 9 mezőnek kell lennie:"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:145
+msgid "Select the layer in the :guilabel:`Layers` panel."
+msgstr "Válassza ki a réteget a :guilabel:`Rétegek` panelen."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:146
+msgid ""
+"Right-click and choose :guilabel:`Open Attribute Table`, or press the "
+"|openTable| button on the :guilabel:`Attributes Toolbar` (it can be enabled "
+"from :menuselection:`View --> Toolbars` menu)."
+msgstr ""
+"Kattintson a jobb gombbal, és válassza az :guilabel:`Attribútumtábla "
+"megnyitása` menüpontot, vagy nyomja meg a |openTable| gombot a "
+":guilabel:`Attribútumok eszköztáron` (a :menuselection:`Nézet --> "
+"Eszköztárak` menüből kapcsolható be)."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:149
+msgid "Count the number of columns."
+msgstr "Számolja meg az oszlopokat."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:151
+msgid ""
+"A quicker approach could be to double-click the :guilabel:`rivers` layer, "
+"open the :menuselection:`Layer properties --> Fields` tab, where you will "
+"find a numbered list of the table's fields."
+msgstr ""
+"Gyorsabb megoldás lehet, ha duplán kattint a :guilabel:`rivers` rétegre, "
+"megnyitja a :menuselection:`Rétegtulajdonságok --> Mezők` lapot, ahol "
+"megtalálja a tábla mezőinek számozott listáját."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:155
+msgid ""
+"Information about towns is available in the :guilabel:`places` layer. Open "
+"its attribute table as you did with the :guilabel:`rivers` layer: there are "
+"two features whose :guilabel:`place` attribute is set to ``town``: "
+"*Swellendam* and *Buffeljagsrivier*. You can add comment on other fields "
+"from these two records, if you like."
+msgstr ""
+"A városokra vonatkozó információk a :guilabel:`places` rétegben találhatók. "
+"Nyissa meg az attribútumtábláját, ahogyan a :guilabel:`rivers` réteggel is "
+"tette: két olyan elem van, amelynek :guilabel:`place` attribútuma ``town`` "
+"értékű: *Swellendam* és *Buffeljagsrivier*. Ha szeretné, a két rekordból más"
+" mezőkhöz is fűzhet megjegyzést."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:161
+msgid ""
+"The ``name`` field is the most useful to show as labels. This is because all"
+" its values are unique for every object and are very unlikely to contain "
+"*NULL* values. If your data contains some *NULL* values, do not worry as "
+"long as most of your places have names."
+msgstr ""
+"A ``name`` mezőt a leghasznosabb címkeként megjeleníteni. Ez azért van így, "
+"mert minden objektumának minden értéke egyedi, és nagyon valószínűtlen, hogy"
+" *NULL* értékeket tartalmazzon. Ha az adataiban van néhány *NULL* érték, ne "
+"aggódjon, amíg a legtöbb helynek van neve."
+
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:167
 msgid "In Conclusion"
-msgstr "Befejezésül"
+msgstr "Összefoglalva"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:169
+msgid ""
+"You now know how to use the attribute table to see what is actually in the "
+"data you're using. Any dataset will only be useful to you if it has the "
+"attributes that you care about. If you know which attributes you need, you "
+"can quickly decide if you're able to use a given dataset, or if you need to "
+"look for another one that has the required attribute data."
+msgstr ""
+"Most már tudja, hogyan használhatja az attribútumtáblát, hogy lássa, mi is "
+"van valójában a felhasznált adatokban. Bármilyen adathalmaz csak akkor lesz "
+"hasznos az Ön számára, ha vannak benne Önt érdeklő attribútumok. Ha tudja, "
+"hogy milyen attribútumokra van szüksége, gyorsan eldöntheti, hogy tudja-e "
+"használni egy adott adathalmazt, vagy keresnie kell egy másikat, amely "
+"rendelkezik a szükséges attribútumadatokkal."
 
 #: ../../docs/training_manual/vector_classification/attribute_data.rst:176
 msgid "What's Next?"
-msgstr "Mi következik?"
+msgstr "Hogyan tovább?"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:178
+msgid ""
+"Different attributes are useful for different purposes. Some of them can be "
+"represented directly as text for the map user to see. You'll learn how to do"
+" this in the next lesson."
+msgstr ""
+"A különböző attribútumok különböző célokra hasznosak. Némelyikük közvetlenül"
+" szövegesen jeleníthető meg a térkép olvasója számára. Ennek módját a "
+"következő leckében fogja megtanulni."
