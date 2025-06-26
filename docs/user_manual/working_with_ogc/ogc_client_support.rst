@@ -1009,7 +1009,7 @@ STAC connections can be added in QGIS using either the :guilabel:`Browser panel`
    * :guilabel:`Edit` the STAC connection settings
    * :guilabel:`Remove` the STAC connection
 
-  .. figure:: img/stac_connection.png
+  .. figure:: img/STAC_connection.png
      :align: center
 
      Creating a connection to a STAC server
