@@ -103,7 +103,7 @@ Icon                            Substitution                        Icon        
 |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
 |newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
 |newVirtualLayer|               ``|newVirtualLayer|``               |newMeshLayer|                  ``|newMeshLayer|``
-|newGpx|                        ``|newGpx|``
+|newGpx|                        ``|newGpx|``                        |stac|                          ``|stac|``
 |dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
 |geoPackage|                    ``|geoPackage|``                    |spatialite|                    ``|spatialite|``
 |virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
@@ -1592,6 +1592,8 @@ Icon                            Substitution                        Icon        
 .. |splitParts| image:: /static/common/mActionSplitParts.png
    :width: 1.5em
 .. |sqlQueryBuilder| image:: /static/common/sqlquerybuilder.png
+   :width: 1.5em
+.. |stac| image:: /static/common/mIconStac.png
    :width: 1.5em
 .. |stackedBar| image:: /static/common/stacked-bar.png
    :width: 1.5em
