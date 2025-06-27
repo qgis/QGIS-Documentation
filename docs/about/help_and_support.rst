@@ -97,7 +97,7 @@ To use IRC:
 Telegram
 --------
 
-There is a vibrant user and community related chat group (english spoken) on the Telegram channel, which you can `join here <https://t.me/joinchat/Aq2V5RPoxYYhXqUPoxRWPQ>`_.
+There is a vibrant user and community related chat group (english spoken) on the Telegram channel, which you can `join here <https://t.me/+4U6j0dycRy40MTU0>`_.
 
 To join Telegram from your phone, you need to install the Telegram app, register and join via the link above.
 There is also a web version (https://web.telegram.org) which you can join in the browser (after you have joined telegram via your phone number).
