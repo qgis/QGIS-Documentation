@@ -265,7 +265,8 @@ Main properties
    Fixed table Item Properties Panel with Table designer
 
 In :guilabel:`Main properties`, press :guilabel:`Edit table...`
-to open the :guilabel:`Table designer` dialog where you can build your table:
+to open the :guilabel:`Table designer` dialog where you can build your table
+(double-clicking the table item will also open the editor dialog):
 
 * On the left hand of the dialog, a table frame displays the active table item
   with its content and settings.
