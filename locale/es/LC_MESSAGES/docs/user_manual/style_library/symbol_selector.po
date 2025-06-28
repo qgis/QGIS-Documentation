@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Eric Armijo, 2025
 # Harrissou Sant-anna, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-08 10:04+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -331,6 +331,21 @@ msgstr ""
 "símbolos de relleno con una apariencia consistente, independientemente del "
 "conjunto de datos que se representa y la orientación del anillo de las "
 "entidades individuales."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:124
+msgid ""
+"for marker symbols, the :guilabel:`Buffer settings...` enables addition of a"
+" halo effect around the marker symbol in order to make it more readable "
+"against different backgrounds. The buffer is calculated and drawn using the "
+"shape of ALL the symbol layers in the marker. You can adjust the "
+":guilabel:`Size`, :guilabel:`Join style` and :guilabel:`Symbol` of display."
+msgstr ""
+"para los símbolos de marcador, la opción :guilabel:`Configuración del "
+"búfer...` permite añadir un efecto de halo alrededor del símbolo de marcador"
+" con el fin de que sea más legible sobre diferentes fondos. El búfer se "
+"calcula y dibuja utilizando la forma de TODAS las capas de símbolos del "
+"marcador. Puede ajustar el :guilabel:`Tamaño`, el :guilabel:`Estilo de "
+"unión` y el :guilabel:`Símbolo` de visualización."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:129
 msgid ""
@@ -1113,6 +1128,97 @@ msgstr ""
 msgid "Examples of raster lines"
 msgstr "Ejemplos de líneas raster"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:463
+msgid ""
+"**Linear referencing**: allows placing text labels at regular intervals "
+"along a line, or at positions corresponding to existing vertices. Positions "
+"can be calculated using Cartesian distances, or interpolated from z/m "
+"values. Parameters include:"
+msgstr ""
+"**Referenciación lineal**: permite colocar etiquetas de texto a intervalos "
+"regulares a lo largo de una línea, o en posiciones correspondientes a "
+"vértices existentes. Las posiciones se pueden calcular utilizando distancias"
+" cartesianas o interpoladas a partir de valores z/m. Los parámetros "
+"incluyen:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:468
+msgid ""
+":guilabel:`Measure placement`: Labels can be placed at regular cartesian 2d "
+"distances, at regular linearly interpolated spacing calculated using the Z "
+"or M values in geometries, or at existing vertices. A fixed or data-defined "
+":guilabel:`Interval` is given."
+msgstr ""
+":guilabel:`Colocación de medidas`: Las etiquetas se pueden colocar a "
+"distancias cartesianas 2D regulares, a intervalos regulares interpolados "
+"linealmente calculados utilizando los valores Z o M en geometrías, o en "
+"vértices existentes. Se proporciona un :guilabel:`Intervalo` fijo o definido"
+" por datos."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:472
+msgid ""
+":guilabel:`Quantity`: Label displayed at each position represent the running"
+" distance along the line, or the linearly interpolated Z or M value. Labels "
+"are rendered using the full range of :ref:`text <text_format>` and "
+":ref:`number <number_formatting>` formatting functionalities available in "
+"QGIS."
+msgstr ""
+":guilabel:`Cantidad`: La etiqueta que se muestra en cada posición representa"
+" la distancia recorrida a lo largo de la línea, o el valor Z o M interpolado"
+" linealmente. Las etiquetas se representan utilizando todo el rango de "
+"funcionalidades de formateo de :ref:`texto <text_format>` y :ref:`número "
+"<number_formatting>` disponibles en QGIS."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:479
+msgid ""
+"When using the distance-based placement or labels, the distances are "
+"calculated using 2D only. Cartesian calculations are based on the original "
+"layer CRS."
+msgstr ""
+"Cuando se utiliza la colocación basada en la distancia o las etiquetas, las "
+"distancias se calculan utilizando solo 2D. Los cálculos cartesianos se basan"
+" en el SRC de la capa original."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:482
+msgid ""
+":guilabel:`Skip multiples of`: If set, labels which are a multiple of this "
+"value will be skipped over. This allows construction of complex referencing "
+"labels, e.g. where a symbol has two linear referencing symbol layers, one "
+"set to label every 100m in a small font, skipping multiples of 1000, and a "
+"second set to label every 1000m in a big bold font."
+msgstr ""
+":guilabel:`Omitir múltiplos de`: Si se establece, se omitirán las etiquetas "
+"que sean múltiplos de este valor. Esto permite la creación de etiquetas de "
+"referencia complejas, por ejemplo, cuando un símbolo tiene dos capas de "
+"símbolos de referencia lineal, una configurada para etiquetar cada 100 m con"
+" una fuente pequeña, omitiendo los múltiplos de 1000, y otra configurada "
+"para etiquetar cada 1000 m con una fuente grande y en negrita."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:486
+msgid ""
+":guilabel:`Average angle over`: Labels are rendered using an angle "
+"calculated by averaging the linestring, so sharp tiny jaggies don't result "
+"in unslightly label rotation."
+msgstr ""
+":guilabel:`Ángulo promedio sobre`: Las etiquetas se representan utilizando "
+"un ángulo calculado a partir del promedio de la cadena de líneas, de modo "
+"que los pequeños bordes dentados no provocan una rotación antiestética de "
+"las etiquetas."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:488
+msgid ""
+":guilabel:`Show marker symbols`, at referenced points in the line feature, "
+"using a full QGIS marker symbol. This allows e.g. showing a cross-hatch at "
+"the labeled point, for a \"ruler\" style line."
+msgstr ""
+":guilabel:`Mostrar símbolos de marcador`, en los puntos referenciados de la "
+"característica de línea, utilizando un símbolo de marcador completo de QGIS."
+" Esto permite, por ejemplo, mostrar un sombreado cruzado en el punto "
+"etiquetado, para una línea de estilo «regla»."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:497
+msgid "Drawing linear labels along line feature"
+msgstr "Dibujar etiquetas lineales a lo largo de una característica lineal"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:502
 msgid ""
 "**Lineburst**: renders a gradient along the width of a line. You can choose "
@@ -1128,6 +1234,23 @@ msgstr ""
 #: ../../docs/user_manual/style_library/symbol_selector.rst:513
 msgid "Examples of lineburst lines"
 msgstr "Ejemplos de líneas de ráfaga"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:517
+msgid ""
+"**Filled line**: renders the interior of the lines using a fill symbol "
+"allowing for lines filled with gradients, line hatches, etc. The "
+":guilabel:`Stroke width`, :guilabel:`Offset`, :guilabel:`Join style`, "
+":guilabel:`Cap style` can be adjusted."
+msgstr ""
+"**Línea rellena**: renderiza el interior de las líneas utilizando un símbolo"
+" de relleno que permite líneas rellenas con degradados, rayados, etc. Se "
+"pueden ajustar los parámetros :guilabel:`Ancho del trazo`, "
+":guilabel:`Desplazamiento`, :guilabel:`Estilo de unión` y :guilabel:`Estilo "
+"de extremo`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:528
+msgid "Examples of filled lines"
+msgstr "Ejemplos de líneas rellenas"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:534
 msgid "Fill Symbols"
@@ -1520,6 +1643,30 @@ msgstr ""
 ":guilabel:`Recortar los marcadores a los límites del polígono`: si los "
 "marcadores representados cerca de los bordes de los polígonos deben ser "
 "recortados al límite del polígono o no"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:682
+msgid ""
+"**Raster image fill**: fills the polygon with tiles from a raster image "
+"(:file:`PNG` :file:`JPG`, :file:`BMP` ...). The image can be a file on the "
+"disk, a remote URL or an embedded file encoded as a string (:ref:`more "
+"details <embedded_file_selector>`). Options include (data defined) opacity, "
+"size, coordinate mode (object or viewport), rotation and offset. Under the "
+"option Size you can independently adjust the width and height of the fill "
+"pattern, enabling stretched raster fills in either the horizontal or "
+"vertical directions. The image width and height can be set using any of the "
+":ref:`common units <unit_selector>` or as a percentage of the original size."
+msgstr ""
+"**Relleno con imagen rasterizada**: rellena el polígono con mosaicos de una "
+"imagen rasterizada (:file:`PNG` :file:`JPG`, :file:`BMP` ...). La imagen "
+"puede ser un archivo en el disco, una URL remota o un archivo incrustado "
+"codificado como una cadena (:ref:`más detalles <embedded_file_selector>`). "
+"Las opciones incluyen (datos definidos) opacidad, tamaño, modo de "
+"coordenadas (objeto o ventana gráfica), rotación y desplazamiento. En la "
+"opción Tamaño, puede ajustar de forma independiente la anchura y la altura "
+"del patrón de relleno, lo que permite rellenos rasterizados estirados en "
+"dirección horizontal o vertical. La anchura y la altura de la imagen se "
+"pueden establecer utilizando cualquiera de las :ref:`unidades comunes "
+"<unit_selector>` o como porcentaje del tamaño original."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:691
 msgid ""
