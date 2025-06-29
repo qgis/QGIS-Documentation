@@ -6,9 +6,10 @@
 # 
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
-# tomoya miyoshi, 2025
-# Transifex Bot <>, 2025
 # Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# tomoya miyoshi, 2025
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -310,6 +311,23 @@ msgid ""
 "general such as name in the project, source path, list of auxiliary files, "
 "last save time and size, the used provider"
 msgstr "一般情報：プロジェクト内での名前、ソースへのパス、付随的なファイルのリスト、最終更新時刻、ファイルの大きさ、使用しているプロバイダ"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:85
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties may include "
+":ref:`layer notes <layer_notes>`, :ref:`legend widgets <vectorlegendmenu>`, "
+":ref:`layer variables <general_tools_variables>`, :ref:`form properties "
+"<vector_attributes_menu>`... More custom properties can be created and "
+"managed using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"カスタムプロパティは、アクティブなプロジェクトにレイヤに関する追加情報を格納するために使用されます。デフォルトのカスタムプロパティには、:ref:`レイヤノート"
+" <layer_notes>`、:ref:`凡例ウィジェット <vectorlegendmenu>`、:ref:`レイヤ変数 "
+"<general_tools_variables>`、:ref:`フォームプロパティ <vector_attributes_menu>` "
+"などが含まれます。追加のカスタムプロパティは、PyQGIS "
+"を使用して作成および管理できます。具体的には、:pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` メソッドを通じて行います。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:91
 msgid ""
@@ -791,6 +809,12 @@ msgid ""
 "symbol for all the classes;"
 msgstr "全てのクラスのベースシンボルとなる :ref:`シンボル <symbol-selector>` を設定します。"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:403
+msgid ""
+"Indicate the :ref:`Color ramp <color-ramp>`, i.e. the range of colors from "
+"which the color applied to each symbol is selected."
+msgstr ":ref:`カラーランプ <color-ramp>` を指定します。つまり、各シンボルに適用される色を選択する色の範囲です。"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:406
 msgid ""
 "Besides the common options of the :ref:`color ramp widget "
@@ -1266,7 +1290,8 @@ msgstr "次に、クラスに比例シンボロジを適用します："
 msgid ""
 "Click on the :guilabel:`Change` button above the classification frame: you "
 "get the :ref:`symbol-selector` dialog."
-msgstr "分類フレームの上にある :guilabel:`変更` ボタンをクリックすると、 :ref:`シンボルセレクタ` ダイアログが開きます。"
+msgstr ""
+"分類フレームの上にある :guilabel:`変更` ボタンをクリックすると、 :ref:`symbol-selector` ダイアログが開きます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:616
 msgid ""
@@ -1483,8 +1508,9 @@ msgid ""
 "selecting the :ref:`corresponding menu <refine_selected_rule>` at the bottom"
 " of the dialog."
 msgstr ""
-":guilabel:`現在のルールを再調整する` サブメニューを開き、現在のルールを **スケール** 、 **カテゴリ** または **範囲** "
-"で絞りこむことができます。ダイアログ下部にある :ref:`対応したメニュー <refine_selected_rule>` を選択したときと同様です。"
+":guilabel:`現在のルールを再調整する` サブメニューを開き、現在のルールを **スケール**  、  **カテゴリ**  または  "
+"**範囲**  で絞りこむことができます。ダイアログ下部にある :ref:`対応したメニュー <refine_selected_rule>`  "
+"を選択したときと同様です。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:725
 msgid ""
@@ -1500,7 +1526,7 @@ msgid ""
 "and you will get some :ref:`more options <editing_style_layer>`."
 msgstr ""
 "作成したルールはマップの凡例においてもツリー階層で表示されます。マップの凡例でエントリをダブルクリックすると、適用されたシンボルを編集できます。右クリックすると"
-" :ref:`さらにオプション <editing_style_layer>` が表示されます。"
+" :ref:`さらにオプション <editing_style_layer>`  が表示されます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:732
 msgid ""
@@ -1543,7 +1569,7 @@ msgstr "点の競合回避レンダラを設定するには:"
 msgid ""
 "Set the :guilabel:`Center symbol`: how the virtual point at the center will "
 "look like"
-msgstr ":guilabel:`中央シンボル` を設定します: 中心にある仮想的な点がどのように表示されるか"
+msgstr ":guilabel:`中央シンボル`  を設定します: 中心にある仮想的な点がどのように表示されるか"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:759
 msgid ""
@@ -1555,7 +1581,7 @@ msgstr ":guilabel:`レンダラ` の種類を選びます: レイヤ内の地物
 msgid ""
 "Press the :guilabel:`Renderer Settings...` button to configure features' "
 "symbology according to the selected renderer"
-msgstr ":guilabel:`レンダラの設定...` ボタンを押して選択したレンダラに応じた地物のシンボロジを設定します"
+msgstr ":guilabel:`レンダラの設定...`  ボタンを押して選択したレンダラに応じた地物のシンボロジを設定します"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:763
 msgid ""
@@ -1595,7 +1621,7 @@ msgid ""
 "adjustment` (e.g., to add more spacing between the rendered points)."
 msgstr ""
 "競合回避シンボルは :guilabel:`置き換え線` 上に配置されます。置き換え線の最小間隔はポイントシンボルレンダラに依存しますが、 "
-":guilabel:`ストローク幅`、 :guilabel:`ストローク色`、 :guilabel:`サイズ調整` "
+":guilabel:`ストローク幅` 、 :guilabel:`ストローク色` 、 :guilabel:`サイズ調整` "
 "などの設定をカスタマイズすることができます（例えば、レンダリングされたポイントの間隔を広げるなど）。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:779
@@ -1668,7 +1694,7 @@ msgid ""
 msgstr ""
 "|pointDisplacementSymbol| :guilabel:`点の競合回避` "
 "レンダラーが最も近いか重ね合うポイント地物の配置を吹き飛ばすのとは異なり、|pointClusterSymbol| :guilabel:`点のクラスタ`"
-" "
+"  "
 "レンダラーは近接した点を1つのレンダリングされたマーカーシンボルにグループ化します。互いに指定された距離内にある点は1つのシンボルに統合されます。点の集約は、単に検索距離内の最初のグループを割り当てるのではなく、最も近いグループが形成されるように行われます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4033
@@ -1687,7 +1713,7 @@ msgid ""
 " Font marker symbol layer."
 msgstr ""
 ":guilabel:`クラスタシンボル` に点のクラスタを表すシンボルを設定する; デフォルトのレンダリングでは、フォントマーカーシンボルレイヤの "
-"``@cluster_size`` :ref:`variable <general_tools_variables>` "
+"``@cluster_size`` :ref:`variable <general_tools_variables>`  "
 "により集約された地物の数が表示されます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:828
@@ -1775,6 +1801,22 @@ msgstr "反転ポリゴンダイアログ"
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:891
 msgid "Heatmap Renderer"
 msgstr "ヒートマップレンダラー"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:893
+msgid ""
+"With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live "
+"dynamic heatmaps for (multi)point layers. You can specify the heatmap "
+":guilabel:`Radius` in millimeters, points, pixels, map units or inches, "
+"choose and edit a :guilabel:`Color ramp` for the heatmap style and use a "
+"slider for selecting a trade-off between render speed and quality. You can "
+"also define a :guilabel:`Maximum value` limit and :guilabel:`Weight points "
+"by` using a field or an expression."
+msgstr ""
+"|heatmapSymbol| :guilabel:`ヒートマップ` "
+"レンダラーを使用すると、（マルチ）ポイントレイヤ用のライブダイナミックヒートマップを作成できます。ヒートマップ :guilabel:`半径` "
+"をミリメートル、ポイント、ピクセル、地図単位、インチで指定したり、ヒートマップのスタイルの :guilabel:`カラーランプ` "
+"の選択・編集をしたり、スライダーを使用してレンダリングの速度と品質のトレードオフを選択したりすることができます。また、:guilabel:`最大値` "
+"の上限とフィールドや式を使用して :guilabel:`点の重み付け` を定義することもできます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3967
 msgid "heatmapSymbol"
@@ -2448,8 +2490,8 @@ msgid ""
 msgstr ""
 "|labelingSingle| :guilabel:`ラベル` "
 "プロパティは、ベクタレイヤに対するスマートなラベル付けを設定するために必要かつ適切なすべての機能を提供します。このダイアログには、 "
-":guilabel:`レイヤスタイル` パネルや **ラベルツールバー** の |labelingSingle| "
-":sup:`レイヤラベリングオプション` ボタンからもアクセスできます。"
+":guilabel:`レイヤスタイル`  パネルや  **ラベルツールバー**  の |labelingSingle| "
+":sup:`レイヤラベリングオプション`  ボタンからもアクセスできます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3995
 msgid "labelingRules"
@@ -2520,17 +2562,17 @@ msgid ""
 ":ref:`display field <maptips>` is used. Click |expression| if you want to "
 "define labels based on expressions - See :ref:`labeling_with_expressions`."
 msgstr ""
-"ダイアログの最上部には、 :guilabel:`値（Value）` "
+"ダイアログの最上部には、 :guilabel:`値（Value）`  "
 "のドロップダウンリストがあります。ラベル付けに使用する属性カラムを選択することができます。デフォルトでは、 :ref:`表示名フィールド "
-"<maptips>` が使用されます。式に基づいてラベルを定義したい場合には、 |expression| をクリックします。詳細は "
-":ref:`labeling_with_expressions` を参照してください。"
+"<maptips>`  が使用されます。式に基づいてラベルを定義したい場合には、 |expression| をクリックします。詳細は  "
+":ref:`labeling_with_expressions`  を参照してください。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1360
 msgid ""
 "Labels with their formatting can be displayed as entries in the legends, if "
 "enabled in the :ref:`Legend <vectorlegendmenu>` tab."
 msgstr ""
-":ref:`凡例 <vectorlegendmenu>` "
+":ref:`凡例 <vectorlegendmenu>`  "
 "タブでラベル凡例表示を有効にした場合、フォーマット付きのラベルが凡例内のエントリとして表示されます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1363
@@ -2609,11 +2651,11 @@ msgstr "render"
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1375
 msgid ""
 "Description of how to set each property is exposed at :ref:`showlabels`."
-msgstr "各プロパティの設定方法は、 :ref:`showlabels` にあります。"
+msgstr "各プロパティの設定方法は、 :ref:`showlabels`  にあります。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1409
 msgid "Press :guilabel:`OK`."
-msgstr ":guilabel:`OK` を押します。"
+msgstr ":guilabel:`OK`  を押します。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1431
 msgid "Setting the automated placement engine"
@@ -2628,7 +2670,7 @@ msgid ""
 "the following options:"
 msgstr ""
 "ラベルの自動的なふるまいに関するプロジェクトレベルの設定を行うために、自動配置設定を使用することができます。 :guilabel:`ラベル` "
-"タブの右上隅にある |autoPlacementSettings| :sup:`自動配置設定（全レイヤに適用）` "
+"タブの右上隅にある |autoPlacementSettings| :sup:`自動配置設定（全レイヤに適用）`  "
 "ボタンをクリックするとダイアログが開き、以下の設定ができます："
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1444
@@ -2642,8 +2684,8 @@ msgid ""
 "longer or wider a feature is, the more candidates it has, and its labels can"
 " be better placed with less risk of collision."
 msgstr ""
-":guilabel:`候補の数` "
-"：ライン地物やポリゴン地物について、地物のサイズに基づき可能なラベル配置の数を計算し割り当てます。地物が長いあるいは広いほど、より多くの候補を持ち、そのラベルは衝突のリスクが減ってより良い配置が可能となります。"
+":guilabel:`候補の数`  "
+":ライン地物やポリゴン地物について、地物のサイズに基づき可能なラベル配置の数を計算し割り当てます。地物が長いあるいは広いほど、より多くの候補を持ち、そのラベルは衝突のリスクが減ってより良い配置が可能となります。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1471
 msgid ""
@@ -2654,9 +2696,9 @@ msgid ""
 "visible labels will be skipped. Note that this setting has no effects on "
 "labels' display in the :ref:`layout map item <layout_map_item>`."
 msgstr ""
-"|checkbox| :guilabel:`地図の端のラベルは省略` "
-"：マップ範囲から部分的に外れたラベルをレンダリングするかどうかを制御します。チェックを入れると、（見える範囲内で完全なラベルを配置できない場合、）切れたラベルが表示されます。チェックを外すと、部分的にしか見えないラベルはスキップされます。この設定は、"
-" :ref:`地図レイアウトのアイテム <layout_map_item>` のラベル表示には影響しないことに留意してください。"
+"|checkbox| :guilabel:`地図の端のラベルは省略` : "
+"マップ範囲から部分的に外れたラベルをレンダリングするかどうかを制御します。チェックを入れると、（見える範囲内で完全なラベルを配置できない場合、）切れたラベルが表示されます。チェックを外すと、部分的にしか見えないラベルはスキップされます。この設定は、"
+" :ref:`地図レイアウトのアイテム <layout_map_item>`  のラベル表示には影響しないことに留意してください。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1477
 msgid ""
@@ -2664,8 +2706,8 @@ msgid ""
 "colliding objects)`. Note that this option can be also set per layer (see "
 ":ref:`labels_rendering`)"
 msgstr ""
-"|unchecked| :guilabel:`全レイヤの全ラベルを表示（衝突ラベルを含む）` ：このオプションはレイヤ単位で設定することもできます（ "
-":ref:`labels_rendering` を参照）。"
+"|unchecked| :guilabel:`全レイヤの全ラベルを表示（衝突ラベルを含む）`  :このオプションはレイヤ単位で設定することもできます（"
+"  :ref:`labels_rendering`  を参照）。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1480
 msgid ""
@@ -2673,8 +2715,8 @@ msgid ""
 "any important labels are missing from the maps (e.g. due to overlaps or "
 "other constraints). They are displayed using a customizable color."
 msgstr ""
-"|unchecked| :guilabel:`位置未定ラベルの表示` "
-"：これにより、重要なラベルがマップから（重複やその他の制約のためなどで）欠落しているかどうかを判断することができます。これらのラベルの表示色はカスタマイズ可能です。"
+"|unchecked| :guilabel:`位置未定ラベルの表示`  "
+":これにより、重要なラベルがマップから（重複やその他の制約のためなどで）欠落しているかどうかを判断することができます。これらのラベルの表示色はカスタマイズ可能です。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1483
 msgid ""
@@ -2685,15 +2727,15 @@ msgid ""
 " a better manual placement with tools from the :ref:`label toolbar "
 "<label_toolbar>`."
 msgstr ""
-"|unchecked| :guilabel:`候補を表示（デバッグ用）` "
-"：ラベル配置のために生成された候補を示すボックスすべてをマップ上に描画するかどうかを制御します。ラベル名のとおり、これはさまざまなラベル設定がもたらす効果のデバッグとテストのためにのみ有用です。これは、"
-" :ref:`ラベルツールバー <label_toolbar>` のツールを使用して手動でより良い配置を行うのにも便利です。"
+"|unchecked| :guilabel:`候補を表示（デバッグ用）`  "
+":ラベル配置のために生成された候補を示すボックスすべてをマップ上に描画するかどうかを制御します。ラベル名のとおり、これはさまざまなラベル設定がもたらす効果のデバッグとテストのためにのみ有用です。これは、"
+" :ref:`ラベルツールバー <label_toolbar>`  のツールを使用して手動でより良い配置を行うのにも便利です。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1490
 msgid ""
 ":guilabel:`Project labeling version`: QGIS supports two different versions "
 "of label automatic placement:"
-msgstr ":guilabel:`ラベルバージョン` ：QGISはラベルの自動配置について2つの異なるバージョンをサポートしています："
+msgstr ":guilabel:`プロジェクトラベルバージョン`  :QGISはラベルの自動配置について2つの異なるバージョンをサポートしています:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1493
 msgid ""
@@ -2705,7 +2747,7 @@ msgid ""
 "obtain the desired labeling results when using this version and it is thus "
 "recommended only for compatibility with older projects."
 msgstr ""
-":guilabel:`Version 1` ：古いシステム（QGIS3.10 "
+":guilabel:`Version 1` : 古いシステム（QGIS3.10 "
 "以前のバージョンで使用されており、これらのバージョンで作成されたプロジェクトをQGIS3.12以降で開く時に使用）です。 Version 1 "
 "では、ラベルや障害物の優先順位を「大まかな目安」としてのみ扱っており、優先度の高い障害物の上に優先度の低いラベルが配置される可能性があります。このため、このバージョンを使用する場合には望むラベル付け結果を得ることが難しい場合があり、古いプロジェクトとの互換性を保つためでしか推奨されません。"
 
@@ -2719,9 +2761,9 @@ msgid ""
 "As a result, this version results in much more predictable and easier to "
 "understand labeling results."
 msgstr ""
-":guilabel:`Version 2 （推奨）` ：これは、QGIS "
+":guilabel:`Version 2 （推奨）` : これは、QGIS "
 "3.12以降で作成された新規プロジェクトでのデフォルトのシステムです。Version 2 では、どんな時にラベルが :ref:`障害物 "
-"<labels_obstacles>` に重なるのを許可するかを決定するロジックが変更修正されました。新しいロジックでは、 "
+"<labels_obstacles>`  に重なるのを許可するかを決定するロジックが変更修正されました。新しいロジックでは、 "
 "ラベル優先度に比べて障害物の重みづけが大きい障害物にラベルが重なることを禁止しています。その結果、このバージョンではラベル付けの結果がより予測しやすく、理解しやすくなりました。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1511
@@ -2734,7 +2776,7 @@ msgid ""
 "applied selectively on the base of expression filters and scale range, as in"
 " :ref:`Rule-based rendering <rule_based_rendering>`."
 msgstr ""
-"ルールに基づくラベル付けは :ref:`ルールに基づくレンダリング<rule_based_rendering>` "
+"ルールに基づくラベル付けは :ref:`ルールに基づくレンダリング<rule_based_rendering>`  "
 "と同様、複数のラベルの設定を定義し、式フィルタとスケール範囲に基づいて選択的にルールを適用できます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1519
@@ -5134,7 +5176,7 @@ msgid ""
 msgstr ""
 "上で述べたラベルのカスタマイズ方法と同じように、補助属性を使ってシンボルやダイアグラムのスタイル設定ができます。これを行うには、 "
 "|dataDefine| :sup:`データによって定義された上書き` をクリックして、特定のプロパティに対して "
-":guilabel:`データをプロジェクトに格納する` を選択します。例えば、 :guilabel:`塗りつぶし色` "
+":guilabel:`データをプロジェクトに格納する` を選択します。例えば、 :guilabel:`塗りつぶし色`  "
 "属性の場合には以下の図のようになります。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2901
@@ -5747,7 +5789,7 @@ msgid ""
 "interest. Make sure the ``lakes`` layer is active and identify a lake. In "
 "the result box you'll now see that our action is visible:"
 msgstr ""
-":guilabel:`レイヤプロパティ` ダイアログを閉じ、地図を見たい領域にズームして下さい。  ``lakes`` "
+":guilabel:`レイヤプロパティ`  ダイアログを閉じ、地図を見たい領域にズームして下さい。  ``lakes`` "
 "レイヤがアクティブであることを確認して、地物情報表示ツールで湖をクリックして下さい。地物情報ボックスの中にアクションが表示されているはずです："
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3251
@@ -5766,7 +5808,7 @@ msgstr ""
 "アクションをクリックすると、デフォルトのブラウザが立ち上がり、 URL "
 "https://www.google.com/search?q=Tustumena "
 "に移動します。アクションにさらに属性フィールドを追加することも可能です。これにはアクションテキストの末尾に ``+`` "
-"を追加し、別のフィールドを選択して :guilabel:`挿入` "
+"を追加し、別のフィールドを選択して :guilabel:`挿入`  "
 "をクリックします。ただしこの例では、検索する意味があるような他のフィールドは持っていません。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3260
@@ -6314,7 +6356,9 @@ msgid ""
 ":ref:`Line style <vector_line_symbols>`: for extruded point and line "
 "features, and for non-extruded polygon features intersected by the profile "
 "line"
-msgstr ":ref:`線のスタイル `: 押し出しのあるポイント地物とライン地物、および断面図線と交差する押し出しのないポリゴン地物用"
+msgstr ""
+":ref:`Line style <vector_line_symbols>`:  "
+"押し出しのあるポイント地物とライン地物、および断面図線と交差する押し出しのないポリゴン地物用"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3647
 msgid ":ref:`Fill style <vector_fill_symbols>`: for extruded polygon features"
@@ -6323,7 +6367,7 @@ msgstr ":ref:`塗りつぶしスタイル <vector_fill_symbols>`: 押し出し�
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3656
 msgid ""
 "a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`"
-msgstr "特定の :ref:`線のスタイル <vector_line_symbols>` を持った :guilabel:`線`"
+msgstr "特定の :ref:`Line style <vector_line_symbols>` を持った  :guilabel:`線`"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3657
 msgid ""
@@ -6350,8 +6394,8 @@ msgid ""
 "points` to make them visible over the interpretation line and assign them a "
 ":guilabel:`Marker style`."
 msgstr ""
-"さらに、|unchecked| :guilabel:`マーカーをサンプリング表示` をチェックすることで、判読線上にマーカーを表示し、それらに "
-":guilabel:`マーカースタイル` を割り当てることができます。"
+"さらに、|unchecked| :guilabel:`マーカーをサンプリング表示`  をチェックすることで、判読線上にマーカーを表示し、それらに  "
+":guilabel:`マーカースタイル`  を割り当てることができます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3674
 msgid "Metadata Properties"
@@ -6392,9 +6436,9 @@ msgid ""
 "<embedded_file_selector>` for replacement, displayed both in the "
 ":guilabel:`Layers` panel and the print layout legend."
 msgstr ""
-"レイヤに適用しているシンボロジにもよりますが、凡例に複数のエントリが表示されることで、必ずしも読みやすく便利な表示になるとは限りません。 "
-":guilabel:`凡例の枠の画像 ` で代わりとなる :ref:`画像の選択 <embedded_file_selector>` を行うことができ、"
-" :guilabel:`レイヤ` パネルや印刷レイアウトの凡例の両者で表示されます。"
+"レイヤに適用しているシンボロジにもよりますが、凡例に複数のエントリが表示されることで、必ずしも読みやすく便利な表示になるとは限りません。:guilabel:`凡例の枠の画像`"
+" で代わりとなる :ref:`select an image <embedded_file_selector>`  を行うことができ "
+":guilabel:`レイヤ` パネルや印刷レイアウトの凡例の両者で表示されます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3715
 msgid ""
@@ -6416,8 +6460,8 @@ msgid ""
 "Expression` button. Text appearance is handled through the font and color "
 "selector widgets of the :guilabel:`Text Format` button."
 msgstr ""
-"|checkbox| :guilabel:`シンボル上のテキスト` "
-"：場合によっては、凡例内のシンボルに追加の情報を加えると便利なことがあります。このフレームでは、レイヤのシンボロジで使用されているシンボルのどれにでもテキストつけることができます。このテキストは、"
+"|checkbox| :guilabel:`シンボル上のテキスト` : "
+"場合によっては、凡例内のシンボルに追加の情報を加えると便利なことがあります。このフレームでは、レイヤのシンボロジで使用されているシンボルのどれにでもテキストつけることができます。このテキストは、"
 " :guilabel:`レイヤ` "
 "パネルとプリントレイアウトの凡例の両方でシンボル上に表示されます。テーブルウィジェットでシンボルの横に各テキストを入力するか、 "
 ":guilabel:`式でラベルを設定` ボタンを使ってテーブルに入力することで、凡例とテキストの対応付けがなされます。 テキストの外観は "
@@ -6549,7 +6593,7 @@ msgid ""
 "area, topological errors concerning these features are reported as well as "
 "errors introduced in the current edit session."
 msgstr ""
-":guilabel:`トポロジチェック` "
+":guilabel:`トポロジチェック`  "
 "のセクションでは、トポロジの追加的な検証を有効にできます。トポロジのチェックはユーザーがレイヤを保存した際に実行されます。チェックしたエラーは "
 ":guilabel:`ジオメトリ検証` "
 "パネルに報告されます。検証エラーが存在する限りは、レイヤを保存することができません。トポロジのチェックは、修正のあった地物のバウンディングボックス領域内で実行されます。同じ領域内に他の地物が存在することもあるため、現在の編集セッションで発生したエラーだけでなく、他の地物に関するトポロジエラーも報告されます。"
@@ -6566,13 +6610,13 @@ msgstr "説明図"
 msgid ""
 "The |checkbox| :guilabel:`Gap` check will check for gaps between "
 "neighbouring polygons."
-msgstr "|checkbox| :guilabel:`隙間がないか` は、隣接するポリゴンとの間に隙間がないかをチェックします。"
+msgstr "|checkbox| :guilabel:`隙間がないか`  は、隣接するポリゴンとの間に隙間がないかをチェックします。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3850
 msgid ""
 "The |checkbox| :guilabel:`Overlap` check will check for overlaps between "
 "neighbouring polygons."
-msgstr "|checkbox| :guilabel:`重なり（Overlap）` は、隣接するポリゴンとの重なりがないかをチェックします。"
+msgstr "|checkbox| :guilabel:`重なり（Overlap）`  は、隣接するポリゴンとの重なりがないかをチェックします。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3853
 msgid ""
@@ -6580,7 +6624,7 @@ msgid ""
 "boundaries of neighbouring polygons where one border misses a vertex which "
 "is present on the other one."
 msgstr ""
-"|checkbox| :guilabel:`頂点欠損（点で分割されるべき直線）` "
+"|checkbox| :guilabel:`頂点欠損（点で分割されるべき直線）`  "
 "のチェックは、隣接するポリゴンの共有された境界について、頂点が一方の境界には無く、他方の境界にはあるようなものをチェックします。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3860
@@ -6596,13 +6640,13 @@ msgid ""
 "will refer to them as *Allowed Gaps* areas."
 msgstr ""
 "他の部分はポリゴンで完全に覆われているものの、ポリゴンレイヤのある領域内には隙間を作っておくのが望ましい場合もあります。例えば、土地利用レイヤでは湖のために穴があり得るかもしれません。隙間チェックでは、無視される領域を定義することができます。このような領域内の隙間は許容されるものであるから、ここでは"
-" *許容される隙間（Allowed Gaps）* 領域と呼ぶことにします。"
+" *許容される隙間（Allowed Gaps）*  領域と呼ぶことにします。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3868
 msgid ""
 "In the options for the gap checks under :guilabel:`Allowed Gaps`, an "
 "*Allowed Gaps layer* can be configured."
-msgstr ":guilabel:`許容される隙間` の隙間チェックに関するオプションでは、 *レイヤ* を設定できます。"
+msgstr ":guilabel:`許容される隙間`  の隙間チェックに関するオプションでは、 *レイヤ* を設定できます。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3871
 msgid ""

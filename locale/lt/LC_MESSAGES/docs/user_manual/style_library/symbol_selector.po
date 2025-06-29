@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:28
 msgid "and settings to configure the selected symbol layer in the tree."
-msgstr "ir medyje pažymėto simbolio sluoksnio konfigūravimo nustatymai."
+msgstr "ir medyje parinkto simbolio sluoksnio konfigūravimo nustatymai."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:33
 msgid "The symbol layer tree"
@@ -106,7 +106,7 @@ msgstr "symbologyAdd"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:44
 msgid "|symbologyRemove| remove the selected symbol layer"
-msgstr "|symbologyRemove| išimti pažymėti simbolio sluoksnį"
+msgstr "|symbologyRemove| išimti parinktą simbolio sluoksnį"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:979
 msgid "symbologyRemove"
@@ -209,42 +209,981 @@ msgstr ""
 " dydį visuose įtrauktuose :ref:`simbolio sluoksnių <symbol_layer>` "
 "matmenyse."
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:84
+msgid ""
+"The :ref:`Data-defined override <data_defined>` button next to the width, "
+"size or rotation parameters is inactive when setting the symbol from the "
+"Style manager dialog. When the symbol is connected to a map layer, this "
+"button helps you create :ref:`proportional or multivariate analysis "
+"<proportional_symbols>` rendering."
+msgstr ""
+":ref:`Nuo duomenų priklausančio permušimo <data_defined>` mygtukas, esantis "
+"greta pločio, dydžio ar pasukimo paramtrų yra neaktyvus, kai simbolis "
+"nustatomas iš Stilių tvarkyklės dialogo. Kai simbolis prijungiamas prie "
+"žemėlapio sluoksnio, šis mygtukas padeda jums sukurti :ref:`santykinės ar "
+"kelių kintamųjų analizės <proportional_symbols>` braižymą."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:89
+msgid ""
+"A preview of the :ref:`symbols library <vector_style_manager>`: Symbols of "
+"the same type are shown and, through the editable drop-down list just above,"
+" can be filtered by free-form text or by :ref:`categories <group_symbols>`. "
+"You can also update the list of symbols using the |styleManager| :sup:`Style"
+" Manager` button and open the eponym dialog. There, you can use any "
+"capabilities as exposed in :ref:`vector_style_manager` section."
+msgstr ""
+":ref:`Simbolių bibliotekos <vector_style_manager>` peržiūra: rodomi to "
+"paties tipo simboliai ir per aukščiau keičiamą iškrentantį sąrašą gali būti "
+"filtruojami laisvos formos tekstu arba :ref:`kategorijomis <group_symbols>`."
+" Jūs galite atnaujinti simbolių sąrašą naudodami mygtuką |styleManager| "
+":sup:`Stilių tvarkyklė` ir atverdami eponimų dialogą. Ten jūs galite naudoti"
+" bet kokias galimybes, aprašytas skiltyje :ref:`vector_style_manager`."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:975
 msgid "styleManager"
 msgstr "styleManager"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:96
+msgid "The symbols are displayed either:"
+msgstr "Simboliai rodomi arba:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:98
+msgid ""
+"in an icon list (with thumbnail, name and associated tags) using the "
+"|openTable| :sup:`List View` button below the frame;"
+msgstr ""
+"piktogramų sąraše (su miniatiūra, pavadinimu ir susijusiomis žymomis) "
+"naudojant po sekcija esantį mygtuką |openTable| :sup:`Sąrašo vaizdas`;"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:967
 msgid "openTable"
 msgstr "openTable"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:100
+msgid "or as icon preview using the |iconView| :sup:`Icon View` button."
+msgstr ""
+"arba piktogramų peržiūroje naudojant mygtuką  |iconView| :sup:`Piktogramų "
+"vaizdas`."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:961
 msgid "iconView"
 msgstr "iconView"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:102
+msgid ""
+"Press the :guilabel:`Save Symbol` button to open the :guilabel:`Save New "
+"Symbol` dialog. Here, you can choose the :guilabel:`Destination` where you "
+"want to add the symbol being edited, give it a :guilabel:`Name` and add "
+":guilabel:`Tag(s)`. You also have the option to |checkbox| :sup:`Add to "
+"favorites` your new symbol."
+msgstr ""
+"Spauskite mygtuką :guilabel:`Įrašyti simbolį`, kad atvertumėte dialogą "
+":guilabel:`Įrašyti naują simbolį`. Čia galite parinkti :guilabel:`Paskirtį`,"
+" kur norite pridėti keičiamą simbolį, nurodykite jam :guilabel:`Pavadinimą` "
+"ir add :guilabel:`Žymą(s)`. Jūs taipogi galite jūsų naują simbolį |checkbox|"
+" :sup:`Pridėti į parankinius`."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:955
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:106
+msgid "With the :guilabel:`Advanced` |selectString| option, you can:"
+msgstr "Su parinktimi :guilabel:`Sudėtingesni` |selectString|, jūs galite:"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:973
 msgid "selectString"
 msgstr "selectString"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:108
+msgid "for line and fill symbols, :guilabel:`Clip features to canvas extent`."
+msgstr ""
+"linijų ir pildymo simboliams :guilabel:`Apkarpyti geoobjektus pagal drobės "
+"apimtį`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:112
+msgid ""
+"for fill symbols, :guilabel:`Force right-hand rule orientation`: allows "
+"forcing rendered fill symbols to follow the standard \"right hand rule\" for"
+" ring orientation (i.e, polygons where the exterior ring is clockwise, and "
+"the interior rings are all counter-clockwise)."
+msgstr ""
+"pildymo simboliams :guilabel:`Priverstinai taikyti dešinės rankos "
+"orientacijos taisyklę`: leidžia priversti, kad braižomi simboliai atitiktų "
+"standartinę „dešinės rankos taisyklę“ žiedų orientacijai (t.y. poligonų "
+"išorinis žiedas eina pagal laikrodžio rodyklę, o vidiniai žiedai - prieš "
+"laikrodžio rodyklę)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:117
+msgid ""
+"The orientation fix is applied while rendering only, and the original "
+"feature geometry is unchanged. This allows for creation of fill symbols with"
+" consistent appearance, regardless of the dataset being rendered and the "
+"ring orientation of individual features."
+msgstr ""
+"Orientacija taikoma tik braižymui, pradinė geoobjekto geometrija nekeičiama."
+" Tai leidžia kurti pildymo simbolius su stabilia išvaizda, nepriklausomai "
+"nuo braižomo duomenų rinkinio ir konkrečių geoobjektų žiedų orientacijos."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:124
+msgid ""
+"for marker symbols, the :guilabel:`Buffer settings...` enables addition of a"
+" halo effect around the marker symbol in order to make it more readable "
+"against different backgrounds. The buffer is calculated and drawn using the "
+"shape of ALL the symbol layers in the marker. You can adjust the "
+":guilabel:`Size`, :guilabel:`Join style` and :guilabel:`Symbol` of display."
+msgstr ""
+"žymeklių simboliams :guilabel:`Buferio nustatymai...` aplink žymeklio "
+"simbolį įjungia papildomą spindėjimo efektą, taip jį padarant skaitomu virš "
+"įvairių fonų. Buferis skaičiuojamas ir braižomas naudojant VISŲ žymeklio "
+"simbolio sluoksnių formą. Jūs galite keisti rodymo :guilabel:`Dydį`, "
+":guilabel:`Jungimo stilių` ir :guilabel:`Simbolį`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:129
+msgid ""
+"Depending on the :ref:`symbology <vector_style_menu>` of the layer a symbol "
+"is being applied to, additional settings are available in the "
+":guilabel:`Advanced` menu:"
+msgstr ""
+"Priklausomai nuo sluoksnio :ref:`simbologijos <vector_style_menu>` ir "
+"taikomo simbolio, meniu :guilabel:`Sudėtingesni` galimi papildomi "
+"nustatymai:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:132
+msgid ""
+":ref:`Symbol levels... <Symbols_levels>` to define the order of symbols "
+"rendering"
+msgstr ""
+":ref:`Simbolių lygiai... <Symbols_levels>` norint apibrėžti simbolių "
+"braižymo rikiuotę"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:133
+msgid ":ref:`Data-defined Size Legend <data_defined_size_legend>`"
+msgstr ""
+":ref:`Nuo duomenų priklausanti dydžio legenda <data_defined_size_legend>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:134
+msgid ""
+":guilabel:`Match to Saved Symbols...` and :guilabel:`Match to Symbols from "
+"File...` to automatically :ref:`assign symbols to classes "
+"<categorized_advanced_menu>`"
+msgstr ""
+":guilabel:`Atitikti įrašytiems simboliams...` ir :guilabel:`Atitikti "
+"simboliams iš failo...` automatiniam :ref:`simbolių priskyrimui klasėms "
+"<categorized_advanced_menu>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:136
+msgid ":ref:`Animation settings <animation_settings>`"
+msgstr ":ref:`Animacijos nustatymai <animation_settings>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:141
+msgid "The symbol layer"
+msgstr "Simbolių sluoksnis"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:143
+msgid ""
+"At a lower level of the tree, you can customize the symbol layers. The "
+"available symbol layer types depend on the upper symbol type. You can apply "
+"on the symbol layer |paintEffects| :ref:`paint effects <draw_effects>` to "
+"enhance its rendering."
+msgstr ""
+"Žemesniame medžio lygmenyje jūs galite konfigūruoti simbolių sluoksnius. "
+"Galimi simbolių sluoksnio tipai priklauso nuo aukštesnio simbolio tipo. "
+"Galite taikyti simbolio sluoksnio |paintEffects| :ref:`paišymo efektus "
+"<draw_effects>`, kad pagerintumėte jo braižymą."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:969
 msgid "paintEffects"
 msgstr "paintEffects"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:147
+msgid ""
+"Because describing all the options of all the symbol layer types would not "
+"be possible, only particular and significant ones are mentioned below."
+msgstr ""
+"Kadangi aprašyti visų simbolių sluoksnių tipų visas parinktis yra neįmanoma,"
+" žemiau aprašome tik kelias svarbias."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:151
+msgid "Common parameters"
+msgstr "Bendri parametrai"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:153
+msgid ""
+"Some common options and widgets are available to build a symbol layer, "
+"regardless it's of marker, line or fill sub-type:"
+msgstr ""
+"Simbolių sluoksnio kūrimui, nepriklausomai nuo jo žymeklių, linijų ar "
+"pildymo potipio, teikiamos kelios bendro parinktis ir valdikliai:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:156
+msgid ""
+"the :ref:`color selector <color-selector>` widget to ease color manipulation"
+msgstr ""
+":ref:`spalvų parinkimo <color-selector>` valdiklis lengvam spalvų valdymui"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:157
+msgid ""
+":guilabel:`Units`: it can be **Millimeters**, **Points**, **Pixels**, "
+"**Meters at Scale**, **Map units** or **Inches** (see :ref:`unit_selector` "
+"for more details)"
+msgstr ""
+":guilabel:`Vienetai`: gali būti **Milimetrai**, **Taškai**, **Pikseliai**, "
+"**Metrai pagal mastelį**, **Žemėlapio vienetai** ar **Coliai** (daugiau "
+"informacijos rasite :ref:`unit_selector`)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:160
+msgid ""
+"the |dataDefine| :sup:`Data-defined override` widget near almost all "
+"options, extending capabilities of customizing each symbol (see "
+":ref:`data_defined` for more information)"
+msgstr ""
+"|dataDefine| :sup:`Nuo duomenų priklausančių permušimų` valdiklis prie "
+"beveik visų parinkčių, praplečiantis kiekvieno simbolio tinkinimo galimybes "
+"(daugiau informacijos rasite skyriuje :ref:`data_defined`)"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:957
 msgid "dataDefine"
 msgstr "dataDefine"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:163
+msgid ""
+"the |checkbox| :guilabel:`Enable symbol layer` option controls the symbol "
+"layer's visibility. Disabled symbol layers are not drawn when rendering the "
+"symbol but are saved in the symbol. Being able to hide symbol layers is "
+"convenient when looking for the best design of your symbol as you don't need"
+" to remove any for the testing. The data-defined override then makes it "
+"possible to hide or display different symbol layers based on expressions "
+"(using, for instance, feature attributes)."
+msgstr ""
+"Parinktis |checkbox| :guilabel:`Įjungti simbolinį sluoksnį` valdo simbolio "
+"matomumą. Išjungti simbolių sluoksniai nepaišomi braižant simbolį, bet "
+"įrašomi simbolyje. Galimybė paslėpti simbolių sluoksnius patogi, kai ieškote"
+" geriausio jūsų simbolio dizaino, bet nenorite nieko ištrinti bandymu metu. "
+"Nuo duomenų priklausantis permušimas tada leidžia paslėpti ar rodyti "
+"skirtingus simbolių sluoksnius priklausomai nuo išraiškų (pavyzdžiui "
+"naudojant geoobjektų atributus)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:169
+msgid ""
+"the |checkbox| :guilabel:`Draw effects` button for :ref:`effects rendering "
+"<draw_effects>`."
+msgstr ""
+"|checkbox| :guilabel:`Paišymo efektų` mygtukas :ref:`įrakoja braižymą "
+"<draw_effects>`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:174
+msgid ""
+"While the description below assumes that the symbol layer type is bound to "
+"the feature geometry, keep in mind that you can embed symbol layers in each "
+"others. In that case, the lower level symbol layer parameter (placement, "
+"offset...) might be bound to the upper-level symbol, and not to the feature "
+"geometry itself."
+msgstr ""
+"Nors žemiau pateiktas aprašymas daro prielaidą, kad simbolio tipas susijęs "
+"su geoobjekto geometrija, turėkite omenyje, kad jūs galite įdėti simbolių "
+"sluoksnius vienus į kitu. Tokiu atveju žemesnio lygio simbolio sluoksnio "
+"parametras (vietas, poslinkis...) gali būti susijęs su aukštesnio lygio "
+"simboliu, o ne su pačia geoobjekto geometrija."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:183
+msgid "Marker Symbols"
+msgstr "Žymeklių simboliai"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:185
+msgid ""
+"Appropriate for point geometry features, marker symbols have several "
+":guilabel:`Symbol layer types`:"
+msgstr ""
+"Taškų geometrijų geoobjektams tinkami žymeklių simboliai turi kelis "
+":guilabel:`Simbolių sluoksnių tipus`:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:190
+msgid "**Simple marker** (default)"
+msgstr "**Paprastas žymeklis** (numatytasis)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:197
+msgid "Designing a Simple Marker Symbol"
+msgstr "Paprasto žymeklio simbolio kūrimas"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:199
+msgid "The simple marker symbol layer type has the following properties:"
+msgstr "Paprasto žymeklio simbolio sluoksnio tipas turi šias savybes:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:201
+msgid ":guilabel:`Size` in various supported units"
+msgstr ":guilabel:`Dydį` įvairiais palaikomais vienetais"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:202
+msgid ":guilabel:`Fill color`"
+msgstr ":guilabel:`Užpildymo spalvą`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:203
+msgid ""
+":guilabel:`Stroke color`, :guilabel:`Stroke style` from a predefined list "
+"and :guilabel:`Stroke size`"
+msgstr ""
+":guilabel:`Brėžimo spalvą`, :guilabel:`Brėžimo stilių` iš anksto nustatytame"
+" sąraše ir :guilabel:`Brėžimo dydį`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:205
+msgid ":guilabel:`Join style`: it can be **Bevel**, **Miter** or **Round**"
+msgstr ""
+":guilabel:`Jungimo stilius`: gali būti **Kampas**, **Mitra** ar **Apvalus**"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:206
+msgid ":guilabel:`Cap style`: it can be **Square**, **Flat** or **Round**"
+msgstr ""
+":guilabel:`Pabaigos stilius`: gali būti **Kvadratinis**, **Nukirstas** ar "
+"**Apvalus**"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:207
 msgid ":guilabel:`Rotation`"
 msgstr ":guilabel:`Pasukimas`"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:208
+msgid ""
+":guilabel:`Offset` in :guilabel:`X` and :guilabel:`Y` directions from the "
+"feature"
+msgstr ""
+":guilabel:`Poslinkis` :guilabel:`X` ir :guilabel:`Y` kryptimis nuo "
+"geoobjekto"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:210
+msgid ""
+":guilabel:`Anchor point`: defining the quadrant point on the symbol to "
+"settle as placement origin. This is the point the :guilabel:`Offset` is "
+"applied on."
+msgstr ""
+":guilabel:`Kitas taškas`: nustatantis kvadranto tašką ant simbolio, taip "
+"pririšant pozicijos atskaitos tašką. Tai yra taškas, kuriam taikomas "
+":guilabel:`Poslinkis`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:213
+msgid "**Animated marker** (see :ref:`animated_marker`)"
+msgstr "**Animuotas žymeklis** (žr. :ref:`animated_marker`)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:214
+msgid ""
+"**Ellipse marker**: a simple marker symbol layer, with customizable width "
+"and height"
+msgstr ""
+"**Elipsės žymeklis**: paprastas keičiamo pločio ir aukščio žymeklių simbolių"
+" sluoksnis"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:216
+msgid ""
+"**Filled marker**: similar to the simple marker symbol layer, except that it"
+" uses a :ref:`fill sub symbol <vector_fill_symbols>` to render the marker. "
+"This allows use of all the existing QGIS fill (and stroke) styles for "
+"rendering markers, e.g. gradient or shapeburst fills."
+msgstr ""
+"**Užpildyti žymekliai**: panašiai kaip paprastas žymeklių sluoksnis, tik jis"
+" žymeklių braižymui naudoja :ref:`užpildytą sub simbolį "
+"<vector_fill_symbols>`. Tai leidžia naudoti visus esamus QGIS pildymų (ir "
+"brėžimų) stilius žymeklių braižymui, pavyzdžiui gradientą ar išdeginimo "
+"pildymus."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:220
+msgid ""
+"**Font marker**: similar to the simple marker symbol layer, except that it "
+"uses installed fonts to render the marker. Its additional properties are:"
+msgstr ""
+"**Šrifto žymeklis**: panašiai kaip paprastas žymeklis, tik jis naudoja "
+"įdiegtus šriftus žymeklio braižymui. Jo papildomos savybės yra:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:224
+msgid ":guilabel:`Font family`"
+msgstr ":guilabel:`Šrifto šeima`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:225
+msgid ":guilabel:`Font style`"
+msgstr ":guilabel:`Šrifto stilius`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:226
+msgid ""
+":guilabel:`Character(s)`, representing the text to display as symbol. They "
+"can be typed in or selected from the font characters collection widget and "
+"you can live :guilabel:`Preview` them with the selected settings."
+msgstr ""
+":guilabel:`Simbolis(iai)`, reprezentuojantys tekstą, kurį reikia rodyti kaip"
+" simbolį. Juos galima įrašyti arba parinkti iš šriftų simbolių rinkinio "
+"valdiklio. Jūs galite :guilabel:`Peržiūrėti` juos su parinktais nustatymais."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:230
+#: ../../docs/user_manual/style_library/symbol_selector.rst:341
+#: ../../docs/user_manual/style_library/symbol_selector.rst:566
+msgid "**Geometry generator** (see :ref:`geometry_generator_symbol`)"
+msgstr "**Geometrijos generatorius** (žr. :ref:`geometry_generator_symbol`)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:234
+msgid ""
+"**Mask**: its sub-symbol defines a mask shape whose color property will be "
+"ignored and only the opacity will be used. This is convenient when the "
+"marker symbol overlaps with labels or other symbols whose colors are close, "
+"making it hard to decipher. More details at :ref:`vector_mask_menu`."
+msgstr ""
+"**Slėpimas**: tai sub-simbolis, kuris apibrėžia slėpimo formą, kurios spalva"
+" bus ignoruojama ir naudojamas tik permatomumas. Tai patogu, kai žymeklis "
+"persidengia su kitų simbolių užrašais su panašiomis spalvomis, dėl juos "
+"sunku įžiūrėti. Daugiau informacijos galima rasti skyriuje "
+":ref:`vector_mask_menu`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:241
+msgid ""
+"**Raster image marker**: use an image (:file:`PNG`, :file:`JPG`, :file:`BMP`"
+" ...) as marker symbol. The image can be a file on the disk, a remote URL, "
+"embedded in the style database (:ref:`more details "
+"<embedded_file_selector>`) or it can be encoded as a base64 string. Width "
+"and height of the image can be set independently or using the |lockedGray| "
+":sup:`Lock aspect ratio`. The size can be set using any of the :ref:`common "
+"units <unit_selector>` or as a percentage of the image's original size "
+"(scaled by the width)."
+msgstr ""
+"**Rastro piešinio žymeklis**: naudoja piešinį (:file:`PNG`, :file:`JPG`, "
+":file:`BMP` ...) kaip žymeklio simbolį. Piešinys gali būti failas diske, "
+"nutolęs URL, įtrauktas į stilių duomenų bazę (:ref:`daugiau informacijos "
+"<embedded_file_selector>`) arba gali būti užkoduotas kaip base64 eilutė. "
+"Piešinio plotį ir aukštį galima nurodyti nepriklausomai, arba naudojant "
+"|lockedGray| :sup:`Išlaikyti proporcijas`. Dydį galima nurodyti naudojant "
+"bet kurios :ref:`bendrus vienetus <unit_selector>` arba kaip procentus nuo "
+"originalaus piešinio dydžio (pakeitus pagal plotį)."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:965
 msgid "lockedGray"
 msgstr "lockedGray"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:249
+msgid "**Vector Field marker** (see :ref:`vector_field_marker`)"
+msgstr "**Vektorinio lauko žymeklis** (žr. :ref:`vector_field_marker`)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:253
+msgid ""
+"**SVG marker**: provides you with images from your SVG paths (set in "
+":menuselection:`Settings --> Options... --> System` menu) to render as "
+"marker symbol. Width and height of the symbol can be set independently or "
+"using the |lockedGray| :sup:`Lock aspect ratio`. Each SVG file colors and "
+"stroke can also be adapted. The image can be a file on the disk, a remote "
+"URL, embedded in the style database (:ref:`more details "
+"<embedded_file_selector>`) or it can be encoded as a base64 string."
+msgstr ""
+"**SVG žymeklis**: suteikia jums piešinius iš jūsų SVG kelių (nurodytų per "
+"meniu :menuselection:`Nustatymai --> Parinktys... --> Sistema`) žymeklių "
+"simbolių braižymui. Simbolių plotį ir aukštį galima nurodyti atskirai arba "
+"naudojant |lockedGray| :sup:`Užrakintą proporciją`. Kiekvieno SVG failo "
+"spalvas ir brėžimą galima pritaikyti. Piešinys gali būti failas diske, "
+"nutolęs URL, įtrauktas į stilių duomenų bazę (:ref:`daugiau informacijos "
+"<embedded_file_selector>`) arba tai gali būti base64 koduota eilutė."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:261
+msgid ""
+"The symbol can also be set with :guilabel:`Dynamic SVG parameters`. See "
+":ref:`svg_symbol` section to parametrize an SVG symbol."
+msgstr ""
+"Simbolis taipogi gali būti nustatytas su :guilabel:`Dinaminiais SVG "
+"parametrais`. Apie SVG simbolio parametrizavimą skaitykite skyrių "
+":ref:`svg_symbol`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:264
+msgid "SVG version requirements"
+msgstr "SVG versijos reikalavimai"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:266
+msgid ""
+"QGIS renders SVG files that follow the `SVG Tiny 1.2 profile "
+"<https://www.w3.org/TR/SVGMobile12/>`_, intended for implementation on a "
+"range of devices, from cellphones and PDAs to laptop and desktop computers, "
+"and thus includes a subset of the features included in SVG 1.1 Full, along "
+"with new features to extend the capabilities of SVG."
+msgstr ""
+"QGIS braižo SVG failus, kurie atitinka `SVG Tiny 1.2 profilį "
+"<https://www.w3.org/TR/SVGMobile12/>`_, taikoma įgyvendinimui įvairiuose "
+"įrenginiuose, nuo telefonų ir delninukų iki skreitinukų ir stalinių "
+"kompiuterių, todėl juos yra tik poaibi savybių iš SVG 1.1 Full, kartu su "
+"naujomis savybėmis, išplečiančiomis SVG galimybes."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:272
+msgid ""
+"Some features not included in these specifications might not be rendered "
+"correctly in QGIS."
+msgstr ""
+"Kai kurios savybės, kurios neįtrauktos į šias specifikacijas, QGIS gali būti"
+" braižomos neteisingai."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:279
+msgid "Line Symbols"
+msgstr "Linijų simboliai"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:281
+msgid ""
+"Appropriate for line geometry features, line symbols have the following "
+"symbol layer types:"
+msgstr ""
+"Linijų geometrijų geoobjektams tinkami simboliai turi kelis simbolių "
+"sluoksnių tipus:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:286
+msgid "**Simple line** (default)"
+msgstr "**Paprasta linija** (numatytasis)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:293
+msgid "Designing a Simple Line Symbol"
+msgstr "Paprasto linijos simbolio kūrimas"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:295
+msgid ""
+"The simple line symbol layer type has many of the same properties as the "
+":ref:`simple marker symbol <simple_marker_symbol>`, and in addition:"
+msgstr ""
+"Paprastas linijų simbolių sluoksnių tipas turi daug tų pačių savybių kaip ir"
+" :ref:`paprastas žymeklio simbolis <simple_marker_symbol>` ir kelis "
+"papildomus:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:298
+msgid ""
+"|checkbox| :guilabel:`Use custom dash pattern`: overrides the "
+":guilabel:`Stroke style` setting with a custom dash. You would need to "
+"define length of consecutive dashes and spaces shaping the model, in the "
+"chosen unit. The total length of the pattern is displayed at the bottom of "
+"the dialog."
+msgstr ""
+"|checkbox| :guilabel:`Naudoti savo punktyro šabloną`: permuša "
+":guilabel:`Brėžimo stiliaus` nustatymą savo punktyru. Jums reikės nurodyti "
+"vieną po kitos einančių brūkšnelių ir tarpų ilgį pasirinktais vienetais, "
+"taip sukuriant modelį. Bendras šablono ilgis rodomas dialogo apačioje."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:303
+msgid ""
+":guilabel:`Pattern offset`: the positioning of the dashes/spaces in the line"
+" can be tweaked, so that they can be placed at nicer positions to account "
+"for corners in the line (also can be used potentially to \"align\" adjacent "
+"dash pattern borders)"
+msgstr ""
+":guilabel:`Šablono poslinkis`: brūkšnių/tarpų vieta linijoje gali būti "
+"tinkinama taip, kad jie būtų braižomi gražesnėse vietose, atsižvelgiant į "
+"linijos kampus (taipogi galima naudoti potencialiai „lygiuoti“ greta "
+"einančias brūkšnių šablonų ribas)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:306
+msgid ""
+"|checkbox| :guilabel:`Align dash pattern to line length`: the dash pattern "
+"length will be adjusted so that the line will end with a complete dash "
+"element, instead of a gap."
+msgstr ""
+"|checkbox| :guilabel:`Lygiuoti brūkšnių šabloną pagal linijos ilgį`: "
+"brūkšnių šablonų ilgis bus pritaikomas taip, kad linija baigtųsi pilnu "
+"brūkšnio elementu, o ne tarpu."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:309
+msgid ""
+"|checkbox| :guilabel:`Tweak dash pattern at sharp corners`: dynamically "
+"adjusts the dash pattern placement so that sharp corners are represented by "
+"a full dash element coming into and out of the sharp corner. Dependent on "
+":guilabel:`Align dash pattern to line length`."
+msgstr ""
+"|checkbox| :guilabel:`Pataisyti punktyro šabloną aštriuose kampuose`: "
+"dinamiškai pritaiko punktyrų šablono taikymą taip, kad aštrūs kampai "
+"išreiškiami pilnu punktyro elementu einančiu į ir iš aštraus kampo. "
+"Priklauso nuo :guilabel:`Pritaikyti punktyrų šabloną pagal linijos ilgį`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:313
+msgid ""
+":guilabel:`Trim lines` from :guilabel:`Start` and/or :guilabel:`End`: allows"
+" for the line rendering to trim off the first x mm and last y mm from the "
+"actual line string when drawing the line. It supports a range of :ref:`units"
+" <unit_selector>`, including percentage of the overall line length, and can "
+"be data defined for extra control. The start/end trim distance can be used "
+"e.g. when creating complex symbols where a line layer should not overlap "
+"marker symbol layers placed at the start and end of the line."
+msgstr ""
+":guilabel:`Patrumpinti linijas` nuo :guilabel:`Pradžios` ir/ar "
+":guilabel:`Pabaigos`: leidžia linijos braižymui nukirpti pirmus x mm ir "
+"paskutinius y mm nuo realios linijos. Leidžia įvairius :ref:`vienetus "
+"<unit_selector>`, įskaitant procentus nuo bendro linijos ilgio ir gali "
+"priklausyti nuo duomenų papildomam valdymui. Pradžios/pabaigos nukirpimo "
+"atstymą galima naudoti, pavyzdžiui, kuriant sudėtingus simbolius, kur "
+"linijos sluoksnis neturėtų dengti žymeklių simbolių, kurie padėti linijos "
+"pradžioje ir pabaigoje."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:324
+msgid ""
+"**Arrow**: draws lines as curved (or not) arrows with a single or a double "
+"head with configurable (and data-defined):"
+msgstr ""
+"**Rodyklė**: braižo linijas kaip kreivių (arba ne) rodykles su viengubomis "
+"arba dvigubomis galvomis bei konfigūruojamais (arba nuo duomenų "
+"priklausančiais:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:327
+msgid ":guilabel:`Head type`"
+msgstr ":guilabel:`Galvutės tipu`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:328
+msgid ":guilabel:`Arrow type`"
+msgstr ":guilabel:`Rodyklės tipu`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:329
+msgid ":guilabel:`Arrow width`"
+msgstr ":guilabel:`Rodyklės pločiu`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:330
+msgid ":guilabel:`Arrow width at start`"
+msgstr ":guilabel:`Rodyklės pločiu pradžioje`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:331
+msgid ":guilabel:`Head length`"
+msgstr ":guilabel:`Galvutės ilgiu`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:332
+msgid ":guilabel:`Head thickness`"
+msgstr ":guilabel:`Galvutės storiu`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:333
+msgid ":guilabel:`Offset`"
+msgstr ":guilabel:`Poslinkiu`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:335
+msgid ""
+"It is possible to create |checkbox| :guilabel:`Curved arrows` (the line "
+"feature must have at least three vertices) and |checkbox| :guilabel:`Repeat "
+"arrow on each segment`. It also uses a :ref:`fill symbol "
+"<vector_fill_symbols>` such as gradients or shapeburst to render the arrow "
+"body. Combined with the geometry generator, this type of layer symbol helps "
+"you representing flow maps."
+msgstr ""
+"Galima kurti |checkbox| :guilabel:`Kreivines rodykles` (linijos geoobjektas "
+"turi turėti bent tris viršūnes) ir |checkbox| :guilabel:`Kartoti rodyklę "
+"kiekviename segmente`. Taipogi naudojamas :ref:`pildymo simbolis "
+"<vector_fill_symbols>`, kad rodyklės vidus būtų užpildytas gradientu arba "
+"pildymu vidun. Kartu su geometrijos generatoriumi, šis sluoksnio simbolio "
+"tipas leidžia vaizduoti srauto žemėlapius."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:345
+msgid ""
+"**Interpolated line**: allows to render a line whose :guilabel:`Stroke "
+"width` and/or :guilabel:`Color` may be constant (given a :guilabel:`Fixed "
+"width` and :guilabel:`Single color` parameters) or vary along the geometry. "
+"When varying, necessary inputs are:"
+msgstr ""
+"**Interpoliuota linija**: leidžia braižyti liniją, kurios :guilabel:`Brėžimo"
+" storis` ir/ar :guilabel:`Spalva` gali būti pastovi (nurodyti "
+":guilabel:`Fiksuoto pločio` ir :guilabel:`Vienos spalvos` parametrai) arba "
+"gali kisti palei geometriją. Kai kinta, reikalingos įvestys yra:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:350
+msgid ""
+":guilabel:`Start value` and :guilabel:`End value`: Values that will be used "
+"for interpolation at the extremities of the features geometry. They can be "
+"fixed values, feature's attributes or based on an expression."
+msgstr ""
+":guilabel:`Pradžios reikšmė` ir :guilabel:`Pabaigos reikšmė`: Reikšmės, "
+"kurios bus naudojamos geoobjekto geometrijos interpoliacijos ekstremumuose. "
+"Tai gali būti fiksuotos reikšmės, geoobjekto atributai arba priklausyti nuo "
+"išraiškos."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:353
+msgid ""
+":guilabel:`Min. value` and :guilabel:`Max. value`: Values between which the "
+"interpolation is performed. Press the |refresh| :sup:`Load` button to "
+"automatically fill them based on the minimum and maximum start/end values "
+"applied to the layer."
+msgstr ""
+":guilabel:`Min. reikšmė` ir :guilabel:`Maks. reikšmė`: Reikšmės, tarp kurių "
+"vykdoma interpoliacija. Spauskite mygtuką |refresh| :sup:`Įkelti`, kad "
+"automatiškai juos užpildytumėte pagal minimalią ir maksimalią "
+"pradžios/pabaigos reikšmes taikomas sluoksniui."
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:971
 msgid "refresh"
 msgstr "refresh"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:357
+msgid "Only available for the stroke option:"
+msgstr "Veikia tik brėžimo parinkčiai:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:359
+msgid ""
+":guilabel:`Min. width` and :guilabel:`Max. width`: define the range of the "
+"varying width. :guilabel:`Min. width` is assigned to the :guilabel:`Min. "
+"value` and :guilabel:`Max. width` to the :guilabel:`Max. value`. A "
+":ref:`unit <unit_selector>` can be associated."
+msgstr ""
+":guilabel:`Min. plotis` ir :guilabel:`Maks. plotis`: nurodo intervalą "
+"kintančiam pločiui. :guilabel:`Min. pločiui` priskiriama :guilabel:`Min. "
+"reikšmė`, o :guilabel:`Maks. pločiui` - :guilabel:`Maks. reikšmė`. Gali būti"
+" nurodytas :ref:`vienetas <unit_selector>`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:364
+msgid ""
+"|checkbox| :guilabel:`Use absolute value`: only consider absolute value for "
+"interpolation (negative values are used as positive)."
+msgstr ""
+"|checkbox| :guilabel:`Naudoti absoliučią reikšmę`: interpoliacijai naudoti "
+"tik absoliučią reikšmę (neigiamos reikšmės naudojamos kaip teigiamos)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:366
+msgid ""
+"|checkbox| :guilabel:`Ignore out of range`: by default, when the ``[start "
+"value - end value]`` range of a feature is not included in the ``[min. value"
+" - max. value]`` range, the out-of-bounds parts of the feature's geometry "
+"are rendered with the min or max width. Check this option to not render them"
+" at all."
+msgstr ""
+"|checkbox| :guilabel:`Ignoruoti už ribų`: pagal nutylėjimą, jei geoobjekto "
+"intervalas ``[pradinė reikšmė - galutinė reikšmė]`` nepatenka į intervalą "
+"``[min. reikšmė - maks. reikšmė]``, iš ribų išeinančios geoobjekto "
+"geometrijos dalys braižomos minimaliu ar maksimaliu pločiu. Įjunkite šią "
+"parinktį, kad jos išvis nebūtų braižomos."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:371
+msgid ""
+"For varying color, you can use any of the interpolation methods of "
+":ref:`color ramp classification <color_ramp_shader>`"
+msgstr ""
+"Kintamai spalvai galite naudoti bet kurį iš :ref:`spalvų rampos "
+"klasifikacijos <color_ramp_shader>` interpoliavimo metodų"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:380
+msgid "Examples of interpolated lines"
+msgstr "Interpoliuotų linijų pavyzdžiai"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:384
+msgid ""
+"**Marker line**: repeats a :ref:`marker symbol <vector_marker_symbols>` over"
+" the length of a line."
+msgstr ""
+"**Žymeklių linija**: kartoja :ref:`žymeklio simbolį <vector_marker_symbols>`"
+" per visą linijos ilgį."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:387
+msgid ""
+"The :guilabel:`Marker placement` can be set using a regular interval setting"
+" (starting from the first vertex) and/or the line geometry property (on "
+"first or last vertex, inner vertices, the central point of the line or of "
+"each segment, or on every curve point)."
+msgstr ""
+":guilabel:`Žymeklio vietą` galima nurodyti naudojant paprastą intervalo "
+"nustatymą (pradedant nuo pirmos viršūnės) ir/arba linijos geometrijos savybę"
+" (pirmoje ar paskutinėje viršūnėje, vidinėse viršūnėse, linijos ar kiekvieno"
+" segmento centre arba kiekviename kreivės taške)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:391
+msgid ""
+"When first or last vertex placement is enabled, the |checkbox| "
+":guilabel:`Place on every part extremity` option will make the markers "
+"render also at the first or last vertex for every part of multipart "
+"geometries."
+msgstr ""
+"Kai įjungta pirmos ar paskutinės viršūnės pozicija, parinktis |checkbox| "
+":guilabel:`Padėti kiekvienoje ekstremumo dalyje` nurodys, kad žymeklius "
+"reikia braižyti ir pirmoje ar paskutinėje kelių dalių geometrijų dalyse."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:394
+msgid ""
+":guilabel:`Offset along line`: the markers placement can also be given an "
+"offset along the line, in the ref:`unit <unit_selector>` of your choice "
+"(millimeters, points, map unit, meters at scale, percentage, ...):"
+msgstr ""
+":guilabel:`Poslinkis palei liniją`: žymeklių pozicijai taipogi galima "
+"nurodyti poslinkį palei liniją jūsų pasirinktais ref:`vienetais "
+"<unit_selector>` (milimetrais, taškais, žemėlapio vienetais, metrais "
+"mastelyje, procentais...):"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:398
+msgid ""
+"A positive value offsets the markers symbols in the line direction (with "
+":guilabel:`On first vertex` and :guilabel:`With interval` placements) and "
+"backwards (with :guilabel:`On last vertex` placement)."
+msgstr ""
+"Teigiama reikšmė paslenka žymeklių simbolius linijos kryptimi (su "
+"pozicijomis :guilabel:`Ant pirmos viršūnės` ir :guilabel:`Su intervalu`) ir "
+"priešinga kryptimi (su pozicija :guilabel:`Ant paskutinės viršūnės`)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:401
+msgid ""
+"A negative value on a not closed line will result in no offset (for "
+":guilabel:`On first vertex` and :guilabel:`On last vertex` placements) or "
+"backwards offset of the symbols (from the last vertex)."
+msgstr ""
+"Neigiama reikšmė su neuždara linija reikš jokio poslinkio (pozicijoms "
+":guilabel:`Ant pirmos viršūnės` ir :guilabel:`Ant paskutinės viršūnės`) arba"
+" atvirkštinį simbolių poslinkį (nuo paskutinės viršūnės)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:404
+#, python-format
+msgid ""
+"With a closed ring, QGIS treats the offset as continuing to loop around the "
+"ring (forward or backward). E.g. setting the offset to 150% (resp. -10% or "
+"-110%) results in the offset being treated as 50% (resp. 90%) of the length "
+"of the closed ring."
+msgstr ""
+"Uždaro žiedo atveju QGIS poslinkį laiko kaip besitęsiantį aplink žiedą "
+"(pirmyn arba atgal). Pvz. nustačius poslinkį 150% (atitinkamai -10% ar "
+"-110%), bus gautas 50% poslinkis (atitinkamai 90%) uždaro žiedo ilgio."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:409
+msgid ""
+"The |checkbox| :guilabel:`Rotate marker to follow line direction` option "
+"sets whether each marker symbol should be oriented relative to the line "
+"direction or not."
+msgstr ""
+"Parinktis |checkbox| :guilabel:`Sukti žymeklį pagal linijos kryptį` nurodo, "
+"ar reikia kiekvieną žymeklio simbolį pasukti pagal linijos kryptį."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:413
+msgid ""
+"Because a line is often a succession of segments of different directions, "
+"the rotation of the marker is calculated by averaging over a specified "
+"distance along the line. For example, setting the :guilabel:`Average angle "
+"over` property to ``4mm`` means that the two points along the line that are "
+"``2mm`` before and after the symbol placement are used to calculate the line"
+" angle for that marker symbol. This has the effect of smoothing (or "
+"removing) any tiny local deviations from the overall line direction, "
+"resulting in much nicer visual orientations of the marker line symbols."
+msgstr ""
+"Kadangi linija dažnai yra seka skirtingų krypčių segmentų, žymeklio "
+"pasukimas skaičiuojamas kaip nurodyto ilgio palei liniją vidurkis. "
+"Pavyzdžiui nurodžius savybės :guilabel:`Vidutinis kampas per` reikšmę "
+"``4mm``, bus paimti du taškai linijoje, esantys ``2mm`` prieš ir po simbolio"
+" vietos ir taip bus paskaičiuotas žymeklio simbolio pasukimas. Taip "
+"glotninamas (arba pašalinamas) bet koks mažas vietinis nuokrypis nuo bendros"
+" linijos krypties, tokiu būdu gaunant daug gražesnę vizualią linijų žymeklių"
+" simbolių kryptį."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:422
+msgid ""
+":guilabel:`Line offset`: the marker symbols can also be offset from the line"
+" feature."
+msgstr ""
+":guilabel:`Linijos poslinkis`: žymeklių simbolius taipogi galima paslinkti "
+"nuo linijos geoobjekto."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:427
+msgid ""
+"**Hashed line**: repeats a line segment (a hash) over the length of a line "
+"symbol, with a line sub-symbol used to render each individual segment. In "
+"other words, a hashed line is like a marker line in which marker symbols are"
+" replaced with segments. As such, the hashed lines have the :ref:`same "
+"properties <marker_line_symbol>` as marker line symbols, along with:"
+msgstr ""
+"**Brūkšnių linija**: kartoja linijos segmentą (brūkšnį) per linijos ilgį su "
+"linijos sub-simboliu, kuris naudojamas kiekvieno individualaus segmento "
+"braižymui. Kitais žodžiais, brūkšnių linija yra kaip žymeklių linija, kurios"
+" žymeklių simboliai pakeisti segmentais. Kaip tokios, brūkšnių linijos turi "
+":ref:`tas pačias savybes <marker_line_symbol>` kaip žymeklių simboliai, "
+"kartu su:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:434
+msgid ":guilabel:`Hash length`"
+msgstr ":guilabel:`Brūkšnio ilgis`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:435
+msgid ":guilabel:`Hash rotation`"
+msgstr ":guilabel:`Brūkšnio pasukimas`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:443
+msgid "Examples of hashed lines"
+msgstr "Brūkšnių linijų pavyzdžiai"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:447
+msgid ""
+"**Raster line**: renders and repeats a raster image following the length of "
+"a line feature shape. The :guilabel:`Stroke width`, :guilabel:`Offset`, "
+":guilabel:`Join style`, :guilabel:`Cap style` and :guilabel:`Opacity` can be"
+" adjusted."
+msgstr ""
+"**Rastro linija**: braižo ir kartoja rastro piešinį palei linijos geoobjekto"
+" formą. Galima keisti :guilabel:`Brėžimo plotį`, :guilabel:`Poslinkį`, "
+":guilabel:`Jungimo stilių`, :guilabel:`Pabaigos stilių` ir "
+":guilabel:`Permatomumą`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:458
+msgid "Examples of raster lines"
+msgstr "Rastro linijų pavyzdžiai"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:463
+msgid ""
+"**Linear referencing**: allows placing text labels at regular intervals "
+"along a line, or at positions corresponding to existing vertices. Positions "
+"can be calculated using Cartesian distances, or interpolated from z/m "
+"values. Parameters include:"
+msgstr ""
+"**Tiesinė atskaita**: leidžia teksto užrašus dėlioti pastoviais intervalais "
+"palei liniją arba esamų viršūnių pozicijose. Pozicijas galima skaičiuoti "
+"naudojant dekarto atstumus arba interpoliuojant pagal z/m reikšmes. Tarp "
+"parametrų yra:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:468
+msgid ""
+":guilabel:`Measure placement`: Labels can be placed at regular cartesian 2d "
+"distances, at regular linearly interpolated spacing calculated using the Z "
+"or M values in geometries, or at existing vertices. A fixed or data-defined "
+":guilabel:`Interval` is given."
+msgstr ""
+":guilabel:`Matavimo pozicija`: Užrašus galima dėlioti pastoviais 2d dekarto "
+"atstumais, paprastai tiesiškai interpoliuojant tarpus naudojant geometrijų Z"
+" ar M reikšmes arba esamose viršūnėse. Nurodomas fiksuotas arba nuo duomenų "
+"priklausantis :guilabel:`Intervalas`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:472
+msgid ""
+":guilabel:`Quantity`: Label displayed at each position represent the running"
+" distance along the line, or the linearly interpolated Z or M value. Labels "
+"are rendered using the full range of :ref:`text <text_format>` and "
+":ref:`number <number_formatting>` formatting functionalities available in "
+"QGIS."
+msgstr ""
+":guilabel:`Kiekybė`: Kiekvienoje pozicijoje rodomi užrašai reprezentuoja "
+"einamąjį atstumą linijoje arba tiesiškai interpoliuotą Z ar M reikšmę. "
+"Užrašai braižomi naudojant visą diapazoną :ref:`teksto <text_format>` ir "
+":ref:`skaičių <number_formatting>` formatavimo funkcinalumo, kurį teikia "
+"QGIS."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:479
+msgid ""
+"When using the distance-based placement or labels, the distances are "
+"calculated using 2D only. Cartesian calculations are based on the original "
+"layer CRS."
+msgstr ""
+"Kai naudojamas atstumu paremtas užrašų dėliojimas, atstumai skaičiuojami "
+"naudojant tik 2D. Dekarto skaičiavimai remiasi originalaus sluoksnio CRS."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:482
+msgid ""
+":guilabel:`Skip multiples of`: If set, labels which are a multiple of this "
+"value will be skipped over. This allows construction of complex referencing "
+"labels, e.g. where a symbol has two linear referencing symbol layers, one "
+"set to label every 100m in a small font, skipping multiples of 1000, and a "
+"second set to label every 1000m in a big bold font."
+msgstr ""
+":guilabel:`Praleisti daugiklius`: Jei nustatyta, užrašai, kurie yra šios "
+"reikšmės daugikliai, bus praleisti. Tai leidžia konstruoti sudėtingus "
+"atskaitos užrašus, pavyzdžiui kur simbolis turi du tiesinės atskaitos "
+"simbolių sluoksnius, kur vieni užrašai dėliojami kas 100m mažu šriftu, "
+"praleidžiant 1000, o antras sluoksnis dėlioja užrašus kas 1000m dideliu "
+"šriftu."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:486
+msgid ""
+":guilabel:`Average angle over`: Labels are rendered using an angle "
+"calculated by averaging the linestring, so sharp tiny jaggies don't result "
+"in unslightly label rotation."
+msgstr ""
+":guilabel:`Kampo vidurkis per`: Užrašai braižomi naudojant kampą, "
+"paskaičiuotą naudojant linijos vidurkį, taigi aštrūs maži vingiai nereiškia "
+"stipriai pasuktų užrašų."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:488
+msgid ""
+":guilabel:`Show marker symbols`, at referenced points in the line feature, "
+"using a full QGIS marker symbol. This allows e.g. showing a cross-hatch at "
+"the labeled point, for a \"ruler\" style line."
+msgstr ""
+":guilabel:`Rodyti žymeklio simbolius`, nurodytuose linijos geoobjekto "
+"taškuose naudojamas pilnas QGIS žymeklio simbolis. Tai leidžia, pavyzdžiui, "
+"rodyti perbraukimą taške su užrašu, taip sukuriant „liniuotės“ stiliaus "
+"liniją."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:497
+msgid "Drawing linear labels along line feature"
+msgstr "Linijos užrašų braižymas palei linijos geoobjektą"
