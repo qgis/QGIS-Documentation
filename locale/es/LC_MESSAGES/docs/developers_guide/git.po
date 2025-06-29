@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -107,9 +108,31 @@ msgid ""
 "To get started using and contributing to the QGIS repository, you need to:"
 msgstr "Para empezar a usar y contribuir al repositorio QGIS, necesitarás:"
 
+#: ../../docs/developers_guide/git.rst:44
+msgid "have a `GitHub account <https://github.com/signup>`_"
+msgstr "tener una cuenta de GitHub <https://github.com/signup>_"
+
+#: ../../docs/developers_guide/git.rst:45
+msgid ""
+"make your own copy of the `QGIS repository <https://github.com/qgis/QGIS>`_ "
+"(see `fork <https://docs.github.com/en/pull-requests/collaborating-with-"
+"pull-requests/working-with-forks/fork-a-repo>`_)"
+msgstr ""
+"crea tu propia copia del repositorio QGIS <https://github.com/qgis/QGIS>_ "
+"(véase fork <https://docs.github.com/en/pull-requests/collaborating-with-"
+"pull-requests/working-with-forks/fork-a-repo>_)."
+
 #: ../../docs/developers_guide/git.rst:47
 msgid "have a :ref:`git client installed <installing_git>` on your system"
 msgstr "tener un :ref:`cliente git instalado <installing_git>` en tu sistema"
+
+#: ../../docs/developers_guide/git.rst:48
+msgid ""
+"set up your `git environment <https://docs.github.com/en/get-"
+"started/getting-started-with-git/set-up-git>`_"
+msgstr ""
+"configure su entorno Git <https://docs.github.com/en/get-started/getting-"
+"started-with-git/set-up-git>_"
 
 #: ../../docs/developers_guide/git.rst:49
 msgid "and have fun!"
@@ -338,6 +361,28 @@ msgstr ""
 "escribir un conjunto de pruebas para sus modificaciones, cuando sea "
 "apropiado."
 
+#: ../../docs/developers_guide/git.rst:165
+msgid "Proper formatting, spell check, and code quality control"
+msgstr ""
+"Formato adecuado, revisión ortográfica y control de calidad del código."
+
+#: ../../docs/developers_guide/git.rst:167
+msgid ""
+"Proper formatting, spell check, and code quality control are managed from a "
+"pre-commit git hook."
+msgstr ""
+"El formato adecuado, la revisión ortográfica y el control de calidad del "
+"código se gestionan desde un gancho git previo al commit."
+
+#: ../../docs/developers_guide/git.rst:169
+msgid "This can be automated by running:"
+msgstr "Esto se puede automatizar ejecutando:"
+
+#: ../../docs/developers_guide/git.rst:175
+msgid "The spell checker script can also be run alone with:"
+msgstr ""
+"El script del corrector ortográfico también se puede ejecutar solo con:"
+
 #: ../../docs/developers_guide/git.rst:194
 msgid "Commit your changes to the git repo:"
 msgstr "Confirme sus cambios en el repositorio de git:"
@@ -352,6 +397,24 @@ msgstr ""
 "lugar, realice varias confirmaciones pequeñas si los cambios en varios "
 "archivos no están relacionados. Por el contrario, preferimos que agrupe los "
 "cambios relacionados en una única confirmación."
+
+#: ../../docs/developers_guide/git.rst:191
+msgid ""
+"Without the ``-m`` option, a new editor window will open for you to write "
+"your commit message."
+msgstr ""
+"Sin la opción ``-m``, se abrirá una nueva ventana del editor para que "
+"escribas tu mensaje de confirmación."
+
+#: ../../docs/developers_guide/git.rst:193
+msgid ""
+"`Here are some recommendations "
+"<https://www.conventionalcommits.org/en/v1.0.0/#summary>`_ about commit "
+"description format."
+msgstr ""
+"`Aquí hay algunas recomendaciones "
+"<https://www.conventionalcommits.org/en/v1.0.0/#summary>`_ sobre el formato "
+"de descripción de las confirmaciones."
 
 #: ../../docs/developers_guide/git.rst:196
 msgid ""
@@ -456,6 +519,16 @@ msgstr ""
 msgid "Submitting Pull Requests"
 msgstr "Envío de solicitudes de extracción"
 
+#: ../../docs/developers_guide/git.rst:247
+msgid ""
+"There are a few guidelines that will help you to get your patches and pull "
+"requests into QGIS easily, and help us deal with the patches that are sent "
+"to us easily."
+msgstr ""
+"Hay algunas pautas que te ayudarán a enviar tus parches y solicitudes de "
+"incorporación de cambios a QGIS fácilmente, y nos ayudarán a gestionar los "
+"parches que nos envían con facilidad."
+
 #: ../../docs/developers_guide/git.rst:251
 msgid ""
 "In general it is easier for developers if you submit GitHub pull requests. "
@@ -481,6 +554,24 @@ msgstr ""
 "fusione (merge) la rama master a su rama (branch) PR regularmente, así su PR"
 " estará siempre disponible para fusionar en el flujo (upstream) de su rama "
 "master"
+
+#: ../../docs/developers_guide/git.rst:259
+msgid ""
+"Pull requests will cause various checks of the Continuous Integration (CI) "
+"system to run: building for different environments and running tests, "
+"running code linters, spell checkers, etc. Make sure to look at the results "
+"of those checks and try to address issues they raise. Of course, you can ask"
+" a question in the pull request if you need help from other developers to "
+"understand and/or resolve an issue."
+msgstr ""
+"Las pull requests (solicitudes de extracción) provocarán que se ejecuten "
+"varias comprobaciones del sistema de integración continua (CI): compilación "
+"para diferentes entornos y ejecución de pruebas, ejecución de linters de "
+"código, correctores ortográficos, etc. Asegúrate de revisar los resultados "
+"de esas comprobaciones e intenta resolver los problemas que planteen. Por "
+"supuesto, puedes hacer una pregunta en la solicitud de extracción si "
+"necesitas ayuda de otros desarrolladores para comprender o resolver un "
+"problema."
 
 #: ../../docs/developers_guide/git.rst:266
 msgid ""
@@ -519,6 +610,13 @@ msgstr ""
 "pueden revisar su parche. Si cree que el RP no está recibiendo la atención "
 "que merece, sus opciones para acelerarlo deberían ser (en orden de "
 "prioridad):"
+
+#: ../../docs/developers_guide/git.rst:281
+msgid ""
+"Help review others' pull requests to free the person assigned to yours."
+msgstr ""
+"Ayuda a revisar las pull requests de cambios de otros usuarios para liberar "
+"a la persona asignada a las tuyas."
 
 #: ../../docs/developers_guide/git.rst:282
 msgid ""
@@ -671,6 +769,23 @@ msgstr ""
 "posibles para garantizar que sólo envía parches que no estén sujetos a "
 "derechos de propiedad intelectual contradictorios. Además, no envíe código "
 "que no esté contento de haber puesto a disposición en virtud de la GPL."
+
+#: ../../docs/developers_guide/git.rst:335
+msgid "Pull Requests merge criteria"
+msgstr "Criterios de fusión de Pull Requests"
+
+#: ../../docs/developers_guide/git.rst:337
+msgid ""
+"Please see `QEP 323 - Change submission and merge policies "
+"<https://github.com/qgis/QGIS-Enhancement-"
+"Proposals/blob/master/qep-323-code-submission-policy.md>`_ for the current "
+"policies regarding acceptable pull request submission."
+msgstr ""
+"Consulte `QEP 323 - Políticas de envío y fusión de cambios "
+"<https://github.com/qgis/QGIS-Enhancement-"
+"Proposals/blob/master/qep-323-code-submission-policy.md>`_ para conocer las "
+"políticas actuales relativas al envío de solicitudes de extracción "
+"aceptables."
 
 #: ../../docs/developers_guide/git.rst:341
 msgid "Obtaining GIT Write Access"
