@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Eric Armijo, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Eric Armijo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 15:59+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Eric Armijo, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -478,6 +478,19 @@ msgstr ""
 "Qt también proporciona algunos mecanismos interesantes para las pruebas "
 "basadas en datos, por lo que si está interesado en saber más sobre este "
 "tema, consulte la documentación oficial de Qt."
+
+#: ../../docs/developers_guide/unittesting.rst:308
+msgid ""
+"Next lets look at our functional test. The ``isValid()`` test simply checks "
+"if the raster layer was loaded correctly in the initTestCase. QVERIFY is a "
+"Qt macro that you can use to evaluate a test condition. There are a few "
+"other macros Qt provides for use in your tests including:"
+msgstr ""
+"A continuación, veamos nuestra prueba funcional. La prueba ``isValid( )`` "
+"simplemente comprueba si la capa ráster se ha cargado correctamente en "
+"initTestCase. QVERIFY es una macro de Qt que se puede utilizar para evaluar "
+"una condición de prueba. Hay otras macros que Qt proporciona para su uso en "
+"las pruebas, entre ellas:"
 
 #: ../../docs/developers_guide/unittesting.rst:313
 msgid "QCOMPARE ( *actual, expected* )"
@@ -994,6 +1007,37 @@ msgstr ""
 "<https://doc.qt.io/qt-5/qtest-overview.html#qt-test-command-line-"
 "arguments>`_. Esto hace posible correr un subconjunto específico de pruebas:"
 
+#: ../../docs/developers_guide/unittesting.rst:707
+msgid "Sandboxing test run"
+msgstr "Prueba de ejecución en entorno aislado"
+
+#: ../../docs/developers_guide/unittesting.rst:709
+msgid ""
+"By default all test temporary files are written to the system temp directory"
+" (for example ``/tmp/`` on Linux systems or ``C:\\temp`` on Windows). A lot "
+"of files can be created in this directory during the test run."
+msgstr ""
+"De forma predeterminada, todos los archivos temporales de prueba se escriben"
+" en el directorio temporal del sistema (por ejemplo, ``/tmp/`` en sistemas "
+"Linux o ``C:\\temp`` en Windows). Durante la ejecución de la prueba se "
+"pueden crear muchos archivos en este directorio."
+
+#: ../../docs/developers_guide/unittesting.rst:712
+msgid ""
+"If you do not want to mix up with the common system temp directory (for "
+"example on a multi user server or in case of permission issue), you can "
+"create your own temp directory and specify it to ``ctest`` by setting the "
+"``TMPDIR`` environment variable with your new directory."
+msgstr ""
+"Si no desea mezclar el directorio temporal del sistema común (por ejemplo, "
+"en un servidor multiusuario o en caso de problemas de permisos), puede crear"
+" su propio directorio temporal y especificarlo en ``ctest`` configurando la "
+"variable de entorno ``TMPDIR`` con su nuevo directorio."
+
+#: ../../docs/developers_guide/unittesting.rst:715
+msgid "On Linux you could do it with:"
+msgstr "En Linux, puede hacerlo con:"
+
 #: ../../docs/developers_guide/unittesting.rst:724
 msgid "Debugging unit tests"
 msgstr "Pruebas unitarias de depuración"
@@ -1093,3 +1137,18 @@ msgstr ""
 #: ../../docs/developers_guide/unittesting.rst:763
 msgid "Have fun"
 msgstr "Que te diviertas"
+
+#: ../../docs/developers_guide/unittesting.rst:765
+msgid ""
+"Well that concludes this section on writing unit tests in QGIS. We hope you "
+"will get into the habit of writing tests to test new functionality and to "
+"check for regressions. Some aspects of the test system (in particular the "
+":file:`CMakeLists.txt` parts) are still being worked on so that the testing "
+"framework works in a truly platform independent way."
+msgstr ""
+"Con esto concluye esta sección sobre la escritura de pruebas unitarias en "
+"QGIS. Esperamos que adquiera el hábito de escribir pruebas para comprobar "
+"nuevas funcionalidades y detectar regresiones. Algunos aspectos del sistema "
+"de pruebas (en particular las partes :file:`CMakeLists.txt`) aún se están "
+"desarrollando para que el marco de pruebas funcione de forma verdaderamente "
+"independiente de la plataforma."
