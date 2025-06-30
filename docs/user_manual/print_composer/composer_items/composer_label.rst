@@ -127,7 +127,7 @@ Appearance
   By default, the size of a layout label item does not depend on the contained text.
   It may be too large with useless blank space or too small, hiding part of the text.
   To automatically resize a label so it fits the text inside it perfectly,
-  double-click one of the squarish handles on the label.
+  double-click one of the square handles on the label.
   The label will adjust its size to match the text, either expanding or shrinking as needed,
   while the opposite handle of the label remains fixed in place.
   This allows you to quickly ensure the label fits the text without manually resizing it.
