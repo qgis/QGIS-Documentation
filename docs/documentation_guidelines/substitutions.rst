@@ -538,6 +538,7 @@ Icon                            Substitution                        Icon        
 |vrt|                           ``|vrt|``                           |voronoi|                       ``|voronoi|``
 |translate|                     ``|translate|``                     |warp|                          ``|warp|``
 |iterate|                       ``|iterate|``                       |terminal|                      ``|terminal|``
+|queryHistory|                  ``|queryHistory|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -1379,6 +1380,8 @@ Icon                            Substitution                        Icon        
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
    :width: 1.5em
 .. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
+   :width: 1.5em
+.. |queryHistory| image:: /static/common/mIconQueryHistory.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em

@@ -2402,8 +2402,8 @@ processes (QGIS startup, plugins loading, processing tools...)
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
    :width: 1.5em
-.. |queryHistory| image:: /static/common/queryhistory.png
-   :width: 1.5em   
+.. |queryHistory| image:: /static/common/mIconQueryHistory.png
+   :width: 1.5em
 .. |randomPointsInPolygons| image:: /static/common/mAlgorithmRandomPointsInPolygons.png
    :width: 1.5em
 .. |randomPointsOnLines| image:: /static/common/mAlgorithmRandomPointsOnLines.png
