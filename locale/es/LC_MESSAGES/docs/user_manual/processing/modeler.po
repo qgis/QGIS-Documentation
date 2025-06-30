@@ -172,6 +172,26 @@ msgstr "checkbox"
 msgid "Executes the model"
 msgstr "Ejecuta el modelo"
 
+#: ../../docs/user_manual/processing/modeler.rst:60
+msgid "|runSelected| :guilabel:`Run Selected Steps...`"
+msgstr "|runSelected| :guilabel:`Ejecutar pasos seleccionados...`"
+
+#: ../../docs/user_manual/processing/modeler.rst:720
+msgid "runSelected"
+msgstr "runSelected"
+
+#: ../../docs/user_manual/processing/modeler.rst:61
+msgid ":kbd:`Shift+F5`"
+msgstr ":kbd:`Shift+F5`"
+
+#: ../../docs/user_manual/processing/modeler.rst:63
+msgid ""
+"Runs only the selected steps in a model, allowing to run a subset of the "
+"model"
+msgstr ""
+"Ejecuta solo los pasos seleccionados en un modelo, lo que permite ejecutar "
+"un subconjunto del modelo."
+
 #: ../../docs/user_manual/processing/modeler.rst:64
 msgid ":guilabel:`Reorder Model Inputs...`"
 msgstr ":guilabel:`Reordenar entradas del modelo...`"
@@ -1178,9 +1198,74 @@ msgstr ""
 "de diálogo del algoritmo final; se pueden ocultar desactivando "
 ":menuselection:`View --> Show Comments`."
 
+#: ../../docs/user_manual/processing/modeler.rst:488
+msgid "Your model can be run in various ways:"
+msgstr "Su modelo se puede ejecutar de varias maneras:"
+
+#: ../../docs/user_manual/processing/modeler.rst:490
+msgid ""
+"You can run the whole model by clicking on |start| :sup:`Run Model...` from "
+"the toolbar or :menuselection:`Model -->` |start| :menuselection:`Run "
+"Model...`: when using the editor to execute a model, any non-default values "
+"will be saved in the inputs. This means that executing the model at a later "
+"time from the editor will have the dialog prefilled with those values on any"
+" subsequent run."
+msgstr ""
+"Puede ejecutar todo el modelo haciendo clic en |start| :sup:`Ejecutar "
+"modelo...` en la barra de herramientas o :menuselection:`Modelo -->` |start|"
+" :menuselection:`Ejecutar modelo...`: cuando se utiliza el editor para "
+"ejecutar un modelo, cualquier valor no predeterminado se guardará en las "
+"entradas. Esto significa que, si ejecuta el modelo más tarde desde el "
+"editor, el cuadro de diálogo aparecerá rellenado con esos valores en "
+"cualquier ejecución posterior."
+
 #: ../../docs/user_manual/processing/modeler.rst:736
 msgid "start"
 msgstr "start"
+
+#: ../../docs/user_manual/processing/modeler.rst:495
+msgid ""
+"You can select elements of the model and run only that subset of the model: "
+"press the |runSelected| :guilabel:`Run Selected Steps...` option from the "
+":menuselection:`Models -->` menu or from the contextual menu of a selected "
+"algorithm. The initial state will be taken from any previous executions of "
+"the model through the editor, so results from previous steps in the model "
+"are available for the selected steps. This makes it possible to fix parts of"
+" a large model, without having to constantly run the entire model to test. "
+"Especially useful when earlier steps in the model are time consuming."
+msgstr ""
+"Puede seleccionar elementos del modelo y ejecutar solo ese subconjunto del "
+"modelo: pulse la opción |runSelected| :guilabel:`Ejecutar pasos "
+"seleccionados...` del menú :menuselection:`Modelos -->` o del menú "
+"contextual de un algoritmo seleccionado. El estado inicial se tomará de "
+"cualquier ejecución anterior del modelo a través del editor, por lo que los "
+"resultados de los pasos anteriores del modelo estarán disponibles para los "
+"pasos seleccionados. Esto permite corregir partes de un modelo grande sin "
+"tener que ejecutar constantemente todo el modelo para realizar pruebas. Es "
+"especialmente útil cuando los pasos anteriores del modelo requieren mucho "
+"tiempo."
+
+#: ../../docs/user_manual/processing/modeler.rst:503
+msgid ""
+"You can run a subset of the model, starting from a specific algorithm: "
+"right-click the algorithm and select |start| :guilabel:`Run from Here...`. "
+"Likewise, values are taken from previous executions."
+msgstr ""
+"Puede ejecutar un subconjunto del modelo, comenzando por un algoritmo "
+"específico: haga clic con el botón derecho del ratón en el algoritmo y "
+"seleccione |start| :guilabel:`Run from Here...`. Del mismo modo, los valores"
+" se toman de ejecuciones anteriores."
+
+#: ../../docs/user_manual/processing/modeler.rst:506
+msgid ""
+"In order to use the algorithm from the Processing Toolbox, it has to be "
+"saved and the modeler dialog closed, to allow the toolbox to refresh its "
+"contents."
+msgstr ""
+"Para poder utilizar el algoritmo de la caja de herramientas de "
+"procesamiento, es necesario guardarlo y cerrar el cuadro de diálogo del "
+"modelador, a fin de permitir que la caja de herramientas actualice su "
+"contenido."
 
 #: ../../docs/user_manual/processing/modeler.rst:511
 msgid "Documenting your model"
@@ -1412,6 +1497,41 @@ msgstr ""
 msgid "Modeler Right Click"
 msgstr "Click derecho en el modelador"
 
+#: ../../docs/user_manual/processing/modeler.rst:622
+msgid ""
+"Options for :ref:`running part of the model <running_model>` have been "
+"exposed earlier."
+msgstr ""
+"Opciones para :ref:`ejecutar parte del modelo <running_model>` han sido "
+"expuestos anteriormente."
+
+#: ../../docs/user_manual/processing/modeler.rst:624
+msgid ""
+"Selecting the :guilabel:`Remove` option will cause the selected algorithm to"
+" be removed. An algorithm can be removed only if there are no other "
+"algorithms depending on it. That is, if no output from the algorithm is used"
+" as input in a different one."
+msgstr ""
+"Al seleccionar la opción :guilabel:`Eliminar`, se eliminará el algoritmo "
+"seleccionado. Un algoritmo solo se puede eliminar si no hay otros algoritmos"
+" que dependan de él. Es decir, si ninguna salida del algoritmo se utiliza "
+"como entrada en otro diferente."
+
+#: ../../docs/user_manual/processing/modeler.rst:628
+msgid ""
+"Selecting the :guilabel:`Edit...` option will show the parameter dialog so "
+"you can change the inputs and parameter values. Not all input elements "
+"available in the model will appear as available inputs. Layers or values "
+"generated at a more advanced step in the workflow defined by the model will "
+"not be available if they cause circular dependencies."
+msgstr ""
+"Al seleccionar la opción :guilabel:`Editar...`, se mostrará el cuadro de "
+"diálogo de parámetros para que pueda cambiar las entradas y los valores de "
+"los parámetros. No todos los elementos de entrada disponibles en el modelo "
+"aparecerán como entradas disponibles. Las capas o los valores generados en "
+"un paso más avanzado del flujo de trabajo definido por el modelo no estarán "
+"disponibles si provocan dependencias circulares."
+
 #: ../../docs/user_manual/processing/modeler.rst:634
 msgid ""
 "Select the new values and click on the :guilabel:`OK` button as usual. The "
@@ -1430,6 +1550,15 @@ msgstr ""
 "El :guilabel:`Agregar comentario...` le permite agregar un comentario al "
 "algoritmo para describir mejor el comportamiento."
 
+#: ../../docs/user_manual/processing/modeler.rst:640
+msgid ""
+"Right-clicking an input parameter will also allow you to :guilabel:`Remove`,"
+" :guilabel:`Edit…` and :guilabel:`Add comment…`"
+msgstr ""
+"Al hacer clic con el botón derecho del ratón sobre un parámetro de entrada, "
+"también podrás :guilabel:`Eliminar`, :guilabel:`Editar…` y :guilabel:`Añadir"
+" comentario…`"
+
 #: ../../docs/user_manual/processing/modeler.rst:643
 msgid ""
 "A model can be run partially by deactivating some of its algorithms. To do "
@@ -1444,6 +1573,68 @@ msgstr ""
 "algoritmo. El algoritmo seleccionado y todos los del modelo que dependen de "
 "él se mostrarán en gris y no se ejecutarán como parte del modelo."
 
+#: ../../docs/user_manual/processing/modeler.rst:654
+msgid "Model with a deactivated algorithm"
+msgstr "Modelo con un algoritmo desactivado"
+
+#: ../../docs/user_manual/processing/modeler.rst:656
+msgid ""
+"When right-clicking on an algorithm that is not active, you will see an "
+":guilabel:`Activate` menu option that you can use to reactivate it."
+msgstr ""
+"Al hacer clic con el botón derecho del ratón sobre un algoritmo que no está "
+"activo, aparecerá la opción de menú :guilabel:`Activar`, que puede utilizar "
+"para reactivarlo."
+
+#: ../../docs/user_manual/processing/modeler.rst:659
+msgid ""
+"When editing a model through the designer (and after having run that model),"
+" right-clicking any child step in the model allows to select "
+"|showSelectedLayers| :guilabel:`View Output Layers`. This will add the "
+"output layers from that step as new layers in the current QGIS project."
+msgstr ""
+"Al editar un modelo a través del diseñador (y después de haber ejecutado ese"
+" modelo), al hacer clic con el botón derecho del ratón en cualquier paso "
+"secundario del modelo se puede seleccionar |showSelectedLayers| "
+":guilabel:`Ver capas de salida`. Esto añadirá las capas de salida de ese "
+"paso como nuevas capas en el proyecto QGIS actual."
+
 #: ../../docs/user_manual/processing/modeler.rst:734
 msgid "showSelectedLayers"
 msgstr "showSelectedLayers"
+
+#: ../../docs/user_manual/processing/modeler.rst:663
+msgid ""
+"This action is available for all child algorithms in the model, even if the "
+"model is not configured to use the outputs from those children as model "
+"outputs. This is designed as a helpful debugging action. If a model fails "
+"(or gives unexpected results), you can then trace through the model and view"
+" the outputs for suspected problematic steps. It avoids the need to add "
+"temporary outputs to a model and re-run to test."
+msgstr ""
+"Esta acción está disponible para todos los algoritmos secundarios del "
+"modelo, incluso si el modelo no está configurado para utilizar los "
+"resultados de esos algoritmos secundarios como resultados del modelo. Está "
+"diseñada como una acción útil para la depuración. Si un modelo falla (o da "
+"resultados inesperados), puede rastrear el modelo y ver los resultados de "
+"los pasos que sospecha que son problemáticos. Evita la necesidad de añadir "
+"resultados temporales a un modelo y volver a ejecutarlo para realizar "
+"pruebas."
+
+#: ../../docs/user_manual/processing/modeler.rst:669
+msgid ""
+"Additionally, this action is always available after running the model, even "
+"if the model itself failed (e.g., because of a misconfigured step later in "
+"the model)."
+msgstr ""
+"Además, esta acción siempre está disponible después de ejecutar el modelo, "
+"incluso si el modelo en sí ha fallado (por ejemplo, debido a un paso mal "
+"configurado más adelante en el modelo)."
+
+#: ../../docs/user_manual/processing/modeler.rst:672
+msgid ""
+"The :guilabel:`View Log` action helps you see the log for each child "
+"algorithm after you've closed down the algorithm dialog."
+msgstr ""
+"La acción :guilabel:`Ver registro` le permite ver el registro de cada "
+"algoritmo secundario después de cerrar el cuadro de diálogo del algoritmo."
