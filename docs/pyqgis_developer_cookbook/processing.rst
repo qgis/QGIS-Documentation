@@ -59,25 +59,25 @@ If you want to add your existing plugin to Processing, you need to add some code
    you need to adapt some lines like this:
 
    .. testcode:: processing
-        :skipif: True
+      :skipif: True
 
-        from qgis.core import QgsApplication
-        from .processing_provider.provider import Provider
+      from qgis.core import QgsApplication
+      from .processing_provider.provider import Provider
 
-        class YourPluginName:
+      class YourPluginName:
 
-            def __init__(self):
-                self.provider = None
+          def __init__(self):
+              self.provider = None
 
-            def initProcessing(self):
-                self.provider = Provider()
-                QgsApplication.processingRegistry().addProvider(self.provider)
+          def initProcessing(self):
+              self.provider = Provider()
+              QgsApplication.processingRegistry().addProvider(self.provider)
 
-            def initGui(self):
-                self.initProcessing()
+          def initGui(self):
+              self.initProcessing()
 
-            def unload(self):
-                QgsApplication.processingRegistry().removeProvider(self.provider)
+          def unload(self):
+              QgsApplication.processingRegistry().removeProvider(self.provider)
 
 #. You can create a folder :file:`processing_provider` with three files in it:
 
@@ -86,8 +86,8 @@ If you want to add your existing plugin to Processing, you need to add some code
    * :file:`provider.py` which will create the Processing provider and expose
      your algorithms.
 
-    .. testcode:: processing
-    :skipif: True
+     .. testcode:: processing
+        :skipif: True
 
         from qgis.core import QgsProcessingProvider
         from qgis.PyQt.QtGui import QIcon
@@ -131,18 +131,18 @@ If you want to add your existing plugin to Processing, you need to add some code
      file <python/plugins/processing/script/ScriptTemplate.py>` and
      update it according to your needs.
 
-You should have a tree similar to this:
+   You should have a tree similar to this:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   └── your_plugin_root_folder
-      ├── __init__.py
-      ├── LICENSE
-      ├── metadata.txt
-      └── processing_provider
-            ├── example_processing_algorithm.py
-            ├── __init__.py
-            └── provider.py
+    └── your_plugin_root_folder
+       ├── __init__.py
+       ├── LICENSE
+       ├── metadata.txt
+       └── processing_provider
+             ├── example_processing_algorithm.py
+             ├── __init__.py
+             └── provider.py
 
 #. Now you can reload your plugin in QGIS and you should see your example
    script in the Processing toolbox and modeler.
@@ -151,7 +151,7 @@ Implementing custom Processing algorithms
 =========================================
 
 Creating a custom algorithm
---------------------------
+---------------------------
 
 Here's a simple example of a custom buffer algorithm:
 
@@ -216,6 +216,7 @@ where ``panel`` is a :class:`QgsPanelWidget <qgis.gui.QgsPanelWidget>` containin
 This ensures your interface is correctly displayed and interacts properly with the Processing framework.
 
 Here is an example that integrates signal management using QTimer_ for debounced input:
+
 .. testcode:: processing
 
     from qgis.PyQt.QtCore import Qt, QT_VERSION_STR, QTimer
@@ -306,7 +307,8 @@ Here is an example that integrates signal management using QTimer_ for debounced
             self.setResults(results)
             self.showLog()
 
-.. figure:: img/custom_algorithm_dialog.png
+..
+ figure:: img/custom_algorithm_dialog.png
    :align: center
 
    Example custom dialog rendered with ``CustomAlgorithmDialog``
@@ -321,10 +323,12 @@ To launch the custom dialog for a given algorithm, simply instantiate
    dlg.exec()
 
 Managing Qt Signals
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 When building reactive dialogs, manage signal connections carefully. 
-The above pattern uses a `QTimer_` to debounce input from the text field, preventing rapid repeated calls. 
+The above pattern uses a QTimer_ to debounce input from the text field, preventing rapid repeated calls. 
 This is especially useful when fetching metadata or updating UI elements based on user input. 
-Always connect signals once (typically in `__init__`) and use `singleShot=True` to ensure the slot is triggered only once after a delay.
-\n.. _QTimer: https://doc.qt.io/archives/qt-5.15/qtimer.html
+Always connect signals once (typically in ``__init__``) and use ``singleShot=True``
+to ensure the slot is triggered only once after a delay.
+
+.. _QTimer: https://doc.qt.io/archives/qt-5.15/qtimer.html
