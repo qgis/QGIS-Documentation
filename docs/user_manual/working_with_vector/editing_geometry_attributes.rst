@@ -1590,8 +1590,8 @@ In order to trim or extend existing geometries:
 #. Click the reference segment, i.e., the segment with respect to which
    you want to extend or trim another segment.
    It doesn't need to be on the active layer.
-   A red dotted line extending the segment from one side of the map canvas
-   to the other, based on the active layer's CRS, highlights the segment.
+   A red dotted line appears, visually extending the reference segment across the map canvas
+   according to the active layer’s CRS.
 #. Hover over the target segment, i.e., the one you want to trim or extend.
    It does not need to be the last segment of the geometry, but has to be on the active layer.
    QGIS displays a preview of the feature's geometry with the segment limited
@@ -1617,6 +1617,9 @@ In order to trim or extend existing geometries:
 
      Trimming and extending multiple lines from different layers in different CRS
 
+.. note:: Snapping is automatically enabled when this tool is activated.
+ Your original snapping settings will be restored once the tool is deactivated.
+ 
 .. attention:: Pay attention to the modified geometry while using the |trimExtend|
   :sup:`Trim/Extend` tool. Depending on the inputs, it can create invalid
   geometries, potentially resulting in failure at layer saving.
