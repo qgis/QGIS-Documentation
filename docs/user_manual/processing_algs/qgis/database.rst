@@ -323,10 +323,9 @@ Parameters
        Optional
      - ``EXTENT``
      - [extent]
-     - Limit exported features to those with geometries intersecting the
-       provided extent. If none of the features of a specific input layer intersect the
-       provided extent, the layer will still be created and will be empty in the GeoPackage
-       file.
+     - Limit the exported features to those with geometries that intersect the provided 
+       extent. If none of the features from a specific input layer intersect the extent, 
+       the layer will still be created in the GeoPackage file, but it will be empty.
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
