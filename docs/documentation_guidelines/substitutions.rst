@@ -538,7 +538,7 @@ Icon                            Substitution                        Icon        
 |vrt|                           ``|vrt|``                           |voronoi|                       ``|voronoi|``
 |translate|                     ``|translate|``                     |warp|                          ``|warp|``
 |iterate|                       ``|iterate|``                       |terminal|                      ``|terminal|``
-|queryHistory|                  ``|queryHistory|``
+|queryHistory|                  ``|queryHistory|``                  |storedqueries|                 ``|storedqueries|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -1605,6 +1605,8 @@ Icon                            Substitution                        Icon        
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |stopwatch| image:: /static/common/mIconStopwatch.png
+   :width: 1.5em
+.. |storedqueries| image:: /static/common/mIconStoredQueries.png
    :width: 1.5em
 .. |streamingDigitize| image:: /static/common/mActionStreamingDigitize.png
    :width: 1.5em
