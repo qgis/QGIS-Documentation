@@ -1306,25 +1306,13 @@ To load a layer from a database, you can perform the following steps:
 Execute SQL queries
 ...................
 
-With a right click on your Database or SQL Table you get a `Execute SQL...`
-entry in your context menu. It opens the :guilabel:`SQL Execute` Window where you can
-write and execute SQL queries.
-Queries can be saved and loaded, and the builtin "SQL Query Builder" will
-help you formulate your queries.
-It is possible to highlight a portion of the SQL to only execute that
-portion when pressing :kbd:`Ctrl+R` or clicking the :guilabel:`Execute`
-button.
+Other than the ability to load individual tables from a database,
+QGIS allows you to load a subset of a table, as a result of an SQL query
+that may involve one or more tables from the database.
 
-After executing your query, you can select specific cells in the result set.
-Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the clipboard.
-The copied data is available as a formatted table. This allows
-you to paste the data into other applications, such as spreadsheet where it will
-show up as a table.
-
-The :guilabel:`Query History` button stores the last queries of each database
-and provider.  
-
-Double clicking on an entry will add the string to the SQL window.
+From the :guilabel:`Browser` panel, right-click on your database, schema or table
+and you get an `Execute SQL...` entry in your context menu.
+It opens a window with a central text box widget where you can write SQL queries.
 
 .. _figure_execute_sql_queries:
 
@@ -1334,9 +1322,86 @@ Double clicking on an entry will add the string to the SQL window.
 
    Executing SQL queries in the Execute SQL window
 
-You can even view spatial output by checking
-:guilabel:`Load as new layer` and specifying :guilabel:`Column(s) with unique values` (IDs),
-:guilabel:`Geometry column` and :guilabel:`Layer name`.
+At the top of the dialog, a toolbar provides a set of tools
+to create, store and manipulate your queries:
+
+* |fileOpen| :sup:`Open Queries...`: fills the text editor widget
+  with contents from an exiting :file:`.sql` file
+* |fileSave| :sup:`Save Queries...` and |fileSaveAs| :sup:`Save Queries as...`
+  help you store the written query to a :file:`.sql` file
+* Statements of the query can be adjusted using the |editCut| :sup:`Cut`,
+  |editCopy| :sup:`Copy` and |editPaste| :sup:`Paste` buttons.
+  Likewise, you can |undo| :sup:`Undo` or |redo| :sup:`Redo` your changes.
+* The |search| :sup:`Find & Replace` enables a the bottom of the dialog
+  a widget allowing to look for a particular string in your SQL code.
+  The search can be case sensitive, affect partial or whole word,
+  rely on a regular expression.
+  It is then possible to navigate through the found strings, replacing them
+  one by one or all in a row.
+* Use |clearConsole| :sup:`Clear` to wipe the text editor.
+
+.. _sql_history:
+
+* The |queryHistory| :sup:`History` button opens a dialog
+  where all the previously run queries, sorted by date and provider type,
+  can be previewed and reused.
+  This is also accessible from the :menuselection:`Database -->` |queryHistory|
+  :guilabel:`Query History...` menu.
+
+  .. _figure_history_sql_queries:
+
+  .. figure:: img/executesqlwindow.png
+     :align: center
+     :width: 30 em
+
+   Executing SQL queries in the Execute SQL window ???
+
+  Hover over an entry and the full query is displayed over, as a tooltip.
+  Right-click and you can either:
+  
+  * :guilabel:`Execute SQL Command…`, loads the target command
+    into the :guilabel:`Execute SQL` dialog, replacing any existing query.
+    It is the same as double clicking the entry.
+  * :guilabel:`Copy SQL Command` and paste it wherever you want
+
+  When a query is selected, the full query is displayed in the lower part of the dialog.
+  You can interact with the text, copying all or part of it.
+
+* As previously seen, queries can be saved as an :file:`.sql` file stored on disk.
+  Using the |storedqueries| :sup:`Store Current Query` button, they can also be stored:
+
+  * In the active :guilabel:`User Profile`, in the associated :file:`QGIS3.ini` file,
+    thus accessible in subsequent projects
+  * or as part of the :guilabel:`Current Project`.
+
+In the central part of the :guilabel:`Execute SQL` dialog, you build your query
+using the SQL syntax supported by the underlying database.
+Editing tools to select, cut, copy, undo, redo,... are available as well
+from the contextual menu.
+
+When ready, pressing the :guilabel:`Execute` button below the text area
+will try to run the query.
+It is possible to highlight a portion of the SQL to only execute that portion
+when pressing :kbd:`Ctrl+R` or clicking the :guilabel:`Execute selection` button.
+Use the :guilabel:`Stop` button to abort the execution.
+
+A successful query execution will display a table at the bottom of the dialog
+with returned features.
+You can select specific cells in the result set.
+Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the clipboard.
+The copied data is available as a formatted table.
+This allows you to paste the data into other applications,
+such as spreadsheet where it will show up as a table.
+
+The returned table can be loaded in QGIS expanding the :guilabel:`Lod as new layer` group
+and configuring parameters:
+
+* :guilabel:`Column(s) with unique values` to indicate primary key of the data,
+* :guilabel:`Geometry column`: check the box to load the  layer as a spatial one,
+  and indicate the geometry field name
+* :guilabel:`Subset filter`
+* :guilabel:`Avoid selecting by feature ID`
+* :guilabel:`Layer name` in the project
 
 .. _layer_metadata_search_panel:
 
@@ -1761,6 +1826,8 @@ or :guilabel:`Load Connection` from an XML file.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |clearConsole| image:: /static/common/iconClearConsole.png
+   :width: 1.5em
 .. |cloud| image:: /static/common/mIconCloud.png
    :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
@@ -1768,6 +1835,18 @@ or :guilabel:`Load Connection` from an XML file.
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
@@ -1789,17 +1868,27 @@ or :guilabel:`Load Connection` from an XML file.
    :width: 1em
 .. |postgis| image:: /static/common/mIconPostgis.png
    :width: 1.5em
+.. |queryHistory| image:: /static/common/mIconQueryHistory.png
+   :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
+.. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
+.. |storedqueries| image:: /static/common/mIconStoredQueries.png
+   :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |vectorTileLayer| image:: /static/common/mIconVectorTileLayer.png
    :width: 1.5em

@@ -1569,6 +1569,7 @@ Database
 --------
 
 The :menuselection:`Database` menu provides tools for Database interaction.
+If no database-related plugins are enabled, there will be no :guilabel:`Database` menu.
 This is what the :menuselection:`Database` menu looks like if all the core plugins are enabled. 
 
 .. list-table:: The Database menu items
@@ -1596,7 +1597,7 @@ This is what the :menuselection:`Database` menu looks like if all the core plugi
    * - |queryHistory| :guilabel:`Query History...`
      - 
      - :guilabel:`Database`
-     - 
+     - :ref:`execute_sql`
    * - |dbManager| :guilabel:`DB Manager...`
      -
      - :guilabel:`Database`
