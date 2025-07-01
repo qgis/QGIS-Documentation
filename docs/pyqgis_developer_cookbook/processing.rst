@@ -274,7 +274,6 @@ Here is an example that integrates signal management using QTimer_ for debounced
 
         def _on_collection_id_ready(self):
             self.pushInfo("Fetching metadata for collection ID…")
-            # self.updateDropdownsFromCollectionID(self.input.text())
 
         def getParameters(self) -> Dict:
             try:
@@ -307,11 +306,6 @@ Here is an example that integrates signal management using QTimer_ for debounced
             self.setResults(results)
             self.showLog()
 
-..
- figure:: img/custom_algorithm_dialog.png
-   :align: center
-
-   Example custom dialog rendered with ``CustomAlgorithmDialog``
 
 To launch the custom dialog for a given algorithm, simply instantiate
 ``CustomAlgorithmDialog`` with your algorithm instance and call ``exec()``:
