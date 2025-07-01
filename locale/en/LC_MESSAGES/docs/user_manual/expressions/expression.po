@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-07-01 08:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
@@ -62,7 +62,7 @@ msgstr ""
 msgid "clicking the |expression| button;"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:462
+#: ../../docs/user_manual/expressions/expression.rst:469
 msgid "expression"
 msgstr ""
 
@@ -72,7 +72,7 @@ msgid ""
 ":sup:`Select By Expression...` tool;"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:464
+#: ../../docs/user_manual/expressions/expression.rst:471
 msgid "expressionSelect"
 msgstr ""
 
@@ -82,7 +82,7 @@ msgid ""
 "|calculateField| :sup:`Field calculator` tool;"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:452
+#: ../../docs/user_manual/expressions/expression.rst:459
 msgid "calculateField"
 msgstr ""
 
@@ -92,7 +92,7 @@ msgid ""
 "|dataDefine| :sup:`Data defined override` tool (see :ref:`data_defined`);"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:456
+#: ../../docs/user_manual/expressions/expression.rst:463
 msgid "dataDefine"
 msgstr ""
 
@@ -190,7 +190,7 @@ msgstr ""
 msgid "|fileNew|:sup:`Clear the expression editor`"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:466
+#: ../../docs/user_manual/expressions/expression.rst:473
 msgid "fileNew"
 msgstr ""
 
@@ -223,7 +223,7 @@ msgid ""
 ":guilabel:`Copy Expression Value`."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:460
+#: ../../docs/user_manual/expressions/expression.rst:467
 msgid "editCopy"
 msgstr ""
 
@@ -286,7 +286,7 @@ msgid ""
 "use` in the current field."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:454
+#: ../../docs/user_manual/expressions/expression.rst:461
 msgid "checkbox"
 msgstr ""
 
@@ -454,7 +454,7 @@ msgid ""
 "expression dialogs inside all projects of the current user profile."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:468
+#: ../../docs/user_manual/expressions/expression.rst:475
 msgid "fileSave"
 msgstr ""
 
@@ -477,7 +477,7 @@ msgid ""
 " well as their help and label"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:478
+#: ../../docs/user_manual/expressions/expression.rst:485
 msgid "symbologyEdit"
 msgstr ""
 
@@ -485,7 +485,7 @@ msgstr ""
 msgid "|deleteSelected| :sup:`Remove selected expression from user expressions`"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:458
+#: ../../docs/user_manual/expressions/expression.rst:465
 msgid "deleteSelected"
 msgstr ""
 
@@ -495,7 +495,7 @@ msgid ""
 " the active user profile folder"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:472
+#: ../../docs/user_manual/expressions/expression.rst:479
 msgid "sharingImport"
 msgstr ""
 
@@ -506,7 +506,7 @@ msgid ""
 "shared"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:470
+#: ../../docs/user_manual/expressions/expression.rst:477
 msgid "sharingExport"
 msgstr ""
 
@@ -534,7 +534,7 @@ msgstr ""
 msgid "Press the |symbologyAdd| :sup:`New File` button."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:476
+#: ../../docs/user_manual/expressions/expression.rst:483
 msgid "symbologyAdd"
 msgstr ""
 
@@ -549,43 +549,73 @@ msgid ""
 "If you select :guilabel:`Function file`, you need to enter a name for the"
 " Python :file:`.py` file, which is based on a QGIS template file and is "
 "stored in the :file:`/python/expressions` folder under the active "
-":ref:`user profile <user_profiles>` directory."
+":ref:`user profile <user_profiles>` directory, thus available for all "
+"projects you may open with that profile."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:345
+#: ../../docs/user_manual/expressions/expression.rst:346
+msgid ""
+"Custom Python functions stored as Function files are auto loaded whenever"
+" you start a new project under the user profile. Be aware that for "
+"sharing such Python functions, you need to share the :file:`.py` file in "
+"the :file:`/python/expressions` folder."
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:351
 msgid ""
 "If you select :guilabel:`Project functions`, the new function is stored "
-"in the project file."
+"in the project file and only available for that project."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:347
+#: ../../docs/user_manual/expressions/expression.rst:354
+msgid ""
+"Custom Python functions stored as Project functions can be easily shared "
+"by sharing the project file where they were saved. When opening a project"
+" with project functions, QGIS can load or ignore them depending on "
+"whether :ref:`embedded Python code is enabled <load_project_code>`."
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:359
 msgid ""
 "A new item is added in the left panel of the :guilabel:`Function Editor` "
 "tab."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:349
+#: ../../docs/user_manual/expressions/expression.rst:361
 msgid ""
 "The right panel displays the content of the file: a python script "
-"template. Update the code and its help according to your needs."
+"template."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:351
+#: ../../docs/user_manual/expressions/expression.rst:362
+msgid ""
+"Uncomment the code block and start editing it according to your needs. "
+"You can rely on code autocompletion, code formatting and typing helpers, "
+"as defined in :ref:`console_options`."
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:366
+msgid ""
+"You will find in the :guilabel:`Help` widget general information for "
+"setting the @qgsfunction decorator."
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression.rst:368
 msgid ""
 "Press the |start| :guilabel:`Save and Load Functions` button. The "
 "function you wrote is added to the functions tree in the "
 ":guilabel:`Expression` tab, by default under the ``Custom`` group."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:474
+#: ../../docs/user_manual/expressions/expression.rst:481
 msgid "start"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:354
+#: ../../docs/user_manual/expressions/expression.rst:371
 msgid "Enjoy your new function."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:355
+#: ../../docs/user_manual/expressions/expression.rst:372
 msgid ""
 "If the function requires improvements, enable the :guilabel:`Function "
 "Editor` tab, do the changes and press again the |start| :guilabel:`Save "
@@ -593,37 +623,19 @@ msgid ""
 "any expression tab."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:360
-msgid ""
-"Custom Python functions stored as Function files are stored under the "
-"user profile directory, meaning that at each QGIS startup, it will auto "
-"load all the functions defined with the current user profile. Be aware "
-"that for sharing Python functions stored in Function files you need to "
-"share the :file:`.py` file in the :file:`/python/expressions` folder."
-msgstr ""
-
-#: ../../docs/user_manual/expressions/expression.rst:365
-msgid ""
-"On the other hand, custom Python functions stored as Project functions "
-"can be easily shared by sharing the project file where they were saved. "
-"When opening a project with project functions, QGIS can load or ignore "
-"them depending on whether :ref:`embedded Python code is enabled "
-"<load_project_code>` in General settings."
-msgstr ""
-
-#: ../../docs/user_manual/expressions/expression.rst:370
+#: ../../docs/user_manual/expressions/expression.rst:376
 msgid "To delete a custom function:"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:372
+#: ../../docs/user_manual/expressions/expression.rst:378
 msgid "Enable the :guilabel:`Function Editor` tab"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:373
+#: ../../docs/user_manual/expressions/expression.rst:379
 msgid "Select the function in the list"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:374
+#: ../../docs/user_manual/expressions/expression.rst:380
 msgid ""
 "Press the |symbologyRemove| :sup:`Remove selected function`. The function"
 " is removed from the list and, depending on the storage, the "
@@ -631,32 +643,32 @@ msgid ""
 "the Python functions are removed from the project file."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:480
+#: ../../docs/user_manual/expressions/expression.rst:487
 msgid "symbologyRemove"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:379
+#: ../../docs/user_manual/expressions/expression.rst:386
 msgid ""
 "When a project file with Project functions is closed, the corresponding "
 "Project functions are unloaded and are no longer available in the QGIS "
 "session."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:382
+#: ../../docs/user_manual/expressions/expression.rst:389
 msgid "**Example**"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:384
+#: ../../docs/user_manual/expressions/expression.rst:391
 msgid ""
 "Here's a short example on how to create your own ``my_sum`` function that"
 " will operate with two values."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:405
+#: ../../docs/user_manual/expressions/expression.rst:412
 msgid "The ``@qgsfunction`` decorator accepts the following arguments:"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:407
+#: ../../docs/user_manual/expressions/expression.rst:414
 msgid ""
 "``args``: the number of arguments. When using the ``args='auto'`` "
 "argument the number of function arguments required will be calculated by "
@@ -665,51 +677,51 @@ msgid ""
 "of arguments are accepted."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:411
+#: ../../docs/user_manual/expressions/expression.rst:418
 msgid ""
 "The ``group`` argument indicates the group in which the function should "
 "be listed in the Expression dialog."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:413
+#: ../../docs/user_manual/expressions/expression.rst:420
 msgid ""
 "``usesgeometry=True`` if the expression requires access to the features "
 "geometry. By default :const:`False`."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:415
+#: ../../docs/user_manual/expressions/expression.rst:422
 msgid ""
 "``handlesnull=True`` if the expression has custom handling for NULL "
 "values. If :const:`False` (default), the result will always be NULL as "
 "soon as any parameter is NULL."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:418
+#: ../../docs/user_manual/expressions/expression.rst:425
 msgid ""
 "``referenced_columns=[list]``: An array of attribute names that are "
 "required to the function. Defaults to "
 "``[QgsFeatureRequest.ALL_ATTRIBUTES]``."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:421
+#: ../../docs/user_manual/expressions/expression.rst:428
 msgid "The function itself allows following arguments:"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:423
+#: ../../docs/user_manual/expressions/expression.rst:430
 msgid ""
 "any number and type of parameters you want to pass to your function, set "
 "before the following arguments."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:425
+#: ../../docs/user_manual/expressions/expression.rst:432
 msgid "``feature``: the current feature"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:426
+#: ../../docs/user_manual/expressions/expression.rst:433
 msgid "``parent``: the :class:`QgsExpression <qgis.core.QgsExpression>` object"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:427
+#: ../../docs/user_manual/expressions/expression.rst:434
 msgid ""
 "``context``: If there is an argument called ``context`` found at the last"
 " position, this variable will contain a :class:`QgsExpressionContext "
@@ -718,15 +730,15 @@ msgid ""
 "``context.variable( 'layer_id' )``"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:432
+#: ../../docs/user_manual/expressions/expression.rst:439
 msgid "The previous example function can then be used in expressions:"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:439
+#: ../../docs/user_manual/expressions/expression.rst:446
 msgid "Custom Function added to the Expression tab"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression.rst:442
+#: ../../docs/user_manual/expressions/expression.rst:449
 msgid ""
 "Further information about creating Python code can be found in the :ref"
 ":`PyQGIS-Developer-Cookbook`."
