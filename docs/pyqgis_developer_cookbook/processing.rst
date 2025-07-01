@@ -226,6 +226,7 @@ Here is an example that integrates signal management using QTimer_ for debounced
         QgsProcessingFeedback,
         Qgis,
     )
+    from qgis.PyQt.QtWidgets import QWidget
     from qgis import gui, processing
     from datetime import datetime
     from typing import Dict, Optional
