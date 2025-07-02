@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2025-07-02 07:59+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: DiGro, 2025\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -484,19 +484,28 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:257
 msgid ""
 "The :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method has "
-"the same arguments, but returns two arrays. In the first array element `n` "
-"contains index of the incoming edge or -1 if there are no incoming edges. In"
-" the second array element `n` contains the distance from the root of the "
-"tree to vertex `n` or DOUBLE_MAX if vertex `n` is unreachable from the root."
+"the same arguments, but returns a tuple of arrays:"
 msgstr ""
 "De methode :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` "
-"heeft dezelfde argumenten, maar geeft twee arrays terug. In het eerste array"
-" bevat element `n` de index van de inkomende rand of -1 als er geen "
-"inkomende randen zijn. In de tweede array bevat element `n` de afstand van "
-"de wortel van de boom tot het punt `n` of DOUBLE_MAX als het punt `n` "
-"onbereikbaar is vanuit de wortel."
+"heeft dezelfde argumente, maar geeft een tuple met arrays terug:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:268
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:260
+msgid ""
+"In the first array, element `n` contains index of the incoming edge or -1 if"
+" there are no incoming edges."
+msgstr ""
+"In de eerste array bevat element `n` de index van de inkomende rand of -1  "
+"als er geen inkomende randen zijn."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:262
+msgid ""
+"In the second array, element `n` contains the distance from the root of the "
+"tree to vertex `n` or DOUBLE_MAX if vertex `n` is unreachable from the root."
+msgstr ""
+"In de tweede array bevat element `n` de afstand vanaf de bron van de boom "
+"tot punt `n` of DOUBLE_MAX als punt `n`  onbereikbaar is vanaf de bron."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:269
 msgid ""
 "Here is some very simple code to display the shortest path tree using the "
 "graph created with the :meth:`shortestTree() "
@@ -508,7 +517,7 @@ msgstr ""
 "<qgis.analysis.QgsGraphAnalyzer.shortestTree>` (selecteer de lijnenlaag in "
 "het paneel :guilabel:`Lagen` en vervang de coördinaten door die van uzelf)."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:273
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:274
 msgid ""
 "Use this code only as an example, it creates a lot of :class:`QgsRubberBand "
 "<qgis.gui.QgsRubberBand>` objects and may be slow on large datasets."
@@ -517,7 +526,7 @@ msgstr ""
 ":class:`QgsRubberBand <qgis.gui.QgsRubberBand>` en zou zeer traag kunnen "
 "zijn voor grote gegevenssets."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:309
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:310
 msgid ""
 "Same thing but using the :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method"
@@ -525,11 +534,11 @@ msgstr ""
 "Hetzelfde, maar met de methode :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>`"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:346
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:358
 msgid "Finding shortest paths"
 msgstr "Kortste pad zoeken"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:348
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:360
 msgid ""
 "To find the optimal path between two points the following approach is used. "
 "Both points (start A and end B) are \"tied\" to the graph when it is built. "
@@ -549,7 +558,7 @@ msgstr ""
 " naar eindpunt B en beginnen te lopen door de boom vanaf punt B naar punt A."
 " Het gehele algoritme kan worden geschreven als:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:366
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:378
 msgid ""
 "At this point we have the path, in the form of the inverted list of vertexes"
 " (vertexes are listed in reversed order from end point to start point) that "
@@ -559,7 +568,7 @@ msgstr ""
 "punten (punten zijn vermeld in de omgekeerde volgorde van eindpunt naar "
 "beginpunt) die zullen worden bezocht gedurende het lopen over dit pad."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:370
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:382
 msgid ""
 "Here is the sample code for QGIS Python Console (you may need to load and "
 "select a linestring layer in TOC and replace coordinates in the code with "
@@ -572,7 +581,7 @@ msgstr ""
 ":meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>` "
 "gebruikt"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:426
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:440
 msgid ""
 "And here is the same sample but using the :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method"
@@ -580,11 +589,11 @@ msgstr ""
 "En hier is hetzelfde voorbeeld, maar voor de methode :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>`"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:482
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:496
 msgid "Areas of availability"
 msgstr "Beschikbare gebieden"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:484
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:498
 msgid ""
 "The area of availability for vertex A is the subset of graph vertexes that "
 "are accessible from vertex A and the cost of the paths from A to these "
@@ -594,7 +603,7 @@ msgstr ""
 " toegankelijk zijn vanuit punt  A en de kosten van de paden van A naar deze "
 "punten zijn niet groter dan een bepaalde waarde."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:488
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:502
 msgid ""
 "More clearly this can be shown with the following example: \"There is a fire"
 " station. Which parts of city can a fire truck reach in 5 minutes? 10 "
@@ -607,7 +616,7 @@ msgstr ""
 "antwoorden op deze vragen zijn de beschikbare gebieden voor deze "
 "brandweergarage."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:493
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
 msgid ""
 "To find the areas of availability we can use the :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method of the "
@@ -625,7 +634,7 @@ msgstr ""
 "waarde, dan ligt punt i binnen het beschikbare gebied, anders ligt het er "
 "buiten."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:500
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:514
 msgid ""
 "A more difficult problem is to get the borders of the area of availability. "
 "The bottom border is the set of vertexes that are still accessible, and the "
@@ -641,6 +650,6 @@ msgstr ""
 "van de boom van het kortste pad waarvoor het bronpunt van de rand "
 "toegankelijk is en het doelpunt van de rand is dat niet."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:521
 msgid "Here is an example"
 msgstr "Hier is een voorbeeld"
