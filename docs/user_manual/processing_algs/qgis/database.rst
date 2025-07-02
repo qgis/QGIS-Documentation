@@ -300,7 +300,7 @@ Parameters
      - [boolean]
 
        Default: True
-     - Save the layer styles
+     - Save the layer styles.
    * - **Save only selected features**
      - ``SELECTED_FEATURES_ONLY``
      - [boolean]
@@ -318,6 +318,14 @@ Parameters
        setting this option to ``True`` will result in exporting also its related layer(s).
        If the layer has features selected, then only their related features will be exported
        unless the related layer was also an input layer.
+   * - **Extent**
+
+       Optional
+     - ``EXTENT``
+     - [extent]
+     - Limit the exported features to those with geometries that intersect the provided 
+       extent. If none of the features from a specific input layer intersect the extent, 
+       the layer will still be created in the GeoPackage file, but it will be empty.
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
