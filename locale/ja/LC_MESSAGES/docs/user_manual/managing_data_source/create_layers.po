@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# usakooon, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: usakooon, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,6 +82,23 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:42
 msgid "Creating a new GeoPackage layer"
 msgstr "新しいGeoPackageレイヤを作成する"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:44
+msgid ""
+"To create a new GeoPackage layer, press the |newGeoPackageLayer| "
+":menuselection:`New GeoPackage Layer...` button in the :menuselection:`Layer"
+" --> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. You can also create a new GeoPackage layer through the "
+":guilabel:`Browser Panel` by selecting the :guilabel:`Create Database and "
+"Layer...`. The :guilabel:`New GeoPackage Layer` dialog will be displayed as "
+"shown in :numref:`figure_create_geopackage`."
+msgstr ""
+"新しい GeoPackage レイヤーを作成するには、 :menuselection:`レイヤ --> 新規レイヤ -->` メニュー、または "
+":guilabel:`データソースマネージャ` ツールバーから |newGeoPackageLayer| "
+":menuselection:`新しいGeopackageレイヤ...` ボタンを押します。また、 :guilabel:`ブラウザパネルl` から "
+":guilabel:`新規データベースとレイヤ...` を選択して新しい GeoPackage "
+"レイヤーを作成することもできます。numref:`figure_create_geopackage` に示すように "
+":guilabel:`新しいGeoPackageレイヤ` ダイアログが表示されます。"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:822
 msgid "newGeoPackageLayer"
@@ -664,6 +682,22 @@ msgstr ""
 msgid "Creating new layers from an existing layer"
 msgstr "既存のレイヤから新しいレイヤを作成する"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:340
+msgid ""
+"Layers (raster, vector and point cloud) can be saved in a different format "
+"and/or reprojected to a different coordinate reference system (CRS) using "
+"the :menuselection:`Layer --> Save As...` menu or right-clicking on the "
+"layer in the :guilabel:`Layers panel` and selecting:"
+msgstr ""
+"レイヤ（ラスター、ベクトル、点群）は :menuselection:`レイヤ --> 名前を付けて保存...` メニューを使うか、 "
+":guilabel:`レイヤパネル` "
+"でレイヤを右クリックして選択することで、別のフォーマットで保存したり、別の座標参照系（CRS）に再投影することができます："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:345
+msgid ""
+":menuselection:`Export --> Save As...` for raster and point cloud layers"
+msgstr ":menuselection:`エクスポート --> 名前を付けて保存...` ラスタと点群レイヤの場合"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:346
 msgid ""
 ":menuselection:`Export --> Save Features As...` or :menuselection:`Export "
@@ -720,6 +754,10 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:367
 msgid ":guilabel:`Add saved file to map`: to add the new layer to the canvas"
 msgstr ":guilabel:`保存されたファイルを地図に追加する` ：新しいレイヤをマップキャンバスに追加します。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:369
+msgid "However, some parameters are specific to certain formats:"
+msgstr "ただし、いくつかのパラメータは特定のフォーマットの固有のものです。"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:372
 msgid "Raster specific parameters"
@@ -1013,6 +1051,46 @@ msgid ""
 "available."
 msgstr "ESRIシェープファイル、MapInfo .TAB 等の形式は、地物の追加も可能です。"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:500
+msgid "Point Cloud specific parameters"
+msgstr "点群固有のマラメータ"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:502
+msgid ""
+"Similar to raster and vector layers, point cloud layers can be saved in a "
+"different format and/or reprojected to a different coordinate reference "
+"system (CRS). This allows you to export a point cloud layer to vector or "
+"point cloud formats. Current supported formats are: Temporary scratch "
+"(memory layer), GeoPackage, ESRI Shapefile, DXF and LAS/LAZ point cloud. In "
+"addition to the common parameters listed above, exporting point cloud layers"
+" includes the following options:"
+msgstr ""
+"ラスタレイヤやベクタレイヤと同様に、点群レイヤーも異なるフォーマットで保存したり、異なる座標参照系（CRS）に再投影することができます。これにより、点群レイヤをベクトルまたは点群フォーマットにエクスポートできます。現在サポートされているフォーマットは以下の通りです。"
+" Temporary scratch（メモリレイヤー）、GeoPackage、ESRI シェープファイル、DXF、LAS/LAZ "
+"点群。上記の共通パラメータに加え、点群レイヤのエクスポートには以下のオプションがあります。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:509
+msgid ""
+":guilabel:`Filter by Polygon Layer`: Allows you to filter the point cloud "
+"data based on a polygon layer."
+msgstr ":guilabel:`ポリゴンレイヤによるフィルタ`： ポリゴンレイヤに基づいて点群データをフィルタリングできるようにします。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:510
+msgid ""
+":guilabel:`Elevation Range`: Enables filtering of the point cloud data based"
+" on a specified Z range."
+msgstr ":guilabel:`標高範囲`： 指定したZ範囲に基づいて点群データのフィルタリングを有効にします。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:511
+msgid ""
+":guilabel:`Limit number of points`: Provides an option to limit the number "
+"of points exported from the point cloud layer."
+msgstr ":guilabel:`点の数の制限`： 点群レイヤからエクスポートされる点の数を制限するオプションを提供します。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:518
+msgid "Saving a point cloud layer as a new layer"
+msgstr "点群レイヤを新規レイヤとして保存"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:524
 msgid "Creating new DXF files"
 msgstr "新しいDXFファイルを作成する"
@@ -1071,18 +1149,123 @@ msgstr ""
 "からの自動抽出で選択します。 :guilabel:`すべて選択` ボタンと :guilabel:`すべての選択を解除` "
 "ボタンは、エクスポートするデータを素早く設定するのに役立ちます。"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:551
+msgid "For each layer, you can:"
+msgstr "各レイヤについて、以下のことが可能です。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:553
+msgid ""
+"Override the output layer name without altering the original project layer. "
+"For this, click on the :guilabel:`Layer` name in the dialog and write the "
+"output name to use."
+msgstr ""
+"元のプロジェクトのレイヤを変更せずに、出力レイヤ名を上書きします。そのためには、ダイアログの :guilabel:`レイヤ` "
+"名をクリックし、使用する出力名を記述します。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:557
+msgid ""
+":guilabel:`Output layer attribute`: Choose whether to export all the "
+"features in a single DXF layer or rely on a field whose values are used to "
+"split the features into layers in the DXF output. In the latter case, each "
+"layer will take its name from the corresponding field value."
+msgstr ""
+":guilabel:`出力レイヤ属性`： "
+"すべてのフィーチャーを1つのDXFレイヤにエクスポートするか、DXF出力でフィーチャーをレイヤに分割するために使用されるフィールドの値に依存するかを選択します。後者の場合、各レイヤーの名前は対応するフィールド値から取られます。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:561
+msgid ":guilabel:`Allow data defined symbol blocks`:"
+msgstr ":guilabel:`データ定義されたシンボルブロックを許可します。`:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:562
+msgid ""
+":guilabel:`Maximum number of symbol blocks`: creates symbol blocks up to the"
+" specified limit, starting with the ones containing the highest number of "
+"references. The other symbols are written as they are. ``-1`` means no "
+"limitation."
+msgstr ""
+":guilabel:`最大シンボルブロック数`: "
+"指定された上限までのシンボルブロックを作成し、参照数が最も多いものから始めます。他のシンボルはそのまま書かれます。-1``は制限なしを意味します。"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:566
 msgid "Optionally, you can also choose to:"
 msgstr "下記オプションを選択することもできます："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:568
+msgid ""
+"|unchecked| :guilabel:`Use the layer title as name if set` instead of the "
+"layer name itself: the title is taken from the :ref:`metadata "
+"<vectormetadatamenu>` or :ref:`server <vectorservermenu>` properties of the "
+"layer;"
+msgstr ""
+"|unchecked| :guilabel: レイヤ名そのものではなくレイヤのタイトルを使用します。このタイトルはプロパティレイヤの "
+":ref:`メタデータ <vectormetadatamenu>` または :ref:`サーバ <vectorservermenu>` "
+"から取得できます。 "
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:834
 msgid "unchecked"
 msgstr "unchecked"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:571
+msgid ""
+"|unchecked| :guilabel:`Export features intersecting the current map extent`;"
+msgstr "|unchecked| :guilabel:`現在のマップ範囲が交差する特徴をエクスポートをします。`;"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:572
 msgid ""
 "|unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;"
 msgstr "|unchecked| :guilabel:`2D出力を強制する（例えばポリライン幅をサポートするため）`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:573
+msgid ""
+"|checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements;"
+msgstr "|checkbox|:guilabel:`ラベルをMTEXT要素` またはTEXT要素としてエクスポートします；"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:574
+msgid "|unchecked| :guilabel:`Use only selected features`;"
+msgstr "|unchecked| :`選択した機能だけを使用します`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:575
+msgid ""
+"|unchecked| :guilabel:`Export lines with zero width`: all the lines are "
+"exported with minimal width ``0`` (hairline) if enabled. This helps keep the"
+" lines minimal in the file regardless of the zoom level, and can be handy "
+"for doing further CAD-editing with the exported dxf, especially if there are"
+" many features next to each other on the map."
+msgstr ""
+"|unchecked|:guilabel:`線の幅をゼロでエクスポート`: 有効にすると、すべての線が最小幅 ``0`` (ヘアライン) "
+"でエクスポートされます。これは、ズームレベルに関係なく、ファイル内の線を最小に保つのに役立ち、特に地図上で多くのフィーチャーが隣り合っている場合、エクスポートされたdxfでさらにCAD編集を行うのに便利です。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:583
+msgid "The precedence for defining the output layer name is as follows:"
+msgstr "出力レイヤ名の定義の優先順位は以下の通りです。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:585
+msgid "The field value from :guilabel:`Output layer attribute`"
+msgstr ":guilabel:`出力レイヤ属性` のフィールド値です。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:586
+msgid "The overridden name in :guilabel:`Layer` column"
+msgstr "The overridden name in :guilabel:`レイヤ` カラムで名前の上書き保存をします。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:587
+msgid "The :guilabel:`Use the layer title as name if set` option"
+msgstr "The :guilabel:`セットする場合レイヤタイトルを名前として使います a"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:588
+msgid "The layer name"
+msgstr "レイヤ名"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:590
+msgid ""
+"Current settings defined in the :guilabel:`DXF Export` dialog may be stored "
+"in an XML file for reusing them in other sessions. For this, the "
+":guilabel:`Settings` combo box has two options: :guilabel:`Load Settings "
+"from File...` and :guilabel:`Save Settings to File...`."
+msgstr ""
+":guilabel:`DXF Export` ダイアログで定義された現在の設定は、 may be stored in an XML file for "
+"reusing them in other sessions. For this, the :guilabel:`Settings` combo box"
+" has two options: :guilabel:`Load Settings from File...` and :guilabel:`Save"
+" Settings to File...`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:599
 msgid "Creating new layers from the clipboard"
