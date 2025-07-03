@@ -110,7 +110,7 @@ msgid ""
 " URI is in the form of "
 "``driver://username:password@hostname:port/database?options``."
 msgstr ""
-"カスタム認証データベースを設定する唯一の方法は、環境変数QGIS_AUTH_DB_URIに接続情報のURIを設定することです。URIの形式は次のとおりです。driver://username:password@hostname:port/database?options"
+"カスタム認証データベースを設定する唯一の方法は、環境変数``QGIS_AUTH_DB_URI``に接続情報のURIを設定することです。URIの形式は次のとおりです。``driver://username:password@hostname:port/database?options``"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:64
 msgid "Where:"
@@ -121,35 +121,35 @@ msgid ""
 "``driver`` is the name of the Qt SQL driver to use, e.g. ``QPSQL`` for "
 "PostgreSQL, ``QMYSQL`` for MySQL, etc."
 msgstr ""
-"driver:使用するQtSQLドライバー名\n"
-"例:PostgreSQL用は QPSQL、MySQL用はQMYSQLなど"
+"``driver``:使用するQtSQLドライバー名\n"
+"例:PostgreSQL用は ``QPSQL``、MySQL用は``QMYSQL``など"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:59
 msgid "``username`` is the username to use to connect to the database"
-msgstr "username:データベース接続に用いるユーザー名"
+msgstr "``username``:データベース接続に用いるユーザー名"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:60
 msgid "``password`` is the password to use to connect to the database"
-msgstr "password:データベースに接続する際に用いるパスワード"
+msgstr "``password``:データベースに接続する際に用いるパスワード"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:61
 msgid "``hostname`` is the hostname of the database server"
-msgstr "hostname:データベースサーバーのホスト名"
+msgstr "``hostname``:データベースサーバーのホスト名"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:62
 msgid "``port`` is the port of the database server"
-msgstr "port:データベースサーバーのポート番号"
+msgstr "``port``:データベースサーバーのポート番号"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:63
 msgid "``database`` is the name of the database to use"
-msgstr "database:利用するデータベース名"
+msgstr "``database``:利用するデータベース名"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:64
 msgid ""
 "``options`` are the options to pass to the driver, e.g. ``sslmode=require`` "
 "for PostgreSQL"
 msgstr ""
-"options:ドライバーに渡す追加オプション\n"
+"``options``:ドライバーに渡す追加オプション\n"
 "例：PostgreSQL の場合 ``sslmode=require``"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:68
@@ -157,8 +157,8 @@ msgid ""
 "The ``schema`` can be specified in the URI options, e.g. "
 "``QPSQL://username:password@hostname:port/database?schema=schema_name``"
 msgstr ""
-"URIのオプションでschemaを指定できます。\n"
-"例:QPSQL://username:password@hostname:port/database?schema=schema_name"
+"URIのオプションで``schema``を指定できます。\n"
+"例:``QPSQL://username:password@hostname:port/database?schema=schema_name``"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:70
 msgid ""
@@ -166,7 +166,7 @@ msgid ""
 "necessary permissions to connect to the database and to create the required "
 "tables if they do not exist."
 msgstr ""
-"データベースはQGIS起動前にあらかじめ作成しておく必要があります。ユーザーには当該データベースへの接続権限と、テーブルが存在しない場合にそれらを作成する権限が付与されている必要があります。"
+"データベースはQGIS起動前にあらかじめ作成しておく必要があります。ユーザーには当該データベースへの接続権限と、必要なテーブルが存在しない場合にそれらを作成する権限が付与されている必要があります。"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:76
 msgid ""
@@ -188,7 +188,7 @@ msgid ""
 "authentication databases or even custom Python implementations of "
 "credentials storages to be used by QGIS."
 msgstr ""
-"本機能は上級者向けで、複数のカスタム認証データベースや、Pythonプラグインによる独自の資格情報ストレージ実装を QGIS "
+"本機能は上級者向けで、複数のカスタム認証データベースや、独自の資格情報付きストレージにアクセスするためのPython実装を、 QGIS "
 "から利用できるよう設計されています。"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:88
