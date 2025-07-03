@@ -2329,7 +2329,7 @@ values:
 * ``Provide ui file``: allows to use a Qt designer file, hence a potentially
   more complex and fully featured template, as feature form.
 
-Just below the :guilabel:`Attribute editor layout` setting, a search box allows to
+Just below the :guilabel:`Attribute editor layout` setting, a search box allows you to
 filter fields, relations, containers and other available widgets.
 
 For items that support aliases, like fields or relations, the filter targets both
@@ -2343,10 +2343,10 @@ names and aliases.
    Search box in Attributes Form page
 
 The |toggleAliases| :sup:`Show field aliases instead of names` button allows
-to toggle field aliases and field names.
+you to toggle field aliases and field names.
 
-When showing aliases, fields that don't have an alias set, will have their names
-shown in light gray color for intentifying them easily.
+When showing aliases, fields without an alias set will have their names displayed in light gray to help identify them easily.
+.. only:: html
 
 .. _figure_attributes_form_toggle_aliases:
 
