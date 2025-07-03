@@ -2338,7 +2338,8 @@ names and aliases.
 The |toggleAliases| :sup:`Show field aliases instead of names` button allows
 you to toggle field aliases and field names.
 
-When showing aliases, fields without an alias set will have their names displayed in light gray to help identify them easily.
+When showing aliases, fields without an alias set will have their names displayed
+in light gray to help identify them easily.
 
 .. _figure_attributes_form_toggle_aliases:
 
