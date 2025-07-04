@@ -1311,7 +1311,7 @@ QGIS allows you to load a subset of a table, as a result of an SQL query
 that may involve one or more tables from the database.
 
 From the :guilabel:`Browser` panel, right-click on your database, schema or table
-and you get an `Execute SQL...` entry in your context menu.
+and you get an `Execute SQL...` entry in your contextual menu.
 It opens a window with a central text box widget where you can write SQL queries.
 
 .. _figure_execute_sql_queries:
@@ -1326,13 +1326,13 @@ At the top of the dialog, a toolbar provides a set of tools
 to create, store and manipulate your queries:
 
 * |fileOpen| :sup:`Open Queries...`: fills the text editor widget
-  with contents from an exiting :file:`.sql` file
+  with contents from an existing :file:`.sql` file
 * |fileSave| :sup:`Save Queries...` and |fileSaveAs| :sup:`Save Queries as...`
   help you store the written query to a :file:`.sql` file
 * Statements of the query can be adjusted using the |editCut| :sup:`Cut`,
   |editCopy| :sup:`Copy` and |editPaste| :sup:`Paste` buttons.
   Likewise, you can |undo| :sup:`Undo` or |redo| :sup:`Redo` your changes.
-* The |search| :sup:`Find & Replace` enables a the bottom of the dialog
+* The |search| :sup:`Find & Replace` enables, at the bottom of the dialog,
   a widget allowing to look for a particular string in your SQL code.
   The search can be case sensitive, affect partial or whole word,
   rely on a regular expression.
@@ -1350,11 +1350,11 @@ to create, store and manipulate your queries:
 
   .. _figure_history_sql_queries:
 
-  .. figure:: img/executesqlwindow.png
+  .. figure:: img/executesql_history.png
      :align: center
      :width: 30 em
 
-   Executing SQL queries in the Execute SQL window ???
+     History of the executed SQL queries
 
   Hover over an entry and the full query is displayed over, as a tooltip.
   Right-click and you can either:
@@ -1367,7 +1367,7 @@ to create, store and manipulate your queries:
   When a query is selected, the full query is displayed in the lower part of the dialog.
   You can interact with the text, copying all or part of it.
 
-* As previously seen, queries can be saved as an :file:`.sql` file stored on disk.
+* As previously mentioned, queries can be saved as an :file:`.sql` file stored on disk.
   Using the |storedqueries| :sup:`Store Current Query` button, they can also be stored:
 
   * In the active :guilabel:`User Profile`, in the associated :file:`QGIS3.ini` file,
@@ -1375,9 +1375,21 @@ to create, store and manipulate your queries:
   * or as part of the :guilabel:`Current Project`.
 
 In the central part of the :guilabel:`Execute SQL` dialog, you build your query
-using the SQL syntax supported by the underlying database.
-Editing tools to select, cut, copy, undo, redo,... are available as well
+using the SQL syntax supported by the underlying provider (e.g., OGR_, GeoPackage_, PostgreSQL_).
+
+By default, if opened from a layer entry, a sample SQL query is provided.
+Editing tools to select, cut, copy, paste, undo and redo are available as well
 from the contextual menu.
+
+.. todo: Provide some examples of commands, on various providers,
+  single layer, joins, ... ?
+
+.. tip:: **Finding the right SQL syntax for your dataset**
+
+ To find the appropriate SQL dialect for your dataset,
+ press the :guilabel:`...` button next to the :guilabel:`Subset filter` option
+ in the bottom part of the dialog.
+
 
 When ready, pressing the :guilabel:`Execute` button below the text area
 will try to run the query.
@@ -1393,13 +1405,16 @@ The copied data is available as a formatted table.
 This allows you to paste the data into other applications,
 such as spreadsheet where it will show up as a table.
 
-The returned table can be loaded in QGIS expanding the :guilabel:`Lod as new layer` group
-and configuring parameters:
+The returned table can be loaded in QGIS expanding the :guilabel:`Load as new layer` group
+and configuring parameters (their availability depends on the layer provider):
 
 * :guilabel:`Column(s) with unique values` to indicate primary key of the data,
-* :guilabel:`Geometry column`: check the box to load the  layer as a spatial one,
+* :guilabel:`Geometry column`: check the box to load the layer as a spatial one,
   and indicate the geometry field name
-* :guilabel:`Subset filter`
+* :guilabel:`Subset filter`: allows to filter the results using a ``WHERE`` clause.
+  It can be written in the text box, or built using the :ref:`Query builder <vector_query_builder>`
+  after you pressed :guilabel:`...`.
+  Make sure to use fields that are available in the SQL layer.
 * :guilabel:`Avoid selecting by feature ID`
 * :guilabel:`Layer name` in the project
 
@@ -1786,6 +1801,9 @@ You can also choose to :guilabel:`Save Connection` to an XML file
 or :guilabel:`Load Connection` from an XML file.
 
 .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
+.. _GeoPackage: https://gdal.org/en/stable/user/sql_sqlite_dialect.html
+.. _OGR: https://gdal.org/en/stable/user/ogr_sql_dialect.html
+.. _PostgreSQL: https://postgresql.org/docs/current/sql-expressions.html
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
