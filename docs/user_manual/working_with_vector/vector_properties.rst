@@ -4144,6 +4144,8 @@ To do so:
    :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em
+.. |toggleAliases| image:: /static/common/mToggleAliases.png
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
