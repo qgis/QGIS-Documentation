@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# aa123201, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-02 02:30+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: aa123201, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +36,15 @@ msgstr ""
 #: ../../docs/user_manual/style_library/label_settings.rst:5
 msgid "Setting a label"
 msgstr "ラベルの設定"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:12
+msgid ""
+"Labels are textual information you can display on vector features, mesh "
+"layers or maps. They add details you could not necessarily represent using "
+"symbols. Two types of text-related items are available in QGIS:"
+msgstr ""
+"ラベルはベクトル地物やメッシュ レイヤー、あるいは地図上に表示できるテキスト情報です。シンボルだけでは表現できない詳細を追加できますQGIS "
+"では、以下の 2 種類のテキスト関連アイテムが利用可能です:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:16
 msgid ""
@@ -99,6 +109,18 @@ msgstr ""
 ":guilabel:`ラベルの設定` ：テキストの位置や、他のテキストや地物との相互関係に関連したプロパティでテキスト形式の設定を拡張します（ "
 ":ref:`引出し線付きラベル <labels_callouts>` 、 :ref:`配置 <labels_placement>` 、 "
 ":ref:`重なり、縮尺に応じた表示 <labels_rendering>` 、マスクグリッド ...）"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:45
+msgid ""
+"They are used to configure smart labelling for vector and mesh layers "
+"through the |labelingSingle| :guilabel:`Labels` tab of the vector or mesh "
+":guilabel:`Layer Properties` dialog or :guilabel:`Layer Styling` panel or "
+"using the |labelingSingle| :sup:`Layer Labeling Options` button of the "
+":ref:`Label toolbar <label_toolbar>`."
+msgstr ""
+"これらは、ベクトルまたはメッシュ レイヤーの 「レイヤー プロパティ」ダイアログの 「ラベル」タブ、または 「レイヤー "
+"スタイリング」パネルからスマートラベリングを設定する際に使用するか、「ラベル」ツールバーの 「レイヤー ラベリング オプション」 "
+"ボタンを使って呼び出します。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1082
 msgid "labelingSingle"
@@ -249,6 +271,12 @@ msgstr ":guilabel:`色`"
 msgid "the :guilabel:`Opacity`"
 msgstr ":guilabel:`不透明度`"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:133
+msgid ""
+"and :guilabel:`Allow HTML Formatting` enables the use of a subset of HTML "
+"tags and CSS rules to customize the label."
+msgstr "`Allow HTML Formatting`:HTML タグとCSSルールのサブセットを利用してラベルをカスタマイズできます"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:135
 msgid ""
 "At the bottom of the tab, a widget shows a filterable list of compatible "
@@ -273,6 +301,113 @@ msgstr ""
 ":guilabel:`ラベルの設定` アイテムを設定する場合、このウィジェットではテキスト形式アイテムも設定可能です。これを選択すると、現在のラベルの "
 ":ref:`テキストのプロパティ <text_format>` "
 "を素早く上書きすることができます。同様に、そこからテキスト形式を作成/上書きすることもできます。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:152
+msgid "Allow HTML Formatting"
+msgstr "Allow HTML Formatting"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:154
+msgid ""
+"With :guilabel:`Allow HTML Formatting` enabled, you need to provide the HTML"
+" code in the :guilabel:`Value` field. Use whitespaces instead of tabs for "
+"any kind of indentation. The expression is parsed and any supported HTML tag"
+" overrides its corresponding setting in the labels properties. Because it is"
+" impossible to list and detail every HTML tag and CSS property that QGIS "
+"currently supports, we invite you to explore and test in your labels `the "
+"ones supported <https://doc.qt.io/qt-5/richtext-html-subset.html>`_ by the "
+"underlying Qt library."
+msgstr ""
+"Allow HTML "
+"Formattingを有効にすると、「値」フィールドにHTMLコードを入力できます。インデントにはタブではなくスペースを使用してください。式は解析され、サポートされている"
+" HTML タグはラベル プロパティの対応設定を上書きします。QGIS が現在サポートしているすべての "
+"HTMLタグやCSSプロパティを網羅的にリスト化・詳細化することは困難なため、基盤となる Qt "
+"ライブラリでサポートされているものを実際のラベルで試用・検証することをおすすめします。<https://doc.qt.io/qt-5/richtext-"
+"html-subset.html>_ by the underlying Qt library."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:161
+msgid "**Examples of supported HTML tags:**"
+msgstr "サポートされているHTMLタグの例"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:163
+msgid "Text formatting, such as italic or bold, e.g.:"
+msgstr "斜体や太字などのテキスト書式設定："
+
+#: ../../docs/user_manual/style_library/label_settings.rst:169
+msgid ""
+"Superscript and subscript, where the text will be vertically :sup:`super` or"
+" :sub:`sub` aligned and automatically sized to 2/3 of the parent font size. "
+"You can also set a fixed font size for the superscript/subscript by "
+"including css rules, e.g.:"
+msgstr ""
+"上付き文字・下付き文字：テキストを縦方向に<sup>sup</sup>または<sub>sub</sub>に位置合わせし、親フォントサイズの2/3に自動調整します。CSS"
+" ルールで固定フォントサイズを指定することも可能です。例:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:178
+msgid ""
+"Text horizontal alignment, using either HTML the ``align=\"xxx\"`` attribute"
+" or  ``center`` tag. For HTML5 compatibility, prefer using the CSS property "
+"``text-align``."
+msgstr ""
+" 水平方向配置:HTMLの``align=\"xxx\"``属性または``center``タグを使えます。HTML5 互換性を考慮する場合は CSS "
+"プロパティ``text-align`` を推奨します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:181
+msgid "Horizontal alignment can not be used for curved labels."
+msgstr "曲線ラベルでは水平方向配置は使用できません。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:183
+msgid ""
+"Structuring a block of text using header tags (such as ``h1``, ``h2``, ...),"
+" or paragraphs (with ``p``, ``div``, ``br``):"
+msgstr ""
+"見出しタグ (``h1``, ``h2``,...)や段落タグ(``p``, ``div``, ``br``)でテキストブロックを構造化できます。例:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:193
+msgid ""
+"Image insertion: any image format readable by QGIS can be used in HTML label"
+" content. It can be served from local file paths, HTTP links, or base64 "
+"embedded content, using the ``src=\"xxx\"`` attribute. Image sizes can be "
+"specified via the ``width=\"##\"`` and ``height=\"##\"`` attributes, in "
+"``points`` unit. If width or height is not specified it will automatically "
+"be calculated from the original image size. Images are placed inline only, "
+"not as floating images, and not on curved text labels."
+msgstr ""
+"画像挿入:QGISが読み込める任意の画像形式をHTMLラベルに使用できます。ローカルファイルパス、HTTPリンク、base64埋め込みなどを``src=\"xxx\"``属性で指定し、``width=\"##\"``と``height=\"##\"``でサイズ``point``単位を指定します。未指定時は元画像サイズから自動計算されます。画像はインライン配置のみ対応し、曲線ラベルでは使用できません。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:205
+msgid "**Examples of supported CSS properties:**"
+msgstr "サポートされているCSSプロパティの例"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:207
+msgid ""
+"Font properties (``color``, ``font-family``, ``font-size``, ``font-weight``,"
+" ``font-style``, ``word-spacing``). Note that ``word-spacing`` will always "
+"use unit points."
+msgstr ""
+"フォントプロパティ(``color``, ``font-family``, ``font-size``, ``font-weight``, "
+"``font-style``, ``word-spacing``)。``word-spacing``は常にポイント単位です。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:209
+msgid ""
+"Text decorations such as underline, overline and line-through (``text-"
+"decoration``)"
+msgstr "テキスト装飾(underline, overline, line-through を指定する``text-decoration``)"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:210
+msgid ""
+"Text alignment (``vertical-align``, ``text-align``). Horizontal alignment "
+"can not be used for curved labels."
+msgstr "テキスト配置(``vertical-align``, ``text-align``)曲線ラベルでは水平方向配置は使用不可"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:213
+msgid ""
+"CSS properties can be set on HTML tags with the ``style`` attribute. The "
+"HTML tag ``span`` does not apply any formatting to text by itself and is "
+"ideal if you just want to apply CSS styling. A CSS property name and its "
+"value are separated by a colon (``:``). Multiple CSS properties are "
+"separated by semicolon (``;``), e.g.:"
+msgstr ""
+"CSSプロパティはHTMLタグの``style``属性で設定します。``span``タグは書式を持たず、CSSスタイリングのみを適用するのに適しています。プロパティ名と値はコロン(``:``)、複数はセミコロン(``;``)で区切ります。例:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:224
 msgid ""
@@ -339,6 +474,15 @@ msgid ""
 "Under :guilabel:`Spacing`, change the space between words and between "
 "individual letters."
 msgstr ":guilabel:`間隔` は、単語間および個々の文字間のスペースを変更します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:271
+msgid ""
+"With :guilabel:`Tab distance` you can adjust the replacement spacing for "
+":kbd:`Tab` characters in the label, in any supported unit. This allows e.g. "
+"to properly separate or vertically align elements of a layout legend text."
+msgstr ""
+":guilabel:`Tab "
+"distance`を使用すると、ラベル内の:kbd:`Tab`文字を置き換えるスペース間隔をサポートされている任意の単位で調整できます。これにより、レイアウト凡例テキストの要素を適切に区切ったり、縦方向に揃えたりすることが可能になります。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:275
 msgid ""
@@ -707,9 +851,17 @@ msgstr ""
 "、あるいは :guilabel:`テキスト` 自体、 :guilabel:`バッファ` 、 :guilabel:`背景` "
 "等の特定のコンポーネントを指定できます。"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:431
+msgid "Set the shadow's :guilabel:`Offset` from the item being shadowed, ie:"
+msgstr "影を付与する要素からの:guilabel:`Offset`を設定します。すなわち:"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:433
 msgid "The angle: clockwise, it depends on the underlying item orientation"
 msgstr "角度： 時計回りの角度を指定します。角度は元のアイテムの方向に依存します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:434
+msgid "The distance of offset from the item being shadowed"
+msgstr "影を付与する要素からのオフセットの距離"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:435
 msgid "The units of the offset"
@@ -887,9 +1039,137 @@ msgid ""
 "the feature. It can have rounded corners."
 msgstr ":guilabel:`バルーン` ：ラベルを囲み、地物を指し示す吹出し。角を丸めることもできます。"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:544
+msgid ""
+"Set the properties of the callout. The following table shows the different "
+"properties, with description and compatible connector style."
+msgstr "コールアウトのプロパティを設定します。以下の表には各プロパティの説明と対応するコネクタスタイルを示しています。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:548
+msgid "Label callout properties"
+msgstr "ラベル コールアウトのプロパティ"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:552
+msgid "Property"
+msgstr "プロパティ"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:552
+msgid "Style of callout"
+msgstr "コールアウト スタイル"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:552
 msgid "Description"
 msgstr "説明"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+msgid ":guilabel:`Fill style`"
+msgstr ":guilabel:`Fill style`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+#: ../../docs/user_manual/style_library/label_settings.rst:602
+msgid "Balloons"
+msgstr "Balloons"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+msgid ""
+"A :ref:`fill symbol <vector_fill_symbols>` with full display capabilities, "
+"including layer effects, data-defined settings, ... for drawing the balloon "
+"shape."
+msgstr "バルーン コールアウトの終点の下にマーカーを描画するための、レイヤー効果やデータ定義設定を含む完全な表示能力を持つマーカー シンボルです。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:557
+msgid ":guilabel:`Corner radius`"
+msgstr ":guilabel:`Corner radius`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:557
+msgid "Corner radius of the speech bubble"
+msgstr "吹き出しの角丸半径を指定します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:559
+msgid ":guilabel:`Wedge width`"
+msgstr ":guilabel:`Wedge width`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:559
+msgid ""
+"Sets how large the bubble speech connection with feature's pointer should be"
+msgstr "吹き出し先端コネクタの幅を指定します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:561
+msgid ":guilabel:`Margins`"
+msgstr ":guilabel:`Margins`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:561
+msgid "Margins around the label's text, in the unit of your choice"
+msgstr "ラベル テキストの周囲余白を指定します(単位は任意)。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:563
+msgid ":guilabel:`Line style`"
+msgstr ":guilabel:`Line style`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:563
+#: ../../docs/user_manual/style_library/label_settings.rst:572
+msgid "All but balloons"
+msgstr "バルーン以外"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:563
+msgid ""
+"A :ref:`line symbol <vector_line_symbols>` with full display capabilities, "
+"including layer effects, data-defined settings, ... for drawing the "
+"connector line."
+msgstr "コネクタ線を描画するための、レイヤー効果やデータ定義設定を含む完全表示機能を備えた :ref:`line symbol`です。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:566
+msgid ":guilabel:`Curvature`"
+msgstr ":guilabel:`Curvature`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:566
+msgid "Curved lines"
+msgstr "曲線"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:566
+msgid "The percentage of curvature of the connection line"
+msgstr "コネクタ線の湾曲率をパーセンテージで指定します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:568
+msgid ":guilabel:`Orientation`"
+msgstr ":guilabel:`Orientation`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:568
+msgid ""
+"Orientation, starting from the label to the feature. It can be "
+":guilabel:`Clockwise`, :guilabel:`Counter-clockwise`, or "
+":guilabel:`Automatic` (determining an optimal orientation for each label)."
+msgstr ""
+"ラベルから地物に向かうコネクタ線の方向を指定します。:guilabel:`Clockwise`（時計回り）、:guilabel:`Counter-"
+"clockwise`（反時計回り）、:guilabel:`Automatic`（最適方向を自動判定）のいずれかを選択できます。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:572
+msgid ":guilabel:`Minimum length`"
+msgstr ":guilabel:`Minimum length`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:572
+msgid "Minimum length of the connector line"
+msgstr "コネクタ線の最小長を指定します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:574
+msgid ":guilabel:`Draw lines to all feature parts`"
+msgstr ":guilabel:`Draw lines to all feature parts`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:574
+msgid ""
+"In case of a multi-part feature, indicates whether a connector line should "
+"be drawn from the label to each geometry part."
+msgstr "マルチパート地物の場合、ラベルから各ジオメトリパートへのコネクタ線を描画するかどうかを指定します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:577
+msgid ":guilabel:`Label anchor point`"
+msgstr ":guilabel:`Label anchor point`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:577
+msgid ""
+"Controls where the connector line should join to the label text. Available "
+"options:"
+msgstr "コネクタ線がラベル テキストに接続される位置を制御します。利用可能なオプションは次のとおりです："
 
 #: ../../docs/user_manual/style_library/label_settings.rst:580
 msgid ":guilabel:`Closest point`"
@@ -911,10 +1191,41 @@ msgstr ""
 ":guilabel:`中央左` 、 :guilabel:`中央右` 、 :guilabel:`左下` 、 :guilabel:`中下` 、 "
 ":guilabel:`右下` ）。"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:587
+msgid ":guilabel:`Offset from label area`"
+msgstr ":guilabel:`Offset from label area`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:587
+msgid ""
+"Controls the distance from the label anchor point (where the callout line "
+"ends). This avoids drawing lines right up against the text."
+msgstr "ラベルアンカーポイント（コールアウト線の終端となる位置）からの距離を制御します。テキストに線が直接触れてしまうのを防ぎます。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:590
+msgid ":guilabel:`Offset from feature`"
+msgstr ":guilabel:`Offset from feature`"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:590
 #: ../../docs/user_manual/style_library/label_settings.rst:606
 msgid "All"
 msgstr "All"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:590
+msgid ""
+"Controls the distance from the feature (or its anchor point if a polygon) "
+"where callout lines end. E.g., this avoids drawing lines right up against "
+"the edges of the features."
+msgstr ""
+"地物（ポリゴンの場合はアンカーポイント）からコールアウト線が終端する位置までの距離を制御します。例:地物の縁に線が重なる描画を回避できます。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:594
+msgid ":guilabel:`Feature anchor point`"
+msgstr ":guilabel:`Feature anchor point`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:594
+msgid ""
+"Where the connector line ends on the (polygon) feature. Available options:"
+msgstr "コネクタ線がポリゴン地物上のどこに終端するかを指定します。利用可能なオプションは以下の通りです："
 
 #: ../../docs/user_manual/style_library/label_settings.rst:596
 msgid ":guilabel:`Pole of inaccessibility`"
@@ -927,6 +1238,26 @@ msgstr ":guilabel:`外殻リング上（Point on Exterior）`"
 #: ../../docs/user_manual/style_library/label_settings.rst:598
 msgid ":guilabel:`Point on surface`"
 msgstr ":guilabel:`内部保証点（point on surface）`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:602
+msgid ":guilabel:`End point marker`"
+msgstr ":guilabel:`End point marker`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:602
+msgid ""
+"A :ref:`marker symbol <vector_marker_symbols>` with full display "
+"capabilities including layer effects, data-defined, ... for rendering a "
+"marker symbol below the endpoint of the balloon callout."
+msgstr ""
+"レイヤー効果やデータ定義設定を含む完全表示機能付きの`marker symbol`で、バルーンコールアウトの終点下にマーカーをレンダリングします。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:606
+msgid ":guilabel:`Blend mode`"
+msgstr ":guilabel:`Blend mode`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:606
+msgid "Controls the :ref:`blending <blend-modes>` of the callout."
+msgstr "コールアウト全体の`blending`を制御します。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:610
 msgid ""
@@ -953,6 +1284,17 @@ msgstr "moveLabel"
 #: ../../docs/user_manual/style_library/label_settings.rst:622
 msgid "Placement tab"
 msgstr "配置"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:624
+msgid ""
+"Choose the |labelplacement| :guilabel:`Placement` tab for configuring label "
+"placement and labeling priority. Note that the placement options differ "
+"according to the type of vector or mesh layer, namely point, line or "
+"polygon, and are affected by the global :ref:`PAL setting "
+"<automated_placement>`."
+msgstr ""
+"|labelplacement|の:guilabel:`Placement`タブを選択し、ラベルの配置方法と優先度を設定します。ポイント／ライン／ポリゴンの各レイヤータイプで異なるオプションが用意されており、グローバル"
+" :ref:`PAL`設定 の影響を受けます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1086
 msgid "labelplacement"
@@ -989,6 +1331,57 @@ msgstr ""
 "で設定）。後者のオプションはシンボルサイズが固定されていない場合、例えばサイズがデータによって定義されている場合や、 :ref:`カテゴリ値による定義 "
 "<categorized_renderer>` レンダラで様々なシンボルを使用している場合に特に有用です。"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:648
+msgid ""
+"within a :guilabel:`Maximum Distance` from the feature, which is an optional"
+" setting that allows you to control how far a label can be placed from the "
+"feature it's labeling. This works alongside the :guilabel:`Distance` setting"
+" to create a range for label placement, adding flexibility to position "
+"labels more effectively, especially on busy maps, ensuring they fit neatly "
+"around their corresponding features."
+msgstr ""
+":guilabel:`Maximum "
+"Distance`に設定された範囲内でラベルを配置します。これはオプションの設定で、ラベルを対象の地物からどれだけ離して配置できるかを制御できます。この機能は"
+" "
+":guilabel:`Distance`の設定と連動し、ラベル配置の範囲を指定することで、地物が密集した地図上でもラベルをより効果的に配置できる柔軟性を提供し、対応する地物の周囲にラベルをきれいに収めることを可能にします。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:653
+msgid ""
+"using the :guilabel:`Prioritize Placement` option, which decides what's more"
+" important when placing labels. There are two options:"
+msgstr ""
+":guilabel:`Prioritize Placement`オプションを使用すると、ラベル配置時の優先基準を決定できます。選択肢は2つあります:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:656
+msgid ""
+":guilabel:`Prefer closer labels`: By default, labels are kept close to the "
+"feature."
+msgstr ":guilabel:`Prefer closer labels`: デフォルトでは、ラベルを地物にできるだけ近い位置に配置します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:657
+msgid ""
+":guilabel:`Prefer position ordering`: The label will try to stay in a "
+"specific position (like top left or top right), even if it's a bit farther "
+"away from the feature. The label only moves to other positions if there's no"
+" room within the maximum distance at your preferred position."
+msgstr ""
+":guilabel:`Prefer position ordering`: "
+"ラベルは特定の位置（例：左上、右上など）を優先し、たとえ地物から多少離れていてもその位置に配置されるよう試みます。指定位置内にスペースがない場合のみ、別の位置に移動します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:661
+msgid ""
+"following a :guilabel:`Position priority` which dictates placement "
+"candidates for anchoring labels around and (centered) over the point "
+"feature, and the order in which the positions are tested. The default order,"
+" based on `guidelines from Krygier and Wood (2011) "
+"<https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_"
+" and other cartographic textbooks, is as follows:"
+msgstr ""
+":guilabel:`Position "
+"priority`に従い、ポイント地物の周囲および（地物中央の上部へ）ラベルをアンカー配置する候補位置と、それらをテストする順序を定義します。デフォルトの順序は`guidelines"
+" from Krygier and Wood (2011) "
+"<https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_およびその他の地図作成文献に基づき、以下のとおりです："
+
 #: ../../docs/user_manual/style_library/label_settings.rst:668
 msgid "top right"
 msgstr "右上"
@@ -1021,9 +1414,32 @@ msgstr "わずかに右寄りの上"
 msgid "bottom, slightly left."
 msgstr "わずかに左寄りの下"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:677
+msgid ""
+"Using the |dataDefine| :sup:`Data-defined override` button, you can provide "
+"a comma separated list of placements in order of priority. This also allows "
+"only certain placements to be used, for certain features only, so e.g., for "
+"coastal features you can prevent labels being placed over the land."
+msgstr ""
+"|dataDefine| の :sup:`Data-defined "
+"override`ボタンを使用すると、優先順位順にコンマ区切りで配置候補を指定できます。また、この機能により、特定の地物にのみ適用する配置を限定することも可能です。例、海岸線の地物ではラベルが陸地上に配置されないように制限できます。"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1064
 msgid "dataDefine"
 msgstr "dataDefine"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:682
+msgid ""
+":guilabel:`Around Point`: labels are placed in a circle around the feature "
+"with an equal radius set in :guilabel:`Distance`. Additionally you can set "
+":guilabel:`Maximum Distance` from the feature, to control how far a label "
+"can be placed from the feature it's labeling. The placement priority is "
+"clockwise from the \"top right\". The position can be constrained using the "
+"data-defined :guilabel:`Quadrant` option."
+msgstr ""
+":guilabel:`Distance`で設定した半径を中心に、地物を取り囲むようにラベルを円形に配置します。さらに、ラベルを対象地物からどれだけ離して配置するかを制御するために、:guilabel:`Maximum"
+" Distance`を設定できます。配置優先順は「右上」から時計回りで評価されます。また、データ定義オプションの "
+":guilabel:`Quadrant` を使用すると、配置位置を象限単位で制限できます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:689
 msgid ""
@@ -1452,6 +1868,32 @@ msgstr ""
 ":guilabel:`垂直方向` ： **Bottom** 、 **Base** 、 **Half** 、 **Cap** 、 **Top** "
 "のいずれかの値をとります"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:881
+msgid ""
+"the text :guilabel:`Rotation`. Rotation is defined as clockwise angle with "
+"0° pointing in the direction of East for ``Horizontal`` oriented text and "
+"with 0° pointing in North direction for ``Vertical`` oriented text. "
+"Different units can be defined for the labeling rotation (e.g. ``degrees``, "
+"``minutes of arc``, ``turns``). QGIS prioritizes screen display rotation "
+"angles by default and always rotates text to be most readable on screen, so "
+"\"upside-down\" rotation angles are overridden while rendering. To change "
+"this behavior and force QGIS to render exact data-defined rotation angles "
+"there is an option in |render| :guilabel:`Rendering` tab, under "
+":guilabel:`Show upside-down labels`. Check the :guilabel:`Preserve data "
+"rotation values` entry if you want to keep the rotation value in the "
+"associated field and apply it to the label, whether the label is pinned or "
+"not. If unchecked, unpinning the label rotation is reset and its value "
+"cleared from the attribute table."
+msgstr ""
+"the text :guilabel:`Rotation`.ラベルの回転（Rotation）は、水平テキスト（``Horizontal`` "
+"oriented text）では 0° が東方向を、垂直テキスト（``Vertical`` oriented text）では 0° "
+"が北方向を指す時計回りの角度で定義されます。回転角の単位には``degrees``、``minutes of "
+"arc``、``turns``などを使用できます。QGIS はデフォルトで画面表示の可読性を優先し、“上下逆” "
+"の回転角はレンダリング（rendering）時に自動的に補正されます。この動作を変更し、データ定義された回転角を正確に適用するには、|render| "
+"タブの :guilabel:`Rendering`（レンダリング）オプション内にある :guilabel:`Show upside-down "
+"labels`を有効にしてください。さらに :guilabel:`Preserve data rotation "
+"values`を有効にすると、ピン留め状態に関わらず属性フィールドの値を保持してラベルに適用します。無効にすると、ピン留めを解除した際に回転角がリセットされ、属性テーブルの値もクリアされます。"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1094
 msgid "render"
 msgstr "render"
@@ -1664,6 +2106,39 @@ msgid ""
 msgstr ""
 ":guilabel:`表示` および :guilabel:`常に表示するか否かを示す式` "
 "にデータによる定義式を使用して、どのラベルをレンダリングするかを細かく調整することができます。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1001
+msgid ""
+"Allow to :guilabel:`Show upside-down labels`: alternatives are **never**, "
+"**when rotation defined** or **always**."
+msgstr ""
+":guilabel:`Show upside-down labels`の設定では、以下のいずれかを選択できます:**never**、**when "
+"rotation defined**、**always**。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1004
+msgid "**never** - default setting, screen readability is prioritized,"
+msgstr "**never** – デフォルト設定では画面の可読性を優先します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1006
+msgid ""
+"**when rotation defined** - label rotation should be defined under "
+"|labelplacement| :guilabel:`Placement` tab, within the :guilabel:`Data "
+"Defined` group"
+msgstr ""
+"**when rotation defined**–ラベルの回転は、|labelplacement| の "
+":guilabel:`Placement`タブ内の :guilabel:`Data Defined`グループで定義されている必要があります。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1009
+msgid "**always** - upside-down labels are allowed"
+msgstr "**always**–ラベルの上下逆を常に許可します。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1016
+msgid ""
+"Data defined label rotation with show upside-down labels option set to: "
+"\"never\" (left), \"when rotation defined\" (right)"
+msgstr ""
+"データ定義によるラベル回転を、Show upside-down labels オプションを\"never\"（左図）、”when rotation "
+"defined”（右図）に設定した場合の表示例です。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1018
 msgid ""
