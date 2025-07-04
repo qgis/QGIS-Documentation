@@ -2478,7 +2478,7 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Additional creation options**
+   * - **Creation options**
 
        Optional
      - ``CREATION_OPTIONS``
