@@ -414,7 +414,7 @@ msgid ""
 "regardless it's of marker, line or fill sub-type:"
 msgstr ""
 "Simbolių sluoksnio kūrimui, nepriklausomai nuo jo žymeklių, linijų ar "
-"pildymo potipio, teikiamos kelios bendro parinktis ir valdikliai:"
+"pildymo potipio, teikiamos kelios bendros parinktys ir valdikliai:"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:156
 msgid ""
@@ -469,7 +469,7 @@ msgid ""
 "the |checkbox| :guilabel:`Draw effects` button for :ref:`effects rendering "
 "<draw_effects>`."
 msgstr ""
-"|checkbox| :guilabel:`Paišymo efektų` mygtukas :ref:`įrakoja braižymą "
+"|checkbox| :guilabel:`Paišymo efektų` mygtukas :ref:`įtakoja braižymą "
 "<draw_effects>`."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:174
@@ -481,9 +481,9 @@ msgid ""
 "geometry itself."
 msgstr ""
 "Nors žemiau pateiktas aprašymas daro prielaidą, kad simbolio tipas susijęs "
-"su geoobjekto geometrija, turėkite omenyje, kad jūs galite įdėti simbolių "
-"sluoksnius vienus į kitu. Tokiu atveju žemesnio lygio simbolio sluoksnio "
-"parametras (vietas, poslinkis...) gali būti susijęs su aukštesnio lygio "
+"su geoobjekto geometrija, turėkite omenyje, kad jūs galite įdėti vienus "
+"simbolių sluoksnius į kitus. Tokiu atveju žemesnio lygio simbolio sluoksnio "
+"parametras (vieta, poslinkis...) gali būti susijęs su aukštesnio lygio "
 "simboliu, o ne su pačia geoobjekto geometrija."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:183
@@ -624,8 +624,8 @@ msgid ""
 "making it hard to decipher. More details at :ref:`vector_mask_menu`."
 msgstr ""
 "**Slėpimas**: tai sub-simbolis, kuris apibrėžia slėpimo formą, kurios spalva"
-" bus ignoruojama ir naudojamas tik permatomumas. Tai patogu, kai žymeklis "
-"persidengia su kitų simbolių užrašais su panašiomis spalvomis, dėl juos "
+" bus ignoruojama ir naudojamas tik nepermatomumas. Tai patogu, kai žymeklis "
+"persidengia su kitų simbolių užrašais su panašiomis spalvomis, dėl ko juos "
 "sunku įžiūrėti. Daugiau informacijos galima rasti skyriuje "
 ":ref:`vector_mask_menu`."
 
@@ -699,7 +699,7 @@ msgstr ""
 "QGIS braižo SVG failus, kurie atitinka `SVG Tiny 1.2 profilį "
 "<https://www.w3.org/TR/SVGMobile12/>`_, taikoma įgyvendinimui įvairiuose "
 "įrenginiuose, nuo telefonų ir delninukų iki skreitinukų ir stalinių "
-"kompiuterių, todėl juos yra tik poaibi savybių iš SVG 1.1 Full, kartu su "
+"kompiuterių, todėl juose yra tik poaibis savybių iš SVG 1.1 Full, kartu su "
 "naujomis savybėmis, išplečiančiomis SVG galimybes."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:272
@@ -1187,3 +1187,793 @@ msgstr ""
 #: ../../docs/user_manual/style_library/symbol_selector.rst:497
 msgid "Drawing linear labels along line feature"
 msgstr "Linijos užrašų braižymas palei linijos geoobjektą"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:502
+msgid ""
+"**Lineburst**: renders a gradient along the width of a line. You can choose "
+"between :guilabel:`Two color` or :guilabel:`Color ramp` and the "
+":guilabel:`Stroke width`, :guilabel:`Offset`, :guilabel:`Join style`, "
+":guilabel:`Cap style` can be adjusted."
+msgstr ""
+"**Linijų srautas**: braižo gradientą palei liniją. Galite parinkti "
+":guilabel:`Dvi spalvas` arba :guilabel:`Spalvų rampą` ir :guilabel:`Brėžimo "
+"plotį`, :guilabel:`Poslinkį`, :guilabel:`Jungimo stilių`, "
+":guilabel:`Pabaigos stilių`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:513
+msgid "Examples of lineburst lines"
+msgstr "Linijų srauto pavyzdžiai"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:517
+msgid ""
+"**Filled line**: renders the interior of the lines using a fill symbol "
+"allowing for lines filled with gradients, line hatches, etc. The "
+":guilabel:`Stroke width`, :guilabel:`Offset`, :guilabel:`Join style`, "
+":guilabel:`Cap style` can be adjusted."
+msgstr ""
+"**Užpildyta linija**: braižo linijų vidų naudojant pildymo simbolį taip "
+"leidžiant kurti linijas, užpildytas gradientais, linijų punktyrais ir pan. "
+"Galima keisti :guilabel:`Braižymo plotį`, :guilabel:`Poslinkį`, "
+":guilabel:`Jungimo stilių`, :guilabel:`Pabaigos stilių`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:528
+msgid "Examples of filled lines"
+msgstr "Užpildytų linijų pavyzdžiai"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:534
+msgid "Fill Symbols"
+msgstr "Pildymo simboliai"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:536
+msgid ""
+"Appropriate for polygon geometry features, fill symbols have also several "
+"symbol layer types:"
+msgstr ""
+"Poligonų geometrijų geoobjektams tinkami pildymo simboliai taipogi turi "
+"keletą simbolinių sluoksnių tipų:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:539
+msgid "**Simple fill** (default): fills a polygon with a uniform color"
+msgstr "**Paprastas pildymas** (numatytasis): pildo poligoną viena spalva"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:546
+msgid "Designing a Simple Fill Symbol"
+msgstr "Paprasto pildymo simbolio kūrimas"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:548
+msgid ""
+"**Centroid fill**: places a :ref:`marker symbol <vector_marker_symbols>` at "
+"the centroid of the visible feature. The position of the marker may not be "
+"the real centroid of the feature, because calculation takes into account the"
+" polygon(s) clipped to area visible in map canvas for rendering and ignores "
+"holes. Use the :ref:`geometry generator symbol <geometry_generator_symbol>` "
+"if you want the exact centroid."
+msgstr ""
+"**Centroido pildymas**: padeda :ref:`žymeklio simbolį "
+"<vector_marker_symbols>` į matomo geoobjekto centrą. Žymeklio pozicija "
+"negali būti realus geoobjekto centroidas, nes skaičiavimas atsižvelgia tik į"
+" poligoną(us), kurie apkarpyti pagal matomą žemėlapio plotą braižymui ir "
+"ignoruoja skyles. Jei norite tikslaus centroido, naudokite :ref:`geometrijos"
+" generatoriaus simbolį <geometry_generator_symbol>`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:556
+msgid "You can:"
+msgstr "Jūs galite:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:558
+msgid ":guilabel:`Force placement of markers inside polygons`"
+msgstr ":guilabel:`Priversti žymeklių dėliojimą poligonų viduje`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:559
+msgid ""
+":guilabel:`Draw markers on every part of multi-part features` or place the "
+"point only on its biggest part"
+msgstr ""
+":guilabel:`Braižyti žymeklius kiekvienoje kelių dalių geoobjektų dalyje` "
+"arba brėžti tašką tik didžiausioje dalyje"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:561
+msgid ""
+"display the marker symbol(s) in whole or in part, keeping parts overlapping "
+"the current feature geometry (:guilabel:`Clip markers to polygon boundary`) "
+"or the geometry part the symbol belongs to (:guilabel:`Clip markers to "
+"current part boundary only`)"
+msgstr ""
+"rodyti žymeklio simbolį(ius) pilnus ar dalinius, paliekant tas dalis, kurios"
+" išeina už dabartinio geoobjekto geometrijos (:guilabel:`Apkirpti žymeklius "
+"pagal poligono geometriją`) ar geometrijos dalį, kuriai priklauso simbolis "
+"(:guilabel:`Apkarpyti žymeklius tik pagal dabartinės dalies ribą`)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:567
+msgid ""
+"**Gradient fill**: uses a radial, linear or conical gradient, based on "
+"either simple two color gradients or a predefined :ref:`gradient color ramp "
+"<color-ramp>` to fill polygons. The gradient can be rotated and applied on a"
+" single feature basis or across the whole map extent. Also start and end "
+"points can be set via coordinates or using the centroid (of feature or map)."
+" A data-defined offset can be defined."
+msgstr ""
+"**Gradiento užpildymas**: naudoja spindulinį, tiesinį ar kūginį gradientą, "
+"paremtą arba paprastu dviejų spalvų gradientu, arba iš anksto apibrėžta "
+":ref:`gradiento spalvų rampa <color-ramp>` poligonų pildymui. Gradientą "
+"galima pasukti ir taikyti kiekvienam geoobjektui atskirai arba bendrai visai"
+" žemėlapio apimčiai. Taipogi galima nurodyti pradžios ir pabaigos taškus "
+"tiek koordinatėmis, tiek ir naudojant centroidą (geoobjekto ar žemėlapio). "
+"Galima apibrėžti nuo duomenų priklausantį poslinkį."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:573
+msgid ""
+"**Line pattern fill**: fills the polygon with a hatching pattern of "
+":ref:`line symbol layer <vector_line_symbols>`. You can set:"
+msgstr ""
+"**Linijos šablono pildymas**: pildo poligoną :ref:`linijų simbolio sluoksnio"
+" <vector_line_symbols>` štrichavimu. Jūs galite nurodyti:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:576
+#: ../../docs/user_manual/style_library/symbol_selector.rst:602
+msgid ""
+":guilabel:`Alignment`: defines how the pattern is positioned relative to the"
+" feature(s):"
+msgstr ""
+":guilabel:`Lygiavimas`: apibrėžia kokia šablono vieta santykinai nuo "
+"geoobjekto(ų):"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:579
+msgid ""
+":guilabel:`Align pattern to feature`: lines are rendered within each feature"
+msgstr ""
+":guilabel:`Lygiuoti šabloną su geoobjektu`: linijos braižomos kiekviename "
+"geoobjekte"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:581
+msgid ""
+":guilabel:`Align pattern to map extent`: a pattern is rendered over the "
+"whole map extent, allowing lines to align nicely across features"
+msgstr ""
+":guilabel:`Lygiuoti šabloną pagal žemėlapio apimtį`: šablonas braižomas "
+"visoje žemėlapio apimtyje, taip leidžiant, kad šablonas gražiai susiderintų "
+"su visais geoobjektais"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:583
+msgid ":guilabel:`Rotation` of the lines, counter-clockwise"
+msgstr ":guilabel:`Pasukimas` linijų, prieš laikrodžio rodyklę"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:584
+msgid ":guilabel:`Spacing`: distance between consecutive lines"
+msgstr ":guilabel:`Tarpas`: atstumas tarp viena po kitos einančių linijų"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:585
+msgid ":guilabel:`Offset` distance of the lines from the feature boundary"
+msgstr ":guilabel:`Poslinkis` linijų atstumas nuo geoobjektų ribos"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:586
+msgid ""
+":guilabel:`Clipping`: allows to control how lines in the fill should be "
+"clipped to the polygon shape. Options are:"
+msgstr ""
+":guilabel:`Apkirpimas`: leidžia valdyti, kaip linijos užpildyme apkarpomos "
+"pagal poligono formą. Parinktys yra:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:589
+msgid ""
+":guilabel:`Clip During Render Only`: lines are created covering the whole "
+"bounding box of the feature and then clipped while drawing. Line extremities"
+" (beginning and end) will not be visible."
+msgstr ""
+":guilabel:`Apkarpyti tik braižymo metu`: kuriamos visą geoobjekto apimantį "
+"stačiakampį dengiančios linijos ir tada jos apkerpamos braižymo metu. Linijų"
+" ekstremumai (pradžioje ir pabaigoje) nebus matomi."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:592
+msgid ""
+":guilabel:`Clip Lines Before Render`: lines are clipped to the exact shape "
+"of the polygon prior to rendering. Line extremities (including cap styles, "
+"start/end marker line objects, ...) will be visible, and may sometimes "
+"extend outside of the polygon (depending on the line symbol settings)."
+msgstr ""
+":guilabel:`Apkirpti linijas prieš braižymą`: linijos apkerpamos pagal "
+"tikslią poligono formą prieš braižymą. Linijų ekstremumai (įskaitant "
+"pabaigos stilius, pradžios/pabaigos žymeklių linijų objektus, ...) bus "
+"matomi ir kartais gali išeiti už poligono (priklausomai nuo linijų simbolių "
+"nustatymų)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:596
+msgid ""
+":guilabel:`No Clipping`: no clipping at all is done - lines will cover the "
+"whole bounding box of the feature"
+msgstr ""
+":guilabel:`Be apkarpymo`: nedaromas joks apkarpymas - linijos dengs visą "
+"geoobjektą apimantį stačiakampį"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:599
+msgid ""
+"**Point pattern fill**: fills the polygon with a grid pattern of "
+":ref:`marker symbol <vector_marker_symbols>`. You can set:"
+msgstr ""
+"**Taškų šablono pildymas**: pildo poligoną tinklelio šablonu, sudarytu iš "
+":ref:`žymeklio simbolių <vector_marker_symbols>`. Jūs galite nurodyti:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:605
+msgid ""
+":guilabel:`Align pattern to feature`: marker lines are rendered within each "
+"feature"
+msgstr ""
+":guilabel:`Lygiuoti šabloną pagal geoobjektą`: žymeklių linijos braižomos "
+"kiekvieno geoobjekto viduje"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:607
+msgid ""
+":guilabel:`Align pattern to map extent`: a pattern is rendered over the "
+"whole map extent, allowing markers to align nicely across features"
+msgstr ""
+":guilabel:`Lygiuoti šabloną pagal žemėlapio apimtį`: šablonas braižomas "
+"visoje žemėlapio apimtyje, taip leidžiant, kad žymekliai gražiai susiderintų"
+" su visais geoobjektais"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:615
+msgid "Aligning point pattern to feature (left) and to map extent (right)"
+msgstr ""
+"Taškų šablono lygiavimas pagal geoobjektą (kairėje) ir žemėlapio apimtį "
+"(dešinėje)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:617
+msgid ""
+":guilabel:`Distance`: :guilabel:`Horizontal` and :guilabel:`Vertical` "
+"distances between consecutive markers"
+msgstr ""
+":guilabel:`Atstumas`: :guilabel:`Horizontalus` ir :guilabel:`Vertikalus` "
+"atstumas tarp vienas po kito einančių žymeklių"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:619
+msgid ""
+":guilabel:`Displacement`: a :guilabel:`Horizontal` (resp. "
+":guilabel:`Vertical`) offset of alignment between consecutive markers in a "
+"column (resp. in a row)"
+msgstr ""
+":guilabel:`Poslinkis`: a :guilabel:`Horizontalus` (atit. "
+":guilabel:`Vertikalus`) lygiavimo poslinkis tarp vienas po kito einančių "
+"žymeklių stulpelyje (atit. eilutėje)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:621
+msgid ""
+":guilabel:`Offset`: :guilabel:`Horizontal` and :guilabel:`Vertical` "
+"distances from the feature boundary"
+msgstr ""
+":guilabel:`Poslinkis`: :guilabel:`Horizontalus` ir :guilabel:`Vertikalus` "
+"atstumas nuo geoobjekto ribos"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:623
+msgid ""
+":guilabel:`Clipping`: allows to control how markers in the fill should be "
+"clipped to the polygon shape. Options are:"
+msgstr ""
+":guilabel:`Apkirpimas`: leidžia valdyti, kaip žymekliai užpildyme apkarpomos"
+" pagal poligono formą. Parinktys yra:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:626
+msgid ""
+":guilabel:`Clip to shape`: markers are clipped so that only the portions "
+"inside the polygon are visible"
+msgstr ""
+":guilabel:`Apkirpti pagal formą`: žymekliai apkerpami taip, kad matomos būtų"
+" tik tos dalys, kurios yra poligono viduje"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:628
+msgid ""
+":guilabel:`Marker centroid within shape`: only markers where the center of "
+"the marker falls inside the polygon are drawn, but these markers won't be "
+"clipped to the outside of the polygon"
+msgstr ""
+":guilabel:`Žymeklio centroidas formoje`: braižomi tik tie žymekliai, kurių "
+"centras patenka į poligono vidų, bet patys žymeklių dalys už poligono ribų "
+"nėra apkerpamos"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:631
+msgid ""
+":guilabel:`Marker completely within shape`: only markers which fall "
+"completely within the polygon are shown"
+msgstr ""
+":guilabel:`Žymekliai pilnai formoje`: rodomi tik tie žymekliai, kurie pilnai"
+" patenka į poligoną"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:633
+msgid ""
+":guilabel:`No clipping`: any marker which intersects at all with the polygon"
+" will be completely rendered (strictly speaking its the \"intersects with "
+"the bounding box of the marker\")"
+msgstr ""
+":guilabel:`Be apkirpimo`: bet kokie žymekliai, kurie kertasi su poligonu bus"
+" pilnai braižomi (griežtai sakant „kertasi su žymeklio apimties "
+"stačiakampiu“)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:642
+msgid ""
+"Clipping markers in fill - From left to right: Clip to shape, Marker "
+"centroid within shape, Marker completely within shape, No clipping"
+msgstr ""
+"Žymeklių apkarpymas užpildyme - iš kairės į dešinę: apkarpyti pagal formą, "
+"žymeklio centroidas formoje, žymeklis pilnai formoje, be apkarpymo"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:645
+msgid ":guilabel:`Rotation` of the whole pattern, clockwise"
+msgstr ":guilabel:`Pasukimas` viso šablono, pagal laikrodžio rodyklę"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:646
+msgid ""
+"The :guilabel:`Randomize pattern` group setting allows each point in a point"
+" pattern fill to be randomly shifted up to the specified maximum distance "
+":guilabel:`Horizontally` or :guilabel:`Vertically`. You can specify the "
+"maximum offset in any supported units, such as millimeters, points, map "
+"units, or even \"percentage\" (where percentage is relative to the pattern "
+"width or height)."
+msgstr ""
+"The :guilabel:`Atsitiktinio šablono` grupinis nustatymas leidžia kiekvieną "
+"šablono užpildymo tašką šiek tiek atsitiktinai pastumti iki nurodyto "
+"maksimalaus atstumo :guilabel:`Horizontaliai` ar :guilabel:`Vertikaliai`. "
+"Jūs galite nurodyti maksimalų poslinkį bet kokiais palaikomais vienetais, "
+"tokiais kaip milimetrai, taškai, žemėlapio vienetai ar net „procentai“ (kur "
+"procentai bus santykis su šablono pločiu ar aukščiu)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:653
+msgid ""
+"You can set an optional random number seed to avoid the symbol patterns "
+"\"jumping\" around between map refreshes. Data defined overrides are also "
+"supported."
+msgstr ""
+"Jūs galite nurodyti neprivalomą atsitiktinių skaičių sėklą, jei norite "
+"išvengti simbolių šablonų „šokinėjimo“ atnaujinant žemėlapį. Taipogii "
+"palaikomi ir nuo duomenų priklausantys permušimai."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:656
+msgid ""
+"The main difference between the :guilabel:`Randomize pattern` and the "
+":ref:`random marker fill <random_marker_fill>` symbol type is that the "
+"random offset with a point pattern allows for quasi-\"regular\" placement of"
+" markers – because the points in the pattern are effectively constrained to "
+"a grid, this allows creation of semi-random fills which don’t have empty "
+"areas or overlapping markers. (As opposed to the random marker fill, which "
+"will always place points completely randomly… sometimes resulting in visual "
+"clusters of points or unwanted empty areas)."
+msgstr ""
+"Pagrindinis skirtumas tarp :guilabel:`Atsitiktinio šablono` ir "
+":ref:`atsitiktinio žymeklių pildymo <random_marker_fill>` simbolių tipų yra "
+"tai, kad atsitiktinis poslinkis su taškų šablonu leidžia pusiau-„reguliarų“ "
+"žymeklių išdėstymą - nes taškai šablone efektyviai apriboti gardele, tai "
+"leidžia kurti pusiau atsitiktinius pildymus, kurie neturi tuščių plotų ar "
+"persidengiančių žymeklių. (Priešingai nei atsitiktinių žymeklių pildymas, "
+"kuris visada taškus išdėstys visiškai atsitiktinai... kartais gaunant "
+"vizualius spiečius ar nenorimus tuščius plotus)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:667
+msgid ""
+"**Random marker fill**: fills the polygon with a :ref:`marker symbol "
+"<vector_marker_symbols>` placed at random locations within the polygon "
+"boundary. You can set:"
+msgstr ""
+"**Atsitiktinių žymeklių užpildymas**: pildo poligoną :ref:`žymeklių "
+"simboliais <vector_marker_symbols>` atsitiktinai išmėtytais poligono ribose."
+" Jūs galite nurodyti:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:671
+msgid ""
+":guilabel:`Count method`: whether the number of marker symbols to render is "
+"considered as an absolute count or density-based"
+msgstr ""
+":guilabel:`Skaičiavimo būdą`: ar braižomų žymeklių simbolių skaičius "
+"nurodomas kaip absoliutus skaičius, ar remiasi tankiu"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:673
+msgid ":guilabel:`Point count`: the number of marker symbols to render,"
+msgstr ":guilabel:`Taškų skaičius`: braižomų žymeklių simbolių skaičius,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:674
+msgid ""
+"an optional random number :guilabel:`seed`, to give consistent placement"
+msgstr ""
+"neprivalomas atsitiktinis skaičius :guilabel:`seed`, kad būtų pastovus "
+"išdėstymas"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:675
+msgid ""
+":guilabel:`Density area`: in case of density-based count method, ensures the"
+" fill density of markers remains the same on different scale / zoom levels "
+"of markers whenever maps are refreshed (also allows random placement to play"
+" nice with QGIS server and tile-based rendering)"
+msgstr ""
+":guilabel:`Tankio plotas`: jei naudojamas tankiu paremtas skaičiavimo "
+"metodas, užtikrina, kad žymeklių užpildymo tankis bus toks pat skirtinguose "
+"masteliuose kai žemėlapiai atnaujinami (taipogi leidžia atsitiktiniam "
+"išdėstymui gražiai veikti su QGIS serveriu ir nuo laiko priklausančiu "
+"braižymu)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:679
+msgid ""
+":guilabel:`Clip markers to polygon boundary`: whether markers rendered near "
+"the edges of polygons should be clipped to the polygon boundary or not"
+msgstr ""
+":guilabel:`Apkarpyti žymeklius pagal poligono ribą`: ar žymeklius, braižomus"
+" šalia poligonų ribų, reikia apkarpyti pagal poligono ribą ar ne"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:682
+msgid ""
+"**Raster image fill**: fills the polygon with tiles from a raster image "
+"(:file:`PNG` :file:`JPG`, :file:`BMP` ...). The image can be a file on the "
+"disk, a remote URL or an embedded file encoded as a string (:ref:`more "
+"details <embedded_file_selector>`). Options include (data defined) opacity, "
+"size, coordinate mode (object or viewport), rotation and offset. Under the "
+"option Size you can independently adjust the width and height of the fill "
+"pattern, enabling stretched raster fills in either the horizontal or "
+"vertical directions. The image width and height can be set using any of the "
+":ref:`common units <unit_selector>` or as a percentage of the original size."
+msgstr ""
+"**Rastro piešinio pildymas**: pildo poligoną rastro piešinio kaladėlėmis "
+"(:file:`PNG` :file:`JPG`, :file:`BMP` ...). Piešinys gali būti failas diske,"
+" nutolęs URL ar įdėtas failas, užkoduotas kaip eilutė (:ref:`daugiau "
+"informacijos <embedded_file_selector>`). Galimos (nuo duomenų "
+"priklausančios) parinktys yra nepermatomumas, dydis, koordinačių režimas "
+"(objektas ar vaizdas), pasukimas ir poslinkis. Su dydžio parinktimi jūs "
+"galite nepriklausomai keisti pildymo šablono plotį ir aukštį, taip įgalinant"
+" ištemptus rastro pildymus tiek horizontalia, tiek vertikalia kryptimi. "
+"Piešinio plotį ir aukštį galima nurodyti naudojant :ref:`bendrus vienetus "
+"<unit_selector>` arba procentais nuo pradinio dydžio."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:691
+msgid ""
+"**SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>` of a "
+"given size (:guilabel:`Texture width`)."
+msgstr ""
+"**SVG pildymas**: pildo poligoną nurodyto dydžio (:guilabel:`Texture width`)"
+" :ref:`SVG žymekliais <svg_marker>`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:693
+msgid ""
+"**Shapeburst fill**: buffers a gradient fill, where a gradient is drawn from"
+" the boundary of a polygon towards the polygon's centre. Configurable "
+"parameters include distance from the boundary to shade, use of color ramps "
+"or simple two color gradients, optional blurring of the fill and offsets."
+msgstr ""
+"**Išdeginimo pildymas**: gradiento pildymo buferis, kur gradientas paišomas "
+"nuo poligono ribos link poligono centro. Tarp konfigūruojamų parametrų yra "
+"spalvinamas atstumas nuo ribos, spalvos rampų naudojimas ar paprastas dviejų"
+" spalvų gradientas, pasirinktinai užpildymo ir kraštų išblukinimas."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:698
+msgid ""
+"**Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to "
+"represent the polygon boundary. The settings for the outline arrow are the "
+"same as for arrow line symbols."
+msgstr ""
+"**Kontūras: rodyklė**: naudoja linijų :ref:`rodyklių simbolio "
+"<arrow_symbol>` sluoksnį poligono ribos vaizdavimui. Ribos rodyklių "
+"nustatymai yra tokie patys kaip rodyklių linijų simboliams."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:701
+msgid ""
+"**Outline: Hashed line**: uses a :ref:`hash line symbol "
+"<hashed_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings). The other settings for the outline hashed line are "
+"the same as for hashed line symbols."
+msgstr ""
+"**Kontūras: punktyrinė linija**: naudoja :ref:`punktyrinės linijos simbolio "
+"<hashed_line_symbol>` sluoksnį poligono ribos vaizdavimui "
+"(:guilabel:`Žiedai`), kur galima vaizduoti tik vidinius žiedus, tik "
+"išorinius, arba visus). Kiti išorės punktyrų nustatymai yra tokie patys, "
+"kaip punktyrinių linijų simbolių."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:705
+msgid ""
+"**Outline: Marker line**: uses a :ref:`marker line symbol "
+"<marker_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings). The other settings for the outline marker line are "
+"same as for marker line symbols."
+msgstr ""
+"**Kontūras: žymeklių linija**: naudoja :ref:`žymeklių linijos simbolio "
+"<marker_line_symbol>` sluoksnį poligono ribos vaizdavimui "
+"(:guilabel:`Žiedai`), kur galima vaizduoti tik vidinius žiedus, tik "
+"išorinius, arba visus). Kiti išorės žymeklių linijos nustatymai yra tokie "
+"patys, kaip ir žymeklių linijų simbolių."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:709
+msgid ""
+"**Outline: simple line**: uses a :ref:`simple line symbol "
+"<simple_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings). The :guilabel:`Draw line only inside polygon` option"
+" displays the polygon borders inside the polygon and can be useful to "
+"clearly represent adjacent polygon boundaries. The other settings for the "
+"outline simple line are the same as for simple line symbols."
+msgstr ""
+"**Kontūras: paprasta linija**: naudoja :ref:`paprastos linijos simbolio "
+"<simple_line_symbol>` sluoksnį poligono ribai (:guilabel:`Žiedams`) "
+"vaizduoti, galima nurodyti vaizduoti tik vidinius žiedus, tik išorinius, "
+"arba visus). Parinktis :guilabel:`Brėžti liniją tik poligono viduje` rodo "
+"poligono kontūrus poligono viduje ir gali būti naudinga aiškiai parodyti "
+"gretimų poligonų ribas. Kiti išorinės paprastos linijos nustatymai yra tokie"
+" patys kaip linijų simbolių."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:719
+msgid ""
+"When geometry type is polygon, you can choose to disable the automatic "
+"clipping of lines/polygons to the canvas extent. In some cases this clipping"
+" results in unfavourable symbology (e.g. centroid fills where the centroid "
+"must always be the actual feature's centroid)."
+msgstr ""
+"Kai geometrijos tipas yra poligonas, jūs galite pasirinkti išjungti "
+"automatinį linijų/poligonų apkarpymą pagal drobės apimtį. Kai kuriais "
+"atvejais dėl apkarpymo gaunama netinkama simbologija (pvz. centroido "
+"užpildymai, kur centroidas visada turi būti tikras geoobjekto centroidas)."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:727
+msgid "Parametrizable SVG"
+msgstr "Parametrizuojami SVG"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:729
+msgid ""
+"You have the possibility to change the colors of a :guilabel:`SVG marker`. "
+"You have to add the placeholders ``param(fill)`` for fill color, "
+"``param(fill-opacity)`` for fill opacity, ``param(outline)`` and "
+"``param(outline-opacity)`` for stroke color and opacity respectively, and "
+"``param(outline-width)`` for stroke width. These placeholders can optionally"
+" be followed by a default value, e.g.:"
+msgstr ""
+"Jūs turite galimybę pakeisti :guilabel:`SVG žymeklio` spalvas. Turite "
+"pridėti parametrus ``param(fill)`` pildymo spalvai, ``param(fill-opacity)`` "
+"pildymo nepermatomumui, ``param(outline)`` ir ``param(outline-opacity)`` "
+"brėžimo spalvai ir nepermatomumui atitinkamai, bei ``param(outline-width)`` "
+"brėžimo pločiui. Po šių parametrų gali sekti numatytoji reikšmė, pvz.:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:742
+msgid ""
+"More generally, SVG can be freely parametrized using ``param(param_name)``. "
+"This param can either be used as an attribute value or a node text:"
+msgstr ""
+"Bendrai paėmus SVG galima laisvai parametrizuoti naudojant "
+"``param(parametro_pavadinimas)``. Šį parametrą galima naudoti arba kaip "
+"atributo reikšmę, arba mazgo tekstą:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:752
+msgid ""
+"The parameters can then be defined as expressions in the :guilabel:`Dynamic "
+"SVG parameters` table."
+msgstr ""
+"Tada parametrus galima apibrėžti kaip išraiškas lentelėje "
+":guilabel:`Dinaminiai SVG parametrai`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:757
+msgid "Dynamic SVG parameters table"
+msgstr "Dinaminių SVG parametrų lentelė"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:761
+msgid ""
+"QGIS is looking for a complete SVG node. So if your parameter is within a "
+"more complex node, you need to inject the complete node with the expression."
+" For instance, ``transform=\"rotate(param(angle)\"`` will not work. Instead,"
+" you need to do ``transform=\"param(rotation)\"`` and ``rotation`` parameter"
+" will be defined with the expression ``'rotate(' || coalesce(my_field, 0) ||"
+" ')'``."
+msgstr ""
+"QGIS ieško pilno SVG mazgo. Taigi, jei jūsų parametras yra sudėtingesnio "
+"mazgo viduje, jums reikia įterpti į išraišką pilną mazgą. Pavyzdžiui "
+"``transform=\"rotate(param(angle)\"`` neveiks. Vietoje to, jums reikia "
+"daryti ``transform=\"param(rotation)\"`` ir ``rotation`` parametras bus "
+"apibrėžtas išraiškoje ``'rotate(' || coalesce(my_field, 0) || ')'``."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:770
+msgid "The Geometry Generator"
+msgstr "Geometrijos generatorius"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:772
+msgid ""
+"Available with all types of symbols, the :guilabel:`geometry generator` "
+"symbol layer allows to use :ref:`expression syntax <expression_builder>` to "
+"generate a geometry on the fly during the rendering process. The resulting "
+"geometry does not have to match with the original :guilabel:`Geometry type` "
+"and you can add several differently modified symbol layers on top of each "
+"other."
+msgstr ""
+"Su visais simbolių tipais veikiantis :guilabel:`geometrijos generatoriaus` "
+"simbolių sluoksnis leidžia naudoti :ref:`išraiškų sintaksę "
+"<expression_builder>` dinamiškai kuriant geometrijas braižymo metu. Gauta "
+"geometrija neturi atitikti pradinį :guilabel:`Geometrijos tipą` ir jūs "
+"galite pridėti kelis skirtingai pakeistus simbolinius sluoksnius vieną ant "
+"kito."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:778
+msgid ""
+"A :guilabel:`Units` property can be set: when the geometry generator symbol "
+"is not applied to a layer (e.g., it is used on a layout item), this allows "
+"more control over the generated output."
+msgstr ""
+"Galima nurodyti savybę :guilabel:`Vienetai`: kai geometrijos generatoriaus "
+"simbolis nėra taikomas sluoksniui (t.y. kai jis naudojamas išdėstymo "
+"elementui), tai leidžia geriau valdyti sukurtą išvestį."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:782
+msgid "Some examples:"
+msgstr "Keli pavyzdžiai:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:785
+msgid "Render symbol as the centroid of a feature"
+msgstr "Braižyti simbolį kaip geoobjekto centroidą"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:791
+msgid ""
+"Visually overlap features within a 100 map units distance from a point "
+"feature, i.e generate a 100m buffer around the point"
+msgstr ""
+"Vizualiai sukirsti geoobjektus 100 žemėlapio vienetų atstumu nuo taško "
+"geoobjekto, t.y. kurti 100m buferį aplink tašką"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:798
+msgid ""
+"Create a radial effect of points surrounding the central feature point when "
+"used as a MultiPoint geometry generator"
+msgstr ""
+"Sukurti ratu išsidėsčiusius taškus aplink centrinį geoobjekto tašką, "
+"naudojant juos kaip MultiPoint geometrijos generatorių"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:816
+msgid ""
+"Create a radial effect of points surrounding the central feature point. The "
+"number of points varies based on a field."
+msgstr ""
+"Kurti ratu išsidėsčiusius taškus aplink centrinį geoobjekto tašką. Taškų "
+"skaičiuos priklauso nuo lauko reikšmės."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:838
+msgid ""
+"Create a curved arrow line connecting features of two layers based on their "
+":ref:`relation <project_relations>`"
+msgstr ""
+"Kurti rodyklę turinčia kreivę, jungiančią dviejų sluoksnių geoobjektus "
+"naudojant jų :ref:`ryšį <project_relations>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:876
+msgid "The Vector Field Marker"
+msgstr "Vektorinio lauko žymeklis"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:878
+msgid ""
+"The vector field marker is used to display vector field data such as earth "
+"deformation, tidal flows, and the like. It displays the vectors as lines "
+"(preferably arrows) that are scaled and oriented according to selected "
+"attributes of data points. It can only be used to render point data; line "
+"and polygon layers are not drawn by this symbology."
+msgstr ""
+"Vektorinio lauko žymeklis naudojamas rodant vektorinio lauko duomenis, "
+"tokius kaip žemės deformacija, potvynių srautai ir pan. Jis rodo vektorius "
+"kaip linijas (paprastai rodykles), kurios padidintos ir orientuotos pagal "
+"parinktus duomenų taškų atributus. Jį galima naudoti tik braižant taškų "
+"duomenis; linijų ir poligonų sluoksniai su šia simbologija nebraižomi."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:884
+msgid ""
+"The vector field is defined by attributes in the data, which can represent "
+"the field either by:"
+msgstr ""
+"Vektorinis laukas apibrėžiamas pagal duomenų atributus, kurie gali "
+"reprezentuoti lauką:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:887
+msgid "**cartesian** components (``x`` and ``y`` components of the field)"
+msgstr "**dekarto** komponentais (lauko ``x`` ir ``y`` komponentai)"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:888
+msgid ""
+"or **polar** coordinates: in this case, attributes define ``Length`` and "
+"``Angle``. The angle may be measured either clockwise from north, or "
+"Counterclockwise from east, and may be either in degrees or radians."
+msgstr ""
+"**polinės** koordinatėmis: šiuo atveju, atributai apibrėžia ``Ilgį`` ir "
+"``Kampą``. Kampą galima matuoti arba pagal laikrodžio rodyklę nuo šiaurės, "
+"arba prieš laikrodžio rodyklę nuo rytų, ir galima išreikšti tiek laipsniais,"
+" tiek radianais."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:891
+msgid ""
+"or as **height only** data, which displays a vertical arrow scaled using an "
+"attribute of the data. This is appropriate for displaying the vertical "
+"component of deformation, for example."
+msgstr ""
+"**tik aukščio** duomenimis, kurie rodo vertikalias rodykles, padidintas "
+"pagal duomenų atributą. Tai tinkama, pavyzdžiui, rodant vertikalų "
+"deformacijos komponentą."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:895
+msgid ""
+"The magnitude of field can be scaled up or down to an appropriate size for "
+"viewing the field."
+msgstr ""
+"Lauko stiprumą galima didinti ar mažinti iki reikiamo dydžio lauko "
+"peržiūrai."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:903
+msgid "Animated marker"
+msgstr "Animuotas žymeklis"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:905
+msgid ""
+"Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,"
+" :file:`.MNG`, etc. animation file to represent points on your map. You can "
+"specify:"
+msgstr ""
+"Animuoto žymeklio simbolio tipas leidžia jums naudoti :file:`.GIF`, "
+":file:`.WebP`, :file:`.MNG`, kt. animacijos failą reprezentuojant taškus "
+"jūsų žemėlapyje. Jūs galite nurodyti:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:909
+msgid ":guilabel:`File` path,"
+msgstr ":guilabel:`Failo` kelią,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:910
+msgid ""
+":guilabel:`Frame rate`: number of steps that are shown per second, "
+"indicating how fast the animation is played,"
+msgstr ""
+":guilabel:`Kadrų skaičius`: skaičius žingsnių, kurie rodomi per sekundę, "
+"taip nurodant, kaip greitai grojama animacija,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:912
+msgid ":guilabel:`Size` in any :ref:`supported unit <unit_selector>`,"
+msgstr ""
+":guilabel:`Dydį` bet kuriais :ref:`palaikomais vienetais <unit_selector>`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:913
+msgid ":guilabel:`Opacity`,"
+msgstr ":guilabel:`Nepermatomumą`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:914
+msgid ":guilabel:`Rotation`,"
+msgstr ":guilabel:`Pasukimą`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:915
+msgid ""
+":guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions from the "
+"marker position,"
+msgstr ""
+":guilabel:`Poslinkį` :guilabel:`x` ir :guilabel:`y` kryptimis nuo žymeklio "
+"pozicijos,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:917
+msgid ":guilabel:`Anchor point`"
+msgstr ":guilabel:`Pririšimo taškas`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:919
+msgid "There are two ways to handle animated symbols:"
+msgstr "Yra du animuotų simbolių valdymo būdai:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:921
+msgid ""
+"**When your map is not configured as an animation** (i.e. it's a standard "
+"QGIS project without animations), the frame for the animated markers will be"
+" determined solely by the current timestamp."
+msgstr ""
+"**Kai jūsų žemėlapis nėra sukonfigūruotas kaip animacija** (t.y. jis yra "
+"standartinis QGIS projektas be animacijų), animuotų žymeklių kadras bus "
+"nustatomas išskirtinai tik pagal dabartinę laiko žymą."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:931
+msgid "Animated marker when map is not configured as animation"
+msgstr "Animuotas žymeklis, kai žemėlapis nėra sukonfigūruotas kaip animacija"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:933
+msgid ""
+"**When your map is** :ref:`configured as an animation <maptimecontrol>`, the"
+" animated markers will sync with the animation's timeline. This means that "
+"animated markers will pause when the animation is paused, progress with the "
+"animation, and so forth. The map will also be redrawn according to the frame"
+" rate established for temporal animation. This mode is also applied when "
+"exporting an animation using the temporal controller."
+msgstr ""
+"**Kai jūsų žemėlapis yra** :ref:`sukonfigūruotas kaip animacija "
+"<maptimecontrol>`, animuoti žymekliai sinchronizuosis su animacijos laiko "
+"juosta. Tai reiškia, kad animuoti žymekliai sustos, kai animacija "
+"sustabdoma, judės pirmyn kartu su animacija ir t.t.. Žemėlapis taipogi bus "
+"perbraižomas pagal kadrų dažnį, nurodytą laiko animacijai. Šis režimas "
+"taipogi taikomas, kai animacija eksportuojama naudojant laiko valdiklį."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:946
+msgid "Animated marker when map is configured as animation"
+msgstr "Animuotas žymeklis, kai žemėlapis sukonfigūruotas kaip animacija"
