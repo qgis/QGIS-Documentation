@@ -279,9 +279,8 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
   * :guilabel:`All uppercase`
   * :guilabel:`All lowercase`
   * :guilabel:`Small Caps`: renders lowercase characters as small caps.
-    Only available on some systems.
   * :guilabel:`All Small Caps`: renders all characters as small caps
-    regardless of their original case. Only available on some systems.
+    regardless of their original case.
   * :guilabel:`Title case`: modifies the first letter of each word into capital,
     and turns the other letters into lower case if the original text is using
     a single type case. In case of mixed type cases in the text, the other
@@ -303,7 +302,7 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
   based on the :kbd:`Tab` characters.
 * :guilabel:`Stretch` ratio: allows text to be horizontally stretched or
   condensed by a factor. Handy for tweaking the widths of fonts to fit a bit
-  of extra text into labels. Only available on some systems.
+  of extra text into labels.
 * |checkbox| :guilabel:`Enable kerning` of the text font
 * Set the :guilabel:`Text orientation` which can be :guilabel:`Horizontal`
   or :guilabel:`Vertical`. It can also be :guilabel:`Rotation-based` when
