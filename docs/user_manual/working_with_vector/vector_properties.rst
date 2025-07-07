@@ -2716,8 +2716,11 @@ Default values
 Policies
 ^^^^^^^^
 
-:guilabel:`Policies` allows you to determine how values are assigned to the field
-when :guilabel:`Splitting features` or :guilabel:`Duplicating features`:
+Field policies determine how values are assigned to fields during various editing operations:
+
+**Split and Duplicate Policies**
+
+These policies apply when :guilabel:`Splitting features` or :guilabel:`Duplicating features`:
 
 * :guilabel:`Duplicate Values`: Keeps the existing value of the field for the new features.
 * :guilabel:`Use Default Value`: Resets the field by recalculating its :ref:`default value <default_values>`.
@@ -2725,6 +2728,21 @@ when :guilabel:`Splitting features` or :guilabel:`Duplicating features`:
 * :guilabel:`Remove Value`: Clears the field to an unset state.
 * :guilabel:`Use Ratio Geometries`: Recalculates the field value for all split portions
   by multiplying the existing value by ratio of the split parts lengths or areas.
+
+**Merge Policies**
+
+These policies determine initial values when :guilabel:`Merging features`:
+
+* :guilabel:`Remove Value`: Clears the field to an unset state (data provider may populate default value).
+* :guilabel:`Use Default Value`: Uses the default field value set in QGIS.
+  (expressions use a dummy feature with the merged geometry; references to other fields won't work).
+* :guilabel:`Use Sum` (numeric fields only): Sums values from all merged features.
+* :guilabel:`Use Minimum Value` (numeric fields only): Uses smallest value from the selected features.
+* :guilabel:`Use Maximum Value` (numeric fields only): Uses largest value from the selected features.
+* :guilabel:`Average Weighted by Geometry` (numeric fields only): New values are computed as the weighted
+  average of the source values.
+* :guilabel:`Use Largest Feature`: Uses value from feature with the largest geometry.
+* :guilabel:`Set to NULL`: Sets attribute to NULL.
 
 .. _edit_widgets:
 
