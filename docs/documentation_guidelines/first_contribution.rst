@@ -115,10 +115,6 @@ or in the drop-down menu at the bottom of the left sidebar.
    (``patch-xxx``) in your repository
    and the web browser will open the :guilabel:`Comparing changes` page.
 
-   * If you have write access and created the branch directly in the QGIS repository, the process is the same,  
-     but the branch will be under the main repository instead of your fork. Nevertheless, 
-     we recommend contributing through your fork to avoid cluttering the main repository with personal branches.
-
    * If the issue you are addressing does not need any further changes,
      jump to the :ref:`Share your changes via Pull Request <sharing_changes>` section below.
    * If there are additional changes that you want to make before submitting
