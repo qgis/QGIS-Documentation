@@ -1392,7 +1392,7 @@ from the contextual menu.
 
 
 When ready, pressing the :guilabel:`Execute` button below the text area
-will try to run the query.
+will run the query.
 It is possible to highlight a portion of the SQL to only execute that portion
 when pressing :kbd:`Ctrl+R` or clicking the :guilabel:`Execute selection` button.
 Use the :guilabel:`Stop` button to abort the execution.
@@ -1417,6 +1417,12 @@ and configuring parameters (their availability depends on the layer provider):
   Make sure to use fields that are available in the SQL layer.
 * :guilabel:`Avoid selecting by feature ID`
 * :guilabel:`Layer name` in the project
+
+At any time, in the :guilabel:`Layers panel`, you can adjust the output layer
+by right-clicking and selecting :guilabel:`Update SQL expression...`.
+The :guilabel:`Update SQL` dialog opens, prefilled with the applied query
+that you can edit as you wish.
+Once ready, press :guilabel:`Update layer` and teh layer will be modified in-place.
 
 .. _layer_metadata_search_panel:
 
