@@ -59,7 +59,8 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinxext.rediraffe',
     'sphinx_togglebutton',
-    'sphinx_copybutton'
+    'sphinx_copybutton',
+    'sphinx_tabs.tabs',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -544,3 +545,7 @@ linkcheck_retries = 2
 # -- Redirection settings --------------------------------
 
 rediraffe_redirects = "redirects.txt"
+
+# -- sphinx-tabs settings --------------------------------
+
+sphinx_tabs_disable_tab_closing = True
