@@ -915,8 +915,8 @@ or its selection state (note that attribute table and map canvas show the
 same information, so if you select one feature in the attribute table, it will
 be selected on the map canvas too):
 
-* |expressionSelect| :sup:`Select By Expression...` select
-  features using expression dialog
+* |expressionSelect| :sup:`Select Features By Expression...` or press :kbd:`Ctrl+F3`
+  to select features using the expression dialog
 * |formSelect| :sup:`Select Features By Value...` or press :kbd:`F3`
 * |deselectAll| :sup:`Deselect Features from All Layers` or press
   :kbd:`Ctrl+Alt+A` to deselect all selected features in all layers
