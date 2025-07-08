@@ -666,7 +666,19 @@ to create, store and manipulate your queries:
 * Use |clearConsole| :sup:`Clear` to wipe the text editor.
 * The |queryHistory| :sup:`History` button opens a dialog storing previously
   run queries. More at :ref:`sql_history`.
+* As previously mentioned, queries can be saved as an :file:`.sql` file stored on disk.
+  Using the |storedqueries| :sup:`Store Current Query` button, they can also be stored:
 
+  * In the active :guilabel:`User Profile`, in the associated :file:`QGIS3.ini` file,
+    thus accessible in subsequent projects
+  * or as part of the :guilabel:`Current Project`.
+
+  Clicking an entry from the stored queries drop-down menu inserts that query
+  in the expression being written.
+  The stored entry can also be deleted, from the drop-down menu.
+
+Running and loading queries as layer
+------------------------------------
 
 In the central part of the :guilabel:`Execute SQL` dialog, you build your query
 using the SQL syntax supported by the underlying provider (e.g., OGR_, GeoPackage_, PostgreSQL_).
@@ -683,9 +695,6 @@ from the contextual menu.
  To find the appropriate SQL dialect for your dataset,
  press the :guilabel:`...` button next to the :guilabel:`Subset filter` option
  in the bottom part of the dialog.
-
-Running and loading queries as layer
-------------------------------------
 
 When ready, pressing the :guilabel:`Execute` button below the text area
 will run the query.
@@ -749,13 +758,6 @@ Right-click and you can either:
 
 When a query is selected, the full query is displayed in the lower part of the dialog.
 You can interact with the text, copying all or part of it.
-
-* As previously mentioned, queries can be saved as an :file:`.sql` file stored on disk.
-Using the |storedqueries| :sup:`Store Current Query` button, they can also be stored:
-
-* In the active :guilabel:`User Profile`, in the associated :file:`QGIS3.ini` file,
-  thus accessible in subsequent projects
-* or as part of the :guilabel:`Current Project`.
 
 
 .. index:: Virtual layers
