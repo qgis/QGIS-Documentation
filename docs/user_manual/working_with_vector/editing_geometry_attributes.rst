@@ -1462,6 +1462,7 @@ a multipolygon/multipolyline/multipoint feature is created.
      choose to aggregate the initial features attributes (Minimum, Maximum, Median,
      Sum, Count, Concatenation... depending on the type of the field.
      see :ref:`statistical_summary` for the full list of functions).
+     These options correspond to the available merge policies described in :ref:`merge policies <policies>`.
 
    .. note::
     If the layer has default values or clauses present on fields,
