@@ -1339,40 +1339,9 @@ to create, store and manipulate your queries:
   It is then possible to navigate through the found strings, replacing them
   one by one or all in a row.
 * Use |clearConsole| :sup:`Clear` to wipe the text editor.
+* The |queryHistory| :sup:`History` button opens a dialog storing previously
+  run queries. More at :ref:`sql_history`.
 
-.. _sql_history:
-
-* The |queryHistory| :sup:`History` button opens a dialog
-  where all the previously run queries, sorted by date and provider type,
-  can be previewed and reused.
-  This is also accessible from the :menuselection:`Database -->` |queryHistory|
-  :guilabel:`Query History...` menu.
-
-  .. _figure_history_sql_queries:
-
-  .. figure:: img/executesql_history.png
-     :align: center
-     :width: 30 em
-
-     History of the executed SQL queries
-
-  Hover over an entry and the full query is displayed over, as a tooltip.
-  Right-click and you can either:
-  
-  * :guilabel:`Load SQL Command…`, loads the target command
-    into the :guilabel:`Execute SQL` dialog, replacing any existing query.
-    It is the same as double clicking the entry.
-  * :guilabel:`Copy SQL Command` and paste it wherever you want
-
-  When a query is selected, the full query is displayed in the lower part of the dialog.
-  You can interact with the text, copying all or part of it.
-
-* As previously mentioned, queries can be saved as an :file:`.sql` file stored on disk.
-  Using the |storedqueries| :sup:`Store Current Query` button, they can also be stored:
-
-  * In the active :guilabel:`User Profile`, in the associated :file:`QGIS3.ini` file,
-    thus accessible in subsequent projects
-  * or as part of the :guilabel:`Current Project`.
 
 In the central part of the :guilabel:`Execute SQL` dialog, you build your query
 using the SQL syntax supported by the underlying provider (e.g., OGR_, GeoPackage_, PostgreSQL_).
@@ -1390,6 +1359,8 @@ from the contextual menu.
  press the :guilabel:`...` button next to the :guilabel:`Subset filter` option
  in the bottom part of the dialog.
 
+Running and loading queries as layer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When ready, pressing the :guilabel:`Execute` button below the text area
 will run the query.
@@ -1423,6 +1394,44 @@ by right-clicking and selecting :guilabel:`Update SQL expression...`.
 The :guilabel:`Update SQL` dialog opens, prefilled with the applied query
 that you can edit as you wish.
 Once ready, press :guilabel:`Update layer` and teh layer will be modified in-place.
+
+.. _sql_history:
+
+Query History
+^^^^^^^^^^^^^
+
+The :guilabel:`Query History` dialog is accessible when pressing |queryHistory|
+:sup:`History` button in the :guilabel:`Execute SQL` dialog
+or from the :menuselection:`Database -->` |queryHistory| :guilabel:`Query History...` menu.
+It displays all the previously run queries, sorted by date and provider type,
+that you can preview and reuse.
+
+.. _figure_history_sql_queries:
+
+.. figure:: img/executesql_history.png
+    :align: center
+    :width: 30 em
+
+    History of the executed SQL queries
+
+Hover over an entry and the full query is displayed over, as a tooltip.
+Right-click and you can either:
+
+* :guilabel:`Load SQL Command…`, loads the target command
+  into the :guilabel:`Execute SQL` dialog, replacing any existing query.
+  It is the same as double clicking the entry.
+* :guilabel:`Copy SQL Command` and paste it wherever you want
+
+When a query is selected, the full query is displayed in the lower part of the dialog.
+You can interact with the text, copying all or part of it.
+
+* As previously mentioned, queries can be saved as an :file:`.sql` file stored on disk.
+Using the |storedqueries| :sup:`Store Current Query` button, they can also be stored:
+
+* In the active :guilabel:`User Profile`, in the associated :file:`QGIS3.ini` file,
+  thus accessible in subsequent projects
+* or as part of the :guilabel:`Current Project`.
+
 
 .. _layer_metadata_search_panel:
 
