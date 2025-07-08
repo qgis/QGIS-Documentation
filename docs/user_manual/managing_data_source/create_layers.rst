@@ -944,6 +944,10 @@ box. Example:
 Spatial binary predicates like ``ST_Intersects`` are sped up significantly
 when used in conjunction with this spatial index syntax.
 
+.. _GeoPackage: https://gdal.org/en/stable/user/sql_sqlite_dialect.html
+.. _OGR: https://gdal.org/en/stable/user/ogr_sql_dialect.html
+.. _PostgreSQL: https://postgresql.org/docs/current/sql-expressions.html
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

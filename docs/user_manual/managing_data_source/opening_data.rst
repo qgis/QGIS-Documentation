@@ -1685,9 +1685,6 @@ You can also choose to :guilabel:`Save Connection` to an XML file
 or :guilabel:`Load Connection` from an XML file.
 
 .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
-.. _GeoPackage: https://gdal.org/en/stable/user/sql_sqlite_dialect.html
-.. _OGR: https://gdal.org/en/stable/user/ogr_sql_dialect.html
-.. _PostgreSQL: https://postgresql.org/docs/current/sql-expressions.html
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
