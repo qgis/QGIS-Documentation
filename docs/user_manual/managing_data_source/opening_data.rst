@@ -1301,18 +1301,29 @@ To load a layer from a database, you can perform the following steps:
   it is better to use the :ref:`Browser Panel <browser_panel>` or the
   :ref:`DB Manager <dbmanager>` to drag and drop the database tables into the map canvas.
 
+
 .. _execute_sql:
 
-Execute SQL queries
-...................
+Creating SQL Query Layers
+.........................
 
-Other than the ability to load individual tables from a database,
-QGIS allows you to load a subset of a table, as a result of an SQL query
-that may involve one or more tables from the database.
+Beside loading an entire layer in a project or creating new layers from scratch
+or pasted features, you can also load layers generated on the fly from other layer(s).
+They are the result of a more or less advanced filter using SQL language,
+applied to layers regardless their data provider or their availability in the active project.
+Depending on the provider, one or more layers can be used to write the query.
+The generated layer remains dependent on the layer(s) involved in the query
+and is loaded with the |indicatorFilter| :sup:`Filter` icon next to it.
 
-From the :guilabel:`Browser` panel, right-click on your database, schema or table
-and you get an `Execute SQL...` entry in your contextual menu.
-It opens a window with a central text box widget where you can write SQL queries.
+This feature is accessible:
+
+* From the :guilabel:`Browser` panel, right-click on a supported data
+  (plain layer, database connection, schema or table)
+  and select `Execute SQL...` entry in the contextual menu.
+* From the :guilabel:`Layers` panel, select a loaded layer, right-click
+  and select `Execute SQL...` entry in the contextual menu.
+
+This opens a window with a central text box widget where you can write SQL queries.
 
 .. _figure_execute_sql_queries:
 
@@ -1886,6 +1897,8 @@ or :guilabel:`Load Connection` from an XML file.
 .. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |hana| image:: /static/common/mIconHana.png
+   :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
