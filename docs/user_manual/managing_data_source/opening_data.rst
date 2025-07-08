@@ -1359,7 +1359,7 @@ to create, store and manipulate your queries:
   Hover over an entry and the full query is displayed over, as a tooltip.
   Right-click and you can either:
   
-  * :guilabel:`Execute SQL Command…`, loads the target command
+  * :guilabel:`Load SQL Command…`, loads the target command
     into the :guilabel:`Execute SQL` dialog, replacing any existing query.
     It is the same as double clicking the entry.
   * :guilabel:`Copy SQL Command` and paste it wherever you want
