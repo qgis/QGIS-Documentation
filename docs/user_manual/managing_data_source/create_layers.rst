@@ -616,6 +616,148 @@ created (and added to map canvas).
    text (WKT).
 
 
+.. _execute_sql:
+
+Creating SQL Query Layers
+==========================
+
+Beside loading an entire layer in a project or creating new layers from scratch
+or pasted features, you can also load layers generated on the fly from other layer(s).
+They are the result of a more or less advanced filter using SQL language,
+applied to layers regardless their data provider or their availability in the active project.
+Depending on the provider, one or more layers can be used to write the query.
+The generated layer remains dependent on the layer(s) involved in the query
+and is loaded with the |indicatorFilter| :sup:`Filter` icon next to it.
+
+This feature is accessible:
+
+* From the :guilabel:`Browser` panel, right-click on a supported data
+  (plain layer, database connection, schema or table)
+  and select `Execute SQL...` entry in the contextual menu.
+* From the :guilabel:`Layers` panel, select a loaded layer, right-click
+  and select `Execute SQL...` entry in the contextual menu.
+
+This opens a window with a central text box widget where you can write SQL queries.
+
+.. _figure_execute_sql_queries:
+
+.. figure:: img/executesqlwindow.png
+   :align: center
+   :width: 30 em
+
+   Executing SQL queries in the Execute SQL window
+
+At the top of the dialog, a toolbar provides a set of tools
+to create, store and manipulate your queries:
+
+* |fileOpen| :sup:`Open Queries...`: fills the text editor widget
+  with contents from an existing :file:`.sql` file
+* |fileSave| :sup:`Save Queries...` and |fileSaveAs| :sup:`Save Queries as...`
+  help you store the written query to a :file:`.sql` file
+* Statements of the query can be adjusted using the |editCut| :sup:`Cut`,
+  |editCopy| :sup:`Copy` and |editPaste| :sup:`Paste` buttons.
+  Likewise, you can |undo| :sup:`Undo` or |redo| :sup:`Redo` your changes.
+* The |search| :sup:`Find & Replace` enables, at the bottom of the dialog,
+  a widget allowing to look for a particular string in your SQL code.
+  The search can be case sensitive, affect partial or whole word,
+  rely on a regular expression.
+  It is then possible to navigate through the found strings, replacing them
+  one by one or all in a row.
+* Use |clearConsole| :sup:`Clear` to wipe the text editor.
+* The |queryHistory| :sup:`History` button opens a dialog storing previously
+  run queries. More at :ref:`sql_history`.
+
+
+In the central part of the :guilabel:`Execute SQL` dialog, you build your query
+using the SQL syntax supported by the underlying provider (e.g., OGR_, GeoPackage_, PostgreSQL_).
+
+By default, if opened from a layer entry, a sample SQL query is provided.
+Editing tools to select, cut, copy, paste, undo and redo are available as well
+from the contextual menu.
+
+.. todo: Provide some examples of commands, on various providers,
+  single layer, joins, ... ?
+
+.. tip:: **Finding the right SQL syntax for your dataset**
+
+ To find the appropriate SQL dialect for your dataset,
+ press the :guilabel:`...` button next to the :guilabel:`Subset filter` option
+ in the bottom part of the dialog.
+
+Running and loading queries as layer
+------------------------------------
+
+When ready, pressing the :guilabel:`Execute` button below the text area
+will run the query.
+It is possible to highlight a portion of the SQL to only execute that portion
+when pressing :kbd:`Ctrl+R` or clicking the :guilabel:`Execute selection` button.
+Use the :guilabel:`Stop` button to abort the execution.
+
+A successful query execution will display a table at the bottom of the dialog
+with returned features.
+You can select specific cells in the result set.
+Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the clipboard.
+The copied data is available as a formatted table.
+This allows you to paste the data into other applications,
+such as spreadsheet where it will show up as a table.
+
+The returned table can be loaded in QGIS expanding the :guilabel:`Load as new layer` group
+and configuring parameters (their availability depends on the layer provider):
+
+* :guilabel:`Column(s) with unique values` to indicate primary key of the data,
+* :guilabel:`Geometry column`: check the box to load the layer as a spatial one,
+  and indicate the geometry field name
+* :guilabel:`Subset filter`: allows to filter the results using a ``WHERE`` clause.
+  It can be written in the text box, or built using the :ref:`Query builder <vector_query_builder>`
+  after you pressed :guilabel:`...`.
+  Make sure to use fields that are available in the SQL layer.
+* :guilabel:`Avoid selecting by feature ID`
+* :guilabel:`Layer name` in the project
+
+At any time, in the :guilabel:`Layers panel`, you can adjust the output layer
+by right-clicking and selecting :guilabel:`Update SQL expression...`.
+The :guilabel:`Update SQL` dialog opens, prefilled with the applied query
+that you can edit as you wish.
+Once ready, press :guilabel:`Update layer` and teh layer will be modified in-place.
+
+.. _sql_history:
+
+Query History
+-------------
+
+The :guilabel:`Query History` dialog is accessible when pressing |queryHistory|
+:sup:`History` button in the :guilabel:`Execute SQL` dialog
+or from the :menuselection:`Database -->` |queryHistory| :guilabel:`Query History...` menu.
+It displays all the previously run queries, sorted by date and provider type,
+that you can preview and reuse.
+
+.. _figure_history_sql_queries:
+
+.. figure:: img/executesql_history.png
+    :align: center
+    :width: 30 em
+
+    History of the executed SQL queries
+
+Hover over an entry and the full query is displayed over, as a tooltip.
+Right-click and you can either:
+
+* :guilabel:`Load SQL Command…`, loads the target command
+  into the :guilabel:`Execute SQL` dialog, replacing any existing query.
+  It is the same as double clicking the entry.
+* :guilabel:`Copy SQL Command` and paste it wherever you want
+
+When a query is selected, the full query is displayed in the lower part of the dialog.
+You can interact with the text, copying all or part of it.
+
+* As previously mentioned, queries can be saved as an :file:`.sql` file stored on disk.
+Using the |storedqueries| :sup:`Store Current Query` button, they can also be stored:
+
+* In the active :guilabel:`User Profile`, in the associated :file:`QGIS3.ini` file,
+  thus accessible in subsequent projects
+* or as part of the :guilabel:`Current Project`.
+
+
 .. index:: Virtual layers
 .. _vector_virtual_layers:
 
@@ -813,7 +955,23 @@ when used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |clearConsole| image:: /static/common/iconClearConsole.png
+   :width: 1.5em
 .. |createMemory| image:: /static/common/mActionCreateMemory.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
@@ -829,7 +987,17 @@ when used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |newVectorLayer| image:: /static/common/mActionNewVectorLayer.png
    :width: 1.5em
+.. |queryHistory| image:: /static/common/mIconQueryHistory.png
+   :width: 1.5em
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |search| image:: /static/common/search.png
+   :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |storedqueries| image:: /static/common/mIconStoredQueries.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
