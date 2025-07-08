@@ -10,6 +10,8 @@
 # tomoya miyoshi, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2025
+# Shota Arakawa, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-02 02:14+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Shota Arakawa, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,6 +50,31 @@ msgid ""
 msgstr ""
 "オープンソース・ソフトウェアのエコシステムの一部として、QGISは様々なライブラリの上に構築されています。これらのライブラリは、QGIS独自のプロバイダと組み合わされることで、多くのフォーマットを読み込む機能と、そして多くの場合は書き出す機能も提供しています："
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:20
+msgid ""
+"Vector data formats include GeoPackage, GML, GeoJSON, GPX, KML, Comma "
+"Separated Values, ESRI formats (Shapefile, Geodatabase...), MapInfo and "
+"MicroStation file formats, AutoCAD DWG/DXF, GRASS and many more... Read the "
+"complete list of `supported vector formats "
+"<https://gdal.org/en/latest/drivers/vector/index.html>`__."
+msgstr ""
+"ベクターデータ形式には、GeoPackage、GML、GeoJSON、GPX、KML、CSV(カンマ区切り値形式)、ESRI形式（シェープファイル、ジオデータベースなど）、MapInfoやMicroStationファイル形式、AutoCADのDWG/DXF、GRASS形式などがあります。その他にも多くの形式がサポートされています。詳しくは"
+" `supported vector formats "
+"<https://gdal.org/en/latest/drivers/vector/index.html>` をご覧ください。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:26
+msgid ""
+"Raster data formats include GeoTIFF, JPEG, ASCII Gridded XYZ, MBTiles, R or "
+"Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data, ERDAS IMAGINE, ArcInfo "
+"Binary Grid, ArcInfo ASCII Grid, and many more... Read the complete list of "
+"`supported raster formats "
+"<https://gdal.org/en/latest/drivers/raster/index.html>`__."
+msgstr ""
+"ラスターデータ形式には、GeoTIFF、JPEG、ASCIIグリッドXYZ、MBTiles、RやIdrisi形式のラスターデータ、GDAL仮想フォーマット、SRTM、Sentinelデータ、ERDAS"
+" IMAGINE、ArcInfoバイナリグリッド、ArcInfo ASCIIグリッドなどがあります。その他にも多くの形式がサポートされています。詳しくは"
+"  `supported raster formats "
+"<https://gdal.org/en/latest/drivers/raster/index.html>` をご覧ください。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:32
 msgid ""
 "Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, MS "
@@ -74,6 +101,14 @@ msgid ""
 msgstr ""
 "アーカイブされたフォルダからサポートしているフォーマットのファイルを読み込んだり、QML ファイル （ :ref:`qgisstylefile` "
 "）などのQGISネイティブ形式や仮想レイヤ、メモリレイヤを使用することができます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:41
+msgid ""
+"More than 80 vector and 140 raster formats are supported by `GDAL "
+"<https://gdal.org/en/latest/>`_ and QGIS native providers."
+msgstr ""
+"80以上のベクター形式と、140以上のラスター形式が `GDAL <https://gdal.org/en/latest/>` "
+"とQGISネイティブプロバイダーによってサポートされています。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:46
 msgid ""
@@ -415,7 +450,7 @@ msgstr "afs"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:161
 msgid "Interacting with the Browser items"
-msgstr "ブラウザ項目とのインタラクション"
+msgstr "ブラウザ項目の操作"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:163
 msgid ""
@@ -522,6 +557,10 @@ msgstr ":guilabel:`レイヤをプロジェクトに追加する`"
 msgid ":guilabel:`Layer Properties`"
 msgstr ":guilabel:`レイヤのプロパティ`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:203
+msgid ":guilabel:`Open with Data Source Manager...`"
+msgstr ":guilabel:`データソースマネージャで開く...`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:204
 msgid ""
 ":menuselection:`Manage --> Rename \"<name of file>\"...` or "
@@ -573,6 +612,20 @@ msgid ""
 "The attribute table for vector sources (in the :guilabel:`Attributes` "
 "panel)."
 msgstr "ベクタソースの場合は属性テーブル（ :guilabel:`属性` パネル内）"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:226
+msgid ""
+"Use :guilabel:`Open with Data Source Manager...` to directly open and "
+"configure the data source in the :guilabel:`Data Source Manager` using the "
+"URI of your data source. This simplifies the process of adding a layer from "
+"the :guilabel:`Browser` by allowing you to set specific opening options for "
+"the data source. It is currently available for vector (including the "
+"dedicated GeoPackage entry), raster, and SpatiaLite data sources."
+msgstr ""
+":guilabel:`データソースマネージャで開く...` を使用すると、データソースのURLを使って直接 "
+":guilabel:`データソースマネージャ` でデータソースを開いて設定することができます。これにより、特定のオープンオプションを設定できるため、 "
+":guilabel:`ブラウザ` "
+"からレイヤーを追加する際の操作が簡単になります。この操作は現在、ベクターデータ（専用のGeoPackageエントリも含む）、ラスターデータ、SpatiaLiteデータソースで利用可能です。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:233
 msgid "To add a layer to the project using the :guilabel:`Browser`:"
@@ -844,6 +897,31 @@ msgstr ""
 "キーを押しながら最初と最後のアイテムを選択することでアイテム範囲を選択することで、複数のレイヤを同時に読み込むことが可能です。ファイル形式のフィルタには、十分にテストされたファイル形式のみが表示されます。他のファイル形式は、"
 "  ``全ファイル`` （プルダウンメニューの一番上のアイテム）を選択することで読み込むことができます。"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:378
+msgid ""
+"Press :guilabel:`Open` to load the selected file into :guilabel:`Data Source"
+" Manager` dialog."
+msgstr ""
+" :guilabel:`開く` をクリックすると、選択されたファイルが :guilabel:`データソースマネージャ` ダイアログに読み込まれます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:381
+msgid ""
+"Depending on the selected layer type, additional :guilabel:`Options` "
+"(encoding, geometry type, table filtering, file locking, data formatting "
+"...) are available for configuring. These options are described in detail in"
+" the specific GDAL `vector <https://gdal.org/en/latest/drivers/vector/>`__ "
+"or `raster <https://gdal.org/en/latest/drivers/raster>`__ driver "
+"documentation. At the top of the options, a text with hyperlink will "
+"directly lead to the documentation of the appopriate driver for the selected"
+" file format."
+msgstr ""
+"選択したレイヤータイプによっては、追加の :guilabel:`オプション` "
+"（エンコーディング、geometryタイプ、テーブルフィルタリング、ファイルロック、データフォーマット設定 "
+"など）が設定用に利用可能です。これらのオプションは該当するGDALの "
+"`ベクタ形式<https://gdal.org/en/latest/drivers/vector/>` や "
+"`ラスタ形式<https://gdal.org/en/latest/drivers/raster>` "
+"のドライバードキュメントで説明されています。オプション一覧の一番上には、選択したファイル形式に対応するドライバーのドキュメントに直接リンクする、ハイパーリンクテキストが表示されます。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:395
 msgid "Loading a Shapefile with open options"
 msgstr "オプション付きでシェープファイルをロードする"
@@ -965,6 +1043,34 @@ msgstr ""
 "``HTTP/HTTPS/FTP`` ： :guilabel:`URI` と、必要に応じて :ref:`認証 "
 "<authentication_index>` を指定します"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:452
+msgid ""
+"Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft "
+"Azure Blob``, ``Microsoft Azure Data Lake Storage``, ``Alibaba OSS Cloud``, "
+"and ``Open Stack Swift Storage`` supports direct control over VSI "
+":guilabel:`Credential Options` when adding OGR vector or GDAL raster layers."
+" You need to fill in the :guilabel:`Bucket or container` and the "
+":guilabel:`Object key` first. After that, you can add the necessary "
+":guilabel:`Credential Options`."
+msgstr ""
+" ``AWS S3``, ``Google クラウドストレージ``, ``Microsoft Azure Blob``, ``Microsoft "
+"Azure Data Lake ストレージ``, ``Alibaba OSS クラウド`` や ``Open Stack Swift ストレージ`` "
+"などのクラウドストレージはORGベクタデータやGDALラスタデータのレイヤー追加時に、VSI経由で直接制御するための "
+":guilabel:`資格情報オプション` がサポートされています。 :guilabel:`バケット名またはコンテナ名` を指定し、 "
+":guilabel:`Object key` を入力します。その後、必要な :guilabel:`資格情報オプション` を追加します。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:459
+msgid ""
+"When adding OGR vector or GDAL raster layers from the cloud based protocols,"
+" you can also set additional :guilabel:`Credential options` for that "
+"specific driver and bucket. When credential options are found in a layer's "
+"URI, they will also be automatically set. This allows different layers to "
+"use different credentials."
+msgstr ""
+"ORGベクタレイヤやGDALラスタレイヤをクラウドベースのプロトコル経由で追加する場合、特定のドライバやバケットに対して "
+":guilabel:`資格情報オプション` "
+"を追加することができます。レイヤのURIに資格情報オプションが含まれている場合は、それらも自動的に設定されます。これにより、異なるレイヤーごとに別々の資格情報を使うことができます。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:463
 msgid ""
 "service supporting OGC ``WFS 3`` (still experimental), using ``GeoJSON`` or "
@@ -983,6 +1089,36 @@ msgid ""
 msgstr ""
 "ベクタソースタイプ全てについて、 :guilabel:`文字コード` の指定が可能です。 :menuselection:`自動 -->` "
 "設定を使うこともできます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:470
+msgid ""
+"The |radioButtonOn| :guilabel:`OGC API` source type allows you to access "
+"`vector <https://gdal.org/en/latest/drivers/vector/oapif.html>`_ and `raster"
+" <https://gdal.org/en/latest/drivers/raster/ogcapi.html>`_ data from servers"
+" that implement the OGC API standards. To use this option:"
+msgstr ""
+" |radioButtonOn| :guilabel:`OGC API` ソースタイプを選ぶことで、OGC API規格に準拠したサーバーから、 "
+"`ベクタデータ <https://gdal.org/en/latest/drivers/vector/oapif.html>`_ や "
+"`ラスタデータ<https://gdal.org/en/latest/drivers/raster/ogcapi.html>`_ にアクセスできます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:476
+msgid ""
+"Select |radioButtonOn| :guilabel:`OGC API` from the :guilabel:`Data Source "
+"Manager` dialog."
+msgstr ""
+":guilabel:`データソースマネージャ` ダイアログから |radioButtonOn| :guilabel:`OGC API` を選びます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:478
+msgid ""
+"Enter the endpoint of the OGC API service you want to connect to. Note that "
+"you don't need to prefix the endpoint with \"OGCAPI:\"."
+msgstr ""
+"接続したいOGC APIサービスのエンドポイントを入力してください。この際、エンドポイントの先頭に \"OGCAPI:\" "
+"と付け加える必要はありません。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:480
+msgid "Click :guilabel:`Connect` to establish a connection to the server."
+msgstr " :guilabel:`Connect` をクリックしてサーバに接続します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:486
 msgid "Loading a mesh layer"
@@ -1207,6 +1343,18 @@ msgstr ":guilabel:`カスタム論理値`: ブール値として検出される�
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:587
 msgid "Field type detection"
 msgstr "フィールド型を検出"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:589
+msgid ""
+"QGIS tries to detect the field types automatically (unless "
+"|checkbox|:guilabel:`Detect field types` is not checked) by examining the "
+"content of an optional sidecar CSVT file (see `GeoCSV specification`_) and "
+"by scanning the whole file to make sure that all values can actually be "
+"converted without errors, the fall-back field type is text."
+msgstr ""
+"QGIS は、フィールドタイプを自動的に検出しようとします（ただし、|checkbox| :guilabel:`フィールド型を検出` "
+"がオフの場合を除きます）。オプションの CSVT ファイル（ `GeoCSV 仕様`_ "
+"参照）の内容を確認し、ファイル全体をスキャンして、すべての値がエラーなく変換できることをチェックします。変換できない場合は、デフォルトでフィールド型は「テキスト」になります。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:595
 msgid ""
@@ -1718,6 +1866,38 @@ msgid ""
 "dialog."
 msgstr "ブラウザツリー内で対応するデータベース形式を選択し、右クリックして接続を選択すると、データベース接続ダイアログが開きます。"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:842
+msgid "Most of the connection dialogs follow a common structure:"
+msgstr "ほとんどの接続ダイアログは、共通の構造になっています。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:844
+msgid "a section with credentials information to connect to the database"
+msgstr "データベースに接続するための資格情報セクション"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:845
+msgid ""
+"a section with options to tune which data can be requested in the database"
+msgstr "データベース内で要求できるデータを調整するためのオプションセクション"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:850
+msgid "Connecting to PostgreSQL"
+msgstr "PostgreSQLへの接続"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:852
+msgid ""
+"The first time you use a PostGIS data source, you must create a connection "
+"to a database that contains the data. Press the appropriate button as "
+"exposed above, opening the :guilabel:`PostgreSQL` tab of the :guilabel:`Data"
+" Source Manager` dialog. To access the connection manager, click on the "
+":guilabel:`New` button to display the :guilabel:`Create a New PostGIS "
+"Connection` dialog."
+msgstr ""
+"初めて PostGIS "
+"データソースを使用する場合は、データが含まれたデータベースへの接続を作成する必要があります。上記で説明した該当するボタンをクリックし、 "
+":guilabel:`データソースマネージャ` ダイアログの :guilabel:`PostgreSQL` "
+"タブを開きます。接続マネージャにアクセスするには、 :guilabel:`新規` ボタンをクリックし、 :guilabel:`新規PostGISを作成`"
+" ダイアログを表示させます。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:864
 msgid "Create a New PostGIS Connection Dialog"
 msgstr "「新規PostGIS接続を作成」ダイアログ"
@@ -1760,6 +1940,12 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:875
 msgid ":guilabel:`Database`: Name of the database."
 msgstr ":guilabel:`データベース` ：データベース名です。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:876
+msgid ""
+":guilabel:`SSL mode`: SSL encryption setup. The following options are "
+"available:"
+msgstr ":guilabel:`SSL モード`: SSL 暗号化の設定。以下のオプションを選択可能です:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:879
 msgid ""
@@ -1804,6 +1990,21 @@ msgid ""
 ":guilabel:`Disable`: I don't care about security, and I don't want to pay "
 "the overhead of encryption."
 msgstr ":guilabel:`Disable` ：セキュリティはどうでもよく、暗号化の負荷を払いたくない"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:892
+msgid ""
+":guilabel:`Session role`: used to set the current user identifier of the "
+"current session. This is useful to automatically give the ownership of a new"
+" object (table, view, function) to the session_role group and thus share "
+"ownership and associated rights with all members of the session_role group. "
+"Read more about `session role <https://www.postgresql.org/docs/current/sql-"
+"set-role.html>`_."
+msgstr ""
+":guilabel:`セッション role`: "
+"現在のセッションで使用するユーザー識別子を設定します。これにより、新しく作成されるオブジェクト（テーブル、ビュー、関数など）の所有権を自動的に "
+"session_role グループに割り当てることができ、そのグループの全メンバーと所有権や関連する権限を共有するのに便利です。詳しくは "
+"`session role <https://www.postgresql.org/docs/current/sql-set-role.html>`_ "
+"をご覧ください。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:897
 msgid ":guilabel:`Authentication`, basic."
@@ -1908,6 +2109,23 @@ msgstr ""
 "|checkbox| :guilabel:`ジオメトリを持たないテーブルもリストする` "
 "：ジオメトリを持たないテーブルもデフォルトでリストするように指定します。"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:937
+msgid ""
+"|checkbox| :guilabel:`Use estimated table metadata`: When initializing "
+"layers, various queries may be needed to establish the characteristics of "
+"the geometries stored in the database table. When this option is checked, "
+"these queries examine only a sample of the rows and use the table "
+"statistics, rather than the entire table. This can drastically speed up "
+"operations on large datasets, but may result in incorrect characterization "
+"of layers (e.g. the feature count of filtered layers will not be accurately "
+"determined) and may even cause strange behaviour if columns that are "
+"supposed to be unique actually are not."
+msgstr ""
+"|checkbox| :guilabel:`概算されたテーブルメタデータを使用する`: "
+"レイヤを初期化する際、データベーステーブルに格納されているジオメトリ特性を把握するために様々なクエリが必要となることがあります。 "
+":guilabel:`概算されたテーブルメタデータを利用する` "
+"オプションがチェックされている場合、これらのクエリはテーブル全体ではなく行のサンプルのみを調べてテーブルの統計情報に使用します。これにより大規模なデータセットに対する操作を劇的に高速化することができますが、レイヤの特性が不正確（例えばフィルタされたレイヤの地物カウントが正確に決定できない）となり、さらには実際にはユニークであるはずの列がユニークにならないなどの不具合を引き起こす場合があります。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:947
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1077
 msgid ""
@@ -1924,6 +2142,15 @@ msgid ""
 msgstr ""
 "|checkbox|:guilabel:`QGISプロジェクトのデータベース保存・読み込みを許可する` - 詳細は :ref:`ここ "
 "<savemetadatatodb>`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:952
+msgid ""
+"Once all parameters and options are set, you can test the connection by "
+"clicking the :guilabel:`Test Connection` button or apply it by clicking the "
+":guilabel:`OK` button."
+msgstr ""
+"全てのパラメータとオプションを設定したら、 :guilabel:`接続テスト` ボタンをクリックするか :guilabel:`OK` "
+"ボタンをクリックして設定を適用させます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:959
 msgid "PostgreSQL Service connection file"
@@ -2006,6 +2233,17 @@ msgstr ""
 "``web`` ならば、（他の環境変数を何も指定しなくとも）そのままでうまくいくためには、 :file:`.pg_service.conf` は "
 ":file:`/home/web/` ディレクトリに保存されている必要があります。"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1006
+msgid ""
+"You can specify the location of the service file by creating a "
+"``PGSERVICEFILE`` environment variable (e.g. run the ``export "
+"PGSERVICEFILE=/home/web/.pg_service.conf`` command under your \\*nix OS to "
+"temporarily set the ``PGSERVICEFILE`` variable)."
+msgstr ""
+"``PGSERVICEFILE`` 環境変数を作成することで、サービスファイルの場所を指定することができます（例えば、\\*nix OSでは "
+"``export PGSERVICEFILE=/home/web/.pg_service.conf`` コマンドを実行して、 "
+"``PGSERVICEFILE`` 変数を一時的に設定します）。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1011
 msgid ""
 "You can also make the service file available system-wide (all users) either "
@@ -2061,6 +2299,15 @@ msgstr "環境変数を追加した後は、コンピュータを再起動する
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1040
 msgid "Connecting to Oracle Spatial"
 msgstr "Oracle Spatialのへの接続"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1042
+msgid ""
+"The spatial features in Oracle Spatial aid users in managing geographic and "
+"location data in a native type within an Oracle database. The connection "
+"dialog proposes:"
+msgstr ""
+"Oracle Spatial の空間機能は、Oracle "
+"データベース内で地理情報や位置情報をネイティブな型として管理するのに役立ちます。接続ダイアログでは、次の項目が提示されます："
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1046
 msgid "**Database**: SID or SERVICE_NAME of the Oracle instance;"
@@ -2139,6 +2386,17 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1076
 msgid "|checkbox| :guilabel:`Include additional geometry attributes`."
 msgstr "|checkbox| :guilabel:`追加のジオメトリ属性を含める` 。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1079
+msgid ""
+":guilabel:`Schema`: Allows to specify a single schema to limit a connection "
+"to. When set, only tables from the matching schema will be included in the "
+"browser panel and data source select for the connection. This can be used to"
+" limit the database work required to populate tables for a connection "
+"pointing to a large database store."
+msgstr ""
+":guilabel:`Schema`: "
+"接続対象を特定のスキーマに限定するための設定です。これを設定すると、ブラウザパネルやデータソース選択で表示されるのは、指定したスキーマ内のテーブルのみになります。これにより、大規模なデータベースストアに接続する際に、テーブル情報の取得にかかるデータベース負荷を軽減できます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1087
 msgid "**Oracle Spatial Layers**"
@@ -2220,7 +2478,7 @@ msgstr "オプションで、以下のオプションを有効にできます：
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1130
 msgid ""
 "|checkbox| :guilabel:`Only look in the geometry_columns metadata table`."
-msgstr "|checkbox| :guilabel:`'geometry_columnsメタデータテーブルにあるテーブルのみ参照する'。"
+msgstr "|checkbox| :guilabel:`テーブルgeometry_columnsメタデータテーブルにあるテーブルのみ参照する` 。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1131
 msgid ""
@@ -2457,6 +2715,19 @@ msgstr ""
 "|checkbox| :guilabel:`ユーザーのテーブルのみ参照する` "
 "：チェックを入れた場合、QGISはデータベースに接続したユーザーが所有するテーブルとビューのみを検索します。"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1233
+msgid ""
+"|checkbox| :guilabel:`Use estimated table metadata`: If checked, estimated "
+"table metadata will be used if available. For large tables, this avoids slow"
+" table loads and potentially expensive computations, but may result in "
+"incorrect layer properties such as layer extent. The fast extent estimation "
+"is available starting with QRC1/2024 and SP8 in HANA Cloud and HANA On-"
+"Premise respectively."
+msgstr ""
+"|checkbox| :guilabel:`概算されたテーブルメタデータを使用する`: "
+"有効にすると、利用可能な場合は概算されたテーブルメタデータが使われます。大規模なテーブルに関しては、読み込みの遅延や高負荷な計算処理を回避できますが、レイヤ範囲などのプロパティが不正確になる可能性があります。高速な範囲の推定は、HANA"
+" Cloud の QRC1/2024 およびSP8、HANA オンプレミス以降で利用可能です。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1240
 msgid ""
 "|checkbox| :guilabel:`Also list tables with no geometries`: If checked, QGIS"
@@ -2497,6 +2768,18 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1260
 msgid "To load a layer from a database, you can perform the following steps:"
 msgstr "データベースからレイヤを読み込むには、以下の手順に従います："
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1262
+msgid ""
+"Open the corresponding tab of the database in the :guilabel:`Data Source "
+"Manager` dialog."
+msgstr ":guilabel:`データソースマネージャ` ダイアログで、該当するデータベースのタブを開きます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1263
+msgid ""
+"Choose the connection name from the drop-down list and press "
+":guilabel:`Connect`."
+msgstr "ドロップダウンリストから接続名を選択し、 :guilabel:`接続` をクリックします。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1264
 msgid ""
@@ -2734,6 +3017,29 @@ msgstr ""
 ":guilabel:`Style URL` ：MapBox GL "
 "JSONスタイル設定へのURLです。これを設定すると、この接続からのレイヤがQGISに追加される場合に、常にそのスタイルが適用されます。ArcGISベクタタイルサービス接続の場合、このURLはサーバー側の設定で指定されるデフォルトのスタイル設定を上書きします。"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1386
+msgid ""
+"You can load vector tiles directly from a :guilabel:`Style URL`. The data "
+"source is automatically parsed from the style, and URLs with multiple "
+"sources are supported. That makes :guilabel:`Source URL` optional."
+msgstr ""
+":guilabel:`Style URL` から直接ベクタタイルをロード可能です。データソースはスタイルから自動的に解析され、複数のソースを含む URL"
+" にも対応しています。そのため :guilabel:`Source URL` は省略可能です。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1389
+#, python-brace-format
+msgid ""
+"the :guilabel:`Source URL`: of the type "
+"``http://example.com/{z}/{x}/{y}.pbf`` for generic services and "
+"``http://example.com/arcgis/rest/services/Layer/VectorTileServer`` for "
+"ArcGIS based services. The service must provide tiles in :file:`.pbf` "
+"format."
+msgstr ""
+" :guilabel:`Source URL`: 一般的なサービスの場合は ``http://example.com/{z}/{x}/{y}.pbf``"
+" を、ArcGISベースのサービスの場合は "
+"``http://example.com/arcgis/rest/services/Layer/VectorTileServer`` "
+"の形式を使用します。サービスは :file:`.pbf` の形式のタイルを提供している必要があります。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1393
 msgid ""
 "the |checkbox|:guilabel:`Min. Zoom Level` and the |checkbox|:guilabel:`Max. "
@@ -2765,6 +3071,16 @@ msgstr ":ref:`認証 <authentication_index>` ：必要に応じて設定"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1553
 msgid "a :guilabel:`Referer`"
 msgstr ":guilabel:`リファラー`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1404
+msgid ""
+":numref:`figure_vector_tiles_configuration` shows the dialog with the Vector"
+" Tiles service configuration."
+msgstr ":numref:`figure_vector_tiles_configuration` ベクタタイルサービスの設定ダイアログ"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1412
+msgid "Vector Tiles - Service configuration"
+msgstr "ベクタタイル-サービスの設定"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1414
 msgid ""
@@ -2851,8 +3167,8 @@ msgid ""
 ":numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the "
 "OpenStreetMap XYZ Tile service configuration."
 msgstr ""
-"|xyz| :guilabel:`OpenStreetMap` "
-"で世界の2Dマップにアクセスできます。|numref:`figure_xyz_tiles_openstreetmap` はOpenStreetMap "
+"|xyz| :guilabel:`OpenStreetMap`  "
+"で世界の2Dマップにアクセスできます。　:numref:`figure_xyz_tiles_openstreetmap` はOpenStreetMap "
 "XYZ Tileサービスの設定ダイアログを表示します。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1449
@@ -2900,10 +3216,10 @@ msgid ""
 " renderers <raster_rendering>`."
 msgstr ""
 ":guilabel:`データの解釈`: WMTS/XYZ ラスタデータセットを、あらかじめ定義されたエンコーディングスキームに従って、シングルバンド "
-"float 型のラスタレイヤに変換します。サポートされているスキームは :guilabel:`デフォルト` (変換は行われません), "
+"float 型のラスタレイヤに変換します。サポートされているスキームは :guilabel:`デフォルト`  (変換は行われません)、 "
 ":guilabel:`MapTiler Terrain RGB` および :guilabel:`Terrarium Terrain RGB` "
-"です。選択されたコンバータは、RGBソースの値を各ピクセルのfloat値に変換します。一度読み込まれると、レイヤはシングルバンドの浮動小数点ラスタレイヤとして表示され、QGISの通常の:ref:`ラスタレンダラ"
-" <raster_rendering>` を使ってスタイルを設定することができます。"
+"です。選択されたコンバータは、RGBソースの値を各ピクセルのfloat値に変換します。一度読み込まれると、レイヤはシングルバンドの浮動小数点ラスタレイヤとして表示され、QGISの通常の"
+" :ref:`raster renderers <raster_rendering>` を使ってスタイルを設定することができます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1479
 msgid ""
@@ -3024,6 +3340,14 @@ msgstr "addAfsLayer"
 msgid "the :guilabel:`URL`"
 msgstr ":guilabel:`URL`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1548
+msgid ""
+"a :guilabel:`Prefix`: This is used to specify the proxy prefix in the URL, "
+"which is necessary for some ArcGIS servers that use web proxy prefixes."
+msgstr ""
+":guilabel:`Prefix`: URL 内で使用するプロキシプレフィックスを指定するための項目です。一部の ArcGIS サーバーでは、Web "
+"プロキシプレフィックスが必要となる場合があります。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1550
 msgid "a :guilabel:`Community endpoint URL`"
 msgstr ":guilabel:`Community endpoint URL`"
@@ -3121,6 +3445,26 @@ msgstr "レイヤのエントリを右クリックすると、以下の操作が
 msgid ":menuselection:`Export layer... --> To File`"
 msgstr ":menuselection:`レイヤエクスポート --> ファイルへ…`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1605
+msgid "Using 3D tiled scene services"
+msgstr "3Dタイルシーンサービスの使用"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1607
+msgid ""
+"QGIS supports multiple formats of 3D tiled datasets, grouped together as "
+"\"tiled scenes\". These include Cesium 3D Tiles and Quantized Mesh tiles."
+msgstr ""
+"QGIS は、複数の形式の 3D タイルデータセットに対応しており、これらは「タイルシーン」としてまとめられています。対応形式には、Cesium 3D "
+"Tiles や Quantized Mesh タイル などが含まれます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1610
+msgid ""
+"To load a tiled scene dataset into QGIS, use the |addTiledSceneLayer| "
+":guilabel:`Scene` tab in the :guilabel:`Data Source Manager` dialog."
+msgstr ""
+"タイルシーンデータセットをQGISに読み込むためには、 :guilabel:`データソースマネージャ` ダイアログの "
+"|addTiledSceneLayer| :guilabel:`Scene` タブを使用します。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1715
 msgid "addTiledSceneLayer"
 msgstr "addTiledSceneLayer"
@@ -3128,6 +3472,30 @@ msgstr "addTiledSceneLayer"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1618
 msgid "Data Source Manager - Scene"
 msgstr "データソースマネージャ - Scene"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1620
+msgid ""
+"Create a connection by clicking on :guilabel:`New`. You can add a "
+":guilabel:`New Cesium 3D Tiles Connection` or a :guilabel:`New Quantized "
+"Mesh Connection`."
+msgstr ""
+" :guilabel:`New` をクリックし、接続を作成します。 :guilabel:`New Cesium 3D Tiles Connection`"
+" または、 :guilabel:`New Quantized Mesh Connection` を追加可能です。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1624
+msgid ""
+"Choose a :guilabel:`Name` and set the :guilabel:`URL` to the URL of a layer "
+"description JSON file."
+msgstr ""
+" :guilabel:`名前` を入力し、 :guilabel:`URL` にはレイヤー記述用の JSON ファイルの URL を設定します。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1626
+msgid ""
+"The URL may be remote (e.g. ``http://example.com/tileset.json``) or local "
+"(e.g. ``file:///path/to/tiles/tileset.json``)."
+msgstr ""
+"URLはリモート (例  ``http://example.com/tileset.json``) でも、ローカル (例 "
+"``file:///path/to/tiles/tileset.json``) でも構いません。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1634
 msgid "Tiled Scene Connection"
@@ -3143,6 +3511,68 @@ msgid ""
 "to your map."
 msgstr "新しい接続を作成すると、マップに新しいレイヤを :guilabel:`追加` できるようになります。"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1646
+msgid "3D Tiles Layer - Textured"
+msgstr "3D タイルレイヤ - Textured"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1653
+msgid "Quantized Mesh layer"
+msgstr "Quantized Mesh レイヤ"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1659
+msgid "Using Cloud Connections"
+msgstr "Cloud 接続を使用する"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1661
+msgid ""
+"QGIS supports connections to cloud services like Alibaba Cloud OSS, Amazon "
+"S3, Google Cloud Storage, Microsoft Azure Blob Storage, Microsoft Azure Data"
+" Lake Storage, and OpenStack Swift Object Storage. You can load vector and "
+"raster data from these services into QGIS. Set up a new |cloud| "
+":guilabel:`Cloud` connection in the :guilabel:`Browser` panel by right-"
+"clicking on the :guilabel:`Cloud` entry and selecting :guilabel:`New "
+"Connection`. You will see a drop-down list of available cloud services. "
+"Select the service you want to connect to and fill in the required fields:"
+msgstr ""
+"QGIS は、Alibaba Cloud OSS、Amazon S3、Google Cloud Storage、Microsoft Azure Blob"
+" Storage、Microsoft Azure Data Lake Storage、OpenStack Swift Object Storage "
+"などのクラウドサービスへの接続に対応しています。これらのサービスからベクターデータやラスターデータを QGIS に読み込むことができます。 "
+":guilabel:`ブラウザ` パネルで :guilabel:`Cloud` エントリを右クリックし、 :guilabel:`新規接続` "
+"を選択し新しい |cloud| :guilabel:`Cloud` "
+"接続を設定します。すると、利用可能なクラウドサービスのドロップダウンリストが表示されます。接続したいサービスを選択し、必要な項目を入力してください:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1725
 msgid "cloud"
 msgstr "cloud"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1674
+msgid "Cloud Connection Dialog"
+msgstr "Cloud 接続ダイアログ"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1676
+msgid ":guilabel:`Name`: A name for the connection."
+msgstr ":guilabel:`名前`: 接続の名前を設定する"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1677
+msgid ""
+":guilabel:`Bucket or Container`: The name of the bucket or container in the "
+"cloud service."
+msgstr ":guilabel:`Bucket or Container`: クラウドサービス上でのバケットまたはコンテナの名前を設定します。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1678
+msgid ""
+":guilabel:`Object Key` (optional): The key of the object in the bucket or "
+"container."
+msgstr ":guilabel:`Object Key` (optional): バケットまたはコンテナのオブジェクトキー。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1679
+msgid ":guilabel:`Credentials`: The credentials to access the cloud service."
+msgstr ":guilabel:`資格情報`: クラウドサービスにアクセスするための資格情報。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1681
+msgid ""
+"You can also choose to :guilabel:`Save Connection` to an XML file or "
+":guilabel:`Load Connection` from an XML file."
+msgstr ""
+" :guilabel:`接続を保存` から、接続をXMLファイルに保存することも、XMLファイルから :guilabel:`接続を読み込む` "
+"ことも可能です。"
