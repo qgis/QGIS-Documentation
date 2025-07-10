@@ -900,7 +900,10 @@ To load an entity, there are :guilabel:`Layer Settings` that can be configured:
   Using this approach, you can expand the selected layer to include data from other items.
   This will flatten the relationship, creating as many parent features as children,
   and additional properties are added as columns in the attribute table.
-
+  For example, when loading a Thing entity, you can expand it with related
+  Datastreams, Locations, or Observations. This results in one row per related item,
+  with the fields from both the parent and expanded child entities combined into a single flat table.
+  
 ..
   Notice that the Observed Property contains which property is observed,
   which is relevant if the sensor of interest monitors many properties
