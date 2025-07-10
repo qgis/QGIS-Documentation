@@ -624,7 +624,7 @@ Creating SQL Query Layers
 Beside loading an entire layer in a project or creating new layers from scratch
 or pasted features, you can also load layers generated on the fly from other layer(s).
 They are the result of a more or less advanced filter using SQL language,
-applied to layers regardless their data provider or their availability in the active project.
+applied to layers regardless of their data provider or their availability in the active project.
 Depending on the provider, one or more layers can be used to write the query.
 The generated layer remains dependent on the layer(s) involved in the query
 and is loaded with the |indicatorFilter| :sup:`Filter` icon next to it.
@@ -727,7 +727,7 @@ At any time, in the :guilabel:`Layers panel`, you can adjust the output layer
 by right-clicking and selecting :guilabel:`Update SQL expression...`.
 The :guilabel:`Update SQL` dialog opens, prefilled with the applied query
 that you can edit as you wish.
-Once ready, press :guilabel:`Update layer` and teh layer will be modified in-place.
+Once ready, press :guilabel:`Update layer` and the layer will be modified in-place.
 
 .. _sql_history:
 
