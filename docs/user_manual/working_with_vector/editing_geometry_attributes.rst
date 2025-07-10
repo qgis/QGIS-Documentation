@@ -1473,9 +1473,9 @@ a multipolygon/multipolyline/multipoint feature is created.
        Sum, Count, Concatenation... depending on the type of the field.
        see :ref:`statistical_summary` for the full list of functions)
 
-.. note::
-   If a field uses the :guilabel:`Use Default Value` policy, and a default
-   value is defined in the layer, that value is used for the merged feature.
+   .. note::
+    If a field uses the :guilabel:`Use Default Value` policy, and a default
+    value is defined in the layer, that value is used for the merged feature.
 
 #. Press :guilabel:`OK` to apply the modifications. A single (multi)feature is
    created in the layer, replacing the previously selected ones.
