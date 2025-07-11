@@ -985,9 +985,9 @@ when used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
-.. |moveUp| image:: /static/common/mActionArrowUp.png
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
-.. |moveDown| image:: /static/common/mActionArrowDown.png
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
