@@ -97,6 +97,11 @@ Further management of GeoPackage layers can be done with the
 
 
 .. _vector_create_shapefile:
+.. |moveUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
+.. |moveDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+
 
 Creating a new Shapefile layer
 ------------------------------
@@ -134,6 +139,7 @@ To add fields to the layer you are creating:
 #. Depending on the selected data format, enter the :guilabel:`Length` and
    :guilabel:`Precision`.
 #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
+#. Change the field order using the |moveUp|:guilabel:`Move Up` and |moveDown|:guilabel:`Move Down` buttons
 #. Reproduce the steps above for each field you need to add
 #. Once you are happy with the attributes, click :guilabel:`OK`.
    QGIS will add the new layer to the legend, and you can edit it
