@@ -302,6 +302,7 @@ The :guilabel:`New Temporary Scratch Layer` dialog will be displayed as shown in
       :guilabel:`Precision`
    #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
    #. Repeat the steps above for each field you need to add
+   #. Change the field order using the |moveUp|:guilabel:`Move Up` and |moveDown|:guilabel:`Move Down` buttons
 #. Once you are happy with the settings, click :guilabel:`OK`.
    QGIS will add the new layer to the :guilabel:`Layers` panel, and you can edit
    it as described in section :ref:`sec_edit_existing_layer`.
