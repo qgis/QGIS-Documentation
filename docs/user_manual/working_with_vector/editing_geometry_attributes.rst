@@ -1447,8 +1447,10 @@ a multipolygon/multipolyline/multipoint feature is created.
 #. First, select the features you'd like to combine.
 #. Then press the |mergeFeatures| :sup:`Merge Selected Features` button.
 #. In the new dialog, the :guilabel:`Merge` line at the bottom of the table
-   shows the attributes of the resulting feature. You can alter any of these
-   values either by:
+   shows the attributes of the resulting feature. If any :ref:`Merge policy <policies>`
+   have been defined, they are automatically applied to populate this row.
+   However, you can override these values manually.
+   Modify the values in the following ways:
 
    * manually replacing the value in the corresponding cell;
    * selecting a row in the table and pressing :guilabel:`Take attributes from
