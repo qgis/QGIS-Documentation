@@ -97,10 +97,6 @@ Further management of GeoPackage layers can be done with the
 
 
 .. _vector_create_shapefile:
-.. |moveUp| image:: /static/common/mActionArrowUp.png
-   :width: 1.5em
-.. |moveDown| image:: /static/common/mActionArrowDown.png
-   :width: 1.5em
 
 
 Creating a new Shapefile layer
@@ -986,6 +982,10 @@ when used in conjunction with this spatial index syntax.
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
+   :width: 1.5em
+.. |moveUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
+.. |moveDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
