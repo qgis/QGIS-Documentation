@@ -999,7 +999,14 @@ does not contain elevation data or you can set:
   Users can either populate the lower and upper values manually
   or use an |expression| :guilabel:`Expression` to auto-fill all band values based on expression.
   The expression-based fill allows you to design expressions that extract useful information from band names.
-  For example, extracting the depth value from a band name like "Band 001: depth=-5500 (meters)".  
+  For example, extracting the depth value from a band name like "Band 001: depth=-5500 (meters)".
+* :guilabel:`Dynamic Elevation Range Per Band`: This mode calculates elevation ranges for raster bands
+  dynamically using QGIS expressions. It's ideal for datasets where elevation values follow a consistent
+  pattern across bands (like equally spaced vertical layers), eliminating the need to manually assign fixed elevations.
+  Instead of entering individual values for each band, you define expressions for the
+  :guilabel:`Lower` and :guilabel:`Upper` elevation bounds. These expressions can use variables like
+  ``@band``, ``@band_name``, or ``@band_description``
+  automatically computing the elevation range based on each band's properties.
 * :guilabel:`Profile Chart Appearance`: controls the rendering
   of the raster elevation data in the profile chart.
   The profile :guilabel:`Style` can be set as:
