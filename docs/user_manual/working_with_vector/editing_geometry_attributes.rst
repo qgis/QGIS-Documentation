@@ -1447,8 +1447,10 @@ a multipolygon/multipolyline/multipoint feature is created.
 #. First, select the features you'd like to combine.
 #. Then press the |mergeFeatures| :sup:`Merge Selected Features` button.
 #. In the new dialog, the :guilabel:`Merge` line at the bottom of the table
-   shows the attributes of the resulting feature. You can modify
-   any of these values using one of the following methods:
+   shows the attributes of the resulting feature. If any :ref:`Merge policy <policies>`
+   have been defined, they are automatically applied to populate this row.
+   However, you can override these values manually.
+   Modify the values in the following ways:
 
    * manually replacing the value in the corresponding cell;
    * selecting a row in the table and pressing :guilabel:`Take attributes from
@@ -1457,25 +1459,15 @@ a multipolygon/multipolyline/multipoint feature is created.
      to use the attributes from the longest line feature,
      the largest polygon, or the multipoints with the most parts;
    * pressing :guilabel:`Skip all fields` to use empty attributes;
-   * using the drop-down menu at the top of each column to apply a merge
-     policy or aggregation per field. Each field in the :guilabel:`Merge Features` dialog
-     applies a default merge policy, which can be
-     configured per field in the :guilabel:`Attributes Form` tab of the
-     :guilabel:`Layer Properties`. These merge policies define how the initial
-     value in the merge row is determined when merging features.
-     After a policy is set in the layer properties, it is automatically applied in
-     the :guilabel:`Merge Features` dialog.
-     You can override this per field directly in the dialog by expanding the
-     drop-down menu at the top of each column. From there, you can:
-
-     * Select a different :ref:`merge policies <policies>`
-     * Choose an aggregate function (Minimum, Maximum, Median,
-       Sum, Count, Concatenation... depending on the type of the field.
-       see :ref:`statistical_summary` for the full list of functions)
+   * expanding the drop down menu at the top of the table, select any of the
+     above options to apply to the corresponding field only. There, you can also
+     choose to aggregate the initial features attributes (Minimum, Maximum, Median,
+     Sum, Count, Concatenation... depending on the type of the field.
+     see :ref:`statistical_summary` for the full list of functions).
 
    .. note::
-    If a field uses the :guilabel:`Use Default Value` policy, and a default
-    value is defined in the layer, that value is used for the merged feature.
+    If the layer has default values or clauses present on fields,
+    these are used as the initial value for the merged feature.
 
 #. Press :guilabel:`OK` to apply the modifications. A single (multi)feature is
    created in the layer, replacing the previously selected ones.
