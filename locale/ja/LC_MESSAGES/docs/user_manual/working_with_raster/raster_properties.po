@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Fuka, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-17 20:03+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Fuka, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -250,6 +251,22 @@ msgid ""
 "last save time and size, the used provider"
 msgstr "一般情報：プロジェクト内での名前、ソースへのパス、付随的なファイルのリスト、最終更新時刻、ファイルの大きさ、使用しているプロバイダ"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:83
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties include "
+":guilabel:`Identify/format`, which influences how the results from using the"
+" |identify| :ref:`Identify features <raster_identify>` tool over a raster "
+"layer are formatted. More properties can be created and managed using "
+"PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"カスタムプロパティ、アクティブなプロジェクト内で、そのレイヤに関する追加情報を保存するために使用されます。デフォルトのカスタムプロパティには、ラスターレイヤで"
+" |identify| :ref:`Identify features<raster_identify>`を使用した際の結果の表示形式に影響を与える "
+":guilabel:`識別/形式` があります。さらにプロパティを作成・管理する場合は、PyQGIS を使用し、具体的には "
+":pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` "
+"メソッドを通じて設定することが可能です。"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1145
 msgid "identify"
 msgstr "identify"
@@ -384,6 +401,12 @@ msgid ""
 msgstr ""
 ":ref:`単バンド疑似カラー <label_colormaptab>` - "
 "このレンダラーは連続値パレットやカラーマップのファイルに使用します（例：標高地図など）"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:159
+msgid ""
+":ref:`Single color <singlecolor>` - the raster layer will be rendered with a"
+" single color."
+msgstr ":ref:`Single color<singlecolor>` - ラスターレイヤを単色で描画します。"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:161
 msgid ":ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a band."
@@ -590,6 +613,32 @@ msgstr ""
 "）は連続カラーランプを使用して表示されます。凡例の設定を調整したり、代わりに個別クラス（と色）を使用した凡例を使いたい場合には、 "
 ":guilabel:`凡例の設定...` ボタンを押してください。詳細は :ref:`raster_legend_settings` "
 "を参照してください。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:309
+msgid "Single color"
+msgstr "単色"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:311
+msgid ""
+"This renderer allows you to render a raster layer using :guilabel:`Single "
+"color`. This type of renderer is useful when you want to display a raster "
+"layer uniformly, without any variation in color based on pixel values."
+msgstr ""
+"このレンダラーを使用すると、ラスターレイヤを :guilabel:`Single color` "
+"で描画できます。このレンダラーは、画素値による色の変化をつけずにラスターレイヤを一様に表示したい場合に便利です。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:315
+msgid ""
+"The single color renderer can be used with both single-band and multiband "
+"raster layers. When used with multiband rasters, you can select which band "
+"to apply the single color to, effectively displaying that specific band "
+"uniformly across the entire layer."
+msgstr ""
+"単色レンダラーは、シングルバンドおよびマルチバンドのラスターレイヤの両方で使用できます。マルチバンドラスタで使用する場合は、どのバンドに単色を適用するかを選択でき、その特定のバンドをレイヤ全体で一様に表示することが可能です。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:324
+msgid "Raster Symbology - Single color rendering"
+msgstr "ラスタシンボロジー - 単色レンダリング"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:330
 msgid "Hillshade"
@@ -1260,6 +1309,27 @@ msgid ""
 "appear in the pixel list."
 msgstr "|symbologyAdd| :sup:`手動で値を追加` ボタンをクリックします。新しい行がピクセルリストに表示されます。"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:663
+msgid ""
+"For single-band based symbology (e.g. DEMs), enter the **From** and **To** "
+"values and adjust the **Percent Transparent** to apply."
+msgstr ""
+"シングルバンドを用いたシンボロジー (e.g. DEMs) では、**From** と **To** の値を入力し、適用する 透過率 **Percent"
+" Transparen** を調整します。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:665
+msgid ""
+"For multiband based symbology (e.g. RGB images) enter the **Red**, **Green**"
+" and **Blue** values of the pixel and adjust the **Percent Transparent** to "
+"apply. QGIS supports **Tolerance** for pixel values, when defining "
+"transparency. This means that pixels with color close to the specified RGB "
+"values can also be made transparent. Note that this feature applies only to "
+"multiband rasters."
+msgstr ""
+"マルチバンドを用いたシンボロジー (e.g. RGB画像) では、ピクセルの **赤**、**緑**、**青** の値を入力し、**適用する 透過率**"
+" を調整します。QGIS では透過設定時にピクセル値の **許容値** "
+"をサポートしています。これにより、指定したRGB値に近い色のピクセルも透過させることが可能です。この機能はマルチバンドラスタにのみ適用される点に注意してください。"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:670
 msgid ""
 "Alternatively, you can fetch the pixel values directly from the raster using"
@@ -1296,6 +1366,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1141
 msgid "fileSave"
 msgstr "fileSave"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:690
+msgid "Using tolerances for multiband rasters"
+msgstr "マルチバンドラスタでの許容値の使用"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:696
 msgid "Histogram Properties"
@@ -1474,9 +1548,61 @@ msgstr ""
 ":guilabel:`固定時間範囲` ：アニメーション時刻が :guilabel:`開始時刻` と :guilabel:`終了時刻` "
 "の範囲内にある場合にのみ、このラスタレイヤを表示します。"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:803
+msgid ""
+":guilabel:`Fixed Time Range Per Band`: only shows a band when the current "
+"animation time is between its :guilabel:`Begin` and :guilabel:`End` date "
+"range. This option allows you to either manually set these time ranges for "
+"each band or use the |expression| button to automatically generate datetime "
+"values, enabling detailed temporal analysis and visualization. This mode is "
+"particularly useful for working with raster layers where each band "
+"corresponds to a specific time period, such as NetCDF files."
+msgstr ""
+":guilabel:`バンドごとの固定時間範囲`: 現在のアニメーション時間が、そのバンドの :guilabel:`開始` と "
+":guilabel:`終了` "
+"の日付範囲内にあるときのみ、そのバンドを表示します。このオプションでは、各バンドの時間範囲を手動で設定することも、|expression| "
+"ボタンを使用して日時値を自動生成することもでき、詳細な時系列解析や可視化を可能にします。このモードは、各バンドが特定の期間に対応しているNetCDFファイルなどのラスターレイヤを扱う際に特に有用です。"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1137
 msgid "expression"
 msgstr "expression"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:816
+msgid "Example of using the Fixed Time Range Per Band mode"
+msgstr "バンドごとの固定時間範囲モードの使用例"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:818
+msgid ""
+":guilabel:`Represents Temporal Values`: interprets each pixel in the raster "
+"layer as a datetime value. When this temporal mode is active, pixels that do"
+" not fall within the temporal range specified in the render context will be "
+"hidden, ensuring that only temporally relevant data is displayed. This mode "
+"is effective for:"
+msgstr ""
+":guilabel:`時系列値を表す`: "
+"ラスターレイヤの各ピクセルを日時値として解釈します。この時系列モードが有効な場合、レンダーコンテキストで指定された時系列範囲に該当しないピクセルは非表示となり、時系列的に関連するデータのみが表示されます。このモードは以下の用途に有効です:"
+" "
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:823
+msgid "Analyzing land use changes, like observing deforestation patterns."
+msgstr "森林伐採のパターンを観察するなど、土地利用の変化を分析すること。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:824
+msgid "Studying flooding by comparing water coverage across different times."
+msgstr "異なる時点の水域範囲を比較して洪水を調査すること。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:825
+msgid ""
+"Evaluating movement costs in terrain analysis, for example, using GRASS "
+"GIS's r.walk tool to calculate travel costs across a landscape."
+msgstr ""
+"地形解析における移動コストの評価、例えば GRASS GIS の r.walk ツールを使ってランドスケープ全体の移動コストを計算すること。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:834
+msgid ""
+"Application of the Represents Temporal Values mode - analyzing GLAD "
+"deforestation alerts"
+msgstr "時系列値を表すモードの適用例 ‐ GLAD 森林伐採アラートの分析"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:836
 msgid ""
@@ -1587,6 +1713,20 @@ msgstr "ラスタの「ピラミッド」タブ"
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:900
 msgid "Elevation Properties"
 msgstr "標高プロパティ"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:902
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and its appearance in the :ref:`profile tool charts "
+"<label_elevation_profile_view>`. Specifically, you can choose to "
+":guilabel:`Disable` this configuration if the layer does not contain "
+"elevation data or you can set:"
+msgstr ""
+"|elevationscale| の :guilabel:`標高` タブでは、:ref:`3D map view <label_3dmapview>` "
+"内でのレイヤの標高プロパティおよび :ref:`profile tool charts<label_elevation_profile_view>` "
+"における表示を制御するオプションを提供します。具体的には、レイヤに標高データが含まれていない場合はこの設定を :guilabel:`無効化` "
+"することができ、または以下の項目を設定できます: "
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:913
 msgid "Raster Elevation Properties"

@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Fuka, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-08 10:04+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Fuka, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -243,6 +244,19 @@ msgstr "または、|iconView| :sup:`アイコンビュー` ボタンを使用�
 msgid "iconView"
 msgstr "iconView"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:102
+msgid ""
+"Press the :guilabel:`Save Symbol` button to open the :guilabel:`Save New "
+"Symbol` dialog. Here, you can choose the :guilabel:`Destination` where you "
+"want to add the symbol being edited, give it a :guilabel:`Name` and add "
+":guilabel:`Tag(s)`. You also have the option to |checkbox| :sup:`Add to "
+"favorites` your new symbol."
+msgstr ""
+":guialbel:`シンボルを保存` ボタンを押すと、:guilabel:`新しいシンボルの保存` "
+"ダイアログが開きます。ここでは、編集中のシンボルを追加したい :guilabel:`保存先` "
+"を選び、:guilabel::`名前を付け`、:guilabel:`タグ` を追加することができます。また、|checkbox| "
+":sup:`お気に入りに追加` オプションを選択して、新しいシンボルをお気に入りに追加することも可能です。"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:955
 msgid "checkbox"
 msgstr "checkbox"
@@ -278,6 +292,19 @@ msgid ""
 msgstr ""
 "この方向の強制固定はレンダリング時にのみ適用され、元の地物ジオメトリは変更されません。これにより、レンダリングされるデータセットや個々の地物のリングの向きとは無関係に、一貫性のある見た目の塗りつぶしシンボルが作成されます。"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:124
+msgid ""
+"for marker symbols, the :guilabel:`Buffer settings...` enables addition of a"
+" halo effect around the marker symbol in order to make it more readable "
+"against different backgrounds. The buffer is calculated and drawn using the "
+"shape of ALL the symbol layers in the marker. You can adjust the "
+":guilabel:`Size`, :guilabel:`Join style` and :guilabel:`Symbol` of display."
+msgstr ""
+"マーカーシンボルの場合、:guilabel:`バッファ設定...` "
+"を使用すると、マーカーシンボルの周囲にハロー効果を追加でき、さまざまな背景の上でも視認性を高めることができます。バッファは、マーカー内の "
+"すべてのシンボルレイヤの形状 を使用して計算・描画されます。表示する際の :guilabel:`サイズ` :guilabel:`結合スタイル` "
+":guilabel:`シンボル` を調整することが可能です。"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:129
 msgid ""
 "Depending on the :ref:`symbology <vector_style_menu>` of the layer a symbol "
@@ -305,6 +332,10 @@ msgid ""
 msgstr ""
 ":guilabel:`保存されたシンボルに一致` と :guilabel:`ファイルからのシンボルに一致...` で自動的に "
 ":ref:`シンボルを分類に割り当て <categorized_advanced_menu>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:136
+msgid ":ref:`Animation settings <animation_settings>`"
+msgstr ":ref:`Animation settings <animation_settings>`"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:141
 msgid "The symbol layer"
@@ -461,6 +492,10 @@ msgid ""
 msgstr ""
 ":guilabel:`アンカーポイント` ：シンボル上で象限点を定義し、配置の原点とします。これは、 :guilabel:`オフセット` "
 "が適用されるポイントです。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:213
+msgid "**Animated marker** (see :ref:`animated_marker`)"
+msgstr "**アニメーションマーカー** (参照 :ref:`animated_marker`)"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:214
 msgid ""
@@ -935,6 +970,81 @@ msgstr ""
 msgid "Examples of raster lines"
 msgstr "ラスタ線の例"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:463
+msgid ""
+"**Linear referencing**: allows placing text labels at regular intervals "
+"along a line, or at positions corresponding to existing vertices. Positions "
+"can be calculated using Cartesian distances, or interpolated from z/m "
+"values. Parameters include:"
+msgstr ""
+"**線形参照** 線上の一定間隔の位置や既存の頂点に対応する位置にテキストラベルを配置できる機能です。位置はデカルト距離を用いて計算することも、z/m "
+"値から補間することも可能です。パラメータには以下が含まれます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:468
+msgid ""
+":guilabel:`Measure placement`: Labels can be placed at regular cartesian 2d "
+"distances, at regular linearly interpolated spacing calculated using the Z "
+"or M values in geometries, or at existing vertices. A fixed or data-defined "
+":guilabel:`Interval` is given."
+msgstr ""
+":guilabel:`Measure placement`: ラベルを、デカルト2D距離で一定間隔ごと、ジオメトリ内の Z または M "
+"値を用いて計算された線形補間間隔ごと、または既存の頂点上に配置できます。固定値またはデータ定義による :guilabel:`間隔` を指定します。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:472
+msgid ""
+":guilabel:`Quantity`: Label displayed at each position represent the running"
+" distance along the line, or the linearly interpolated Z or M value. Labels "
+"are rendered using the full range of :ref:`text <text_format>` and "
+":ref:`number <number_formatting>` formatting functionalities available in "
+"QGIS."
+msgstr ""
+":guilabel:`Quantity`: 各位置に表示されるラベルは、ラインに沿った累積距離、または線形補間された Z 値や M "
+"値を表します。ラベルは、QGIS で利用可能な :ref:`text <text_format>` および "
+":ref:`number<number_formatting>` の書式設定機能をすべて使ってレンダリングされます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:479
+msgid ""
+"When using the distance-based placement or labels, the distances are "
+"calculated using 2D only. Cartesian calculations are based on the original "
+"layer CRS."
+msgstr "距離ベースのラベル配置を使用する場合、距離の計算は2Dのみで行われます。直交座標での計算は、元のレイヤのCRS基づいて行われます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:482
+msgid ""
+":guilabel:`Skip multiples of`: If set, labels which are a multiple of this "
+"value will be skipped over. This allows construction of complex referencing "
+"labels, e.g. where a symbol has two linear referencing symbol layers, one "
+"set to label every 100m in a small font, skipping multiples of 1000, and a "
+"second set to label every 1000m in a big bold font."
+msgstr ""
+":guilabel:`Skip multiples of`: "
+"この値の倍数にあたるラベルをスキップします。これにより複雑なリファレンスラベルを構築できます。例えば、シンボルに 2 "
+"つの線形リファレンスのシンボルレイヤを持たせ、小さいフォントで 100m ごとにラベルを付けつつ 1000 "
+"の倍数はスキップし、もう一方は大きく太字のフォントで 1000m ごとにラベルを付ける、といった設定が可能です。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:486
+msgid ""
+":guilabel:`Average angle over`: Labels are rendered using an angle "
+"calculated by averaging the linestring, so sharp tiny jaggies don't result "
+"in unslightly label rotation."
+msgstr ""
+":guilabel:`Average angle over`: "
+"ラベルの回転角度を、ラインストリングの平均角度から計算して適用します。これにより、小さな鋭いギザギザによってラベルが不自然に回転するのを防ぎます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:488
+msgid ""
+":guilabel:`Show marker symbols`, at referenced points in the line feature, "
+"using a full QGIS marker symbol. This allows e.g. showing a cross-hatch at "
+"the labeled point, for a \"ruler\" style line."
+msgstr ""
+":guilabel:'Show marker symbols` ラインフィーチャ内の参照ポイントに、QGIS "
+"のフル機能のマーカーシンボルを使用してマーカーを表示します。これにより、ラベル位置にクロスハッチを表示して \"定規\" "
+"スタイルのラインを表現することなどが可能です。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:497
+msgid "Drawing linear labels along line feature"
+msgstr "ライン地物に沿ってラベルを配置する"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:502
 msgid ""
 "**Lineburst**: renders a gradient along the width of a line. You can choose "
@@ -949,6 +1059,20 @@ msgstr ""
 #: ../../docs/user_manual/style_library/symbol_selector.rst:513
 msgid "Examples of lineburst lines"
 msgstr "線バーストの例"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:517
+msgid ""
+"**Filled line**: renders the interior of the lines using a fill symbol "
+"allowing for lines filled with gradients, line hatches, etc. The "
+":guilabel:`Stroke width`, :guilabel:`Offset`, :guilabel:`Join style`, "
+":guilabel:`Cap style` can be adjusted."
+msgstr ""
+"**塗りつぶしライン**: "
+"塗りつぶしシンボルを使ってラインの内部を描画します。グラデーションやラインハッチなどで塗りつぶされたラインを表現できます。:guilabel:`線幅`、:guilabel:`オフセット`、:guilabel:`結合スタイル`、:guilabel:`線端スタイルの調整`が可能です。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:528
+msgid "Examples of filled lines"
+msgstr "塗りつぶしラインの例"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:534
 msgid "Fill Symbols"
@@ -1373,6 +1497,17 @@ msgstr ""
 msgid "Some examples:"
 msgstr "いくつかの例："
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:785
+msgid "Render symbol as the centroid of a feature"
+msgstr "地物の重心位置にシンボルを配置する"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:838
+msgid ""
+"Create a curved arrow line connecting features of two layers based on their "
+":ref:`relation <project_relations>`"
+msgstr ""
+"2 つのレイヤの :ref:`relation <project_relations>`に基づいて、地物同士を接続する曲線矢印ラインを作成する"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:876
 msgid "The Vector Field Marker"
 msgstr "ベクタフィールドマーカー"
@@ -1420,3 +1555,81 @@ msgid ""
 "The magnitude of field can be scaled up or down to an appropriate size for "
 "viewing the field."
 msgstr "フィールドの大きさは、フィールドを見るのに適したサイズに拡大・縮小することができます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:903
+msgid "Animated marker"
+msgstr "アニメーションマーカー"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:905
+msgid ""
+"Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,"
+" :file:`.MNG`, etc. animation file to represent points on your map. You can "
+"specify:"
+msgstr ""
+"アニメーションマーカーシンボルタイプを使用すると "
+":file:`.GIF`、:file:`.WebP`、:file:`.MNG`、などのアニメーションファイルを地図上のポイントの表示に利用できます。指定できる項目は以下のとおりです:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:909
+msgid ":guilabel:`File` path,"
+msgstr ":guilabel:`ファイル` パス,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:910
+msgid ""
+":guilabel:`Frame rate`: number of steps that are shown per second, "
+"indicating how fast the animation is played,"
+msgstr ":guilabel:`フレームレート` : 1 秒あたりに表示されるステップ数で、アニメーションの再生速度を示します、"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:912
+msgid ":guilabel:`Size` in any :ref:`supported unit <unit_selector>`,"
+msgstr ":guilabel:`サイズ` 任意の :ref:`supported unitで<unit_selector>`,指定します。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:913
+msgid ":guilabel:`Opacity`,"
+msgstr ":guilabel:`不透明度`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:914
+msgid ":guilabel:`Rotation`,"
+msgstr ":guilabel:`回転`,"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:915
+msgid ""
+":guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions from the "
+"marker position,"
+msgstr ":guilabel:`オフセット` マーカー位置からの :guilabel:`x` および :guilabel:`y` 方向のずれ"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:917
+msgid ":guilabel:`Anchor point`"
+msgstr ":guilabel:`アンカーポイント`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:919
+msgid "There are two ways to handle animated symbols:"
+msgstr "アニメーションシンボルの取り扱い方法は2通りあります:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:921
+msgid ""
+"**When your map is not configured as an animation** (i.e. it's a standard "
+"QGIS project without animations), the frame for the animated markers will be"
+" determined solely by the current timestamp."
+msgstr ""
+"**マップがアニメーションとして設定されていない場合** "
+"(つまり、アニメーション機能を使っていない通常のQGISプロジェクトの場合)、アニメーションマーカーのフレームは現在のタイムスタンプのみによって決まります。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:931
+msgid "Animated marker when map is not configured as animation"
+msgstr "マップがアニメーションとして設定されていない場合のアニメーションマーカー"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:933
+msgid ""
+"**When your map is** :ref:`configured as an animation <maptimecontrol>`, the"
+" animated markers will sync with the animation's timeline. This means that "
+"animated markers will pause when the animation is paused, progress with the "
+"animation, and so forth. The map will also be redrawn according to the frame"
+" rate established for temporal animation. This mode is also applied when "
+"exporting an animation using the temporal controller."
+msgstr ""
+"マップが :ref:`configured as an "
+"animation<maptimecontrol>`,アニメーションマーカーはアニメーションのタイムラインと同期します。つまり、アニメーションが一時停止するとマーカーも停止し、アニメーションとともに進行します。また、マップは時間アニメーションで設定されたフレームレートに従って再描画されます。このモードは、時間コントローラーを使ってアニメーションをエクスポートする際にも適用されます。"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:946
+msgid "Animated marker when map is configured as animation"
+msgstr "マップがアニメーションとして設定されている場合のアニメーションマーカー"

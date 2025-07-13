@@ -9,6 +9,7 @@
 # tomoya miyoshi, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Shota Arakawa, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Shota Arakawa, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1338,6 +1339,22 @@ msgid ""
 msgstr ""
 "編集可能なベクタレイヤに対して、頂点ツールは地物の頂点を操作するCADプログラムと似たような機能を提供します。一度に複数の頂点を選択し、移動、追加、削除を行うことができます。また、頂点ツールはトポロジ編集機能をサポートしています。これらのツールは選択状態を維持し続けるため、何らかの操作を行った場合でも、その地物とツールの選択状態が維持されます。"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:611
+msgid "**Drawing a series of new vertices**"
+msgstr "**一連の新しい頂点を描く**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:613
+msgid ""
+"The vertex tool does not support :ref:`automatic tracing <tracing>` and is "
+"optimized for editing individual vertices and moving or deleting an "
+"arbitrary selection of multiple vertices.  Try using the "
+"|reshape|:sup:`Reshape Features` tool when you need to replace or insert a "
+"series of new vertices, especially if you want to trace other features."
+msgstr ""
+"頂点ツールは :ref:`自動トレース <tracing>` "
+"をサポートしておらず、個々の頂点の編集や、複数の頂点を任意に選択して移動・削除する操作に最適化されています。他の地物をトレースしたい場合や、一連の新しい頂点を置き換えたり挿入したりする必要がある場合は、"
+" |reshape|:sup:`地物の変形` ツールをお勧めします。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2331
 msgid "reshape"
 msgstr "reshape"
@@ -2541,6 +2558,28 @@ msgstr ""
 "|addPart| :sup:`部分を追加` は、ジオメトリのない地物にジオメトリを追加するためにも使用できます。まず、属性テーブルで地物を選択し、 "
 "|addPart| :sup:`部分を追加` ツールで新しいジオメトリをデジタイズします。"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1190
+msgid "**Order of vertices in polygon parts**"
+msgstr "**ポリゴンパーツにおける頂点の順序**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1192
+msgid ""
+"Unlike the OGC standards, QGIS doesn't constrain vertices of the exterior "
+"boundary of a polygon feature to be ordered counterclockwise. Thus, you can "
+"find both directions in a layer. However, every parts of the same "
+"multipolygon feature will have their outer vertices ordered following the "
+"same direction."
+msgstr ""
+"OGC標準とは異なり、QGISではポリゴン地物の外部境界の頂点が反時計回りに並ぶように制限されていません。そのため、1つのレイヤ内で両方向の頂点順序が存在する可能性があります。ただし、同一のマルチポリゴン地物内のすべての部分については、その外部頂点は同じ方向に沿って並べられます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1198
+msgid ""
+"You can however use the :ref:`qgisforcerhr` algorithm to constrain features "
+"of a layer to have vertices of their outer boundaries ordered in the "
+"clockwise direction."
+msgstr ""
+"しかし、 :ref:`右手ルールを強制` アルゴリズムを使用することで、レイヤ内の地物の外部境界の頂点を時計回りに並ぶよう制約することが可能です。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1208
 msgid ""
 "The |deletePart| :sup:`Delete Part` tool allows you to delete parts from "
@@ -2562,6 +2601,57 @@ msgid ""
 msgstr ""
 "ツールバーの |addRing| :sup:`リングを追加` "
 "アイコンを使用して、リングポリゴンを作成できます。これは、既存のポリゴン領域の内部にさらにポリゴンをデジタイズできて、それが「穴」となり、外側と内側のポリゴンの境界の間の領域のみがリングポリゴンとして残ります。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1227
+msgid "To add a ring:"
+msgstr "リングを追加:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1229
+msgid "Select the feature(s) to modify"
+msgstr "変更する地物（複数可）を選択"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1230
+msgid "Activate the |addRing| :sup:`Add Ring` tool"
+msgstr " |addRing| :sup:`リングを追加` ツールをアクティブにする"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1231
+msgid ""
+"Draw a polygon within the selected geometries, using the aforementioned "
+":ref:`techniques <drawing_methods>`. A hole appears in the selected "
+"geometries."
+msgstr ""
+"前述の、 :ref:`テクニック <drawing_methods>` "
+"を用いて、選択したジオメトリの内側にポリゴンを描画します。すると、選択されたジオメトリに穴が作成されます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1234
+msgid ""
+"If no geometry is selected when the ring is drawn, then a hole is added to "
+"each of the polygons the ring is drawn over."
+msgstr "リングを描画する際にジオメトリが選択されていない場合、そのリングが重なったすべてのポリゴンに穴が追加されます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1237
+msgid "**Order of vertices in polygon rings**"
+msgstr "**ポリゴンリングにおける頂点の順序**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1239
+msgid ""
+"Unlike the OGC standards, QGIS doesn't constrain vertices of the exterior "
+"boundary of a polygon feature to be ordered counterclockwise. Thus, you can "
+"find both directions in a layer. However, every rings of the same "
+"(multi)polygon feature will have their vertices ordered in the opposite "
+"direction to the outer boundary's."
+msgstr ""
+"OGC標準とは異なり、QGISではポリゴン地物の外部境界の頂点が反時計回りに並ぶように制約されていません。そのため、1つのレイヤ内で両方向の頂点順序が存在する可能性があります。ただし、同一の（複数）ポリゴン地物内の各リングについては、外部境界とは逆方向に頂点が並べられます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1245
+msgid ""
+"You can however use the :ref:`qgisforcerhr` algorithm to constrain features "
+"of a layer to have vertices of their outer boundaries ordered in the "
+"clockwise direction, and vertices of their interior rings ordered in the "
+"counter-clockwise direction."
+msgstr ""
+"しかし、 :ref:`右手ルールを強制` "
+"アルゴリズムを使用することで、レイヤ内の地物の外部境界の頂点を時計回りに、内部リングの頂点を反時計回りに並ぶように制約することができます。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1256
 msgid ""
@@ -2681,6 +2771,55 @@ msgstr ""
 msgid "Offset Curves"
 msgstr "曲線のオフセット"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1346
+msgid ""
+"The |offsetCurve| :sup:`Offset Curve` tool creates parallel shifts of line "
+"layers. The tool can be applied to the edited layer (the geometries are "
+"modified) or also to background layers (in which case it creates copies of "
+"the lines / rings and adds them to the edited layer). It is thus ideally "
+"suited for the creation of distance line layers. The :guilabel:`User Input` "
+"dialog pops-up, showing the displacement distance and other settings."
+msgstr ""
+"|offsetCurve| :sup: `Offset Curve` "
+"ツールは、ラインレイヤの平行シフトを作成するツールです。このツールは、編集中のレイヤーに適用してジオメトリを変更することも、背景レイヤーに対して適用してラインやリングのコピーを作成し、それらを編集中のレイヤーに追加することもできます。そのため、距離を持つラインレイヤの作成に理想的です。ツールの実行時には"
+" :guilabel: `ユーザー入力` ダイアログが表示され、オフセット距離やその他の設定を入力できます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1355
+msgid ""
+"To create a shift of a line or polygon layer, you must first go into editing"
+" mode and activate the |offsetCurve| :sup:`Offset Curve` tool. Then click on"
+" a feature to shift it. Move the mouse and click where wanted or enter the "
+"desired distance in the user input widget. Holding :kbd:`Ctrl` during the "
+"2nd click will make an offset copy. Your changes may then be saved with the "
+"|saveEdits| :sup:`Save Layer Edits` tool."
+msgstr ""
+"ラインまたはポリゴンレイヤをシフトするには、まず編集モードに入り、　|offsetCurve| :sup:`Offset Curve` "
+"ツールを有効にします。次に、シフトする地物をクリックします。マウスを動かして、シフトさせたい位置を再度クリックするか、ユーザー入力ウィジェットから任意の値を入力して位置を定めます。2度目のクリックの際に"
+" :kbd:`Ctrl` キーを押したままにすると、オフセットのコピーが作成されます。変更内容は |saveEdits| "
+":sup:`レイヤ変更内容を保存` ツールで保存可能です。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1363
+msgid ""
+"For geometries on background layers make sure that snapping is on and hold "
+":kbd:`Ctrl` to select the geometry from the background. Also hold "
+":kbd:`Ctrl` when doing the second click. Geometries will be converted to the"
+" target layer geometry type."
+msgstr ""
+"背景レイヤのジオメトリを操作する場合は、スナップ機能を有効にし、 :kbd:`Ctrl` "
+"キーを押しながらクリックして背景レイヤのジオメトリを選択してください。また、2回目のクリックの際にも :kbd:`Ctrl` "
+"キーを押したままにしてください。ジオメトリは変換先レイヤのジオメトリタイプに変換されます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1367
+msgid ""
+"QGIS options dialog (Digitizing tab then **Curve offset tools** section) or "
+"the |settings| icon in the :guilabel:`User Input` dialog allows you to "
+"configure :ref:`some parameters <curve_offset_tool>` like **Join style**, "
+"**Quadrant segments**, **Miter limit** and **End cap style**."
+msgstr ""
+"QGISの設定ダイアログ（デジタイジングタブ内の **Curve offset ツール** セクション）や、:guilabel:`ユーザー入力` "
+"ダイアログの |settings| アイコンから、 **統合スタイル**, **象限セグメント**, **Miter l制限** そして "
+"**先端スタイル** などの :ref:`いくつかのパラメータ <curve_offset_tool>` を設定可能です。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2349
 msgid "settings"
 msgstr "settings"
@@ -2725,6 +2864,18 @@ msgstr "ライン地物またはポリゴン地物を分割するには："
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1401
 msgid "Select the |splitFeatures| :sup:`Split Features` tool."
 msgstr "|splitFeatures| :sup:`地物を分割` ツールを選択します。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1402
+msgid ""
+"Draw a line across the feature(s) you want to split. If a selection is "
+"active, only selected features are split. The original feature is then "
+"assigned the biggest geometry resulting from the splitting, and new features"
+" are created for the remaining parts. Fields of the features are "
+"filled/updated according to the datasource provider rules or their "
+":ref:`splitting policy <policies>`."
+msgstr ""
+"分割したい地物に割したい地物（複数可）に線を描いてください。選択がアクティブであれば、選択されている地物の身が分割されます。分割後、元の地物には最大のジオメトリが割り当てられ、残りの部分については新しい地物が作成されます。地物の属性はデータソースプロバイダーのルールまたは、"
+" :ref:`ポリシー <policies>` に則って入力/更新されます。"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1408
 msgid ""
@@ -3599,6 +3750,15 @@ msgstr ""
 "|unchecked| :guilabel:`X/Y点`: "
 "頂点にカーソルを合わせると、そのXまたはY座標に沿って、マップキャンバス上に紫色の点線が表示されます。この仮想線上の任意の場所に頂点をスナップすることができます。2つの異なる頂点にカーソルを合わせると、両方の仮想座標線が生成され、その交点にスナップすることも可能です。"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1819
+msgid ""
+"|circlesIntersection| :sup:`2-circle Point Intersection`: allows you to "
+"digitize a point or vertex at the intersection of two circles. (more at "
+":ref:`circle_intersection`)."
+msgstr ""
+"|circlesIntersection| :sup:`2-circle Point Intersection`: "
+"2つの円の交差点にポイントや頂点をデジタイズすることができます。（詳しくは :ref:`2円の交差` をご覧ください。）"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2237
 msgid "circlesIntersection"
 msgstr "circlesIntersection"
@@ -4103,6 +4263,49 @@ msgstr ""
 "|cadConstruction| :sup:`作図モード` アイコンをクリックするか、キーボードショートカット :kbd:`C` で *作図モード* "
 "有効化・無効化を切り替えられます。作図モード中では、マップキャンバスをクリックしても新しい頂点は追加されませんが、クリックした位置はキャプチャされるので、距離や角度、X、Y、Z、M値の相対値をロックするための基準点として使用できます。"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2019
+msgid ""
+"In the |cadConstruction| :sup:`Construction mode` you will find a drop-down "
+"menu where you can choose to:"
+msgstr " |cadConstruction| :sup:`作図モード` ではドロップダウンメニューが表示され、以下の操作を選択することができます:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2022
+msgid ""
+"|checkbox| :guilabel:`Record Construction Guides`: All construction steps "
+"are rendered as dashed lines. Each step that you perform is visually "
+"represented, allowing you to trace the construction process. The guides are "
+"displayed as long as :guilabel:`Advanced Digitizing` remains active."
+msgstr ""
+"|checkbox| :guilabel:`Record Construction Guides`: "
+"すべての作図ステップが破線として描画されます。各ステップが視覚的に表示されるため、作図プロセスをたどることができます。ガイドは、 "
+":guilabel:`高度なデジタイズ` が有効である限り表示されます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2026
+msgid ""
+"|checkbox| :guilabel:`Show Construction Guides`: Allows you to make "
+"construction guides visible or hidden on the canvas. When enabled, all "
+"active guides are displayed, offering better spatial orientation and "
+"precision during the digitizing process."
+msgstr ""
+"|checkbox| :guilabel:`Show Construction Guides`: "
+"キャンバス上に作図ガイドを表示／非表示に切り替えることができます。有効にすると、すべてのアクティブなガイドが表示され、デジタイジング作業中の空間的な把握と精度の向上に役立ちます。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2029
+msgid ""
+"|checkbox| :guilabel:`Snap to Visible Construction Guides`: The guides are "
+"snap-able, allowing you to start new construction steps from any point along"
+" the existing guides."
+msgstr ""
+"|checkbox| :guilabel:`Snap to Visible Construction Guides`: "
+"表示されている作図ガイドにスナップできるようになり、既存のガイド上の任意の点から新たな作図ステップを開始することが可能になります。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2031
+msgid ""
+"Choose :guilabel:`Clear Construction Guides` to remove all the guides from "
+"the canvas."
+msgstr ""
+" :guilabel:`Clear Construction Guides` をクリックすると、キャンバス上のすべてのガイドを削除することができます。"
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2033
 msgid ""
 "As an example, the construction mode can be used to draw some point at an "
@@ -4249,6 +4452,10 @@ msgid ""
 "parameter to cancel their use in the middle of the process."
 msgstr ""
 "これらの2つのツールは単に、垂直や平行となるちょうどの角度を見つけて、編集中に角度パラメータをロックするだけです。角度パラメータのロックを解除すると、デジタイズ中のこれらの2つのツールの使用をキャンセルします。"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2121
+msgid "2-circle point intersection"
+msgstr "2円の交点"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2145
 msgid "The Processing in-place layer modifier"

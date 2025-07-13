@@ -80,7 +80,7 @@ msgid ""
 "Once the target version repository is configured and QGIS Server installed, "
 "you can test the installation with:"
 msgstr ""
-"Sukonfigūravus paskirties versijos repozitoriją ir įdiegus QGIS serverį, jūs"
+"Sukonfigūravus paskirties versijos repozitoriją ir įdiegus QGIS Serverį, jūs"
 " galite patikrinti diegimą su:"
 
 #: ../../docs/server_manual/getting_started.rst:35
@@ -223,7 +223,7 @@ msgid ""
 msgstr ""
 "Dabar, kai Apache žino, kad turi atsakinėti į užklausas, skirtas "
 "http://qgis.demo, mums taipogi reikia nustatyti kliento sistemą, kad ji "
-"žinotų, kas yra ``qgis.demo``. Tai mes padarysimte pridėdami ``127.0.0.1 "
+"žinotų, kas yra ``qgis.demo``. Tai mes padarysime pridėdami ``127.0.0.1 "
 "qgis.demo`` į `hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ "
 "failą."
 
@@ -261,25 +261,532 @@ msgstr ""
 "QGIS Serveris dabar pasiekiamas http://qgis.demo. Norėdami patikrinti, "
 "įrašykite į naršyklę tokią paprastą užklausą:"
 
+#: ../../docs/server_manual/getting_started.rst:238
+msgid "NGINX HTTP Server"
+msgstr "NGINX HTTP Serveris"
+
+#: ../../docs/server_manual/getting_started.rst:242
+msgid ""
+"You can also use QGIS Server with `NGINX <https://nginx.org/en/docs/>`__. "
+"Unlike Apache, NGINX does not automatically spawn FastCGI processes. The "
+"FastCGI processes are to be started by something else."
+msgstr ""
+"Jūs taipogi galite naudoti QGIS Serverį su `NGINX "
+"<https://nginx.org/en/docs/>`__. Priešingai nei Apache, NGINX nemoka "
+"automatiškai pakelti FastCGI procesų. FastCGI procesus pakelti turi kas nors"
+" kitas."
+
+#: ../../docs/server_manual/getting_started.rst:246
+msgid "Install NGINX:"
+msgstr "Įdiekite NGINX:"
+
+#: ../../docs/server_manual/getting_started.rst:253
+msgid ""
+"As a first option, you can use **spawn-fcgi** or **fcgiwrap** to start and "
+"manage the QGIS Server processes. Official Debian packages exist for both. "
+"When you have no X server running and you need, for example, printing, you "
+"can use :ref:`xvfb <xvfb>`."
+msgstr ""
+"Kaip pirmą pasirinkimą galite naudoti **spawn-fcgi** ar **fcgiwrap**, kuris "
+"paleistų ir valdytų QGIS Serverio procesus. Abu turi oficialius Debian "
+"paketus. Jei neturite veikiančio X serverio ir jums reikia, pavyzdžiui, "
+"spausdinimo, galite naudoti :ref:`xvfb <xvfb>`."
+
+#: ../../docs/server_manual/getting_started.rst:259
+msgid ""
+"Another option is to rely on **Systemd**, the init system for GNU/Linux that"
+" most Linux distributions use today. One of the advantages of this method is"
+" that it requires no other components or processes. It’s meant to be simple,"
+" yet robust and efficient for production deployments."
+msgstr ""
+"Kitas variantas yra naudoti **Systemd**, GNU/Linux inicializavimo sistemą, "
+"kurią šiandien naudoja dauguma distribucijų. Vienas iš šio metodo pranašumų "
+"yra tas, kad tai nereikalauja jokių kitų komponentų ar procesų. Jis turėtų "
+"būti paprastas, bet stabilus ir efektyvus gamybos aplinkose."
+
+#: ../../docs/server_manual/getting_started.rst:266
+msgid "NGINX Configuration"
+msgstr "NGINX konfigūracija"
+
+#: ../../docs/server_manual/getting_started.rst:268
+msgid ""
+"The **include fastcgi_params;** used in the previous configuration is "
+"important, as it adds the parameters from :file:`/etc/nginx/fastcgi_params`:"
+msgstr ""
+"Svarbus ankstesnėje konfigūracijoje naudotas **include fastcgi_params;**, "
+"nes jis prideda parametrus iš :file:`/etc/nginx/fastcgi_params`:"
+
+#: ../../docs/server_manual/getting_started.rst:298
+msgid ""
+"Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS "
+"Server. In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you "
+"have to use ``fastcgi_param`` instruction to define these variables as shown"
+" below:"
+msgstr ""
+"Taipogi galite naudoti kai kuriuos :ref:`qgis-server-envvar` skirtus QGIS "
+"Serverio konfigūravimui. NGINX konfigūracijos faile, "
+":file:`/etc/nginx/nginx.conf`, jūs turite naudoti instrukciją "
+"``fastcgi_param``, kad apibrėžtumėte šiuos kintamuosius taip, kaip parodyta "
+"žemiau:"
+
+#: ../../docs/server_manual/getting_started.rst:313
+msgid "FastCGI wrappers"
+msgstr "FastCGI įpakavimai"
+
+#: ../../docs/server_manual/getting_started.rst:317
+msgid ""
+"**fcgiwrap** is easier to set up than **spawn-fcgi**, because it's already "
+"wrapped in a Systemd service. But it also leads to a solution that is much "
+"slower than using spawn-fcgi. With fcgiwrap, a new QGIS Server process is "
+"created on each request, meaning that the QGIS Server initialization "
+"process, which includes reading and parsing the QGIS project file, is done "
+"on each request. With spawn-fcgi, the QGIS Server process remains alive "
+"between requests, resulting in much better performance. For that reason, "
+"spawn-fcgi is recommended for production use."
+msgstr ""
+"**fcgiwrap** lengviau paruošti nei **spawn-fcgi**, nes jis jau įpakuotas "
+"kaip Systemd paslauga. Bet tai taipogi veda į sprendimą, kuris yra daug "
+"lėtesnis nei naudojant spawn-fcgi. Su fcgiwrap, naujas QGIS Serverio "
+"procesas sukuriamas kiekvienam procesui, kas reiškia, kad QGIS Serverio "
+"inicializavimo procesas, kuriame yra ir QGIS projekto failo skaitymas ir "
+"nagrinėjimas, vykdomas kiekvienai užklausai. Su spawn-fcgi, QGIS Serverio "
+"procesas išlieka tarp užklausų, taip gaunant daug geresnę greitaveiką. Dėl "
+"šios priežasties gamyboje rekomenduojama naudoti spawn-fcgi."
+
 #: ../../docs/server_manual/getting_started.rst:327
 msgid "spawn-fcgi"
 msgstr "spawn-fcgi"
+
+#: ../../docs/server_manual/getting_started.rst:329
+msgid ""
+"If you want to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
+"fcgi/wiki>`_:"
+msgstr ""
+"Jei norite naudoti `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
+"fcgi/wiki>`_:"
+
+#: ../../docs/server_manual/getting_started.rst:331
+msgid "The first step is to install the package:"
+msgstr "Pirmas žingsnis yra įdiegti paketą:"
+
+#: ../../docs/server_manual/getting_started.rst:338
+#: ../../docs/server_manual/getting_started.rst:419
+msgid ""
+"Then, introduce the following block in your NGINX server configuration:"
+msgstr "Tada įterpkite tokį bloką į jūsų NGINX serverio konfigūraciją:"
+
+#: ../../docs/server_manual/getting_started.rst:348
+msgid "And restart NGINX to take into account the new configuration:"
+msgstr "Ir perstartuokite NGINX, kad būtų atsižvelgta į naują konfigūraciją:"
+
+#: ../../docs/server_manual/getting_started.rst:354
+msgid ""
+"Finally, considering that there is no default service file for spawn-fcgi, "
+"you have to manually start QGIS Server in your terminal:"
+msgstr ""
+"O tada, jei nėra numatytojo spawn-fcgi paslaugos failo, jūs turite rankiniu "
+"būdu pradėti QGIS Serverį jūsų terminale:"
+
+#: ../../docs/server_manual/getting_started.rst:363
+#: ../../docs/server_manual/getting_started.rst:438
+msgid "QGIS Server is now available at http://qgis.demo/qgisserver."
+msgstr "QGIS Serveris dabar pasiekiamas http://qgis.demo/qgisserver."
+
+#: ../../docs/server_manual/getting_started.rst:367
+msgid ""
+"When using spawn-fcgi, you may directly define environment variables before "
+"running the server. For example: ``export QGIS_SERVER_LOG_STDERR=1``"
+msgstr ""
+"Kai naudojate spawn-fcgi, jūs galite tiesiogiai apibrėžti aplinkos "
+"kintamuosius prieš paleidžiant serverį. Pavyzdžiui: ``export "
+"QGIS_SERVER_LOG_STDERR=1``"
+
+#: ../../docs/server_manual/getting_started.rst:371
+msgid ""
+"Of course, you can add an init script to start QGIS Server at boot time or "
+"whenever you want. For example with **systemd**:"
+msgstr ""
+"Be abejo, jūs galite pridėti init scenarijų, kuris paleistų QGIS Serverį "
+"sistemos paleidimo metu ar kada tik jūs norite. Pavyzdžiui su **systemd**:"
+
+#: ../../docs/server_manual/getting_started.rst:374
+msgid ""
+"Edit the file :file:`/etc/systemd/system/qgis-server.service` with this "
+"content:"
+msgstr ""
+"Pakeiskite failą :file:`/etc/systemd/system/qgis-server.service` šiuo "
+"turiniu:"
+
+#: ../../docs/server_manual/getting_started.rst:397
+msgid "Then enable and start the service:"
+msgstr "Tada įjunkite ir paleiskite paslaugą:"
+
+#: ../../docs/server_manual/getting_started.rst:405
+msgid ""
+"With the above commands spawn-fcgi spawns only one QGIS Server process."
+msgstr ""
+"Su aukščiau nurodytomis komandomis spawn-fcgi paleidžia tik vieną QGIS "
+"Server procesą."
 
 #: ../../docs/server_manual/getting_started.rst:408
 msgid "fcgiwrap"
 msgstr "fcgiwrap"
 
+#: ../../docs/server_manual/getting_started.rst:410
+msgid ""
+"Using `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ is "
+"much easier to setup than **spawn-fcgi** but it's much slower."
+msgstr ""
+"Naudojant `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ "
+"nustatymas yra daug paprastesnis, nei su **spawn-fcgi**, bet jis daug "
+"lėtesnis."
+
+#: ../../docs/server_manual/getting_started.rst:413
+msgid "You first have to install the corresponding package:"
+msgstr "Jūs visų pirma turite įdiegti atitinkamą paketą:"
+
+#: ../../docs/server_manual/getting_started.rst:431
+msgid ""
+"Finally, restart NGINX and **fcgiwrap** to take into account the new "
+"configuration:"
+msgstr ""
+"Ir pabaigai perstartuoti NGINX ir **fcgiwrap**, kad būtų atsižvelgta į naują"
+" konfigūraciją:"
+
 #: ../../docs/server_manual/getting_started.rst:442
 msgid "Systemd"
 msgstr "Systemd"
+
+#: ../../docs/server_manual/getting_started.rst:444
+msgid ""
+"QGIS Server needs a running X Server to be fully usable, in particular for "
+"printing. In the case you already have a running X Server, you can use "
+"systemd services."
+msgstr ""
+"Kad būtų pilnai panaudotas, konkrečiai spausdinimui, QGIS Serveriui reikia X"
+" Serverio. Jei jūs jau turite veikiantį X Serverį, jūs galite naudoti "
+"systemd paslaugas."
+
+#: ../../docs/server_manual/getting_started.rst:447
+msgid ""
+"This method, to deploy QGIS Server, relies on two Systemd units to "
+"configure: a `Socket unit "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.socket.html>`_"
+" and a `Service unit "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html>`_."
+msgstr ""
+"Šis QGIS Serverio paleidimo būdas remiasi dvejų Systemd vienetų "
+"konfigūracija: `Jungties vienetas "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.socket.html>`_"
+" ir `Paslaugos vienetas "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html>`_."
+
+#: ../../docs/server_manual/getting_started.rst:451
+msgid ""
+"The **QGIS Server Socket unit** defines and creates a file system socket, "
+"used by NGINX to start and communicate with QGIS Server. The Socket unit has"
+" to be configured with ``Accept=false``, meaning that the calls to the "
+"``accept()`` system call are delegated to the process created by the Service"
+" unit. It is located in :file:`/etc/systemd/system/qgis-server@.socket`, "
+"which is actually a template:"
+msgstr ""
+"**QGIS Serverio jungties vienetas** apibrėžia ir sukuria failų sistemos "
+"jungtį, kurią NGINX naudoja QGIS Serverio paleidimui ir bendravimui su juo. "
+"Jungties vienetas turi būti sukonfigūruotas su ``Accept=false``, kas "
+"reiškia, kad sisteminiai ``accept()`` kvietimai perduodami procesui, kurį "
+"sukūrė Paslaugos vienetas. Jis yra :file:`/etc/systemd/system/qgis-"
+"server@.socket`, kuris realiai yra šablonas:"
+
+#: ../../docs/server_manual/getting_started.rst:474
+msgid "Now enable and start sockets:"
+msgstr "Dabar įjunkite ir paleiskite jungtis:"
+
+#: ../../docs/server_manual/getting_started.rst:480
+msgid ""
+"The **QGIS Server Service unit** defines and starts the QGIS Server process."
+" The important part is that the Service process’ standard input is connected"
+" to the socket defined by the Socket unit. This has to be configured using "
+"``StandardInput=socket`` in the Service unit configuration located in "
+":file:`/etc/systemd/system/qgis-server@.service`:"
+msgstr ""
+"**QGIS Serverio paslaugos vienetas** apibrėžia ir paleidžia QGIS Serverio "
+"procesą. Svarbi dalis yra tai, kad paslaugos proceso standartinė įvestis "
+"prijungiama prie jungties, kuri apibrėžta jungties vienete. Tai turi būti "
+"sukonfigūruota naudojant ``StandardInput=socket`` paslaugos vieneto "
+"konfigūracijoje, kuri yra :file:`/etc/systemd/system/qgis-server@.service`:"
+
+#: ../../docs/server_manual/getting_started.rst:504
+msgid ""
+"The QGIS Server :ref:`environment variables <qgis-server-envvar>` are "
+"defined in a separate file, :file:`/etc/qgis-server/env`. It could look like"
+" this:"
+msgstr ""
+"QGIS Serverio :ref:`aplinkos kintamieji <qgis-server-envvar>` apibrėžiami "
+"atskirame faile :file:`/etc/qgis-server/env`. Jis gali atrodyti taip:"
+
+#: ../../docs/server_manual/getting_started.rst:514
+msgid "Now start socket service:"
+msgstr "Dabar paleiskite jungties paslaugą:"
+
+#: ../../docs/server_manual/getting_started.rst:520
+msgid ""
+"Finally, for the NGINX HTTP server, let's introduce the configuration for "
+"this setup:"
+msgstr ""
+"Na ir pabaigai, pridėkime šių nustatymų konfigūraciją NGINX HTTP serveriui:"
+
+#: ../../docs/server_manual/getting_started.rst:541
+msgid "Now restart NGINX for the new configuration to be taken into account:"
+msgstr "Dabar iš naujo paleiskite NGINX, kad įsigaliotų nauja konfigūracija:"
+
+#: ../../docs/server_manual/getting_started.rst:547
+msgid ""
+"Thanks to Oslandia for sharing `their tutorial "
+"<https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_."
+msgstr ""
+"Ačiū Oslandia, kad pasidalino `savo instrukcijomis "
+"<https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_."
 
 #: ../../docs/server_manual/getting_started.rst:552
 msgid "Xvfb"
 msgstr "Xvfb"
 
+#: ../../docs/server_manual/getting_started.rst:553
+msgid ""
+"QGIS Server needs a running X Server to be fully usable, in particular for "
+"printing. On servers it is usually recommended not to install it, so you may"
+" use ``xvfb`` to have a virtual X environment."
+msgstr ""
+"QGIS Serveriui reikia veikiančio X Serverio, kad jis pilnai veiktų, "
+"konkrečiau, kad veiktų spausdinimas. Serveriuose paprastai rekomenduojama jo"
+" nediegti, taigi jums gali tekti naudoti ``xvfb``, kad turėtumėte virtualią "
+"X aplinką."
+
+#: ../../docs/server_manual/getting_started.rst:557
+msgid ""
+"If you're running the Server in graphic/X11 environment then there is no "
+"need to install xvfb. More info at https://www.itopen.it/qgis-server-setup-"
+"notes/."
+msgstr ""
+"Jei jūsų Serveris veikia grafinėje/X11 aplinkoje, tai jums nereikia diegti "
+"xvfb. Daugiau informacijos rasite https://www.itopen.it/qgis-server-setup-"
+"notes/."
+
+#: ../../docs/server_manual/getting_started.rst:560
+msgid "To install the package:"
+msgstr "Kad įdiegtumėte paketą:"
+
+#: ../../docs/server_manual/getting_started.rst:566
+msgid ""
+"Create the service file, :file:`/etc/systemd/system/xvfb.service`, with this"
+" content:"
+msgstr ""
+"Sukurkite paslaugos failą :file:`/etc/systemd/system/xvfb.service` su tokiu "
+"turiniu:"
+
+#: ../../docs/server_manual/getting_started.rst:580
+msgid "Enable, start and check the status of the ``xvfb.service``:"
+msgstr ""
+"Įjunkite, paleiskite ir patikrinkite paslaugos ``xvfb.service`` būseną:"
+
+#: ../../docs/server_manual/getting_started.rst:587
+msgid ""
+"Then, according to your HTTP server, you should configure the **DISPLAY** "
+"parameter or directly use **xvfb-run**."
+msgstr ""
+"Tada, pagal jūsų HTTP serverį, jūs turėtumėte sukonfigūruoti **DISPLAY** "
+"parametrą arba tiesiogiai naudoti **xvfb-run**."
+
+#: ../../docs/server_manual/getting_started.rst:590
+msgid "Using Apache:"
+msgstr "Naudojant Apache:"
+
+#: ../../docs/server_manual/getting_started.rst:592
+msgid "Add to your *Fcgid* configuration (see :ref:`httpserver`):"
+msgstr "Pridėkite jūsų *Fcgid* konfigūraciją (žr. :ref:`httpserver`):"
+
+#: ../../docs/server_manual/getting_started.rst:598
+msgid "Restart Apache for the new configuration to be taken into account:"
+msgstr "Iš naujo paleiskite Apache, kad įsigaliotų nauja konfigūracija:"
+
+#: ../../docs/server_manual/getting_started.rst:604
+msgid "Using NGINX"
+msgstr "Naudojant NGINX"
+
+#: ../../docs/server_manual/getting_started.rst:606
+msgid "With spawn-fcgi using ``xvfb-run``:"
+msgstr "Su spawn-fcgi naudojant ``xvfb-run``:"
+
+#: ../../docs/server_manual/getting_started.rst:614
+msgid ""
+"With the **DISPLAY** environment variable in the HTTP server configuration."
+msgstr "Su **DISPLAY** aplinkos kintamuoju HTTP serverio konfigūracijoje."
+
+#: ../../docs/server_manual/getting_started.rst:621
+msgid "Installation on Windows"
+msgstr "Diegimas Windows sistemose"
+
+#: ../../docs/server_manual/getting_started.rst:625
+msgid ""
+"QGIS Server can also be installed on Windows systems using the OSGeo4W "
+"network installer (https://qgis.org/resources/installation-guide/#windows)."
+msgstr ""
+"QGIS Serverį taipogi galima įdiegti Windows sistemose naudojant OSGeo4W "
+"tinklo diegiklį (https://qgis.org/resources/installation-guide/#windows)."
+
+#: ../../docs/server_manual/getting_started.rst:628
+msgid "A simple procedure is the following:"
+msgstr "Paprasta procedūra yra tokia:"
+
+#: ../../docs/server_manual/getting_started.rst:630
+msgid "Download and run the OSGeo4W installer"
+msgstr "Atsisiųskite ir paleiskite OSGeo4W diegiklį"
+
+#: ../../docs/server_manual/getting_started.rst:631
+msgid ""
+"Follow the \"Advanced Install\" and install the **QGIS Desktop**, **QGIS "
+"Server** **apache** and **mod_fcgid** packages."
+msgstr ""
+"Vykdykite „Išmanųjų diegimą“ ir įdiekite **QGIS Darbastalį**, **QGIS "
+"Serverį** **apache** ir **mod_fcgid** paketus."
+
+#: ../../docs/server_manual/getting_started.rst:637
+msgid "Apache is not directly installed as a service on Windows. You need to:"
+msgstr ""
+"Windows sistemoje apache nėra tiesiogiai diegiamas kaip paslauga. Jums "
+"reikia:"
+
+#: ../../docs/server_manual/getting_started.rst:639
+msgid ""
+"Right-click the :file:`OSGeo4W.bat` file at the root of the "
+":file:`C:\\\\OSGeo4W\\\\` folder (if the default installation paths have "
+"been used) and select :guilabel:`Run as administrator`"
+msgstr ""
+"Spausti dešinį mygtuką ant failo :file:`OSGeo4W.bat` aplanko "
+":file:`C:\\\\OSGeo4W\\\\` šaknyje (jei buvo naudojami numatytieji diegimo "
+"keliai) ir parinkti :guilabel:`Vykdyti kaip administratoriumi`"
+
+#: ../../docs/server_manual/getting_started.rst:642
+msgid "In the console, run ``apache-install.bat``, which will output"
+msgstr "Konsolėje įvykdyti ``apache-install.bat``, kuris išves"
+
+#: ../../docs/server_manual/getting_started.rst:653
+msgid ""
+"The service is started as you can notice in the report. But the server may "
+"fail to run due to missing custom configuration."
+msgstr ""
+"Paslauga paleidžiama, kaip jūs ir matote ataskaitoje. Bet serveris gali ir "
+"nepasileisti dėl trūkstamos savos konfigūracijos."
+
+#: ../../docs/server_manual/getting_started.rst:655
+msgid ""
+"Edit the :file:`C:\\\\OSGeo4w\\\\apps\\\\apache\\\\conf\\\\httpd.conf` file "
+"with the following changes (various other combinations are possible):"
+msgstr ""
+"Faile :file:`C:\\\\OSGeo4w\\\\apps\\\\apache\\\\conf\\\\httpd.conf` "
+"padarykite šiuos pakeitimus (galimos įvairios kitos kombinacijos):"
+
 #: ../../docs/server_manual/getting_started.rst:662
 msgid "Purpose"
 msgstr "Tikslas"
+
+#: ../../docs/server_manual/getting_started.rst:663
+msgid "Existing config"
+msgstr "Esama konfigūracija"
+
+#: ../../docs/server_manual/getting_started.rst:664
+msgid "Replacement"
+msgstr "Pakeitimas"
+
+#: ../../docs/server_manual/getting_started.rst:665
+msgid ""
+"(Optional) Customize the address to listen to using an IP and/or port, You "
+"can and add as many entries as you wish."
+msgstr ""
+"(Pasirinktinai) keiskite adresą, kuriuo klausytis, naudojant ip ir/ar "
+"prievadą. Jūs galite pridėti tiek įrašų, kiek tik norite."
+
+#: ../../docs/server_manual/getting_started.rst:676
+msgid "Indicate where to find the script files"
+msgstr "Nurodykite, kur rasti scenarijų failus"
+
+#: ../../docs/server_manual/getting_started.rst:685
+msgid "Provide permissions on the script folder"
+msgstr "Nurodykite scenarijų aplanko teises"
+
+#: ../../docs/server_manual/getting_started.rst:702
+msgid "Enable file extensions to use for script files. Uncomment and complete"
+msgstr ""
+"Įjunkite failų plėtinį, kurį naudoti scenarijų failams. Atkomentuokite ir "
+"pabaikite"
+
+#: ../../docs/server_manual/getting_started.rst:710
+msgid "Add more OSGeo4W custom configuration variables"
+msgstr "Pridėkite daugiau OSGeo4W savo konfigūracijos kintamųjų"
+
+#: ../../docs/server_manual/getting_started.rst:723
+msgid "Restart the Apache web server"
+msgstr "Iš naujo paleiskite Apache serverį"
+
+#: ../../docs/server_manual/getting_started.rst:729
+msgid ""
+"Open browser window to testing a GetCapabilities request to QGIS Server. "
+"Replace ``localhost:8080`` with the IP and port you set to listen."
+msgstr ""
+"Atverkite naršyklės langą QGIS Serverio GetCapabilities užklausos "
+"testavimui. Pakeiskite ``localhost:8080`` į IP ir prievadą, kuriuo nurodėte "
+"klausytis."
+
+#: ../../docs/server_manual/getting_started.rst:736
+msgid ""
+"A :file:`XML` file with the capabilities should be returned. Your server is "
+"ready to use."
+msgstr ""
+"Turėtų būti grąžintas :file:`XML` failas su galimybėmis. Jūsų serveris "
+"paruoštas naudojimui."
+
+#: ../../docs/server_manual/getting_started.rst:744
+msgid "Serve a project"
+msgstr "Projekto pateikimas"
+
+#: ../../docs/server_manual/getting_started.rst:746
+msgid "Now that QGIS Server is installed and running, we just have to use it."
+msgstr ""
+"Dabar, kai QGIS Serveris jau įdiegtas ir paleistas, jums reikia jį "
+"panaudoti."
+
+#: ../../docs/server_manual/getting_started.rst:748
+msgid ""
+"Obviously, we need a QGIS project to work on. Of course, you can fully "
+"customize your project by defining contact information, precise some "
+"restrictions on CRS or even exclude some layers. Everything you need to know"
+" about that is described later in :ref:`Creatingwmsfromproject`."
+msgstr ""
+"Be abejo, jums reikia QGIS projekto, su kuriuo galėtumėte dirbti. Be abejo, "
+"jūs galite pilnai tinkinti savo projektą apibrėždami kontaktinę informaciją,"
+" apibrėžti CRS apribojimus ar net išimti kai kuriuos sluoksnius. Viskas, ką "
+"jums reikia apie tai žinoti, apibrėžta vėliau skyriuje "
+":ref:`Creatingwmsfromproject`."
+
+#: ../../docs/server_manual/getting_started.rst:753
+msgid ""
+"But for now, we are going to use a simple project already configured and "
+"previously downloaded in :file:`/home/qgis/projects/world.qgs`, as described"
+" above."
+msgstr ""
+"Bet pradžiai mes panaudosime paprastą projektą, kuris jau sukonfigūruotas ir"
+" anksčiau atsiųstas į :file:`/home/qgis/projects/world.qgs`, kaip aprašyta "
+"aukščiau."
+
+#: ../../docs/server_manual/getting_started.rst:756
+msgid ""
+"By opening the project and taking a quick look on layers, we know that 4 "
+"layers are currently available:"
+msgstr ""
+"Atvėrę projektą ir greitai peržiūrėję sluoksnius mes žinome, kad galimi 4 "
+"sluoksniai:"
 
 #: ../../docs/server_manual/getting_started.rst:759
 msgid "airports"
@@ -296,6 +803,34 @@ msgstr "countries"
 #: ../../docs/server_manual/getting_started.rst:762
 msgid "countries_shapeburst"
 msgstr "countries_shapeburst"
+
+#: ../../docs/server_manual/getting_started.rst:764
+msgid ""
+"You don't have to understand the full request for now but you may retrieve a"
+" map with some of the previous layers thanks to QGIS Server by doing "
+"something like this in your web browser to retrieve the *countries* layer:"
+msgstr ""
+"Jums kol kas nereikia suprasti visos užklausos, bet jūs galite ištraukti "
+"žemėlapį su kai kuriais iš ankstesnių sluoksnių, QGIS Serverio dėka, "
+"padarius kažką panašaus į tai jūsų naršyklėje, kad parsiųstumėte sluoksnį "
+"„countries“."
+
+#: ../../docs/server_manual/getting_started.rst:768
+msgid ""
+"If you followed the above instructions to install an Apache HTTP Server:"
+msgstr ""
+"Jei sekėte aukščiau pateiktas instrukcijas, kaip įdiegti Apache HTTP "
+"serverį:"
+
+#: ../../docs/server_manual/getting_started.rst:774
+msgid ""
+"If you followed the above instructions to install an NGINX HTTP Server:"
+msgstr ""
+"Jei sekėte aukščiau pateiktas instrukcijas, kaip įdiegti NGINX HTTP serverį:"
+
+#: ../../docs/server_manual/getting_started.rst:780
+msgid "If you obtain the next image, then QGIS Server is running correctly:"
+msgstr "Jei gaunate šį vaizdą, tai QGIS serveris veikia tvarkingai:"
 
 #: ../../docs/server_manual/getting_started.rst:1070
 msgid "checkbox"
