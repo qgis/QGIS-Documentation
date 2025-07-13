@@ -3550,6 +3550,15 @@ msgstr "|indicatorNotes| :sup:`ノート`"
 msgid ":ref:`layer_notes`"
 msgstr ":ref:`layer_notes`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1342
+msgid ""
+":sup:`[1]`: For raster layers, symbology and rendering items are melted "
+"together, meaning that saving/loading one would also save/load items of/from"
+" the other."
+msgstr ""
+":sup:`[1]`: "
+"ラスターレイヤーの場合、シンボロジーとレンダリングの項目は統合されています。つまり、一方を保存/読み込むと、もう一方の項目も保存/読み込まれます。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1346
 msgid ""
 "By default, the style applied to a loaded layer is named ``default``. Once "
@@ -3621,6 +3630,20 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:1375
 msgid "**Manage styles from layer context menu**"
 msgstr "**レイヤのコンテキストメニューからスタイル管理**"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1377
+msgid ""
+"Right-click on the layer in the :guilabel:`Layers` panel to copy, paste, add"
+" or rename layer styles. For both vector and raster layers, you can choose "
+"which style categories to copy/paste. Choose :guilabel:`All Style "
+"Categories` or one of the available categories, depending on the layer type."
+" Note that for raster layers, the :guilabel:`Symbology` and "
+":guilabel:`Rendering` categories are always copied together."
+msgstr ""
+"レイヤーのスタイルをコピー、貼り付け、追加、または名前変更するには、 :guilabel:`レイヤー` "
+"パネルでレイヤーを右クリックします。ベクタレイヤーとラスタレイヤーのどちらでも、コピー/貼り付けするスタイルカテゴリを選択できます。レイヤーの種類に応じて、"
+" :guilabel:`全てのスタイルカテゴリ` または利用可能なカテゴリのいずれかを選択してください。ラスタレイヤーの場合、 "
+":guilabel:`シンボロジー` と :guilabel:`レンダリング` カテゴリは常に一緒にコピーされることに注意してください。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1386
 msgid "Storing Styles in a File or a Database"
@@ -3918,6 +3941,15 @@ msgstr ""
 msgid "Metadata load/save options"
 msgstr "メタデータ読み込み／保存オプション"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1548
+msgid ""
+"The \"Default\" location used by :guilabel:`Save to Default Location` and "
+":guilabel:`Restore from Default Location` changes depending on the "
+"underlying data source and on its configuration:"
+msgstr ""
+":guilabel:`デフォルトの場所に保存` および :guilabel:`デフォルトの場所から復元` "
+"で使用される「デフォルト」の場所は、基になるデータソースとその設定によって変わります:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1554
 msgid ""
 "For PostgreSQL data sources if the configuration option :guilabel:`Allow "
@@ -3927,6 +3959,14 @@ msgstr ""
 "PostgreSQL データソースの場合、設定オプション :guilabel:`QGISレイヤメタデータをデータベースに保存/読み込みを許可する` "
 "がチェックされていると、メタデータはデータベース内の専用テーブル内に保存されます。"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1559
+msgid ""
+"For GeoPackage data sources :guilabel:`Save to Default Location` always "
+"saves the metadata in the internal metadata tables of the GeoPackage."
+msgstr ""
+"GeoPackage データソースの場合、 :guilabel:`デフォルトの場所に保存` は常に GeoPackage "
+"の内部メタデータテーブルにメタデータを保存します。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1562
 msgid ""
 "When metadata are saved into the internal tables of PostgreSQL or GeoPackage"
@@ -3935,6 +3975,22 @@ msgid ""
 msgstr ""
 "パネルメタデータがPostgreSQLやGeoPackageの内部テーブルに保存されると、ブラウザや :ref:`layer metadata "
 "search panel <layer_metadata_search_panel>`  で検索やフィルタリングが可能になります。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1566
+msgid ""
+"For all other file based data sources :guilabel:`Save to Default Location` "
+"saves the metadata in a :file:`.qmd` file alongside the file."
+msgstr ""
+"GeoPackage以外のファイルベースのデータソースの場合、:guilabel:`デフォルトの場所に保存` "
+"を実行すると、対象ファイルと同じ場所にメタデータが :file:`.qmd` ファイルとして保存されます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1569
+msgid ""
+"In all other cases :guilabel:`Save to Default Location` saves the metadata "
+"in a local :file:`.sqlite` database."
+msgstr ""
+"上記以外の場合、:guilabel:`デフォルトの場所に保存` を実行すると、メタデータはローカルの :file:`.sqlite` "
+"データベースに保存されます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1576
 msgid "Layer notes"
@@ -4285,6 +4341,25 @@ msgstr ""
 "を使用してQGISのUIや他のアプリケーションの任意の部分に置いたマウスカーソルの下にある色をサンプルすることができます。タブがアクティブなときにスペースバーを押し、目的の色の上にマウスを移動させて、クリックするかスペースバーを再度押します。"
 "  :guilabel:`色をサンプルする` ボタンをクリックしても、カラーピッカーを起動することができます。"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1759
+msgid ""
+"Whatever method you use, the selected color is always described through "
+"options of a :guilabel:`Color model` that defaults to the :ref:`project "
+"color model <project_colors>`:"
+msgstr ""
+"お使いの方法にかかわらず、選択した色は常に :guilabel:`カラーモデル` のオプションで表示されます。これはデフォルトで "
+":ref:`プロジェクトのカラーモデル<project_colors>` に準拠します。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1763
+msgid ""
+":guilabel:`RGB`: color is set using sliders for ``HSV`` (Hue, Saturation, "
+"Value) or ``RGB`` (Red, Green, Blue) values."
+msgstr ":guilabel:`RGB` : 色は HSV（色相、彩度、明度）または RGB（赤、緑、青）の値のスライダーを使って設定します。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1765
+msgid ":guilabel:`CMYK` (Cyan, Magenta, Yellow, Black)"
+msgstr ":guilabel:`CMYK`（シアン、マゼンタ、イエロー、ブラック）"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1767
 msgid ""
 "Modifying a color is as simple as clicking on the color wheel or ramp or on "
@@ -4539,6 +4614,40 @@ msgstr "シンボルやラベル、テクスチャ、地図整飾のカスタマ
 msgid "Pressing the arrow will provide you with a menu to:"
 msgstr "矢印をクリックすると、以下の操作ができるメニューが表示されます:"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1898
+msgid ""
+":guilabel:`Select File…`, to load the file from the file system. The file is"
+" identified through the file path and QGIS needs to resolve the path in "
+"order to display the corresponding image"
+msgstr ""
+":guilabel:`ファイルを選択…` は、ファイルシステムからファイルを読み込むためのものです。ファイルはファイルパスによって識別され、QGIS "
+"は対応する画像を表示するためにそのパスを解決する必要があります。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1900
+msgid ""
+":guilabel:`From URL…`, to load the file from a remote URL. As above, the "
+"image will only be loaded on successful retrieval of the remote resource"
+msgstr ""
+":guilabel:`URLから…` "
+"は、リモートURLからファイルを読み込むためのものです。上記と同様に、画像はリモートリソースの取得が成功した場合にのみ読み込まれます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1902
+msgid ""
+":guilabel:`Embed File…`, to embed the file inside the current project, style"
+" database, or print layout template. The file is then always rendered as "
+"part of the item. This is a convenient way to create self-contained projects"
+" with custom symbols which can be easily shared amongst different users and "
+"installations of QGIS."
+msgstr ""
+":guilabel:`ファイルを埋め込み…` "
+"は、現在のプロジェクト、スタイルデータベース、または印刷レイアウトテンプレート内にファイルを埋め込むためのものです。これにより、ファイルは常にアイテムの一部としてレンダリングされます。これは、カスタムシンボルを含む自己完結型のプロジェクトを作成し、異なるユーザーやQGISのインストール間で簡単に共有するための便利な方法です。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1907
+msgid ""
+":guilabel:`Extract Embedded File…`, to extract the embedded file from the "
+"widget and save it on disk."
+msgstr ":guilabel:`埋め込みファイルを抽出…` は、ウィジェットから埋め込まれたファイルを抽出し、ディスクに保存するためのものです。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1913
 msgid "Visibility Scale Selector"
 msgstr "表示縮尺セレクタ"
@@ -4681,6 +4790,17 @@ msgstr ""
 ":menuselection:`最近使ったフォント -->` "
 "メニューは、最近使ったフォントと共に、アクティブなフォントが（最上部に）チェックされた状態で表示されます"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1988
+msgid ""
+":guilabel:`Configure Format...`: same as pressing the font selector widget. "
+"It opens the :ref:`Text format <text_format>` dialog, providing advanced "
+"formatting options such as color, opacity, orientation, HTML notation, "
+"buffer, background, shadow, ..."
+msgstr ""
+":guilabel:`フォーマットを構成...` を選択すると、フォントセレクタウィジェットを押した場合と同じ動作になります。これは "
+":ref:`テキストフォーマット<text_format>` "
+"ダイアログを開き、色、不透明度、向き、HTML表記、バッファ、背景、影など、高度な書式設定オプションを提供します。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1992
 msgid ":guilabel:`Copy Format` of the text"
 msgstr ":guilabel:`コピー形式` ：テキストのフォーマットをコピーします"
@@ -4797,6 +4917,17 @@ msgstr "縮尺範囲の調整ダイアログ"
 msgid "Number Formatting"
 msgstr "数値フォーマット"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2052
+msgid ""
+"Numeric formatters allow formatting of numeric values for display, using a "
+"variety of different formatting techniques (for instance scientific "
+"notation, currency values, percentage values, custom formatting, etc). One "
+"use of this is to set text in a layout scale bar or table, a color ramp "
+"legend, an elevation profile plot, ..."
+msgstr ""
+"数値フォーマッターは、さまざまな書式設定方法（例: "
+"科学表記、通貨値、パーセンテージ値、カスタム書式設定など）を使用して、表示する数値の書式を設定できます。これは、レイアウトのスケールバーやテーブル、カラーランプの凡例、標高プロットなどにテキストを設定する際に使用されます。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2063
 msgid "Formatting numeric value"
 msgstr "数値フォーマット"
@@ -4828,6 +4959,17 @@ msgid ""
 ":guilabel:`General`, the default category: has no setting and displays "
 "values as set in the parent widget properties or using the global settings."
 msgstr ":guilabel:`一般情報` 、デフォルトのカテゴリ：設定がなく、親ウィジェットの設定もしくはグローバル設定と同様に値を表示します。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2077
+msgid ""
+":guilabel:`Custom expression`: allows you to craft a custom :ref:`QGIS "
+"expression <vector_expressions>` to format numbers. The expression can use "
+"the ``@value`` variable to retrieve the value to be formatted, and then use "
+"any standard QGIS expression function to format this as desired."
+msgstr ""
+":guilabel:`カスタム式` を使用すると、カスタムの :ref:`QGIS式<vector_expressions>` "
+"を作成して数値を書式設定できます。この式では、 ``@value`` "
+"変数を使用してフォーマットを取得し、標準のQGIS式関数を使って目的の形式に設定できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2081
 msgid ":guilabel:`Number`"
@@ -5161,6 +5303,13 @@ msgstr ""
 ":guilabel:`説明...` "
 "は、オプションが有効化されているか、予想される入力値、有効な入力型、そして現在の定義を表示します。ウィジェットの上にマウスカーソルを乗せることでも、この情報を表示します。"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2215
+msgid ""
+":guilabel:`Store data in the project`: a button allowing the property to be "
+"stored using the :ref:`vector_auxiliary_storage` mechanism."
+msgstr ""
+":guilabel:`プロジェクト内にデータを保存` は、 :ref:`ベクタ補助ストレージ` のメカニズムを使ってプロパティを保存できるボタンです。"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2217
 msgid ""
 ":guilabel:`Field type`: an entry to select from the layer's fields that "
@@ -5248,6 +5397,19 @@ msgid ""
 msgstr ""
 "ウィジェットをマウスの右ボタンでクリックすることで、設定された |dataDefine| :sup:`データによって定義された上書き` "
 "ボタンを簡単に有効化・無効化できます。"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2243
+msgid "**Use middle-click to create or edit the expression to apply**"
+msgstr "** ミドルクリックで、適用する式を作成または編集します。 **"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2245
+msgid ""
+"You can directly open the :guilabel:`Expression String Builder` dialog to "
+"create or edit the expression to apply by simply clicking the |dataDefine| "
+":sup:`Data-defined override` widget with the middle mouse button."
+msgstr ""
+"|dataDefine| :sup:`データ定義による上書き` ウィジェットをマウスの中央ボタンでクリックするだけで、 "
+":guilabel:`式文字列ビルダー` ダイアログを直接開いて、適用する式を作成または編集できます。"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2252
 msgid "Using the data-defined assistant interface"
