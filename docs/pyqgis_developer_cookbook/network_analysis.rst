@@ -228,7 +228,7 @@ and accepts three variables:
   tree = QgsGraphAnalyzer.shortestTree(graph, startId, 0)
 
 The :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method has the
-same arguments, but returns a tuple whose first element is a tuple of arrays:
+same arguments, but returns a tuple of arrays:
 
 * In the first array, element `n` contains index of the incoming edge or -1 if there
   are no incoming edges.
@@ -237,8 +237,7 @@ same arguments, but returns a tuple whose first element is a tuple of arrays:
 
 .. testcode:: network_analysis
 
- results = QgsGraphAnalyzer.dijkstra(graph, startId, 0)
- (tree, cost) = results[0]
+ (tree, cost) = QgsGraphAnalyzer.dijkstra(graph, startId, 0)
 
 Here is some very simple code to display the shortest path tree using the graph created
 with the :meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>` method
@@ -311,7 +310,7 @@ Same thing but using the :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijks
 
   idStart = graph.findVertex(pStart)
 
-  tree, costs = QgsGraphAnalyzer.dijkstra(graph, idStart, 0)
+  (tree, costs) = QgsGraphAnalyzer.dijkstra(graph, idStart, 0)
 
   for edgeId in tree:
       if edgeId == -1:
@@ -453,7 +452,7 @@ And here is the same sample but using the :meth:`dijkstra()
     idxStart = graph.findVertex(tStart)
     idxEnd = graph.findVertex(tStop)
 
-    tree, costs = QgsGraphAnalyzer.dijkstra(graph, idxStart, 0)
+    (tree, costs) = QgsGraphAnalyzer.dijkstra(graph, idxStart, 0)
 
     if tree[idxEnd] == -1:
         raise Exception('No route!')
@@ -532,8 +531,7 @@ Here is an example:
 
     idStart = graph.findVertex(tStart)
 
-    results = QgsGraphAnalyzer.dijkstra(graph, idStart, 0)
-    (tree, cost) = results[0]
+    (tree, cost) = QgsGraphAnalyzer.dijkstra(graph, idStart, 0)
 
     upperBound = []
     r = 1500.0
