@@ -396,8 +396,8 @@ will operate with two values.
    from qgis.core import *
    from qgis.gui import *
 
-   @qgsfunction(args='auto', group='Custom')
-   def my_sum(value1, value2, feature, parent):
+   @qgsfunction(group='Custom', referenced_columns=[])
+   def my_sum(value1, value2):
        """
        Calculates the sum of the two parameters value1 and value2.
        <h2>Example usage:</h2>
@@ -411,30 +411,30 @@ will operate with two values.
 
 The ``@qgsfunction`` decorator accepts the following arguments:
 
-* ``args``: the number of arguments. When using the ``args='auto'`` argument
-  the number of function arguments required will be calculated by the number of
-  arguments the function has been defined with in Python (minus 2 - ``feature``,
-  and ``parent``). With ``args = -1``, any number of arguments are accepted.
 * The ``group`` argument indicates the group in which the function
   should be listed in the Expression dialog.
-* ``usesgeometry=True`` if the expression requires access to the features geometry.
+* ``usesgeometry``: Set this to :const:`True` if the expression requires access to the features geometry.
   By default :const:`False`.
-* ``handlesnull=True`` if the expression has custom handling for NULL values.
-  If :const:`False` (default), the result will always be NULL as soon as
-  any parameter is NULL.
-* ``referenced_columns=[list]``: An array of attribute names that are required to
-  the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``.
+* ``handlesnull``: Set this to :const:`True` if the expression has custom handling for NULL values.
+  If :const:`False` (default), the result will always be NULL as soon as any parameter is NULL.
+* ``referenced_columns``: An array of attribute names that are required to run the function.
+  Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``.
+  Specifying a subset of fields or an empty list will result in a faster execution.
+* ``params_as_list``: Set this to :const:`True` to pass the function parameters as a list.
+  If :const:`False` (default), the function will receive the parameters as individual arguments.
 
-The function itself allows following arguments:
+The function itself takes any number and type of parameters you want to pass to your function.
+These should be set before the following optional arguments:
 
-* any number and type of parameters you want to pass to your function, set before
-  the following arguments.
 * ``feature``: the current feature
 * ``parent``: the :class:`QgsExpression <qgis.core.QgsExpression>` object
 * ``context``: If there is an argument called ``context`` found at the last position,
   this variable will contain a :class:`QgsExpressionContext <qgis.core.QgsExpressionContext>`
   object, that gives access to various additional information like expression variables.
   E.g. ``context.variable( 'layer_id' )``
+
+If those arguments are present in the function signature,
+they will be automatically passed to the function, without the need to specify them in the expression.
 
 The previous example function can then be used in expressions:
 
@@ -446,6 +446,7 @@ The previous example function can then be used in expressions:
    Custom Function added to the Expression tab
 
 
+Find more examples and additional arguments for custom functions at :mod:`qgsfunction`.
 Further information about creating Python code can be found in the
 :ref:`PyQGIS-Developer-Cookbook`.
 
