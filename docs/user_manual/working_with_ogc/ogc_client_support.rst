@@ -751,8 +751,9 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
 #. Enable the |addWfsLayer| :guilabel:`WFS / OGC API - Features` tab
 #. Click on :guilabel:`New...` to open the :guilabel:`Create a New WFS
    Connection` dialog
-#. Enter ``Gateway Geomatics`` as name
+#. In the :guilabel:`Connection Details` group, enter ``Gateway Geomatics`` as name
 #. Enter the URL (see above)
+#. Optionally, enter the :guilabel:`Authentication` settings
 
    .. _figure_OGC_create_wfs_connection:
 
@@ -762,25 +763,40 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
       Creating a connection to a WFS server
 
    .. note:: In case of an OGC API - Features (OAPIF), the URL to provide should
-     be the :ref:`landing page <oapif_endpoints>`, ie the main page from which
+     be the :ref:`landing page <oapif_endpoints>`, i.e., the main page from which
      it is possible to navigate to all the available service endpoints.
 
-#. In the WFS settings dialog, you can:
+#. In the :guilabel:`WFS Options` group, you can:
 
    * Indicate the WFS version of the server.
      If unknown, press the :guilabel:`Detect` button to automatically retrieve it.
    * Select the :guilabel:`Preferred HTTP method` to use for requests.
      The default is :guilabel:`GET`, but you can also select :guilabel:`POST`.
-   * Define the :guilabel:`maximum number of features` retrieved in a single GetFetFeature request.
+   * Define the :guilabel:`Maximum number of features` retrieved in a single GetFetFeature request.
      If empty, no limit is set.
-   * And depending on the WFS version, indicate whether to:
+   * :guilabel:`Feature mode (simple vs complex)`: helps determine how to handle servers
+     serving data with simple or complex GML schemas. Available options are:
 
-     * :guilabel:`Enable feature paging` and specify the maximum number of features
+     * :guilabel:`Default`: if the server supports editing capabilities, this is the same
+       as using :guilabel:`Simple Features`. If not, it fallbacks to using :guilabel:`Complex Features` mode.
+     * :guilabel:`Simple Features`: returns data as simple features only
+     * :guilabel:`Complex Features`: uses the `OGR GMLAS <https://gdal.org/en/stable/drivers/vector/gmlas.html>`,
+       potentially returning complex features, regardless of the server capabilities or data schema.
+
+   * Depending on the WFS version, indicate whether to:
+
+     * Enable :guilabel:`Feature paging` and specify the maximum number of features
        to retrieve with :guilabel:`Page size`.
        If no limit is defined, then the server default is applied.
      * Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`
      * :guilabel:`Invert axis orientation`.
      * :guilabel:`Use GML2 encoding for transactions`.
+   * :guilabel:`Force initial GetFeature`:
+     When checked, an initial GetFeature call will always be issued
+     in order to determine the geometry type from the first downloaded feature.
+     Because QGIS assumes features are of 2D geometry type, use this option
+     if the layer contains features with Z axis coordinates you would like to get
+     (and possibly edit in WFS-T).
 
    .. warning::
 
