@@ -8,8 +8,8 @@
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
-# tomoya miyoshi, 2025
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2025
+# tomoya miyoshi, 2025
 # Hinako Terado, 2025
 # 
 #, fuzzy
@@ -782,7 +782,7 @@ msgid ""
 " in the map canvas."
 msgstr ""
 "|elevation| :guilabel:`標高コントローラー` "
-"を使うと、2D地図で標高のZレンジデータを扱うことができます。このオプションは現在点群データとラスタDEMsをサポートしています。マップキャンバスで標高データを視覚化し操作するためにそのパネルを使用します。"
+"を使うと、2D地図で標高のZレンジデータを扱うことができます。このオプションは現在点群データとラスタDEM(群)をサポートしています。マップキャンバスで標高データを視覚化し操作するためにそのパネルを使用します。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1410
 msgid "elevation"
@@ -796,7 +796,7 @@ msgid ""
 "slider on the left side of the map canvas. At the top of the slider, there "
 "is a |settings| :sup:`Settings` menu where you can:"
 msgstr ""
-"マップキャンバスの :guilabel:`表示` メニューの :guilabel:`データフィルタリング` をクリックして、 |elevation| "
+"マップキャンバスの :guilabel:`ビュー` メニューの :guilabel:`データフィルタリング` をクリックして、 |elevation| "
 ":guilabel:`標高コントローラー` パネルをアクティブにします。 |elevation| :guilabel:`標高コントローラー` "
 "はマップキャンバスの左側に範囲スライダーとして表示されます。スライダーの上部には |settings| :sup:`Settings` "
 "メニューがあります："
@@ -811,20 +811,20 @@ msgid ""
 msgstr ""
 ":guilabel:`固定範囲サイズ` "
 "値を設定すると、標高範囲を特定のサイズに固定することができます。この設定はプロジェクト内に保存され、セッションをまたいでも保持されるため、標高フィルターの一貫性が保たれます。|checkbox|"
-" :guilabel:`反対方向`  "
+" :guilabel:`Invert Direction` "
 "オプションを使用すると、標高フィルターのスライダーを反転させ、下部の高い値から上部の低い値へと移動させることができます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:322
 msgid ""
 ":guilabel:`Set Elevation Range` to open the project elevation tab, where you"
 " can set dedicated lower and upper bounds for the elevation range"
-msgstr ":guilabel:`標高範囲の設定` で標高タブのプロジェクトを開き、専用の上限と下限を設定することができます。"
+msgstr ":guilabel:`標高範囲を設定` で標高タブのプロジェクトを開き、専用の上限と下限を設定することができます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:323
 msgid ""
 ":guilabel:`Disable Elevation Filter` to remove the elevation filter from the"
 " map canvas"
-msgstr ":guilabel:`標高フィルター無効化` マップキャンバスから標高フィルタを削除します。"
+msgstr ":guilabel:`標高フィルターを無効化` マップキャンバスから標高フィルタを削除します。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:331
 msgid "Bookmarking extents on the map"
@@ -1724,7 +1724,7 @@ msgid ""
 "canvas scale, and its position can be anchored."
 msgstr ""
 "**バルーン注記**: "
-"これらはバブル内の個々のHTMLまたはフォーム注記です。可視性のために任意のレイヤに関連づけやマップキャンバスの上に描写されます。サイズはマップキャンバスの縮尺に依存し、位置は固定できます。"
+"これらはバブル内に個々に記述するHTMLまたはフォームの注記です。これらは任意のレイヤに関連づけられ、マップキャンバスの最上位に描画されます。サイズはマップキャンバスの縮尺に依存し、位置は固定できます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:761
 msgid "**Layout the map with annotations**"
@@ -1865,7 +1865,7 @@ msgstr "線地物に沿った曲線テキストとして注記を作成します
 #: ../../docs/user_manual/map_views/map_view.rst:795
 #: ../../docs/user_manual/map_views/map_view.rst:911
 msgid "|textInsideRect| :sup:`Create Text Annotation In Rectangle`"
-msgstr "|textInsideRect| :sup:`長方形のテキスト注記を作成`"
+msgstr "|textInsideRect| :sup:`四角の注記を作成`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1487
 msgid "textInsideRect"
@@ -1873,16 +1873,16 @@ msgstr "textInsideRect"
 
 #: ../../docs/user_manual/map_views/map_view.rst:795
 msgid "Create a text formatted annotation bound within a rectangle"
-msgstr "長方形の中にテキスト形式の注記を作成"
+msgstr "長方形の中にテキスト形式の注記を作成します"
 
 #: ../../docs/user_manual/map_views/map_view.rst:798
 #: ../../docs/user_manual/map_views/map_view.rst:914
 msgid "|addImage| :sup:`Create Picture Annotation`"
-msgstr "|addImage| :sup:`画像注記を作成`"
+msgstr "|addImage| :sup:`画像注記を作成します`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:798
 msgid "Create an annotation showing an :file:`.SVG` or raster image"
-msgstr ":file:`.SVG` またはラスタ画像を表示する注記を作成"
+msgstr ":file:`.SVG` またはラスタ画像を表示する注記を作成します"
 
 #: ../../docs/user_manual/map_views/map_view.rst:800
 msgid "|htmlAnnotation| :sup:`HTML Annotation`"
@@ -1939,9 +1939,9 @@ msgid ""
 "instead each feature can be symbolized on an item-by-item basis, through "
 ":guilabel:`Layer Styling` panel."
 msgstr ""
-"地物注記は "
-"**注記レイヤ**に保存されます。従来のレイヤと異なり、注記レイヤは現在のプロジェクトでのみ利用可能で、さまざまなタイプの地物（テキスト、マーカー、ライン、ポリゴン、画像）を含むことができます。このレイヤは属性やシンボルを持ちませんが、"
-" :guilabel:`レイヤスタイル` パネルを使って、各フィーチャーを項目ごとにシンボル化することができます。"
+"地物注記は **注記レイヤ** "
+"に保存されます。従来のレイヤと異なり、注記レイヤは現在のプロジェクトでのみ利用可能で、さまざまなタイプの地物（テキスト、マーカー、ライン、ポリゴン、画像）を含むことができます。このレイヤは属性やシンボルを持ちませんが、"
+" :guilabel:`レイヤスタイル` パネルを使って、各地物を項目ごとにシンボル化することができます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:823
 msgid "Two types of annotation layer are available in QGIS:"
@@ -1992,7 +1992,7 @@ msgid ""
 " and total count, CRS details, ..."
 msgstr ""
 ":guilabel:`情報`: "
-"読み取り専用のダイアログで、現在のレイヤの要約された情報やメタデータをさっと掴むことができる興味深い場所です。提供される情報には、レイヤの領域や注記の種類ごとのアイテム数と合計数、CRSの詳細などがあります。"
+"読取専用のダイアログで、現在のレイヤの要約された情報やメタデータをさっと掴むことができる興味深い場所です。提供される情報には、レイヤの領域や注記の種類ごとのアイテム数と合計数、CRSの詳細などがあります。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:847
 msgid ""
@@ -2121,7 +2121,7 @@ msgstr "ジオメトリ"
 
 #: ../../docs/user_manual/map_views/map_view.rst:896
 msgid "This is like digitizing a point, line or polygon vector feature."
-msgstr "これは点、線またはポリゴンのベクタ地物をデジタル化するようなものです。"
+msgstr "これは点、線またはポリゴンのベクタ地物をデジタイズするようなものです。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:898
 msgid ""
@@ -2133,8 +2133,8 @@ msgid ""
 "<drawing_methods>` to for example the streaming mode for completely free-"
 "form shapes."
 msgstr ""
-"注記アイテムを作成するとき、地物作成をするために通常のショートカットが全て適用されます。線またはポリゴン注記は各頂点で一度左クリックし、形状を完成するために最後にマウスの右クリックで描写されます。描写中にスナップを有効にしたり、"
-" :guilabel:`高度なデジタル化ツール` を使って頂点を正確に配置したり、 :ref:`描写ツール <drawing_methods>` "
+"注記アイテムを作成するとき、地物作成をするために通常のショートカットが全て適用されます。線またはポリゴン注記は各頂点で一度左クリックし、形状を完成するために最後にマウスの右クリックで描写されます。描画中にスナップを有効にしたり、"
+" :guilabel:`高度なデジタル化ツール` を使って頂点を正確に配置したり、 :ref:`描画ツール <drawing_methods>` "
 "をストリーミングモードなどに切り替えて完全に自由な形にすることもできます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:905
@@ -2144,6 +2144,30 @@ msgstr "テキスト"
 #: ../../docs/user_manual/map_views/map_view.rst:905
 msgid "Left-click on the map canvas."
 msgstr "マップキャンバスで左クリック"
+
+#: ../../docs/user_manual/map_views/map_view.rst:907
+msgid ""
+"Left-click to add vertices to the text basement line geometry, and right-"
+"click to end. As above, digitizing features capabilities are also available."
+msgstr "左クリックでテキスト基部のラインジオメトリに頂点を追加し、右クリックで終了します。上と同様に、地物のデジタイズ機能も利用できます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:911
+msgid ""
+"Draw the rectangle box of the text, by left-clicking to add a first corner "
+"and left-clicking again to add the opposite one."
+msgstr "テキストの矩形ボックスを、左クリックで最初の角、再び左クリックで反対の角を追加し、描きます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:914
+msgid "Picture"
+msgstr "画像"
+
+#: ../../docs/user_manual/map_views/map_view.rst:914
+msgid ""
+"Draw the rectangle box of the picture, by left-clicking to add a first "
+"corner and left-clicking again to add the opposite one. Then pick an image "
+"or SVG file from the file explorer."
+msgstr ""
+"画像の矩形ボックスを、左クリックで最初の角、再び左クリックで反対の角を追加し、描きます。次にファイルエクスプローラから画像かSVGファイルを選びます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:919
 msgid ""
@@ -2183,6 +2207,16 @@ msgstr ":kbd:`Shift+key` ：大きく移動"
 msgid ":kbd:`Alt+key` for ``1 px`` movement"
 msgstr ":kbd:`Alt+key` ： ``1 ピクセル`` だけ移動"
 
+#: ../../docs/user_manual/map_views/map_view.rst:935
+msgid ""
+"**Geometry modification**: move over an annotation and purple squares are "
+"displayed on nodes of its underlying geometry. Left-click on the square, "
+"move and click again. For linear or polygonal annotations, double-clicking a"
+" segment will add a new vertex."
+msgstr ""
+"**ジオメトリの編集**: "
+"注記の上を移動すると、その下にあるジオメトリのノードに紫色の四角形が表示されます。四角形を左クリックし、移動して再度クリックします。ラインまたはポリゴン注記の場合、セグメントをダブルクリックすると新しい頂点が追加されます。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:939
 msgid ""
 "**Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while an "
@@ -2197,11 +2231,179 @@ msgstr ":ref:`地物のシンボロジの変更 <annotation_feature_symbology>`"
 msgid "Feature symbology"
 msgstr "地物のシンボロジ"
 
+#: ../../docs/user_manual/map_views/map_view.rst:948
+msgid ""
+"A selected annotation will display its :guilabel:`Symbology` properties in "
+"the :guilabel:`Layer styling` panel."
+msgstr "選択された注記は、その :guilabel:`シンボロジ` プロパティを :guilabel:`レイヤスタイル` パネルに表示します。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:951
+msgid ""
+"For polygon, polyline and marker annotations, you can modify the appearance "
+"using full capabilities of the :ref:`symbol properties <symbol-selector>`"
+msgstr ""
+"ポリゴン、ポリライン、およびマーカー注記については、:ref:`シンボルプロパティ <symbol-selector>` "
+"のすべての機能を使用して外観をカスタマイズできます"
+
+#: ../../docs/user_manual/map_views/map_view.rst:953
+msgid ""
+"For text-based annotations, an area with text editing tools helps you "
+"construct the string to display. It can be multiline, use HTML formatting "
+"and rely on QGIS expression functions. You can moreover modify the "
+"appearance using full capabilities of the :ref:`text format properties "
+"<text_format>`."
+msgstr ""
+"テキスト型の注記の場合、テキスト編集ツールを備えた領域が表示され、表示する文字列を組み立てられます。この領域は複数行に対応し、HTMLフォーマットを使用でき、QGIS式の関数を利用可能です。さらに、:ref:`テキスト形式のプロパティ"
+" <text_format>` の全機能を使用して、外観をカスタマイズできます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:958
+msgid "Depending on the type of annotation, additional options are available."
+msgstr "注記の型によって追加のオプションが利用できます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:960
+msgid "For text annotation at point, it is also possible to:"
+msgstr "ポイントのテキスト注記の場合、次のこともできます:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:962
+msgid ""
+"set the text :guilabel:`Alignment` (left, center or right of the anchor "
+"point)"
+msgstr "テキストの :guilabel:`整列` （アンカーポイントの左、中央または右）を設定する"
+
+#: ../../docs/user_manual/map_views/map_view.rst:963
+msgid ""
+"configure whether the text should :guilabel:`Ignore map rotation` or "
+":guilabel:`Rotate with map`. In both cases, a custom :guilabel:`Angle` can "
+"be set for the feature orientation."
+msgstr ""
+"テキストを :guilabel:`地図の回転を無視` または :guilabel:`地図と共に回転` "
+"のいずれかに設定する。どちらの場合も、地物の向きにとしてカスタムの :guilabel:`角度` を設定できます。 "
+
 #: ../../docs/user_manual/map_views/map_view.rst:965
 msgid ""
 "For text annotation along a line, configure an :guilabel:`Offset from line` "
 "in the unit of your choice"
 msgstr "線に沿った注記では、任意の単位で :guilabel:`線からのオフセット` を設定できます"
+
+#: ../../docs/user_manual/map_views/map_view.rst:967
+msgid "For text annotation in rectangle, it is also possible to:"
+msgstr "矩形のテキスト注記の場合、次のこともできます:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:969
+msgid ""
+"set the text :guilabel:`Horizontal alignment` (left, center, right or "
+"justify) and :guilabel:`Vertical alignment` (top, vertical center or bottom)"
+" in the rectangle box"
+msgstr ""
+"矩形ボックス内のテキストの：:guilabel:`水平方向配置`（左、中央、右、または両端揃え）と "
+":guilabel:`垂直方向配置`（上、垂直中央、または下）を設定する"
+
+#: ../../docs/user_manual/map_views/map_view.rst:971
+msgid ""
+"configure for the rectangle, the :guilabel:`Margins` distance in the units "
+"of your choice, the :guilabel:`Frame` and :guilabel:`Background` colors."
+msgstr ""
+"矩形に、選んだ単位による :guilabel:`マージン` 距離、:guilabel:`フレーム` と :guilabel:`背景` の色を設定する。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:973
+msgid ""
+"Picture annotations allow you to display a :guilabel:`Raster image` or an "
+":guilabel:`SVG image`, using the :ref:`embedded_file_selector`. The "
+"placement and size of the picture can be set as:"
+msgstr ""
+"画像注記は :ref:`embedded_file_selector` を使用して、:guilabel:`ラスタ画像` または "
+":guilabel:`SVG画像` を表示できます。画像の配置とサイズは次のように設定できます: "
+
+#: ../../docs/user_manual/map_views/map_view.rst:977
+msgid ""
+":guilabel:`Scale dependent size`: the picture scales with the map, appearing"
+" larger when zooming in and smaller when zooming out. The size is defined by"
+" a single reference size in map units (e.g. meters or degrees, depending on "
+"the layer’s CRS). With |checkbox| :guilabel:`Lock aspect ratio`, you can "
+"keep the annotation size proportional to the embedded picture size, or "
+"stretch the picture to fill the annotation extent."
+msgstr ""
+":guilabel:`縮尺に依存するサイズ`: "
+"画像は拡大すると大きく、縮小すると小さく表示されます。このサイズは地図単位（レイヤのCRSによってメートルや度など）で定義されます。 "
+"|checkbox| :guilabel:`アスペクト比を固定する` "
+"を使用すると、注記のサイズを埋め込まれた画像のサイズに比例させたり、注記の範囲いっぱいに画像を塗りつぶして引き伸ばしたりすることができます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:983
+msgid ""
+":guilabel:`Fixed size`: the picture annotation maintains a constant size in "
+"screen or output units (e.g. pixels or millimeters), regardless of the map "
+"scale. The :guilabel:`Width` and :guilabel:`Height` of the annotation can be"
+" filled separatey or adjusted proportionally to the embedded picture size."
+msgstr ""
+":guilabel:`サイズの固定`: "
+"画像の注記は、地図の縮尺に関係なく、スクリーンまたは出力単位（ピクセルやミリメートルなど）で一定のサイズを維持します。注記の :guilabel:`幅`"
+" と :guilabel:`高さ` は別々に入力することも、埋め込む画像サイズに比例して調整することもできます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:987
+msgid ""
+":guilabel:`Relative to map`: the picture annotation will always be rendered "
+"at the same position relative to the map canvas bounds, regardless of the "
+"map scale. The :guilabel:`Width` and :guilabel:`Height` of the annotation "
+"can be filled separatey or adjusted proportionally to the embedded picture "
+"size."
+msgstr ""
+":guilabel:`マップとの相対関係`: マップの縮尺に関係なく、画像注記は常にマップキャンバスの境界に対して同じ位置にレンダリングされます。注記の"
+" :guilabel:`幅` と :guilabel:`高さ` は別々に入力するか、埋め込む画像のサイズに比例して調整することができます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:992
+msgid ""
+"Moreover, you can enable display of the :guilabel:`Frame` and "
+":guilabel:`Background` of the rectangle box, and configure them using "
+":ref:`fill symbols <vector_fill_symbols>`."
+msgstr ""
+"さらに、四角ボックスの :guilabel:`枠` と :guilabel:`背景` の表示と :ref:`塗りつぶし記号 "
+"<vector_fill_symbols>` を使用してテーマの設定を有効にできます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:995
+msgid ""
+"For text at point, text inside rectangle and picture annotations, you can "
+":guilabel:`Show callout` when the picture or text anchor point is offset "
+"from its default placement. To create a callout for an annotation:"
+msgstr ""
+"ポイント内のテキスト、長方形内のテキスト、および画像の注記については、画像またはテキストのアンカーポイントがデフォルトの配置からオフセットされているときに"
+" :guilabel:`コールアウトを表示` を使用できます。注記のコールアウトを作成するには："
+
+#: ../../docs/user_manual/map_views/map_view.rst:999
+msgid "Select the annotation item"
+msgstr "注記項目を選択します"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1000
+msgid ""
+"Move the anchor point, i.e., click the central and green :kbd:`X` node and "
+"click at the new placement"
+msgstr "アンカーポイントを移動します。つまり、中央と緑の :kbd:`X` ノードをクリックし、新しい配置でクリックします。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1001
+msgid ""
+"In the annotation properties, press the :guilabel:`...` button to configure "
+"the :ref:`callout properties <labels_callouts>`."
+msgstr ""
+"注記プロパティの中で、 :ref:`プロパティをコールアウトする <labels_callouts>` を設定するために :guilabel:`...`"
+" ボタンを押してください。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1004
+msgid ""
+"Applying a balloon callout to a text or picture annotation will make you get"
+" their old-style balloon annotation display."
+msgstr "テキストまたは画像注記に吹き出しのコールアウトを適用すると、旧式の吹き出し注記が表示されます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1007
+msgid ""
+"Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale"
+" at which symbol or text sizes which use paper-based units (such as "
+"millimeters or points) relate to. The sizes will be scaled accordingly "
+"whenever the map is viewed at a different scale. For instance, a line "
+"feature wide of 2mm at 1:2000 :guilabel:`Reference scale` will be rendered "
+"using 4mm when the map is viewed at 1:1000."
+msgstr ""
+"|unchecked| :guilabel:`縮尺の参照`: "
+"の設定は紙ベースの単位（ミリメートルやポイントなど）を使用するシンボルやテキストのサイズが関連する地図の縮尺を示します。地図が異なる縮尺で表示されるときはいつでも、サイズはそれに応じて縮尺されます。例えば、1:2000"
+" :guilabel:`縮尺の参照` で幅2mmの線地物は、1:1000で地図を見たときには4mmで表示されます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1012
 msgid ""
@@ -2232,6 +2434,23 @@ msgid ""
 ":file:`html` file"
 msgstr "|htmlAnnotation| :sup:`HTML注記`  :file:`html` ファイルのコンテンツを配置するための注記"
 
+#: ../../docs/user_manual/map_views/map_view.rst:1026
+msgid ""
+"|formAnnotation| :sup:`Form Annotation`: useful to display attributes of a "
+"vector layer in a customized :file:`ui` file (see "
+":numref:`figure_custom_annotation`). This is similar to the :ref:`custom "
+"attribute forms <provide_ui_file>`, but displayed in an annotation item. "
+"Also watch `this video "
+"<https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s>` from"
+" Tim Sutton for more information."
+msgstr ""
+"|formAnnotation| :sup:`注記の形式`: はカスタマイズされた :file:`ui` file ( "
+":numref:`figure_custom_annotation` をご覧ください)でベクタレイヤ属性の表示に役立ちます。これは "
+":ref:`属性形式のカスタム <provide_ui_file>` と同様ですが、注記項目で表示されます。また、詳細はTim Suttonの "
+"`こちらの動画 "
+"<https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s>` "
+"をご覧ください。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1042
 msgid "Examples of balloon annotations"
 msgstr "バルーン注記の例"
@@ -2244,6 +2463,13 @@ msgid ""
 " types:"
 msgstr ""
 "バルーン注記を追加するには、対応するツールを選択してマップキャンバスをクリックします。空のバルーンが追加されます。これをダブルクリックすると、さまざまなオプションを含むダイアログが開きます。このダイアログは、すべての注記タイプでほぼ同じです。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1049
+msgid ""
+"At the top, a file selector to fill with the path to an :file:`html` or "
+":file:`ui` file depending on the type of annotation."
+msgstr ""
+"一番上には注記の種類に応じて :file:`html` または :file:`ui` がPATHにあり、それを塗りつぶすのにファイルセレクタがあります。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1051
 msgid ""
@@ -2843,6 +3069,15 @@ msgstr ""
 "|checkbox| :guilabel:`RDF メタデータのエクスポート（title, authorなど）`: "
 "タイトル、著者、日付、説明などをエクスポートします。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:1343
+msgid ""
+"|unchecked| :guilabel:`Create Geospatial PDF`: Generate a `georeferenced PDF"
+" file <https://gdal.org/en/latest/drivers/raster/pdf.html>`_. You can:"
+msgstr ""
+"|unchecked| :guilabel:`地図情報PDFの作成`:  "
+"`地図参照PDFファイル　<https://gdal.org/en/latest/drivers/raster/pdf.html>`_ "
+"を作成します。そしたら、"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1347
 msgid "Choose the Geospatial PDF :guilabel:`Format`"
 msgstr "地図情報PDFの :guilabel:`フォーマット` を選ぶ"
@@ -2882,6 +3117,14 @@ msgstr ""
 "：地図をエクスポートする際に、エクスポート先の解像度では区別することができない頂点を削除することで、ジオメトリが簡略化されます（たとえば、エクスポート解像度が"
 " ``300 dpi`` ならば、 ``1/600 インチ`` "
 "よりも近い頂点は削除されます）。これにより、出力ファイルのサイズと複雑さを減少させることができます（非常に大きなファイルは他のアプリケーションで読み込みに失敗する可能性があります）。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1367
+msgid ""
+"Set the :guilabel:`Text export`: controls whether text labels are always or "
+"preferably exported as :ref:`text or outline objects <render_labels_text>`."
+msgstr ""
+":guilabel:`テキストエクスポート`: の設定はテキストラベルが :ref:`テキストまたは概要オブジェクト "
+"<render_labels_text>` としてエクスポートするかどうか制御します。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1370
 msgid "Click :guilabel:`Save` to select file location, name and format."
