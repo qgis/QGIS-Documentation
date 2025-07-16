@@ -3823,6 +3823,9 @@ The following enclosing geometry types are supported:
     Clockwise from top left: envelope, oriented rectangle,
     circle, convex hull
 
+.. note:: For singlepart point features, the output corresponds to
+   the bounding box of the geometry.
+
 .. seealso:: :ref:`qgisminimumenclosingcircle`
 
 Parameters
@@ -7377,8 +7380,6 @@ Python code
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
-   :width: 1.5em
-.. |remove| image:: /static/common/mActionRemove.png
    :width: 1.5em
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em

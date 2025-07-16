@@ -22,7 +22,8 @@ QGIS also has a Python console.
 The QGIS Python Console is an interactive shell for Python command executions.
 It also has a Python file editor that allows you to edit and save your Python scripts.
 Both console and editor are based on PyQScintilla2 package.
-To open the console go to :menuselection:`Plugins --> Python Console` (:kbd:`Ctrl+Alt+P`).
+To open the console go to :menuselection:`Plugins --> Python Console` (:kbd:`Ctrl+Alt+P`) or
+click on the |pythonFile| :sup:`Python Console` icon in the :guilabel:`Plugins` toolbar.
 
 .. _interactive_console:
 
@@ -203,6 +204,8 @@ share the code via GitHub and much more). Main features are:
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
+.. |pythonFile| image:: /static/common/mIconPythonFile.png
+   :width: 1.5em
 .. |runConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
 .. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png

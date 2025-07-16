@@ -13,13 +13,12 @@ Working with 3D Tiles
 What are 3D Tiles?
 ======================
 
-3D tiles are specification for streaming and rendering large-scale 3D
-geospatial datasets. They use a hierarchical structure to efficiently manage 
-and display 3D content, optimising performance by dynamically loading
-appropriate levels of detail. This technology is widely used in urban 
-planning, architecture, simulation, gaming, and virtual reality, providing
-a standardised and interoperable solution for visualising complex geographical data.
-
+3D tiles are specification for streaming and rendering large-scale 3D geospatial datasets.
+They use a hierarchical structure to efficiently manage and display 3D content,
+optimising performance by dynamically loading appropriate levels of detail.
+This technology is widely used in urban planning, architecture, simulation, gaming,
+and virtual reality, providing a standardised and interoperable solution
+for visualising complex geographical data.
 
 .. _figure_3d_tiles_example:
 
@@ -127,15 +126,6 @@ want to get a quick overview of the data.
 
    3D Tiles - textured and wireframe 
 
-To view the data you can open |new3DMap| :guilabel:`New 3D map view`.
-
-.. _figure_3d_tiles_map_view:
-
-.. figure:: img/3d_tiles_map_view.png
-   :align: center
-
-   3D Map View  
-
 From the :guilabel:`Symbology` tab, you can also set some options that 
 invariably act on all features of the layer:
 
@@ -148,7 +138,7 @@ invariably act on all features of the layer:
   the rendering of an excessive number of details, potentially slowing down
   the rendering process. Different units can be selected to tailor the setting
   to your specific needs.
-* :guilabel:`Opacity`: Adjust the visibility of the underlying layer on the 
+* :guilabel:`Opacity`: Adjusts the visibility of the underlying layer on the 
   map canvas using this tool. Use slider to tailor the visibility 
   of your scene layer according to your preferences. Alternatively, specify the 
   exact percentage of visibility through the menu next to the slider.
@@ -162,14 +152,22 @@ invariably act on all features of the layer:
 3D View Properties
 ------------------
 
-* :guilabel:`Maximum screen space error` determines the threshold for swapping
+* :guilabel:`Maximum screen space error`: Determines the threshold for swapping
   terrain tiles with more detailed ones (and vice versa) - i.e. how soon the 3D 
   view will use higher quality tiles. Lower numbers mean more details in the 
   scene at the expenses of increased rendering complexity.
 
-* |unchecked| :guilabel:`Show bounding boxes` Show 3D bounding boxes of the 
+* |unchecked| :guilabel:`Show bounding boxes`: Shows 3D bounding boxes of the 
   terrain tiles (useful for troubleshooting terrain issues).
 
+To view the data you can open |new3DMap| :guilabel:`New 3D map view`.
+
+.. _figure_3d_tiles_map_view:
+
+.. figure:: img/3d_tiles_map_view.png
+   :align: center
+
+   3D Map View
 
 .. _3dtilesrenderingmenu:
 

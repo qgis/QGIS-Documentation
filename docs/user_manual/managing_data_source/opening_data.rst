@@ -1301,6 +1301,7 @@ To load a layer from a database, you can perform the following steps:
   it is better to use the :ref:`Browser Panel <browser_panel>` or the
   :ref:`DB Manager <dbmanager>` to drag and drop the database tables into the map canvas.
 
+
 .. _layer_metadata_search_panel:
 
 The Layer Metadata Search Panel

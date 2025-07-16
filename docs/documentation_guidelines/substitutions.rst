@@ -538,6 +538,7 @@ Icon                            Substitution                        Icon        
 |vrt|                           ``|vrt|``                           |voronoi|                       ``|voronoi|``
 |translate|                     ``|translate|``                     |warp|                          ``|warp|``
 |iterate|                       ``|iterate|``                       |terminal|                      ``|terminal|``
+|queryHistory|                  ``|queryHistory|``                  |storedqueries|                 ``|storedqueries|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -1380,6 +1381,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
    :width: 1.5em
+.. |queryHistory| image:: /static/common/mIconQueryHistory.png
+   :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
@@ -1602,6 +1605,8 @@ Icon                            Substitution                        Icon        
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |stopwatch| image:: /static/common/mIconStopwatch.png
+   :width: 1.5em
+.. |storedqueries| image:: /static/common/mIconStoredQueries.png
    :width: 1.5em
 .. |streamingDigitize| image:: /static/common/mActionStreamingDigitize.png
    :width: 1.5em
