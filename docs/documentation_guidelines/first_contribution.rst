@@ -97,6 +97,11 @@ or in the drop-down menu at the bottom of the left sidebar.
    top of the page telling you that you don't have write access to this repo
    and your changes will be applied to a new branch of your repository.
 
+   .. note:: If you do have write access to the QGIS repository, no message is displayed
+    and your changes will likely be saved directly in the main repository instead of your fork.
+    However, to keep the repository clean, it is recommended that even contributors with write access
+    work from their forks when editing documentation.
+
 #. Do your changes. Since the documentation is written using the reStructureText
    syntax, depending on your changes, you may need to rely on the :ref:`writing
    guidelines <QGIS-documentation-guidelines>`.

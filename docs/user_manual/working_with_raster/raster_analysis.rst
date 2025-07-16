@@ -55,6 +55,10 @@ You can:
 * Set the :guilabel:`Resolution` of the layer using columns and rows number.
   If the input layer has a different resolution, the values will be
   resampled with the nearest neighbor algorithm.
+* Enable the |checkbox| :guilabel:`Create Options` to define additional raster creation options.
+  These options let you control how the output file is structured and compressed,
+  including format, compression method, and other driver-specific settings.
+  See more at :ref:`Raster driver options <gdal_createoptions>`.
 * With the |checkbox| :guilabel:`Add result to project` checkbox, the result layer
   will automatically be added to the legend area and can be visualized.
   Checked by default for virtual rasters.

@@ -302,6 +302,9 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
   * :guilabel:`No change`
   * :guilabel:`All uppercase`
   * :guilabel:`All lowercase`
+  * :guilabel:`Small Caps`: renders lowercase characters as small caps.
+  * :guilabel:`All Small Caps`: renders all characters as small caps
+    regardless of their original case.
   * :guilabel:`Title case`: modifies the first letter of each word into capital,
     and turns the other letters into lower case if the original text is using
     a single type case. In case of mixed type cases in the text, the other

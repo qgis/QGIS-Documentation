@@ -778,7 +778,38 @@ Map tools Settings
 
    Map tools settings
 
-This tab offers some options regarding the behavior of the :ref:`Identify tool <identify>`.
+.. _global_measure_tool:
+
+**Measurements, Coordinate and Bearing Display**
+
+This section provides ways to configure default units parameters:
+
+* Define :guilabel:`Decimal places`
+* |checkbox| :guilabel:`Keep base unit` to not automatically convert large
+  numbers (e.g., meters to kilometers)
+* :guilabel:`Preferred angle units`: options are 'Degrees', 'Radians',
+  'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions',
+  milliradians (SI definition) or mil (NATO/military definition)
+* :guilabel:`Default distance units for new projects`: options are 'Meters',
+  'Kilometers', 'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters',
+  'Millimeters', 'Inches', 'Degrees' or 'Map Units' (automatically matches the project’s CRS units)
+* :guilabel:`Preferred area units for new projects`: options are 'Square meters',
+  'Square kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
+  'Acres', 'Square nautical miles', 'Square centimeters', 'Square millimeters',
+  'Square inches', 'Square degrees' or 'Map Units' (automatically matches the project’s CRS units)
+* :guilabel:`Default coordinate format for new projects`,
+  as displayed in the :guilabel:`Coordinates` box on QGIS status bar
+  and in the :guilabel:`Derived` section of the |identify| :sup:`Identify features` tool's results
+* :guilabel:`Default bearing format for new projects`, as displayed in the status bar
+  for the map canvas panning direction and by the |measureBearing| :sup:`Measure bearing` tool.
+
+The global options can be overridden at the project level,
+:ref:`here <measurements_ellipsoid>` for measurement units and
+:ref:`here <coordinate_and_bearing>` for coordinate and bearing formatting.
+
+**Identify tool**
+
+This group offers some options regarding the behavior of the :ref:`Identify tool <identify>`.
 
 * :guilabel:`Search radius for identifying features and displaying map tips` is
   a tolerance distance within which the identify tool will depict results
@@ -790,38 +821,11 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 * :guilabel:`Minimum width` determines how thick should
   the outline of a highlighted object be.
 
-.. _global_measure_tool:
+.. _measure_copy_settings:
 
 **Measure tool**
 
 * Define :guilabel:`Rubberband color` for measure tools
-* Define :guilabel:`Decimal places`
-* |checkbox| :guilabel:`Keep base unit` to not automatically convert large
-  numbers (e.g., meters to kilometers)
-* :guilabel:`Preferred distance units`: options are 'Meters', 'Kilometers',
-  'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', 'Millimeters',
-  'Inches', 'Degrees' or 'Map Units'
-* :guilabel:`Preferred area units`: options are 'Square meters', 'Square
-  kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
-  'Acres', 'Square nautical miles', 'Square centimeters', 'Square millimeters',
-  'Square inches', 'Square degrees' or 'Map Units'
-* :guilabel:`Preferred angle units`: options are 'Degrees', 'Radians',
-  'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions',
-  milliradians (SI definition) or mil (NATO/military definition)
-
-Some of these options can be overridden at the :ref:`project level <measurements_ellipsoid>`.
-
-.. tip::
-
- To ensure the reported distance and area units follow the project's CRS,
- choose the appropriate :guilabel:`Units for distance measurements` and :guilabel:`Units for area measurements`
- from the drop-down menu in :menuselection:`Project --> Properties… --> General --> Measurements`.
- You can select from various distance units (such as meters, feet, miles, etc.)
- and area units (such as square meters, acres, square miles, etc.),
- or choose :guilabel:`Map Units` to automatically match the project's CRS units.
- This setting makes the measurement results dynamically adapt to the project's CRS.
-
-.. _measure_copy_settings:
 
 **Measure Tool Copy Settings**
 
@@ -834,18 +838,6 @@ to the clipboard with a dot as a decimal separator, even if your language settin
 in QGIS options are set up to use a comma. In this case, if you don't have the 
 :guilabel:`Always use decimal point` 
 option checked, you will be unable to select comma as a field separator.
-
-**Coordinate and Bearing Display**
-
-This section provides ways to :guilabel:`Configure`:
-
-* :guilabel:`Default coordinate format for new projects`,
-  as displayed in the :guilabel:`Coordinates` box on QGIS status bar
-  and in the :guilabel:`Derived` section of the |identify| :sup:`Identify features` tool's results
-* :guilabel:`Default bearing format for new projects`, as displayed in the status bar
-  for the map canvas panning direction and by the |measureBearing| :sup:`Measure bearing` tool.
-
-These options can be overridden at the :ref:`project level <coordinate_and_bearing>`.
 
 **Panning and zooming**
 

@@ -75,9 +75,11 @@ You are welcome to subscribe to any of the lists. Please remember to
 contribute to the list by answering questions and sharing your
 experiences.
 
+Communication channels
+======================
 
 Matrix / IRC
-============
+------------
 
 Matrix (https://matrix.org) is a project for decentralised chat. QGIS has a room accessible by the #qgis:osgeo.org alias (among others) which bridges to the libera.chat #qgis IRC channel.
 
@@ -91,6 +93,14 @@ To use IRC:
 
 #. Install an IRC client
 #. Connect to irc://irc.libera.chat/#qgis or point your browser to https://web.libera.chat/?channels=#qgis
+
+Telegram
+--------
+
+There is a vibrant user and community related chat group (english spoken) on the Telegram channel, which you can `join here <https://t.me/+4U6j0dycRy40MTU0>`_.
+
+To join Telegram from your phone, you need to install the Telegram app, register and join via the link above.
+There is also a web version (https://web.telegram.org) which you can join in the browser (after you have joined telegram via your phone number).
 
 Commercial support
 ==================

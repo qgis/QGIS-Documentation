@@ -1447,8 +1447,10 @@ a multipolygon/multipolyline/multipoint feature is created.
 #. First, select the features you'd like to combine.
 #. Then press the |mergeFeatures| :sup:`Merge Selected Features` button.
 #. In the new dialog, the :guilabel:`Merge` line at the bottom of the table
-   shows the attributes of the resulting feature. You can alter any of these
-   values either by:
+   shows the attributes of the resulting feature. If any :ref:`Merge policy <policies>`
+   have been defined, they are automatically applied to populate this row.
+   However, you can override these values manually.
+   Modify the values in the following ways:
 
    * manually replacing the value in the corresponding cell;
    * selecting a row in the table and pressing :guilabel:`Take attributes from
@@ -1575,7 +1577,7 @@ Trim/Extend Feature
 The |trimExtend| :sup:`Trim/Extend` tool allows you to shorten or lengthen
 segments of a (multi)line or (multi)polygon geometry to converge with a
 selected segment (the cutting line). This results in a modified geometry
-with a vertex snapped to the target segment or in its prolongation.
+with a vertex snapped to a reference segment or in its prolongation.
 Depending on how the selected geometries are placed in relation to each
 other, the tool will either:
 
@@ -1586,24 +1588,40 @@ other, the tool will either:
 
 In order to trim or extend existing geometries:
 
-#. Enable appropriate :ref:`snapping settings <snapping_options>` on segment
-   for the involved layer(s)
 #. Select the |trimExtend| :sup:`Trim/Extend` tool
-#. Click the target limit segment, i.e. the segment with respect to which
-   you want to extend or trim another segment. It appears highlighted.
-#. Move to the segment you want to trim or extend. It does not need to be
-   the last segment of the geometry, but has to be on the active layer.
-#. Hover over the segment, and QGIS displays a preview of what the feature's
-   geometry would be. If OK, click the segment.
-   In the case of a trim, you must select the part that should be shortened.
-#. When both segments are in 3D, the tool performs an interpolation on
-   the limit segment to get the Z value.
-#. If you need to use the same target segment for trimming or extending many features:
+#. Click the reference segment, i.e., the segment with respect to which
+   you want to extend or trim another segment.
+   It doesn't need to be on the active layer.
+   A red dotted line appears, visually extending the reference segment across the map canvas
+   according to the active layer’s CRS.
+#. Hover over the target segment, i.e., the one you want to trim or extend.
+   It does not need to be the last segment of the geometry, but has to be on the active layer.
+   QGIS displays a preview of the feature's geometry with the segment limited
+   to its intersection with the highlighted red dotted extending line.
 
-   #. Press :kbd:`Shift` while selecting the target limit segment.
+   #. If an extension of the segment is required, click anywhere on the segment.
+   #. In the case of a trim, click the part that should remain.
+   #. In either case, the feature's geometry is updated accordingly.
+      When both segments are in 3D, the tool performs an interpolation on
+      the limit segment to get the Z value.
+#. If you need to use the same reference segment for trimming or extending many features:
+
+   #. Press :kbd:`Shift` while selecting the reference segment.
    #. Click consecutively on the segments to modify and each will be trimmed
       or extended accordingly.
 
+.. only:: html
+
+  .. _figure_trim_extend_segment:
+
+  .. figure:: img/trim_extend_segment.gif
+     :align: center
+
+     Trimming and extending multiple lines from different layers in different CRS
+
+.. note:: Snapping is automatically enabled when this tool is activated.
+ Your original snapping settings will be restored once the tool is deactivated.
+ 
 .. attention:: Pay attention to the modified geometry while using the |trimExtend|
   :sup:`Trim/Extend` tool. Depending on the inputs, it can create invalid
   geometries, potentially resulting in failure at layer saving.
