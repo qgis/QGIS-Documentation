@@ -79,6 +79,8 @@ To add fields to the layer you are creating:
    of values.
 #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
 #. Reproduce the steps above for each field you need to add
+#. You can later change the fields order using the |arrowUp| :sup:`Move Up`
+   and |arrowDown| :sup:`Move Down` buttons
 #. Once you are happy with the attributes, click :guilabel:`OK`.
    QGIS will add the new layer to the legend, and you can edit it
    as described in section :ref:`sec_edit_existing_layer`.
