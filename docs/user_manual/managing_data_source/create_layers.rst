@@ -79,6 +79,8 @@ To add fields to the layer you are creating:
    of values.
 #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
 #. Reproduce the steps above for each field you need to add
+#. You can later change the fields order using the |arrowUp| :sup:`Move Up`
+   and |arrowDown| :sup:`Move Down` buttons
 #. Once you are happy with the attributes, click :guilabel:`OK`.
    QGIS will add the new layer to the legend, and you can edit it
    as described in section :ref:`sec_edit_existing_layer`.
@@ -97,6 +99,7 @@ Further management of GeoPackage layers can be done with the
 
 
 .. _vector_create_shapefile:
+
 
 Creating a new Shapefile layer
 ------------------------------
@@ -135,6 +138,8 @@ To add fields to the layer you are creating:
    :guilabel:`Precision`.
 #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
 #. Reproduce the steps above for each field you need to add
+#. You can later change the fields order using the |arrowUp| :sup:`Move Up`
+   and |arrowDown| :sup:`Move Down` buttons
 #. Once you are happy with the attributes, click :guilabel:`OK`.
    QGIS will add the new layer to the legend, and you can edit it
    as described in section :ref:`sec_edit_existing_layer`.
@@ -180,6 +185,8 @@ To add fields to the layer you are creating:
    :guilabel:`Date time`.
 #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
 #. Reproduce the steps above for each field you need to add
+#. You can later change the fields order using the |arrowUp| :sup:`Move Up`
+   and |arrowDown| :sup:`Move Down` buttons
 #. Once you are happy with the attributes, click :guilabel:`OK`.
    QGIS will add the new layer to the legend, and you can edit it
    as described in section :ref:`sec_edit_existing_layer`.
@@ -300,6 +307,8 @@ The :guilabel:`New Temporary Scratch Layer` dialog will be displayed as shown in
       :guilabel:`Precision`
    #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
    #. Repeat the steps above for each field you need to add
+   #. You can later change the fields order using the |arrowUp| :sup:`Move Up`
+      and |arrowDown| :sup:`Move Down` buttons
 #. Once you are happy with the settings, click :guilabel:`OK`.
    QGIS will add the new layer to the :guilabel:`Layers` panel, and you can edit
    it as described in section :ref:`sec_edit_existing_layer`.
@@ -980,6 +989,10 @@ when used in conjunction with this spatial index syntax.
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
+   :width: 1.5em
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
