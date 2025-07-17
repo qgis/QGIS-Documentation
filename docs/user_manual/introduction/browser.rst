@@ -335,6 +335,9 @@ Tiles and Web Services
 |               |                                              | |wms|               | |xyz|            | |wcs|            | |wfs|            | |afs|            |
 |               |                                              | WMS / WMTS          | XYZ Tiles        | WCS              | WFS / OGC        | ArcGIS REST      |
 |               |                                              |                     |                  |                  | API - Features   | Servers          |
+|               |                                              |                     |                  |                  |                  |                  |
+|               |                                              | (:ref:`Reference    | (:ref:`Reference | (:ref:`Reference | (:ref:`Reference | (:ref:`Reference |
+|               |                                              | <ogc-wms-servers>`) | <xyz_tile>`)     | <ogc-wcs>`)      | <ogc-wfs>`)      | <arcgis_rest>`)  |
 +===============+==============================================+=====================+==================+==================+==================+==================+
 | Top menu      | Create a :guilabel:`New Connection…`         | |checkbox|          | |checkbox|       | |checkbox|       | |checkbox|       | |checkbox|       |
 |               +----------------------------------------------+---------------------+------------------+------------------+------------------+------------------+
@@ -368,6 +371,9 @@ Tiles and Web Services
 |               |                                              +-------------------+-------------------+-----------------------+-------------------+
 |               |                                              | |vectorTileLayer| | |tiledSceneLayer| | |cloud|               | |sensor|          |
 |               |                                              | Vector Tiles      | Scene             | Cloud                 | SensorThings      |
+|               |                                              |                   |                   |                       |                   |
+|               |                                              | (:ref:`Reference  | (:ref:`Reference  | (:ref:`Reference      | (:ref:`Reference  |
+|               |                                              | <vector_tiles>`)  | <3d_tiles>`)      | <cloud_connections>`) | <sensor_things>`) |
 +===============+==============================================+===================+===================+=======================+===================+
 | Top menu      | Create a :guilabel:`New Connection…`         |                   | |checkbox|        | |checkbox|            | |checkbox|        |
 |               +----------------------------------------------+-------------------+-------------------+-----------------------+-------------------+
