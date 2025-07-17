@@ -946,11 +946,12 @@ you can install the QGIS plugin :guilabel:`Data Plotly`.
 
       Use Data plotly to plot the air quality observations at a location
 
-STAC (SpatioTemporal Asset Catalogs)
-====================================
 
 .. index:: STAC
 .. _stac:
+
+STAC (SpatioTemporal Asset Catalogs)
+====================================
 
 STAC (SpatioTemporal Asset Catalog) is a specification for describing geospatial
 data in a consistent and accessible way. It defines a standard structure for organizing
