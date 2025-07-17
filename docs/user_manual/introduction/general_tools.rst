@@ -678,17 +678,32 @@ The :guilabel:`Debugging/Development Tools` panel (:kbd:`F12`) provides
 a unified place for handling and debugging actions within QGIS.
 Available tools are organized under following tabs:
 
+* |HelpContents| :guilabel:`API Documentation`: embeds developer oriented documentation
 * |networkAndProxy| :guilabel:`Network Logger`: records and displays network requests
   and interactions
 * |dbManager| :guilabel:`Query Logger`: logs SQL commands issued by data providers
   and duration of execution
 * |stopwatch| :guilabel:`Profiler`: provides load times for every actions
   in order to detect causes of slow down
-  
+
 .. note:: Plugin authors can extend the panel with custom tabs
  for debugging and developping their own plugins.
  This is done using :meth:`registerDevToolWidgetFactory
  <qgis.gui.QgisInterface.registerDevToolWidgetFactory>` method.
+
+
+API Documentation
+.................
+
+The |HelpContents| :guilabel:`API Documentation` tab can display either
+the |logo| :sup:`PyQGIS API documentation` or the |qt| :sup:`Qt API documentation`.
+These are embedded in the widget, allowing you to browse and search the docs without leaving QGIS.
+It is also the place you can display specific help page for objects or classes in your code sample;
+from the Python interactive console or text editor dialog, select or hover a text
+and press :kbd:`F1` or right-click and select |HelpContents| :sup:`Contextual help` to get its API help.
+If you wish to read the active page in the system web browser, then press |wms| :sup:`Open in web browser`.
+
+Read :ref:`contextual help <python_contextual_help>` for details on the widget configuration.
 
 Network Logger
 ..............
@@ -2440,6 +2455,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.2em
+.. |logo| image:: /static/common/logo.png
+   :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
@@ -2454,6 +2471,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |qt| image:: /static/common/mIconQt.png
+   :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
 .. |record| image:: /static/common/mActionRecord.png
@@ -2516,6 +2535,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+.. |wms| image:: /static/common/mIconWms.png
+   :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
