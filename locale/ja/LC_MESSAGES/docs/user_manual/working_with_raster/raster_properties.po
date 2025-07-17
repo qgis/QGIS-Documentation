@@ -1732,6 +1732,59 @@ msgstr ""
 msgid "Raster Elevation Properties"
 msgstr "ラスタ標高プロパティ"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:915
+msgid ""
+":guilabel:`Represents Elevation Surface`: whether the raster layer "
+"represents a height surface (e.g DEM) and the pixel values should be "
+"interpreted as elevations. Choose this option if you want to display a "
+"raster in an :ref:`elevation profile view <label_elevation_profile_view>`. "
+"You will also need to fill in the :guilabel:`Band` to pick values from and "
+"can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`."
+msgstr ""
+":guilabel:`Represents Elevation Surface`: ラスタレイヤが高さの表面 (例 DEM) "
+"を表し、ピクセル値を標高として解釈するかどうかを指定します。ラスタを :ref:`elevation profile "
+"view<label_elevation_profile_view>`. に表示したい場合はこのオプションを選択してください。また、値を取得する "
+":guilabel:`Band` の指定が必要で、:guilabel:`Scale` および "
+":guilabel:`Offst`を適用することも可能です。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:921
+msgid ""
+":guilabel:`Fixed Elevation Range`: The raster layer (or selected raster "
+"band) is associated with a fixed elevation range. This mode can be used when"
+" a layer has a single fixed elevation or a range (slice) of elevation "
+"values. If a range is specified, pixels will be extruded over this range. "
+"You can set the :guilabel:`Lower` and :guilabel:`Upper` elevation range "
+"values for the layer, and specify whether the lower or upper "
+":guilabel:`Limits` are inclusive or exclusive."
+msgstr ""
+":guilabel:`Fixed Elevation Range`: ラスタレイヤ (または選択したラスタバンド) "
+"に固定の標高範囲を関連付けることができます。このモードは、レイヤに単一の固定標高、または標高値の範囲 (スライス) "
+"がある場合に使用できます。範囲が指定されている場合、ピクセルはこの範囲に沿って押し出されて表示されます。レイヤに対して "
+":guilabel:`Lower` および :guilabel:`Upper` の標高範囲の値を設定でき、さらに下限・上限の "
+":guilabel:`Limits` を含むか含まないか (inclusive または exclusive) を指定することが可能です。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:927
+msgid ""
+":guilabel:`Fixed Elevation Range Per Band`: Each band in the raster can have"
+" a fixed elevation range associated with it. This is designed for data "
+"sources that expose elevation-related data in bands, such as NetCDF files. "
+"For example, a raster with temperature data at different ocean depths. When "
+"rendering, the uppermost matching band will be selected and used for the "
+"layer's data. This feature is exposed as a user-editable table for raster "
+"bands with lower and upper values. Users can either populate the lower and "
+"upper values manually or use an |expression| :guilabel:`Expression` to auto-"
+"fill all band values based on expression. The expression-based fill allows "
+"you to design expressions that extract useful information from band names. "
+"For example, extracting the depth value from a band name like \"Band 001: "
+"depth=-5500 (meters)\"."
+msgstr ""
+":guilabel:`Fixed Elevation Range Per Band`: "
+"ラスタ内の各バンドに固定の標高範囲を関連付けることができます。これは、NetCDF "
+"ファイルのように標高関連データをバンド内に持つデータソース向けに設計されています。例えば、異なる海洋深度での温度データを持つラスタの場合などです。レンダリング時には、一致する最上位のバンドが選択され、そのレイヤのデータとして使用されます。この機能は、ラスタバンドごとの下限値・上限値を持つユーザー編集可能なテーブルとして提供されます。ユーザーは下限値・上限値を手動で入力することも、|expression|"
+" :guilabel:`Expression` "
+"を使用してすべてのバンド値を式に基づいて自動入力することも可能です。式による自動入力では、バンド名から有用な情報を抽出する式を設計することができます。例えば、\"Band"
+" 001: depth=-5500 (meters)\" のようなバンド名から深度の値を抽出することが可能です。"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:936
 msgid ""
 ":guilabel:`Profile Chart Appearance`: controls the rendering of the raster "
@@ -1845,6 +1898,42 @@ msgid ""
 "|checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips "
 "for the layer"
 msgstr "|checkbox| :guilabel:`Tipsを有効化` は、レイヤの地図のTipsを表示するかどうかを制御します。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1012
+msgid ""
+"The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor "
+"for map tips, mixing QGIS expressions and html styles and tags (multiline, "
+"fonts, images, hyperlink, tables, ...). You can check the result of your "
+"code sample in the :guilabel:`Preview` frame. You can also select and edit "
+"existing expressions using the :guilabel:`Insert/Edit Expression` button."
+msgstr ""
+":guilabel:`HTML Map Tip`  は、QGIS の式と HTML のスタイル・タグ (複数行、フォント、画像、ハイパーリンク、表など)"
+" を組み合わせてマップチップを作成できる、高機能な HTML テキストエディタを提供します。コードサンプルの結果は "
+":guilabel:`Preview` フレームで確認できます。また、:guilabel:`Insert/Edit Expression` "
+"ボタンを使用して、既存の式を選択・編集することも可能です。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1017
+msgid ""
+"You might look for expressions located in :guilabel:`Rasters` group or the "
+"``@layer_cursor_point`` variable in the :guilabel:`Expressions` dialog."
+msgstr ""
+":guilabel:`Expressions` ダイアログ内で、:guilabel:`Rasters` グループ内にある式や "
+"``@layer_cursor_point`` 変数を探すことができます。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1020
+msgid ""
+"**Understanding the** :guilabel:`Insert/Edit Expression` **button behavior**"
+msgstr ":guilabel:`Insert/Edit Expression` **ボタンの動作** を *理解する**      "
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1022
+msgid ""
+"If you select some text within an expression (between \"[%\" and \"%]\"), or"
+" if no text is selected but the cursor is inside an expression, the whole "
+"expression will be automatically selected for editing. If the cursor or a "
+"selected text is outside an expression, the dialog opens with the selection."
+msgstr ""
+"式 (\"[%\" と \"%]\" で囲まれた部分) "
+"の中でテキストを選択した場合、またはテキストを選択していなくてもカーソルが式の中にある場合は、その式全体が自動的に選択されて編集できるようになります。カーソルや選択したテキストが式の外にある場合は、ダイアログはその選択範囲で開きます。"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1032
 msgid "Map tips with raster layer"
@@ -1977,6 +2066,37 @@ msgstr "ツールバーの :guilabel:`地物情報表示` ツールをクリッ�
 msgid "Click on the point in the raster layer that you want to identify."
 msgstr "識別したいラスタレイヤの点の上でクリックします。"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1094
+msgid ""
+"The Identify Results panel will open in its default ``Tree`` view and "
+"display information about the clicked point. Formatting of the results vary "
+"depending on the provider of the layer. For example:"
+msgstr ""
+"クリックしたポイントの情報が表示されると、Identify Results パネルがデフォルトの``Tree`` "
+"ビューで開きます。結果の表示形式はレイヤのプロバイダによって異なります。例えば:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1098
+msgid ""
+"For a local raster layer: below the name of the layer, you have on the left "
+"the band(s) of the clicked pixel, and on the right their respective value."
+msgstr ""
+"ローカルのラスタレイヤの場合: レイヤ名の下に、左側にはクリックしたピクセルのバンド (複数ある場合はバンド一覧) 右側にはそれぞれの値が表示されます。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1101
+msgid ""
+"For a remote layer such as WMS, a :guilabel:`Format` menu allows you to "
+"select whether the information should be displayed as :guilabel:`HTML`, "
+":guilabel:`Feature` or :guilabel:`Text`."
+msgstr ""
+"WMS などのリモートレイヤの場合、:guilabel:` Format` メニューで情報の表示形式として "
+":guilabel:`HTML`、:guilabel:`Feature` または :guilabel:`Text` を選択できます。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1105
+msgid ""
+"These values can also be rendered (from the :guilabel:`View` menu located at"
+" the bottom of the panel) in:"
+msgstr "これらの値は、(パネル下部にある :guilabel:`View` メニューから) 表示させることもできます:"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1107
 msgid ""
 "a ``Table`` view - organizes the information about the identified features "
@@ -1998,3 +2118,7 @@ msgstr "ピクセル属性の下には、以下のような :guilabel:`派生` �
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1115
 msgid "``X`` and ``Y`` coordinate values of the point clicked"
 msgstr "クリックされた点の ``X`` 、 ``Y`` 座標値"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1116
+msgid "Column and row of the point clicked (pixel) when compatible"
+msgstr "互換性がある場合、クリックしたポイントの列および行 (ピクセル) が表示されます"
