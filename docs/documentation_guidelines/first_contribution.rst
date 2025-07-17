@@ -89,9 +89,11 @@ without any harm.
 Alternative 1: Use the ``Edit on GitHub`` shortcut
 ..................................................
 
-Pages on the QGIS documentation website can be edited quickly and easily by clicking on the
-``Edit on GitHub`` link at the top right of each page,
-or in the drop-down menu at the bottom of the left sidebar.
+Pages on the QGIS documentation website can be edited quickly and easily
+by clicking on the ``Edit on GitHub`` link:
+
+* at the top right of each page,
+* or in the drop-down menu at the bottom of the left sidebar.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo
