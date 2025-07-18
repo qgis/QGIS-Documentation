@@ -260,6 +260,21 @@ Right-clicking an item in the browser tree helps you to:
 
 * for a file or a table, display its metadata or open it in your project.
   Tables can even be renamed, deleted or truncated.
+
+.. tip:: **Rename PostgreSQL table fields directly from the Browser Panel**
+
+   Starting from QGIS 3.44, you can rename fields of a PostgreSQL table directly from the Browser Panel.
+
+   To do this:
+
+   #. Expand your PostgreSQL connection in the Browser Panel.
+   #. Navigate to the desired schema and table.
+   #. Expand the table node to show its fields.
+   #. Right-click a field and choose :guilabel:`Rename Field`.
+   #. Enter a new name and confirm.
+
+   You need to have the appropriate privileges on the database to perform this action (e.g. ``ALTER TABLE``).
+   
 * for a folder, bookmark it into your favourites or hide it from the browser
   tree. Hidden folders can be managed from the :menuselection:`Settings -->
   Options --> Data Sources` tab.
