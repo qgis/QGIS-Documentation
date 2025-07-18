@@ -781,7 +781,8 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
        as using :guilabel:`Simple Features`. If not, it fallbacks to using :guilabel:`Complex Features` mode.
      * :guilabel:`Simple Features`: returns data as simple features only
      * :guilabel:`Complex Features`: uses the `OGR GMLAS <https://gdal.org/en/stable/drivers/vector/gmlas.html>`,
-       potentially returning complex features, regardless of the server capabilities or data schema.
+       potentially returning complex features, depending on the data schema,
+       where nested data structures are exposed by QGIS as JSON.
 
    * Depending on the WFS version, indicate whether to:
 
