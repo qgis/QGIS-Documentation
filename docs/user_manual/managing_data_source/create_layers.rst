@@ -132,8 +132,8 @@ To add fields to the layer you are creating:
 
 #. Enter the :guilabel:`Name` of the field
 #. Select the data :guilabel:`Type`. Only :guilabel:`Decimal number`,
-   :guilabel:`Whole number`, :guilabel:`Text data` and :guilabel:`Date`
-   attributes are supported.
+   :guilabel:`Whole number`, :guilabel:`Text data`, :guilabel:`Date`, and
+   :guilabel:`Boolean` data types attributes are supported.
 #. Depending on the selected data format, enter the :guilabel:`Length` and
    :guilabel:`Precision`.
 #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
