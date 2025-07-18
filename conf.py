@@ -120,6 +120,10 @@ html_theme_options = {
     # Toc options
     # titles_only: When enabled, page subheadings are not included in the navigation. Default: False
     # 'titles_only': False,
+    # vcs_pageview_mode: changes how to view files when using ``display_github``, ``display_gitlab``, etc.
+    # When using GitHub or GitLab this can be: ``blob`` (default), ``edit``, or ``raw``.
+    # On Bitbucket, this can be either: ``view`` (default) or ``edit``.
+    'vcs_pageview_mode': 'edit',
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
