@@ -305,7 +305,7 @@ each level of the dataset tree.
 +---------------+--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 | Field         | :guilabel:`Set Field Domain`               | |checkbox|   |              |            |            |               |            |
 +               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
-|               | :guilabel:`Rename Field`                   | |checkbox|   |              |            |            |               |            |
+|               | :guilabel:`Rename Field` ([2]_)            | |checkbox|   |              | |checkbox| |            |               |            |
 +               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 |               | :guilabel:`Set Alias…`                     | |checkbox|   |              |            |            |               |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
@@ -318,6 +318,7 @@ each level of the dataset tree.
 .. [1] The different entries may also be available for some GDAL supported
  `vector file formats <https://gdal.org/en/latest/drivers/vector/index.html>`_
  such as ESRI File Geodatabase, FlatGeobuf, GeoParquet, NetCDF, ... when compatible.
+.. [2] For PostgreSQL connections: only supported with ALTER TABLE privilege.
 
 .. note::
 
