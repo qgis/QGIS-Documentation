@@ -126,6 +126,9 @@ Selected layout items feature a rotation handle above them.
 Click and drag this handle to rotate the item interactively on the layout canvas.  
 For more precise control, you can use the :guilabel:`Rotation` field in the :guilabel:`Item Properties` panel.
 
+Holding the :kbd:`Ctrl` key while rotating constrains the rotation angle to predefined steps (e.g., 15°),
+allowing for precise alignment.
+
 .. _group_items:
 
 Grouping items
