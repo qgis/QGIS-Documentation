@@ -249,7 +249,7 @@ The algorithm has no output.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:importintospatialite``
+**Algorithm ID**: ``native:importintospatialite``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
