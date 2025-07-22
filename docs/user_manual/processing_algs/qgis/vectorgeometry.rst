@@ -3832,9 +3832,6 @@ The following enclosing geometry types are supported:
     Clockwise from top left: envelope, oriented rectangle,
     circle, convex hull
 
-.. note:: For singlepart point features, the output corresponds to
-   the bounding box of the geometry.
-
 .. seealso:: :ref:`qgisminimumenclosingcircle`
 
 Parameters
@@ -4295,6 +4292,9 @@ Oriented minimum bounding box
 -----------------------------
 Calculates the minimum area rotated rectangle for each feature in the
 input layer.
+
+.. note:: For singlepart point features, the output corresponds to
+   the bounding box of the geometry.
 
 .. figure:: img/oriented_minimum_bounding_box.png
    :align: center
