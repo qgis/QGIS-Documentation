@@ -3699,6 +3699,11 @@ Specifically, you can set:
   to control how high features vertically extend above their base.
   This is convenient to indicate that a 2D geometry layers, e.g. a polygon
   building footprints layer, actually represents 3D objects.
+* |unchecked| :guilabel:`Custom tolerance`: allows you to override the global sampling
+  tolerance defined in the elevation profile settings, specifically for this vector layer.
+  When enabled, you can set :guilabel:`Tolerance` that determines how the layer
+  is sampled along the profile line. This is useful when you need finer or coarser sampling
+  than the global default, for example, to improve performance or accuracy for complex geometries.
 * :guilabel:`Elevation Binding`: only relevant when combining an
   :guilabel:`Elevation clamping` relying on the terrain with a line or
   polygon layer, this option controls how feature elevation is set relative
