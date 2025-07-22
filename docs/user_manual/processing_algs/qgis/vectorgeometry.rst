@@ -5737,10 +5737,10 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Rotated**
+   * - **Roundness**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer with roundness value in a field
+     - The output vector layer with ``roundness`` value in a field
 
 Python code
 ...........
