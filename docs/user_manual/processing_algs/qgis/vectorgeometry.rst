@@ -2844,6 +2844,9 @@ Outputs
      - [vector: point]
      - The output (point) vector layer containing the specified
        vertices from the input layer geometries.
+       Other than the input attributes, the output layer also contains the following fields:
+       ``vertex_pos``, ``vertex_index``, ``vertex_part``, ``vertex_part_ring``, ``vertex_part_index``,
+       ``distance``, and ``angle`` of the extracted vertex.
 
 Python code
 ...........
