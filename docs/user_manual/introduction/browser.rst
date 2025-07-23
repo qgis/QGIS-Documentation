@@ -295,6 +295,9 @@ each level of the dataset tree.
 |               | :menuselection:`Manage -->                 | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox|    |            |
 |               | Add Selected Layers to Project`            |              |              |            |            |               |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
+|               | :menuselection:`Manage -->                 |              |              | |checkbox| |            |               |            |
+|               | Move to Another Schema`                    |              |              |            |            |               |            |
+|               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 |               | Open :guilabel:`Layer Properties…` dialog  | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox|    |            |
 |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
 |               | Open :guilabel:`File Properties…` dialog   | |checkbox|   |              |            |            |               |            |
