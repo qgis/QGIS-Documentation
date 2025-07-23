@@ -118,6 +118,7 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
        Uses the map units and is ignored by other layer or geometry types.
        For some layer types (e.g. vector layers, point clouds), a custom tolerance can be set in the layer's Elevation properties tab, 
        which replaces the global tolerance and allows more control over feature inclusion based on distance to the profile line.
+       
    * - :menuselection:`--> Rename Profile...`
      -
      - Allows to rename the profile view.
