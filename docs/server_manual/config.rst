@@ -226,6 +226,12 @@ several ways to define these variables. This is fully described in
      -
      - All
 
+   * - QGIS_SERVER_PROJECT_CACHE_SIZE
+     - Sets the maximum number of QGIS project files (.qgs/.qgz) to keep in server cache. 
+       This can improve performance when serving the same projects repeatedly.
+     - 100
+     - All
+
    * - QGIS_SERVER_PROJECT_CACHE_STRATEGY
      - Defines method for invalidating the project cache. Available strategies are:
 
