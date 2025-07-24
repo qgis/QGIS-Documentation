@@ -1752,6 +1752,11 @@ You can indeed choose:
   * :ref:`measure dialog <sec_measure>`
   * :ref:`scale bar decoration <scalebar_decoration>`
 
+  .. note::
+
+   To ensure measurement units (for distance and area) always reflect the units of the current project's CRS,
+   select :guilabel:`Map Units` for these options.
+
 .. _coordinate_and_bearing:
 
 The :guilabel:`Coordinate and Bearing display` allows you to customize
