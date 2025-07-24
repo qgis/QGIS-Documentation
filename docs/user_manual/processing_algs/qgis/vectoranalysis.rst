@@ -1157,7 +1157,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:listuniquevalues``
+**Algorithm ID**: ``native:listuniquevalues``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1265,6 +1265,9 @@ values:
   spatially random process, while a high Z-Score means that your data
   are likely to be a result of a spatially random process.
 
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
+
   .. figure:: img/normal_distribution.png
      :align: center
 
@@ -1359,6 +1362,9 @@ layers.
 New attributes are added to the output layer reporting the
 total area of overlap and percentage of the input feature
 overlapped by each of the selected overlay layers.
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 Parameters
 ..........
@@ -1849,6 +1855,9 @@ of lines and the total number of them that cross each polygon.
 The resulting layer has the same features as the input polygon layer,
 but with two additional attributes containing the length and count of
 the lines across each polygon.
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>` 
