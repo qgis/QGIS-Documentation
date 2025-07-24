@@ -1140,7 +1140,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``native:listuniquevalues``
+**Algorithm ID**: ``qgis:listuniquevalues``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
