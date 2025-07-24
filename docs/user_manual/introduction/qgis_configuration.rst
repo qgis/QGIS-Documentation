@@ -1762,19 +1762,18 @@ You can indeed choose:
   and the :guilabel:`Units for area measurements`.
   These settings default to their corresponding :ref:`global options <global_measure_tool>`
   and can be manually changed for the current project.
-
-.. note::
-
-   To ensure measurement units (for distance and area) always reflect the units of the current project's CRS,
-   select :guilabel:`Map Units` for these options.
-
-They are used in:
+  They are used in:
 
   * Attribute table field update bar
   * Field calculator calculations
   * :ref:`Identify tool <identify>` derived length, perimeter and area values
   * :ref:`measure dialog <sec_measure>`
   * :ref:`scale bar decoration <scalebar_decoration>`
+
+  .. note::
+
+   To ensure measurement units (for distance and area) always reflect the units of the current project's CRS,
+   select :guilabel:`Map Units` for these options.
 
 .. _scale_calculation_method:
 
