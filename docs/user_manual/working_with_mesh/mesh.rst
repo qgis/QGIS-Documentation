@@ -1231,6 +1231,10 @@ The :guilabel:`Result Layer` helps you configure properties of the output layer:
     coordinate fields)
   * defined by a polygon layer (:guilabel:`Mask layer`) of the project:
     the polygon features geometry are used to clip the mesh layer datasets
+  * quickly selected using the :guilabel:`Calculate from` button,
+    which allows quick selection from the current canvas extent (:guilabel:`Map Canvas Extent`), 
+    an existing layer (:guilabel:`Layer`), a print layout map (:guilabel:`Layout Map`), 
+    or a saved spatial bookmark (:guilabel:`Bookmark`).
 
 * The :guilabel:`Temporal extent` to take into account for datasets can be set
   with the :guilabel:`Start time` and :guilabel:`End time` options, selected
