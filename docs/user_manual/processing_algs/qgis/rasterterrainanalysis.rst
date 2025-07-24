@@ -112,9 +112,12 @@ to match the overall slope in the study area (``dz_max( d ) = d * s``).
 A 5 % confidence interval (``ci = 1.65 * sqrt( 2 * stddev )``) may be used to modify the filter function even further
 by either relaxing (``dz_max( d ) = d * s + ci``) or amplifying (``dz_max( d ) = d * s - ci``) the filter criterium.
 
-*References: Vosselman, G. (2000): Slope based filtering of laser altimetry data. IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942*
+*References: Vosselman, G. (2000): Slope based filtering of laser altimetry data.
+IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942*
 
-.. seealso:: This tool is a port of the SAGA `DTM Filter (slope-based) <https://saga-gis.sourceforge.io/saga_tool_doc/9.1.1/grid_filter_7.html>`_
+.. seealso:: This tool is a port of the SAGA `DTM Filter (slope-based)`_
+
+.. _`DTM Filter (slope-based)`: https://saga-gis.sourceforge.io/saga_tool_doc/9.9.1/grid_filter_7.html
 
 Parameters
 ..........
@@ -256,6 +259,162 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+.. _qgisfillsinkswangliu:
+
+Fill sinks (Wang & Liu)
+------------------------
+|344|
+
+Uses a method proposed by Wang & Liu to identify and fill surface depressions in digital elevation models.
+
+The method was enhanced to allow the creation of hydrologically sound elevation models,
+i.e. not only to fill the depression(s) but also to preserve a downward slope along the flow path.
+If desired, this is accomplished by preserving a minimum slope gradient (and thus elevation difference) between cells.
+
+*References: Wang, L. & H. Liu (2006): An efficient method for identifying and filling surface depressions
+in digital elevation models for hydrologic analysis and modelling.
+International Journal of Geographical Information Science, Vol. 20, No. 2: 193-213.*
+
+.. seealso:: This tool is a port of the SAGA `Fill Sinks (Wang & Liu)`_ tool.
+  
+.. _`Fill Sinks (Wang & Liu)`: https://saga-gis.sourceforge.io/saga_tool_doc/9.9.1/ta_preprocessor_4.html
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+
+       Default: 1
+     - The band of the DEM to consider
+   * - **Minimum slope (degrees)**
+     - ``MIN_SLOPE``
+     - [numeric: double]
+
+       Default: 0.10
+     - Minimum slope gradient to preserve from cell to cell;
+       with a value of zero, sinks are filled up to the spill elevation
+       (which results in flat areas).
+   * - **Output layer (filled DEM)**
+
+       Optional
+     - ``OUTPUT_FILLED_DEM``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the ouput raster corresponding to the depression-free DEM.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+
+   * - **Output layer (flow directions)**
+
+       Optional
+     - ``OUTPUT_FLOW_DIRECTIONS``
+     - [raster]
+
+       Default: ``[Skip output]``
+     - Specify the output raster with computed flow directions.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+
+   * - **Output layer (watershed basins)**
+
+       Optional
+     - ``OUTPUT_WATERSHED_BASINS``
+     - [raster]
+
+       Default: ``[Skip output]``
+     - Specify the output raster corresponding to the delineated watershed basins.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options with a pipe
+       character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer (filled DEM)**
+     - ``OUTPUT_FILLED_DEM``
+     - [raster]
+     - Ouput raster corresponding to the depression-free digital elevation model.
+   * - **Output layer (flow directions)**
+     - ``OUTPUT_FLOW_DIRECTIONS``
+     - [raster]
+     - Output raster with computed flow directions; 0=N, 1=NE, 2=E, ... 7=NW.
+   * - **Output layer (watershed basins)**
+     - ``OUTPUT_WATERSHED_BASINS``
+     - [raster]
+     - Output raster corresponding to the delineated watershed basins.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:fillsinkswangliu``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 .. _qgishillshade:
 
@@ -747,3 +906,12 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |344| replace:: ``NEW in 3.44``
