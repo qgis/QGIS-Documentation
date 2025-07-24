@@ -752,8 +752,10 @@ Points can be grouped by a field or an expression to distinguish line features.
 
 In addition to the line vector layer, a text file is output
 that describes the resulting line as a start point and a
-sequence of bearings / directions (relative to azimuth) and
-distances.
+sequence of bearings / directions (relative to azimuth) and distances.
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 Parameters
 ..........

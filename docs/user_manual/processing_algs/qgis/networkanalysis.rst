@@ -18,6 +18,9 @@ This allows evaluation of accessibility within a network,
 e.g., what are the places I can navigate to on a road network without spending
 cost greater than a given value (the cost can be distance or time).
 
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
+
 Parameters
 ..........
 
@@ -263,6 +266,9 @@ This allows the evaluation of accessibility within a network,
 e.g., what are the places I can navigate to on a road network without spending a cost
 greater than a given value (the cost can be distance or time).
 
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
+
 Parameters
 ..........
 
@@ -402,6 +408,9 @@ Shortest path (layer to point)
 Computes the optimal (shortest or fastest) routes from multiple start
 points defined by a vector layer and a given end point.
 
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
+
 Parameters
 ..........
 
@@ -530,6 +539,9 @@ Shortest path (point to layer)
 ------------------------------
 Computes the optimal (shortest or fastest) routes between a given
 start point and multiple end points defined by a point vector layer.
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 .. warning::
  This algorithm drops existing primary keys or FID values and regenerates them in output layers.
@@ -662,6 +674,9 @@ Shortest path (point to point)
 ------------------------------
 Computes the optimal (shortest or fastest) route between a given start
 point and a given end point.
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 Parameters
 ..........

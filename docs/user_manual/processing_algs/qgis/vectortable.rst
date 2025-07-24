@@ -782,6 +782,9 @@ A new layer is created with the result of the expression.
 
 The field calculator is very useful when used in :ref:`processing.modeler`.
 
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
+
 Parameters
 ..........
 
@@ -906,6 +909,9 @@ The Refactor fields algorithm allows to:
 * Reorder fields
 * Calculate new fields based on expressions
 * Load field list from another layer
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 .. figure:: img/refactor_fields.png
   :align: center
