@@ -1222,20 +1222,7 @@ The :guilabel:`Result Layer` helps you configure properties of the output layer:
 
   In either case, you should provide a :guilabel:`Group Name` for the output
   dataset group.
-* The :guilabel:`Spatial extent` to consider for calculation can be:
-
-  * a :guilabel:`Custom extent`, manually filled with the :guilabel:`X min`,
-    :guilabel:`X max`, :guilabel:`Y min` and :guilabel:`Y max` coordinate,
-    or extracted from an existing dataset group (select it in the list and
-    press :guilabel:`Use selected layer extent` to fill the abovementioned
-    coordinate fields)
-  * defined by a polygon layer (:guilabel:`Mask layer`) of the project:
-    the polygon features geometry are used to clip the mesh layer datasets
-  * quickly selected using the :guilabel:`Calculate from` button,
-    which allows quick selection from the current canvas extent (:guilabel:`Map Canvas Extent`), 
-    an existing layer (:guilabel:`Layer`), a print layout map (:guilabel:`Layout Map`), 
-    or a saved spatial bookmark (:guilabel:`Bookmark`).
-
+* Define the :guilabel:`Spatial extent` of the calculation using the :ref:`extent selector <extent_selector>` widget.
 * The :guilabel:`Temporal extent` to take into account for datasets can be set
   with the :guilabel:`Start time` and :guilabel:`End time` options, selected
   from the existing dataset groups timesteps. They can also be filled using the
