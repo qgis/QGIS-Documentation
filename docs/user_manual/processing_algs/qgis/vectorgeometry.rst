@@ -5378,6 +5378,170 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisremovepartsbyarea:
+
+Remove parts by area
+----------------------
+|400|
+
+Takes a polygon layer and removes polygons which are smaller than a specified area.
+
+If the input geometry is a multipart geometry, then the parts will be filtered by their individual areas.
+If no parts match the required minimum area, then the feature will be skipped and omitted from the output layer.
+
+If the input geometry is a singlepart geometry, then the feature will be skipped
+if the geometry's area is below the required size and omitted from the output layer.
+
+The area will be calculated using Cartesian calculations in the source layer's coordinate reference system.
+
+Attributes are not modified.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of line features
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input vector layer whose features are to be filtered by area.
+   * - **Remove parts with area less than**
+     - ``MIN_AREA``
+     - [numeric: double] |dataDefine|
+
+       Default: 0.0
+     - Minimum area of the polygons to keep, using cartesian calculations in the layer's CRS.
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the polygon output vector layer.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output polygon vector layer with features
+       whose individual parts have a surface greater than the given area.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:removepartsbyarea``
+
+.. include:: ../algs_include.rst
+   :start-after: **algorithm_code_section**
+   :end-before: **end_algorithm_code_section**
+
+
+.. _qgisremovepartsbylength:
+
+Remove parts by length
+----------------------
+|400|
+
+Takes a line layer and removes lines which are shorter than a specified length.
+
+If the input geometry is a multipart geometry, then the parts will be filtered by their individual lengths.
+If no parts match the required minimum length, then the feature will be skipped and omitted from the output layer.
+
+If the input geometry is a singlepart geometry, then the feature will be skipped
+if the geometry's length is below the required size and omitted from the output layer.
+
+The length will be calculated using Cartesian calculations in the source layer's coordinate reference system.
+
+Attributes are not modified.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of line features
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input vector layer whose features are to be filtered by length.
+   * - **Remove parts with lengths less than**
+     - ``MIN_LENGTH``
+     - [numeric: double] |dataDefine|
+
+       Default: 0.0
+     - Minimum length of the lines to keep, using cartesian calculations in the layer's CRS.
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the line output vector layer.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output line vector layer with features
+       whose individual parts are longer than the given value.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:removepartsbylength``
+
+.. include:: ../algs_include.rst
+   :start-after: **algorithm_code_section**
+   :end-before: **end_algorithm_code_section**
+
+
 .. _qgisreverselinedirection:
 
 Reverse line direction
@@ -7374,6 +7538,7 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |400| replace:: ``NEW in 4.0``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
