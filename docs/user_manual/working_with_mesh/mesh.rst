@@ -1238,7 +1238,7 @@ The :guilabel:`Result Layer` helps you configure properties of the output layer:
   :guilabel:`Use all selected dataset times` button to take the whole range.
 * With the |checkbox| :guilabel:`Add result to project` checkbox, the result layer
   will automatically be added to the legend area and can be visualized.
-  Checked by default for mesh layers.
+  Checked by default.
 
 The :guilabel:`Operators` section contains all available operators. To add an operator
 to the mesh calculator expression box, click the appropriate button. Mathematical
