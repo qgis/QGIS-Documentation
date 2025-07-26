@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +35,28 @@ msgstr ""
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
 
+#: ../../docs/server_manual/services/basics.rst:4
+msgid "Basics"
+msgstr "Pagrindas"
+
+#: ../../docs/server_manual/services/basics.rst:6
+msgid ""
+"This section describes concepts and parameters mutually shared by services. "
+"Some of these are standard and defined in OGC specifications while others "
+"are very specific to QGIS Server."
+msgstr ""
+"Šioje skiltyje aprašomos sąvokos ir parametrai, bendrai teikiami visose "
+"paslaugose. Kai kurie iš jų yra standartiniai ir apibrėžti OGC "
+"specifikacijose, o kiti yra naudojami tik QGIS Serverio."
+
+#: ../../docs/server_manual/services/basics.rst:10
+msgid "Standard concepts:"
+msgstr "Standartinės sąvokos:"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "Concept"
+msgstr "Sąvoka"
+
 #: ../../docs/server_manual/services/basics.rst:1
 msgid "Description"
 msgstr "Aprašymas"
@@ -43,29 +66,187 @@ msgid ":ref:`SERVICE <services_basics_service>`"
 msgstr ":ref:`SERVICE <services_basics_service>`"
 
 #: ../../docs/server_manual/services/basics.rst:1
+msgid "Name of the service"
+msgstr "Paslaugos pavadinimas"
+
+#: ../../docs/server_manual/services/basics.rst:1
 msgid ":ref:`REQUEST <services_basics_request>`"
 msgstr ":ref:`REQUEST <services_basics_request>`"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "Name of the request"
+msgstr "Užklausos pavadinimas"
+
+#: ../../docs/server_manual/services/basics.rst:20
+msgid "Vendor concepts:"
+msgstr "Tiekėjo sąvokos:"
 
 #: ../../docs/server_manual/services/basics.rst:1
 msgid ":ref:`MAP <services_basics_map>`"
 msgstr ":ref:`MAP <services_basics_map>`"
 
 #: ../../docs/server_manual/services/basics.rst:1
+msgid "QGIS project file"
+msgstr "QGIS projekto failas"
+
+#: ../../docs/server_manual/services/basics.rst:1
 msgid ":ref:`FILE_NAME <services_basics_file_name>`"
 msgstr ":ref:`FILE_NAME <services_basics_file_name>`"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "File name of the downloaded file"
+msgstr "Atsiųsto failo pavadinimas"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid ":ref:`Short name <services_basics_short_name>`"
+msgstr ":ref:`Trumpas pavadinimas <services_basics_short_name>`"
+
+#: ../../docs/server_manual/services/basics.rst:1
+msgid "Short name definition"
+msgstr "Trumpo pavadinimo apibrėžimas"
 
 #: ../../docs/server_manual/services/basics.rst:34
 msgid "SERVICE"
 msgstr "SERVICE"
 
+#: ../../docs/server_manual/services/basics.rst:36
+msgid ""
+"This standard parameter allows to specify the name of the service to use for"
+" a specific :ref:`request <services_basics_request>` and has to be formed "
+"like ``SERVICE=NAME``."
+msgstr ""
+"Šis standartinis parametras leidžia nurodyti pavadinimą paslaugos, kurią "
+"reikia naudoti konkrečiai :ref:`užklausai <services_basics_request>` ir jis "
+"turi būti suformuotas taip ``SERVICE=PAVADINIMAS``."
+
+#: ../../docs/server_manual/services/basics.rst:40
+msgid "URL example for the **WMS** service:"
+msgstr "**WMS** paslaugos URL pavyzdys:"
+
+#: ../../docs/server_manual/services/basics.rst:50
+#: ../../docs/server_manual/services/basics.rst:73
+#: ../../docs/server_manual/services/basics.rst:120
+msgid ""
+"Not available for REST based services like :ref:`WFS3 (OGC API Features) "
+"<ogc_api_features>`."
+msgstr ""
+"Netinka REST pagrindo paslaugoms, tokioms kaip :ref:`WFS3 (OGC API Features)"
+" <ogc_api_features>`."
+
 #: ../../docs/server_manual/services/basics.rst:57
 msgid "REQUEST"
 msgstr "REQUEST"
+
+#: ../../docs/server_manual/services/basics.rst:59
+msgid ""
+"This standard parameter allows to specify the name of the request to execute"
+" for a specific :ref:`service <services_basics_service>` and has to be "
+"formed like ``REQUEST=RequestName``."
+msgstr ""
+"Šis standartinis parametras leidžia nurodyti pavadinimą užklausos, kurią "
+"reikia vykdyti konkrečiai :ref:`paslaugai <services_basics_service>` ir turi"
+" būti suformuotas taip ``REQUEST=UžklausosPavadinimas``."
+
+#: ../../docs/server_manual/services/basics.rst:63
+msgid "URL example for the **GetCapabilities** request:"
+msgstr "**GetCapabilities** užklausos URL pavyzdys:"
 
 #: ../../docs/server_manual/services/basics.rst:80
 msgid "MAP"
 msgstr "MAP"
 
+#: ../../docs/server_manual/services/basics.rst:82
+msgid ""
+"This vendor parameter allows to define the QGIS project file to use. It may "
+"be an absolute path or a path relative to the location of the server "
+"executable :file:`qgis_mapserv.fcgi`. ``MAP`` is mandatory by default "
+"because a request needs a QGIS project to actually work. However, the "
+"**QGIS_PROJECT_FILE** environment variable may be used to define a default "
+"QGIS project. In this specific case, ``MAP`` is no longer a required "
+"parameter. For further information you may refer to the "
+":ref:`server_env_variables` chapter."
+msgstr ""
+"Šis tiekėjo parametras leidžia apibrėžti, kurį QGIS projekto failą reikia "
+"naudoti. Tai gali būti absoliutus arba santykinis kelias serveryje "
+"skaičiuojant nuo vykdomojo failo :file:`qgis_mapserv.fcgi`. ``MAP`` yra "
+"privalomas pagal nutylėjimą, nes užklausai reikia QGIS projekto, kad galėtų "
+"veikti. Bet aplinkos kintamajame **QGIS_PROJECT_FILE** galima apibrėžti "
+"numatytąjį QGIS projekto failą. Tokiu konkrečiu atveju, ``MAP`` daugiau "
+"nebėra privalomas parametras. Daugiau informacijos rasite skyriuje "
+":ref:`server_env_variables`."
+
+#: ../../docs/server_manual/services/basics.rst:90
+msgid "URL example:"
+msgstr "URL pavyzdys:"
+
 #: ../../docs/server_manual/services/basics.rst:102
 msgid "FILE_NAME"
 msgstr "FILE_NAME"
+
+#: ../../docs/server_manual/services/basics.rst:104
+msgid ""
+"If this vendor parameter is set, the server response will be sent to the "
+"client as a file attachment with the specified file name."
+msgstr ""
+"Jei nurodytas šis tiekėjo parametras, tai serverio atsakas bus siunčiamas "
+"klientui kaip prisegtas failas su nurodytu failo pavadinimu."
+
+#: ../../docs/server_manual/services/basics.rst:107
+msgid "URL example to save an XML **GetCapabilities** document:"
+msgstr "URL pavyzdys **GetCapabilities** XML dokumento įrašymui:"
+
+#: ../../docs/server_manual/services/basics.rst:127
+msgid "Short name"
+msgstr "Trumpas pavadinimas"
+
+#: ../../docs/server_manual/services/basics.rst:129
+msgid ""
+"A number of elements have both a **short name** and a **title**. The short "
+"name is a text string used for machine-to-machine communication while the "
+"title is for the benefit of humans. For example, a dataset might have the "
+"descriptive title *“Maximum Atmospheric Temperature”* and be requested using"
+" the abbreviated short name *“ATMAX”*. You can set title, short name and "
+"abstract for:"
+msgstr ""
+"Kai kurie elementai turi tiek **trumpą pavadinimą**, tiek ir **antraštę**. "
+"Trumpas pavadinimas yra tekstas, kuris naudojamas bendraujant mašinai su "
+"mašina, o antraštė yra naudojama žmonėms. Pavyzdžiui duomenų aibė gali būti "
+"aprašyta antrašte *“Maksimali atmosferos temperatūra”* ir būti užklausiama "
+"naudojant sutrumpintą trumpą pavadinimą *“ATMAX”*. Jūs galite nurodyti "
+"antraštę, trumpą pavadinimą ir santrauką:"
+
+#: ../../docs/server_manual/services/basics.rst:136
+msgid ""
+"**Layers**: right-click on a layer and choose :menuselection:`Properties... "
+"--> QGIS Server --> Description`."
+msgstr ""
+"**Sluoksniams**: spauskite ant sluoksnio dešiniu mygtuku ir parinkite "
+":menuselection:`Savybės... --> QGIS Serveris --> Aprašymas`."
+
+#: ../../docs/server_manual/services/basics.rst:139
+msgid ""
+"**Groups**: right-click on a group and select :guilabel:`Set Group WMS data`"
+msgstr ""
+"**Grupėms**: spauskite ant grupės dešiniu mygtuku ir parinkite "
+":guilabel:`Nustatyti grupės WMS duomenis`"
+
+#: ../../docs/server_manual/services/basics.rst:141
+msgid ""
+"**Project**: go to :menuselection:`Project --> Properties... --> QGIS Server"
+" --> Service Capabilities`."
+msgstr ""
+"**Projektui**: eikite į :menuselection:`Projektas --> Savybės... --> QGIS "
+"Serveris --> Paslaugų galimybės`."
+
+#: ../../docs/server_manual/services/basics.rst:151
+msgid "Set group WMS data dialog"
+msgstr "Grupės WMS duomenų nustatymo dialogas"
+
+#: ../../docs/server_manual/services/basics.rst:154
+msgid ""
+"Thus, the short name may be used to identify these items when interacting "
+"with QGIS Server. For example with the standard ``LAYERS`` parameter:"
+msgstr ""
+"Taigi trumpą pavadinimą galima naudoti šių elementų identifikavimui, kai "
+"sąveikaujama su QGIS Serveriu. Pavyzdžiui standartiniame parametre "
+"``LAYERS``:"
