@@ -649,7 +649,7 @@ msgid ""
 "Follow the \"Advanced Install\" and install the **QGIS Desktop**, **QGIS "
 "Server** **apache** and **mod_fcgid** packages."
 msgstr ""
-"Vykdykite „Išmanųjų diegimą“ ir įdiekite **QGIS Darbastalį**, **QGIS "
+"Vykdykite „Išmanųjį diegimą“ ir įdiekite **QGIS Darbastalį**, **QGIS "
 "Serverį** **apache** ir **mod_fcgid** paketus."
 
 #: ../../docs/server_manual/getting_started.rst:637
@@ -832,10 +832,576 @@ msgstr ""
 msgid "If you obtain the next image, then QGIS Server is running correctly:"
 msgstr "Jei gaunate šį vaizdą, tai QGIS serveris veikia tvarkingai:"
 
+#: ../../docs/server_manual/getting_started.rst:785
+msgid "Server response to a basic GetMap request"
+msgstr "Serverio atsakas į paprastą GetMap užklausą"
+
+#: ../../docs/server_manual/getting_started.rst:787
+msgid ""
+"Note that you may define **QGIS_PROJECT_FILE** environment variable to use a"
+" project by default instead of giving a **MAP** parameter (see :ref:`qgis-"
+"server-envvar`)."
+msgstr ""
+"Pastebėtina, kad jūs galite apibrėžti aplinkos kintamąjį "
+"**QGIS_PROJECT_FILE**, kuriame būtų nurodomas naudojamas projektas, vietoje "
+"to, kad nurodyti **MAP** parametrą (žr. :ref:`qgis-server-envvar`)."
+
+#: ../../docs/server_manual/getting_started.rst:790
+msgid "For example with spawn-fcgi:"
+msgstr "Pavyzdžiui su spawn-fcgi:"
+
+#: ../../docs/server_manual/getting_started.rst:802
+msgid "Configure your project"
+msgstr "Jūsų projekto konfigūravimas"
+
+#: ../../docs/server_manual/getting_started.rst:804
+msgid ""
+"To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a "
+"QGIS project file with some data or use one of your current projects. Define"
+" the colors and styles of the layers in QGIS and the project CRS, if not "
+"already defined. Then, go to the :guilabel:`QGIS Server` menu of the "
+":menuselection:`Project --> Properties...` dialog and provide some "
+"information about the OWS in the :guilabel:`Service Capabilities` tab."
+msgstr ""
+"Norėdami su QGIS Serveriu teikti WMS, WFS, OAPIF ar WCS, jūs turite sukurti "
+"QGIS projektą su tais pačiais duomenimis arba naudoti vieną iš jūsų "
+"dabartinių projektų. QGIS'e apibrėžkite jūsų sluoksnių spalvas ir stilius, "
+"projekto CRS, jei ji dar nenurodyta. Tada eikite į meniu :guilabel:`QGIS "
+"Serveris`, kurį rasite dialoge :menuselection:`Projektas --> Savybės...` ir "
+"pateikite papildomos informacijos apie OWS kortelėje :guilabel:`Paslaugų "
+"galimybės`."
+
+#: ../../docs/server_manual/getting_started.rst:816
+msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
+msgstr "QGIS serverio projekto WMS/WFS/WCS apibrėžimai"
+
+#: ../../docs/server_manual/getting_started.rst:818
+msgid ""
+"You have to :guilabel:`Enable Service Capabilities` first, if it is "
+"deactivated. This will appear in the GetCapabilities response of the WMS, "
+"WFS or WCS. If you don't check |checkbox| :guilabel:`Enable Service "
+"capabilities`, QGIS Server will use the information given in the "
+":file:`wms_metadata.xml` file located in the :file:`cgi-bin` folder."
+msgstr ""
+"Jūs visų pirma turite :guilabel:`Įgalinti paslaugų galimybes`, jei jos "
+"išjungtos. Tai bus rodoma WMS, WFS ar WCS paslaugų GetCapabilities atsake. "
+"Jei neįjungiate |checkbox| :guilabel:`Įgalinti paslaugų galimybes`, QGIS "
+"Serveris naudos informaciją, kuri pateikta :file:`wms_metadata.xml` faile, "
+"esančiame :file:`cgi-bin` aplanke."
+
 #: ../../docs/server_manual/getting_started.rst:1070
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/server_manual/getting_started.rst:825
+msgid "WMS capabilities"
+msgstr "WMS galimybės"
+
+#: ../../docs/server_manual/getting_started.rst:832
+msgid "Definitions in the WMS tab"
+msgstr "WMS kortelės apibrėžimai"
+
+#: ../../docs/server_manual/getting_started.rst:834
+msgid ""
+"In the :guilabel:`WMS` tab, you can define the options for the WMS "
+"capabilities."
+msgstr ""
+":guilabel:`WMS` kortelėje jūs galite apibrėžti WMS galimybių parinktis."
+
+#: ../../docs/server_manual/getting_started.rst:836
+msgid ""
+"Check :guilabel:`Advertised extent` to define the extent advertised in the "
+"WMS GetCapabilities response. The :ref:`spatial extent selector "
+"<extent_selector>` widget helps you enter the extent as a ``xmin, xmax, "
+"ymin, ymax`` text or pick it from the map canvas, layers, bookmarks..."
+msgstr ""
+"Įjunkite :guilabel:`Reklamuojama apimtis`, kad apibrėžtumėte apimtį, kuri "
+"reklamuojama WMS GetCapabilities atsake. :ref:`Erdvinės apimties parinkimo "
+"<extent_selector>` valdiklis padeda jums įvesti apimtį kaip ``xmin, xmax, "
+"ymin, ymax`` tekstą ar leidžia pasirinkti jį iš žemėlapio drobės, sluoksnio "
+"ar žymeklių..."
+
+#: ../../docs/server_manual/getting_started.rst:843
+msgid ""
+"By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict in "
+"which coordinate reference systems (CRS) QGIS Server will offer to render "
+"maps. It is recommended that you restrict the offered CRS as this reduces "
+"the size of the WMS GetCapabilities response. Use the |symbologyAdd| button "
+"below to select those CRSs from the Coordinate Reference System Selector, or"
+" click :guilabel:`Used` to add the CRSs used in the QGIS project to the "
+"list."
+msgstr ""
+"Įjungę |checkbox| :guilabel:`CRS apribojimus`, jūs galite apriboti, kuriose "
+"koordinačių atskaitos sistemose (CRS) QGIS Serveris siūlys braižyti "
+"žemėlapius. Rekomenduojama apriboti siūlomas CRS, nes tai sumažina WMS "
+"GetCapabilities atsako dydį. Naudokite žemiau esantį mygtuką |symbologyAdd|,"
+" kad parinktumėte CRS iš koordinačių atskaitos sistemos parinkimo ar "
+"spauskite :guilabel:`Naudotos`, kad pridėtumėte QGIS projekte naudotą CRS į "
+"sąrašą."
+
 #: ../../docs/server_manual/getting_started.rst:1072
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
+
+#: ../../docs/server_manual/getting_started.rst:851
+msgid ""
+"If you have print layouts defined in your project, they will be listed in "
+"the ``GetProjectSettings`` response, and they can be used by the GetPrint "
+"request to create prints, using one of the print layouts as a template. This"
+" is a QGIS-specific extension to the WMS 1.3.0 specification. If you want to"
+" exclude any print layout from being published by the WMS, check |checkbox| "
+":guilabel:`Exclude layouts` and click the |symbologyAdd| button below. Then,"
+" select a print layout from the :guilabel:`Select print layout` dialog in "
+"order to add it to the excluded layouts list."
+msgstr ""
+"Jei jūsų projekte yra apibrėžti spausdinimo išdėstymai, jie bus išvardinti "
+"``GetProjectSettings`` atsake ir juos galima naudoti GetPrint užklausose, "
+"kuriant spausdinamus rezultatus, naudojant vieną iš spausdinimo išdėstymų "
+"kaip šabloną. Tai yra specifinis QGIS WMS 1.3.0 specifikacijos plėtinys. Jei"
+" nenorite, kad spausdinimo išdėstymai būtų publikuojami per WMS, įjunkite "
+"parinktį |checkbox| :guilabel:`Išimti išdėstymus` ir spauskite žemiau esantį"
+" mygtuką |symbologyAdd|. Tada parinkite spausdinimo išdėstymą dialoge "
+":guilabel:`Parinkti spausdinimo išdėstymą`, kad pridėtumėte jį į išimamų "
+"išdėstymų sąrašą."
+
+#: ../../docs/server_manual/getting_started.rst:860
+msgid ""
+"If you want to exclude any layer or layer group from being published by the "
+"WMS, check |checkbox| :guilabel:`Exclude Layers` and click the "
+"|symbologyAdd| button below. This opens the :guilabel:`Select restricted "
+"layers and groups` dialog, which allows you to choose the layers and groups "
+"that you don't want to be published. Use the :kbd:`Shift` or :kbd:`Ctrl` key"
+" if you want to select multiple entries. It is recommended that you exclude "
+"from publishing the layers that you don't need as this reduces the size of "
+"the WMS GetCapabilities response which leads to faster loading times on the "
+"client side."
+msgstr ""
+"Jei norite kas koks kuris nors sluoksnis ar sluoksnių grupė nebūtų "
+"publikuojami WMS, įjunkite |checkbox| :guilabel:`Išimti sluoksnius` ir "
+"spauskite žemiau esantį mygtuką |symbologyAdd|. Tai atvers dialoge "
+":guilabel:`Parinkite apribotus sluoksnius ir grupes`, kuriame galėsite "
+"pasirinkti sluoksnius ir grupes, kurių nenorite publikuoti. Naudokite "
+":kbd:`Shift` ar :kbd:`Ctrl` mygtuką, jei norite parinkti kelis įrašus. "
+"Rekomenduojama išimti sluoksnius, kurių jums nereikia, nes tai sumažina WMS "
+"GetCapabilities atsako dydį, o tai reiškia greitesnį įkėlimą kliento pusėje."
+
+#: ../../docs/server_manual/getting_started.rst:869
+msgid ":guilabel:`Layer and Feature Options`"
+msgstr ":guilabel:`Sluoksnio ir geoobjekto parinktys`"
+
+#: ../../docs/server_manual/getting_started.rst:871
+msgid ""
+"You can receive requested GetFeatureInfo as plain text, XML and GML. The "
+"default is XML."
+msgstr ""
+"Paprašytą GetFeatureInfo galite gauti kaip paprastą tekstą, XML ir GML. "
+"Numatytas variantas yra XML."
+
+#: ../../docs/server_manual/getting_started.rst:873
+msgid ""
+"If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be"
+" used to reference layers in the ``GetCapabilities`` response or ``GetMap "
+"LAYERS`` parameter. If not, layer name or short name if defined (see "
+":ref:`vectorservermenu`) is used."
+msgstr ""
+"Jei įjungiate parinktį |checkbox| :guilabel:`Naudoti sluoksnių id kaip "
+"pavadinimą`, sluoksnių id bus naudojami apibūdinant sluoksnius "
+"``GetCapabilities`` atsake ar ``GetMap LAYERS`` parametre. Priešingu atveju "
+"naudojamas sluoksnio pavadinimas arba trumpas pavadinimas, jei toks "
+"apibrėžtas (žr. :ref:`vectorservermenu`)."
+
+#: ../../docs/server_manual/getting_started.rst:877
+msgid ""
+"By default, layer names are used to expose layers through WMS. If multiple "
+"layers have the same name, they will be merged to a single WMS layer and "
+"cannot be requested individually. You need to take care of these layers "
+"being compatible with each other. Using the :guilabel:`Use layer ids as "
+"name` option ensures that multiple layers with the same name can be "
+"requested as individual layers."
+msgstr ""
+"Pagal nutylėjimą sluoksnių pavadinimai naudojami, kai jie skelbiami per WMS."
+" Jei keli sluoksniai turi tokį patį pavadinimą, jie bus sujungti į vieną WMS"
+" sluoksnį ir jų negalima bus prašyti po vieną. Jums reikia pasirūpinti, kad "
+"šie sluoksniai būtų suderinami vienas su kitu. Parinktis :guilabel:`Naudoti "
+"sluoksnio id kaip pavadinimą` užtikrina, kad keli sluoksniai su tuo pačiu "
+"pavadinimu gali būti paprašyti kaip atskiri sluoksniai."
+
+#: ../../docs/server_manual/getting_started.rst:886
+msgid ""
+"If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
+"response`. This will include the bounding box for each feature in the "
+"GetFeatureInfo response. See also the :ref:`WITH_GEOMETRY "
+"<wms_getfeatureinfo>` parameter."
+msgstr ""
+"Jei norite, galite įjungti parinktį |checkbox| :guilabel:`Pridėti geometriją"
+" į geoobjekto atsaką`. Tai pridės aprėpties stačiakampį kiekvienam "
+"geoobjektui GetFeatureInfo atsake. Taipogi žiūrėkite parametrą "
+":ref:`WITH_GEOMETRY <wms_getfeatureinfo>`."
+
+#: ../../docs/server_manual/getting_started.rst:890
+msgid ""
+"As many web clients can’t display circular arcs in geometries you have the "
+"option to segmentize the geometry before sending it to the client in a "
+"GetFeatureInfo response. This allows such clients to still display a "
+"feature’s geometry (e.g. for highlighting the feature). You need to check "
+"the |checkbox| :guilabel:`Segmentize feature info geometry` to activate the "
+"option."
+msgstr ""
+"Kadangi dauguma žiniatinklio klientų negali rodyti lankų geometrijose, jūs "
+"turite galimybę segmentuoti geometriją prieš išsiunčiant ją klientui "
+"GetFeatureInfo atsake. Tai leidžia tokiems klientams vis tiek rodyti "
+"geoobjekto geometriją (pvz. geoobjekto paryškinimui). Jums reikia įjungti, "
+"|checkbox| :guilabel:`Segmentuoti geoobjekto informacijos geometriją`, kad "
+"aktyvuotumėte šią parinktį."
+
+#: ../../docs/server_manual/getting_started.rst:896
+msgid ""
+"You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
+" set the precision of the GetFeatureInfo geometry. This enables you to save "
+"bandwidth when you don't need the full precision."
+msgstr ""
+"Jūs taipogi galite naudoti parinktį :guilabel:`GetFeatureInfo geometrijos "
+"precizika`, kad nustatytumėte GetFeatureInfo geometrijos preciziką. Tai "
+"leidžia jums sutaupyti tinklo pralaidumo, jei jums nereikia pilnos "
+"precizikos."
+
+#: ../../docs/server_manual/getting_started.rst:900
+msgid ""
+"If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
+"show text using expressions) this will be listed inside the GetFeatureInfo "
+"output. If the layer uses a Value Map for one of its attributes, this "
+"information will also be shown in the GetFeatureInfo output."
+msgstr ""
+"Jei vienas iš jūsų sluoksnių naudoja :ref:`Žemėlapio pastabos rodymą "
+"<maptips>` (t.y. rodo tekstą pagal išraišką), tai bus rodoma GetFeatureInfo "
+"išvestyje. Jei sluoksnis naudoja reikšmių masyvą vienam iš atributų, ši "
+"informacija taipogi bus rodoma GetFeatureInfo išvestyje."
+
+#: ../../docs/server_manual/getting_started.rst:905
+msgid ""
+"If you want QGIS Server to advertise specific request URLs in the WMS "
+"GetCapabilities response, enter the corresponding URL in the "
+":guilabel:`Advertised URL` field."
+msgstr ""
+"Jei jūs norite, kad QGIS Serveris siūlytų konkretų užklausos URL WMS "
+"GetCapabilities atsake, įveskite atitinkamą URL į lauką :guilabel:`Siūlomas "
+"URL`."
+
+#: ../../docs/server_manual/getting_started.rst:908
+msgid ":guilabel:`Map and Legend Options`"
+msgstr ":guilabel:`Žemėlapio ir legendos parinktys`"
+
+#: ../../docs/server_manual/getting_started.rst:910
+msgid ""
+"When a layer group is passed to ``GetLegendGraphic`` request, all of its "
+"leaf layers are added to the legend picture (however without the groups' "
+"labels). Check the |checkbox| :guilabel:`Add layer groups in "
+"GetLegendGraphic` option if you want to also insert the layer groups (and "
+"subgroups) names into the layer tree, just like in QGIS Desktop legend."
+msgstr ""
+"Kai sluoksnių grupė pateikiama ``GetLegendGraphic`` užklausoje, visi jos "
+"vaikiniai sluoksniai pridedami į legendos paveikslą (nors ir be grupės "
+"užrašų). Įjunkite parinktį |checkbox| :guilabel:`Pridėti sluoksnių grupes į "
+"GetLegendGraphic`, jei norite taipogi pridėti sluoksnių grupių (ir sub-"
+"grupių) pavadinimus į sluoksnių medį, taip kaip QGIS Darbastalio legendoje."
+
+#: ../../docs/server_manual/getting_started.rst:916
+msgid ""
+"When QGIS project contains layer groups, they are listed in WMS capabilities"
+" document alongside with layers. If a group (its name as listed in "
+"capabilities) is included in WMS GetMap ``LAYERS`` parameter alongside with "
+"names of layers in that group, QGIS would duplicate the layers: once for the"
+" group and once for specific layer. If you check the |checkbox| "
+":guilabel:`Skip name attribute for groups` option, GetCapabilities will only"
+" return title attribute for the group but not its name attribute, making it "
+"impossible to include groups in list of layers of GetMap request."
+msgstr ""
+"Kai QGIS projekte yra sluoksnių grupės, jų sąrašas pateikiamas WMS galimybių"
+" dokumente kartu su sluoksniais. Jei grupė (jos pavadinimas, kaip paminėta "
+"galimybėse) įtraukiama į WMS GetMap ``LAYERS`` parametrą kartu su tos grupės"
+" sluoksniais, QGIS pateiks šių sluoksnių dublius: vieną kartą pagal grupę ir"
+" antrą kartą pagal konkretų sluoksnį. Jei įjungsite parinktį |checkbox| "
+":guilabel:`Praleisti pavadinimo atributą grupėms`, GetCapabilities grąžins "
+"tik grupės antraštės atributą, todėl bus neįmanoma jo įtraukti į sluoksnių "
+"sąrašą siunčiant GetMap užklausą."
+
+#: ../../docs/server_manual/getting_started.rst:924
+msgid ""
+"Furthermore, you can restrict the maximum size of the maps returned by the "
+"requests by entering the maximum width and height into the respective fields"
+" under :guilabel:`Maximum image size for GetMap and GetLegendGraphic "
+"requests`."
+msgstr ""
+"Taipogi galite apriboti maksimalų užklausų gražinamų žemėlapių dydį įvesdami"
+" į atitinkamus laukus maksimalų plotį ir aukštį :guilabel:`Maksimalus "
+"piešinio dydis GetMap ir GetLegendGraphic užklausoms`."
+
+#: ../../docs/server_manual/getting_started.rst:928
+msgid ""
+"You can change the :guilabel:`Quality for JPEG and WebP images` factor. The "
+"quality factor must be in the range 0 to 100. Specify 0 for maximum "
+"compression, 100 for no compression."
+msgstr ""
+"Jūs galite pakeisti :guilabel:`JPEG ir WebP nuotraukų kokybės` faktorių. "
+"Kokybės faktorius turi būti tarp 0 ir 100. Nurodykite 0, jei norite "
+"maksimalaus suspaudimo, 100 jei nenorite spausti visai."
+
+#: ../../docs/server_manual/getting_started.rst:932
+msgid ""
+"You can change the limit for atlas features to be printed in one request by "
+"setting the :guilabel:`Maximum features for Atlas print requests` field."
+msgstr ""
+"Jūs galite pakeisti limitą atlaso goobjektų, kurie spausdinami viena "
+"užklausa užpildydami lauką :guilabel:`Maksimalus spausdinamų Atlaso "
+"geoobjektų skaičius užklausoje`."
+
+#: ../../docs/server_manual/getting_started.rst:935
+msgid ""
+"When QGIS Server is used in tiled mode (see :ref:`TILED parameter "
+"<wms_tiled>`), you can set the :guilabel:`Tile buffer in pixels`. The "
+"recommended value is the size of the largest symbol or line width in your "
+"QGIS project."
+msgstr ""
+"Kai QGIS Serveris naudojamas kaladėlių režime (žr. :ref:`TILED parametrą "
+"<wms_tiled>`), jūs galite nustatyti :guilabel:`Kaladėlių buferį taškais`. "
+"Rekomenduojama reikšmė yra jūsų QGIS projekto didžiausio simbolio dydis arba"
+" maksimalus linijos plotis."
+
+#: ../../docs/server_manual/getting_started.rst:938
+msgid ""
+"Depending on whether the map uses a projected CRS or a geographic CRS and if"
+" there is no information to evaluate the map unit sized symbols, you can "
+"provide reference for size through either a :guilabel:`Default scale for "
+"legend` or :guilabel:`Default map units per mm in legend`."
+msgstr ""
+"Priklausomai nuo to, ar žemėlapis naudoja projektuotą ar geografinę CRS ir "
+"ar nėra informacijos žemėlapio vieneto dydžio simboliams, jūs galite "
+"pateikti dydžio atskaitą arba per :guilabel:`Numatytas legendos mastelis` "
+"arba :guilabel:`Numatyti žemėlapio vienetai per mm legendoje`."
+
+#: ../../docs/server_manual/getting_started.rst:945
+msgid "WMTS capabilities"
+msgstr "WMTS galimybės"
+
+#: ../../docs/server_manual/getting_started.rst:947
+msgid ""
+"In the :guilabel:`WMTS` tab you can select the layers you want to publish as"
+" WMTS and specify if you want to publish as PNG or JPEG."
+msgstr ""
+":guilabel:`WMTS` kortelėje jūs galite parinkti sluoksnius, kuriuos norite "
+"publikuoti kaip WMTS, ir nurodyti, ar norite publikuoti kaip PNG, ar JPEG."
+
+#: ../../docs/server_manual/getting_started.rst:950
+msgid ""
+"Under :guilabel:`Grids`, for each :ref:`restricted CRS <restricted_crs>`, "
+"you can indicate whether the tile matrices should be published and configure"
+" their top-left corner, minimum and maximum scales and the last level of the"
+" tile matrices. Note that for ``EPSG:3857`` and ``EPSG:4326`` CRS, only the "
+"last level of the tile matrices can be edited."
+msgstr ""
+"Skiltyje :guilabel:`Tinkleliai`, kiekvienai :ref:`apribotai CRS "
+"<restricted_crs>` jūs galite nurodyti, ar turi būti publikuojama kaladėlių "
+"matrica ir sukonfigūruoti jų viršutinį kairįjį kampą, minimalų ir maksimalų "
+"mastelius bei paskutinį kaladėlių matricos lygį. Pastebėtina, kad "
+"``EPSG:3857`` ir ``EPSG:4326`` CRS galima keisti tik paskutinį kaladėlių "
+"matricos lygį."
+
+#: ../../docs/server_manual/getting_started.rst:956
+msgid "You can also set a :guilabel:`Minimum scale` for the tiles display."
+msgstr ""
+"Jūs taipogi galite nurodyti :guilabel:`Minimalų mastelį` kaladėlių rodymui."
+
+#: ../../docs/server_manual/getting_started.rst:958
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field, QGIS Server will"
+" advertise this specific URL in the WMTS GetCapabilities response."
+msgstr ""
+"Jei jūs įvedate URL į lauką :guilabel:`Siūlomas URL`, QGIS Serveris siūlys "
+"šį konkretų URL WMTS GetCapabilities atsake."
+
+#: ../../docs/server_manual/getting_started.rst:966
+msgid "Definitions in the WMTS tab"
+msgstr "WMTS kortelės apibrėžimai"
+
+#: ../../docs/server_manual/getting_started.rst:969
+msgid "WFS/OAPIF capabilities"
+msgstr "WFS/OAPIF galimybės"
+
+#: ../../docs/server_manual/getting_started.rst:971
+msgid ""
+"In the :guilabel:`WFS/OAPIF` tab, you can select the layers you want to "
+"publish as WFS or OAPIF, and specify if they will allow update, insert and "
+"delete operations."
+msgstr ""
+":guilabel:`WFS/OAPIF` kortelėje jūs galite parinkti sluoksnius, kuriuos "
+"norite publikuoti kaip WFS ar OAPIF ir nurodyti,ar leisti juose keitimo, "
+"įterpimo ir trynimo veiksmus."
+
+#: ../../docs/server_manual/getting_started.rst:980
+msgid "Definitions in the WFS/OAPIF tab"
+msgstr "WFS/OAPIF kortelės apibrėžimai"
+
+#: ../../docs/server_manual/getting_started.rst:982
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field, QGIS Server will"
+" advertise this specific URL in the WFS GetCapabilities response."
+msgstr ""
+"Jei jūs įvedate URL į lauką :guilabel:`Siūlomas URL`, QGIS Serveris siūlys "
+"šį konkretų URL WFS GetCapabilities atsake."
+
+#: ../../docs/server_manual/getting_started.rst:986
+msgid "WCS capabilities"
+msgstr "WCS galimybės"
+
+#: ../../docs/server_manual/getting_started.rst:988
+msgid ""
+"In the :guilabel:`WCS` tab, you can select the layers that you want to "
+"publish as WCS."
+msgstr ""
+":guilabel:`WCS` kortelėje jūs galite parinkti sluoksnius, kuriuos norite "
+"publikuoti kaip WCS."
+
+#: ../../docs/server_manual/getting_started.rst:995
+msgid "Definitions in the WCS tab"
+msgstr "WCS kortelės apibrėžimai"
+
+#: ../../docs/server_manual/getting_started.rst:997
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WCS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WCS GetCapabilities response."
+msgstr ""
+"Jei jūs įvedate URL į lauką :guilabel:`Siūlomas URL` skiltyje :guilabel:`WCS"
+" galimybės`, QGIS Serveris siūlys šį konkretų URL WCS GetCapabilities "
+"atsake."
+
+#: ../../docs/server_manual/getting_started.rst:1002
+msgid "Fine tuning your OWS"
+msgstr "Jūsų OWS tikslinimas"
+
+#: ../../docs/server_manual/getting_started.rst:1004
+msgid ""
+"For vector layers, the :guilabel:`Fields` tab of the :menuselection:`Layer "
+"--> Layer Properties` dialog allows you to define for each attribute if it "
+"will be published or not. By default, all the attributes are published by "
+"your WMS and WFS. If you don't want a specific attribute to be published, "
+"uncheck the appropriate checkbox in the :guilabel:`Configuration` column:"
+msgstr ""
+"Vektoriniams sluoksniams kortelė :guilabel:`Laukai` iš dialogo "
+":menuselection:`Sluoksnis --> Sluoksnio savybės` leidžia jums nurodyti "
+"kiekvienam atributui, ar jis turėtų būti publikuojamas ar ne. Pagal "
+"nutylėjimą visi atributai publikuojami jūsų WMS ir WFS. Jei nenorite "
+"publikuoti kažkokio konkretaus atributo, atjunkite atitinkamą varnelę "
+":guilabel:`Konfigūracijos` stulpelyje:"
+
+#: ../../docs/server_manual/getting_started.rst:1010
+msgid ":guilabel:`Do not expose in WFS`"
+msgstr ":guilabel:`Nepateikti WFS`"
+
+#: ../../docs/server_manual/getting_started.rst:1011
+msgid ":guilabel:`Do not expose in WMS`"
+msgstr ":guilabel:`Nepateikti WMS`"
+
+#: ../../docs/server_manual/getting_started.rst:1013
+msgid ""
+"You can overlay watermarks over the maps produced by your WMS by adding text"
+" annotations or SVG annotations to the project file. See the "
+":ref:`sec_annotations` section for instructions on creating annotations. For"
+" annotations to be displayed as watermarks on the WMS output, the "
+":guilabel:`Fixed map position` checkbox in the :guilabel:`Annotation text` "
+"dialog must be unchecked. This can be accessed by double clicking the "
+"annotation while one of the annotation tools is active. For SVG annotations,"
+" you will need either to set the project to save absolute paths (in the "
+":guilabel:`General` menu of the :menuselection:`Project --> Properties...` "
+"dialog) or to manually modify the path to the SVG image so that it "
+"represents a valid relative path."
+msgstr ""
+"Jūs galite perdengti vandens ženklus virš žemėlapių, kuriuos sukuria jūsų "
+"WMS pridėdami teksto anotacijas arba SVG anotacija į projekto failą. "
+"Anotacijų kūrimo instrukcijas rasite skiltyje :ref:`sec_annotations`. Kad "
+"anotacijos būtų rodomos kaip vandens ženklai WMS išvestyje, reikia išjungti "
+"varnelę :guilabel:`Fiksuota žemėlapio pozicija` dialoge "
+":guilabel:`Anotacijos tekstas`. Ją galima pasiekti du kartus paspaudus "
+"anotaciją, kai aktyvus anotacijų įrankis. SVG anotacijoms jūs turėsite arba "
+"nurodyti, kad projektas saugotų absoliučius kelius (dalis :guilabel:`Bendra`"
+" dialoge :menuselection:`Projektas --> Savybės...`) arba rankiniu būdu "
+"pakeisti kelią iki SVG piešinio taip, kad jis būtų tinkamas santykinis "
+"kelias."
+
+#: ../../docs/server_manual/getting_started.rst:1027
+msgid "Integration with third parties"
+msgstr "Integracija su trečiosiomis šalimis"
+
+#: ../../docs/server_manual/getting_started.rst:1029
+msgid ""
+"QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
+"<https://www.ogc.org/publications>`_ thus it can be used by a wide variety "
+"of end user tools."
+msgstr ""
+"QGIS Serveris teikia standartines OGC paslaugas, tokias kaip `WMS, WFS ir "
+"t.t. <https://www.ogc.org/publications>`_ taigi jį galima naudoti plačiame "
+"pasirinkime naudotojų įrankių."
+
+#: ../../docs/server_manual/getting_started.rst:1033
+msgid "Integration with QGIS Desktop"
+msgstr "Integracija su QGIS Darbastaliu"
+
+#: ../../docs/server_manual/getting_started.rst:1035
+msgid ""
+"QGIS Desktop is the map designer where QGIS Server is the map server. The "
+"maps or QGIS projects will be served by the QGIS Server to provide OGC "
+"standards. These QGIS projects can either be files or entries in a database "
+"(by using :menuselection:`Project --> Save to --> PostgreSQL` in QGIS "
+"Desktop)."
+msgstr ""
+"QGIS Darbastalis yra žemėlapių kūrimo įrankis, o QGIS Serveris - žemėlapių "
+"serveris. Žemėlapius ar QGIS projektus QGIS Serveris teikia pagal OGC "
+"standartus. Šie QGIS projektai gali būti arba failai, arba įrašai duomenų "
+"bazėje (QGIS Darbastalyje naudojant :menuselection:`Projektas --> Įrašyti į "
+"--> PostgreSQL`)."
+
+#: ../../docs/server_manual/getting_started.rst:1040
+msgid ""
+"Furthermore, dedicated update workflow must be established to refresh a "
+"project used by a QGIS Server (ie. copy project files into server location "
+"and restart QGIS Server). For now, automated processes (as server reloading "
+"over message queue service) are not implemented yet."
+msgstr ""
+"Taipogi reikia sukurti tam skirtą procesą, kaip atnaujinamas QGIS Serverio "
+"naudojamas projektas (t.y. kopijuoti projekto failus į serverio vietą ir "
+"perstartuoti QGIS Serverį). Šiuo metu automatinis procesas (kaip serveris "
+"perkraunantis pagal žinučių eilę) dar neįgyvendintas."
+
+#: ../../docs/server_manual/getting_started.rst:1047
+msgid "Integration with MapProxy"
+msgstr "Integracija su MapProxy"
+
+#: ../../docs/server_manual/getting_started.rst:1049
+msgid ""
+"`MapProxy <https://www.mapproxy.org/>`_ is a tile cache server and as it can"
+" read and serve any WMS/WMTS map server, it can be directly connected to "
+"QGIS server web services and improve end user experience."
+msgstr ""
+"`MapProxy <https://www.mapproxy.org/>`_ yra kaladėlių podėliavimo serveris "
+"ir, kadangi jis gali skaityti ir teikti bet kokius WMS/WMTS žemėlapius, jį "
+"galima tiesiogiai jungti prie QGIS serverio paslaugų ir pagerinti naudotojo "
+"patirtį."
+
+#: ../../docs/server_manual/getting_started.rst:1055
+msgid "Integration with QWC2"
+msgstr "Integracija su QWC2"
+
+#: ../../docs/server_manual/getting_started.rst:1057
+msgid ""
+"`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application "
+"dedicated to QGIS Server. It helps you to build a highly customized map "
+"viewer with layer selection, feature info, etc.. Also many plugins are "
+"available like authentication or print service, the full list is available "
+"in this `repository <https://github.com/qwc-services>`_."
+msgstr ""
+"`QWC2 <https://github.com/qgis/qwc2>`_ yra žiniatinklio aplikacija skirta "
+"QGIS Serveriui. Ji padeda jums kurti stipriai pritaikytas žemėlapio "
+"žiūrykles su sluoksnių pasirinkimu, geoobjektų informacija ir pan. Taipogi "
+"yra ir daug priedų, tokių kaip autentifikacijos ar spausdinimo paslaugų, "
+"pilną sąrašą rasite šioje `repozitorijoje <https://github.com/qwc-"
+"services>`_."
