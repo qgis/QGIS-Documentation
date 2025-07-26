@@ -50,8 +50,7 @@ You can:
     and it can be made persistent in file using the layer
     :menuselection:`Export --> Save as...` contextual menu.
 
-* Define the :guilabel:`Spatial extent` of the calculation based on an input
-  raster layer extent, or on custom X,Y coordinates
+* Define the :guilabel:`Spatial extent` of the calculation using the :ref:`extent selector <extent_selector>` widget.
 * Set the :guilabel:`Resolution` of the layer using columns and rows number.
   If the input layer has a different resolution, the values will be
   resampled with the nearest neighbor algorithm.

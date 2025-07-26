@@ -1224,14 +1224,9 @@ The :guilabel:`Result Layer` helps you configure properties of the output layer:
   dataset group.
 * The :guilabel:`Spatial extent` to consider for calculation can be:
 
-  * a :guilabel:`Custom extent`, manually filled with the :guilabel:`X min`,
-    :guilabel:`X max`, :guilabel:`Y min` and :guilabel:`Y max` coordinate,
-    or extracted from an existing dataset group (select it in the list and
-    press :guilabel:`Use selected layer extent` to fill the abovementioned
-    coordinate fields)
+  * defined as a :guilabel:`Custom extent` using the :ref:`extent selector <extent_selector>` widget.
   * defined by a polygon layer (:guilabel:`Mask layer`) of the project:
     the polygon features geometry are used to clip the mesh layer datasets
-
 * The :guilabel:`Temporal extent` to take into account for datasets can be set
   with the :guilabel:`Start time` and :guilabel:`End time` options, selected
   from the existing dataset groups timesteps. They can also be filled using the
