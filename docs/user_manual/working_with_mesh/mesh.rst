@@ -1222,7 +1222,11 @@ The :guilabel:`Result Layer` helps you configure properties of the output layer:
 
   In either case, you should provide a :guilabel:`Group Name` for the output
   dataset group.
-* Define the :guilabel:`Spatial extent` of the calculation using the :ref:`extent selector <extent_selector>` widget.
+* The :guilabel:`Spatial extent` to consider for calculation can be:
+
+  * defined as a :guilabel:`Custom extent` using the :ref:`extent selector <extent_selector>` widget.
+  * defined by a polygon layer (:guilabel:`Mask layer`) of the project:
+    the polygon features geometry are used to clip the mesh layer datasets
 * The :guilabel:`Temporal extent` to take into account for datasets can be set
   with the :guilabel:`Start time` and :guilabel:`End time` options, selected
   from the existing dataset groups timesteps. They can also be filled using the
