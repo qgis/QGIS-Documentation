@@ -301,6 +301,12 @@ Parameters
 
        Default: True
      - Save the layer styles.
+   * - **Save layer metadata into GeoPackage**
+     - ``SAVE_METADATA``
+     - [boolean]
+
+       Default: True
+     - Save the layer metadata.
    * - **Save only selected features**
      - ``SELECTED_FEATURES_ONLY``
      - [boolean]
@@ -326,6 +332,14 @@ Parameters
      - Limit the exported features to those with geometries that intersect the provided 
        extent. If none of the features from a specific input layer intersect the extent, 
        the layer will still be created in the GeoPackage file, but it will be empty.
+   * - **Destination CRS**
+
+       Optional
+     - ``CRS``
+     - [crs]
+     - The coordinate reference system to use for the output layer.
+       If not set, the CRS of the input layer will be used.
+       If the input layers have different CRS, the first one will be used.
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
