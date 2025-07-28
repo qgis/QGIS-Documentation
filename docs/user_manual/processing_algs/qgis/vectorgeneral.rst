@@ -492,6 +492,8 @@ Attributes are not checked, so in case two features have identical
 geometries but different attributes, only one of them will be added to
 the result layer.
 
+Optionally, these duplicate records can be saved to a separate output for analysis.
+
 .. note::
  This algorithm does not require valid geometries as input.
 
@@ -531,11 +533,22 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
+   :class: longtable
 
    * - Label
      - Name
      - Type
      - Description
+   * - **Filtered (duplicates)**
+
+       Optional
+     - ``DUPLICATES``
+     - [same as input]
+     
+       Default: ``[Skip output]``
+     - Vector layer containing the removed features.
+       Will not be produced if not specified (left as
+       ``[Skip output]``).
    * - **Count of discarded duplicate records**
      - ``DUPLICATE_COUNT``
      - [numeric: integer]
