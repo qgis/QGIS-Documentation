@@ -338,8 +338,7 @@ Parameters
      - ``CRS``
      - [crs]
      - The coordinate reference system to use for the output layer.
-       If not set, the CRS of the input layer will be used.
-       If the input layers have different CRS, the first one will be used.
+       If not set, each layer will keep its original CRS.
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
