@@ -14,6 +14,7 @@ It allows you to add elements such as the QGIS 2D or 3D map canvas, text labels,
 scale bars, basic shapes, arrows, attribute and simple tables, elevation profiles and HTML frames...
 You can size, group, align, position and rotate each element
 and adjust their properties to create your layout.
+
 The layout can be printed or exported to image formats, PostScript, PDF or to SVG.
 You can save the layout as a template and load it again in another session.
 Finally, generating several maps based on a template can be done through the atlas generator.
