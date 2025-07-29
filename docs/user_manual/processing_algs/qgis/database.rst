@@ -270,6 +270,9 @@ is not checked, the layer will be appended.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -306,7 +309,8 @@ Parameters
      - [boolean]
 
        Default: True
-     - Save the layer metadata.
+     - If checked, copies the source layer metadata into the GeoPackage
+       so it becomes the default metadata for the layer.
    * - **Save only selected features**
      - ``SELECTED_FEATURES_ONLY``
      - [boolean]
@@ -332,13 +336,6 @@ Parameters
      - Limit the exported features to those with geometries that intersect the provided 
        extent. If none of the features from a specific input layer intersect the extent, 
        the layer will still be created in the GeoPackage file, but it will be empty.
-   * - **Destination CRS**
-
-       Optional
-     - ``CRS``
-     - [crs]
-     - The coordinate reference system to use for the output layer.
-       If not set, each layer will keep its original CRS.
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
@@ -349,6 +346,25 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Destination CRS**
+
+       Optional
+     - ``CRS``
+     - [crs]
+     - The coordinate reference system to use for the output layer.
+       If not set, each layer will keep its original CRS.
 
 Outputs
 .......
