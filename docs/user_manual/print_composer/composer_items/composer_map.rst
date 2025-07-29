@@ -41,7 +41,9 @@ functionalities:
 * |viewExtentInCanvas| :sup:`View current map extent in main canvas`
 * |setToCanvasScale| :sup:`Set map scale to match main canvas scale`
 * |viewScaleInCanvas| :sup:`Set main canvas to match current map scale`
-* |showBookmarks| :sup:`Bookmarks`: set the map item extent to match
+* |layers| :sup:`Set map extent to layer extent`: sets the map item extent to match 
+  the full extent of a selected layer from the project's layers
+* |showBookmarks| :sup:`Set map extent to bookmark extent`: sets the map item extent to match the extent of
   an existing spatial bookmark
 * |moveItemContent| :sup:`Interactively edit map extent`: pan and
   zoom interactively
@@ -525,6 +527,8 @@ of the overview on the selected map frame. You can customize it with:
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |labelingSingle| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |layers| image:: /static/common/mActionLayers.png
    :width: 1.5em
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
