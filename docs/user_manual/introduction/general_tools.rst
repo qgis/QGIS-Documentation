@@ -1394,8 +1394,9 @@ to duplicate any layer in the map legend.
    Right-click on the layer in the :guilabel:`Layers` panel to copy, paste, add
    or rename layer styles.
    For both vector and raster layers, you can choose which style categories to copy/paste.
-   Choose :guilabel:`All Style Categories` or one of the available categories, depending on the layer type.
-   Note that for raster layers, the :guilabel:`Symbology` and :guilabel:`Rendering` categories are always copied together.
+   Choose :guilabel:`All Style Categories` or one of the available categories.
+   Note that for raster layers, you can select the :guilabel:`All Symbology and Labeling Categories` option,
+   the :guilabel:`Symbology` and :guilabel:`Rendering` categories are always copied together.
 
 .. _store_style:
 
