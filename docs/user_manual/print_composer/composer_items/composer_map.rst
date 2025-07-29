@@ -43,7 +43,7 @@ functionalities:
 * |viewScaleInCanvas| :sup:`Set main canvas to match current map scale`
 * |layers| :sup:`Set map extent to layer extent`: sets the map item extent to match 
   the full extent of a selected layer from the project's layers
-* |showBookmarks| :sup:`Bookmarks`: set the map item extent to match
+* |showBookmarks| :sup:`Set map extent to bookmark extent`: sets the map item extent to match the extent of
   an existing spatial bookmark
 * |moveItemContent| :sup:`Interactively edit map extent`: pan and
   zoom interactively
