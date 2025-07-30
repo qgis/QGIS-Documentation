@@ -1,0 +1,282 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/second_alg.rst:2
+msgid "More algorithms and data types"
+msgstr "Fler algoritmer och datatyper"
+
+#: ../../docs/training_manual/processing/second_alg.rst:5
+msgid ""
+"In this lesson we will run three more algorithms, learn how to use other "
+"input types, and configure outputs to be saved to a given folder "
+"automatically."
+msgstr ""
+"I den här lektionen ska vi köra ytterligare tre algoritmer, lära oss att "
+"använda andra indatatyper och konfigurera utdata så att de sparas "
+"automatiskt i en viss mapp."
+
+#: ../../docs/training_manual/processing/second_alg.rst:7
+msgid ""
+"For this lessons we will need a table and a polygons layer. We are going to "
+"create a points layer based on coordinates in the table, and then count the "
+"number of points in each polygon. If you open the QGIS project corresponding"
+" to this lesson, you will find a table with X and Y coordinates, but you "
+"will find no polygons layer. Don't worry, we will create it using a "
+"processing geoalgorithm."
+msgstr ""
+"För den här lektionen behöver vi en tabell och ett polygonlager. Vi kommer "
+"att skapa ett punktlager baserat på koordinaterna i tabellen och sedan räkna"
+" antalet punkter i varje polygon. Om du öppnar QGIS-projektet som motsvarar "
+"den här lektionen hittar du en tabell med X- och Y-koordinater, men du "
+"hittar inget polygonlager. Oroa dig inte, vi kommer att skapa det med hjälp "
+"av en bearbetningsgeoalgoritm."
+
+#: ../../docs/training_manual/processing/second_alg.rst:9
+msgid ""
+"The first thing we are going to do is to create a points layer from the "
+"coordinates in the table, using the *Points layer from table* algorithm. You"
+" now know how to use the search box, so it should not be hard for you to "
+"find it. Double--click on it to run it and get to its following dialog."
+msgstr ""
+"Det första vi ska göra är att skapa ett punktlager från koordinaterna i "
+"tabellen med hjälp av algoritmen *Punktlager från tabell*. Du vet nu hur man"
+" använder sökrutan, så det borde inte vara svårt för dig att hitta den. "
+"Dubbelklicka på den för att köra den och komma till följande dialogruta."
+
+#: ../../docs/training_manual/processing/second_alg.rst:11
+msgid ""
+"This algorithm, like the one from the previous lesson, just generates a "
+"single output, and it has three inputs:"
+msgstr ""
+"Den här algoritmen, precis som den från föregående lektion, genererar bara "
+"en enda utdata och har tre ingångar:"
+
+#: ../../docs/training_manual/processing/second_alg.rst:13
+msgid ""
+"*Table*: the table with the coordinates. You should select here the table "
+"from the lesson data."
+msgstr ""
+"*Tabell*: tabellen med koordinaterna. Du bör här välja tabellen från "
+"lektionsdata."
+
+#: ../../docs/training_manual/processing/second_alg.rst:14
+msgid ""
+"*X and Y fields*: these two parameters are linked to the first one. The "
+"corresponding selector will show the name of those fields that are available"
+" in the selected table. Select the *XCOORD* field for the *X* parameter, and"
+" the *YYCOORD* field for the *Y* parameter."
+msgstr ""
+"*X- och Y-fält*: dessa två parametrar är kopplade till den första. Den "
+"motsvarande väljaren visar namnet på de fält som är tillgängliga i den valda"
+" tabellen. Välj fältet *XCOORD* för parametern *X* och fältet *YYCOORD* för "
+"parametern *Y*."
+
+#: ../../docs/training_manual/processing/second_alg.rst:15
+msgid ""
+"*CRS*: Since this algorithm takes no input layers, it cannot assign a CRS to"
+" the output layer based on them. Instead, it asks you to manually select the"
+" CRS that the coordinates in the table use. Click on the button on the left"
+"--hand side to open the QGIS CRS selector, and select EPSG:4326 as the "
+"output CRS. We are using this CRS because the coordinates in the table are "
+"in that CRS."
+msgstr ""
+"*CRS*: Eftersom den här algoritmen inte tar några inmatningslager kan den "
+"inte tilldela ett CRS till utmatningslagret baserat på dem. Istället ber den"
+" dig att manuellt välja den CRS som koordinaterna i tabellen använder. "
+"Klicka på knappen på vänster sida för att öppna QGIS CRS-väljare och välj "
+"EPSG:4326 som CRS för utdata. Vi använder detta CRS eftersom koordinaterna i"
+" tabellen ligger i detta CRS."
+
+#: ../../docs/training_manual/processing/second_alg.rst:17
+msgid "Your dialog should look like this."
+msgstr "Din dialog bör se ut så här."
+
+#: ../../docs/training_manual/processing/second_alg.rst:21
+msgid ""
+"Now press the *Run* button to get the following layer (you may need to zoom "
+"full to reenter the map around the newly created points):"
+msgstr ""
+"Tryck nu på *Run*-knappen för att få följande lager (du kan behöva zooma "
+"fullt ut för att återgå till kartan runt de nyskapade punkterna):"
+
+#: ../../docs/training_manual/processing/second_alg.rst:25
+msgid ""
+"The next thing we need is the polygon layer. We are going to create a "
+"regular grid of polygons using the *Create grid* algorithm, which has the "
+"following parameters dialog."
+msgstr ""
+"Nästa sak vi behöver är polygonlagret. Vi kommer att skapa ett regelbundet "
+"rutnät av polygoner med hjälp av algoritmen *Create grid*, som har följande "
+"parametrar i dialogrutan."
+
+#: ../../docs/training_manual/processing/second_alg.rst:29
+msgid ""
+"The options are simpler in recent versions of QGIS; you just need to enter "
+"min and max for X and Y (suggested values: "
+"-5.696226,-5.695122,40.24742,40.248171)"
+msgstr ""
+"Alternativen är enklare i de senaste versionerna av QGIS; du behöver bara "
+"ange min och max för X och Y (föreslagna värden: "
+"-5.696226,-5.695122,40.24742,40.248171)"
+
+#: ../../docs/training_manual/processing/second_alg.rst:31
+msgid ""
+"The inputs required to create the grid are all numbers. When you have to "
+"enter a numerical value, you have two options: typing it directly on the "
+"corresponding box or clicking the button on the right--hand side to get to a"
+" dialog like the one shown next."
+msgstr ""
+"De inmatningar som krävs för att skapa rutnätet är alla siffror. När du ska "
+"ange ett numeriskt värde har du två alternativ: att skriva in det direkt i "
+"motsvarande ruta eller klicka på knappen till höger för att komma till en "
+"dialogruta som den som visas här intill."
+
+#: ../../docs/training_manual/processing/second_alg.rst:35
+msgid ""
+"The dialog contains a simple calculator, so you can type expressions such as"
+" ``11 * 34.7 + 4.6``, and the result will be computed and put in the "
+"corresponding text box in the parameters dialog. Also, it contains constants"
+" that you can use, and values from other layers available."
+msgstr ""
+"Dialogrutan innehåller en enkel räknare, så att du kan skriva in uttryck som"
+" ``11 * 34,7 + 4,6``, och resultatet beräknas och läggs i motsvarande "
+"textruta i parameterdialogrutan. Den innehåller också konstanter som du kan "
+"använda och värden från andra tillgängliga lager."
+
+#: ../../docs/training_manual/processing/second_alg.rst:37
+msgid ""
+"In this case, we want to create a grid that covers the extent of the input "
+"points layer, so we should use its coordinates to calculate the center "
+"coordinate of the grid and its width and height, since those are the "
+"parameters that the algorithm takes to create the grid. With a little bit of"
+" math, try to do that yourself using the calculator dialog and the constants"
+" from the input points layer."
+msgstr ""
+"I det här fallet vill vi skapa ett rutnät som täcker hela lageret med "
+"inmatningspunkter, så vi bör använda dess koordinater för att beräkna "
+"rutnätets mittkoordinat och dess bredd och höjd, eftersom det är de "
+"parametrar som algoritmen använder för att skapa rutnätet. Med lite "
+"matematik kan du försöka göra det själv med hjälp av kalkylatordialogen och "
+"konstanterna från lageret med inmatningspunkter."
+
+#: ../../docs/training_manual/processing/second_alg.rst:39
+msgid "Select *Rectangles (polygons)* in the *Type* field."
+msgstr "Välj *Rektanglar (polygoner)* i fältet *Typ*."
+
+#: ../../docs/training_manual/processing/second_alg.rst:41
+msgid ""
+"As in the case of the last algorithm, we have to enter the CRS here as well."
+" Select EPSG:4326 as the target CRS, as we did before."
+msgstr ""
+"Precis som i fallet med den sista algoritmen måste vi ange CRS även här. "
+"Välj EPSG:4326 som mål-CRS, precis som vi gjorde tidigare."
+
+#: ../../docs/training_manual/processing/second_alg.rst:43
+msgid "In the end, you should have a parameters dialog like this:"
+msgstr "I slutändan bör du ha en parameterdialog som ser ut så här:"
+
+#: ../../docs/training_manual/processing/second_alg.rst:47
+msgid ""
+"(Better add one spacing on the width and height: Horizontal spacing: 0.0001,"
+" Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: "
+"-5.695674, Center Y: 40.2477955) The case of X center is a bit tricky, see: "
+"-5.696126+(( -5.695222+ 5.696126)/2)"
+msgstr ""
+"(Bättre att lägga till ett mellanrum på bredden och höjden: Horisontellt "
+"mellanrum: 0.0001, Vertikalt avstånd: 0.0001, Bredd: 0,001004, Höjd: "
+"0,000651, Centrum X: -5,695674, Centrum Y: 40,2477955) Fallet med centrum X "
+"är lite knepigt, se: -5.696126+(( -5.695222+ 5.696126)/2)"
+
+#: ../../docs/training_manual/processing/second_alg.rst:50
+msgid "Press *Run* and you will get the graticule layer."
+msgstr "Tryck på *Run* så får du upp graticule-lageret."
+
+#: ../../docs/training_manual/processing/second_alg.rst:54
+msgid ""
+"The last step is to count the points in each one of the rectangles of that "
+"graticule. We will use the *Count points in polygons* algorithm."
+msgstr ""
+"Det sista steget är att räkna punkterna i var och en av rektanglarna i den "
+"graticulen. Vi kommer att använda algoritmen *Räkna punkter i polygoner*."
+
+#: ../../docs/training_manual/processing/second_alg.rst:58
+msgid "Now we have the result we were looking for."
+msgstr "Nu har vi det resultat vi letade efter."
+
+#: ../../docs/training_manual/processing/second_alg.rst:60
+msgid ""
+"Before finishing this lesson, here is a quick tip to make your life easier "
+"in case you want to persistently save your data. If you want all your output"
+" files to be saved in a given folder, you do not have to type the folder "
+"name each time. Instead, go to the processing menu and select the *Options "
+"and configuration* item. It will open the configuration dialog."
+msgstr ""
+"Innan vi avslutar den här lektionen kommer här ett snabbt tips som gör livet"
+" enklare för dig om du vill spara dina data kontinuerligt. Om du vill att "
+"alla dina utdatafiler ska sparas i en viss mapp behöver du inte skriva in "
+"mappnamnet varje gång. Gå istället till bearbetningsmenyn och välj "
+"alternativet *Options and configuration*. Då öppnas dialogrutan för "
+"konfiguration."
+
+#: ../../docs/training_manual/processing/second_alg.rst:64
+msgid ""
+"In the *Output folder* entry that you will find in the *General* group, type"
+" the path to your destination folder."
+msgstr ""
+"I posten *Output folder* som du hittar i gruppen *General* skriver du "
+"sökvägen till din målmapp."
+
+#: ../../docs/training_manual/processing/second_alg.rst:68
+msgid ""
+"Now when you run an algorithm, just use the filename instead of the full "
+"path. For instance, with the configuration shown above, if you enter "
+"``graticule.shp`` as the output path for the algorithm that we have just "
+"used, the result will be saved in ``D:\\processing_output\\graticule.shp``. "
+"You can still enter a full path in case you want a result to be saved in a "
+"different folder."
+msgstr ""
+"När du nu kör en algoritm använder du bara filnamnet i stället för hela "
+"sökvägen. Om du t.ex. anger ``graticule.shp`` som sökväg för den algoritm "
+"som vi just har använt, kommer resultatet att sparas i "
+"``D:\\processing_output\\graticule.shp``. Du kan fortfarande ange en "
+"fullständig sökväg om du vill att ett resultat ska sparas i en annan mapp."
+
+#: ../../docs/training_manual/processing/second_alg.rst:71
+msgid ""
+"Try yourself the *Create grid* algorithm with different grid sizes, and also"
+" with different types of grids."
+msgstr ""
+"Prova själv *Create grid*-algoritmen med olika rutnätsstorlekar och även med"
+" olika typer av rutnät."
