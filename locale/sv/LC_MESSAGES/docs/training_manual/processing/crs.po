@@ -1,0 +1,267 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/crs.rst:2
+msgid "CRSs. Reprojecting"
+msgstr "CRS:er. Omprojicering"
+
+#: ../../docs/training_manual/processing/crs.rst:5
+msgid ""
+"In this lesson we will discuss how Processing uses CRSs. We will also see a "
+"very useful algorithm: reprojecting."
+msgstr ""
+"I den här lektionen ska vi diskutera hur Processing använder CRS. Vi kommer "
+"också att se en mycket användbar algoritm: reprojicering."
+
+#: ../../docs/training_manual/processing/crs.rst:9
+msgid ""
+"CRS's are a great source of confusion for QGIS Processing users, so here are"
+" some general rules about how they are handled by geoalgorithms when "
+"creating a new layer."
+msgstr ""
+"CRS är en stor källa till förvirring för QGIS Processing-användare, så här "
+"är några allmänna regler om hur de hanteras av geoalgoritmer när ett nytt "
+"lager skapas."
+
+#: ../../docs/training_manual/processing/crs.rst:12
+msgid ""
+"If there are input layers, it will use the CRS of the first layer. This is "
+"assumed to be the CRS of all input layers, since they should have the same "
+"one. If you use layers with unmatching CRS's, QGIS will warn you about it. "
+"Notice that the CRS of input layers is shown along with its name in the "
+"parameters dialog."
+msgstr ""
+"Om det finns flera inmatningslager används CRS för det första lagret. Detta "
+"antas vara CRS för alla indatalager, eftersom de bör ha samma CRS. Om du "
+"använder lager med CRS som inte matchar varandra kommer QGIS att varna dig "
+"för det. Lägg märke till att CRS för indatalageren visas tillsammans med "
+"dess namn i parameterdialogen."
+
+#: ../../docs/training_manual/processing/crs.rst:19
+msgid ""
+"If there are no input layer, it will use the project CRS, unless the "
+"algorithm contains a specific CRS field (as it happened in the last lesson "
+"with the graticule algorithm)"
+msgstr ""
+"Om det inte finns något inmatningslager kommer det att använda projektets "
+"CRS, såvida inte algoritmen innehåller ett specifikt CRS-fält (som det hände"
+" i den senaste lektionen med graticule-algoritmen)"
+
+#: ../../docs/training_manual/processing/crs.rst:23
+msgid ""
+"Open the project corresponding to this lesson and you will see two layers "
+"named 23030 and 4326. They both contain the same points, but in different "
+"CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
+"is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
+"actually the same layer."
+msgstr ""
+"Öppna det projekt som motsvarar denna lektion och du kommer att se två lager"
+" med namnen 23030 och 4326. De innehåller båda samma punkter, men i olika "
+"CRS (EPSG:23030 och EPSG:4326). De visas på samma plats eftersom QGIS "
+"omprojicerar i farten till projektets CRS (EPSG:4326), men de är faktiskt "
+"inte samma lager."
+
+#: ../../docs/training_manual/processing/crs.rst:29
+msgid "Open the *Export/Add geometry columns* algorithm."
+msgstr "Öppna algoritmen *Export/Add geometry columns*."
+
+#: ../../docs/training_manual/processing/crs.rst:33
+msgid ""
+"This algorithm add new columns to the attributes table of a vector layer. "
+"The content of the columns depend on the type of geometry of the layer. In "
+"the case of points, it adds new columns with the X and Y coordinates of each"
+" point."
+msgstr ""
+"Denna algoritm lägger till nya kolumner i attributtabellen för ett "
+"vektorlager. Innehållet i kolumnerna beror på vilken typ av geometri som "
+"lagret har. När det gäller punkter lägger den till nya kolumner med X- och "
+"Y-koordinaterna för varje punkt."
+
+#: ../../docs/training_manual/processing/crs.rst:38
+msgid ""
+"In the list of available layers that you will find in the input layer field,"
+" you will see each one with its corresponding CRS. That means that, although"
+" they appear in the same place in your canvas, they will be treated "
+"differently. Select the 4326 layer."
+msgstr ""
+"I listan över tillgängliga lager som du hittar i fältet input layer ser du "
+"varje lager med sin motsvarande CRS. Det innebär att även om de visas på "
+"samma plats i din canvas kommer de att behandlas på olika sätt. Välj lageret"
+" 4326."
+
+#: ../../docs/training_manual/processing/crs.rst:43
+msgid ""
+"The other parameter of the algorithm allows to set how the algorithm uses "
+"coordinates to calculate the new value that it will add to the resulting "
+"layers. Most algorithms do not have an option like that, and just use the "
+"coordinates directly. Select the *Layer CRS* option to just use coordinates "
+"as they are. This is how almost all geoalgorithms work."
+msgstr ""
+"Den andra parametern för algoritmen gör det möjligt att ställa in hur "
+"algoritmen använder koordinater för att beräkna det nya värdet som den "
+"lägger till i de resulterande lagren. De flesta algoritmer har inte ett "
+"sådant alternativ, utan använder bara koordinaterna direkt. Välj "
+"alternativet *Layer CRS* för att bara använda koordinaterna som de är. Det "
+"är så här nästan alla geoalgoritmer fungerar."
+
+#: ../../docs/training_manual/processing/crs.rst:49
+msgid ""
+"You should get a new layer with exactly the same points as the other two "
+"layers. If you right click on the name of the layer and open its properties,"
+" you will see that it shares the same CRS of the input layer, that is, "
+"EPSG:4326. When the layer is loaded into QGIS, you will not be asked to "
+"enter the CRS of the layer, since QGIS already knows about it."
+msgstr ""
+"Du bör få ett nytt lager med exakt samma punkter som de andra två lagren. Om"
+" du högerklickar på lagerets namn och öppnar dess egenskaper ser du att det "
+"har samma CRS som indatalageret, det vill säga EPSG:4326. När lageret laddas"
+" in i QGIS kommer du inte att bli ombedd att ange lagerets CRS, eftersom "
+"QGIS redan känner till det."
+
+#: ../../docs/training_manual/processing/crs.rst:55
+msgid ""
+"If you open the attributes table of the new layer you will see that it "
+"contains two new fields with the X and Y coordinates of each point."
+msgstr ""
+"Om du öppnar attributtabellen för det nya lagret kommer du att se att det "
+"innehåller två nya fält med X- och Y-koordinaterna för varje punkt."
+
+#: ../../docs/training_manual/processing/crs.rst:60
+msgid ""
+"Those coordinate values are given in the layer CRS, since we chose that "
+"option. However, even if you choose another option, the output CRS of the "
+"layer would have been the same, since the input CRS is used to set the CRS "
+"of the output layer. Choosing another option will cause the values to be "
+"different, but not the resulting point to change or the CRS of the output "
+"layer to be different to the CRS of the input one."
+msgstr ""
+"Dessa koordinatvärden anges i lagerets CRS, eftersom vi valde det "
+"alternativet. Men även om du väljer ett annat alternativ skulle lagerets CRS"
+" för utdata ha varit detsamma, eftersom CRS för indata används för att "
+"ställa in CRS för utdata. Om du väljer ett annat alternativ kommer värdena "
+"att vara olika, men inte den resulterande punkten att ändras eller CRS för "
+"det utgående lagret att vara annorlunda än CRS för det ingående lagret."
+
+#: ../../docs/training_manual/processing/crs.rst:68
+msgid ""
+"Now do the same calculation using the other layer. You should find the "
+"resulting layer rendered exactly in the same place as the other ones, and it"
+" will have the EPSG:23030 CRS, since that was the one of the input layer."
+msgstr ""
+"Gör nu samma beräkning med det andra lagret. Det resulterande lagret kommer "
+"att återges exakt på samma plats som de andra, och det kommer att ha "
+"EPSG:23030 CRS, eftersom det var det som användes i det ingående lagret."
+
+#: ../../docs/training_manual/processing/crs.rst:72
+msgid ""
+"If you go to its attribute table, you will see values that are different to "
+"the ones in the first layer that we created."
+msgstr ""
+"Om du går till dess attributtabell kommer du att se värden som skiljer sig "
+"från dem i det första lagret som vi skapade."
+
+#: ../../docs/training_manual/processing/crs.rst:77
+msgid ""
+"This is because the original data is different (it uses a different CRS), "
+"and those coordinates are taken from it."
+msgstr ""
+"Detta beror på att originaldata är annorlunda (den använder en annan CRS), "
+"och dessa koordinater är hämtade från den."
+
+#: ../../docs/training_manual/processing/crs.rst:80
+msgid ""
+"What should you learn from this? The main idea behind these examples is that"
+" geoalgorithms use the layer as it is in its original data source, and "
+"completely ignore the reprojections that QGIS might be doing before "
+"rendering. In other words, do not trust what you see in the canvas, but "
+"always have in mind that the original data will be used. That is not so "
+"important in this case, since we are just using one single layer at a time, "
+"but in an algorithm that needs several of them (such as a clip algorithm), "
+"layers that appear to match or overlay might be very far one from each "
+"other, since they might have different CRSs."
+msgstr ""
+"Vad kan man lära sig av detta? Huvudtanken bakom dessa exempel är att "
+"geoalgoritmer använder lagret som det är i sin ursprungliga datakälla och "
+"helt ignorerar de omprojektioner som QGIS kan göra före rendering. Med andra"
+" ord ska du inte lita på vad du ser på skärmen, utan alltid ha i åtanke att "
+"originaldata kommer att användas. Det är inte så viktigt i det här fallet, "
+"eftersom vi bara använder ett enda lager åt gången, men i en algoritm som "
+"behöver flera av dem (t.ex. en klippalgoritm) kan lager som ser ut att "
+"matcha eller överlagra varandra vara mycket långt ifrån varandra, eftersom "
+"de kan ha olika CRS."
+
+#: ../../docs/training_manual/processing/crs.rst:89
+msgid ""
+"Algorithms performs no reprojection (except in the reprojection algorithm "
+"that we will see next), so it is up to you to make sure that layers have "
+"matching CRS's."
+msgstr ""
+"Algoritmer utför ingen reprojektion (utom i reprojektionsalgoritmen som vi "
+"ska se härnäst), så det är upp till dig att se till att lagren har matchande"
+" CRS:er."
+
+#: ../../docs/training_manual/processing/crs.rst:93
+msgid ""
+"An interesting module that deals with CRS's is the reprojection one. It "
+"represents a particular case, since it has an input layer (the one to "
+"reproject), but it will not use its CRS for the output one."
+msgstr ""
+"En intressant modul som handlar om CRS är reprojektionsmodulen. Den "
+"representerar ett särskilt fall, eftersom den har ett inputlager (det som "
+"ska reprojiceras), men den kommer inte att använda sin CRS för outputlagret."
+
+#: ../../docs/training_manual/processing/crs.rst:97
+msgid "Open the *Reproject layer* algorithm."
+msgstr "Öppna algoritmen *Reproject layer*."
+
+#: ../../docs/training_manual/processing/crs.rst:101
+msgid ""
+"Select any of the layers as input, and select EPSG:23029 as the destination "
+"CRS. Run the algorithm and you will get a new layer, identical to the input "
+"one, but with a different CRS. It will appear on the same region of the "
+"canvas, like the other ones, since QGIS will reproject it on the fly, but "
+"its original coordinates are different. You can see that by running the "
+"*Export/Add geometry columns* algorithm using this new layer as input, and "
+"veryfing that the added coordinates are different to the ones in the "
+"attribute tables of both of the two layers that we had computed before."
+msgstr ""
+"Välj något av lagren som indata och välj EPSG:23029 som destination CRS. Kör"
+" algoritmen och du kommer att få ett nytt lager, identiskt med indatalagret,"
+" men med en annan CRS. Det kommer att visas på samma område av duken som de "
+"andra, eftersom QGIS kommer att omprojicera det i farten, men dess "
+"ursprungliga koordinater är annorlunda. Du kan se det genom att köra "
+"algoritmen *Export/Add geometry columns* med det nya lagret som indata och "
+"konstatera att de tillagda koordinaterna skiljer sig från dem i "
+"attributtabellerna för båda de två lager som vi hade beräknat tidigare."
