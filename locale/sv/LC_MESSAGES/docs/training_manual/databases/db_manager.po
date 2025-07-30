@@ -1,0 +1,615 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/databases/db_manager.rst:2
+msgid "Lesson: Using DB Manager to work with Spatial Databases in QGIS"
+msgstr ""
+"Lektion: Använda DB Manager för att arbeta med spatiala databaser i QGIS"
+
+#: ../../docs/training_manual/databases/db_manager.rst:4
+msgid ""
+"We have already seen how to perform many database operations with QGIS as "
+"well as with other tools, but now it's time to look at the DB Manager tool "
+"which provides much of this same functionality as well as more management "
+"oriented tools."
+msgstr ""
+"Vi har redan sett hur man utför många databasoperationer med QGIS och med "
+"andra verktyg, men nu är det dags att titta på verktyget DB Manager som "
+"tillhandahåller mycket av samma funktionalitet samt mer "
+"förvaltningsinriktade verktyg."
+
+#: ../../docs/training_manual/databases/db_manager.rst:10
+msgid ""
+"**The goal for this lesson:** To learn how to interact with spatial "
+"databases using the QGIS DB Manager."
+msgstr ""
+"**Målet med den här lektionen:** Att lära sig hur man interagerar med "
+"rumsliga databaser med hjälp av QGIS DB Manager."
+
+#: ../../docs/training_manual/databases/db_manager.rst:14
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Managing PostGIS Databases with DB "
+"Manager"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Hantera PostGIS-databaser med DB "
+"Manager"
+
+#: ../../docs/training_manual/databases/db_manager.rst:16
+msgid ""
+"You should first open the DB Manager interface by selecting "
+":menuselection:`Database --> DB Manager --> DB Manager` on the menu or by "
+"selecting the |dbManager| :sup:`DB Manager` icon on the toolbar."
+msgstr ""
+"Du bör först öppna gränssnittet DB Manager genom att välja "
+":menuselection:`Database --> DB Manager --> DB Manager` på menyn eller genom"
+" att välja ikonen |dbManager| :sup:`DB Manager` på verktygsfältet."
+
+#: ../../docs/training_manual/databases/db_manager.rst:294
+msgid "dbManager"
+msgstr "dbManager"
+
+#: ../../docs/training_manual/databases/db_manager.rst:20
+msgid ""
+"You should already see the previous connections we have configured and be "
+"able to expand the ``myPG`` section and its ``public`` schema to see the "
+"tables we have worked with in previous sections."
+msgstr ""
+"Du bör redan se de tidigare anslutningar som vi har konfigurerat och kunna "
+"expandera avsnittet ``myPG`` och dess ``public`` schema för att se de "
+"tabeller som vi har arbetat med i tidigare avsnitt."
+
+#: ../../docs/training_manual/databases/db_manager.rst:24
+msgid ""
+"The first thing you may notice is that you can now see some metadata about "
+"the Schemas contained in your database."
+msgstr ""
+"Det första du kanske märker är att du nu kan se vissa metadata om de scheman"
+" som finns i din databas."
+
+#: ../../docs/training_manual/databases/db_manager.rst:30
+msgid ""
+"Schemas are a way of grouping data tables and other objects in a PostgreSQL "
+"database and a container for permissions and other constraints. Managing "
+"PostgreSQL schemas is beyond the scope of this manual, but you can find more"
+" information about them in the `PostgreSQL documentation on Schemas "
+"<https://www.postgresql.org/docs/9.1/ddl-schemas.html>`_. You can use the DB"
+" Manager to create new Schemas, but will need to use a tool like pgAdmin III"
+" or the command line interface to manage them effectively."
+msgstr ""
+"Scheman är ett sätt att gruppera datatabeller och andra objekt i en "
+"PostgreSQL-databas och en behållare för behörigheter och andra "
+"begränsningar. Hantering av PostgreSQL-scheman ligger utanför omfattningen "
+"av denna handbok, men du kan hitta mer information om dem i `PostgreSQL-"
+"dokumentationen om Schemas <https://www.postgresql.org/docs/9.1/ddl-"
+"schemas.html>`_. Du kan använda DB Manager för att skapa nya Schemas, men "
+"måste använda ett verktyg som pgAdmin III eller kommandoradsgränssnittet för"
+" att hantera dem effektivt."
+
+#: ../../docs/training_manual/databases/db_manager.rst:40
+msgid ""
+"DB Manager can also be used to manage the tables within your database. We "
+"have already looked at various ways to create and manage tables on the "
+"command line, but now lets look at how to do this in DB Manager."
+msgstr ""
+"DB Manager kan också användas för att hantera tabellerna i din databas. Vi "
+"har redan tittat på olika sätt att skapa och hantera tabeller på "
+"kommandoraden, men nu ska vi titta på hur man gör detta i DB Manager."
+
+#: ../../docs/training_manual/databases/db_manager.rst:45
+msgid ""
+"First, its useful to just look at a table's metadata by clicking on its name"
+" in tree and looking in the :guilabel:`Info` tab."
+msgstr ""
+"För det första är det bra att bara titta på en tabells metadata genom att "
+"klicka på dess namn i trädet och titta på fliken :guilabel:`Info`."
+
+#: ../../docs/training_manual/databases/db_manager.rst:51
+msgid ""
+"In this panel you can see the :guilabel:`General Info` about the table as "
+"well the information that the PostGIS extension maintains about the geometry"
+" and spatial reference system."
+msgstr ""
+"I den här panelen kan du se :guilabel:`General Info` om tabellen samt den "
+"information som PostGIS-tillägget upprätthåller om geometrin och det "
+"rumsliga referenssystemet."
+
+#: ../../docs/training_manual/databases/db_manager.rst:55
+msgid ""
+"If you scroll down in the :guilabel:`Info` tab, you can see more information"
+" about the :guilabel:`Fields`, :guilabel:`Constraints` and "
+":guilabel:`Indexes` for the table you are viewing."
+msgstr ""
+"Om du bläddrar nedåt i fliken :guilabel:`Info` kan du se mer information om "
+":guilabel:`Fields`, :guilabel:`Constraints` och :guilabel:`Index` för den "
+"tabell du tittar på."
+
+#: ../../docs/training_manual/databases/db_manager.rst:62
+msgid ""
+"Its also very useful to use DB Manager to simply look at the records in the "
+"database in much the same way you might do this by viewing the attribute "
+"table of a layer in the Layer Tree. You can browse the data by selecting the"
+" :guilabel:`Table` tab."
+msgstr ""
+"Det är också mycket användbart att använda DB Manager för att helt enkelt "
+"titta på posterna i databasen på ungefär samma sätt som du kan göra det "
+"genom att visa attributtabellen för ett lager i lagerträdet. Du kan bläddra "
+"bland data genom att välja fliken :guilabel:`Table`."
+
+#: ../../docs/training_manual/databases/db_manager.rst:70
+msgid ""
+"There is also a :guilabel:`Preview` tab which will show you the layer data "
+"in a map preview."
+msgstr ""
+"Det finns också en flik :guilabel:`Preview` som visar skiktdata i en "
+"förhandsgranskning av kartan."
+
+#: ../../docs/training_manual/databases/db_manager.rst:73
+msgid ""
+"Right-clicking on a layer in the tree and clicking :guilabel:`Add to Canvas`"
+" will add this layer to your map."
+msgstr ""
+"Om du högerklickar på ett lager i trädet och klickar på :guilabel:`Add to "
+"Canvas` läggs detta lager till på kartan."
+
+#: ../../docs/training_manual/databases/db_manager.rst:76
+msgid ""
+"So far we have only been viewing the database its schemas and tables and "
+"their metadata, but what if we wanted to alter the table to add an "
+"additional column perhaps? DB Manager allows you to do this directly."
+msgstr ""
+"Hittills har vi bara tittat på databasen, dess scheman och tabeller och "
+"deras metadata, men tänk om vi vill ändra tabellen för att lägga till en "
+"extra kolumn kanske? Med DB Manager kan du göra detta direkt."
+
+#: ../../docs/training_manual/databases/db_manager.rst:81
+msgid "Select the table you want to edit in the tree"
+msgstr "Välj den tabell som du vill redigera i trädet"
+
+#: ../../docs/training_manual/databases/db_manager.rst:82
+msgid ""
+"Select :menuselection:`Table --> Edit Table` from the menu, to open the "
+":guilabel:`Table Properties` dialog."
+msgstr ""
+"Välj :menuselection:`Table --> Edit Table` från menyn för att öppna "
+"dialogrutan :guilabel:`Table Properties`."
+
+#: ../../docs/training_manual/databases/db_manager.rst:88
+msgid ""
+"You can use this dialog to Add Columns, Add geometry columns, edit existing "
+"columns or to remove a column completely."
+msgstr ""
+"Du kan använda den här dialogen för att lägga till kolumner, lägga till "
+"geometriska kolumner, redigera befintliga kolumner eller ta bort en kolumn "
+"helt."
+
+#: ../../docs/training_manual/databases/db_manager.rst:91
+msgid ""
+"Using the :guilabel:`Constraints` tab, you can manage which fields are used "
+"as the primary key or to drop existing constraints."
+msgstr ""
+"På fliken :guilabel:`Constraints` kan du styra vilka fält som ska användas "
+"som primärnyckel eller ta bort befintliga begränsningar."
+
+#: ../../docs/training_manual/databases/db_manager.rst:97
+msgid ""
+"The :guilabel:`Indexes` tab can be used to add and delete both spatial and "
+"normal indexes."
+msgstr ""
+"Fliken :guilabel:`Indexes` kan användas för att lägga till och ta bort både "
+"spatiala och normala index."
+
+#: ../../docs/training_manual/databases/db_manager.rst:104
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Creating a New Table"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Skapa en ny tabell"
+
+#: ../../docs/training_manual/databases/db_manager.rst:106
+msgid ""
+"Now that we have gone through the process of working with existing tables in"
+" our database, let's use DB Manager to create a new table."
+msgstr ""
+"Nu när vi har gått igenom hur vi arbetar med befintliga tabeller i vår "
+"databas ska vi använda DB Manager för att skapa en ny tabell."
+
+#: ../../docs/training_manual/databases/db_manager.rst:109
+msgid ""
+"If it is not already open, open the DB Manager window, and expand the tree "
+"until you see the list of tables already in your database."
+msgstr ""
+"Om den inte redan är öppen öppnar du fönstret DB Manager och expanderar "
+"trädet tills du ser listan över tabeller som redan finns i databasen."
+
+#: ../../docs/training_manual/databases/db_manager.rst:111
+msgid ""
+"From the menu select :guilabel:`Table --> Create Table` to bring up the "
+"Create Table dialog."
+msgstr ""
+"Välj :guilabel:`Table --> Create Table` i menyn för att visa dialogrutan "
+"Create Table."
+
+#: ../../docs/training_manual/databases/db_manager.rst:113
+msgid "Use the default ``Public`` schema and name the table ``places``."
+msgstr "Använd standardschemat ``Public`` och döp tabellen till ``places``."
+
+#: ../../docs/training_manual/databases/db_manager.rst:114
+msgid ""
+"Add the ``id``, ``place_name``, and ``elevation`` fields as shown below"
+msgstr ""
+"Lägg till fälten ``id``, ``place_name`` och ``elevation`` enligt nedan"
+
+#: ../../docs/training_manual/databases/db_manager.rst:116
+msgid "Make sure the ``id`` field is set as the primary key."
+msgstr "Kontrollera att fältet ``id`` är inställt som primärnyckel."
+
+#: ../../docs/training_manual/databases/db_manager.rst:117
+msgid ""
+"Click the checkbox to :guilabel:`Create geometry column` and make sure it is"
+" set to a ``POINT`` type and leave it named ``geom`` and specify ``4326`` as"
+" the :guilabel:`SRID`."
+msgstr ""
+"Klicka på kryssrutan för :guilabel:`Create geometry column` och se till att "
+"den är inställd på en ``POINT`` typ och låt den heta ``geom`` och ange "
+"``4326`` som :guilabel:`SRID`."
+
+#: ../../docs/training_manual/databases/db_manager.rst:121
+msgid ""
+"Click the checkbox to :guilabel:`Create spatial index` and click "
+":guilabel:`Create` to create the table."
+msgstr ""
+"Klicka på kryssrutan för :guilabel:`Create spatial index` och klicka på "
+":guilabel:`Create` för att skapa tabellen."
+
+#: ../../docs/training_manual/databases/db_manager.rst:127
+msgid ""
+"Dismiss the dialog letting you know that the table was created and click "
+":guilabel:`Close` to close the Create Table Dialog."
+msgstr ""
+"Avsluta dialogen som talar om att tabellen har skapats och klicka på "
+":guilabel:`Close` för att stänga dialogen Create Table."
+
+#: ../../docs/training_manual/databases/db_manager.rst:130
+msgid ""
+"You can now inspect your table in the DB Manager and you will of course find"
+" that there is no data in it. From here you can :guilabel:`Toggle Editing` "
+"on the layer menu and begin to add places to your table."
+msgstr ""
+"Du kan nu inspektera din tabell i DB Manager och du kommer naturligtvis att "
+"upptäcka att det inte finns några data i den. Härifrån kan du "
+":guilabel:`Toggle Editing` på lagermenyn och börja lägga till platser i din "
+"tabell."
+
+#: ../../docs/training_manual/databases/db_manager.rst:136
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Basic Database Administration"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Grundläggande "
+"databasadministration"
+
+#: ../../docs/training_manual/databases/db_manager.rst:138
+msgid ""
+"The DB Manager will also let you do some basic database administration "
+"tasks. It is certainly not a substitute for a more complete database "
+"administration tool, but it does provide some functionality that you can use"
+" to maintain your database."
+msgstr ""
+"Med DB Manager kan du också utföra vissa grundläggande uppgifter för "
+"databasadministration. Det är absolut inte en ersättning för ett mer "
+"komplett verktyg för databasadministration, men det ger viss funktionalitet "
+"som du kan använda för att underhålla din databas."
+
+#: ../../docs/training_manual/databases/db_manager.rst:144
+msgid ""
+"Database tables can often become quite large and tables which are being "
+"modified frequently can end up leaving around remnants of records that are "
+"no longer needed by PostgreSQL. The *VACUUM* command takes care of doing a "
+"kind of garbage collection to compact and optional analyze your tables for "
+"better performance."
+msgstr ""
+"Databastabeller kan ofta bli ganska stora och tabeller som ändras ofta kan "
+"sluta lämna kvar rester av poster som inte längre behövs av PostgreSQL. "
+"Kommandot * VACUUM * tar hand om att göra en slags skräpsamling för att "
+"komprimera och valfritt analysera dina tabeller för bättre prestanda."
+
+#: ../../docs/training_manual/databases/db_manager.rst:150
+msgid ""
+"Let us take a look at how we can perform a *VACUUM ANALYZE* command from "
+"within DB Manager."
+msgstr ""
+"Låt oss ta en titt på hur vi kan utföra ett *VACUUM ANALYZE*-kommando från "
+"DB Manager."
+
+#: ../../docs/training_manual/databases/db_manager.rst:153
+msgid "Select one of your tables in the DB Manager Tree"
+msgstr "Välj en av dina tabeller i DB Manager-trädet"
+
+#: ../../docs/training_manual/databases/db_manager.rst:154
+msgid "Select :menuselection:`Table --> Run Vacuum Analyze` from the menu"
+msgstr "Välj :menuselection:`Table --> Run Vacuum Analyze` från menyn"
+
+#: ../../docs/training_manual/databases/db_manager.rst:156
+msgid ""
+"PostgreSQL will now perform the operation. Depending on how big your table "
+"is, this may take some time to complete."
+msgstr ""
+"PostgreSQL kommer nu att utföra operationen. Beroende på hur stor din tabell"
+" är kan det ta lite tid att slutföra."
+
+#: ../../docs/training_manual/databases/db_manager.rst:160
+msgid ""
+"You can find more information about the VACUUM ANALYZE process in the "
+"`PostgreSQL Documentation on VACUUM ANALYZE "
+"<https://www.postgresql.org/docs/9.1/sql-vacuum.html>`_."
+msgstr ""
+"Du kan hitta mer information om VACUUM ANALYZE-processen i `PostgreSQL-"
+"dokumentationen om VACUUM ANALYZE <https://www.postgresql.org/docs/9.1/sql-"
+"vacuum.html>`_."
+
+#: ../../docs/training_manual/databases/db_manager.rst:165
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Executing SQL Queries with DB "
+"Manager"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Exekvera SQL-frågor med DB "
+"Manager"
+
+#: ../../docs/training_manual/databases/db_manager.rst:167
+msgid ""
+"DB Manager also provides a way for you to write queries against your "
+"database tables and to view the results. We have already seen this type of "
+"functionality in the :guilabel:`Browser` panel, but lets look at it again "
+"here with DB Manager."
+msgstr ""
+"DB Manager ger dig också möjlighet att skriva frågor mot dina "
+"databastabeller och visa resultaten. Vi har redan sett den här typen av "
+"funktionalitet i :guilabel:`Browser`-panelen, men låt oss titta på det igen "
+"här med DB Manager."
+
+#: ../../docs/training_manual/databases/db_manager.rst:173
+msgid "Select the ``lines`` table in the tree."
+msgstr "Välj tabellen ``lines`` i trädet."
+
+#: ../../docs/training_manual/databases/db_manager.rst:174
+msgid "Select the :guilabel:`SQL window` button in the DB Manager toolbar."
+msgstr "Välj knappen :guilabel:`SQL window` i verktygsfältet DB Manager."
+
+#: ../../docs/training_manual/databases/db_manager.rst:179
+msgid "Compose the following :guilabel:`SQL query` in the space provided::"
+msgstr ""
+"Skriv följande :guilabel:`SQL-fråga` i det utrymme som tillhandahålls::"
+
+#: ../../docs/training_manual/databases/db_manager.rst:183
+msgid "Click the :guilabel:`Execute (F5)` button to run the query."
+msgstr "Klicka på knappen :guilabel:`Execute (F5)` för att köra frågan."
+
+#: ../../docs/training_manual/databases/db_manager.rst:184
+msgid ""
+"You should now see the records that match in the :guilabel:`Result` panel."
+msgstr "Du bör nu se de poster som matchar i :guilabel:`Result`-panelen."
+
+#: ../../docs/training_manual/databases/db_manager.rst:190
+msgid ""
+"Click the checkbox for :guilabel:`Load as new layer` to add the results to "
+"your map."
+msgstr ""
+"Klicka på kryssrutan för :guilabel:`Load as new layer` för att lägga till "
+"resultaten på kartan."
+
+#: ../../docs/training_manual/databases/db_manager.rst:192
+msgid ""
+"Select the ``id`` column as the :guilabel:`Column with unique integer "
+"values` and the ``geom`` column as the :guilabel:`Geometry column`."
+msgstr ""
+"Välj kolumnen ``id`` som :guilabel:`Kolumn med unika heltalsvärden` och "
+"kolumnen ``geom`` som :guilabel:`Geometrikolumn`."
+
+#: ../../docs/training_manual/databases/db_manager.rst:195
+msgid "Enter ``roads_primary`` as the :guilabel:`Layer name (prefix)`."
+msgstr "Ange ``roads_primary`` som :guilabel:`Layernamn (prefix)`."
+
+#: ../../docs/training_manual/databases/db_manager.rst:196
+msgid ""
+"Click :guilabel:`Load now!` to load the results as a new layer into your "
+"map."
+msgstr ""
+"Klicka på :guilabel:`Ladda nu!` för att ladda resultaten som ett nytt lager "
+"i din karta."
+
+#: ../../docs/training_manual/databases/db_manager.rst:202
+msgid ""
+"The layers that matched your query are now displayed on your map. You can of"
+" course use this query tool to execute any arbitrary SQL command including "
+"many of the ones we looked at in previous modules and sections."
+msgstr ""
+"De lager som matchade din fråga visas nu på kartan. Du kan naturligtvis "
+"använda det här frågeverktyget för att utföra godtyckliga SQL-kommandon, "
+"inklusive många av dem som vi har tittat på i tidigare moduler och avsnitt."
+
+#: ../../docs/training_manual/databases/db_manager.rst:208
+msgid "Importing Data into a Database with DB Manager"
+msgstr "Importera data till en databas med DB Manager"
+
+#: ../../docs/training_manual/databases/db_manager.rst:210
+msgid ""
+"We have already looked at how to import data into a spatial database using "
+"command line tools, so now let's learn how to use DB Manager to do imports."
+msgstr ""
+"Vi har redan tittat på hur man importerar data till en spatial databas med "
+"hjälp av kommandoradsverktyg, så nu ska vi lära oss hur man använder DB "
+"Manager för att göra importer."
+
+#: ../../docs/training_manual/databases/db_manager.rst:214
+msgid ""
+"Click the :guilabel:`Import layer/file` button on the toolbar in the DB "
+"Manager dialog."
+msgstr ""
+"Klicka på knappen :guilabel:`Import layer/file` i verktygsfältet i "
+"dialogrutan DB Manager."
+
+#: ../../docs/training_manual/databases/db_manager.rst:220
+msgid ""
+"Select the :file:`urban_33S.shp` file from "
+":file:`exercise_data/projected_data` as the input dataset"
+msgstr ""
+"Välj filen :file:`urban_33S.shp` från :file:`exercise_data/projected_data` "
+"som indatadataset"
+
+#: ../../docs/training_manual/databases/db_manager.rst:222
+msgid ""
+"Click the :guilabel:`Update Options` button to pre-fill some of the form "
+"values."
+msgstr ""
+"Klicka på knappen :guilabel:`Update Options` för att förifylla några av "
+"formulärvärdena."
+
+#: ../../docs/training_manual/databases/db_manager.rst:224
+msgid "Make sure that the :guilabel:`Create new table` option is selected"
+msgstr "Kontrollera att alternativet :guilabel:`Create new table` är valt"
+
+#: ../../docs/training_manual/databases/db_manager.rst:225
+msgid ""
+"Specify the :guilabel:`Source SRID` as ``32722`` and the :guilabel:`Target "
+"SRID` as ``4326``"
+msgstr ""
+"Ange :guilabel:`Source SRID` som ``32722`` och :guilabel:`Target SRID` som "
+"``4326``"
+
+#: ../../docs/training_manual/databases/db_manager.rst:227
+msgid "Enable the checkbox to :guilabel:`Create Spatial Index`"
+msgstr "Aktivera kryssrutan för att :guilabel:`Create Spatial Index`"
+
+#: ../../docs/training_manual/databases/db_manager.rst:228
+msgid "Click :guilabel:`OK` to perform the import"
+msgstr "Klicka på :guilabel:`OK` för att utföra importen"
+
+#: ../../docs/training_manual/databases/db_manager.rst:233
+msgid "Dismiss the dialog letting you know that the import was successful"
+msgstr "Avsluta dialogrutan som meddelar att importen lyckades"
+
+#: ../../docs/training_manual/databases/db_manager.rst:234
+msgid "Click the :guilabel:`Refresh` button on the DB Manager Toolbar"
+msgstr "Klicka på knappen :guilabel:`Refresh` i verktygsfältet DB Manager"
+
+#: ../../docs/training_manual/databases/db_manager.rst:236
+msgid ""
+"You can now inspect the table in your database by clicking on it in the "
+"Tree. Verify that the data has been reprojected by checking that the "
+":guilabel:`Spatial ref:` is listed as ``WGS 84 (4326)``."
+msgstr ""
+"Du kan nu inspektera tabellen i din databas genom att klicka på den i "
+"trädet. Kontrollera att data har omprojicerats genom att kontrollera att "
+":guilabel:`Spatial ref:` är listad som ``WGS 84 (4326)``."
+
+#: ../../docs/training_manual/databases/db_manager.rst:244
+msgid ""
+"Right clicking on the table in the Tree and a selecting :guilabel:`Add to "
+"Canvas` will add the table as a layer in your map."
+msgstr ""
+"Om du högerklickar på tabellen i trädet och väljer :guilabel:`Add to Canvas`"
+" läggs tabellen till som ett lager i kartan."
+
+#: ../../docs/training_manual/databases/db_manager.rst:249
+msgid "Exporting Data from a Database with DB Manager"
+msgstr "Exportera data från en databas med DB Manager"
+
+#: ../../docs/training_manual/databases/db_manager.rst:251
+msgid ""
+"Of course DB Manager can also be used to export data from your spatial "
+"databases, so lets take a look at how that is done."
+msgstr ""
+"DB Manager kan naturligtvis också användas för att exportera data från dina "
+"spatiala databaser, så låt oss ta en titt på hur det går till."
+
+#: ../../docs/training_manual/databases/db_manager.rst:254
+msgid ""
+"Select the ``lines`` layer in the Tree and click the :guilabel:`Export to "
+"File` button on the toolbar to open the :guilabel:`Export to vector file` "
+"dialog."
+msgstr ""
+"Markera lagret ``lines`` i trädet och klicka på knappen :guilabel:`Export to"
+" File` i verktygsfältet för att öppna dialogrutan :guilabel:`Export to "
+"vector file`."
+
+#: ../../docs/training_manual/databases/db_manager.rst:257
+msgid ""
+"Click the :guilabel:`...` button to select the :guilabel:`Output file` and "
+"save the data to your :file:`exercise_data` directory as :file:`urban_4326`."
+msgstr ""
+"Klicka på knappen :guilabel:`...` för att välja :guilabel:`Output file` och "
+"spara data i katalogen :file:`exercise_data` som :file:`urban_4326`."
+
+#: ../../docs/training_manual/databases/db_manager.rst:260
+msgid "Set the :guilabel:`Target SRID` as ``4326``."
+msgstr "Ställ in :guilabel:`Target SRID` som ``4326``."
+
+#: ../../docs/training_manual/databases/db_manager.rst:261
+msgid "Click :guilabel:`OK` to initialize the export."
+msgstr "Klicka på :guilabel:`OK` för att initiera exporten."
+
+#: ../../docs/training_manual/databases/db_manager.rst:266
+msgid ""
+"Dismiss the dialog letting you know the export was successful and close the "
+"DB Manager."
+msgstr ""
+"Avsluta dialogrutan som talar om att exporten lyckades och stäng DB Manager."
+
+#: ../../docs/training_manual/databases/db_manager.rst:269
+msgid "You can now inspect the shapefile you created with the Browser panel."
+msgstr ""
+"Du kan nu inspektera den shapefil du skapade med hjälp av panelen Browser."
+
+#: ../../docs/training_manual/databases/db_manager.rst:275
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/databases/db_manager.rst:277
+msgid ""
+"You have now seen how to use the DB Manager interface in QGIS to manage your"
+" spatial databases, to execute SQL queries against your data and how to "
+"import and export data."
+msgstr ""
+"Du har nu sett hur du använder gränssnittet DB Manager i QGIS för att "
+"hantera dina rumsliga databaser, för att köra SQL-frågor mot dina data och "
+"hur du importerar och exporterar data."
+
+#: ../../docs/training_manual/databases/db_manager.rst:282
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/databases/db_manager.rst:284
+msgid ""
+"Next, we will look at how to use many of these same techniques with "
+"*SpatiaLite* databases."
+msgstr ""
+"Därefter tittar vi på hur man kan använda många av dessa tekniker med "
+"*SpatiaLite*-databaser."
