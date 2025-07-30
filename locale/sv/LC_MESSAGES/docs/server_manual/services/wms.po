@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,39 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/server_manual/services/wms.rst:2
+msgid "Web Map Service (WMS)"
+msgstr "Webbkarttjänst (WMS)"
+
+#: ../../docs/server_manual/services/wms.rst:4
+msgid ""
+"The **1.1.1** and **1.3.0** WMS standards implemented in QGIS Server provide"
+" a HTTP interface to request map or legend images generated from a QGIS "
+"project. A typical WMS request defines the QGIS project to use, the layers "
+"to render as well as the image format to generate. Basic support is also "
+"available for **Styled Layer Descriptor (SLD)**."
+msgstr ""
+"WMS-standarderna **1.1.1** och **1.3.0** som implementerats i QGIS Server "
+"tillhandahåller ett HTTP-gränssnitt för att begära kart- eller legendbilder "
+"som genererats från ett QGIS-projekt. En typisk WMS-begäran definierar det "
+"QGIS-projekt som ska användas, de lager som ska återges samt det bildformat "
+"som ska genereras. Grundläggande stöd finns också för **Styled Layer "
+"Descriptor (SLD)**."
+
+#: ../../docs/server_manual/services/wms.rst:10
+msgid "Specifications:"
+msgstr "Specifikationer:"
 
 #: ../../docs/server_manual/services/wms.rst:12
 msgid ""
@@ -46,6 +80,14 @@ msgstr ""
 "`SLD 1.1.0 WMS profile "
 "<https://portal.ogc.org/files/?artifact_id=22364&format=pdf>`_"
 
+#: ../../docs/server_manual/services/wms.rst:16
+msgid "Standard requests provided by QGIS Server:"
+msgstr "Standardförfrågningar som tillhandahålls av QGIS Server:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Request"
+msgstr "Förfrågan"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Description"
 msgstr "Beskrivning"
@@ -55,140 +97,373 @@ msgid ":ref:`GetCapabilities <wms_getcapabilities>`"
 msgstr ":ref:`GetCapabilities <wms_getcapabilities>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "Returnerar XML-metadata med information om servern"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetMap <wms_getmap>`"
 msgstr ":ref:`GetMap <wms_getmap>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a map"
+msgstr "Returnerar en karta"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetFeatureInfo <wms_getfeatureinfo>`"
 msgstr ":ref:`GetFeatureInfo <wms_getfeatureinfo>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr "Hämtar data (geometri och värden) för en pixelplats"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetLegendGraphic <wms_getlegendgraphic>`"
 msgstr ":ref:`GetLegendGraphic <wms_getlegendgraphic>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns legend symbols"
+msgstr "Returnerar legendsymboler"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetStyle(s) <wms_getstyle>`"
 msgstr ":ref:`GetStyle(s) <wms_getstyle>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML document with style description in SLD"
+msgstr "Returnerar XML-dokument med stilbeskrivning i SLD"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`DescribeLayer <wms_describelayer>`"
 msgstr ":ref:`DescribeLayer <wms_describelayer>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"Returns information about WFS and WCS availability respectively for vector "
+"and raster layers"
+msgstr ""
+"Returnerar information om WFS- respektive WCS-tillgänglighet för vektor- och"
+" rasterlager"
+
+#: ../../docs/server_manual/services/wms.rst:30
+msgid "Vendor requests provided by QGIS Server:"
+msgstr "Leverantörsförfrågningar som tillhandahålls av QGIS Server:"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetPrint <wms_getprint>`"
 msgstr ":ref:`GetPrint <wms_getprint>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a QGIS layout"
+msgstr "Returnerar en QGIS-layout"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetProjectSettings <wms_getprojectsettings>`"
 msgstr ":ref:`GetProjectSettings <wms_getprojectsettings>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns specific information about QGIS Server"
+msgstr "Returnerar specifik information om QGIS Server"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetSchemaExtension <wms_getschemaextension>`"
 msgstr ":ref:`GetSchemaExtension <wms_getschemaextension>`"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata about optional extended capabilities"
+msgstr "Returnerar XML-metadata om valfria utökade funktioner"
+
 #: ../../docs/server_manual/services/wms.rst:44
 msgid "GetCapabilities"
 msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wms.rst:46
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standardparametrar för **GetCapabilities**-begäran enligt OGC WMS 1.1.1 och "
+"1.3.0-specifikationerna:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Parameter"
+msgstr "Parameter"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Required"
+msgstr "Obligatorisk"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SERVICE <services_basics_service>`"
 msgstr ":ref:`SERVICE <services_basics_service>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Yes"
+msgstr "Ja"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the service (**WMS**)"
+msgstr "Namn på tjänsten (**WMS**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`REQUEST <services_basics_request>`"
 msgstr ":ref:`REQUEST <services_basics_request>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "Namn på begäran (**GetCapabilities**)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`VERSION <wms_version>`"
 msgstr ":ref:`VERSION <wms_version>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "No"
+msgstr "Nej"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Version of the service"
+msgstr "Version av tjänsten"
+
+#: ../../docs/server_manual/services/wms.rst:57
+msgid ""
+"The **GetCapabilities** request supports as well the following vendor "
+"parameters:"
+msgstr ""
+"Begäran **GetCapabilities** stöder även följande leverantörsparametrar:"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`MAP <services_basics_map>`"
 msgstr ":ref:`MAP <services_basics_map>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "QGIS project file"
+msgstr "QGIS-projektfil"
+
+#: ../../docs/server_manual/services/wms.rst:66
+#: ../../docs/server_manual/services/wms.rst:127
+#: ../../docs/server_manual/services/wms.rst:336
+#: ../../docs/server_manual/services/wms.rst:433
+#: ../../docs/server_manual/services/wms.rst:476
+#: ../../docs/server_manual/services/wms.rst:640
+#: ../../docs/server_manual/services/wms.rst:878
+#: ../../docs/server_manual/services/wms.rst:1025
+#: ../../docs/server_manual/services/wms.rst:1050
+#: ../../docs/server_manual/services/wms.rst:1079
+#: ../../docs/server_manual/services/wms.rst:1107
+#: ../../docs/server_manual/services/wms.rst:1134
+#: ../../docs/server_manual/services/wms.rst:1161
+#: ../../docs/server_manual/services/wms.rst:1188
+#: ../../docs/server_manual/services/wms.rst:1215
+#: ../../docs/server_manual/services/wms.rst:1242
+#: ../../docs/server_manual/services/wms.rst:1301
+#: ../../docs/server_manual/services/wms.rst:1327
+#: ../../docs/server_manual/services/wms.rst:1357
+#: ../../docs/server_manual/services/wms.rst:1385
+#: ../../docs/server_manual/services/wms.rst:1431
+#: ../../docs/server_manual/services/wms.rst:1457
+#: ../../docs/server_manual/services/wms.rst:1487
+#: ../../docs/server_manual/services/wms.rst:1515
+#: ../../docs/server_manual/services/wms.rst:1639
+#: ../../docs/server_manual/services/wms.rst:1675
+#: ../../docs/server_manual/services/wms.rst:1760
+#: ../../docs/server_manual/services/wms.rst:1851
+#: ../../docs/server_manual/services/wms.rst:1985
+msgid "URL example:"
+msgstr "Exempel på URL:"
 
 #: ../../docs/server_manual/services/wms.rst:79
 msgid "GetMap"
 msgstr "GetMap"
+
+#: ../../docs/server_manual/services/wms.rst:81
+msgid ""
+"Standard parameters for the **GetMap** request according to the OGC WMS "
+"1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standardparametrar för **GetMap**-begäran enligt OGC WMS 1.1.1 och "
+"1.3.0-specifikationerna:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetMap**)"
+msgstr "Namn på begäran (**GetMap**)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERS <wms_layers>`"
 msgstr ":ref:`LAYERS <wms_layers>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to display"
+msgstr "Lager som ska visas"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`STYLES <wms_styles>`"
 msgstr ":ref:`STYLES <wms_styles>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style"
+msgstr "Layers stil"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SRS / CRS <wms_srs>`"
 msgstr ":ref:`SRS / CRS <wms_srs>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Coordinate reference system"
+msgstr "Referenssystem för koordinater"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`BBOX <wms_bbox>`"
 msgstr ":ref:`BBOX <wms_bbox>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map extent"
+msgstr "Kartans utbredning"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`WIDTH <wms_width>`"
 msgstr ":ref:`WIDTH <wms_width>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the image in pixels"
+msgstr "Bildens bredd i pixlar"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`HEIGHT <wms_height>`"
 msgstr ":ref:`HEIGHT <wms_height>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Height of the image in pixels"
+msgstr "Bildens höjd i pixlar"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FORMAT <wms_getmap_format>`"
 msgstr ":ref:`FORMAT <wms_getmap_format>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Image format"
+msgstr "Bildformat"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`TRANSPARENT <wms_transparent>`"
 msgstr ":ref:`TRANSPARENT <wms_transparent>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Transparent background"
+msgstr "Transparent bakgrund"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "SLD"
 msgstr "SLD"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "URL of an SLD to be used for styling"
+msgstr "URL till en SLD som ska användas för styling"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "SLD_BODY"
 msgstr "SLD_BODY"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "In-line SLD (XML) to be used for styling"
+msgstr "In-line SLD (XML) som ska användas för styling"
+
+#: ../../docs/server_manual/services/wms.rst:103
+msgid ""
+"In addition to the standard ones, QGIS Server supports :ref:`redlining "
+"<wms_redlining>`, :ref:`external WMS layers <wms_external>` as well as the "
+"following extra parameters:"
+msgstr ""
+"Utöver standardparametrarna stöder QGIS Server :ref:`redlining "
+"<wms_redlining>`, :ref:`externa WMS-lager <wms_external>` samt följande "
+"extra parametrar:"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`BGCOLOR <wms_bgcolor>`"
 msgstr ":ref:`BGCOLOR <wms_bgcolor>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the background color"
+msgstr "Ange bakgrundsfärg"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`DPI <wms_dpi>`"
 msgstr ":ref:`DPI <wms_dpi>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the output resolution"
+msgstr "Ange utgångsupplösning"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`IMAGE_QUALITY <wms_imagequality>`"
 msgstr ":ref:`IMAGE_QUALITY <wms_imagequality>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "JPEG compression"
+msgstr "JPEG-komprimering"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`OPACITIES <wms_opacities>`"
 msgstr ":ref:`OPACITIES <wms_opacities>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Opacity for layer or group"
+msgstr "Opacitet för lager eller grupp"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FILTER <wms_filter>`"
 msgstr ":ref:`FILTER <wms_filter>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Subset of features"
+msgstr "Undergrupp av funktioner"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SELECTION <wms_selection>`"
 msgstr ":ref:`SELECTION <wms_selection>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Highlight features"
+msgstr "Markera funktioner"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "FILE_NAME"
 msgstr "FILE_NAME"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "File name of the downloaded file"
+msgstr "Filnamn på den nedladdade filen"
+
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/dxf``"
+msgstr "Endast för ``FORMAT=application/dxf``"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FORMAT_OPTIONS <wms_getmap_formatoptions>`"
 msgstr ":ref:`FORMAT_OPTIONS <wms_getmap_formatoptions>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Options of the specified file format"
+msgstr "Alternativ för det angivna filformatet"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`TILED <wms_tiled>`"
 msgstr ":ref:`TILED <wms_tiled>`"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Working in *tiled mode*"
+msgstr "Arbetar i *tiled mode* (lutande läge)"
+
 #: ../../docs/server_manual/services/wms.rst:151
 msgid "VERSION"
 msgstr "VERSION"
+
+#: ../../docs/server_manual/services/wms.rst:153
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+"Denna parameter gör det möjligt att ange vilken version av tjänsten som ska "
+"användas. Tillgängliga värden för parametern ``VERSION`` är:"
 
 #: ../../docs/server_manual/services/wms.rst:156
 msgid "``1.1.1``"
@@ -197,6 +472,14 @@ msgstr "``1.1.1``"
 #: ../../docs/server_manual/services/wms.rst:157
 msgid "``1.3.0``"
 msgstr "``1.3.0``"
+
+#: ../../docs/server_manual/services/wms.rst:159
+msgid ""
+"According to the version number, slight differences have to be expected as "
+"explained later for the next parameters:"
+msgstr ""
+"Beroende på versionsnumret kan man förvänta sig små skillnader, vilket "
+"förklaras senare för nästa parameter:"
 
 #: ../../docs/server_manual/services/wms.rst:162
 msgid "``CRS`` / ``SRS``"
@@ -210,34 +493,187 @@ msgstr "``BBOX``"
 msgid "LAYERS"
 msgstr "LAYERS"
 
+#: ../../docs/server_manual/services/wms.rst:171
+msgid ""
+"This parameter allows to specify the layers to display on the map. Names "
+"have to be separated by a comma."
+msgstr ""
+"Med denna parameter kan du ange vilka lager som ska visas på kartan. Namnen "
+"måste separeras med ett kommatecken."
+
+#: ../../docs/server_manual/services/wms.rst:174
+msgid "In addition, QGIS Server introduced some options to select layers by:"
+msgstr ""
+"Dessutom har QGIS Server infört några alternativ för att välja lager efter:"
+
+#: ../../docs/server_manual/services/wms.rst:176
+msgid ""
+"the layer id: the project option allowing to select layers by their id is in"
+" :menuselection:`QGIS Server --> WMS` tab of the :menuselection:`Project -->"
+" Properties...` dialog. Check the :guilabel:`Use layer ids as names` "
+"checkbox to activate this option."
+msgstr ""
+"lagrets id: projektalternativet som gör det möjligt att välja lager efter "
+"deras id finns i :menuselection:`QGIS Server --> WMS` fliken i "
+":menuselection:`Project --> Properties...` dialogen. Markera kryssrutan "
+":guilabel:`Use layer ids as names` för att aktivera detta alternativ."
+
+#: ../../docs/server_manual/services/wms.rst:179
+msgid "a :ref:`short name <services_basics_short_name>`"
+msgstr "a :ref:`kortnamn <services_basics_kortnamn>`"
+
 #: ../../docs/server_manual/services/wms.rst:193
 msgid "STYLES"
 msgstr "STYLES"
 
+#: ../../docs/server_manual/services/wms.rst:195
+msgid ""
+"This parameter can be used to specify a layer's style for the rendering "
+"step. Styles have to be separated by a comma. The name of the default style "
+"is ``default``."
+msgstr ""
+"Denna parameter kan användas för att ange ett lagers stil för "
+"renderingssteget. Stilarna måste separeras med ett kommatecken. Namnet på "
+"standardstilen är ``default``."
+
 #: ../../docs/server_manual/services/wms.rst:204
 msgid "SRS / CRS"
 msgstr "SRS / CRS"
+
+#: ../../docs/server_manual/services/wms.rst:206
+msgid ""
+"This parameter allows to indicate the map output Spatial Reference System in"
+" WMS **1.1.1** and has to be formed like ``EPSG:XXXX``. Note that ``CRS`` is"
+" also supported if current version is **1.1.1**."
+msgstr ""
+"Denna parameter gör det möjligt att ange det rumsliga referenssystemet för "
+"kartutdata i WMS **1.1.1** och måste utformas som ``EPSG:XXXX``. Observera "
+"att ``CRS`` också stöds om den aktuella versionen är **1.1.1**."
+
+#: ../../docs/server_manual/services/wms.rst:210
+msgid ""
+"For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also "
+"supported."
+msgstr ""
+"För WMS **1.3.0** är parametern ``CRS`` att föredra, men ``SRS`` stöds "
+"också."
+
+#: ../../docs/server_manual/services/wms.rst:213
+msgid ""
+"Note that if both ``CRS`` and ``SRS`` parameters are indicated in the "
+"request, then it's the current version indicated in ``VERSION`` parameter "
+"which is decisive."
+msgstr ""
+"Observera att om både parametrarna ``CRS`` och ``SRS`` anges i begäran, är "
+"det den aktuella versionen som anges i parametern ``VERSION`` som är "
+"avgörande."
+
+#: ../../docs/server_manual/services/wms.rst:217
+msgid ""
+"In the next case, the ``SRS`` parameter is kept whatever the ``VERSION`` "
+"parameter because ``CRS`` is not indicated:"
+msgstr ""
+"I nästa fall behålls parametern ``SRS`` oavsett parametern ``VERSION`` "
+"eftersom ``CRS`` inte anges:"
+
+#: ../../docs/server_manual/services/wms.rst:229
+msgid ""
+"In the next case, the ``SRS`` parameter is kept instead of ``CRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr ""
+"I nästa fall behålls parametern ``SRS`` i stället för ``CRS`` på grund av "
+"parametern ``VERSION``:"
+
+#: ../../docs/server_manual/services/wms.rst:242
+msgid ""
+"In the next case, the ``CRS`` parameter is kept instead of ``SRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr ""
+"I nästa fall behålls parametern ``CRS`` i stället för ``SRS`` på grund av "
+"parametern ``VERSION``:"
 
 #: ../../docs/server_manual/services/wms.rst:259
 #: ../../docs/server_manual/services/wms.rst:871
 msgid "BBOX"
 msgstr "BBOX"
 
+#: ../../docs/server_manual/services/wms.rst:261
+msgid ""
+"This parameter allows to specify the map extent with units according to the "
+"current CRS. Coordinates have to be separated by a comma."
+msgstr ""
+"Denna parameter gör det möjligt att ange kartans utsträckning med enheter "
+"enligt aktuellt CRS. Koordinaterna måste separeras med ett kommatecken."
+
+#: ../../docs/server_manual/services/wms.rst:264
+msgid ""
+"The ``BBOX`` parameter is formed like ``min_a,min_b,max_a,max_b`` but ``a`` "
+"and ``b`` axis definition is different according to the current ``VERSION`` "
+"parameter:"
+msgstr ""
+"Parametern ``BBOX`` är utformad som ``min_a,min_b,max_a,max_b`` men ``a`` "
+"och ``b`` axeldefinitionen är olika beroende på den aktuella parametern "
+"``VERSION``:"
+
+#: ../../docs/server_manual/services/wms.rst:268
+msgid "in WMS **1.1.1**, the axis ordering is always east/north"
+msgstr "i WMS **1.1.1** är axelordningen alltid öst/nord"
+
+#: ../../docs/server_manual/services/wms.rst:269
+msgid "in WMS **1.3.0**, the axis ordering depends on the CRS authority"
+msgstr "i WMS **1.3.0** beror axelordningen på CRS-auktoriteten"
+
+#: ../../docs/server_manual/services/wms.rst:271
+msgid ""
+"For example in case of ``EPSG:4326`` and WMS **1.1.1**, ``a`` is the "
+"longitude (east) and ``b`` the latitude (north), leading to a request like:"
+msgstr ""
+"Till exempel i fallet med ``EPSG:4326`` och WMS **1.1.1**, ``a`` är "
+"longituden (öst) och ``b`` latituden (nord), vilket leder till en begäran "
+"som:"
+
+#: ../../docs/server_manual/services/wms.rst:284
+msgid ""
+"But in case of WMS **1.3.0**, the axis ordering defined in the EPSG database"
+" is north/east so ``a`` is the latitude and ``b`` the longitude:"
+msgstr ""
+"Men när det gäller WMS **1.3.0** är den axelordning som definieras i EPSG-"
+"databasen nord/öst, så \"a\" är latitud och \"b\" longitud:"
+
 #: ../../docs/server_manual/services/wms.rst:301
 #: ../../docs/server_manual/services/wms.rst:898
 msgid "WIDTH"
 msgstr "WIDTH"
+
+#: ../../docs/server_manual/services/wms.rst:303
+msgid ""
+"This parameter allows to specify the width in pixels of the output image."
+msgstr "Med den här parametern kan du ange bredden i pixlar på utdatabilden."
 
 #: ../../docs/server_manual/services/wms.rst:310
 #: ../../docs/server_manual/services/wms.rst:918
 msgid "HEIGHT"
 msgstr "HEIGHT"
 
+#: ../../docs/server_manual/services/wms.rst:312
+msgid ""
+"This parameter allows to specify the height in pixels of the output image."
+msgstr ""
+"Med den här parametern kan du ange höjden i pixlar för den utgående bilden."
+
 #: ../../docs/server_manual/services/wms.rst:319
 #: ../../docs/server_manual/services/wms.rst:938
 #: ../../docs/server_manual/services/wms.rst:1808
 msgid "FORMAT"
 msgstr "FORMAT"
+
+#: ../../docs/server_manual/services/wms.rst:321
+msgid ""
+"This parameter may be used to specify the format of map image. Available "
+"values are:"
+msgstr ""
+"Denna parameter kan användas för att ange formatet på kartbilden. "
+"Tillgängliga värden är:"
 
 #: ../../docs/server_manual/services/wms.rst:324
 #: ../../docs/server_manual/services/wms.rst:1814
@@ -277,6 +713,14 @@ msgstr "``image/png; mode=16bit``"
 msgid "``image/webp``"
 msgstr "``image/webp``"
 
+#: ../../docs/server_manual/services/wms.rst:332
+msgid ""
+"``application/dxf``: only layers that have read access in the WFS service "
+"are exported in the DXF format"
+msgstr ""
+"``application/dxf``: endast lager som har läsbehörighet i WFS-tjänsten "
+"exporteras i DXF-format"
+
 #: ../../docs/server_manual/services/wms.rst:334
 #: ../../docs/server_manual/services/wms.rst:1821
 msgid "``application/pdf``"
@@ -285,6 +729,14 @@ msgstr "``application/pdf``"
 #: ../../docs/server_manual/services/wms.rst:355
 msgid "TRANSPARENT"
 msgstr "TRANSPARENT"
+
+#: ../../docs/server_manual/services/wms.rst:357
+msgid ""
+"This boolean parameter can be used to specify the background transparency. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Denna booleska parameter kan användas för att ange bakgrundens transparens. "
+"Tillgängliga värden är (inte skiftlägeskänsliga):"
 
 #: ../../docs/server_manual/services/wms.rst:361
 #: ../../docs/server_manual/services/wms.rst:773
@@ -311,106 +763,444 @@ msgstr "``TRUE``"
 msgid "``FALSE``"
 msgstr "``FALSE``"
 
+#: ../../docs/server_manual/services/wms.rst:364
+msgid ""
+"However, this parameter is ignored if the format of the image indicated with"
+" ``FORMAT`` is different from PNG."
+msgstr ""
+"Denna parameter ignoreras dock om formatet på den bild som anges med "
+"``FORMAT`` är ett annat än PNG."
+
 #: ../../docs/server_manual/services/wms.rst:371
 msgid "BGCOLOR"
 msgstr "BGCOLOR"
+
+#: ../../docs/server_manual/services/wms.rst:373
+msgid ""
+"This parameter allows to indicate a background color for the map image. "
+"However it cannot be combined with ``TRANSPARENT`` parameter in case of PNG "
+"images (transparency takes priority). The colour may be literal or in "
+"hexadecimal notation."
+msgstr ""
+"Denna parameter gör det möjligt att ange en bakgrundsfärg för kartbilden. "
+"Den kan dock inte kombineras med parametern ``TRANSPARENT`` när det gäller "
+"PNG-bilder (transparens prioriteras). Färgen kan vara bokstavlig eller i "
+"hexadecimal notation."
+
+#: ../../docs/server_manual/services/wms.rst:378
+msgid "URL example with the literal notation:"
+msgstr "URL-exempel med bokstavlig notation:"
+
+#: ../../docs/server_manual/services/wms.rst:389
+msgid "URL example with the hexadecimal notation:"
+msgstr "URL-exempel med hexadecimal notation:"
 
 #: ../../docs/server_manual/services/wms.rst:404
 msgid "DPI"
 msgstr "DPI"
 
+#: ../../docs/server_manual/services/wms.rst:406
+msgid "This parameter can be used to specify the requested output resolution."
+msgstr ""
+"Denna parameter kan användas för att ange önskad upplösning på utmatningen."
+
 #: ../../docs/server_manual/services/wms.rst:412
 msgid "IMAGE_QUALITY"
 msgstr "IMAGE_QUALITY"
+
+#: ../../docs/server_manual/services/wms.rst:414
+msgid ""
+"This parameter is only used for JPEG images. By default, the JPEG "
+"compression is ``-1``."
+msgstr ""
+"Denna parameter används endast för JPEG-bilder. Som standard är JPEG-"
+"komprimeringen ``-1``."
+
+#: ../../docs/server_manual/services/wms.rst:417
+msgid ""
+"You can change the default per QGIS project in the :menuselection:`OWS "
+"Server --> WMS capabilities` menu of the :menuselection:`Project --> "
+"Properties...` dialog. If you want to override it in a ``GetMap`` request "
+"you can do it using the ``IMAGE_QUALITY`` parameter."
+msgstr ""
+"Du kan ändra standardvärdet för varje QGIS-projekt i menyn "
+":menuselection:`OWS Server --> WMS capabilities` i dialogrutan "
+":menuselection:`Project --> Properties...`. Om du vill åsidosätta den i en "
+"``GetMap``-begäran kan du göra det med hjälp av parametern "
+"``IMAGE_QUALITY``."
 
 #: ../../docs/server_manual/services/wms.rst:427
 msgid "OPACITIES"
 msgstr "OPACITIES"
 
+#: ../../docs/server_manual/services/wms.rst:429
+msgid ""
+"Comma separated list of opacity values. Opacity can be set on layer or group"
+" level. Allowed values range from ``0`` (fully transparent) to ``255`` "
+"(fully opaque)."
+msgstr ""
+"Kommaseparerad lista med opacitetsvärden. Opaciteten kan ställas in på "
+"lager- eller gruppnivå. Tillåtna värden sträcker sig från ``0`` (helt "
+"transparent) till ``255`` (helt ogenomskinlig)."
+
+#: ../../docs/server_manual/services/wms.rst:452
+msgid "To the left ``OPACITIES=255,0`` and to the right ``OPACITIES=255,255``"
+msgstr "Till vänster ``OPACITIES=255,0`` och till höger ``OPACITIES=255,255``"
+
 #: ../../docs/server_manual/services/wms.rst:457
 msgid "FILTER"
 msgstr "FILTER"
 
+#: ../../docs/server_manual/services/wms.rst:459
+msgid ""
+"A subset of layers can be selected with the ``FILTER`` parameter. The syntax"
+" is basically the same as for the QGIS subset string. However, there are "
+"some restrictions to avoid SQL injections into databases via QGIS Server. If"
+" a dangerous string is found in the parameter, QGIS Server will return the "
+"next error:"
+msgstr ""
+"En delmängd av lager kan väljas med parametern ``FILTER``. Syntaxen är i "
+"princip densamma som för QGIS subset-strängen. Det finns dock vissa "
+"begränsningar för att undvika SQL-injektioner i databaser via QGIS Server. "
+"Om en farlig sträng hittas i parametern kommer QGIS Server att returnera "
+"nästa fel:"
+
+#: ../../docs/server_manual/services/wms.rst:495
+msgid "Server response to a GetMap request with FILTER parameter"
+msgstr "Serverns svar på en GetMap-begäran med parametern FILTER"
+
+#: ../../docs/server_manual/services/wms.rst:498
+msgid ""
+"In this example, the same filter ``\"name\" = 'France'`` is applied to "
+"layers ``countries`` and ``countries_shapeburst``, while the filter "
+"``\"name\" = 'Paris'`` is only applied to ``places``."
+msgstr ""
+"I det här exemplet tillämpas samma filter ``\"name\" = \"France\"`` på "
+"skikten ``countries`` och ``countries_shapeburst``, medan filtret ``\"name\""
+" = \"Paris\"`` endast tillämpas på ``places``."
+
+#: ../../docs/server_manual/services/wms.rst:504
+msgid ""
+"It is possible to make attribute searches via GetFeatureInfo and omit the "
+"X/Y parameter if a FILTER is there. QGIS Server then returns info about the "
+"matching features and generates a combined bounding box in the XML output."
+msgstr ""
+"Det är möjligt att göra attributsökningar via GetFeatureInfo och utelämna "
+"X/Y-parametern om det finns ett FILTER. QGIS Server returnerar sedan "
+"information om de matchande funktionerna och genererar en kombinerad "
+"bounding box i XML-utdata."
+
 #: ../../docs/server_manual/services/wms.rst:513
 msgid "SELECTION"
 msgstr "SELECTION"
+
+#: ../../docs/server_manual/services/wms.rst:515
+msgid ""
+"The ``SELECTION`` parameter can highlight features from one or more layers. "
+"Vector features can be selected by passing comma separated lists with "
+"feature ids."
+msgstr ""
+"Parametern ``SELECTION`` kan markera funktioner från ett eller flera lager. "
+"Vektorfunktioner kan väljas genom att skicka kommaseparerade listor med "
+"funktions-id."
+
+#: ../../docs/server_manual/services/wms.rst:529
+msgid ""
+"The following image presents the response from a GetMap request using the "
+"``SELECTION`` option e.g. "
+"``http://myserver.com/...&SELECTION=countries:171,65``."
+msgstr ""
+"Följande bild visar svaret från en GetMap-begäran med alternativet "
+"``SELECTION``, t.ex. ``http://myserver.com/...&SELECTION=countries:171,65``."
+
+#: ../../docs/server_manual/services/wms.rst:533
+msgid ""
+"As those features id's correspond in the source dataset to **France** and "
+"**Romania** they're highlighted in yellow."
+msgstr ""
+"Eftersom dessa funktions-ID:n i källdatasetet motsvarar **Frankrike** och "
+"**Rumänien** är de markerade med gult."
+
+#: ../../docs/server_manual/services/wms.rst:541
+msgid "Server response to a GetMap request with SELECTION parameter"
+msgstr "Serverns svar på en GetMap-begäran med parametern SELECTION"
 
 #: ../../docs/server_manual/services/wms.rst:546
 #: ../../docs/server_manual/services/wms.rst:1829
 msgid "FORMAT_OPTIONS"
 msgstr "FORMAT_OPTIONS"
 
+#: ../../docs/server_manual/services/wms.rst:548
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/dxf`` in GetMap request. Takes a list of key:value "
+"pairs separated by semicolon:"
+msgstr ""
+"Denna parameter kan användas för att ange alternativ för det valda formatet."
+" Endast för ``FORMAT=application/dxf`` i GetMap-begäran. Tar emot en lista "
+"med nyckel:värde-par separerade med semikolon:"
+
+#: ../../docs/server_manual/services/wms.rst:552
+msgid ""
+"SCALE: to be used for symbology rules, filters and styles (not actual "
+"scaling of the data - data remains in the original scale)."
+msgstr ""
+"SCALE (SKALA): används för symbologiregler, filter och stilar (inte faktisk "
+"skalning av data - data förblir i den ursprungliga skalan)."
+
+#: ../../docs/server_manual/services/wms.rst:554
+msgid ""
+"MODE: corresponds to the export options offered in the QGIS Desktop DXF "
+"export dialog. Possible values are ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` and"
+" ``SYMBOLLAYERSYMBOLOGY``."
+msgstr ""
+"MODE: motsvarar de exportalternativ som erbjuds i DXF-exportdialogen i QGIS "
+"Desktop. Möjliga värden är ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` och "
+"``SYMBOLLAYERSYMBOLOGY``."
+
+#: ../../docs/server_manual/services/wms.rst:557
+msgid ""
+"LAYERATTRIBUTES: specify a field or in case of many layers a comma separated"
+" list of fields that contains values for DXF layer names - if not specified,"
+" the original QGIS layer names are used."
+msgstr ""
+"LAYERATTRIBUTES: ange ett fält eller, om det finns många lager, en "
+"kommaseparerad lista med fält som innehåller värden för DXF-lagernamn - om "
+"inget anges används de ursprungliga QGIS-lagernamnen."
+
+#: ../../docs/server_manual/services/wms.rst:559
+msgid ""
+"USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will be used as "
+"layer name."
+msgstr ""
+"USE_TITLE_AS_LAYERNAME: om detta är aktiverat kommer skiktets titel att "
+"användas som skiktnamn."
+
+#: ../../docs/server_manual/services/wms.rst:561
+msgid ""
+"CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1`` "
+"check the QGIS desktop DXF export dialog for valid values."
+msgstr ""
+"CODEC: ange en codec som ska användas för kodning. Standard är "
+"``ISO-8859-1`` kontrollera dialogrutan DXF-export i QGIS desktop för giltiga"
+" värden."
+
+#: ../../docs/server_manual/services/wms.rst:563
+msgid "NO_MTEXT: Use TEXT instead of MTEXT for labels."
+msgstr "NO_MTEXT: Använd TEXT i stället för MTEXT för etiketter."
+
+#: ../../docs/server_manual/services/wms.rst:564
+msgid "FORCE_2D: Force 2D output. This is required for polyline width."
+msgstr "FORCE_2D: Tvinga fram 2D-utdata. Detta krävs för polylinjebredd."
+
 #: ../../docs/server_manual/services/wms.rst:569
 msgid "TILED"
 msgstr "TILED"
 
+#: ../../docs/server_manual/services/wms.rst:571
+msgid ""
+"For performance reasons, QGIS Server can be used in tiled mode. In this "
+"mode, the client requests several small fixed size tiles, and assembles them"
+" to form the whole map. Doing this, symbols at or near the boundary between "
+"two tiles may appeared cut, because they are only present in one of the "
+"tile."
+msgstr ""
+"Av prestandaskäl kan QGIS Server användas i tiled-läge. I det här läget "
+"begär klienten flera små plattor med fast storlek och sätter ihop dem till "
+"en hel karta. På så sätt kan symboler på eller nära gränsen mellan två "
+"plattor visas som utklippta, eftersom de bara finns i en av plattorna."
+
+#: ../../docs/server_manual/services/wms.rst:577
+msgid ""
+"Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in "
+"*tiled* mode, and to apply the *Tile buffer* configured in the QGIS project "
+"(see :ref:`Creatingwmsfromproject`)."
+msgstr ""
+"Sätt parametern ``TILED`` till ``TRUE`` för att tala om för QGIS Server att "
+"arbeta i *tiled*-läge och att använda den *Tile-buffert* som konfigurerats i"
+" QGIS-projektet (se :ref:`Creatingwmsfromproject`)."
+
+#: ../../docs/server_manual/services/wms.rst:581
+msgid ""
+"When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is configured in "
+"the QGIS project, features outside the tile extent are drawn to avoid cut "
+"symbols at tile boundaries."
+msgstr ""
+"När ``TILED`` är ``TRUE`` och när en Tile-buffert som inte är noll har "
+"konfigurerats i QGIS-projektet ritas funktioner utanför tile-utbredningen "
+"för att undvika klippsymboler vid tile-gränser."
+
+#: ../../docs/server_manual/services/wms.rst:585
+msgid "``TILED`` defaults to ``FALSE``."
+msgstr "standardvärdet för ``TILED`` är ``FALSE``."
+
 #: ../../docs/server_manual/services/wms.rst:591
 msgid "GetFeatureInfo"
 msgstr "GetFeatureInfo"
+
+#: ../../docs/server_manual/services/wms.rst:593
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standardparametrar för **GetFeatureInfo**-begäran enligt OGC WMS 1.1.1 och "
+"1.3.0-specifikationerna:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetFeatureInfo**)"
+msgstr "Namn på begäran (**GetFeatureInfo**)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`QUERY_LAYERS <wms_querylayers>`"
 msgstr ":ref:`QUERY_LAYERS <wms_querylayers>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to query"
+msgstr "Lager att fråga på"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to display (identical to `QUERY_LAYERS`)"
+msgstr "Lager som ska visas (identiskt med `QUERY_LAYERS`)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`INFO_FORMAT <wms_infoformat>`"
 msgstr ":ref:`INFO_FORMAT <wms_infoformat>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Output format"
+msgstr "Utdata format"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FEATURE_COUNT <wms_featurecount>`"
 msgstr ":ref:`FEATURE_COUNT <wms_featurecount>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Maximum number of features to return"
+msgstr "Maximalt antal funktioner som ska returneras"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`I <wms_i>`"
 msgstr ":ref:`I <wms_i>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Pixel column of the point to query"
+msgstr "Pixelkolumn för den punkt som ska frågas"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`X <wms_x>`"
 msgstr ":ref:`X <wms_x>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `I` parameter, but in WMS 1.1.1"
+msgstr "Samma som parametern `I`, men i WMS 1.1.1"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`J <wms_j>`"
 msgstr ":ref:`J <wms_j>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Pixel row of the point to query"
+msgstr "Pixelrad för den punkt som ska frågas"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`Y <wms_y>`"
 msgstr ":ref:`Y <wms_y>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `J` parameter, but in WMS 1.1.1"
+msgstr "Samma som parametern `J`, men i WMS 1.1.1"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "WMS_PRECISION"
 msgstr "WMS_PRECISION"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"The precision (number of digits) to be used when returning geometry (see "
+":ref:`how to add geometry to feature response "
+"<addGeometryToFeatureResponse>`). The default value is ``-1`` meaning that "
+"the precision defined in the project is used."
+msgstr ""
+"Den precision (antal siffror) som ska användas vid returnering av geometri "
+"(se :ref:`hur man lägger till geometri i funktionssvar "
+"<addGeometryToFeatureResponse>`). Standardvärdet är ``-1``, vilket innebär "
+"att den precision som definieras i projektet används."
+
+#: ../../docs/server_manual/services/wms.rst:621
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr ""
+"Utöver standardparametrarna har QGIS Server stöd för följande extra "
+"parametrar:"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FI_POINT_TOLERANCE <wms_fipointtolerance>`"
 msgstr ":ref:`FI_POINT_TOLERANCE <wms_fipointtolerance>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for point layers"
+msgstr "Tolerans i pixlar för punktlager"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`"
 msgstr ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for line layers"
+msgstr "Tolerans i pixlar för linjelager"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FI_POLYGON_TOLERANCE <wms_fipolygontolerance>`"
 msgstr ":ref:`FI_POLYGON_TOLERANCE <wms_fipolygontolerance>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for polygon layers"
+msgstr "Tolerans i pixlar för polygonlager"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FILTER_GEOM <wms_filtergeom>`"
 msgstr ":ref:`FILTER_GEOM <wms_filtergeom>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Geometry filtering"
+msgstr "Filtrering av geometri"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`"
 msgstr ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Add the feature display name to the output"
+msgstr "Lägg till funktionens visningsnamn i utdata"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`WITH_MAPTIP <wms_withmaptip>`"
 msgstr ":ref:`WITH_MAPTIP <wms_withmaptip>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add map tips to the output"
+msgstr "Lägg till karttips i utskriften"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`WITH_GEOMETRY <wms_withgeometry>`"
 msgstr ":ref:`WITH_GEOMETRY <wms_withgeometry>`"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add geometry to the output"
+msgstr "Lägg till geometri i utdata"
+
 #: ../../docs/server_manual/services/wms.rst:664
 msgid "INFO_FORMAT"
 msgstr "INFO_FORMAT"
+
+#: ../../docs/server_manual/services/wms.rst:666
+msgid ""
+"This parameter may be used to specify the format of the result. Available "
+"values are:"
+msgstr ""
+"Denna parameter kan användas för att ange resultatets format. Tillgängliga "
+"värden är:"
 
 #: ../../docs/server_manual/services/wms.rst:669
 msgid "``text/xml``"
@@ -437,57 +1227,199 @@ msgstr "``application/json``"
 msgid "QUERY_LAYERS"
 msgstr "QUERY_LAYERS"
 
+#: ../../docs/server_manual/services/wms.rst:680
+msgid ""
+"This parameter specifies the layers to display on the map. Names are "
+"separated by a comma."
+msgstr ""
+"Denna parameter anger vilka lager som ska visas på kartan. Namnen separeras "
+"med ett kommatecken."
+
+#: ../../docs/server_manual/services/wms.rst:683
+msgid "In addition, QGIS Server introduces options to select layers by:"
+msgstr ""
+"Dessutom introducerar QGIS Server alternativ för att välja lager efter:"
+
+#: ../../docs/server_manual/services/wms.rst:685
+msgid "short name"
+msgstr "kort namn"
+
+#: ../../docs/server_manual/services/wms.rst:686
+msgid "layer id"
+msgstr "lager id"
+
+#: ../../docs/server_manual/services/wms.rst:688
+msgid ""
+"See the ``LAYERS`` parameter defined in :ref:`GetMap <wms_layers>` for more "
+"information."
+msgstr ""
+"Se parametern ``LAYERS`` som definieras i :ref:`GetMap <wms_layers>` för mer"
+" information."
+
 #: ../../docs/server_manual/services/wms.rst:694
 msgid "FEATURE_COUNT"
 msgstr "FEATURE_COUNT"
+
+#: ../../docs/server_manual/services/wms.rst:696
+msgid ""
+"This parameter specifies the maximum number of features per layer to return."
+" For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and "
+"``FEATURE_COUNT`` is set to ``3`` then a maximum of 3 features from layer1 "
+"will be returned. Likewise a maximum of 3 features from layer2 will be "
+"returned."
+msgstr ""
+"Denna parameter anger det maximala antalet funktioner per lager som ska "
+"returneras. Om till exempel ``QUERY_LAYERS`` är inställt på "
+"``layer1,layer2`` och ``FEATURE_COUNT`` är inställt på ``3`` kommer maximalt"
+" 3 funktioner från layer1 att returneras. På samma sätt kommer maximalt 3 "
+"funktioner från lager2 att returneras."
+
+#: ../../docs/server_manual/services/wms.rst:703
+msgid "By default, only 1 feature per layer is returned."
+msgstr "Som standard returneras endast 1 funktion per lager."
 
 #: ../../docs/server_manual/services/wms.rst:708
 msgid "I"
 msgstr "I"
 
+#: ../../docs/server_manual/services/wms.rst:710
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel column"
+" of the query point."
+msgstr ""
+"Med denna parameter, som definieras i WMS 1.3.0, kan du ange pixelkolumnen "
+"för sökpunkten."
+
 #: ../../docs/server_manual/services/wms.rst:716
 msgid "X"
 msgstr "X"
+
+#: ../../docs/server_manual/services/wms.rst:718
+msgid "Same parameter as ``I``, but defined in WMS 1.1.1."
+msgstr "Samma parameter som ``I``, men definierad i WMS 1.1.1."
 
 #: ../../docs/server_manual/services/wms.rst:723
 msgid "J"
 msgstr "J"
 
+#: ../../docs/server_manual/services/wms.rst:725
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel row of"
+" the query point."
+msgstr ""
+"Med denna parameter, som definieras i WMS 1.3.0, kan du ange pixelraden för "
+"frågepunkten."
+
 #: ../../docs/server_manual/services/wms.rst:731
 msgid "Y"
 msgstr "Y"
+
+#: ../../docs/server_manual/services/wms.rst:733
+msgid "Same parameter as ``J``, but defined in WMS 1.1.1."
+msgstr "Samma parameter som ``J``, men definierad i WMS 1.1.1."
 
 #: ../../docs/server_manual/services/wms.rst:738
 msgid "FI_POINT_TOLERANCE"
 msgstr "FI_POINT_TOLERANCE"
 
+#: ../../docs/server_manual/services/wms.rst:740
+msgid "This parameter specifies the tolerance in pixels for point layers."
+msgstr "Denna parameter anger toleransen i pixlar för punktlager."
+
 #: ../../docs/server_manual/services/wms.rst:745
 msgid "FI_LINE_TOLERANCE"
 msgstr "FI_LINE_TOLERANCE"
+
+#: ../../docs/server_manual/services/wms.rst:747
+msgid "This parameter specifies the tolerance in pixels for line layers."
+msgstr "Denna parameter anger toleransen i pixlar för linjelager."
 
 #: ../../docs/server_manual/services/wms.rst:752
 msgid "FI_POLYGON_TOLERANCE"
 msgstr "FI_POLYGON_TOLERANCE"
 
+#: ../../docs/server_manual/services/wms.rst:754
+msgid "This parameter specifies the tolerance in pixels for polygon layers."
+msgstr "Denna parameter anger toleransen i pixlar för polygonlager."
+
 #: ../../docs/server_manual/services/wms.rst:759
 msgid "FILTER_GEOM"
 msgstr "FILTER_GEOM"
+
+#: ../../docs/server_manual/services/wms.rst:761
+msgid ""
+"This parameter specifies a WKT geometry with which features have to "
+"intersect."
+msgstr "Denna parameter anger en WKT-geometri som objekten måste korsa."
 
 #: ../../docs/server_manual/services/wms.rst:767
 msgid "WITH_DISPLAY_NAME"
 msgstr "WITH_DISPLAY_NAME"
 
+#: ../../docs/server_manual/services/wms.rst:769
+msgid ""
+"This parameter specifies whether to add feature display name to the output."
+msgstr ""
+"Denna parameter anger om funktionens visningsnamn ska läggas till i utdata."
+
+#: ../../docs/server_manual/services/wms.rst:771
+#: ../../docs/server_manual/services/wms.rst:783
+#: ../../docs/server_manual/services/wms.rst:800
+#: ../../docs/server_manual/services/wms.rst:1268
+msgid "Available values are (not case sensitive):"
+msgstr "Tillgängliga värden är (inte skiftlägeskänsliga):"
+
 #: ../../docs/server_manual/services/wms.rst:779
 msgid "WITH_MAPTIP"
 msgstr "WITH_MAPTIP"
+
+#: ../../docs/server_manual/services/wms.rst:781
+msgid "This parameter specifies whether to add map tips to the output."
+msgstr "Den här parametern anger om karttips ska läggas till i utdata."
+
+#: ../../docs/server_manual/services/wms.rst:787
+msgid ""
+"``HTML_FI_ONLY_MAPTIP``: like ``TRUE``, with the difference that the HTML "
+"response to the feature info request only contains the maptip. This gives "
+"full control over the HTML response using e.g. the built-in layer maptip "
+"editor."
+msgstr ""
+"``HTML_FI_ONLY_MAPTIP``: som ``TRUE``, med skillnaden att HTML-svaret på "
+"begäran om funktionsinformation endast innehåller karttipset. Detta ger full"
+" kontroll över HTML-svaret med hjälp av t.ex. den inbyggda redigeraren för "
+"karttips för lager."
 
 #: ../../docs/server_manual/services/wms.rst:794
 msgid "WITH_GEOMETRY"
 msgstr "WITH_GEOMETRY"
 
+#: ../../docs/server_manual/services/wms.rst:796
+msgid ""
+"This parameter specifies whether to add geometries to the output. To use "
+"this feature you must first enable the :guilabel:`Add geometry to feature "
+"response` option in the QGIS project. See :ref:`Configure your project "
+"<Creatingwmsfromproject>`."
+msgstr ""
+"Denna parameter anger om geometrier ska läggas till i utdata. För att "
+"använda den här funktionen måste du först aktivera alternativet "
+":guilabel:`Add geometry to feature response` i QGIS-projektet. Se "
+":ref:`Konfigurera ditt projekt <Creatingwmsfromproject>`."
+
 #: ../../docs/server_manual/services/wms.rst:810
 msgid "GetLegendGraphic"
 msgstr "GetLegendGraphic"
+
+#: ../../docs/server_manual/services/wms.rst:812
+msgid ""
+"Standard parameters for the **GetLegendGraphic** request according to the "
+"OGC WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standardparametrar för **GetLegendGraphic**-begäran enligt OGC WMS 1.1.1 och"
+" 1.3.0-specifikationerna:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetLegendGraphic**)"
+msgstr "Namn på begäran (**GetLegendGraphic**)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`BBOX <wms_getlegendgraphic_bbox>`"
@@ -506,228 +1438,811 @@ msgid ":ref:`FORMAT <wms_getlegendgraphic_format>`"
 msgstr ":ref:`FORMAT <wms_getlegendgraphic_format>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Legend format"
+msgstr "Format för teckenförklaring"
+
+#: ../../docs/server_manual/services/wms.rst:832
+msgid ""
+"In addition to the standard ones, QGIS Server supports extra parameters to "
+"change the size of the legend elements or the font properties for layer "
+"titles and item labels:"
+msgstr ""
+"Utöver standardparametrarna har QGIS Server stöd för extra parametrar för "
+"att ändra storleken på legendelementen eller teckensnittsegenskaperna för "
+"lagertitlar och objektetiketter:"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SRCWIDTH <wms_getlegendgraphic_srcwidth>`"
 msgstr ":ref:`SRCWIDTH <wms_getlegendgraphic_srcwidth>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map width"
+msgstr "Kartans bredd"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SRCHEIGHT <wms_getlegendgraphic_srcheight>`"
 msgstr ":ref:`SRCHEIGHT <wms_getlegendgraphic_srcheight>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Map height"
+msgstr "Karthöjd"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphic_showfeaturecount>`"
 msgstr ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphic_showfeaturecount>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add feature count of features"
+msgstr "Lägg till antal funktioner"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`RULE <wms_getlegendgraphic_rule>`"
 msgstr ":ref:`RULE <wms_getlegendgraphic_rule>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Rule symbol to render"
+msgstr "Regelsymbol att återge"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`RULELABEL <wms_getlegendgraphic_rulelabel>`"
 msgstr ":ref:`RULELABEL <wms_getlegendgraphic_rulelabel>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item labels rendering"
+msgstr "Rendering av artikeletiketter"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`BOXSPACE <wms_getlegendgraphic_boxspace>`"
 msgstr ":ref:`BOXSPACE <wms_getlegendgraphic_boxspace>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Space between legend frame and content (mm)"
+msgstr "Avstånd mellan legendram och innehåll (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERSPACE <wms_getlegendgraphic_layerspace>`"
 msgstr ":ref:`LAYERSPACE <wms_getlegendgraphic_layerspace>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between layers (mm)"
+msgstr "Vertikalt avstånd mellan skikten (mm)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERTITLESPACE <wms_getlegendgraphic_layertitlespace>`"
 msgstr ":ref:`LAYERTITLESPACE <wms_getlegendgraphic_layertitlespace>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between layer title and items (mm)"
+msgstr "Vertikalt avstånd mellan lagertitel och artiklar (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SYMBOLSPACE <wms_getlegendgraphic_symbolspace>`"
 msgstr ":ref:`SYMBOLSPACE <wms_getlegendgraphic_symbolspace>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between symbol and items (mm)"
+msgstr "Vertikalt avstånd mellan symbol och objekt (mm)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ICONLABELSPACE <wms_getlegendgraphic-iconlabelspace>`"
 msgstr ":ref:`ICONLABELSPACE <wms_getlegendgraphic-iconlabelspace>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Horizontal space between symbol and label (mm)"
+msgstr "Horisontellt avstånd mellan symbol och etikett (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SYMBOLWIDTH <wms_getlegendgraphic_symbolwidth>`"
 msgstr ":ref:`SYMBOLWIDTH <wms_getlegendgraphic_symbolwidth>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the symbol preview (mm)"
+msgstr "Bredd på förhandsgranskningen av symbolen (mm)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SYMBOLHEIGHT <wms_getlegendgraphic_symbolheight>`"
 msgstr ":ref:`SYMBOLHEIGHT <wms_getlegendgraphic_symbolheight>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Height of the symbol preview (mm)"
+msgstr "Höjd på symbolens förhandsgranskning (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERTITLE <wms_getlegendgraphic_layertitle>`"
 msgstr ":ref:`LAYERTITLE <wms_getlegendgraphic_layertitle>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title rendering"
+msgstr "Rendering av lagertitel"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTFAMILY <wms_getlegendgraphic_layerfontfamily>`"
 msgstr ":ref:`LAYERFONTFAMILY <wms_getlegendgraphic_layerfontfamily>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer font family"
+msgstr "Layer teckensnittsfamilj"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTBOLD <wms_getlegendgraphic_layerfontbold>`"
 msgstr ":ref:`LAYERFONTBOLD <wms_getlegendgraphic_layerfontbold>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title bold rendering"
+msgstr "Titel på lager fet återgivning"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTSIZE <wms_getlegendgraphic_layerfontsize>`"
 msgstr ":ref:`LAYERFONTSIZE <wms_getlegendgraphic_layerfontsize>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title font size (pt)"
+msgstr "Teckenstorlek för lagertitel (pt)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTITALIC <wms_getlegendgraphic_layerfontitalic>`"
 msgstr ":ref:`LAYERFONTITALIC <wms_getlegendgraphic_layerfontitalic>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title italic rendering"
+msgstr "Lagertitel kursiv rendering"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTCOLOR <wms_getlegendgraphic_layerfontcolor>`"
 msgstr ":ref:`LAYERFONTCOLOR <wms_getlegendgraphic_layerfontcolor>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title color"
+msgstr "Färg för lagertitel"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ITEMFONTFAMILY <wms_getlegendgraphic_itemfontfamily>`"
 msgstr ":ref:`ITEMFONTFAMILY <wms_getlegendgraphic_itemfontfamily>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item font family"
+msgstr "Artikelns teckensnittsfamilj"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ITEMFONTBOLD <wms_getlegendgraphic_itemfontbold>`"
 msgstr ":ref:`ITEMFONTBOLD <wms_getlegendgraphic_itemfontbold>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label bold rendering"
+msgstr "Fetstil på artikeletiketten"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ITEMFONTSIZE <wms_getlegendgraphic_itemfontsize>`"
 msgstr ":ref:`ITEMFONTSIZE <wms_getlegendgraphic_itemfontsize>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label font size (pt)"
+msgstr "Artikeletikettens teckenstorlek (pt)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`"
 msgstr ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label italic rendering"
+msgstr "Artikeletikett kursiv rendering"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`"
 msgstr ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label color"
+msgstr "Färg på artikeletikett"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`"
 msgstr ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Adds the rule text to JSON output"
+msgstr "Lägger till regeltexten i JSON-utdata"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
 msgstr ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Adds the layer groups to JSON output"
+msgstr "Lägger till lagergrupperna i JSON-utdata"
+
+#: ../../docs/server_manual/services/wms.rst:873
+msgid ""
+"This parameter can be used to specify the geographical area for which the "
+"legend should be built (its format is described :ref:`here <wms_bbox>`) but "
+"cannot be combined with the ``RULE`` parameter. The ``SRS``/``CRS`` "
+"parameter becomes mandatory when using the ``BBOX`` parameter."
+msgstr ""
+"Denna parameter kan användas för att ange det geografiska område för vilket "
+"teckenförklaringen ska byggas (dess format beskrivs :ref:`här <wms_bbox>`) "
+"men kan inte kombineras med parametern ``RULE``. Parametern ``SRS``/``CRS`` "
+"blir obligatorisk när parametern ``BBOX`` används."
+
+#: ../../docs/server_manual/services/wms.rst:891
+msgid ""
+"When the ``BBOX`` parameter is defined, the legend is referred to as a "
+"*content based legend*."
+msgstr ""
+"När parametern ``BBOX`` är definierad kallas teckenförklaringen för en "
+"*innehållsbaserad teckenförklaring*."
+
+#: ../../docs/server_manual/services/wms.rst:900
+msgid ""
+"This parameter is not used by default but becomes mandatory when the "
+"``RULE`` parameter is set. In this case it allows to specify the width in "
+"pixels of the output image."
+msgstr ""
+"Denna parameter används inte som standard, men blir obligatorisk när "
+"parametern ``RULE`` är inställd. I detta fall gör den det möjligt att ange "
+"bredden i pixlar för utdatabilden."
+
+#: ../../docs/server_manual/services/wms.rst:920
+msgid ""
+"This parameter is not used by default but becomes mandatory when the "
+"``RULE`` parameter is set. In this case it allows to specify the height in "
+"pixels of the output image."
+msgstr ""
+"Denna parameter används inte som standard, men blir obligatorisk när "
+"parametern ``RULE`` är inställd. I detta fall gör den det möjligt att ange "
+"höjden i pixlar för utdatabilden."
+
+#: ../../docs/server_manual/services/wms.rst:940
+msgid ""
+"This parameter may be used to specify the format of legend image. Available "
+"values are:"
+msgstr ""
+"Denna parameter kan användas för att ange formatet på legendbilden. "
+"Tillgängliga värden är:"
+
+#: ../../docs/server_manual/services/wms.rst:947
+msgid ""
+"For JSON, symbols are encoded with Base64 and most other options related to "
+"layout or fonts are not taken into account because the legend must be built "
+"on the client side. The ``RULE`` parameter cannot be combined with this "
+"format."
+msgstr ""
+"För JSON kodas symbolerna med Base64 och de flesta andra alternativ som rör "
+"layout eller teckensnitt beaktas inte eftersom legenden måste byggas på "
+"klientsidan. Parametern ``RULE`` kan inte kombineras med detta format."
+
+#: ../../docs/server_manual/services/wms.rst:951
+#: ../../docs/server_manual/services/wms.rst:1544
+msgid "URL example with the corresponding JSON output:"
+msgstr "URL-exempel med motsvarande JSON-utdata:"
+
+#: ../../docs/server_manual/services/wms.rst:961
+#: ../../docs/server_manual/services/wms.rst:1555
+msgid "And the corresponding JSON output:"
+msgstr "Och motsvarande JSON-utdata:"
 
 #: ../../docs/server_manual/services/wms.rst:980
 msgid "SRCWIDTH"
 msgstr "SRCWIDTH"
 
+#: ../../docs/server_manual/services/wms.rst:982
+msgid ""
+"This parameter may de defined when the ``RULE`` parameter is set. In this "
+"case, the ``SRCWIDTH`` value is forwarded to the underlying ``GetMap`` "
+"request as the ``WIDTH`` parameter while the ``WIDTH`` parameter of "
+"``GetLegendGraphic`` is used for the image legend size."
+msgstr ""
+"Denna parameter kan definieras när parametern ``RULE`` är inställd. I detta "
+"fall vidarebefordras värdet ``SRCWIDTH`` till den underliggande ``GetMap`` "
+"begäran som parametern ``WIDTH`` medan parametern ``WIDTH`` i "
+"``GetLegendGraphic`` används för storleken på bildens legend."
+
 #: ../../docs/server_manual/services/wms.rst:991
 msgid "SRCHEIGHT"
 msgstr "SRCHEIGHT"
+
+#: ../../docs/server_manual/services/wms.rst:993
+msgid ""
+"This parameter may de defined when the ``RULE`` parameter is set. In this "
+"case, the ``SRCHEIGHT`` value is forwarded to the underlying ``GetMap`` "
+"request as the ``HEIGHT`` parameter while the ``HEIGHT`` parameter of "
+"``GetLegendGraphic`` is used for the image legend size."
+msgstr ""
+"Denna parameter kan definieras när parametern ``RULE`` är inställd. I detta "
+"fall vidarebefordras värdet ``SRCHEIGHT`` till den underliggande ``GetMap`` "
+"begäran som parametern ``HEIGHT`` medan parametern ``HEIGHT`` i "
+"``GetLegendGraphic`` används för storleken på bildens legend."
 
 #: ../../docs/server_manual/services/wms.rst:1002
 msgid "SHOWFEATURECOUNT"
 msgstr "SHOWFEATURECOUNT"
 
+#: ../../docs/server_manual/services/wms.rst:1004
+msgid ""
+"This parameter can be used to activate feature count in the legend. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Denna parameter kan användas för att aktivera funktionsräkning i "
+"teckenförklaringen. Tillgängliga värden är (inte skiftlägeskänsliga):"
+
+#: ../../docs/server_manual/services/wms.rst:1010
+#: ../../docs/server_manual/services/wms.rst:1782
+msgid "For example:"
+msgstr "Till exempel:"
+
 #: ../../docs/server_manual/services/wms.rst:1019
 msgid "RULE"
 msgstr "RULE"
+
+#: ../../docs/server_manual/services/wms.rst:1021
+msgid ""
+"This parameter is available on layers with :guilabel:`Rule-based` rendering "
+"and allows to build a legend with only the named rule symbol. It cannot be "
+"combined with ``BBOX`` parameter. ``HEIGHT`` and ``WIDTH`` must be "
+"specified."
+msgstr ""
+"Denna parameter är tillgänglig på lager med :guilabel:`Rule-based` rendering"
+" och gör det möjligt att bygga en legend med endast den namngivna "
+"regelsymbolen. Den kan inte kombineras med parametern ``BBOX``. parametrarna"
+" ``HEIGHT`` och ``WIDTH`` måste anges."
 
 #: ../../docs/server_manual/services/wms.rst:1041
 msgid "RULELABEL"
 msgstr "RULELABEL"
 
+#: ../../docs/server_manual/services/wms.rst:1043
+msgid ""
+"This parameter allows to control the item label rendering. Available values "
+"are (not case sensitive):"
+msgstr ""
+"Denna parameter gör det möjligt att styra återgivningen av artikeletiketten."
+" Tillgängliga värden är (inte skiftlägeskänsliga):"
+
+#: ../../docs/server_manual/services/wms.rst:1046
+msgid "``TRUE``: display item label"
+msgstr "``TRUE``: visa artikeletikett"
+
+#: ../../docs/server_manual/services/wms.rst:1047
+msgid "``FALSE``: hide item label"
+msgstr "``FALSE``: dölj artikeletikett"
+
+#: ../../docs/server_manual/services/wms.rst:1048
+msgid ""
+"``AUTO``: hide item label for layers with :guilabel:`Single symbol` "
+"rendering"
+msgstr ""
+"``AUTO``: dölj objektetikett för lager med :guilabel:`Single "
+"symbol`-rendering"
+
+#: ../../docs/server_manual/services/wms.rst:1067
+msgid "Legend rendering without label for single symbol layers"
+msgstr ""
+"Rendering av teckenförklaring utan etikett för lager med enstaka symboler"
+
 #: ../../docs/server_manual/services/wms.rst:1074
 msgid "BOXSPACE"
 msgstr "BOXSPACE"
+
+#: ../../docs/server_manual/services/wms.rst:1076
+msgid ""
+"This parameter allows to specify the space between legend frame and content "
+"in millimeters. By default, the space value is ``2`` mm."
+msgstr ""
+"Denna parameter gör det möjligt att ange utrymmet mellan legendramen och "
+"innehållet i millimeter. Som standard är värdet för utrymmet ``2`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1095
+msgid "To the left ``BOXSPACE=0`` and to the right ``BOXSPACE=15``"
+msgstr "Till vänster ``BOXSPACE=0`` och till höger ``BOXSPACE=15``"
 
 #: ../../docs/server_manual/services/wms.rst:1102
 msgid "LAYERSPACE"
 msgstr "LAYERSPACE"
 
+#: ../../docs/server_manual/services/wms.rst:1104
+msgid ""
+"This parameter allows to specify the vertical space between layers in "
+"millimeters. By default, the space value is ``3`` mm."
+msgstr ""
+"Denna parameter gör det möjligt att ange det vertikala utrymmet mellan "
+"lagren i millimeter. Som standard är utrymmesvärdet ``3`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1123
+msgid "To the left ``LAYERSPACE=0`` and to the right ``LAYERSPACE=10``"
+msgstr "Till vänster ``LAYERSPACE=0`` och till höger ``LAYERSPACE=10``"
+
 #: ../../docs/server_manual/services/wms.rst:1129
 msgid "LAYERTITLESPACE"
 msgstr "LAYERTITLESPACE"
+
+#: ../../docs/server_manual/services/wms.rst:1131
+msgid ""
+"This parameter allows to specify the vertical space between layer title and "
+"items following in millimeters. By default the space value is ``3`` mm."
+msgstr ""
+"Med denna parameter kan du ange det vertikala utrymmet mellan lagertiteln "
+"och följande objekt i millimeter. Som standard är värdet på utrymmet ``3`` "
+"mm."
+
+#: ../../docs/server_manual/services/wms.rst:1150
+msgid ""
+"To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``"
+msgstr ""
+"Till vänster ``LAYERTITLESPACE=0`` och till höger ``LAYERTITLESPACE=10``"
 
 #: ../../docs/server_manual/services/wms.rst:1156
 msgid "SYMBOLSPACE"
 msgstr "SYMBOLSPACE"
 
+#: ../../docs/server_manual/services/wms.rst:1158
+msgid ""
+"This parameter allows to specify the vertical space between symbol and item "
+"following in millimeters. By default the space value is ``2`` mm."
+msgstr ""
+"Denna parameter gör det möjligt att ange det vertikala utrymmet mellan "
+"symbolen och följande objekt i millimeter. Som standard är värdet för "
+"mellanrummet ``2`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1177
+msgid "To the left ``SYMBOLSPACE=0`` and to the right ``SYMBOLSPACE=5``"
+msgstr "Till vänster ``SYMBOLSPACE=0`` och till höger ``SYMBOLSPACE=5``"
+
 #: ../../docs/server_manual/services/wms.rst:1183
 msgid "ICONLABELSPACE"
 msgstr "ICONLABELSPACE"
+
+#: ../../docs/server_manual/services/wms.rst:1185
+msgid ""
+"This parameter allows to specify the horizontal space between symbol and "
+"label text in millimeters. By default the space value is ``2`` mm."
+msgstr ""
+"Med denna parameter kan du ange det horisontella utrymmet mellan symbol och "
+"etikettext i millimeter. Som standard är värdet för mellanrummet ``2`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1204
+msgid ""
+"To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``"
+msgstr ""
+"Till vänster ``ICONLABELSPACE=0`` och till höger ``ICONLABELSPACE=10``"
 
 #: ../../docs/server_manual/services/wms.rst:1210
 msgid "SYMBOLWIDTH"
 msgstr "SYMBOLWIDTH"
 
+#: ../../docs/server_manual/services/wms.rst:1212
+msgid ""
+"This parameter allows to specify the width of the symbol preview in "
+"millimeters. By default the width value is ``7`` mm."
+msgstr ""
+"Med denna parameter kan du ange bredden på symbolförhandsgranskningen i "
+"millimeter. Standardvärdet för bredden är ``7`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1231
+msgid "To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``"
+msgstr "Till vänster ``SYMBOLWIDTH=2`` och till höger ``SYMBOLWIDTH=20``"
+
 #: ../../docs/server_manual/services/wms.rst:1237
 msgid "SYMBOLHEIGHT"
 msgstr "SYMBOLHEIGHT"
+
+#: ../../docs/server_manual/services/wms.rst:1239
+msgid ""
+"This parameter allows to specify the height of the symbol preview in "
+"millimeters. By default the height value is ``4`` mm."
+msgstr ""
+"Med denna parameter kan du ange höjden på symbolförhandsgranskningen i "
+"millimeter. Som standard är höjdvärdet ``4`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1258
+msgid "To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``"
+msgstr "Till vänster ``SYMBOLHEIGHT=2`` och till höger ``SYMBOLHEIGHT=6``"
 
 #: ../../docs/server_manual/services/wms.rst:1264
 msgid "LAYERTITLE"
 msgstr "LAYERTITLE"
 
+#: ../../docs/server_manual/services/wms.rst:1266
+msgid "This parameter specifies whether to render layer title."
+msgstr "Denna parameter anger om skiktets titel ska återges."
+
+#: ../../docs/server_manual/services/wms.rst:1270
+msgid "``TRUE`` (default value)"
+msgstr "``TRUE`` (standardvärde)"
+
 #: ../../docs/server_manual/services/wms.rst:1277
 msgid "LAYERFONTFAMILY"
 msgstr "LAYERFONTFAMILY"
+
+#: ../../docs/server_manual/services/wms.rst:1279
+msgid ""
+"This parameter specifies the font family to use for rendering layer title."
+msgstr ""
+"Denna parameter anger vilken teckensnittsfamilj som ska användas för att "
+"rendera lagertiteln."
 
 #: ../../docs/server_manual/services/wms.rst:1293
 msgid "LAYERFONTBOLD"
 msgstr "LAYERFONTBOLD"
 
+#: ../../docs/server_manual/services/wms.rst:1295
+msgid ""
+"This parameter specifies whether the layer title is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Denna parameter anger om skiktets titel ska återges i fet stil. Tillgängliga"
+" värden är (inte skiftlägeskänsliga):"
+
+#: ../../docs/server_manual/services/wms.rst:1317
+msgid "Legend with ``LAYERFONTBOLD=TRUE``"
+msgstr "Legend med ``LAYERFONTBOLD=TRUE``"
+
 #: ../../docs/server_manual/services/wms.rst:1323
 msgid "LAYERFONTSIZE"
 msgstr "LAYERFONTSIZE"
+
+#: ../../docs/server_manual/services/wms.rst:1325
+#: ../../docs/server_manual/services/wms.rst:1455
+msgid ""
+"This parameter specifies the font size for rendering layer title in point."
+msgstr ""
+"Denna parameter anger teckenstorleken för rendering av lagertiteln i punkt."
+
+#: ../../docs/server_manual/services/wms.rst:1343
+msgid "Legend with ``LAYERFONTSIZE=20``"
+msgstr "Legend med ``LAYERFONTSIZE=20``"
 
 #: ../../docs/server_manual/services/wms.rst:1349
 msgid "LAYERFONTITALIC"
 msgstr "LAYERFONTITALIC"
 
+#: ../../docs/server_manual/services/wms.rst:1351
+msgid ""
+"This parameter specifies whether the layer title is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Denna parameter anger om skiktets titel ska återges i kursiv stil. "
+"Tillgängliga värden är (inte skiftlägeskänsliga):"
+
+#: ../../docs/server_manual/services/wms.rst:1373
+msgid "Legend with ``LAYERFONTITALIC=TRUE``"
+msgstr "Legend med ``LAYERFONTITALIC=TRUE``"
+
 #: ../../docs/server_manual/services/wms.rst:1379
 msgid "LAYERFONTCOLOR"
 msgstr "LAYERFONTCOLOR"
+
+#: ../../docs/server_manual/services/wms.rst:1381
+msgid ""
+"This parameter specifies the layer title color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+"Denna parameter anger färgen på skiktets titel. Färgen kan vara bokstavlig "
+"(``röd``, ``grön``, ...) eller i hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+
+#: ../../docs/server_manual/services/wms.rst:1401
+msgid "Legend with ``LAYERFONTCOLOR=0x5f9930``"
+msgstr "Legend med ``LAYERFONTCOLOR=0x5f9930``"
 
 #: ../../docs/server_manual/services/wms.rst:1407
 msgid "ITEMFONTFAMILY"
 msgstr "ITEMFONTFAMILY"
 
+#: ../../docs/server_manual/services/wms.rst:1409
+msgid ""
+"This parameter specifies the font family to use for rendering item label."
+msgstr ""
+"Denna parameter anger vilken teckensnittsfamilj som ska användas för att "
+"rendera artikeletiketten."
+
 #: ../../docs/server_manual/services/wms.rst:1423
 msgid "ITEMFONTBOLD"
 msgstr "ITEMFONTBOLD"
+
+#: ../../docs/server_manual/services/wms.rst:1425
+msgid ""
+"This parameter specifies whether the item label is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Denna parameter anger om artikeletiketten ska återges i fet stil. "
+"Tillgängliga värden är (ej skiftlägeskänsliga):"
+
+#: ../../docs/server_manual/services/wms.rst:1447
+msgid "Legend with ``ITEMFONTBOLD=TRUE``"
+msgstr "Teckenförklaring med ``ITEMFONTBOLD=TRUE``"
 
 #: ../../docs/server_manual/services/wms.rst:1453
 msgid "ITEMFONTSIZE"
 msgstr "ITEMFONTSIZE"
 
+#: ../../docs/server_manual/services/wms.rst:1473
+msgid "Legend with ``ITEMFONTSIZE=30``"
+msgstr "Legend med ``ITEMFONTSIZE=30``"
+
 #: ../../docs/server_manual/services/wms.rst:1479
 msgid "ITEMFONTITALIC"
 msgstr "ITEMFONTITALIC"
+
+#: ../../docs/server_manual/services/wms.rst:1481
+msgid ""
+"This parameter specifies whether the item label is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Denna parameter anger om artikeletiketten ska återges i kursiv stil. "
+"Tillgängliga värden är (ej skiftlägeskänsliga):"
+
+#: ../../docs/server_manual/services/wms.rst:1503
+msgid "Legend with ``ITEMFONTITALIC=TRUE``"
+msgstr "Legend med ``ITEMFONTITALIC=TRUE``"
 
 #: ../../docs/server_manual/services/wms.rst:1509
 msgid "ITEMFONTCOLOR"
 msgstr "ITEMFONTCOLOR"
 
+#: ../../docs/server_manual/services/wms.rst:1511
+msgid ""
+"This parameter specifies the item label color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+"Denna parameter anger färgen på artikeletiketten. Färgen kan vara bokstavlig"
+" (``röd``, ``grön``, ...) eller i hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+
+#: ../../docs/server_manual/services/wms.rst:1531
+msgid "Legend with ``ITEMFONTCOLOR=0x5f9930``"
+msgstr "Legend med ``ITEMFONTCOLOR=0x5f9930``"
+
 #: ../../docs/server_manual/services/wms.rst:1537
 msgid "SHOWRULEDETAILS"
 msgstr "SHOWRULEDETAILS"
+
+#: ../../docs/server_manual/services/wms.rst:1539
+msgid ""
+"This parameter specifies if the JSON output will also contain the details "
+"about the rule that generated the legend entry. This parameter only has "
+"effect when the renderer is rule-based or categorized."
+msgstr ""
+"Den här parametern anger om JSON-utdata även ska innehålla information om "
+"den regel som genererade legendposten. Den här parametern har endast effekt "
+"när renderingsprogrammet är regelbaserat eller kategoriserat."
 
 #: ../../docs/server_manual/services/wms.rst:1574
 msgid "ADDLAYERGROUPS"
 msgstr "ADDLAYERGROUPS"
 
+#: ../../docs/server_manual/services/wms.rst:1576
+msgid ""
+"This parameter specifies if the JSON output will also display the names of "
+"the layers groups (and subgroups) in the legend entry. Possible values are:"
+msgstr ""
+"Denna parameter anger om JSON-utdata även ska visa namnen på lagergrupperna "
+"(och undergrupperna) i legendposten. Möjliga värden är:"
+
+#: ../../docs/server_manual/services/wms.rst:1580
+msgid "``TRUE``: display the groups labels"
+msgstr "``TRUE``: visa gruppernas etiketter"
+
+#: ../../docs/server_manual/services/wms.rst:1581
+msgid "``FALSE`` (default): hide the groups labels"
+msgstr "``FALSE`` (standard): döljer gruppernas etiketter"
+
+#: ../../docs/server_manual/services/wms.rst:1586
+msgid "Legend without (left) and with (right) layer groups labels display"
+msgstr "Legend utan (vänster) och med (höger) lagergruppers etiketter display"
+
+#: ../../docs/server_manual/services/wms.rst:1588
+msgid "The corresponding JSON output showing groups name would look like:"
+msgstr "Motsvarande JSON-utdata som visar gruppnamn skulle se ut som följer:"
+
 #: ../../docs/server_manual/services/wms.rst:1618
 msgid "GetStyle(s)"
 msgstr "GetStyle(s)"
+
+#: ../../docs/server_manual/services/wms.rst:1620
+msgid ""
+"Standard parameters for the **GetStyle** (or **GetStyles**) request "
+"according to the OGC WMS 1.1.1 specifications:"
+msgstr ""
+"Standardparametrar för begäran **GetStyle** (eller **GetStyles**) enligt OGC"
+" WMS 1.1.1-specifikationerna:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetStyle** or **GetStyles**)"
+msgstr "Namn på begäran (**GetStyle** eller **GetStyles**)"
+
+#: ../../docs/server_manual/services/wms.rst:1631
+msgid ""
+"The **GetStyle** request supports as well the following vendor parameters:"
+msgstr "Begäran **GetStyle** stöder även följande leverantörsparametrar:"
 
 #: ../../docs/server_manual/services/wms.rst:1652
 msgid "DescribeLayer"
 msgstr "DescribeLayer"
 
+#: ../../docs/server_manual/services/wms.rst:1654
+msgid ""
+"Standard parameters for the **DescribeLayer** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standardparametrar för **DescribeLayer**-begäran enligt OGC WMS 1.1.1 och "
+"1.3.0-specifikationerna:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**DescribeLayer**)"
+msgstr "Namn på begäran (**DescribeLayer**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to describe"
+msgstr "Skikt för att beskriva"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SLD_VERSION <wms_describelayer_sldversion>`"
 msgstr ":ref:`SLD_VERSION <wms_describelayer_sldversion>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD version"
+msgstr "SLD-version"
+
+#: ../../docs/server_manual/services/wms.rst:1666
+msgid ""
+"The **DescribeLayer** request supports as well the following vendor "
+"parameters:"
+msgstr "Begäran **DescribeLayer** stöder även följande leverantörsparametrar:"
+
+#: ../../docs/server_manual/services/wms.rst:1685
+#: ../../docs/server_manual/services/wms.rst:1994
+msgid "The XML document looks like:"
+msgstr "XML-dokumentet ser ut som följer:"
 
 #: ../../docs/server_manual/services/wms.rst:1711
 msgid "SLD_VERSION"
 msgstr "SLD_VERSION"
 
+#: ../../docs/server_manual/services/wms.rst:1713
+msgid ""
+"This parameter allows to specify the version of SLD. Only the value "
+"``1.1.0`` is available."
+msgstr ""
+"Denna parameter gör det möjligt att ange versionen av SLD. Endast värdet "
+"``1.1.0`` är tillgängligt."
+
 #: ../../docs/server_manual/services/wms.rst:1720
 msgid "GetPrint"
 msgstr "GetPrint"
 
+#: ../../docs/server_manual/services/wms.rst:1722
+msgid ""
+"QGIS Server has the capability to create print layout output in pdf or pixel"
+" format. Print layout windows in the published project are used as "
+"templates. In the **GetPrint** request, the client has the possibility to "
+"specify parameters of the contained layout maps and labels."
+msgstr ""
+"QGIS Server har möjlighet att skapa utskriftslayouter i pdf- eller "
+"pixelformat. Utskriftslayoutfönstren i det publicerade projektet används som"
+" mallar. I **GetPrint**-begäran har klienten möjlighet att ange parametrar "
+"för de layoutkartor och etiketter som ingår."
+
+#: ../../docs/server_manual/services/wms.rst:1727
+msgid ""
+"The **GetPrint** request supports :ref:`redlining <wms_redlining>`, "
+":ref:`external WMS layers <wms_external>` as well as the following "
+"parameters:"
+msgstr ""
+"Begäran **GetPrint** stöder :ref:`redlining <wms_redlining>`, :ref:`externa "
+"WMS-lager <wms_external>` samt följande parametrar:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetPrint**)"
+msgstr "Namn på begäran (**GetPrint**)"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`TEMPLATE <wms_template>`"
 msgstr ":ref:`TEMPLATE <wms_template>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layout template to use"
+msgstr "Layoutmall att använda"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FORMAT <wms_getprint_format>`"
@@ -737,41 +2252,107 @@ msgstr ":ref:`FORMAT <wms_getprint_format>`"
 msgid ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
 msgstr ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
 
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/pdf``"
+msgstr "Endast för ``FORMAT=application/pdf``"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ATLAS_PK <wms_atlaspk>`"
 msgstr ":ref:`ATLAS_PK <wms_atlaspk>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Atlas features"
+msgstr "Atlas funktioner"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:EXTENT <wms_mapextent>`"
 msgstr ":ref:`mapX:EXTENT <wms_mapextent>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Extent of the map 'X'"
+msgstr "Kartans utbredning \"X"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:LAYERS <wms_maplayers>`"
 msgstr ":ref:`mapX:LAYERS <wms_maplayers>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers of the map 'X'"
+msgstr "Lager på kartan \"X"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:STYLES <wms_mapstyles>`"
 msgstr ":ref:`mapX:STYLES <wms_mapstyles>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style of the map 'X'"
+msgstr "Layers stil för kartan \"X"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:SCALE <wms_mapscale>`"
 msgstr ":ref:`mapX:SCALE <wms_mapscale>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' scale of the map 'X'"
+msgstr "Kartans lagerskala \"X"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:ROTATION <wms_maprotation>`"
 msgstr ":ref:`mapX:ROTATION <wms_maprotation>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Rotation  of the map 'X'"
+msgstr "Rotation av kartan \"X"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:GRID_INTERVAL_X <wms_mapgridintervalx>`"
 msgstr ":ref:`mapX:GRID_INTERVAL_X <wms_mapgridintervalx>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on x axis of the map 'X'"
+msgstr "Rutnätsintervall på kartans x-axel \"X"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`"
 msgstr ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on y axis of the map 'X'"
+msgstr "Rutnätsintervall på kartans y-axel \"X"
+
+#: ../../docs/server_manual/services/wms.rst:1777
+msgid ""
+"Note that the layout template may contain more than one map. In this way, if"
+" you want to configure a specific map, you have to use ``mapX:`` parameters "
+"where ``X`` is a positive number that you can retrieve thanks to the "
+"**GetProjectSettings** request."
+msgstr ""
+"Observera att layoutmallen kan innehålla mer än en karta. Om du vill "
+"konfigurera en specifik karta måste du därför använda parametrarna ``mapX:``"
+" där ``X`` är ett positivt tal som du kan hämta med hjälp av begäran "
+"**GetProjectSettings**."
+
 #: ../../docs/server_manual/services/wms.rst:1800
 msgid "TEMPLATE"
 msgstr "TEMPLATE"
+
+#: ../../docs/server_manual/services/wms.rst:1802
+msgid ""
+"This parameter can be used to specify the name of a layout template to use "
+"for printing."
+msgstr ""
+"Denna parameter kan användas för att ange namnet på en layoutmall som ska "
+"användas för utskrift."
+
+#: ../../docs/server_manual/services/wms.rst:1810
+msgid ""
+"This parameter specifies the format of map image. Available values are:"
+msgstr ""
+"Denna parameter anger formatet för kartbilden. Tillgängliga värden är:"
+
+#: ../../docs/server_manual/services/wms.rst:1812
+msgid "``png`` (default value)"
+msgstr "``png`` (standardvärde)"
 
 #: ../../docs/server_manual/services/wms.rst:1817
 msgid "``svg``"
@@ -789,42 +2370,481 @@ msgstr "``image/svg+xml``"
 msgid "``pdf``"
 msgstr "``pdf``"
 
+#: ../../docs/server_manual/services/wms.rst:1823
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then an "
+"exception is returned."
+msgstr ""
+"Om parametern ``FORMAT`` skiljer sig från något av dessa värden returneras "
+"ett undantag."
+
+#: ../../docs/server_manual/services/wms.rst:1831
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/pdf`` in GetPrint requests. Takes a list of "
+"key:value pairs separated by semicolon:"
+msgstr ""
+"Denna parameter kan användas för att ange alternativ för det valda formatet."
+" Endast för ``FORMAT=application/pdf`` i GetPrint-begäranden. Tar emot en "
+"lista med nyckel:värde-par separerade med semikolon:"
+
+#: ../../docs/server_manual/services/wms.rst:1835
+msgid ""
+"``RASTERIZE_WHOLE_IMAGE``: whether the whole pdf should be exported as an "
+"image. Default: false."
+msgstr ""
+"``RASTERIZE_WHOLE_IMAGE``: om hela pdf:en ska exporteras som en bild. "
+"Standard: false."
+
+#: ../../docs/server_manual/services/wms.rst:1836
+msgid ""
+"``FORCE_VECTOR_OUTPUT``: whether pdf should be exported as vector. Default: "
+"false."
+msgstr ""
+"``FORCE_VECTOR_OUTPUT``: om pdf ska exporteras som vektor. Standard: false."
+
+#: ../../docs/server_manual/services/wms.rst:1837
+msgid ""
+"``APPEND_GEOREFERENCE``: whether georeference info shall be added to the "
+"pdf. Default: true."
+msgstr ""
+"``APPEND_GEOREFERENCE``: om georeferensinformation ska läggas till i pdf-"
+"filen. Standard: true."
+
+#: ../../docs/server_manual/services/wms.rst:1838
+msgid ""
+"``EXPORT_METADATA``: whether metadata shall be added to the pdf. Default: "
+"true."
+msgstr ""
+"``EXPORT_METADATA``: om metadata ska läggas till i pdf-filen. Standard: "
+"true."
+
+#: ../../docs/server_manual/services/wms.rst:1839
+msgid ""
+"``TEXT_RENDER_FORMAT``: sets the text render format for pdf export. It can "
+"be ``AlwaysOutlines`` (default) or ``AlwaysText``."
+msgstr ""
+"``TEXT_RENDER_FORMAT``: anger textrenderingsformatet för pdf-export. Det kan"
+" vara ``AlwaysOutlines`` (standard) eller ``AlwaysText``."
+
+#: ../../docs/server_manual/services/wms.rst:1841
+msgid ""
+"``SIMPLIFY_GEOMETRY``: whether features geometries shall be simplified. "
+"Default: true."
+msgstr ""
+"``SIMPLIFY_GEOMETRY``: anger om geometrierna för objekten ska förenklas. "
+"Standard: true."
+
+#: ../../docs/server_manual/services/wms.rst:1842
+msgid ""
+"``WRITE_GEO_PDF``: whether a Geospatial PDF shall be exported. Default: "
+"false."
+msgstr ""
+"``WRITE_GEO_PDF``: anger om en geospatial PDF ska exporteras. Standard: "
+"false."
+
+#: ../../docs/server_manual/services/wms.rst:1843
+msgid ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: whether Iso32000 "
+"georeferencing shall be used. Default: false."
+msgstr ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: Anger om Iso32000 "
+"georeferenser ska användas. Standard: false."
+
+#: ../../docs/server_manual/services/wms.rst:1844
+msgid ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: whether OGC best practice "
+"georeferencing shall be used. Default: false."
+msgstr ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: anger om OGC:s bästa praxis"
+" för georeferenser ska användas. Standard: false."
+
+#: ../../docs/server_manual/services/wms.rst:1845
+msgid ""
+"``EXPORT_THEMES``: a comma separated list of map themes to use for a "
+"Geospatial PDF export"
+msgstr ""
+"``EXPORT_THEMES``: en kommaseparerad lista över kartteman som ska användas "
+"för en Geospatial PDF-export"
+
+#: ../../docs/server_manual/services/wms.rst:1846
+msgid ""
+"``PREDEFINED_MAP_SCALES``: a comma separated list of map scales to render "
+"the map"
+msgstr ""
+"``PREDEFINED_MAP_SCALES``: en kommaseparerad lista över kartskalor för att "
+"återge kartan"
+
+#: ../../docs/server_manual/services/wms.rst:1847
+msgid ""
+"``LOSSLESS_IMAGE_COMPRESSION``: whether images embedded in pdf must be "
+"compressed using a lossless algorithm. Default: false."
+msgstr ""
+"``LOSSLESS_IMAGE_COMPRESSION``: om bilder som är inbäddade i pdf måste "
+"komprimeras med en förlustfri algoritm. Standard: false."
+
+#: ../../docs/server_manual/services/wms.rst:1848
+msgid ""
+"``DISABLE_TILED_RASTER_RENDERING``: whether rasters shall be untiled in the "
+"pdf. Default: false."
+msgstr ""
+"``DISABLE_TILED_RASTER_RENDERING``: anger om rastrering ska ske i pdf-filen."
+" Standard: false."
+
 #: ../../docs/server_manual/services/wms.rst:1869
 msgid "ATLAS_PK"
 msgstr "ATLAS_PK"
+
+#: ../../docs/server_manual/services/wms.rst:1871
+msgid ""
+"This parameter allows activation of Atlas rendering by indicating which "
+"features we want to print. In order to retrieve an atlas with all features, "
+"the ``*`` symbol may be used (according to the maximum number of features "
+"allowed in the project configuration)."
+msgstr ""
+"Denna parameter gör det möjligt att aktivera Atlas-rendering genom att ange "
+"vilka funktioner som ska skrivas ut. För att hämta en atlas med alla "
+"funktioner kan symbolen ``*`` användas (i enlighet med det maximala antalet "
+"funktioner som tillåts i projektkonfigurationen)."
+
+#: ../../docs/server_manual/services/wms.rst:1877
+msgid ""
+"When ``FORMAT`` is ``pdf``, a single PDF document combining the feature "
+"pages is returned. For all other formats, a single page is returned."
+msgstr ""
+"När ``FORMAT`` är ``pdf`` returneras ett enda PDF-dokument som kombinerar "
+"funktionssidorna. För alla andra format returneras en enda sida."
 
 #: ../../docs/server_manual/services/wms.rst:1884
 msgid "mapX:EXTENT"
 msgstr "mapX:EXTENT"
 
+#: ../../docs/server_manual/services/wms.rst:1886
+msgid ""
+"This parameter specifies the extent for a layout map item as "
+"xmin,ymin,xmax,ymax."
+msgstr ""
+"Denna parameter anger omfattningen för ett layoutmappningsobjekt som "
+"xmin,ymin,xmax,ymax."
+
 #: ../../docs/server_manual/services/wms.rst:1892
 msgid "mapX:ROTATION"
 msgstr "mapX:ROTATION"
+
+#: ../../docs/server_manual/services/wms.rst:1894
+msgid "This parameter specifies the map rotation in degrees."
+msgstr "Denna parameter anger kartans rotation i grader."
 
 #: ../../docs/server_manual/services/wms.rst:1899
 msgid "mapX:GRID_INTERVAL_X"
 msgstr "mapX:GRID_INTERVAL_X"
 
+#: ../../docs/server_manual/services/wms.rst:1901
+msgid "This parameter specifies the grid line density in the X direction."
+msgstr "Denna parameter anger rutnätets linjetäthet i X-riktningen."
+
 #: ../../docs/server_manual/services/wms.rst:1906
 msgid "mapX:GRID_INTERVAL_Y"
 msgstr "mapX:GRID_INTERVAL_Y"
+
+#: ../../docs/server_manual/services/wms.rst:1908
+msgid "This parameter specifies the grid line density in the Y direction."
+msgstr "Denna parameter anger rutnätets linjetäthet i Y-riktningen."
 
 #: ../../docs/server_manual/services/wms.rst:1913
 msgid "mapX:SCALE"
 msgstr "mapX:SCALE"
 
+#: ../../docs/server_manual/services/wms.rst:1915
+msgid ""
+"This parameter specifies the map scale for a layout map item. This is useful"
+" to ensure scale based visibility of layers and labels even if client and "
+"server may have different algorithms to calculate the scale denominator."
+msgstr ""
+"Denna parameter anger kartskalan för ett kartobjekt i layouten. Detta är "
+"användbart för att säkerställa skalbaserad synlighet av lager och etiketter "
+"även om klient och server kan ha olika algoritmer för att beräkna skalans "
+"nämnare."
+
 #: ../../docs/server_manual/services/wms.rst:1923
 msgid "mapX:LAYERS"
 msgstr "mapX:LAYERS"
+
+#: ../../docs/server_manual/services/wms.rst:1925
+msgid ""
+"This parameter specifies the layers for a layout map item. See :ref:`GetMap "
+"Layers <wms_layers>` for more information on this parameter."
+msgstr ""
+"Den här parametern anger lagren för ett layoutkartobjekt. Se :ref:`GetMap "
+"Layers <wms_layers>` för mer information om den här parametern."
 
 #: ../../docs/server_manual/services/wms.rst:1932
 msgid "mapX:STYLES"
 msgstr "mapX:STYLES"
 
+#: ../../docs/server_manual/services/wms.rst:1934
+msgid ""
+"This parameter specifies the layers' styles defined in a specific layout map"
+" item. See :ref:`GetMap Styles <wms_styles>` for more information on this "
+"parameter."
+msgstr ""
+"Den här parametern anger stilarna för de lager som definieras i ett "
+"specifikt kartobjekt för layout. Se :ref:`GetMap Styles <wms_styles>` för "
+"mer information om den här parametern."
+
 #: ../../docs/server_manual/services/wms.rst:1943
 msgid "GetProjectSettings"
 msgstr "GetProjectSettings"
 
+#: ../../docs/server_manual/services/wms.rst:1945
+msgid ""
+"This request type works similar to :ref:`GetCapabilities "
+"<wms_getcapabilities>`, but it is more specific to QGIS Server and allows a "
+"client to read additional information which are not available in the "
+":ref:`GetCapabilities <wms_getcapabilities>` output:"
+msgstr ""
+"Den här begärandetypen fungerar på samma sätt som :ref:`GetCapabilities "
+"<wms_getcapabilities>`, men den är mer specifik för QGIS Server och gör det "
+"möjligt för en klient att läsa ytterligare information som inte är "
+"tillgänglig i :ref:`GetCapabilities <wms_getcapabilities>`:"
+
+#: ../../docs/server_manual/services/wms.rst:1950
+msgid "initial visibility of layers"
+msgstr "initial synlighet för lager"
+
+#: ../../docs/server_manual/services/wms.rst:1951
+msgid "information about vector attributes and their edit types"
+msgstr "information om vektorattribut och deras redigeringstyper"
+
+#: ../../docs/server_manual/services/wms.rst:1952
+msgid "information about layer order and drawing order"
+msgstr "information om lagerordning och ritningsordning"
+
+#: ../../docs/server_manual/services/wms.rst:1953
+msgid "list of layers published in WFS"
+msgstr "lista över lager som publicerats i WFS"
+
+#: ../../docs/server_manual/services/wms.rst:1954
+msgid ""
+"show if a group in the layer tree is :ref:`mutually exclusive "
+"<group_layers_interact>`"
+msgstr ""
+"visa om en grupp i lagerträdet är :ref:`mutually exclusive "
+"<group_layers_interact>``"
+
+#: ../../docs/server_manual/services/wms.rst:1956
+msgid "The **GetProjectSettings** request supports the following parameters:"
+msgstr "Begäran **GetProjectSettings** stöder följande parametrar:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetProjectSettings**)"
+msgstr "Namn på begäran (**GetProjectSettings**)"
+
 #: ../../docs/server_manual/services/wms.rst:1970
 msgid "GetSchemaExtension"
 msgstr "GetSchemaExtension"
+
+#: ../../docs/server_manual/services/wms.rst:1972
+msgid ""
+"The **GetSchemaExtension** request allows to retrieve optional extended "
+"capabilities and operations of the WMS service such as implemented by QGIS "
+"Server."
+msgstr ""
+"Begäran **GetSchemaExtension** gör det möjligt att hämta valfria utökade "
+"funktioner och operationer för WMS-tjänsten, såsom de som implementeras av "
+"QGIS Server."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetSchemaExtension**)"
+msgstr "Namn på begäran (**GetSchemaExtension**)"
+
+#: ../../docs/server_manual/services/wms.rst:2008
+msgid "External WMS layers"
+msgstr "Externa WMS-lager"
+
+#: ../../docs/server_manual/services/wms.rst:2010
+msgid ""
+"QGIS Server allows including layers from external WMS servers in WMS "
+":ref:`GetMap <wms_getmap>` and WMS :ref:`GetPrint <wms_getprint>` requests. "
+"This is especially useful if a web client uses an external background layer "
+"in the web map. For performance reasons, such layers should be directly "
+"requested by the web client (not cascaded via QGIS server). For printing "
+"however, these layers should be cascaded via QGIS server in order to appear "
+"in the printed map."
+msgstr ""
+"QGIS Server tillåter inkludering av lager från externa WMS-servrar i WMS "
+":ref:`GetMap <wms_getmap>` och WMS :ref:`GetPrint <wms_getprint>`. Detta är "
+"särskilt användbart om en webbklient använder ett externt bakgrundslager i "
+"webbkartan. Av prestandaskäl bör sådana lager begäras direkt av webbklienten"
+" (inte kaskaderas via QGIS-servern). För utskrift bör dock dessa lager "
+"kaskadkopplas via QGIS-servern för att visas i den utskrivna kartan."
+
+#: ../../docs/server_manual/services/wms.rst:2018
+msgid ""
+"External layers can be added to the LAYERS parameter as "
+"EXTERNAL_WMS:<layername>. The parameters for the external WMS layers (e.g. "
+"url, format, dpiMode, crs, layers, styles) can later be given as service "
+"parameters <layername>:<parameter>. In a :ref:`GetMap <wms_getmap>` request,"
+" this might look like this:"
+msgstr ""
+"Externa lager kan läggas till i LAYERS-parametern som "
+"EXTERNAL_WMS:<layername>. Parametrarna för de externa WMS-lagren (t.ex. url,"
+" format, dpiMode, crs, lager, stilar) kan senare anges som serviceparametrar"
+" <layername>:<parameter>. I en :ref:`GetMap <wms_getmap>` -begäran kan detta"
+" se ut så här:"
+
+#: ../../docs/server_manual/services/wms.rst:2040
+msgid ""
+"Similarly, external layers can be used in :ref:`GetPrint <wms_getprint>` "
+"requests:"
+msgstr ""
+"På samma sätt kan externa lager användas i :ref:`GetPrint "
+"<wms_getprint>`-begäranden:"
+
+#: ../../docs/server_manual/services/wms.rst:2063
+msgid "Redlining"
+msgstr "Redlining"
+
+#: ../../docs/server_manual/services/wms.rst:2065
+msgid ""
+"This feature is available and can be used with :ref:`GetMap <wms_getmap>` "
+"and :ref:`GetPrint <wms_getprint>` requests."
+msgstr ""
+"Den här funktionen är tillgänglig och kan användas med förfrågningarna "
+":ref:`GetMap <wms_getmap>` och :ref:`GetPrint <wms_getprint>`."
+
+#: ../../docs/server_manual/services/wms.rst:2068
+msgid ""
+"The redlining feature can be used to pass geometries and labels in the "
+"request which are overlapped by the server over the standard returned image "
+"(map). This permits the user to put emphasis or maybe add some comments "
+"(labels) to some areas, locations etc. that are not in the standard map."
+msgstr ""
+"Redlining-funktionen kan användas för att skicka geometrier och etiketter i "
+"begäran som överlappas av servern över den standardbild (karta) som "
+"returneras. Detta gör det möjligt för användaren att betona eller kanske "
+"lägga till kommentarer (etiketter) till vissa områden, platser etc. som inte"
+" finns med i standardkartan."
+
+#: ../../docs/server_manual/services/wms.rst:2073
+msgid "The :ref:`GetMap <wms_getmap>` request is in the format:"
+msgstr "Begäran :ref:`GetMap <wms_getmap>` har följande format:"
+
+#: ../../docs/server_manual/services/wms.rst:2090
+msgid ""
+"The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that "
+"``mapX:`` parameter is added to tell which map has redlining):"
+msgstr ""
+"Motsvarigheten till :ref:`GetPrint <wms_getprint>` är i formatet (observera "
+"att parametern ``mapX:`` har lagts till för att tala om vilken karta som har"
+" redlining):"
+
+#: ../../docs/server_manual/services/wms.rst:2107
+msgid ""
+"Here is the image outputed by the above request in which a polygon and a "
+"label are drawn on top of the normal map:"
+msgstr ""
+"Här är bilden som matas ut av ovanstående begäran där en polygon och en "
+"etikett ritas ovanpå den normala kartan:"
+
+#: ../../docs/server_manual/services/wms.rst:2115
+msgid "Server response to a GetMap request with redlining parameters"
+msgstr "Serverns svar på en GetMap-begäran med redlining-parametrar"
+
+#: ../../docs/server_manual/services/wms.rst:2117
+msgid ""
+"You can see there are several parameters in this request to control the "
+"redlining feature. The full list includes:"
+msgstr ""
+"Du kan se att det finns flera parametrar i denna begäran för att styra "
+"redlining-funktionen. Den fullständiga listan innehåller:"
+
+#: ../../docs/server_manual/services/wms.rst:2120
+msgid ""
+"**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
+"supports multipart geometries. Here is an example: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. The coordinates should "
+"be in the CRS of the GetMap/GetPrint request."
+msgstr ""
+"**HIGHLIGHT_GEOM**: Du kan lägga till POINT, MULTILINESTRING, POLYGON etc. "
+"Den stöder geometrier med flera delar. Här är ett exempel: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. Koordinaterna ska "
+"finnas i CRS för GetMap/GetPrint-begäran."
+
+#: ../../docs/server_manual/services/wms.rst:2124
+msgid ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
+"color."
+msgstr ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: Denna parameter styr etikettens buffertfärg."
+
+#: ../../docs/server_manual/services/wms.rst:2126
+msgid ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
+"size."
+msgstr ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: Denna parameter styr etikettbuffertens "
+"storlek."
+
+#: ../../docs/server_manual/services/wms.rst:2128
+msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
+msgstr "**HIGHLIGHT_LABELCOLOR**: Denna parameter styr etikettens färg."
+
+#: ../../docs/server_manual/services/wms.rst:2129
+msgid ""
+"**HIGHLIGHT_LABEL_DISTANCE**: controls the distance between feature (e.g. "
+"point or line) and the label in mm"
+msgstr ""
+"**HIGHLIGHT_LABEL_DISTANCE**: styr avståndet mellan objektet (t.ex. punkt "
+"eller linje) och etiketten i mm"
+
+#: ../../docs/server_manual/services/wms.rst:2131
+msgid ""
+"**HIGHLIGHT_LABELFONT**: This parameter controls the font of the label (e.g."
+" Arial)"
+msgstr ""
+"**HIGHLIGHT_LABELFONT**: Denna parameter styr etikettens teckensnitt (t.ex. "
+"Arial)"
+
+#: ../../docs/server_manual/services/wms.rst:2133
+msgid ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: places the label horizontally on a"
+" point using the specified alignment (e.g. 'left', 'center', 'right')"
+msgstr ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: placerar etiketten horisontellt på"
+" en punkt med den angivna inriktningen (t.ex. \"vänster\", \"mitt\", "
+"\"höger\")"
+
+#: ../../docs/server_manual/services/wms.rst:2135
+msgid "**HIGHLIGHT_LABEL_ROTATION**: controls the label rotation in degrees"
+msgstr "**HIGHLIGHT_LABEL_ROTATION**: styr etikettens rotation i grader"
+
+#: ../../docs/server_manual/services/wms.rst:2136
+msgid ""
+"**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
+msgstr "**HIGHLIGHT_LABELSIZE**: Denna parameter styr storleken på etiketten."
+
+#: ../../docs/server_manual/services/wms.rst:2138
+msgid ""
+"**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
+"parameter."
+msgstr ""
+"**HIGHLIGHT_LABELSTRING**: Du kan skicka din märkningstext till den här "
+"parametern."
+
+#: ../../docs/server_manual/services/wms.rst:2140
+msgid ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: places the label vertically on a "
+"point using the specified alignment (e.g. 'top', 'half', 'bottom')"
+msgstr ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: placerar etiketten vertikalt på en "
+"punkt med hjälp av den angivna inriktningen (t.ex. \"topp\", \"halv\", "
+"\"botten\")"
+
+#: ../../docs/server_manual/services/wms.rst:2142
+msgid ""
+"**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
+" change the stroke width, color and opacity."
+msgstr ""
+"**HIGHLIGHT_SYMBOL**: Här styrs hur geometrin ska markeras och du kan ändra "
+"streckbredd, färg och opacitet."
