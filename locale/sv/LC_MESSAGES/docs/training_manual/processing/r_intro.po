@@ -1,0 +1,470 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:31+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/r_intro.rst:5
+msgid "Use R scripts in Processing"
+msgstr "Använda R-skript i Processing"
+
+#: ../../docs/training_manual/processing/r_intro.rst:7
+msgid ""
+"Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/it>`_"
+msgstr ""
+"Modulen har skapats av Matteo Ghetta - finansierad av `Scuola Superiore "
+"Sant'Anna <https://www.santannapisa.it/it>`_"
+
+#: ../../docs/training_manual/processing/r_intro.rst:10
+msgid ""
+"Processing (with the ``Processing R Provider`` plugin) makes it possible to "
+"write and run R scripts inside QGIS."
+msgstr ""
+"Processing (med insticksprogrammet ``Processing R Provider``) gör det "
+"möjligt att skriva och köra R-skript i QGIS."
+
+#: ../../docs/training_manual/processing/r_intro.rst:14
+msgid ""
+"R has to be installed on your computer and the PATH has to be correctly set "
+"up. Moreover Processing just calls the external R packages, it is not able "
+"to install them. So be sure to install external packages directly in R. See "
+"the related :ref:`chapter <creating_r_scripts>` in the user manual."
+msgstr ""
+"R måste vara installerat på din dator och PATH måste vara korrekt inställt. "
+"Dessutom anropar Processing bara de externa R-paketen, det kan inte "
+"installera dem. Se därför till att installera externa paket direkt i R. Se "
+"relaterad :ref:`kapitel <creating_r_scripts>` i användarhandboken."
+
+#: ../../docs/training_manual/processing/r_intro.rst:20
+msgid ""
+"If you have *package* problems, it may be related to missing *mandatory* "
+"packages required by Processing, like ``sp``, ``rgdal`` and ``raster``."
+msgstr ""
+"Om du har problem med *paket* kan det bero på att du saknar *obligatoriska* "
+"paket som krävs av Processing, t.ex. ``sp``, ``rgdal`` och ``raster``."
+
+#: ../../docs/training_manual/processing/r_intro.rst:24
+msgid "Adding scripts"
+msgstr "Lägga till skript"
+
+#: ../../docs/training_manual/processing/r_intro.rst:26
+msgid ""
+"Adding a script is simple. The easiest way is to open the Processing toolbox"
+" and choose :menuselection:`Create new R script...` from the R menu "
+"(labelled with an R icon) at the top of the Processing Toolbox. You can also"
+" create the script in for instance a text editor and save it in your R "
+"scripts folder (:file:`processing/rscripts`). When it has been saved there, "
+"it will be available for editing by right-clicking on the script name in the"
+" processing toolbox and then choose :menuselection:`Edit Script...`)."
+msgstr ""
+"Att lägga till ett skript är enkelt. Det enklaste sättet är att öppna "
+"verktygslådan Processing och välja :menuselection:`Create new R script...` "
+"från R-menyn (märkt med en R-ikon) högst upp i verktygslådan Processing. Du "
+"kan också skapa skriptet i t.ex. en textredigerare och spara det i din "
+"R-skriptmapp (:file:`processing/rscripts`). När det har sparats där kommer "
+"det att vara tillgängligt för redigering genom att högerklicka på "
+"skriptnamnet i verktygslådan för bearbetning och sedan välja "
+":menuselection:`Edit Script...`)."
+
+#: ../../docs/training_manual/processing/r_intro.rst:39
+msgid ""
+"If you cannot see R in Processing, you have to activate it in "
+":menuselection:`Processing --> Options --> Providers`"
+msgstr ""
+"Om du inte kan se R i Processing måste du aktivera det i "
+":menuselection:`Processing --> Options --> Providers`"
+
+#: ../../docs/training_manual/processing/r_intro.rst:42
+msgid ""
+"It opens a *script editor window* in which you have to specify some "
+"parameters before you can add the script body."
+msgstr ""
+"Det öppnar ett *skriptredigeringsfönster* där du måste ange några parametrar"
+" innan du kan lägga till skriptdelen."
+
+#: ../../docs/training_manual/processing/r_intro.rst:50
+msgid "Creating plots"
+msgstr "Skapa tomter"
+
+#: ../../docs/training_manual/processing/r_intro.rst:52
+msgid ""
+"In this tutorial we are going to create a **boxplot** of a vector layer "
+"field."
+msgstr ""
+"I den här handledningen ska vi skapa en **boxplot** av ett vektorlagerfält."
+
+#: ../../docs/training_manual/processing/r_intro.rst:54
+msgid ""
+"Open the :file:`r_intro.qgs` QGIS project under the "
+":file:`exercise_data/processing/r_intro/` folder."
+msgstr ""
+"Öppna QGIS-projektet :file:`r_intro.qgs` under mappen "
+":file:`exercise_data/processing/r_intro/`."
+
+#: ../../docs/training_manual/processing/r_intro.rst:59
+#: ../../docs/training_manual/processing/r_intro.rst:180
+msgid "Script parameters"
+msgstr "Parametrar för skript"
+
+#: ../../docs/training_manual/processing/r_intro.rst:61
+msgid "Open the editor and start writing at the beginning of it."
+msgstr "Öppna redigeringsprogrammet och börja skriva i början av det."
+
+#: ../../docs/training_manual/processing/r_intro.rst:63
+msgid "You **must** specify some parameters **before** the script body:"
+msgstr "Du **måste** ange vissa parametrar **före** skriptets huvuddel:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:65
+msgid ""
+"The name of the group (`plots` in this case) in which you want to put your "
+"script (if the group does not exist, it will be created)::"
+msgstr ""
+"Namnet på den grupp (`plots` i detta fall) där du vill placera ditt skript "
+"(om gruppen inte finns kommer den att skapas)::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:70
+msgid ""
+"You will find your script in the **plots** R group in the Processing "
+"toolbox."
+msgstr ""
+"Du hittar ditt skript i R-gruppen **plots** i verktygslådan Processing."
+
+#: ../../docs/training_manual/processing/r_intro.rst:72
+msgid ""
+"You have to tell Processing that you want to display a plot (in this "
+"example)::"
+msgstr ""
+"Du måste tala om för Processing att du vill visa ett diagram (i det här "
+"exemplet)::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:76
+msgid ""
+"You will then find a link to the plot in the **Result Viewer** panel (can be"
+" turned on / off in :menuselection:`View --> Panels` and with "
+":menuselection:`Processing --> Results Viewer`)."
+msgstr ""
+"Du hittar sedan en länk till diagrammet i **Result Viewer**-panelen (kan "
+"slås på / av i :menuselection:`View --> Panels` och med "
+":menuselection:`Processing --> Results Viewer`)."
+
+#: ../../docs/training_manual/processing/r_intro.rst:80
+msgid ""
+"You also need to tell Processing about your input data. In this example we "
+"want to create a plot from a field of a vector layer::"
+msgstr ""
+"Du måste också berätta för Processing om dina indata. I det här exemplet "
+"vill vi skapa en plott från ett fält i ett vektorlager::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:85
+msgid ""
+"Processing now knows that the input is a vector. The name *Layer* is not "
+"important, what matters is the **vector** parameter."
+msgstr ""
+"Processing vet nu att indata är en vektor. Namnet *Layer* är inte viktigt, "
+"det som betyder något är parametern **vector**."
+
+#: ../../docs/training_manual/processing/r_intro.rst:88
+msgid ""
+"Finally, you have to specify the input field of the vector layer (using the "
+"name you have provided above - *Layer*)::"
+msgstr ""
+"Slutligen måste du ange indatafältet för vektorlagret (med det namn du angav"
+" ovan - *Lager*)::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:93
+msgid ""
+"Processing now knows that you need a field of *Layer*, and that you will "
+"call it **X**."
+msgstr ""
+"Processing vet nu att du behöver ett fält av typen *Layer* och att du ska "
+"kalla det **X**."
+
+#: ../../docs/training_manual/processing/r_intro.rst:96
+msgid "It is also possible to define the name of your script using ``name``::"
+msgstr ""
+"Det är också möjligt att definiera namnet på ditt skript med hjälp av "
+"``name``::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:100
+msgid "If not defined, the file name will be used as the name of the script."
+msgstr ""
+"Om det inte definieras kommer filnamnet att användas som namn på skriptet."
+
+#: ../../docs/training_manual/processing/r_intro.rst:103
+#: ../../docs/training_manual/processing/r_intro.rst:206
+msgid "Script body"
+msgstr "Skriptets kropp"
+
+#: ../../docs/training_manual/processing/r_intro.rst:105
+msgid ""
+"Now that you have set up the *heading* of the script you can add the "
+"function::"
+msgstr ""
+"Nu när du har skapat *huvudet* i skriptet kan du lägga till funktionen::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:109
+msgid ""
+"**boxplot** is the name of the R function, the parameter **Layer** is the "
+"name that you have defined for the input dataset and **X** is the name you "
+"have defined for the field of that dataset."
+msgstr ""
+"**boxplot** är namnet på R-funktionen, parametern **Layer** är det namn som "
+"du har definierat för indatadatasetet och **X** är det namn som du har "
+"definierat för fältet i det datasetet."
+
+#: ../../docs/training_manual/processing/r_intro.rst:114
+msgid ""
+"The parameter **X** has to be within double square brackets (``[[]]``)."
+msgstr "Parametern **X** måste stå inom dubbla hakparenteser (``[[]]``)."
+
+#: ../../docs/training_manual/processing/r_intro.rst:116
+#: ../../docs/training_manual/processing/r_intro.rst:225
+msgid "The final script looks like this::"
+msgstr "Det slutliga skriptet ser ut så här::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:126
+msgid ""
+"Save the script in the default path suggested by Processing "
+"(processing/rscripts). If you have not defined a ``name`` in the script "
+"heading, the file name you choose will become the name of the script in the "
+"Processing toolbox."
+msgstr ""
+"Spara skriptet i den standardsökväg som föreslås av Processing "
+"(processing/rscripts). Om du inte har definierat ett ``namn`` i skriptets "
+"rubrik kommer det filnamn du väljer att bli namnet på skriptet i "
+"verktygslådan Processing."
+
+#: ../../docs/training_manual/processing/r_intro.rst:131
+msgid ""
+"You can save the script wherever you like, but Processing will then not be "
+"able to include it in the processing toolbox automatically, so you have to "
+"upload it manually."
+msgstr ""
+"Du kan spara skriptet var du vill, men Processing kommer då inte att kunna "
+"inkludera det i verktygslådan för bearbetning automatiskt, så du måste ladda"
+" upp det manuellt."
+
+#: ../../docs/training_manual/processing/r_intro.rst:135
+msgid "Now just run it using the button on the top of the editor window:"
+msgstr ""
+"Nu är det bara att köra den med hjälp av knappen längst upp i "
+"redigeringsfönstret:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:139
+msgid ""
+"Once the editor window has been closed, use the text box of Processing to "
+"find your script:"
+msgstr ""
+"När redigeringsfönstret har stängts kan du använda textrutan i Processing "
+"för att hitta ditt skript:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:144
+msgid ""
+"You can now fill the parameters required in the Processing algorithm window:"
+msgstr ""
+"Du kan nu fylla i de parametrar som krävs i fönstret Processing algorithm:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:146
+msgid "for **Layer** choose *sample_points*"
+msgstr "för **Layer** välj *sample_points*"
+
+#: ../../docs/training_manual/processing/r_intro.rst:147
+msgid "for the **X** field choose *value*"
+msgstr "för fältet **X** välj *värde*"
+
+#: ../../docs/training_manual/processing/r_intro.rst:149
+msgid "Click on **Run**."
+msgstr "Klicka på **Kör**."
+
+#: ../../docs/training_manual/processing/r_intro.rst:153
+msgid ""
+"The **Result window** should be automatically opened, if not, just click on "
+":menuselection:`Processing --> Result Viewer...`."
+msgstr ""
+"Fönstret **Result** bör öppnas automatiskt, om inte, klicka bara på "
+":menuselection:`Processing --> Result Viewer...`."
+
+#: ../../docs/training_manual/processing/r_intro.rst:156
+msgid "Click on the link in the viewer and you will see:"
+msgstr "Klicka på länken i visaren så kommer du att se:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:161
+msgid "You can open, copy and save the image by right clicking on the plot."
+msgstr ""
+"Du kan öppna, kopiera och spara bilden genom att högerklicka på plotten."
+
+#: ../../docs/training_manual/processing/r_intro.rst:164
+msgid "Create a vector"
+msgstr "Skapa en vektor"
+
+#: ../../docs/training_manual/processing/r_intro.rst:166
+msgid ""
+"You can also create a vector layer and have it automatically loaded into "
+"QGIS."
+msgstr ""
+"Du kan också skapa ett vektorlager och få det automatiskt inläst i QGIS."
+
+#: ../../docs/training_manual/processing/r_intro.rst:169
+msgid ""
+"The following example has been taken from the ``Random sampling grid`` "
+"script that can be found in the online collection of R scripts (the scripts "
+"in this online collection can be found in https://github.com/qgis/QGIS-"
+"Processing/tree/master/rscripts)."
+msgstr ""
+"Följande exempel har hämtats från skriptet ``Random sampling grid`` som "
+"finns i online-samlingen av R-skript (skripten i denna online-samling finns "
+"på https://github.com/qgis/QGIS-Processing/tree/master/rscripts)."
+
+#: ../../docs/training_manual/processing/r_intro.rst:174
+msgid ""
+"The aim of this exercise is to create a random point vector layer using an "
+"input vector layer to restrict the extent using the ``spsample`` function of"
+" the ``sp`` package."
+msgstr ""
+"Syftet med denna övning är att skapa ett slumpmässigt punktvektorlager med "
+"hjälp av ett ingångsvektorlager för att begränsa omfattningen med hjälp av "
+"funktionen ``spsample`` i paketet ``sp``."
+
+#: ../../docs/training_manual/processing/r_intro.rst:182
+msgid "As before we have to set some parameters before the script body:"
+msgstr ""
+"Som tidigare måste vi ställa in några parametrar innan skriptet börjar:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:184
+msgid ""
+"Specify the name of the group in which you want to put your script, in this "
+"case *Point pattern analysis*::"
+msgstr ""
+"Ange namnet på den grupp där du vill placera ditt skript, i det här fallet "
+"*Point pattern analysis*::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:188
+msgid ""
+"Define an input parameter (a vector layer) that will constrain the placement"
+" of the random points::"
+msgstr ""
+"Definiera en inmatningsparameter (ett vektorlager) som begränsar placeringen"
+" av de slumpmässiga punkterna::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:193
+msgid ""
+"Set an input parameter for the number of points that are going to be created"
+" (``Size``, with a default value of ``10``)::"
+msgstr ""
+"Ange en inmatningsparameter för antalet punkter som ska skapas (``Size``, "
+"med ett standardvärde på ``10``)::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:198
+msgid ""
+"Since a default value (``10``) is defined, the user can change this number "
+"or can leave the parameter without a number."
+msgstr ""
+"Eftersom ett standardvärde (``10``) har definierats kan användaren ändra "
+"detta tal eller lämna parametern utan tal."
+
+#: ../../docs/training_manual/processing/r_intro.rst:201
+msgid "Specify that there is an output vector layer (called ``Output``)::"
+msgstr "Ange att det finns ett utmatningsvektorlager (kallat ``Output``)::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:208
+msgid "Now you can add the body of the function:"
+msgstr "Nu kan du lägga till funktionens huvuddel:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:210
+msgid "Use the ``spsample`` function::"
+msgstr "Använd funktionen ``spsample``::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:214
+msgid ""
+"The function uses the *Layer* to constrain the placement of the points (if "
+"it is a line layer, a points will have to be on one of the lines in the "
+"layer, if it is a polygon layer, a point will have to be within a polygon). "
+"The number of points is taken from the *Size* parameter. The sampling method"
+" is *random*."
+msgstr ""
+"Funktionen använder *Layer* för att begränsa punkternas placering (om det är"
+" ett linjelager måste en punkt ligga på en av linjerna i lagret, om det är "
+"ett polygonlager måste en punkt ligga inom en polygon). Antalet punkter "
+"hämtas från parametern *Size*. Provtagningsmetoden är *slumpmässig*."
+
+#: ../../docs/training_manual/processing/r_intro.rst:221
+msgid "Generate the output (the ``Output`` parameter)::"
+msgstr "Generera utdata (parametern ``Output``)::"
+
+#: ../../docs/training_manual/processing/r_intro.rst:236
+msgid "Save it and run it, clicking on the run button."
+msgstr "Spara den och kör den genom att klicka på körknappen."
+
+#: ../../docs/training_manual/processing/r_intro.rst:238
+msgid "In the new window type in the right parameters:"
+msgstr "I det nya fönstret skriver du in rätt parametrar:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:242
+msgid "and click on run."
+msgstr "och klicka på Kör."
+
+#: ../../docs/training_manual/processing/r_intro.rst:244
+msgid ""
+"The result layer will be added to the table of contents and its points will "
+"be displayed on the map canvas:"
+msgstr ""
+"Resultatlagret läggs till i innehållsförteckningen och dess punkter visas på"
+" kartbilden:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:251
+msgid "Text and graph output from R - syntax"
+msgstr "Text- och grafutmatning från R - syntax"
+
+#: ../../docs/training_manual/processing/r_intro.rst:253
+msgid ""
+"Processing (with the ``Processing R Provider plugin``) uses special syntax "
+"to get the results out of R:"
+msgstr ""
+"Processing (med plugin-programmet ``Processing R Provider``) använder "
+"speciell syntax för att få ut resultaten från R:"
+
+#: ../../docs/training_manual/processing/r_intro.rst:256
+msgid ""
+"``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the "
+"result should be sent to R output (Result viewer)"
+msgstr ""
+"``>`` före ditt kommando, som i ``>lillie.test(Layer[[Field]])`` betyder att"
+" resultatet ska skickas till R-utdata (Result viewer)"
+
+#: ../../docs/training_manual/processing/r_intro.rst:258
+msgid ""
+"``+`` after a plot enables overlay plots. For example ``plot(Layer[[X]], "
+"Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
+msgstr ""
+"``+`` efter en plott aktiverar överlagrade plottar. Till exempel "
+"``plot(Lager[[X]], Lager[[Y]]) + abline(h=medelvärde(Lager[[X]]))``"
