@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,20 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:5
+msgid "Vector Data"
+msgstr "Vektordata"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:8
 msgid "|gentleLogo|"
@@ -36,18 +51,834 @@ msgstr "gentleLogo"
 msgid "Objectives:"
 msgstr "Mål:"
 
+#: ../../docs/gentle_gis_introduction/vector_data.rst:8
+msgid "Understanding of vector data models as used in GIS."
+msgstr "Förståelse för vektordatamodeller som används i GIS."
+
 #: ../../docs/gentle_gis_introduction/vector_data.rst:10
 msgid "Keywords:"
 msgstr "Nyckelord:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:10
+msgid ""
+"Vector, Point, Polyline, Polygon, Vertex, Geometry, Scale, Data Quality, "
+"Symbology, Data Sources"
+msgstr ""
+"Vektor, punkt, polylinje, polygon, vertex, geometri, skala, datakvalitet, "
+"symbologi, datakällor"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:14
 msgid "Overview"
 msgstr "Översikt"
 
+#: ../../docs/gentle_gis_introduction/vector_data.rst:16
+msgid ""
+"**Vector** data provide a way to represent real world **features** within "
+"the GIS environment. A feature is anything you can see on the landscape. "
+"Imagine you are standing on the top of a hill. Looking down you can see "
+"houses, roads, trees, rivers, and so on (see "
+":numref:`figure_vector_landscape`). Each one of these things would be a "
+"**feature** when we represent them in a GIS Application. Vector features "
+"have **attributes**, which consist of text or numerical information that "
+"**describe** the features."
+msgstr ""
+"** Vektordata** är ett sätt att representera verkliga **funktioner** i GIS-"
+"miljön. En funktion är något som du kan se i landskapet. Föreställ dig att "
+"du står på toppen av en kulle. När du tittar nedåt kan du se hus, vägar, "
+"träd, floder och så vidare (se :numref:`figure_vector_landscape`). Var och "
+"en av dessa saker skulle vara en **feature** när vi representerar dem i en "
+"GIS-applikation. Vektorobjekt har **attribut**, som består av text eller "
+"numerisk information som **beskriver** objekten."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:30
+msgid ""
+"Looking over a landscape you can see the main features, such as roads, "
+"houses and trees."
+msgstr ""
+"När du tittar på ett landskap kan du se huvuddragen, t.ex. vägar, hus och "
+"träd."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:33
+msgid ""
+"A vector feature has its shape represented using **geometry**. The geometry "
+"is made up of one or more interconnected **vertices**. A vertex describes a "
+"position in space using an **X**, **Y** and optionally **Z** axis. "
+"Geometries which have vertices with a ``Z`` axis are often referred to as "
+"**2.5D** since they describe height or depth at each vertex, but not both."
+msgstr ""
+"En vektorfunktion har sin form representerad med hjälp av **geometri**. "
+"Geometrin består av en eller flera sammankopplade **vertices**. En vertex "
+"beskriver en position i rummet med hjälp av en **X**-, **Y**- och eventuellt"
+" **Z**-axel. Geometrier som har vertex med en ``Z``-axel kallas ofta "
+"**2,5D** eftersom de beskriver höjd eller djup vid varje vertex, men inte "
+"både och."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:39
+msgid ""
+"When a feature's geometry consists of only a single vertex, it is referred "
+"to as a **point** feature (see illustration "
+":numref:`figure_geometry_point`). Where the geometry consists of two or more"
+" vertices and the first and last vertex are not equal, a **polyline** "
+"feature is formed (see illustration :numref:`figure_geometry_polyline`). "
+"Where three or more vertices are present, and the last vertex is equal to "
+"the first, an enclosed **polygon** feature is formed (see illustration "
+":numref:`figure_geometry_polygon`)."
+msgstr ""
+"När en funktions geometri består av endast en enda vertex kallas den en "
+"**punkt**-funktion (se illustration :numref:`figure_geometry_point`). Om "
+"geometrin består av två eller flera hörn och det första och sista hörnet "
+"inte är lika, bildas en **polyline**-funktion (se illustration "
+":numref:`figure_geometry_polyline`). Om det finns tre eller fler hörn och "
+"det sista hörnet är lika med det första, bildas en sluten **polygon** (se "
+"illustration :numref:`figure_geometry_polygon`)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:52
+msgid ""
+"A point feature is described by its X, Y and optionally Z coordinate. The "
+"point attributes describe the point e.g. if it is a tree or a lamp post."
+msgstr ""
+"En punkt beskrivs av dess X-, Y- och eventuellt Z-koordinat. Punktattributen"
+" beskriver punkten, t.ex. om det är ett träd eller en lyktstolpe."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:61
+msgid ""
+"A polyline is a sequence of joined vertices. Each vertex has an X, Y (and "
+"optionally Z) coordinate. Attributes describe the polyline."
+msgstr ""
+"En polylinje är en sekvens av sammanfogade hörnpunkter. Varje hörnpunkt har "
+"en X-, Y- (och eventuellt Z-) koordinat. Attribut beskriver polylinjen."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:70
+msgid ""
+"A polygon, like a polyline, is a sequence of vertices. However in a polygon,"
+" the first and last vertices are always at the same position."
+msgstr ""
+"En polygon är, precis som en polylinje, en sekvens av hörnpunkter. I en "
+"polygon är dock den första och den sista hörnpunkten alltid på samma plats."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:73
+msgid ""
+"Looking back at the picture of a landscape we showed you further up, you "
+"should be able to see the different types of features in the way that a GIS "
+"represents them now (see illustration :numref:`figure_geometry_landscape`)."
+msgstr ""
+"Om du tittar tillbaka på bilden av ett landskap som vi visade dig längre upp"
+" bör du kunna se de olika typerna av funktioner på det sätt som ett GIS "
+"representerar dem nu (se illustration :numref:`figure_geometry_landscape`)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:83
+msgid ""
+"Landscape features as we would present them in a GIS. Rivers (blue) and "
+"roads (green) can be represented as lines, trees as points (red) and houses "
+"as polygons (white)."
+msgstr ""
+"Landskapselement så som vi skulle presentera dem i ett GIS. Floder (blå) och"
+" vägar (gröna) kan representeras som linjer, träd som punkter (röda) och hus"
+" som polygoner (vita)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:88
+msgid "Point features in detail"
+msgstr "Punktfunktioner i detalj"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:90
+msgid ""
+"The first thing we need to realise when talking about point features is that"
+" what we describe as a point in GIS is a matter of opinion, and often "
+"dependent on scale. let's look at cities for example. If you have a small "
+"scale map (which covers a large area), it may make sense to represent a city"
+" using a point feature. However as you zoom in to the map, moving towards a "
+"larger scale, it makes more sense to show the city limits as a polygon."
+msgstr ""
+"Det första vi måste inse när vi talar om punktfunktioner är att vad vi "
+"beskriver som en punkt i GIS är en fråga om åsikt och ofta beroende av "
+"skala. låt oss titta på städer till exempel. Om du har en småskalig karta "
+"(som täcker ett stort område) kan det vara vettigt att representera en stad "
+"med hjälp av en punktfunktion. Men när du zoomar in på kartan och rör dig "
+"mot en större skala är det mer meningsfullt att visa stadsgränserna som en "
+"polygon."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:97
+msgid ""
+"When you choose to use points to represent a feature is mostly a matter of "
+"scale (how far away are you from the feature), convenience (it takes less "
+"time and effort to create point features than polygon features), and the "
+"type of feature (some things like telephone poles just don't make sense to "
+"be stored as polygons)."
+msgstr ""
+"När du väljer att använda punkter för att representera en funktion är mest "
+"en fråga om skala (hur långt bort är du från funktionen), bekvämlighet (det "
+"tar mindre tid och ansträngning att skapa punktfunktioner än "
+"polygonfunktioner) och typen av funktion (vissa saker som telefonstolpar är "
+"helt enkelt inte meningsfulla att lagra som polygoner)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:102
+msgid ""
+"As we show in illustration :numref:`figure_geometry_point`, a point feature "
+"has an X, Y and optionally, Z value. The X and Y values will depend on the "
+"**Coordinate Reference System** (CRS) being used. We are going to go into "
+"more detail about Coordinate Reference Systems in a later tutorial. For now "
+"let's simply say that a CRS is a way to accurately describe where a "
+"particular place is on the earth's surface. One of the most common reference"
+" systems is **Longitude and Latitude**. Lines of Longitude run from the "
+"North Pole to the South Pole. Lines of Latitude run from the East to West. "
+"You can describe precisely where you are at any place on the earth by giving"
+" someone your Longitude (X) and Latitude (Y). If you make a similar "
+"measurement for a tree or a telephone pole and marked it on a map, you will "
+"have created a point feature."
+msgstr ""
+"Som vi visar i illustrationen :numref:`figure_geometry_point` har en "
+"punktfunktion ett X-, Y- och eventuellt Z-värde. X- och Y-värdena beror på "
+"vilket **koordinatreferenssystem** (CRS) som används. Vi kommer att gå in "
+"mer i detalj på koordinatreferenssystem i en senare handledning. För "
+"tillfället kan vi helt enkelt säga att ett CRS är ett sätt att exakt "
+"beskriva var en viss plats befinner sig på jordens yta. Ett av de vanligaste"
+" referenssystemen är **Longitud och Latitud**. Longitudlinjerna går från "
+"nordpolen till sydpolen. Latitudlinjerna går från öst till väst. Du kan "
+"beskriva exakt var du befinner dig på vilken plats som helst på jorden genom"
+" att ange din longitud (X) och latitud (Y). Om du gör en liknande mätning "
+"för ett träd eller en telefonstolpe och markerar det på en karta, har du "
+"skapat en punktfunktion."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:114
+msgid ""
+"Since we know the earth is not flat, it is often useful to add a Z value to "
+"a point feature. This describes how high above sea level you are."
+msgstr ""
+"Eftersom vi vet att jorden inte är platt är det ofta användbart att lägga "
+"till ett Z-värde till en punktfunktion. Detta beskriver hur högt över havet "
+"du befinner dig."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:118
+msgid "Polyline features in detail"
+msgstr "Polylinjefunktioner i detalj"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:120
+msgid ""
+"Where a point feature is a single vertex, **a polyline has two or more "
+"vertices**. The polyline is a continuous path drawn through each vertex, as "
+"shown in :numref:`figure_geometry_polyline`. When two vertices are joined, a"
+" line is created. When more than two are joined, they form a 'line of "
+"lines', or **polyline**."
+msgstr ""
+"Där en punktfunktion är ett enda vertex, **har en polylinje två eller flera "
+"vertex**. Polylinjen är en kontinuerlig bana som dras genom varje vertex, "
+"vilket visas i :numref:`figure_geometry_polyline`. När två hörn sammanfogas "
+"skapas en linje. När fler än två är sammanfogade bildar de en \"linje av "
+"linjer\", eller **polylinje**."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:125
+msgid ""
+"A polyline is used to show the geometry of **linear features** such as "
+"roads, rivers, contours, footpaths, flight paths and so on. Sometimes we "
+"have special rules for polylines in addition to their basic geometry. For "
+"example contour lines may touch (e.g. at a cliff face) but should never "
+"cross over each other. Similarly, polylines used to store a road network "
+"should be connected at intersections. In some GIS applications you can set "
+"these special rules for a feature type (e.g. roads) and the GIS will ensure "
+"that these polylines always comply to these rules."
+msgstr ""
+"En polylinje används för att visa geometrin för **linjära funktioner** som "
+"vägar, floder, konturer, gångstigar, flygvägar och så vidare. Ibland har vi "
+"särskilda regler för polylinjer utöver deras grundläggande geometri. "
+"Konturlinjer kan t.ex. beröra varandra (t.ex. vid en klippvägg) men får "
+"aldrig korsa varandra. På samma sätt bör polylinjer som används för att "
+"lagra ett vägnät vara anslutna vid korsningar. I vissa GIS-applikationer kan"
+" du ställa in dessa specialregler för en objekttyp (t.ex. vägar) och GIS "
+"kommer då att se till att dessa polylinjer alltid följer dessa regler."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:134
+msgid ""
+"If a curved polyline has very large distances between vertices, it may "
+"appear **angular** or jagged, depending on the scale at which it is viewed "
+"(see :numref:`figure_polyline_jagged`). Because of this it is important that"
+" polylines are digitised (captured into the computer) with distances between"
+" vertices that are small enough for the scale at which you want to use the "
+"data."
+msgstr ""
+"Om en krökt polylinje har mycket stora avstånd mellan hörnen kan den se "
+"**vinkelformad** eller ojämn ut, beroende på i vilken skala den betraktas "
+"(se :numref:`figure_polyline_jagged`). På grund av detta är det viktigt att "
+"polylinjer digitaliseras (fångas in i datorn) med avstånd mellan hörn som är"
+" tillräckligt små för den skala som du vill använda data på."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:146
+msgid ""
+"Polylines viewed at a smaller scale (1:20 000 to the left) may appear smooth"
+" and curved. When zoomed in to a larger scale (1:500 to the right) polylines"
+" may look very angular."
+msgstr ""
+"Polylinjer som betraktas i mindre skala (1:20 000 till vänster) kan se släta"
+" och böjda ut. När du zoomar in till en större skala (1:500 till höger) kan "
+"polylinjerna se mycket kantiga ut."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:150
+msgid ""
+"The **attributes** of a polyline describe its properties or characteristics."
+" For example a road polyline may have attributes that describe whether it is"
+" surfaced with gravel or tar, how many lanes it has, whether it is a one way"
+" street, and so on. The GIS can use these attributes to symbolise the "
+"polyline feature with a suitable colour or line style."
+msgstr ""
+"En polylines **attribut** beskriver dess egenskaper eller kännetecken. En "
+"vägpolylinje kan t.ex. ha attribut som beskriver om den är belagd med grus "
+"eller tjära, hur många körfält den har, om den är enkelriktad och så vidare."
+" GIS kan använda dessa attribut för att symbolisera polylinjeobjektet med en"
+" lämplig färg eller linjestil."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:157
+msgid "Polygon features in detail"
+msgstr "Polygonfunktioner i detalj"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:159
+msgid ""
+"Polygon features are **enclosed areas** like dams, islands, country "
+"boundaries and so on. Like polyline features, polygons are created from a "
+"series of vertices that are connected with a continuous line. However "
+"because a polygon always describes an enclosed area, the first and last "
+"vertices should always be at the same place! Polygons often have **shared "
+"geometry** –-- boundaries that are in common with a neighbouring polygon. "
+"Many GIS applications have the capability to ensure that the boundaries of "
+"neighbouring polygons exactly coincide. We will explore this in the "
+":ref:`gentle_gis_topology` topic later in this tutorial."
+msgstr ""
+"Polygonelement är **omslutna områden** som dammar, öar, landsgränser och så "
+"vidare. Precis som polyline-objekt skapas polygoner av en serie hörnpunkter "
+"som är förbundna med en kontinuerlig linje. Men eftersom en polygon alltid "
+"beskriver ett slutet område måste det första och sista hörnet alltid vara på"
+" samma plats! Polygoner har ofta **delad geometri** --- gränser som är "
+"gemensamma med en angränsande polygon. Många GIS-applikationer har möjlighet"
+" att se till att gränserna för närliggande polygoner sammanfaller exakt. Vi "
+"kommer att utforska detta i ämnet :ref:`gentle_gis_topology` senare i denna "
+"handledning."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:168
+msgid ""
+"As with points and polylines, polygons have **attributes**. The attributes "
+"describe each polygon. For example a dam may have attributes for depth and "
+"water quality."
+msgstr ""
+"Precis som med punkter och polylinjer har polygoner **attribut**. Attributen"
+" beskriver varje polygon. En damm kan t.ex. ha attribut för djup och "
+"vattenkvalitet."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:173
+msgid "Vector data in layers"
+msgstr "Vektordata i lager"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:175
+msgid ""
+"Now that we have described what vector data is, let's look at how vector "
+"data is managed and used in a GIS environment. Most GIS applications group "
+"vector features into **layers**. Features in a layer have the same geometry "
+"type (e.g. they will all be points) and the same kinds of attributes (e.g. "
+"information about what species a tree is for a trees layer). For example if "
+"you have recorded the positions of all the footpaths in your school, they "
+"will usually be stored together on the computer hard disk and shown in the "
+"GIS as a single layer. This is convenient because it allows you to hide or "
+"show all of the features for that layer in your GIS application with a "
+"single mouse click."
+msgstr ""
+"Nu när vi har beskrivit vad vektordata är ska vi titta på hur vektordata "
+"hanteras och används i en GIS-miljö. De flesta GIS-applikationer grupperar "
+"vektorfunktioner i **lager**. Objekten i ett lager har samma geometrityp "
+"(t.ex. är alla punkter) och samma typ av attribut (t.ex. information om "
+"vilken art ett träd är för ett trädlager). Om du t.ex. har registrerat "
+"positionerna för alla gångvägar i din skola, lagras de vanligtvis "
+"tillsammans på datorns hårddisk och visas i GIS som ett enda skikt. Det här "
+"är praktiskt eftersom du då kan dölja eller visa alla funktioner för det "
+"skiktet i GIS-programmet med ett enda musklick."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:186
+msgid "Editing vector data"
+msgstr "Redigera vektordata"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:188
+msgid ""
+"The GIS application will allow you to create and modify the geometry data in"
+" a layer --– a process called **digitising** –-- which we will look at more "
+"closely in a later tutorial. If a layer contains polygons (e.g. farm dams), "
+"the GIS application will only allow you to create new polygons in that "
+"layer. Similarly if you want to change the shape of a feature, the "
+"application will only allow you to do it if the changed shape is correct. "
+"For example it won't allow you to edit a line in such a way that it has only"
+" one vertex –-- remember in our discussion of lines above that all lines "
+"must have at least two vertices."
+msgstr ""
+"GIS-programmet tillåter dig att skapa och ändra geometridata i ett skikt ---"
+" en process som kallas **digitalisering** --- som vi kommer att titta "
+"närmare på i en senare handledning. Om ett skikt innehåller polygoner (t.ex."
+" jordbruksdammar), tillåter GIS-programmet endast att du skapar nya "
+"polygoner i det skiktet. På samma sätt gäller att om du vill ändra formen på"
+" en funktion, tillåter programmet dig bara att göra det om den ändrade "
+"formen är korrekt. Det går t.ex. inte att redigera en linje så att den bara "
+"har ett toppunkt --- kom ihåg att alla linjer måste ha minst två toppunkter,"
+" vilket vi diskuterade i avsnittet om linjer ovan."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:197
+msgid ""
+"Creating and editing vector data is an important function of a GIS since it "
+"is one of the main ways in which you can create personal data for things you"
+" are interested in. Say for example you are monitoring pollution in a river."
+" You could use the GIS to digitise all outfalls for storm water drains (as "
+"point features). You could also digitise the river itself (as a polyline "
+"feature). Finally you could take readings of pH levels along the course of "
+"the river and digitise the places where you made these readings (as a point "
+"layer)."
+msgstr ""
+"Att skapa och redigera vektordata är en viktig funktion i ett GIS eftersom "
+"det är ett av de viktigaste sätten att skapa personliga data för saker som "
+"du är intresserad av. Säg till exempel att du övervakar föroreningar i en "
+"flod. Du kan använda GIS för att digitalisera alla utlopp för "
+"dagvattenledningar (som punktobjekt). Du kan också digitalisera själva "
+"floden (som en polylinjefunktion). Slutligen kan du göra mätningar av pH-"
+"värden längs floden och digitalisera de platser där du gjort dessa mätningar"
+" (som ett punktlager)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:205
+msgid ""
+"As well as creating your own data, there is a lot of free vector data that "
+"you can obtain and use. For example, you can obtain vector data that appears"
+" on the 1:50 000 map sheets from the Chief Directorate: Surveys and Mapping."
+msgstr ""
+"Förutom att du kan skapa dina egna data finns det en hel del gratis "
+"vektordata som du kan få och använda. Du kan till exempel hämta vektordata "
+"som visas på kartbladen 1:50 000 från Chief Directorate: Undersökningar och "
+"kartläggning."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:210
+msgid "Scale and vector data"
+msgstr "Skal- och vektordata"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:212
+msgid ""
+"Map **scale** is an important issue to consider when working with vector "
+"data in a GIS. When data is captured, it is usually digitised from existing "
+"maps, or by taking information from surveyor records and global positioning "
+"system devices. Maps have different scales, so if you import vector data "
+"from a map into a GIS environment (for example by digitising paper maps), "
+"the digital vector data will have the same scale issues as the original map."
+" This effect can be seen in illustrations "
+":numref:`figure_vector_small_scale` and :numref:`figure_vector_large_scale`."
+" Many issues can arise from making a poor choice of map scale. For example "
+"using the vector data in illustration :numref:`figure_vector_small_scale` to"
+" plan a wetland conservation area could result in important parts of the "
+"wetland being left out of the reserve! On the other hand if you are trying "
+"to create a regional map, using data captured at 1:1000 000 might be just "
+"fine and will save you a lot of time and effort capturing the data."
+msgstr ""
+"Kartans **skala** är en viktig fråga att ta hänsyn till när man arbetar med "
+"vektordata i ett GIS. När data samlas in digitaliseras de vanligtvis från "
+"befintliga kartor eller genom att information hämtas från lantmäteriakter "
+"och enheter för globala positioneringssystem. Kartor har olika skalor, så om"
+" du importerar vektordata från en karta till en GIS-miljö (t.ex. genom att "
+"digitalisera papperskartor) kommer de digitala vektordata att ha samma "
+"skalproblem som originalkartan. Denna effekt kan ses i illustrationerna "
+":numref:`figure_vector_small_scale` och :numref:`figure_vector_large_scale`."
+" Många problem kan uppstå om man gör ett dåligt val av kartskala. Om man "
+"t.ex. använder vektordata i illustrationen "
+":numref:`figure_vector_small_scale` för att planera ett våtmarksskyddsområde"
+" kan det leda till att viktiga delar av våtmarken lämnas utanför reservatet!"
+" Om du å andra sidan försöker skapa en regional karta kan det vara helt okej"
+" att använda data som samlats in i skala 1:1000 000, vilket sparar dig "
+"mycket tid och ansträngning när du samlar in data."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:232
+msgid ""
+"Vector data (red lines) that was digitised from a small scale (1:1000 000) "
+"map."
+msgstr ""
+"Vektordata (röda linjer) som digitaliserades från en småskalig karta (1:1000"
+" 000)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:240
+msgid ""
+"Vector data (green lines) that was digitised from a large scale (1:50 000) "
+"map."
+msgstr ""
+"Vektordata (gröna linjer) som digitaliserades från en storskalig karta (1:50"
+" 000)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:243
+msgid "Symbology"
+msgstr "Symbologi"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:245
+msgid ""
+"When you add vector layers to the map view in a GIS application, they will "
+"be drawn with random colours and basic symbols. One of the great advantages "
+"of using a GIS is that you can create personalised maps very easily. The GIS"
+" program will let you choose colours to suite the feature type (e.g. you can"
+" tell it to draw a water bodies vector layer in blue). The GIS will also let"
+" you adjust the symbol used. So if you have a trees point layer, you can "
+"show each tree position with a small picture of a tree, rather than the "
+"basic circle marker that the GIS uses when you first load the layer (see "
+"illustrations :numref:`figure_vector_symbology`, "
+":numref:`figure_generic_symbology` and :numref:`figure_custom_symbology`)."
+msgstr ""
+"När du lägger till vektorlager i kartvyn i ett GIS-program ritas de med "
+"slumpmässiga färger och enkla symboler. En av de stora fördelarna med att "
+"använda ett GIS är att du mycket enkelt kan skapa personliga kartor. I GIS-"
+"programmet kan du välja färger som passar till funktionstypen (du kan t.ex. "
+"be programmet att rita ett vektorlager med vattendrag i blått). GIS låter "
+"dig också justera den symbol som används. Så om du har ett trädpunktsskikt "
+"kan du visa varje trädposition med en liten bild av ett träd, i stället för "
+"den grundläggande cirkelmarkören som GIS använder när du först laddar "
+"skiktet (se illustrationerna :numref:`figure_vector_symbology`, "
+":numref:`figure_generic_symbology` och :numref:`figure_custom_symbology`)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:261
+msgid ""
+"In the GIS, you can use a panel (like the one above) to adjust how features "
+"in your layer should be drawn."
+msgstr ""
+"I GIS kan du använda en panel (som den ovan) för att justera hur funktioner "
+"i ditt lager ska ritas."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:270
+msgid ""
+"When a layer (for example the trees layer above) is first loaded, a GIS "
+"application will give it a generic symbol."
+msgstr ""
+"När ett skikt (t.ex. trädskiktet ovan) laddas första gången kommer ett GIS-"
+"program att ge det en generisk symbol."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:279
+msgid ""
+"After making our adjustments it is much easier to see that our points "
+"represent trees."
+msgstr ""
+"När vi har gjort våra justeringar är det mycket lättare att se att våra "
+"punkter representerar träd."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:282
+msgid ""
+"Symbology is a powerful feature, making maps come to life and the data in "
+"your GIS easier to understand. In the topic that follows "
+"(:ref:`gentle_gis_attributes`) we will explore more deeply how symbology can"
+" help the user to understand vector data."
+msgstr ""
+"Symbologi är en kraftfull funktion som ger liv åt kartor och gör det lättare"
+" att förstå data i ditt GIS. I följande ämne (:ref:`gentle_gis_attributes`) "
+"kommer vi att gå djupare in på hur symbologi kan hjälpa användaren att "
+"förstå vektordata."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:288
+msgid "What can we do with vector data in a GIS?"
+msgstr "Vad kan vi göra med vektordata i ett GIS?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:290
+msgid ""
+"At the simplest level we can use vector data in a GIS Application in much "
+"the same way you would use a normal topographic map. The real power of GIS "
+"starts to show itself when you start to ask questions like 'which houses are"
+" within the 100 year flood level of a river?'; 'where is the best place to "
+"put a hospital so that it is easily accessible to as many people as "
+"possible?'; 'which learners live in a particular suburb?'. A GIS is a great "
+"tool for answering these types of questions with the help of vector data. "
+"Generally we refer to the process of answering these types of questions as "
+"**spatial analysis**. In later topics of this tutorial we will look at "
+"spatial analysis in more detail."
+msgstr ""
+"På den enklaste nivån kan vi använda vektordata i en GIS-applikation på "
+"ungefär samma sätt som du skulle använda en vanlig topografisk karta. Den "
+"verkliga kraften i GIS börjar visa sig när man börjar ställa frågor som "
+"\"vilka hus ligger inom 100-årsflödet i en flod?\"; \"var är det bästa "
+"stället att placera ett sjukhus så att det är lättillgängligt för så många "
+"människor som möjligt?\"; \"vilka elever bor i en viss förort?\". Ett GIS är"
+" ett utmärkt verktyg för att besvara den här typen av frågor med hjälp av "
+"vektordata. I allmänhet kallar vi processen för att besvara den här typen av"
+" frågor för **rumslig analys**. I senare delar av denna handledning kommer "
+"vi att titta närmare på rumslig analys."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:301
+msgid "Common problems with vector data"
+msgstr "Vanliga problem med vektordata"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:303
+msgid ""
+"Working with vector data does have some problems. We already mentioned the "
+"issues that can arise with vectors captured at different scales. Vector data"
+" also needs a lot of work and maintenance to ensure that it is accurate and "
+"reliable. Inaccurate vector data can occur when the instruments used to "
+"capture the data are not properly set up, when the people capturing the data"
+" aren't being careful, when time or money don't allow for enough detail in "
+"the collection process, and so on."
+msgstr ""
+"Att arbeta med vektordata innebär vissa problem. Vi har redan nämnt de "
+"problem som kan uppstå med vektorer som fångats i olika skalor. Vektordata "
+"kräver också mycket arbete och underhåll för att de ska vara korrekta och "
+"tillförlitliga. Felaktiga vektordata kan uppstå när de instrument som "
+"används för att samla in data inte är korrekt inställda, när de personer som"
+" samlar in data inte är försiktiga, när tid eller pengar inte räcker till "
+"för att samla in tillräckligt med detaljer, och så vidare."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:311
+msgid ""
+"If you have poor quality vector data, you can often detect this when viewing"
+" the data in a GIS. For example **slivers** can occur when the edges of two "
+"polygon areas don't meet properly (see :numref:`figure_vector_slivers`)."
+msgstr ""
+"Om du har vektordata av dålig kvalitet kan du ofta upptäcka detta när du "
+"tittar på data i ett GIS. Till exempel kan **slivers** uppstå när kanterna "
+"på två polygonområden inte möts ordentligt (se "
+":numref:`figure_vector_slivers`)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:321
+msgid ""
+"Slivers occur when the vertices of two polygons do not match up on their "
+"borders. At a small scale (e.g. 1 on left) you may not be able to see these "
+"errors. At a large scale they are visible as thin strips between two "
+"polygons (2 on right)."
+msgstr ""
+"Slivers uppstår när hörnen på två polygoner inte matchar varandra på deras "
+"kanter. I liten skala (t.ex. 1 till vänster) är det inte säkert att du kan "
+"se dessa fel. I stor skala syns de som tunna remsor mellan två polygoner (2 "
+"till höger)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:326
+msgid ""
+"**Overshoots** can occur when a line feature such as a road does not meet "
+"another road exactly at an intersection. **Undershoots** can occur when a "
+"line feature (e.g. a river) does not exactly meet another feature to which "
+"it should be connected. Figure :numref:`figure_vector_shoots` demonstrates "
+"what undershoots and overshoots look like."
+msgstr ""
+"**Overshoots** kan uppstå när en linjefunktion, t.ex. en väg, inte möter en "
+"annan väg exakt i en korsning. **Undershoots** kan uppstå när en "
+"linjefunktion (t.ex. en flod) inte exakt möter en annan funktion som den ska"
+" anslutas till. Figur :numref:`figure_vector_shoots` visar hur underskott "
+"och överskott ser ut."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:338
+msgid ""
+"Undershoots (1) occur when digitised vector lines that should connect to "
+"each other don’t quite touch. Overshoots (2) happen if a line ends beyond "
+"the line it should connect to."
+msgstr ""
+"Undershoots (1) uppstår när digitaliserade vektorlinjer som ska ansluta till"
+" varandra inte riktigt rör vid varandra. Overshoots (2) inträffar om en "
+"linje slutar bortom den linje som den ska ansluta till."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:342
+msgid ""
+"Because of these types of errors, it is very important to digitise data "
+"carefully and accurately. In the upcoming topic on **topology**, we will "
+"examine some of these types of errors in more detail."
+msgstr ""
+"På grund av dessa typer av fel är det mycket viktigt att digitalisera data "
+"noggrant och exakt. I det kommande ämnet om **topologi** kommer vi att "
+"undersöka några av dessa typer av fel mer i detalj."
+
 #: ../../docs/gentle_gis_introduction/vector_data.rst:347
 msgid "What have we learned?"
 msgstr "Vad har vi lärt oss?"
 
+#: ../../docs/gentle_gis_introduction/vector_data.rst:349
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Låt oss sammanfatta vad vi behandlat i det här arbetsbladet:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:351
+msgid "**Vector data** is used to represent real world **features** in a GIS."
+msgstr ""
+"** Vektordata** används för att representera verkliga **funktioner** i ett "
+"GIS."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:352
+msgid ""
+"A vector feature can have a **geometry** type of **point**, **line** or a "
+"**polygon**."
+msgstr ""
+"En vektorfunktion kan ha en **geometri** av typen **punkt**, **linje** eller"
+" en **polygon**."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:354
+msgid "Each vector feature has **attribute data** that describes it."
+msgstr "Varje vektorfunktion har **attributdata** som beskriver den."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:355
+msgid "Feature geometry is described in terms of **vertices.**"
+msgstr "Objektets geometri beskrivs i termer av **vertices.**"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:356
+msgid ""
+"Point geometries are made up of a **single vertex** (X,Y and optionally Z)."
+msgstr ""
+"Punktgeometrier består av ett **enkelt vertex** (X, Y och eventuellt Z)."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:357
+msgid ""
+"Polyline geometries are made up of **two or more** vertices forming a "
+"connected line."
+msgstr ""
+"Polylinjegeometrier består av **två eller fler** hörnpunkter som bildar en "
+"sammanhängande linje."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:359
+msgid ""
+"Polygon geometries are made up of **at least four vertices** forming an "
+"enclosed area. The first and last vertices are always in the same place."
+msgstr ""
+"Polygongeometrier består av **minst fyra hörn** som bildar ett omslutet "
+"område. Det första och sista hörnet är alltid på samma plats."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:361
+msgid ""
+"Choosing which geometry type to use depends on scale, convenience and what "
+"you want to do with the data in the GIS."
+msgstr ""
+"Vilken geometrityp som ska användas beror på skala, bekvämlighet och vad du "
+"vill göra med data i GIS."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:363
+msgid ""
+"Most GIS applications do not allow you to mix more than one geometry type in"
+" a single layer."
+msgstr ""
+"De flesta GIS-program tillåter inte att man blandar mer än en geometrityp i "
+"ett och samma lager."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:365
+msgid ""
+"Digitising is the process of creating digital vector data by drawing it in a"
+" GIS application."
+msgstr ""
+"Digitalisering är en process där man skapar digitala vektordata genom att "
+"rita dem i en GIS-applikation."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:367
+msgid ""
+"Vector data can have quality issues such as **undershoots**, **overshoots** "
+"and **slivers** which you need to be aware of."
+msgstr ""
+"Vektordata kan ha kvalitetsproblem som **underskott**, **överskott** och "
+"**slivers** som du måste vara medveten om."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:369
+msgid ""
+"Vector data can be used for **spatial analysis** in a GIS application, for "
+"example to find the nearest hospital to a school."
+msgstr ""
+"Vektordata kan användas för **rumslig analys** i ett GIS-program, t.ex. för "
+"att hitta närmaste sjukhus till en skola."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:372
+msgid ""
+"We have summarised the GIS Vector Data concept in Figure "
+":numref:`figure_vector_summary`."
+msgstr ""
+"Vi har sammanfattat GIS-vektordatakonceptet i figur "
+":numref:`figure_vector_summary`."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:380
+msgid "This diagram shows how GIS applications deal with vector data."
+msgstr "Detta diagram visar hur GIS-applikationer hanterar vektordata."
+
 #: ../../docs/gentle_gis_introduction/vector_data.rst:383
 msgid "Now you try!"
 msgstr "Nu får du försöka!"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:385
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Här är några idéer som du kan prova med dina elever:"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:387
+msgid ""
+"Using a copy of a toposheet map for your local area (like the one shown in "
+":numref:`figure_sample_map`), see if your learners can identify examples of "
+"the different types of vector data by highlighting them on the map."
+msgstr ""
+"Använd en kopia av en toposheet-karta för ditt lokala område (som den som "
+"visas i :numref:`figure_sample_map`) och se om dina elever kan identifiera "
+"exempel på de olika typerna av vektordata genom att markera dem på kartan."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:390
+msgid ""
+"Think of how you would create vector features in a GIS to represent real "
+"world features on your school grounds. Create a table of different features "
+"in and around your school and then task your learners to decide whether they"
+" would be best represented in the GIS as a point, line or polygon. See "
+"table_vector_1_ for an example."
+msgstr ""
+"Fundera på hur du skulle skapa vektorfunktioner i ett GIS för att "
+"representera verkliga funktioner på din skolgård. Skapa en tabell över olika"
+" funktioner i och runt din skola och låt sedan eleverna avgöra om de bäst "
+"representeras i GIS som en punkt, linje eller polygon. Se tabell_vektor_1_ "
+"för ett exempel."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:402
+msgid ""
+"Can you identify two point features and one polygon feature on this map?"
+msgstr ""
+"Kan du identifiera två punktobjekt och ett polygonobjekt på den här kartan?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:408
+msgid "Real world feature"
+msgstr "Funktion i den verkliga världen"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:408
+msgid "Suitable Geometry Type"
+msgstr "Lämplig geometrityp"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:410
+msgid "The school flagpole"
+msgstr "Skolans flaggstång"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:412
+msgid "The soccer field"
+msgstr "Fotbollsplanen"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:414
+msgid "The footpaths in and around the school"
+msgstr "Gångstigarna i och runt skolan"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:416
+msgid "Places where taps are located"
+msgstr "Platser där kranar är placerade"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:418
+msgid "Etc."
+msgstr "Och så vidare."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:421
+msgid ""
+"Table Vector 1: Create a table like this (leaving the geometry type column "
+"empty) and ask your learners to decide on suitable geometry types."
+msgstr ""
+"Tabell Vektor 1: Skapa en tabell som denna (lämna kolumnen för geometrityp "
+"tom) och be dina elever att besluta om lämpliga geometrityper."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:425
+msgid "Something to think about"
+msgstr "Något att tänka på"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:427
+msgid ""
+"If you don't have a computer available, you can use a toposheet and "
+"transparency sheets to show your learners about vector data."
+msgstr ""
+"Om du inte har en dator tillgänglig kan du använda ett toposark och "
+"transparensark för att visa dina elever om vektordata."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:431
+msgid "Further reading"
+msgstr "Ytterligare läsning"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:433
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"vector data in QGIS."
+msgstr ""
+"QGIS User Guide innehåller också mer detaljerad information om hur man "
+"arbetar med vektordata i QGIS."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:437
+msgid "What's next?"
+msgstr "Vad kommer härnäst?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:439
+msgid ""
+"In the section that follows we will take a closer look at **attribute data**"
+" to see how it can be used to describe vector features."
+msgstr ""
+"I avsnittet som följer kommer vi att titta närmare på **attributdata** för "
+"att se hur de kan användas för att beskriva vektoregenskaper."
