@@ -1,0 +1,824 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:2
+msgid "Lesson: Creating a New Vector Dataset"
+msgstr "Lektion: Skapa en ny vektordatauppsättning"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:4
+msgid ""
+"The data that you use has to come from somewhere. For most common "
+"applications, the data exists already; but the more particular and "
+"specialized the project, the less likely it is that the data will already be"
+" available. In such cases, you'll need to create your own new data."
+msgstr ""
+"De data som du använder måste komma någonstans ifrån. För de flesta vanliga "
+"tillämpningar finns data redan, men ju mer speciellt och specialiserat "
+"projektet är, desto mindre sannolikt är det att data redan finns "
+"tillgängliga. I sådana fall måste du skapa dina egna nya data."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:9
+msgid "**The goal for this lesson:** To create a new vector dataset."
+msgstr ""
+"**Målet för den här lektionen:** Att skapa en ny vektordatauppsättning."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:12
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: The Layer Creation Dialog"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Dialogrutan för skapande av lager"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:14
+msgid ""
+"Before you can add new vector data, you need a vector dataset to add it to. "
+"In our case, you'll begin by creating new data entirely, rather than editing"
+" an existing dataset. Therefore, you'll need to define your own new dataset "
+"first."
+msgstr ""
+"Innan du kan lägga till nya vektordata behöver du en vektordatauppsättning "
+"att lägga till dem i. I vårt fall kommer du att börja med att skapa helt nya"
+" data, snarare än att redigera en befintlig dataset. Därför måste du först "
+"definiera din egen nya datauppsättning."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:18
+msgid "Open QGIS and create a new blank project."
+msgstr "Öppna QGIS och skapa ett nytt tomt projekt."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:19
+msgid ""
+"Navigate to and click on the menu entry :menuselection:`Layer --> Create "
+"Layer --> New Shapefile Layer`. You'll be presented with the :guilabel:`New "
+"Shapefile Layer` dialog, which will allow you to define a new layer."
+msgstr ""
+"Navigera till och klicka på menyposten :menuselection:`Layer --> Create "
+"Layer --> New Shapefile Layer`. Du kommer att få upp dialogrutan "
+":guilabel:`New Shapefile Layer`, där du kan definiera ett nytt lager."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:27
+msgid ""
+"Click :guilabel:`...` for the :guilabel:`File name` field. A save dialog "
+"will appear."
+msgstr ""
+"Klicka på :guilabel:`...` för fältet :guilabel:`Filnamn`. En dialogruta för "
+"att spara visas."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:29
+msgid "Navigate to the :file:`exercise_data` directory."
+msgstr "Navigera till katalogen :file:`exercise_data`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:30
+msgid "Save your new layer as :file:`school_property.shp`."
+msgstr "Spara ditt nya lager som :file:`school_property.shp`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:32
+msgid ""
+"It's important to decide which kind of dataset you want at this stage. Each "
+"different vector layer type is \"built differently\" in the background, so "
+"once you've created the layer, you can't change its type."
+msgstr ""
+"Det är viktigt att du bestämmer dig för vilken typ av dataset du vill ha i "
+"det här skedet. Alla olika typer av vektorlager \"byggs upp på olika sätt\" "
+"i bakgrunden, så när du väl har skapat lagret kan du inte ändra dess typ."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:36
+msgid ""
+"For the next exercise, we're going to create new features which describe "
+"areas. For such features, you'll need to create a polygon dataset."
+msgstr ""
+"I nästa övning ska vi skapa nya funktioner som beskriver områden. För sådana"
+" funktioner måste du skapa en polygondatauppsättning."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:39
+msgid ""
+"For :guilabel:`Geometry Type`, select :guilabel:`Polygon` from the drop down"
+" menu:"
+msgstr ""
+"För :guilabel:`Geometry Type`, välj :guilabel:`Polygon` från "
+"rullgardinsmenyn:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:44
+msgid ""
+"This has no impact on the rest of the dialog, but it will cause the correct "
+"type of geometry to be used when the vector dataset is created."
+msgstr ""
+"Detta har ingen inverkan på resten av dialogen, men det kommer att leda till"
+" att rätt typ av geometri används när vektordatasetet skapas."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:47
+msgid ""
+"The next field allows you to specify the Coordinate Reference System, or "
+"CRS. CRS is a method of associating numerical coordinates with a position on"
+" the surface of the Earth. See the User Manual on :ref:`Working with "
+"Projections <label_projections>` to learn more."
+msgstr ""
+"I nästa fält kan du ange referenssystemet för koordinater, CRS (Coordinate "
+"Reference System). CRS är en metod för att associera numeriska koordinater "
+"med en position på jordens yta. Mer information finns i användarhandboken "
+":ref:`Arbeta med projektioner <label_projections>`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:53
+msgid ""
+"For this example we will use the default CRS associated with this project, "
+"which is WGS84."
+msgstr ""
+"I det här exemplet använder vi det standard-CRS som är kopplat till det här "
+"projektet, vilket är WGS84."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:59
+msgid ""
+"Next there is a collection of fields grouped under :guilabel:`New Field`. By"
+" default, a new layer has only one attribute, the ``id`` field (which you "
+"should see in the :guilabel:`Fields list`) below. However, in order for the "
+"data you create to be useful, you actually need to say something about the "
+"features you'll be creating in this new layer. For our current purposes, it "
+"will be enough to add one field called ``name`` that will hold ``Text data``"
+" and will be limited to text length of ``80`` characters."
+msgstr ""
+"Därefter finns en samling fält grupperade under :guilabel:`New Field`. Som "
+"standard har ett nytt lager bara ett attribut, fältet ``id`` (som du bör se "
+"i :guilabel:`Fields list`) nedan. Men för att de data du skapar ska vara "
+"användbara måste du faktiskt säga något om de funktioner du kommer att skapa"
+" i detta nya skikt. För våra nuvarande syften räcker det att lägga till ett "
+"fält som heter ``name`` som kommer att innehålla ``Text data`` och kommer "
+"att begränsas till en textlängd på ``80`` tecken."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:67
+msgid ""
+"Replicate the setup below, then click the :guilabel:`Add to Fields List` "
+"button:"
+msgstr ""
+"Replikera installationen nedan och klicka sedan på knappen :guilabel:`Add to"
+" Fields List`:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:72
+msgid "Check that your dialog now looks like this:"
+msgstr "Kontrollera att din dialogruta nu ser ut så här:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:77
+msgid "Click :guilabel:`OK`"
+msgstr "Klicka på :guilabel:`OK`"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:79
+msgid "The new layer should appear in your :guilabel:`Layers` panel."
+msgstr "Det nya lagret bör visas i din :guilabel:`Layers`-panel."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:84
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Data Sources"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Datakällor"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:86
+msgid ""
+"When you create new data, it obviously has to be about objects that really "
+"exist on the ground. Therefore, you'll need to get your information from "
+"somewhere."
+msgstr ""
+"När du skapar ny data måste den naturligtvis handla om objekt som verkligen "
+"finns på marken. Därför måste du hämta din information någonstans ifrån."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:90
+msgid ""
+"There are many different ways to obtain data about objects. For example, you"
+" could use a GPS to capture points in the real world, then import the data "
+"into QGIS afterwards. Or you could survey points using a theodolite, and "
+"enter the coordinates manually to create new features. Or you could use the "
+"digitizing process to trace objects from remote sensing data, such as "
+"satellite imagery or aerial photography."
+msgstr ""
+"Det finns många olika sätt att få fram data om objekt. Du kan t.ex. använda "
+"en GPS för att mäta in punkter i verkligheten och sedan importera data till "
+"QGIS efteråt. Eller så kan du mäta in punkter med en teodolit och ange "
+"koordinaterna manuellt för att skapa nya objekt. Eller så kan du använda "
+"digitaliseringsprocessen för att spåra objekt från fjärranalysdata, t.ex. "
+"satellitbilder eller flygfotografier."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:97
+msgid ""
+"For our example, you'll be using the digitizing approach. Sample raster "
+"datasets are provided, so you'll need to import them as necessary."
+msgstr ""
+"I vårt exempel kommer du att använda digitaliseringsmetoden. Exempel på "
+"rasterdatauppsättningar tillhandahålls, så du måste importera dem efter "
+"behov."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:100
+msgid "Click on |dataSourceManager| :sup:`Data Source Manager` button."
+msgstr "Klicka på knappen |dataSourceManager| :sup:`Data Source Manager`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:381
+msgid "dataSourceManager"
+msgstr "dataSourceManager"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:101
+msgid "Select |raster| :guilabel:`Raster` on the left side."
+msgstr "Välj |raster| :guilabel:`Raster` på vänster sida."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:383
+msgid "raster"
+msgstr "raster"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:102
+msgid "In the :guilabel:`Source` panel, click on the :guilabel:`...` button:"
+msgstr "I panelen :guilabel:`Source` klickar du på knappen :guilabel:`...`:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:103
+msgid "Navigate to :file:`exercise_data/raster/`."
+msgstr "Navigera till :file:`exercise_data/raster/`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:104
+msgid "Select the file :file:`3420C_2010_327_RGB_LATLNG.tif`."
+msgstr "Välj filen :file:`3420C_2010_327_RGB_LATLNG.tif`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:105
+msgid "Click :guilabel:`Open` to close the dialogue window."
+msgstr "Klicka på :guilabel:`Open` för att stänga dialogfönstret."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:110
+msgid ""
+"Click :guilabel:`Add` and :guilabel:`Close`. An image will load into your "
+"map."
+msgstr ""
+"Klicka på :guilabel:`Add` och :guilabel:`Close`. En bild kommer att laddas "
+"in i din karta."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:115
+msgid ""
+"If you don't see an aerial image appear, select the new layer, right click, "
+"and choose :guilabel:`Zoom to Layer` in the context menu."
+msgstr ""
+"Om du inte ser någon flygbild visas markerar du det nya lagret, högerklickar"
+" och väljer :guilabel:`Zoom to Layer` i snabbmenyn."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:121
+msgid ""
+"Click on the |zoomIn| :sup:`Zoom In` button, and zoom to the area "
+"highlighted in blue below:"
+msgstr ""
+"Klicka på knappen |zoomIn| :sup:`Zoom In` och zooma till det område som är "
+"markerat med blått nedan:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:394
+msgid "zoomIn"
+msgstr "zoomIn"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:127
+msgid "Now you are ready to digitize these three fields:"
+msgstr "Nu är du redo att digitalisera dessa tre fält:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:132
+msgid ""
+"Before starting to digitize, let's move the ``school_property`` layer above "
+"the aerial image."
+msgstr ""
+"Innan vi börjar digitalisera, låt oss flytta skiktet ``school_property`` "
+"över flygbilden."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:134
+msgid ""
+"Select ``school_property`` layer in the :guilabel:`Layers` pane and drag it "
+"to the top."
+msgstr ""
+"Markera skiktet ``school_property`` i rutan :guilabel:`Layers` och dra det "
+"till toppen."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:139
+msgid ""
+"In order to begin digitizing, you'll need to enter **edit mode**. GIS "
+"software commonly requires this to prevent you from accidentally editing or "
+"deleting important data. Edit mode is switched on or off individually for "
+"each layer."
+msgstr ""
+"För att kunna påbörja digitaliseringen måste du gå in i **redigeringsläge**."
+" GIS-programvara kräver ofta detta för att förhindra att du av misstag "
+"redigerar eller raderar viktiga data. Redigeringsläget slås på eller av "
+"individuellt för varje lager."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:143
+msgid "To enter edit mode for the ``school_property`` layer:"
+msgstr "För att gå in i redigeringsläge för skiktet ``school_property``:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:145
+msgid ""
+"Click on the ``school_property`` layer in the :guilabel:`Layers` panel to "
+"select it."
+msgstr ""
+"Klicka på skiktet ``school_property`` i panelen :guilabel:`Layers` för att "
+"markera det."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:146
+msgid "Click on the |toggleEditing| :sup:`Toggle Editing` button."
+msgstr "Klicka på knappen |toggleEditing| :sup:`Toggle Editing`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:388
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:148
+msgid ""
+"If you can't find this button, check that the :guilabel:`Digitizing` toolbar"
+" is enabled. There should be a check mark next to the :menuselection:`View "
+"--> Toolbars --> Digitizing` menu entry."
+msgstr ""
+"Om du inte kan hitta den här knappen, kontrollera att verktygsfältet "
+":guilabel:`Digitizing` är aktiverat. Det bör finnas en bock bredvid "
+":menuselection:`View --> Toolbars --> Digitizing`-menyposten."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:152
+msgid ""
+"As soon as you are in edit mode, you'll see that some digitizing tools have "
+"become active:"
+msgstr ""
+"Så snart du är i redigeringsläget ser du att vissa digitaliseringsverktyg "
+"har blivit aktiva:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:155
+msgid "|capturePolygon| :sup:`Capture Polygon`"
+msgstr "|capturePolygon| :sup:`Capture Polygon`"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:379
+msgid "capturePolygon"
+msgstr "capturePolygon"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:156
+msgid "|vertexToolActiveLayer| :sup:`Vertex Tool`"
+msgstr "|vertexToolActiveLayer| :sup:`Vertexverktyg`"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:392
+msgid "vertexToolActiveLayer"
+msgstr "vertexToolActiveLayer"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:158
+msgid ""
+"Other relevant buttons are still inactive, but will become active when we "
+"start interacting with our new data."
+msgstr ""
+"Andra relevanta knappar är fortfarande inaktiva, men kommer att aktiveras "
+"när vi börjar interagera med våra nya data."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:161
+msgid ""
+"Notice that the layer ``school_property`` in the :guilabel:`Layers` panel "
+"now has the pencil icon, indicating that it is in edit mode."
+msgstr ""
+"Lägg märke till att lagret ``school_property`` i :guilabel:`Layers`-panelen "
+"nu har en pennikon, vilket visar att det är i redigeringsläge."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:164
+msgid ""
+"Click on the |capturePolygon| :sup:`Capture Polygon` button to begin "
+"digitizing our school fields."
+msgstr ""
+"Klicka på knappen |capturePolygon| :sup:`Capture Polygon` för att börja "
+"digitalisera våra skolgårdar."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:167
+msgid ""
+"You'll notice that your mouse cursor has become a crosshair. This allows you"
+" to more accurately place the points you'll be digitizing. Remember that "
+"even when you're using the digitizing tool, you can zoom in and out on your "
+"map by rolling the mouse wheel, and you can pan around by holding down the "
+"mouse wheel and dragging around in the map."
+msgstr ""
+"Du kommer att märka att din muspekare har blivit ett hårkors. Detta gör att "
+"du mer exakt kan placera de punkter som du ska digitalisera. Kom ihåg att "
+"även när du använder digitaliseringsverktyget kan du zooma in och ut på "
+"kartan genom att rulla mushjulet, och du kan panorera genom att hålla "
+"mushjulet nedtryckt och dra runt i kartan."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:173
+msgid "The first feature you'll be digitizing is the |schoolAreaType1|:"
+msgstr "Den första funktionen som du ska digitalisera är |schoolAreaType1|:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:178
+msgid ""
+"Start digitizing by clicking on a point somewhere along the edge of the "
+"field."
+msgstr ""
+"Börja digitaliseringen genom att klicka på en punkt någonstans längs fältets"
+" kant."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:179
+msgid ""
+"Place more points by clicking further along the edge, until the shape you're"
+" drawing completely covers the field."
+msgstr ""
+"Placera fler punkter genom att klicka längre ut längs kanten, tills den form"
+" du ritar täcker hela fältet."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:185
+msgid ""
+"After placing your last point, right click to finish drawing the polygon. "
+"This will finalize the feature and show you the :guilabel:`Attributes` "
+"dialog."
+msgstr ""
+"När du har placerat ut den sista punkten högerklickar du för att avsluta "
+"polygonritningen. Detta kommer att slutföra funktionen och visa dialogrutan "
+":guilabel:`Attributes`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:187
+msgid "Fill in the values as below:"
+msgstr "Fyll i värdena enligt nedan:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:192
+msgid "Click :guilabel:`OK`, and you have created a new feature!"
+msgstr "Klicka på :guilabel:`OK`, så har du skapat en ny funktion!"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:197
+msgid "In the :guilabel:`Layers` panel select the ``school_property`` layer."
+msgstr "I panelen :guilabel:`Layers` markerar du lagret ``school_property``."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:198
+msgid ""
+"Right click and choose :guilabel:`Open Attribute Table` in the context menu."
+msgstr "Högerklicka och välj :guilabel:`Open Attribute Table` i snabbmenyn."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:203
+msgid ""
+"In the table you will see the feature you just added. While in edit mode you"
+" can update the attributes data by double click on the cell you want to "
+"update."
+msgstr ""
+"I tabellen ser du den funktion som du just har lagt till. När du är i "
+"redigeringsläge kan du uppdatera attributdata genom att dubbelklicka på den "
+"cell du vill uppdatera."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:210
+msgid "Close the attribute table."
+msgstr "Stäng attributtabellen."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:211
+msgid ""
+"To save the new feature we just created, click on |saveEdits| :sup:`Save "
+"Edits` button."
+msgstr ""
+"För att spara den nya funktionen vi just skapat, klicka på |saveEdits| "
+":sup:`Save Edits`-knappen."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:385
+msgid "saveEdits"
+msgstr "saveEdits"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:213
+msgid ""
+"Remember, if you've made a mistake while digitizing a feature, you can "
+"always edit it after you're done creating it. If you've made a mistake, "
+"continue digitizing until you're done creating the feature as above. Then:"
+msgstr ""
+"Kom ihåg att om du har gjort ett misstag när du digitaliserade en funktion "
+"kan du alltid redigera den efter att du har skapat den. Om du har gjort ett "
+"misstag fortsätter du att digitalisera tills du är klar med att skapa "
+"inslaget enligt ovan. Därefter..:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:217
+msgid "Click on |vertexToolActiveLayer| :sup:`Vertex Tool` button."
+msgstr "Klicka på knappen |vertexToolActiveLayer| :sup:`Vertex Tool`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:218
+msgid ""
+"Hover the mouse over a vertex you want to move and left click on the vertex."
+msgstr ""
+"Håll muspekaren över en toppunkt som du vill flytta och vänsterklicka på "
+"toppunkten."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:219
+msgid ""
+"Move the mouse to the correct location of the vertex, and left click. This "
+"will move the vertex to the new location."
+msgstr ""
+"Flytta musen till rätt plats för toppunktet och vänsterklicka. Detta flyttar"
+" toppunkten till den nya platsen."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:227
+msgid ""
+"The same procedure can be used to move a line segment, but you will need to "
+"hover over the midpoint of the line segment."
+msgstr ""
+"Samma procedur kan användas för att flytta ett linjesegment, men du måste då"
+" hålla muspekaren över linjesegmentets mittpunkt."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:230
+msgid ""
+"If you want to undo a change, you can press the |undo| :sup:`Undo` button or"
+" :kbd:`Ctrl+Z`."
+msgstr ""
+"Om du vill ångra en ändring kan du trycka på knappen |undo| :sup:`Undo` "
+"eller :kbd:`Ctrl+Z`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:390
+msgid "undo"
+msgstr "undo"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:232
+msgid ""
+"Remember to save your changes by clicking the |saveEdits| :sup:`Save Edits` "
+"button."
+msgstr ""
+"Kom ihåg att spara dina ändringar genom att klicka på knappen |saveEdits| "
+":sup:`Save Edits`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:233
+msgid ""
+"When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to"
+" get out of edit mode."
+msgstr ""
+"När du är klar med redigeringen klickar du på knappen |toggleEditing| "
+":sup:`Toggle Editing` för att gå ur redigeringsläget."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:238
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Digitizing Polygons"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Prova själv: Digitalisera polygoner"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:240
+msgid ""
+"Digitize the school itself and the upper field. Use this image to assist "
+"you:"
+msgstr ""
+"Digitalisera själva skolan och det övre fältet. Använd den här bilden som "
+"hjälp:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:245
+msgid "Remember that each new feature needs to have a unique ``id`` value!"
+msgstr "Kom ihåg att varje ny funktion måste ha ett unikt \"id\"-värde!"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:247
+msgid ""
+"When you're done adding features to a layer, remember to save your edits and"
+" then exit edit mode."
+msgstr ""
+"När du är klar med att lägga till funktioner i ett lager ska du komma ihåg "
+"att spara dina ändringar och sedan avsluta redigeringsläget."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:250
+msgid ""
+"You can style the fill, outline and label placement and formatting of the "
+"``school_property`` using techniques learnt in earlier lessons."
+msgstr ""
+"Du kan utforma fyllning, kontur och etikettplacering och formatering av "
+"``school_property`` med hjälp av tekniker som du lärt dig i tidigare "
+"lektioner."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:256
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Using Vertex Editor Table"
+msgstr ":abbr:`★★☆ (Måttlig nivå)` Följ med: Använda Vertex Editor Table"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:258
+msgid ""
+"Another way to edit a feature is to manually enter the actual coordinate "
+"values for each vertex using the :guilabel:`Vertex Editor` table."
+msgstr ""
+"Ett annat sätt att redigera en funktion är att manuellt ange de faktiska "
+"koordinatvärdena för varje vertex med hjälp av tabellen :guilabel:`Vertex "
+"Editor`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:262
+msgid "Make sure you are in edit mode on layer ``school_property``."
+msgstr "Se till att du är i redigeringsläge på lagret ``school_property``."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:263
+msgid ""
+"If not already activated, click on |vertexToolActiveLayer| :sup:`Vertex "
+"Tool` button."
+msgstr ""
+"Om den inte redan är aktiverad, klicka på |vertexToolActiveLayer| "
+":sup:`Vertex Tool`-knappen."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:265
+msgid ""
+"Move the mouse over one of the polygon features you created in the "
+"``school_property`` layer and right click on it. This will select the "
+"feature and a :guilabel:`Vertex Editor` pane will appear."
+msgstr ""
+"För musen över en av de polygonfunktioner som du skapade i lagret "
+"``school_property`` och högerklicka på den. Då markeras funktionen och en "
+"ruta med :guilabel:`Vertex Editor` visas."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:272
+msgid ""
+"This table contains the coordinates for the vertices of the feature. Notice "
+"there are seven vertices for this feature, but only six are visually "
+"identified in the map area. Upon closer inspection, one will notice that row"
+" 0 and 6 have identical coordinates. These are the start and end vertices of"
+" the feature geometry, and are required in order to create a closed polygon "
+"feature."
+msgstr ""
+"Denna tabell innehåller koordinaterna för objektets hörn. Observera att det "
+"finns sju hörnpunkter för denna funktion, men endast sex är visuellt "
+"identifierade i kartområdet. Vid närmare granskning märker man att rad 0 och"
+" 6 har identiska koordinater. Dessa är start- och slutpunkterna för "
+"objektets geometri och krävs för att skapa ett slutet polygonobjekt."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:280
+msgid ""
+"Click and drag a box over a vertex, or multiple vertices, of the selected "
+"feature."
+msgstr ""
+"Klicka och dra en ruta över en eller flera toppar på den valda funktionen."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:285
+msgid ""
+"The selected vertices will change to a color blue and the :guilabel:`Vertex "
+"Editor` table will have the corresponding rows highlighted, which contain "
+"the coordinates of the vertices."
+msgstr ""
+"De markerade hörnen får en blå färg och i tabellen :guilabel:`Vertex Editor`"
+" markeras motsvarande rader, som innehåller hörnens koordinater."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:292
+msgid ""
+"To update a coordinate, double left click on the cell in the table that you "
+"want to edit and enter the updated value. In this example, the x coordinate "
+"of row ``4`` is updated from ``20.4450`` to ``20.4444``."
+msgstr ""
+"För att uppdatera en koordinat dubbelklickar du med vänster musknapp på den "
+"cell i tabellen som du vill redigera och anger det uppdaterade värdet. I det"
+" här exemplet uppdateras x-koordinaten för rad ``4`` från ``20.4450`` till "
+"``20.4444``."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:300
+msgid ""
+"After entering the updated value, hit the enter key to apply the change. You"
+" will see the vertex move to the new location in the map window."
+msgstr ""
+"När du har angett det uppdaterade värdet trycker du på enter-knappen för att"
+" tillämpa ändringen. Du kommer att se att vertexen flyttas till den nya "
+"platsen i kartfönstret."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:302
+msgid ""
+"When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to"
+" get out of edit mode, and save your edits."
+msgstr ""
+"När du är klar med redigeringen klickar du på knappen |toggleEditing| "
+":sup:`Toggle Editing` för att gå ur redigeringsläget och spara dina "
+"ändringar."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:306
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Digitizing Lines"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Prova själv: Digitalisera linjer"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:307
+msgid ""
+"We are going to digitize two routes which are not already marked on the "
+"roads layer; one is a path, the other is a track. Our path runs along the "
+"southern edge of the suburb of Railton, starting and ending at marked roads:"
+msgstr ""
+"Vi kommer att digitalisera två vägar som inte redan är markerade på "
+"väglagret; den ena är en stig, den andra är ett spår. Vår väg går längs den "
+"södra kanten av förorten Railton och börjar och slutar vid markerade vägar:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:315
+msgid "Our track is a little further to the south:"
+msgstr "Vårt spår ligger lite längre söderut:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:320
+msgid ""
+"If the *roads* layer is not yet in your map, then add the :file:`roads` "
+"layer from the GeoPackage file :file:`training-data.gpkg` included in the "
+":file:`exercise_data` folder of the training data you downloaded. You can "
+"read :ref:`load_geopackage` for a how-to."
+msgstr ""
+"Om skiktet *vägar* ännu inte finns på din karta lägger du till skiktet "
+":file:`roads` från GeoPackage-filen :file:`training-data.gpkg` som finns i "
+"mappen :file:`exercise_data` i de träningsdata som du hämtade. Du kan läsa "
+":ref:`load_geopackage` för en beskrivning av hur du gör."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:324
+msgid ""
+"Create a new ESRI Shapefile line dataset called ``routes.shp`` in the "
+":file:`exercise_data` directory, with attributes ``id`` and ``type`` (use "
+"the approach above to guide you.)"
+msgstr ""
+"Skapa en ny ESRI Shapefile-linjedatauppsättning med namnet ``routes.shp`` i "
+"katalogen :file:`exercise_data`, med attributen ``id`` och ``type`` (använd "
+"metoden ovan för att vägleda dig)"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:327
+msgid "Activate edit mode on the :guilabel:`routes` layer."
+msgstr "Aktivera redigeringsläget på skiktet :guilabel:`routes`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:328
+msgid ""
+"Since you are working with a line feature, click on the |captureLine| "
+":sup:`Add Line` button to initiate line digitizing mode."
+msgstr ""
+"Eftersom du arbetar med en linjefunktion klickar du på knappen |captureLine|"
+" :sup:`Add Line` för att starta digitaliseringsläget för linjer."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:377
+msgid "captureLine"
+msgstr "captureLine"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:331
+msgid ""
+"One at a time, digitize the path and the track on the ``routes`` layer. Try "
+"to follow the routes as accurately as possible, adding additional points "
+"along corners or turns."
+msgstr ""
+"Digitalisera stigen och spåret en i taget i skiktet ``routes``. Försök att "
+"följa rutterna så exakt som möjligt och lägg till ytterligare punkter längs "
+"hörn eller svängar."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:334
+msgid "Set the ``type`` attribute value to ``path`` or ``track``."
+msgstr "Ställ in attributvärdet ``type`` till ``path`` eller ``track``."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:335
+msgid ""
+"Use the :guilabel:`Layer Properties` dialog to add styling to your routes. "
+"Feel free to use different styles for paths and tracks."
+msgstr ""
+"Använd dialogrutan :guilabel:`Layer Properties` för att lägga till styling "
+"på dina rutter. Använd gärna olika stilar för stigar och spår."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:337
+msgid ""
+"Save your edits and toggle off editing mode by pressing the |toggleEditing| "
+":sup:`Toggle Editing` button."
+msgstr ""
+"Spara dina ändringar och stäng av redigeringsläget genom att trycka på "
+"knappen |toggleEditing| :sup:`Toggle Editing`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:340
+msgid "Answer"
+msgstr "Svar"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:343
+msgid ""
+"The symbology doesn't matter, but the results should look more or less like "
+"this:"
+msgstr ""
+"Symbologin spelar ingen roll, men resultatet bör se ut ungefär så här:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:351
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:353
+msgid ""
+"Now you know how to create features! This course doesn't cover adding point "
+"features, because that's not really necessary once you've worked with more "
+"complicated features (lines and polygons). It works exactly the same, except"
+" that you only click once where you want the point to be, give it attributes"
+" as usual, and then the feature is created."
+msgstr ""
+"Nu vet du hur du skapar features! Den här kursen handlar inte om att lägga "
+"till punktfunktioner, eftersom det inte är nödvändigt när du har arbetat med"
+" mer komplicerade funktioner (linjer och polygoner). Det fungerar precis "
+"likadant, förutom att du bara klickar en gång där du vill att punkten ska "
+"vara, ger den attribut som vanligt och sedan skapas funktionen."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:359
+msgid ""
+"Knowing how to digitize is important because it's a very common activity in "
+"GIS programs."
+msgstr ""
+"Att veta hur man digitaliserar är viktigt eftersom det är en mycket vanlig "
+"aktivitet i GIS-program."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:363
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:365
+msgid ""
+"Features in a GIS layer aren't just pictures, but objects in space. For "
+"example, adjacent polygons know where they are in relation to one another. "
+"This is called **topology**. In the next lesson you'll see an example of why"
+" this can be useful."
+msgstr ""
+"Objekten i ett GIS-skikt är inte bara bilder, utan även objekt i rymden. "
+"Till exempel vet polygoner som ligger intill varandra var de befinner sig i "
+"förhållande till varandra. Detta kallas **topologi**. I nästa lektion får du"
+" se ett exempel på varför detta kan vara användbart."
