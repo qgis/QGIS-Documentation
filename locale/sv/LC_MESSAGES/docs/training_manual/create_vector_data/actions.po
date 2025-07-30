@@ -1,0 +1,725 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:2
+msgid "Lesson: Actions"
+msgstr "Lektion: Åtgärder"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:4
+msgid ""
+"Now that you have seen a default action in the previous lesson, it is time "
+"to define your own actions."
+msgstr ""
+"Nu när du har sett en standardåtgärd i den föregående lektionen är det dags "
+"att definiera dina egna åtgärder."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:7
+msgid ""
+"An action is something that happens when you click on a feature. It can add "
+"a lot of extra functionality to your map, allowing you to retrieve "
+"additional information about an object, for example. Assigning actions can "
+"add a whole new dimension to your map!"
+msgstr ""
+"En åtgärd är något som händer när du klickar på en funktion. Det kan ge "
+"många extra funktioner till din karta, t.ex. att du kan hämta ytterligare "
+"information om ett objekt. Genom att tilldela åtgärder kan du ge din karta "
+"en helt ny dimension!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:12
+msgid "**The goal for this lesson:** To learn how to add custom actions."
+msgstr ""
+"**Målet med den här lektionen:** Att lära dig hur du lägger till anpassade "
+"åtgärder."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:14
+msgid ""
+"In this lesson you will use the :guilabel:`school_property` layer you "
+"created previously. The sample data include photos of each of the three "
+"properties you digitized. What we are going to do is to associate each "
+"property with its image. Then we will create an action that will open the "
+"image for a property when clicking on the property."
+msgstr ""
+"I den här lektionen kommer du att använda skiktet "
+":guilabel:`school_property` som du skapade tidigare. Exempeldata innehåller "
+"foton av var och en av de tre fastigheter som du digitaliserade. Vad vi ska "
+"göra är att associera varje fastighet med dess bild. Sedan ska vi skapa en "
+"åtgärd som öppnar bilden för en fastighet när du klickar på fastigheten."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:23
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Add a Field for Images"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Lägg till ett fält för bilder"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:25
+msgid ""
+"The ``school_property`` layer has no way to associate an image with a "
+"property yet. First we will create a field for this purpose."
+msgstr ""
+"Lagret ``school_property`` har ännu inget sätt att associera en bild med en "
+"fastighet. Först ska vi skapa ett fält för detta ändamål."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:28
+msgid "Open the :guilabel:`Layer Properties` dialog."
+msgstr "Öppna dialogrutan :guilabel:`Layer Properties`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:29
+msgid "Click on the :guilabel:`Fields` tab."
+msgstr "Klicka på fliken :guilabel:`Fields`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:30
+msgid "Toggle editing mode:"
+msgstr "Växla redigeringsläge:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:35
+msgid "Add a new column:"
+msgstr "Lägg till en ny kolumn:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:40
+msgid "Enter the values below:"
+msgstr "Ange värdena nedan:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:45
+msgid ""
+"After the field has been created, move to the :guilabel:`Attributes Form` "
+"tab and select the ``image`` field."
+msgstr ""
+"När fältet har skapats går du till fliken :guilabel:`Attributes Form` och "
+"väljer fältet ``image``."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:47
+msgid "Set :guilabel:`Widget Type` to :guilabel:`Attachment`:"
+msgstr "Ställ in :guilabel:`Widget Type` på :guilabel:`Attachment`:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:52
+msgid "Click :guilabel:`OK` in the :guilabel:`Layer Properties` dialog."
+msgstr "Klicka på :guilabel:`OK` i dialogrutan :guilabel:`Layer Properties`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:53
+msgid ""
+"Use the :guilabel:`Identify` tool to click on one of the three features in "
+"the :guilabel:`school_property` layer."
+msgstr ""
+"Använd verktyget :guilabel:`Identify` för att klicka på en av de tre "
+"objekten i skiktet :guilabel:`school_property`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:56
+msgid ""
+"Since you are still in edit mode, the dialog should be active and look like "
+"this:"
+msgstr ""
+"Eftersom du fortfarande befinner dig i redigeringsläge bör dialogen vara "
+"aktiv och se ut så här:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:62
+msgid ""
+"Click on the browse button (the :guilabel:`...` next to the "
+":guilabel:`image` field)."
+msgstr ""
+"Klicka på bläddringsknappen (:guilabel:`...` bredvid fältet "
+":guilabel:`image`)."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:64
+msgid ""
+"Select the path for your image. The images are in "
+":file:`exercise_data/school_property_photos/` and are named the same as the "
+"features they should be associated with."
+msgstr ""
+"Välj sökvägen för din bild. Bilderna finns i "
+":file:``exercise_data/school_property_photos/` och har samma namn som de "
+"funktioner de ska associeras med."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:67
+msgid "Click :guilabel:`OK`."
+msgstr "Klicka på :guilabel:`OK`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:68
+msgid ""
+"Associate all of the images with the correct features using this method."
+msgstr ""
+"Associera alla bilder med rätt funktioner med hjälp av den här metoden."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:70
+msgid "Save your edits and exit edit mode."
+msgstr "Spara dina ändringar och avsluta redigeringsläget."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:74
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Creating an Action"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Skapa en åtgärd"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:76
+msgid ""
+"Open the :guilabel:`Actions` tab for the :guilabel:`school_property` layer, "
+"and click on the |symbologyAdd| :sup:`Add a new action` button."
+msgstr ""
+"Öppna fliken :guilabel:`Actions` för skiktet :guilabel:`school_property` och"
+" klicka på knappen |symbologyAdd| :sup:`Lägg till en ny åtgärd`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:347
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:83
+msgid ""
+"In the :guilabel:`Add New Action` dialog, enter the words ``Show Image`` "
+"into the :guilabel:`Description` field:"
+msgstr ""
+"I dialogrutan :guilabel:`Add New Action` skriver du in orden ``Show Image`` "
+"i fältet :guilabel:`Description`:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:89
+#: ../../docs/training_manual/create_vector_data/actions.rst:175
+msgid ""
+"What to do next varies according to your operating system, so choose the "
+"appropriate course to follow:"
+msgstr ""
+"Vad du ska göra härnäst varierar beroende på ditt operativsystem, så välj "
+"lämplig väg att följa:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:92
+#: ../../docs/training_manual/create_vector_data/actions.rst:178
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:94
+msgid "Click on the :guilabel:`Type` dropdown and choose :guilabel:`Open`."
+msgstr ""
+"Klicka på rullgardinsmenyn :guilabel:`Type` och välj :guilabel:`Open`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:97
+#: ../../docs/training_manual/create_vector_data/actions.rst:184
+msgid "Ubuntu Linux"
+msgstr "Ubuntu Linux"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:99
+msgid ""
+"Under :guilabel:`Action`, write ``eog`` for the *Gnome Image Viewer*, or "
+"write ``display`` to use *ImageMagick*. Remember to put a space after the "
+"command!"
+msgstr ""
+"Under :guilabel:`Action`, skriv ``eog`` för *Gnome Image Viewer*, eller "
+"skriv ``display`` för att använda *ImageMagick*. Kom ihåg att sätta ett "
+"mellanslag efter kommandot!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:104
+#: ../../docs/training_manual/create_vector_data/actions.rst:190
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:106
+msgid "Click on the :guilabel:`Type` dropdown and choose :guilabel:`Mac`."
+msgstr "Klicka på rullgardinsmenyn :guilabel:`Type` och välj :guilabel:`Mac`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:108
+msgid ""
+"Under :guilabel:`Action`, write ``open``. Remember to put a space after the "
+"command!"
+msgstr ""
+"Under :guilabel:`Action`, skriv ``open``. Kom ihåg att sätta ett mellanslag "
+"efter kommandot!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:112
+msgid "Now you can continue writing the command."
+msgstr "Nu kan du fortsätta att skriva kommandot."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:114
+msgid ""
+"You want to open the image, and QGIS knows where the image is. All it needs "
+"to do is to tell the :guilabel:`Action` where the image is."
+msgstr ""
+"Du vill öppna bilden, och QGIS vet var bilden finns. Allt den behöver göra "
+"är att tala om för :guilabel:`Action` var bilden finns."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:118
+msgid "Select :guilabel:`image` from the list:"
+msgstr "Välj :guilabel:`image` från listan:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:123
+msgid ""
+"Click the :guilabel:`Insert field` button. QGIS will add the phrase ``[% "
+"\"image\" %]`` in the :guilabel:`Action Text` field."
+msgstr ""
+"Klicka på knappen :guilabel:`Insert field`. QGIS kommer att lägga till "
+"frasen ``[% \"image\" %]`` i fältet :guilabel:`Action Text`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:126
+#: ../../docs/training_manual/create_vector_data/actions.rst:242
+msgid ""
+"Click the :guilabel:`OK` button to close the :guilabel:`Add New Action` "
+"dialog"
+msgstr ""
+"Klicka på knappen :guilabel:`OK` för att stänga dialogrutan :guilabel:`Add "
+"New Action`"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:128
+#: ../../docs/training_manual/create_vector_data/actions.rst:244
+msgid "Click :guilabel:`OK` to close the :guilabel:`Layer Properties` dialog"
+msgstr ""
+"Klicka på :guilabel:`OK` för att stänga dialogrutan :guilabel:`Layer "
+"Properties`"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:131
+msgid "Now it is time to test the new action:"
+msgstr "Nu är det dags att testa den nya åtgärden:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:133
+msgid ""
+"Click on the :guilabel:`school_property` layer in the :guilabel:`Layers` "
+"panel so that it is highlighted."
+msgstr ""
+"Klicka på lagret :guilabel:`school_property` i panelen :guilabel:`Layers` så"
+" att det blir markerat."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:135
+msgid ""
+"Find the |actionRun| :sup:`Run feature action` button (in the "
+":guilabel:`Attributes Toolbar`)."
+msgstr ""
+"Hitta knappen |actionRun| :sup:`Run feature action` (i verktygsfältet "
+":guilabel:`Attributes Toolbar`)."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:345
+msgid "actionRun"
+msgstr "actionRun"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:137
+msgid ""
+"Click on the down arrow to the right of this button. There is only one "
+"action defined for this layer so far, which is the one you just created."
+msgstr ""
+"Klicka på nedåtpilen till höger om den här knappen. Hittills har endast en "
+"åtgärd definierats för detta lager, nämligen den som du just skapade."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:144
+msgid "Click the button itself to activate the tool."
+msgstr "Klicka på själva knappen för att aktivera verktyget."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:145
+msgid "Using this tool, click on any of the three school properties."
+msgstr ""
+"Med hjälp av detta verktyg klickar du på någon av de tre skolegenskaperna."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:147
+msgid "The image for that property should open."
+msgstr "Bilden för den fastigheten bör öppnas."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:150
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Searching the Internet"
+msgstr ":abbr:`★★☆ (Måttlig nivå)` Följ med: Söka på Internet"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:152
+msgid ""
+"Let's say we are looking at the map and want to know more about the area "
+"that a farm is in. Suppose you know nothing of the area in question and want"
+" to find general information about it. Your first impulse, considering that "
+"you're using a computer right now, would probably be to Google the name of "
+"the area. So let's tell QGIS to do that automatically for us!"
+msgstr ""
+"Låt oss säga att vi tittar på kartan och vill veta mer om det område som en "
+"gård ligger i. Anta att du inte vet något om området i fråga och vill hitta "
+"allmän information om det. Din första impuls, med tanke på att du använder "
+"en dator just nu, skulle förmodligen vara att googla områdets namn. Så låt "
+"oss säga till QGIS att göra det automatiskt åt oss!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:158
+msgid "Open the attribute table for the :guilabel:`landuse` layer."
+msgstr "Öppna attributtabellen för skiktet :guilabel:`landuse`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:160
+msgid ""
+"We will be using the ``name`` field for each of our landuse areas to search "
+"Google."
+msgstr ""
+"Vi kommer att använda fältet ``namn`` för vart och ett av våra "
+"markanvändningsområden för att söka på Google."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:162
+msgid "Close the attribute table."
+msgstr "Stäng attributtabellen."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:163
+msgid "Go back to :guilabel:`Actions` in :guilabel:`Layer Properties`."
+msgstr "Gå tillbaka till :guilabel:`Actions` i :guilabel:`Layer Properties`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:164
+msgid ""
+"Click on the :guilabel:`Create Default Actions` button to add a number of "
+"pre-defined actions."
+msgstr ""
+"Klicka på knappen :guilabel:`Create Default Actions` för att lägga till ett "
+"antal fördefinierade åtgärder."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:166
+msgid ""
+"Remove all the actions but the :guilabel:`Open URL` action with the short "
+"name :guilabel:`Search Web` using the |symbologyRemove| :sup:`Remove the "
+"selected action` button below."
+msgstr ""
+"Ta bort alla åtgärder utom åtgärden :guilabel:`Öppna URL` med det korta "
+"namnet :guilabel:`Sök på webben` med hjälp av knappen |symbologyRemove| "
+":sup:`Ta bort den valda åtgärden` nedan."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:349
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:169
+msgid "Double-click on the remaining action to edit it"
+msgstr "Dubbelklicka på den återstående åtgärden för att redigera den"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:170
+msgid ""
+"Change the :guilabel:`Description` to ``Google Search``, and remove the "
+"content of the :guilabel:`Short Name` field."
+msgstr ""
+"Ändra :guilabel:`Description` till ``Google Search``, och ta bort innehållet"
+" i fältet :guilabel:`Short Name`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:172
+msgid ""
+"Make sure that :guilabel:`Canvas` is among the checked :guilabel:`Action "
+"scopes`."
+msgstr ""
+"Kontrollera att :guilabel:`Canvas` finns med bland de kontrollerade "
+":guilabel:`Action scopes`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:180
+msgid ""
+"Under :guilabel:`Type`, choose :guilabel:`Open`. This will tell Windows to "
+"open an Internet address in your default browser, such as Internet Explorer."
+msgstr ""
+"Under :guilabel:`Type` väljer du :guilabel:`Open`. Detta kommer att tala om "
+"för Windows att öppna en Internetadress i din standardwebbläsare, till "
+"exempel Internet Explorer."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:186
+msgid ""
+"Under :guilabel:`Action`, write ``xdg-open``. This will tell Ubuntu to open "
+"an Internet address in your default browser, such as Chrome or Firefox."
+msgstr ""
+"Under :guilabel:`Action`, skriv ``xdg-open``. Detta kommer att tala om för "
+"Ubuntu att öppna en Internetadress i din standardwebbläsare, t.ex. Chrome "
+"eller Firefox."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:192
+msgid ""
+"Under :guilabel:`Action`, write ``open``. This will tell macOS to open an "
+"Internet address in your default browser, such as Safari."
+msgstr ""
+"Under :guilabel:`Action` skriver du ``open``. Detta kommer att tala om för "
+"macOS att öppna en Internetadress i din standardwebbläsare, till exempel "
+"Safari."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:196
+msgid "Now you can continue writing the command"
+msgstr "Nu kan du fortsätta att skriva kommandot"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:198
+msgid ""
+"Whichever command you used above, you need to tell it which Internet address"
+" to open next. You want it to visit Google, and to search for a phrase "
+"automatically."
+msgstr ""
+"Oavsett vilket kommando du använde ovan måste du tala om vilken "
+"Internetadress som ska öppnas härnäst. Du vill att den ska besöka Google och"
+" söka efter en fras automatiskt."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:203
+msgid ""
+"Usually when you use Google, you enter your search phrase into the Google "
+"Search bar. But in this case, you want your computer to do this for you. The"
+" way you tell Google to search for something (if you don't want to use its "
+"search bar directly) is by giving your Internet browser the address "
+"``https://www.google.com/search?q=SEARCH_PHRASE``, where ``SEARCH_PHRASE``` "
+"is what you want to search for. Since we don't know what phrase to search "
+"for yet, we will just enter the first part (without the search phrase)."
+msgstr ""
+"Vanligtvis när du använder Google skriver du in din sökfras i Googles "
+"sökfält. Men i det här fallet vill du att din dator ska göra det åt dig. Det"
+" sätt du säger till Google att söka efter något (om du inte vill använda "
+"sökfältet direkt) är att ge din webbläsare adressen "
+"``https://www.google.com/search?q=SEARCH_PHRASE``, där ``SEARCH_PHRASE`` är "
+"det du vill söka efter. Eftersom vi inte vet vilken fras vi ska söka efter "
+"ännu, kommer vi bara att ange den första delen (utan sökfrasen)."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:214
+msgid ""
+"In the :guilabel:`Action` field, write ``https://www.google.com/search?q=``."
+" Remember to add a space after your initial command before writing this in!"
+msgstr ""
+"I fältet :guilabel:`Action` skriver du ``https://www.google.com/search?q=``."
+" Kom ihåg att lägga till ett mellanslag efter ditt första kommando innan du "
+"skriver in detta!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:219
+msgid ""
+"Now you want QGIS to tell the browser to tell Google to search for the value"
+" of ``name`` for any feature that you could click on."
+msgstr ""
+"Nu vill du att QGIS ska säga till webbläsaren att säga till Google att söka "
+"efter värdet på ``name`` för alla funktioner som du kan klicka på."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:222
+msgid "Select the :guilabel:`name` field."
+msgstr "Välj fältet :guilabel:`name`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:223
+msgid "Click :guilabel:`Insert` button:"
+msgstr "Klicka på :guilabel:`Insert`-knappen:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:228
+msgid ""
+"What this means is that QGIS is going to open the browser and send it to the"
+" address ``https://www.google.com/search?q=[% \"name\" %]``. ``[% \"name\" "
+"%]`` tells QGIS to use the contents of the ``name`` field as the phrase to "
+"search for."
+msgstr ""
+"Detta innebär att QGIS kommer att öppna webbläsaren och skicka den till "
+"adressen ``https://www.google.com/search?q=[% \"name\" %]``. ``[% \"name\" "
+"%]`` säger till QGIS att använda innehållet i fältet ``name`` som den fras "
+"som ska sökas efter."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:234
+msgid ""
+"So if, for example, the landuse area you click on is named ``Marloth Nature "
+"Reserve``, QGIS is going to send the browser to "
+"``https://www.google.com/search?q=Marloth%20Nature%20Reserve``, which will "
+"cause your browser to visit Google, which will in turn search for \"Marloth "
+"Nature Reserve\"."
+msgstr ""
+"Om det markanvändningsområde som du klickar på till exempel heter \"Marloth "
+"Nature Reserve\", kommer QGIS att skicka webbläsaren till "
+"\"https://www.google.com/search?q=Marloth%20Nature%20Reserve\", vilket leder"
+" till att webbläsaren besöker Google, som i sin tur söker efter \"Marloth "
+"Nature Reserve\"."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:240
+msgid "If you have not done so already, set everything up as explained above."
+msgstr ""
+"Om du inte redan har gjort det, ställ in allt enligt beskrivningen ovan."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:247
+msgid "Now to test the new action."
+msgstr "Nu ska vi testa den nya åtgärden."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:249
+msgid ""
+"With the :guilabel:`landuse` layer active in the :guilabel:`Layers` panel, "
+"click on the down arrow to the right of the |actionRun| :sup:`Run feature "
+"action` button, and select the only action (``Google Search``) defined for "
+"this layer."
+msgstr ""
+"Med lagret :guilabel:`landuse` aktivt i panelen :guilabel:`Layers` klickar "
+"du på nedåtpilen till höger om knappen |actionRun| :sup:`Run feature action`"
+" och väljer den enda åtgärd (``Google Search``) som definierats för detta "
+"lager."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:253
+msgid ""
+"Click on any landuse area you can see on the map. Your browser will now "
+"open, and will start a Google search for the place that is recorded as that "
+"area's ``name`` value."
+msgstr ""
+"Klicka på ett markanvändningsområde som du kan se på kartan. Din webbläsare "
+"öppnas nu och startar en Google-sökning efter den plats som är registrerad "
+"som områdets \"namn\"-värde."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:257
+msgid ""
+"If your action doesn't work, check that everything was entered correctly; "
+"typos are common with this kind of work!"
+msgstr ""
+"Om din åtgärd inte fungerar, kontrollera att allt har matats in korrekt; "
+"skrivfel är vanliga i den här typen av arbete!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:261
+msgid ""
+":abbr:`★★★ (Advanced level)` Follow Along: Open a Webpage Directly in QGIS"
+msgstr ""
+":abbr:`★★★★ (Avancerad nivå)` Följ med: Öppna en webbsida direkt i QGIS"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:263
+msgid ""
+"Above, you've seen how to open a webpage in an external browser. There are "
+"some shortcomings with this approach in that it adds an unknowable "
+"dependency – will the end-user have the software required to execute the "
+"action on their system? As you've seen, they don't necessarily even have the"
+" same kind of base command for the same kind of action, if you don't know "
+"which OS they will be using. With some OS versions, the above commands to "
+"open the browser might not work at all. This could be an insurmountable "
+"problem."
+msgstr ""
+"Ovan har du sett hur du öppnar en webbsida i en extern webbläsare. Det finns"
+" vissa brister med det här tillvägagångssättet eftersom det lägger till ett "
+"okänt beroende - kommer slutanvändaren att ha den programvara som krävs för "
+"att utföra åtgärden på sitt system? Som du har sett har de inte "
+"nödvändigtvis ens samma typ av baskommando för samma typ av åtgärd, om du "
+"inte vet vilket operativsystem de kommer att använda. Med vissa OS-versioner"
+" kanske ovanstående kommandon för att öppna webbläsaren inte fungerar alls. "
+"Detta kan vara ett oöverstigligt problem."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:271
+msgid ""
+"However, QGIS sits on top of the incredibly powerful and versatile Qt "
+"library. Also, QGIS actions can be arbitrary, tokenized (i.e. using variable"
+" information based on the contents of a field attribute) Python commands!"
+msgstr ""
+"QGIS bygger dock på det otroligt kraftfulla och mångsidiga Qt-biblioteket. "
+"Dessutom kan QGIS-åtgärder vara godtyckliga, tokeniserade (dvs. använda "
+"variabelinformation baserad på innehållet i ett fältattribut) Python-"
+"kommandon!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:275
+msgid ""
+"Now you will see how to use a python action to show a web page. It is the "
+"same general idea as opening a site in an external browser, but it requires "
+"no browser on the user’s system since it uses the Qt QWebView class (which "
+"is a webkit based html widget) to display the content in a pop-up window."
+msgstr ""
+"Nu ska du få se hur man använder en python-action för att visa en webbsida. "
+"Det är samma generella idé som att öppna en webbplats i en extern "
+"webbläsare, men det kräver ingen webbläsare på användarens system eftersom "
+"den använder Qt QWebView-klassen (som är en webkit-baserad html-widget) för "
+"att visa innehållet i ett popup-fönster."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:281
+msgid ""
+"Let us use Wikipedia this time. So the URL you request will look like this:"
+msgstr ""
+"Låt oss använda Wikipedia den här gången. Så den URL du begär kommer att se "
+"ut så här:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:284
+msgid "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
+msgstr "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:286
+msgid "To create the layer action:"
+msgstr "För att skapa en lageråtgärd:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:288
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog and head over to the "
+":guilabel:`Actions` tab."
+msgstr ""
+"Öppna dialogrutan :guilabel:`Layer Properties` och gå till fliken "
+":guilabel:`Actions`."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:290
+msgid "Set up a new action using the following properties for the action:"
+msgstr "Skapa en ny åtgärd med följande egenskaper för åtgärden:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:292
+msgid ":guilabel:`Type`: ``Python``"
+msgstr ":guilabel:`Typ`: ``Python``"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:293
+msgid ":guilabel:`Description`: ``Wikipedia``"
+msgstr ":guilabel:`Beskrivning`: ``Wikipedia``"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:294
+msgid ":guilabel:`Scope`: ``Feature``, ``Canvas``"
+msgstr ":guilabel:`Scope`: ``Funktion``, ``Canvas``"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:295
+msgid ":guilabel:`Action Text`::"
+msgstr ":guilabel:`Aktionstext`::"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:307
+msgid "There are a couple of things going on here:"
+msgstr "Det är ett par saker som händer här:"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:309
+msgid ""
+"``[%name%]`` will be replaced by the actual attribute value when the action "
+"is invoked (as before)."
+msgstr ""
+"``[%name%]`` kommer att ersättas av det faktiska attributvärdet när åtgärden"
+" anropas (som tidigare)."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:311
+msgid ""
+"The code simply creates a new ``QWebView`` instance, sets its URL, and then "
+"calls ``show()`` on it to make it visible as a window on the user’s desktop."
+msgstr ""
+"Koden skapar helt enkelt en ny ``QWebView``-instans, anger dess URL och "
+"anropar sedan ``show()`` på den för att göra den synlig som ett fönster på "
+"användarens skrivbord."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:315
+msgid ""
+"You could also use this approach to display an image without requiring that "
+"the users have a particular image viewer on their system."
+msgstr ""
+"Du kan också använda den här metoden för att visa en bild utan att kräva att"
+" användarna har en viss bildvisare på sitt system."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:319
+msgid ""
+"Try to use the methods described above to load a Wikipedia page using the "
+"Wikipedia action you just created."
+msgstr ""
+"Försök att använda de metoder som beskrivs ovan för att ladda en Wikipedia-"
+"sida med hjälp av den Wikipedia-åtgärd som du just skapade."
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:323
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:325
+msgid ""
+"Actions allow you to give your map extra functionality, useful to the end-"
+"user who views the same map in QGIS. Due to the fact that processes called "
+"can be shell commands for any operating system, as well as Python, the sky "
+"is the limit in terms of the functions you could incorporate!"
+msgstr ""
+"Med hjälp av åtgärder kan du ge din karta extra funktionalitet som är "
+"användbar för slutanvändaren som tittar på samma karta i QGIS. Eftersom de "
+"processer som anropas kan vara shell-kommandon för alla operativsystem, "
+"liksom Python, är det bara fantasin som sätter gränser för vilka funktioner "
+"du kan lägga till!"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:332
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/create_vector_data/actions.rst:334
+msgid ""
+"Now that you've done all kinds of vector data creation, you will learn how "
+"to analyze the data to solve problems. That is the topic of the next module."
+msgstr ""
+"Nu när du har skapat alla typer av vektordata ska du lära dig hur du "
+"analyserar data för att lösa problem. Det är ämnet för nästa modul."
