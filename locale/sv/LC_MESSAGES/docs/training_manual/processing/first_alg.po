@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:31+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/first_alg.rst:2
+msgid "Running our first algorithm. The  toolbox"
+msgstr "Kör vår första algoritm. Verktygslådan"
+
+#: ../../docs/training_manual/processing/first_alg.rst:5
+msgid ""
+"In this lesson we will run our first algorithm, and get our first result "
+"from it."
+msgstr ""
+"I den här lektionen kommer vi att köra vår första algoritm och få vårt "
+"första resultat från den."
+
+#: ../../docs/training_manual/processing/first_alg.rst:8
+msgid ""
+"As we have already mentioned, the processing framework can run algorithms "
+"from other applications, but it also contains native algorithms that need no"
+" external software to be run. To start exploring the processing framework, "
+"we are going to run one of those native algorithms. In particular, we are "
+"going to calculate the centroids of set of polygons."
+msgstr ""
+"Som vi redan har nämnt kan processramverket köra algoritmer från andra "
+"program, men det innehåller också inbyggda algoritmer som inte behöver någon"
+" extern programvara för att köras. För att börja utforska "
+"bearbetningsramverket ska vi köra en av dessa inbyggda algoritmer. I "
+"synnerhet ska vi beräkna mittpunkterna i en uppsättning polygoner."
+
+#: ../../docs/training_manual/processing/first_alg.rst:14
+msgid ""
+"First, open the QGIS project corresponding to this lesson. It contains just "
+"a single layer with two polygons"
+msgstr ""
+"Öppna först det QGIS-projekt som motsvarar den här lektionen. Det innehåller"
+" bara ett enda lager med två polygoner"
+
+#: ../../docs/training_manual/processing/first_alg.rst:19
+msgid ""
+"Now go to the text box at the top of the toolbox. That is the search box, "
+"and if you type text in it, it will filter the list of algorithms so just "
+"those ones containing the entered text are shown. If there are algorithms "
+"that match your search but belong to a provider that is not active, an "
+"additional label will be shown in the lower part of the toolbox."
+msgstr ""
+"Gå nu till textrutan längst upp i verktygslådan. Det är sökrutan, och om du "
+"skriver in text i den filtreras listan över algoritmer så att bara de som "
+"innehåller den inmatade texten visas. Om det finns algoritmer som matchar "
+"din sökning men som tillhör en leverantör som inte är aktiv, visas en "
+"ytterligare etikett i den nedre delen av verktygslådan."
+
+#: ../../docs/training_manual/processing/first_alg.rst:25
+msgid "Type ``centroids`` and you should see something like this."
+msgstr "Skriv ``centroids`` och du bör se något liknande."
+
+#: ../../docs/training_manual/processing/first_alg.rst:29
+msgid ""
+"The search box is a very practical way of finding the algorithm you are "
+"looking for. At the bottom of the dialog, an additional label shows that "
+"there are algorithms that match your search but belong to a provider that is"
+" not active. If you click on the link in that label, the list of algorithms "
+"will also include results from those inactive providers, which will be shown"
+" in light gray. A link to activate each inactive provider is also shown. "
+"We'll see later how to activate other providers."
+msgstr ""
+"Sökrutan är ett mycket praktiskt sätt att hitta den algoritm du letar efter."
+" Längst ned i dialogrutan finns en extra etikett som visar att det finns "
+"algoritmer som matchar din sökning men som tillhör en leverantör som inte är"
+" aktiv. Om du klickar på länken i den etiketten kommer listan över "
+"algoritmer också att innehålla resultat från de inaktiva leverantörerna, som"
+" visas i ljusgrått. En länk för att aktivera varje inaktiv leverantör visas "
+"också. Vi kommer senare att se hur du aktiverar andra leverantörer."
+
+#: ../../docs/training_manual/processing/first_alg.rst:39
+msgid ""
+"To execute an algorithm, you just have to double-click on its name in the "
+"toolbox. When you double-click on the *Polygon centroids* algorithm, you "
+"will see the following dialog."
+msgstr ""
+"För att köra en algoritm behöver du bara dubbelklicka på dess namn i "
+"verktygslådan. När du dubbelklickar på algoritmen *Polygon centroids* visas "
+"följande dialogruta."
+
+#: ../../docs/training_manual/processing/first_alg.rst:45
+msgid ""
+"All algorithms have a similar interface, which basically contains input "
+"parameters that you have to fill, and outputs that you have to select where "
+"to store. In this case, the only input we have is a vector layer with "
+"polygons."
+msgstr ""
+"Alla algoritmer har ett liknande gränssnitt, som i princip innehåller "
+"ingångsparametrar som du måste fylla i och utgångar som du måste välja var "
+"de ska lagras. I det här fallet är den enda indata vi har ett vektorlager "
+"med polygoner."
+
+#: ../../docs/training_manual/processing/first_alg.rst:49
+msgid ""
+"Select the *Polygons* layer as input. The algorithm has a single output, "
+"which is the centroids layer. There are two options to define where a data "
+"output is saved: enter a filepath or save it to a temporary filename"
+msgstr ""
+"Välj *Polygoner*-lagret som indata. Algoritmen har en enda utdata, vilket är"
+" centroids-skiktet. Det finns två alternativ för att definiera var en "
+"datautmatning sparas: ange en filväg eller spara den till ett tillfälligt "
+"filnamn"
+
+#: ../../docs/training_manual/processing/first_alg.rst:53
+msgid ""
+"In case you want to set a destination and not save the result in a temporary"
+" file, the format of the output is defined by the filename extension. To "
+"select a format, just select the corresponding file extension (or add it if "
+"you are directly typing the filepath instead). If the extension of the "
+"filepath you entered does not match any of the supported ones, a default "
+"extension (usually :file:`.dbf` for tables, :file:`.tif` for raster layers "
+"and :file:`.shp` for vector ones) will be appended to the filepath and the "
+"file format corresponding to that extension will be used to save the layer "
+"or table."
+msgstr ""
+"Om du vill ange en destination och inte spara resultatet i en tillfällig "
+"fil, definieras formatet för utdata av filnamnstillägget. För att välja ett "
+"format väljer du bara motsvarande filnamnstillägg (eller lägger till det om "
+"du skriver in filvägen direkt i stället). Om filnamnstillägget för den "
+"filväg du angav inte matchar något av de filnamnstillägg som stöds, kommer "
+"ett standardtillägg (vanligtvis :file:`.dbf` för tabeller, :file:`.tif` för "
+"rasterlager och :file:`.shp` för vektorlager) att läggas till filvägen och "
+"det filformat som motsvarar detta tillägg kommer att användas för att spara "
+"lagret eller tabellen."
+
+#: ../../docs/training_manual/processing/first_alg.rst:62
+msgid ""
+"In all the exercises in this guide, we will be saving results to a temporary"
+" file, since there is no need to save them for a later use. Feel free to "
+"save them to a permanent location if you want to."
+msgstr ""
+"I alla övningar i den här guiden sparar vi resultaten i en tillfällig fil, "
+"eftersom det inte finns något behov av att spara dem för senare användning. "
+"Du får gärna spara dem på en permanent plats om du vill."
+
+#: ../../docs/training_manual/processing/first_alg.rst:66
+msgid ""
+"Temporary files are deleted once you close QGIS. If you create a project "
+"with an output that was saved as a temporary output, QGIS will complain when"
+" you try to open back the project later, since that output file will not "
+"exist."
+msgstr ""
+"Temporära filer raderas när du stänger QGIS. Om du skapar ett projekt med en"
+" utdata som sparats som en temporär utdata, kommer QGIS att klaga när du "
+"försöker öppna projektet igen senare, eftersom den utdatafilen inte kommer "
+"att finnas."
+
+#: ../../docs/training_manual/processing/first_alg.rst:71
+msgid ""
+"Once you have configured the algorithm dialog, press :guilabel:`Run` to run "
+"the algorithm."
+msgstr ""
+"När du har konfigurerat dialogrutan för algoritmen trycker du på "
+":guilabel:`Run` för att köra algoritmen."
+
+#: ../../docs/training_manual/processing/first_alg.rst:74
+msgid "You will get the following output."
+msgstr "Du kommer att få följande utdata."
+
+#: ../../docs/training_manual/processing/first_alg.rst:78
+msgid ""
+"The output has the same CRS as the input. Geoalgorithms assumes all input "
+"layers share the same CRS and do not perform any reprojection. Except in the"
+" case of some special algorithms (for instance, reprojection ones), the "
+"outputs will also have that same CRS. We will see more about this soon."
+msgstr ""
+"Utdata har samma CRS som indata. Geoalgoritmer förutsätter att alla ingående"
+" lager har samma CRS och inte utför någon reprojektion. Förutom i fallet med"
+" vissa speciella algoritmer (till exempel reprojektionsalgoritmer) kommer "
+"utgångarna också att ha samma CRS. Vi kommer att se mer om detta snart."
+
+#: ../../docs/training_manual/processing/first_alg.rst:83
+msgid ""
+"Try yourself saving it using different file formats (use, for instance, "
+":file:`shp` and :file:`geojson` as extensions). Also, if you do not want the"
+" layer to be loaded in QGIS after it is generated, you can check off the "
+"checkbox that is found below the output path box."
+msgstr ""
+"Prova själv att spara det med olika filformat (använd t.ex. :file:`shp` och "
+":file:`geojson` som tillägg). Om du inte vill att skiktet ska laddas i QGIS "
+"efter att det har genererats kan du också kryssa i kryssrutan som finns "
+"under rutan för utdatasökväg."
