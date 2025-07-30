@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,20 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:3
+msgid "Map Production"
+msgstr "Kartproduktion"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:6
 msgid "|gentleLogo|"
@@ -36,21 +51,582 @@ msgstr "gentleLogo"
 msgid "Objectives:"
 msgstr "Mål:"
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:6
+msgid "Understanding of map production for spatial data"
+msgstr "Förståelse för kartproduktion för rumsliga data"
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:8
 msgid "Keywords:"
 msgstr "Nyckelord:"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:8
+msgid ""
+"Map production, map layout, scale bar, north arrow, legend, map body, map "
+"unit"
+msgstr ""
+"Kartproduktion, kartlayout, skalstreck, norrpil, teckenförklaring, "
+"kartkropp, kartenhet"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:12
 msgid "Overview"
 msgstr "Översikt"
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:14
+msgid ""
+"Map production is the process of arranging map elements on a sheet of paper "
+"in a way that, even without many words, the average person can understand "
+"what it is all about. Maps are usually produced for presentations and "
+"reports where the audience or reader is a politician, citizen or a learner "
+"with no professional background in GIS. Because of this, a map has to be "
+"effective in communicating spatial information. Common elements of a map are"
+" the title, map body, legend, north arrow, scale bar, acknowledgement, and "
+"map border (see :numref:`figure_map_elements`)."
+msgstr ""
+"Kartproduktion är processen att arrangera kartelement på ett pappersark på "
+"ett sätt som gör att en genomsnittlig person, även utan många ord, kan "
+"förstå vad det handlar om. Kartor produceras vanligtvis för presentationer "
+"och rapporter där publiken eller läsaren är en politiker, medborgare eller "
+"en elev utan professionell bakgrund inom GIS. Därför måste en karta vara "
+"effektiv när det gäller att kommunicera rumslig information. Vanliga element"
+" i en karta är titel, kartkropp, teckenförklaring, norrpil, skalstreck, "
+"bekräftelse och kartkant (se :numref:`figure_map_elements`)."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:28
+msgid ""
+"Common map elements (labelled in red) are the title, map body, legend, north"
+" arrow, scale bar, acknowledgement and map border."
+msgstr ""
+"Vanliga kartelement (markerade med rött) är titel, kartkropp, "
+"teckenförklaring, norrpil, skalstreck, bekräftelse och kartkant."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:31
+msgid ""
+"Other elements that might be added are e.g. a **graticule**, or **name of "
+"the map projection** (CRS). Together, these elements help the map reader to "
+"interpret the information shown on the map. The map body is, of course, the "
+"most important part of the map because it contains the map information. The "
+"other elements support the communication process and help the map reader to "
+"orientate himself and understand the map topic. For example, the title "
+"describes the subject matter and the legend relates map symbols to the "
+"mapped data."
+msgstr ""
+"Andra element som kan läggas till är t.ex. en **graticule** eller **namn på "
+"kartprojektionen** (CRS). Tillsammans hjälper dessa element kartläsaren att "
+"tolka den information som visas på kartan. Kartkroppen är naturligtvis den "
+"viktigaste delen av kartan eftersom den innehåller kartinformationen. De "
+"andra delarna stödjer kommunikationsprocessen och hjälper kartläsaren att "
+"orientera sig och förstå kartans ämne. Titeln beskriver t.ex. ämnet och "
+"teckenförklaringen relaterar kartsymbolerna till de kartlagda uppgifterna."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:40
+msgid "Title in detail"
+msgstr "Titel i detalj"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:42
+msgid ""
+"The map title is very important because it is usually the first thing a "
+"reader will look at on a map. It can be compared with a title in a "
+"newspaper. It should be short but give the reader a first idea of what the "
+"map is about."
+msgstr ""
+"Kartans titel är mycket viktig eftersom det oftast är det första en läsare "
+"tittar på på en karta. Den kan jämföras med en titel i en tidning. Den ska "
+"vara kort men ge läsaren en första uppfattning om vad kartan handlar om."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:47
+msgid "Map Border in detail"
+msgstr "Karta Gräns i detalj"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:49
+msgid ""
+"The map border is a line that defines exactly the edges of the area shown on"
+" the map. When printing a map with a graticule (which we describe further "
+"down), you often find the coordinate information of the graticule lines "
+"along the border lines, as you can see in :numref:`figure_map_legend`."
+msgstr ""
+"Kartgränsen är en linje som exakt definierar kanterna på det område som "
+"visas på kartan. När du skriver ut en karta med en graticule (som vi "
+"beskriver längre ner) hittar du ofta koordinatinformationen för graticule-"
+"linjerna längs gränslinjerna, som du kan se i :numref:`figure_map_legend`."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:55
+msgid "Map Legend in detail"
+msgstr "Kartförklaring i detalj"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:57
+msgid ""
+"A map is a simplified representation of the real world and **map symbols** "
+"are used to represent real objects. Without symbols, we wouldn't understand "
+"maps. To ensure that a person can correctly read a map, a map legend is used"
+" to provide a key to all the symbols used on the map. It is like a "
+"dictionary that allows you to understand the meaning of what the map shows. "
+"A map legend is usually shown as a little box in a corner of the map. It "
+"contains icons, each of which will represent a type of feature. For example,"
+" a *house* icon will show you how to identify houses on the map (see "
+":numref:`figure_map_legend`)."
+msgstr ""
+"En karta är en förenklad representation av den verkliga världen och "
+"**kartsymboler** används för att representera verkliga objekt. Utan symboler"
+" skulle vi inte förstå kartor. För att säkerställa att en person kan läsa en"
+" karta på rätt sätt används en kartlegende som ger en nyckel till alla "
+"symboler som används på kartan. Det är som ett lexikon som gör det möjligt "
+"att förstå innebörden av det som kartan visar. En kartförklaring visas "
+"vanligtvis som en liten ruta i ett hörn av kartan. Den innehåller ikoner som"
+" var och en representerar en viss typ av objekt. En *hus*-ikon visar t.ex. "
+"hur du identifierar hus på kartan (se :numref:`figure_map_legend`)."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:72
+msgid ""
+"Two maps from the same area, both with a water body in the background but "
+"with different themes, map symbols and colours in the legend."
+msgstr ""
+"Två kartor från samma område, båda med en vattensamling i bakgrunden men med"
+" olika teman, kartsymboler och färger i teckenförklaringen."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:75
+msgid ""
+"You can also use different symbols and icons in your legend to show "
+"different themes. In :numref:`figure_map_legend` you can see a map with a "
+"lake in light blue overlaid with contour lines and spot heights to show "
+"information about the terrain in that area. On the right side you see the "
+"same area with the lake in the background but this map is designed to show "
+"tourists the location of houses they can rent for their holidays. It uses "
+"brighter colours, a house icon and more descriptive and inviting words in "
+"the legend."
+msgstr ""
+"Du kan också använda olika symboler och ikoner i din legend för att visa "
+"olika teman. I :numref:`figure_map_legend` kan du se en karta med en sjö i "
+"ljusblått överlagrad med konturlinjer och punkthöjder för att visa "
+"information om terrängen i det området. På höger sida ser du samma område "
+"med sjön i bakgrunden, men den här kartan är utformad för att visa turister "
+"var husen ligger som de kan hyra under semestern. Här används ljusare "
+"färger, en husikon och mer beskrivande och inbjudande ord i "
+"teckenförklaringen."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:84
+msgid "North arrow in detail"
+msgstr "Nordpilen i detalj"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:86
+msgid ""
+"A north arrow (sometimes also called a compass rose) is a figure displaying "
+"the main directions, **North**, **South**, **East** and **West**. On a map "
+"it is used to indicate the direction of North."
+msgstr ""
+"En norrpil (ibland även kallad kompassros) är en figur som visar "
+"huvudriktningarna **Nord**, **Syd**, **Öst** och **Väst**. På en karta "
+"används den för att ange riktningen mot norr."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:90
+msgid ""
+"For example, in GIS this means that a house that is located north from a "
+"lake can be found on top of the lake on a map. The road in the east will "
+"then be to the right of the water body on the map, a river in the south will"
+" be below the water body and if you are searching for a train station to the"
+" west of the lake you will find it on the left side on the map."
+msgstr ""
+"I GIS innebär det till exempel att ett hus som ligger norr om en sjö kan "
+"hittas ovanpå sjön på en karta. Vägen i öster kommer då att ligga till höger"
+" om vattenmassan på kartan, en flod i söder kommer att ligga under "
+"vattenmassan och om du söker efter en tågstation väster om sjön kommer du "
+"att hitta den på vänster sida på kartan."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:97
+msgid "Scale in detail"
+msgstr "Skala i detalj"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:99
+msgid ""
+"The scale of a map, is the value of a single unit of distance on the map, "
+"representing distance in the real world. The values are shown in map units "
+"(meters, feet or degrees). The scale can be expressed in several ways, for "
+"example, in words, as a ratio or as a graphical scale bar (see "
+":numref:`figure_map_scale`)."
+msgstr ""
+"Skalan på en karta är värdet på en enda enhet av avstånd på kartan, som "
+"representerar avstånd i den verkliga världen. Värdena visas i kartans "
+"enheter (meter, fot eller grader). Skalan kan uttryckas på flera sätt, t.ex."
+" med ord, som ett förhållande eller som en grafisk skalstapel (se "
+":numref:`figure_map_scale`)."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:104
+msgid ""
+"**Expressing a scale in words** is a commonly used method and has the "
+"advantage of being easily understood by most map users. You can see an "
+"example of a word based scale in a :numref:`figure_map_scale` (a). Another "
+"option is the **representative fraction (RF)** method, where both the map "
+"distance and the ground distance in the real world are given in the same map"
+" units, as a ratio. For example, a RF value 1:25,000 means that any distance"
+" on the map is 1/25,000 *th* of the real distance on the ground (see "
+":numref:`figure_map_scale` (b)). The value 25,000 in the ratio is called the"
+" **scale denominator**. More experienced users often prefer the "
+"representative fraction method, because it reduces confusion."
+msgstr ""
+"**Att uttrycka en skala i ord** är en vanligt förekommande metod och har "
+"fördelen att den är lätt att förstå för de flesta kartanvändare. Du kan se "
+"ett exempel på en ordbaserad skala i en :numref:`figure_map_scale` (a). Ett "
+"annat alternativ är metoden **representative fraction (RF)**, där både "
+"kartavståndet och markavståndet i den verkliga världen anges i samma "
+"kartenheter, som ett förhållande. Ett RF-värde på 1:25 000 innebär t.ex. att"
+" varje avstånd på kartan är 1/25 000 *del* av det verkliga avståndet på "
+"marken (se :numref:`figure_map_scale` (b)). Värdet 25.000 i förhållandet "
+"kallas **skalans nämnare**. Mer erfarna användare föredrar ofta metoden med "
+"representativa fraktioner, eftersom den minskar förvirringen."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:114
+msgid ""
+"When a representative fraction expresses a very small ratio, for example "
+"1:1000 000, it is called a **small scale map**. On the other hand if the "
+"ratio is very large, for example a 1:50 000 map, it is called a **large "
+"scale map**. It is handy to remember that a small scale map covers a **large"
+" area**, and a large scale map covers a **small area**!"
+msgstr ""
+"När en representativ fraktion uttrycker ett mycket litet förhållande, t.ex. "
+"1:1000 000, kallas den en **småskalig karta**. Om förhållandet däremot är "
+"mycket stort, t.ex. en karta i skala 1:50 000, kallas den för en "
+"**storskalig karta**. Det är bra att komma ihåg att en småskalig karta "
+"täcker ett **stort område** och en storskalig karta täcker ett **litet "
+"område**!"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:120
+msgid ""
+"A **scale expression as a graphic or bar scale** is another basic method of "
+"expressing a scale. A bar scale shows measured distances on the map. The "
+"equivalent distance in the real world is placed above as you can see in "
+":numref:`figure_map_scale` (c)."
+msgstr ""
+"Ett **skaluttryck i form av en grafisk skala eller stapelskala** är en annan"
+" grundläggande metod för att uttrycka en skala. En stapelskala visar "
+"uppmätta avstånd på kartan. Det motsvarande avståndet i den verkliga världen"
+" placeras ovanför som du kan se i :numref:`figure_map_scale` (c)."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:130
+msgid ""
+"A map scale can be expressed in words (a), as a ratio (b), or as graphic or "
+"bar scale (c)"
+msgstr ""
+"En kartskala kan uttryckas i ord (a), som ett förhållande (b) eller som en "
+"grafisk skala eller stapelskala (c)"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:133
+msgid ""
+"Maps are usually produced at standard scales of, for example, 1:10 000, 1:25"
+" 000, 1:50 000, 1:100 000, 1:250 000, 1:500 000. What does this mean to the "
+"map reader? It means that if you *multiply* the distance measured on the "
+"**map** by the **scale denominator**, you will know the distance in the "
+"**real world**."
+msgstr ""
+"Kartor produceras vanligtvis i standardskalor, t.ex. 1:10 000, 1:25 000, "
+"1:50 000, 1:100 000, 1:250 000, 1:500 000. Vad innebär detta för "
+"kartläsaren? Det betyder att om du *multiplicerar* det avstånd som uppmätts "
+"på **kartan** med **skalans nämnare**, så får du reda på avståndet i den "
+"**verkliga världen**."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:138
+msgid ""
+"For example, if we want to measure a distance of 100mm on a map with a scale"
+" of 1:25,000 we calculate the real world distance like this:"
+msgstr ""
+"Om vi t.ex. vill mäta ett avstånd på 100 mm på en karta i skala 1:25.000 "
+"beräknar vi det verkliga avståndet så här:"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:145
+msgid ""
+"This means that 100 mm on the map is equivalent to 2,500,000 mm (2500 m) in "
+"the real world."
+msgstr ""
+"Det innebär att 100 mm på kartan motsvarar 2.500.000 mm (2500 m) i den "
+"verkliga världen."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:148
+msgid ""
+"Another interesting aspect of a map scale, is that the lower the map scale, "
+"the more detailed the feature information in the map will be. In "
+":numref:`figure_map_scale_compare`, you can see an example of this. Both "
+"maps are the same size but have a different scale. The image on the left "
+"side shows more details, for example the houses south-west of the water body"
+" can be clearly identified as separate squares. In the image on the right "
+"you can only see a black clump of rectangles and you are not able to see "
+"each house clearly."
+msgstr ""
+"En annan intressant aspekt av en kartskala är att ju lägre kartskalan är, "
+"desto mer detaljerad kommer funktionsinformationen på kartan att vara. I "
+":numref:`figure_map_scale_compare` kan du se ett exempel på detta. Båda "
+"kartorna är lika stora men har olika skala. Bilden till vänster visar fler "
+"detaljer, t.ex. kan husen sydväst om vattendraget tydligt identifieras som "
+"separata rutor. I den högra bilden ser man bara en svart klump av rektanglar"
+" och man kan inte se varje hus tydligt."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:162
+msgid ""
+"Maps showing an area in two different scales. The map scale on the left is "
+"1:25,000. The map scale on the right is 1:50,000."
+msgstr ""
+"Kartor som visar ett område i två olika skalor. Kartskalan till vänster är "
+"1:25.000. Kartskalan till höger är 1:50.000."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:166
+msgid "Acknowledgment in detail"
+msgstr "Acknowledgment i detalj"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:168
+msgid ""
+"In the acknowledgment area of a map it is possible to add text with "
+"important information. For example information about the quality of the used"
+" data can be useful to give the reader an idea about details such as how, by"
+" whom and when a map was created. If you look at a topographical map of your"
+" town, it would be useful to know when the map was created and who did it. "
+"If the map is already 50 years old, you will probably find a lot of houses "
+"and roads that no longer exist or maybe never even existed. If you know that"
+" the map was created by an official institution, you could contact them and "
+"ask if they have a more current version of that map with updated "
+"information."
+msgstr ""
+"I området för bekräftelse på en karta är det möjligt att lägga till text med"
+" viktig information. Exempelvis kan information om kvaliteten på de data som"
+" använts vara användbar för att ge läsaren en uppfattning om detaljer som "
+"hur, av vem och när en karta skapades. Om du tittar på en topografisk karta "
+"över din stad skulle det vara bra att veta när kartan skapades och vem som "
+"gjorde det. Om kartan redan är 50 år gammal kommer du förmodligen att hitta "
+"en hel del hus och vägar som inte längre finns eller kanske aldrig ens har "
+"funnits. Om du vet att kartan har skapats av en officiell institution kan du"
+" kontakta dem och fråga om de har en nyare version av kartan med uppdaterad "
+"information."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:179
+msgid "Graticule in detail"
+msgstr "Graticule i detalj"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:181
+msgid ""
+"A graticule is a network of lines overlain on a map to make spatial "
+"orientation easier for the reader. The lines can be used as a reference. As "
+"an example, the lines of a graticule can represent the earth's parallels of "
+"latitude and meridians of longitude. When you want to refer to a special "
+"area on a map during your presentation or in a report you could say: 'the "
+"houses close to latitude 26.04 / longitude -32.11 are often exposed to "
+"flooding during January and February' (see :numref:`figure_map_graticule`)."
+msgstr ""
+"En graticule är ett nätverk av linjer som överlagras på en karta för att "
+"underlätta den rumsliga orienteringen för läsaren. Linjerna kan användas som"
+" referens. Linjerna i en graticule kan t.ex. representera jordens "
+"latitudparalleller och longitudmeridianer. När du vill hänvisa till ett "
+"speciellt område på en karta under din presentation eller i en rapport kan "
+"du säga: \"husen nära latitud 26,04 / longitud -32,11 är ofta utsatta för "
+"översvämningar under januari och februari\" (se "
+":numref:`figure_map_graticule`)."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:195
+msgid ""
+"Graticules (red lines) representing the Earth’s parallels of latitude and "
+"meridians of longitude. The latitude and longitude values on the map border "
+"can be used for better orientation on the map."
+msgstr ""
+"Graticules (röda linjer) som representerar jordens latitudparalleller och "
+"longitudmeridianer. Värdena för latitud och longitud i kartans kant kan "
+"användas för bättre orientering på kartan."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:200
+msgid "Name of the map projection in detail"
+msgstr "Kartprojektionens namn i detalj"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:202
+msgid ""
+"A map projection tries to represent the 3-dimensional Earth with all its "
+"features like houses, roads or lakes on a flat sheet of paper. This is very "
+"difficult as you can imagine, and even after hundreds of years there is no "
+"single projection that is able to represent the Earth perfectly for any area"
+" in the world. Every projection has advantages and disadvantages."
+msgstr ""
+"En kartprojektion försöker representera den 3-dimensionella jorden med alla "
+"dess egenskaper som hus, vägar eller sjöar på ett platt pappersark. Som du "
+"säkert förstår är detta mycket svårt, och även efter hundratals år finns det"
+" inte en enda projektion som kan återge jorden perfekt för alla områden i "
+"världen. Varje projektion har sina fördelar och nackdelar."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:208
+msgid ""
+"To be able to create maps as precisely as possible, people have studied, "
+"modified, and produced many different kinds of projections. In the end "
+"almost every country has developed its own map projection with the goal of "
+"improving the map accuracy for their territorial area (see "
+":numref:`figure_map_projection`)."
+msgstr ""
+"För att kunna skapa så exakta kartor som möjligt har människor studerat, "
+"modifierat och producerat många olika typer av projektioner. I slutändan har"
+" nästan varje land utvecklat sin egen kartprojektion med målet att förbättra"
+" kartans noggrannhet för deras territoriella område (se "
+":numref:`figure_map_projection`)."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:219
+msgid ""
+"The world in different projections. A Mollweide Equal Area projection left, "
+"a Plate Carree Equidistant Cylindrical projection on the right."
+msgstr ""
+"Världen i olika projektioner. En Mollweide Equal Area-projektion till "
+"vänster, en Plate Carree Equidistant Cylindrical-projektion till höger."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:222
+msgid ""
+"With this in mind, we can now understand why it makes sense to add the name "
+"of the projection on a map. It allows the reader to see quickly, if one map "
+"can be compared with another. For example, features on a map in a so-called "
+"Equal Area projection appear very different to features projected in a "
+"Cylindrical Equidistant projection (see :numref:`figure_map_projection`)."
+msgstr ""
+"Med detta i åtanke kan vi nu förstå varför det är meningsfullt att lägga "
+"till namnet på projektionen på en karta. Det gör det möjligt för läsaren att"
+" snabbt se om en karta kan jämföras med en annan. Till exempel ser "
+"funktioner på en karta i en så kallad Equal Area-projektion mycket "
+"annorlunda ut än funktioner som projiceras i en Cylindrical Equidistant-"
+"projektion (se :numref:`figure_map_projection`)."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:228
+msgid ""
+"Map projection is a very complex topic and we cannot cover it completely "
+"here. You may want to take a look at our previous topic: Coordinate "
+"Reference Systems if you want to know more about it."
+msgstr ""
+"Kartprojektion är ett mycket komplext ämne och vi kan inte täcka det helt "
+"och hållet här. Du kanske vill ta en titt på vårt tidigare ämne: "
+"Koordinatreferenssystem om du vill veta mer om det."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:233
+msgid "Common problems / things to be aware of"
+msgstr "Vanliga problem / saker att vara uppmärksam på"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:235
+msgid ""
+"It is sometimes difficult to create a map that is easy to understand and "
+"well laid out whilst still showing and explaining all the information that "
+"the reader needs to know. To achieve this, you need to create an ideal "
+"arrangement and composition of all the map elements. You should concentrate "
+"on what story you want to tell with your map and how the elements, such as "
+"the legend, scale bar and acknowledgements should be ordered. By doing this,"
+" you will have a well designed and educational map, that people would like "
+"to look at and be able to understand."
+msgstr ""
+"Det är ibland svårt att skapa en karta som är lätt att förstå och som är väl"
+" utformad samtidigt som den visar och förklarar all information som läsaren "
+"behöver veta. För att uppnå detta måste du skapa ett idealiskt arrangemang "
+"och en idealisk sammansättning av alla kartelement. Du bör koncentrera dig "
+"på vilken historia du vill berätta med din karta och hur elementen, till "
+"exempel teckenförklaringen, skalstocken och erkännandena, ska ordnas. Genom "
+"att göra detta får du en väl utformad och pedagogisk karta som människor "
+"vill titta på och kan förstå."
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:245
 msgid "What have we learned?"
 msgstr "Vad har vi lärt oss?"
 
+#: ../../docs/gentle_gis_introduction/map_production.rst:247
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Låt oss sammanfatta vad vi behandlat i det här arbetsbladet:"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:249
+msgid ""
+"**Map production** means arranging **map elements** on a sheet of paper."
+msgstr ""
+"**Kartframställning** innebär att arrangera **kartelement** på ett "
+"pappersark."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:250
+msgid ""
+"**Map elements** are the title, map body, map border, legend, scale, north "
+"arrow and the acknowledgement."
+msgstr ""
+"**Kartelement** är titel, kartkropp, kartgräns, teckenförklaring, skala, "
+"norrpil och bekräftelse."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:252
+msgid ""
+"**Scale** represents the ratio of a distance on the map to the actual "
+"distance in the real world."
+msgstr ""
+"**Skala** representerar förhållandet mellan ett avstånd på kartan och det "
+"faktiska avståndet i den verkliga världen."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:254
+msgid "Scale is displayed in **map units** (meters, feet or degrees)"
+msgstr "Skalan visas i **kortenheter** (meter, fot eller grader)"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:255
+msgid "A **legend** explains all the symbols on a map."
+msgstr "En **legend** förklarar alla symboler på en karta."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:256
+msgid "A map should **explain complex information as simply as possible**."
+msgstr ""
+"En karta ska **förklara komplex information på ett så enkelt sätt som "
+"möjligt**."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:257
+msgid "Maps are usually always displayed '**North up**'."
+msgstr "Kartor visas vanligtvis alltid med \"**North up**\"."
+
 #: ../../docs/gentle_gis_introduction/map_production.rst:260
 msgid "Now you try!"
 msgstr "Nu får du försöka!"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:262
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Här är några idéer som du kan prova med dina elever:"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:264
+msgid ""
+"Load some vector layers in your GIS for your local area. See if your "
+"learners can identify examples of different types of legend elements such as"
+" road types or buildings. Create a list of legend elements and define what "
+"the icons should look like, so a reader can most easily figure out their "
+"meaning in the map."
+msgstr ""
+"Ladda några vektorlager i ditt GIS för ditt lokala område. Se om dina elever"
+" kan identifiera exempel på olika typer av teckenförklaringar, t.ex. "
+"vägtyper eller byggnader. Skapa en lista över legendelement och definiera "
+"hur ikonerna ska se ut, så att en läsare lättast kan förstå deras betydelse "
+"på kartan."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:268
+msgid ""
+"Create a map layout with your learners on a sheet of paper. Decide on the "
+"title of the map, what GIS layers you want to show and what colors and icons"
+" to have on the map. Use the techniques you learned in Topics "
+":ref:`gentle_gis_vector_data` and :ref:`gentle_gis_attributes` to adjust the"
+" symbology accordingly. When you have a template, open the QGIS print layout"
+" and try to arrange a map layout as planned."
+msgstr ""
+"Skapa en kartlayout med dina elever på ett pappersark. Bestäm titeln på "
+"kartan, vilka GIS-lager du vill visa och vilka färger och ikoner som ska "
+"finnas på kartan. Använd de tekniker som du lärde dig i ämnena "
+":ref:``gentle_gis_vector_data`` och :ref:``gentle_gis_attributes`` för att "
+"justera symbologin i enlighet med detta. När du har en mall kan du öppna "
+"QGIS utskriftslayout och försöka ordna en kartlayout enligt planerna."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:276
+msgid "Something to think about"
+msgstr "Något att tänka på"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:278
+msgid ""
+"If you don't have a computer available, you can use any topographical map "
+"and discuss the map design with your learners. Figure out if they understand"
+" what the map wants to tell. What can be improved? How accurately does the "
+"map represent the history of the area? How would a map from 100 years ago "
+"differ from the same map today?"
+msgstr ""
+"Om du inte har tillgång till en dator kan du använda vilken topografisk "
+"karta som helst och diskutera kartans utformning med dina elever. Ta reda på"
+" om de förstår vad kartan vill berätta. Vad kan förbättras? Hur exakt "
+"representerar kartan områdets historia? Hur skulle en karta från 100 år "
+"sedan skilja sig från samma karta idag?"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:285
+msgid "Further reading"
+msgstr "Ytterligare läsning"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:287
+msgid "**Books**:"
+msgstr "**Böcker**:"
 
 #: ../../docs/gentle_gis_introduction/map_production.rst:289
 msgid ""
@@ -67,3 +643,31 @@ msgid ""
 msgstr ""
 "DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
 "3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:294
+msgid ""
+"**Website**: `Scale (map) <https://en.wikipedia.org/wiki/Scale_(map)>`_"
+msgstr ""
+"**Webbplats**: `Skala (karta) "
+"<https://en.wikipedia.org/wiki/Scale_(karta)>`_"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:296
+msgid ""
+"The QGIS User Guide also has more detailed information on map production "
+"provided in QGIS."
+msgstr ""
+"I QGIS User Guide finns också mer detaljerad information om kartproduktion i"
+" QGIS."
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:300
+msgid "What's next?"
+msgstr "Vad kommer härnäst?"
+
+#: ../../docs/gentle_gis_introduction/map_production.rst:302
+msgid ""
+"In the section that follows we will take a closer look at **vector "
+"analysis** to see how we can use a GIS for more than just making good "
+"looking maps!"
+msgstr ""
+"I avsnittet som följer kommer vi att titta närmare på **vektoranalys** för "
+"att se hur vi kan använda ett GIS till mer än att bara göra snygga kartor!"
