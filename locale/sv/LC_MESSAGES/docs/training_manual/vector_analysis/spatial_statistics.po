@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,26 +25,826 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:2
+msgid "Lesson: Spatial Statistics"
+msgstr "Lektion: Rumslig statistik"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:4
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr ""
+"Lektion utvecklad av Linfiniti och S Motala (Cape Peninsula University of "
+"Technology)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:7
+msgid ""
+"Spatial statistics allows you to analyze and understand what is going on in "
+"a given vector dataset. QGIS includes many useful tools for statistical "
+"analysis."
+msgstr ""
+"Rumslig statistik gör att du kan analysera och förstå vad som händer i en "
+"given vektordatauppsättning. QGIS innehåller många användbara verktyg för "
+"statistisk analys."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:11
+msgid ""
+"**The goal for this lesson:** To know how to use QGIS' spatial statistics "
+"tools within the :guilabel:`Processing Toolbox`."
+msgstr ""
+"**Målet för den här lektionen:** Att veta hur man använder QGIS rumsliga "
+"statistikverktyg i verktygslådan :guilabel:`Processing Toolbox`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:15
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Create a Test Dataset"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Skapa en testdatauppsättning"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:17
+msgid "We will create a random set of points, to get a dataset to work with."
+msgstr ""
+"Vi kommer att skapa en slumpmässig uppsättning punkter för att få ett "
+"dataset att arbeta med."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:19
+msgid ""
+"To do so, you will need a polygon dataset to define the area you want to "
+"create the points in."
+msgstr ""
+"För att göra det behöver du en polygondatauppsättning för att definiera det "
+"område där du vill skapa punkterna."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:22
+msgid "We will use the area covered by streets."
+msgstr "Vi kommer att använda det område som täcks av gator."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:24
+msgid "Start a new project"
+msgstr "Starta ett nytt projekt"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:25
+msgid ""
+"Add your ``roads`` dataset, as well as ``srtm_41_19`` (elevation data) found"
+" in :file:`exercise_data/raster/SRTM/`."
+msgstr ""
+"Lägg till din ``roads``-datauppsättning samt ``rtm_41_19`` (höjddata) som "
+"finns i :file:`exercise_data/raster/SRTM/`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:28
+msgid ""
+"You might find that the SRTM DEM layer has a different CRS to that of the "
+"roads layer. QGIS is reprojecting both layers in a single CRS. For the "
+"following exercises this difference does not matter, but feel free to "
+"reproject (as shown earlier in this module)."
+msgstr ""
+"Du kanske upptäcker att SRTM DEM-skiktet har ett annat CRS än vägskiktet. "
+"QGIS omprojicerar båda skikten i ett enda CRS. För de följande övningarna "
+"spelar denna skillnad ingen roll, men du får gärna omprojicera (som visats "
+"tidigare i denna modul)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:34
+msgid "Open :guilabel:`Processing` toolbox"
+msgstr "Öppna :guilabel:`Processing` verktygslåda"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:35
+msgid ""
+"Use the :menuselection:`Vector Geometry --> Minimum bounding geometry` tool "
+"to generate an area enclosing all the roads by selecting ``Convex Hull`` as "
+"the :guilabel:`Geometry Type`:"
+msgstr ""
+"Använd verktyget :menuselection:`Vector Geometry --> Minimum bounding "
+"geometry` för att generera ett område som omsluter alla vägar genom att "
+"välja ``Convex Hull`` som :guilabel:`Geometry Type`:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:43
+msgid ""
+"As you know, if you don't specify the output, *Processing* creates temporary"
+" layers. It is up to you to save the layers immediately or at a later stage."
+msgstr ""
+"Som du vet skapar *Processing* tillfälliga lager om du inte specificerar "
+"utdata. Det är upp till dig att spara lagren omedelbart eller i ett senare "
+"skede."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:48
+msgid "Creating random points"
+msgstr "Skapa slumpmässiga punkter"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:50
+msgid ""
+"Create 100 random points in this area using the tool at "
+":menuselection:`Vector Creation --> Random points in layer bounds`, with a "
+"minimum distance of ``0.0``:"
+msgstr ""
+"Skapa 100 slumpmässiga punkter i detta område med hjälp av verktyget i "
+":menuselection:`Vector Creation --> Random points in layer bounds`, med ett "
+"minsta avstånd på ``0.0``:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:57
+msgid ""
+"The yellow warning sign tells you that that parameter concerns distances. "
+"The :guilabel:`Bounding geometry` layer is in a Geographical Coordinate "
+"System and the algorithm is just reminding you this. For this example we "
+"won't use this parameter so you can ignore it."
+msgstr ""
+"Den gula varningssymbolen visar att parametern gäller avstånd. Skiktet "
+":guilabel:`Bounding geometry` är i ett geografiskt koordinatsystem och "
+"algoritmen påminner dig bara om detta. I det här exemplet kommer vi inte att"
+" använda den här parametern, så du kan ignorera den."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:64
+msgid ""
+"If needed, move the generated random point to the top of the legend to see "
+"them better:"
+msgstr ""
+"Om det behövs kan du flytta den genererade slumpmässiga punkten till toppen "
+"av legenden för att se dem bättre:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:71
+msgid "Sampling the data"
+msgstr "Sampling av data"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:73
+msgid ""
+"To create a sample dataset from the raster, you'll need to use the "
+":menuselection:`Raster Analysis --> Sample raster values` algorithm. This "
+"tool samples the raster at the locations of the points and adds the raster "
+"values in new field(s) depending on the number of bands in the raster."
+msgstr ""
+"För att skapa en provdatauppsättning från rastret måste du använda "
+"algoritmen :menuselection:`Raster Analysis --> Sample raster values`. Detta "
+"verktyg samplar rastret på punkternas platser och lägger till rastervärdena "
+"i nya fält beroende på antalet band i rastret."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:77
+msgid "Open the :guilabel:`Sample raster values` algorithm dialog"
+msgstr "Öppna dialogrutan :guilabel:`Sampla rastervärden` för algoritmen"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:78
+msgid ""
+"Select ``Random_points`` as the layer containing sampling points, and the "
+"SRTM raster as the band to get values from. The default name of the new "
+"field is ``rvalue_N``, where ``N`` is the number of the raster band. You can"
+" change the name of the prefix if you want."
+msgstr ""
+"Välj ``Random_points`` som det lager som innehåller provtagningspunkter och "
+"SRTM-rastret som det band som värdena ska hämtas från. Standardnamnet på det"
+" nya fältet är ``rvalue_N``, där ``N`` är numret på rasterbandet. Du kan "
+"ändra namnet på prefixet om du vill."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:87
+msgid "Press :guilabel:`Run`"
+msgstr "Tryck på :guilabel:`Run`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:89
+msgid ""
+"Now you can check the sampled data from the raster file in the attribute "
+"table of the ``Sampled Points`` layer. They will be in a new field with the "
+"name you have chosen."
+msgstr ""
+"Nu kan du kontrollera samplingsdata från rasterfilen i attributtabellen för "
+"skiktet ``Sampled Points``. De kommer att finnas i ett nytt fält med det "
+"namn du har valt."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:93
+msgid "A possible sample layer is shown here:"
+msgstr "Här visas ett möjligt exempel på ett lager:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:98
+msgid ""
+"The sample points are classified using the ``rvalue_1`` field such that red "
+"points are at a higher altitude."
+msgstr ""
+"Provpunkterna klassificeras med hjälp av fältet ``rvalue_1`` så att röda "
+"punkter ligger på högre höjd."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:101
+msgid ""
+"You will be using this sample layer for the rest of the statistical "
+"exercises."
+msgstr ""
+"Du kommer att använda detta provlager under resten av statistikövningarna."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:105
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Basic Statistics"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Grundläggande statistik"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:107
+msgid "Now get the basic statistics for this layer."
+msgstr "Nu får du den grundläggande statistiken för detta lager."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:109
+msgid ""
+"Click on the |sum| :sup:`Show statistical summary` icon in the "
+":guilabel:`Attributes Toolbar`. A new panel will pop up."
+msgstr ""
+"Klicka på ikonen |sum| :sup:`Visa statistisk sammanfattning` i "
+"verktygsfältet :guilabel:`Attributes`. En ny panel kommer att dyka upp."
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:395
 msgid "sum"
 msgstr "sum"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:112
+msgid ""
+"In the dialog that appears, specify the ``Sampled Points`` layer as the "
+"source."
+msgstr "I dialogrutan som visas anger du lagret ``Sampled Points`` som källa."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:114
+msgid ""
+"Select the *rvalue_1* field in the field combo box. This is the field you "
+"will calculate statistics for."
+msgstr ""
+"Välj fältet *rvalue_1* i kombinationsrutan för fält. Detta är det fält som "
+"du ska beräkna statistik för."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:116
+msgid ""
+"The :guilabel:`Statistics` Panel will be automatically updated with the "
+"calculated statistics:"
+msgstr ""
+"Panelen :guilabel:`Statistics` kommer automatiskt att uppdateras med den "
+"beräknade statistiken:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:122
+msgid ""
+"You can copy the values by clicking on the |editCopy| :sup:`Copy Statistics "
+"To Clipboard` button and paste the results into a spreadsheet."
+msgstr ""
+"Du kan kopiera värdena genom att klicka på knappen |editCopy| :sup:`Copy "
+"Statistics To Clipboard` och klistra in resultaten i ett kalkylblad."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:389
 msgid "editCopy"
 msgstr "editCopy"
 
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:126
+msgid "Close the :guilabel:`Statistics` Panel when done"
+msgstr "Stäng :guilabel:`Statistics`-panelen när du är klar"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:128
+msgid "Many different statistics are available:"
+msgstr "Många olika statistiska uppgifter finns tillgängliga:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "Count"
+msgstr "Antal"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:131
+msgid "The number of samples/values."
+msgstr "Antalet prover/värden."
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
 msgid "Sum"
 msgstr "Sum"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:134
+msgid "The values added together."
+msgstr "Värdena läggs samman."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:138
+msgid "Mean"
+msgstr "Genomsnitt"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:137
+msgid ""
+"The mean (average) value is simply the sum of the values divided by the "
+"number of values."
+msgstr ""
+"Medelvärdet (genomsnittet) är helt enkelt summan av värdena dividerat med "
+"antalet värden."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:143
+msgid "Median"
+msgstr "Median"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:141
+msgid ""
+"If you arrange all the values from smallest to greatest, the middle value "
+"(or the average of the two middle values, if N is an even number) is the "
+"median of the values."
+msgstr ""
+"Om du ordnar alla värden från det minsta till det största, är det mittersta "
+"värdet (eller genomsnittet av de två mittersta värdena, om N är ett jämnt "
+"tal) medianen av värdena."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:150
+msgid "St Dev (pop)"
+msgstr "St Dev (pop)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:146
+msgid ""
+"The standard deviation. Gives an indication of how closely the values are "
+"clustered around the mean. The smaller the standard deviation, the closer "
+"values tend to be to the mean."
+msgstr ""
+"Standardavvikelsen. Ger en indikation på hur tätt värdena är grupperade runt"
+" medelvärdet. Ju mindre standardavvikelsen är, desto närmare tenderar "
+"värdena att ligga medelvärdet."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "Minimum"
+msgstr "Minimum"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:153
+msgid "The minimum value."
+msgstr "Det lägsta värdet."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "Maximum"
+msgstr "Maximal"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:156
+msgid "The maximum value."
+msgstr "Det maximala värdet."
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
 msgid "Range"
 msgstr "Intervall"
 
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:159
+msgid "The difference between the minimum and maximum values."
+msgstr "Skillnaden mellan minimi- och maximivärdena."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "Q1"
+msgstr "Q1"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:162
+msgid "First quartile of the data."
+msgstr "Första kvartilen av uppgifterna."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Q3"
+msgstr "Q3"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:165
+msgid "Third quartile of the data."
+msgstr "Tredje kvartilen av uppgifterna."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:169
+msgid "Missing (null) values"
+msgstr "Saknade värden (null)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:168
+msgid "The number of missing values."
+msgstr "Antalet saknade värden."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:172
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Compute statistics on distances "
+"between points"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Beräkna statistik på avstånd "
+"mellan punkter"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:174
+msgid "Create a new temporary point layer."
+msgstr "Skapa ett nytt tillfälligt punktlager."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:175
+msgid ""
+"Enter edit mode, and digitize three points somewhere among the other points."
+msgstr ""
+"Gå in i redigeringsläge och digitalisera tre punkter någonstans bland de "
+"andra punkterna."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:178
+msgid ""
+"Alternatively, use the same random point generation method as before, but "
+"specify only **three** points."
+msgstr ""
+"Alternativt kan du använda samma metod för att generera slumpmässiga punkter"
+" som tidigare, men ange endast **tre** punkter."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:180
+msgid ""
+"Save your new layer as :guilabel:`distance_points` in the format you prefer."
+msgstr ""
+"Spara ditt nya lager som :guilabel:`distance_points` i det format du "
+"föredrar."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:183
+msgid ""
+"To generate statistics on the distances between points in the two layers:"
+msgstr ""
+"För att generera statistik över avstånden mellan punkter i de två lagren:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:186
+msgid "Open the :menuselection:`Vector Analysis --> Distance matrix` tool."
+msgstr "Öppna verktyget :menuselection:`Vektoranalys --> Avståndsmatris`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:187
+msgid ""
+"Select the ``distance_points`` layer as the input layer, and the ``Sampled "
+"Points`` layer as the target layer."
+msgstr ""
+"Välj skiktet ``distance_points`` som ingångsskikt och skiktet ``Sampled "
+"Points`` som målskikt."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:189
+msgid "Set their ``id`` field as unique field references"
+msgstr "Ange deras fält ``id`` som unika fältreferenser"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:190
+msgid ""
+"Change the :guilabel:`Output matrix type` option into :guilabel:`Summary "
+"distance matrix`."
+msgstr ""
+"Ändra alternativet :guilabel:`Output matrix type` till :guilabel:`Summary "
+"distance matrix`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:191
+msgid ""
+"set value of :guilabel:`Use only the nearest (k) target points` to ``2``."
+msgstr ""
+"ställ in värdet för :guilabel:``Use only the nearest (k) target points`` "
+"till ``2``."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:192
+msgid ""
+"If you want you can save the output layer as a file or just run the "
+"algorithm and save the temporary output layer later."
+msgstr ""
+"Om du vill kan du spara utdatalagret som en fil eller bara köra algoritmen "
+"och spara det tillfälliga utdatalagret senare."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:198
+msgid "Click :guilabel:`Run` to generate the distance matrix layer."
+msgstr "Klicka på :guilabel:`Run` för att generera avståndsmatrislagret."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:199
+msgid ""
+"Open the attribute table of the generated layer: values refer to the "
+"distances between the :guilabel:`distance_points` features and their two "
+"nearest points in the :guilabel:`Sampled Points` layer:"
+msgstr ""
+"Öppna attributtabellen för det genererade skiktet: värdena avser avstånden "
+"mellan funktionerna :guilabel:`distance_points` och deras två närmaste "
+"punkter i skiktet :guilabel:`Sampled Points`:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:206
+msgid ""
+"With these parameters, the *Distance Matrix* tool calculates distance "
+"statistics for each point of the input layer with respect to their two "
+"nearest points in the target layer. The fields of the output layer contain "
+"the mean, standard deviation, minimum and maximum for the calculated "
+"distances."
+msgstr ""
+"Med dessa parametrar beräknar verktyget *Distance Matrix* avståndsstatistik "
+"för varje punkt i indataskiktet i förhållande till de två närmaste punkterna"
+" i målskiktet. Fälten i utdataskiktet innehåller medelvärde, "
+"standardavvikelse, minimum och maximum för de beräknade avstånden."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:212
+msgid ""
+"For further testing, you may want to modify the :guilabel:`Output matrix "
+"type` option or the number of target points."
+msgstr ""
+"För ytterligare tester kanske du vill ändra alternativet :guilabel:``Output "
+"matrix type`` eller antalet målpunkter."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:216
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Nearest Neighbor Analysis (within "
+"layer)"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Närmaste granne-analys (inom "
+"lager)"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:218
+msgid "To do a nearest neighbor analysis of a point layer:"
+msgstr "För att göra en närmaste granne-analys av ett punktlager:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:220
+msgid "Choose :menuselection:`Vector analysis --> Nearest neighbor analysis`."
+msgstr "Välj :menuselection:`Vektoranalys --> Närmaste granne analys`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:222
+msgid ""
+"In the dialog that appears, select the :guilabel:`Random points` layer and "
+"click :guilabel:`Run`."
+msgstr ""
+"I dialogrutan som visas väljer du lagret :guilabel:`Random points` och "
+"klickar på :guilabel:`Run`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:224
+msgid ""
+"The results will appear in the Processing :guilabel:`Result Viewer` Panel."
+msgstr ""
+"Resultaten kommer att visas i panelen Processing :guilabel:`Result Viewer`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:230
+msgid "Click on the blue link to open the ``html`` page with the results:"
+msgstr "Klicka på den blå länken för att öppna ``html``-sidan med resultaten:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:236
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Mean Coordinates"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Genomsnittliga koordinater"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:238
+msgid "To get the mean coordinates of a dataset:"
+msgstr "För att få fram medelkoordinaterna för en dataset:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:240
+msgid "Start :menuselection:`Vector analysis --> Mean coordinate(s)`"
+msgstr "Start :menuselection:`Vektoranalys --> Medelkoordinat(er)`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:241
+msgid ""
+"In the dialog that appears, specify :guilabel:`Random points` as "
+":guilabel:`Input layer`, and leave the optional choices unchanged."
+msgstr ""
+"I dialogrutan som visas anger du :guilabel:`Random points` som "
+":guilabel:`Input layer` och låter de valfria alternativen vara oförändrade."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:243
+msgid "Click :guilabel:`Run`."
+msgstr "Klicka på :guilabel:`Run`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:245
+msgid ""
+"Let us compare this to the central coordinate of the polygon that was used "
+"to create the random sample."
+msgstr ""
+"Låt oss jämföra detta med den centrala koordinaten för den polygon som "
+"användes för att skapa det slumpmässiga urvalet."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:248
+msgid "Start :menuselection:`Vector geometry --> Centroids`"
+msgstr "Starta :menuselection:`Vektorgeometri --> Centroider`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:249
+msgid ""
+"In the dialog that appears, select ``Bounding geometry`` as the input layer."
+msgstr ""
+"I dialogrutan som visas väljer du ``Bounding geometry`` som inmatningslager."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:252
+msgid ""
+"As you can see, the mean coordinates (pink point) and the center of the "
+"study area (in green) don't necessarily coincide."
+msgstr ""
+"Som du kan se sammanfaller inte nödvändigtvis medelkoordinaterna (rosa "
+"punkt) och studieområdets centrum (i grönt)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:255
+msgid ""
+"The centroid is the barycenter of the layer (the barycenter of a square is "
+"the center of the square) while the mean coordinates represent the average "
+"of all node coordinates."
+msgstr ""
+"Centroiden är skiktets barycentrum (barycentrum i en kvadrat är kvadratens "
+"centrum) medan medelkoordinaterna representerar genomsnittet av alla "
+"nodkoordinater."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:263
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Image Histograms"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Histogram för bilder"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:265
+msgid ""
+"The histogram of a dataset shows the distribution of its values. The "
+"simplest way to demonstrate this in QGIS is via the image histogram, "
+"available in the :guilabel:`Layer Properties` dialog of any image layer "
+"(raster dataset)."
+msgstr ""
+"Histogrammet för en datauppsättning visar fördelningen av dess värden. Det "
+"enklaste sättet att visa detta i QGIS är via bildhistogrammet, som finns i "
+"dialogrutan :guilabel:`Layer Properties` för alla bildlager (rasterdataset)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:270
+msgid ""
+"In your :guilabel:`Layers` panel, right-click on the ``srtm_41_19`` layer"
+msgstr "I panelen :guilabel:`Layers` högerklickar du på lagret ``srtm_41_19``"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:272
+msgid "Select :menuselection:`Properties`"
+msgstr "Välj :menyselection:`Properties`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:273
+msgid ""
+"Choose the :guilabel:`Histogram` tab. You may need to click on the "
+":guilabel:`Compute Histogram` button to generate the graphic. You will see a"
+" graph that shows the frequency distribution for the raster values."
+msgstr ""
+"Välj fliken :guilabel:`Histogram`. Du kan behöva klicka på knappen "
+":guilabel:`Compute Histogram` för att generera grafiken. Du kommer att se en"
+" graf som visar frekvensfördelningen för rastervärdena."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:282
+msgid ""
+"The graph can be exported as an image with the |fileSave| :sup:`Save plot` "
+"button"
+msgstr ""
+"Grafen kan exporteras som en bild med knappen |fileSave| :sup:`Save plot`"
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:391
 msgid "fileSave"
 msgstr "fileSave"
 
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:285
+msgid ""
+"You can see more detailed information about the layer in the "
+":guilabel:`Information` tab (the mean and max values are estimated, and may "
+"not be exact)."
+msgstr ""
+"Du kan se mer detaljerad information om skiktet på fliken "
+":guilabel:`Information` (medel- och maxvärdena är uppskattade och kanske "
+"inte exakta)."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:289
+msgid ""
+"The mean value is ``332.8`` (estimated to 324.3), and the maximum value is "
+"``1699`` (estimated to 1548)! You can zoom in the histogram. Since there are"
+" a lot of pixels with value ``0``, the histogram looks compressed "
+"vertically. By zooming in to cover everything but the peak at ``0``, you "
+"will see more details:"
+msgstr ""
+"Medelvärdet är ``332,8`` (uppskattat till 324,3), och det maximala värdet är"
+" ``1699`` (uppskattat till 1548)! Du kan zooma in i histogrammet. Eftersom "
+"det finns många pixlar med värdet ``0`` ser histogrammet ut att vara "
+"komprimerat vertikalt. Genom att zooma in så att allt utom toppen vid ``0`` "
+"täcks, ser du fler detaljer:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:300
+msgid ""
+"If the mean and maximum values are not the same as above, it can be due to "
+"the min/max value calculation. Open the :guilabel:`Symbology` tab and expand"
+" the :guilabel:`Min / Max Value Settings` menu. Choose "
+"|radioButtonOn|:guilabel:`Min / max` and click on :guilabel:`Apply`."
+msgstr ""
+"Om medel- och maxvärdena inte är desamma som ovan kan det bero på "
+"beräkningen av min/max-värdet. Öppna fliken :guilabel:`Symbology` och "
+"expandera menyn :guilabel:`Min / Max Value Settings`. Välj "
+"|radioButtonOn|:guilabel:`Min / max` och klicka på :guilabel:`Apply`."
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:393
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:307
+msgid ""
+"Keep in mind that a histogram shows you the distribution of values, and not "
+"all values are necessarily visible on the graph."
+msgstr ""
+"Tänk på att ett histogram visar fördelningen av värden, och att alla värden "
+"inte nödvändigtvis syns i diagrammet."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:312
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Spatial Interpolation"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Rumslig interpolation"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:314
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the "
+":guilabel:`Sampled points` dataset we created earlier, and would like to "
+"have some idea of what the terrain looks like."
+msgstr ""
+"Låt oss säga att du har en samling provpunkter från vilka du skulle vilja "
+"extrapolera data. Du kanske till exempel har tillgång till "
+":guilabel:`Sampled points`-datasetet som vi skapade tidigare och vill få en "
+"uppfattning om hur terrängen ser ut."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:320
+msgid ""
+"To start, launch the :menuselection:`GDAL --> Raster analysis --> Grid (IDW "
+"with nearest neighbor searching)` tool in the :guilabel:`Processing "
+"Toolbox`."
+msgstr ""
+"Börja med att starta verktyget :menuselection:`GDAL --> Raster analysis --> "
+"Grid (IDW with nearest neighbor searching)` i :guilabel:`Processing "
+"Toolbox`."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:323
+msgid "For :guilabel:`Point layer` select ``Sampled points``"
+msgstr "För :guilabel:`Point layer` välj ``Sampled points``"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:324
+msgid "Set :guilabel:`Weighting power` to ``5.0``"
+msgstr "Ställ in :guilabel:`Viktningskraft` till ``5.0``"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:325
+msgid ""
+"In :guilabel:`Advanced parameters`, set :guilabel:`Z value from field` to "
+"``rvalue_1``"
+msgstr ""
+"I :guilabel:`Avancerade parametrar`, ställ in :guilabel:`Z värde från fält` "
+"till ``rvalue_1``"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:327
+msgid "Finally click on :guilabel:`Run` and wait until the processing ends"
+msgstr ""
+"Klicka slutligen på :guilabel:`Run` och vänta tills bearbetningen är klar"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:328
+msgid "Close the dialog"
+msgstr "Stäng dialogrutan"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:330
+msgid ""
+"Here is a comparison of the original dataset (left) to the one constructed "
+"from our sample points (right). Yours may look different due to the random "
+"nature of the location of the sample points."
+msgstr ""
+"Här är en jämförelse mellan den ursprungliga datauppsättningen (vänster) och"
+" den som konstruerats utifrån våra provpunkter (höger). Du kan se annorlunda"
+" ut på grund av den slumpmässiga placeringen av provpunkterna."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:338
+msgid ""
+"As you can see, 100 sample points aren't really enough to get a detailed "
+"impression of the terrain. It gives a very general idea, but it can be "
+"misleading as well."
+msgstr ""
+"Som du kan se är 100 provpunkter inte tillräckligt för att få ett detaljerat"
+" intryck av terrängen. Det ger en mycket allmän uppfattning, men det kan "
+"också vara missvisande."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:343
+msgid ""
+":abbr:`★★☆ (Moderate level)` Try Yourself: Different interpolation methods"
+msgstr ":abbr:`★★☆ (Måttlig nivå)` Prova själv: Olika interpolationsmetoder"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:345
+msgid "Use the processes shown above to create a set of 10 000 random points"
+msgstr ""
+"Använd de processer som visas ovan för att skapa en uppsättning med 10 000 "
+"slumpmässiga punkter"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:348
+msgid ""
+"If the number of points is really big, the processing time can take a long "
+"time."
+msgstr "Om antalet punkter är mycket stort kan bearbetningstiden ta lång tid."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:351
+msgid "Use these points to sample the original DEM"
+msgstr "Använd dessa punkter för att prova den ursprungliga DEM"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:352
+msgid ""
+"Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this "
+"dataset."
+msgstr ""
+"Använd verktyget :guilabel:`Grid (IDW with nearest neighbor searching)` på "
+"den här datauppsättningen."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:354
+msgid ""
+"Set :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``, "
+"respectively."
+msgstr ""
+"Sätt :guilabel:`Power` och :guilabel:`Smoothing` till ``5.0`` respektive "
+"``2.0``."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:357
+msgid ""
+"The results (depending on the positioning of your random points) will look "
+"more or less like this:"
+msgstr ""
+"Resultatet (beroende på placeringen av dina slumpmässiga punkter) kommer att"
+" se ut ungefär så här:"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:363
+msgid ""
+"This is a better representation of the terrain, due to the greater density "
+"of sample points. Remember, larger samples give better results."
+msgstr ""
+"Detta är en bättre representation av terrängen, eftersom provpunkterna har "
+"större täthet. Kom ihåg att större stickprov ger bättre resultat."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:369
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:371
+msgid ""
+"QGIS has a number of tools for analyzing the spatial statistical properties "
+"of datasets."
+msgstr ""
+"QGIS har ett antal verktyg för att analysera de rumsliga statistiska "
+"egenskaperna hos datauppsättningar."
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:376
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:378
+msgid ""
+"Now that we have covered vector analysis, why not see what can be done with "
+"rasters? That is what we will do in the next module!"
+msgstr ""
+"Nu när vi har gått igenom vektoranalys, varför inte se vad man kan göra med "
+"raster? Det är vad vi ska göra i nästa modul!"
