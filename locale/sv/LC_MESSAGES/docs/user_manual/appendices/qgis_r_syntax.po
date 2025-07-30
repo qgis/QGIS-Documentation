@@ -1,0 +1,673 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:7
+msgid "Appendix D: QGIS R script syntax"
+msgstr "Bilaga D: Syntax för QGIS R-skript"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:9
+msgid ""
+"Contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/en/istituto/scienze-della-vita/istituto-di-"
+"scienze-della-vita>`_"
+msgstr ""
+"Bidrag från Matteo Ghetta - finansierat av `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/en/istituto/scienze-della-vita/istituto-di-"
+"scienze-della-vita>`_"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:12
+msgid ""
+"Writing R scripts in Processing is a bit tricky because of the special "
+"syntax."
+msgstr ""
+"Att skriva R-skript i Processing är lite knepigt på grund av den speciella "
+"syntaxen."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:15
+msgid ""
+"A Processing R script starts with defining its **Inputs** and **Outputs**, "
+"each preceded with double hash characters (``##``)."
+msgstr ""
+"Ett Processing R-skript börjar med att definiera dess **Inputs** och "
+"**Outputs**, som var och en föregås av dubbla hash-tecken (``##``)."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:18
+msgid ""
+"Before the inputs, the group to place the algoritm in can be specified. If "
+"the group already exists, the algorithm will be added to it, if not, the "
+"group will be created. In the example below, the name of the group is *My "
+"group*:"
+msgstr ""
+"Före inmatningarna kan den grupp som algoritmen ska placeras i anges. Om "
+"gruppen redan finns kommer algoritmen att läggas till i den, om inte kommer "
+"gruppen att skapas. I exemplet nedan är gruppens namn *Min grupp*:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:24
+msgid "``##My Group=group``"
+msgstr "``##Min grupp=grupp``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:28
+msgid "Inputs"
+msgstr "Inmatningar"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:30
+msgid ""
+"All input data and parameters have to be specified. There are several types "
+"of inputs:"
+msgstr ""
+"Alla indata och parametrar måste specificeras. Det finns flera olika typer "
+"av indata:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:33
+msgid "vector: ``##Layer = vector``"
+msgstr "vektor: ``##Lager = vektor``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:34
+msgid ""
+"vector field: ``##F = Field Layer`` (where `Layer` is the name of an input "
+"vector layer the field belongs to)"
+msgstr ""
+"vektorfält: ``##F = fältskikt`` (där `skikt` är namnet på ett "
+"ingångsvektorskikt som fältet tillhör)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:36
+msgid "raster: ``##r = raster``"
+msgstr "raster: ``##r = raster``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:37
+msgid "table: ``##t = table``"
+msgstr "bord: ``##t = tabell``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:38
+msgid "number: ``##Num = number``"
+msgstr "nummer: ``##Num = nummer``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:39
+msgid "string: ``##Str = string``"
+msgstr "sträng: ``##Str = sträng``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:40
+msgid "boolean: ``##Bol = boolean``"
+msgstr "boolean: ``##Bol = boolean``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:42
+msgid ""
+"elements in a dropdown menu. The items must be separated with semicolons "
+"``;``: ``##type=selection point;lines;point+lines``"
+msgstr ""
+"element i en rullgardinsmeny. Objekten måste separeras med semikolon ``;``: "
+"``##type=valpunkt;linjer;punkt+linjer``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:47
+msgid "Outputs"
+msgstr "Utgångar"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:49
+msgid ""
+"As for the inputs, each output has to be defined at the beginning of the "
+"script:"
+msgstr ""
+"På samma sätt som för inmatningarna måste varje utmatning definieras i "
+"början av skriptet:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:52
+msgid "vector: ``##output= output vector``"
+msgstr "vektor: ``##output= utmatningsvektor``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:53
+msgid "raster: ``##output= output raster``"
+msgstr "raster: ``##output= utmatning raster``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:54
+msgid "table: ``##output= output table``"
+msgstr "tabell: ``##output= utmatningstabell``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:55
+msgid "plots: ``##output_plots_to_html`` (##showplots in earlier versions)"
+msgstr "plots: ``##output_plots_to_html`` (##showplots i tidigare versioner)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:56
+msgid ""
+"To show R output in the *Result Viewer*, put ``>`` in front of the command "
+"whose output you would like to show."
+msgstr ""
+"Om du vill visa R-utdata i *Result Viewer* sätter du ``>`` framför det "
+"kommando vars utdata du vill visa."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:65
+msgid "Syntax Summary for QGIS R scripts"
+msgstr "Syntaxsammanfattning för QGIS R-skript"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:70
+msgid "A number of input and output parameter types are offered."
+msgstr "Det finns ett antal olika typer av parametrar för in- och utmatning."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:73
+msgid "Input parameter types"
+msgstr "Typer av inmatningsparametrar"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:129
+msgid "Parameter"
+msgstr "Parameter"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:129
+msgid "Syntax example"
+msgstr "Exempel på syntax"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+msgid "Returning objects"
+msgstr "Återlämnande av objekt"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:131
+msgid "vector"
+msgstr "vektor"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+msgid "Layer = vector"
+msgstr "Lager = vektor"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
+msgid ""
+"sf object (or SpatialDataFrame object, if ##load_vector_using_rgdal is "
+"specified)"
+msgstr ""
+"sf-objekt (eller SpatialDataFrame-objekt, om ##load_vector_using_rgdal "
+"anges)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
+msgid "vector point"
+msgstr "vektorpunkt"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
+msgid "Layer = vector point"
+msgstr "Lager = vektorpunkt"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
+msgid "vector line"
+msgstr "vektorlinje"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
+msgid "Layer = vector line"
+msgstr "Lager = vektorlinje"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
+msgid "vector polygon"
+msgstr "vektorpolygon"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
+msgid "Layer = vector polygon"
+msgstr "Lager = vektorpolygon"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
+msgid ""
+"sf object (or SpatialPolygonsDataFrame object, if ##load_vector_using_rgdal "
+"is used)"
+msgstr ""
+"sf-objekt (eller SpatialPolygonsDataFrame-objekt, om "
+"##load_vector_using_rgdal används)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
+msgid "multiple vector"
+msgstr "multipel vektor"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
+msgid "Layer = multiple vector"
+msgstr "Lager = flera vektorer"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
+msgid ""
+"sf object (or SpatialDataFrame objects if ##load_vector_using_rgdal is "
+"specified)"
+msgstr ""
+"sf-objekt (eller SpatialDataFrame-objekt om ##load_vector_using_rgdal har "
+"angetts)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:135
+msgid "table"
+msgstr "tabell"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
+msgid "Layer = table"
+msgstr "Lager = bord"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
+msgid "dataframe conversion from csv, default object of ``read.csv`` function"
+msgstr ""
+"dataframe-konvertering från csv, standardobjekt för funktionen ``read.csv``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:90
+msgid "field"
+msgstr "fält"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:90
+msgid "Field = Field Layer"
+msgstr "Fält = fältskikt"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:90
+msgid "name of the Field selected, e.g. ``\"Area\"``"
+msgstr "namnet på det valda fältet, t.ex. ``\"Area\"``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:92
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:133
+msgid "raster"
+msgstr "raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:92
+msgid "Layer = raster"
+msgstr "Lager = raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:92
+msgid "RasterBrick object, default object of ``raster`` package"
+msgstr "RasterBrick-objekt, standardobjekt för ``raster``-paketet"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:94
+msgid "multiple raster"
+msgstr "flera raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:94
+msgid "Layer = multiple raster"
+msgstr "Lager = flera raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:94
+msgid "RasterBrick objects, default object of ``raster`` package"
+msgstr "RasterBrick-objekt, standardobjekt i ``raster``-paketet"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:96
+msgid "number"
+msgstr "nummer"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:96
+msgid "N = number"
+msgstr "N = antal"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:96
+msgid "integer or floating number chosen"
+msgstr "heltal eller flytande tal vald"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
+msgid "string"
+msgstr "sträng"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
+msgid "S = string"
+msgstr "S = sträng"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
+msgid "string added in the box"
+msgstr "sträng tillagd i rutan"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
+msgid "longstring"
+msgstr "långsträng"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
+msgid "LS = longstring"
+msgstr "LS = långsträng"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
+msgid "string added in the box, could be longer then the normal string"
+msgstr ""
+"sträng som läggs till i lådan, kan vara längre än den normala strängen"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
+msgid "selection"
+msgstr "urval"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
+msgid "S = selection first;second;third"
+msgstr "S = urval första;andra;tredje"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
+msgid "string of the selected item chosen in the dropdown menu"
+msgstr "sträng för det valda objektet som valts i rullgardinsmenyn"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
+msgid "crs"
+msgstr "crs"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
+msgid "C = crs"
+msgstr "C = crs"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
+msgid "string of the resulting CRS chosen, in the format: ``\"EPSG:4326\"``"
+msgstr "sträng av den resulterande CRS som valts, i formatet: ``\"EPSG:4326\"``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
+msgid "extent"
+msgstr "omfattning"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
+msgid "E = extent"
+msgstr "E = omfattning"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
+msgid ""
+"Extent object of the ``raster`` package, you can extract values as "
+"``E@xmin``"
+msgstr ""
+"Extent-objekt i paketet ``raster``, du kan extrahera värden som ``E@xmin``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
+msgid "point"
+msgstr "poäng"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
+msgid "P = point"
+msgstr "P = punkt"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
+msgid "when clicked on the map, you have the coordinates of the point"
+msgstr "när du klickar på kartan har du koordinaterna för punkten"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:110
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:137
+msgid "file"
+msgstr "fil"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:110
+msgid "F = file"
+msgstr "F = fil"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:110
+msgid "path of the file chosen, e.g. \"/home/matteo/file.txt\""
+msgstr "sökvägen till den valda filen, t.ex. \"/home/matteo/file.txt\""
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:112
+msgid "folder"
+msgstr "folder"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:112
+msgid "F = folder"
+msgstr "F = mapp"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:112
+msgid "path of the folder chosen, e.g. \"/home/matteo/Downloads\""
+msgstr "sökvägen till den valda mappen, t.ex. \"/home/matteo/Downloads\""
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:115
+msgid "A parameter can be **OPTIONAL**, meaning that it can be ignored."
+msgstr ""
+"En parameter kan vara **OPTIONAL**, vilket innebär att den kan ignoreras."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:117
+msgid ""
+"In order to set an input as optional, you add the string ``optional`` "
+"**before** the input, e.g::"
+msgstr ""
+"För att ange att en inmatning är valfri lägger du till strängen ``optional``"
+" **före** inmatningen, t.ex:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:126
+msgid "Output parameter types"
+msgstr "Typer av utgångsparametrar"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:131
+msgid "Output = output vector"
+msgstr "Utgång = utgångsvektor"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:133
+msgid "Output = output raster"
+msgstr "Output = utmatning av raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:135
+msgid "Output = output table"
+msgstr "Output = utmatningstabell"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:137
+msgid "Output = output file"
+msgstr "Output = utdatafil"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:140
+msgid ""
+"You can save plots as ``png`` from the *Processing Result Viewer*, or you "
+"can choose to save the plot directly from the algorithm interface."
+msgstr ""
+"Du kan spara plottar som ``png`` från *Processing Result Viewer*, eller så "
+"kan du välja att spara plotten direkt från algoritmens gränssnitt."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:147
+msgid "Script body"
+msgstr "Skriptets kropp"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:149
+msgid ""
+"The script body follows R syntax and the **Log** panel can help you if there"
+" is something wrong with your script."
+msgstr ""
+"Skriptet följer R-syntaxen och panelen **Log** kan hjälpa dig om det är "
+"något fel på ditt skript."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:152
+msgid ""
+"**Remember** that you have to load all additional libraries in the script::"
+msgstr ""
+"**Kom ihåg** att du måste ladda alla ytterligare bibliotek i skriptet::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:161
+msgid "Examples"
+msgstr "Exempel"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:164
+msgid "Example with vector output"
+msgstr "Exempel med vektorutgång"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:166
+msgid ""
+"Let's take an algorithm from the online collection that creates random "
+"points from the extent of an input layer::"
+msgstr ""
+"Låt oss ta en algoritm från online-samlingen som skapar slumpmässiga punkter"
+" från omfattningen av ett ingångsskikt::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:179
+msgid "Explanation (per line in the script):"
+msgstr "Förklaring (per rad i skriptet):"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:181
+msgid "``Point pattern analysis`` is the group of the algorithm"
+msgstr "``Punktmönsteranalys`` är gruppen för algoritmen"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:182
+msgid "``Layer`` is the input **vector** layer"
+msgstr "``Lager`` är det ingående **vektor**-lagret"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:183
+msgid "``Size`` is a **numerical** parameter with a default value of 10"
+msgstr "``Size`` är en **numerisk** parameter med ett standardvärde på 10"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:184
+msgid ""
+"``Output`` is the **vector** layer that will be created by the algorithm"
+msgstr ""
+"``Output`` är det **vektor**-lager som kommer att skapas av algoritmen"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:186
+msgid "``library(sp)`` loads the **sp** library"
+msgstr "``library(sp)``` laddar **sp**-biblioteket"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:187
+msgid "``spatpoly = as(Layer, \"Spatial\")`` translate to an sp object"
+msgstr "``spatpoly = as(Layer, \"Spatial\")`` översätt till ett sp-objekt"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:188
+msgid ""
+"Call the ``spsample`` function of the ``sp`` library and run it using the "
+"input defined above (``Layer`` and ``Size``)"
+msgstr ""
+"Anropa funktionen ``spsample`` i biblioteket ``sp`` och kör den med de "
+"indata som definierats ovan (``Layer`` och ``Size``)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:190
+msgid ""
+"Create a *SpatialPointsDataFrame* object using the "
+"``SpatialPointsDataFrame`` function"
+msgstr ""
+"Skapa ett *SpatialPointsDataFrame*-objekt med hjälp av funktionen "
+"``SpatialPointsDataFrame``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:192
+msgid "Create the output vector layer using the ``st_as_sf`` function"
+msgstr "Skapa utmatningsvektorlagret med hjälp av funktionen ``st_as_sf``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:195
+msgid ""
+"That's it! Just run the algorithm with a vector layer you have in the QGIS "
+"Legend, choose the number of random point. The resulting layer will be added"
+" to your map."
+msgstr ""
+"Så där ja! Kör bara algoritmen med ett vektorlager som du har i QGIS Legend,"
+" välj antalet slumpmässiga punkter. Det resulterande lagret kommer att "
+"läggas till på din karta."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:201
+msgid "Example with raster output"
+msgstr "Exempel med rasterutmatning"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:203
+msgid ""
+"The following script will perform basic ordinary kriging to create a raster "
+"map of interpolated values from a specified field of the input point vector "
+"layer by using the ``autoKrige`` function of the ``automap`` R package. It "
+"will first calculate the kriging model and then create a raster. The raster "
+"is created with the ``raster`` function of the raster R package::"
+msgstr ""
+"Följande skript utför grundläggande vanlig kriging för att skapa en "
+"rasterkarta med interpolerade värden från ett angivet fält i indatapunktens "
+"vektorlager med hjälp av funktionen ``autoKrige`` i R-paketet ``automap``. "
+"Först beräknas krigingmodellen och sedan skapas ett raster. Rastret skapas "
+"med funktionen ``raster`` i R-paketet raster::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:227
+msgid ""
+"By using ``##load_vector_using_rgdal``, the input vector layer will be made "
+"available as a ``SpatialDataFrame`` objects, so we avoid having to translate"
+" it from an ``sf`` object."
+msgstr ""
+"Genom att använda ``##load_vector_using_rgdal`` kommer ingångsvektorlagret "
+"att göras tillgängligt som ett ``SpatialDataFrame``-objekt, så vi undviker "
+"att behöva översätta det från ett ``sf``-objekt."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:232
+msgid "Example with table output"
+msgstr "Exempel med tabellutdata"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:234
+msgid ""
+"Let's edit the ``Summary Statistics`` algorithm so that the output is a "
+"table file (csv)."
+msgstr ""
+"Låt oss redigera algoritmen ``Summary Statistics`` så att utdata blir en "
+"tabellfil (csv)."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:237
+msgid "The script body is the following::"
+msgstr "Skriptets huvuddel är följande::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:258
+msgid ""
+"The third line specifies the **Vector Field** in input and the fourth line "
+"tells the algorithm that the output should be a table."
+msgstr ""
+"Den tredje raden anger **Vector Field** i indata och den fjärde raden talar "
+"om för algoritmen att utdata ska vara en tabell."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:261
+msgid ""
+"The last line will take the ``Stat`` object created in the script and "
+"convert it into a ``csv`` table."
+msgstr ""
+"Den sista raden tar ``Stat``-objektet som skapats i skriptet och konverterar"
+" det till en ``csv``-tabell."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:265
+msgid "Example with console output"
+msgstr "Exempel med konsolutmatning"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:267
+msgid ""
+"We can use the previous example and instead of creating a table, print the "
+"result in the **Result Viewer**::"
+msgstr ""
+"Vi kan använda det tidigare exemplet och istället för att skapa en tabell "
+"skriva ut resultatet i **Result Viewer**::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:287
+msgid "The script is exactly the same as the one above except for two edits:"
+msgstr ""
+"Manuset är exakt detsamma som det ovan, med undantag för två ändringar:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:289
+msgid "no output specified (the fourth line has been removed)"
+msgstr "ingen utdata specificerad (den fjärde raden har tagits bort)"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:290
+msgid ""
+"the last line begins with ``>``, telling Processing to make the object "
+"available through the result viewer"
+msgstr ""
+"den sista raden börjar med ``>``, vilket säger till Processing att göra "
+"objektet tillgängligt via resultatvisaren"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:295
+msgid "Example with plot"
+msgstr "Exempel med diagram"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:296
+msgid ""
+"To create plots, you have to use the ``##output_plots_to_html`` parameter as"
+" in the following script::"
+msgstr ""
+"För att skapa plottar måste du använda parametern ``##output_plots_to_html``"
+" som i följande skript::"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:307
+msgid ""
+"The script uses a field (``Field``) of a vector layer (``Layer``) as input, "
+"and creates a *QQ Plot* (to test the normality of the distribution)."
+msgstr ""
+"Skriptet använder ett fält (``Field``) i ett vektorlager (``Layer``) som "
+"indata och skapar en *QQ Plot* (för att testa normaliteten i fördelningen)."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:311
+msgid "The plot is automatically added to the Processing *Result Viewer*."
+msgstr "Plotten läggs automatiskt till i Processing *Result Viewer*."
