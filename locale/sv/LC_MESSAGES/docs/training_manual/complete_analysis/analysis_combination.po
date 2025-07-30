@@ -1,0 +1,328 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:2
+msgid "Lesson: Combining the Analyses"
+msgstr "Lektion: Kombinera analyserna"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:4
+msgid ""
+"Using the vectorized results of the raster analysis will allow you to select"
+" only those buildings on suitable terrain."
+msgstr ""
+"Genom att använda de vektoriserade resultaten av rasteranalysen kan du bara "
+"välja de byggnader som ligger i lämplig terräng."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:7
+msgid ""
+"**The goal for this lesson:** To use the vectorized terrain results to "
+"select suitable plots."
+msgstr ""
+"**Målet för den här lektionen:** Att använda de vektoriserade "
+"terrängresultaten för att välja lämpliga tomter."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:11
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
+msgstr ":abbr:`★★☆ (Måttlig nivå)` Prova själv:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:13
+msgid "Save your current map (:file:`raster_analysis.qgs`)."
+msgstr "Spara din aktuella karta (:file:`raster_analysis.qgs`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:14
+msgid ""
+"Open the map which you created during the vector analysis earlier (you "
+"should have saved the file as :file:`analysis.qgs`)."
+msgstr ""
+"Öppna den karta som du skapade under vektoranalysen tidigare (du bör ha "
+"sparat filen som :file:`analysis.qgs`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:16
+msgid "In the :guilabel:`Layers` panel, enable these layers:"
+msgstr "Aktivera dessa lager i panelen :guilabel:`Layers`:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
+msgid ":guilabel:`hillshade`,"
+msgstr ":guilabel:`hillshade`,"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
+msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
+msgstr ":guilabel:`solution` (eller :guilabel:`buildings_over_100`)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
+msgid ""
+"In addition to these layers, which should already be loaded in the map from "
+"when you worked on it before, also add the :file:`suitable_terrain.shp` "
+"dataset."
+msgstr ""
+"Förutom dessa lager, som redan bör vara inlästa i kartan från när du "
+"arbetade med den tidigare, lägger du också till datasetet "
+":file:`suitable_terrain.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:24
+msgid ""
+"If you are missing some layers, you should find them in "
+":file:`exercise_data/residential_development/`"
+msgstr ""
+"Om du saknar några lager bör du hitta dem i "
+":file:`exercise_data/residential_development/`"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
+msgid ""
+"Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> "
+"Geoprocessing Tools`) to create a new vector layer called "
+":file:`new_solution.shp` which contains only those buildings which intersect"
+" the :guilabel:`suitable_terrain` layer."
+msgstr ""
+"Använd verktyget :guilabel:`Intersection` (:menyval:`Vector --> "
+"Geoprocessing Tools`) för att skapa ett nytt vektorskikt som heter "
+":file:`new_solution.shp` och som endast innehåller de byggnader som skär "
+"igenom skiktet :guilabel:`suitable_terrain`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
+msgid ""
+"You should now have a layer showing certain buildings as your solution, for "
+"example:"
+msgstr ""
+"Du bör nu ha ett lager som visar vissa byggnader som till exempel din "
+"lösning:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:38
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Inspecting the Results"
+msgstr ":abbr:`★★★☆ (Måttlig nivå)` Prova själv: Inspektera resultaten"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
+msgid ""
+"Look at each of the buildings in your :guilabel:`new_solution` layer. "
+"Compare them with the :guilabel:`suitable_terrain` layer by changing the "
+"symbology for the :guilabel:`new_solution` layer so that it has outlines "
+"only. What do you notice about some of the buildings? Are they all suitable "
+"just because they intersect with the :guilabel:`suitable_terrain` layer? Why"
+" or why not? Which ones would you deem to be unsuitable?"
+msgstr ""
+"Titta på var och en av byggnaderna i ditt :guilabel:`new_solution`-lager. "
+"Jämför dem med skiktet :guilabel:`suitable_terrain` genom att ändra "
+"symbologin för skiktet :guilabel:`new_solution` så att det bara har "
+"konturer. Vad lägger du märke till hos några av byggnaderna? Är de alla "
+"lämpliga bara för att de korsar skiktet :guilabel:`suitable_terrain`? Varför"
+" eller varför inte? Vilka skulle du anse vara olämpliga?"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
+msgid "Answer"
+msgstr "Svar"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:50
+msgid ""
+"You may notice that some of the buildings in your :file:`new_solution` layer"
+" have been \"sliced\" by the :guilabel:`Intersection` tool. This shows that "
+"only part of the building - and therefore only part of the property - lies "
+"on suitable terrain. We can therefore sensibly eliminate those buildings "
+"from our dataset."
+msgstr ""
+"Du kanske märker att några av byggnaderna i ditt lager :file:`new_solution` "
+"har \"skurits\" med verktyget :guilabel:`Intersection`. Detta visar att "
+"endast en del av byggnaden - och därmed endast en del av fastigheten - "
+"ligger i lämplig terräng. Vi kan därför på ett förnuftigt sätt eliminera "
+"dessa byggnader från vårt dataset."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:58
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Refining the Analysis"
+msgstr ":abbr:`★★☆ (Måttlig nivå)` Prova själv: Förfina analysen"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:60
+msgid ""
+"You can see from the results that some buildings which were included were "
+"not really suitable, so we can now refine the analysis."
+msgstr ""
+"Av resultaten framgår att vissa byggnader som ingick inte var riktigt "
+"lämpliga, så vi kan nu förfina analysen."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:63
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the :guilabel:`suitable_terrain` layer. How would you "
+"achieve this? Use one or more Vector Analysis tools and remember that our "
+"buildings are all over 100m squared in size."
+msgstr ""
+"Vi vill säkerställa att vår analys endast returnerar de byggnader som helt "
+"och hållet faller inom :guilabel:`suitable_terrain`-skiktet. Hur skulle du "
+"uppnå detta? Använd ett eller flera vektoranalysverktyg och kom ihåg att "
+"alla våra byggnader är över 100 m i kvadratstorlek."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:71
+msgid "At the moment, your analysis should look something like this:"
+msgstr "För närvarande bör din analys se ut ungefär så här:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:76
+msgid "Consider a circular area, continuous for 100 meters in all directions."
+msgstr ""
+"Tänk dig en cirkelformad yta som sträcker sig 100 meter i alla riktningar."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:81
+msgid ""
+"If it is greater than 100 meters in radius, then subtracting 100 meters from"
+" its size (from all directions) will result in a part of it being left in "
+"the middle."
+msgstr ""
+"Om den är större än 100 meter i radie kommer en del av den att lämnas i "
+"mitten om man subtraherar 100 meter från dess storlek (från alla "
+"riktningar)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:88
+msgid ""
+"Therefore, you can run an *interior buffer* of 100 meters on your existing "
+":guilabel:`suitable_terrain` vector layer. In the output of the buffer "
+"function, whatever remains of the original layer will represent areas where "
+"there is suitable terrain for 100 meters beyond."
+msgstr ""
+"Därför kan du köra en *interior buffert* på 100 meter på ditt befintliga "
+":guilabel:`suitable_terrain`-vektorlager. I buffertfunktionens utdata kommer"
+" det som återstår av det ursprungliga skiktet att representera områden där "
+"det finns lämplig terräng 100 meter bort."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:93
+msgid "To demonstrate:"
+msgstr "För att demonstrera:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:95
+msgid ""
+"Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open "
+"the Buffer(s) dialog."
+msgstr ""
+"Gå till :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` för "
+"att öppna dialogrutan Buffer(s)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:97
+msgid "Set it up like this:"
+msgstr "Ställ upp det så här:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:102
+msgid ""
+"Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a buffer"
+" distance of ``-100``. (The distance is automatically in meters because your"
+" map is using a projected CRS.)"
+msgstr ""
+"Använd skiktet :guilabel:`suitable_terrain` med ``10`` segment och ett "
+"buffertavstånd på ``-100``. (Avståndet anges automatiskt i meter eftersom "
+"din karta använder ett projicerat CRS)"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:105
+msgid ""
+"Save the output in :file:`exercise_data/residential_development/` as "
+":file:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"Spara utdata i :file:`exercise_data/residential_development/` som "
+":file:`suitable_terrain_continuous100m.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:107
+msgid ""
+"If necessary, move the new layer above your original "
+":guilabel:`suitable_terrain` layer."
+msgstr ""
+"Om det behövs flyttar du det nya lagret ovanför det ursprungliga "
+":guilabel:`suitable_terrain`-lagret."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:110
+msgid "Your results will look like something like this:"
+msgstr "Dina resultat kommer att se ut ungefär så här:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:115
+msgid ""
+"Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector --> "
+"Research Tools --> Select by location`)."
+msgstr ""
+"Använd nu verktyget :guilabel:`Välj efter plats` (:menuselection:`Vector -->"
+" Research Tools --> Select by location`)."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:117
+msgid "Set up like this:"
+msgstr "Ställ upp så här:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:122
+msgid ""
+"Select features in :guilabel:`new_solution` that intersect features in "
+":guilabel:`suitable_terrain_continuous100m.shp`."
+msgstr ""
+"Välj objekt i :guilabel:`new_solution` som korsar objekt i "
+":guilabel:`suitable_terrain_continuous100m.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:125
+msgid "This is the result:"
+msgstr "Resultat tar färg från:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:130
+msgid ""
+"The yellow buildings are selected. Although some of the buildings fall "
+"partly outside the new :guilabel:`suitable_terrain_continuous100m` layer, "
+"they lie well within the original :guilabel:`suitable_terrain` layer and "
+"therefore meet all of our requirements."
+msgstr ""
+"De gula byggnaderna är valda. Även om några av byggnaderna delvis faller "
+"utanför det nya skiktet :guilabel:`suitable_terrain_continuous100m`, ligger "
+"de väl inom det ursprungliga skiktet :guilabel:`suitable_terrain` och "
+"uppfyller därför alla våra krav."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:135
+msgid ""
+"Save the selection under :file:`exercise_data/residential_development/` as "
+":file:`final_answer.shp`."
+msgstr ""
+"Spara urvalet under :file:`exercise_data/residential_development/` som "
+":file:`final_answer.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:139
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:141
+msgid ""
+"You have now answered the original research question, and can offer an "
+"opinion (with reasons, backed by analysis) for a recommendation regarding "
+"which property to develop."
+msgstr ""
+"Du har nu svarat på den ursprungliga forskningsfrågan och kan ge en åsikt "
+"(med skäl, underbyggd av analys) för en rekommendation om vilken fastighet "
+"som ska utvecklas."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:146
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:148
+msgid "Next you will present these results as part of your second assignment."
+msgstr ""
+"Därefter kommer du att presentera dessa resultat som en del av din andra "
+"uppgift."
