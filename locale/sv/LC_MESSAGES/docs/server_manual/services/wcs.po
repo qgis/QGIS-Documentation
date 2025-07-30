@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,6 +25,34 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/server_manual/services/wcs.rst:2
+msgid "Web Coverage Service (WCS)"
+msgstr "Webbtäckningstjänst (WCS)"
+
+#: ../../docs/server_manual/services/wcs.rst:4
+msgid ""
+"The **1.0.0** and **1.1.1** WCS standards implemented in QGIS Server provide"
+" a HTTP interface to access raster data, referred to as *coverage*, coming "
+"from a QGIS project."
+msgstr ""
+"WCS-standarderna **1.0.0** och **1.1.1** som implementerats i QGIS Server "
+"tillhandahåller ett HTTP-gränssnitt för åtkomst till rasterdata, som kallas "
+"*täckning*, som kommer från ett QGIS-projekt."
+
+#: ../../docs/server_manual/services/wcs.rst:8
+msgid "Specifications:"
+msgstr "Specifikationer:"
+
 #: ../../docs/server_manual/services/wcs.rst:10
 msgid "`WCS 1.0.0 <https://docs.ogc.org/is/16-083r2/16-083r2.html>`_"
 msgstr "`WCS 1.0.0 <https://docs.ogc.org/is/16-083r2/16-083r2.html>`_"
@@ -31,6 +60,14 @@ msgstr "`WCS 1.0.0 <https://docs.ogc.org/is/16-083r2/16-083r2.html>`_"
 #: ../../docs/server_manual/services/wcs.rst:11
 msgid "`WCS 1.1.1 <https://docs.ogc.org/is/09-146r8/09-146r8.html>`_"
 msgstr "`WCS 1.1.1 <https://docs.ogc.org/is/09-146r8/09-146r8.html>`_"
+
+#: ../../docs/server_manual/services/wcs.rst:13
+msgid "Standard requests provided by QGIS Server:"
+msgstr "Standardförfrågningar som tillhandahålls av QGIS Server:"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Request"
+msgstr "Förfrågan"
 
 #: ../../docs/server_manual/services/wcs.rst:1
 msgid "Description"
@@ -41,97 +78,346 @@ msgid ":ref:`GetCapabilities <wcs_getcapabilities>`"
 msgstr ":ref:`GetCapabilities <wcs_getcapabilities>`"
 
 #: ../../docs/server_manual/services/wcs.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "Returnerar XML-metadata med information om servern"
+
+#: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`DescribeCoverage <wcs_describecoverage>`"
 msgstr ":ref:`DescribeCoverage <wcs_describecoverage>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Retrieves XML document about additional information about coverages"
+msgstr "Hämtar XML-dokument med ytterligare information om försäkringar"
 
 #: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`GetCoverage <wcs_getcoverage>`"
 msgstr ":ref:`GetCoverage <wcs_getcoverage>`"
 
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Retrieves coverage"
+msgstr "Hämtar täckning"
+
 #: ../../docs/server_manual/services/wcs.rst:27
 msgid "GetCapabilities"
 msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wcs.rst:29
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WCS 1.1.1 specifications:"
+msgstr ""
+"Standardparametrar för **GetCapabilities**-begäran enligt OGC WCS "
+"1.1.1-specifikationerna:"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Parameter"
+msgstr "Parameter"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Required"
+msgstr "Obligatorisk"
 
 #: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`SERVICE <services_basics_service>`"
 msgstr ":ref:`SERVICE <services_basics_service>`"
 
 #: ../../docs/server_manual/services/wcs.rst:1
+msgid "Yes"
+msgstr "Ja"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Name of the service (**WCS**)"
+msgstr "Tjänstens namn (**WCS**)"
+
+#: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`REQUEST <services_basics_request>`"
 msgstr ":ref:`REQUEST <services_basics_request>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "Namn på begäran (**GetCapabilities**)"
 
 #: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`VERSION <wcs_version>`"
 msgstr ":ref:`VERSION <wcs_version>`"
 
 #: ../../docs/server_manual/services/wcs.rst:1
+msgid "No"
+msgstr "Nej"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Version of the service"
+msgstr "Version av tjänsten"
+
+#: ../../docs/server_manual/services/wcs.rst:40
+#: ../../docs/server_manual/services/wcs.rst:113
+#: ../../docs/server_manual/services/wcs.rst:229
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr ""
+"Utöver standardparametrarna har QGIS Server stöd för följande extra "
+"parametrar:"
+
+#: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`MAP <services_basics_map>`"
 msgstr ":ref:`MAP <services_basics_map>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "QGIS project file"
+msgstr "QGIS-projektfil"
+
+#: ../../docs/server_manual/services/wcs.rst:49
+#: ../../docs/server_manual/services/wcs.rst:248
+msgid "URL example:"
+msgstr "Exempel på URL:"
+
+#: ../../docs/server_manual/services/wcs.rst:58
+msgid ""
+"XML document example when a single raster layer (named "
+"``T20QPD_20171123T144719_TCI``) is published in the QGIS project for the WCS"
+" service:"
+msgstr ""
+"Exempel på XML-dokument när ett enda rasterlager (med namnet "
+"``T20QPD_20171123T144719_TCI``) publiceras i QGIS-projektet för WCS-"
+"tjänsten:"
 
 #: ../../docs/server_manual/services/wcs.rst:87
 msgid "VERSION"
 msgstr "VERSION"
 
+#: ../../docs/server_manual/services/wcs.rst:89
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Currently, the version values is not internally used and always fallback to "
+"``1.1.1``."
+msgstr ""
+"Denna parameter gör det möjligt att ange vilken version av tjänsten som ska "
+"användas. För närvarande används inte versionsvärdena internt och faller "
+"alltid tillbaka på ``1.1.1``."
+
 #: ../../docs/server_manual/services/wcs.rst:96
 msgid "DescribeCoverage"
 msgstr "DescribeCoverage"
+
+#: ../../docs/server_manual/services/wcs.rst:98
+msgid ""
+"This request allows to retrieve additional information about coverages like "
+"the format of the underlying datasource, the number of bands, ... Standard "
+"parameters for the **DescribeCoverage** request according to the OGC WCS "
+"1.1.1 specifications:"
+msgstr ""
+"Denna begäran gör det möjligt att hämta ytterligare information om "
+"täckningar, t.ex. formatet för den underliggande datakällan, antalet band, "
+"... Standardparametrar för begäran **DescribeCoverage** enligt OGC WCS "
+"1.1.1-specifikationerna:"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Name of the request (**DescribeCoverage**)"
+msgstr "Namn på begäran (**DescribeCoverage**)"
 
 #: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`COVERAGE <wcs_describecoverage_coverage>`"
 msgstr ":ref:`COVERAGE <wcs_describecoverage_coverage>`"
 
 #: ../../docs/server_manual/services/wcs.rst:1
+msgid "Specify coverage layers (WCS 1.0.0)"
+msgstr "Ange täckningsskikt (WCS 1.0.0)"
+
+#: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`"
 msgstr ":ref:`IDENTIFIER <wcs_describecoverage_identifier>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Specify coverage layers (WCS 1.1.1)"
+msgstr "Ange täckningsskikt (WCS 1.1.1)"
+
+#: ../../docs/server_manual/services/wcs.rst:122
+msgid "The XML document for a 3 bands GeoTIFF raster layer looks like:"
+msgstr ""
+"XML-dokumentet för ett GeoTIFF-rasterskikt med 3 band ser ut som följer:"
 
 #: ../../docs/server_manual/services/wcs.rst:166
 msgid "COVERAGE"
 msgstr "COVERAGE"
 
+#: ../../docs/server_manual/services/wcs.rst:168
+msgid ""
+"This parameter, defined in WCS ``1.0.0``, allows to specify the layers to "
+"query for additional information. Names have to be separated by a comma."
+msgstr ""
+"Denna parameter, som definieras i WCS ``1.0.0``, gör det möjligt att ange "
+"vilka lager som ska tillfrågas om ytterligare information. Namnen måste "
+"separeras med ett kommatecken."
+
+#: ../../docs/server_manual/services/wcs.rst:171
+msgid ""
+"In addition, QGIS Server introduced an option to select layers by its short "
+"name. The short name of a layer may be configured through "
+":menuselection:`Properties --> Metadata` in layer menu. If the short name is"
+" defined, then it's used by default instead of the layer's name:"
+msgstr ""
+"Dessutom har QGIS Server infört ett alternativ för att välja lager efter "
+"dess kortnamn. Kortnamnet för ett skikt kan konfigureras genom "
+":menuselection:`Properties --> Metadata` i skiktmenyn. Om kortnamnet är "
+"definierat används det som standard i stället för skiktets namn:"
+
+#: ../../docs/server_manual/services/wcs.rst:186
+msgid "``COVERAGE`` is mandatory if ``IDENTIFIER`` is not set."
+msgstr "``COVERAGE`` är obligatoriskt om ``IDENTIFIER`` inte är angivet."
+
 #: ../../docs/server_manual/services/wcs.rst:192
 msgid "IDENTIFIER"
 msgstr "IDENTIFIER"
 
+#: ../../docs/server_manual/services/wcs.rst:194
+msgid ""
+"This parameter replaces the :ref:`COVERAGE <wcs_describecoverage_coverage>` "
+"parameter in WCS ``1.1.1``. But QGIS Server does not filter according to the"
+" ``VERSION`` parameter so ``IDENTIFIER`` and ``COVERAGE`` have the same "
+"effect."
+msgstr ""
+"Denna parameter ersätter parametern :ref:`COVERAGE "
+"<wcs_describecoverage_coverage>` i WCS ``1.1.1``. Men QGIS Server filtrerar "
+"inte enligt parametern ``VERSION`` så ``IDENTIFIER`` och ``COVERAGE`` har "
+"samma effekt."
+
+#: ../../docs/server_manual/services/wcs.rst:200
+msgid ""
+"``IDENTIFIER`` is mandatory if ``COVERAGE`` is not set. If both "
+"``IDENTIFIER`` and ``COVERAGE`` parameters are defined, ``COVERAGE`` is "
+"always used in priority."
+msgstr ""
+"``IDENTIFIER`` är obligatorisk om ``COVERAGE`` inte har angetts. Om både "
+"parametrarna ``IDENTIFIER`` och ``COVERAGE`` är definierade, används alltid "
+"``COVERAGE`` i första hand."
+
 #: ../../docs/server_manual/services/wcs.rst:208
 msgid "GetCoverage"
 msgstr "GetCoverage"
+
+#: ../../docs/server_manual/services/wcs.rst:210
+msgid ""
+"This request allows to retrieve the coverage according to specific "
+"constraints like the extent or the CRS. Standard parameters for the "
+"**DescribeCoverage** request according to the OGC WCS 1.1.1 specifications:"
+msgstr ""
+"Denna begäran gör det möjligt att hämta täckningen enligt specifika "
+"begränsningar, t.ex. omfattning eller CRS. Standardparametrar för "
+"**DescribeCoverage**-begäran enligt OGC WCS 1.1.1-specifikationerna:"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Name of the request (**GetCoverage**)"
+msgstr "Namn på begäran (**GetCoverage**)"
 
 #: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`WIDTH <wcs_getcoverage_width>`"
 msgstr ":ref:`WIDTH <wcs_getcoverage_width>`"
 
 #: ../../docs/server_manual/services/wcs.rst:1
+msgid "Width of the response in pixels"
+msgstr "Bredd på svaret i pixlar"
+
+#: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`HEIGHT <wcs_getcoverage_height>`"
 msgstr ":ref:`HEIGHT <wcs_getcoverage_height>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Height of the response in pixels"
+msgstr "Svarets höjd i pixlar"
 
 #: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`BBOX <wcs_getcoverage_bbox>`"
 msgstr ":ref:`BBOX <wcs_getcoverage_bbox>`"
 
 #: ../../docs/server_manual/services/wcs.rst:1
+msgid "Map extent in CRS units"
+msgstr "Kartans utbredning i CRS-enheter"
+
+#: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`CRS <wcs_getcoverage_crs>`"
 msgstr ":ref:`CRS <wcs_getcoverage_crs>`"
+
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Coordinate reference system of the extent"
+msgstr "Koordinatreferenssystem för utbredning"
 
 #: ../../docs/server_manual/services/wcs.rst:1
 msgid ":ref:`RESPONSE_CRS <wcs_getcoverage_responsecrs>`"
 msgstr ":ref:`RESPONSE_CRS <wcs_getcoverage_responsecrs>`"
 
+#: ../../docs/server_manual/services/wcs.rst:1
+msgid "Coordinate reference system of the response"
+msgstr "Koordinat referenssystem för svaret"
+
 #: ../../docs/server_manual/services/wcs.rst:242
 msgid "BBOX"
 msgstr "BBOX"
+
+#: ../../docs/server_manual/services/wcs.rst:244
+msgid ""
+"This parameter allows to specify the map extent in the units of the current "
+"CRS. Coordinates have to be separated by a comma. The ``BBOX`` parameter is "
+"formed like ``minx,miny,maxx,maxy``."
+msgstr ""
+"Denna parameter gör det möjligt att ange kartans utbredning i enheterna för "
+"det aktuella CRS-systemet. Koordinaterna måste separeras med ett "
+"kommatecken. Parametern ``BBOX`` är utformad som ``minx,miny,maxx,maxy``."
 
 #: ../../docs/server_manual/services/wcs.rst:263
 msgid "CRS"
 msgstr "CRS"
 
+#: ../../docs/server_manual/services/wcs.rst:265
+msgid ""
+"This parameter allows to indicate the  Spatial Reference System of the "
+"``BBOX`` parameter and has to be formed like ``EPSG:XXXX``."
+msgstr ""
+"Denna parameter gör det möjligt att ange det rumsliga referenssystemet för "
+"parametern ``BBOX`` och måste utformas som ``EPSG:XXXX``."
+
 #: ../../docs/server_manual/services/wcs.rst:272
 msgid "RESPONSE_CRS"
 msgstr "RESPONSE_CRS"
+
+#: ../../docs/server_manual/services/wcs.rst:274
+msgid ""
+"This parameter allows to indicate the output response Spatial Reference "
+"System and has to be formed like ``EPSG:XXXX``. The CRS of the corresponding"
+" coverage layer is used by default."
+msgstr ""
+"Denna parameter gör det möjligt att ange det rumsliga referenssystemet för "
+"utdata och måste utformas som ``EPSG:XXXX``. CRS för motsvarande "
+"täckningsskikt används som standard."
 
 #: ../../docs/server_manual/services/wcs.rst:282
 msgid "WIDTH"
 msgstr "WIDTH"
 
+#: ../../docs/server_manual/services/wcs.rst:284
+msgid ""
+"This parameter allows to specify the width in pixels of the output image. "
+"The resolution of the response image depends on this value."
+msgstr ""
+"Denna parameter gör det möjligt att ange bredden i pixlar på utdatabilden. "
+"Svarsbildens upplösning beror på detta värde."
+
 #: ../../docs/server_manual/services/wcs.rst:291
 msgid "HEIGHT"
 msgstr "HEIGHT"
+
+#: ../../docs/server_manual/services/wcs.rst:293
+msgid ""
+"This parameter allows to specify the height in pixels of the output image. "
+"The resolution of the response image depends on this value."
+msgstr ""
+"Denna parameter gör det möjligt att ange höjden i pixlar för utdatabilden. "
+"Svarsbildens upplösning beror på detta värde."
+
+#: ../../docs/server_manual/services/wcs.rst:300
+msgid ""
+"From left to right: ``WIDTH=20&HEIGHT=20``, ``WIDTH=50&HEIGHT=50``, "
+"``WIDTH=100&HEIGHT=100``"
+msgstr ""
+"Från vänster till höger: ``VIDD=20&HÖJD=20``, ``VIDD=50&HÖJD=50``, "
+"``VIDD=100&HÖJD=100``"
