@@ -1,0 +1,1090 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:31+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:2
+msgid "Lesson: Digitizing Forest Stands"
+msgstr "Lektion: Digitalisering av skogsbestånd"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:4
+msgid ""
+"Unless you are going to use your georeferenced map as a simple background "
+"image, the next natural step is to digitize elements from it. You have "
+"already done so in the exercises about creating vector data in "
+":doc:`../create_vector_data/create_new_vector`, when you digitized the "
+"school fields. In this lesson, you are going to digitize the forest stands' "
+"borders that appear in the map as green lines but instead of doing it using "
+"an aerial image, you will use your georeferenced map."
+msgstr ""
+"Om du inte tänker använda din georefererade karta som en enkel bakgrundsbild"
+" är nästa naturliga steg att digitalisera element från den. Det har du redan"
+" gjort i övningarna om att skapa vektordata i "
+":doc:`../create_vector_data/create_new_vector`, när du digitaliserade "
+"skolgårdarna. I den här lektionen ska du digitalisera skogsbeståndens "
+"gränser som visas på kartan som gröna linjer, men i stället för att göra det"
+" med hjälp av en flygbild ska du använda din georefererade karta."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:11
+msgid ""
+"**The goal for this lesson:** Learn a technique to help the digitizing task,"
+" digitizing forest stands and finally adding the inventory data to them."
+msgstr ""
+"**Målet för den här lektionen:** Lär dig en teknik för att underlätta "
+"digitaliseringsarbetet, digitalisera skogsbestånd och slutligen lägga till "
+"inventeringsdata till dem."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:15
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Extracting the Forest Stands Borders"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Extrahera skogsbeståndets gränser"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:17
+msgid ""
+"Open your :file:`map_digitizing.qgs` project in QGIS, that you saved from "
+"the previous lesson."
+msgstr ""
+"Öppna ditt projekt :file:`map_digitizing.qgs` i QGIS, som du sparade från "
+"föregående lektion."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:20
+msgid ""
+"Once you have scanned and georeferenced your map you could start to digitize"
+" directly by looking at the image as a guide. That would most likely be the "
+"way to go if the image you are going to digitize from is, for example, an "
+"aerial photograph."
+msgstr ""
+"När du har skannat och georefererat din karta kan du börja digitalisera "
+"direkt genom att titta på bilden som en guide. Det skulle troligen vara rätt"
+" väg att gå om den bild du ska digitalisera från är till exempel ett "
+"flygfoto."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:25
+msgid ""
+"If what you are using to digitize is a good map, as it is in our case, it is"
+" likely that the information is clearly displayed as lines with different "
+"colors for each type of element. Those colors can be relatively easy "
+"extracted as individual images using an image processing software like `GIMP"
+" <https://www.gimp.org/>`_. Such separate images can be used to assist the "
+"digitizing, as you will see below."
+msgstr ""
+"Om det du använder för att digitalisera är en bra karta, som det är i vårt "
+"fall, är det troligt att informationen visas tydligt som linjer med olika "
+"färger för varje typ av element. Dessa färger kan relativt enkelt extraheras"
+" som enskilda bilder med hjälp av ett bildbehandlingsprogram som `GIMP "
+"<https://www.gimp.org/>`_. Sådana separata bilder kan användas som hjälp vid"
+" digitaliseringen, som du kommer att se nedan."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:31
+msgid ""
+"The first step will be to use GIMP to obtain an image that contains only the"
+" forest stands, that is, all those greenish lines that you could see in the "
+"original scanned map:"
+msgstr ""
+"Det första steget är att använda GIMP för att få en bild som bara innehåller"
+" skogsbestånden, det vill säga alla de grönaktiga linjer som du kunde se i "
+"den ursprungliga skannade kartan:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:35
+msgid ""
+"Open GIMP (if you don't have it installed yet, download it from the internet"
+" or ask your teacher)."
+msgstr ""
+"Öppna GIMP (om du inte har det installerat ännu kan du ladda ner det från "
+"internet eller fråga din lärare)."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:37
+msgid ""
+"Open the original map image, :menuselection:`File --> Open`, "
+":file:`rautjarvi_map.tif` in the :file:`exercise_data/forestry` folder. Note"
+" that the forest stands are represented as green lines (with the number of "
+"the stand also in green inside each polygon)."
+msgstr ""
+"Öppna den ursprungliga kartbilden, :menuselection:`File --> Open`, "
+":file:`rautjarvi_map.tif` i mappen :file:`exercise_data/forestry`. Observera"
+" att skogsbestånden representeras av gröna linjer (med beståndets nummer "
+"också i grönt inuti varje polygon)."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:47
+msgid ""
+"Now you can select the pixels in the image that are making up the forest "
+"stands' borders (the greenish pixels):"
+msgstr ""
+"Nu kan du välja de pixlar i bilden som utgör skogsbeståndens gränser (de "
+"grönaktiga pixlarna):"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:50
+msgid "Open the tool :menuselection:`Select --> By color`."
+msgstr "Öppna verktyget :menuselection:`Välj --> Efter färg`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:51
+msgid ""
+"With the tool active, zoom into the image (:kbd:`Ctrl` + mouse wheel) so "
+"that a forest stand line is close enough to differentiate the pixels forming"
+" the line. See the left image below."
+msgstr ""
+"När verktyget är aktivt zoomar du in i bilden (:kbd:`Ctrl` + mushjul) så att"
+" en linje i ett skogsbestånd är tillräckligt nära för att du ska kunna "
+"urskilja de pixlar som bildar linjen. Se den vänstra bilden nedan."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:54
+msgid ""
+"Click and drag the mouse cursor in the middle of the line so that the tool "
+"will collect several pixel color values."
+msgstr ""
+"Klicka och dra muspekaren i mitten av linjen så att verktyget samlar in "
+"flera pixelfärgvärden."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:56
+msgid ""
+"Release the mouse click and wait a few seconds. The pixels matching the "
+"colors collected by the tool will be selected through the whole image."
+msgstr ""
+"Släpp musklicket och vänta några sekunder. De pixlar som matchar de färger "
+"som verktyget har samlat in kommer att väljas ut i hela bilden."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:58
+msgid ""
+"Zoom out to see how the greenish pixels have been selected throughout the "
+"image."
+msgstr ""
+"Zooma ut för att se hur de grönaktiga pixlarna har valts ut i hela bilden."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:59
+msgid ""
+"If you are not happy with the result, repeat the click and drag operation."
+msgstr ""
+"Om du inte är nöjd med resultatet kan du upprepa klick- och dra-operationen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:60
+msgid "Your pixel selection should look something like the right image below."
+msgstr "Ditt pixelval bör se ut ungefär som den högra bilden nedan."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:67
+msgid ""
+"Once you are done with the selection you need to copy this selection as a "
+"new layer and then save it as separate image file:"
+msgstr ""
+"När du är klar med urvalet måste du kopiera detta urval som ett nytt lager "
+"och sedan spara det som en separat bildfil:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:70
+msgid ""
+"Copy (:kbd:`Ctrl+C` or :menuselection:`Edit --> Copy`) the selected pixels."
+msgstr ""
+"Kopiera (:kbd:`Ctrl+C` eller :menuselection:`Edit --> Copy`) de markerade "
+"pixlarna."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:71
+msgid ""
+"And paste the pixels directly as a new layer (:menuselection:`Edit --> Paste"
+" as --> New Layer`). GIMP will display the pasted pixels as a new layer "
+"(``Pasted Layer``) in the :guilabel:`Layers` panel."
+msgstr ""
+"Och klistra in pixlarna direkt som ett nytt lager (:menyval:`Edit --> Paste "
+"as --> New Layer`). GIMP kommer att visa de inklistrade pixlarna som ett "
+"nytt lager (``Pasted Layer``) i :guilabel:`Layers`-panelen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:73
+msgid ""
+"Click the \"eye\" icon next to the original image layer to switch it off, so"
+" that only the :guilabel:`Pasted Layer` is visible:"
+msgstr ""
+"Klicka på ikonen \"öga\" bredvid det ursprungliga bildlagret för att stänga "
+"av det, så att endast :guilabel:`Pasted Layer` syns:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:81
+msgid ""
+"Finally, select :menuselection:`File --> Export As...`, set "
+":guilabel:`Select File Type (By Extension)` as a :guilabel:`TIFF image`, "
+"select the :file:`digitizing` folder and name it "
+":file:`rautjarvi_map_green.tif`. Select no compression when asked."
+msgstr ""
+"Slutligen väljer du :menuselection:`File --> Export As...`, ställer in "
+":guilabel:`Select File Type (By Extension)` som en :guilabel:`TIFF image`, "
+"väljer mappen :file:`digitizing` och namnger den "
+":file:`rautjarvi_map_green.tif`. Välj ingen komprimering när du blir "
+"tillfrågad."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:86
+msgid ""
+"You could do the same process with other elements in the image, for example "
+"extracting the black lines that represent roads or the brown ones that "
+"represent the terrain' contour lines. But for us, the forest stands is "
+"enough."
+msgstr ""
+"Du kan göra samma sak med andra element i bilden, till exempel extrahera de "
+"svarta linjerna som representerar vägar eller de bruna som representerar "
+"terrängens konturlinjer. Men för oss räcker det med skogsbestånden."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:91
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Georeference the Green Pixels Image"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Prova själv: Georeferera Green Pixels-"
+"bilden"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:93
+msgid ""
+"As you did in the previous lesson, you need to georeference this new image "
+"to be able to use it with the rest of your data."
+msgstr ""
+"Precis som i den föregående lektionen måste du georeferera den nya bilden "
+"för att kunna använda den tillsammans med resten av dina data."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:96
+msgid ""
+"Note that you don't need to digitize the ground control points anymore "
+"because this image is basically the same image as the original map image, as"
+" far as the Georeferencer tool is concerned. Here are some things you should"
+" remember:"
+msgstr ""
+"Observera att du inte behöver digitalisera markkontrollpunkterna längre "
+"eftersom den här bilden i princip är samma bild som den ursprungliga "
+"kartbilden när det gäller verktyget Georeferencer. Här är några saker som du"
+" bör komma ihåg:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:100
+msgid "This image is also, of course, in ``KKJ / Finland zone 2`` CRS."
+msgstr "Denna bild finns naturligtvis också i ``KKJ / Finland zon 2`` CRS."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:101
+msgid ""
+"You should use the ground control points you saved, :menuselection:`File -->"
+" Load GCP points`."
+msgstr ""
+"Du bör använda de markkontrollpunkter som du sparade, :menuselection:`File "
+"--> Load GCP points`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:103
+msgid "Remember to review the :guilabel:`Transformation settings`."
+msgstr "Kom ihåg att granska :guilabel:`Transformationsinställningar`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:104
+msgid ""
+"Name the output raster as :file:`rautjarvi_green_georef.tif` in the "
+":file:`digitizing` folder."
+msgstr ""
+"Namnge utmatningsrastret som :file:`rautjarvi_green_georef.tif` i mappen "
+":file:`digitizing`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:107
+msgid "Check that the new raster is fitting nicely with the original map."
+msgstr "Kontrollera att det nya rastret passar bra ihop med originalkartan."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:111
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Creating Supporting Points for "
+"Digitizing"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Skapa stödpunkter för "
+"digitalisering"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:113
+msgid ""
+"Having in mind the digitizing tools in QGIS, you might already be thinking "
+"that it would be helpful to snap to those green pixels while digitizing. "
+"That is precisely what you are going to do next create points from those "
+"pixels to use them later to help you follow the forest stands' borders when "
+"digitizing, by using the snapping tools available in QGIS."
+msgstr ""
+"Med tanke på digitaliseringsverktygen i QGIS kanske du redan tänker att det "
+"skulle vara bra att snäppa till de gröna pixlarna när du digitaliserar. Det "
+"är precis vad du kommer att göra härnäst, skapa punkter från dessa pixlar "
+"för att senare använda dem för att hjälpa dig att följa skogsbeståndens "
+"gränser när du digitaliserar, genom att använda de snäppverktyg som finns i "
+"QGIS."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:119
+msgid ""
+"Use the :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
+"Vector)` tool to vectorize your green lines to polygons. If you don't "
+"remember how, you can review it in "
+":doc:`../complete_analysis/raster_to_vector`."
+msgstr ""
+"Använd verktyget :menuselection:`Raster --> Conversion --> Polygonize "
+"(Raster to Vector)` för att vektorisera dina gröna linjer till polygoner. Om"
+" du inte kommer ihåg hur du gör kan du läsa om det i "
+":doc:`../complete_analysis/raster_to_vector`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:122
+msgid ""
+"Save as :file:`rautjarvi_green_polygon.shp` inside the :file:`digitizing` "
+"folder."
+msgstr ""
+"Spara som :file:`rautjarvi_green_polygon.shp` i mappen :file:`digitizing`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:124
+msgid ""
+"Zoom in and see what the polygons look like. You will get something like "
+"this:"
+msgstr ""
+"Zooma in och se hur polygonerna ser ut. Du kommer att få något liknande "
+"detta:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:131
+msgid ""
+"Next option to get points out of those polygons is to get their centroids:"
+msgstr ""
+"Nästa alternativ för att få fram punkter ur dessa polygoner är att få fram "
+"deras centroider:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:133
+msgid "Open :menuselection:`Vector --> Geometry Tools --> Centroids...`."
+msgstr "Öppna :menuselection:`Vector --> Geometry Tools --> Centroids...`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:134
+msgid ""
+"Set :guilabel:`Input Layer` to |polygonLayer| "
+":guilabel:`rautjarvi_green_polygon` (the polygon layer you have just "
+"created)"
+msgstr ""
+"Ställ in :guilabel:`Input Layer` på |polygonLayer| "
+":guilabel:`rautjarvi_green_polygon` (polygonlagret som du just har skapat)"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:422
+msgid "polygonLayer"
+msgstr "polygonLayer"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:136
+msgid ""
+"Set :guilabel:`Centroids` output to :file:`green_centroids.shp` file within "
+"the folder :file:`digitizing`"
+msgstr ""
+"Ställ in :guilabel:`Centroids` utdata till :file:`green_centroids.shp` fil i"
+" mappen :file:`digitizing`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:138
+msgid ""
+"Check |checkbox| :menuselection:`Open output file after running algorithm`"
+msgstr ""
+"Check |checkbox| :menuselection:`Öppna utdatafil efter körning av algoritm`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:416
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:139
+msgid ""
+"Press :guilabel:`Run`. This will calculate the centroids for the polygons as"
+" a new layer and add it to the project."
+msgstr ""
+"Tryck på :guilabel:`Run`. Detta kommer att beräkna polygonernas centroider "
+"som ett nytt lager och lägga till det i projektet."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:147
+msgid ""
+"Now you can remove the |polygonLayer| ``rautjarvi_green_polygon`` layer from"
+" the TOC."
+msgstr ""
+"Nu kan du ta bort skiktet |polygonLayer| ``rautjarvi_green_polygon`` från "
+"TOC."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:149
+msgid "Change the symbology of the centroids layer as follows:"
+msgstr "Ändra symbologin för centroids-lagret enligt följande:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:151
+msgid ""
+"Open the :guilabel:`Layer Properties` for |pointLayer| ``green_centroids``."
+msgstr ""
+"Öppna :guilabel:`Layer Properties` för |pointLayer| ``green_centroids``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:420
+msgid "pointLayer"
+msgstr "pointLayer"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:152
+msgid "Go to the :guilabel:`Symbology` tab."
+msgstr "Gå till fliken :guilabel:`Symbologi`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:153
+msgid "Set :guilabel:`Size` to ``1.00`` and choose :menuselection:`Map Units`"
+msgstr ""
+"Ställ in :guilabel:`Size` till ``1.00`` och välj :menuselection:`Map Units`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:156
+msgid ""
+"It is not necessary to differentiate points from each other, you just need "
+"them to be there for the snapping tools to use them. You can use those "
+"points now to follow the original lines much easily than without them."
+msgstr ""
+"Det är inte nödvändigt att skilja punkterna från varandra, de behöver bara "
+"finnas där för att snappingverktygen ska kunna använda dem. Du kan nu "
+"använda dessa punkter för att följa de ursprungliga linjerna mycket lättare "
+"än utan dem."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:161
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Digitize the Forest Stands"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Digitalisera skogens bestånd"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:163
+msgid ""
+"Now you are ready to start with the actual digitizing work. You would start "
+"by creating a vector file of :guilabel:`polygon type`, but for this "
+"exercise, there is a shapefile with part of the area of interest already "
+"digitized. You will just finish digitizing the half of the forest stands "
+"that are left between the main roads (wide pink lines) and the lake:"
+msgstr ""
+"Nu är du redo att börja med det faktiska digitaliseringsarbetet. Du skulle "
+"börja med att skapa en vektorfil av :guilabel:`polygontyp`, men för den här "
+"övningen finns det en shapefil med en del av intresseområdet redan "
+"digitaliserat. Du kommer bara att digitalisera den halva av skogsbeståndet "
+"som finns kvar mellan huvudvägarna (breda rosa linjer) och sjön:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:174
+msgid "Go to the :file:`digitizing` folder using your file manager browser."
+msgstr ""
+"Gå till mappen :file:`digitizing` med hjälp av din filhanteringswebbläsare."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:175
+msgid "Drag and drop the :file:`forest_stands.shp` vector file to your map."
+msgstr "Dra och släpp vektorfilen :file:`forest_stands.shp` till din karta."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:177
+msgid ""
+"Change the new layer's symbology so that it will be easier to see the "
+"polygons that have already been digitized."
+msgstr ""
+"Ändra symbologin för det nya lagret så att det blir lättare att se de "
+"polygoner som redan har digitaliserats."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:180
+msgid ""
+"Set :guilabel:`Fill color` to green - and change the :guilabel:`Opacity` to "
+"``50%``."
+msgstr ""
+"Ställ in :guilabel:`Fill color` till grön - och ändra :guilabel:`Opacity` "
+"till ``50%``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:181
+msgid ""
+"Select :guilabel:`Simple Fill` and set :guilabel:`Stroke width` to ``1.00 "
+"mm``."
+msgstr ""
+"Välj :guilabel:`Simple Fill` och ställ in :guilabel:`Stroke width` till "
+"``1.00 mm``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:183
+msgid ""
+"Now, if you remember past modules, we have to set up and activate the "
+"snapping options:"
+msgstr ""
+"Om du kommer ihåg tidigare moduler måste vi nu ställa in och aktivera "
+"snäppalternativen:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:185
+msgid "Go to :menuselection:`Project --> Snapping options...`"
+msgstr "Gå till :menuselection:`Projekt --> Snapping-alternativ...`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:186
+msgid ""
+"Press |snapping| :sup:`Enable Snapping` and select :guilabel:`Advanced "
+"Configuration`"
+msgstr ""
+"Tryck på |snapping| :sup:`Enable Snapping` och välj :guilabel:`Advanced "
+"Configuration`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:424
+msgid "snapping"
+msgstr "snapping"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:187
+msgid ""
+"Check the :guilabel:`green_centroids` and :guilabel:`forest_stands` layers"
+msgstr ""
+"Kontrollera skikten :guilabel:`green_centroids` och "
+":guilabel:`forest_stands`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:188
+msgid "Set :guilabel:`Type` for each layer to :guilabel:`Vertex`"
+msgstr "Sätt :guilabel:`Type` för varje lager till :guilabel:`Vertex`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:189
+msgid "Set :guilabel:`Tolerance` for each layer to ``10``"
+msgstr "Ställ in :guilabel:`Tolerance` för varje lager till ``10``"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:190
+msgid "Set :guilabel:`Units` for each layer to :guilabel:`pixels`"
+msgstr "Ställ in :guilabel:`Units` för varje lager till :guilabel:`pixels`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:191
+msgid ""
+"Check |checkbox| :guilabel:`Avoid Overlap` for the :guilabel:`forest_stands`"
+" layer"
+msgstr ""
+"Markera |checkbox| :guilabel:`Avoid Overlap` för skiktet "
+":guilabel:`forest_stands`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:192
+msgid "Press |topologicalEditing| :guilabel:`Topological editing`"
+msgstr "Press |topologiskredigering| :guilabel:`Topologisk redigering`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:430
+msgid "topologicalEditing"
+msgstr "topologicalEditing"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:193
+msgid ""
+"Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`"
+msgstr ""
+"Välj |avoidIntersectionsLayers| :guilabel:`Följ avancerad konfiguration`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:412
+msgid "avoidIntersectionsLayers"
+msgstr "avoidIntersectionsLayers"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:194
+msgid "Close the pop-up"
+msgstr "Stäng popup-fönstret"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:200
+msgid ""
+"With these snapping settings, whenever you are digitizing and get close "
+"enough to one of the points in the centroids layer or any vertex of your "
+"digitized polygons, a pink square will appear on the point that will be "
+"snapped to."
+msgstr ""
+"Med dessa snapping-inställningar kommer en rosa fyrkant att visas på den "
+"punkt som snappas till när du digitaliserar och kommer tillräckligt nära en "
+"av punkterna i centroids-lagret eller en toppunkt i dina digitaliserade "
+"polygoner."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:204
+msgid ""
+"Finally, turn off the visibility of all the layers except "
+":guilabel:`forest_stands` and :guilabel:`rautjarvi_georef`. Make sure that "
+"the map image has not transparency any more."
+msgstr ""
+"Slutligen stänger du av synligheten för alla lager utom "
+":guilabel:`forest_stands` och :guilabel:`rautjarvi_georef`. Se till att "
+"kartbilden inte har någon transparens längre."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:207
+msgid "A few important things to note before you start digitizing:"
+msgstr "Några viktiga saker att tänka på innan du börjar digitalisera:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:209
+msgid "Don't try to be too accurate with the digitizing of the borders."
+msgstr "Försök inte att vara alltför exakt med digitaliseringen av gränserna."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:210
+msgid ""
+"If a border is a straight line, digitize it with just two nodes. In general,"
+" digitize using as few nodes as possible."
+msgstr ""
+"Om en gräns är en rak linje digitaliserar du den med bara två noder. I "
+"allmänhet bör du digitalisera med så få noder som möjligt."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:212
+msgid ""
+"Zoom in to close ranges only if you feel that you need to be accurate, for "
+"example, at some corners or when you want a polygon to connect with another "
+"polygon at a certain node."
+msgstr ""
+"Zooma in på nära håll endast om du känner att du behöver vara exakt, till "
+"exempel vid vissa hörn eller när du vill att en polygon ska ansluta till en "
+"annan polygon vid en viss nod."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:215
+msgid ""
+"Use the mouse's middle button to zoom in/out and to pan as you digitize."
+msgstr ""
+"Använd musens mittknapp för att zooma in/ut och för att panorera när du "
+"digitaliserar."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:216
+msgid "Digitize only one polygon at a time."
+msgstr "Digitalisera endast en polygon åt gången."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:217
+msgid ""
+"After digitizing one polygon, write the forest stand id that you can see "
+"from the map."
+msgstr ""
+"När du har digitaliserat en polygon skriver du in det skogsbestånds-ID som "
+"du kan se på kartan."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:219
+msgid "Now you can start digitizing:"
+msgstr "Nu kan du börja digitalisera:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:221
+msgid "Locate the forest stand number ``357`` in the map window."
+msgstr "Leta reda på skogsbeståndets nummer ``357`` i kartfönstret."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:222
+msgid "Select the ``forest_stands`` layer."
+msgstr "Välj skiktet ``forest_stands``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:223
+msgid ""
+"Click the |toggleEditing| :sup:`Toggle Editing` button to enable editing"
+msgstr ""
+"Klicka på knappen |toggleEditing| :sup:`Toggle Editing` för att aktivera "
+"redigering"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:428
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:224
+msgid "Select |capturePolygon| :sup:`Add Polygon Feature` tool."
+msgstr "Välj verktyget |capturePolygon| :sup:`Add Polygon Feature`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:414
+msgid "capturePolygon"
+msgstr "capturePolygon"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:225
+msgid ""
+"Start digitizing the stand ``357`` by connecting some of the dots. Note the "
+"pink crosses indicating the snapping."
+msgstr ""
+"Börja digitalisera monter ``357`` genom att koppla ihop några av prickarna. "
+"Notera de rosa kryssen som indikerar knäppningen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:233
+msgid "When you are done:"
+msgstr "När du är klar:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:235
+msgid "Right click to end digitizing that polygon."
+msgstr "Högerklicka för att avsluta digitaliseringen av polygonen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:236
+msgid ""
+"Enter the forest stand :guilabel:`ID` within the form (in this case "
+"``357``)."
+msgstr ""
+"Ange skogsbeståndet :guilabel:`ID` inom formuläret (i detta fall ``357``)."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:237
+msgid "Click :guilabel:`OK`."
+msgstr "Klicka på :guilabel:`OK`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:239
+msgid ""
+"If a form did not appear when you finished digitizing the polygon, go to "
+":menuselection:`Settings --> Options --> Digitizing` and make sure that the "
+":guilabel:`Suppress attribute form pop-up after feature creation` is not "
+"checked."
+msgstr ""
+"Om ett formulär inte visades när du hade digitaliserat polygonen, gå till "
+":menuselection:`Inställningar --> Alternativ --> Digitalisering` och se till"
+" att :guilabel:`Undertryck popup-fönstret för attributformulär efter "
+"skapande av objekt` inte är markerat."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:243
+msgid "Your digitized polygon will look like this:"
+msgstr "Din digitaliserade polygon kommer att se ut så här:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:250
+msgid ""
+"Now for the second polygon, pick up the stand number 358. Make sure that "
+"|checkbox| :guilabel:`Avoid Overlap` is checked for the "
+":guilabel:`forest_stands` layer (as shown above). This option ensures "
+"polygons do not overlap. So, if you digitize over an existing polygon, the "
+"new polygon will be trimmed to meet the border of the existing polygons. You"
+" can use this option to automatically obtain a common border."
+msgstr ""
+"Nu till den andra polygonen, plocka upp beståndet nummer 358. Se till att "
+"|checkbox| :guilabel:`Avoid Overlap` är markerat för skiktet "
+":guilabel:`forest_stands` (som visas ovan). Detta alternativ säkerställer "
+"att polygoner inte överlappar varandra. Så om du digitaliserar över en "
+"befintlig polygon kommer den nya polygonen att trimmas så att den möter "
+"gränsen för de befintliga polygonerna. Du kan använda det här alternativet "
+"för att automatiskt få en gemensam kant."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:257
+msgid ""
+"Begin digitizing the stand 358 at one of the common corners with the stand "
+"357."
+msgstr ""
+"Börja digitalisera stativ 358 vid ett av de gemensamma hörnen med stativ "
+"357."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:258
+msgid ""
+"Continue normally until you get to the other common corner for both stands."
+msgstr ""
+"Fortsätt på normalt sätt tills du kommer till det andra gemensamma hörnet "
+"för båda ställningarna."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:259
+msgid ""
+"Finally, digitize a few points inside polygon 357 making sure that the "
+"common border is not intersected. See left image below."
+msgstr ""
+"Digitalisera slutligen några punkter inom polygon 357 och se till att den "
+"gemensamma gränsen inte skärs. Se vänster bild nedan."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:261
+msgid "Right click to finish editing the forest stand 358."
+msgstr "Högerklicka för att avsluta redigeringen av skogsbeståndet 358."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:262
+msgid "Enter the :guilabel:`ID` as ``358``."
+msgstr "Ange :guilabel:`ID` som ``358``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:263
+msgid ""
+"Click :guilabel:`OK`. Your new polygon should have a common border with the "
+"stand 357 as you can see in the image below."
+msgstr ""
+"Klicka på :guilabel:`OK`. Din nya polygon bör ha en gemensam kant med stativ"
+" 357 som du kan se i bilden nedan."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:271
+msgid ""
+"The part of the polygon that was overlapping the existing polygon has been "
+"automatically trimmed and you are left with a common border - as you "
+"intended it to be."
+msgstr ""
+"Den del av polygonen som överlappade den befintliga polygonen har "
+"automatiskt skurits bort och du har nu en gemensam kant - precis som du "
+"ville ha den."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:277
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Finish Digitizing the Forest Stands"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Prova själv: Avsluta digitaliseringen av "
+"skogsbestånden"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:279
+msgid ""
+"Now you have two forest stands ready. And a good idea on how to proceed. "
+"Continue digitizing on your own until you have digitized all the forest "
+"stands that are limited by the main road and the lake."
+msgstr ""
+"Nu har du två skogsbestånd redo. Och en bra idé om hur du ska gå vidare. "
+"Fortsätt digitalisera på egen hand tills du har digitaliserat alla "
+"skogsbestånd som begränsas av huvudvägen och sjön."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:283
+msgid ""
+"It might look like a lot of work, but you will soon get used to digitizing "
+"the forest stands. It should take you about 15 minutes."
+msgstr ""
+"Det kan se ut som en hel del arbete, men du kommer snart att vänja dig vid "
+"att digitalisera skogsbestånden. Det bör ta dig ungefär 15 minuter."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:286
+msgid ""
+"During the digitizing you might need to edit or delete nodes, split or merge"
+" polygons. You learned about the necessary tools in "
+":doc:`../create_vector_data/topo_editing`, now is probably a good moment to "
+"go read about them again."
+msgstr ""
+"Under digitaliseringen kan du behöva redigera eller ta bort noder, dela "
+"eller slå samman polygoner. Du lärde dig om de nödvändiga verktygen i "
+":doc:`../create_vector_data/topo_editing`, nu är det förmodligen ett bra "
+"tillfälle att läsa om dem igen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:290
+msgid ""
+"Remember that having :guilabel:`Enable topological editing` activated, "
+"allows you to move nodes common to two polygons so that the common border is"
+" edited at the same time for both polygons."
+msgstr ""
+"Kom ihåg att om du har aktiverat :guilabel:`Enable topological editing` kan "
+"du flytta noder som är gemensamma för två polygoner så att den gemensamma "
+"gränsen redigeras samtidigt för båda polygonerna."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:294
+msgid "Your result will look like this:"
+msgstr "Ditt resultat kommer att se ut så här:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:302
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Joining the Forest Stand Data"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Sammanfoga data om skogsbestånd"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:304
+msgid ""
+"It is possible that the forest inventory data you have for you map is also "
+"written in paper. In that case, you would have to first write that data to a"
+" text file or a spreadsheet. For this exercise, the information from the "
+"inventory for 1994 (the same inventory as the map) is ready as a comma "
+"separated text (csv) file."
+msgstr ""
+"Det är möjligt att de skogsinventeringsdata som du har för din karta också "
+"är skrivna på papper. I så fall måste du först skriva över dessa data till "
+"en textfil eller ett kalkylblad. För den här övningen är informationen från "
+"inventeringen 1994 (samma inventering som kartan) klar som en csv-fil (comma"
+" separated text)."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:309
+msgid ""
+"Open the :file:`rautjarvi_1994.csv` file from the "
+":file:`exercise_data\\\\forestry` directory in a text editor and note that "
+"the inventory data file has an attribute called :guilabel:`ID` that has the "
+"numbers of the forest stands. Those numbers are the same as the forest "
+"stands ids you have entered for your polygons and can be used to link the "
+"data from the text file to your vector file. You can see the metadata for "
+"this inventory data in the file :file:`rautjarvi_1994_legend.txt` in the "
+"same folder."
+msgstr ""
+"Öppna filen :file:`rautjarvi_1994.csv` från katalogen "
+":file:`exercise_data\\\\forestry` i en textredigerare och notera att "
+"inventeringsdatafilen har ett attribut som heter :guilabel:`ID` som "
+"innehåller numren på skogsbestånden. Dessa nummer är desamma som de "
+"skogsbestånds-ID som du har angett för dina polygoner och kan användas för "
+"att länka data från textfilen till din vektorfil. Du kan se metadata för "
+"dessa inventeringsdata i filen :file:`rautjarvi_1994_legend.txt` i samma "
+"mapp."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:317
+msgid "Now add this file into the project:"
+msgstr "Lägg nu till den här filen i projektet:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:319
+msgid ""
+"Use the |addDelimitedTextLayer| :sup:`Add Delimited Text Layer` tool. This "
+"is accessed via :menuselection:`Layer --> Add Layer --> Add Delimited Text "
+"Layer...`."
+msgstr ""
+"Använd verktyget |addDelimitedTextLayer| :sup:`Add Delimited Text Layer`. "
+"Detta nås via :menuselection:`Layer --> Add Layer --> Add Delimited Text "
+"Layer...`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:410
+msgid "addDelimitedTextLayer"
+msgstr "addDelimitedTextLayer"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:321
+msgid "Set details in the dialog as follows:"
+msgstr "Ställ in detaljer i dialogrutan enligt följande:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:327
+msgid ""
+"Press :guilabel:`Add` to load the formatted :file:`csv` file in the project."
+msgstr ""
+"Tryck på :guilabel:`Add` för att ladda den formaterade :file:`csv`-filen i "
+"projektet."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:329
+msgid ""
+"To link the data from the :file:`.csv` file with the digitized polygons, "
+"create a join between the two layers:"
+msgstr ""
+"För att länka data från filen :file:`.csv` till de digitaliserade "
+"polygonerna skapar du en länk mellan de två lagren:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:332
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:347
+msgid "Open the Layer Properties for the ``forest_stands`` layer."
+msgstr "Öppna Layer Properties för skiktet ``forest_stands``."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:333
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:348
+msgid "Go to the :guilabel:`Joins` tab."
+msgstr "Gå till fliken :guilabel:`Joins`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:334
+msgid ""
+"Click |symbologyAdd| :sup:`Add new join` on the bottom of the dialog box."
+msgstr ""
+"Klicka på |symbologyAdd| :sup:`Lägg till ny join` längst ner i dialogrutan."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:426
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:335
+msgid "Select :guilabel:`rautjarvi_1994.csv` as the :guilabel:`Join layer`"
+msgstr "Välj :guilabel:`rautjarvi_1994.csv` som :guilabel:`Join layer`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:336
+msgid "Set the :guilabel:`Join` field to :guilabel:`ID`"
+msgstr "Ställ in fältet :guilabel:`Join` till :guilabel:`ID`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:337
+msgid "Set the :guilabel:`Target` field to :guilabel:`ID`"
+msgstr "Ställ in fältet :guilabel:`Target` på :guilabel:`ID`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:338
+msgid "Click :guilabel:`OK` two times."
+msgstr "Klicka på :guilabel:`OK` två gånger."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:340
+msgid ""
+"The data from the text file should be now linked to your vector file. To see"
+" what has happened, select the ``forest_stands`` layer and use |openTable| "
+":sup:`Open Attribute Table`. You can see that all the attributes from the "
+"inventory data file are now linked to your digitized vector layer."
+msgstr ""
+"Data från textfilen bör nu vara länkade till din vektorfil. För att se vad "
+"som har hänt väljer du skiktet ``forest_stands`` och använder |openTable| "
+":sup:`Open Attribute Table`. Du kan se att alla attribut från "
+"inventeringsdatafilen nu är länkade till ditt digitaliserade vektorskikt."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:418
+msgid "openTable"
+msgstr "openTable"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:345
+msgid ""
+"You will see that the field names are prefixed with ``rautjarvi_1994_``. To "
+"change this:"
+msgstr ""
+"Du kommer att se att fältnamnen inleds med ``rautjarvi_1994_``. För att "
+"ändra detta:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:349
+msgid "Select :guilabel:`Join Layer` :guilabel:`rautjarvi_1994`"
+msgstr "Välj :guilabel:`Join Layer` :guilabel:`rautjarvi_1994`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:350
+msgid ""
+"Click the |toggleEditing| :sup:`Edit selected join` button to enable editing"
+msgstr ""
+"Klicka på knappen |toggleEditing| :sup:`Edit selected join` för att aktivera"
+" redigering"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:351
+msgid ""
+"Under |checkbox| :guilabel:`Custom field name prefix` remove the prefix name"
+msgstr ""
+"Under |checkbox| :guilabel:`Prefix för anpassat fältnamn` ta bort "
+"prefixnamnet"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:357
+msgid ""
+"The data from the :file:`.csv` file is just linked to your vector file. To "
+"make this link permanent, so that the data is actually recorded to the "
+"vector file you need to save the ``forest_stands`` layer as a new vector "
+"file. To do this:"
+msgstr ""
+"Data från filen :file:`.csv` är bara länkad till din vektorfil. För att göra"
+" denna länk permanent, så att data faktiskt registreras i vektorfilen, måste"
+" du spara skiktet ``forest_stands`` som en ny vektorfil. För att göra detta:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:361
+msgid "Right click on ``forest_stands`` layer"
+msgstr "Högerklicka på ``forest_stands`` lager"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:362
+msgid "Choose :menuselection:`Export --> Save Features As...`"
+msgstr "Välj :menyselection:`Export --> Spara funktioner som...`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:363
+msgid "Set :guilabel:`Format` to :guilabel:`ESRI Shapefile`"
+msgstr "Ställ in :guilabel:`Format` till :guilabel:`ESRI Shapefile`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:364
+msgid ""
+"Set file name to :file:`forest_stands_1994.shp` under the :file:`forestry` "
+"folder"
+msgstr ""
+"Ange filnamn till :file:`forest_stands_1994.shp` under mappen "
+":file:`forestry`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:365
+msgid ""
+"To include the new file as a layer in the project, check |checkbox| "
+":guilabel:`Add saved file to map`"
+msgstr ""
+"För att inkludera den nya filen som ett lager i projektet, markera "
+"|checkbox| :guilabel:`Lägg till sparad fil på kartan`"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:374
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Adding Area and Perimeter"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Prova själv: Lägga till area och omkrets"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:376
+msgid ""
+"To finish gathering the information related to these forest stands, you "
+"might calculate the area and the perimeter of the stands. You calculated "
+"areas for polygons in :doc:`../complete_analysis/analysis_exercise`. Go back"
+" to that lesson if you need to and calculate the areas for the forest "
+"stands. Name the new attribute ``Area`` and make sure that the values "
+"calculated are in hectares. You could also do the same for the perimeter."
+msgstr ""
+"För att avsluta insamlingen av information om dessa skogsbestånd kan du "
+"beräkna arean och omkretsen för bestånden. Du beräknade areor för polygoner "
+"i :doc:`../complete_analysis/analysis_exercise`. Gå tillbaka till den "
+"lektionen om du behöver och beräkna areorna för skogsbestånden. Ge det nya "
+"attributet namnet ``Area`` och se till att de beräknade värdena är i hektar."
+" Du kan också göra samma sak för omkretsen."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:383
+msgid ""
+"Now your ``forest_stands_1994`` layer is ready and packed with all the "
+"available information."
+msgstr ""
+"Nu är ditt ``forest_stands_1994``-lager klart och fyllt med all tillgänglig "
+"information."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:386
+msgid ""
+"Save your project to keep the current map layers in case you need to come "
+"back later to it."
+msgstr ""
+"Spara ditt projekt för att behålla de aktuella kartlagren om du behöver "
+"komma tillbaka till det senare."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:390
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:392
+msgid ""
+"It has taken a few clicks of the mouse but you now have your old inventory "
+"data in digital format and ready for use in QGIS."
+msgstr ""
+"Det har tagit några musklick, men nu har du dina gamla inventeringsdata i "
+"digitalt format och redo att användas i QGIS."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:396
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:398
+msgid ""
+"You could start doing different analysis with your brand new dataset, but "
+"you might be more interested in performing analysis in a dataset more up to "
+"date. The topic of the next lesson will be the creation of forest stands "
+"using current aerial photos and the addition of some relevant information to"
+" your dataset."
+msgstr ""
+"Du kan börja göra olika analyser med ditt helt nya dataset, men du kanske är"
+" mer intresserad av att utföra analyser i ett dataset som är mer uppdaterat."
+" Nästa lektion kommer att handla om att skapa skogsbestånd med hjälp av "
+"aktuella flygfoton och lägga till relevant information i datasetet."
