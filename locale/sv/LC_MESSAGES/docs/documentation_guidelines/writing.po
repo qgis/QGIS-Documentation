@@ -7,15 +7,16 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-15 20:01+0000\n"
+"POT-Creation-Date: 2025-06-13 08:42+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,13 +25,437 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/documentation_guidelines/writing.rst:5
+msgid "Writing Guidelines"
+msgstr "Riktlinjer för skrivande"
+
+#: ../../docs/documentation_guidelines/writing.rst:10
+msgid ""
+"In general, when creating reST documentation for the QGIS project, please "
+"follow the `Python documentation style guidelines "
+"<https://devguide.python.org/documenting/>`_. For convenience, we provide a "
+"set of general rules we rely on for writing QGIS documentation below."
+msgstr ""
+"I allmänhet, när du skapar reST-dokumentation för QGIS-projektet, vänligen "
+"följ `Python documentation style guidelines "
+"<https://devguide.python.org/documenting/>`_. För enkelhetens skull "
+"tillhandahåller vi en uppsättning allmänna regler som vi förlitar oss på för"
+" att skriva QGIS-dokumentation nedan."
+
+#: ../../docs/documentation_guidelines/writing.rst:17
+msgid "Writing Documentation"
+msgstr "Skriva dokumentation"
+
+#: ../../docs/documentation_guidelines/writing.rst:20
+msgid "Headlines"
+msgstr "Rubriker"
+
+#: ../../docs/documentation_guidelines/writing.rst:22
+msgid "To each webpage of the documentation corresponds a ``.rst`` file."
+msgstr "Till varje webbsida i dokumentationen hör en fil med namnet ``.rst``."
+
+#: ../../docs/documentation_guidelines/writing.rst:24
+msgid ""
+"Sections used to structure the text are identified through their title which"
+" is underlined (and overlined for the first level). Same level titles must "
+"use same character for underline adornment. In QGIS Documentation, you "
+"should use following styles for chapter, section, subsection and minisec."
+msgstr ""
+"Avdelningar som används för att strukturera texten identifieras genom sin "
+"titel som är understruken (och överstruken för den första nivån). Titlar på "
+"samma nivå måste använda samma tecken för understrykning. I QGIS "
+"Documentation bör du använda följande stilar för kapitel, avsnitt, "
+"underavsnitt och minisec."
+
+#: ../../docs/documentation_guidelines/writing.rst:49
+msgid "Lists"
+msgstr "Listor"
+
+#: ../../docs/documentation_guidelines/writing.rst:51
+msgid ""
+"Lists are useful for structuring the text.  Here are some simple rules "
+"common to all lists:"
+msgstr ""
+"Listor är användbara för att strukturera texten.  Här är några enkla regler "
+"som är gemensamma för alla listor:"
+
+#: ../../docs/documentation_guidelines/writing.rst:54
+msgid "Start all list items with a capital letter"
+msgstr "Börja alla listobjekt med en stor bokstav"
+
+#: ../../docs/documentation_guidelines/writing.rst:56
+msgid ""
+"Do not use punctuation after list items that only contain a single simple "
+"sentence"
+msgstr ""
+"Använd inte skiljetecken efter listobjekt som bara innehåller en enda enkel "
+"mening"
+
+#: ../../docs/documentation_guidelines/writing.rst:59
+msgid ""
+"Use period ( ``.`` ) as punctuation for list items that consist of several "
+"sentences or a single compound sentence"
+msgstr ""
+"Använd punkt ( ``.``` ) som skiljetecken för listobjekt som består av flera "
+"meningar eller en enda sammansatt mening"
+
+#: ../../docs/documentation_guidelines/writing.rst:63
+msgid "Indentation"
+msgstr "Indrag"
+
+#: ../../docs/documentation_guidelines/writing.rst:65
+msgid ""
+"Indentation in ReStructuredText should be aligned with the list or markup "
+"*marker*. It is also possible to create block quotes with indentation. See "
+"the `Specification "
+"<https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#indentation>`__"
+msgstr ""
+"Indrag i ReStructuredText ska vara i linje med listan eller markeringen "
+"*marker*. Det är också möjligt att skapa blockcitat med indrag. Se "
+"`Specifikation "
+"<https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#indentation>`__"
+
+#: ../../docs/documentation_guidelines/writing.rst:89
+msgid "Inline Tags"
+msgstr "Inline-taggar"
+
+#: ../../docs/documentation_guidelines/writing.rst:91
+msgid "You can use tags to emphasize items."
+msgstr "Du kan använda taggar för att framhäva objekt."
+
+#: ../../docs/documentation_guidelines/writing.rst:93
+msgid ""
+"**Menu GUI**: to mark a complete sequence of menu selections, including "
+"selecting submenus and choosing a specific operation, or any subsequence of "
+"such a sequence."
+msgstr ""
+"**Menu GUI**: för att markera en komplett sekvens av menyval, inklusive val "
+"av undermenyer och val av en specifik åtgärd, eller en delsekvens av en "
+"sådan sekvens."
+
+#: ../../docs/documentation_guidelines/writing.rst:101
+msgid ""
+"**Dialogs and Tab titles**: Labels presented as part of an interactive user "
+"interface including window titles, tab titles, button and option labels."
+msgstr ""
+"**Dialog- och fliktitlar**: Etiketter som presenteras som en del av ett "
+"interaktivt användargränssnitt, inklusive fönstertitlar, fliktitlar, knapp- "
+"och alternativetiketter."
+
+#: ../../docs/documentation_guidelines/writing.rst:108
+msgid "**Filenames and directories**"
+msgstr "**Filnamn och kataloger**"
+
+#: ../../docs/documentation_guidelines/writing.rst:114
+msgid "**Icons with popup text**"
+msgstr "**Ikoner med popup-text**"
+
+#: ../../docs/documentation_guidelines/writing.rst:120
+msgid "(see `image`_ below)."
+msgstr "(se `bild`_ nedan)."
+
+#: ../../docs/documentation_guidelines/writing.rst:122
+msgid "**Keyboard shortcuts**"
+msgstr "**Kortkommandon för tangentbord**"
+
+#: ../../docs/documentation_guidelines/writing.rst:128
+msgid "will show :kbd:`Ctrl+B`"
+msgstr "kommer att visa :kbd:`Ctrl+B`"
+
+#: ../../docs/documentation_guidelines/writing.rst:130
+msgid ""
+"When describing keyboard shortcuts, the following conventions should be "
+"used:"
+msgstr "Vid beskrivning av kortkommandon bör följande konventioner användas:"
+
+#: ../../docs/documentation_guidelines/writing.rst:133
+msgid "Letter keys are displayed using uppercase: :kbd:`S`"
+msgstr "Bokstavsknappar visas med versaler: :kbd:`S`"
+
+#: ../../docs/documentation_guidelines/writing.rst:134
+msgid "Special keys are displayed with an uppercase first letter: :kbd:`Esc`"
+msgstr "Specialknappar visas med en versal första bokstav: :kbd:`Esc`"
+
+#: ../../docs/documentation_guidelines/writing.rst:135
+msgid ""
+"Key combinations are displayed with a ``+`` sign between keys, without "
+"spaces: :kbd:`Shift+R`"
+msgstr ""
+"Tangentkombinationer visas med tecknet ``+`` mellan tangenterna, utan "
+"mellanslag: :kbd:`Shift+R`"
+
+#: ../../docs/documentation_guidelines/writing.rst:138
+msgid "**User text**"
+msgstr "**Användarens text**"
+
+#: ../../docs/documentation_guidelines/writing.rst:144
+msgid "**Layer names**"
+msgstr "**Namn på lager**"
+
+#: ../../docs/documentation_guidelines/writing.rst:146
+msgid "When referring to layers, format as inline code:"
+msgstr "När du hänvisar till lager, formatera som inline-kod:"
+
+#: ../../docs/documentation_guidelines/writing.rst:156
+msgid "Labels/references"
+msgstr "Etiketter/referenser"
+
+#: ../../docs/documentation_guidelines/writing.rst:158
+msgid ""
+"Anchors inside the text can be used to create hyperlinks to sections or "
+"pages."
+msgstr ""
+"Ankare i texten kan användas för att skapa hyperlänkar till avsnitt eller "
+"sidor."
+
+#: ../../docs/documentation_guidelines/writing.rst:161
+msgid ""
+"The example below creates the anchor of a section (e.g., Label/reference "
+"title)"
+msgstr ""
+"I exemplet nedan skapas ett ankare för ett avsnitt (t.ex. "
+"etikett/referenstitel)"
+
+#: ../../docs/documentation_guidelines/writing.rst:170
+msgid "To call the reference in the **same page**, use"
+msgstr "För att ringa upp referensen på **samme sida**, använd"
+
+#: ../../docs/documentation_guidelines/writing.rst:176
+msgid "which will return:"
+msgstr "som kommer att återvända:"
+
+#: ../../docs/documentation_guidelines/writing.rst:178
+msgid "see my_anchor_ for more information."
+msgstr "se my_anchor_ för mer information."
+
+#: ../../docs/documentation_guidelines/writing.rst:180
+msgid ""
+"Notice that it will jump to the line/thing following the 'anchor'. You do "
+"not need to use apostrophes, but you do need to have empty lines after the "
+"anchor."
+msgstr ""
+"Observera att den kommer att hoppa till raden/det som följer efter "
+"\"ankaret\". Du behöver inte använda apostrofer, men du måste ha tomma rader"
+" efter ankaret."
+
+#: ../../docs/documentation_guidelines/writing.rst:184
+msgid ""
+"Another way to jump to the same place **from anywhere in the documentation**"
+" is to use the ``:ref:`` role."
+msgstr ""
+"Ett annat sätt att hoppa till samma plats **från var som helst i "
+"dokumentationen** är att använda rollen ``:ref:``."
+
+#: ../../docs/documentation_guidelines/writing.rst:191
+msgid ""
+"which will create a link with the caption instead (in this case the title of"
+" this section!):"
+msgstr ""
+"vilket skapar en länk med bildtexten istället (i det här fallet titeln på "
+"det här avsnittet!):"
+
+#: ../../docs/documentation_guidelines/writing.rst:194
+msgid "see :ref:`my_anchor` for more information."
+msgstr "se :ref:`my_anchor` för mer information."
+
+#: ../../docs/documentation_guidelines/writing.rst:196
+msgid ""
+"So, reference 1 (my_anchor_) and reference 2 (:ref:`my_anchor`). Because the"
+" reference often displays a full caption, it is not really necessary to use "
+"the word *section*. Note that you can also use a custom caption to describe "
+"the reference:"
+msgstr ""
+"Alltså, referens 1 (my_anchor_) och referens 2 (:ref:`my_anchor`). Eftersom "
+"referensen ofta visar en fullständig bildtext är det egentligen inte "
+"nödvändigt att använda ordet *sektion*. Observera att du också kan använda "
+"en anpassad bildtext för att beskriva referensen:"
+
+#: ../../docs/documentation_guidelines/writing.rst:205
+msgid "which returns:"
+msgstr "som återvänder:"
+
+#: ../../docs/documentation_guidelines/writing.rst:207
+msgid "see :ref:`Label and reference <my_anchor>` for more information."
+msgstr "se :ref:`Märkning och referens <my_anchor>` för mer information."
+
+#: ../../docs/documentation_guidelines/writing.rst:213
+msgid "Figures and Images"
+msgstr "Siffror och bilder"
+
 #: ../../docs/documentation_guidelines/writing.rst:217
 msgid "Pictures"
 msgstr "Bilder"
 
+#: ../../docs/documentation_guidelines/writing.rst:219
+msgid "To insert an image, use"
+msgstr "Om du vill infoga en bild använder du"
+
+#: ../../docs/documentation_guidelines/writing.rst:226
+msgid "which returns"
+msgstr "som returnerar"
+
+#: ../../docs/documentation_guidelines/writing.rst:232
+msgid "Replacement"
+msgstr "Ersättning"
+
+#: ../../docs/documentation_guidelines/writing.rst:234
+msgid ""
+"You can put an image inside text or add an alias to use everywhere. To use "
+"an image inside a paragraph, first create an alias in the "
+":file:`source/substitutions.txt` file:"
+msgstr ""
+"Du kan lägga in en bild i texten eller lägga till ett alias för att använda "
+"den överallt. Om du vill använda en bild i ett stycke måste du först skapa "
+"ett alias i filen :file:`source/substitutions.txt`:"
+
+#: ../../docs/documentation_guidelines/writing.rst:244
+msgid "and then call it in your paragraph:"
+msgstr "och sedan kalla det i ditt stycke:"
+
+#: ../../docs/documentation_guidelines/writing.rst:250
+msgid "This is how the example will be displayed:"
+msgstr "Det är så här exemplet kommer att visas:"
+
+#: ../../docs/documentation_guidelines/writing.rst:255
+msgid "My paragraph begins here with a nice logo |nice_logo|."
+msgstr "Mitt stycke börjar här med en fin logotyp |nice_logo|."
+
 #: ../../docs/documentation_guidelines/writing.rst:252
 msgid "nice_logo"
 msgstr "nice_logo"
+
+#: ../../docs/documentation_guidelines/writing.rst:257
+msgid ""
+"To allow preview rendering in GitHub that is as close as possible to HTML "
+"rendering, you will also need to add the image replacement call at the end "
+"of the file you changed. This can be done by copy-pasting it from "
+":file:`substitutions.txt` or by executing the "
+":file:`scripts/find_set_subst.py` script."
+msgstr ""
+"För att tillåta förhandsgranskning i GitHub som är så nära HTML-rendering "
+"som möjligt måste du också lägga till anropet för bildersättning i slutet av"
+" filen du ändrade. Detta kan göras genom att kopiera och klistra in det från"
+" :file:`substitutions.txt` eller genom att köra skriptet "
+":file:`scripts/find_set_subst.py`."
+
+#: ../../docs/documentation_guidelines/writing.rst:266
+msgid ""
+"Currently, to ensure consistency and help in the use of QGIS icons, a list "
+"of aliases is built and available in the :ref:`substitutions` chapter."
+msgstr ""
+"För närvarande, för att säkerställa konsekvens och hjälpa till vid "
+"användningen av QGIS-ikoner, byggs en lista över alias som finns tillgänglig"
+" i kapitlet :ref:`substitutions`."
+
+#: ../../docs/documentation_guidelines/writing.rst:270
+msgid "Figure"
+msgstr "Media"
+
+#: ../../docs/documentation_guidelines/writing.rst:283
+msgid "The result looks like this:"
+msgstr "Resultatet ser ut så här:"
+
+#: ../../docs/documentation_guidelines/writing.rst:291
+msgid "A caption: A logo I like"
+msgstr "En bildtext: En logotyp som jag gillar"
+
+#: ../../docs/documentation_guidelines/writing.rst:293
+msgid ""
+"To avoid conflicts with other references, always begin figure anchors with "
+"``_figure_`` and use terms that easily connect to the figure caption. While "
+"only the centered alignment is mandatory for the image, feel free to use any"
+" other options for figures (such as ``width``, ``height``, ``scale``...) if "
+"needed."
+msgstr ""
+"För att undvika konflikter med andra referenser ska du alltid börja "
+"figurankare med ``_figure_`` och använda termer som enkelt kan kopplas till "
+"figurtexten. Även om endast centrerad justering är obligatorisk för bilden, "
+"får du gärna använda andra alternativ för figurer (t.ex. ``width``, "
+"``height``, ``scale``...) om det behövs."
+
+#: ../../docs/documentation_guidelines/writing.rst:299
+msgid ""
+"The scripts will insert an automatically generated number before the caption"
+" of the figure in the generated HTML and PDF versions of the documentation."
+msgstr ""
+"Skripten kommer att infoga ett automatiskt genererat nummer före bildtexten "
+"i den genererade HTML- och PDF-versionen av dokumentationen."
+
+#: ../../docs/documentation_guidelines/writing.rst:302
+msgid ""
+"To use a caption (*see My caption*) just insert indented text after a blank "
+"line in the figure block."
+msgstr ""
+"För att använda en bildtext (*se Min bildtext*) infogar du bara indragen "
+"text efter en tom rad i figurblocket."
+
+#: ../../docs/documentation_guidelines/writing.rst:305
+msgid "A figure can be referenced using the reference label like this:"
+msgstr ""
+"En figur kan refereras till med hjälp av referensetiketten på följande sätt:"
+
+#: ../../docs/documentation_guidelines/writing.rst:311
+#: ../../docs/documentation_guidelines/writing.rst:328
+msgid "renders like this:"
+msgstr "renderingar så här:"
+
+#: ../../docs/documentation_guidelines/writing.rst:313
+msgid "see :numref:`figure_logo`"
+msgstr "se :numref:`figure_logo`"
+
+#: ../../docs/documentation_guidelines/writing.rst:315
+msgid "This is the preferred way of referencing figures."
+msgstr "Detta är det föredragna sättet att referera till figurer."
+
+#: ../../docs/documentation_guidelines/writing.rst:319
+msgid "For ``:numref:`` to work, the figure **must have a caption**."
+msgstr "För att ``:numref:`` ska fungera måste figuren **ha en bildtext**."
+
+#: ../../docs/documentation_guidelines/writing.rst:321
+msgid ""
+"It is possible to use ``:ref:`` instead of ``:numref:`` for reference, but "
+"this returns the full caption of the image."
+msgstr ""
+"Det är möjligt att använda ``:ref:`` i stället för ``:numref:`` som "
+"referens, men då returneras hela bildtexten."
+
+#: ../../docs/documentation_guidelines/writing.rst:330
+msgid "see :ref:`figure_logo`"
+msgstr "se :ref:`figure_logo`"
+
+#: ../../docs/documentation_guidelines/writing.rst:334
+msgid "Tables"
+msgstr "Tabeller"
+
+#: ../../docs/documentation_guidelines/writing.rst:336
+msgid "A simple table can be coded like this"
+msgstr "En enkel tabell kan kodas så här"
+
+#: ../../docs/documentation_guidelines/writing.rst:347
+msgid "It will render like this:"
+msgstr "Det kommer att återges så här:"
+
+#: ../../docs/documentation_guidelines/writing.rst:350
+msgid "x"
+msgstr "bredd"
+
+#: ../../docs/documentation_guidelines/writing.rst:350
+msgid "y"
+msgstr "Y"
+
+#: ../../docs/documentation_guidelines/writing.rst:350
+msgid "z"
+msgstr "z"
 
 #: ../../docs/documentation_guidelines/writing.rst:352
 msgid "1"
@@ -52,11 +477,35 @@ msgstr "4"
 msgid "5"
 msgstr "5"
 
+#: ../../docs/documentation_guidelines/writing.rst:356
+msgid ""
+"Use a ``\\`` (backslash) followed by an empty space to leave an empty space."
+msgstr ""
+"Använd en ````` (backslash) följt av ett tomt utrymme för att lämna ett tomt"
+" utrymme."
+
+#: ../../docs/documentation_guidelines/writing.rst:358
+msgid "You can also make more complicated tables and reference them:"
+msgstr "Du kan också göra mer komplicerade tabeller och hänvisa till dem:"
+
+#: ../../docs/documentation_guidelines/writing.rst:376
+#: ../../docs/documentation_guidelines/writing.rst:412
+msgid "The result:"
+msgstr "Resultatet blev..:"
+
+#: ../../docs/documentation_guidelines/writing.rst:381
+msgid "Windows"
+msgstr "Fönster"
+
+#: ../../docs/documentation_guidelines/writing.rst:381
+msgid "macOS"
+msgstr "macOS"
+
 #: ../../docs/documentation_guidelines/writing.rst:383
 msgid "|win|"
 msgstr "|win|"
 
-#: ../../docs/documentation_guidelines/writing.rst:827
+#: ../../docs/documentation_guidelines/writing.rst:829
 msgid "win"
 msgstr "win"
 
@@ -64,221 +513,959 @@ msgstr "win"
 msgid "|osx|"
 msgstr "|osx|"
 
-#: ../../docs/documentation_guidelines/writing.rst:811
+#: ../../docs/documentation_guidelines/writing.rst:813
 msgid "osx"
 msgstr "osx"
 
-#: ../../docs/documentation_guidelines/writing.rst:809
+#: ../../docs/documentation_guidelines/writing.rst:385
+msgid "and of course not to forget |nix|"
+msgstr "och naturligtvis inte att förglömma |nix|"
+
+#: ../../docs/documentation_guidelines/writing.rst:811
 msgid "nix"
 msgstr "nix"
 
+#: ../../docs/documentation_guidelines/writing.rst:388
+msgid ""
+"My drawn table, mind you this is unfortunately not regarded as a caption"
+msgstr ""
+"Mitt ritbord, märk väl att detta tyvärr inte är att betrakta som en bildtext"
+
+#: ../../docs/documentation_guidelines/writing.rst:390
+msgid "You can reference to it like this my_drawn_table_."
+msgstr "Du kan hänvisa till den så här my_drawn_table_."
+
+#: ../../docs/documentation_guidelines/writing.rst:392
+msgid "For even more complex tables, it is easier to use ``list-table``:"
+msgstr ""
+"För ännu mer komplexa tabeller är det lättare att använda ``list-table``:"
+
+#: ../../docs/documentation_guidelines/writing.rst:418
+msgid "What"
+msgstr "Vad"
+
+#: ../../docs/documentation_guidelines/writing.rst:419
+msgid "Purpose"
+msgstr "Syfte"
+
+#: ../../docs/documentation_guidelines/writing.rst:420
+msgid "Key word"
+msgstr "Nyckelord"
+
 #: ../../docs/documentation_guidelines/writing.rst:421
-#: ../../docs/documentation_guidelines/writing.rst:648
+#: ../../docs/documentation_guidelines/writing.rst:650
 msgid "Description"
 msgstr "Beskrivning"
 
+#: ../../docs/documentation_guidelines/writing.rst:422
+msgid "**Test**"
+msgstr "**Test**"
+
+#: ../../docs/documentation_guidelines/writing.rst:423
+msgid "``Useful test``"
+msgstr "``Nyttigt test``"
+
+#: ../../docs/documentation_guidelines/writing.rst:424
+msgid "complexity"
+msgstr "komplexitet"
+
+#: ../../docs/documentation_guidelines/writing.rst:425
+msgid "Geometry.  One of:"
+msgstr "Geometri.  Ett av följande:"
+
 #: ../../docs/documentation_guidelines/writing.rst:427
-#: ../../docs/documentation_guidelines/writing.rst:678
+#: ../../docs/documentation_guidelines/writing.rst:680
 msgid "Point"
 msgstr "Punkt"
+
+#: ../../docs/documentation_guidelines/writing.rst:428
+msgid "Line"
+msgstr "Rad"
 
 #: ../../docs/documentation_guidelines/writing.rst:431
 msgid "Index"
 msgstr "Index"
 
+#: ../../docs/documentation_guidelines/writing.rst:433
+msgid ""
+"An index is a handy way to help the reader find information in a document. "
+"QGIS documentation provides some essential indices. There are a few rules "
+"that help us provide a set of indices that are really useful (coherent, "
+"consistent and really connected to each other):"
+msgstr ""
+"Ett index är ett praktiskt sätt att hjälpa läsaren att hitta information i "
+"ett dokument. QGIS-dokumentationen innehåller några viktiga index. Det finns"
+" några regler som hjälper oss att tillhandahålla en uppsättning index som är"
+" riktigt användbara (sammanhängande, konsekventa och verkligen kopplade till"
+" varandra):"
+
+#: ../../docs/documentation_guidelines/writing.rst:438
+msgid ""
+"An index should be human readable, understandable and translatable; an index"
+" can be made from many words but you should avoid any unneeded ``_``, "
+"``-``... characters to link them i.e., ``Loading layers`` instead of "
+"``loading_layers`` or ``loadingLayers``."
+msgstr ""
+"Ett index ska vara läsbart för människor, förståeligt och översättningsbart;"
+" ett index kan göras av många ord men du bör undvika onödiga ``_``, ``-``..."
+" tecken för att länka dem, t.ex. ``Loading layers`` istället för "
+"``loading_layers`` eller ``loadingLayers``."
+
+#: ../../docs/documentation_guidelines/writing.rst:442
+msgid ""
+"Capitalize only the first letter of the index unless the word has a "
+"particular spelling. E.g., ``Loading layers``, ``Atlas generation``, "
+"``WMS``, ``pgsql2shp``."
+msgstr ""
+"Använd endast stor bokstav på första bokstaven i indexet om inte ordet har "
+"en särskild stavning. T.ex. ``Laddning av lager``, ``Atlasgenerering``, "
+"``WMS``, ``pgsql2shp``."
+
+#: ../../docs/documentation_guidelines/writing.rst:445
+msgid ""
+"Keep an eye on the existing `Index list "
+"<https://docs.qgis.org/testing/en/genindex.html>`_ in order to reuse the "
+"most convenient expression with the right spelling and avoid unnecessary "
+"duplicates."
+msgstr ""
+"Håll ett öga på den befintliga `Indexlistan "
+"<https://docs.qgis.org/testing/en/genindex.html>`_ för att kunna återanvända"
+" det mest lämpliga uttrycket med rätt stavning och undvika onödiga "
+"dubbletter."
+
+#: ../../docs/documentation_guidelines/writing.rst:449
+msgid ""
+"Several index tags exist in RST. You can use the inline ``:index:`` tag "
+"within normal text:"
+msgstr ""
+"Flera index-taggar finns i RST. Du kan använda inline-taggen ``:index:`` "
+"inom normal text:"
+
+#: ../../docs/documentation_guidelines/writing.rst:456
+msgid ""
+"Or you can use the ``.. index::`` block-level markup which links to the "
+"beginning of the next paragraph. Because of the rules mentioned above, it is"
+" recommended to use the block-level tag:"
+msgstr ""
+"Eller så kan du använda markeringen ``.. index::`` på blocknivå som länkar "
+"till början av nästa stycke. På grund av de regler som nämns ovan "
+"rekommenderas det att använda blocknivåtaggen:"
+
+#: ../../docs/documentation_guidelines/writing.rst:464
+msgid ""
+"It is also recommended to use index parameters such as ``single``, ``pair`` "
+"and ``see``, in order to build a more structured and interconnected index "
+"table. See `Index generating <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#index-generating-"
+"markup>`_ for more information on index creation."
+msgstr ""
+"Det är också rekommenderat att använda indexparametrar som ``ingle``, "
+"``pair`` och ``see`` för att skapa en mer strukturerad och sammankopplad "
+"indextabell. Se `Indexgenerering <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#index-generating-"
+"markup>`_ för mer information om hur du skapar index."
+
+#: ../../docs/documentation_guidelines/writing.rst:471
+msgid "Special Comments"
+msgstr "Särskilda kommentarer"
+
+#: ../../docs/documentation_guidelines/writing.rst:473
+msgid ""
+"Sometimes, you may want to emphasize some points of the description, either "
+"to warn, remind or give some hints to the user. In QGIS Documentation, we "
+"use reST special directives such as ``.. warning::``, ``.. seealso::``, ``.."
+" note::`` and ``.. tip::``. These directives generate frames that highlight "
+"your comments. See `Paragraph Level markup <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#paragraph-level-"
+"markup>`_ for more information. A clear and appropriate title is required "
+"for both warnings and tips."
+msgstr ""
+"Ibland kanske du vill betona vissa punkter i beskrivningen, antingen för att"
+" varna, påminna eller ge några ledtrådar till användaren. I QGIS "
+"Documentation använder vi reST-specialdirektiv som ``... warning::``, ``... "
+"seealso::``, ``... note::`` och ``... tip::``. Dessa direktiv genererar "
+"ramar som markerar dina kommentarer. Se `Paragraph Level markup "
+"<https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#paragraph-level-"
+"markup>`_ för mer information. En tydlig och lämplig titel krävs för både "
+"varningar och tips."
+
+#: ../../docs/documentation_guidelines/writing.rst:491
+msgid "Code Snippets"
+msgstr "Kodsnuttar"
+
+#: ../../docs/documentation_guidelines/writing.rst:493
+msgid ""
+"You may also want to give examples and insert code snippets. In this case, "
+"write the comment below a line with the ``::`` directive inserted.  For a "
+"better rendering, especially to apply color highlighting to code according "
+"to its language, use the code-block directive, e.g. ``.. code-block:: xml``."
+" More details at `Showing code <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#showing-code-"
+"examples>`_."
+msgstr ""
+"Du kanske också vill ge exempel och infoga kodsnuttar. I så fall skriver du "
+"kommentaren under en rad med ``::``-direktivet infogat.  För en bättre "
+"återgivning, särskilt för att tillämpa färgmarkering på kod enligt dess "
+"språk, använd kodblockdirektivet, t.ex. ``.. code-block:: xml``. Mer "
+"information finns på `Visa kod <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#showing-code-"
+"examples>`_."
+
+#: ../../docs/documentation_guidelines/writing.rst:502
+msgid ""
+"While texts in note, tip and warning frames are translatable, be aware that "
+"code block frames do not allow translation. So avoid comments not related to"
+" the code and keep comments as short as possible."
+msgstr ""
+"Texter i ramarna för anmärkningar, tips och varningar kan översättas, men "
+"tänk på att ramarna för kodblock inte tillåter översättning. Undvik därför "
+"kommentarer som inte är relaterade till koden och håll kommentarerna så "
+"korta som möjligt."
+
+#: ../../docs/documentation_guidelines/writing.rst:507
+msgid "Footnotes"
+msgstr "Fotnoter"
+
+#: ../../docs/documentation_guidelines/writing.rst:509
+msgid ""
+"Please note: Footnotes are not recognized by any translation software and it"
+" is also not converted to pdf format properly. So, if possible, don't use "
+"footnotes within any documentation."
+msgstr ""
+"Observera: Fotnoter känns inte igen av något översättningsprogram och "
+"konverteras inte heller till pdf-format på rätt sätt. Om möjligt ska du "
+"därför inte använda fotnoter i någon dokumentation."
+
+#: ../../docs/documentation_guidelines/writing.rst:513
+msgid "This is for creating a footnote (showing as example [1]_)"
+msgstr "Detta är för att skapa en fotnot (visas som exempel [1]_)"
+
+#: ../../docs/documentation_guidelines/writing.rst:519
+msgid "Which will point to:"
+msgstr "Vilket kommer att peka på:"
+
+#: ../../docs/documentation_guidelines/writing.rst:521
+msgid "Updates of core plugins"
+msgstr "Uppdateringar av kärnplugins"
+
+#: ../../docs/documentation_guidelines/writing.rst:526
+msgid "Managing Screenshots"
+msgstr "Hantera skärmdumpar"
+
+#: ../../docs/documentation_guidelines/writing.rst:529
+msgid "Add new Screenshots"
+msgstr "Lägg till nya skärmdumpar"
+
+#: ../../docs/documentation_guidelines/writing.rst:531
+msgid ""
+"Here are some hints to create new, nice looking screenshots. The images "
+"should be placed in an image (:file:`img/`) folder that is located in the "
+"same folder as the referencing :file:`.rst` file."
+msgstr ""
+"Här är några tips för att skapa nya, snygga skärmdumpar. Bilderna ska "
+"placeras i en bildmapp (:file:`img/`) som ligger i samma mapp som den "
+"refererande :file:`.rst`-filen."
+
+#: ../../docs/documentation_guidelines/writing.rst:535
+msgid ""
+"You can find some prepared QGIS-projects that are used to create screenshots"
+" in the :file:`./qgis-projects` folder of this repository. This makes it "
+"easier to reproduce screenshots for the next version of QGIS. These projects"
+" use the QGIS `Sample Data <https://github.com/qgis/QGIS-Sample-"
+"Data/archive/master.zip>`_ (aka Alaska Dataset), which should be unzipped "
+"and placed in the same folder as the QGIS-Documentation Repository."
+msgstr ""
+"Du kan hitta några förberedda QGIS-projekt som används för att skapa "
+"skärmdumpar i mappen :file:`./qgis-projects` i detta arkiv. Detta gör det "
+"enklare att reproducera skärmdumpar för nästa version av QGIS. Dessa projekt"
+" använder QGIS `Sample Data <https://github.com/qgis/QGIS-Sample-"
+"Data/archive/master.zip>`_ (även kallad Alaska Dataset), som bör packas upp "
+"och placeras i samma mapp som QGIS-Documentation Repository."
+
+#: ../../docs/documentation_guidelines/writing.rst:541
+msgid ""
+"Reduce the window to the minimal space needed to show the feature (taking "
+"the whole screen for a small modal window > overkill)"
+msgstr ""
+"Minska fönstret till det minimala utrymme som behövs för att visa funktionen"
+" (ta hela skärmen för ett litet modalt fönster > överdrivet)"
+
+#: ../../docs/documentation_guidelines/writing.rst:543
+msgid "The less clutter, the better (no need to activate all the toolbars)"
+msgstr ""
+"Ju mindre rörigt, desto bättre (inget behov av att aktivera alla "
+"verktygsfält)"
+
+#: ../../docs/documentation_guidelines/writing.rst:544
+msgid ""
+"Don't resize them in an image editor; the size will be set into the "
+":file:`.rst` files if necessary (downscaling the dimensions without properly"
+" upping the resolution > ugly)"
+msgstr ""
+"Ändra inte storlek på dem i en bildredigerare; storleken kommer att ställas "
+"in i :file:`.rst`-filerna om det behövs (nedskalning av dimensionerna utan "
+"att öka upplösningen ordentligt > ful)"
+
+#: ../../docs/documentation_guidelines/writing.rst:547
+msgid "Cut the background"
+msgstr "Klipp ut bakgrunden"
+
+#: ../../docs/documentation_guidelines/writing.rst:548
+msgid "Make the top corners transparent if the background is not white"
+msgstr "Gör de övre hörnen genomskinliga om bakgrunden inte är vit"
+
+#: ../../docs/documentation_guidelines/writing.rst:549
+msgid ""
+"Set print size resolution to ``135 dpi`` (e.g., in GIMP scale down the image"
+" using :menuselection:`Image --> Scale Image` and setting \"X/Y\" to ``135 "
+"pixels/in``, and export it through :menuselection:`File --> Export...`). "
+"This way, images will be at original size in html and at a good print "
+"resolution in the PDF."
+msgstr ""
+"Ställ in utskriftsstorlekens upplösning till ``135 dpi`` (t.ex. i GIMP, "
+"skala ner bilden med hjälp av :menuselection:`Image --> Scale Image` och "
+"ställ in \"X/Y\" till ``135 pixels/in``, och exportera den genom "
+":menuselection:`File --> Export...`). På så sätt kommer bilderna att vara i "
+"originalstorlek i html och ha en bra utskriftsupplösning i PDF-filen."
+
+#: ../../docs/documentation_guidelines/writing.rst:554
+msgid "You can also use ImageMagick convert command to do a batch of images:"
+msgstr ""
+"Du kan också använda ImageMagick convert-kommandot för att konvertera ett "
+"antal bilder:"
+
+#: ../../docs/documentation_guidelines/writing.rst:560
+msgid "Save them as :file:`.png` (to avoid :file:`.jpeg` artifacts)"
+msgstr "Spara dem som :file:`.png` (för att undvika :file:`.jpeg`-artefakter)"
+
+#: ../../docs/documentation_guidelines/writing.rst:561
+msgid ""
+"The screenshot should show the content according to what is described in the"
+" text"
+msgstr ""
+"Skärmdumpen ska visa innehållet i enlighet med vad som beskrivs i texten"
+
+#: ../../docs/documentation_guidelines/writing.rst:564
+msgid ""
+"If you are on Ubuntu, you can use the following command to remove the global"
+" menu function and create smaller application screens with menus:"
+msgstr ""
+"Om du använder Ubuntu kan du använda följande kommando för att ta bort den "
+"globala menyfunktionen och skapa mindre programskärmar med menyer:"
+
+#: ../../docs/documentation_guidelines/writing.rst:573
+msgid "Translated Screenshots"
+msgstr "Översatta skärmdumpar"
+
+#: ../../docs/documentation_guidelines/writing.rst:575
+msgid ""
+"Here are some additional hints for those that want to create screenshots for"
+" a translated user guide:"
+msgstr ""
+"Här är några ytterligare tips för dig som vill skapa skärmdumpar för en "
+"översatt användarhandbok:"
+
+#: ../../docs/documentation_guidelines/writing.rst:578
+msgid ""
+"Translated images should be placed in a :file:`img/<your_language>/` folder."
+" Use the same filename as the english 'original' screenshot."
+msgstr ""
+"Översatta bilder ska placeras i en :file:`img/<ditt_språk>/`-mapp. Använd "
+"samma filnamn som den engelska \"original\"-skärmdumpen."
+
+#: ../../docs/documentation_guidelines/writing.rst:583
+msgid "Documenting Processing algorithms"
+msgstr "Dokumentation av bearbetningsalgoritmer"
+
+#: ../../docs/documentation_guidelines/writing.rst:585
+msgid ""
+"If you want to write documentation for Processing algorithms, consider these"
+" guidelines:"
+msgstr ""
+"Om du vill skriva dokumentation för bearbetningsalgoritmer bör du tänka på "
+"dessa riktlinjer:"
+
+#: ../../docs/documentation_guidelines/writing.rst:588
+msgid ""
+"Processing algorithm help files are part of QGIS User Guide, so use the same"
+" formatting as User Guide and other documentation."
+msgstr ""
+"Hjälpfiler för bearbetningsalgoritmer är en del av QGIS användarhandbok, så "
+"använd samma formatering som användarhandboken och annan dokumentation."
+
+#: ../../docs/documentation_guidelines/writing.rst:591
+msgid ""
+"Each algorithm documentation should be placed in the corresponding "
+"**provider** folder and **group** file, e.g. the algorithm `Voronoi polygon`"
+" belongs to the `QGIS` provider and to the group `vectorgeometry`. So the "
+"correct file to add the description is: "
+":file:`source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst`."
+msgstr ""
+"Varje algoritmdokumentation ska placeras i motsvarande **provider**-mapp och"
+" **group**-fil, t.ex. algoritmen `Voronoi polygon` tillhör `QGIS`-providern "
+"och gruppen `vectorgeometry`. Så den korrekta filen för att lägga till "
+"beskrivningen är: "
+":file:`source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst`."
+
+#: ../../docs/documentation_guidelines/writing.rst:596
+msgid ""
+"Before starting to write the guide, check if the algorithm is already "
+"described. In this case, you can enhance the existing description."
+msgstr ""
+"Innan du börjar skriva guiden bör du kontrollera om algoritmen redan finns "
+"beskriven. I så fall kan du förbättra den befintliga beskrivningen."
+
+#: ../../docs/documentation_guidelines/writing.rst:599
+msgid ""
+"It is **extremely** important that each algorithm has an *anchor* that "
+"corresponds to the provider name + the unique name of the algorithm itself. "
+"This allows the Help button to open the Help page of the correct section. "
+"The anchor should be placed **above** the title, e.g. (see also the "
+":ref:`my_anchor` section)::"
+msgstr ""
+"Det är **extremt** viktigt att varje algoritm har en *ankare* som motsvarar "
+"leverantörsnamnet + det unika namnet på själva algoritmen. Detta gör att "
+"hjälpknappen kan öppna hjälpsidan för rätt avsnitt. Ankaret ska placeras "
+"**ovanför** titeln, t.ex. (se även avsnittet :ref:`my_anchor`)::"
+
+#: ../../docs/documentation_guidelines/writing.rst:609
+msgid ""
+"To find out the algorithm name you can just hover the mouse on the algorithm"
+" in the Processing toolbox."
+msgstr ""
+"För att ta reda på algoritmens namn kan du bara hålla muspekaren på "
+"algoritmen i verktygslådan Processing."
+
+#: ../../docs/documentation_guidelines/writing.rst:611
+msgid ""
+"Avoid using \"This algorithm does this and that...\" as the first sentence "
+"in the algorithm description. Try to use more general expressions like::"
+msgstr ""
+"Undvik att använda \"Den här algoritmen gör det här och det där...\" som "
+"första mening i algoritmbeskrivningen. Försök att använda mer allmänna "
+"uttryck som::"
+
+#: ../../docs/documentation_guidelines/writing.rst:616
+msgid ""
+"Avoid describing what the algorithm does by replicating its name and please "
+"don't replicate the name of the parameter in the description of the "
+"parameter itself. For example if the algorithm is ``Voronoi polygon`` "
+"consider to describe the ``Input layer`` as ``Layer to calculate the polygon"
+" from``."
+msgstr ""
+"Undvik att beskriva vad algoritmen gör genom att replikera dess namn och "
+"replikera inte namnet på parametern i beskrivningen av själva parametern. "
+"Till exempel om algoritmen är ``Voronoi polygon`` överväga att beskriva "
+"``Input layer`` som ``Layer to calculate the polygon from``."
+
+#: ../../docs/documentation_guidelines/writing.rst:620
+msgid ""
+"Indicate in the description whether the algorithm has a default shortcut in "
+"QGIS or supports in-place editing."
+msgstr ""
+"Ange i beskrivningen om algoritmen har en standardgenväg i QGIS eller stöd "
+"för redigering på plats."
+
+#: ../../docs/documentation_guidelines/writing.rst:622
+msgid ""
+"Add images! A picture is worth a thousand words! Use :file:`.png` format and"
+" follow the general guidelines for documentation (see the :ref:`image` "
+"section for more info). Put the image file in the correct folder, i.e. the "
+":file:`img` folder next to the :file:`.rst` file you are editing."
+msgstr ""
+"Lägg till bilder! En bild säger mer än tusen ord! Använd formatet "
+":file:`.png` och följ de allmänna riktlinjerna för dokumentation (se "
+"avsnittet :ref:`image` för mer information). Placera bildfilen i rätt mapp, "
+"dvs. i mappen :file:`img` bredvid filen :file:`.rst` som du redigerar."
+
+#: ../../docs/documentation_guidelines/writing.rst:626
+msgid ""
+"If necessary, add links in the \"See also\" section that provide additional "
+"information about the algorithm  (e.g., publications or web-pages).  Only "
+"add the \"See also\" section if there is really something to see. As a good "
+"practice, the \"See also\" section can be filled with links to similar "
+"algorithms."
+msgstr ""
+"Om det behövs kan du lägga till länkar i avsnittet \"Se även\" som ger "
+"ytterligare information om algoritmen (t.ex. publikationer eller webbsidor)."
+"  Lägg bara till avsnittet \"Se även\" om det verkligen finns något att se. "
+"Som en god praxis kan avsnittet \"Se även\" fyllas med länkar till liknande "
+"algoritmer."
+
+#: ../../docs/documentation_guidelines/writing.rst:630
+msgid ""
+"Give clear explanation for algorithm parameters and outputs: take "
+"inspiration from existing algorithms."
+msgstr ""
+"Ge en tydlig förklaring av algoritmens parametrar och utdata: hämta "
+"inspiration från befintliga algoritmer."
+
+#: ../../docs/documentation_guidelines/writing.rst:632
+msgid ""
+"Avoid duplicating detailed description of algorithm options. Add this "
+"information in the parameter description."
+msgstr ""
+"Undvik att duplicera den detaljerade beskrivningen av algoritmalternativen. "
+"Lägg till denna information i parameterbeskrivningen."
+
+#: ../../docs/documentation_guidelines/writing.rst:634
+msgid ""
+"Avoid adding information about the vector geometry type in the algorithm or "
+"parameter description, as this information is already available in the "
+"parameter descriptions."
+msgstr ""
+"Undvik att lägga till information om vektorgeometritypen i algoritm- eller "
+"parameterbeskrivningen, eftersom denna information redan finns i "
+"parameterbeskrivningarna."
+
+#: ../../docs/documentation_guidelines/writing.rst:637
+msgid "Add the default value of the parameter, e.g.::"
+msgstr "Lägg till parameterns standardvärde, t.ex.::"
+
+#: ../../docs/documentation_guidelines/writing.rst:646
+msgid ""
+"Describe the *type* of input supported the parameters. There are several "
+"types available you can pick one from:"
+msgstr ""
+"Beskriv *typen* av indata som stöder parametrarna. Det finns flera typer "
+"tillgängliga som du kan välja en av:"
+
 #: ../../docs/documentation_guidelines/writing.rst:650
+msgid "Parameter/Output type"
+msgstr "Parameter/utgångstyp"
+
+#: ../../docs/documentation_guidelines/writing.rst:650
+msgid "Visual indicator"
+msgstr "Visuell indikator"
+
+#: ../../docs/documentation_guidelines/writing.rst:652
+msgid "Point vector layer"
+msgstr "Punktvektorlager"
+
+#: ../../docs/documentation_guidelines/writing.rst:652
+msgid "``vector: point``"
+msgstr "``vektor: punkt``"
+
+#: ../../docs/documentation_guidelines/writing.rst:652
 msgid "|pointLayer|"
 msgstr "|pointLayer|"
 
-#: ../../docs/documentation_guidelines/writing.rst:813
+#: ../../docs/documentation_guidelines/writing.rst:815
 msgid "pointLayer"
 msgstr "pointLayer"
 
-#: ../../docs/documentation_guidelines/writing.rst:651
+#: ../../docs/documentation_guidelines/writing.rst:653
+msgid "Line vector layer"
+msgstr "Linjevektorlager"
+
+#: ../../docs/documentation_guidelines/writing.rst:653
+msgid "``vector: line``"
+msgstr "``vektor: linje``"
+
+#: ../../docs/documentation_guidelines/writing.rst:653
 msgid "|lineLayer|"
 msgstr "|lineLayer|"
 
-#: ../../docs/documentation_guidelines/writing.rst:807
+#: ../../docs/documentation_guidelines/writing.rst:809
 msgid "lineLayer"
 msgstr "lineLayer"
 
-#: ../../docs/documentation_guidelines/writing.rst:652
+#: ../../docs/documentation_guidelines/writing.rst:654
+msgid "Polygon vector layer"
+msgstr "Polygon vektorlager"
+
+#: ../../docs/documentation_guidelines/writing.rst:654
+msgid "``vector: polygon``"
+msgstr "``vektor: polygon``"
+
+#: ../../docs/documentation_guidelines/writing.rst:654
 msgid "|polygonLayer|"
 msgstr "|polygonLayer|"
 
-#: ../../docs/documentation_guidelines/writing.rst:815
+#: ../../docs/documentation_guidelines/writing.rst:817
 msgid "polygonLayer"
 msgstr "polygonLayer"
 
-#: ../../docs/documentation_guidelines/writing.rst:654
+#: ../../docs/documentation_guidelines/writing.rst:655
+msgid "All spatial vector layers"
+msgstr "Alla rumsliga vektorlager"
+
+#: ../../docs/documentation_guidelines/writing.rst:655
+msgid "``vector: geometry``"
+msgstr "``vektor: geometri``"
+
+#: ../../docs/documentation_guidelines/writing.rst:656
+msgid "Geometryless vector layer"
+msgstr "Geometrilöst vektorlager"
+
+#: ../../docs/documentation_guidelines/writing.rst:656
+msgid "``vector: table``"
+msgstr "``vektor: tabell``"
+
+#: ../../docs/documentation_guidelines/writing.rst:656
 msgid "|tableLayer|"
 msgstr "|tableLayer|"
 
-#: ../../docs/documentation_guidelines/writing.rst:825
+#: ../../docs/documentation_guidelines/writing.rst:827
 msgid "tableLayer"
 msgstr "tableLayer"
 
-#: ../../docs/documentation_guidelines/writing.rst:656
+#: ../../docs/documentation_guidelines/writing.rst:657
+msgid "Generic vector layer"
+msgstr "Generiskt vektorlager"
+
+#: ../../docs/documentation_guidelines/writing.rst:657
+msgid "``vector: any``"
+msgstr "``vektor: valfri``"
+
+#: ../../docs/documentation_guidelines/writing.rst:658
+msgid "Vector field numeric"
+msgstr "Vektorfält numerisk"
+
+#: ../../docs/documentation_guidelines/writing.rst:658
+msgid "``tablefield: numeric``"
+msgstr "``tabellfält: numerisk``"
+
+#: ../../docs/documentation_guidelines/writing.rst:658
 msgid "|fieldFloat|"
 msgstr "|fieldFloat|"
 
-#: ../../docs/documentation_guidelines/writing.rst:802
+#: ../../docs/documentation_guidelines/writing.rst:804
 msgid "fieldFloat"
 msgstr "fieldFloat"
 
-#: ../../docs/documentation_guidelines/writing.rst:657
+#: ../../docs/documentation_guidelines/writing.rst:659
+msgid "Vector field string"
+msgstr "Vektorfält sträng"
+
+#: ../../docs/documentation_guidelines/writing.rst:659
+msgid "``tablefield: string``"
+msgstr "``tabellfält: sträng``"
+
+#: ../../docs/documentation_guidelines/writing.rst:659
 msgid "|fieldText|"
 msgstr "|fieldText|"
 
-#: ../../docs/documentation_guidelines/writing.rst:804
+#: ../../docs/documentation_guidelines/writing.rst:806
 msgid "fieldText"
 msgstr "fieldText"
 
-#: ../../docs/documentation_guidelines/writing.rst:659
+#: ../../docs/documentation_guidelines/writing.rst:660
+msgid "Vector field generic"
+msgstr "Vektorfält generisk"
+
+#: ../../docs/documentation_guidelines/writing.rst:660
+msgid "``tablefield: any``"
+msgstr "``tabellfält: valfritt``"
+
+#: ../../docs/documentation_guidelines/writing.rst:661
+msgid "Raster layer"
+msgstr "Ett rasterlager"
+
+#: ../../docs/documentation_guidelines/writing.rst:661
 msgid "``raster``"
 msgstr "``raster``"
 
-#: ../../docs/documentation_guidelines/writing.rst:659
+#: ../../docs/documentation_guidelines/writing.rst:661
 msgid "|rasterLayer|"
 msgstr "|rasterLayer|"
 
-#: ../../docs/documentation_guidelines/writing.rst:817
+#: ../../docs/documentation_guidelines/writing.rst:819
 msgid "rasterLayer"
 msgstr "rasterLayer"
 
-#: ../../docs/documentation_guidelines/writing.rst:661
+#: ../../docs/documentation_guidelines/writing.rst:662
+msgid "Raster band"
+msgstr "Rasterband"
+
+#: ../../docs/documentation_guidelines/writing.rst:662
+msgid "``raster band``"
+msgstr "``rasterband``"
+
+#: ../../docs/documentation_guidelines/writing.rst:663
+msgid "HTML file"
+msgstr "HTML-fil"
+
+#: ../../docs/documentation_guidelines/writing.rst:663
 msgid "``html``"
 msgstr "``html``"
 
-#: ../../docs/documentation_guidelines/writing.rst:662
+#: ../../docs/documentation_guidelines/writing.rst:664
 msgid "Expression"
 msgstr "Uttryck"
 
-#: ../../docs/documentation_guidelines/writing.rst:662
+#: ../../docs/documentation_guidelines/writing.rst:664
+msgid "``expression``"
+msgstr "``uttryck``"
+
+#: ../../docs/documentation_guidelines/writing.rst:664
 msgid "|expression|"
 msgstr "|expression|"
 
-#: ../../docs/documentation_guidelines/writing.rst:800
+#: ../../docs/documentation_guidelines/writing.rst:802
 msgid "expression"
 msgstr "expression"
 
-#: ../../docs/documentation_guidelines/writing.rst:664
+#: ../../docs/documentation_guidelines/writing.rst:665
+msgid "Point geometry"
+msgstr "Punktgeometri"
+
+#: ../../docs/documentation_guidelines/writing.rst:665
+msgid "``coordinates``"
+msgstr "``koordinater``"
+
+#: ../../docs/documentation_guidelines/writing.rst:666
 msgid "Extent"
 msgstr "Utsträckning"
 
-#: ../../docs/documentation_guidelines/writing.rst:665
+#: ../../docs/documentation_guidelines/writing.rst:666
+msgid "``extent``"
+msgstr "``extent``"
+
+#: ../../docs/documentation_guidelines/writing.rst:667
 msgid "CRS"
 msgstr "Koordinatsystem"
 
-#: ../../docs/documentation_guidelines/writing.rst:665
+#: ../../docs/documentation_guidelines/writing.rst:667
 msgid "``crs``"
 msgstr "``crs``"
 
-#: ../../docs/documentation_guidelines/writing.rst:665
+#: ../../docs/documentation_guidelines/writing.rst:667
 msgid "|setProjection|"
 msgstr "|setProjection|"
 
-#: ../../docs/documentation_guidelines/writing.rst:823
+#: ../../docs/documentation_guidelines/writing.rst:825
 msgid "setProjection"
 msgstr "setProjection"
 
-#: ../../docs/documentation_guidelines/writing.rst:666
+#: ../../docs/documentation_guidelines/writing.rst:668
+msgid "Enumeration"
+msgstr "Uppräkning"
+
+#: ../../docs/documentation_guidelines/writing.rst:668
+msgid "``enumeration``"
+msgstr "``uppräkning``"
+
+#: ../../docs/documentation_guidelines/writing.rst:668
 msgid "|selectString|"
 msgstr "|selectString|"
 
-#: ../../docs/documentation_guidelines/writing.rst:821
+#: ../../docs/documentation_guidelines/writing.rst:823
 msgid "selectString"
 msgstr "selectString"
 
-#: ../../docs/documentation_guidelines/writing.rst:668
 #: ../../docs/documentation_guidelines/writing.rst:669
+msgid "List"
+msgstr "Lista"
+
+#: ../../docs/documentation_guidelines/writing.rst:669
+msgid "``list``"
+msgstr "Konfigurationens id %1 finns redan i listan"
+
+#: ../../docs/documentation_guidelines/writing.rst:670
+msgid "Integer value"
+msgstr "Heltalsvärde"
+
+#: ../../docs/documentation_guidelines/writing.rst:670
+msgid "``numeric: integer``"
+msgstr "``numerisk: heltal``"
+
+#: ../../docs/documentation_guidelines/writing.rst:670
+#: ../../docs/documentation_guidelines/writing.rst:671
 msgid "|selectNumber|"
 msgstr "|selectNumber|"
 
-#: ../../docs/documentation_guidelines/writing.rst:819
+#: ../../docs/documentation_guidelines/writing.rst:821
 msgid "selectNumber"
 msgstr "selectNumber"
 
-#: ../../docs/documentation_guidelines/writing.rst:670
+#: ../../docs/documentation_guidelines/writing.rst:671
+msgid "Decimal value"
+msgstr "Decimalvärde"
+
+#: ../../docs/documentation_guidelines/writing.rst:671
+msgid "``numeric: double``"
+msgstr "``numerisk: dubbel``"
+
+#: ../../docs/documentation_guidelines/writing.rst:672
 msgid "String"
 msgstr "Text"
 
-#: ../../docs/documentation_guidelines/writing.rst:670
+#: ../../docs/documentation_guidelines/writing.rst:672
 msgid "``string``"
 msgstr "``string``"
 
-#: ../../docs/documentation_guidelines/writing.rst:670
+#: ../../docs/documentation_guidelines/writing.rst:672
 msgid "|inputText|"
 msgstr "|inputText|"
 
-#: ../../docs/documentation_guidelines/writing.rst:806
+#: ../../docs/documentation_guidelines/writing.rst:808
 msgid "inputText"
 msgstr "inputText"
 
-#: ../../docs/documentation_guidelines/writing.rst:671
+#: ../../docs/documentation_guidelines/writing.rst:673
 msgid "Boolean"
 msgstr "Boolean"
 
-#: ../../docs/documentation_guidelines/writing.rst:671
+#: ../../docs/documentation_guidelines/writing.rst:673
 msgid "``boolean``"
 msgstr "``boolean``"
 
-#: ../../docs/documentation_guidelines/writing.rst:671
+#: ../../docs/documentation_guidelines/writing.rst:673
 msgid "|checkbox|"
 msgstr "|checkbox|"
 
-#: ../../docs/documentation_guidelines/writing.rst:798
+#: ../../docs/documentation_guidelines/writing.rst:800
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/documentation_guidelines/writing.rst:673
+#: ../../docs/documentation_guidelines/writing.rst:674
+msgid "Folder path"
+msgstr "Mappens sökväg"
+
+#: ../../docs/documentation_guidelines/writing.rst:674
+msgid "``folder``"
+msgstr "``mapp``"
+
+#: ../../docs/documentation_guidelines/writing.rst:675
 msgid "File"
 msgstr "Fil"
 
-#: ../../docs/documentation_guidelines/writing.rst:674
+#: ../../docs/documentation_guidelines/writing.rst:675
+msgid "``file``"
+msgstr "``file``"
+
+#: ../../docs/documentation_guidelines/writing.rst:676
 msgid "Matrix"
 msgstr "Matris"
 
-#: ../../docs/documentation_guidelines/writing.rst:674
+#: ../../docs/documentation_guidelines/writing.rst:676
 msgid "``matrix``"
 msgstr "``matrix``"
 
 #: ../../docs/documentation_guidelines/writing.rst:677
+msgid "Layer"
+msgstr "Lager"
+
+#: ../../docs/documentation_guidelines/writing.rst:677
+msgid "``layer``"
+msgstr "``lager``"
+
+#: ../../docs/documentation_guidelines/writing.rst:678
+msgid "Same output type as input type"
+msgstr "Samma utgångstyp som ingångstyp"
+
+#: ../../docs/documentation_guidelines/writing.rst:678
+msgid "``same as input``"
+msgstr "``Samma som inmatning``"
+
+#: ../../docs/documentation_guidelines/writing.rst:679
+msgid "Definition"
+msgstr "Definition"
+
+#: ../../docs/documentation_guidelines/writing.rst:679
 msgid "``definition``"
 msgstr "``definition``"
 
-#: ../../docs/documentation_guidelines/writing.rst:678
+#: ../../docs/documentation_guidelines/writing.rst:680
 msgid "``point``"
 msgstr "``point``"
 
-#: ../../docs/documentation_guidelines/writing.rst:680
+#: ../../docs/documentation_guidelines/writing.rst:681
+msgid "Map layers"
+msgstr "Kartlager"
+
+#: ../../docs/documentation_guidelines/writing.rst:681
+msgid "``layer`` ``list``"
+msgstr "``lager`` ``lista``"
+
+#: ../../docs/documentation_guidelines/writing.rst:682
 msgid "Range"
 msgstr "Intervall"
 
-#: ../../docs/documentation_guidelines/writing.rst:680
+#: ../../docs/documentation_guidelines/writing.rst:682
 msgid "``range``"
 msgstr "``range``"
 
-#: ../../docs/documentation_guidelines/writing.rst:681
+#: ../../docs/documentation_guidelines/writing.rst:683
+msgid "AuthConfig"
+msgstr "AuthKonfig"
+
+#: ../../docs/documentation_guidelines/writing.rst:683
 msgid "``authconfig``"
 msgstr "``authconfig``"
 
-#: ../../docs/documentation_guidelines/writing.rst:682
+#: ../../docs/documentation_guidelines/writing.rst:684
+msgid "Mesh"
+msgstr "Nät"
+
+#: ../../docs/documentation_guidelines/writing.rst:684
 msgid "``mesh``"
 msgstr "``mesh``"
 
-#: ../../docs/documentation_guidelines/writing.rst:683
+#: ../../docs/documentation_guidelines/writing.rst:685
+msgid "Layout"
+msgstr "Layout"
+
+#: ../../docs/documentation_guidelines/writing.rst:685
 msgid "``layout``"
 msgstr "``layout``"
 
-#: ../../docs/documentation_guidelines/writing.rst:684
+#: ../../docs/documentation_guidelines/writing.rst:686
+msgid "LayoutItem"
+msgstr "LayoutItem"
+
+#: ../../docs/documentation_guidelines/writing.rst:686
 msgid "``layoutitem``"
 msgstr "``layoutitem``"
 
-#: ../../docs/documentation_guidelines/writing.rst:685
+#: ../../docs/documentation_guidelines/writing.rst:687
+msgid "Color"
+msgstr "Färg"
+
+#: ../../docs/documentation_guidelines/writing.rst:687
 msgid "``color``"
 msgstr "``color``"
 
-#: ../../docs/documentation_guidelines/writing.rst:686
+#: ../../docs/documentation_guidelines/writing.rst:688
+msgid "Scale"
+msgstr "Skala"
+
+#: ../../docs/documentation_guidelines/writing.rst:688
 msgid "``scale``"
 msgstr "``scale``"
+
+#: ../../docs/documentation_guidelines/writing.rst:689
+msgid "Map theme"
+msgstr "Karttema"
+
+#: ../../docs/documentation_guidelines/writing.rst:689
+msgid "``map theme``"
+msgstr "``mapp tema``"
+
+#: ../../docs/documentation_guidelines/writing.rst:693
+msgid ""
+"Study an existing and well documented algorithm, and copy all the useful "
+"layouts."
+msgstr ""
+"Studera en befintlig och väldokumenterad algoritm och kopiera alla "
+"användbara layouter."
+
+#: ../../docs/documentation_guidelines/writing.rst:695
+msgid ""
+"When you are finished, just follow the guidelines described in "
+":ref:`step_by_step` to commit your changes and make a Pull Request"
+msgstr ""
+"När du är klar följer du bara de riktlinjer som beskrivs i "
+":ref:`step_by_step` för att överföra dina ändringar och göra en Pull Request"
+
+#: ../../docs/documentation_guidelines/writing.rst:698
+msgid ""
+"Here is an example of an :ref:`existing algorithm "
+"<qgiscountpointsinpolygon>` to help you with the layout and the "
+"description::"
+msgstr ""
+"Här är ett exempel på en :ref:`befintlig algoritm "
+"<qgiscountpointsinpolygon>` för att hjälpa dig med layouten och "
+"beskrivningen::"
