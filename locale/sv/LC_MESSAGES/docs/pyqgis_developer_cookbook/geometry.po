@@ -1,0 +1,339 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:31+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:25
+msgid "Geometry Handling"
+msgstr "Geometrihantering"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:27
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"Kodsnuttarna på den här sidan behöver följande import om du befinner dig "
+"utanför pyqgis-konsolen:"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:51
+msgid ""
+"Points, linestrings and polygons that represent a spatial feature are "
+"commonly referred to as geometries. In QGIS they are represented with the "
+":class:`QgsGeometry <qgis.core.QgsGeometry>` class."
+msgstr ""
+"Punkter, linjestrengar och polygoner som representerar en rumslig egenskap "
+"kallas vanligen geometrier. I QGIS representeras de med klassen "
+":class:`QgsGeometry <qgis.core.QgsGeometry>`."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:55
+msgid ""
+"Sometimes one geometry is actually a collection of simple (single-part) "
+"geometries. Such a geometry is called a multi-part geometry. If it contains "
+"just one type of simple geometry, we call it multi-point, multi-linestring "
+"or multi-polygon. For example, a country consisting of multiple islands can "
+"be represented as a multi-polygon."
+msgstr ""
+"Ibland är en geometri i själva verket en samling enkla (endelade) "
+"geometrier. En sådan geometri kallas en flerdelsgeometri. Om den bara "
+"innehåller en typ av enkel geometri kallar vi den multipunkt, "
+"multilinjestring eller multipolygon. Till exempel kan ett land som består av"
+" flera öar representeras som en multipolygon."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:61
+msgid ""
+"The coordinates of geometries can be in any coordinate reference system "
+"(CRS). When fetching features from a layer, associated geometries will have "
+"coordinates in CRS of the layer."
+msgstr ""
+"Geometriernas koordinater kan vara i valfritt koordinatreferenssystem (CRS)."
+" När funktioner hämtas från ett skikt kommer associerade geometrier att ha "
+"koordinater i skiktets CRS."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:65
+msgid ""
+"Description and specifications of all possible geometries construction and "
+"relationships are available in the `OGC Simple Feature Access Standards "
+"<https://www.ogc.org/publications/standard/sfa>`_ for advanced details."
+msgstr ""
+"Beskrivning och specifikationer av alla möjliga geometrier, konstruktioner "
+"och relationer finns tillgängliga i `OGC Simple Feature Access Standards "
+"<https://www.ogc.org/publications/standard/sfa>`_ för avancerade detaljer."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:72
+msgid "Geometry Construction"
+msgstr "Geometri Konstruktion"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:74
+msgid "PyQGIS provides several options for creating a geometry:"
+msgstr "PyQGIS erbjuder flera alternativ för att skapa en geometri:"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:76
+msgid "from coordinates"
+msgstr "från koordinater"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:95
+msgid ""
+"Coordinates are given using :class:`QgsPoint <qgis.core.QgsPoint>` class or "
+":class:`QgsPointXY <qgis.core.QgsPointXY>` class. The difference between "
+"these classes is that :class:`QgsPoint <qgis.core.QgsPoint>` supports M and "
+"Z dimensions."
+msgstr ""
+"Koordinater anges med hjälp av klassen :class:`QgsPoint "
+"<qgis.core.QgsPoint>` eller :class:`QgsPointXY <qgis.core.QgsPointXY>`. "
+"Skillnaden mellan dessa klasser är att :class:`QgsPoint "
+"<qgis.core.QgsPoint>` stöder M- och Z-dimensioner."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:99
+msgid "A Polyline (Linestring) is represented by a list of points."
+msgstr "En Polyline (Linjestring) representeras av en lista med punkter."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:101
+msgid ""
+"A Polygon is represented by a list of linear rings (i.e. closed "
+"linestrings). The first ring is the outer ring (boundary), optional "
+"subsequent rings are holes in the polygon. Note that unlike some programs, "
+"QGIS will close the ring for you so there is no need to duplicate the first "
+"point as the last."
+msgstr ""
+"En polygon representeras av en lista med linjära ringar (dvs. slutna "
+"linjestringar). Den första ringen är den yttre ringen (gränsen), valfria "
+"efterföljande ringar är hål i polygonen. Observera att till skillnad från "
+"vissa program kommer QGIS att stänga ringen åt dig så att du inte behöver "
+"duplicera den första punkten som den sista."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:107
+msgid ""
+"Multi-part geometries go one level further: multi-point is a list of points,"
+" multi-linestring is a list of linestrings and multi-polygon is a list of "
+"polygons."
+msgstr ""
+"Geometrier med flera delar går en nivå längre: multi-point är en lista med "
+"punkter, multi-linestring är en lista med linestrings och multi-polygon är "
+"en lista med polygoner."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:111
+msgid "from well-known text (WKT)"
+msgstr "från välkänd text (WKT)"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:123
+msgid "from well-known binary (WKB)"
+msgstr "från välkänd binär (WKB)"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:142
+msgid "Access to Geometry"
+msgstr "Tillgång till geometri"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:144
+msgid ""
+"First, you should find out the geometry type. The :meth:`wkbType() "
+"<qgis.core.QgsGeometry.wkbType>` method is the one to use. It returns a "
+"value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>` "
+"enumeration."
+msgstr ""
+"Först bör du ta reda på geometritypen. Metoden :meth:`wkbType() "
+"<qgis.core.QgsGeometry.wkbType>` är den som ska användas. Den returnerar ett"
+" värde från :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>` uppräkning."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:164
+msgid ""
+"As an alternative, one can use the :meth:`type() "
+"<qgis.core.QgsGeometry.type>` method which returns a value from the "
+":meth:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes.geometryType>` "
+"enumeration."
+msgstr ""
+"Som ett alternativ kan man använda metoden :meth:`type() "
+"<qgis.core.QgsGeometry.type>` som returnerar ett värde från uppräkningen "
+":meth:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes.geometryType>`."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:178
+msgid ""
+"You can use the :meth:`displayString() "
+"<qgis.core.QgsWkbTypes.displayString>` function to get a human readable "
+"geometry type."
+msgstr ""
+"Du kan använda funktionen :meth:`displayString() "
+"<qgis.core.QgsWkbTypes.displayString>` för att få en geometrityp som är "
+"läsbar för människor."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:197
+msgid ""
+"There is also a helper function :meth:`isMultipart() "
+"<qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is "
+"multipart or not."
+msgstr ""
+"Det finns också en hjälpfunktion :meth:`isMultipart() "
+"<qgis.core.QgsGeometry.isMultipart>` för att ta reda på om en geometri är "
+"multipart eller inte."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:200
+msgid ""
+"To extract information from a geometry there are accessor functions for "
+"every vector type. Here's an example on how to use these accessors:"
+msgstr ""
+"För att extrahera information från en geometri finns det accessorfunktioner "
+"för varje vektortyp. Här är ett exempel på hur man använder dessa "
+"accessorer:"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:220
+msgid ""
+"The tuples (x,y) are not real tuples, they are :class:`QgsPoint "
+"<qgis.core.QgsPoint>` objects, the values are accessible with :meth:`x() "
+"<qgis.core.QgsPoint.x>` and :meth:`y() <qgis.core.QgsPoint.y>` methods."
+msgstr ""
+"Tuplerna (x,y) är inte riktiga tupler, de är :class:`QgsPoint "
+"<qgis.core.QgsPoint>`-objekt, värdena är tillgängliga med :meth:`x() "
+"<qgis.core.QgsPoint.x>` och :meth:`y() <qgis.core.QgsPoint.y>`-metoder."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:224
+msgid ""
+"For multipart geometries there are similar accessor functions: "
+":meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, "
+":meth:`asMultiPolyline() <qgis.core.QgsGeometry.asMultiPolyline>` and "
+":meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`."
+msgstr ""
+"För geometrier med flera delar finns liknande accessorfunktioner: "
+":meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, "
+":meth:`asMultiPolyline() <qgis.core.QgsGeometry.asMultiPolyline>` och "
+":meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:230
+msgid ""
+"It is possible to iterate over all the parts of a geometry, regardless of "
+"the geometry's type. E.g."
+msgstr ""
+"Det är möjligt att iterera över alla delar av en geometri, oavsett "
+"geometrins typ. T.ex."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:265
+msgid ""
+"It's also possible to modify each part of the geometry using "
+":meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>` method."
+msgstr ""
+"Det är också möjligt att modifiera varje del av geometrin med "
+":meth:`QgsGeometry.parts() <qgis.core.QgsGeometry.parts>`-metoden."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:287
+msgid "Geometry Predicates and Operations"
+msgstr "Geometri Predikat och operationer"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:289
+msgid ""
+"QGIS uses GEOS library for advanced geometry operations such as geometry "
+"predicates (:meth:`contains() <qgis.core.QgsGeometry.contains>`, "
+":meth:`intersects() <qgis.core.QgsGeometry.intersects>`, …) and set "
+"operations (:meth:`combine() <qgis.core.QgsGeometry.combine>`, "
+":meth:`difference() <qgis.core.QgsGeometry.difference>`, …). It can also "
+"compute geometric properties of geometries, such as area (in the case of "
+"polygons) or lengths (for polygons and lines)."
+msgstr ""
+"QGIS använder GEOS-biblioteket för avancerade geometrioperationer som "
+"geometripredikater (:meth:`contains() <qgis.core.QgsGeometry.contains>`, "
+":meth:`intersects() <qgis.core.QgsGeometry.intersects>`, ...) och set-"
+"operationer (:meth:`combine() <qgis.core.QgsGeometry.combine>`, "
+":meth:`difference() <qgis.core.QgsGeometry.difference>`, ...). Den kan också"
+" beräkna geometriska egenskaper för geometrier, t.ex. area (för polygoner) "
+"eller längder (för polygoner och linjer)."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:295
+msgid ""
+"Let's see an example that combines iterating over the features in a given "
+"layer and performing some geometric computations based on their geometries. "
+"The below code will compute and print the area and perimeter of each country"
+" in the ``countries`` layer within our tutorial QGIS project."
+msgstr ""
+"Låt oss se ett exempel som kombinerar iterering över funktionerna i ett "
+"visst skikt och utförande av några geometriska beräkningar baserat på deras "
+"geometrier. Nedanstående kod kommer att beräkna och skriva ut arean och "
+"omkretsen för varje land i skiktet ``countries`` i vårt QGIS-projekt för "
+"handledning."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:300
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:339
+msgid ""
+"The following code assumes ``layer`` is a :class:`QgsVectorLayer "
+"<qgis.core.QgsVectorLayer>` object that has Polygon feature type."
+msgstr ""
+"Följande kod förutsätter att ``layer`` är ett :class:`QgsVectorLayer "
+"<qgis.core.QgsVectorLayer>`-objekt som har funktionstypen Polygon."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:330
+msgid ""
+"Now you have calculated and printed the areas and perimeters of the "
+"geometries. You may however quickly notice that the values are strange. That"
+" is because areas and perimeters don't take CRS into account when computed "
+"using the :meth:`area() <qgis.core.QgsGeometry.area>` and :meth:`length() "
+"<qgis.core.QgsGeometry.length>` methods from the :class:`QgsGeometry "
+"<qgis.core.QgsGeometry>` class. For a more powerful area and distance "
+"calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class "
+"can be used, which can perform ellipsoid based calculations:"
+msgstr ""
+"Nu har du beräknat och skrivit ut geometriernas area och omkrets. Du kanske "
+"dock snabbt märker att värdena är konstiga. Det beror på att areor och "
+"omkretsar inte tar hänsyn till CRS när de beräknas med hjälp av metoderna "
+":meth:`area() <qgis.core.QgsGeometry.area>` och :meth:`length() "
+"<qgis.core.QgsGeometry.length>` från klassen :class:`QgsGeometry "
+"<qgis.core.QgsGeometry>`. För en mer kraftfull beräkning av yta och avstånd "
+"kan klassen :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` användas, "
+"som kan utföra ellipsoidbaserade beräkningar:"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:375
+msgid "Alternatively, you may want to know the distance between two points."
+msgstr "Alternativt kanske du vill veta avståndet mellan två punkter."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:395
+msgid ""
+"You can find many example of algorithms that are included in QGIS and use "
+"these methods to analyze and transform vector data. Here are some links to "
+"the code of a few of them."
+msgstr ""
+"Du kan hitta många exempel på algoritmer som ingår i QGIS och använda dessa "
+"metoder för att analysera och omvandla vektordata. Här är några länkar till "
+"koden för några av dem."
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:399
+msgid ""
+"Distance and area using the :class:`QgsDistanceArea "
+"<qgis.core.QgsDistanceArea>` class: :source:`Distance matrix algorithm "
+"<python/plugins/processing/algs/qgis/PointDistance.py>`"
+msgstr ""
+"Avstånd och area med hjälp av :class:`QgsDistanceArea "
+"<qgis.core.QgsDistanceArea>` class: :source:`Distance matrix algorithm "
+"<python/plugins/processing/algs/qgis/PointDistance.py>`"
+
+#: ../../docs/pyqgis_developer_cookbook/geometry.rst:401
+msgid ""
+":source:`Lines to polygons algorithm "
+"<python/plugins/processing/algs/qgis/LinesToPolygons.py>`"
+msgstr ""
+":source:`Algoritm för linjer till polygoner "
+"<python/plugins/processing/algs/qgis/LinesToPolygons.py>`"
