@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-02 07:49+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:16
+msgid "Writing a Processing plugin"
+msgstr "Skriva ett Processing-plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:23
+msgid ""
+"Depending on the kind of plugin that you are going to develop, it might be a"
+" better option to add its functionality as a Processing algorithm (or a set "
+"of them). That would provide a better integration within QGIS, additional "
+"functionality (since it can be run in the components of Processing, such as "
+"the modeler or the batch processing interface), and a quicker development "
+"time (since Processing will take of a large part of the work)."
+msgstr ""
+"Beroende på vilken typ av plugin du ska utveckla kan det vara ett bättre "
+"alternativ att lägga till dess funktionalitet som en Processing-algoritm "
+"(eller en uppsättning av dem). Det skulle ge en bättre integration i QGIS, "
+"ytterligare funktionalitet (eftersom den kan köras i komponenterna i "
+"Processing, t.ex. modelleraren eller batchbehandlingsgränssnittet) och en "
+"snabbare utvecklingstid (eftersom Processing kommer att ta en stor del av "
+"arbetet)."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:30
+msgid ""
+"To distribute those algorithms, you should create a new plugin that adds "
+"them to the Processing Toolbox. The plugin should contain an algorithm "
+"provider, which has to be registered when the plugin is instantiated."
+msgstr ""
+"För att distribuera dessa algoritmer bör du skapa ett nytt insticksprogram "
+"som lägger till dem i Processing Toolbox. Insticksprogrammet ska innehålla "
+"en algoritmleverantör som måste registreras när insticksprogrammet "
+"instansieras."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:35
+msgid "Creating from scratch"
+msgstr "Skapa från grunden"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:37
+msgid ""
+"To create a plugin from scratch which contains an algorithm provider, you "
+"can follow these steps using the Plugin Builder:"
+msgstr ""
+"Om du vill skapa ett plugin från början som innehåller en algoritmleverantör"
+" kan du följa dessa steg med hjälp av Plugin Builder:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:40
+msgid "Install the **Plugin Builder** plugin"
+msgstr "Installera insticksprogrammet **Plugin Builder**"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:41
+msgid ""
+"Create a new plugin using the Plugin Builder. When the Plugin Builder asks "
+"you for the template to use, select \"Processing provider\"."
+msgstr ""
+"Skapa ett nytt plugin med hjälp av Plugin Builder. När Plugin Builder frågar"
+" dig om vilken mall du vill använda väljer du \"Processing provider\"."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:43
+msgid ""
+"The created plugin contains a provider with a single algorithm. Both the "
+"provider file and the algorithm file are fully commented and contain "
+"information about how to modify the provider and add additional algorithms. "
+"Refer to them for more information."
+msgstr ""
+"Det skapade insticksprogrammet innehåller en provider med en enda algoritm. "
+"Både providerfilen och algoritmfilen är fullständigt kommenterade och "
+"innehåller information om hur man ändrar providern och lägger till "
+"ytterligare algoritmer. Hänvisa till dem för mer information."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:48
+msgid "Updating a plugin"
+msgstr "Uppdatering av ett plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:50
+msgid ""
+"If you want to add your existing plugin to Processing, you need to add some "
+"code."
+msgstr ""
+"Om du vill lägga till ditt befintliga plugin till Processing måste du lägga "
+"till lite kod."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:52
+msgid "In your :file:`metadata.txt` file, you need to add a variable:"
+msgstr "I din fil :file:`metadata.txt` behöver du lägga till en variabel:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:58
+msgid ""
+"In the Python file where your plugin is setup with the ``initGui`` method, "
+"you need to adapt some lines like this:"
+msgstr ""
+"I Python-filen där ditt plugin konfigureras med ``initGui``-metoden måste du"
+" anpassa några rader så här:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:82
+msgid ""
+"You can create a folder :file:`processing_provider` with three files in it:"
+msgstr "Du kan skapa en mapp :file:`processing_provider` med tre filer i den:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:84
+msgid ""
+":file:`__init__.py` with nothing in it. This is necessary to make a valid "
+"Python package."
+msgstr ""
+":file:`__init__.py` med ingenting i den. Detta är nödvändigt för att skapa "
+"ett giltigt Python-paket."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:86
+msgid ""
+":file:`provider.py` which will create the Processing provider and expose "
+"your algorithms."
+msgstr ""
+":file:`provider.py` som skapar Processing-providern och exponerar dina "
+"algoritmer."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:129
+msgid ""
+":file:`example_processing_algorithm.py` which contains the example algorithm"
+" file. Copy/paste the content of the :source:`script template file "
+"<python/plugins/processing/script/ScriptTemplate.py>` and update it "
+"according to your needs."
+msgstr ""
+":file:`example_processing_algorithm.py` som innehåller exempelalgoritmfilen."
+" Kopiera/klistra in innehållet i :source:`skriptmallfilen "
+"<python/plugins/processing/script/ScriptTemplate.py>` och uppdatera den "
+"efter dina behov."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:134
+msgid "You should have a tree similar to this:"
+msgstr "Du bör ha ett träd som liknar detta:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:147
+msgid ""
+"Now you can reload your plugin in QGIS and you should see your example "
+"script in the Processing toolbox and modeler."
+msgstr ""
+"Nu kan du ladda om ditt plugin i QGIS och du bör se ditt exempelskript i "
+"verktygslådan Processing och modelleraren."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:151
+msgid "Implementing custom Processing algorithms"
+msgstr "Implementering av anpassade bearbetningsalgoritmer"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:154
+msgid "Creating a custom algorithm"
+msgstr "Skapa en anpassad algoritm"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:156
+msgid "Here's a simple example of a custom buffer algorithm:"
+msgstr "Här är ett enkelt exempel på en anpassad buffertalgoritm:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:207
+msgid "Customizing the algorithm dialog"
+msgstr "Anpassning av algoritmdialogrutan"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:209
+msgid ""
+"Custom dialogs are especially useful when working with nested or dynamic "
+"inputs, when parameters depend on external data sources such as APIs (e.g. "
+"dynamically populated dropdowns), or when you need advanced validation and "
+"custom layout behavior that isn’t supported by the default Processing "
+"dialog. To override the default UI (e.g. for complex parameter types or "
+"dynamic logic), subclass :class:`QgsProcessingAlgorithmDialogBase "
+"<qgis.gui.QgsProcessingAlgorithmDialogBase>`. To render your custom UI in "
+"the standard Processing dialog window, you must call "
+"``self.setMainWidget(panel)``, where ``panel`` is a :class:`QgsPanelWidget "
+"<qgis.gui.QgsPanelWidget>` containing your custom layout. This ensures your "
+"interface is correctly displayed and interacts properly with the Processing "
+"framework."
+msgstr ""
+"Anpassade dialogrutor är särskilt användbara när du arbetar med kapslade "
+"eller dynamiska indata, när parametrar beror på externa datakällor som "
+"API:er (t.ex. dynamiskt ifyllda rullgardinsmenyer) eller när du behöver "
+"avancerad validering och anpassat layoutbeteende som inte stöds av "
+"standarddialogrutan för bearbetning. För att åsidosätta standardgränssnittet"
+" (t.ex. för komplexa parametertyper eller dynamisk logik), underordna "
+":class:`QgsProcessingAlgorithmDialogBase "
+"<qgis.gui.QgsProcessingAlgorithmDialogBase>`. För att återge ditt anpassade "
+"användargränssnitt i standarddialogfönstret för bearbetning måste du anropa "
+"``self.setMainWidget(panel)``, där ``panel`` är en :class:`QgsPanelWidget "
+"<qgis.gui.QgsPanelWidget>` som innehåller din anpassade layout. Detta "
+"säkerställer att ditt gränssnitt visas korrekt och interagerar korrekt med "
+"Processing-ramverket."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:218
+msgid ""
+"Here is an example that integrates signal management using QTimer_ for "
+"debounced input:"
+msgstr ""
+"Här är ett exempel som integrerar signalhantering med hjälp av QTimer_ för "
+"avbouncad ingång:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:310
+msgid ""
+"To launch the custom dialog for a given algorithm, simply instantiate "
+"``CustomAlgorithmDialog`` with your algorithm instance and call ``exec()``:"
+msgstr ""
+"För att starta den anpassade dialogen för en viss algoritm instansierar du "
+"helt enkelt ``CustomAlgorithmDialog`` med din algoritminstans och anropar "
+"``exec()``:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:320
+msgid "Managing Qt Signals"
+msgstr "Hantera Qt-signaler"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:322
+msgid ""
+"When building reactive dialogs, manage signal connections carefully. The "
+"above pattern uses a QTimer_ to debounce input from the text field, "
+"preventing rapid repeated calls. This is especially useful when fetching "
+"metadata or updating UI elements based on user input. Always connect signals"
+" once (typically in ``__init__``) and use ``singleShot=True`` to ensure the "
+"slot is triggered only once after a delay."
+msgstr ""
+"När du bygger reaktiva dialogrutor ska du hantera signalanslutningar "
+"noggrant. I mönstret ovan används en QTimer_ för att fördröja inmatning från"
+" textfältet, vilket förhindrar snabba upprepade anrop. Detta är särskilt "
+"användbart när du hämtar metadata eller uppdaterar "
+"användargränssnittselement baserat på användarens inmatning. Anslut alltid "
+"signaler en gång (vanligtvis i ``__init__``) och använd ```singleShot=True``"
+" för att säkerställa att sloten bara utlöses en gång efter en fördröjning."
