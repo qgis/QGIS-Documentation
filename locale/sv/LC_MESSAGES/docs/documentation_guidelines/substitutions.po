@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-12 07:02+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,16 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
 
 #: ../../docs/documentation_guidelines/substitutions.rst:5
 msgid "Substitutions"
@@ -32,9 +43,84 @@ msgstr "Substitutioner"
 msgid "Usage"
 msgstr "Användning"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:13
+msgid ""
+"To ease the use of icons in QGIS manuals, replacements are defined for each "
+"icon in :file:`/source/substitutions.txt` file at `QGIS-Documentation "
+"repository <https://github.com/qgis/QGIS-Documentation>`_ and some of these "
+"substitutions are listed below. Thus, when you want to use an icon from QGIS"
+" application in the documentation there is a big chance that there is "
+"already a substitution that can/should be used."
+msgstr ""
+"För att underlätta användningen av ikoner i QGIS-handböcker definieras "
+"ersättningar för varje ikon i :file:`/source/substitutions.txt`-filen på "
+"`QGIS-Documentation repository <https://github.com/qgis/QGIS-"
+"Documentation>`_ och några av dessa ersättningar listas nedan. När du vill "
+"använda en ikon från QGIS-applikationen i dokumentationen finns det alltså "
+"en stor chans att det redan finns en ersättning som kan/bör användas."
+
+#: ../../docs/documentation_guidelines/substitutions.rst:20
+msgid "If no replacement exists:"
+msgstr "Om ingen ersättning finns:"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:22
+msgid ""
+"check the documentation repository whether the icon is available in "
+":file:`/static/common` folder. If no image, then you need to find and copy "
+"the icon image file from `QGIS repository <https://github.com/qgis/QGIS>`_ "
+"(often under :source:`default themes <images/themes/default>` folder) and "
+"paste (in ``.png`` format) under :file:`/static/common` folder. For "
+"convenience and update, it's advised to keep filename when possible."
+msgstr ""
+"kontrollera dokumentationsarkivet om ikonen finns tillgänglig i mappen "
+":file:`/static/common`. Om det inte finns någon bild måste du hitta och "
+"kopiera ikonens bildfil från `QGIS repository "
+"<https://github.com/qgis/QGIS>`_ (ofta under :source:`default themes "
+"<images/themes/default>` folder) och klistra in (i ``.png`` format) under "
+":file:`/static/common` folder. För enkelhetens och uppdateringens skull "
+"rekommenderas att filnamnet behålls när det är möjligt."
+
+#: ../../docs/documentation_guidelines/substitutions.rst:28
+msgid ""
+"create the reference to the substitution in the :file:`/substitutions.txt` "
+"file following the example below. The replacement text should be derived "
+"from file name and in camelCase:"
+msgstr ""
+"skapa referensen till substitutionen i filen :file:`/substitutions.txt` "
+"enligt exemplet nedan. Ersättningstexten ska härledas från filnamnet och "
+"vara i camelCase:"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:39
+msgid "Update the target section(s) of the docs, using your new substitution."
+msgstr ""
+"Uppdatera målavsnittet/avsnitten i dokumenten med din nya substitution."
+
+#: ../../docs/documentation_guidelines/substitutions.rst:40
+msgid ""
+"(optional but highly desirable) add the substitution to the list below."
+msgstr "(valfritt men mycket önskvärt) lägg till ersättningen i listan nedan."
+
+#: ../../docs/documentation_guidelines/substitutions.rst:41
+msgid ""
+"Add the new substitution reference in the substitutions list at the end of "
+"the file(s) it is used in, or run the convenient "
+":file:`scripts/find_set_subst.py` script."
+msgstr ""
+"Lägg till den nya substitutionsreferensen i substitutionslistan i slutet av "
+"den eller de filer som den används i, eller kör det praktiska skriptet "
+":file:`scripts/find_set_subst.py`."
+
 #: ../../docs/documentation_guidelines/substitutions.rst:50
 msgid "Common Substitutions"
 msgstr "Vanliga substitutioner"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:52
+msgid ""
+"Below are given some icons and their substitution to use when writing "
+"documentation. Can be used/found in many places in manuals."
+msgstr ""
+"Nedan följer några ikoner och deras ersättningar som du kan använda när du "
+"skriver dokumentation. Kan användas/finnas på många ställen i manualer."
 
 #: ../../docs/documentation_guidelines/substitutions.rst:56
 msgid "Platform Icons"
@@ -306,6 +392,10 @@ msgstr "hamburgerMenu"
 msgid "``|hamburgerMenu|``"
 msgstr "``|hamburgerMenu|``"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:84
+msgid "Toolbar Button Icons"
+msgstr "Ikoner för knappar i verktygsfältet"
+
 #: ../../docs/documentation_guidelines/substitutions.rst:87
 msgid "Manage Layers and overview"
 msgstr "Hantera Lager och översikt"
@@ -337,6 +427,18 @@ msgstr "addOgrLayer"
 #: ../../docs/documentation_guidelines/substitutions.rst:93
 msgid "``|addOgrLayer|``"
 msgstr "``|addOgrLayer|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:93
+msgid "|addSensorThingsLayer|"
+msgstr "|addSensorThingsLayer|"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:662
+msgid "addSensorThingsLayer"
+msgstr "addSensorThingsLayer"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:93
+msgid "``|addSensorThingsLayer|``"
+msgstr "``|addSensorThingsLayer|``"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:94
 msgid "|addRasterLayer|"
@@ -1093,6 +1195,10 @@ msgstr "indicatorOffline"
 #: ../../docs/documentation_guidelines/substitutions.rst:126
 msgid "``|indicatorOffline|``"
 msgstr "``|indicatorOffline|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:130
+msgid "Project"
+msgstr "Projekt"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:135
 msgid "|fileNew|"
@@ -2246,6 +2352,10 @@ msgstr "snappingSelf"
 msgid "``|snappingSelf|``"
 msgstr "``|snappingSelf|``"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:214
+msgid "Mesh"
+msgstr "Nät"
+
 #: ../../docs/documentation_guidelines/substitutions.rst:219
 msgid "|meshDigitizing|"
 msgstr "|meshDigitizing|"
@@ -2761,6 +2871,10 @@ msgstr "elevation"
 msgid "``|elevation|``"
 msgstr "``|elevation|``"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:254
+msgid "Selection and Expressions"
+msgstr "Urval och uttryck"
+
 #: ../../docs/documentation_guidelines/substitutions.rst:259
 msgid "|selectRectangle|"
 msgstr "|selectRectangle|"
@@ -3056,6 +3170,10 @@ msgstr "filterMap"
 #: ../../docs/documentation_guidelines/substitutions.rst:272
 msgid "``|filterMap|``"
 msgstr "``|filterMap|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:277
+msgid "Labels and Diagrams"
+msgstr "Etiketter och diagram"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:282
 #: ../../docs/documentation_guidelines/substitutions.rst:457
@@ -3519,6 +3637,10 @@ msgstr "labelingRules"
 msgid "``|labelingRules|``"
 msgstr "``|labelingRules|``"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:305
+msgid "Decorations"
+msgstr "Dekorationer"
+
 #: ../../docs/documentation_guidelines/substitutions.rst:310
 #: ../../docs/documentation_guidelines/substitutions.rst:349
 msgid "|copyrightLabel|"
@@ -3667,6 +3789,10 @@ msgstr "contextHelp"
 msgid "``|contextHelp|``"
 msgstr "``|contextHelp|``"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:328
+msgid "Colors"
+msgstr "Färger"
+
 #: ../../docs/documentation_guidelines/substitutions.rst:333
 msgid "|colorBox|"
 msgstr "|colorBox|"
@@ -3714,6 +3840,10 @@ msgstr "colorWheel"
 #: ../../docs/documentation_guidelines/substitutions.rst:334
 msgid "``|colorWheel|``"
 msgstr "``|colorWheel|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:339
+msgid "Other basic icons"
+msgstr "Andra grundläggande ikoner"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:344
 msgid "|arrowLeft|"
@@ -4054,6 +4184,10 @@ msgstr "``|add|``"
 #: ../../docs/documentation_guidelines/substitutions.rst:360
 msgid "|relations|"
 msgstr "|relations|"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:1429
+msgid "relations"
+msgstr "relationer"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:360
 msgid "``|relations|``"
@@ -4522,6 +4656,10 @@ msgstr "fullHistogramStretch"
 #: ../../docs/documentation_guidelines/substitutions.rst:404
 msgid "``|fullHistogramStretch|``"
 msgstr "``|fullHistogramStretch|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:409
+msgid "Print Layout"
+msgstr "Layout för utskrift"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:414
 msgid "|newLayout|"
@@ -5279,6 +5417,10 @@ msgstr "lockedGray"
 msgid "``|lockedGray|``"
 msgstr "``|lockedGray|``"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:452
+msgid "Layer Properties"
+msgstr "Egenskaper för lager"
+
 #: ../../docs/documentation_guidelines/substitutions.rst:457
 msgid "|symbology|"
 msgstr "|symbology|"
@@ -6015,6 +6157,14 @@ msgstr "sharingExport"
 msgid "``|sharingExport|``"
 msgstr "``|sharingExport|``"
 
+#: ../../docs/documentation_guidelines/substitutions.rst:494
+msgid "Plugins"
+msgstr "Tillägg"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:497
+msgid "Processing"
+msgstr "Bearbetas"
+
 #: ../../docs/documentation_guidelines/substitutions.rst:502
 msgid "|processingAlgorithm|"
 msgstr "|processingAlgorithm|"
@@ -6074,6 +6224,18 @@ msgstr "menu"
 #: ../../docs/documentation_guidelines/substitutions.rst:504
 msgid "``|menu|``"
 msgstr "``|menu|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:504
+msgid "|runSelected|"
+msgstr "|runSelected|"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:1465
+msgid "runSelected"
+msgstr "runSelected"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:504
+msgid "``|runSelected|``"
+msgstr "``|runSelected|``"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:505
 msgid "|processSelected|"
@@ -6914,6 +7076,17 @@ msgstr "terminal"
 #: ../../docs/documentation_guidelines/substitutions.rst:540
 msgid "``|terminal|``"
 msgstr "``|terminal|``"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:544
+msgid "Various Core Plugins"
+msgstr "Olika Core Plugins"
+
+#: ../../docs/documentation_guidelines/substitutions.rst:546
+msgid ""
+"Standard provided with basic install, but not loaded with initial install"
+msgstr ""
+"Standard medföljer vid grundinstallation, men laddas inte vid första "
+"installationen"
 
 #: ../../docs/documentation_guidelines/substitutions.rst:551
 msgid "|showPluginManager|"
