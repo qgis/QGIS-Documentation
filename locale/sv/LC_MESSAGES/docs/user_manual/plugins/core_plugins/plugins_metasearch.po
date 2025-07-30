@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,10 +25,411 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:6
+msgid "MetaSearch Catalog Client"
+msgstr "MetaSearch katalogklient"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:15
 msgid "Introduction"
 msgstr "Introduktion"
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:17
+msgid ""
+"MetaSearch is a QGIS plugin to interact with metadata catalog services, "
+"supporting both the OGC API - Records and OGC Catalog Service for the Web "
+"(CSW) standards."
+msgstr ""
+"MetaSearch är ett QGIS-plugin för att interagera med "
+"metadatakatalogtjänster, som stöder både OGC API - Records och OGC Catalog "
+"Service for the Web (CSW) standarder."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:21
+msgid ""
+"MetaSearch provides an easy and intuitive approach and user-friendly "
+"interface to searching metadata catalogs within QGIS."
+msgstr ""
+"MetaSearch ger en enkel och intuitiv metod och ett användarvänligt "
+"gränssnitt för att söka i metadatakataloger inom QGIS."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:29
+msgid "Search and results of Services in MetaSearch"
+msgstr "Sökning och resultat av tjänster i MetaSearch"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:33
+msgid "Working with Metadata Catalogs in QGIS"
+msgstr "Arbeta med metadatakataloger i QGIS"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:35
+msgid ""
+"MetaSearch is included by default in QGIS, with all of its dependencies, and"
+" can be enabled from the QGIS Plugin Manager."
+msgstr ""
+"MetaSearch ingår som standard i QGIS, med alla dess beroenden, och kan "
+"aktiveras från QGIS Plugin Manager."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:39
+msgid "OGC API - Records"
+msgstr "OGC API - Register"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:41
+msgid ""
+"`OGC API - Records`_ is an `OGC (Open Geospatial Consortium)`_ standard for "
+"the discovery of geospatial resources on the Web."
+msgstr ""
+"\"OGC API - Records\" är en \"OGC (Open Geospatial Consortium)-standard för "
+"att hitta geospatiala resurser på webben."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:45
+msgid "CSW (Catalog Service for the Web)"
+msgstr "CSW (katalogtjänst för webben)"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:47
+msgid ""
+"`CSW (Catalog Service for the Web)`_ is an `OGC (Open Geospatial "
+"Consortium)`_ specification that defines common interfaces to discover, "
+"browse and query metadata about data, services, and other potential "
+"resources."
+msgstr ""
+"cSW (Catalog Service for the Web) är en specifikation frånOGC (Open "
+"Geospatial Consortium) som definierar gemensamma gränssnitt för att "
+"upptäcka, bläddra i och fråga efter metadata om data, tjänster och andra "
+"potentiella resurser."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:53
+msgid "Startup"
+msgstr "Uppstart"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:55
+msgid ""
+"To start MetaSearch, click the |metasearch| icon or select "
+":menuselection:`Web --> MetaSearch --> MetaSearch` via the QGIS main menu. "
+"The MetaSearch dialog will appear. The main GUI consists of three tabs: "
+":guilabel:`Services`, :guilabel:`Search` and :guilabel:`Settings`."
+msgstr ""
+"MetaSearch startas genom att klicka på ikonen |metasearch| eller genom att "
+"välja :menuselection:`Web --> MetaSearch --> MetaSearch` via QGIS huvudmeny."
+" Dialogrutan MetaSearch kommer att visas. Det grafiska huvudgränssnittet "
+"består av tre flikar: :guilabel:`Services`, :guilabel:`Search` och "
+":guilabel:`Settings`."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:239
 msgid "metasearch"
 msgstr "metasearch"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:62
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:69
+msgid "Managing Catalog Services"
+msgstr "Hantera katalogtjänster"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:71
+msgid ""
+"The :guilabel:`Services` tab allows the user to manage all available catalog"
+" services. MetaSearch provides a default list of Catalog Services, which can"
+" be added by pressing the :guilabel:`Add Default Services` button."
+msgstr ""
+"På fliken :guilabel:`Services` kan användaren hantera alla tillgängliga "
+"katalogtjänster. MetaSearch tillhandahåller en standardlista med "
+"katalogtjänster, som kan läggas till genom att trycka på knappen "
+":guilabel:`Add Default Services`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:76
+msgid ""
+"To find all listed Catalog Service entries, click the dropdown select box."
+msgstr ""
+"Om du vill hitta alla listade katalogtjänstposter klickar du på "
+"rullgardinsmenyn."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:78
+msgid "To add a Catalog Service entry:"
+msgstr "Så här lägger du till en katalogtjänstpost:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:80
+msgid "Click the :guilabel:`New` button"
+msgstr "Klicka på knappen :guilabel:`New` (ny)"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:81
+msgid ""
+"Enter a :guilabel:`Name` for the service, as well as the :guilabel:`URL` "
+"(endpoint). Note that for OGC CSW 2.0.2 Catalogs, only the base URL is "
+"required (not a full GetCapabilities URL).  For OGC API - Records Catalogs, "
+"the URL should be the path to the collection endpoint"
+msgstr ""
+"Ange ett :guilabel:`Name` för tjänsten, samt :guilabel:`URL` (endpoint). "
+"Observera att för OGC CSW 2.0.2 Catalogs krävs endast bas-URL:en (inte en "
+"fullständig GetCapabilities-URL).  För OGC API - Records Catalogs ska URL:en"
+" vara sökvägen till samlingens slutpunkt"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:86
+msgid ""
+"If the Catalog requires authentication, enter the appropriate "
+":guilabel:`User name` and :guilabel:`Password` credentials."
+msgstr ""
+"Om katalogen kräver autentisering anger du lämpliga uppgifter för "
+":guilabel:`Användarnamn` och :guilabel:`Lösenord`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:88
+msgid "Click :guilabel:`OK` to add the service to the list of entries."
+msgstr ""
+"Klicka på :guilabel:`OK` för att lägga till tjänsten i listan över poster."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:90
+msgid "To edit an existing Catalog Service entry:"
+msgstr "Så här redigerar du en befintlig katalogtjänstpost:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:92
+msgid "Select the entry you would like to edit"
+msgstr "Välj den post som du vill redigera"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:93
+msgid "Click the :guilabel:`Edit` button"
+msgstr "Klicka på :guilabel:`Edit`-knappen"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:94
+msgid "And modify the :guilabel:`Name` or :guilabel:`URL` values"
+msgstr "Och ändra värdena :guilabel:`Name` eller :guilabel:`URL"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:95
+msgid "Click :guilabel:`OK`."
+msgstr "Klicka på :guilabel:`OK`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:97
+msgid ""
+"To delete a Catalog Service entry, select the entry you would like to delete"
+" and click the :guilabel:`Delete` button. You will be asked to confirm "
+"deleting the entry."
+msgstr ""
+"För att radera en katalogtjänstpost, välj den post du vill radera och klicka"
+" på knappen :guilabel:`Delete`. Du kommer att bli ombedd att bekräfta "
+"borttagningen av posten."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:101
+msgid ""
+"MetaSearch allows loading and saving connections to an XML file. This is "
+"useful when you need to share settings between applications. Below is an "
+"example of the XML file format."
+msgstr ""
+"MetaSearch gör det möjligt att ladda och spara anslutningar till en XML-fil."
+" Detta är användbart när du behöver dela inställningar mellan applikationer."
+" Nedan visas ett exempel på XML-filformatet."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:120
+msgid "To load a list of entries:"
+msgstr "För att ladda en lista med poster:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:122
+msgid "Click the :guilabel:`Load` button. A new window will appear."
+msgstr ""
+"Klicka på knappen :guilabel:`Load`. Ett nytt fönster kommer att visas."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:123
+msgid ""
+"Click the :guilabel:`Browse` button and navigate to the XML file of entries "
+"you wish to load."
+msgstr ""
+"Klicka på knappen :guilabel:`Browse` och navigera till den XML-fil med "
+"poster som du vill ladda."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:125
+msgid "Click :guilabel:`Open`. The list of entries will be displayed."
+msgstr "Klicka på :guilabel:`Öppna`. Listan över poster kommer att visas."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:126
+msgid ""
+"Select the entries you wish to add from the list and click :guilabel:`Load`."
+msgstr ""
+"Välj de poster som du vill lägga till från listan och klicka på "
+":guilabel:`Load`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:129
+msgid ""
+"Click the :guilabel:`Service Info` button to display information about the "
+"selected Catalog Service such as service identification, service provider "
+"and contact information. If you would like to view the raw API response, "
+"click the :guilabel:`Raw API Response` button. A separate window will open "
+"displaying server information in raw JSON or XML format."
+msgstr ""
+"Klicka på knappen :guilabel:`Service Info` för att visa information om den "
+"valda katalogtjänsten, t.ex. tjänsteidentifiering, tjänsteleverantör och "
+"kontaktinformation. Om du vill visa det råa API-svaret klickar du på knappen"
+" :guilabel:`Raw API Response`. Ett separat fönster öppnas och visar "
+"serverinformation i rå JSON- eller XML-format."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:138
+msgid "Searching Catalog Services"
+msgstr "Sökning i katalogtjänster"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:145
+msgid "Searching catalog services"
+msgstr "Söka katalogtjänster"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:147
+msgid ""
+"The :guilabel:`Search` tab allows the user to query Catalog Services for "
+"data and services, set various search parameters and view results."
+msgstr ""
+"Fliken :guilabel:`Search` ger användaren möjlighet att söka efter data och "
+"tjänster i Catalog Services, ställa in olika sökparametrar och visa "
+"resultat."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:150
+msgid "The following search parameters are available:"
+msgstr "Följande sökparametrar är tillgängliga:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:152
+msgid ":guilabel:`Keywords`: free text search keywords;"
+msgstr ":guilabel:`Nyckelord`: nyckelord för fritextsökning;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:153
+msgid ":guilabel:`From`: the Catalog Service to perform the query against;"
+msgstr ":guilabel:`From`: den katalogtjänst som frågan ska ställas mot;"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:154
+msgid ""
+"**Bounding box**: the spatial area of interest to filter, defined by "
+":guilabel:`Xmax`, :guilabel:`Xmin`, :guilabel:`Ymax`, and :guilabel:`Ymin`. "
+"Click :guilabel:`Set  Global` to do a  global search, click :guilabel:`Map "
+"Extent` to do a search in the visible area, or enter values manually."
+msgstr ""
+"**Bounding box**: det rumsliga område som är intressant att filtrera, "
+"definierat av :guilabel:`Xmax`, :guilabel:`Xmin`, :guilabel:`Ymax` och "
+":guilabel:`Ymin`. Klicka på :guilabel:`Set Global` för att göra en global "
+"sökning, klicka på :guilabel:`Map Extent` för att göra en sökning i det "
+"synliga området, eller ange värden manuellt."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:161
+msgid ""
+"Clicking the :guilabel:`Search` button will search the selected Metadata "
+"Catalog. Search results are displayed in a list, and can be sorted by "
+"clicking on the column header. You can navigate through search results with "
+"the directional buttons below the search results."
+msgstr ""
+"Om du klickar på knappen :guilabel:`Search` görs en sökning i den valda "
+"metadatakatalogen. Sökresultaten visas i en lista och kan sorteras genom att"
+" klicka på kolumnrubriken. Du kan navigera genom sökresultaten med hjälp av "
+"riktningsknapparna under sökresultaten."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:167
+msgid "Select a result and:"
+msgstr "Välj ett resultat och:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:169
+msgid ""
+"Click the :guilabel:`View Raw API Response` button to open a window with the"
+" service response in raw JSON or XML format."
+msgstr ""
+"Klicka på knappen :guilabel:`View Raw API Response` för att öppna ett "
+"fönster med tjänstens svar i rå JSON- eller XML-format."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:171
+msgid ""
+"If the metadata record has an associated bounding box, a footprint of the "
+"bounding box will be displayed on the map."
+msgstr ""
+"Om metadataposten har en tillhörande avgränsningsbox visas ett fotavtryck av"
+" avgränsningsboxen på kartan."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:173
+msgid ""
+"Double-click the record to display the record metadata with any associated "
+"access links. Clicking a link opens the link in the user's web browser."
+msgstr ""
+"Dubbelklicka på posten för att visa postens metadata med eventuella "
+"tillhörande åtkomstlänkar. Om du klickar på en länk öppnas länken i "
+"användarens webbläsare."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:176
+msgid ""
+"If the record is a supported web service (WMS/WMTS, WFS, WCS, ArcGIS REST "
+"Service, etc.) or a GIS File, the :guilabel:`Add Data` button will be "
+"enabled. When clicking this button, MetaSearch will verify if this is a "
+"valid OWS. The service will then be added to the appropriate QGIS connection"
+" list, and the appropriate connection dialog will appear. If you choose "
+":guilabel:`Add GIS File` the linked GIS file will be added to the current "
+"project."
+msgstr ""
+"Om posten är en webbtjänst som stöds (WMS/WMTS, WFS, WCS, ArcGIS REST "
+"Service, etc.) eller en GIS-fil, kommer knappen :guilabel:`Add Data` att "
+"aktiveras. När du klickar på den här knappen kommer MetaSearch att verifiera"
+" om detta är en giltig OWS. Tjänsten kommer sedan att läggas till i lämplig "
+"QGIS-anslutningslista och lämplig anslutningsdialog visas. Om du väljer "
+":guilabel:`Add GIS File` kommer den länkade GIS-filen att läggas till i det "
+"aktuella projektet."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:191
+msgid "Metadata record display"
+msgstr "Visning av metadataposter"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:194
+msgid "Settings"
+msgstr "Inställningar"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:201
+msgid "MetaSearch settings"
+msgstr "MetaSearch-inställningar"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:203
+msgid "You can fine tune MetaSearch with the following :guilabel:`Settings`:"
+msgstr "Du kan finjustera MetaSearch med följande :guilabel:`Settings`:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:205
+msgid ""
+":guilabel:`Server Timeout`: when searching metadata catalogs, the number of "
+"seconds for blocking connection attempt. Default value is 10."
+msgstr ""
+":guilabel:`Server Timeout`: vid sökning i metadatakataloger, antal sekunder "
+"för blockering av anslutningsförsök. Standardvärdet är 10."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:208
+msgid ""
+":guilabel:`Disable SSL verification`: option to switch off ssl verification."
+msgstr ""
+":guilabel:`Disable SSL verification`: alternativ för att stänga av ssl-"
+"verifiering."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:210
+msgid ""
+":guilabel:`Results paging`: when searching metadata catalogs, the number of "
+"results to show per page. Default value is 10."
+msgstr ""
+":guilabel:`Results paging`: vid sökning i metadatakataloger, antalet "
+"resultat som ska visas per sida. Standardvärdet är 10."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:212
+msgid ""
+":guilabel:`Log debugging messages`: option to enable the logging of "
+"debugging messages in the :ref:`log_message_panel`."
+msgstr ""
+":guilabel:`Logga felsökningsmeddelanden`: alternativ för att aktivera "
+"loggning av felsökningsmeddelanden i :ref:`log_message_panel`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:216
+msgid "Catalog Server Errors"
+msgstr "Fel i katalogservern"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_metasearch.rst:218
+msgid ""
+"In some cases, the Catalog will work in a web browser, but not in "
+"MetaSearch. This may be due to the Catalog server's configuration/setup. "
+"Catalog server providers should ensure URLs are consistent and up to date in"
+" their configuration (this is common in HTTP -> HTTPS redirection "
+"scenarios). Please see the `pycsw FAQ item`_ for a deeper explanation of the"
+" issue and fix. Although the FAQ item is pycsw specific it can also apply in"
+" general to other Catalog servers."
+msgstr ""
+"I vissa fall fungerar katalogen i en webbläsare, men inte i MetaSearch. "
+"Detta kan bero på katalogserverns konfiguration / inställning. "
+"Katalogserverleverantörer bör se till att webbadresserna är konsekventa och "
+"uppdaterade i sin konfiguration (detta är vanligt i HTTP -> HTTPS-"
+"omdirigeringsscenarier). Se `pycsw FAQ-artikeln`_ för en djupare förklaring "
+"av problemet och lösningen. Även om FAQ-artikeln är pycsw-specifik kan den "
+"också tillämpas generellt på andra katalogservrar."
