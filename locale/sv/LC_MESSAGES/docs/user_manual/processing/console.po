@@ -1,0 +1,731 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/processing/console.rst:4
+msgid "Using processing algorithms from the console"
+msgstr "Använda bearbetningsalgoritmer från konsolen"
+
+#: ../../docs/user_manual/processing/console.rst:11
+msgid ""
+"The console allows advanced users to increase their productivity and perform"
+" complex operations that cannot be performed using any of the other GUI "
+"elements of the processing framework. Models involving several algorithms "
+"can be defined using the command-line interface, and additional operations "
+"such as loops and conditional sentences can be added to create more flexible"
+" and powerful workflows."
+msgstr ""
+"Konsolen gör det möjligt för avancerade användare att öka sin produktivitet "
+"och utföra komplexa operationer som inte kan utföras med hjälp av något av "
+"de andra GUI-elementen i bearbetningsramverket. Modeller som innehåller "
+"flera algoritmer kan definieras med hjälp av kommandoradsgränssnittet och "
+"ytterligare operationer som loopar och villkorliga meningar kan läggas till "
+"för att skapa mer flexibla och kraftfulla arbetsflöden."
+
+#: ../../docs/user_manual/processing/console.rst:18
+msgid ""
+"There is not a processing console in QGIS, but all processing commands are "
+"available instead from the QGIS built-in :ref:`Python console <console>`.  "
+"That means that you can incorporate those commands into your console work "
+"and connect processing algorithms to all the other features (including "
+"methods from the QGIS API) available from there."
+msgstr ""
+"Det finns ingen bearbetningskonsol i QGIS, men alla bearbetningskommandon är"
+" istället tillgängliga från QGIS inbyggda :ref:`Python-konsol <console>`.  "
+"Det innebär att du kan införliva dessa kommandon i ditt konsolarbete och "
+"ansluta bearbetningsalgoritmer till alla andra funktioner (inklusive metoder"
+" från QGIS API) som finns tillgängliga därifrån."
+
+#: ../../docs/user_manual/processing/console.rst:24
+msgid ""
+"The code that you can execute from the Python console, even if it does not "
+"call any specific processing method, can be converted into a new algorithm "
+"that you can later call from the toolbox, the graphical modeler or any other"
+" component, just like you do with any other algorithm. In fact, some "
+"algorithms that you can find in the toolbox are simple scripts."
+msgstr ""
+"Den kod som du kan exekvera från Python-konsolen, även om den inte anropar "
+"någon specifik bearbetningsmetod, kan konverteras till en ny algoritm som du"
+" senare kan anropa från verktygslådan, den grafiska modelleraren eller någon"
+" annan komponent, precis som du gör med vilken annan algoritm som helst. "
+"Faktum är att vissa algoritmer som du kan hitta i verktygslådan är enkla "
+"skript."
+
+#: ../../docs/user_manual/processing/console.rst:31
+msgid ""
+"In this section, we will see how to use processing algorithms from the QGIS "
+"Python console, and also how to write algorithms using Python."
+msgstr ""
+"I det här avsnittet ska vi se hur man använder bearbetningsalgoritmer från "
+"QGIS Python-konsolen, och även hur man skriver algoritmer med Python."
+
+#: ../../docs/user_manual/processing/console.rst:35
+msgid "Calling algorithms from the Python console"
+msgstr "Anropa algoritmer från Python-konsolen"
+
+#: ../../docs/user_manual/processing/console.rst:37
+msgid ""
+"The first thing you have to do is to import the processing functions with "
+"the following line:"
+msgstr ""
+"Det första du måste göra är att importera bearbetningsfunktionerna med "
+"följande rad:"
+
+#: ../../docs/user_manual/processing/console.rst:44
+msgid ""
+"Now, there is basically just one (interesting) thing you can do with that "
+"from the console: execute an algorithm. That is done using the :meth:`run() "
+"<qgis.core.QgsProcessingAlgorithm.run>` method, which takes the name of the "
+"algorithm to execute as its first parameter, and then a variable number of "
+"additional parameters depending on the requirements of the algorithm. So the"
+" first thing you need to know is the name of the algorithm to execute. That "
+"is not the name you see in the toolbox, but rather a unique command–line "
+"name. To find the right name for your algorithm, you can use the "
+":class:`processingRegistry <qgis.core.QgsProcessingRegistry>`. Type the "
+"following line in your console:"
+msgstr ""
+"Nu finns det i princip bara en (intressant) sak du kan göra med det från "
+"konsolen: exekvera en algoritm. Det görs med metoden :meth:`run() "
+"<qgis.core.QgsProcessingAlgorithm.run>`, som tar namnet på den algoritm som "
+"ska köras som sin första parameter och sedan ett varierande antal "
+"ytterligare parametrar beroende på algoritmens krav. Så det första du "
+"behöver veta är namnet på den algoritm som ska köras. Det är inte det namn "
+"som du ser i verktygslådan, utan snarare ett unikt kommandoradsnamn. För att"
+" hitta rätt namn för din algoritm kan du använda :class:`processingRegistry "
+"<qgis.core.QgsProcessingRegistry>`. Skriv följande rad i din konsol:"
+
+#: ../../docs/user_manual/processing/console.rst:61
+msgid ""
+"You will see something like this (with some extra dashes added to improve "
+"readability)."
+msgstr ""
+"Du kommer att se något liknande detta (med några extra streck tillagda för "
+"att förbättra läsbarheten)."
+
+#: ../../docs/user_manual/processing/console.rst:81
+msgid ""
+"That's a list of all the available algorithm IDs, sorted by provider name "
+"and algorithm name, along with their corresponding names."
+msgstr ""
+"Det är en lista över alla tillgängliga algoritm-ID:n, sorterade efter "
+"leverantörsnamn och algoritmnamn, tillsammans med deras motsvarande namn."
+
+#: ../../docs/user_manual/processing/console.rst:84
+msgid ""
+"Once you know the command-line name of the algorithm, the next thing to do "
+"is to determine the right syntax to execute it. That means knowing which "
+"parameters are needed when calling the ``run()`` method."
+msgstr ""
+"När du vet kommandoradsnamnet på algoritmen är nästa sak att bestämma rätt "
+"syntax för att exekvera den. Det innebär att du måste veta vilka parametrar "
+"som behövs när du anropar metoden ``run()``."
+
+#: ../../docs/user_manual/processing/console.rst:88
+msgid ""
+"There is a method to describe an algorithm in detail, which can be used to "
+"get a list of the parameters that an algorithm requires and the outputs that"
+" it will generate. To get this information, you can use the "
+"``algorithmHelp(id_of_the_algorithm)`` method. Use the ID of the algorithm, "
+"not the full descriptive name."
+msgstr ""
+"Det finns en metod för att beskriva en algoritm i detalj, som kan användas "
+"för att få en lista över de parametrar som en algoritm kräver och de utdata "
+"som den kommer att generera. För att få den här informationen kan du använda"
+" metoden ``algorithmHelp(id_of_the_algorithm)``. Använd algoritmens ID, inte"
+" det fullständiga beskrivande namnet."
+
+#: ../../docs/user_manual/processing/console.rst:94
+msgid ""
+"Calling the method with ``native:buffer`` as parameter (``qgis:buffer`` is "
+"an alias for ``native:buffer`` and will also work), you get the following "
+"description:"
+msgstr ""
+"Om man anropar metoden med ``native:buffer`` som parameter (``qgis:buffer`` "
+"är ett alias för ``native:buffer`` och fungerar också) får man följande "
+"beskrivning:"
+
+#: ../../docs/user_manual/processing/console.rst:222
+msgid ""
+"Now you have everything you need to run any algorithm. As we have already "
+"mentioned, algorithms can be run using: ``run()``. Its syntax is as follows:"
+msgstr ""
+"Nu har du allt du behöver för att köra en algoritm. Som vi redan har nämnt "
+"kan algoritmer köras med hjälp av: ``run()``. Dess syntax är som följer:"
+
+#: ../../docs/user_manual/processing/console.rst:230
+msgid ""
+"Where parameters is a dictionary of parameters that depend on the algorithm "
+"you want to run, and is exactly the list that the ``algorithmHelp()`` method"
+" gives you."
+msgstr ""
+"Där parametrar är en ordlista med parametrar som beror på den algoritm du "
+"vill köra, och är exakt den lista som metoden ``algorithmHelp()`` ger dig."
+
+#: ../../docs/user_manual/processing/console.rst:247
+msgid ""
+"If a parameter is optional and you do not want to use it, then don't include"
+" it in the dictionary."
+msgstr ""
+"Om en parameter är valfri och du inte vill använda den, ska du inte ta med "
+"den i ordlistan."
+
+#: ../../docs/user_manual/processing/console.rst:250
+msgid "If a parameter is not specified, the default value will be used."
+msgstr "Om en parameter inte anges kommer standardvärdet att användas."
+
+#: ../../docs/user_manual/processing/console.rst:252
+msgid ""
+"Depending on the type of parameter, values are introduced differently. The "
+"next list gives a quick review of how to introduce values for each type of "
+"input parameter:"
+msgstr ""
+"Beroende på typ av parameter introduceras värdena på olika sätt. Nästa lista"
+" ger en snabb genomgång av hur man introducerar värden för varje typ av "
+"inmatningsparameter:"
+
+#: ../../docs/user_manual/processing/console.rst:255
+msgid ""
+"Raster Layer, Vector Layer or Table. Simply use a string with the name that "
+"identifies the data object to use (the name it has in the QGIS Table of "
+"Contents) or a filename (if the corresponding layer is not opened, it will "
+"be opened but not added to the map canvas). If you have an instance of a "
+"QGIS object representing the layer, you can also pass it as parameter."
+msgstr ""
+"Rasterlager, vektorlager eller tabell. Använd helt enkelt en sträng med "
+"namnet som identifierar dataobjektet som ska användas (namnet som det har i "
+"QGIS innehållsförteckning) eller ett filnamn (om motsvarande skikt inte är "
+"öppnat kommer det att öppnas men inte läggas till i kartbilden). Om du har "
+"en instans av ett QGIS-objekt som representerar skiktet kan du också skicka "
+"det som parameter."
+
+#: ../../docs/user_manual/processing/console.rst:260
+msgid ""
+"Enumeration. If an algorithm has an enumeration parameter, the value of that"
+" parameter should be entered using an integer value. To know the available "
+"options, you can use the ``algorithmHelp()`` command, as above. For "
+"instance, the ``native:buffer`` algorithm has an enumeration called "
+"JOIN_STYLE:"
+msgstr ""
+"Uppräkning. Om en algoritm har en uppräkningsparameter ska värdet för denna "
+"parameter anges med ett heltalsvärde. Om du vill veta vilka alternativ som "
+"finns kan du använda kommandot ``algorithmHelp()``, enligt ovan. Till "
+"exempel har algoritmen ``native:buffer`` en uppräkning som heter JOIN_STYLE:"
+
+#: ../../docs/user_manual/processing/console.rst:281
+msgid ""
+"In this case, the parameter has three options. Notice that ordering is zero-"
+"based."
+msgstr ""
+"I det här fallet har parametern tre alternativ. Observera att ordningen är "
+"nollbaserad."
+
+#: ../../docs/user_manual/processing/console.rst:283
+msgid "Boolean.  Use ``True`` or ``False``."
+msgstr "Booleansk.  Använd ``True`` eller ``False``."
+
+#: ../../docs/user_manual/processing/console.rst:284
+msgid ""
+"Multiple input. The value is a string with input descriptors separated by "
+"semicolons (``;``). As in the case of single layers or tables, each input "
+"descriptor can be the data object name, or its file path."
+msgstr ""
+"Flera inmatningar. Värdet är en sträng med indatabeskrivningar åtskilda med "
+"semikolon (``;``). Precis som för enskilda lager eller tabeller kan varje "
+"indatabeskrivare vara dataobjektets namn eller dess filsökväg."
+
+#: ../../docs/user_manual/processing/console.rst:287
+msgid ""
+"Table Field from XXX. Use a string with the name of the field to use. This "
+"parameter is case-sensitive."
+msgstr ""
+"Tabellfält från XXX. Använd en sträng med namnet på det fält som ska "
+"användas. Denna parameter är skiftlägeskänslig."
+
+#: ../../docs/user_manual/processing/console.rst:289
+msgid ""
+"Fixed Table. Type the list of all table values separated by commas (``,``) "
+"and enclosed between quotes (``\"``). Values start on the upper row and go "
+"from left to right. You can also use a 2-D array of values representing the "
+"table."
+msgstr ""
+"Fast tabell. Skriv in listan över alla tabellvärden separerade med "
+"kommatecken (``,``) och inneslutna mellan citattecken (``\"``). Värdena "
+"börjar på den övre raden och går från vänster till höger. Du kan också "
+"använda en 2D-array med värden som representerar tabellen."
+
+#: ../../docs/user_manual/processing/console.rst:292
+msgid "CRS. Enter the EPSG code number of the desired CRS."
+msgstr "CRS. Ange EPSG-kodnumret för önskad CRS."
+
+#: ../../docs/user_manual/processing/console.rst:293
+msgid ""
+"Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax``"
+" values separated by commas (``,``)."
+msgstr ""
+"Utsträckning. Du måste använda en sträng med värdena ``xmin``, ``xmax``, "
+"``ymin`` och ``ymax`` åtskilda med kommatecken (``,``)."
+
+#: ../../docs/user_manual/processing/console.rst:296
+msgid ""
+"Boolean, file, string and numerical parameters do not need any additional "
+"explanations."
+msgstr ""
+"Booleska, fil-, sträng- och numeriska parametrar behöver inga ytterligare "
+"förklaringar."
+
+#: ../../docs/user_manual/processing/console.rst:299
+msgid ""
+"Input parameters such as strings, booleans, or numerical values have default"
+" values. The default value is used if the corresponding parameter entry is "
+"missing."
+msgstr ""
+"Inmatningsparametrar som strängar, booleaner eller numeriska värden har "
+"standardvärden. Standardvärdet används om motsvarande parameterinmatning "
+"saknas."
+
+#: ../../docs/user_manual/processing/console.rst:302
+msgid ""
+"For output data objects, type the file path to be used to save it, just as "
+"it is done from the toolbox. If the output object is not specified, the "
+"result is saved to a temporary file (or skipped if it is an optional "
+"output). The extension of the file determines the file format. If you enter "
+"a file extension not supported by the algorithm, the default file format for"
+" that output type will be used, and its corresponding extension appended to "
+"the given file path."
+msgstr ""
+"För objekt med utdatadata skriver du den filsökväg som ska användas för att "
+"spara dem, precis som i verktygslådan. Om utdataobjektet inte anges sparas "
+"resultatet i en tillfällig fil (eller hoppas över om det är en valfri "
+"utdata). Filtillägget avgör vilket filformat som används. Om du anger en "
+"filändelse som inte stöds av algoritmen används standardfilformatet för den "
+"utdatatypen och motsvarande filändelse läggs till i den angivna filsökvägen."
+
+#: ../../docs/user_manual/processing/console.rst:310
+msgid ""
+"Unlike when an algorithm is executed from the toolbox, outputs are not added"
+" to the map canvas if you execute that same algorithm from the Python "
+"console using the :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` "
+"method. That method returns a dictionary with one or more output names (the "
+"ones shown in the algorithm description) as keys and the file paths of those"
+" outputs as values:"
+msgstr ""
+"Till skillnad från när en algoritm exekveras från verktygslådan läggs inte "
+"utdata till i kartbilden om du exekverar samma algoritm från Python-konsolen"
+" med metoden :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>`. Den "
+"metoden returnerar en ordbok med ett eller flera utdatanamn (de som visas i "
+"algoritmbeskrivningen) som nycklar och filsökvägarna för dessa utdata som "
+"värden:"
+
+#: ../../docs/user_manual/processing/console.rst:331
+msgid "You can then load the output in the project as any common layer:"
+msgstr ""
+"Du kan sedan ladda utdata i projektet som vilket vanligt lager som helst:"
+
+#: ../../docs/user_manual/processing/console.rst:339
+msgid ""
+"To immediately load the processing outputs in the project, you can use the "
+"``runAndLoadResults()`` method instead of ``run()``."
+msgstr ""
+"För att omedelbart ladda bearbetningsresultaten i projektet kan du använda "
+"metoden ``runAndLoadResults()`` i stället för ``run()``."
+
+#: ../../docs/user_manual/processing/console.rst:348
+msgid ""
+"If you want to open an algorithm dialog from the console you can use the "
+"``createAlgorithmDialog`` method. The only mandatory parameter is the "
+"algorithm name, but you can also define the dictionary of parameters so that"
+" the dialog will be filled automatically:"
+msgstr ""
+"Om du vill öppna en algoritmdialog från konsolen kan du använda metoden "
+"``createAlgorithmDialog``. Den enda obligatoriska parametern är algoritmens "
+"namn, men du kan också definiera en ordlista med parametrar så att "
+"dialogrutan fylls i automatiskt:"
+
+#: ../../docs/user_manual/processing/console.rst:367
+msgid "The ``execAlgorithmDialog`` method opens the dialog immediately:"
+msgstr "Metoden ``execAlgorithmDialog`` öppnar dialogrutan omedelbart:"
+
+#: ../../docs/user_manual/processing/console.rst:384
+msgid "Creating scripts and running them from the toolbox"
+msgstr "Skapa skript och köra dem från verktygslådan"
+
+#: ../../docs/user_manual/processing/console.rst:386
+msgid ""
+"You can create your own algorithms by writing Python code. Processing "
+"scripts extend :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`, so you need to add some extra lines of "
+"code to implement mandatory functions. You can find :guilabel:`Create new "
+"script` (clean sheet) and :guilabel:`Create New Script from Template` "
+"(template that includes code for mandatory functions of "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`) under "
+"the :guilabel:`Scripts` dropdown menu on the top of the Processing toolbox. "
+"The Processing Script Editor will open, and that's where you should type "
+"your code. Saving the script from there in the :file:`scripts` folder (the "
+"default folder when you open the save file dialog) with a :file:`.py` "
+"extension should create the corresponding algorithm."
+msgstr ""
+"Du kan skapa dina egna algoritmer genom att skriva Python-kod. "
+"Bearbetningsskript utökar :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`, så du måste lägga till några extra "
+"rader kod för att implementera obligatoriska funktioner. Du hittar "
+":guilabel:`Create new script` (rent skript) och :guilabel:`Create New Script"
+" from Template` (mall som innehåller kod för obligatoriska funktioner i "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`) under "
+"rullgardinsmenyn :guilabel:`Scripts` högst upp i verktygslådan Processing. "
+"Processing Script Editor öppnas och det är där du ska skriva din kod. Om du "
+"sparar skriptet därifrån i mappen :file:`scripts` (standardmappen när du "
+"öppnar dialogrutan för att spara filer) med tillägget :file:`.py` skapas "
+"motsvarande algoritm."
+
+#: ../../docs/user_manual/processing/console.rst:401
+msgid ""
+"The name of the algorithm (the one you will see in the toolbox) is defined "
+"within the code."
+msgstr ""
+"Namnet på algoritmen (den som du ser i verktygslådan) definieras i koden."
+
+#: ../../docs/user_manual/processing/console.rst:404
+msgid ""
+"Let's have a look at the following code, which defines a Processing "
+"algorithm that performs a buffer operation with a user defined buffer "
+"distance on a vector layer that is specified by the user, after first "
+"smoothing the layer."
+msgstr ""
+"Låt oss ta en titt på följande kod, som definierar en Processing-algoritm "
+"som utför en buffertoperation med ett användardefinierat buffertavstånd på "
+"ett vektorlager som anges av användaren, efter att först ha utjämnat lagret."
+
+#: ../../docs/user_manual/processing/console.rst:469
+msgid ""
+"After doing the necessary imports, the following "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` functions"
+" are specified:"
+msgstr ""
+"Efter att ha gjort de nödvändiga importerna specificeras följande "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` "
+"funktioner:"
+
+#: ../../docs/user_manual/processing/console.rst:473
+msgid ""
+":meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`: The id of the "
+"algorithm (lowercase)."
+msgstr ""
+":meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`: Algoritmens id "
+"(gemener)."
+
+#: ../../docs/user_manual/processing/console.rst:475
+msgid ""
+":meth:`displayName() <qgis.core.QgsProcessingAlgorithm.displayName>`: A "
+"human readable name for the algorithm."
+msgstr ""
+":meth:`displayName() <qgis.core.QgsProcessingAlgorithm.displayName>`: Ett "
+"mänskligt läsbart namn för algoritmen."
+
+#: ../../docs/user_manual/processing/console.rst:477
+msgid ""
+":meth:`createInstance() <qgis.core.QgsProcessingAlgorithm.createInstance>`: "
+"Create a new instance of the algorithm class."
+msgstr ""
+":meth:`createInstance() <qgis.core.QgsProcessingAlgorithm.createInstance>`: "
+"Skapa en ny instans av algoritmklassen."
+
+#: ../../docs/user_manual/processing/console.rst:479
+msgid ""
+":meth:`initAlgorithm() <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`: "
+"Configure the parameterDefinitions and outputDefinitions."
+msgstr ""
+":meth:`initAlgorithm() <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`: "
+"Konfigurera parameterDefinitioner och outputDefinitioner."
+
+#: ../../docs/user_manual/processing/console.rst:482
+msgid ""
+"Here you describe the parameters and output of the algorithm.  In this case,"
+" a feature source for the input, a feature sink for the result and a number "
+"for the buffer distance."
+msgstr ""
+"Här beskriver du algoritmens parametrar och utdata.  I det här fallet en "
+"funktionskälla för indata, en funktionssänka för resultatet och ett tal för "
+"buffertavståndet."
+
+#: ../../docs/user_manual/processing/console.rst:485
+msgid ""
+":meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`: Do the work."
+msgstr ""
+":meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`: Gör arbetet."
+
+#: ../../docs/user_manual/processing/console.rst:488
+msgid ""
+"Here we first run the ``smoothgeometry`` algorithm to smooth the geometry, "
+"and then we run the ``buffer`` algorithm on the smoothed output. To be able "
+"to run algorithms from within another algorithm we have to set the "
+"``is_child_algorithm`` argument to :const:`True`. You can see how input and "
+"output parameters are used as parameters to the ``smoothgeometry`` and "
+"``buffer`` algorithms."
+msgstr ""
+"Här kör vi först algoritmen ``smoothgeometry`` för att jämna ut geometrin, "
+"och sedan kör vi algoritmen ``buffer`` på det utjämnade resultatet. För att "
+"kunna köra algoritmer inifrån en annan algoritm måste vi sätta argumentet "
+"``is_child_algorithm`` till :const:`True`. Du kan se hur in- och "
+"utparametrar används som parametrar för algoritmerna ``smoothgeometry`` och "
+"``buffer``."
+
+#: ../../docs/user_manual/processing/console.rst:496
+msgid ""
+"There are a number of different parameter types available for input and "
+"output. You can find the full list at :ref:`processing_algs_input_output`."
+msgstr ""
+"Det finns ett antal olika parametertyper tillgängliga för in- och utdata. Du"
+" kan hitta hela listan på :ref:`processing_algs_input_output`."
+
+#: ../../docs/user_manual/processing/console.rst:499
+msgid ""
+"The first parameter to the constructors is the name of the parameter, and "
+"the second is the description of the parameter (for the user interface). The"
+" rest of the constructor parameters are parameter type specific."
+msgstr ""
+"Den första parametern till konstruktörerna är namnet på parametern och den "
+"andra är beskrivningen av parametern (för användargränssnittet). Resten av "
+"konstruktörsparametrarna är parametertypspecifika."
+
+#: ../../docs/user_manual/processing/console.rst:504
+msgid ""
+"The input can be turned into QGIS classes using the ``parameterAs`` "
+"functions of :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`. For instance to get the number provided"
+" for the buffer distance as a double::"
+msgstr ""
+"Indata kan omvandlas till QGIS-klasser med hjälp av funktionerna "
+"``parameterAs`` i :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`. Till exempel för att få det nummer som "
+"anges för buffertavståndet som en dubbel::"
+
+#: ../../docs/user_manual/processing/console.rst:510
+msgid ""
+"The ``processAlgorithm`` function should return a dictionary containing "
+"values for every output defined by the algorithm. This allows access to "
+"these outputs from other algorithms, including other algorithms contained "
+"within the same model."
+msgstr ""
+"Funktionen ``processAlgorithm`` bör returnera en ordbok som innehåller "
+"värden för varje utdata som definieras av algoritmen. Detta gör det möjligt "
+"att få tillgång till dessa utdata från andra algoritmer, inklusive andra "
+"algoritmer som ingår i samma modell."
+
+#: ../../docs/user_manual/processing/console.rst:515
+msgid ""
+"Well behaved algorithms should define and return as many outputs as makes "
+"sense. Non-feature outputs, such as numbers and strings, are very useful "
+"when running your algorithm as part of a larger model, as these values can "
+"be used as input parameters for subsequent algorithms within the model. "
+"Consider adding numeric outputs for things like the number of features "
+"processed, the number of invalid features encountered, the number of "
+"features output, etc. The more outputs you return, the more useful your "
+"algorithm becomes!"
+msgstr ""
+"Välskötta algoritmer bör definiera och returnera så många utdata som är "
+"rimligt. Utdata som inte är funktioner, t.ex. siffror och strängar, är "
+"mycket användbara när du kör din algoritm som en del av en större modell, "
+"eftersom dessa värden kan användas som inparametrar för efterföljande "
+"algoritmer inom modellen. Överväg att lägga till numeriska utdata för saker "
+"som antalet bearbetade funktioner, antalet ogiltiga funktioner som "
+"påträffats, antalet funktioner som matats ut osv. Ju fler utdata du "
+"returnerar, desto mer användbar blir din algoritm!"
+
+#: ../../docs/user_manual/processing/console.rst:525
+msgid "Feedback"
+msgstr "Feedback"
+
+#: ../../docs/user_manual/processing/console.rst:527
+msgid ""
+"The :class:`feedback <qgis.core.QgsProcessingFeedback>` object passed to "
+":meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>` should be used for user"
+" feedback / interaction. You can use the :meth:`setProgress() "
+"<qgis.core.QgsFeedback.setProgress>` function of the :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` object to update the progress bar (0 to "
+"100) to inform the user about the progress of the algorithm. This is very "
+"useful if your algorithm takes a long time to complete."
+msgstr ""
+"Objektet :class:`feedback <qgis.core.QgsProcessingFeedback>` som skickas "
+"till :meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>` bör användas för "
+"användarens återkoppling/interaktion. Du kan använda funktionen "
+":meth:`setProgress() <qgis.core.QgsFeedback.setProgress>` i objektet "
+":class:`feedback <qgis.core.QgsProcessingFeedback>` för att uppdatera "
+"förloppsindikatorn (0 till 100) för att informera användaren om algoritmens "
+"framsteg. Detta är mycket användbart om din algoritm tar lång tid att "
+"slutföra."
+
+#: ../../docs/user_manual/processing/console.rst:535
+msgid ""
+"The :class:`feedback <qgis.core.QgsProcessingFeedback>` object provides an "
+":meth:`isCanceled() <qgis.core.QgsFeedback.isCanceled>` method that should "
+"be monitored to enable cancelation of the algorithm by the user. The "
+":meth:`pushInfo() <qgis.core.QgsProcessingFeedback.pushInfo>` method of "
+":class:`feedback <qgis.core.QgsProcessingFeedback>` can be used to send "
+"information to the user, and :meth:`reportError() "
+"<qgis.core.QgsProcessingFeedback.reportError>` is handy for pushing non-"
+"fatal errors to users."
+msgstr ""
+"Objektet :class:`feedback <qgis.core.QgsProcessingFeedback>` tillhandahåller"
+" en metod :meth:`isCanceled() <qgis.core.QgsFeedback.isCanceled>` som bör "
+"övervakas för att användaren ska kunna avbryta algoritmen. Metoden "
+":meth:`pushInfo() <qgis.core.QgsProcessingFeedback.pushInfo>` i "
+":class:`feedback <qgis.core.QgsProcessingFeedback>` kan användas för att "
+"skicka information till användaren, och :meth:`reportError() "
+"<qgis.core.QgsProcessingFeedback.reportError>` är praktisk för att skicka "
+"icke-fatala fel till användare."
+
+#: ../../docs/user_manual/processing/console.rst:543
+msgid ""
+"Algorithms should avoid using other forms of providing feedback to users, "
+"such as print statements or logging to :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>`, and should always use the feedback object "
+"instead. This allows verbose logging for the algorithm, and is also thread-"
+"safe (which is important, given that algorithms are typically run in a "
+"background thread)."
+msgstr ""
+"Algoritmer bör undvika att använda andra former av återkoppling till "
+"användare, t.ex. utskriftssatser eller loggning till :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>`, och bör alltid använda feedback-objektet "
+"istället. Detta möjliggör utförlig loggning för algoritmen och är även "
+"trådsäkert (vilket är viktigt eftersom algoritmer vanligtvis körs i en "
+"bakgrundstråd)."
+
+#: ../../docs/user_manual/processing/console.rst:552
+msgid "Handling errors"
+msgstr "Hantering av fel"
+
+#: ../../docs/user_manual/processing/console.rst:554
+msgid ""
+"If your algorithm encounters an error which prevents it from executing, such"
+" as invalid input values or some other condition from which it cannot or "
+"should not recover, then you should raise a :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>`. E.g.::"
+msgstr ""
+"Om din algoritm stöter på ett fel som hindrar den från att köras, t.ex. "
+"ogiltiga indatavärden eller något annat tillstånd som den inte kan eller bör"
+" återhämta sig från, bör du skapa en :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>`. T.ex.::"
+
+#: ../../docs/user_manual/processing/console.rst:563
+msgid ""
+"Try to avoid raising :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>` for non-fatal errors (e.g. when a "
+"feature has a null geometry), and instead just report these errors via "
+"``feedback.reportError()`` and skip the feature. This helps make your "
+"algorithm \"model-friendly\", as it avoids halting the execution of an "
+"entire algorithm when a non-fatal error is encountered."
+msgstr ""
+"Försök att undvika :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>` för icke-fatala fel (t.ex. när en "
+"funktion har en null-geometri), och rapportera istället bara dessa fel via "
+"``feedback.reportError()`` och hoppa över funktionen. Detta bidrar till att "
+"göra din algoritm \"modellvänlig\", eftersom den undviker att stoppa "
+"exekveringen av en hel algoritm när ett icke-fatalt fel påträffas."
+
+#: ../../docs/user_manual/processing/console.rst:573
+msgid "Documenting your scripts"
+msgstr "Dokumentera dina skript"
+
+#: ../../docs/user_manual/processing/console.rst:575
+msgid ""
+"As in the case of models, you can create additional documentation for your "
+"scripts, to explain what they do and how to use them."
+msgstr ""
+"På samma sätt som för modeller kan du skapa ytterligare dokumentation för "
+"dina skript för att förklara vad de gör och hur de ska användas."
+
+#: ../../docs/user_manual/processing/console.rst:578
+msgid ""
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` provides "
+"the :meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>`, "
+":meth:`shortHelpString() <qgis.core.QgsProcessingAlgorithm.shortHelpString>`"
+" and :meth:`helpUrl() <qgis.core.QgsProcessingAlgorithm.helpUrl>` functions "
+"for that purpose. Specify / override these to provide more help to the user."
+msgstr ""
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` "
+"tillhandahåller :meth:`helpString() "
+"<qgis.core.QgsProcessingAlgorithm.helpString>`, :meth:`shortHelpString() "
+"<qgis.core.QgsProcessingAlgorithm.shortHelpString>` och :meth:`helpUrl() "
+"<qgis.core.QgsProcessingAlgorithm.helpUrl>` funktioner för detta ändamål. "
+"Ange / åsidosätt dessa för att ge mer hjälp till användaren."
+
+#: ../../docs/user_manual/processing/console.rst:584
+msgid ""
+":meth:`shortDescription() "
+"<qgis.core.QgsProcessingAlgorithm.shortDescription>` is used in the tooltip "
+"when hovering over the algorithm in the toolbox."
+msgstr ""
+":meth:`shortDescription() "
+"<qgis.core.QgsProcessingAlgorithm.shortDescription>` används i "
+"verktygstipset när du håller muspekaren över algoritmen i verktygslådan."
+
+#: ../../docs/user_manual/processing/console.rst:588
+msgid "Pre- and post-execution script hooks"
+msgstr "Skriptkrokar före och efter utförandet"
+
+#: ../../docs/user_manual/processing/console.rst:590
+msgid ""
+"Scripts can also be used as pre- and post-execution hooks that are run "
+"before and after an algorithm is run, respectively. This can be used to "
+"automate tasks that should be performed whenever an algorithm is executed."
+msgstr ""
+"Skript kan också användas som pre- och post-exekveringskrokar som körs före "
+"respektive efter att en algoritm körs. Detta kan användas för att "
+"automatisera uppgifter som ska utföras när en algoritm körs."
+
+#: ../../docs/user_manual/processing/console.rst:594
+msgid ""
+"The syntax is identical to the syntax explained above, but an additional "
+"global variable named ``alg`` is available, representing the algorithm that "
+"has just been (or is about to be) executed."
+msgstr ""
+"Syntaxen är identisk med den som förklaras ovan, men det finns ytterligare "
+"en global variabel med namnet ``alg`` som representerar den algoritm som "
+"just har körts (eller ska köras)."
+
+#: ../../docs/user_manual/processing/console.rst:598
+msgid ""
+"In the :guilabel:`General` group of the processing options dialog, you will "
+"find two entries named :guilabel:`Pre-execution script` and :guilabel:`Post-"
+"execution script` where the filenames of the scripts to be run in each case "
+"can be entered."
+msgstr ""
+"I gruppen :guilabel:`General` i dialogen processing options finns två poster"
+" med namnen :guilabel:`Pre-execution script` och :guilabel:`Post-execution "
+"script` där filnamnen på de skript som ska köras i varje enskilt fall kan "
+"anges."
