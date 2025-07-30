@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,476 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:2
+msgid "Lesson: Implementing the Data Model"
+msgstr "Lektion: Implementering av datamodellen"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:4
+msgid ""
+"Now that we've covered all the theory, let's create a new database. This "
+"database will be used for our exercises for the lessons that will follow "
+"afterwards."
+msgstr ""
+"Nu när vi har gått igenom all teori ska vi skapa en ny databas. Denna "
+"databas kommer att användas för våra övningar för de lektioner som kommer "
+"att följa efteråt."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:8
+msgid ""
+"**The goal for this lesson:** To install the required software and use it to"
+" implement our example database."
+msgstr ""
+"**Målet för den här lektionen:** Att installera den programvara som krävs "
+"och använda den för att implementera vår exempeldatabas."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:12
+msgid "Install PostgreSQL"
+msgstr "Installera PostgreSQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:14
+msgid ""
+"You can find PostgreSQL packages and installation instructions for your "
+"operating system at https://www.postgresql.org/download/. Please note that "
+"the documentation will assume users are running QGIS under Ubuntu."
+msgstr ""
+"Du kan hitta PostgreSQL-paket och installationsinstruktioner för ditt "
+"operativsystem på https://www.postgresql.org/download/. Observera att "
+"dokumentationen förutsätter att användarna kör QGIS under Ubuntu."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:19
+#: ../../docs/training_manual/database_concepts/data_model.rst:56
+msgid "Under Ubuntu:"
+msgstr "Under Ubuntu:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:25
+msgid "You should get a message like this:"
+msgstr "Du bör få ett meddelande som detta:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:44
+msgid ""
+"Press :kbd:`Y` and :kbd:`Enter` and wait for the download and installation "
+"to finish."
+msgstr ""
+"Tryck på :kbd:`Y` och :kbd:`Enter` och vänta tills nedladdningen och "
+"installationen är klar."
+
 #: ../../docs/training_manual/database_concepts/data_model.rst:48
 msgid "Help"
 msgstr "Hjälp"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:50
+msgid ""
+"PostgreSQL has very good `online "
+"<https://www.postgresql.org/docs/9.1/index.html>`_ documentation."
+msgstr ""
+"PostgreSQL har mycket bra `online "
+"<https://www.postgresql.org/docs/9.1/index.html>`_ dokumentation."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:54
+msgid "Create a database user"
+msgstr "Skapa en databasanvändare"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:58
+msgid ""
+"After the installation is complete, run this command to become the postgres "
+"user and then create a new database user:"
+msgstr ""
+"När installationen är klar kör du det här kommandot för att bli postgres-"
+"användare och sedan skapa en ny databasanvändare:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:65
+msgid ""
+"Type in your normal log in password when prompted (you need to have sudo "
+"rights)."
+msgstr ""
+"Skriv in ditt vanliga inloggningslösenord när du uppmanas att göra det (du "
+"måste ha sudo-rättigheter)."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:67
+msgid ""
+"Now, at the postgres user's bash prompt, create the database user. Make sure"
+" the user name matches your unix login name: it will make your life much "
+"easier, as postgres will automatically authenticate you when you are logged "
+"in as that user:"
+msgstr ""
+"Skapa nu databasanvändaren i postgres-användarens bash-prompt. Se till att "
+"användarnamnet matchar ditt unix-inloggningsnamn: det kommer att göra ditt "
+"liv mycket enklare, eftersom postgres automatiskt autentiserar dig när du är"
+" inloggad som den användaren:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:76
+msgid ""
+"Enter a password when prompted. You should use a different password to your "
+"login password."
+msgstr ""
+"Ange ett lösenord när du uppmanas att göra det. Du bör använda ett annat "
+"lösenord än ditt inloggningslösenord."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:79
+msgid "What do those options mean?"
+msgstr "Vad innebär dessa alternativ?"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:91
+msgid ""
+"Now you should leave the postgres user's bash shell environment by typing:"
+msgstr "Nu ska du lämna postgres-användarens bash-skalmiljö genom att skriva:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:99
+msgid "Verify the new account"
+msgstr "Verifiera det nya kontot"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:105
+msgid "Should return something like this::"
+msgstr "Bör returnera något liknande detta::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:115
+#: ../../docs/training_manual/database_concepts/data_model.rst:145
+msgid "Type :kbd:`Q` to exit."
+msgstr "Skriv :kbd:`Q` för att avsluta."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:118
+msgid "Create a database"
+msgstr "Skapa en databas"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:120
+msgid ""
+"The ``createdb`` command is used to create a new database. It should be run "
+"from the bash shell prompt:"
+msgstr ""
+"Kommandot ``createdb`` används för att skapa en ny databas. Det bör köras "
+"från skalprompten bash:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:127
+msgid ""
+"You can verify the existence of your new database by using this command:"
+msgstr ""
+"Du kan kontrollera att den nya databasen finns med hjälp av det här "
+"kommandot:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:133
+msgid "Which should return something like this:"
+msgstr "Vilket borde ge något i stil med detta:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:148
+msgid "Starting a database shell session"
+msgstr "Starta en shell-session för en databas"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:150
+msgid "You can connect to your database easily like this::"
+msgstr "Du kan enkelt ansluta till din databas på följande sätt::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:154
+msgid "To exit out of the psql database shell, type::"
+msgstr "Om du vill lämna psql-databasens skal skriver du::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:158
+msgid "For help in using the shell, type::"
+msgstr "Om du vill ha hjälp med att använda skalet skriver du::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:162
+msgid "For help in using sql commands, type::"
+msgstr "Om du vill ha hjälp med att använda sql-kommandon skriver du::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:166
+msgid "To get help on a specific command, type (for example)::"
+msgstr ""
+"För att få hjälp med ett specifikt kommando skriver du (till exempel)::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:170
+msgid ""
+"See also the `Psql cheat sheet "
+"<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_."
+msgstr ""
+"Se även `Psql fuskblad "
+"<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:173
+msgid "Make Tables in SQL"
+msgstr "Skapa tabeller i SQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:175
+msgid ""
+"Let's start making some tables! We will use our ER Diagram as a guide. "
+"First, connect to the address db:"
+msgstr ""
+"Låt oss börja skapa några tabeller! Vi kommer att använda vårt ER-diagram "
+"som en guide. Anslut först till adressdatabasen:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:182
+msgid "Then create a :file:`streets` table:"
+msgstr "Skapa sedan en :file:`streets`-tabell:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:188
+msgid ""
+":kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells "
+"PostgreSQL to start an integer sequence (auto-number) to populate the "
+":kbd:`id` automatically for every new record. :kbd:`varchar(50)` tells "
+"PostgreSQL to create a character field of 50 characters in length."
+msgstr ""
+":kbd:`serial` och :kbd:`varchar` är ** datatyper **. :kbd:`serial` säger "
+"till PostgreSQL att starta en heltalssekvens (auto-number) för att fylla i "
+":kbd:`id` automatiskt för varje ny post. :kbd:`varchar(50)` säger till "
+"PostgreSQL att skapa ett teckenfält med 50 tecken i längd."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:193
+msgid ""
+"You will notice that the command ends with a :kbd:`;` - all SQL commands "
+"should be terminated this way. When you press :kbd:`Enter`, psql will report"
+" something like this:"
+msgstr ""
+"Du kommer att märka att kommandot avslutas med ett :kbd:`;` - alla SQL-"
+"kommandon ska avslutas på detta sätt. När du trycker på :kbd:`Enter` kommer "
+"psql att rapportera ungefär så här:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:205
+msgid ""
+"That means your table was created successfully, with a primary key "
+":kbd:`streets_pkey` using :kbd:`streets.id`."
+msgstr ""
+"Det betyder att din tabell skapades framgångsrikt, med en primärnyckel "
+":kbd:`streets_pkey` som använder :kbd:`streets.id`."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:208
+msgid ""
+"Note: If you hit return without entering a :kbd:`;`, then you will get a "
+"prompt like this: :kbd:`address-#`. This is because PG is expecting you to "
+"enter more. Enter :kbd:`;` to run your command."
+msgstr ""
+"Obs: Om du trycker på retur utan att ange en :kbd:`;`, kommer du att få en "
+"prompt som denna: :kbd:`address-#`. Detta beror på att PG förväntar sig att "
+"du ska skriva in mer. Ange :kbd:`;` för att köra ditt kommando."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:212
+msgid "To view your table schema, you can do this:"
+msgstr "Så här kan du visa ditt tabellschema:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:218
+#: ../../docs/training_manual/database_concepts/data_model.rst:237
+msgid "Which should show something like this:"
+msgstr "Vilket borde visa något liknande detta:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:231
+msgid "To view your table contents, you can do this:"
+msgstr "Så här kan du visa innehållet i din tabell:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:245
+msgid "As you can see, our table is currently empty."
+msgstr "Som du kan se är vårt bord för närvarande tomt."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:248
+msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
+msgstr "Prova själv: :abbr:`★★☆ (Måttlig nivå)`"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:250
+msgid "Use the approach shown above to make a table called people:"
+msgstr ""
+"Använd metoden som visas ovan för att skapa en tabell som heter personer:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:252
+msgid ""
+"Add fields such as phone number, home address, name, etc. (these aren't all "
+"valid names: change them to make them valid). Make sure you give the table "
+"an ID column with the same data-type as above."
+msgstr ""
+"Lägg till fält som telefonnummer, hemadress, namn etc. (alla dessa namn är "
+"inte giltiga, ändra dem så att de blir giltiga). Se till att du ger tabellen"
+" en ID-kolumn med samma datatyp som ovan."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:256
+#: ../../docs/training_manual/database_concepts/data_model.rst:385
+msgid "Answer"
+msgstr "Svar"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:259
+msgid "The SQL required to create the correct people table is::"
+msgstr "Den SQL som krävs för att skapa rätt persontabell är::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:267
+msgid "The schema for the table (enter ``\\\\d people``) looks like this::"
+msgstr "Schemat för tabellen (ange ``d människor``) ser ut så här::"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:282
+msgid ""
+"For illustration purposes, we have purposely omitted the fkey constraint."
+msgstr "I illustrationssyfte har vi avsiktligt utelämnat fkey-begränsningen."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:285
+msgid "Create Keys in SQL"
+msgstr "Skapa nycklar i SQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:287
+msgid ""
+"The problem with our solution above is that the database doesn't know that "
+"people and streets have a logical relationship. To express this "
+"relationship, we have to define a foreign key that points to the primary key"
+" of the streets table."
+msgstr ""
+"Problemet med vår lösning ovan är att databasen inte vet att människor och "
+"gator har en logisk relation. För att uttrycka detta förhållande måste vi "
+"definiera en främmande nyckel som pekar på den primära nyckeln i tabellen "
+"streets."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:295
+msgid "There are two ways to do this:"
+msgstr "Det finns två sätt att göra detta på:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:297
+msgid "Add the key after the table has been created"
+msgstr "Lägg till nyckeln efter att tabellen har skapats"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:298
+msgid "Define the key at time of table creation"
+msgstr "Definiera nyckeln vid tidpunkten för skapandet av tabellen"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:300
+msgid "Our table has already been created, so let's do it the first way:"
+msgstr ""
+"Vår tabell har redan skapats, så låt oss göra det på det första sättet:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:308
+msgid ""
+"That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
+"match a valid street :kbd:`id` from the :kbd:`streets` table."
+msgstr ""
+"Det säger till tabellen :kbd:`people` att dess fält :kbd:`street_id` måste "
+"matcha en giltig gata :kbd:`id` från tabellen :kbd:`streets`."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:311
+msgid ""
+"The more usual way to create a constraint is to do it when you create the "
+"table:"
+msgstr ""
+"Det vanligaste sättet att skapa en constraint är att göra det när du skapar "
+"tabellen:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:323
+msgid "After adding the constraint, our table schema looks like this now:"
+msgstr ""
+"Efter att ha lagt till begränsningen ser vårt tabellschema ut så här nu:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:343
+msgid "Create Indexes in SQL"
+msgstr "Skapa index i SQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:345
+msgid ""
+"We want lightning fast searches on peoples names. To provide for this, we "
+"can create an index on the name column of our people table:"
+msgstr ""
+"Vi vill ha blixtsnabba sökningar på personers namn. För att åstadkomma detta"
+" kan vi skapa ett index på namnkolumnen i vår tabell över personer:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:354
+msgid "Which results in:"
+msgstr "Vilket resulterar i:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:375
+msgid "Dropping Tables in SQL"
+msgstr "Borttagning av tabeller i SQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:377
+msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
+msgstr ""
+"Om du vill göra dig av med en tabell kan du använda kommandot :kbd:`drop`:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:383
+msgid "In our current example, the above command would not work. Why not?"
+msgstr ""
+"I vårt aktuella exempel skulle ovanstående kommando inte fungera. Varför "
+"skulle det inte det?"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:388
+msgid ""
+"The reason the DROP command would not work in this case is because the "
+"*people* table has a Foreign Key constraint to the *streets* table. This "
+"means that dropping (or deleting) the *streets* table would leave the "
+"*people* table with references to non-existent *streets* data."
+msgstr ""
+"Anledningen till att DROP-kommandot inte skulle fungera i det här fallet är "
+"att tabellen *people* har en Foreign Key-begränsning till tabellen "
+"*streets*. Det innebär att om tabellen *streets* släpps (eller tas bort) "
+"kommer tabellen *people* att innehålla referenser till obefintliga data från"
+" *streets*."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:393
+msgid ""
+"It is possible to 'force' the *streets* table to be deleted by using the "
+"``CASCADE`` command, but this would also delete the *people* and any other "
+"table which had a relationship to the *streets* table. Use with caution!"
+msgstr ""
+"Det är möjligt att \"tvinga\" *streets*-tabellen att raderas med kommandot "
+"``CASCADE``, men detta skulle också radera *people* och alla andra tabeller "
+"som har en relation till *streets*-tabellen. Använd med försiktighet!"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:398
+msgid ""
+"If you used the same :kbd:`drop table` command on the `people` table, it "
+"would be successful:"
+msgstr ""
+"Om du använde samma :kbd:`drop table`-kommando på `people`-tabellen skulle "
+"det lyckas:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:406
+msgid ""
+"If you actually did enter that command and dropped the :kbd:`people` table, "
+"now would be a good time to rebuild it, as you will need it in the next "
+"exercises."
+msgstr ""
+"Om du faktiskt skrev in kommandot och tappade bort tabellen :kbd:`people`, "
+"är det nu en bra tid att bygga upp den igen, eftersom du kommer att behöva "
+"den i nästa övning."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:411
+msgid "A word on pgAdmin III"
+msgstr "Ett ord om pgAdmin III"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:413
+msgid ""
+"We are showing you the SQL commands from the `psql` prompt because it's a "
+"very useful way to learn about databases. However, there are quicker and "
+"easier ways to do a lot of what we are showing you. Install pgAdmin III and "
+"you can create, drop, alter etc tables using 'point and click' operations in"
+" a GUI."
+msgstr ""
+"Vi visar dig SQL-kommandona från `psql`-prompten eftersom det är ett mycket "
+"användbart sätt att lära sig om databaser. Det finns dock snabbare och "
+"enklare sätt att göra mycket av det vi visar dig. Installera pgAdmin III så "
+"kan du skapa, släppa, ändra etc tabeller med hjälp av \"peka och "
+"klicka\"-operationer i ett GUI."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:418
+msgid "Under Ubuntu, you can install it like this:"
+msgstr "Under Ubuntu kan du installera det så här:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:424
+msgid "pgAdmin III will be covered in more detail in another module."
+msgstr "pgAdmin III kommer att behandlas mer ingående i en annan modul."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:427
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:429
+msgid ""
+"You have now seen how to create a brand new database, starting completely "
+"from scratch."
+msgstr "Du har nu sett hur du skapar en helt ny databas från grunden."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:433
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:435
+msgid "Next you'll learn how to use the DBMS to add new data."
+msgstr ""
+"Därefter får du lära dig hur du använder DBMS för att lägga till nya data."
