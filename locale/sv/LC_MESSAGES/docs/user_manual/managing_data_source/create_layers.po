@@ -1,0 +1,1819 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-18 12:17+0000\n"
+"PO-Revision-Date: 2025-02-27 21:31+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:5
+msgid "Creating Layers"
+msgstr "Skapa lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:13
+msgid "Layers can be created in many ways, including:"
+msgstr "Skikt kan skapas på många olika sätt, bland annat:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:15
+msgid "empty layers from scratch"
+msgstr "tomma lager från början"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:16
+msgid "layers from existing layers"
+msgstr "lager från befintliga lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:17
+msgid "layers from the clipboard"
+msgstr "lager från urklipp"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:18
+msgid ""
+"layers as a result of an SQL-like query based on one or many layers "
+"(:ref:`virtual layers <vector_virtual_layers>`)"
+msgstr ""
+"lager som ett resultat av en SQL-liknande fråga baserad på ett eller flera "
+"lager (:ref:`virtual layers <vector_virtual_layers>`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:21
+msgid "QGIS also provides tools to import/export from/to different formats."
+msgstr ""
+"QGIS innehåller också verktyg för att importera/exportera från/till olika "
+"format."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:29
+msgid "Creating new vector layers"
+msgstr "Skapa nya vektorlager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:31
+msgid ""
+"QGIS allows you to create new layers in different formats. It provides tools"
+" for creating GeoPackage, Shapefile, SpatiaLite, GPX format and Temporary "
+"Scratch layers (aka memory layers). Creation of a :ref:`new GRASS layer "
+"<creating_new_grass_vectors>` is supported within the GRASS plugin."
+msgstr ""
+"I QGIS kan du skapa nya lager i olika format. Det finns verktyg för att "
+"skapa GeoPackage-, Shapefile-, SpatiaLite-, GPX-format och Temporary "
+"Scratch-lager (även kallade minneslager). Skapande av ett :ref:`nytt GRASS-"
+"lager <creating_new_grass_vectors>` stöds inom GRASS-plugin-programmet."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:42
+msgid "Creating a new GeoPackage layer"
+msgstr "Skapa ett nytt GeoPackage-lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:44
+msgid ""
+"To create a new GeoPackage layer, press the |newGeoPackageLayer| "
+":menuselection:`New GeoPackage Layer...` button in the :menuselection:`Layer"
+" --> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. You can also create a new GeoPackage layer through the "
+":guilabel:`Browser Panel` by selecting the :guilabel:`Create Database and "
+"Layer...`. The :guilabel:`New GeoPackage Layer` dialog will be displayed as "
+"shown in :numref:`figure_create_geopackage`."
+msgstr ""
+"Du skapar ett nytt GeoPackage-lager genom att trycka på knappen "
+"|newGeoPackageLayer| :menuselection:`New GeoPackage Layer...` i menyn "
+":menuselection:`Layer --> Create Layer -->` eller i verktygsfältet "
+":guilabel:`Data Source Manager`. Du kan också skapa ett nytt GeoPackage-"
+"lager via :guilabel:`Browser Panel` genom att välja :guilabel:`Create "
+"Database and Layer...`. Dialogrutan :guilabel:`New GeoPackage Layer` visas "
+"enligt bilden i :numref:`figure_create_geopackage`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:835
+msgid "newGeoPackageLayer"
+msgstr "newGeoPackageLayer"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:58
+msgid "Creating a New GeoPackage layer dialog"
+msgstr "Skapa en ny dialogruta för GeoPackage-skikt"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:60
+msgid ""
+"The first step is to indicate the database file location. This can be done "
+"by pressing the :guilabel:`...` button to the right of the "
+":guilabel:`Database` field and select an existing GeoPackage file or create "
+"a new one. QGIS will automatically add the right extension to the name you "
+"provide."
+msgstr ""
+"Det första steget är att ange databasfilens plats. Detta kan göras genom att"
+" trycka på knappen :guilabel:`...` till höger om fältet :guilabel:`Database`"
+" och välja en befintlig GeoPackage-fil eller skapa en ny. QGIS kommer "
+"automatiskt att lägga till rätt tillägg till det namn du anger."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:65
+msgid "Give the new layer / table a name (:guilabel:`Table name`)"
+msgstr "Ge det nya lagret / tabellen ett namn (:guilabel:`Tabellnamn`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:66
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:175
+msgid ""
+"Define the :guilabel:`Geometry type`. If not a geometryless layer, you can "
+"specify whether it should :guilabel:`Include Z dimension` and/or "
+":guilabel:`Include M values`."
+msgstr ""
+"Definiera :guilabel:`Geometri typ`. Om det inte är ett geometrilöst lager "
+"kan du ange om det ska :guilabel:`Inkludera Z-dimension` och/eller "
+":guilabel:`Inkludera M-värden`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:69
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:122
+msgid ""
+"Specify the coordinate reference system using the |setProjection| button"
+msgstr ""
+"Ange referenssystemet för koordinaterna med hjälp av knappen |setProjection"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:845
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:71
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:131
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:180
+msgid "To add fields to the layer you are creating:"
+msgstr "För att lägga till fält i det lager du skapar:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:73
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:133
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:182
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:301
+msgid "Enter the :guilabel:`Name` of the field"
+msgstr "Ange fältets :guilabel:`Namn`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:74
+msgid ""
+"Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,"
+" :guilabel:`Whole number` (both integer and integer64), :guilabel:`Decimal "
+"number`, :guilabel:`Date` and :guilabel:`Date and time`, :guilabel:`Binary "
+"(BLOB)` and :guilabel:`Boolean`."
+msgstr ""
+"Välj data :guilabel:`Type`. Följande typer stöds: :guilabel:`Textdata`, "
+":guilabel:`Hela tal` (både heltal och heltal64), :guilabel:`Decimaltal`, "
+":guilabel:`Datum` och :guilabel:`Datum och tid`, :guilabel:`Binär (BLOB)` "
+"och :guilabel:`Boolean`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:78
+msgid ""
+"Depending on the selected data format, enter the :guilabel:`Maximum length` "
+"of values."
+msgstr ""
+"Ange värdenas :guilabel:`Maximala längd` beroende på det valda dataformatet."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:80
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:139
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:186
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:308
+msgid "Click on the |newAttribute| :guilabel:`Add to Fields List` button"
+msgstr ""
+"Klicka på knappen |newAttribute| :guilabel:`Add to Fields List` (Lägg till i"
+" listan över fält)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:833
+msgid "newAttribute"
+msgstr "newAttribute"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:81
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:140
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:187
+msgid "Reproduce the steps above for each field you need to add"
+msgstr "Upprepa stegen ovan för varje fält som du behöver lägga till"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:82
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:141
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:188
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:310
+msgid ""
+"You can later change the fields order using the |arrowUp| :sup:`Move Up` and"
+" |arrowDown| :sup:`Move Down` buttons"
+msgstr ""
+"Du kan senare ändra fältordningen med hjälp av knapparna |pil upp| "
+":sup:`Flytta upp` och |pil ner| :sup:`Flytta ner`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:829
+msgid "arrowUp"
+msgstr "pil upp"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:831
+msgid "arrowDown"
+msgstr "pilNed"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:84
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:143
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:190
+msgid ""
+"Once you are happy with the attributes, click :guilabel:`OK`. QGIS will add "
+"the new layer to the legend, and you can edit it as described in section "
+":ref:`sec_edit_existing_layer`."
+msgstr ""
+"När du är nöjd med attributen klickar du på :guilabel:`OK`. QGIS lägger till"
+" det nya lagret i teckenförklaringen och du kan redigera det enligt "
+"beskrivningen i avsnitt :ref:`sec_edit_existing_layer`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:88
+msgid ""
+"By default, when creating a GeoPackage layer, QGIS generates a "
+":guilabel:`Feature id column` called ``fid`` which acts as the primary key "
+"of the layer. The name can be changed. The geometry field, if availabe, is "
+"named ``geometry``, and you can choose to :guilabel:`Create a spatial index`"
+" on it. These options can be found under the :guilabel:`Advanced Options` "
+"together with the :guilabel:`Layer identifier` (short human readable name of"
+" the layer) and the :guilabel:`Layer description`."
+msgstr ""
+"När ett GeoPackage-skikt skapas genererar QGIS som standard en "
+":guilabel:`Feature id column` som kallas ``fid`` och som fungerar som "
+"primärnyckel för skiktet. Namnet kan ändras. Geometrifältet, om det finns, "
+"får namnet ``geometry`` och du kan välja att :guilabel:``Create a spatial "
+"index`` på det. Dessa alternativ finns under :guilabel:`Advanced Options` "
+"tillsammans med :guilabel:`Layer identifier` (kort mänskligt läsbart namn på"
+" skiktet) och :guilabel:`Layer description`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:97
+msgid ""
+"Further management of GeoPackage layers can be done with the :ref:`DB "
+"Manager <dbmanager>`."
+msgstr ""
+"Ytterligare hantering av GeoPackage-lager kan göras med :ref:`DB Manager "
+"<dbmanager>`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:105
+msgid "Creating a new Shapefile layer"
+msgstr "Skapa ett nytt Shapefile-lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:107
+msgid ""
+"To create a new ESRI Shapefile format layer, press the |newVectorLayer| "
+":menuselection:`New Shapefile Layer...` button in the :menuselection:`Layer "
+"--> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New Shapefile Layer` dialog will be displayed as "
+"shown in :numref:`figure_create_shapefile`."
+msgstr ""
+"Om du vill skapa ett nytt lager i ESRI Shapefile-format trycker du på "
+"knappen |newVectorLayer| :menuselection:`New Shapefile Layer...` i menyn "
+":menuselection:`Layer --> Create Layer -->` eller i verktygsfältet "
+":guilabel:`Data Source Manager`. Dialogrutan :guilabel:`New Shapefile Layer`"
+" visas som visas i :numref:`figure_create_shapefile`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:843
+msgid "newVectorLayer"
+msgstr "newVectorLayer"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:114
+msgid ""
+"Provide a path and file name using the :guilabel:`...` button next to "
+":guilabel:`File name`. QGIS will automatically add the right extension to "
+"the name you provide."
+msgstr ""
+"Ange en sökväg och ett filnamn med hjälp av knappen :guilabel:`...` bredvid "
+":guilabel:`Filnamn`. QGIS kommer automatiskt att lägga till rätt tillägg "
+"till det namn du anger."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:117
+msgid "Next, indicate the :guilabel:`File encoding` of the data"
+msgstr "Ange sedan :guilabel:`Filkodning` för data"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:118
+msgid ""
+"Choose the :guilabel:`Geometry type` of the layer: No Geometry (resulting in"
+" a :file:`.DBF` format file), point, multipoint, line or polygon"
+msgstr ""
+"Välj :guilabel:`Geometrityp` för skiktet: Ingen geometri (resulterar i en "
+"fil i formatet :file:`.DBF`), punkt, multipunkt, linje eller polygon"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:120
+msgid ""
+"Specify whether the geometry should have additional dimensions: "
+":guilabel:`None`, :guilabel:`Z (+ M values)` or :guilabel:`M values`"
+msgstr ""
+"Ange om geometrin ska ha ytterligare dimensioner: :guilabel:`None`, "
+":guilabel:`Z (+ M värden)` eller :guilabel:`M värden`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:129
+msgid "Creating a new Shapefile layer dialog"
+msgstr "Skapa en ny Shapefile-lagerdialog"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:134
+msgid ""
+"Select the data :guilabel:`Type`. Only :guilabel:`Decimal number`, "
+":guilabel:`Whole number`, :guilabel:`Text data`, :guilabel:`Date`, and "
+":guilabel:`Boolean` data types attributes are supported."
+msgstr ""
+"Välj data :guilabel:`Typ`. Endast attributen :guilabel:`Decimal number`, "
+":guilabel:`Whole number`, :guilabel:`Text data`, :guilabel:`Date` och "
+":guilabel:`Boolean` stöds."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:137
+msgid ""
+"Depending on the selected data format, enter the :guilabel:`Length` and "
+":guilabel:`Precision`."
+msgstr ""
+"Beroende på valt dataformat anger du :guilabel:`Längd` och "
+":guilabel:`Precision`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:147
+msgid "By default, a first integer ``id`` column is added but can be removed."
+msgstr ""
+"Som standard läggs en kolumn med första heltalet ``id`` till, men den kan "
+"tas bort."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:154
+msgid "Creating a new SpatiaLite layer"
+msgstr "Skapa ett nytt SpatiaLite-lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:156
+msgid ""
+"To create a new SpatiaLite layer, press the |newSpatiaLiteLayer| "
+":menuselection:`New SpatiaLite Layer...` button in the :menuselection:`Layer"
+" --> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New SpatiaLite Layer` dialog will be displayed as "
+"shown in :numref:`Figure_create_spatialite`."
+msgstr ""
+"För att skapa ett nytt SpatiaLite-lager trycker du på knappen "
+"|newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` i menyn "
+":menuselection:`Layer --> Create Layer -->` eller i verktygsfältet "
+":guilabel:`Data Source Manager`. Dialogrutan :guilabel:`New SpatiaLite "
+"Layer` kommer att visas som visas i :numref:`Figure_create_spatialite`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:841
+msgid "newSpatiaLiteLayer"
+msgstr "newSpatiaLiteLayer"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:167
+msgid "Creating a New SpatiaLite layer dialog"
+msgstr "Skapa en dialogruta för ett nytt SpatiaLite-lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:169
+msgid ""
+"The first step is to indicate the database file location. This can be done "
+"by pressing the :guilabel:`...` button to the right of the "
+":guilabel:`Database` field and select an existing SpatiaLite file or create "
+"a new one. QGIS will automatically add the right extension to the name you "
+"provide."
+msgstr ""
+"Det första steget är att ange databasfilens plats. Detta kan göras genom att"
+" trycka på :guilabel:`...`-knappen till höger om :guilabel:`Database`-fältet"
+" och välja en befintlig SpatiaLite-fil eller skapa en ny. QGIS kommer "
+"automatiskt att lägga till rätt tillägg till det namn du anger."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:174
+msgid "Provide a name (:guilabel:`Layer name`) for the new layer"
+msgstr "Ange ett namn (:guilabel:`Layer name`) för det nya lagret"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:178
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:297
+msgid ""
+"Specify the coordinate reference system using the |setProjection| button."
+msgstr ""
+"Ange referenssystemet för koordinaterna med hjälp av knappen "
+"|setProjection|."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:183
+msgid ""
+"Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,"
+" :guilabel:`Whole number`, :guilabel:`Decimal number`, :guilabel:`Date` and "
+":guilabel:`Date time`."
+msgstr ""
+"Välj datatyp :guilabel:`Type`. Följande typer stöds: :guilabel:`Textdata`, "
+":guilabel:`Hela tal`, :guilabel:`Decimaltal`, :guilabel:`Datum` och "
+":guilabel:`Datumtid`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:194
+msgid ""
+"If desired, you can select |checkbox| :guilabel:`Create an autoincrementing "
+"primary key` under the :guilabel:`Advanced Options` section. You can also "
+"rename the :guilabel:`Geometry column` (``geometry`` by default)."
+msgstr ""
+"Om du vill kan du markera |checkbox| :guilabel:`Create an autoincrementing "
+"primary key` under avsnittet :guilabel:`Advanced Options`. Du kan också byta"
+" namn på kolumnen :guilabel:`Geometry` (``geometry`` som standard)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:823
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:198
+msgid ""
+"Further management of SpatiaLite layers can be done with :ref:`DB Manager "
+"<dbmanager>`."
+msgstr ""
+"Ytterligare hantering av SpatiaLite-lager kan göras med :ref:`DB Manager "
+"<dbmanager>`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:206
+msgid "Creating a new Mesh layer"
+msgstr "Skapa ett nytt Mesh-lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:208
+msgid ""
+"To create a new Mesh layer, press the |newMeshLayer| :menuselection:`New "
+"Mesh Layer...` button in the :menuselection:`Layer --> Create Layer -->` "
+"menu or from the :guilabel:`Data Source Manager` toolbar. The :guilabel:`New"
+" Mesh Layer` dialog will be displayed as shown in "
+":numref:`figure_create_mesh`."
+msgstr ""
+"För att skapa ett nytt Mesh-lager, tryck på knappen |newMeshLayer| "
+":menuselection:`New Mesh Layer...` i menyn :menuselection:`Layer --> Create "
+"Layer -->` eller från verktygsfältet :guilabel:`Data Source Manager`. "
+"Dialogrutan :guilabel:`New Mesh Layer` kommer att visas som visas i "
+":numref:`figure_create_mesh`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:839
+msgid "newMeshLayer"
+msgstr "newMeshLayer"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:220
+msgid "Creating a New Mesh layer dialog"
+msgstr "Skapa en dialogruta för ett nytt mesh-lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:222
+msgid ""
+"The first step is to indicate the mesh file location. This can be done by "
+"pressing the :guilabel:`...` button to the right of the :guilabel:`File "
+"name` field and select an existing mesh file or create a new one."
+msgstr ""
+"Det första steget är att ange platsen för mesh-filen. Detta kan göras genom "
+"att trycka på knappen :guilabel:`...` till höger om fältet "
+":guilabel:`Filnamn` och välja en befintlig mesh-fil eller skapa en ny."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:226
+msgid ""
+"Provide a name (:guilabel:`Layer name`), i.e. the name the layer is "
+"displayed with in the :guilabel:`Layers` panel"
+msgstr ""
+"Ange ett namn (:guilabel:`Layer name`), dvs. det namn som lagret visas med i"
+" panelen :guilabel:`Layers`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:228
+msgid ""
+"Select the :guilabel:`File format`: currently supported mesh file formats "
+"are ``2DM Mesh File (*.2dm)``, ``Selafin File (*.slf)`` and ``UGRID "
+"(*.nc)``."
+msgstr ""
+"Välj :guilabel:`File format`: för närvarande stöds följande mesh-filformat: "
+"``2DM Mesh File (*.2dm)``, ``Selafin File (*.slf)`` och ``UGRID (*.nc)``."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:230
+msgid ""
+"Indicate the :ref:`Coordinate Reference System <crs_selector>` to assign to "
+"the dataset"
+msgstr ""
+"Ange :ref:`Koordinatreferenssystem <crs_selector>` som ska tilldelas "
+"datasetet"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:232
+msgid ""
+"The above steps will generate an empty layer that you can afterwards "
+"digitize vertices and add dataset groups to. It's however also possible to "
+"initialize the layer with an existing mesh layer, i.e. populate the new "
+"layer with vertices or faces from the other. To do so:"
+msgstr ""
+"Ovanstående steg genererar ett tomt lager som du sedan kan digitalisera "
+"vertikaler och lägga till datasetgrupper i. Det är dock också möjligt att "
+"initiera lagret med ett befintligt mesh-lager, dvs. fylla det nya lagret med"
+" vertikaler eller ytor från det andra lagret. För att göra detta:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:238
+msgid "Check |checkbox| :guilabel:`Initialize Mesh using`"
+msgstr "Check |checkbox| :guilabel:`Initialisera nät med hjälp av`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:239
+msgid ""
+"and select either a :guilabel:`Mesh from the current project` or "
+":guilabel:`Mesh from a file`. Informations on the selected mesh file are "
+"displayed for checkup."
+msgstr ""
+"och välj antingen en :guilabel:`Mesh från det aktuella projektet` eller "
+":guilabel:`Mesh från en fil`. Information om den valda mesh-filen visas för "
+"kontroll."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:243
+msgid ""
+"Note that only the frame of the mesh layer is transferred to the new layer; "
+"their datasets are not copied."
+msgstr ""
+"Observera att endast ramen för mesh-lagret överförs till det nya lagret; "
+"deras dataset kopieras inte."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:251
+msgid "Creating a new GPX layer"
+msgstr "Skapa ett nytt GPX-lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:253
+msgid "To create a new GPX file:"
+msgstr "Så här skapar du en ny GPX-fil:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:255
+msgid ""
+"Select :menuselection:`Create Layer -->` |newGpx| :menuselection:`New GPX "
+"Layer...` from the :menuselection:`Layer` menu."
+msgstr ""
+"Välj :menuselection:`Create Layer -->` |newGpx| :menuselection:`New GPX "
+"Layer...` från menyn :menuselection:`Layer`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:837
+msgid "newGpx"
+msgstr "newGpx"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:257
+msgid ""
+"In the dialog, choose where to save the new file, name it and press "
+":guilabel:`Save`."
+msgstr ""
+"I dialogrutan väljer du var du vill spara den nya filen, namnger den och "
+"trycker på :guilabel:`Save`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:258
+msgid "Three new layers are added to the :guilabel:`Layers Panel`:"
+msgstr "Tre nya lager läggs till i :guilabel:`Layers Panel`:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:260
+msgid ""
+"a point layer to digitize locations (``waypoints``) with fields storing the "
+"name, elevation, comment, description, source, url and url name"
+msgstr ""
+"ett punktlager för att digitalisera platser (``waypoints``) med fält som "
+"lagrar namn, höjd, kommentar, beskrivning, källa, webbadress och "
+"webbadressnamn"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:262
+msgid ""
+"a line layer to digitize sequences of locations that make up a planned route"
+" (``routes``) with fields storing the name, symbol, number, comment, "
+"description, source, url, url name"
+msgstr ""
+"ett linjeskikt för att digitalisera sekvenser av platser som utgör en "
+"planerad rutt (``routes``) med fält som lagrar namn, symbol, nummer, "
+"kommentar, beskrivning, källa, url, url-namn"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:265
+msgid ""
+"and a line layer to track the receiver’s movement over time (``tracks``) "
+"with fields storing the name, symbol, number, comment, description, source, "
+"url, url name."
+msgstr ""
+"och ett linjelager för att spåra mottagarens rörelse över tiden (``spår``) "
+"med fält som lagrar namn, symbol, nummer, kommentar, beskrivning, källa, "
+"webbadress, webbadressnamn."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:268
+msgid ""
+"You can now edit any of them as described in section "
+":ref:`sec_edit_existing_layer`."
+msgstr ""
+"Du kan nu redigera vilket som helst av dem enligt beskrivningen i avsnitt "
+":ref:`sec_edit_existing_layer`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:274
+msgid "Creating a new Temporary Scratch Layer"
+msgstr "Skapa ett nytt temporärt skrapskikt"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:276
+msgid ""
+"Temporary Scratch Layers are in-memory layers, meaning that they are not "
+"saved on disk and will be discarded when QGIS is closed. They can be handy "
+"for storing features you temporarily need or as intermediate layers during "
+"geoprocessing operations."
+msgstr ""
+"Temporary Scratch Layers är minneslager, vilket innebär att de inte sparas "
+"på disk och kommer att kasseras när QGIS stängs. De kan vara praktiska för "
+"att lagra funktioner som du behöver tillfälligt eller som mellanlager under "
+"geobearbetning."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:281
+msgid ""
+"To create a new Temporary Scratch layer, choose the |createMemory| "
+":menuselection:`New Temporary Scratch Layer...` entry in the "
+":menuselection:`Layer --> Create Layer -->` menu or in the :guilabel:`Data "
+"Source Manager` toolbar. The :guilabel:`New Temporary Scratch Layer` dialog "
+"will be displayed as shown in :numref:`figure_create_temporary`. Then:"
+msgstr ""
+"För att skapa ett nytt Temporary Scratch-lager, välj posten |createMemory| "
+":menuselection:`New Temporary Scratch Layer...` i menyn "
+":menuselection:`Layer --> Create Layer -->` eller i verktygsfältet "
+":guilabel:`Data Source Manager`. Dialogrutan :guilabel:`New Temporary "
+"Scratch Layer` kommer att visas som visas i "
+":numref:`figure_create_temporary`. Och så vidare:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:825
+msgid "createMemory"
+msgstr "createMemory"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:288
+msgid "Provide the :guilabel:`Layer name`"
+msgstr "Ange :guilabel:`Skiktets namn`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:289
+msgid "Select the :guilabel:`Geometry type`. Here you can create a:"
+msgstr "Välj :guilabel:`Geometri typ`. Här kan du skapa en:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:291
+msgid "``No geometry`` type layer, served as simple table,"
+msgstr "skikt av typen ``No geometry``, används som enkelt bord,"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:292
+msgid "``Point`` or ``MultiPoint`` layer,"
+msgstr "``Point`` eller ``MultiPoint`` lager,"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:293
+msgid "``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,"
+msgstr ""
+"``LineString/CompoundCurve`` eller ``MultiLineString/MultiCurve`` lager,"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:294
+msgid "``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer."
+msgstr "``Polygon/CurvePolygon`` eller ``MultiPolygon/MultiSurface`` lager."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:295
+msgid ""
+"For geometric types, specify the dimensions of the dataset: check whether it"
+" should :guilabel:`Include Z dimension` and/or :guilabel:`Include M values`"
+msgstr ""
+"För geometriska typer anger du datauppsättningens dimensioner: kontrollera "
+"om den ska :guilabel:`Include Z dimension` och/eller :guilabel:`Include M "
+"values`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:298
+msgid ""
+"Add fields to the layer. Note that unlike many formats, temporary layers can"
+" be created without any fields. This step is thus optional."
+msgstr ""
+"Lägg till fält i lagret. Observera att till skillnad från många andra format"
+" kan tillfälliga lager skapas utan några fält. Detta steg är alltså "
+"valfritt."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:302
+msgid ""
+"Select the data :guilabel:`Type`: :guilabel:`Text`, :guilabel:`Whole "
+"number`, :guilabel:`Decimal number`, :guilabel:`Boolean`, :guilabel:`Date`, "
+":guilabel:`Time`, :guilabel:`Date & Time` and :guilabel:`Binary (BLOB)` are "
+"supported."
+msgstr ""
+"Välj data :guilabel:`Type`: :guilabel:`Text`, :guilabel:`Whole number`, "
+":guilabel:`Decimal number`, :guilabel:`Boolean`, :guilabel:`Date`, "
+":guilabel:`Time`, :guilabel:`Date & Time` och :guilabel:`Binary (BLOB)` "
+"stöds."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:306
+msgid ""
+"Depending on the selected data format, enter the :guilabel:`Length` and "
+":guilabel:`Precision`"
+msgstr ""
+"Beroende på det valda dataformatet anger du :guilabel:`Längd` och "
+":guilabel:`Precision`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:309
+msgid "Repeat the steps above for each field you need to add"
+msgstr "Upprepa stegen ovan för varje fält som du behöver lägga till"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:312
+msgid ""
+"Once you are happy with the settings, click :guilabel:`OK`. QGIS will add "
+"the new layer to the :guilabel:`Layers` panel, and you can edit it as "
+"described in section :ref:`sec_edit_existing_layer`."
+msgstr ""
+"När du är nöjd med inställningarna klickar du på :guilabel:`OK`. QGIS lägger"
+" till det nya lagret i panelen :guilabel:`Layers`, och du kan redigera det "
+"enligt beskrivningen i avsnitt :ref:`sec_edit_existing_layer`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:322
+msgid "Creating a new Temporary Scratch layer dialog"
+msgstr "Skapa en ny dialogruta för lagret Temporary Scratch"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:325
+msgid ""
+"You can also create prepopulated temporary scratch layers using e.g. the "
+"clipboard (see :ref:`paste_into_layer`) or as a result of a :ref:`Processing"
+" algorithm <processing_algs>`."
+msgstr ""
+"Du kan också skapa förfyllda tillfälliga scratch-lager med hjälp av t.ex. "
+"urklipp (se :ref:`paste_into_layer`) eller som ett resultat av en "
+":ref:`Processing algorithm <processing_algs>`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:329
+msgid "**Permanently store a memory layer on disk**"
+msgstr "**Permanent lagring av ett minneslager på disk**"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:331
+msgid ""
+"To avoid data loss when closing a project with temporary scratch layers, you"
+" can save these layers to any vector format supported by QGIS:"
+msgstr ""
+"För att undvika dataförlust när du avslutar ett projekt med tillfälliga "
+"scratch-lager kan du spara dessa lager i valfritt vektorformat som stöds av "
+"QGIS:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:334
+msgid "clicking the |indicatorMemory| indicator icon next to the layer;"
+msgstr "genom att klicka på indikatorikonen |indicatorMemory| bredvid lagret;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:827
+msgid "indicatorMemory"
+msgstr "indicatorMemory"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:335
+msgid ""
+"selecting the :guilabel:`Make permanent` entry in the layer contextual menu;"
+msgstr ""
+"genom att välja :guilabel:`Make permanent` i skiktets kontextuella meny;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:336
+msgid ""
+"using the :menuselection:`Export -->` entry from the contextual menu or the "
+":menuselection:`Layer --> Save As...` menu."
+msgstr ""
+"med hjälp av :menuselection:`Export -->` i snabbmenyn eller "
+":menuselection:`Layer --> Save As...` i menyn."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:339
+msgid ""
+"Each of these commands opens the :guilabel:`Save Vector Layer as` dialog "
+"described in the :ref:`general_saveas` section and the saved file replaces "
+"the temporary one in the :guilabel:`Layers` panel."
+msgstr ""
+"Alla dessa kommandon öppnar dialogrutan :guilabel:`Save Vector Layer as` som"
+" beskrivs i avsnittet :ref:`general_saveas` och den sparade filen ersätter "
+"den tillfälliga filen i panelen :guilabel:`Layers`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:347
+msgid "Creating new layers from an existing layer"
+msgstr "Skapa nya lager från ett befintligt lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:349
+msgid ""
+"Layers (raster, vector and point cloud) can be saved in a different format "
+"and/or reprojected to a different coordinate reference system (CRS) using "
+"the :menuselection:`Layer --> Save As...` menu or right-clicking on the "
+"layer in the :guilabel:`Layers panel` and selecting:"
+msgstr ""
+"Lager (raster, vektor och punktmoln) kan sparas i ett annat format och/eller"
+" omprojiceras till ett annat koordinatreferenssystem (CRS) med hjälp av "
+"menyn :menuselection:`Layer --> Save As...` eller genom att högerklicka på "
+"lagret i :guilabel:`Layers panel` och välja:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:354
+msgid ""
+":menuselection:`Export --> Save As...` for raster and point cloud layers"
+msgstr ""
+":menuselection:`Export --> Spara som...` för raster- och punktmolnslager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:355
+msgid ""
+":menuselection:`Export --> Save Features As...` or :menuselection:`Export "
+"--> Save Selected Features As...` for vector layers."
+msgstr ""
+":menuselection:`Export --> Save Features As...` eller :menuselection:`Export"
+" --> Save Selected Features As...` för vektorlager."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:358
+msgid ""
+"Drag and drop the layer from the layer tree to the PostGIS entry in the "
+":guilabel:`Browser Panel`. Note that you must have a PostGIS connection in "
+"the :guilabel:`Browser Panel`."
+msgstr ""
+"Dra och släpp lagret från lagerträdet till PostGIS-posten i "
+":guilabel:`Browser Panel`. Observera att du måste ha en PostGIS-anslutning i"
+" :guilabel:`Browser Panel`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:363
+msgid "Common parameters"
+msgstr "Vanliga parametrar"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:365
+msgid ""
+"The :guilabel:`Save Layer as...` dialog shows several parameters to change "
+"the behavior when saving the layer. Among the common parameters for raster "
+"and vector are:"
+msgstr ""
+"Dialogrutan :guilabel:`Save Layer as...` visar flera parametrar för att "
+"ändra beteendet när lagret sparas. Några av de vanligaste parametrarna för "
+"raster och vektor är:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:369
+msgid ""
+":guilabel:`File name`: the location of the file on the disk. It can refer to"
+" the output layer or to a container that stores the layer (for example "
+"database-like formats such as GeoPackage, SpatiaLite or Open Document "
+"Spreadsheets)."
+msgstr ""
+":guilabel:`Filnamn`: Filens plats på hårddisken. Den kan hänvisa till "
+"utdataskiktet eller till en behållare som lagrar skiktet (t.ex. "
+"databasliknande format som GeoPackage, SpatiaLite eller Open Document "
+"Spreadsheets)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:373
+msgid ":guilabel:`CRS`: can be changed to reproject the data"
+msgstr ":guilabel:`CRS`: kan ändras för att återföra data"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:374
+msgid ""
+":guilabel:`Extent`: restricts the extent of the input that is to be exported"
+" using the :ref:`extent_selector <extent_selector>` widget"
+msgstr ""
+":guilabel:`Extent`: begränsar omfattningen av den indata som ska exporteras "
+"med hjälp av widgeten :ref:`extent_selector <extent_selector>`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:376
+msgid ":guilabel:`Add saved file to map`: to add the new layer to the canvas"
+msgstr ""
+":guilabel:`Lägg till sparad fil på kartan`: för att lägga till det nya "
+"lagret på duken"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:378
+msgid "However, some parameters are specific to certain formats:"
+msgstr "Vissa parametrar är dock specifika för vissa format:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:381
+msgid "Raster specific parameters"
+msgstr "Raster-specifika parametrar"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:383
+msgid ""
+"Depending on the format of export, some of these options may not be "
+"available:"
+msgstr ""
+"Beroende på exportformat är det möjligt att vissa av dessa alternativ inte "
+"är tillgängliga:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:385
+msgid ":guilabel:`Output mode` (it can be **raw data** or **rendered image**)"
+msgstr ""
+":guilabel:`Output mode` (det kan vara **raw data** eller **renderad bild**)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:386
+msgid ""
+":guilabel:`Format`: exports to any raster format GDAL can write to, such as "
+"GeoTiff, GeoPackage, MBTiles, Geospatial PDF, SAGA GIS Binary Grid, "
+"Intergraph Raster, ESRI .hdr Labelled..."
+msgstr ""
+":guilabel:`Format`: exporterar till alla rasterformat som GDAL kan skriva "
+"till, t.ex. GeoTiff, GeoPackage, MBTiles, Geospatial PDF, SAGA GIS Binary "
+"Grid, Intergraph Raster, ESRI .hdr Labelled..."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:389
+msgid ":guilabel:`Resolution`"
+msgstr ":guilabel:`Resolution`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:390
+msgid ""
+":guilabel:`Create Options`: use advanced options (file compression, block "
+"sizes, colorimetry...) when generating files, either from the "
+":ref:`predefined create profiles <gdal_createoptions>` related to the output"
+" format or by setting each parameter."
+msgstr ""
+":guilabel:`Create Options`: använd avancerade alternativ (filkomprimering, "
+"blockstorlekar, kolorimetri ...) när du genererar filer, antingen från "
+":ref:``fördefinierade skapande profiler <gdal_createoptions>` relaterade "
+"till utdataformatet eller genom att ställa in varje parameter."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:394
+msgid ":guilabel:`Pyramids` creation"
+msgstr ":guilabel:`Pyramider` skapelse"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:395
+msgid ""
+":guilabel:`VRT Tiles` in case you opted to |checkbox| :guilabel:`Create VRT`"
+msgstr ""
+":guilabel:`VRT Tiles` ifall du valde att |checkbox| :guilabel:`Create VRT`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:396
+msgid ":guilabel:`No data values`"
+msgstr ":guilabel:``Inga datavärden``"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:403
+msgid "Saving as a new raster layer"
+msgstr "Spara som ett nytt rasterlager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:406
+msgid "Vector specific parameters"
+msgstr "Vektorspecifika parametrar"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:408
+msgid ""
+"Depending on the format of export, some of these options may be available:"
+msgstr ""
+"Beroende på exportformat kan några av dessa alternativ vara tillgängliga:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:410
+msgid ""
+":guilabel:`Format`: exports to any vector format GDAL can write to, such as "
+"GeoPackage, GML, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or "
+"MIF, SpatiaLite, CSV, KML, ODS, ..."
+msgstr ""
+":guilabel:`Format`: exporterar till alla vektorformat som GDAL kan skriva "
+"till, t.ex. GeoPackage, GML, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, "
+"Mapinfo TAB eller MIF, SpatiaLite, CSV, KML, ODS, ..."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:413
+msgid ""
+":guilabel:`Layer name`: available when the :guilabel:`File name` refers to a"
+" container-like format, this entry represents the output layer."
+msgstr ""
+":guilabel:`Layer name`: tillgänglig när :guilabel:`File name` hänvisar till "
+"ett containerliknande format, denna post representerar utmatningslagret."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:415
+msgid ":guilabel:`Encoding`"
+msgstr ":guilabel:`Kodning`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:416
+msgid ":guilabel:`Save only selected features`"
+msgstr ":guilabel:`Spara endast utvalda funktioner`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:417
+msgid ""
+":guilabel:`Select fields to export and their export options`: provides means"
+" to export fields with custom names and :ref:`form widget <configure_field>`"
+" settings:"
+msgstr ""
+":guilabel:`Välj fält som ska exporteras och deras exportalternativ`: ger "
+"möjlighet att exportera fält med anpassade namn och :ref:`form widget "
+"<configure_field>`-inställningar:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:421
+msgid ""
+"Check rows under the :guilabel:`Name` column to choose fields to keep in the"
+" output layer, or press :guilabel:`Select All` or :guilabel:`Deselect All` "
+"buttons"
+msgstr ""
+"Markera raderna under kolumnen :guilabel:`Name` för att välja fält som ska "
+"behållas i utdataskiktet, eller tryck på knapparna :guilabel:`Select All` "
+"eller :guilabel:`Deselect All`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:424
+msgid ""
+"Toggle the :guilabel:`Use aliases for exported name` checkbox to populate "
+"the :guilabel:`Export name` column with corresponding field aliases or reset"
+" to the original field name. Double-clicking a cell will also edit the name."
+msgstr ""
+"Aktivera kryssrutan :guilabel:`Use aliases for exported name` för att fylla "
+"i kolumnen :guilabel:`Export name` med motsvarande fältalias eller "
+"återställa till det ursprungliga fältnamnet. Om du dubbelklickar på en cell "
+"redigeras även namnet."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:428
+msgid ""
+"Depending on whether attribute form custom widgets are in use, you can "
+":guilabel:`Replace all selected raw field values by displayed values`. E.g. "
+"if a ``value map`` widget is applied to a field, the output layer will "
+"contain the description values instead of the original values. The "
+"replacement can also be done on a field by field basis, in the "
+":guilabel:`Replace with displayed values` column."
+msgstr ""
+"Beroende på om widgetar för attributformulär används kan du "
+":guilabel:`ersätta alla valda råa fältvärden med visade värden`. Om t.ex. en"
+" widget för \"värdekarta\" används för ett fält kommer utdataskiktet att "
+"innehålla beskrivningsvärdena i stället för de ursprungliga värdena. "
+"Ersättningen kan också göras fält för fält, i kolumnen :guilabel:`Replace "
+"with displayed values` (Ersätt med visade värden)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:435
+msgid ""
+":guilabel:`Persist layer metadata`: ensures that any layer :ref:`metadata "
+"<vectormetadatamenu>` present in the source layer will be copied and stored:"
+msgstr ""
+":guilabel:`Persist layer metadata`: säkerställer att alla lager "
+":ref:`metadata <vectormetadatamenu>` som finns i källlagret kopieras och "
+"lagras:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:438
+msgid "in the newly created layer, if the output is of GeoPackage format"
+msgstr "i det nyskapade skiktet, om utdata är i GeoPackage-format"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:439
+msgid ""
+"as a :file:`.qmd` file along with the output layer, for other formats. Note "
+"that file-based formats supporting more than one dataset (e.g. SpatiaLite, "
+"DXF,...) may have unintended behavior."
+msgstr ""
+"som en :file:`.qmd`-fil tillsammans med utdataskiktet, för andra format. "
+"Observera att filbaserade format som stöder mer än en dataset (t.ex. "
+"SpatiaLite, DXF, ...) kan ha ett oavsiktligt beteende."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:442
+msgid ""
+":guilabel:`Symbology export`: can be used mainly for DXF export and for all "
+"file formats who manage OGR feature styles (see note below) as DXF, KML, tab"
+" file formats:"
+msgstr ""
+":guilabel:`Symbology export`: kan användas främst för DXF-export och för "
+"alla filformat som hanterar OGR-funktionsstilar (se anmärkning nedan) som "
+"DXF-, KML-, tab-filformat:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:446
+msgid "**No symbology**: default style of the application that reads the data"
+msgstr "**Ingen symbologi**: standardstil för den applikation som läser data"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:447
+msgid ""
+"**Feature symbology**: save style with OGR Feature Styles (see note below)"
+msgstr ""
+"**Feature symbology**: spara stil med OGR Feature Styles (se anmärkning "
+"nedan)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:448
+msgid ""
+"**Symbol Layer symbology**: save with OGR Feature Styles (see note below) "
+"but export the same geometry multiple times if there are multiple symbology "
+"symbol layers used"
+msgstr ""
+"**Symbolskiktssymbologi**: spara med OGR Feature Styles (se anmärkning "
+"nedan) men exportera samma geometri flera gånger om det finns flera "
+"symbolskiktssymboler som används"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:451
+msgid "A **Scale** value can be applied to the latest options"
+msgstr "Ett **Scale**-värde kan tillämpas på de senaste alternativen"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:455
+msgid ""
+"*OGR Feature Styles* are a way to store style directly in the data as a "
+"hidden attribute. Only some formats can handle this kind of information. "
+"KML, DXF and TAB file formats are such formats. For advanced details, you "
+"can read the `OGR Feature Styles specification "
+"<https://gdal.org/en/latest/user/ogr_feature_style.html>`_ document."
+msgstr ""
+"*OGR Feature Styles* är ett sätt att lagra stil direkt i data som ett dolt "
+"attribut. Endast vissa format kan hantera den här typen av information. "
+"KML-, DXF- och TAB-filformat är sådana format. För avancerade detaljer kan "
+"du läsa dokumentet `OGR Feature Styles specification "
+"<https://gdal.org/en/latest/user/ogr_feature_style.html>`_."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:461
+msgid ""
+":guilabel:`Geometry`: you can configure the geometry capabilities of the "
+"output layer"
+msgstr ""
+":guilabel:`Geometry`: du kan konfigurera geometrifunktionerna för "
+"utdataskiktet"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:464
+msgid ""
+":guilabel:`geometry type`: keeps the original geometry of the features when "
+"set to **Automatic**, otherwise removes or overrides it with any type. You "
+"can add an empty geometry column to an attribute table and remove the "
+"geometry column of a spatial layer."
+msgstr ""
+":guilabel:`geometry type`: behåller den ursprungliga geometrin för objekten "
+"när den är inställd på **Automatic**, annars tas den bort eller ersätts med "
+"valfri typ. Du kan lägga till en tom geometrikolumn i en attributtabell och "
+"ta bort geometrikolumnen i ett rumsligt skikt."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:468
+msgid ""
+":guilabel:`Force multi-type`: forces creation of multi-geometry features in "
+"the layer."
+msgstr ""
+":guilabel:`Force multi-type`: tvingar fram skapandet av multigeometriska "
+"funktioner i skiktet."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:470
+msgid ":guilabel:`Include z-dimension` to geometries."
+msgstr ":guilabel:`Inkludera z-dimension` till geometrier."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:474
+msgid ""
+"Overriding layer geometry type makes it possible to do things like save a "
+"geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any type "
+"of geometry (point, line, polygon), so that geometries can then be manually "
+"added to rows with the |addPart| :sup:`Add Part` tool."
+msgstr ""
+"Genom att åsidosätta skiktets geometrityp kan du t.ex. spara en geometrilös "
+"tabell (t.ex. :file:`.csv`-fil) i en shapefil MED valfri geometrityp (punkt,"
+" linje, polygon), så att geometrier sedan kan läggas till manuellt i raderna"
+" med verktyget |addPart| :sup:`Add Part`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:819
+msgid "addPart"
+msgstr "addPart"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:479
+msgid ""
+":guilabel:`Datasource Options`, :guilabel:`Layer Options` or "
+":guilabel:`Custom Options` which allow you to configure advanced parameters "
+"depending on the output format. Some are described in "
+":ref:`supported_format` but for full details, see the `GDAL "
+"<https://gdal.org/en/latest>`_ driver documentation. Each file format has "
+"its own custom parameters, e.g. for the ``GeoJSON`` format have a look at "
+"the `GDAL GeoJSON "
+"<https://gdal.org/en/latest/drivers/vector/geojson.html#layer-creation-"
+"options>`_ documentation."
+msgstr ""
+":guilabel:`Datasource Options`, :guilabel:`Layer Options` eller "
+":guilabel:`Custom Options` som gör att du kan konfigurera avancerade "
+"parametrar beroende på utdataformat. Vissa beskrivs i "
+":ref:`supported_format` men för fullständiga detaljer, se dokumentationen "
+"för drivrutinen `GDAL <https://gdal.org/en/latest>`_. Varje filformat har "
+"sina egna anpassade parametrar, t.ex. för formatet ``GeoJSON``, se "
+"dokumentationen för `GDAL GeoJSON "
+"<https://gdal.org/en/latest/drivers/vector/geojson.html#layer-creation-"
+"options>`_."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:493
+msgid "Saving as a new vector layer"
+msgstr "Spara som ett nytt vektorlager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:497
+msgid ""
+"When saving a vector layer into an existing file, depending on the "
+"capabilities of the output format (Geopackage, SpatiaLite, FileGDB...), the "
+"user can decide whether to:"
+msgstr ""
+"När du sparar ett vektorlager i en befintlig fil kan användaren, beroende på"
+" kapaciteten i utdataformatet (Geopackage, SpatiaLite, FileGDB ...), "
+"bestämma om den ska:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:501
+msgid "overwrite the whole file"
+msgstr "skriva över hela filen"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:502
+msgid "overwrite only the target layer (the layer name is configurable)"
+msgstr "skriva över endast målskiktet (skiktnamnet är konfigurerbart)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:503
+msgid "append features to the existing target layer"
+msgstr "lägga till funktioner till det befintliga målskiktet"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:504
+msgid "append features, add new fields if there are any."
+msgstr "lägg till funktioner, lägg till nya fält om det finns några."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:506
+msgid ""
+"For formats like ESRI Shapefile, MapInfo .tab, feature append is also "
+"available."
+msgstr ""
+"För format som ESRI Shapefile, MapInfo .tab är det också möjligt att lägga "
+"till funktioner."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:509
+msgid "Point Cloud specific parameters"
+msgstr "Specifika parametrar för punktmoln"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:511
+msgid ""
+"Similar to raster and vector layers, point cloud layers can be saved in a "
+"different format and/or reprojected to a different coordinate reference "
+"system (CRS). This allows you to export a point cloud layer to vector or "
+"point cloud formats. Current supported formats are: Temporary scratch "
+"(memory layer), GeoPackage, ESRI Shapefile, DXF and LAS/LAZ point cloud. In "
+"addition to the common parameters listed above, exporting point cloud layers"
+" includes the following options:"
+msgstr ""
+"På samma sätt som raster- och vektorlager kan punktmolnslager sparas i ett "
+"annat format och/eller omprojiceras till ett annat koordinatreferenssystem "
+"(CRS). Detta gör att du kan exportera ett punktmolnsskikt till vektor- eller"
+" punktmolnsformat. Format som stöds för närvarande är: Temporary scratch "
+"(minneslager), GeoPackage, ESRI Shapefile, DXF och LAS/LAZ punktmoln. "
+"Förutom de vanliga parametrarna som anges ovan innehåller export av "
+"punktmolnslager följande alternativ:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:518
+msgid ""
+":guilabel:`Filter by Polygon Layer`: Allows you to filter the point cloud "
+"data based on a polygon layer."
+msgstr ""
+":guilabel:`Filtrera efter polygonskikt`: Gör att du kan filtrera "
+"punktmolnsdata baserat på ett polygonlager."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:519
+msgid ""
+":guilabel:`Elevation Range`: Enables filtering of the point cloud data based"
+" on a specified Z range."
+msgstr ""
+":guilabel:`Elevation Range`: Möjliggör filtrering av punktmolnsdata baserat "
+"på ett specificerat Z-intervall."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:520
+msgid ""
+":guilabel:`Limit number of points`: Provides an option to limit the number "
+"of points exported from the point cloud layer."
+msgstr ""
+":guilabel:`Begränsa antalet punkter`: Ger ett alternativ för att begränsa "
+"antalet punkter som exporteras från punktmolnslagret."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:527
+msgid "Saving a point cloud layer as a new layer"
+msgstr "Spara ett punktmolnslager som ett nytt lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:533
+msgid "Creating new DXF files"
+msgstr "Skapa nya DXF-filer"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:535
+msgid ""
+"Besides the :guilabel:`Save As...` dialog which provides options to export a"
+" single layer to another format, including :file:`*.DXF`, QGIS provides "
+"another tool to export multiple layers as a single DXF layer. It's "
+"accessible in the :menuselection:`Project --> Import/Export --> Export "
+"Project to DXF...` menu."
+msgstr ""
+"Förutom dialogen :guilabel:`Save As...` som innehåller alternativ för att "
+"exportera ett enskilt lager till ett annat format, inklusive :file:`*.DXF`, "
+"innehåller QGIS ett annat verktyg för att exportera flera lager som ett enda"
+" DXF-lager. Det finns tillgängligt i menyn :menuselection:`Project --> "
+"Import/Export --> Export Project to DXF...`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:545
+msgid "Exporting a project to DXF dialog"
+msgstr "Exportera ett projekt till DXF-dialogrutan"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:547
+msgid "In the :guilabel:`DXF Export` dialog:"
+msgstr "I dialogrutan :guilabel:`DXF Export`:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:549
+msgid "Provide the destination file."
+msgstr "Ange destinationsfilen."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:550
+msgid ""
+"Choose the symbology mode and scale (see the :ref:`OGR Feature Styles "
+"<ogr_features_note>` note), if applicable."
+msgstr ""
+"Välj symbologiläge och skala (se anmärkningen :ref:`OGR Feature Styles "
+"<ogr_features_note>`), om tillämpligt."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:552
+msgid "Select the data :guilabel:`Encoding`."
+msgstr "Välj data :guilabel:`Encoding`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:553
+msgid ""
+"Select the :guilabel:`CRS` to apply: the selected layers will be reprojected"
+" to the given CRS."
+msgstr ""
+"Välj den :guilabel:`CRS` som ska tillämpas: de valda lagren kommer att "
+"reprojiceras till den angivna CRS."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:555
+msgid ""
+"Select the layers to include in the DXF files either by checking them in the"
+" table widget or automatically picking them from an existing :ref:`map theme"
+" <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect All` "
+"buttons can help to quickly set the data to export."
+msgstr ""
+"Välj de lager som ska ingå i DXF-filerna antingen genom att markera dem i "
+"tabellwidgeten eller genom att automatiskt välja dem från ett befintligt "
+":ref:`map theme <map_themes>`. Knapparna :guilabel:`Select All` och "
+":guilabel:`Deselect All` kan hjälpa till att snabbt ställa in vilka data som"
+" ska exporteras."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:560
+msgid "For each layer, you can:"
+msgstr "För varje lager kan du:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:562
+msgid ""
+"Override the output layer name without altering the original project layer. "
+"For this, click on the :guilabel:`Layer` name in the dialog and write the "
+"output name to use."
+msgstr ""
+"Åsidosätt namnet på utdatalagret utan att ändra det ursprungliga "
+"projektlagret. Klicka på :guilabel:`Layer`-namnet i dialogrutan och skriv "
+"det utdatanamn som ska användas."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:566
+msgid ""
+":guilabel:`Output layer attribute`: Choose whether to export all the "
+"features in a single DXF layer or rely on a field whose values are used to "
+"split the features into layers in the DXF output. In the latter case, each "
+"layer will take its name from the corresponding field value."
+msgstr ""
+":guilabel:`Attribut för utmatningsskikt`: Välj om du vill exportera alla "
+"funktioner i ett enda DXF-lager eller förlita dig på ett fält vars värden "
+"används för att dela upp funktionerna i lager i DXF-utdata. I det senare "
+"fallet kommer varje lager att få sitt namn från motsvarande fältvärde."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:570
+msgid ":guilabel:`Allow data defined symbol blocks`:"
+msgstr ":guilabel:`Tillåt datadefinierade symbolblock`:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:571
+msgid ""
+":guilabel:`Maximum number of symbol blocks`: creates symbol blocks up to the"
+" specified limit, starting with the ones containing the highest number of "
+"references. The other symbols are written as they are. ``-1`` means no "
+"limitation."
+msgstr ""
+":guilabel:`Maximalt antal symbolblock`: skapar symbolblock upp till den "
+"angivna gränsen och börjar med de block som innehåller flest referenser. De "
+"andra symbolerna skrivs som de är. ``-1`` betyder ingen begränsning."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:575
+msgid "Optionally, you can also choose to:"
+msgstr "Alternativt kan du också välja att:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:577
+msgid ""
+"|unchecked| :guilabel:`Use the layer title as name if set` instead of the "
+"layer name itself: the title is taken from the :ref:`metadata "
+"<vectormetadatamenu>` or :ref:`server <vectorservermenu>` properties of the "
+"layer;"
+msgstr ""
+"|ej markerad| :guilabel:`Använd skiktets titel som namn om det är inställt` "
+"istället för själva skiktnamnet: titeln hämtas från skiktets egenskaper "
+":ref:`metadata <vectormetadatamenu>` eller :ref:`server <vectorservermenu>`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:847
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:580
+msgid ""
+"|unchecked| :guilabel:`Export features intersecting the current map extent`;"
+msgstr ""
+"|ej markerad| :guilabel:`Exportera funktioner som skär den aktuella "
+"kartutbredningen`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:581
+msgid ""
+"|unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;"
+msgstr ""
+"|ej markerad| :guilabel:`Tvinga fram 2d-utdata (t.ex. för att stödja "
+"polylinjebredd)`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:582
+msgid ""
+"|checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements;"
+msgstr ""
+"|checkbox| :guilabel:`Exportera etikett som MTEXT-element` eller TEXT-"
+"element;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:583
+msgid "|unchecked| :guilabel:`Use only selected features`;"
+msgstr "|ej markerad| :guilabel:`Använd endast utvalda funktioner`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:584
+msgid ""
+"|unchecked| :guilabel:`Export lines with zero width`: all the lines are "
+"exported with minimal width ``0`` (hairline) if enabled. This helps keep the"
+" lines minimal in the file regardless of the zoom level, and can be handy "
+"for doing further CAD-editing with the exported dxf, especially if there are"
+" many features next to each other on the map."
+msgstr ""
+"|ej markerad| :guilabel:`Exportera linjer med noll bredd`: alla linjer "
+"exporteras med minimal bredd ``0`` (hårlinje) om den är aktiverad. Detta "
+"hjälper till att hålla linjerna minimala i filen oavsett zoomnivå, och kan "
+"vara praktiskt för att göra ytterligare CAD-redigering med den exporterade "
+"dxf, särskilt om det finns många funktioner bredvid varandra på kartan."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:592
+msgid "The precedence for defining the output layer name is as follows:"
+msgstr "Prioriteringen för att definiera namnet på utdataskiktet är följande:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:594
+msgid "The field value from :guilabel:`Output layer attribute`"
+msgstr "Fältvärdet från :guilabel:`Output layer attribute`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:595
+msgid "The overridden name in :guilabel:`Layer` column"
+msgstr "Det åsidosatta namnet i :guilabel:`Layer`-kolumnen"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:596
+msgid "The :guilabel:`Use the layer title as name if set` option"
+msgstr ""
+"Alternativet :guilabel:`Använd skiktets titel som namn om det är inställt"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:597
+msgid "The layer name"
+msgstr "Lagrets namn"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:599
+msgid ""
+"Current settings defined in the :guilabel:`DXF Export` dialog may be stored "
+"in an XML file for reusing them in other sessions. For this, the "
+":guilabel:`Settings` combo box has two options: :guilabel:`Load Settings "
+"from File...` and :guilabel:`Save Settings to File...`."
+msgstr ""
+"Aktuella inställningar som definieras i dialogrutan :guilabel:`DXF Export` "
+"kan lagras i en XML-fil så att de kan återanvändas i andra sessioner. För "
+"detta har kombinationsrutan :guilabel:`Settings` två alternativ: "
+":guilabel:`Load Settings from File...` och :guilabel:`Save Settings to "
+"File...`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:608
+msgid "Creating new layers from the clipboard"
+msgstr "Skapa nya lager från urklipp"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:610
+msgid ""
+"Features that are on the clipboard can be pasted into a new layer. To do "
+"this, Select some features, copy them to the clipboard, and then paste them "
+"into a new layer using :menuselection:`Edit --> Paste Features as -->` and "
+"choosing:"
+msgstr ""
+"Funktioner som finns i urklippet kan klistras in i ett nytt lager. Detta gör"
+" du genom att välja några funktioner, kopiera dem till urklippet och sedan "
+"klistra in dem i ett nytt lager med :menuselection:`Edit --> Paste Features "
+"as -->` och välja:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:614
+msgid ""
+":guilabel:`New Vector Layer...`: the :guilabel:`Save vector layer as...` "
+"dialog appears (see :ref:`general_saveas` for parameters)"
+msgstr ""
+":guilabel:`New Vector Layer...`: dialogrutan :guilabel:`Save vector layer "
+"as...` visas (se :ref:`general_saveas` för parametrar)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:616
+msgid ""
+"or :guilabel:`Temporary Scratch Layer...`: you need to provide a name for "
+"the layer"
+msgstr ""
+"eller :guilabel:`Temporary Scratch Layer...`: du måste ange ett namn för "
+"lagret"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:619
+msgid ""
+"A new layer, filled with selected features and their attributes is created "
+"(and added to map canvas)."
+msgstr ""
+"Ett nytt lager, fyllt med valda funktioner och deras attribut, skapas (och "
+"läggs till i kartbilden)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:622
+msgid ""
+"Creating layers from the clipboard is possible with features selected and "
+"copied within QGIS as well as features from another application, as long as "
+"their geometries are defined using well-known text (WKT)."
+msgstr ""
+"Det är möjligt att skapa lager från urklipp med objekt som markerats och "
+"kopierats i QGIS samt objekt från ett annat program, så länge deras "
+"geometrier definieras med hjälp av välkänd text (WKT)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:632
+msgid "Creating virtual layers"
+msgstr "Skapa virtuella lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:634
+msgid ""
+"A virtual layer is a special kind of vector layer. It allows you to define a"
+" layer as the result of an SQL query involving any number of other vector "
+"layers that QGIS is able to open. Virtual layers do not carry data by "
+"themselves and can be seen as views."
+msgstr ""
+"Ett virtuellt lager är en speciell typ av vektorlager. Det gör att du kan "
+"definiera ett lager som resultatet av en SQL-fråga som involverar ett "
+"valfritt antal andra vektorlager som QGIS kan öppna. Virtuella lager "
+"innehåller inte data i sig utan kan ses som vyer."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:640
+msgid "To create a virtual layer, open the virtual layer creation dialog by:"
+msgstr ""
+"För att skapa ett virtuellt lager öppnar du dialogrutan för skapande av "
+"virtuella lager:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:642
+msgid ""
+"choosing the |addVirtualLayer| :guilabel:`Add/Edit Virtual Layer` entry in "
+"the :menuselection:`Layer --> Add Layer -->` menu;"
+msgstr ""
+"välja posten |addVirtualLayer| :guilabel:`Add/Edit Virtual Layer` i menyn "
+":menuselection:`Layer --> Add Layer -->`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:821
+msgid "addVirtualLayer"
+msgstr "addVirtualLayer"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:644
+msgid ""
+"enabling the |addVirtualLayer| :guilabel:`Add Virtual Layer` tab in the "
+":guilabel:`Data Source Manager` dialog;"
+msgstr ""
+"aktivera fliken |addVirtualLayer| :guilabel:`Add Virtual Layer` i "
+"dialogrutan :guilabel:`Data Source Manager`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:646
+msgid "or using the :guilabel:`DB Manager` dialog tree."
+msgstr "eller med hjälp av dialogrutan :guilabel:`DB Manager`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:648
+msgid ""
+"The dialog allows you to specify a :guilabel:`Layer name` and an SQL "
+":guilabel:`Query`. The query can use the name (or id) of loaded vector "
+"layers as tables, as well as their field names as columns."
+msgstr ""
+"I dialogrutan kan du ange en :guilabel:`Layer name` och en SQL "
+":guilabel:`Query`. Frågan kan använda namnet (eller id) på laddade "
+"vektorlager som tabeller, samt deras fältnamn som kolumner."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:652
+msgid ""
+"For example, if you have a layer called ``airports``, you can create a new "
+"virtual layer called ``public_airports`` with an SQL query like:"
+msgstr ""
+"Om du till exempel har ett lager som heter ``airports`` kan du skapa ett "
+"nytt virtuellt lager som heter ``public_airports`` med en SQL-fråga som:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:661
+msgid ""
+"The SQL query will be executed, regardless of the underlying provider of the"
+" ``airports`` layer, even if this provider does not directly support SQL "
+"queries."
+msgstr ""
+"SQL-frågan kommer att köras, oavsett den underliggande leverantören av "
+"skiktet ``airports``, även om denna leverantör inte direkt stöder SQL-"
+"frågor."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:668
+msgid "Create virtual layers dialog"
+msgstr "Skapa dialog för virtuella lager"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:670
+msgid ""
+"Joins and complex queries can also be created, for example, to join airports"
+" and country information:"
+msgstr ""
+"Joins och komplexa frågor kan också skapas, till exempel för att koppla "
+"samman flygplatser och landinformation:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:682
+msgid ""
+"It's also possible to create virtual layers using the SQL window of "
+":ref:`dbmanager`."
+msgstr ""
+"Det är också möjligt att skapa virtuella lager med hjälp av SQL-fönstret i "
+":ref:`dbmanager`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:686
+msgid "Embedding layers for use in queries"
+msgstr "Inbäddning av lager för användning i frågor"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:688
+msgid ""
+"Besides the vector layers available in the map canvas, the user can add "
+"layers to the :guilabel:`Embedded layers` list, which can be used in queries"
+" without the need to have them showing in the map canvas or Layers panel."
+msgstr ""
+"Förutom de vektorlager som finns tillgängliga i kartbilden kan användaren "
+"lägga till lager i listan :guilabel:`Embedded layers`, som kan användas i "
+"frågor utan att de behöver visas i kartbilden eller panelen Layers."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:692
+msgid ""
+"To embed a layer, click :guilabel:`Add` and provide the :guilabel:`Local "
+"name`, :guilabel:`Provider`, :guilabel:`Encoding` and the path to the "
+":guilabel:`Source`."
+msgstr ""
+"För att bädda in ett lager klickar du på :guilabel:`Add` och anger "
+":guilabel:`Local name`, :guilabel:`Provider`, :guilabel:`Encoding` och "
+"sökvägen till :guilabel:`Source`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:696
+msgid ""
+"The :guilabel:`Import` button allows adding layers in the map canvas into "
+"the Embedded layers list. Those layers can then be removed from the Layers "
+"panel without breaking existent queries."
+msgstr ""
+"Med knappen :guilabel:`Import` kan du lägga till lager i kartbilden i listan"
+" Inbäddade lager. Dessa lager kan sedan tas bort från panelen Lager utan att"
+" befintliga frågor bryts."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:701
+msgid "Supported query language"
+msgstr "Frågespråk som stöds"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:703
+msgid "The underlying engine uses SQLite and SpatiaLite to operate."
+msgstr ""
+"Den underliggande motorn använder SQLite och SpatiaLite för att fungera."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:705
+msgid ""
+"It means you can use all of the SQL your local installation of SQLite "
+"understands."
+msgstr ""
+"Det innebär att du kan använda all SQL som din lokala installation av SQLite"
+" förstår."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:708
+msgid ""
+"Functions from SQLite and spatial functions from SpatiaLite can also be used"
+" in a virtual layer query. For instance, creating a point layer out of an "
+"attribute-only layer can be done with a query similar to:"
+msgstr ""
+"Funktioner från SQLite och spatiala funktioner från SpatiaLite kan också "
+"användas i en virtuell skiktfråga. Om du t.ex. vill skapa ett punktlager av "
+"ett lager med enbart attribut kan du göra det med en fråga som liknar:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:717
+msgid ""
+":ref:`Functions of QGIS expressions <functions_list>` can also be used in a "
+"virtual layer query."
+msgstr ""
+":ref:`Funktioner i QGIS-uttrycken <functions_list>` kan också användas i en "
+"virtuell lagerfråga."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:720
+msgid "To refer the geometry column of a layer, use the name ``geometry``."
+msgstr ""
+"För att referera till geometrikolumnen i ett lager, använd namnet "
+"``geometry``."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:722
+msgid ""
+"Contrary to a pure SQL query, all the fields of a virtual layer query must "
+"be named. Don't forget to use the ``as`` keyword to name your columns if "
+"they are the result of a computation or a function call."
+msgstr ""
+"I motsats till en ren SQL-fråga måste alla fält i en virtuell lagerfråga "
+"namnges. Glöm inte att använda nyckelordet ``as`` för att namnge dina "
+"kolumner om de är resultatet av en beräkning eller ett funktionsanrop."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:727
+msgid "Performance issues"
+msgstr "Problem med prestanda"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:729
+msgid ""
+"With default parameters, the virtual layer engine will try its best to "
+"detect the type of the different columns of the query, including the type of"
+" the geometry column if one is present."
+msgstr ""
+"Med standardparametrar kommer den virtuella lagermotorn att göra sitt bästa "
+"för att upptäcka typen av de olika kolumnerna i frågan, inklusive typen av "
+"geometrikolumn om en sådan finns."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:733
+msgid ""
+"This is done by introspecting the query when possible or by fetching the "
+"first row of the query (LIMIT 1) as a last resort. Fetching the first row of"
+" the result just to create the layer may be undesirable for performance "
+"reasons."
+msgstr ""
+"Detta görs genom att introspektera frågan när det är möjligt eller genom att"
+" hämta den första raden i frågan (LIMIT 1) som en sista utväg. Att hämta den"
+" första raden i resultatet bara för att skapa lagret kan vara oönskat av "
+"prestandaskäl."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:738
+msgid "The creation dialog parameters:"
+msgstr "Parametrar för dialogrutan för skapande:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:740
+msgid ""
+":guilabel:`Unique identifier column`: specifies a field of the query that "
+"represents unique integer values that QGIS can use as row identifiers. By "
+"default, an autoincrementing integer value is used. Defining a unique "
+"identifier column speeds up the selection of rows by id."
+msgstr ""
+":guilabel:`Unique identifier column`: anger ett fält i frågan som "
+"representerar unika heltalsvärden som QGIS kan använda som radidentifierare."
+" Som standard används ett automatiskt ökande heltalsvärde. Om du definierar "
+"en kolumn för unika identifierare går det snabbare att välja rader efter id."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:747
+msgid ""
+":guilabel:`No geometry`: forces the virtual layer to ignore any geometry "
+"field. The resulting layer is an attribute-only layer."
+msgstr ""
+":guilabel:``No geometry``: tvingar det virtuella lagret att ignorera alla "
+"geometriska fält. Det resulterande skiktet är ett skikt med enbart attribut."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:750
+msgid ""
+"Geometry :guilabel:`Column`: specifies the name of the geometry column."
+msgstr "Geometry :guilabel:`Column`: anger namnet på geometrikolumnen."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:752
+msgid "Geometry :guilabel:`Type`: specifies the type of the geometry."
+msgstr "Geometry :guilabel:`Type`: anger geometrins typ."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:754
+msgid ""
+"Geometry :guilabel:`CRS`: specifies the coordinate reference system of the "
+"virtual layer."
+msgstr ""
+"Geometry :guilabel:`CRS`: anger det virtuella skiktets referenssystem för "
+"koordinater."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:758
+msgid "Special comments"
+msgstr "Särskilda kommentarer"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:760
+msgid ""
+"The virtual layer engine tries to determine the type of each column of the "
+"query. If it fails, the first row of the query is fetched to determine "
+"column types."
+msgstr ""
+"Motorn för det virtuella lagret försöker fastställa typen för varje kolumn i"
+" frågan. Om det misslyckas hämtas den första raden i frågan för att "
+"fastställa kolumntyperna."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:764
+msgid ""
+"The type of a particular column can be specified directly in the query by "
+"using some special comments."
+msgstr ""
+"Typen av en viss kolumn kan anges direkt i frågan med hjälp av några "
+"speciella kommentarer."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:767
+msgid ""
+"The syntax is the following: ``/*:type*/``. It has to be placed just after "
+"the name of a column. ``type`` can be either ``int`` for integers, ``real`` "
+"for floating point numbers or ``text``."
+msgstr ""
+"Syntaxen är följande: ``/*:typ*/``. Den måste placeras precis efter namnet "
+"på en kolumn. ``type`` kan vara antingen ``int`` för heltal, ``real`` för "
+"flyttal eller ``text``."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:771
+msgid "For instance:"
+msgstr "Till exempel:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:778
+msgid ""
+"The type and coordinate reference system of the geometry column can also be "
+"set thanks to special comments with the following syntax ``/*:gtype:srid*/``"
+" where ``gtype`` is the geometry type (``point``, ``linestring``, "
+"``polygon``, ``multipoint``, ``multilinestring`` or ``multipolygon``) and "
+"``srid`` an integer representing the EPSG code of a coordinate reference "
+"system."
+msgstr ""
+"Geometrikolumnens typ och koordinatreferenssystem kan också ställas in med "
+"hjälp av särskilda kommentarer med följande syntax ``/*:gtype:srid*/`` där "
+"``gtype`` är geometritypen (``point``, ``linestring``, ``polygon``, "
+"``multipoint``, ``multilinestring`` eller ``multipolygon``) och ``srid`` ett"
+" heltal som representerar EPSG-koden för ett koordinatreferenssystem."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:785
+msgid "Use of indexes"
+msgstr "Användning av index"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:787
+msgid ""
+"When requesting a layer through a virtual layer, the source layer indices "
+"will be used in the following ways:"
+msgstr ""
+"När du begär ett lager via ett virtuellt lager kommer källlagrets index att "
+"användas på följande sätt:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:790
+msgid ""
+"if an ``=`` predicate is used on the primary key column of the layer, the "
+"underlying data provider will be asked for a particular id (FilterFid)"
+msgstr ""
+"om ett ``=``-predikat används på skiktets primärnyckelkolumn, kommer den "
+"underliggande dataleverantören att tillfrågas om ett visst id (FilterFid)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:793
+msgid ""
+"for any other predicates (``>``, ``<=``, ``!=``, etc.) or on a column "
+"without a primary key, a request built from an expression will be used to "
+"request the underlying vector data provider. It means indexes may be used on"
+" database providers if they exist."
+msgstr ""
+"för alla andra predikat (``>``, ``<=``, ``!=``, etc.) eller på en kolumn "
+"utan primärnyckel, kommer en begäran byggd från ett uttryck att användas för"
+" att begära den underliggande vektordataleverantören. Det betyder att index "
+"kan användas på databasleverantörer om de finns."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:798
+msgid ""
+"A specific syntax exists to handle spatial predicates in requests and "
+"triggers the use of a spatial index: a hidden column named "
+"``_search_frame_`` exists for each virtual layer. This column can be "
+"compared for equality to a bounding box. Example:"
+msgstr ""
+"Det finns en specifik syntax för att hantera spatiala predikat i "
+"förfrågningar och utlöser användningen av ett spatialt index: en dold kolumn"
+" med namnet ``_search_frame_`` finns för varje virtuellt lager. Den här "
+"kolumnen kan jämföras med en bounding box för att visa att den är lika. Ett "
+"exempel:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:809
+msgid ""
+"Spatial binary predicates like ``ST_Intersects`` are sped up significantly "
+"when used in conjunction with this spatial index syntax."
+msgstr ""
+"Spatiala binära predikat som ``ST_Intersects`` snabbas upp avsevärt när de "
+"används tillsammans med denna spatiala indexsyntax."
