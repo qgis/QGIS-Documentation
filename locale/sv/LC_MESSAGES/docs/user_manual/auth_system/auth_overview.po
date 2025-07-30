@@ -1,0 +1,695 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:4
+msgid "Authentication System Overview"
+msgstr "Översikt över autentiseringssystem"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:16
+msgid "Anatomy of authentication system"
+msgstr "Autentiseringssystemets anatomi"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:20
+msgid "Authentication database"
+msgstr "Autentiseringsdatabas"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:22
+msgid ""
+"The authentication system stores authentication configurations in an SQLite "
+"database file located, by default, at :file:`<profile directory>/qgis-"
+"auth.db`."
+msgstr ""
+"Autentiseringssystemet lagrar autentiseringskonfigurationer i en SQLite-"
+"databasfil som finns, som standard, på :file:`<profile directory>/qgis-"
+"auth.db`."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:25
+msgid ""
+"This authentication database can be moved between QGIS installations without"
+" affecting other current QGIS user preferences, as it is completely separate"
+" from normal QGIS settings. A configuration ID (a random 7-character "
+"alphanumeric string) is generated when initially storing a configuration to "
+"the database. This represents the configuration, thereby allowing the ID to "
+"be stored in plain text application components, (such as project, plugin, or"
+" settings files) without disclosure of its associated credentials."
+msgstr ""
+"Denna autentiseringsdatabas kan flyttas mellan QGIS-installationer utan att "
+"påverka andra aktuella QGIS-användarinställningar, eftersom den är helt "
+"skild från normala QGIS-inställningar. Ett konfigurations-ID (en slumpmässig"
+" alfanumerisk sträng med 7 tecken) genereras när en konfiguration initialt "
+"lagras i databasen. Detta representerar konfigurationen, vilket gör att ID:t"
+" kan lagras i programkomponenter i klartext (t.ex. projekt-, plugin- eller "
+"inställningsfiler) utan att de tillhörande autentiseringsuppgifterna "
+"avslöjas."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:35
+msgid ""
+"The parent directory of the `qgis-auth.db` can be set using the following "
+"environment variable, ``QGIS_AUTH_DB_DIR_PATH``, or set on the command line "
+"during launch with the ``--authdbdirectory`` option."
+msgstr ""
+"Den överordnade katalogen för `qgis-auth.db` kan ställas in med hjälp av "
+"följande miljövariabel, ``QGIS_AUTH_DB_DIR_PATH``, eller ställas in på "
+"kommandoraden under start med alternativet ``--authdbdirectory``."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:41
+msgid "Custom authentication databases"
+msgstr "Anpassade autentiseringsdatabaser"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:43
+msgid ""
+"QGIS can be configured to use a custom authentication database instead of "
+"the above mentioned default SQLite one: any database suppported by the Qt "
+"SQL module can be used (e.g. PostgreSQL, MySQL, etc), provided that the "
+"corresponding Qt SQL driver is available in the system."
+msgstr ""
+"QGIS kan konfigureras att använda en anpassad autentiseringsdatabas istället"
+" för den ovan nämnda standard SQLite-databasen: alla databaser som stöds av "
+"Qt SQL-modulen kan användas (t.ex. PostgreSQL, MySQL, etc.), förutsatt att "
+"motsvarande Qt SQL-drivrutin finns tillgänglig i systemet."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:48
+msgid ""
+"This can be useful in scenarios where a user wants to share the same "
+"authentication database between multiple QGIS installations, or when a user "
+"wants to use a different authentication database than the default SQLite one"
+" or when a centralized authentication database is used by QGIS server."
+msgstr ""
+"Detta kan vara användbart i scenarier där en användare vill dela samma "
+"autentiseringsdatabas mellan flera QGIS-installationer, eller när en "
+"användare vill använda en annan autentiseringsdatabas än standard SQLite "
+"eller när en centraliserad autentiseringsdatabas används av QGIS-servern."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:53
+msgid ""
+"The only way to configure a custom authentication database is by setting the"
+" ``QGIS_AUTH_DB_URI`` environment variable to the URI of the connection, the"
+" URI is in the form of "
+"``driver://username:password@hostname:port/database?options``."
+msgstr ""
+"Det enda sättet att konfigurera en anpassad autentiseringsdatabas är genom "
+"att ställa in miljövariabeln ``QGIS_AUTH_DB_URI`` till URI för anslutningen,"
+" URI är i form av "
+"``driver://username:password@hostname:port/database?options``."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:64
+msgid "Where:"
+msgstr "Var:"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:58
+msgid ""
+"``driver`` is the name of the Qt SQL driver to use, e.g. ``QPSQL`` for "
+"PostgreSQL, ``QMYSQL`` for MySQL, etc."
+msgstr ""
+"``driver`` är namnet på Qt SQL-drivrutinen som ska användas, t.ex. ``QPSQL``"
+" för PostgreSQL, ``QMYSQL`` för MySQL, etc."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:59
+msgid "``username`` is the username to use to connect to the database"
+msgstr ""
+"``username`` är det användarnamn som ska användas för att ansluta till "
+"databasen"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:60
+msgid "``password`` is the password to use to connect to the database"
+msgstr ""
+"``password`` är det lösenord som ska användas för att ansluta till databasen"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:61
+msgid "``hostname`` is the hostname of the database server"
+msgstr "``hostname`` är värdnamnet på databasservern"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:62
+msgid "``port`` is the port of the database server"
+msgstr "``port`` är porten till databasservern"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:63
+msgid "``database`` is the name of the database to use"
+msgstr "``database`` är namnet på den databas som ska användas"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:64
+msgid ""
+"``options`` are the options to pass to the driver, e.g. ``sslmode=require`` "
+"for PostgreSQL"
+msgstr ""
+"``options`` är alternativen som ska skickas till drivrutinen, t.ex. "
+"``sslmode = require`` för PostgreSQL"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:68
+msgid ""
+"The ``schema`` can be specified in the URI options, e.g. "
+"``QPSQL://username:password@hostname:port/database?schema=schema_name``"
+msgstr ""
+"Schemat kan anges i URI-alternativen, t.ex. "
+"``QPSQL://användarnamn:lösenord@hostname:port/database?schema=schema_name``"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:70
+msgid ""
+"The database must exist before starting QGIS, and the user must have the "
+"necessary permissions to connect to the database and to create the required "
+"tables if they do not exist."
+msgstr ""
+"Databasen måste finnas innan QGIS startas och användaren måste ha de "
+"nödvändiga behörigheterna för att ansluta till databasen och för att skapa "
+"de nödvändiga tabellerna om de inte redan finns."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:76
+msgid ""
+"The password in the URI is stored in plain text in the environment variable,"
+" so it is recommended to use a passwordless user or a user with limited "
+"permissions to connect to the database."
+msgstr ""
+"Lösenordet i URI:n lagras i klartext i miljövariabeln, så vi rekommenderar "
+"att du använder en användare utan lösenord eller en användare med begränsade"
+" behörigheter för att ansluta till databasen."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:82
+msgid ""
+"Any database not based on SQLite is considered to be read-only (this can be "
+"changed by Python plugins if necessary)."
+msgstr ""
+"Alla databaser som inte är baserade på SQLite anses vara skrivskyddade "
+"(detta kan ändras av Python-plugins vid behov)."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:85
+msgid ""
+"This is an advanced feature, designed to allow one or more custom "
+"authentication databases or even custom Python implementations of "
+"credentials storages to be used by QGIS."
+msgstr ""
+"Detta är en avancerad funktion som är utformad för att QGIS ska kunna "
+"använda en eller flera anpassade autentiseringsdatabaser eller till och med "
+"anpassade Python-implementeringar av lagring av autentiseringsuppgifter."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:88
+msgid ""
+"The system is also designed to allow for multiple authentication databases "
+"to be used but there is currently no user facing interface to manage "
+"multiple credential storages so its usage requires manual configuration and "
+"management, typically from a Python plugin."
+msgstr ""
+"Systemet är också utformat för att möjliggöra användning av flera "
+"autentiseringsdatabaser, men det finns för närvarande inget "
+"användargränssnitt för att hantera lagring av flera autentiseringsuppgifter,"
+" så användningen kräver manuell konfiguration och hantering, vanligtvis från"
+" ett Python-plugin."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:94
+msgid "Master password"
+msgstr "Huvudlösenord"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:96
+msgid ""
+"To store or access sensitive information within the database, a user must "
+"define a `master password`. A new master password is requested and verified "
+"when initially storing any encrypted data to the database. When sensitive "
+"information is accessed, the user is prompted for the master password. The "
+"password is then cached for the remainder of the session (until application "
+"is quit), unless the user manually chooses an action to clear its cached "
+"value. Some instances of using the authentication system do not require "
+"input of the master password, such as when selecting an existing "
+"authentication configuration, or applying a configuration to a server "
+"configuration (such as when adding a WMS layer)."
+msgstr ""
+"För att lagra eller få tillgång till känslig information i databasen måste "
+"användaren definiera ett \"huvudlösenord\". Ett nytt huvudlösenord begärs "
+"och verifieras när krypterade data första gången lagras i databasen. Vid "
+"åtkomst till känslig information uppmanas användaren att ange "
+"huvudlösenordet. Lösenordet cachelagras sedan under resten av sessionen "
+"(tills programmet avslutas), såvida inte användaren manuellt väljer en "
+"åtgärd för att rensa det cachelagrade värdet. Vid vissa tillfällen då "
+"autentiseringssystemet används krävs inte att huvudlösenordet anges, t.ex. "
+"när en befintlig autentiseringskonfiguration väljs eller när en "
+"konfiguration tillämpas på en serverkonfiguration (t.ex. när ett WMS-lager "
+"läggs till)."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:106
+msgid ""
+"You can choose to save the password in the ``Wallet/Keyring`` of your "
+"computer."
+msgstr "Du kan välja att spara lösenordet i datorns ``Wallet/Keyring``."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:114
+msgid "Input new master password"
+msgstr "Ange nytt huvudlösenord"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:118
+msgid ""
+"A path to a file containing the master password can be set using the "
+"following environment variable, ``QGIS_AUTH_PASSWORD_FILE``."
+msgstr ""
+"En sökväg till en fil som innehåller huvudlösenordet kan anges med hjälp av "
+"följande miljövariabel, ``QGIS_AUTH_PASSWORD_FILE``."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:122
+msgid "Managing the master password"
+msgstr "Hantering av huvudlösenordet"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:124
+msgid ""
+"Once set, the master password can be reset; the current master password will"
+" be needed prior to resetting. During this process, there is an option to "
+"generate a complete backup of the current database."
+msgstr ""
+"När huvudlösenordet har ställts in kan det återställas; det aktuella "
+"huvudlösenordet måste anges innan återställningen kan göras. Under denna "
+"process finns det möjlighet att generera en fullständig säkerhetskopia av "
+"den aktuella databasen."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:133
+msgid "Resetting master password"
+msgstr "Återställning av huvudlösenord"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:135
+msgid ""
+"If the user forgets the master password, there is no way to retrieve or "
+"override it. There is also no means of retrieving encrypted information "
+"without knowing the master password."
+msgstr ""
+"Om användaren glömmer huvudlösenordet finns det inget sätt att hämta eller "
+"åsidosätta det. Det finns inte heller något sätt att hämta krypterad "
+"information utan att känna till huvudlösenordet."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:139
+msgid ""
+"If a user inputs their existing password incorrectly three times, the dialog"
+" will offer to erase the database."
+msgstr ""
+"Om en användare skriver in sitt befintliga lösenord felaktigt tre gånger "
+"kommer dialogrutan att erbjuda sig att radera databasen."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:147
+msgid "Password prompt after three invalid attempts"
+msgstr "Lösenordsuppmaning efter tre ogiltiga försök"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:150
+msgid "Authentication Configurations"
+msgstr "Konfigurationer för autentisering"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:152
+msgid ""
+"You can manage authentication configurations from :guilabel:`Configurations`"
+" in the :guilabel:`Authentication` tab of the QGIS Options dialog "
+"(:menuselection:`Settings --> Options`)."
+msgstr ""
+"Du kan hantera autentiseringskonfigurationer från :guilabel:`Configurations`"
+" i :guilabel:`Authentication`-fliken i QGIS Options-dialogrutan "
+"(:menyval:`Settings --> Options`)."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:161
+msgid "Configurations editor"
+msgstr "Redaktör för konfigurationer"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:163
+msgid ""
+"Use the |symbologyAdd| button to add a new configuration, the "
+"|symbologyRemove| button to remove configurations, and the |symbologyEdit| "
+"button to modify existing ones."
+msgstr ""
+"Använd knappen |symbologyAdd| för att lägga till en ny konfiguration, "
+"knappen |symbologyRemove| för att ta bort konfigurationer och knappen "
+"|symbologyEdit| för att ändra befintliga konfigurationer."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:377
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:381
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:379
+msgid "symbologyEdit"
+msgstr "symbologyEdit"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:171
+msgid "Adding config from within Configuration editor"
+msgstr "Lägga till konfiguration från konfigurationsredigeraren"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:173
+msgid ""
+"The same type of operations for authentication configuration management "
+"(Add, Edit and Remove) can be done when configuring a given service "
+"connection, such as configuring an OWS service connection. For that, there "
+"are action buttons within the configuration selector for fully managing "
+"configurations found within the authentication database. In this case, there"
+" is no need to go to the :guilabel:`configurations` in "
+":guilabel:`Authentication` tab of QGIS options unless you need to do more "
+"comprehensive configuration management."
+msgstr ""
+"Samma typ av åtgärder för hantering av autentiseringskonfiguration (Lägg "
+"till, Redigera och Ta bort) kan göras när du konfigurerar en viss "
+"tjänsteanslutning, t.ex. konfigurering av en OWS-tjänsteanslutning. För "
+"detta ändamål finns det åtgärdsknappar i konfigurationsväljaren för "
+"fullständig hantering av konfigurationer som finns i "
+"autentiseringsdatabasen. I det här fallet behöver du inte gå till fliken "
+":guilabel:`configurations` i :guilabel:`Authentication` i QGIS-alternativen "
+"om du inte behöver göra en mer omfattande konfigurationshantering."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:186
+msgid ""
+"WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and "
+":guilabel:`Remove` authentication configuration buttons"
+msgstr ""
+"WMS-anslutningsdialog med knapparna :guilabel:`Add`, :guilabel:`Edit` och "
+":guilabel:`Remove` för autentiseringskonfiguration"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:189
+msgid ""
+"When creating or editing an authentication configuration, the info required "
+"is a name, an authentication method and any other info that the "
+"authentication method requires (see more about the available authentication "
+"types in :ref:`authentication_methods`)."
+msgstr ""
+"När du skapar eller redigerar en autentiseringskonfiguration krävs ett namn,"
+" en autentiseringsmetod och eventuell annan information som "
+"autentiseringsmetoden kräver (se mer om tillgängliga autentiseringstyper i "
+":ref:`authentication_methods`)."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:197
+msgid "Authentication Methods"
+msgstr "Autentiseringsmetoder"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:199
+msgid ""
+"Available authentications are provided by C++ plugins much in the same way "
+"data provider plugins are supported by QGIS. The method of authentication "
+"that can be selected is relative to the access needed for the "
+"resource/provider, e.g. HTTP(S) or database, and whether there is support in"
+" both QGIS code and a plugin. As such, some authentication method plugins "
+"may not be applicable everywhere an authentication configuration selector is"
+" shown. A list of available authentication method plugins and their "
+"compatible resource/providers can be accessed going to "
+":menuselection:`Settings --> Options` and, in the :guilabel:`Authentication`"
+" tab, click the |options| :guilabel:`Installed Plugins` button."
+msgstr ""
+"Tillgängliga autentiseringar tillhandahålls av C++-plugins på ungefär samma "
+"sätt som plugins för dataleverantörer stöds av QGIS. Vilken "
+"autentiseringsmetod som kan väljas beror på vilken åtkomst som behövs för "
+"resursen/providern, t.ex. HTTP(S) eller databas, och om det finns stöd i "
+"både QGIS-koden och ett insticksprogram. Därför kan det hända att vissa "
+"insticksprogram för autentiseringsmetoder inte är tillämpliga överallt där "
+"en väljare för autentiseringskonfiguration visas. En lista över tillgängliga"
+" insticksprogram för autentiseringsmetoder och deras kompatibla "
+"resurser/providers kan nås genom att gå till :menuselection:`Inställningar "
+"--> Alternativ` och, på fliken :guilabel:`Autentication`, klicka på knappen "
+"|options| :guilabel:`Installed Plugins`."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:375
+msgid "options"
+msgstr "options"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:215
+msgid "Available method plugins list"
+msgstr "Lista över tillgängliga metodplugins"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:217
+msgid ""
+"Plugins can be created for new authentication methods that do not require "
+"QGIS to be recompiled. Since the support for plugins is currently C++-only, "
+"QGIS will need to be restarted for the new dropped-in plugin to become "
+"available to the user. Ensure your plugin is compiled against the same "
+"target version of QGIS if you intend to add it to an existing target "
+"install."
+msgstr ""
+"Plugins kan skapas för nya autentiseringsmetoder som inte kräver att QGIS "
+"kompileras om. Eftersom stödet för insticksprogram för närvarande endast är "
+"C++ måste QGIS startas om för att det nya insticksprogrammet ska bli "
+"tillgängligt för användaren. Se till att ditt insticksprogram är kompilerat "
+"mot samma målversion av QGIS om du tänker lägga till det i en befintlig "
+"målinstallation."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:228
+msgid "Basic HTTP authentication configs"
+msgstr "Konfigurationer för grundläggande HTTP-autentisering"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:235
+msgid "ESRI Token authentication configs"
+msgstr "Konfigurationer för ESRI Token-autentisering"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:242
+msgid "OAuth2 authentication configs"
+msgstr "Konfigurationer för OAuth2-autentisering"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:249
+msgid "PKI paths authentication configs"
+msgstr "PKI-sökvägar autentisering konfigurationer"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:256
+msgid "PKI PKCS#12 file paths authentication configs"
+msgstr "PKI PKCS#12 filsökvägar autentisering konfigurationer"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:263
+msgid "Stored Identity authentication configs"
+msgstr "Lagrade konfigurationer för identitetsautentisering"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:267
+msgid ""
+"The Resource URL is currently an *unimplemented* feature that will "
+"eventually allow a particular configuration to be auto-chosen when "
+"connecting to resources at a given URL."
+msgstr ""
+"Resource URL är för närvarande en *ej implementerad* funktion som så "
+"småningom kommer att göra det möjligt att automatiskt välja en viss "
+"konfiguration vid anslutning till resurser på en viss URL."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:272
+msgid "Master Password and Auth Config Utilities"
+msgstr "Verktyg för Master Password och Auth Config"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:274
+msgid ""
+"Under the Options menu (:menuselection:`Settings --> Options`) in the "
+":guilabel:`Authentication` tab, there are several utility actions to manage "
+"the authentication database and configurations:"
+msgstr ""
+"Under menyn Options (:menuselection:`Settings --> Options`) på fliken "
+":guilabel:`Authentication` finns det flera verktyg för att hantera "
+"autentiseringsdatabasen och konfigurationerna:"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:283
+msgid "Utilities menu"
+msgstr "Verktygsmeny"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:285
+msgid ""
+"**Input master password**: opens the master password input dialog, "
+"independent of performing any authentication database command"
+msgstr ""
+"**Input master password**: öppnar dialogrutan för inmatning av "
+"huvudlösenordet, oberoende av om något autentiseringsdatabaskommando utförs"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:287
+msgid ""
+"**Clear cached master password**: unsets the master password if it has been "
+"set"
+msgstr ""
+"**Clear cached master password**: återställer masterlösenordet om det har "
+"ställts in"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:289
+msgid ""
+"**Reset master password**: opens a dialog to change the master password (the"
+" current password must be known) and optionally back up the current database"
+msgstr ""
+"**Reset master password**: öppnar en dialogruta för att ändra "
+"huvudlösenordet (det aktuella lösenordet måste vara känt) och eventuellt "
+"säkerhetskopiera den aktuella databasen"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:291
+msgid ""
+"**Clear network authentication access cache**: clears the authentication "
+"cache of all connections"
+msgstr ""
+"**Clear network authentication access cache**: rensar autentiseringscachen "
+"för alla anslutningar"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:293
+msgid ""
+"**Automatically clear network authentication access cache on SSL errors**: "
+"the connection cache stores all authentication data for connections, also "
+"when the connection fails. If you change authentication configurations or "
+"certification authorities, you should clear the authentication cache or "
+"restart QGIS. When this option is checked, the authentication cache will be "
+"automatically cleared every time an SSL error occurs and you choose to abort"
+" the connection"
+msgstr ""
+"**Automatiskt rensa nätverksautentiseringens åtkomstcache vid SSL-fel**: "
+"Anslutningscachen lagrar alla autentiseringsdata för anslutningar, även när "
+"anslutningen misslyckas. Om du ändrar autentiseringskonfigurationer eller "
+"certifikatutfärdare bör du rensa autentiseringscachen eller starta om QGIS. "
+"När det här alternativet är markerat rensas autentiseringscachen automatiskt"
+" varje gång ett SSL-fel inträffar och du väljer att avbryta anslutningen"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:300
+msgid ""
+"**Integrate master password with your Wallet/Keyring**: adds the master "
+"password to your personal Wallet/Keyring"
+msgstr ""
+"**Integrera huvudlösenordet med din plånbok/nyckelring**: lägger till "
+"huvudlösenordet i din personliga plånbok/nyckelring"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:302
+msgid ""
+"**Store/update the master password in your Wallet/Keyring**: updates the "
+"changed master password in your Wallet/Keyring"
+msgstr ""
+"**Lagra/uppdatera huvudlösenordet i din plånbok/nyckelring**: uppdaterar det"
+" ändrade huvudlösenordet i din plånbok/nyckelring"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:304
+msgid ""
+"**Clear the master password from your Wallet/Keyring**: deletes the master "
+"password from your Wallet/Keyring"
+msgstr ""
+"**Radera huvudlösenordet från din plånbok/nyckelring**: raderar "
+"huvudlösenordet från din plånbok/nyckelring"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:306
+msgid ""
+"**Enable password helper debug log**: enables a debug tool that will contain"
+" all the log information of the authentication methods"
+msgstr ""
+"**Enable password helper debug log**: aktiverar ett felsökningsverktyg som "
+"kommer att innehålla all logginformation för autentiseringsmetoderna"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:308
+msgid ""
+"**Clear cached authentication configurations**: clears the internal lookup "
+"cache for configurations, used to speed up network connections. This does "
+"not clear QGIS’s core network access manager’s cache, which requires a "
+"relaunch of QGIS."
+msgstr ""
+"**Rensa cachade autentiseringskonfigurationer**: rensar den interna "
+"cacheminnet för konfigurationer, som används för att snabba upp "
+"nätverksanslutningar. Detta rensar inte QGIS centrala "
+"nätverksåtkomsthanterares cache, vilket kräver en omstart av QGIS."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:311
+msgid ""
+"**Remove all authentication configurations**: clears the database of all "
+"configuration records, without removing other stored records."
+msgstr ""
+"**Remove all authentication configurations**: rensar databasen från alla "
+"konfigurationsposter, utan att ta bort andra lagrade poster."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:313
+msgid ""
+"**Erase authentication database**: schedules a backup of the current "
+"database and complete rebuild of the database table structure. The actions "
+"are scheduled for a later time, to ensure that other operations, like "
+"project loading, do not interrupt the operation or cause errors due to a "
+"temporarily missing database."
+msgstr ""
+"**Erase authentication database**: schemalägger en säkerhetskopia av den "
+"aktuella databasen och en fullständig återuppbyggnad av databasens "
+"tabellstruktur. Åtgärderna schemaläggs till en senare tidpunkt för att "
+"säkerställa att andra åtgärder, t.ex. projektladdning, inte avbryter "
+"åtgärden eller orsakar fel på grund av en tillfälligt saknad databas."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:324
+msgid "DB erase verification menu"
+msgstr "Meny för verifiering av DB-radering"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:327
+msgid "Using authentication configurations"
+msgstr "Använda autentiseringskonfigurationer"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:329
+msgid ""
+"Typically, an authentication configuration is selected in a configuration "
+"dialog for a network services (such as WMS). However, the selector widget "
+"can be embedded anywhere authentication is needed or in non-core "
+"functionality, like in third-party PyQGIS or C++ plugins."
+msgstr ""
+"Vanligtvis väljs en autentiseringskonfiguration i en konfigurationsdialog "
+"för en nätverkstjänst (t.ex. WMS). Väljarwidgeten kan dock bäddas in var som"
+" helst där autentisering behövs eller i icke-kärnfunktioner, som i PyQGIS- "
+"eller C++-plugins från tredje part."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:334
+msgid ""
+"When using the selector, :guilabel:`No authentication` is displayed in the "
+"pop-up menu control when nothing is selected, when there are no "
+"configurations to choose from, or when a previously assigned configuration "
+"can no longer be found in the database. The :guilabel:`Type` and "
+":guilabel:`Id` fields are read-only and provide a description of the "
+"authentication method and the config’s ID respectively."
+msgstr ""
+"När väljaren används visas :guilabel:`No authentication` i popup-menyn när "
+"ingenting har valts, när det inte finns några konfigurationer att välja "
+"mellan eller när en tidigare tilldelad konfiguration inte längre finns i "
+"databasen. Fälten :guilabel:`Type` och :guilabel:`Id` är skrivskyddade och "
+"innehåller en beskrivning av autentiseringsmetoden respektive "
+"konfigurationens ID."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:346
+msgid "Authentication configuration selector with no authentication"
+msgstr "Konfigurationsväljare för autentisering utan autentisering"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:353
+msgid "Authentication configuration selector with selected config"
+msgstr "Konfigurationsväljare för autentisering med vald konfiguration"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:356
+msgid "Python bindings"
+msgstr "Python-bindningar"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:358
+msgid ""
+"All classes and public functions have sip bindings, except "
+"``QgsAuthCrypto``, since management of the master password hashing and auth "
+"database encryption should be handled by the main app, and not via Python."
+msgstr ""
+"Alla klasser och offentliga funktioner har sip-bindningar, utom "
+"``QgsAuthCrypto``, eftersom hanteringen av huvudlösenordets hashing och "
+"auth-databasens kryptering bör hanteras av huvudappen och inte via Python."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:362
+msgid ""
+"Once the master password is entered, the API is open to access "
+"authentication configs in the authentication database, similar to how "
+"Firefox works. However, no wall against PyQGIS access has been defined. This"
+" may lead to issues where a user downloads/installs a malicious PyQGIS "
+"plugin or standalone app that gains access to authentication credentials."
+msgstr ""
+"När huvudlösenordet har angetts är API:et öppet för åtkomst till "
+"autentiseringskonfigurationer i autentiseringsdatabasen, på samma sätt som "
+"Firefox fungerar. Ingen mur mot PyQGIS-åtkomst har dock definierats. Detta "
+"kan leda till problem där en användare laddar ner/installerar ett skadligt "
+"PyQGIS-plugin eller en fristående app som får tillgång till "
+"autentiseringsuppgifter."
