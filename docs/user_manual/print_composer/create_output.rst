@@ -331,6 +331,8 @@ the :guilabel:`Atlas` panel. This panel contains the following
 
   * A :guilabel:`Coverage layer` |selectString| combo box that allows you to
     choose the table or vector layer containing the features to iterate over.
+  * An optional |checkbox| :guilabel:`Only render current feature on coverage layer`
+    if checked, will restrict the rendering of the coverage layer to the current feature only.
   * An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked,
     will hide the coverage layer (but not the other layers) during the generation.
   * An optional :guilabel:`Page name` combo box to specify the name for the
