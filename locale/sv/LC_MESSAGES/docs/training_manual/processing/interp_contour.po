@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:31+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/interp_contour.rst:2
+msgid "Interpolation and contouring"
+msgstr "Interpolation och konturering"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:4
+msgid "Module contributed by Paolo Cavallini - `Faunalia`_"
+msgstr "Modulen har tillhandahållits av Paolo Cavallini - `Faunalia`_"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:6
+msgid ""
+"This chapter shows how to use different backends to calculate different "
+"interpolations."
+msgstr ""
+"I det här kapitlet visas hur man använder olika backends för att beräkna "
+"olika interpolationer."
+
+#: ../../docs/training_manual/processing/interp_contour.rst:9
+msgid "Interpolation"
+msgstr "Interpolation"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:11
+msgid ""
+"The project shows a gradient in rainfall, from south to north. Let's use "
+"different methods for interpolation, all based on vector ``points.shp``, "
+"parameter ``RAIN``:"
+msgstr ""
+"Projektet visar en gradient i nederbörd, från söder till norr. Låt oss "
+"använda olika metoder för interpolering, alla baserade på vektorn "
+"``points.shp``, parameter ``RAIN``:"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:14
+msgid "Set cell size to :kbd:`500` for all analyses."
+msgstr "Ställ in cellstorlek till :kbd:`500` för alla analyser."
+
+#: ../../docs/training_manual/processing/interp_contour.rst:16
+msgid ":menuselection:`GRASS --> v.surf.rst`"
+msgstr ":menuselection:`GRASS --> v.surf.rst`"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:17
+msgid ":menuselection:`SAGA --> Multilevel B-Spline Interpolation`"
+msgstr ":menuselection:`SAGA --> Multilevel B-Spline Interpolation`"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:18
+msgid ""
+":menuselection:`SAGA --> Inverse Distance Weighted` [Inverse distance to a "
+"power; Power: 4; Search radius: Global; Search range: all points]"
+msgstr ""
+":menuselection:`SAGA --> Inverse Distance Weighted` [Inverst avstånd till en"
+" kraft; Kraft: 4; Sökradie: Global; Sökområde: alla punkter]"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:19
+msgid ":menuselection:`GDAL --> Grid (Inverse Distance to a power)` [Power:4]"
+msgstr ""
+":menuselection:`GDAL --> Grid (Inverse Distance to a power)` [Power:4]"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:20
+msgid ":menuselection:`GDAL --> Grid (Moving average)` [Radius1&2: 50000]"
+msgstr ":menuselection:`GDAL --> Grid (Moving average)` [Radius1&2: 50000]"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:22
+msgid ""
+"Then measure variation among methods and correlate it with distance to "
+"points:"
+msgstr ""
+"Mät sedan variationen mellan metoderna och korrelera den med avståndet till "
+"punkterna:"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:24
+msgid ""
+":menuselection:`GRASS --> r.series` [Unselect Propagate NULLs, Aggregate "
+"operation: stddev]"
+msgstr ""
+":menuselection:`GRASS --> r.series` [Unselect Propagate NULLs, Aggregate "
+"operation: stddev]"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:25
+msgid ":menuselection:`GRASS --> v.to.rast.value` on ``points.shp``"
+msgstr ":menuselection:`GRASS --> v.to.rast.value` på ``points.shp``"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:26
+msgid ":menuselection:`GDAL --> Proximity`"
+msgstr ":menuselection:`GDAL --> Närhet`"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:27
+msgid ""
+":menuselection:`GRASS --> r.covar` to show the correlation matrix; check the"
+" significance of the correlation e.g. with http://vassarstats.net/rsig.html."
+msgstr ""
+":menuselection:`GRASS --> r.covar` för att visa korrelationsmatrisen; "
+"kontrollera korrelationens signifikans t.ex. med "
+"http://vassarstats.net/rsig.html."
+
+#: ../../docs/training_manual/processing/interp_contour.rst:30
+msgid "Thus, areas far from points will have less accurate interpolation."
+msgstr ""
+"Områden som ligger långt från punkterna får därför en mindre exakt "
+"interpolering."
+
+#: ../../docs/training_manual/processing/interp_contour.rst:33
+msgid "Contour"
+msgstr "Kontur"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:35
+msgid ""
+"Various methods to draw contour lines [always step= 10] on the *stddev* "
+"raster:"
+msgstr ""
+"Olika metoder för att rita konturlinjer [alltid steg= 10] på "
+"*stddev*-rastret:"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:37
+msgid ":menuselection:`GRASS --> r.contour.step`"
+msgstr ":menuselection:`GRASS --> r.contour.step`"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:38
+msgid ":menuselection:`GDAL --> Contour`"
+msgstr ":menuselection:`GDAL --> Kontur`"
+
+#: ../../docs/training_manual/processing/interp_contour.rst:39
+msgid ""
+":menuselection:`SAGA --> Contour lines from grid` [**NB:** in some older "
+"SAGA versions, output shp is not valid, known bug]"
+msgstr ""
+":menuselection:`SAGA --> Konturlinjer från rutnät` [**NB:** i vissa äldre "
+"SAGA-versioner är utdata shp inte giltig, känd bugg]"
