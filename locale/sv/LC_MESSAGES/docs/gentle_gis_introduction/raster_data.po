@@ -1,0 +1,789 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:36+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:4
+msgid "Raster Data"
+msgstr "Rasterdata"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:7
+msgid "|gentleLogo|"
+msgstr "|gentleLogo|"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:369
+msgid "gentleLogo"
+msgstr "gentleLogo"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:7
+msgid "Objectives:"
+msgstr "Mål:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:7
+msgid "Understand what raster data is and how it can be used in a GIS."
+msgstr "Förstå vad rasterdata är och hur det kan användas i ett GIS."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:9
+msgid "Keywords:"
+msgstr "Nyckelord:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:9
+msgid "Raster, Pixel, Remote Sensing, Satellite, Image, Georeference"
+msgstr "Raster, pixel, fjärranalys, satellit, bild, georeferens"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:13
+msgid "Overview"
+msgstr "Översikt"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:15
+msgid ""
+"In the previous topics we have taken a closer look at vector data. While "
+"vector features use geometry (points, polylines and polygons) to represent "
+"the real world, raster data takes a different approach. Rasters are made up "
+"of a matrix of pixels (also called cells), each containing a value that "
+"represents the conditions for the area covered by that cell (see "
+":numref:`figure_raster`). In this topic we are going to take a closer look "
+"at raster data, when it is useful and when it makes more sense to use vector"
+" data."
+msgstr ""
+"I de tidigare avsnitten har vi tittat närmare på vektordata. Medan "
+"vektorfunktioner använder geometri (punkter, polylinjer och polygoner) för "
+"att representera den verkliga världen, har rasterdata ett annat "
+"tillvägagångssätt. Raster består av en matris med pixlar (även kallade "
+"celler), som var och en innehåller ett värde som representerar förhållandena"
+" för det område som täcks av den cellen (se :numref:`figure_raster`). I det "
+"här avsnittet ska vi titta närmare på rasterdata, när det är användbart och "
+"när det är mer meningsfullt att använda vektordata."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:29
+msgid ""
+"A raster dataset is composed of rows (running across) and columns (running "
+"down) of pixels (also know as cells). Each pixel represents a geographical "
+"region, and the value in that pixel represents some characteristic of that "
+"region."
+msgstr ""
+"En rasterdatauppsättning består av rader (som löper tvärs över) och kolumner"
+" (som löper nedåt) med pixlar (även kallade celler). Varje pixel "
+"representerar en geografisk region och värdet i den pixeln representerar "
+"någon egenskap hos den regionen."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:35
+msgid "Raster data in detail"
+msgstr "Rasterdata i detalj"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:37
+msgid ""
+"Raster data is used in a GIS application when we want to display information"
+" that is continuous across an area and cannot easily be divided into vector "
+"features. When we introduced you to vector data we showed you the image in "
+":numref:`figure_landscape`. Point, polyline and polygon features work well "
+"for representing some features on this landscape, such as trees, roads and "
+"building footprints. Other features on a landscape can be more difficult to "
+"represent using vector features. For example the grasslands shown have many "
+"variations in colour and density of cover. It would be easy enough to make a"
+" single polygon around each grassland area, but a lot of the information "
+"about the grassland would be lost in the process of simplifying the features"
+" to a single polygon. This is because when you give a vector feature "
+"attribute values, they apply to the whole feature, so vectors aren't very "
+"good at representing features that are not homogeneous (entirely the same) "
+"all over. Another approach you could take is to digitise every small "
+"variation of grass colour and cover as a separate polygon. The problem with "
+"that approach is that it will take a huge amount of work in order to create "
+"a good vector dataset."
+msgstr ""
+"Rasterdata används i en GIS-applikation när vi vill visa information som är "
+"kontinuerlig över ett område och inte lätt kan delas in i vektorfunktioner. "
+"När vi introducerade dig till vektordata visade vi dig bilden i "
+":numref:`figure_landscape`. Punkt-, polylinje- och polygonfunktioner "
+"fungerar bra för att representera vissa funktioner i det här landskapet, "
+"t.ex. träd, vägar och byggnadsavtryck. Andra funktioner i ett landskap kan "
+"vara svårare att representera med hjälp av vektorfunktioner. De gräsmarker "
+"som visas har till exempel många variationer i färg och täckningsgrad. Det "
+"skulle vara enkelt att skapa en enda polygon runt varje gräsmark, men mycket"
+" av informationen om gräsmarken skulle gå förlorad i processen med att "
+"förenkla funktionerna till en enda polygon. Det beror på att när du ger en "
+"vektor attributvärden gäller de för hela funktionen, så vektorer är inte "
+"särskilt bra på att representera funktioner som inte är homogena (helt "
+"likadana) överallt. En annan metod är att digitalisera varje liten variation"
+" av gräsets färg och täckning som en separat polygon. Problemet med det "
+"tillvägagångssättet är att det kommer att krävas enormt mycket arbete för "
+"att skapa en bra vektordatauppsättning."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:60
+msgid ""
+"Some features on a landscape are easy to represent as points, polylines and "
+"polygons (e.g. trees, roads, houses). In other cases it can be difficult. "
+"For example how would you represent the grasslands? As polygons? What about "
+"the variations in colour you can see in the grass? When you are trying to "
+"represent large areas with continuously changing values, raster data can be "
+"a better choice."
+msgstr ""
+"Vissa element i ett landskap är lätta att representera som punkter, "
+"polylinjer och polygoner (t.ex. träd, vägar och hus). I andra fall kan det "
+"vara svårt. Hur skulle du till exempel representera gräsmarkerna? Som "
+"polygoner? Hur är det med de färgvariationer som man kan se i gräset? När du"
+" försöker representera stora områden med värden som ständigt förändras kan "
+"rasterdata vara ett bättre val."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:67
+msgid ""
+"Using raster data is a solution to these problems. Many people use raster "
+"data as a **backdrop** to be used behind vector layers in order to provide "
+"more meaning to the vector information. The human eye is very good at "
+"interpreting images and so using an image behind vector layers, results in "
+"maps with a lot more meaning. Raster data is not only good for images that "
+"depict the real world surface (e.g. satellite images and aerial "
+"photographs), they are also good for representing more abstract ideas. For "
+"example, rasters can be used to show rainfall trends over an area, or to "
+"depict the fire risk on a landscape. In these kinds of applications, each "
+"cell in the raster represents a different value e.g. risk of fire on a scale"
+" of one to ten."
+msgstr ""
+"Att använda rasterdata är en lösning på dessa problem. Många använder "
+"rasterdata som en **backdrop** som används bakom vektorlager för att ge "
+"vektorinformationen mer mening. Det mänskliga ögat är mycket bra på att "
+"tolka bilder och att använda en bild bakom vektorlager resulterar därför i "
+"kartor med mycket mer mening. Rasterdata är inte bara bra för bilder som "
+"avbildar den verkliga ytan (t.ex. satellitbilder och flygfoton), de är också"
+" bra för att representera mer abstrakta idéer. Rasterdata kan t.ex. användas"
+" för att visa nederbördstrender över ett område eller för att beskriva "
+"brandrisken i ett landskap. I den här typen av tillämpningar representerar "
+"varje cell i rastret ett annat värde, t.ex. brandrisk på en skala från ett "
+"till tio."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:78
+msgid ""
+"An example that shows the difference between an image obtained from a "
+"satellite and one that shows calculated values can be seen in "
+":numref:`figure_raster_types`."
+msgstr ""
+"Ett exempel som visar skillnaden mellan en bild som erhållits från en "
+"satellit och en som visar beräknade värden kan ses i "
+":numref:`figure_raster_types`."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:87
+msgid ""
+"True colour raster images (left) are useful as they provide a lot of detail "
+"that is hard to capture as vector features but easy to see when looking at "
+"the raster image. Raster data can also be non-photographic data such as the "
+"raster layer shown on the right which shows the calculated average minimum "
+"temperature in the Western Cape for the month of March."
+msgstr ""
+"Rasterbilder i äkta färg (till vänster) är användbara eftersom de innehåller"
+" många detaljer som är svåra att fånga som vektorfunktioner men som är lätta"
+" att se när man tittar på rasterbilden. Rasterdata kan också vara icke-"
+"fotografiska data, t.ex. rasterlagret till höger som visar den beräknade "
+"genomsnittliga minimitemperaturen i Västra Kapprovinsen för mars månad."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:94
+msgid "Georeferencing"
+msgstr "Georeferenser"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:96
+msgid ""
+"Georeferencing is the process of defining exactly where on the earth's "
+"surface an image or raster dataset was created. This positional information "
+"is stored with the digital version of the aerial photo. When the GIS "
+"application opens the photo, it uses the positional information to ensure "
+"that the photo appears in the correct place on the map. Normally this "
+"positional information consists of a coordinate for the top left pixel in "
+"the image, the size of each pixel in the X direction, the size of each pixel"
+" in the Y direction, and the amount (if any) by which the image is rotated. "
+"With these few pieces of information, the GIS application can ensure that "
+"raster data are displayed in the correct place. The georeferencing "
+"information for a raster is often provided in a small text file accompanying"
+" the raster."
+msgstr ""
+"Georeferering är processen för att definiera exakt var på jordens yta en "
+"bild eller rasterdatauppsättning skapades. Denna positionsinformation lagras"
+" med den digitala versionen av flygfotot. När GIS-programmet öppnar fotot "
+"används positionsinformationen för att säkerställa att fotot visas på rätt "
+"plats på kartan. Normalt består denna positionsinformation av en koordinat "
+"för bildens översta vänstra pixel, storleken på varje pixel i X-riktningen, "
+"storleken på varje pixel i Y-riktningen och den eventuella rotationen av "
+"bilden. Med hjälp av dessa få uppgifter kan GIS-programmet se till att "
+"rasterdata visas på rätt plats. Georeferensinformationen för en rasterbild "
+"finns ofta i en liten textfil som medföljer rasterbilden."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:109
+msgid "Sources of raster data"
+msgstr "Källor till rasterdata"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:111
+msgid ""
+"Raster data can be obtained in a number of ways. Two of the most common ways"
+" are aerial photography and satellite imagery. In aerial photography, an "
+"aeroplane flies over an area with a camera mounted underneath it. The "
+"photographs are then imported into a computer and georeferenced. Satellite "
+"imagery is created when satellites orbiting the earth point special digital "
+"cameras towards the earth and then take an image of the area on earth they "
+"are passing over. Once the image has been taken it is sent back to earth "
+"using radio signals to special receiving stations such as the one shown in "
+":numref:`figure_csir_station`. The process of capturing raster data from an "
+"aeroplane or satellite is called **remote sensing**."
+msgstr ""
+"Rasterdata kan erhållas på ett antal olika sätt. Två av de vanligaste sätten"
+" är flygfotografering och satellitbilder. Vid flygfotografering flyger ett "
+"flygplan över ett område med en kamera monterad undertill. Fotografierna "
+"importeras sedan till en dator och georefereras. Satellitbilder skapas genom"
+" att satelliter i omloppsbana runt jorden riktar speciella digitalkameror "
+"mot jorden och tar en bild av det område på jorden som de passerar över. När"
+" bilden har tagits skickas den tillbaka till jorden med hjälp av "
+"radiosignaler till speciella mottagningsstationer som den som visas i "
+":numref:`figure_csir_station`. Processen att fånga rasterdata från ett "
+"flygplan eller en satellit kallas **remote sensing**."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:127
+msgid ""
+"The CSIR Satellite Applications Center at Hartebeeshoek near Johannesburg. "
+"Special antennae track satellites as they pass overhead and download images "
+"using radio waves."
+msgstr ""
+"CSIR:s center för satellittillämpningar i Hartebeeshoek nära Johannesburg. "
+"Särskilda antenner följer satelliterna när de passerar och laddar ner bilder"
+" med hjälp av radiovågor."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:131
+msgid ""
+"In other cases, raster data can be computed. For example an insurance "
+"company may take police crime incident reports and create a country wide "
+"raster map showing how high the incidence of crime is likely to be in each "
+"area. Meteorologists (people who study weather patterns) might generate a "
+"province level raster showing average temperature, rainfall and wind "
+"direction using data collected from weather stations (see "
+":numref:`figure_csir_station`). In these cases, they will often use raster "
+"analysis techniques such as interpolation (which we describe in Topic "
+":ref:`spatial_analysys`)."
+msgstr ""
+"I andra fall kan rasterdata beräknas. Ett försäkringsbolag kan t.ex. ta "
+"polisens brottsrapporter och skapa en landsomfattande rasterkarta som visar "
+"hur hög brottsfrekvensen sannolikt är i varje område. Meteorologer (personer"
+" som studerar vädermönster) kan skapa ett raster på provinsnivå som visar "
+"medeltemperatur, nederbörd och vindriktning med hjälp av data som samlats in"
+" från väderstationer (se :numref:`figure_csir_station`). I dessa fall kommer"
+" de ofta att använda rasteranalystekniker som interpolering (som vi "
+"beskriver i ämne :ref:`spatial_analysys`)."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:140
+msgid ""
+"Sometimes raster data are created from vector data because the data owners "
+"want to share the data in an easy to use format. For example, a company with"
+" road, rail, cadastral and other vector datasets may choose to generate a "
+"raster version of these datasets so that employees can view these datasets "
+"in a web browser. This is normally only useful if the attributes, that users"
+" need to be aware of, can be represented on the map with labels or "
+"symbology. If the user needs to look at the attribute table for the data, "
+"providing it in raster format could be a bad choice because raster layers do"
+" not usually have any attribute data associated with them."
+msgstr ""
+"Ibland skapas rasterdata från vektordata eftersom dataägarna vill dela data "
+"i ett format som är lätt att använda. Ett företag med väg-, järnvägs-, "
+"fastighets- och andra vektordataset kan till exempel välja att skapa en "
+"rasterversion av dessa dataset så att de anställda kan visa dem i en "
+"webbläsare. Detta är normalt bara användbart om de attribut som användarna "
+"behöver känna till kan representeras på kartan med etiketter eller "
+"symbologi. Om användaren behöver titta på attributtabellen för data kan det "
+"vara ett dåligt val att tillhandahålla den i rasterformat eftersom "
+"rasterlager vanligtvis inte har några attributdata associerade med dem."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:151
+msgid "Spatial Resolution"
+msgstr "Spatial upplösning"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:153
+msgid ""
+"Every raster layer in a GIS has pixels (cells) of a fixed size that "
+"determine its spatial resolution. This becomes apparent when you look at an "
+"image at a small scale (see :numref:`figure_raster_small_scale`) and then "
+"zoom in to a large scale (see :numref:`figure_raster_large_scale`)."
+msgstr ""
+"Varje rasterlager i ett GIS har pixlar (celler) med en fast storlek som "
+"bestämmer dess rumsliga upplösning. Detta blir tydligt när du tittar på en "
+"bild i liten skala (se :numref:`figure_raster_small_scale`) och sedan zoomar"
+" in till en stor skala (se :numref:`figure_raster_large_scale`)."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:164
+msgid "This satellite image looks good when using a small scale..."
+msgstr "Den här satellitbilden ser bra ut när man använder en liten skala..."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:172
+msgid ""
+"...but when viewed at a large scale you can see the individual pixels that "
+"the image is composed of."
+msgstr ""
+"...men när man tittar på den i stor skala kan man se de enskilda pixlarna "
+"som bilden består av."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:175
+msgid ""
+"Several factors determine the spatial resolution of an image. For remote "
+"sensing data, spatial resolution is usually determined by the capabilities "
+"of the sensor used to take an image. For example SPOT5 satellites can take "
+"images where each pixel is 10 m x 10 m. Other satellites, for example MODIS "
+"take images only at 500 m x 500 m per pixel. In aerial photography, pixel "
+"sizes of 50 cm x 50 cm are not uncommon. Images with a pixel size covering a"
+" small area are called '**high resolution**' images because it is possible "
+"to make out a high degree of detail in the image. Images with a pixel size "
+"covering a large area are called '**low resolution**' images because the "
+"amount of detail the images show is low."
+msgstr ""
+"Flera faktorer avgör den rumsliga upplösningen hos en bild. För "
+"fjärranalysdata bestäms den rumsliga upplösningen vanligtvis av kapaciteten "
+"hos den sensor som används för att ta en bild. SPOT5-satelliter kan t.ex. ta"
+" bilder där varje pixel är 10 m x 10 m. Andra satelliter, t.ex. MODIS, tar "
+"endast bilder på 500 m x 500 m per pixel. Vid flygfotografering är "
+"pixelstorlekar på 50 cm x 50 cm inte ovanliga. Bilder med en pixelstorlek "
+"som täcker ett litet område kallas \"**högupplösta**\" bilder eftersom det "
+"är möjligt att urskilja en hög grad av detaljer i bilden. Bilder med en "
+"pixelstorlek som täcker ett stort område kallas \"**lågupplösta**\" bilder "
+"eftersom detaljrikedomen i bilderna är låg."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:185
+msgid ""
+"In raster data that is computed by spatial analysis (such as the rainfall "
+"map we mentioned earlier), the spatial density of information used to create"
+" the raster will usually determine the spatial resolution. For example if "
+"you want to create a high resolution average rainfall map, you would ideally"
+" need many weather stations in close proximity to each other."
+msgstr ""
+"I rasterdata som beräknas genom rumslig analys (t.ex. nederbördskartan som "
+"vi nämnde tidigare) bestämmer den rumsliga tätheten för den information som "
+"används för att skapa rastret vanligtvis den rumsliga upplösningen. Om du "
+"till exempel vill skapa en högupplöst karta över genomsnittlig nederbörd "
+"behöver du helst många väderstationer i närheten av varandra."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:191
+msgid ""
+"One of the main things to be aware of with rasters captured at a high "
+"spatial resolution is storage requirements. Think of a raster that is 3 x 3 "
+"pixels, each of which contains a number representing average rainfall. To "
+"store all the information contained in the raster, you will need to store 9 "
+"numbers in the computer's memory. Now imagine you want to have a raster "
+"layer for the whole of South Africa with pixels of 1 km x 1 km. South Africa"
+" is around 1,219,090 km :sup:`2`. Which means your computer would need to "
+"store over a million numbers on its hard disk in order to hold all of the "
+"information. Making the pixel size smaller would greatly increase the amount"
+" of storage needed."
+msgstr ""
+"En av de viktigaste sakerna att tänka på när det gäller raster med hög "
+"rumslig upplösning är lagringskraven. Tänk på ett raster som är 3 x 3 "
+"pixlar, där var och en innehåller ett tal som representerar genomsnittlig "
+"nederbörd. För att lagra all information som finns i rastret måste du lagra "
+"9 siffror i datorns minne. Tänk dig nu att du vill ha ett rasterlager för "
+"hela Sydafrika med pixlar på 1 km x 1 km. Sydafrika är cirka 1.219.090 km "
+":sup:`2`. Det innebär att din dator skulle behöva lagra över en miljon "
+"siffror på hårddisken för att få plats med all information. Att göra "
+"pixelstorleken mindre skulle kraftigt öka mängden lagringsutrymme som "
+"behövs."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:201
+msgid ""
+"Sometimes using a low spatial resolution is useful when you want to work "
+"with a large area and are not interested in looking at any one area in a lot"
+" of detail. The cloud maps you see on the weather report, are an example of "
+"this –-- it's useful to see the clouds across the whole country. Zooming in "
+"to one particular cloud in high resolution will not tell you very much about"
+" the upcoming weather!"
+msgstr ""
+"Ibland är det bra att använda en låg rumslig upplösning när du vill arbeta "
+"med ett stort område och inte är intresserad av att titta på ett område i "
+"detalj. Molnkartorna som du ser på väderleksrapporten är ett exempel på "
+"detta --- det är användbart att se molnen över hela landet. Att zooma in på "
+"ett visst moln i hög upplösning säger inte särskilt mycket om det kommande "
+"vädret!"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:207
+msgid ""
+"On the other hand, using low resolution raster data can be problematic if "
+"you are interested in a small region because you probably won't be able to "
+"make out any individual features from the image."
+msgstr ""
+"Å andra sidan kan det vara problematiskt att använda rasterdata med låg "
+"upplösning om du är intresserad av en liten region eftersom du förmodligen "
+"inte kommer att kunna urskilja några enskilda funktioner från bilden."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:212
+msgid "Spectral resolution"
+msgstr "Spektral upplösning"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:214
+msgid ""
+"If you take a colour photograph with a digital camera or camera on a "
+"cellphone, the camera uses electronic sensors to detect red, green and blue "
+"light. When the picture is displayed on a screen or printed out, the red, "
+"green and blue (RGB) information is combined to show you an image that your "
+"eyes can interpret. While the information is still in digital format though,"
+" this RGB information is stored in separate colour **bands**."
+msgstr ""
+"Om du tar ett färgfoto med en digitalkamera eller en kamera i en "
+"mobiltelefon använder kameran elektroniska sensorer för att detektera rött, "
+"grönt och blått ljus. När bilden visas på en skärm eller skrivs ut "
+"kombineras den röda, gröna och blå (RGB) informationen för att visa en bild "
+"som dina ögon kan tolka. Medan informationen fortfarande är i digitalt "
+"format lagras dock denna RGB-information i separata färg**band**."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:221
+msgid ""
+"Whilst our eyes can only see RGB wavelengths, the electronic sensors in "
+"cameras are able to detect wavelengths that our eyes cannot. Of course in a "
+"hand held camera it probably doesn't make sense to record information from "
+"the **non-visible** parts of the spectrum since most people just want to "
+"look at pictures of their dog or what have you. Raster images that include "
+"data for non-visible parts of the light spectrum are often referred to as "
+"multi-spectral images. In GIS recording the non-visible parts of the "
+"spectrum can be very useful. For example, measuring infra-red light can be "
+"useful in identifying water bodies."
+msgstr ""
+"Våra ögon kan bara se RGB-våglängder, men de elektroniska sensorerna i "
+"kameror kan upptäcka våglängder som våra ögon inte kan se. I en handhållen "
+"kamera är det naturligtvis inte meningsfullt att registrera information från"
+" de **icke-synliga** delarna av spektrumet eftersom de flesta människor bara"
+" vill titta på bilder av sin hund eller vad det nu kan vara. Rasterbilder "
+"som innehåller data för icke-synliga delar av ljusspektrumet kallas ofta "
+"multispektrala bilder. I GIS kan det vara mycket användbart att registrera "
+"de icke-synliga delarna av spektrumet. Mätning av infrarött ljus kan till "
+"exempel vara användbart för att identifiera vattensamlingar."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:230
+msgid ""
+"Because having images containing multiple bands of light is so useful in "
+"GIS, raster data are often provided as multi-band images. Each band in the "
+"image is like a separate layer. The GIS will combine three of the bands and "
+"show them as red, green and blue so that the human eye can see them. The "
+"number of bands in a raster image is referred to as its **spectral "
+"resolution**."
+msgstr ""
+"Eftersom bilder som innehåller flera ljusband är så användbara i GIS "
+"tillhandahålls rasterdata ofta som multibandbilder. Varje band i bilden är "
+"som ett separat lager. GIS kombinerar tre av banden och visar dem som rött, "
+"grönt och blått så att det mänskliga ögat kan se dem. Antalet band i en "
+"rasterbild kallas för dess **spektrala upplösning**."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:236
+msgid ""
+"If an image consists of only one band, it is often called a **grayscale** "
+"image. With grayscale images, you can apply false colouring to make the "
+"differences in values in the pixels more obvious. Images with false "
+"colouring applied are often referred to as **pseudocolour images**."
+msgstr ""
+"Om en bild bara består av ett band kallas den ofta för en **gråskalebild**. "
+"I gråskalebilder kan man använda falsk färgläggning för att göra "
+"skillnaderna i pixlarnas värden tydligare. Bilder med falsk färg kallas ofta"
+" för **pseudofärgbilder**."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:242
+msgid "Raster to vector conversion"
+msgstr "Konvertering av raster till vektor"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:244
+msgid ""
+"In our discussion of vector data, we explained that often raster data are "
+"used as a backdrop layer, which is then used as a base from which vector "
+"features can be digitised."
+msgstr ""
+"I vår diskussion om vektordata förklarade vi att rasterdata ofta används som"
+" ett bakgrundsskikt, som sedan används som en bas från vilken "
+"vektorfunktioner kan digitaliseras."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:248
+msgid ""
+"Another approach is to use advanced computer programs to automatically "
+"extract vector features from images. Some features such as roads show in an "
+"image as a sudden change of colour from neighbouring pixels. The computer "
+"program looks for such colour changes and creates vector features as a "
+"result. This kind of functionality is normally only available in very "
+"specialised (and often expensive) GIS software."
+msgstr ""
+"En annan metod är att använda avancerade datorprogram för att automatiskt "
+"extrahera vektorfunktioner från bilder. Vissa funktioner, t.ex. vägar, syns "
+"i en bild som en plötslig färgförändring i förhållande till närliggande "
+"pixlar. Datorprogrammet letar efter sådana färgförändringar och skapar "
+"vektorfunktioner som ett resultat av detta. Den här typen av funktioner "
+"finns normalt bara i mycket specialiserade (och ofta dyra) GIS-program."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:256
+msgid "Vector to raster conversion"
+msgstr "Konvertering av vektor till raster"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:258
+msgid ""
+"Sometimes it is useful to convert vector data into raster data. One side "
+"effect of this is that attribute data (that is attributes associated with "
+"the original vector data) will be lost when the conversion takes place. "
+"Having vectors converted to raster format can be useful though when you want"
+" to give GIS data to non GIS users. With the simpler raster formats, the "
+"person you give the raster image to can simply view it as an image on their "
+"computer without needing any special GIS software."
+msgstr ""
+"Ibland är det bra att konvertera vektordata till rasterdata. En bieffekt av "
+"detta är att attributdata (det vill säga attribut som är associerade med den"
+" ursprungliga vektordatan) går förlorade när konverteringen sker. Att ha "
+"vektorer konverterade till rasterformat kan dock vara användbart när du vill"
+" ge GIS-data till icke-GIS-användare. Med de enklare rasterformaten kan den "
+"person som du ger rasterbilden till helt enkelt se den som en bild på sin "
+"dator utan att behöva någon speciell GIS-programvara."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:267
+msgid "Raster analysis"
+msgstr "Rasteranalys"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:269
+msgid ""
+"There are a great many analytical tools that can be run on raster data which"
+" cannot be used with vector data. For example, rasters can be used to model "
+"water flow over the land surface. This information can be used to calculate "
+"where watersheds and stream networks exist, based on the terrain."
+msgstr ""
+"Det finns ett stort antal analysverktyg som kan köras på rasterdata och som "
+"inte kan användas med vektordata. Rasterdata kan t.ex. användas för att "
+"modellera vattenflödet över markytan. Denna information kan användas för att"
+" beräkna var det finns vattendelare och vattendragsnätverk, baserat på "
+"terrängen."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:274
+msgid ""
+"Raster data are also often used in agriculture and forestry to manage crop "
+"production. For example with a satellite image of a farmer's lands, you can "
+"identify areas where the plants are growing poorly and then use that "
+"information to apply more fertilizer on the affected areas only. Foresters "
+"use raster data to estimate how much timber can be harvested from an area."
+msgstr ""
+"Rasterdata används också ofta inom jord- och skogsbruk för att hantera "
+"växtodling. Med en satellitbild av en jordbrukares mark kan man till exempel"
+" identifiera områden där växterna växer dåligt och sedan använda den "
+"informationen för att sprida mer gödningsmedel endast på de drabbade "
+"områdena. Skogsbrukare använder rasterdata för att uppskatta hur mycket "
+"timmer som kan avverkas från ett område."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:280
+msgid ""
+"Raster data is also very important for disaster management. Analysis of "
+"Digital Elevation Models (a kind of raster where each pixel contains the "
+"height above sea level) can then be used to identify areas that are likely "
+"to be flooded. This can then be used to target rescue and relief efforts to "
+"areas where it is needed the most."
+msgstr ""
+"Rasterdata är också mycket viktigt för katastrofhantering. Analys av "
+"digitala höjdmodeller (en typ av raster där varje pixel innehåller höjden "
+"över havet) kan sedan användas för att identifiera områden som sannolikt "
+"kommer att översvämmas. Detta kan sedan användas för att rikta räddnings- "
+"och hjälpinsatser till områden där de behövs som mest."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:287
+msgid "Common problems / things to be aware of"
+msgstr "Vanliga problem / saker att vara uppmärksam på"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:289
+msgid ""
+"As we have already mentioned, high resolution raster data can require large "
+"amounts of computer storage."
+msgstr ""
+"Som vi redan har nämnt kan högupplösta rasterdata kräva stora mängder "
+"datalagring."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:293
+msgid "What have we learned?"
+msgstr "Vad har vi lärt oss?"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:295
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Låt oss sammanfatta vad vi behandlat i det här arbetsbladet:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:297
+msgid "Raster data are a grid of regularly sized **pixels.**"
+msgstr "Rasterdata är ett rutnät av jämnstora **pixlar.**"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:298
+msgid "Raster data are good for showing **continually varying information.**"
+msgstr ""
+"Rasterdata är bra för att visa **kontinuerligt varierande information.**"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:299
+msgid "The size of pixels in a raster determines its **spatial resolution.**"
+msgstr ""
+"Storleken på pixlarna i ett raster avgör dess **spatiala upplösning.**"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:300
+msgid ""
+"Raster images can contain one or more **bands**, each covering the same "
+"spatial area, but containing different information."
+msgstr ""
+"Rasterbilder kan innehålla ett eller flera **band**, som alla täcker samma "
+"rumsliga område men innehåller olika information."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:302
+msgid ""
+"When raster data contains bands from different parts of the electromagnetic "
+"spectrum, they are called **multi-spectral images**."
+msgstr ""
+"När rasterdata innehåller band från olika delar av det elektromagnetiska "
+"spektrumet kallas de för **multispektrala bilder**."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:304
+msgid ""
+"Three of the bands of a multi-spectral image can be shown in the colours "
+"Red, Green and Blue so that we can see them."
+msgstr ""
+"Tre av banden i en multispektral bild kan visas i färgerna rött, grönt och "
+"blått så att vi kan se dem."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:306
+msgid "Images with a single band are called grayscale images."
+msgstr "Bilder med ett enda band kallas gråskalebilder."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:307
+msgid "Single band, grayscale images can be shown in pseudocolour by the GIS."
+msgstr "Enbandiga gråskalebilder kan visas i pseudofärg av GIS."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:308
+msgid "Raster images can consume a large amount of storage space."
+msgstr "Rasterbilder kan förbruka en stor mängd lagringsutrymme."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:311
+msgid "Now you try!"
+msgstr "Nu får du försöka!"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:313
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Här är några idéer som du kan prova med dina elever:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:315
+msgid ""
+"Discuss with your learners in which situations you would use raster data and"
+" in which you would use vector data."
+msgstr ""
+"Diskutera med dina elever i vilka situationer du skulle använda rasterdata "
+"och i vilka du skulle använda vektordata."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:317
+msgid ""
+"Get your learners to create a raster map of your school by using A4 "
+"transparency sheets with grid lines drawn on them. Overlay the "
+"transparencies onto a toposheet or aerial photograph of your school. Now let"
+" each learner or group of learners colour in cells that represent a certain "
+"type of feature e.g. building, playground, sports field, trees, footpaths "
+"etc. When they are all finished, overlay all the sheets together and see if "
+"it makes a good raster map representation of your school. Which types of "
+"features worked well when represented as rasters? How did your choice in "
+"cell size affect your ability to represent different feature types?"
+msgstr ""
+"Låt eleverna skapa en rasterkarta över skolan med hjälp av transparenta "
+"A4-ark med rutnätslinjer ritade på. Lägg över transparenterna på ett "
+"toposark eller ett flygfoto av skolan. Låt nu varje elev eller grupp av "
+"elever färglägga celler som representerar en viss typ av objekt, t.ex. "
+"byggnad, lekplats, idrottsplats, träd, gångstigar osv. När alla är klara "
+"lägger du ihop alla ark och ser om det blir en bra rasterkarta över din "
+"skola. Vilka typer av funktioner fungerade bra när de representerades som "
+"raster? Hur påverkade ditt val av cellstorlek din förmåga att representera "
+"olika typer av funktioner?"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:328
+msgid "Something to think about"
+msgstr "Något att tänka på"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:330
+msgid ""
+"If you don't have a computer available, you can understand raster data using"
+" pen and paper. Draw a grid of squares onto a sheet of paper to represent "
+"your soccer field. Fill the grid in with numbers representing values for "
+"grass cover on your soccer field. If a patch is bare give the cell a value "
+"of 0. If the patch is mixed bare and covered, give it a value of 1. If an "
+"area is completely covered with grass, give it a value of 2. Now use pencil "
+"crayons to colour the cells based on their values. Colour cells with value 2"
+" dark green. Value 1 should get coloured light green, and value 0 coloured "
+"in brown. When you finish, you should have a raster map of your soccer "
+"field!"
+msgstr ""
+"Om du inte har tillgång till en dator kan du förstå rasterdata med hjälp av "
+"penna och papper. Rita ett rutnät med rutor på ett pappersark för att "
+"representera din fotbollsplan. Fyll i rutnätet med siffror som representerar"
+" värden för grästäckningen på fotbollsplanen. Om en yta är bar ger du cellen"
+" värdet 0. Om ytan är både bar och täckt ger du den värdet 1. Om en yta är "
+"helt täckt av gräs ger du den värdet 2. Använd nu blyertspennor för att "
+"färglägga cellerna utifrån deras värden. Celler med värde 2 färgas "
+"mörkgröna. Värde 1 ska färgas ljusgrönt och värde 0 ska färgas brunt. När du"
+" är klar bör du ha en rasterkarta över din fotbollsplan!"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:341
+msgid "Further reading"
+msgstr "Ytterligare läsning"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:343
+msgid "**Book**:"
+msgstr "**Bok**:"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:345
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:347
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:350
+msgid ""
+"**Website:** https://en.wikipedia.org/wiki/GIS_file_formats#Raster_formats"
+msgstr ""
+"**Website:** https://en.wikipedia.org/wiki/GIS_file_formats#Raster_formats"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:352
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"raster data in QGIS."
+msgstr ""
+"I QGIS User Guide finns också mer detaljerad information om hur du arbetar "
+"med rasterdata i QGIS."
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:356
+msgid "What's next?"
+msgstr "Vad kommer härnäst?"
+
+#: ../../docs/gentle_gis_introduction/raster_data.rst:358
+msgid ""
+"In the section that follows we will take a closer look at **topology** to "
+"see how the relationship between vector features can be used to ensure the "
+"best data quality."
+msgstr ""
+"I avsnittet som följer kommer vi att titta närmare på **topologi** för att "
+"se hur förhållandet mellan vektorfunktioner kan användas för att säkerställa"
+" bästa möjliga datakvalitet."
