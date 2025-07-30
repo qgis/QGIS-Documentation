@@ -1,0 +1,962 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:2
+msgid "Lesson: Vector Analysis"
+msgstr "Lektion Vektoranalys"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:4
+msgid ""
+"Vector data can also be analyzed to reveal how different features interact "
+"with each other in space. There are many different analysis-related "
+"functions, so we won't go through them all. Rather, we will pose a question "
+"and try to solve it using the tools that QGIS provides."
+msgstr ""
+"Vektordata kan också analyseras för att avslöja hur olika funktioner "
+"interagerar med varandra i rymden. Det finns många olika analysrelaterade "
+"funktioner, så vi kommer inte att gå igenom dem alla. Istället kommer vi att"
+" ställa en fråga och försöka lösa den med hjälp av de verktyg som QGIS "
+"tillhandahåller."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:10
+msgid ""
+"**The goal for this lesson:** To ask a question and solve it using analysis "
+"tools."
+msgstr ""
+"**Målet för den här lektionen:** Att ställa en fråga och lösa den med hjälp "
+"av analysverktyg."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:15
+msgid ":abbr:`★☆☆ (Basic level)` The GIS Process"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` GIS-processen"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:17
+msgid ""
+"Before we start, it would be useful to give a brief overview of a process "
+"that can be used to solve a problem. The way to go about it is:"
+msgstr ""
+"Innan vi börjar kan det vara bra att ge en kort översikt över en process som"
+" kan användas för att lösa ett problem. Sättet att göra det på är:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:21
+msgid "State the Problem"
+msgstr "Redogör för problemet"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:22
+msgid "Get the Data"
+msgstr "Hämta data"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:23
+msgid "Analyze the Problem"
+msgstr "Analysera problemet"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:24
+msgid "Present the Results"
+msgstr "Presentera resultaten"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:28
+msgid ":abbr:`★☆☆ (Basic level)` The Problem"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Problemet"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:30
+msgid ""
+"Let's start off the process by deciding on a problem to solve. For example, "
+"you are an estate agent and you are looking for a residential property in "
+"|majorUrbanName| for clients who have the following criteria:"
+msgstr ""
+"Låt oss börja processen med att bestämma oss för ett problem att lösa. Du är"
+" till exempel en fastighetsmäklare och du letar efter en bostadsfastighet i "
+"|majorUrbanName| för kunder som har följande kriterier:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:35
+msgid "It needs to be in |majorUrbanName|"
+msgstr "Det måste vara i |majorUrbanName|"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:36
+msgid "It must be within reasonable driving distance of a school (say 1km)"
+msgstr "Den måste ligga inom rimligt köravstånd från en skola (t.ex. 1 km)"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:37
+msgid "It must be more than 100m squared in size"
+msgstr "Den måste ha en storlek på mer än 100 m i kvadrat"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:38
+msgid "Closer than 50m to a main road"
+msgstr "Närmare än 50 meter till en huvudväg"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:39
+msgid "Closer than 500m to a restaurant"
+msgstr "Närmare än 500 meter till en restaurang"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:43
+msgid ":abbr:`★☆☆ (Basic level)` The Data"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Data"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:45
+msgid "To answer these questions, we are going to need the following data:"
+msgstr "För att besvara dessa frågor behöver vi följande uppgifter:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:47
+msgid "The residential properties (buildings) in the area"
+msgstr "Bostadsfastigheterna (byggnaderna) i området"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:48
+msgid "The roads in and around the town"
+msgstr "Vägarna i och runt staden"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:49
+msgid "The location of schools and restaurants"
+msgstr "Läget till skolor och restauranger"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:50
+msgid "The size of buildings"
+msgstr "Byggnadernas storlek"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:52
+msgid ""
+"These data are available through OSM, and you should find that the dataset "
+"you have been using throughout this manual also can be used for this lesson."
+msgstr ""
+"Dessa data finns tillgängliga via OSM, och du bör upptäcka att den dataset "
+"som du har använt i hela den här handboken också kan användas för den här "
+"lektionen."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:56
+msgid ""
+"If you want to download data from another area, jump to the "
+":ref:`Introduction Chapter <tm_preparing_data>` to read how to do it."
+msgstr ""
+"Om du vill hämta data från ett annat område kan du gå till "
+":ref:`Introduktionskapitlet <tm_preparing_data>` för att läsa om hur du gör "
+"det."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:59
+msgid ""
+"Although OSM downloads have consistent data fields, the coverage and detail "
+"does vary. If you find that your chosen region does not contain information "
+"on restaurants, for example, you may need to chose a different region."
+msgstr ""
+"Även om OSM-nedladdningar har konsekventa datafält varierar täckningen och "
+"detaljerna. Om du upptäcker att din valda region inte innehåller information"
+" om till exempel restauranger, kan du behöva välja en annan region."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:67
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Start a Project and get the Data"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Starta ett projekt och hämta data"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:69
+msgid "We first need to load the data to work with."
+msgstr "Först måste vi ladda de data vi ska arbeta med."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:71
+msgid "Start a new QGIS project"
+msgstr "Starta ett nytt QGIS-projekt"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:72
+msgid ""
+"If you want, you can add a background map. Open the :guilabel:`Browser` and "
+"load the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu."
+msgstr ""
+"Om du vill kan du lägga till en bakgrundskarta. Öppna :guilabel:`Browser` "
+"och ladda :guilabel:`OSM` bakgrundskarta från :guilabel:`XYZ Tiles` menyn."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:79
+msgid ""
+"In the :file:`training_data.gpkg` Geopackage database, you will find most "
+"the datasets we will use in this chapter:"
+msgstr ""
+"I databasen :file:`training_data.gpkg` Geopackage hittar du de flesta "
+"dataset som vi kommer att använda i det här kapitlet:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:82
+msgid "``buildings``"
+msgstr "``byggnader``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:83
+msgid "``roads``"
+msgstr "\"vägar"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:84
+msgid "``restaurants``"
+msgstr "``restauranger``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:85
+msgid "``schools``"
+msgstr "``skolor``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:87
+msgid "Load them, and also :file:`landuse.sqlite`."
+msgstr "Ladda dem, och även :file:`landuse.sqlite`."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:89
+msgid "Zoom to the layer extent to see |majorUrbanName|, South Africa"
+msgstr "Zooma till skiktets omfattning för att se |majorUrbanName|, Sydafrika"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:91
+msgid ""
+"Before proceeding we will filter the :guilabel:`roads` layer, in order to "
+"have only some specific road types to work with."
+msgstr ""
+"Innan vi fortsätter filtrerar vi skiktet :guilabel:`roads`, så att vi bara "
+"har vissa specifika vägtyper att arbeta med."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:94
+msgid ""
+"Some roads in OSM datasets are listed as ``unclassified``, ``tracks``, "
+"``path`` and ``footway``. We want to exclude these from our dataset and "
+"focus on the other road types, more suitable for this exercise."
+msgstr ""
+"Vissa vägar i OSM-dataset listas som \"oklassificerade\", \"spår\", \"stig\""
+" och \"fotväg\". Vi vill utesluta dessa från vårt dataset och fokusera på de"
+" andra vägtyperna, som är mer lämpliga för den här övningen."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:99
+msgid ""
+"Moreover, OSM data might not be updated everywhere, and we will also exclude"
+" ``NULL`` values."
+msgstr ""
+"Dessutom kanske OSM-data inte uppdateras överallt, och vi kommer också att "
+"utesluta ``NULL``-värden."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:102
+msgid "Right click on the ``roads`` layer and choose :guilabel:`Filter...`."
+msgstr "Högerklicka på lagret ``roads`` och välj :guilabel:`Filter...`."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:103
+msgid ""
+"In the dialog that pops up we filter these features with the following "
+"expression::"
+msgstr ""
+"I dialogrutan som dyker upp filtrerar vi dessa funktioner med följande "
+"uttryck::"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:107
+msgid ""
+"The concatenation of the two operators ``NOT`` and ``IN`` excludes all the "
+"features that have these attribute values in the ``highway`` field."
+msgstr ""
+"Sammankopplingen av de två operatörerna ``NOT`` och ``IN`` utesluter alla "
+"funktioner som har dessa attributvärden i fältet ``highway``."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:110
+msgid ""
+"``IS NOT NULL`` combined with the ``AND`` operator excludes roads with no "
+"value in the ``highway`` field."
+msgstr ""
+"``IS NOT NULL`` kombinerat med operatorn ``AND`` utesluter vägar som saknar "
+"värde i fältet ``highway``."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
+msgid ""
+"Note the |indicatorFilter| icon next to the :guilabel:`roads` layer. It "
+"helps you remember that this layer has a filter activated, so some features "
+"may not be available in the project."
+msgstr ""
+"Notera ikonen |indicatorFilter| bredvid skiktet :guilabel:`roads`. Det "
+"hjälper dig att komma ihåg att det här lagret har ett filter aktiverat, så "
+"vissa funktioner kanske inte är tillgängliga i projektet."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:486
+msgid "indicatorFilter"
+msgstr "indicatorFilter"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:117
+msgid "The map with all the data should look like the following one:"
+msgstr "Kartan med alla data bör se ut som följande:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:124
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Convert Layers' CRS"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Prova själv: Konvertera lager' CRS"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:126
+msgid ""
+"Because we are going to be measuring distances within our layers, we need to"
+" change the layers' CRS. To do this, we need to select each layer in turn, "
+"save the layer to a new one with our new projection, then import that new "
+"layer into our map."
+msgstr ""
+"Eftersom vi ska mäta avstånd inom våra lager måste vi ändra lagrens CRS. För"
+" att göra detta måste vi välja varje lager i tur och ordning, spara lagret "
+"till ett nytt lager med vår nya projektion och sedan importera det nya "
+"lagret till vår karta."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:131
+msgid ""
+"You have many different options, e.g. you can export each layer as an ESRI "
+"Shapefile format dataset, you can append the layers to an existing "
+"GeoPackage file, or you can create another GeoPackage file and fill it with "
+"the new reprojected layers. We will show the last option, so the "
+":file:`training_data.gpkg` will remain clean. Feel free to choose the best "
+"workflow for yourself."
+msgstr ""
+"Du har många olika alternativ, t.ex. kan du exportera varje lager som en "
+"dataset i ESRI Shapefile-format, du kan lägga till lagren i en befintlig "
+"GeoPackage-fil, eller så kan du skapa en ny GeoPackage-fil och fylla den med"
+" de nya reprojicerade lagren. Vi kommer att visa det sista alternativet, så "
+"att :filen:`training_data.gpkg` förblir ren. Känn dig fri att välja det "
+"bästa arbetsflödet för dig själv."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:139
+msgid ""
+"In this example, we are using the *WGS 84 / UTM zone 34S* CRS, but you "
+"should use a UTM CRS which is more appropriate for your region."
+msgstr ""
+"I det här exemplet använder vi *WGS 84 / UTM-zon 34S* CRS, men du bör "
+"använda en UTM CRS som är mer lämplig för din region."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
+msgid ""
+"Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel"
+msgstr "Högerklicka på skiktet :guilabel:`roads` i panelen :guilabel:`Layers"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:145
+msgid "Click :guilabel:`Export --> Save Features As...`"
+msgstr "Klicka på :guilabel:`Export --> Spara funktioner som...`"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:146
+msgid ""
+"In the :guilabel:`Save Vector Layer As` dialog choose :guilabel:`GeoPackage`"
+" as :guilabel:`Format`"
+msgstr ""
+"I dialogrutan :guilabel:`Save Vector Layer As` väljer du "
+":guilabel:`GeoPackage` som :guilabel:`Format`"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:148
+msgid ""
+"Click on :guilabel:`...` for the :guilabel:`File name`, and name the new "
+"GeoPackage ``vector_analysis``"
+msgstr ""
+"Klicka på :guilabel:`...` för :guilabel:`File name` och döp det nya "
+"GeoPackage till ``vector_analysis``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:150
+msgid "Change the :guilabel:`Layer name` to ``roads_34S``"
+msgstr "Ändra :guilabel:`Layer name` till ``roads_34S``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:151
+msgid "Change the :guilabel:`CRS` to *WGS 84 / UTM zone 34S*"
+msgstr "Ändra :guilabel:`CRS` till *WGS 84 / UTM-zon 34S*"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:152
+msgid "Click on :guilabel:`OK`:"
+msgstr "Klicka på :guilabel:`OK`:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:157
+msgid ""
+"This will create the new GeoPackage database and add the ``roads_34S`` "
+"layer."
+msgstr ""
+"Detta kommer att skapa den nya GeoPackage-databasen och lägga till skiktet "
+"``roads_34S``."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:159
+msgid ""
+"Repeat this process for each layer, creating a new layer in the "
+":file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the "
+"original name."
+msgstr ""
+"Upprepa denna process för varje skikt och skapa ett nytt skikt i GeoPackage-"
+"filen :file:`vector_analysis.gpkg` med ``_34S`` tillagt till det "
+"ursprungliga namnet."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:162
+msgid ""
+"On macOS, press the :guilabel:`Replace` button in the dialog that pops up to"
+" allow QGIS to overwrite the existing GeoPackage."
+msgstr ""
+"På macOS trycker du på knappen :guilabel:`Replace` i dialogrutan som dyker "
+"upp för att låta QGIS skriva över det befintliga GeoPackage."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:165
+msgid ""
+"When you choose to save a layer to an existing GeoPackage, QGIS will **add**"
+" that layer next to the existing layers in the GeoPackage, if no layer of "
+"the same name already exists."
+msgstr ""
+"När du väljer att spara ett lager till ett befintligt GeoPackage kommer QGIS"
+" att **lägga till** lagret bredvid de befintliga lagren i GeoPackage, om "
+"inget lager med samma namn redan finns."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:169
+msgid "Remove each of the old layers from the project"
+msgstr "Ta bort alla gamla lager från projektet"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:170
+msgid ""
+"Once you have completed the process for all the layers, right click on any "
+"layer and click :guilabel:`Zoom to layer extent` to focus the map to the "
+"area of interest."
+msgstr ""
+"När du har slutfört processen för alla lager högerklickar du på valfritt "
+"lager och klickar på :guilabel:`Zoom to layer extent` för att fokusera "
+"kartan till det område du är intresserad av."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:174
+msgid ""
+"Now that we have converted OSM data to a UTM projection, we can begin our "
+"calculations."
+msgstr ""
+"Nu när vi har konverterat OSM-data till en UTM-projektion kan vi påbörja "
+"våra beräkningar."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:178
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Analyzing the Problem: Distances "
+"From Schools and Roads"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Analysera problemet: Avstånd från"
+" skolor och vägar"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:180
+msgid "QGIS allows you to calculate distances between any vector object."
+msgstr "Med QGIS kan du beräkna avstånd mellan valfria vektorobjekt."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:182
+msgid ""
+"Make sure that only the ``roads_34S`` and ``buildings_34S`` layers are "
+"visible (to simplify the map while you're working)"
+msgstr ""
+"Se till att endast lagren ``roads_34S`` och ``buildings_34S`` är synliga "
+"(för att förenkla kartan medan du arbetar)"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:184
+msgid ""
+"Click on the :menuselection:`Processing --> Toolbox` to open the analytical "
+"*core* of QGIS. Basically, **all** algorithms (for vector **and** raster "
+"analysis) are available in this toolbox."
+msgstr ""
+"Klicka på :menuselection:`Processing --> Toolbox` för att öppna den "
+"analytiska *kärnan* i QGIS. I princip finns **alla** algoritmer (för vektor-"
+" **och** rasteranalys) tillgängliga i den här verktygslådan."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:188
+msgid ""
+"We start by calculating the area around the ``roads_34S`` by using the "
+":guilabel:`Buffer` algorithm. You can find it in the :menuselection:`Vector "
+"Geometry` group."
+msgstr ""
+"Vi börjar med att beräkna området runt ``roads_34S`` genom att använda "
+":guilabel:`Buffer` algoritmen. Du kan hitta den i :menuselection:`Vector "
+"Geometry`-gruppen."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:195
+msgid ""
+"Or you can type ``buffer`` in the search menu in the upper part of the "
+"toolbox:"
+msgstr ""
+"Eller så kan du skriva ``buffer`` i sökmenyn i den övre delen av "
+"verktygslådan:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:201
+msgid "Double click on it to open the algorithm dialog"
+msgstr "Dubbelklicka på den för att öppna algoritmdialogen"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:202
+msgid ""
+"Select ``roads_34S`` as :guilabel:`Input layer`, set :guilabel:`Distance` to"
+" 50 and use the default values for the rest of the parameters."
+msgstr ""
+"Välj ``roads_34S`` som :guilabel:`Input layer`, ställ in "
+":guilabel:`Distance` till 50 och använd standardvärdena för resten av "
+"parametrarna."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:209
+msgid ""
+"The default :guilabel:`Distance` is in meters because our input dataset is "
+"in a Projected Coordinate System that uses meter as its basic measurement "
+"unit. You can use the combo box to choose other projected units like "
+"kilometers, yards, etc."
+msgstr ""
+"Standardvärdet för :guilabel:`Distance` är i meter eftersom vår "
+"indatauppsättning är i ett projicerat koordinatsystem som använder meter som"
+" grundläggande måttenhet. Du kan använda kombinationsrutan för att välja "
+"andra projicerade enheter som kilometer, yards etc."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:215
+msgid ""
+"If you are trying to make a buffer on a layer with a Geographical Coordinate"
+" System, Processing will warn you and suggest to reproject the layer to a "
+"metric Coordinate System."
+msgstr ""
+"Om du försöker skapa en buffert på ett lager med ett geografiskt "
+"koordinatsystem kommer Processing att varna dig och föreslå att du "
+"omprojicerar lagret till ett metriskt koordinatsystem."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:219
+msgid ""
+"By default, *Processing* creates temporary layers and adds them to the "
+":guilabel:`Layers` panel. You can also append the result to the GeoPackage "
+"database by:"
+msgstr ""
+"Som standard skapar *Processing* tillfälliga lager och lägger till dem i "
+"panelen :guilabel:`Layers`. Du kan också lägga till resultatet i GeoPackage-"
+"databasen genom att:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:223
+msgid ""
+"Clicking on the :guilabel:`...` button and choose :guilabel:`Save to "
+"GeoPackage...`"
+msgstr ""
+"Klicka på knappen :guilabel:`...` och välj :guilabel:`Save to GeoPackage...`"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:225
+msgid "Naming the new layer ``roads_buffer_50m``"
+msgstr "Namnge det nya lagret ``roads_buffer_50m``"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:226
+msgid "Saving it in the :file:`vector_analysis.gpkg` file"
+msgstr "Spara den i filen :file:`vector_analysis.gpkg`"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:231
+msgid "Click on :guilabel:`Run`, and then close the :guilabel:`Buffer` dialog"
+msgstr ""
+"Klicka på :guilabel:`Run`, och stäng sedan :guilabel:`Buffer`-dialogrutan"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:234
+msgid "Now your map will look something like this:"
+msgstr "Nu kommer din karta att se ut ungefär så här:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:239
+msgid ""
+"If your new layer is at the top of the :guilabel:`Layers` list, it will "
+"probably obscure much of your map, but this gives you all the areas in your "
+"region which are within 50m of a road."
+msgstr ""
+"Om det nya skiktet ligger högst upp i listan :guilabel:`Layers` kommer det "
+"förmodligen att skymma en stor del av kartan, men det ger dig alla områden i"
+" din region som ligger inom 50 m från en väg."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:243
+msgid ""
+"Notice that there are distinct areas within your buffer, which correspond to"
+" each individual road. To get rid of this problem:"
+msgstr ""
+"Lägg märke till att det finns distinkta områden inom din buffert, som "
+"motsvarar varje enskild väg. För att bli av med detta problem:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:246
+msgid ""
+"Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the buffer with"
+" :guilabel:`Dissolve results` enabled."
+msgstr ""
+"Avmarkera lagret :guilabel:`roads_buffer_50m` och återskapa bufferten med "
+":guilabel:`Dissolve results` aktiverat."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:252
+msgid "Save the output as :guilabel:`roads_buffer_50m_dissolved`"
+msgstr "Spara utdata som :guilabel:`roads_buffer_50m_dissolved`"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:253
+msgid "Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog"
+msgstr "Klicka på :guilabel:`Run` och stäng dialogrutan :guilabel:`Buffer`"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:255
+msgid ""
+"Once you have added the layer to the :guilabel:`Layers` panel, it will look "
+"like this:"
+msgstr ""
+"När du har lagt till lagret i panelen :guilabel:`Layers` kommer det att se "
+"ut så här:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:261
+msgid "Now there are no unnecessary subdivisions."
+msgstr "Nu finns det inga onödiga underavdelningar."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:263
+msgid ""
+"The *Short Help* on the right side of the dialog explains how the algorithm "
+"works. If you need more information, just click on the :guilabel:`Help` "
+"button in the bottom part to open a more detailed guide of the algorithm."
+msgstr ""
+"Den *Korta hjälpen* på höger sida av dialogrutan förklarar hur algoritmen "
+"fungerar. Om du behöver mer information kan du klicka på knappen "
+":guilabel:`Help` längst ned för att öppna en mer detaljerad guide till "
+"algoritmen."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:273
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself: Distance from schools"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Prova själv: Avstånd från skolor"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:275
+msgid "Use the same approach as above and create a buffer for your schools."
+msgstr "Använd samma metod som ovan och skapa en buffert för dina skolor."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:277
+msgid ""
+"It shall be ``1 km`` in radius. Save the new layer in the "
+":file:`vector_analysis.gpkg` file as ``schools_buffer_1km_dissolved``."
+msgstr ""
+"Det ska vara ``1 km`` i radie. Spara det nya lagret i filen "
+":file:`vector_analysis.gpkg` som ``schools_buffer_1km_dissolved``."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:280
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:392
+msgid "Answer"
+msgstr "Svar"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:283
+msgid "Your buffer dialog should look like this:"
+msgstr "Din buffertdialog bör se ut så här:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:288
+msgid "The :guilabel:`Buffer distance` is :guilabel:`1` kilometer."
+msgstr "Det :guilabel:`Buffertavstånd` är :guilabel:`1` kilometer."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
+msgid ""
+"The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This"
+" is optional, but it's recommended, because it makes the output buffers look"
+" smoother. Compare this:"
+msgstr ""
+"Värdet för :guilabel:`Segments to approximate` sätts till :guilabel:`20`. "
+"Detta är valfritt, men rekommenderas eftersom det gör att utdatabuffertarna "
+"ser jämnare ut. Jämför detta:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:297
+msgid "To this:"
+msgstr "Till det här:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:302
+msgid ""
+"The first image shows the buffer with the :guilabel:`Segments to "
+"approximate` value set to :guilabel:`5` and the second shows the value set "
+"to :guilabel:`20`. In our example, the difference is subtle, but you can see"
+" that the buffer's edges are smoother with the higher value."
+msgstr ""
+"Den första bilden visar bufferten med värdet :guilabel:`Segments to "
+"approximate` inställt på :guilabel:`5` och den andra visar värdet inställt "
+"på :guilabel:`20`. I vårt exempel är skillnaden subtil, men du kan se att "
+"buffertens kanter är mjukare med det högre värdet."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:308
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Overlapping Areas"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Överlappande områden"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
+msgid ""
+"Now we have identified areas where the road is less than 50 meters away and "
+"areas where there is a school within 1 km (direct line, not by road). But "
+"obviously, we only want the areas where both of these criteria are "
+"satisfied. To do that, we will need to use the :guilabel:`Intersect` tool. "
+"You can find it in :menuselection:`Vector Overlay` group in the "
+":guilabel:`Processing Toolbox`."
+msgstr ""
+"Nu har vi identifierat områden där vägen ligger mindre än 50 meter bort och "
+"områden där det finns en skola inom 1 km (direktlinje, inte via väg). Men vi"
+" vill naturligtvis bara ha de områden där båda dessa kriterier är uppfyllda."
+" För att göra det måste vi använda verktyget :guilabel:`Intersect`. Du "
+"hittar det i :menuselection:`Vector Overlay`-gruppen i :guilabel:`Processing"
+" Toolbox`."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:319
+msgid ""
+"Use the two buffer layers as :guilabel:`Input layer` and :guilabel:`Overlay "
+"layer`, choose :file:`vector_analysis.gpkg` GeoPackage in "
+":guilabel:`Intersection` with :guilabel:`Layer name` "
+"``road_school_buffers_intersect``. Leave the rest as suggested (default)."
+msgstr ""
+"Använd de två buffertskikten som :guilabel:`Input layer` och "
+":guilabel:`Overlay layer`, välj :file:`vector_analysis.gpkg` GeoPackage i "
+":guilabel:`Intersection` med :guilabel:`Layer name` "
+"``road_school_buffers_intersect``. Lämna resten som föreslagits (standard)."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:328
+msgid "Click :guilabel:`Run`."
+msgstr "Klicka på :guilabel:`Run`."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:330
+msgid ""
+"In the image below, the blue areas are where both of the distance criteria "
+"are satisfied."
+msgstr ""
+"I bilden nedan är de blå områdena där båda avståndskriterierna uppfylls."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:336
+msgid ""
+"You may remove the two buffer layers and only keep the one that shows where "
+"they overlap, since that's what we really wanted to know in the first place:"
+msgstr ""
+"Du kan ta bort de två buffertlagren och bara behålla det som visar var de "
+"överlappar varandra, eftersom det är det vi egentligen ville veta från "
+"början:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:346
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Extract the Buildings"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Extrahera byggnaderna"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
+msgid ""
+"Now you've got the area that the buildings must overlap. Next, you want to "
+"extract the buildings in that area."
+msgstr ""
+"Nu har du det område som byggnaderna måste överlappa. Därefter vill du "
+"extrahera byggnaderna i det området."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:351
+msgid ""
+"Look for the menu entry :menuselection:`Vector Selection --> Extract by "
+"location` within the *Processing Toolbox*"
+msgstr ""
+"Leta efter menyalternativet :menuselection:`Vector Selection --> Extract by "
+"location` i *Processing Toolbox*"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:354
+msgid ""
+"Select ``buildings_34S`` in :guilabel:`Extract features from`. Check "
+":guilabel:`intersect` in :guilabel:`Where the features (geometric "
+"predicate)`, select the buffer intersection layer in :guilabel:`By comparing"
+" to the features from`. Save to the :file:`vector_analysis.gpkg`, and name "
+"the layer ``well_located_houses``."
+msgstr ""
+"Välj ``buildings_34S`` i :guilabel:`Extrahera funktioner från`. Kontrollera "
+":guilabel:`intersect` i :guilabel:`Where the features (geometric "
+"predicate)`, välj buffertens intersection-lager i :guilabel:`By comparing to"
+" the features from`. Spara till :file:`vector_analysis.gpkg`, och namnge "
+"lagret ``well_located_houses``."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:365
+msgid "Click :guilabel:`Run` and close the dialog"
+msgstr "Klicka på :guilabel:`Run` och stäng dialogrutan"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:366
+msgid ""
+"You will probably find that not much seems to have changed. If so, move the "
+":guilabel:`well_located_houses` layer to the top of the layers list, then "
+"zoom in."
+msgstr ""
+"Du kommer förmodligen att upptäcka att inte mycket verkar ha förändrats. Om "
+"så är fallet, flytta lagret :guilabel:`well_located_houses` till toppen av "
+"lagerlistan och zooma sedan in."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
+msgid ""
+"The red buildings are those which match our criteria, while the buildings in"
+" green are those which do not."
+msgstr ""
+"De röda byggnaderna är de som uppfyller våra kriterier, medan de gröna "
+"byggnaderna är de som inte gör det."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:375
+msgid ""
+"Now you have two separated layers and can remove ``buildings_34S`` from the "
+"layer list."
+msgstr ""
+"Nu har du två separata lager och kan ta bort ``buildings_34S`` från "
+"lagerlistan."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:380
+msgid ""
+":abbr:`★★☆ (Moderate level)` Try Yourself: Further Filter our Buildings"
+msgstr ""
+":abbr:`★★☆ (Måttlig nivå)` Prova själv: Filtrera våra byggnader ytterligare"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
+msgid ""
+"We now have a layer which shows us all the buildings within 1km of a school "
+"and within 50m of a road. We now need to reduce that selection to only show "
+"buildings which are within 500m of a restaurant."
+msgstr ""
+"Vi har nu ett lager som visar oss alla byggnader inom 1 km från en skola och"
+" inom 50 m från en väg. Vi måste nu minska urvalet så att det bara visar "
+"byggnader som ligger inom 500 m från en restaurang."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:387
+msgid ""
+"Using the processes described above, create a new layer called "
+":guilabel:`houses_restaurants_500m` which further filters your "
+":guilabel:`well_located_houses` layer to show only those which are within "
+"500m of a restaurant."
+msgstr ""
+"Med hjälp av de processer som beskrivs ovan skapar du ett nytt skikt som "
+"heter :guilabel:`houses_restaurants_500m` som ytterligare filtrerar ditt "
+":guilabel:`well_located_houses`-skikt så att det bara visar de hus som "
+"ligger inom 500 meter från en restaurang."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:395
+msgid ""
+"To create the new :guilabel:`houses_restaurants_500m` layer, we go through a"
+" two step process:"
+msgstr ""
+"För att skapa det nya lagret :guilabel:`houses_restaurants_500m` går vi "
+"igenom en process i två steg:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
+msgid ""
+"First, create a buffer of 500m around the restaurants and add the layer to "
+"the map:"
+msgstr ""
+"Skapa först en buffert på 500 meter runt restaurangerna och lägg till lagret"
+" på kartan:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:407
+msgid "Next, extract buildings within that buffer area:"
+msgstr "Därefter extraheras byggnader inom detta buffertområde:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:412
+msgid ""
+"Your map should now show only those buildings which are within 50m of a "
+"road, 1km of a school and 500m of a restaurant:"
+msgstr ""
+"På kartan visas nu endast de byggnader som ligger inom 50 meter från en väg,"
+" 1 km från en skola och 500 meter från en restaurang:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Select Buildings of the Right Size"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Välj byggnader av rätt storlek"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
+msgid ""
+"To see which buildings are of the correct size (more than 100 square "
+"meters), we need to calculate their size."
+msgstr ""
+"För att se vilka byggnader som är av rätt storlek (mer än 100 kvadratmeter) "
+"måste vi beräkna deras storlek."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:424
+msgid ""
+"Select the :guilabel:`houses_restaurants_500m` layer and open the *Field "
+"Calculator* by clicking on the |calculateField| :sup:`Open Field Calculator`"
+" button in the main toolbar or in the attribute table window"
+msgstr ""
+"Välj skiktet :guilabel:`houses_restaurants_500m` och öppna *Field "
+"Calculator* genom att klicka på knappen |calculateField| :sup:`Open Field "
+"Calculator` i huvudverktygsfältet eller i attributtabellfönstret"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:484
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:428
+msgid ""
+"Select :guilabel:`Create a new field`, set the :guilabel:`Output field name`"
+" to ``AREA``, choose :guilabel:`Decimal number (real)` as :guilabel:`Output "
+"field type`, and choose ``$area`` from the :menuselection:`Geometry` group."
+msgstr ""
+"Välj :guilabel:`Create a new field`, sätt :guilabel:`Output field name` till"
+" ``AREA``, välj :guilabel:`Decimal number (real)`` som :guilabel:`Output "
+"field type`, och välj ``$area`` från :menuselection:`Geometry`-gruppen."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:437
+msgid ""
+"The new field ``AREA`` will contain the area of each building in square "
+"meters."
+msgstr ""
+"Det nya fältet ``AREA`` kommer att innehålla ytan för varje byggnad i "
+"kvadratmeter."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:439
+msgid ""
+"Click :guilabel:`OK`. The ``AREA`` field has been added at the end of the "
+"attribute table."
+msgstr ""
+"Klicka på :guilabel:`OK`. Fältet ``AREA`` har lagts till i slutet av "
+"attributtabellen."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:442
+msgid ""
+"Click the |toggleEditing| :sup:`Toggle Editing` button to finish editing, "
+"and save your edits when prompted."
+msgstr ""
+"Klicka på knappen |toggleEditing| :sup:`Toggle Editing` för att avsluta "
+"redigeringen och spara dina ändringar när du uppmanas till det."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:489
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:444
+msgid ""
+"In the :menuselection:`Source` tab of the layer properties, set the "
+":guilabel:`Provider Feature Filter` to ``\"AREA >= 100``."
+msgstr ""
+"På fliken :menuselection:`Source` i skiktets egenskaper ställer du in "
+":guilabel:`Provider Feature Filter` på ``\"AREA >= 100``."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:450
+msgid "Click :guilabel:`OK`."
+msgstr "Klicka på :guilabel:`OK`."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:452
+msgid ""
+"Your map should now only show you those buildings which match our starting "
+"criteria and which are more than 100 square meters in size."
+msgstr ""
+"Din karta ska nu bara visa dig de byggnader som uppfyller våra "
+"startkriterier och som är mer än 100 kvadratmeter stora."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:457
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Prova själv:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:459
+msgid ""
+"Save your solution as a new layer, using the approach you learned above for "
+"doing so. The file should be saved within the same GeoPackage database, with"
+" the name ``solution``."
+msgstr ""
+"Spara din lösning som ett nytt lager med hjälp av den metod som du lärde dig"
+" ovan. Filen ska sparas i samma GeoPackage-databas med namnet ``solution``."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:465
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:467
+msgid ""
+"Using the GIS problem solving approach together with QGIS vector analysis "
+"tools, you were able to solve a problem with multiple criteria quickly and "
+"easily."
+msgstr ""
+"Genom att använda GIS-problemlösningsmetoden tillsammans med QGIS "
+"vektoranalysverktyg kunde du snabbt och enkelt lösa ett problem med flera "
+"kriterier."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:472
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:474
+msgid ""
+"In the next lesson, we will look at how to calculate the shortest distance "
+"along roads from one point to another."
+msgstr ""
+"I nästa lektion tittar vi på hur man beräknar det kortaste avståndet längs "
+"vägar från en punkt till en annan."
