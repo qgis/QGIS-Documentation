@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:5
+msgid "Releasing your plugin"
+msgstr "Frigör ditt plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:12
+msgid ""
+"Once your plugin is ready and you think the plugin could be helpful for some"
+" people, do not hesitate to upload it to :ref:`official_pyqgis_repository`. "
+"On that page you can also find packaging guidelines about how to prepare the"
+" plugin to work well with the plugin installer. Or in case you would like to"
+" set up your own plugin repository, create a simple XML file that will list "
+"the plugins and their metadata."
+msgstr ""
+"När ditt plugin är klart och du tror att pluginet kan vara till hjälp för "
+"vissa människor, tveka inte att ladda upp det till "
+":ref:`official_pyqgis_repository`. På den sidan kan du också hitta "
+"riktlinjer för paketering om hur du förbereder plugin-programmet för att "
+"fungera bra med plugin-installationsprogrammet. Om du vill skapa ditt eget "
+"plugin-arkiv kan du skapa en enkel XML-fil som listar plugin-programmen och "
+"deras metadata."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:19
+msgid "Please take special care to the following suggestions:"
+msgstr "Var särskilt noga med att följa följande anvisningar:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:22
+msgid "Metadata and names"
+msgstr "Metadata och namn"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:24
+msgid "avoid using a name too similar to existing plugins"
+msgstr "undvika att använda ett namn som är alltför likt befintliga plugins"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:25
+msgid ""
+"if your plugin has a similar functionality to an existing plugin, please "
+"explain the differences in the About field, so the user will know which one "
+"to use without the need to install and test it"
+msgstr ""
+"om ditt plugin har en liknande funktionalitet som ett befintligt plugin, "
+"förklara skillnaderna i fältet Om, så att användaren vet vilket som ska "
+"användas utan att behöva installera och testa det"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:26
+msgid "avoid repeating \"plugin\" in the name of the plugin itself"
+msgstr "undvika att upprepa \"plugin\" i namnet på själva pluginet"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:27
+msgid ""
+"use the description field in metadata for a 1 line description, the About "
+"field for more detailed instructions"
+msgstr ""
+"använd beskrivningsfältet i metadata för en beskrivning på 1 rad, fältet Om "
+"för mer detaljerade instruktioner"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:28
+msgid ""
+"include a code repository, a bug tracker, and a home page; this will greatly"
+" enhance the possibility of collaboration, and can be done very easily with "
+"one of the available web infrastructures (GitHub, GitLab, Bitbucket, etc.)"
+msgstr ""
+"inkludera ett kodförvar, en buggspårare och en hemsida; detta kommer att "
+"förbättra möjligheten till samarbete avsevärt och kan göras mycket enkelt "
+"med någon av de tillgängliga webbinfrastrukturerna (GitHub, GitLab, "
+"Bitbucket, etc.)"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:29
+msgid ""
+"choose tags with care: avoid the uninformative ones (e.g. vector) and prefer"
+" the ones already used by others (see the plugin website)"
+msgstr ""
+"välj taggar med omsorg: undvik de oinformativa (t.ex. vector) och föredra de"
+" som redan används av andra (se plugin-webbplatsen)"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:30
+msgid ""
+"add a proper icon, do not leave the default one; see QGIS interface for a "
+"suggestion of the style to be used"
+msgstr ""
+"lägg till en riktig ikon, lämna inte standardikonen; se QGIS-gränssnittet "
+"för ett förslag på vilken stil som ska användas"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:33
+msgid "Code and help"
+msgstr "Kod och hjälp"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:35
+msgid ""
+"do not include generated file (ui_*.py, resources_rc.py, generated help "
+"files…) and useless stuff (e.g. .gitignore) in repository"
+msgstr ""
+"inkludera inte genererade filer (ui_*.py, resources_rc.py, genererade "
+"hjälpfiler ...) och värdelösa saker (t.ex. .gitignore) i repository"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:36
+msgid "add the plugin to the appropriate menu (Vector, Raster, Web, Database)"
+msgstr ""
+"lägga till insticksprogrammet i lämplig meny (Vector, Raster, Web, Database)"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:37
+msgid ""
+"when appropriate (plugins performing analyses), consider adding the plugin "
+"as a subplugin of Processing framework: this will allow users to run it in "
+"batch, to integrate it in more complex workflows, and will free you from the"
+" burden of designing an interface"
+msgstr ""
+"när det är lämpligt (plugins som utför analyser), överväg att lägga till "
+"pluginet som ett underplugin till Processing framework: detta gör det "
+"möjligt för användare att köra det i batch, att integrera det i mer komplexa"
+" arbetsflöden och befriar dig från bördan att utforma ett gränssnitt"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:38
+msgid ""
+"include at least minimal documentation and, if useful for testing and "
+"understanding, sample data."
+msgstr ""
+"innehålla åtminstone minimal dokumentation och, om det är användbart för "
+"testning och förståelse, exempeldata."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:43
+msgid "Official Python plugin repository"
+msgstr "Officiellt Python plugin-repository"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:45
+msgid ""
+"You can find the *official* Python plugin repository at "
+"`<https://plugins.qgis.org/>`_."
+msgstr ""
+"Du kan hitta det *officiella* Python plugin-arkivet på "
+"`<https://plugins.qgis.org/>`_."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:48
+msgid ""
+"In order to use the official repository you must obtain an OSGEO ID from the"
+" `OSGEO web portal <https://www.osgeo.org/community/getting-started-"
+"osgeo/osgeo_userid/>`_."
+msgstr ""
+"För att kunna använda det officiella arkivet måste du skaffa ett OSGEO ID "
+"från `OSGEO webbportal <https://www.osgeo.org/community/getting-started-"
+"osgeo/osgeo_userid/>`_."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:51
+msgid ""
+"Once you have uploaded your plugin it will be approved by a staff member and"
+" you will be notified."
+msgstr ""
+"När du har laddat upp din plugin kommer den att godkännas av en anställd och"
+" du kommer att meddelas."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:55
+msgid "**TODO:**"
+msgstr "**TODO:**"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:55
+msgid "Insert a link to the governance document"
+msgstr "Infoga en länk till styrdokumentet"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:61
+msgid "Permissions"
+msgstr "Behörigheter"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:63
+msgid "These rules have been implemented in the official plugin repository:"
+msgstr "Dessa regler har implementerats i det officiella plugin-arkivet:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:65
+msgid "every registered user can add a new plugin"
+msgstr "varje registrerad användare kan lägga till ett nytt plugin"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:66
+msgid "*staff* users can approve or disapprove all plugin versions"
+msgstr "*personal* användare kan godkänna eller avvisa alla plugin-versioner"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:67
+msgid ""
+"users which have the special permission `plugins.can_approve` get the "
+"versions they upload automatically approved"
+msgstr ""
+"användare som har den särskilda behörigheten `plugins.can_approve` får de "
+"versioner de laddar upp automatiskt godkända"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:69
+msgid ""
+"users which have the special permission `plugins.can_approve` can approve "
+"versions uploaded by others as long as they are in the list of the plugin "
+"*owners*"
+msgstr ""
+"användare som har den speciella behörigheten `plugins.can_approve` kan "
+"godkänna versioner som laddats upp av andra så länge de finns i listan över "
+"plugin *ägare*"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:72
+msgid ""
+"a particular plugin can be deleted and edited only by *staff* users and "
+"plugin *owners*"
+msgstr ""
+"ett visst plugin kan raderas och redigeras endast av *anställda* användare "
+"och plugin *ägare*"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:74
+msgid ""
+"if a user without `plugins.can_approve` permission uploads a new version, "
+"the plugin version is automatically unapproved."
+msgstr ""
+"om en användare utan `plugins.can_approve`-behörighet laddar upp en ny "
+"version, blir plugin-versionen automatiskt ogodkänd."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:79
+msgid "Trust management"
+msgstr "Förtroendehantering"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:81
+msgid ""
+"Staff members can grant *trust* to selected plugin creators setting "
+"`plugins.can_approve` permission through the front-end application."
+msgstr ""
+"Personal kan ge *trust* till utvalda plugin-skapare genom att ställa in "
+"`plugins.can_approve`-behörighet via frontend-applikationen."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:84
+msgid ""
+"The plugin details view offers direct links to grant trust to the plugin "
+"creator or the plugin *owners*."
+msgstr ""
+"I plugin-detaljerna finns direktlänkar för att ge förtroende till plugin-"
+"skaparen eller plugin-ägarna*."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:90
+msgid "Validation"
+msgstr "Validering"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:92
+msgid ""
+"Plugin's metadata are automatically imported and validated from the "
+"compressed package when the plugin is uploaded."
+msgstr ""
+"Pluginets metadata importeras och valideras automatiskt från det "
+"komprimerade paketet när pluginet laddas upp."
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:95
+msgid ""
+"Here are some validation rules that you should aware of when you want to "
+"upload a plugin on the official repository:"
+msgstr ""
+"Här är några valideringsregler som du bör känna till när du vill ladda upp "
+"ett plugin på det officiella förvaret:"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:98
+msgid ""
+"the name of the main folder containing your plugin must contain only ASCII "
+"characters (A-Z and a-z), digits and the characters underscore (_) and minus"
+" (-), also it cannot start with a digit"
+msgstr ""
+"namnet på huvudmappen som innehåller ditt plugin får endast innehålla ASCII-"
+"tecken (A-Z och a-z), siffror och tecknen underscore (_) och minus (-), och "
+"det får inte börja med en siffra"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:101
+msgid ":file:`metadata.txt` is required"
+msgstr ":file:`metadata.txt` krävs"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:102
+msgid ""
+"all required metadata listed in :ref:`metadata table<plugin_metadata_table>`"
+" must be present"
+msgstr ""
+"alla obligatoriska metadata som anges i "
+":ref:`metadatatabell<plugin_metadata_table>` måste finnas"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:104
+msgid "the `version` metadata field must be unique"
+msgstr "metadatafältet `version` måste vara unikt"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:105
+msgid ""
+"a license file must be included, saved as ``LICENSE`` with no extension "
+"(i.e. not ``LICENSE.txt`` for example)"
+msgstr ""
+"en licensfil måste inkluderas, sparad som ``LICENSE`` utan tillägg (dvs. "
+"inte ``LICENSE.txt`` till exempel)"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:109
+msgid "Plugin structure"
+msgstr "Plugin-struktur"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:111
+msgid ""
+"Following the validation rules the compressed (.zip) package of your plugin "
+"must have a specific structure to validate as a functional plugin. As the "
+"plugin will be unzipped inside the users plugins folder it must have it's "
+"own directory inside the .zip file to not interfere with other plugins. "
+"Mandatory files are: :file:`metadata.txt`,  :file:`__init__.py` and "
+":file:`LICENSE`. But it would be nice to have a :file:`README` and of course"
+" an icon to represent the plugin. Following is an example of how a "
+":file:`plugin.zip` could look like."
+msgstr ""
+"Enligt valideringsreglerna måste det komprimerade (.zip) paketet med ditt "
+"plugin ha en specifik struktur för att valideras som ett funktionellt "
+"plugin. Eftersom insticksprogrammet kommer att packas upp i användarens "
+"insticksprogrammapp måste det ha en egen katalog i .zip-filen för att inte "
+"störa andra insticksprogram. Obligatoriska filer är: :file:`metadata.txt`, "
+":file:`__init__.py` och :file:`LICENSE`. Men det skulle vara trevligt att ha"
+" en :file:`README` och naturligtvis en ikon för att representera "
+"insticksprogrammet. Nedan följer ett exempel på hur en :file:`plugin.zip` "
+"kan se ut."
