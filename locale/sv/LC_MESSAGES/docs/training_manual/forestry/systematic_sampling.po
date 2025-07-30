@@ -1,0 +1,576 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:2
+msgid "Lesson: Systematic Sampling Design"
+msgstr "Lektion: Systematisk urvalsdesign"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:4
+msgid ""
+"You have already digitized a set of polygons that represent the forest "
+"stands, but you don't have information about the forest just yet. For that "
+"purpose you can design a survey to inventory the whole forest area and then "
+"estimate its parameters. In this lesson you will create a systematic set of "
+"sampling plots."
+msgstr ""
+"Du har redan digitaliserat en uppsättning polygoner som representerar "
+"skogsbestånden, men du har inte information om skogen ännu. För det "
+"ändamålet kan du utforma en undersökning för att inventera hela skogsområdet"
+" och sedan uppskatta dess parametrar. I den här lektionen kommer du att "
+"skapa en systematisk uppsättning provytor."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:9
+msgid ""
+"When you start planning your forest inventory it is important to clearly "
+"define the objectives, the types of sample plots that will be used, and the "
+"data that will be collected to achieve the objectives. For each individual "
+"case, those will depend on the type of forest and the management purpose; "
+"and should be carefully planned by someone with forestry knowledge. In this "
+"lesson, you will implement a theoretical inventory based on a systematic "
+"sampling plot design."
+msgstr ""
+"När du börjar planera din skogsinventering är det viktigt att tydligt "
+"definiera målen, vilka typer av provytor som ska användas och vilka data som"
+" ska samlas in för att uppnå målen. I varje enskilt fall beror detta på "
+"skogstypen och syftet med skötseln, och bör planeras noggrant av någon med "
+"skoglig kunskap. I den här lektionen kommer du att genomföra en teoretisk "
+"inventering baserad på en systematisk provytedesign."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:16
+msgid ""
+"**The goal for this lesson:** To create a systematic sampling plot design to"
+" survey the forest area."
+msgstr ""
+"**Målet för den här lektionen:** Att skapa en systematisk provytedesign för "
+"att undersöka skogsområdet."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:20
+msgid "Inventorying the Forest"
+msgstr "Inventering av skogen"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:22
+msgid ""
+"There are several methods to inventory forests, each of them suiting "
+"different purposes and conditions. For example, one very accurate way to "
+"inventory a forest (if you consider only tree species) would be to visit the"
+" forest and make a list of every tree and their characteristics. As you can "
+"imagine this is not commonly applicable except for some small areas or some "
+"special situations."
+msgstr ""
+"Det finns flera olika metoder för att inventera skogar, och var och en av "
+"dem lämpar sig för olika syften och förhållanden. Ett mycket exakt sätt att "
+"inventera en skog (om man bara tar hänsyn till trädarter) skulle till "
+"exempel vara att besöka skogen och göra en lista över varje träd och dess "
+"egenskaper. Som du kan föreställa dig är detta inte vanligt förekommande, "
+"utom för vissa små områden eller i vissa speciella situationer."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:28
+msgid ""
+"The most common way to find out about a forest is by sampling it, that is, "
+"taking measurements in different locations at the forest and generalizing "
+"that information to the whole forest. These measurements are often made in "
+"*sample plots* that are smaller forest areas that can be easily measured. "
+"The sample plots can be of any size (for ex. 50 m2, 0.5 ha) and form (for "
+"ex. circular, rectangular, variable size), and can be located in the forest "
+"in different ways (for ex. randomly, systematically, along lines). The size,"
+" form and location of the sample plots are usually decided following "
+"statistical, economical and practical considerations. If you have no "
+"forestry knowledge, you might be interested in reading `this Wikipedia "
+"article <https://en.wikipedia.org/wiki/Forest_inventory>`_."
+msgstr ""
+"Det vanligaste sättet att ta reda på mer om en skog är genom att ta "
+"stickprov, det vill säga att göra mätningar på olika platser i skogen och "
+"generalisera informationen till hela skogen. Dessa mätningar görs ofta i "
+"*provytor* som är mindre skogsområden som lätt kan mätas. Provytorna kan "
+"vara av valfri storlek (t.ex. 50 m2, 0,5 ha) och form (t.ex. cirkulära, "
+"rektangulära, varierande storlek) och kan placeras i skogen på olika sätt "
+"(t.ex. slumpmässigt, systematiskt, längs linjer). Provytornas storlek, form "
+"och läge bestäms vanligen utifrån statistiska, ekonomiska och praktiska "
+"överväganden. Om du inte har någon kunskap om skogsbruk kan du vara "
+"intresserad av att läsa `den här Wikipedia-artikeln "
+"<https://en.wikipedia.org/wiki/Forest_inventory>`_."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:40
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Implementing a Systematic Sampling "
+"Plot Design"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Implementering av en systematisk "
+"provtagningsplottdesign"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:42
+msgid ""
+"For the forest you are working with, the manager has decided that a "
+"systematic sampling design is the most appropriate for this forest and has "
+"decided that a fixed distance of 80 meters between the sample plots and "
+"sampling lines will yield reliable results (for this case, +- 5% average "
+"error at a probability of 68%). Variable size plots has been decided to be "
+"the most effective method for this inventory, for growing and mature stands,"
+" but a 4 meters fixed radius plots will be used for seedling stands."
+msgstr ""
+"För den skog du arbetar med har förvaltaren beslutat att en systematisk "
+"provtagningsdesign är den mest lämpliga för denna skog och har beslutat att "
+"ett fast avstånd på 80 meter mellan provytorna och provtagningslinjerna "
+"kommer att ge tillförlitliga resultat (för detta fall +- 5% averagefel med "
+"en sannolikhet på 68%). Provytor med varierande storlek har beslutats vara "
+"den mest effektiva metoden för denna inventering, för växande och mogna "
+"bestånd, men provytor med en fast radie på 4 meter kommer att användas för "
+"plantbestånd."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:50
+msgid ""
+"In practice, you simply need to represented the sample plots as points that "
+"will be used by the field teams later:"
+msgstr ""
+"I praktiken behöver du helt enkelt representera provytorna som punkter som "
+"senare kommer att användas av fältteamen:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:53
+msgid ""
+"Open your :file:`digitizing_2012.qgs` project from the previous lesson."
+msgstr ""
+"Öppna ditt projekt :file:`digitizing_2012.qgs` från föregående lektion."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:54
+msgid "Remove all the layers except for :guilabel:`forest_stands_2012`."
+msgstr "Ta bort alla lager utom :guilabel:`forest_stands_2012`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:55
+msgid "Save your project now as :file:`forest_inventory.qgs`"
+msgstr "Spara nu ditt projekt som :file:`forest_inventory.qgs`"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:57
+msgid ""
+"Now you need to create a rectangular grid of points separated 80 meters from"
+" each other:"
+msgstr ""
+"Nu ska du skapa ett rektangulärt rutnät med punkter som ligger 80 meter från"
+" varandra:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:59
+msgid ""
+"Open :menuselection:`Vector --> Research Tools` |regularPoints| "
+":guilabel:`Regular points`."
+msgstr ""
+"Öppna :menuselection:`Vector --> Research Tools` |regularPoints| "
+":guilabel:`Regular points`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:216
+msgid "regularPoints"
+msgstr "regularPoints"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:60
+msgid ""
+"Press the drop-down button next to the :guilabel:`Input extent` field and "
+"from the :guilabel:`Calculate from Layer` menu, select "
+":guilabel:`forest_stands_2012`."
+msgstr ""
+"Tryck på rullgardinsmenyn bredvid fältet :guilabel:`Input extent` och välj "
+":guilabel:`Forest_stands_2012` i menyn :guilabel:`Calculate from Layer`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:62
+msgid ""
+"In the :guilabel:`Point spacing/count` settings, enter ``80`` ``meters``."
+msgstr ""
+"I inställningarna :guilabel:`Point spacing/count` anger du ``80`` "
+"``meters``."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:63
+msgid ""
+"Check the :guilabel:`Use point spacing` box to indicate that the value "
+"represents the distance between the points."
+msgstr ""
+"Markera rutan :guilabel:`Use point spacing` för att ange att värdet "
+"representerar avståndet mellan punkterna."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:65
+msgid ""
+"Under :guilabel:`Regular points`, save the output as "
+":file:`systematic_plots.shp` in the :file:`forestry\\\\sampling\\\\` folder."
+msgstr ""
+"Under :guilabel:`Regular points` sparar du resultatet som "
+":file:`systematic_plots.shp` i mappen :file:`forestry\\sampling\\`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:67
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:90
+msgid "Check :guilabel:`Open output file after running algorithm`."
+msgstr ""
+"Kontrollera :guilabel:`Öppna utdatafilen efter körning av algoritmen`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:68
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:91
+msgid "Press :guilabel:`Run`."
+msgstr "Tryck på :guilabel:`Run`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:70
+msgid ""
+"The suggested :guilabel:`Regular points` creates the systematic points "
+"starting in the upper-left corner of the extent of the selected polygon "
+"layer. If you want to add some randomness to this regular points, you could "
+"use a randomly calculated number between 0 and 80 (80 is the distance "
+"between our points), and then write it as the :guilabel:`Initial inset from "
+"corner (LH side)` parameter in the tool's dialog."
+msgstr ""
+"Den föreslagna :guilabel:`Regular points` skapar systematiska punkter som "
+"börjar i det övre vänstra hörnet av det valda polygonlagrets utsträckning. "
+"Om du vill lägga till lite slumpmässighet i dessa regelbundna punkter kan du"
+" använda ett slumpmässigt beräknat tal mellan 0 och 80 (80 är avståndet "
+"mellan våra punkter) och sedan skriva det som :guilabel:`Initial inset from "
+"corner (LH side)`-parameter i verktygets dialogruta."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:77
+msgid ""
+"You notice that the tool has used the whole extent of your stands layer to "
+"generate a rectangular grid of points. But you are only interested on those "
+"points that are actually inside your forest area (see the images below):"
+msgstr ""
+"Du märker att verktyget har använt hela omfattningen av ditt beståndslager "
+"för att generera ett rektangulärt rutnät av punkter. Men du är bara "
+"intresserad av de punkter som faktiskt ligger inom ditt skogsområde (se "
+"bilderna nedan):"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:84
+msgid ""
+"From the Processing toolbox, open |gdal| :menuselection:`GDAL --> Vector "
+"geoprocessing --> Clip vector by mask layer`."
+msgstr ""
+"Från verktygslådan Processing öppnar du |gdal| :menuselection:`GDAL --> "
+"Vector geoprocessing --> Clip vector by mask layer`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:210
+msgid "gdal"
+msgstr "gdal"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:86
+msgid "Select :guilabel:`systematic_plots` as the :guilabel:`Input layer`."
+msgstr "Välj :guilabel:`systematic_plots` som :guilabel:`Input layer`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:87
+msgid "Set :guilabel:`forest_stands_2012` as the :guilabel:`Mask layer`."
+msgstr "Ange :guilabel:`forest_stands_2012` som :guilabel:`Mask layer`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:88
+msgid ""
+"Save the :guilabel:`Clipped (mask)` result as "
+":file:`systematic_plots_clip.shp` in the :file:`forestry\\\\sampling\\\\` "
+"folder."
+msgstr ""
+"Spara resultatet :guilabel:`Clipped (mask)` som "
+":file:`systematic_plots_clip.shp` i mappen :file:`forestry\\\\sampling\\`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:93
+msgid ""
+"You have now the points that the field teams will use to navigate to the "
+"designed sample plots locations. You can still prepare these points so that "
+"they are more useful for the field work. At the least you will have to add "
+"meaningful names for the points and export them to a format that can be used"
+" in their GPS devices."
+msgstr ""
+"Du har nu de punkter som fältteamen kommer att använda för att navigera till"
+" de utvalda platserna för provytorna. Du kan fortfarande förbereda dessa "
+"punkter så att de blir mer användbara för fältarbetet. Du måste åtminstone "
+"lägga till meningsfulla namn för punkterna och exportera dem till ett format"
+" som kan användas i deras GPS-enheter."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:98
+msgid ""
+"Let's start with the naming of the sample plots. If you check the "
+":guilabel:`Attribute table` for the plots inside the forest area, you can "
+"see that you have the default :guilabel:`id` field automatically generated "
+"by the :guilabel:`Regular points` tool. Label the points to see them in the "
+"map and consider if you could use those numbers as part of your sample plot "
+"naming:"
+msgstr ""
+"Låt oss börja med namngivningen av provytorna. Om du kontrollerar "
+":guilabel:`Attribute table` för provytorna i skogsområdet kan du se att du "
+"har standardfältet :guilabel:`id` som automatiskt genereras av verktyget "
+":guilabel:`Regular points`. Märk punkterna så att de syns på kartan och "
+"fundera på om du kan använda dessa nummer som en del av namngivningen av "
+"provytorna:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:104
+msgid ""
+"Open the :menuselection:`Layer Properties -->` |labelingSingle| "
+":guilabel:`Labels` for the ``systematic_plots_clip`` layer."
+msgstr ""
+"Öppna :menuselection:`Layer Properties -->` |labelingSingle| "
+":guilabel:`Labels` för lagret ``systematic_plots_clip``."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:214
+msgid "labelingSingle"
+msgstr "labelingSingle"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:106
+msgid "Turn the top menu into |labelingSingle| :guilabel:`Single Labels`."
+msgstr "Gör om toppmenyn till |labelingSingle| :guilabel:`Single Labels`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:107
+msgid "For the :guilabel:`Value` entry, select the field ``id``."
+msgstr "För posten :guilabel:`Value` väljer du fältet ``id``."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:108
+msgid ""
+"Go to the |labelbuffer| :guilabel:`Buffer` tab, check the :guilabel:`Draw "
+"text buffer` and set the buffer :guilabel:`Size` to ``1``."
+msgstr ""
+"Gå till fliken |labelbuffer| :guilabel:`Buffer`, markera :guilabel:`Draw "
+"text buffer` och ställ in bufferten :guilabel:`Size` till ``1``."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:212
+msgid "labelbuffer"
+msgstr "labelbuffer"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:110
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:134
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:171
+msgid "Click :guilabel:`OK`."
+msgstr "Klicka på :guilabel:`OK`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:112
+msgid ""
+"Now look at the labels on your map. You can see that the points have been "
+"created and numbered first West to East and then North to South. If you look"
+" at the attribute table again, you will notice that the order in the table "
+"is following also that pattern. Unless you would have a reason to name the "
+"sample plots in a different way, naming them in a West-East/North-South "
+"fashion follows a logical order and is a good option."
+msgstr ""
+"Titta nu på etiketterna på din karta. Du kan se att punkterna har skapats "
+"och numrerats först från väst till öst och sedan från norr till söder. Om du"
+" tittar på attributtabellen igen kommer du att märka att ordningen i "
+"tabellen också följer det mönstret. Om du inte har någon anledning att "
+"namnge provytorna på ett annat sätt följer namngivningen i väst-östlig/nord-"
+"sydlig ordning en logisk ordning och är ett bra alternativ."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:119
+msgid ""
+"Nevertheless, the number values in the ``id`` field are not so good. It "
+"would be better if the naming would be something like ``p_1, p_2...``. You "
+"can create a new column for the ``systematic_plots_clip`` layer:"
+msgstr ""
+"Ändå är siffervärdena i fältet ``id`` inte så bra. Det skulle vara bättre om"
+" namngivningen var något i stil med ``p_1, p_2...``. Du kan skapa en ny "
+"kolumn för lagret ``systematic_plots_clip``:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:123
+msgid "Go to the :guilabel:`Attribute table` for ``systematic_plots_clip``."
+msgstr "Gå till :guilabel:`Attribute table` för ``systematic_plots_clip``."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:124
+msgid "Enable the |toggleEditing| edit mode."
+msgstr "Aktivera redigeringsläget |toggleEditing|."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:218
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:125
+msgid "Open the |calculateField| :sup:`Field calculator`:"
+msgstr "Öppna |calculateField| :sup:`Fältkalkylator`:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:208
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:127
+msgid "Check :guilabel:`Create a new field`"
+msgstr "Kontrollera :guilabel:`Create a new field` (Skapa ett nytt fält)"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:128
+msgid "Enter ``Plot_id`` as :guilabel:`Output field name`"
+msgstr "Ange ``Plot_id`` som :guilabel:`Utmatningsfältets namn``"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:129
+msgid "Set the :guilabel:`Output field type` to :guilabel:`Text (string)`."
+msgstr ""
+"Ställ in :guilabel:`Output field type` till :guilabel:`Text (string)`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:130
+msgid ""
+"In the :guilabel:`Expression` field, write, copy or construct this formula "
+"``concat('P_', @row_number )``. Remember that you can also double click on "
+"the elements inside the :guilabel:`Function list`. The ``concat`` function "
+"can be found under :guilabel:`String` and ``@row_number`` is under the "
+":guilabel:`Variables` group."
+msgstr ""
+"I fältet :guilabel:`Expression` skriver, kopierar eller konstruerar du "
+"formeln ``concat('P_', @row_number )``. Kom ihåg att du också kan "
+"dubbelklicka på elementen i :guilabel:`Funktionslista`. Funktionen "
+"``concat`` finns under :guilabel:`String` och ``@row_number`` finns under "
+":guilabel:`Variables`-gruppen."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:135
+msgid "Disable the edit mode and save your changes."
+msgstr "Inaktivera redigeringsläget och spara dina ändringar."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:137
+msgid ""
+"Now you have a new column with plot names that are meaningful to you. For "
+"the ``systematic_plots_clip`` layer, change the field used for labeling to "
+"your new ``Plot_id`` field."
+msgstr ""
+"Nu har du en ny kolumn med plotnamn som är meningsfulla för dig. För lagret "
+"``systematic_plots_clip`` ändrar du fältet som används för märkning till "
+"ditt nya fält ``Plot_id``."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:145
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Exporting Sample Plots as GPX format"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Exportera provytor som GPX-format"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:147
+msgid ""
+"The field teams will be probably using a GPS device to locate the sample "
+"plots you planned. The next step is to export the points you created to a "
+"format that your GPS can read. QGIS allows you to save your point and line "
+"vector data in `GPS eXchange Format (GPX) "
+"<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`_, which is an standard "
+"GPS data format that can be read by most of the specialized software. You "
+"need to be careful with selecting the CRS when you save your data:"
+msgstr ""
+"Fältteamen kommer förmodligen att använda en GPS-enhet för att lokalisera de"
+" provytor som du har planerat. Nästa steg är att exportera de punkter du har"
+" skapat till ett format som din GPS kan läsa. Med QGIS kan du spara dina "
+"punkt- och linjevektordata i `GPS eXchange Format (GPX) "
+"<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`_, som är ett "
+"standardformat för GPS-data som kan läsas av de flesta specialiserade "
+"program. Du måste vara försiktig med att välja CRS när du sparar dina data:"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:155
+msgid ""
+"Right-click ``systematic_plots_clip`` layer and select "
+":menuselection:`Export --> Save features as...`."
+msgstr ""
+"Högerklicka på lagret ``systematic_plots_clip`` och välj "
+":menuselection:`Export --> Save features as...`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:161
+msgid "In :guilabel:`Format` select :guilabel:`GPS eXchange Format [GPX]`."
+msgstr "I :guilabel:`Format` välj :guilabel:`GPS eXchange Format [GPX]`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:162
+msgid ""
+"Save the output :guilabel:`File name` as :file:`plots_wgs84.gpx` in the "
+":file:`forestry\\\\sampling\\\\` folder."
+msgstr ""
+"Spara utdata :guilabel:`Filnamn` som :file:`plots_wgs84.gpx` i mappen "
+":file:`forestry\\\\sampling\\`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:164
+msgid "In :guilabel:`CRS` select :guilabel:`Selected CRS`."
+msgstr "I :guilabel:`CRS` välj :guilabel:`Valda CRS`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:165
+msgid "Browse for :guilabel:`EPSG:4326 - WGS 84`."
+msgstr "Bläddra efter :guilabel:`EPSG:4326 - WGS 84`."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:167
+msgid ""
+"The `GPX <https://gdal.org/en/latest/drivers/vector/gpx.html>`_ format "
+"accepts only this CRS, if you select a different one, QGIS will give no "
+"error but you will get an empty file."
+msgstr ""
+"Formatet `GPX <https://gdal.org/en/latest/drivers/vector/gpx.html>`_ "
+"accepterar endast denna CRS, om du väljer en annan kommer QGIS inte att ge "
+"något felmeddelande men du kommer att få en tom fil."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:172
+msgid ""
+"In the dialog that opens, select only the ``waypoints`` layer (the rest of "
+"the layers are empty)."
+msgstr ""
+"I dialogrutan som öppnas väljer du bara skiktet ``waypoints`` (resten av "
+"skikten är tomma)."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:175
+msgid ""
+"The inventory sample plots are now in a standard format that can be managed "
+"by most of the GPS software. The field teams can now upload the locations of"
+" the sample plots to their devices. That would be done by using the specific"
+" devices own software and the :file:`plots_wgs84.gpx` file you just saved. "
+"Other option would be to use the :guilabel:`GPS Tools` plugin but it would "
+"most likely involve setting the tool to work with your specific GPS device. "
+"If you are working with your own data and want to see how the tool works you"
+" can find out information about it in the section :ref:`working_gps` in the "
+"**QGIS User Manual**."
+msgstr ""
+"De inventerade provytorna är nu i ett standardformat som kan hanteras av de "
+"flesta GPS-program. Fältteamen kan nu ladda upp platserna för provytorna "
+"till sina enheter. Det görs genom att använda den specifika enhetens egen "
+"programvara och filen :file:`plots_wgs84.gpx` som du just sparade. Ett annat"
+" alternativ skulle vara att använda :guilabel:`GPS Tools` plugin men det "
+"skulle troligen innebära att du ställer in verktyget så att det fungerar med"
+" din specifika GPS-enhet. Om du arbetar med dina egna data och vill se hur "
+"verktyget fungerar kan du hitta information om det i avsnittet "
+":ref:`working_gps` i **QGIS User Manual**."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:184
+msgid "Save your QGIS project now."
+msgstr "Spara ditt QGIS-projekt nu."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:187
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:189
+msgid ""
+"You just saw how easily you can create a systematic sampling design to be "
+"used in a forest inventory. Creating other types of sampling designs will "
+"involve the use of different tools within QGIS, spreadsheets or scripting to"
+" calculate the coordinates of the sample plots, but the general idea remains"
+" the same."
+msgstr ""
+"Du har just sett hur enkelt det är att skapa en systematisk "
+"provtagningsdesign som kan användas vid en skogsinventering. För att skapa "
+"andra typer av provytor måste du använda olika verktyg i QGIS, kalkylblad "
+"eller skript för att beräkna koordinaterna för provytorna, men den allmänna "
+"idén är densamma."
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:195
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/forestry/systematic_sampling.rst:197
+msgid ""
+"In the next lesson you will see how to use the Atlas capabilities in QGIS to"
+" automatically generate detailed maps that the field teams will be using to "
+"navigate to the sample plots assigned to them."
+msgstr ""
+"I nästa lektion kommer du att se hur du använder Atlas-funktionerna i QGIS "
+"för att automatiskt generera detaljerade kartor som fältteamen kommer att "
+"använda för att navigera till de provytor som tilldelats dem."
