@@ -3896,7 +3896,15 @@ Outputs
    * - **Bounding geometry**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output (bounding) polygon vector layer.
+     - The output (bounding) polygon vector layer. 
+       It has the fields from the input layer  
+       and, depending on the selected parameter ``TYPE``,
+       the output also has the attributes:
+
+       * ``width``, ``height``, ``area`` and ``perimeter`` of the Envelope (Bounding Box)
+       * ``width``, ``height``, ``area``, ``angle`` and ``perimeter`` of the Mininum Oriented Rectangle
+       * ``radius`` and ``area`` of the Minimum Enclosing Circle
+       * ``area`` and ``perimeter`` of the Convex Hull 
 
 Python code
 ...........
