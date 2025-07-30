@@ -7,284 +7,3515 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-31 09:36+0200\n"
+"POT-Creation-Date: 2025-05-27 12:44+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/map_views/map_view.rst:6
+msgid "2D Map View"
+msgstr "2D-kartvy"
+
+#: ../../docs/user_manual/map_views/map_view.rst:14
+msgid ""
+"The 2D map view (also called **Map canvas**) is the central place where maps"
+" are displayed. QGIS opens by default with a single map view (called ``main "
+"map``), showing layers in 2D, and tightly bound to the :guilabel:`Layers` "
+"panel. That window reflects the rendering (symbology, labeling, "
+"visibilities...) you applied to the loaded layers."
+msgstr ""
+"2D-kartvyn (även kallad **Map canvas**) är den centrala plats där kartor "
+"visas. QGIS öppnas som standard med en enda kartvy (kallad ``huvudkarta``), "
+"som visar lager i 2D och är tätt knuten till panelen :guilabel:`Layers`. Det"
+" fönstret återspeglar den rendering (symbologi, märkning, synlighet ...) som"
+" du har tillämpat på de laddade lagren."
+
+#: ../../docs/user_manual/map_views/map_view.rst:26
+msgid "QGIS GUI"
+msgstr "QGIS GUI"
+
+#: ../../docs/user_manual/map_views/map_view.rst:33
+msgid "Exploring the map view"
+msgstr "Utforska kartvyn"
+
+#: ../../docs/user_manual/map_views/map_view.rst:35
+msgid ""
+"When you add a layer (see e.g. :ref:`opening_data`), QGIS automatically "
+"looks for its CRS. If a different CRS is set by default for the project (see"
+" :ref:`project_crs`) then the layer extent is \"on-the-fly\" translated to "
+"that CRS, and the map view is zoomed to that extent if you start with a "
+"blank QGIS project. If there are already layers in the project, no map "
+"canvas resize is performed, so only features falling within the current map "
+"canvas extent will be visible."
+msgstr ""
+"När du lägger till ett skikt (se t.ex. :ref:`opening_data`) letar QGIS "
+"automatiskt efter dess CRS. Om en annan CRS är inställd som standard för "
+"projektet (se :ref:`project_crs`) översätts skiktets omfattning \"i farten\""
+" till den CRS:en och kartvyn zoomas till den omfattningen om du börjar med "
+"ett tomt QGIS-projekt. Om det redan finns lager i projektet utförs ingen "
+"storleksändring av kartvyn, så endast funktioner som faller inom den "
+"aktuella kartvyns utsträckning kommer att vara synliga."
+
+#: ../../docs/user_manual/map_views/map_view.rst:44
+msgid ""
+"Click on the map view and you should be able to interact with it, panning or"
+" zooming to different areas of the map. Dedicated tools are provided in the "
+":guilabel:`Navigation Toolbar` and in the :menuselection:`View` menu, with "
+"handful shortcuts from the keyboard or the mouse buttons."
+msgstr ""
+"Klicka på kartvyn och du bör kunna interagera med den genom att panorera "
+"eller zooma till olika delar av kartan. Dedikerade verktyg finns i "
+":guilabel:`Navigation Toolbar` och i :menuselection:`View`-menyn, med "
+"praktiska genvägar från tangentbordet eller musknapparna."
+
+#: ../../docs/user_manual/map_views/map_view.rst:51
+msgid "Map canvas navigation tools"
+msgstr "Navigationsverktyg för kartor"
+
+#: ../../docs/user_manual/map_views/map_view.rst:56
+#: ../../docs/user_manual/map_views/map_view.rst:776
+msgid "Tool"
+msgstr "Verktyg"
 
 #: ../../docs/user_manual/map_views/map_view.rst:57
 #: ../../docs/user_manual/map_views/map_view.rst:776
 msgid "Usage"
 msgstr "Användning"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1424
+#: ../../docs/user_manual/map_views/map_view.rst:58
+msgid "|pan| :sup:`Pan Map`"
+msgstr "|pan| :sup:`Pan Map`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1438
 msgid "pan"
 msgstr "pan"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1485
+#: ../../docs/user_manual/map_views/map_view.rst:59
+msgid ""
+"Single left click: the map is centered on the clicked point, at the same "
+"scale"
+msgstr ""
+"Ett vänsterklick: kartan centreras på den klickade punkten, i samma skala"
+
+#: ../../docs/user_manual/map_views/map_view.rst:60
+msgid "Hold down the left mouse button and drag the map canvas."
+msgstr "Håll ned vänster musknapp och dra i kartbilden."
+
+#: ../../docs/user_manual/map_views/map_view.rst:62
+msgid "|zoomIn| :sup:`Zoom In`"
+msgstr "|zoomIn| :sup:`Zoom In`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1499
 msgid "zoomIn"
 msgstr "zoomIn"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1491
+#: ../../docs/user_manual/map_views/map_view.rst:63
+msgid ""
+"Single left click: the map is centered on the clicked point, while the scale"
+" gets doubled"
+msgstr ""
+"Enbart vänsterklick: kartan centreras på den klickade punkten, medan skalan "
+"fördubblas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:65
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom in to "
+"an area."
+msgstr ""
+"Dra en rektangel på kartbilden med vänster musknapp för att zooma in på ett "
+"område."
+
+#: ../../docs/user_manual/map_views/map_view.rst:67
+msgid ""
+"Hold the :kbd:`Alt` key to switch to the |zoomOut| :sup:`Zoom Out` tool."
+msgstr ""
+"Håll ned :kbd:`Alt` för att växla till verktyget |zoomOut| :sup:`Zoom Out`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1505
 msgid "zoomOut"
 msgstr "zoomOut"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1426
+#: ../../docs/user_manual/map_views/map_view.rst:69
+msgid "|zoomOut| :sup:`Zoom Out`"
+msgstr "|zoomOut| :sup:`Zoom ut`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:70
+msgid ""
+"Single left click: the map is centered on the clicked point, while the scale"
+" gets halved"
+msgstr ""
+"Enbart vänsterklick: kartan centreras på den klickade punkten, medan skalan "
+"halveras"
+
+#: ../../docs/user_manual/map_views/map_view.rst:72
+msgid ""
+"Drag a rectangle on the map canvas with the left mouse button to zoom out "
+"from an area."
+msgstr ""
+"Dra en rektangel på kartbilden med vänster musknapp för att zooma ut från "
+"ett område."
+
+#: ../../docs/user_manual/map_views/map_view.rst:74
+msgid "Hold the :kbd:`Alt` key to switch to the |zoomIn| :sup:`Zoom In` tool."
+msgstr ""
+"Håll ned :kbd:`Alt` för att växla till verktyget |zoomIn| :sup:`Zoom In`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:76
+msgid "|panToSelected| :sup:`Pan Map to Selection`"
+msgstr "|panToSelected| :sup:`Pan Map till urval`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1440
 msgid "panToSelected"
 msgstr "panToSelected"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1497
+#: ../../docs/user_manual/map_views/map_view.rst:77
+msgid ""
+"Pan the map to the selected features of all the selected layers in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Panorera kartan till de valda objekten i alla valda skikt i panelen "
+":guilabel:`Layers`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:79
+msgid "|zoomToSelected| :sup:`Zoom To Selection`"
+msgstr "|zoomToSelected| :sup:`Zoom till val`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1511
 msgid "zoomToSelected"
 msgstr "zoomToSelected"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1495
+#: ../../docs/user_manual/map_views/map_view.rst:80
+msgid ""
+"Zoom to the selected features of all the selected layers in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Zooma till de valda objekten i alla valda lager i panelen "
+":guilabel:`Layers`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:83
+#: ../../docs/user_manual/map_views/map_view.rst:88
+#: ../../docs/user_manual/map_views/map_view.rst:100
+msgid "*Also available in the layer contextual menu*"
+msgstr "*Finns även i skiktets kontextuella meny*"
+
+#: ../../docs/user_manual/map_views/map_view.rst:84
+msgid "|zoomToLayer| :sup:`Zoom To Layer(s)`"
+msgstr "|zoomToLayer| :sup:`Zooma till skikt``"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1509
 msgid "zoomToLayer"
 msgstr "zoomToLayer"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1483
+#: ../../docs/user_manual/map_views/map_view.rst:85
+msgid ""
+"Zoom to the extent of all the selected layers in the :guilabel:`Layers` "
+"panel."
+msgstr ""
+"Zooma till omfattningen av alla markerade lager i panelen "
+":guilabel:`Layers`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:89
+msgid "|zoomFullExtent| :sup:`Zoom Full`"
+msgstr "|zoomFullExtent| :sup:`Zoom Full`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1497
 msgid "zoomFullExtent"
 msgstr "zoomFullExtent"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1487
+#: ../../docs/user_manual/map_views/map_view.rst:90
+msgid ""
+"Zoom to the extent of all the layers in the project or to the :ref:`project "
+"full extent <project_full_extent>`."
+msgstr ""
+"Zooma till omfattningen av alla lager i projektet eller till "
+":ref:`projektets fulla omfattning <project_full_extent>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:92
+msgid "|zoomLast| :sup:`Zoom Last`"
+msgstr "|zoomLast| :sup:`Zoom Sista`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1501
 msgid "zoomLast"
 msgstr "zoomLast"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1489
+#: ../../docs/user_manual/map_views/map_view.rst:93
+msgid "Zoom the map to the previous extent in history."
+msgstr "Zooma kartan till den tidigare omfattningen i historiken."
+
+#: ../../docs/user_manual/map_views/map_view.rst:94
+msgid "|zoomNext| :sup:`Zoom Next`"
+msgstr "|zoomNext| :sup:`Zoom Nästa`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1503
 msgid "zoomNext"
 msgstr "zoomNext"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1481
+#: ../../docs/user_manual/map_views/map_view.rst:95
+msgid "Zoom the map to the next extent in history."
+msgstr "Zooma kartan till nästa utbredning i historien."
+
+#: ../../docs/user_manual/map_views/map_view.rst:96
+msgid "|zoomActual| :sup:`Zoom to Native Resolution`"
+msgstr "|zoomActual| :sup:`Zoom till ursprunglig upplösning`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1495
 msgid "zoomActual"
 msgstr "zoomActual"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1394
+#: ../../docs/user_manual/map_views/map_view.rst:97
+msgid ""
+"Zoom the map to a level where one pixel of the active raster layer covers "
+"one screen pixel."
+msgstr ""
+"Zooma kartan till en nivå där en pixel i det aktiva rasterlagret täcker en "
+"skärmpixel."
+
+#: ../../docs/user_manual/map_views/map_view.rst:101
+msgid "Mouse wheel"
+msgstr "Musens hjul"
+
+#: ../../docs/user_manual/map_views/map_view.rst:102
+msgid "Pan map: Hold and drag the mouse wheel."
+msgstr "Panorera över kartan: Håll mushjulet nedtryckt och dra det."
+
+#: ../../docs/user_manual/map_views/map_view.rst:103
+msgid ""
+"Zoom: Roll the mouse wheel to zoom in or zoom out. With :kbd:`Ctrl` key "
+"pressed while rolling the mouse wheel results in a finer zoom."
+msgstr ""
+"Zooma in: Rulla mushjulet för att zooma in eller zooma ut. Om "
+":kbd:`Ctrl`-tangenten hålls nedtryckt medan mushjulet rullar får du en "
+"finare zoom."
+
+#: ../../docs/user_manual/map_views/map_view.rst:106
+msgid ""
+"Press the back or forward button to browse the map canvas zoom history."
+msgstr ""
+"Tryck på bakåt- eller framåtknappen för att bläddra i zoomhistoriken för "
+"kartbilden."
+
+#: ../../docs/user_manual/map_views/map_view.rst:107
+msgid "Keyboard"
+msgstr "Tangentbord"
+
+#: ../../docs/user_manual/map_views/map_view.rst:108
+msgid ""
+"Pan map: Hold down the :kbd:`Space` key and move the mouse. Press the arrow "
+"keys to pan up, down, left and right."
+msgstr ""
+"Panorera kartan: Håll ned :kbd:`Space`-tangenten och flytta musen. Tryck på "
+"piltangenterna för att panorera uppåt, nedåt, vänster och höger."
+
+#: ../../docs/user_manual/map_views/map_view.rst:110
+msgid "Zoom in: Press :kbd:`PgUp` or :kbd:`Ctrl++`"
+msgstr "Zooma in: Tryck på :kbd:`PgUp` eller :kbd:`Ctrl++`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:111
+msgid "Zoom out: Press :kbd:`PgDown` or :kbd:`Ctrl+-`"
+msgstr "Zooma ut: Tryck på :kbd:`PgDown` eller :kbd:`Ctrl+-`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:112
+msgid ""
+"Zoom to area: When certain map tools are active (Identify, Measure...), hold"
+" down :kbd:`Shift` and drag a rectangle on the map to zoom to that area. Not"
+" compatible with active selection or edit tools."
+msgstr ""
+"Zooma till område: När vissa kartverktyg är aktiva (Identifiera, Mäta...) "
+"kan du hålla ned :kbd:`Shift` och dra en rektangel på kartan för att zooma "
+"till det området. Inte kompatibel med aktiva markerings- eller "
+"redigeringsverktyg."
+
+#: ../../docs/user_manual/map_views/map_view.rst:116
+msgid ""
+"Right-click over the map and you should be able to |editCopy| "
+":guilabel:`Copy coordinates` of the clicked point in the map CRS, in WGS84 "
+"or in a custom CRS. The copied information can then be pasted in an "
+"expression, a script, text editor or spreadsheet..."
+msgstr ""
+"Högerklicka på kartan och du bör kunna |editCopy| :guilabel:``Kopiera "
+"koordinater`` för den klickade punkten i kartans CRS, i WGS84 eller i en "
+"anpassad CRS. Den kopierade informationen kan sedan klistras in i ett "
+"uttryck, ett skript, en textredigerare eller ett kalkylblad..."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1408
 msgid "editCopy"
 msgstr "editCopy"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1386
+#: ../../docs/user_manual/map_views/map_view.rst:127
+msgid "Controlling map rendering"
+msgstr "Styrning av kartrendering"
+
+#: ../../docs/user_manual/map_views/map_view.rst:129
+msgid ""
+"By default, QGIS renders all visible layers whenever the map canvas is "
+"refreshed. The events that trigger a refresh of the map canvas include:"
+msgstr ""
+"Som standard återger QGIS alla synliga lager när kartbilden uppdateras. De "
+"händelser som utlöser en uppdatering av kartbilden inkluderar:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:132
+msgid "changing the visibility of a layer"
+msgstr "ändra synligheten för ett lager"
+
+#: ../../docs/user_manual/map_views/map_view.rst:133
+msgid "modifying symbology of a visible layer"
+msgstr "ändra symbologi för ett synligt lager"
+
+#: ../../docs/user_manual/map_views/map_view.rst:134
+msgid "adding a layer"
+msgstr "lägga till ett lager"
+
+#: ../../docs/user_manual/map_views/map_view.rst:135
+msgid "panning or zooming"
+msgstr "panorering eller zoomning"
+
+#: ../../docs/user_manual/map_views/map_view.rst:136
+msgid "resizing the QGIS window"
+msgstr "ändra storlek på QGIS-fönstret"
+
+#: ../../docs/user_manual/map_views/map_view.rst:138
+msgid "QGIS allows you to control the rendering process in a number of ways."
+msgstr "Med QGIS kan du styra renderingsprocessen på flera olika sätt."
+
+#: ../../docs/user_manual/map_views/map_view.rst:140
+msgid "at the :ref:`global level <rendering_options>`"
+msgstr "på :ref:`global nivå <rendering_options>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:141
+msgid ""
+"per layer, using e.g. the :ref:`scale dependent rendering "
+"<label_scaledepend>`"
+msgstr ""
+"per lager, t.ex. med hjälp av :ref:`skaleberoende rendering "
+"<label_scaledepend>``"
+
+#: ../../docs/user_manual/map_views/map_view.rst:142
+msgid "or with dedicated tools in the GUI."
+msgstr "eller med särskilda verktyg i det grafiska användargränssnittet."
+
+#: ../../docs/user_manual/map_views/map_view.rst:144
+msgid ""
+"To stop the map drawing, press the :kbd:`Esc` key. This will halt the "
+"refresh of the map canvas and leave the map partially drawn. It may however "
+"take a bit of time after pressing :kbd:`Esc` for the map drawing to halt."
+msgstr ""
+"För att stoppa kartritningen, tryck på :kbd:`Esc`-tangenten. Detta stoppar "
+"uppdateringen av kartbilden och lämnar kartan delvis ritad. Det kan dock ta "
+"lite tid efter att du tryckt på :kbd:`Esc` innan kartritningen stoppas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:148
+msgid ""
+"To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in "
+"the bottom-right corner of the status bar. When |checkbox| "
+":guilabel:`Render` is unchecked, QGIS does not redraw the canvas in response"
+" to any of the usual triggers mentioned earlier. Examples of when you might "
+"want to suspend rendering include:"
+msgstr ""
+"Om du vill avbryta renderingen klickar du på kryssrutan |checkbox| "
+":guilabel:`Render` i det nedre högra hörnet av statusfältet. När kryssrutan "
+"|checkbox| :guilabel:`Render` är avmarkerad, ritar QGIS inte om duken som "
+"svar på någon av de vanliga utlösarna som nämnts tidigare. Exempel på när du"
+" kanske vill avbryta rendering inkluderar:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1400
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1404
+#: ../../docs/user_manual/map_views/map_view.rst:154
+msgid "adding many layers and symbolizing them prior to drawing"
+msgstr "lägga till många lager och symbolisera dem innan de ritas"
+
+#: ../../docs/user_manual/map_views/map_view.rst:155
+msgid ""
+"adding one or more large layers and setting scale dependency before drawing"
+msgstr ""
+"lägga till ett eller flera stora lager och ställa in skalberoende innan du "
+"ritar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:156
+msgid ""
+"adding one or more large layers and zooming to a specific view before "
+"drawing"
+msgstr ""
+"lägga till ett eller flera stora lager och zooma till en specifik vy innan "
+"du ritar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:157
+msgid "any combination of the above"
+msgstr "någon kombination av ovanstående"
+
+#: ../../docs/user_manual/map_views/map_view.rst:159
+msgid ""
+"Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and "
+"causes an immediate refresh of the map canvas."
+msgstr ""
+"Om du markerar kryssrutan |checkbox| :guilabel:`Render` aktiveras rendering "
+"och en omedelbar uppdatering av kartbilden görs."
+
+#: ../../docs/user_manual/map_views/map_view.rst:166
+msgid "Time-based control on the map canvas"
+msgstr "Tidsbaserad kontroll på kartbilden"
+
+#: ../../docs/user_manual/map_views/map_view.rst:168
+msgid ""
+"QGIS can handle temporal control on loaded layers, i.e. modify the map "
+"canvas rendering based on a time variation. To achieve this, you need:"
+msgstr ""
+"QGIS kan hantera temporal kontroll på laddade lager, dvs. ändra renderingen "
+"av kartans canvas baserat på en tidsvariation. För att uppnå detta behöver "
+"du:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:171
+msgid ""
+"Layers that have dynamic temporal properties set. QGIS supports temporal "
+"control for different data providers, with custom settings. It's mainly "
+"about setting the time range in which the layer would display:"
+msgstr ""
+"Skikt som har dynamiska temporala egenskaper inställda. QGIS stöder temporal"
+" kontroll för olika dataleverantörer, med anpassade inställningar. Det "
+"handlar främst om att ställa in det tidsintervall inom vilket lagret ska "
+"visas:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:175
+msgid ""
+":ref:`raster layers <raster_temporal>`: controls whether to display or not "
+"the layer."
+msgstr ""
+":ref:`raster layers <raster_temporal>`: kontrollerar om lagret ska visas "
+"eller inte."
+
+#: ../../docs/user_manual/map_views/map_view.rst:177
+msgid ""
+":ref:`WMTS layers <wmts_temporal>`: controls whether the data should be "
+"rendered based on a static time range or following a dynamic temporal range"
+msgstr ""
+":ref:`WMTS-lager <wmts_temporal>`: styr om data ska återges baserat på ett "
+"statiskt tidsintervall eller efter ett dynamiskt tidsintervall"
+
+#: ../../docs/user_manual/map_views/map_view.rst:179
+msgid ""
+":ref:`vector layers <vectortemporalmenu>`: features are filtered based on "
+"time values associated to their attributes"
+msgstr ""
+":ref:`vektorlager <vectortemporalmenu>`: funktioner filtreras baserat på "
+"tidsvärden som är associerade med deras attribut"
+
+#: ../../docs/user_manual/map_views/map_view.rst:181
+msgid ""
+":ref:`mesh layers <meshtemporal>`: displays dynamically the active dataset "
+"groups values"
+msgstr ""
+":ref:`mesh layers <meshtemporal>`: visar dynamiskt de aktiva "
+"datasetgruppernas värden"
+
+#: ../../docs/user_manual/map_views/map_view.rst:184
+msgid ""
+"When dynamic temporal options are enabled for a layer, an "
+"|indicatorTemporal| icon is displayed next to the layer in the "
+":guilabel:`Layers` panel to remind you that the layer is temporally "
+"controlled. Click the icon to update the temporal settings."
+msgstr ""
+"När dynamiska temporala alternativ är aktiverade för ett lager visas en ikon"
+" |indicatorTemporal| bredvid lagret i panelen :guilabel:`Layers` för att "
+"påminna dig om att lagret är temporalt kontrollerat. Klicka på ikonen för "
+"att uppdatera de temporala inställningarna."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1418
 msgid "indicatorTemporal"
 msgstr "indicatorTemporal"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1461
+#: ../../docs/user_manual/map_views/map_view.rst:189
+msgid ""
+"Enable the temporal navigation of the map canvas using the :ref:`Temporal "
+"controller panel <temporal_controller>`. The panel is activated:"
+msgstr ""
+"Aktivera den temporära navigeringen av kartbilden med hjälp av "
+":ref:`Temporal controller panel <temporal_controller>`. Panelen är "
+"aktiverad:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:192
+msgid ""
+"using the |temporal| :sup:`Temporal controller panel` icon located in the "
+":guilabel:`Map Navigation` toolbar"
+msgstr ""
+"med hjälp av ikonen |temporal| :sup:``Temporal controller panel`` i "
+"verktygsfältet :guilabel:``Map Navigation``"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1475
 msgid "temporal"
 msgstr "temporal"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1469
+#: ../../docs/user_manual/map_views/map_view.rst:194
+msgid ""
+"or from the :menuselection:`View --> Panels --> Temporal controller panel` "
+"menu"
+msgstr ""
+"eller från menyn :menuselection:`Visa --> Paneler --> Temporal controller "
+"panel`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:196
+msgid ""
+"or from the :menuselection:`View --> Data Filtering --> Temporal controller "
+"panel` menu"
+msgstr ""
+"eller från menyn :menuselection:`Visa --> Datafiltrering --> Temporal "
+"kontrollpanel`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:202
+msgid "The temporal controller panel"
+msgstr "Den temporala kontrollpanelen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:204
+msgid "The :guilabel:`Temporal controller` panel has the following modes:"
+msgstr "Panelen :guilabel:`Temporal controller` har följande lägen:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:209
+msgid "Temporal Controller Panel in navigation mode"
+msgstr "Temporal Controller Panel i navigeringsläge"
+
+#: ../../docs/user_manual/map_views/map_view.rst:211
+msgid ""
+"|temporalNavigationOff| :sup:`Turn off temporal navigation`: all the "
+"temporal settings are disabled and visible layers are rendered as usual"
+msgstr ""
+"|temporalNavigationOff| :sup:`Stäng av temporal navigering`: alla temporala "
+"inställningar inaktiveras och synliga lager återges som vanligt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1483
 msgid "temporalNavigationOff"
 msgstr "temporalNavigationOff"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1465
+#: ../../docs/user_manual/map_views/map_view.rst:213
+msgid ""
+"|temporalNavigationFixedRange| :sup:`Fixed range temporal navigation`: a "
+"time range is set and only layers (or features) whose temporal range "
+"overlaps with this range are displayed on the map."
+msgstr ""
+"|temporalNavigationFixedRange| :sup:``Fixed range temporal navigation``: ett"
+" tidsintervall anges och endast lager (eller funktioner) vars tidsintervall "
+"överlappar detta intervall visas på kartan."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1479
 msgid "temporalNavigationFixedRange"
 msgstr "temporalNavigationFixedRange"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1463
+#: ../../docs/user_manual/map_views/map_view.rst:216
+msgid ""
+"|temporalNavigationAnimated| :sup:`Animated temporal navigation`: a time "
+"range is set, split into steps, and only layers (or features) whose temporal"
+" range overlaps with each frame are displayed on the map"
+msgstr ""
+"|temporalNavigationAnimated| :sup:`Animerad temporal navigering`: ett "
+"tidsintervall anges, delas upp i steg och endast lager (eller funktioner) "
+"vars tidsintervall överlappar varje ram visas på kartan"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1477
 msgid "temporalNavigationAnimated"
 msgstr "temporalNavigationAnimated"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1467
+#: ../../docs/user_manual/map_views/map_view.rst:219
+msgid ""
+"|temporalNavigationMovie| :sup:`Animated movie`: a total number of frames is"
+" set for the animation, with the map settings advancing at each step, "
+"displaying the progression frame by frame without any time-based filtering "
+"of data."
+msgstr ""
+"|temporalNavigationMovie| :sup:`Animerad film`: ett totalt antal bildrutor "
+"anges för animeringen, där kartinställningarna flyttas fram i varje steg och"
+" visar utvecklingen bildruta för bildruta utan någon tidsbaserad filtrering "
+"av data."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1481
 msgid "temporalNavigationMovie"
 msgstr "temporalNavigationMovie"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1449
+#: ../../docs/user_manual/map_views/map_view.rst:223
+msgid "|settings| :sup:`Settings` for general control of the animation"
+msgstr ""
+"|inställningar| :sup:`Inställningar` för allmän kontroll av animeringen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1463
 msgid "settings"
 msgstr "settings"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1479
+#: ../../docs/user_manual/map_views/map_view.rst:225
+msgid ":guilabel:`Frames rate`: number of steps that are shown per second"
+msgstr ":guilabel:`Frames rate`: antal steg som visas per sekund"
+
+#: ../../docs/user_manual/map_views/map_view.rst:227
+msgid ""
+"|unchecked| :guilabel:`Cumulative range`: all animation frames will have the"
+" same start date-time but different end dates and times. This is useful if "
+"you wish to accumulate data in your temporal visualization instead of "
+"showing a ‘moving time window’ across your data."
+msgstr ""
+"|ej markerad| :guilabel:`Kumulativt intervall`: alla animationsrutor kommer "
+"att ha samma startdatum och -tid men olika slutdatum och -tider. Detta är "
+"användbart om du vill ackumulera data i din temporala visualisering i "
+"stället för att visa ett \"rörligt tidsfönster\" över dina data."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1493
 msgid "unchecked"
 msgstr "unchecked"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1434
+#: ../../docs/user_manual/map_views/map_view.rst:235
+msgid "Animating a temporal navigation"
+msgstr "Animera en temporal navigering"
+
+#: ../../docs/user_manual/map_views/map_view.rst:237
+msgid ""
+"An animation is based on a varying set of visible layers at particular times"
+" within a time range. To create a temporal animation:"
+msgstr ""
+"En animation baseras på en varierande uppsättning synliga lager vid vissa "
+"tidpunkter inom ett tidsintervall. Så här skapar du en temporal animering:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:241
+msgid ""
+"Toggle on the |temporalNavigationAnimated| :sup:`Animated temporal "
+"navigation`, displaying the animation player widget"
+msgstr ""
+"Slå på |temporalNavigationAnimated| :sup:`Animerad temporal navigering`, "
+"visar widgeten för animationsspelaren"
+
+#: ../../docs/user_manual/map_views/map_view.rst:243
+msgid ""
+"Enter the :guilabel:`Time range` to consider. Using the |refresh| button, "
+"this can be defined as:"
+msgstr ""
+"Ange det :guilabel:`Tidsintervall` som ska beaktas. Med hjälp av "
+"|refresh|-knappen kan detta definieras som:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1448
 msgid "refresh"
 msgstr "refresh"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1428
+#: ../../docs/user_manual/map_views/map_view.rst:246
+msgid ":guilabel:`Set to full range` of all the time enabled layers"
+msgstr ":guilabel:`Set to full range` av alla tidsaktiverade lager"
+
+#: ../../docs/user_manual/map_views/map_view.rst:247
+msgid ""
+":guilabel:`Set to preset project range` as defined in the :ref:`project "
+"properties <project_temporal>`"
+msgstr ""
+":guilabel:`Sätt till förinställt projektintervall` enligt definitionen i "
+":ref:`projektegenskaper <project_temporal>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:249
+msgid ""
+":guilabel:`Set to single layer's range` taken from a time-enabled layer"
+msgstr ""
+":guilabel:`Set to single layer's range` hämtat från ett tidsaktiverat lager"
+
+#: ../../docs/user_manual/map_views/map_view.rst:250
+msgid ""
+"Fill in the time :guilabel:`Step` to split the time range. Different units "
+"are supported, from ``seconds`` to ``centuries``. A ``source timestamps`` "
+"option is also available as step: when selected, this causes the temporal "
+"navigation to step between all available time ranges from layers in the "
+"project. It’s useful when a project contains layers with non-contiguous "
+"available times, such as a WMS-T service which provides images that are "
+"available at irregular dates. This option will allow you to only step "
+"between time ranges where the next available image is shown."
+msgstr ""
+"Fyll i tiden :guilabel:`Step` för att dela upp tidsintervallet. Olika "
+"enheter stöds, från ``sekunder`` till ``hundratal``. Alternativet "
+"``källtidstämplar`` finns också tillgängligt som steg: när det väljs får det"
+" den temporala navigeringen att stega mellan alla tillgängliga tidsintervall"
+" från skikt i projektet. Det är användbart när ett projekt innehåller skikt "
+"med icke sammanhängande tillgängliga tider, t.ex. en WMS-T-tjänst som "
+"tillhandahåller bilder som är tillgängliga vid oregelbundna datum. Med det "
+"här alternativet kan du bara stega mellan tidsintervall där nästa "
+"tillgängliga bild visas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:259
+msgid ""
+"Click the |play| button to preview the animation. QGIS will generate scenes "
+"using the layers rendering at the set times. Layers display depends on "
+"whether they overlap any individual time frame."
+msgstr ""
+"Klicka på knappen |play| för att förhandsgranska animeringen. QGIS kommer "
+"att generera scener med hjälp av de lager som renderas vid de inställda "
+"tiderna. Lagrens visning beror på om de överlappar någon enskild tidsram."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1442
 msgid "play"
 msgstr "play"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1398
+#: ../../docs/user_manual/map_views/map_view.rst:268
+msgid "Temporal navigation through a layer"
+msgstr "Temporär navigering genom ett lager"
+
+#: ../../docs/user_manual/map_views/map_view.rst:270
+msgid ""
+"The animation can also be previewed by moving the time slider. Checking the "
+"|unchecked| :guilabel:`Loop` checkbox will repeatedly run the animation "
+"while clicking |play| stops a running animation. A full set of video player "
+"buttons is available."
+msgstr ""
+"Animationen kan också förhandsgranskas genom att flytta tidsreglaget. Om du "
+"markerar kryssrutan |unchecked| :guilabel:`Loop` kommer animationen att "
+"köras upprepade gånger medan du klickar på |play| för att stoppa en pågående"
+" animation. En komplett uppsättning videospelarknappar finns tillgänglig."
+
+#: ../../docs/user_manual/map_views/map_view.rst:275
+msgid ""
+"Horizontal scrolling using the mouse wheel (where supported) with the cursor"
+" on the map canvas will also allow you to navigate, or “scrub”, the temporal"
+" navigation slider backwards and forwards."
+msgstr ""
+"Horisontell skrollning med mushjulet (där det stöds) med markören på "
+"kartbilden gör det också möjligt att navigera, eller \"skrubba\", det "
+"temporala navigeringsreglaget framåt och bakåt."
+
+#: ../../docs/user_manual/map_views/map_view.rst:279
+msgid ""
+"Click the |fileSave| :sup:`Export animation` button if you want to generate "
+"a series of images representing the scene. They can be later combined in a "
+"video editor software:"
+msgstr ""
+"Klicka på knappen |fileSave| :sup:`Export animation` om du vill skapa en "
+"serie bilder som representerar scenen. De kan senare kombineras i ett "
+"videoredigeringsprogram:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1412
 msgid "fileSave"
 msgstr "fileSave"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1396
+#: ../../docs/user_manual/map_views/map_view.rst:286
+msgid "Exporting map canvas animation scenes to images"
+msgstr "Exportera animationsscener från Map Canvas till bilder"
+
+#: ../../docs/user_manual/map_views/map_view.rst:288
+msgid ""
+"The filename :guilabel:`Template`: the ``####`` are replaced with frame "
+"sequence number"
+msgstr ""
+"Filnamnet :guilabel:`Template`: ``####`` ersätts med bildsekvensnummer"
+
+#: ../../docs/user_manual/map_views/map_view.rst:290
+msgid "The :guilabel:`Output directory`"
+msgstr "Den :guilabel:`Utmatningskatalog`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:291
+msgid "Under :guilabel:`Map settings`, you can:"
+msgstr "Under :guilabel:`Kartinställningar` kan du:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:293
+msgid "redefine the :ref:`spatial extent <extent_selector>` to use"
+msgstr ""
+"omdefiniera :ref:`spatial utsträckning <extent_selector>` för att använda"
+
+#: ../../docs/user_manual/map_views/map_view.rst:294
+msgid ""
+"control the :guilabel:`Resolution` of the image (:guilabel:`Output width` "
+"and :guilabel:`Output height`)"
+msgstr ""
+"kontrollera bildens :guilabel:`Resolution` (:guilabel:`Output width` och "
+":guilabel:`Output height`)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:296
+msgid ""
+":guilabel:`Draw active decorations`: whether active :ref:`decorations "
+"<decorations>` should be kept in the output"
+msgstr ""
+":guilabel:`Draw active decorations`: om aktiva :ref:`dekorationer "
+"<decorations>` ska sparas i utdata"
+
+#: ../../docs/user_manual/map_views/map_view.rst:298
+msgid "Under :guilabel:`Temporal settings`, you can redefine:"
+msgstr "Under :guilabel:`Temporal settings` kan du omdefiniera:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:300
+msgid "the time :guilabel:`Range` for the animation"
+msgstr "tiden :guilabel:`Range` för animeringen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:301
+msgid "the :guilabel:`Step (frame length)` in the unit of your choice"
+msgstr ":guilabel:`Steg (ramlängd)` i den enhet som du väljer"
+
+#: ../../docs/user_manual/map_views/map_view.rst:306
+msgid "The Elevation Controller panel"
+msgstr "Panelen för höjdkontroll"
+
+#: ../../docs/user_manual/map_views/map_view.rst:308
+msgid ""
+"|elevation| :guilabel:`Elevation Controller` allows you to handle elevation "
+"z-range data in 2D maps. This option currently supports point cloud layers "
+"and raster DEMs. Use the panel to visualize and interact with elevation data"
+" in the map canvas."
+msgstr ""
+"|elevation| :guilabel:`Elevation Controller` låter dig hantera data för höjd"
+" z-område i 2D-kartor. Detta alternativ stöder för närvarande "
+"punktmolnslager och raster-DEM:er. Använd panelen för att visualisera och "
+"interagera med höjddata i kartbilden."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1410
 msgid "elevation"
 msgstr "elevation"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1416
+#: ../../docs/user_manual/map_views/map_view.rst:312
+msgid ""
+"Activate the |elevation| :guilabel:`Elevation Controller` panel in the map "
+"canvas by clicking on the :guilabel:`Data Filtering` in the :guilabel:`View`"
+" menu. The |elevation| :guilabel:`Elevation Controller` appears as a range "
+"slider on the left side of the map canvas. At the top of the slider, there "
+"is a |settings| :sup:`Settings` menu where you can:"
+msgstr ""
+"Aktivera panelen |elevation| :guilabel:`Elevation Controller` i kartbilden "
+"genom att klicka på :guilabel:`Data Filtering` i menyn :guilabel:`View`. "
+"|elevation| :guilabel:`Elevation Controller` visas som ett skjutreglage för "
+"intervall på vänster sida av kartbilden. Längst upp på skjutreglaget finns "
+"en meny |settings| :sup:`Settings` där du kan:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:318
+msgid ""
+"Set the :guilabel:`Fixed Range Size` value to lock the elevation range to a "
+"specific size. This setting is saved within the project and retained across "
+"sessions, ensuring consistency for your elevation filter. Use the |checkbox|"
+" :guilabel:`Invert Direction` option to reverse the elevation filter slider,"
+" so that it moves from high values at the bottom to low values at the top."
+msgstr ""
+"Ställ in värdet :guilabel:`Fixed Range Size` för att låsa höjdintervallet "
+"till en viss storlek. Den här inställningen sparas i projektet och behålls "
+"under alla sessioner, vilket gör att höjdfiltret blir konsekvent. Använd "
+"alternativet |checkbox| :guilabel:`Invert Direction` för att vända "
+"höjdfilterreglaget, så att det rör sig från höga värden längst ned till låga"
+" värden längst upp."
+
+#: ../../docs/user_manual/map_views/map_view.rst:322
+msgid ""
+":guilabel:`Set Elevation Range` to open the project elevation tab, where you"
+" can set dedicated lower and upper bounds for the elevation range"
+msgstr ""
+":guilabel:`Set Elevation Range` för att öppna projektets höjdflik, där du "
+"kan ställa in dedikerade nedre och övre gränser för höjdintervallet"
+
+#: ../../docs/user_manual/map_views/map_view.rst:323
+msgid ""
+":guilabel:`Disable Elevation Filter` to remove the elevation filter from the"
+" map canvas"
+msgstr ""
+":guilabel:`Disable Elevation Filter` för att ta bort höjdfiltret från "
+"kartbilden"
+
+#: ../../docs/user_manual/map_views/map_view.rst:331
+msgid "Bookmarking extents on the map"
+msgstr "Lägga till bokmärken för extenter på kartan"
+
+#: ../../docs/user_manual/map_views/map_view.rst:333
+msgid ""
+"Spatial Bookmarks allow you to \"bookmark\" a geographic location and return"
+" to it later. By default, bookmarks are saved in the user's profile (as "
+":guilabel:`User Bookmarks`), meaning that they are available from any "
+"project the user opens. They can also be saved for a single project (named "
+":guilabel:`Project Bookmarks`) and stored within the project file, which can"
+" be helpful if the project is to be shared with other users."
+msgstr ""
+"Med Spatial Bookmarks kan du \"bokmärka\" en geografisk plats och återvända "
+"till den senare. Som standard sparas bokmärkena i användarens profil (som "
+":guilabel:`User Bookmarks`), vilket innebär att de är tillgängliga i alla "
+"projekt som användaren öppnar. De kan också sparas för ett enskilt projekt "
+"(med namnet :guilabel:`Project Bookmarks`) och lagras i projektfilen, vilket"
+" kan vara till hjälp om projektet ska delas med andra användare."
+
+#: ../../docs/user_manual/map_views/map_view.rst:341
+msgid "Creating a Bookmark"
+msgstr "Skapa ett bokmärke"
+
+#: ../../docs/user_manual/map_views/map_view.rst:343
+msgid "To create a bookmark:"
+msgstr "Så här skapar du ett bokmärke:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:345
+msgid "Zoom and pan to the area of interest."
+msgstr "Zooma och panorera till det område som är av intresse."
+
+#: ../../docs/user_manual/map_views/map_view.rst:346
+msgid ""
+"Select the menu option :menuselection:`View -->` |newBookmark| "
+":menuselection:`New Spatial Bookmark...`, press :kbd:`Ctrl+B` or right-click"
+" the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the "
+":guilabel:`Browser` panel and select :guilabel:`New Spatial Bookmark`. The "
+":guilabel:`Bookmark Editor` dialog opens."
+msgstr ""
+"Välj menyalternativet :menuselection:`View -->` |newBookmark| "
+":menuselection:`New Spatial Bookmark...`, tryck på :kbd:`Ctrl+B` eller "
+"högerklicka på posten |showBookmarks| :guilabel:`Spatial Bookmarks` i "
+"panelen :guilabel:`Browser` och välj :guilabel:`New Spatial Bookmark`. "
+"Dialogrutan :guilabel:`Bookmark Editor` öppnas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1430
 msgid "newBookmark"
 msgstr "newBookmark"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1457
+#: ../../docs/user_manual/map_views/map_view.rst:1471
 msgid "showBookmarks"
 msgstr "showBookmarks"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1493
+#: ../../docs/user_manual/map_views/map_view.rst:358
+msgid "The Bookmark Editor Dialog"
+msgstr "Dialogrutan för redigering av bokmärken"
+
+#: ../../docs/user_manual/map_views/map_view.rst:360
+msgid "Enter a descriptive name for the bookmark"
+msgstr "Ange ett beskrivande namn för bokmärket"
+
+#: ../../docs/user_manual/map_views/map_view.rst:361
+msgid "Enter or select a group name in which to store related bookmarks"
+msgstr "Ange eller välj ett gruppnamn där du vill lagra relaterade bokmärken"
+
+#: ../../docs/user_manual/map_views/map_view.rst:362
+msgid ""
+"Select the extent of the area you wish to save, using the :ref:`extent "
+"selector <extent_selector>` widget"
+msgstr ""
+"Välj omfattningen av det område som du vill spara med hjälp av widgeten "
+":ref:`extent selector <extent_selector>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:364
+msgid "Change the map :guilabel:`Rotation`"
+msgstr "Ändra kartan :guilabel:`Rotation`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:365
+msgid "Indicate the :guilabel:`CRS` to use for the extent"
+msgstr "Ange vilken :guilabel:`CRS` som ska användas för omfattningen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:366
+msgid ""
+"Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User "
+"Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list"
+" is set to :guilabel:`User Bookmarks`)"
+msgstr ""
+"Välj om bokmärket ska :guilabel:`Sparas i` :guilabel:`Användarens bokmärken`"
+" eller :guilabel:`Projektets bokmärken` (som standard är den här listrutan "
+"inställd på :guilabel:`Användarens bokmärken`)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:369
+msgid "Press :guilabel:`Save` to add the bookmark to the list"
+msgstr "Tryck på :guilabel:`Save` för att lägga till bokmärket i listan"
+
+#: ../../docs/user_manual/map_views/map_view.rst:371
+msgid "Note that you can have multiple bookmarks with the same name."
+msgstr "Observera att du kan ha flera bokmärken med samma namn."
+
+#: ../../docs/user_manual/map_views/map_view.rst:374
+msgid "Working with Bookmarks"
+msgstr "Arbeta med bokmärken"
+
+#: ../../docs/user_manual/map_views/map_view.rst:376
+msgid ""
+"To use and manage bookmarks, you can either use the :guilabel:`Spatial "
+"Bookmarks` panel or :guilabel:`Browser`."
+msgstr ""
+"För att använda och hantera bokmärken kan du antingen använda panelen "
+":guilabel:`Spatial Bookmarks` eller :guilabel:`Browser`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:379
+msgid ""
+"Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show "
+"Spatial Bookmark Manager` or press :kbd:`Ctrl+7` to open the "
+":guilabel:`Spatial Bookmarks Manager` panel. Select :menuselection:`View "
+"-->` |showBookmarks| :menuselection:`Show Bookmarks` or :kbd:`Ctrl+Shift+B` "
+"to show the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the "
+":guilabel:`Browser` panel."
+msgstr ""
+"Välj :menuselection:`View -->` |showBookmarks| :menuselection:`Show Spatial "
+"Bookmark Manager` eller tryck på :kbd:`Ctrl+7` för att öppna panelen "
+":guilabel:`Spatial Bookmarks Manager`. Välj :menuselection:`View -->` "
+"|showBookmarks| :menuselection:`Show Bookmarks` eller :kbd:`Ctrl+Shift+B` "
+"för att visa posten |showBookmarks| :guilabel:`Spatial Bookmarks` i panelen "
+":guilabel:`Browser`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:387
+msgid "You can perform the following tasks:"
+msgstr "Du kan utföra följande uppgifter:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:389
+msgid "Managing bookmark actions"
+msgstr "Hantera bokmärkesåtgärder"
+
+#: ../../docs/user_manual/map_views/map_view.rst:394
+msgid "Task"
+msgstr "Uppgift"
+
+#: ../../docs/user_manual/map_views/map_view.rst:395
+msgid "Spatial Bookmark Manager"
+msgstr "Spatial bokmärkeshanterare"
+
+#: ../../docs/user_manual/map_views/map_view.rst:396
+msgid "Browser"
+msgstr "Webbläsare"
+
+#: ../../docs/user_manual/map_views/map_view.rst:397
+msgid "**Zoom to a Bookmark**"
+msgstr "**Zoom till ett bokmärke**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:398
+msgid ""
+"Double-click on it, or select the bookmark and press the |zoomToBookmark| "
+":guilabel:`Zoom to bookmark` button."
+msgstr ""
+"Dubbelklicka på det, eller markera bokmärket och tryck på knappen "
+"|zoomToBookmark| :guilabel:`Zoom to bookmark`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1507
 msgid "zoomToBookmark"
 msgstr "zoomToBookmark"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1392
+#: ../../docs/user_manual/map_views/map_view.rst:400
+msgid ""
+"Double-click on it, drag and drop it to the map canvas, or right-click the "
+"bookmark and select :guilabel:`Zoom to Bookmark`."
+msgstr ""
+"Dubbelklicka på det, dra och släpp det på kartbilden eller högerklicka på "
+"bokmärket och välj :guilabel:`Zoom to Bookmark`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:402
+msgid "**Delete a bookmark**"
+msgstr "**Ta bort ett bokmärke**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:403
+msgid ""
+"Select the bookmark and click the |deleteSelected| :guilabel:`Delete "
+"bookmark` button. Confirm your choice."
+msgstr ""
+"Markera bokmärket och klicka på knappen |deleteSelected| :guilabel:`Delete "
+"bookmark`. Bekräfta ditt val."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1406
 msgid "deleteSelected"
 msgstr "deleteSelected"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1451
+#: ../../docs/user_manual/map_views/map_view.rst:405
+msgid ""
+"Right-click the bookmark and select :guilabel:`Delete Spatial Bookmark`. "
+"Confirm your choice."
+msgstr ""
+"Högerklicka på bokmärket och välj :guilabel:`Delete Spatial Bookmark`. "
+"Bekräfta ditt val."
+
+#: ../../docs/user_manual/map_views/map_view.rst:407
+msgid "**Export bookmarks to XML**"
+msgstr "**Exportera bokmärken till XML**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:408
+msgid ""
+"Click the |sharing| :guilabel:`Import/Export Bookmarks` button and select "
+"|sharingExport| :guilabel:`Export`. All the bookmarks (user or project) are "
+"saved in an xml file."
+msgstr ""
+"Klicka på knappen |sharing| :guilabel:`Import/Export Bookmarks` och välj "
+"|sharingExport| :guilabel:`Export`. Alla bokmärken (användare eller projekt)"
+" sparas i en xml-fil."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1465
 msgid "sharing"
 msgstr "sharing"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1453
+#: ../../docs/user_manual/map_views/map_view.rst:1467
 msgid "sharingExport"
 msgstr "sharingExport"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1455
+#: ../../docs/user_manual/map_views/map_view.rst:411
+msgid ""
+"Select one or more folders (user or project) or subfolders (groups), then "
+"right-click and select |sharingExport| :guilabel:`Export Spatial "
+"Bookmarks...`. The selected bookmark subset is saved."
+msgstr ""
+"Välj en eller flera mappar (användare eller projekt) eller undermappar "
+"(grupper), högerklicka sedan och välj |sharingExport| :guilabel:`Export "
+"Spatial Bookmarks...`. Den valda delmängden bokmärken sparas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:414
+msgid "**Import bookmarks from XML**"
+msgstr "**Importera bokmärken från XML**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:415
+msgid ""
+"Click the |sharing| :guilabel:`Import/Export Bookmarks` button and select "
+"|sharingImport| :guilabel:`Import`. All bookmarks in the XML file are "
+"imported as user bookmarks."
+msgstr ""
+"Klicka på knappen |sharing| :guilabel:`Importera/Exportera bokmärken` och "
+"välj |sharingImport| :guilabel:`Importera`. Alla bokmärken i XML-filen "
+"importeras som användarens bokmärken."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1469
 msgid "sharingImport"
 msgstr "sharingImport"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1372
+#: ../../docs/user_manual/map_views/map_view.rst:418
+msgid ""
+"Right-click the :guilabel:`Spatial Bookmarks` entry or one of its folders "
+"(user or project) or subfolders (groups) to determine where to import the "
+"bookmarks, then select |sharingImport| :guilabel:`Import Spatial Bookmarks`."
+" If performed on the :guilabel:`Spatial Bookmarks` entry, the bookmarks are "
+"added to :guilabel:`User Bookmarks`."
+msgstr ""
+"Högerklicka på posten :guilabel:`Spatial Bookmarks` eller en av dess mappar "
+"(användare eller projekt) eller undermappar (grupper) för att avgöra var "
+"bokmärkena ska importeras och välj sedan |sharingImport| :guilabel:`Import "
+"Spatial Bookmarks`. Om detta utförs på posten :guilabel:`Spatial Bookmarks` "
+"läggs bokmärkena till i :guilabel:`User Bookmarks`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:423
+msgid "**Edit bookmark**"
+msgstr "**Redigera bokmärke**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:424
+msgid ""
+"You can change a bookmark by changing the values in the table. You can edit "
+"the name, the group, the extent and if it is stored in the project or not."
+msgstr ""
+"Du kan ändra ett bokmärke genom att ändra värdena i tabellen. Du kan "
+"redigera namnet, gruppen, omfattningen och om det ska lagras i projektet "
+"eller inte."
+
+#: ../../docs/user_manual/map_views/map_view.rst:427
+msgid ""
+"Right-click the desired bookmark and select :guilabel:`Edit Spatial "
+"Bookmark...`. The :guilabel:`Bookmark Editor` will open, allowing you to "
+"redefine every aspect of the bookmark as if you were creating it for the "
+"first time."
+msgstr ""
+"Högerklicka på önskat bokmärke och välj :guilabel:`Edit Spatial "
+"Bookmark...`. Då öppnas :guilabel:`Bookmark Editor`, där du kan omdefiniera "
+"alla aspekter av bokmärket som om du skapade det för första gången."
+
+#: ../../docs/user_manual/map_views/map_view.rst:432
+msgid ""
+"You can also drag and drop the bookmark between folders (user and project) "
+"and subfolders (groups)."
+msgstr ""
+"Du kan också dra och släppa bokmärket mellan mappar (användare och projekt) "
+"och undermappar (grupper)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:435
+msgid ""
+"You can manage bookmark actions by right-click on the desired bookmark in "
+"the :guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by"
+" typing the bookmark name in the :ref:`locator <label_statusbar>`."
+msgstr ""
+"Du kan hantera bokmärkesåtgärder genom att högerklicka på önskat bokmärke i "
+":guilabel:`Spatial Bookmarks Manager`. Du kan också zooma till bokmärken "
+"genom att skriva in bokmärkets namn i :ref:`locator <label_statusbar>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:443
+msgid "Decorating the map"
+msgstr "Dekorera kartan"
+
+#: ../../docs/user_manual/map_views/map_view.rst:445
+msgid ""
+"Decorations include Grid, Title Label, Copyright Label, Image, North Arrow, "
+"Scale Bar and Layout Extents. They are used to 'decorate' the map by adding "
+"cartographic elements."
+msgstr ""
+"Dekorationer inkluderar rutnät, titeletikett, copyrightetikett, bild, "
+"norrpil, skalstreck och layoutextens. De används för att \"dekorera\" kartan"
+" genom att lägga till kartografiska element."
+
+#: ../../docs/user_manual/map_views/map_view.rst:452
+msgid "Grid"
+msgstr "Rutnät"
+
+#: ../../docs/user_manual/map_views/map_view.rst:454
+msgid ""
+"|addGrid| :guilabel:`Grid` allows you to add a coordinate grid and "
+"coordinate annotations to the map canvas."
+msgstr ""
+"|addGrid| :guilabel:`Grid` gör att du kan lägga till ett koordinatnät och "
+"koordinatanteckningar i kartbilden."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1386
 msgid "addGrid"
 msgstr "addGrid"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1475
+#: ../../docs/user_manual/map_views/map_view.rst:457
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Grid...` to open"
+" the dialog."
+msgstr ""
+"Välj menyalternativet :menuselection:`Visa --> Dekorationer --> Rutnät...` "
+"för att öppna dialogen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:464
+msgid "The Grid Dialog"
+msgstr "Dialogrutan för rutnät"
+
+#: ../../docs/user_manual/map_views/map_view.rst:466
+msgid ""
+"Tick |checkbox| :guilabel:`Enable grid` and set grid definitions according "
+"to the layers loaded in the map canvas:"
+msgstr ""
+"Tick |checkbox| :guilabel:`Aktivera rutnät` och ställ in rutnätsdefinitioner"
+" enligt de lager som laddats i kartbilden:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:469
+msgid ""
+"The :guilabel:`Grid type`: it can be :guilabel:`Line` or :guilabel:`Marker`"
+msgstr ""
+"Typ av :guilabel:`Grid`: den kan vara :guilabel:`Line` eller "
+":guilabel:`Marker`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:470
+msgid ""
+"The associated :ref:`Line symbol <vector_line_symbols>` or :ref:`marker "
+"symbol <vector_marker_symbols>` used to represent the grid marks"
+msgstr ""
+"Den associerade :ref:`linjesymbol <vector_line_symbols>` eller "
+":ref:`markörsymbol <vector_marker_symbols>` som används för att representera"
+" rutnätsmarkeringarna"
+
+#: ../../docs/user_manual/map_views/map_view.rst:472
+msgid ""
+"The :guilabel:`Interval X` and :guilabel:`Interval Y` between the grid "
+"marks, in map units"
+msgstr ""
+":guilabel:`Intervall X` och :guilabel:`Intervall Y` mellan "
+"rutnätsmarkeringarna, i kartenheter"
+
+#: ../../docs/user_manual/map_views/map_view.rst:474
+msgid ""
+"An :guilabel:`Offset X` and :guilabel:`Offset Y` distance of the grid marks "
+"from the bottom left corner of the map canvas, in map units"
+msgstr ""
+"Ett :guilabel:`Offset X` och :guilabel:`Offset Y` avstånd för "
+"rutnätsmarkeringarna från det nedre vänstra hörnet av kartbilden, i "
+"kartenheter"
+
+#: ../../docs/user_manual/map_views/map_view.rst:476
+msgid "The interval and offset parameters can be set based on the:"
+msgstr "Parametrarna för intervall och offset kan ställas in baserat på:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:478
+msgid ""
+":guilabel:`Canvas Extents`: generates a grid with an interval that is "
+"approximatively 1/5 of the canvas width"
+msgstr ""
+":guilabel:`Canvas Extents`: genererar ett rutnät med ett intervall som är "
+"ungefär 1/5 av dukens bredd"
+
+#: ../../docs/user_manual/map_views/map_view.rst:480
+msgid ":guilabel:`Active Raster Layer` resolution"
+msgstr ":guilabel:`Aktivt rasterlager`-upplösning"
+
+#: ../../docs/user_manual/map_views/map_view.rst:481
+msgid ""
+"Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates of "
+"the grid marks and set:"
+msgstr ""
+"Tick |checkbox| :guilabel:`Draw annotations` för att visa koordinaterna för "
+"rutnätets markeringar och uppsättning:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:484
+msgid ""
+"The :guilabel:`Annotation direction`, ie how the labels would be placed "
+"relative to their grid line. It can be:"
+msgstr ""
+":guilabel:`Annotation direction`, dvs. hur etiketterna ska placeras i "
+"förhållande till rutnätslinjen. Den kan vara:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:487
+msgid ":guilabel:`Horizontal` or :guilabel:`Vertical` for all the labels"
+msgstr ":guilabel:`Horisontal` eller :guilabel:`Vertikal` för alla etiketter"
+
+#: ../../docs/user_manual/map_views/map_view.rst:488
+msgid ""
+":guilabel:`Horizontal and Vertical`, ie each label is parallel to the grid "
+"mark it refers to"
+msgstr ""
+":guilabel:`Horisontell och vertikal`, dvs. varje etikett är parallell med "
+"det rutnätsmärke som den hänvisar till"
+
+#: ../../docs/user_manual/map_views/map_view.rst:490
+msgid ""
+":guilabel:`Boundary direction`, ie each label follows the canvas boundary, "
+"and is perpendicular to the grid mark it refers to"
+msgstr ""
+":guilabel:`Begränsningsriktning`, dvs. varje etikett följer dukens "
+"begränsning och är vinkelrät mot den rutnätsmarkering som den hänvisar till"
+
+#: ../../docs/user_manual/map_views/map_view.rst:492
+msgid ""
+"The :guilabel:`Annotation font` (text formatting, buffer, shadow...) using "
+"the :ref:`font selector widget <font_selector>`"
+msgstr ""
+"Teckensnittet :guilabel:`Annotation` (textformatering, buffert, skugga...) "
+"med hjälp av widgeten :ref:`fontselector <font_selector>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:494
+msgid ""
+"The :guilabel:`Distance to map frame`, margin between annotations and map "
+"canvas limits. Convenient when :ref:`exporting the map canvas "
+"<exportingmapcanvas>` eg to an image format or PDF, and avoid annotations to"
+" be on the \"paper\" limits."
+msgstr ""
+":guilabel:`Distance to map frame`, marginalen mellan anteckningar och "
+"kartans gränser. Praktiskt när man :ref:`exporterar kartbilden "
+"<exportingmapcanvas>` t.ex. till ett bildformat eller PDF, och undviker att "
+"anteckningar hamnar på \"pappers\"-gränserna."
+
+#: ../../docs/user_manual/map_views/map_view.rst:497
+msgid "The :guilabel:`Coordinate precision`"
+msgstr "Den :guilabel:`Koordinatprecision`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:499
+#: ../../docs/user_manual/map_views/map_view.rst:539
+#: ../../docs/user_manual/map_views/map_view.rst:578
+#: ../../docs/user_manual/map_views/map_view.rst:685
+msgid ""
+"Click :guilabel:`Apply` to verify that it looks as expected or "
+":guilabel:`OK` if you're satisfied."
+msgstr ""
+"Klicka på :guilabel:`Apply` för att kontrollera att det ser ut som förväntat"
+" eller på :guilabel:`OK` om du är nöjd."
+
+#: ../../docs/user_manual/map_views/map_view.rst:506
+msgid "Title Label"
+msgstr "Titelmärke"
+
+#: ../../docs/user_manual/map_views/map_view.rst:508
+msgid ""
+"|titleLabel| :guilabel:`Title Label` allows you to decorate your map with a "
+"**Title**."
+msgstr ""
+"|titleLabel| :guilabel:`Title Label` låter dig dekorera din karta med en "
+"**Title**."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1489
 msgid "titleLabel"
 msgstr "titleLabel"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1388
+#: ../../docs/user_manual/map_views/map_view.rst:510
+msgid "To add a Title Label decoration:"
+msgstr "Så här lägger du till en dekoration för titeletikett:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:512
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Title Label...` "
+"to open the dialog."
+msgstr ""
+"Välj menyalternativet :menuselection:`Visa --> Dekorationer --> "
+"Titellabel...` för att öppna dialogen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:520
+msgid "The Title Decoration Dialog"
+msgstr "Dialogrutan för dekorering av titlar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:522
+msgid "Make sure |checkbox| :guilabel:`Enable Title Label` is checked"
+msgstr "Kontrollera att |checkbox| :guilabel:`Enable Title Label` är markerad"
+
+#: ../../docs/user_manual/map_views/map_view.rst:523
+msgid ""
+"Enter the title text you want to place on the map. You can make it dynamic "
+"using the :guilabel:`Insert or Edit an Expression...` button."
+msgstr ""
+"Ange den titeltext som du vill placera på kartan. Du kan göra den dynamisk "
+"med hjälp av knappen :guilabel:`Insert or Edit an Expression...`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:526
+#: ../../docs/user_manual/map_views/map_view.rst:567
+msgid ""
+"Choose the :guilabel:`Font` for the label using the :ref:`font selector "
+"widget <font_selector>` with full access to QGIS :ref:`text formatting "
+"<text_format>` options. Quickly set the font color and opacity by clicking "
+"the black arrow to the right of the font combo box."
+msgstr ""
+"Välj :guilabel:`Font` för etiketten med hjälp av :ref:`font selector widget "
+"<font_selector>` med full tillgång till QGIS :ref:`text formatting "
+"<text_format>` alternativ. Du kan snabbt ställa in teckensnittets färg och "
+"opacitet genom att klicka på den svarta pilen till höger om "
+"kombinationsrutan för teckensnitt."
+
+#: ../../docs/user_manual/map_views/map_view.rst:530
+msgid ""
+"Select the :ref:`color <color-selector>` to apply to the title's "
+":guilabel:`Background bar color`."
+msgstr ""
+"Välj :ref:`color <color-selector>` som ska gälla för titelns "
+":guilabel:`Background bar color`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:532
+msgid ""
+"Choose the :guilabel:`Placement` of the label in the canvas: options are "
+":guilabel:`Top left`, :guilabel:`Top Center` (default), :guilabel:`Top "
+"Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center` and "
+":guilabel:`Bottom Right`."
+msgstr ""
+"Välj :guilabel:`Placement` för etiketten på duken: alternativen är "
+":guilabel:`Top left`, :guilabel:`Top Center` (standard), :guilabel:`Top "
+"Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center` och "
+":guilabel:`Bottom Right`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:536
+#: ../../docs/user_manual/map_views/map_view.rst:575
+msgid ""
+"Refine the placement of the item by setting a horizontal and/or vertical "
+":guilabel:`Margin from Edge`. These values can be in **Millimeters** or "
+"**Pixels** or set as a **Percentage** of the width or height of the map "
+"canvas."
+msgstr ""
+"Förfina placeringen av objektet genom att ange en horisontell och/eller "
+"vertikal :guilabel:`Marginal från kant`. Dessa värden kan vara i "
+"**Millimeter** eller **Pixel** eller anges som en **Procent** av kartans "
+"bredd eller höjd."
+
+#: ../../docs/user_manual/map_views/map_view.rst:546
+msgid "Copyright Label"
+msgstr "Copyright Etikett"
+
+#: ../../docs/user_manual/map_views/map_view.rst:548
+msgid ""
+"|copyrightLabel| :guilabel:`Copyright Label` can be used to decorate your "
+"map with a **Copyright** label."
+msgstr ""
+"|copyrightLabel| :guilabel:`Copyright Label` kan användas för att dekorera "
+"din karta med en **Copyright**-etikett."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1402
 msgid "copyrightLabel"
 msgstr "copyrightLabel"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1374
+#: ../../docs/user_manual/map_views/map_view.rst:551
+msgid "To add this decoration:"
+msgstr "För att lägga till denna dekoration:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:553
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Copyright "
+"Label...` to open the dialog."
+msgstr ""
+"Välj menyalternativet :menuselection:`Visa --> Dekorationer --> Copyright "
+"Label...` för att öppna dialogen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:561
+msgid "The Copyright Decoration Dialog"
+msgstr "Dialogrutan för dekorering av upphovsrätt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:563
+msgid "Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked"
+msgstr ""
+"Kontrollera att |checkbox| :guilabel:`Enable Copyright Label` är markerad"
+
+#: ../../docs/user_manual/map_views/map_view.rst:564
+msgid ""
+"Enter the copyright text you want to place on the map. You can make it "
+"dynamic using the :guilabel:`Insert or Edit an Expression...` button."
+msgstr ""
+"Ange den copyright-text som du vill placera på kartan. Du kan göra den "
+"dynamisk med hjälp av knappen :guilabel:`Insert or Edit an Expression...`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:571
+msgid ""
+"Choose the :guilabel:`Placement` of the label in the canvas: options are "
+":guilabel:`Top left`, :guilabel:`Top Center`, :guilabel:`Top Right`, "
+":guilabel:`Bottom left`, :guilabel:`Bottom Center`, and :guilabel:`Bottom "
+"Right` (default for Copyright decoration)"
+msgstr ""
+"Välj :guilabel:`Placement` för etiketten i duken: alternativen är "
+":guilabel:`Top left`, :guilabel:`Top Center`, :guilabel:`Top Right`, "
+":guilabel:`Bottom left`, :guilabel:`Bottom Center` och :guilabel:`Bottom "
+"Right` (standard för Copyright-dekoration)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:585
+msgid "Image Decoration"
+msgstr "Dekoration av bilder"
+
+#: ../../docs/user_manual/map_views/map_view.rst:587
+msgid ""
+"|addImage| :guilabel:`Image` allows you to add an image (logo, legend, ..) "
+"on the map canvas."
+msgstr ""
+"|addImage| :guilabel:`Image` gör att du kan lägga till en bild (logotyp, "
+"legend, ...) på kartbilden."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1388
 msgid "addImage"
 msgstr "addImage"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1420
+#: ../../docs/user_manual/map_views/map_view.rst:589
+msgid "To add an image:"
+msgstr "Lägga till en bild:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:591
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Image...` to "
+"open the dialog."
+msgstr ""
+"Välj menyalternativet :menuselection:`Visa --> Dekorationer --> Bild...` för"
+" att öppna dialogrutan."
+
+#: ../../docs/user_manual/map_views/map_view.rst:599
+msgid "The Image Decoration Dialog"
+msgstr "Dialogrutan för bilddekoration"
+
+#: ../../docs/user_manual/map_views/map_view.rst:601
+msgid "Make sure |checkbox| :guilabel:`Enable Image` is checked"
+msgstr "Kontrollera att |checkbox| :guilabel:`Enable Image` är markerad"
+
+#: ../../docs/user_manual/map_views/map_view.rst:602
+msgid ""
+"Select a bitmap (e.g. png or jpg) or SVG image using the :guilabel:`...` "
+":sup:`Browse` button"
+msgstr ""
+"Välj en bitmapp (t.ex. png eller jpg) eller SVG-bild med hjälp av "
+":guilabel:`...` :sup:`Browse`-knappen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:604
+msgid ""
+"If you have chosen a parameter enabled SVG then you can also set a "
+":guilabel:`Fill` or :guilabel:`Stroke` (outline) color. For bitmap images, "
+"the color settings are disabled."
+msgstr ""
+"Om du har valt en parameter som aktiverar SVG kan du också ange en "
+":guilabel:`Fill`- eller :guilabel:`Stroke`-färg (kontur). För bitmappsbilder"
+" är färginställningarna inaktiverade."
+
+#: ../../docs/user_manual/map_views/map_view.rst:607
+msgid ""
+"Set a :guilabel:`Size` of the image in mm. The width of selected image is "
+"used to resize it to given :guilabel:`Size`."
+msgstr ""
+"Ställ in en :guilabel:`Size` för bilden i mm. Bredden på den valda bilden "
+"används för att ändra storlek på den till angiven :guilabel:`Size`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:609
+msgid ""
+"Choose where you want to place the image on the map canvas with the "
+":guilabel:`Placement` combo box. The default position is :guilabel:`Top "
+"Left`."
+msgstr ""
+"Välj var du vill placera bilden på kartbilden med hjälp av kombinationsrutan"
+" :guilabel:`Placement`. Standardpositionen är :guilabel:`Top Left`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:611
+msgid ""
+"Set the :guilabel:`Horizontal` and :guilabel:`Vertical Margin from (Canvas) "
+"Edge`. These values can be set in **Millimeters**, **Pixels** or as a "
+"**Percentage** of the width or height of the map canvas."
+msgstr ""
+"Ställ in :guilabel:`Horizontal` och :guilabel:`Vertical Margin from (Canvas)"
+" Edge`. Dessa värden kan anges i **Millimeter**, **Pixel** eller som en "
+"**Procent** av kartans bredd eller höjd."
+
+#: ../../docs/user_manual/map_views/map_view.rst:614
+#: ../../docs/user_manual/map_views/map_view.rst:645
+#: ../../docs/user_manual/map_views/map_view.rst:723
+msgid ""
+"Click :guilabel:`Apply` to verify that it looks as expected and "
+":guilabel:`OK` if you're satisfied."
+msgstr ""
+"Klicka på :guilabel:`Apply` för att kontrollera att det ser ut som förväntat"
+" och på :guilabel:`OK` om du är nöjd."
+
+#: ../../docs/user_manual/map_views/map_view.rst:621
+msgid "North Arrow"
+msgstr "Nordpilen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:623
+msgid ""
+"|northArrow| :guilabel:`North Arrow` allows you to add a north arrow on the "
+"map canvas."
+msgstr ""
+"|northArrow| :guilabel:`North Arrow` gör att du kan lägga till en norrpil på"
+" kartbilden."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1434
 msgid "northArrow"
 msgstr "northArrow"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1440
+#: ../../docs/user_manual/map_views/map_view.rst:625
+msgid "To add a north arrow:"
+msgstr "Lägga till en norrpil:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:627
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> North Arrow...` "
+"to open the dialog."
+msgstr ""
+"Välj menyalternativet :menuselection:`Vy --> Dekorationer --> Nordpil...` "
+"för att öppna dialogrutan."
+
+#: ../../docs/user_manual/map_views/map_view.rst:635
+msgid "The North Arrow Dialog"
+msgstr "Dialogrutan för norrpil"
+
+#: ../../docs/user_manual/map_views/map_view.rst:637
+msgid "Make sure |checkbox| :guilabel:`Enable north arrow` is checked"
+msgstr "Kontrollera att |checkbox| :guilabel:`Enable north arrow` är markerad"
+
+#: ../../docs/user_manual/map_views/map_view.rst:638
+msgid "Optionally change the color and size, or choose a custom SVG"
+msgstr "Du kan ändra färg och storlek eller välja en anpassad SVG"
+
+#: ../../docs/user_manual/map_views/map_view.rst:639
+msgid ""
+"Optionally change the angle or choose **Automatic** to let QGIS determine "
+"the direction"
+msgstr ""
+"Ändra vinkeln eller välj **Automatisk** för att låta QGIS bestämma "
+"riktningen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:641
+msgid "Optionally choose the placement from the Placement combo box"
+msgstr "Du kan även välja placering i kombinationsrutan Placering"
+
+#: ../../docs/user_manual/map_views/map_view.rst:642
+msgid ""
+"Optionally refine the placement of the arrow by setting a horizontal and/or "
+"vertical `Margin from (Canvas) Edge`. These values can be in **Millimeters**"
+" or **Pixels** or set as a **Percentage** of the width or height of the map "
+"canvas."
+msgstr ""
+"Förfina eventuellt pilens placering genom att ange en horisontell och/eller "
+"vertikal \"marginal från (Canvas) Edge\". Dessa värden kan vara i "
+"**Millimeter** eller **Pixel** eller anges som en **Procent** av kartans "
+"bredd eller höjd."
+
+#: ../../docs/user_manual/map_views/map_view.rst:652
+msgid "Scale Bar"
+msgstr "Skala Bar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:654
+msgid ""
+"|scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas. "
+"You can control the style and placement, as well as the labelling of the "
+"bar. The scale bar respects the active :ref:`project's distance unit "
+"<measurements_ellipsoid>` as defined in :menuselection:`Project properties "
+"--> General --> Units for distance measurement`."
+msgstr ""
+"|scaleBar| :guilabel:`Scale Bar` lägger till ett enkelt skalstreck i "
+"kartbilden. Du kan styra stilen och placeringen samt märkningen av stapeln. "
+"Skalstapeln respekterar det aktiva :ref:`projektets avståndsenhet "
+"<measurements_ellipsoid>` enligt definitionen i "
+":menuselection:`Projektegenskaper --> Allmänt --> Enheter för "
+"avståndsmätning`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1454
 msgid "scaleBar"
 msgstr "scaleBar"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1445
+#: ../../docs/user_manual/map_views/map_view.rst:659
+msgid "To add a scale bar:"
+msgstr "För att lägga till en skalstreck:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:661
+msgid ""
+"Select menu option :menuselection:`View --> Decorations --> Scale Bar...` to"
+" open the dialog"
+msgstr ""
+"Välj menyalternativet :menuselection:`View --> Decorations --> Scale Bar...`"
+" för att öppna dialogrutan"
+
+#: ../../docs/user_manual/map_views/map_view.rst:669
+msgid "The Scale Bar Dialog"
+msgstr "Dialogrutan för skalfält"
+
+#: ../../docs/user_manual/map_views/map_view.rst:671
+msgid "Make sure |checkbox| :guilabel:`Enable scale bar` is checked"
+msgstr "Kontrollera att |checkbox| :guilabel:`Enable scale bar` är markerad"
+
+#: ../../docs/user_manual/map_views/map_view.rst:672
+msgid ""
+"Choose a style from the :guilabel:`Scale bar style` |selectString| combo box"
+msgstr ""
+"Välj en stil från kombinationsrutan :guilabel:`Scale bar style` "
+"|selectString| (välj sträng)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1459
 msgid "selectString"
 msgstr "selectString"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1444
+#: ../../docs/user_manual/map_views/map_view.rst:673
+msgid ""
+"Select the :guilabel:`Color of bar` |selectColor| by choosing a fill color "
+"(default: black) and an outline color (default: white). The scale bar fill "
+"and outline can be made opaque by clicking on the down arrow to the right of"
+" the color input."
+msgstr ""
+"Välj :guilabel:`Color of bar` |selectColor| genom att välja en fyllningsfärg"
+" (standard: svart) och en konturfärg (standard: vit). Skalstapelns fyllning "
+"och kontur kan göras ogenomskinliga genom att klicka på nedåtpilen till "
+"höger om färginmatningen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1458
 msgid "selectColor"
 msgstr "selectColor"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1376
+#: ../../docs/user_manual/map_views/map_view.rst:677
+msgid ""
+"Select the font for the scale bar from the :guilabel:`Font of bar` "
+"|selectString| combo box"
+msgstr ""
+"Välj teckensnitt för skalstrecket från kombinationsrutan "
+":guilabel:`Teckensnitt för streck` |selectString|"
+
+#: ../../docs/user_manual/map_views/map_view.rst:678
+msgid "Set the :guilabel:`Size of bar` in the active unit"
+msgstr "Ställ in :guilabel:`Storleken på baren` i den aktiva enheten"
+
+#: ../../docs/user_manual/map_views/map_view.rst:679
+msgid ""
+"Optionally check |checkbox| :guilabel:`Automatically snap to round number on"
+" resize` to display easy-to-read values"
+msgstr ""
+"Markera valfritt |checkbox| :guilabel:`Automatiskt avrunda tal vid "
+"storleksändring` för att visa lättlästa värden"
+
+#: ../../docs/user_manual/map_views/map_view.rst:681
+msgid ""
+"Choose the placement from the :guilabel:`Placement` |selectString| combo box"
+msgstr ""
+"Välj placering från kombinationsrutan :guilabel:`Placement` |selectString|"
+
+#: ../../docs/user_manual/map_views/map_view.rst:682
+msgid ""
+"You can refine the placement of the item by setting a horizontal and/or "
+"vertical `Margin from (Canvas) Edge`. These values can be in **Millimeters**"
+" or **Pixels** or set as a **Percentage** of the width or height of the map "
+"canvas."
+msgstr ""
+"Du kan förfina placeringen av objektet genom att ange en horisontell "
+"och/eller vertikal `Marginal från (Canvas) Edge`. Dessa värden kan anges i "
+"**Millimeter** eller **Pixel** eller ställas in som en **Procent** av "
+"bredden eller höjden på kartbilden."
+
+#: ../../docs/user_manual/map_views/map_view.rst:691
+msgid "Layout Extents"
+msgstr "Layout Extents"
+
+#: ../../docs/user_manual/map_views/map_view.rst:693
+msgid ""
+"|addMap| :guilabel:`Layout Extents` adds the extents of :ref:`map item(s) "
+"<layout_map_item>` in print layout(s) to the canvas. When enabled, the "
+"extents of all map items within all print layouts are shown using a lightly "
+"dotted border labeled with the name of the print layout and map item. You "
+"can control the style and labeling of the displayed layout extents. This "
+"decoration is useful when you are tweaking the positioning of map elements "
+"such as labels, and need to know the actual visible region of print layouts."
+msgstr ""
+"|addMap| :guilabel:`Layout Extents` lägger till utbredning av "
+":ref:`kartobjekt <layout_map_item>` i utskriftslayout(er) på duken. När "
+"funktionen är aktiverad visas utdragen av alla kartobjekt i alla "
+"utskriftslayouter med en lätt prickad kant som är märkt med namnet på "
+"utskriftslayouten och kartobjektet. Du kan styra stilen och märkningen av de"
+" layoututbredningar som visas. Denna dekoration är användbar när du justerar"
+" positioneringen av kartelement, t.ex. etiketter, och behöver veta den "
+"faktiska synliga regionen för utskriftslayouter."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1390
 msgid "addMap"
 msgstr "addMap"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1390
+#: ../../docs/user_manual/map_views/map_view.rst:705
+msgid ""
+"Example of layout extents displayed in a QGIS project with two print "
+"layouts. The print layout named 'Sights' contains two map items, while the "
+"other print layout contains one map item."
+msgstr ""
+"Exempel på layoutextent som visas i ett QGIS-projekt med två "
+"utskriftslayouter. Utskriftslayouten med namnet \"Sights\" innehåller två "
+"kartobjekt, medan den andra utskriftslayouten innehåller ett kartobjekt."
+
+#: ../../docs/user_manual/map_views/map_view.rst:709
+msgid "To add layout extent(s):"
+msgstr "För att lägga till layoututsträckning(ar):"
+
+#: ../../docs/user_manual/map_views/map_view.rst:711
+msgid ""
+"Select :menuselection:`View --> Decorations --> Layout Extents` to open the "
+"dialog"
+msgstr ""
+"Välj :menuselection:`Vy --> Dekorationer --> Layoututbredning` för att öppna"
+" dialogrutan"
+
+#: ../../docs/user_manual/map_views/map_view.rst:719
+msgid "The Layout Extents Dialog"
+msgstr "Dialogrutan Layoututbredning"
+
+#: ../../docs/user_manual/map_views/map_view.rst:721
+msgid "Make sure |checkbox| :guilabel:`Show layout extents` is checked."
+msgstr "Se till att |checkbox| :guilabel:`Visa layoututdrag` är markerad."
+
+#: ../../docs/user_manual/map_views/map_view.rst:722
+msgid "Optionally change the symbol and labeling of the extents."
+msgstr "Ändra eventuellt symbolen och märkningen av extenterna."
+
+#: ../../docs/user_manual/map_views/map_view.rst:729
+msgid "**Decorations Settings**"
+msgstr "**Dekorationer Inställningar**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:731
+msgid ""
+"When you save a QGIS project file, any changes you have made to Grid, North "
+"Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project "
+"and restored the next time you load the project."
+msgstr ""
+"När du sparar en QGIS-projektfil sparas alla ändringar som du har gjort i "
+"rutnät, norrpil, skalstreck, copyright och layoutextens i projektet och "
+"återställs nästa gång du laddar projektet."
+
+#: ../../docs/user_manual/map_views/map_view.rst:742
+msgid "Annotation Tools"
+msgstr "Verktyg för anteckningar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:744
+msgid ""
+"Annotations are another type of elements added onto the map canvas to "
+"provide additional information that can not be depicted by the rendered "
+"layers. Unlike :ref:`labels <vector_labels_tab>` that rely on attribute "
+"values stored in vector layers, annotations are independent details, stored "
+"within the project file itself."
+msgstr ""
+"Annotationer är en annan typ av element som läggs till i kartbilden för att "
+"ge ytterligare information som inte kan visas av de renderade skikten. Till "
+"skillnad från :ref:`labels <vector_labels_tab>` som förlitar sig på "
+"attributvärden som lagras i vektorlager, är annotationer oberoende detaljer "
+"som lagras i själva projektfilen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:750
+msgid "Two families of annotations are available in QGIS:"
+msgstr "Det finns två typer av annoteringar tillgängliga i QGIS:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:752
+msgid ""
+"**Feature annotations**: they are actual georeferenced features of text, "
+"marker, line or polygon type stored within a special layer type called "
+"\"annotation layer\". They are tied to a particular geographic location, "
+"meaning that moving your map, changing the scale or changing projection "
+"won’t cause your annotations to jump around the map. Rather, they’ll be "
+"locked in place to the location you’ve drawn them."
+msgstr ""
+"**Feature annotations**: de är faktiska georefererade funktioner av text-, "
+"markör-, linje- eller polygontyp som lagras i en speciell lagertyp som "
+"kallas \"annotation layer\". De är knutna till en viss geografisk plats, "
+"vilket innebär att om du flyttar kartan, ändrar skala eller projektion "
+"kommer dina anteckningar inte att hoppa runt på kartan. De kommer snarare "
+"att vara låsta till den plats där du har ritat dem."
+
+#: ../../docs/user_manual/map_views/map_view.rst:757
+msgid ""
+"**Balloon annotations**: these are individual HTML or form annotations "
+"inside a bubble. They can be associated to any layer for their visibility "
+"and drawn on top of the map canvas. The size is dependent from the map "
+"canvas scale, and its position can be anchored."
+msgstr ""
+"**Balloon annotations**: detta är individuella HTML- eller formannoteringar "
+"inuti en bubbla. De kan kopplas till valfritt lager för att synas och ritas "
+"ovanpå kartbilden. Storleken är beroende av kartans skala och dess position "
+"kan förankras."
+
+#: ../../docs/user_manual/map_views/map_view.rst:761
+msgid "**Layout the map with annotations**"
+msgstr "**Layout av kartan med anteckningar**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:763
+msgid ""
+"You can print or export annotations with your map to various formats using:"
+msgstr ""
+"Du kan skriva ut eller exportera anteckningar med din karta till olika "
+"format med hjälp av:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:765
+msgid "map canvas export tools available in the :menuselection:`Project` menu"
+msgstr ""
+"verktyg för export av kartbilder som finns i menyn :menuselection:`Project"
+
+#: ../../docs/user_manual/map_views/map_view.rst:766
+msgid ""
+":ref:`print layout <create-output>`, in which case you need to check "
+":guilabel:`Draw map canvas items` in the corresponding map item properties"
+msgstr ""
+":ref:`print layout <create-output>`, i vilket fall du måste markera "
+":guilabel:`Draw map canvas items` i motsvarande kartobjektsegenskaper"
+
+#: ../../docs/user_manual/map_views/map_view.rst:770
+msgid ""
+"The :guilabel:`Annotations Toolbar` provides a set of tools to create and "
+"interact with both families of annotations."
+msgstr ""
+"Verktygsfältet :guilabel:`Annotations Toolbar` innehåller en uppsättning "
+"verktyg för att skapa och interagera med båda typerna av annoteringar."
+
+#: ../../docs/user_manual/map_views/map_view.rst:773
+msgid "The Annotations Toolbar actions"
+msgstr "Åtgärder i verktygsfältet Anteckningar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:776
+msgid "Scope"
+msgstr "Omfång"
+
+#: ../../docs/user_manual/map_views/map_view.rst:778
+msgid "|createAnnotationLayer| :sup:`New Annotation Layer`"
+msgstr "|createAnnotationLayer| :sup:`Nytt annoteringslager`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1404
 msgid "createAnnotationLayer"
 msgstr "createAnnotationLayer"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1442
+#: ../../docs/user_manual/map_views/map_view.rst:778
+msgid "Create a new layer to store annotations"
+msgstr "Skapa ett nytt lager för att lagra anteckningar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:778
+msgid "Feature annotations"
+msgstr "Anteckningar om funktioner"
+
+#: ../../docs/user_manual/map_views/map_view.rst:780
+msgid ":sup:`Main Annotation Layer Properties`"
+msgstr ":sup:`Egenskaper för huvudlager för annoteringar`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:780
+msgid "Control settings of the Main Annotation Layer"
+msgstr "Kontrollinställningar för Main Annotation Layer"
+
+#: ../../docs/user_manual/map_views/map_view.rst:782
+msgid "|select| :sup:`Modify Annotations`"
+msgstr "|select| :sup:`Modifiera anteckningar`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1456
 msgid "select"
 msgstr "select"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1380
+#: ../../docs/user_manual/map_views/map_view.rst:782
+msgid "Select, move, resize and modify symbology properties of annotations"
+msgstr ""
+"Välj, flytta, ändra storlek på och modifiera symbologiegenskaper för "
+"anteckningar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:784
+#: ../../docs/user_manual/map_views/map_view.rst:896
+msgid "|addPolygon| :sup:`Create Polygon Annotation`"
+msgstr "|addPolygon| :sup:`Skapa Polygon Annotation`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1394
 msgid "addPolygon"
 msgstr "addPolygon"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1382
+#: ../../docs/user_manual/map_views/map_view.rst:784
+msgid "Create an annotation as a polygon feature"
+msgstr "Skapa en annotation som en polygonfunktion"
+
+#: ../../docs/user_manual/map_views/map_view.rst:786
+#: ../../docs/user_manual/map_views/map_view.rst:899
+msgid "|addPolyline| :sup:`Create Line Annotation`"
+msgstr "|addPolyline| :sup:`Skapa linjeannotering`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1396
 msgid "addPolyline"
 msgstr "addPolyline"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1378
+#: ../../docs/user_manual/map_views/map_view.rst:786
+msgid "Create an annotation as a polyline feature"
+msgstr "Skapa en annotation som en polylinjefunktion"
+
+#: ../../docs/user_manual/map_views/map_view.rst:788
+#: ../../docs/user_manual/map_views/map_view.rst:902
+msgid "|addMarker| :sup:`Create Marker Annotation`"
+msgstr "|addMarker| :sup:`Skapa markörannotering`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1392
 msgid "addMarker"
 msgstr "addMarker"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1370
+#: ../../docs/user_manual/map_views/map_view.rst:788
+msgid "Create an annotation as a point feature"
+msgstr "Skapa en annotation som en punktfunktion"
+
+#: ../../docs/user_manual/map_views/map_view.rst:790
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid "|actionText| :sup:`Create Text Annotation at Point`"
+msgstr "|actionText| :sup:`Skapa textannotering vid punkt`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1384
 msgid "actionText"
 msgstr "actionText"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1471
+#: ../../docs/user_manual/map_views/map_view.rst:790
+msgid "Create an annotation as a text label"
+msgstr "Skapa en annotation som en textetikett"
+
+#: ../../docs/user_manual/map_views/map_view.rst:792
+#: ../../docs/user_manual/map_views/map_view.rst:907
+msgid "|textAlongLine| :sup:`Create Text Annotation along Line`"
+msgstr "|textAlongLine| :sup:`Skapa textannotering längs linje`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1485
 msgid "textAlongLine"
 msgstr "textAlongLine"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1473
+#: ../../docs/user_manual/map_views/map_view.rst:792
+msgid "Create an annotation as a curved text along a line feature"
+msgstr "Skapa en annotering som en böjd text längs en linjefunktion"
+
+#: ../../docs/user_manual/map_views/map_view.rst:795
+#: ../../docs/user_manual/map_views/map_view.rst:911
+msgid "|textInsideRect| :sup:`Create Text Annotation In Rectangle`"
+msgstr "|textInsideRect| :sup:`Skapa textannotering i rektangel`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1487
 msgid "textInsideRect"
 msgstr "textInsideRect"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1402
+#: ../../docs/user_manual/map_views/map_view.rst:795
+msgid "Create a text formatted annotation bound within a rectangle"
+msgstr "Skapa en textformaterad anteckning som är bunden inom en rektangel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+#: ../../docs/user_manual/map_views/map_view.rst:914
+msgid "|addImage| :sup:`Create Picture Annotation`"
+msgstr "|addImage| :sup:`Skapa bildannotering`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+msgid "Create an annotation showing an :file:`.SVG` or raster image"
+msgstr "Skapa en annotation som visar en :fil:`.SVG` eller rasterbild"
+
+#: ../../docs/user_manual/map_views/map_view.rst:800
+msgid "|htmlAnnotation| :sup:`HTML Annotation`"
+msgstr "|htmlAnnotation| :sup:`HTML Annotation`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1416
 msgid "htmlAnnotation"
 msgstr "htmlAnnotation"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1400
+#: ../../docs/user_manual/map_views/map_view.rst:800
+msgid "Select and create annotation with an :file:`HTML` file's content"
+msgstr "Välj och skapa en annotering med innehållet i en :file:`HTML`-fil"
+
+#: ../../docs/user_manual/map_views/map_view.rst:800
+#: ../../docs/user_manual/map_views/map_view.rst:1020
+msgid "Balloon annotations"
+msgstr "Anteckningar om ballonger"
+
+#: ../../docs/user_manual/map_views/map_view.rst:802
+msgid "|formAnnotation| :sup:`Form Annotation`"
+msgstr "|FormAnnotation| :sup:`FormAnnotation`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1414
 msgid "formAnnotation"
 msgstr "formAnnotation"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1447
+#: ../../docs/user_manual/map_views/map_view.rst:802
+msgid ""
+"Select and create annotation showing attributes of a vector layer in a "
+"custom form file"
+msgstr ""
+"Välj och skapa en annotering som visar attribut för ett vektorlager i en "
+"anpassad formulärfil"
+
+#: ../../docs/user_manual/map_views/map_view.rst:808
+msgid ""
+"Starting with QGIS 3.40, it is no longer possible to create balloon "
+"annotations of SVG or text type. When loading old projects, any of these "
+"annotations will automatically be converted to the newer picture and "
+"rectangular text annotation item types."
+msgstr ""
+"Från och med QGIS 3.40 är det inte längre möjligt att skapa "
+"ballongannoteringar av SVG- eller texttyp. Vid inläsning av gamla projekt "
+"kommer alla dessa annoteringar automatiskt att konverteras till de nyare "
+"annoteringstyperna bild och rektangulär text."
+
+#: ../../docs/user_manual/map_views/map_view.rst:815
+msgid "Feature Annotations"
+msgstr "Funktionskommentarer"
+
+#: ../../docs/user_manual/map_views/map_view.rst:817
+msgid ""
+"Feature annotations are stored in **annotation layers**. Unlike conventional"
+" layers, an annotation layer is available only in the current project and "
+"can contain features of different types (text, marker, line, polygon, "
+"picture). The layer has no attributes and no symbology associated, but "
+"instead each feature can be symbolized on an item-by-item basis, through "
+":guilabel:`Layer Styling` panel."
+msgstr ""
+"Feature-annoteringar lagras i **annoteringslager**. Till skillnad från "
+"konventionella lager är ett annoteringslager endast tillgängligt i det "
+"aktuella projektet och kan innehålla funktioner av olika typer (text, "
+"markör, linje, polygon, bild). Skiktet har inga attribut och ingen "
+"associerad symbologi, utan varje objekt kan symboliseras objekt för objekt "
+"genom :guilabel:`Layer Styling`-panelen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:823
+msgid "Two types of annotation layer are available in QGIS:"
+msgstr "Två typer av annoteringslager finns tillgängliga i QGIS:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:825
+msgid ""
+"A common :guilabel:`Annotation Layer`: you can create one using the "
+"|createAnnotationLayer| :sup:`New Annotation Layer` tool. It is listed in "
+"the :guilabel:`Layers` panel, allowing you to control its features' "
+"visibility, move it to show above or below particular layers in your map, "
+"like any common layer. Double-click the layer and you can access its "
+"properties."
+msgstr ""
+"Ett vanligt :guilabel:`Annotation Layer`: du kan skapa ett med hjälp av "
+"verktyget |createAnnotationLayer| :sup:`New Annotation Layer`. Det listas i "
+"panelen :guilabel:`Layers`, så att du kan styra dess funktioners synlighet, "
+"flytta det så att det visas ovanför eller under vissa lager i kartan, som "
+"vilket vanligt lager som helst. Dubbelklicka på skiktet så får du tillgång "
+"till dess egenskaper."
+
+#: ../../docs/user_manual/map_views/map_view.rst:830
+msgid ""
+"The :guilabel:`Main Annotation Layer`: By default, this is where annotations"
+" are stored when no annotation layer is available in the project or is "
+"selected at creation time. This layer is always drawn on the very top of "
+"your map and you won't see it listed in the :guilabel:`Layers` panel "
+"alongside the other layers in your project, meaning that its features are "
+"always visible. The :guilabel:`Main Annotation Layer Properties` entry on "
+"the :guilabel:`Annotations` toolbar helps you open its properties dialog."
+msgstr ""
+"Den :guilabel:`Huvudlager för annoteringar`: Som standard är det här som "
+"anteckningar lagras när inget anteckningslager finns tillgängligt i "
+"projektet eller väljs vid skapandet. Det här lagret ritas alltid högst upp "
+"på kartan och du kommer inte att se det listat i panelen :guilabel:`Layers` "
+"tillsammans med de andra lagren i projektet, vilket innebär att dess "
+"funktioner alltid är synliga. Med hjälp av :guilabel:`Main Annotation Layer "
+"Properties` i verktygsfältet :guilabel:`Annotations` kan du öppna "
+"dialogrutan för dess egenskaper."
+
+#: ../../docs/user_manual/map_views/map_view.rst:839
+msgid "Layer Properties"
+msgstr "Egenskaper för lager"
+
+#: ../../docs/user_manual/map_views/map_view.rst:841
+msgid ""
+"The properties dialog of an annotation layer provides the following tabs:"
+msgstr ""
+"Egenskapsdialogen för ett annoteringslager innehåller följande flikar:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:843
+msgid ""
+":guilabel:`Information`: a read-only dialog representing an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. This may include the layer extent, count of items per annotation type"
+" and total count, CRS details, ..."
+msgstr ""
+":guilabel:`Information`: en skrivskyddad dialogruta som representerar en "
+"intressant plats för att snabbt hämta sammanfattad information och metadata "
+"om det aktuella lagret. Detta kan inkludera skiktets utsträckning, antal "
+"objekt per annoteringstyp och totalt antal, CRS-detaljer, ..."
+
+#: ../../docs/user_manual/map_views/map_view.rst:847
+msgid ""
+":guilabel:`Source`: defines general settings for the annotation layer. You "
+"can:"
+msgstr ""
+":guilabel:`Source`: definierar allmänna inställningar för anteckningslagret."
+" Du kan göra följande:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:849
+msgid ""
+"Set a :guilabel:`Layer name` that will be used to identify the layer in the "
+"project (in the :guilabel:`Layers Panel`, with expressions, ...)"
+msgstr ""
+"Ange ett :guilabel:`Layernamn` som ska användas för att identifiera lagret i"
+" projektet (i :guilabel:`Layers Panel`, med uttryck, ...)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:851
+msgid ""
+"Display the layer's :ref:`Assigned Coordinate Reference System (CRS) "
+"<layer_crs>`: you can change the layer's CRS, selecting a recently used one "
+"in the drop-down list or clicking on |setProjection| :sup:`Select CRS` "
+"button (see :ref:`crs_selector`). Use this process only if the CRS applied "
+"to the layer is a wrong one or if none was applied."
+msgstr ""
+"Visa skiktets :ref:`Assigned Coordinate Reference System (CRS) <layer_crs>`:"
+" du kan ändra skiktets CRS genom att välja ett nyligen använt i listrutan "
+"eller klicka på |setProjection| :sup:`Select CRS`-knappen (se "
+":ref:`crs_selector`). Använd denna process endast om det CRS som tillämpas "
+"på lagret är fel eller om inget CRS har tillämpats."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1461
 msgid "setProjection"
 msgstr "setProjection"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1406
+#: ../../docs/user_manual/map_views/map_view.rst:859
+msgid ":guilabel:`Rendering`:"
+msgstr ":guilabel:`Rendering`:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:861
+msgid ""
+"You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum "
+"(exclusive)` scale, defining a range of scale in which features will be "
+"visible. Out of this range, they are hidden. The |mapIdentification| "
+":sup:`Set to current canvas scale` button helps you use the current map "
+"canvas scale as boundary of the range visibility. See "
+":ref:`label_scaledepend` for more information."
+msgstr ""
+"Du kan ställa in :guilabel:`Maximum (inklusive)` och :guilabel:`Minimum "
+"(exklusive)` skala, vilket definierar ett skalområde inom vilket funktioner "
+"ska vara synliga. Utanför detta intervall är de dolda. Knappen "
+"|mapIdentification| :sup:`Set to current canvas scale` hjälper dig att "
+"använda den aktuella kartans skala som gräns för synlighetsintervallet. Se "
+":ref:`label_scaledepend` för mer information."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1420
 msgid "mapIdentification"
 msgstr "mapIdentification"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1477
+#: ../../docs/user_manual/map_views/map_view.rst:867
+msgid ""
+":guilabel:`Linked layer`: allows you to optionally set a linked visibility "
+"layer for the annotation layer. If set, then the annotations will only be "
+"drawn when the linked layer is visible in the map."
+msgstr ""
+":guilabel:`Länkat lager`: gör att du kan välja att ange ett länkat "
+"synlighetsskikt för annoteringsskiktet. Om detta anges ritas anteckningarna "
+"endast när det länkade skiktet är synligt på kartan."
+
+#: ../../docs/user_manual/map_views/map_view.rst:871
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your "
+"vector layer to your needs. You can also make a precise definition of the "
+"percentage of visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`Opacitet`: Med det här verktyget kan du göra det underliggande "
+"lagret i kartbilden synligt. Använd skjutreglaget för att anpassa "
+"synligheten för ditt vektorlager efter dina behov. Du kan också göra en "
+"exakt definition av den procentuella synligheten i menyn bredvid "
+"skjutreglaget."
+
+#: ../../docs/user_manual/map_views/map_view.rst:875
+msgid ""
+":guilabel:`Blending mode` at the :guilabel:`Layer` level: You can achieve "
+"special rendering effects with these tools that you may previously only know"
+" from graphics programs. The pixels of your overlaying and underlying layers"
+" are mixed through the settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`Blending mode` på nivån :guilabel:`Layer`: Med dessa verktyg kan "
+"du uppnå speciella renderingseffekter som du kanske tidigare bara kände till"
+" från grafikprogram. Pixlarna i de överliggande och underliggande lagren "
+"blandas med hjälp av de inställningar som beskrivs i :ref:`blend-modes`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:879
+msgid ""
+"Apply :ref:`paint effects <draw_effects>` on all the layer features with the"
+" :guilabel:`Draw Effects` button."
+msgstr ""
+"Applicera :ref:`paint effects <draw_effects>` på alla lagerfunktioner med "
+"knappen :guilabel:`Draw Effects`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:882
+msgid ""
+"Some of these options are accessible from the feature annotation "
+":guilabel:`Symbology` properties."
+msgstr ""
+"Vissa av dessa alternativ är tillgängliga från egenskaperna för feature "
+"annotation :guilabel:`Symbology`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:886
+msgid "Interacting with features"
+msgstr "Interagera med funktioner"
+
+#: ../../docs/user_manual/map_views/map_view.rst:888
+msgid ""
+"The Feature annotations have dedicated tools for creation depending on their"
+" type."
+msgstr ""
+"Feature-annoteringarna har särskilda verktyg för skapande beroende på vilken"
+" typ de är."
+
+#: ../../docs/user_manual/map_views/map_view.rst:890
+msgid "Creating feature annotation"
+msgstr "Skapa anteckningar om funktioner"
+
+#: ../../docs/user_manual/map_views/map_view.rst:893
+msgid "Family / based on"
+msgstr "Familj / baserat på"
+
+#: ../../docs/user_manual/map_views/map_view.rst:893
+msgid "Annotation tool"
+msgstr "Verktyg för anteckningar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:893
+msgid "Procedure"
+msgstr "Procedur"
+
+#: ../../docs/user_manual/map_views/map_view.rst:896
+msgid "Geometry"
+msgstr "Geometri"
+
+#: ../../docs/user_manual/map_views/map_view.rst:896
+msgid "This is like digitizing a point, line or polygon vector feature."
+msgstr ""
+"Detta är som att digitalisera en punkt, linje eller polygon vektorfunktion."
+
+#: ../../docs/user_manual/map_views/map_view.rst:898
+msgid ""
+"All the usual shortcuts for creating features apply when creating annotation"
+" items. A line or polygon annotation is drawn by left-clicking once for each"
+" vertex, with a final right mouse click to complete the shape. Snapping can "
+"be enabled while you draw, you can use the :guilabel:`Advanced Digitizing "
+"Tools` to precisely place vertices, and even switch the :ref:`drawing tools "
+"<drawing_methods>` to for example the streaming mode for completely free-"
+"form shapes."
+msgstr ""
+"Alla de vanliga genvägarna för att skapa funktioner gäller när du skapar "
+"annoteringsobjekt. En linje- eller polygonannotation ritas genom att "
+"vänsterklicka en gång för varje vertex, med ett sista högerklick för att "
+"slutföra formen. Snapping kan aktiveras medan du ritar, du kan använda "
+":guilabel:``Advanced Digitizing Tools`` för att exakt placera hörnpunkter, "
+"och till och med byta :ref:``drawing tools <drawing_methods>`` till "
+"exempelvis streaming-läget för helt friformade former."
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid "Text"
+msgstr "Text"
+
+#: ../../docs/user_manual/map_views/map_view.rst:905
+msgid "Left-click on the map canvas."
+msgstr "Vänsterklicka på kartbilden."
+
+#: ../../docs/user_manual/map_views/map_view.rst:907
+msgid ""
+"Left-click to add vertices to the text basement line geometry, and right-"
+"click to end. As above, digitizing features capabilities are also available."
+msgstr ""
+"Vänsterklicka för att lägga till hörnpunkter i geometrin för textbaslinjen "
+"och högerklicka för att avsluta. Som ovan finns även funktioner för "
+"digitaliseringsfunktioner tillgängliga."
+
+#: ../../docs/user_manual/map_views/map_view.rst:911
+msgid ""
+"Draw the rectangle box of the text, by left-clicking to add a first corner "
+"and left-clicking again to add the opposite one."
+msgstr ""
+"Rita rektangelrutan för texten genom att vänsterklicka för att lägga till "
+"ett första hörn och vänsterklicka igen för att lägga till det motsatta."
+
+#: ../../docs/user_manual/map_views/map_view.rst:914
+msgid "Picture"
+msgstr "Bild"
+
+#: ../../docs/user_manual/map_views/map_view.rst:914
+msgid ""
+"Draw the rectangle box of the picture, by left-clicking to add a first "
+"corner and left-clicking again to add the opposite one. Then pick an image "
+"or SVG file from the file explorer."
+msgstr ""
+"Rita upp bildens rektangel genom att vänsterklicka för att lägga till ett "
+"första hörn och vänsterklicka igen för att lägga till det motsatta. Välj "
+"sedan en bild eller SVG-fil från filutforskaren."
+
+#: ../../docs/user_manual/map_views/map_view.rst:919
+msgid ""
+"Unlike common layers, an annotation layer does not need to be active before "
+"you select its features. Simply grab the |select| :sup:`Modify Annotations` "
+"tool and you will be able to interact with any feature annotation:"
+msgstr ""
+"Till skillnad från vanliga lager behöver ett annoteringslager inte vara "
+"aktivt innan du väljer dess funktioner. Ta bara tag i verktyget |select| "
+":sup:`Modify Annotations` och du kommer att kunna interagera med alla "
+"annoterade funktioner:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:923
+msgid ""
+"**Selection**: left-click on the annotation. By default, annotations are "
+"rendered in the order of creation, meaning that recent annotations will be "
+"placed on top of older. You may need to play with the Z-index property of "
+"features in order to select ones they would sit above."
+msgstr ""
+"**Selection**: vänsterklicka på anteckningen. Som standard återges "
+"annotationer i den ordning de skapades, vilket innebär att nya annotationer "
+"placeras ovanpå äldre. Du kan behöva spela med egenskapen Z-index för "
+"funktioner för att välja dem som de ska placeras ovanför."
+
+#: ../../docs/user_manual/map_views/map_view.rst:928
+msgid ""
+"**Moving**: Left click on a selected annotation item to start moving it. A "
+"right-click or pressing :kbd:`Esc` key cancels the move, while a second left"
+" click will confirm the move. The displacement can also be controlled "
+"pressing the cursor keys:"
+msgstr ""
+"**Flytta**: Vänsterklicka på ett markerat annoteringsobjekt för att börja "
+"flytta det. Om du högerklickar eller trycker på :kbd:`Esc` avbryts "
+"förflyttningen, medan en andra vänsterklickning bekräftar förflyttningen. "
+"Förflyttningen kan också styras genom att trycka på markörknapparna:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:933
+msgid ":kbd:`Shift+key` for big movement"
+msgstr ":kbd:`Shift+tangent` för stor rörelse"
+
+#: ../../docs/user_manual/map_views/map_view.rst:934
+msgid ":kbd:`Alt+key` for ``1 px`` movement"
+msgstr ":kbd:`Alt+tangent` för ``1 px`` rörelse"
+
+#: ../../docs/user_manual/map_views/map_view.rst:935
+msgid ""
+"**Geometry modification**: move over an annotation and purple squares are "
+"displayed on nodes of its underlying geometry. Left-click on the square, "
+"move and click again. For linear or polygonal annotations, double-clicking a"
+" segment will add a new vertex."
+msgstr ""
+"**Geometrimodifiering**: flytta över en annotation och lila fyrkanter visas "
+"på noder i dess underliggande geometri. Vänsterklicka på fyrkanten, flytta "
+"och klicka igen. För linjära eller polygonala annotationer kan du "
+"dubbelklicka på ett segment för att lägga till en ny vertex."
+
+#: ../../docs/user_manual/map_views/map_view.rst:939
+msgid ""
+"**Delete**: Pressing the :kbd:`Del` or :kbd:`Backspace` key while an "
+"annotation is selected will delete that annotation"
+msgstr ""
+"**Radera**: Om du trycker på :kbd:`Del` eller :kbd:`Backspace` medan en "
+"annotation är markerad raderas den annotationen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:941
+msgid ":ref:`Change feature symbology <annotation_feature_symbology>`"
+msgstr ":ref:`Ändra funktionssymbologi <annotation_feature_symbology>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:946
+msgid "Feature symbology"
+msgstr "Funktionssymbologi"
+
+#: ../../docs/user_manual/map_views/map_view.rst:948
+msgid ""
+"A selected annotation will display its :guilabel:`Symbology` properties in "
+"the :guilabel:`Layer styling` panel."
+msgstr ""
+"En markerad annotering visar sina :guilabel:`Symbology`-egenskaper i panelen"
+" :guilabel:`Layer styling`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:951
+msgid ""
+"For polygon, polyline and marker annotations, you can modify the appearance "
+"using full capabilities of the :ref:`symbol properties <symbol-selector>`"
+msgstr ""
+"För polygon-, polylinje- och marköranteckningar kan du ändra utseendet med "
+"hjälp av alla funktioner i :ref:`symbolegenskaperna <symbol-selector>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:953
+msgid ""
+"For text-based annotations, an area with text editing tools helps you "
+"construct the string to display. It can be multiline, use HTML formatting "
+"and rely on QGIS expression functions. You can moreover modify the "
+"appearance using full capabilities of the :ref:`text format properties "
+"<text_format>`."
+msgstr ""
+"För textbaserade annoteringar finns ett område med textredigeringsverktyg "
+"som hjälper dig att konstruera strängen som ska visas. Den kan vara "
+"flerlinjig, använda HTML-formatering och förlita sig på QGIS "
+"uttrycksfunktioner. Du kan dessutom ändra utseendet med hjälp av alla "
+"funktioner i :ref:`textformategenskaperna <text_format>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:958
+msgid "Depending on the type of annotation, additional options are available."
+msgstr ""
+"Beroende på vilken typ av anteckning det gäller finns ytterligare alternativ"
+" tillgängliga."
+
+#: ../../docs/user_manual/map_views/map_view.rst:960
+msgid "For text annotation at point, it is also possible to:"
+msgstr "För textannotering vid punkt är det också möjligt att:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:962
+msgid ""
+"set the text :guilabel:`Alignment` (left, center or right of the anchor "
+"point)"
+msgstr ""
+"ange texten :guilabel:`Alignment` (vänster, mitt eller höger om "
+"ankarpunkten)"
+
+#: ../../docs/user_manual/map_views/map_view.rst:963
+msgid ""
+"configure whether the text should :guilabel:`Ignore map rotation` or "
+":guilabel:`Rotate with map`. In both cases, a custom :guilabel:`Angle` can "
+"be set for the feature orientation."
+msgstr ""
+"konfigurerar om texten ska :guilabel:`Ignore map rotation` eller "
+":guilabel:`Rotate with map`. I båda fallen kan en anpassad :guilabel:`Angle`"
+" ställas in för funktionens orientering."
+
+#: ../../docs/user_manual/map_views/map_view.rst:965
+msgid ""
+"For text annotation along a line, configure an :guilabel:`Offset from line` "
+"in the unit of your choice"
+msgstr ""
+"För textanteckning längs en linje, konfigurera en :guilabel:`Offset from "
+"line` i valfri enhet"
+
+#: ../../docs/user_manual/map_views/map_view.rst:967
+msgid "For text annotation in rectangle, it is also possible to:"
+msgstr "För textannotering i rektangel är det också möjligt att:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:969
+msgid ""
+"set the text :guilabel:`Horizontal alignment` (left, center, right or "
+"justify) and :guilabel:`Vertical alignment` (top, vertical center or bottom)"
+" in the rectangle box"
+msgstr ""
+"ange texten :guilabel:`Horizontal alignment` (vänster, mitt, höger eller "
+"justify) och :guilabel:`Vertical alignment` (topp, vertikal mitt eller "
+"botten) i rektangelrutan"
+
+#: ../../docs/user_manual/map_views/map_view.rst:971
+msgid ""
+"configure for the rectangle, the :guilabel:`Margins` distance in the units "
+"of your choice, the :guilabel:`Frame` and :guilabel:`Background` colors."
+msgstr ""
+"konfigurera för rektangeln, avståndet :guilabel:`Margins` i de enheter du "
+"väljer, färgerna :guilabel:`Frame` och :guilabel:`Background`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:973
+msgid ""
+"Picture annotations allow you to display a :guilabel:`Raster image` or an "
+":guilabel:`SVG image`, using the :ref:`embedded_file_selector`. The "
+"placement and size of the picture can be set as:"
+msgstr ""
+"Med bildkommentarer kan du visa en :guilabel:`Rasterbild` eller en "
+":guilabel:`SVG-bild` med hjälp av :ref:`embedded_file_selector`. Bildens "
+"placering och storlek kan ställas in enligt följande:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:977
+msgid ""
+":guilabel:`Scale dependent size`: the picture scales with the map, appearing"
+" larger when zooming in and smaller when zooming out. The size is defined by"
+" a single reference size in map units (e.g. meters or degrees, depending on "
+"the layer’s CRS). With |checkbox| :guilabel:`Lock aspect ratio`, you can "
+"keep the annotation size proportional to the embedded picture size, or "
+"stretch the picture to fill the annotation extent."
+msgstr ""
+":guilabel:`Skaleberoende storlek`: bilden skalas med kartan och blir större "
+"när man zoomar in och mindre när man zoomar ut. Storleken definieras av en "
+"enda referensstorlek i kartans enheter (t.ex. meter eller grader, beroende "
+"på skiktets CRS). Med |checkbox| :guilabel:`Lock aspect ratio` kan du hålla "
+"annoteringsstorleken proportionell mot den inbäddade bildens storlek eller "
+"sträcka ut bilden så att den fyller annoteringsområdet."
+
+#: ../../docs/user_manual/map_views/map_view.rst:983
+msgid ""
+":guilabel:`Fixed size`: the picture annotation maintains a constant size in "
+"screen or output units (e.g. pixels or millimeters), regardless of the map "
+"scale. The :guilabel:`Width` and :guilabel:`Height` of the annotation can be"
+" filled separatey or adjusted proportionally to the embedded picture size."
+msgstr ""
+":guilabel:`Fixed size`: bildannoteringen behåller en konstant storlek i "
+"skärm- eller utdataenheter (t.ex. pixlar eller millimeter), oavsett kartans "
+"skala. Annotationens :guilabel:`Width` och :guilabel:`Height` kan fyllas i "
+"separat eller justeras proportionellt mot den inbäddade bildens storlek."
+
+#: ../../docs/user_manual/map_views/map_view.rst:987
+msgid ""
+":guilabel:`Relative to map`: the picture annotation will always be rendered "
+"at the same position relative to the map canvas bounds, regardless of the "
+"map scale. The :guilabel:`Width` and :guilabel:`Height` of the annotation "
+"can be filled separatey or adjusted proportionally to the embedded picture "
+"size."
+msgstr ""
+":guilabel:`Relative to map`: bildannoteringen kommer alltid att återges i "
+"samma position i förhållande till kartans canvasgränser, oavsett kartans "
+"skala. Annotationens :guilabel:`Width` och :guilabel:`Height` kan fyllas "
+"separat eller justeras proportionellt mot den inbäddade bildens storlek."
+
+#: ../../docs/user_manual/map_views/map_view.rst:992
+msgid ""
+"Moreover, you can enable display of the :guilabel:`Frame` and "
+":guilabel:`Background` of the rectangle box, and configure them using "
+":ref:`fill symbols <vector_fill_symbols>`."
+msgstr ""
+"Dessutom kan du aktivera visning av :guilabel:`Frame` och "
+":guilabel:`Background` för rektangelboxen och konfigurera dem med :ref:`fill"
+" symbols <vector_fill_symbols>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:995
+msgid ""
+"For text at point, text inside rectangle and picture annotations, you can "
+":guilabel:`Show callout` when the picture or text anchor point is offset "
+"from its default placement. To create a callout for an annotation:"
+msgstr ""
+"För text vid punkt, text inom rektangel och bildannoteringar kan du "
+":guilabel:`Visa upprop` när bildens eller textens ankarpunkt förskjuts från "
+"standardplaceringen. Så här skapar du en bildtext för en annotation:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:999
+msgid "Select the annotation item"
+msgstr "Välj anteckningsobjekt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1000
+msgid ""
+"Move the anchor point, i.e., click the central and green :kbd:`X` node and "
+"click at the new placement"
+msgstr ""
+"Flytta ankarpunkten, d.v.s. klicka på den centrala och gröna :kbd:`X`-noden "
+"och klicka på den nya placeringen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1001
+msgid ""
+"In the annotation properties, press the :guilabel:`...` button to configure "
+"the :ref:`callout properties <labels_callouts>`."
+msgstr ""
+"I anteckningsegenskaperna trycker du på knappen :guilabel:`...` för att "
+"konfigurera :ref:`callout properties <labels_callouts>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1004
+msgid ""
+"Applying a balloon callout to a text or picture annotation will make you get"
+" their old-style balloon annotation display."
+msgstr ""
+"Om du lägger till en ballongtext till en text- eller bildtext får du den "
+"gamla ballongtextvisningen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1007
+msgid ""
+"Configure a |unchecked| :guilabel:`Reference scale`: indicates the map scale"
+" at which symbol or text sizes which use paper-based units (such as "
+"millimeters or points) relate to. The sizes will be scaled accordingly "
+"whenever the map is viewed at a different scale. For instance, a line "
+"feature wide of 2mm at 1:2000 :guilabel:`Reference scale` will be rendered "
+"using 4mm when the map is viewed at 1:1000."
+msgstr ""
+"Konfigurera en |kontrollerad| :guilabel:`Reference scale`: anger den "
+"kartskala som symbol- eller textstorlekar som använder pappersbaserade "
+"enheter (t.ex. millimeter eller punkter) relaterar till. Storlekarna kommer "
+"att skalas i enlighet med detta när kartan visas i en annan skala. Till "
+"exempel kommer en linje som är 2 mm bred i skala 1:2000 :guilabel:`Reference"
+" scale` att återges med 4 mm när kartan visas i skala 1:1000."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1012
+msgid ""
+"Set a :guilabel:`Z-index`: a feature with a higher index is placed on top of"
+" features with lower index. A convenient setting for both feature display "
+"and selection."
+msgstr ""
+"Ange ett :guilabel:`Z-index`: en funktion med ett högre index placeras "
+"ovanpå funktioner med lägre index. En praktisk inställning för både visning "
+"och val av funktioner."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1015
+msgid ""
+"Modify some of the :ref:`Layer rendering <annotationslayer_rendering>` "
+"settings"
+msgstr ""
+"Ändra några av :ref:`Layer rendering "
+"<annotationslayer_rendering>`-inställningarna"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1022
+msgid ""
+"You can add balloon annotations through :menuselection:`Edit --> Add "
+"Annotation -->` menu or from the :guilabel:`Annotations Toolbar`:"
+msgstr ""
+"Du kan lägga till ballonganteckningar genom :menuselection:`Edit --> Add "
+"Annotation -->` menyn eller från :guilabel:`Annotations Toolbar`:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1025
+msgid ""
+"|htmlAnnotation| :sup:`HTML Annotation` to place the content of an "
+":file:`html` file"
+msgstr ""
+"|htmlAnnotation| :sup:`HTML Annotation` för att placera innehållet i en "
+":file:`html`-fil"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1026
+msgid ""
+"|formAnnotation| :sup:`Form Annotation`: useful to display attributes of a "
+"vector layer in a customized :file:`ui` file (see "
+":numref:`figure_custom_annotation`). This is similar to the :ref:`custom "
+"attribute forms <provide_ui_file>`, but displayed in an annotation item. "
+"Also watch `this video "
+"<https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s>` from"
+" Tim Sutton for more information."
+msgstr ""
+"|formAnnotation| :sup:`Form Annotation`: användbart för att visa attribut "
+"för ett vektorlager i en anpassad :file:`ui`-fil (se "
+":numref:`figure_custom_annotation`). Detta liknar :ref:`custom attribute "
+"forms <provide_ui_file>`, men visas i ett anteckningsobjekt. Titta också på "
+"`den här videon "
+"<https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s>` från"
+" Tim Sutton för mer information."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1042
+msgid "Examples of balloon annotations"
+msgstr "Exempel på ballonganteckningar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1045
+msgid ""
+"To add a balloon annotation, select the corresponding tool and click on the "
+"map canvas. An empty balloon is added. Double-click on it and a dialog opens"
+" with various options. This dialog is almost the same for all the annotation"
+" types:"
+msgstr ""
+"För att lägga till en ballongannotation väljer du motsvarande verktyg och "
+"klickar på kartbilden. En tom ballong läggs till. Dubbelklicka på den så "
+"öppnas en dialogruta med olika alternativ. Denna dialog är nästan densamma "
+"för alla typer av anteckningar:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1049
+msgid ""
+"At the top, a file selector to fill with the path to an :file:`html` or "
+":file:`ui` file depending on the type of annotation."
+msgstr ""
+"Längst upp en filväljare som ska fyllas med sökvägen till en :file:`html`- "
+"eller :file:`ui`-fil beroende på vilken typ av annotering det gäller."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1051
+msgid ""
+"|checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon "
+"placement is based on a screen position (instead of the map), meaning that "
+"it's always shown regardless the map canvas extent."
+msgstr ""
+"|checkbox| :guilabel:`Fixed map position`: när den är avmarkerad baseras "
+"ballongens placering på skärmens position (istället för kartan), vilket "
+"innebär att den alltid visas oavsett kartans utbredning."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1054
+msgid ""
+":guilabel:`Linked layer`: associates the annotation with a map layer, making"
+" it visible only when that layer is visible."
+msgstr ""
+":guilabel:`Linked layer`: associerar anteckningen med ett kartskikt och gör "
+"den synlig endast när det skiktet är synligt."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1056
+msgid ""
+":guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, sets "
+"the symbol to display at the balloon anchor position (shown only when "
+":guilabel:`Fixed map position` is checked)."
+msgstr ""
+":guilabel:`Kartmarkör`: använder :ref:`QGIS-symboler <symbol-selector>`, "
+"ställer in symbolen som ska visas vid ballongens ankarposition (visas endast"
+" när :guilabel:`Fixerad kartposition` är markerad)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1059
+msgid ""
+":guilabel:`Frame style`: sets the frame background color, transparency, "
+"stroke color or width of the balloon using QGIS symbols."
+msgstr ""
+":guilabel:`Frame style`: anger ramens bakgrundsfärg, transparens, streckfärg"
+" eller bredd för ballongen som använder QGIS-symboler."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1061
+msgid ""
+":guilabel:`Contents margins`: sets interior margins of the annotation frame."
+msgstr ""
+":guilabel:`Contents margins`: anger inre marginaler för annoteringsramen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1062
+msgid ""
+"|checkbox| :guilabel:`Live update` allows you to live preview your changes."
+msgstr ""
+"|checkbox| :guilabel:Med `Live update` kan du förhandsgranska dina ändringar"
+" i realtid."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1069
+msgid "A ballon annotation text dialog"
+msgstr "En dialogruta med text om ballongens anteckning"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1071
+msgid "When a balloon annotation tool is active, you can also:"
+msgstr ""
+"När ett verktyg för ballonganteckningar är aktivt kan du också göra det:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1073
+msgid "Select an annotation"
+msgstr "Välj en anteckning"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1074
+msgid "Resize an annotation"
+msgstr "Ändra storlek på en annotering"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1075
+msgid ""
+"Move an annotation by map position (by dragging the map marker) or by moving"
+" only the balloon."
+msgstr ""
+"Flytta en annotation efter kartposition (genom att dra kartmarkören) eller "
+"genom att bara flytta ballongen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1076
+msgid ""
+"Delete an annotation: select it and either press the :kbd:`Del` or "
+":kbd:`Backspace` button, or double-click it and press the :guilabel:`Delete`"
+" button in the properties dialog."
+msgstr ""
+"Ta bort en annotation: markera den och tryck antingen på knappen :kbd:`Del` "
+"eller :kbd:`Backspace`, eller dubbelklicka på den och tryck på knappen "
+":guilabel:`Delete` i dialogrutan Egenskaper."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1078
+msgid "Right-click and in the contextual menu:"
+msgstr "Högerklicka och i den kontextuella menyn:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1080
+msgid ""
+"|editCopy| :guilabel:`Copy coordinate` of the annotation's map marker in "
+"various CRS"
+msgstr ""
+"|editCopy| :guilabel:`Kopieringskoordinat` för anteckningens kartmarkör i "
+"olika CRS"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1081
+msgid ""
+"|toggleEditing| :guilabel:`Edit` properties of the annotation. Same as "
+"double-clicking the annotation."
+msgstr ""
+"|toggleEditing| :guilabel:`Edit` egenskaper för annotationen. Samma sak som "
+"att dubbelklicka på annotationen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1491
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1408
+#: ../../docs/user_manual/map_views/map_view.rst:1082
+msgid "|deleteSelected| :guilabel:`Delete` the annotation"
+msgstr "|deleteSelected| :guilabel:`Ta bort` anteckningen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1090
+msgid "Measuring"
+msgstr "Mätning"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1093
+msgid "General information"
+msgstr "Allmän information"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1095
+msgid "QGIS provides four means of measuring geometries:"
+msgstr "QGIS erbjuder fyra sätt att mäta geometrier:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1097
+msgid "interactive measurement tools |measure|"
+msgstr "interaktiva mätverktyg |mätning|"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1422
 msgid "measure"
 msgstr "measure"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1384
+#: ../../docs/user_manual/map_views/map_view.rst:1098
+msgid "measuring in the |calculateField| :sup:`Field Calculator`"
+msgstr "mätning i fältet |calculateField| :sup:`Fältkalkylator`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1398
 msgid "calculateField"
 msgstr "calculateField"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1412
+#: ../../docs/user_manual/map_views/map_view.rst:1099
+msgid "derived measurements in the :ref:`identify` tool"
+msgstr "härledda mätningar i :ref:`identify`-verktyget"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1100
+msgid ""
+"the vector analysis tool: :menuselection:`Vector --> Geometry Tools --> "
+"Export/Add Geometry Columns`"
+msgstr ""
+"verktyget för vektoranalys: :menuselection:`Vector --> Geometry Tools --> "
+"Export/Add Geometry Columns`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1103
+msgid ""
+"Measuring works within projected coordinate systems (e.g., UTM) and "
+"unprojected data. The first three measuring tools behave equally to global "
+"project settings:"
+msgstr ""
+"Mätning fungerar inom projicerade koordinatsystem (t.ex. UTM) och icke-"
+"projicerade data. De tre första mätverktygen fungerar lika bra i globala "
+"projektinställningar:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1106
+msgid ""
+"Unlike most other GIS, the default measurement metric is ellipsoidal, using "
+"the ellipsoid defined in :menuselection:`Project --> Properties... --> "
+"General`. This is true both when geographic and projected coordinate systems"
+" are defined for the project."
+msgstr ""
+"Till skillnad från de flesta andra GIS är standardmätmetriken ellipsoid, med"
+" hjälp av den ellipsoid som definieras i :menuselection:`Projekt --> "
+"Egenskaper... --> Allmänt`. Detta gäller både när geografiska och "
+"projicerade koordinatsystem definieras för projektet."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1110
+msgid ""
+"If you want to calculate the projected/planimetric area or distance using "
+"cartesian maths, the measurement ellipsoid has to be set to "
+"\"None/Planimetric\" (:menuselection:`Project --> Properties... --> "
+"General`). However, with a geographic (ie unprojected) CRS defined for the "
+"data and project, area and distance measurement will be ellipsoidal."
+msgstr ""
+"Om du vill beräkna den projicerade/planimetriska ytan eller avståndet med "
+"hjälp av cartesisk matematik måste mätellipsoiden ställas in på "
+"\"None/Planimetric\" (:menuselection:`Project --> Properties... --> "
+"General`). Men med ett geografiskt (dvs. icke-projicerat) CRS definierat för"
+" data och projekt kommer mätning av område och avstånd att vara "
+"ellipsoidisk."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1116
+msgid ""
+"However, neither the identify tool nor the field calculator will transform "
+"your data to the project CRS before measuring. If you want to achieve this, "
+"you have to use the vector analysis tool: :menuselection:`Vector --> "
+"Geometry Tools --> Add Geometry Attributes...`. Here, measurement is "
+"planimetric, unless you choose the ellipsoidal measurement."
+msgstr ""
+"Varken identifieringsverktyget eller fältkalkylatorn kommer dock att "
+"omvandla dina data till projektets CRS före mätningen. Om du vill uppnå "
+"detta måste du använda vektoranalysverktyget: :menuselection:`Vector --> "
+"Geometry Tools --> Add Geometry Attributes...`. Här är mätningen "
+"planimetrisk, om du inte väljer ellipsoidmätning."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1123
+msgid "Measure length, areas, bearings and angles interactively"
+msgstr "Mät längd, ytor, lager och vinklar interaktivt"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1125
+msgid ""
+"Click the |measure| icon in the Attribute toolbar to begin measurements. The"
+" down arrow near the icon switches between |measure| length, |measureArea| "
+"area, |measureBearing| bearing or |measureAngle| angle. The default unit "
+"used in the dialog is the one set in :menuselection:`Project --> "
+"Properties... --> General` menu."
+msgstr ""
+"Klicka på ikonen |measure| i verktygsfältet Attribute för att påbörja "
+"mätningen. Nedåtpilen nära ikonen växlar mellan |measure| längd, "
+"|measureArea| yta, |measureBearing| bäring eller |measureAngle| vinkel. "
+"Standardenheten som används i dialogrutan är den som anges i "
+":menuselection:`Projekt --> Egenskaper... --> Allmänt` menyn."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1426
 msgid "measureArea"
 msgstr "measureArea"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1414
+#: ../../docs/user_manual/map_views/map_view.rst:1428
 msgid "measureBearing"
 msgstr "measureBearing"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1410
+#: ../../docs/user_manual/map_views/map_view.rst:1424
 msgid "measureAngle"
 msgstr "measureAngle"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1432
+#: ../../docs/user_manual/map_views/map_view.rst:1131
+msgid ""
+"For the :guilabel:`Measure Line` and the :guilabel:`Measure Area` the "
+"measurements can be done in |radioButtonOn| :guilabel:`Cartesian` or "
+"|radioButtonOn| :guilabel:`Ellipsoidal` measure."
+msgstr ""
+"För :guilabel:`Mätlinje` och :guilabel:`Mätområde` kan mätningarna göras med"
+" |radioButtonOn| :guilabel:`Cartesian` eller |radioButtonOn| "
+":guilabel:`Ellipsoidal` mått."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1446
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1418
+#: ../../docs/user_manual/map_views/map_view.rst:1135
+msgid "**Configuring the measure tool**"
+msgstr "**Konfigurera mätverktyget**"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1137
+msgid ""
+"While measuring length or area, clicking the :guilabel:`Configuration` "
+"button at the bottom of the widget opens the :menuselection:`Settings --> "
+"Options --> Map Tools` menu, where you can select the rubberband color, the "
+"precision of the measurements and the unit behavior. You can also choose "
+"your preferred measurement or angle units, but keep in mind that those "
+"values are overridden in the current project by the selection made in the "
+":menuselection:`Project --> Properties... --> General` menu, and by the "
+"selection made in the measurement widget."
+msgstr ""
+"När du mäter längd eller yta kan du klicka på knappen "
+":guilabel:`Configuration` längst ned i widgeten för att öppna menyn "
+":menuselection:` `Settings --> Options --> Map Tools`, där du kan välja färg"
+" på gummibandet, precisionen i mätningarna och enhetens beteende. Du kan "
+"också välja önskade mät- eller vinkelenheter, men kom ihåg att dessa värden "
+"åsidosätts i det aktuella projektet av det val som görs i menyn "
+":menuselection:`Project --> Properties... -> General... --> General` och "
+"genom det val som görs i mätwidgeten."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1146
+msgid ""
+"All measuring modules use the snapping settings from the digitizing module "
+"(see section :ref:`snapping_tolerance`). So, if you want to measure exactly "
+"along a line feature, or around a polygon feature, first set its layer "
+"snapping tolerance. Now, when using the measuring tools, each mouse click "
+"(within the tolerance setting) will snap to that layer."
+msgstr ""
+"Alla mätmoduler använder snappinginställningarna från digitaliseringsmodulen"
+" (se avsnitt :ref:`snapping_tolerance`). Om du vill mäta exakt längs en "
+"linjefunktion eller runt en polygonfunktion måste du alltså först ställa in "
+"toleransen för snäppning av lagret. När du nu använder mätverktygen kommer "
+"varje musklick (inom toleransinställningen) att snäppas till det lagret."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1158
+msgid ""
+"The |measure| :sup:`Measure Line` measures distances between given points. "
+"The tool then allows you to click points on the map. Each segment length, as"
+" well as the total, shows up in the measure window. In the measure window, "
+"you will see coordinates for all your points and distances. Keep in mind "
+"that the first row will contain only coordinates, as it represents your "
+"starting point. Now it is possible to copy all your line measurements at "
+"once to the clipboard using the :guilabel:`Copy` button. Clicking the "
+":guilabel:`Configuration` button you will access to :guilabel:`Measure Tool "
+"Copy Settings` where you can set up :ref:`copy options "
+"<measure_copy_settings>`. To stop measuring, click the right mouse button."
+msgstr ""
+"Verktyget |measure| :sup:`Measure Line` mäter avstånd mellan givna punkter. "
+"Verktyget låter dig sedan klicka på punkter på kartan. Varje segmentlängd, "
+"liksom den totala, visas i mätfönstret. I mätfönstret visas koordinater för "
+"alla dina punkter och avstånd. Tänk på att den första raden endast "
+"innehåller koordinater, eftersom den representerar din startpunkt. Nu är det"
+" möjligt att kopiera alla linjemätningar på en gång till urklipp med hjälp "
+"av knappen :guilabel:`Copy`. Om du klickar på knappen "
+":guilabel:`Configuration` kommer du till :guilabel:`Measure Tool Copy "
+"Settings` där du kan ställa in :ref:`copy options <measure_copy_settings>`. "
+"För att stoppa mätningen, klicka på höger musknapp."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1169
+msgid ""
+"Note that you can use the drop-down list near the total to change the "
+":ref:`measurement units <measurements_ellipsoid>` interactively while "
+"working with the measure tool. This unit is retained for the widget until a "
+"new project is created or another project is opened."
+msgstr ""
+"Observera att du kan använda rullgardinsmenyn nära totalen för att ändra "
+":ref:`mätningsenheter <measurements_ellipsoid>` interaktivt medan du arbetar"
+" med mätverktyget. Denna enhet behålls för widgeten tills ett nytt projekt "
+"skapas eller ett annat projekt öppnas."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1175
+msgid ""
+"The :guilabel:`Info` section in the dialog explains how calculations are "
+"made according to the CRS settings available."
+msgstr ""
+"Avsnittet :guilabel:`Info` i dialogrutan förklarar hur beräkningarna görs "
+"enligt de CRS-inställningar som finns tillgängliga."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1184
+msgid "Measure Distance"
+msgstr "Mät avstånd"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1186
+msgid ""
+"|measureArea| :sup:`Measure Area`: Areas can also be measured. In the "
+"measure window, the accumulated area size appears. Right-click to stop "
+"drawing. The Info section is also available as well as the ability to switch"
+" between different :ref:`area units <measurements_ellipsoid>`."
+msgstr ""
+"|measureArea| :sup:`Mäta yta`: Områden kan också mätas. I mätfönstret visas "
+"den ackumulerade områdesstorleken. Högerklicka för att stoppa ritningen. "
+"Infoavsnittet är också tillgängligt, liksom möjligheten att växla mellan "
+"olika :ref:`area units <measurements_ellipsoid>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1196
+msgid "Measure Area"
+msgstr "Mätområde"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1198
+msgid ""
+"|measureBearing| :sup:`Measure Bearing`: You can also measure bearings. The "
+"cursor becomes cross-shaped. Click to draw the first point of the bearing, "
+"then move the cursor to draw the second point. The measurement is displayed "
+"in a pop-up dialog."
+msgstr ""
+"|measureBearing| :sup:`Mätning av lager`: Du kan också mäta lager. Markören "
+"blir korsformad. Klicka för att rita den första punkten i lagret och flytta "
+"sedan markören för att rita den andra punkten. Mätningen visas i en popup-"
+"dialogruta."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1209
+msgid "Measure Bearing"
+msgstr "Mätning av lager"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1211
+msgid ""
+"|measureAngle| :sup:`Measure Angle`: You can also measure angles. The cursor"
+" becomes cross-shaped. Click to draw the first segment of the angle you wish"
+" to measure, then move the cursor to draw the desired angle. The measurement"
+" is displayed in a pop-up dialog."
+msgstr ""
+"|measureAngle| :sup:`Mät vinkel`: Du kan också mäta vinklar. Markören blir "
+"korsformad. Klicka för att rita det första segmentet av den vinkel du vill "
+"mäta och flytta sedan markören för att rita önskad vinkel. Mätningen visas i"
+" en popup-dialogruta."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1222
+msgid "Measure Angle"
+msgstr "Mät vinkel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1228
+msgid "Setting additional map views"
+msgstr "Ställa in ytterligare kartvyer"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1230
+msgid ""
+"It is also possible to open additional map views whose content could diverge"
+" from the :guilabel:`Layers` panel current state. To add a new map view, go "
+"to :menuselection:`View -->` |newMap| :menuselection:`New Map View`. A new "
+"floating widget, mimicking the main map view's rendering, is added to QGIS. "
+"You can add as many map views as you need. They can be kept floating, placed"
+" side by side or stacked on top of each other."
+msgstr ""
+"Det är också möjligt att öppna ytterligare kartvyer vars innehåll kan avvika"
+" från :guilabel:`Layers`-panelens nuvarande tillstånd. För att lägga till en"
+" ny kartvy, gå till :menuselection:`View -->` |newMap| :menuselection:`New "
+"Map View`. En ny flytande widget, som efterliknar renderingen av "
+"huvudkartvyn, läggs till i QGIS. Du kan lägga till så många kartvyer som du "
+"behöver. De kan hållas flytande, placeras sida vid sida eller staplas ovanpå"
+" varandra."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1432
 msgid "newMap"
 msgstr "newMap"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1459
+#: ../../docs/user_manual/map_views/map_view.rst:1244
+msgid "Multiple map views with different settings"
+msgstr "Flera kartvyer med olika inställningar"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1246
+msgid ""
+"At the top of an additional map canvas, there's a toolbar with the following"
+" capabilities:"
+msgstr ""
+"Överst på en extra kartbild finns ett verktygsfält med följande funktioner:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1249
+msgid ""
+"|zoomFullExtent| :sup:`Zoom Full`, |zoomToSelected| :sup:`Zoom to Selection`"
+" and |zoomToLayer| :sup:`Zoom to Layer(s)` to navigate within the view"
+msgstr ""
+"|zoomFullExtent| :sup:`Zoom Full`, |zoomToSelected| :sup:`Zoom to Selection`"
+" och |zoomToLayer| :sup:`Zoom to Layer(s)` för att navigera inom vyn"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1251
+msgid ""
+"|showPresets| :sup:`Set View Theme` to select the :ref:`map theme "
+"<map_themes>` to display in the map view. If set to ``(none)``, the view "
+"will follow the :guilabel:`Layers` panel changes."
+msgstr ""
+"|showPresets| :sup:`Set View Theme` för att välja det :ref:`karttema "
+"<map_themes>` som ska visas i kartvyn. Om inställningen är ``(none)`` kommer"
+" vyn att följa paneländringarna i :guilabel:`Layers`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1473
 msgid "showPresets"
 msgstr "showPresets"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1422
+#: ../../docs/user_manual/map_views/map_view.rst:1254
+msgid "|options| :sup:`View settings` to configure the map view:"
+msgstr "|options| :sup:`View settings` för att konfigurera kartvyn:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1436
 msgid "options"
 msgstr "options"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1430
+#: ../../docs/user_manual/map_views/map_view.rst:1256
+msgid ""
+"|radioButtonOn| :guilabel:`Synchronize view center with main map`: syncs the"
+" center of the map views without changing the scale. This allows you to have"
+" an overview style or magnified map which follows the main canvas center."
+msgstr ""
+"|radioButtonOn| :guilabel:`Synkronisera vycentrum med huvudkartan`: "
+"synkroniserar centrum för kartvyerna utan att ändra skalan. Detta gör att du"
+" kan ha en översiktsstil eller förstorad karta som följer huvudkartans "
+"centrum."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1260
+msgid ""
+"|radioButtonOff| :guilabel:`Synchronize view to selection`: same as zoom to "
+"selection"
+msgstr ""
+"|radioButtonOff| :guilabel:`Synkronisera vy till urval`: samma som zoom till"
+" urval"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1444
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1438
+#: ../../docs/user_manual/map_views/map_view.rst:1262
+msgid ":guilabel:`Scale`"
+msgstr ":guilabel:`Skala`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1263
+msgid ":guilabel:`Rotation`"
+msgstr ":guilabel:`Rotation`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1264
+msgid ":guilabel:`Magnification`"
+msgstr ":guilabel:`förstoring`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1265
+msgid ""
+"|unchecked| :guilabel:`Synchronize scale` with the main map scale. A "
+":guilabel:`Scale factor` can then be applied, allowing you to have a view "
+"which is e.g. always 2x the scale of the main canvas."
+msgstr ""
+"|ej markerad| :guilabel:`Synkronisera skalan` med huvudkartans skala. En "
+":guilabel:`Skalfaktor` kan sedan tillämpas, vilket gör att du kan ha en vy "
+"som t.ex. alltid är 2x skalan på huvudkartan."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1268
+msgid "|checkbox| :guilabel:`Show annotations`"
+msgstr "|checkbox| :guilabel:`Visa anteckningar`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1269
+msgid "|checkbox| :guilabel:`Show cursor position`"
+msgstr "|checkbox| :guilabel:`Visa markörens position`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1270
+msgid "|unchecked| :guilabel:`Show main canvas extent`"
+msgstr "|ej markerad| :guilabel:`Visa huvuddukens utsträckning`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1271
+msgid ""
+"|checkbox| :guilabel:`Show labels`: allows to hide labels regardless they "
+"are set in the displayed layers' properties"
+msgstr ""
+"|checkbox| :guilabel:`Visa etiketter`: gör det möjligt att dölja etiketter "
+"oavsett om de är inställda i de visade lagrens egenskaper"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1273
+msgid ":guilabel:`Change map CRS...`"
+msgstr ":guilabel:`Ändra karta CRS...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1274
+msgid ":guilabel:`Rename view...`"
+msgstr ":guilabel:`Rename view...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1280
+msgid "Exporting the map view"
+msgstr "Exportera kartvyn"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1282
+msgid ""
+"Maps you make can be layout and exported to various formats using the "
+"advanced capabilities of the :ref:`print layout or report "
+"<label_printlayout>`. It's also possible to directly export the current "
+"rendering, without a layout. This quick \"screenshot\" of the map view has "
+"some convenient features."
+msgstr ""
+"Kartor som du skapar kan layoutas och exporteras till olika format med hjälp"
+" av de avancerade funktionerna i :ref:`print layout eller report "
+"<label_printlayout>`. Det är också möjligt att direkt exportera den aktuella"
+" renderingen utan layout. Den här snabba \"skärmdumpen\" av kartvyn har "
+"några praktiska funktioner."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1289
+msgid "To export the map canvas with the current rendering:"
+msgstr "För att exportera kartbilden med den aktuella renderingen:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1291
+msgid "Go to :menuselection:`Project --> Import/Export`"
+msgstr "Gå till :menyselection:`Projekt --> Import/Export`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1292
+msgid "Depending on your output format, select either"
+msgstr "Beroende på ditt utmatningsformat väljer du antingen"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1294
+msgid "|saveMapAsImage| :guilabel:`Export Map to Image...`"
+msgstr "|saveMapAsImage| :guilabel:`Exportera karta till bild...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1452
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
 
-#: ../../docs/user_manual/map_views/map_view.rst:1436
+#: ../../docs/user_manual/map_views/map_view.rst:1295
+msgid "or |saveAsPDF| :guilabel:`Export Map to PDF...`"
+msgstr "eller |saveAsPDF| :guilabel:`Exportera karta till PDF...`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1450
 msgid "saveAsPDF"
 msgstr "saveAsPDF"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1297
+msgid ""
+"The two tools provide you with a common set of options. In the dialog that "
+"opens:"
+msgstr ""
+"De två verktygen ger dig en gemensam uppsättning alternativ. I den "
+"dialogruta som öppnas:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1305
+msgid "The Save Map as Image dialog"
+msgstr "Dialogrutan Spara karta som bild"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1307
+msgid ""
+"Choose the :guilabel:`Extent` to export: it can be the current view extent "
+"(the default), the extent of a layer or a custom extent drawn over the map "
+"canvas. Coordinates of the selected area are displayed and manually "
+"editable."
+msgstr ""
+"Välj den :guilabel:`Extent` som ska exporteras: det kan vara den aktuella "
+"vyns utsträckning (standard), ett lagers utsträckning eller en anpassad "
+"utsträckning som ritas över kartbilden. Koordinaterna för det valda området "
+"visas och kan redigeras manuellt."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1311
+msgid ""
+"Enter the :guilabel:`Scale` of the map or select it from the "
+":ref:`predefined scales <predefinedscales>`: changing the scale will resize "
+"the extent to export (from the center)."
+msgstr ""
+"Ange :guilabel:`Skala` för kartan eller välj den från :ref:``fördefinierade "
+"skalor <predefinedscales>`: om du ändrar skalan ändras storleken på den "
+"utsträckning som ska exporteras (från mitten)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1314
+msgid "Set the :guilabel:`Resolution` of the output"
+msgstr "Ställ in :guilabel:`Resolution` för utdata"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1315
+msgid ""
+"Control the :guilabel:`Output width` and :guilabel:`Output height` in pixels"
+" of the image: based by default on the current resolution and extent, they "
+"can be customized and will resize the map extent (from the center). The size"
+" ratio can be locked, which may be particularly convenient when drawing the "
+"extent on the canvas."
+msgstr ""
+"Styr :guilabel:`Output width` och :guilabel:`Output height` i pixlar för "
+"bilden: som standard baseras de på den aktuella upplösningen och "
+"omfattningen, men de kan anpassas och ändrar storleken på kartans omfattning"
+" (från mitten). Storleksförhållandet kan låsas, vilket kan vara särskilt "
+"praktiskt när man ritar utbredning på duken."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1321
+msgid ""
+"|checkbox| :guilabel:`Draw active decorations`: in use :ref:`decorations "
+"<decorations>` (scale bar, title, grid, north arrow...) are exported with "
+"the map"
+msgstr ""
+"|checkbox| :guilabel:`Draw active decorations`: in use :ref:``decorations "
+"<decorations>` (skalstreck, titel, rutnät, norrpil...) exporteras med kartan"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1324
+msgid ""
+"|checkbox| :guilabel:`Draw annotations` to export any :ref:`annotation "
+"<sec_annotations>`"
+msgstr ""
+"|checkbox| :guilabel:`Draw annotations` för att exportera alla "
+":ref:`annotation <sec_annotations>`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1326
+msgid ""
+"|checkbox| :guilabel:`Append georeference information (embedded or via world"
+" file)`: depending on the output format, a world file of the same name (with"
+" extension ``PNGW`` for ``PNG`` images, ``JPGW`` for ``JPG``, ...) is saved "
+"in the same folder as your image. The ``PDF`` format embeds the information "
+"in the PDF file."
+msgstr ""
+"|checkbox| :guilabel:`Lägg till georeferensinformation (inbäddad eller via "
+"världsfil)`: beroende på utdataformat sparas en världsfil med samma namn "
+"(med tillägget ``PNGW`` för ``PNG``-bilder, ``JPGW`` för ``JPG``, ...) i "
+"samma mapp som din bild. I formatet ``PDF`` bäddas informationen in i PDF-"
+"filen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1331
+msgid ""
+"When exporting to PDF, more options are available in the :guilabel:`Save map"
+" as PDF...` dialog:"
+msgstr ""
+"Vid export till PDF finns fler alternativ i dialogrutan :guilabel:`Save map "
+"as PDF...`:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1339
+msgid "The Save Map as PDF dialog"
+msgstr "Dialogrutan Spara karta som PDF"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1341
+msgid ""
+"|checkbox| :guilabel:`Export RDF metadata` of the document such as the "
+"title, author, date, description..."
+msgstr ""
+"|checkbox| :guilabel:`Exportera RDF-metadata` för dokumentet, t.ex. titel, "
+"författare, datum, beskrivning ..."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1343
+msgid ""
+"|unchecked| :guilabel:`Create Geospatial PDF`: Generate a `georeferenced PDF"
+" file <https://gdal.org/en/latest/drivers/raster/pdf.html>`_. You can:"
+msgstr ""
+"|ej kontrollerad| :guilabel:`Create Geospatial PDF`: Generera en "
+"`georefererad PDF-fil "
+"<https://gdal.org/en/latest/drivers/raster/pdf.html>`_. Det kan du göra:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1347
+msgid "Choose the Geospatial PDF :guilabel:`Format`"
+msgstr "Välj geospatial PDF :guilabel:`Format`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1348
+msgid ""
+"|checkbox| :guilabel:`Include vector feature information` in the Geospatial "
+"PDF file: will include all the geometry and attribute information from "
+"features visible within the map in the output Geospatial PDF file."
+msgstr ""
+"|checkbox| :guilabel:`Include vector feature information` in the Geospatial "
+"PDF file: kommer att inkludera all geometri- och attributinformation från "
+"funktioner som är synliga på kartan i den utmatade Geospatial PDF-filen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1355
+msgid ""
+"A Geospatial PDF file can also be used as a data source. For more on "
+"Geospatial PDF support in QGIS, see https://north-"
+"road.com/2019/09/03/qgis-3-10-loves-geospatialpdf/."
+msgstr ""
+"En geospatial PDF-fil kan också användas som datakälla. Mer information om "
+"stöd för geospatiala PDF-filer i QGIS finns på https://north-"
+"road.com/2019/09/03/qgis-3-10-loves-geospatialpdf/."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1359
+msgid ":guilabel:`Rasterize map`"
+msgstr ":guilabel:`Rasterisera karta`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1360
+msgid ""
+"|checkbox| :guilabel:`Simplify geometries to reduce output file size`: "
+"Geometries will be simplified while exporting the map by removing vertices "
+"that are not discernibly different at the export resolution (e.g. if the "
+"export resolution is ``300 dpi``, vertices that are less than ``1/600 inch``"
+" apart will be removed). This can reduce the size and complexity of the "
+"export file (very large files can fail to load in other applications)."
+msgstr ""
+"|checkbox| :guilabel:`Förenkla geometrier för att minska storleken på "
+"utdatafilen`: Geometrier kommer att förenklas vid export av kartan genom att"
+" ta bort hörn som inte är märkbart olika vid exportupplösningen (t.ex. om "
+"exportupplösningen är ``300 dpi``, kommer hörn som är mindre än ``1/600 "
+"tum`` från varandra att tas bort). Detta kan minska exportfilens storlek och"
+" komplexitet (mycket stora filer kan inte laddas i andra program)."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1367
+msgid ""
+"Set the :guilabel:`Text export`: controls whether text labels are always or "
+"preferably exported as :ref:`text or outline objects <render_labels_text>`."
+msgstr ""
+"Ange :guilabel:`Text export`: styr om textetiketter alltid eller helst ska "
+"exporteras som :ref:`text- eller konturobjekt <render_labels_text>`."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1370
+msgid "Click :guilabel:`Save` to select file location, name and format."
+msgstr ""
+"Klicka på :guilabel:`Save` för att välja plats, namn och format för filen."
+
+#: ../../docs/user_manual/map_views/map_view.rst:1372
+msgid ""
+"When exporting to image, it's also possible to :guilabel:`Copy to clipboard`"
+" the expected result of the above settings and paste the map in another "
+"application such as LibreOffice, GIMP..."
+msgstr ""
+"När du exporterar till bild är det också möjligt att :guilabel:`Kopiera till"
+" klippbord` det förväntade resultatet av ovanstående inställningar och "
+"klistra in kartan i ett annat program som LibreOffice, GIMP ..."
