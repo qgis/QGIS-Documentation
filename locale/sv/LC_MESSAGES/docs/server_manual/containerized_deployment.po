@@ -1,0 +1,570 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:35+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/server_manual/containerized_deployment.rst:3
+msgid "Containerized deployment"
+msgstr "Containerbaserad driftsättning"
+
+#: ../../docs/server_manual/containerized_deployment.rst:11
+msgid ""
+"There are many ways to use containerized application, from the most simple "
+"(simple Docker images) to sophisticated (Kubernetes and so on)."
+msgstr ""
+"Det finns många sätt att använda containeriserade applikationer, från de "
+"mest enkla (enkla Docker-bilder) till sofistikerade (Kubernetes och så "
+"vidare)."
+
+#: ../../docs/server_manual/containerized_deployment.rst:14
+msgid ""
+"This kind of deployment needs the `docker application "
+"<https://www.docker.com>`_ to be installed and running. Check this `tutorial"
+" <https://www.docker.com/101-tutorial>`_."
+msgstr ""
+"Den här typen av distribution kräver att `docker-applikationen "
+"<https://www.docker.com>`_ är installerad och igång. Kolla in denna "
+"`handledning <https://www.docker.com/101-tutorial>`_."
+
+#: ../../docs/server_manual/containerized_deployment.rst:19
+msgid ""
+"Docker run pre packaged application (aka images) which can be retrieved as "
+"sources (Dockerfile and resources) to build or already built from registries"
+" (private or public)."
+msgstr ""
+"Docker kör färdigpaketerade applikationer (även kallade images) som kan "
+"hämtas som källor (Dockerfile och resurser) för att bygga eller redan byggas"
+" från register (privata eller offentliga)."
+
+#: ../../docs/server_manual/containerized_deployment.rst:23
+msgid ""
+"QGIS Debian-Ubuntu package downloads need a valid gpg authentication key. "
+"Please refer to the `installation pages "
+"<https://www.qgis.org/resources/installation-guide/#debian--ubuntu>`_ to "
+"update the following Dockerfile."
+msgstr ""
+"QGIS Debian-Ubuntu-paketnedladdningar behöver en giltig gpg-"
+"autentiseringsnyckel. Se installationssidorna "
+"<https://www.qgis.org/resources/installation-guide/#debian--ubuntu>`_ för "
+"att uppdatera följande Dockerfile."
+
+#: ../../docs/server_manual/containerized_deployment.rst:30
+msgid "Simple docker images"
+msgstr "Enkla dockeravbildningar"
+
+#: ../../docs/server_manual/containerized_deployment.rst:32
+msgid ""
+"As the docker image does not exist in a public registry. you will need to "
+"build it. To do so create a directory :file:`qgis-server` and within its "
+"directory:"
+msgstr ""
+"Eftersom dockeravbildningen inte finns i ett offentligt register måste du "
+"bygga den. För att göra det skapar du en katalog :file:`qgis-server` och i "
+"dess katalog:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:35
+msgid "create a file :file:`Dockerfile` with this content:"
+msgstr "skapa en fil :file:`Dockerfile` med detta innehåll:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:90
+msgid "create a file :file:`cmd.sh` with this content:"
+msgstr "skapa en fil :file:`cmd.sh` med detta innehåll:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:101
+msgid "build the image with:"
+msgstr "bygga upp bilden med:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:109
+msgid "First run"
+msgstr "Första körningen"
+
+#: ../../docs/server_manual/containerized_deployment.rst:111
+msgid ""
+"To run the server you will need a QGIS project file. You can use one of "
+"yours or pick `this sample <https://gitlab.com/Oslandia/qgis/docker-"
+"qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
+"exec/data/osm.qgs>`_."
+msgstr ""
+"För att köra servern behöver du en QGIS-projektfil. Du kan använda en av "
+"dina egna eller välja `det här exemplet "
+"<https://gitlab.com/Oslandia/qgis/docker-"
+"qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
+"exec/data/osm.qgs>`_."
+
+#: ../../docs/server_manual/containerized_deployment.rst:114
+msgid ""
+"To do so, create a directory :file:`data` within the directory :file:`qgis-"
+"server` and copy your file in it. To comply with the following explanations,"
+" rename it to :file:`osm.qgs`."
+msgstr ""
+"För att göra det, skapa en katalog :file:`data` inom katalogen :file:`qgis-"
+"server` och kopiera din fil till den. För att följa följande förklaringar, "
+"byt namn på den till :file:`osm.qgs`."
+
+#: ../../docs/server_manual/containerized_deployment.rst:120
+msgid ""
+"You may need to add advertised URLs under the :guilabel:`QGIS Server` tab of"
+" the :menuselection:`Project --> Properties` if the GetCapabilites are "
+"broken. For example if your server is exposed on port 8080, you will put "
+"this for advertised URL ``http://localhost:8080/qgis-server/``. More "
+"information available in section :ref:`Creatingwmsfromproject` and "
+"subsequent."
+msgstr ""
+"Du kan behöva lägga till annonserade URL:er under fliken :guilabel:`QGIS "
+"Server` i :menuselection:`Project --> Properties` om GetCapabilites är "
+"trasiga. Till exempel om din server är exponerad på port 8080, kommer du att"
+" lägga till detta för annonserad URL ``http://localhost:8080/qgis-server/``."
+" Mer information finns i avsnitt :ref:`Creatingwmsfromproject` och "
+"efterföljande."
+
+#: ../../docs/server_manual/containerized_deployment.rst:127
+msgid "Now, you can run the server with:"
+msgstr "Nu kan du köra servern med:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:137
+msgid "Options used:"
+msgstr "Använda alternativ:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:139
+msgid "**-d**: run in the background"
+msgstr "**-d**: körs i bakgrunden"
+
+#: ../../docs/server_manual/containerized_deployment.rst:140
+msgid "**--rm**: remove the container when it is stopped"
+msgstr "**--rm**: ta bort behållaren när den är stoppad"
+
+#: ../../docs/server_manual/containerized_deployment.rst:141
+msgid "**--name**: name of the container to be created"
+msgstr "**--namn**: namn på den container som ska skapas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:142
+msgid "**--net**: (previously created) sub network"
+msgstr "**--nät**: (tidigare skapat) undernätverk"
+
+#: ../../docs/server_manual/containerized_deployment.rst:143
+msgid "**--hostname**: container hostname, for later referencing"
+msgstr "**--hostname**: behållarens värdnamn, för senare referenser"
+
+#: ../../docs/server_manual/containerized_deployment.rst:144
+msgid "**-v**: local data directory to be mounted in the container"
+msgstr "**-v**: lokal datakatalog som ska monteras i behållaren"
+
+#: ../../docs/server_manual/containerized_deployment.rst:145
+msgid "**-p**: host/container port mapping"
+msgstr "**-p**: mappning av port för värd/behållare"
+
+#: ../../docs/server_manual/containerized_deployment.rst:146
+msgid "**-e**: environment variable to be used in the container"
+msgstr "**-e**: miljövariabel som ska användas i containern"
+
+#: ../../docs/server_manual/containerized_deployment.rst:149
+msgid ""
+"To check, type ``docker ps | grep qgis-server`` and you should see a line "
+"with **qgis-server**::"
+msgstr ""
+"För att kontrollera, skriv ``docker ps | grep qgis-server`` och du bör se en"
+" rad med **qgis-server**::"
+
+#: ../../docs/server_manual/containerized_deployment.rst:157
+msgid "Usable sample"
+msgstr "Användbart prov"
+
+#: ../../docs/server_manual/containerized_deployment.rst:159
+msgid ""
+"As the server is only accepting fastcgi connections, you need an HTTP server"
+" that handles this protocol. To do so we have to create a simple Nginx "
+"configuration file and start a Nginx image."
+msgstr ""
+"Eftersom servern bara accepterar fastcgi-anslutningar behöver du en HTTP-"
+"server som hanterar det här protokollet. För att göra det måste vi skapa en "
+"enkel Nginx-konfigurationsfil och starta en Nginx-image."
+
+#: ../../docs/server_manual/containerized_deployment.rst:164
+msgid ""
+"Create a file :file:`nginx.conf` in the current directory with this content:"
+msgstr ""
+"Skapa en fil :file:`nginx.conf` i den aktuella katalogen med detta innehåll:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:185
+msgid "And type this command:"
+msgstr "Och skriv det här kommandot:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:193
+msgid ""
+"To check capabilities availability, type in a browser "
+"http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"För att kontrollera tillgängligheten, skriv in i en webbläsare "
+"http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../docs/server_manual/containerized_deployment.rst:197
+#: ../../docs/server_manual/containerized_deployment.rst:293
+#: ../../docs/server_manual/containerized_deployment.rst:540
+msgid "Cleanup"
+msgstr "Rensa upp"
+
+#: ../../docs/server_manual/containerized_deployment.rst:199
+msgid "To cleanup the running images, type:"
+msgstr "Om du vill rensa de avbildningar som körs skriver du :"
+
+#: ../../docs/server_manual/containerized_deployment.rst:208
+msgid "Docker stacks"
+msgstr "Docker-stackar"
+
+#: ../../docs/server_manual/containerized_deployment.rst:210
+msgid ""
+"The previous method is scriptable, but not easily packageable nor "
+"standardized or easily manageable."
+msgstr ""
+"Den tidigare metoden är skriptbar, men inte lätt att paketera, standardisera"
+" eller hantera."
+
+#: ../../docs/server_manual/containerized_deployment.rst:213
+msgid ""
+"To work with a docker image set you could use a docker stack managed by an "
+"orchestrator. In a stack, the images are working in the same private "
+"network, and you can start / stop the whole stack or deploy the stack to "
+"other workers. There are many orchestrators, for example Swarm, Kubernetes "
+"and Mesos."
+msgstr ""
+"För att arbeta med en docker-imageuppsättning kan du använda en docker-stack"
+" som hanteras av en orkestrator. I en stack arbetar avbildningarna i samma "
+"privata nätverk, och du kan starta/stoppa hela stacken eller distribuera "
+"stacken till andra arbetare. Det finns många orkestratorer, till exempel "
+"Swarm, Kubernetes och Mesos."
+
+#: ../../docs/server_manual/containerized_deployment.rst:220
+msgid ""
+"In the following, we will present simple configurations for testing "
+"purposes. They are not suitable for production."
+msgstr ""
+"I det följande kommer vi att presentera enkla konfigurationer för "
+"teständamål. De är inte lämpliga för produktion."
+
+#: ../../docs/server_manual/containerized_deployment.rst:225
+msgid "Swarm/docker-compose"
+msgstr "Swarm/docker-compose"
+
+#: ../../docs/server_manual/containerized_deployment.rst:227
+msgid ""
+"Docker now has its own orchestrator: Swarm (compatible with docker-compose "
+"files). You have to `enable it "
+"<https://docs.docker.com/guides/orchestration/#enable-docker-swarm>`_ (the "
+"Mac version will also work with Linux)."
+msgstr ""
+"Docker har nu sin egen orkestrator: Swarm (kompatibel med docker-compose-"
+"filer). Du måste aktivera den "
+"<https://docs.docker.com/guides/orchestration/#enable-docker-swarm>`_ (Mac-"
+"versionen fungerar även med Linux)."
+
+#: ../../docs/server_manual/containerized_deployment.rst:235
+msgid "Stack description"
+msgstr "Beskrivning av stapeln"
+
+#: ../../docs/server_manual/containerized_deployment.rst:237
+msgid ""
+"Now that you have Swarm working, create the service file (see `Deploy to "
+"Swarm <https://docs.docker.com/guides/swarm-deploy/>`_) :file:`qgis-"
+"stack.yaml`:"
+msgstr ""
+"Nu när du har fått Swarm att fungera skapar du servicefilen (se `Deploy to "
+"Swarm <https://docs.docker.com/guides/swarm-deploy/>`_) :file:`qgis-"
+"stack.yaml`:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:267
+msgid "To deploy (or update) the stack, type:"
+msgstr "För att distribuera (eller uppdatera) stacken, skriv:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:273
+msgid ""
+"Check the stack deployment status until you obtain **1/1** in the "
+"**replicas** column:"
+msgstr ""
+"Kontrollera stackens driftsättningsstatus tills du får **1/1** i kolumnen "
+"**replicas**:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:280
+msgid "Something like:"
+msgstr "Nåt i den stilen:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:289
+msgid ""
+"To check WMS capabilities, type in a web browser http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"För att kontrollera WMS-funktioner, skriv in i en webbläsare "
+"http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../docs/server_manual/containerized_deployment.rst:295
+msgid "To cleanup, type:"
+msgstr "För att städa upp, skriv:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:302
+msgid "Kubernetes"
+msgstr "Kubernetes"
+
+#: ../../docs/server_manual/containerized_deployment.rst:305
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../docs/server_manual/containerized_deployment.rst:307
+msgid ""
+"If you have a **Docker Desktop** installation, using Kubernetes (aka k8s) is"
+" pretty straight forward: `enable k8s "
+"<https://docs.docker.com/guides/orchestration/#turn-on-kubernetes>`_."
+msgstr ""
+"Om du har en **Docker Desktop**-installation är det ganska enkelt att "
+"använda Kubernetes (även kallat k8s): `enable k8s "
+"<https://docs.docker.com/guides/orchestration/#turn-on-kubernetes>`_."
+
+#: ../../docs/server_manual/containerized_deployment.rst:311
+msgid ""
+"If not, follow the `minikube tutorial "
+"<https://kubernetes.io/docs/tutorials/hello-minikube/>`_ or `microk8s for "
+"Ubuntu <https://ubuntu.com/tutorials/install-a-local-kubernetes-with-"
+"microk8s>`_."
+msgstr ""
+"Om inte, följ `minikube tutorial "
+"<https://kubernetes.io/docs/tutorials/hello-minikube/>`_ eller `microk8s för"
+" Ubuntu <https://ubuntu.com/tutorials/install-a-local-kubernetes-with-"
+"microk8s>`_."
+
+#: ../../docs/server_manual/containerized_deployment.rst:316
+msgid ""
+"As Kubernetes installation can be really complex, we will only focus on "
+"aspects used by this demo. For further / deeper information, check the "
+"`official documentation <https://kubernetes.io/docs/home/>`_."
+msgstr ""
+"Eftersom installationen av Kubernetes kan vara mycket komplex kommer vi "
+"endast att fokusera på de aspekter som används i detta demo. För ytterligare"
+" / djupare information, se den officiella dokumentationen "
+"<https://kubernetes.io/docs/home/>`_."
+
+#: ../../docs/server_manual/containerized_deployment.rst:322
+msgid "microk8s"
+msgstr "microk8s"
+
+#: ../../docs/server_manual/containerized_deployment.rst:324
+msgid ""
+"microk8s needs extra steps: you have to enable the registry and tag the "
+"qgis-server image in order to have Kubernetes to find the created images."
+msgstr ""
+"microk8s kräver extra steg: du måste aktivera registret och tagga qgis-"
+"serveravbildningen för att Kubernetes ska hitta de skapade avbildningarna."
+
+#: ../../docs/server_manual/containerized_deployment.rst:328
+msgid "First, enable the registry:"
+msgstr "Först måste du aktivera registret:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:334
+msgid "Then, tag and push the image to your newly created registry:"
+msgstr "Tagga sedan bilden och skicka den till ditt nyskapade register:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:340
+msgid ""
+"Finally, add or complete the :file:`/etc/docker/daemon.json` to have your "
+"registry **127.0.0.1:32000** listed in the **insecure-registries** field:"
+msgstr ""
+"Slutligen, lägg till eller komplettera :file:`/etc/docker/daemon.json` för "
+"att få ditt register **127.0.0.1:32000** listat i fältet **insecure-"
+"registries**:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:353
+msgid "Creating manifests"
+msgstr "Skapa manifest"
+
+#: ../../docs/server_manual/containerized_deployment.rst:355
+msgid ""
+"Kubernetes describes the objects to deploy in yaml manifests. There are many"
+" different kinds, but we will only use deployments (handle pods, i.e. docker"
+" images) and services to expose the deployments to internal or external "
+"purposes."
+msgstr ""
+"Kubernetes beskriver de objekt som ska distribueras i yaml-manifest. Det "
+"finns många olika typer, men vi kommer bara att använda deployments (hantera"
+" pods, dvs. docker images) och services för att exponera deployments för "
+"interna eller externa ändamål."
+
+#: ../../docs/server_manual/containerized_deployment.rst:361
+msgid "Deployment manifests"
+msgstr "Manifest för driftsättning"
+
+#: ../../docs/server_manual/containerized_deployment.rst:363
+msgid "Create a file :file:`deployments.yaml` with this content:"
+msgstr "Skapa en fil :file:`deployments.yaml` med detta innehåll:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:459
+msgid "Service manifests"
+msgstr "Servicemanifest"
+
+#: ../../docs/server_manual/containerized_deployment.rst:461
+msgid "Create a file :file:`services.yaml` with this content:"
+msgstr "Skapa en fil :file:`services.yaml` med detta innehåll:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:493
+msgid "Deploying manifests"
+msgstr "Distribuera manifest"
+
+#: ../../docs/server_manual/containerized_deployment.rst:495
+msgid ""
+"To deploy the images and services in Kubernetes, one can use the dashboard "
+"(click on the **+** on the upper right) or the command line."
+msgstr ""
+"För att distribuera bilderna och tjänsterna i Kubernetes kan man använda "
+"instrumentpanelen (klicka på **+** längst upp till höger) eller "
+"kommandoraden."
+
+#: ../../docs/server_manual/containerized_deployment.rst:499
+msgid ""
+"When using the command line with microk8s you will have to prefix each "
+"command with `microk8s`."
+msgstr ""
+"När du använder kommandoraden med microk8s måste du prefixera varje kommando"
+" med `microk8s`."
+
+#: ../../docs/server_manual/containerized_deployment.rst:502
+msgid "To deploy or update your manifests:"
+msgstr "För att distribuera eller uppdatera dina manifest:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:508
+msgid "To check what is currently deployed:"
+msgstr "För att kontrollera vad som för närvarande är utplacerat:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:514
+msgid "You should obtain something like::"
+msgstr "Du bör få något i stil med::"
+
+#: ../../docs/server_manual/containerized_deployment.rst:530
+msgid "To read nginx/qgis logs, type:"
+msgstr "Om du vill läsa nginx/qgis-loggar skriver du :"
+
+#: ../../docs/server_manual/containerized_deployment.rst:536
+msgid ""
+"To check WMS capabilities, type in a web browser "
+"http://localhost:30080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"För att kontrollera WMS-funktioner, skriv in i en webbläsare "
+"http://localhost:30080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../docs/server_manual/containerized_deployment.rst:542
+msgid "To clean up, type:"
+msgstr "För att städa upp, skriv:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:549
+msgid "Cloud deployment"
+msgstr "Driftsättning i molnet"
+
+#: ../../docs/server_manual/containerized_deployment.rst:551
+msgid ""
+"Managing your own cluster of servers to handle the deployment of "
+"containerized applications, is a complex job. You have to handle multiple "
+"issues, such as hardware, bandwidth and security at different levels."
+msgstr ""
+"Att hantera ett eget kluster av servrar för att hantera distributionen av "
+"containeriserade applikationer är ett komplext jobb. Du måste hantera flera "
+"olika frågor, t.ex. hårdvara, bandbredd och säkerhet på olika nivåer."
+
+#: ../../docs/server_manual/containerized_deployment.rst:556
+msgid ""
+"Cloud deployment solutions can be a good alternative when you do not want to"
+" focus on infrastructure management."
+msgstr ""
+"Molnlösningar kan vara ett bra alternativ när du inte vill fokusera på "
+"infrastrukturhantering."
+
+#: ../../docs/server_manual/containerized_deployment.rst:559
+msgid ""
+"A cloud deployment may use proprietary mechanisms, but they are also "
+"compatible with the stages explained previously (:ref:`docker images "
+"<simple-docker-images>` and :ref:`stack management <docker-stacks>`)."
+msgstr ""
+"En molndriftsättning kan använda proprietära mekanismer, men de är också "
+"kompatibla med de steg som förklarats tidigare (:ref:`docker images <simple-"
+"docker-images>` och :ref:`stack management <docker-stacks>`)."
+
+#: ../../docs/server_manual/containerized_deployment.rst:565
+msgid "AWS usecase"
+msgstr "AWS användningsfall"
+
+#: ../../docs/server_manual/containerized_deployment.rst:567
+msgid ""
+"With Amazon AWS, through `ECS (Elastic Container Service) "
+"<https://console.aws.amazon.com/ecs/home>`_ functionalities, you can use "
+"docker-compose or Kubernetes compatible wrappers to manage your stack. You "
+"will have to create an `image registry "
+"<https://console.aws.amazon.com/ecr/home>`_ for your custom images to be "
+"accessible."
+msgstr ""
+"Med Amazon AWS, genom `ECS (Elastic Container Service) "
+"<https://console.aws.amazon.com/ecs/home>`_-funktioner, kan du använda "
+"docker-compose eller Kubernetes-kompatibla omslag för att hantera din stack."
+" Du måste skapa ett \"avbildningsregister\" "
+"<https://console.aws.amazon.com/ecr/home>`_ för att dina anpassade "
+"avbildningar ska vara tillgängliga."
+
+#: ../../docs/server_manual/containerized_deployment.rst:575
+msgid ""
+"To use docker-compose alike functionalities, you need to install the **ecs-"
+"cli** client and have `proper permissions / roles "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_."
+" Then, with the help of the `ecs-cli compose <https://github.com/aws/amazon-"
+"ecs-cli>`_ commands, you can reuse the :ref:`stack description <docker-"
+"compose-file>`."
+msgstr ""
+"För att använda docker-compose liknande funktioner måste du installera "
+"**ecs-cli**-klienten och ha `korrekta behörigheter / roller "
+"&lt;https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html&gt;`_."
+" Sedan kan du med hjälp av kommandona `ecs-cli compose "
+"&lt;https://github.com/aws/amazon-ecs-cli&gt;`_ återanvända :ref:`stack "
+"description <docker-compose-file>`."
+
+#: ../../docs/server_manual/containerized_deployment.rst:581
+msgid ""
+"To use Kubernetes, you can use the AWS web console or the command line tool "
+"`eksctl <https://docs.aws.amazon.com/eks/latest/userguide/getting-"
+"started.html>`_ and have the proper permissions / roles. Then with a well "
+"configured kubectl environment, you can reuse the :ref:`Kubernetes manifests"
+" <k8s-manifests>`."
+msgstr ""
+"För att använda Kubernetes kan du använda AWS webbkonsol eller "
+"kommandoradsverktyget `eksctl "
+"&lt;https://docs.aws.amazon.com/eks/latest/userguide/getting-"
+"started.html&gt;`_ och ha rätt behörigheter / roller. Med en välkonfigurerad"
+" kubectl-miljö kan du sedan återanvända :ref:`Kubernetes manifest "
+"<k8s-manifests>`."
