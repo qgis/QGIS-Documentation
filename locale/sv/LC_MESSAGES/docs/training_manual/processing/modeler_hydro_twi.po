@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:35+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:2
+msgid "A model within a model"
+msgstr "En modell inom en modell"
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:4
+msgid ""
+"Beware, this chapter is not well tested, please report any issue; images are"
+" missing"
+msgstr ""
+"Observera att detta kapitel inte är väl testat, vänligen rapportera "
+"eventuella problem; bilder saknas"
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:6
+msgid "In this lesson we will see how to use a model within a bigger model."
+msgstr ""
+"I den här lektionen kommer vi att se hur man använder en modell inom en "
+"större modell."
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:8
+msgid ""
+"We have already created a few models, and in this lesson we are going to see"
+" how we can combine them on a single bigger one. A model behaves like any "
+"other algorithm, which means that you can add a model that you have already "
+"created as part of another one that you create after that."
+msgstr ""
+"Vi har redan skapat några modeller, och i den här lektionen ska vi se hur vi"
+" kan kombinera dem till en enda större modell. En modell beter sig som "
+"vilken annan algoritm som helst, vilket innebär att du kan lägga till en "
+"modell som du redan har skapat som en del av en annan som du skapar efter "
+"det."
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:10
+msgid ""
+"In this case, we are going to expand our hydrological model, by adding the "
+"mean TWI value in each of the basins that it generates as result. To do "
+"that, we need to calculate the TWI, and to compute the statistics. Since we "
+"have already created a model to calculate TWI from a DEM, it is a good idea "
+"to reuse that model instead of adding the algorithms it contains "
+"individually."
+msgstr ""
+"I det här fallet ska vi utöka vår hydrologiska modell genom att lägga till "
+"det genomsnittliga TWI-värdet i var och en av de bassänger som den genererar"
+" som resultat. För att göra det måste vi beräkna TWI och beräkna "
+"statistiken. Eftersom vi redan har skapat en modell för att beräkna TWI från"
+" en DEM, är det en bra idé att återanvända den modellen i stället för att "
+"lägga till de algoritmer som den innehåller individuellt."
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:12
+msgid ""
+"Let's start with the model we used as starting point for the last lesson."
+msgstr ""
+"Låt oss börja med den modell som vi använde som utgångspunkt för den senaste"
+" lektionen."
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:14
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:22
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:28
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:32
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:36
+msgid "todo: Add image"
+msgstr "att göra: Lägg till bild"
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:16
+msgid ""
+"First, we will add the TWI model. For it to be available, it should have "
+"been saved on the models folder, since otherwise it will not be shown in the"
+" toolbox or the algorithms list in the modeler. Make sure you have it "
+"available."
+msgstr ""
+"Först ska vi lägga till TWI-modellen. För att den ska vara tillgänglig måste"
+" den ha sparats i modellmappen, eftersom den annars inte kommer att visas i "
+"verktygslådan eller algoritmlistan i modelleraren. Se till att du har den "
+"tillgänglig."
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:18
+msgid ""
+"Add it to the current model and use the input DEM as its input. The output "
+"is a temporary one, since we just want the TWI layer to compute the "
+"statistics. The only output of this model we are creating will still be the "
+"vector layer with the watersheds."
+msgstr ""
+"Lägg till den i den aktuella modellen och använd den ingående DEM som "
+"indata. Utdata är tillfällig, eftersom vi bara vill ha TWI-skiktet för att "
+"beräkna statistiken. Den enda utdata från den här modellen som vi skapar "
+"kommer fortfarande att vara vektorskiktet med vattendelarna."
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:20
+msgid "Here is the corresponding parameters dialog:"
+msgstr "Här är motsvarande dialogruta för parametrar:"
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:24
+msgid ""
+"Now we have a TWI layer that we can use along with the watersheds vector "
+"layer, to generate a new one which contains the values of the TWI "
+"corresponding to each watershed."
+msgstr ""
+"Nu har vi ett TWI-lager som vi kan använda tillsammans med vektorlagret för "
+"vattendelare för att generera ett nytt lager som innehåller värdena för TWI "
+"som motsvarar varje vattendelare."
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:26
+msgid ""
+"This calculation is done using the *Grid statistics in polygons* algorithm. "
+"Use the layers mentioned above as input, to create the final result."
+msgstr ""
+"Denna beräkning görs med hjälp av algoritmen *Grid statistics in polygons*. "
+"Använd de lager som nämns ovan som indata för att skapa det slutliga "
+"resultatet."
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:30
+msgid ""
+"The output of the *Vectorize grid classes* algorithm was originally our "
+"final output, but now we just want it as an intermediate result. To change "
+"that, we have to edit the algorithm. Just double--click on it to see its "
+"parameters dialog, and delete the name of the output. That will make it a "
+"temporary output, as it is by default."
+msgstr ""
+"Utdata från algoritmen *Vectorize grid classes* var ursprungligen vår "
+"slutliga utdata, men nu vill vi bara ha den som ett mellanresultat. För att "
+"ändra på det måste vi redigera algoritmen. Dubbelklicka på den för att se "
+"dialogrutan med parametrar och ta bort namnet på utdata. Det kommer att göra"
+" det till en tillfällig output, som det är som standard."
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:34
+msgid "This is how the final model should look like:"
+msgstr "Så här ska den slutliga modellen se ut:"
+
+#: ../../docs/training_manual/processing/modeler_hydro_twi.rst:38
+msgid ""
+"As you see, using a model in another model is nothing special, and you can "
+"add it just like you add another algorithm, as long as the model is saved in"
+" the models folder and is available in the toolbox."
+msgstr ""
+"Som du ser är det inget speciellt att använda en modell i en annan modell, "
+"och du kan lägga till den precis som du lägger till en annan algoritm, så "
+"länge modellen är sparad i mappen models och finns tillgänglig i "
+"verktygslådan."
