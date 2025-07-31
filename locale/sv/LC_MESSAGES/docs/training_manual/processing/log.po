@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/log.rst:2
+msgid "The processing log"
+msgstr "Behandlingsloggen"
+
+#: ../../docs/training_manual/processing/log.rst:4
+msgid "This lesson describes the processing log."
+msgstr "Den här lektionen beskriver behandlingsloggen."
+
+#: ../../docs/training_manual/processing/log.rst:6
+msgid ""
+"All the analysis performed with the processing framework is logged in QGIS "
+"logging system. This allows you to know more about what has been done with "
+"the processing tools, to solve problems when they happen, and also to re--"
+"run previous operations, since the logging system also implements some "
+"interactivity."
+msgstr ""
+"All analys som utförs med bearbetningsramverket loggas i QGIS "
+"loggningssystem. Detta gör att du kan veta mer om vad som har gjorts med "
+"bearbetningsverktygen, lösa problem när de uppstår och även köra om tidigare"
+" operationer, eftersom loggningssystemet också implementerar viss "
+"interaktivitet."
+
+#: ../../docs/training_manual/processing/log.rst:11
+msgid ""
+"To open the log, click on the balloon at the bottom right, on the QGIS "
+"status bar. Some algorithms might leave here information about their "
+"execution. For instance, those algorithms that call an external application "
+"usually log the console output of that application to this entry. If you "
+"have a look at it, you will see that the output of the SAGA algorithm that "
+"we just run (and that fails to execute because input data was not correct) "
+"is stored here."
+msgstr ""
+"För att öppna loggen klickar du på ballongen längst ned till höger i QGIS "
+"statusfält. Vissa algoritmer kan lämna information om sin exekvering här. "
+"Till exempel loggar de algoritmer som anropar ett externt program vanligtvis"
+" konsolutmatningen från det programmet till den här posten. Om du tittar på "
+"den ser du att utdata från den SAGA-algoritm som vi just körde (och som "
+"misslyckades med att exekvera eftersom indata inte var korrekta) lagras här."
+
+#: ../../docs/training_manual/processing/log.rst:18
+msgid ""
+"This is helpful to understand what is going on. Advanced users will be able "
+"to analyze that output to find out why the algorithm failed. If you are not "
+"an advanced user, this will be useful for others to help you diagnose the "
+"problem you are having, which might be a problem in the installation of the "
+"external software or an issue with the data you provided."
+msgstr ""
+"Detta är till hjälp för att förstå vad som händer. Avancerade användare kan "
+"analysera utdata för att ta reda på varför algoritmen misslyckades. Om du "
+"inte är en avancerad användare kan detta vara användbart för andra som "
+"hjälper dig att diagnostisera det problem du har, vilket kan vara ett "
+"problem med installationen av den externa programvaran eller ett problem med"
+" de data du har tillhandahållit."
+
+#: ../../docs/training_manual/processing/log.rst:23
+msgid ""
+"Even if the algorithm could be executed, some algorithms might leave "
+"warnings in case the result might not be right. For instance, when executing"
+" an interpolation algorithm with a very small amount of points, the "
+"algorithm can run and will produce a result, but it is likely that it will "
+"not be correct, since more points should be used. It's a good idea to "
+"regularly check for this type of warnings if you are not sure about some "
+"aspect of a given algorithm."
+msgstr ""
+"Även om algoritmen kan köras kan vissa algoritmer lämna varningar om "
+"resultatet kanske inte blir rätt. Om man t.ex. kör en interpoleringsalgoritm"
+" med ett mycket litet antal punkter kan algoritmen köras och ge ett "
+"resultat, men det är troligt att det inte är korrekt eftersom fler punkter "
+"borde användas. Det är en god idé att regelbundet kontrollera om det finns "
+"den här typen av varningar om du är osäker på någon aspekt av en viss "
+"algoritm."
+
+#: ../../docs/training_manual/processing/log.rst:28
+msgid ""
+"From the :menuselection:`Processing --> History...` menu, you'll find "
+"*algorithms* that are executed, regardless of they are executed from the GUI"
+" or from the console (which will be explained later in this manual). The "
+"execution is stored in this dialog as a console call. That means that "
+"everytime you run an algorithm, a console command is added to the log, and "
+"you have the full history of your working session. Here is how that history "
+"looks like:"
+msgstr ""
+"I menyn :menuselection:`Processing --> History...` hittar du *algoritmer* "
+"som körs, oavsett om de körs från GUI eller från konsolen (vilket förklaras "
+"senare i denna manual). Exekveringen lagras i denna dialogruta som ett "
+"konsolanrop. Det innebär att varje gång du kör en algoritm läggs ett "
+"konsolkommando till i loggen, och du har hela historiken för din "
+"arbetssession. Så här ser den historiken ut:"
+
+#: ../../docs/training_manual/processing/log.rst:37
+msgid ""
+"This can be very useful when starting working with the console, to learn "
+"about the syntax of algorithms. We will use it when we discuss how to run "
+"analysis commands from the console."
+msgstr ""
+"Detta kan vara mycket användbart när du börjar arbeta med konsolen för att "
+"lära dig algoritmernas syntax. Vi kommer att använda den när vi diskuterar "
+"hur man kör analyskommandon från konsolen."
+
+#: ../../docs/training_manual/processing/log.rst:41
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Sammanfoga data om skogsbestånd"
+
+#: ../../docs/training_manual/processing/log.rst:43
+msgid ""
+"The history is also interactive, and you can run any previous algorithm just"
+" by double-clicking on its entry. This is an easy way of replicating the "
+"work we already did before."
+msgstr ""
+"Historiken är också interaktiv, och du kan köra vilken tidigare algoritm som"
+" helst genom att dubbelklicka på dess post. Det här är ett enkelt sätt att "
+"upprepa det arbete vi redan gjort tidigare."
+
+#: ../../docs/training_manual/processing/log.rst:46
+msgid "For instance, try the following:"
+msgstr "Försök till exempel med följande:"
+
+#: ../../docs/training_manual/processing/log.rst:48
+msgid ""
+"Open the data corresponding to the first chapter of this manual and run the "
+"algorithm explained there."
+msgstr ""
+"Öppna de data som motsvarar det första kapitlet i denna handbok och kör den "
+"algoritm som beskrivs där."
+
+#: ../../docs/training_manual/processing/log.rst:50
+msgid ""
+"Now go to the History dialog and locate the last algorithm in the list, "
+"which corresponds to the algorithm you have just run."
+msgstr ""
+"Gå nu till dialogrutan Historik och leta upp den sista algoritmen i listan, "
+"som motsvarar den algoritm du just har kört."
+
+#: ../../docs/training_manual/processing/log.rst:52
+msgid ""
+"Double-click on it and a new result should be produced, just like when you "
+"run it using the normal dialog and calling it from the toolbox."
+msgstr ""
+"Dubbelklicka på den och ett nytt resultat ska produceras, precis som när du "
+"kör den med den vanliga dialogen och anropar den från verktygslådan."
+
+#: ../../docs/training_manual/processing/log.rst:56
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along"
+msgstr ":abbr:`★★☆ (Måttlig nivå)` Följ med"
+
+#: ../../docs/training_manual/processing/log.rst:58
+msgid "You can also modify the algorithm."
+msgstr "Du kan också ändra algoritmen."
+
+#: ../../docs/training_manual/processing/log.rst:60
+msgid "Copy the algorithm call"
+msgstr "Kopiera anropet till algoritmen"
+
+#: ../../docs/training_manual/processing/log.rst:61
+msgid "Open the :menuselection:`Plugins --> Python console`"
+msgstr "Öppna :menuselection:`Plugins --> Python console`"
+
+#: ../../docs/training_manual/processing/log.rst:62
+msgid "Paste your copy to run the analysis; change the parameters at will."
+msgstr ""
+"Klistra in din kopia för att köra analysen; ändra parametrarna efter behag."
+
+#: ../../docs/training_manual/processing/log.rst:63
+msgid ""
+"To display the resulting file, you may want to replace ``processing.run`` in"
+" the pasted command with ``processing.runAndLoadResults``."
+msgstr ""
+"För att visa den resulterande filen kanske du vill ersätta "
+"``processing.run`` i det inklistrade kommandot med "
+"``processing.runAndLoadResults``."
