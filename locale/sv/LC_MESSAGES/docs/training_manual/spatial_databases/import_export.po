@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:2
+msgid "Lesson: Import and Export"
+msgstr "Lektion: Import och export"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:4
+msgid ""
+"Of course, a database with no easy way to migrate data into it and out of it"
+" would not be of much use. Fortunately, there are a number of tools that "
+"will let you easily move data into and out of PostGIS."
+msgstr ""
+"En databas som inte har något enkelt sätt att flytta data till och från den "
+"skulle naturligtvis inte vara till någon större nytta. Lyckligtvis finns det"
+" ett antal verktyg som gör att du enkelt kan flytta data till och från "
+"PostGIS."
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:9
+msgid "shp2pgsql"
+msgstr "shp2pgsql"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:11
+msgid ""
+"shp2pgsql is a commandline tool to import ESRI Shapefile to the database. "
+"Under Unix, you can use the following command for importing a new PostGIS "
+"table:"
+msgstr ""
+"shp2pgsql är ett kommandoradsverktyg för att importera ESRI Shapefile till "
+"databasen. Under Unix kan du använda följande kommando för att importera en "
+"ny PostGIS-tabell:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:20
+msgid "Under Windows, you have to perform the import process in two steps:"
+msgstr "Under Windows måste du utföra importprocessen i två steg:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:27
+msgid "You may encounter this error:"
+msgstr "Du kan stöta på detta fel:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:34
+msgid ""
+"This is a known issue regarding the creation *in situ* of a spatial index "
+"for the data you're importing. To avoid the error, exclude the ``-I`` "
+"parameter. This will mean that no spatial index is being created directly, "
+"and you'll need to create it in the database after the data have been "
+"imported. (The creation of a spatial index will be covered in the next "
+"lesson.)"
+msgstr ""
+"Detta är ett känt problem som gäller skapandet *in situ* av ett spatialt "
+"index för de data du importerar. Undvik felet genom att utesluta parametern "
+"``-I``. Detta innebär att inget spatialt index skapas direkt och att du "
+"måste skapa det i databasen efter att data har importerats. (Skapandet av "
+"ett spatialt index tas upp i nästa lektion)"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:41
+msgid "pgsql2shp"
+msgstr "pgsql2shp"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:43
+msgid ""
+"pgsql2shp is a commandline tool to export PostGIS Tables, Views or SQL "
+"select queries. To do this under Unix:"
+msgstr ""
+"pgsql2shp är ett kommandoradsverktyg för att exportera PostGIS-tabeller, "
+"vyer eller SQL select-frågor. För att göra detta under Unix:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:51
+msgid "To export the data using a query:"
+msgstr "För att exportera data med hjälp av en fråga:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:59
+msgid "ogr2ogr"
+msgstr "ogr2ogr"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:61
+msgid ""
+"ogr2ogr is a very powerful tool to convert data into and from postgis to "
+"many data formats. ogr2ogr is part of the GDAL library and has to be "
+"installed separately. To export a table from PostGIS to GML, you can use "
+"this command:"
+msgstr ""
+"ogr2ogr är ett mycket kraftfullt verktyg för att konvertera data till och "
+"från PostGIS till många dataformat. ogr2ogr är en del av GDAL-biblioteket "
+"och måste installeras separat. Om du vill exportera en tabell från PostGIS "
+"till GML kan du använda det här kommandot:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:71
+msgid "DB Manager"
+msgstr "DB Manager"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:73
+msgid ""
+"You may have noticed another option in the :guilabel:`Database` menu labeled"
+" :guilabel:`DB Manager`. This is a tool that provides a unified interface "
+"for interacting with spatial databases including PostGIS. It also allows you"
+" to import and export from databases to other formats. Since the next module"
+" is largely devoted to using this tool, we will only briefly mention it "
+"here."
+msgstr ""
+"Du kanske har lagt märke till ett annat alternativ i menyn "
+":guilabel:`Database` som heter :guilabel:`DB Manager`. Det här är ett "
+"verktyg som ger ett enhetligt gränssnitt för interaktion med spatiala "
+"databaser, inklusive PostGIS. Det låter dig också importera och exportera "
+"från databaser till andra format. Eftersom nästa modul till stor del handlar"
+" om att använda det här verktyget kommer vi bara att nämna det kort här."
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:82
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:84
+msgid ""
+"Importing and exporting data to and from the database can be done in many "
+"various ways. Especially when using disparate data sources, you will "
+"probably use these functions (or others like them) on a regular basis."
+msgstr ""
+"Import och export av data till och från databasen kan göras på många olika "
+"sätt. Speciellt när du använder olika datakällor kommer du förmodligen att "
+"använda dessa funktioner (eller andra liknande) regelbundet."
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:89
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:91
+msgid "Next we'll look at how to query the data we've created before."
+msgstr ""
+"Nu ska vi titta på hur man söker efter de data som vi har skapat tidigare."
