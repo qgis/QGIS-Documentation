@@ -991,7 +991,8 @@ The following example code illustrates creating and populating a memory provider
   # add a feature
   fet = QgsFeature()
   fet.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(10,10)))
-  t = QDateTime.fromString("2000-01-01T12:00:00", Qt.ISODate)
+  fmt = Qt.DateFormat.ISODate
+  t = QDateTime.fromString("2000-01-01T12:00:00", fmt)
   fet.setAttributes(["Johnny", 2, 0.3, t])
   pr.addFeatures([fet])
 
