@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,20 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:6
+msgid "Spatial Analysis (Interpolation)"
+msgstr "Rumslig analys (interpolation)"
 
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:9
 msgid "|gentleLogo|"
@@ -36,21 +51,441 @@ msgstr "gentleLogo"
 msgid "Objectives:"
 msgstr "Mål:"
 
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:9
+msgid "Understanding of interpolation as part of spatial analysis"
+msgstr "Förståelse för interpolering som en del av rumslig analys"
+
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:11
 msgid "Keywords:"
 msgstr "Nyckelord:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:11
+msgid ""
+"Point data, interpolation method, Inverse Distance Weighted, Triangulated "
+"Irregular Network"
+msgstr ""
+"Punktdata, interpoleringsmetod, omvänt avståndsviktat, triangulerat "
+"oregelbundet nätverk"
 
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:15
 msgid "Overview"
 msgstr "Översikt"
 
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:17
+msgid ""
+"**Spatial analysis** is the process of manipulating spatial information to "
+"extract new information and meaning from the original data. Usually spatial "
+"analysis is carried out with a Geographic Information System (GIS). A GIS "
+"usually provides spatial analysis tools for calculating feature statistics "
+"and carrying out geoprocessing activities as data interpolation. In "
+"hydrology, users will likely emphasize the importance of terrain analysis "
+"and hydrological modelling (modelling the movement of water over and in the "
+"earth). In wildlife management, users are interested in analytical functions"
+" dealing with wildlife point locations and their relationship to the "
+"environment. Each user will have different things they are interested in "
+"depending on the kind of work they do."
+msgstr ""
+"**Spatial analysis** är processen att manipulera spatial information för att"
+" extrahera ny information och mening från originaldata. Vanligtvis utförs "
+"rumslig analys med hjälp av ett geografiskt informationssystem (GIS). Ett "
+"GIS tillhandahåller vanligtvis verktyg för rumslig analys för att beräkna "
+"statistik över funktioner och utföra geobearbetningsaktiviteter som "
+"datainterpolering. Inom hydrologi kommer användarna sannolikt att betona "
+"vikten av terränganalys och hydrologisk modellering (modellering av vattnets"
+" rörelse över och i jorden). När det gäller viltförvaltning är användarna "
+"intresserade av analytiska funktioner som behandlar platser där vilda djur "
+"befinner sig och deras förhållande till omgivningen. Varje användare kommer "
+"att ha olika saker som de är intresserade av beroende på vilken typ av "
+"arbete de utför."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:29
+msgid "Spatial interpolation in detail"
+msgstr "Spatial interpolation i detalj"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:31
+msgid ""
+"Spatial interpolation is the process of using points with known values to "
+"estimate values at other unknown points. For example, to make a "
+"precipitation (rainfall) map for your country, you will not find enough "
+"evenly spread weather stations to cover the entire region. Spatial "
+"interpolation can estimate the temperatures at locations without recorded "
+"data by using known temperature readings at nearby weather stations (see "
+":numref:`figure_temperature_map`). This type of interpolated surface is "
+"often called a **statistical surface**. Elevation data, precipitation, snow "
+"accumulation, water table and population density are other types of data "
+"that can be computed using interpolation."
+msgstr ""
+"Spatial interpolering innebär att man använder punkter med kända värden för "
+"att uppskatta värden på andra okända punkter. Om du till exempel vill göra "
+"en nederbördskarta för ditt land kommer du inte att hitta tillräckligt många"
+" jämnt utspridda väderstationer för att täcka hela regionen. Spatial "
+"interpolering kan uppskatta temperaturen på platser utan registrerade data "
+"genom att använda kända temperaturavläsningar vid närliggande väderstationer"
+" (se :numref:`figure_temperature_map`). Den här typen av interpolerad yta "
+"kallas ofta för en **statistisk yta**. Höjddata, nederbörd, snöackumulering,"
+" grundvattennivå och befolkningstäthet är andra typer av data som kan "
+"beräknas med hjälp av interpolering."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:47
+msgid "Temperature map interpolated from South African Weather Stations."
+msgstr "Temperaturkarta interpolerad från sydafrikanska väderstationer."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:49
+msgid ""
+"Because of high cost and limited resources, data collection is usually "
+"conducted only in a limited number of selected point locations. In GIS, "
+"spatial interpolation of these points can be applied to create a raster "
+"surface with estimates made for all raster cells."
+msgstr ""
+"På grund av höga kostnader och begränsade resurser utförs datainsamlingen "
+"vanligtvis endast i ett begränsat antal utvalda punkter. I GIS kan rumslig "
+"interpolering av dessa punkter tillämpas för att skapa en rasteryta med "
+"skattningar för alla rasterceller."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:54
+msgid ""
+"In order to generate a continuous map, for example, a digital elevation map "
+"from elevation points measured with a GPS device, a suitable interpolation "
+"method has to be used to optimally estimate the values at those locations "
+"where no samples or measurements were taken. The results of the "
+"interpolation analysis can then be used for analyses that cover the whole "
+"area and for modelling."
+msgstr ""
+"För att generera en kontinuerlig karta, t.ex. en digital höjdkarta från "
+"höjdpunkter som mätts med en GPS-enhet, måste en lämplig interpoleringsmetod"
+" användas för att på ett optimalt sätt uppskatta värdena på de platser där "
+"inga prover eller mätningar har gjorts. Resultaten av interpoleringsanalysen"
+" kan sedan användas för analyser som täcker hela området och för "
+"modellering."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:60
+msgid ""
+"There are many interpolation methods. In this introduction we will present "
+"two widely used interpolation methods called **Inverse Distance Weighting** "
+"(IDW) and **Triangulated Irregular Networks** (TIN). If you are looking for "
+"additional interpolation methods, please refer to the 'Further Reading' "
+"section at the end of this topic."
+msgstr ""
+"Det finns många olika interpoleringsmetoder. I den här introduktionen "
+"presenterar vi två allmänt använda interpoleringsmetoder som kallas "
+"**Inverse Distance Weighting** (IDW) och **Triangulated Irregular Networks**"
+" (TIN). Om du letar efter ytterligare interpoleringsmetoder, se avsnittet "
+"\"Ytterligare läsning\" i slutet av detta ämne."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:67
+msgid "Inverse Distance Weighted (IDW)"
+msgstr "Invers distansviktad (IDW)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:69
+msgid ""
+"In the IDW interpolation method, the sample points are weighted during "
+"interpolation such that the influence of one point relative to another "
+"declines with distance from the unknown point you want to create (see "
+":numref:`figure_idw_interpolation`)."
+msgstr ""
+"I IDW-interpolationsmetoden viktas provpunkterna under interpoleringen så "
+"att påverkan från en punkt i förhållande till en annan minskar med avståndet"
+" från den okända punkt som du vill skapa (se "
+":numref:`figure_idw_interpolation`)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:80
+msgid ""
+"Inverse Distance Weighted interpolation based on weighted sample point "
+"distance (left). Interpolated IDW surface from elevation vector points "
+"(right). Image Source: Mitas, L., Mitasova, H. (1999)."
+msgstr ""
+"Inverse Distance Weighted-interpolering baserad på viktat provpunktsavstånd "
+"(vänster). Interpolerad IDW-yta från höjdvektorpunkter (höger). Bildkälla: "
+"Mitas, L., Mitasova, H. (1999)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:84
+msgid ""
+"Weighting is assigned to sample points through the use of a weighting "
+"coefficient that controls how the weighting influence will drop off as the "
+"distance from new point increases. The greater the weighting coefficient, "
+"the less the effect points will have if they are far from the unknown point "
+"during the interpolation process. As the coefficient increases, the value of"
+" the unknown point approaches the value of the nearest observational point."
+msgstr ""
+"Viktning tilldelas provpunkterna med hjälp av en viktningskoefficient som "
+"styr hur viktningens inflytande minskar när avståndet från den nya punkten "
+"ökar. Ju större viktningskoefficienten är, desto mindre effekt har punkterna"
+" om de ligger långt från den okända punkten under interpoleringsprocessen. "
+"När koefficienten ökar närmar sig värdet för den okända punkten värdet för "
+"den närmaste observationspunkten."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:91
+msgid ""
+"It is important to notice that the IDW interpolation method also has some "
+"disadvantages: the quality of the interpolation result can decrease, if the "
+"distribution of sample data points is uneven. Furthermore, maximum and "
+"minimum values in the interpolated surface can only occur at sample data "
+"points. This often results in small peaks and pits around the sample data "
+"points as shown in :numref:`figure_idw_interpolation`."
+msgstr ""
+"Det är viktigt att notera att IDW-interpoleringsmetoden också har vissa "
+"nackdelar: kvaliteten på interpoleringsresultatet kan försämras om "
+"fördelningen av datapunkterna i urvalet är ojämn. Dessutom kan max- och "
+"minvärdena i den interpolerade ytan bara uppstå vid datapunkterna i urvalet."
+" Detta resulterar ofta i små toppar och gropar runt provdatapunkterna, "
+"vilket visas i :numref:`figure_idw_interpolation`."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:98
+msgid ""
+"In GIS, interpolation results are usually shown as a 2 dimensional raster "
+"layer. In :numref:`figure_idw_result`, you can see a typical IDW "
+"interpolation result, based on elevation sample points collected in the "
+"field with a GPS device."
+msgstr ""
+"I GIS visas interpolationsresultat vanligtvis som ett 2-dimensionellt "
+"rasterlager. I :numref:`figure_idw_result` kan du se ett typiskt IDW-"
+"interpoleringsresultat, baserat på höjdprovpunkter som samlats in i fält med"
+" en GPS-enhet."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:108
+msgid ""
+"IDW interpolation result from irregularly collected elevation sample points "
+"(shown as black crosses)."
+msgstr ""
+"IDW-interpolationsresultat från oregelbundet insamlade höjdprovpunkter "
+"(visas som svarta kors)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:112
+msgid "Triangulated Irregular Network (TIN)"
+msgstr "Triangulerat oregelbundet nätverk (TIN)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:114
+msgid ""
+"TIN interpolation is another popular tool in GIS. A common TIN algorithm is "
+"called **Delaunay triangulation**. It tries to create a surface formed by "
+"triangles of nearest neighbour points. To do this, circumcircles around "
+"selected sample points are created and their intersections are connected to "
+"a network of non overlapping and as compact as possible triangles (see "
+":numref:`figure_tin_interpolation`)."
+msgstr ""
+"TIN-interpolering är ett annat populärt verktyg inom GIS. En vanlig TIN-"
+"algoritm kallas **Delaunay-triangulering**. Den försöker skapa en yta som "
+"bildas av trianglar från de närmaste grannpunkterna. För att göra detta "
+"skapas omkretsar runt utvalda provpunkter och deras skärningspunkter ansluts"
+" till ett nätverk av icke-överlappande och så kompakta trianglar som möjligt"
+" (se :numref:`figure_tin_interpolation`)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:126
+msgid ""
+"Delaunay triangulation with circumcircles around the red sample data. The "
+"resulting interpolated TIN surface created from elevation vector points is "
+"shown on the right. Image Source: Mitas, L., Mitasova, H. (1999)."
+msgstr ""
+"Delaunay-triangulering med cirklar runt de röda provdatapunkterna. Den "
+"resulterande interpolerade TIN-ytan som skapats från höjdvektorpunkter visas"
+" till höger. Bildkälla: Mitas, L., Mitasova, H. (1999)."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:130
+msgid ""
+"The main disadvantage of the TIN interpolation is that the surfaces are not "
+"smooth and may give a jagged appearance. This is caused by discontinuous "
+"slopes at the triangle edges and sample data points. In addition, "
+"triangulation is generally not suitable for extrapolation beyond the area "
+"with collected sample data points (see :numref:`figure_tin_result` )."
+msgstr ""
+"Den största nackdelen med TIN-interpolering är att ytorna inte är jämna och "
+"kan ge ett ojämnt utseende. Detta orsakas av diskontinuerliga lutningar vid "
+"triangelkanterna och provdatapunkterna. Dessutom är triangulering i "
+"allmänhet inte lämplig för extrapolering bortom området med insamlade "
+"provdatapunkter (se :numref:`figure_tin_result` )."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:142
+msgid ""
+"Delaunay TIN interpolation result from irregularly collected rainfall sample"
+" points (blue circles)"
+msgstr ""
+"Delaunay TIN-interpolationsresultat från oregelbundet insamlade "
+"regnprovpunkter (blå cirklar)"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:146
+msgid "Common problems / things to be aware of"
+msgstr "Vanliga problem / saker att vara uppmärksam på"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:148
+msgid ""
+"It is important to remember that there is no single interpolation method "
+"that can be applied to all situations. Some are more exact and useful than "
+"others but take longer to calculate. They all have advantages and "
+"disadvantages. In practice, selection of a particular interpolation method "
+"should depend upon the sample data, the type of surfaces to be generated and"
+" tolerance of estimation errors. Generally, a three step procedure is "
+"recommended:"
+msgstr ""
+"Det är viktigt att komma ihåg att det inte finns någon enskild "
+"interpoleringsmetod som kan tillämpas i alla situationer. Vissa är mer "
+"exakta och användbara än andra, men tar längre tid att beräkna. De har alla "
+"sina fördelar och nackdelar. I praktiken bör valet av en viss "
+"interpoleringsmetod bero på provdata, vilken typ av ytor som ska genereras "
+"och toleransen för uppskattningsfel. I allmänhet rekommenderas ett "
+"trestegsförfarande:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:155
+msgid ""
+"Evaluate the sample data. Do this to get an idea on how data are distributed"
+" in the area, as this may provide hints on which interpolation method to "
+"use."
+msgstr ""
+"Utvärdera exempeldata. Gör detta för att få en uppfattning om hur data är "
+"fördelade i området, eftersom detta kan ge ledtrådar om vilken "
+"interpoleringsmetod som ska användas."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:157
+msgid ""
+"Apply an interpolation method which is most suitable to both the sample data"
+" and the study objectives. When you are in doubt, try several methods, if "
+"available."
+msgstr ""
+"Använd den interpoleringsmetod som är bäst lämpad för både urvalsdata och "
+"undersökningsmål. Om du är osäker ska du prova flera metoder, om sådana "
+"finns tillgängliga."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:160
+msgid ""
+"Compare the results and find the best result and the most suitable method. "
+"This may look like a time consuming process at the beginning. However, as "
+"you gain experience and knowledge of different interpolation methods, the "
+"time required for generating the most suitable surface will be greatly "
+"reduced."
+msgstr ""
+"Jämför resultaten och hitta det bästa resultatet och den lämpligaste "
+"metoden. Detta kan se ut som en tidskrävande process i början. Men "
+"allteftersom du får erfarenhet av och kunskap om olika interpoleringsmetoder"
+" kommer den tid som krävs för att generera den lämpligaste ytan att minska "
+"avsevärt."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:166
+msgid "Other interpolation methods"
+msgstr "Andra interpoleringsmetoder"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:168
+msgid ""
+"Although we concentrated on IDW and TIN interpolation methods in this "
+"worksheet, there are more spatial interpolation methods provided in GIS, "
+"such as Regularized Splines with Tension (RST), Kriging or Trend Surface "
+"interpolation. See the additional reading section below for a web link."
+msgstr ""
+"Även om vi koncentrerade oss på IDW- och TIN-interpolationsmetoder i detta "
+"arbetsblad finns det fler rumsliga interpolationsmetoder som tillhandahålls "
+"i GIS, till exempel Regularized Splines with Tension (RST), Kriging eller "
+"Trend Surface-interpolation. Se avsnittet Ytterligare läsning nedan för en "
+"webblänk."
+
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:174
 msgid "What have we learned?"
 msgstr "Vad har vi lärt oss?"
 
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:176
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Låt oss sammanfatta vad vi behandlat i det här arbetsbladet:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:178
+msgid ""
+"**Interpolation** uses vector points with known values to estimate values at"
+" unknown locations to create a raster surface covering an entire area."
+msgstr ""
+"**Interpolation** använder vektorpunkter med kända värden för att uppskatta "
+"värden på okända platser för att skapa en rasteryta som täcker ett helt "
+"område."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:180
+msgid "The interpolation result is typically a **raster** layer."
+msgstr "Interpolationsresultatet är vanligtvis ett **raster**-lager."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:181
+msgid ""
+"It is important to **find a suitable interpolation method** to optimally "
+"estimate values for unknown locations."
+msgstr ""
+"Det är viktigt att **finna en lämplig interpoleringsmetod** för att på bästa"
+" sätt uppskatta värden för okända platser."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:183
+msgid ""
+"**IDW interpolation** gives weights to sample points, such that the "
+"influence of one point on another declines with distance from the new point "
+"being estimated."
+msgstr ""
+"**IDW-interpolation** ger vikter till provpunkter, så att en punkts påverkan"
+" på en annan minskar med avståndet från den nya punkt som beräknas."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:186
+msgid ""
+"**TIN interpolation** uses sample points to create a surface formed by "
+"triangles based on nearest neighbour point information."
+msgstr ""
+"**TIN-interpolation** använder provpunkter för att skapa en yta som består "
+"av trianglar baserade på information om närmaste grannpunkt."
+
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:190
 msgid "Now you try!"
 msgstr "Nu får du försöka!"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:192
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Här är några idéer som du kan prova med dina elever:"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:194
+msgid ""
+"The Department of Agriculture plans to cultivate new land in your area but "
+"apart from the character of the soils, they want to know if the rainfall is "
+"sufficient for a good harvest. All the information they have available comes"
+" from a few weather stations around the area. Create an interpolated surface"
+" with your learners that shows which areas are likely to receive the highest"
+" rainfall."
+msgstr ""
+"Jordbruksdepartementet planerar att odla upp ny mark i ditt område, men "
+"förutom markens beskaffenhet vill de veta om nederbörden är tillräcklig för "
+"en bra skörd. All information de har tillgänglig kommer från några "
+"väderstationer runt om i området. Skapa en interpolerad yta med dina elever "
+"som visar vilka områden som sannolikt kommer att få den högsta nederbörden."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:199
+msgid ""
+"The tourist office wants to publish information about the weather conditions"
+" in January and February. They have temperature, rainfall and wind strength "
+"data and ask you to interpolate their data to estimate places where tourists"
+" will probably have optimal weather conditions with mild temperatures, no "
+"rainfall and little wind strength. Can you identify the areas in your region"
+" that meet these criteria?"
+msgstr ""
+"Turistbyrån vill publicera information om väderförhållandena i januari och "
+"februari. De har uppgifter om temperatur, nederbörd och vindstyrka och ber "
+"dig att interpolera deras uppgifter för att uppskatta platser där turisterna"
+" förmodligen kommer att ha optimala väderförhållanden med milda "
+"temperaturer, ingen nederbörd och liten vindstyrka. Kan du identifiera de "
+"områden i din region som uppfyller dessa kriterier?"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:207
+msgid "Something to think about"
+msgstr "Något att tänka på"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:209
+msgid ""
+"If you don't have a computer available, you can use a toposheet and a ruler "
+"to estimate elevation values between contour lines or rainfall values "
+"between fictional weather stations. For example, if rainfall at weather "
+"station A is 50 mm per month and at weather station B it is 90 mm, you can "
+"estimate, that the rainfall at half the distance between weather station A "
+"and B is 70 mm."
+msgstr ""
+"Om du inte har tillgång till en dator kan du använda ett toposblad och en "
+"linjal för att uppskatta höjdvärden mellan höjdkurvor eller nederbördsvärden"
+" mellan fiktiva väderstationer. Om det t.ex. regnar 50 mm per månad vid "
+"väderstation A och 90 mm vid väderstation B, kan du uppskatta att det regnar"
+" 70 mm på halva avståndet mellan väderstation A och B."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:216
+msgid "Further reading"
+msgstr "Ytterligare läsning"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:218
+msgid "**Books**:"
+msgstr "**Böcker**:"
 
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:220
 msgid ""
@@ -78,6 +513,10 @@ msgstr ""
 "Goodchild, D.J. Maguire, D.W.Rhind (Eds.), Geographical Information Systems:"
 " Principles, Techniques, Management and Applications, Wiley."
 
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:228
+msgid "**Websites**:"
+msgstr "**Webbplatser**:"
+
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:230
 msgid "https://en.wikipedia.org/wiki/Interpolation"
 msgstr "https://en.wikipedia.org/wiki/Interpolation"
@@ -85,3 +524,25 @@ msgstr "https://en.wikipedia.org/wiki/Interpolation"
 #: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:231
 msgid "https://en.wikipedia.org/wiki/Delaunay_triangulation"
 msgstr "https://en.wikipedia.org/wiki/Delaunay_triangulation"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:233
+msgid ""
+"The QGIS User Guide also has more detailed information on interpolation "
+"tools provided in QGIS."
+msgstr ""
+"QGIS User Guide innehåller också mer detaljerad information om de "
+"interpolationsverktyg som finns i QGIS."
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:237
+msgid "What's next?"
+msgstr "Vad kommer härnäst?"
+
+#: ../../docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:239
+msgid ""
+"This is the final worksheet in this series. We encourage you to explore QGIS"
+" and use the accompanying QGIS manual to discover all the other things you "
+"can do with GIS software!"
+msgstr ""
+"Detta är det sista arbetsbladet i den här serien. Vi uppmuntrar dig att "
+"utforska QGIS och använda den medföljande QGIS-handboken för att upptäcka "
+"alla andra saker du kan göra med GIS-programvara!"
