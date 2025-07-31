@@ -1,0 +1,1400 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-17 20:03+0000\n"
+"PO-Revision-Date: 2025-02-27 21:31+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/server_manual/getting_started.rst:3
+msgid "Getting Started"
+msgstr "Komma igång"
+
+#: ../../docs/server_manual/getting_started.rst:12
+msgid "Installation on Debian-based systems"
+msgstr "Installation på Debian-baserade system"
+
+#: ../../docs/server_manual/getting_started.rst:16
+msgid ""
+"We will give a short and simple installation how-to for a minimal working "
+"configuration on Debian based systems (including Ubuntu and derivatives). "
+"However, many other distributions and OSs provide packages for QGIS Server."
+msgstr ""
+"Vi kommer att ge en kort och enkel installationsanvisning för en minimal "
+"fungerande konfiguration på Debian-baserade system (inklusive Ubuntu och "
+"derivat). Det finns dock många andra distributioner och operativsystem som "
+"tillhandahåller paket för QGIS Server."
+
+#: ../../docs/server_manual/getting_started.rst:20
+msgid ""
+"In Ubuntu you can use your regular user, prepending ``sudo`` to commands "
+"requiring admin permissions. In Debian you can work as admin (``root``), "
+"without using ``sudo``."
+msgstr ""
+"I Ubuntu kan du använda din vanliga användare och lägga till ``sudo`` till "
+"kommandon som kräver administratörsbehörighet. I Debian kan du arbeta som "
+"administratör (``root``) utan att använda ```sudo``."
+
+#: ../../docs/server_manual/getting_started.rst:24
+msgid ""
+"Requirements and steps to add official QGIS repositories to install QGIS "
+"Server on a Debian based system are provided in `QGIS installers page "
+"<https://qgis.org/resources/installation-guide/#linux>`_. You may want to "
+"install at least the latest Long Term Release."
+msgstr ""
+"Krav och steg för att lägga till officiella QGIS-arkiv för att installera "
+"QGIS Server på ett Debian-baserat system finns på `QGIS installers page "
+"<https://qgis.org/resources/installation-guide/#linux>`_. Du kanske vill "
+"installera åtminstone den senaste Long Term Release."
+
+#: ../../docs/server_manual/getting_started.rst:28
+msgid ""
+"Once the target version repository is configured and QGIS Server installed, "
+"you can test the installation with:"
+msgstr ""
+"När målversionsförvaret har konfigurerats och QGIS Server har installerats "
+"kan du testa installationen med:"
+
+#: ../../docs/server_manual/getting_started.rst:35
+msgid "If you get the following output, the server is correctly installed."
+msgstr "Om du får följande utdata är servern korrekt installerad."
+
+#: ../../docs/server_manual/getting_started.rst:37
+msgid ""
+"Depending on the version of QGIS, you might see slightly different output "
+"reported when you run ``qgis_mapserv.fcgi``."
+msgstr ""
+"Beroende på vilken version av QGIS du har kan du få se lite olika utdata när"
+" du kör ``qgis_mapserv.fcgi``."
+
+#: ../../docs/server_manual/getting_started.rst:55
+msgid ""
+"As seen below, QGIS reports a Status 400 code, which correctly identifies "
+"the request has failed because there is no active http session. This is not "
+"a bug and indicates the server is functioning properly."
+msgstr ""
+"Som visas nedan rapporterar QGIS en Status 400-kod, som korrekt identifierar"
+" att begäran har misslyckats eftersom det inte finns någon aktiv http-"
+"session. Detta är inte en bugg och indikerar att servern fungerar som den "
+"ska."
+
+#: ../../docs/server_manual/getting_started.rst:80
+msgid ""
+"Let's add a sample project. You can use your own, or one from `Training demo"
+" data <https://github.com/qgis/QGIS-Training-Data/>`_:"
+msgstr ""
+"Låt oss lägga till ett exempelprojekt. Du kan använda ditt eget eller ett "
+"från `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_:"
+
+#: ../../docs/server_manual/getting_started.rst:92
+msgid ""
+"Of course, you can use your favorite GIS software to open this file and take"
+" a look at the configuration and available layers."
+msgstr ""
+"Naturligtvis kan du använda din favorit GIS-programvara för att öppna den "
+"här filen och titta på konfigurationen och tillgängliga lager."
+
+#: ../../docs/server_manual/getting_started.rst:95
+msgid ""
+"To properly deploy QGIS server you need a HTTP server. Recommended choices "
+"are `Apache <https://httpd.apache.org/docs/>`_ or `NGINX "
+"<https://nginx.org/en/docs/>`__."
+msgstr ""
+"För att kunna driftsätta QGIS-servern på rätt sätt behöver du en HTTP-"
+"server. Rekommenderade val är `Apache <https://httpd.apache.org/docs/>`_ "
+"eller `NGINX <https://nginx.org/en/docs/>`__."
+
+#: ../../docs/server_manual/getting_started.rst:103
+msgid "Apache HTTP Server"
+msgstr "Apache HTTP-server"
+
+#: ../../docs/server_manual/getting_started.rst:105
+#: ../../docs/server_manual/getting_started.rst:240
+msgid ""
+"In the following, please replace ``qgis.demo`` with the name or IP address "
+"of your server."
+msgstr ""
+"I det följande ska du ersätta ``qgis.demo`` med namnet på eller IP-adressen "
+"till din server."
+
+#: ../../docs/server_manual/getting_started.rst:107
+msgid ""
+"Install Apache and `mod_fcgid "
+"<https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_:"
+msgstr ""
+"Installera Apache och `mod_fcgid "
+"<https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_:"
+
+#: ../../docs/server_manual/getting_started.rst:114
+msgid ""
+"You can run QGIS Server on your default website, but let's configure a "
+"`virtualhost <https://httpd.apache.org/docs/2.4/vhosts>`_ specifically for "
+"this, as follows."
+msgstr ""
+"Du kan köra QGIS Server på din standardwebbplats, men låt oss konfigurera "
+"ett `virtualhost <https://httpd.apache.org/docs/2.4/vhosts>`_ specifikt för "
+"detta, enligt följande."
+
+#: ../../docs/server_manual/getting_started.rst:117
+msgid ""
+"In the :file:`/etc/apache2/sites-available` directory, create a file called "
+":file:`qgis.demo.conf`, with this content:"
+msgstr ""
+"I katalogen :file:`/etc/apache2/sites-available` skapar du en fil med namnet"
+" :file:`qgis.demo.conf` med följande innehåll:"
+
+#: ../../docs/server_manual/getting_started.rst:170
+msgid ""
+"Some of the above configuration options are explained in the Server "
+":ref:`environment variables <server_env_variables>` and :ref:`pg_service "
+"file <pg-service-file>` sections."
+msgstr ""
+"Några av ovanstående konfigurationsalternativ förklaras i avsnitten Server "
+":ref:`environment variables <server_env_variables>` och :ref:`pg_service "
+"file <pg-service-file>`."
+
+#: ../../docs/server_manual/getting_started.rst:174
+msgid ""
+"Let's now create the directories that will store the QGIS Server logs and "
+"the authentication database:"
+msgstr ""
+"Låt oss nu skapa de kataloger som ska lagra QGIS Server-loggar och "
+"autentiseringsdatabasen:"
+
+#: ../../docs/server_manual/getting_started.rst:186
+msgid ""
+"``www-data`` is the Apache user on Debian based systems and we need Apache "
+"to have access to those locations or files. The ``chown www-data...`` "
+"commands change the owner of the respective directories and files to ``www-"
+"data``."
+msgstr ""
+"``www-data`` är Apache-användaren på Debian-baserade system och vi behöver "
+"Apache för att få tillgång till dessa platser eller filer. Kommandona "
+"``chown www-data...`` ändrar ägaren till respektive kataloger och filer till"
+" ``www-data``."
+
+#: ../../docs/server_manual/getting_started.rst:191
+msgid ""
+"We can now enable the virtual host and the ``fcgid`` mod if it's not already"
+" done:"
+msgstr ""
+"Vi kan nu aktivera den virtuella värden och ``fcgid`` mod om det inte redan "
+"är gjort:"
+
+#: ../../docs/server_manual/getting_started.rst:199
+msgid "Now restart Apache for the new configuration to be taken into account:"
+msgstr "Starta nu om Apache så att den nya konfigurationen tas i beaktande:"
+
+#: ../../docs/server_manual/getting_started.rst:205
+#, python-format
+msgid ""
+"Now that Apache knows that he should answer requests to http://qgis.demo we "
+"also need to setup the client system so that it knows who ``qgis.demo`` is. "
+"We do that by adding ``127.0.0.1 qgis.demo`` in the `hosts "
+"<https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file."
+msgstr ""
+"Nu när Apache vet att han ska svara på förfrågningar till http://qgis.demo "
+"måste vi också konfigurera klientsystemet så att det vet vem ``qgis.demo`` "
+"är. Det gör vi genom att lägga till ``127.0.0.1 qgis.demo`` i filen `hosts "
+"<https://en.wikipedia.org/wiki/Hosts_%28file%29>`_."
+
+#: ../../docs/server_manual/getting_started.rst:217
+msgid ""
+"Remember that both the :file:`qgis.demo.conf` and :file:`/etc/hosts` files "
+"should be configured for your setup to work. You can also test the access to"
+" your QGIS Server from other clients on the network (e.g. Windows or macos "
+"machines) by going to their :file:`/etc/hosts` file and point the "
+"``qgis.demo`` name to whatever IP the server machine has on the network (not"
+" ``127.0.0.1`` as it is the local IP, only accessible from the local "
+"machine).  On ``*nix`` machines the :file:`hosts` file is located in "
+":file:`/etc`, while on Windows it's under the "
+":file:`C:\\\\Windows\\\\System32\\\\drivers\\\\etc` directory. Under Windows"
+" you need to start your text editor with administrator privileges before "
+"opening the hosts file."
+msgstr ""
+"Kom ihåg att både filerna :file:`qgis.demo.conf` och :file:`/etc/hosts` "
+"måste vara konfigurerade för att din installation ska fungera. Du kan också "
+"testa åtkomsten till din QGIS-server från andra klienter i nätverket (t.ex. "
+"Windows- eller macos-maskiner) genom att gå till deras "
+":file:`/etc/hosts`-fil och peka namnet ``qgis.demo`` till den IP som "
+"servermaskinen har i nätverket (inte ``127.0.0.1`` eftersom det är den "
+"lokala IP:n, endast tillgänglig från den lokala maskinen).  På "
+"``*nix``-maskiner finns filen :file:`hosts` i :file:`/etc`, medan den i "
+"Windows finns i katalogen "
+":file:`C:\\\\Windows\\\\System32\\drivers\\\\etc``. Under Windows måste du "
+"starta din textredigerare med administratörsbehörighet innan du öppnar "
+"hosts-filen."
+
+#: ../../docs/server_manual/getting_started.rst:229
+msgid ""
+"QGIS Server is now available at http://qgis.demo. To check, type in a "
+"browser, as in the simple case:"
+msgstr ""
+"QGIS Server är nu tillgänglig på http://qgis.demo. För att kontrollera, "
+"skriv in i en webbläsare, som i det enkla fallet:"
+
+#: ../../docs/server_manual/getting_started.rst:238
+msgid "NGINX HTTP Server"
+msgstr "NGINX HTTP-server"
+
+#: ../../docs/server_manual/getting_started.rst:242
+msgid ""
+"You can also use QGIS Server with `NGINX <https://nginx.org/en/docs/>`__. "
+"Unlike Apache, NGINX does not automatically spawn FastCGI processes. The "
+"FastCGI processes are to be started by something else."
+msgstr ""
+"Du kan också använda QGIS Server med `NGINX <https://nginx.org/en/docs/>`__."
+" Till skillnad från Apache startar NGINX inte automatiskt FastCGI-processer."
+" FastCGI-processerna ska startas av något annat."
+
+#: ../../docs/server_manual/getting_started.rst:246
+msgid "Install NGINX:"
+msgstr "Installera NGINX:"
+
+#: ../../docs/server_manual/getting_started.rst:253
+msgid ""
+"As a first option, you can use **spawn-fcgi** or **fcgiwrap** to start and "
+"manage the QGIS Server processes. Official Debian packages exist for both. "
+"When you have no X server running and you need, for example, printing, you "
+"can use :ref:`xvfb <xvfb>`."
+msgstr ""
+"Som ett första alternativ kan du använda **spawn-fcgi** eller **fcgiwrap** "
+"för att starta och hantera QGIS Server-processerna. Officiella Debian-paket "
+"finns för båda. När du inte har någon X-server igång och du till exempel "
+"behöver skriva ut, kan du använda :ref:`xvfb <xvfb>`."
+
+#: ../../docs/server_manual/getting_started.rst:259
+msgid ""
+"Another option is to rely on **Systemd**, the init system for GNU/Linux that"
+" most Linux distributions use today. One of the advantages of this method is"
+" that it requires no other components or processes. It’s meant to be simple,"
+" yet robust and efficient for production deployments."
+msgstr ""
+"Ett annat alternativ är att förlita sig på **Systemd**, init-systemet för "
+"GNU/Linux som de flesta Linux-distributioner använder idag. En av fördelarna"
+" med den här metoden är att den inte kräver några andra komponenter eller "
+"processer. Den är tänkt att vara enkel, men ändå robust och effektiv för "
+"produktionsinstallationer."
+
+#: ../../docs/server_manual/getting_started.rst:266
+msgid "NGINX Configuration"
+msgstr "NGINX-konfiguration"
+
+#: ../../docs/server_manual/getting_started.rst:268
+msgid ""
+"The **include fastcgi_params;** used in the previous configuration is "
+"important, as it adds the parameters from :file:`/etc/nginx/fastcgi_params`:"
+msgstr ""
+"Den **include fastcgi_params;** som används i den föregående konfigurationen"
+" är viktig, eftersom den lägger till parametrarna från "
+":file:`/etc/nginx/fastcgi_params`:"
+
+#: ../../docs/server_manual/getting_started.rst:298
+msgid ""
+"Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS "
+"Server. In the NGINX configuration file, :file:`/etc/nginx/nginx.conf`, you "
+"have to use ``fastcgi_param`` instruction to define these variables as shown"
+" below:"
+msgstr ""
+"Dessutom kan du använda vissa :ref:`qgis-server-envvar` för att konfigurera "
+"QGIS Server. I konfigurationsfilen för NGINX, :file:`/etc/nginx/nginx.conf`,"
+" måste du använda instruktionen ``fastcgi_param`` för att definiera dessa "
+"variabler enligt nedan:"
+
+#: ../../docs/server_manual/getting_started.rst:313
+msgid "FastCGI wrappers"
+msgstr "FastCGI-omslag"
+
+#: ../../docs/server_manual/getting_started.rst:317
+msgid ""
+"**fcgiwrap** is easier to set up than **spawn-fcgi**, because it's already "
+"wrapped in a Systemd service. But it also leads to a solution that is much "
+"slower than using spawn-fcgi. With fcgiwrap, a new QGIS Server process is "
+"created on each request, meaning that the QGIS Server initialization "
+"process, which includes reading and parsing the QGIS project file, is done "
+"on each request. With spawn-fcgi, the QGIS Server process remains alive "
+"between requests, resulting in much better performance. For that reason, "
+"spawn-fcgi is recommended for production use."
+msgstr ""
+"**fcgiwrap** är enklare att installera än **spawn-fcgi**, eftersom den redan"
+" är inkapslad i en Systemd-tjänst. Men det leder också till en lösning som "
+"är mycket långsammare än att använda spawn-fcgi. Med fcgiwrap skapas en ny "
+"QGIS Server-process vid varje begäran, vilket innebär att QGIS Server-"
+"initialiseringsprocessen, som inkluderar läsning och parsning av QGIS-"
+"projektfilen, görs vid varje begäran. Med spawn-fcgi förblir QGIS Server-"
+"processen vid liv mellan begäranden, vilket resulterar i mycket bättre "
+"prestanda. Av den anledningen rekommenderas spawn-fcgi för "
+"produktionsanvändning."
+
+#: ../../docs/server_manual/getting_started.rst:327
+msgid "spawn-fcgi"
+msgstr "spawn-fcgi"
+
+#: ../../docs/server_manual/getting_started.rst:329
+msgid ""
+"If you want to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
+"fcgi/wiki>`_:"
+msgstr ""
+"Om du vill använda `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-"
+"fcgi/wiki>`_:"
+
+#: ../../docs/server_manual/getting_started.rst:331
+msgid "The first step is to install the package:"
+msgstr "Det första steget är att installera paketet:"
+
+#: ../../docs/server_manual/getting_started.rst:338
+#: ../../docs/server_manual/getting_started.rst:419
+msgid ""
+"Then, introduce the following block in your NGINX server configuration:"
+msgstr "Inför sedan följande block i din NGINX-serverkonfiguration:"
+
+#: ../../docs/server_manual/getting_started.rst:348
+msgid "And restart NGINX to take into account the new configuration:"
+msgstr "Och starta om NGINX för att ta hänsyn till den nya konfigurationen:"
+
+#: ../../docs/server_manual/getting_started.rst:354
+msgid ""
+"Finally, considering that there is no default service file for spawn-fcgi, "
+"you have to manually start QGIS Server in your terminal:"
+msgstr ""
+"Slutligen, med tanke på att det inte finns någon standardtjänstfil för "
+"spawn-fcgi, måste du starta QGIS Server manuellt i din terminal:"
+
+#: ../../docs/server_manual/getting_started.rst:363
+#: ../../docs/server_manual/getting_started.rst:438
+msgid "QGIS Server is now available at http://qgis.demo/qgisserver."
+msgstr "QGIS Server finns nu tillgänglig på http://qgis.demo/qgisserver."
+
+#: ../../docs/server_manual/getting_started.rst:367
+msgid ""
+"When using spawn-fcgi, you may directly define environment variables before "
+"running the server. For example: ``export QGIS_SERVER_LOG_STDERR=1``"
+msgstr ""
+"När du använder spawn-fcgi kan du direkt definiera miljövariabler innan du "
+"kör servern. Till exempel: ``export QGIS_SERVER_LOG_STDERR=1``"
+
+#: ../../docs/server_manual/getting_started.rst:371
+msgid ""
+"Of course, you can add an init script to start QGIS Server at boot time or "
+"whenever you want. For example with **systemd**:"
+msgstr ""
+"Naturligtvis kan du lägga till ett init-skript för att starta QGIS Server "
+"vid start eller när du vill. Till exempel med **systemd**:"
+
+#: ../../docs/server_manual/getting_started.rst:374
+msgid ""
+"Edit the file :file:`/etc/systemd/system/qgis-server.service` with this "
+"content:"
+msgstr ""
+"Redigera filen :file:`/etc/systemd/system/qgis-server.service` med detta "
+"innehåll:"
+
+#: ../../docs/server_manual/getting_started.rst:397
+msgid "Then enable and start the service:"
+msgstr "Aktivera sedan tjänsten och starta den:"
+
+#: ../../docs/server_manual/getting_started.rst:405
+msgid ""
+"With the above commands spawn-fcgi spawns only one QGIS Server process."
+msgstr ""
+"Med ovanstående kommandon skapar spawn-fcgi endast en QGIS Server-process."
+
+#: ../../docs/server_manual/getting_started.rst:408
+msgid "fcgiwrap"
+msgstr "fcgiwrap"
+
+#: ../../docs/server_manual/getting_started.rst:410
+msgid ""
+"Using `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ is "
+"much easier to setup than **spawn-fcgi** but it's much slower."
+msgstr ""
+"Att använda `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ är "
+"mycket enklare att installera än **spawn-fcgi** men det går mycket "
+"långsammare."
+
+#: ../../docs/server_manual/getting_started.rst:413
+msgid "You first have to install the corresponding package:"
+msgstr "Du måste först installera motsvarande paket:"
+
+#: ../../docs/server_manual/getting_started.rst:431
+msgid ""
+"Finally, restart NGINX and **fcgiwrap** to take into account the new "
+"configuration:"
+msgstr ""
+"Slutligen startar du om NGINX och **fcgiwrap** för att ta hänsyn till den "
+"nya konfigurationen:"
+
+#: ../../docs/server_manual/getting_started.rst:442
+msgid "Systemd"
+msgstr "Systemd"
+
+#: ../../docs/server_manual/getting_started.rst:444
+msgid ""
+"QGIS Server needs a running X Server to be fully usable, in particular for "
+"printing. In the case you already have a running X Server, you can use "
+"systemd services."
+msgstr ""
+"QGIS Server behöver en fungerande X Server för att kunna användas fullt ut, "
+"särskilt för utskrifter. Om du redan har en X-server som körs kan du använda"
+" systemd-tjänster."
+
+#: ../../docs/server_manual/getting_started.rst:447
+msgid ""
+"This method, to deploy QGIS Server, relies on two Systemd units to "
+"configure: a `Socket unit "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.socket.html>`_"
+" and a `Service unit "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html>`_."
+msgstr ""
+"Den här metoden för att distribuera QGIS Server är beroende av två Systemd-"
+"enheter som ska konfigureras: en `Socket-enhet "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.socket.html>`_"
+" och en `Service-enhet "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html>`_."
+
+#: ../../docs/server_manual/getting_started.rst:451
+msgid ""
+"The **QGIS Server Socket unit** defines and creates a file system socket, "
+"used by NGINX to start and communicate with QGIS Server. The Socket unit has"
+" to be configured with ``Accept=false``, meaning that the calls to the "
+"``accept()`` system call are delegated to the process created by the Service"
+" unit. It is located in :file:`/etc/systemd/system/qgis-server@.socket`, "
+"which is actually a template:"
+msgstr ""
+"Enheten **QGIS Server Socket** definierar och skapar en filsystemssocket som"
+" används av NGINX för att starta och kommunicera med QGIS Server. Socket-"
+"enheten måste konfigureras med ``Accept=false``, vilket innebär att anropen "
+"till systemanropet ``accept()`` delegeras till den process som skapas av "
+"Service-enheten. Den finns i :file:`/etc/systemd/system/qgis-"
+"server@.socket`, som faktiskt är en mall:"
+
+#: ../../docs/server_manual/getting_started.rst:474
+msgid "Now enable and start sockets:"
+msgstr "Aktivera och starta nu socklar:"
+
+#: ../../docs/server_manual/getting_started.rst:480
+msgid ""
+"The **QGIS Server Service unit** defines and starts the QGIS Server process."
+" The important part is that the Service process’ standard input is connected"
+" to the socket defined by the Socket unit. This has to be configured using "
+"``StandardInput=socket`` in the Service unit configuration located in "
+":file:`/etc/systemd/system/qgis-server@.service`:"
+msgstr ""
+"Enheten **QGIS Server Service** definierar och startar QGIS Server-"
+"processen. Det viktiga är att serviceprocessens standardinmatning är "
+"ansluten till det uttag som definieras av Socket-enheten. Detta måste "
+"konfigureras med hjälp av ``StandardInput=socket`` i konfigurationen för "
+"serviceenheten som finns i :file:`/etc/systemd/system/qgis-server@.service`:"
+
+#: ../../docs/server_manual/getting_started.rst:504
+msgid ""
+"The QGIS Server :ref:`environment variables <qgis-server-envvar>` are "
+"defined in a separate file, :file:`/etc/qgis-server/env`. It could look like"
+" this:"
+msgstr ""
+"QGIS-serverns :ref:`miljövariabler <qgis-server-envvar>` definieras i en "
+"separat fil, :file:`/etc/qgis-server/env`. Den kan se ut så här:"
+
+#: ../../docs/server_manual/getting_started.rst:514
+msgid "Now start socket service:"
+msgstr "Starta nu socket-tjänsten:"
+
+#: ../../docs/server_manual/getting_started.rst:520
+msgid ""
+"Finally, for the NGINX HTTP server, let's introduce the configuration for "
+"this setup:"
+msgstr ""
+"Slutligen, för NGINX HTTP-servern, låt oss introducera konfigurationen för "
+"den här installationen:"
+
+#: ../../docs/server_manual/getting_started.rst:541
+msgid "Now restart NGINX for the new configuration to be taken into account:"
+msgstr ""
+"Starta nu om NGINX för att den nya konfigurationen ska tas med i "
+"beräkningen:"
+
+#: ../../docs/server_manual/getting_started.rst:547
+msgid ""
+"Thanks to Oslandia for sharing `their tutorial "
+"<https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_."
+msgstr ""
+"Tack till Oslandia för att de delade med sig av sin handledning "
+"<https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_."
+
+#: ../../docs/server_manual/getting_started.rst:552
+msgid "Xvfb"
+msgstr "Xvfb"
+
+#: ../../docs/server_manual/getting_started.rst:553
+msgid ""
+"QGIS Server needs a running X Server to be fully usable, in particular for "
+"printing. On servers it is usually recommended not to install it, so you may"
+" use ``xvfb`` to have a virtual X environment."
+msgstr ""
+"QGIS Server behöver en fungerande X-server för att kunna användas fullt ut, "
+"i synnerhet för utskrifter. På servrar rekommenderas det vanligtvis att inte"
+" installera det, så du kan använda ``xvfb`` för att ha en virtuell X-miljö."
+
+#: ../../docs/server_manual/getting_started.rst:557
+msgid ""
+"If you're running the Server in graphic/X11 environment then there is no "
+"need to install xvfb. More info at https://www.itopen.it/qgis-server-setup-"
+"notes/."
+msgstr ""
+"Om du kör servern i en grafisk/X11-miljö behöver du inte installera xvfb. "
+"Mer information finns på https://www.itopen.it/qgis-server-setup-notes/."
+
+#: ../../docs/server_manual/getting_started.rst:560
+msgid "To install the package:"
+msgstr "För att installera paketet:"
+
+#: ../../docs/server_manual/getting_started.rst:566
+msgid ""
+"Create the service file, :file:`/etc/systemd/system/xvfb.service`, with this"
+" content:"
+msgstr ""
+"Skapa servicefilen, :file:`/etc/systemd/system/xvfb.service`, med detta "
+"innehåll:"
+
+#: ../../docs/server_manual/getting_started.rst:580
+msgid "Enable, start and check the status of the ``xvfb.service``:"
+msgstr "Aktivera, starta och kontrollera statusen för ``xvfb.service``:"
+
+#: ../../docs/server_manual/getting_started.rst:587
+msgid ""
+"Then, according to your HTTP server, you should configure the **DISPLAY** "
+"parameter or directly use **xvfb-run**."
+msgstr ""
+"Sedan ska du, beroende på din HTTP-server, konfigurera parametern "
+"**DISPLAY** eller direkt använda **xvfb-run**."
+
+#: ../../docs/server_manual/getting_started.rst:590
+msgid "Using Apache:"
+msgstr "Använda Apache:"
+
+#: ../../docs/server_manual/getting_started.rst:592
+msgid "Add to your *Fcgid* configuration (see :ref:`httpserver`):"
+msgstr "Lägg till i din *Fcgid*-konfiguration (se :ref:`httpserver`):"
+
+#: ../../docs/server_manual/getting_started.rst:598
+msgid "Restart Apache for the new configuration to be taken into account:"
+msgstr "Starta om Apache för att den nya konfigurationen ska tas i beaktande:"
+
+#: ../../docs/server_manual/getting_started.rst:604
+msgid "Using NGINX"
+msgstr "Använda NGINX"
+
+#: ../../docs/server_manual/getting_started.rst:606
+msgid "With spawn-fcgi using ``xvfb-run``:"
+msgstr "Med spawn-fcgi med hjälp av ``xvfb-run``:"
+
+#: ../../docs/server_manual/getting_started.rst:614
+msgid ""
+"With the **DISPLAY** environment variable in the HTTP server configuration."
+msgstr "Med miljövariabeln **DISPLAY** i HTTP-serverns konfiguration."
+
+#: ../../docs/server_manual/getting_started.rst:621
+msgid "Installation on Windows"
+msgstr "Installation i Windows"
+
+#: ../../docs/server_manual/getting_started.rst:625
+msgid ""
+"QGIS Server can also be installed on Windows systems using the OSGeo4W "
+"network installer (https://qgis.org/resources/installation-guide/#windows)."
+msgstr ""
+"QGIS Server kan också installeras på Windows-system med hjälp av "
+"nätverksinstallatören OSGeo4W (https://qgis.org/resources/installation-"
+"guide/#windows)."
+
+#: ../../docs/server_manual/getting_started.rst:628
+msgid "A simple procedure is the following:"
+msgstr "Ett enkelt förfarande är följande:"
+
+#: ../../docs/server_manual/getting_started.rst:630
+msgid "Download and run the OSGeo4W installer"
+msgstr "Ladda ner och kör installationsprogrammet för OSGeo4W"
+
+#: ../../docs/server_manual/getting_started.rst:631
+msgid ""
+"Follow the \"Advanced Install\" and install the **QGIS Desktop**, **QGIS "
+"Server** **apache** and **mod_fcgid** packages."
+msgstr ""
+"Följ \"Advanced Install\" och installera paketen **QGIS Desktop**, **QGIS "
+"Server** **apache** och **mod_fcgid**."
+
+#: ../../docs/server_manual/getting_started.rst:637
+msgid "Apache is not directly installed as a service on Windows. You need to:"
+msgstr ""
+"Apache installeras inte direkt som en tjänst i Windows. Du måste göra det:"
+
+#: ../../docs/server_manual/getting_started.rst:639
+msgid ""
+"Right-click the :file:`OSGeo4W.bat` file at the root of the "
+":file:`C:\\\\OSGeo4W\\\\` folder (if the default installation paths have "
+"been used) and select :guilabel:`Run as administrator`"
+msgstr ""
+"Högerklicka på filen :file:`OSGeo4W.bat` i roten av mappen "
+":file:`C:\\\\OSGeo4W\\\\` (om standardinstallationssökvägarna har använts) "
+"och välj :guilabel:`Kör som administratör`"
+
+#: ../../docs/server_manual/getting_started.rst:642
+msgid "In the console, run ``apache-install.bat``, which will output"
+msgstr "Kör ``apache-install.bat`` i konsolen, vilket ger följande resultat"
+
+#: ../../docs/server_manual/getting_started.rst:653
+msgid ""
+"The service is started as you can notice in the report. But the server may "
+"fail to run due to missing custom configuration."
+msgstr ""
+"Tjänsten startas som du kan se i rapporten. Men servern kan misslyckas med "
+"att köras på grund av att anpassad konfiguration saknas."
+
+#: ../../docs/server_manual/getting_started.rst:655
+msgid ""
+"Edit the :file:`C:\\\\OSGeo4w\\\\apps\\\\apache\\\\conf\\\\httpd.conf` file "
+"with the following changes (various other combinations are possible):"
+msgstr ""
+"Redigera filen :file:`C:\\\\OSGeo4w\\\\apps\\\\apache\\\\conf\\\\httpd.conf`"
+" med följande ändringar (flera andra kombinationer är möjliga):"
+
+#: ../../docs/server_manual/getting_started.rst:662
+msgid "Purpose"
+msgstr "Syfte"
+
+#: ../../docs/server_manual/getting_started.rst:663
+msgid "Existing config"
+msgstr "Befintlig konfiguration"
+
+#: ../../docs/server_manual/getting_started.rst:664
+msgid "Replacement"
+msgstr "Ersättning"
+
+#: ../../docs/server_manual/getting_started.rst:665
+msgid ""
+"(Optional) Customize the address to listen to using an IP and/or port, You "
+"can and add as many entries as you wish."
+msgstr ""
+"(Valfritt) Anpassa adressen att lyssna på med hjälp av en IP och/eller port,"
+" Du kan och lägga till så många poster som du vill."
+
+#: ../../docs/server_manual/getting_started.rst:676
+msgid "Indicate where to find the script files"
+msgstr "Ange var du hittar skriptfilerna"
+
+#: ../../docs/server_manual/getting_started.rst:685
+msgid "Provide permissions on the script folder"
+msgstr "Tillhandahålla behörigheter för skriptmappen"
+
+#: ../../docs/server_manual/getting_started.rst:702
+msgid "Enable file extensions to use for script files. Uncomment and complete"
+msgstr ""
+"Aktivera filtillägg som ska användas för skriptfiler. Avkommentera och fyll "
+"i"
+
+#: ../../docs/server_manual/getting_started.rst:710
+msgid "Add more OSGeo4W custom configuration variables"
+msgstr "Lägg till fler anpassade konfigurationsvariabler för OSGeo4W"
+
+#: ../../docs/server_manual/getting_started.rst:723
+msgid "Restart the Apache web server"
+msgstr "Starta om Apache-webbservern"
+
+#: ../../docs/server_manual/getting_started.rst:729
+msgid ""
+"Open browser window to testing a GetCapabilities request to QGIS Server. "
+"Replace ``localhost:8080`` with the IP and port you set to listen."
+msgstr ""
+"Öppna webbläsarfönstret för att testa en GetCapabilities-begäran till QGIS "
+"Server. Ersätt ``localhost:8080`` med den IP och port som du har ställt in "
+"för att lyssna."
+
+#: ../../docs/server_manual/getting_started.rst:736
+msgid ""
+"A :file:`XML` file with the capabilities should be returned. Your server is "
+"ready to use."
+msgstr ""
+"En :file:`XML`-fil med funktionerna bör returneras. Din server är klar att "
+"användas."
+
+#: ../../docs/server_manual/getting_started.rst:744
+msgid "Serve a project"
+msgstr "Servera ett projekt"
+
+#: ../../docs/server_manual/getting_started.rst:746
+msgid "Now that QGIS Server is installed and running, we just have to use it."
+msgstr ""
+"Nu när QGIS Server är installerat och igång är det bara att använda det."
+
+#: ../../docs/server_manual/getting_started.rst:748
+msgid ""
+"Obviously, we need a QGIS project to work on. Of course, you can fully "
+"customize your project by defining contact information, precise some "
+"restrictions on CRS or even exclude some layers. Everything you need to know"
+" about that is described later in :ref:`Creatingwmsfromproject`."
+msgstr ""
+"Självklart behöver vi ett QGIS-projekt att arbeta med. Naturligtvis kan du "
+"anpassa ditt projekt helt och hållet genom att definiera kontaktinformation,"
+" ange vissa begränsningar för CRS eller till och med utesluta vissa lager. "
+"Allt du behöver veta om detta beskrivs senare i "
+":ref:`Creatingwmsfromproject`."
+
+#: ../../docs/server_manual/getting_started.rst:753
+msgid ""
+"But for now, we are going to use a simple project already configured and "
+"previously downloaded in :file:`/home/qgis/projects/world.qgs`, as described"
+" above."
+msgstr ""
+"Men nu ska vi använda ett enkelt projekt som redan är konfigurerat och "
+"tidigare nedladdat i :file:`/home/qgis/projects/world.qgs`, enligt "
+"beskrivningen ovan."
+
+#: ../../docs/server_manual/getting_started.rst:756
+msgid ""
+"By opening the project and taking a quick look on layers, we know that 4 "
+"layers are currently available:"
+msgstr ""
+"Genom att öppna projektet och ta en snabb titt på lager vet vi att 4 lager "
+"för närvarande är tillgängliga:"
+
+#: ../../docs/server_manual/getting_started.rst:759
+msgid "airports"
+msgstr "airports"
+
+#: ../../docs/server_manual/getting_started.rst:760
+msgid "places"
+msgstr "places"
+
+#: ../../docs/server_manual/getting_started.rst:761
+msgid "countries"
+msgstr "countries"
+
+#: ../../docs/server_manual/getting_started.rst:762
+msgid "countries_shapeburst"
+msgstr "countries_shapeburst"
+
+#: ../../docs/server_manual/getting_started.rst:764
+msgid ""
+"You don't have to understand the full request for now but you may retrieve a"
+" map with some of the previous layers thanks to QGIS Server by doing "
+"something like this in your web browser to retrieve the *countries* layer:"
+msgstr ""
+"Du behöver inte förstå hela begäran för tillfället, men du kan hämta en "
+"karta med några av de tidigare skikten tack vare QGIS Server genom att göra "
+"något liknande i din webbläsare för att hämta *countries*-skiktet:"
+
+#: ../../docs/server_manual/getting_started.rst:768
+msgid ""
+"If you followed the above instructions to install an Apache HTTP Server:"
+msgstr ""
+"Om du följde instruktionerna ovan för att installera en Apache HTTP Server:"
+
+#: ../../docs/server_manual/getting_started.rst:774
+msgid ""
+"If you followed the above instructions to install an NGINX HTTP Server:"
+msgstr ""
+"Om du följde instruktionerna ovan för att installera en NGINX HTTP Server:"
+
+#: ../../docs/server_manual/getting_started.rst:780
+msgid "If you obtain the next image, then QGIS Server is running correctly:"
+msgstr "Om du får fram nästa bild körs QGIS Server korrekt:"
+
+#: ../../docs/server_manual/getting_started.rst:785
+msgid "Server response to a basic GetMap request"
+msgstr "Serverns svar på en grundläggande GetMap-begäran"
+
+#: ../../docs/server_manual/getting_started.rst:787
+msgid ""
+"Note that you may define **QGIS_PROJECT_FILE** environment variable to use a"
+" project by default instead of giving a **MAP** parameter (see :ref:`qgis-"
+"server-envvar`)."
+msgstr ""
+"Observera att du kan definiera miljövariabeln **QGIS_PROJECT_FILE** för att "
+"använda ett projekt som standard istället för att ange en **MAP**-parameter "
+"(se :ref:`qgis-server-envvar`)."
+
+#: ../../docs/server_manual/getting_started.rst:790
+msgid "For example with spawn-fcgi:"
+msgstr "Till exempel med spawn-fcgi:"
+
+#: ../../docs/server_manual/getting_started.rst:802
+msgid "Configure your project"
+msgstr "Konfigurera ditt projekt"
+
+#: ../../docs/server_manual/getting_started.rst:804
+msgid ""
+"To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a "
+"QGIS project file with some data or use one of your current projects. Define"
+" the colors and styles of the layers in QGIS and the project CRS, if not "
+"already defined. Then, go to the :guilabel:`QGIS Server` menu of the "
+":menuselection:`Project --> Properties...` dialog and provide some "
+"information about the OWS in the :guilabel:`Service Capabilities` tab."
+msgstr ""
+"För att tillhandahålla en ny QGIS Server WMS, WFS, OAPIF eller WCS måste du "
+"skapa en QGIS-projektfil med vissa data eller använda ett av dina nuvarande "
+"projekt. Definiera färger och stilar för lagren i QGIS och projektets CRS, "
+"om det inte redan är definierat. Gå sedan till menyn :guilabel:`QGIS Server`"
+" i dialogrutan :menuselection:`Project --> Properties...` och ange lite "
+"information om OWS på fliken :guilabel:`Service Capabilities`."
+
+#: ../../docs/server_manual/getting_started.rst:816
+msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
+msgstr "Definitioner för ett QGIS Server WMS/WFS/WCS-projekt"
+
+#: ../../docs/server_manual/getting_started.rst:818
+msgid ""
+"You have to :guilabel:`Enable Service Capabilities` first, if it is "
+"deactivated. This will appear in the GetCapabilities response of the WMS, "
+"WFS or WCS. If you don't check |checkbox| :guilabel:`Enable Service "
+"capabilities`, QGIS Server will use the information given in the "
+":file:`wms_metadata.xml` file located in the :file:`cgi-bin` folder."
+msgstr ""
+"Du måste :guilabel:`Enable Service Capabilities` först, om den är "
+"avaktiverad. Detta kommer att visas i GetCapabilities-svaret från WMS, WFS "
+"eller WCS. Om du inte markerar kryssrutan :guilabel:`Enable Service "
+"capabilities` kommer QGIS Server att använda informationen i filen "
+":file:`wms_metadata.xml` som finns i mappen :file:`cgi-bin`."
+
+#: ../../docs/server_manual/getting_started.rst:1070
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/server_manual/getting_started.rst:825
+msgid "WMS capabilities"
+msgstr "WMS-funktioner"
+
+#: ../../docs/server_manual/getting_started.rst:832
+msgid "Definitions in the WMS tab"
+msgstr "Definitioner i fliken WMS"
+
+#: ../../docs/server_manual/getting_started.rst:834
+msgid ""
+"In the :guilabel:`WMS` tab, you can define the options for the WMS "
+"capabilities."
+msgstr ""
+"På fliken :guilabel:`WMS` kan du definiera alternativen för WMS-"
+"funktionerna."
+
+#: ../../docs/server_manual/getting_started.rst:836
+msgid ""
+"Check :guilabel:`Advertised extent` to define the extent advertised in the "
+"WMS GetCapabilities response. The :ref:`spatial extent selector "
+"<extent_selector>` widget helps you enter the extent as a ``xmin, xmax, "
+"ymin, ymax`` text or pick it from the map canvas, layers, bookmarks..."
+msgstr ""
+"Markera :guilabel:`Advertiserad utsträckning` för att definiera den "
+"utsträckning som annonseras i WMS GetCapabilities-svaret. Widgeten "
+":ref:``spatial extent selector <extent_selector>` hjälper dig att ange "
+"omfattningen som en ``xmin, xmax, ymin, ymax`` text eller plocka den från "
+"kartans canvas, lager, bokmärken..."
+
+#: ../../docs/server_manual/getting_started.rst:843
+msgid ""
+"By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict in "
+"which coordinate reference systems (CRS) QGIS Server will offer to render "
+"maps. It is recommended that you restrict the offered CRS as this reduces "
+"the size of the WMS GetCapabilities response. Use the |symbologyAdd| button "
+"below to select those CRSs from the Coordinate Reference System Selector, or"
+" click :guilabel:`Used` to add the CRSs used in the QGIS project to the "
+"list."
+msgstr ""
+"Genom att markera |checkbox| :guilabel:`CRS restrictions` kan du begränsa i "
+"vilka koordinatreferenssystem (CRS) QGIS Server kommer att erbjuda för att "
+"rendera kartor. Det rekommenderas att du begränsar de erbjudna CRS eftersom "
+"detta minskar storleken på WMS GetCapabilities-svaret. Använd knappen "
+"|symbologyAdd| nedan för att välja dessa CRS från väljaren för "
+"koordinatreferenssystem, eller klicka på :guilabel:`Used` för att lägga till"
+" de CRS som används i QGIS-projektet i listan."
+
+#: ../../docs/server_manual/getting_started.rst:1072
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/server_manual/getting_started.rst:851
+msgid ""
+"If you have print layouts defined in your project, they will be listed in "
+"the ``GetProjectSettings`` response, and they can be used by the GetPrint "
+"request to create prints, using one of the print layouts as a template. This"
+" is a QGIS-specific extension to the WMS 1.3.0 specification. If you want to"
+" exclude any print layout from being published by the WMS, check |checkbox| "
+":guilabel:`Exclude layouts` and click the |symbologyAdd| button below. Then,"
+" select a print layout from the :guilabel:`Select print layout` dialog in "
+"order to add it to the excluded layouts list."
+msgstr ""
+"Om du har utskriftslayouter definierade i ditt projekt kommer de att listas "
+"i svaret ``GetProjectSettings`` och de kan användas av GetPrint-begäran för "
+"att skapa utskrifter med en av utskriftslayouterna som mall. Detta är ett "
+"QGIS-specifikt tillägg till WMS 1.3.0-specifikationen. Om du vill utesluta "
+"en utskriftslayout från att publiceras av WMS, markera |checkbox| "
+":guilabel:``Exclude layouts`` och klicka på knappen |symbologyAdd| nedan. "
+"Välj sedan en utskriftslayout från dialogrutan :guilabel:`Välj "
+"utskriftslayout` för att lägga till den i listan över uteslutna layouter."
+
+#: ../../docs/server_manual/getting_started.rst:860
+msgid ""
+"If you want to exclude any layer or layer group from being published by the "
+"WMS, check |checkbox| :guilabel:`Exclude Layers` and click the "
+"|symbologyAdd| button below. This opens the :guilabel:`Select restricted "
+"layers and groups` dialog, which allows you to choose the layers and groups "
+"that you don't want to be published. Use the :kbd:`Shift` or :kbd:`Ctrl` key"
+" if you want to select multiple entries. It is recommended that you exclude "
+"from publishing the layers that you don't need as this reduces the size of "
+"the WMS GetCapabilities response which leads to faster loading times on the "
+"client side."
+msgstr ""
+"Om du vill utesluta ett lager eller en lagergrupp från att publiceras av "
+"WMS, markera kryssrutan :guilabel:`Exclude Layers` och klicka på knappen "
+"|symbologyAdd| nedan. Detta öppnar dialogrutan :guilabel:`Select restricted "
+"layers and groups`, där du kan välja de lager och grupper som du inte vill "
+"ska publiceras. Använd :kbd:`Shift` eller :kbd:`Ctrl` om du vill välja flera"
+" poster. Det rekommenderas att du utesluter de lager som du inte behöver "
+"från publicering eftersom detta minskar storleken på WMS GetCapabilities-"
+"svaret vilket leder till snabbare laddningstider på klientsidan."
+
+#: ../../docs/server_manual/getting_started.rst:869
+msgid ":guilabel:`Layer and Feature Options`"
+msgstr ":guilabel:`Lager- och funktionsalternativ`"
+
+#: ../../docs/server_manual/getting_started.rst:871
+msgid ""
+"You can receive requested GetFeatureInfo as plain text, XML and GML. The "
+"default is XML."
+msgstr ""
+"Du kan ta emot begärd GetFeatureInfo som vanlig text, XML och GML. Standard "
+"är XML."
+
+#: ../../docs/server_manual/getting_started.rst:873
+msgid ""
+"If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be"
+" used to reference layers in the ``GetCapabilities`` response or ``GetMap "
+"LAYERS`` parameter. If not, layer name or short name if defined (see "
+":ref:`vectorservermenu`) is used."
+msgstr ""
+"Om du markerar |checkbox| :guilabel:`Use layer ids as name`, kommer lager-id"
+" att användas för att referera till lager i ``GetCapabilities``-svaret eller"
+" ``GetMap LAYERS``-parametern. Om inte, används skiktets namn eller kortnamn"
+" om det är definierat (se :ref:`vectorservermenu`)."
+
+#: ../../docs/server_manual/getting_started.rst:877
+msgid ""
+"By default, layer names are used to expose layers through WMS. If multiple "
+"layers have the same name, they will be merged to a single WMS layer and "
+"cannot be requested individually. You need to take care of these layers "
+"being compatible with each other. Using the :guilabel:`Use layer ids as "
+"name` option ensures that multiple layers with the same name can be "
+"requested as individual layers."
+msgstr ""
+"Som standard används lagernamn för att exponera lager via WMS. Om flera "
+"lager har samma namn kommer de att slås samman till ett enda WMS-lager och "
+"kan inte begäras individuellt. Du måste se till att dessa lager är "
+"kompatibla med varandra. Genom att använda alternativet :guilabel:`Use layer"
+" ids as name` säkerställer du att flera lager med samma namn kan begäras som"
+" enskilda lager."
+
+#: ../../docs/server_manual/getting_started.rst:886
+msgid ""
+"If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
+"response`. This will include the bounding box for each feature in the "
+"GetFeatureInfo response. See also the :ref:`WITH_GEOMETRY "
+"<wms_getfeatureinfo>` parameter."
+msgstr ""
+"Om du vill kan du kryssa i |checkbox| :guilabel:`Lägg till geometri i "
+"funktionssvaret`. Detta kommer att inkludera avgränsningsrutan för varje "
+"funktion i GetFeatureInfo-svaret. Se även parametern :ref:`WITH_GEOMETRY "
+"<wms_getfeatureinfo>`."
+
+#: ../../docs/server_manual/getting_started.rst:890
+msgid ""
+"As many web clients can’t display circular arcs in geometries you have the "
+"option to segmentize the geometry before sending it to the client in a "
+"GetFeatureInfo response. This allows such clients to still display a "
+"feature’s geometry (e.g. for highlighting the feature). You need to check "
+"the |checkbox| :guilabel:`Segmentize feature info geometry` to activate the "
+"option."
+msgstr ""
+"Eftersom många webbklienter inte kan visa cirkelbågar i geometrier har du "
+"möjlighet att segmentisera geometrin innan du skickar den till klienten i "
+"ett GetFeatureInfo-svar. Detta gör det möjligt för sådana klienter att "
+"fortfarande visa en funktions geometri (t.ex. för att markera funktionen). "
+"Du måste markera kryssrutan |checkbox| :guilabel:`Segmentize feature info "
+"geometry` för att aktivera alternativet."
+
+#: ../../docs/server_manual/getting_started.rst:896
+msgid ""
+"You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
+" set the precision of the GetFeatureInfo geometry. This enables you to save "
+"bandwidth when you don't need the full precision."
+msgstr ""
+"Du kan också använda alternativet :guilabel:`GetFeatureInfo geometry "
+"precision` för att ställa in precisionen för geometrin i GetFeatureInfo. "
+"Detta gör att du kan spara bandbredd när du inte behöver full precision."
+
+#: ../../docs/server_manual/getting_started.rst:900
+msgid ""
+"If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
+"show text using expressions) this will be listed inside the GetFeatureInfo "
+"output. If the layer uses a Value Map for one of its attributes, this "
+"information will also be shown in the GetFeatureInfo output."
+msgstr ""
+"Om ett av dina skikt använder :ref:`Map Tip display <maptips>` (dvs. för att"
+" visa text med hjälp av uttryck) kommer detta att listas i GetFeatureInfo-"
+"utmatningen. Om skiktet använder en Value Map för ett av sina attribut "
+"kommer denna information också att visas i GetFeatureInfo-utmatningen."
+
+#: ../../docs/server_manual/getting_started.rst:905
+msgid ""
+"If you want QGIS Server to advertise specific request URLs in the WMS "
+"GetCapabilities response, enter the corresponding URL in the "
+":guilabel:`Advertised URL` field."
+msgstr ""
+"Om du vill att QGIS Server ska annonsera specifika URL:er för begäran i WMS "
+"GetCapabilities-svaret anger du motsvarande URL i fältet "
+":guilabel:`Advertised URL`."
+
+#: ../../docs/server_manual/getting_started.rst:908
+msgid ":guilabel:`Map and Legend Options`"
+msgstr ":guilabel:`Optioner för karta och teckenförklaring`"
+
+#: ../../docs/server_manual/getting_started.rst:910
+msgid ""
+"When a layer group is passed to ``GetLegendGraphic`` request, all of its "
+"leaf layers are added to the legend picture (however without the groups' "
+"labels). Check the |checkbox| :guilabel:`Add layer groups in "
+"GetLegendGraphic` option if you want to also insert the layer groups (and "
+"subgroups) names into the layer tree, just like in QGIS Desktop legend."
+msgstr ""
+"När en lagergrupp skickas till ``GetLegendGraphic`` begäran, läggs alla dess"
+" bladlager till i legendbilden (dock utan gruppernas etiketter). Markera "
+"alternativet |checkbox| :guilabel:`Add layer groups in GetLegendGraphic` om "
+"du även vill infoga skiktgruppernas (och undergruppernas) namn i "
+"skiktträdet, precis som i QGIS Desktop-legenden."
+
+#: ../../docs/server_manual/getting_started.rst:916
+msgid ""
+"When QGIS project contains layer groups, they are listed in WMS capabilities"
+" document alongside with layers. If a group (its name as listed in "
+"capabilities) is included in WMS GetMap ``LAYERS`` parameter alongside with "
+"names of layers in that group, QGIS would duplicate the layers: once for the"
+" group and once for specific layer. If you check the |checkbox| "
+":guilabel:`Skip name attribute for groups` option, GetCapabilities will only"
+" return title attribute for the group but not its name attribute, making it "
+"impossible to include groups in list of layers of GetMap request."
+msgstr ""
+"När QGIS-projektet innehåller lagergrupper listas de i WMS "
+"kapacitetsdokument tillsammans med lager. Om en grupp (dess namn som listas "
+"i capabilities) inkluderas i WMS GetMap ``LAYERS`` parameter tillsammans med"
+" namn på lager i den gruppen, skulle QGIS duplicera lagren: en gång för "
+"gruppen och en gång för det specifika lagret. Om du markerar alternativet "
+"|checkbox| :guilabel:`Skippa namnattribut för grupper`, kommer "
+"GetCapabilities endast att returnera titelattribut för gruppen men inte dess"
+" namnattribut, vilket gör det omöjligt att inkludera grupper i listan över "
+"lager i GetMap-begäran."
+
+#: ../../docs/server_manual/getting_started.rst:924
+msgid ""
+"Furthermore, you can restrict the maximum size of the maps returned by the "
+"requests by entering the maximum width and height into the respective fields"
+" under :guilabel:`Maximum image size for GetMap and GetLegendGraphic "
+"requests`."
+msgstr ""
+"Dessutom kan du begränsa den maximala storleken på de kartor som returneras "
+"av förfrågningarna genom att ange maximal bredd och höjd i respektive fält "
+"under :guilabel:`Maximal bildstorlek för GetMap- och GetLegendGraphic-"
+"förfrågningar`."
+
+#: ../../docs/server_manual/getting_started.rst:928
+msgid ""
+"You can change the :guilabel:`Quality for JPEG and WebP images` factor. The "
+"quality factor must be in the range 0 to 100. Specify 0 for maximum "
+"compression, 100 for no compression."
+msgstr ""
+"Du kan ändra faktorn :guilabel:`Kvalitet för JPEG- och WebP-bilder`. "
+"Kvalitetsfaktorn måste ligga inom intervallet 0 till 100. Ange 0 för maximal"
+" komprimering och 100 för ingen komprimering."
+
+#: ../../docs/server_manual/getting_started.rst:932
+msgid ""
+"You can change the limit for atlas features to be printed in one request by "
+"setting the :guilabel:`Maximum features for Atlas print requests` field."
+msgstr ""
+"Du kan ändra gränsen för hur många atlasfunktioner som ska skrivas ut i en "
+"begäran genom att ange fältet :guilabel:`Maximum features for Atlas print "
+"requests`."
+
+#: ../../docs/server_manual/getting_started.rst:935
+msgid ""
+"When QGIS Server is used in tiled mode (see :ref:`TILED parameter "
+"<wms_tiled>`), you can set the :guilabel:`Tile buffer in pixels`. The "
+"recommended value is the size of the largest symbol or line width in your "
+"QGIS project."
+msgstr ""
+"När QGIS Server används i tiled-läge (se :ref:`TILED-parametern "
+"<wms_tiled>`) kan du ställa in :guilabel:`Tile buffer in pixels`. Det "
+"rekommenderade värdet är storleken på den största symbolen eller "
+"linjebredden i ditt QGIS-projekt."
+
+#: ../../docs/server_manual/getting_started.rst:938
+msgid ""
+"Depending on whether the map uses a projected CRS or a geographic CRS and if"
+" there is no information to evaluate the map unit sized symbols, you can "
+"provide reference for size through either a :guilabel:`Default scale for "
+"legend` or :guilabel:`Default map units per mm in legend`."
+msgstr ""
+"Beroende på om kartan använder ett projicerat CRS eller ett geografiskt CRS "
+"och om det inte finns någon information för att utvärdera symbolerna med "
+"kartans enhetsstorlek, kan du ge en referens för storlek genom antingen "
+":guilabel:`Förvald skala för teckenförklaring` eller :guilabel:`Förvald "
+"kartans enheter per mm i teckenförklaring`."
+
+#: ../../docs/server_manual/getting_started.rst:945
+msgid "WMTS capabilities"
+msgstr "WMTS kapacitet"
+
+#: ../../docs/server_manual/getting_started.rst:947
+msgid ""
+"In the :guilabel:`WMTS` tab you can select the layers you want to publish as"
+" WMTS and specify if you want to publish as PNG or JPEG."
+msgstr ""
+"På fliken :guilabel:`WMTS` kan du välja de lager som du vill publicera som "
+"WMTS och ange om du vill publicera som PNG eller JPEG."
+
+#: ../../docs/server_manual/getting_started.rst:950
+msgid ""
+"Under :guilabel:`Grids`, for each :ref:`restricted CRS <restricted_crs>`, "
+"you can indicate whether the tile matrices should be published and configure"
+" their top-left corner, minimum and maximum scales and the last level of the"
+" tile matrices. Note that for ``EPSG:3857`` and ``EPSG:4326`` CRS, only the "
+"last level of the tile matrices can be edited."
+msgstr ""
+"Under :guilabel:`Grids`, för varje :ref:``restricted CRS <restricted_crs>`, "
+"kan du ange om kakelmatriserna ska publiceras och konfigurera deras övre "
+"vänstra hörn, minsta och största skalor och den sista nivån i "
+"kakelmatriserna. Observera att för CRS ``EPSG:3857`` och ``EPSG:4326`` kan "
+"endast den sista nivån i kakelmatriserna redigeras."
+
+#: ../../docs/server_manual/getting_started.rst:956
+msgid "You can also set a :guilabel:`Minimum scale` for the tiles display."
+msgstr "Du kan också ange en :guilabel:`Minsta skala` för visning av brickor."
+
+#: ../../docs/server_manual/getting_started.rst:958
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field, QGIS Server will"
+" advertise this specific URL in the WMTS GetCapabilities response."
+msgstr ""
+"Om du anger en URL i fältet :guilabel:`Advertised URL`, kommer QGIS Server "
+"att annonsera denna specifika URL i WMTS GetCapabilities-svaret."
+
+#: ../../docs/server_manual/getting_started.rst:966
+msgid "Definitions in the WMTS tab"
+msgstr "Definitioner i fliken WMTS"
+
+#: ../../docs/server_manual/getting_started.rst:969
+msgid "WFS/OAPIF capabilities"
+msgstr "WFS/OAPIF-funktioner"
+
+#: ../../docs/server_manual/getting_started.rst:971
+msgid ""
+"In the :guilabel:`WFS/OAPIF` tab, you can select the layers you want to "
+"publish as WFS or OAPIF, and specify if they will allow update, insert and "
+"delete operations."
+msgstr ""
+"På fliken :guilabel:`WFS/OAPIF` kan du välja de lager som du vill publicera "
+"som WFS eller OAPIF och ange om de ska tillåta uppdatering, infogning och "
+"radering."
+
+#: ../../docs/server_manual/getting_started.rst:980
+msgid "Definitions in the WFS/OAPIF tab"
+msgstr "Definitioner i fliken WFS/OAPIF"
+
+#: ../../docs/server_manual/getting_started.rst:982
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field, QGIS Server will"
+" advertise this specific URL in the WFS GetCapabilities response."
+msgstr ""
+"Om du anger en URL i fältet :guilabel:`Advertised URL`, kommer QGIS Server "
+"att annonsera denna specifika URL i WFS GetCapabilities-svaret."
+
+#: ../../docs/server_manual/getting_started.rst:986
+msgid "WCS capabilities"
+msgstr "WCS kapacitet"
+
+#: ../../docs/server_manual/getting_started.rst:988
+msgid ""
+"In the :guilabel:`WCS` tab, you can select the layers that you want to "
+"publish as WCS."
+msgstr ""
+"På fliken :guilabel:`WCS` kan du välja de lager som du vill publicera som "
+"WCS."
+
+#: ../../docs/server_manual/getting_started.rst:995
+msgid "Definitions in the WCS tab"
+msgstr "Definitioner i fliken WCS"
+
+#: ../../docs/server_manual/getting_started.rst:997
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field of the "
+":guilabel:`WCS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WCS GetCapabilities response."
+msgstr ""
+"Om du anger en URL i fältet :guilabel:`Advertised URL` i avsnittet "
+":guilabel:`WCS capabilities`, kommer QGIS Server att annonsera denna "
+"specifika URL i WCS GetCapabilities-svaret."
+
+#: ../../docs/server_manual/getting_started.rst:1002
+msgid "Fine tuning your OWS"
+msgstr "Finjustera din OWS"
+
+#: ../../docs/server_manual/getting_started.rst:1004
+msgid ""
+"For vector layers, the :guilabel:`Fields` tab of the :menuselection:`Layer "
+"--> Layer Properties` dialog allows you to define for each attribute if it "
+"will be published or not. By default, all the attributes are published by "
+"your WMS and WFS. If you don't want a specific attribute to be published, "
+"uncheck the appropriate checkbox in the :guilabel:`Configuration` column:"
+msgstr ""
+"För vektorlager kan du på fliken :guilabel:`Fields` i dialogrutan "
+":menuselection:`Layer --> Layer Properties` för varje attribut definiera om "
+"det ska publiceras eller inte. Som standard publiceras alla attribut av din "
+"WMS och WFS. Om du inte vill att ett visst attribut ska publiceras "
+"avmarkerar du kryssrutan i kolumnen :guilabel:`Configuration`:"
+
+#: ../../docs/server_manual/getting_started.rst:1010
+msgid ":guilabel:`Do not expose in WFS`"
+msgstr ":guilabel:`Exponeras inte i WFS``"
+
+#: ../../docs/server_manual/getting_started.rst:1011
+msgid ":guilabel:`Do not expose in WMS`"
+msgstr ":guilabel:`Exponeras inte i WMS`"
+
+#: ../../docs/server_manual/getting_started.rst:1013
+msgid ""
+"You can overlay watermarks over the maps produced by your WMS by adding text"
+" annotations or SVG annotations to the project file. See the "
+":ref:`sec_annotations` section for instructions on creating annotations. For"
+" annotations to be displayed as watermarks on the WMS output, the "
+":guilabel:`Fixed map position` checkbox in the :guilabel:`Annotation text` "
+"dialog must be unchecked. This can be accessed by double clicking the "
+"annotation while one of the annotation tools is active. For SVG annotations,"
+" you will need either to set the project to save absolute paths (in the "
+":guilabel:`General` menu of the :menuselection:`Project --> Properties...` "
+"dialog) or to manually modify the path to the SVG image so that it "
+"represents a valid relative path."
+msgstr ""
+"Du kan lägga vattenstämplar över de kartor som produceras av ditt WMS genom "
+"att lägga till textanteckningar eller SVG-anteckningar i projektfilen. Se "
+"avsnittet :ref:`sec_annotations` för instruktioner om hur du skapar "
+"anteckningar. För att annoteringar ska visas som vattenstämplar på WMS-"
+"utdata måste kryssrutan :guilabel:`Fixed map position` i dialogrutan "
+":guilabel:`Annotation text` avmarkeras. Detta kan göras genom att "
+"dubbelklicka på annotationen medan ett av annoteringsverktygen är aktivt. "
+"För SVG-annoteringar måste du antingen ställa in projektet så att absoluta "
+"sökvägar sparas (i menyn :guilabel:`General` i dialogrutan "
+":menuselection:`Project --> Properties...`) eller manuellt ändra sökvägen "
+"till SVG-bilden så att den representerar en giltig relativ sökväg."
+
+#: ../../docs/server_manual/getting_started.rst:1027
+msgid "Integration with third parties"
+msgstr "Integration med tredje part"
+
+#: ../../docs/server_manual/getting_started.rst:1029
+msgid ""
+"QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
+"<https://www.ogc.org/publications>`_ thus it can be used by a wide variety "
+"of end user tools."
+msgstr ""
+"QGIS Server tillhandahåller standard OGC webbtjänster som `WMS, WFS, etc. "
+"<https://www.ogc.org/publications>`_ och kan därför användas av ett stort "
+"antal olika slutanvändarverktyg."
+
+#: ../../docs/server_manual/getting_started.rst:1033
+msgid "Integration with QGIS Desktop"
+msgstr "Integration med QGIS Desktop"
+
+#: ../../docs/server_manual/getting_started.rst:1035
+msgid ""
+"QGIS Desktop is the map designer where QGIS Server is the map server. The "
+"maps or QGIS projects will be served by the QGIS Server to provide OGC "
+"standards. These QGIS projects can either be files or entries in a database "
+"(by using :menuselection:`Project --> Save to --> PostgreSQL` in QGIS "
+"Desktop)."
+msgstr ""
+"QGIS Desktop är kartdesignern där QGIS Server är kartservern. Kartorna eller"
+" QGIS-projekten kommer att serveras av QGIS Server för att tillhandahålla "
+"OGC-standarder. Dessa QGIS-projekt kan antingen vara filer eller poster i en"
+" databas (genom att använda :menuselection:`Project --> Save to --> "
+"PostgreSQL` i QGIS Desktop)."
+
+#: ../../docs/server_manual/getting_started.rst:1040
+msgid ""
+"Furthermore, dedicated update workflow must be established to refresh a "
+"project used by a QGIS Server (ie. copy project files into server location "
+"and restart QGIS Server). For now, automated processes (as server reloading "
+"over message queue service) are not implemented yet."
+msgstr ""
+"Dessutom måste ett särskilt uppdateringsarbetsflöde upprättas för att "
+"uppdatera ett projekt som används av en QGIS Server (dvs. kopiera "
+"projektfiler till serverplatsen och starta om QGIS Server). För närvarande "
+"är automatiserade processer (som serveromladdning via Message Queue Service)"
+" ännu inte implementerade."
+
+#: ../../docs/server_manual/getting_started.rst:1047
+msgid "Integration with MapProxy"
+msgstr "Integration med MapProxy"
+
+#: ../../docs/server_manual/getting_started.rst:1049
+msgid ""
+"`MapProxy <https://www.mapproxy.org/>`_ is a tile cache server and as it can"
+" read and serve any WMS/WMTS map server, it can be directly connected to "
+"QGIS server web services and improve end user experience."
+msgstr ""
+"`MapProxy <https://www.mapproxy.org/>`_ är en kakelcacheserver och eftersom "
+"den kan läsa och betjäna alla WMS/WMTS-kartservrar kan den anslutas direkt "
+"till QGIS-serverns webbtjänster och förbättra slutanvändarens upplevelse."
+
+#: ../../docs/server_manual/getting_started.rst:1055
+msgid "Integration with QWC2"
+msgstr "Integration med QWC2"
+
+#: ../../docs/server_manual/getting_started.rst:1057
+msgid ""
+"`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application "
+"dedicated to QGIS Server. It helps you to build a highly customized map "
+"viewer with layer selection, feature info, etc.. Also many plugins are "
+"available like authentication or print service, the full list is available "
+"in this `repository <https://github.com/qwc-services>`_."
+msgstr ""
+"`QWC2 <https://github.com/qgis/qwc2>`_ är en responsiv webbapplikation som "
+"är dedikerad till QGIS Server. Det hjälper dig att bygga en mycket anpassad "
+"kartvisare med lagerval, funktionsinformation etc. Många plugins finns också"
+" tillgängliga som autentisering eller utskriftstjänst, den fullständiga "
+"listan finns i detta `repository <https://github.com/qwc-services>`_."
