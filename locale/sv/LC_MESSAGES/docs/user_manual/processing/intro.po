@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:36+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,18 +25,158 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
 #: ../../docs/user_manual/processing/intro.rst:4
 msgid "Introduction"
 msgstr "Introduktion"
+
+#: ../../docs/user_manual/processing/intro.rst:6
+msgid ""
+"This chapter introduces the QGIS processing framework, a geoprocessing "
+"environment that can be used to call native and third-party algorithms from "
+"QGIS, making your spatial analysis tasks more productive and easy to "
+"accomplish."
+msgstr ""
+"I det här kapitlet introduceras QGIS Processing Framework, en "
+"geoprocessmiljö som kan användas för att anropa egna algoritmer och "
+"algoritmer från tredje part från QGIS, vilket gör dina rumsliga "
+"analysuppgifter mer produktiva och enkla att utföra."
+
+#: ../../docs/user_manual/processing/intro.rst:10
+msgid ""
+"As a :ref:`Core plugin <core_plugins>`, Processing is installed by default "
+"but you need to activate it:"
+msgstr ""
+"Som ett :ref:`Core-plugin <core_plugins>` är Processing installerat som "
+"standard men du måste aktivera det:"
+
+#: ../../docs/user_manual/processing/intro.rst:13
+msgid "Go to :menuselection:`Plugins --> Manage and install plugins...`"
+msgstr ""
+"Gå till :menuselection:`Plugins --> Hantera och installera plugins...`"
+
+#: ../../docs/user_manual/processing/intro.rst:14
+msgid "Click on the :guilabel:`Installed` tab at the left"
+msgstr "Klicka på fliken :guilabel:`Installed` till vänster"
+
+#: ../../docs/user_manual/processing/intro.rst:15
+msgid ""
+"Check the box next to the |processingAlgorithm| :guilabel:`Processing` entry"
+msgstr ""
+"Markera rutan bredvid posten |processingAlgorithm| :guilabel:`Processing`"
 
 #: ../../docs/user_manual/processing/intro.rst:87
 msgid "processingAlgorithm"
 msgstr "processingAlgorithm"
 
+#: ../../docs/user_manual/processing/intro.rst:16
+msgid "Close the dialog."
+msgstr "Stäng dialogrutan."
+
+#: ../../docs/user_manual/processing/intro.rst:18
+msgid ""
+"A :menuselection:`Processing` menu is now available in the top menu bar. "
+"From there you can reach the main components of this framework."
+msgstr ""
+"En :menuselection:`Processing`-meny finns nu tillgänglig i den övre "
+"menyraden. Därifrån kan du nå de viktigaste komponenterna i detta ramverk."
+
+#: ../../docs/user_manual/processing/intro.rst:21
+msgid ""
+"In the following sections, we will review how to use the graphical elements "
+"of this framework and make the most out of each one of them."
+msgstr ""
+"I de följande avsnitten går vi igenom hur du använder de grafiska elementen "
+"i detta ramverk och får ut mesta möjliga av vart och ett av dem."
+
+#: ../../docs/user_manual/processing/intro.rst:24
+msgid ""
+"There are four basic elements in the framework GUI, which are used to run "
+"algorithms for different purposes. Choosing one tool or another will depend "
+"on the kind of analysis that is to be performed and the particular "
+"characteristics of each user and project. All of them (except for the batch "
+"processing interface, which is called from the toolbox or the algorithm "
+"execution dialog, as we will see) can be accessed from the "
+":menuselection:`Processing` menu item (you will see more entries; the "
+"remaining ones are not used to execute algorithms and will be explained "
+"later in this chapter)."
+msgstr ""
+"Det finns fyra grundläggande element i ramverkets GUI, som används för att "
+"köra algoritmer för olika ändamål. Valet av det ena eller andra verktyget "
+"beror på vilken typ av analys som ska utföras och de särskilda egenskaperna "
+"hos varje användare och projekt. Alla (utom gränssnittet för "
+"batchbearbetning, som anropas från verktygslådan eller dialogrutan för "
+"algoritmkörning, som vi kommer att se) kan nås från menyalternativet "
+":menuselection:`Processing` (du kommer att se fler poster; de återstående "
+"används inte för att köra algoritmer och förklaras senare i detta kapitel)."
+
+#: ../../docs/user_manual/processing/intro.rst:33
+msgid ""
+"The :guilabel:`Toolbox`: The main element of the GUI, it is used to execute "
+"a single algorithm or run a batch process based on that algorithm."
+msgstr ""
+"Den :guilabel:`verktygslådan`: Huvudelementet i GUI, används för att köra en"
+" enskild algoritm eller köra en batchprocess baserad på den algoritmen."
+
 #: ../../docs/user_manual/processing/intro.rst:41
 msgid "Processing Toolbox"
 msgstr "Geobearbetning verktygslåda"
 
+#: ../../docs/user_manual/processing/intro.rst:43
+msgid ""
+"The :guilabel:`Model Designer`: Several algorithms can be combined "
+"graphically using the modeler to define a workflow, creating a single "
+"process that involves several subprocesses."
+msgstr ""
+"Den :guilabel:`Model Designer`: Flera algoritmer kan kombineras grafiskt med"
+" hjälp av modelleraren för att definiera ett arbetsflöde, vilket skapar en "
+"enda process som involverar flera delprocesser."
+
 #: ../../docs/user_manual/processing/intro.rst:53
 msgid "Processing Modeler"
 msgstr "Geobearbetning Modellbyggare"
+
+#: ../../docs/user_manual/processing/intro.rst:55
+msgid ""
+"The :guilabel:`History` manager: All actions performed using any of the "
+"aforementioned elements are stored in a history file and can be later easily"
+" reproduced using the history manager."
+msgstr ""
+"Hanteraren :guilabel:`History`: Alla åtgärder som utförs med hjälp av något "
+"av de ovan nämnda elementen lagras i en historikfil och kan senare enkelt "
+"återskapas med hjälp av historikhanteraren."
+
+#: ../../docs/user_manual/processing/intro.rst:64
+msgid "Processing History"
+msgstr "Bearbetningshistorik"
+
+#: ../../docs/user_manual/processing/intro.rst:66
+msgid ""
+"The :guilabel:`Batch Processing` interface: This interface allows you to "
+"execute batch processes and automate the execution of a single algorithm on "
+"multiple datasets."
+msgstr ""
+"Gränssnittet :guilabel:`Batch Processing`: Med det här gränssnittet kan du "
+"köra batchprocesser och automatisera körningen av en enda algoritm på flera "
+"dataset."
+
+#: ../../docs/user_manual/processing/intro.rst:76
+msgid "Batch Processing interface"
+msgstr "Gränssnitt för batchbearbetning"
+
+#: ../../docs/user_manual/processing/intro.rst:78
+msgid ""
+"In the following sections, we will review each one of these elements in "
+"detail."
+msgstr ""
+"I de följande avsnitten kommer vi att gå igenom vart och ett av dessa "
+"element i detalj."
