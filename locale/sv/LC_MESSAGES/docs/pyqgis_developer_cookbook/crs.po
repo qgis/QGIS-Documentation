@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:12
+msgid "Projections Support"
+msgstr "Stöd för projektioner"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:14
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"Kodsnuttarna på den här sidan behöver följande import om du befinner dig "
+"utanför pyqgis-konsolen:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:33
+msgid "Coordinate reference systems"
+msgstr "Referenssystem för koordinater"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:35
+msgid ""
+"Coordinate reference systems (CRS) are encapsulated by the "
+":class:`QgsCoordinateReferenceSystem "
+"<qgis.core.QgsCoordinateReferenceSystem>` class. Instances of this class can"
+" be created in several different ways:"
+msgstr ""
+"Koordinatreferenssystem (CRS) är inkapslade av "
+":class:`QgsCoordinateReferenceSystem "
+"<qgis.core.QgsCoordinateReferenceSystem>`-klassen. Instanser av denna klass "
+"kan skapas på flera olika sätt:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:39
+msgid "specify CRS by its ID"
+msgstr "ange CRS med dess ID"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:51
+msgid "QGIS supports different CRS identifiers with the following formats:"
+msgstr "QGIS stöder olika CRS-identifierare med följande format:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:53
+msgid ""
+"``EPSG:<code>`` --- ID assigned by the EPSG organization - handled with "
+":meth:`createFromOgcWms() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromOgcWmsCrs>`"
+msgstr ""
+"``EPSG:<code>`` --- ID tilldelat av EPSG-organisationen - hanteras med "
+":meth:`createFromOgcWms() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromOgcWmsCrs>`"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:54
+msgid ""
+"``POSTGIS:<srid>``--- ID used in PostGIS databases - handled with "
+":meth:`createFromSrid() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrid>`"
+msgstr ""
+"``POSTGIS:<srid>``--- ID som används i PostGIS-databaser - hanteras med "
+":meth:`createFromSrid() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrid>`"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:55
+msgid ""
+"``INTERNAL:<srsid>`` --- ID used in the internal QGIS database - handled "
+"with :meth:`createFromSrsId() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrsId>`"
+msgstr ""
+"``INTERNAL:<srsid>`` --- ID som används i den interna QGIS-databasen - "
+"hanteras med :meth:`createFromSrsId() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromSrsId>`"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:56
+msgid ""
+"``PROJ:<proj>`` - handled with :meth:`createFromProj() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromProj>`"
+msgstr ""
+"``PROJ:<proj>`` - hanterad med :meth:`createFromProj() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromProj>`"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:57
+msgid ""
+"``WKT:<wkt>`` - handled with :meth:`createFromWkt() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromWkt>`"
+msgstr ""
+"``WKT:<wkt>`` - hanterad med :meth:`createFromWkt() "
+"<qgis.core.QgsCoordinateReferenceSystem.createFromWkt>`"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:59
+msgid "If no prefix is specified, WKT definition is assumed."
+msgstr "Om inget prefix anges antas WKT-definitionen."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:61
+msgid "specify CRS by its well-known text (WKT)"
+msgstr "ange CRS genom dess välkända text (WKT)"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:75
+msgid ""
+"create an invalid CRS and then use one of the ``create*`` functions to "
+"initialize it. In the following example we use a Proj string to initialize "
+"the projection."
+msgstr ""
+"skapa en ogiltig CRS och sedan använda en av funktionerna ``create*`` för "
+"att initialisera den. I följande exempel använder vi en Proj-sträng för att "
+"initiera projektionen."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:89
+msgid ""
+"It's wise to check whether creation (i.e. lookup in the database) of the CRS"
+" has been successful: :meth:`isValid() "
+"<qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`."
+msgstr ""
+"Det är klokt att kontrollera om skapandet (d.v.s. uppslagningen i databasen)"
+" av CRS har lyckats: :meth:`isValid() "
+"<qgis.core.QgsCoordinateReferenceSystem.isValid>` måste returnera "
+":const:`True`."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:93
+msgid ""
+"Note that for initialization of spatial reference systems QGIS needs to look"
+" up appropriate values in its internal database :file:`srs.db`. Thus in case"
+" you create an independent application you need to set paths correctly with "
+":meth:`QgsApplication.setPrefixPath() "
+"<qgis.core.QgsApplication.setPrefixPath>`, otherwise it will fail to find "
+"the database. If you are running the commands from the QGIS Python console "
+"or developing a plugin you do not care: everything is already set up for "
+"you."
+msgstr ""
+"Observera att för initialisering av rumsliga referenssystem måste QGIS leta "
+"upp lämpliga värden i sin interna databas :file:`srs.db`. Om du skapar en "
+"oberoende applikation måste du därför ställa in sökvägar korrekt med "
+":meth:`QgsApplication.setPrefixPath() "
+"<qgis.core.QgsApplication.setPrefixPath>`, annars kommer den inte att hitta "
+"databasen. Om du kör kommandona från QGIS Python-konsolen eller utvecklar "
+"ett insticksprogram behöver du inte bry dig: allt är redan förberett åt dig."
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:101
+msgid "Accessing spatial reference system information:"
+msgstr "Tillgång till information om rumsligt referenssystem:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:118
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:160
+msgid "Output:"
+msgstr "Utdata:"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:134
+msgid "CRS Transformation"
+msgstr "CRS-omvandling"
+
+#: ../../docs/pyqgis_developer_cookbook/crs.rst:136
+msgid ""
+"You can do transformation between different spatial reference systems by "
+"using the :class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>`"
+" class. The easiest way to use it is to create a source and destination CRS "
+"and construct a :class:`QgsCoordinateTransform "
+"<qgis.core.QgsCoordinateTransform>` instance with them and the current "
+"project. Then just repeatedly call :meth:`transform() "
+"<qgis.core.QgsCoordinateTransform.transform>` function to do the "
+"transformation. By default it does forward transformation, but it is capable"
+" to do also inverse transformation."
+msgstr ""
+"Du kan göra transformationer mellan olika rumsliga referenssystem genom att "
+"använda klassen :class:`QgsCoordinateTransform "
+"<qgis.core.QgsCoordinateTransform>`. Det enklaste sättet att använda den är "
+"att skapa ett CRS för källa och destination och konstruera en "
+":class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>`-instans "
+"med dem och det aktuella projektet. Sedan anropar du bara upprepade gånger "
+":meth:`transform() <qgis.core.QgsCoordinateTransform.transform>`-funktionen "
+"för att göra transformationen. Som standard gör den framåtriktad "
+"transformation, men den kan också göra invers transformation."
