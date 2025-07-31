@@ -984,13 +984,15 @@ The following example code illustrates creating and populating a memory provider
   # add fields
   pr.addAttributes([QgsField("name", QMetaType.Type.QString),
                       QgsField("age",  QMetaType.Type.Int),
-                      QgsField("size", QMetaType.Type.Double)])
+                      QgsField("size", QMetaType.Type.Double),
+                      QgsField("birthday", QMetaType.Type.QDateTime)])
   vl.updateFields() # tell the vector layer to fetch changes from the provider
 
   # add a feature
   fet = QgsFeature()
   fet.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(10,10)))
-  fet.setAttributes(["Johnny", 2, 0.3])
+  t = QDateTime.fromString("2000-01-01T12:00:00", Qt.ISODate)
+  fet.setAttributes(["Johnny", 2, 0.3, t])
   pr.addFeatures([fet])
 
   # update layer's extent when new features have been added
@@ -1017,7 +1019,7 @@ Finally, let's check whether everything went well
     fields: 3
     features: 1
     extent: 10.0 10.0 10.0 10.0
-    F: 1 ['Johnny', 2, 0.3] <QgsPointXY: POINT(10 10)>
+    F: 1 ['Johnny', 2, 0.3, PyQt6.QtCore.QDateTime(2000, 1, 1, 12, 0)] <QgsPointXY: POINT(10 10)>
 
 .. index:: Vector layers; Symbology
 
