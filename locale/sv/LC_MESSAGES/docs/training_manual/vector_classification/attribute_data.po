@@ -1,0 +1,447 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:4
+msgid "Lesson: Vector Attribute Data"
+msgstr "Lektion: Data för vektorattribut"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:6
+msgid ""
+"Vector data is arguably the most common kind of data in the daily use of "
+"GIS. The vector model represents the location and shape of geographic "
+"features using points, lines and polygons (and for 3D data also surfaces and"
+" volumes), while their other properties are included as attributes (often "
+"presented as a table in QGIS)."
+msgstr ""
+"Vektordata är utan tvekan den vanligaste typen av data i den dagliga "
+"användningen av GIS. Vektormodellen representerar geografiska objekts läge "
+"och form med hjälp av punkter, linjer och polygoner (och för 3D-data även "
+"ytor och volymer), medan deras övriga egenskaper ingår som attribut (ofta "
+"presenterade som en tabell i QGIS)."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:12
+msgid ""
+"Up to now, none of the changes we have made to the map have been influenced "
+"by the objects that are being shown. In other words, all the land use areas "
+"look alike, and all the roads look alike. When looking at the map, the "
+"viewers don't know anything about the roads they are seeing; only that there"
+" is a road of a certain shape in a certain area."
+msgstr ""
+"Hittills har ingen av de ändringar vi har gjort på kartan påverkats av de "
+"objekt som visas. Med andra ord ser alla markanvändningsområden likadana ut,"
+" och alla vägar ser likadana ut. När man tittar på kartan vet man ingenting "
+"om de vägar man ser, bara att det finns en väg med en viss form i ett visst "
+"område."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:18
+msgid ""
+"But the whole strength of GIS is that all the objects that are visible on "
+"the map also have attributes. Maps in a GIS aren't just pictures. They "
+"represent not only objects in locations, but also information about those "
+"objects."
+msgstr ""
+"Men hela styrkan med GIS är att alla objekt som syns på kartan också har "
+"attribut. Kartor i ett GIS är inte bara bilder. De representerar inte bara "
+"objekt på platser, utan också information om dessa objekt."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:23
+msgid ""
+"**The goal for this lesson:** To learn about the structure of vector data "
+"and explore the attribute data of an object"
+msgstr ""
+"**Målet för den här lektionen:** Att lära sig om strukturen för vektordata "
+"och utforska attributdata för ett objekt"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:27
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Viewing Layer Attributes"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Visa lagerattribut"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:29
+msgid ""
+"It's important to know that the data you will be working with does not only "
+"represent **where** objects are in space, but also tells you **what** those "
+"objects are."
+msgstr ""
+"Det är viktigt att veta att de data du kommer att arbeta med inte bara visar"
+" **var** objekten befinner sig i rymden, utan också berättar **vad** dessa "
+"objekt är."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:33
+msgid ""
+"From the previous exercise, you should have the ``protected_areas`` layer "
+"loaded in your map. If it is not loaded, then you can find the "
+":file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory "
+":file:`exercise_data/shapefile`."
+msgstr ""
+"Från föregående övning bör du ha skiktet ``protected_areas`` laddat i din "
+"karta. Om det inte är laddat kan du hitta datasetet "
+":file:`protected_areas.shp` *ESRI Shapefile*-format i katalogen "
+":file:`exercise_data/shapefile`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:38
+msgid ""
+"The polygons representing the protected areas constitute the **spatial "
+"data**, but we can learn more about the protected areas by exploring the "
+"**attribute table**."
+msgstr ""
+"Polygonerna som representerar de skyddade områdena utgör de **rumsliga "
+"uppgifterna**, men vi kan lära oss mer om de skyddade områdena genom att "
+"utforska **attributtabellen**."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:42
+msgid ""
+"In the :guilabel:`Layers` panel, click on the ``protected_areas`` layer to "
+"select it."
+msgstr ""
+"I panelen :guilabel:`Layers` klickar du på lagret ``protected_areas`` för "
+"att markera det."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:44
+msgid ""
+"In the :menuselection:`Layer` menu, click the |openTable| :sup:`Open "
+"Attribute Table` button (also accessible from top toolbars buttons). This "
+"will open a new window showing the attribute table of the "
+"``protected_areas`` layer."
+msgstr ""
+"I menyn :menuselection:`Layer` klickar du på knappen |openTable| :sup:`Open "
+"Attribute Table` (även tillgänglig från de övre verktygsfältens knappar). "
+"Detta öppnar ett nytt fönster som visar attributtabellen för skiktet "
+"``protected_areas``."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:191
+msgid "openTable"
+msgstr "openTable"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:51
+msgid ""
+"A row is called a **record** and is associated with a **feature** in the "
+"Canvas Map, such as a polygon. A column is called a **field** (or an "
+"**attribute**), and has a name that helps describe it, such as ``name`` or "
+"``id``. Values in the cells are known as **attribute values**. These "
+"definitions are commonly used in GIS, so it is good to become familiar with "
+"them."
+msgstr ""
+"En rad kallas för en **record** och är associerad med en **feature** i "
+"Canvas Map, t.ex. en polygon. En kolumn kallas ett **fält** (eller ett "
+"**attribut**) och har ett namn som hjälper till att beskriva det, t.ex. "
+"``namn`` eller ``id``. Värdena i cellerna kallas **attributvärden**. Dessa "
+"definitioner används ofta i GIS, så det är bra att bekanta sig med dem."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:59
+msgid ""
+"In the ``protected_areas`` layer, there are two **features**, which are "
+"represented by the two polygons we see on the Map Canvas."
+msgstr ""
+"I skiktet ``protected_areas`` finns det två **features**, som representeras "
+"av de två polygoner som vi ser på kartbilden."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:62
+msgid ""
+"In order to understand what the **fields** and **attribute values** "
+"represent, one may need to find documentation (or metadata) describing the "
+"meaning of the attribute values. This is usually available from the creator "
+"of the data set."
+msgstr ""
+"För att förstå vad **fälten** och **attributvärdena** representerar kan man "
+"behöva hitta dokumentation (eller metadata) som beskriver innebörden av "
+"attributvärdena. Detta är vanligtvis tillgängligt från skaparen av "
+"datauppsättningen."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:67
+msgid ""
+"Next, let's see how a record in the attribute table is linked to a polygon "
+"feature that we see on the Map Canvas."
+msgstr ""
+"Nu ska vi se hur en post i attributtabellen länkas till en polygonfunktion "
+"som vi ser på kartbilden."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:70
+msgid "Go back to the main QGIS window."
+msgstr "Gå tillbaka till huvudfönstret i QGIS."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:71
+msgid ""
+"In the :menuselection:`Edit --> Select` menu, click on the |selectRectangle|"
+" :guilabel:`Select Feature(s)` button."
+msgstr ""
+"I menyn :menuselection:`Edit --> Select` klickar du på knappen "
+"|selectRectangle| :guilabel:`Select Feature(s)`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:193
+msgid "selectRectangle"
+msgstr "selectRectangle"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:72
+msgid ""
+"Make sure the ``protected_areas`` layer is still selected in the "
+":guilabel:`Layers` panel."
+msgstr ""
+"Kontrollera att skiktet ``protected_areas`` fortfarande är valt i panelen "
+":guilabel:`Layers`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:73
+msgid ""
+"Move your mouse to the Map Canvas and left click on the smaller of the two "
+"polygons. The polygon will turn yellow indicating it is selected."
+msgstr ""
+"Flytta musen till Map Canvas och vänsterklicka på den mindre av de två "
+"polygonerna. Polygonen blir gul och visar att den är markerad."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:79
+msgid ""
+"Go back to the :guilabel:`Attribute Table` window, and you should see a "
+"record (row) highlighted. These are the attribute values of the selected "
+"polygon."
+msgstr ""
+"Gå tillbaka till fönstret :guilabel:`Attribute Table` och du bör se en post "
+"(rad) markerad. Detta är attributvärdena för den valda polygonen."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:86
+msgid "You can also select a feature using the Attribute Table."
+msgstr "Du kan också välja en funktion med hjälp av attributtabellen."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:88
+msgid ""
+"In the :guilabel:`Attribute Table` window, on the far left, click on the row"
+" number of the record that is currently not selected."
+msgstr ""
+"I fönstret :guilabel:`Attribute Table` längst till vänster klickar du på "
+"radnumret för den post som för närvarande inte är markerad."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:94
+msgid ""
+"Go back to the main QGIS window and look at the Map Canvas. You should see "
+"the larger of the two polygons colored yellow."
+msgstr ""
+"Gå tillbaka till huvudfönstret i QGIS och titta på Map Canvas. Du bör se att"
+" den större av de två polygonerna är gulfärgad."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:96
+msgid ""
+"To deselect the feature, go to the :guilabel:`Attribute Table` window and "
+"click on |deselectActiveLayer| :sup:`Deselect all features from the layer` "
+"button."
+msgstr ""
+"Du avmarkerar funktionen genom att gå till fönstret :guilabel:`Attribute "
+"Table` och klicka på knappen |deselectActiveLayer| :sup:`Avmarkera alla "
+"funktioner från lagret`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:189
+msgid "deselectActiveLayer"
+msgstr "deselectActiveLayer"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:99
+msgid ""
+"Sometimes there are many features shown on the Map Canvas and it might be "
+"difficult to see which feature is selected from the Attribute Table.  "
+"Another way to identify the location of a feature is to use the "
+":guilabel:`Flash Feature` tool."
+msgstr ""
+"Ibland visas många funktioner på kartbilden och det kan vara svårt att se "
+"vilken funktion som har valts från attributtabellen.  Ett annat sätt att "
+"identifiera platsen för en funktion är att använda verktyget "
+":guilabel:`Flash Feature`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:104
+msgid ""
+"In the :guilabel:`Attribute Table`, right-click on any cell in the row that "
+"has the attribute value ``r2855697`` for the field ``full_id``."
+msgstr ""
+"I :guilabel:`Attribute Table` högerklickar du på en cell i den rad som har "
+"attributvärdet ``r2855697`` för fältet ``full_id``."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:106
+msgid ""
+"In the context menu, click on :guilabel:`Flash Feature` and watch the Map "
+"Canvas."
+msgstr ""
+"I snabbmenyn klickar du på :guilabel:`Flash Feature` och tittar på Map "
+"Canvas."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:112
+msgid ""
+"You should see the polygon flash red a few times.  If you missed it, try it "
+"again."
+msgstr ""
+"Du bör se polygonen blinka rött några gånger.  Om du missade det, försök "
+"igen."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:115
+msgid ""
+"Another useful tool is the :guilabel:`Zoom to Feature` tool, that tells QGIS"
+" to zoom to the feature of interest."
+msgstr ""
+"Ett annat användbart verktyg är :guilabel:`Zoom to Feature`, som säger åt "
+"QGIS att zooma till den intressanta funktionen."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:118
+msgid ""
+"In the :guilabel:`Attribute Table`, right-click on  any cell in the row that"
+" has the attribute value ``r2855697`` for the field ``full_id``."
+msgstr ""
+"I :guilabel:`Attribute Table` högerklickar du på en cell i den rad som har "
+"attributvärdet ``r2855697`` för fältet ``full_id``."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:120
+msgid "In the context menu, click on :guilabel:`Zoom to Feature`"
+msgstr "I snabbmenyn klickar du på :guilabel:`Zoom to Feature`"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:125
+msgid ""
+"Look at the Map Canvas. The polygon should now occupy the extent of the Map "
+"Canvas area."
+msgstr "Titta på kartbilden. Polygonen bör nu uppta hela Map Canvas-ytan."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:128
+msgid "You may now close the attribute table."
+msgstr "Du kan nu stänga attributtabellen."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:133
+msgid ""
+":abbr:`★☆☆ (Basic level)` Try Yourself: Exploring Vector Data Attributes"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Prova själv: Utforska vektordataattribut"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:135
+msgid "How many fields are available in the :guilabel:`rivers` layer?"
+msgstr "Hur många fält finns tillgängliga i skiktet :guilabel:`rivers`?"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:136
+msgid "Tell us a bit about the ``town`` places in your dataset."
+msgstr "Berätta lite om de \"städer\" som finns i ditt dataset."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:137
+msgid ""
+"Open the attribute table for the :guilabel:`places` layer. Which field would"
+" be the most useful to represent in label form, and why?"
+msgstr ""
+"Öppna attributtabellen för skiktet :guilabel:`places`. Vilket fält skulle "
+"vara mest användbart att representera i etikettform, och varför?"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:140
+msgid "Answer"
+msgstr "Svar"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:143
+msgid "There should be 9 fields in the :guilabel:`rivers` layer:"
+msgstr "Det bör finnas 9 fält i skiktet :guilabel:`rivers`:"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:145
+msgid "Select the layer in the :guilabel:`Layers` panel."
+msgstr "Välj skiktet i panelen :guilabel:`Layers`."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:146
+msgid ""
+"Right-click and choose :guilabel:`Open Attribute Table`, or press the "
+"|openTable| button on the :guilabel:`Attributes Toolbar` (it can be enabled "
+"from :menuselection:`View --> Toolbars` menu)."
+msgstr ""
+"Högerklicka och välj :guilabel:`Open Attribute Table`, eller tryck på "
+"knappen |openTable| i :guilabel:`Attributes Toolbar` (den kan aktiveras från"
+" :menuselection:`View --> Toolbars`-menyn)."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:149
+msgid "Count the number of columns."
+msgstr "Räkna antalet kolumner."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:151
+msgid ""
+"A quicker approach could be to double-click the :guilabel:`rivers` layer, "
+"open the :menuselection:`Layer properties --> Fields` tab, where you will "
+"find a numbered list of the table's fields."
+msgstr ""
+"En snabbare metod kan vara att dubbelklicka på skiktet :guilabel:`rivers`, "
+"öppna fliken :menuselection:`Layer properties --> Fields`, där du hittar en "
+"numrerad lista över tabellens fält."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:155
+msgid ""
+"Information about towns is available in the :guilabel:`places` layer. Open "
+"its attribute table as you did with the :guilabel:`rivers` layer: there are "
+"two features whose :guilabel:`place` attribute is set to ``town``: "
+"*Swellendam* and *Buffeljagsrivier*. You can add comment on other fields "
+"from these two records, if you like."
+msgstr ""
+"Information om städer finns i skiktet :guilabel:`places`. Öppna dess "
+"attributtabell som du gjorde med skiktet :guilabel:`rivers`: det finns två "
+"objekt vars attribut :guilabel:`place` är inställt på ``town``: *Swellendam*"
+" och *Buffeljagsrivier*. Du kan lägga till kommentarer om andra fält från "
+"dessa två poster, om du vill."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:161
+msgid ""
+"The ``name`` field is the most useful to show as labels. This is because all"
+" its values are unique for every object and are very unlikely to contain "
+"*NULL* values. If your data contains some *NULL* values, do not worry as "
+"long as most of your places have names."
+msgstr ""
+"Fältet ``name`` är det mest användbara att visa som etiketter. Detta beror "
+"på att alla dess värden är unika för varje objekt och det är mycket "
+"osannolikt att de innehåller *NULL*-värden. Om dina data innehåller några "
+"*NULL*-värden behöver du inte oroa dig så länge de flesta av dina platser "
+"har namn."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:167
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:169
+msgid ""
+"You now know how to use the attribute table to see what is actually in the "
+"data you're using. Any dataset will only be useful to you if it has the "
+"attributes that you care about. If you know which attributes you need, you "
+"can quickly decide if you're able to use a given dataset, or if you need to "
+"look for another one that has the required attribute data."
+msgstr ""
+"Du vet nu hur du använder attributtabellen för att se vad som faktiskt finns"
+" i de data du använder. Ett dataset är bara användbart för dig om det har de"
+" attribut som du bryr dig om. Om du vet vilka attribut du behöver kan du "
+"snabbt avgöra om du kan använda en viss datauppsättning eller om du måste "
+"leta efter en annan som har de nödvändiga attributuppgifterna."
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:176
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/vector_classification/attribute_data.rst:178
+msgid ""
+"Different attributes are useful for different purposes. Some of them can be "
+"represented directly as text for the map user to see. You'll learn how to do"
+" this in the next lesson."
+msgstr ""
+"Olika attribut är användbara för olika ändamål. Vissa av dem kan "
+"representeras direkt som text för kartanvändaren att se. Du lär dig hur du "
+"gör detta i nästa lektion."
