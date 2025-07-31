@@ -1,0 +1,1327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-15 05:53+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:6
+msgid "Connecting and Editing Data Across Layers"
+msgstr "Koppla samman och redigera data i olika lager"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:13
+msgid ""
+"Ability to connect data from different layers is one of the duties of a GIS "
+"software. Such a connection can be based on the spatial relationship between"
+" the features, or on their shared attributes. QGIS provides tools to handle "
+"any of these associations, such as:"
+msgstr ""
+"En av uppgifterna i ett GIS-program är att kunna koppla samman data från "
+"olika lager. En sådan koppling kan baseras på det rumsliga förhållandet "
+"mellan objekten eller på deras gemensamma attribut. QGIS tillhandahåller "
+"verktyg för att hantera alla dessa associationer, t.ex:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:18
+msgid ""
+"Processing algorithms that can create a new layer as a result of the "
+"connection, namely :ref:`qgisjoinattributesbylocation`, "
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, ..."
+msgstr ""
+"Bearbetningsalgoritmer som kan skapa ett nytt lager som ett resultat av "
+"anslutningen, nämligen :ref:`qgisjoinattributesbylocation`, "
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, ..."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:21
+msgid ""
+"SQL queries to create a new layer from the :ref:`DB Manager <dbmanager>` or "
+"as a :ref:`virtual layer <vector_virtual_layers>`"
+msgstr ""
+"SQL-frågor för att skapa ett nytt lager från :ref:`DB Manager <dbmanager>` "
+"eller som ett :ref:`virtuellt lager <vector_virtual_layers>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:23
+msgid ""
+":ref:`Joins properties <sec_joins>` or :ref:`relations settings "
+"<vector_relations>` that temporarily extend attributes of features in a "
+"given layer, with those of features in another layer based on some matching "
+"attribute(s)."
+msgstr ""
+":ref:`Joins-egenskaper <sec_joins>` eller :ref:`relationsinställningar "
+"<vector_relations>` som tillfälligt utökar attributen för objekt i ett visst"
+" skikt med attributen för objekt i ett annat skikt baserat på något eller "
+"några matchande attribut."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:27
+msgid ""
+"Joins and relations are technical concepts borrowed from databases to get "
+"the most out of data stored in tables by combining their contents. The idea "
+"is that features (rows) of different layers (tables) can be associated to "
+"each other. The number of rows which are matching each other can be of any "
+"value (zero, one, many)."
+msgstr ""
+"Joins och relationer är tekniska begrepp som lånats från databaser för att "
+"få ut mesta möjliga av data som lagras i tabeller genom att kombinera deras "
+"innehåll. Tanken är att funktioner (rader) i olika lager (tabeller) kan "
+"associeras med varandra. Antalet rader som matchar varandra kan ha vilket "
+"värde som helst (noll, en, många)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:37
+msgid "Joining features between two layers"
+msgstr "Sammanfogning av funktioner mellan två lager"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:39
+msgid ""
+"**Joins** in QGIS allow you to associate features of the current layer to "
+"features from another loaded vector layer. Whether they are spatially "
+"enabled and the type of geometry do not matter. The join is based on an "
+"attribute that is shared by the layers, in a one-to-one relationship."
+msgstr ""
+"*med *Joins** i QGIS kan du associera funktioner i det aktuella lagret med "
+"funktioner från ett annat laddat vektorlager. Det spelar ingen roll om de är"
+" rumsligt aktiverade eller vilken typ av geometri det rör sig om. "
+"Sammankopplingen baseras på ett attribut som delas av skikten, i ett ett-"
+"till-ett-förhållande."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:44
+msgid "To create a join on a layer (identified below as ``target layer``):"
+msgstr ""
+"För att skapa en join på ett lager (identifieras nedan som ``mållager``):"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:46
+msgid ""
+"Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab"
+msgstr ""
+"Gå till lagret :menuselection:`Properties -->` |join| :guilabel:`Joins` "
+"fliken"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
+msgid "join"
+msgstr "join"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:47
+msgid ""
+"Click the |symbologyAdd| :sup:`Add new join` button. The :guilabel:`Add "
+"vector join` dialog appears."
+msgstr ""
+"Klicka på knappen |symbologyAdd| :sup:`Lägg till ny länk`. Dialogrutan "
+":guilabel:`Add vector join` visas."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:49
+msgid ""
+"Select the :guilabel:`Join layer` you want to connect with the target vector"
+" layer"
+msgstr ""
+"Välj det :guilabel:`Join-lager` som du vill ansluta till målvektorlagret"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:50
+msgid ""
+"Specify the :guilabel:`Join field` (from the ``join layer``) and the "
+":guilabel:`Target field` (from the ``target layer``). These are the fields "
+"that are used to find matching feature in both layers hence they should have"
+" values in common."
+msgstr ""
+"Ange :guilabel:`Join field` (från ``join layer``) och :guilabel:`Target "
+"field` (från ``target layer``). Det är dessa fält som används för att hitta "
+"matchande objekt i båda skikten och de bör därför ha gemensamma värden."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:54
+msgid ""
+"Press :guilabel:`OK` and a summary of selected parameters is added to the "
+":guilabel:`Join` panel."
+msgstr ""
+"Tryck på :guilabel:`OK` och en sammanfattning av de valda parametrarna läggs"
+" till i :guilabel:`Join`-panelen."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:61
+msgid "Join an attribute table to an existing vector layer"
+msgstr "Anslut en attributtabell till ett befintligt vektorlager"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:63
+msgid ""
+"The steps above will create a join, where **ALL** the attributes of the "
+"**first matching feature** in the join layer is added to the target layer's "
+"feature. The following logic is used to pair features during a join process:"
+msgstr ""
+"Stegen ovan skapar en join, där **ALLA** attributen för den **första "
+"matchande funktionen** i join-lagret läggs till i mållagrets funktion. "
+"Följande logik används för att para ihop funktioner under en join-process:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:68
+msgid ""
+"All the features in the target layer are returned, regardless they have a "
+"match"
+msgstr ""
+"Alla funktioner i målskiktet returneras, oavsett om de har en matchning"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:69
+msgid ""
+"If the target field contains duplicate values, these features are assigned "
+"the same feature from the join layer."
+msgstr ""
+"Om målfältet innehåller duplicerade värden tilldelas dessa funktioner samma "
+"funktion från det gemensamma skiktet."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:71
+msgid ""
+"If the join field contains duplicate matching values, only the first fetched"
+" feature is picked."
+msgstr ""
+"Om join-fältet innehåller dubbla matchande värden väljs endast den först "
+"hämtade funktionen."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:73
+msgid ""
+"Joins in QGIS are based on a single field matching so most of the times, you"
+" would want to make sure that values in the matchable fields are unique."
+msgstr ""
+"Sammanfogningar i QGIS baseras på matchning av ett enda fält, så för det "
+"mesta vill du se till att värdena i de matchande fälten är unika."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:76
+msgid "QGIS provides some more options to tweak the join:"
+msgstr "QGIS ger några fler alternativ för att justera sammanfogningen:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:78
+msgid ""
+"|checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to "
+"cache values in memory (without geometries) from the joined layer in order "
+"to speed up lookups."
+msgstr ""
+"|checkbox| :guilabel:`Cache join layer in virtual memory`: gör att du kan "
+"cacha värden i minnet (utan geometrier) från det sammanfogade lagret för att"
+" snabba upp sökningar."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:80
+msgid ""
+"|unchecked| :guilabel:`Create attribute index on the join field` to speed up"
+" lookups"
+msgstr ""
+"|ej markerad| :guilabel:`Skapa attributindex på join-fältet` för att snabba "
+"upp sökningar"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:81
+msgid ""
+"|unchecked| :guilabel:`Dynamic form`: helps to synchronize join fields on "
+"the fly, according to the :guilabel:`Target field`. This way, constraints "
+"for join fields are also correctly updated. Note that it's deactivated by "
+"default because it may be very time consuming if you have a lot of features "
+"or a myriad of joins."
+msgstr ""
+"|ej markerad| :guilabel:`Dynamic form`: hjälper till att synkronisera join-"
+"fält i farten, enligt :guilabel:`Target field`. På så sätt uppdateras även "
+"begränsningarna för join-fält korrekt. Observera att den är avaktiverad som "
+"standard eftersom den kan vara mycket tidskrävande om du har många "
+"funktioner eller en mängd olika kopplingar."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:86
+msgid ""
+"If the target layer is editable, then some icons will be displayed in the "
+"attribute table next to fields, in order to inform about their status:"
+msgstr ""
+"Om målskiktet är redigerbart kommer vissa ikoner att visas i "
+"attributtabellen bredvid fälten för att informera om deras status:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:89
+msgid ""
+"|joinNotEditable|: the join layer is not configured to be editable. If you "
+"want to be able to edit join features from the target attribute table, then "
+"you have to check the option |checkbox| :guilabel:`Editable join layer`."
+msgstr ""
+"|joinNotEditable|: länklagret är inte konfigurerat för att kunna redigeras. "
+"Om du vill kunna redigera join-funktioner från målattributtabellen måste du "
+"markera alternativet |checkbox| :guilabel:`Editable join layer`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:684
+msgid "joinNotEditable"
+msgstr "joinNotEditable"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:92
+msgid ""
+"|joinedLayerNotEditable|: the join layer is well configured to be editable, "
+"but its current status is read only."
+msgstr ""
+"|joinedLayerNotEditable|: det gemensamma lagret är väl konfigurerat för att "
+"vara redigerbart, men dess aktuella status är skrivskyddad."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:686
+msgid "joinedLayerNotEditable"
+msgstr "joinedLayerNotEditable"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:94
+msgid ""
+"|joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization "
+"mechanisms are not activated. If you want to automatically add a feature in "
+"the join layer when a feature is created in the target layer, then you have "
+"to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically, "
+"the option |checkbox| :guilabel:`Delete cascade` may be activated if you  "
+"want to automatically delete join features."
+msgstr ""
+"|joinHasNotUpsertOnEdit|: det sammanfogade skiktet är redigerbart, men "
+"synkroniseringsmekanismerna är inte aktiverade. Om du automatiskt vill lägga"
+" till en funktion i det anslutande skiktet när en funktion skapas i "
+"målskiktet måste du markera alternativet |checkbox| :guilabel:`Upsert on "
+"edit`. Symmetriskt kan alternativet |checkbox| :guilabel:`Delete cascade` "
+"aktiveras om du automatiskt vill ta bort join-funktioner."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
+msgid "joinHasNotUpsertOnEdit"
+msgstr "joinHasNotUpsertOnEdit"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:101
+msgid ""
+"|unchecked| :guilabel:`Joined fields`: instead of adding all the fields from"
+" the joined layer, you can specify a subset."
+msgstr ""
+"|ej markerad| :guilabel:`Joined fields`: istället för att lägga till alla "
+"fält från det sammanfogade lagret kan du ange en delmängd."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:103
+msgid ""
+"|unchecked| :guilabel:`Custom field name prefix` for joined fields, in order"
+" to avoid name collision"
+msgstr ""
+"|ej markerad| :guilabel:`Prefix för anpassat fältnamn` för sammanfogade "
+"fält, för att undvika namnkollision"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:111
+msgid "Setting relations between multiple layers"
+msgstr "Inställning av relationer mellan flera lager"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:113
+msgid ""
+"Unlike joins that define a one-to-one link between features across two "
+"layers, relations help you build interconnections between multiple features "
+"across two or more layers. As such, relations are project level settings and"
+" are set in :menuselection:`Project --> Properties -->` |relations| "
+":guilabel:`Relations` tab. From there, you can:"
+msgstr ""
+"Till skillnad från joins som definierar en en-till-en-länk mellan funktioner"
+" i två lager, hjälper relationer dig att skapa sammankopplingar mellan flera"
+" funktioner i två eller flera lager. Relationer är alltså inställningar på "
+"projektnivå och anges i :menuselection:`Project --> Properties -->` "
+"|relations| :guilabel:`Relations` tab. Därifrån kan du:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
+msgid "relations"
+msgstr "relationer"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:119
+msgid "|symbologyAdd| :guilabel:`Add relation` whose type can be:"
+msgstr "|symbologyAdd| :guilabel:`Lägg till relation` vars typ kan vara:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:121
+msgid ":ref:`one to many relation <one_to_many_relation>`"
+msgstr ":ref:`en till många-relation <en_till_många-relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:122
+msgid ":ref:`many to many relation <many_to_many_relation>`"
+msgstr ":ref:`många till många-relation <många_till_många_relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:123
+msgid ""
+":ref:`polymorphic relation <polymorphic_relation>` that you can add or edit "
+"with the dedicated tools in the action drop-down menu."
+msgstr ""
+":ref:`polymorfisk relation <polymorfisk_relation>` som du kan lägga till "
+"eller redigera med de dedikerade verktygen i rullgardinsmenyn för åtgärder."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:126
+msgid ""
+"There is no simple way yet to edit a non-polymorphic relation once it has "
+"been created. Only the name can be edited with a double-click. For any other"
+" parameters of such a relation you will have to remove and recreate it."
+msgstr ""
+"Det finns ännu inget enkelt sätt att redigera en icke-polymorf relation när "
+"den väl har skapats. Endast namnet kan redigeras med ett dubbelklick. För "
+"alla andra parametrar i en sådan relation måste du ta bort den och skapa den"
+" på nytt."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:130
+msgid ""
+"|symbologyAdd| :guilabel:`Discover relations`: QGIS is able to discover "
+"existing relations from supported database formats (PostgreSQL, GeoPackage, "
+"ESRI File Geodatabase, ...). This can be a good way to ease the relations "
+"definition."
+msgstr ""
+"|symbologyAdd| :guilabel:`Upptäck relationer`: QGIS kan upptäcka befintliga "
+"relationer från databasformat som stöds (PostgreSQL, GeoPackage, ESRI File "
+"Geodatabase, ...). Detta kan vara ett bra sätt att underlätta "
+"relationsdefinitionen."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:133
+msgid "|symbologyRemove| :guilabel:`Remove relation`"
+msgstr "|symbologyRemove| :guilabel:`Remove relation`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:700
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:140
+msgid "Relations tab"
+msgstr "Fliken Relationer"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:148
+msgid "One to many (1-N) relations"
+msgstr "En till många (1-N) relationer"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:150
+msgid ""
+"As an example you have a layer with all regions of Alaska (polygon) which "
+"provides some attributes about its name and region type and a unique id "
+"(which acts as primary key)."
+msgstr ""
+"Som ett exempel har du ett lager med alla regioner i Alaska (polygon) som "
+"ger några attribut om dess namn och regiontyp och ett unikt id (som fungerar"
+" som primärnyckel)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:154
+msgid ""
+"Then you get another point layer or table with information about airports "
+"that are located in the regions and you also want to keep track of these. If"
+" you want to add them to the regions layer, you need to create a one to many"
+" relation using foreign keys, because there are several airports in most "
+"regions."
+msgstr ""
+"Sedan får du ett annat punktlager eller en tabell med information om "
+"flygplatser som ligger i regionerna och du vill också hålla reda på dessa. "
+"Om du vill lägga till dem i regionskiktet måste du skapa en en till många-"
+"relation med hjälp av främmande nycklar, eftersom det finns flera "
+"flygplatser i de flesta regioner."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:165
+msgid "Alaska region with airports"
+msgstr "Alaska regionen med flygplatser"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:168
+msgid "Layers and keys"
+msgstr "Skikt och nycklar"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:170
+msgid ""
+"QGIS makes no difference between a table and a vector layer. Basically, a "
+"vector layer is a table with a geometry. So you can add your table as a "
+"vector layer. To demonstrate the 1-n relation, you can load the "
+":file:`regions` and :file:`airports` layers in the sample dataset. In "
+"practice, each airport belongs to exactly one region while each region can "
+"have any number of airports (a typical one to many relation)."
+msgstr ""
+"QGIS gör ingen skillnad mellan en tabell och ett vektorlager. I grund och "
+"botten är ett vektorlager en tabell med en geometri. Så du kan lägga till "
+"din tabell som ett vektorlager. För att demonstrera 1-n-relationen kan du "
+"ladda skikten :file:`regions` och :file:`airports` i exempeldatasetet. I "
+"praktiken hör varje flygplats till exakt en region medan varje region kan ha"
+" ett valfritt antal flygplatser (en typisk en till många-relation)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:178
+msgid "which has a foreign key field (``fk_region``) to the layer regions."
+msgstr ""
+"som har ett främmande nyckelfält (``fk_region``) till lagerregionerna."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:180
+msgid ""
+"In addition to the attributes describing the airports, the aiports layer has"
+" another field ``fk_region`` which acts as a foreign key (if you have a "
+"database, you will probably want to define a constraint on it). This "
+"``fk_region`` field will always contain an id of a region. It can be seen "
+"like a pointer to the region it belongs to."
+msgstr ""
+"Förutom de attribut som beskriver flygplatserna har aiports-skiktet "
+"ytterligare ett fält, ``fk_region``, som fungerar som en främmande nyckel "
+"(om du har en databas vill du förmodligen definiera en begränsning för det)."
+" Fältet ``fk_region`` kommer alltid att innehålla ett id för en region. Det "
+"kan ses som en pekare till den region som det tillhör."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:186
+msgid ""
+"All you have to do is to tell QGIS the relation between the layers so that "
+"you can design a custom edit form for editing and QGIS takes care of the "
+"setup. It works with different providers (so you can also use it with shape "
+"and csv files)."
+msgstr ""
+"Allt du behöver göra är att tala om för QGIS relationen mellan lagren så att"
+" du kan utforma ett anpassat redigeringsformulär för redigering och QGIS tar"
+" hand om installationen. Det fungerar med olika leverantörer (så du kan "
+"också använda det med shape- och csv-filer)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:191
+msgid "Defining 1-N relations"
+msgstr "Definiera 1-N-relationer"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:193
+msgid ""
+"The first thing we are going to do is to let QGIS know about the relations "
+"between the layers. This is done in :menuselection:`Project --> "
+"Properties...`. Open the :guilabel:`Relations` tab and click on "
+"|symbologyAdd| :guilabel:`Add Relation`."
+msgstr ""
+"Det första vi ska göra är att berätta för QGIS om relationerna mellan "
+"lagren. Detta görs i :menuselection:`Project --> Properties...`. Öppna "
+"fliken :guilabel:`Relations` och klicka på |symbologyAdd| :guilabel:`Add "
+"Relation`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:197
+msgid ""
+"**Name** is going to be used as a title. It should be a human readable "
+"string describing what the relation is used for. We will just call say "
+"**airport_relation** in this case."
+msgstr ""
+"**Namn** kommer att användas som en titel. Det ska vara en mänskligt läsbar "
+"sträng som beskriver vad relationen används till. I det här fallet säger vi "
+"bara **airport_relation**."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:200
+msgid ""
+"**Referenced Layer (Parent)** also considered as parent layer, is the one "
+"with the primary key, pointed to, so here it is the ``regions`` layer. You "
+"need to define the primary key of the referenced layer, so it is ``ID``."
+msgstr ""
+"**Referenced Layer (Parent)** betraktas också som överordnat lager, är det "
+"med primärnyckeln, pekade på, så här är det ``regioner``-lagret. Du måste "
+"definiera den primära nyckeln för det refererade lagret, så det är ``ID``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:203
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``airports`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``fk_region``."
+msgstr ""
+"**Referencing Layer (Child)** betraktas också som barnlager, det är det som "
+"har det främmande nyckelfältet på sig. I vårt fall är detta "
+"``flygplatser``-skiktet. För detta lager måste du lägga till ett "
+"referensfält som pekar på det andra lagret, så det här är ``fk_region``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:209
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:587
+msgid ""
+"Sometimes, you need more than a single field to uniquely identify features "
+"in a layer. Creating a relation with such a layer requires a **composite "
+"key**, i.e. more than a single pair of matching fields. Use the "
+"|symbologyAdd| :sup:`Add new field pair as part of a composite foreign key` "
+"button to add as many pairs as necessary."
+msgstr ""
+"Ibland behöver du mer än ett enda fält för att unikt identifiera funktioner "
+"i ett skikt. För att skapa en relation med ett sådant skikt krävs en "
+"**kompositnyckel**, dvs. mer än ett enda par matchande fält. Använd knappen "
+"|symbologyAdd| :sup:`Lägg till nytt fältpar som en del av en sammansatt "
+"främmande nyckel` för att lägga till så många par som behövs."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:215
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:576
+msgid ""
+"**Id** will be used for internal purposes and has to be unique. You may need"
+" it to build :ref:`custom forms <customize_form>`. If you leave it empty, "
+"one will be generated for you but you can assign one yourself to get one "
+"that is easier to handle"
+msgstr ""
+"**Id** kommer att användas för interna ändamål och måste vara unikt. Du kan "
+"behöva det för att bygga :ref:`custom forms <customize_form>`. Om du lämnar "
+"det tomt kommer ett att genereras åt dig, men du kan tilldela ett själv för "
+"att få ett som är lättare att hantera"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:219
+msgid ""
+"**Relationship strength** sets the strength of the relation between the "
+"parent and the child layer. The default :guilabel:`Association` type means "
+"that the parent layer is *simply* linked to the child one while the "
+":guilabel:`Composition` type allows you to duplicate also the child features"
+" when duplicating the parent ones and on deleting a feature the children are"
+" deleted as well, resulting in cascade over all levels (means children of "
+"children of... are deleted as well)."
+msgstr ""
+"**Relationship strength** anger styrkan i relationen mellan det överordnade "
+"och det underordnade lagret. Standardtypen :guilabel:`Association` innebär "
+"att det överordnade lagret är *enkelt* länkat till det underordnade medan "
+"typen :guilabel:`Composition` gör att du kan duplicera även de underordnade "
+"funktionerna när du duplicerar de överordnade och när du tar bort en "
+"funktion tas även de underordnade bort, vilket resulterar i en kaskad över "
+"alla nivåer (vilket innebär att barn till barn till... också tas bort)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:230
+msgid "Adding a relation between regions and airports layers"
+msgstr "Lägga till en relation mellan region- och flygplatslager"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:232
+msgid ""
+"From the :guilabel:`Relations` tab, you can also press the |symbologyAdd| "
+":guilabel:`Discover Relation` button to fetch the relations available from "
+"the providers of the loaded layers. This is possible for layers stored in "
+"data providers like PostgreSQL or SpatiaLite."
+msgstr ""
+"Från fliken :guilabel:`Relations` kan du också trycka på knappen "
+"|symbologyAdd| :guilabel:`Discover Relation` för att hämta de relationer som"
+" är tillgängliga från leverantörerna av de laddade lagren. Detta är möjligt "
+"för skikt som lagras i dataleverantörer som PostgreSQL eller SpatiaLite."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:240
+msgid "Forms for 1-N relations"
+msgstr "Formulär för 1-N-relationer"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:242
+msgid ""
+"Now that QGIS knows about the relation, it will be used to improve the forms"
+" it generates. As we did not change the default form method (autogenerated),"
+" it will just add a new widget in our form. So let's select the layer region"
+" in the legend and use the identify tool. Depending on your settings, the "
+"form might open directly or you will have to choose to open it in the "
+"identification dialog under actions."
+msgstr ""
+"Nu när QGIS känner till relationen kommer den att användas för att förbättra"
+" de formulär som genereras. Eftersom vi inte har ändrat standardmetoden för "
+"formuläret (autogenererat) kommer det bara att lägga till en ny widget i "
+"vårt formulär. Så låt oss välja lagerregionen i legenden och använda "
+"identifieringsverktyget. Beroende på dina inställningar kan formuläret "
+"öppnas direkt eller så måste du välja att öppna det i identifieringsdialogen"
+" under åtgärder."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:253
+msgid "Identification dialog regions with relation to airports"
+msgstr "Identifiering av dialogregioner i förhållande till flygplatser"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:255
+msgid ""
+"As you can see, the airports assigned to this particular region are all "
+"shown in a table. And there are also some buttons available. Let's review "
+"them shortly:"
+msgstr ""
+"Som du kan se visas alla flygplatser som tilldelats den här regionen i en "
+"tabell. Och det finns också några knappar tillgängliga. Låt oss granska dem "
+"kort:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:258
+msgid ""
+"The |toggleEditing| button is for toggling the edit mode. Be aware that it "
+"toggles the edit mode of the airport layer, although we are in the feature "
+"form of a feature from the region layer. But the table is representing "
+"features of the airport layer."
+msgstr ""
+"Knappen |toggleEditing| är till för att växla redigeringsläge. Tänk på att "
+"den växlar redigeringsläget för flygplatsskiktet, även om vi befinner oss i "
+"funktionsformatet för en funktion från regionskiktet. Men tabellen "
+"representerar funktioner i flygplatslagret."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:702
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:262
+msgid ""
+"The |saveEdits| button is for saving all the edits in the child layer "
+"(airport)."
+msgstr ""
+"Knappen |saveEdits| används för att spara alla redigeringar i underordnat "
+"lager (flygplats)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:696
+msgid "saveEdits"
+msgstr "saveEdits"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:263
+msgid ""
+"The |capturePoint| button lets you digitize the airport geometry in the map "
+"canvas and assigns the new feature to the current region by default. Note "
+"that the icon will change according to the geometry type."
+msgstr ""
+"Med knappen |capturePoint| kan du digitalisera flygplatsgeometrin i "
+"kartbilden och tilldela den nya funktionen till den aktuella regionen som "
+"standard. Observera att ikonen kommer att ändras beroende på geometritypen."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:670
+msgid "capturePoint"
+msgstr "capturePoint"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:266
+msgid ""
+"The |newTableRow| button adds a new record to the airport layer attribute "
+"table and assigns the new feature to the current region by default. The "
+"geometry can be drawn later with the :guilabel:`Add part` digitizing tool."
+msgstr ""
+"Knappen |newTableRow| lägger till en ny post i attributtabellen för "
+"flygplatslagret och tilldelar den nya funktionen till den aktuella regionen "
+"som standard. Geometrin kan ritas senare med digitaliseringsverktyget "
+":guilabel:`Add part`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:690
+msgid "newTableRow"
+msgstr "newTableRow"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:269
+msgid ""
+"The |duplicateFeature| button allows you to copy and paste one or more child"
+" features within the child layer. They can later be assigned to a different "
+"parent feature or have their attributes modified."
+msgstr ""
+"Med knappen |duplicateFeature| kan du kopiera och klistra in en eller flera "
+"underordnade funktioner i det underordnade lagret. De kan senare tilldelas "
+"en annan överordnad funktion eller få sina attribut modifierade."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:676
+msgid "duplicateFeature"
+msgstr "duplicateFeature"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:272
+msgid ""
+"The |deleteSelectedFeatures| button deletes the selected airport(s) "
+"permanently."
+msgstr ""
+"Knappen |deleteSelectedFeatures| raderar den eller de valda flygplatserna "
+"permanent."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:674
+msgid "deleteSelectedFeatures"
+msgstr "deleteSelectedFeatures"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:273
+msgid ""
+"The |link| symbol opens a new dialog where you can select any existing "
+"airport which will then be assigned to the current region. This may be handy"
+" if you created the airport on the wrong region by accident."
+msgstr ""
+"Symbolen |länk| öppnar en ny dialogruta där du kan välja en befintlig "
+"flygplats som sedan kommer att tilldelas den aktuella regionen. Detta kan "
+"vara praktiskt om du råkade skapa flygplatsen i fel region."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:688
+msgid "link"
+msgstr "link"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:276
+msgid ""
+"The |unlink| symbol unlinks the selected airport(s) from the current region,"
+" leaving them unassigned (the foreign key is set to NULL) effectively."
+msgstr ""
+"Symbolen |unlink| kopplar bort den eller de valda flygplatserna från den "
+"aktuella regionen och lämnar dem utan tilldelning (främmande nyckel sätts "
+"till NULL) i praktiken."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:706
+msgid "unlink"
+msgstr "unlink"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:278
+msgid ""
+"With the |zoomToSelected| button you can zoom the map to the selected child "
+"features."
+msgstr ""
+"Med knappen |zoomToSelected| kan du zooma kartan till de valda "
+"barnfunktionerna."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:708
+msgid "zoomToSelected"
+msgstr "zoomToSelected"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:279
+msgid ""
+"The two buttons |formView| and |openTable| to the right switch between the "
+":ref:`table view and form view <attribute_table_view>` of the related child "
+"features."
+msgstr ""
+"De två knapparna |formView| och |openTable| till höger växlar mellan "
+":ref:`tabellvy och formulärvy <attribute_table_view>` för de relaterade "
+"underordnade funktionerna."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:678
+msgid "formView"
+msgstr "formView"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:692
+msgid "openTable"
+msgstr "openTable"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:282
+msgid ""
+"If you use the :ref:`Drag and Drop Designer <customize_form>` for the "
+"regions feature, you can select which tools are available. You can even "
+"decide whether to open a new form when a new feature is added using "
+":guilabel:`Force hide form on add feature` option. Be aware that this option"
+" implies that not null attributes must take a valid default value to work "
+"correctly."
+msgstr ""
+"Om du använder :ref:`Drag and Drop Designer <customize_form>` för "
+"regionfunktionen kan du välja vilka verktyg som ska vara tillgängliga. Du "
+"kan även bestämma om ett nytt formulär ska öppnas när en ny funktion läggs "
+"till med hjälp av alternativet :guilabel:`Force hide form on add feature`. "
+"Tänk på att detta alternativ innebär att not null-attribut måste ha ett "
+"giltigt standardvärde för att fungera korrekt."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:294
+msgid "Drag and Drop Designer for configure regions-airports relation tools"
+msgstr ""
+"Drag and Drop Designer för att konfigurera verktyg för relationer mellan "
+"regioner och flygplatser"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:296
+msgid ""
+"In the above example the referencing layer has geometries (so it isn't just "
+"an alphanumeric table) so the above steps will create an entry in the layer "
+"attribute table that has no corresponding geometric feature. To add the "
+"geometry:"
+msgstr ""
+"I exemplet ovan har referenslagret geometrier (så det är inte bara en "
+"alfanumerisk tabell) så stegen ovan kommer att skapa en post i "
+"lagerattributtabellen som inte har någon motsvarande geometrisk funktion. "
+"För att lägga till geometrin:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:301
+msgid ""
+"Choose |openTable| :menuselection:`Open Attribute Table` for the referencing"
+" layer."
+msgstr ""
+"Välj |openTable| :menuselection:`Open Attribute Table` för referenslagret."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:302
+msgid ""
+"Select the record that has been added previously within the feature form of "
+"the referenced layer."
+msgstr ""
+"Välj den post som tidigare har lagts till i det refererade skiktets "
+"funktionsform."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:303
+msgid ""
+"Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to "
+"the selected attributes table record."
+msgstr ""
+"Använd digitaliseringsverktyget |addPart| :sup:`Add Part` för att koppla en "
+"geometri till den valda attributtabellposten."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:668
+msgid "addPart"
+msgstr "addPart"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:306
+msgid ""
+"If you work on the airport table, the widget Relation Reference is "
+"automatically set up for the ``fk_region`` field (the one used to create the"
+" relation), see :ref:`Relation Reference widget <configure_field>`."
+msgstr ""
+"Om du arbetar med flygplatstabellen konfigureras widgeten Relation Reference"
+" automatiskt för fältet ``fk_region`` (det som används för att skapa "
+"relationen), se :ref:`Relation Reference widget <configure_field>`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:312
+msgid ""
+"In the airport form you will see the |formView| button at the right side of "
+"the ``fk_region`` field: if you click on the button the form of the region "
+"layer will be opened. This widget allows you to easily and quickly open the "
+"forms of the linked parent features."
+msgstr ""
+"I flygplatsformuläret ser du knappen |formView| till höger om fältet "
+"``fk_region``: om du klickar på knappen öppnas formuläret för regionlagret. "
+"Med den här widgeten kan du enkelt och snabbt öppna formulären för de "
+"länkade överordnade funktionerna."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:321
+msgid "Identification dialog airport with relation to regions"
+msgstr "Identifieringsdialog flygplats med relation till regioner"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:323
+msgid ""
+"The Relation Reference widget has also an option to embed the form of the "
+"parent layer within the child one. It is available in  the "
+":menuselection:`Properties --> Attributes Form` menu of the airport layer: "
+"select the ``fk_region`` field and check the ``Show embedded form`` option."
+msgstr ""
+"Widgeten Relation Reference har också ett alternativ för att bädda in "
+"formuläret för det överordnade lagret i det underordnade. Det finns "
+"tillgängligt i menyn :menuselection:`Properties --> Attributes Form` i "
+"flygplatslagret: välj fältet ``fk_region`` och markera alternativet ``Visa "
+"inbäddat formulär``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:327
+msgid ""
+"If you look at the feature dialog now, you will see that the form of the "
+"region is embedded inside the airports form and will even have a combobox, "
+"which allows you to assign the current airport to another region."
+msgstr ""
+"Om du tittar på funktionsdialogen nu kommer du att se att regionformuläret "
+"är inbäddat i flygplatsformuläret och till och med har en kombinationsruta "
+"som gör att du kan tilldela den aktuella flygplatsen till en annan region."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:336
+msgid ""
+"Moreover if you toggle the editing mode of the airport layer, the "
+"``fk_region`` field has also an autocompleter function: while typing you "
+"will see all the values of the ``id`` field of the region layer. Here it is "
+"possible to digitize a polygon for the region layer using the |symbologyAdd|"
+" button if you chose the option ``Allow adding new features`` in the "
+":menuselection:`Properties --> Attributes Form` menu of the airport layer."
+msgstr ""
+"Om du växlar redigeringsläget för flygplatslagret har fältet ``fk_region`` "
+"dessutom en autokompletteringsfunktion: när du skriver kommer du att se alla"
+" värden i fältet ``id`` för regionlagret. Här är det möjligt att "
+"digitalisera en polygon för regionlagret med hjälp av knappen |symbologyAdd|"
+" om du har valt alternativet ``Allow adding new features`` i menyn "
+":menuselection:`Properties --> Attributes Form` i flygplatslagret."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:343
+msgid ""
+"The child layer can also be used in the :ref:`select_by_value` tool in order"
+" to select features of the parent layer based on attributes of their "
+"children."
+msgstr ""
+"Barnskiktet kan också användas i verktyget :ref:`select_by_value` för att "
+"välja funktioner i det överordnade skiktet baserat på attribut för deras "
+"barn."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:346
+msgid ""
+"In :numref:`figure_select_by_value`, all the regions where the mean altitude"
+" of the airports is greater than 500 meters above sea level are selected."
+msgstr ""
+"I :numref:`figure_select_by_value` väljs alla regioner där flygplatsernas "
+"medelhöjd är större än 500 meter över havet."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:349
+msgid ""
+"You will find that many different aggregation functions are available in the"
+" form."
+msgstr ""
+"Du kommer att upptäcka att många olika aggregeringsfunktioner finns "
+"tillgängliga i formuläret."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:356
+msgid "Select parent features with child values"
+msgstr "Välj föräldrafunktioner med barnvärden"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:363
+msgid "Many-to-many (N-M) relations"
+msgstr "Många-till-många-relationer (N-M)"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:365
+msgid ""
+"N-M relations are many-to-many relations between two tables. For instance, "
+"the ``airports`` and ``airlines`` layers: an airport receives several "
+"airline companies and an airline company flies to several airports."
+msgstr ""
+"N-M-relationer är många-till-många-relationer mellan två tabeller. Till "
+"exempel lagren ``flygplatser`` och ``flygbolag``: en flygplats tar emot "
+"flera flygbolag och ett flygbolag flyger till flera flygplatser."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:370
+msgid ""
+"This SQL code creates the three tables we need for an N-M relationship in a "
+"PostgreSQL/PostGIS schema named *locations*. You can run the code using the "
+":menuselection:`Database --> DB Manager…` for PostGIS or external tools such"
+" as `pgAdmin <https://www.pgadmin.org>`_. The airports table stores the "
+"``airports`` layer and the airline table stores the ``airlines`` layer. In "
+"both tables few fields are used for clarity. The *tricky* part is the "
+"``airports_airlines`` table. We need it to list all airlines for all "
+"airports (or vice versa). This kind of table is known as a *pivot table*. "
+"The *constraints* in this table force that an airport can be associated with"
+" an airline only if both already exist in their layers."
+msgstr ""
+"Denna SQL-kod skapar de tre tabellerna vi behöver för en N-M-relation i ett "
+"PostgreSQL / PostGIS-schema med namnet *locations *. Du kan köra koden med "
+"hjälp av :menuselection:`Database --> DB Manager...` för PostGIS eller "
+"externa verktyg som `pgAdmin <https://www.pgadmin.org>`_. Flygplatstabellen "
+"lagrar ``airports``-skiktet och flygbolagstabellen lagrar "
+"``airlines``-skiktet. I båda tabellerna används få fält för tydlighetens "
+"skull. Den * knepiga * delen är tabellen ``airports_airlines``. Vi behöver "
+"den för att lista alla flygbolag för alla flygplatser (eller vice versa). "
+"Den här typen av tabell kallas för en *pivottabell*. Begränsningarna i den "
+"här tabellen gör att en flygplats kan associeras med ett flygbolag endast om"
+" båda redan finns i sina lager."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:424
+msgid ""
+"Instead of PostgreSQL you can also use GeoPackage. In this case, the three "
+"tables can be created manually using the :menuselection:`Database --> DB "
+"Manager…`. In GeoPackage there are no schemas so the *locations* prefix is "
+"not needed."
+msgstr ""
+"Istället för PostgreSQL kan du också använda GeoPackage. I det här fallet "
+"kan de tre tabellerna skapas manuellt med hjälp av :menuselection:`Database "
+"--> DB Manager...`. I GeoPackage finns det inga scheman så prefixet "
+"*locations * behövs inte."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:429
+msgid ""
+"Foreign key constraints in ``airports_airlines`` table can´t be created "
+"using :menuselection:`Table --> Create Table…` or :menuselection:`Table --> "
+"Edit Table…` so they should be created using :menuselection:`Database --> "
+"SQL Window…`. GeoPackage doesn't support *ADD CONSTRAINT* statements so the "
+"``airports_airlines`` table should be created in two steps:"
+msgstr ""
+"Foreign key constraints i tabellen ``airports_airlines`` kan inte skapas med"
+" hjälp av :menuselection:`Table --> Create Table...` eller "
+":menuselection:`Table --> Edit Table...` så de bör skapas med hjälp av "
+":menuselection:`Database --> SQL Window...`. GeoPackage stöder inte *ADD "
+"CONSTRAINT*-satser så tabellen ``airports_airlines`` bör skapas i två steg:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:435
+msgid ""
+"Set up the table only with the ``id`` field using :menuselection:`Table --> "
+"Create Table…`"
+msgstr ""
+"Ställ in tabellen endast med fältet ``id`` med hjälp av "
+":menuselection:`Table --> Create Table...`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:436
+msgid ""
+"Using :menuselection:`Database --> SQL Window…`, type and execute this SQL "
+"code:"
+msgstr ""
+"Använd :menuselection:`Database --> SQL Window...`, skriv och kör denna SQL-"
+"kod:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:454
+msgid ""
+"Then in QGIS, you should set up two :ref:`one-to-many relations "
+"<one_to_many_relation>` as explained above:"
+msgstr ""
+"I QGIS ska du sedan ställa in två :ref:`one-to-many-relationer "
+"<one_to_many_relation>` enligt förklaringen ovan:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:457
+msgid "a relation between ``airlines`` table and the pivot table;"
+msgstr "en relation mellan ``airlines`` tabellen och pivottabellen;"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:458
+msgid "and a second one between ``airports`` table and the pivot table."
+msgstr "och en andra mellan ``airports`` tabellen och pivottabellen."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:460
+msgid ""
+"An easier way to do it (only for PostgreSQL) is using the "
+":guilabel:`Discover Relations` in :menuselection:`Project --> Properties -->"
+" Relations`. QGIS will automatically read all relations in your database and"
+" you only have to select the two you need. Remember to load the three tables"
+" in the QGIS project first."
+msgstr ""
+"Ett enklare sätt att göra det (endast för PostgreSQL) är att använda "
+":guilabel:`Discover Relations` i :menuselection:`Project --> Properties --> "
+"Relations`. QGIS kommer automatiskt att läsa alla relationer i din databas "
+"och du behöver bara välja de två du behöver. Kom ihåg att först ladda in de "
+"tre tabellerna i QGIS-projektet."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:471
+msgid "Relations and autodiscover"
+msgstr "Relationer och autodiscover"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:473
+msgid ""
+"In case you want to remove an ``airport`` or an ``airline``, QGIS won't "
+"remove the associated record(s) in ``airports_airlines`` table. This task "
+"will be made by the database if we specify the right *constraints* in the "
+"pivot table creation as in the current example."
+msgstr ""
+"Om du vill ta bort en \"flygplats\" eller ett \"flygbolag\" kommer QGIS inte"
+" att ta bort de tillhörande posterna i tabellen \"airports_airlines\". Denna"
+" uppgift kommer att utföras av databasen om vi anger rätt *begränsningar* i "
+"skapandet av pivottabellen som i det aktuella exemplet."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:478
+msgid "**Combining N-M relation with automatic transaction group**"
+msgstr "**Kombinera N-M-relation med automatisk transaktionsgrupp**"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:480
+msgid ""
+"You should enable the transaction mode in :menuselection:`Project Properties"
+" --> Data Sources -->` when working on such context. QGIS should be able to "
+"add or update row(s) in all tables (airlines, airports and the pivot "
+"tables)."
+msgstr ""
+"Du bör aktivera transaktionsläget i :menuselection:`Projektegenskaper --> "
+"Datakällor -->` när du arbetar med en sådan kontext. QGIS bör kunna lägga "
+"till eller uppdatera rad(ar) i alla tabeller (flygbolag, flygplatser och "
+"pivottabeller)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:484
+msgid ""
+"Finally we have to select the right cardinality in the :menuselection:`Layer"
+" Properties --> Attributes Form` for the ``airports`` and ``airlines`` "
+"layers. For the first one we should choose the **airlines (id)** option and "
+"for the second one the **airports (id)** option."
+msgstr ""
+"Slutligen måste vi välja rätt kardinalitet i :menuselection:`Layer "
+"Properties --> Attributes Form` för lagren ``airports`` och ``airlines``. "
+"För det första bör vi välja alternativet **airlines (id)** och för det andra"
+" alternativet **airports (id)**."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:495
+msgid "Set relationship cardinality"
+msgstr "Ange kardinalitet för relation"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:497
+msgid ""
+"Now you can associate an airport with an airline (or an airline with an "
+"airport) using :guilabel:`Add child feature` or :guilabel:`Link existing "
+"child feature` in the subforms. A record will automatically be inserted in "
+"the ``airports_airlines`` table."
+msgstr ""
+"Nu kan du koppla ihop en flygplats med ett flygbolag (eller ett flygbolag "
+"med en flygplats) med hjälp av :guilabel:`Add child feature` eller "
+":guilabel:`Link existing child feature` i underformulären. En post kommer "
+"automatiskt att infogas i tabellen ``airports_airlines``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:506
+msgid "N-M relationship between airports and airlines"
+msgstr "N-M-förhållande mellan flygplatser och flygbolag"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:508
+msgid "Using **Many to one relation** cardinality"
+msgstr "Använda **Många till en relation** kardinalitet"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:510
+msgid ""
+"Sometimes hiding the pivot table in an N-M relationship is not desirable. "
+"Mainly because there are attributes in the relationship that can only have "
+"values when a relationship is established. If your tables have a geometry "
+"field, it could be interesting to activate the :guilabel:`On map "
+"identification` option (:menuselection:`Layer Properties --> Attributes Form"
+" --> Available widgets --> Fields`) for the foreign key fields in the pivot "
+"table."
+msgstr ""
+"Ibland är det inte önskvärt att dölja pivottabellen i en N-M-relation. "
+"Främst för att det finns attribut i relationen som bara kan ha värden när en"
+" relation är etablerad. Om dina tabeller har ett geometrifält kan det vara "
+"intressant att aktivera alternativet :guilabel:``On map identification`` "
+"(:menuselection:``Layer Properties --> Attributes Form --> Available widgets"
+" --> Fields``) för fälten med främmande nycklar i pivottabellen."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:517
+msgid "**Pivot table primary key**"
+msgstr "**Pivottabellens primärnyckel**"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:519
+msgid ""
+"Avoid using multiple fields in the primary key in a pivot table. QGIS "
+"assumes a single  primary key so a constraint like ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` will not work."
+msgstr ""
+"Undvik att använda flera fält i den primära nyckeln i en pivottabell. QGIS "
+"förutsätter en enda primärnyckel, så en begränsning som ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` fungerar inte."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:528
+msgid "Polymorphic relations"
+msgstr "Polymorfa relationer"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:531
+msgid "The purpose"
+msgstr "Syftet med"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:533
+msgid ""
+"Polymorphic relations are special case of 1-N relations, where a single "
+"referencing (document) layer contains the features for multiple referenced "
+"layers. This differs from normal relations which require different "
+"referencing layer for each referenced layer. A single referencing (document)"
+" layer is achieved by adding an adiditonal ``layer_field`` column in the "
+"referencing (document) layer that stores information to identify the "
+"referenced layer. In its most simple form, the referencing (document) layer "
+"will just insert the layer name of the referenced layer into this field."
+msgstr ""
+"Polymorfa relationer är ett specialfall av 1-N-relationer, där ett enda "
+"refererande (dokument)lager innehåller egenskaper för flera refererade "
+"lager. Detta skiljer sig från normala relationer som kräver olika "
+"referenslager för varje refererat lager. Ett enda referenslager "
+"(dokumentlager) uppnås genom att lägga till en extra kolumn \"layer_field\" "
+"i referenslagret (dokumentlagret) som lagrar information för att identifiera"
+" det refererade lagret. I sin enklaste form kommer det refererande lagret "
+"(dokumentlagret) bara att infoga lagernamnet för det refererade lagret i "
+"detta fält."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:541
+msgid ""
+"To be more precise, a polymorphic relation is a set of normal relations "
+"having the same referencing layer but having the referenced layer "
+"dynamically defined. The polymorphic setting of the layer is solved by using"
+" an expression which has to match some properties of the referenced layer "
+"like the table name, layer id, layer name."
+msgstr ""
+"För att vara mer exakt är en polymorf relation en uppsättning normala "
+"relationer som har samma referenslager men där det refererade lagret "
+"definieras dynamiskt. Den polymorfa inställningen av skiktet löses genom att"
+" använda ett uttryck som måste matcha vissa egenskaper hos det refererade "
+"skiktet, t.ex. tabellnamn, skikt-ID, skiktnamn."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:546
+msgid ""
+"Imagine we are going to the park and want to take pictures of different "
+"species of ``plants`` and ``animals`` we see there. Each plant or animal has"
+" multiple pictures associated with it, so if we use the normal 1:N relations"
+" to store pictures, we would need two separate tables, ``animal_images`` and"
+" ``plant_images``. This might not be a problem for 2 tables, but imagine if "
+"we want to take separate pictures for mushrooms, birds etc."
+msgstr ""
+"Tänk dig att vi går till parken och vill ta bilder av olika arter av "
+"\"växter\" och \"djur\" som vi ser där. Varje växt eller djur har flera "
+"bilder associerade med sig, så om vi använder de normala 1:N-relationerna "
+"för att lagra bilder skulle vi behöva två separata tabeller, "
+"``animal_images`` och ``plant_images``. Detta kanske inte är ett problem för"
+" 2 tabeller, men tänk om vi vill ta separata bilder för svampar, fåglar etc."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:554
+msgid ""
+"Polymorphic relations solve this problem as all the referencing features are"
+" stored in the same table ``documents``. For each feature the referenced "
+"layer is stored in the ``referenced_layer`` field and the referenced feature"
+" id in the ``referenced_id`` field."
+msgstr ""
+"Polymorfiska relationer löser detta problem eftersom alla refererande "
+"funktioner lagras i samma tabell ``documents``. För varje funktion lagras "
+"det refererade lagret i fältet ``referenced_layer`` och den refererade "
+"funktionens id i fältet ``referenced_id``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
+msgid "Defining polymorphic relations"
+msgstr "Definiera polymorfa relationer"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:562
+msgid ""
+"First, let QGIS know about the polymorphic relations between the layers. "
+"This is done in :menuselection:`Project --> Properties...`. Open the "
+":guilabel:`Relations` tab and click on the little down arrow next to the "
+"|symbologyAdd| :guilabel:`Add Relation` button, so you can select the "
+":guilabel:`Add Polymorphic Relation` option from the newly appeared "
+"dropdown."
+msgstr ""
+"Låt först QGIS veta om de polymorfa relationerna mellan lagren. Detta görs i"
+" :menuselection:`Project --> Properties...`. Öppna fliken "
+":guilabel:`Relations` och klicka på den lilla nedåtpilen bredvid knappen "
+"|symbologyAdd| :guilabel:`Add Relation`, så att du kan välja alternativet "
+":guilabel:`Add Polymorphic Relation` i den nya rullgardinsmenyn."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:573
+msgid ""
+"Adding a polymorphic relation using ``documents`` layer as referencing and "
+"``animals`` and ``plants`` as referenced layers."
+msgstr ""
+"Lägga till en polymorf relation med skiktet ``dokument`` som refererande och"
+" skikten ``djur`` och ``växter`` som refererande."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:581
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``documents`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``referenced_id``."
+msgstr ""
+"**Referencing Layer (Child)** betraktas också som barnlager och är det lager"
+" som innehåller fältet med främmande nyckel. I vårt fall är detta "
+"``documents``-skiktet. För detta lager måste du lägga till ett referensfält "
+"som pekar på det andra lagret, så detta är ``referenced_id``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:593
+msgid ""
+"**Layer Field** is the field in the referencing table that stores the result"
+" of the evaluated layer expression which is the referencing table that this "
+"feature belongs to. In our example, this would be the ``referenced_layer`` "
+"field."
+msgstr ""
+"**Lagerfält** är det fält i referenstabellen som lagrar resultatet av det "
+"utvärderade lageruttrycket, vilket är den referenstabell som den här "
+"funktionen tillhör. I vårt exempel skulle detta vara fältet "
+"``referenced_layer``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:597
+msgid ""
+"**Layer expression** evaluates to a unique identifier of the layer. This can"
+" be the layer name ``@layer_name``, the layer id ``@layer_id``, the layer's "
+"table name ``decode_uri(@layer, 'table')`` or anything that can uniquely "
+"identifies a layer."
+msgstr ""
+"**Layer expression** utvärderas till en unik identifierare för lagret. Detta"
+" kan vara skiktnamnet ``@layer_name``, skiktets id ``@layer_id``, skiktets "
+"tabellnamn ``decode_uri(@layer, 'table')`` eller något annat som kan "
+"identifiera ett skikt på ett unikt sätt."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:602
+msgid ""
+"**Relationship strength** sets the strength of the generated relations "
+"between the parent and the child layer. The default :guilabel:`Association` "
+"type means that the parent layer is *simply* linked to the child one while "
+"the :guilabel:`Composition` type allows you to duplicate also the child "
+"features when duplicating the parent ones and on deleting a feature the "
+"children are deleted as well, resulting in cascade over all levels (means "
+"children of children of... are deleted as well)."
+msgstr ""
+"**Relationship strength** anger styrkan i de genererade relationerna mellan "
+"det överordnade och det underordnade lagret. Standardtypen "
+":guilabel:`Association` innebär att det överordnade lagret är *enkelt* "
+"länkat till det underordnade medan typen :guilabel:`Composition` gör att du "
+"kan duplicera även de underordnade funktionerna när du duplicerar de "
+"överordnade och när du tar bort en funktion tas även de underordnade bort, "
+"vilket resulterar i en kaskad över alla nivåer (vilket innebär att barn till"
+" barn till... också tas bort)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:608
+msgid ""
+"**Referenced Layers** also considered as parent layers, are those with the "
+"primary key, pointed to, so here they would be ``plants`` and ``animals`` "
+"layers. You need to define the primary key of the referenced layers from the"
+" dropdown, so it is ``fid``. Note that the definition of a valid primary key"
+" requires all the referenced layers to have a field with that name. If there"
+" is no such field you cannot save a polymorphic relation."
+msgstr ""
+"** Refererade lager ** betraktas också som föräldralager, är de med den "
+"primära nyckeln, pekade på, så här skulle de vara `` växter `` och `` djur "
+"`` lager. Du måste definiera den primära nyckeln för de refererade lagren "
+"från rullgardinsmenyn, så det är ``fid``. Observera att definitionen av en "
+"giltig primärnyckel kräver att alla refererade lager har ett fält med det "
+"namnet. Om det inte finns något sådant fält kan du inte spara en polymorf "
+"relation."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:615
+msgid ""
+"Once added, the polymorphic relation can be edited via the :guilabel:`Edit "
+"Polymorphic Relation` menu entry."
+msgstr ""
+"När den polymorfa relationen har lagts till kan den redigeras via "
+"menyalternativet :guilabel:`Edit Polymorphic Relation`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:623
+msgid ""
+"Preview of the newly created polymorphic relation and its child relations "
+"for animals and plants."
+msgstr ""
+"Förhandsgranskning av den nyskapade polymorfa relationen och dess "
+"underordnade relationer för djur och växter."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:626
+msgid "The example above uses the following database schema:"
+msgstr "I exemplet ovan används följande databasschema:"
