@@ -1,0 +1,967 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:5
+msgid "Working with Projections"
+msgstr "Arbeta med projektioner"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:14
+msgid ""
+"A Coordinate Reference System, or CRS, is a method of associating numerical "
+"coordinates with a position on the surface of the Earth. QGIS has support "
+"for approximately 7,000 standard CRSs, each with different use cases, pros "
+"and cons! Choosing an appropriate reference system for your QGIS projects "
+"and data can be a complex task, but fortunately QGIS helps guide you through"
+" this choice, and makes working with different CRSs as transparent and "
+"accurate as possible."
+msgstr ""
+"Ett koordinatreferenssystem, eller CRS, är en metod för att associera "
+"numeriska koordinater med en position på jordens yta. QGIS har stöd för "
+"cirka 7 000 standard-CRS:er, alla med olika användningsområden, för- och "
+"nackdelar! Att välja ett lämpligt referenssystem för dina QGIS-projekt och "
+"data kan vara en komplex uppgift, men lyckligtvis hjälper QGIS dig att "
+"vägleda dig genom detta val och gör arbetet med olika CRS så transparent och"
+" korrekt som möjligt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:25
+msgid "Overview of Projection Support"
+msgstr "Översikt över projektionsstöd"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:27
+msgid ""
+"QGIS has support for approximately 7,000 known CRSs. These standard CRSs are"
+" based on those defined by the European Petroleum Search Group (EPSG) and "
+"the Institut Geographique National de France (IGNF), and are made available "
+"in QGIS through the underlying \"Proj\" projection library. Commonly, these "
+"standard projections are identified through use of an authority:code "
+"combination, where the authority is an organisation name such as \"EPSG\" or"
+" \"IGNF\", and the code is a unique number associated with a specific CRS. "
+"For instance, the common WGS 84 latitude/longitude CRS is known by the "
+"identifier ``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``."
+msgstr ""
+"QGIS har stöd för cirka 7 000 kända CRS. Dessa standard-CRS baseras på de "
+"som definieras av European Petroleum Search Group (EPSG) och Institut "
+"Geographique National de France (IGNF), och görs tillgängliga i QGIS genom "
+"det underliggande projektionsbiblioteket \"Proj\". Vanligtvis identifieras "
+"dessa standardprojektioner genom användning av en kombination av auktoritet "
+"och kod, där auktoriteten är ett organisationsnamn som \"EPSG\" eller "
+"\"IGNF\" och koden är ett unikt nummer som är associerat med ett specifikt "
+"CRS. Exempelvis är det vanliga CRS-systemet för latitud/longitud WGS 84 känt"
+" genom identifieraren \"EPSG:4326\" och CRS-systemet för webbkartor är "
+"\"EPSG:3857\"."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:37
+msgid ""
+"Custom, user-created CRSs are stored in a user CRS database. See section "
+":ref:`sec_custom_projections` for information on managing your custom "
+"coordinate reference systems."
+msgstr ""
+"Anpassade, användarskapade CRS lagras i en CRS-databas för användare. Se "
+"avsnitt :ref:`sec_custom_projections` för information om hur du hanterar "
+"dina anpassade koordinatreferenssystem."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
+msgid "Layer Coordinate Reference Systems"
+msgstr "Referenssystem för lagerkoordinater"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:46
+msgid ""
+"In order to correctly project data into a specific target CRS, either your "
+"data must contain information about its coordinate reference system or you "
+"will need to manually assign the correct CRS to the layer. For PostGIS "
+"layers, QGIS uses the spatial reference identifier that was specified when "
+"that PostGIS layer was created. For data supported by GDAL, QGIS relies on "
+"the presence of a recognized means of specifying the CRS. For instance, for "
+"the Shapefile format this is a file containing an ESRI Well-Known Text "
+"(:index:`WKT`) representation of the layer's CRS. This projection file has "
+"the same base name as the :file:`.shp` file and a :file:`.prj` extension. "
+"For example, :file:`alaska.shp` would have a corresponding projection file "
+"named :file:`alaska.prj`."
+msgstr ""
+"För att korrekt kunna projicera data till ett specifikt CRS-mål måste "
+"antingen dina data innehålla information om dess koordinatreferenssystem "
+"eller så måste du manuellt tilldela skiktet rätt CRS. För PostGIS-skikt "
+"använder QGIS den identifierare för rumslig referens som angavs när PostGIS-"
+"skiktet skapades. För data som stöds av GDAL förlitar sig QGIS på att det "
+"finns ett erkänt sätt att ange CRS. För Shapefile-formatet är detta till "
+"exempel en fil som innehåller en ESRI Well-Known Text "
+"(:index:`WKT`)-representation av skiktets CRS. Denna projektionsfil har "
+"samma basnamn som :file:`.shp`-filen och ett :file:`.prj`-tillägg. Till "
+"exempel skulle :file:`alaska.shp` ha en motsvarande projektionsfil med "
+"namnet :file:`alaska.prj`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
+msgid ""
+"Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
+"determine the correct CRS for that layer. In some cases this is not "
+"possible, e.g. when a layer has been provided without retaining this "
+"information. You can configure QGIS behavior whenever it cannot "
+"automatically determine the correct CRS for a layer:"
+msgstr ""
+"När ett skikt laddas in i QGIS försöker QGIS att automatiskt bestämma rätt "
+"CRS för skiktet. I vissa fall är detta inte möjligt, t.ex. när ett skikt har"
+" tillhandahållits utan att denna information har sparats. Du kan konfigurera"
+" QGIS beteende när det inte automatiskt kan fastställa rätt CRS för ett "
+"skikt:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
+msgid ""
+"Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> "
+"CRS`"
+msgstr ""
+"Öppna :menyval:`Inställningar -->` |optioner| :menyval:`Optioner... --> CRS`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:439
+msgid "options"
+msgstr "options"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
+msgid "The CRS tab in the QGIS Options Dialog"
+msgstr "Fliken CRS i dialogrutan Alternativ i QGIS"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:73
+msgid ""
+"Under the :guilabel:`CRS for layers` group, set the action to do "
+":guilabel:`when a new layer is created, or when a layer is loaded that has "
+"no CRS`. One of:"
+msgstr ""
+"Under gruppen :guilabel:`CRS för lager`, ställ in åtgärden att göra "
+":guilabel:`när ett nytt lager skapas, eller när ett lager laddas som inte "
+"har någon CRS`. Ett av följande:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
+msgid ""
+"|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`: there "
+"will be no prompt to select a CRS when a layer without CRS is loaded, "
+"defering CRS choice to a later time. Convenient when loading a lot of layers"
+" at once. Such layers will be identifiable in the :guilabel:`Layers` panel "
+"by the |indicatorNoCRS| icon next to them. They'll also be un-referenced, "
+"with coordinates from the layer treated as purely numerical, non-earth "
+"values, i.e. the same behavior as all layers get when :ref:`a project is set"
+" to have no CRS <project_crs>`."
+msgstr ""
+"|radioButtonOn| :guilabel:`Lämna som okänd CRS (ingen åtgärd)`: det kommer "
+"inte att finnas någon uppmaning att välja en CRS när ett lager utan CRS "
+"laddas, utan valet av CRS skjuts upp till en senare tidpunkt. Praktiskt när "
+"man laddar många lager samtidigt. Sådana lager kommer att kunna identifieras"
+" i :guilabel:`Layers`-panelen genom ikonen |indicatorNoCRS| bredvid dem. De "
+"kommer också att vara utan referens, med koordinater från skiktet som "
+"behandlas som rent numeriska, icke-jordiska värden, dvs. samma beteende som "
+"alla skikt får när :ref:`ett projekt är inställt på att inte ha någon CRS "
+"<project_crs>`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:443
+msgid "radioButtonOn"
+msgstr "radioButtonOn"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:437
+msgid "indicatorNoCRS"
+msgstr "indicatorNoCRS"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
+msgid ""
+"|radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to manually "
+"select the CRS. Selecting the correct choice is crucial, as a wrong choice "
+"will place your layer in the wrong position on the Earth's surface! "
+"Sometimes, accompanying metadata will describe the correct CRS for a layer, "
+"in other cases you will need to contact the original author of the data to "
+"determine the correct CRS to use."
+msgstr ""
+"|radioButtonOff| :guilabel:`Prompt for CRS`: du uppmanas att manuellt välja "
+"CRS. Det är mycket viktigt att välja rätt, eftersom ett felaktigt val "
+"placerar ditt lager i fel position på jordens yta! Ibland beskriver "
+"medföljande metadata rätt CRS för ett skikt, i andra fall måste du kontakta "
+"den ursprungliga författaren till data för att fastställa rätt CRS att "
+"använda."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:441
+msgid "radioButtonOff"
+msgstr "radioButtonOff"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
+msgid "|radioButtonOff| :guilabel:`Use project CRS`"
+msgstr "|radioButtonOff| :guilabel:`Använda CRS i projektet`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
+msgid ""
+"|radioButtonOff| :guilabel:`Use default layer CRS`, as set in the "
+":guilabel:`Default CRS for layers` combobox above."
+msgstr ""
+"|radioButtonOff| :guilabel:`Use default layer CRS`, enligt inställningarna i"
+" :guilabel:`Default CRS for layers` ovan."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
+msgid ""
+"To assign the same CRS to multiple layers that have no crs or have a wrong "
+"one in one operation:"
+msgstr ""
+"Att tilldela samma CRS till flera lager som inte har några CRS eller har fel"
+" CRS i en och samma operation:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
+msgid "Select the layers in the :guilabel:`Layers` panel"
+msgstr "Välj lager i panelen :guilabel:`Layers` (lager)"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
+msgid ""
+"Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
+"selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
+msgstr ""
+"Tryck på :kbd:`Ctrl+Shift+C`. Du kan också högerklicka på ett av de "
+"markerade lagren eller gå till :menuselection:`Layer --> Set CRS of "
+"layer(s)`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
+msgid "Find and select the right CRS to use"
+msgstr "Hitta och välj rätt CRS att använda"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
+msgid ""
+"And press :guilabel:`OK`. You can confirm that it has been set correctly in "
+"the :guilabel:`Source` tab of the layers' properties dialog."
+msgstr ""
+"Tryck sedan på :guilabel:`OK`. Du kan bekräfta att den har ställts in "
+"korrekt på fliken :guilabel:`Source` i dialogen för lagrets egenskaper."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:107
+msgid ""
+"Note that changing the CRS in this setting does not alter the underlying "
+"data source in any way, rather it just changes how QGIS interprets the raw "
+"coordinates from the layer in the current QGIS project."
+msgstr ""
+"Observera att om du ändrar CRS i den här inställningen ändras inte den "
+"underliggande datakällan på något sätt, utan det ändrar bara hur QGIS tolkar"
+" de råa koordinaterna från skiktet i det aktuella QGIS-projektet."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
+msgid "Project Coordinate Reference Systems"
+msgstr "Referenssystem för projektkoordinater"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:119
+msgid ""
+"Every project in QGIS also has an associated Coordinate Reference System. "
+"The project CRS determines how data is projected from its underlying raw "
+"coordinates to the flat map rendered within your QGIS map canvas."
+msgstr ""
+"Varje projekt i QGIS har också ett associerat koordinatreferenssystem. "
+"Projektets CRS avgör hur data projiceras från dess underliggande "
+"råkoordinater till den platta karta som återges i din QGIS-kartkanvas."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:123
+msgid ""
+"QGIS supports \"on the fly\" CRS transformation for both raster and vector "
+"data. This means that regardless of the underlying CRS of particular map "
+"layers in your project, they will always be automatically transformed into "
+"the common CRS defined for your project. Behind the scenes, QGIS "
+"transparently reprojects all layers contained within your project into the "
+"project's CRS, so that they will all be rendered in the correct position "
+"with respect to each other!"
+msgstr ""
+"QGIS stöder \"on the fly\"-transformering av CRS för både raster- och "
+"vektordata. Detta innebär att oavsett underliggande CRS för vissa kartlager "
+"i ditt projekt kommer de alltid att automatiskt omvandlas till det "
+"gemensamma CRS som definierats för ditt projekt. Bakom kulisserna "
+"återprojicerar QGIS på ett transparent sätt alla lager som finns i ditt "
+"projekt till projektets CRS, så att de alla återges i rätt position i "
+"förhållande till varandra!"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
+msgid ""
+"It is important to make an appropriate choice of CRS for your QGIS projects."
+" Choosing an inappropriate CRS can cause your maps to look distorted, and "
+"poorly reflect the real-world relative sizes and positions of features. "
+"Usually, while working in smaller geographic areas, there will be a number "
+"of standard CRSs used within a particular country or administrative area. "
+"It's important to research which CRSs are appropriate or standard choices "
+"for the area you are mapping, and ensure that your QGIS project follows "
+"these standards."
+msgstr ""
+"Det är viktigt att välja ett lämpligt CRS för dina QGIS-projekt. Om du "
+"väljer ett olämpligt CRS kan det leda till att dina kartor ser förvrängda ut"
+" och dåligt återspeglar de verkliga relativa storlekarna och positionerna "
+"för funktioner. När man arbetar i mindre geografiska områden finns det "
+"vanligtvis ett antal standard-CRS som används inom ett visst land eller "
+"administrativt område. Det är viktigt att undersöka vilka CRS som är "
+"lämpliga eller standardval för det område du kartlägger, och se till att "
+"ditt QGIS-projekt följer dessa standarder."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:140
+msgid ""
+"By default, QGIS starts each new project using a global default projection. "
+"This default CRS is ``EPSG:4326`` (also known as \"WGS 84\"), and it is a "
+"global latitude/longitude based reference system. This default CRS can be "
+"changed via the :guilabel:`CRS for New Projects` setting in the "
+":guilabel:`CRS` tab under :menuselection:`Settings -->` |options| "
+":menuselection:`Options...` (see :numref:`figure_projection_options`). There"
+" is an option to automatically set the project's CRS to match the CRS of the"
+" first layer loaded into a new project, or alternatively you can select a "
+"different default CRS to use for all newly created projects. This choice "
+"will be saved for use in subsequent QGIS sessions."
+msgstr ""
+"Som standard startar QGIS varje nytt projekt med en global "
+"standardprojektion. Detta standard-CRS är ``EPSG:4326`` (även känt som \"WGS"
+" 84\"), och det är ett globalt latitud/longitudbaserat referenssystem. Detta"
+" standard-CRS kan ändras via inställningen :guilabel:`CRS för nya projekt` i"
+" fliken :guilabel:`CRS` under :menuselection:`Settings -->` |options| "
+":menuselection:`Options...` (se :numref:`figure_projection_options`). Det "
+"finns ett alternativ för att automatiskt ställa in projektets CRS så att det"
+" matchar CRS för det första lagret som laddas in i ett nytt projekt, eller "
+"så kan du välja ett annat standard-CRS som ska användas för alla nyskapade "
+"projekt. Detta val kommer att sparas för användning i efterföljande QGIS-"
+"sessioner."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
+msgid ""
+"The project CRS can also be set through the :guilabel:`CRS` tab of the "
+":menuselection:`Project --> Properties...` dialog. It will also be shown in "
+"the lower-right of the QGIS status bar."
+msgstr ""
+"Projektets CRS kan också ställas in via fliken :guilabel:`CRS` i dialogrutan"
+" :menuselection:`Project --> Properties...`. Den kommer också att visas "
+"längst ned till höger i QGIS statusfält."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:160
+msgid "Project Properties Dialog"
+msgstr "Dialog för projektegenskaper"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:162
+msgid "Available options are:"
+msgstr "Tillgängliga alternativ är:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:164
+msgid ""
+"|unchecked| :guilabel:`No CRS (or unknown/non-Earth projection)`: Checking "
+"this setting will disable ALL projection handling within the QGIS project, "
+"causing all layers and map coordinates to be treated as simple 2D Cartesian "
+"coordinates, with no relation to positions on the Earth's surface. It can be"
+" used to guess a layer CRS (based on its raw coordinates or when using QGIS "
+"for non earth uses like role-playing game maps, building mapping or "
+"microscopic stuff. In this case:"
+msgstr ""
+"|ej markerad| :guilabel:``Ingen CRS (eller okänd/ej jordprojektion)``: Om du"
+" markerar den här inställningen inaktiveras ALL projektionshantering i QGIS-"
+"projektet, vilket gör att alla skikt och kartkoordinater behandlas som enkla"
+" kartesiska 2D-koordinater, utan någon relation till positioner på jordens "
+"yta. Den kan användas för att gissa ett lagers CRS (baserat på dess "
+"råkoordinater eller när QGIS används för andra ändamål än jorden, t.ex. "
+"rollspelskartor, byggnadskartor eller mikroskopiska saker. I det här fallet:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:453
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
+msgid ""
+"No reprojection is done while rendering the layers: features are just drawn "
+"using their raw coordinates."
+msgstr ""
+"Ingen reprojektion görs vid rendering av skikten: objekten ritas bara med "
+"sina råkoordinater."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
+msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
+msgstr "Ellipsoiden är utestängd och tvingas till ``None/Planimetric``."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
+msgid ""
+"The distance and area units, and the coordinate display are locked out and "
+"forced to \"unknown units\"; all measurements are done in unknown map units,"
+" and no conversion is possible."
+msgstr ""
+"Enheterna för avstånd och yta samt koordinatvisningen är låsta och tvingade "
+"till \"unknown units\"; alla mätningar görs i okända kartenheter och ingen "
+"konvertering är möjlig."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
+msgid ""
+"or an existing coordinate reference system that can be *geographic*, "
+"*projected* or *user-defined*. A preview of the CRS extent on earth is "
+"displayed to help you select the appropriate one. Layers added to the "
+"project are translated on-the-fly to this CRS in order to overlay them "
+"regardless of their original CRS. Use of units and ellipsoid setting are "
+"available and make sense and you can perform calculations accordingly."
+msgstr ""
+"eller ett befintligt koordinatreferenssystem som kan vara *geografiskt*, "
+"*projicerat* eller *användardefinierat*. En förhandsgranskning av CRS-"
+"utbredningen på jorden visas för att hjälpa dig att välja rätt. Lager som "
+"läggs till i projektet översätts i realtid till detta CRS för att kunna "
+"läggas över dem oavsett deras ursprungliga CRS. Användning av enheter och "
+"ellipsoidinställning är tillgänglig och meningsfull och du kan utföra "
+"beräkningar i enlighet med detta."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
+msgid ""
+"Whenever you select a new CRS for your QGIS project, the measurement units "
+"will automatically be changed in the :guilabel:`General` tab of the "
+":guilabel:`Project properties` dialog (:menuselection:`Project --> "
+"Properties...`) to match the selected CRS. For instance, some CRSs define "
+"their coordinates in feet instead of meters, so setting your QGIS project to"
+" one of these CRSs will also set your project to measure using feet by "
+"default."
+msgstr ""
+"När du väljer ett nytt CRS för ditt QGIS-projekt kommer måttenheterna "
+"automatiskt att ändras på fliken :guilabel:`General` i dialogrutan "
+":guilabel:`Project properties` (:menuselection:`Project --> Properties...`) "
+"för att matcha det valda CRS:et. Till exempel definierar vissa CRS sina "
+"koordinater i fot istället för meter, så om du ställer in ditt QGIS-projekt "
+"på ett av dessa CRS kommer ditt projekt också att ställa in att mäta med fot"
+" som standard."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
+msgid "**Setting the project CRS from a layer**"
+msgstr "**Ställa in projektets CRS från ett lager**"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
+msgid "You can assign a CRS to the project using a layer CRS:"
+msgstr "Du kan tilldela en CRS till projektet med hjälp av en CRS för lager:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
+msgid ""
+"In the :guilabel:`Layers` panel, right-click on the layer you want to pick "
+"the CRS"
+msgstr ""
+"I panelen :guilabel:`Layers` högerklickar du på det lager där du vill välja "
+"CRS"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
+msgid "Select :guilabel:`Set project CRS from Layer`."
+msgstr "Välj :guilabel:`Set project CRS from Layer`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:201
+msgid ""
+"The project's CRS is redefined using the layer's CRS. Map canvas extent, "
+"coordinates display are updated accordingly and all the layers in the "
+"project are on-the-fly translated to the new project CRS."
+msgstr ""
+"Projektets CRS omdefinieras med hjälp av skiktets CRS. Kartans omfattning "
+"och koordinatvisning uppdateras i enlighet med detta och alla skikt i "
+"projektet översätts direkt till det nya projekt-CRS:et."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
+msgid "Coordinate Reference System Selector"
+msgstr "Väljare för referenssystem för koordinater"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:217
+msgid "CRS Selector"
+msgstr "CRS-väljare"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:219
+msgid ""
+"This dialog helps you assign a Coordinate Reference System to a project or a"
+" layer, provided a set of projection databases. Items in the dialog are:"
+msgstr ""
+"Denna dialog hjälper dig att tilldela ett koordinatreferenssystem till ett "
+"projekt eller ett lager, förutsatt att det finns en uppsättning "
+"projektionsdatabaser. Objekt i dialogrutan är:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:222
+msgid ""
+"**Filter**: If you know the EPSG code, the identifier, or the name for a "
+"Coordinate Reference System, you can use the search feature to find it. "
+"Enter the EPSG code, the identifier or the name."
+msgstr ""
+"**Filter**: Om du känner till EPSG-koden, identifieraren eller namnet för "
+"ett koordinatreferenssystem kan du använda sökfunktionen för att hitta det. "
+"Ange EPSG-koden, identifieraren eller namnet."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:225
+msgid ""
+"**Recently used coordinate reference systems**: If you have certain CRSs "
+"that you frequently use in your everyday GIS work, these will be displayed "
+"in this list. Click on one of these items to select the associated CRS."
+msgstr ""
+"**Nyligen använda koordinatreferenssystem**: Om du har vissa CRS som du ofta"
+" använder i ditt dagliga GIS-arbete visas dessa i den här listan. Klicka på "
+"ett av dessa objekt för att välja det tillhörande CRS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:228
+msgid ""
+"**Coordinate reference systems of the world**: This is a list of all CRSs "
+"supported by QGIS, including Geographic, Projected and Custom coordinate "
+"reference systems. To define a CRS, select it from the list by expanding the"
+" appropriate node and selecting the CRS. The active CRS is preselected."
+msgstr ""
+"**Världens koordinatreferenssystem**: Detta är en lista över alla CRS som "
+"stöds av QGIS, inklusive geografiska, projicerade och anpassade "
+"koordinatreferenssystem. För att definiera ett CRS, välj det från listan "
+"genom att expandera lämplig nod och välja CRS. Det aktiva CRS är förvalt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:232
+msgid ""
+"**PROJ text**: This is the CRS string used by the PROJ projection engine. "
+"This text is read-only and provided for informational purposes."
+msgstr ""
+"**PROJ text**: Detta är den CRS-sträng som används av PROJ "
+"projektionsmotorn. Denna text är skrivskyddad och tillhandahålls för "
+"informationsändamål."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:236
+msgid ""
+"If you want to remove a recently used CRS from the list that can be done in "
+"several ways:"
+msgstr ""
+"Om du vill ta bort en nyligen använd CRS från listan kan du göra det på "
+"flera sätt:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:239
+msgid ""
+"Press |clearItem| :sup:`Remove from recently used CRS` button on the right "
+"side."
+msgstr ""
+"Tryck på knappen |clearItem| :sup:`Remove from recently used CRS` på höger "
+"sida."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:433
+msgid "clearItem"
+msgstr "clearItem"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
+msgid "Press :kbd:`Del` after selecting CRS that you want to remove."
+msgstr "Tryck på :kbd:`Del` när du har valt den CRS som du vill ta bort."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:242
+msgid ""
+"Right-click on used CRS and choose |clearItem| :guilabel:`Remove selected "
+"CRS from recently used CRS` to remove selected CRS or |clearConsole| "
+":guilabel:`Clear all recently used CRS` to remove all used CRS."
+msgstr ""
+"Högerklicka på en använd CRS och välj |clearItem| :guilabel:`Remove selected"
+" CRS from recently used CRS` för att ta bort den valda CRS:en eller "
+"|clearConsole| :guilabel:`Clear all recently used CRS` för att ta bort alla "
+"använda CRS:er."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:431
+msgid "clearConsole"
+msgstr "clearConsole"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:248
+msgid ""
+"The CRS selector also shows a rough preview of the geographic area for which"
+" a selected CRS is valid for use. Many CRSs are designed only for use in "
+"small geographic areas, and you should not use these outside of the area "
+"they were designed for. The preview map shades an approximate area of use "
+"whenever a CRS is selected from the list. In addition, this preview map also"
+" shows an indicator of the current main canvas map extent."
+msgstr ""
+"CRS-väljaren visar också en grov förhandsgranskning av det geografiska "
+"område där ett valt CRS är giltigt för användning. Många CRS är endast "
+"avsedda att användas inom små geografiska områden och du bör inte använda "
+"dem utanför det område de är avsedda för. Förhandsgranskningskartan visar "
+"ett ungefärligt användningsområde när ett CRS väljs från listan. Dessutom "
+"visar förhandsgranskningskartan en indikator på den aktuella omfattningen av"
+" huvudkartan."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:261
+msgid "Custom Coordinate Reference System"
+msgstr "Anpassat referenssystem för koordinater"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:263
+msgid ""
+"If QGIS does not provide the coordinate reference system you need, you can "
+"define a custom CRS. To define a CRS, select |customProjection| "
+":guilabel:`Custom CRS...` from the :menuselection:`Settings` menu. Custom "
+"CRSs are stored in your QGIS user database. In addition to your custom CRSs,"
+" this database also contains your spatial bookmarks and other custom data."
+msgstr ""
+"Om QGIS inte tillhandahåller det koordinatreferenssystem som du behöver kan "
+"du definiera ett eget CRS. För att definiera ett CRS, välj "
+"|customProjection| :guilabel:`Custom CRS...` från menyn "
+":menuselection:`Settings`. Anpassade CRS lagras i din QGIS-användardatabas. "
+"Förutom dina anpassade CRS innehåller denna databas även dina rumsliga "
+"bokmärken och andra anpassade data."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:435
+msgid "customProjection"
+msgstr "customProjection"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:269
+msgid ""
+"Defining a custom CRS in QGIS requires a good understanding of the PROJ "
+"projection library. To begin, refer to \"Cartographic Projection Procedures "
+"for the UNIX Environment - A User's Manual\" by Gerald I. Evenden, U.S. "
+"Geological Survey Open-File Report 90-284, 1990 (available at "
+"https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
+msgstr ""
+"För att kunna definiera ett anpassat CRS i QGIS krävs en god förståelse av "
+"PROJ projektionsbibliotek. Du kan börja med att läsa \"Cartographic "
+"Projection Procedures for the UNIX Environment - A User's Manual\" av Gerald"
+" I. Evenden, U.S. Geological Survey Open-File Report 90-284, 1990 (finns på "
+"https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:275
+msgid ""
+"This manual describes the use of ``proj`` and related command line "
+"utilities. The cartographic parameters used with ``proj`` are described in "
+"the user manual and are the same as those used by QGIS."
+msgstr ""
+"Denna manual beskriver användningen av ``proj`` och relaterade "
+"kommandoradsverktyg. De kartografiska parametrar som används med ``proj`` "
+"beskrivs i användarhandboken och är desamma som de som används av QGIS."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:279
+msgid ""
+"The :guilabel:`Custom Coordinate Reference System Definition` dialog "
+"requires only two parameters to define a user CRS:"
+msgstr ""
+"Dialogrutan :guilabel:`Custom Coordinate Reference System Definition` kräver"
+" endast två parametrar för att definiera ett CRS för användaren:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:282
+msgid "A descriptive name"
+msgstr "Ett beskrivande namn"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:283
+msgid "The cartographic parameters in PROJ or WKT format"
+msgstr "De kartografiska parametrarna i PROJ- eller WKT-format"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:285
+msgid "To create a new CRS:"
+msgstr "Så här skapar du en ny CRS:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
+msgid "Click the |symbologyAdd| :sup:`Add new CRS` button"
+msgstr "Klicka på knappen |symbologyAdd| :sup:`Lägg till ny CRS`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:447
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:288
+msgid "Enter a descriptive name"
+msgstr "Ange ett beskrivande namn"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:289
+msgid ""
+"Select the format: it can be :guilabel:`Proj String` or :guilabel:`WKT`"
+msgstr ""
+"Välj format: det kan vara :guilabel:`Proj String` eller :guilabel:`WKT`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:290
+msgid "Add the CRS :guilabel:`Parameters`."
+msgstr "Lägg till CRS :guilabel:`Parameters`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:292
+msgid "**Prefer storing the CRS definition in WKT format**"
+msgstr "**Företräcker att lagra CRS-definitionen i WKT-format**"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:294
+msgid ""
+"Although both ``Proj String`` and ``WKT`` formats are supported, it's highly"
+" recommended to store projection definitions in the WKT format. Therefore, "
+"if the available definition is in the proj format, select that format, enter"
+" the parameters and then switch to WKT format. QGIS will convert the "
+"definition to the WKT format that you can later save."
+msgstr ""
+"Även om både formaten ``Proj String`` och ``WKT`` stöds, rekommenderas det "
+"starkt att lagra projektionsdefinitioner i WKT-format. Om den tillgängliga "
+"definitionen är i proj-format väljer du därför det formatet, anger "
+"parametrarna och växlar sedan till WKT-format. QGIS konverterar definitionen"
+" till WKT-format som du senare kan spara."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:300
+msgid ""
+"Click :guilabel:`Validate` to test whether the CRS definition is an "
+"acceptable projection definition."
+msgstr ""
+"Klicka på :guilabel:`Validate` för att testa om CRS-definitionen är en "
+"godtagbar projektionsdefinition."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:308
+msgid "Custom CRS Dialog"
+msgstr "Anpassad CRS-dialog"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:311
+msgid ""
+"You can test your CRS parameters to see if they give sane results. To do "
+"this, enter known WGS 84 latitude and longitude values in :guilabel:`North` "
+"and :guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, "
+"and compare the results with the known values in your coordinate reference "
+"system."
+msgstr ""
+"Du kan testa dina CRS-parametrar för att se om de ger rimliga resultat. Det "
+"gör du genom att ange kända värden för latitud och longitud enligt WGS 84 i "
+"fälten :guilabel:`North` respektive :guilabel:`East`. Klicka på "
+":guilabel:`Calculate` och jämför resultatet med de kända värdena i ditt "
+"koordinatreferenssystem."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:317
+msgid "Integrate an NTv2-transformation in QGIS"
+msgstr "Integrera en NTv2-transformation i QGIS"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:319
+msgid ""
+"To integrate an NTv2 transformation file in QGIS you need one more step:"
+msgstr ""
+"För att integrera en NTv2-transformationsfil i QGIS behöver du ytterligare "
+"ett steg:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:321
+msgid ""
+"Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. "
+":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` for windows users)"
+msgstr ""
+"Placera NTv2-filen (.gsb) i CRS/Proj-mappen som QGIS använder (t.ex. "
+":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` för Windows-användare)"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:323
+msgid ""
+"Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition in"
+" the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate "
+"Reference System Definition` (:menuselection:`Settings --> Custom "
+"Projections...`)."
+msgstr ""
+"Lägg till **nadgrids** (``+nadgrids=namnpåfilen.gsb``) till Proj-"
+"definitionen i fältet :guilabel:`Parameters` i :guilabel:`Custom Coordinate "
+"Reference System Definition` (:menuselection:`Settings --> Custom "
+"Projections...`)."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:332
+msgid "Setting an NTv2 transformation"
+msgstr "Ställa in en NTv2-transformation"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:339
+msgid "Datum Transformations"
+msgstr "Datumtransformationer"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:341
+msgid ""
+"In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that"
+" whenever you use layers with different coordinate systems QGIS "
+"transparently reprojects them to the project CRS. For some CRS, there are a "
+"number of possible transforms available to reproject to the project's CRS!"
+msgstr ""
+"I QGIS är CRS-transformering \"on-the-fly\" aktiverad som standard, vilket "
+"innebär att när du använder lager med olika koordinatsystem så "
+"återprojicerar QGIS dem på ett transparent sätt till projektets CRS. För "
+"vissa CRS finns det ett antal möjliga transformationer tillgängliga för att "
+"återprojicera till projektets CRS!"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:346
+msgid ""
+"By default, QGIS will attempt to use the most accurate transformation "
+"available. However, in some cases this may not be possible, e.g. whenever "
+"additional support files are required to use a transformation. Whenever a "
+"more accurate transformation is available, but is not currently usable, QGIS"
+" will show an informative warning message advising you of the more accurate "
+"transformation and how to enable it on your system. Usually, this requires "
+"download of an external package of transformation support files, and "
+"extracting these to the :file:`proj` folder under your QGIS :ref:`user "
+"profile <user_profiles>` folder."
+msgstr ""
+"Som standard kommer QGIS att försöka använda den mest exakta tillgängliga "
+"transformationen. I vissa fall är detta dock inte möjligt, t.ex. när det "
+"krävs ytterligare stödfiler för att använda en transformation. När en mer "
+"exakt omvandling finns tillgänglig, men inte kan användas för närvarande, "
+"kommer QGIS att visa ett informativt varningsmeddelande som informerar dig "
+"om den mer exakta omvandlingen och hur du aktiverar den på ditt system. "
+"Vanligtvis kräver detta nedladdning av ett externt paket med stödfiler för "
+"transformation och extrahering av dessa till mappen :file:`proj` under "
+"mappen QGIS :ref:`user profile <user_profiles>`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:356
+msgid ""
+"If desired, QGIS can also prompt you whenever multiple possible "
+"transformations can be made between two CRSs, and allow you to make an "
+"informed selection of which is the most appropriate transformation to use "
+"for your data."
+msgstr ""
+"Om så önskas kan QGIS också fråga dig när flera möjliga transformationer kan"
+" göras mellan två CRS, och låta dig göra ett välgrundat val av vilken "
+"transformation som är lämpligast att använda för dina data."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:360
+msgid ""
+"This customization is done in the :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> Transformations` tab menu under the "
+":guilabel:`Default datum transformations` group:"
+msgstr ""
+"Denna anpassning görs i flikmenyn :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> Transformations` under gruppen "
+":guilabel:`Default datum transformations`:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:364
+msgid ""
+"using |checkbox| :guilabel:`Ask for datum transformation if several are "
+"available`: when more than one appropriate datum transformation exist for a "
+"source/destination CRS combination, a dialog will automatically be opened "
+"prompting users to choose which of these datum transformations to use for "
+"the project. If the :guilabel:`Make default` checkbox is ticked when "
+"selecting a transformation from this dialog, then the choice is remembered "
+"and automatically applied to any newly created QGIS projects."
+msgstr ""
+"using |checkbox| :guilabel:`Ask for datum transformation if several are "
+"available`: när det finns mer än en lämplig datumtransformation för en CRS-"
+"kombination för källa/destination, öppnas automatiskt en dialogruta där "
+"användaren uppmanas att välja vilken av dessa datumtransformationer som ska "
+"användas för projektet. Om kryssrutan :guilabel:`Make default` är markerad "
+"när en transformation väljs från denna dialog, kommer valet att kommas ihåg "
+"och automatiskt tillämpas på alla nyskapade QGIS-projekt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:371
+msgid ""
+"or defining a list of appropriate datum transformations to use as defaults "
+"when loading a layer to a project or reprojecting a layer."
+msgstr ""
+"eller definiera en lista över lämpliga datumtransformationer som ska "
+"användas som standard när ett lager laddas till ett projekt eller när ett "
+"lager omprojiceras."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:374
+msgid ""
+"Use the |symbologyAdd| button to open the :guilabel:`Select Datum "
+"Transformations` dialog. Then:"
+msgstr ""
+"Använd knappen |symbologyAdd| för att öppna dialogrutan :guilabel:`Select "
+"Datum Transformations`. Välj sedan:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:377
+msgid ""
+"Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu or "
+"the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"Välj skiktets :guilabel:`Source CRS` med hjälp av rullgardinsmenyn eller "
+"widgeten |setProjection| :sup:`Select CRS`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:445
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
+msgid "Provide the :guilabel:`Destination CRS` in the same way."
+msgstr "Tillhandahåll :guilabel:`Destination CRS` på samma sätt."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:380
+msgid ""
+"A list of available transformations from source to destination will be shown"
+" in the table. Clicking a row shows details on the settings applied and the "
+"corresponding accuracy and area of use of the transformation."
+msgstr ""
+"En lista över tillgängliga transformationer från källa till destination "
+"visas i tabellen. Om du klickar på en rad visas detaljer om de inställningar"
+" som tillämpats och motsvarande noggrannhet och användningsområde för "
+"omvandlingen."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:390
+msgid "Selecting a preferred default datum transformation"
+msgstr "Val av en föredragen standard datumtransformation"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:392
+msgid ""
+"In some cases a transformation may not be available for use on your system. "
+"In this case, the transformation will still be shown (greyed) in this list "
+"but can not be picked until you install the required package of "
+"transformation support. Usually, a button is provided to download and "
+"install the corresponding grid, which is then stored under the :file:`proj` "
+"folder in the active :ref:`user profile <user_profiles>` directory."
+msgstr ""
+"I vissa fall kan det hända att en transformation inte är tillgänglig för "
+"användning i ditt system. I så fall kommer transformationen fortfarande att "
+"visas (gråmarkerad) i listan men kan inte väljas förrän du har installerat "
+"det nödvändiga paketet med transformationsstöd. Vanligtvis finns det en "
+"knapp för att hämta och installera motsvarande grid, som sedan lagras under "
+"mappen :file:`proj` i den aktiva katalogen :ref:`user profile "
+"<user_profiles>`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:399
+msgid "Find your preferred transformation and select it"
+msgstr "Hitta din önskade omvandling och välj den"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:400
+msgid ""
+"Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred"
+" operation fails`"
+msgstr ""
+"Ange om du |checkbox| :guilabel:`Tillåt reservtransformationer om den "
+"föredragna operationen misslyckas`"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:402
+msgid "Click :guilabel:`OK`."
+msgstr "Klicka på :guilabel:`OK`."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:404
+msgid ""
+"A row is added to the table under :guilabel:`Default Datum Transformations` "
+"with information about the :guilabel:`Source CRS`, the "
+":guilabel:`Destination CRS`, the :guilabel:`Operation` applied for the "
+"transformation and whether :guilabel:`Allow fallback Transforms` is enabled."
+msgstr ""
+"En rad läggs till i tabellen under :guilabel:`Default Datum Transformations`"
+" med information om :guilabel:`Source CRS`, :guilabel:`Destination CRS`, "
+":guilabel:`Operation` som används för transformationen och om "
+":guilabel:`Allow fallback Transforms` är aktiverad."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:409
+msgid ""
+"From now, QGIS automatically uses the selected datum transformations for "
+"further transformation between these two CRSs until you remove it "
+"(|symbologyRemove|) from the list or change the entry (|toggleEditing|) in "
+"the list."
+msgstr ""
+"Från och med nu använder QGIS automatiskt de valda datumtransformationerna "
+"för vidare transformation mellan dessa två CRS tills du tar bort den "
+"(|symbologyRemove|) från listan eller ändrar posten (|toggleEditing|) i "
+"listan."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:449
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:451
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:414
+msgid ""
+"Datum transformations set in the :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> Transformations` tab will be inherited by all "
+"new QGIS projects created on the system. Additionally, a particular project "
+"may have its own specific set of transformations specified via the "
+":guilabel:`CRS` tab of the :guilabel:`Project properties` dialog "
+"(:menuselection:`Project --> Properties...`). These settings apply to the "
+"current project only."
+msgstr ""
+"Datumtransformationer som anges i fliken :menuselection:`Settings -->` "
+"|options| :menuselection:`Options --> Transformations` kommer att ärvas av "
+"alla nya QGIS-projekt som skapas i systemet. Dessutom kan ett visst projekt "
+"ha sin egen specifika uppsättning transformationer som specificeras via "
+"fliken :guilabel:`CRS` i dialogrutan :guilabel:`Projektegenskaper` "
+"(:menuselection:`Project --> Properties...`). Dessa inställningar gäller "
+"endast för det aktuella projektet."
