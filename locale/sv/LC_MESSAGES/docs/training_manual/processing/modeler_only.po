@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:2
+msgid "Using modeler-only tools for creating a model"
+msgstr ""
+"Använda verktyg som endast är avsedda för modellerare för att skapa en "
+"modell"
+
+#: ../../docs/training_manual/processing/modeler_only.rst:4
+msgid ""
+"This lesson shows how to use some algorithms that are only available in the "
+"modeler, to provide additional functionality to models."
+msgstr ""
+"Den här lektionen visar hur man använder vissa algoritmer som endast är "
+"tillgängliga i modelleringsprogrammet för att ge modellerna ytterligare "
+"funktionalitet."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:6
+msgid ""
+"The goal of this lesson is to use the modeler to create an interpolation "
+"algorithm that takes into account the current selection, not just to use "
+"only selected features, but to use the extent of that selection to create "
+"the interpolated raster layer."
+msgstr ""
+"Målet med den här lektionen är att använda modelleraren för att skapa en "
+"interpoleringsalgoritm som tar hänsyn till det aktuella urvalet, inte bara "
+"för att använda endast valda funktioner, utan för att använda omfattningen "
+"av det urvalet för att skapa det interpolerade rasterlagret."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:8
+msgid ""
+"The interpolation process involves two steps, as it has been already "
+"explained in previous lessons: rasterizing the points layer and fill the no-"
+"data values that appear in the rasterized layer. In case the points layer "
+"has a selection, only selected points will be used, but if the output extent"
+" is set to be automatically adjusted, the full extent of the layer will be "
+"used. That is, the extent of the layer is always considered to be the full "
+"extent of all features, not the one computed from just the selected ones. We"
+" will try to fix that by using some additional tools into our model."
+msgstr ""
+"Interpoleringsprocessen omfattar två steg, som redan har förklarats i "
+"tidigare lektioner: rastrering av punktskiktet och fyllning av de värden "
+"utan data som visas i det rastrerade skiktet. Om punktlagret har ett urval "
+"kommer endast valda punkter att användas, men om utmatningens omfattning är "
+"inställd på att justeras automatiskt kommer hela lagrets omfattning att "
+"användas. Det innebär att skiktets utsträckning alltid anses vara den "
+"fullständiga omfattningen av alla funktioner, inte den som beräknas från "
+"bara de valda. Vi kommer att försöka åtgärda detta genom att använda några "
+"ytterligare verktyg i vår modell."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:10
+msgid ""
+"Open the modeler and start the model by adding the required inputs. In this "
+"case we need a vector layer (restricted to points) and an attribute from it,"
+" with the values that we will use for rasterizing."
+msgstr ""
+"Öppna modelleraren och starta modellen genom att lägga till de nödvändiga "
+"ingångarna. I det här fallet behöver vi ett vektorlager (begränsat till "
+"punkter) och ett attribut från det, med de värden som vi kommer att använda "
+"för rasterisering."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:14
+msgid ""
+"The next step is to compute the extent of the selected features. That's "
+"where we can use the model-only tool called *Vector layer bounds*. First, we"
+" will have to create a layer that has the extent of those selected features."
+" Then, we can use this tool on that layer."
+msgstr ""
+"Nästa steg är att beräkna omfattningen av de valda funktionerna. Det är här "
+"vi kan använda det modellverktyg som kallas *Vector layer bounds*. Först "
+"måste vi skapa ett lager som har omfattningen av de valda funktionerna. "
+"Sedan kan vi använda det här verktyget på det lagret."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:16
+msgid ""
+"An easy way of creating a layer with the extent of the selected features is "
+"to compute a convex hull of the input points layer. It will use only the "
+"selected point, so the convex hull will have the same bounding box as the "
+"selection. Then we can add the *Vector layer bounds* algorithm, and use the "
+"convex hull layer as input. It should look this in the modeler canvas:"
+msgstr ""
+"Ett enkelt sätt att skapa ett lager med omfattningen av de valda "
+"funktionerna är att beräkna ett konvext skrov för lagret med "
+"inmatningspunkter. Det kommer bara att använda den valda punkten, så det "
+"konvexa skrovet kommer att ha samma avgränsningsbox som urvalet. Sedan kan "
+"vi lägga till algoritmen *Vector layer bounds* och använda det konvexa "
+"skrovlagret som indata. Det bör se ut så här i modelleringsduken:"
+
+#: ../../docs/training_manual/processing/modeler_only.rst:20
+msgid ""
+"The result from the *Vector layer bounds* is a set of four numeric values "
+"and a extent object. We will use both the numeric outputs and the extent for"
+" this exercise."
+msgstr ""
+"Resultatet från *Vector layer bounds* är en uppsättning med fyra numeriska "
+"värden och ett extent-objekt. Vi kommer att använda både de numeriska "
+"värdena och extent-objektet i den här övningen."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:24
+msgid ""
+"We can now add the algorithm that rasterizes the vector layer, using the "
+"extent from the *Vector layer bounds* algorithm as input."
+msgstr ""
+"Vi kan nu lägga till algoritmen som rastrerar vektorlagret, med hjälp av "
+"omfattningen från algoritmen *Vector layer bounds* som indata."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:26
+msgid "Fill the parameters of the algorithm as shown next:"
+msgstr "Fyll i parametrarna för algoritmen enligt nästa bild:"
+
+#: ../../docs/training_manual/processing/modeler_only.rst:30
+msgid "The canvas should now look like."
+msgstr "Canvas bör nu se ut som följer."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:34
+msgid ""
+"Finally, fill the no-data values of the raster layer using the *Close gaps* "
+"algorithm."
+msgstr ""
+"Slutligen fyller du i rasterskiktets värden utan data med hjälp av "
+"algoritmen *Close gaps*."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:38
+msgid ""
+"The algorithm is now ready to be saved and added to the toolbox. You can run"
+" it and it will generate a raster layer from interpolating the selected "
+"points in the input layer, and the layer will have the same extent as the "
+"selection."
+msgstr ""
+"Algoritmen är nu redo att sparas och läggas till i verktygslådan. Du kan "
+"köra den och den kommer att generera ett rasterlager genom att interpolera "
+"de valda punkterna i ingångsskiktet, och lagret kommer att ha samma "
+"utsträckning som urvalet."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:40
+msgid ""
+"Here's an improvement to the algorithm. We have used a harcoded value for "
+"the cellsize when rasterizing. This value is fine for our test input layer, "
+"but might not be for other cases. We could add a new parameter, so the user "
+"enters the desired value, but a much better approach would be to have that "
+"value automatically computed."
+msgstr ""
+"Här är en förbättring av algoritmen. Vi har använt ett harkodat värde för "
+"cellstorleken vid rastrering. Detta värde är bra för vårt "
+"testinmatningslager, men kanske inte för andra fall. Vi skulle kunna lägga "
+"till en ny parameter, så att användaren anger önskat värde, men ett mycket "
+"bättre tillvägagångssätt skulle vara att få det värdet automatiskt beräknat."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:42
+msgid ""
+"We can use the modeler-only calculator, and compute that value from the "
+"extent coordinates. For instance, to create a layer with a fixed width of "
+"100 pixels, we can use the following formula in the calculator."
+msgstr ""
+"Vi kan använda kalkylatorn för enbart modellering och beräkna det värdet "
+"från omfattningskoordinaterna. Om du t.ex. vill skapa ett lager med en fast "
+"bredd på 100 pixlar kan du använda följande formel i kalkylatorn."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:46
+msgid ""
+"Now we have to edit the rasterize algorithm, so it uses the output of the "
+"calculator instead of the hardcoded value."
+msgstr ""
+"Nu måste vi redigera rasteriseringsalgoritmen så att den använder "
+"kalkylatorns utdata i stället för det hårdkodade värdet."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:48
+msgid "The final algorithm should look like this:"
+msgstr "Den slutliga algoritmen bör se ut så här:"
