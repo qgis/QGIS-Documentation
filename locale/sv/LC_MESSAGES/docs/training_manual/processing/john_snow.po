@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/john_snow.rst:2
+msgid "First analysis example"
+msgstr "Exempel på första analys"
+
+#: ../../docs/training_manual/processing/john_snow.rst:5
+msgid ""
+"In this lesson we will perform some real analysis using just the toolbox, so"
+" you can get more familiar with the processing framework elements."
+msgstr ""
+"I den här lektionen kommer vi att utföra några riktiga analyser med hjälp av"
+" bara verktygslådan, så att du kan bli mer bekant med ramverkselementen för "
+"bearbetning."
+
+#: ../../docs/training_manual/processing/john_snow.rst:7
+msgid ""
+"Now that everything is configured and we can use external algorithms, we "
+"have a very powerful tool to perform spatial analysis. It is time to work "
+"out a larger exercise with some real--world data."
+msgstr ""
+"Nu när allt är konfigurerat och vi kan använda externa algoritmer har vi ett"
+" mycket kraftfullt verktyg för att utföra rumslig analys. Det är dags att "
+"göra en större övning med lite verkliga data."
+
+#: ../../docs/training_manual/processing/john_snow.rst:9
+msgid ""
+"We will be using the well-known dataset that John Snow used in 1854, in his "
+"groundbreaking work "
+"(https://en.wikipedia.org/wiki/John_Snow_%28physician%29), and we will get "
+"some interesting results. The analysis of this dataset is pretty obvious and"
+" there is no need for sophisticated GIS techniques to end up with good "
+"results and conclusions, but it is a good way of showing how these spatial "
+"problems can be analyzed and solved by using different processing tools."
+msgstr ""
+"Vi kommer att använda det välkända dataset som John Snow använde 1854 i sitt"
+" banbrytande arbete "
+"(https://en.wikipedia.org/wiki/John_Snow_%28physician%29), och vi kommer att"
+" få några intressanta resultat. Analysen av det här datasetet är ganska "
+"uppenbar och det behövs inga sofistikerade GIS-tekniker för att få bra "
+"resultat och slutsatser, men det är ett bra sätt att visa hur dessa rumsliga"
+" problem kan analyseras och lösas med hjälp av olika bearbetningsverktyg."
+
+#: ../../docs/training_manual/processing/john_snow.rst:11
+msgid ""
+"The dataset contains shapefiles with cholera deaths and pump locations, and "
+"an OSM rendered map in TIFF format. Open the corresponding QGIS project for "
+"this lesson."
+msgstr ""
+"Datasetet innehåller shapefiler med koleradödsfall och pumplägen, och en "
+"OSM-renderad karta i TIFF-format. Öppna motsvarande QGIS-projekt för den här"
+" lektionen."
+
+#: ../../docs/training_manual/processing/john_snow.rst:15
+msgid ""
+"The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen "
+"polygons) of the pumps layer, to get the influence zone of each pump. The "
+"*Voronoi Diagram* algorithm can be used for that."
+msgstr ""
+"Det första du måste göra är att beräkna Voronoi-diagrammet (även kallat "
+"Thiessen-polygoner) för pumplagret för att få fram varje pumps influenszon. "
+"Algoritmen *Voronoi-diagram* kan användas för detta."
+
+#: ../../docs/training_manual/processing/john_snow.rst:22
+msgid "Pretty easy, but it will already give us interesting information."
+msgstr ""
+"Ganska enkelt, men det kommer redan att ge oss intressant information."
+
+#: ../../docs/training_manual/processing/john_snow.rst:26
+msgid "Clearly, most cases are within one of the polygons"
+msgstr "Det är uppenbart att de flesta fall ligger inom någon av polygonerna"
+
+#: ../../docs/training_manual/processing/john_snow.rst:28
+msgid ""
+"To get a more quantitative result, we can count the number of deaths in each"
+" polygon. Since each point represents a building where deaths occured, and "
+"the number of deaths is stored in an attribute, we cannot just count the "
+"points. We need a weighted count, so we will use the *Count points in "
+"polygon (weighted)* tool."
+msgstr ""
+"För att få ett mer kvantitativt resultat kan vi räkna antalet dödsfall i "
+"varje polygon. Eftersom varje punkt representerar en byggnad där dödsfall "
+"inträffade, och antalet dödsfall lagras i ett attribut, kan vi inte bara "
+"räkna punkterna. Vi behöver en viktad räkning, så vi använder verktyget "
+"*Count points in polygon (weighted)*."
+
+#: ../../docs/training_manual/processing/john_snow.rst:32
+msgid ""
+"The new field will be called *DEATHS*, and we use the *COUNT* field as "
+"weighting field. The resulting table clearly reflects that the number of "
+"deaths in the polygon corresponding to the first pump is much larger than "
+"the other ones."
+msgstr ""
+"Det nya fältet kommer att kallas *DEATHS*, och vi använder fältet *COUNT* "
+"som viktningsfält. Den resulterande tabellen visar tydligt att antalet "
+"dödsfall i den polygon som motsvarar den första pumpen är mycket större än "
+"de andra."
+
+#: ../../docs/training_manual/processing/john_snow.rst:36
+msgid ""
+"Another good way of visualizing the dependence of each point in the "
+"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
+"line to the closest one. This can be done with the *Distance to nearest hub*"
+" tool, and using the configuration shown next."
+msgstr ""
+"Ett annat bra sätt att visualisera beroendet mellan varje punkt i skiktet "
+"``Cholera_deaths`` och en punkt i skiktet ``Pumps`` är att dra en linje till"
+" den närmaste. Detta kan göras med verktyget *Distance to nearest hub* och "
+"med hjälp av den konfiguration som visas härnäst."
+
+#: ../../docs/training_manual/processing/john_snow.rst:40
+msgid "The result looks like this:"
+msgstr "Resultatet ser ut så här:"
+
+#: ../../docs/training_manual/processing/john_snow.rst:44
+msgid ""
+"Although the number of lines is larger in the case of the central pump, do "
+"not forget that this does not represent the number of deaths, but the number"
+" of locations where cholera cases were found. It is a representative "
+"parameter, but it is not considering that some locations might have more "
+"cases than other."
+msgstr ""
+"Även om antalet rader är större när det gäller den centrala pumpen, får man "
+"inte glömma att detta inte representerar antalet dödsfall, utan antalet "
+"platser där kolerafall påträffades. Det är en representativ parameter, men "
+"den tar inte hänsyn till att vissa platser kan ha fler fall än andra."
+
+#: ../../docs/training_manual/processing/john_snow.rst:46
+msgid ""
+"A density layer will also give us a very clear view of what is happening. We"
+" can create it with the *Kernel density* algorithm. Using the "
+"*Cholera_deaths* layer, its *COUNT* field as weight field, with a radius of "
+"100, the extent and cellsize of the streets raster layer, we get something "
+"like this."
+msgstr ""
+"Ett densitetsskikt ger oss också en mycket tydlig bild av vad som händer. Vi"
+" kan skapa det med algoritmen *Kernel density*. Med hjälp av skiktet "
+"*Cholera_deaths*, dess fält *COUNT* som viktfält, med en radie på 100, "
+"omfattningen och cellstorleken för rasterskiktet streets, får vi något "
+"liknande detta."
+
+#: ../../docs/training_manual/processing/john_snow.rst:50
+msgid ""
+"Remember that, to get the output extent, you do not have to type it. Click "
+"on the button on the right-hand side and select *Use layer/canvas extent*."
+msgstr ""
+"Kom ihåg att du inte behöver skriva in utdataomfånget för att få det. Klicka"
+" på knappen på höger sida och välj *Use layer/canvas extent*."
+
+#: ../../docs/training_manual/processing/john_snow.rst:54
+msgid ""
+"Select the streets raster layer and its extent will be automatically added "
+"to the text field. You must do the same with the cellsize, selecting the "
+"cellsize of that layer as well."
+msgstr ""
+"Välj rasterlagret för gatorna så läggs dess utsträckning automatiskt till i "
+"textfältet. Du måste göra samma sak med cellstorleken genom att välja "
+"cellstorleken för det lagret också."
+
+#: ../../docs/training_manual/processing/john_snow.rst:56
+msgid ""
+"Combining with the pumps layer, we see that there is one pump clearly in the"
+" hotspot where the maximum density of death cases is found."
+msgstr ""
+"I kombination med pumplagret ser vi att det finns en pump tydligt i den "
+"hotspot där den maximala tätheten av dödsfall finns."
