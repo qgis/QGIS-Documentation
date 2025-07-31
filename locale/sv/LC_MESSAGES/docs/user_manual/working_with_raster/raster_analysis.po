@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:36+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:6
+msgid "Raster Analysis"
+msgstr "Rasteranalys"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:17
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:29
+msgid "Raster Calculator"
+msgstr "Rasterkalkylator"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:19
+msgid ""
+"The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu "
+"allows you to perform calculations on the basis of existing raster pixel "
+"values (see :numref:`figure_raster_calculator`). The results are written to "
+"a new raster layer in a GDAL-supported format."
+msgstr ""
+"Med :menuselection:`Raster Calculator` i :menuselection:`Raster`-menyn kan "
+"du utföra beräkningar på grundval av befintliga rasterpixelvärden (se "
+":numref:`figure_raster_calculator`). Resultaten skrivs till ett nytt "
+"rasterlager i ett GDAL-stött format."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:32
+msgid ""
+"The :guilabel:`Raster bands` list contains all loaded raster layers that can"
+" be used. To add a raster to the raster calculator expression field, double "
+"click its name in the Fields list. You can then use the operators to "
+"construct calculation expressions, or you can just type them into the box."
+msgstr ""
+"Listan :guilabel:`Raster bands` innehåller alla inlästa rasterlager som kan "
+"användas. Om du vill lägga till ett raster i rasterkalkylatorns uttrycksfält"
+" dubbelklickar du på dess namn i listan Fields. Du kan sedan använda "
+"operatörerna för att konstruera beräkningsuttryck eller bara skriva in dem i"
+" rutan."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:37
+msgid ""
+"In the :guilabel:`Result layer` section, you will need to define an output "
+"layer. You can:"
+msgstr ""
+"I avsnittet :guilabel:`Resultatskikt` måste du definiera ett utdataskikt. "
+"Det kan du göra:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:40
+msgid ""
+"|checkbox| :guilabel:`Create on-the-fly raster instead of writing layer to "
+"disk`:"
+msgstr ""
+"|checkbox| :guilabel:`Skapa raster i farten i stället för att skriva lagret "
+"till disken`:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:160
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:42
+msgid ""
+"If unchecked, the output is stored on the disk as a new plain file. An "
+":guilabel:`Output layer` path and an :guilabel:`Output format` are required."
+msgstr ""
+"Om den inte är markerad lagras utdata på disken som en ny vanlig fil. En "
+"sökväg till :guilabel:`Output layer` och ett :guilabel:`Output format` "
+"krävs."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:44
+msgid ""
+"If checked, a virtual raster layer, i.e. a raster layer defined by its URI "
+"and whose pixels are calculated on-the-fly, is created. It's not a new file "
+"on disk; the virtual layer is still connected to the rasters used in the "
+"calculation meaning that deleting or moving these rasters would break it. A "
+":guilabel:`Layer name` can be provided, otherwise the calculation expression"
+" is used as such. Removing the virtual layer from the project deletes it, "
+"and it can be made persistent in file using the layer :menuselection:`Export"
+" --> Save as...` contextual menu."
+msgstr ""
+"Om det är markerat skapas ett virtuellt rasterlager, dvs. ett rasterlager "
+"som definieras av sin URI och vars pixlar beräknas i realtid. Det är inte en"
+" ny fil på disken; det virtuella skiktet är fortfarande kopplat till de "
+"raster som används i beräkningen, vilket innebär att det skulle gå sönder om"
+" dessa raster raderades eller flyttades. En :guilabel:`Layer name` kan "
+"anges, annars används beräkningsuttrycket som sådant. Om det virtuella "
+"lagret tas bort från projektet raderas det, och det kan göras beständigt i "
+"filen med hjälp av lagrets :menuselection:`Export --> Save as...` "
+"kontextuella meny."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:53
+msgid ""
+"Define the :guilabel:`Spatial extent` of the calculation based on an input "
+"raster layer extent, or on custom X,Y coordinates"
+msgstr ""
+"Definiera :guilabel:`Rumslig utsträckning` för beräkningen baserat på en "
+"utsträckning för ett rasterskikt eller på anpassade X,Y-koordinater"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:55
+msgid ""
+"Set the :guilabel:`Resolution` of the layer using columns and rows number. "
+"If the input layer has a different resolution, the values will be resampled "
+"with the nearest neighbor algorithm."
+msgstr ""
+"Ställ in :guilabel:`Resolution` för lagret med hjälp av kolumn- och "
+"radnummer. Om indataskiktet har en annan upplösning kommer värdena att "
+"omsamplas med närmaste grannar-algoritmen."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:58
+msgid ""
+"With the |checkbox| :guilabel:`Add result to project` checkbox, the result "
+"layer will automatically be added to the legend area and can be visualized. "
+"Checked by default for virtual rasters."
+msgstr ""
+"Med kryssrutan |checkbox| :guilabel:`Add result to project` läggs "
+"resultatlagret automatiskt till i legendområdet och kan visualiseras. "
+"Markerad som standard för virtuella raster."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:62
+msgid ""
+"The :guilabel:`Operators` section contains all available operators. To add "
+"an operator to the raster calculator expression box, click the appropriate "
+"button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and "
+"trigonometric functions (``sin``, ``cos``, ``tan``, ... ) are available. "
+"Conditional expressions (``=``, ``!=``, ``<``, ``>=``, ... ) return either 0"
+" for false or 1 for true, and therefore can be used with other operators and"
+" functions."
+msgstr ""
+"Avsnittet :guilabel:`Operators` innehåller alla tillgängliga operatorer. Om "
+"du vill lägga till en operator i rasterkalkylatorns uttrycksruta klickar du "
+"på lämplig knapp. Matematiska beräkningar (``+``, ``-``, ``*``, ... ) och "
+"trigonometriska funktioner (``sin``, ``cos``, ``tan``, ... ) är "
+"tillgängliga. Villkorliga uttryck (``=``, ``!=``, ``<``, ``>=``, ... ) "
+"returnerar antingen 0 för falskt eller 1 för sant, och kan därför användas "
+"med andra operatorer och funktioner."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:70
+msgid ":ref:`qgisrastercalc` and :ref:`qgisvirtualrastercalc` algorithms"
+msgstr "algoritmerna :ref:`qgisrastercalc` och :ref:`qgisvirtualrastercalc"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:76
+msgid "Raster calculator expression"
+msgstr "Uttryck för rasterkalkylator"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:79
+msgid "The dialog"
+msgstr "Dialogen"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:81
+msgid ""
+"The :guilabel:`Raster calculator expression` dialog provides means to write "
+"expressions for pixels calculations between a set of raster layers."
+msgstr ""
+"Dialogen :guilabel:`Raster calculator expression` ger möjlighet att skriva "
+"uttryck för pixelberäkningar mellan en uppsättning rasterlager."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:89
+msgid "Raster Expression Calculator"
+msgstr "Kalkylator för rasteruttryck"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:92
+msgid ""
+":guilabel:`Layers`: Shows the list of all raster layers loaded in the "
+"legend. These can be used to fill the expression box (double click to add). "
+"Raster layers are referred by their name and the number of the band: "
+"``layer_name@band_number``. For instance, the first band from a layer named "
+"``DEM`` will be referred as ``DEM@1``."
+msgstr ""
+":guilabel:`Lager`: Visar en lista över alla rasterlager som laddats i "
+"legenden. Dessa kan användas för att fylla uttrycksfältet (dubbelklicka för "
+"att lägga till). Rasterskikt refereras till med sitt namn och bandets "
+"nummer: ``layer_name@band_number``. Till exempel kommer det första bandet "
+"från ett lager med namnet ``DEM`` att refereras till som ``DEM@1``."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:96
+msgid ""
+":guilabel:`Operators`: contains a number of calculation operators for pixels"
+" manipulation:"
+msgstr ""
+":guilabel:`Operators`: innehåller ett antal beräkningsoperatorer för "
+"pixelmanipulation:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:98
+msgid "Arithmetical: ``+``, ``-``, ``*``, ``sqrt``, ``abs``, ``ln``, ..."
+msgstr "Aritmetiska: ``+``, ``-``, ``*``, ``qrt``, ``abs``, ``ln``, ..."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:99
+msgid "Trigonometric: ``sin``, ``cos``, ``tan``, ..."
+msgstr "Trigonometriska: ``sin``, ``cos``, ``tan``, ..."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:100
+msgid "Comparison: ``=``, ``!=``, ``<``, ``>=``, ..."
+msgstr "Jämförelse: ``=``, ``!=``, ``<``, ``>=``, ..."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:101
+msgid "Logical: ``IF``, ``AND``, ``OR``, ``(``, ``)``"
+msgstr "Logiska: ``IF``, ``AND``, ``OR``, ``(``, ``)``"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:102
+msgid "Statistical: ``min``, ``max``"
+msgstr "Statistik: ``min``, ``max``"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:104
+msgid ""
+"To add an operator to the raster calculator expression box, click the "
+"appropriate button."
+msgstr ""
+"Om du vill lägga till en operator i uttrycksrutan för rasterkalkylatorn "
+"klickar du på lämplig knapp."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:105
+msgid ""
+":guilabel:`Raster calculator expression` is the area in which the expression"
+" is composed"
+msgstr ""
+":guilabel:`Rasterkalkylatoruttryck` är det område där uttrycket är "
+"sammansatt"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:108
+msgid "Examples"
+msgstr "Exempel"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:110
+msgid "**Convert elevation values from meters to feet**"
+msgstr "**Konvertera höjdvärden från meter till fot**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:112
+msgid ""
+"Creating an elevation raster in feet from a raster in meters, you need to "
+"use the conversion factor for meters to feet: 3.28. The expression is:"
+msgstr ""
+"Om du skapar ett höjdraster i fot från ett raster i meter måste du använda "
+"omvandlingsfaktorn för meter till fot: 3.28. Uttrycket är:"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:119
+msgid "**Using a mask**"
+msgstr "**Använda en mask**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:121
+msgid ""
+"If you want to mask out parts of a raster -- say, for instance, because you "
+"are only interested in elevations above 0 meters -- you can use the "
+"following expression to create a mask and apply the result to a raster in "
+"one step."
+msgstr ""
+"Om du vill maskera bort delar av ett raster, t.ex. för att du bara är "
+"intresserad av höjder över 0 meter, kan du använda följande uttryck för att "
+"skapa en mask och tillämpa resultatet på ett raster i ett steg."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:129
+msgid ""
+"In other words, for every cell greater than or equal to 0 the conditional "
+"expression evaluates to 1, which keeps the original value by multiplying it "
+"by 1. Otherwise the conditional expression evaluates to 0, which sets the "
+"raster value to 0. This creates the mask on the fly."
+msgstr ""
+"Med andra ord, för varje cell som är större än eller lika med 0 utvärderas "
+"det villkorliga uttrycket till 1, vilket innebär att originalvärdet behålls "
+"genom att det multipliceras med 1. Annars utvärderas det villkorliga "
+"uttrycket till 0, vilket innebär att rastervärdet sätts till 0. Detta skapar"
+" masken i farten."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:134
+msgid "**Classify a Raster**"
+msgstr "**Klassificera ett raster**"
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:136
+msgid ""
+"If you want to classify a raster -- say, for instance into two elevation "
+"classes, you can use the following expression to create a raster with two "
+"values 1 and 2 in one step."
+msgstr ""
+"Om du vill klassificera ett raster, t.ex. i två höjdklasser, kan du använda "
+"följande uttryck för att skapa ett raster med de två värdena 1 och 2 i ett "
+"steg."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:144
+msgid ""
+"In other words, for every cell less than 50 set its value to 1. For every "
+"cell greater than or equal 50 set its value to 2."
+msgstr ""
+"Med andra ord, för varje cell som är mindre än 50 sätts värdet till 1. För "
+"varje cell som är större än eller lika med 50 sätts värdet till 2."
+
+#: ../../docs/user_manual/working_with_raster/raster_analysis.rst:147
+msgid "Or you can use the ``IF`` operator."
+msgstr "Eller så kan du använda operatorn ``IF``."
