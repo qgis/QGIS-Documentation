@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/processing/standalone.rst:4
+msgid "Using processing from the command line"
+msgstr "Använda bearbetning från kommandoraden"
+
+#: ../../docs/user_manual/processing/standalone.rst:11
+msgid ""
+"QGIS comes with a tool called ``QGIS Processing Executor`` which allows you "
+"to run Processing algorithms and models (built-in or provided by plugins) "
+"directly from the command line without starting QGIS Desktop itself."
+msgstr ""
+"QGIS levereras med ett verktyg som heter ``QGIS Processing Executor`` som "
+"gör att du kan köra Processing-algoritmer och modeller (inbyggda eller "
+"tillhandahållna av insticksprogram) direkt från kommandoraden utan att "
+"starta QGIS Desktop själv."
+
+#: ../../docs/user_manual/processing/standalone.rst:15
+msgid "From a command line tool, run ``qgis_process`` and you should get:"
+msgstr "Från ett kommandoradsverktyg, kör ``qgis_process`` och du bör få:"
+
+#: ../../docs/user_manual/processing/standalone.rst:48
+msgid ""
+"Only installed plugins that advertise ``hasProcessingProvider=yes`` in their"
+" :file:`metadata.txt` file are recognized and can be activated or loaded by "
+"qgis_process tool."
+msgstr ""
+"Endast installerade plugins som annonserar ``hasProcessingProvider=yes`` i "
+"sin :file:`metadata.txt`-fil känns igen och kan aktiveras eller laddas av "
+"qgis_process-verktyget."
+
+#: ../../docs/user_manual/processing/standalone.rst:52
+msgid ""
+"Before calling qgis_process on a system without window manager (e.g. a "
+"headless server), you should set::"
+msgstr ""
+"Innan du anropar qgis_process på ett system utan fönsterhanterare (t.ex. en "
+"huvudlös server) bör du ställa in::"
+
+#: ../../docs/user_manual/processing/standalone.rst:58
+msgid ""
+"The command ``list`` can be used to get a list of all available providers "
+"and algorithms."
+msgstr ""
+"Kommandot ``list`` kan användas för att få en lista över alla tillgängliga "
+"leverantörer och algoritmer."
+
+#: ../../docs/user_manual/processing/standalone.rst:65
+msgid ""
+"The command ``help`` can be used to get further information about commands "
+"or algorithms."
+msgstr ""
+"Kommandot ``help`` kan användas för att få ytterligare information om "
+"kommandon eller algoritmer."
+
+#: ../../docs/user_manual/processing/standalone.rst:71
+msgid ""
+"The command ``run`` can be used to run an algorithm or model. Specify the "
+"name of the algorithm or a path to a model as first parameter."
+msgstr ""
+"Kommandot ``run`` kan användas för att köra en algoritm eller modell. Ange "
+"namnet på algoritmen eller en sökväg till en modell som första parameter."
+
+#: ../../docs/user_manual/processing/standalone.rst:78
+msgid ""
+"Where a parameter accepts a list of values, set the same variable multiple "
+"times."
+msgstr ""
+"Om en parameter accepterar en lista med värden kan du ange samma variabel "
+"flera gånger."
+
+#: ../../docs/user_manual/processing/standalone.rst:84
+msgid ""
+"While running an algorithm a text-based feedback bar is shown, and the "
+"operation can be cancelled via :kbd:`CTRL+C`."
+msgstr ""
+"När en algoritm körs visas ett textbaserat feedbackfält och operationen kan "
+"avbrytas via :kbd:`CTRL+C`."
+
+#: ../../docs/user_manual/processing/standalone.rst:87
+msgid "The ``run`` command also supports further parameters."
+msgstr "Kommandot ``run`` har även stöd för ytterligare parametrar."
+
+#: ../../docs/user_manual/processing/standalone.rst:89
+msgid "``--json`` will format stdout output in a JSON structured way."
+msgstr ""
+"``--json`` formaterar utdata från stdout på ett JSON-strukturerat sätt."
+
+#: ../../docs/user_manual/processing/standalone.rst:90
+msgid "``--ellipsoid`` will set the ellipsoid to the specified one."
+msgstr "``--ellipsoid`` kommer att ställa in ellipsoiden till den angivna."
+
+#: ../../docs/user_manual/processing/standalone.rst:91
+msgid "``--distance_units`` will use the specified distance units."
+msgstr "``--distance_units`` kommer att använda de angivna avståndsenheterna."
+
+#: ../../docs/user_manual/processing/standalone.rst:92
+msgid "``--area_units`` will use the specified area units."
+msgstr "``--area_units`` kommer att använda de angivna areaenheterna."
+
+#: ../../docs/user_manual/processing/standalone.rst:93
+msgid ""
+"``--project_path`` will load the specified project for running the "
+"algorithm."
+msgstr ""
+"``--project_path`` kommer att ladda det angivna projektet för att köra "
+"algoritmen."
+
+#: ../../docs/user_manual/processing/standalone.rst:95
+msgid ""
+"Complex input parameters, i.e. parameter types which are themselves "
+"specified as a dictionary type object for algorithms, are supported by "
+"qgis_process. To indicate that parameters will be specified via stdin, the "
+"qgis_process command must follow the format (with a trailing ``-`` in place "
+"of the usual arguments list)."
+msgstr ""
+"Komplexa inmatningsparametrar, dvs. parametertyper som själva specificeras "
+"som ett objekt av typen dictionary för algoritmer, stöds av qgis_process. "
+"För att ange att parametrar kommer att anges via stdin måste kommandot "
+"qgis_process följa formatet (med en efterföljande ``-`` i stället för den "
+"vanliga argumentlistan)."
+
+#: ../../docs/user_manual/processing/standalone.rst:106
+msgid ""
+"The JSON object must contain an \"inputs\" key, which is a map of the input "
+"parameter values. E.g."
+msgstr ""
+"JSON-objektet måste innehålla en \"inputs\"-nyckel, som är en karta över "
+"värdena för inparametrarna. T.ex."
+
+#: ../../docs/user_manual/processing/standalone.rst:113
+msgid ""
+"Additionally, extra settings like the distance units, area units, ellipsoid "
+"and project path can be included in this JSON object:"
+msgstr ""
+"Dessutom kan extra inställningar som avståndsenheter, ytenheter, ellipsoid "
+"och projektväg inkluderas i detta JSON-objekt:"
+
+#: ../../docs/user_manual/processing/standalone.rst:126
+msgid ""
+"Specifying input parameters via stdin implies automatically the :file:`JSON`"
+" output format for results."
+msgstr ""
+"Om du anger inparametrar via stdin innebär det automatiskt att :file:`JSON` "
+"används som utdataformat för resultaten."
