@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:15
+msgid "Reading And Storing Settings"
+msgstr "Läsa och lagra inställningar"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:18
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"Kodsnuttarna på den här sidan behöver följande import om du befinner dig "
+"utanför pyqgis-konsolen:"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:33
+msgid ""
+"Many times it is useful for a plugin to save some variables so that the user"
+" does not have to enter or select them again next time the plugin is run."
+msgstr ""
+"Många gånger är det användbart för ett plugin att spara vissa variabler så "
+"att användaren inte behöver ange eller välja dem igen nästa gång pluginet "
+"körs."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:36
+msgid ""
+"These variables can be saved and retrieved with help of Qt and QGIS API. For"
+" each variable, you should pick a key that will be used to access the "
+"variable --- for user's favourite color you could use key "
+"\"favourite_color\" or any other meaningful string. It is recommended to "
+"give some structure to naming of keys."
+msgstr ""
+"Dessa variabler kan sparas och hämtas med hjälp av Qt och QGIS API. För "
+"varje variabel bör du välja en nyckel som ska användas för att komma åt "
+"variabeln --- för användarens favoritfärg kan du använda nyckeln "
+"\"favorite_color\" eller någon annan meningsfull sträng. Vi rekommenderar "
+"att du ger namngivningen av nycklar en viss struktur."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:41
+msgid "We can differentiate between several types of settings:"
+msgstr "Vi kan skilja mellan flera olika typer av inställningar:"
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:45
+msgid ""
+"**global settings** --- they are bound to the user at a particular machine. "
+"QGIS itself stores a lot of global settings, for example, main window size "
+"or default snapping tolerance. Settings are handled using the "
+":class:`QgsSettings <qgis.core.QgsSettings>` class, through for example the "
+":meth:`setValue() <qgis.core.QgsSettings.setValue>` and :meth:`value() "
+"<qgis.core.QgsSettings.value>` methods."
+msgstr ""
+"**globala inställningar** --- de är knutna till användaren på en viss "
+"maskin. QGIS själv lagrar en hel del globala inställningar, till exempel "
+"huvudfönstrets storlek eller standardtolerans för snapping. Inställningar "
+"hanteras med hjälp av klassen :class:`QgsSettings <qgis.core.QgsSettings>`, "
+"till exempel genom metoderna :meth:`setValue() "
+"<qgis.core.QgsSettings.setValue>` och :meth:`value() "
+"<qgis.core.QgsSettings.value>`."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:52
+msgid "Here you can see an example of how these methods are used."
+msgstr "Här kan du se ett exempel på hur dessa metoder används."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:73
+msgid ""
+"The second parameter of the :meth:`value() <qgis.core.QgsSettings.value>` "
+"method is optional and specifies the default value that is returned if there"
+" is no previous value set for the passed setting name."
+msgstr ""
+"Den andra parametern i metoden :meth:`value() <qgis.core.QgsSettings.value>`"
+" är valfri och anger det standardvärde som returneras om det inte finns "
+"något tidigare värde angivet för det passerade inställningsnamnet."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:77
+msgid ""
+"For a method to pre-configure the default values of the global settings "
+"through the  :file:`qgis_global_settings.ini` file, see "
+":ref:`deploying_organization` for further details."
+msgstr ""
+"För en metod att förkonfigurera standardvärdena för de globala "
+"inställningarna genom filen :file:`qgis_global_settings.ini`, se "
+":ref:`deploying_organization` för ytterligare information."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:83
+msgid ""
+"**project settings** --- vary between different projects and therefore they "
+"are connected with a project file. Map canvas background color or "
+"destination coordinate reference system (CRS) are examples --- white "
+"background and WGS84 might be suitable for one project, while yellow "
+"background and UTM projection are better for another one."
+msgstr ""
+"**projektinställningar** --- varierar mellan olika projekt och därför är de "
+"kopplade till en projektfil. Bakgrundsfärgen på kartduken eller "
+"destinationens koordinatreferenssystem (CRS) är exempel på detta --- vit "
+"bakgrund och WGS84 kan vara lämpligt för ett projekt, medan gul bakgrund och"
+" UTM-projektion är bättre för ett annat."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:89
+msgid "An example of usage follows."
+msgstr "Ett exempel på användning följer nedan."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:119
+msgid ""
+"As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>` "
+"method is used for many data types (integer, string, list), but several "
+"methods exist for reading the setting value back, and the corresponding one "
+"has to be selected for each data type."
+msgstr ""
+"Som du kan se används metoden :meth:`writeEntry() "
+"<qgis.core.QgsProject.writeEntry>` för många datatyper (heltal, sträng, "
+"lista), men det finns flera metoder för att läsa tillbaka "
+"inställningsvärdet, och motsvarande måste väljas för varje datatyp."
+
+#: ../../docs/pyqgis_developer_cookbook/settings.rst:126
+msgid ""
+"**map layer settings** --- these settings are related to a particular "
+"instance of a map layer with a project. They are *not* connected with "
+"underlying data source of a layer, so if you create two map layer instances "
+"of one shapefile, they will not share the settings. The settings are stored "
+"inside the project file, so if the user opens the project again, the layer-"
+"related settings will be there again. The value for a given setting is "
+"retrieved using the :meth:`customProperty() "
+"<qgis.core.QgsMapLayer.customProperty>` method, and can be set using the "
+":meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one."
+msgstr ""
+"**inställningar för kartlager** --- dessa inställningar är relaterade till "
+"en viss instans av ett kartlager med ett projekt. De är *inte* kopplade till"
+" den underliggande datakällan för ett lager, så om du skapar två "
+"kartlagerinstanser av en shapefil kommer de inte att dela inställningarna. "
+"Inställningarna lagras i projektfilen, så om användaren öppnar projektet "
+"igen kommer de lagerrelaterade inställningarna att finnas där igen. Värdet "
+"för en given inställning hämtas med metoden :meth:`customProperty() "
+"<qgis.core.QgsMapLayer.customProperty>` och kan ställas in med metoden "
+":meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>`."
