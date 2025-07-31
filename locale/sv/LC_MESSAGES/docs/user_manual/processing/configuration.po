@@ -1,0 +1,487 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Transifex Bot <>, 2025
+# Harrissou Sant-anna, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-29 09:12+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/processing/configuration.rst:5
+msgid "Configuring the Processing Framework"
+msgstr "Konfigurera ramverket för bearbetning"
+
+#: ../../docs/user_manual/processing/configuration.rst:12
+msgid ""
+"The Processing Options menu (:menuselection:`Settings--> Options -->` "
+"|processingAlgorithm| :guilabel:`Processing` tab) allows you to configure "
+"how algorithms work. Configuration parameters are structured in separate "
+"blocks that you can select on the left-hand side of the dialog."
+msgstr ""
+"I menyn Processing Options (fliken :menuselection:`Settings--> Options -->` "
+"|processingAlgorithm| :guilabel:`Processing`) kan du konfigurera hur "
+"algoritmerna fungerar. Konfigurationsparametrarna är strukturerade i "
+"separata block som du kan välja på vänster sida av dialogrutan."
+
+#: ../../docs/user_manual/processing/configuration.rst:191
+msgid "processingAlgorithm"
+msgstr "processingAlgorithm"
+
+#: ../../docs/user_manual/processing/configuration.rst:20
+msgid "General"
+msgstr "Allmänt"
+
+#: ../../docs/user_manual/processing/configuration.rst:22
+msgid ""
+"The :guilabel:`General` block contains the default settings to control how "
+"the algorithm dialog as well as input or output parameters should behave. "
+"Some of the settings can however be overridden at the algorithm level, per "
+":ref:`algorithm run <alg_override_setting>` or for :ref:`individual "
+"parameters <alg_parameter_types>`."
+msgstr ""
+"Blocket :guilabel:`General` innehåller standardinställningarna för att styra"
+" hur algoritmdialogen samt inmatnings- och utdataparametrar ska bete sig. "
+"Vissa av inställningarna kan dock åsidosättas på algoritmnivå, per "
+":ref:`algoritmkörning <alg_override_setting>` eller för :ref:`individuella "
+"parametrar <alg_parameter_types>`."
+
+#: ../../docs/user_manual/processing/configuration.rst:28
+msgid ""
+":guilabel:`Default output raster layer extension` is by default ``tif``"
+msgstr ""
+":guilabel:`Default output raster layer extension` är som standard ``tif``"
+
+#: ../../docs/user_manual/processing/configuration.rst:29
+msgid ""
+":guilabel:`Default output vector layer extension` is by default ``gpkg``"
+msgstr ""
+":guilabel:`Default output vector layer extension` är som standard ``gpkg``"
+
+#: ../../docs/user_manual/processing/configuration.rst:30
+msgid ":guilabel:`Invalid features filtering` when executing algorithm:"
+msgstr ":guilabel:`Invalid features filtering` vid exekvering av algoritm:"
+
+#: ../../docs/user_manual/processing/configuration.rst:32
+msgid ""
+":guilabel:`Do not filter (better performance)`: all the features (with valid"
+" and invalid geometries) are processed, but the result may be erroneous "
+"depending on how the geometry invalidity affects the operations"
+msgstr ""
+":guilabel:``Filtrera inte (bättre prestanda)``: alla funktioner (med giltiga"
+" och ogiltiga geometrier) bearbetas, men resultatet kan bli felaktigt "
+"beroende på hur geometrins ogiltighet påverkar operationerna"
+
+#: ../../docs/user_manual/processing/configuration.rst:35
+msgid ""
+":guilabel:`Skip (ignore) features with invalid geometries`, meaning that "
+"only a subset of your dataset (the valid geometry features) will be "
+"processed"
+msgstr ""
+":guilabel:`Skippa (ignorera) funktioner med ogiltig geometri`, vilket "
+"innebär att endast en delmängd av din dataset (funktioner med giltig "
+"geometri) kommer att bearbetas"
+
+#: ../../docs/user_manual/processing/configuration.rst:38
+msgid ""
+":guilabel:`Stop algorithm execution when a geometry is invalid`: you'll need"
+" to track and fix the invalid geometries if you want the algorithm to "
+"process the whole layer. Algorithms like :ref:`qgischeckvalidity` or "
+":ref:`qgisfixgeometries` can help you achieve this."
+msgstr ""
+":guilabel:`Stop algorithm execution when a geometry is invalid`: du måste "
+"spåra och fixa de ogiltiga geometrierna om du vill att algoritmen ska "
+"bearbeta hela lagret. Algoritmer som :ref:`qgischeckvalidity` eller "
+":ref:`qgisfixgeometries` kan hjälpa dig att uppnå detta."
+
+#: ../../docs/user_manual/processing/configuration.rst:43
+msgid ""
+"The :guilabel:`Invalid features filtering` setting can be overridden on a "
+"per-input basis, at algorithm runtime."
+msgstr ""
+"Inställningen :guilabel:`Invalid features filtering` kan åsidosättas för "
+"varje inmatning, vid algoritmens körtid."
+
+#: ../../docs/user_manual/processing/configuration.rst:45
+msgid ""
+":guilabel:`Keep dialog open after running algorithm`. Once an algorithm has "
+"finished execution and its output layers are loaded into the QGIS project, "
+"the algorithm dialog is closed. If you want to keep it open (to run the "
+"algorithm again with different parameters, or to better check the output "
+"that is written to the log tab), check this option."
+msgstr ""
+":guilabel:`Låt dialogrutan vara öppen efter att algoritmen körts`. När en "
+"algoritm har körts färdigt och dess utdatalager har laddats in i QGIS-"
+"projektet stängs algoritmdialogen. Om du vill hålla den öppen (för att köra "
+"algoritmen igen med andra parametrar eller för att bättre kontrollera utdata"
+" som skrivs till loggfliken) markerar du det här alternativet."
+
+#: ../../docs/user_manual/processing/configuration.rst:50
+msgid ":guilabel:`Max Threads`"
+msgstr ":guilabel:`Max antal trådar`"
+
+#: ../../docs/user_manual/processing/configuration.rst:51
+msgid ""
+":guilabel:`Output folder` for non temporary outputs: If no folder path is "
+"provided for the Processing execution outputs, this is the folder in which "
+"they will be saved. Default is :file:`processing/outputs` under the active "
+":ref:`user profile <user_profiles>` directory."
+msgstr ""
+":guilabel:`Output folder` för icke temporära utdata: Om ingen mappsökväg "
+"anges för utdata från bearbetningskörningen är detta den mapp där de sparas."
+" Standard är :file:`processing/outputs` under den aktiva "
+":ref:`användarprofilen <user_profiles>` katalogen."
+
+#: ../../docs/user_manual/processing/configuration.rst:55
+msgid ""
+":guilabel:`Override temporary output folder path`: Temporary outputs are "
+"saved by default in the :file:`tmp` folder on the machine. This option helps"
+" you set a different place for storage."
+msgstr ""
+":guilabel:`Overskriv sökvägen till mappen för temporära utdata`: Temporära "
+"utdata sparas som standard i mappen :file:`tmp` på maskinen. Detta "
+"alternativ hjälper dig att ange en annan plats för lagring."
+
+#: ../../docs/user_manual/processing/configuration.rst:58
+msgid ""
+":guilabel:`Pre-execution script` and :guilabel:`Post-execution script`. "
+"These parameters point to files that contain scripts written using the "
+"processing scripting functionality, explained in the section covering "
+"scripting and the console."
+msgstr ""
+":guilabel:`Pre-execution script` och :guilabel:`Post-execution script`. "
+"Dessa parametrar pekar på filer som innehåller skript som skrivits med hjälp"
+" av skriptfunktionen för bearbetning, som beskrivs i avsnittet om skript och"
+" konsolen."
+
+#: ../../docs/user_manual/processing/configuration.rst:62
+msgid ""
+":guilabel:`Prefer output filename for layer names`. The name of each "
+"resulting layer created by an algorithm is defined by the algorithm itself. "
+"In some cases, a fixed name might be used, meaning that the same output name"
+" will be used, no matter which input layer is used. In other cases, the name"
+" might depend on the name of the input layer or some of the parameters used "
+"to run the algorithm. If this checkbox is checked, the name will be taken "
+"from the output filename instead. Notice that, if the output is saved to a "
+"temporary file, the filename of this temporary file is usually a long and "
+"meaningless one intended to avoid collision with other already existing "
+"filenames."
+msgstr ""
+":guilabel:`Företräda utdatafilnamn för skiktnamn`. Namnet på varje "
+"resulterande skikt som skapas av en algoritm definieras av algoritmen själv."
+" I vissa fall kan ett fast namn användas, vilket innebär att samma "
+"utdatanamn kommer att användas oavsett vilket indataskikt som används. I "
+"andra fall kan namnet bero på namnet på indataskiktet eller på några av de "
+"parametrar som används för att köra algoritmen. Om den här kryssrutan är "
+"markerad kommer namnet i stället att hämtas från utdatafilens namn. "
+"Observera att om utdata sparas i en temporär fil, är filnamnet för denna "
+"temporära fil vanligtvis långt och meningslöst för att undvika kollision med"
+" andra redan existerande filnamn."
+
+#: ../../docs/user_manual/processing/configuration.rst:74
+msgid ""
+":guilabel:`Results group name`. If you want to obtain all processing result "
+"layers in a group in the :guilabel:`Layers` panel, set a group name for this"
+" parameter. The group may exist already or not. QGIS will add all output "
+"layers to such a group. By default, this parameter is empty, so all output "
+"layers are added to different places in the :guilabel:`Layers` panel, "
+"depending on the item that is active when running an algorithm. Note that "
+"output layers will be loaded to the :guilabel:`Layers` panel only if "
+":guilabel:`Open output file after running algorithm` is checked in the "
+"algorithm dialog."
+msgstr ""
+":guilabel:`Resultats gruppnamn`. Om du vill få fram alla "
+"bearbetningsresultatskikt i en grupp i panelen :guilabel:`Layers`, anger du "
+"ett gruppnamn för denna parameter. Gruppen kan redan existera eller inte. "
+"QGIS kommer att lägga till alla utdataskikt i en sådan grupp. Som standard "
+"är denna parameter tom, så alla utdataskikt läggs till på olika platser i "
+"panelen :guilabel:`Layers`, beroende på vilket objekt som är aktivt när en "
+"algoritm körs. Observera att utdatalager laddas till panelen "
+":guilabel:`Layers` endast om :guilabel:`Open output file after running "
+"algorithm` är markerad i algoritmdialogen."
+
+#: ../../docs/user_manual/processing/configuration.rst:84
+msgid ""
+":guilabel:`Show algorithms with known issues`: By default, QGIS avoids "
+"display of broken algorithms (generally from third-party providers). If "
+"checked, they will be available in the Processing toolbox, with a warning "
+"icon and a tooltip explaining they have issues. Use at your own risks."
+msgstr ""
+":guilabel:`Visa algoritmer med kända problem`: Som standard undviker QGIS "
+"att visa trasiga algoritmer (vanligtvis från tredjepartsleverantörer). Om "
+"det är markerat kommer de att finnas tillgängliga i verktygslådan "
+"Processing, med en varningsikon och en verktygstips som förklarar att de har"
+" problem. Använd på egen risk."
+
+#: ../../docs/user_manual/processing/configuration.rst:88
+msgid ""
+":guilabel:`Show feature count for output vector layers`. Since calculating "
+"the feature count might take some time in certain data formats, this option "
+"is off by default."
+msgstr ""
+":guilabel:`Visa antal funktioner för utdatavektorlager`. Eftersom det kan ta"
+" lite tid att beräkna antalet funktioner i vissa dataformat är det här "
+"alternativet avaktiverat som standard."
+
+#: ../../docs/user_manual/processing/configuration.rst:91
+msgid ":guilabel:`Show layer CRS definition in selection boxes`"
+msgstr ":guilabel:`Visa CRS-definition för lager i urvalsrutor`"
+
+#: ../../docs/user_manual/processing/configuration.rst:92
+msgid ":guilabel:`Show tooltip when there are disabled providers`"
+msgstr ":guilabel:`Visa verktygstips när det finns inaktiverade leverantörer`"
+
+#: ../../docs/user_manual/processing/configuration.rst:93
+msgid ""
+":guilabel:`Style for line layers`, :guilabel:`Style for point layers`, "
+":guilabel:`Style for polygons layers` and :guilabel:`Style for raster "
+"layers` are used for setting the default rendering style for output layers "
+"(that is, layers generated by processing algorithms). Just create the style "
+"you want using QGIS, save it to a file, and then enter the path to that file"
+" in the settings so the algorithms can use it. Whenever a layer is loaded by"
+" Processing and added to the QGIS canvas, it will be rendered with that "
+"style."
+msgstr ""
+":guilabel:`Style for line layers`, :guilabel:`Style for point layers`, "
+":guilabel:`Style for polygons layers` och :guilabel:`Style for raster "
+"layers` används för att ange standardrenderingsstilen för utdataskikt (dvs. "
+"skikt som genereras av bearbetningsalgoritmer). Skapa bara den stil du vill "
+"ha med QGIS, spara den i en fil och ange sedan sökvägen till den filen i "
+"inställningarna så att algoritmerna kan använda den. När ett lager laddas av"
+" Processing och läggs till i QGIS-rutan, kommer det att återges med den "
+"stilen."
+
+#: ../../docs/user_manual/processing/configuration.rst:104
+msgid ""
+"Rendering styles can be configured individually for each algorithm and each "
+"one of its outputs. Just right-click on the name of the algorithm in the "
+"toolbox and select :guilabel:`Edit rendering styles for outputs`. You will "
+"see a dialog like the one shown next."
+msgstr ""
+"Renderingsstilar kan konfigureras individuellt för varje algoritm och var "
+"och en av dess utgångar. Högerklicka bara på algoritmens namn i "
+"verktygslådan och välj :guilabel:`Edit rendering styles for outputs`. Du "
+"kommer att se en dialogruta som den som visas här intill."
+
+#: ../../docs/user_manual/processing/configuration.rst:115
+msgid "Rendering Styles"
+msgstr "Renderingsstilar"
+
+#: ../../docs/user_manual/processing/configuration.rst:117
+msgid ""
+"Select the style file (:file:`.qml`) that you want for each output and press"
+" :guilabel:`OK`."
+msgstr ""
+"Välj den stilfil (:file:`.qml`) som du vill ha för varje utdata och tryck på"
+" :guilabel:`OK`."
+
+#: ../../docs/user_manual/processing/configuration.rst:119
+msgid ""
+":guilabel:`Warn before executing if parameter CRS's do not match`: By "
+"default, QGIS native algorithms (i.e. the ones listed under the |menu| "
+":menuselection:`Menus --> QGIS (native C++)` group) transparently reproject "
+"the input layers to the first one's CRS before execution. Check this option "
+"to get a notification from the other tools that do not suppport "
+"reprojection, when the inputs CRS are not identical. Third-party providers "
+"are not concerned."
+msgstr ""
+":guilabel:`Varning före exekvering om parameterns CRS inte matchar`: Som "
+"standard omprojicerar QGIS inbyggda algoritmer (dvs. de som listas i gruppen"
+" |menu| :menuselection:`Menus --> QGIS (native C++)`) de ingående lagren "
+"till det första lagrets CRS före exekvering. Markera detta alternativ för "
+"att få ett meddelande från de andra verktygen som inte stöder omprojicering,"
+" när CRS för indata inte är identiska. Tredjepartsleverantörer berörs inte."
+
+#: ../../docs/user_manual/processing/configuration.rst:189
+msgid "menu"
+msgstr "menu"
+
+#: ../../docs/user_manual/processing/configuration.rst:127
+msgid "Menus"
+msgstr "Menyer"
+
+#: ../../docs/user_manual/processing/configuration.rst:129
+msgid ""
+"The |menu| :guilabel:`Menus` block controls whether an algorithm, script or "
+"model (built-in or provided by plugins) should be made available through a "
+"dedicated menu or toolbar (along with the Processing Toolbox). For each item"
+" of each provider, you can:"
+msgstr ""
+"|menu| :guilabel:`Menus`-blocket styr om en algoritm, ett skript eller en "
+"modell (inbyggd eller tillhandahållen av insticksprogram) ska göras "
+"tillgänglig via en särskild meny eller ett verktygsfält (tillsammans med "
+"Processing Toolbox). För varje objekt i varje leverantör kan du:"
+
+#: ../../docs/user_manual/processing/configuration.rst:134
+msgid ""
+":guilabel:`Add button in toolbar`, making it available in the "
+":guilabel:`Processing Algorithms` toolbar"
+msgstr ""
+":guilabel:`Add button in toolbar`, vilket gör den tillgänglig i "
+"verktygsfältet :guilabel:`Processing Algorithms`"
+
+#: ../../docs/user_manual/processing/configuration.rst:136
+msgid "assign an :guilabel:`Icon` to the algorithm"
+msgstr "tilldela en :guilabel:`Icon` till algoritmen"
+
+#: ../../docs/user_manual/processing/configuration.rst:137
+msgid ""
+"set a :guilabel:`Menu path`: the algorithm will then be available through an"
+" existing or a custom menu, e.g. ``Vect&or/MyTopAlgorithms`` will add a "
+"shortcut in a :menuselection:`MyTopAlgorithms` sub-menu of the default "
+":menuselection:`Vector` menu."
+msgstr ""
+"ange en :guilabel:`Menu path`: algoritmen kommer då att vara tillgänglig via"
+" en befintlig eller en anpassad meny, t.ex. ``Vect&or/MyTopAlgorithms`` "
+"kommer att lägga till en genväg i en :menuselection:`MyTopAlgorithms` "
+"undermeny i standardmenyn :menuselection:`Vector`."
+
+#: ../../docs/user_manual/processing/configuration.rst:141
+msgid ""
+"Restart QGIS to apply the settings. At any time, your changes can be "
+":guilabel:`Reset to defaults`."
+msgstr ""
+"Starta om QGIS för att tillämpa inställningarna. När som helst kan dina "
+"ändringar :guilabel:`Återställas till standardvärden`."
+
+#: ../../docs/user_manual/processing/configuration.rst:145
+msgid "Models and Scripts"
+msgstr "Modeller och manuskript"
+
+#: ../../docs/user_manual/processing/configuration.rst:147
+msgid ""
+"In the |processingModel| :guilabel:`Models` and |pythonFile| "
+":guilabel:`Scripts` blocks, a default path, set under the active :ref:`User "
+"profile <user_profiles>` folder, is provided for storing models and scripts "
+"respectively. As for the other options, you can modify the path, e.g., to "
+"lead to a remote or shared folder for all your users."
+msgstr ""
+"I blocken |processingModel| :guilabel:`Models` och |pythonFile| "
+":guilabel:`Scripts` anges en standardsökväg, som anges under den aktiva "
+"mappen :ref:`User profile <user_profiles>`, för lagring av modeller "
+"respektive skript. Precis som för de andra alternativen kan du ändra "
+"sökvägen, t.ex. så att den leder till en fjärrdator eller delad mapp för "
+"alla dina användare."
+
+#: ../../docs/user_manual/processing/configuration.rst:193
+msgid "processingModel"
+msgstr "processingModel"
+
+#: ../../docs/user_manual/processing/configuration.rst:195
+msgid "pythonFile"
+msgstr "pythonFile"
+
+#: ../../docs/user_manual/processing/configuration.rst:154
+msgid "Providers"
+msgstr "Leverantörer"
+
+#: ../../docs/user_manual/processing/configuration.rst:156
+msgid ""
+"You will also find a block for algorithm |processingAlgorithm| "
+":guilabel:`Providers`. This is the place where installed providers expose "
+"their settings."
+msgstr ""
+"Du hittar också ett block för algoritmen |processingAlgorithm| "
+":guilabel:`Providers`. Det här är platsen där installerade leverantörer "
+"exponerar sina inställningar."
+
+#: ../../docs/user_manual/processing/configuration.rst:159
+msgid "By default, QGIS is installed with two algorithm providers:"
+msgstr "Som standard installeras QGIS med två algoritmleverantörer:"
+
+#: ../../docs/user_manual/processing/configuration.rst:161
+msgid ""
+":guilabel:`GDAL` whose algorithms you may :guilabel:`Activate` (or not) in "
+"this dialog. Read more about the :ref:`GDAL algorithms <gdal_algorithms>`."
+msgstr ""
+":guilabel:`GDAL` vars algoritmer du kan :guilabel:`Aktivera` (eller inte) i "
+"den här dialogen. Läs mer om :ref:`GDAL-algoritmer <gdal_algorithms>`."
+
+#: ../../docs/user_manual/processing/configuration.rst:163
+msgid ""
+":guilabel:`GRASS` whose algorithms require the installation of the "
+":guilabel:`GRASS GIS Processing Provider` from the :guilabel:`Plugins "
+"Manager`. You could then set some dedicated settings such as:"
+msgstr ""
+":guilabel:`GRASS` vars algoritmer kräver installation av :guilabel:`GRASS "
+"GIS Processing Provider` från :guilabel:`Plugins Manager`. Du kan sedan "
+"ställa in några dedikerade inställningar som t.ex:"
+
+#: ../../docs/user_manual/processing/configuration.rst:167
+msgid ""
+"|checkbox| :guilabel:`For raster layers, use r.external (faster) instead of "
+"r.in.gdal`"
+msgstr ""
+"|checkbox| :guilabel:`För rasterlager, använd r.external (snabbare) istället"
+" för r.in.gdal`"
+
+#: ../../docs/user_manual/processing/configuration.rst:187
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/processing/configuration.rst:168
+msgid ""
+"|checkbox| :guilabel:`For vector layers, use v.external (faster) instead of "
+"v.in.ogr`"
+msgstr ""
+"|checkbox| :guilabel:`För vektorlager, använd v.external (snabbare) istället"
+" för v.in.ogr`"
+
+#: ../../docs/user_manual/processing/configuration.rst:169
+msgid ""
+":guilabel:`Location of GRASS docs`: by default, and depending on your OS, "
+"QGIS utilizes a hardcoded list of paths for finding the local GRASS "
+"documentation and opening it whenever you hit the :guilabel:`Help` button of"
+" a GRASS algorithm dialog. Filling this option will override the default "
+"path, allowing you to use a custom location, or remote documentation."
+msgstr ""
+":guilabel:`Location of GRASS docs`: som standard, och beroende på ditt "
+"operativsystem, använder QGIS en hårdkodad lista med sökvägar för att hitta "
+"den lokala GRASS-dokumentationen och öppna den när du trycker på "
+":guilabel:`Help`-knappen i en GRASS-algoritmdialog. Om du fyller i detta "
+"alternativ åsidosätts standardsökvägen, så att du kan använda en anpassad "
+"plats eller fjärrdokumentation."
+
+#: ../../docs/user_manual/processing/configuration.rst:174
+msgid "|checkbox| :guilabel:`Log console output`"
+msgstr "|checkbox| :guilabel:`Logga konsolutdata`"
+
+#: ../../docs/user_manual/processing/configuration.rst:175
+msgid "|checkbox| :guilabel:`Log execution commands`"
+msgstr "|checkbox| :guilabel:`Logga exekveringskommandon`"
+
+#: ../../docs/user_manual/processing/configuration.rst:177
+msgid ""
+"Installed plugins that provide Processing algorithms may also have their "
+"provider listed in this group, with custom settings."
+msgstr ""
+"Installerade insticksprogram som tillhandahåller bearbetningsalgoritmer kan "
+"också ha sin leverantör listad i den här gruppen, med anpassade "
+"inställningar."
