@@ -1,0 +1,308 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:13
+msgid "Communicating with the user"
+msgstr "Kommunicera med användaren"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:15
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"Kodsnuttarna på den här sidan behöver följande import om du befinner dig "
+"utanför pyqgis-konsolen:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:41
+msgid ""
+"This section shows some methods and elements that should be used to "
+"communicate with the user, in order to keep consistency in the User "
+"Interface."
+msgstr ""
+"I det här avsnittet beskrivs några metoder och element som bör användas för "
+"att kommunicera med användaren, så att användargränssnittet blir konsekvent."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:45
+msgid "Showing messages. The QgsMessageBar class"
+msgstr "Visning av meddelanden. Klassen QgsMessageBar"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:47
+msgid ""
+"Using message boxes can be a bad idea from a user experience point of view. "
+"For showing a small info line or a warning/error messages, the QGIS message "
+"bar is usually a better option."
+msgstr ""
+"Att använda meddelanderutor kan vara en dålig idé ur "
+"användarupplevelsesynpunkt. För att visa en liten informationsrad eller ett "
+"varnings-/felmeddelande är QGIS meddelandefält vanligtvis ett bättre "
+"alternativ."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:51
+msgid ""
+"Using the reference to the QGIS interface object, you can show a message in "
+"the message bar with the following code"
+msgstr ""
+"Med hjälp av referensen till QGIS-gränssnittsobjektet kan du visa ett "
+"meddelande i meddelandefältet med följande kod"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:68
+msgid "QGIS Message bar"
+msgstr "QGIS meddelandefält"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:70
+msgid "You can set a duration to show it for a limited time"
+msgstr ""
+"Du kan ställa in en varaktighet för att visa den under en begränsad tid"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:84
+msgid "QGIS Message bar with timer"
+msgstr "QGIS meddelandefält med timer"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:86
+msgid ""
+"The examples above show an error bar, but the ``level`` parameter can be "
+"used to creating warning messages or info messages, using the "
+":class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You "
+"can use up to 4 different levels:"
+msgstr ""
+"Exemplen ovan visar en felrad, men parametern ``level`` kan användas för att"
+" skapa varningsmeddelanden eller informationsmeddelanden med hjälp av "
+":class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` uppräkning. Du kan "
+"använda upp till 4 olika nivåer:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:90
+msgid "Info"
+msgstr "Info"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:91
+msgid "Warning"
+msgstr "Varning"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:92
+msgid "Critical"
+msgstr "Kritiskt"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:93
+msgid "Success"
+msgstr "Lyckades"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:99
+msgid "QGIS Message bar (info)"
+msgstr "QGIS meddelandefält (info)"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:101
+msgid ""
+"Widgets can be added to the message bar, like for instance a button to show "
+"more info"
+msgstr ""
+"Widgets kan läggas till i meddelandefältet, t.ex. en knapp för att visa mer "
+"information"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:124
+msgid "QGIS Message bar with a button"
+msgstr "QGIS meddelandefält med en knapp"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:126
+msgid ""
+"You can even use a message bar in your own dialog so you don't have to show "
+"a message box, or if it doesn't make sense to show it in the main QGIS "
+"window"
+msgstr ""
+"Du kan även använda ett meddelandefält i din egen dialogruta så att du inte "
+"behöver visa en meddelanderuta, eller om det inte är meningsfullt att visa "
+"den i QGIS huvudfönster"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:152
+msgid "QGIS Message bar in custom dialog"
+msgstr "QGIS meddelandefält i anpassad dialog"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:156
+msgid "Showing progress"
+msgstr "Visar framsteg"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:158
+msgid ""
+"Progress bars can also be put in the QGIS message bar, since, as we have "
+"seen, it accepts widgets. Here is an example that you can try in the "
+"console."
+msgstr ""
+"Progressfält kan också placeras i QGIS meddelandefält, eftersom det, som vi "
+"har sett, accepterar widgetar. Här är ett exempel som du kan prova i "
+"konsolen."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:184
+msgid ""
+"Also, you can use the built-in status bar to report progress, as in the next"
+" example:"
+msgstr ""
+"Du kan också använda den inbyggda statusfältet för att rapportera framsteg, "
+"som i nästa exempel:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:212
+msgid "Logging"
+msgstr "Loggning"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:214
+msgid ""
+"There are three different types of logging available in QGIS to log and save"
+" all the information about the execution of your code. Each has its specific"
+" output location. Please consider to use the correct way of logging for your"
+" purpose:"
+msgstr ""
+"Det finns tre olika typer av loggning tillgängliga i QGIS för att logga och "
+"spara all information om körningen av din kod. Var och en har sin specifika "
+"utmatningsplats. Tänk på att använda rätt loggningssätt för ditt ändamål:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:218
+msgid ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to "
+"communicate issues to the user. The output of the QgsMessageLog is shown in "
+"the Log Messages Panel."
+msgstr ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` är för meddelanden för att "
+"kommunicera problem till användaren. Utdata från QgsMessageLog visas i "
+"panelen för loggmeddelanden."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:221
+msgid ""
+"The python built in **logging** module is for debugging on the level of the "
+"QGIS Python API (PyQGIS). It is recommended for Python script developers "
+"that need to debug their python code, e.g. feature ids or geometries"
+msgstr ""
+"Den i Python inbyggda **logging**-modulen är avsedd för felsökning på samma "
+"nivå som QGIS Python API (PyQGIS). Den rekommenderas för Python-"
+"skriptutvecklare som behöver felsöka sin Python-kod, t.ex. objekt-ID:n eller"
+" geometrier"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:224
+msgid ""
+":class:`QgsLogger <qgis.core.QgsLogger>` is for messages for *QGIS internal*"
+" debugging / developers (i.e. you suspect something is triggered by some "
+"broken code). Messages are only visible with developer versions of QGIS."
+msgstr ""
+":class:`QgsLogger <qgis.core.QgsLogger>` är för meddelanden för *QGIS "
+"intern* felsökning / utvecklare (dvs. du misstänker att något utlöses av "
+"någon trasig kod). Meddelanden är endast synliga med utvecklarversioner av "
+"QGIS."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:228
+msgid ""
+"Examples for the different logging types are shown in the following sections"
+" below."
+msgstr "Exempel på de olika loggningstyperna visas i följande avsnitt nedan."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:232
+msgid ""
+"Use of the Python ``print`` statement is unsafe to do in any code which may "
+"be multithreaded and **extremely slows down the algorithm**. This includes "
+"**expression functions**, **renderers**, **symbol layers** and **Processing "
+"algorithms** (amongst others). In these cases you should always use the "
+"python **logging** module or thread safe classes (:class:`QgsLogger "
+"<qgis.core.QgsLogger>` or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) "
+"instead."
+msgstr ""
+"Användning av Pythons ``print``-sats är osäkert att göra i all kod som kan "
+"vara flertrådad och **extremt saktar ner algoritmen**. Detta inkluderar "
+"**uttrycksfunktioner**, **renderare**, **symbolskikt** och "
+"**behandlingsalgoritmer** (bland andra). I dessa fall bör du alltid använda "
+"pythonmodulen **logging** eller trådsäkra klasser (:class:`QgsLogger "
+"<qgis.core.QgsLogger>` eller :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>`) istället."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:241
+msgid "QgsMessageLog"
+msgstr "QgsMessageLog"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:258
+msgid ""
+"You can see the output of the :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>` in the :ref:`log_message_panel`"
+msgstr ""
+"Du kan se utdata från :class:`QgsMessageLog <qgis.core.QgsMessageLog>` i "
+":ref:`log_message_panel`"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:262
+msgid "The python built in logging module"
+msgstr "Den inbyggda loggningsmodulen i Python"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:273
+msgid ""
+"The basicConfig method configures the basic setup of the logging. In the "
+"above code the filename, logging level and the format are defined. The "
+"filename refers to where to write the logfile to, the logging level defines "
+"what levels to output and the format defines the format in which each "
+"message is output."
+msgstr ""
+"Metoden basicConfig konfigurerar den grundläggande inställningen för "
+"loggningen. I koden ovan definieras filnamn, loggningsnivå och format. "
+"Filnamnet anger var loggfilen ska skrivas, loggningsnivån definierar vilka "
+"nivåer som ska matas ut och formatet definierar i vilket format varje "
+"meddelande ska matas ut."
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:283
+msgid ""
+"If you want to erase the log file every time you execute your script you can"
+" do something like:"
+msgstr ""
+"Om du vill radera loggfilen varje gång du kör ditt skript kan du göra något "
+"liknande:"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:291
+msgid ""
+"Further resources on how to use the python logging facility are available "
+"at:"
+msgstr ""
+"Mer information om hur du använder python-loggningsfunktionen finns på"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:293
+msgid "https://docs.python.org/3/library/logging.html"
+msgstr "https://docs.python.org/3/library/logging.html"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:294
+msgid "https://docs.python.org/3/howto/logging.html"
+msgstr "https://docs.python.org/3/howto/logging.html"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:295
+msgid "https://docs.python.org/3/howto/logging-cookbook.html"
+msgstr "https://docs.python.org/3/howto/logging-cookbook.html"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:299
+msgid ""
+"Please note that without logging to a file by setting a filename the logging"
+" may be multithreaded which heavily slows down the output."
+msgstr ""
+"Observera att om du inte loggar till en fil genom att ange ett filnamn kan "
+"loggningen vara flertrådad, vilket gör att utdata går långsammare."
