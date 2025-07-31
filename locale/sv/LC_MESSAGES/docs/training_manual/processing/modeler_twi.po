@@ -1,0 +1,390 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:4
+msgid "Starting with the model designer"
+msgstr "Börjar med modellkonstruktören"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:6
+msgid ""
+"In this lesson we will use the model designer, a powerful component that we "
+"can use to define a workflow and run a chain of algorithms."
+msgstr ""
+"I den här lektionen kommer vi att använda modelldesignern, en kraftfull "
+"komponent som vi kan använda för att definiera ett arbetsflöde och köra en "
+"kedja av algoritmer."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:8
+msgid ""
+"A normal session with the processing tools includes more than running a "
+"single algorithm. Usually several of them are run to obtain a result, and "
+"the outputs of some of those algorithms are used as input for some of the "
+"other ones."
+msgstr ""
+"En normal session med bearbetningsverktygen omfattar mer än att köra en enda"
+" algoritm. Vanligtvis körs flera av dem för att få ett resultat, och utdata "
+"från några av dessa algoritmer används som indata för några av de andra."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:10
+msgid ""
+"Using the model designer, that workflow can be put into a model, which will "
+"run all the necessary algorithms in a single run, thus simplifying the whole"
+" process and automating it."
+msgstr ""
+"Med hjälp av modelldesignern kan det arbetsflödet läggas in i en modell som "
+"kör alla nödvändiga algoritmer i en enda körning, vilket förenklar och "
+"automatiserar hela processen."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:12
+msgid ""
+"To start this lesson, we are going to calculate a parameter named "
+"Topographic Wetness Index. The algorithm that computes it is called "
+":guilabel:`Topographic wetness index (twi)`."
+msgstr ""
+"I början av den här lektionen ska vi beräkna en parameter som heter "
+"Topographic Wetness Index. Algoritmen som beräknar den kallas "
+":guilabel:`Topographic wetness index (twi)`."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:16
+msgid ""
+"As you can see, there are two mandatory inputs: *Slope* and *Catchment "
+"area*. There is also an optional input, but we will not be using it, so we "
+"can ignore it."
+msgstr ""
+"Som du kan se finns det två obligatoriska ingångar: *Slope* (lutning) och "
+"*Catchment area* (avrinningsområde). Det finns också en valfri inmatning, "
+"men vi kommer inte att använda den, så vi kan ignorera den."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:18
+msgid ""
+"The data for this lesson contains just a DEM, so we do not have any of the "
+"required inputs. However, we know how to calculate both of them from that "
+"DEM, since we have already seen the algorithms to compute slope and "
+"catchment area. So we can first compute those layers and then use them for "
+"the TWI algorithm."
+msgstr ""
+"Uppgifterna för den här lektionen innehåller bara en DEM, så vi har inte "
+"någon av de nödvändiga indata. Vi vet dock hur vi ska beräkna dem båda från "
+"denna DEM, eftersom vi redan har sett algoritmerna för att beräkna lutning "
+"och avrinningsområde. Så vi kan först beräkna dessa lager och sedan använda "
+"dem för TWI-algoritmen."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:20
+msgid ""
+"Here are the parameter dialogs that you should use to calculate the 2 "
+"intermediate layers."
+msgstr ""
+"Här är de parameterdialoger som du ska använda för att beräkna de 2 "
+"mellanliggande lagren."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:22
+msgid "Slope must be calculated in radians, not in degrees."
+msgstr "Lutningen måste beräknas i radianer, inte i grader."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:28
+msgid ""
+"And this is how you have to set the parameters dialog of the TWI algorithm."
+msgstr ""
+"Och det är så här du måste ställa in parameterdialogen för TWI-algoritmen."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:32
+msgid ""
+"This is the result that you will obtain (the default singleband pseudocolor "
+"inverted palette has been used for rendering). You can use the "
+":file:`twi.qml` style provided."
+msgstr ""
+"Detta är det resultat som du kommer att få (standardpaletten för inverterad "
+"pseudofärg med ett band har använts för rendering). Du kan använda den "
+"medföljande :file:`twi.qml`-stilen."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:36
+msgid ""
+"What we will try to do now is to create an algorithm that calculates the TWI"
+" from a DEM in just one single step. That will save us work in case we later"
+" have to compute a TWI layer from another DEM, since we will need just one "
+"single step to do it instead of the three above. All the processes that we "
+"need are found in the  toolbox, so what we have to do is to define the "
+"workflow to wrap them. This is where the model designer comes in."
+msgstr ""
+"Vad vi nu ska försöka göra är att skapa en algoritm som beräknar TWI från en"
+" DEM i bara ett enda steg. Det kommer att spara oss arbete om vi senare "
+"måste beräkna ett TWI-lager från en annan DEM, eftersom vi bara behöver ett "
+"enda steg för att göra det i stället för de tre ovan. Alla processer som vi "
+"behöver finns i verktygslådan, så det enda vi behöver göra är att definiera "
+"arbetsflödet för dem. Det är här modelldesignern kommer in i bilden."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:38
+msgid "Open the modeler by selecting its menu entry in the processing menu."
+msgstr ""
+"Öppna modelleraren genom att välja dess menyalternativ i bearbetningsmenyn."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:42
+msgid ""
+"Two things are needed to create a model: setting the inputs that it will "
+"need, and defining the algorithm that it contains. Both of them are done by "
+"adding elements from the two tabs in the left-hand side of the modeler "
+"window: :guilabel:`Inputs` and :guilabel:`Algorithms`."
+msgstr ""
+"Två saker behövs för att skapa en modell: att ställa in de indata som den "
+"behöver och att definiera den algoritm som den innehåller. Båda görs genom "
+"att lägga till element från de två flikarna till vänster i "
+"modelleringsfönstret: :guilabel:`Inputs` och :guilabel:`Algorithms`."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:44
+msgid ""
+"Let's start with the inputs. In this case we do not have much to add. We "
+"just need a raster layer with the DEM, and that will be our only input data."
+msgstr ""
+"Låt oss börja med ingångarna. I det här fallet har vi inte mycket att lägga "
+"till. Vi behöver bara ett rasterlager med DEM, och det blir vår enda indata."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:46
+msgid ""
+"Double click on the :guilabel:`Raster layer` input and you will see the "
+"following dialog."
+msgstr ""
+"Dubbelklicka på ingången :guilabel:`Raster layer` och du kommer att se "
+"följande dialogruta."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:50
+msgid "Here we will have to define the input we want:"
+msgstr "Här måste vi definiera vilken inmatning vi vill ha:"
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:52
+msgid ""
+"Since we expect this raster layer to be a DEM, we will call it ``DEM``. "
+"That's the name that the user of the model will see when running it."
+msgstr ""
+"Eftersom vi förväntar oss att detta rasterlager ska vara en DEM, kommer vi "
+"att kalla det ``DEM``. Det är det namn som användaren av modellen kommer att"
+" se när den körs."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:53
+msgid ""
+"Since we need that layer to work, we will define it as a mandatory layer."
+msgstr ""
+"Eftersom vi behöver det lagret för att fungera definierar vi det som ett "
+"obligatoriskt lager."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:55
+msgid "Here is how the dialog should be configured."
+msgstr "Så här ska dialogrutan konfigureras."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:59
+msgid ""
+"Click on :guilabel:`OK` and the input will appear in the modeler canvas."
+msgstr "Klicka på :guilabel:`OK` så visas inmatningen i modelleringspanelen."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:63
+msgid "Now let's move to the :guilabel:`Algorithms` tab."
+msgstr "Låt oss nu gå till fliken :guilabel:`Algoritmer`."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:64
+msgid ""
+"The first algorithm we have to run is the :guilabel:`Slope, aspect, "
+"curvature` algorithm. Locate it in the algorithm list, double-click on it "
+"and you will see the dialog shown below."
+msgstr ""
+"Den första algoritmen vi ska köra är algoritmen :guilabel:`Slope, aspect, "
+"curvature`. Leta upp den i algoritmlistan, dubbelklicka på den och du kommer"
+" att se dialogrutan som visas nedan."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:69
+msgid ""
+"This dialog is very similar to the one that you can find when running the "
+"algorithm from the toolbox, but the element that you can use as parameter "
+"values are not taken from the current QGIS project, but from the model "
+"itself. That means that, in this case, we will not have all the raster "
+"layers of our project available for the *Elevation* field, but just the ones"
+" defined in our model. Since we have added just one single raster input "
+"named ``DEM``, that will be the only raster layer that we will see in the "
+"list corresponding to the :guilabel:`Elevation` parameter."
+msgstr ""
+"Den här dialogen är mycket lik den som du hittar när du kör algoritmen från "
+"verktygslådan, men det element som du kan använda som parametervärden hämtas"
+" inte från det aktuella QGIS-projektet utan från själva modellen. Det "
+"innebär att vi i det här fallet inte kommer att ha alla rasterlager i vårt "
+"projekt tillgängliga för fältet *Elevation*, utan bara de som definieras i "
+"vår modell. Eftersom vi bara har lagt till en enda rasterinmatning med "
+"namnet ``DEM`` kommer det att vara det enda rasterskiktet som vi kommer att "
+"se i listan som motsvarar parametern :guilabel:`Elevation`."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:71
+msgid ""
+"Output generated by an algorithm are handled a bit differently when the "
+"algorithm is used as a part of a model. Instead of selecting the filepath "
+"where you want to save each output, you just have to specify if that output "
+"is an intermediate layer (and you do not want it to be preserved after the "
+"model has been executed), or it is a final one. In this case, all layers "
+"produced by this algorithm are intermediate. We will only use one of them "
+"(the slope layer), but we do not want to keep it, since we just need it to "
+"calculate the TWI layer, which is the final result that we want to obtain."
+msgstr ""
+"Utdata som genereras av en algoritm hanteras på ett lite annorlunda sätt när"
+" algoritmen används som en del av en modell. Istället för att välja den "
+"filväg där du vill spara varje utdata behöver du bara ange om utdata är ett "
+"mellanlager (och du inte vill att det ska bevaras efter att modellen har "
+"exekverats) eller om det är ett slutlager. I det här fallet är alla lager "
+"som produceras av den här algoritmen mellanlager. Vi kommer bara att använda"
+" ett av dem (lutningsskiktet), men vi vill inte behålla det, eftersom vi "
+"bara behöver det för att beräkna TWI-skiktet, som är det slutresultat som vi"
+" vill få fram."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:73
+msgid ""
+"When layers are not a final result, you should just leave the corresponding "
+"field. Otherwise, you have to enter a name that will be used to identify the"
+" layer in the parameters dialog that will be shown when you run the model "
+"later."
+msgstr ""
+"När skikten inte är ett slutresultat bör du bara lämna motsvarande fält. "
+"Annars måste du ange ett namn som kommer att användas för att identifiera "
+"lagret i den parameterdialog som visas när du kör modellen senare."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:75
+msgid ""
+"There is not much to select in this first dialog, since we do not have but "
+"just one layer in our model (The DEM input that we created). Actually, the "
+"default configuration of the dialog is the correct one in this case, so you "
+"just have to press :guilabel:`OK`. This is what you will now have in the "
+"modeler canvas."
+msgstr ""
+"Det finns inte så mycket att välja i den här första dialogen, eftersom vi "
+"bara har ett lager i vår modell (DEM-inmatningen som vi skapade). I själva "
+"verket är dialogrutans standardkonfiguration den rätta i det här fallet, så "
+"det är bara att trycka på :guilabel:`OK`. Detta är vad du nu kommer att ha i"
+" modelleringskanvasen."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:79
+msgid ""
+"The second algorithm we have to add to our model is the catchment area "
+"algorithm. We will use the algorithm named *Catchment area (Paralell)*. We "
+"will use the DEM layer again as input, and none of the ouputs it produces "
+"are final, so here is how you have to fill the corresponding dialog."
+msgstr ""
+"Den andra algoritmen som vi måste lägga till i vår modell är "
+"avrinningsområdesalgoritmen. Vi kommer att använda algoritmen med namnet "
+"*Catchment area (Paralell)*. Vi kommer att använda DEM-skiktet igen som "
+"indata, och ingen av de utdata som det producerar är slutgiltig, så här är "
+"hur du måste fylla i motsvarande dialog."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:83
+msgid "Now your model should look like this."
+msgstr "Nu ska din modell se ut så här."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:87
+msgid ""
+"The last step is to add the :guilabel:`Topographic wetness index` algorithm,"
+" with the following configuration."
+msgstr ""
+"Det sista steget är att lägga till algoritmen :guilabel:`Topographic wetness"
+" index`, med följande konfiguration."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:91
+msgid ""
+"In this case, we will not be using the DEM as input, but instead, we will "
+"use the slope and catchment area layers that are calculated by the "
+"algorithms that we previously added. As you add new algorithms, the outputs "
+"they produce become available for other algorithms, and using them you link "
+"the algorithms, creating the workflow."
+msgstr ""
+"I det här fallet kommer vi inte att använda DEM som indata, utan i stället "
+"kommer vi att använda de lager för lutning och avrinningsområde som beräknas"
+" av de algoritmer som vi tidigare lagt till. När du lägger till nya "
+"algoritmer blir de utdata som de producerar tillgängliga för andra "
+"algoritmer, och med hjälp av dem länkar du algoritmerna och skapar "
+"arbetsflödet."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:93
+msgid ""
+"In this case, the output ``TWI`` layer is a final layer, so we have to "
+"indicate so. In the corresponding textbox, enter the name that you want to "
+"be shown for this output."
+msgstr ""
+"I det här fallet är utdata ``TWI``-lagret ett slutlager, så vi måste ange "
+"det. I motsvarande textruta anger du det namn som du vill ska visas för den "
+"här utgången."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:95
+msgid "Now our model is finished and it should look like this."
+msgstr "Nu är vår modell färdig och den ska se ut så här."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:99
+msgid "Enter a name and a group name in the upper part of the model window."
+msgstr "Ange ett namn och ett gruppnamn i den övre delen av modellfönstret."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:103
+msgid ""
+"Save it clicking on the :guilabel:`Save` button. You can save it anywhere "
+"you want and open it later, but if you save it in the models folder (which "
+"is the folder that you will see when the save file dialog appears), your "
+"model will also be available in the toolbox as well. So stay on that folder "
+"and save the model with the filename that you prefer."
+msgstr ""
+"Spara den genom att klicka på knappen :guilabel:`Save`. Du kan spara den var"
+" du vill och öppna den senare, men om du sparar den i mappen models (som är "
+"den mapp som du ser när dialogrutan spara fil visas) kommer din modell också"
+" att finnas tillgänglig i verktygslådan. Så håll dig till den mappen och "
+"spara modellen med det filnamn som du föredrar."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:105
+msgid ""
+"Now close the modeler dialog and go to the toolbox. In the "
+":guilabel:`Models` entry you will find your model."
+msgstr ""
+"Stäng nu dialogrutan för modellering och gå till verktygslådan. I "
+":guilabel:`Models` hittar du din modell."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:109
+msgid "You can run it just like any normal algorithm, double-clicking on it."
+msgstr ""
+"Du kan köra den precis som en vanlig algoritm genom att dubbelklicka på den."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:113
+msgid ""
+"As you can see, the parameters dialog, contain the input that you added to "
+"the model, along with the outputs that you set as final when adding the "
+"corresponding algorithms."
+msgstr ""
+"Som du kan se innehåller parameterdialogen de indata som du har lagt till i "
+"modellen, tillsammans med de utdata som du angav som slutliga när du lade "
+"till motsvarande algoritmer."
+
+#: ../../docs/training_manual/processing/modeler_twi.rst:115
+msgid ""
+"Run it using the DEM as input and you will get the TWI layer in just one "
+"single step."
+msgstr ""
+"Kör det med DEM som indata och du får TWI-skiktet i bara ett enda steg."
