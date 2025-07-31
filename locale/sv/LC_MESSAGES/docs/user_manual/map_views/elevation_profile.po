@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,98 +25,988 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:6
+msgid "Elevation Profile View"
+msgstr "Höjdprofil Vy"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:14
+msgid ""
+"The :guilabel:`Elevation Profile` panel is a plotting tool for side view, "
+"for visualizing elevation data along a line. It supports vector, raster, "
+"mesh and point cloud layers. Data can be of 2D or 3D type."
+msgstr ""
+"Panelen :guilabel:`Elevation Profile` är ett plottverktyg för sidovy, för "
+"att visualisera höjddata längs en linje. Den stöder vektor-, raster-, mesh- "
+"och punktmolnslager. Data kan vara av 2D- eller 3D-typ."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:18
+msgid ""
+"To add an elevation profile view, go to :menuselection:`View -->` "
+"|layoutItem3DMap| :menuselection:`Elevation Profile` menu. You can add as "
+"many profile views as you want, and they can be docked, piled on top of each"
+" other, or floating."
+msgstr ""
+"För att lägga till en höjdprofilvy, gå till :menuselection:`View -->` "
+"|layoutItem3DMap| :menuselection:`Elevation Profile` menyn. Du kan lägga "
+"till så många profilvyer du vill och de kan vara dockade, staplade på "
+"varandra eller flytande."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:341
 msgid "layoutItem3DMap"
 msgstr "layoutItem3DMap"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:26
+msgid "Elevation Profile dialog embedded below main map canvas"
+msgstr "Dialogruta för höjdprofil inbäddad under huvudkartan"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:28
+msgid ""
+"Figure shows a coastline with a town behind a sea-dike. A larger tolerance "
+"applied to the elevation profile line returns more point cloud features."
+msgstr ""
+"Figuren visar en kustlinje med en stad bakom ett havsdike. En större "
+"tolerans som tillämpas på höjdprofillinjen returnerar fler "
+"punktmolnsfunktioner."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:33
+msgid "The interface"
+msgstr "Gränssnittet"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:35
+msgid ""
+"At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides "
+"you with the following tools:"
+msgstr ""
+"Överst på :guilabel:`Elevation Profile`-panelen finns ett verktygsfält med "
+"följande verktyg:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:37
+msgid "Elevation Profile View toolbar"
+msgstr "Verktygsfält för vy av höjdprofil"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:42
+msgid "Tool"
+msgstr "Verktyg"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:43
+msgid "Shortcut"
+msgstr "Genväg"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:44
 msgid "Description"
 msgstr "Beskrivning"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:45
+msgid "|addLayer| :sup:`Add Layers`"
+msgstr "|addLayer| :sup:`Lägg till lager`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:319
 msgid "addLayer"
 msgstr "addLayer"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:46
+msgid "hold :kbd:`Ctrl` while drag-and-drop"
+msgstr "håll in :kbd:`Ctrl` medan du drar och släpper"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:47
+msgid "Allows you to add new layers to a plot."
+msgstr "Gör det möjligt att lägga till nya lager i en plot."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:48
+msgid "|layerTree| :sup:`Show Layer Tree`"
+msgstr "|layerTree| :sup:`Visa lagerträdet`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:339
 msgid "layerTree"
 msgstr "layerTree"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:50
+msgid ""
+"Shows or hides a list of project layers to configure rendering in the "
+"profile view."
+msgstr ""
+"Visar eller döljer en lista över projektlager för att konfigurera rendering "
+"i profilvyn."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:51
+msgid "|captureLine| :sup:`Capture Curve`"
+msgstr "|fångstlinje| :sup:`Fångstkurva`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:327
 msgid "captureLine"
 msgstr "captureLine"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:53
+msgid ""
+"Draws interactively a line over the map canvas to represent the profile "
+"curve."
+msgstr ""
+"Ritar interaktivt en linje över kartbilden för att representera "
+"profilkurvan."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:54
+msgid "|captureCurveFromFeature| :sup:`Capture Curve From Feature`"
+msgstr "|fångaKurvaFrånFunktion| :sup:`Fånga Kurva Från Funktion`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:325
 msgid "captureCurveFromFeature"
 msgstr "captureCurveFromFeature"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:56
+msgid ""
+"Picks an existing line feature on the map canvas and generate a profile "
+"curve along that line."
+msgstr ""
+"Välj en befintlig linjefunktion på kartbilden och skapa en profilkurva längs"
+" den linjen."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:57
+msgid "|arrowLeft| :sup:`Nudge Left`"
+msgstr "|pilVänster| :sup:`Nudga åt vänster`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:321
 msgid "arrowLeft"
 msgstr "arrowLeft"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:58
+msgid ":kbd:`Ctrl+Alt+,`"
+msgstr ":kbd:`Ctrl+Alt+,`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:59
+msgid ""
+"Allows you to slowly move the capture line across the map to the left (e.g. "
+"to find the optimal profile line based on the elevation)."
+msgstr ""
+"Gör det möjligt att sakta flytta upptagningslinjen över kartan till vänster "
+"(t.ex. för att hitta den optimala profillinjen baserat på höjden)."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:61
+msgid "|arrowRight| :sup:`Nudge Right`"
+msgstr "|pil höger :sup:`Nudda höger`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:323
 msgid "arrowRight"
 msgstr "arrowRight"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:62
+msgid ":kbd:`Ctrl+Alt+.`"
+msgstr ":kbd:`Ctrl+Alt+.`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:63
+msgid ""
+"Allows you to slowly move the capture line across the map to the right (e.g."
+" to find the optimal profile line based on the elevation)."
+msgstr ""
+"Gör det möjligt att sakta flytta upptagningslinjen över kartan till höger "
+"(t.ex. för att hitta den optimala profillinjen baserat på höjden)."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:65
+msgid "|clearConsole| :sup:`Clear`"
+msgstr "|clearConsole| :sup:`Clear`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:329
 msgid "clearConsole"
 msgstr "clearConsole"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:67
+msgid ""
+"Removes the profile line and any plot displayed in the :guilabel:`Elevation "
+"Profile` view"
+msgstr ""
+"Tar bort profillinjen och alla diagram som visas i vyn :guilabel:`Elevation "
+"Profile` (höjdprofil)"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:68
+msgid "|identify| :sup:`Identify Features`"
+msgstr "|Identifiera :sup:`Identifiera funktioner`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:337
 msgid "identify"
 msgstr "identify"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:70
+msgid ""
+"Identifies features in the plot canvas via either a single click, or click-"
+"and-drag rectangle. Results are shown in the standard :ref:`Identify Results"
+" <identify>` dock."
+msgstr ""
+"Identifierar funktioner i plottduken med antingen ett enda klick eller en "
+"klick-och-drag-rektangel. Resultaten visas i standard :ref:`Identify Results"
+" <identify>` docka."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:72
+msgid "|pan| :sup:`Pan`"
+msgstr "|pan| :sup:`Pan`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:349
 msgid "pan"
 msgstr "pan"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:73
+msgid ":kbd:`Space`"
+msgstr ":kbd:`Space`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:74
+msgid ""
+"Click and drag to pan the plot canvas. Can also be done with the middle "
+"mouse button."
+msgstr ""
+"Klicka och dra för att panorera plottytan. Kan också göras med den mellersta"
+" musknappen."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:75
+msgid "|zoomInXAxis| :sup:`Zoom X Axis`"
+msgstr "|zoomInXAxis| :sup:`Zoom X-axel`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:363
 msgid "zoomInXAxis"
 msgstr "zoomInXAxis"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:77
+msgid "Zooms in/out along the horizontal axis, keeping the vertical ratio"
+msgstr ""
+"Zooma in/ut längs den horisontella axeln och behåll det vertikala "
+"förhållandet"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:78
+msgid "|zoomIn| :sup:`zoom`"
+msgstr "|zoomIn| :sup:`zoom`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:361
 msgid "zoomIn"
 msgstr "zoomIn"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:79
+msgid ":kbd:`Ctrl+Space`"
+msgstr ":kbd:`Ctrl+Space`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:80
+msgid ""
+"Click or click-and-drag a rectangle over the plot to zoom in. Press "
+":kbd:`Alt` and click to instead zoom out."
+msgstr ""
+"Klicka eller klicka-och-drag en rektangel över diagrammet för att zooma in. "
+"Tryck på :kbd:`Alt` och klicka för att istället zooma ut."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:82
+msgid "|zoomFullExtent| :sup:`Zoom Full`"
+msgstr "|zoomFullExtent| :sup:`Zoom Full`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:359
 msgid "zoomFullExtent"
 msgstr "zoomFullExtent"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:84
+msgid ""
+"Zooms the :guilabel:`Elevation Profile` view to the extent of the capture "
+"line"
+msgstr ""
+"Zoomar :guilabel:`Elevation Profile`-vyn till omfattningen av fångstlinjen"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:85
+msgid "|snapping| :sup:`Enable Snapping`"
+msgstr "|snapping| :sup:`Aktivera snäppning`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:355
 msgid "snapping"
 msgstr "snapping"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:87
+msgid ""
+"Allows to snap to the edge or vertex of the plot features in the profile "
+"view. Convenient for accurate retrieval of coordinates or distance "
+"measurements."
+msgstr ""
+"Gör det möjligt att snäppa till kanten eller toppunkten på plotelementen i "
+"profilvyn. Praktiskt för exakt hämtning av koordinater eller "
+"avståndsmätningar."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:89
+msgid "|measure| :sup:`Measure Distances`"
+msgstr "|mäta| :sup:`Mät avstånd`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:343
 msgid "measure"
 msgstr "measure"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:91
+msgid "Measures horizontal and vertical distances"
+msgstr "Mäter horisontella och vertikala avstånd"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:92
+msgid "|saveAsPDF| :sup:`Export As PDF`"
+msgstr "|saveAsPDF| :sup:`Exportera som PDF`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:351
 msgid "saveAsPDF"
 msgstr "saveAsPDF"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:94
+msgid "Exports plots to PDF (as high quality vector objects)"
+msgstr "Exporterar plottar till PDF (som högkvalitativa vektorobjekt)"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:95
+msgid "|saveMapAsImage| :sup:`Export As Image`"
+msgstr "|saveMapAsImage| :sup:`Exportera som bild`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:353
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:97
+msgid "Exports plots to several image formats"
+msgstr "Exporterar plottar till flera bildformat"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:98
+msgid "|fileSaveAs| :sup:`Export Results`"
+msgstr "|fileSaveAs| :sup:`Exportera resultat`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:335
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:100
+msgid ""
+"Exports plots as 3D features, 2D Profile and Distance/Elevation Table. (The "
+"results can be saved as DXF files, CSV files or any of the standard writable"
+" vector spatial formats). More details at :ref:`export_elevation_profile`."
+msgstr ""
+"Exporterar plottar som 3D-funktioner, 2D-profiler och "
+"avstånds-/höjdtabeller. (Resultaten kan sparas som DXF-filer, CSV-filer "
+"eller något av de skrivbara vektorformaten). Mer information finns på "
+":ref:`export_elevation_profile`."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:104
+msgid "|options| :sup:`Options` :menuselection:`-->`"
+msgstr "|options| :sup:`Options` :menuselection:`-->`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:347
 msgid "options"
 msgstr "options"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:106
+msgid ""
+"Provides access to configuration settings of the profile elevation line."
+msgstr ""
+"Ger tillgång till konfigurationsinställningar för profilhöjningslinjen."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:107
+msgid ""
+":menuselection:`-->` |unchecked| :menuselection:`Lock distance/elevation "
+"scales`"
+msgstr ""
+":menuselection:`-->` |unchecked| :menuselection:`Locka skalor för "
+"avstånd/höjd`"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:357
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:109
+msgid ""
+"Ensures that the horizontal and vertical scales are always kept equal (so "
+"that e.g. a 45° slope will appear as a 45° slope in the profile view)."
+msgstr ""
+"Säkerställer att de horisontella och vertikala skalorna alltid är lika (så "
+"att t.ex. en 45° lutning visas som en 45° lutning i profilvyn)."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:111
+msgid ":menuselection:`--> Distance units`"
+msgstr ":menuselection:`--> Avståndsenheter`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:113
+msgid ""
+"Allows to render distances in the profile chart with units other than the "
+"map canvas units."
+msgstr ""
+"Gör det möjligt att återge avstånd i profildiagrammet med andra enheter än "
+"kartans enheter."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:114
+msgid ":menuselection:`--> Tolerance`"
+msgstr ":menuselection:`--> Tolerans`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:116
+msgid ""
+"Sets how far from the actual profile line a feature (vector point, line or "
+"polygon, point cloud) can reside to be included in the results. Uses the map"
+" units and is ignored by other layer or geometry types."
+msgstr ""
+"Ställer in hur långt från den faktiska profillinjen en funktion "
+"(vektorpunkt, linje eller polygon, punktmoln) kan ligga för att inkluderas i"
+" resultaten. Använder kartans enheter och ignoreras av andra lager- eller "
+"geometrityper."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:119
+msgid ":menuselection:`--> Rename Profile...`"
+msgstr ":menuselection:`--> Byt namn på profil...`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:121
+msgid "Allows to rename the profile view."
+msgstr "Gör det möjligt att byta namn på profilvyn."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:122
+msgid "|dock| :sup:`Dock Elevation Profile View`"
+msgstr "|dock| :sup:`Docka Elevation Profil View`"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:331
 msgid "dock"
 msgstr "dock"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:124
+msgid "Switch between docked and floating status of the view"
+msgstr "Växla mellan dockad och flytande status för vyn"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:127
+msgid ""
+"In the bottom left, a copy of the :guilabel:`Layers` panel can be displayed "
+"pushing the |layerTree| :guilabel:`Show Layer Tree` button. This is however "
+"an independent widget, with its own set of visible layers, in a custom stack"
+" order. It allows you to control layers rendering and behavior within the "
+"plot canvas:"
+msgstr ""
+"Längst ner till vänster kan en kopia av panelen :guilabel:`Layers` visas "
+"genom att trycka på knappen |layerTree| :guilabel:`Show Layer Tree`. Detta "
+"är dock en oberoende widget med sin egen uppsättning synliga lager i en "
+"anpassad stapelordning. Det gör att du kan kontrollera lagrens rendering och"
+" beteende inom plotcanvasen:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:132
+msgid ""
+"Tick the box next to the layer name to set whether it should be rendered in "
+"the plot canvas"
+msgstr ""
+"Kryssa i rutan bredvid skiktets namn för att ange om det ska återges i "
+"plotcanvasen"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:133
+msgid "Drag-and-drop layers up or down to change the order of the layers"
+msgstr "Dra och släpp lager upp eller ner för att ändra ordningen på lagren"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:134
+msgid ""
+"style rendering of layers in the profile view: double-click a layer or "
+"right-click and select :guilabel:`Properties...` to open the layer's "
+":guilabel:`Elevation` properties tab for configuration. A summary of "
+"elevation settings is displayed as tooltip when hovering over the layer."
+msgstr ""
+"stilrendering av lager i profilvyn: dubbelklicka på ett lager eller "
+"högerklicka och välj :guilabel:`Properties...` för att öppna lagrets "
+":guilabel:`Elevation` egenskapsflik för konfiguration. En sammanfattning av "
+"höjdinställningarna visas som verktygstips när du håller muspekaren över "
+"lagret."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:140
+msgid ""
+"On the right of the layer tree, the plot canvas is the main place you can "
+"preview the elevation profile of the enabled layers. It is based on a "
+"graduated grid in which the horizontal axis displays the length of the "
+"profile line and the vertical axis displays the Z elevation of the observed "
+"features. It also allows a set of interactions such as zooming, panning, "
+"measuring, identifying features, ... using the tools at the top."
+msgstr ""
+"Till höger om lagerträdet finns plot canvas som är den huvudsakliga platsen "
+"där du kan förhandsgranska höjdprofilen för de aktiverade lagren. Den är "
+"baserad på ett graderat rutnät där den horisontella axeln visar "
+"profillinjens längd och den vertikala axeln visar Z-höjden för de "
+"observerade objekten. Det är också möjligt att utföra en rad olika "
+"interaktioner, t.ex. zooma, panorera, mäta, identifiera funktioner, ... med "
+"hjälp av verktygen längst upp."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:149
+msgid "Creating an elevation profile"
+msgstr "Skapa en höjdprofil"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:151
+msgid "To create a profile view, you can:"
+msgstr "För att skapa en profilvy kan du göra följande:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:153
+msgid ""
+"Go to :menuselection:`View -->` |newElevationProfile| "
+":menuselection:`Elevation Profile` menu. The :guilabel:`Elevation profile` "
+"panel opens."
+msgstr ""
+"Gå till :menuselection:`View -->` |newElevationProfile| "
+":menuselection:`Elevation Profile` menyn. Panelen :guilabel:`Elevation "
+"profile` öppnas."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:345
 msgid "newElevationProfile"
 msgstr "newElevationProfile"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:155
+msgid ""
+"Create the profile line along which the terrain and the features will be "
+"rendered. Select a drawing tool:"
+msgstr ""
+"Skapa den profillinje längs vilken terrängen och objekten ska återges. Välj "
+"ett ritverktyg:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:158
+msgid ""
+"|captureLine| :sup:`Capture Curve`: click left over the main map canvas to "
+"add vertices and click right to finalize a line that will be used as profile"
+" line"
+msgstr ""
+"|captureLine| :sup:`Capture Curve`: klicka vänster över huvudkartan för att "
+"lägga till hörn och klicka höger för att slutföra en linje som kommer att "
+"användas som profillinje"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:160
+msgid ""
+"or |captureCurveFromFeature| :sup:`Capture Curve From Feature`: click a line"
+" feature on the map canvas to select it as the profile line. If multiple "
+"features are present at the clicked point then a popup menu will appear "
+"allowing you to select among them."
+msgstr ""
+"eller |captureCurveFromFeature| :sup:`Capture Curve From Feature`: klicka på"
+" en linjefunktion på kartbilden för att välja den som profillinje. Om flera "
+"objekt finns vid den klickade punkten visas en popup-meny där du kan välja "
+"bland dem."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:165
+msgid ""
+"All the line digitizing capabilities such as the :ref:`snapping options "
+"<snapping_options>`, :ref:`tracing <tracing>`, :ref:`digitizing techniques "
+"<drawing_methods>` or the advanced :ref:`digitizing panel "
+"<advanced_digitizing_panel>` are available for use."
+msgstr ""
+"Alla linjedigitaliseringsfunktioner som :ref:`snapping options "
+"<snapping_options>`, :ref:`tracing <tracing>`, :ref:`digitizing techniques "
+"<drawing_methods>` eller den avancerade :ref:`digitizing panel "
+"<advanced_digitizing_panel>` är tillgängliga för användning."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:169
+msgid "The plot canvas may start rendering some features."
+msgstr "Plot canvas kan börja rendera vissa funktioner."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:170
+msgid ""
+"The next step is to configure the elevation properties of the layers you "
+"want to visualize."
+msgstr ""
+"Nästa steg är att konfigurera höjdegenskaperna för de lager som du vill "
+"visualisera."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:172
+msgid ""
+"Push on the |layerTree| :sup:`Show Layer Tree` button to display the list of"
+" layers. By default, not all the layers of the project are loaded and "
+"referenced in the profile tool; e.g., raster layers which are not marked as "
+"having elevation data in their properties are ignored. Clicking the "
+"|addLayer| :sup:`Add layers` button will show a filtered list of possible "
+"layers which can be added to the plot, but which currently aren't in the "
+"plot. Applying the dialog with selected layers will automatically mark them "
+"as having elevation data and immediately add them to the plot."
+msgstr ""
+"Tryck på knappen |layerTree| :sup:`Show Layer Tree` för att visa listan över"
+" lager. Som standard laddas inte alla lager i projektet och refereras till i"
+" profilverktyget; t.ex. ignoreras rasterlager som inte är markerade som att "
+"de har höjddata i sina egenskaper. Om du klickar på knappen |addLayer| "
+":sup:`Add layers` visas en filtrerad lista över möjliga lager som kan läggas"
+" till i plotten, men som för närvarande inte finns med i plotten. Om du "
+"använder dialogrutan med valda lager markeras de automatiskt som lager med "
+"höjddata och läggs omedelbart till i plotten."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:180
+msgid ""
+"Holding :kbd:`Ctrl` key, it is possible to drag and drop additional layers "
+"from the main layer tree to one in the elevation profile tool."
+msgstr ""
+"Om du håller in :kbd:`Ctrl`-tangenten kan du dra och släppa ytterligare "
+"lager från huvudlagerträdet till ett lager i höjdprofilverktyget."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:183
+msgid ""
+"Toggle visibility of the layers you are interested in. These are the only "
+"ones rendered in the profile view and selected layers can be different from "
+"the main :guilabel:`Layers` panel's."
+msgstr ""
+"Växla synlighet för de lager du är intresserad av. Dessa är de enda som "
+"återges i profilvyn och valda lager kan skilja sig från huvudpanelen "
+":guilabel:`Layers`."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:186
+msgid ""
+"Double-click a layer name or right-click and select :guilabel:`Properties`. "
+"The :guilabel:`Elevation` properties tab of the layer opens. This is the "
+"place you configure how each feature or terrain should render on the profile"
+" view. Available properties depend on the layer type:"
+msgstr ""
+"Dubbelklicka på ett skiktnamn eller högerklicka och välj "
+":guilabel:`Properties`. Fliken :guilabel:`Elevation` properties för skiktet "
+"öppnas. Det är här du konfigurerar hur varje objekt eller terräng ska "
+"återges i profilvyn. Vilka egenskaper som är tillgängliga beror på lagertyp:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:191
+msgid ":ref:`Raster Elevation Properties <raster_elevation>`"
+msgstr ":ref:`Rasterhöjdsegenskaper <raster_elevation>`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:192
+msgid ":ref:`Vector Elevation Properties <vectorelevationmenu>`"
+msgstr ":ref:`Vector Elevation Properties <vectorelevationmenu>`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:193
+msgid ":ref:`Point Cloud Elevation Properties <point_clouds_elevation>`"
+msgstr ":ref:`Egenskaper för punktmolnens höjd <point_clouds_elevation>`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:194
+msgid ":ref:`Mesh Elevation Properties <meshelevation>`"
+msgstr ":ref:`Mesh Elevation Properties <meshelevation>`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:196
+msgid ""
+"The profile view starts rendering terrain or features of active layers "
+"crossing the given profile curve, as soon as they have elevation properties "
+"configured."
+msgstr ""
+"Profilvyn börjar rendera terräng eller funktioner i aktiva lager som korsar "
+"den givna profilkurvan, så snart de har konfigurerade höjdegenskaper."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:199
+msgid ""
+"Under |options| :sup:`Options` drop-down menu, you can set the "
+":guilabel:`Tolerance` value. This value is used to create a flat buffer "
+"around the elevation profile line, visible in the main map canvas. Any "
+"visible feature (point, line, polygon, etc.) overlapping that buffer will be"
+" captured in the plot canvas."
+msgstr ""
+"Under |options| :sup:`Options` rullgardinsmeny kan du ställa in värdet för "
+":guilabel:`Tolerance`. Detta värde används för att skapa en platt buffert "
+"runt höjdprofillinjen, synlig i huvudkartan. Alla synliga objekt (punkt, "
+"linje, polygon, etc.) som överlappar denna buffert kommer att fångas upp i "
+"plottbilden."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:203
+msgid "**Limitations with polygon extrusion**"
+msgstr "**Begränsningar med polygonextrudering**"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:205
+msgid ""
+"Geometry extrusion can be set in the |elevationscale| :guilabel:`Elevation` "
+"properties of a layer, and rendered in the profile view. When tolerance is "
+"enabled, it is however not trivial to render extruded polygons, thus, for "
+"now, polygon extrusion is ignored."
+msgstr ""
+"Geometriextrudering kan ställas in i egenskaperna |elevationscale| "
+":guilabel:`Elevation` för ett lager och återges i profilvyn. När toleransen "
+"är aktiverad är det dock inte trivialt att rendera extruderade polygoner, så"
+" för närvarande ignoreras polygonextrudering."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:333
 msgid "elevationscale"
 msgstr "elevationscale"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:212
+msgid "Interacting with the profile Views"
+msgstr "Interagera med profilen Vyer"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:214
+msgid ""
+"When an elevation profile line is created, the plot canvas zooms to its full"
+" extent. On the X-axis you can see the length of the profile and, on the "
+"Y-axis the height range between minimum and maximum height captured, both in"
+" map units."
+msgstr ""
+"När en höjdprofillinje skapas zoomas plottytan ut till sin fulla "
+"utsträckning. På X-axeln kan du se profilens längd och på Y-axeln "
+"höjdintervallet mellan lägsta och högsta höjd som registrerats, båda i "
+"kartenheter."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:218
+msgid ""
+"When you move the mouse pointer in the elevation profile view, you will see "
+"two crossing dot lines:"
+msgstr ""
+"När du flyttar muspekaren i höjdprofilvyn ser du två korsande punktlinjer:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:220
+msgid "the vertical line shows the height information"
+msgstr "den vertikala linjen visar höjdinformationen"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:221
+msgid ""
+"the horizontal line shows the distance from the beginning of the elevation "
+"profile Line"
+msgstr ""
+"den horisontella linjen visar avståndet från början av höjdprofilen Line"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:223
+msgid ""
+"When you move the mouse pointer in the elevation profile canvas, you can "
+"also see a black dot move along the elevation profile line on the main map "
+"canvas. At the middle of the profile line, an arrow indicates its direction."
+msgstr ""
+"När du flyttar muspekaren i höjdprofilen kan du också se en svart punkt röra"
+" sig längs höjdprofillinjen på huvudkartan. I mitten av profillinjen finns "
+"en pil som anger dess riktning."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:227
+msgid ""
+"As for the main map canvas, QGIS provides means to navigate on the plot "
+"canvas:"
+msgstr ""
+"Precis som för huvudkartan tillhandahåller QGIS medel för att navigera på "
+"plotkartan:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:229
+msgid ""
+"|pan| :sup:`Pan` is used to move the elevation profile extent in any "
+"direction you want. Holding :kbd:`Space` key while moving the mouse also "
+"shifts the plot canvas extent."
+msgstr ""
+"|pan| :sup:`Pan` används för att flytta höjdprofilens utsträckning i vilken "
+"riktning du vill. Om du håller ned :kbd:`Space` samtidigt som du flyttar "
+"musen flyttas också plottytans omfattning."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:231
+msgid ""
+"|zoomInXAxis| :sup:`Zoom X Axis` is used to zoom in along the horizontal "
+"axis, keeping the ratio of the vertical axis (the elevation) the same. Left "
+"click to stretch out the plot along the X axis, with the clicked point at "
+"the center of the axis, or drag a rectangle to stretch out the plot along "
+"the X axis to the rectangle width. Hold :kbd:`Alt` while using |zoomInXAxis|"
+" :sup:`Zoom X Axis` to zoom out along that axis."
+msgstr ""
+"|zoomInXAxis| :sup:`Zoom X Axis` används för att zooma in längs den "
+"horisontella axeln, samtidigt som förhållandet för den vertikala axeln "
+"(höjden) förblir detsamma. Vänsterklicka för att sträcka ut plotten längs "
+"X-axeln, med den klickade punkten i mitten av axeln, eller dra en rektangel "
+"för att sträcka ut plotten längs X-axeln till rektangelns bredd. Håll inne "
+":kbd:`Alt` medan du använder |zoomInXAxis| :sup:`Zoom X Axis` för att zooma "
+"ut längs den axeln."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:236
+msgid ""
+"|zoomIn| :sup:`Zoom` is used to zoom in on a certain point (using left "
+"click), or to a certain extent (dragging a rectangle on the area). Hold "
+":kbd:`Alt` while using |zoomIn| :sup:`Zoom` to instead zoom out. In "
+"combination with the :kbd:`Ctrl` key you can zoom in or out more smoothly."
+msgstr ""
+"|zoomIn| :sup:`Zoom` används för att zooma in på en viss punkt (med "
+"vänsterklick) eller till en viss utsträckning (genom att dra en rektangel "
+"över området). Håll in :kbd:`Alt` medan du använder |zoomIn| :sup:`Zoom` för"
+" att istället zooma ut. I kombination med :kbd:`Ctrl` kan du zooma in eller "
+"ut på ett smidigare sätt."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:240
+msgid ""
+"|zoomFullExtent| :sup:`Zoom Full` is the default zoom level used at the "
+"beginning and shows the full extent of the profile line, with all returned "
+"features. Use it to reset the zoom level."
+msgstr ""
+"|zoomFullExtent| :sup:`Zoom Full` är den standardzoomnivå som används i "
+"början och visar profillinjens hela utsträckning, med alla återgivna "
+"funktioner. Använd den för att återställa zoomnivån."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:244
+msgid ""
+"It is also possible to interact with the elements displayed in the plot "
+"canvas:"
+msgstr ""
+"Det är också möjligt att interagera med de element som visas i plotcanvasen:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:246
+msgid ""
+"Press |snapping| :sup:`Enable snapping` button to accurately catch points, "
+"vertices or edges of the features, for an accurate measurement or "
+"coordinates report."
+msgstr ""
+"Tryck på knappen |snapping| :sup:`Enable snapping` för att exakt fånga "
+"punkter, toppar eller kanter på objekten, för en exakt mätning eller "
+"koordinatrapport."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:248
+msgid ""
+"|identify| :sup:`Identify Features` is used to identify features of the "
+"visible layers in the layer tree. You can drag a rectangle across several "
+"features in the profile view to query all of them. When compatible with the "
+"format (e.g. vector, point cloud), these features will be highlighted in the"
+" main map canvas."
+msgstr ""
+"|identify| :sup:`Identify Features` används för att identifiera funktioner i"
+" de synliga lagren i lagerträdet. Du kan dra en rektangel över flera "
+"funktioner i profilvyn för att söka efter dem alla. När formatet är "
+"kompatibelt (t.ex. vektor, punktmoln) kommer dessa funktioner att markeras i"
+" huvudkartan."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:251
+msgid ""
+"|measure| :sup:`Measurement Distances`: click or select two points in the "
+"plot canvas to report the horizontal :guilabel:`Distance`, the "
+":guilabel:`Elevation` and the :guilabel:`Total distance` between them, in "
+"map units."
+msgstr ""
+"|measure| :sup:`Measurement Distances`: klicka på eller välj två punkter i "
+"plottytan för att rapportera det horisontella :guilabel:`Distance`, "
+":guilabel:`Elevation` och :guilabel:`Total distance` mellan dem, i "
+"kartenheter."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:254
+msgid ""
+"|arrowLeft| :sup:`Nudge Left` and |arrowRight| :sup:`Nudge right` are used "
+"to shift the position of the elevation profile line in the map canvas to its"
+" left or right. The plot canvas will be redrawn, showing features and "
+"terrain overlapping the profile line buffer. The line is moved sideways "
+"using the :guilabel:`Tolerance` value in |options| :sup:`Options` menu."
+msgstr ""
+"|arrowLeft| :sup:`Nudge Left` och |arrowRight| :sup:`Nudge right` används "
+"för att flytta höjdprofillinjens position i kartbilden till vänster eller "
+"höger. Kartbilden ritas om och visar funktioner och terräng som överlappar "
+"profillinjens buffert. Linjen flyttas i sidled med hjälp av värdet "
+":guilabel:`Tolerance` i menyn |options| :sup:`Options`."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:259
+msgid ""
+"Closing an elevation profile view or the project currently removes the view "
+"from the project."
+msgstr ""
+"Om du stänger en höjdprofilvy eller projektet tas vyn bort från projektet."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:261
+msgid ""
+"For more details, give a look to `QGIS elevation profile/cross section tool "
+"-- a deep dive! <https://www.youtube.com/watch?v=AknJjNPystU>`_, a "
+"presentation done by Nyall Dawson."
+msgstr ""
+"För mer information, ta en titt på `QGIS elevation profile/cross section "
+"tool -- a deep dive! <https://www.youtube.com/watch?v=AknJjNPystU>`_, en "
+"presentation gjord av Nyall Dawson."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:271
+msgid "Exporting from the elevation profile"
+msgstr "Exportera från höjdprofilen"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:273
+msgid ""
+"The top toolbar of the :guilabel:`Elevation profile` dialog provides a "
+"variety of tools to export an elevation profile, allowing you to reuse the "
+"plots in another software:"
+msgstr ""
+"I det övre verktygsfältet i dialogrutan :guilabel:`Elevation profile` finns "
+"en mängd olika verktyg för att exportera en höjdprofil, så att du kan "
+"återanvända plottarna i en annan programvara:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:276
+msgid ""
+"|saveAsPDF| :sup:`Export As PDF`: Exports plots to PDF (as high quality "
+"vector objects). Following options are requested for generating the output "
+"file:"
+msgstr ""
+"|saveAsPDF| :sup:`Exportera som PDF`: Exporterar plottar till PDF (som "
+"högkvalitativa vektorobjekt). Följande alternativ begärs för att generera "
+"utdatafilen:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:279
+msgid ""
+"The :guilabel:`Page size`, selecting a page from a predefined list or "
+"setting custom dimensions, and the page orientation"
+msgstr ""
+":guilabel:`Sidstorlek`, välja en sida från en fördefinierad lista eller ange"
+" egna mått och sidans orientering"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:281
+msgid ""
+"The :guilabel:`Chart ranges` to control the extent of the chart to export:"
+msgstr ""
+":guilabel:`Chart ranges` för att styra omfattningen av det diagram som ska "
+"exporteras:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:283
+msgid ""
+"on the X axis, the :guilabel:`Minimum distance` and :guilabel:`Maximum "
+"distance` from the profile curve starting point"
+msgstr ""
+"på X-axeln, :guilabel:`Minimum distance` och :guilabel:`Maximum distance` "
+"från profilkurvans startpunkt"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:285
+msgid ""
+"On the Y axis, the :guilabel:`Minimum elevation` and :guilabel:`Maximum "
+"elevation`"
+msgstr "På Y-axeln visas :guilabel:`Minsta höjd` och :guilabel:`Maxsta höjd`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:286
+msgid ""
+"The :guilabel:`Distance axis settings`: helps you configure the horizontal "
+"graduation of the grid over which the elevation profile is rendered. You can"
+" customize the :guilabel:`Label interval`, the :guilabel:`Major grid line "
+"interval` and the :guilabel:`Minor grid line interval`."
+msgstr ""
+"Med :guilabel:`Distance axis settings`: kan du konfigurera den horisontella "
+"graderingen av det rutnät som höjdprofilen återges över. Du kan anpassa "
+":guilabel:`Label interval`, :guilabel:`Major grid line interval` och "
+":guilabel:`Minor grid line interval`."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:290
+msgid ""
+"The :guilabel:`Elevation axis settings`, same as above, for vertical "
+"graduation"
+msgstr ""
+"Inställningarna för :guilabel:`Elevation axis`, samma som ovan, för vertikal"
+" gradering"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:294
+msgid ""
+"|saveMapAsImage| :sup:`Export As Image`: Exports plots to an image file "
+"format. Specific :guilabel:`Export options` such as the :guilabel:`Image "
+"width` and :guilabel:`Image height` are requested, along with the "
+":guilabel:`Chart ranges`, :guilabel:`Distance axis settings` and "
+":guilabel:`Elevation axis settings` previously mentioned."
+msgstr ""
+"|saveMapAsImage| :sup:`Exportera som bild`: Exporterar plottar till ett "
+"bildfilsformat. Specifika :guilabel:`Exportalternativ` såsom "
+":guilabel:`Bildbredd` och :guilabel:`Bildhöjd` begärs, tillsammans med "
+":guilabel:`Kartområden`, :guilabel:`Inställningar för avståndsaxel` och "
+":guilabel:`Inställningar för höjdaxel` som tidigare nämnts."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:299
+msgid ""
+"|fileSaveAs| :sup:`Export results`: Exports the profile results as a set of "
+"features of a vector layer (:file:`.DXF`, :file:`.CSV`, :file:`.SHP`, "
+":file:`.GPKG`, ...). Depending on the output format, multiple layers may be "
+"returned when the geometry types of exported features differ."
+msgstr ""
+"|fileSaveAs| :sup:`Exportera resultat`: Exporterar profilresultaten som en "
+"uppsättning funktioner i ett vektorlager (:file:`.DXF`, :file:`.CSV`, "
+":file:`.SHP`, :file:`.GPKG`, ...). Beroende på utdataformat kan flera lager "
+"returneras när geometrityperna för exporterade funktioner skiljer sig åt."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:304
+msgid ""
+":menuselection:`Export 3D features`: Exports profile lines as 3D features, "
+"with elevation values taken from the elevation slices and stored in exported"
+" geometry Z values."
+msgstr ""
+":menuselection:`Exportera 3D-funktioner`: Exporterar profillinjer som "
+"3D-funktioner, med höjdvärden som hämtas från höjdskivorna och lagras i den "
+"exporterade geometrins Z-värden."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:306
+msgid ""
+":menuselection:`Export 2D profile`: Exports profiles as 2D profile lines, "
+"with elevation stored in exported geometry Y dimension and distance in X "
+"dimension (as shown in the elevation profile widget)."
+msgstr ""
+":menuselection:`Exportera 2D-profil`: Exporterar profiler som "
+"2D-profilinjer, med höjd lagrad i den exporterade geometrins Y-dimension och"
+" avstånd i X-dimension (som visas i höjdprofilwidgeten)."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:309
+msgid ""
+":menuselection:`Export distance/elevation table`: Exports profiles as a "
+"table of sampled distance vs elevation values."
+msgstr ""
+":menuselection:`Exportera tabell för avstånd/höjd`: Exporterar profiler som "
+"en tabell med samplade värden för avstånd och höjd."
