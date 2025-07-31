@@ -7,6 +7,7 @@
 # Translators:
 # Transifex Bot <>, 2025
 # Harrissou Sant-anna, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-15 08:52+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,19 +25,125 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/processing/modeler.rst:4
+msgid "The model designer"
+msgstr "Modellkonstruktören"
+
+#: ../../docs/user_manual/processing/modeler.rst:11
+msgid ""
+"The *model designer* allows you to create complex models using a simple and "
+"easy-to-use interface. When working with a GIS, most analysis operations are"
+" not isolated, rather part of a chain of operations. Using the model "
+"designer, that chain of operations can be wrapped into a single process, "
+"making it convenient to execute later with a different set of inputs. No "
+"matter how many steps and different algorithms it involves, a model is "
+"executed as a single algorithm, saving time and effort."
+msgstr ""
+"Med *model designer* kan du skapa komplexa modeller med hjälp av ett enkelt "
+"och lättanvänt gränssnitt. När man arbetar med ett GIS är de flesta "
+"analysoperationer inte isolerade, utan ingår i en kedja av operationer. Med "
+"hjälp av modelldesignern kan denna kedja av operationer förpackas i en enda "
+"process, vilket gör det bekvämt att köra senare med en annan uppsättning "
+"ingångar. Oavsett hur många steg och olika algoritmer det handlar om körs en"
+" modell som en enda algoritm, vilket sparar tid och ansträngning."
+
+#: ../../docs/user_manual/processing/modeler.rst:21
+msgid ""
+"The model designer can be opened from the Processing menu "
+"(:menuselection:`Processing --> Model Designer`)."
+msgstr ""
+"Modellkonstruktören kan öppnas från bearbetningsmenyn (:menyval:`Bearbetning"
+" --> Modellkonstruktör`)."
+
+#: ../../docs/user_manual/processing/modeler.rst:25
+msgid "The model designer interface"
+msgstr "Gränssnittet för modellkonstruktören"
+
+#: ../../docs/user_manual/processing/modeler.rst:32
+msgid "Model designer"
+msgstr "Modelldesigner"
+
+#: ../../docs/user_manual/processing/modeler.rst:34
+msgid ""
+"In its main part, the modeler has a working canvas where the structure of "
+"the model and the workflow it represents can be constructed."
+msgstr ""
+"I huvudsak har modelleraren en arbetsyta där modellens struktur och det "
+"arbetsflöde som den representerar kan konstrueras."
+
+#: ../../docs/user_manual/processing/modeler.rst:37
+msgid ""
+"At the top of the dialog, different menus and the :guilabel:`Navigation` "
+"toolbar give access to a variety of tools."
+msgstr ""
+"Längst upp i dialogrutan finns olika menyer och verktygsfältet "
+":guilabel:`Navigation` som ger tillgång till en mängd olika verktyg."
+
+#: ../../docs/user_manual/processing/modeler.rst:41
+msgid "Model menu"
+msgstr "Meny för modell"
+
+#: ../../docs/user_manual/processing/modeler.rst:47
+#: ../../docs/user_manual/processing/modeler.rst:122
+#: ../../docs/user_manual/processing/modeler.rst:173
+msgid "Label"
+msgstr "Etikett"
+
+#: ../../docs/user_manual/processing/modeler.rst:48
+#: ../../docs/user_manual/processing/modeler.rst:123
+#: ../../docs/user_manual/processing/modeler.rst:174
+msgid "Shortcut"
+msgstr "Genväg"
+
+#: ../../docs/user_manual/processing/modeler.rst:49
+#: ../../docs/user_manual/processing/modeler.rst:124
+#: ../../docs/user_manual/processing/modeler.rst:175
+msgid "Navigation Toolbar"
+msgstr "Verktygsfält för navigering"
+
 #: ../../docs/user_manual/processing/modeler.rst:50
 #: ../../docs/user_manual/processing/modeler.rst:125
 #: ../../docs/user_manual/processing/modeler.rst:176
 msgid "Description"
 msgstr "Beskrivning"
 
+#: ../../docs/user_manual/processing/modeler.rst:51
+msgid "|success| :guilabel:`Validate Model`"
+msgstr "|success| :guilabel:`Validera modell`"
+
 #: ../../docs/user_manual/processing/modeler.rst:738
 msgid "success"
 msgstr "success"
 
+#: ../../docs/user_manual/processing/modeler.rst:54
+msgid ""
+"Checks whether the algorithms and inputs used in the model exist. Convenient"
+" before releasing a model."
+msgstr ""
+"Kontrollerar om de algoritmer och indata som används i modellen finns. "
+"Praktiskt innan du släpper en modell."
+
+#: ../../docs/user_manual/processing/modeler.rst:56
+msgid "|play| :guilabel:`Run Model...`"
+msgstr "|play| :guilabel:`Kör modell...`"
+
 #: ../../docs/user_manual/processing/modeler.rst:710
 msgid "play"
 msgstr "play"
+
+#: ../../docs/user_manual/processing/modeler.rst:57
+msgid ":kbd:`F5`"
+msgstr ":kbd:`F5`"
 
 #: ../../docs/user_manual/processing/modeler.rst:58
 #: ../../docs/user_manual/processing/modeler.rst:75
@@ -59,126 +166,1440 @@ msgstr "|checkbox|"
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/processing/modeler.rst:59
+msgid "Executes the model"
+msgstr "Exekverar modellen"
+
+#: ../../docs/user_manual/processing/modeler.rst:60
+msgid "|runSelected| :guilabel:`Run Selected Steps...`"
+msgstr "|runSelected| :guilabel:`Kör valda steg...`"
+
+#: ../../docs/user_manual/processing/modeler.rst:720
+msgid "runSelected"
+msgstr "runSelected"
+
+#: ../../docs/user_manual/processing/modeler.rst:61
+msgid ":kbd:`Shift+F5`"
+msgstr ":kbd:`Shift+F5`"
+
+#: ../../docs/user_manual/processing/modeler.rst:63
+msgid ""
+"Runs only the selected steps in a model, allowing to run a subset of the "
+"model"
+msgstr ""
+"Kör endast de valda stegen i en modell, vilket gör det möjligt att köra en "
+"delmängd av modellen"
+
+#: ../../docs/user_manual/processing/modeler.rst:64
+msgid ":guilabel:`Reorder Model Inputs...`"
+msgstr ":guilabel:`Ombeställ modellens indata...`"
+
+#: ../../docs/user_manual/processing/modeler.rst:67
+msgid ""
+"Sets the order in which inputs are presented to the user in the algorithm "
+"dialog."
+msgstr ""
+"Anger i vilken ordning indata ska presenteras för användaren i "
+"algoritmdialogen."
+
+#: ../../docs/user_manual/processing/modeler.rst:68
+msgid ":guilabel:`Reorder Output Layers...`"
+msgstr ":guilabel:`Omordna utmatningsskikten...`"
+
+#: ../../docs/user_manual/processing/modeler.rst:71
+msgid ""
+"Sets a specific order which the outputs from the model must use when loading"
+" the results into a project."
+msgstr ""
+"Ställer in en specifik ordning som utdata från modellen måste använda när "
+"resultaten laddas in i ett projekt."
+
+#: ../../docs/user_manual/processing/modeler.rst:73
+msgid "|fileOpen| :guilabel:`Open Model...`"
+msgstr "|fileOpen| :guilabel:`Öppna modell...`"
+
 #: ../../docs/user_manual/processing/modeler.rst:700
 msgid "fileOpen"
 msgstr "fileOpen"
+
+#: ../../docs/user_manual/processing/modeler.rst:74
+msgid ":kbd:`Ctrl+O`"
+msgstr ":kbd:`Ctrl+O`"
+
+#: ../../docs/user_manual/processing/modeler.rst:76
+msgid "Opens a :file:`.model3` file for edit or execution"
+msgstr "Öppnar en :file:`.model3`-fil för redigering eller exekvering"
+
+#: ../../docs/user_manual/processing/modeler.rst:77
+msgid "|fileSave| :guilabel:`Save Model`"
+msgstr "|fileSave| :guilabel:`Spara modell`"
 
 #: ../../docs/user_manual/processing/modeler.rst:702
 msgid "fileSave"
 msgstr "fileSave"
 
+#: ../../docs/user_manual/processing/modeler.rst:78
+msgid ":kbd:`Ctrl+S`"
+msgstr ":kbd:`Ctrl+S`"
+
+#: ../../docs/user_manual/processing/modeler.rst:80
+msgid "Saves the model to disk as a :file:`.model3` file"
+msgstr "Sparar modellen på hårddisken som en :file:`.model3`-fil"
+
+#: ../../docs/user_manual/processing/modeler.rst:81
+msgid "|fileSaveAs| :guilabel:`Save Model as...`"
+msgstr "|fileSaveAs| :guilabel:`Spara modell som...`"
+
 #: ../../docs/user_manual/processing/modeler.rst:704
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
+
+#: ../../docs/user_manual/processing/modeler.rst:82
+msgid ":kbd:`Ctrl+Shift+S`"
+msgstr ":kbd:`Ctrl+Shift+S`"
+
+#: ../../docs/user_manual/processing/modeler.rst:84
+msgid "Saves the model to disk as a new :file:`.model3` file"
+msgstr "Sparar modellen på hårddisken som en ny :file:`.model3`-fil"
+
+#: ../../docs/user_manual/processing/modeler.rst:85
+msgid "|fileSave| :guilabel:`Save Model in project`"
+msgstr "|fileSave| :guilabel:`Spara modell i projekt`"
+
+#: ../../docs/user_manual/processing/modeler.rst:88
+msgid ""
+"Embeds the model file in the project file, making it available when sharing "
+"the project file."
+msgstr ""
+"Bäddar in modellfilen i projektfilen, så att den blir tillgänglig när du "
+"delar projektfilen."
+
+#: ../../docs/user_manual/processing/modeler.rst:89
+msgid "|helpContents| :guilabel:`Edit Model Help...`"
+msgstr "|helpContents| :guilabel:`Redigera modellhjälp...`"
 
 #: ../../docs/user_manual/processing/modeler.rst:706
 msgid "helpContents"
 msgstr "helpContents"
 
+#: ../../docs/user_manual/processing/modeler.rst:92
+msgid ""
+"An interface to document the model, the algorithms, the parameters and "
+"outputs, as well as the author and versioning"
+msgstr ""
+"Ett gränssnitt för att dokumentera modellen, algoritmerna, parametrarna och "
+"utdata, samt författare och versionshantering"
+
+#: ../../docs/user_manual/processing/modeler.rst:94
+msgid ":menuselection:`Export -->`"
+msgstr ":menyval:`Export -->`"
+
+#: ../../docs/user_manual/processing/modeler.rst:98
+msgid "|saveMapAsImage| :menuselection:`--> Export as Image...`"
+msgstr "|saveMapAsImage| :menuselection:`--> Exportera som bild...`"
+
 #: ../../docs/user_manual/processing/modeler.rst:728
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
+
+#: ../../docs/user_manual/processing/modeler.rst:101
+msgid ""
+"Saves the model's graphical design to an image file format (for illustration"
+" purpose)"
+msgstr ""
+"Sparar modellens grafiska design i ett bildfilformat (för "
+"illustrationsändamål)"
+
+#: ../../docs/user_manual/processing/modeler.rst:102
+msgid "|saveAsPDF|:menuselection:`--> Export as PDF...`"
+msgstr "|saveAsPDF|:menyerelection:`--> Exportera som PDF...`"
 
 #: ../../docs/user_manual/processing/modeler.rst:722
 msgid "saveAsPDF"
 msgstr "saveAsPDF"
 
+#: ../../docs/user_manual/processing/modeler.rst:105
+msgid ""
+"Saves the model's graphical design to a :file:`PDF` file format (for "
+"illustration purpose)"
+msgstr ""
+"Sparar modellens grafiska design till filformatet :file:`PDF` (för "
+"illustrationsändamål)"
+
+#: ../../docs/user_manual/processing/modeler.rst:106
+msgid "|saveAsSVG|:menuselection:`--> Export as SVG...`"
+msgstr "|saveAsSVG|:menyval:`--> Exportera som SVG...`"
+
 #: ../../docs/user_manual/processing/modeler.rst:726
 msgid "saveAsSVG"
 msgstr "saveAsSVG"
+
+#: ../../docs/user_manual/processing/modeler.rst:109
+msgid ""
+"Saves the model's graphical design to an :file:`SVG` file format (for "
+"illustration purpose)"
+msgstr ""
+"Sparar modellens grafiska design i filformatet :file:`SVG` (för "
+"illustrationsändamål)"
+
+#: ../../docs/user_manual/processing/modeler.rst:110
+msgid "|fileSave|:menuselection:`--> Export as Script Algorithm...`"
+msgstr "|fileSave|:menyerelection:`--> Exportera som skriptalgoritm...`"
+
+#: ../../docs/user_manual/processing/modeler.rst:113
+msgid "Generates a python script file including the model's instructions"
+msgstr "Genererar en pythonskriptfil med instruktioner för modellen"
+
+#: ../../docs/user_manual/processing/modeler.rst:116
+msgid "Edit menu"
+msgstr "Redigera meny"
+
+#: ../../docs/user_manual/processing/modeler.rst:126
+msgid "|selectAll| :guilabel:`Select All`"
+msgstr "|selectAll| :guilabel:`Välj alla`"
 
 #: ../../docs/user_manual/processing/modeler.rst:732
 msgid "selectAll"
 msgstr "selectAll"
 
+#: ../../docs/user_manual/processing/modeler.rst:127
+msgid ":kbd:`Ctrl+A`"
+msgstr ":kbd:`Ctrl+A`"
+
+#: ../../docs/user_manual/processing/modeler.rst:129
+msgid "Selects all the model components in the designer"
+msgstr "Markerar alla modellkomponenter i designern"
+
+#: ../../docs/user_manual/processing/modeler.rst:130
+msgid ":guilabel:`Snap selected components to Grid`"
+msgstr ":guilabel:`Snapna valda komponenter till rutnätet`"
+
+#: ../../docs/user_manual/processing/modeler.rst:133
+msgid "snaps and aligns the elements into a grid"
+msgstr "snäpper och riktar in elementen i ett rutnät"
+
+#: ../../docs/user_manual/processing/modeler.rst:134
+msgid "|redo| :guilabel:`Redo`"
+msgstr "|redo| :guilabel:`Redo`"
+
 #: ../../docs/user_manual/processing/modeler.rst:718
 msgid "redo"
 msgstr "redo"
+
+#: ../../docs/user_manual/processing/modeler.rst:135
+msgid ":kbd:`Ctrl+Y`"
+msgstr ":kbd:`Ctrl+Y`"
+
+#: ../../docs/user_manual/processing/modeler.rst:137
+msgid ""
+"Rollback the latest canceled action. See also the :guilabel:`Undo/Redo` "
+"panel."
+msgstr ""
+"Återställer den senast avbrutna åtgärden. Se även panelen "
+":guilabel:`Undo/Redo`."
+
+#: ../../docs/user_manual/processing/modeler.rst:138
+msgid "|undo| :guilabel:`Undo`"
+msgstr "|undo| :guilabel:`Undo`"
 
 #: ../../docs/user_manual/processing/modeler.rst:742
 msgid "undo"
 msgstr "undo"
 
+#: ../../docs/user_manual/processing/modeler.rst:139
+msgid ":kbd:`Ctrl+Z`"
+msgstr ":kbd:`Ctrl+Z`"
+
+#: ../../docs/user_manual/processing/modeler.rst:141
+msgid "Cancel the previous change. See also the :guilabel:`Undo/Redo` panel."
+msgstr ""
+"Avbryt den föregående ändringen. Se även panelen :guilabel:`Undo/Redo`."
+
+#: ../../docs/user_manual/processing/modeler.rst:142
+msgid "|editCut| :guilabel:`Cut`"
+msgstr "|editCut| :guilabel:`Cut`"
+
 #: ../../docs/user_manual/processing/modeler.rst:690
 msgid "editCut"
 msgstr "editCut"
+
+#: ../../docs/user_manual/processing/modeler.rst:143
+msgid ":kbd:`Ctrl+X`"
+msgstr ":kbd:`Ctrl+X`"
+
+#: ../../docs/user_manual/processing/modeler.rst:145
+msgid "Cuts a selection of components from the model."
+msgstr "Skär ut ett urval av komponenter från modellen."
+
+#: ../../docs/user_manual/processing/modeler.rst:146
+msgid "|editCopy| :guilabel:`Copy`"
+msgstr "|editCopy| :guilabel:`Copy`"
 
 #: ../../docs/user_manual/processing/modeler.rst:688
 msgid "editCopy"
 msgstr "editCopy"
 
+#: ../../docs/user_manual/processing/modeler.rst:147
+msgid ":kbd:`Ctrl+C`"
+msgstr ":kbd:`Ctrl+C`"
+
+#: ../../docs/user_manual/processing/modeler.rst:149
+msgid "Copies a selection of components from the model."
+msgstr "Kopierar ett urval av komponenter från modellen."
+
+#: ../../docs/user_manual/processing/modeler.rst:150
+msgid "|editPaste| :guilabel:`Paste`"
+msgstr "|editPaste| :guilabel:`Paste`"
+
 #: ../../docs/user_manual/processing/modeler.rst:694
 msgid "editPaste"
 msgstr "editPaste"
+
+#: ../../docs/user_manual/processing/modeler.rst:151
+msgid ":kbd:`Ctrl+V`"
+msgstr ":kbd:`Ctrl+V`"
+
+#: ../../docs/user_manual/processing/modeler.rst:153
+msgid ""
+"Pastes a cut or copied selection of components from a model to another or "
+"within the same model. The selected components keep their original "
+"properties and comments."
+msgstr ""
+"Klistrar in ett utskuret eller kopierat urval av komponenter från en modell "
+"till en annan eller inom samma modell. De valda komponenterna behåller sina "
+"ursprungliga egenskaper och kommentarer."
+
+#: ../../docs/user_manual/processing/modeler.rst:156
+msgid "|deleteSelected| :guilabel:`Delete selected components`"
+msgstr "|deleteSelected| :guilabel:`Radera valda komponenter`"
 
 #: ../../docs/user_manual/processing/modeler.rst:686
 msgid "deleteSelected"
 msgstr "deleteSelected"
 
+#: ../../docs/user_manual/processing/modeler.rst:157
+msgid ":kbd:`Del`"
+msgstr ":kbd:`Del`"
+
+#: ../../docs/user_manual/processing/modeler.rst:159
+msgid "Removes a component from the model."
+msgstr "Tar bort en komponent från modellen."
+
+#: ../../docs/user_manual/processing/modeler.rst:160
+msgid ":guilabel:`Add Group Box`"
+msgstr ":guilabel:`Add Group Box`"
+
+#: ../../docs/user_manual/processing/modeler.rst:163
+msgid ""
+"Adds a box at the background of related components in order to visually "
+"group them. Particularly useful in big models to keep the workflow clean."
+msgstr ""
+"Lägger till en ruta i bakgrunden på relaterade komponenter för att gruppera "
+"dem visuellt. Särskilt användbart i stora modeller för att hålla "
+"arbetsflödet rent."
+
+#: ../../docs/user_manual/processing/modeler.rst:167
+msgid "View menu"
+msgstr "Visa meny"
+
+#: ../../docs/user_manual/processing/modeler.rst:177
+msgid ":menuselection:`Zoom To -->`"
+msgstr ":menyselection:`Zoom To -->`"
+
+#: ../../docs/user_manual/processing/modeler.rst:180
+msgid "Zooms to the selected group box extent"
+msgstr "Zoomar till den valda gruppboxens omfattning"
+
+#: ../../docs/user_manual/processing/modeler.rst:181
+msgid "|zoomIn| :guilabel:`Zoom In`"
+msgstr "|zoomIn| :guilabel:`Zoom In`"
+
 #: ../../docs/user_manual/processing/modeler.rst:748
 msgid "zoomIn"
 msgstr "zoomIn"
+
+#: ../../docs/user_manual/processing/modeler.rst:182
+msgid ":kbd:`Ctrl++`"
+msgstr ":kbd:`Ctrl++`"
+
+#: ../../docs/user_manual/processing/modeler.rst:185
+msgid "|zoomOut| :guilabel:`Zoom Out`"
+msgstr "|zoomOut| :guilabel:`Zoom Out`"
 
 #: ../../docs/user_manual/processing/modeler.rst:750
 msgid "zoomOut"
 msgstr "zoomOut"
 
+#: ../../docs/user_manual/processing/modeler.rst:186
+msgid ":kbd:`Ctrl+-`"
+msgstr ":kbd:`Ctrl+-`"
+
+#: ../../docs/user_manual/processing/modeler.rst:189
+msgid "|zoomActual| :guilabel:`Zoom to 100%`"
+msgstr "|zoomActual| :guilabel:`Zoom till 100%`"
+
 #: ../../docs/user_manual/processing/modeler.rst:744
 msgid "zoomActual"
 msgstr "zoomActual"
+
+#: ../../docs/user_manual/processing/modeler.rst:190
+msgid ":kbd:`Ctrl+1`"
+msgstr ":kbd:`Ctrl+1`"
+
+#: ../../docs/user_manual/processing/modeler.rst:193
+msgid "|zoomFullExtent| :guilabel:`Zoom Full`"
+msgstr "|zoomFullExtent| :guilabel:`Zoom Full`"
 
 #: ../../docs/user_manual/processing/modeler.rst:746
 msgid "zoomFullExtent"
 msgstr "zoomFullExtent"
 
+#: ../../docs/user_manual/processing/modeler.rst:194
+msgid ":kbd:`Ctrl+0`"
+msgstr ":kbd:`Ctrl+0`"
+
+#: ../../docs/user_manual/processing/modeler.rst:196
+msgid "Displays all the components in the designer current canvas"
+msgstr "Visar alla komponenter i designerns aktuella arbetsyta"
+
+#: ../../docs/user_manual/processing/modeler.rst:197
+msgid "|checkbox| :guilabel:`Show Comments`"
+msgstr "|checkbox| :guilabel:`Visa kommentarer`"
+
+#: ../../docs/user_manual/processing/modeler.rst:200
+msgid ""
+"Displays comments associated to every algorithm or input in the model "
+"designer"
+msgstr ""
+"Visar kommentarer som är kopplade till varje algoritm eller indata i "
+"modellkonstruktören"
+
+#: ../../docs/user_manual/processing/modeler.rst:201
+msgid "|unchecked| :guilabel:`Enable Snapping`"
+msgstr "|ej markerad| :guilabel:`Aktivera Snapping`"
+
 #: ../../docs/user_manual/processing/modeler.rst:740
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/user_manual/processing/modeler.rst:205
+msgid "|unchecked| :guilabel:`Toggle Panel Visibility`"
+msgstr "|ej markerad| :guilabel:`Toggle Panel Visibility`"
+
+#: ../../docs/user_manual/processing/modeler.rst:206
+msgid ":kbd:`Ctrl+Tab`"
+msgstr ":kbd:`Ctrl+Tab`"
+
+#: ../../docs/user_manual/processing/modeler.rst:208
+msgid "Switches ON or OFF the :ref:`panels <modelerpanels>` in the designer"
+msgstr "Slår på eller av :ref:``paneler <modelerpanels>`` i designern"
+
+#: ../../docs/user_manual/processing/modeler.rst:214
+msgid "Panels"
+msgstr "Paneler"
+
+#: ../../docs/user_manual/processing/modeler.rst:216
+msgid ""
+"The left part of the window is a section with five panels that can be used "
+"to add new elements to the model:"
+msgstr ""
+"Den vänstra delen av fönstret är en sektion med fem paneler som kan användas"
+" för att lägga till nya element i modellen:"
+
+#: ../../docs/user_manual/processing/modeler.rst:219
+msgid ""
+":guilabel:`Model Properties`: specify the name (required) of the model and "
+"the group in which it will be displayed in the :ref:`Processing Toolbox "
+"<processing.toolbox>`"
+msgstr ""
+":guilabel:`Model Properties`: ange namnet (obligatoriskt) på modellen och i "
+"vilken grupp den ska visas i :ref:`Processing Toolbox <processing.toolbox>`"
+
+#: ../../docs/user_manual/processing/modeler.rst:221
+msgid ""
+":guilabel:`Inputs`: all the :ref:`input parameters <processing_inputs>` that"
+" could shape your model"
+msgstr ""
+":guilabel:`Input`: alla :ref:`inputparametrar <processing_inputs>` som kan "
+"forma din modell"
+
+#: ../../docs/user_manual/processing/modeler.rst:223
+msgid ""
+":guilabel:`Algorithms`: the available :ref:`Processing algorithms "
+"<processing_algs>`"
+msgstr ""
+":guilabel:`Algoritmer`: tillgängliga :ref:`Processing-algoritmer "
+"<processing_algs>`"
+
+#: ../../docs/user_manual/processing/modeler.rst:224
+msgid ""
+":guilabel:`Variables`: Models can contain dedicated :ref:`variables "
+"<general_tools_variables>` that are unique and only available to them. These"
+" variables can be accessed by any expression used within the model. They are"
+" useful to control algorithms within a model and control multiple aspects of"
+" the model by changing a single variable. The variables can be viewed and "
+"modified in the :guilabel:`Variables` panel."
+msgstr ""
+":guilabel:`Variabler`: Modeller kan innehålla dedikerade :ref:`variabler "
+"<general_tools_variables>` som är unika och endast tillgängliga för dem. "
+"Dessa variabler kan nås av alla uttryck som används i modellen. De är "
+"användbara för att styra algoritmer inom en modell och styra flera aspekter "
+"av modellen genom att ändra en enda variabel. Variablerna kan visas och "
+"ändras i panelen :guilabel:`Variables`."
+
+#: ../../docs/user_manual/processing/modeler.rst:230
+msgid ""
+":guilabel:`Undo History`: this panel will register everything that happens "
+"in the modeler, making it easy to cancel things you did wrong."
+msgstr ""
+":guilabel:`Undo History`: den här panelen registrerar allt som händer i "
+"modelleraren, vilket gör det enkelt att avbryta saker du gjort fel."
+
+#: ../../docs/user_manual/processing/modeler.rst:234
+msgid "About available algorithms"
+msgstr "Om tillgängliga algoritmer"
+
+#: ../../docs/user_manual/processing/modeler.rst:236
+msgid ""
+"Some algorithms that can be executed from the toolbox do not appear in the "
+"list of available algorithms when you are designing a model. To be included "
+"in a model, an algorithm must have the correct semantic. If an algorithm "
+"does not have such a well-defined semantic (for instance, if the number of "
+"output layers cannot be known in advance), then it is not possible to use it"
+" within a model, and it will not appear in the list of algorithms that you "
+"can find in the modeler dialog. On the other hand some algorithms are "
+"specific to the modeler. Those algorithms are located within the group "
+"'Modeler Tools'."
+msgstr ""
+"Vissa algoritmer som kan köras från verktygslådan visas inte i listan över "
+"tillgängliga algoritmer när du utformar en modell. För att en algoritm ska "
+"kunna ingå i en modell måste den ha rätt semantik. Om en algoritm inte har "
+"en sådan väldefinierad semantik (t.ex. om antalet utmatningslager inte är "
+"känt i förväg) går det inte att använda den i en modell och den visas inte i"
+" listan över algoritmer som du hittar i dialogrutan för modellering. Å andra"
+" sidan är vissa algoritmer specifika för modelleraren. Dessa algoritmer "
+"finns i gruppen \"Modelleringsverktyg\"."
+
+#: ../../docs/user_manual/processing/modeler.rst:249
+msgid "Creating a model"
+msgstr "Skapa en modell"
+
+#: ../../docs/user_manual/processing/modeler.rst:251
+msgid "Creating a model involves two basic steps:"
+msgstr "Att skapa en modell innebär två grundläggande steg:"
+
+#: ../../docs/user_manual/processing/modeler.rst:253
+msgid ""
+"*Definition of necessary inputs*. These inputs will be added to the "
+"parameters window, so the user can set their values when executing the "
+"model. The model itself is an algorithm, so the parameters window is "
+"generated automatically as for all algorithms available in the Processing "
+"framework."
+msgstr ""
+"*Definition av nödvändiga indata*. Dessa indata kommer att läggas till i "
+"parameterfönstret, så att användaren kan ställa in deras värden när modellen"
+" körs. Modellen i sig är en algoritm, så parameterfönstret genereras "
+"automatiskt som för alla algoritmer som är tillgängliga i Processing-"
+"ramverket."
+
+#: ../../docs/user_manual/processing/modeler.rst:259
+msgid ""
+"*Definition of the workflow*. Using the input data of the model, the "
+"workflow is defined by adding algorithms and selecting how they use the "
+"defined inputs or the outputs generated by other algorithms in the model."
+msgstr ""
+"*Definition av arbetsflödet*. Med hjälp av modellens indata definieras "
+"arbetsflödet genom att lägga till algoritmer och välja hur de använder de "
+"definierade indata eller de utdata som genereras av andra algoritmer i "
+"modellen."
+
+#: ../../docs/user_manual/processing/modeler.rst:267
+msgid "Definition of inputs"
+msgstr "Definition av ingångar"
+
+#: ../../docs/user_manual/processing/modeler.rst:269
+msgid ""
+"The first step is to define the inputs for the model. They are found in the "
+":guilabel:`Inputs` panel on the left side of the modeler window. Hovering "
+"with the mouse over the inputs will show a tooltip with additional "
+"information. For a full list of available parameters in modeler and their "
+"correspondance for scripting, please read "
+":ref:`processing_algs_input_output`."
+msgstr ""
+"Det första steget är att definiera indata för modellen. De finns i "
+":guilabel:`Inputs`-panelen till vänster i modelleringsfönstret. Om du håller"
+" muspekaren över indata visas ett verktygstips med ytterligare information. "
+"För en fullständig lista över tillgängliga parametrar i modeler och deras "
+"motsvarighet för skriptning, läs :ref:`processing_algs_input_output`."
+
+#: ../../docs/user_manual/processing/modeler.rst:275
+msgid ""
+"When double-clicking on an element, a dialog is shown that lets you define "
+"its characteristics. Depending on the parameter, the dialog will contain at "
+"least one element (the description, which is what the user will see when "
+"executing the model). For example, when adding a numerical value, as can be "
+"seen in the next figure, in addition to the description of the parameter, "
+"you have to set a default value and the range of valid values."
+msgstr ""
+"När du dubbelklickar på ett element visas en dialogruta där du kan definiera"
+" dess egenskaper. Beroende på parametern innehåller dialogrutan minst ett "
+"element (beskrivningen, som är det som användaren ser när modellen körs). Om"
+" du t.ex. lägger till ett numeriskt värde, som visas i nästa figur, måste du"
+" förutom beskrivningen av parametern ange ett standardvärde och ett "
+"intervall för giltiga värden."
+
+#: ../../docs/user_manual/processing/modeler.rst:289
+msgid "Model Parameters Definition"
+msgstr "Definition av modellparametrar"
+
+#: ../../docs/user_manual/processing/modeler.rst:291
+msgid ""
+"You can define your input as mandatory for your model by checking the "
+"|checkbox| ``Mandatory`` option and by checking the |unchecked| ``Advanced``"
+" checkbox you can set the input to be within the ``Advanced`` section. This "
+"is particularly useful when the model has many parameters and some of them "
+"are not trivial, but you still want to choose them."
+msgstr ""
+"Du kan definiera dina indata som obligatoriska för din modell genom att "
+"markera alternativet |checkbox| ``Mandatory`` och genom att markera "
+"kryssrutan |unchecked| ``Advanced`` kan du ange att indata ska finnas i "
+"avsnittet ``Advanced``. Detta är särskilt användbart när modellen har många "
+"parametrar och några av dem inte är triviala, men du vill ändå välja dem."
+
+#: ../../docs/user_manual/processing/modeler.rst:297
+msgid "For each added input, a new element is added to the modeler canvas."
+msgstr ""
+"För varje ny inmatning läggs ett nytt element till i modelleringspanelen."
+
+#: ../../docs/user_manual/processing/modeler.rst:304
+msgid "Model Parameters"
+msgstr "Modell Parametrar"
+
+#: ../../docs/user_manual/processing/modeler.rst:306
+msgid ""
+"You can also add inputs by dragging the input type from the list and "
+"dropping it at the position where you want it in the modeler canvas. If you "
+"want to change a parameter of an existing input, just double click on it, "
+"and the same dialog will pop up."
+msgstr ""
+"Du kan också lägga till ingångar genom att dra ingångstypen från listan och "
+"släppa den på den plats där du vill ha den i modelleringspanelen. Om du vill"
+" ändra en parameter för en befintlig ingång dubbelklickar du bara på den, så"
+" visas samma dialogruta."
+
+#: ../../docs/user_manual/processing/modeler.rst:311
+msgid ""
+"When using a model within another model, the inputs and outputs necessary "
+"will be displayed in the canvas."
+msgstr ""
+"När du använder en modell i en annan modell visas de nödvändiga in- och "
+"utmatningarna i Canvas."
+
+#: ../../docs/user_manual/processing/modeler.rst:315
+msgid "Definition of the workflow"
+msgstr "Definition av arbetsflödet"
+
+#: ../../docs/user_manual/processing/modeler.rst:317
+msgid ""
+"In the following example we will add two inputs and two algorithms. The aim "
+"of the model is to copy the elevation values from a DEM raster layer to a "
+"line layer using the ``Drape`` algorithm,  and then calculate the total "
+"ascent of the line layer using the ``Climb Along Line`` algorithm."
+msgstr ""
+"I följande exempel lägger vi till två indata och två algoritmer. Syftet med "
+"modellen är att kopiera höjdvärdena från ett DEM-rasterlager till ett "
+"linjeskikt med hjälp av algoritmen \"Drape\" och sedan beräkna linjeskiktets"
+" totala stigning med hjälp av algoritmen \"Climb Along Line\"."
+
+#: ../../docs/user_manual/processing/modeler.rst:322
+msgid ""
+"In the :guilabel:`Inputs` tab, choose the two inputs as ``Vector Layer`` for"
+" the line and ``Raster Layer`` for the DEM. We are now ready to add the "
+"algorithms to the workflow."
+msgstr ""
+"På fliken :guilabel:`Inputs` väljer du de två indata som ``Vector Layer`` "
+"för linjen och ``Raster Layer`` för DEM. Vi är nu redo att lägga till "
+"algoritmerna i arbetsflödet."
+
+#: ../../docs/user_manual/processing/modeler.rst:326
+msgid ""
+"Algorithms can be found in the :guilabel:`Algorithms` panel, grouped much in"
+" the same way as they are in the Processing toolbox."
+msgstr ""
+"Algoritmer finns i panelen :guilabel:`Algorithms`, grupperade på ungefär "
+"samma sätt som i verktygslådan i Processing."
+
+#: ../../docs/user_manual/processing/modeler.rst:334
+msgid "Model Inputs"
+msgstr "Inmatning av modell"
+
+#: ../../docs/user_manual/processing/modeler.rst:337
+msgid ""
+"To add an algorithm to a model, double-click on its name or drag and drop "
+"it, just like for inputs. As for the inputs you can change the description "
+"of the algorithm and add a comment. When adding an algorithm, an execution "
+"dialog will appear, with a content similar to the one found in the execution"
+" panel that is shown when executing the algorithm from the toolbox. The "
+"following picture shows both the ``Drape (set Z value from raster)`` and the"
+" ``Climb along line`` algorithm dialogs."
+msgstr ""
+"För att lägga till en algoritm i en modell dubbelklickar du på dess namn "
+"eller drar och släpper den, precis som för indata. På samma sätt som för "
+"indata kan du ändra beskrivningen av algoritmen och lägga till en kommentar."
+" När du lägger till en algoritm visas en exekveringsdialog med ett innehåll "
+"som liknar det som finns i exekveringspanelen som visas när du exekverar "
+"algoritmen från verktygslådan. Följande bild visar både algoritmdialogerna "
+"``Drape (set Z value from raster)`` och ``Climb along line``."
+
+#: ../../docs/user_manual/processing/modeler.rst:349
+msgid "Model Algorithm parameters"
+msgstr "Modell Algoritm parametrar"
+
+#: ../../docs/user_manual/processing/modeler.rst:352
+msgid ""
+"As you can see, there are however some differences. Each parameter has a "
+"drop-down menu next to it allowing to control how it will be served during "
+"the workflow:"
+msgstr ""
+"Som du kan se finns det dock vissa skillnader. Varje parameter har en "
+"rullgardinsmeny bredvid sig som gör det möjligt att styra hur den ska "
+"serveras under arbetsflödet:"
+
+#: ../../docs/user_manual/processing/modeler.rst:356
+msgid ""
+"|fieldInteger| :sup:`Value`: allows you to assign a static value to the "
+"parameter. Depending on the parameter type, the widget will let you enter a "
+"number (``5.0``), a string (``mytext``), select layer(s) loaded in the QGIS "
+"project or from a folder, pick items from a list, ..."
+msgstr ""
+"|fieldInteger| :sup:`Value`: gör att du kan tilldela parametern ett statiskt"
+" värde. Beroende på parametertyp kan du i widgeten ange ett tal (``5.0``), "
+"en sträng (``mytext``), välja lager som laddats i QGIS-projektet eller från "
+"en mapp, välja objekt från en lista, ..."
 
 #: ../../docs/user_manual/processing/modeler.rst:698
 msgid "fieldInteger"
 msgstr "fieldInteger"
 
+#: ../../docs/user_manual/processing/modeler.rst:360
+msgid ""
+"|expression| :sup:`Pre-calculated Value`: opens the :ref:`Expression Builder"
+" <vector_expressions>` dialog and lets you define an expression to fill the "
+"parameter. Model inputs together with some other layer statistics are "
+"available as **variables** and are listed at the top of the Search dialog of"
+" the Expression Builder. The expression is evaluated once before the child "
+"algorithm is executed and used during the execution of that algorithm."
+msgstr ""
+"|expression| :sup:`Pre-calculated Value`: öppnar dialogrutan "
+":ref:`Expression Builder <vector_expressions>` och låter dig definiera ett "
+"uttryck för att fylla i parametern. Modellinmatningar tillsammans med viss "
+"annan lagerstatistik är tillgängliga som **variabler** och listas högst upp "
+"i dialogrutan Search i Expression Builder. Uttrycket utvärderas en gång "
+"innan den underordnade algoritmen körs och används under körningen av den "
+"algoritmen."
+
 #: ../../docs/user_manual/processing/modeler.rst:696
 msgid "expression"
 msgstr "expression"
+
+#: ../../docs/user_manual/processing/modeler.rst:366
+msgid ""
+"|processingModel| :sup:`Model Input`: allows to use an input added to the "
+"model as a parameter. Once clicked, this option will list all the suitable "
+"inputs for the parameter."
+msgstr ""
+"|processingModel| :sup:`Model Input`: gör det möjligt att använda en indata "
+"som lagts till i modellen som en parameter. När du klickar på detta "
+"alternativ visas en lista över alla lämpliga indata för parametern."
 
 #: ../../docs/user_manual/processing/modeler.rst:714
 msgid "processingModel"
 msgstr "processingModel"
 
+#: ../../docs/user_manual/processing/modeler.rst:368
+msgid ""
+"|processingAlgorithm| :sup:`Algorithm Output`: allows to use the output of "
+"another algorithm as an input of the current algorithm. As of model inputs, "
+"this option will list all the suitable inputs for the parameter."
+msgstr ""
+"|processingAlgorithm| :sup:`Algorithm Output`: gör det möjligt att använda "
+"utdata från en annan algoritm som indata för den aktuella algoritmen. När "
+"det gäller modellinmatningar kommer detta alternativ att lista alla lämpliga"
+" inmatningar för parametern."
+
 #: ../../docs/user_manual/processing/modeler.rst:712
 msgid "processingAlgorithm"
 msgstr "processingAlgorithm"
+
+#: ../../docs/user_manual/processing/modeler.rst:371
+msgid ""
+"The **output parameter** also has the above options in its drop-down menu:"
+msgstr ""
+"Även **output parameter** har ovanstående alternativ i sin rullgardinsmeny:"
+
+#: ../../docs/user_manual/processing/modeler.rst:373
+msgid ""
+"add static outputs for child algorithms, e.g. always saving a child "
+"algorithm's output to a predefined geopackage or postgres layer"
+msgstr ""
+"lägga till statiska utdata för underordnade algoritmer, t.ex. alltid spara "
+"en underordnad algoritms utdata till ett fördefinierat geopaket eller "
+"postgres-lager"
+
+#: ../../docs/user_manual/processing/modeler.rst:375
+msgid ""
+"use an expression based output values for child algorithms, e.g. generating "
+"an automatic file name based on today's date and saving outputs to that file"
+msgstr ""
+"använda ett uttrycksbaserat utdatavärde för underordnade algoritmer, t.ex. "
+"generera ett automatiskt filnamn baserat på dagens datum och spara utdata i "
+"den filen"
+
+#: ../../docs/user_manual/processing/modeler.rst:377
+msgid ""
+"use a model input, e.g. the *File/Folder* model input to specify an output "
+"file or folder"
+msgstr ""
+"använda en modellinmatning, t.ex. modellinmatningen *File/Folder* för att "
+"ange en utdatafil eller -mapp"
+
+#: ../../docs/user_manual/processing/modeler.rst:379
+msgid ""
+"use another algorithm output, e.g. the output of the *Create directory* "
+"algorithm (from *Modeler tools*)"
+msgstr ""
+"använda en annan algoritms utdata, t.ex. utdata från algoritmen *Create "
+"directory* (från *Modeler tools*)"
+
+#: ../../docs/user_manual/processing/modeler.rst:381
+msgid ""
+"an addditional |modelOutput| :sup:`Model Output` option makes the output of "
+"the algorithm available in the model. If a layer generated by the algorithm "
+"is only to be used as input to another algorithm, don't edit that text box."
+msgstr ""
+"ett extra alternativ |modelOutput| :sup:`Model Output` gör algoritmens "
+"utdata tillgängliga i modellen. Om ett lager som genereras av algoritmen "
+"endast ska användas som indata till en annan algoritm, redigera inte "
+"textrutan."
 
 #: ../../docs/user_manual/processing/modeler.rst:708
 msgid "modelOutput"
 msgstr "modelOutput"
 
+#: ../../docs/user_manual/processing/modeler.rst:385
+msgid ""
+"In the following picture you can see the two input parameters defined as "
+"``Model Input`` and the temporary output layer:"
+msgstr ""
+"I följande bild kan du se de två ingångsparametrarna som definieras som "
+"\"Model Input\" och det tillfälliga utgångsskiktet:"
+
+#: ../../docs/user_manual/processing/modeler.rst:391
+msgid "Algorithm Input and Output parameters"
+msgstr "Algoritm Parametrar för inmatning och utmatning"
+
+#: ../../docs/user_manual/processing/modeler.rst:393
+msgid ""
+"You will also find an additional parameter named :guilabel:`Dependencies` "
+"that is not available when calling the algorithm from the toolbox. This "
+"parameter allows you to define the order in which algorithms are executed, "
+"by explicitly defining one algorithm as a *parent* of the current one. This "
+"will force the *parent* algorithm to be executed before the current one."
+msgstr ""
+"Du hittar också en ytterligare parameter med namnet :guilabel:`Dependencies`"
+" som inte är tillgänglig när du anropar algoritmen från verktygslådan. Med "
+"denna parameter kan du definiera i vilken ordning algoritmerna exekveras "
+"genom att uttryckligen definiera en algoritm som en *förälder* till den "
+"aktuella algoritmen. Detta tvingar *föräldra*-algoritmen att exekveras före "
+"den aktuella algoritmen."
+
+#: ../../docs/user_manual/processing/modeler.rst:399
+msgid ""
+"When you use the output of a previous algorithm as the input of your "
+"algorithm, that implicitly sets the previous algorithm as parent of the "
+"current one (and places the corresponding arrow in the modeler canvas). "
+"However, in some cases an algorithm might depend on another one even if it "
+"does not use any output object from it (for instance, an algorithm that "
+"executes a SQL sentence on a PostGIS database and another one that imports a"
+" layer into that same database). In that case, just select the previous "
+"algorithm in the *Dependencies* parameter and they will be executed in the "
+"correct order."
+msgstr ""
+"När du använder utdata från en tidigare algoritm som indata för din "
+"algoritm, innebär det implicit att den tidigare algoritmen blir överordnad "
+"den aktuella algoritmen (och att motsvarande pil placeras i "
+"modelleringspanelen). I vissa fall kan dock en algoritm vara beroende av en "
+"annan algoritm även om den inte använder något utdataobjekt från den (t.ex. "
+"en algoritm som kör en SQL-sats på en PostGIS-databas och en annan som "
+"importerar ett lager till samma databas). I så fall väljer du bara den "
+"föregående algoritmen i parametern *Dependencies* så kommer de att köras i "
+"rätt ordning."
+
+#: ../../docs/user_manual/processing/modeler.rst:410
+msgid ""
+"Once all the parameters have been assigned valid values, click on "
+":guilabel:`OK` and the algorithm will be added to the canvas. It will be "
+"linked to the elements in the canvas (algorithms or inputs) that provide "
+"objects that are used as inputs for the algorithm."
+msgstr ""
+"När alla parametrar har tilldelats giltiga värden klickar du på "
+":guilabel:`OK` och algoritmen läggs till i kanvasen. Den kommer att länkas "
+"till de element i Canvas (algoritmer eller indata) som tillhandahåller "
+"objekt som används som indata för algoritmen."
+
+#: ../../docs/user_manual/processing/modeler.rst:415
+msgid ""
+"Elements can be dragged to a different position on the canvas using the "
+"|select| :sup:`Select/Move Item` tool. This is useful to make the structure "
+"of the model clearer and more intuitive. You can also resize the elements, "
+"grasping their border. This is particularly useful if the description of the"
+" input or algorithm is long. With :menuselection:`View --> Enable snapping` "
+"option checked, items resizing or displacement can be bound to a virtual "
+"grid, for a more visually structured algorithm design."
+msgstr ""
+"Element kan dras till en annan position på duken med hjälp av verktyget "
+"|select| :sup:`Select/Move Item`. Detta är användbart för att göra modellens"
+" struktur tydligare och mer intuitiv. Du kan också ändra storlek på "
+"elementen genom att ta tag i deras kant. Detta är särskilt användbart om "
+"beskrivningen av indata eller algoritm är lång. Om alternativet "
+":menuselection:`View --> Enable snapping` är markerat kan element som ändras"
+" i storlek eller förflyttas bindas till ett virtuellt rutnät, vilket ger en "
+"mer visuellt strukturerad algoritmdesign."
+
 #: ../../docs/user_manual/processing/modeler.rst:730
 msgid "select"
 msgstr "select"
+
+#: ../../docs/user_manual/processing/modeler.rst:424
+msgid ""
+"Links between elements are updated automatically and you can see a ``+`` "
+"button at the top and at the bottom of each algorithm. Clicking the button "
+"will list all the inputs and outputs of the algorithm so you can have a "
+"quick overview."
+msgstr ""
+"Länkar mellan element uppdateras automatiskt och du kan se en ``+``-knapp "
+"högst upp och längst ned i varje algoritm. Om du klickar på knappen listas "
+"alla algoritmens in- och utgångar så att du snabbt kan få en överblick."
+
+#: ../../docs/user_manual/processing/modeler.rst:434
+msgid "A complete model"
+msgstr "En komplett modell"
+
+#: ../../docs/user_manual/processing/modeler.rst:436
+msgid ""
+"With the :menuselection:`Edit --> Add Group Box` tool, you can add a "
+"draggable *box* to the canvas. This feature is very useful in big models to "
+"group related elements in the modeler canvas and to keep the workflow clean."
+" For example we might group together all the inputs of the example:"
+msgstr ""
+"Med verktyget :menuselection:`Edit --> Add Group Box` kan du lägga till en "
+"dragbar *låda* i Canvas. Denna funktion är mycket användbar i stora modeller"
+" för att gruppera relaterade element i modelleringskanvasen och för att "
+"hålla arbetsflödet rent. Vi kan t.ex. gruppera alla ingångar i exemplet:"
+
+#: ../../docs/user_manual/processing/modeler.rst:445
+msgid "Model Group Box"
+msgstr "Modell Grupp Box"
+
+#: ../../docs/user_manual/processing/modeler.rst:447
+msgid ""
+"You can change the name and the color of the boxes. Group boxes are very "
+"useful when used together with :menuselection:`View --> Zoom To -->` tool, "
+"allowing you to zoom to a specific part of the model. You can also zoom in "
+"and out by using the mouse wheel."
+msgstr ""
+"Du kan ändra namn och färg på boxarna. Gruppboxar är mycket användbara när "
+"de används tillsammans med :menuselection:``View --> Zoom To -->``, så att "
+"du kan zooma till en viss del av modellen. Du kan också zooma in och ut med "
+"hjälp av mushjulet."
+
+#: ../../docs/user_manual/processing/modeler.rst:452
+msgid ""
+"You might want to change the order of the inputs and how they are listed in "
+"the main model dialog. At the bottom of the ``Input`` panel you will find "
+"the ``Reorder Model Inputs...`` button and by clicking on it a new dialog "
+"pops up allowing you to change the order of the inputs:"
+msgstr ""
+"Du kanske vill ändra ordningen på indata och hur de listas i huvudmodellens "
+"dialogruta. Längst ned i panelen ``Input`` hittar du knappen ``Reorder Model"
+" Inputs...`` och genom att klicka på den öppnas en ny dialogruta där du kan "
+"ändra ordningen på indata:"
+
+#: ../../docs/user_manual/processing/modeler.rst:460
+msgid "Reorder Model Inputs"
+msgstr "Omordna modellens ingångar"
+
+#: ../../docs/user_manual/processing/modeler.rst:462
+msgid ""
+"There is also the possibility to set a specific order which the outputs from"
+" the model must use when loading the results into a project. This gives the "
+"model creator a means of ensuring that layers are logically ordered on the "
+"canvas when running a model, such as placing a vector layer output over a "
+"raster layer output, or a point layer over a polygon layer. The model "
+"creator can also set an optional \"Group name\" for the outputs for "
+"automatically grouping outputs within the layer tree using a new group name "
+"or by adding them to an existing group. In the ``Model`` menu you will find "
+"the ``Reorder Output Layers...`` entry and by clicking on it a new dialog "
+"pops up allowing you to change the order of the output layers:"
+msgstr ""
+"Det finns också möjlighet att ange en specifik ordning som utdata från "
+"modellen måste använda när resultaten laddas in i ett projekt. Detta ger "
+"modellskaparen ett sätt att se till att lagren är logiskt ordnade på duken "
+"när en modell körs, t.ex. genom att placera en vektorlagerutgång över en "
+"rasterlagerutgång eller ett punktlager över ett polygonlager. Modellskaparen"
+" kan också ange ett valfritt \"Gruppnamn\" för utdata för att automatiskt "
+"gruppera utdata i lagerträdet med hjälp av ett nytt gruppnamn eller genom "
+"att lägga till dem i en befintlig grupp. I menyn ``Model`` hittar du posten "
+"``Reorder Output Layers...`` och genom att klicka på den öppnas en ny "
+"dialogruta där du kan ändra ordningen på utdatalagren:"
+
+#: ../../docs/user_manual/processing/modeler.rst:477
+msgid "Reorder Output Layers"
+msgstr "Ordna om utmatningsskikten"
+
+#: ../../docs/user_manual/processing/modeler.rst:479
+msgid ""
+"Comments can also be added to inputs or algorithms present in the modeler. "
+"This can be done by going in the :guilabel:`Comment` tab of the item or with"
+" a right-click. In the same tab a color can be set manual for individual "
+"model comments. Comments are visible only in the modeler canvas and not in "
+"the final algorithm dialog; they can be hidden by deactivating "
+":menuselection:`View --> Show Comments`."
+msgstr ""
+"Kommentarer kan också läggas till indata eller algoritmer som finns i "
+"modelleraren. Detta kan göras genom att gå in på fliken :guilabel:`Comment` "
+"i objektet eller genom att högerklicka. I samma flik kan en färg ställas in "
+"manuellt för enskilda modellkommentarer. Kommentarer är endast synliga i "
+"modelleringspanelen och inte i dialogen för den slutliga algoritmen; de kan "
+"döljas genom att avaktivera :menuselection:`View --> Show Comments`."
+
+#: ../../docs/user_manual/processing/modeler.rst:488
+msgid "Your model can be run in various ways:"
+msgstr "Din modell kan köras på olika sätt:"
+
+#: ../../docs/user_manual/processing/modeler.rst:490
+msgid ""
+"You can run the whole model by clicking on |start| :sup:`Run Model...` from "
+"the toolbar or :menuselection:`Model -->` |start| :menuselection:`Run "
+"Model...`: when using the editor to execute a model, any non-default values "
+"will be saved in the inputs. This means that executing the model at a later "
+"time from the editor will have the dialog prefilled with those values on any"
+" subsequent run."
+msgstr ""
+"Du kan köra hela modellen genom att klicka på |start| :sup:`Run Model...` i "
+"verktygsfältet eller :menuselection:`Model -->` |start| :menuselection:`Run "
+"Model...`: När du använder editorn för att köra en modell sparas alla värden"
+" som inte är standardvärden i indata. Detta innebär att om modellen körs vid"
+" ett senare tillfälle från editorn kommer dialogrutan att fyllas i med dessa"
+" värden vid varje efterföljande körning."
 
 #: ../../docs/user_manual/processing/modeler.rst:736
 msgid "start"
 msgstr "start"
 
+#: ../../docs/user_manual/processing/modeler.rst:495
+msgid ""
+"You can select elements of the model and run only that subset of the model: "
+"press the |runSelected| :guilabel:`Run Selected Steps...` option from the "
+":menuselection:`Models -->` menu or from the contextual menu of a selected "
+"algorithm. The initial state will be taken from any previous executions of "
+"the model through the editor, so results from previous steps in the model "
+"are available for the selected steps. This makes it possible to fix parts of"
+" a large model, without having to constantly run the entire model to test. "
+"Especially useful when earlier steps in the model are time consuming."
+msgstr ""
+"Du kan välja ut delar av modellen och köra endast den delmängden av "
+"modellen: tryck på alternativet |runSelected| :guilabel:`Run Selected "
+"Steps...` från menyn :menuselection:`Models -->` eller från den kontextuella"
+" menyn för en vald algoritm. Initialtillståndet hämtas från alla tidigare "
+"körningar av modellen via editorn, så resultat från tidigare steg i modellen"
+" är tillgängliga för de valda stegen. Detta gör det möjligt att fixa delar "
+"av en stor modell utan att hela tiden behöva köra hela modellen för att "
+"testa. Detta är särskilt användbart när tidigare steg i modellen är "
+"tidskrävande."
+
+#: ../../docs/user_manual/processing/modeler.rst:503
+msgid ""
+"You can run a subset of the model, starting from a specific algorithm: "
+"right-click the algorithm and select |start| :guilabel:`Run from Here...`. "
+"Likewise, values are taken from previous executions."
+msgstr ""
+"Du kan köra en delmängd av modellen med början från en viss algoritm: "
+"högerklicka på algoritmen och välj |start| :guilabel:`Kör härifrån...`. På "
+"samma sätt hämtas värden från tidigare körningar."
+
+#: ../../docs/user_manual/processing/modeler.rst:506
+msgid ""
+"In order to use the algorithm from the Processing Toolbox, it has to be "
+"saved and the modeler dialog closed, to allow the toolbox to refresh its "
+"contents."
+msgstr ""
+"För att kunna använda algoritmen från verktygslådan Processing måste den "
+"sparas och dialogrutan för modellering stängas, så att verktygslådan kan "
+"uppdatera sitt innehåll."
+
+#: ../../docs/user_manual/processing/modeler.rst:511
+msgid "Documenting your model"
+msgstr "Dokumentera din modell"
+
+#: ../../docs/user_manual/processing/modeler.rst:513
+msgid ""
+"You need to document your model, and this can be done from the modeler "
+"itself. Click on the |editHelpContent|:sup:`Edit model help` button, and a "
+"dialog like the one shown next will appear."
+msgstr ""
+"Du måste dokumentera din modell, och detta kan göras från själva "
+"modelleraren. Klicka på knappen |editHelpContent|:sup:`Edit model help` så "
+"visas en dialogruta som den som visas här intill."
+
 #: ../../docs/user_manual/processing/modeler.rst:692
 msgid "editHelpContent"
 msgstr "editHelpContent"
+
+#: ../../docs/user_manual/processing/modeler.rst:522
+msgid "Editing Help"
+msgstr "Hjälp med redigering"
+
+#: ../../docs/user_manual/processing/modeler.rst:524
+msgid ""
+"On the right-hand side, you will see a simple HTML page, created using the "
+"description of the input parameters and outputs of the algorithm, along with"
+" some additional items like a general description of the model or its "
+"author. Also, there is an Example section where you can input your own "
+"custom examples to help explain the usage of the model. The first time you "
+"open the help editor, all these descriptions are empty, but you can edit "
+"them using the elements on the left-hand side of the dialog. Select an "
+"element on the upper part and then write its description in the text box "
+"below."
+msgstr ""
+"På höger sida ser du en enkel HTML-sida som skapats med hjälp av "
+"beskrivningen av algoritmens ingångsparametrar och utdata, tillsammans med "
+"några ytterligare objekt som en allmän beskrivning av modellen eller dess "
+"författare. Det finns också ett avsnitt med exempel där du kan skriva in "
+"dina egna anpassade exempel för att förklara hur modellen används. Första "
+"gången du öppnar hjälpredigeraren är alla dessa beskrivningar tomma, men du "
+"kan redigera dem med hjälp av elementen på vänster sida av dialogrutan. Välj"
+" ett element i den övre delen och skriv sedan dess beskrivning i textrutan "
+"nedan."
+
+#: ../../docs/user_manual/processing/modeler.rst:535
+msgid "Model help is saved as part of the model itself."
+msgstr "Modellhjälp sparas som en del av själva modellen."
+
+#: ../../docs/user_manual/processing/modeler.rst:539
+msgid "Saving and loading models"
+msgstr "Spara och ladda modeller"
+
+#: ../../docs/user_manual/processing/modeler.rst:542
+msgid "Saving models"
+msgstr "Spara modeller"
+
+#: ../../docs/user_manual/processing/modeler.rst:544
+msgid ""
+"Use the |fileSave|:sup:`Save model` button to save the current model and the"
+" |fileOpen|:sup:`Open Model` button to open a previously saved model. Models"
+" are saved with the :file:`.model3` extension. If the model has already been"
+" saved from the modeler window, you will not be prompted for a filename. "
+"Since there is already a file associated with the model, that file will be "
+"used for subsequent saves."
+msgstr ""
+"Använd knappen |fileSave|:sup:`Save model` för att spara den aktuella "
+"modellen och knappen |fileOpen|:sup:`Open Model` för att öppna en tidigare "
+"sparad modell. Modeller sparas med filnamnstillägget :file:`.model3`. Om "
+"modellen redan har sparats från modelleringsfönstret kommer du inte att "
+"uppmanas att ange något filnamn. Eftersom det redan finns en fil kopplad "
+"till modellen kommer den filen att användas för efterföljande sparningar."
+
+#: ../../docs/user_manual/processing/modeler.rst:552
+msgid ""
+"Before saving a model, you have to enter a name and a group for it in the "
+"text boxes in the upper part of the window."
+msgstr ""
+"Innan du sparar en modell måste du ange ett namn och en grupp för den i "
+"textrutorna i den övre delen av fönstret."
+
+#: ../../docs/user_manual/processing/modeler.rst:555
+msgid ""
+"Models saved in the :file:`models` folder (the default folder when you are "
+"prompted for a filename to save the model) will appear in the toolbox in the"
+" corresponding branch. When the toolbox is invoked, it searches the "
+":file:`models` folder for files with the :file:`.model3` extension and loads"
+" the models they contain. Since a model is itself an algorithm, it can be "
+"added to the toolbox just like any other algorithm."
+msgstr ""
+"Modeller som sparats i mappen :file:`models` (standardmappen när du uppmanas"
+" att ange ett filnamn för att spara modellen) visas i verktygslådan i "
+"motsvarande gren. När verktygslådan startas söker den i mappen "
+":file:`models` efter filer med filnamnstillägget :file:`.model3` och laddar "
+"de modeller de innehåller. Eftersom en modell i sig är en algoritm kan den "
+"läggas till i verktygslådan precis som vilken annan algoritm som helst."
+
+#: ../../docs/user_manual/processing/modeler.rst:564
+msgid ""
+"Models can also be saved within the project file using the "
+"|addToProject|:sup:`Save model in project` button. Models saved using this "
+"method won't be written as :file:`.model3` files on the disk but will be "
+"embedded in the project file."
+msgstr ""
+"Modeller kan också sparas i projektfilen med hjälp av knappen "
+"|addToProject|:sup:`Spara modell i projekt`. Modeller som sparas med den här"
+" metoden skrivs inte ut som :file:`.model3`-filer på disken utan bäddas in i"
+" projektfilen."
 
 #: ../../docs/user_manual/processing/modeler.rst:682
 msgid "addToProject"
 msgstr "addToProject"
 
+#: ../../docs/user_manual/processing/modeler.rst:569
+msgid ""
+"Project models are available in the |qgsProjectFile|:guilabel:`Project "
+"models` menu of the toolbox and in the :menuselection:`Project --> Models` "
+"menu item."
+msgstr ""
+"Projektmodeller finns tillgängliga i menyn "
+"|qgsProjectFile|:guilabel:`Projektmodeller` i verktygslådan och i "
+"menyalternativet :menuselection:`Projekt --> Modeller`."
+
 #: ../../docs/user_manual/processing/modeler.rst:716
 msgid "qgsProjectFile"
 msgstr "qgsProjectFile"
+
+#: ../../docs/user_manual/processing/modeler.rst:573
+msgid ""
+"The models folder can be set from the Processing configuration dialog, under"
+" the :guilabel:`Modeler` group."
+msgstr ""
+"Modellmappen kan ställas in i dialogrutan Processing configuration, under "
+"gruppen :guilabel:`Modeler`."
+
+#: ../../docs/user_manual/processing/modeler.rst:576
+msgid ""
+"Models loaded from the :file:`models` folder appear not only in the toolbox,"
+" but also in the algorithms tree in the :guilabel:`Algorithms` tab of the "
+"modeler window. That means that you can incorporate a model as a part of a "
+"bigger model, just like other algorithms."
+msgstr ""
+"Modeller som laddas från mappen :file:`models` visas inte bara i "
+"verktygslådan utan även i algoritmträdet på fliken :guilabel:`Algorithms` i "
+"modelleringsfönstret. Det innebär att du kan integrera en modell som en del "
+"av en större modell, precis som andra algoritmer."
+
+#: ../../docs/user_manual/processing/modeler.rst:582
+msgid ""
+"Models will show up in the :ref:`Browser <browser_panel>` panel and can be "
+"run from there."
+msgstr ""
+"Modellerna kommer att visas i :ref:`Browser <browser_panel>`-panelen och kan"
+" köras därifrån."
+
+#: ../../docs/user_manual/processing/modeler.rst:586
+msgid "Exporting a model as a Python script"
+msgstr "Exportera en modell som ett Python-skript"
+
+#: ../../docs/user_manual/processing/modeler.rst:588
+msgid ""
+"As we will see in a later chapter, Processing algorithms can be called from "
+"the QGIS Python console, and new Processing algorithms can be created using "
+"Python. A quick way to create such a Python script is to create a model and "
+"then export it as a Python file."
+msgstr ""
+"Som vi kommer att se i ett senare kapitel kan Processing-algoritmer anropas "
+"från QGIS Python-konsolen, och nya Processing-algoritmer kan skapas med "
+"hjälp av Python. Ett snabbt sätt att skapa ett sådant Python-skript är att "
+"skapa en modell och sedan exportera den som en Python-fil."
+
+#: ../../docs/user_manual/processing/modeler.rst:594
+msgid ""
+"To do so, click on the |saveAsPython|:sup:`Export as Script Algorithm...` in"
+" the modeler canvas or right click on the name of the model in the "
+"Processing Toolbox and choose |saveAsPython|:sup:`Export Model as Python "
+"Algorithm...`."
+msgstr ""
+"För att göra det, klicka på |saveAsPython|:sup:`Export as Script "
+"Algorithm...` i modelleringsrutan eller högerklicka på namnet på modellen i "
+"Processing Toolbox och välj |saveAsPython|:sup:`Export Model as Python "
+"Algorithm...`."
 
 #: ../../docs/user_manual/processing/modeler.rst:724
 msgid "saveAsPython"
 msgstr "saveAsPython"
 
+#: ../../docs/user_manual/processing/modeler.rst:599
+msgid "Exporting a model as an image, PDF or SVG"
+msgstr "Exportera en modell som en bild, PDF eller SVG"
+
+#: ../../docs/user_manual/processing/modeler.rst:601
+msgid ""
+"A model can also be exported as an image, SVG or PDF (for illustration "
+"purposes) by clicking |saveMapAsImage|:sup:`Export as image`, "
+"|saveAsPDF|:sup:`Export as PDF` or |saveAsSVG|:sup:`Export as SVG`."
+msgstr ""
+"En modell kan också exporteras som en bild, SVG eller PDF (för "
+"illustrationssyften) genom att klicka på |saveMapAsImage|:sup:`Export as "
+"image`, |saveAsPDF|:sup:`Export as PDF` eller |saveAsSVG|:sup:`Export as "
+"SVG`."
+
+#: ../../docs/user_manual/processing/modeler.rst:607
+msgid "Editing a model"
+msgstr "Redigera en modell"
+
+#: ../../docs/user_manual/processing/modeler.rst:609
+msgid ""
+"You can edit the model you are currently creating, redefining the workflow "
+"and the relationships between the algorithms and inputs that define the "
+"model."
+msgstr ""
+"Du kan redigera den modell du håller på att skapa och omdefiniera "
+"arbetsflödet och relationerna mellan de algoritmer och indata som definierar"
+" modellen."
+
+#: ../../docs/user_manual/processing/modeler.rst:612
+msgid ""
+"If you right-click on an algorithm in the canvas, you will see a context "
+"menu like the one shown next:"
+msgstr ""
+"Om du högerklickar på en algoritm i Canvas visas en kontextmeny som den som "
+"visas här intill:"
+
+#: ../../docs/user_manual/processing/modeler.rst:620
+msgid "Modeler Right Click"
+msgstr "Modellerare Högerklicka"
+
+#: ../../docs/user_manual/processing/modeler.rst:622
+msgid ""
+"Options for :ref:`running part of the model <running_model>` have been "
+"exposed earlier."
+msgstr ""
+"Alternativ för :ref:`kör en del av modellen <running_model>` har exponerats "
+"tidigare."
+
+#: ../../docs/user_manual/processing/modeler.rst:624
+msgid ""
+"Selecting the :guilabel:`Remove` option will cause the selected algorithm to"
+" be removed. An algorithm can be removed only if there are no other "
+"algorithms depending on it. That is, if no output from the algorithm is used"
+" as input in a different one."
+msgstr ""
+"Om du väljer alternativet :guilabel:`Remove` kommer den valda algoritmen att"
+" tas bort. En algoritm kan bara tas bort om det inte finns några andra "
+"algoritmer som är beroende av den. Det vill säga om ingen utdata från "
+"algoritmen används som indata i en annan algoritm."
+
+#: ../../docs/user_manual/processing/modeler.rst:628
+msgid ""
+"Selecting the :guilabel:`Edit...` option will show the parameter dialog so "
+"you can change the inputs and parameter values. Not all input elements "
+"available in the model will appear as available inputs. Layers or values "
+"generated at a more advanced step in the workflow defined by the model will "
+"not be available if they cause circular dependencies."
+msgstr ""
+"Om du väljer alternativet :guilabel:`Edit...` visas parameterdialogen så att"
+" du kan ändra indata och parametervärden. Alla indataelement som är "
+"tillgängliga i modellen visas inte som tillgängliga indata. Lager eller "
+"värden som genereras i ett mer avancerat steg i det arbetsflöde som "
+"definieras av modellen kommer inte att vara tillgängliga om de orsakar "
+"cirkulära beroenden."
+
+#: ../../docs/user_manual/processing/modeler.rst:634
+msgid ""
+"Select the new values and click on the :guilabel:`OK` button as usual. The "
+"connections between the model elements will change in the modeler canvas "
+"accordingly."
+msgstr ""
+"Välj de nya värdena och klicka på knappen :guilabel:`OK` som vanligt. "
+"Anslutningarna mellan modellelementen kommer att ändras i "
+"modelleringspanelen i enlighet med detta."
+
+#: ../../docs/user_manual/processing/modeler.rst:637
+msgid ""
+"The :guilabel:`Add comment...` allows you to add a comment to the algorithm "
+"to better describe the behavior."
+msgstr ""
+"Med :guilabel:`Add comment...` kan du lägga till en kommentar till "
+"algoritmen för att bättre beskriva beteendet."
+
+#: ../../docs/user_manual/processing/modeler.rst:640
+msgid ""
+"Right-clicking an input parameter will also allow you to :guilabel:`Remove`,"
+" :guilabel:`Edit…` and :guilabel:`Add comment…`"
+msgstr ""
+"Om du högerklickar på en inmatningsparameter kan du också "
+":guilabel:`Remove`, :guilabel:`Edit...` och :guilabel:`Add comment...`"
+
+#: ../../docs/user_manual/processing/modeler.rst:643
+msgid ""
+"A model can be run partially by deactivating some of its algorithms. To do "
+"it, select the :guilabel:`Deactivate` option in the context menu that "
+"appears when right-clicking on an algorithm element. The selected algorithm,"
+" and all the ones in the model that depend on it will be displayed in grey "
+"and will not be executed as part of the model."
+msgstr ""
+"En modell kan köras delvis genom att avaktivera några av dess algoritmer. "
+"Det gör du genom att välja alternativet :guilabel:`Deaktivera` i snabbmenyn "
+"som visas när du högerklickar på ett algoritmelement. Den valda algoritmen "
+"och alla de algoritmer i modellen som är beroende av den visas i grått och "
+"körs inte som en del av modellen."
+
+#: ../../docs/user_manual/processing/modeler.rst:654
+msgid "Model with a deactivated algorithm"
+msgstr "Modell med avaktiverad algoritm"
+
+#: ../../docs/user_manual/processing/modeler.rst:656
+msgid ""
+"When right-clicking on an algorithm that is not active, you will see an "
+":guilabel:`Activate` menu option that you can use to reactivate it."
+msgstr ""
+"När du högerklickar på en algoritm som inte är aktiv visas ett "
+":guilabel:`Activate`-menyalternativ som du kan använda för att aktivera den "
+"igen."
+
+#: ../../docs/user_manual/processing/modeler.rst:659
+msgid ""
+"When editing a model through the designer (and after having run that model),"
+" right-clicking any child step in the model allows to select "
+"|showSelectedLayers| :guilabel:`View Output Layers`. This will add the "
+"output layers from that step as new layers in the current QGIS project."
+msgstr ""
+"När du redigerar en modell via designern (och efter att ha kört modellen) "
+"kan du högerklicka på ett underordnat steg i modellen och välja "
+"|showSelectedLayers| :guilabel:`View Output Layers`. Detta lägger till "
+"utdatalagren från det steget som nya lager i det aktuella QGIS-projektet."
+
 #: ../../docs/user_manual/processing/modeler.rst:734
 msgid "showSelectedLayers"
 msgstr "showSelectedLayers"
+
+#: ../../docs/user_manual/processing/modeler.rst:663
+msgid ""
+"This action is available for all child algorithms in the model, even if the "
+"model is not configured to use the outputs from those children as model "
+"outputs. This is designed as a helpful debugging action. If a model fails "
+"(or gives unexpected results), you can then trace through the model and view"
+" the outputs for suspected problematic steps. It avoids the need to add "
+"temporary outputs to a model and re-run to test."
+msgstr ""
+"Den här åtgärden är tillgänglig för alla underordnade algoritmer i modellen,"
+" även om modellen inte är konfigurerad för att använda utdata från dessa "
+"underordnade algoritmer som modellutdata. Denna åtgärd är avsedd att vara "
+"till hjälp vid felsökning. Om en modell misslyckas (eller ger oväntade "
+"resultat) kan du spåra den genom modellen och visa utdata för misstänkta "
+"problematiska steg. Det gör att man inte behöver lägga till tillfälliga "
+"utdata i en modell och köra om den för att testa."
+
+#: ../../docs/user_manual/processing/modeler.rst:669
+msgid ""
+"Additionally, this action is always available after running the model, even "
+"if the model itself failed (e.g., because of a misconfigured step later in "
+"the model)."
+msgstr ""
+"Dessutom är denna åtgärd alltid tillgänglig efter att modellen har körts, "
+"även om modellen i sig misslyckades (t.ex. på grund av ett felkonfigurerat "
+"steg senare i modellen)."
+
+#: ../../docs/user_manual/processing/modeler.rst:672
+msgid ""
+"The :guilabel:`View Log` action helps you see the log for each child "
+"algorithm after you've closed down the algorithm dialog."
+msgstr ""
+"Åtgärden :guilabel:`View Log` hjälper dig att se loggen för varje "
+"underordnad algoritm efter att du har stängt algoritmdialogen."
