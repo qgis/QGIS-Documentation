@@ -1,0 +1,356 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-27 16:37+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:2
+msgid "Lesson: Simple Feature Model"
+msgstr "Lektion: Enkel funktionsmodell"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:4
+msgid ""
+"How can we store and represent geographic features in a database? In this "
+"lesson we'll cover one approach, the Simple Feature Model as defined by the "
+"OGC."
+msgstr ""
+"Hur kan vi lagra och representera geografiska funktioner i en databas? I den"
+" här lektionen går vi igenom ett tillvägagångssätt, Simple Feature Model, "
+"som definieras av OGC."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:8
+msgid ""
+"**The goal for this lesson:** To learn what the SFS Model is and how to use "
+"it."
+msgstr ""
+"**Målet för den här lektionen:** Att lära sig vad SFS-modellen är och hur "
+"man använder den."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:11
+msgid "What is OGC"
+msgstr "Vad är OGC?"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:13
+msgid ""
+"The Open Geospatial Consortium (OGC), an international voluntary consensus "
+"standards organization, originated in 1994. In the OGC, more than 370+ "
+"commercial, governmental, nonprofit and research organizations worldwide "
+"collaborate in an open consensus process encouraging development and "
+"implementation of standards for geospatial content and services, GIS data "
+"processing and data sharing. *- Wikipedia*"
+msgstr ""
+"Open Geospatial Consortium (OGC), en internationell frivillig "
+"konsensusorganisation för standarder, bildades 1994. I OGC samarbetar mer än"
+" 370+ kommersiella, statliga, ideella och forskningsorganisationer över hela"
+" världen i en öppen konsensusprocess som uppmuntrar utveckling och "
+"implementering av standarder för geospatialt innehåll och tjänster, GIS-"
+"databehandling och datadelning. *- Wikipedia* (på engelska)"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:21
+msgid "What is the SFS Model"
+msgstr "Vad är SFS-modellen?"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:23
+msgid ""
+"The Simple Feature for SQL (SFS) Model is a *non-topological* way to store "
+"geospatial data in a database and defines functions for accessing, "
+"operating, and constructing these data."
+msgstr ""
+"SFS-modellen (Simple Feature for SQL) är ett *icke-topologiskt* sätt att "
+"lagra geospatiala data i en databas och definierar funktioner för åtkomst, "
+"drift och konstruktion av dessa data."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:30
+msgid ""
+"The model defines geospatial data from Point, Linestring, and Polygon types "
+"(and aggregations of them to Multi objects)."
+msgstr ""
+"Modellen definierar geospatiala data från typerna Point, Linestring och "
+"Polygon (och aggregeringar av dem till Multi-objekt)."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:33
+msgid ""
+"For further information, have a look at the `OGC Simple Feature for SQL "
+"<https://www.ogc.org/publications/standard/sfs>`_ standard."
+msgstr ""
+"För ytterligare information, se standarden `OGC Simple Feature for SQL "
+"<https://www.ogc.org/publications/standard/sfs>`_."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:37
+msgid "Add a geometry field to table"
+msgstr "Lägga till ett geometrifält i tabellen"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:39
+msgid "Let's add a point field to our people table:"
+msgstr "Låt oss lägga till ett punktfält i vår persontabell:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:47
+msgid "Add a constraint based on geometry type"
+msgstr "Lägg till en begränsning baserad på geometrityp"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:49
+msgid ""
+"You will notice that the geometry field type does not implicitly specify "
+"what *type* of geometry for the field - for that we need a constraint:"
+msgstr ""
+"Du kommer att märka att fälttypen geometry inte implicit anger vilken *typ* "
+"av geometri som ska användas för fältet - för det behövs en begränsning:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:59
+msgid ""
+"This adds a constraint to the table so that it will only accept a point "
+"geometry or a null value."
+msgstr ""
+"Detta lägger till en begränsning i tabellen så att den endast accepterar en "
+"punktgeometri eller ett nollvärde."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:63
+msgid ":abbr:`★★★ (Advanced level)` Try Yourself:"
+msgstr ":abbr:`★★★★ (Avancerad nivå)` Prova själv:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:65
+msgid ""
+"Create a new table called cities and give it some appropriate columns, "
+"including a geometry field for storing polygons (the city boundaries). Make "
+"sure it has a constraint enforcing geometries to be polygons."
+msgstr ""
+"Skapa en ny tabell som heter cities och ge den några lämpliga kolumner, "
+"inklusive ett geometrifält för lagring av polygoner (stadsgränserna). Se "
+"till att den har en begränsning som tvingar geometrier att vara polygoner."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:69
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:121
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:200
+msgid "Answer"
+msgstr "Svar"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:84
+msgid "Populate geometry_columns table"
+msgstr "Fyll i tabellen geometry_columns"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:86
+msgid ""
+"At this point you should also add an entry into the ``geometry_columns`` "
+"table:"
+msgstr ""
+"Vid denna tidpunkt bör du också lägga till en post i tabellen "
+"``geometry_columns``:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:93
+msgid ""
+"Why? :kbd:`geometry_columns` is used by certain applications to be aware of "
+"which tables in the database contain geometry data."
+msgstr ""
+"Varför? :kbd:`geometry_columns` används av vissa program för att få reda på "
+"vilka tabeller i databasen som innehåller geometridata."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:98
+msgid ""
+"If the above ``INSERT`` statement causes an error, run this query first:"
+msgstr ""
+"Om ovanstående ``INSERT``-sats orsakar ett fel, kör den här frågan först:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:105
+msgid ""
+"If the column :kbd:`f_table_name` contains the value :kbd:`people`, then "
+"this table has already been registered and you don't need to do anything "
+"more."
+msgstr ""
+"Om kolumnen :kbd:`f_table_name` innehåller värdet :kbd:`people` har den här "
+"tabellen redan registrerats och du behöver inte göra något mer."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:109
+msgid ""
+"The value ``2`` refers to the number of dimensions; in this case, two: **X**"
+" and **Y**."
+msgstr ""
+"Värdet ``2`` avser antalet dimensioner, i detta fall två: **X** och **Y**."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:112
+msgid ""
+"The value :kbd:`4326` refers to the projection we are using; in this case, "
+"WGS 84, which is referred to by the number 4326 (refer to the earlier "
+"discussion about the EPSG)."
+msgstr ""
+"Värdet :kbd:`4326` hänvisar till den projektion vi använder, i det här "
+"fallet WGS 84, som har numret 4326 (se den tidigare diskussionen om EPSG)."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:117
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Prova själv:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:119
+msgid "Add an appropriate `geometry_columns` entry for your new cities layer"
+msgstr "Lägg till en lämplig `geometry_columns`-post för ditt nya stadsskikt"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:132
+msgid "Add geometry record to table using SQL"
+msgstr "Lägga till geometripost i tabell med SQL"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:134
+msgid "Now that our tables are geo-enabled, we can store geometries in them:"
+msgstr "Nu när våra tabeller är geoaktiverade kan vi lagra geometrier i dem:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:145
+msgid ""
+"In the new entry above, you will need to specify which projection (SRID) you"
+" want to use. This is because you entered the geometry of the new point "
+"using a plain string of text, which does not automatically add the correct "
+"projection information. Obviously, the new point needs to use the same SRID "
+"as the data-set it is being added to, so you need to specify it."
+msgstr ""
+"I den nya posten ovan måste du ange vilken projektion (SRID) du vill "
+"använda. Detta beror på att du angav geometrin för den nya punkten med hjälp"
+" av en vanlig textsträng, som inte automatiskt lägger till rätt "
+"projektionsinformation. Självklart måste den nya punkten använda samma SRID "
+"som den datauppsättning den läggs till i, så du måste ange det."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:151
+msgid ""
+"If at this point you were using a graphical interface, for example, "
+"specifying the projection for each point would be automatic. In other words,"
+" you usually won't need to worry about using the correct projection for "
+"every point you want to add if you've already specified it for that data-"
+"set, as we did earlier."
+msgstr ""
+"Om du vid det här laget till exempel använder ett grafiskt gränssnitt skulle"
+" det vara automatiskt att ange projektionen för varje punkt. Med andra ord "
+"behöver du vanligtvis inte oroa dig för att använda rätt projektion för "
+"varje punkt som du vill lägga till om du redan har angett den för den "
+"aktuella datauppsättningen, som vi gjorde tidigare."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:157
+msgid ""
+"Now is probably a good time to open QGIS and try to view your :kbd:`people` "
+"table. Also, we should try editing / adding / deleting records and then "
+"performing select queries in the database to see how the data has changed."
+msgstr ""
+"Nu är det förmodligen en bra tid att öppna QGIS och försöka visa din "
+":kbd:`people`-tabell. Vi bör också försöka redigera / lägga till / ta bort "
+"poster och sedan utföra utvalda frågor i databasen för att se hur data har "
+"förändrats."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:161
+msgid ""
+"To load a PostGIS layer in QGIS, use the :menuselection:`Layer --> Add "
+"PostGIS Layers` menu option or toolbar button:"
+msgstr ""
+"För att ladda ett PostGIS-skikt i QGIS använder du menyalternativet eller "
+"knappen i verktygsfältet :menuselection:`Layer --> Add PostGIS Layers`:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:164
+msgid "|addPostgisLayer|"
+msgstr "|addPostgisLayer|"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:243
+msgid "addPostgisLayer"
+msgstr "addPostgisLayer"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:166
+msgid "This will open the dialog:"
+msgstr "Detta öppnar dialogrutan:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:171
+msgid "Click on the :guilabel:`New` button to open this dialog:"
+msgstr "Klicka på knappen :guilabel:`New` för att öppna denna dialogruta:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:176
+msgid "Then define a new connection, e.g.::"
+msgstr "Definiera sedan en ny anslutning, t.ex.::"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:186
+msgid ""
+"To see whether QGIS has found the :kbd:`address` database and that your "
+"username and password are correct, click :guilabel:`Test Connect`. If it "
+"works, check the boxes next to :guilabel:`Save Username` and :guilabel:`Save"
+" Password`. Then click :guilabel:`OK` to create this connection."
+msgstr ""
+"För att se om QGIS har hittat databasen :kbd:`address` och att ditt "
+"användarnamn och lösenord är korrekta, klicka på :guilabel:`Test Connect`. "
+"Om det fungerar, markera rutorna bredvid :guilabel:`Save Username` och "
+":guilabel:`Save Password`. Klicka sedan på :guilabel:`OK` för att skapa den "
+"här anslutningen."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:191
+msgid ""
+"Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`"
+" and add layers to your project as usual."
+msgstr ""
+"Tillbaka i dialogrutan :guilabel:`Add PostGIS Layers` klickar du på "
+":guilabel:`Connect` och lägger till lager i ditt projekt som vanligt."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:195
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
+msgstr ":abbr:`★★☆ (Måttlig nivå)` Prova själv:"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:197
+msgid ""
+"Formulate a query that shows a person's name, street name and position (from"
+" the geom column) as plain text."
+msgstr ""
+"Formulera en fråga som visar en persons namn, gatunamn och position (från "
+"kolumnen geom) som vanlig text."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:211
+msgid "Result::"
+msgstr "Resultat::"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:222
+msgid ""
+"As you can see, our constraint allows nulls to be added into the database."
+msgstr ""
+"Som du kan se tillåter vår begränsning att nollor läggs till i databasen."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:226
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:228
+msgid ""
+"You have seen how to add spatial objects to your database and view them in "
+"GIS software."
+msgstr ""
+"Du har sett hur du lägger till rumsliga objekt i din databas och hur du "
+"visar dem i GIS-program."
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:232
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:234
+msgid ""
+"Next you'll see how to import data into, and export data from, your "
+"database."
+msgstr ""
+"Nu ska du få se hur du importerar data till och exporterar data från din "
+"databas."
