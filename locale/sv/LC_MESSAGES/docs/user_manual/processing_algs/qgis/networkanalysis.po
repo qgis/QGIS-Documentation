@@ -7,15 +7,16 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-04 12:28+0000\n"
+"POT-Creation-Date: 2025-07-24 05:01+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,146 +25,1089 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:22
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:272
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:405
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:532
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:655
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:2
+msgid "Network analysis"
+msgstr "Analys av nätverk"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:14
+msgid "Service area (from layer)"
+msgstr "Serviceområde (från lager)"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:15
+msgid ""
+"Returns all the edges or parts of edges of a network that can be reached "
+"within a distance or a time, starting from a point layer. This allows "
+"evaluation of accessibility within a network, e.g., what are the places I "
+"can navigate to on a road network without spending cost greater than a given"
+" value (the cost can be distance or time)."
+msgstr ""
+"Returnerar alla kanter eller delar av kanter i ett nätverk som kan nås inom "
+"ett visst avstånd eller en viss tid, med utgångspunkt från ett punktlager. "
+"Detta möjliggör utvärdering av tillgängligheten i ett nätverk, t.ex. vilka "
+"platser jag kan navigera till i ett vägnät utan att kostnaden överstiger ett"
+" givet värde (kostnaden kan vara avstånd eller tid)."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:21
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:269
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:411
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:543
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:678
+msgid ""
+"This algorithm uses ellipsoid based measurements and respects the current "
+":ref:`ellipsoid settings <measurements_ellipsoid>`."
+msgstr ""
+"Den här algoritmen använder ellipsoidbaserade mätningar och respekterar de "
+"aktuella :ref:`ellipsoidinställningarna <measurements_ellipsoid>`."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:25
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:273
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:415
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:550
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:682
 msgid "Parameters"
 msgstr "Parametrar"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:13
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:33
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:114
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:28
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:276
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:418
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:553
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:685
+msgid "Basic parameters"
+msgstr "Grundläggande parametrar"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:12
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:35
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:116
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:230
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:283
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:372
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:416
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:497
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:543
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:623
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:666
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:728
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:380
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:425
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:511
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:560
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:646
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:692
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:762
+msgid "Label"
+msgstr "Etikett"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:13
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:231
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:284
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:381
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:426
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:512
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:561
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:647
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:693
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:763
 msgid "Name"
 msgstr "Namn"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:15
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:35
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:116
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:14
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:118
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:232
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:285
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:374
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:418
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:499
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:545
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:625
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:668
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:730
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:382
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:427
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:513
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:562
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:648
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:694
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:764
+msgid "Type"
+msgstr "Typ"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:15
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:38
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:233
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:286
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:383
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:428
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:514
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:563
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:649
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:695
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:765
 msgid "Description"
 msgstr "Beskrivning"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:37
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:287
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:420
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:547
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:670
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:429
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:564
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:696
+msgid "**Vector layer representing network**"
+msgstr "**Vektorlager som representerar nätverket**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:288
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:430
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:565
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:697
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:41
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:433
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:240
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:289
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:319
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:390
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:431
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:517
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:566
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:590
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:652
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:698
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:725
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:768
+msgid "[vector: line]"
+msgstr "[vektor: linje]"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:42
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:290
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:432
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:567
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:699
+msgid "Line vector layer representing the network to be covered"
+msgstr "Linjevektorlager som representerar det nätverk som ska täckas"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:43
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:442
+msgid "**Vector layer with start points**"
+msgstr "**Vektorlager med startpunkter**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:443
 msgid "``START_POINTS``"
 msgstr "``START_POINTS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:45
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:236
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:245
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:333
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:386
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:444
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:470
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:522
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:586
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:604
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:657
+msgid "[vector: point]"
+msgstr "[vektor: punkt]"
+
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:46
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:296
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:424
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:551
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:674
+msgid ""
+"Point vector layer whose features are used as start points to generate the "
+"service areas"
+msgstr ""
+"Punktvektorskikt vars egenskaper används som startpunkter för att generera "
+"serviceområdena"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:291
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:433
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:568
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:700
+msgid "**Path type to calculate**"
+msgstr "**Stigtyp att beräkna**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:292
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:434
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:569
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:701
 msgid "``STRATEGY``"
 msgstr "``STRATEGY``"
 
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:58
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:162
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:293
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:435
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:570
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:702
+msgid "[enumeration]"
+msgstr "[uppräkning]"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:52
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:295
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:437
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:572
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:704
+msgid "Default: 0"
+msgstr "Standard: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:53
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:296
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:438
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:573
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:705
+msgid "The type of path to calculate. One of:"
+msgstr "Den typ av sökväg som ska beräknas. En av:"
+
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:55
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:305
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:298
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:440
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:575
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:707
+msgid "0 --- Shortest"
+msgstr "0 --- Kortast"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:299
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:441
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:576
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:708
+msgid "1 --- Fastest"
+msgstr "1 --- Snabbast"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:307
+msgid "**Travel cost (distance for \"Shortest\", time for \"Fastest\")**"
+msgstr "**Resekostnad (avstånd för \"Kortast\", tid för \"Snabbast\")**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:58
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:308
 msgid "``TRAVEL_COST``"
 msgstr "``TRAVEL_COST``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:81
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:88
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:215
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:309
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:357
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:495
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:630
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:747
+msgid "[numeric: double]"
+msgstr "[numerisk: dubbel]"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:61
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:90
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:194
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:359
+msgid "Default: 0.0"
+msgstr "Standard: 0,0"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:62
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:312
+msgid ""
+"The value is estimated as a distance (in the network layer units) when "
+"looking for the *Shortest* path and as time (in hours) for the *Fastest* "
+"path."
+msgstr ""
+"Värdet beräknas som ett avstånd (i nätverkslagerenheter) när man letar efter"
+" den *kortaste* vägen och som tid (i timmar) för den *snabbaste* vägen."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:65
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:238
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:315
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:388
+msgid "**Service area (lines)**"
+msgstr "**Serviceområde (linjer)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:66
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:239
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:313
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:381
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:318
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:389
 msgid "``OUTPUT_LINES``"
 msgstr "``OUTPUT_LINES``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:75
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:69
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:321
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:458
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:592
+msgid "Default: ``[Create temporary layer]``"
+msgstr "Standard: ``[Skapa tillfälligt lager]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:70
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:322
+msgid ""
+"Specify the output line layer for the service area. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Ange det utgående linjeskiktet för serviceområdet. :ref:`Ett av "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Skip Output"
+msgstr "Hoppa över utmatning"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "Skapa ett tillfälligt lager (``TEMPORARY_OUTPUT``)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid "Save to File…"
+msgstr "Spara till fil…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "Save to Geopackage…"
+msgstr "Spara till Geopackage…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Save to Database Table…"
+msgstr "Spara till databastabell…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "The file encoding can also be changed here."
+msgstr "Här kan du också ändra filkodningen."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:77
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:234
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:325
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:376
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:442
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:501
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:569
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:627
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:691
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:732
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:329
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:384
+msgid "**Service area (boundary nodes)**"
+msgstr "**Serviceområde (gränsnoder)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:78
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:235
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:332
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:385
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:455
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:516
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:589
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:651
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:724
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:767
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:19
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:81
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:93
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:335
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:472
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:606
+msgid "Default: ``[Skip output]``"
+msgstr "Standard: ``[Hoppa över utdata]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:82
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:336
+msgid ""
+"Specify the output point layer for the service area boundary nodes. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Ange utmatningspunktskiktet för tjänsteområdets gränsnoder. :ref:`Ett av "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:89
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:466
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:600
+msgid "**Non-routable features**"
+msgstr "**Funktioner som inte går att routa**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:90
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:244
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:469
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:521
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:601
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:656
+msgid "``OUTPUT_NON_ROUTABLE``"
+msgstr "``UTGÅNG_INTE_ROUTERBAR``"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:94
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:473
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:607
+msgid ""
+"Specify the output which will be used to store any input features which "
+"could not be routed (e.g., those which are too far from the network layer). "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Ange den utgång som ska användas för att lagra alla ingångsfunktioner som "
+"inte kunde routas (t.ex. de som ligger för långt från nätverkslagret). "
+":ref:`One of <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:344
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:482
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:616
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:734
+msgid "Advanced parameters"
+msgstr "Avancerade parametrar"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:16
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:120
+msgid "**Direction field**"
+msgstr "**Riktningsfält**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:18
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:32
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:70
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:122
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:136
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:145
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:154
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:174
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:213
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:317
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:331
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:355
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:468
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:493
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:603
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:628
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:745
+msgid "Optional"
+msgstr "Valfritt"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:19
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:123
 msgid "``DIRECTION_FIELD``"
 msgstr "``DIRECTION_FIELD``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:20
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:124
+msgid "[tablefield: any]"
+msgstr "[bordsfält: alla]"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:21
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:125
+msgid "The field used to specify directions for the network edges."
+msgstr "Det fält som används för att ange riktningar för nätverkets kanter."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:23
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:127
+msgid ""
+"The values used in this field are specified with the three parameters "
+"``Value for forward direction``, ``Value for backward direction`` and "
+"``Value for both directions``. Forward and reverse directions correspond to "
+"a one-way edge, \"both directions\" indicates a two-way edge. If a feature "
+"does not have a value in this field, or no field is set then the default "
+"direction setting (provided with the ``Default direction`` parameter) is "
+"used."
+msgstr ""
+"De värden som används i detta fält anges med de tre parametrarna ``Value for"
+" forward direction``, ``Value for backward direction`` och ``Value for both "
+"directions``. Framåt- och bakåtriktning motsvarar en enkelriktad kant, "
+"\"båda riktningarna\" anger en dubbelriktad kant. Om en egenskap inte har "
+"något värde i detta fält, eller om inget fält har angetts, används "
+"standardinställningen för riktning (som anges i parametern ``Default "
+"direction``)."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:30
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:134
+msgid "**Value for forward direction**"
+msgstr "**Värde för riktning framåt**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:33
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:137
 msgid "``VALUE_FORWARD``"
 msgstr "``VALUE_FORWARD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:43
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:52
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:138
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:147
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:156
+msgid "[string]"
+msgstr "[sträng]"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:36
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:45
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:54
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:140
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:149
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:158
+msgid "Default: '' (empty string)"
+msgstr "Standard: '' (tom sträng)"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:141
+msgid ""
+"Value set in the direction field to identify edges with a forward direction"
+msgstr ""
+"Värde som anges i fältet direction för att identifiera kanter med en "
+"riktning framåt"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:143
+msgid "**Value for backward direction**"
+msgstr "**Värde för bakåtriktad riktning**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:42
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:146
 msgid "``VALUE_BACKWARD``"
 msgstr "``VALUE_BACKWARD``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:54
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:150
+msgid ""
+"Value set in the direction field to identify edges with a backward direction"
+msgstr ""
+"Värde som anges i fältet direction för att identifiera kanter med en "
+"bakåtriktad riktning"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:152
+msgid "**Value for both directions**"
+msgstr "**Värde för båda riktningarna**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:51
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:155
 msgid "``VALUE_BOTH``"
 msgstr "``VALUE_BOTH``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:61
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:162
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:55
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:159
+msgid "Value set in the direction field to identify bidirectional edges"
+msgstr ""
+"Värde som anges i fältet direction för att identifiera dubbelriktade kanter"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:160
+msgid "**Default direction**"
+msgstr "**Förvald riktning**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:161
 msgid "``DEFAULT_DIRECTION``"
 msgstr "``DEFAULT_DIRECTION``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:75
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:176
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:60
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:164
+msgid "Default: 2"
+msgstr "Standard: 2"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:61
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:165
+msgid ""
+"If a feature has no value set in the direction field or if no direction "
+"field is set, then this direction value is used. One of:"
+msgstr ""
+"Om en funktion inte har något värde angivet i fältet för riktning eller om "
+"inget fält för riktning har angetts, används detta riktningsvärde. Ett av "
+"följande:"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:65
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:169
+msgid "0 --- Forward direction"
+msgstr "0 --- Riktning framåt"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:66
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:170
+msgid "1 --- Backward direction"
+msgstr "1 --- Bakåtriktad riktning"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:171
+msgid "2 --- Both directions"
+msgstr "2 --- Båda riktningarna"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:68
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:172
+msgid "**Speed field**"
+msgstr "**Hastighetsfält**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:71
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:175
 msgid "``SPEED_FIELD``"
 msgstr "``SPEED_FIELD``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:84
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:72
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:176
+msgid "[tablefield: numeric]"
+msgstr "[tabellfält: numerisk]"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:73
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:177
+msgid ""
+"Field providing the speed value (in ``km/h``) for the edges of the network "
+"when looking for the fastest path."
+msgstr ""
+"Fält som anger hastighetsvärdet (i ``km/h``) för nätverkets kanter när man "
+"letar efter den snabbaste vägen."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:76
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:180
+msgid ""
+"If a feature does not have a value in this field, or no field is set then "
+"the default speed value (provided with the ``Default speed`` parameter) is "
+"used."
+msgstr ""
+"Om en funktion inte har något värde i detta fält, eller om inget fält har "
+"angetts, används standardhastighetsvärdet (som anges med parametern "
+"\"Standardhastighet\")."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:183
+msgid "**Default speed (km/h)**"
+msgstr "**Förvald hastighet (km/h)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:80
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:184
 msgid "``DEFAULT_SPEED``"
 msgstr "``DEFAULT_SPEED``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:91
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:83
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:187
+msgid "Default: 50.0"
+msgstr "Standard: 50,0"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:84
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:188
+msgid ""
+"Value to use to calculate the travel time if no speed value is provided for "
+"an edge in the specified field"
+msgstr ""
+"Värde som ska användas för att beräkna restiden om inget hastighetsvärde "
+"anges för en kant i det angivna fältet"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:86
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:190
+msgid "**Topology tolerance**"
+msgstr "**Topologisk tolerans**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:87
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:191
 msgid "``TOLERANCE``"
 msgstr "``TOLERANCE``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:205
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:356
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:195
+msgid ""
+"Two lines with nodes closer than the specified tolerance are considered "
+"connected"
+msgstr ""
+"Två linjer med noder som ligger närmare varandra än den angivna toleransen "
+"anses vara anslutna"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:203
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:364
+msgid "**Include upper/lower bound points**"
+msgstr "**Inkludera övre/nedre gränspunkter**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:204
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:365
 msgid "``INCLUDE_BOUNDS``"
 msgstr "``INCLUDE_BOUNDS``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:291
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:560
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:683
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:205
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:366
+msgid "[boolean]"
+msgstr "[boolean]"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:207
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:368
+msgid "Default: False"
+msgstr "Standard: Falsk"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:208
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:369
+msgid ""
+"Creates a point layer output with two points for each edge at the boundaries"
+" of the service area. One point is the start of that edge, the other is the "
+"end."
+msgstr ""
+"Skapar en punktlagerutgång med två punkter för varje kant vid gränserna för "
+"serviceområdet. Den ena punkten är början på kanten, den andra är slutet."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:211
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:353
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:491
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:626
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:743
+msgid "**Maximum point distance from network**"
+msgstr "**Maximalt punktavstånd från nätverket**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:214
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:356
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:494
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:629
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:746
+msgid "``POINT_TOLERANCE``"
+msgstr "``PUNKT_TOLERANS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:217
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:497
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:632
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:749
+msgid "Default: Not set"
+msgstr "Standard: Ej inställd"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:218
+msgid ""
+"Specifies an optional limit on the distance from the points to the network "
+"layer. If a point is further from the network than this distance it will be "
+"treated as non-routable. If not set, endpoints will be snapped to the "
+"nearest point on the network layer, regardless of how far away from the "
+"network they actually are."
+msgstr ""
+"Anger en valfri gräns för avståndet från punkterna till nätverkslagret. Om "
+"en punkt ligger längre bort från nätverket än detta avstånd kommer den att "
+"behandlas som icke-routerbar. Om detta inte anges kommer slutpunkterna att "
+"knäppas till den närmaste punkten på nätverkslagret, oavsett hur långt bort "
+"från nätverket de faktiskt befinner sig."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:224
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:374
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:505
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:640
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:756
+msgid "Outputs"
+msgstr "Utgångar"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:237
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:387
+msgid "The output point layer with the service area boundary nodes."
+msgstr "Utgångspunktens lager med serviceområdets gränsnoder."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:241
+msgid ""
+"Line layer representing the parts of the network that can be serviced by the"
+" start points, for the given cost."
+msgstr ""
+"Linjeskikt som representerar de delar av nätverket som kan betjänas av "
+"startpunkterna, för den givna kostnaden."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:243
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:520
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:655
+msgid "**Non routable features**"
+msgstr "**Funktioner som inte kan dirigeras**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:246
+msgid ""
+"An optional output which will be used to store any input features which "
+"could not be routed (e.g., those which are too far from the network layer)."
+msgstr ""
+"En valfri utgång som kommer att användas för att lagra alla "
+"ingångsfunktioner som inte kunde routas (t.ex. de som ligger för långt från "
+"nätverkslagret)."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:250
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:395
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:527
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:662
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:773
+msgid "Python code"
+msgstr "Python-kod"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:252
+msgid "**Algorithm ID**: ``qgis:serviceareafromlayer``"
+msgstr "**Algoritm ID**: ``qgis:serviceareafromlayer``"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"*algoritm id* visas när du håller muspekaren över algoritmen i verktygslådan"
+" Processing Toolbox. I *parameter dictionary* finns parameternamn och "
+"värden. Se :ref:`processing_console` för information om hur du kör "
+"bearbetningsalgoritmer från Python-konsolen."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:262
+msgid "Service area (from point)"
+msgstr "Serviceområde (från punkt)"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:263
+msgid ""
+"Returns all the edges or parts of edges of a network that can be reached "
+"within a given distance or time, starting from a point feature. This allows "
+"the evaluation of accessibility within a network, e.g., what are the places "
+"I can navigate to on a road network without spending a cost greater than a "
+"given value (the cost can be distance or time)."
+msgstr ""
+"Returnerar alla kanter eller delar av kanter i ett nätverk som kan nås inom "
+"ett givet avstånd eller en given tid, med utgångspunkt från en "
+"punktfunktion. Detta gör det möjligt att utvärdera tillgängligheten i ett "
+"nätverk, t.ex. vilka platser jag kan navigera till i ett vägnät utan att "
+"kostnaden överstiger ett visst värde (kostnaden kan vara avstånd eller tid)."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:287
+msgid "**Vector layer representing the network**"
+msgstr "**Vektorlager som representerar nätverket**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:300
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:577
+msgid "**Start point**"
+msgstr "**Startpunkt**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:301
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:578
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:710
 msgid "``START_POINT``"
 msgstr "``START_POINT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:438
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:687
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:302
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:449
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:579
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:711
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:718
+msgid "[coordinates]"
+msgstr "[koordinater]"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:303
+msgid "Coordinate of the point to calculate the service area around."
+msgstr "Koordinat för punkten för att beräkna serviceområdet runt."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:305
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:452
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:582
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:714
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:721
+msgid ""
+"Press the :guilabel:`...` button next to the option and click on the canvas "
+"to fill the parameter with the clicked point coordinate."
+msgstr ""
+"Tryck på knappen :guilabel:`...` bredvid alternativet och klicka på duken "
+"för att fylla parametern med den klickade punktkoordinaten."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:311
+msgid "Default: 0.O"
+msgstr "Standard: 0.O"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:360
+msgid ""
+"Specifies an optional limit on the distance from the start point to the "
+"network layer. If the point is further from the network than this distance "
+"an error will be raised. If not set, the point will be snapped to the "
+"nearest point on the network layer, regardless of how far away from the "
+"network it actually is."
+msgstr ""
+"Anger en valfri gräns för avståndet från startpunkten till nätverkslagret. "
+"Om punkten ligger längre bort från nätverket än detta avstånd kommer ett fel"
+" att uppstå. Om den inte anges kommer punkten att knäppas till den närmaste "
+"punkten på nätverkslagret, oavsett hur långt bort från nätverket den "
+"faktiskt är."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:391
+msgid ""
+"Line layer representing the parts of the network that can be serviced by the"
+" start point, for the given cost."
+msgstr ""
+"Linjeskikt som representerar de delar av nätverket som kan betjänas av "
+"startpunkten, för den givna kostnaden."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:397
+msgid "**Algorithm ID**: ``native:serviceareafrompoint``"
+msgstr "**Algoritm-ID**: ``native:tjänsteleverantörfrånpunkt``"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:407
+msgid "Shortest path (layer to point)"
+msgstr "Kortaste vägen (lager till punkt)"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:408
+msgid ""
+"Computes the optimal (shortest or fastest) routes from multiple start points"
+" defined by a vector layer and a given end point."
+msgstr ""
+"Beräknar de optimala (kortaste eller snabbaste) rutterna från flera "
+"startpunkter som definieras av ett vektorlager och en given slutpunkt."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:445
+msgid ""
+"Point vector layer whose features are used as start points of the routes"
+msgstr ""
+"Punktvektorlager vars egenskaper används som startpunkter för rutterna"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:447
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:716
+msgid "**End point (x, y)**"
+msgstr "**Slutpunkt (x, y)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:448
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:717
 msgid "``END_POINT``"
 msgstr "``END_POINT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:564
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:450
+msgid "Point feature representing the end point of the routes"
+msgstr "Punktfunktion som representerar slutpunkten för rutterna"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:454
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:515
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:588
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:650
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:723
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:766
+msgid "**Shortest path**"
+msgstr "**Kortaste vägen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:459
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:593
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:726
+msgid ""
+"Specify the output line layer for the shortest paths. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Ange utmatningslinjeskiktet för de kortaste vägarna. :ref:`En av "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:498
+msgid ""
+"Specifies an optional limit on the distance from the start and end points to"
+" the network layer. If a start feature is further from the network than this"
+" distance it will be treated as non-routable. If the end point is further "
+"from the network than this distance an error will be raised. If not set, "
+"points will be snapped to the nearest point on the network layer, regardless"
+" of how far away from the network they actually are."
+msgstr ""
+"Anger en valfri gräns för avståndet från start- och slutpunkterna till "
+"nätverkslagret. Om en startpunkt ligger längre bort från nätverket än detta "
+"avstånd kommer den att behandlas som icke-routerbar. Om slutpunkten ligger "
+"längre bort från nätverket än detta avstånd kommer ett fel att uppstå. Om "
+"detta inte anges kommer punkterna att knäppas till den närmaste punkten på "
+"nätverkslagret, oavsett hur långt bort från nätverket de faktiskt befinner "
+"sig."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:518
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:653
+msgid ""
+"Line layer of the shortest or fastest path from each of the start points to "
+"the end point"
+msgstr ""
+"Linjeskikt med den kortaste eller snabbaste vägen från var och en av "
+"startpunkterna till slutpunkten"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:523
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:658
+msgid ""
+"An optional output layer which will be used to store any input features "
+"which could not be routed (e.g., those which are too far from the network "
+"layer)."
+msgstr ""
+"Ett valfritt utdatalager som används för att lagra alla inmatningsfunktioner"
+" som inte kunde dirigeras (t.ex. de som ligger för långt från "
+"nätverkslagret)."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:529
+msgid "**Algorithm ID**: ``native:shortestpathlayertopoint``"
+msgstr "**Algoritm-ID**: ``original:kortastepathlayertopoint``"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:539
+msgid "Shortest path (point to layer)"
+msgstr "Kortaste vägen (punkt till lager)"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:540
+msgid ""
+"Computes the optimal (shortest or fastest) routes between a given start "
+"point and multiple end points defined by a point vector layer."
+msgstr ""
+"Beräknar de optimala (kortaste eller snabbaste) rutterna mellan en given "
+"startpunkt och flera slutpunkter som definieras av ett punktvektorlager."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:547
+msgid ""
+"This algorithm drops existing primary keys or FID values and regenerates "
+"them in output layers."
+msgstr ""
+"Den här algoritmen tar bort befintliga primärnycklar eller FID-värden och "
+"återskapar dem i utdatalagren."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:580
+msgid "Point feature representing the start point of the routes"
+msgstr "Punktfunktion som representerar startpunkten för rutterna"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:584
+msgid "**Vector layer with end points**"
+msgstr "**Vektorlager med ändpunkter**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:585
 msgid "``END_POINTS``"
 msgstr "``END_POINTS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:587
+msgid "Point vector layer whose features are used as end points of the routes"
+msgstr "Punktvektorlager vars egenskaper används som slutpunkter för rutterna"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:633
+msgid ""
+"Specifies an optional limit on the distance from the start and end points to"
+" the network layer. If the start point is further from the network than this"
+" distance an error will be raised. If an end feature is further from the "
+"network than this distance it will be treated as non-routable. If not set, "
+"points will be snapped to the nearest point on the network layer, regardless"
+" of how far away from the network they actually are."
+msgstr ""
+"Anger en valfri gräns för avståndet från start- och slutpunkterna till "
+"nätverkslagret. Om startpunkten ligger längre bort från nätverket än detta "
+"avstånd kommer ett fel att uppstå. Om en slutpunkt ligger längre bort från "
+"nätverket än detta avstånd kommer den att behandlas som icke-routerbar. Om "
+"detta inte anges kommer punkterna att knäppas till den närmaste punkten på "
+"nätverkslagret, oavsett hur långt bort från nätverket de faktiskt befinner "
+"sig."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:664
+msgid "**Algorithm ID**: ``native:shortestpathpointtolayer``"
+msgstr "**Algoritm-ID**: ``native:kortastevägspinttolager``"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:674
+msgid "Shortest path (point to point)"
+msgstr "Kortaste vägen (punkt till punkt)"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:675
+msgid ""
+"Computes the optimal (shortest or fastest) route between a given start point"
+" and a given end point."
+msgstr ""
+"Beräknar den optimala (kortaste eller snabbaste) rutten mellan en given "
+"startpunkt och en given slutpunkt."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:709
+msgid "**Start point (x, y)**"
+msgstr "**Startpunkt (x, y)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:712
+msgid "Point feature representing the start point of the routes."
+msgstr "Punktfunktion som representerar startpunkten för rutterna."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:719
+msgid "Point feature representing the end point of the routes."
+msgstr "Punktfunktion som representerar slutpunkten för rutterna."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:750
+msgid ""
+"Specifies an optional limit on the distance from the start and end points to"
+" the network layer. If either point is further from the network than this "
+"distance an error will be raised. If not set, points will be snapped to the "
+"nearest point on the network layer, regardless of how far away from the "
+"network they actually are."
+msgstr ""
+"Anger en valfri gräns för avståndet från start- och slutpunkterna till "
+"nätverkslagret. Om någon av punkterna ligger längre bort från nätverket än "
+"detta avstånd kommer ett fel att uppstå. Om detta inte anges kommer "
+"punkterna att snäppas till den närmaste punkten på nätverkslagret, oavsett "
+"hur långt bort från nätverket de faktiskt är."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:769
+msgid ""
+"Line layer of the shortest or fastest path from each of the start point to "
+"the end point"
+msgstr ""
+"Linjeskikt med den kortaste eller snabbaste vägen från varje startpunkt till"
+" slutpunkten"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:775
+msgid "**Algorithm ID**: ``native:shortestpathpointtopoint``"
+msgstr "**Algoritm-ID**: ``nativ:kortastevägpointtopunkt``"
