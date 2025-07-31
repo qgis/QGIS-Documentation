@@ -1,0 +1,3265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-31 09:36+0200\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:5
+msgid "Working with Mesh Data"
+msgstr "Arbeta med Mesh-data"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:13
+msgid "What's a mesh?"
+msgstr "Vad är ett nät?"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:15
+msgid ""
+"A mesh is an unstructured grid usually with temporal and other components. "
+"The spatial component contains a collection of vertices, edges and/or faces,"
+" in 2D or 3D space:"
+msgstr ""
+"Ett mesh är ett ostrukturerat rutnät som vanligtvis har temporala och andra "
+"komponenter. Den rumsliga komponenten innehåller en samling hörn, kanter "
+"och/eller ytor i 2D- eller 3D-rymd:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:19
+msgid ""
+"**vertices** - XY(Z) points (in the layer's coordinate reference system)"
+msgstr ""
+"**vertices** - XY(Z)-punkter (i skiktets referenssystem för koordinater)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:20
+msgid "**edges** - connect pairs of vertices"
+msgstr "**kanter** - förbinder par av hörn"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:21
+msgid ""
+"**faces** - a face is a set of edges forming a closed shape - typically a "
+"triangle or a quadrilateral (quad), rarely polygons with more vertices"
+msgstr ""
+"**ytor** - en yta är en uppsättning kanter som bildar en sluten form - "
+"vanligtvis en triangel eller en fyrhörning (quad), sällan polygoner med fler"
+" hörn"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:24
+msgid ""
+"Relying on the above, mesh layers can thus have different types of "
+"structure:"
+msgstr ""
+"På grundval av ovanstående kan nätskikten således ha olika typer av "
+"struktur:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:26
+msgid ""
+"1D Meshes: consist of vertices and edges. An edge connects two vertices and "
+"can have assigned data (scalars or vectors) on it. The 1D mesh network can "
+"be for example used for modelling of an urban drainage system."
+msgstr ""
+"1D Meshes: består av hörn och kanter. En kant förbinder två hörn och kan ha "
+"tilldelade data (skalärer eller vektorer) på sig. 1D mesh-nätverket kan "
+"t.ex. användas för modellering av ett urbant dräneringssystem."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:29
+msgid ""
+"2D meshes: consist of faces with triangles, regular or unstructured quads."
+msgstr ""
+"2D-mesh: består av ytor med trianglar, regelbundna eller ostrukturerade "
+"kvadrater."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:30
+msgid ""
+"3D layered meshes: consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (levels) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. The mesh definition (vertical level extrusion) could in general "
+"change in time. The data is usually defined in volume centres or by some "
+"parametric function."
+msgstr ""
+"3D-skiktade nät: består av flera staplade ostrukturerade 2D-nät som var och "
+"en extruderas i vertikal riktning (nivåer) med hjälp av en vertikal "
+"koordinat. Topparna och ytorna har samma topologi i varje vertikal nivå. "
+"Nätdefinitionen (extrudering på vertikal nivå) kan i allmänhet ändras med "
+"tiden. Uppgifterna definieras vanligen i volymscentra eller genom någon "
+"parametrisk funktion."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:41
+msgid "Different mesh types"
+msgstr "Olika typer av nät"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:43
+msgid ""
+"Mesh provides information about the spatial structure. In addition, the mesh"
+" can have datasets (groups) that assign a value to every vertex. For "
+"example, having a triangular mesh with numbered vertices as shown in the "
+"image below:"
+msgstr ""
+"Mesh ger information om den rumsliga strukturen. Dessutom kan mesh ha "
+"dataset (grupper) som tilldelar ett värde till varje vertex. Ett exempel är "
+"ett triangulärt nät med numrerade hörn enligt bilden nedan:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:52
+msgid "Triangular grid with numbered vertices"
+msgstr "Triangulärt rutnät med numrerade hörn"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:54
+msgid ""
+"Each vertex can store different datasets (typically multiple quantities), "
+"and those datasets can also have a temporal dimension. Thus, a single file "
+"may contain multiple datasets."
+msgstr ""
+"Varje vertex kan lagra olika dataset (vanligtvis flera kvantiteter), och "
+"dessa dataset kan också ha en tidsdimension. En enda fil kan alltså "
+"innehålla flera dataset."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:58
+msgid ""
+"The following table gives an idea about the information that can be stored "
+"in mesh datasets. Table columns represent indices of mesh vertices, each row"
+" represents one dataset. Datasets can have different datatypes. In this "
+"case, it stores wind velocity at 10m at a particular moments in time (t1, "
+"t2, t3)."
+msgstr ""
+"Följande tabell ger en uppfattning om vilken information som kan lagras i "
+"mesh-dataset. Tabellens kolumner representerar index för nätets hörnpunkter,"
+" varje rad representerar en dataset. Datauppsättningar kan ha olika "
+"datatyper. I det här fallet lagras vindhastigheten på 10 m vid en viss "
+"tidpunkt (t1, t2, t3)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:64
+msgid ""
+"In a similar way, the mesh dataset can also store vector values for each "
+"vertex. For example, wind direction vector at the given time stamps:"
+msgstr ""
+"På liknande sätt kan mesh-datasetet också lagra vektorvärden för varje "
+"vertex. Till exempel vindriktningsvektorn vid de givna tidsstämplarna:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:67
+msgid "Example of mesh dataset"
+msgstr "Exempel på nätdataset"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "10 metre wind"
+msgstr "10 meter vind"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "1"
+msgstr "1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "2"
+msgstr "2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+msgid "3"
+msgstr "3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:70
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:75
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:79
+msgid "..."
+msgstr "..."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+msgid "10 metre speed at time=t1"
+msgstr "10 meters hastighet vid tid=t1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "17251"
+msgstr "17251"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+msgid "24918"
+msgstr "24918"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:72
+msgid "32858"
+msgstr "32858"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "10 metre speed at time=t2"
+msgstr "10 meters hastighet vid tiden=t2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "19168"
+msgstr "19168"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "23001"
+msgstr "23001"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:73
+msgid "36418"
+msgstr "36418"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "10 metre speed at time=t3"
+msgstr "10 meters hastighet vid tiden=t3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "21085"
+msgstr "21085"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:74
+msgid "30668"
+msgstr "30668"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "10m wind direction time=t1"
+msgstr "10m vindriktning tid=t1"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "[20,2]"
+msgstr "[20,2]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "[20,3]"
+msgstr "[20,3]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:76
+msgid "[20,4.5]"
+msgstr "[20,4.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "10m wind direction time=t2"
+msgstr "10m vindriktning tid=t2"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "[21,3]"
+msgstr "[21,3]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "[21,4]"
+msgstr "[21,4]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:77
+msgid "[21,5.5]"
+msgstr "[21,5.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "10m wind direction time=t3"
+msgstr "10m vindriktning tid=t3"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "[22,4]"
+msgstr "[22,4]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "[22,5]"
+msgstr "[22,5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:78
+msgid "[22,6.5]"
+msgstr "[22,6.5]"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:82
+msgid ""
+"We can visualize the data by assigning colors to values (similarly to how it"
+" is done with :ref:`Singleband pseudocolor <label_colormaptab>` raster "
+"rendering) and interpolating data between vertices according to the mesh "
+"topology. It is common that some quantities are 2D vectors rather than being"
+" simple scalar values (e.g. wind direction). For such quantities it is "
+"desirable to display arrows indicating the directions."
+msgstr ""
+"Vi kan visualisera data genom att tilldela värdena färger (på samma sätt som"
+" görs med :ref:`Singleband pseudocolor <label_colormaptab>` rasterrendering)"
+" och interpolera data mellan hörn enligt mesh-topologin. Det är vanligt att "
+"vissa storheter är 2D-vektorer i stället för enkla skalärvärden (t.ex. "
+"vindriktning). För sådana storheter är det önskvärt att visa pilar som anger"
+" riktningarna."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:94
+msgid "Possible visualisation of mesh data"
+msgstr "Möjlig visualisering av maskdata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:99
+msgid "Supported formats"
+msgstr "Format som stöds"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:101
+msgid ""
+"QGIS accesses mesh data using the `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_, and natively supports a "
+"`variety of formats <https://github.com/lutraconsulting/MDAL?tab=readme-ov-"
+"file#supported-formats>`__. Whether QGIS can edit a mesh layer depends on "
+"the format and the mesh structure type."
+msgstr ""
+"QGIS har åtkomst till mesh-data med hjälp av `MDAL-drivrutinerna "
+"<https://github.com/lutraconsulting/MDAL>`_ och har inbyggt stöd för `många "
+"olika format <https://github.com/lutraconsulting/MDAL?tab=readme-ov-"
+"file#supported-formats>`__. Huruvida QGIS kan redigera ett mesh-lager beror "
+"på formatet och typen av mesh-struktur."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:106
+msgid ""
+"To load a mesh dataset into QGIS, use the |addMeshLayer| :guilabel:`Mesh` "
+"tab in the :guilabel:`Data Source Manager` dialog. Read :ref:`mesh_loading` "
+"for more details."
+msgstr ""
+"För att ladda en mesh-datauppsättning i QGIS använder du fliken "
+"|addMeshLayer| :guilabel:`Mesh` i dialogrutan :guilabel:`Data Source "
+"Manager`. Läs :ref:`mesh_loading` för mer information."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1231
+msgid "addMeshLayer"
+msgstr "addMeshLayer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:114
+msgid "Mesh Dataset Properties"
+msgstr "Egenskaper för nätdataset"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:116
+msgid ""
+"The :guilabel:`Layer Properties` dialog for a mesh layer provides general "
+"settings to manage dataset groups of the layer and their rendering (active "
+"dataset groups, symbology, 2D and 3D rendering). It also provides "
+"information about the layer."
+msgstr ""
+"Dialogrutan :guilabel:`Layer Properties` för ett mesh-skikt innehåller "
+"allmänna inställningar för att hantera skiktets datasetgrupper och deras "
+"rendering (aktiva datasetgrupper, symbologi, 2D- och 3D-rendering). Den "
+"innehåller också information om skiktet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:121
+msgid "To access the :guilabel:`Layer Properties` dialog:"
+msgstr "För att komma till dialogrutan :guilabel:`Layer Properties`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:123
+msgid ""
+"In the :guilabel:`Layers` panel, double-click the layer or right-click and "
+"select :guilabel:`Properties...` from the pop-up menu;"
+msgstr ""
+"Dubbelklicka på lagret i panelen :guilabel:`Layers` eller högerklicka och "
+"välj :guilabel:`Properties...` från popup-menyn;"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:125
+msgid ""
+"Go to :menuselection:`Layer --> Layer Properties...` menu when the layer is "
+"selected."
+msgstr ""
+"Gå till menyn :menuselection:`Layer --> Layer Properties...` när lagret är "
+"markerat."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:128
+msgid ""
+"The mesh :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr ""
+"Dialogrutan mesh :guilabel:`Layer Properties` innehåller följande avsnitt:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:130
+msgid "Tabs of the Mesh Layer Properties"
+msgstr "Flikar för egenskaper för nätlager"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:132
+msgid "|metadata| :ref:`Information <meshinformation>`"
+msgstr "|metadata| :ref:`Information <meshinformation>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1301
+msgid "metadata"
+msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:133
+msgid "|system| :ref:`Source <meshsource>`"
+msgstr "|system| :ref:`Källa <meshsource>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1321
+msgid "system"
+msgstr "system"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:134
+msgid "|symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`"
+msgstr "|symbologi| :ref:`Symbologi <meshsymbology>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1319
+msgid "symbology"
+msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:135
+msgid "|3d| :ref:`3D View <mesh3dview>`:sup:`[1]`"
+msgstr "|3d| :ref:`3D View <mesh3dview>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1227
+msgid "3d"
+msgstr "3d"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:136
+msgid "|temporal| :ref:`Temporal <meshtemporal>`"
+msgstr "|temporal| :ref:`Temporal <meshtemporal>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1323
+msgid "temporal"
+msgstr "temporal"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:137
+msgid "|labelingSingle| :ref:`Labels <meshlabels>`:sup:`[1]`"
+msgstr "|labelingSingle| :ref:`Labels <meshlabels>`:sup:`[1]`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1265
+msgid "labelingSingle"
+msgstr "labelingSingle"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:138
+msgid "|elevationscale| :ref:`Elevation <meshelevation>`"
+msgstr "|elevationsskala| :ref:`Elevation <meshelevation>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1245
+msgid "elevationscale"
+msgstr "elevationscale"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:139
+msgid "|rendering| :ref:`Rendering <meshrendering>`"
+msgstr "|rendering| :ref:`Rendering <meshrendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1309
+msgid "rendering"
+msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:140
+msgid "|editMetadata| :ref:`Metadata <meshmetadata>`"
+msgstr "|editMetadata| :ref:`Metadata <meshmetadata>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1243
+msgid "editMetadata"
+msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:143
+msgid ""
+":sup:`[1]` Also available in the :ref:`Layer styling panel "
+"<layer_styling_panel>`"
+msgstr ""
+":sup:`[1]` Finns även i :ref:`Layer stylingpanel <layer_styling_panel>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:145
+msgid ""
+"Most of the properties of a mesh layer can be saved to or loaded from a "
+":file:`.qml` using the :guilabel:`Style` menu at the bottom of the dialog. "
+"More details at :ref:`manage_custom_style`."
+msgstr ""
+"De flesta av egenskaperna för ett mesh-lager kan sparas i eller laddas från "
+"en :file:`.qml` med hjälp av :guilabel:`Style`-menyn längst ned i "
+"dialogrutan. Mer information finns på :ref:`manage_custom_style`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:153
+msgid "Information Properties"
+msgstr "Informationsegenskaper"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:160
+msgid "Mesh Layer Information Properties"
+msgstr "Egenskaper för information om nätlager"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:162
+msgid ""
+"The |metadata| :guilabel:`Information` tab is read-only and represents an "
+"interesting place to quickly grab summarized information and metadata on the"
+" current layer. Provided information are:"
+msgstr ""
+"Fliken |metadata| :guilabel:`Information` är skrivskyddad och utgör en "
+"intressant plats för att snabbt hämta sammanfattad information och metadata "
+"om det aktuella lagret. Tillhandahållen information är:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:166
+msgid ""
+"general such as  name in the project, source path, list of auxiliary files, "
+"last save time and size, the used provider"
+msgstr ""
+"allmänna uppgifter som namn i projektet, källsökväg, lista över hjälpfiler, "
+"senaste spartid och storlek, den använda leverantören"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:168
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties may include "
+":ref:`layer notes <layer_notes>`. More properties can be created and managed"
+" using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"anpassade egenskaper som används för att lagra ytterligare information om "
+"lagret i det aktiva projektet. Standardanpassade egenskaper kan inkludera "
+":ref:`layer notes <layer_notes>`. Fler egenskaper kan skapas och hanteras "
+"med hjälp av PyQGIS, särskilt genom metoden :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:172
+msgid ""
+"based on the provider of the layer: extent, vertex, face, edges and/or "
+"dataset groups count"
+msgstr ""
+"baserat på skiktets leverantör: utsträckning, vertex, yta, kanter och/eller "
+"antal datasetgrupper"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:174
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr ""
+"det koordinatsatta referenssystemet: namn, enheter, metod, noggrannhet, "
+"referens (dvs. om det är statiskt eller dynamiskt)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:176
+msgid ""
+"extracted from filled :ref:`metadata <meshmetadata>`: access, extents, "
+"links, contacts, history..."
+msgstr ""
+"hämtat från fylld :ref:`metadata <meshmetadata>`: access, extents, länkar, "
+"kontakter, historik..."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:184
+msgid "Source Properties"
+msgstr "Källfastigheter"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:186
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected mesh, including:"
+msgstr ""
+"Fliken |system| :guilabel:`Source` visar grundläggande information om det "
+"valda nätet, inklusive:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:194
+msgid "Mesh Layer Source Properties"
+msgstr "Egenskaper för Mesh Layer Source"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:196
+msgid "the layer name to display in the :guilabel:`Layers` panel"
+msgstr "det skiktnamn som ska visas i :guilabel:`Layers`-panelen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:197
+msgid ""
+"setting the Coordinate Reference System: Displays the layer’s :ref:`Assigned"
+" Coordinate Reference System (CRS) <layer_crs>`. You can change the layer’s "
+"CRS by selecting a recently used one in the drop-down list or clicking on "
+"|setProjection| :guilabel:`Select CRS` button (see :ref:`crs_selector`). Use"
+" this process only if the CRS applied to the layer is wrong or if none was "
+"applied."
+msgstr ""
+"inställning av koordinatreferenssystem: Visar skiktets :ref:`Assigned "
+"Coordinate Reference System (CRS) <layer_crs>`. Du kan ändra skiktets CRS "
+"genom att välja ett nyligen använt i listrutan eller klicka på "
+"|setProjection| :guilabel:``Select CRS``-knappen (se :ref:`crs_selector`). "
+"Använd denna process endast om det CRS som används för lagret är fel eller "
+"om inget CRS har använts."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1317
+msgid "setProjection"
+msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:203
+msgid ""
+"The :guilabel:`Available datasets` frame lists all the dataset groups (and "
+"subgroups) in the mesh layer, with their type and description in a tree "
+"view. Both regular datasets (i.e. their data is stored in the file) and "
+"virtual datasets (which are :ref:`calculated on the fly <mesh_calculator>`) "
+"are listed."
+msgstr ""
+"I ramen :guilabel:`Available datasets` listas alla datasetgrupper (och "
+"undergrupper) i mesh-lagret, med typ och beskrivning i en trädvy. Både "
+"vanliga datamängder (dvs. deras data lagras i filen) och virtuella "
+"datamängder (som :ref:`beräknas i farten <mesh_calculator>`) listas."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:208
+msgid ""
+"Use the |add| :guilabel:`Assign extra dataset to mesh` button to add more "
+"groups to the current mesh layer."
+msgstr ""
+"Använd knappen |add| :guilabel:`Assign extra dataset to mesh` för att lägga "
+"till fler grupper i det aktuella mesh-lagret."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1229
+msgid "add"
+msgstr "add"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:210
+msgid ""
+"|collapseTree| :guilabel:`Collapse all` and |expandTree| :guilabel:`Expand "
+"all` the dataset tree, in case of embedded groups"
+msgstr ""
+"|collapseTree| :guilabel:`Collapse all` och |expandTree| :guilabel:`Expand "
+"all` datasetets träd, i händelse av inbäddade grupper"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1241
+msgid "collapseTree"
+msgstr "collapseTree"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1247
+msgid "expandTree"
+msgstr "expandTree"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:212
+msgid ""
+"If you are interested in few datasets, you can uncheck the others and make "
+"them unavailable in the project"
+msgstr ""
+"Om du är intresserad av ett fåtal dataset kan du avmarkera de andra och göra"
+" dem otillgängliga i projektet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:214
+msgid "Double-click over a name and you can rename the dataset."
+msgstr "Dubbelklicka på ett namn så kan du byta namn på datasetet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:215
+msgid ""
+"|refresh| :guilabel:`Reset to defaults`: checks all the groups and renames "
+"them back to their original name in the provider."
+msgstr ""
+"|refresh| :guilabel:`Reset to defaults`: kontrollerar alla grupper och byter"
+" namn på dem tillbaka till deras ursprungliga namn i leverantören."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1305
+msgid "refresh"
+msgstr "refresh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:217
+msgid "Right-click over a virtual dataset group and you can:"
+msgstr "Högerklicka på en virtuell datasetgrupp så kan du:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:219
+msgid ":guilabel:`Remove dataset group` from the project"
+msgstr ":guilabel:`Remove dataset group` från projektet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:220
+msgid ""
+":guilabel:`Save dataset group as...` a file on disk, to any supported "
+"format. The new file is kept assigned to the current mesh layer in the "
+"project."
+msgstr ""
+":guilabel:``Spara datasetgruppen som...` en fil på disken, i valfritt "
+"format. Den nya filen hålls tilldelad det aktuella mesh-lagret i projektet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:222
+msgid ""
+"Checking the |unchecked| :guilabel:`Treat as static dataset` group allows to"
+" ignore the :ref:`map temporal navigation <maptimecontrol>` properties while"
+" rendering the mesh layer. For each active dataset group (as selected in "
+"|symbology| :menuselection:`Symbology -->` |general| :guilabel:`Datasets` "
+"tab), you can:"
+msgstr ""
+"Om du markerar gruppen |unchecked| :guilabel:`Treat as static dataset` kan "
+"du ignorera egenskaperna :ref:`map temporal navigation <maptimecontrol>` när"
+" du renderar mesh-lagret. För varje aktiv datasetgrupp (som valts i fliken "
+"|symbology| :menuselection:`Symbology --&gt;` |general| "
+":guilabel:`Datasets`) kan du:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1329
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1253
+msgid "general"
+msgstr "general"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:228
+msgid "set to :guilabel:`None`: the dataset group is not displayed at all"
+msgstr "inställd på :guilabel:`None`: datasetgruppen visas inte alls"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:229
+msgid ""
+":guilabel:`Display dataset`: e.g., for the \"bed elevation\" dataset which "
+"is not time aware"
+msgstr ""
+":guilabel:`Display dataset`: t.ex. för datasetet \"bed elevation\" som inte "
+"är tidsmedvetet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:231
+msgid ""
+"extract a particular date time: the dataset matching the provided time is "
+"rendered and stay fixed during map navigation."
+msgstr ""
+"extrahera ett visst datum och en viss tid: den datauppsättning som matchar "
+"den angivna tiden återges och förblir fixerad under kartnavigering."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:238
+msgid "Symbology Properties"
+msgstr "Egenskaper för symbologi"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:240
+msgid ""
+"Click the |symbology| :guilabel:`Symbology` button to activate the dialog. "
+"Symbology properties are divided into several tabs:"
+msgstr ""
+"Klicka på knappen |symbology| :guilabel:`Symbology` för att aktivera "
+"dialogrutan. Symbologiegenskaperna är indelade i flera flikar:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:243
+msgid ":ref:`Datasets <mesh_symbology_datasets>`"
+msgstr ":ref:`Datauppsättningar <mesh_symbology_datauppsättningar>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:244
+msgid ":ref:`Contours <mesh_symbology_contours>`"
+msgstr ":ref:`Contours <mesh_symbology_contours>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:245
+msgid ":ref:`Vectors <mesh_symbology_vectors>`"
+msgstr ":ref:`Vektorer <mesh_symbologi_vektorer>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:246
+msgid ":ref:`Rendering <mesh_symbology_rendering>`"
+msgstr ":ref:`Rendering <mesh_symbology_rendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:247
+msgid ":ref:`Stacked mesh averaging method <mesh_stacked_averaging>`"
+msgstr ""
+":ref:`Metod för medelvärdesberäkning av staplade nät "
+"<mesh_stacked_averaging>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:252
+msgid "Datasets"
+msgstr "Datamängder"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:254
+msgid ""
+"The tab |general| :sup:`Datasets` is the main place to control and set which"
+" datasets will be used for the layer. It presents the following items:"
+msgstr ""
+"Fliken |general| :sup:`Datasets` är den viktigaste platsen för att "
+"kontrollera och ställa in vilka dataset som ska användas för skiktet. Den "
+"presenterar följande objekt:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:257
+msgid ""
+":guilabel:`Groups` available in the mesh dataset, with whether they provide:"
+msgstr ""
+":guilabel:`Grupper` tillgängliga i mesh-datasetet, med angivande av om de "
+"tillhandahåller:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:259
+msgid "|meshcontoursoff| scalar dataset"
+msgstr "|Meshcontoursoff| skalär dataset"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1293
+msgid "meshcontoursoff"
+msgstr "meshcontoursoff"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:260
+msgid ""
+"or |meshvectorsoff| vector dataset: by default, each vector dataset has a "
+"scalar dataset representing its magnitude automatically generated."
+msgstr ""
+"eller |meshvectorsoff| vektordatauppsättning: som standard har varje "
+"vektordatauppsättning en skalärdatauppsättning som representerar dess "
+"magnitud automatiskt genererad."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1299
+msgid "meshvectorsoff"
+msgstr "meshvectorsoff"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:263
+msgid ""
+"Click on the icon next to the dataset name to select the group and type of "
+"data to represent."
+msgstr ""
+"Klicka på ikonen bredvid datasetnamnet för att välja vilken grupp och typ av"
+" data som ska representeras."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:265
+msgid ":guilabel:`Selected dataset group(s) metadata`, with details on:"
+msgstr ":guilabel:`Metadata för vald(a) datasetgrupp(er)`, med detaljer om:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:267
+msgid "the mesh type: edges or faces"
+msgstr "typ av nät: kanter eller ytor"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:268
+msgid "the data type: vertices, edges, faces or volume"
+msgstr "datatyp: toppar, kanter, ytor eller volym"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:269
+msgid "whether it's of vector type or not"
+msgstr "oavsett om den är av vektortyp eller inte"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:270
+msgid "the original name in the mesh layer"
+msgstr "det ursprungliga namnet i mesh-lagret"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:271
+msgid "the unit, if applicable"
+msgstr "enheten, om tillämpligt"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:272
+msgid ""
+":ref:`blending mode <blend-modes>` available for the selected datasets."
+msgstr ""
+":ref:`blending mode <blend-modes>` tillgänglig för de valda dataseten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:279
+msgid "Mesh Layer Datasets"
+msgstr "Dataset för nätskikt"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:282
+msgid ""
+"You can apply symbology to the selected vector and/or scalar group using the"
+" next tabs."
+msgstr ""
+"Du kan tillämpa symbologi på den valda vektor- och/eller skalärgruppen med "
+"hjälp av följande flikar."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:289
+msgid "Contours Symbology"
+msgstr "Konturer Symbologi"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:291
+msgid ""
+"The |meshcontours| :sup:`Contours` tab can be activated only if a scalar "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab."
+msgstr ""
+"Fliken |meshcontours| :sup:`Contours` kan endast aktiveras om en skalär "
+"dataset har valts i fliken |general| :guilabel:`Datasets`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1291
+msgid "meshcontours"
+msgstr "meshcontours"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:294
+msgid ""
+"In the |meshcontours| :sup:`Contours` tab you can see and change the current"
+" visualization options of contours for the selected group, as shown in "
+":numref:`figure_mesh_symbology_contours` below:"
+msgstr ""
+"I fliken |meshcontours| :sup:`Contours` kan du se och ändra de aktuella "
+"visualiseringsalternativen för konturer för den valda gruppen, vilket visas "
+"i :numref:`figure_mesh_symbology_contours` nedan:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:303
+msgid "Styling Contours in a Mesh Layer"
+msgstr "Styling av konturer i ett mesh-lager"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:305
+msgid ""
+"For 1D mesh, set the :guilabel:`Stroke width` of the edges. This can be a "
+"fixed size for the whole dataset, or vary along the geometry (more details "
+"with the :ref:`interpolated line renderer <interpolated_line_symbol>`)"
+msgstr ""
+"För 1D-mesh, ställ in :guilabel:`Stroke width` för kanterna. Detta kan vara "
+"en fast storlek för hela datasetet, eller variera längs geometrin (mer "
+"detaljer med :ref:`interpolated line renderer <interpolated_line_symbol>`)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:308
+msgid ""
+"Use the slider or the spinbox to set the :guilabel:`Opacity` of the current "
+"group, if of a 2D mesh type."
+msgstr ""
+"Använd skjutreglaget eller snurrboxen för att ställa in :guilabel:`Opacity` "
+"för den aktuella gruppen, om den är av typen 2D mesh."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:310
+msgid ""
+"Enter the range of values you want to represent on the current group: use "
+"|refresh| :sup:`Load` to fetch the min and max values of the current group "
+"or enter custom values if you want to exclude some."
+msgstr ""
+"Ange det värdeintervall som du vill representera i den aktuella gruppen: "
+"använd |refresh| :sup:`Load` för att hämta min- och maxvärdena i den "
+"aktuella gruppen eller ange egna värden om du vill utesluta vissa."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:313
+msgid ""
+"For 2D/3D meshes, select the :guilabel:`Resampling method` to interpolate "
+"the values on the surrounding vertices to the faces (or from the surrounding"
+" faces to the vertices) using the :guilabel:`Neighbour average` method. "
+"Depending on whether the dataset is defined on the vertices (respectively on"
+" the faces), QGIS defaults this setting to :guilabel:`None` (respectively "
+":guilabel:`Neighbour average`) method in order to use values on vertices and"
+" keep the default rendering smooth."
+msgstr ""
+"För 2D/3D-mesh, välj :guilabel:`Resampling method` för att interpolera "
+"värdena på de omgivande hörnen till ytorna (eller från de omgivande ytorna "
+"till hörnen) med hjälp av :guilabel:`Neighbour average`-metoden. Beroende på"
+" om datasetet är definierat på vertikalerna (respektive på ytorna), har QGIS"
+" denna inställning som standard till :guilabel:`None` (respektive "
+":guilabel:`Neighbour average`) för att använda värden på vertikalerna och "
+"behålla standardrenderingen jämn."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:319
+msgid ""
+"Classify the dataset using the :ref:`color ramp shader <color_ramp_shader>` "
+"classification."
+msgstr ""
+"Klassificera datasetet med hjälp av :ref:`color ramp shader "
+"<color_ramp_shader>`-klassificeringen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:326
+msgid "Vectors Symbology"
+msgstr "Vektorer Symbologi"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:328
+msgid ""
+"The |meshvectors| :sup:`Vectors` tab can be activated only if a vector "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab. Click "
+"on the |meshvectors| :sup:`Vectors` icon on the right side of the |general| "
+":guilabel:`Datasets` tab."
+msgstr ""
+"Fliken |meshvectors| :sup:`Vectors` kan endast aktiveras om ett "
+"vektordataset har valts på fliken |general| :guilabel:`Datasets`. Klicka på "
+"ikonen |meshvectors| :sup:`Vectors` på höger sida av fliken |general| "
+":guilabel:`Datasets`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1297
+msgid "meshvectors"
+msgstr "meshvectors"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:333
+msgid ""
+"In the |meshvectors| :sup:`Vectors` tab you can see and change the current "
+"visualization options of vectors for the selected group, as shown in "
+":numref:`figure_mesh_symbology_vectors`:"
+msgstr ""
+"På fliken |meshvectors| :sup:`Vectors` kan du se och ändra de aktuella "
+"visualiseringsalternativen för vektorer för den valda gruppen, som visas i "
+":numref:`figure_mesh_symbology_vectors`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:342
+msgid "Styling Vectors in a Mesh Layer with arrows"
+msgstr "Styling av vektorer i ett mesh-lager med pilar"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:344
+msgid ""
+"Mesh vector dataset can be styled using various types of "
+":guilabel:`Symbology`:"
+msgstr ""
+"Mesh-vektordataset kan utformas med hjälp av olika typer av "
+":guilabel:`Symbologi`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:346
+msgid ""
+"**Arrows**: vectors are represented with arrows at the same place as they "
+"are defined in the raw dataset (i.e. on the nodes or center of elements) or "
+"on a user-defined grid (hence, they are evenly distributed). The arrow "
+"length is proportional to the magnitude of the arrow as defined in the raw "
+"data but can be scaled by various methods."
+msgstr ""
+"**Pilar**: vektorer representeras med pilar på samma plats som de definieras"
+" i rådatasetet (dvs. på noderna eller i mitten av elementen) eller på ett "
+"användardefinierat rutnät (de är alltså jämnt fördelade). Pilens längd är "
+"proportionell mot pilens storlek enligt definitionen i rådata, men kan "
+"skalas med olika metoder."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:351
+msgid ""
+"**Streamlines**: vectors are represented with streamlines seeded from start "
+"points. The seeding points can start from the vertices of the mesh, from a "
+"user grid or randomly."
+msgstr ""
+"**Streamlines**: vektorer representeras med strömlinjer som utgår från "
+"startpunkter. Startpunkterna kan utgå från nätets hörn, från ett användarnät"
+" eller slumpmässigt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:354
+msgid ""
+"**Traces**: a nicer animation of the streamlines, the kind of effect you get"
+" when you randomly throws sand in the water and see where the sand items "
+"flows."
+msgstr ""
+"**Traces**: en snyggare animation av strömlinjerna, den typ av effekt du får"
+" när du slumpmässigt kastar sand i vattnet och ser var sandföremålen flyter."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:356
+msgid ""
+"**Wind barbs**: vectors are represented with wind barbs, a common way to "
+"represent wind speed and direction."
+msgstr ""
+"**Vindpinnar**: vektorer representeras med vindpinnar, ett vanligt sätt att "
+"representera vindhastighet och riktning."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:359
+msgid ""
+"Available properties depend on the selected symbology as shown in the "
+"following table."
+msgstr ""
+"Vilka egenskaper som är tillgängliga beror på den valda symbologin enligt "
+"följande tabell."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:361
+msgid "Availability and meaning of the vectors symbology properties"
+msgstr "Tillgänglighet och innebörd av egenskaperna för symbologin vektorer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:364
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:746
+msgid "Label"
+msgstr "Label"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:364
+msgid "Description and Properties"
+msgstr "Beskrivning och egenskaper"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:364
+msgid "Arrow"
+msgstr "Pil"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:364
+msgid "Streamlines"
+msgstr "Streamlines"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:364
+msgid "Traces"
+msgstr "Spår"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:364
+msgid "Wind Barbs"
+msgstr "Wind Barbs"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:366
+msgid ":guilabel:`Line width`"
+msgstr ":guilabel:`Linjebredd`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:366
+msgid "Width of the vector representation"
+msgstr "Bredd på vektorrepresentationen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:366
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:368
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:372
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:375
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:378
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:381
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:386
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:389
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:391
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:393
+msgid "|checkbox|"
+msgstr "|checkbox|"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1237
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:368
+msgid ":guilabel:`Coloring method`"
+msgstr ":guilabel:`Färgningsmetod`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:368
+msgid "a :guilabel:`Single color` assigned to all vectors"
+msgstr "en :guilabel:`Enkel färg` som tilldelas alla vektorer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:369
+msgid ""
+"or a variable color based on vectors magnitude, using a :ref:`Color ramp "
+"shader <color_ramp_shader>`"
+msgstr ""
+"eller en variabel färg baserad på vektorstorleken, med hjälp av en "
+":ref:`Color ramp shader <color_ramp_shader>``"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:372
+msgid ":guilabel:`Filter by magnitude`"
+msgstr ":guilabel:`Filtrera efter magnitud`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:372
+msgid ""
+"Only vectors whose length for the selected dataset falls between a "
+":guilabel:`Min` and :guilabel:`Max` range are displayed"
+msgstr ""
+"Endast vektorer vars längd för den valda datauppsättningen ligger inom "
+"intervallen :guilabel:`Min` och :guilabel:`Max` visas"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:375
+msgid ":guilabel:`Display on user grid`"
+msgstr ":guilabel:`Visa på användarens rutnät`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:375
+msgid ""
+"Places the vector on a grid with custom :guilabel:`X spacing` and "
+":guilabel:`Y spacing` and interpolates their length based on neighbours"
+msgstr ""
+"Placerar vektorn på ett rutnät med anpassade :guilabel:`X spacing` och "
+":guilabel:`Y spacing` och interpolerar deras längd baserat på grannar"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:378
+msgid ":guilabel:`Head options`"
+msgstr ":guilabel:`Huvudalternativ`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:378
+msgid ""
+":guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage "
+"of its shaft length"
+msgstr ""
+":guilabel:`Längd` och :guilabel:`Bredd` på pilspetsen, som en procentandel "
+"av dess skaftlängd"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:381
+msgid ":guilabel:`Arrow length`"
+msgstr ":guilabel:`Pilens längd`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:381
+msgid ""
+"**Defined by Min and Max**: You specify the minimum and maximum length for "
+"the arrows, QGIS will interpolate their size based on the underlying "
+"vector's magnitude"
+msgstr ""
+"**Definieras av Min och Max**: Du anger den minsta och största längden för "
+"pilarna, QGIS interpolerar deras storlek baserat på den underliggande "
+"vektorns magnitud"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:383
+msgid ""
+"**Scale to magnitude**: arrow length is proportional to their vector's "
+"magnitude"
+msgstr ""
+"**Skala till magnitud**: pilarnas längd är proportionell mot deras vektors "
+"magnitud"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:384
+msgid "**Fixed**: all the vectors are shown with the same length"
+msgstr "**Fixed**: alla vektorer visas med samma längd"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:386
+msgid ":guilabel:`Streamlines seeding method`"
+msgstr ":guilabel:`Streamlines såddmetod`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:386
+msgid "**On mesh/grid**: relies on the user grid to display the vectors"
+msgstr ""
+"**På mesh/grid**: förlitar sig på användarens grid för att visa vektorerna"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:387
+msgid ""
+"**Randomly**: vector placement is randomly done with respect to a certain "
+"density"
+msgstr ""
+"**Slumpmässigt**: Vektorplaceringen görs slumpmässigt med hänsyn till en "
+"viss densitet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:389
+msgid ":guilabel:`Particles count`"
+msgstr ":guilabel:`Partikelantal`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:389
+msgid "The amount of \"sand\" you want to throw into visualisation"
+msgstr "Mängden \"sand\" som du vill lägga i visualiseringen"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:391
+msgid ":guilabel:`Max tail length`"
+msgstr ":guilabel:`Max svanslängd`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:391
+msgid "The time until the particle fades out"
+msgstr "Tiden tills partikeln tonar ut"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:393
+msgid ":guilabel:`Wind Barbs`"
+msgstr ":guilabel:`Wind Barbs`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:393
+msgid ""
+"**Length**: Specifies the length of the wind barbs. Choose the units from a "
+"drop-down menu."
+msgstr ""
+"**Längd**: Anger längden på vindhakarna. Välj enhet från en rullgardinsmeny."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:395
+msgid ""
+"**Data Units**: Specifies the units of wind speed data. Wind barbs encode "
+"the wind in knots (nautical miles per hour). Therefore, you should select "
+"the units that your data are in, or use a custom :guilabel:`Multiplier` to "
+"convert your data units to knots. This ensures that the wind speed is "
+"accurately represented."
+msgstr ""
+"**Dataenheter**: Anger enheterna för vindhastighetsdata. Wind barbs kodar "
+"vinden i knop (nautiska mil per timme). Därför bör du välja de enheter som "
+"dina data är i, eller använda en anpassad :guilabel:`Multiplier` för att "
+"konvertera dina dataenheter till knop. På så sätt säkerställs att "
+"vindhastigheten återges på ett korrekt sätt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:404
+msgid "Rendering"
+msgstr "Rendering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:406
+msgid ""
+"In the tab |meshframe| :sup:`Rendering` tab, QGIS offers possibilities to "
+"display and customize the mesh structure. :guilabel:`Line width` and "
+":guilabel:`Line color` can be set to represent:"
+msgstr ""
+"På fliken |meshframe| :sup:`Rendering` erbjuder QGIS möjligheter att visa "
+"och anpassa nätstrukturen. :guilabel:`Line width` och :guilabel:`Line color`"
+" kan ställas in för att representera:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1295
+msgid "meshframe"
+msgstr "meshframe"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:410
+msgid "the edges for 1D meshes"
+msgstr "kanterna för 1D-mesh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:411
+msgid "For 2D meshes:"
+msgstr "För 2D-mesh:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:413
+msgid ""
+":guilabel:`Native mesh rendering`: shows original faces and edges from the "
+"layer"
+msgstr ""
+":guilabel:`Native mesh rendering`: visar originalytor och kanter från lagret"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:414
+msgid ""
+":guilabel:`Triangular mesh rendering`: adds more edges and displays the "
+"faces as triangles"
+msgstr ""
+":guilabel:`Triangular mesh rendering`: lägger till fler kanter och visar "
+"ytorna som trianglar"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:422
+msgid "2D Mesh Rendering"
+msgstr "rendering av 2D-nät"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:428
+msgid "Stacked mesh averaging method"
+msgstr "Metod för medelvärdesberäkning av staplade nät"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:430
+msgid ""
+"3D layered meshes consist of multiple stacked 2D unstructured meshes each "
+"extruded in the vertical direction (``levels``) by means of a vertical "
+"coordinate. The vertices and faces have the same topology in each vertical "
+"level. Values are usually stored on the volumes that are regularly stacked "
+"over base 2d mesh. In order to visualise them on 2D canvas, you need to "
+"convert values on volumes (3d) to values on faces (2d) that can be shown in "
+"mesh layer. The |meshaveraging| :sup:`Stacked mesh averaging method` "
+"provides different averaging/interpolation methods to handle this."
+msgstr ""
+"3D-skiktade nät består av flera staplade ostrukturerade 2D-nät som var och "
+"en extruderas i vertikal riktning (``nivåer``) med hjälp av en vertikal "
+"koordinat. Topparna och ytorna har samma topologi i varje vertikal nivå. "
+"Värdena lagras vanligen på volymer som regelbundet staplas över basens "
+"2D-maskor. För att kunna visualisera dem på en 2D-bild måste du konvertera "
+"värden på volymer (3d) till värden på ytor (2d) som kan visas i mesh-lagret."
+" Metoden |meshaveraging| :sup:`Stacked mesh averaging method` "
+"tillhandahåller olika metoder för medelvärdesberäkning/interpolation för att"
+" hantera detta."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1289
+msgid "meshaveraging"
+msgstr "meshaveraging"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:439
+msgid ""
+"You can select the method to derive the 2D datasets and corresponding "
+"parameters (level index, depth or height values). For each method, an "
+"example of application is shown in the dialog but you can read more on the "
+"methods at https://fvwiki.tuflow.com/Depth_Averaging_Results."
+msgstr ""
+"Du kan välja metod för att härleda 2D-dataset och motsvarande parametrar "
+"(nivåindex, djup- eller höjdvärden). För varje metod visas ett exempel på "
+"tillämpning i dialogrutan, men du kan läsa mer om metoderna på "
+"https://fvwiki.tuflow.com/Depth_Averaging_Results."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:448
+msgid "Labels Properties"
+msgstr "Etiketter Egenskaper"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:450
+msgid ""
+"The |labelingSingle| :guilabel:`Labels` tab offers you dynamic labeling of "
+"mesh vertices and native mesh faces based on geometric properties and custom"
+" expressions. This dialog can also be accessed from the :guilabel:`Layer "
+"Styling` panel."
+msgstr ""
+"Fliken |labelingSingle| :guilabel:`Labels` ger dig dynamisk märkning av "
+"mesh-vertikaler och native mesh-ytor baserat på geometriska egenskaper och "
+"anpassade uttryck. Denna dialogruta kan också nås från panelen "
+":guilabel:`Layer Styling`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:459
+msgid "Mesh Labels Properties"
+msgstr "Egenskaper för nätetiketter"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:461
+msgid ""
+"Choose the labeling method from the drop-down list. Available methods are:"
+msgstr "Välj märkningsmetod från rullgardinsmenyn. Tillgängliga metoder är:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:464
+msgid ""
+"|labelingNone| :guilabel:`No labels`: the default value, showing no labels "
+"from the layer."
+msgstr ""
+"|labelingNone| :guilabel:`No labels`: standardvärdet, visar inga etiketter "
+"från lagret."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1263
+msgid "labelingNone"
+msgstr "labelingNone"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:466
+msgid ""
+"|labelingSingle| :guilabel:`Labels on vertices`: labels the mesh vertices as"
+" a point feature."
+msgstr ""
+"|labelingSingle| :guilabel:`Märker på hörn`: märker nätets hörn som en "
+"punktfunktion."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:467
+msgid ""
+"|labelingSingle| :guilabel:`Labels on faces`: labels the mesh faces as a "
+"polygon feature."
+msgstr ""
+"|labelingSingle| :guilabel:`Märker på ytor`: märker nätets ytor som en "
+"polygonfunktion."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:474
+msgid "Mesh Labeling methods"
+msgstr "Metoder för märkning av nät"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:476
+msgid ""
+"Once the labeling method has been selected, open |expression| "
+":sup:`Expression dialog` and choose a :ref:`mesh function "
+"<expression_function_meshes>`. You can combine meshes functions with other "
+"functions from the :ref:`list <functions_list>` to modify the label."
+msgstr ""
+"När du har valt märkningsmetod öppnar du |expression| :sup:`Expression "
+"dialog` och väljer en :ref:`mesh-funktion <expression_function_meshes>`. Du "
+"kan kombinera meshes-funktioner med andra funktioner från :ref:`listan "
+"<functions_list>` för att ändra etiketten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1249
+msgid "expression"
+msgstr "expression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:481
+msgid ""
+"Below are displayed options to customize the labels, under various tabs:"
+msgstr ""
+"Nedan visas alternativ för att anpassa etiketterna, under olika flikar:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:483
+msgid "|text| :ref:`Text <labels_text>`"
+msgstr "|text| :ref:`Text <etiketter_text>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1325
+msgid "text"
+msgstr "text"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:484
+msgid "|labelformatting| :ref:`Formatting <labels_formatting>`"
+msgstr "|labelformatering| :ref:`Formatering <labels_formatting>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1261
+msgid "labelformatting"
+msgstr "labelformatting"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:485
+msgid "|labelbuffer| :ref:`Buffer <labels_buffer>`"
+msgstr "|labelbuffer| :ref:`Buffer <labels_buffer>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1257
+msgid "labelbuffer"
+msgstr "labelbuffer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:486
+msgid "|labelmask| :ref:`Mask <labels_mask>`"
+msgstr "|labelmask| :ref:`Mask <labels_mask>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1267
+msgid "labelmask"
+msgstr "labelmask"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:487
+msgid "|labelbackground| :ref:`Background <labels_background>`"
+msgstr "|labelbackground| :ref:`Bakgrund <labels_background>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1255
+msgid "labelbackground"
+msgstr "labelbackground"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:488
+msgid "|labelshadow| :ref:`Shadow <labels_shadow>`"
+msgstr "|labelshadow| :ref:`Skugga <labels_shadow>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1271
+msgid "labelshadow"
+msgstr "labelshadow"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:489
+msgid "|labelcallout| :ref:`Callouts <labels_callouts>`"
+msgstr "|labelcallout| :ref:`Callouts <labels_callouts>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1259
+msgid "labelcallout"
+msgstr "labelcallout"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:490
+msgid "|labelplacement| :ref:`Placement <labels_placement>`"
+msgstr "|labelplacement| :ref:`Placement <labels_placement>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1269
+msgid "labelplacement"
+msgstr "labelplacement"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:491
+msgid "|render| :ref:`Rendering <labels_rendering>`"
+msgstr "|render| :ref:`Rendering <etiketter_rendering>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1307
+msgid "render"
+msgstr "render"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:493
+msgid ""
+"Description of how to set each property is exposed at :ref:`showlabels`."
+msgstr ""
+"Beskrivning av hur man ställer in varje egenskap finns på :ref:`showlabels`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:499
+msgid "3D View Properties"
+msgstr "egenskaper för 3D-vy"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:501
+msgid ""
+"Mesh layers can be used as :ref:`terrain in a 3D map view "
+"<scene_configuration>` based on their vertices Z values. From the |3d| "
+":guilabel:`3D View` properties tab, it's also possible to render the mesh "
+"layer's dataset in the same 3D view. Therefore, the vertical component of "
+"the vertices can be set equal to dataset values (for example, level of water"
+" surface) and the texture of the mesh can be set to render other dataset "
+"values with color shading (for example velocity)."
+msgstr ""
+"Mesh-lager kan användas som :ref:`terrain i en 3D-kartvy "
+"<scene_configuration>` baserat på deras vertikala Z-värden. Från "
+"egenskapsfliken |3d| :guilabel:`3D View` är det också möjligt att rendera "
+"mesh-skiktets dataset i samma 3D-vy. Därför kan den vertikala komponenten i "
+"vertikalerna ställas in lika med datasetvärden (t.ex. vattenytans nivå) och "
+"mesh-strukturen kan ställas in för att återge andra datasetvärden med "
+"färgskuggning (t.ex. hastighet)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:513
+msgid "Mesh dataset 3D properties"
+msgstr "Mesh-dataset 3D-egenskaper"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:515
+msgid ""
+"Check |checkbox| :guilabel:`Enable 3D Renderer` and you can edit following "
+"properties:"
+msgstr ""
+"Markera |checkbox| :guilabel:`Enable 3D Renderer` och du kan redigera "
+"följande egenskaper:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:518
+msgid "Under :guilabel:`Triangle settings`"
+msgstr "Under :guilabel:`Triangelinställningar`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:520
+msgid ""
+":guilabel:`Smooth triangles`: Angles between consecutive triangles are "
+"smoothed for a better 3D rendering"
+msgstr ""
+":guilabel:`Utjämnade trianglar`: Vinklar mellan på varandra följande "
+"trianglar jämnas ut för en bättre 3D-rendering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:522
+msgid ""
+":guilabel:`Show wireframe` whose you can set the :guilabel:`Line width` and "
+":guilabel:`Color`"
+msgstr ""
+":guilabel:`Show wireframe` där du kan ställa in :guilabel:`Line width` och "
+":guilabel:`Color`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:527
+msgid ""
+":guilabel:`Level of detail`: Controls how :ref:`simplified <meshrendering>` "
+"the mesh layer to render should be. On the far right, it is the base mesh, "
+"and the more you go left, the more the layer is simplified and is rendered "
+"with less details. This option is only available if the :guilabel:`Simplify "
+"mesh` option under the :guilabel:`Rendering` tab is activated."
+msgstr ""
+":guilabel:`Detaljnivå`: Styr hur :ref:``förenklat <meshrendering>` mesh-"
+"lagret som ska renderas ska vara. Längst till höger är det basmeshen, och ju"
+" mer du går åt vänster, desto mer förenklas lagret och återges med färre "
+"detaljer. Detta alternativ är endast tillgängligt om alternativet "
+":guilabel:`Simplify mesh` under fliken :guilabel:`Rendering` är aktiverat."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:533
+msgid ""
+":guilabel:`Vertical settings` to control behavior of the vertical component "
+"of vertices of rendered triangles:"
+msgstr ""
+":guilabel:`Vertikala inställningar` för att styra beteendet för den "
+"vertikala komponenten i topparna i renderade trianglar:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:536
+msgid ""
+":guilabel:`Dataset group for vertical value`: the dataset group that will be"
+" used for the vertical component of the mesh"
+msgstr ""
+":guilabel:`Datasetgrupp för vertikalt värde`: den datasetgrupp som ska "
+"användas för maskans vertikala komponent"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:538
+msgid ""
+"|unchecked|:guilabel:`Dataset value relative to vertices Z value`: whether "
+"to consider the dataset values as absolute Z coordinate or relative to the "
+"vertices native Z value"
+msgstr ""
+"|unchecked|:guilabel:`Dataset-värde i förhållande till hörnens Z-värde`: om "
+"dataset-värdena ska betraktas som absoluta Z-koordinater eller i förhållande"
+" till hörnens ursprungliga Z-värde"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:541
+msgid ""
+":guilabel:`Vertical scale`: the scale factor to apply to the dataset Z "
+"values"
+msgstr ""
+":guilabel:`Vertical scale`: den skalfaktor som ska tillämpas på datasetets "
+"Z-värden"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:543
+msgid ""
+":guilabel:`Rendering color settings` with a :guilabel:`Rendering style` that"
+" can be based on the color ramp shader set in :ref:`mesh_symbology_contours`"
+" (:guilabel:`2D contour color ramp shader`) or as a :guilabel:`Single color`"
+" with an associated :guilabel:`Mesh color`"
+msgstr ""
+":guilabel:`Rendering color settings` med en :guilabel:`Rendering style` som "
+"kan baseras på den färgrampshader som anges i :ref:`mesh_symbology_contours`"
+" (:guilabel:`2D contour color ramp shader`) eller som en :guilabel:`Single "
+"color` med en associerad :guilabel:`Mesh color`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:547
+msgid ""
+":guilabel:`Show arrows`: displays arrows on mesh layer dataset 3D entity, "
+"based on the same vector dataset group used in the :ref:`vector 2D rendering"
+" <mesh_symbology_vectors>`. They are displayed using the 2D color setting. "
+"It's also possible to define the :guilabel:`Arrow spacing` and, if it's of a"
+" :guilabel:`Fixed size` or scaled on magnitude. This spacing setting defines"
+" also the max size of arrows because arrows can't overlap."
+msgstr ""
+":guilabel:``Show arrows``: visar pilar på meshskiktets dataset 3D-enhet, "
+"baserat på samma vektor-datasetgrupp som används i :ref:``vector 2D "
+"rendering <mesh_symbology_vectors>`. De visas med hjälp av "
+"2D-färginställningen. Det är också möjligt att definiera "
+":guilabel:`Pilavstånd` och om det är en :guilabel:`Fixerad storlek` eller "
+"skalad på magnitud. Denna inställning för avstånd definierar också "
+"maxstorleken för pilar eftersom pilar inte kan överlappa varandra."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:559
+msgid "Rendering Properties"
+msgstr "Rendering av egenskaper"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:566
+msgid "Mesh rendering properties"
+msgstr "Egenskaper för rendering av nät"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:568
+msgid ""
+"Under the :guilabel:`Scale dependent visibility` group box, you can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scale, "
+"defining a range of scale in which mesh elements will be visible. Out of "
+"this range, they are hidden. The |mapIdentification| :sup:`Set to current "
+"canvas scale` button helps you use the current map canvas scale as boundary "
+"of the range visibility. See :ref:`label_scaledepend` for more information."
+msgstr ""
+"I grupprutan :guilabel:`Scale dependent visibility` kan du ställa in "
+":guilabel:`Maximum (inclusive)` och :guilabel:`Minimum (exclusive)` skala, "
+"vilket definierar ett skalområde inom vilket mesh-element kommer att vara "
+"synliga. Utanför detta intervall är de dolda. Knappen |mapIdentification| "
+":sup:`Set to current canvas scale` hjälper dig att använda den aktuella "
+"kartans canvasskala som gräns för synlighetsområdet. Se "
+":ref:`label_scaledepend` för mer information."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1275
+msgid "mapIdentification"
+msgstr "mapIdentification"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:578
+msgid ""
+"You can also activate scale dependent visibility on a layer from within the "
+":guilabel:`Layers` panel: right-click on the layer and in the contextual "
+"menu, select :guilabel:`Set Layer Scale Visibility`."
+msgstr ""
+"Du kan också aktivera skalberoende synlighet på ett lager från panelen "
+":guilabel:`Layers`: högerklicka på lagret och välj :guilabel:`Set Layer "
+"Scale Visibility` i snabbmenyn."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:582
+msgid ""
+"As mesh layers can have millions of faces, their rendering can sometimes be "
+"very slow, especially when all the faces are displayed in the view whereas "
+"they are too small to be viewed. To speed up the rendering, you can simplify"
+" the mesh layer, resulting in one or more meshes representing different "
+":ref:`levels of detail <levelofdetail>` and select at which level of detail "
+"you would like QGIS to render the mesh layer. Note that the simplify mesh "
+"contains only triangular faces."
+msgstr ""
+"Eftersom mesh-lager kan ha miljontals ytor kan renderingen av dem ibland "
+"vara mycket långsam, särskilt när alla ytor visas i vyn trots att de är för "
+"små för att kunna ses. För att snabba upp renderingen kan du förenkla mesh-"
+"lagret, vilket resulterar i ett eller flera nät som representerar olika "
+":ref:`detaljnivåer <levelofdetail>` och välja på vilken detaljnivå du vill "
+"att QGIS ska rendera mesh-lagret. Observera att det förenklade nätet endast "
+"innehåller triangulära ytor."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:590
+msgid ""
+"From the |rendering| :guilabel:`Rendering` tab, check |checkbox| "
+":guilabel:`Simplify mesh` and set:"
+msgstr ""
+"På fliken |rendering| :guilabel:`Rendering`, markera |checkbox| "
+":guilabel:`Simplify mesh` och ställ in:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:593
+msgid ""
+"a :guilabel:`Reduction factor`: Controls generation of successive levels of "
+"simplified meshes. For example, if the base mesh has 5M faces, and the "
+"reduction factor is 10, the first simplified mesh will have approximately "
+"500 000 faces, the second 50 000 faces, the third 5000,... If a higher "
+"reduction factor leads quickly to simpler meshes (i.e. with triangles of "
+"bigger size), it produces also fewer levels of detail."
+msgstr ""
+"a :guilabel:`Reduktionsfaktor`: Styr genereringen av successiva nivåer av "
+"förenklade nät. Om t.ex. basnätet har 5 miljoner ytor och reduktionsfaktorn "
+"är 10, kommer det första förenklade nätet att ha ungefär 500 000 ytor, det "
+"andra 50 000 ytor, det tredje 5000, ... Om en högre reduktionsfaktor snabbt "
+"leder till enklare nät (dvs. med trianglar av större storlek), ger den också"
+" färre detaljnivåer."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:600
+msgid ""
+":guilabel:`Minimum triangle size`: the average size (in pixels) of the "
+"triangles that is permitted to display. If the average size of the mesh is "
+"lesser than this value, the rendering of a lower level of details mesh is "
+"triggered."
+msgstr ""
+":guilabel:`Minsta triangelstorlek`: den genomsnittliga storleken (i pixlar) "
+"på de trianglar som får visas. Om nätets genomsnittliga storlek är mindre än"
+" detta värde utlöses rendering av ett nät med lägre detaljnivå."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:610
+msgid "Temporal Properties"
+msgstr "Temporala egenskaper"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:612
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab provides options to control the "
+"rendering of the layer over time. It allows to dynamically display temporal "
+"values of the enabled dataset groups. Such a dynamic rendering requires the "
+":ref:`temporal navigation <maptimecontrol>` to be enabled over the map "
+"canvas."
+msgstr ""
+"Fliken |temporal| :guilabel:`Temporal` ger alternativ för att styra "
+"återgivningen av skiktet över tid. Det gör det möjligt att dynamiskt visa "
+"temporära värden för de aktiverade datasetgrupperna. En sådan dynamisk "
+"rendering kräver att :ref:``temporal navigation <maptimecontrol>`` är "
+"aktiverad över kartans canvas."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:623
+msgid "Mesh Temporal properties"
+msgstr "Mesh Temporala egenskaper"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:625
+msgid "**Layer temporal settings**"
+msgstr "**Temporära inställningar för skikt**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:627
+msgid ""
+":guilabel:`Reference time` of the dataset group, as an absolute date time. "
+"By default, QGIS parses the source layer and returns the first valid "
+"reference time in the layer's dataset group. If unavailable, the value will "
+"be set by the project time range or fall back to the current date. The "
+":guilabel:`Start time` and :guilabel:`End time` to  consider are then "
+"calculated based on the internal timestamp step of the dataset."
+msgstr ""
+":guilabel:`Reference time` i datasetgruppen, som ett absolut tidsdatum. Som "
+"standard analyserar QGIS källskiktet och returnerar den första giltiga "
+"referenstiden i skiktets datasetgrupp. Om den inte är tillgänglig kommer "
+"värdet att ställas in av projektets tidsintervall eller falla tillbaka till "
+"aktuellt datum. De :guilabel:`Starttid` och :guilabel:`Sluttid` som ska "
+"beaktas beräknas sedan baserat på det interna tidsstämpelsteget i datasetet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:635
+msgid ""
+"It is possible to set a custom :guilabel:`Reference time` (and then the time"
+" range), and revert the changes using the |refresh| :sup:`Reload from "
+"provider` button. With |checkbox| :guilabel:`Always take reference time from"
+" data source` checked, you ensure that the time properties are updated from "
+"the file each time the layer is reloaded or the project reopened."
+msgstr ""
+"Det är möjligt att ange en anpassad :guilabel:`Reference time` (och sedan "
+"tidsintervallet) och återgå till ändringarna med hjälp av knappen |refresh| "
+":sup:`Reload from provider`. Om du markerar kryssrutan :guilabel:`Alltid ta "
+"referenstid från datakällan` säkerställer du att tidsegenskaperna uppdateras"
+" från filen varje gång lagret laddas om eller projektet öppnas på nytt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:640
+msgid ""
+":guilabel:`Dataset matching method`: determines the dataset to display at "
+"the given time. Options are :guilabel:`Find closest dataset before requested"
+" time` or :guilabel:`Find closest dataset from requested time (after or "
+"before)`."
+msgstr ""
+":guilabel:`Dataset matching method`: avgör vilken dataset som ska visas vid "
+"den angivna tidpunkten. Alternativen är :guilabel:`Find closest dataset "
+"before requested time` eller :guilabel:`Find closest dataset from requested "
+"time (after or before)`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:644
+msgid "**Provider time settings**"
+msgstr "**Leverantörens tidsinställningar**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:646
+msgid ""
+":guilabel:`Time unit` extracted from the raw data, or user defined. This can"
+" be used to align the speed of the mesh layer with other layers in the "
+"project during map time navigation. Supported units are :guilabel:`Seconds`,"
+" :guilabel:`Minutes`, :guilabel:`Hours` and :guilabel:`Days`."
+msgstr ""
+":guilabel:`Tidsenhet` extraherad från rådata, eller användardefinierad. "
+"Detta kan användas för att anpassa mesh-skiktets hastighet till andra skikt "
+"i projektet under karttidsnavigering. Enheter som stöds är "
+":guilabel:`Seconds`, :guilabel:`Minutes`, :guilabel:`Hours` och "
+":guilabel:`Days`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:657
+msgid "Elevation Properties"
+msgstr "Elevation Egenskaper"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:659
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and :ref:`2D map view <label_mapview>` and its appearance in the "
+":ref:`profile tool charts <label_elevation_profile_view>`. Specifically, you"
+" can configure how heights from your dataset are interpreted:"
+msgstr ""
+"På fliken |elevationscale| :guilabel:`Elevation` finns alternativ för att "
+"styra skiktets höjdegenskaper i en :ref:`3D-kartvy <label_3dmapview>` och "
+":ref:`2D-kartvy <label_mapview>` och dess utseende i :ref:`profile tool "
+"charts <label_elevation_profile_view>`. Du kan särskilt konfigurera hur "
+"höjder från din datauppsättning ska tolkas:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:669
+msgid "Mesh Elevation properties"
+msgstr "Egenskaper för Mesh Elevation"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:671
+msgid ""
+":guilabel:`From vertices`: how the mesh layer vertices Z values should be "
+"interpreted as terrain elevation. You can apply a :guilabel:`Scale` factor "
+"and an :guilabel:`Offset`. This setting is available for :ref:`3D map view "
+"<label_3dmapview>` and :ref:`profile tool charts "
+"<label_elevation_profile_view>`."
+msgstr ""
+":guilabel:`From vertices`: hur Z-värdena för meshskiktets vertikaler ska "
+"tolkas som terränghöjd. Du kan använda en :guilabel:`Scale`-faktor och en "
+":guilabel:`Offset`. Den här inställningen är tillgänglig för :ref:`3D map "
+"view <label_3dmapview>` och :ref:`profile tool charts "
+"<label_elevation_profile_view>`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:676
+msgid ""
+":guilabel:`Fixed Elevation Range`: the mesh layer is linked to a fixed "
+"elevation range. This mode is applicable when a layer has either a single "
+"fixed elevation or a range (slice) of elevation values. If a range is "
+"specified, mesh values will be extruded over this range. You can set the "
+":guilabel:`Lower` and :guilabel:`Upper` elevation range values for the "
+"layer, and specify whether the lower or upper :guilabel:`Limits` are "
+"inclusive or exclusive. When enabled, the layer will only be visible in "
+":ref:`elevation filtered 2D maps <elevation_controller>` when the layer's "
+"range is included in the map's Z range."
+msgstr ""
+":guilabel:`Fixed Elevation Range`: nätskiktet är kopplat till ett fast "
+"höjdintervall. Detta läge är tillämpligt när ett skikt antingen har en enda "
+"fast höjd eller ett intervall (skiva) av höjdvärden. Om ett intervall anges "
+"kommer mesh-värdena att extruderas över detta intervall. Du kan ställa in "
+":guilabel:`Lower` och :guilabel:`Upper` höjdintervallvärden för lagret och "
+"ange om de nedre eller övre :guilabel:`Limits` är inkluderande eller "
+"exklusiva. När skiktet är aktiverat kommer det endast att vara synligt i "
+":ref:``höjdfiltrerade 2D-kartor <elevation_controller>` när skiktets "
+"intervall ingår i kartans Z-intervall."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:684
+msgid ""
+":guilabel:`Fixed Elevation Range Per Group`: each group in the mesh layer is"
+" associated with a fixed elevation range. This mode can be used when a layer"
+" has elevation data exposed through different dataset groups. This feature "
+"is exposed as a user-editable table for dataset groups with lower and upper "
+"values. You can either populate the lower and upper values manually or use "
+"an |expression| :guilabel:`Expression` to auto-fill all group values based "
+"on an expression. When enabled, the layer will be filtered in the :ref:`2D "
+"map view <label_mapview>`, displaying only values within the map filter "
+"ranges. In :ref:`3D map view <label_3dmapview>` or :ref:`profile tool charts"
+" <label_elevation_profile_view>`, the full extent of the layer will be "
+"displayed, ignoring the filtering."
+msgstr ""
+":guilabel:`Fixed Elevation Range Per Group`: varje grupp i mesh-skiktet är "
+"associerad med ett fast höjdintervall. Detta läge kan användas när ett skikt"
+" har höjddata som exponeras genom olika datasetgrupper. Den här funktionen "
+"visas som en användarredigerbar tabell för datasetgrupper med lägre och "
+"högre värden. Du kan antingen fylla i de nedre och övre värdena manuellt "
+"eller använda ett |uttryck| :guilabel:`Expression` för att automatiskt fylla"
+" i alla gruppvärden baserat på ett uttryck. När detta är aktiverat filtreras"
+" skiktet i :ref:`2D-kartvyn <label_mapview>` och visar endast värden inom "
+"kartfiltrets intervall. I :ref:`3D map view <label_3dmapview>` eller "
+":ref:`profile tool charts <label_elevation_profile_view>` visas skiktets "
+"hela utsträckning, utan hänsyn till filtreringen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:694
+msgid ""
+":guilabel:`Profile Chart Appearance`: controls the rendering of the mesh "
+"elements elevation in the profile chart. The profile :guilabel:`Style` can "
+"be set as:"
+msgstr ""
+":guilabel:`Profile Chart Appearance`: styr återgivningen av nätelementens "
+"höjd i profildiagrammet. Profilen :guilabel:`Style` kan ställas in som:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:698
+msgid ""
+"a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`"
+msgstr ""
+"en :guilabel:`Linje` med en specifik :ref:`Linjestil <vektor_linjesymboler>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:699
+msgid ""
+"an elevation surface rendered using a fill symbol either above "
+"(:guilabel:`Fill above`) or below (:guilabel:`Fill below`) the elevation "
+"curve line. The surface symbology is represented using:"
+msgstr ""
+"en höjdyta som återges med en fyllnadssymbol antingen ovanför "
+"(:guilabel:`Fill above`) eller nedanför (:guilabel:`Fill below`) höjdkurvans"
+" linje. Ytsymboliken representeras med hjälp av:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:703
+msgid "a :ref:`Fill style <vector_fill_symbols>`"
+msgstr "a :ref:`Fyllstil <vektor_fill_symboler>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:704
+msgid ""
+"and a :guilabel:`Limit`: the maximum (respectively minimum) altitude "
+"determining how high the fill surface will be"
+msgstr ""
+"och en :guilabel:`Limit`: den maximala (respektive minimala) höjden som "
+"bestämmer hur hög fyllnadsytan kommer att vara"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:712
+msgid "Metadata Properties"
+msgstr "Egenskaper för metadata"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:714
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"Fliken |editMetadata| :guilabel:`Metadata` ger dig alternativ för att skapa "
+"och redigera en metadatarapport om ditt lager. Se :ref:`metadatamenu` för "
+"mer information."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:722
+msgid "Editing a mesh layer"
+msgstr "Redigera ett mesh-lager"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:724
+msgid ""
+"QGIS allows to :ref:`create a mesh layer <vector_create_mesh>` from scratch "
+"or based on an existing one. You can create/modify the geometries of the new"
+" layer whom you can assign datasets afterwards. It's also possible to edit "
+"an existing mesh layer. Because the editing operation requires a frames-only"
+" layer, you will be asked to either remove any associated datasets first "
+"(make sure you have them available if they still are necessary) or create a "
+"copy (only geometries) of the layer."
+msgstr ""
+"QGIS gör det möjligt att :ref:`skapa ett mesh-lager <vector_create_mesh>` "
+"från grunden eller baserat på ett befintligt. Du kan skapa/ändra "
+"geometrierna i det nya skiktet som du kan tilldela dataset efteråt. Det är "
+"också möjligt att redigera ett befintligt mesh-lager. Eftersom "
+"redigeringsoperationen kräver ett lager med endast ramar kommer du att bli "
+"ombedd att antingen ta bort alla associerade dataset först (se till att du "
+"har dem tillgängliga om de fortfarande behövs) eller skapa en kopia (endast "
+"geometrier) av lagret."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:732
+msgid ""
+"QGIS does not allow to digitize edges on mesh layers. Only vertices and "
+"faces are mesh elements that can be created. Also not all supported mesh "
+"formats can be edited in QGIS (see `permissions "
+"<https://github.com/lutraconsulting/MDAL?tab=readme-ov-file#supported-"
+"formats>`__)."
+msgstr ""
+"QGIS tillåter inte att kanter digitaliseras på mesh-lager. Endast hörn och "
+"ytor är mesh-element som kan skapas. Alla mesh-format som stöds kan inte "
+"heller redigeras i QGIS (se `permissions "
+"<https://github.com/lutraconsulting/MDAL?tab=readme-ov-file#supported-"
+"formats>`__)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:739
+msgid "Overview of the mesh digitizing tools"
+msgstr "Översikt över digitaliseringsverktygen för nät"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:741
+msgid ""
+"To interact with or edit a base mesh layer element, following tools are "
+"available."
+msgstr ""
+"Följande verktyg finns tillgängliga för att interagera med eller redigera "
+"ett element i basnätskiktet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:743
+msgid "Tools for mesh digitizing"
+msgstr "Verktyg för digitalisering av nät"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:747
+msgid "Purpose"
+msgstr "Syfte"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:748
+msgid "Location"
+msgstr "Plats"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:749
+msgid "|allEdits| :sup:`Current Edits`"
+msgstr "|allEdits| :sup:`Aktuella redigeringar`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1233
+msgid "allEdits"
+msgstr "allEdits"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:750
+msgid ""
+"Access to save, rollback or cancel changes in all or selected layers "
+"simultaneously"
+msgstr ""
+"Möjlighet att spara, rulla tillbaka eller avbryta ändringar i alla eller "
+"valda lager samtidigt"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:751
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:754
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:757
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:760
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:763
+msgid ":guilabel:`Digitizing` toolbar"
+msgstr ":guilabel:`Digitalisering` verktygsfält"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:752
+msgid "|toggleEditing| :sup:`Toggle to Edit`"
+msgstr "|toggleEditing| :sup:`Toggle för att redigera`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1327
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:753
+msgid "Turn on/off the layer in edit mode"
+msgstr "Aktivera/avaktivera lagret i redigeringsläget"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:755
+msgid "|saveEdits| :sup:`Save Edits`"
+msgstr "|saveEdits| :sup:`Spara redigeringar`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1311
+msgid "saveEdits"
+msgstr "saveEdits"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:756
+msgid "Save changes done to the layer"
+msgstr "Spara ändringar som gjorts i lagret"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:758
+msgid "|undo| :sup:`Undo`"
+msgstr "|undo| :sup:`Undo`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1331
+msgid "undo"
+msgstr "undo"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:759
+msgid "Undo the last change(s) - :kbd:`Ctrl+Z`"
+msgstr "Ångra den senaste ändringen (ändringarna) - :kbd:`Ctrl+Z`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:761
+msgid "|redo| :sup:`Redo`"
+msgstr "|redo| :sup:`Redo`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1303
+msgid "redo"
+msgstr "redo"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:762
+msgid "Redo the last undone action(s) - :kbd:`Ctrl+Shift+Z`"
+msgstr "Gör om de senast ogjorda åtgärderna - :kbd:`Ctrl+Shift+Z``"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:764
+msgid "|cad| :sup:`Enable Advanced Digitizing tools`"
+msgstr "|cad| :sup:`Aktivera avancerade digitaliseringsverktyg`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1235
+msgid "cad"
+msgstr "cad"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:765
+msgid ""
+"Turn on/off the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`"
+msgstr ""
+"Slå på/av :ref:``Advanced Digitizing Panel <advanced_digitizing_panel>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:766
+msgid ":guilabel:`Advanced Digitizing` toolbar"
+msgstr ":guilabel:Verktygsfältet `Avancerad digitalisering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:767
+msgid "|meshReindex| :sup:`Reindex Faces and Vertices`"
+msgstr "|meshReindex| :sup:`Reindexera ansikten och vertikaler`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1281
+msgid "meshReindex"
+msgstr "meshReindex"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:768
+msgid "Recreate index and renumber the mesh elements for optimization"
+msgstr "Återskapa index och numrera om mesh-elementen för optimering"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:769
+msgid ":guilabel:`Mesh` menu"
+msgstr ":guilabel:`Mesh` meny"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:770
+msgid "|meshDigitizing| :sup:`Digitize Mesh Elements`"
+msgstr "|meshDigitizing| :sup:`Digitisera nätelement`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1277
+msgid "meshDigitizing"
+msgstr "meshDigitizing"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:771
+msgid "Select/Create vertices and faces"
+msgstr "Välj/skapa hörn och ytor"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:772
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:775
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:778
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:781
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:784
+msgid ":guilabel:`Mesh Digitizing` toolbar"
+msgstr ":guilabel:`Mesh Digitalisering` verktygsfält"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:773
+msgid "|meshSelectPolygon| :sup:`Select Mesh Elements by Polygon`"
+msgstr "|meshSelectPolygon| :sup:`Välj nätelement efter polygon`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1285
+msgid "meshSelectPolygon"
+msgstr "meshSelectPolygon"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:774
+msgid "Select vertices and faces overlapped by a drawn polygon"
+msgstr "Välj hörnpunkter och ytor som överlappas av en ritad polygon"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:776
+msgid "|meshSelectExpression| :sup:`Select Mesh Elements by Expression`"
+msgstr "|meshSelectExpression| :sup:`Välj nätelement efter uttryck`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1283
+msgid "meshSelectExpression"
+msgstr "meshSelectExpression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:777
+msgid "Select vertices and faces using an expression"
+msgstr "Välj toppar och ytor med hjälp av ett uttryck"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:779
+msgid "|meshTransformByExpression| :sup:`Transform Vertices Coordinates`"
+msgstr ""
+"|meshTransformByExpression| :sup:`Transformera vertikaler koordinater`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1287
+msgid "meshTransformByExpression"
+msgstr "meshTransformByExpression"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:780
+msgid "Modify coordinates of a selection of vertices"
+msgstr "Ändra koordinaterna för ett urval av hörnpunkter"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:782
+msgid "|meshEditForceByVectorLines| :sup:`Force by Selected Geometries`"
+msgstr "|meshEditForceByVectorLines| :sup:`Force efter valda geometrier`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1279
+msgid "meshEditForceByVectorLines"
+msgstr "meshEditForceByVectorLines"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:783
+msgid "Split faces and constrain Z value using a linear geometry"
+msgstr "Dela ytor och begränsa Z-värdet med hjälp av en linjär geometri"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:787
+msgid "Exploring the Z value assignment logic"
+msgstr "Utforska logiken för tilldelning av Z-värde"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:789
+msgid ""
+"When a mesh layer is turned into edit mode, a :guilabel:`Vertex Z value` "
+"widget opens at the top right of the map canvas. By default, its value "
+"corresponds to the :guilabel:`Default Z value` set in "
+":menuselection:`Settings --> Options --> Digitizing` tab. When there are "
+"selected vertices, the widget displays the average Z value of the selected "
+"vertices."
+msgstr ""
+"När ett mesh-lager försätts i redigeringsläge öppnas en widget "
+":guilabel:`Vertex Z-värde` uppe till höger på kartbilden. Som standard "
+"motsvarar dess värde det :guilabel:`Default Z value` som ställts in i "
+":menuselection:` `Settings --> Options --> Digitizing` fliken. När det finns"
+" valda hörnpunkter visar widgeten det genomsnittliga Z-värdet för de valda "
+"hörnpunkterna."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:795
+msgid ""
+"During editing, the :guilabel:`Vertex Z value` is assigned to new vertices. "
+"It is also possible to set a custom value: edit the widget, press "
+":kbd:`Enter` and you will override the default value and make use of this "
+"new value in the digitizing process. Click the |clearText| icon in the "
+"widget to reset its value to the Options default value."
+msgstr ""
+"Under redigeringen tilldelas :guilabel:`Vertex Z value` till nya vertikaler."
+" Det är också möjligt att ställa in ett eget värde: redigera widgeten, tryck"
+" på :kbd:`Enter` så åsidosätts standardvärdet och det nya värdet används i "
+"digitaliseringsprocessen. Klicka på ikonen |clearText| i widgeten för att "
+"återställa dess värde till Options standardvärde."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1239
+msgid "clearText"
+msgstr "clearText"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:803
+msgid "Rules of assignment"
+msgstr "Regler för överlåtelse"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:805
+msgid ""
+"When **creating** a new vertex, its Z value definition may vary depending on"
+" the active selection in the mesh layer and its location. The following "
+"table displays the various combinations."
+msgstr ""
+"När du **skapar** en ny vertex kan definitionen av dess Z-värde variera "
+"beroende på det aktiva valet i mesh-lagret och dess placering. I följande "
+"tabell visas de olika kombinationerna."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:809
+msgid "Matrix of Z value assignment to new vertex"
+msgstr "Matris för tilldelning av Z-värde till ny toppunkt"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:812
+msgid "Vertex creation"
+msgstr "Skapande av vertex"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:812
+msgid "Are there selected vertices in mesh layer?"
+msgstr "Finns det markerade vertikaler i mesh-lagret?"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:812
+msgid "Source of assigned value"
+msgstr "Källa till det tilldelade värdet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:812
+msgid "Assigned Z Value"
+msgstr "Tilldelat Z-värde"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:815
+msgid "\"Free\" vertex, not connected to any face or edge of a face"
+msgstr "\"Fri\" vertex, inte kopplad till någon yta eller kant på en yta"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:815
+msgid "No"
+msgstr "Nej"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:815
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:823
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:829
+msgid ":guilabel:`Vertex Z value`"
+msgstr ":guilabel:`Vertex Z-värde`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:815
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:829
+msgid "Default or user defined"
+msgstr "Standard eller användardefinierad"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:818
+msgid ""
+":guilabel:`Advanced Digitizing Panel` (if :guilabel:`z` widget is in "
+"|locked| :sup:`Locked` state)"
+msgstr ""
+":guilabel:`Advanced Digitizing Panel` (om :guilabel:`z` widget är i |locked|"
+" :sup:`Locked` tillstånd)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1273
+msgid "locked"
+msgstr "locked"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:818
+msgid ":guilabel:`z` widget if in |locked| :sup:`Locked` state"
+msgstr ":guilabel:`z` widget if in |locked| :sup:`Locked` tillstånd"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:823
+msgid "Yes"
+msgstr "Ja"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:823
+msgid "Average of the selected vertices"
+msgstr "Medelvärde av de valda topparna"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:825
+msgid "Vertex on an edge"
+msgstr "Toppunkt på en kant"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:825
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:827
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:829
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:831
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:833
+msgid "---"
+msgstr "---"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:825
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:827
+msgid "Mesh layer"
+msgstr "Nätlager"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:825
+msgid "Interpolated from the edge's vertices"
+msgstr "Interpolerad från kantens hörnpunkter"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:827
+msgid "Vertex on a face"
+msgstr "Toppunkt på en yta"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:827
+msgid "Interpolated from the face's vertices"
+msgstr "Interpolerad från ansiktets hörnpunkter"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:829
+msgid "Vertex snapped to a 2D vector feature"
+msgstr "Vertex snäppt till en 2D-vektorfunktion"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:831
+msgid "Vertex snapped to a 3D vector vertex"
+msgstr "Vertex snappad till en 3D-vektorvertex"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:831
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:833
+msgid "Vector layer"
+msgstr "Ett vektorlager"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:831
+msgid "Vertex"
+msgstr "Toppunkt"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:833
+msgid "Vertex snapped to a 3D vector segment"
+msgstr "Vertex knäppt till ett 3D-vektorsegment"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:833
+msgid "Interpolated along the vector segment"
+msgstr "Interpolerad längs vektorsegmentet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:837
+msgid ""
+"The :guilabel:`Vertex Z value` widget is deactivated if the :ref:`Advanced "
+"Digitizing Panel <advanced_digitizing_panel>` is enabled and no mesh element"
+" is selected. The latter's :guilabel:`z` widget then rules the Z value "
+"assignment."
+msgstr ""
+"Widgeten :guilabel:`Vertex Z value` inaktiveras om :ref:``Advanced "
+"Digitizing Panel <advanced_digitizing_panel>` är aktiverad och inget mesh-"
+"element är valt. Den senares widget :guilabel:`z` styr då tilldelningen av "
+"Z-värdet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:844
+msgid "Modifying Z value of existing vertices"
+msgstr "Ändra Z-värdet för befintliga hörn"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:846
+msgid "To modify the Z value of vertices, the most straightforward way is:"
+msgstr "Det enklaste sättet att ändra Z-värdet för toppar är:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:848
+msgid ""
+"Select one or many vertices. The :guilabel:`Vertex Z value` widget will "
+"display the average height of the selection."
+msgstr ""
+"Välj en eller flera hörn. Widgeten :guilabel:`Vertex Z value` visar den "
+"genomsnittliga höjden för urvalet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:850
+msgid "Change the value in the widget."
+msgstr "Ändra värdet i widgeten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:851
+msgid ""
+"Press :kbd:`Enter`. The entered value is assigned to the vertices and "
+"becomes the default value of next vertices."
+msgstr ""
+"Tryck på :kbd:`Enter`. Det inmatade värdet tilldelas hörnpunkterna och blir "
+"standardvärde för nästa hörnpunkt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:854
+msgid ""
+"Another way to change the Z value of a vertex is to move and snap it on a "
+"vector layer feature with the Z value capability. If more than one vertex "
+"are selected, the Z value can't be changed in this way."
+msgstr ""
+"Ett annat sätt att ändra Z-värdet för en vertex är att flytta och snäppa den"
+" på en vektorlagerfunktion med Z-värdesfunktion. Om mer än en vertex är "
+"markerad kan Z-värdet inte ändras på det här sättet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:858
+msgid ""
+"The :ref:`Transform mesh vertices <transform_meshvertices>` dialog also "
+"provides means to modify the Z value of a selection of vertices (along with "
+"their X or Y coordinates)."
+msgstr ""
+"I dialogrutan :ref:`Transform mesh vertices <transform_meshvertices>` kan du"
+" också ändra Z-värdet för ett urval av hörnpunkter (tillsammans med deras X-"
+" eller Y-koordinater)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:865
+msgid "Selecting mesh elements"
+msgstr "Välja nätelement"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:868
+msgid "Using :guilabel:`Digitize Mesh Elements`"
+msgstr "Använda :guilabel:`Digitize Mesh Elements` (Digitalisera nätelement)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:870
+msgid ""
+"Activate the |meshDigitizing| :sup:`Digitize Mesh Elements` tool. Hover over"
+" an element and it gets highlighted, allowing you to select it."
+msgstr ""
+"Aktivera verktyget |meshDigitizing| :sup:`Digitize Mesh Elements`. Håll "
+"muspekaren över ett element så markeras det och du kan välja det."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:873
+msgid "Click on a vertex, and it is selected."
+msgstr "Klicka på en vertex så blir den markerad."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:874
+msgid ""
+"Click on the small square at the center of a face or an edge, and it gets "
+"selected. Connected vertices are also selected. Conversely, selecting all "
+"the vertices of an edge or a face also selects that element."
+msgstr ""
+"Klicka på den lilla fyrkanten i mitten av en yta eller en kant så blir den "
+"markerad. Anslutna hörnpunkter markeras också. Omvänt gäller att om du "
+"markerar alla hörn på en kant eller en yta markeras även det elementet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:878
+msgid ""
+"Drag a rectangle to select overlapping elements (a selected face comes with "
+"all their vertices). Press :kbd:`Alt` key if you want to select only "
+"completely contained elements."
+msgstr ""
+"Dra en rektangel för att markera överlappande element (en markerad yta har "
+"alla sina hörnpunkter). Tryck på :kbd:`Alt` om du bara vill välja element "
+"som är helt inneslutna."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:881
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:899
+msgid ""
+"To add elements to a selection, press :kbd:`Shift` while selecting them."
+msgstr ""
+"Om du vill lägga till element i en markering trycker du på :kbd:`Shift` "
+"medan du markerar dem."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:882
+msgid ""
+"To remove an element from the selection, press :kbd:`Ctrl` and reselect it. "
+"A deselected face will also deselect all their vertices."
+msgstr ""
+"Om du vill ta bort ett element från markeringen trycker du på :kbd:`Ctrl` "
+"och markerar det igen. En bortvald yta kommer också att avmarkera alla sina "
+"hörn."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:886
+msgid "Using :guilabel:`Select Mesh Elements by Polygon`"
+msgstr "Använda :guilabel:`Välj nätelement efter polygon`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:888
+msgid ""
+"Activate the |meshSelectPolygon| :sup:`Select Mesh Elements by Polygon` tool"
+" and:"
+msgstr ""
+"Aktivera verktyget |meshSelectPolygon| :sup:``Välj nätelement efter "
+"polygon`` och:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:890
+msgid ""
+"Draw a polygon (left-click to add vertex, :kbd:`Backspace` to undo last "
+"vertex, :kbd:`Esc` to abort the polygon and right-click to validate it) over"
+" the mesh geometries. Any partially overlapping vertices and faces will get "
+"selected. Press :kbd:`Alt` key while drawing if you want to select only "
+"completely contained elements."
+msgstr ""
+"Rita en polygon (vänsterklicka för att lägga till vertex, :kbd:`Backspace` "
+"för att ångra den sista vertexen, :kbd:`Esc` för att avbryta polygonen och "
+"högerklicka för att validera den) över mesh-geometrierna. Alla delvis "
+"överlappande hörn och ytor kommer att väljas. Tryck på :kbd:`Alt` medan du "
+"ritar om du bara vill välja helt inneslutna element."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:895
+msgid ""
+"Right-click over the geometry of a vector layer's feature, select it in the "
+"list that pops up and any partially overlapping vertices and faces of the "
+"mesh layer will get selected. Use :kbd:`Alt` while drawing to select only "
+"completely contained elements."
+msgstr ""
+"Högerklicka över geometrin för ett vektorlagers funktion, välj den i listan "
+"som dyker upp och alla delvis överlappande hörn och ytor i mesh-lagret "
+"kommer att väljas. Använd :kbd:`Alt` medan du ritar för att endast välja "
+"helt inneslutna element."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:900
+msgid ""
+"To remove an element from the selection, press :kbd:`Ctrl` while drawing "
+"over the selection polygon."
+msgstr ""
+"Om du vill ta bort ett element från markeringen trycker du på :kbd:`Ctrl` "
+"medan du ritar över markeringspolygonen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:904
+msgid "Using :guilabel:`Select Mesh Elements by Expression`"
+msgstr "Använda :guilabel:`Välj nätelement med uttryck`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:906
+msgid ""
+"Another tool for mesh elements selection is |meshSelectExpression| "
+":sup:`Select Mesh Elements by Expression`. When pressed, the tool opens the "
+"mesh :ref:`expression selector dialog <vector_expressions>` from which you "
+"can:"
+msgstr ""
+"Ett annat verktyg för val av nätelement är |meshSelectExpression| :sup:`Välj"
+" nätelement med uttryck`. När du trycker på verktyget öppnas dialogen mesh "
+":ref:`expression selector dialog <vector_expressions>` där du kan välja:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:910
+msgid "Select the method of selection:"
+msgstr "Välj metod för urval:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:912
+msgid ""
+":guilabel:`Select by vertices`: applies the entered expression to vertices, "
+"and returns matching ones and their eventually associated edges/faces"
+msgstr ""
+":guilabel:`Select by vertices`: tillämpar det angivna uttrycket på "
+"vertikaler och returnerar matchande sådana och deras eventuellt associerade "
+"kanter/ytor"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:914
+msgid ""
+":guilabel:`Select by faces`: applies the entered expression to faces, and "
+"returns matching ones and their associated edges/vertices"
+msgstr ""
+":guilabel:`Select by faces`: tillämpar det angivna uttrycket på ansikten och"
+" returnerar matchande ansikten och deras tillhörande kanter/vertikaler"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:916
+msgid ""
+"Write the expression of selection. Depending on the selected method, "
+"available functions in the :ref:`Meshes group <expression_function_meshes>` "
+"will be filtered accordingly."
+msgstr ""
+"Skriv uttrycket för valet. Beroende på den valda metoden kommer tillgängliga"
+" funktioner i :ref:`Meshes group <expression_function_meshes>` att filtreras"
+" i enlighet med detta."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:919
+msgid "Run the query by setting how the selection should behave and pressing:"
+msgstr ""
+"Kör frågan genom att ställa in hur urvalet ska bete sig och trycka på :"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:921
+msgid ""
+"|expressionSelect| :guilabel:`Select`: replaces any existing selection in "
+"the layer"
+msgstr ""
+"|expressionSelect| :guilabel:`Select`: ersätter alla befintliga markeringar "
+"i skiktet"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1251
+msgid "expressionSelect"
+msgstr "expressionSelect"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:923
+msgid "|selectAdd| :guilabel:`Add to current selection`"
+msgstr "|selectAdd| :guilabel:`Lägg till i aktuellt urval`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1313
+msgid "selectAdd"
+msgstr "selectAdd"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:924
+msgid "|selectRemove| :guilabel:`Remove from current selection`"
+msgstr "|selectRemove| :guilabel:`Ta bort från aktuellt urval`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1315
+msgid "selectRemove"
+msgstr "selectRemove"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:927
+msgid "Modifying mesh elements"
+msgstr "Modifiera nätelement"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:930
+msgid "Adding vertices"
+msgstr "Lägga till hörn"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:932
+msgid "To add vertices to a mesh layer:"
+msgstr "Lägga till hörnpunkter i ett mesh-lager:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:934
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:951
+msgid "Press the |meshDigitizing| :sup:`Digitize mesh elements` button"
+msgstr ""
+"Tryck på knappen |meshDigitizing| :sup:`Digitize mesh elements` "
+"(Digitalisera nätelement)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:935
+msgid ""
+"A :guilabel:`Vertex Z value` widget appears on the top right corner of the "
+"map canvas. Set this value to the Z coordinate you would like to assign to "
+"the subsequent vertices"
+msgstr ""
+"En widget med :guilabel:`Vertex Z-värde` visas i det övre högra hörnet av "
+"kartbilden. Ställ in detta värde på den Z-koordinat som du vill tilldela de "
+"efterföljande vertikalerna"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:937
+msgid "Then double-click:"
+msgstr "Dubbelklicka sedan:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:939
+msgid ""
+"outside a face: adds a \"free vertex\", that is a vertex not linked to any "
+"face. This vertex is represented by a red dot when the layer is in editing "
+"mode."
+msgstr ""
+"outside a face: lägger till en \"fri vertex\", dvs. en vertex som inte är "
+"kopplad till någon face. Denna vertex representeras av en röd prick när "
+"lagret är i redigeringsläge."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:941
+msgid ""
+"on the edge of existing face(s): adds a vertex on the edge, splits the "
+"touching face(s) into triangles connected to the new vertex."
+msgstr ""
+"på kanten av befintlig(a) yta(r): lägger till en vertex på kanten, delar upp"
+" den eller de ytor som berör den i trianglar som är anslutna till den nya "
+"vertexen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:943
+msgid ""
+"inside a face: splits the face into triangles whose edges connect the "
+"surrounding vertices to the new vertex."
+msgstr ""
+"inuti en yta: delar upp ytan i trianglar vars kanter förbinder de omgivande "
+"topparna med den nya toppen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:947
+msgid "Adding faces"
+msgstr "Lägga till ansikten"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:949
+msgid "To add faces to a mesh layer:"
+msgstr "Så här lägger du till ytor i ett mesh-lager:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:952
+msgid ""
+"A :guilabel:`Vertex Z value` widget appears on the top right corner of the "
+"map canvas. Set this value to the Z coordinate you would like to assign to "
+"the subsequent vertices."
+msgstr ""
+"En widget med :guilabel:`Vertex Z-värde` visas i det övre högra hörnet av "
+"kartbilden. Ställ in detta värde på den Z-koordinat som du vill tilldela de "
+"efterföljande vertikalerna."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:954
+msgid ""
+"Hover over a vertex and click the small triangle that appears next to it."
+msgstr ""
+"Håll muspekaren över en toppunkt och klicka på den lilla triangeln som visas"
+" bredvid."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:955
+msgid ""
+"Move the cursor to the next vertex position; you can snap to existing vertex"
+" or left-click to add a new one."
+msgstr ""
+"Flytta markören till nästa toppunktsposition; du kan snäppa till befintligt "
+"toppunkt eller vänsterklicka för att lägga till ett nytt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:957
+msgid ""
+"Proceed as above to add as many vertices as you wish for the face. Press "
+":kbd:`Backspace` button to undo the last vertex."
+msgstr ""
+"Fortsätt enligt ovan för att lägga till så många toppar som du vill för "
+"ansiktet. Tryck på :kbd:`Backspace`-knappen för att ångra det sista "
+"toppunktet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:959
+msgid ""
+"While moving the mouse, a rubberband showing the shape of the face is "
+"displayed. If it is shown in green, then the expected face is valid and you "
+"can right-click to add it to the mesh. If it is red, the face is not valid "
+"(e.g. because it self-intersects, overlaps an existing face or vertex, "
+"creates a hole, ...) and can't be added. You'd need to undo some vertices "
+"and fix the geometry."
+msgstr ""
+"När du flyttar musen visas ett gummiband som visar ansiktets form. Om det "
+"visas i grönt är den förväntade ytan giltig och du kan högerklicka för att "
+"lägga till den i mesh. Om det är rött är ytan inte giltig (t.ex. för att den"
+" skär sig själv, överlappar en befintlig yta eller vertex, skapar ett hål, "
+"...) och kan inte läggas till. Du måste ångra några vertex och fixa "
+"geometrin."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:965
+msgid "Press :kbd:`Esc` to abort the face digitizing."
+msgstr "Tryck på :kbd:`Esc` för att avbryta digitaliseringen av ansiktet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:966
+msgid "Right-click to validate the face."
+msgstr "Högerklicka för att validera ansiktet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:973
+msgid "Examples of invalid mesh"
+msgstr "Exempel på ogiltiga maskor"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:978
+msgid "Removing mesh elements"
+msgstr "Ta bort nätelement"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:980
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1001
+msgid ":ref:`Select the target elements <select_mesh_elements>`"
+msgstr ":ref:`Välj målelement <select_mesh_elements>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:981
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1002
+msgid "Enable the |meshDigitizing| :sup:`Digitize mesh elements` tool"
+msgstr ""
+"Aktivera verktyget |meshDigitizing| :sup:`Digitize mesh elements` "
+"(Digitalisera nätelement)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:982
+msgid "Right-click and select:"
+msgstr "Högerklicka och välj:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:984
+msgid ""
+":guilabel:`Remove Selected Vertices and Fill Hole(s)` or press "
+":kbd:`Ctrl+Del`: removes vertices and linked faces and fills the hole(s) by "
+"triangulating from the neighbor vertices"
+msgstr ""
+":guilabel:`Remove Selected Vertices and Fill Hole(s)` eller tryck på "
+":kbd:`Ctrl+Del`: tar bort vertikaler och länkade ytor och fyller hålet/hålen"
+" genom triangulering från grannvertikalerna"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:987
+msgid ""
+":guilabel:`Remove Selected Vertices Without Filling Hole(s)` or press "
+":kbd:`Ctrl+Shift+Del`: removes vertices and linked faces and do not fill "
+"hole(s)"
+msgstr ""
+":guilabel:`Remove Selected Vertices Without Filling Hole(s)` eller tryck på "
+":kbd:`Ctrl+Shift+Del`: tar bort vertikaler och länkade ytor och fyller inte "
+"i hål"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:990
+msgid ""
+":guilabel:`Remove Selected Face(s)` or press :kbd:`Shift+Del`: removes faces"
+" but keeps the vertices"
+msgstr ""
+":guilabel:`Remove Selected Face(s)` eller tryck på :kbd:`Shift+Del`: tar "
+"bort ansikten men behåller hörnpunkterna"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:993
+msgid ""
+"These options are also accessible from the contextual menu when hovering "
+"over a single item without selecting."
+msgstr ""
+"Dessa alternativ är också tillgängliga från den kontextuella menyn när du "
+"håller muspekaren över ett enskilt objekt utan att välja."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:997
+msgid "Moving mesh elements"
+msgstr "Flytta nätelement"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:999
+msgid "To move vertices and faces of a mesh layer:"
+msgstr "För att flytta hörn och ytor i ett mesh-lager:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1003
+msgid ""
+"To start moving the element, click on a vertex or the centroid of a "
+"face/edge"
+msgstr ""
+"Börja flytta elementet genom att klicka på en vertex eller centroiden för en"
+" yta/kant"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1004
+msgid ""
+"Move the cursor to the target location (snapping to vector features is "
+"supported)."
+msgstr ""
+"Flytta markören till målpositionen (snapping till vektorfunktioner stöds)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1005
+msgid ""
+"If the new location does not generate an :ref:`invalid mesh "
+"<figure_invalid_mesh>`, the moved elements appear in green. Click again to "
+"release them at this location. Faces whose vertices are all selected are "
+"translated, their neighbors are reshaped accordingly."
+msgstr ""
+"Om den nya platsen inte genererar en :ref:`invalid mesh "
+"<figure_invalid_mesh>` visas de flyttade elementen i grönt. Klicka igen för "
+"att släppa dem på den här platsen. Faces vars alla hörn är markerade "
+"translateras och deras grannar omformas i enlighet med detta."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1013
+msgid "Transforming mesh vertices"
+msgstr "Omvandling av nätets hörnpunkter"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1015
+msgid ""
+"The |meshTransformByExpression| :sup:`Transform Vertices Coordinates` tool "
+"gives a more advanced way to move vertices, by editing their X, Y and/or Z "
+"coordinates thanks to expressions."
+msgstr ""
+"Verktyget |meshTransformByExpression| :sup:`Transform Vertices Coordinates` "
+"ger ett mer avancerat sätt att flytta vertikaler genom att redigera deras "
+"X-, Y- och/eller Z-koordinater med hjälp av uttryck."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1019
+msgid "Select the vertices you want to edit the coordinates"
+msgstr "Välj de hörn som du vill redigera koordinaterna för"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1020
+msgid ""
+"Press |meshTransformByExpression| :sup:`Transform Vertices Coordinates`. A "
+"dialog opens with a mention of the number of selected vertices. You can "
+"still add or remove vertices from the selection."
+msgstr ""
+"Tryck på |meshTransformByExpression| :sup:`Transform Vertices Coordinates`. "
+"En dialogruta öppnas med uppgift om antalet valda vertikaler. Du kan "
+"fortfarande lägga till eller ta bort vertikaler från urvalet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1023
+msgid ""
+"Depending on the properties you want to modify, you need to check the "
+":guilabel:`X coordinate`, :guilabel:`Y coordinate` and/or :guilabel:`Z "
+"value`."
+msgstr ""
+"Beroende på vilka egenskaper du vill ändra måste du kontrollera :guilabel:`X"
+" coordinate`, :guilabel:`Y coordinate` och/eller :guilabel:`Z value`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1025
+msgid ""
+"Then enter the target position in the box, either as a numeric value or an "
+"expression (using the |expression| :sup:`Expression dialog`)"
+msgstr ""
+"Ange sedan målpositionen i rutan, antingen som ett numeriskt värde eller som"
+" ett uttryck (med hjälp av dialogen |expression| :sup:``Expression``)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1027
+msgid ""
+"With the |vertexCoordinates| :sup:`Import Coordinates of the Selected "
+"Vertex` pressed, the X, Y and Z boxes are automatically filled with its "
+"coordinates whenever a single vertex is selected. A convenient and quick way"
+" to adjust vertices individually."
+msgstr ""
+"När |vertexCoordinates| :sup:`Import Coordinates of the Selected Vertex` är "
+"aktiverat fylls rutorna X, Y och Z automatiskt med koordinaterna när en "
+"enskild vertex väljs. Ett bekvämt och snabbt sätt att justera topparna "
+"individuellt."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1333
+msgid "vertexCoordinates"
+msgstr "vertexCoordinates"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1031
+msgid ""
+"Press :guilabel:`Preview Transform` to simulate the vertices new location "
+"and preview the mesh with transformation."
+msgstr ""
+"Tryck på :guilabel:`Preview Transform` för att simulera topparnas nya "
+"placering och förhandsgranska nätet med transformationen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1034
+msgid ""
+"If the preview is green, transformed mesh is valid and you can apply the "
+"transformation."
+msgstr ""
+"Om förhandsgranskningen är grön är det transformerade nätet giltigt och du "
+"kan tillämpa transformationen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1036
+msgid ""
+"If the preview is red, the transformed mesh is invalid and you can not apply"
+" the transformation until it is corrected."
+msgstr ""
+"Om förhandsgranskningen är röd är det transformerade nätet ogiltigt och du "
+"kan inte använda transformationen förrän det har korrigerats."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1038
+msgid ""
+"Press :guilabel:`Apply Transform` to modify the selected coordinates for the"
+" set of vertices."
+msgstr ""
+"Tryck på :guilabel:`Apply Transform` för att ändra de valda koordinaterna "
+"för uppsättningen hörnpunkter."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1042
+msgid "Reshaping mesh geometry"
+msgstr "Omformning av nätgeometri"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1045
+msgid "The contextual menu"
+msgstr "Den kontextuella menyn"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1047
+msgid "Enable the |meshDigitizing| :sup:`Digitize mesh elements`"
+msgstr ""
+"Aktivera |meshDigitizing| :sup:`Digitize mesh elements` (Digitalisera "
+"nätelement)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1048
+msgid "Select mesh item(s), or not"
+msgstr "Välj eller avstå från att välja maskpost(er)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1049
+msgid "Hover over a mesh element, it gets highlighted."
+msgstr "Håll muspekaren över ett mesh-element så markeras det."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1050
+msgid "Right-click and you can:"
+msgstr "Högerklicka så kan du göra det:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1052
+msgid ":ref:`remove the item(s) <remove_mesh_items>`"
+msgstr ":ref:`ta bort objektet/objekten <remove_mesh_items>`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1053
+msgid ""
+":guilabel:`Split Selected Face(s)` (:guilabel:`Split Current Face`): splits "
+"the face you are hovering over or each selected quad mesh faces into two "
+"triangles"
+msgstr ""
+":guilabel:`Split Selected Face(s)` (:guilabel:`Split Current Face`): delar "
+"upp ansiktet du håller muspekaren över eller varje valt quad mesh-ansikte i "
+"två trianglar"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1056
+msgid ""
+":guilabel:`Delaunay Triangulation with Selected vertices`: builds triangular"
+" faces using selected free vertices."
+msgstr ""
+":guilabel:`Delaunay Triangulation with Selected vertices`: bygger "
+"triangulära ytor med hjälp av utvalda fria hörn."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1058
+msgid ""
+":guilabel:`Refine Selected Face(s)` (:guilabel:`Refine Current Face`): "
+"splits the face into four faces, based on vertices added at the middle of "
+"each edge (a triangle results into triangles, a quad into quads). Also "
+"triangulates adjacent faces connected to the new vertices."
+msgstr ""
+":guilabel:`Refine Selected Face(s)` (:guilabel:`Refine Current Face`): delar"
+" upp ytan i fyra ytor, baserat på hörn som läggs till i mitten av varje kant"
+" (en triangel resulterar i trianglar, en fyrkant i fyrkant). Triangulerar "
+"även intilliggande ytor som är anslutna till de nya hörnen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1064
+msgid "The edge markers"
+msgstr "Kantmarkeringarna"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1066
+msgid ""
+"When the |meshDigitizing| :sup:`Digitize mesh elements` is active and you "
+"hover over an edge, the edge is highlighted and it is possible to interact "
+"with it. Depending on the context, following markers may be available:"
+msgstr ""
+"När funktionen |meshDigitizing| :sup:`Digitize mesh elements` är aktiv och "
+"du håller muspekaren över en kant, markeras kanten och det är möjligt att "
+"interagera med den. Beroende på sammanhanget kan följande markörer vara "
+"tillgängliga:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1070
+msgid ""
+"a **square**, at the center of the edge: click on it to select extremity "
+"vertices."
+msgstr ""
+"en **fyrkantsvy** i mitten av kanten: klicka på den för att välja yttersta "
+"hörn."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1071
+msgid ""
+"a **cross** if the two faces on either side can be merged: click on it to "
+"delete the edge and merge the faces."
+msgstr ""
+"ett **kors** om de två ansiktena på vardera sidan kan slås samman: klicka på"
+" det för att ta bort kanten och slå samman ansiktena."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1073
+msgid ""
+"a **circle** if the edge is between two triangles: Click on it to flip the "
+"edge, i.e. connect it instead to the two other \"free\" vertices of the "
+"faces"
+msgstr ""
+"en **cirkel** om kanten ligger mellan två trianglar: Klicka på den för att "
+"vända på kanten, dvs. koppla den istället till de två andra \"fria\" hörnen "
+"på ytorna"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1077
+msgid "The :guilabel:`Force by Selected Geometries` tool"
+msgstr ""
+"Verktyget :guilabel:`Force by Selected Geometries` (kraft genom valda "
+"geometrier)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1079
+msgid ""
+"The |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool "
+"provides advanced ways to apply break lines using lines geometry. A break "
+"line will force the mesh to have edges along the line. Note that the break "
+"line will not be considered persistent once the operation is done; resulting"
+" edges will not act as constraints anymore and can be modified like any "
+"other edge. This can be used for example to locally modify a mesh layer with"
+" accurate lines, as river banks or border of road embankments."
+msgstr ""
+"Verktyget |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` "
+"ger avancerade sätt att tillämpa brytlinjer med hjälp av linjegeometri. En "
+"brytlinje tvingar mesh att ha kanter längs linjen. Observera att brytlinjen "
+"inte betraktas som beständig när operationen är klar; resulterande kanter "
+"fungerar inte som begränsningar längre och kan modifieras som vilken annan "
+"kant som helst. Detta kan t.ex. användas för att lokalt modifiera ett mesh-"
+"lager med exakta linjer, som flodbankar eller vägbankar."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1088
+msgid ""
+"Enable the |meshEditForceByVectorLines| :sup:`Force by Selected Geometries` "
+"tool"
+msgstr ""
+"Aktivera verktyget |meshEditForceByVectorLines| :sup:`Force genom valda "
+"geometrier`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1089
+msgid "Indicate the geometry to use as \"forcing line\"; it can be:"
+msgstr "Ange den geometri som ska användas som \"forcing line\"; det kan vara:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1091
+msgid ""
+"picked from a line or polygon feature in the map canvas: right-click over "
+"the vector feature and select it from the list in the contextual menu."
+msgstr ""
+"hämtas från en linje- eller polygonfunktion i kartbilden: högerklicka på "
+"vektorfunktionen och välj den från listan i snabbmenyn."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1093
+msgid ""
+"a virtual line drawn over the mesh frame: left-click to add vertices, right-"
+"click for validation. Vertices Z value is set through the :guilabel:`Vertex "
+"Z value` widget or the :guilabel:`z` widget if the :guilabel:`Advanced "
+"Digitizing Panel` is on. If the line is snapped to a mesh vertex or a 3D "
+"vector feature's vertex or segment, the new vertex takes the snapped element"
+" Z value."
+msgstr ""
+"en virtuell linje som dras över meshramen: vänsterklicka för att lägga till "
+"vertices, högerklicka för validering. Vertex Z-värde ställs in via widgeten "
+":guilabel:`Vertex Z-värde` eller widgeten :guilabel:`z` om widgeten "
+":guilabel:`Avancerad digitaliseringspanel` är aktiverad. Om linjen knäpps "
+"till ett mesh-vertex eller ett vertex eller segment i en 3D-vektorfunktion, "
+"får det nya vertexet det knäppta elementets Z-värde."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1100
+msgid ""
+"Mesh faces that overlap the line geometry or the polygon's boundary will be "
+"affected in a way that depends on options you can set from the "
+"|meshEditForceByVectorLines| :sup:`Force by Selected Geometries` tool drop-"
+"down menu:"
+msgstr ""
+"Meshytor som överlappar linjegeometrin eller polygonens gräns påverkas på "
+"ett sätt som beror på de alternativ som du kan ställa in i verktygets "
+"rullgardinsmeny |meshEditForceByVectorLines| :sup:`Force by Selected "
+"Geometries`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1105
+msgid ""
+"|checkbox| :guilabel:`Add new vertex on intersecting edges`: with this "
+"option, a new vertex is added each time the forcing line intersect an edge. "
+"This option leads to split along the line each encountered faces."
+msgstr ""
+"|checkbox| :guilabel:`Lägg till ny vertex på korsande kanter`: med detta "
+"alternativ läggs en ny vertex till varje gång forceringslinjen korsar en "
+"kant. Detta alternativ leder till delning längs linjen varje gång den möter "
+"ansikten."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1109
+msgid ""
+"Without this option, encountered faces are removed and replaced by faces "
+"coming from a triangulation with only the existing vertices plus the "
+"vertices of the forcing lines (new vertices are also added on the boundary "
+"edge intersecting the forcing lines)."
+msgstr ""
+"Utan detta alternativ tas påträffade ytor bort och ersätts av ytor som "
+"kommer från en triangulering med endast de befintliga hörnen plus hörnen på "
+"forceringslinjerna (nya hörn läggs också till på gränskanten som skär "
+"forceringslinjerna)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1119
+msgid ""
+"Force Mesh using a line geometry - Results without (middle) and with (right)"
+" new vertex on edges intersection"
+msgstr ""
+"Force Mesh med linjegeometri - Resultat utan (mitten) och med (höger) ny "
+"vertex på kanternas skärningspunkt"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1122
+msgid ""
+":guilabel:`Interpolate Z value from`: set how the new vertices Z value is "
+"calculated. It can be from:"
+msgstr ""
+":guilabel:`Interpolera Z-värde från`: anger hur den nya toppens Z-värde "
+"beräknas. Det kan vara från:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1125
+msgid ""
+"the :guilabel:`Mesh` itself: the new vertices Z value is interpolated from "
+"vertices of the face they fall within"
+msgstr ""
+"själva :guilabel:`Mesh`: de nya hörnens Z-värde interpoleras från hörnen i "
+"den yta de faller inom"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1127
+msgid ""
+"or the :guilabel:`Forcing line`: if the line is defined by a 3D vector "
+"feature or a drawn line then the new vertices Z value is derived from its "
+"geometry. In case of 2D line feature, the new vertices Z value is the "
+":guilabel:`Vertex Z value`."
+msgstr ""
+"eller :guilabel:`Forcing line`: om linjen definieras av en 3D-vektorfunktion"
+" eller en ritad linje härleds det nya Z-värdet för vertikalerna från dess "
+"geometri. När det gäller 2D-linjefunktioner är det nya Z-värdet för "
+"vertikalerna :guilabel:`Vertex Z value`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1132
+msgid ""
+":guilabel:`Tolerance`: when an existing mesh vertex is closer to the line "
+"than the tolerance value, do not create new vertex on the line but use the "
+"existing vertex instead. The value can be set in :guilabel:`Meters at Scale`"
+" or in :guilabel:`Map Units` (more details at :ref:`unit_selector`)."
+msgstr ""
+":guilabel:`Tolerance`: när ett befintligt mesh-vertex är närmare linjen än "
+"toleransvärdet, skapa inte ett nytt vertex på linjen utan använd det "
+"befintliga vertexet istället. Värdet kan ställas in i :guilabel:`Meters at "
+"Scale` eller i :guilabel:`Map Units` (mer information finns i "
+":ref:`unit_selector`)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1141
+msgid "Reindexing meshes"
+msgstr "Omindexering av maskor"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1143
+msgid ""
+"During edit, and in order to allow quick undo/redo operations, QGIS keeps "
+"empty places for deleted elements, which may lead to growing memory use and "
+"inefficient mesh structuring. The :menuselection:`Mesh -->` |meshReindex| "
+":menuselection:`Reindex Faces and Vertices` tool is designed to remove these"
+" holes and renumber the indices of faces and vertices so that they are "
+"continuous and somewhat reasonably ordered. This optimizes relation between "
+"faces and vertices and increases the efficiency of calculation."
+msgstr ""
+"Under redigering, och för att möjliggöra snabba ångra/återställa "
+"operationer, behåller QGIS tomma platser för borttagna element, vilket kan "
+"leda till växande minnesanvändning och ineffektiv mesh-strukturering. "
+"Verktyget :menuselection:`Mesh -->` |meshReindex| :menuselection:`Reindex "
+"Faces and Vertices` är utformat för att ta bort dessa hål och omnumrera "
+"indexen för ytor och vertikaler så att de är kontinuerliga och någorlunda "
+"rimligt ordnade. Detta optimerar relationen mellan ytor och toppar och ökar "
+"effektiviteten i beräkningen."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1152
+msgid ""
+"The |meshReindex| :guilabel:`Reindex Faces and Vertices` tool saves the "
+"layer and clear the undo/redo stacks, disabling any rollback."
+msgstr ""
+"Verktyget |meshReindex| :guilabel:`Reindex Faces and Vertices` sparar lagret"
+" och rensar undo/redo-staplarna, vilket gör att ingen rollback är möjlig."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1159
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1170
+msgid "Mesh Calculator"
+msgstr "Mesh-kalkylator"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1161
+msgid ""
+"The :guilabel:`Mesh Calculator` tool from the top :menuselection:`Mesh` menu"
+" allows you to perform arithmetic and logical calculations on existing "
+"dataset groups to generate a new dataset group (see "
+":numref:`figure_mesh_calculator`)."
+msgstr ""
+"Med verktyget :guilabel:`Mesh Calculator` från den övre menyn "
+":menuselection:`Mesh` kan du utföra aritmetiska och logiska beräkningar på "
+"befintliga datasetgrupper för att generera en ny datasetgrupp (se "
+":numref:`figure_mesh_calculator`)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1172
+msgid ""
+"The :guilabel:`Datasets` list contains all dataset groups in the active mesh"
+" layer. To use a dataset group in an expression, double click its name in "
+"the list and it will be added to the :guilabel:`Mesh calculator expression` "
+"field. You can then use the operators to construct calculation expressions, "
+"or you can just type them into the box."
+msgstr ""
+"Listan :guilabel:`Datasets` innehåller alla datasetgrupper i det aktiva "
+"meshlagret. Om du vill använda en datasetgrupp i ett uttryck dubbelklickar "
+"du på dess namn i listan så läggs den till i fältet :guilabel:`Mesh "
+"calculator expression`. Du kan sedan använda operatörerna för att konstruera"
+" beräkningsuttryck eller bara skriva in dem i rutan."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1178
+msgid ""
+"The :guilabel:`Result Layer` helps you configure properties of the output "
+"layer:"
+msgstr ""
+"Med :guilabel:`Result Layer` kan du konfigurera egenskaper för "
+"utdataskiktet:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1180
+msgid ""
+"|checkbox| :guilabel:`Create on-the-fly dataset group instead of writing "
+"layer to disk`:"
+msgstr ""
+"|checkbox| :guilabel:`Skapa en datasetgrupp i farten istället för att skriva"
+" lagret till disken`:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1183
+msgid ""
+"If unchecked, the output is stored on disk as a new plain file. An "
+":guilabel:`Output File` path and an :guilabel:`Output Format` are required."
+msgstr ""
+"Om den inte är markerad lagras utdata på disken som en ny vanlig fil. En "
+"sökväg till :guilabel:`Output File` och ett :guilabel:`Output Format` krävs."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1185
+msgid ""
+"If checked, a new dataset group will be added to the mesh layer. Values of "
+"the dataset group are not stored in memory but each dataset is calculated "
+"when needed with the formula entered in the mesh calculator. That virtual "
+"dataset group is saved with the project, and if needed, it can be removed or"
+" made persistent in file from the layer :guilabel:`Source` properties tab."
+msgstr ""
+"Om du markerar detta läggs en ny datasetgrupp till i mesh-lagret. Värdena i "
+"datasetgruppen lagras inte i minnet, utan varje dataset beräknas vid behov "
+"med den formel som anges i meshkalkylatorn. Den virtuella datasetgruppen "
+"sparas med projektet och kan vid behov tas bort eller göras beständig i en "
+"fil på fliken Layer :guilabel:`Source` properties."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1192
+msgid ""
+"In either case, you should provide a :guilabel:`Group Name` for the output "
+"dataset group."
+msgstr ""
+"I båda fallen bör du ange ett :guilabel:`Group Name` för gruppen i "
+"utdatasetet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1194
+msgid "The :guilabel:`Spatial extent` to consider for calculation can be:"
+msgstr ""
+"Den :guilabel:`Rumliga utsträckning` som ska beaktas för beräkning kan vara:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1196
+msgid ""
+"a :guilabel:`Custom extent`, manually filled with the :guilabel:`X min`, "
+":guilabel:`X max`, :guilabel:`Y min` and :guilabel:`Y max` coordinate, or "
+"extracted from an existing dataset group (select it in the list and press "
+":guilabel:`Use selected layer extent` to fill the abovementioned coordinate "
+"fields)"
+msgstr ""
+"en :guilabel:`Custom extent`, manuellt fylld med koordinaterna :guilabel:`X "
+"min`, :guilabel:`X max`, :guilabel:`Y min` och :guilabel:`Y max`, eller "
+"extraherad från en befintlig datasetgrupp (välj den i listan och tryck på "
+":guilabel:`Use selected layer extent` för att fylla i de ovannämnda "
+"koordinatfälten)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1201
+msgid ""
+"defined by a polygon layer (:guilabel:`Mask layer`) of the project: the "
+"polygon features geometry are used to clip the mesh layer datasets"
+msgstr ""
+"definieras av ett polygonlager (:guilabel:`Mask layer`) i projektet: "
+"polygonens geometri används för att klippa ut mesh-lagrets dataset"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1204
+msgid ""
+"The :guilabel:`Temporal extent` to take into account for datasets can be set"
+" with the :guilabel:`Start time` and :guilabel:`End time` options, selected "
+"from the existing dataset groups timesteps. They can also be filled using "
+"the :guilabel:`Use all selected dataset times` button to take the whole "
+"range."
+msgstr ""
+"Den :guilabel:`Temporal extent` som ska beaktas för dataset kan ställas in "
+"med alternativen :guilabel:`Start time` och :guilabel:`End time`, som väljs "
+"från de befintliga datasetgruppernas tidssteg. De kan också fyllas i med "
+"hjälp av knappen :guilabel:`Use all selected dataset times` för att ta med "
+"hela intervallet."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1209
+msgid ""
+"The :guilabel:`Operators` section contains all available operators. To add "
+"an operator to the mesh calculator expression box, click the appropriate "
+"button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and "
+"statistical functions (``min``, ``max``, ``sum (aggr)``, ``average (aggr)``,"
+" ... ) are available. Conditional expressions (``=``, ``!=``, ``<``, ``>=``,"
+" ``IF``, ``AND``, ``NOT``, ... ) return either 0 for false and 1 for true, "
+"and therefore can be used with other operators and functions. The ``NODATA``"
+" value can also be used in the expressions."
+msgstr ""
+"Avsnittet :guilabel:`Operators` innehåller alla tillgängliga operatorer. För"
+" att lägga till en operator i nätkalkylatorns uttrycksruta, klicka på "
+"lämplig knapp. Matematiska beräkningar (``+``, ``-``, ``*``, ... ) och "
+"statistiska funktioner (``min``, ``max``, ``sum (aggr)``, ``medel (aggr)``, "
+"... ) är tillgängliga. Villkorliga uttryck (``=``, ``!=``, ``<``, ``>=``, "
+"``IF``, ``AND``, ``NOT``, ... ) returnerar antingen 0 för falskt och 1 för "
+"sant, och kan därför användas med andra operatorer och funktioner. Värdet "
+"``NODATA`` kan också användas i uttrycken."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1217
+msgid ""
+"The :guilabel:`Mesh Calculator Expression` widget shows and lets you edit "
+"the expression to execute."
+msgstr ""
+"Widgeten :guilabel:`Mesh Calculator Expression` visar och låter dig redigera"
+" det uttryck som ska köras."
