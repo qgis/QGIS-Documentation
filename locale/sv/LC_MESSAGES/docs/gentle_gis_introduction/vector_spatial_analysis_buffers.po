@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:36+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,20 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:4
+msgid "Vector Spatial Analysis (Buffers)"
+msgstr "Rumslig vektoranalys (buffertar)"
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:7
 msgid "|gentleLogo|"
@@ -36,21 +51,537 @@ msgstr "gentleLogo"
 msgid "Objectives:"
 msgstr "Mål:"
 
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:7
+msgid "Understanding the use of buffering in vector spatial analysis."
+msgstr "Förstå användningen av buffring i vektorbaserad rumslig analys."
+
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:9
 msgid "Keywords:"
 msgstr "Nyckelord:"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:9
+msgid ""
+"Vector, buffer zone, spatial analysis, buffer distance, dissolve boundary, "
+"outward and inward buffer, multiple buffer"
+msgstr ""
+"Vektor, buffertzon, rumslig analys, buffertavstånd, upplösbar gräns, utåt- "
+"och inåtbuffert, multipelbuffert"
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:13
 msgid "Overview"
 msgstr "Översikt"
 
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:15
+msgid ""
+"**Spatial analysis** uses spatial information to extract new and additional "
+"meaning from GIS data. Usually spatial analysis is carried out using a GIS "
+"Application. GIS Applications normally have spatial analysis tools for "
+"feature statistics (e.g. how many vertices make up this polyline?) or "
+"geoprocessing such as feature buffering. The types of spatial analysis that "
+"are used vary according to subject areas. People working in water management"
+" and research (hydrology) will most likely be interested in analysing "
+"terrain and modelling water as it moves across it. In wildlife management "
+"users are interested in analytical functions that deal with wildlife point "
+"locations and their relationship to the environment. In this topic we will "
+"discuss buffering as an example of a useful spatial analysis that can be "
+"carried out with vector data."
+msgstr ""
+"**Spatial analysis** använder spatial information för att utvinna ny och "
+"ytterligare mening ur GIS-data. Vanligtvis utförs rumslig analys med hjälp "
+"av en GIS-applikation. GIS-applikationer har normalt verktyg för rumslig "
+"analys för objektstatistik (t.ex. hur många hörn består den här polylinjen "
+"av?) eller geobearbetning, t.ex. buffring av objekt. Vilka typer av rumslig "
+"analys som används varierar beroende på ämnesområde. Personer som arbetar "
+"med vattenförvaltning och vattenforskning (hydrologi) kommer troligen att "
+"vara intresserade av att analysera terräng och modellera vatten när det rör "
+"sig över den. Inom viltförvaltning är användarna intresserade av analytiska "
+"funktioner som hanterar platser för vilda djur och deras förhållande till "
+"miljön. I det här ämnet diskuterar vi buffring som ett exempel på en "
+"användbar rumslig analys som kan utföras med vektordata."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:28
+msgid "Buffering in detail"
+msgstr "Buffring i detalj"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:30
+msgid ""
+"**Buffering** usually creates two areas: one area that is **within** a "
+"specified distance to selected real world features and the other area that "
+"is **beyond**. The area that is within the specified distance is called the "
+"**buffer zone**."
+msgstr ""
+"**Buffring** skapar vanligtvis två områden: ett område som ligger **inom** "
+"ett specificerat avstånd till utvalda funktioner i verkligheten och det "
+"andra området som ligger **utanför**. Området som ligger inom det angivna "
+"avståndet kallas **buffer zone**."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:34
+msgid ""
+"A **buffer zone** is any area that serves the purpose of keeping real world "
+"features distant from one another. Buffer zones are often set up to protect "
+"the environment, protect residential and commercial zones from industrial "
+"accidents or natural disasters, or to prevent violence. Common types of "
+"buffer zones may be greenbelts between residential and commercial areas, "
+"border zones between countries (see :numref:`figure_buffer_zone`), noise "
+"protection zones around airports, or pollution protection zones along "
+"rivers."
+msgstr ""
+"En **buffertzon** är ett område som har till syfte att hålla olika "
+"funktioner i den verkliga världen på avstånd från varandra. Buffertzoner "
+"inrättas ofta för att skydda miljön, skydda bostadsområden och kommersiella "
+"områden från industriolyckor eller naturkatastrofer eller för att förhindra "
+"våld. Vanliga typer av buffertzoner kan vara gröna bälten mellan "
+"bostadsområden och kommersiella områden, gränszoner mellan länder (se "
+":numref:`figure_buffer_zone`), bullerskyddszoner runt flygplatser eller "
+"föroreningsskyddszoner längs floder."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:48
+msgid ""
+"The border between the United States of America and Mexico is separated by a"
+" buffer zone. (Photo taken by SGT Jim Greenhill 2006)."
+msgstr ""
+"Gränsen mellan Amerikas förenta stater och Mexiko skiljs åt av en "
+"buffertzon. (Foto taget av SGT Jim Greenhill 2006)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:51
+msgid ""
+"In a GIS Application, **buffer zones are** always represented as **vector "
+"polygons** enclosing other polygon, line or point features (see "
+":numref:`figure_point_buffer`, :numref:`figure_line_buffer`, "
+":numref:`figure_polygon_buffer`)."
+msgstr ""
+"I en GIS-applikation representeras **bufferzoner** alltid som "
+"**vektorpolygoner** som omsluter andra polygon-, linje- eller "
+"punktfunktioner (se :numref:`figure_point_buffer`, "
+":numref:`figure_line_buffer`, :numref:`figure_polygon_buffer`)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:61
+msgid "A buffer zone around vector points."
+msgstr "En buffertzon runt vektorpunkter."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:69
+msgid "A buffer zone around vector polylines."
+msgstr "En buffertzon runt vektorpolylinjer."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:77
+msgid "A buffer zone around vector polygons."
+msgstr "En buffertzon runt vektorpolygoner."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:80
+msgid "Variations in buffering"
+msgstr "Variationer i buffring"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:82
+msgid ""
+"There are several variations in buffering. The **buffer distance** or buffer"
+" size **can vary** according to numerical values provided in the vector "
+"layer attribute table for each feature. The numerical values have to be "
+"defined in map units according to the Coordinate Reference System (CRS) used"
+" with the data. For example, the width of a buffer zone along the banks of a"
+" river can vary depending on the intensity of the adjacent land use. For "
+"intensive cultivation the buffer distance may be bigger than for organic "
+"farming (see Figure :numref:`figure_variable_buffer` and Table "
+"table_buffer_attributes_)."
+msgstr ""
+"Det finns flera olika varianter av buffring. Buffertavståndet** eller "
+"buffertstorleken **kan variera** beroende på de numeriska värden som anges i"
+" attributtabellen för vektorlagret för varje funktion. De numeriska värdena "
+"måste definieras i kartenheter enligt det koordinatreferenssystem (CRS) som "
+"används med data. Bredden på en buffertzon längs en flod kan t.ex. variera "
+"beroende på intensiteten i den intilliggande markanvändningen. För intensiv "
+"odling kan buffertavståndet vara större än för ekologiskt jordbruk (se figur"
+" :numref:`figure_variable_buffer` och tabell table_buffer_attributes_)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:97
+msgid "Buffering rivers with different buffer distances."
+msgstr "Buffring av floder med olika buffertavstånd."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:102
+msgid "River"
+msgstr "Floden"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:102
+msgid "Adjacent land use"
+msgstr "Intilliggande markanvändning"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:102
+msgid "Buffer distance (meters)"
+msgstr "Buffertavstånd (meter)"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:104
+msgid "Breede River"
+msgstr "Breede River"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:104
+msgid "Intensive vegetable cultivation"
+msgstr "Intensiv odling av grönsaker"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:104
+msgid "100"
+msgstr "100"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:106
+msgid "Komati"
+msgstr "Komati"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:106
+msgid "Intensive cotton cultivation"
+msgstr "Intensiv bomullsodling"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:106
+msgid "150"
+msgstr "150"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:108
+msgid "Oranje"
+msgstr "Oranje"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:108
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:110
+msgid "Organic farming"
+msgstr "Ekologiskt jordbruk"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:108
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:110
+msgid "50"
+msgstr "50"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:110
+msgid "Telle river"
+msgstr "Telle älv"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:113
+msgid ""
+"Table Buffer Attributes 1: Attribute table with different buffer distances "
+"to rivers based on information about the adjacent land use."
+msgstr ""
+"Tabell Buffertattribut 1: Attributtabell med olika buffertavstånd till "
+"floder baserat på information om den intilliggande markanvändningen."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:116
+msgid ""
+"Buffers around polyline features, such as rivers or roads, do not have to be"
+" on both sides of the lines. They can be on either the left side or the "
+"right side of the line feature. In these cases the left or right side is "
+"determined by the direction from the starting point to the end point of the "
+"line during digitising."
+msgstr ""
+"Buffertar runt polylinjeobjekt, t.ex. floder eller vägar, behöver inte ligga"
+" på båda sidor om linjerna. De kan ligga antingen på vänster eller höger "
+"sida av linjefunktionen. I dessa fall bestäms vänster eller höger sida av "
+"riktningen från linjens startpunkt till dess slutpunkt under "
+"digitaliseringen."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:122
+msgid "Multiple buffer zones"
+msgstr "Flera buffertzoner"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:124
+msgid ""
+"A feature can also have more than one buffer zone. A nuclear power plant may"
+" be buffered with distances of 10, 15, 25 and 30 km, thus forming multiple "
+"rings around the plant as part of an evacuation plan (see "
+":numref:`figure_multiple_buffers`)."
+msgstr ""
+"En funktion kan också ha mer än en buffertzon. Ett kärnkraftverk kan buffras"
+" med avstånd på 10, 15, 25 och 30 km, vilket bildar flera ringar runt "
+"anläggningen som en del av en evakueringsplan (se "
+":numref:`figure_multiple_buffers`)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:134
+msgid "Buffering a point feature with distances of 10, 15, 25 and 30 km."
+msgstr "Buffring av en punktfunktion med avstånden 10, 15, 25 och 30 km."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:137
+msgid "Buffering with intact or dissolved boundaries"
+msgstr "Buffring med intakta eller upplösta gränser"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:139
+msgid ""
+"Buffer zones often have dissolved boundaries so that there are no "
+"overlapping areas between the buffer zones. In some cases though, it may "
+"also be useful for boundaries of buffer zones to remain intact, so that each"
+" buffer zone is a separate polygon and you can identify the overlapping "
+"areas (see Figure :numref:`figure_buffer_dissolve`)."
+msgstr ""
+"Buffertzoner har ofta upplösta gränser så att det inte finns några "
+"överlappande områden mellan buffertzonerna. I vissa fall kan det dock också "
+"vara användbart att gränserna för buffertzoner förblir intakta, så att varje"
+" buffertzon är en separat polygon och du kan identifiera de överlappande "
+"områdena (se figur :numref:`figure_buffer_dissolve`)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:151
+msgid ""
+"Buffer zones with dissolved (left) and with intact boundaries (right) "
+"showing overlapping areas."
+msgstr ""
+"Buffertzoner med upplösta gränser (vänster) och med intakta gränser (höger) "
+"visar överlappande områden."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:155
+msgid "Buffering outward and inward"
+msgstr "Buffring utåt och inåt"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:157
+msgid ""
+"Buffer zones around polygon features are usually extended outward from a "
+"polygon boundary but it is also possible to create a buffer zone inward from"
+" a polygon boundary. Say, for example, the Department of Tourism wants to "
+"plan a new road around Robben Island and environmental laws require that the"
+" road is at least 200 meters inward from the coastline. They could use an "
+"inward buffer to find the 200 m line inland and then plan their road not to "
+"go beyond that line."
+msgstr ""
+"Buffertzoner runt polygonelement sträcker sig vanligtvis utåt från "
+"polygonens gräns, men det är också möjligt att skapa en buffertzon inåt från"
+" polygonens gräns. Säg till exempel att turistdepartementet vill planera en "
+"ny väg runt Robben Island och att miljölagarna kräver att vägen ligger minst"
+" 200 meter in från kustlinjen. De skulle kunna använda en inåtriktad buffert"
+" för att hitta 200-meterslinjen inåt land och sedan planera sin väg så att "
+"den inte går utanför den linjen."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:165
+msgid "Common problems / things to be aware of"
+msgstr "Vanliga problem / saker att vara uppmärksam på"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:167
+msgid ""
+"Most GIS Applications offer buffer creation as an analysis tool, but the "
+"options for creating buffers can vary. For example, not all GIS Applications"
+" allow you to buffer on either the left side or the right side of a line "
+"feature, to dissolve the boundaries of buffer zones or to buffer inward from"
+" a polygon boundary."
+msgstr ""
+"De flesta GIS-program erbjuder buffertskapande som ett analysverktyg, men "
+"alternativen för att skapa buffertar kan variera. Det är t.ex. inte alla "
+"GIS-program som tillåter att man buffrar på antingen vänster eller höger "
+"sida av en linjefunktion, att man löser upp gränserna för buffertzoner eller"
+" att man buffrar inåt från en polygongräns."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:172
+msgid ""
+"A buffer distance always has to be defined as a whole number (integer) or a "
+"decimal number (floating point value). This value is defined in map units "
+"(meters, feet, decimal degrees) according to the Coordinate Reference System"
+" (CRS) of the vector layer."
+msgstr ""
+"Ett buffertavstånd måste alltid definieras som ett heltal (heltal) eller ett"
+" decimaltal (flyttalsvärde). Detta värde definieras i kartenheter (meter, "
+"fot, decimalgrader) enligt vektorskiktets koordinatreferenssystem (CRS)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:178
+msgid "More spatial analysis tools"
+msgstr "Fler verktyg för rumslig analys"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:180
+msgid ""
+"Buffering is an important and often used spatial analysis tool but there are"
+" many others that can be used in a GIS and explored by the user."
+msgstr ""
+"Buffring är ett viktigt och ofta använt verktyg för rumslig analys, men det "
+"finns många andra som kan användas i ett GIS och utforskas av användaren."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:183
+msgid ""
+"**Spatial overlay** is a process that allows you to identify the "
+"relationships between two polygon features that share all or part of the "
+"same area. The output vector layer is a combination of the input features "
+"information (see :numref:`figure_overlay_operations`)."
+msgstr ""
+"**Spatial overlay** är en process som gör att du kan identifiera "
+"relationerna mellan två polygonfunktioner som delar hela eller delar av "
+"samma område. Det utgående vektorlagret är en kombination av informationen "
+"om de ingående funktionerna (se :numref:`figure_overlay_operations`)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:194
+msgid ""
+"Spatial overlay with two input vector layers (a_input = rectangle, b_input ="
+" circle). The resulting vector layer is displayed in green."
+msgstr ""
+"Rumslig överlagring med två ingående vektorlager (a_input = rektangel, "
+"b_input = cirkel). Det resulterande vektorlagret visas i grönt."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:197
+msgid "Typical spatial overlay examples are:"
+msgstr "Typiska exempel på rumslig överlagring är:"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:199
+msgid ""
+"**Intersection**: The output layer contains all areas where both layers "
+"overlap (intersect)."
+msgstr ""
+"**Intersektion**: Utgångsskiktet innehåller alla områden där de båda skikten"
+" överlappar varandra (skär varandra)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:201
+msgid ""
+"**Union**: the output layer contains all areas of the two input layers "
+"combined."
+msgstr ""
+"**Union**: det utgående lagret innehåller alla områden i de två ingående "
+"lagren kombinerade."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:202
+msgid ""
+"**Symmetrical difference**: The output layer contains all areas of the input"
+" layers except those areas where the two layers overlap (intersect)."
+msgstr ""
+"**Symmetrisk skillnad**: Utgångsskiktet innehåller alla områden i "
+"ingångsskikten utom de områden där de två skikten överlappar varandra "
+"(korsar varandra)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:204
+msgid ""
+"**Difference**: The output layer contains all areas of the first input layer"
+" that do not overlap (intersect) with the second input layer."
+msgstr ""
+"**Differens**: Utgångsskiktet innehåller alla områden i det första "
+"ingångsskiktet som inte överlappar (skär) det andra ingångsskiktet."
+
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:208
 msgid "What have we learned?"
 msgstr "Vad har vi lärt oss?"
 
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:210
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Låt oss sammanfatta vad vi behandlat i det här arbetsbladet:"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:212
+msgid "**Buffer zones** describe areas around real world features."
+msgstr "**Buffertzoner** beskriver områden runt verkliga funktioner."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:213
+msgid "Buffer zones are always **vector polygons**."
+msgstr "Buffertzoner är alltid **vektorpolygoner**."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:214
+msgid "A feature can have **multiple** buffer zones."
+msgstr "En funktion kan ha **flera** buffertzoner."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:215
+msgid "The size of a buffer zone is defined by a **buffer distance**."
+msgstr "Storleken på en buffertzon definieras av ett **bufferavstånd**."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:216
+msgid ""
+"A buffer distance has to be an **integer** or **floating point** value."
+msgstr ""
+"Ett buffertavstånd måste vara ett **integer**- eller **floating "
+"point**-värde."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:217
+msgid ""
+"A buffer distance can be different for each feature within a vector layer."
+msgstr ""
+"Ett buffertavstånd kan vara olika för varje funktion inom ett vektorlager."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:218
+msgid ""
+"Polygons can be buffered **inward** or **outward** from the polygon "
+"boundary."
+msgstr "Polygoner kan buffras **inåt** eller **utåt** från polygongränsen."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:219
+msgid ""
+"Buffer zones can be created with **intact** or **dissolved** boundaries."
+msgstr "Buffertzoner kan skapas med **intakta** eller **upplösta** gränser."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:220
+msgid ""
+"Besides buffering, a GIS usually provides a variety of vector analysis tools"
+" to solve spatial tasks."
+msgstr ""
+"Förutom buffring tillhandahåller ett GIS vanligtvis en mängd olika "
+"vektoranalysverktyg för att lösa rumsliga uppgifter."
+
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:224
 msgid "Now you try!"
 msgstr "Nu får du försöka!"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:226
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Här är några idéer som du kan prova med dina elever:"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:228
+msgid ""
+"Because of dramatic traffic increase, the town planners want to widen the "
+"main road and add a second lane. Create a buffer around the road to find "
+"properties that fall within the buffer zone (see "
+":numref:`figure_buffer_road`)."
+msgstr ""
+"På grund av den dramatiska trafikökningen vill stadsplanerarna bredda "
+"huvudvägen och lägga till ett andra körfält. Skapa en buffert runt vägen för"
+" att hitta fastigheter som faller inom buffertzonen (se "
+":numref:`figure_buffer_road`)."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:231
+msgid ""
+"For controlling protesting groups, the police want to establish a neutral "
+"zone to keep protesters at least 100 meters from a building. Create a buffer"
+" around a building and colour it so that event planners can see where the "
+"buffer area is."
+msgstr ""
+"För att kontrollera protesterande grupper vill polisen upprätta en neutral "
+"zon för att hålla demonstranter minst 100 meter från en byggnad. Skapa en "
+"buffert runt en byggnad och färglägg den så att evenemangsplanerare kan se "
+"var buffertområdet finns."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:235
+msgid ""
+"A truck factory plans to expand. The siting criteria stipulate that a "
+"potential site must be within 1 km of a heavy-duty road. Create a buffer "
+"along a main road so that you can see where potential sites are."
+msgstr ""
+"En lastbilsfabrik planerar att expandera. Enligt kriterierna för "
+"lokalisering måste en potentiell plats ligga inom 1 km från en väg för tunga"
+" fordon. Skapa en buffert längs en huvudväg så att du kan se var potentiella"
+" platser finns."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:238
+msgid ""
+"Imagine that the city wants to introduce a law stipulating that no bottle "
+"stores may be within a 1000 meter buffer zone of a school or a church. "
+"Create a 1 km buffer around your school and then go and see if there would "
+"be any bottle stores too close to your school."
+msgstr ""
+"Föreställ dig att staden vill införa en lag som föreskriver att inga "
+"flaskbutiker får finnas inom en 1000 meters buffertzon från en skola eller "
+"en kyrka. Skapa en buffert på 1 km runt din skola och gå sedan och se om det"
+" skulle finnas några flaskbutiker för nära din skola."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:249
+msgid ""
+"Buffer zone (green) around a roads map (brown). You can see which houses "
+"fall within the buffer zone, so now you could contact the owner and talk to "
+"him about the situation."
+msgstr ""
+"Buffertzon (grön) runt en vägkarta (brun). Du kan se vilka hus som ligger "
+"inom buffertzonen, så nu kan du kontakta ägaren och prata med honom om "
+"situationen."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:254
+msgid "Something to think about"
+msgstr "Något att tänka på"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:256
+msgid ""
+"If you don't have a computer available, you can use a toposheet and a "
+"compass to create buffer zones around buildings. Make small pencil marks at "
+"an equal distance all along your feature using the compass, then connect the"
+" marks using a ruler!"
+msgstr ""
+"Om du inte har tillgång till en dator kan du använda ett toposblad och en "
+"kompass för att skapa buffertzoner runt byggnader. Gör små "
+"blyertsmarkeringar på lika avstånd längs hela objektet med hjälp av "
+"kompassen och anslut sedan markeringarna med en linjal!"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:261
+msgid "Further reading"
+msgstr "Ytterligare läsning"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:263
+msgid "**Books**:"
+msgstr "**Böcker**:"
 
 #: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:265
 msgid ""
@@ -75,3 +606,23 @@ msgid ""
 msgstr ""
 "DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
 "3rd Edition. Wiley. ISBN: 9814126195"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:273
+msgid ""
+"The QGIS User Guide also has more detailed information on analysing vector "
+"data in QGIS."
+msgstr ""
+"I QGIS User Guide finns också mer detaljerad information om hur man "
+"analyserar vektordata i QGIS."
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:277
+msgid "What's next?"
+msgstr "Vad kommer härnäst?"
+
+#: ../../docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:279
+msgid ""
+"In the section that follows we will take a closer look at **interpolation** "
+"as an example of spatial analysis you can do with raster data."
+msgstr ""
+"I avsnittet som följer kommer vi att titta närmare på **interpolering** som "
+"ett exempel på rumslig analys som du kan göra med rasterdata."
