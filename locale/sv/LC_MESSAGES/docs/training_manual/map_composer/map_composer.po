@@ -1,0 +1,783 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:2
+msgid "Lesson: Using Print Layout"
+msgstr "Lektion: Använda utskriftslayout"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:4
+msgid ""
+"Now that you've got a map, you need to be able to print it or to export it "
+"to a document. The reason is, a GIS map file is not an image. Rather, it "
+"saves the state of the GIS program, with references to all the layers, their"
+" labels,colors, etc. So for someone who doesn't have the data or the same "
+"GIS program (such as QGIS), the map file will be useless. Luckily, QGIS can "
+"export its map file to a format that anyone's computer can read, as well as "
+"printing out the map if you have a printer connected. Both exporting and "
+"printing is handled via the *Print Layout*."
+msgstr ""
+"Nu när du har en karta behöver du kunna skriva ut den eller exportera den "
+"till ett dokument. Anledningen är att en GIS-kartfil inte är en bild. Den "
+"sparar snarare GIS-programmets tillstånd, med referenser till alla lager, "
+"deras etiketter, färger osv. Så för någon som inte har data eller samma GIS-"
+"program (t.ex. QGIS) är kartfilen värdelös. Lyckligtvis kan QGIS exportera "
+"sin kartfil till ett format som vem som helst kan läsa på sin dator, och "
+"även skriva ut kartan om du har en skrivare ansluten. Både export och "
+"utskrift hanteras via *Print Layout*."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:16
+msgid ""
+"**The goal for this lesson:** To use the QGIS *Print Layout* to create a "
+"basic map with all the required settings."
+msgstr ""
+"**Målet för den här lektionen:** Att använda QGIS *Print Layout* för att "
+"skapa en grundläggande karta med alla nödvändiga inställningar."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:20
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: The Layout Manager"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Layoutansvarig"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:22
+msgid ""
+"QGIS allows you to create multiple maps using the same map file. For this "
+"reason, it has a tool called the *Layout Manager*."
+msgstr ""
+"Med QGIS kan du skapa flera kartor med samma kartfil. Av denna anledning "
+"finns det ett verktyg som kallas *Layout Manager*."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:25
+msgid ""
+"Click on the :menuselection:`Project --> Layout Manager...` menu entry to "
+"open this tool. You'll see a blank :guilabel:`Layout manager` dialog appear."
+msgstr ""
+"Klicka på :menyval:`Projekt --> Layout Manager...` för att öppna detta "
+"verktyg. Du kommer att se en tom :guilabel:`Layout manager` dialogruta "
+"visas."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:32
+msgid ""
+"Under :guilabel:`New from Template`, select :guilabel:`Empty layout` and "
+"press the :guilabel:`Create...` button."
+msgstr ""
+"Under :guilabel:`New from Template` väljer du :guilabel:`Empty layout` och "
+"trycker på knappen :guilabel:`Create...`."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:34
+msgid ""
+"Give the new layout the name of |majorUrbanName| and click :guilabel:`OK`."
+msgstr ""
+"Ge den nya layouten namnet |majorUrbanName| och klicka på :guilabel:`OK`."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:36
+msgid "You will now see the *Print Layout* window:"
+msgstr "Du kommer nu att se fönstret *Print Layout*:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:41
+msgid ""
+"You could also create this new layout via the :menuselection:`Project --> "
+"New Print Layout...` menu."
+msgstr ""
+"Du kan också skapa denna nya layout via menyn :menuselection:`Project --> "
+"New Print Layout...`."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:44
+msgid ""
+"Whichever route you take, the new print layout is now accessible from the "
+":menuselection:`Project --> Layouts -->` menu, as in the image below."
+msgstr ""
+"Oavsett vilken väg du väljer finns den nya utskriftslayouten nu tillgänglig "
+"från menyn :menuselection:`Project --> Layouts -->`, som på bilden nedan."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:52
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Basic Map Composition"
+msgstr ""
+":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Grundläggande kartkomposition"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:54
+msgid ""
+"In this example, the composition was already the way we wanted it. Ensure "
+"that yours is as well."
+msgstr ""
+"I det här exemplet var kompositionen redan som vi ville ha den. Se till att "
+"din också är det."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:57
+msgid ""
+"Right-click on the sheet in the central part of the layout window and choose"
+" :guilabel:`Page properties...` in the context menu."
+msgstr ""
+"Högerklicka på arket i den centrala delen av layoutfönstret och välj "
+":guilabel:`Page properties...` i snabbmenyn."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:59
+msgid ""
+"Check that the values in the :guilabel:`Item Properties` tab are set to the "
+"following:"
+msgstr ""
+"Kontrollera att värdena i fliken :guilabel:`Item Properties` är inställda på"
+" följande:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:62
+msgid ":guilabel:`Size`: ``A4``"
+msgstr ":guilabel:`Storlek`: ``A4``"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:63
+msgid ":guilabel:`Orientation`: ``Landscape``"
+msgstr ":guilabel:`Orientation`: ``Landskap``"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:65
+msgid ""
+"Now you've got the page layout the way you wanted it, but this page is still"
+" blank. It clearly lacks a map. Let's fix that!"
+msgstr ""
+"Nu har du fått sidlayouten som du ville ha den, men den här sidan är "
+"fortfarande tom. Den saknar helt klart en karta. Låt oss fixa det!"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:69
+msgid "Click on the |addMap| :sup:`Add Map` button."
+msgstr "Klicka på knappen |addMap| :sup:`Add Map`."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:334
+msgid "addMap"
+msgstr "addMap"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:71
+msgid "With this tool activated, you will be able to place a map on the page."
+msgstr "När det här verktyget är aktiverat kan du placera en karta på sidan."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:74
+msgid "Click and drag a box on the blank page:"
+msgstr "Klicka och dra en ruta på den tomma sidan:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:79
+msgid "The map will appear on the page."
+msgstr "Kartan kommer att visas på sidan."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:81
+msgid "Move the map by clicking and dragging it around:"
+msgstr "Flytta kartan genom att klicka på den och dra den runt:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:86
+msgid "Resize it by clicking and dragging the boxes on the edges:"
+msgstr "Ändra storlek genom att klicka på och dra i rutorna på kanterna:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:91
+msgid ""
+"Your map may look a lot different, of course! This depends on how your own "
+"project is set up. But not to worry! These instructions are general, so they"
+" will work the same regardless of what the map itself looks like."
+msgstr ""
+"Din karta kan naturligtvis se helt annorlunda ut! Det beror på hur ditt eget"
+" projekt är uppbyggt. Men oroa dig inte! De här instruktionerna är allmänna,"
+" så de fungerar på samma sätt oavsett hur själva kartan ser ut."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:96
+msgid ""
+"Be sure to leave margins along the edges, and a space along the top for the "
+"title."
+msgstr ""
+"Se till att det finns marginaler längs kanterna och ett utrymme längst upp "
+"för titeln."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:99
+msgid "Zoom in and out on the page (but not the map!) by using these buttons:"
+msgstr ""
+"Zooma in och ut på sidan (men inte på kartan!) med hjälp av dessa knappar:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:102
+msgid "|zoomFullExtent| |zoomIn| |zoomOut|"
+msgstr "|zoomFullExtent| |zoomIn| |zoomOut|"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:367
+msgid "zoomFullExtent"
+msgstr "zoomFullExtent"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:369
+msgid "zoomIn"
+msgstr "zoomIn"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:371
+msgid "zoomOut"
+msgstr "zoomOut"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:104
+msgid ""
+"Zoom and pan the map in the main QGIS window. You can also pan the map using"
+" the |moveItemContent| :sup:`Move item content` tool."
+msgstr ""
+"Zooma och panorera kartan i QGIS huvudfönster. Du kan också panorera kartan "
+"med hjälp av verktyget |moveItemContent| :sup:`Flytta objektinnehåll`."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:349
+msgid "moveItemContent"
+msgstr "moveItemContent"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:108
+msgid "The map view updates as you zoom in or zoom out."
+msgstr "Kartvyn uppdateras när du zoomar in eller zoomar ut."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:109
+msgid ""
+"If, for any reason, the map view does not refresh correctly, you can force "
+"the map to refresh by clicking the |refresh| :sup:`Refresh view` button."
+msgstr ""
+"Om kartvyn av någon anledning inte uppdateras korrekt kan du tvinga kartan "
+"att uppdateras genom att klicka på knappen |refresh| :sup:`Refresh view`."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:351
+msgid "refresh"
+msgstr "refresh"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:113
+msgid ""
+"Remember that the size and position you've given the map doesn't need to be "
+"final. You can always come back and change it later if you're not satisfied."
+" For now, you need to ensure that you've saved your work on this map. "
+"Because a *Print Layout* in QGIS is part of the main map file, you must save"
+" your project."
+msgstr ""
+"Kom ihåg att den storlek och position som du har gett kartan inte behöver "
+"vara slutgiltig. Du kan alltid komma tillbaka och ändra den senare om du "
+"inte är nöjd. Nu måste du se till att du har sparat ditt arbete med den här "
+"kartan. Eftersom en *Print Layout* i QGIS är en del av huvudkartfilen, måste"
+" du spara ditt projekt."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:122
+msgid ""
+"Go to the :menuselection:`Layout -->` |fileSave| :menuselection:`Save "
+"Project`. This is a convenient shortcut to the one in the main dialog."
+msgstr ""
+"Gå till :menuselection:`Layout -->` |fileSave| :menuselection:`Save "
+"Project`. Detta är en bekväm genväg till den i huvuddialogen."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:342
+msgid "fileSave"
+msgstr "fileSave"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:127
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Adding a Title"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Lägga till en titel"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:129
+msgid ""
+"Now your map is looking good on the page, but your readers/users are not "
+"being told what's going on yet. They need some context, which is what you'll"
+" provide for them by adding map elements. First, let us add a title."
+msgstr ""
+"Nu ser din karta bra ut på sidan, men dina läsare / användare får inte veta "
+"vad som händer ännu. De behöver lite sammanhang, och det är vad du kommer "
+"att ge dem genom att lägga till kartelement. Låt oss först lägga till en "
+"titel."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:135
+msgid "Click on the |label| :sup:`Add Label` button"
+msgstr "Klicka på knappen |label| :sup:`Add Label` (lägg till etikett)"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:344
+msgid "label"
+msgstr "label"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:136
+msgid ""
+"Click on the page, above the map, accept the suggested values in the "
+":guilabel:`New Item Properties` dialog, and a label will appear at the top "
+"of the map."
+msgstr ""
+"Klicka på sidan ovanför kartan, acceptera de föreslagna värdena i "
+"dialogrutan :guilabel:`New Item Properties`, så visas en etikett högst upp "
+"på kartan."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:139
+msgid ""
+"Resize it and place it in the top center of the page. It can be resized and "
+"moved in the same way that you resized and moved the map."
+msgstr ""
+"Ändra storlek på den och placera den längst upp i mitten av sidan. Du kan "
+"ändra storlek och flytta den på samma sätt som du ändrade storlek och "
+"flyttade kartan."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:143
+msgid ""
+"As you move the title, you'll notice that guidelines appear to help you "
+"position the title in the center of the page."
+msgstr ""
+"När du flyttar titeln kommer du att märka att riktlinjer visas för att "
+"hjälpa dig att placera titeln mitt på sidan."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:146
+msgid ""
+"However, there is also a tool in the Actions Toolbar to help position the "
+"title relative to the map (not the page):"
+msgstr ""
+"Det finns dock också ett verktyg i verktygsfältet Åtgärder som hjälper till "
+"att placera titeln i förhållande till kartan (inte sidan):"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:149
+msgid "|alignLeft|"
+msgstr "|alignLeft|"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:338
+msgid "alignLeft"
+msgstr "alignLeft"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:151
+msgid "Click the map to select it"
+msgstr "Klicka på kartan för att välja den"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:152
+msgid ""
+"Hold in :kbd:`Shift` on your keyboard and click on the label so that both "
+"the map and the label are selected."
+msgstr ""
+"Håll in :kbd:`Shift` på tangentbordet och klicka på etiketten så att både "
+"kartan och etiketten markeras."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:154
+msgid ""
+"Look for the |alignLeft| :sup:`Align selected items left` button and click "
+"on the dropdown arrow next to it to reveal the positioning options and click"
+" |alignHCenter| :guilabel:`Align center`:"
+msgstr ""
+"Leta efter knappen |alignLeft| :sup:`Align selected items left` och klicka "
+"på rullgardinsmenyn bredvid den för att visa positioneringsalternativen och "
+"klicka på |alignHCenter| :guilabel:`Align center`:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:336
+msgid "alignHCenter"
+msgstr "alignHCenter"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:162
+msgid ""
+"Now the label frame is centered on the map, but not the contents. To center "
+"the contents of the label:"
+msgstr ""
+"Nu är etikettramen centrerad på kartan, men inte innehållet. För att "
+"centrera innehållet på etiketten:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:165
+msgid "Select the label by clicking on it."
+msgstr "Välj etikett genom att klicka på den."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:166
+msgid ""
+"Click on the :guilabel:`Item Properties` tab in the side panel of the layout"
+" window."
+msgstr ""
+"Klicka på fliken :guilabel:`Item Properties` i sidopanelen i layoutfönstret."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:168
+msgid "Change the text of the label to \"|majorUrbanName|\":"
+msgstr "Ändra texten i etiketten till \"|majorUrbanName|\":"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:173
+msgid ""
+"Use this interface to set the font and alignment options under the "
+":guilabel:`Appearance` section:"
+msgstr ""
+"Använd det här gränssnittet för att ställa in teckensnitt och "
+"justeringsalternativ i avsnittet :guilabel:`Appearance`:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:176
+msgid ""
+"Choose a large but sensible font (the example will use the default font with"
+" a size of ``36``)"
+msgstr ""
+"Välj ett stort men vettigt typsnitt (i exemplet används standardtypsnittet "
+"med storleken ``36``)"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:178
+msgid "Set the :guilabel:`Horizontal Alignment` to :guilabel:`Center`."
+msgstr "Ställ in :guilabel:`Horizontal Alignment` till :guilabel:`Center`."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:180
+msgid ""
+"You can also change the font color, but it's probably best to keep it black "
+"as per the default."
+msgstr ""
+"Du kan också ändra teckensnittsfärgen, men det är förmodligen bäst att "
+"behålla den svarta som standard."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:183
+msgid ""
+"The default setting is not to add a frame to the title's text box. However, "
+"if you wish to add a frame, you can do so:"
+msgstr ""
+"Standardinställningen är att inte lägga till en ram i titelns textruta. Om "
+"du vill lägga till en ram kan du dock göra det:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:186
+msgid ""
+"In the :guilabel:`Item Properties` tab, scroll down until you see the "
+":guilabel:`Frame` option."
+msgstr ""
+"På fliken :guilabel:`Item Properties` rullar du ner tills du ser "
+"alternativet :guilabel:`Frame`."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:188
+msgid ""
+"Click the :guilabel:`Frame` checkbox to enable the frame. You can also "
+"change the frame's color and width."
+msgstr ""
+"Klicka på kryssrutan :guilabel:`Frame` för att aktivera ramen. Du kan också "
+"ändra ramens färg och bredd."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:191
+msgid ""
+"In this example, we won't enable the frame, so here is our page so far:"
+msgstr ""
+"I det här exemplet kommer vi inte att aktivera ramen, så här är vår sida så "
+"här långt:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:197
+msgid ""
+"To make sure that you don't accidentally move these elements around now that"
+" you've aligned them, you can lock items into place:"
+msgstr ""
+"För att se till att du inte av misstag flyttar runt dessa element nu när du "
+"har justerat dem kan du låsa fast objekt på plats:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:200
+msgid "Select both the label and the map items"
+msgstr "Välj både etikett och kartobjekt"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:201
+msgid ""
+"Click the |lockItems| :sup:`Lock Selected Items` button in the *Actions* "
+"Toolbar."
+msgstr ""
+"Klicka på knappen |lockItems| :sup:`Lock Selected Items` i verktygsfältet "
+"*Actions*."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:346
+msgid "lockItems"
+msgstr "lockItems"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:204
+msgid ""
+"Click the |unlockAll| :sup:`Unlock All Items` button in the *Actions* "
+"Toolbar to be able to edit the items again."
+msgstr ""
+"Klicka på knappen |unlockAll| :sup:`Unlock All Items` i verktygsfältet "
+"*Actions* för att kunna redigera objekten igen."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:365
+msgid "unlockAll"
+msgstr "unlockAll"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:209
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Adding a Legend"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Lägga till en legend"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:211
+msgid ""
+"The map reader also needs to be able to see what various things on the map "
+"actually mean. In some cases, like the place names, this is quite obvious. "
+"In other cases, it's more difficult to guess, like the colors of the "
+"forests. Let's add a new legend."
+msgstr ""
+"Kartläsaren måste också kunna se vad olika saker på kartan egentligen "
+"betyder. I vissa fall, som ortnamnen, är detta ganska uppenbart. I andra "
+"fall är det svårare att gissa, som till exempel färgerna på skogarna. Låt "
+"oss lägga till en ny legend."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:218
+msgid "Click on the |addLegend| :sup:`Add Legend` button"
+msgstr "Klicka på knappen |addLegend| :sup:`Add Legend`"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:332
+msgid "addLegend"
+msgstr "addLegend"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:219
+msgid ""
+"Click on the page to place the legend, accept the suggested values in the "
+":guilabel:`New Item Properties` dialog,"
+msgstr ""
+"Klicka på den sida där legenden ska placeras och acceptera de föreslagna "
+"värdena i dialogrutan :guilabel:`New Item Properties`,"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:221
+msgid ""
+"A legend is added to the layout page, showing layers symbology as set in the"
+" main dialog."
+msgstr ""
+"En teckenförklaring läggs till på layoutsidan och visar lagrens symbologi "
+"enligt inställningarna i huvuddialogen."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:223
+msgid "As usual, you can click and move the item to where you want it:"
+msgstr "Som vanligt kan du klicka och flytta objektet dit du vill ha det:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:230
+msgid ":abbr:`★★☆ (Moderate level)` Follow Along: Customizing Legend Items"
+msgstr ":abbr:`★★☆ (Måttlig nivå)` Följ med: Anpassa legendföremål"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:232
+msgid ""
+"Not everything on the legend is necessary, so let's remove some unwanted "
+"items."
+msgstr ""
+"Inte allt på legenden är nödvändigt, så låt oss ta bort några oönskade "
+"föremål."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:235
+msgid ""
+"In the :guilabel:`Item Properties` tab, you'll find the :guilabel:`Legend "
+"items` group."
+msgstr ""
+"På fliken :guilabel:`Item Properties` hittar du gruppen :guilabel:`Legend "
+"items`."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:237
+msgid ""
+"Uncheck the |unchecked| :guilabel:`Auto update` box, allowing you to "
+"directly modify the legend items"
+msgstr ""
+"Avmarkera rutan |avmarkerad| :guilabel:`Auto update`, så att du direkt kan "
+"ändra legendobjekten"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:363
+msgid "unchecked"
+msgstr "unchecked"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:239
+msgid "Select the entry with :guilabel:`buildings`"
+msgstr "Välj post med :guilabel:`byggnader`"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:240
+msgid "Delete it from the legend by clicking the |symbologyRemove| button"
+msgstr ""
+"Ta bort den från legenden genom att klicka på knappen |symbologyRemove|"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:361
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:242
+msgid "You can also rename items."
+msgstr "Du kan också byta namn på objekt."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:244
+msgid "Select a layer from the same list."
+msgstr "Välj ett lager från samma lista."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:245
+msgid "Click the |symbologyEdit| :sup:`Edit selected item properties` button."
+msgstr ""
+"Klicka på knappen |symbologyEdit| :sup:``Edit selected item properties``."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:359
+msgid "symbologyEdit"
+msgstr "symbologyEdit"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:246
+msgid ""
+"Rename the layers to ``Places``, ``Roads and Streets``, ``Surface Water``, "
+"and ``Rivers``."
+msgstr ""
+"Byt namn på lagren till ``Places``, ``Roads and Streets``, ``Surface Water``"
+" och ``Rivers``."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:249
+msgid "You can also reorder the items:"
+msgstr "Du kan också ändra ordningen på artiklarna:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:255
+msgid ""
+"As the legend will likely be widened by the new layer names, you may wish to"
+" move and resize the legend and or map. This is the result:"
+msgstr ""
+"Eftersom teckenförklaringen sannolikt kommer att breddas av de nya "
+"lagernamnen, kanske du vill flytta och ändra storlek på teckenförklaringen "
+"och/eller kartan. Detta är resultatet:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:264
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Exporting Your Map"
+msgstr ":abbr:`★☆☆ (Grundläggande nivå)` Följ med: Exportera din karta"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:266
+msgid "Did you remember to save your work often?"
+msgstr "Kom du ihåg att spara ditt arbete ofta?"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:268
+msgid ""
+"Finally the map is ready for export! You'll see the export buttons near the "
+"top left corner of the layout window:"
+msgstr ""
+"Äntligen är kartan klar för export! Du ser exportknapparna i det övre "
+"vänstra hörnet av layoutfönstret:"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:271
+msgid ""
+"|filePrint| :sup:`Print Layout`: interfaces with a printer. Since the "
+"printer options will differ depending on the model of printer that you're "
+"working with, it's probably better to consult the printer manual or a "
+"general guide to printing for more information on this topic."
+msgstr ""
+"|filePrint| :sup:`Print Layout`: har gränssnitt mot en skrivare. Eftersom "
+"skrivaralternativen skiljer sig åt beroende på vilken skrivarmodell du "
+"arbetar med, är det förmodligen bättre att läsa skrivarhandboken eller en "
+"allmän guide till utskrift för mer information om detta ämne."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:340
+msgid "filePrint"
+msgstr "filePrint"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:277
+msgid "The other buttons allow you to export the map page to a file."
+msgstr "Med de andra knapparna kan du exportera kartsidan till en fil."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:278
+msgid ""
+"|saveMapAsImage| :sup:`Export as Image`: gives you a selection of various "
+"common image formats to choose from. This is probably the simplest option, "
+"but the image it creates is \"dead\" and difficult to edit."
+msgstr ""
+"|saveMapAsImage| :sup:`Export as Image`: ger dig ett urval av olika vanliga "
+"bildformat att välja mellan. Detta är förmodligen det enklaste alternativet,"
+" men den bild som skapas är \"död\" och svår att redigera."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:357
+msgid "saveMapAsImage"
+msgstr "saveMapAsImage"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:282
+msgid ""
+"|saveAsSVG| :sup:`Export as SVG`: If you're sending the map to a "
+"cartographer (who may want to edit the map for publication), it's best to "
+"export as an SVG. SVG stands for \"Scalable Vector Graphic\", and can be "
+"imported to programs like `Inkscape <https://inkscape.org/>`_ or other "
+"vector image editing software."
+msgstr ""
+"|saveAsSVG| :sup:`Exportera som SVG`: Om du skickar kartan till en kartograf"
+" (som kanske vill redigera kartan för publicering) är det bäst att exportera"
+" den som en SVG. SVG står för \"Scalable Vector Graphic\" och kan importeras"
+" till program som `Inkscape <https://inkscape.org/>`_ eller andra program "
+"för redigering av vektorbilder."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:355
+msgid "saveAsSVG"
+msgstr "saveAsSVG"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:287
+msgid ""
+"|saveAsPDF| :sup:`Export as PDF`: If you need to send the map to a client, "
+"it's most common to use a PDF, because it's easier to set up printing "
+"options for a PDF. Some cartographers may prefer PDF as well, if they have a"
+" program that allows them to import and edit this format."
+msgstr ""
+"|saveAsPDF| :sup:`Exportera som PDF`: Om du behöver skicka kartan till en "
+"kund är det vanligast att använda en PDF-fil, eftersom det är lättare att "
+"ställa in utskriftsalternativ för en PDF-fil. Vissa kartografer kanske också"
+" föredrar PDF, om de har ett program som gör att de kan importera och "
+"redigera det här formatet."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:353
+msgid "saveAsPDF"
+msgstr "saveAsPDF"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:293
+msgid "For our purposes, we're going to use PDF."
+msgstr "För våra syften kommer vi att använda PDF."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:295
+msgid "Click the |saveAsPDF| :sup:`Export as PDF` button"
+msgstr "Klicka på knappen |saveAsPDF| :sup:``Exportera som PDF``"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:296
+msgid ""
+"Choose a save location and a file name as usual. The following dialog will "
+"show up."
+msgstr ""
+"Välj en lagringsplats och ett filnamn som vanligt. Följande dialogruta "
+"kommer att visas."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:302
+msgid "You can safely use the default values now and click :guilabel:`Save`."
+msgstr "Du kan använda standardvärdena nu och klicka på :guilabel:`Save`."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:305
+msgid ""
+"QGIS will proceed to the map export and push a message on top of the print "
+"layout dialog as soon as it finishes."
+msgstr ""
+"QGIS fortsätter att exportera kartan och lägger ett meddelande ovanpå "
+"dialogrutan för utskriftslayout så snart den är klar."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:307
+msgid ""
+"Click the hyperlink in the message to open the folder in which the PDF has "
+"been saved in your system's file manager"
+msgstr ""
+"Klicka på hyperlänken i meddelandet för att öppna den mapp där PDF-filen har"
+" sparats i systemets filhanterare"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:309
+msgid "Open it and see how your layout looks."
+msgstr "Öppna den och se hur din layout ser ut."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:311
+msgid ""
+"Everything is OK? Congratulations on your first completed QGIS map project!"
+msgstr ""
+"Är allt som det ska? Grattis till ditt första slutförda QGIS-kartprojekt!"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:314
+msgid ""
+"Anything unsatisfying? Go back to the QGIS window, do the appropriate "
+"modifications and export again."
+msgstr ""
+"Är det något som inte är tillfredsställande? Gå tillbaka till QGIS-fönstret,"
+" gör lämpliga ändringar och exportera igen."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:316
+msgid "Remember to save your project file."
+msgstr "Kom ihåg att spara din projektfil."
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:320
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/map_composer/map_composer.rst:321
+msgid ""
+"Now you know how to create a basic static map layout. We can go a step "
+"further and create a map layout that adapts dynamically, with more layout "
+"items."
+msgstr ""
+"Nu vet du hur du skapar en grundläggande statisk kartlayout. Vi kan gå ett "
+"steg längre och skapa en kartlayout som anpassar sig dynamiskt med fler "
+"layoutobjekt."
