@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,124 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/server_manual/services/ogcapif.rst:4
+msgid "OGC API Features"
+msgstr "Funktioner i OGC API"
+
+#: ../../docs/server_manual/services/ogcapif.rst:6
+msgid ""
+"OGC API Features (OAPIF) is the first implementation of the new generation "
+"of OGC protocols. It is described by the `OGC API - Features - Part 1: Core "
+"<https://docs.ogc.org/is/17-069r3/17-069r3.html>`_ document."
+msgstr ""
+"OGC API Features (OAPIF) är den första implementeringen av den nya "
+"generationen OGC-protokoll. Det beskrivs av dokumentet `OGC API - Funktioner"
+" - Del 1: Core <https://docs.ogc.org/is/17-069r3/17-069r3.html>`_ dokument."
+
+#: ../../docs/server_manual/services/ogcapif.rst:11
+msgid ""
+"The API can be reached on typical installations via "
+"``http://localhost/qgisserver/wfs3``."
+msgstr ""
+"API:et kan nås på vanliga installationer via "
+"``http://localhost/qgisserver/wfs3``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:13
+msgid ""
+"Here is a quick informal summary of the most important differences between "
+"the well known WFS protocol and OAPIF:"
+msgstr ""
+"Här följer en snabb informell sammanfattning av de viktigaste skillnaderna "
+"mellan det välkända WFS-protokollet och OAPIF:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:16
+msgid ""
+"OAPIF is based on a `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
+msgstr ""
+"OAPIF är baserat på ett `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
+
+#: ../../docs/server_manual/services/ogcapif.rst:19
+msgid ""
+"OAPIF must follow the `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
+msgstr ""
+"OAPIF måste följa specifikationerna för `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_"
+
+#: ../../docs/server_manual/services/ogcapif.rst:22
+msgid ""
+"OAPIF supports multiple output formats but it does not dictate any (only "
+"GeoJSON and HTML are currently available in QGIS OAPIF) and it uses `content"
+" negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
+"determine which format is to be served to the client"
+msgstr ""
+"OAPIF stöder flera utdataformat, men det dikterar inte något (endast GeoJSON"
+" och HTML är för närvarande tillgängliga i QGIS OAPIF) och det använder "
+"`innehållsförhandling <https://en.wikipedia.org/wiki/Content_negotiation>`_ "
+"för att avgöra vilket format som ska serveras till klienten"
+
+#: ../../docs/server_manual/services/ogcapif.rst:27
+msgid "JSON and HTML are first class citizens in OAPIF"
+msgstr "JSON och HTML är förstklassiga medborgare i OAPIF"
+
+#: ../../docs/server_manual/services/ogcapif.rst:28
+msgid "OAPIF is self-documenting (through the ``/api`` endpoint)"
+msgstr "OAPIF är självdokumenterande (genom slutpunkten ``/api``)"
+
+#: ../../docs/server_manual/services/ogcapif.rst:29
+msgid "OAPIF is fully navigable (through links) and browsable"
+msgstr "OAPIF är fullt navigerbar (via länkar) och bläddringsbar"
+
+#: ../../docs/server_manual/services/ogcapif.rst:33
+msgid ""
+"While the OGC API Features implementation in QGIS can make use of the "
+"``MAP`` parameter to specify the project file, no extra query parameters are"
+" allowed by the OPENAPI specification. For this reason it is strongly "
+"recommended that ``MAP`` is not exposed in the URL and the project file is "
+"specified in the environment by other means (i.e. setting "
+"``QGIS_PROJECT_FILE`` in the environment through a web server rewrite rule)."
+msgstr ""
+"Även om implementeringen av OGC API Features i QGIS kan använda parametern "
+"``MAP`` för att ange projektfilen, tillåts inga extra frågeparametrar enligt"
+" OPENAPI-specifikationen. Av detta skäl rekommenderas starkt att ``MAP`` "
+"inte exponeras i URL:en och att projektfilen anges i miljön på annat sätt "
+"(dvs. genom att ställa in ``QGIS_PROJECT_FILE`` i miljön via en "
+"omskrivningsregel på webbservern)."
+
+#: ../../docs/server_manual/services/ogcapif.rst:44
+msgid ""
+"The **API** endpoint provides comprehensive documentation of all supported "
+"parameters and output formats of your service. The following paragraphs will"
+" only describe the most important ones."
+msgstr ""
+"Slutpunkten **API** ger omfattande dokumentation av alla parametrar och "
+"utdataformat som stöds av din tjänst. I följande stycken beskrivs endast de "
+"viktigaste."
+
+#: ../../docs/server_manual/services/ogcapif.rst:50
+msgid "Resource representation"
+msgstr "Representation av resurser"
+
+#: ../../docs/server_manual/services/ogcapif.rst:52
+msgid ""
+"The implementation of OGC API Features in QGIS Server currently supports the"
+" following resource representation (output) formats:"
+msgstr ""
+"Implementeringen av OGC API-funktioner i QGIS Server stöder för närvarande "
+"följande format för resursrepresentation (utdata):"
 
 #: ../../docs/server_manual/services/ogcapif.rst:55
 msgid "HTML"
@@ -32,6 +151,20 @@ msgstr "HTML"
 msgid "JSON"
 msgstr "JSON"
 
+#: ../../docs/server_manual/services/ogcapif.rst:58
+msgid ""
+"The format that is actually served will depend on content negotiation, but a"
+" specific format can be explicitly requested by appending a format specifier"
+" to the endpoints."
+msgstr ""
+"Det format som faktiskt levereras beror på innehållsförhandlingen, men ett "
+"specifikt format kan uttryckligen begäras genom att en formatspecifikator "
+"läggs till i ändpunkterna."
+
+#: ../../docs/server_manual/services/ogcapif.rst:62
+msgid "Supported format specifier extensions are:"
+msgstr "Formatspecifikationstillägg som stöds är:"
+
 #: ../../docs/server_manual/services/ogcapif.rst:64
 msgid "``.json``"
 msgstr "``.json``"
@@ -40,33 +173,125 @@ msgstr "``.json``"
 msgid "``.html``"
 msgstr "``.html``"
 
+#: ../../docs/server_manual/services/ogcapif.rst:67
+msgid ""
+"Additional format specifier aliases may be defined by specific endpoints:"
+msgstr ""
+"Ytterligare alias för formatspecificerare kan definieras av specifika "
+"ändpunkter:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:70
+msgid "``.openapi``: alias for ``.json`` supported by the **API** endpoint"
+msgstr "``.openapi``: alias för ``.json`` som stöds av ändpunkten **API**"
+
+#: ../../docs/server_manual/services/ogcapif.rst:71
+msgid ""
+"``.geojson``: alias for ``.json`` supported by the **Features** and "
+"**Feature** endpoints"
+msgstr ""
+"``.geojson``: alias för ``.json`` som stöds av ändpunkterna **Features** och"
+" **Feature**"
+
+#: ../../docs/server_manual/services/ogcapif.rst:77
+msgid "Endpoints"
+msgstr "Endpoints"
+
+#: ../../docs/server_manual/services/ogcapif.rst:79
+msgid ""
+"The API provides a list of endpoints that the clients can retrieve. The "
+"system is designed in such a way that every response provides a set of links"
+" to navigate through all the provided resources."
+msgstr ""
+"API:et tillhandahåller en lista med slutpunkter som klienterna kan hämta. "
+"Systemet är utformat på ett sådant sätt att varje svar innehåller en "
+"uppsättning länkar för att navigera genom alla de resurser som "
+"tillhandahålls."
+
+#: ../../docs/server_manual/services/ogcapif.rst:83
+msgid "Endpoints points provided by the QGIS implementation are:"
+msgstr "Slutpunkterna som tillhandahålls av QGIS-implementeringen är:"
+
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "Name"
 msgstr "Namn"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Path"
+msgstr "Sökväg"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "Description"
 msgstr "Beskrivning"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
+#: ../../docs/server_manual/services/ogcapif.rst:107
+msgid "Landing Page"
+msgstr "Landningssida"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/``"
 msgstr "``/``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid ""
+"General information about the service and provides links to all available "
+"endpoints"
+msgstr ""
+"Allmän information om tjänsten och länkar till alla tillgängliga endpoints"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Conformance"
+msgstr "Överensstämmelse"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/conformance``"
 msgstr "``/conformance``"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about the conformance of the service to the standards"
+msgstr "Information om tjänstens överensstämmelse med standarderna"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "API"
+msgstr "API"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/api``"
 msgstr "``/api``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid ""
+"Full description of the endpoints provided by the service and the returned "
+"documents structure"
+msgstr ""
+"Fullständig beskrivning av de slutpunkter som tillhandahålls av tjänsten och"
+" strukturen för de returnerade dokumenten"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Collections"
+msgstr "Samlingar"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/collections``"
 msgstr "``/collections``"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "List of all collections (i.e. 'vector layers') provided by the service"
+msgstr ""
+"Lista över alla samlingar (dvs. \"vektorlager\") som tillhandahålls av "
+"tjänsten"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Collection"
+msgstr "Samling"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/collections/{collectionId}``"
 msgstr "``/collections/{collectionId}``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about a collection (name, metadata, extent etc.)"
+msgstr "Information om en samling (namn, metadata, omfattning etc.)"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "Features"
@@ -77,5 +302,526 @@ msgid "``/collections/{collectionId}/items``"
 msgstr "``/collections/{collectionId}/items``"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "List of the features provided by the collection"
+msgstr "Lista över de funktioner som tillhandahålls av samlingen"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Feature"
+msgstr "Funktion"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/collections/{collectionId}/items/{featureId}``"
 msgstr "``/collections/{collectionId}/items/{featureId}``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about a single feature"
+msgstr "Information om en enskild funktion"
+
+#: ../../docs/server_manual/services/ogcapif.rst:104
+msgid ""
+"Similar to WFS-T (transactional Web Feature Service), it is possible to add,"
+" update and delete features (CRUD). The respective requests are described on"
+" \"``/api``\"."
+msgstr ""
+"I likhet med WFS-T (transactional Web Feature Service) är det möjligt att "
+"lägga till, uppdatera och ta bort funktioner (CRUD). Respektive begäran "
+"beskrivs på \"``/api``\"."
+
+#: ../../docs/server_manual/services/ogcapif.rst:109
+msgid ""
+"The main endpoint is the **Landing Page**. From that page it is possible to "
+"navigate to all the available service endpoints. The **Landing Page** must "
+"provide links to"
+msgstr ""
+"Den huvudsakliga slutpunkten är **Landningssidan**. Från den sidan är det "
+"möjligt att navigera till alla tillgängliga tjänsteändpunkter. "
+"**Landningssidan** måste innehålla länkar till"
+
+#: ../../docs/server_manual/services/ogcapif.rst:113
+msgid ""
+"the API definition (path ``/api`` link relations ``service-desc`` and "
+"``service-doc``),"
+msgstr ""
+"aPI-definitionen (sökväg ``/api`` länkrelationer ``service-desc`` och "
+"``service-doc``),"
+
+#: ../../docs/server_manual/services/ogcapif.rst:115
+msgid ""
+"the Conformance declaration (path ``/conformance``, link relation "
+"``conformance``), and"
+msgstr ""
+"conformance-deklarationen (sökväg ``/conformance``, länkrelation "
+"``conformance``), och"
+
+#: ../../docs/server_manual/services/ogcapif.rst:117
+msgid "the Collections (path ``/collections``, link relation ``data``)."
+msgstr "samlingarna (sökväg ``/collections``, länkrelation ``data``)."
+
+#: ../../docs/server_manual/services/ogcapif.rst:124
+msgid "Server OAPIF landing page"
+msgstr "Server OAPIF landningssida"
+
+#: ../../docs/server_manual/services/ogcapif.rst:129
+msgid "API Definition"
+msgstr "API-definition"
+
+#: ../../docs/server_manual/services/ogcapif.rst:131
+msgid ""
+"The **API Definition** is an OPENAPI-compliant description of the API "
+"provided by the service. In its HTML representation it is a browsable page "
+"where all the endpoints and their response formats are accurately listed and"
+" documented. The path of this endpoint is ``/api``."
+msgstr ""
+"API-definitionen** är en OPENAPI-kompatibel beskrivning av det API som "
+"tillhandahålls av tjänsten. I sin HTML-representation är det en "
+"bläddringsbar sida där alla endpoints och deras svarsformat är noggrant "
+"listade och dokumenterade. Sökvägen till denna endpoint är ``/api``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:138
+msgid ""
+"The API definition provides a comprehensive and authoritative documentation "
+"of the service, including all supported parameters and returned formats."
+msgstr ""
+"API-definitionen ger en omfattande och auktoritativ dokumentation av "
+"tjänsten, inklusive alla parametrar som stöds och returformat."
+
+#: ../../docs/server_manual/services/ogcapif.rst:144
+msgid "This endpoint is analogue to WFS's ``GetCapabilities``"
+msgstr "Denna ändpunkt är analog med WFS ``GetCapabilities``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:147
+msgid "Collections list"
+msgstr "Samlingslista"
+
+#: ../../docs/server_manual/services/ogcapif.rst:149
+msgid ""
+"The collections endpoint provides a list of all the collections available in"
+" the service. Since the service \"serves\" a single QGIS project the "
+"collections are the vector layers from the current project (if they were "
+"published as WFS in the project properties). The path of this endpoint is "
+"``/collections/``."
+msgstr ""
+"Slutpunkten för samlingar ger en lista över alla samlingar som finns "
+"tillgängliga i tjänsten. Eftersom tjänsten \"betjänar\" ett enda QGIS-"
+"projekt är samlingarna vektorskikten från det aktuella projektet (om de "
+"publicerades som WFS i projektegenskaperna). Sökvägen till den här "
+"ändpunkten är ``/collections/``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:161
+msgid "Server OAPIF collections list page"
+msgstr "Server OAPIF samlingar lista sida"
+
+#: ../../docs/server_manual/services/ogcapif.rst:165
+msgid "Collection detail"
+msgstr "Kollektionsdetaljer"
+
+#: ../../docs/server_manual/services/ogcapif.rst:167
+msgid ""
+"While the collections endpoint does not provide detailed information about "
+"each available collection, that information is available in the "
+"``/collections/{collectionId}`` endpoints. Typical information includes the "
+"extent, a description, CRSs and other metadata."
+msgstr ""
+"Slutpunkten collections ger inte detaljerad information om varje tillgänglig"
+" samling, men den informationen finns i slutpunkterna "
+"``/collections/{collectionId}``. Typisk information omfattar omfattning, "
+"beskrivning, CRS och andra metadata."
+
+#: ../../docs/server_manual/services/ogcapif.rst:173
+#: ../../docs/server_manual/services/ogcapif.rst:194
+msgid ""
+"The HTML representation also provides a browsable map with the available "
+"features."
+msgstr ""
+"HTML-representationen ger också en bläddringsbar karta med de tillgängliga "
+"funktionerna."
+
+#: ../../docs/server_manual/services/ogcapif.rst:182
+msgid "Server OAPIF collection detail page"
+msgstr "Server OAPIF samling detaljsida"
+
+#: ../../docs/server_manual/services/ogcapif.rst:188
+msgid "Features list"
+msgstr "Featureslista"
+
+#: ../../docs/server_manual/services/ogcapif.rst:190
+msgid ""
+"This endpoint provides a list of all features in a collection knowing the "
+"collection ID. The path of this endpoint is "
+"``/collections/{collectionId}/items``."
+msgstr ""
+"Denna endpoint ger en lista över alla funktioner i en samling som känner "
+"till samlingens ID. Sökvägen för denna endpoint är "
+"``/collections/{collectionId}/items``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:200
+msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
+msgstr "Denna ändpunkt är analog med ``GetFeature`` i WFS 1 och WFS 2."
+
+#: ../../docs/server_manual/services/ogcapif.rst:208
+msgid "Server OAPIF features list page"
+msgstr "Lista över funktioner i Server OAPIF sida"
+
+#: ../../docs/server_manual/services/ogcapif.rst:212
+msgid "Feature detail"
+msgstr "Detaljerad funktion"
+
+#: ../../docs/server_manual/services/ogcapif.rst:214
+msgid ""
+"This endpoint provides all the available information about a single feature,"
+" including the feature attributes and its geometry. The path of this "
+"endpoint is ``/collections/{collectionId}/items/{itemId}``."
+msgstr ""
+"Denna endpoint tillhandahåller all tillgänglig information om en enskild "
+"feature, inklusive feature-attribut och dess geometri. Sökvägen till denna "
+"endpoint är ``/collections/{collectionId}/items/{itemId}``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:219
+msgid ""
+"The HTML representation also provides a browsable map with the feature "
+"geometry."
+msgstr ""
+"HTML-representationen ger också en bläddringsbar karta med objektets "
+"geometri."
+
+#: ../../docs/server_manual/services/ogcapif.rst:228
+msgid "Server OAPIF feature detail page"
+msgstr "Detaljerad sida för funktionen Server OAPIF"
+
+#: ../../docs/server_manual/services/ogcapif.rst:233
+msgid "Pagination"
+msgstr "Sidindelning"
+
+#: ../../docs/server_manual/services/ogcapif.rst:235
+msgid ""
+"Pagination of a long list of features is implemented in the OGC API through "
+"``next`` and ``prev`` links, QGIS server constructs these links by appending"
+" ``limit`` and ``offset`` as query string parameters."
+msgstr ""
+"Paginering av en lång lista med funktioner implementeras i OGC API genom "
+"``next`` och ``prev`` länkar, QGIS server konstruerar dessa länkar genom att"
+" lägga till ``limit`` och ``offset`` som parametrar i frågesträngen."
+
+#: ../../docs/server_manual/services/ogcapif.rst:240
+#: ../../docs/server_manual/services/ogcapif.rst:315
+#: ../../docs/server_manual/services/ogcapif.rst:327
+#: ../../docs/server_manual/services/ogcapif.rst:341
+#: ../../docs/server_manual/services/ogcapif.rst:352
+#: ../../docs/server_manual/services/ogcapif.rst:381
+msgid "URL example:"
+msgstr "Exempel på URL:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:248
+msgid ""
+"The maximum acceptable value for ``limit`` can be configured with the "
+"``QGIS_SERVER_API_WFS3_MAX_LIMIT`` server configuration setting (see: "
+":ref:`qgis-server-envvar`)."
+msgstr ""
+"Det högsta godtagbara värdet för ``limit`` kan konfigureras med serverns "
+"konfigurationsinställning ``QGIS_SERVER_API_WFS3_MAX_LIMIT`` (se: "
+":ref:`qgis-server-envvar`)."
+
+#: ../../docs/server_manual/services/ogcapif.rst:254
+msgid "Feature filtering"
+msgstr "Filtrering av funktioner"
+
+#: ../../docs/server_manual/services/ogcapif.rst:256
+msgid ""
+"The features available in a collection can be filtered/searched by "
+"specifying one or more filters."
+msgstr ""
+"De funktioner som finns i en samling kan filtreras/sökas genom att ange ett "
+"eller flera filter."
+
+#: ../../docs/server_manual/services/ogcapif.rst:261
+msgid "Date and time filter"
+msgstr "Datum- och tidsfilter"
+
+#: ../../docs/server_manual/services/ogcapif.rst:262
+msgid ""
+"Collections with date and/or datetime attributes can be filtered by "
+"specifying a ``datetime`` argument in the query string. By default the first"
+" date/datetime field is used for filtering. This behavior can be configured "
+"by setting a \"Date\" or \"Time\" dimension in the :menuselection:`QGIS "
+"Server --> Dimension` section of the layer properties dialog."
+msgstr ""
+"Samlingar med datum- och/eller datetime-attribut kan filtreras genom att "
+"ange ett ``datetime``-argument i frågesträngen. Som standard används det "
+"första datum-/datetime-fältet för filtrering. Detta beteende kan "
+"konfigureras genom att ange en \"Date\"- eller \"Time\"-dimension i "
+"avsnittet :menuselection:`QGIS Server --> Dimension` i dialogen för "
+"skiktegenskaper."
+
+#: ../../docs/server_manual/services/ogcapif.rst:269
+msgid ""
+"The date and time filtering syntax is fully described in the "
+":ref:`ogc_api_features_api_definition` and also supports ranges (begin and "
+"end values are included) in addition to single values."
+msgstr ""
+"Syntaxen för datum- och tidsfiltrering beskrivs i sin helhet i "
+":ref:`ogc_api_features_api_definition` och stöder även intervall (start- och"
+" slutvärden ingår) utöver enskilda värden."
+
+#: ../../docs/server_manual/services/ogcapif.rst:274
+msgid "URL examples:"
+msgstr "Exempel på webbadresser:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:276
+msgid "Returns only the features with date dimension matching ``2019-01-01``"
+msgstr ""
+"Returnerar endast de funktioner med datumdimension som matchar "
+"``2019-01-01``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:282
+msgid ""
+"Returns only the features with datetime dimension matching "
+"``2019-01-01T01:01:01``"
+msgstr ""
+"Returnerar endast funktioner med en datatidsdimension som matchar "
+"``2019-01-01T01:01:01``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:289
+msgid ""
+"Returns only the features with datetime dimension in the range "
+"``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
+msgstr ""
+"Returnerar endast funktioner med datetime-dimension i intervallet "
+"``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:298
+msgid "Bounding box filter"
+msgstr "Filter för begränsande box"
+
+#: ../../docs/server_manual/services/ogcapif.rst:300
+msgid ""
+"A bounding box spatial filter can be specified with the ``bbox`` parameter:"
+msgstr ""
+"Ett rumsligt filter med avgränsande box kan specificeras med parametern "
+"``bbox``:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:302
+msgid "The order of the comma separated elements is:"
+msgstr "Ordningen på de kommaseparerade elementen är:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:304
+msgid "Lower left corner, WGS 84 longitude"
+msgstr "Nedre vänstra hörnet, WGS 84-longitud"
+
+#: ../../docs/server_manual/services/ogcapif.rst:305
+msgid "Lower left corner, WGS 84 latitude"
+msgstr "Nedre vänstra hörnet, WGS 84 latitud"
+
+#: ../../docs/server_manual/services/ogcapif.rst:306
+msgid "Upper right corner, WGS 84 longitude"
+msgstr "Övre högra hörnet, WGS 84-longitud"
+
+#: ../../docs/server_manual/services/ogcapif.rst:307
+msgid "Upper right corner, WGS 84 latitude"
+msgstr "Övre högra hörnet, WGS 84 latitud"
+
+#: ../../docs/server_manual/services/ogcapif.rst:310
+msgid ""
+"The OGC specifications also allow a 6 item bbox specifier where the third "
+"and sixth items are the Z components, this is not yet supported by QGIS "
+"server."
+msgstr ""
+"OGC-specifikationerna tillåter också en bbox-specifikator med 6 objekt där "
+"det tredje och sjätte objektet är Z-komponenterna, men detta stöds ännu inte"
+" av QGIS-servern."
+
+#: ../../docs/server_manual/services/ogcapif.rst:321
+msgid ""
+"If the *CRS* of the bounding box is not `WGS 84 "
+"<https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_, a different CRS can be "
+"specified by using the optional parameter ``bbox-crs``. The CRS format "
+"identifier must be in the `OGC URI <https://www.opengis.net/def/crs/>`_ "
+"format:"
+msgstr ""
+"Om *CRS* för begränsningsrutan inte är `WGS 84 "
+"<https://www.opengis.net/def/crs/OGC/1.3/CRS84>`_ kan ett annat CRS anges "
+"med hjälp av den valfria parametern ``bbox-crs``. Identifieraren för CRS-"
+"formatet måste vara i formatet `OGC URI "
+"<https://www.opengis.net/def/crs/>`_:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:335
+msgid "Attribute filters"
+msgstr "Attributfilter"
+
+#: ../../docs/server_manual/services/ogcapif.rst:337
+msgid ""
+"Attribute filters can be combined with the bounding box filter and they are "
+"in the general form: ``<attribute name>=<attribute value>``. Multiple "
+"filters can be combined using the ``AND`` operator."
+msgstr ""
+"Attributfilter kan kombineras med bounding box-filtret och de har följande "
+"allmänna form: ``<attribute name>=<attribute value>``. Flera filter kan "
+"kombineras med hjälp av operatorn ``AND``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:343
+msgid "filters all features where attribute ``name`` equals \"my value\""
+msgstr ""
+"filtrerar alla funktioner där attributet ``namn`` är lika med \"mitt värde\""
+
+#: ../../docs/server_manual/services/ogcapif.rst:350
+msgid "Partial matches are also supported by using a ``*`` (\"star\") operator:"
+msgstr ""
+"Partiella matchningar stöds också genom att använda operatorn ``*`` "
+"(\"stjärna\"):"
+
+#: ../../docs/server_manual/services/ogcapif.rst:354
+msgid "filters all features where attribute ``name`` ends with \"value\""
+msgstr "filtrerar alla funktioner där attributet ``name`` slutar med \"value\""
+
+#: ../../docs/server_manual/services/ogcapif.rst:361
+msgid "Feature sorting"
+msgstr "Sortering av funktioner"
+
+#: ../../docs/server_manual/services/ogcapif.rst:363
+msgid ""
+"It is possible to order the result set by field value using the ``sortby`` "
+"query parameter."
+msgstr ""
+"Det är möjligt att sortera resultatuppsättningen efter fältvärde med hjälp "
+"av frågeparametern ``ortby``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:366
+msgid ""
+"The results are sorted in ascending order by default. To sort the results in"
+" descending order, a boolean flag (``sortdesc``) can be set:"
+msgstr ""
+"Resultaten sorteras som standard i stigande ordning. Om du vill sortera "
+"resultaten i fallande ordning kan du ange en boolesk flagga (``ortdesc``):"
+
+#: ../../docs/server_manual/services/ogcapif.rst:375
+msgid "Attribute selection"
+msgstr "Val av attribut"
+
+#: ../../docs/server_manual/services/ogcapif.rst:377
+msgid ""
+"The feature attributes returned by a :ref:`ogc_api_features_features_list` "
+"call can be limited by adding a comma separated list of attribute names in "
+"the optional ``properties`` query string argument."
+msgstr ""
+"De funktionsattribut som returneras av ett anrop från "
+":ref:`ogc_api_features_features_list` kan begränsas genom att lägga till en "
+"kommaseparerad lista med attributnamn i det valfria argumentet "
+"``properties`` i frågesträngen."
+
+#: ../../docs/server_manual/services/ogcapif.rst:383
+msgid "returns only the ``name`` attribute"
+msgstr "returnerar endast attributet ``name``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:391
+msgid "Customize the HTML pages"
+msgstr "Anpassa HTML-sidorna"
+
+#: ../../docs/server_manual/services/ogcapif.rst:393
+msgid ""
+"The HTML representation uses a set of HTML templates to generate the "
+"response. The template is parsed by a template engine called `inja "
+"<https://github.com/pantor/inja/>`_. The templates can be customized by "
+"overriding them (see: :ref:`server_oapif_template_override`). The template "
+"has access to the same data that are available to the ``JSON`` "
+"representation and a few additional functions are available to the template:"
+msgstr ""
+"HTML-representationen använder en uppsättning HTML-mallar för att generera "
+"svaret. Mallen analyseras av en mallmotor som heter `inja "
+"<https://github.com/pantor/inja/>`_. Mallarna kan anpassas genom att "
+"åsidosätta dem (se: :ref:`server_oapif_template_override`). Mallen har "
+"tillgång till samma data som är tillgängliga för ``JSON``-representationen "
+"och några ytterligare funktioner är tillgängliga för mallen:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:405
+msgid "Custom template functions"
+msgstr "Anpassade mallfunktioner"
+
+#: ../../docs/server_manual/services/ogcapif.rst:407
+msgid "``path_append( path )``: appends a directory path to the current url"
+msgstr ""
+"``path_append( path )``: lägger till en katalogsökväg till den aktuella "
+"webbadressen"
+
+#: ../../docs/server_manual/services/ogcapif.rst:408
+msgid ""
+"``path_chomp( n )``: removes the specified number \"n\" of directory "
+"components from the current url path"
+msgstr ""
+"``path_chomp( n )``: tar bort det angivna antalet \"n\" katalogkomponenter "
+"från den aktuella webbadressens sökväg"
+
+#: ../../docs/server_manual/services/ogcapif.rst:410
+msgid "``json_dump( )``: prints the JSON data passed to the template"
+msgstr "``json_dump( )``: skriver ut JSON-data som skickas till mallen"
+
+#: ../../docs/server_manual/services/ogcapif.rst:411
+msgid ""
+"``static( path )``: returns the full URL to the specified static path. For "
+"example: \"static( \"/style/black.css\" )\" with a root path "
+"\"http://localhost/qgisserver/wfs3\" will return "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
+msgstr ""
+"``static( path )``: returnerar den fullständiga URL:en till den angivna "
+"statiska sökvägen. Till exempel: \"static( \"static( \"/style/black.css\" "
+")\" med en rotsökväg \"http://localhost/qgisserver/wfs3\" returnerar "
+"\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
+
+#: ../../docs/server_manual/services/ogcapif.rst:415
+msgid ""
+"``links_filter( links, key, value )``: Returns filtered links from a link "
+"list"
+msgstr ""
+"``länkar_filter( länkar, nyckel, värde )``: Returnerar filtrerade länkar "
+"från en länklista"
+
+#: ../../docs/server_manual/services/ogcapif.rst:417
+msgid ""
+"``content_type_name( content_type )``: Returns a short name from a content "
+"type, for example \"text/html\" will return \"HTML\""
+msgstr ""
+"``content_type_name( content_type )``: Returnerar ett kort namn från en "
+"innehållstyp, till exempel \"text/html\" returnerar \"HTML\""
+
+#: ../../docs/server_manual/services/ogcapif.rst:419
+msgid ""
+"``nl2br( text )``: Returns the input text with all newlines replaced by "
+"\"<br>\" tags"
+msgstr ""
+"``nl2br( text )``: Returnerar inmatningstexten med alla nya rader ersatta av"
+" \"<br>\" taggar"
+
+#: ../../docs/server_manual/services/ogcapif.rst:421
+msgid ""
+"``starts_with( string, prefix )``: returns true if a string begins with the "
+"provided string prefix, false otherwise"
+msgstr ""
+"``starts_with( string, prefix )``: returnerar true om en sträng börjar med "
+"det angivna strängprefixet, false annars"
+
+#: ../../docs/server_manual/services/ogcapif.rst:428
+msgid "Template overrides"
+msgstr "Åsidosättande av mall"
+
+#: ../../docs/server_manual/services/ogcapif.rst:430
+msgid ""
+"Templates and static assets are stored in subdirectories of the QGIS server "
+"default API resource directory "
+"(:file:`/usr/share/qgis/resources/server/api/` on a Linux system), the base "
+"directory can be customized by changing the environment variable "
+"``QGIS_SERVER_API_RESOURCES_DIRECTORY``."
+msgstr ""
+"Mallar och statiska tillgångar lagras i underkataloger i QGIS-serverns "
+"standard API-resurskatalog (:file:`/usr/share/qgis/resources/server/api/` på"
+" ett Linux-system), baskatalogen kan anpassas genom att ändra miljövariabeln"
+" ``QGIS_SERVER_API_RESOURCES_DIRECTORY``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:436
+msgid "A typical Linux installation will have the following directory tree:"
+msgstr "En typisk Linux-installation har följande katalogträd:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:461
+msgid ""
+"To override the templates you can copy the whole tree to another location "
+"and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location."
+msgstr ""
+"Om du vill åsidosätta mallarna kan du kopiera hela trädet till en annan "
+"plats och peka ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` till den nya platsen."
