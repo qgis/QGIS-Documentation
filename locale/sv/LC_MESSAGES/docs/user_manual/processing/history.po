@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Daniel Nylander <po@danielnylander.se>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,168 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/user_manual/processing/history.rst:4
+msgid "The history manager"
+msgstr "Den historiskt ansvarige"
+
+#: ../../docs/user_manual/processing/history.rst:12
+msgid "The processing history"
+msgstr "Bearbetningshistorik"
+
+#: ../../docs/user_manual/processing/history.rst:14
+msgid ""
+"Every time you execute an algorithm, information about the process is stored"
+" in the history manager. The date and time of the execution are saved, along"
+" with the parameters used, making it is easy to track and control all the "
+"work that has been developed using the Processing framework, and to "
+"reproduce it."
+msgstr ""
+"Varje gång du kör en algoritm lagras information om processen i "
+"historikhanteraren. Datum och tid för exekveringen sparas tillsammans med de"
+" parametrar som används, vilket gör det enkelt att spåra och kontrollera "
+"allt arbete som har utvecklats med hjälp av Processing-ramverket och att "
+"reproducera det."
+
 #: ../../docs/user_manual/processing/history.rst:26
 msgid "History"
 msgstr "Historik"
+
+#: ../../docs/user_manual/processing/history.rst:28
+msgid ""
+"Process information is kept as a command-line expression, even if the "
+"algorithm was launched from the toolbox. This makes it useful for those "
+"learning how to use the command-line interface, since they can call an "
+"algorithm using the toolbox and then check the history manager to see how it"
+" could be called from the command line."
+msgstr ""
+"Processinformationen sparas som ett kommandoradsuttryck, även om algoritmen "
+"startades från verktygslådan. Detta gör det användbart för dem som lär sig "
+"att använda kommandoradsgränssnittet, eftersom de kan anropa en algoritm med"
+" hjälp av verktygslådan och sedan kontrollera historikhanteraren för att se "
+"hur den skulle kunna anropas från kommandoraden."
+
+#: ../../docs/user_manual/processing/history.rst:35
+msgid "Right-click on a row and you should be able to:"
+msgstr "Högerklicka på en rad så ska du kunna göra det:"
+
+#: ../../docs/user_manual/processing/history.rst:37
+msgid ""
+":guilabel:`Copy as Python Command`: allows for easy copying of the "
+"equivalent :ref:`PyQGIS command <processing_console>` run from the dialog. "
+"Same as the code displayed below the commands list."
+msgstr ""
+":guilabel:`Copy as Python Command`: gör det enkelt att kopiera det "
+"motsvarande :ref:`PyQGIS-kommandot <processing_console>` som körs från "
+"dialogrutan. Samma som koden som visas under kommandolistan."
+
+#: ../../docs/user_manual/processing/history.rst:40
+msgid ""
+":guilabel:`Copy as qgis_process Command`: allows for easy generation of "
+":ref:`qgis_process command <processing_standalone>`, including its "
+"environment settings like the distance units, area units, ellipsoid, and any"
+" tricky parameter values like GeoPackage outputs with specific layers"
+msgstr ""
+":guilabel:`Kopiera som qgis_process-kommando`: gör det enkelt att generera "
+":ref:`qgis_process-kommando <processing_standalone>`, inklusive dess "
+"miljöinställningar som avståndsenheter, ytenheter, ellipsoid och eventuella "
+"knepiga parametervärden som GeoPackage-utdata med specifika lager"
+
+#: ../../docs/user_manual/processing/history.rst:44
+msgid ""
+":guilabel:`Copy as JSON`: all the settings of the command are copied in a "
+":file:`JSON` format, ready to be consumed by qgis_process. This is a "
+"convenient way to see the expected format of the commands, even for complex "
+"parameters (like TIN interpolation parameters). You can store these easily "
+"and then restore them later by pasting the values over an algorithm dialog."
+msgstr ""
+":guilabel:`Copy as JSON`: alla inställningar för kommandot kopieras i ett "
+":file:`JSON`-format, redo att användas av qgis_process. Detta är ett bekvämt"
+" sätt att se det förväntade formatet för kommandona, även för komplexa "
+"parametrar (som TIN-interpolationsparametrar). Du kan enkelt lagra dessa och"
+" sedan återställa dem senare genom att klistra in värdena i en "
+"algoritmdialog."
+
+#: ../../docs/user_manual/processing/history.rst:50
+msgid ""
+":guilabel:`Create Test...` using the concerned algorithm and parameters, "
+"following instructions at :source:`Processing README file "
+"<python/plugins/processing/tests/README.md>`."
+msgstr ""
+":guilabel:`Skapa test...` med hjälp av den aktuella algoritmen och "
+"parametrarna, enligt instruktionerna i :source:`Processing README-filen "
+"<python/plugins/processing/tests/README.md>`."
+
+#: ../../docs/user_manual/processing/history.rst:54
+msgid ""
+"Apart from browsing the entries in the registry, you can also re-execute "
+"processes by simply double-clicking on the entry. The algorithm dialog then "
+"opens with parameters already set, and you can change any of them to fit "
+"your needs and re-run the algorithm."
+msgstr ""
+"Förutom att bläddra bland posterna i registret kan du också köra processer "
+"igen genom att helt enkelt dubbelklicka på posten. Algoritmdialogen öppnas "
+"då med redan inställda parametrar, och du kan ändra någon av dem så att de "
+"passar dina behov och köra algoritmen igen."
+
+#: ../../docs/user_manual/processing/history.rst:59
+msgid ""
+"The :guilabel:`History` dialog also provides a convenient way to contribute "
+"to the consolidation of the testing infrastructure of QGIS Processing "
+"algorithms and scripts."
+msgstr ""
+"Dialogrutan :guilabel:`History` ger också ett bekvämt sätt att bidra till "
+"konsolideringen av testinfrastrukturen för QGIS Processing-algoritmer och "
+"skript."
+
+#: ../../docs/user_manual/processing/history.rst:65
+msgid "The processing log"
+msgstr "Behandlingsloggen"
+
+#: ../../docs/user_manual/processing/history.rst:67
+msgid ""
+"The history dialog only contains the execution calls, but not the "
+"information produced by the algorithm when executed. That information is "
+"written to the QGIS log (:menuselection:`View --> Panels --> Log Messages "
+"Panel`)."
+msgstr ""
+"Historikdialogen innehåller endast exekveringsanropen, men inte den "
+"information som algoritmen producerar när den exekveras. Den informationen "
+"skrivs till QGIS-loggen (:menuselection:``View --> Panels --> Log Messages "
+"Panel``)."
+
+#: ../../docs/user_manual/processing/history.rst:72
+msgid ""
+"Third-party algorithms are usually executed by using their command-line "
+"interfaces, which communicate with the user via the console. Although that "
+"console is not shown, usually a full dump of it is written to the log each "
+"time you run one of those algorithms. To avoid cluttering the log with that "
+"information, you can disable it for each provider in the settings dialog."
+msgstr ""
+"Algoritmer från tredje part körs vanligtvis med hjälp av deras "
+"kommandoradsgränssnitt, som kommunicerar med användaren via konsolen. Även "
+"om konsolen inte visas skrivs vanligtvis en fullständig dumpning av den till"
+" loggen varje gång du kör en av dessa algoritmer. För att undvika att loggen"
+" fylls med den informationen kan du inaktivera den för varje leverantör i "
+"inställningsdialogen."
+
+#: ../../docs/user_manual/processing/history.rst:80
+msgid ""
+"Some algorithms, even if they can produce a result with the given input "
+"data, output comments or additional information to log when they detect "
+"potential problems with the data, in order to warn you. Make sure you check "
+"those messages in the log if you get unexpected results."
+msgstr ""
+"Vissa algoritmer, även om de kan producera ett resultat med de givna indata,"
+" skickar ut kommentarer eller ytterligare information till loggen när de "
+"upptäcker potentiella problem med data, för att varna dig. Se till att "
+"kontrollera dessa meddelanden i loggen om du får oväntade resultat."
