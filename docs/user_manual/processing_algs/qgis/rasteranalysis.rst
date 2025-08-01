@@ -3189,6 +3189,131 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+.. _qgisrasterrank:
+
+Raster rank
+----------------
+Performs a rank-based analysis for each pixel using overlapping input rasters.
+The output rank reflects the position of a pixel's value in the sorted list of
+values at that location, using the first band of each input layer.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT_RASTERS``
+     - [raster]
+     - Input raster layer to calculate the rank from.
+   * - **Rank**
+     - ``RANKS``
+     - [numeric: integer] [list]
+
+       Default: ``[1]``
+     - List of ranks to calculate for each pixel.
+       The ranks are 1-based, meaning that the first rank is 1.
+   * - **NoData value handling**
+     - ``NODATA_HANDLING``
+     - [enumeration]
+
+       Default: ``[Exclude NoData from values lists]``
+     - Choose how to handle NoData values in the input raster:
+
+       * Exclude NoData from values lists: will not include NoData values in the list of pixel values when calculating ranks.
+       * Presence of NoData in a values list results in NoData output cells: the output raster will have NoData values in the corresponding locations.
+   * - **Ranked**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster containing the rank values.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output extent**
+
+       Optional
+     - ``EXTENT``
+     - [extent]
+     - Specify the spatial extent of the output raster layer.
+       If the extent is not specified, the minimum extent that covers
+       all the selected reference layers will be used.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
+   * - **Output cell size**
+
+       Optional
+     - ``CELL_SIZE``
+     - [numeric: double]
+     - Cell size of the output raster layer.
+       If the cell size is not specified, the minimum cell size of
+       the selected reference layer(s) will be used.
+       The cell size will be the same for the X and Y axes.
+   * - **Output CRS**
+
+       Optional
+     - ``CRS``
+     - [crs]
+     - CRS of the output raster layer.
+       If the output CRS is not specified, the CRS of the first
+       reference layer will be used.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Ranked**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:rasterrank``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisrastersurfacevolume:
 
 Raster surface volume
