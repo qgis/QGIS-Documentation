@@ -2845,8 +2845,15 @@ Outputs
      - The output (point) vector layer containing the specified
        vertices from the input layer geometries.
        Other than the input attributes, the output layer also contains the following fields:
-       ``vertex_pos``, ``vertex_index``, ``vertex_part``, ``vertex_part_ring``, ``vertex_part_index``,
-       ``distance``, and ``angle`` of the extracted vertex.
+
+       - ``vertex_pos``: the position of the vertex in the geometry, where counting starts at 0 for the first vertex.
+       - ``vertex_index``: the index of the vertex within its part. The first vertex is indexed as 0.
+       - ``vertex_part``: the part number of the geometry that the vertex belongs to. For single-part geometries, this is always 0.
+         For multi-part geometries (e.g. MultiPolygon or MultiLine), this indicates which part the vertex comes from.
+       - ``vertex_part_ring``: for polygon geometries, this indicates whether the vertex belongs to the outer ring (0) or one of the inner rings (1, 2, ...).
+       - ``vertex_part_index``: is the index of a vertex in a specific ring.
+       - ``distance``: the distance from the previous vertex.
+       - ``angle``: the angle (in degrees) between the previous and the current vertex.
 
 Python code
 ...........
@@ -2933,8 +2940,14 @@ Outputs
      - The output (point) vector layer containing the vertices from
        the input layer geometries.
        Other than the input attributes, the output layer also contains the following fields:
-       ``vertex_index``, ``vertex_part``, ``vertex_part_ring``, ``vertex_part_index``,
-       ``distance``, and ``angle`` of the extracted vertex.
+       
+       - ``vertex_index``: the index of the vertex within its part. The first vertex is indexed as 0.
+       - ``vertex_part``: the part number of the geometry that the vertex belongs to. For single-part geometries, this is always 0.
+         For multi-part geometries (e.g. MultiPolygon or MultiLine), this indicates which part the vertex comes from.
+       - ``vertex_part_ring``: for polygon geometries, this indicates whether the vertex belongs to the outer ring (0) or one of the inner rings (1, 2, ...).
+       - ``vertex_part_index``: is the index of a vertex in a specific ring.
+       - ``distance``: the distance from the previous vertex.
+       - ``angle``: the angle (in degrees) between the previous and the current vertex.
 
 Python code
 ...........
