@@ -308,7 +308,7 @@ Basic parameters
      - ``TRAVEL_COST``
      - [numeric: double]
 
-       Default: 0.O
+       Default: 0.0
      - The value is estimated as a distance (in the network
        layer units) when looking for the *Shortest* path and
        as time (in hours) for the *Fastest* path.
