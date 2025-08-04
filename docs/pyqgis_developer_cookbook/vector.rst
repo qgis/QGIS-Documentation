@@ -975,7 +975,7 @@ The following example code illustrates creating and populating a memory provider
 
 .. testcode:: vectors
 
-  from qgis.PyQt.QtCore import QMetaType
+  from qgis.PyQt.QtCore import QDateTime, QMetaType, Qt
 
   # create layer
   vl = QgsVectorLayer("Point", "temporary_points", "memory")
@@ -1017,10 +1017,10 @@ Finally, let's check whether everything went well
 
 .. testoutput:: vectors
 
-    fields: 3
+    fields: 4
     features: 1
     extent: 10.0 10.0 10.0 10.0
-    F: 1 ['Johnny', 2, 0.3, PyQt6.QtCore.QDateTime(2000, 1, 1, 12, 0)] <QgsPointXY: POINT(10 10)>
+    F: 1 ['Johnny', 2, 0.3, PyQt5.QtCore.QDateTime(2000, 1, 1, 12, 0)] <QgsPointXY: POINT(10 10)>
 
 .. index:: Vector layers; Symbology
 
