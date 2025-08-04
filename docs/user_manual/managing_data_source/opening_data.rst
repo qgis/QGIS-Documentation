@@ -1302,6 +1302,20 @@ To load a layer from a database, you can perform the following steps:
    Add PostgreSQL Table(s) Dialog
 
 
+.. note:: In the first column of the list of layers, a warning icon will appear at the
+  left-hand side when the layer still requires a primary key column to be defined,
+  so that QGIS can unequivocally identify each feature.
+
+  This can be done by selecting one or more attributes in the drop-down list at the
+  corresponding ``Feature id`` column.
+
+  Since PostgreSQL views don't support primary keys, a unique attribute or
+  combination of attributes should always be selected. To help users to speed-up
+  workflows, QGIS automatically selects the first attribute in the view. Therefore,
+  users can define their views in a way that a unique column is in the first position
+  of the view's definition. In this way, the view will be loaded with no extra
+  interaction and the warning icon will never appear.
+
 .. tip:: **Use the Browser Panel to speed up loading of database table(s)**
 
   Adding DB tables from the :guilabel:`Data Source Manager` may
