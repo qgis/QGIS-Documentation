@@ -4043,7 +4043,7 @@ Outputs
        the output also has the attributes:
 
        * ``width``, ``height``, ``area`` and ``perimeter`` of the Envelope (Bounding Box)
-       * ``width``, ``height``, ``area``, ``angle`` and ``perimeter`` of the Mininum Oriented Rectangle
+       * ``width``, ``height``, ``area``, ``angle`` and ``perimeter`` of the Minimum Oriented Rectangle
        * ``radius`` and ``area`` of the Minimum Enclosing Circle
        * ``area`` and ``perimeter`` of the Convex Hull 
 
