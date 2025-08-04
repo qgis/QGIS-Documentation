@@ -478,6 +478,19 @@ msgstr ""
 "se sei interessato a saperne di più sull'argomento, consulta la "
 "documentazione di Qt."
 
+#: ../../docs/developers_guide/unittesting.rst:308
+msgid ""
+"Next lets look at our functional test. The ``isValid()`` test simply checks "
+"if the raster layer was loaded correctly in the initTestCase. QVERIFY is a "
+"Qt macro that you can use to evaluate a test condition. There are a few "
+"other macros Qt provides for use in your tests including:"
+msgstr ""
+"Passiamo ora al nostro test funzionale. Il test ``isValid()`` verifica "
+"semplicemente se il layer raster è stato caricato correttamente in "
+"initTestCase. QVERIFY è una macro Qt che puoi utilizzare per valutare una "
+"condizione di test. Esistono alcune altre macro fornite da Qt che è "
+"possibile utilizzare nei test, tra cui:"
+
 #: ../../docs/developers_guide/unittesting.rst:313
 msgid "QCOMPARE ( *actual, expected* )"
 msgstr "QCOMPARE ( *actual, expected* )"
@@ -992,6 +1005,37 @@ msgstr ""
 "arguments>`_. In questo modo è possibile eseguire un sottoinsieme specifico "
 "di test:"
 
+#: ../../docs/developers_guide/unittesting.rst:707
+msgid "Sandboxing test run"
+msgstr "Esecuzione test in modalità sandbox"
+
+#: ../../docs/developers_guide/unittesting.rst:709
+msgid ""
+"By default all test temporary files are written to the system temp directory"
+" (for example ``/tmp/`` on Linux systems or ``C:\\temp`` on Windows). A lot "
+"of files can be created in this directory during the test run."
+msgstr ""
+"Per impostazione predefinita, tutti i file temporanei di test vengono "
+"scritti nella directory temporanea di sistema (ad esempio ``/tmp/`` sui "
+"sistemi Linux o ``C:\\temp`` su Windows). Durante l'esecuzione del test, in "
+"questa directory possono essere creati molti file."
+
+#: ../../docs/developers_guide/unittesting.rst:712
+msgid ""
+"If you do not want to mix up with the common system temp directory (for "
+"example on a multi user server or in case of permission issue), you can "
+"create your own temp directory and specify it to ``ctest`` by setting the "
+"``TMPDIR`` environment variable with your new directory."
+msgstr ""
+"Se non desideri utilizzare la directory temporanea comune del sistema (ad "
+"esempio su un server multiutente o in caso di problemi di autorizzazione), "
+"puoi creare una tua directory temporanea e specificarla in ``ctest`` "
+"impostando la variabile di ambiente ``TMPDIR`` con la tua nuova directory."
+
+#: ../../docs/developers_guide/unittesting.rst:715
+msgid "On Linux you could do it with:"
+msgstr "Su Linux puoi farlo con:"
+
 #: ../../docs/developers_guide/unittesting.rst:724
 msgid "Debugging unit tests"
 msgstr "Debug di unit test"
@@ -1090,3 +1134,18 @@ msgstr ""
 #: ../../docs/developers_guide/unittesting.rst:763
 msgid "Have fun"
 msgstr "Buon divertimento "
+
+#: ../../docs/developers_guide/unittesting.rst:765
+msgid ""
+"Well that concludes this section on writing unit tests in QGIS. We hope you "
+"will get into the habit of writing tests to test new functionality and to "
+"check for regressions. Some aspects of the test system (in particular the "
+":file:`CMakeLists.txt` parts) are still being worked on so that the testing "
+"framework works in a truly platform independent way."
+msgstr ""
+"Bene, questo conclude questa sezione sulla scrittura di unit test in QGIS."
+"   Speriamo che tu prenda l'abitudine di scrivere test per collaudare nuove "
+"funzionalità e per controllare le eventuali rettifiche. Alcuni aspetti del "
+"sistema di test (in particolare le parti :file:`CMakeLists.txt`) sono ancora"
+" in fase di sviluppo per assicurare che framework di test funzioni in modo "
+"realmente indipendente dalla piattaforma."
