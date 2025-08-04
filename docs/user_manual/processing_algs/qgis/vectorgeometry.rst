@@ -2847,6 +2847,7 @@ Outputs
        Other than the input attributes, the output layer also contains the following fields:
 
        - ``vertex_pos``: the position of the vertex in the geometry, where counting starts at 0 for the first vertex.
+         The value depends on the vertex indices provided by the user in the algorithm input. Negative values count from the end (e.g., -1 is the last vertex).
        - ``vertex_index``: the index of the vertex within its part. The first vertex is indexed as 0.
        - ``vertex_part``: the part number of the geometry that the vertex belongs to. For single-part geometries, this is always 0.
          For multi-part geometries (e.g. MultiPolygon or MultiLine), this indicates which part the vertex comes from.
