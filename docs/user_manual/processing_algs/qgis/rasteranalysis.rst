@@ -3224,8 +3224,11 @@ Basic parameters
      - [numeric: integer] [list]
 
        Default: [1]
-     - List of ranks to calculate for each pixel.
+     - List of ranks to calculate for each pixel in the sorted list of cells values
+       from the input rasters.
+       Cells whose values match the given rank(s) are kept in the output layer.
        The ranks are 1-based, meaning that the first rank is 1.
+       Negative values are also supported.
    * - **NoData value handling**
      - ``NODATA_HANDLING``
      - [enumeration]
