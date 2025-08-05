@@ -167,7 +167,7 @@ Deletes holes in polygon geometries based on an error layer from the
 
    Fixing reported errors on a polygon feature for holes.
 
-.. seealso:: :ref:`qgischeckgeometryholes`
+.. seealso:: :ref:`qgischeckgeometryholes`, :ref:`qgisdeleteholes`
 
 Parameters
 ..........
