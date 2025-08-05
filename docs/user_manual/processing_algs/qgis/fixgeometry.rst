@@ -280,8 +280,8 @@ Outputs
        x and y coordinates and value of the erroneous angle, the applied fix and its successfulness).
    * - **Holes-filled layer**
      - ``OUTPUT``
-     - [same as input]
-     - Output layer with the geometry fix applied to the input features.
+     - [vector: polygon]
+     - Output layer of polygons without holes.
 
 Python code
 ...........
