@@ -3230,7 +3230,7 @@ Basic parameters
      - ``NODATA_HANDLING``
      - [enumeration]
 
-       Default: ``[Exclude NoData from values lists]``
+       Default: 0
      - Choose how to handle NoData values in the input raster:
 
        * Exclude NoData from values lists: will not include NoData values in the list of pixel values when calculating ranks.
