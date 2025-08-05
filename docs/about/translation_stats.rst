@@ -153,10 +153,10 @@ Statistics of translation
 
 .. list of substitutions for the statistics:
 
-.. |today| replace:: *2025-07-29*
-.. |total_strings| replace:: **31286**
+.. |today| replace:: *2025-08-05*
+.. |total_strings| replace:: **31292**
 .. |nb_languages| replace:: **60**
-.. |global_percentage| replace:: **14.81%**
+.. |global_percentage| replace:: **16.49%**
 
 .. |stats_ar| replace:: 3.43
 .. |stats_az| replace:: 0.04
@@ -165,29 +165,29 @@ Statistics of translation
 .. |stats_ca| replace:: 1.16
 .. |stats_cs| replace:: 5.02
 .. |stats_da| replace:: 0.72
-.. |stats_de| replace:: 55.13
+.. |stats_de| replace:: 55.12
 .. |stats_el| replace:: 0.39
-.. |stats_es| replace:: 99.88
+.. |stats_es| replace:: 99.85
 .. |stats_et| replace:: 3.13
 .. |stats_eu| replace:: 1.11
 .. |stats_fa| replace:: 0.72
 .. |stats_fi| replace:: 1.29
-.. |stats_fr| replace:: 82.68
+.. |stats_fr| replace:: 82.66
 .. |stats_gl| replace:: 0.54
 .. |stats_he| replace:: 0.82
 .. |stats_hi| replace:: 0.39
 .. |stats_hr| replace:: 0.23
 .. |stats_ht| replace:: 0.29
-.. |stats_hu| replace:: 20.6
+.. |stats_hu| replace:: 20.59
 .. |stats_id| replace:: 3.78
 .. |stats_ig| replace:: 0.11
-.. |stats_it| replace:: 94.67
-.. |stats_ja| replace:: 94.82
+.. |stats_it| replace:: 96.34
+.. |stats_ja| replace:: 94.8
 .. |stats_ka| replace:: 0.23
 .. |stats_kab| replace:: 0.23
-.. |stats_ko| replace:: 94.48
+.. |stats_ko| replace:: 94.47
 .. |stats_ku| replace:: 0.3
-.. |stats_lt| replace:: 29.4
+.. |stats_lt| replace:: 29.79
 .. |stats_mi| replace:: 0.29
 .. |stats_mk| replace:: 0.26
 .. |stats_ml| replace:: 0.23
@@ -201,13 +201,13 @@ Statistics of translation
 .. |stats_pl| replace:: 12.98
 .. |stats_pt_BR| replace:: 62.1
 .. |stats_pt_PT| replace:: 8.14
-.. |stats_ro| replace:: 31.37
+.. |stats_ro| replace:: 31.36
 .. |stats_ru| replace:: 27.57
 .. |stats_sk| replace:: 1.36
 .. |stats_sl| replace:: 2.48
 .. |stats_sq| replace:: 0.57
 .. |stats_sr| replace:: 0.23
-.. |stats_sv| replace:: 1.15
+.. |stats_sv| replace:: 100.0
 .. |stats_ta| replace:: 0.6
 .. |stats_te| replace:: 0.04
 .. |stats_th| replace:: 0.23
@@ -216,6 +216,6 @@ Statistics of translation
 .. |stats_uk| replace:: 2.69
 .. |stats_ur| replace:: 0.1
 .. |stats_vi| replace:: 1.51
-.. |stats_zh-Hans| replace:: 25.36
+.. |stats_zh-Hans| replace:: 25.35
 .. |stats_zh-Hant| replace:: 1.4
 
