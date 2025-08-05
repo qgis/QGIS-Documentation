@@ -3223,7 +3223,7 @@ Basic parameters
      - ``RANKS``
      - [numeric: integer] [list]
 
-       Default: ``[1]``
+       Default: [1]
      - List of ranks to calculate for each pixel.
        The ranks are 1-based, meaning that the first rank is 1.
    * - **NoData value handling**
