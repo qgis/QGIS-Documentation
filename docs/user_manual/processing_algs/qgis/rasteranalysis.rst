@@ -3233,8 +3233,8 @@ Basic parameters
        Default: 0
      - Choose how to handle NoData values in the input raster:
 
-       * Exclude NoData from values lists: will not include NoData values in the list of pixel values when calculating ranks.
-       * Presence of NoData in a values list results in NoData output cells: the output raster will have NoData values in the corresponding locations.
+       * 0 --- Exclude NoData from values lists: will not include NoData values in the list of pixel values when calculating ranks.
+       * 1 --- Presence of NoData in a values list results in NoData output cells: the output raster will have NoData values in the corresponding locations.
    * - **Ranked**
      - ``OUTPUT``
      - [raster]
