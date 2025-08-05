@@ -2852,7 +2852,7 @@ Outputs
          For multi-part geometries (e.g. MultiPolygon or MultiLine), this indicates which part the vertex comes from.
        - ``vertex_part_ring``: for polygon geometries, this indicates whether the vertex belongs to the outer ring (0) or one of the inner rings (1, 2, ...).
        - ``vertex_part_index``: the index of the vertex in its specific ring (outer or inner).
-       - ``distance``: the distance from the previous vertex.
+       - ``distance``: the cumulative length of line segments from the first vertex of the geometry.
        - ``angle``: the angle (in degrees) between the previous and the current vertex.
 
 Python code
