@@ -229,3 +229,119 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+.. _qgischeckgeometrydangleendlines:
+
+Dangle-end lines
+----------------
+
+Detects dangle-end lines in line geometries and reports them as errors.
+
+.. figure:: img/check_geometry_dangleendlines.png
+   :align: center
+
+   Reporting errors for dangle-end lines on a line feature.
+
+Parameters
+..........
+
+Basic parameters
+................
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Layer with the geometries to check
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification
+   * - **Dangle-end errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the errors location.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Dangle-end features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Skip output]``
+     - Line layer containing the dangle-end features to be checked.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+...................
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Dangle-end errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information
+       (the ID and name of the input layer, the ID, geometry part,
+       ring and vertex index of the erroneous feature,
+       x and y coordinates of the error).
+   * - **Dangle-end features**
+     - ``OUTPUT``
+     - [vector: line]
+     - Output line layer with features containing the dangle-end features. If no dangle-end features are found,
+       the output layer will be empty.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrydangle``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
