@@ -170,7 +170,7 @@ Basic parameters
      - [vector: polygon]
 
        Default: ``[Skip output]``
-     - Polygon layer containing the holes to be checked.
+     - Polygon layer with the features containing holes.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
