@@ -220,8 +220,8 @@ Outputs
    * - **Polygon with holes**
      - ``OUTPUT``
      - [vector: polygon]
-     - Output polygon layer containing the holes. If no holes are found,
-       the output layer will be empty.
+     - Output polygon layer with features containing holes.
+        If no holes are found, the output layer will be empty.
 
 Python code
 ...........
