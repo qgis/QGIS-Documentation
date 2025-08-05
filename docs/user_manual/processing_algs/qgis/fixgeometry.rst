@@ -283,7 +283,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``native:fixgeometryholes``
+**Algorithm ID**: ``native:fixgeometryhole``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
