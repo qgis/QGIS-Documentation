@@ -2704,7 +2704,7 @@ Outputs
        - ``vertex_part``: the part number of the geometry that the vertex belongs to. For single-part geometries, this is always 0.
          For multi-part geometries (e.g. MultiPolygon or MultiLine), this indicates which part the vertex comes from.
        - ``vertex_part_ring``: for polygon geometries, this indicates whether the vertex belongs to the outer ring (0) or one of the inner rings (1, 2, ...).
-       - ``vertex_part_index``: is the index of a vertex in a specific ring.
+       - ``vertex_part_index``: the index of the vertex in its specific ring (outer or inner).
        - ``distance``: the distance from the previous vertex.
        - ``angle``: the angle (in degrees) between the previous and the current vertex.
 
