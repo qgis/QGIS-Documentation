@@ -2847,7 +2847,7 @@ Outputs
        Other than the input attributes, the output layer also contains the following fields:
 
        - ``vertex_pos``: the index of the vertex in the geometry, as requested by the user.
-       - ``vertex_index``: the index of the vertex within its part. The first vertex is indexed as 0.
+       - ``vertex_index``: the index of the vertex within the geometry. The first vertex is indexed as 0.
        - ``vertex_part``: the part number of the geometry that the vertex belongs to. For single-part geometries, this is always 0.
          For multi-part geometries (e.g. MultiPolygon or MultiLine), this indicates which part the vertex comes from.
        - ``vertex_part_ring``: for polygon geometries, this indicates whether the vertex belongs to the outer ring (0) or one of the inner rings (1, 2, ...).
