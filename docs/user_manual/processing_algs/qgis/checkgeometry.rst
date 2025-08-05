@@ -163,7 +163,9 @@ Basic parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-   * - **Polygon with holes**
+   * - **Polygons with holes**
+
+       Optional
      - ``OUTPUT``
      - [vector: polygon]
 
