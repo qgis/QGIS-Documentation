@@ -217,7 +217,7 @@ Basic parameters
      - Field storing the erroneous feature's geometry vertex number.
    * - **Holes-filled layer**
      - ``OUTPUT``
-     - [vector: same as input]
+     - [vector: polygon]
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer containing fixed features.
