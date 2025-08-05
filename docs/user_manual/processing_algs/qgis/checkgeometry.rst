@@ -224,7 +224,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``native:checkgeometryholes``
+**Algorithm ID**: ``native:checkgeometryhole``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
