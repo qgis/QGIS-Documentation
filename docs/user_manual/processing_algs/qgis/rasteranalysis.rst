@@ -3216,7 +3216,7 @@ Basic parameters
    * - **Input layer**
      - ``INPUT_RASTERS``
      - [raster]
-     - Input raster layer to calculate the rank from.
+     - Input raster layer(s) to calculate the rank from.
    * - **Rank**
      - ``RANKS``
      - [numeric: integer] [list]
