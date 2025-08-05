@@ -119,8 +119,7 @@ Python code
 Holes
 ------------
 
-Detects holes in polygon geometries that are smaller than a specified threshold,
-and reports them as errors.
+Detects holes in polygon geometries and reports them as errors.
 
 .. figure:: img/check_geometry_holes.png
    :align: center
