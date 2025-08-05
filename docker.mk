@@ -5,6 +5,7 @@ doctest:
 	docker run --rm \
 		--env=QGIS_PREFIX_PATH=/usr \
 		--env=PYTHONPATH=/usr/share/qgis/python \
+		--env=QGIS_DISABLE_MESSAGE_HOOKS=1 \
 		--user=$(shell id -u) \
 		--volume=$(PWD):/documentation \
 		qgis/documentation:latest
