@@ -214,13 +214,12 @@ Outputs
      - [vector: point]
      - Output point layer representing the error locations and information
        (the ID and name of the input layer, the ID, geometry part,
-       ring and vertex index of the erroneous feature,
-       x and y coordinates of the error and the value of the erroneous angle).
+       ring and vertex index of the erroneous feature, x and y coordinates of the error).
    * - **Polygon with holes**
      - ``OUTPUT``
      - [vector: polygon]
      - Output polygon layer with features containing holes.
-        If no holes are found, the output layer will be empty.
+       If no holes are found, the output layer will be empty.
 
 Python code
 ...........

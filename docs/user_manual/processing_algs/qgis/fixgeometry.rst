@@ -159,13 +159,10 @@ Fill holes
 Deletes holes in polygon geometries based on an error layer from the
 :ref:`qgischeckgeometryholes` algorithm.
 
-.. attention:: This algorithm removes the hole at the reported location,
-    generating a new polygon without the hole.
-
 .. figure:: img/fix_geometry_holes.png
    :align: center
 
-   Fixing reported errors on a polygon feature for holes.
+   Before and after fixing holes in a polygon feature.
 
 .. seealso:: :ref:`qgischeckgeometryholes`, :ref:`qgisdeleteholes`
 
@@ -277,7 +274,7 @@ Outputs
      - [vector: point]
      - Output point layer representing the error locations and fix applied
        (the ID and name of the input layer, the ID, geometry part, ring and vertex index of the erroneous feature,
-       x and y coordinates and value of the erroneous angle, the applied fix and its successfulness).
+       x and y coordinates of the error, the applied fix and its successfulness).
    * - **Holes-filled layer**
      - ``OUTPUT``
      - [vector: polygon]
