@@ -3194,6 +3194,8 @@ Python code
 
 Raster rank
 ----------------
+|344|
+
 Performs a rank-based analysis for each pixel using overlapping input rasters.
 The output rank reflects the position of a pixel's value in the sorted list of
 values at that location, using the first band of each input layer.
