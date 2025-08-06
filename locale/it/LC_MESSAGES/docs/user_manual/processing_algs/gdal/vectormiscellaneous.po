@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:45+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
@@ -43,6 +43,12 @@ msgstr "Vettore miscellanea"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:14
 msgid "Build virtual vector"
 msgstr "Crea vettore virtuale"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:15
+msgid "Creates a virtual vector layer that contains a set of vector layers."
+msgstr ""
+"Crea un layer vettoriale virtuale che contiene un insieme di layer "
+"vettoriali."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:17
 msgid ""
@@ -241,8 +247,12 @@ msgid "Default: ``[Save to temporary file]``"
 msgstr "Predefinito: ``[Save to temporary file]``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:49
-msgid "Specify the output layer containing only the duplicates. One of:"
-msgstr "Specifica il layer in uscita che contiene solo i duplicati. Uno di:"
+msgid ""
+"Specify the output layer containing only the duplicates. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Specifica il layer in uscita contenente solo i duplicati. :ref:`One of "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -311,6 +321,17 @@ msgid ""
 msgstr ""
 "Esegue una query semplice o complessa con sintassi SQL sul layer di origine."
 " Il risultato della query sarà aggiunto come un nuovo layer."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:91
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:202
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:502
+msgid ""
+"This algorithm is derived from the `GDAL ogr2ogr utility "
+"<https://gdal.org/en/latest/programs/ogr2ogr.html>`_."
+msgstr ""
+"Questo algoritmo deriva da `GDAL ogrinfo utility "
+"<https://gdal.org/en/latest/programs/ogrinfo.html>`_. `GDAL ogr2ogr utility "
+"<https://gdal.org/en/latest/programs/ogr2ogr.html>`_."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:98
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:858
@@ -423,8 +444,10 @@ msgid "**SQL result**"
 msgstr "**Risultato SQL**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:131
-msgid "Specification of the output layer. One of:"
-msgstr "Specifica del layer in uscita. Uno di:"
+msgid ""
+"Specification of the output layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specifiche del layer in uscita. :ref:`One of <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:138
 msgid ""
@@ -611,47 +634,82 @@ msgstr "0 ---"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:241
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:537
 msgid "1 --- NONE"
-msgstr "1 --- Nessuno"
+msgstr "1 --- NONE"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:242
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:538
 msgid "2 --- GEOMETRY"
-msgstr "2 --- Geometria"
+msgstr "2 --- GEOMETRY"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:243
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:539
 msgid "3 --- POINT"
-msgstr "3 --- Punto"
+msgstr "3 --- POINT"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:244
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:540
 msgid "4 --- LINESTRING"
-msgstr "4 --- Linea"
+msgstr "4 --- LINESTRING"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:245
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:541
 msgid "5 --- POLYGON"
-msgstr "5 --- Poligono"
+msgstr "5 --- POLYGON"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:246
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:542
 msgid "6 --- GEOMETRYCOLLECTION"
-msgstr "6 --- Raccolta di geometrie"
+msgstr "6 --- GEOMETRYCOLLECTION"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:247
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:543
 msgid "7 --- MULTIPOINT"
-msgstr "7 --- Multi punto"
+msgstr "7 --- MULTIPOINT"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:248
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:544
 msgid "8 --- MULTIPOLYGON"
-msgstr "8 --- Multi poligono"
+msgstr "8 --- MULTIPOLYGON"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:249
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:545
 msgid "9 --- MULTILINESTRING"
-msgstr "9 --- Multi linea"
+msgstr "9 --- MULTILINESTRING"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:250
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:546
+msgid "10 --- CIRCULARSTRING"
+msgstr "10 --- CIRCULARSTRING"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:251
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:547
+msgid "11 --- COUMPOUNDCURVE"
+msgstr "11 --- COUMPOUNDCURVE"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:252
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:548
+msgid "12 --- CURVEPOLYGON"
+msgstr "12 --- CURVEPOLYGON"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:253
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:549
+msgid "13 --- MULTICURVE"
+msgstr "13 --- MULTICURVE"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:254
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:550
+msgid "14 --- MULTISURFACE"
+msgstr "14 --- MULTISURFACE"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:255
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:551
+msgid "15 --- CONVERT_TO_LINEAR"
+msgstr "15 --- CONVERT_TO_LINEAR"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:256
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:552
+msgid "16 --- CONVERT_TO_CURVE"
+msgstr "16 --- CONVERT_TO_CURVE"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:258
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:554
@@ -846,6 +904,28 @@ msgstr "``DIM``"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:670
 msgid "Default: 0 (2D)"
 msgstr "Predefinito: 0 (2D)"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:336
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:671
+msgid "Defines the coordinate dimensions of the imported vector data. One of:"
+msgstr ""
+"Definisce le dimensioni delle coordinate dei dati vettoriali importati. Uno "
+"dei seguenti: "
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:339
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:674
+msgid "0 --- 2 (``XY``)"
+msgstr "0 --- 2 (``XY``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:340
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:675
+msgid "1 --- 3 (``XYZ``)"
+msgstr "1 --- 3 (``XYZ``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:341
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:676
+msgid "2 --- 4 (``XYZM``)"
+msgstr "2 --- 4 (``XYZM``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:343
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:678
@@ -1126,17 +1206,39 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:446
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:790
 msgid "**Continue after a failure, skipping the failed feature**"
-msgstr "**Continua dopo un errore, saltando la funzione non riuscita**."
+msgstr ""
+"**Continua dopo un errore, saltando l'elemento che ha causato l'errore**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:447
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:791
 msgid "``SKIPFAILURES``"
 msgstr "``SKIPFAILURES``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:451
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:795
+msgid "Continue after a failure, skipping the failed feature."
+msgstr "Continua dopo un errore, saltando l'elemento che ha causato l'errore."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:452
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:796
+msgid "**Validate geometries based on Simple Features specification**"
+msgstr "**Convalida delle geometrie in base alle specifiche Simple Features**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:453
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:797
 msgid "``MAKEVALID``"
 msgstr "``MAKEVALID``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:457
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:801
+msgid ""
+"Applies cleanup operations on geometries to ensure they are valid regarding "
+"the rules of the `Simple Features specification "
+"<https://www.ogc.org/publications/standard/sfs/>`_."
+msgstr ""
+"Applica operazioni di pulizia alle geometrie per garantire che siano valide "
+"rispetto alle regole delle `Simple Features specification "
+"<https://www.ogc.org/publications/standard/sfs/>`_."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:459
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:803
@@ -1329,15 +1431,64 @@ msgstr ""
 msgid "Vector Information"
 msgstr "Informazioni vettore"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:843
+msgid ""
+"Creates an information file that lists information about an OGR-supported "
+"data source. The output will be shown in a 'Result' window and can be "
+"written into a HTML-file. The information includes the geometry type, "
+"feature count, the spatial extent, the projection information, the list of "
+"attributes and related type, list of relations and field domains, and many "
+"more."
+msgstr ""
+"Crea un file di informazioni che elenca le informazioni relative a una fonte"
+" di dati supportata da OGR. Il risultato verrà visualizzato in una finestra "
+"'Risultato' e potrà essere salvato in un file HTML. Le informazioni "
+"includono il tipo di geometria, il numero di elementi, l'estensione "
+"spaziale, le informazioni sulla proiezione, l'elenco degli attributi e il "
+"tipo correlato, l'elenco delle relazioni e dei domini dei campi e molto "
+"altro ancora."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:851
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:968
+msgid ""
+"This algorithm is derived from the `GDAL ogrinfo utility "
+"<https://gdal.org/en/latest/programs/ogrinfo.html>`_."
+msgstr ""
+"Questo algoritmo deriva da `GDAL ogrinfo utility "
+"<https://gdal.org/en/latest/programs/ogrinfo.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:871
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:990
+msgid "[vector: geometry]"
+msgstr "[vector: geometry]"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:872
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:991
 msgid "Input vector layer"
 msgstr "Layer vettoriale in input"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:873
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:992
+msgid "**Enable listing of all layers in the dataset**"
+msgstr "**Abilita l'elenco di tutti i layer nel dataset**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:874
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:993
 msgid "``ALL_LAYERS``"
 msgstr "``ALL_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:878
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:997
+msgid ""
+"If checked, QGIS will output the information of all the layers in the input "
+"dataset instead of information of the first layer only. Convenient when a "
+"multi layer format (GeoPackage, GML, KML, SpatiaLite, SQLite, ...) is used "
+"as input."
+msgstr ""
+"Se selezionato, QGIS visualizzerà le informazioni di tutti i layer presenti "
+"nel dataset in ingresso anziché solo quelle del primo layer. Utile quando si"
+" utilizza un formato multistrato (GeoPackage, GML, KML, SpatiaLite, SQLite, "
+"...) in ingresso."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:882
 msgid "**Summary output only**"
@@ -1346,6 +1497,14 @@ msgstr "**Solo risultato sommario**"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:883
 msgid "``SUMMARY_ONLY``"
 msgstr "``SUMMARY_ONLY``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:887
+msgid ""
+"Suppress listing of individual features and show only summary information "
+"like projection, schema, feature count and extents."
+msgstr ""
+"Elimina l'elenco dei singoli elementi e mostra solo informazioni di "
+"riepilogo quali proiezione, schema, numero di elementi ed estensione."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:889
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1007
@@ -1356,6 +1515,15 @@ msgstr "**Rimuovere le informazioni sui metadati**"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1008
 msgid "``NO_METADATA``"
 msgstr "``NO_METADATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:894
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1012
+msgid ""
+"Suppress metadata printing. Some datasets may contain a lot of metadata "
+"strings."
+msgstr ""
+"Elimina la stampa dei metadati. Alcuni set di dati potrebbero contenere "
+"molte stringhe di metadati."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:895
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:941
@@ -1371,16 +1539,22 @@ msgstr "[html]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:900
 msgid ""
-"Specify the output HTML file that includes the file information. One of:"
+"Specify the output HTML file that includes the file information. :ref:`One "
+"of <output_parameter_widget>`:"
 msgstr ""
-"Specificare il file HTML in uscita che include le informazioni sul file. Uno"
-" di:"
+"Specifica il file HTML in uscita che include le informazioni sul file. "
+":ref:`One of <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:907
 msgid ""
 "If no HTML-file is defined the output will be written to a temporary file"
 msgstr ""
 "Se nessun file HTML è definito, l'output sarà scritto in un file temporaneo"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:921
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1039
+msgid "**Additional command line parameters**"
+msgstr "**Parametri aggiuntivi da linea di comando**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:924
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1042
@@ -1400,6 +1574,35 @@ msgstr "Il file HTML in uscita che include le informazioni sul file."
 msgid "**Algorithm ID**: ``gdal:ogrinfo``"
 msgstr "**ID Algoritmo**: ``gdal:ogrinfo``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:959
+msgid "Vector Information (JSON)"
+msgstr "Informazioni vettore (JSON)"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:960
+msgid ""
+"Creates an information file that lists information about an OGR-supported "
+"data source. The output will be shown in a 'Result' window and can be "
+"written into a :file:`.JSON` file. The information includes the geometry "
+"type, feature count, the spatial extent, the projection information, the "
+"list of attributes and related type, list of relations and field domains, "
+"and many more."
+msgstr ""
+"Crea un file di informazioni che elenca le informazioni relative a una fonte"
+" di dati supportata da OGR. Il risultato verrà visualizzato in una finestra "
+"'Result' e potrà essere salvato in un file :file:`.JSON`. Le informazioni "
+"includono il tipo di geometria, il numero di elementi, l'estensione "
+"spaziale, le informazioni di proiezione, l'elenco degli attributi e il tipo "
+"correlato, l'elenco delle relazioni e dei domini dei campi e molto altro "
+"ancora."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:971
+msgid "**Requires version of GDAL >= 3.7**"
+msgstr "**Richiede versione di GDAL >= 3.7**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1001
+msgid "**Enable listing of features**"
+msgstr "**Abilita elenco elementi**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1002
 msgid "``FEATURES``"
 msgstr "``FEATURES``"
@@ -1408,3 +1611,26 @@ msgstr "``FEATURES``"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1061
 msgid "[file]"
 msgstr "[file]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1018
+msgid ""
+"Specify the output JSON file that includes the file information. :ref:`One "
+"of <output_parameter_widget>`:"
+msgstr ""
+"Specifica il file JSON in uscita che include le informazioni sul file. "
+":ref:`One of <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1025
+msgid ""
+"If no JSON file is defined the output will be written to a temporary file"
+msgstr ""
+"Se non è definito alcun file JSON, il risultato verrà scritto in un file "
+"temporaneo."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1062
+msgid "The output `.JSON` file that includes the file information."
+msgstr "Il file in uscita `.JSON` che include le informazioni sul file."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1067
+msgid "**Algorithm ID**: ``gdal:ogrinfojson``"
+msgstr "**ID Algoritmo**: ``gdal:ogrinfojson``"
