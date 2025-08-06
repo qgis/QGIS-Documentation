@@ -612,6 +612,23 @@ Editing a model
 You can edit the model you are currently creating, redefining the workflow
 and the relationships between the algorithms and inputs that define the model.
 
+You can create or remove connections between model components using an interactive drag-and-drop interface.
+Each parameter and algorithm item on the model canvas includes small circular sockets,
+output sockets on the right and input sockets on the left.
+To connect components, click and drag from an output socket
+(either from a model input or an algorithm) to an input socket on another algorithm.
+A visual edge follows the cursor and completes the connection when released.
+To remove a connection, drag the edge away from the input socket.
+The algorithm dialogs update automatically to reflect changes made using the drag-and-drop interface.
+
+  .. only:: html
+
+    .. figure:: img/model_drag_and_drop.gif
+       :align: center
+       :width: 100%
+
+       Drag and drop connections
+
 If you right-click on an algorithm in the canvas, you will see a context menu
 like the one shown next:
 
