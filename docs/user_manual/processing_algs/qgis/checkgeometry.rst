@@ -114,7 +114,7 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-.. _qgisfixgeometryselfintersections:
+.. _qgischeckgeometryselfintersections:
 
 Self-intersections
 ------------------
@@ -124,9 +124,9 @@ Detects self-intersections in line or polygon geometries, and reports them as er
 .. figure:: img/check_geometry_selfintersections.png
    :align: center
 
-   Reporting errors on a polygon feature or line feature with self-intersections.
+   Reporting errors on a feature with self-intersections.
 
-.. seealso:: :ref:`qgisfixgeometryselfintersections`
+.. seealso:: :ref:`qgisfixgeometrysplitselfintersectinggeometries`
 
 Parameters
 ..........
@@ -213,17 +213,17 @@ Outputs
      - Output point layer representing the error locations and information
        (the ID and name of the input layer, the ID, geometry part,
        ring and vertex index of the erroneous feature,
-       x and y coordinates of the error and the value of the erroneous ).
+       x and y coordinates of the error, the index of the intersecting segments).
    * - **Self-intersecting features**
      - ``OUTPUT``
-     - [vector: polygon]
-     - Output polygon layer containing the self-intersecting features. If no self-intersecting features are found,
+     - [vector: line, polygon]
+     - Output polygon or line layer with features containing the self-intersecting features. If no self-intersecting features are found,
        the output layer will be empty.
 
 Python code
 ...........
 
-**Algorithm ID**: ``native:checkgeometryselfintersections``
+**Algorithm ID**: ``native:checkgeometryselfintersection``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
