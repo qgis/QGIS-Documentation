@@ -3196,9 +3196,11 @@ Raster rank
 ----------------
 |344|
 
-Performs a rank-based analysis for each pixel using overlapping input rasters.
-The output rank reflects the position of a pixel's value in the sorted list of
-values at that location, using the first band of each input layer.
+Performs a cell-by-cell analysis in which output values match
+the rank of a sorted list of overlapping cell values from input layers.
+The output raster will be multi-band if multiple ranks are provided.
+If multiband rasters are used in the data raster stack,
+the algorithm will always perform the analysis on the first band of the rasters.
 
 Parameters
 ..........
@@ -4344,7 +4346,7 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-
+.. |344| replace:: ``NEW in 3.44``
 .. |gaussian_formula| image:: img/fuzzy_gaussian_formula.png
    :height: 1.5em
 .. |fuzzy_large_formula| image:: img/fuzzy_large_formula.png
