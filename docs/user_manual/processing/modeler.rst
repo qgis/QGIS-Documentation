@@ -220,8 +220,7 @@ to add new elements to the model:
 #. :guilabel:`Inputs`: all the :ref:`input parameters <processing_inputs>` that could shape
    your model
 #. :guilabel:`Toolbox`: here you can find available :ref:`Processing algorithms <processing_algs>`.
-   It also includes input parameters that are part of those algorithms,
-   use :guilabel:`Search...` box to find algorithms or inputs.
+   It also includes input parameters. Use :guilabel:`Search...` box to find algorithms or inputs.
 #. :guilabel:`Model Properties`: specify the name (required) of the model and
    the group in which it will be displayed in the :ref:`Processing Toolbox <processing.toolbox>`
 #. :guilabel:`Variables`: Models can contain dedicated :ref:`variables
@@ -416,7 +415,7 @@ It will be linked to the elements in the canvas (algorithms or inputs)
 that provide objects that are used as inputs for the algorithm.
 
 Elements can be dragged to a different position on the canvas using the
-|select| :sup:`Select/Move Item` tool.
+|select| :sup:`Select/Move/Link Item` tool.
 This is useful to make the structure of the model clearer and more intuitive.
 You can also resize the elements, grasping their border.
 This is particularly useful if the description of the input or algorithm is long.
@@ -428,6 +427,14 @@ Links between elements are updated automatically and you can see a ``+`` button
 at the top and at the bottom of each algorithm. Clicking the button will list
 all the inputs and outputs of the algorithm so you can have a quick overview.
 
+You can create or remove connections between model components using an interactive drag-and-drop interface.
+Each parameter and algorithm item on the model canvas includes small circular sockets,
+output sockets on the right and input sockets on the left.
+To connect components, click and drag from an output socket
+(either from a model input or an algorithm) to an input socket on another algorithm.
+A visual edge follows the cursor and completes the connection when released.
+To remove a connection, drag the edge away from the input socket.
+The algorithm dialogs update automatically to reflect changes made using the drag-and-drop interface.
 
 .. _figure_model_model:
 
@@ -612,22 +619,6 @@ Editing a model
 You can edit the model you are currently creating, redefining the workflow
 and the relationships between the algorithms and inputs that define the model.
 
-You can create or remove connections between model components using an interactive drag-and-drop interface.
-Each parameter and algorithm item on the model canvas includes small circular sockets,
-output sockets on the right and input sockets on the left.
-To connect components, click and drag from an output socket
-(either from a model input or an algorithm) to an input socket on another algorithm.
-A visual edge follows the cursor and completes the connection when released.
-To remove a connection, drag the edge away from the input socket.
-The algorithm dialogs update automatically to reflect changes made using the drag-and-drop interface.
-
-  .. only:: html
-
-    .. figure:: img/model_drag_and_drop.gif
-       :align: center
-       :width: 100%
-
-       Drag and drop connections
 
 If you right-click on an algorithm in the canvas, you will see a context menu
 like the one shown next:
