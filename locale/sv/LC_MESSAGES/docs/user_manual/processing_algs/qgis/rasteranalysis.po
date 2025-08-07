@@ -109,7 +109,7 @@ msgstr ""
 "Utdatarasterns utsträckning och upplösning definieras av en referensraster. "
 "Rasterlager i indata som inte matchar cellstorleken i referensrasterlagret "
 "kommer att omsamplas med hjälp av omsampling med närmaste granne. NoData-"
-"värden i något av indataskikten kommer att resultera i en NoData-"
+"värden i något av inmatningslagren kommer att resultera i en NoData-"
 "cellutmatning om parametern \"Ignore NoData values\" inte är inställd. "
 "Rasterdatatypen för utdata kommer alltid att vara ``Float32``."
 
@@ -856,7 +856,7 @@ msgid ""
 "The reference layer for the output layer creation (extent, CRS, pixel "
 "dimensions)"
 msgstr ""
-"Referensskiktet för skapandet av utdataskiktet (utsträckning, CRS, "
+"Referenslagret för skapandet av utdatalagret (utsträckning, CRS, "
 "pixeldimensioner)"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:34
@@ -1083,7 +1083,7 @@ msgstr "Standard: -9999.0"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2125
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2295
 msgid "Value to use for NoData in the output layer"
-msgstr "Värde som ska användas för NoData i utdataskiktet"
+msgstr "Värde som ska användas för NoData i utdatalagret"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:64
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:73
@@ -1489,7 +1489,7 @@ msgstr "``EXTENT``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2888
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3045
 msgid "The spatial extent of the output raster layer"
-msgstr "Den rumsliga omfattningen av det utgående rasterskiktet"
+msgstr "Den spatiala omfattningen av det utgående rasterlagret"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:103
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:132
@@ -1632,7 +1632,7 @@ msgstr "[numerisk: heltal]"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2927
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3073
 msgid "The number of columns in the output raster layer"
-msgstr "Antalet kolumner i det utgående rasterskiktet"
+msgstr "Antalet kolumner i det utgående rasterlagret"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:107
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:116
@@ -1898,7 +1898,7 @@ msgstr "**Algoritm-id**: ``native:cellstackpercentile``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:370
 msgid "Cell stack percentrank from raster layer"
-msgstr "Cellstapel procentrank från rasterskikt"
+msgstr "Cellstapel procentrank från rasterlager"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:372
 msgid ""
@@ -1926,8 +1926,7 @@ msgstr ""
 msgid ""
 "Ranking the value raster layer cells. ``NoData`` cells (grey) are ignored."
 msgstr ""
-"Rangordnar rasterskiktets värdeceller. celler med ``NoData`` (grå) "
-"ignoreras."
+"Rangordnar rasterlagrets värdeceller. celler med ``NoData`` (grå) ignoreras."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:402
 msgid ""
@@ -1937,7 +1936,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:425
 msgid "**Value raster layer**"
-msgstr "**Värde rasterskikt**"
+msgstr "**Värde rasterlager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:426
@@ -1998,8 +1997,8 @@ msgid ""
 "is checked, then NoData inputs will be ignored in the statistic calculation."
 " This may result in NoData output for locations where all cells are NoData."
 msgstr ""
-"Som standard kommer en NoData-cell i NÅGOT av indataskikten att resultera i "
-"en NoData-cell i utdatarastret. Om alternativet :guilabel:`Ignore NoData "
+"Som standard kommer en NoData-cell i NÅGOT av inmatningslagren att resultera"
+" i en NoData-cell i utdatarastret. Om alternativet :guilabel:`Ignore NoData "
 "values` är markerat ignoreras NoData-ingångar i den statistiska beräkningen."
 " Detta kan resultera i NoData-utdata för platser där alla celler är NoData."
 
@@ -2011,7 +2010,7 @@ msgid ""
 msgstr ""
 "Parametern :guilabel:`Reference layer` anger ett befintligt rasterlager som "
 "ska användas som referens när utdatarastern skapas. Utdatarastret kommer att"
-" ha samma utsträckning, CRS och pixeldimensioner som detta skikt."
+" ha samma utsträckning, CRS och pixeldimensioner som detta lager."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:568
 msgid ""
@@ -2152,7 +2151,7 @@ msgid ""
 "The reference layer to create the output layer from (extent, CRS, pixel "
 "dimensions)"
 msgstr ""
-"Referensskiktet att skapa utdataskiktet från (utsträckning, CRS, "
+"Referenslagret att skapa utdatalagret från (utsträckning, CRS, "
 "pixeldimensioner)"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:68
@@ -3032,7 +3031,7 @@ msgid ""
 msgstr ""
 "Parametern referenslager anger ett befintligt rasterlager som ska användas "
 "som referens när utdatarastern skapas. Utdatarastern kommer att ha samma "
-"utsträckning, CRS och pixeldimensioner som detta skikt."
+"utsträckning, CRS och pixeldimensioner som detta lager."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2058
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2228
@@ -3042,10 +3041,10 @@ msgid ""
 "false` option is checked, then NoData inputs will be treated the same as a "
 "``0`` input value."
 msgstr ""
-"Som standard kommer en NoData-pixel i NÅGOT av indataskikten att resultera i"
-" en NoData-pixel i utdatarastret. Om alternativet :guilabel:`Behandla "
-"NoData-värden som falska` är markerat, behandlas NoData-ingångar på samma "
-"sätt som ett ingångsvärde på ``0``."
+"Som standard kommer en NoData-pixel i NÅGOT av inmatningslagren att "
+"resultera i en NoData-pixel i utdatarastret. Om alternativet "
+":guilabel:`Behandla NoData-värden som falska` är markerat, behandlas NoData-"
+"ingångar på samma sätt som ett ingångsvärde på ``0``."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2063
 msgid ":ref:`qgisrasterbooleanor`"
@@ -3255,7 +3254,7 @@ msgid ""
 "expression. The expression can contain numerical values, operators and "
 "references to any of the layers in the current project."
 msgstr ""
-"Det resulterande skiktet får sina värden beräknade enligt ett uttryck. "
+"Det resulterande lagret får sina värden beräknade enligt ett uttryck. "
 "Uttrycket kan innehålla numeriska värden, operatorer och referenser till "
 "något av lagren i det aktuella projektet."
 
@@ -3308,7 +3307,7 @@ msgid ""
 "specified, the minimum extent that covers all the selected reference layers "
 "will be used."
 msgstr ""
-"Ange den rumsliga omfattningen för det utgående rasterskiktet. Om "
+"Ange den spatiala omfattningen för det utgående rasterlagret. Om "
 "omfattningen inte anges kommer den minsta omfattning som täcker alla valda "
 "referenslager att användas."
 
@@ -3434,7 +3433,7 @@ msgid ""
 msgstr ""
 "Ett virtuellt rasterlager är ett rasterlager som definieras av dess URI och "
 "vars pixlar beräknas i realtid. Det är inte en ny fil på disken; det "
-"virtuella skiktet är fortfarande kopplat till de raster som används i "
+"virtuella lagret är fortfarande kopplat till de raster som används i "
 "beräkningen, vilket innebär att radering eller flyttning av dessa raster "
 "skulle förstöra det. Ett :guilabel:`Layernamn` kan anges, annars används "
 "beräkningsuttrycket som sådant. Om det virtuella lagret tas bort från "
@@ -3449,7 +3448,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2562
 msgid "**Output layer name**"
-msgstr "**Namn på utmatningsskikt**"
+msgstr "**Namn på utmatningslager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2565
 msgid "``LAYER_NAME``"
@@ -3502,7 +3501,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2836
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3957
 msgid "**Input layer**"
-msgstr "**Inmatningsskikt**"
+msgstr "**Inmatningslager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2624
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2733
@@ -3543,7 +3542,7 @@ msgstr "Antalet band i rastret"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2656
 msgid "The raster layer extent in the CRS"
-msgstr "Rasterskiktets utsträckning i CRS"
+msgstr "Rasterlagrets utsträckning i CRS"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2657
 msgid "**Band has a NoData value set**"
@@ -3647,7 +3646,7 @@ msgstr "**Algoritm-ID**: ``native:rasterlayerproperties``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2712
 msgid "Raster layer statistics"
-msgstr "Statistik för rasterskikt"
+msgstr "Statistik för rasterlager"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2713
 msgid ""
@@ -3817,7 +3816,7 @@ msgid ""
 " calculation of the area is done in the area unit of the layer's CRS."
 msgstr ""
 "Returnerar antal och area för varje unikt värde i ett givet rasterlager. "
-"Beräkningen av arean görs i areaenheten för skiktets CRS."
+"Beräkningen av arean görs i areaenheten för lagrets CRS."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2847
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2901
@@ -3884,7 +3883,7 @@ msgstr "Här kan du också ändra filkodningen."
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2896
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3053
 msgid "The number of NoData pixels in the output raster layer"
-msgstr "Antalet NoData-pixlar i det utgående rasterskiktet"
+msgstr "Antalet NoData-pixlar i det utgående rasterlagret"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2904
 msgid "The output HTML file contains the following information:"
@@ -3900,7 +3899,7 @@ msgstr "Utbredning: xmin, ymin, xmax, ymax koordinater för utbredningen"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2908
 msgid "Projection: projection of the layer"
-msgstr "Projektion: projektion av skiktet"
+msgstr "Projektion: projektion av lagret"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2909
 msgid "Width in pixels: number of columns and pixel width size"
@@ -3937,8 +3936,8 @@ msgid ""
 "is done in that unit."
 msgstr ""
 "*m2* eller *deg2* eller *ft2* eller ... : total yta av pixlar med detta "
-"värde. Kolumnnamnet beror på areaenheten i skiktets CRS och beräkningen görs"
-" i den enheten."
+"värde. Kolumnnamnet beror på areaenheten i lagrets CRS och beräkningen görs "
+"i den enheten."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2932
 msgid "**Algorithm ID**: ``native:rasterlayeruniquevaluesreport``"
@@ -3946,15 +3945,15 @@ msgstr "**Algoritm-ID**: ```native:rasterlayeruniquevaluesreport``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2942
 msgid "Raster layer zonal statistics"
-msgstr "Zonal statistik för rasterskikt"
+msgstr "Zonal statistik för rasterlager"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2943
 msgid ""
 "Calculates statistics for a raster layer's values, categorized by zones "
 "defined in another raster layer."
 msgstr ""
-"Beräknar statistik för ett rasterskikts värden, kategoriserade efter zoner "
-"som definierats i ett annat rasterskikt."
+"Beräknar statistik för ett rasterlagers värden, kategoriserade efter zoner "
+"som definierats i ett annat rasterlager."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2946
 msgid ":ref:`qgiszonalstatisticsfb`"
@@ -3963,7 +3962,7 @@ msgstr ":ref:`qgiszonalstatisticsfb`"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2963
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3798
 msgid "**Input Layer**"
-msgstr "**Ingångsskikt**"
+msgstr "**Inmatningslager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2972
 msgid ""
@@ -4020,14 +4019,14 @@ msgid ""
 "when determining the zones in the output layer. One of:"
 msgstr ""
 "Rasterlager som används för att beräkna de centroider som kommer att "
-"användas som referens när zonerna i utdataskiktet bestäms. Ett av följande:"
+"användas som referens när zonerna i utdatalagret bestäms. Ett av följande:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3021
 msgid ""
 "0 --- Input layer: zones are determined by sampling the zone raster layer "
 "value at the centroid of each pixel from the source raster layer"
 msgstr ""
-"0 --- Inmatningsskikt: zonerna bestäms genom provtagning av "
+"0 --- Inmatningslager: zonerna bestäms genom provtagning av "
 "zonrasterskiktets värde i centroiden för varje pixel från källrasterskiktet"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3023
@@ -4035,12 +4034,12 @@ msgid ""
 "1 --- Zones layer: the input raster layer will be sampled at the centroid of"
 " each pixel from the zones raster layer"
 msgstr ""
-"1 --- Zonskikt: det ingående rasterskiktet kommer att samplas vid centroiden"
-" för varje pixel från zonrasterskiktet"
+"1 --- Zonlager: det ingående rasterlagret kommer att samplas vid centroiden "
+"för varje pixel från zonrasterlagret"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3057
 msgid "The output layer contains the following information **for each zone**:"
-msgstr "Utdataskiktet innehåller följande information **för varje zon**:"
+msgstr "Utmatningslagret innehåller följande information **för varje zon**:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3060
 msgid "Area: the area in square raster units in the zone;"
@@ -4273,7 +4272,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3244
 msgid "**Layer containing class breaks**"
-msgstr "**Skikt som innehåller klassresor**"
+msgstr "**Lager som innehåller klassresor**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3245
 msgid "``INPUT_TABLE``"
@@ -4732,8 +4731,8 @@ msgid ""
 "The attribute table of the resulting layer will have as many new columns as "
 "the raster layer band count."
 msgstr ""
-"Attributtabellen för det resulterande skiktet kommer att ha lika många nya "
-"kolumner som rasterskiktets bandantal."
+"Attributtabellen för det resulterande lagret kommer att ha lika många nya "
+"kolumner som rasterlagrets bandantal."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3800
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3816
@@ -4787,12 +4786,12 @@ msgid ""
 "Specify the output layer containing the sampled values. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange utdataskiktet som innehåller de samplade värdena. :ref:`En av "
+"Ange utdatalagret som innehåller de samplade värdena. :ref:`En av "
 "<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3840
 msgid "The output layer containing the sampled values."
-msgstr "Utgångsskiktet som innehåller de samplade värdena."
+msgstr "Utmatningslagret som innehåller de samplade värdena."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3845
 msgid "**Algorithm ID**: ``native:rastersampling``"
@@ -4815,8 +4814,8 @@ msgid ""
 "The output layer attribute table will have as many fields as the unique "
 "values of the raster layer that intersects the polygon(s)."
 msgstr ""
-"Attributtabellen för utdataskiktet kommer att ha lika många fält som de "
-"unika värdena för det rasterskikt som skär polygonen/polygonerna."
+"Attributtabellen för utdatalagret kommer att ha lika många fält som de unika"
+" värdena för det rasterlager som skär polygonen/polygonerna."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3865
 msgid "Raster layer histogram example"
@@ -4868,12 +4867,12 @@ msgid ""
 "Specify the output vector polygon layer. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange polygonskiktet för utdatavektorn. :ref:`En av "
+"Ange polygonlagret för utdatavektorn. :ref:`En av "
 "<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3926
 msgid "The output vector polygon layer."
-msgstr "Polygonskikt för utmatningsvektor."
+msgstr "Polygonlager för utmatningsvektor."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3931
 msgid "**Algorithm ID**: ``native:zonalhistogram``"
@@ -4978,7 +4977,7 @@ msgstr "Lägg till lager…"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:4023
 msgid "The zone vector layer with added statistics."
-msgstr "Zonens vektorskikt med extra statistik."
+msgstr "Zonens vektorlager med extra statistik."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:4028
 msgid "**Algorithm ID**: ``native:zonalstatisticsfb``"
