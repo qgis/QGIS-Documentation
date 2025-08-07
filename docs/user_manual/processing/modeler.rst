@@ -216,11 +216,13 @@ Panels
 The left part of the window is a section with five panels that can be used
 to add new elements to the model:
 
-#. :guilabel:`Model Properties`: specify the name (required) of the model and
-   the group in which it will be displayed in the :ref:`Processing Toolbox <processing.toolbox>`
+
 #. :guilabel:`Inputs`: all the :ref:`input parameters <processing_inputs>` that could shape
    your model
-#. :guilabel:`Algorithms`: the available :ref:`Processing algorithms <processing_algs>`
+#. :guilabel:`Toolbox`: here you can find available :ref:`Processing algorithms <processing_algs>`.
+   It also includes input parameters. Use :guilabel:`Search...` box to find algorithms or inputs.
+#. :guilabel:`Model Properties`: specify the name (required) of the model and
+   the group in which it will be displayed in the :ref:`Processing Toolbox <processing.toolbox>`
 #. :guilabel:`Variables`: Models can contain dedicated :ref:`variables
    <general_tools_variables>` that are unique and only available to them.
    These variables can be accessed by any expression used within the model.
@@ -233,7 +235,7 @@ to add new elements to the model:
 About available algorithms
 ..........................
 
-Some algorithms that can be executed from the toolbox do not appear
+Some algorithms that can be executed from the :menuselection:`Processing --> Toolbox` do not appear
 in the list of available algorithms when you are designing a model.
 To be included in a model, an algorithm must have the correct
 semantic.
@@ -323,7 +325,7 @@ In the :guilabel:`Inputs` tab, choose the two inputs as ``Vector Layer`` for the
 ``Raster Layer`` for the DEM.
 We are now ready to add the algorithms to the workflow.
 
-Algorithms can be found in the :guilabel:`Algorithms` panel, grouped
+Algorithms can be found in the :guilabel:`Toolbox` panel, grouped
 much in the same way as they are in the Processing toolbox.
 
 .. _figure_model_parameter_inputs:
@@ -413,7 +415,7 @@ It will be linked to the elements in the canvas (algorithms or inputs)
 that provide objects that are used as inputs for the algorithm.
 
 Elements can be dragged to a different position on the canvas using the
-|select| :sup:`Select/Move Item` tool.
+|select| :sup:`Select/Move/Link Item` tool.
 This is useful to make the structure of the model clearer and more intuitive.
 You can also resize the elements, grasping their border.
 This is particularly useful if the description of the input or algorithm is long.
@@ -425,6 +427,14 @@ Links between elements are updated automatically and you can see a ``+`` button
 at the top and at the bottom of each algorithm. Clicking the button will list
 all the inputs and outputs of the algorithm so you can have a quick overview.
 
+You can create or remove connections between model components using an interactive drag-and-drop interface.
+Each parameter and algorithm item on the model canvas includes small circular sockets,
+output sockets on the right and input sockets on the left.
+To connect components, click and drag from an output socket
+(either from a model input or an algorithm) to an input socket on another algorithm.
+A visual edge follows the cursor and completes the connection when released.
+To remove a connection, drag the edge away from the input socket.
+The algorithm dialogs update automatically to reflect changes made using the drag-and-drop interface.
 
 .. _figure_model_model:
 
@@ -436,7 +446,7 @@ all the inputs and outputs of the algorithm so you can have a quick overview.
 With the :menuselection:`Edit --> Add Group Box` tool, you can add a draggable
 *box* to the canvas. This feature is very
 useful in big models to group related elements in the modeler canvas and to keep the
-workflow clean. For example we might group together all the inputs of the
+workflow clean. For example we might group together all the algorithms of the
 example:
 
 .. figure:: img/model_group_box.png
@@ -608,6 +618,7 @@ Editing a model
 
 You can edit the model you are currently creating, redefining the workflow
 and the relationships between the algorithms and inputs that define the model.
+
 
 If you right-click on an algorithm in the canvas, you will see a context menu
 like the one shown next:
