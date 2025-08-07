@@ -145,7 +145,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: polygon]
+     - [vector: line, polygon]
      - Layer with the geometries to check
    * - **Unique feature identifier**
      - ``UNIQUE_ID``
@@ -166,7 +166,7 @@ Basic parameters
    
        Optional
      - ``OUTPUT``
-     - [vector: polygon]
+     - [vector: line, polygon]
        Default: ``[Skip output]``
      - Polygon layer containing self-intersecting features.
        :ref:`One of <output_parameter_widget>`:

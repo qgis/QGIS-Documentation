@@ -234,7 +234,7 @@ Basic parameters
      - Field storing the erroneous feature's geometry segment number.
    * - **Self-intersections fixed layer**
      - ``OUTPUT``
-     - [vector: same as input]
+     - [vector: line, polygon]
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer containing fixed features.
