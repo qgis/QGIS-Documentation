@@ -757,8 +757,8 @@ msgid ""
 "layer."
 msgstr ""
 "Beräknar den totala stigningen och nedstigningen längs linjegeometrier. "
-"Inmatningsskiktet måste ha Z-värden. Om Z-värden inte finns tillgängliga kan"
-" algoritmen :ref:`qgissetzfromraster` användas för att lägga till Z-värden "
+"Inmatningslagret måste ha Z-värden. Om Z-värden inte finns tillgängliga kan "
+"algoritmen :ref:`qgissetzfromraster` användas för att lägga till Z-värden "
 "från ett DEM-lager."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:192
@@ -770,12 +770,12 @@ msgid ""
 "as these added fields, they will be renamed (field names will be altered to "
 "\"name_2\", \"name_3\", etc, finding the first non-duplicate name)."
 msgstr ""
-"Utdataskiktet är en kopia av indataskiktet med ytterligare fält som "
+"Utmatningslagret är en kopia av inmatningslagret med ytterligare fält som "
 "innehåller den totala stigningen (``climb``), den totala nedstigningen "
 "(``descent``), den lägsta höjden (``minelev``) och den högsta höjden "
-"(``maxelev``) för varje linjegeometri. Om indataskiktet innehåller fält med "
-"samma namn som de tillagda fälten, byter de namn (fältnamnen ändras till "
-"\"name_2\", \"name_3\", etc., varvid det första icke-duplicerade namnet "
+"(``maxelev``) för varje linjegeometri. Om inmatningslagret innehåller fält "
+"med samma namn som de tillagda fälten, byter de namn (fältnamnen ändras till"
+" \"name_2\", \"name_3\", etc., varvid det första icke-duplicerade namnet "
 "hittas)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:211
@@ -824,7 +824,7 @@ msgid ""
 "Specification of the output (line) layer. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Specifikation av utmatningsskiktet (linje). :ref:`En av "
+"Specifikation av utdatalagret (linje). :ref:`En av "
 "<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:240
@@ -881,7 +881,7 @@ msgstr "``MAXELEVATION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:259
 msgid "The maximum elevation for the geometries in the layer"
-msgstr "Den maximala höjden för geometrierna i skiktet"
+msgstr "Den maximala höjden för geometrierna i lagret"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:264
 msgid "**Algorithm ID**: ``qgis:climbalongline``"
@@ -1075,7 +1075,7 @@ msgstr "Namnet på det fält som ska lagra antalet poäng"
 msgid ""
 "Specification of the output layer. :ref:`One of <output_parameter_widget>`:"
 msgstr ""
-"Specifikation av utmatningsskiktet. :ref:`En av <output_parameter_widget>`:"
+"Specifikation av utdatalagret. :ref:`En av <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:7
 msgid "Append to Layer…"
@@ -1132,7 +1132,7 @@ msgstr "Grundläggande parametrar"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1366
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1562
 msgid "**Input layer**"
-msgstr "**Inmatningsskikt**"
+msgstr "**Inmatningslager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:412
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:984
@@ -1325,8 +1325,8 @@ msgid ""
 "Calculates for point features distances to their nearest features in the "
 "same layer or in another layer."
 msgstr ""
-"Beräknar för punktobjekt avstånd till närmaste objekt i samma skikt eller i "
-"ett annat skikt."
+"Beräknar för punktobjekt avstånd till närmaste objekt i samma lager eller i "
+"ett annat lager."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:512
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1260
@@ -1355,8 +1355,8 @@ msgid ""
 "Field to use to uniquely identify features of the input layer. Used in the "
 "output attribute table."
 msgstr ""
-"Fält som ska användas för att unikt identifiera egenskaper i indataskiktet. "
-"Används i tabellen för utdataattribut."
+"Fält som ska användas för att unikt identifiera egenskaper i "
+"inmatningslagret. Används i tabellen för utdataattribut."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:536
 msgid "**Target point layer**"
@@ -1385,7 +1385,7 @@ msgid ""
 "Field to use to uniquely identify features of the target layer. Used in the "
 "output attribute table."
 msgstr ""
-"Fält som ska användas för att unikt identifiera egenskaper i målskiktet. "
+"Fält som ska användas för att unikt identifiera egenskaper i mållagret. "
 "Används i tabellen för utdataattribut."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:547
@@ -1453,8 +1453,8 @@ msgid ""
 "You can choose to calculate the distance to all the points in the target "
 "layer (*0*) or limit to a number (*k*) of closest features."
 msgstr ""
-"Du kan välja att beräkna avståndet till alla punkter i målskiktet (*0*) "
-"eller begränsa till ett antal (*k*) av de närmaste objekten."
+"Du kan välja att beräkna avståndet till alla punkter i mållagret (*0*) eller"
+" begränsa till ett antal (*k*) av de närmaste objekten."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:573
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:595
@@ -1545,7 +1545,7 @@ msgstr "Vektorlager som innehåller de funktioner som ska sökas efter"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:651
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:743
 msgid "**Hub layer name attribute**"
-msgstr "**Hubskiktets namnattribut**"
+msgstr "**Navlagrets namnattribut**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:654
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:746
@@ -1674,8 +1674,8 @@ msgid ""
 "Creates hub and spoke diagrams by connecting lines from points on the Spoke "
 "layer to matching points in the Hub layer."
 msgstr ""
-"Skapar nav- och ekerdiagram genom att ansluta linjer från punkter i skiktet "
-"Spoke till matchande punkter i skiktet Hub."
+"Skapar nav- och ekerdiagram genom att ansluta linjer från punkter i lagret "
+"Spoke till matchande punkter i lagret Hub."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:809
 msgid ""
@@ -1728,7 +1728,7 @@ msgstr "**Hublager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:850
 msgid "Input layer"
-msgstr "Inmatningsskikt"
+msgstr "Inmatningslager"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:851
 msgid "**Hub ID field**"
@@ -1985,7 +1985,7 @@ msgid ""
 "Specify the summary table layer with unique values. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange skiktet för sammanfattningstabellen med unika värden. :ref:`En av "
+"Ange lagret för sammanfattningstabellen med unika värden. :ref:`En av "
 "<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1096
@@ -2008,7 +2008,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1124
 msgid "Summary table layer with unique values"
-msgstr "Sammanfattande tabellskikt med unika värden"
+msgstr "Sammanfattande tabellager med unika värden"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1128
 msgid ""
@@ -2078,8 +2078,8 @@ msgid ""
 "for the features in each category."
 msgstr ""
 "Om ett attribut har valts i parametern grupperas funktionerna enligt värdena"
-" i detta fält. Istället för en enda punkt med masscentrum för hela skiktet, "
-"kommer utdataskiktet att innehålla ett masscentrum för funktionerna i varje "
+" i detta fält. Istället för en enda punkt med masscentrum för hela lagret, "
+"kommer utdatalagret att innehålla ett masscentrum för funktionerna i varje "
 "kategori."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1182
@@ -2116,7 +2116,7 @@ msgid ""
 "Specify the (point vector) layer for the result. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange (punktvektor)-skiktet för resultatet. :ref:`Ett av "
+"Ange (punktvektor)-lagret för resultatet. :ref:`Ett av "
 "<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1219
@@ -2174,8 +2174,8 @@ msgid ""
 msgstr ""
 "Z-poäng: Genom att jämföra Z-Score med normalfördelningen får du reda på hur"
 " dina data är fördelade. En låg Z-score innebär att det är osannolikt att "
-"data är resultatet av en rumsligt slumpmässig process, medan en hög Z-score "
-"innebär att det är sannolikt att dina data är resultatet av en rumsligt "
+"data är resultatet av en spatialt slumpmässig process, medan en hög Z-score "
+"innebär att det är sannolikt att dina data är resultatet av en spatialt "
 "slumpmässig process."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1251
@@ -2267,7 +2267,7 @@ msgid ""
 "layer are overlapped by features from a selection of overlay layers."
 msgstr ""
 "Beräknar den yta och procentuella täckning med vilken objekt från ett "
-"indataskikt överlappas av objekt från ett urval av överlagringsskikt."
+"inmatningslager överlappas av objekt från ett urval av överlagringslager."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1345
 msgid ""
@@ -2275,9 +2275,9 @@ msgid ""
 "overlap and percentage of the input feature overlapped by each of the "
 "selected overlay layers."
 msgstr ""
-"Nya attribut läggs till i utdataskiktet som rapporterar den totala "
+"Nya attribut läggs till i utdatalagret som rapporterar den totala "
 "överlappningsytan och procentandelen av indatafunktionen som överlappas av "
-"vart och ett av de valda överlagringsskikten."
+"vart och ett av de valda överlagringslagren."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1369
 msgid "The input layer."
@@ -2339,9 +2339,9 @@ msgid ""
 "and percentage) of the input feature overlapped by each of the selected "
 "layers."
 msgstr ""
-"Utdataskiktet med ytterligare fält som rapporterar överlappningen (i "
+"Utmatningslagret med ytterligare fält som rapporterar överlappningen (i "
 "kartenheter och procent) av den ingående funktionen som överlappas av vart "
-"och ett av de valda skikten."
+"och ett av de valda lagren."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1428
 msgid "**Algorithm ID**: ``native:calculatevectoroverlaps``"
@@ -2359,7 +2359,7 @@ msgid ""
 "number can be specified. If a maximum distance is specified, then only "
 "features which are closer than this distance will be considered."
 msgstr ""
-"Skapar ett linjeskikt som den kortaste linjen mellan käll- och "
+"Skapar ett linjelager som den kortaste linjen mellan käll- och "
 "destinationsskiktet. Som standard tas endast hänsyn till den första närmaste"
 " funktionen i destinationslagret. Antalet n-närmaste grannfunktioner kan "
 "specificeras. Om ett maximalt avstånd anges kommer endast objekt som ligger "
@@ -2371,8 +2371,8 @@ msgid ""
 "attributes from the n-nearest feature and the additional field of the "
 "distance."
 msgstr ""
-"De utgående funktionerna innehåller alla källskiktets attribut, alla "
-"attribut från den n-närmaste funktionen och det extra fältet för avståndet."
+"De utgående funktionerna innehåller alla källagrets attribut, alla attribut "
+"från den n-närmaste funktionen och det extra fältet för avståndet."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1445
 msgid ""
@@ -2384,7 +2384,7 @@ msgstr ""
 "Denna algoritm använder rent kartesiska beräkningar för avstånd och tar inte"
 " hänsyn till geodetiska eller ellipsoidiska egenskaper när den bestämmer "
 "objektets närhet. Koordinatsystemet för mätning och utdata baseras på "
-"koordinatsystemet för källskiktet."
+"koordinatsystemet för källagret."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1453
 msgid "Shortest line from point features to lines"
@@ -2392,7 +2392,7 @@ msgstr "Kortaste linjen från punkter till linjer"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1466
 msgid "**Source layer**"
-msgstr "**Källskikt**"
+msgstr "**Källager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1467
 msgid "``SOURCE``"
@@ -2412,7 +2412,7 @@ msgstr "``DESTINATION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1473
 msgid "Target Layer in which to search for nearest neighbors"
-msgstr "Målskikt i vilket man söker efter närmaste grannar"
+msgstr "Mållager i vilket man söker efter närmaste grannar"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1474
 msgid "**Method**"
@@ -2758,9 +2758,9 @@ msgid ""
 "with two additional attributes containing the length and count of the lines "
 "across each polygon."
 msgstr ""
-"Det resulterande skiktet har samma egenskaper som det ingående "
-"polygonskiktet, men med två ytterligare attribut som innehåller längden och "
-"antalet linjer över varje polygon."
+"Det resulterande lagret har samma egenskaper som det ingående polygonlagret,"
+" men med två ytterligare attribut som innehåller längden och antalet linjer "
+"över varje polygon."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1863
 msgid "**Lines**"
@@ -2820,7 +2820,7 @@ msgid ""
 "Specify the output polygon layer with generated statistics. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange det utgående polygonskiktet med genererad statistik. :ref:`Ett av "
+"Ange det utgående polygonlagret med genererad statistik. :ref:`Ett av "
 "<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1908
