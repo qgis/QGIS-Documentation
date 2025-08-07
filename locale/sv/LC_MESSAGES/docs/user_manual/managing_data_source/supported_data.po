@@ -163,7 +163,7 @@ msgstr "**Til matrisuppsättningar av bildmaterial** och **raster**-kartor"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:86
 msgid "attributes (non-spatial data)"
-msgstr "attribut (icke rumsliga data)"
+msgstr "attribut (icke spatiala data)"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:87
 msgid "extensions"
@@ -252,8 +252,8 @@ msgid ""
 "extension."
 msgstr ""
 "Om du vill förbättra ritningsprestandan för en dataset i ESRI Shapefile-"
-"format kan du skapa ett rumsligt index. Ett rumsligt index förbättrar "
-"hastigheten för både zoomning och panorering. Rumsliga index som används av "
+"format kan du skapa ett spatialt index. Ett spatialt index förbättrar "
+"hastigheten för både zoomning och panorering. Spatiala index som används av "
 "QGIS har filnamnstillägget :file:`.qix`."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:128
@@ -299,8 +299,8 @@ msgstr ""
 "Om du laddar en dataset i ESRI Shapefile-format med en :file:`.prj`-fil och "
 "QGIS inte kan läsa koordinatreferenssystemet från den filen, måste du "
 "definiera rätt projektion manuellt på fliken :menuselection:`Layer "
-"Properties --> Source` i skiktet genom att klicka på knappen |setProjection|"
-" :sup:`Select CRS`. Detta beror på att :file:`.prj`-filer ofta inte "
+"Properties --> Source` i lagret genom att klicka på knappen |setProjection| "
+":sup:`Select CRS`. Detta beror på att :file:`.prj`-filer ofta inte "
 "innehåller de fullständiga projektionsparametrar som används i QGIS och som "
 "anges i dialogrutan :guilabel:`CRS`."
 
@@ -641,7 +641,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:295
 msgid "PostGIS Layers"
-msgstr "PostGIS-skikt"
+msgstr "PostGIS-lager"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:297
 msgid ""
@@ -651,13 +651,13 @@ msgid ""
 "than they do with GDAL layers in QGIS."
 msgstr ""
 "PostGIS-lager lagras i en PostgreSQL-databas. Fördelarna med PostGIS är "
-"rumslig indexering, filtrering och frågefunktioner. Med PostGIS fungerar "
+"spatial indexering, filtrering och frågefunktioner. Med PostGIS fungerar "
 "vektorfunktioner som att välja och identifiera mer exakt än de gör med GDAL-"
 "lager i QGIS."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:306
 msgid "**PostGIS Layers**"
-msgstr "**PostGIS-skikt**"
+msgstr "**PostGIS-lager**"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:308
 msgid ""
@@ -900,10 +900,10 @@ msgid ""
 "section :ref:`label_projections` for more information about spatial "
 "reference systems and projections."
 msgstr ""
-"Detta skapar ett nytt skikt med namnet ``lakes_new`` i databasen "
-"``gis_data``. Det nya skiktet kommer att ha en rumslig referensidentifierare"
-" (SRID) på 2964. Se avsnitt :ref:`label_projections` för mer information om "
-"rumsliga referenssystem och projektioner."
+"Detta skapar ett nytt lager med namnet ``lakes_new`` i databasen "
+"``gis_data``. Det nya lagret kommer att ha en spatial referensidentifierare "
+"(SRID) på 2964. Se avsnitt :ref:`label_projections` för mer information om "
+"spatiala referenssystem och projektioner."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:435
 msgid "**Exporting datasets from PostGIS**"
@@ -999,9 +999,9 @@ msgid ""
 msgstr ""
 "Att hämta funktioner från en PostgreSQL-databas kan vara tidskrävande, "
 "särskilt över ett nätverk. Du kan förbättra ritningsprestandan för "
-"PostgreSQL-lager genom att se till att ett PostGIS-rumsligt index finns på "
+"PostgreSQL-lager genom att se till att ett PostGIS-spatialt index finns på "
 "varje lager i databasen. PostGIS stöder skapandet av ett GiST-index "
-"(Generalized Search Tree) för att påskynda rumslig sökning (GiST-"
+"(Generalized Search Tree) för att påskynda spatial sökning (GiST-"
 "indexinformation hämtas från PostGIS-dokumentationen som finns på "
 "https://postgis.net)."
 
@@ -1012,10 +1012,10 @@ msgid ""
 "go to :menuselection:`Indexes` tab and click on :guilabel:`Add Spatial "
 "Index`."
 msgstr ""
-"Du kan använda DBManager för att skapa ett index för ditt skikt. Du bör "
-"först markera skiktet och klicka på :menuselection:`Table --> Edit table`, "
-"gå till :menuselection:`Indexes`-fliken och klicka på :guilabel:`Add Spatial"
-" Index`."
+"Du kan använda DBManager för att skapa ett index för ditt lager. Du bör "
+"först markera lagret och klicka på :menuselection:`Table --> Edit table`, gå"
+" till :menuselection:`Indexes`-fliken och klicka på :guilabel:`Add Spatial "
+"Index`."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:497
 msgid "The syntax for creating a GiST index is::"
@@ -1288,7 +1288,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:655
 msgid "Layers crossing 180° longitude"
-msgstr "Skikt som korsar 180° longitud"
+msgstr "Lager som korsar 180° longitud"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:657
 msgid ""
