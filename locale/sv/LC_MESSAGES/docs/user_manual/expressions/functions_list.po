@@ -960,7 +960,7 @@ msgid ""
 msgstr ""
 "**filter** - valfritt filteruttryck för att begränsa de funktioner som "
 "används för att beräkna aggregatet. Fält och geometri kommer från objekten i"
-" det sammanfogade skiktet. Källfunktionen kan nås med variabeln @parent."
+" det sammanfogade lagret. Källfunktionen kan nås med variabeln @parent."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:55
 msgid ""
@@ -979,8 +979,8 @@ msgid ""
 msgstr ""
 "**order_by** - valfritt filteruttryck för att ordna de funktioner som "
 "används för att beräkna aggregatet. Fält och geometri är från funktionerna i"
-" det sammanfogade skiktet. Som standard kommer funktionerna att returneras i"
-" en ospecificerad ordning."
+" det sammanfogade lagret. Som standard kommer funktionerna att returneras i "
+"en ospecificerad ordning."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:45
@@ -1339,7 +1339,7 @@ msgid ""
 " → sum of all values from the passengers field in the rail_stations layer"
 msgstr ""
 "``aggregate(layer:='rail_stations',aggregate:='sum',expression:=\"passengers\")``"
-" → summan av alla värden från fältet passengers i skiktet rail_stations"
+" → summan av alla värden från fältet passengers i lagret rail_stations"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:59
 msgid ""
@@ -1369,7 +1369,7 @@ msgid ""
 msgstr ""
 "``aggregate(layer:='rail_stations',aggregate:='concatenate', "
 "expression:=\"name\", concatenator:=',')`` → kommaseparerad lista över "
-"namnfältet för alla funktioner i skiktet rail_stations"
+"namnfältet för alla funktioner i lagret rail_stations"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:62
 msgid ""
@@ -1379,7 +1379,7 @@ msgid ""
 msgstr ""
 "``aggregate(layer:='countries', aggregate:='max', expression:=\"code\", "
 "filter:=intersects( @geometry, geometry(@parent) ) )`` → Landskoden för ett "
-"korsande land i skiktet \"countries"
+"korsande land i lagret \"countries"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:63
 msgid ""
@@ -1936,8 +1936,8 @@ msgid ""
 msgstr ""
 "**order_by** - valfritt uttryck för att ordna de funktioner som används för "
 "att beräkna aggregatet. Fält och geometri kommer från funktionerna i det "
-"sammanfogade skiktet. Som standard returneras funktionerna i en "
-"ospecificerad ordning."
+"sammanfogade lagret. Som standard returneras funktionerna i en ospecificerad"
+" ordning."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:579
 msgid ""
@@ -6284,7 +6284,7 @@ msgid ""
 " and :ref:`auxiliary <vector_auxiliary_storage>` ones as well as from "
 ":ref:`joins <sec_joins>`."
 msgstr ""
-"Innehåller en lista över fält från det aktiva skiktet och specialvärden. "
+"Innehåller en lista över fält från det aktiva lagret och specialvärden. "
 "Fältlistan innehåller de som lagras i datasetet, :ref:`virtual "
 "<virtual_field>` och :ref:`auxiliary <vector_auxiliary_storage>` samt från "
 ":ref:`joins <sec_joins>`."
@@ -6376,8 +6376,8 @@ msgid ""
 "**path** - a file path or a map layer value. If a map layer value is "
 "specified then the file source of the layer will be used."
 msgstr ""
-"**path** - en filsökväg eller ett värde för ett kartskikt. Om ett värde för "
-"ett kartskikt anges kommer skiktets filkälla att användas."
+"**path** - en filsökväg eller ett värde för ett kartlager. Om ett värde för "
+"ett kartlager anges kommer lagrets filkälla att användas."
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:24
 msgid ""
@@ -6405,7 +6405,7 @@ msgid ""
 "**path** - An image file path or a map layer value. If a map layer value is "
 "specified then the file source of the layer will be used."
 msgstr ""
-"**path** - En sökväg till en bildfil eller ett värde för ett kartskikt. Om "
+"**path** - En sökväg till en bildfil eller ett värde för ett kartlager. Om "
 "ett värde för ett kartlager anges kommer filkällan för lagret att användas."
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:45
@@ -6585,10 +6585,10 @@ msgstr ""
 "det aktuella, osparade värdet för ett fält i det överordnade formulär som "
 "för närvarande redigeras. Detta kommer att skilja sig från den överordnade "
 "funktionens faktiska attributvärden för funktioner som för närvarande "
-"redigeras eller som ännu inte har lagts till i ett överordnat skikt. När den"
+"redigeras eller som ännu inte har lagts till i ett överordnat lager. När den"
 " här funktionen används i ett filteruttryck för en widget med värderelation "
 "bör den förpackas i en \"coalesce()\" som kan hämta den faktiska överordnade"
-" funktionen från skiktet när formuläret inte används i ett inbäddat "
+" funktionen från lagret när formuläret inte används i ett inbäddat "
 "sammanhang."
 
 #: ../../docs/user_manual/expressions/expression_help/Form.rst:20
@@ -6621,7 +6621,7 @@ msgstr ""
 "Returnerar det aktuella, osparade värdet för ett fält i formuläret eller "
 "tabellraden som för närvarande redigeras. Detta skiljer sig från objektets "
 "faktiska attributvärden för objekt som håller på att redigeras eller som "
-"ännu inte har lagts till i ett skikt."
+"ännu inte har lagts till i ett lager."
 
 #: ../../docs/user_manual/expressions/expression_help/Form.rst:40
 msgid "current_value(field_name)"
@@ -7046,7 +7046,7 @@ msgid ""
 "coordinate is not present in the geometry, it will be added."
 msgstr ""
 "Returnerar geometrin efter en affin transformation. Beräkningarna görs i "
-"geometrins rumsliga referenssystem. Operationerna utförs i ordningen skala, "
+"geometrins spatiala referenssystem. Operationerna utförs i ordningen skala, "
 "rotation, translation. Om det finns en Z- eller M-offset men koordinaten "
 "inte finns i geometrin kommer den att läggas till."
 
@@ -7328,7 +7328,7 @@ msgid ""
 "settings."
 msgstr ""
 "Returnerar arean för ett geometriskt polygonobjekt. Beräkningar är alltid "
-"planimetriska i det rumsliga referenssystemet (SRS) för denna geometri, och "
+"planimetriska i det spatiala referenssystemet (SRS) för denna geometri, och "
 "enheterna för den returnerade ytan kommer att matcha enheterna för SRS. "
 "Detta skiljer sig från de beräkningar som utförs av funktionen $area, som "
 "utför ellipsoidiska beräkningar baserat på projektets inställningar för "
@@ -7411,7 +7411,7 @@ msgid ""
 "points. By default the current layer's CRS is used."
 msgstr ""
 "**source_crs** - en valfri sträng som representerar punkternas CRS-källa. "
-"Som standard används det aktuella skiktets CRS."
+"Som standard används det aktuella lagrets CRS."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:174
 msgid ""
@@ -7495,7 +7495,7 @@ msgid ""
 "Calculations are in the Spatial Reference System of this geometry."
 msgstr ""
 "Returnerar en geometri som representerar begränsningsboxen för en "
-"indatageometri. Beräkningar görs i det rumsliga referenssystemet för denna "
+"indatageometri. Beräkningar görs i det spatiala referenssystemet för denna "
 "geometri."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -7535,7 +7535,7 @@ msgid ""
 "the Spatial Reference System of this geometry."
 msgstr ""
 "Returnerar höjden på den avgränsande boxen för en geometri. Beräkningar görs"
-" i geometrins rumsliga referenssystem."
+" i geometrins spatiala referenssystem."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "bounds_height(geometry)"
@@ -7564,7 +7564,7 @@ msgid ""
 " Spatial Reference System of this geometry."
 msgstr ""
 "Returnerar bredden på den avgränsande boxen för en geometri. Beräkningar "
-"görs i geometrins rumsliga referenssystem."
+"görs i geometrins spatiala referenssystem."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "bounds_width(geometry)"
@@ -7594,7 +7594,7 @@ msgid ""
 msgstr ""
 "Returnerar en geometri som representerar alla punkter vars avstånd från "
 "denna geometri är mindre än eller lika med distance. Beräkningar görs i det "
-"rumsliga referenssystemet för denna geometri."
+"spatiala referenssystemet för denna geometri."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:56
 msgid ""
@@ -8226,7 +8226,7 @@ msgid ""
 "Tests whether geometries do not spatially intersect. Returns TRUE if the "
 "geometries do not share any space together."
 msgstr ""
-"Testar om geometrier inte korsar varandra rumsligt. Returnerar TRUE om "
+"Testar om geometrier inte korsar varandra spatialt. Returnerar TRUE om "
 "geometrierna inte delar något utrymme tillsammans."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -8265,7 +8265,7 @@ msgid ""
 "Returns the minimum distance (based on spatial reference) between two "
 "geometries in projected units."
 msgstr ""
-"Returnerar det minsta avståndet (baserat på rumslig referens) mellan två "
+"Returnerar det minsta avståndet (baserat på spatial referens) mellan två "
 "geometrier i projicerade enheter."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -8373,7 +8373,7 @@ msgstr ""
 "Förlänger början och slutet av en linjestringgeometri med en angiven mängd. "
 "Linjer förlängs med hjälp av bäringen för det första och sista segmentet i "
 "linjen. För en multilinestring förlängs alla delar. Avstånden är i det "
-"rumsliga referenssystemet för denna geometri."
+"spatiala referenssystemet för denna geometri."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "extend(geometry, start_distance, end_distance)"
@@ -8847,7 +8847,7 @@ msgid ""
 "'POINT(6 50)'"
 msgstr ""
 "``geom_to_wkt( geometry( get_feature_by_id( 'streets', 1 ) ) )`` → geometrin"
-" i WKT för objektet med id 1 i skiktet \"streets\", t.ex. \"POINT(6 50)"
+" i WKT för objektet med id 1 i lagret \"streets\", t.ex. \"POINT(6 50)"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:143
 msgid ""
@@ -8856,8 +8856,8 @@ msgid ""
 "St.' named feature in the \"streets\" layer"
 msgstr ""
 "``intersects( @geometry, geometry( get_feature( 'streets', 'name', 'Main "
-"St.' ) ) )`` → TRUE om den aktuella funktionen rumsligt skär den namngivna "
-"funktionen \"Main St.\" i skiktet \"streets"
+"St.' ) ) )`` → TRUE om den aktuella funktionen spatialt skär den namngivna "
+"funktionen \"Main St.\" i lagret \"streets"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:151
 msgid "geometry_n"
@@ -9152,7 +9152,7 @@ msgid ""
 "spatially intersect (share any portion of space) and false if they do not."
 msgstr ""
 "Testar om en geometri skär en annan. Returnerar TRUE om geometrierna korsar "
-"varandra rumsligt (delar någon del av utrymmet) och false om de inte gör "
+"varandra spatialt (delar någon del av utrymmet) och false om de inte gör "
 "det."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -9193,7 +9193,7 @@ msgid ""
 "defined and false if they do not."
 msgstr ""
 "Testar om en geometris avgränsningsbox överlappar en annan geometris "
-"avgränsningsbox. Returnerar TRUE om geometrierna rumsligt korsar den "
+"avgränsningsbox. Returnerar TRUE om geometrierna spatialt korsar den "
 "definierade begränsningsboxen och false om de inte gör det."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -9466,7 +9466,7 @@ msgid ""
 "settings."
 msgstr ""
 "Beräknar längden på ett geometriskt linjeobjekt. Beräkningar är alltid "
-"planimetriska i det rumsliga referenssystemet (SRS) för denna geometri, och "
+"planimetriska i det spatiala referenssystemet (SRS) för denna geometri, och "
 "enheterna för den returnerade längden kommer att matcha enheterna för SRS. "
 "Detta skiljer sig från de beräkningar som utförs av funktionen $length, som "
 "utför ellipsoidiska beräkningar baserat på projektets inställningar för "
@@ -9512,7 +9512,7 @@ msgid ""
 msgstr ""
 "Beräknar 3D-längden för ett geometriskt linjeobjekt. Om geometrin inte är "
 "ett 3D-linjeobjekt returneras dess 2D-längd. Beräkningarna är alltid "
-"planimetriska i det rumsliga referenssystemet (SRS) för denna geometri, och "
+"planimetriska i det spatiala referenssystemet (SRS) för denna geometri, och "
 "enheterna för den returnerade längden kommer att överensstämma med enheterna"
 " för SRS. Detta skiljer sig från de beräkningar som utförs av funktionen "
 "$length, som utför ellipsoidiska beräkningar baserat på projektets "
@@ -10672,7 +10672,7 @@ msgid ""
 "Distances are in the Spatial Reference System of this geometry."
 msgstr ""
 "Returnerar en geometri som bildas genom att en linjestringgeometri förskjuts"
-" åt sidan. Avstånden är i det rumsliga referenssystemet för denna geometri."
+" åt sidan. Avstånden är i det spatiala referenssystemet för denna geometri."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:95
 msgid ""
@@ -10746,7 +10746,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:114
 msgid "In blue the source layer, in red the offset one"
-msgstr "I blått källskiktet, i rött det förskjutna skiktet"
+msgstr "I blått källagret, i rött det förskjutna lagret"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:567
 msgid "Further reading: :ref:`qgisoffsetline` algorithm"
@@ -10869,9 +10869,9 @@ msgid ""
 "from a target layer, or an array of expression-based results for the "
 "features in the target layer contained in the current feature."
 msgstr ""
-"Returnerar om den aktuella funktionen rumsligt innehåller minst en funktion "
-"från ett målskikt, eller en matris med uttrycksbaserade resultat för "
-"funktionerna i målskiktet som ingår i den aktuella funktionen."
+"Returnerar om den aktuella funktionen spatialt innehåller minst en funktion "
+"från ett mållager, eller en matris med uttrycksbaserade resultat för "
+"funktionerna i mållagret som ingår i den aktuella funktionen."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid ""
@@ -10900,7 +10900,7 @@ msgid ""
 "indicating whether there is at least one match."
 msgstr ""
 "**expression** - ett valfritt uttryck som ska utvärderas på funktionerna "
-"från målskiktet. Om det inte anges kommer funktionen bara att returnera ett "
+"från mållagret. Om det inte anges kommer funktionen bara att returnera ett "
 "booleanskt värde som anger om det finns minst en matchning."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
@@ -10938,7 +10938,7 @@ msgid ""
 "``overlay_contains('regions')`` → TRUE if the current feature spatially "
 "contains a region"
 msgstr ""
-"``overlay_contains('regions')`` → TRUE om den aktuella funktionen rumsligt "
+"``overlay_contains('regions')`` → TRUE om den aktuella funktionen spatialt "
 "innehåller en region"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:51
@@ -10948,7 +10948,7 @@ msgid ""
 "10000"
 msgstr ""
 "``overlay_contains('regions', filter:= population > 10000)`` → TRUE om den "
-"aktuella funktionen rumsligt innehåller en region med en population som är "
+"aktuella funktionen spatialt innehåller en region med en population som är "
 "större än 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:52
@@ -11008,9 +11008,9 @@ msgid ""
 "from a target layer, or an array of expression-based results for the "
 "features in the target layer crossed by the current feature."
 msgstr ""
-"Returnerar om den aktuella funktionen rumsligt korsar minst en funktion från"
-" ett målskikt, eller en uppsättning uttrycksbaserade resultat för de "
-"funktioner i målskiktet som korsas av den aktuella funktionen."
+"Returnerar om den aktuella funktionen spatialt korsar minst en funktion från"
+" ett mållager, eller en uppsättning uttrycksbaserade resultat för de "
+"funktioner i mållagret som korsas av den aktuella funktionen."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -11030,7 +11030,7 @@ msgid ""
 "``overlay_crosses('regions')`` → TRUE if the current feature spatially "
 "crosses a region"
 msgstr ""
-"``overlay_crosses('regions')`` → TRUE om den aktuella funktionen rumsligt "
+"``overlay_crosses('regions')`` → TRUE om den aktuella funktionen spatialt "
 "korsar en region"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
@@ -11040,7 +11040,7 @@ msgid ""
 "10000"
 msgstr ""
 "``overlay_crosses('regions', filter:= population > 10000)`` → TRUE om den "
-"aktuella funktionen rumsligt korsar en region med en population som är "
+"aktuella funktionen spatialt korsar en region med en population som är "
 "större än 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
@@ -11101,9 +11101,9 @@ msgid ""
 "features of a target layer, or an array of expression-based results for the "
 "features in the target layer that are disjoint from the current feature."
 msgstr ""
-"Returnerar om den aktuella funktionen är rumsligt disjunkt från alla "
-"funktioner i ett målskikt, eller en matris med uttrycksbaserade resultat för"
-" de funktioner i målskiktet som är disjunkta från den aktuella funktionen."
+"Returnerar om den aktuella funktionen är spatialt disjunkt från alla "
+"funktioner i ett mållager, eller en matris med uttrycksbaserade resultat för"
+" de funktioner i mållagret som är disjunkta från den aktuella funktionen."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -11125,7 +11125,7 @@ msgid ""
 "disjoint from all the regions"
 msgstr ""
 "``overlay_disjoint('regions')`` → TRUE om den aktuella funktionen är "
-"rumsligt åtskild från alla regioner"
+"spatialt åtskild från alla regioner"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
 msgid ""
@@ -11134,7 +11134,7 @@ msgid ""
 " greater than 10000"
 msgstr ""
 "``overlay_disjoint('regions', filter:= population > 10000)`` → TRUE om den "
-"aktuella funktionen är rumsligt åtskild från alla regioner med en population"
+"aktuella funktionen är spatialt åtskild från alla regioner med en population"
 " som är större än 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
@@ -11143,7 +11143,7 @@ msgid ""
 "spatially disjoint from the current feature"
 msgstr ""
 "``overlay_disjoint('regions', name)`` → en matris med namn för de regioner "
-"som är rumsligt åtskilda från den aktuella funktionen"
+"som är spatialt åtskilda från den aktuella funktionen"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid ""
@@ -11152,7 +11152,7 @@ msgid ""
 "current feature"
 msgstr ""
 "``array_to_string(overlay_disjoint('regions', name))`` → en sträng som en "
-"kommaseparerad lista med namn för de regioner som är rumsligt åtskilda från "
+"kommaseparerad lista med namn för de regioner som är spatialt åtskilda från "
 "den aktuella funktionen"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
@@ -11164,7 +11164,7 @@ msgid ""
 msgstr ""
 "``array_sort(overlay_disjoint(layer:='regions', expression:=\"name\", "
 "filter:= population > 10000))`` → en ordnad matris med namn, för de regioner"
-" som är rumsligt åtskilda från den aktuella funktionen och har en befolkning"
+" som är spatialt åtskilda från den aktuella funktionen och har en befolkning"
 " som är större än 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
@@ -11175,7 +11175,7 @@ msgid ""
 msgstr ""
 "``overlay_disjoint(layer:='regions', expression:= geom_to_wkt(@geometry), "
 "limit:=2)`` → en array av geometrier (i WKT), för upp till två regioner som "
-"är rumsligt åtskilda från den aktuella funktionen"
+"är spatialt åtskilda från den aktuella funktionen"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:595
 msgid ""
@@ -11198,9 +11198,9 @@ msgid ""
 "features in the target layer that are spatially equal to the current "
 "feature."
 msgstr ""
-"Returnerar om den aktuella funktionen är rumsligt lika med minst en funktion"
-" från ett målskikt, eller en matris med uttrycksbaserade resultat för "
-"funktionerna i målskiktet som är rumsligt lika med den aktuella funktionen."
+"Returnerar om den aktuella funktionen är spatialt lika med minst en funktion"
+" från ett mållager, eller en matris med uttrycksbaserade resultat för "
+"funktionerna i mållagret som är spatialt lika med den aktuella funktionen."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -11219,7 +11219,7 @@ msgid ""
 "``overlay_equals('regions')`` → TRUE if the current feature is spatially "
 "equal to a region"
 msgstr ""
-"``overlay_equals('regions')`` → TRUE om den aktuella funktionen är rumsligt "
+"``overlay_equals('regions')`` → TRUE om den aktuella funktionen är spatialt "
 "lika med en region"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
@@ -11229,7 +11229,7 @@ msgid ""
 "than 10000"
 msgstr ""
 "``overlay_equals('regions', filter:= population > 10000)`` → TRUE om den "
-"aktuella funktionen är rumsligt lika med en region med en befolkning större "
+"aktuella funktionen är spatialt lika med en region med en befolkning större "
 "än 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
@@ -11238,7 +11238,7 @@ msgid ""
 "spatially equal to the current feature"
 msgstr ""
 "``overlay_equals('regions', name)`` → en matris med namn för de regioner som"
-" är rumsligt lika med den aktuella funktionen"
+" är spatialt lika med den aktuella funktionen"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
 msgid ""
@@ -11247,7 +11247,7 @@ msgid ""
 "feature"
 msgstr ""
 "``array_to_string(overlay_equals('regions', name))`` → en sträng som en "
-"kommaseparerad lista med namn, för de regioner som är rumsligt lika med den "
+"kommaseparerad lista med namn, för de regioner som är spatialt lika med den "
 "aktuella funktionen"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
@@ -11259,7 +11259,7 @@ msgid ""
 msgstr ""
 "``array_sort(overlay_equals(layer:='regions', expression:=\"name\", filter:="
 " population > 10000))`` → en ordnad matris med namn, för de regioner som är "
-"rumsligt lika med den aktuella funktionen och har en befolkning som är "
+"spatialt lika med den aktuella funktionen och har en befolkning som är "
 "större än 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:33
@@ -11270,7 +11270,7 @@ msgid ""
 msgstr ""
 "``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
 "limit:=2)`` → en array av geometrier (i WKT), för upp till två regioner som "
-"är rumsligt lika med den aktuella funktionen"
+"är spatialt lika med den aktuella funktionen"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:603
 msgid ""
@@ -11290,9 +11290,9 @@ msgid ""
 "feature from a target layer, or an array of expression-based results for the"
 " features in the target layer intersected by the current feature."
 msgstr ""
-"Returnerar om den aktuella funktionen rumsligt skär minst en funktion från "
-"ett målskikt, eller en matris med uttrycksbaserade resultat för de "
-"funktioner i målskiktet som skärs av den aktuella funktionen."
+"Returnerar om den aktuella funktionen spatialt skär minst en funktion från "
+"ett mållager, eller en matris med uttrycksbaserade resultat för de "
+"funktioner i mållagret som skärs av den aktuella funktionen."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -11382,7 +11382,7 @@ msgstr ""
 "kartor som innehåller (nyckelnamn inom citationstecken) funktionens \"id\", "
 "uttrycket \"result\" och \"overlap\"-värdet (för det största elementet vid "
 "multipart). Radien för den maximalt inskrivna cirkeln returneras också när "
-"målskiktet är en polygon. Endast giltig när den används med parametern "
+"mållagret är en polygon. Endast giltig när den används med parametern "
 "expression"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
@@ -11401,7 +11401,7 @@ msgid ""
 "``overlay_intersects('regions')`` → TRUE if the current feature spatially "
 "intersects a region"
 msgstr ""
-"``overlay_intersects('regions')`` → TRUE om den aktuella funktionen rumsligt"
+"``overlay_intersects('regions')`` → TRUE om den aktuella funktionen spatialt"
 " skär en region"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
@@ -11411,7 +11411,7 @@ msgid ""
 "than 10000"
 msgstr ""
 "``overlay_intersects('regions', filter:= population > 10000)`` → TRUE om den"
-" aktuella funktionen rumsligt skär en region med en befolkning större än "
+" aktuella funktionen spatialt skär en region med en befolkning större än "
 "10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
@@ -11461,7 +11461,7 @@ msgid ""
 "0.54"
 msgstr ""
 "``overlay_intersects(layer:='regions', min_overlap:=0.54)`` → TRUE om den "
-"aktuella funktionen rumsligt skär en region och skärningsområdet (för minst "
+"aktuella funktionen spatialt skär en region och skärningsområdet (för minst "
 "en av delarna när det gäller multipolygoner) är större än eller lika med "
 "0.54"
 
@@ -11473,7 +11473,7 @@ msgid ""
 "parts in case of multipart) is greater or equal to 0.54"
 msgstr ""
 "``overlay_intersects(layer:='regions', min_inscribed_circle_radius:=0.54)`` "
-"→ TRUE om den aktuella funktionen rumsligt skär en region och "
+"→ TRUE om den aktuella funktionen spatialt skär en region och "
 "skärningsområdets maximala radie för den inskrivna cirkeln (för minst en av "
 "delarna om det gäller flera delar) är större än eller lika med 0,54"
 
@@ -11517,9 +11517,9 @@ msgid ""
 "within a given distance, or an array of expression-based results for the "
 "features in the target layer within a distance from the current feature."
 msgstr ""
-"Returnerar om den aktuella funktionen har funktion(er) från ett målskikt "
+"Returnerar om den aktuella funktionen har funktion(er) från ett mållager "
 "inom ett givet avstånd, eller en matris med uttrycksbaserade resultat för "
-"funktionerna i målskiktet inom ett avstånd från den aktuella funktionen."
+"funktionerna i mållagret inom ett avstånd från den aktuella funktionen."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -11539,7 +11539,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:22
 msgid "**layer** - the target layer"
-msgstr "**skikt** - målskiktet"
+msgstr "**lager** - mållagret"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
 msgid ""
@@ -11547,7 +11547,7 @@ msgid ""
 "If not set, all the features in the target layer will be used."
 msgstr ""
 "**filter** - ett valfritt uttryck för att filtrera de målfunktioner som ska "
-"kontrolleras. Om det inte anges kommer alla funktioner i målskiktet att "
+"kontrolleras. Om det inte anges kommer alla funktioner i mållagret att "
 "användas."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
@@ -11566,7 +11566,7 @@ msgid ""
 "features. If not set, all the features in the target layer will be used."
 msgstr ""
 "**max_distance** - ett valfritt avstånd för att begränsa sökningen efter "
-"matchande funktioner. Om det inte anges kommer alla funktioner i målskiktet "
+"matchande funktioner. Om det inte anges kommer alla funktioner i mållagret "
 "att användas."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
@@ -11574,7 +11574,7 @@ msgid ""
 "``overlay_nearest('airports')`` → TRUE if the \"airports\" layer has at "
 "least one feature"
 msgstr ""
-"``overlay_nearest('airports')`` → TRUE om skiktet \"airports\" har minst en "
+"``overlay_nearest('airports')`` → TRUE om lagret \"airports\" har minst en "
 "funktion"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
@@ -11650,9 +11650,9 @@ msgid ""
 "from a target layer, or an array of expression-based results for the "
 "features in the target layer touched by the current feature."
 msgstr ""
-"Returnerar om den aktuella funktionen rumsligt berör minst en funktion från "
-"ett målskikt, eller en matris med uttrycksbaserade resultat för de "
-"funktioner i målskiktet som berörs av den aktuella funktionen."
+"Returnerar om den aktuella funktionen spatialt berör minst en funktion från "
+"ett mållager, eller en matris med uttrycksbaserade resultat för de "
+"funktioner i mållagret som berörs av den aktuella funktionen."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -11672,7 +11672,7 @@ msgid ""
 "``overlay_touches('regions')`` → TRUE if the current feature spatially "
 "touches a region"
 msgstr ""
-"``overlay_touches('regions')`` → TRUE om den aktuella funktionen rumsligt "
+"``overlay_touches('regions')`` → TRUE om den aktuella funktionen spatialt "
 "berör en region"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
@@ -11682,7 +11682,7 @@ msgid ""
 "10000"
 msgstr ""
 "``overlay_touches('regions', filter:= population > 10000)`` → TRUE om den "
-"aktuella funktionen rumsligt berör en region med en population som är större"
+"aktuella funktionen spatialt berör en region med en population som är större"
 " än 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
@@ -11743,9 +11743,9 @@ msgid ""
 " from a target layer, or an array of expression-based results for the "
 "features in the target layer that contain the current feature."
 msgstr ""
-"Returnerar om den aktuella funktionen är rumsligt inom minst en funktion "
-"från ett målskikt, eller en matris med uttrycksbaserade resultat för de "
-"funktioner i målskiktet som innehåller den aktuella funktionen."
+"Returnerar om den aktuella funktionen är spatialt inom minst en funktion "
+"från ett mållager, eller en matris med uttrycksbaserade resultat för de "
+"funktioner i mållagret som innehåller den aktuella funktionen."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:12
 msgid ""
@@ -11764,7 +11764,7 @@ msgid ""
 "``overlay_within('regions')`` → TRUE if the current feature is spatially "
 "within a region"
 msgstr ""
-"``overlay_within('regions')`` → TRUE om den aktuella funktionen är rumsligt "
+"``overlay_within('regions')`` → TRUE om den aktuella funktionen är spatialt "
 "inom en region"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
@@ -11774,7 +11774,7 @@ msgid ""
 "10000"
 msgstr ""
 "``overlay_within('regions', filter:= population > 10000)`` → TRUE om den "
-"aktuella funktionen ligger rumsligt inom en region med en population som är "
+"aktuella funktionen ligger spatialt inom en region med en population som är "
 "större än 10000"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
@@ -11863,7 +11863,7 @@ msgid ""
 "distance unit settings."
 msgstr ""
 "Returnerar omkretsen för ett geometriskt polygonobjekt. Beräkningarna är "
-"alltid planimetriska i det rumsliga referenssystemet (SRS) för denna "
+"alltid planimetriska i det spatiala referenssystemet (SRS) för denna "
 "geometri, och enheterna för den returnerade omkretsen kommer att matcha "
 "enheterna för SRS. Detta skiljer sig från de beräkningar som utförs av "
 "funktionen $perimeter, som utför ellipsoidiska beräkningar baserat på "
@@ -12130,7 +12130,7 @@ msgid ""
 "Reference System of this geometry."
 msgstr ""
 "Returnerar en roterad version av en geometri. Beräkningar görs i geometrins "
-"rumsliga referenssystem."
+"spatiala referenssystem."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "rotate(geometry, rotation, [center=NULL], [per_part=false])"
@@ -12229,7 +12229,7 @@ msgid ""
 "Reference System of this geometry."
 msgstr ""
 "Returnerar en skalad version av en geometri. Beräkningar görs i geometrins "
-"rumsliga referenssystem."
+"spatiala referenssystem."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "scale(geometry, x_scale, y_scale, [center])"
@@ -12424,7 +12424,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
 msgid ""
 "From left to right, source layer and increasing simplification tolerances"
-msgstr "Från vänster till höger, källskikt och ökande förenklingstoleranser"
+msgstr "Från vänster till höger, källager och ökande förenklingstoleranser"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:683
 #: ../../docs/user_manual/expressions/functions_list.rst:689
@@ -12477,7 +12477,7 @@ msgid ""
 "geometry. Distances are in the Spatial Reference System of this geometry."
 msgstr ""
 "Returnerar en geometri som bildats genom att buffra ut bara en sida av en "
-"linjestringgeometri. Avstånden är i det rumsliga referenssystemet för denna "
+"linjestringgeometri. Avstånden är i det spatiala referenssystemet för denna "
 "geometri."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -12991,7 +12991,7 @@ msgid ""
 "Reference System of this geometry."
 msgstr ""
 "Returnerar en översatt version av en geometri. Beräkningar görs i geometrins"
-" rumsliga referenssystem."
+" spatiala referenssystem."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "translate(geometry, dx, dy)"
@@ -13410,7 +13410,7 @@ msgid ""
 "spatial reference system of this geometry."
 msgstr ""
 "Returnerar den maximala x-koordinaten för en geometri. Beräkningarna görs i "
-"geometrins rumsliga referenssystem."
+"geometrins spatiala referenssystem."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "x_max(geometry)"
@@ -13430,7 +13430,7 @@ msgid ""
 "spatial reference system of this geometry."
 msgstr ""
 "Returnerar den minsta x-koordinaten för en geometri. Beräkningarna görs i "
-"geometrins rumsliga referenssystem."
+"geometrins spatiala referenssystem."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
 msgid "x_min(geometry)"
@@ -13542,7 +13542,7 @@ msgid ""
 "spatial reference system of this geometry."
 msgstr ""
 "Returnerar den maximala y-koordinaten för en geometri. Beräkningarna görs i "
-"geometrins rumsliga referenssystem."
+"geometrins spatiala referenssystem."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:35
 msgid "y_max(geometry)"
@@ -13562,7 +13562,7 @@ msgid ""
 "spatial reference system of this geometry."
 msgstr ""
 "Returnerar den minsta y-koordinaten för en geometri. Beräkningarna görs i "
-"geometrins rumsliga referenssystem."
+"geometrins spatiala referenssystem."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
 msgid "y_min(geometry)"
@@ -13822,8 +13822,8 @@ msgid ""
 " lines: CC-BY-NC, Basemap: CC-BY-SA'"
 msgstr ""
 "``array_to_string( map_credits( \"Huvudkarta\", include_layer_names := true,"
-" layer_name_separator := ': ' ) )`` → kommaseparerad lista över skiktnamn "
-"och deras krediter för skikt som visas i layoutobjektet \"Huvudkarta\", "
+" layer_name_separator := ': ' ) )`` → kommaseparerad lista över lagernamn "
+"och deras krediter för lager som visas i layoutobjektet \"Huvudkarta\", "
 "t.ex. \"Järnvägslinjer: CC-BY-NC, Baskarta: CC-BY-SA"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:804
@@ -13836,7 +13836,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/functions_list.rst:812
 msgid "Map Layers"
-msgstr "Kartskikt"
+msgstr "Kartlager"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:814
 msgid ""
@@ -13851,8 +13851,8 @@ msgid ""
 ":ref:`attribute <record_attributes>` or :ref:`spatial <geometry_functions>` "
 "queries."
 msgstr ""
-"Denna grupp innehåller en lista över tillgängliga skikt i det aktuella "
-"projektet och, för varje skikt, deras fält (lagrade i datasetet, virtuella "
+"Denna grupp innehåller en lista över tillgängliga lager i det aktuella "
+"projektet och, för varje lager, deras fält (lagrade i datasetet, virtuella "
 "eller extra samt från sammanfogningar). Fälten kan interageras på samma sätt"
 " som nämns i :ref:`fields_values`, förutom att ett dubbelklick lägger till "
 "namnet som en sträng (med enkla citattecken) i uttrycket i stället för som "
@@ -13938,7 +13938,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:52
 msgid "name: layer name"
-msgstr "namn: skiktets namn"
+msgstr "namn: lagrets namn"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:53
 msgid "id: layer ID"
@@ -13998,7 +13998,7 @@ msgstr "crs_description: beskrivning av CRS-lager"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
 msgid "crs_ellipsoid: acronym of the layer CRS ellipsoid"
-msgstr "crs_ellipsoid: akronym för skiktet CRS ellipsoid"
+msgstr "crs_ellipsoid: akronym för lagret CRS ellipsoid"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
 msgid "extent: layer extent (as a geometry object)"
@@ -14006,7 +14006,7 @@ msgstr "extent: lagerutbredning (som ett geometriobjekt)"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:69
 msgid "distance_units: layer distance units"
-msgstr "distance_units: skiktets avståndsenheter"
+msgstr "distance_units: lagrets avståndsenheter"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:70
 msgid "type: layer type, e.g., Vector or Raster"
@@ -14031,7 +14031,7 @@ msgid ""
 "path: File path to the layer data source. Only available for file based "
 "layers."
 msgstr ""
-"sökväg: Filsökväg till skiktets datakälla. Endast tillgängligt för "
+"sökväg: Filsökväg till lagrets datakälla. Endast tillgängligt för "
 "filbaserade lager."
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
@@ -14072,7 +14072,7 @@ msgstr "**uri** - URI-sträng för källan till lagret"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:17
 msgid "**provider** - layer data provider name"
-msgstr "**provider** - namn på leverantör av skiktdata"
+msgstr "**provider** - namn på leverantör av lagerdata"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:19
 msgid ""
@@ -14080,7 +14080,7 @@ msgid ""
 "→ count of features from the c:/data/roads.shp vector layer"
 msgstr ""
 "``layer_property(load_layer('c:/data/roads.shp', 'ogr'), 'feature_count')`` "
-"→ antal funktioner från vektorskiktet c:/data/roads.shp"
+"→ antal funktioner från vektorlagret c:/data/roads.shp"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:845
 msgid "Maps Functions"
@@ -16506,7 +16506,7 @@ msgid ""
 "raster layer"
 msgstr ""
 "``raster_statistic('lc',1,'avg')`` → Medelvärde från band 1 från "
-"rasterskiktet 'lc"
+"rasterlagret 'lc"
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:61
 msgid ""
@@ -16514,7 +16514,7 @@ msgid ""
 "'ac2010' raster layer"
 msgstr ""
 "``raster_statistic('ac2010',3,'min')`` → Minsta värde från band 3 från "
-"rasterskiktet \"ac2010"
+"rasterlagret \"ac2010"
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:69
 msgid "raster_value"
@@ -16701,7 +16701,7 @@ msgid ""
 "expression is evaluated by default. Can be used with zero, one or more "
 "arguments, see below for details."
 msgstr ""
-"Returnerar visningsuttrycket för en given funktion i ett skikt. Uttrycket "
+"Returnerar visningsuttrycket för en given funktion i ett lager. Uttrycket "
 "utvärderas som standard. Kan användas med noll, ett eller flera argument, se"
 " nedan för mer information."
 
@@ -16791,7 +16791,7 @@ msgstr "display_expression(lager, funktion, [evaluate=true])"
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:68
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:106
 msgid "**layer** - The layer (or its ID or name)"
-msgstr "**layer** - Skiktet (eller dess ID eller namn)"
+msgstr "**layer** - Lagret (eller dess ID eller namn)"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:70
 msgid ""
@@ -16809,7 +16809,7 @@ msgid ""
 "display expression of the feature with the ID 1 on the layer 'streets'."
 msgstr ""
 "``display_expression( 'streets', get_feature_by_id('streets', 1))`` → "
-"Visningsuttrycket för funktionen med ID 1 i skiktet 'streets'."
+"Visningsuttrycket för funktionen med ID 1 i lagret 'streets'."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:73
 msgid ""
@@ -16861,7 +16861,7 @@ msgstr "**Variant med ett enda värde**"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:12
 msgid "Along with the layer ID, a single column and value are specified."
-msgstr "Tillsammans med skiktets ID anges en enda kolumn och ett värde."
+msgstr "Tillsammans med lagrets ID anges en enda kolumn och ett värde."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:18
 msgid "get_feature(layer, attribute, value)"
@@ -16893,8 +16893,8 @@ msgid ""
 "Along with the layer ID, a map containing the columns (key) and their "
 "respective value to be used."
 msgstr ""
-"Tillsammans med skiktets ID, en karta som innehåller de kolumner (nyckel) "
-"och deras respektive värde som ska användas."
+"Tillsammans med lagrets ID, en karta som innehåller de kolumner (nyckel) och"
+" deras respektive värde som ska användas."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:35
 msgid "get_feature(layer, attribute)"
@@ -16912,8 +16912,8 @@ msgid ""
 "field and  \"4\" value in the \"lane_num\" field"
 msgstr ""
 "``get_feature('streets',map('name','main st','lane_num','4'))`` → första "
-"funktionen som hittades i skiktet \"streets\" med värdet \"main st\" i "
-"fältet \"name\" och värdet \"4\" i fältet \"lane_num\""
+"funktionen som hittades i lagret \"streets\" med värdet \"main st\" i fältet"
+" \"name\" och värdet \"4\" i fältet \"lane_num\""
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:48
 msgid "get_feature_by_id"
@@ -17139,8 +17139,8 @@ msgid ""
 "selected."
 msgstr ""
 "``is_selected(get_feature('streets', 'name', 'Main St.'))`` → TRUE om den "
-"unika funktionen med namnet \"Main St.\" i det aktiva \"streets\"-skiktet är"
-" vald."
+"unika funktionen med namnet \"Main St.\" i det aktiva \"streets\"-lagret är "
+"vald."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:37
 msgid ""
@@ -17182,7 +17182,7 @@ msgid ""
 msgstr ""
 "``is_selected( 'streets', get_feature('streets', 'name', \"street_name\"))``"
 " → TRUE om den aktuella byggnadens gata är vald (förutsatt att "
-"byggnadsskiktet har ett fält med namnet \"street_name\" och att skiktet "
+"byggnadslagret har ett fält med namnet \"street_name\" och att lagret "
 "\"streets\" har ett fält med namnet \"name\" med unika värden)."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:54
@@ -17203,7 +17203,7 @@ msgid ""
 "evaluated by default. Can be used with zero, one or more arguments, see "
 "below for details."
 msgstr ""
-"Returnerar karttipset för en given funktion i ett skikt. Uttrycket "
+"Returnerar karttipset för en given funktion i ett lager. Uttrycket "
 "utvärderas som standard. Kan användas med noll, ett eller flera argument, se"
 " nedan för detaljer."
 
@@ -17253,7 +17253,7 @@ msgid ""
 "feature with the ID 1 on the layer 'streets'."
 msgstr ""
 "``maptip('streets', get_feature_by_id('streets', 1))`` → Karttipset för "
-"funktionen med ID 1 i skiktet \"streets\"."
+"funktionen med ID 1 i lagret \"streets\"."
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:111
 msgid ""
@@ -17297,7 +17297,7 @@ msgid ""
 "``num_selected('streets')`` → The number of selected features on the layer "
 "streets"
 msgstr ""
-"``num_selected('streets')`` → Antalet utvalda funktioner i skiktet streets"
+"``num_selected('streets')`` → Antalet utvalda funktioner i lagret streets"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:142
 msgid "represent_attributes"
@@ -17381,7 +17381,7 @@ msgid ""
 " of the attributes for the specified feature from the specified layer."
 msgstr ""
 "``represent_attributes('atlas_layer', @atlas_feature)`` → → Representationen"
-" av attributen för den angivna funktionen från det angivna skiktet."
+" av attributen för den angivna funktionen från det angivna lagret."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1032
 msgid ""
@@ -18757,7 +18757,7 @@ msgstr "atlas_layername"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "The current atlas coverage layer name"
-msgstr "Det aktuella namnet på atlasens täckningsskikt"
+msgstr "Det aktuella namnet på atlasens täckningslager"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "atlas_pagename"
@@ -19063,7 +19063,7 @@ msgstr "layer_crs"
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "The Coordinate Reference System Authority ID of the current layer"
 msgstr ""
-"Det aktuella skiktets auktoritets-ID för koordinatsystemets referenssystem"
+"Det aktuella lagrets auktoritets-ID för koordinatsystemets referenssystem"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_crs_ellipsoid"
@@ -19071,7 +19071,7 @@ msgstr "layer_crs_ellipsoid"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "The ellipsoid Authority ID of the current layer CRS"
-msgstr "Det aktuella skiktets ellipsoid Authority ID CRS"
+msgstr "Det aktuella lagrets ellipsoid Authority ID CRS"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_cursor_point"
@@ -19083,7 +19083,7 @@ msgid ""
 " position in context of QGIS Server), in active layer's CRS"
 msgstr ""
 "Punktgeometri under musens position i kartbilden (eller GetFeatureInfo-"
-"positionen i QGIS Server), i det aktiva skiktets CRS"
+"positionen i QGIS Server), i det aktiva lagrets CRS"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_id"
@@ -19118,7 +19118,7 @@ msgid ""
 "The Identifier for the vertical coordinate reference system of the layer "
 "(e.g., 'EPSG:5703')"
 msgstr ""
-"Identifieraren för skiktets referenssystem för vertikala koordinater (t.ex. "
+"Identifieraren för lagrets referenssystem för vertikala koordinater (t.ex. "
 "\"EPSG:5703\")"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
@@ -19129,7 +19129,7 @@ msgstr "layer_vertical_crs_definition"
 msgid ""
 "The full definition of the vertical Coordinate reference system of the layer"
 msgstr ""
-"Den fullständiga definitionen av skiktets vertikala referenssystem för "
+"Den fullständiga definitionen av lagrets vertikala referenssystem för "
 "koordinater"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
@@ -19138,7 +19138,7 @@ msgstr "layer_vertical_crs_description"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "The name of the vertical Coordinate reference system of the layer"
-msgstr "Namnet på skiktets vertikala referenssystem för koordinater"
+msgstr "Namnet på lagrets vertikala referenssystem för koordinater"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_vertical_crs_wkt"
@@ -19977,7 +19977,7 @@ msgstr "symbol_layer_count"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "Total number of symbol layers in the symbol"
-msgstr "Totalt antal symbolskikt i symbolen"
+msgstr "Totalt antal symbollager i symbolen"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "symbol_layer_index"
