@@ -382,7 +382,7 @@ msgstr "Beskrivning"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:839
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1935
 msgid "**Input layer**"
-msgstr "**Inmatningsskikt**"
+msgstr "**Inmatningslager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:42
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:121
@@ -760,7 +760,7 @@ msgid ""
 "geocoded location."
 msgstr ""
 "Utför batchgeokodning med hjälp av Nominatim-tjänsten mot ett strängfält i "
-"ett indataskikt. Utdataskiktet kommer att ha en punktgeometri som "
+"ett inmatningslager. Utmatningslagret kommer att ha en punktgeometri som "
 "återspeglar den geokodade platsen samt ett antal attribut som är associerade"
 " med den geokodade platsen."
 
@@ -841,8 +841,8 @@ msgid ""
 "Specify the output layer containing only the geocoded addresses. :ref:`One "
 "of <output_parameter_widget>`:"
 msgstr ""
-"Ange utdataskiktet som endast innehåller de geokodade adresserna. :ref:`En "
-"av <output_parameter_widget>`:"
+"Ange utdatalagret som endast innehåller de geokodade adresserna. :ref:`En av"
+" <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:154
 msgid ""
@@ -855,15 +855,15 @@ msgstr "**Algoritm-id**: ``native:batchnominatimgeocoder``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:169
 msgid "Convert layer to spatial bookmarks"
-msgstr "Konvertera lager till rumsliga bokmärken"
+msgstr "Konvertera lager till spatiala bokmärken"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:170
 msgid ""
 "Creates spatial bookmarks corresponding to the extent of features contained "
 "in a layer."
 msgstr ""
-"Skapar rumsliga bokmärken som motsvarar omfattningen av funktioner som finns"
-" i ett skikt."
+"Skapar spatiala bokmärken som motsvarar omfattningen av funktioner som finns"
+" i ett lager."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:184
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:330
@@ -879,7 +879,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2659
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2752
 msgid "**Input Layer**"
-msgstr "**Ingångsskikt**"
+msgstr "**Inmatningslager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:186
 msgid "[vector: line, polygon]"
@@ -993,7 +993,7 @@ msgstr "**Algoritm-ID**: ``native:layertobookmarks``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:238
 msgid "Convert spatial bookmarks to layer"
-msgstr "Konvertera rumsliga bokmärken till lager"
+msgstr "Konvertera spatiala bokmärken till lager"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:239
 msgid ""
@@ -1001,7 +1001,7 @@ msgid ""
 "bookmarks. The export can be filtered to only bookmarks belonging to the "
 "current project, to all user bookmarks, or a combination of both."
 msgstr ""
-"Skapar ett nytt lager som innehåller polygonfunktioner för lagrade rumsliga "
+"Skapar ett nytt lager som innehåller polygonfunktioner för lagrade spatiala "
 "bokmärken. Exporten kan filtreras till endast bokmärken som hör till det "
 "aktuella projektet, till alla användares bokmärken eller en kombination av "
 "båda."
@@ -1055,7 +1055,7 @@ msgstr "[vektor: polygon]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:276
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:525
 msgid "Specify the output layer. :ref:`One of <output_parameter_widget>`:"
-msgstr "Ange utmatningsskiktet. :ref:`En av <output_parameter_widget>`:"
+msgstr "Ange utdatalagret. :ref:`En av <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:296
 msgid "The output (bookmarks) vector layer"
@@ -1076,8 +1076,8 @@ msgid ""
 "and the field type."
 msgstr ""
 "Skapar ett index mot ett fält i attributtabellen för att snabba upp "
-"sökningar. Stödet för indexskapande beror både på skiktets dataleverantör "
-"och på fälttypen."
+"sökningar. Stödet för indexskapande beror både på lagrets dataleverantör och"
+" på fälttypen."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:317
 msgid "No outputs are created: the index is stored on the layer itself."
@@ -1118,7 +1118,7 @@ msgstr "**Algoritm-ID**: ``native:skapa attributindex``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:370
 msgid "Create spatial index"
-msgstr "Skapa rumsligt index"
+msgstr "Skapa spatialt index"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:371
 msgid ""
@@ -1126,9 +1126,9 @@ msgid ""
 "their spatial location. Support for spatial index creation is dependent on "
 "the layer's data provider."
 msgstr ""
-"Skapar ett index för att påskynda åtkomsten till funktionerna i ett skikt "
-"baserat på deras rumsliga placering. Stöd för skapande av rumsliga index är "
-"beroende av skiktets dataleverantör."
+"Skapar ett index för att påskynda åtkomsten till funktionerna i ett lager "
+"baserat på deras spatiala placering. Stöd för skapande av spatiala index är "
+"beroende av lagrets dataleverantör."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:376
 msgid "No new output layers are created."
@@ -1156,7 +1156,7 @@ msgstr "Indexerat lager"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:410
 msgid "A copy of the input vector layer with a spatial index"
-msgstr "En kopia av inmatningsvektorlagret med ett rumsligt index"
+msgstr "En kopia av inmatningsvektorlagret med ett spatialt index"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:415
 msgid "**Algorithm ID**: ``native:createspatialindex``"
@@ -1277,7 +1277,7 @@ msgstr "Antal kasserade duplicerade poster"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:549
 msgid "The output layer without any duplicated geometries"
-msgstr "Utgångsskiktet utan några duplicerade geometrier"
+msgstr "Utmatningslagret utan några duplicerade geometrier"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:550
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:657
@@ -1360,7 +1360,7 @@ msgid ""
 "Specify the output layer containing the unique features. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange utdataskiktet som innehåller de unika egenskaperna. :ref:`En av "
+"Ange utdatalagret som innehåller de unika egenskaperna. :ref:`En av "
 "<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:613
@@ -1386,7 +1386,7 @@ msgid ""
 "Specify the output layer containing only the duplicates. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange utdataskiktet som endast innehåller duplikaten. :ref:`En av "
+"Ange utdatalagret som endast innehåller duplikaten. :ref:`En av "
 "<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
@@ -1512,14 +1512,14 @@ msgstr "``UNCHANGED``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:782
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:786
 msgid "[vector: same as Original layer]"
-msgstr "[vektor: samma som Originalskiktet]"
+msgstr "[vektor: samma som Originallagret]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:733
 msgid ""
 "Specify the output vector layer containing the unchanged features. :ref:`One"
 " of <output_parameter_widget>`:"
 msgstr ""
-"Ange utdatavektorskiktet som innehåller de oförändrade funktionerna. "
+"Ange utmatningsvektorlagret som innehåller de oförändrade funktionerna. "
 ":ref:`En av <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:740
@@ -1537,8 +1537,8 @@ msgid ""
 "Specify the output vector layer containing the added features. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange utdatavektorskiktet som innehåller de extra funktionerna. :ref:`En av "
-"<output_parameter_widget>`:"
+"Ange utmatningsvektorlagret som innehåller de extra funktionerna. :ref:`En "
+"av <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:752
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:784
@@ -1620,7 +1620,7 @@ msgid ""
 "keeps the attribute table of the source layer."
 msgstr ""
 "Skapar en enkel *geometrilös* kopia av attributtabellen för "
-"inmatningslagret. Den behåller attributtabellen för källskiktet."
+"inmatningslagret. Den behåller attributtabellen för källagret."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:819
 msgid ""
@@ -1660,12 +1660,12 @@ msgid ""
 "Specify the output geometryless layer. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange det geometrilösa utdataskiktet. :ref:`En av <output_parameter_widget>`:"
+"Ange det geometrilösa utdatalagret. :ref:`En av <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:866
 msgid "The output geometryless layer. A copy of the original attribute table."
 msgstr ""
-"Det geometrilösa utdataskiktet. En kopia av den ursprungliga "
+"Det geometrilösa utdatalagret. En kopia av den ursprungliga "
 "attributtabellen."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:872
@@ -1682,7 +1682,7 @@ msgid ""
 "the source layer."
 msgstr ""
 "Kör en enkel eller komplex fråga som endast baseras på SELECT med "
-"``SQL``-syntax på källskiktet."
+"``SQL``-syntax på källagret."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:886
 msgid ""
@@ -1863,7 +1863,7 @@ msgid ""
 "Specify the output layer created by the query. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange utdataskiktet som skapas av frågan. :ref:`En av "
+"Ange utdatalagret som skapas av frågan. :ref:`En av "
 "<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:987
@@ -1935,7 +1935,7 @@ msgstr "Attributindex för att dela upp inmatningslagret med unika värden"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1035
 msgid "**Output layer name** [string] (``overriddenLayerName``)"
-msgstr "**Namn på utmatningsskikt** [sträng] (``overriddenLayerName``)"
+msgstr "**Namn på utmatningslager** [sträng] (``overriddenLayerName``)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1036
 msgid ""
@@ -1987,7 +1987,7 @@ msgstr "1 --- Symbologi för funktioner"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1053
 msgid "2 --- Symbol Layer Symbology"
-msgstr "2 --- Symbolskikt Symbologi"
+msgstr "2 --- Symbollager Symbologi"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1055
 msgid "**Symbology scale**"
@@ -2105,8 +2105,8 @@ msgid ""
 "Name the output layer with the layer title (as set in layer metadata or QGIS"
 " Server properties) instead of the layer name."
 msgstr ""
-"Namnge utdataskiktet med skikttiteln (som anges i skiktets metadata eller "
-"QGIS Server-egenskaper) istället för skiktnamnet."
+"Namnge utdatalagret med lagertiteln (som anges i lagrets metadata eller QGIS"
+" Server-egenskaper) istället för lagernamnet."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1089
 msgid "**Force 2D**"
@@ -2301,7 +2301,7 @@ msgid ""
 "target area parameter. The coordinate reference system for this target area "
 "must be known to QGIS."
 msgstr ""
-"Det område som skiktet förväntas täcka måste anges via parametern target "
+"Det område som lagret förväntas täcka måste anges via parametern target "
 "area. Koordinatreferenssystemet för detta målområde måste vara känt för "
 "QGIS."
 
@@ -2311,9 +2311,9 @@ msgid ""
 "reference system and then listing any for which the bounds would be near the"
 " target area if the layer was in this projection."
 msgstr ""
-"Algoritmen fungerar genom att testa skiktets utsträckning i alla kända "
+"Algoritmen fungerar genom att testa lagrets utsträckning i alla kända "
 "referenssystem och sedan lista alla för vilka gränserna skulle vara nära "
-"målområdet om skiktet var i denna projektion."
+"målområdet om lagret var i denna projektion."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1284
 msgid ""
@@ -2329,7 +2329,7 @@ msgstr "Lager med okänd projektion"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1303
 msgid "**Target area for layer (xmin, xmax, ymin, ymax)**"
-msgstr "**Målområde för skiktet (xmin, xmax, ymin, ymax)**"
+msgstr "**Målområde för lagret (xmin, xmax, ymin, ymax)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1304
 msgid "``TARGET_AREA``"
@@ -2392,7 +2392,7 @@ msgid ""
 "Specify the table (geometryless layer) for the CRS suggestions (EPSG codes)."
 " :ref:`One of <output_parameter_widget>`:"
 msgstr ""
-"Ange tabellen (geometrilöst skikt) för CRS-förslagen (EPSG-koder). :ref:`One"
+"Ange tabellen (geometrilöst lager) för CRS-förslagen (EPSG-koder). :ref:`One"
 " of <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1338
@@ -2512,8 +2512,8 @@ msgid ""
 "Input vector layer. The output layer will consist of the features of this "
 "layer with attributes from matching features in the second layer."
 msgstr ""
-"Ingångsvektorlager. Utgångsskiktet kommer att bestå av funktionerna i detta "
-"skikt med attribut från matchande funktioner i det andra skiktet."
+"Ingångsvektorlager. Utmatningslagret kommer att bestå av funktionerna i "
+"detta lager med attribut från matchande funktioner i det andra lagret."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1462
 msgid "**Table field**"
@@ -2521,7 +2521,7 @@ msgstr "**Tabellfält**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1465
 msgid "Field of the source layer to use for the join"
-msgstr "Fält för det källskikt som ska användas för sammanfogningen"
+msgstr "Fält för det källager som ska användas för sammanfogningen"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1466
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1939
@@ -2655,7 +2655,7 @@ msgid ""
 "Specify the output vector layer for the join. :ref:`One of "
 "<output_parameter_widget>`:"
 msgstr ""
-"Ange utdatavektorskiktet för sammanfogningen. :ref:`En av "
+"Ange utmatningsvektorlagret för sammanfogningen. :ref:`En av "
 "<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1523
@@ -2732,7 +2732,7 @@ msgid ""
 "layer that are added to each feature from the first layer."
 msgstr ""
 "De ytterligare attributen och deras värden hämtas från ett andra "
-"vektorlager. Ett rumsligt kriterium tillämpas för att välja de värden från "
+"vektorlager. Ett spatialt kriterium tillämpas för att välja de värden från "
 "det andra lagret som läggs till varje egenskap från det första lagret."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1600
@@ -2746,7 +2746,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1604
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1770
 msgid "Exploring spatial relations"
-msgstr "Utforska rumsliga relationer"
+msgstr "Utforska spatiala relationer"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid ""
@@ -2755,7 +2755,7 @@ msgid ""
 "geometries share a portion of space."
 msgstr ""
 "Geometriska predikat är booleska funktioner som används för att bestämma den"
-" rumsliga relationen mellan en egenskap och en annan genom att jämföra om "
+" spatiala relationen mellan en egenskap och en annan genom att jämföra om "
 "och hur deras geometrier delar en del av utrymmet."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:10
@@ -2768,7 +2768,7 @@ msgid ""
 "comparing them to the orange rectangle feature. Available geometric "
 "predicates are:"
 msgstr ""
-"I figuren ovan letar vi efter de gröna cirklarna genom att rumsligt jämföra "
+"I figuren ovan letar vi efter de gröna cirklarna genom att spatialt jämföra "
 "dem med den orangefärgade rektangeln. Tillgängliga geometriska predikat är:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:16
@@ -2783,7 +2783,7 @@ msgid ""
 "1, 2 and 3."
 msgstr ""
 "Testar om en geometri korsar en annan. Returnerar 1 (sant) om geometrierna "
-"korsar varandra rumsligt (delar någon del av utrymmet - överlappar eller rör"
+"korsar varandra spatialt (delar någon del av utrymmet - överlappar eller rör"
 " vid varandra) och 0 om de inte gör det. I bilden ovan kommer detta att "
 "returnera cirklarna 1, 2 och 3."
 
@@ -2915,7 +2915,7 @@ msgid ""
 "Type of spatial relation the source feature should have with the target "
 "feature so that they could be joined. One or more of:"
 msgstr ""
-"Typ av rumslig relation som källobjektet bör ha med målobjektet för att de "
+"Typ av spatial relation som källobjektet bör ha med målobjektet för att de "
 "ska kunna sammanfogas. En eller flera av:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1636
@@ -2978,9 +2978,9 @@ msgid ""
 "to the source layer attribute table if they satisfy the spatial "
 "relationship."
 msgstr ""
-"Det förenade skiktet. Funktioner i detta vektorskikt kommer att **lägga "
-"till** sina attribut i källskiktets attributtabell om de uppfyller det "
-"rumsliga förhållandet."
+"Det förenade lagret. Funktioner i detta vektorlager kommer att **lägga "
+"till** sina attribut i källagrets attributtabell om de uppfyller det "
+"spatiala förhållandet."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1652
 msgid "**Fields to add (leave empty to use all fields)**"
@@ -3011,8 +3011,8 @@ msgstr ""
 msgid ""
 "Remove from the output the input layer's features which could not be joined"
 msgstr ""
-"Ta bort de funktioner från ingångsskiktet som inte kunde kopplas samman från"
-" utdata"
+"Ta bort de funktioner från inmatningslagret som inte kunde kopplas samman "
+"från utdata"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1734
 msgid "Vector layer of the non-matched features"
@@ -3044,9 +3044,9 @@ msgid ""
 "their attributes to the source layer attribute table if they satisfy the "
 "spatial relationship."
 msgstr ""
-"Det förenade skiktet. Funktioner i detta vektorskikt kommer att **lägga "
-"till** sammanfattningar av sina attribut till källskiktets attributtabell om"
-" de uppfyller det rumsliga förhållandet."
+"Det förenade lagret. Funktioner i detta vektorlager kommer att **lägga "
+"till** sammanfattningar av sina attribut till källagrets attributtabell om "
+"de uppfyller det spatiala förhållandet."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1819
 msgid "**Fields to summarize (leave empty to use all fields)**"
@@ -3222,7 +3222,7 @@ msgstr ""
 msgid ""
 "Remove from the output the input layer records which could not be joined"
 msgstr ""
-"Ta bort de poster i ingångsskiktet som inte kunde sammanfogas från utdata"
+"Ta bort de poster i inmatningslagret som inte kunde sammanfogas från utdata"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:1958
 msgid "Joined field prefix"
@@ -3281,8 +3281,8 @@ msgid ""
 "Layer containing the features from first layer that could not be joined to "
 "any features in the join layer."
 msgstr ""
-"Skikt som innehåller de funktioner från det första skiktet som inte kunde "
-"kopplas till några funktioner i det kopplade skiktet."
+"Lager som innehåller de funktioner från det första lagret som inte kunde "
+"kopplas till några funktioner i det kopplade lagret."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2019
 msgid "Number of features from the input table that have been joined."
@@ -3313,10 +3313,10 @@ msgid ""
 "then the exported field will be automatically converted into a string type "
 "field. New fields storing the original layer name and source are also added."
 msgstr ""
-"Attributtabellen för det resulterande skiktet kommer att innehålla fälten "
-"från alla ingående skikt. Om fält med samma namn men olika typer hittas "
+"Attributtabellen för det resulterande lagret kommer att innehålla fälten "
+"från alla ingående lager. Om fält med samma namn men olika typer hittas "
 "konverteras det exporterade fältet automatiskt till ett fält av strängtyp. "
-"Nya fält som lagrar det ursprungliga skiktets namn och källa läggs också "
+"Nya fält som lagrar det ursprungliga lagrets namn och källa läggs också "
 "till."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2046
@@ -3337,9 +3337,9 @@ msgid ""
 "input layer. All layers will be reprojected to match this CRS."
 msgstr ""
 "Alternativt kan det koordinatreferenssystem (CRS) som ska användas för det "
-"sammanslagna skiktet ställas in. Om det inte anges kommer CRS att hämtas "
-"från det första inmatningslagret. Alla lager kommer att reprojiceras för att"
-" matcha detta CRS."
+"sammanslagna lagret ställas in. Om det inte anges kommer CRS att hämtas från"
+" det första inmatningslagret. Alla lager kommer att reprojiceras för att "
+"matcha detta CRS."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2063
 msgid ":ref:`qgissplitvectorlayer`"
@@ -3347,7 +3347,7 @@ msgstr ":ref:`qgissplitvectorlayer`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2076
 msgid "**Input Layers**"
-msgstr "**Inmatningsskikt**"
+msgstr "**Inmatningslager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2079
 msgid ""
@@ -3503,7 +3503,7 @@ msgid ""
 "have the same features and attributes of the input layer."
 msgstr ""
 "Återprojicerar ett vektorlager i ett annat CRS. Det återprojicerade lagret "
-"har samma funktioner och attribut som indataskiktet."
+"har samma funktioner och attribut som inmatningslagret."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2269
 msgid ""
@@ -3611,9 +3611,9 @@ msgid ""
 "`GDAL documentation <https://gdal.org/en/latest/drivers/vector/index.html>`_"
 " on the format."
 msgstr ""
-"För datasetformat som stöder skikt kan en valfri parameter för skiktnamn "
+"För datasetformat som stöder lager kan en valfri parameter för lagernamn "
 "användas för att ange en anpassad sträng. Valfria GDAL-definierade "
-"alternativ för dataset och skikt kan anges. Mer information om detta finns i"
+"alternativ för dataset och lager kan anges. Mer information om detta finns i"
 " online-dokumentationen för GDAL "
 "<https://gdal.org/en/latest/drivers/vector/index.html>`_ om formatet."
 
@@ -3642,7 +3642,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2415
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2467
 msgid "**Layer name**"
-msgstr "**Skiktnamn**"
+msgstr "**Lagernamn**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2418
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2468
@@ -3743,7 +3743,7 @@ msgstr "**Algoritm-ID**: ``native:spara funktioner``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2485
 msgid "Set layer encoding"
-msgstr "Ställ in skiktkodning"
+msgstr "Ställ in lagerkodning"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2487
 msgid ""
@@ -3800,7 +3800,7 @@ msgid ""
 "flexibility."
 msgstr ""
 "Funktioner delas upp i flera utdatafunktioner genom att dela upp ett "
-"fältvärde vid ett angivet tecken. Om ett skikt t.ex. innehåller funktioner "
+"fältvärde vid ett angivet tecken. Om ett lager t.ex. innehåller funktioner "
 "med flera kommaseparerade värden i ett enda fält kan denna algoritm användas"
 " för att dela upp dessa värden i flera utdatafunktioner. Geometrier och "
 "andra attribut förblir oförändrade i utdata. Eventuellt kan "
@@ -3862,9 +3862,9 @@ msgid ""
 "attribute. The output folder will contain as many layers as the unique "
 "values found in the desired field."
 msgstr ""
-"Skapar en uppsättning vektorer i en utdatamapp baserat på ett indataskikt "
-"och ett attribut. Utdatamappen kommer att innehålla lika många lager som de "
-"unika värden som finns i önskat fält."
+"Skapar en uppsättning vektorer i en utdatamapp baserat på ett "
+"inmatningslager och ett attribut. Utdatamappen kommer att innehålla lika "
+"många lager som de unika värden som finns i önskat fält."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2636
 msgid ""
