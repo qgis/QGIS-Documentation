@@ -175,7 +175,7 @@ Basic parameters
           :end-before: **end_layer_output_types_skip**
 
 Advanced parameters
-...................
+^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
