@@ -52,7 +52,7 @@ msgid ""
 msgstr ""
 "Beräknar den rotation som krävs för att rikta in punktelement med deras "
 "närmaste element från ett annat referenslager. Ett nytt fält läggs till i "
-"utdataskiktet som fylls med vinkeln (i grader, medurs) till närmaste "
+"utdatalagret som fylls med vinkeln (i grader, medurs) till närmaste "
 "referensobjekt."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:21
@@ -261,7 +261,7 @@ msgstr "Beskrivning"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:229
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1495
 msgid "**Input layer**"
-msgstr "**Inmatningsskikt**"
+msgstr "**Inmatningslager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:44
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:133
@@ -554,7 +554,7 @@ msgid ""
 "of its marker symbol."
 msgstr ""
 "Punktlagret med ett rotationsfält som tillägg. Om det laddas till QGIS "
-"tillämpas som standard symbologin för inmatningsskiktet, med en "
+"tillämpas som standard symbologin för inmatningslagret, med en "
 "datadefinierad rotation av dess markörsymbol."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:102
@@ -847,9 +847,9 @@ msgid ""
 "library is used."
 msgstr ""
 "Fil (:file:`.XML`) som innehåller de symboler som ska tillämpas på "
-"kategorierna i indataskiktet. Filen kan hämtas från verktyget Style Manager "
-":ref:`Share symbols <share_symbols>`. Om ingen fil anges används QGIS lokala"
-" symbolbibliotek."
+"kategorierna i inmatningslagret. Filen kan hämtas från verktyget Style "
+"Manager :ref:`Share symbols <share_symbols>`. Om ingen fil anges används "
+"QGIS lokala symbolbibliotek."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:246
 msgid "**Use case-sensitive match to symbol names**"
@@ -1088,7 +1088,7 @@ msgid ""
 "this algorithm will be overwritten. In this case, an empty filter or sort by"
 " expression will turn those settings off."
 msgstr ""
-"Om ett täckningsskikt har angetts skrivs den valda layoutens "
+"Om ett täckningslager har angetts skrivs den valda layoutens "
 "atlasinställningar som visas i denna algoritm över. I detta fall kommer ett "
 "tomt filter eller ett uttryck för sortering efter att stänga av dessa "
 "inställningar."
@@ -1138,7 +1138,7 @@ msgstr "Layout för export"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:589
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:762
 msgid "**Coverage layer**"
-msgstr "**Täckskikt**"
+msgstr "**Täckningslager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:452
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:592
@@ -1748,7 +1748,7 @@ msgstr ""
 "Om ett karttema anges kommer den renderade kartan att matcha synligheten och"
 " symbologin för det temat. Om det lämnas tomt kommer alla synliga lager från"
 " projektet att användas. Extraherad etikettinformation inkluderar: position "
-"(serveras som punktgeometrier), det associerade skiktnamnet och funktions-"
+"(serveras som punktgeometrier), det associerade lagernamnet och funktions-"
 "ID, etikettext, rotation (i grader, medurs), multilinjejustering och "
 "teckensnittsdetaljer."
 
@@ -1915,7 +1915,7 @@ msgstr ""
 "Punktvektorlager som representerar de hämtade etiketterna. Varje objekt har "
 "attribut som identifierar källan (lager, objekt-ID) och de tilldelade "
 "märkningsegenskaperna (text, teckensnitt, storlek, rotation, ...). En "
-"standardstil med märkning och nollsymbol tillämpas också på skiktet."
+"standardstil med märkning och nollsymbol tillämpas också på lagret."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1274
 msgid ""
@@ -1925,7 +1925,7 @@ msgid ""
 msgstr ""
 "Eftersom vissa av de genererade fälten har namn med mer än 10 tecken kan "
 "användning av ESRI shapefile-format (:file:`.SHP`) för att lagra utdata leda"
-" till oväntad rendering när skiktet laddas i QGIS."
+" till oväntad rendering när lagret laddas i QGIS."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1281
 msgid "**Algorithm ID**: ``native:extractlabels``"
@@ -2019,7 +2019,7 @@ msgstr "Standard: *Layouten CRS*"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1361
 msgid ""
 "Select the CRS for the layer in which the information will be reported."
-msgstr "Välj CRS för det skikt i vilket informationen ska rapporteras."
+msgstr "Välj CRS för det lager i vilket informationen ska rapporteras."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1375
 msgid "**Map height**"
@@ -2076,7 +2076,7 @@ msgstr "Inga nya utdata skapas: stilen tilldelas omedelbart till lagret."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1428
 msgid "**Input Layer**"
-msgstr "**Ingångsskikt**"
+msgstr "**Inmatningslager**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1430
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1619
@@ -2145,7 +2145,7 @@ msgstr "Exempel på topologiska färger"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1498
 msgid "The input polygon layer"
-msgstr "Det ingående polygonskiktet"
+msgstr "Det ingående polygonlagret"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1499
 msgid "**Minimum number of colors**"
@@ -2244,7 +2244,7 @@ msgstr "**Färgad**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1547
 msgid "Specify the output layer. :ref:`One of <output_parameter_widget>`:"
-msgstr "Ange utmatningsskiktet. :ref:`En av <output_parameter_widget>`:"
+msgstr "Ange utdatalagret. :ref:`En av <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1567
 msgid "Polygon vector layer with an added ``color_id`` column"
