@@ -169,7 +169,7 @@ Parameters
 ..........
 
 Basic parameters
-................
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -236,7 +236,7 @@ Basic parameters
           :end-before: **end_layer_output_types**
 
 Advanced parameters
-...................
+^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
