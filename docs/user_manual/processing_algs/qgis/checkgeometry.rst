@@ -132,7 +132,7 @@ Parameters
 ..........
 
 Basic parameters
-................
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
