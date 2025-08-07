@@ -130,7 +130,7 @@ Parameters
 ..........
 
 Basic parameters
-................
+^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -177,7 +177,7 @@ Basic parameters
 
 
 Advanced parameters
-...................
+^^^^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
