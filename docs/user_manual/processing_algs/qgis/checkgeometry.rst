@@ -163,9 +163,10 @@ Basic parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
    * - **Self-intersecting features**
+   
+       Optional
      - ``OUTPUT``
      - [vector: polygon]
-
        Default: ``[Skip output]``
      - Polygon layer containing self-intersecting features.
        :ref:`One of <output_parameter_widget>`:
