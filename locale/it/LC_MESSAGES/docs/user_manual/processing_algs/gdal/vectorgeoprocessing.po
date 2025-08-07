@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-15 17:10+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
@@ -182,6 +182,13 @@ msgstr "**Layer in ingresso**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:34
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:155
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:251
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:341
+msgid "[vector: geometry]"
+msgstr "[vector: geometry]"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:35
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:156
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:252
@@ -245,6 +252,13 @@ msgstr "**Distanza Buffer**"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:711
 msgid "``DISTANCE``"
 msgstr "``DISTANCE``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:44
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:490
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:585
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:712
+msgid "[numeric: double]"
+msgstr "[numeric: double]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:46
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:492
@@ -330,6 +344,14 @@ msgstr "[boolean]"
 msgid "Default: False"
 msgstr "Predefinito: False"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:61
+msgid ""
+"If set, the result is dissolved. If no field is set for dissolving, all the "
+"buffers are dissolved into one feature."
+msgstr ""
+"Se impostato, il risultato è dissolto. Se non è impostato alcun campo per la"
+" dissoluzione, tutti i buffer vengono dissolti in un unico elemento."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:64
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:379
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:614
@@ -388,8 +410,11 @@ msgstr "Predefinito: ``[Salva in file temporaneo]``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:76
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:626
-msgid "Specify the output buffer layer. One of:"
-msgstr "Specifica il buffer layer in uscita. Uno di:"
+msgid ""
+"Specify the output buffer layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specifica il layer del buffer in uscita. :ref:`One of "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -500,6 +525,16 @@ msgid "Clips any OGR-supported vector file to a given extent."
 msgstr ""
 "Ritaglia qualsiasi file vettoriale supportato da OGR in una data estensione."
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:135
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:232
+msgid ""
+"This algorithm is derived from the `GDAL ogr2ogr utility "
+"<https://gdal.org/en/latest/programs/ogr2ogr.html>`_."
+msgstr ""
+"Questo algoritmo deriva da `GDAL ogrinfo utility "
+"<https://gdal.org/en/latest/programs/ogrinfo.html>`_. `GDAL ogr2ogr utility "
+"<https://gdal.org/en/latest/programs/ogr2ogr.html>`_."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:157
 msgid "**Clip extent**"
 msgstr "**Ritagliare su estensione**"
@@ -579,8 +614,9 @@ msgid "[same as input]"
 msgstr "[same as input]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:173
-msgid "Specify the output (clipped) layer. One of:"
-msgstr "Specifica il layer in uscita (ritagliato). Uno di:"
+msgid ""
+"Specify the output (clipped) layer. :ref:`One of <output_parameter_widget>`:"
+msgstr "Specifica il layer in uscita (ritagliato). :ref:`One of 1`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:213
 msgid "The output (clipped) layer. The default format is \"ESRI Shapefile\"."
@@ -622,8 +658,9 @@ msgid "**Clipped (mask)**"
 msgstr "**Ritagliato (maschera di ritaglio)**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:262
-msgid "The output (masked) layer. One of:"
-msgstr "Il layer in uscita (maschera di ritaglio). Uno di:"
+msgid "The output (masked) layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Il layer in uscita (mascherato). :ref:`One of <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:302
 msgid "The output (masked) layer. The default format is \"ESRI Shapefile\"."
@@ -671,8 +708,9 @@ msgid "**Dissolved**"
 msgstr "**Dissolto**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:361
-msgid "Specify the output layer. One of:"
-msgstr "Specifica il layer in uscita. Uno di:"
+msgid "Specify the output layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificare il layer in uscita. :ref:`One of <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:385
 msgid ""
@@ -714,6 +752,14 @@ msgstr "**Calcolare l'area e il perimetro degli elementi dissolti**"
 msgid "``COMPUTE_AREA``"
 msgstr "``COMPUTE_AREA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:405
+msgid ""
+"Compute the area and perimeter of dissolved features and include them in the"
+" output layer"
+msgstr ""
+"Calcola l'area e il perimetro degli elementi dissolti e includili nel layer "
+"in uscita"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:407
 msgid "**Compute min/max/sum/mean for attribute**"
 msgstr "**Calcolare min/max/somma/media in base all'attributo**"
@@ -745,6 +791,10 @@ msgstr "[tablefield: numeric]"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:419
 msgid "The numeric attribute to calculate statistics on"
 msgstr "L'attributo numerico su cui calcolare le statistiche"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:443
+msgid "The output multipart geometry layer (with dissolved geometries)"
+msgstr "Il layer di geometrie multi parte in uscita (con geometrie dissolte)"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:448
 msgid "**Algorithm ID**: ``gdal:dissolve``"
@@ -787,8 +837,11 @@ msgid "**Offset curve**"
 msgstr "**Curva di offset**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:499
-msgid "Specify the output line layer. One of:"
-msgstr "Specifica il vettore lineare in uscita. Uno di:"
+msgid ""
+"Specify the output line layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specifica il layer della linea in uscita. :ref:`One of "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:539
 msgid "The output offset curve layer"
@@ -895,8 +948,11 @@ msgid "[vector: point]"
 msgstr "[vector: point]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:721
-msgid "Specify the output point layer. One of:"
-msgstr "Specificare il layer di punti in uscita. Uno di:"
+msgid ""
+"Specify the output point layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specifica il layer di punti in uscita.  :ref:`One of "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:759
 msgid "**Points along line**"
