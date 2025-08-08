@@ -82,24 +82,6 @@ This creates a new layer and adds it to the current QGIS project (making it appe
 in the layer list) in one step. The function returns the layer instance or ``None``
 if the layer couldn't be loaded.
 
-Note that if your geopackage contains relationships between layers.
-Simply using ``addMapLayer`` does not automatically create these relationships between the layers in your QGIS project.
-To do this, you need to run the following code, which will prevent you from having to create your relationships manually from the project properties.
-
-.. testcode:: loadlayer
-
-    project = QgsProject.instance()
-    relation_manager = project.relationManager()
-    existing_relations = list(relation_manager.relations().values())
-
-    layers = [
-        layer for layer in project.mapLayers().values() if layer.type() == layer.VectorLayer
-    ]
-
-    discovered_relations = QgsRelationManager.discoverRelations(existing_relations, layers)
-    for rel in discovered_relations:
-        relation_manager.addRelation(rel)
-
 The following list shows how to access various data sources using vector data
 providers:
 
@@ -128,6 +110,26 @@ providers:
       uri = "testdata/data/data.gpkg|layername=airports"
       vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
       QgsProject.instance().addMapLayer(vlayer)
+
+    Note that if your GeoPackage contains relationships between layers.
+    Simply using :meth:`addMapLayer <qgis.core.QgsProject.addMapLayer>`
+    does not automatically create these relationships between the layers in your QGIS project.
+    Add the following code to automatically find the relationships in the database
+    and add appropriate ones to the project properties.
+
+    .. testcode:: loadlayer
+
+      project = QgsProject.instance()
+      relation_manager = project.relationManager()
+      existing_relations = list(relation_manager.relations().values())
+
+      layers = [
+          layer for layer in project.mapLayers().values() if layer.type() == layer.VectorLayer
+      ]
+
+      discovered_relations = QgsRelationManager.discoverRelations(existing_relations, layers)
+      for relation in discovered_relations:
+          relation_manager.addRelation(relation)
 
   * for dxf (note the internal options in data source uri):
 
