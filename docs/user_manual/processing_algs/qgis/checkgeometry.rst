@@ -143,7 +143,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: point, line, polygon]
+     - [vector: geometry]
      - Layer with the geometries to check
    * - **Unique feature identifier**
      - ``UNIQUE_ID``
