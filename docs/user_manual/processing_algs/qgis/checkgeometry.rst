@@ -283,7 +283,7 @@ Basic parameters
      - [vector: line]
 
        Default: ``[Skip output]``
-     - Line layer containing the dangle-end features to be checked.
+     - Line layer containing the identified dangle-end line features.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
