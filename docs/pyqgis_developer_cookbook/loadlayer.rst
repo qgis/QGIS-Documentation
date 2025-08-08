@@ -119,6 +119,8 @@ providers:
 
     .. testcode:: loadlayer
 
+      from qgis.core import QgsRelationManager
+
       project = QgsProject.instance()
       relation_manager = project.relationManager()
       existing_relations = list(relation_manager.relations().values())
