@@ -235,7 +235,7 @@ Python code
 Dangle-end lines
 ----------------
 
-Detects dangle-end lines in line geometries and reports them as errors.
+Detects lines with dangle-ends and reports them as errors.
 
 .. figure:: img/check_geometry_dangleendlines.png
    :align: center
