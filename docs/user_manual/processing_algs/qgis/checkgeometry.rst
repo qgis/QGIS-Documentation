@@ -124,7 +124,7 @@ Checks for duplicated geometries in a vector layer, and reports them as errors.
 .. figure:: img/check_geometry_duplicatedgeometries.png
    :align: center
 
-   Output layer displaying duplicated geometries
+   Output layer identifying duplicated geometries
 
 Parameters
 ..........
