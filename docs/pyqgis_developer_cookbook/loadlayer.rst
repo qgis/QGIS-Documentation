@@ -111,6 +111,28 @@ providers:
       vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
       QgsProject.instance().addMapLayer(vlayer)
 
+    Note that if your GeoPackage contains relationships between layers.
+    Simply using :meth:`addMapLayer <qgis.core.QgsProject.addMapLayer>`
+    does not automatically create these relationships between the layers in your QGIS project.
+    Add the following code to automatically find the relationships in the database
+    and add appropriate ones to the project properties.
+
+    .. testcode:: loadlayer
+
+      from qgis.core import QgsRelationManager
+
+      project = QgsProject.instance()
+      relation_manager = project.relationManager()
+      existing_relations = list(relation_manager.relations().values())
+
+      layers = [
+          layer for layer in project.mapLayers().values() if layer.type() == layer.VectorLayer
+      ]
+
+      discovered_relations = QgsRelationManager.discoverRelations(existing_relations, layers)
+      for relation in discovered_relations:
+          relation_manager.addRelation(relation)
+
   * for dxf (note the internal options in data source uri):
 
     .. testcode:: loadlayer
