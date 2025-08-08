@@ -164,7 +164,7 @@ Basic parameters
 
        Optional
      - ``OUTPUT``
-     - [vector: point, line, polygon]
+     - [vector: same as input]
 
        Default: ``[Skip output]``
      - Specification of the output layer containing the geometries
