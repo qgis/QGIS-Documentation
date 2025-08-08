@@ -213,7 +213,7 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the ID, geometry part,
+       (the ID and name of the input layer, the geometry part,
        ring and vertex index of the erroneous feature,
        x and y coordinates of the error and affected feature IDs).
    * - **Duplicate geometries**
