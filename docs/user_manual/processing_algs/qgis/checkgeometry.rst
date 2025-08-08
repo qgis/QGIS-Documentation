@@ -218,7 +218,7 @@ Outputs
        x and y coordinates of the error and affected feature IDs).
    * - **Duplicate geometries**
      - ``OUTPUT``
-     - [vector: point, line, polygon]
+     - [vector: same as input]
      - Output layer containing the geometries that were found to be duplicated.
 
 Python code
