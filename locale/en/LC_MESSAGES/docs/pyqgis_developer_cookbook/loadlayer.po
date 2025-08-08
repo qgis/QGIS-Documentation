@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-08-08 21:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
@@ -99,23 +99,33 @@ msgid "for Geopackage (note the internal options in data source uri):"
 msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:114
+msgid ""
+"Note that if your GeoPackage contains relationships between layers. "
+"Simply using :meth:`addMapLayer <qgis.core.QgsProject.addMapLayer>` does "
+"not automatically create these relationships between the layers in your "
+"QGIS project. Add the following code to automatically find the "
+"relationships in the database and add appropriate ones to the project "
+"properties."
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:136
 msgid "for dxf (note the internal options in data source uri):"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:125
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:147
 msgid ""
 "PostGIS database - data source is a string with all information needed to"
 " create a connection to PostgreSQL database."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:128
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:150
 msgid ""
 ":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` class can generate"
 " this string for you. Note that QGIS has to be compiled with Postgres "
 "support, otherwise this provider isn't available:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:143
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:165
 msgid ""
 "The ``False`` argument passed to ``uri.uri(False)`` prevents the "
 "expansion of the authentication configuration parameters, if you are not "
@@ -123,14 +133,14 @@ msgid ""
 "difference."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:150
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:172
 msgid ""
 "CSV or other delimited text files --- to open a file with a semicolon as "
 "a delimiter, with field \"x\" for X coordinate and field \"y\" for Y "
 "coordinate you would use something like this:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:160
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:182
 msgid ""
 "The provider string is structured as a URL, so the path must be prefixed "
 "with ``file://``. Also it allows WKT (well known text) formatted "
@@ -138,37 +148,37 @@ msgid ""
 "coordinate reference system to be specified. For example:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:172
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:194
 msgid ""
 "GPX files --- the \"gpx\" data provider reads tracks, routes and "
 "waypoints from gpx files. To open a file, the type (track/route/waypoint)"
 " needs to be specified as part of the url:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:185
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:207
 msgid ""
 "SpatiaLite database --- Similarly to PostGIS databases, "
 ":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` can be used for "
 "generation of data source identifier:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:205
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:227
 msgid ""
 "MySQL WKB-based geometries, through GDAL --- data source is the "
 "connection string to the table:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:217
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:239
 msgid ""
 "WFS connection: the connection is defined with a URI and using the "
 "``WFS`` provider:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:224
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:246
 msgid "The uri can be created using the standard ``urllib`` library:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:239
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:261
 msgid ""
 "You can change the data source of an existing layer by calling "
 ":meth:`setDataSource() <qgis.core.QgsMapLayer.setDataSource>` on a "
@@ -176,11 +186,11 @@ msgid ""
 "following example:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:260
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:282
 msgid "Raster Layers"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:262
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:284
 msgid ""
 "For accessing raster files, GDAL library is used. It supports a wide "
 "range of file formats. In case you have troubles with opening some files,"
@@ -189,28 +199,28 @@ msgid ""
 "its filename and display name:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:275
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:297
 msgid "To load a raster from a geopackage:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:289
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:311
 msgid ""
 "Similarly to vector layers, raster layers can be loaded using the "
 "addRasterLayer function of the :class:`QgisInterface "
 "<qgis.gui.QgisInterface>` object:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:296
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:318
 msgid ""
 "This creates a new layer and adds it to the current project (making it "
 "appear in the layer list) in one step."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:300
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:322
 msgid "To load a PostGIS raster:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:302
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:324
 msgid ""
 "PostGIS rasters, similar to PostGIS vectors, can be added to a project "
 "using a URI string. It is efficient to keep a reusable dictionary of "
@@ -220,15 +230,15 @@ msgid ""
 "After that the raster can be added to the project."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:348
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:370
 msgid "Raster layers can also be created from a WCS service:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:356
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:378
 msgid "Here is a description of the parameters that the WCS URI can contain:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:358
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:380
 msgid ""
 "WCS URI is composed of **key=value** pairs separated by ``&``. It is the "
 "same format like query string in URL, encoded the same way. "
@@ -236,64 +246,64 @@ msgid ""
 "construct the URI to ensure that special characters are encoded properly."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:364
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:386
 msgid ""
 "**url** (required) : WCS Server URL. Do not use VERSION in URL, because "
 "each version of WCS is using different parameter name for "
 "**GetCapabilities** version, see param version."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:367
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:389
 msgid "**identifier** (required) : Coverage name"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:368
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:390
 msgid ""
 "**time** (optional) : time position or time period "
 "(beginPosition/endPosition[/timeResolution])"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:370
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:392
 msgid ""
 "**format** (optional) : Supported format name. Default is the first "
 "supported format with tif in name or the first supported format."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:372
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:394
 msgid ""
 "**crs** (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is"
 " EPSG:4326 if supported or the first supported CRS."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:374
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:396
 msgid "**username** (optional) : Username for basic authentication."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:375
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:397
 msgid "**password** (optional) : Password for basic authentication."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:376
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:398
 msgid ""
 "**IgnoreGetMapUrl** (optional, hack) : If specified (set to 1), ignore "
 "GetCoverage URL advertised by GetCapabilities. May be necessary if a "
 "server is not configured properly."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:379
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:401
 msgid ""
 "**InvertAxisOrientation** (optional, hack) : If specified (set to 1), "
 "switch axis in GetCoverage request. May be necessary for geographic CRS "
 "if a server is using wrong axis order."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:382
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:404
 msgid ""
 "**IgnoreAxisOrientation** (optional, hack) : If specified (set to 1), do "
 "not invert axis orientation according to WCS standard for geographic CRS."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:384
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:406
 msgid ""
 "**cache** (optional) : cache load control, as described in "
 "QNetworkRequest::CacheLoadControl, but request is resend as PreferCache "
@@ -301,18 +311,18 @@ msgid ""
 "PreferNetwork, AlwaysNetwork. Default is AlwaysCache."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:392
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:414
 msgid ""
 "Alternatively you can load a raster layer from WMS server. However "
 "currently it's not possible to access GetCapabilities response from API "
 "--- you have to know what layers you want:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:406
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:428
 msgid "QgsProject instance"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:408
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:430
 msgid ""
 "If you would like to use the opened layers for rendering, do not forget "
 "to add them to the :class:`QgsProject <qgis.core.QgsProject>` instance. "
@@ -324,30 +334,30 @@ msgid ""
 "<qgis.core.QgsProject.removeMapLayer>` method."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:418
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:440
 msgid ""
 "Adding a layer to the current project is done using the "
 ":meth:`addMapLayer() <qgis.core.QgsProject.addMapLayer>` method:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:425
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:447
 msgid "To add a layer at an absolute position:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:436
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:458
 msgid ""
 "If you want to delete the layer use the :meth:`removeMapLayer() "
 "<qgis.core.QgsProject.removeMapLayer>` method:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:443
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:465
 msgid ""
 "In the above code, the layer id is passed (you can get it calling the "
 ":meth:`id() <qgis.core.QgsMapLayer.id>` method of the layer), but you can"
 " also pass the layer object itself."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:446
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:468
 msgid ""
 "For a list of loaded layers and layer ids, use the :meth:`mapLayers() "
 "<qgis.core.QgsProject.mapLayers>` method:"
