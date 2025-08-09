@@ -39,6 +39,23 @@ msgstr ""
 msgid "Georeferencer"
 msgstr "Georeferenziatore"
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:13
+msgid ""
+"The |georefRun| Georeferencer is a tool for aligning unreferenced raster or "
+"vector layers to known coordinate systems using Ground Control Points "
+"(GCPs). It supports exporting transformed rasters (GeoTIFF) and vectors "
+"(shapefiles, geopackages, etc.) or writing accompanying world files (for "
+"raster only). The basic approach to georeferencing a layer is to locate "
+"points on it for which you can accurately determine coordinates."
+msgstr ""
+"Il Georeferenziatore |georefRun| è uno strumento che consente di allineare "
+"layer raster o vettoriali non referenziati a sistemi di coordinate noti "
+"utilizzando punti di controllo a terra (GCP). Supporta l'esportazione di "
+"raster trasformati (GeoTIFF) e vettori (shapefile, geopackage, ecc.) o la "
+"scrittura di file world di accompagnamento (solo per raster). L'approccio di"
+" base alla georeferenziazione di un layer consiste nell'individuare i punti "
+"su di esso per i quali puoi determinare con precisione le coordinate."
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:366
 msgid "georefRun"
 msgstr "georefRun"
@@ -148,12 +165,20 @@ msgid "addGCPPoint"
 msgstr "addGCPPoint"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:38
+msgid "Add GCP Point"
+msgstr "Aggiunge un punto GCP"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:38
 msgid "|deleteGCPPoint|"
 msgstr "|deleteGCPPoint|"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:360
 msgid "deleteGCPPoint"
 msgstr "deleteGCPPoint"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:38
+msgid "Delete GCP Point"
+msgstr "Elimina un punto GCP"
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:40
 msgid "|moveGCPPoint|"
@@ -291,6 +316,10 @@ msgstr "Stiramento locale dell'istogramma"
 msgid "Table Georeferencer: Georeferencer Tools"
 msgstr "Tabella Georeferenziatore: Strumenti del Georeferenziatore"
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:56
+msgid "Georeferencing raster layer"
+msgstr "Georeferenziazione layer raster"
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:58
 msgid ""
 "As X and Y coordinates (DMS (dd mm ss.ss), DD (dd.dd) or projected "
@@ -382,6 +411,18 @@ msgstr ""
 "nell'area di lavoro principale della finestra di dialogo. Una volta caricato"
 " il raster, possiamo iniziare a inserire i punti di riferimento."
 
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:102
+msgid ""
+"Using the |addGCPPoint| :sup:`Add GCP Point` button, add points to the main "
+"working area and enter their coordinates (see Figure "
+":numref:`figure_georeferencer_add_points`). For this procedure you have the "
+"following options:"
+msgstr ""
+"Utilizzando il pulsante |addGCPPoint| :sup:`Aggiungi punto GCP`, si "
+"aggiungono punti all'area di lavoro principale e si inseriscono le loro "
+"coordinate ( vedi Figura :numref:`figure_georeferencer_add_points`). Per "
+"questa procedura hai a disposizione le seguenti opzioni:"
+
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:106
 msgid ""
 "Click on a point in the raster image and enter the X and Y coordinates "
@@ -444,6 +485,32 @@ msgstr ""
 "coordinate puoi fornire, migliore sarà il risultato. Ci sono strumenti "
 "aggiuntivi per lo zoom e la panoramica dell'area di lavoro al fine di "
 "localizzare un numero di punti GCP appropriato."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:130
+msgid ""
+"To avoid constant switching between |pan| :sup:`Pan`, |addGCPPoint| "
+":sup:`Add GCP point` and |moveGCPPoint| :sup:`Move GCP point` buttons, you "
+"may use the keyboard arrow keys for moving and the mouse wheel for scaling "
+"the georeferenced map conveniently."
+msgstr ""
+"Per evitare di dover passare continuamente dai pulsanti |pan| :sup:`Sposta`,"
+" |addGCPPoint| :sup:`Aggiungi punto GCP` e |moveGCPPoint| :sup:`Sposta punto"
+" GCP`, puoi utilizzare i tasti freccia della tastiera per spostarsi e la "
+"rotellina del mouse per ridimensionare facilmente la mappa georeferenziata."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:134
+msgid ""
+"After you provide a few points, you can use the |linkQGisToGeoref| "
+":sup:`Link QGIS to Georeferencer` and/or |linkGeorefToQGis| :sup:`Link "
+"Georeferencer to QGIS` buttons that will adjust, respectively, the map "
+"extent of the main QGIS window to the present view in Georeferencer and/or "
+"vice versa."
+msgstr ""
+"Dopo che hai fornito alcuni punti, puoi utilizzare i pulsanti "
+"|linkQGisToGeoref| :sup:`Collega QGIS a Georefereziatore` e/o "
+"|linkGeorefToQGis| :sup:`Collega Georefereziatore a QGIS` che regoleranno, "
+"rispettivamente, l'estensione della mappa della finestra principale di QGIS "
+"alla vista attuale nel Georefereziatore e/o viceversa."
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:137
 msgid ""
@@ -813,6 +880,160 @@ msgstr ""
 "Dopo aver acquisito tutti i GCP e definite tutte le impostazioni di "
 "trasformazione, basta premere il pulsante |start| :sup:`Inizia la "
 "georeferenziazione` per creare il nuovo raster georeferenziato."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:273
+msgid "Georeferencing vector layer"
+msgstr "Georeferenziazione di un layer vettoriale"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:275
+msgid ""
+"Georeferencing vector layers works similarly to raster georeferencing, but "
+"instead of matching image pixels, you match vector geometries (points, "
+"lines, or polygons) to known spatial references."
+msgstr ""
+"La georeferenziazione dei layer vettoriali funziona in modo simile alla "
+"georeferenziazione raster, ma invece di abbinare i pixel dell'immagine, si "
+"abbinano le geometrie vettoriali (punti, linee o poligoni) a riferimenti "
+"spaziali noti."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:278
+msgid ""
+"The standard procedure starts the same as for raster georeferencing: open "
+"QGIS and add a layer to the map canvas to use as a reference. This can be a "
+"georeferenced raster or vector layer, or a WMS layer."
+msgstr ""
+"La procedura standard inizia come per il georeferenziazione raster: apri "
+"QGIS e aggiungi un layer alla mappa da utilizzare come riferimento. Può "
+"trattarsi di un layer raster o vettoriale georeferenziato oppure di un layer"
+" WMS."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:282
+msgid ""
+"Open the Georeferencer dialog from :menuselection:`Layer -->` |georefRun| "
+":menuselection:`Georeferencer`."
+msgstr ""
+"Apri la finestra di dialogo Georeferenziatore da :menuselection:`Layer -- >`"
+" |georefRun| :menuselection:`Georeferenziatore`."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:284
+msgid ""
+"Start georeferencing by following these steps (in this example, we use an "
+"unreferenced ``alaska.shp``):"
+msgstr ""
+"Avvia il processo di georeferenziazione seguendo questi passaggi (in questo "
+"esempio utilizziamo un file ``alaska.shp`` non georeferenziato)"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:291
+msgid "Vector Georeferencer Dialog"
+msgstr "Finestra di dialogo Georeferenziatore vettoriale"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:293
+msgid ""
+"Load the unreferenced vector layer using the |addOgrLayer| button. The "
+"vector layer will appear in the main working area of the dialog."
+msgstr ""
+"Carica il layer vettoriale non georeferenziato utilizzando il pulsante "
+"|addOgrLayer|. Il layer vettoriale apparirà nell'area di lavoro principale "
+"della finestra di dialogo."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:296
+msgid ""
+"Use the |addGCPPoint| :sup:`Add GCP Point` button to add a point to the "
+"working area. Enter its coordinates manually and set the CRS, or click the "
+"|pencil| :sup:`From map canvas` button to pick the coordinates from a "
+"georeferenced layer in the main QGIS map canvas. In that case, the CRS will "
+"be set automatically."
+msgstr ""
+"Utilizza il pulsante |addGCPPoint| :sup:`Aggiungi punto GCP` per aggiungere "
+"un punto all'area di lavoro. Inserisci manualmente le sue coordinate e "
+"imposta il SR, oppure fai clic sul pulsante |pencil| :sup:`Dalla Mappa` per "
+"selezionare le coordinate da un layer georeferenziato nella mappa principale"
+" di QGIS. In tal caso, il SR verrà impostato automaticamente."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:301
+msgid "Define the transformation settings:"
+msgstr "Definisci le impostazioni di trasformazione:"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:303
+msgid ""
+"Select the :guilabel:`Transformation type`. The transformation algorithms "
+"are the same as those for raster georeferencing. See "
+":ref:`georeferencer_transformation` for more details."
+msgstr ""
+"Seleziona il :guilabel:`Tipo di trasformazione`. Gli algoritmi di "
+"trasformazione sono gli stessi utilizzati per la georeferenziazione raster. "
+"Per ulteriori dettagli, consulta :ref:`georeferencer_transformation`."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:306
+msgid ""
+"Define the :guilabel:`Target CRS` (Coordinate Reference System) for the "
+"georeferenced vector (see :ref:`label_projections`)."
+msgstr ""
+"Definisci il :guilabel:`SR di destinazione` (Sistema di riferimento "
+"coordinato) per il vettore georeferenziato (vedi :ref:`label_projections`)."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:308
+msgid ""
+"Set the output file format and path (e.g., GeoPackage, Shapefile). By "
+"default, a new file with suffix ``_modified`` will be created in the same "
+"folder as the original vector file."
+msgstr ""
+"Imposta il formato e il percorso del file in uscita (ad esempio, GeoPackage,"
+" Shapefile). Per impostazione predefinita, verrà creato un nuovo file con il"
+" suffisso ``_modified`` nella stessa cartella del file vettoriale di "
+"origine."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:311
+msgid ""
+"Optionally, enable **Generate PDF map** and **Generate PDF report**. The "
+"report includes transformation parameters, GCP residuals, and a summary of "
+"RMS errors."
+msgstr ""
+"Facoltativamente, abilita **Genera una mappa PDF** e **Genera un rapporto "
+"PDF**. Il rapporto include i parametri di trasformazione, i residui GCP e un"
+" riepilogo degli errori RMS."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:313
+msgid ""
+"Enable |checkbox| :guilabel:`Save GCP Points` to store GCPs in a file "
+"alongside the output vector layer."
+msgstr ""
+"Abilita |checkbox| :guilabel:`Salva punti GCP` per memorizzare i GCP in un "
+"file insieme al layer vettoriale di uscita."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:314
+msgid ""
+"Enable |checkbox| :guilabel:`Load in project when done` to add the result "
+"directly to the map canvas."
+msgstr ""
+"Abilita |checkbox| :guilabel:`Carica in progetto una volta eseguito` per "
+"aggiungere il risultato direttamente alla finestra della mappa."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:316
+msgid ""
+"Click |start| :sup:`Start georeferencing` to run the transformation and "
+"generate the georeferenced vector layer."
+msgstr ""
+"Fai clic su |start| :sup:`Avvia georeferenziazione` per eseguire la "
+"trasformazione e generare il layer vettoriale georeferenziato."
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:319
+msgid "Show and adapt layer properties"
+msgstr "Visualizza e modifica le proprietà del livello"
+
+#: ../../docs/user_manual/working_with_raster/georeferencer.rst:321
+msgid ""
+"Clicking on the :guilabel:`Source properties` option in the "
+":guilabel:`Settings` menu opens the :ref:`Raster Layer properties "
+"<raster_properties_dialog>` or :ref:`Vector Layer properties "
+"<vector_properties_dialog>` depending on the type of layer you are "
+"georeferencing."
+msgstr ""
+"Facendo clic sull'opzione :guilabel:`Proprietà sorgente` nel menu "
+":guilabel:`Impostazioni` si aprono le :ref:`Raster Layer properties "
+"<raster_properties_dialog>` o le :ref:`Vector Layer properties "
+"<vector_properties_dialog>` a seconda del tipo di layer che stai "
+"georeferenziando."
 
 #: ../../docs/user_manual/working_with_raster/georeferencer.rst:329
 msgid "Configure the georeferencer"
