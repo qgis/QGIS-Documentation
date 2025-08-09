@@ -380,6 +380,17 @@ msgstr "|fileSaveAs| :sup:`Esporta Risultati`"
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:100
+msgid ""
+"Exports plots as 3D features, 2D Profile and Distance/Elevation Table. (The "
+"results can be saved as DXF files, CSV files or any of the standard writable"
+" vector spatial formats). More details at :ref:`export_elevation_profile`."
+msgstr ""
+"Esporta i grafici come elementi 3D, Profilo 2D e Tabella di "
+"Distanza/Elevazione. (I risultati possono essere salvati come file DXF, file"
+" CSV o qualsiasi altro formato spaziale vettoriale scrivibile standard). "
+"Maggiori dettagli su :ref:`export_elevation_profile`."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:104
 msgid "|options| :sup:`Options` :menuselection:`-->`"
 msgstr "|options| :sup:`Opzioni` :menuselection:`-->`"
@@ -431,6 +442,25 @@ msgstr ""
 #: ../../docs/user_manual/map_views/elevation_profile.rst:114
 msgid ":menuselection:`--> Tolerance`"
 msgstr ":menuselection:`--> Tolleranza`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:116
+msgid ""
+"Sets how far from the actual profile line a feature (vector point, line or "
+"polygon, point cloud) can reside to be included in the results. Uses the map"
+" units and is ignored by other layer or geometry types."
+msgstr ""
+"Imposta la distanza dalla linea di profilo reale a cui un elemento (punto "
+"vettoriale, linea o poligono, nuvola di punti) può trovarsi per essere "
+"incluso nei risultati. Utilizza le unità di mappa e viene ignorato da altri "
+"tipi di layer o geometrie."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:119
+msgid ":menuselection:`--> Rename Profile...`"
+msgstr ":menuselection:`--> Rinomina Profilo...`"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:121
+msgid "Allows to rename the profile view."
+msgstr "Consente di rinominare la vista del profilo."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:122
 msgid "|dock| :sup:`Dock Elevation Profile View`"
@@ -662,6 +692,37 @@ msgstr ""
 "elementi dei layer attivi che attraversano la curva del profilo impostata, "
 "non appena sono configurate le proprietà di elevazione."
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:199
+msgid ""
+"Under |options| :sup:`Options` drop-down menu, you can set the "
+":guilabel:`Tolerance` value. This value is used to create a flat buffer "
+"around the elevation profile line, visible in the main map canvas. Any "
+"visible feature (point, line, polygon, etc.) overlapping that buffer will be"
+" captured in the plot canvas."
+msgstr ""
+"Sotto il menu a discesa :sup:`Opzioni`, puoi impostare il valore "
+":guilabel:`Tolleranza`. Questo valore viene utilizzato per creare un buffer "
+"piatto intorno alla linea del profilo di elevazione, visibile nella mappa "
+"principale. Qualsiasi elemento visibile (punto, linea, poligono, ecc.) "
+"sovrapposto a quel buffer verrà incluso nell'area di disegno del grafico."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:203
+msgid "**Limitations with polygon extrusion**"
+msgstr "**Limitazioni con l'estrusione dei poligoni**"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:205
+msgid ""
+"Geometry extrusion can be set in the |elevationscale| :guilabel:`Elevation` "
+"properties of a layer, and rendered in the profile view. When tolerance is "
+"enabled, it is however not trivial to render extruded polygons, thus, for "
+"now, polygon extrusion is ignored."
+msgstr ""
+"L'estrusione della geometria può essere impostata nelle proprietà "
+"|elevationscale| :guilabel:`Elevazione` di un layer e visualizzata nella "
+"vista profilo. Quando la tolleranza è abilitata, tuttavia, non è banale "
+"visualizzare i poligoni estrusi, quindi, per ora, l'estrusione dei poligoni "
+"viene ignorata."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:333
 msgid "elevationscale"
 msgstr "elevationscale"
@@ -854,6 +915,47 @@ msgstr ""
 "<https://www.youtube.com/watch?v=AknJjNPystU>`_, una presentazione fatta da "
 "Nyall Dawson."
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:271
+msgid "Exporting from the elevation profile"
+msgstr "Esportazione dal profilo di elevazione"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:273
+msgid ""
+"The top toolbar of the :guilabel:`Elevation profile` dialog provides a "
+"variety of tools to export an elevation profile, allowing you to reuse the "
+"plots in another software:"
+msgstr ""
+"La barra degli strumenti superiore della finestra di dialogo "
+":guilabel:`Profilo di elevazione` fornisce una serie di strumenti per "
+"esportare un profilo di elevazione, consentendo di riutilizzare i grafici in"
+" un altro software:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:276
+msgid ""
+"|saveAsPDF| :sup:`Export As PDF`: Exports plots to PDF (as high quality "
+"vector objects). Following options are requested for generating the output "
+"file:"
+msgstr ""
+"|saveAsPDF| :sup:`Esporta come PDF`: Esporta i grafici in PDF (come oggetti "
+"vettoriali di alta qualità). Per generare il file in uscita sono richieste "
+"le seguenti opzioni:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:279
+msgid ""
+"The :guilabel:`Page size`, selecting a page from a predefined list or "
+"setting custom dimensions, and the page orientation"
+msgstr ""
+":guilabel:`Dimensione della pagina`, selezione pagina da un elenco "
+"predefinito o impostazione di dimensioni personalizzate e orientamento della"
+" pagina"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:281
+msgid ""
+"The :guilabel:`Chart ranges` to control the extent of the chart to export:"
+msgstr ""
+":guilabel:`Intervalli del Grafico` per controllare l'estensione del grafico "
+"da esportare:"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:283
 msgid ""
 "on the X axis, the :guilabel:`Minimum distance` and :guilabel:`Maximum "
@@ -869,3 +971,81 @@ msgid ""
 msgstr ""
 "Sull'asse Y, i valori :guilabel:`Elevazione minima` e :guilabel:`Elevazione "
 "massima`."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:286
+msgid ""
+"The :guilabel:`Distance axis settings`: helps you configure the horizontal "
+"graduation of the grid over which the elevation profile is rendered. You can"
+" customize the :guilabel:`Label interval`, the :guilabel:`Major grid line "
+"interval` and the :guilabel:`Minor grid line interval`."
+msgstr ""
+":guilabel:`Impostazioni Distanza Asse`: consente di configurare la "
+"graduazione orizzontale della griglia su cui viene visualizzato il profilo "
+"altimetrico. Puoi personalizzare l':guilabel:`Intervallo etichetta`, "
+"l':guilabel:`Intervallo linee principale griglia` e l':guilabel:`Intervallo "
+"linee secondaria griglia`."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:290
+msgid ""
+"The :guilabel:`Elevation axis settings`, same as above, for vertical "
+"graduation"
+msgstr ""
+"Le :guilabel:`Impostazioni Eelevazione Asse`, come sopra, per la graduazione"
+" verticale"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:294
+msgid ""
+"|saveMapAsImage| :sup:`Export As Image`: Exports plots to an image file "
+"format. Specific :guilabel:`Export options` such as the :guilabel:`Image "
+"width` and :guilabel:`Image height` are requested, along with the "
+":guilabel:`Chart ranges`, :guilabel:`Distance axis settings` and "
+":guilabel:`Elevation axis settings` previously mentioned."
+msgstr ""
+"|saveMapAsImage| :sup:`Esporta come immagine`: esporta i grafici in un "
+"formato di file immagine. Sono richieste :guilabel:`Opzioni Esportazione "
+"Immagine` specifiche come :guilabel:`Larghezza immagine` e "
+":guilabel:`Altezza immagine`, insieme agli :guilabel:`Intervalli del "
+"Grafico`, :guilabel:`Impostazioni  Asse Distanza` e :guilabel:`Impostazioni "
+"Asse Elevazione` menzionati in precedenza."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:299
+msgid ""
+"|fileSaveAs| :sup:`Export results`: Exports the profile results as a set of "
+"features of a vector layer (:file:`.DXF`, :file:`.CSV`, :file:`.SHP`, "
+":file:`.GPKG`, ...). Depending on the output format, multiple layers may be "
+"returned when the geometry types of exported features differ."
+msgstr ""
+"|fileSaveAs| :sup:`Esporta Risultati`: esporta i risultati del profilo come "
+"un set di elementi di un layer vettoriale (:file:`.DXF`, :file:`.CSV`, "
+":file:`.SHP`, :file:`.GPKG`, ...). A seconda del formato in uscita, "
+"potrebbero essere restituiti più layer quando i tipi di geometria degli "
+"elementi esportati sono diversi."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:304
+msgid ""
+":menuselection:`Export 3D features`: Exports profile lines as 3D features, "
+"with elevation values taken from the elevation slices and stored in exported"
+" geometry Z values."
+msgstr ""
+":menuselection:`Esporta Elementi 3D...`: esporta le linee del profilo come "
+"feature 3D, con i valori di elevazione presi dalle sezioni di elevazione e "
+"memorizzati nei valori Z della geometria esportata."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:306
+msgid ""
+":menuselection:`Export 2D profile`: Exports profiles as 2D profile lines, "
+"with elevation stored in exported geometry Y dimension and distance in X "
+"dimension (as shown in the elevation profile widget)."
+msgstr ""
+":menuselection:`Esporta Profilo 2D...`: esporta i profili come linee di "
+"profilo 2D, con l'elevazione memorizzata nella dimensione Y della geometria "
+"esportata e la distanza nella dimensione X (come mostrato nel widget del "
+"profilo di elevazione)."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:309
+msgid ""
+":menuselection:`Export distance/elevation table`: Exports profiles as a "
+"table of sampled distance vs elevation values."
+msgstr ""
+":menuselection:`Esporta Tabella Distanza/Elevazione`: esporta i profili come"
+" una tabella di valori campionati di distanza rispetto all'elevazione."
