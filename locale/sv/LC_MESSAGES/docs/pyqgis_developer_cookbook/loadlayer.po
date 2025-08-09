@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-08-08 21:44+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -128,10 +128,24 @@ msgid "for Geopackage (note the internal options in data source uri):"
 msgstr "för Geopackage (observera de interna alternativen i datakällans uri):"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:114
+msgid ""
+"Note that if your GeoPackage contains relationships between layers. Simply "
+"using :meth:`addMapLayer <qgis.core.QgsProject.addMapLayer>` does not "
+"automatically create these relationships between the layers in your QGIS "
+"project. Add the following code to automatically find the relationships in "
+"the database and add appropriate ones to the project properties."
+msgstr ""
+"Observera att om ditt GeoPackage innehåller relationer mellan lager. Att "
+"bara använda :meth:`addMapLayer <qgis.core.QgsProject.addMapLayer>` skapar "
+"inte automatiskt dessa relationer mellan lagren i ditt QGIS-projekt. Lägg "
+"till följande kod för att automatiskt hitta relationerna i databasen och "
+"lägga till lämpliga relationer i projektets egenskaper."
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:136
 msgid "for dxf (note the internal options in data source uri):"
 msgstr "för dxf (notera de interna alternativen i datakällans uri):"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:125
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:147
 msgid ""
 "PostGIS database - data source is a string with all information needed to "
 "create a connection to PostgreSQL database."
@@ -139,7 +153,7 @@ msgstr ""
 "PostGIS-databas - datakälla är en sträng med all information som behövs för "
 "att skapa en anslutning till PostgreSQL-databasen."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:128
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:150
 msgid ""
 ":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` class can generate "
 "this string for you. Note that QGIS has to be compiled with Postgres "
@@ -149,7 +163,7 @@ msgstr ""
 "sträng åt dig. Observera att QGIS måste kompileras med stöd för Postgres, "
 "annars är den här leverantören inte tillgänglig:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:143
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:165
 msgid ""
 "The ``False`` argument passed to ``uri.uri(False)`` prevents the expansion "
 "of the authentication configuration parameters, if you are not using any "
@@ -160,7 +174,7 @@ msgstr ""
 "använder någon autentiseringskonfiguration gör detta argument ingen "
 "skillnad."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:150
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:172
 msgid ""
 "CSV or other delimited text files --- to open a file with a semicolon as a "
 "delimiter, with field \"x\" for X coordinate and field \"y\" for Y "
@@ -170,7 +184,7 @@ msgstr ""
 "som avgränsare, med fält \"x\" för X-koordinat och fält \"y\" för "
 "Y-koordinat använder du något liknande detta:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:160
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:182
 msgid ""
 "The provider string is structured as a URL, so the path must be prefixed "
 "with ``file://``. Also it allows WKT (well known text) formatted geometries "
@@ -182,7 +196,7 @@ msgstr ""
 " som ett alternativ till fälten ``x`` och ``y``, och tillåter att "
 "koordinatreferenssystemet anges. Exempelvis"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:172
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:194
 msgid ""
 "GPX files --- the \"gpx\" data provider reads tracks, routes and waypoints "
 "from gpx files. To open a file, the type (track/route/waypoint) needs to be "
@@ -192,7 +206,7 @@ msgstr ""
 " gpx-filer. För att öppna en fil måste typen (track/route/waypoint) anges "
 "som en del av webbadressen:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:185
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:207
 msgid ""
 "SpatiaLite database --- Similarly to PostGIS databases, "
 ":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` can be used for "
@@ -202,7 +216,7 @@ msgstr ""
 ":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` användas för att "
 "generera datakällans identifierare:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:205
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:227
 msgid ""
 "MySQL WKB-based geometries, through GDAL --- data source is the connection "
 "string to the table:"
@@ -210,7 +224,7 @@ msgstr ""
 "MySQL WKB-baserade geometrier, genom GDAL --- datakälla är "
 "anslutningssträngen till tabellen:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:217
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:239
 msgid ""
 "WFS connection: the connection is defined with a URI and using the ``WFS`` "
 "provider:"
@@ -218,11 +232,11 @@ msgstr ""
 "WFS-anslutning: anslutningen definieras med en URI och med hjälp av "
 "``WFS``-providern:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:224
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:246
 msgid "The uri can be created using the standard ``urllib`` library:"
 msgstr "URI kan skapas med hjälp av standardbiblioteket ``urllib``:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:239
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:261
 msgid ""
 "You can change the data source of an existing layer by calling "
 ":meth:`setDataSource() <qgis.core.QgsMapLayer.setDataSource>` on a "
@@ -234,11 +248,11 @@ msgstr ""
 ":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`-instans, som i följande "
 "exempel:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:260
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:282
 msgid "Raster Layers"
 msgstr "Rasterlager"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:262
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:284
 msgid ""
 "For accessing raster files, GDAL library is used. It supports a wide range "
 "of file formats. In case you have troubles with opening some files, check "
@@ -252,11 +266,11 @@ msgstr ""
 "tillgängliga som standard). För att ladda ett raster från en fil, ange dess "
 "filnamn och visningsnamn:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:275
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:297
 msgid "To load a raster from a geopackage:"
 msgstr "För att ladda ett raster från ett geopaket:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:289
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:311
 msgid ""
 "Similarly to vector layers, raster layers can be loaded using the "
 "addRasterLayer function of the :class:`QgisInterface "
@@ -265,7 +279,7 @@ msgstr ""
 "På samma sätt som vektorlager kan rasterlager laddas med hjälp av funktionen"
 " addRasterLayer i objektet :class:`QgisInterface <qgis.gui.QgisInterface>`:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:296
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:318
 msgid ""
 "This creates a new layer and adds it to the current project (making it "
 "appear in the layer list) in one step."
@@ -273,11 +287,11 @@ msgstr ""
 "Detta skapar ett nytt lager och lägger till det i det aktuella projektet "
 "(vilket gör att det visas i lagerlistan) i ett steg."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:300
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:322
 msgid "To load a PostGIS raster:"
 msgstr "För att ladda ett PostGIS-raster:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:302
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:324
 msgid ""
 "PostGIS rasters, similar to PostGIS vectors, can be added to a project using"
 " a URI string. It is efficient to keep a reusable dictionary of strings for "
@@ -293,16 +307,16 @@ msgstr ""
 " sedan till en URI med hjälp av provider-metadataobjektet "
 "\"postgresraster\". Efter det kan rastret läggas till i projektet."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:348
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:370
 msgid "Raster layers can also be created from a WCS service:"
 msgstr "Rasterlager kan också skapas från en WCS-tjänst:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:356
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:378
 msgid "Here is a description of the parameters that the WCS URI can contain:"
 msgstr ""
 "Här följer en beskrivning av de parametrar som WCS-URI:n kan innehålla:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:358
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:380
 msgid ""
 "WCS URI is composed of **key=value** pairs separated by ``&``. It is the "
 "same format like query string in URL, encoded the same way. "
@@ -314,7 +328,7 @@ msgstr ""
 ":class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` bör användas för att "
 "konstruera URI:n för att säkerställa att specialtecken kodas korrekt."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:364
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:386
 msgid ""
 "**url** (required) : WCS Server URL. Do not use VERSION in URL, because each"
 " version of WCS is using different parameter name for **GetCapabilities** "
@@ -324,11 +338,11 @@ msgstr ""
 "varje version av WCS använder olika parameternamn för "
 "**GetCapabilities**-versionen, se param version."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:367
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:389
 msgid "**identifier** (required) : Coverage name"
 msgstr "**identifierare** (krävs) : Namn på täckning"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:368
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:390
 msgid ""
 "**time** (optional) : time position or time period "
 "(beginPosition/endPosition[/timeResolution])"
@@ -336,7 +350,7 @@ msgstr ""
 "**time** (valfritt) : tidsposition eller tidsperiod "
 "(beginPosition/endPosition[/timeResolution])"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:370
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:392
 msgid ""
 "**format** (optional) : Supported format name. Default is the first "
 "supported format with tif in name or the first supported format."
@@ -344,7 +358,7 @@ msgstr ""
 "**format** (valfritt) : Namn på format som stöds. Standard är det första "
 "stödda formatet med tif i namnet eller det första stödda formatet."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:372
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:394
 msgid ""
 "**crs** (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is "
 "EPSG:4326 if supported or the first supported CRS."
@@ -353,16 +367,16 @@ msgstr ""
 "är EPSG:4326 om det stöds eller det första datoriserade bokningssystemet som"
 " stöds."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:374
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:396
 msgid "**username** (optional) : Username for basic authentication."
 msgstr ""
 "**användarnamn** (valfritt) : Användarnamn för grundläggande autentisering."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:375
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:397
 msgid "**password** (optional) : Password for basic authentication."
 msgstr "**lösenord** (valfritt) : Lösenord för grundläggande autentisering."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:376
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:398
 msgid ""
 "**IgnoreGetMapUrl** (optional, hack) : If specified (set to 1), ignore "
 "GetCoverage URL advertised by GetCapabilities. May be necessary if a server "
@@ -372,7 +386,7 @@ msgstr ""
 "GetCoverage URL som annonseras av GetCapabilities. Kan vara nödvändigt om en"
 " server inte är korrekt konfigurerad."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:379
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:401
 msgid ""
 "**InvertAxisOrientation** (optional, hack) : If specified (set to 1), switch"
 " axis in GetCoverage request. May be necessary for geographic CRS if a "
@@ -382,7 +396,7 @@ msgstr ""
 "byt axel i GetCoverage-begäran. Kan vara nödvändigt för geografiska CRS om "
 "en server använder fel axelordning."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:382
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:404
 msgid ""
 "**IgnoreAxisOrientation** (optional, hack) : If specified (set to 1), do not"
 " invert axis orientation according to WCS standard for geographic CRS."
@@ -390,7 +404,7 @@ msgstr ""
 "**IgnoreAxisOrientation** (valfri, hack) : Om specificerat (satt till 1), "
 "invertera inte axelorienteringen enligt WCS-standarden för geografiska CRS."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:384
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:406
 msgid ""
 "**cache** (optional) : cache load control, as described in "
 "QNetworkRequest::CacheLoadControl, but request is resend as PreferCache if "
@@ -403,7 +417,7 @@ msgstr ""
 "AlwaysCache, PreferCache, PreferNetwork, AlwaysNetwork. Standardvärdet är "
 "AlwaysCache."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:392
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:414
 msgid ""
 "Alternatively you can load a raster layer from WMS server. However currently"
 " it's not possible to access GetCapabilities response from API --- you have "
@@ -413,11 +427,11 @@ msgstr ""
 "närvarande är det inte möjligt att komma åt GetCapabilities-svar från API "
 "--- du måste veta vilka lager du vill ha:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:406
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:428
 msgid "QgsProject instance"
 msgstr "QgsProject-instans"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:408
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:430
 msgid ""
 "If you would like to use the opened layers for rendering, do not forget to "
 "add them to the :class:`QgsProject <qgis.core.QgsProject>` instance. The "
@@ -436,7 +450,7 @@ msgstr ""
 "tas bort av användaren i QGIS-gränssnittet, eller via Python med hjälp av "
 "metoden :meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>`."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:418
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:440
 msgid ""
 "Adding a layer to the current project is done using the :meth:`addMapLayer()"
 " <qgis.core.QgsProject.addMapLayer>` method:"
@@ -444,11 +458,11 @@ msgstr ""
 "Att lägga till ett lager i det aktuella projektet görs med metoden "
 ":meth:`addMapLayer() <qgis.core.QgsProject.addMapLayer>`:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:425
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:447
 msgid "To add a layer at an absolute position:"
 msgstr "För att lägga till ett lager i en absolut position:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:436
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:458
 msgid ""
 "If you want to delete the layer use the :meth:`removeMapLayer() "
 "<qgis.core.QgsProject.removeMapLayer>` method:"
@@ -456,7 +470,7 @@ msgstr ""
 "Om du vill ta bort lagret använder du metoden :meth:`removeMapLayer() "
 "<qgis.core.QgsProject.removeMapLayer>`:"
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:443
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:465
 msgid ""
 "In the above code, the layer id is passed (you can get it calling the "
 ":meth:`id() <qgis.core.QgsMapLayer.id>` method of the layer), but you can "
@@ -466,7 +480,7 @@ msgstr ""
 "<qgis.core.QgsMapLayer.id>`-metoden för lagret), men du kan också skicka "
 "själva lagerobjektet."
 
-#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:446
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:468
 msgid ""
 "For a list of loaded layers and layer ids, use the :meth:`mapLayers() "
 "<qgis.core.QgsProject.mapLayers>` method:"
