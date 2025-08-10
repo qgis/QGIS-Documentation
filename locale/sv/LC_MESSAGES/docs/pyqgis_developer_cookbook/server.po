@@ -113,7 +113,7 @@ msgstr "STANDALONE |rarr| Kör QGIS Server som en fristående WSGI/HTTP-tjänst"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:61
 msgid "FILTERS |rarr| Enhance/Customize QGIS Server with filter plugins"
-msgstr "FILTERS |rarr| Förbättra/anpassa QGIS Server med filterplugins"
+msgstr "FILTERS |rarr| Förbättra/anpassa QGIS Server med filtertillägg"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:62
 msgid "SERVICES |rarr| Add a new *SERVICE*"
@@ -136,9 +136,9 @@ msgstr ""
 "Python API direkt från ett annat Python-skript eller en annan applikation. "
 "De återstående alternativen är bättre lämpade för när du vill lägga till "
 "anpassade funktioner i en binär standardapplikation för QGIS Server (FCGI "
-"eller utvecklingsserver): i det här fallet måste du skriva ett Python-plugin"
-" för serverapplikationen och registrera dina anpassade filter, tjänster "
-"eller API:er."
+"eller utvecklingsserver): i det här fallet måste du skriva ett Python-"
+"tillägg  för serverapplikationen och registrera dina anpassade filter, "
+"tjänster eller API:er."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:72
 msgid "Server API basics"
@@ -193,8 +193,8 @@ msgid ""
 "<qgis.server.QgsServerInterface>` class."
 msgstr ""
 "Inuti metoden :meth:`QgsServer.handleRequest(request, response) "
-"<qgis.server.QgsServer.handleRequest>` anropas filterpluginets callbacks och"
-" :class:`QgsServerRequest <qgis.server.QgsServerRequest>` och "
+"<qgis.server.QgsServer.handleRequest>` anropas filtertilläggets callbacks "
+"och :class:`QgsServerRequest <qgis.server.QgsServerRequest>` och "
 ":class:`QgsServerResponse <qgis.server.QgsServerResponse>` görs tillgängliga"
 " för insticksprogrammen genom klassen :class:`QgsServerInterface "
 "<qgis.server.QgsServerInterface>`."
@@ -244,21 +244,21 @@ msgid ""
 msgstr ""
 "Här är ett komplett fristående applikationsexempel som utvecklats för "
 "kontinuerlig integrationstestning på QGIS källkodsarkiv, det visar en bred "
-"uppsättning olika pluginfilter och autentiseringsscheman (inte avsedda för "
-"produktion eftersom de endast utvecklades för teständamål men ändå "
+"uppsättning olika tilläggsfilter och autentiseringsscheman (inte avsedda för"
+" produktion eftersom de endast utvecklades för teständamål men ändå "
 "intressanta för inlärning): :source:`qgis_wrapped_server.py "
 "<tests/src/python/qgis_wrapped_server.py>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:154
 msgid "Server plugins"
-msgstr "Plugins för server"
+msgstr "Tillägg för server"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:156
 msgid ""
 "Server python plugins are loaded once when the QGIS Server application "
 "starts and can be used to register filters, services or APIs."
 msgstr ""
-"Python-plugins för server laddas en gång när QGIS Server-programmet startar "
+"Python-tillägg för server laddas en gång när QGIS Server-programmet startar "
 "och kan användas för att registrera filter, tjänster eller API:er."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:159
@@ -269,16 +269,16 @@ msgid ""
 "more custom filters, services or APIs to the corresponding registry by using"
 " one of the methods exposed by the server interface."
 msgstr ""
-"Strukturen för ett serverplugin är mycket lik dess motsvarighet på "
+"Strukturen för ett servertillägg är mycket lik dess motsvarighet på "
 "skrivbordet, ett :class:`QgsServerInterface "
-"<qgis.server.QgsServerInterface>`-objekt görs tillgängligt för plugin-"
-"programmen och plugin-programmen kan registrera ett eller flera anpassade "
-"filter, tjänster eller API:er till motsvarande register genom att använda en"
-" av de metoder som exponeras av servergränssnittet."
+"<qgis.server.QgsServerInterface>`-objekt görs tillgängligt för tilläggen och"
+" tillägget kan registrera ett eller flera anpassade filter, tjänster eller "
+"API:er till motsvarande register genom att använda en av de metoder som "
+"exponeras av servergränssnittet."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:165
 msgid "Server filter plugins"
-msgstr "Plugins för serverfilter"
+msgstr "Tillägg för serverfilter"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:167
 msgid ""
@@ -372,7 +372,7 @@ msgid ""
 "plugins API docs <server>`."
 msgstr ""
 "Från den här punkten kan det vara bra att snabbt titta på :pyqgis:`server "
-"plugins API docs <server>`."
+"tillägg API docs <server>`."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:199
 msgid "Each filter should implement at least one of three callbacks:"
@@ -562,14 +562,14 @@ msgid ""
 "<qgis.server.QgsServerFilter.onResponseComplete>` but, in any case, prevent "
 "response to be sent to the client."
 msgstr ""
-"Observera att om du returnerar :const:`False` förhindras nästa plugins att "
+"Observera att om du returnerar :const:`False` förhindras nästa tillägg att "
 "utföra :meth:`onResponseComplete() "
 "<qgis.server.QgsServerFilter.onResponseComplete>`, men i vilket fall som "
 "helst förhindras att svaret skickas till klienten."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:290
 msgid "Raising exceptions from a plugin"
-msgstr "Utlösa undantag från ett plugin"
+msgstr "Utlösa undantag från ett tillägg"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:292
 msgid ""
@@ -600,7 +600,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:306
 msgid "Writing a server plugin"
-msgstr "Skriva ett serverplugin"
+msgstr "Skriva ett servertillägg"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:308
 msgid ""
@@ -612,11 +612,11 @@ msgid ""
 "<qgis.server.QgsServerInterface>` when it is executed within the QGIS Server"
 " application context."
 msgstr ""
-"Ett serverplugin är ett standard QGIS Python-plugin enligt beskrivningen i "
-":ref:`developing_plugins`, som bara tillhandahåller ett ytterligare (eller "
+"Ett servertillägg är ett standard QGIS Python-tillägg enligt beskrivningen i"
+" :ref:`developing_plugins`, som bara tillhandahåller ett ytterligare (eller "
 "alternativt) gränssnitt: ett typiskt QGIS-skrivbordsplugin har tillgång till"
 " QGIS-applikationen via :class:`QgisInterface <qgis.gui.QgisInterface>`, "
-"medan ett serverplugin endast har tillgång till :class:`QgsServerInterface "
+"medan ett servertillägg endast har tillgång till :class:`QgsServerInterface "
 "<qgis.server.QgsServerInterface>` när det körs i QGIS Server-"
 "applikationskontext."
 
@@ -644,21 +644,21 @@ msgid ""
 "published in the official `QGIS plugins repository "
 "<https://plugins.qgis.org/plugins/server>`_."
 msgstr ""
-"Exempelpluginet `qgis3-server-vagrant "
+"Exempeltillägget `qgis3-server-vagrant "
 "<https://github.com/elpaso/qgis3-server-"
-"vagrant/tree/master/resources/web/plugins>`_ som diskuteras här (med många "
-"fler) finns tillgängligt på github, några serverplugins publiceras också i "
-"det officiella `QGIS plugins repository "
-"<https://plugins.qgis.org/plugins/server>`_."
+"vagrant/tree/master/resources/web/tillägg>`_ som diskuteras här (med många "
+"fler) finns tillgängligt på github, några servertillägg publiceras också i "
+"det officiella `QGIS tillägg repository "
+"<https://tillägg.qgis.org/tillägg/server>`_."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:329
 #: ../../docs/pyqgis_developer_cookbook/server.rst:554
 msgid "Plugin files"
-msgstr "Plugin-filer"
+msgstr "Tilläggsfiler"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:331
 msgid "Here's the directory structure of our example server plugin."
-msgstr "Här är katalogstrukturen för vårt exempel på serverplugin."
+msgstr "Här är katalogstrukturen för vårt exempel på servertillägg."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:344
 #: ../../docs/pyqgis_developer_cookbook/server.rst:568
@@ -698,8 +698,8 @@ msgid ""
 "A server plugin typically consists in one or more callbacks packed into "
 "instances of a :class:`QgsServerFilter <qgis.server.QgsServerFilter>`."
 msgstr ""
-"Ett serverplugin består vanligtvis av en eller flera callbacks som packas in"
-" i instanser av en :class:`QgsServerFilter <qgis.server.QgsServerFilter>`."
+"Ett servertillägg består vanligtvis av en eller flera callbacks som packas "
+"in i instanser av en :class:`QgsServerFilter <qgis.server.QgsServerFilter>`."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:369
 msgid ""
@@ -747,7 +747,7 @@ msgid ""
 "the server (by using :func:`requestReady`) or after the request has been "
 "processed by the core services (by using :func:`sendResponse`)."
 msgstr ""
-"Genom att använda de tre callbacks kan plugins manipulera ingången och/eller"
+"Genom att använda de tre callbacks kan tillägg manipulera ingången och/eller"
 " utgången från servern på många olika sätt. I varje ögonblick har plugin-"
 "instansen tillgång till :class:`QgsRequestHandler "
 "<qgis.server.QgsRequestHandler>` genom :class:`QgsServerInterface "
@@ -773,7 +773,7 @@ msgid ""
 "by core services (WMS etc.), at the end of core services processing we check"
 " that the parameter is still there:"
 msgstr ""
-"Exempelpluginet innehåller ett testexempel som ändrar inmatningsparametrar "
+"Exempeltillägget innehåller ett testexempel som ändrar inmatningsparametrar "
 "som kommer från frågesträngen, i det här exemplet injiceras en ny parameter "
 "i (redan analyserad) ``parameterMap``, den här parametern är sedan synlig av"
 " kärntjänster (WMS etc.), i slutet av kärntjänstbearbetningen kontrollerar "
@@ -917,7 +917,7 @@ msgstr ":meth:`cacheKey() <qgis.server.QgsAccessControlFilter.cacheKey>`"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:556
 msgid "Here's the directory structure of our example plugin:"
-msgstr "Här är katalogstrukturen för vårt exempel på plugin:"
+msgstr "Här är katalogstrukturen för vårt exempel på tillägg:"
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:570
 msgid ""
@@ -929,10 +929,10 @@ msgid ""
 "plugin's class. This is how the example plugin :file:`__init__.py` looks "
 "like:"
 msgstr ""
-"Den här filen krävs av Pythons importsystem. Som för alla QGIS-serverplugins"
+"Den här filen krävs av Pythons importsystem. Som för alla QGIS-servertillägg"
 " innehåller denna fil en :func:`serverClassFactory()`-funktion, som anropas "
-"när pluginet laddas in i QGIS Server vid uppstart. Den tar emot en referens "
-"till en instans av :class:`QgsServerInterface "
+"när tillägget laddas in i QGIS Server vid uppstart. Den tar emot en referens"
+" till en instans av :class:`QgsServerInterface "
 "<qgis.server.QgsServerInterface>` och måste returnera en instans av ditt "
 "insticksprograms klass. Så här ser exempelpluginet :file:`__init__.py` ut:"
 
@@ -946,7 +946,7 @@ msgstr "Detta exempel ger full åtkomst för alla."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:628
 msgid "It's the role of the plugin to know who is logged on."
-msgstr "Det är plugin-programmets uppgift att veta vem som är inloggad."
+msgstr "Det är tilläggets uppgift att veta vem som är inloggad."
 
 #: ../../docs/pyqgis_developer_cookbook/server.rst:630
 msgid ""
