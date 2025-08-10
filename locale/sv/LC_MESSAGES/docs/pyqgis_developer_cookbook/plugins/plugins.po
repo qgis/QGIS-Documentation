@@ -52,8 +52,8 @@ msgid ""
 "*Setup*: :ref:`Create the files for your plugin <plugin_setup>`. Depending "
 "on the plugin type, some are mandatory while others are optional"
 msgstr ""
-"*Setup*: :ref:`Skapa filerna för ditt insticksprogram <plugin_setup>`. "
-"Beroende på typen av plugin är vissa obligatoriska medan andra är valfria"
+"*Setup*: :ref:`Skapa filerna för ditt tillägg <plugin_setup>`. Beroende på "
+"typen av plugin är vissa obligatoriska medan andra är valfria"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:20
 msgid ""
@@ -62,17 +62,15 @@ msgstr "*Develop*: :ref:`Skriv koden <plugin_development>` i lämpliga filer"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:21
 msgid "*Document*: :ref:`Write the plugin documentation <plugin_docs>`"
-msgstr ""
-"*Dokument*: :ref:`Skriva dokumentationen för insticksprogrammet "
-"<plugin_docs>`"
+msgstr "*Dokument*: :ref:`Skriva dokumentationen för tillägget <plugin_docs>`"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:22
 msgid ""
 "Optionally: *Translate*: :ref:`Translate your plugin <plugin_translation>` "
 "into different languages"
 msgstr ""
-"Valfritt: *Translate*: :ref:`Översätt ditt insticksprogram "
-"<plugin_translation>` till olika språk"
+"Valfritt: *Translate*: :ref:`Översätt ditt tillägg <plugin_translation>` "
+"till olika språk"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:23
 msgid ""
@@ -102,10 +100,10 @@ msgid ""
 "plugin already exists and you may be able to extend it or at least build on "
 "it to develop your own."
 msgstr ""
-"Innan du börjar skriva ett nytt insticksprogram, ta en titt på "
-":ref:`official_pyqgis_repository`. Källkoden för befintliga insticksprogram "
-"kan hjälpa dig att lära dig mer om programmering. Du kanske också upptäcker "
-"att ett liknande plugin redan finns och att du kanske kan utöka det eller "
+"Innan du börjar skriva ett nytt tillägg, ta en titt på "
+":ref:`official_pyqgis_repository`. Källkoden för befintliga tillägg kan "
+"hjälpa dig att lära dig mer om programmering. Du kanske också upptäcker att "
+"ett liknande plugin redan finns och att du kanske kan utöka det eller "
 "åtminstone bygga vidare på det för att utveckla ditt eget."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:44
@@ -168,8 +166,8 @@ msgid ""
 "to have the :func:`classFactory` method and may have any other "
 "initialisation code."
 msgstr ""
-":file:`__init__.py` - *krävs* - Startpunkten för insticksprogrammet. Den "
-"måste ha metoden :func:`classFactory` och kan ha annan initialiseringskod."
+":file:`__init__.py` - *krävs* - Startpunkten för tillägget. Den måste ha "
+"metoden :func:`classFactory` och kan ha annan initialiseringskod."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:64
 msgid ""
@@ -178,24 +176,23 @@ msgid ""
 "code."
 msgstr ""
 ":file:`mainPlugin.py` - *kärnkod* - Den huvudsakliga arbetskoden för "
-"insticksprogrammet. Innehåller all information om pluginets åtgärder och "
-"huvudkoden."
+"tillägget. Innehåller all information om pluginets åtgärder och huvudkoden."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:66
 msgid ""
 ":file:`form.ui` - *for plugins with custom GUI* -  The GUI created by Qt "
 "Designer."
 msgstr ""
-":file:`form.ui` - *för insticksprogram med eget GUI* - Det GUI som skapats "
-"av Qt Designer."
+":file:`form.ui` - *för tillägg med eget grafiskt gränssnitt* - Det grafiska "
+"gränssnitt som skapats av Qt Designer."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:67
 msgid ""
 ":file:`form.py` - *compiled GUI* - The translation of the form.ui described "
 "above to Python."
 msgstr ""
-":file:`form.py` - *kompilerad GUI* - Översättningen av form.ui som beskrivs "
-"ovan till Python."
+":file:`form.py` - *kompilerat grafiskt gränssnitt* - Översättningen av "
+"form.ui som beskrivs ovan till Python."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:68
 msgid ""
@@ -203,8 +200,8 @@ msgid ""
 "Designer. Contains relative paths to resources used in the GUI forms."
 msgstr ""
 ":file:`resources.qrc` - *valfritt* - Ett .xml-dokument som skapats av Qt "
-"Designer. Innehåller relativa sökvägar till resurser som används i GUI-"
-"formulären."
+"Designer. Innehåller relativa sökvägar till resurser som används i de "
+"grafiska gränssnittsformulären."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:70
 msgid ""
@@ -220,9 +217,9 @@ msgid ""
 "QGIS Plugins Directory, otherwise *optional*. File should be a plain text "
 "file with no file extension in the filename."
 msgstr ""
-":file:`LICENSE` - *krävs* om insticksprogrammet ska publiceras eller "
-"uppdateras i QGIS Tillägg Directory, annars *valfritt*. Filen ska vara en "
-"ren textfil utan filtillägg i filnamnet."
+":file:`LICENSE` - *krävs* om tillägget ska publiceras eller uppdateras i "
+"QGIS Tillägg Directory, annars *valfritt*. Filen ska vara en ren textfil "
+"utan filtillägg i filnamnet."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:77
 msgid ""
@@ -230,10 +227,10 @@ msgid ""
 "you must check that your plugin follows some additional rules, required for "
 "plugin :ref:`official_pyqgis_repository_validation`."
 msgstr ""
-"Om du planerar att ladda upp insticksprogrammet till "
-":ref:`official_pyqgis_repository` måste du kontrollera att ditt "
-"insticksprogram följer några ytterligare regler, som krävs för "
-"insticksprogrammet :ref:`official_pyqgis_repository_validation`."
+"Om du planerar att ladda upp tillägget till "
+":ref:`official_pyqgis_repository` måste du kontrollera att ditt tillägg "
+"följer några ytterligare regler, som krävs för tillägget "
+":ref:`official_pyqgis_repository_validation`."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:86
 msgid "Writing plugin code"
@@ -294,7 +291,7 @@ msgstr "Sant"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:108
 msgid "a short string  containing the name of the plugin"
-msgstr "en kort sträng som innehåller namnet på insticksprogrammet"
+msgstr "en kort sträng som innehåller namnet på tillägget"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:109
 msgid "qgisMinimumVersion"
@@ -333,7 +330,7 @@ msgstr "description"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:111
 msgid "short text which describes the plugin, no HTML allowed"
-msgstr "kort text som beskriver insticksprogrammet, ingen HTML tillåten"
+msgstr "kort text som beskriver tillägget, ingen HTML tillåten"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:112
 msgid "about"
@@ -401,7 +398,7 @@ msgid ""
 "and not just to the uploaded version"
 msgstr ""
 "boolesk flagga, :const:`True` eller :const:`False`, gäller för hela "
-"insticksprogrammet och inte bara för den uppladdade versionen"
+"tillägget och inte bara för den uppladdade versionen"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:122
 msgid "tags"
@@ -445,7 +442,7 @@ msgid ""
 "compressed package) of a web friendly image (PNG, JPEG)"
 msgstr ""
 "ett filnamn eller en relativ sökväg (i förhållande till basmappen i "
-"insticksprogrammets komprimerade paket) för en webbvänlig bild (PNG, JPEG)"
+"tilläggets komprimerade paket) för en webbvänlig bild (PNG, JPEG)"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:129
 msgid "category"
@@ -464,8 +461,8 @@ msgid ""
 "PIP-like comma separated list of other plugins to install, use plugin names "
 "coming from their metadata's name field"
 msgstr ""
-"PIP-liknande kommaseparerad lista över andra insticksprogram som ska "
-"installeras, använd insticksprogrammens namn från deras metadatas namnfält"
+"PIP-liknande kommaseparerad lista över andra tillägg som ska installeras, "
+"använd tilläggens namn från deras metadatas namnfält"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:132
 msgid "server"
@@ -476,8 +473,8 @@ msgid ""
 "boolean flag, :const:`True` or :const:`False`, determines if the plugin has "
 "a server interface"
 msgstr ""
-"boolean flagga, :const:`True` eller :const:`False`, avgör om "
-"insticksprogrammet har ett servergränssnitt"
+"boolean flagga, :const:`True` eller :const:`False`, avgör om tillägget har "
+"ett servergränssnitt"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:134
 msgid "hasProcessingProvider"
@@ -488,8 +485,8 @@ msgid ""
 "boolean flag, :const:`True` or :const:`False`, determines if the plugin "
 "provides processing algorithms"
 msgstr ""
-"boolean flagga, :const:`True` eller :const:`False`, avgör om "
-"insticksprogrammet tillhandahåller bearbetningsalgoritmer"
+"boolean flagga, :const:`True` eller :const:`False`, avgör om tillägget "
+"tillhandahåller bearbetningsalgoritmer"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:138
 msgid ""
@@ -549,8 +546,8 @@ msgid ""
 "look like"
 msgstr ""
 "Denna fil krävs av Pythons importsystem. QGIS kräver också att denna fil "
-"innehåller en :func:`classFactory()`-funktion, som anropas när "
-"insticksprogrammet laddas in i QGIS. Den får en referens till instansen av "
+"innehåller en :func:`classFactory()`-funktion, som anropas när tillägget "
+"laddas in i QGIS. Den får en referens till instansen av "
 ":class:`QgisInterface <qgis.gui.QgisInterface>` och måste returnera ett "
 "objekt av din tillägg klass från :file:`mainplugin.py` --- i vårt fall heter"
 " den ``TestPlugin`` (se nedan). Så här bör :file:`__init__.py` se ut"
@@ -581,11 +578,11 @@ msgstr "``__init__`` som ger tillgång till QGIS-gränssnittet"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:297
 msgid "``initGui()`` called when the plugin is loaded"
-msgstr "``initGui()`` anropas när insticksprogrammet laddas"
+msgstr "``initGui()`` anropas när tillägget laddas"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:298
 msgid "``unload()`` called when the plugin is unloaded"
-msgstr "``unload()`` anropas när insticksprogrammet avlastas"
+msgstr "``unload()`` anropas när tillägget avlastas"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:300
 msgid ""
@@ -677,10 +674,9 @@ msgid ""
 "(working) directory and create a makefile which will generate UI + resource "
 "files and install the plugin into your QGIS installation."
 msgstr ""
-"När du arbetar med ett riktigt insticksprogram är det klokt att skriva "
-"insticksprogrammet i en annan (arbets)katalog och skapa en makefile som "
-"genererar UI + resursfiler och installerar insticksprogrammet i din QGIS-"
-"installation."
+"När du arbetar med ett riktigt tillägg är det klokt att skriva tillägget i "
+"en annan (arbets)katalog och skapa en makefile som genererar UI + "
+"resursfiler och installerar tillägget i din QGIS-installation."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:382
 msgid "Documenting plugins"
@@ -692,10 +688,9 @@ msgid ""
 ":mod:`qgis.utils` module provides a function, :func:`showPluginHelp` which "
 "will open the help file browser, in the same way as other QGIS help."
 msgstr ""
-"Dokumentationen för insticksprogrammet kan skrivas som HTML-hjälpfiler. "
-"Modulen :mod:`qgis.utils` tillhandahåller en funktion, "
-":func:`showPluginHelp`, som öppnar webbläsaren för hjälpfiler på samma sätt "
-"som annan QGIS-hjälp."
+"Dokumentationen för tillägget kan skrivas som HTML-hjälpfiler. Modulen "
+":mod:`qgis.utils` tillhandahåller en funktion, :func:`showPluginHelp`, som "
+"öppnar webbläsaren för hjälpfiler på samma sätt som annan QGIS-hjälp."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:388
 msgid ""
@@ -711,7 +706,7 @@ msgstr ""
 "ll_cc.html`, :file:`index-ll.html`, :file:`index-en.html`, :file:`index-"
 "en_us.html` och :file:`index.html`, och visar den som hittas först. Här är "
 "``ll_cc`` QGIS-landets språk. Detta gör att flera översättningar av "
-"dokumentationen kan inkluderas med insticksprogrammet."
+"dokumentationen kan inkluderas med tillägget."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:395
 msgid ""
@@ -803,12 +798,11 @@ msgid ""
 "place every file explicitly in the ``.pro`` file. Your project file might "
 "then look like something like this:"
 msgstr ""
-"Ditt insticksprogram kan ha en mer komplex struktur och kan vara "
-"distribuerat över flera filer. Om så är fallet, kom ihåg att ``pylupdate5``,"
-" det program vi använder för att läsa filen ``.pro`` och uppdatera den "
-"översättningsbara strängen, inte expanderar jokertecken, så du måste placera"
-" varje fil uttryckligen i filen ``.pro``. Din projektfil kan då se ut "
-"ungefär så här:"
+"Ditt tillägg kan ha en mer komplex struktur och kan vara distribuerat över "
+"flera filer. Om så är fallet, kom ihåg att ``pylupdate5``, det program vi "
+"använder för att läsa filen ``.pro`` och uppdatera den översättningsbara "
+"strängen, inte expanderar jokertecken, så du måste placera varje fil "
+"uttryckligen i filen ``.pro``. Din projektfil kan då se ut ungefär så här:"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:460
 msgid ""
@@ -934,7 +928,7 @@ msgstr "Du måste distribuera ``.ts``-filer med ditt tillägg."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:529
 msgid "Load the plugin"
-msgstr "Ladda insticksprogrammet"
+msgstr "Ladda tillägget"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:531
 msgid ""
@@ -971,10 +965,10 @@ msgid ""
 "able to learn from your code. All hosted plugins can be found and installed "
 "from within QGIS with the Plugin Manager."
 msgstr ""
-"QGIS är värd för hundratals insticksprogram i insticksarkivet. Överväg att "
-"dela med dig av din! Det kommer att utöka möjligheterna med QGIS och "
-"människor kommer att kunna lära sig av din kod. Alla insticksprogram som "
-"finns i QGIS kan hittas och installeras från QGIS med instickshanteraren."
+"QGIS är värd för hundratals tillägg i tilläggsarkivet. Överväg att dela med "
+"dig av din! Det kommer att utöka möjligheterna med QGIS och människor kommer"
+" att kunna lära sig av din kod. Alla tillägg som finns i QGIS kan hittas och"
+" installeras från QGIS med tilläggshanteraren."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:550
 msgid ""
@@ -998,10 +992,9 @@ msgid ""
 "QGIS for testing. This is very easy using the **Plugin Reloader** plugin. "
 "You can find it with the :ref:`Plugin Manager <plugins>`."
 msgstr ""
-"Under utvecklingen av ditt insticksprogram kommer du ofta att behöva ladda "
-"om det i QGIS för testning. Detta är mycket enkelt med hjälp av tillägget "
-"**Plugin Reloader**. Du kan hitta det med :ref:`Tilläggshanterare "
-"<plugins>`."
+"Under utvecklingen av ditt tillägg kommer du ofta att behöva ladda om det i "
+"QGIS för testning. Detta är mycket enkelt med hjälp av tillägget **Plugin "
+"Reloader**. Du kan hitta det med :ref:`Tilläggshanterare <plugins>`."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:566
 msgid "Automate packaging, release and translation with qgis-plugin-ci"
@@ -1036,8 +1029,8 @@ msgid ""
 "You can access all the classes of installed plugins from within QGIS using "
 "python, which can be handy for debugging purposes."
 msgstr ""
-"Du kan komma åt alla klasser av installerade insticksprogram från QGIS med "
-"hjälp av python, vilket kan vara praktiskt för felsökning."
+"Du kan komma åt alla klasser av installerade tillägg från QGIS med hjälp av "
+"python, vilket kan vara praktiskt för felsökning."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:587
 msgid "Log Messages"
@@ -1057,7 +1050,7 @@ msgid ""
 "define resources for the GUI, such as icons:"
 msgstr ""
 "Vissa tillägg använder resursfiler, t.ex. :file:`resources.qrc` som "
-"definierar resurser för GUI, t.ex. ikoner:"
+"definierar resurser för grafiska gränssnitt, t.ex. ikoner:"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:608
 msgid ""
