@@ -1222,6 +1222,19 @@ msgstr ""
 "problema per due tabelle, ma immaginiamo di voler fare immagini separate per"
 " funghi, uccelli, ecc."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:554
+msgid ""
+"Polymorphic relations solve this problem as all the referencing features are"
+" stored in the same table ``documents``. For each feature the referenced "
+"layer is stored in the ``referenced_layer`` field and the referenced feature"
+" id in the ``referenced_id`` field."
+msgstr ""
+"Le relazioni polimorfiche risolvono questo problema, poiché tutte gli "
+"elementi di riferimento sono memorizzati nella stessa tabella ``documents``."
+" Per ogni elemento, il layer di riferimento è memorizzato nel campo "
+"``referenced_layer`` e l'id dell'elemento di riferimento nel campo "
+"``referenced_id``."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
 msgid "Defining polymorphic relations"
 msgstr "Definizione relazioni polimorfiche"
@@ -1249,6 +1262,18 @@ msgid ""
 msgstr ""
 "Aggiungere una relazione polimorfa che utilizza il layer ``documents`` come "
 "riferimento e i layer ``animals`` e ``plants`` come riferimento."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:581
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``documents`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``referenced_id``."
+msgstr ""
+"Il **Layer di riferimento (figlio)**, considerato anche come layer figlio, è"
+" quello che contiene il campo chiave esterna. Nel nostro caso, si tratta del"
+" layer ``documents``. Per questo layer è necessario aggiungere un campo di "
+"riferimento che punti all'altro layer, quindi questo è ``referenced_id``."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:593
 msgid ""
