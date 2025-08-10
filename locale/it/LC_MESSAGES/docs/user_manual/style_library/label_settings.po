@@ -38,6 +38,17 @@ msgstr ""
 msgid "Setting a label"
 msgstr "Impostare una etichetta"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:12
+msgid ""
+"Labels are textual information you can display on vector features, mesh "
+"layers or maps. They add details you could not necessarily represent using "
+"symbols. Two types of text-related items are available in QGIS:"
+msgstr ""
+"Le etichette sono informazioni testuali che puoi visualizzare su elementi "
+"vettoriali, layer mesh o mappe. Aggiungono dettagli che non potresti "
+"necessariamente rappresentare usando i simboli. In QGIS sono disponibili due"
+" tipi  di oggetti  testuali:"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:16
 msgid ""
 ":guilabel:`Text Format`: defines the appearance of the text, including "
@@ -106,6 +117,21 @@ msgstr ""
 "testi o oggetti  (:ref:`callouts <labels_callouts>`, :ref:`placement "
 "<labels_placement>`, :ref:`overlay, scale visibility <labels_rendering>`, "
 "maschera ...)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:45
+msgid ""
+"They are used to configure smart labelling for vector and mesh layers "
+"through the |labelingSingle| :guilabel:`Labels` tab of the vector or mesh "
+":guilabel:`Layer Properties` dialog or :guilabel:`Layer Styling` panel or "
+"using the |labelingSingle| :sup:`Layer Labeling Options` button of the "
+":ref:`Label toolbar <label_toolbar>`."
+msgstr ""
+"Vengono utilizzati per configurare l'etichettatura intelligente per i layer "
+"vettoriali e mesh tramite la scheda |labelingSingle| :guilabel:`Etichette` "
+"della finestra di dialogo :guilabel:`Proprietà...` del vettore o della mesh "
+"o il pannello :guilabel:`Stile del layer` oppure utilizzando il pulsante "
+"|labelingSingle| :sup:`Opzioni per le Etichette del layer` della :ref:`Label"
+" toolbar <label_toolbar>`."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1082
 msgid "labelingSingle"
@@ -262,6 +288,14 @@ msgstr "il :guilabel:`Colore`"
 msgid "the :guilabel:`Opacity`"
 msgstr "the :guilabel:`Opacità`"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:133
+msgid ""
+"and :guilabel:`Allow HTML Formatting` enables the use of a subset of HTML "
+"tags and CSS rules to customize the label."
+msgstr ""
+"e :guilabel:`Permetti formattazione HTML` consente l'uso di un sottoinsieme "
+"di tag HTML e regole CSS per personalizzare l'etichetta."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:135
 msgid ""
 "At the bottom of the tab, a widget shows a filterable list of compatible "
@@ -291,6 +325,141 @@ msgstr ""
 "formato del testo. Selezionane uno per sovrascrivere rapidamente le attuali "
 ":ref:`textual properties <text_format>` dell'etichetta. Allo stesso modo, "
 "puoi creare/sovrascrivere un formato di testo da lì."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:152
+msgid "Allow HTML Formatting"
+msgstr "Permettere formattazione HTML"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:154
+msgid ""
+"With :guilabel:`Allow HTML Formatting` enabled, you need to provide the HTML"
+" code in the :guilabel:`Value` field. Use whitespaces instead of tabs for "
+"any kind of indentation. The expression is parsed and any supported HTML tag"
+" overrides its corresponding setting in the labels properties. Because it is"
+" impossible to list and detail every HTML tag and CSS property that QGIS "
+"currently supports, we invite you to explore and test in your labels `the "
+"ones supported <https://doc.qt.io/qt-5/richtext-html-subset.html>`_ by the "
+"underlying Qt library."
+msgstr ""
+"Con l'opzione `Permetti formattazione HTML` abilitata, devi specificare il "
+"codice HTML nel campo `Valore`. Utilizza spazi vuoti anziché tabulazioni per"
+" qualsiasi tipo di rientro. L'espressione viene analizzata e qualsiasi tag "
+"HTML supportato sovrascrive l'impostazione corrispondente nelle proprietà "
+"delle etichette. Poiché è impossibile elencare e descrivere in dettaglio "
+"tutti i tag HTML e le proprietà CSS attualmente supportati da QGIS, vi "
+"invitiamo a esplorare e testare nelle vostre etichette `the ones supported "
+"<https://doc.qt.io/qt-5/richtext-html-subset.html>`_ dalla libreria Qt "
+"sottostante."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:161
+msgid "**Examples of supported HTML tags:**"
+msgstr "**Esempi di tag HTML supportati:**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:163
+msgid "Text formatting, such as italic or bold, e.g.:"
+msgstr "Formattazione del testo, come corsivo o grassetto, ad esempio:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:169
+msgid ""
+"Superscript and subscript, where the text will be vertically :sup:`super` or"
+" :sub:`sub` aligned and automatically sized to 2/3 of the parent font size. "
+"You can also set a fixed font size for the superscript/subscript by "
+"including css rules, e.g.:"
+msgstr ""
+"Formattazioni apice e pedice del testo, per le quali il testo sarà allineato"
+" verticalmente :sup:`in alto` o :sub:`in basso` e dimensionato "
+"automaticamente a 2/3 della dimensione del carattere principale. Puoi anche "
+"impostare una dimensione fissa del carattere per l'apice/pedice includendo "
+"regole css, ad esempio:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:178
+msgid ""
+"Text horizontal alignment, using either HTML the ``align=\"xxx\"`` attribute"
+" or  ``center`` tag. For HTML5 compatibility, prefer using the CSS property "
+"``text-align``."
+msgstr ""
+"Allineamento orizzontale del testo, utilizzando l'attributo HTML "
+"``align=\"xxx\"`` o il tag ``center``. Per la compatibilità con HTML5, è "
+"preferibile utilizzare la proprietà CSS ``text-align``."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:181
+msgid "Horizontal alignment can not be used for curved labels."
+msgstr ""
+"L'allineamento orizzontale non può essere utilizzato per le etichette "
+"curvate."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:183
+msgid ""
+"Structuring a block of text using header tags (such as ``h1``, ``h2``, ...),"
+" or paragraphs (with ``p``, ``div``, ``br``):"
+msgstr ""
+"Strutturare un blocco di testo utilizzando tag di intestazione (come ``h1``,"
+" ``h2``, ...) o paragrafi (con ``p``, ``div``, ``br``):"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:193
+msgid ""
+"Image insertion: any image format readable by QGIS can be used in HTML label"
+" content. It can be served from local file paths, HTTP links, or base64 "
+"embedded content, using the ``src=\"xxx\"`` attribute. Image sizes can be "
+"specified via the ``width=\"##\"`` and ``height=\"##\"`` attributes, in "
+"``points`` unit. If width or height is not specified it will automatically "
+"be calculated from the original image size. Images are placed inline only, "
+"not as floating images, and not on curved text labels."
+msgstr ""
+"Inserimento di immagini: qualsiasi formato di immagine leggibile da QGIS può"
+" essere utilizzato nel contenuto dell'etichetta HTML. Può essere disponibile"
+" tramite percorsi di file locali, link HTTP o contenuto incorporato in "
+"formato base64, utilizzando l'attributo ``src=\"xxx\"``. Le dimensioni delle"
+" immagini possono essere specificate tramite gli attributi ``width=\"##\"`` "
+"e ``height=\"##\"``, in unità ``points``. Se larghezza o altezza non vengono"
+" specificate, verranno automaticamente calcolate in base alle dimensioni "
+"originali dell'immagine. Le immagini vengono inserite solo in linea, non "
+"come immagini mobili e non su etichette di testo curvate."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:205
+msgid "**Examples of supported CSS properties:**"
+msgstr "**Esempi di proprietà CSS supportate:**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:207
+msgid ""
+"Font properties (``color``, ``font-family``, ``font-size``, ``font-weight``,"
+" ``font-style``, ``word-spacing``). Note that ``word-spacing`` will always "
+"use unit points."
+msgstr ""
+"Proprietà del carattere (``color``, ``font-family``, ``font-size``, ``font-"
+"weight``, ``font-style``, ``word-spacing``). Si noti che ``word-spacing``  "
+"utilizzerà sempre unità di punti.carattere"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:209
+msgid ""
+"Text decorations such as underline, overline and line-through (``text-"
+"decoration``)"
+msgstr ""
+"Decorazioni del testo come sottolineature, sovrascritte e barrature (``text-"
+"decoration``)"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:210
+msgid ""
+"Text alignment (``vertical-align``, ``text-align``). Horizontal alignment "
+"can not be used for curved labels."
+msgstr ""
+"Allineamento del testo (``vertical-align``, ``text-align``). L'allineamento "
+"orizzontale non può essere utilizzato per etichette curvate."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:213
+msgid ""
+"CSS properties can be set on HTML tags with the ``style`` attribute. The "
+"HTML tag ``span`` does not apply any formatting to text by itself and is "
+"ideal if you just want to apply CSS styling. A CSS property name and its "
+"value are separated by a colon (``:``). Multiple CSS properties are "
+"separated by semicolon (``;``), e.g.:"
+msgstr ""
+"Le proprietà CSS possono essere impostate sui tag HTML con l'attributo "
+"``style``. Il tag HTML ``span`` non applica alcuna formattazione al testo di"
+" per sé ed è ideale se si desidera semplicemente applicare uno stile CSS. Il"
+" nome di una proprietà CSS e il suo valore sono separati da due punti "
+"(``:``). Le proprietà CSS multiple sono separate da punto e virgola (``;``),"
+" ad esempio:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:224
 msgid ""
@@ -369,6 +538,17 @@ msgid ""
 msgstr ""
 "Con :guilabel:`Spaziatura`, cambi lo spazio tra le parole e tra le singole "
 "lettere."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:271
+msgid ""
+"With :guilabel:`Tab distance` you can adjust the replacement spacing for "
+":kbd:`Tab` characters in the label, in any supported unit. This allows e.g. "
+"to properly separate or vertically align elements of a layout legend text."
+msgstr ""
+"Con :guilabel:`Distanza di tabulazione` puoi regolare lo spaziamento di "
+"sostituzione per i caratteri :kbd:`Tab` nell'etichetta, in qualsiasi unità "
+"supportata. Questo consente, ad esempio, di separare correttamente o "
+"allineare verticalmente gli elementi di un testo di legenda del layout."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:275
 msgid ""
@@ -790,11 +970,20 @@ msgstr ""
 "componente come lo stesso :guilabel:`Testo`, il :guilabel:`Buffer` o lo "
 ":guilabel:`Sfondo`."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:431
+msgid "Set the shadow's :guilabel:`Offset` from the item being shadowed, ie:"
+msgstr ""
+"Imposta l':guilabel:`Offset` dell'ombra dall'elemento da ombreggiare, cioè:"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:433
 msgid "The angle: clockwise, it depends on the underlying item orientation"
 msgstr ""
 "L'angolo: in senso orario, dipende dall'orientamento dell'oggetto "
 "sottostante"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:434
+msgid "The distance of offset from the item being shadowed"
+msgstr "La distanza di offset dall'oggetto da ombreggiare"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:435
 msgid "The units of the offset"
@@ -1004,9 +1193,153 @@ msgstr ""
 ":guilabel:`Fumetti`: una nuvola vocale che circonda l'etichetta e segnala "
 "l'elemento. Può avere angoli arrotondati."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:544
+msgid ""
+"Set the properties of the callout. The following table shows the different "
+"properties, with description and compatible connector style."
+msgstr ""
+"Imposta le proprietà delle linee di richiamo. La tabella seguente mostra le "
+"diverse proprietà, con descrizione e stile del connettore compatibile."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:548
+msgid "Label callout properties"
+msgstr "Proprietà etichette delle linee di richiamo"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:552
+msgid "Property"
+msgstr "Proprietà"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:552
+msgid "Style of callout"
+msgstr "Stile delle linee di richiamo"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:552
 msgid "Description"
 msgstr "Descrizione"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+msgid ":guilabel:`Fill style`"
+msgstr ":guilabel:`Stile riempimento`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+#: ../../docs/user_manual/style_library/label_settings.rst:602
+msgid "Balloons"
+msgstr "Fumetti"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+msgid ""
+"A :ref:`fill symbol <vector_fill_symbols>` with full display capabilities, "
+"including layer effects, data-defined settings, ... for drawing the balloon "
+"shape."
+msgstr ""
+"Un :ref:`fill symbol<vector_fill_symbols>` con completa capacità di "
+"visualizzazione, inclusi effetti del layer, impostazioni definite dai dati, "
+"... per disegnare la forma del fumetto."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:557
+msgid ":guilabel:`Corner radius`"
+msgstr ":guilabel:`Raggio dell'angolo`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:557
+msgid "Corner radius of the speech bubble"
+msgstr "Raggio d'angolo del fumetto"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:559
+msgid ":guilabel:`Wedge width`"
+msgstr ":guilabel:`Ampiezza spicchio`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:559
+msgid ""
+"Sets how large the bubble speech connection with feature's pointer should be"
+msgstr ""
+"Imposta quanto larga deve essere la linea di richiamo del fumetto con il "
+"puntatore dell'elemento."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:561
+msgid ":guilabel:`Margins`"
+msgstr ":guilabel:`Margini`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:561
+msgid "Margins around the label's text, in the unit of your choice"
+msgstr "Margini attorno al testo dell'etichetta, nell'unità di tua scelta"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:563
+msgid ":guilabel:`Line style`"
+msgstr ":guilabel:`Stile linea`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:563
+#: ../../docs/user_manual/style_library/label_settings.rst:572
+msgid "All but balloons"
+msgstr "Tutto tranne i fumetti"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:563
+msgid ""
+"A :ref:`line symbol <vector_line_symbols>` with full display capabilities, "
+"including layer effects, data-defined settings, ... for drawing the "
+"connector line."
+msgstr ""
+"Un :ref:`line symbol <vector_line_symbols>` con funzionalità di "
+"visualizzazione completa, inclusi effetti layer, impostazioni definite dai "
+"dati, ... per disegnare la linea di collegamento."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:566
+msgid ":guilabel:`Curvature`"
+msgstr ":guilabel:`Curvatura`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:566
+msgid "Curved lines"
+msgstr "Linee Curvate"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:566
+msgid "The percentage of curvature of the connection line"
+msgstr "La percentuale di curvatura della linea di connessione"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:568
+msgid ":guilabel:`Orientation`"
+msgstr ":guilabel:`Orientamento`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:568
+msgid ""
+"Orientation, starting from the label to the feature. It can be "
+":guilabel:`Clockwise`, :guilabel:`Counter-clockwise`, or "
+":guilabel:`Automatic` (determining an optimal orientation for each label)."
+msgstr ""
+"Orientamento, partendo dall'etichetta all'elemento. Può essere "
+":guilabel:`Senso orario`, :guilabel:`Senso antiorario`, o "
+":guilabel:`Automatico` (determinando un orientamento ottimale per ciascuna "
+"etichetta)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:572
+msgid ":guilabel:`Minimum length`"
+msgstr ":guilabel:`Lunghezza minima`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:572
+msgid "Minimum length of the connector line"
+msgstr "Lunghezza minima della linea di connessione"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:574
+msgid ":guilabel:`Draw lines to all feature parts`"
+msgstr ":guilabel:`Disegna linee per tutte le parti dell'elemento`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:574
+msgid ""
+"In case of a multi-part feature, indicates whether a connector line should "
+"be drawn from the label to each geometry part."
+msgstr ""
+"Nel caso di un elemento parti multiple, indica se è necessario tracciare una"
+" linea di collegamento dall'etichetta a ciascuna parte della geometria."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:577
+msgid ":guilabel:`Label anchor point`"
+msgstr ":guilabel:`Punto di ancoraggio etichetta`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:577
+msgid ""
+"Controls where the connector line should join to the label text. Available "
+"options:"
+msgstr ""
+"Controlla il punto in cui la linea di connessione deve unirsi al testo "
+"dell'etichetta. Opzioni disponibili:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:580
 msgid ":guilabel:`Closest point`"
@@ -1029,10 +1362,38 @@ msgstr ""
 "Sinistra`, :guilabel:`Centro a Destra`, :guilabel:`In Basso a Sinistra`, "
 ":guilabel:`In Basso al Centro` e :guilabel:`In Basso a Destra`)."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:587
+msgid ":guilabel:`Offset from label area`"
+msgstr ":guilabel:`Offset dall'area dell'etichetta`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:587
+msgid ""
+"Controls the distance from the label anchor point (where the callout line "
+"ends). This avoids drawing lines right up against the text."
+msgstr ""
+"Controlla la distanza dal punto di ancoraggio dell'etichetta (dove termina "
+"la linea di richiamo). In questo modo si evita di disegnare linee a filo con"
+" il testo."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:590
+msgid ":guilabel:`Offset from feature`"
+msgstr ":guilabel:`Offset dall'elemento`"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:590
 #: ../../docs/user_manual/style_library/label_settings.rst:606
 msgid "All"
 msgstr "All"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:594
+msgid ":guilabel:`Feature anchor point`"
+msgstr ":guilabel:`Punto di ancoraggio elemento`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:594
+msgid ""
+"Where the connector line ends on the (polygon) feature. Available options:"
+msgstr ""
+"Dove termina la linea di connessione sull'elemengto (poligono). Opzioni "
+"disponibili:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:596
 msgid ":guilabel:`Pole of inaccessibility`"
@@ -1045,6 +1406,14 @@ msgstr ":guilabel:`Punto sull'Esterno`"
 #: ../../docs/user_manual/style_library/label_settings.rst:598
 msgid ":guilabel:`Point on surface`"
 msgstr ":guilabel:`Punto su Superficie`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:602
+msgid ":guilabel:`End point marker`"
+msgstr ":guilabel:Centroide`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:606
+msgid "Controls the :ref:`blending <blend-modes>` of the callout."
+msgstr "Controlla la :ref:`blending <blend-modes>` della linea di richiamo."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:610
 msgid ""
@@ -1077,6 +1446,20 @@ msgstr "moveLabel"
 #: ../../docs/user_manual/style_library/label_settings.rst:622
 msgid "Placement tab"
 msgstr "Scheda Posizionamento"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:624
+msgid ""
+"Choose the |labelplacement| :guilabel:`Placement` tab for configuring label "
+"placement and labeling priority. Note that the placement options differ "
+"according to the type of vector or mesh layer, namely point, line or "
+"polygon, and are affected by the global :ref:`PAL setting "
+"<automated_placement>`."
+msgstr ""
+"Scegli la scheda |labelplacement| :guilabel:`Posizionamento` per configurare"
+" il posizionamento delle etichette e la priorità di etichettatura. Nota che "
+"le opzioni di posizionamento differiscono a seconda del tipo di layer "
+"vettoriale o mesh, cioè punto, linea o poligono, e sono influenzate "
+"dall'impostazione globale :ref:`PAL setting <automated_placement>`."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1086
 msgid "labelplacement"
