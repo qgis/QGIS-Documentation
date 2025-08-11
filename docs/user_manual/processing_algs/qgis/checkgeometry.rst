@@ -124,9 +124,9 @@ Detects self-intersections in line or polygon geometries, and reports them as er
 .. figure:: img/check_geometry_selfintersections.png
    :align: center
 
-   Reporting errors on a feature with self-intersections.
+   Reporting errors on features with self-intersections.
 
-.. seealso:: :ref:`qgisfixgeometrysplitselfintersectinggeometries`
+.. seealso:: :ref:`qgisfixgeometryselfintersection`
 
 Parameters
 ..........
@@ -166,9 +166,10 @@ Basic parameters
    
        Optional
      - ``OUTPUT``
-     - [vector: line, polygon]
+     - [same as input]
+
        Default: ``[Skip output]``
-     - Polygon layer containing self-intersecting features.
+     - Line or polygon layer containing self-intersected features.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -218,8 +219,9 @@ Outputs
    * - **Self-intersecting features**
      - ``OUTPUT``
      - [vector: line, polygon]
-     - Output polygon or line layer with features containing the self-intersecting features. If no self-intersecting features are found,
-       the output layer will be empty.
+     - Output polygon or line layer with features containing the self-intersecting features.
+       If no self-intersecting features are found, the output layer will be empty.
+       Additional fields are added (see ``ERRORS`` output).
 
 Python code
 ...........

@@ -151,7 +151,7 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-.. _qgisfixgeometrysplitselfintersectinggeometries:
+.. _qgisfixgeometryselfintersection:
 
 Split self-intersecting geometries
 ----------------------------------
@@ -225,16 +225,16 @@ Basic parameters
      - [tablefield: integer]
 
        Default: ``gc_segment_1``
-     - Field storing the erroneous feature's geometry segment number.
+     - Field storing the number of the first segment involved in the erroneous intersection.
    * - **Field of segment 2**
      - ``SEGMENT_2``
      - [tablefield: integer]
 
        Default: ``gc_segment_2``
-     - Field storing the erroneous feature's geometry segment number.
+     - Field storing the number of the second segment involved in the erroneous intersection.
    * - **Self-intersections fixed layer**
      - ``OUTPUT``
-     - [vector: line, polygon]
+     - [vector: same as input]
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer containing fixed features.
@@ -297,7 +297,7 @@ Outputs
        x and y coordinates, the index of the intersecting segments, the applied fix and its successfulness).
    * - **Self-intersections fixed layer**
      - ``OUTPUT``
-     - [vector: line, polygon]
+     - [vector: same as input]
      - Output layer with the geometry fix applied to the input features.
 
 Python code
