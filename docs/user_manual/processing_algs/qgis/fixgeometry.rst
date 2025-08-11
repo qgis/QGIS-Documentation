@@ -195,8 +195,8 @@ Basic parameters
        
      - Method to apply to the self-intersecting geometries:
 
-       * 0 -- ``Split feature into a multi-object feature``: splits the self-intersecting geometry into multiple parts, each part being a single-object feature.
-       * 1 -- ``Split feature into multiple single-object features``: splits the self-intersecting geometry into multiple parts,each part being a single-object feature, and removes the original self-intersecting feature.
+       * 0 -- ``Split feature into a multi-object feature``: splits the self-intersecting geometry into multiple parts stored in a single multipart feature.
+       * 1 -- ``Split feature into multiple single-object features``: splits the self-intersecting geometry into multiple parts, each part stored in a separate feature.
    * - **Field of original feature unique identifier**
      - ``UNIQUE_ID``
      - [tablefield: any]
