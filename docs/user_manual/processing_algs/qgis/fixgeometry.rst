@@ -327,8 +327,12 @@ Deletes duplicated vertices from the input geometries.
 
    Before and after fixing duplicated vertices in a polygon feature.
 
+<<<<<<< HEAD
 .. seealso:: :ref:`qgischeckgeometryduplicatenodes`, :ref:`qgis removeduplicatevertices`
 >>>>>>> aa43aa0564 (Apply suggestions from code review)
+=======
+.. seealso:: :ref:`qgischeckgeometryduplicatenodes`, :ref:`qgisremoveduplicatevertices`
+>>>>>>> e11a4c07db (Edit documentation and replace images)
 
 Parameters
 ..........
