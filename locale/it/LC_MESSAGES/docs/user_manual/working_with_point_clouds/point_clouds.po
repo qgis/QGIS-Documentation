@@ -71,6 +71,22 @@ msgstr ""
 msgid "**Supported Formats**"
 msgstr "**Formati supportati**"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:31
+msgid ""
+"QGIS supports the data formats Entwine Point Tile (EPT) and LAS/LAZ. To work"
+" with point clouds, QGIS always saves the data in EPT. EPT is a storage "
+"format that consists of several files stored in a common folder. To allow "
+"quick access to the data, EPT uses indexing. For more information on the EPT"
+" format, see `entwine homepage <https://entwine.io/en/latest/entwine-point-"
+"tile.html>`_"
+msgstr ""
+"QGIS supporta i formati di dati Entwine Point Tile (EPT) e LAS/LAZ. Per "
+"lavorare con nuvole di punti, QGIS salva sempre i dati in EPT. L'EPT è un "
+"formato di archiviazione che consiste in diversi file memorizzati in una "
+"cartella comune. Per consentire un accesso rapido ai dati, EPT utilizza "
+"l'indicizzazione. Per ulteriori informazioni sul formato EPT, vedere "
+"`entwine homepage <https://entwine.io/en/latest/entwine-point-tile.html>`_"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:37
 msgid ""
 "If the data is in LAS or LAZ format, QGIS will convert it to EPT when it is "
@@ -124,6 +140,16 @@ msgstr ""
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:796
 msgid "identify"
 msgstr "identify"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:57
+msgid ""
+"If you want to create a new layer, in the same or another supported format, "
+"from an existing point cloud layer, see :ref:`Creating new layers from an "
+"existing layer <general_saveas>`."
+msgstr ""
+"Se vuoi creare un nuovo layer, nello stesso formato o in un altro formato "
+"supportato, da un layer di nuvola di punti esistente, vedere :ref:`Creating "
+"new layers from an existing layer <general_saveas>`."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:64
 msgid "Point Clouds Properties"
@@ -272,6 +298,21 @@ msgid ""
 msgstr ""
 "Generale, come il nome del progetto, il percorso del sorgente, l'ora e la "
 "dimensione dell'ultimo salvataggio, il provider utilizzato."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:110
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties may include "
+":ref:`layer notes <layer_notes>`. More properties can be created and managed"
+" using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"proprietà personalizzate, utilizzate per memorizzare nel progetto attivo "
+"informazioni aggiuntive sul layer.  Le proprietà personalizzate predefinite "
+"possono includere :ref:`layer notes <layer_notes>`. Altre proprietà possono "
+"essere create e gestite utilizzando PyQGIS, in particolare attraverso il "
+"metodo :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>`."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:114
 msgid "Based on the provider of the layer: extent and number of points"
@@ -596,9 +637,20 @@ msgid ""
 "ranges the values are located."
 msgstr ""
 "Se non conosci gli attributi della nuvola di punti, la scheda "
-"|basicStatistics| :guilabel:`Statistiche` :ref:`tab 1` fornisce una buona "
-"descrizione di quali attributi sono contenuti nella nuvola di punti e in "
-"quali intervalli si trovano i valori."
+"|basicStatistics| :guilabel:`Statistiche` :ref:`tab "
+"<point_clouds_statistics>` fornisce una buona descrizione di quali attributi"
+" sono contenuti nella nuvola di punti e in quali intervalli si trovano i "
+"valori."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:250
+msgid ""
+"For each renderer, you can improve the data display adjusting the "
+":ref:`point symbol size <pointsymbol_size>` or enabling :ref:`surface "
+"triangulation <pointcloud_rendersurface>`."
+msgstr ""
+"Per ogni  visualizzazione, puoi migliorare la visualizzazione dei dati "
+"regolando la :ref:`point symbol size <pointsymbol_size>` o abilitando "
+":ref:`surface triangulation <pointcloud_rendersurface>`."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:259
 msgid "Point cloud symbology tab"
@@ -901,6 +953,14 @@ msgstr ""
 "sviluppo. Se riscontri problemi con esso, dovresti usare l'impostazione "
 "predefinita :guilabel:`Stira a MinMax`."
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:382
+msgid ""
+"Example of RGB renderer (left) combined with surface triangulation option "
+"(right)"
+msgstr ""
+"Esempio di visualizzazione RGB (a sinistra) combinata con l'opzione di "
+"triangolazione della superficie (a destra)"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:388
 msgid "Classification Renderer"
 msgstr "Visualizzatore Classificazione"
@@ -938,6 +998,56 @@ msgstr ""
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:408
 msgid "The point cloud classification renderer"
 msgstr "Il visualizzatore classificazione delle nuvole di punti"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:410
+msgid ""
+"In the table all used values are displayed with the corresponding color and "
+"legend. At the beginning of each row there is a |checkbox| check box; if it "
+"is unchecked, this value is no longer shown on the map. With double click in"
+" the table, you can modify:"
+msgstr ""
+"Nella tabella sono visualizzati tutti i valori utilizzati con il "
+"corrispondente colore e legenda. All'inizio di ogni riga c'è una |checkbox| "
+"casella di controllo; se non è selezionata, questo valore non viene più "
+"mostrato sulla mappa. Con un doppio clic nella tabella, puoi modificare:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:415
+msgid "the :guilabel:`Color`: the :ref:`color-selector` widget opens"
+msgstr "il :guilabel:`Colore`: apre il widget :ref:`color-selector` "
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:416
+msgid ""
+"the :guilabel:`Size`: assigning a size of ``0`` to a category will revert it"
+" to use the default :ref:`point size <pointsymbol_size>` set for the layer"
+msgstr ""
+"la :guilabel:`Dimensione`: assegnando una dimensione ``0`` a una categoria, "
+"questa tornerà a utilizzare la dimensione predefinita :ref:`point size "
+"<pointsymbol_size>`  impostata per il layer"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:418
+msgid "the :guilabel:`Value`"
+msgstr "il :guilabel:`Valore`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:419
+msgid "the :guilabel:`Legend`"
+msgstr "la :guilabel:`Legenda`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:420
+msgid ""
+"the :guilabel:`Percentage` column will show you the representation of the "
+"category within the layer."
+msgstr ""
+"la colonna :guilabel:`Percentuale` ti mostrerà la rappresentazione della "
+"categoria all'interno del layer."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:423
+msgid ""
+"You can also right-click one or more rows to open a context menu with the "
+"options to change the color, opacity or point size."
+msgstr ""
+"Puoi anche fare clic con il tasto destro su una o più righe per aprire un "
+"menu contestuale con le opzioni per cambiare il colore, l'opacità o la "
+"dimensione del punto."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:426
 msgid ""
@@ -978,6 +1088,14 @@ msgstr ""
 "mouse su una voce di classe di un layer per configurare rapidamente la "
 "visibilità dei relativi elementi."
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:446
+msgid ""
+"Example of classification renderer (left) combined with surface "
+"triangulation option (right)"
+msgstr ""
+"Esempio di visualizzazione di classificazione (sinistra) combinata con "
+"l'opzione di triangolazione della superficie (destra)"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:451
 msgid "Point Symbol"
 msgstr "Simbolo Punto"
@@ -993,6 +1111,46 @@ msgstr ""
 "(ad esempio, millimetri, pixel, pollici) con cui viene visualizzato ciascun "
 "punto dati. È possibile selezionare :guilabel:`Cerchio` o "
 ":guilabel:`Quadrato` come stile per i punti."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:460
+msgid "Render as a surface (Triangulate)"
+msgstr "Visualizzaione come una superficie (Triangolare)"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:462
+msgid ""
+"Check |checkbox| :guilabel:`Render as surface (Triangulate)` to enable the "
+"triangulation of the point cloud layer in the 2D view. This option allows "
+"rendering triangles instead of points. Each point keeps its color for "
+"interpolation in the triangle. You can control the horizontal length of "
+"computed triangles:"
+msgstr ""
+"Scegli |checkbox| :guilabel:`Visualizza come una Superficie (Triangolare)` "
+"per abilitare la triangolazione del layer della nuvola di punti nella vista "
+"2D. Questa opzione consente di visualizzare triangoli anziché punti. Ogni "
+"punto mantiene il proprio colore per l'interpolazione nel triangolo. Puoi "
+"controllare la lunghezza orizzontale dei triangoli calcolati:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:467
+msgid ""
+"By checking the |checkbox| :guilabel:`Skip triangles longer than` option and"
+" setting up the threshold value, you can control the maximum lenght of a "
+"side of the triangles to consider in the horizontal plan. This can be "
+"particularly useful if you want to identify actual holes in the data."
+msgstr ""
+"Scegliendo l'opzione |checkbox| :guilabel:`Salta i triangoli più lunghi di` "
+"e impostando il valore della soglia, puoi controllare la lunghezza massima "
+"di un lato dei triangoli da considerare nel piano orizzontale. Questo può "
+"essere particolarmente utile se desideri identificare buchi effettivi nei "
+"dati."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:477
+msgid ""
+"Rendering data as a surface with map shading (left) and with map shading, "
+"filtering large triangles (right)"
+msgstr ""
+"Visualizzazione dei dati come superficie con ombreggiatura della mappa (a "
+"sinistra) e con ombreggiatura della mappa, filtrando triangoli grandi (a "
+"destra)"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:481
 msgid "Layer Rendering"
@@ -1342,6 +1500,27 @@ msgstr ""
 "regolare l'elevazione dei dati nelle mappe 3D e la loro visualizzazione nei "
 "grafici degli strumenti del profilo dell'elevazione :ref:`profile tool "
 "charts <label_elevation_profile_view>`. Ci sono le seguenti opzioni:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:626
+msgid ""
+":guilabel:`Vertical Reference System`: If the CRS of your point cloud layer "
+"is a compound one (including a Z dimension), then the vertical CRS used for "
+"the layer will be automatically derived from the vertical component of the "
+"layer's CRS. In this case, you cannot manually set a different vertical CRS,"
+" and the option to change it will be disabled. If your point cloud layer "
+"uses a horizontal (2D) CRS (though uncommon), you can manually select a "
+"specific vertical CRS by clicking on the |setProjection|:sup:`Select CRS`. "
+"Vertical reference systems are supported for point cloud layers in:"
+msgstr ""
+":guilabel:`Sistema di riferimento verticale`: Se il SR del tuo layer di "
+"nuvola di punti è composto (inclusa una dimensione Z), il SR verticale "
+"utilizzato per il layer sarà automaticamente derivato dalla componente "
+"verticale del SR del layer. In questo caso, non puoi impostare manualmente "
+"un SR verticale diverso, e l'opzione per modificarlo sarà disabilitata. Se "
+"il tuo layer di nuvola di punti utilizza un SR orizzontale (2D) (anche se "
+"raro), puoi selezionare manualmente un SR verticale specifico facendo clic "
+"su |setProjection|:sup:`Seleziona SR`. I sistemi di riferimento verticale "
+"sono supportati per i layer di nuvola di punti in:"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:634
 msgid ":ref:`Elevation profiles <label_elevation_profile_view>`"
