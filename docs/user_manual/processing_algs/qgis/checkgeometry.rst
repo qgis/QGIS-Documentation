@@ -459,3 +459,123 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+.. _qgischeckgeometrycontained:
+
+Features inside polygon
+-----------------------
+
+Checks the input geometries contained in the polygons from the polygon layers list.
+A polygon layer can be checked against itself.
+
+.. figure:: img/check_geometry_featuresinsidepolygon.png
+   :align: center
+
+   Reporting errors on features inside a polygon.
+
+.. .. seealso:: :ref:`qgisfixgeometrydeletefeatures`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: geometry]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Polygon layers**
+     - ``POLYGONS``
+     - [vector: polygon][list]
+     - List of polygon layers to check against.
+   * - **Errors from contained features**
+     - ``OUTPUT``
+     - [vector: same as input]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer contained within the checked polygons.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+   * - **Contained features**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Point layer representing the contained features.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Contained features**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information
+       (the ID and name of the input layer, the geometry part,
+       ring and vertex index of the erroneous feature,
+       x and y coordinates of the error and the index of the polygon containing the feature).
+   * - **Errors from contained features**
+     - ``OUTPUT``
+     - [vector: same as input]
+     - Output layer contained within the checked polygons.
+       Additional fields are added (see ``ERRORS`` output).
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrycontained``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
