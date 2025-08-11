@@ -162,7 +162,7 @@ Splits self-intersecting geometries based on an error layer from the
 .. figure:: img/fix_geometry_splitselfintersectinggeometries.png
    :align: center
 
-   Fixing reported errors on a feature for self-intersections.
+   Comparison between input layer, multi-object fix, and single-object fix geometries.
 
 .. seealso:: :ref:`qgischeckgeometryselfintersections`
 
