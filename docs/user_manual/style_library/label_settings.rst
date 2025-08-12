@@ -895,7 +895,7 @@ the |dataDefine| :sup:`Data-defined override` button.
 Choose unit from the unit selector, and there you can also :ref:`adjust scaling range <unit_selector>`.
 
 Duplicated Labels
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 Use |checkbox| :guilabel:`Avoid duplicate labels` to improve label appearance in situations like road networks,
 where features such as dual carriageways or service roads can result in many identical labels appearing close together.
