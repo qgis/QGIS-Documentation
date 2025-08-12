@@ -3189,6 +3189,140 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+.. _qgisrasterrank:
+
+Raster rank
+----------------
+|344|
+
+Performs a cell-by-cell analysis in which output values match
+the rank of a sorted list of overlapping cell values from input layers.
+The output raster will be multi-band if multiple ranks are provided.
+If multiband rasters are used in the data raster stack,
+the algorithm will always perform the analysis on the first band of the rasters.
+
+.. seealso:: :ref:`qgiscellstackpercentrankfromvalue`, :ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromrasterlayer`, :ref:`qgiscellstatistics`, :ref:`qgisrastercalc`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT_RASTERS``
+     - [raster] [list]
+     - Input raster layer(s) to calculate the rank from.
+   * - **Rank**
+     - ``RANKS``
+     - [numeric: integer] [list]
+
+       Default: [1]
+     - List of ranks to calculate for each pixel in the sorted list of cells values
+       from the input rasters.
+       Cells whose values match the given rank(s) are kept in the output layer.
+       The ranks are 1-based, meaning that the first rank is 1.
+       Negative values are also supported.
+   * - **NoData value handling**
+     - ``NODATA_HANDLING``
+     - [enumeration]
+
+       Default: 0
+     - Choose how to handle NoData values in the input raster:
+
+       * 0 --- Exclude NoData from values lists: will not include NoData values in the list of pixel values when calculating ranks.
+       * 1 --- Presence of NoData in a values list results in NoData output cells: the output raster will have NoData values in the corresponding locations.
+   * - **Ranked**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster containing the rank values.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output extent**
+
+       Optional
+     - ``EXTENT``
+     - [extent]
+     - Specify the spatial extent of the output raster layer.
+       If the extent is not specified, the minimum extent that covers
+       all the selected reference layers will be used.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
+   * - **Output cell size**
+
+       Optional
+     - ``CELL_SIZE``
+     - [numeric: double]
+     - Cell size of the output raster layer.
+       If the cell size is not specified, the minimum cell size of
+       the selected reference layer(s) will be used.
+       The cell size will be the same for the X and Y axes.
+   * - **Output CRS**
+
+       Optional
+     - ``CRS``
+     - [crs]
+     - CRS of the output raster layer.
+       If the output CRS is not specified, the CRS of the first
+       reference layer will be used.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Ranked**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:rasterrank``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisrastersurfacevolume:
 
 Raster surface volume
@@ -4214,7 +4348,6 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-
 .. |gaussian_formula| image:: img/fuzzy_gaussian_formula.png
    :height: 1.5em
 .. |fuzzy_large_formula| image:: img/fuzzy_large_formula.png
@@ -4227,3 +4360,12 @@ Python code
    :height: 4.4em
 .. |small_formula| image:: img/fuzzy_small_formula.png
    :height: 3.2em
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |344| replace:: ``NEW in 3.44``

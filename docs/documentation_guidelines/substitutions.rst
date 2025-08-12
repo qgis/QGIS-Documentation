@@ -359,7 +359,7 @@ Icon                            Substitution                        Icon        
 |codeEditor|                    ``|codeEditor|``                    |add|                           ``|add|``
 |relations|                     ``|relations|``                     |layoutItem3DMap|               ``|layoutItem3DMap|``
 |stopwatch|                     ``|stopwatch|``                     |sensor|                        ``|sensor|``
-|clearItem|                     ``|clearItem|``
+|clearItem|                     ``|clearItem|``                     |warning|                       ``|warning|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -1718,6 +1718,8 @@ Icon                            Substitution                        Icon        
 .. |voronoi| image:: /static/common/mAlgorithmVoronoi.png
    :width: 1.5em
 .. |vrt| image:: /static/common/vrt.png
+   :width: 1.5em
+.. |warning| image:: /static/common/mIconWarning.png
    :width: 1.5em
 .. |warp| image:: /static/common/warp.png
    :width: 1.5em

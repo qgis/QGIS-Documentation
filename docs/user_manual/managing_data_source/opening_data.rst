@@ -1274,6 +1274,8 @@ To load a layer from a database, you can perform the following steps:
 
 #. Open the corresponding tab of the database in the :guilabel:`Data Source Manager` dialog.
 #. Choose the connection name from the drop-down list and press :guilabel:`Connect`.
+#. The table below will be filled with your data grouped by schema,
+   with a number of metadata information helpful for loading.
 #. Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`.
 #. Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the
    list of tables to those matching your search. You can also set this option
@@ -1282,6 +1284,27 @@ To load a layer from a database, you can perform the following steps:
 #. Find the layer(s) you wish to add in the list of available layers.
 #. Select it by clicking on it. You can select multiple layers by holding
    down the :kbd:`Shift` or :kbd:`Ctrl` key while clicking.
+
+   Layers can be selected only if they have no |warning| warning icon
+   at the left-hand side of their first column.
+   This may indicate an issue to detect:
+
+   * features geometry type: in which case you can select the appropriate one
+     in the drop-dowmn list of the :guilabel:`Spatial Type` column
+   * layer CRS: you can enter the correct code in the :guilabel:`SRID` column
+   * layer's primary key, in order to unequivocally identify each feature:
+     this can be fixed by selecting one or more attributes in the drop-down list
+     at the corresponding :guilabel:`Feature id` column.
+
+     .. tip:: **Use the first column to store "primary keys" for views**
+
+       Since PostgreSQL views don't support primary keys, a unique attribute or
+       combination of attributes should always be selected. To help users to speed-up
+       workflows, QGIS automatically selects the first attribute in the view. Therefore,
+       users can define their views in a way that a unique column is in the first position
+       of the view's definition. In this way, the view will be loaded with no extra
+       interaction and the warning icon will never appear.
+
 #. If applicable, use the :guilabel:`Set Filter` button (or double-click
    the layer) to start the :guilabel:`Query Builder` dialog (see section
    :ref:`vector_query_builder`) and define which features to load from the
@@ -1300,7 +1323,6 @@ To load a layer from a database, you can perform the following steps:
    :align: center
 
    Add PostgreSQL Table(s) Dialog
-
 
 .. tip:: **Use the Browser Panel to speed up loading of database table(s)**
 
@@ -1777,6 +1799,8 @@ or :guilabel:`Load Connection` from an XML file.
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |vectorTileLayer| image:: /static/common/mIconVectorTileLayer.png
+   :width: 1.5em
+.. |warning| image:: /static/common/mIconWarning.png
    :width: 1.5em
 .. |wcs| image:: /static/common/mIconWcs.png
    :width: 1.5em

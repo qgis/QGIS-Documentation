@@ -492,6 +492,8 @@ Attributes are not checked, so in case two features have identical
 geometries but different attributes, only one of them will be added to
 the result layer.
 
+Optionally, these duplicate records can be saved to a separate output for analysis.
+
 .. note::
  This algorithm does not require valid geometries as input.
 
@@ -519,11 +521,25 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output layer. :ref:`One of <output_parameter_widget>`:
+     - Specify the output layer containing the unique features.
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
+   * - **Duplicates**
+
+       Optional
+     - ``DUPLICATES``
+     - [same as input]
+
+       Default: ``[Skip output]``
+     - Specify the output layer containing only the discarded duplicates.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
 Outputs
 ..........
@@ -531,11 +547,16 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
+   :class: longtable
 
    * - Label
      - Name
      - Type
      - Description
+   * - **Duplicates**
+     - ``DUPLICATES``
+     - [same as input]
+     - Vector layer containing the duplicate features.
    * - **Count of discarded duplicate records**
      - ``DUPLICATE_COUNT``
      - [numeric: integer]
@@ -563,10 +584,8 @@ Python code
 
 Delete duplicates by attribute
 -----------------------------------
-Deletes duplicate rows by only considering the specified field
-/ fields.
-The first matching row will be retained, and duplicates will be
-discarded.
+Deletes duplicate rows by only considering the specified field(s).
+The first matching row will be retained, and duplicates will be discarded.
 
 Optionally, these duplicate records can be saved to a separate
 output for analysis.
@@ -634,15 +653,9 @@ Outputs
      - Type
      - Description
    * - **Filtered (duplicates)**
-
-       Optional
      - ``DUPLICATES``
      - [same as input]
-     
-       Default: ``[Skip output]``
-     - Vector layer containing the removed features.
-       Will not be produced if not specified (left as
-       ``[Skip output]``).
+     - Vector layer containing the duplicate features.
    * - **Count of discarded duplicate records**
      - ``DUPLICATE_COUNT``
      - [numeric: integer]
