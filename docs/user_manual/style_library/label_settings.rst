@@ -885,6 +885,24 @@ Common placement settings
 
 Some label placement settings are available for all layer geometry types:
 
+Label Spacing
+^^^^^^^^^^^^^
+
+The :guilabel:`Label Spacing` option allows you to set the margin around the label,
+preventing all other labels from being placed within that area.
+You can dinamically control :guilabel:`Mergin around label` using
+the |dataDefine| :sup:`Data-defined override` button.
+Choose unit from the unit selector, and there you can also :ref:`Adjust scaling range <unit_selector>`.
+
+Duplicated Labels
+^^^^^^^^^^^^^^^^
+
+Use |checkbox| :guilabel:`Avoid duplicate labels` to improve label appearance in situations like road networks,
+where features such as dual carriageways or service roads can result in many identical labels appearing close together.
+When active, it prevents placing labels with the exact same text (case-sensitive)
+closer than the minimum distance defined in the :guilabel:`Settings...` option.
+The setting applies across layers, so duplicate text from any layer will be considered.
+
 Geometry Generator
 ^^^^^^^^^^^^^^^^^^
 
