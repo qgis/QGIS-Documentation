@@ -163,9 +163,9 @@ Deletes error features based on an error layer from the check geometry algorithm
 
    Before and after deleting features with errors.
 
-.. seealso:: :ref:`qgischeckgeometryduplicatedgeometries`
-             :ref:`qgischeckgeometrydegeneratepolygons`
-             :ref:`qgischeckgeometryfeaturesinsidepolygon`
+.. .. seealso:: :ref:`qgischeckgeometryduplicatedgeometries`
+..              :ref:`qgischeckgeometrydegeneratepolygons`
+..              :ref:`qgischeckgeometryfeaturesinsidepolygon`
 
 Parameters
 ..........
@@ -184,7 +184,7 @@ Basic parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: point, line, polygon]
+     - [vector: geometry]
      - Layer with the geometries to fix, same as input in the check algorithm.
    * - **Error layer**
      - ``ERRORS``
@@ -197,7 +197,7 @@ Basic parameters
        as set in the check algorithm.
    * - **Cleaned layer**
      - ``OUTPUT``
-     - [vector: point, line, polygon]
+     - [vector: same as input]
 
        Default: ``[Create temporary layer]``
      - Specification of the output layer containing fixed features.
@@ -235,12 +235,13 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied
-       (the ID and name of the input layer, the ID, geometry part, ring and vertex index of the erroneous feature,
-       x and y coordinates, identifier for the erroneous geometry, the applied fix and its successfulness).
+       (the ID and name of the input layer, the geometry part, ring and vertex index of the erroneous feature,
+       x and y coordinates, index of the error geometry containing the feature, the applied fix and its successfulness).
    * - **Cleaned layer**
      - ``OUTPUT``
-     - [vector: point, line, polygon]
-     - Output layer with the geometry fix applied to the input features.
+     - [vector: same as input]
+     - Output layer with features removed based on detected errors.
+       Additional fields are added (see ``REPORT`` output).
 
 Python code
 ...........
