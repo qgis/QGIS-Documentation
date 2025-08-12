@@ -2947,7 +2947,10 @@ Outputs
        - ``vertex_part_ring``: for polygon geometries, this indicates whether the vertex belongs to the outer ring (0) or one of the inner rings (1, 2, ...).
        - ``vertex_part_index``: is the index of a vertex in a specific ring.
        - ``distance``: the distance from the previous vertex.
-       - ``angle``: the angle (in degrees) between the previous and the current vertex.
+       - ``angle``: returns approximate angle at a vertex. 
+         Usually the average angle between adjacent segments,
+         and can be pictured as the orientation of a line following
+         the curvature of the geometry at the specified vertex.
 
 Python code
 ...........
