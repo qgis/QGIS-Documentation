@@ -1384,6 +1384,16 @@ msgstr ":guilabel:`Offset dall'elemento`"
 msgid "All"
 msgstr "All"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:590
+msgid ""
+"Controls the distance from the feature (or its anchor point if a polygon) "
+"where callout lines end. E.g., this avoids drawing lines right up against "
+"the edges of the features."
+msgstr ""
+"Controlla la distanza dall'elemento (o dal suo punto di ancoraggio se si "
+"tratta di un poligono) in cui terminano le linee di richiamo. Ad esempio, "
+"questo evita di disegnare linee proprio contro i bordi degli elementi."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:594
 msgid ":guilabel:`Feature anchor point`"
 msgstr ":guilabel:`Punto di ancoraggio elemento`"
@@ -1410,6 +1420,21 @@ msgstr ":guilabel:`Punto su Superficie`"
 #: ../../docs/user_manual/style_library/label_settings.rst:602
 msgid ":guilabel:`End point marker`"
 msgstr ":guilabel:Centroide`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:602
+msgid ""
+"A :ref:`marker symbol <vector_marker_symbols>` with full display "
+"capabilities including layer effects, data-defined, ... for rendering a "
+"marker symbol below the endpoint of the balloon callout."
+msgstr ""
+"Un :ref:`marker symbol <vector_marker_symbols>` con funzionalità di "
+"visualizzazione complete, inclusi effetti layer, dati definiti, ... per la "
+"visualizzaione di un simbolo sotto il punto finale della linea di richiamo "
+"del fumetto."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:606
+msgid ":guilabel:`Blend mode`"
+msgstr ":guilabel:`Moadlità fusione`"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:606
 msgid "Controls the :ref:`blending <blend-modes>` of the callout."
@@ -1501,6 +1526,70 @@ msgstr ""
 "dai dati o quando si usano diversi simboli in una rappresentazione "
 ":ref:`categorized <categorized_renderer>`."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:648
+msgid ""
+"within a :guilabel:`Maximum Distance` from the feature, which is an optional"
+" setting that allows you to control how far a label can be placed from the "
+"feature it's labeling. This works alongside the :guilabel:`Distance` setting"
+" to create a range for label placement, adding flexibility to position "
+"labels more effectively, especially on busy maps, ensuring they fit neatly "
+"around their corresponding features."
+msgstr ""
+"entro una :guilabel:`Distanza massima` dall'elemento, un'impostazione "
+"facoltativa che consente di controllare la distanza massima di "
+"posizionamento di un'etichetta dall'elemento che si sta etichettando. Questa"
+" impostazione, insieme all'impostazione :guilabel:`Distanza`, crea un "
+"intervallo per il posizionamento delle etichette, aggiungendo flessibilità "
+"per posizionare le etichette in modo più efficace, soprattutto su mappe "
+"molto affollate, garantendo che si adattino perfettamente agli elementi "
+"corrispondenti."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:653
+msgid ""
+"using the :guilabel:`Prioritize Placement` option, which decides what's more"
+" important when placing labels. There are two options:"
+msgstr ""
+"Utilizzando l'opzione :guilabel:`Privilegi posizionamento`, che stabilisce "
+"cosa è più importante quando si posizionano le etichette. Ci sono due "
+"opzioni:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:656
+msgid ""
+":guilabel:`Prefer closer labels`: By default, labels are kept close to the "
+"feature."
+msgstr ""
+":guilabel:`Preferisci Etichette Più Vicine`: per impostazione predefinita, "
+"le etichette vengono mantenute vicine all'elemento."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:657
+msgid ""
+":guilabel:`Prefer position ordering`: The label will try to stay in a "
+"specific position (like top left or top right), even if it's a bit farther "
+"away from the feature. The label only moves to other positions if there's no"
+" room within the maximum distance at your preferred position."
+msgstr ""
+":guilabel:`Preferenza Ordinamento Posizione`: l'etichetta tenterà di "
+"rimanere in una posizione specifica (ad esempio in alto a sinistra o in alto"
+" a destra), anche se è leggermente più lontana dall'elemento. L'etichetta si"
+" sposta in altre posizioni solo se non c'è spazio entro la distanza massima "
+"dalla posizione preferita."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:661
+msgid ""
+"following a :guilabel:`Position priority` which dictates placement "
+"candidates for anchoring labels around and (centered) over the point "
+"feature, and the order in which the positions are tested. The default order,"
+" based on `guidelines from Krygier and Wood (2011) "
+"<https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_"
+" and other cartographic textbooks, is as follows:"
+msgstr ""
+"seguendo una :guilabel:`Priorità della posizione` che definisce il "
+"posizionamento delle etichette di ancoraggio attorno e (centrate) sopra "
+"l'elemento puntuale, e l'ordine in cui le posizioni vengono testate. "
+"L'ordine predefinito, basato sulle `guidelines from Krygier and Wood (2011) "
+"<https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_"
+" e altri manuali di cartografia, è il seguente:"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:668
 msgid "top right"
 msgstr "in alto a destra"
@@ -1533,9 +1622,39 @@ msgstr "in alto, leggermente a destra"
 msgid "bottom, slightly left."
 msgstr "in alto, leggermente a sinistra."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:677
+msgid ""
+"Using the |dataDefine| :sup:`Data-defined override` button, you can provide "
+"a comma separated list of placements in order of priority. This also allows "
+"only certain placements to be used, for certain features only, so e.g., for "
+"coastal features you can prevent labels being placed over the land."
+msgstr ""
+"Utilizzando il pulsante |dataDefine| :sup:`Sovrascrittura definita dai "
+"dati`, puoi fornire un elenco separato da virgole di posizioni in ordine di "
+"priorità. Questo consente anche di utilizzare solo alcune posizioni, solo "
+"per determinati elementi, quindi, ad esempio, per gli elementi costieri puoi"
+" impedire che le etichette siano posizionate sulla terraferma."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1064
 msgid "dataDefine"
 msgstr "dataDefine"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:682
+msgid ""
+":guilabel:`Around Point`: labels are placed in a circle around the feature "
+"with an equal radius set in :guilabel:`Distance`. Additionally you can set "
+":guilabel:`Maximum Distance` from the feature, to control how far a label "
+"can be placed from the feature it's labeling. The placement priority is "
+"clockwise from the \"top right\". The position can be constrained using the "
+"data-defined :guilabel:`Quadrant` option."
+msgstr ""
+":guilabel:'Intorno al punto': le etichette sono posizionate in un cerchio "
+"attorno all'elemento con un raggio uguale impostato in :guilabel:'Distanza'."
+" Inoltre puoi impostare :guilabel:'Distanza massima' dall'elemento, per "
+"controllare quanto lontano un'etichetta può essere posizionata dall'elemento"
+" che sta etichettando. La priorità di posizionamento è in senso orario a "
+"partire dall'alto a destra. La posizione può essere vincolata utilizzando "
+"l'opzione definita dai dati :guilabel:'Quadrante'."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:689
 msgid ""
@@ -2022,15 +2141,52 @@ msgstr ""
 
 #: ../../docs/user_manual/style_library/label_settings.rst:878
 msgid ":guilabel:`Horizontal`: it can be **Left**, **Center** or **Right**"
-msgstr ":guilabel:`Orizzontale`: può essere **Left**, **Center** or **Right**"
+msgstr ""
+":guilabel:`Orizzontale`: può essere **A sinistra**, **Al centro** or **A "
+"destra**"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:879
 msgid ""
 "the text :guilabel:`Vertical`: it can be **Bottom**, **Base**, **Half**, "
 "**Cap** or **Top**"
 msgstr ""
-"il testo :guilabel:`Verticale`: può essere **Bottom**, **Base**, **Half**, "
-"**Cap** o **Top**"
+"il testo :guilabel:`Verticale`: può essere **In fondo**, **In basso**, **A "
+"metà**, **Sopra** o **In alto**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:881
+msgid ""
+"the text :guilabel:`Rotation`. Rotation is defined as clockwise angle with "
+"0° pointing in the direction of East for ``Horizontal`` oriented text and "
+"with 0° pointing in North direction for ``Vertical`` oriented text. "
+"Different units can be defined for the labeling rotation (e.g. ``degrees``, "
+"``minutes of arc``, ``turns``). QGIS prioritizes screen display rotation "
+"angles by default and always rotates text to be most readable on screen, so "
+"\"upside-down\" rotation angles are overridden while rendering. To change "
+"this behavior and force QGIS to render exact data-defined rotation angles "
+"there is an option in |render| :guilabel:`Rendering` tab, under "
+":guilabel:`Show upside-down labels`. Check the :guilabel:`Preserve data "
+"rotation values` entry if you want to keep the rotation value in the "
+"associated field and apply it to the label, whether the label is pinned or "
+"not. If unchecked, unpinning the label rotation is reset and its value "
+"cleared from the attribute table."
+msgstr ""
+"il testo :guilabel:'Rotazione'. La rotazione è definita come angolo in senso"
+" orario con 0° che punta in direzione est per il testo orientato "
+"''Orizzontale'' e con 0° che punta in direzione nord per il testo orientato "
+"''Verticale''. È possibile definire diverse unità di misura per la rotazione"
+" dell'etichettatura (ad esempio ''gradi'', ''minuti d'arco'', ''giri''). "
+"QGIS dà la priorità agli angoli di rotazione dello schermo per impostazione "
+"predefinita e ruota sempre il testo per renderlo più leggibile sullo "
+"schermo, quindi gli angoli di rotazione \"capovolti\" vengono sovrascritti "
+"durante la visualizzazione. Per cambiare questo comportamento e forzare QGIS"
+" a visualizzare angoli di rotazione esatti definiti dai dati, c'è un'opzione"
+" nella scheda |render| :guilabel:'Visualizzazione', sotto :guilabel:'Mostra "
+"etichette capovolte'. Controlla la voce :guilabel:'Preserva i valori di "
+"rotazione dei dati' se vuoi mantenere il valore di rotazione nel campo "
+"associato e applicarlo all'etichetta, indipendentemente dal fatto che "
+"l'etichetta sia bloccata o meno. Se questa opzione non è selezionata, la "
+"rimozione della rotazione dell'etichetta viene reimpostata e il relativo "
+"valore viene cancellato dalla tabella degli attributi."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1094
 msgid "render"
@@ -2298,6 +2454,43 @@ msgstr ""
 "Con le espressioni definite dai dati in :guilabel:`Mostra etichetta` e "
 ":guilabel:`Mostra sempre` puoi mettere a punto quali etichette devono essere"
 " rappresentate."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1001
+msgid ""
+"Allow to :guilabel:`Show upside-down labels`: alternatives are **never**, "
+"**when rotation defined** or **always**."
+msgstr ""
+"Abilita :guilabel:`Mostra le etichette capovolte`: le alternative sono "
+"**mai**, **quando la rotazione è definita** o **sempre**."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1004
+msgid "**never** - default setting, screen readability is prioritized,"
+msgstr ""
+"**mai** - impostazione predefinita, la leggibilità dello schermo è "
+"prioritaria,"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1006
+msgid ""
+"**when rotation defined** - label rotation should be defined under "
+"|labelplacement| :guilabel:`Placement` tab, within the :guilabel:`Data "
+"Defined` group"
+msgstr ""
+"**quando la rotazione è definita** - la rotazione dell'etichetta dovrebbe "
+"essere definita nella scheda |labelplacement| :guilabel:`Posizionamento`, "
+"all'interno del gruppo :guilabel:`Dati definiti`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1009
+msgid "**always** - upside-down labels are allowed"
+msgstr "**sempre** - sono consentite le etichette capovolte"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1016
+msgid ""
+"Data defined label rotation with show upside-down labels option set to: "
+"\"never\" (left), \"when rotation defined\" (right)"
+msgstr ""
+"Rotazione delle etichette definita dai dati con l'opzione mostra etichette "
+"capovolte impostata su: \"mai\" (sinistra), \"quando definita la rotazione\""
+" (destra)"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1018
 msgid ""
