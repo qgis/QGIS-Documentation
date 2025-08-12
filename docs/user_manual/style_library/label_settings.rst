@@ -892,7 +892,7 @@ The :guilabel:`Label Spacing` option allows you to set the margin around the lab
 preventing all other labels from being placed within that area.
 You can dinamically control :guilabel:`Mergin around label` using
 the |dataDefine| :sup:`Data-defined override` button.
-Choose unit from the unit selector, and there you can also :ref:`Adjust scaling range <unit_selector>`.
+Choose unit from the unit selector, and there you can also :ref:`adjust scaling range <unit_selector>`.
 
 Duplicated Labels
 ^^^^^^^^^^^^^^^^
