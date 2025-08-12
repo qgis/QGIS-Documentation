@@ -2844,6 +2844,16 @@ Outputs
      - [vector: point]
      - The output (point) vector layer containing the specified
        vertices from the input layer geometries.
+       Other than the input attributes, the output layer also contains the following fields:
+
+       - ``vertex_pos``: the index of the vertex in the geometry, as requested by the user.
+       - ``vertex_index``: the index of the vertex within the geometry. The first vertex is indexed as 0.
+       - ``vertex_part``: the part number of the geometry that the vertex belongs to. For single-part geometries, this is always 0.
+         For multi-part geometries (e.g. MultiPolygon or MultiLine), this indicates which part the vertex comes from.
+       - ``vertex_part_ring``: for polygon geometries, this indicates whether the vertex belongs to the outer ring (0) or one of the inner rings (1, 2, ...).
+       - ``vertex_part_index``: the index of the vertex in its specific ring (outer or inner).
+       - ``distance``: the cumulative length of line segments from the first vertex of the geometry.
+       - ``angle``: the angle (in degrees) between the previous and the current vertex.
 
 Python code
 ...........
@@ -2929,6 +2939,18 @@ Outputs
      - [vector: point]
      - The output (point) vector layer containing the vertices from
        the input layer geometries.
+       Other than the input attributes, the output layer also contains the following fields:
+       
+       - ``vertex_index``: the index of the vertex within its part. The first vertex is indexed as 0.
+       - ``vertex_part``: the part number of the geometry that the vertex belongs to. For single-part geometries, this is always 0.
+         For multi-part geometries (e.g. MultiPolygon or MultiLine), this indicates which part the vertex comes from.
+       - ``vertex_part_ring``: for polygon geometries, this indicates whether the vertex belongs to the outer ring (0) or one of the inner rings (1, 2, ...).
+       - ``vertex_part_index``: is the index of a vertex in a specific ring.
+       - ``distance``: the distance from the previous vertex.
+       - ``angle``: returns approximate angle at a vertex. 
+         Usually the average angle between adjacent segments,
+         and can be pictured as the orientation of a line following
+         the curvature of the geometry at the specified vertex.
 
 Python code
 ...........
@@ -5731,10 +5753,10 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Rotated**
+   * - **Roundness**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer with roundness value in a field
+     - The output vector layer with ``roundness`` value in a field
 
 Python code
 ...........
