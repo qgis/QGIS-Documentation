@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-31 09:36+0200\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1564,6 +1564,25 @@ msgstr ""
 "persistenti nella selezione, quindi quando si esegue un'operazione, la "
 "selezione rimane attiva per questa funzione e per questo strumento."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:611
+msgid "**Drawing a series of new vertices**"
+msgstr "**Disegnare una serie di nuovi vertici**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:613
+msgid ""
+"The vertex tool does not support :ref:`automatic tracing <tracing>` and is "
+"optimized for editing individual vertices and moving or deleting an "
+"arbitrary selection of multiple vertices.  Try using the "
+"|reshape|:sup:`Reshape Features` tool when you need to replace or insert a "
+"series of new vertices, especially if you want to trace other features."
+msgstr ""
+"Lo strumento Vertice non supporta il :ref:`automatic tracing <tracing>`  ed "
+"è ottimizzato per la modifica di singoli vertici e per lo spostamento o "
+"l'eliminazione di una selezione arbitraria di più vertici. Prova a "
+"utilizzare lo strumento |reshape|:sup:`Modifica Forma` quando devi "
+"sostituire o inserire una serie di nuovi vertici, soprattutto se vuoi "
+"tracciare altre feature."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2331
 msgid "reshape"
 msgstr "reshape"
@@ -2969,6 +2988,34 @@ msgstr ""
 "seleziona l'oggetto nella tabella degli attributi e digitalizza la nuova "
 "geometria con lo strumento |addPart| :sup:`Aggiungi parte`."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1190
+msgid "**Order of vertices in polygon parts**"
+msgstr "**Ordine dei vertici nelle parti del poligono**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1192
+msgid ""
+"Unlike the OGC standards, QGIS doesn't constrain vertices of the exterior "
+"boundary of a polygon feature to be ordered counterclockwise. Thus, you can "
+"find both directions in a layer. However, every parts of the same "
+"multipolygon feature will have their outer vertices ordered following the "
+"same direction."
+msgstr ""
+"A differenza degli standard OGC, QGIS non impone l'ordinamento antiorario "
+"dei vertici del contorno esterno di un elemento poligonale. Pertanto, è "
+"possibile trovare entrambe le direzioni in un layer. Tuttavia, ogni parte "
+"dello stesso elemento multipoligonale avrà i vertici esterni ordinati nella "
+"stessa direzione."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1198
+msgid ""
+"You can however use the :ref:`qgisforcerhr` algorithm to constrain features "
+"of a layer to have vertices of their outer boundaries ordered in the "
+"clockwise direction."
+msgstr ""
+"Tuttavia, puoi utilizzare l'algoritmo :ref:`qgisforcerhr` per vincolare gli "
+"elementi di un layer ad avere i vertici dei loro confini esterni ordinati in"
+" senso orario."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1208
 msgid ""
 "The |deletePart| :sup:`Delete Part` tool allows you to delete parts from "
@@ -2998,6 +3045,66 @@ msgstr ""
 "esistente è possibile digitalizzare ulteriori poligoni che si presentano "
 "come un 'buco', quindi rimane solo l'area tra i confini dei poligoni esterni"
 " e interni come un poligono bucato."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1227
+msgid "To add a ring:"
+msgstr "Per aggiungere un anello interno:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1229
+msgid "Select the feature(s) to modify"
+msgstr "Seleziona Elemento(i) da modificare"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1230
+msgid "Activate the |addRing| :sup:`Add Ring` tool"
+msgstr "Attiva lo strumento |addRing| :sup:`Aggiungi Buco`"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1231
+msgid ""
+"Draw a polygon within the selected geometries, using the aforementioned "
+":ref:`techniques <drawing_methods>`. A hole appears in the selected "
+"geometries."
+msgstr ""
+"Disegna un poligono all'interno delle geometrie selezionate, utilizzando le "
+":ref:`techniques <drawing_methods>` sopra menzionate. Appare un buco nelle "
+"geometrie selezionate."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1234
+msgid ""
+"If no geometry is selected when the ring is drawn, then a hole is added to "
+"each of the polygons the ring is drawn over."
+msgstr ""
+"Se non viene selezionata alcuna geometria quando si disegna l'anello, viene "
+"aggiunto un foro a ciascuno dei poligoni su cui è disegnato l'anello."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1237
+msgid "**Order of vertices in polygon rings**"
+msgstr "**Ordine dei vertici nei buchi nei poligoni**"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1239
+msgid ""
+"Unlike the OGC standards, QGIS doesn't constrain vertices of the exterior "
+"boundary of a polygon feature to be ordered counterclockwise. Thus, you can "
+"find both directions in a layer. However, every rings of the same "
+"(multi)polygon feature will have their vertices ordered in the opposite "
+"direction to the outer boundary's."
+msgstr ""
+"A differenza degli standard OGC, QGIS non impone l'ordinamento antiorario "
+"dei vertici del contorno esterno di un elemento poligonale. Pertanto, puoi "
+"trovare entrambe le direzioni in un layer. Tuttavia, ogni anello (buco) "
+"dello stesso elemento (multi)poligonale avrà i vertici ordinati nella "
+"direzione opposta a quella del contorno esterno."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1245
+msgid ""
+"You can however use the :ref:`qgisforcerhr` algorithm to constrain features "
+"of a layer to have vertices of their outer boundaries ordered in the "
+"clockwise direction, and vertices of their interior rings ordered in the "
+"counter-clockwise direction."
+msgstr ""
+"Tuttavia, puoi utilizzare l'algoritmo :ref:`qgisforcerhr` per vincolare gli "
+"elementi di un layer ad avere i vertici dei loro confini esterni ordinati in"
+" senso orario e i vertici dei loro anelli interni ordinati in senso "
+"antiorario."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1256
 msgid ""
@@ -3149,6 +3256,65 @@ msgstr ""
 msgid "Offset Curves"
 msgstr "Curve di Offset"
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1346
+msgid ""
+"The |offsetCurve| :sup:`Offset Curve` tool creates parallel shifts of line "
+"layers. The tool can be applied to the edited layer (the geometries are "
+"modified) or also to background layers (in which case it creates copies of "
+"the lines / rings and adds them to the edited layer). It is thus ideally "
+"suited for the creation of distance line layers. The :guilabel:`User Input` "
+"dialog pops-up, showing the displacement distance and other settings."
+msgstr ""
+"Lo strumento |offsetCurve| :sup:`Curva Offset` crea spostamenti paralleli "
+"layer lineari. Lo strumento può essere applicato al layer modificato (le "
+"geometrie vengono modificate) o anche ai layer di sfondo (nel qual caso crea"
+" copie delle linee/anelli e le aggiunge al layer modificato). È quindi "
+"ideale per la creazione di layer di linee di distanza. Si apre la finestra "
+"di dialogo :guilabel:`Input Utente`, che mostra la distanza di spostamento e"
+" altre impostazioni."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1355
+msgid ""
+"To create a shift of a line or polygon layer, you must first go into editing"
+" mode and activate the |offsetCurve| :sup:`Offset Curve` tool. Then click on"
+" a feature to shift it. Move the mouse and click where wanted or enter the "
+"desired distance in the user input widget. Holding :kbd:`Ctrl` during the "
+"2nd click will make an offset copy. Your changes may then be saved with the "
+"|saveEdits| :sup:`Save Layer Edits` tool."
+msgstr ""
+"Per creare uno spostamento di un layer di linee o poligoni, è necessario "
+"prima entrare in modalità di modifica e attivare lo strumento |offsetCurve| "
+":sup:`Curva di Offset`. Quindi fare clic su un elemento per spostarlo. "
+"Muovere il mouse e fare clic nel punto desiderato o immettere la distanza "
+"desiderata nel widget di input utente. Tenendo premuto :kbd:`Ctrl` durante "
+"il secondo clic verrà creata una copia offset. Le modifiche possono quindi "
+"essere salvate con lo strumento |saveEdits| :sup:`Salva Modifiche Vettore`."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1363
+msgid ""
+"For geometries on background layers make sure that snapping is on and hold "
+":kbd:`Ctrl` to select the geometry from the background. Also hold "
+":kbd:`Ctrl` when doing the second click. Geometries will be converted to the"
+" target layer geometry type."
+msgstr ""
+"Per le geometrie sui layer di sfondo, assicurati che l'aggancio sia attivo e"
+" tieni premuto :kbd:`Ctrl` per selezionare la geometria dallo sfondo. Tieni "
+"premuto :kbd:`Ctrl` anche quando fai il secondo clic. Le geometrie verranno "
+"convertite nel tipo di geometria del layer di destinazione."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1367
+msgid ""
+"QGIS options dialog (Digitizing tab then **Curve offset tools** section) or "
+"the |settings| icon in the :guilabel:`User Input` dialog allows you to "
+"configure :ref:`some parameters <curve_offset_tool>` like **Join style**, "
+"**Quadrant segments**, **Miter limit** and **End cap style**."
+msgstr ""
+"La finestra di dialogo delle opzioni di QGIS (scheda Digitalizzazione, "
+"quindi sezione **Strumento Offset Curva**) o l'icona |impostazioni| nella "
+"finestra di dialogo :guilabel:`Input utente` consente di configurare "
+":ref:`some parameters <curve_offset_tool>` come **Stile unione**, **Segmenti"
+" di quadrante**, **Limite smussatura** e **Stile testata terminale**."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2349
 msgid "settings"
 msgstr "settings"
@@ -3198,6 +3364,22 @@ msgstr "Per dividere una linea o un poligono:"
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1401
 msgid "Select the |splitFeatures| :sup:`Split Features` tool."
 msgstr "Seleziona lo strumento |splitFeatures| :guilabel:`Dividi geometrie`."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1402
+msgid ""
+"Draw a line across the feature(s) you want to split. If a selection is "
+"active, only selected features are split. The original feature is then "
+"assigned the biggest geometry resulting from the splitting, and new features"
+" are created for the remaining parts. Fields of the features are "
+"filled/updated according to the datasource provider rules or their "
+":ref:`splitting policy <policies>`."
+msgstr ""
+"Traccia una linea attraverso l'elemento(i) che vuoi dividere. Se una "
+"selezione è attiva, vengono divisi solo gli elementi selezionati. All'elento"
+" originale viene quindi assegnata la geometria più grande risultante dalla "
+"suddivisione e vengono creati nuovi elementi per le parti rimanenti. I campi"
+" degli elementi vengono compilati/aggiornati in base alle regole del "
+"fornitore della fonte dati o alla loro :ref:`splitting policy <policies>`."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1408
 msgid ""
@@ -4235,6 +4417,16 @@ msgstr ""
 "mouse su due vertici diversi, generando linee di coordinate virtuali per "
 "entrambi e facendo clic sulla loro intersezione."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1819
+msgid ""
+"|circlesIntersection| :sup:`2-circle Point Intersection`: allows you to "
+"digitize a point or vertex at the intersection of two circles. (more at "
+":ref:`circle_intersection`)."
+msgstr ""
+"|circlesIntersection| :sup:`Intersezione di 2 punti tra cerchi`: consente di"
+" digitalizzare un punto o un vertice all'intersezione di due cerchi. "
+"(maggiori informazioni su :ref:`circle_intersection`)."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2237
 msgid "circlesIntersection"
 msgstr "circlesIntersection"
@@ -4814,6 +5006,57 @@ msgstr ""
 "riferimento per bloccare poi la distanza, l'angolo o i valori relativi X, Y,"
 " Z, M."
 
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2019
+msgid ""
+"In the |cadConstruction| :sup:`Construction mode` you will find a drop-down "
+"menu where you can choose to:"
+msgstr ""
+"Nella |cadConstruction| :sup:`Modalità costruzione` troverai un menu a "
+"discesa in cui potrai scegliere:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2022
+msgid ""
+"|checkbox| :guilabel:`Record Construction Guides`: All construction steps "
+"are rendered as dashed lines. Each step that you perform is visually "
+"represented, allowing you to trace the construction process. The guides are "
+"displayed as long as :guilabel:`Advanced Digitizing` remains active."
+msgstr ""
+"|checkbox| :guilabel:`Registra Guide di Costruazione`: tutte le fasi di "
+"costruzione vengono visualizzate come linee tratteggiate. Ogni passaggio "
+"eseguito viene rappresentato visivamente, consentendo di tracciare il "
+"processo di costruzione. Le guide vengono visualizzate finché "
+":guilabel:`Digitalizzazione avanzata` rimane attiva."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2026
+msgid ""
+"|checkbox| :guilabel:`Show Construction Guides`: Allows you to make "
+"construction guides visible or hidden on the canvas. When enabled, all "
+"active guides are displayed, offering better spatial orientation and "
+"precision during the digitizing process."
+msgstr ""
+"|checkbox| :guilabel:`Mostra Guide di Costruzione`: ti permette di rendere "
+"visibili o nascoste le guide di costruzione sulla tela. Quando abilitata, "
+"vengono visualizzate tutte le guide attive, offrendo un migliore "
+"orientamento spaziale e precisione durante il processo di digitalizzazione."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2029
+msgid ""
+"|checkbox| :guilabel:`Snap to Visible Construction Guides`: The guides are "
+"snap-able, allowing you to start new construction steps from any point along"
+" the existing guides."
+msgstr ""
+"|checkbox| :guilabel:`Aggancia alle Guide di Costruzione Visibili`: le guide"
+" sono agganciabili, consentendo di iniziare nuove fasi di costruzione da "
+"qualsiasi punto lungo le guide esistenti."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2031
+msgid ""
+"Choose :guilabel:`Clear Construction Guides` to remove all the guides from "
+"the canvas."
+msgstr ""
+"Selezionare :guilabel:`Cancella Guide di Costruzione` per rimuovere tutte le"
+" guide dalla mappa."
+
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2033
 msgid ""
 "As an example, the construction mode can be used to draw some point at an "
@@ -4988,6 +5231,61 @@ msgstr ""
 "perpendicolare e parallelo e a bloccare questo parametro durante la "
 "modifica. Sblocca il parametro dell'angolo per annullare il loro utilizzo "
 "nel corso del processo."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2121
+msgid "2-circle point intersection"
+msgstr "2-circle point intersection"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2123
+msgid ""
+"To add a vertex at the intersection of two circles, follow these steps:"
+msgstr ""
+"Per aggiungere un vertice all'intersezione di due cerchi, segui questi "
+"passaggi:"
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2125
+msgid ""
+"Click the |circlesIntersection| :sup:`2-circle Point Intersection` icon."
+msgstr ""
+"Fare clic sull'icona |circlesIntersection| :sup:`2-circle Point "
+"Intersection`."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2126
+msgid ""
+"A dialog will open where you can define the parameters for :guilabel:`Circle"
+" #1` and :guilabel:`Circle #2`."
+msgstr ""
+"Si aprirà una finestra di dialogo in cui potrai definire i parametri per "
+":guilabel:`Cerchio #1` e :guilabel:`Cerchio #2`."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2128
+msgid ""
+"Click on the map canvas, and the tool will automatically calculate the "
+":guilabel:`X` and :guilabel:`Y` coordinates for the centers of both circles."
+msgstr ""
+"Fai clic sulla mappa, lo strumento calcolerà automaticamente le coordinate "
+":guilabel:`X` e :guilabel:`Y` per i centri di entrambi i cerchi."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2130
+msgid "Enter the distance :guilabel:`d` for each circle."
+msgstr "Inserisci la distanza :guilabel:`d` per ogni cerchio."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2131
+msgid ""
+"The tool will calculate and display the two intersection points of the "
+"circles."
+msgstr ""
+"Lo strumento calcolerà e visualizzerà i due punti di intersezione dei "
+"cerchi."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2132
+msgid "Click one of the intersection points to add the new vertex."
+msgstr ""
+"Fai clic su uno dei punti di intersezione per aggiungere il nuovo vertice."
+
+#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2137
+msgid "2-circle Point Intersection"
+msgstr "2-circle Point Intersection"
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2145
 msgid "The Processing in-place layer modifier"
