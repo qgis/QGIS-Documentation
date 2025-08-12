@@ -1395,6 +1395,19 @@ msgid "This parameter specifies whether to add map tips to the output."
 msgstr ""
 "Questo parametro specifica se aggiungere suggerimenti mappa al risultato."
 
+#: ../../docs/server_manual/services/wms.rst:787
+msgid ""
+"``HTML_FI_ONLY_MAPTIP``: like ``TRUE``, with the difference that the HTML "
+"response to the feature info request only contains the maptip. This gives "
+"full control over the HTML response using e.g. the built-in layer maptip "
+"editor."
+msgstr ""
+"``HTML_FI_ONLY_MAPTIP``: come ``TRUE``, con la differenza che la risposta "
+"HTML alla richiesta di informazioni sugli elementi contiene solo il "
+"suggerimento sulla mappa. Questo offre il pieno controllo sulla risposta "
+"HTML utilizzando, ad esempio, l'editor di suggerimenti sulla mappa integrato"
+" nel layer."
+
 #: ../../docs/server_manual/services/wms.rst:794
 msgid "WITH_GEOMETRY"
 msgstr "WITH_GEOMETRY"
@@ -1646,6 +1659,10 @@ msgid ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`"
 msgstr ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Adds the rule text to JSON output"
+msgstr "Aggiunge il testo della regola al risultato JSON"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
 msgstr ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
 
@@ -1779,6 +1796,18 @@ msgstr "Per esempio:"
 #: ../../docs/server_manual/services/wms.rst:1019
 msgid "RULE"
 msgstr "RULE"
+
+#: ../../docs/server_manual/services/wms.rst:1021
+msgid ""
+"This parameter is available on layers with :guilabel:`Rule-based` rendering "
+"and allows to build a legend with only the named rule symbol. It cannot be "
+"combined with ``BBOX`` parameter. ``HEIGHT`` and ``WIDTH`` must be "
+"specified."
+msgstr ""
+"Questo parametro è disponibile sui layer con visualizzazione ``Basata su "
+"regole`` e consente di creare una legenda con il solo simbolo di regola "
+"specificato. Non può essere combinato con il parametro ``BBOX``. È "
+"necessario specificare ``HEIGHT`` e ``WIDTH``."
 
 #: ../../docs/server_manual/services/wms.rst:1041
 msgid "RULELABEL"
@@ -2098,6 +2127,16 @@ msgstr "Legenda con ``ITEMFONTCOLOR=0x5f9930``"
 #: ../../docs/server_manual/services/wms.rst:1537
 msgid "SHOWRULEDETAILS"
 msgstr "SHOWRULEDETAILS"
+
+#: ../../docs/server_manual/services/wms.rst:1539
+msgid ""
+"This parameter specifies if the JSON output will also contain the details "
+"about the rule that generated the legend entry. This parameter only has "
+"effect when the renderer is rule-based or categorized."
+msgstr ""
+"Questo parametro specifica se il risultato JSON conterrà anche i dettagli "
+"sulla regola che ha generato la voce della legenda. Questo parametro ha "
+"effetto solo quando la visualizzazione è basata su regole o categorizzata."
 
 #: ../../docs/server_manual/services/wms.rst:1574
 msgid "ADDLAYERGROUPS"
