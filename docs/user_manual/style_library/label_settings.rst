@@ -890,18 +890,26 @@ Label Spacing
 
 The :guilabel:`Label Spacing` option allows you to set the margin around the label,
 preventing all other labels from being placed within that area.
-You can dinamically control :guilabel:`Mergin around label` using
+You can dynamically control :guilabel:`Mergin around label` using
 the |dataDefine| :sup:`Data-defined override` button.
 Choose unit from the unit selector, and there you can also :ref:`adjust scaling range <unit_selector>`.
 
-Duplicated Labels
-^^^^^^^^^^^^^^^^^
+.. attention:: This option require a build based on GEOS >= 3.10,
+    it may not be available on your QGIS installation depending on the underlying
+    GEOS version in use.
+
+Duplicate Labels
+^^^^^^^^^^^^^^^^
 
 Use |checkbox| :guilabel:`Avoid duplicate labels` to improve label appearance in situations like road networks,
 where features such as dual carriageways or service roads can result in many identical labels appearing close together.
 When active, it prevents placing labels with the exact same text (case-sensitive)
 closer than the minimum distance defined in the :guilabel:`Settings...` option.
 The setting applies across layers, so duplicate text from any layer will be considered.
+
+.. attention:: This option require a build based on GEOS >= 3.10,
+    it may not be available on your QGIS installation depending on the underlying
+    GEOS version in use.
 
 Geometry Generator
 ^^^^^^^^^^^^^^^^^^
