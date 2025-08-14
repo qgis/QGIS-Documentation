@@ -467,13 +467,14 @@ Features inside polygon
 
 Checks the input geometries contained in the polygons from the polygon layers list.
 A polygon layer can be checked against itself.
+Any contained features are reported as errors.
 
 .. figure:: img/check_geometry_featuresinsidepolygon.png
    :align: center
 
    Reporting errors on features inside a polygon.
 
-.. .. seealso:: :ref:`qgisfixgeometrydeletefeatures`
+.. seealso:: :ref:`qgisfixgeometrydeletefeatures`
 
 Parameters
 ..........
@@ -502,17 +503,6 @@ Basic parameters
      - ``POLYGONS``
      - [vector: polygon][list]
      - List of polygon layers to check against.
-   * - **Contained features**
-     - ``OUTPUT``
-     - [vector: same as input]
-
-       Default: ``[Skip output]``
-     - Specification of the output layer containing features within the checked polygons.
-       :ref:`One of <output_parameter_widget>`:
-
-       .. include:: ../algs_include.rst
-          :start-after: **layer_output_types_skip**
-          :end-before: **end_layer_output_types_skip**
    * - **Errors from contained features**
      - ``ERRORS``
      - [vector: point]
@@ -524,6 +514,19 @@ Basic parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
+   * - **Contained features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: same as input]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer containing features within the checked polygons.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
