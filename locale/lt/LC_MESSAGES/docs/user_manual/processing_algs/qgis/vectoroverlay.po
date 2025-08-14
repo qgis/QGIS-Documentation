@@ -399,6 +399,16 @@ msgstr "[toks pat, kaip įvestis]"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Numatytas: ``[Kurti laikiną sluoksnį]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:67
+msgid ""
+"Specify the layer to contain the features from the input layer that are "
+"inside the overlay (clipping) layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite sluoksnį, kuriame turės būti įvesties sluoksnio geoobjektai, "
+"kurie yra perdangos (apkarpymo) sluoksnio viduje. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
 msgstr "Kurti laikiną sluoksnį (``TEMPORARY_OUTPUT``)"
@@ -417,7 +427,7 @@ msgstr "Įrašyti į duombazės lentelę..."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid "The file encoding can also be changed here."
-msgstr "Šia taipogi galima pakeisti failo koduotę."
+msgstr "Čia taipogi galima pakeisti failo koduotę."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:77
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:196
@@ -545,6 +555,16 @@ msgstr ""
 msgid "**Difference**"
 msgstr "**Skirtumas**"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:164
+msgid ""
+"Specify the layer to contain the (parts of) features from the input layer "
+"that are not inside the overlay layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite sluoksnį, kuriame turės būti įvesties sluoksnio geoobjektai (jų "
+"dalys), kurie nėra perdangos (apkarpymo) sluoksnio viduje. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:173
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:495
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:605
@@ -631,11 +651,98 @@ msgstr ""
 msgid "**Algorithm ID**: ``qgis:difference``"
 msgstr "**Algoritmo ID**: ``qgis:difference``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:225
+msgid "Difference (multiple)"
+msgstr "Skirtumas (keli)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:227
+msgid ""
+"Extracts features from the input layer that fall completely outside or only "
+"partially overlap the features from any of the overlay layer(s)."
+msgstr ""
+"Ištraukia išvesties sluoksnio geoobjektus, kurie yra pilnai už arba dalinai "
+"dengia persidengimo sluoksnio(ių) geoobjektus."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:230
+msgid ""
+"For each overlay layer the difference is calculated between the result of "
+"all previous difference operations and this overlay layer. Input layer "
+"features that partially overlap feature(s) in the overlay layer are split "
+"along those features' boundary and only the portions outside the overlay "
+"layer features are retained."
+msgstr ""
+"Skirtumas kiekvienam persidengimo sluoksniui skaičiuojamas tarp visų "
+"ankstesnių skirtumo veiksmų rezultato ir perdangos sluoksnio. Įvesties "
+"sluoksnių geoobjektai, kurie dalinai dengia geoobjektą(us) perdengimo "
+"sluoksnyje, padalinami ties tų geoobjektų riba ir tik paliekamos tik tos jų "
+"dalys, kurios yra už perdengimo sluoksnio geoobjektų."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:243
+msgid ""
+"Difference operation between a two-feature input layer 'a' and single "
+"feature overlay layers 'b' and 'c' (left) - resulting in a new layer with "
+"the modified 'a' features (right)"
+msgstr ""
+"Skirtumo veiksmas tarp dviejų geoobjektų įvesties sluoksnio „a“ ir vieno "
+"geoobjekto perdengimo sluoksnių „b“ ir „c“ (kairėje) - gauname nauje "
+"sluoksnį su pakeistais „a“ geoobjektais (dešinėje)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:247
+msgid ""
+":ref:`qgisdifference`, :ref:`qgissymmetricaldifference`, :ref:`qgisclip`"
+msgstr ""
+":ref:`qgisdifference`, :ref:`qgissymmetricaldifference`, :ref:`qgisclip`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:264
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:596
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1172
+msgid "**Overlay layers**"
+msgstr "**Perdengimo sluoksniai**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:265
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:597
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1175
 msgid "``OVERLAYS``"
 msgstr "``OVERLAYS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:266
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:598
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1176
+msgid "[vector: geometry] [list]"
+msgstr "[vektorius: geometrija] [sąrašas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:267
+msgid ""
+"List of layers containing the geometries that will be subtracted from the "
+"input layer geometries. They are expected to have at least as many "
+"dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D) as the input layer"
+" geometries."
+msgstr ""
+"Sąrašas sluoksnų su geometrijomis, kurios bus atimamos iš įvesties sluoksnio"
+" geometrijų. Tikimasi, kad juose bus bent tiek matmenų (taškai: 0D, linijos:"
+" 1D, poligonai: 2D, tūris: 3D), kiek įvesties sluoksnio geometrijose."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:276
+msgid ""
+"Specify the layer to contain the (parts of) features from the input layer "
+"that do not overlap features of the overlay layers. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite sluoksnį, kuriame bus įvesties sluoksnio geoobjektai (ar jų "
+"dalys), kurie nesidengia su persidengimo sluoksnių geoobjektais. "
+":ref:`Vienas iš <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:298
+msgid ""
+"Layer containing (parts of) features from the input layer not overlapping "
+"features from the overlay layers."
+msgstr ""
+"Sluoksnis su įvesties sluoksnio geoobjektais (ar jų dalimis), kurie "
+"nesidengia su persidengimo sluoksnio geoobjektais."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:304
+msgid "**Algorithm ID**: ``qgis:multidifference``"
+msgstr "**Algoritmo ID**: ``qgis:multidifference``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:333
 msgid ":ref:`qgisclip`"
@@ -747,7 +854,7 @@ msgstr "``OVERLAY_FIELDS_PREFIX``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1071
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1208
 msgid "[string]"
-msgstr "[string]"
+msgstr "[tekstas]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:663
 msgid "**Default menu**: :menuselection:`Vector --> Analysis Tools`"

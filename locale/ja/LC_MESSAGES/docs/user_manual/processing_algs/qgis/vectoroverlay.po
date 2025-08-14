@@ -9,15 +9,16 @@
 # tomoya miyoshi, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# 藤本理弘 <mfujimot@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:45+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: 藤本理弘 <mfujimot@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -282,6 +283,22 @@ msgstr "**入力レイヤ**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:148
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:152
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:262
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:348
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:452
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:594
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:896
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:900
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1033
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1039
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1170
+msgid "[vector: geometry]"
+msgstr "[vector: geometry]"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:57
 msgid "Layer containing the features to be clipped"
 msgstr "切り抜かれる地物を格納しているレイヤ"
@@ -373,12 +390,6 @@ msgstr "[入力レイヤと同じ]"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1183
 msgid "Default: ``[Create temporary layer]``"
 msgstr "デフォルト： ``[一時レイヤを作成]``"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:67
-msgid ""
-"Specify the layer to contain the features from the input layer that are "
-"inside the overlay (clipping) layer. One of:"
-msgstr "オーバーレイ（クリッピング）レイヤの内側にある入力レイヤの地物を格納するレイヤを指定します。以下のいずれかです： "
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -517,12 +528,6 @@ msgstr ""
 msgid "**Difference**"
 msgstr "**差分**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:164
-msgid ""
-"Specify the layer to contain the (parts of) features from the input layer "
-"that are not inside the overlay layer. One of:"
-msgstr "入力レイヤの地物（の一部）のうち、オーバーレイレイヤの内側にないものを格納するレイヤを指定します。以下のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:173
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:495
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:605
@@ -657,12 +662,6 @@ msgstr ""
 "入力レイヤのジオメトリから減算されるジオメトリを格納しているレイヤのリスト。少なくとも入力レイヤのジオメトリと同じ次元（ポイント: 0D、ライン: "
 "1D、ポリゴン: 2D、ボリューム: 3D）を持つことが期待されます。 "
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:276
-msgid ""
-"Specify the layer to contain the (parts of) features from the input layer "
-"that do not overlap features of the overlay layers. One of:"
-msgstr "入力レイヤの地物（の一部）のうち、オーバーレイレイヤの地物と重ならないものを格納するレイヤを指定します。以下のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:298
 msgid ""
 "Layer containing (parts of) features from the input layer not overlapping "
@@ -762,12 +761,6 @@ msgstr "デフォルト： False"
 msgid "**Extracted**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:373
-msgid ""
-"Specify the layer to contain the features from the input layer that are "
-"inside the clip extent. One of:"
-msgstr "切り抜き範囲内にある入力レイヤの地物を格納するレイヤを指定します。以下のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:395
 msgid "Layer containing the clipped features."
 msgstr "切り抜かれた地物を格納するレイヤ"
@@ -856,12 +849,6 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:710
 msgid "**Intersection**"
 msgstr "**交差**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:485
-msgid ""
-"Specify the layer to contain (the parts of) the features from the input "
-"layer that overlap one or more features from the overlay layer. One of:"
-msgstr "オーバーレイレイヤのひとつ以上の地物と重なる入力レイヤの地物（の一部）を格納するレイヤを指定します。以下のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:506
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:616
@@ -1021,12 +1008,6 @@ msgstr ""
 msgid "[vector: point]"
 msgstr "[ベクタ：ポイント]"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:715
-msgid ""
-"Specify the layer to contain the intersection points of the lines from the "
-"input and overlay layers. One of:"
-msgstr "入力レイヤとオーバーレイレイヤのラインの交差ポイントを格納するレイヤを指定します。以下のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:735
 msgid "**Intersect fields prefix**"
 msgstr "**交差のフィールド名接頭辞**"
@@ -1105,13 +1086,6 @@ msgstr "分割点を定義するのに使われるライン又はポリゴンを
 msgid "**Split**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:815
-msgid ""
-"Specify the layer to contain the splitted (in case they are intersected by a"
-" line in the split layer) line/polygon features from the input layer. One "
-"of:"
-msgstr "入力レイヤから分割された（分割レイヤにあるラインと交差した）ライン／ポリゴン地物を格納するレイヤを指定します。以下のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:838
 msgid "Output vector layer with split lines or polygons from input layer."
 msgstr "入力レイヤから分割されたライン又はポリゴンを持つ出力ベクタレイヤ　　　"
@@ -1163,13 +1137,6 @@ msgstr "地物（の部分）を抽出する二番目のレイヤ。ジオメト
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:957
 msgid "**Symmetrical difference**"
 msgstr "**対象差**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:908
-msgid ""
-"Specify the layer to contain (the parts of) the features from the input and "
-"overlay layers that do not overlap features from the other layer. One of:"
-msgstr ""
-"入力レイヤとオーバーレイレイヤからの地物（の部分）であって、他のレイヤの地物と重ならないものを格納するレイヤを指定します。次のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:960
 msgid ""
@@ -1258,12 +1225,6 @@ msgstr "最初のレイヤと結合されるレイヤ。ジオメトリタイプ
 msgid "**Union**"
 msgstr "**和集合**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1047
-msgid ""
-"Specify the layer to contain the (split and duplicated) features from the "
-"input layer and the overlay layer. One of:"
-msgstr "入力レイヤおよびオーバーレイレイヤの（分割および複製された）地物を格納するレイヤを指定します。以下のいずれかです："
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1098
 msgid ""
 "Layer containing all the overlapping and non-overlapping parts from the "
@@ -1312,12 +1273,6 @@ msgid ""
 "Layers that will be combined to the first one. Ideally the geometry type "
 "should be the same as input layer."
 msgstr "最初のレイヤと結合されるレイヤ。ジオメトリタイプは入力レイヤと同じであることが理想的です。"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1184
-msgid ""
-"Specify the layer to contain the (split and duplicated) features from the "
-"input layer and the overlay layers. One of:"
-msgstr "入力レイヤおよびオーバーレイレイヤの（分割および複製された）地物を格納するレイヤを指定します。以下のいずれかです："
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1227
 msgid ""

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:45+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Transifex Bot <>, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
@@ -374,13 +374,6 @@ msgstr "[same as input]"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "기본값: ``[Create temporary layer]``"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:67
-msgid ""
-"Specify the layer to contain the features from the input layer that are "
-"inside the overlay (clipping) layer. One of:"
-msgstr ""
-"중첩(잘라내기) 레이어 안에 들어오는 입력 레이어의 피처를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
-
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
 msgstr "임시 레이어 생성 (``TEMPORARY_OUTPUT``)"
@@ -519,13 +512,6 @@ msgstr ""
 msgid "**Difference**"
 msgstr "**Difference**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:164
-msgid ""
-"Specify the layer to contain the (parts of) features from the input layer "
-"that are not inside the overlay layer. One of:"
-msgstr ""
-"중첩 레이어 안에 들어오지 않는 입력 레이어의 피처(의 일부분)를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:173
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:495
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:605
@@ -661,13 +647,6 @@ msgstr ""
 "입력 레이어 도형에서 차감할 도형을 담고 있는 레이어 목록입니다. 이 중첩 레이어들은 최소한 입력 레이어 도형만큼의 차원(포인트: "
 "0차원, 라인: 1차원, 폴리곤: 2차원, 부피: 3차원)을 가질 것을 요구합니다."
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:276
-msgid ""
-"Specify the layer to contain the (parts of) features from the input layer "
-"that do not overlap features of the overlay layers. One of:"
-msgstr ""
-"중첩 레이어의 피처와 중첩하지 않는 입력 레이어의 피처(의 일부분)를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:298
 msgid ""
 "Layer containing (parts of) features from the input layer not overlapping "
@@ -767,12 +746,6 @@ msgstr "기본값: False"
 msgid "**Extracted**"
 msgstr "**Extracted**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:373
-msgid ""
-"Specify the layer to contain the features from the input layer that are "
-"inside the clip extent. One of:"
-msgstr "잘라내기 범위 안에 들어오는 입력 레이어의 피처를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:395
 msgid "Layer containing the clipped features."
 msgstr "잘라낸 피처를 담고 있는 레이어"
@@ -862,14 +835,6 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:710
 msgid "**Intersection**"
 msgstr "**Intersection**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:485
-msgid ""
-"Specify the layer to contain (the parts of) the features from the input "
-"layer that overlap one or more features from the overlay layer. One of:"
-msgstr ""
-"중첩 레이어의 하나 이상의 피처와 중첩하는 입력 레이어의 피처(의 일부분)를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 "
-"있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:506
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:616
@@ -1028,12 +993,6 @@ msgstr ""
 msgid "[vector: point]"
 msgstr "[vector: point]"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:715
-msgid ""
-"Specify the layer to contain the intersection points of the lines from the "
-"input and overlay layers. One of:"
-msgstr "입력 및 중첩 레이어의 라인들의 교차점 포인트를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:735
 msgid "**Intersect fields prefix**"
 msgstr "**Intersect fields prefix**"
@@ -1113,15 +1072,6 @@ msgstr "분절점을 정의하는 데 사용되는 라인 또는 고리를 가�
 msgid "**Split**"
 msgstr "**Split**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:815
-msgid ""
-"Specify the layer to contain the splitted (in case they are intersected by a"
-" line in the split layer) line/polygon features from the input layer. One "
-"of:"
-msgstr ""
-"입력 레이어에서 분할된 (분할 레이어의 라인과 교차하는) 라인/폴리곤 피처를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 "
-"있습니다:"
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:838
 msgid "Output vector layer with split lines or polygons from input layer."
 msgstr "입력 레이어에서 분할된 라인 또는 폴리곤을 가진 산출 벡터 레이어"
@@ -1173,13 +1123,6 @@ msgstr "피처(의 일부분)를 추출할 두 번째 레이어. 도형 유형�
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:957
 msgid "**Symmetrical difference**"
 msgstr "**Symmetrical difference**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:908
-msgid ""
-"Specify the layer to contain (the parts of) the features from the input and "
-"overlay layers that do not overlap features from the other layer. One of:"
-msgstr ""
-"입력 및 중첩 레이어에서 서로 중첩하지 않는 피처(의 일부분)를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:960
 msgid ""
@@ -1277,13 +1220,6 @@ msgstr "첫 번째 레이어로 결합될 레이어. 도형 유형이 입력 레
 msgid "**Union**"
 msgstr "**Union**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1047
-msgid ""
-"Specify the layer to contain the (split and duplicated) features from the "
-"input layer and the overlay layer. One of:"
-msgstr ""
-"입력 레이어 및 중첩 레이어에서 (분할된 그리고 복제된) 피처를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1098
 msgid ""
 "Layer containing all the overlapping and non-overlapping parts from the "
@@ -1334,13 +1270,6 @@ msgid ""
 "Layers that will be combined to the first one. Ideally the geometry type "
 "should be the same as input layer."
 msgstr "첫 번째 레이어로 결합될 레이어들. 도형 유형이 입력 레이어와 동일한 편이 좋습니다."
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1184
-msgid ""
-"Specify the layer to contain the (split and duplicated) features from the "
-"input layer and the overlay layers. One of:"
-msgstr ""
-"입력 레이어 및 중첩 레이어들에서 (분할된 그리고 복제된) 피처를 담을 레이어를 지정합니다. 다음 가운데 하나로 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1227
 msgid ""

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:18+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -296,9 +296,12 @@ msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:46
-msgid "Specify the point cloud file to use as output. One of:"
+msgid ""
+"Specify the point cloud file to use as output. :ref:`One of "
+"<output_parameter_widget>`:"
 msgstr ""
-"Nurodykite taškų debesies failą, kurį naudoti kaip išvestį. Vienas iš:"
+"Nurodykite taškų masyvo failą, kurį naudoti kaip išvestį. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -362,6 +365,36 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:82
+msgid "Build virtual point cloud (VPC)"
+msgstr "Kurti virtualų taškų masyvą (VPC)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:84
+msgid ""
+"Creates a :ref:`virtual point cloud (VPC) <virtual_point_cloud>` from input "
+"point cloud data."
+msgstr ""
+"Kuria :ref:`virtualų taškų masyvą (VPC) <virtual_point_cloud>` iš įvesties "
+"taškų masyvo duomenų."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:86
+msgid ""
+"If you leave the optional parameters unchecked, the VPC file will be built "
+"very quickly as the algorithm will only read metadata of input files. With "
+"any of the optional parameters set, the algorithm will read all points which"
+" can take some time."
+msgstr ""
+"Jei paliksite neprivalomus parametrus neįjungtus, VPC failas bus sukurtas "
+"labai greitai, nes algoritmas tik perskaitys įvesties failų metaduomenis. "
+"Įjungus bet kurį iš pasirinktinių parametrų, algoritmas perskaitys visus "
+"taškus, o tai gali užimti nemažai laiko."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:94
+msgid ""
+"Generating Virtual Point Cloud with overview from a set of point cloud tiles"
+msgstr ""
+"Virtualaus taškų masyvo su apžvalga kūrimas iš kelių taškų masyvų failų"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:96
 msgid ":ref:`pdalmerge`"
 msgstr ":ref:`pdalmerge`"
@@ -380,6 +413,23 @@ msgstr "**Įvesties sluoksniai**"
 msgid "``LAYERS``"
 msgstr "``LAYERS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:111
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:291
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:444
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:826
+msgid "[point cloud] [list]"
+msgstr "[taškų masyvas] [sąrašas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:112
+msgid "Input point cloud layers to combine inside a virtual point cloud layer"
+msgstr ""
+"Įvesties taškų masyvo sluoksniai, kuriuos reikia sujungti į virtualų taškų "
+"masyvo sluoksnį"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:113
+msgid "**Calculate boundary polygon**"
+msgstr "**Skaičiuoti ribos poligoną**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:114
 msgid "``BOUNDARY``"
 msgstr "``BOUNDARY``"
@@ -396,18 +446,81 @@ msgstr "[boolean]"
 msgid "Default: False"
 msgstr "Numatytas: ne"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:118
+msgid ""
+"Set to True to show the exact boundaries of data (rather than just "
+"rectangular extent)"
+msgstr ""
+"Nustatykite True, kad būtų rodoma tiksli duomenų riba (o be tik stačiakampė "
+"apimtis)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:119
+msgid "**Calculate statistics**"
+msgstr "**Skaičiuoti statistiką**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:120
 msgid "``STATISTICS``"
 msgstr "``STATISTICS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:124
+msgid "Set to True to understand ranges of values of the various attributes"
+msgstr ""
+"Nustatykite True, kad suprastumėte įvairių atributų reikšmių diapazonus"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:125
+msgid "**Build overview point cloud**"
+msgstr "**Kurti apžvalgos taškų masyvą**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:126
 msgid "``OVERVIEW``"
 msgstr "``OVERVIEW``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:130
+msgid ""
+"Generates a single “thinned” point cloud of all the input data (using only "
+"every 1000th point from original data)."
+msgstr ""
+"Kuria vieną „praretintą“ taškų masyvą visiems įvesties duomenims (naudojant "
+"tik kas 1000-ąjį pradinių duomenų tašką)."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:133
+msgid ""
+"The overview point cloud will be created next to the VPC file - for example,"
+" for :file:`mydata.vpc`, the overview point cloud would be named "
+":file:`mydata-overview.copc.laz`."
+msgstr ""
+"Apžvalgos taškų masyvas bus sukurtas greta VPC failo - pavyzdžiui, jei "
+"failas yra :file:`manoduomenys.vpc`, tai apžvalgos taškų masyvo pavadinimas "
+"bus :file:`manoduomenys-overview.copc.laz`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:135
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:157
+msgid "**Virtual point cloud**"
+msgstr "**Virtualus taškų masyvas**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:140
+msgid ""
+"Specify the point cloud file to build the data into. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite taškų masyvo failą, į kurį sudėti duomenis. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:159
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:258
 msgid "[raster]"
 msgstr "[rastras]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:160
+msgid ""
+"Output point cloud layer combining all the input data, as a virtual file."
+msgstr ""
+"Išvesties taškų masyvo sluoksnis, apjungiantis visus įvesties duomenis kaip "
+"virtualų failą."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:165
+msgid "**Algorithm ID**: ``pdal:virtualpointcloud``"
+msgstr "**Algoritmo ID**: ``pdal:virtualpointcloud``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:174
 msgid "Clip"
@@ -561,6 +674,20 @@ msgstr ""
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:293
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:317
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:834
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:874
+msgid "**Output directory**"
+msgstr "**Išvesties aplankas**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:297
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:319
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:836
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:876
+msgid "[folder]"
+msgstr "[aplankas]"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:299
 msgid "Default: ``[Skip output]``"
 msgstr "Numatytas: ``[Praleisti išvestį]``"
@@ -569,13 +696,32 @@ msgstr "Numatytas: ``[Praleisti išvestį]``"
 msgid "Skip Output"
 msgstr "Praleisti išvestį"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to a Temporary Directory"
+msgstr "Įrašyti į laikiną aplanką"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid "Save to Directory"
+msgstr "Įrašyti į aplanką"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:385
 msgid "[file]"
 msgstr "[file]"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:422
+msgid "Merge"
+msgstr "Sulieti"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:426
 msgid ":ref:`pdalvirtualpointcloud`"
 msgstr ":ref:`pdalvirtualpointcloud`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:446
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:496
+msgid "**Merged**"
+msgstr "**Sulietas**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:518
 msgid ":ref:`pdalassignprojection`"
@@ -584,6 +730,10 @@ msgstr ":ref:`pdalassignprojection`"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:535
 msgid "**Target CRS**"
 msgstr "**Paskirties CRS**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:539
+msgid "**Reprojected**"
+msgstr "**Perprojektuota**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:564
 msgid "``OPERATION``"
@@ -629,3 +779,7 @@ msgstr ":ref:`pdalvirtualpointcloud`, :ref:`pdalcreatecopc`"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:829
 msgid "``LENGTH``"
 msgstr "``LENGTH``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:838
+msgid "Default: ``[Save to temporary folder]``"
+msgstr "Numatytas: ``[Įrašyti į laikiną aplanką]``"

@@ -36,6 +36,16 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:48
+#: ../../docs/user_manual/processing_algs/algs_include.rst:57
+msgid "Save to a Temporary Directory"
+msgstr "Įrašyti į laikiną aplanką"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:49
+#: ../../docs/user_manual/processing_algs/algs_include.rst:58
+msgid "Save to Directory"
+msgstr "Įrašyti į aplanką"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:56
 #: ../../docs/user_manual/processing_algs/algs_include.rst:75
 #: ../../docs/user_manual/processing_algs/algs_include.rst:111
@@ -81,7 +91,7 @@ msgstr "Įrašyti į duombazės lentelę..."
 #: ../../docs/user_manual/processing_algs/algs_include.rst:104
 #: ../../docs/user_manual/processing_algs/algs_include.rst:117
 msgid "The file encoding can also be changed here."
-msgstr "Šia taipogi galima pakeisti failo koduotę."
+msgstr "Čia taipogi galima pakeisti failo koduotę."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:102
 msgid "Append to Layer…"
@@ -130,6 +140,147 @@ msgstr ""
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:151
+msgid ""
+"Geometric predicates are boolean functions used to determine the spatial "
+"relation a feature has with another by comparing whether and how their "
+"geometries share a portion of space."
+msgstr ""
+"Geometriniai predikatai yra funkcijos, kurios naudojamos nustatant, kokį "
+"erdvinį ryšį geoobjektas turi su kitu, lyginant ar ir kaip jų geometrijos "
+"dalinasi erdvės dalimi."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:158
+msgid "Looking for spatial relations between layers"
+msgstr "Erdvinių ryšių tarp sluoksnių paieška"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:160
+msgid ""
+"Using the figure above, we are looking for the green circles by spatially "
+"comparing them to the orange rectangle feature. Available geometric "
+"predicates are:"
+msgstr ""
+"Naudojant aukščiau pateiktą iliustraciją, mes ieškome žalių apskritimų, "
+"erdviškai lygindami juos su oranžiniu stačiakampiu geoobjektus. Galimi "
+"geometriniai predikatai yra:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:167
+msgid "*Intersect*"
+msgstr "*Susikerta*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:165
+msgid ""
+"Tests whether a geometry intersects another. Returns 1 (true) if the "
+"geometries spatially intersect (share any portion of space - overlap or "
+"touch) and 0 if they don’t. In the picture above, this will return circles "
+"1, 2 and 3."
+msgstr ""
+"Tikrina, ar viena geometrija kerta kitą. Grąžina 1 (true), jei geometrijos "
+"erdviškai kertasi (dalinasi kažkokia erdvės dalimi - persidengia arba "
+"liečia) ir 0, jei to nėra. Iliustracijoje aukščiau True bus grąžinama "
+"apskritimams 1, 2 ir 3."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:174
+msgid "*Contain*"
+msgstr "*Įtraukia*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:170
+msgid ""
+"Returns 1 (true) if and only if no points of b lie in the exterior of a, and"
+" at least one point of the interior of b lies in the interior of a. In the "
+"picture, no circle is returned, but the rectangle would be if you would look"
+" for it the other way around, as it contains circle 1 completely. This is "
+"the opposite of *are within*."
+msgstr ""
+"Grąžina 1 (true) tada ir tik tada, jei nei vienas b taškas nėra už a ribų, "
+"ir bent vienas b vidaus taškas yra a viduje. Iliustracijoje nei vienas "
+"apskritimas nebūtų grąžintas, bet stačiakampis būtų, jei jūs ieškotumėte "
+"atvirkščiai, nes pilnai stačiakampyje yra 1 apskritimas. Tai yra priešingybė"
+" *yra viduje*."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:178
+msgid "*Disjoint*"
+msgstr "*Atskiras*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:177
+msgid ""
+"Returns 1 (true) if the geometries do not share any portion of space (no "
+"overlap, not touching). Only circle 4 is returned."
+msgstr ""
+"Grąžina 1 (true), jei geometrijos nesidalina jokia erdvės dalimi (nėra "
+"persidengimo, nėra susilietimo). Grąžinamas tik 4 apskritimas."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:182
+msgid "*Equal*"
+msgstr "*Lygūs*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:181
+msgid ""
+"Returns 1 (true) if and only if geometries are exactly the same. No circles "
+"will be returned."
+msgstr ""
+"Grąžina 1 (true), tada ir tik tada, jei geometrijos yra lygiai tokios "
+"pačios. Negrąžinami jokie apskritimai."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:187
+msgid "*Touch*"
+msgstr "*Liečia*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:185
+msgid ""
+"Tests whether a geometry touches another. Returns 1 (true) if the geometries"
+" have at least one point in common, but their interiors do not intersect. "
+"Only circle 3 is returned."
+msgstr ""
+"Tikrina, ar geometrija liečia kitą geometriją. Grąžina 1 (true), jei "
+"geometrijos turi bent vieną bendrą tašką, bet jų vidus nepersidengia. "
+"Grąžinamas tik 3 apskritimas."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:192
+msgid "*Overlap*"
+msgstr "*Persidengia*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:190
+msgid ""
+"Tests whether a geometry overlaps another. Returns 1 (true) if the "
+"geometries share space, are of the same dimension, but are not completely "
+"contained by each other. Only circle 2 is returned."
+msgstr ""
+"Tikrina, ar viena geometrija persidengia su kita. Grąžina 1 (true), jei "
+"geometrijos dalinasi erdve, turi tokius pačius matmenis, bet nei viena iš jų"
+" nėra pilnai kitoje. Grąžinamas tik 2 apskritimas."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:196
+msgid "*Are within*"
+msgstr "*Yra viduje*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:195
+msgid ""
+"Tests whether a geometry is within another. Returns 1 (true) if geometry a "
+"is completely inside geometry b. Only circle 1 is returned."
+msgstr ""
+"Tikrina, ar geometrija yra kitos viduje. Grąžina 1 (true), jei geometrija a "
+"yra pilnai geometrijos b viduje. Grąžinamas tik apskritimas 1."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:204
+msgid "*Cross*"
+msgstr "*Kerta*"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:199
+msgid ""
+"Returns 1 (true) if the supplied geometries have some, but not all, interior"
+" points in common and the actual crossing is of a lower dimension than the "
+"highest supplied geometry. For example, a line crossing a polygon will cross"
+" as a line (true). Two lines crossing will cross as a point (true). Two "
+"polygons cross as a polygon (false). In the picture, no circles will be "
+"returned."
+msgstr ""
+"Grąžina 1 (true), jei pateiktos geometrijos turi kelis, bet ne visus, "
+"bendrus vidaus taškus ir jų susikirtimas turi mažiau matmenų nei daugiausiai"
+" matmenų turinti geometrija. Pavyzdžiui, linijos ir poligono susikirtimas "
+"bus linija (true). Poligono ir poligono susikirtimas yra poligonas (false). "
+"Iliustracijoje nebūtų grąžinamas nei vienas apskritimas."
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:213
 msgid "**Geometry modification only**"
 msgstr "**Keičiama tik geometrija**"
@@ -147,12 +298,68 @@ msgstr ""
 "pasikeisti. Jei šios savybės laikomos atributuose, juos reikės pakeisti "
 "rankiniu būdu."
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:237
+#: ../../docs/user_manual/processing_algs/algs_include.rst:267
+msgid "0 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "0 --- Byte        (aštuonių bitų sveikas skaičius be ženklo (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:238
+#: ../../docs/user_manual/processing_algs/algs_include.rst:268
+msgid "1 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr ""
+"1 --- Int16       (Šešiolikos bitų sveikas skaičius su ženklu (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:239
+#: ../../docs/user_manual/processing_algs/algs_include.rst:269
+msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr ""
+"2 --- UInt16      (Šešiolikos bitų sveikas skaičius be ženklo (quint16))"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:241
 #: ../../docs/user_manual/processing_algs/algs_include.rst:300
 msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
 msgstr ""
 "4 --- UInt32      (Trisdešimt dviejų bitų sveikas skaičius be ženklo "
 "(quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:242
+#: ../../docs/user_manual/processing_algs/algs_include.rst:272
+msgid "5 --- Float32     (Thirty two bit floating point (float))"
+msgstr ""
+"5 --- Float32     (Trisdešimt dviejų bitų slankaus kablelio skaičius "
+"(float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:243
+#: ../../docs/user_manual/processing_algs/algs_include.rst:273
+msgid "6 --- Float64     (Sixty four bit floating point (double))"
+msgstr ""
+"6 --- Float64     (Šešiasdešimt keturių bitų slankaus kablelio skaičius "
+"(double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:244
+#: ../../docs/user_manual/processing_algs/algs_include.rst:274
+msgid "7 --- CInt16      (Complex Int16)"
+msgstr "7 --- CInt16      (Kompleksinis Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:245
+#: ../../docs/user_manual/processing_algs/algs_include.rst:275
+msgid "8 --- CInt32      (Complex Int32)"
+msgstr "8 --- CInt32      (Kompleksinis Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:246
+#: ../../docs/user_manual/processing_algs/algs_include.rst:276
+msgid "9 --- CFloat32    (Complex Float32)"
+msgstr "9 --- CFloat32   (Kompleksinis Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:247
+#: ../../docs/user_manual/processing_algs/algs_include.rst:277
+msgid "10 --- CFloat64   (Complex Float64)"
+msgstr "10 --- CFloat64   (Kompleksinis Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:248
+#: ../../docs/user_manual/processing_algs/algs_include.rst:278
+msgid "11 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "11 --- Int8       (Aštuonių bitų sveikas skaičius su ženklu (qint8))"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:250
 #: ../../docs/user_manual/processing_algs/algs_include.rst:280
@@ -163,6 +370,18 @@ msgid ""
 msgstr ""
 "Galimi variantai priklauso nuo GDAL versijos, su kuria sukurtas QGIS "
 "(žiūrėkite meniu :menuselection:`Pagalba --> Apie`)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:270
+msgid "3 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr ""
+"3 --- UInt32      (Trisdešimt dviejų bitų sveikas skaičius be ženklo "
+"(quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:271
+msgid "4 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr ""
+"4 --- Int32       (Trisdešimt dviejų bitų sveikas skaičius su ženklu "
+"(qint32))"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:296
 msgid "0 --- Use Input Layer Data Type"

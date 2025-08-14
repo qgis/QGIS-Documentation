@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:45+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2025\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
@@ -395,10 +395,12 @@ msgstr "Par défaut : ``[Créer une couche temporaire]``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:67
 msgid ""
 "Specify the layer to contain the features from the input layer that are "
-"inside the overlay (clipping) layer. One of:"
+"inside the overlay (clipping) layer. :ref:`One of "
+"<output_parameter_widget>`:"
 msgstr ""
 "Spécifiez la couche qui contiendra les entités de la couche d'entrée qui se "
-"trouvent à l'intérieur de la couche de superposition (découpage). Un des:"
+"trouvent à l'intérieur de la couche de superposition (découpage). :ref:`Une "
+"des options suivantes <output_parameter_widget>` :"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -542,10 +544,12 @@ msgstr "**Difference**"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:164
 msgid ""
 "Specify the layer to contain the (parts of) features from the input layer "
-"that are not inside the overlay layer. One of:"
+"that are not inside the overlay layer. :ref:`One of "
+"<output_parameter_widget>`:"
 msgstr ""
 "Spécifiez la couche contenant les (parties de) entités de la couche d'entrée"
-" qui ne se trouvent pas à l'intérieur de la couche de superposition. Un des:"
+" qui ne se trouvent pas à l'intérieur de la couche de superposition. "
+":ref:`Une des options suivantes <output_parameter_widget>` :"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:173
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:495
@@ -643,6 +647,16 @@ msgstr "``OVERLAYS``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1176
 msgid "[vector: geometry] [list]"
 msgstr "[vecteur : géométrie] [liste]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:276
+msgid ""
+"Specify the layer to contain the (parts of) features from the input layer "
+"that do not overlap features of the overlay layers. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Spécifiez la couche contenant les (parties de) entités de la couche d'entrée"
+" qui ne se superposent pas aux entités des couches de superposition. "
+":ref:`Une des options suivantes <output_parameter_widget>` :"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:304
 msgid "**Algorithm ID**: ``qgis:multidifference``"
@@ -749,10 +763,11 @@ msgstr "**Extrait**"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:373
 msgid ""
 "Specify the layer to contain the features from the input layer that are "
-"inside the clip extent. One of:"
+"inside the clip extent. :ref:`One of <output_parameter_widget>`:"
 msgstr ""
 "Spécifiez la couche devant contenir les entités de la couche d'entrée qui se"
-" trouvent à l'intérieur de l'étendue de découpe. Un des:"
+" trouvent à l'intérieur de l'étendue de découpe. :ref:`Une des options "
+"suivantes <output_parameter_widget>` :"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:395
 msgid "Layer containing the clipped features."
@@ -844,15 +859,6 @@ msgstr "``OVERLAY_FIELDS``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:710
 msgid "**Intersection**"
 msgstr "**Intersection**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:485
-msgid ""
-"Specify the layer to contain (the parts of) the features from the input "
-"layer that overlap one or more features from the overlay layer. One of:"
-msgstr ""
-"Spécifiez la couche devant contenir (les parties) des entités de la couche "
-"d'entrée qui chevauchent une ou plusieurs entités de la couche de "
-"superposition. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:506
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:616
@@ -969,14 +975,6 @@ msgstr "``INTERSECT_FIELDS``"
 msgid "[vector: point]"
 msgstr "[vecteur : point]"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:715
-msgid ""
-"Specify the layer to contain the intersection points of the lines from the "
-"input and overlay layers. One of:"
-msgstr ""
-"Spécifiez la couche devant contenir les points d'intersection des lignes des"
-" couches d'entrée et de superposition. Un des:"
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:735
 msgid "**Intersect fields prefix**"
 msgstr "**Préfixe de champs d'intersection**"
@@ -1036,16 +1034,6 @@ msgstr "``LINES``"
 msgid "**Split**"
 msgstr "**Fractionner**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:815
-msgid ""
-"Specify the layer to contain the splitted (in case they are intersected by a"
-" line in the split layer) line/polygon features from the input layer. One "
-"of:"
-msgstr ""
-"Spécifiez la couche devant contenir les entités ligne/polygone fractionnées "
-"(au cas où elles sont coupées par une ligne de la couche fractionnée) de la "
-"couche en entrée. Un des:"
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:838
 msgid "Output vector layer with split lines or polygons from input layer."
 msgstr ""
@@ -1099,15 +1087,6 @@ msgstr ""
 msgid "**Symmetrical difference**"
 msgstr "**Différence symétrique**"
 
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:908
-msgid ""
-"Specify the layer to contain (the parts of) the features from the input and "
-"overlay layers that do not overlap features from the other layer. One of:"
-msgstr ""
-"Spécifiez la couche devant contenir (les parties de) les entités des couches"
-" d'entrée et de superposition qui ne chevauchent pas les entités de "
-"l'autrecouche. Un des:"
-
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:966
 msgid "**Algorithm ID**: ``qgis:symmetricaldifference``"
 msgstr "**ID de l'algorithme** : ``qgis:symmetricaldifference``"
@@ -1157,14 +1136,6 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1224
 msgid "**Union**"
 msgstr "**Union**"
-
-#: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1047
-msgid ""
-"Specify the layer to contain the (split and duplicated) features from the "
-"input layer and the overlay layer. One of:"
-msgstr ""
-"Spécifiez la couche devant contenir les entités (divisées et dupliquées) de "
-"la couche d'entrée et de la couche de superposition. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoroverlay.rst:1098
 msgid ""

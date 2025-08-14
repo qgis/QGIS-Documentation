@@ -534,6 +534,26 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:136
+msgid "Align rasters"
+msgstr "Lygiuoti rastrus"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:138
+msgid ""
+"Aligns rasters by resampling them to the same cell size and reprojecting to "
+"the same CRS as a reference raster."
+msgstr ""
+"Lygiuoja rastrus perrenkant juos į tokį patį celių dydį ir perprojektuojant "
+"į tą pačią CRS kaip ir atskaitos rastras."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:141
+msgid ""
+"**This algorithm is NOT available in the** :ref:`Model Designer "
+"<processing.modeler>` context. Use instead :ref:`qgisalignsingleraster`."
+msgstr ""
+"**Šis algoritmas NEVEIKIA** :ref:`Modelių dizainerio <processing.modeler>` "
+"kontekste. Vietoje to naudokite :ref:`qgisalignsingleraster`."
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:156
 msgid "**Input layers**"
 msgstr "**Įvesties sluoksniai**"
@@ -543,9 +563,59 @@ msgstr "**Įvesties sluoksniai**"
 msgid "[raster] [list]"
 msgstr "[rastras] [sąrašas]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:159
+msgid ""
+"List of input raster layers with resampling options associated (filled as a "
+":class:`QgsProcessingParameterAlignRasterLayers "
+"<qgis.core.QgsProcessingParameterAlignRasterLayers>` item --- done in GUI by"
+" pressing :guilabel:`Configure Raster...` button for each selected layer):"
+msgstr ""
+"Sąrašas įvesties rastrų su susijusiomis perrinkimo parinktimis (užpildytomis"
+" kaip :class:`QgsProcessingParameterAlignRasterLayers "
+"<qgis.core.QgsProcessingParameterAlignRasterLayers>` elementai --- atliekama"
+" GUI naudojant mygtuką :guilabel:`Konfigūruoti rastrą...` kiekvienam "
+"parinktam sluoksniui):"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:166
+msgid "**Input layer** [string] (``inputFile``)"
+msgstr "**Įvesties sluoksnis** [tekstas] (``inputFile``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:167
+msgid "Full path of the input layer to align"
+msgstr "Pilnas kelias iki lygiuojamo įvesties sluoksnio"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:169
+msgid "**Output file** [string] (``outputFile``)"
+msgstr "**Išvesties failas** [tekstas] (``outputFile``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:170
+msgid "Full path of the corresponding aligned output layer"
+msgstr "Pilnas atitinkamai lygiuoto išvesties sluoksnio kelias"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:172
+msgid "**Resampling method** [enumeration] (``resampleMethod``)"
+msgstr "**Perrinkimo metodas** [sąrašas] (``resampleMethod``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:180
+msgid "**Rescale values according to the cell size** [boolean] (``rescale``)"
+msgstr ""
+"**Mastelio keitimo reikšmės pagal celės dydį** [loginis] (``rescale``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:240
+msgid "**Aligned rasters**"
+msgstr "**Lygiuoti rastrai**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:241
 msgid "``OUTPUT_LAYERS``"
 msgstr "``OUTPUT_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:243
+msgid "output rasters with pixels resampled"
+msgstr "išvesties rastrai su perrinktais pikseliais"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:248
+msgid "**Algorithm ID**: ``native:alignrasters``"
+msgstr "**Algoritmo ID**: ``native:alignrasters``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:294
 msgid "``TILE_SIZE``"
@@ -604,6 +674,13 @@ msgstr "**Išvesties sluoksnis**"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:781
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:330
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:413
+msgid ""
+"Specification of the output raster. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Išvesties rastro specifikacija. :ref:`Vienas iš <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
@@ -670,7 +747,7 @@ msgstr "``CREATE_OPTIONS``"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:633
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:641
 msgid "[string]"
-msgstr "[string]"
+msgstr "[tekstas]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:437
 msgid "Default: ''"
