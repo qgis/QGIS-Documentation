@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +41,7 @@ msgstr "プロセシングフレームワークの準備をする"
 msgid ""
 "The first thing to do before using the processing framework is to configure "
 "it. There is not much to set-up, so this is an easy task."
-msgstr "プロセシングフレームワークを使う前に環境設定をします。設定項目は多くないので簡単です。"
+msgstr "プロセシングフレームワークを使う前に、まず環境設定をする必要があります。設定項目はそれほど多くないので簡単な作業です。"
 
 #: ../../docs/training_manual/processing/set_up.rst:7
 msgid ""
@@ -48,7 +49,7 @@ msgid ""
 "used for extending the list of available algorithms, but for now we are just"
 " going to work with the framework itself."
 msgstr ""
-"後ほど、利用可能なアルゴリズムのリストを拡張するために使用される外部アプリケーションを構成する方法を示しますが、今はこのフレームワークだけで作業しようとしています。"
+"後で利用可能なアルゴリズムのリストを拡張するために使う外部アプリケーションの構成方法を説明しますが、今はこのフレームワークだけで作業します。"
 
 #: ../../docs/training_manual/processing/set_up.rst:11
 msgid ""
@@ -57,14 +58,14 @@ msgid ""
 " it is active, you should see a menu called :guilabel:`Processing` in your "
 "menu bar. There you can access all the framework components."
 msgstr ""
-"プロセシングフレームワークはコアQGISプラグインです。それはQGISに含まれているため,システムに既にインストールされています.このプラグインが有効な場合,メニューバーに"
-" :guilabel:`プロセシング` というメニューが表示されます.ここですべてのフレームワークコンポーネントを利用できます."
+"プロセシングフレームワークはQGISのコアプラグインであり、QGISに標準で含まれているため、システムに既にインストールされているはずです。それが有効になっている場合、メニューバーに"
+" :guilabel:`プロセシング` というメニューが表示されます。そこからフレームワークの全てのコンポーネントにアクセスできます。"
 
 #: ../../docs/training_manual/processing/set_up.rst:18
 msgid ""
 "If you cannot find that menu, you have to enable the plugin by going to the "
 "plugin manager and activating it."
-msgstr "メニューを見つけられない場合、プラグインマネージャでそれを有効にすることで、プラグインを使用可能にする必要があります。"
+msgstr "そのメニューが見つからない場合は、プラグインマネージャに移動し、プラグインを有効にする必要があります。"
 
 #: ../../docs/training_manual/processing/set_up.rst:23
 msgid ""
@@ -72,7 +73,7 @@ msgid ""
 " corresponding menu entry and you will see the toolbox docked at the right "
 "side of the QGIS window."
 msgstr ""
-"作業するのに使用する主な要素は、ツールボックスです。対応するメニュー項目をクリックすると、QGISウィンドウの右側にドッキングされ、ツールボックスが表示されます。"
+"作業に使う主な要素はツールボックスです。対応するメニュー項目をクリックすると、QGISウィンドウの右側にツールボックスがドッキングされます。"
 
 #: ../../docs/training_manual/processing/set_up.rst:30
 msgid ""
@@ -81,7 +82,7 @@ msgid ""
 ":menuselection:`Settings --> Options --> Processing`. We will discuss that "
 "dialog later in this manual."
 msgstr ""
-"ツールボックスには、利用可能なすべてのアルゴリズムのリストが含まれ、 *プロバイダ* と呼ばれるグループに分けられています。プロバイダは、 "
+"ツールボックスには、利用可能なすべてのアルゴリズムのリストが *プロバイダ* と呼ばれるグループに分類されて格納されています。プロバイダは、 "
 ":menuselection:`設定->オプション->プロセシング` "
 "で有効（無効）にできます。このダイアログについては、このマニュアルの後半で説明します。"
 
@@ -93,7 +94,7 @@ msgid ""
 "configuration. Configuring providers is explained in a later chapter in this"
 " manual."
 msgstr ""
-"デフォルトでは、サードパーティ製のアプリケーションに依存しないプロバイダーだけ（つまり、実行されるのにQGIS要素を必要とするだけのもの）が有効です。外部アプリケーションを必要とするアルゴリズムには、追加の設定が必要になる場合があります。プロバイダの設定は、このマニュアルの後の章で説明されています。"
+"デフォルトでは、サードパーティ製のアプリケーションに依存しないプロバイダだけ（つまり、実行するのにQGIS要素だけを必要とするもの）が有効です。外部アプリケーションを必要とするアルゴリズムには、追加の設定が必要になる場合があります。プロバイダの設定は、このマニュアルの後の章で説明されています。"
 
 #: ../../docs/training_manual/processing/set_up.rst:40
 msgid ""
@@ -101,4 +102,4 @@ msgid ""
 "There is no need to configure anything else by now. We can already run our "
 "first algorithm, which we will do in the next lesson."
 msgstr ""
-"ここまで来ていればジオアルゴリズムを使う準備は整っています。他に何も設定する必要はありません。すでに次のレッスンで行う最初のアルゴリズムを実行できます。"
+"ここまで来ていればジオアルゴリズムを使う準備は整っています。現時点では他に何も設定する必要はありません。次のレッスンで行う最初のアルゴリズムの実行ができます。"
