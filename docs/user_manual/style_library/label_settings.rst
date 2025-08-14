@@ -894,7 +894,7 @@ You can dynamically control :guilabel:`Mergin around label` using
 the |dataDefine| :sup:`Data-defined override` button.
 Choose unit from the unit selector, and there you can also :ref:`adjust scaling range <unit_selector>`.
 
-.. attention:: This option require a build based on GEOS >= 3.10,
+.. attention:: This option requires a build based on GEOS >= 3.10,
     it may not be available on your QGIS installation depending on the underlying
     GEOS version in use.
 
@@ -907,7 +907,7 @@ When active, it prevents placing labels with the exact same text (case-sensitive
 closer than the minimum distance defined in the :guilabel:`Settings...` option.
 The setting applies across layers, so duplicate text from any layer will be considered.
 
-.. attention:: This option require a build based on GEOS >= 3.10,
+.. attention:: This option requires a build based on GEOS >= 3.10,
     it may not be available on your QGIS installation depending on the underlying
     GEOS version in use.
 
