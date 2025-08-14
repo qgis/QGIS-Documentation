@@ -502,18 +502,18 @@ Basic parameters
      - ``POLYGONS``
      - [vector: polygon][list]
      - List of polygon layers to check against.
-   * - **Errors from contained features**
+   * - **Contained features**
      - ``OUTPUT``
      - [vector: same as input]
 
        Default: ``[Skip output]``
-     - Specification of the output layer contained within the checked polygons.
+     - Specification of the output layer containing features within the checked polygons.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types_skip**
           :end-before: **end_layer_output_types_skip**
-   * - **Contained features**
+   * - **Errors from contained features**
      - ``ERRORS``
      - [vector: point]
 
@@ -558,18 +558,18 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Contained features**
+   * - **Errors from contained features**
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information
        (the ID and name of the input layer, the geometry part,
        ring and vertex index of the erroneous feature,
-       x and y coordinates of the error and the index of the polygon containing the feature).
-   * - **Errors from contained features**
+       x and y coordinates of the centroid of the contained feature,
+       and the layer name and index of a polygon containing the feature).
+   * - **Contained features**
      - ``OUTPUT``
      - [vector: same as input]
-     - Output layer contained within the checked polygons.
-       Additional fields are added (see ``ERRORS`` output).
+     - Output layer containing features within the checked polygons.
 
 Python code
 ...........
