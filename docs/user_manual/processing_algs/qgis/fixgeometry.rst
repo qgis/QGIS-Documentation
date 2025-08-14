@@ -529,7 +529,6 @@ Outputs
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer with the geometry fix applied to the input features.
-       Additional fields are added (see ``REPORT`` output).
 
 Python code
 ...........
@@ -539,5 +538,3 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-
