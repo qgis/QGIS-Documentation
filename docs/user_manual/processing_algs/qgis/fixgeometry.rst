@@ -161,11 +161,9 @@ Deletes error features based on an error layer from the check geometry algorithm
 .. figure:: img/fix_geometry_deletefeatures.png
    :align: center
 
-   Before and after deleting features with errors.
+   Before and after deleting features inside a polygon.
 
-.. .. seealso:: :ref:`qgischeckgeometryduplicatedgeometries`
-..              :ref:`qgischeckgeometrydegeneratepolygons`
-..              :ref:`qgischeckgeometryfeaturesinsidepolygon`
+.. seealso:: :ref:`qgisdeleteduplicategeometries`, :ref:`qgisdropgeometries`
 
 Parameters
 ..........
@@ -236,12 +234,11 @@ Outputs
      - [vector: point]
      - Output point layer representing the error locations and fix applied
        (the ID and name of the input layer, the geometry part, ring and vertex index of the erroneous feature,
-       x and y coordinates, index of the error geometry containing the feature, the applied fix and its successfulness).
+       x and y coordinates, affected feature IDs, the applied fix and its successfulness).
    * - **Cleaned layer**
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer with features removed based on detected errors.
-       Additional fields are added (see ``REPORT`` output).
 
 Python code
 ...........
