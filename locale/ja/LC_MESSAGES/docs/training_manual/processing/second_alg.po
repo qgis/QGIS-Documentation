@@ -122,7 +122,7 @@ msgid ""
 "following parameters dialog."
 msgstr ""
 "次に必要とするのはポリゴンレイヤです。*グリッドを作成* "
-"アルゴリズムを使用して、規則的なグリッドのポリゴンを作成します。このアルゴリズムには次のパラメータダイアログがあります。"
+"アルゴリズムを使用して、構造格子のポリゴンを作成します。このアルゴリズムには次のパラメータダイアログがあります。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:29
 msgid ""
@@ -130,8 +130,8 @@ msgid ""
 "min and max for X and Y (suggested values: "
 "-5.696226,-5.695122,40.24742,40.248171)"
 msgstr ""
-"オプションは、QGISの最近のバージョンでは単純です。XとYのための最小値と最大値を入力する必要があるだけです（推奨値：-5.696226, "
-"-5.695122, 40.24742, 40.248171）"
+"QGISの最近のバージョンではオプションが単純になりました。XとYの最小値と最大値を入力するだけです（推奨値：-5.696226, -5.695122,"
+" 40.24742, 40.248171）"
 
 #: ../../docs/training_manual/processing/second_alg.rst:31
 msgid ""
@@ -140,8 +140,8 @@ msgid ""
 "corresponding box or clicking the button on the right--hand side to get to a"
 " dialog like the one shown next."
 msgstr ""
-"グリッドを作成するために必要な入力はすべて数値です。 - "
-"右側次の図のようなダイアログボックスに取得するには、対応するボックスに直接入力するか、右側のボタンをクリック：数値を入力する必要がある場合、次の2つのオプションがあります。"
+"グリッドを作成するために必要な入力はすべて数値です。数値を入力する必要がある場合、次の2つのオプションがあります: "
+"対応するボックスに直接入力するか、右にあるボタンをクリックして次のようなダイアログボックスを表示させます。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:35
 msgid ""
@@ -150,8 +150,8 @@ msgid ""
 "corresponding text box in the parameters dialog. Also, it contains constants"
 " that you can use, and values from other layers available."
 msgstr ""
-"ダイアログには簡単な計算機が含まれているので、 ``11 * 34.7 + 4.6`` "
-"のような式を入力でき、その結果が計算され、パラメーターダイアログに対応するテキストボックスに入ります。また、それには使用できる定数が含まれており、他のレイヤーからの値が入手できます。"
+"このダイアログには簡単な計算機が含まれており、 ``11 * 34.7 + 4.6`` "
+"のような式を入力すると、計算結果がパラメータダイアログの対応するテキストボックスに入ります。また、それには定数や利用可能な他のレイヤの値も含んでいます。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:37
 msgid ""
@@ -162,22 +162,22 @@ msgid ""
 " math, try to do that yourself using the calculator dialog and the constants"
 " from the input points layer."
 msgstr ""
-"この場合、入力ポイントレイヤーの範囲をカバーするグリッドを作成したいので、これらはアルゴリズムがグリッドを作成するのに要するパラメーターであるので、グリッドとその幅と高さの中心座標を計算するためにその座標を使用する必要があります。数学の少しで、計算機ダイアログと入力ポイントレイヤーからの定数を使用して自分でやってみましょう。"
+"ここでは入力ポイントレイヤの範囲を覆うグリッドを作成したいので、それらの座標を使い、アルゴリズムがグリッドを作成するのに要するパラメータであるグリッドの中心座標と幅と高さを計算する必要があります。少し数学が必要ですが、計算機ダイアログと入力ポイントレイヤの定数を使って自分でやってみましょう。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:39
 msgid "Select *Rectangles (polygons)* in the *Type* field."
-msgstr "*タイプ* フィールドに *長方形（ポリゴン）* を選択します。"
+msgstr "*グリッドタイプ* フィールドは *長方形（ポリゴン）* を選択します。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:41
 msgid ""
 "As in the case of the last algorithm, we have to enter the CRS here as well."
 " Select EPSG:4326 as the target CRS, as we did before."
 msgstr ""
-"最後のアルゴリズムの場合のように、私たちはここにもCRSを入力する必要があります。私たちは前に行ったように、ターゲットCRSとして4326：EPSGを選択します。"
+"最後のアルゴリズムの場合のように、ここにもCRSを入力する必要があります。前に行ったように、ターゲットCRSとしてEPSG:4326を選択します。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:43
 msgid "In the end, you should have a parameters dialog like this:"
-msgstr "最後には、このようなダイアログのパラメーターを持っているはずです："
+msgstr "最終的に、次のようなパラメータダイアログになるはずです:"
 
 #: ../../docs/training_manual/processing/second_alg.rst:47
 msgid ""
@@ -186,22 +186,22 @@ msgid ""
 "-5.695674, Center Y: 40.2477955) The case of X center is a bit tricky, see: "
 "-5.696126+(( -5.695222+ 5.696126)/2)"
 msgstr ""
-"（幅と高さ上の一点の間隔を追加すると良い：水平間隔：0.0001、垂直間隔：0.0001、幅：0.001004、高さ：0.000651、中心X：-5.695674、中心Y：40.2477955）X中心の場合は少しトリッキーであり、参照：-5.696126"
-" +（（-5.695222+ 5.696126）/ 2）"
+"（幅と高さにひとつ間隔を追加した方が良いでしょう：水平間隔：0.0001、垂直間隔：0.0001、幅：0.001004、高さ：0.000651、中心X：-5.695674、中心Y：40.2477955）X中心は少し複雑です:"
+" -5.696126 +（（-5.695222+ 5.696126）/ 2）"
 
 #: ../../docs/training_manual/processing/second_alg.rst:50
 msgid "Press *Run* and you will get the graticule layer."
-msgstr "*実行* を押すと目盛レイヤが得られるでしょう。"
+msgstr "*実行* を押すと経緯線網レイヤが表示されます。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:54
 msgid ""
 "The last step is to count the points in each one of the rectangles of that "
 "graticule. We will use the *Count points in polygons* algorithm."
-msgstr "最後のステップは、その目盛の各長方形の中の点を数えることです。 *ポリゴンでポイントをカウント* アルゴリズムを使用します。"
+msgstr "最後のステップは、その経緯線網の各長方形の中の点を数えることです。 *ポリゴン内の点の数* アルゴリズムを使用します。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:58
 msgid "Now we have the result we were looking for."
-msgstr "これで探していた結果が得られました。"
+msgstr "これで求めていた結果が得ることができました。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:60
 msgid ""
@@ -211,14 +211,14 @@ msgid ""
 "name each time. Instead, go to the processing menu and select the *Options "
 "and configuration* item. It will open the configuration dialog."
 msgstr ""
-"このレッスンを終える前に、データを永続的に保存したい場合の簡単なヒントを紹介します。すべての出力ファイルを指定したフォルダに保存したい場合は、フォルダ名を毎回入力する必要はありません。代わりに、プロセシングメニューに移動し、"
-" *オプションと設定* 項目を選択します。これは、設定ダイアログを開きます。"
+"このレッスンを終える前に、データを永続的に保存したい場合に役立つ簡単なヒントを紹介します。全ての出力ファイルを特定のフォルダに保存したい場合、フォルダ名を毎回入力する必要はありません。代わりに、プロセシングメニューに移動し、"
+" *オプションと設定* を選択します。すると設定ダイアログが開きます。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:64
 msgid ""
 "In the *Output folder* entry that you will find in the *General* group, type"
 " the path to your destination folder."
-msgstr "*一般設定* グループで見つかる *出力フォルダ* エントリで、保存先フォルダへのパスを入力します。"
+msgstr "*一般情報* グループで見つかる *出力フォルダ* エントリで、保存先フォルダのパスを入力します。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:68
 msgid ""
@@ -229,9 +229,9 @@ msgid ""
 "You can still enter a full path in case you want a result to be saved in a "
 "different folder."
 msgstr ""
-"これでアルゴリズムを実行するときに、完全パスではなくファイル名を使うだけでよくなりました。例えば上の設定において、先ほどのアルゴリズムの出力パスとして "
-"``graticule.shp`` を入力すると、結果は ``D:\\processing_output\\graticule.shp`` "
-"に保存されます。それでも結果を別のフォルダに保存したい場合は、完全パスを入力することもできます。"
+"これでアルゴリズムを実行するときに、完全パスの代わりにファイル名を使うだけでよくなりました。例えば上の設定において、先ほどのアルゴリズムの出力パスとして"
+" ``graticule.shp`` を入力すると、結果は ``D:\\processing_output\\graticule.shp`` "
+"に保存されます。結果を別のフォルダに保存したい場合は、完全パスを入力することもできます。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:71
 msgid ""
