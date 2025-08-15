@@ -60,7 +60,7 @@ msgid ""
 "Notice that the CRS of input layers is shown along with its name in the "
 "parameters dialog."
 msgstr ""
-"入力レイヤが複数存在する場合は、最初のレイヤのCRSが使用されます。これは全ての入力レイヤのCRSである（それらは同じである必要があるため）と想定されます。CRSが一致していないレイヤを使う場合は、QGISがそれを警告します。入力レイヤのCRSはパラメータダイアログ中にその名前と一緒に表示されていることに注意してください。"
+"入力レイヤが複数存在する場合は、最初のレイヤのCRSが使用されます。全ての入力レイヤのCRSは同じ必要があり、これがそのCRSであると想定されます。CRSが一致していないレイヤを使うと、QGISがそれを警告します。入力レイヤのCRSはパラメータダイアログ中にその名前と一緒に表示されていることに注意してください。"
 
 #: ../../docs/training_manual/processing/crs.rst:19
 msgid ""
@@ -68,7 +68,7 @@ msgid ""
 "algorithm contains a specific CRS field (as it happened in the last lesson "
 "with the graticule algorithm)"
 msgstr ""
-"入力レイヤがない場合、アルゴリズムに特定のCRSフィールドが含まれていなければ、プロジェクトのCRSを使用します（前回のgraticuleアルゴリズムのレッスンで起こったように）"
+"入力レイヤがない場合はプロジェクトのCRSが使用されますが、アルゴリズムに具体的なCRSフィールドが含まれていれば、（経緯線網アルゴリズムを使った前回のレッスンのように）それが使われます"
 
 #: ../../docs/training_manual/processing/crs.rst:23
 msgid ""
@@ -78,11 +78,11 @@ msgid ""
 "is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
 "actually the same layer."
 msgstr ""
-"このレッスンに対応するプロジェクトを開いてください。23030と4326という名前の2つのレイヤが表示されるでしょう。それら両方には同じ点が含まれていますが、CRSは異なっています（EPSG：23030とEPSG：4326）。QGISによってその場でプロジェクトCRS（EPSG：4326）に再投影されたので、それらは同じ場所に表示されますが、それらは実際には同じレイヤではありません。"
+"このレッスンに対応するプロジェクトを開き、23030と4326という名前の2つのレイヤを表示してください。それら両方には同じ点が含まれていますが、CRSは異なっています（EPSG：23030とEPSG：4326）。QGISによってプロジェクトCRS（EPSG：4326）にオンザフライで再投影されたので、それらは正確に同じ場所に表示されますが、それらは実際には同じレイヤではありません。"
 
 #: ../../docs/training_manual/processing/crs.rst:29
 msgid "Open the *Export/Add geometry columns* algorithm."
-msgstr "*ジオメトリ列の出力/追加* アルゴリズムを開きます。"
+msgstr "*ジオメトリ属性を追加* アルゴリズムを開きます。"
 
 #: ../../docs/training_manual/processing/crs.rst:33
 msgid ""
@@ -91,7 +91,7 @@ msgid ""
 "the case of points, it adds new columns with the X and Y coordinates of each"
 " point."
 msgstr ""
-"このアルゴリズムは、ベクタレイヤの属性テーブルに新しい列を追加します。列の内容は、レイヤのジオメトリの種類によって異なります。ポイントの場合には、各点のX及びY座標で新しい列を追加します。"
+"このアルゴリズムは、ベクタレイヤの属性テーブルに新しい列を追加します。列の内容は、レイヤのジオメトリの種類によって異なります。ポイントの場合、各点のX及びY座標で新しい列を追加します。"
 
 #: ../../docs/training_manual/processing/crs.rst:38
 msgid ""
@@ -100,7 +100,7 @@ msgid ""
 " they appear in the same place in your canvas, they will be treated "
 "differently. Select the 4326 layer."
 msgstr ""
-"入力レイヤのフィールドにある使用可能なレイヤのリストには、各レイヤとそれに対応するCRSが表示されています。それが意味するのは、それらはキャンバス内の同じ場所に表示されますが異なる方法で処理されているということです。4326レイヤを選択してください。"
+"入力レイヤのフィールドにある使用可能なレイヤのリストには、各レイヤとそれに対応するCRSが表示されています。それは、キャンバスの同じ場所に表示されても異なる方法で処理されることを意味します。4326レイヤを選択してください。"
 
 #: ../../docs/training_manual/processing/crs.rst:43
 msgid ""
@@ -110,8 +110,8 @@ msgid ""
 "coordinates directly. Select the *Layer CRS* option to just use coordinates "
 "as they are. This is how almost all geoalgorithms work."
 msgstr ""
-"アルゴリズムの他のパラメータは、アルゴリズムが結果のレイヤに追加する新たな値を計算するために、どのように座標を使用するかを設定できます。ほとんどのアルゴリズムはこのようなオプションがなく、単に座標を直接使用します。座標をそのまま使用する場合は、*レイヤCRS*"
-" オプションを選択します。これは、ほとんどすべての地理アルゴリズムの動作方法です。"
+"アルゴリズムのもうひとつのパラメータは、アルゴリズムが結果レイヤに追加する新たな値を計算するために、どのように座標を使用するかを設定できます。ほとんどのアルゴリズムにはこのようなオプションはなく、座標を直接使うだけです。座標をそのまま使用する場合は、*レイヤCRS*"
+" オプションを選択します。これは、ほぼ全ての地理アルゴリズムの動作です。"
 
 #: ../../docs/training_manual/processing/crs.rst:49
 msgid ""
@@ -121,13 +121,13 @@ msgid ""
 "EPSG:4326. When the layer is loaded into QGIS, you will not be asked to "
 "enter the CRS of the layer, since QGIS already knows about it."
 msgstr ""
-"他の2つのレイヤとまったく同じポイントを持つ新しいレイヤが作成されるはずです。レイヤの名前を右クリックしてプロパティを開くと、入力レイヤと同じCRS、つまりEPSG:4326を共有していることがわかります。このレイヤをQGISに読み込む際、レイヤのCRSはQGISがすでに知っているので、それを入力するよう求められることはありません。"
+"他の2つのレイヤとまったく同じポイントを持つ新しいレイヤが作成されるはずです。レイヤの名前を右クリックしてプロパティを開くと、入力レイヤと同じCRS、つまりEPSG:4326を共有していることが分かります。このレイヤがQGISに読み込まれる際、レイヤのCRSはQGISがすでに知っているので、それを入力するよう求められることはありません。"
 
 #: ../../docs/training_manual/processing/crs.rst:55
 msgid ""
 "If you open the attributes table of the new layer you will see that it "
 "contains two new fields with the X and Y coordinates of each point."
-msgstr "新しいレイヤの属性テーブルを開くと、それが各ポイントのXとY座標を持つ2つの新しいフィールドが含まれていることがわかります。"
+msgstr "新しいレイヤの属性テーブルを開くと、それが各ポイントのXとY座標を持つ2つの新しいフィールドが含まれていることが分かります。"
 
 #: ../../docs/training_manual/processing/crs.rst:60
 msgid ""
@@ -148,7 +148,7 @@ msgid ""
 " will have the EPSG:23030 CRS, since that was the one of the input layer."
 msgstr ""
 "もう一方のレイヤを使って、同じ計算をしてみてください。出来上がったレイヤは他のレイヤと全く同じ場所にレンダリングされ、入力レイヤのものなので "
-"EPSG:23030 CRS を持つことになるはずです。"
+"EPSG:23030 CRS を持つはずです。"
 
 #: ../../docs/training_manual/processing/crs.rst:72
 msgid ""
@@ -160,7 +160,7 @@ msgstr "その属性テーブルに行くと、最初に作成したレイヤの
 msgid ""
 "This is because the original data is different (it uses a different CRS), "
 "and those coordinates are taken from it."
-msgstr "これは、元のデータが異なる（それは異なるCRSを使用する）ためであり、これらの座標はそれから取られます。"
+msgstr "これは、元のデータが異なる（それは異なるCRSを使用する）ためであり、これらの座標はそれから取られています。"
 
 #: ../../docs/training_manual/processing/crs.rst:80
 msgid ""
@@ -174,15 +174,14 @@ msgid ""
 "layers that appear to match or overlay might be very far one from each "
 "other, since they might have different CRSs."
 msgstr ""
-"このことから何を学ぶべきでしょうか？これらの例の背後にある主な考え方は、地理アルゴリズムは元のデータソースのレイヤをそのまま使用し、QGISでレンダリングする前に行われているかもしれない再投影は完全に無視するということです。言い換えれば、キャンバスに見えるものは信用せず、元のデータが使用されるだろうことを常に念頭に置いてください。この場合は一度に1つのレイヤを使用しているのでそれほど重要ではありませんが、複数のレイヤを必要とするアルゴリズム（例えばクリップアルゴリズムのような）では、一致したり重なったりするように見えるレイヤが、異なるCRSを持っているかもしれないため、互いに非常に離れていることがあります。"
+"ここから何を学ぶべきでしょうか？これらの例の背後にある重要な考えは、地理アルゴリズムは元のデータソースのレイヤをそのまま使用し、QGISでレンダリングする前に行われているかもしれない再投影は完全に無視するということです。言い換えれば、キャンバスに見えるものは信用せず、常に元のデータが使用されることを念頭に置いてください。ここでは一度に1つのレイヤだけを使用しているのでそれほど重要ではありませんが、複数のレイヤを必要とするアルゴリズム（例えばクリップアルゴリズム）では、一致したり重なったりするように見えるレイヤが、異なるCRSを持っていて、互いに非常に離れていることがあります。"
 
 #: ../../docs/training_manual/processing/crs.rst:89
 msgid ""
 "Algorithms performs no reprojection (except in the reprojection algorithm "
 "that we will see next), so it is up to you to make sure that layers have "
 "matching CRS's."
-msgstr ""
-"アルゴリズムでは（次に見る再投影アルゴリズムを除いて）何も再投影を行わないので、レイヤのCRSが一致していることを確認することは自己責任です。"
+msgstr "アルゴリズムは（次に見る再投影アルゴリズムを除いて）再投影を行わないので、レイヤのCRSが一致していることを確認することは自分の責任です。"
 
 #: ../../docs/training_manual/processing/crs.rst:93
 msgid ""
@@ -190,7 +189,7 @@ msgid ""
 "represents a particular case, since it has an input layer (the one to "
 "reproject), but it will not use its CRS for the output one."
 msgstr ""
-"CRSを扱う興味深いモジュールに再投影があります。それは入力レイヤ（再投影するもの）を持っていますが、それは出力レイヤにはそのCRSを使わないので、特定の場合を表しています。"
+"CRSを扱う興味深いモジュールのひとつが再投影モジュールです。それは入力レイヤ（再投影の対象となるもの）を持つが、そのCRSを出力レイヤに使わない特殊なケースを代表しています。"
 
 #: ../../docs/training_manual/processing/crs.rst:97
 msgid "Open the *Reproject layer* algorithm."
@@ -207,6 +206,6 @@ msgid ""
 "veryfing that the added coordinates are different to the ones in the "
 "attribute tables of both of the two layers that we had computed before."
 msgstr ""
-"入力として、レイヤのいずれかを選択し、出力CRSとしてEPSG:23029を選択します。アルゴリズムを実行すると、入力レイヤと同じで、異なるCRSを持つ新しいレイヤが生成されます。QGISではそれをその場で再投影するのでキャンバスの同じ領域に表示されますが、元の座標は異なっています。この新しいレイヤを入力として"
-" *ジオメトリ列をエクスポート/追加* "
+"入力として、レイヤのいずれかを選択し、出力CRSとしてEPSG:23029を選択します。アルゴリズムを実行すると、入力レイヤと同じで、異なるCRSを持つ新しいレイヤが生成されます。QGISではそれをオンザフライで再投影するので、他のものと同様にキャンバスの同じ領域に表示されますが、元にしている座標は異なっています。この新しいレイヤを入力として"
+" *ジオメトリ属性を追加* "
 "アルゴリズムを実行すると、追加された座標が前に計算した2つのレイヤの属性テーブルのものと異なっていることを確認することができます。"
