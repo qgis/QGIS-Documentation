@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-17 20:03+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,6 +62,18 @@ msgstr ""
 "In Ubuntu puoi usare il tuo normale utente, aggiungendo ``sudo`` ai comandi "
 "che richiedono permessi di admin. In Debian puoi lavorare come admin "
 "(``root``), senza usare ``sudo``."
+
+#: ../../docs/server_manual/getting_started.rst:24
+msgid ""
+"Requirements and steps to add official QGIS repositories to install QGIS "
+"Server on a Debian based system are provided in `QGIS installers page "
+"<https://qgis.org/resources/installation-guide/#linux>`_. You may want to "
+"install at least the latest Long Term Release."
+msgstr ""
+"I requisiti e i passaggi per aggiungere repository QGIS ufficiali per "
+"installare QGIS Server su un sistema basato su Debian sono forniti in`QGIS "
+"installers page <https://qgis.org/resources/installation-guide/#linux>`_.  "
+"Dovresti installare l'ultima versione a lungo termine."
 
 #: ../../docs/server_manual/getting_started.rst:28
 msgid ""
@@ -461,6 +473,20 @@ msgstr ""
 "utilizzabile, in particolare per la stampa. Nel caso in cui si disponga già "
 "di un server X funzionante, puoi utilizzare i servizi systemd."
 
+#: ../../docs/server_manual/getting_started.rst:447
+msgid ""
+"This method, to deploy QGIS Server, relies on two Systemd units to "
+"configure: a `Socket unit "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.socket.html>`_"
+" and a `Service unit "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html>`_."
+msgstr ""
+"Questo metodo, per distribuire QGIS Server, si basa su due unità Systemd da "
+"configurare: una `Socket unit "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.socket.html>`_"
+" e una `Service unit "
+"<https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html>`_."
+
 #: ../../docs/server_manual/getting_started.rst:451
 msgid ""
 "The **QGIS Server Socket unit** defines and creates a file system socket, "
@@ -609,6 +635,15 @@ msgstr ""
 #: ../../docs/server_manual/getting_started.rst:621
 msgid "Installation on Windows"
 msgstr "Installazione su Windows"
+
+#: ../../docs/server_manual/getting_started.rst:625
+msgid ""
+"QGIS Server can also be installed on Windows systems using the OSGeo4W "
+"network installer (https://qgis.org/resources/installation-guide/#windows)."
+msgstr ""
+"QGIS Server può essere installato anche su sistemi Windows utilizzando il "
+"programma di installazione di rete OSGeo4W "
+"(https://qgis.org/resources/installation-guide/#windows)."
 
 #: ../../docs/server_manual/getting_started.rst:628
 msgid "A simple procedure is the following:"
@@ -828,6 +863,22 @@ msgstr "Per esempio con spawn-fcgi:"
 msgid "Configure your project"
 msgstr "Configura il tuo progetto"
 
+#: ../../docs/server_manual/getting_started.rst:804
+msgid ""
+"To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a "
+"QGIS project file with some data or use one of your current projects. Define"
+" the colors and styles of the layers in QGIS and the project CRS, if not "
+"already defined. Then, go to the :guilabel:`QGIS Server` menu of the "
+":menuselection:`Project --> Properties...` dialog and provide some "
+"information about the OWS in the :guilabel:`Service Capabilities` tab."
+msgstr ""
+"Per fornire un nuovo server QGIS WMS, WFS, OAPIF o WCS, devi creare un file "
+"di progetto QGIS con alcuni dati o utilizzare uno dei progetti correnti. "
+"Definire i colori e gli stili dei layer in QGIS e nel progetto il SR, se non"
+" già definiti. Quindi, vai al menu :guilabel:`QGIS Server` della finestra di"
+" dialogo :menuselection:`Progetto --> Proprietà...` e fornisci alcune "
+"informazioni sull'OWS nella scheda :guilabel:`Service Capabilities`."
+
 #: ../../docs/server_manual/getting_started.rst:816
 msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
 msgstr "Definizioni per un progetto QGIS Server WMS/WFS/WCS"
@@ -857,6 +908,27 @@ msgstr "WMS capabilities"
 #: ../../docs/server_manual/getting_started.rst:832
 msgid "Definitions in the WMS tab"
 msgstr "Definizioni nella scheda WMS"
+
+#: ../../docs/server_manual/getting_started.rst:834
+msgid ""
+"In the :guilabel:`WMS` tab, you can define the options for the WMS "
+"capabilities."
+msgstr ""
+"Nella scheda :guilabel:`WMS` puoi definire le opzioni per le WMS "
+"capabilities."
+
+#: ../../docs/server_manual/getting_started.rst:836
+msgid ""
+"Check :guilabel:`Advertised extent` to define the extent advertised in the "
+"WMS GetCapabilities response. The :ref:`spatial extent selector "
+"<extent_selector>` widget helps you enter the extent as a ``xmin, xmax, "
+"ymin, ymax`` text or pick it from the map canvas, layers, bookmarks..."
+msgstr ""
+"Seleziona :guilabel:`Estensione pubblicata` per definire l'estensione "
+"pubblicata nella risposta WMS GetCapabilities. Il widget :ref:`spatial "
+"extent selector ` ti aiuta a inserire l'estensione come testo ``xmin, xmax, "
+"ymin, ymax`` oppure a selezionarla dall'area di disegno della mappa, dai "
+"layer, dai segnalibri..."
 
 #: ../../docs/server_manual/getting_started.rst:843
 msgid ""
@@ -923,6 +995,10 @@ msgstr ""
 " dimensioni della risposta di WMS GetCapabilities, con conseguenti tempi di "
 "caricamento più rapidi sul lato client."
 
+#: ../../docs/server_manual/getting_started.rst:869
+msgid ":guilabel:`Layer and Feature Options`"
+msgstr ":guilabel:`Layer e Opzioni Elementi`"
+
 #: ../../docs/server_manual/getting_started.rst:871
 msgid ""
 "You can receive requested GetFeatureInfo as plain text, XML and GML. The "
@@ -943,6 +1019,22 @@ msgstr ""
 "``GetCapabilities`` o nel parametro ``GetMap LAYERS``. In caso contrario, "
 "viene utilizzato il nome del layer o il nome breve, se definito (vedi "
 ":ref:`vectorservermenu`)."
+
+#: ../../docs/server_manual/getting_started.rst:877
+msgid ""
+"By default, layer names are used to expose layers through WMS. If multiple "
+"layers have the same name, they will be merged to a single WMS layer and "
+"cannot be requested individually. You need to take care of these layers "
+"being compatible with each other. Using the :guilabel:`Use layer ids as "
+"name` option ensures that multiple layers with the same name can be "
+"requested as individual layers."
+msgstr ""
+"Per impostazione predefinita, i nomi dei layer vengono utilizzati per "
+"esporre i layer tramite WMS. Se più layeri hanno lo stesso nome, verranno "
+"uniti in un unico layer WMS e non potranno essere richiamati sigolarmente. "
+"Devi assicurarti che questi layer siano compatibili tra loro. Utilizzando "
+"l'opzione :guilabel:`Usa ID livello come nome` si garantisce che più layer "
+"con lo stesso nome possano essere richiesti come layer singoli."
 
 #: ../../docs/server_manual/getting_started.rst:886
 msgid ""
@@ -1006,6 +1098,10 @@ msgstr ""
 "risposta di WMS GetCapabilities, inserisci l'URL corrispondente nel campo "
 ":guilabel:`Advertised URL`."
 
+#: ../../docs/server_manual/getting_started.rst:908
+msgid ":guilabel:`Map and Legend Options`"
+msgstr ":guilabel:`Mapa e Opzioni Legenda`"
+
 #: ../../docs/server_manual/getting_started.rst:910
 msgid ""
 "When a layer group is passed to ``GetLegendGraphic`` request, all of its "
@@ -1020,6 +1116,49 @@ msgstr ""
 ":guilabel:`Aggiungi gruppi di layer in GetLegendGraphic` se vuoi inserire "
 "anche i nomi dei gruppi di layer (e dei sottogruppi) nell'albero dei layer, "
 "proprio come nella legenda di QGIS Desktop."
+
+#: ../../docs/server_manual/getting_started.rst:916
+msgid ""
+"When QGIS project contains layer groups, they are listed in WMS capabilities"
+" document alongside with layers. If a group (its name as listed in "
+"capabilities) is included in WMS GetMap ``LAYERS`` parameter alongside with "
+"names of layers in that group, QGIS would duplicate the layers: once for the"
+" group and once for specific layer. If you check the |checkbox| "
+":guilabel:`Skip name attribute for groups` option, GetCapabilities will only"
+" return title attribute for the group but not its name attribute, making it "
+"impossible to include groups in list of layers of GetMap request."
+msgstr ""
+"Quando il progetto QGIS contiene gruppi di layer, questi vengono elencati "
+"nel documento delle capabilities WMS insieme ai layer. Se un gruppo (il cui "
+"nome è elencato nellecapabilities) è incluso nel parametro ``LAYERS`` di WMS"
+" GetMap insieme ai nomi dei layer in quel gruppo, QGIS duplicherebbe i "
+"layer: una volta per il gruppo e una volta per il layer specifico. Se si "
+"seleziona l'opzione |checkbox| :guilabel:`Salta l'attributo name per i "
+"gruppi`, GetCapabilities restituirà solo l'attributo title per il gruppo ma "
+"non il suo attributo name, rendendo impossibile includere i gruppi "
+"nell'elenco dei layer della richiesta GetMap."
+
+#: ../../docs/server_manual/getting_started.rst:924
+msgid ""
+"Furthermore, you can restrict the maximum size of the maps returned by the "
+"requests by entering the maximum width and height into the respective fields"
+" under :guilabel:`Maximum image size for GetMap and GetLegendGraphic "
+"requests`."
+msgstr ""
+"Inoltre, puoi limitare la dimensione massima delle mappe restituite dalle "
+"richieste inserendo la larghezza e l'altezza massime nei rispettivi campi in"
+" :guilabel:`Dimensione massima dell'immagine per le richieste GetMap e "
+"GetLegendGraphic`."
+
+#: ../../docs/server_manual/getting_started.rst:928
+msgid ""
+"You can change the :guilabel:`Quality for JPEG and WebP images` factor. The "
+"quality factor must be in the range 0 to 100. Specify 0 for maximum "
+"compression, 100 for no compression."
+msgstr ""
+"Puoi modificare il fattore :guilabel:`Qualità per immagini JPEG e WebP`. Il "
+"fattore di qualità deve essere compreso tra 0 e 100. Specificare 0 per la "
+"compressione massima, 100 per nessuna compressione."
 
 #: ../../docs/server_manual/getting_started.rst:932
 msgid ""
@@ -1042,9 +1181,59 @@ msgstr ""
 ":guilabel:`Tile buffer in pixel`. Il valore consigliato è la dimensione del "
 "simbolo o della linea più grande del progetto QGIS."
 
+#: ../../docs/server_manual/getting_started.rst:938
+msgid ""
+"Depending on whether the map uses a projected CRS or a geographic CRS and if"
+" there is no information to evaluate the map unit sized symbols, you can "
+"provide reference for size through either a :guilabel:`Default scale for "
+"legend` or :guilabel:`Default map units per mm in legend`."
+msgstr ""
+"A seconda che la mappa utilizzi un SR proiettato o un SR geografico e se non"
+" ci sono informazioni per valutare i simboli delle dimensioni delle unità "
+"della mappa, puoi fornire un riferimento per le dimensioni tramite "
+":guilabel:`Scala predefinita per la legenda` o :guilabel:`Unità di mappa "
+"predefinite per mm nella legenda`."
+
 #: ../../docs/server_manual/getting_started.rst:945
 msgid "WMTS capabilities"
 msgstr "WMTS capabilities"
+
+#: ../../docs/server_manual/getting_started.rst:947
+msgid ""
+"In the :guilabel:`WMTS` tab you can select the layers you want to publish as"
+" WMTS and specify if you want to publish as PNG or JPEG."
+msgstr ""
+"Nella scheda :guilabel:`WMTS` puoi selezionare i layer che vuoi pubblicare "
+"come WMTS e specificare se desideri pubblicare come PNG o JPEG."
+
+#: ../../docs/server_manual/getting_started.rst:950
+msgid ""
+"Under :guilabel:`Grids`, for each :ref:`restricted CRS <restricted_crs>`, "
+"you can indicate whether the tile matrices should be published and configure"
+" their top-left corner, minimum and maximum scales and the last level of the"
+" tile matrices. Note that for ``EPSG:3857`` and ``EPSG:4326`` CRS, only the "
+"last level of the tile matrices can be edited."
+msgstr ""
+"In :guilabel:`Reticoli`, per ogni :ref:`restricted CRS <restricted_crs>`, "
+"puoi indicare se le matrici di tasselli devono essere pubblicate e "
+"configurare il loro angolo in alto a sinistra, le scale minima e massima e "
+"l'ultimo livello delle matrici di tasselli. Si noti che per SR ``EPSG:3857``"
+" e ``EPSG:4326`` è possibile modificare solo l'ultimo livello delle matrici "
+"di tasselli."
+
+#: ../../docs/server_manual/getting_started.rst:956
+msgid "You can also set a :guilabel:`Minimum scale` for the tiles display."
+msgstr ""
+"Puoi anche impostare la :guilabel:`Scala minima` per la visualizzazione dei "
+"tasselli."
+
+#: ../../docs/server_manual/getting_started.rst:958
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field, QGIS Server will"
+" advertise this specific URL in the WMTS GetCapabilities response."
+msgstr ""
+"Se immetti un URL nel campo :guilabel:`URL pubblicato`, QGIS Server "
+"pubblicherà questo URL specifico nella risposta WMTS GetCapabilities."
 
 #: ../../docs/server_manual/getting_started.rst:966
 msgid "Definitions in the WMTS tab"
@@ -1054,13 +1243,39 @@ msgstr "Definizioni nella scheda WMTS"
 msgid "WFS/OAPIF capabilities"
 msgstr "WFS/OAPIF capabilities"
 
+#: ../../docs/server_manual/getting_started.rst:971
+msgid ""
+"In the :guilabel:`WFS/OAPIF` tab, you can select the layers you want to "
+"publish as WFS or OAPIF, and specify if they will allow update, insert and "
+"delete operations."
+msgstr ""
+"Nella scheda :guilabel:`WFS/OAPIF`, puoi selezionare i layer che vuoi "
+"pubblicare come WFS o OAPIF e specificare se consentiranno operazioni di "
+"aggiornamento, inserimento ed eliminazione."
+
 #: ../../docs/server_manual/getting_started.rst:980
 msgid "Definitions in the WFS/OAPIF tab"
 msgstr "Definizioni nella scheda WFS/OAPIF"
 
+#: ../../docs/server_manual/getting_started.rst:982
+msgid ""
+"If you enter a URL in the :guilabel:`Advertised URL` field, QGIS Server will"
+" advertise this specific URL in the WFS GetCapabilities response."
+msgstr ""
+"Se immetti un URL nel campo :guilabel:`URL pubblicato`, QGIS Server "
+"pubblicherà questo URL specifico nella risposta WFS GetCapabilities."
+
 #: ../../docs/server_manual/getting_started.rst:986
 msgid "WCS capabilities"
 msgstr "WCS capabilities"
+
+#: ../../docs/server_manual/getting_started.rst:988
+msgid ""
+"In the :guilabel:`WCS` tab, you can select the layers that you want to "
+"publish as WCS."
+msgstr ""
+"Nella scheda :guilabel:`WCS` puoi selezionare i layer che vuoi pubblicare "
+"come WCS."
 
 #: ../../docs/server_manual/getting_started.rst:995
 msgid "Definitions in the WCS tab"
@@ -1079,6 +1294,30 @@ msgstr ""
 #: ../../docs/server_manual/getting_started.rst:1002
 msgid "Fine tuning your OWS"
 msgstr "Messa a punto del tuo OWS"
+
+#: ../../docs/server_manual/getting_started.rst:1004
+msgid ""
+"For vector layers, the :guilabel:`Fields` tab of the :menuselection:`Layer "
+"--> Layer Properties` dialog allows you to define for each attribute if it "
+"will be published or not. By default, all the attributes are published by "
+"your WMS and WFS. If you don't want a specific attribute to be published, "
+"uncheck the appropriate checkbox in the :guilabel:`Configuration` column:"
+msgstr ""
+"Per i layer vettoriali, la scheda :guilabel:`Campi` della finestra di "
+"dialogo :menuselection:`Layer --> Proprietà Layer` ti permette di definire "
+"per ciascun attributo se verrà pubblicato o meno. Per impostazione "
+"predefinita, tutti gli attributi vengono pubblicati dal tuo WMS e WFS. Se "
+"non si desidera che venga pubblicato un attributo specifico, deselezionare "
+"la casella di controllo appropriata nella colonna "
+":guilabel:`Configurazione`:"
+
+#: ../../docs/server_manual/getting_started.rst:1010
+msgid ":guilabel:`Do not expose in WFS`"
+msgstr ":guilabel:`Non esporre in WFS`"
+
+#: ../../docs/server_manual/getting_started.rst:1011
+msgid ":guilabel:`Do not expose in WMS`"
+msgstr ":guilabel:`Non esporre in WMS`"
 
 #: ../../docs/server_manual/getting_started.rst:1013
 msgid ""
@@ -1110,6 +1349,16 @@ msgstr ""
 #: ../../docs/server_manual/getting_started.rst:1027
 msgid "Integration with third parties"
 msgstr "Integrazione con terze parti"
+
+#: ../../docs/server_manual/getting_started.rst:1029
+msgid ""
+"QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
+"<https://www.ogc.org/publications>`_ thus it can be used by a wide variety "
+"of end user tools."
+msgstr ""
+"QGIS Server fornisce servizi web standard OGC come `WMS, WFS, etc. "
+"<https://www.ogc.org/publications>`_  e può quindi essere utilizzato da "
+"un'ampia gamma di strumenti per l'utente finale."
 
 #: ../../docs/server_manual/getting_started.rst:1033
 msgid "Integration with QGIS Desktop"
@@ -1146,6 +1395,17 @@ msgstr ""
 #: ../../docs/server_manual/getting_started.rst:1047
 msgid "Integration with MapProxy"
 msgstr "Integrazione con MapProxy"
+
+#: ../../docs/server_manual/getting_started.rst:1049
+msgid ""
+"`MapProxy <https://www.mapproxy.org/>`_ is a tile cache server and as it can"
+" read and serve any WMS/WMTS map server, it can be directly connected to "
+"QGIS server web services and improve end user experience."
+msgstr ""
+"`MapProxy <https://www.mapproxy.org/>`_ è un server di cache di tasselli e, "
+"poiché può leggere e servire qualsiasi server di mappe WMS/WMTS, può essere "
+"collegato direttamente ai servizi web del server QGIS e migliorare "
+"l'esperienza dell'utente finale."
 
 #: ../../docs/server_manual/getting_started.rst:1055
 msgid "Integration with QWC2"
