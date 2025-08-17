@@ -449,7 +449,7 @@ Deletes error features based on an error layer from some check geometry algorith
 .. figure:: img/fix_geometry_deletefeatures.png
    :align: center
 
-   Deleting features inside a polygon.
+   Fixing errors from the ":ref:`qgischeckgeometrycontained`" algorithm check.
 
 .. seealso:: :ref:`qgisdeleteduplicategeometries`, :ref:`qgisdropgeometries`
 
