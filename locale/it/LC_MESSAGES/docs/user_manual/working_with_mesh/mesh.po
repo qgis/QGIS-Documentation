@@ -319,6 +319,20 @@ msgstr "Possibile visualizzazione di dati mesh"
 msgid "Supported formats"
 msgstr "Formati supportati"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:101
+msgid ""
+"QGIS accesses mesh data using the `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_, and natively supports a "
+"`variety of formats <https://github.com/lutraconsulting/MDAL?tab=readme-ov-"
+"file#supported-formats>`__. Whether QGIS can edit a mesh layer depends on "
+"the format and the mesh structure type."
+msgstr ""
+"QGIS accede ai dati mesh utilizzando i `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_, e supporta nativamente "
+"una`variety of formats <https://github.com/lutraconsulting/MDAL?tab=readme-"
+"ov-file#supported-formats>`__. La possibilità per QGIS di modificare un "
+"layer mesh dipende dal formato e dal tipo di struttura mesh."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:106
 msgid ""
 "To load a mesh dataset into QGIS, use the |addMeshLayer| :guilabel:`Mesh` "
@@ -422,6 +436,10 @@ msgstr "|temporal| :ref:`Temporal <meshtemporal>`"
 msgid "temporal"
 msgstr "temporal"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:137
+msgid "|labelingSingle| :ref:`Labels <meshlabels>`:sup:`[1]`"
+msgstr "|labelingSingle| :ref:`Labels <meshlabels>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1265
 msgid "labelingSingle"
 msgstr "labelingSingle"
@@ -494,6 +512,19 @@ msgstr ""
 "di tipo generale, come il nome nel progetto, il percorso del sorgente, "
 "l'elenco dei file ausiliari, l'ora e la dimensione dell'ultimo salvataggio, "
 "il provider utilizzato."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:168
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties may include "
+":ref:`layer notes <layer_notes>`. More properties can be created and managed"
+" using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"proprietà personalizzate, utilizzate per memorizzare nel progetto attivo "
+"informazioni aggiuntive sul layer. Altre proprietà possono essere create e "
+"gestite utilizzando PyQGIS, in particolare attraverso il metodo "
+":pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>`."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:172
 msgid ""
@@ -905,6 +936,18 @@ msgstr ""
 msgid "Vectors Symbology"
 msgstr "Simbologia Vettori"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:328
+msgid ""
+"The |meshvectors| :sup:`Vectors` tab can be activated only if a vector "
+"dataset has been selected in the |general| :guilabel:`Datasets` tab. Click "
+"on the |meshvectors| :sup:`Vectors` icon on the right side of the |general| "
+":guilabel:`Datasets` tab."
+msgstr ""
+"La scheda |meshvectors| :sup:`Vettori` può essere attivata solo se è stato "
+"selezionato un set di dati vettoriali nella scheda |general| "
+":guilabel:`Datasets`. Fai clic sull'icona |meshvectors| :sup:`Vettori` sul "
+"lato destro della scheda |general| :guilabel:`Datasets`."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1297
 msgid "meshvectors"
 msgstr "meshvectors"
@@ -966,6 +1009,14 @@ msgstr ""
 "effetto che si ottiene quando si getta a caso della sabbia nell'acqua e si "
 "vede dove gli elementi di sabbia scorrono."
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:356
+msgid ""
+"**Wind barbs**: vectors are represented with wind barbs, a common way to "
+"represent wind speed and direction."
+msgstr ""
+"**Frecce di vento**: i vettori sono rappresentati con le frecce di vento, un"
+" modo comune per rappresentare la velocità e la direzione del vento."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:359
 msgid ""
 "Available properties depend on the selected symbology as shown in the "
@@ -999,6 +1050,10 @@ msgstr "Streamlines"
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:364
 msgid "Traces"
 msgstr "Tracce"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:364
+msgid "Wind Barbs"
+msgstr "Frecce di vento"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:366
 msgid ":guilabel:`Line width`"
@@ -1138,6 +1193,33 @@ msgstr ":guilabel:`Massima lunghezza coda`"
 msgid "The time until the particle fades out"
 msgstr "Il tempo per la scomparsa delle particelle"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:393
+msgid ":guilabel:`Wind Barbs`"
+msgstr ":guilabel:`Frecce di vento`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:393
+msgid ""
+"**Length**: Specifies the length of the wind barbs. Choose the units from a "
+"drop-down menu."
+msgstr ""
+"**Lunghezza**: specifica la lunghezza delle frecce di vento. Scegli le unità"
+" da un menu a discesa."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:395
+msgid ""
+"**Data Units**: Specifies the units of wind speed data. Wind barbs encode "
+"the wind in knots (nautical miles per hour). Therefore, you should select "
+"the units that your data are in, or use a custom :guilabel:`Multiplier` to "
+"convert your data units to knots. This ensures that the wind speed is "
+"accurately represented."
+msgstr ""
+"**Unità dati**: specifica le unità di dati per la velocità del vento. Le "
+"frecce di vento codificano il vento in nodi (miglia nautiche all'ora). "
+"Pertanto, dovresti selezionare le unità in cui si trovano i tuoi dati oppure"
+" utilizzare un :guilabel:`Moltiplicatore` personalizzato per convertire le "
+"unità di dati in nodi. Ciò garantisce che la velocità del vento sia "
+"rappresentata accuratamente."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:404
 msgid "Rendering"
 msgstr "Visualizzazione"
@@ -1215,13 +1297,91 @@ msgstr ""
 msgid "meshaveraging"
 msgstr "meshaveraging"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:439
+msgid ""
+"You can select the method to derive the 2D datasets and corresponding "
+"parameters (level index, depth or height values). For each method, an "
+"example of application is shown in the dialog but you can read more on the "
+"methods at https://fvwiki.tuflow.com/Depth_Averaging_Results."
+msgstr ""
+"Puoi selezionare il metodo per ricavare i set di dati 2D e i parametri "
+"corrispondenti (indice layer, valori di profondità o altezza). Per ogni "
+"metodo, nella finestra di dialogo viene mostrato un esempio di applicazione,"
+" ma puoi leggere ulteriori informazioni sui metodi all'indirizzo "
+"https://fvwiki.tuflow.com/Depth_Averaging_Results."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:448
 msgid "Labels Properties"
 msgstr "Proprietà etichette"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:450
+msgid ""
+"The |labelingSingle| :guilabel:`Labels` tab offers you dynamic labeling of "
+"mesh vertices and native mesh faces based on geometric properties and custom"
+" expressions. This dialog can also be accessed from the :guilabel:`Layer "
+"Styling` panel."
+msgstr ""
+"La scheda |labelingSingle| :guilabel:`Etichette` offre l'etichettatura "
+"dinamica dei vertici della mesh e delle facce native della mesh in base alle"
+" proprietà geometriche e alle espressioni personalizzate. È possibile "
+"accedere a questa finestra di dialogo anche dal pannello :guilabel:`Stile "
+"Layer`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:459
+msgid "Mesh Labels Properties"
+msgstr "Proprietà Etichette Mesh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:461
+msgid ""
+"Choose the labeling method from the drop-down list. Available methods are:"
+msgstr ""
+"Seleziona il metodo di etichettatura dall'elenco a discesa. I metodi "
+"disponibili sono:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:464
+msgid ""
+"|labelingNone| :guilabel:`No labels`: the default value, showing no labels "
+"from the layer."
+msgstr ""
+"|labelingNone| :guilabel:`Nessuna etichetta`: il valore predefinito, che non"
+" mostra alcuna etichetta dal layer."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1263
 msgid "labelingNone"
 msgstr "labelingNone"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:466
+msgid ""
+"|labelingSingle| :guilabel:`Labels on vertices`: labels the mesh vertices as"
+" a point feature."
+msgstr ""
+"|labelingSingle| :guilabel:`Etichette sui Vertici`: etichetta i vertici "
+"della mesh come elemento puntiforme."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:467
+msgid ""
+"|labelingSingle| :guilabel:`Labels on faces`: labels the mesh faces as a "
+"polygon feature."
+msgstr ""
+"|labelingSingle| :guilabel:`Etichette sulle Facce`: etichetta le facce della"
+" mesh come elemento poligonale."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:474
+msgid "Mesh Labeling methods"
+msgstr "Metodi Etichettatura Mesh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:476
+msgid ""
+"Once the labeling method has been selected, open |expression| "
+":sup:`Expression dialog` and choose a :ref:`mesh function "
+"<expression_function_meshes>`. You can combine meshes functions with other "
+"functions from the :ref:`list <functions_list>` to modify the label."
+msgstr ""
+"Una volta selezionato il metodo di etichettatura, apri la finestra di "
+"dialogo |expression| :sup:`Costruttore di espressioni` e scegli una funzione"
+" :ref:`mesh <expression_function_meshes>`. Puoi combinare le funzioni mesh "
+"con altre funzioni dell'elenco :ref:`<functions_list>` per modificare "
+"l'etichetta."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1249
 msgid "expression"
@@ -1634,9 +1794,89 @@ msgstr ""
 msgid "Elevation Properties"
 msgstr "Proprietà Elevazione"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:659
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and :ref:`2D map view <label_mapview>` and its appearance in the "
+":ref:`profile tool charts <label_elevation_profile_view>`. Specifically, you"
+" can configure how heights from your dataset are interpreted:"
+msgstr ""
+"La scheda |elevationscale| :guilabel:`Elevazione` fornisce opzioni per "
+"controllare le proprietà di elevazione del layer all'interno di una :ref:`3D"
+" map view <label_3dmapview>` e :ref:`2D map view <label_mapview>` e il suo "
+"aspetto nei :ref:`profile tool charts <label_elevation_profile_view>`. Nello"
+" specifico, puoi configurare il modo in cui vengono interpretate le altezze "
+"del tuo set di dati:"
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:669
 msgid "Mesh Elevation properties"
 msgstr "Proprietà Elevazione Mesh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:671
+msgid ""
+":guilabel:`From vertices`: how the mesh layer vertices Z values should be "
+"interpreted as terrain elevation. You can apply a :guilabel:`Scale` factor "
+"and an :guilabel:`Offset`. This setting is available for :ref:`3D map view "
+"<label_3dmapview>` and :ref:`profile tool charts "
+"<label_elevation_profile_view>`."
+msgstr ""
+":guilabel:`Dai vertici`: come i valori Z dei vertici del layer mesh "
+"dovrebbero essere interpretati come elevazione del terreno. È possibile "
+"applicare un fattore di :guilabel:`Scala` e un fattore :guilabel:`Offset`. "
+"Questa impostazione è disponibile per :ref:`3D map view <label_3dmapview>` e"
+" :ref:`profile tool charts <label_elevation_profile_view>`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:676
+msgid ""
+":guilabel:`Fixed Elevation Range`: the mesh layer is linked to a fixed "
+"elevation range. This mode is applicable when a layer has either a single "
+"fixed elevation or a range (slice) of elevation values. If a range is "
+"specified, mesh values will be extruded over this range. You can set the "
+":guilabel:`Lower` and :guilabel:`Upper` elevation range values for the "
+"layer, and specify whether the lower or upper :guilabel:`Limits` are "
+"inclusive or exclusive. When enabled, the layer will only be visible in "
+":ref:`elevation filtered 2D maps <elevation_controller>` when the layer's "
+"range is included in the map's Z range."
+msgstr ""
+":guilabel:`Intervallo di Elevazione Fisso`: il layer mesh è associato a un "
+"intervallo di elevazione fisso. Questa modalità è applicabile quando un "
+"layer ha una singola elevazione fissa o un intervallo (parziale) di valori "
+"di elevazione. Se viene specificato un intervallo, i valori delle mesh "
+"verranno estratti su questo intervallo. Puoi impostare i valori "
+"dell'intervallo di elevazione :guilabel:`Inferiore` e :guilabel:`Superiore` "
+"per il layer e specificare se i :guilabel:`Limiti` inferiore o superiore "
+"sono inclusivi o esclusivi. Se abilitato, il layer sarà visibile solo in "
+":ref:`elevation filtered 2D maps <elevation_controller>` quando l'intervallo"
+" del layer è incluso nell'intervallo Z della mappa."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:684
+msgid ""
+":guilabel:`Fixed Elevation Range Per Group`: each group in the mesh layer is"
+" associated with a fixed elevation range. This mode can be used when a layer"
+" has elevation data exposed through different dataset groups. This feature "
+"is exposed as a user-editable table for dataset groups with lower and upper "
+"values. You can either populate the lower and upper values manually or use "
+"an |expression| :guilabel:`Expression` to auto-fill all group values based "
+"on an expression. When enabled, the layer will be filtered in the :ref:`2D "
+"map view <label_mapview>`, displaying only values within the map filter "
+"ranges. In :ref:`3D map view <label_3dmapview>` or :ref:`profile tool charts"
+" <label_elevation_profile_view>`, the full extent of the layer will be "
+"displayed, ignoring the filtering."
+msgstr ""
+":guilabel:`Intervallo di Elevazione Fisso per Gruppo`: ogni gruppo nel layer"
+" mesh è associato a un intervallo di elevazione fisso. Questa modalità può "
+"essere utilizzata quando un layer ha dati di elevazione esposti attraverso "
+"diversi gruppi di set di dati. Questa funzionalità è visualizzata come una "
+"tabella modificabile dall'utente per gruppi di set di dati con valori "
+"inferiori e superiori. Puoi popolare manualmente i valori inferiore e "
+"superiore oppure utilizzare |expression| :guilabel:`Espressioni` per "
+"riempire automaticamente tutti i valori del gruppo in base a un'espressione."
+" Se abilitato, il layer verrà filtrato nella :ref:`2D map view "
+"<label_mapview>`, visualizzando solo i valori all'interno degli intervalli "
+"del filtro mappa. In :ref:`3D map view <label_3dmapview>` o :ref:`profile "
+"tool charts <label_elevation_profile_view>`, verrà visualizzata l'intera "
+"estensione del layer, ignorando il filtraggio."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:694
 msgid ""
@@ -1713,6 +1953,20 @@ msgstr ""
 "modifica richiede un layer di soli telai, verrà chiesto di rimuovere prima "
 "tutti i dataset associati (assicurarsi di averli a disposizione se sono "
 "ancora necessari) o di creare una copia (solo geometrie) del layer."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:732
+msgid ""
+"QGIS does not allow to digitize edges on mesh layers. Only vertices and "
+"faces are mesh elements that can be created. Also not all supported mesh "
+"formats can be edited in QGIS (see `permissions "
+"<https://github.com/lutraconsulting/MDAL?tab=readme-ov-file#supported-"
+"formats>`__)."
+msgstr ""
+"QGIS non consente di digitalizzare i bordi sui livelli mesh. Solo i vertici "
+"e le facce sono elementi mesh che possono essere creati. Inoltre, non tutti "
+"i formati mesh supportati possono essere modificati in QGIS (vedere "
+"`permissions <https://github.com/lutraconsulting/MDAL?tab=readme-ov-"
+"file#supported-formats>`__)."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:739
 msgid "Overview of the mesh digitizing tools"
@@ -2421,6 +2675,13 @@ msgstr ""
 "destra dell'area di disegno della mappa. Impostare questo valore sulla "
 "coordinata Z che si desidera assegnare ai vertici successivi."
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:954
+msgid ""
+"Hover over a vertex and click the small triangle that appears next to it."
+msgstr ""
+"Passa il mouse su un vertice e fai clic sul piccolo triangolo che appare "
+"accanto ad esso."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:955
 msgid ""
 "Move the cursor to the next vertex position; you can snap to existing vertex"
@@ -2429,6 +2690,14 @@ msgstr ""
 "Sposta il cursore sulla posizione del vertice successivo; puoi eseguire "
 "l'aggancio al vertice esistente o fare clic con il pulsante sinistro del "
 "mouse per aggiungerne uno nuovo."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:957
+msgid ""
+"Proceed as above to add as many vertices as you wish for the face. Press "
+":kbd:`Backspace` button to undo the last vertex."
+msgstr ""
+"Procedi come sopra per aggiungere tutti i vertici desiderati per la faccia. "
+"Premi il pulsante :kbd:`Backspace` per annullare l'ultimo vertice."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:959
 msgid ""
