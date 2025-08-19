@@ -903,9 +903,9 @@ and |redo| :guilabel:`Redo` to redo the last undone actions.
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
-.. |selectAboveLine| image:: /static/mActionSelectAboveLine.png
+.. |selectAboveLine| image:: /static/common/mActionSelectAboveLine.png
    :width: 1.5em
-.. |selectBelowLine| image:: /static/mActionSelectBelowLine.png
+.. |selectBelowLine| image:: /static/common/mActionSelectBelowLine.png
    :width: 1.5em
 .. |selectPolygon| image:: /static/common/mActionSelectPolygon.png
    :width: 1.5em
