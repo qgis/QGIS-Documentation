@@ -817,6 +817,45 @@ it is strongly recommended to create them using an automated tool, such as:
 For more details, please refer to the `VPC specification <https://github.com/PDAL/wrench/blob/main/vpc-spec.md>`_
 that also contains best practices and optional extensions (such as overviews).
 
+.. _`editing_point_cloud`:
+
+Editing Point Clouds layer
+==========================
+
+QGIS supports editing of point clouds layers by providing a set of tools
+inside the :ref:`3D map view <label_3dmapview>`. These tools allow interactive selection of points,
+filtering based on expressions, and modification of point attributes.
+
+.. note:: Requires special formats that support read/write operations (e.g., LAZ/COPC).
+
+.. _figure_point_cloud_editing:
+
+.. figure:: img/point_cloud_editing.png
+   :align: center
+
+   Editing toolbar available for point clouds in 3D map view
+
+By clicking the |toggleEditing| :guilabel:`Toggle Editing` button
+in the 3D map view toolbar you will be able to use the following tools:
+
+* :guilabel:`Select Editing Tool` where you can choose to:
+  
+  * |selectPolygon| :guilabel:`Select by Polygon`: select points by drawing a polygon around them
+  * |rendering| :guilabel:`Select by Paintburush`: allows you to drag to select points, change the brush size with the scroll wheel,
+    see highlighted selections, and view a loading cursor while editing
+  * |selectAboveLine| :guilabel:`Select Above Line`
+  * |selectBelowLine| :guilabel:`Select Below Line`
+
+* |expressionFilter| :guilabel:`Filter Points` allows you to set a filter expression to limit
+  which points are modified by the editing tools. 
+  Only points that match the expression will be affected, while others remain unchanged. 
+  Leaving the expression empty removes the filter and applies edits to all points.
+
+* You can use the :guilabel:`Attribute` and :guilabel:`Value` fields to update the chosen attribute of the selected points
+  to the specified value (e.g., reclassify points by setting their Classification attribute).
+
+Beside those tools, you can also use the |undo| :guilabel:`Undo` to undo the last editing changes,
+and |redo| :guilabel:`Redo` to redo the last undone actions.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -833,6 +872,8 @@ that also contains best practices and optional extensions (such as overviews).
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
+.. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
@@ -854,9 +895,19 @@ that also contains best practices and optional extensions (such as overviews).
    :width: 1.5em
 .. |pointCloudExtent| image:: /static/common/pointCloudExtent.png
    :width: 1.5em
+.. |pointCloudLayer| image:: /static/common/mIconPointCloudLayer.png
+   :width: 1.5em
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |selectAboveLine| image:: /static/mActionSelectAboveLine.png
+   :width: 1.5em
+.. |selectBelowLine| image:: /static/mActionSelectBelowLine.png
+   :width: 1.5em
+.. |selectPolygon| image:: /static/common/mActionSelectPolygon.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
@@ -872,5 +923,9 @@ that also contains best practices and optional extensions (such as overviews).
    :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
