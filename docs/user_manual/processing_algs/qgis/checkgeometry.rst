@@ -9,6 +9,125 @@ Check Geometry
       :local:
       :depth: 1
 
+
+.. _qgischeckgeometrydangle:
+
+Dangle-end lines
+----------------
+
+A dangle-end line is a line feature that terminates at a vertex connected to only one segment,
+resulting in an endpoint without a proper connection.
+
+
+.. figure:: img/check_geometry_dangleendlines.png
+   :align: center
+
+   Errors for dangle-end lines are reported on line features, where each feature is a single LineString, and entire features with dangling ends are highlighted in red for clarity.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Dangle-end errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the errors location.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Dangle-end features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Skip output]``
+     - Line layer containing the identified dangle-end line features.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Dangle-end errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information
+       (the ID and name of the input layer, the ID, geometry part,
+       ring and vertex index of the erroneous feature,
+       x and y coordinates of the error).
+   * - **Dangle-end features**
+     - ``OUTPUT``
+     - [vector: line]
+     - Output line layer containing the input dangle-end features.
+       If no dangle-end features are found, the output layer will be empty.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrydangle``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgischeckgeometryduplicate:
 
 Duplicated geometries
@@ -120,7 +239,245 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-  
+
+
+.. _qgischeckgeometryduplicatenodes:
+
+Duplicated vertices
+-------------------
+
+Checks for duplicated vertices in line or polygon geometries,
+and reports them as errors.
+
+.. seealso:: :ref:`qgisfixgeometryduplicatenodes`, :ref:`qgisremoveduplicatevertices`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Layer with the geometries to check
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification
+   * - **Duplicated vertices errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the errors location.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Duplicated vertices features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: same as input]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer containing the features
+       with duplicated vertices.
+       :ref:`One of <output_parameter_widget>`:
+
+        .. include:: ../algs_include.rst
+            :start-after: **layer_output_types_skip**
+            :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Duplicated vertices errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information
+       (the ID and name of the input layer, the geometry part,
+       ring and vertex index of the erroneous feature,
+       x and y coordinates of the error).
+   * - **Duplicated vertices features**
+     - ``OUTPUT``
+     - [vector: line, polygon]
+     - Output layer containing the features with duplicated vertices.
+       Additional fields are added (see ``ERRORS`` output).
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometryduplicatenodes``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+.. _qgischeckgeometrycontained:
+
+Features inside polygon
+-----------------------
+
+Checks the input geometries contained in the polygons from the polygon layers list.
+A polygon layer can be checked against itself.
+Any contained features are reported as errors.
+
+.. figure:: img/check_geometry_featuresinsidepolygon.png
+   :align: center
+
+   Reporting errors on features inside a polygon.
+
+.. seealso:: :ref:`qgisfixgeometrydeletefeatures`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: geometry]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Polygon layers**
+     - ``POLYGONS``
+     - [vector: polygon][list]
+     - List of polygon layers to check against.
+   * - **Errors from contained features**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Point layer representing the contained features.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Contained features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: same as input]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer containing features within the checked polygons.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Errors from contained features**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information
+       (the ID and name of the input layer, the geometry part,
+       ring and vertex index of the erroneous feature,
+       x and y coordinates of the centroid of the contained feature,
+       and the layer name and index of a polygon containing the feature).
+   * - **Contained features**
+     - ``OUTPUT``
+     - [vector: same as input]
+     - Output layer containing features within the checked polygons.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrycontained``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgischeckgeometryhole:
 
@@ -221,13 +578,14 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the ID, geometry part,
+       (the ID and name of the input layer, the geometry part,
        ring and vertex index of the erroneous feature, x and y coordinates of the error).
    * - **Polygon with holes**
      - ``OUTPUT``
      - [vector: polygon]
      - Output polygon layer with features containing holes.
        If no holes are found, the output layer will be empty.
+       Additional fields are added (see ``ERRORS`` output).
 
 Python code
 ...........
@@ -238,121 +596,6 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-.. _qgischeckgeometrydangleendlines:
-
-Dangle-end lines
-----------------
-
-Detects lines with dangle-ends and reports them as errors.
-
-.. figure:: img/check_geometry_dangleendlines.png
-   :align: center
-
-   Reporting errors for dangle-end lines on a line feature.
-
-Parameters
-..........
-
-Basic parameters
-^^^^^^^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :class: longtable
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input layer**
-     - ``INPUT``
-     - [vector: line]
-     - Layer with the geometries to check
-   * - **Unique feature identifier**
-     - ``UNIQUE_ID``
-     - [tablefield: any]
-     - Field storing unique values for feature identification
-   * - **Dangle-end errors**
-     - ``ERRORS``
-     - [vector: point]
-
-       Default: ``[Create temporary layer]``
-     - Specification of the output layer containing the errors location.
-       :ref:`One of <output_parameter_widget>`:
-
-       .. include:: ../algs_include.rst
-          :start-after: **layer_output_types**
-          :end-before: **end_layer_output_types**
-   * - **Dangle-end features**
-
-       Optional
-     - ``OUTPUT``
-     - [vector: line]
-
-       Default: ``[Skip output]``
-     - Line layer containing the identified dangle-end line features.
-       :ref:`One of <output_parameter_widget>`:
-
-       .. include:: ../algs_include.rst
-          :start-after: **layer_output_types_skip**
-          :end-before: **end_layer_output_types_skip**
-
-Advanced parameters
-^^^^^^^^^^^^^^^^^^^
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :class: longtable
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Tolerance**
-     - ``TOLERANCE``
-     - [numeric: integer]
-
-       Default: 8
-     - Numerical precision of geometric operations, given as an integer n,
-       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
-       are considered to be merged.
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :class: longtable
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Dangle-end errors**
-     - ``ERRORS``
-     - [vector: point]
-     - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the ID, geometry part,
-       ring and vertex index of the erroneous feature,
-       x and y coordinates of the error).
-   * - **Dangle-end features**
-     - ``OUTPUT``
-     - [vector: line]
-     - Output line layer with features containing the dangle-end features. If no dangle-end features are found,
-       the output layer will be empty.
-
-Python code
-...........
-
-**Algorithm ID**: ``native:checkgeometrydangle``
-
-.. include:: ../algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-  
 
 .. _qgischeckgeometryselfintersections:
 
@@ -403,7 +646,7 @@ Basic parameters
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
    * - **Self-intersecting features**
-   
+
        Optional
      - ``OUTPUT``
      - [same as input]
@@ -506,11 +749,11 @@ Basic parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: line, polygon]
-     - Layer with the geometries to check
+     - Layer with the geometries to check.
    * - **Unique feature identifier**
      - ``UNIQUE_ID``
      - [tablefield: any]
-     - Field storing unique values for feature identification
+     - Field storing unique values for feature identification.
    * - **Minimum angle**
      - ``MIN_ANGLE``
      - [numeric: double]
