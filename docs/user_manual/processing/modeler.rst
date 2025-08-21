@@ -497,7 +497,8 @@ in the final algorithm dialog; they can be hidden by deactivating
 
 Your model can be run in various ways:
 
-* You can run the whole model by clicking on |start| :sup:`Run Model...` from the toolbar
+* You can run the whole model by clicking on |start| :sup:`Run Model...` from the toolbar,
+  right-clicking on the model in the :guilabel:`Browser panel`
   or :menuselection:`Model -->` |start| :menuselection:`Run Model...`:
   when using the editor to execute a model, any non-default values will be saved in the inputs.
   This means that executing the model at a later time from the editor
@@ -618,6 +619,8 @@ Editing a model
 
 You can edit the model you are currently creating, redefining the workflow
 and the relationships between the algorithms and inputs that define the model.
+
+You can also edit existing model from the :guilabel:`Browser panel` choosing :guilabel:`Edit Model...` option.
 
 
 If you right-click on an algorithm in the canvas, you will see a context menu
