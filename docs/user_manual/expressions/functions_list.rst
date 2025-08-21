@@ -479,6 +479,13 @@ Further reading: :ref:`qgisextendlines` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_extend_section
+   :end-before: .. end_exterior_ring_section
+
+Further reading: :ref:`qgisboundary` algorithm,
+:ref:`expression_function_GeometryGroup_interior_ring_n`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_exterior_ring_section
    :end-before: .. end_flip_coordinates_section
 
 Further reading: :ref:`qgisswapxy` algorithm
@@ -507,6 +514,12 @@ Further reading: :ref:`qgisforcerhr` algorithm,
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_force_rhr_section
+   :end-before: .. end_interior_ring_n_section
+
+Further reading: :ref:`expression_function_GeometryGroup_exterior_ring`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_interior_ring_n_section
    :end-before: .. end_intersection_section
 
 Further reading: :ref:`qgisintersection` algorithm

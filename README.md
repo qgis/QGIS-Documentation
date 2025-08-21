@@ -14,11 +14,13 @@ offering a range of complementary open-source GIS software projects.
 The latest documentation of QGIS is available at <https://docs.qgis.org/latest>
 
 * [Building the documentation](#building-the-documentation)
-   * [Build on Linux](#build-on-linux)
-   * [Build on macOS or Linux](#build-on-macos-or-linux)
+   * [Build on Linux or macOS](#build-on-linux-or-macos)
+     * [Fixing build locale error on macOS](#fixing-build-locale-error-on-macos)
    * [Build on Windows](#build-on-windows)
    * [Build PDFs](#build-pdfs)
 * [Translating](#translating)
+  * [GitHub workflow](#github-workflow)
+  * [Managing translations locally](#managing-translations-locally)
 * [Testing Python snippets](#testing-python-snippets)
 
 # Building the documentation
@@ -87,8 +89,9 @@ make -f venv.mk cleanall
 ```
 
 ### Fixing build locale error on macOS
-When the build on macOS fails with:
 
+When the build on macOS fails with:
+  
 ```sh
 locale.Error: unsupported locale setting
 make: *** [html] Error 1
@@ -194,8 +197,12 @@ Some languages will also need specific fonts installed:
 # Translating
 
 We rely on the [Transifex platform](https://www.transifex.com) to store and coordinate
-our translation efforts. To be part of the translation team, please follow
+our translation efforts.
+Only the [current Long Term Release](https://docs.qgis.org/latest/) is being translated.
+
+To be part of the translation team, please follow
 [becoming a translator](https://www.qgis.org/en/site/getinvolved/translate.html#becoming-a-translator).
+
 
 ## GitHub workflow
 
@@ -243,8 +250,15 @@ make html LANG=yourlanguage
 
 ## Managing translations locally
 
-Sometimes, you may want to build the docs with really new strings in a partially translated file
-and the above workflow may fail to work.
+While the master branch is provided only in English, we translate the released branches to various languages.
+The translated strings are available in the corresponding `release_X.Y` branch (see ``locale`` folder),
+so you can build a localized documentation in HTML using:
+```sh
+make html LANG=yourlanguage
+```
+
+Sometimes, you may want to build the docs with really new translated strings
+that are not yet available in the main repository (e.g., from partially translated files).
 In that case, you need to manually pull the translations from Transifex to your local repository:
 
 1. Checkout locally the repository and target branch in git

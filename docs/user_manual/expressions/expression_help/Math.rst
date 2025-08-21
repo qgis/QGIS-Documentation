@@ -438,7 +438,7 @@ Returns a random float within the range specified by the minimum and maximum arg
 round
 .....
 
-Rounds a number to number of decimal places.
+Rounds a number to number of decimal places. The rounding is done to the nearest number. The ceil or floor functions can be used if rounding up or down is required.
 
 .. list-table::
    :widths: 15 85
@@ -449,11 +449,12 @@ Rounds a number to number of decimal places.
        [] marks optional arguments
    * - Arguments
      - * **value** - decimal number to be rounded
-       * **places** - Optional integer representing number of places to round decimals to. Can be negative.
+       * **places** - Optional integer representing number of places to round decimals to. For negative integers the rounding is done to the left of the decimal point.
    * - Examples
      - * ``round(1234.567, 2)`` → 1234.57
        * ``round(1234.567)`` → 1235
        * ``round(1234.567, -1)`` → 1230
+       * ``round(1234.567, -2)`` → 1200
 
 
 .. end_round_section

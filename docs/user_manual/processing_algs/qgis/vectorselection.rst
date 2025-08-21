@@ -113,7 +113,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extractbyattribute``
+**Algorithm ID**: ``native:extractbyattribute``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -201,7 +201,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extractbyexpression``
+**Algorithm ID**: ``native:extractbyexpression``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -300,7 +300,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:extractbylocation``
+**Algorithm ID**: ``native:extractbylocation``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -547,7 +547,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:randomextract``
+**Algorithm ID**: ``native:randomextract``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1062,7 +1062,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:selectbylocation``
+**Algorithm ID**: ``native:selectbylocation``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

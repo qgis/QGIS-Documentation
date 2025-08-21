@@ -1,6 +1,5 @@
 # Users Manual Projects and data for examples and screenshots
 
-
 This folder will contain the qgis projects and data used to create the user
 manual documentation.
 
@@ -15,31 +14,33 @@ The following list
 
 ## Introduction
 
-  * `introduction_qgis_general_tools_annotation.qgs`
-  * `introduction_qgis_gui_map_legend.qgs`
-  * `introduction_qgis_gui_start_up.qgs` 
-  * `Working_with_vector_02.qgs`
-  * `startup.svg`
+* `introduction_qgis_general_tools_annotation.qgs`
+* `introduction_qgis_gui_map_legend.qgs`
+* `introduction_qgis_gui_start_up.qgs`
+* `Working_with_vector_02.qgs`
+* `startup.svg`
 
 ## Working with Vector Chapter
 
- * `label_examples.qgs` (needs memory layer saver plugin)
- * `multivariate_examples.qgs`
- * `working_with_vector_supported_data.qgs`
- * `working_with_vector_02.qgs`
- * `working_with_vector_relations.qgs`
- * `working_with_vector_diagrams.qgs`
- * `effects_examples.qgs`
- * `orange.svg`
- * `point_sample_effects.geosjson`
- * `drag_n_drop_form_designer.qgs`
- 
+* `label_examples.qgs` (needs memory layer saver plugin)
+* `multivariate_examples.qgs`
+* `working_with_vector_supported_data.qgs`
+* `working_with_vector_02.qgs`
+* `working_with_vector_relations.qgs`
+* `working_with_vector_diagrams.qgs`
+* `effects_examples.qgs`
+* `orange.svg`
+* `point_sample_effects.geosjson`
+* `drag_n_drop_form_designer.qgs`
 
 ## Working with Raster Chapter
 
- * `working_with_rasters.qgs`
+* `working_with_rasters.qgs`
 
 ## Print Composer Chapter
 
- * `working_with_vector_02.qgs`
- 
+* `working_with_vector_02.qgs`
+
+## Processing
+
+* `modeldesigner.qgz`

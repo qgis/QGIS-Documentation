@@ -865,8 +865,10 @@ set whether the layer redraw should be:
   .. A bit more info on this automatic option would be necessary.
    I guess it has to do with wms-t that I don't use so precision welcome
 
+* :guilabel:`Fixed Date/Time`: only show the raster layer at a single, specific date/time.
+  This avoids having to enter the same value for both the start and end of the temporal range.
 * :guilabel:`Fixed time range`: only show the raster layer if the animation
-  time is within a :guilabel:`Start date` and :guilabel:`End date` range
+  time is within a :guilabel:`Start date` and :guilabel:`End date` range.
 * :guilabel:`Fixed Time Range Per Band`: only shows a band when the current animation time
   is between its :guilabel:`Begin` and :guilabel:`End` date range. This option allows
   you to either manually set these time ranges for each band or use the |expression| button
