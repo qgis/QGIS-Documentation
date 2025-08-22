@@ -16,7 +16,6 @@ Dangle-end lines
 ----------------
 
 Detects dangle-end lines in line geometries and reports them as errors.
-Detects dangle-end lines in line geometries and reports them as errors.
 A dangle-end line is a line feature that terminates at a vertex connected to only one segment,
 resulting in an endpoint without a proper connection.
 
