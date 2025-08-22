@@ -430,7 +430,6 @@ Basic parameters
    * - **Field of part index**
      - ``PART_IDX``
      - [tablefield: integer]
- 
        Default: ``gc_partidx``
      - Field storing the erroneous feature's geometry part number.
    * - **Field of ring index**
@@ -512,7 +511,6 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output layer of polygons without holes.
-       Additional fields are added (see ``REPORT`` output).
 
 Python code
 ...........
