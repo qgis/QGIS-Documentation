@@ -23,7 +23,7 @@ resulting in an endpoint without a proper connection.
 .. figure:: img/check_geometry_dangleendlines.png
    :align: center
 
-   Errors for dangle-end lines are reported on line features, where each feature is a single LineString, and entire features with dangling ends are highlighted in red for clarity.
+   Errors for dangle-end lines are reported on line features, and entire features with dangling ends are highlighted in red for clarity.
 
 Parameters
 ..........
