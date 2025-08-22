@@ -38,6 +38,8 @@ The following tools are provided at the top of the 3D map view panel:
   and direction of the camera
 * |zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole
   layers' extent, or the :ref:`reference extent <scene_extent>` if set
+* |pointCloudLayer| :sup:`Show Editing Toolbar`: available for :ref:`point cloud editing
+  <editing_point_cloud>`.
 * |3dNavigation| :sup:`Toggle On-Screen Notification`: shows/hides the
   navigation widget (that is meant to ease controlling of the map view)
 * |identify| :sup:`Identify`: returns information on the clicked point
@@ -508,6 +510,8 @@ the 3D vector layer.
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
 .. |play| image:: /static/common/mActionPlay.png
+   :width: 1.5em
+.. |pointCloudLayer| image:: /static/common/mIconPointCloudLayer.png
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
