@@ -1390,6 +1390,12 @@ layers (with their saved styles) to the Layers Panel.
 You can also drag and drop QLR files from the system file manager into
 the map canvas.
 
+Available actions for QLR files in the Browser Panel are:
+
+* :menuselection:`Export Layer --> To file`
+* :guilabel:`Add Layer to Project`
+* :guilabel:`Layer Properties...`
+
 Connecting to web services
 ==========================
 
