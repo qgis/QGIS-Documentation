@@ -915,8 +915,8 @@ msgid ""
 "As those features id's correspond in the source dataset to **France** and "
 "**Romania** they're highlighted in yellow."
 msgstr ""
-"Kadangi šie geoobjektų id priklauso **Prancūzijai** ir **Rumunijai**, jos ir"
-" paryškintos geltonai."
+"Kadangi šaltinio duomenų rinkinyje šie geoobjektų id priklauso "
+"**Prancūzijai** ir **Rumunijai**, jos ir paryškintos geltonai."
 
 #: ../../docs/server_manual/services/wms.rst:541
 msgid "Server response to a GetMap request with SELECTION parameter"
@@ -951,7 +951,7 @@ msgid ""
 "export dialog. Possible values are ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` and"
 " ``SYMBOLLAYERSYMBOLOGY``."
 msgstr ""
-"MODE: atitinka eksporto parinkti, kurios siūlomos QGIS Darbastalio DXF "
+"MODE: atitinka eksporto parinktis, kurios siūlomos QGIS Darbastalio DXF "
 "eksporto dialoge. Galimos reikšmės yra ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY``"
 " ir ``SYMBOLLAYERSYMBOLOGY``."
 
@@ -1270,7 +1270,7 @@ msgstr ""
 
 #: ../../docs/server_manual/services/wms.rst:703
 msgid "By default, only 1 feature per layer is returned."
-msgstr "Pagal nutylėjimą grąžinamas tik vienas sluoksnio geoobjektas."
+msgstr "Pagal nutylėjimą grąžinamas tik 1 sluoksnio geoobjektas."
 
 #: ../../docs/server_manual/services/wms.rst:708
 msgid "I"
@@ -1382,7 +1382,7 @@ msgid ""
 "editor."
 msgstr ""
 "``HTML_FI_ONLY_MAPTIP``: kaip ``TRUE``, su tokiu skirtumu, kad geoobjekto "
-"informacijos užklauso HTML atsake yra žemėlapio patarimas. Tai leidžia "
+"informacijos užklausos HTML atsake yra žemėlapio patarimas. Tai leidžia "
 "pilnai valdyti HTML atsaką naudojant pavyzdžiui įstatytą sluoksnių žemėlapio"
 " patarimo redaktorių."
 
@@ -1558,7 +1558,7 @@ msgstr ":ref:`LAYERFONTFAMILY <wms_getlegendgraphic_layerfontfamily>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "Layer font family"
-msgstr "Sluoksnio šriftų šeima"
+msgstr "Sluoksnio šrifto šeima"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTBOLD <wms_getlegendgraphic_layerfontbold>`"
@@ -1759,7 +1759,7 @@ msgid ""
 "This parameter can be used to activate feature count in the legend. "
 "Available values are (not case sensitive):"
 msgstr ""
-"Šį parametrą galima naudoti, norint aktyvuoti geoobjektų skaičių legendoje. "
+"Šį parametrą galima naudoti, norint įgalinti geoobjektų skaičių legendoje. "
 "Galimos reikšmės yra (raidžių dydis nesvarbus):"
 
 #: ../../docs/server_manual/services/wms.rst:1010
@@ -1902,81 +1902,318 @@ msgstr "Kairėje ``ICONLABELSPACE=0``, o dešinėje ``ICONLABELSPACE=10``"
 msgid "SYMBOLWIDTH"
 msgstr "SYMBOLWIDTH"
 
+#: ../../docs/server_manual/services/wms.rst:1212
+msgid ""
+"This parameter allows to specify the width of the symbol preview in "
+"millimeters. By default the width value is ``7`` mm."
+msgstr ""
+"Šis parametras leidžia nurodyti simbolio peržiūros plotį milimetrais. Pagal "
+"nutylėjimą ši pločio reikšmė yra ``7`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1231
+msgid "To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``"
+msgstr "Kairėje ``SYMBOLWIDTH=2``, o dešinėje ``SYMBOLWIDTH=20``"
+
 #: ../../docs/server_manual/services/wms.rst:1237
 msgid "SYMBOLHEIGHT"
 msgstr "SYMBOLHEIGHT"
+
+#: ../../docs/server_manual/services/wms.rst:1239
+msgid ""
+"This parameter allows to specify the height of the symbol preview in "
+"millimeters. By default the height value is ``4`` mm."
+msgstr ""
+"Šis parametras leidžia nurodyti simbolio peržiūros aukštį milimetrais. Pagal"
+" nutylėjimą ši aukščio reikšmė yra ``4`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1258
+msgid "To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``"
+msgstr "Kairėje ``SYMBOLHEIGHT=2``, o dešinėje ``SYMBOLHEIGHT=6``"
 
 #: ../../docs/server_manual/services/wms.rst:1264
 msgid "LAYERTITLE"
 msgstr "LAYERTITLE"
 
+#: ../../docs/server_manual/services/wms.rst:1266
+msgid "This parameter specifies whether to render layer title."
+msgstr "Šis parametras nurodo ar reikia braižyti sluoksnio antraštę."
+
+#: ../../docs/server_manual/services/wms.rst:1270
+msgid "``TRUE`` (default value)"
+msgstr "``TRUE`` (numatytoji reikšmė)"
+
 #: ../../docs/server_manual/services/wms.rst:1277
 msgid "LAYERFONTFAMILY"
 msgstr "LAYERFONTFAMILY"
+
+#: ../../docs/server_manual/services/wms.rst:1279
+msgid ""
+"This parameter specifies the font family to use for rendering layer title."
+msgstr "Šis parametras nurodo braižomos sluoksnio antraštės šrifto šeimą."
 
 #: ../../docs/server_manual/services/wms.rst:1293
 msgid "LAYERFONTBOLD"
 msgstr "LAYERFONTBOLD"
 
+#: ../../docs/server_manual/services/wms.rst:1295
+msgid ""
+"This parameter specifies whether the layer title is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Šis parametras nurodo, ar sluoksnio antraštę reikia braižyti riebiu šriftu. "
+"Galimos reikšmės yra (raidžių dydis nesvarbus):"
+
+#: ../../docs/server_manual/services/wms.rst:1317
+msgid "Legend with ``LAYERFONTBOLD=TRUE``"
+msgstr "Legenda su ``LAYERFONTBOLD=TRUE``"
+
 #: ../../docs/server_manual/services/wms.rst:1323
 msgid "LAYERFONTSIZE"
 msgstr "LAYERFONTSIZE"
+
+#: ../../docs/server_manual/services/wms.rst:1325
+#: ../../docs/server_manual/services/wms.rst:1455
+msgid ""
+"This parameter specifies the font size for rendering layer title in point."
+msgstr ""
+"Šis parametras nurodo sluoksnio antraštės braižymo šrifto dydį taškais."
+
+#: ../../docs/server_manual/services/wms.rst:1343
+msgid "Legend with ``LAYERFONTSIZE=20``"
+msgstr "Legenda su ``LAYERFONTSIZE=20``"
 
 #: ../../docs/server_manual/services/wms.rst:1349
 msgid "LAYERFONTITALIC"
 msgstr "LAYERFONTITALIC"
 
+#: ../../docs/server_manual/services/wms.rst:1351
+msgid ""
+"This parameter specifies whether the layer title is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Šis parametras nurodo, ar sluoksnio antraštę reikia braižyti pasvirusiu "
+"šriftu. Galimos reikšmės yra (raidžių dydis nesvarbus):"
+
+#: ../../docs/server_manual/services/wms.rst:1373
+msgid "Legend with ``LAYERFONTITALIC=TRUE``"
+msgstr "Legenda su ``LAYERFONTITALIC=TRUE``"
+
 #: ../../docs/server_manual/services/wms.rst:1379
 msgid "LAYERFONTCOLOR"
 msgstr "LAYERFONTCOLOR"
+
+#: ../../docs/server_manual/services/wms.rst:1381
+msgid ""
+"This parameter specifies the layer title color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+"Šis parametras nurodo sluoksnio antraštės spalvą. Spalva gali būti žodinė "
+"(``red``, ``green``, ..) arba šešioliktainė notacija (``0xFF0000``, "
+"``0x00FF00``, ...)."
+
+#: ../../docs/server_manual/services/wms.rst:1401
+msgid "Legend with ``LAYERFONTCOLOR=0x5f9930``"
+msgstr "Legenda su ``LAYERFONTCOLOR=0x5f9930``"
 
 #: ../../docs/server_manual/services/wms.rst:1407
 msgid "ITEMFONTFAMILY"
 msgstr "ITEMFONTFAMILY"
 
+#: ../../docs/server_manual/services/wms.rst:1409
+msgid ""
+"This parameter specifies the font family to use for rendering item label."
+msgstr "Šis parametras nurodo elementų užrašo braižymo šrifto šeimą."
+
 #: ../../docs/server_manual/services/wms.rst:1423
 msgid "ITEMFONTBOLD"
 msgstr "ITEMFONTBOLD"
+
+#: ../../docs/server_manual/services/wms.rst:1425
+msgid ""
+"This parameter specifies whether the item label is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Šis parametras nurodo, ar elemento užrašą reikia braižyti riebiu šriftu. "
+"Galimos reikšmės yra (raidžių dydis nesvarbus):"
+
+#: ../../docs/server_manual/services/wms.rst:1447
+msgid "Legend with ``ITEMFONTBOLD=TRUE``"
+msgstr "Legenda su ``ITEMFONTBOLD=TRUE``"
 
 #: ../../docs/server_manual/services/wms.rst:1453
 msgid "ITEMFONTSIZE"
 msgstr "ITEMFONTSIZE"
 
+#: ../../docs/server_manual/services/wms.rst:1473
+msgid "Legend with ``ITEMFONTSIZE=30``"
+msgstr "Legenda su ``ITEMFONTSIZE=30``"
+
 #: ../../docs/server_manual/services/wms.rst:1479
 msgid "ITEMFONTITALIC"
 msgstr "ITEMFONTITALIC"
+
+#: ../../docs/server_manual/services/wms.rst:1481
+msgid ""
+"This parameter specifies whether the item label is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Šis parametras nurodo, ar elemento užrašą reikia braižyti pasvirusiu šriftu."
+" Galimos reikšmės yra (raidžių dydis nesvarbus):"
+
+#: ../../docs/server_manual/services/wms.rst:1503
+msgid "Legend with ``ITEMFONTITALIC=TRUE``"
+msgstr "Legenda su ``ITEMFONTITALIC=TRUE``"
 
 #: ../../docs/server_manual/services/wms.rst:1509
 msgid "ITEMFONTCOLOR"
 msgstr "ITEMFONTCOLOR"
 
+#: ../../docs/server_manual/services/wms.rst:1511
+msgid ""
+"This parameter specifies the item label color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+"Šis parametras nurodo elemento užrašo spalvą. Spalva gali būti žodinė "
+"(``red``, ``green``, ..) arba šešioliktainė notacija (``0xFF0000``, "
+"``0x00FF00``, ...)."
+
+#: ../../docs/server_manual/services/wms.rst:1531
+msgid "Legend with ``ITEMFONTCOLOR=0x5f9930``"
+msgstr "Legenda su ``ITEMFONTCOLOR=0x5f9930``"
+
 #: ../../docs/server_manual/services/wms.rst:1537
 msgid "SHOWRULEDETAILS"
 msgstr "SHOWRULEDETAILS"
+
+#: ../../docs/server_manual/services/wms.rst:1539
+msgid ""
+"This parameter specifies if the JSON output will also contain the details "
+"about the rule that generated the legend entry. This parameter only has "
+"effect when the renderer is rule-based or categorized."
+msgstr ""
+"Šis parametras nurodo, ar JSON išvestyje taipogi bus detalės apie taisyklę, "
+"kuri sukūrė legendos įrašą. Šis parametras veikia tik kai naudojamas "
+"taisyklėmis ar kategorijomis paremtas braižymas."
 
 #: ../../docs/server_manual/services/wms.rst:1574
 msgid "ADDLAYERGROUPS"
 msgstr "ADDLAYERGROUPS"
 
+#: ../../docs/server_manual/services/wms.rst:1576
+msgid ""
+"This parameter specifies if the JSON output will also display the names of "
+"the layers groups (and subgroups) in the legend entry. Possible values are:"
+msgstr ""
+"Šis parametras nurodo, ar JSON išvestyje legendos įraše taipogi rodyti "
+"sluoksnių grupių (ir pogrupių) pavadinimus. Galimos reikšmės yra:"
+
+#: ../../docs/server_manual/services/wms.rst:1580
+msgid "``TRUE``: display the groups labels"
+msgstr "``TRUE``: rodyti grupių užrašus"
+
+#: ../../docs/server_manual/services/wms.rst:1581
+msgid "``FALSE`` (default): hide the groups labels"
+msgstr "``FALSE`` (numatytas): slėpti grupių užrašus"
+
+#: ../../docs/server_manual/services/wms.rst:1586
+msgid "Legend without (left) and with (right) layer groups labels display"
+msgstr "Legenda be (kairėje) ir su (dešinėje) sluoksnių grupių užrašų rodymu"
+
+#: ../../docs/server_manual/services/wms.rst:1588
+msgid "The corresponding JSON output showing groups name would look like:"
+msgstr "Atitinkama JSON išvestis, rodanti grupių pavadinimus, atrodytų taip:"
+
 #: ../../docs/server_manual/services/wms.rst:1618
 msgid "GetStyle(s)"
 msgstr "GetStyle(s)"
+
+#: ../../docs/server_manual/services/wms.rst:1620
+msgid ""
+"Standard parameters for the **GetStyle** (or **GetStyles**) request "
+"according to the OGC WMS 1.1.1 specifications:"
+msgstr ""
+"Standartiniai **GetStyle** (ar **GetStyles**) užklausos parametrai pagal OGC"
+" WMS 1.1.1 specifikacijas:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetStyle** or **GetStyles**)"
+msgstr "Užklausos pavadinimas (**GetStyle** ar **GetStyles**)"
+
+#: ../../docs/server_manual/services/wms.rst:1631
+msgid ""
+"The **GetStyle** request supports as well the following vendor parameters:"
+msgstr ""
+"**GetStyle** užklausa palaiko ir šiuos specifinius tiekėjo parametrus:"
 
 #: ../../docs/server_manual/services/wms.rst:1652
 msgid "DescribeLayer"
 msgstr "DescribeLayer"
 
+#: ../../docs/server_manual/services/wms.rst:1654
+msgid ""
+"Standard parameters for the **DescribeLayer** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standartiniai **DescribeLayer** užklausos parametrai pagal OGC WMS 1.1.1 ir "
+"1.3.0 specifikacijas:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**DescribeLayer**)"
+msgstr "Užklausos pavadinimas (**DescribeLayer**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to describe"
+msgstr "Aprašomi sluoksniai"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SLD_VERSION <wms_describelayer_sldversion>`"
 msgstr ":ref:`SLD_VERSION <wms_describelayer_sldversion>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD version"
+msgstr "SLD versija"
+
+#: ../../docs/server_manual/services/wms.rst:1666
+msgid ""
+"The **DescribeLayer** request supports as well the following vendor "
+"parameters:"
+msgstr ""
+"**DescribeLayer** užklausa palaiko ir šiuos specifinius tiekėjo parametrus:"
+
+#: ../../docs/server_manual/services/wms.rst:1685
+#: ../../docs/server_manual/services/wms.rst:1994
+msgid "The XML document looks like:"
+msgstr "XML dokumentas atrodo taip:"
 
 #: ../../docs/server_manual/services/wms.rst:1711
 msgid "SLD_VERSION"
 msgstr "SLD_VERSION"
 
+#: ../../docs/server_manual/services/wms.rst:1713
+msgid ""
+"This parameter allows to specify the version of SLD. Only the value "
+"``1.1.0`` is available."
+msgstr ""
+"Šis parametras leidžia nurodyti SLD versiją. Leidžiama tik reikšmė "
+"``1.1.0``."
+
 #: ../../docs/server_manual/services/wms.rst:1720
 msgid "GetPrint"
 msgstr "GetPrint"
+
+#: ../../docs/server_manual/services/wms.rst:1722
+msgid ""
+"QGIS Server has the capability to create print layout output in pdf or pixel"
+" format. Print layout windows in the published project are used as "
+"templates. In the **GetPrint** request, the client has the possibility to "
+"specify parameters of the contained layout maps and labels."
+msgstr ""
+"QGIS Serveris turi galimybę kurti spausdinimo išdėstymo išvestį pdf ar "
+"pikselių formatu. Spausdinimo išdėstymo langai publikuojamame projekte yra "
+"naudojami kaip šablonai. **GetPrint** užklausoje klientas gali nurodyti "
+"įtraukiamų išdėstymo žemėlapių ir užrašų parametrus."
 
 #: ../../docs/server_manual/services/wms.rst:1727
 msgid ""
@@ -1988,8 +2225,16 @@ msgstr ""
 ":ref:`išorinius WMS sluoksnius <wms_external>` bei šiuos parametrus:"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetPrint**)"
+msgstr "Užklausos pavadinimas (**GetPrint**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`TEMPLATE <wms_template>`"
 msgstr ":ref:`TEMPLATE <wms_template>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layout template to use"
+msgstr "Naudojamas išdėstymo šablonas"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FORMAT <wms_getprint_format>`"
@@ -1999,41 +2244,107 @@ msgstr ":ref:`FORMAT <wms_getprint_format>`"
 msgid ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
 msgstr ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
 
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/pdf``"
+msgstr "Skirta tik ``FORMAT=application/pdf``"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ATLAS_PK <wms_atlaspk>`"
 msgstr ":ref:`ATLAS_PK <wms_atlaspk>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Atlas features"
+msgstr "Atlaso geoobjektai"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:EXTENT <wms_mapextent>`"
 msgstr ":ref:`mapX:EXTENT <wms_mapextent>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Extent of the map 'X'"
+msgstr "Žemėlapio „X“ apimtis"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:LAYERS <wms_maplayers>`"
 msgstr ":ref:`mapX:LAYERS <wms_maplayers>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers of the map 'X'"
+msgstr "Žemėlapio „X“ sluoksniai"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:STYLES <wms_mapstyles>`"
 msgstr ":ref:`mapX:STYLES <wms_mapstyles>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style of the map 'X'"
+msgstr "Žemėlapio „X“ sluoksnių stilius"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:SCALE <wms_mapscale>`"
 msgstr ":ref:`mapX:SCALE <wms_mapscale>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' scale of the map 'X'"
+msgstr "Žemėlapio „X“ sluoksnių mastelis"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:ROTATION <wms_maprotation>`"
 msgstr ":ref:`mapX:ROTATION <wms_maprotation>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Rotation  of the map 'X'"
+msgstr "Žemėlapio „X“ pasukimas"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:GRID_INTERVAL_X <wms_mapgridintervalx>`"
 msgstr ":ref:`mapX:GRID_INTERVAL_X <wms_mapgridintervalx>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on x axis of the map 'X'"
+msgstr "Žemėlapio „X“ x ašies tinklelio intervalas"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`"
 msgstr ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on y axis of the map 'X'"
+msgstr "Žemėlapio „X“ y ašies tinklelio intervalas"
+
+#: ../../docs/server_manual/services/wms.rst:1777
+msgid ""
+"Note that the layout template may contain more than one map. In this way, if"
+" you want to configure a specific map, you have to use ``mapX:`` parameters "
+"where ``X`` is a positive number that you can retrieve thanks to the "
+"**GetProjectSettings** request."
+msgstr ""
+"Pastebėtina, kad išdėstymo šablone gali būti daugiau nei vienas žemėlapis. "
+"Tokių būdu, jei norite konfigūruoti konkretų žemėlapį, jūs turite naudoti "
+"``mapX:`` parametrus, kur ``X`` yra teigiamas skaičius, kurį galite "
+"ištraukti **GetProjectSettings** užklausos dėka."
+
 #: ../../docs/server_manual/services/wms.rst:1800
 msgid "TEMPLATE"
 msgstr "TEMPLATE"
+
+#: ../../docs/server_manual/services/wms.rst:1802
+msgid ""
+"This parameter can be used to specify the name of a layout template to use "
+"for printing."
+msgstr ""
+"Šį parametrą galima naudoti nurodant spausdinimui naudojamo išdėstymo "
+"šablono pavadinimą."
+
+#: ../../docs/server_manual/services/wms.rst:1810
+msgid ""
+"This parameter specifies the format of map image. Available values are:"
+msgstr ""
+"Šis parametras nurodo žemėlapio piešinio formatą. Galimos reikšmės yra:"
+
+#: ../../docs/server_manual/services/wms.rst:1812
+msgid "``png`` (default value)"
+msgstr "``png`` (numatytoji reikšmė)"
 
 #: ../../docs/server_manual/services/wms.rst:1817
 msgid "``svg``"
@@ -2051,46 +2362,474 @@ msgstr "``image/svg+xml``"
 msgid "``pdf``"
 msgstr "``pdf``"
 
+#: ../../docs/server_manual/services/wms.rst:1823
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then an "
+"exception is returned."
+msgstr ""
+"Jei parametras ``FORMAT`` yra kitoks, nei čia nurodytos reikšmės, grąžinama "
+"klaida."
+
+#: ../../docs/server_manual/services/wms.rst:1831
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/pdf`` in GetPrint requests. Takes a list of "
+"key:value pairs separated by semicolon:"
+msgstr ""
+"Šį parametrą galima naudoti nurodant parinkto formato parinktis. Skirta tik "
+"GetPrint užklausoms su ``FORMAT=application/pdf``. Ima sąrašą raktas:reikšmė"
+" porų, atskirtų kableliais:"
+
+#: ../../docs/server_manual/services/wms.rst:1835
+msgid ""
+"``RASTERIZE_WHOLE_IMAGE``: whether the whole pdf should be exported as an "
+"image. Default: false."
+msgstr ""
+"``RASTERIZE_WHOLE_IMAGE``: ar reikia visą pdf eksportuoti kaip piešinį. "
+"Numatyta: false."
+
+#: ../../docs/server_manual/services/wms.rst:1836
+msgid ""
+"``FORCE_VECTOR_OUTPUT``: whether pdf should be exported as vector. Default: "
+"false."
+msgstr ""
+"``FORCE_VECTOR_OUTPUT``: ar reikia pdf eksportuoti kaip vektorių. Numatyta: "
+"false."
+
+#: ../../docs/server_manual/services/wms.rst:1837
+msgid ""
+"``APPEND_GEOREFERENCE``: whether georeference info shall be added to the "
+"pdf. Default: true."
+msgstr ""
+"``APPEND_GEOREFERENCE``: ar pridėti į pdf geopririšimo informaciją. "
+"Numatyta: true."
+
+#: ../../docs/server_manual/services/wms.rst:1838
+msgid ""
+"``EXPORT_METADATA``: whether metadata shall be added to the pdf. Default: "
+"true."
+msgstr "``EXPORT_METADATA``: ar pridėti į pdf metaduomenis. Numatyta: true."
+
+#: ../../docs/server_manual/services/wms.rst:1839
+msgid ""
+"``TEXT_RENDER_FORMAT``: sets the text render format for pdf export. It can "
+"be ``AlwaysOutlines`` (default) or ``AlwaysText``."
+msgstr ""
+"``TEXT_RENDER_FORMAT``: numato pdf eksporto teksto braižymo formatą. Gali "
+"būti ``AlwaysOutlines`` (numatyta) ar ``AlwaysText``."
+
+#: ../../docs/server_manual/services/wms.rst:1841
+msgid ""
+"``SIMPLIFY_GEOMETRY``: whether features geometries shall be simplified. "
+"Default: true."
+msgstr ""
+"``SIMPLIFY_GEOMETRY``: ar paprastinti geoobjektų geometrijas. Numatyta: "
+"true."
+
+#: ../../docs/server_manual/services/wms.rst:1842
+msgid ""
+"``WRITE_GEO_PDF``: whether a Geospatial PDF shall be exported. Default: "
+"false."
+msgstr ""
+"``WRITE_GEO_PDF``: ar reikia eksportuoti Geoerdvinį PDF. Numatyta: false."
+
+#: ../../docs/server_manual/services/wms.rst:1843
+msgid ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: whether Iso32000 "
+"georeferencing shall be used. Default: false."
+msgstr ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: ar naudoti Iso32000 "
+"geopririšimą. Numatyta: false."
+
+#: ../../docs/server_manual/services/wms.rst:1844
+msgid ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: whether OGC best practice "
+"georeferencing shall be used. Default: false."
+msgstr ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: ar naudoti OGC geriausias "
+"praktikas. Numatyta: false."
+
+#: ../../docs/server_manual/services/wms.rst:1845
+msgid ""
+"``EXPORT_THEMES``: a comma separated list of map themes to use for a "
+"Geospatial PDF export"
+msgstr ""
+"``EXPORT_THEMES``: kableliais atskiras žemėlapio temų sąrašas, kurį reikia "
+"naudoti Geoerdvinio PDF eksportui"
+
+#: ../../docs/server_manual/services/wms.rst:1846
+msgid ""
+"``PREDEFINED_MAP_SCALES``: a comma separated list of map scales to render "
+"the map"
+msgstr ""
+"``PREDEFINED_MAP_SCALES``: kableliais atskirtas sąrašas žemėlapio mastelių "
+"žemėlapio braižymui"
+
+#: ../../docs/server_manual/services/wms.rst:1847
+msgid ""
+"``LOSSLESS_IMAGE_COMPRESSION``: whether images embedded in pdf must be "
+"compressed using a lossless algorithm. Default: false."
+msgstr ""
+"``LOSSLESS_IMAGE_COMPRESSION``: ar į pdf įtrauktus piešinius reikia "
+"suspausti naudojant neprarandantį algoritmą. Numatyta: false."
+
+#: ../../docs/server_manual/services/wms.rst:1848
+msgid ""
+"``DISABLE_TILED_RASTER_RENDERING``: whether rasters shall be untiled in the "
+"pdf. Default: false."
+msgstr ""
+"``DISABLE_TILED_RASTER_RENDERING``: ar reikia pdf'e sujungti rastro "
+"kaladėles. Default: false."
+
 #: ../../docs/server_manual/services/wms.rst:1869
 msgid "ATLAS_PK"
 msgstr "ATLAS_PK"
+
+#: ../../docs/server_manual/services/wms.rst:1871
+msgid ""
+"This parameter allows activation of Atlas rendering by indicating which "
+"features we want to print. In order to retrieve an atlas with all features, "
+"the ``*`` symbol may be used (according to the maximum number of features "
+"allowed in the project configuration)."
+msgstr ""
+"Šis parametras leidžia aktyvuoti Atlaso braižymą nurodant, kuriuos "
+"geoobjektus norite spausdinti. Norint atsisiųsti atlasą su visais "
+"geoobjektais, galima naudoti simbolį ``*`` (atsižvelgiant į projekto "
+"konfigūracijoje nurodytą maksimalų leidžiamą geoobjektų skaičių)."
+
+#: ../../docs/server_manual/services/wms.rst:1877
+msgid ""
+"When ``FORMAT`` is ``pdf``, a single PDF document combining the feature "
+"pages is returned. For all other formats, a single page is returned."
+msgstr ""
+"Kai ``FORMAT`` yra ``pdf``, grąžinamas vienas PDF dokumentas su geoobjektų "
+"puslapiais. Visiems kitiems formatams grąžinamas vienas puslapis."
 
 #: ../../docs/server_manual/services/wms.rst:1884
 msgid "mapX:EXTENT"
 msgstr "mapX:EXTENT"
 
+#: ../../docs/server_manual/services/wms.rst:1886
+msgid ""
+"This parameter specifies the extent for a layout map item as "
+"xmin,ymin,xmax,ymax."
+msgstr ""
+"Šis parametras nurodo išdėstymo žemėlapio elemento apimtį kaip "
+"xmin,ymin,xmax,ymax."
+
 #: ../../docs/server_manual/services/wms.rst:1892
 msgid "mapX:ROTATION"
 msgstr "mapX:ROTATION"
+
+#: ../../docs/server_manual/services/wms.rst:1894
+msgid "This parameter specifies the map rotation in degrees."
+msgstr "Šis parametras nurodo žemėlapio pasukimą laipsniais."
 
 #: ../../docs/server_manual/services/wms.rst:1899
 msgid "mapX:GRID_INTERVAL_X"
 msgstr "mapX:GRID_INTERVAL_X"
 
+#: ../../docs/server_manual/services/wms.rst:1901
+msgid "This parameter specifies the grid line density in the X direction."
+msgstr "Šis parametras nurodo tinklelio linijų tankį X kryptimi."
+
 #: ../../docs/server_manual/services/wms.rst:1906
 msgid "mapX:GRID_INTERVAL_Y"
 msgstr "mapX:GRID_INTERVAL_Y"
+
+#: ../../docs/server_manual/services/wms.rst:1908
+msgid "This parameter specifies the grid line density in the Y direction."
+msgstr "Šis parametras nurodo tinklelio linijų tankį Y kryptimi."
 
 #: ../../docs/server_manual/services/wms.rst:1913
 msgid "mapX:SCALE"
 msgstr "mapX:SCALE"
 
+#: ../../docs/server_manual/services/wms.rst:1915
+msgid ""
+"This parameter specifies the map scale for a layout map item. This is useful"
+" to ensure scale based visibility of layers and labels even if client and "
+"server may have different algorithms to calculate the scale denominator."
+msgstr ""
+"Šis parametras nurodo išdėstymo žemėlapio elemento žemėlapio mastelį. Tai "
+"naudinga, kai reikia užtikrinti nuo mastelio priklausantį sluoksnių ir "
+"užrašų matomumą, net kai klientas ir serveris turi skirtingus mastelio "
+"skaičiavimo algoritmus."
+
 #: ../../docs/server_manual/services/wms.rst:1923
 msgid "mapX:LAYERS"
 msgstr "mapX:LAYERS"
+
+#: ../../docs/server_manual/services/wms.rst:1925
+msgid ""
+"This parameter specifies the layers for a layout map item. See :ref:`GetMap "
+"Layers <wms_layers>` for more information on this parameter."
+msgstr ""
+"Šis parametras nurodo išdėstymo žemėlapio elemento sluoksnius. Daugiau "
+"informacijos apie šį parametrą rasite :ref:`GetMap sluoksniai <wms_layers>`."
 
 #: ../../docs/server_manual/services/wms.rst:1932
 msgid "mapX:STYLES"
 msgstr "mapX:STYLES"
 
+#: ../../docs/server_manual/services/wms.rst:1934
+msgid ""
+"This parameter specifies the layers' styles defined in a specific layout map"
+" item. See :ref:`GetMap Styles <wms_styles>` for more information on this "
+"parameter."
+msgstr ""
+"Šis parametras nurodo konkrečiam išdėstymo žemėlapio elementui nurodytus "
+"sluoksnių stilius. Daugiau informacijos apie šį parametrą rasite "
+":ref:`GetMap stiliai <wms_styles>`."
+
 #: ../../docs/server_manual/services/wms.rst:1943
 msgid "GetProjectSettings"
 msgstr "GetProjectSettings"
+
+#: ../../docs/server_manual/services/wms.rst:1945
+msgid ""
+"This request type works similar to :ref:`GetCapabilities "
+"<wms_getcapabilities>`, but it is more specific to QGIS Server and allows a "
+"client to read additional information which are not available in the "
+":ref:`GetCapabilities <wms_getcapabilities>` output:"
+msgstr ""
+"Šis užklausos tipas veikia panašiai į :ref:`GetCapabilities "
+"<wms_getcapabilities>`, tik yra labiau specifinis QGIS Serveriui ir leidžia "
+"klientui perskaityti papildomą informaciją, kurios nėra "
+":ref:`GetCapabilities <wms_getcapabilities>` išvestyje:"
+
+#: ../../docs/server_manual/services/wms.rst:1950
+msgid "initial visibility of layers"
+msgstr "pradinį sluoksnių matomumą"
+
+#: ../../docs/server_manual/services/wms.rst:1951
+msgid "information about vector attributes and their edit types"
+msgstr "informaciją apie vektorių atributus ir jų redagavimo tipus"
+
+#: ../../docs/server_manual/services/wms.rst:1952
+msgid "information about layer order and drawing order"
+msgstr "informaciją apie sluoksnių rikiuotę ir braižymo rikiuotę"
+
+#: ../../docs/server_manual/services/wms.rst:1953
+msgid "list of layers published in WFS"
+msgstr "WFS publikuojamų sluoksnių sąrašą"
+
+#: ../../docs/server_manual/services/wms.rst:1954
+msgid ""
+"show if a group in the layer tree is :ref:`mutually exclusive "
+"<group_layers_interact>`"
+msgstr ""
+"ar grupė sluoksnių medyje yra :ref:`leidžianti pažymėti vienu metu tik vieną"
+" elementą <group_layers_interact>`"
+
+#: ../../docs/server_manual/services/wms.rst:1956
+msgid "The **GetProjectSettings** request supports the following parameters:"
+msgstr "**GetProjectSettings** užklausa palaiko šiuos parametrus:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetProjectSettings**)"
+msgstr "Užklausos pavadinimas (**GetProjectSettings**)"
 
 #: ../../docs/server_manual/services/wms.rst:1970
 msgid "GetSchemaExtension"
 msgstr "GetSchemaExtension"
 
+#: ../../docs/server_manual/services/wms.rst:1972
+msgid ""
+"The **GetSchemaExtension** request allows to retrieve optional extended "
+"capabilities and operations of the WMS service such as implemented by QGIS "
+"Server."
+msgstr ""
+"**GetSchemaExtension** užklausa leidžia gauti papildomas išplėstas WMS "
+"paslaugos galimybes ir veiksmus, įgyvendintas QGIS Serverio."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetSchemaExtension**)"
+msgstr "Užklausos pavadinimas (**GetSchemaExtension**)"
+
+#: ../../docs/server_manual/services/wms.rst:2008
+msgid "External WMS layers"
+msgstr "Išoriniai WMS sluoksniai"
+
+#: ../../docs/server_manual/services/wms.rst:2010
+msgid ""
+"QGIS Server allows including layers from external WMS servers in WMS "
+":ref:`GetMap <wms_getmap>` and WMS :ref:`GetPrint <wms_getprint>` requests. "
+"This is especially useful if a web client uses an external background layer "
+"in the web map. For performance reasons, such layers should be directly "
+"requested by the web client (not cascaded via QGIS server). For printing "
+"however, these layers should be cascaded via QGIS server in order to appear "
+"in the printed map."
+msgstr ""
+"QGIS Serveris leidžia įdėti sluoksnius iš išorinių WMS serverių į "
+":ref:`GetMap <wms_getmap>` ir WMS :ref:`GetPrint <wms_getprint>` užklausas. "
+"Tai ypatingai naudinga, jei žiniatinklio klientas žemėlapyje naudoja išorinį"
+" pagrindo sluoksnį. Greitaveikos tikslais tokie sluoksniai turėtų būti "
+"tiesiogiai užklausiami kliento (o ne perduodami per QGIS serverį). Kaip ten "
+"bebūtų, spausdinimui šie sluoksniai turėtų praeiti per QGIS serverį, kad "
+"matytųsi spausdinamame žemėlapyje."
+
+#: ../../docs/server_manual/services/wms.rst:2018
+msgid ""
+"External layers can be added to the LAYERS parameter as "
+"EXTERNAL_WMS:<layername>. The parameters for the external WMS layers (e.g. "
+"url, format, dpiMode, crs, layers, styles) can later be given as service "
+"parameters <layername>:<parameter>. In a :ref:`GetMap <wms_getmap>` request,"
+" this might look like this:"
+msgstr ""
+"Išoriniai sluoksniai gali būti pridėti į LAYERS parametrą kaip "
+"EXTERNAL_WMS:<layername>. Išorinių WMS sluoksnių parametrai (pvz. url, "
+"formatas, dpiMode, crs, sluoksniai, stiliai) gali būti vėliau nurodyti kaip "
+"paslaugos parametrai <layername>:<parameter>. :ref:`GetMap <wms_getmap>` "
+"užklausoje tai gali atrodyti štai taip:"
+
+#: ../../docs/server_manual/services/wms.rst:2040
+msgid ""
+"Similarly, external layers can be used in :ref:`GetPrint <wms_getprint>` "
+"requests:"
+msgstr ""
+"Panašiai išoriniai sluoksniai gali būti naudojami ir :ref:`GetPrint "
+"<wms_getprint>` užklausose:"
+
 #: ../../docs/server_manual/services/wms.rst:2063
 msgid "Redlining"
 msgstr "Paryškinimas"
+
+#: ../../docs/server_manual/services/wms.rst:2065
+msgid ""
+"This feature is available and can be used with :ref:`GetMap <wms_getmap>` "
+"and :ref:`GetPrint <wms_getprint>` requests."
+msgstr ""
+"Ši savybė prieinama ir ją galima naudoti :ref:`GetMap <wms_getmap>` ir "
+":ref:`GetPrint <wms_getprint>` užklausose."
+
+#: ../../docs/server_manual/services/wms.rst:2068
+msgid ""
+"The redlining feature can be used to pass geometries and labels in the "
+"request which are overlapped by the server over the standard returned image "
+"(map). This permits the user to put emphasis or maybe add some comments "
+"(labels) to some areas, locations etc. that are not in the standard map."
+msgstr ""
+"Pabraukimo savybę galima naudoti perduodant užklausoje geometrijas ir "
+"užrašus, kuriais serveris uždengia standartinį sukurtą piešinį (žemėlapį). "
+"Tai leidžia naudotojui paryškinti, o gal ir pridėti komentarus (užrašus) "
+"prie kai kurių plotų, vietų ir pan., kurių nėra standartiniame žemėlapyje."
+
+#: ../../docs/server_manual/services/wms.rst:2073
+msgid "The :ref:`GetMap <wms_getmap>` request is in the format:"
+msgstr ":ref:`GetMap <wms_getmap>` užklausos formatas:"
+
+#: ../../docs/server_manual/services/wms.rst:2090
+msgid ""
+"The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that "
+"``mapX:`` parameter is added to tell which map has redlining):"
+msgstr ""
+":ref:`GetPrint <wms_getprint>` ekvivalentas yra tokio formato (atkreipkite "
+"dėmesį, kad pridėtas ``mapX:`` parametras, kuris nurodo, kuriame žemėlapyje "
+"pridedama):"
+
+#: ../../docs/server_manual/services/wms.rst:2107
+msgid ""
+"Here is the image outputed by the above request in which a polygon and a "
+"label are drawn on top of the normal map:"
+msgstr ""
+"Štai piešinys, kurį grąžina aukščiau pateikta užklausa, kurioje ant "
+"normalaus žemėlapio pridedamas poligonas ir užrašas:"
+
+#: ../../docs/server_manual/services/wms.rst:2115
+msgid "Server response to a GetMap request with redlining parameters"
+msgstr "Serverio GetMap užklausos su perdengimo parametrais atsakas"
+
+#: ../../docs/server_manual/services/wms.rst:2117
+msgid ""
+"You can see there are several parameters in this request to control the "
+"redlining feature. The full list includes:"
+msgstr ""
+"Kaip matote, šioje užklausoje yra keletas parametrų, kurie valdo geoobjekto "
+"braižymą. Pilnas jų sąrašas:"
+
+#: ../../docs/server_manual/services/wms.rst:2120
+msgid ""
+"**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
+"supports multipart geometries. Here is an example: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. The coordinates should "
+"be in the CRS of the GetMap/GetPrint request."
+msgstr ""
+"**HIGHLIGHT_GEOM**: Galite pridėti POINT, MULTILINESTRING, POLYGON ir pan. "
+"Palaikomos ir kelių dalių geometrijos. Štai pavyzdys: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. Koordinatės turi būti "
+"GetMap/GetPrint užklausos CRS."
+
+#: ../../docs/server_manual/services/wms.rst:2124
+msgid ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
+"color."
+msgstr ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: Šis parametras valdo užrašo buferio spalvą."
+
+#: ../../docs/server_manual/services/wms.rst:2126
+msgid ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
+"size."
+msgstr ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: Šis parametras valdo užrašo buferio dydį."
+
+#: ../../docs/server_manual/services/wms.rst:2128
+msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
+msgstr "**HIGHLIGHT_LABELCOLOR**: Šis parametras valdo užrašo spalvą."
+
+#: ../../docs/server_manual/services/wms.rst:2129
+msgid ""
+"**HIGHLIGHT_LABEL_DISTANCE**: controls the distance between feature (e.g. "
+"point or line) and the label in mm"
+msgstr ""
+"**HIGHLIGHT_LABEL_DISTANCE**: valdo atstumą milimetrais tarp geoobjeto (pvz."
+" taško ar linijos) ir užrašo"
+
+#: ../../docs/server_manual/services/wms.rst:2131
+msgid ""
+"**HIGHLIGHT_LABELFONT**: This parameter controls the font of the label (e.g."
+" Arial)"
+msgstr ""
+"**HIGHLIGHT_LABELFONT**: Šis parametras valdo užrašo šriftą (pvz. Arial)"
+
+#: ../../docs/server_manual/services/wms.rst:2133
+msgid ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: places the label horizontally on a"
+" point using the specified alignment (e.g. 'left', 'center', 'right')"
+msgstr ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: braižo užrašą horizontaliai ant "
+"taško, naudojant nurodytą lygiavimą (pvz. 'left', 'center', 'right')"
+
+#: ../../docs/server_manual/services/wms.rst:2135
+msgid "**HIGHLIGHT_LABEL_ROTATION**: controls the label rotation in degrees"
+msgstr "**HIGHLIGHT_LABEL_ROTATION**: valdo užrašo pasukimą laipsniais"
+
+#: ../../docs/server_manual/services/wms.rst:2136
+msgid ""
+"**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
+msgstr "**HIGHLIGHT_LABELSIZE**: Šis parametras valdo užrašo dydį."
+
+#: ../../docs/server_manual/services/wms.rst:2138
+msgid ""
+"**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
+"parameter."
+msgstr ""
+"**HIGHLIGHT_LABELSTRING**: Šiame parametre galite perduoti jūsų užrašo "
+"tekstą."
+
+#: ../../docs/server_manual/services/wms.rst:2140
+msgid ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: places the label vertically on a "
+"point using the specified alignment (e.g. 'top', 'half', 'bottom')"
+msgstr ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: braižo užrašą vertikaliai taške "
+"naudojant nurodytą lygiavimą (pvz. 'top', 'half', 'bottom')"
+
+#: ../../docs/server_manual/services/wms.rst:2142
+msgid ""
+"**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
+" change the stroke width, color and opacity."
+msgstr ""
+"**HIGHLIGHT_SYMBOL**: Valdo kaip geometriją apibrėžiama ir čia galite keisti"
+" brėžimo plotį, spalvą bei nepermatomumą."
