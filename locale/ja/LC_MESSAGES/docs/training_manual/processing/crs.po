@@ -147,7 +147,7 @@ msgid ""
 "resulting layer rendered exactly in the same place as the other ones, and it"
 " will have the EPSG:23030 CRS, since that was the one of the input layer."
 msgstr ""
-"もう一方のレイヤを使って、同じ計算をしてみてください。出来上がったレイヤは他のレイヤと全く同じ場所にレンダリングされ、入力レイヤのものなので "
+"もう一方のレイヤを使って、同じ計算をしてみてください。出来上がったレイヤは他のレイヤと全く同じ場所にレンダリングされ、入力レイヤと同じ "
 "EPSG:23030 CRS を持つはずです。"
 
 #: ../../docs/training_manual/processing/crs.rst:72
@@ -160,7 +160,7 @@ msgstr "その属性テーブルに行くと、最初に作成したレイヤの
 msgid ""
 "This is because the original data is different (it uses a different CRS), "
 "and those coordinates are taken from it."
-msgstr "これは、元のデータが異なる（それは異なるCRSを使用する）ためであり、これらの座標はそれから取られています。"
+msgstr "これは元のデータが異なる（異なるCRSを使用している）ためであり、座標はそれから取られています。"
 
 #: ../../docs/training_manual/processing/crs.rst:80
 msgid ""
@@ -174,7 +174,7 @@ msgid ""
 "layers that appear to match or overlay might be very far one from each "
 "other, since they might have different CRSs."
 msgstr ""
-"ここから何を学ぶべきでしょうか？これらの例の背後にある重要な考えは、地理アルゴリズムは元のデータソースのレイヤをそのまま使用し、QGISでレンダリングする前に行われているかもしれない再投影は完全に無視するということです。言い換えれば、キャンバスに見えるものは信用せず、常に元のデータが使用されることを念頭に置いてください。ここでは一度に1つのレイヤだけを使用しているのでそれほど重要ではありませんが、複数のレイヤを必要とするアルゴリズム（例えばクリップアルゴリズム）では、一致したり重なったりするように見えるレイヤが、異なるCRSを持っていて、互いに非常に離れていることがあります。"
+"ここから何を学ぶべきでしょうか？これらの例の背後にある重要な考えは、地理アルゴリズムは元のデータソースのレイヤをそのまま使用し、QGISでレンダリングする前に行われているかもしれない再投影は完全に無視しているということです。言い換えれば、キャンバスに見えているものは信用せず、常に元のデータが使われることを念頭に置いてください。ここでは一度に1つのレイヤだけを使用しているのでそれほど重要ではありませんが、複数のレイヤを必要とするアルゴリズム（例えばクリップアルゴリズム）では、一致したり重なったりするように見えるレイヤが、異なるCRSを持っていて、互いに非常に離れていることがあります。"
 
 #: ../../docs/training_manual/processing/crs.rst:89
 msgid ""
@@ -189,7 +189,7 @@ msgid ""
 "represents a particular case, since it has an input layer (the one to "
 "reproject), but it will not use its CRS for the output one."
 msgstr ""
-"CRSを扱う興味深いモジュールのひとつが再投影モジュールです。それは入力レイヤ（再投影の対象となるもの）を持つが、そのCRSを出力レイヤに使わない特殊なケースを代表しています。"
+"CRSを扱う興味深いモジュールのひとつが再投影モジュールです。それが特殊なケースを代表するのは、入力レイヤ（再投影の対象となるもの）を持つが、そのCRSを出力レイヤに使わないからです。"
 
 #: ../../docs/training_manual/processing/crs.rst:97
 msgid "Open the *Reproject layer* algorithm."
