@@ -890,7 +890,7 @@ Label Spacing
 
 The :guilabel:`Label Spacing` option allows you to set the margin around the label,
 preventing all other labels from being placed within that area.
-You can dynamically control :guilabel:`Mergin around label` using
+You can dynamically control :guilabel:`Margin around label` using
 the |dataDefine| :sup:`Data-defined override` button.
 Choose unit from the unit selector, and there you can also :ref:`adjust scaling range <unit_selector>`.
 

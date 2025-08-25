@@ -1183,6 +1183,11 @@ Returns a specific interior ring from a polygon geometry, or NULL if the geometr
      - * ``geom_to_wkt(interior_ring_n(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1),(-0.1 -0.1, 0.4 0, 0.4 0.2, 0 0.2, -0.1 -0.1),(-1 -1, 4 0, 4 2, 0 2, -1 -1))'),1))`` → 'LineString (-0.1 -0.1, 0.4 0, 0.4 0.2, 0 0.2, -0.1 -0.1))'
 
 
+.. figure:: /docs/user_manual/expressions/expression_help/img/interior_ring_n.*
+   :align: center
+
+   The dashed line represents a specific interior ring of the polygon
+
 .. end_interior_ring_n_section
 
 .. _expression_function_GeometryGroup_intersection:
