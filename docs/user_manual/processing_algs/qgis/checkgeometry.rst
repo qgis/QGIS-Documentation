@@ -356,6 +356,7 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
 .. _qgischeckgeometrycontained:
 
 Features inside polygon
@@ -817,6 +818,139 @@ Python code
 ...........
 
 **Algorithm ID**: ``native:checkgeometryangle``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgischeckgeometrysegmentlength:
+
+Small segments
+---------------------
+
+Calculates length of individual segments in line or polygon geometries,
+and reports segments shorter than a minimum length as errors.
+
+.. figure:: img/check_geometry_smallsegments.png
+   :align: center
+
+   Red lines indicate errors on segments shorter than three map units.
+
+.. seealso:: :ref:`qgisfixgeometrydeletefeatures`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Minimum segment length**
+     - ``MIN_SEGMENT_LENGTH``
+     - [numeric: double]
+
+       Default: 0.0
+     - Minimum length of segments to be considered valid, in map units.
+   * - **Short segments errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing centroid of short segments.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Short segments features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: same as input]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer for features containing short segments.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Short segments errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       Other than the input attributes, the output layer also contains the following fields:
+       
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the geometry part index of the erroneous feature.
+       - ``gc_ringidx``: the ring index of the erroneous feature.
+       - ``gc_vertidx``: the vertex index of the erroneous feature.
+       - ``gc_errorx``: the x coordinate of the centroid of the small segment.
+       - ``gc_errory``: the y coordinate of the centroid of the small segment.
+       - ``gc_error``: the error segment length.
+   * - **Short segments features**
+     - ``OUTPUT``
+     - [vector: same as input]
+     - Output layer containing, for each identified short segment, the feature it belongs to.
+       Additional fields are available (see ``ERRORS`` output).
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrysegmentlength``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
