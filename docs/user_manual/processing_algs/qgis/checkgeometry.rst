@@ -829,13 +829,13 @@ Python code
 Small segments
 ---------------------
 
-Checks the minimum segment length of line or polygon geometries.
-Segments shorter than the minimum length are errors.
+Calculates length of individual segments in line or polygon geometries,
+and reports segments shorter than a minimum length as errors.
 
 .. figure:: img/check_geometry_smallsegments.png
    :align: center
 
-   Reporting errors on line features for segments shorter than 3 map units.
+   Red lines indicate errors on segments shorter than three map units.
 
 .. seealso:: :ref:`qgisfixgeometrydeletefeatures`
 
@@ -864,16 +864,16 @@ Basic parameters
      - Field storing unique values for feature identification.
    * - **Minimum segment length**
      - ``MIN_SEGMENT_LENGTH``
-     - [numeric: float]
+     - [numeric: double]
 
-       Default: 0.000000
+       Default: 0.0
      - Minimum length of segments to be considered valid, in map units.
    * - **Short segments errors**
      - ``ERRORS``
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output layer containing end points of short segments.
+     - Specification of the output layer containing centroid of short segments.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -886,7 +886,7 @@ Basic parameters
      - [vector: same as input]
 
        Default: ``[Skip output]``
-     - Specification of the output layer with short segments.
+     - Specification of the output layer for features containing short segments.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -930,15 +930,22 @@ Outputs
    * - **Short segments errors**
      - ``ERRORS``
      - [vector: point]
-     - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the geometry part,
-       ring and vertex index of the erroneous feature,
-       x and y coordinates of the error and small segment length).
+     - Output point layer representing the error locations and information.
+       Other than the input attributes, the output layer also contains the following fields:
+       
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the geometry part index of the erroneous feature.
+       - ``gc_ringidx``: the ring index of the erroneous feature.
+       - ``gc_vertidx``: the vertex index of the erroneous feature.
+       - ``gc_errorx``: the x coordinate of the centroid of the small segment.
+       - ``gc_errory``: the y coordinate of the centroid of the small segment.
+       - ``gc_error``: the error segment length.
    * - **Short segments features**
      - ``OUTPUT``
      - [vector: same as input]
-     - Output layer containing the features with short segments.
-       Additional fields are added (see ``ERRORS`` output).
+     - Output layer containing, for each identified short segment, the feature it belongs to.
+       Additional fields are available (see ``ERRORS`` output).
 
 Python code
 ...........
