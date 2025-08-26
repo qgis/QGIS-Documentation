@@ -2796,9 +2796,9 @@ with the field type. The available widgets are:
    relative paths. This increases portability of a :file:`.qgs` project with
    multimedia information attached.
 
-* **Geometry**: Compatible with the "Geometry" field type. For example PostgreSQL and Memory layers 
-  can have multiple fields of type "Geometry". QGIS picks the first geometry column as the layer geometry.
-  Applying the Geometry widget for additional geometry columns allows for lossless use of the data in the attribute form:
+* **Geometry**: Compatible with the *Geometry* field type. For example, PostgreSQL and Memory layers 
+  can contain multiple geometry fields. QGIS uses the first geometry column as the layer geometry.
+  Applying the Geometry widget to additional geometry fields allows lossless use of the data in the attribute form:
 
   * Copy in the formats WKT (Well-known text representation, e.g. ``POINT (30 10)`` ) or GeoJSON
   * Paste
