@@ -2846,10 +2846,17 @@ with the field type. The available widgets are:
    will be automatically recognized by QGIS and assigned a **Value Map** widget for the relevant fields.
 
 * **Value Relation**: Offers values from a related table in a combobox. You can
-  select layer, key column and value column. Several options are available to
-  change the standard behaviors: allow null value, order by value, allow
+  select layer, key column and value column. You may also choose to order the list by key, value, or field.
+
+  - :guilabel:`Key`: sorts the list by the key column.
+  - :guilabel:`Value`: sorts the list by the value column.
+  - :guilabel:`Field`: sorts the list by the selected field column.
+
+  Enable the |checkbox| :guilabel:`Descending order` if you wish the values to be sorted in reverse order.
+  Several options are available to
+  change the standard behaviors: allow NULL value, allow
   multiple selections and use of auto-completer. The forms will display either
-  a drop-down list or a line edit field when completer checkbox is enabled.
+  a drop-down list or a line edit field when completer checkbox is enabled. 
 
   If a layer that is stored in PostgreSQL, GeoPackage or SpatiaLite is
   configured to use a value relation widget, but the required layer is
