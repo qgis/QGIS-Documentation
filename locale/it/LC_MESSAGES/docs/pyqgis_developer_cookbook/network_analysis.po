@@ -5,22 +5,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2025-07-02 07:59+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -483,18 +483,29 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:257
 msgid ""
 "The :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method has "
-"the same arguments, but returns two arrays. In the first array element `n` "
-"contains index of the incoming edge or -1 if there are no incoming edges. In"
-" the second array element `n` contains the distance from the root of the "
-"tree to vertex `n` or DOUBLE_MAX if vertex `n` is unreachable from the root."
+"the same arguments, but returns a tuple of arrays:"
 msgstr ""
 "Il metodo :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` ha "
-"gli stessi argomenti, ma restituisce due array. Il primo elemento `n` "
-"contiene l'indice del bordo entrante o -1 se non ci sono bordi entranti. Nel"
-" secondo elemento `n` contiene la distanza dalla radice dell'albero al "
-"vertice `n` o DOUBLE_MAX se il vertice `n` non è raggiungibile dalla radice."
+"gli stessi argomenti, ma restituisce una tupla di array:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:268
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:260
+msgid ""
+"In the first array, element `n` contains index of the incoming edge or -1 if"
+" there are no incoming edges."
+msgstr ""
+"Nel primo array, l'elemento `n` contiene l'indice del bordo in entrata o -1 "
+"se non ci sono bordi in entrata."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:262
+msgid ""
+"In the second array, element `n` contains the distance from the root of the "
+"tree to vertex `n` or DOUBLE_MAX if vertex `n` is unreachable from the root."
+msgstr ""
+"Nel secondo array, l'elemento `n` contiene la distanza dalla radice "
+"dell'albero al vertice `n` o DOUBLE_MAX se il vertice `n` non è "
+"raggiungibile dalla radice."
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:269
 msgid ""
 "Here is some very simple code to display the shortest path tree using the "
 "graph created with the :meth:`shortestTree() "
@@ -507,7 +518,7 @@ msgstr ""
 "linestring nel pannello :guilabel:`Layer` e sostituisci le coordinate con le"
 " tue)."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:273
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:274
 msgid ""
 "Use this code only as an example, it creates a lot of :class:`QgsRubberBand "
 "<qgis.gui.QgsRubberBand>` objects and may be slow on large datasets."
@@ -516,7 +527,7 @@ msgstr ""
 ":class:`QgsRubberBand <qgis.gui.QgsRubberBand>` e può essere lento su grandi"
 " insiemi di dati."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:309
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:310
 msgid ""
 "Same thing but using the :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method"
@@ -524,11 +535,11 @@ msgstr ""
 "Stessa cosa, ma utilizzando il metodo :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>`."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:346
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:358
 msgid "Finding shortest paths"
 msgstr "Trovare i percorsi più brevi"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:348
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:360
 msgid ""
 "To find the optimal path between two points the following approach is used. "
 "Both points (start A and end B) are \"tied\" to the graph when it is built. "
@@ -548,7 +559,7 @@ msgstr ""
 "trova anche il punto finale B e si inizia a percorrere l'albero dal punto B "
 "al punto A. L'intero algoritmo può essere scritto come:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:366
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:378
 msgid ""
 "At this point we have the path, in the form of the inverted list of vertexes"
 " (vertexes are listed in reversed order from end point to start point) that "
@@ -558,7 +569,7 @@ msgstr ""
 "vertici (i vertici sono elencati in ordine inverso, dal punto finale al "
 "punto iniziale) che saranno visitati durante il percorso."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:370
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:382
 msgid ""
 "Here is the sample code for QGIS Python Console (you may need to load and "
 "select a linestring layer in TOC and replace coordinates in the code with "
@@ -570,7 +581,7 @@ msgstr ""
 "sostituire le coordinate nel codice con le tue) che utilizza il metodo "
 ":meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>`."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:426
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:440
 msgid ""
 "And here is the same sample but using the :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method"
@@ -578,11 +589,11 @@ msgstr ""
 "Ed ecco lo stesso esempio, ma utilizzando il metodo :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>`."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:482
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:496
 msgid "Areas of availability"
 msgstr "Zone di disponibilità"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:484
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:498
 msgid ""
 "The area of availability for vertex A is the subset of graph vertexes that "
 "are accessible from vertex A and the cost of the paths from A to these "
@@ -592,7 +603,7 @@ msgstr ""
 "grafo che sono accessibili dal vertice A e il costo dei percorsi da A a "
 "questi vertici non è superiore a un certo valore."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:488
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:502
 msgid ""
 "More clearly this can be shown with the following example: \"There is a fire"
 " station. Which parts of city can a fire truck reach in 5 minutes? 10 "
@@ -604,7 +615,7 @@ msgstr ""
 " camion dei pompieri in 5 minuti? 10 minuti? 15 minuti?\". Le risposte a "
 "queste domande sono le zone di disponibilità della caserma dei pompieri."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:493
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
 msgid ""
 "To find the areas of availability we can use the :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method of the "
@@ -620,7 +631,7 @@ msgstr ""
 "cost[i] è minore o uguale a un valore predefinito, allora il vertice i è "
 "all'interno della zona di disponibilità, altrimenti è fuori."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:500
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:514
 msgid ""
 "A more difficult problem is to get the borders of the area of availability. "
 "The bottom border is the set of vertexes that are still accessible, and the "
@@ -636,6 +647,6 @@ msgstr ""
 "basato sui bordi dell'albero del cammino più breve per i quali il vertice di"
 " origine del bordo è accessibile e il vertice di destinazione del bordo no."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:521
 msgid "Here is an example"
 msgstr "Ecco un esempio"
