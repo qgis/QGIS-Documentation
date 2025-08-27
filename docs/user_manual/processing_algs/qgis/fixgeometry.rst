@@ -384,7 +384,6 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-
 .. _qgisfixgeometryhole:
 
 Fill holes
@@ -431,7 +430,6 @@ Basic parameters
    * - **Field of part index**
      - ``PART_IDX``
      - [tablefield: integer]
-
        Default: ``gc_partidx``
      - Field storing the erroneous feature's geometry part number.
    * - **Field of ring index**
@@ -507,7 +505,7 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied
-       (the ID and name of the input layer, the ID, geometry part, ring and vertex index of the erroneous feature,
+       (the ID and name of the input layer, the geometry part, ring and vertex index of the erroneous feature,
        x and y coordinates of the error, the applied fix and its successfulness).
    * - **Holes-filled layer**
      - ``OUTPUT``
