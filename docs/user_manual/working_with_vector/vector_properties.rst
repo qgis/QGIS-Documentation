@@ -2796,6 +2796,14 @@ with the field type. The available widgets are:
    relative paths. This increases portability of a :file:`.qgs` project with
    multimedia information attached.
 
+* **Geometry**: Compatible with the *Geometry* field type. For example, PostgreSQL and Memory layers 
+  can contain multiple geometry fields. QGIS uses the first geometry column as the layer geometry.
+  Applying the Geometry widget to additional geometry fields allows lossless use of the data in the attribute form:
+
+  * Copy in the formats WKT (Well-known text representation, e.g. ``POINT (30 10)`` ) or GeoJSON
+  * Paste
+  * Clear
+
 * **Hidden**: A hidden attribute column is invisible. The user is not able
   to see its contents.
 * **Key/Value**: Displays a two-columns table to store sets of key/value
@@ -2845,10 +2853,15 @@ with the field type. The available widgets are:
    Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined **coded Field Domains**
    will be automatically recognized by QGIS and assigned a **Value Map** widget for the relevant fields.
 
-* **Value Relation**: Offers values from a related table in a combobox. You can
-  select layer, key column and value column. Several options are available to
-  change the standard behaviors: allow null value, order by value, allow
-  multiple selections and use of auto-completer. The forms will display either
+* **Value Relation**: Offers values from a related table in a combobox.
+  You can select layer, key column and value column.
+  You may also choose to order the list of displayed values
+  by the :guilabel:`Key` column (the default sort order), the :guilabel:`Value` column,
+  or a specific :guilabel:`Field` of the layer.
+  Enable the |checkbox| :guilabel:`Descending order` if you wish the values to be sorted in reverse order.
+
+  Several options are available to change the standard behavior:
+  allow NULL value, allow multiple selections and use of auto-completer. The forms will display either
   a drop-down list or a line edit field when completer checkbox is enabled.
 
   If a layer that is stored in PostgreSQL, GeoPackage or SpatiaLite is
