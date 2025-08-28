@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Tomas Straupis, 2025
 # Transifex Bot <>, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +34,30 @@ msgstr ""
 "Vertimas yra bendruomenės pastangos, prie kurių :ref:`jūs galite prisijungti"
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
+
+#: ../../docs/server_manual/services/wmts.rst:2
+msgid "Web Map Tile Service (WMTS)"
+msgstr "Žiniatinklio žemėlapio kaladėlių paslauga (WMTS)"
+
+#: ../../docs/server_manual/services/wmts.rst:4
+msgid ""
+"The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP "
+"interface to request tiled map images generated from a QGIS project. A "
+"typical WMTS request defined the QGIS project to use, some WMS parameters "
+"like layers to render, as well as tile parameters."
+msgstr ""
+"QGIS Serverio palaikomas **1.0.0** WMTS standartas teikia HTTP sąsają "
+"prašyti kaladėlėmis padalinto žemėlapio piešinio iš QGIS projekto. Tipinė "
+"QGIS projekte apibrėžta WMTS užklausa, keli WMS parametrai, tokie kaip "
+"braižomi sluoksniai bei kaladėlių parametrai."
+
+#: ../../docs/server_manual/services/wmts.rst:9
+msgid "Specifications document of the service:"
+msgstr "Paslaugos specifikacijos dokumentas:"
+
+#: ../../docs/server_manual/services/wmts.rst:11
+msgid "`WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_"
+msgstr "`WMTS 1.0.0 <https://portal.ogc.org/files/?artifact_id=35326>`_"
 
 #: ../../docs/server_manual/services/wmts.rst:13
 msgid "Standard requests provided by QGIS Server:"
@@ -60,6 +84,10 @@ msgid ":ref:`GetTile <wmts_gettile>`"
 msgstr ":ref:`GetTile <wmts_gettile>`"
 
 #: ../../docs/server_manual/services/wmts.rst:1
+msgid "Returns a tile"
+msgstr "Grąžina kaladėlę"
+
+#: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`"
 msgstr ":ref:`GetFeatureInfo <wmts_getfeatureinfo>`"
 
@@ -70,6 +98,14 @@ msgstr "Grąžina duomenis (geometriją ir reikšmes) pikselio vietai"
 #: ../../docs/server_manual/services/wmts.rst:27
 msgid "GetCapabilities"
 msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wmts.rst:29
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMTS 1.0.0 specifications:"
+msgstr ""
+"Standartiniai **GetCapabilities** užklausos parametrai pagal OGC WMTS 1.0.0 "
+"specifikaciją:"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid "Parameter"
@@ -88,6 +124,10 @@ msgid "Yes"
 msgstr "Taip"
 
 #: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the service (**WMTS**)"
+msgstr "Paslaugos pavadinimas (**WMTS**)"
+
+#: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`REQUEST <services_basics_request>`"
 msgstr ":ref:`REQUEST <services_basics_request>`"
 
@@ -95,41 +135,104 @@ msgstr ":ref:`REQUEST <services_basics_request>`"
 msgid "Name of the request (**GetCapabilities**)"
 msgstr "Užklausos pavadinimas (**GetCapabilities**)"
 
+#: ../../docs/server_manual/services/wmts.rst:40
+#: ../../docs/server_manual/services/wmts.rst:83
+#: ../../docs/server_manual/services/wmts.rst:186
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr ""
+"Be standartinių, QGIS Serveris palaiko ir šiuos papildomus parametrus:"
+
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`MAP <services_basics_map>`"
 msgstr ":ref:`MAP <services_basics_map>`"
 
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "QGIS project file"
+msgstr "QGIS projekto failas"
+
+#: ../../docs/server_manual/services/wmts.rst:51
+#: ../../docs/server_manual/services/wmts.rst:94
+#: ../../docs/server_manual/services/wmts.rst:197
+msgid "URL example:"
+msgstr "URL pavyzdys:"
+
 #: ../../docs/server_manual/services/wmts.rst:64
 msgid "GetTile"
 msgstr "GetTile"
+
+#: ../../docs/server_manual/services/wmts.rst:66
+msgid ""
+"Standard parameters for the **GetTile** request according to the OGC WMTS "
+"1.0.0 specifications:"
+msgstr ""
+"Standartiniai **GetTile** užklausos parametrai pagal OGC WMTS 1.0.0 "
+"specifikaciją:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the request (**GetTile**)"
+msgstr "Užklausos pavadinimas (**GetTile**)"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`LAYER <wms_layers>`"
 msgstr ":ref:`LAYER <wms_layers>`"
 
 #: ../../docs/server_manual/services/wmts.rst:1
+msgid "Layer identifier"
+msgstr "Sluoksnio identifikatorius"
+
+#: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`FORMAT <wmts_gettile_format>`"
 msgstr ":ref:`FORMAT <wmts_gettile_format>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Output format of the tile"
+msgstr "Kaladėlės išvesties formatas"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`"
 msgstr ":ref:`TILEMATRIXSET <wmts_gettile_tilematrixset>`"
 
 #: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the pyramid"
+msgstr "Piramidės pavadinimas"
+
+#: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`"
 msgstr ":ref:`TILEMATRIX <wmts_gettile_tilematrix>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Meshing"
+msgstr "Tinklelis"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`TILEROW <wmts_gettile_tilerow>`"
 msgstr ":ref:`TILEROW <wmts_gettile_tilerow>`"
 
 #: ../../docs/server_manual/services/wmts.rst:1
+msgid "Row coordinate in the mesh"
+msgstr "Eilutės koordinatė tinklelyje"
+
+#: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`TILECOL <wmts_gettile_tilecol>`"
 msgstr ":ref:`TILECOL <wmts_gettile_tilecol>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Column coordinate in the mesh"
+msgstr "Stulpelio koordinatė tinklelyje"
 
 #: ../../docs/server_manual/services/wmts.rst:112
 msgid "FORMAT"
 msgstr "FORMAT"
+
+#: ../../docs/server_manual/services/wmts.rst:114
+msgid ""
+"This parameter may be used to specify the format of tile image. Available "
+"values are:"
+msgstr ""
+"Šį parametrą galima naudoti, norint nustatyti kaladėlės paveikslo formatą. "
+"Galimos reikšmės yra:"
 
 #: ../../docs/server_manual/services/wmts.rst:117
 msgid "``jpg``"
@@ -147,41 +250,110 @@ msgstr "``image/jpeg``"
 msgid "``image/png``"
 msgstr "``image/png``"
 
+#: ../../docs/server_manual/services/wmts.rst:122
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then the "
+"default format PNG is used instead."
+msgstr ""
+"Jei ``FORMAT`` parametras ne toks, kaip šios reikšmės, tada naudojamas "
+"numatytasis PNG formatas."
+
 #: ../../docs/server_manual/services/wmts.rst:129
 msgid "TILEMATRIXSET"
 msgstr "TILEMATRIXSET"
+
+#: ../../docs/server_manual/services/wmts.rst:131
+msgid ""
+"This parameter defines the CRS to use when computing the underlying pyramid."
+" Format: ``EPSG:XXXX``."
+msgstr ""
+"Šis parametras apibrėžia CRS, kurį reikia naudoti piramidžių skaičiavimui. "
+"Formatas: ``EPSG:XXXX``."
 
 #: ../../docs/server_manual/services/wmts.rst:138
 msgid "TILEMATRIX"
 msgstr "TILEMATRIX"
 
+#: ../../docs/server_manual/services/wmts.rst:140
+msgid "This parameter allows to define the matrix to use for the output tile."
+msgstr ""
+"Šis parametras leidžia nurodyti išvesties kaladėlei naudojamą matricą."
+
 #: ../../docs/server_manual/services/wmts.rst:146
 msgid "TILEROW"
 msgstr "TILEROW"
+
+#: ../../docs/server_manual/services/wmts.rst:148
+msgid ""
+"This parameter allows to select the row of the tile to get within the "
+"matrix."
+msgstr "Šis parametras leidžia parinkti kaladėlės eilutę matricoje."
 
 #: ../../docs/server_manual/services/wmts.rst:155
 msgid "TILECOL"
 msgstr "TILECOL"
 
+#: ../../docs/server_manual/services/wmts.rst:157
+msgid ""
+"This parameter allows to select the column of the tile to get within the "
+"matrix."
+msgstr "Šis parametras leidžia parinkti kaladėlės stulpelį matricoje."
+
 #: ../../docs/server_manual/services/wmts.rst:165
 msgid "GetFeatureInfo"
 msgstr "GetFeatureInfo"
+
+#: ../../docs/server_manual/services/wmts.rst:167
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMTS 1.0.0 specification:"
+msgstr ""
+"Standartiniai **GetFeatureInfo** užklausos parametrai pagal OGC WMTS 1.0.0 "
+"specifikaciją:"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Name of the request (**GetFeatureInfo**)"
+msgstr "Užklausos pavadinimas (**GetFeatureInfo**)"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`INFOFORMAT <wmts_getfeatureinfo_infoformat>`"
 msgstr ":ref:`INFOFORMAT <wmts_getfeatureinfo_infoformat>`"
 
 #: ../../docs/server_manual/services/wmts.rst:1
+msgid "No"
+msgstr "Ne"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Output format"
+msgstr "Išvesties formatas"
+
+#: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`I <wmts_getfeatureinfo_i>`"
 msgstr ":ref:`I <wmts_getfeatureinfo_i>`"
+
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "X coordinate of a pixel"
+msgstr "Pikselio X koordinatė"
 
 #: ../../docs/server_manual/services/wmts.rst:1
 msgid ":ref:`J <wmts_getfeatureinfo_j>`"
 msgstr ":ref:`J <wmts_getfeatureinfo_j>`"
 
+#: ../../docs/server_manual/services/wmts.rst:1
+msgid "Y coordinate of a pixel"
+msgstr "Pikselio Y koordinatė"
+
 #: ../../docs/server_manual/services/wmts.rst:214
 msgid "INFOFORMAT"
 msgstr "INFOFORMAT"
+
+#: ../../docs/server_manual/services/wmts.rst:216
+msgid ""
+"This parameter allows to define the output format of the result. Available "
+"values are:"
+msgstr ""
+"Šis parametras leidžia nurodyti rezultato išvesties formatą. Galimos "
+"reikšmės yra:"
 
 #: ../../docs/server_manual/services/wmts.rst:219
 msgid "``text/xml``"
@@ -199,10 +371,30 @@ msgstr "``text/plain``"
 msgid "``application/vnd.ogc.gml``"
 msgstr "``application/vnd.ogc.gml``"
 
+#: ../../docs/server_manual/services/wmts.rst:224
+msgid "The default value is ``text/plain``."
+msgstr "Numatytoji reikšmė yra ``text/plain``."
+
 #: ../../docs/server_manual/services/wmts.rst:230
 msgid "I"
 msgstr "I"
 
+#: ../../docs/server_manual/services/wmts.rst:232
+msgid ""
+"This parameter allows to define the X coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr ""
+"Šis parametras leidžia nurodyti X koordinatę pikselio, kurio informaciją "
+"norite ištraukti."
+
 #: ../../docs/server_manual/services/wmts.rst:239
 msgid "J"
 msgstr "J"
+
+#: ../../docs/server_manual/services/wmts.rst:241
+msgid ""
+"This parameter allows to define the Y coordinate of the pixel for which we "
+"want to retrieve underlying information."
+msgstr ""
+"Šis parametras leidžia nurodyti Y koordinatę pikselio, kurio informaciją "
+"norite ištraukti."
