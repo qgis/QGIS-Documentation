@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:45+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
@@ -343,12 +343,22 @@ msgstr "Opzionale"
 msgid "``INCREMENT``"
 msgstr "``INCREMENT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:58
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:185
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:472
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:666
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:782
+msgid "[numeric: double]"
+msgstr "[numeric: double]"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:52
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:60
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:69
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:77
 msgid "Default: Not set"
-msgstr "Valote predefinito: non impostato"
+msgstr "Valore predefinito: non impostato"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:53
 msgid "Interval between generated levels."
@@ -361,6 +371,14 @@ msgstr "**Curva di livello minima**"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:57
 msgid "``MINIMUM``"
 msgstr "``MINIMUM``"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:61
+msgid ""
+"Starting level values of contours. No generated levels will be lower than "
+"this value."
+msgstr ""
+"Valori del livello iniziale delle curve di livello. Nessun livello generato "
+"sarà inferiore a questo valore."
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:63
 msgid "**Maximum contour level**"
@@ -390,6 +408,14 @@ msgstr "``CONTOUR_LEVEL_LIST``"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:819
 msgid "[string]"
 msgstr "[string]"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:78
+msgid ""
+"List of desired levels of contours (separated by commas). If filled, the "
+"increment, minimum, and maximum fields will not be considered."
+msgstr ""
+"Elenco delle curve di livello desiderate (separate da virgole). Se "
+"compilato, l'incremento, minimo e massimo non verranno considerati."
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:80
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:276
@@ -461,10 +487,10 @@ msgstr "Predefinito: ``[Create temporary layer]``"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:91
 msgid ""
 "Specify the output line layer representing the contours of the mesh layer. "
-"One of:"
+":ref:`One of <output_parameter_widget>`:"
 msgstr ""
-"Specifica il vettore lineare in uscita che rappresenta le curve di livello "
-"del layer mesh. Uno di:"
+"Specifica il layer lineare in uscita che rappresenta le curve di livello "
+"della mesh. :ref:`One of <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -506,10 +532,10 @@ msgstr "[vector: polygon]"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:103
 msgid ""
 "Specify the output polygon layer representing the contours of the mesh "
-"layer. One of:"
+"layer. :ref:`One of <output_parameter_widget>`:"
 msgstr ""
-"Specifica il vettore poligonale risultato che rappresenta le curve di "
-"livello del layer mesh. Uno di:"
+"Specifica il layer poligonale in uscita che rappresenta le curve di livello "
+"della mesh. :ref:`One of <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:111
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:215
@@ -607,6 +633,14 @@ msgstr "``RESOLUTION``"
 msgid "Default: 10.0"
 msgstr "Predefinito: 10.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:188
+msgid ""
+"The distance between points on the lines where the data will be extracted "
+"from the dataset mesh. Units can be selected."
+msgstr ""
+"Distanza tra i punti sulle linee in cui i dati verranno estratti dalla mesh "
+"del set di dati. È possibile selezionare le unità."
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:191
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:676
 msgid "**Digits count for coordinates**"
@@ -617,12 +651,23 @@ msgstr "**Numero cifre per le coordinate**"
 msgid "``COORDINATES_DIGITS``"
 msgstr "``COORDINATES_DIGITS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:193
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:199
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:678
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:684
+msgid "[numeric: integer]"
+msgstr "[numeric: integer]"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:195
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:201
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:681
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:686
 msgid "Default: 2"
 msgstr "Predefinito: 2"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:196
+msgid "Number of digits for rounding the coordinate values"
+msgstr "Numero di cifre per arrotondare i valori delle coordinate"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:197
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:682
@@ -633,6 +678,10 @@ msgstr "**Numero di cifre per il valore l'insieme dei dati**"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:683
 msgid "``DATASET_DIGITS``"
 msgstr "``DATASET_DIGITS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:202
+msgid "Number of digits for rounding the dataset values"
+msgstr "Numero di cifre per arrotondare i valori nel dataset"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:203
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:225
@@ -680,8 +729,10 @@ msgstr "Predefinito: ``[Salva in file temporaneo]``"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:693
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:797
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:921
-msgid "Specification of the output file. One of:"
-msgstr "Specifica del file in uscita. Uno di:"
+msgid ""
+"Specification of the output file. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specifiche del file in uscita. :ref:`One of <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -1031,6 +1082,14 @@ msgstr ""
 "Layer vettoriale contenente i punti in cui verranno estratti i dati dal "
 "dataset mesh"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:679
+msgid "Number of digits for rounding coordinate values"
+msgstr "Numero di cifre per arrotondare i valori delle coordinate"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:687
+msgid "Number of digits for rounding dataset values"
+msgstr "Numero di cifre per arrotondare i valori nel dateset"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:713
 msgid ""
 ":file:`.CSV` file containing the mesh dataset time series values at the "
@@ -1084,6 +1143,10 @@ msgstr "[raster]"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:804
 msgid "Advanced parameters"
 msgstr "Parametri Avanzati"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:815
+msgid "**Creation options**"
+msgstr "**Opzioni di creazione**"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:818
 msgid "``CREATE_OPTIONS``"
@@ -1235,6 +1298,10 @@ msgstr "2 --- PLY"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:908
 msgid "3 --- Ugrid"
 msgstr "3 --- Ugrid"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:909
+msgid "4 --- Mike21"
+msgstr "4 --- Mike21"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:916
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:938
