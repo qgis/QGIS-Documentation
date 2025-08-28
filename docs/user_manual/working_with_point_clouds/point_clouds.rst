@@ -819,43 +819,73 @@ that also contains best practices and optional extensions (such as overviews).
 
 .. _`editing_point_cloud`:
 
-Editing Point Clouds layer
-==========================
+Editing point clouds layers
+===========================
 
-QGIS supports editing of point clouds layers by providing a set of tools
-inside the :ref:`3D map view <label_3dmapview>`. These tools allow interactive selection of points,
-filtering based on expressions, and modification of point attributes.
+QGIS supports editing of point cloud layers by providing a dedicated set of tools
+inside the :ref:`3D map view <label_3dmapview>`. These tools allow you to
+interactively select points, filter them based on expressions, and modify their attributes.
 
-.. note:: Requires special formats that support read/write operations (e.g., LAZ/COPC).
+.. note::
+   Only local COPC files are editable.  
+   Other formats (e.g. LAS/LAZ) are automatically indexed into COPCs when added to QGIS,
+   but only the resulting COPC file can be edited.
 
-.. _figure_point_cloud_editing:
+.. list-table:: Tools for point cloud digitizing
+   :header-rows: 1
 
-.. figure:: img/point_cloud_editing.png
-   :align: center
+   * - Label
+     - Purpose
+     - Location
+   * - |toggleEditing| :sup:`Toggle to Edit`
+     - Enable or disable edit mode
+     - :guilabel:`Editing Toolbar`
+   * - |undo| :sup:`Undo`
+     - Undo the last change(s) - :kbd:`Ctrl+Z`
+     - :guilabel:`Editing Toolbar`
+   * - |redo| :sup:`Redo`
+     - Redo the last undone action(s) - :kbd:`Ctrl+Shift+Z`
+     - :guilabel:`Editing Toolbar`
+   * - |selectPolygon| :sup:`Select by Polygon`
+     - Select points with a polygon
+     - :guilabel:`Select Editing Tool`
+   * - |rendering| :sup:`Select by Paintbrush`
+     - Select points with a brush
+     - :guilabel:`Select Editing Tool`
+   * - |selectAboveLine| :sup:`Select Above Line`
+     - Select points above a line
+     - :guilabel:`Select Editing Tool`
+   * - |selectBelowLine| :sup:`Select Below Line`
+     - Select points below a line
+     - :guilabel:`Select Editing Tool`
+   * - |expressionFilter| :sup:`Filter Points`
+     - Apply an expression filter
+     - :guilabel:`Editing Toolbar`
 
-   Editing toolbar available for point clouds in 3D map view
+Adding attribute values and filtering points
+--------------------------------------------
 
-By clicking the |toggleEditing| :guilabel:`Toggle Editing` button
-in the 3D map view toolbar you will be able to use the following tools:
+Before selecting points, choose the :guilabel:`Attribute` you want to modify and enter the :guilabel:`Value` to assign.  
+Optionally, define a |expressionFilter| :sup:`Filter Points` expression to restrict which points are affected by selections and edits.
+Clicking the filter opens the :ref:`Query Builder <vector_query_builder>`, where you can create or test the expression.  
+Only points matching the filter will be affected by the subsequent selection and edits. Clearing the filter applies edits to all points. 
 
-* :guilabel:`Select Editing Tool` where you can choose to:
-  
-  * |selectPolygon| :guilabel:`Select by Polygon`: select points by drawing a polygon around them
-  * |rendering| :guilabel:`Select by Paintburush`: allows you to drag to select points, change the brush size with the scroll wheel,
-    see highlighted selections, and view a loading cursor while editing
-  * |selectAboveLine| :guilabel:`Select Above Line`
-  * |selectBelowLine| :guilabel:`Select Below Line`
+Selecting points
+----------------
 
-* |expressionFilter| :guilabel:`Filter Points` allows you to set a filter expression to limit
-  which points are modified by the editing tools. 
-  Only points that match the expression will be affected, while others remain unchanged. 
-  Leaving the expression empty removes the filter and applies edits to all points.
+After setting the attribute, value, and optional filter, digitize a selection using one of the following methods:
 
-* You can use the :guilabel:`Attribute` and :guilabel:`Value` fields to update the chosen attribute of the selected points
-  to the specified value (e.g., reclassify points by setting their Classification attribute).
+* |selectPolygon| :sup:`Select by Polygon`: draw a 2D polygon around points to select them.  
+* |rendering| :sup:`Select by Paintbrush`: drag the mouse to paint over points.
+  The brush size can be adjusted with the mouse scroll wheel.  
+* |selectAboveLine| :sup:`Select Above Line`: digitize a line to define the base of a trapezoid; points above it are selected.  
+* |selectBelowLine| :sup:`Select Below Line`: similar to the above, but selects points below the line.   
 
-Beside those tools, you can also use the |undo| :guilabel:`Undo` to undo the last editing changes,
-and |redo| :guilabel:`Redo` to redo the last undone actions.
+.. note::
+   Selection polygons are digitized directly in the 3D view.  
+   Camera movement is blocked while digitizing.  
+   Only points in front of the camera’s near plane (i.e. currently rendered)
+   are considered; points behind the camera are ignored.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
