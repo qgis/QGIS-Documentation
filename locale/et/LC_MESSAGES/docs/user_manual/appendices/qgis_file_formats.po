@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Katre K, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Katre K, 2025\n"
 "Language-Team: Estonian (https://app.transifex.com/qgis/teams/6144/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,6 +33,173 @@ msgstr ""
 "Tõlge on kogukonna pingutus :ref:`saate liituda <translation_guidelines>`. "
 "Seda lehekülge tõlgitakse hetkel |translation progress|."
 
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:5
+msgid "Appendix C: QGIS File Formats"
+msgstr "Lisa C: QGIS failivormingud"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:14
+msgid "QGS/QGZ - The QGIS Project File Format"
+msgstr "QGS/QGZ - QGIS projekti failivorming"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:16
+msgid ""
+"The **QGS** format is an XML format for storing QGIS projects. The **QGZ** "
+"format is a compressed (zip) archive containing a QGS file and a QGD file. "
+"The **QGD** file is the associated sqlite database of the qgis project that "
+"contain auxiliary data for the project. If there are no auxiliary data, the "
+"QGD file will be empty."
+msgstr ""
+"**QGS** vorming on XML vorming QGIS-projektide salvestamiseks. **QGZ** "
+"vorming on tihendatud (zip) arhiiv, mis sisaldab QGS-faili ja QGD faili. "
+"**QGD** fail on QGIS projektiga seotud SQLite andmebaas, mis sisaldab "
+"projekti abiandmeid. Kui abiandmeid pole, on QGD fail tühi."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:23
+msgid ""
+"A QGIS file contains everything that is needed for storing a QGIS project, "
+"including:"
+msgstr ""
+"QGIS fail sisaldab kõike, mida on vaja QGIS projekti salvestamiseks, "
+"sealhulgas:"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:26
+msgid "project title"
+msgstr "projekti pealkiri"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:27
+msgid "project CRS"
+msgstr "projekti CRS"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:28
+msgid "the layer tree"
+msgstr "kihipuu"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:29
+msgid "snapping settings"
+msgstr "klõpsamise seaded"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:30
+msgid "relations"
+msgstr "sõltuvused"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:31
+msgid "the map canvas extent"
+msgstr "kaardi lõuendi ulatus"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:32
+msgid "project models"
+msgstr "projekti mudelid"
+
 #: ../../docs/user_manual/appendices/qgis_file_formats.rst:33
 msgid "legend"
 msgstr "legend"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:34
+msgid "mapview docks (2D and 3D)"
+msgstr "kaardivaate dokkimispunktid (2D ja 3D)"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:35
+msgid ""
+"the layers with links to the underlying datasets (data sources) and other "
+"layer properties including extent, SRS, joins, styles, renderer, blend mode,"
+" opacity and more."
+msgstr ""
+"kihid koos linkidega alusandmekogumitele (andmeallikatele) ja muude kihi "
+"omadustega, sh ulatus, SRS, ühendused, stiilid, renderdaja, segamisrežiim, "
+"läbipaistmatus ja palju muud."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:38
+msgid "project properties"
+msgstr "projekti omadused"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:40
+msgid ""
+"The figures below show the top level tags in a QGS file and the expanded "
+"``ProjectLayers`` tag."
+msgstr ""
+"Allolevad joonised näitavad QGS faili ülemise taseme silte ja laiendatud "
+"silti ``ProjectLayers``."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:48
+msgid "The top level tags in a QGS file"
+msgstr "Ülemise taseme sildid QGS failis "
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:55
+msgid "The expanded top level ProjectLayers tag of a QGS file"
+msgstr "QGS faili laiendatud ülemise taseme ProjectLayers silt"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:63
+msgid "QLR - The QGIS Layer Definition file"
+msgstr "QLR - QGIS-i kihi definitsioonifail"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:65
+msgid ""
+"A Layer Definition file (QLR) is an XML file that contains a pointer to the "
+"layer data source in addition to QGIS style information for the layer."
+msgstr ""
+"Kihi definitsioonifail (QLR) on XML-fail, mis sisaldab lisaks kihi QGIS "
+"stiiliteabele ka osutit kihi andmeallikale."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:69
+msgid ""
+"The use case for this file is simple: To have a single file for opening a "
+"data source and bringing in all the related style information. QLR files "
+"also allow you to mask the underlying datasource in an easy to open file."
+msgstr ""
+"Selle faili kasutusjuhtum on lihtne: üks fail andmeallika avamiseks ja kogu "
+"sellega seotud stiiliteabe sisestamiseks. QLR-failid võimaldavad teil ka "
+"aluseks olevat andmeallikat hõlpsasti avatavas failis maskeerida."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:75
+msgid ""
+"An example of QLR usage is for opening MS SQL layers. Rather than having to "
+"go to the MS SQL connection dialog, connect, select, load and finally style,"
+" you can simply add a .qlr file that points to the correct MS SQL layer with"
+" all the necessary style included."
+msgstr ""
+"Näide QLR-i kasutamisest on MS SQL-i kihtide avamine. Selle asemel, et minna"
+" MS SQL-i ühenduse dialoogi, luua ühendus, valida, laadida ja lõpuks stiili "
+"kasutada, saate lihtsalt lisada .qlr-faili, mis osutab õigele MS SQL-i "
+"kihile koos kõigi vajalike stiilidega."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:81
+msgid "In the future a .qlr file may hold a reference to more than one layer."
+msgstr "Tulevikus võib .qlr-fail sisaldada viidet mitmele kihile."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:88
+msgid "The top level tags of a QLR file"
+msgstr "QGS faili ülemise taseme sildid "
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:96
+msgid "QML - The QGIS Style File Format"
+msgstr "QML - QGIS-i stiili failivorming"
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:98
+msgid "QML is an XML format for storing layer styling."
+msgstr "QML on XML vorming kihtide stiilide salvestamiseks."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:100
+msgid ""
+"A QML file contains all the information QGIS can handle for the rendering of"
+" feature geometries including symbol definitions, sizes and rotations, "
+"labelling, opacity and blend mode and more."
+msgstr ""
+"QML fail sisaldab kogu teavet, mida QGIS suudab käsitleda objektide "
+"geomeetriate renderdamiseks, sealhulgas sümbolite definitsioonid, suurused "
+"ja pöörded, sildistamine, läbipaistmatus ja segamisrežiim jne."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:104
+msgid ""
+"The figure below shows the top level tags of a QML file (with only "
+"``renderer_v2`` and its ``symbol`` tag expanded)."
+msgstr ""
+"Allolev joonis näitab QML-faili kõrgeima taseme silte (ainult "
+"``renderer_v2`` ja selle laiendatud ``symbol`` sildiga)."
+
+#: ../../docs/user_manual/appendices/qgis_file_formats.rst:112
+msgid ""
+"The top level tags of a QML file (only the renderer_v2 tag with its symbol "
+"tag is expanded)"
+msgstr ""
+"QML faili ülemise taseme sildid (laiendatakse ainult renderer_v2 silti koos "
+"selle sümbolsildiga)"
