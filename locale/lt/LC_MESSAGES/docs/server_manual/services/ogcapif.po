@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Tomas Straupis, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,6 +39,110 @@ msgstr ""
 msgid "OGC API Features"
 msgstr "OGC API Features (Geoobjektai)"
 
+#: ../../docs/server_manual/services/ogcapif.rst:6
+msgid ""
+"OGC API Features (OAPIF) is the first implementation of the new generation "
+"of OGC protocols. It is described by the `OGC API - Features - Part 1: Core "
+"<https://docs.ogc.org/is/17-069r3/17-069r3.html>`_ document."
+msgstr ""
+"OGC API Features (OAPIF) yra pirmas naujos OGC protokolų kartos "
+"įgyvendinimas. Jį aprašo dokumentas `OGC API - Geoobjektai - 1 dalis: "
+"Pagrindas <https://docs.ogc.org/is/17-069r3/17-069r3.html>`_."
+
+#: ../../docs/server_manual/services/ogcapif.rst:11
+msgid ""
+"The API can be reached on typical installations via "
+"``http://localhost/qgisserver/wfs3``."
+msgstr ""
+"Tipiniuose diegimuose šį API galima pasiekti adresu "
+"``http://localhost/qgisserver/wfs3``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:13
+msgid ""
+"Here is a quick informal summary of the most important differences between "
+"the well known WFS protocol and OAPIF:"
+msgstr ""
+"Čia yra greitas neformalus svarbiausių skirtumų tarp gerai žinomo WFS "
+"protokolo ir OAPIF apibendrinimas:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:16
+msgid ""
+"OAPIF is based on a `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
+msgstr ""
+"OAPIF remiasi `REST "
+"<https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API"
+
+#: ../../docs/server_manual/services/ogcapif.rst:19
+msgid ""
+"OAPIF must follow the `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications"
+msgstr ""
+"OAPIF turi atitikti `OPENAPI "
+"<https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifikacijas"
+
+#: ../../docs/server_manual/services/ogcapif.rst:22
+msgid ""
+"OAPIF supports multiple output formats but it does not dictate any (only "
+"GeoJSON and HTML are currently available in QGIS OAPIF) and it uses `content"
+" negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to "
+"determine which format is to be served to the client"
+msgstr ""
+"OAPIF palaiko kelis išvesties formatus, bet nei vieno iš jų nediktuoja (QGIS"
+" OAPIF šiuo metu teikia tik GeoJSON ir HTML) ir naudoja `turinio derybas "
+"<https://en.wikipedia.org/wiki/Content_negotiation>`_, kad nustatytų, kurį "
+"formatą pateikti klientui"
+
+#: ../../docs/server_manual/services/ogcapif.rst:27
+msgid "JSON and HTML are first class citizens in OAPIF"
+msgstr "Pirmos klasės OAPIF piliečiai yra JSON ir HTML"
+
+#: ../../docs/server_manual/services/ogcapif.rst:28
+msgid "OAPIF is self-documenting (through the ``/api`` endpoint)"
+msgstr "OAPIF yra save-aprašantis (per prieigos tašką ``/api``)"
+
+#: ../../docs/server_manual/services/ogcapif.rst:29
+msgid "OAPIF is fully navigable (through links) and browsable"
+msgstr "OAPIF yra pilnai naviguojamas (per nuorodas) ir naršomas"
+
+#: ../../docs/server_manual/services/ogcapif.rst:33
+msgid ""
+"While the OGC API Features implementation in QGIS can make use of the "
+"``MAP`` parameter to specify the project file, no extra query parameters are"
+" allowed by the OPENAPI specification. For this reason it is strongly "
+"recommended that ``MAP`` is not exposed in the URL and the project file is "
+"specified in the environment by other means (i.e. setting "
+"``QGIS_PROJECT_FILE`` in the environment through a web server rewrite rule)."
+msgstr ""
+"Nors QGIS OGC API Geoobjektų įgyvendinimas leidžia naudoti ``MAP`` parametrą"
+" nurodant projekto failą, jokie papildomi parametrai neleidžiami pagal "
+"OPENAPI specifikaciją. Dėl šios priežasties stipriai rekomenduojama, kad "
+"``MAP`` nebūtų išleidžiamas į URL ir projekto failas nurodomas aplinkoje "
+"kitomis priemonėmis (pvz. nustatant aplinkoje ``QGIS_PROJECT_FILE`` "
+"žiniatinklio serverio perrašymo taisyklių pagalba)."
+
+#: ../../docs/server_manual/services/ogcapif.rst:44
+msgid ""
+"The **API** endpoint provides comprehensive documentation of all supported "
+"parameters and output formats of your service. The following paragraphs will"
+" only describe the most important ones."
+msgstr ""
+"**API** prieigos taškas teikia visų jūsų paslaugos palaikomų parametrų ir "
+"išvesties formatų pilną dokumentaciją. Žemiau pateikiamose pastraipose bus "
+"aprašome tik patys svarbiausi."
+
+#: ../../docs/server_manual/services/ogcapif.rst:50
+msgid "Resource representation"
+msgstr "Resursų reprezentacija"
+
+#: ../../docs/server_manual/services/ogcapif.rst:52
+msgid ""
+"The implementation of OGC API Features in QGIS Server currently supports the"
+" following resource representation (output) formats:"
+msgstr ""
+"QGIS Serverio OGC API Features įgyvendinimas šiuo metu palaiko šiuos resursų"
+" reprezentacijos (pateikties) formatus:"
+
 #: ../../docs/server_manual/services/ogcapif.rst:55
 msgid "HTML"
 msgstr "HTML"
@@ -46,6 +150,20 @@ msgstr "HTML"
 #: ../../docs/server_manual/services/ogcapif.rst:56
 msgid "JSON"
 msgstr "JSON"
+
+#: ../../docs/server_manual/services/ogcapif.rst:58
+msgid ""
+"The format that is actually served will depend on content negotiation, but a"
+" specific format can be explicitly requested by appending a format specifier"
+" to the endpoints."
+msgstr ""
+"Realiai pateikiamas formatas priklauso nuo turinio derybų, bet galima "
+"paprašyti konkretaus formato prieigos taškui perduodant formato "
+"specifikaciją."
+
+#: ../../docs/server_manual/services/ogcapif.rst:62
+msgid "Supported format specifier extensions are:"
+msgstr "Palaikomi formatų plėtiniai yra:"
 
 #: ../../docs/server_manual/services/ogcapif.rst:64
 msgid "``.json``"
@@ -55,33 +173,124 @@ msgstr "``.json``"
 msgid "``.html``"
 msgstr "``.html``"
 
+#: ../../docs/server_manual/services/ogcapif.rst:67
+msgid ""
+"Additional format specifier aliases may be defined by specific endpoints:"
+msgstr ""
+"Papildomi formatų specifikavimo pseudonimai gali būti apibrėžti konkretiems "
+"prieigos taškams:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:70
+msgid "``.openapi``: alias for ``.json`` supported by the **API** endpoint"
+msgstr "``.openapi``: ``.json`` pseudonimas palaikomas **API** prieigos taške"
+
+#: ../../docs/server_manual/services/ogcapif.rst:71
+msgid ""
+"``.geojson``: alias for ``.json`` supported by the **Features** and "
+"**Feature** endpoints"
+msgstr ""
+"``.geojson``: ``.json`` pseudonimas palaikomas **Features** ir **Feature** "
+"prieigos taškuose"
+
+#: ../../docs/server_manual/services/ogcapif.rst:77
+msgid "Endpoints"
+msgstr "Prieigos taškai"
+
+#: ../../docs/server_manual/services/ogcapif.rst:79
+msgid ""
+"The API provides a list of endpoints that the clients can retrieve. The "
+"system is designed in such a way that every response provides a set of links"
+" to navigate through all the provided resources."
+msgstr ""
+"API teikia sąrašą prieigos taškų, kuriuos klientai gali gauti. Sistema "
+"sukurta tokiu būdu, kad kiekvienas atsakas teikia aibę nuorodų, leidžiančių "
+"naviguoti per visus teikiamus resursus."
+
+#: ../../docs/server_manual/services/ogcapif.rst:83
+msgid "Endpoints points provided by the QGIS implementation are:"
+msgstr "QGIS įgyvendinimo teikiami prieigos taškai yra:"
+
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "Name"
 msgstr "Pavadinimas"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Path"
+msgstr "Kelias"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "Description"
 msgstr "Aprašymas"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
+#: ../../docs/server_manual/services/ogcapif.rst:107
+msgid "Landing Page"
+msgstr "Pradinis puslapis"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/``"
 msgstr "``/``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid ""
+"General information about the service and provides links to all available "
+"endpoints"
+msgstr ""
+"Bendra informacija apie paslaugą, kurioje teikiamos nuorodos į visus "
+"prieigos taškus"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Conformance"
+msgstr "Atitikimas"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/conformance``"
 msgstr "``/conformance``"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about the conformance of the service to the standards"
+msgstr "Informacija apie paslaugos atitikimas standartams"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "API"
+msgstr "API"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/api``"
 msgstr "``/api``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid ""
+"Full description of the endpoints provided by the service and the returned "
+"documents structure"
+msgstr ""
+"Pilnas paslaugos teikiamų prieigos taškų aprašymas ir grąžinamų duomenų "
+"struktūra"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Collections"
+msgstr "Rinkiniai"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/collections``"
 msgstr "``/collections``"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "List of all collections (i.e. 'vector layers') provided by the service"
+msgstr ""
+"Sąrašas visų paslaugos teikiamų rinkinių (pvz. „vektorinių sluoksnių“)"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Collection"
+msgstr "Rinkinys"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/collections/{collectionId}``"
 msgstr "``/collections/{collectionId}``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about a collection (name, metadata, extent etc.)"
+msgstr "Informacija apie rinkinį (pavadinimas, metaduomenys, apimtis ir pan.)"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "Features"
@@ -92,5 +301,193 @@ msgid "``/collections/{collectionId}/items``"
 msgstr "``/collections/{collectionId}/items``"
 
 #: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "List of the features provided by the collection"
+msgstr "Sąrašas rinkinio teikiamų geoobjektų"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Feature"
+msgstr "Geoobjektas"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
 msgid "``/collections/{collectionId}/items/{featureId}``"
 msgstr "``/collections/{collectionId}/items/{featureId}``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:1
+msgid "Information about a single feature"
+msgstr "Informacija apie vieną geoobjektą"
+
+#: ../../docs/server_manual/services/ogcapif.rst:104
+msgid ""
+"Similar to WFS-T (transactional Web Feature Service), it is possible to add,"
+" update and delete features (CRUD). The respective requests are described on"
+" \"``/api``\"."
+msgstr ""
+"Kaip ir WFS-T (transakcinio žiniatinklio geoobjektų paslaugos) atveju, "
+"galima pridėti, pakeisti ir trinti geoobjektus (CRUD). Atitinkamos užklausos"
+" aprašomos „``/api``“."
+
+#: ../../docs/server_manual/services/ogcapif.rst:109
+msgid ""
+"The main endpoint is the **Landing Page**. From that page it is possible to "
+"navigate to all the available service endpoints. The **Landing Page** must "
+"provide links to"
+msgstr ""
+"Pagrindinis prieigos taškas yra **Pradinis puslapis**. Iš šio puslapio "
+"galima patekti į visus prieinamus paslaugos prieigos taškus. **Pradinis "
+"puslapis** privalo teikti nuorodas į:"
+
+#: ../../docs/server_manual/services/ogcapif.rst:113
+msgid ""
+"the API definition (path ``/api`` link relations ``service-desc`` and "
+"``service-doc``),"
+msgstr ""
+"API apibrėžimą (kelias ``/api`` nuorodos ``service-desc`` ir ``service-"
+"doc``),"
+
+#: ../../docs/server_manual/services/ogcapif.rst:115
+msgid ""
+"the Conformance declaration (path ``/conformance``, link relation "
+"``conformance``), and"
+msgstr ""
+"atitikimo deklaracija (kelias ``/conformance``, nuoroda ``conformance``), ir"
+
+#: ../../docs/server_manual/services/ogcapif.rst:117
+msgid "the Collections (path ``/collections``, link relation ``data``)."
+msgstr "rinkiniai (kelias ``/collections``, nuoroda ``data``)."
+
+#: ../../docs/server_manual/services/ogcapif.rst:124
+msgid "Server OAPIF landing page"
+msgstr "Serverio OAPIF pradinis puslapis"
+
+#: ../../docs/server_manual/services/ogcapif.rst:129
+msgid "API Definition"
+msgstr "API apibrėžimas"
+
+#: ../../docs/server_manual/services/ogcapif.rst:131
+msgid ""
+"The **API Definition** is an OPENAPI-compliant description of the API "
+"provided by the service. In its HTML representation it is a browsable page "
+"where all the endpoints and their response formats are accurately listed and"
+" documented. The path of this endpoint is ``/api``."
+msgstr ""
+"**API apibrėžimas** yra su OPENAPI suderinamas API apibrėžimas, kurį teikia "
+"paslauga. Jo HTML reprezentacijoje tai naršomas puslapis, kuriame yra visi "
+"prieigos taškai, kur jų atsakymų formatai aiškiai išvardinti ir "
+"dokumentuoti. Šio prieigos taško kelias yra ``/api``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:138
+msgid ""
+"The API definition provides a comprehensive and authoritative documentation "
+"of the service, including all supported parameters and returned formats."
+msgstr ""
+"API apibrėžimas teikia išsamią ir autoritetingą paslaugos dokumentaciją, "
+"įskaitant visus palaikomus parametrus ir grąžinamus formatus."
+
+#: ../../docs/server_manual/services/ogcapif.rst:144
+msgid "This endpoint is analogue to WFS's ``GetCapabilities``"
+msgstr "Šis prieigos taškas yra analogiškas WFS ``GetCapabilities``"
+
+#: ../../docs/server_manual/services/ogcapif.rst:147
+msgid "Collections list"
+msgstr "Rinkinių sąrašas"
+
+#: ../../docs/server_manual/services/ogcapif.rst:149
+msgid ""
+"The collections endpoint provides a list of all the collections available in"
+" the service. Since the service \"serves\" a single QGIS project the "
+"collections are the vector layers from the current project (if they were "
+"published as WFS in the project properties). The path of this endpoint is "
+"``/collections/``."
+msgstr ""
+"Rinkinių prieigos taškai teikia sąrašą visų paslaugoje prieinamų rinkinių. "
+"Kadangi paslauga „teikia“ vieną QGIS projektą, rinkiniai yra dabartinio "
+"projekto vektoriniai sluoksniai (jei jie publikuojami kaip WFS projekto "
+"savybėse). Šio prieigos taško kelias yra ``/collections/``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:161
+msgid "Server OAPIF collections list page"
+msgstr "Serverio OAPIF rinkinių sąrašo puslapis"
+
+#: ../../docs/server_manual/services/ogcapif.rst:165
+msgid "Collection detail"
+msgstr "Rinkinio detalės"
+
+#: ../../docs/server_manual/services/ogcapif.rst:167
+msgid ""
+"While the collections endpoint does not provide detailed information about "
+"each available collection, that information is available in the "
+"``/collections/{collectionId}`` endpoints. Typical information includes the "
+"extent, a description, CRSs and other metadata."
+msgstr ""
+"Nors rinkinių prieigos taškas ir neteikia detalios informacijos apie "
+"kiekvieną rinkinį, tokią informaciją galite rasti prieigos taškuose "
+"``/collections/{rinkinioId}``. Tipinėje informacijoje bus apimtis, "
+"aprašymas, CRS ir kiti metaduomenys."
+
+#: ../../docs/server_manual/services/ogcapif.rst:173
+#: ../../docs/server_manual/services/ogcapif.rst:194
+msgid ""
+"The HTML representation also provides a browsable map with the available "
+"features."
+msgstr ""
+"HTML pateiktyje taipogi yra naršomas žemėlapis su galimais geoobjektais."
+
+#: ../../docs/server_manual/services/ogcapif.rst:182
+msgid "Server OAPIF collection detail page"
+msgstr "Serverio OAPIF rinkinio detalių puslapis"
+
+#: ../../docs/server_manual/services/ogcapif.rst:188
+msgid "Features list"
+msgstr "Geoobjektų sąrašas"
+
+#: ../../docs/server_manual/services/ogcapif.rst:190
+msgid ""
+"This endpoint provides a list of all features in a collection knowing the "
+"collection ID. The path of this endpoint is "
+"``/collections/{collectionId}/items``."
+msgstr ""
+"Šis prieigos taškas pagal rinkinio ID teikia visų rinkinio geoobjektų "
+"sąrašą. Šio prieigos taško kelias yra ``/collections/{rinkinioId}/items``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:200
+msgid "This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2."
+msgstr ""
+"Šis prieigos taškas yra analogiškas WFS 1 ir WFS 2 metodui ``GetFeature``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:208
+msgid "Server OAPIF features list page"
+msgstr "Serverio OAPIF geoobjektų sąrašo puslapis"
+
+#: ../../docs/server_manual/services/ogcapif.rst:212
+msgid "Feature detail"
+msgstr "Geoobjekto detalės"
+
+#: ../../docs/server_manual/services/ogcapif.rst:214
+msgid ""
+"This endpoint provides all the available information about a single feature,"
+" including the feature attributes and its geometry. The path of this "
+"endpoint is ``/collections/{collectionId}/items/{itemId}``."
+msgstr ""
+"Šis prieigos taškas teikia visą turimą informaciją apie vieną geoobjektą, "
+"įskaitant geoobjekto atributus ir jo geometriją. Šios prieigos taško adresas"
+" yra ``/collections/{rinkinioId}/items/{elementoId}``."
+
+#: ../../docs/server_manual/services/ogcapif.rst:219
+msgid ""
+"The HTML representation also provides a browsable map with the feature "
+"geometry."
+msgstr ""
+"HTML pateiktyje taipogi yra naršomas žemėlapis su geoobjekto geometrija."
+
+#: ../../docs/server_manual/services/ogcapif.rst:228
+msgid "Server OAPIF feature detail page"
+msgstr "Serverio OAPIF geoobjekto detalių puslapis"
+
+#: ../../docs/server_manual/services/ogcapif.rst:240
+#: ../../docs/server_manual/services/ogcapif.rst:315
+#: ../../docs/server_manual/services/ogcapif.rst:327
+#: ../../docs/server_manual/services/ogcapif.rst:341
+#: ../../docs/server_manual/services/ogcapif.rst:352
+#: ../../docs/server_manual/services/ogcapif.rst:381
+msgid "URL example:"
+msgstr "URL pavyzdys:"
