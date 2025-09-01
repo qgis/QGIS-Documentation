@@ -2775,7 +2775,7 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
 roundness
 .........
 
-Calculates how close a polygon shape is to a circle. The function Returns TRUE when the polygon shape is a perfect circle and 0 when it is completely flat.
+Calculates how close a polygon shape is to a circle. The function returns 1 when the polygon shape is a perfect circle and 0 when it is completely flat.
 
 .. list-table::
    :widths: 15 85
