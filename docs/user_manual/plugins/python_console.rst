@@ -161,7 +161,9 @@ share the code via GitHub and much more). Main features are:
     (:kbd:`Ctrl+G` and :kbd:`Shift+Ctrl+G`);
   * Automatically find first match when typing in find box;
   * Set initial find string to selection when opening find;
-  * Pressing :kbd:`Esc` closes the find bar.
+  * Pressing :kbd:`Esc` closes the find bar;
+  * Enable the |searchRegex| :guilabel:`Use Regular Expressions` option in the search bar to use regular expressions
+    instead of plain text matching.
 
 * Object inspector: a class and function browser;
 * Go to an object definition with a mouse click (from Object inspector);
@@ -207,6 +209,8 @@ share the code via GitHub and much more). Main features are:
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
 .. |runConsole| image:: /static/common/iconRunConsole.png
+   :width: 1.5em
+.. |searchRegex| image:: /static/common/mIconSearchRegex.png
    :width: 1.5em
 .. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
