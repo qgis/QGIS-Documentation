@@ -222,10 +222,17 @@ Outputs
    * - **Duplicate geometries errors**
      - ``ERRORS``
      - [vector: point]
-     - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the geometry part,
-       ring and vertex index of the erroneous feature,
-       x and y coordinates of the error and affected feature IDs).
+     - Output point layer representing the error locations and information.
+       Other than the input attributes, the output layer also contains the following fields:
+       
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the centroid of the duplicate geometry.
+       - ``gc_errory``: the y coordinate of the centroid of the duplicate geometry.
+       - ``gc_error``: the indices of the duplicate geometry (all except the highest index).
    * - **Duplicate geometries**
      - ``OUTPUT``
      - [vector: same as input]
