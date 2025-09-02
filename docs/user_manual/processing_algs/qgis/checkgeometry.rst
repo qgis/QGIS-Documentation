@@ -345,8 +345,8 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the input attributes, the output layer also contains the following fields:
-       
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the duplicate vertex.
