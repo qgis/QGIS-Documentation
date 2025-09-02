@@ -696,10 +696,19 @@ Outputs
    * - **Self-intersecting errors**
      - ``ERRORS``
      - [vector: point]
-     - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the ID, geometry part,
-       ring and vertex index of the erroneous feature,
-       x and y coordinates of the error, the index of the intersecting segments).
+     - Output point layer representing the error locations and information.
+       Other than the input attributes, the output layer also contains the following fields:
+       
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the index of the feature's geometry part where the self-intersection occurs.
+       - ``gc_ringidx``: the index of the feature's geometry ring where the self-intersection occurs.
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the self-intersection.
+       - ``gc_errory``: the y coordinate of the self-intersection.
+       - ``gc_error``
+       - ``gc_segment_1``: the index of the first segment involved in the intersection.
+       - ``gc_segment_2``: the index of the second segment involved in the intersection.
    * - **Self-intersecting features**
      - ``OUTPUT``
      - [vector: line, polygon]
