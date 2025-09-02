@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,10 +39,170 @@ msgstr ""
 msgid "Plugins"
 msgstr "Priedai"
 
+#: ../../docs/server_manual/plugins.rst:11
+msgid "List of plugins"
+msgstr "Priedų sąrašas"
+
+#: ../../docs/server_manual/plugins.rst:13
+msgid "Plugins can also be installed on QGIS Server."
+msgstr "Priedus galima įdiegti ir į QGIS Serverį."
+
+#: ../../docs/server_manual/plugins.rst:15
+msgid ""
+"Some plugins designed for server can be found on the official `QGIS "
+"repository <https://plugins.qgis.org/plugins/server/>`_."
+msgstr ""
+"Kelis priedus, kurie sukurti serveriui, galima rasti oficialioje `QGIS "
+"repozitorijoje <https://plugins.qgis.org/plugins/server/>`_."
+
+#: ../../docs/server_manual/plugins.rst:18
+msgid ""
+"Install only plugins you need for your own purpose. On QGIS server, plugins "
+"are like hooks into QGIS server, they can alter inputs or outputs of QGIS "
+"server. They can produce unexpected result if you don't know how the plugin "
+"works. Please refer to their respective documentation or the application "
+"that needs QGIS server plugins to know which plugin can be useful for you."
+msgstr ""
+"Įdiekite tik tuos priedus, kurių jums reikia jūsų tikslams. QGIS serveryje, "
+"priedai yra tarsi QGIS serverio intarpai, jie gali keisti QGIS serverio "
+"įvestis ar išvestis. Jie gali reikšti netikėtus rezultatus, jei jūs "
+"nežinote, kaip priedai veikia. Prašome peržvelgti atitinkamą dokumentaciją "
+"ar aplikaciją, kuriai reikia QGIS serverio priedų, kad geriau suprastumėte, "
+"kurie priedai jums gali būti naudingi."
+
+#: ../../docs/server_manual/plugins.rst:24
+msgid "Location of plugins"
+msgstr "Priedų vieta"
+
+#: ../../docs/server_manual/plugins.rst:26
+msgid ""
+"By default, on Debian based systems, QGIS Server will look for plugins "
+"located in :file:`/usr/lib/qgis/plugins`. The default value is displayed "
+"when QGIS Server is starting, in the logs. It's possible to set a custom "
+"path by defining the environment variable ``QGIS_PLUGINPATH`` in the web "
+"server configuration."
+msgstr ""
+"Pagal nutylėjimą, Debian sistemose, QGIS serveris ieškos priedų, esančių "
+":file:`/usr/lib/qgis/plugins`. Numatytoji reikšmė rodoma žurnale, kai "
+"paleidžiamas QGIS Serveris. Galima nurodyti savo kelią apibrėžiant aplinkos "
+"kintamąjį ``QGIS_PLUGINPATH`` žiniatinklio serverio konfigūracijoje."
+
 #: ../../docs/server_manual/plugins.rst:32
 msgid "Installation"
 msgstr "Įdiegimas"
 
+#: ../../docs/server_manual/plugins.rst:35
+msgid "Manually with a ZIP"
+msgstr "Rankiniu būdu su ZIP"
+
+#: ../../docs/server_manual/plugins.rst:37
+msgid ""
+"As an example, to install the **HelloWorld** plugin for testing the server, "
+"using a specific folder, you first have to create a directory to hold server"
+" plugins. This will be specified in the virtual host configuration and "
+"passed on to the server through an environment variable:"
+msgstr ""
+"Kaip pavyzdį, kad įdiegtumėte priedą **HelloWorld** serverio testavimui, "
+"naudojant savo aplanką, jūs visų pirma turite sukurti aplanką, kuriame bus "
+"serverio priedai. Tai bus nurodyta virtualaus serverio konfigūracijoje ir "
+"perduoda serveriui per aplinkos kintamąjį:"
+
+#: ../../docs/server_manual/plugins.rst:52
+msgid ""
+"According to its `description "
+"<https://plugins.qgis.org/plugins/HelloServer/>`_, HelloServer plugin is "
+"designed for development and demonstration purposes. Do not keep this plugin"
+" for production if you don't need it."
+msgstr ""
+"Pagal jo `aprašą <https://plugins.qgis.org/plugins/HelloServer/>`_, "
+"HelloServer priedas sukurtas vystymo ir demonstracijos tikslams. Nelaikykite"
+" šio priedo gamyboje, jei jums jo nereikia."
+
+#: ../../docs/server_manual/plugins.rst:56
+msgid "With a command line tool"
+msgstr "Naudojant komandinės eilutės įrankį"
+
+#: ../../docs/server_manual/plugins.rst:58
+msgid ""
+"If you need to install and regularly upgrade plugins which are stored in the"
+" QGIS plugin repository, you may use the `QGIS-Plugin-Manager "
+"<https://github.com/3liz/qgis-plugin-manager>`_. It's a tool to help you "
+"manage plugins from the command line."
+msgstr ""
+"Jei jums reikia įdiegti ir periodiškai atnaujinti priedus, kurie laikomo "
+"QGIS priedų repozitorijoje, jūs galite naudoti `QGIS-Priedų-Tvarkyklę "
+"<https://github.com/3liz/qgis-plugin-manager>`_. Tai įrankis, kuris padeda "
+"jums tvarkyti priedus naudojant komandinę eilutę."
+
+#: ../../docs/server_manual/plugins.rst:62
+msgid ""
+"The installation is using pip. Installing in a virtual environment is a good"
+" practice but not required:"
+msgstr ""
+"Diegimas naudoja pip. Diegimas į virtualią aplinką yra gera praktika, bet "
+"nėra privalomas:"
+
+#: ../../docs/server_manual/plugins.rst:68
+msgid "To upgrade the tool:"
+msgstr "Norėdami atnaujinti įrankį:"
+
+#: ../../docs/server_manual/plugins.rst:74
+msgid ""
+"Then, you can use the ``qgis-plugin-manager`` executable from the command "
+"line:"
+msgstr "Tada galite komandinėje eilutėje naudoti ``qgis-plugin-manager``:"
+
+#: ../../docs/server_manual/plugins.rst:92
+msgid ""
+"We suggest you to read the full documentation in the `readme file "
+"<https://github.com/3liz/qgis-plugin-manager/blob/master/README.md>`_ to "
+"know how to install or upgrade plugins with this tool."
+msgstr ""
+"Mes siūlome jums perskaityti pilną dokumentaciją `readme faile "
+"<https://github.com/3liz/qgis-plugin-manager/blob/master/README.md>`_, kad "
+"žinotumėte, kaip diegti ar atnaujinti priedus naudojant šį įrankį."
+
+#: ../../docs/server_manual/plugins.rst:97
+msgid "HTTP Server configuration"
+msgstr "HTTP Serverio konfigūracija"
+
 #: ../../docs/server_manual/plugins.rst:100
 msgid "Apache"
 msgstr "Apache"
+
+#: ../../docs/server_manual/plugins.rst:102
+msgid ""
+"To be able to use server plugins, FastCGI needs to know where to look. So, "
+"we have to modify the Apache configuration file to indicate the "
+"``QGIS_PLUGINPATH`` environment variable to FastCGI:"
+msgstr ""
+"Kad galėtumėte naudoti serverio priedus, FastCGI turi žinoti, kur ieškoti. "
+"Taigi mes turime pakeisti Apache konfigūracijos failą, kad nurodytumėme "
+"FastCGI aplinkos kintamąjį ``QGIS_PLUGINPATH``:"
+
+#: ../../docs/server_manual/plugins.rst:110
+msgid ""
+"Moreover, a basic HTTP authorization is necessary to play with the "
+"HelloWorld plugin previously introduced. So we have to update the Apache "
+"configuration file a last time:"
+msgstr ""
+"Taipogi reikia bazinės HTTP autorizacijos, kad būtų galima žaisti su "
+"anksčiau pristatytu priedu HelloWorld. Taigi mes turime atnaujinti Apache "
+"konfigūracijos failą dar kartą:"
+
+#: ../../docs/server_manual/plugins.rst:123
+msgid "Then, restart Apache:"
+msgstr "Tada, iš naujo paleisti Apache:"
+
+#: ../../docs/server_manual/plugins.rst:130
+msgid "How to use a plugin"
+msgstr "Kaip naudoti priedą"
+
+#: ../../docs/server_manual/plugins.rst:132
+msgid "Test the server with the HelloWorld plugin:"
+msgstr "Patikrinkite serverį su HelloWorld priedu:"
+
+#: ../../docs/server_manual/plugins.rst:139
+msgid ""
+"You can have a look at the default GetCapabilities of the QGIS server at:"
+msgstr "Numatytas QGIS serverio GetCapabilities galite rasti čia:"
