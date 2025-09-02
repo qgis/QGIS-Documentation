@@ -237,7 +237,7 @@ Outputs
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer containing the geometries that were found to be duplicated.
-       Additional fields are added (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -357,9 +357,9 @@ Outputs
        - ``gc_error``
    * - **Duplicated vertices features**
      - ``OUTPUT``
-     - [vector: line, polygon]
+     - [vector: same as input]
      - Output layer containing the features with duplicated vertices.
-       Additional fields are added (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -483,6 +483,7 @@ Outputs
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer containing features within the checked polygons.
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -608,7 +609,7 @@ Outputs
      - [vector: polygon]
      - Output polygon layer with features containing holes.
        If no holes are found, the output layer will be empty.
-       Additional fields are added (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -736,7 +737,7 @@ Outputs
      - [vector: line, polygon]
      - Output polygon or line layer with features containing the self-intersecting features.
        If no self-intersecting features are found, the output layer will be empty.
-       Additional fields are added (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
