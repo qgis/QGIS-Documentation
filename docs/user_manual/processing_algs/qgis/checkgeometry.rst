@@ -342,12 +342,12 @@ Outputs
        
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
-       - ``gc_partidx``: the geometry part index of the erroneous feature.
-       - ``gc_ringidx``: the ring index of the erroneous feature.
-       - ``gc_vertidx``: the vertex index of the erroneous feature.
-       - ``gc_errorx``: the x coordinate of the error.
-       - ``gc_errory``: the y coordinate of the error.
-       - ``gc_error``: a description of the error.
+       - ``gc_partidx``: the index of the feature's geometry part containing the duplicate vertex.
+       - ``gc_ringidx``: the index of the feature's geometry ring containing the duplicate vertex.
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the duplicate vertex.
+       - ``gc_errory``: the y coordinate of the duplicate vertex.
+       - ``gc_error``
    * - **Duplicated vertices features**
      - ``OUTPUT``
      - [vector: line, polygon]
