@@ -37,14 +37,11 @@ or
   :guilabel:`Prompt to save project and data source changes when required`
   setting under :menuselection:`Settings --> Options --> General`.
 
-You can load existing projects through :menuselection:`Project -->` |fileOpen| :menuselection:`Open...`,
-:menuselection:`Project --> New from template` or :menuselection:`Project --> Open Recent -->`.
-
-From the :guilabel:`Browser panel` you can :guilabel:`Open Project`, :guilabel:`Extract Symbols...`
-– opens the style manager to export symbols to XML,
-add them to the default style, or export as PNG/SVG.
-You can also access the :guilabel:`File Properties...` dialog.
-The project file can be expanded to see its layers. The context menu of a layer offers the same actions as elsewhere in the browser.
+You can load existing projects into QGIS from the Browser panel or
+by through
+:menuselection:`Project -->` |fileOpen| :menuselection:`Open...`,
+:menuselection:`Project --> New from template` or
+:menuselection:`Project --> Open Recent -->`.
 
 At startup, a list of :guilabel:`Project Templates` and
 :guilabel:`Recent Projects` are displayed, including screenshots,
