@@ -27,17 +27,33 @@ for visualising complex geographical data.
 
    Example of 3D tiles
 
+See :ref:`3d_tiles` for instructions on how to add these data sources to QGIS.
+
+State of 3D Tiles Support
+-------------------------
 
 Currently, QGIS supports two formats of 3D tiles:
+`3D Tiles <https://docs.ogc.org/cs/22-025r4/22-025r4.html>`_ and `Quantized Mesh <https://github.com/CesiumGS/quantized-mesh>`_ tiles.
 
-* `Cesium 3D tiles <https://cesium.com/why-cesium/3d-tiles/>`_,
-  used primarily for complex 3D models of buildings or whole cities.
-  Such datasets can be provided by cloud-based platforms such as Cesium Ion
-  or Google (*Photorealistic 3D Tiles*).
-* `Quantized Mesh tiles <https://github.com/CesiumGS/quantized-mesh>`_,
-  used for terrain elevation data.
+* *3D Tiles* are used primarily for complex 3D models of buildings or whole
+  cities. Such datasets can be provided by cloud-based platforms such as Cesium
+  Ion or Google (*Photorealistic 3D Tiles*).
+* *Quantized Mesh* are used for terrain elevation data.
 
-See :ref:`3d_tiles` for instructions on how to add these data sources to QGIS.
+Supported *3D Tiles* features:
+
+* QGIS currently has partial support for 3D Tiles 1.0 and partial support for
+  3D Tiles 1.1.
+* For 3D Tiles 1.0, the tile format Batched 3D Model (``b3dm``) is supported.
+  The tile formats Instanced 3D Model (``i3dm``), Point Cloud (``pnts``) and
+  Composite (``cmpt``) are not supported yet.
+* For 3D Tiles 1.1, the ``3DTILES_content_gltf`` extension is supported, so
+  tile contents may also be encoded as glTF 2.0 (text or binary). The
+  ``EXT_mesh_gpu_instancing`` extension is not supported yet.
+* Currently only explicit tiling is supported. Implicit tiling is not
+  supported yet
+* Currently only tilesets using EPSG:4978 are supported.
+
 
 .. _3dtiles_properties:
 
