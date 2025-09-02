@@ -720,11 +720,24 @@ A simple procedure is the following:
             SetEnv GDAL_DATA "C:/OSGeo4W/share/gdal"
             SetEnv QGIS_AUTH_DB_DIR_PATH "C:/OSGeo4W/apps/qgis/resources"
 
+            # default QGIS project
+            SetEnv QGIS_PROJECT_FILE "C:/Users/*Your USERNAME*/qgis_projects/qgis-server-tutorial-data/world.qgs"
+
+
+            
+
 #. Restart the Apache web server
 
    ::
 
      > apache-restart.bat
+
+#. Let's add a sample project. You can use your own, or one from `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_. 
+   Make sure that you place it in the same folder that your *QGIS_PROJECT_FILE* environment variable is pointing to:
+
+   ::
+    
+     > "C:/Users/*Your USERNAME*/qgis_projects/qgis-server-tutorial-data/world.qgs"
 
 #. Open browser window to testing a GetCapabilities request to QGIS Server.
    Replace ``localhost:8080`` with the IP and port you set to listen.
@@ -737,7 +750,9 @@ A simple procedure is the following:
    Your server is ready to use.
 
 .. Todo: Document how to configure the server so that people could run
- it as http://qgis.demo/qgisserver? (which is the kind of syntax most used in this file)
+ it as http://qgis.demo/qgisserver? (which is the kind of syntax most used in this file).
+
+.. Todo: If the above is done, also change the link in the "Serve a project" section.
 
 
 Serve a project
@@ -776,6 +791,12 @@ like this in your web browser to retrieve the *countries* layer:
   .. code-block:: bash
 
     http://qgis.demo/qgisserver?MAP=/home/qgis/projects/world.qgs&LAYERS=countries&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG:4326&WIDTH=400&HEIGHT=200&BBOX=-90,-180,90,180
+
+* If you followed the instructions for Windows:
+
+  .. code-block:: bash
+
+    http://localhost:8080/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&LAYERS=countries&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG:4326&WIDTH=400&HEIGHT=200&BBOX=-90,-180,90,180
 
 If you obtain the next image, then QGIS Server is running correctly:
 
