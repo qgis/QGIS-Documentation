@@ -126,17 +126,17 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied.
-       Other than the input attributes, the output layer also contains the following fields:
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
        
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
-       - ``gc_partidx``: the geometry part index of the erroneous feature.
-       - ``gc_ringidx``: the ring index of the erroneous feature.
-       - ``gc_vertidx``: the vertex index of the erroneous feature.
-       - ``gc_errorx``: the x coordinate of the error.
-       - ``gc_errory``: the y coordinate of the error.
-       - ``gc_error``: a description of the error.
-       - ``report``: the applied fix and its successfulness.
+       - ``gc_partidx``: the index of the feature's geometry part containing the duplicate vertex.
+       - ``gc_ringidx``: the index of the feature's geometry ring containing the duplicate vertex.
+       - ``gc_vertidx``: the vertex index of the duplicate vertex in the feature.
+       - ``gc_errorx``: the x coordinate of the duplicate vertex.
+       - ``gc_errory``: the y coordinate of the duplicate vertex.
+       - ``gc_error``
+       - ``report``: a text field describing the fix applied.
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **Fixed duplicate vertices layer**
      - ``OUTPUT``
