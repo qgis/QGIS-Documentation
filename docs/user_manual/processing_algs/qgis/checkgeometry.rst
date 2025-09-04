@@ -481,11 +481,17 @@ Outputs
    * - **Errors from contained features**
      - ``ERRORS``
      - [vector: point]
-     - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the geometry part,
-       ring and vertex index of the erroneous feature,
-       x and y coordinates of the centroid of the contained feature,
-       and the layer name and index of a polygon containing the feature).
+     - Output point layer representing the error locations and information.
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
+       
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the centroid of the contained feature.
+       - ``gc_errory``: the y coordinate of the centroid of the contained feature.
+       - ``gc_error``: the layer name and feature ID of a polygon that contains the feature.
    * - **Contained features**
      - ``OUTPUT``
      - [vector: same as input]
