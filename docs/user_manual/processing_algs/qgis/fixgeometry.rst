@@ -125,9 +125,19 @@ Outputs
    * - **Report layer from fixing duplicate vertices**
      - ``REPORT``
      - [vector: point]
-     - Output point layer representing the error locations and fix applied
-       (the ID and name of the input layer, the geometry part, ring and vertex index of the erroneous feature,
-       x and y coordinates, the applied fix and its successfulness).
+     - Output point layer representing the error locations and fix applied.
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
+       
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the index of the feature's geometry part containing the duplicate vertex.
+       - ``gc_ringidx``: the index of the feature's geometry ring containing the duplicate vertex.
+       - ``gc_vertidx``: the index of the duplicate vertex in the feature.
+       - ``gc_errorx``: the x coordinate of the duplicate vertex.
+       - ``gc_errory``: the y coordinate of the duplicate vertex.
+       - ``gc_error``
+       - ``report``: a text field describing the fix applied.
+       - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **Fixed duplicate vertices layer**
      - ``OUTPUT``
      - [vector: same as input]
