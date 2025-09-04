@@ -132,7 +132,7 @@ Outputs
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the duplicate vertex.
        - ``gc_ringidx``: the index of the feature's geometry ring containing the duplicate vertex.
-       - ``gc_vertidx``: the vertex index of the duplicate vertex in the feature.
+       - ``gc_vertidx``: the index of the duplicate vertex in the feature.
        - ``gc_errorx``: the x coordinate of the duplicate vertex.
        - ``gc_errory``: the y coordinate of the duplicate vertex.
        - ``gc_error``
