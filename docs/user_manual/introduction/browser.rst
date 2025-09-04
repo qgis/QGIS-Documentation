@@ -200,6 +200,39 @@ From the contextual menu of each of these folders or drives, you can:
 * inspect the :guilabel:`Properties...` or the parent :guilabel:`Directory
   Properties...`
 
+
+Data type
+.........
+
++---------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+| Level         | Context menu                                 | Types of layers                                                                                              |
+|               |                                              +-----------------------------+-----------------------------+------------------------------+-------------------+
+|               |                                              | |addRasterLayer|            | |addOgrLayer|               | |addPointCloudLayer|         | |addMeshLayer|    |
+|               |                                              | Raster                      | Vector                      | Point clouds                 | Mesh              |
+|               |                                              | (:ref:`Reference            | (:ref:`Reference            | (:ref:`Reference             | (:ref:`Reference  |
+|               |                                              | <raster_properties_dialog>`)| <vector_properties_dialog>`)| <working_with_point_clouds>`)| <label_meshdata>`)|
++===============+==============================================+=============================+=============================+==============================+===================+
+| File          | :guilabel:`Delete File <dataset name>`       | |checkbox|                  | |checkbox|                  |                              |                   |
+|               +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+|               | :guilabel:`Show in Files`                    | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+|               +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+|               | :menuselection:`Manage`                      | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+|               +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+|               | :guilabel:`File Properties...`               | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+|               +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+|               | :guilabel:`Open <file type> Externally...`   | |checkbox|                  |                             |                              |                   |
++---------------+----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+| Layer         | :guilabel:`Add Layer to Project`             | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+|               +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+|               | :menuselection:`Export Layer`                | |checkbox|                  | |checkbox|                  |                              |                   |
+|               +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+|               | :guilabel:`Layer Properties...`              | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+|               +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+|               | :guilabel:`Open with Data Source Manager...` | |checkbox|                  | |checkbox|                  |                              |                   |
+|               +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+|               | :guilabel:`Execute SQL...`                   |                             | |checkbox|                  |                              |                   |
++---------------+----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+
 .. _database_entries:
 
 Database entries
@@ -400,68 +433,37 @@ Tiles and Web Services
 |               | Open :guilabel:`Layer properties…` dialog    | |checkbox|        | |checkbox|        |                       | |checkbox|        |
 +---------------+----------------------------------------------+-------------------+-------------------+-----------------------+-------------------+
 
+Project and supported file types
+................................
 
-Resources
-----------------------------------------------------------------------
-
-* Project files.
-  The context menu for QGIS project files allows you to:
-
-  * open it (:guilabel:`Open Project`)
-  * extract symbols (:guilabel:`Extract Symbols...`) - opens the style
-    manager that allows you to export symbols to an XML file, add
-    symbols to the default style or export as PNG or SVG.
-  * inspect properties (:guilabel:`File Properties...`)
-
-  You can expand the project file to see its layers.
-  The context menu of a layer offers the same actions as elsewhere
-  in the browser.
-* QGIS Layer Definition files (QLR).
-  The following actions are available from the context menu:
-
-  * export it (:menuselection:`Export Layer --> To file`)
-  * add it to the project (:guilabel:`Add Layer to Project`)
-  * inspect properties (:guilabel:`Layer Properties...`)
-
-* Processing models (.model3).
-  The following actions are available from the context menu:
-
-  * :guilabel:`Run Model...`)
-  * :guilabel:`Edit Model...`)
-
-* QGIS print composer templates (QPT).
-  The following action is available from the context menu:
-
-  * (:guilabel:`New Layout from Template`)
-
-* Python scripts (.py).
-  The following actions are available from the context menu:
-
-  * (:guilabel:`Run script...`)
-  * (:guilabel:`Open in External Editor`)
-
-* Recognized raster formats.
-  The following actions are available from the context menu:
-
-  * delete it (:guilabel:`Delete File <dataset name>`)
-  * export it (:menuselection:`Export Layer --> To file`)
-  * add it to the project (:guilabel:`Add Layer to Project`)
-  * inspect properties (:guilabel:`Layer Properties...`,
-    :guilabel:`File Properties...`)
-
-  For some formats you can also
-  :guilabel:`Open <file type> Externally...`
-* Recognized vector formats.
-  The following actions are available from the context menu:
-
-  * delete it (:guilabel:`Delete File <dataset name>`)
-  * export it (:menuselection:`Export Layer --> To file`)
-  * add it to the project (:guilabel:`Add Layer to Project`)
-  * inspect properties (:guilabel:`Layer Properties...`,
-    :guilabel:`File Properties...`)
-
-  For some formats you can also
-  :guilabel:`Open <file type> Externally...`
++--------------------------+------------------------------------------------------------+
+| File type                | Context menu                                               |
++==========================+============================================================+
+| QGIS Project file        | :menuselection:`Open Project`                              |
+| (.qgz, .qgs)             +------------------------------------------------------------+
+|                          | :menuselection:`Extract Symbols…`                          |
+|                          | (opens Style Manager to export symbols to XML,             |
+|                          | add to default style, or export as PNG/SVG)                |
+|                          +------------------------------------------------------------+
+|                          | :menuselection:`File Properties…`                          |
++--------------------------+------------------------------------------------------------+
+| QGIS Layer Definition    | :menuselection:`Export Layer --> To File…`                 |
+| (.qlr)                   +------------------------------------------------------------+
+|                          | :menuselection:`Add Layer to Project`                      |
+|                          +------------------------------------------------------------+
+|                          | :menuselection:`Layer Properties…`                         |
++--------------------------+------------------------------------------------------------+
+| Processing Model         | :menuselection:`Run Model…`                                |
+| (.model3)                +------------------------------------------------------------+
+|                          | :menuselection:`Edit Model…`                               |
++--------------------------+------------------------------------------------------------+
+| Print Composer Template  | :menuselection:`New Layout from Template`                  |
+| (.qpt)                   |                                                            |
++--------------------------+------------------------------------------------------------+
+| Python script            | :menuselection:`Run Script…`                               |
+| (.py)                    +------------------------------------------------------------+
+|                          | :menuselection:`Open in External Editor`                   |
++--------------------------+------------------------------------------------------------+
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -471,6 +473,14 @@ Resources
    source folder.
 
 .. |addLayer| image:: /static/common/mActionAddLayer.png
+   :width: 1.5em
+.. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
+   :width: 1.5em
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
+.. |addPointCloudLayer| image:: /static/common/mActionAddPointCloudLayer.png
+   :width: 1.5em
+.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
 .. |afs| image:: /static/common/mIconAfs.png
    :width: 1.5em
