@@ -247,12 +247,12 @@ Python code
 Delete overlaps
 ---------------
 
-Deletes overlapping features based on an error layer from the check geometry algorithms.
+Deletes overlapping areas based on an error layer from the check geometry algorithms.
 
 .. figure:: img/fix_geometry_deleteoverlaps.png
    :align: center
 
-   Before and after deleting overlapping features.
+   Before and after deleting overlapping areas.
 
 Parameters
 ..........
@@ -352,20 +352,21 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied.
-       Other than the input attributes, the output layer also contains the following fields:
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
        
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_errorx``: the x coordinate of the centroid of the overlapping area.
        - ``gc_errory``: the y coordinate of the centroid of the overlapping area.
-       - ``gc_error``: a description of the error.
-       - ``gc_overlap_feature_fid``: the feature ID of the overlapping feature.
-       - ``report``: the applied fix and its successfulness.
+       - ``gc_error``: the area of the overlapping geometry.
+       - ``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the overlapping feature.
+       - ``report``: a text field describing the fix applied.
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **No-overlap layer**
      - ``OUTPUT``
      - [vector: polygon]
-     - Output layer with features removed based on detected errors.
+     - Output layer with input features edited.
+       Overlapping areas reported as errors are removed.
 
 Python code
 ...........
