@@ -51,6 +51,7 @@
             ps.sphinxext-rediraffe
             ps.sphinx-togglebutton
             ps.sphinx-copybutton
+            ps.sphinx-tabs
           ]))
           pkgs.vscode
           pkgs.transifex-cli
