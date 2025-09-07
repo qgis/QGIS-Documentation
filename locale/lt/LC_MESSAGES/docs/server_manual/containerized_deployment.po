@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,9 +35,302 @@ msgstr ""
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
 
+#: ../../docs/server_manual/containerized_deployment.rst:3
+msgid "Containerized deployment"
+msgstr "Konteinerizuotas išdėstymas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:11
+msgid ""
+"There are many ways to use containerized application, from the most simple "
+"(simple Docker images) to sophisticated (Kubernetes and so on)."
+msgstr ""
+"Yra daug būdų, kaip galima naudoti konteinerizuotą aplikaciją, nuo pačių "
+"paprasčiausių (paprastas Docker vaizdas) iki sudėtingų (Kubernetes ir pan.)."
+
+#: ../../docs/server_manual/containerized_deployment.rst:14
+msgid ""
+"This kind of deployment needs the `docker application "
+"<https://www.docker.com>`_ to be installed and running. Check this `tutorial"
+" <https://www.docker.com/101-tutorial>`_."
+msgstr ""
+"Tokio tipo išdėstymui reikia, kad būtų įdiegta ir paleista `docker "
+"aplikacija <https://www.docker.com>`_. Peržiūrėkite šį `vadovą "
+"<https://www.docker.com/101-tutorial>`_."
+
+#: ../../docs/server_manual/containerized_deployment.rst:19
+msgid ""
+"Docker run pre packaged application (aka images) which can be retrieved as "
+"sources (Dockerfile and resources) to build or already built from registries"
+" (private or public)."
+msgstr ""
+"Docker run yra iš anksto supakuota aplikacija (dar žinoma kaip vaizdas). Ją "
+"galima sukurti atsisiuntus kaip šaltinį (Dockerfile ir resursus), arba gauti"
+" jau sukurtą iš registrų (privačių ar viešų)."
+
+#: ../../docs/server_manual/containerized_deployment.rst:23
+msgid ""
+"QGIS Debian-Ubuntu package downloads need a valid gpg authentication key. "
+"Please refer to the `installation pages "
+"<https://www.qgis.org/resources/installation-guide/#debian--ubuntu>`_ to "
+"update the following Dockerfile."
+msgstr ""
+"QGIS Debian-Ubuntu paketui reikia tinkamo gpg autentifikacijos rakto. "
+"Prašome skaityti `diegimo puslapius "
+"<https://www.qgis.org/resources/installation-guide/#debian--ubuntu>`_, kad "
+"keistumėte šį Dockerfile."
+
+#: ../../docs/server_manual/containerized_deployment.rst:30
+msgid "Simple docker images"
+msgstr "Paprasti docker vaizdai"
+
+#: ../../docs/server_manual/containerized_deployment.rst:32
+msgid ""
+"As the docker image does not exist in a public registry. you will need to "
+"build it. To do so create a directory :file:`qgis-server` and within its "
+"directory:"
+msgstr ""
+"Kadangi viešame registre docker vaizdo nėra, jums reikės jį susikurti. Kad "
+"tai padarytumėte, sukurkite aplanką :file:`qgis-server` ir jame:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:35
+msgid "create a file :file:`Dockerfile` with this content:"
+msgstr "sukurkite failą :file:`Dockerfile` su tokiu turiniu:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:90
+msgid "create a file :file:`cmd.sh` with this content:"
+msgstr "sukurkite failą :file:`cmd.sh` su tokiu turiniu:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:101
+msgid "build the image with:"
+msgstr "sukurkite vaizdą su:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:109
+msgid "First run"
+msgstr "Pirmas paleidimas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:111
+msgid ""
+"To run the server you will need a QGIS project file. You can use one of "
+"yours or pick `this sample <https://gitlab.com/Oslandia/qgis/docker-"
+"qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
+"exec/data/osm.qgs>`_."
+msgstr ""
+"Kad paleistumėte serverį, jums reikės QGIS projekto failo. Jūs galite "
+"naudoti vieną iš jūsų, arba pasirinkti `šį pavyzdį "
+"<https://gitlab.com/Oslandia/qgis/docker-"
+"qgis/-/blob/cc1798074d4a66a472721352f3984bb318777a5a/qgis-"
+"exec/data/osm.qgs>`_."
+
+#: ../../docs/server_manual/containerized_deployment.rst:114
+msgid ""
+"To do so, create a directory :file:`data` within the directory :file:`qgis-"
+"server` and copy your file in it. To comply with the following explanations,"
+" rename it to :file:`osm.qgs`."
+msgstr ""
+"Kad tai padarytumėte, sukurkite aplanką :file:`data` viduje anksčiau sukurto"
+" aplanko :file:`qgis-server` ir nukopijuokite į jį savo failą. Kad tiktų "
+"žemiau einantys paaiškinimai, pervadinkite jį į :file:`osm.qgs`."
+
+#: ../../docs/server_manual/containerized_deployment.rst:120
+msgid ""
+"You may need to add advertised URLs under the :guilabel:`QGIS Server` tab of"
+" the :menuselection:`Project --> Properties` if the GetCapabilites are "
+"broken. For example if your server is exposed on port 8080, you will put "
+"this for advertised URL ``http://localhost:8080/qgis-server/``. More "
+"information available in section :ref:`Creatingwmsfromproject` and "
+"subsequent."
+msgstr ""
+"Jums gali reikėti pridėti reklamuojamą URL kortelėje :guilabel:`QGIS "
+"Serveris`, kurią rasite :menuselection:`Projektas --> Savybės`, jei "
+"GetCapabilities bus neteisingas. Pavyzdžiui, jei jūsų serveris išorėje "
+"matomas per prievadą 8080, jūs įrašysite kaip reklamuojamą URL "
+"``http://localhost:8080/qgis-server/``. Daugiau informacijos rasite skiltyje"
+" :ref:`Creatingwmsfromproject` ir tolimesnėse."
+
+#: ../../docs/server_manual/containerized_deployment.rst:127
+msgid "Now, you can run the server with:"
+msgstr "Dabar jūs galite paleisti serverį įvykdydami:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:137
+msgid "Options used:"
+msgstr "Naudotos parinktys:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:139
+msgid "**-d**: run in the background"
+msgstr "**-d**: vykdyti fone"
+
+#: ../../docs/server_manual/containerized_deployment.rst:140
+msgid "**--rm**: remove the container when it is stopped"
+msgstr "**--rm**: pašalinti konteinerį, kai jis sustabdomas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:141
+msgid "**--name**: name of the container to be created"
+msgstr "**--name**: kuriamo konteinerio pavadinimas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:142
+msgid "**--net**: (previously created) sub network"
+msgstr "**--net**: (anksčiau sukurtas) potinklis"
+
+#: ../../docs/server_manual/containerized_deployment.rst:143
+msgid "**--hostname**: container hostname, for later referencing"
+msgstr "**--hostname**: konteinerio mašinos pavadinimas, vėlesniam naudojimui"
+
+#: ../../docs/server_manual/containerized_deployment.rst:144
+msgid "**-v**: local data directory to be mounted in the container"
+msgstr ""
+"**-v**: vietinis duomenų aplankas, kurį reikia prijungti prie konteinerio"
+
+#: ../../docs/server_manual/containerized_deployment.rst:145
+msgid "**-p**: host/container port mapping"
+msgstr "**-p**: mašinos/konteinerio prievadų sugretinimas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:146
+msgid "**-e**: environment variable to be used in the container"
+msgstr "**-e**: aplinkos kintamasis, kurį reikia naudoti konteineryje"
+
+#: ../../docs/server_manual/containerized_deployment.rst:149
+msgid ""
+"To check, type ``docker ps | grep qgis-server`` and you should see a line "
+"with **qgis-server**::"
+msgstr ""
+"Kad patikrintumėte, rašykite ``docker ps | grep qgis-server`` ir tada "
+"turėtumėte matyti eilutę su **qgis-server**::"
+
+#: ../../docs/server_manual/containerized_deployment.rst:157
+msgid "Usable sample"
+msgstr "Panaudojamas pavyzdys"
+
+#: ../../docs/server_manual/containerized_deployment.rst:159
+msgid ""
+"As the server is only accepting fastcgi connections, you need an HTTP server"
+" that handles this protocol. To do so we have to create a simple Nginx "
+"configuration file and start a Nginx image."
+msgstr ""
+"Kadangi serveris priima tik fastcgi jungtis, jums reikia HTTP serverio, "
+"kuris apdoroja protokolą. Kad tai padarytumėte, jums reikia sukurti paprastą"
+" Nginx konfigūracijos failą ir paleisti Nginx vaizdą."
+
+#: ../../docs/server_manual/containerized_deployment.rst:164
+msgid ""
+"Create a file :file:`nginx.conf` in the current directory with this content:"
+msgstr "Dabartiniame aplanke sukurkite :file:`nginx.conf` su tokiu turiniu:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:185
+msgid "And type this command:"
+msgstr "Ir įrašykite tokią komandą:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:193
+msgid ""
+"To check capabilities availability, type in a browser "
+"http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"Kad patikrintumėte galimybių pasiekiamumą, įrašykite naršyklėje "
+"http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../docs/server_manual/containerized_deployment.rst:197
+#: ../../docs/server_manual/containerized_deployment.rst:293
+#: ../../docs/server_manual/containerized_deployment.rst:540
+msgid "Cleanup"
+msgstr "Susitvarkymas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:199
+msgid "To cleanup the running images, type:"
+msgstr "Kad išvalytumėte vykdomus vaizdus, įrašykite:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:208
+msgid "Docker stacks"
+msgstr "Doker rinkiniai"
+
+#: ../../docs/server_manual/containerized_deployment.rst:210
+msgid ""
+"The previous method is scriptable, but not easily packageable nor "
+"standardized or easily manageable."
+msgstr ""
+"Ankstesnį būdą galima aprašyti scenarijumi, bet jo negalima lengvai "
+"supakuoti ar standartizuoti bei lengvai valdyti."
+
+#: ../../docs/server_manual/containerized_deployment.rst:213
+msgid ""
+"To work with a docker image set you could use a docker stack managed by an "
+"orchestrator. In a stack, the images are working in the same private "
+"network, and you can start / stop the whole stack or deploy the stack to "
+"other workers. There are many orchestrators, for example Swarm, Kubernetes "
+"and Mesos."
+msgstr ""
+"Norint dirbti su docker vaizdų rinkiniu, jūs galėtumėte naudoti docker "
+"rinkinį, kurį valdo orkestratorius. Rinkinyje vaizdai veikia tame pačiame "
+"privačiame potinklyje ir jūs galite paleisti / sustabdyti visą rinkinį ar "
+"išplatinti rinkinį į kitus darbininkus. Yra daug orkestratorių, pavyzdžiui "
+"Swarm, Kubernetes ir Mesos."
+
+#: ../../docs/server_manual/containerized_deployment.rst:220
+msgid ""
+"In the following, we will present simple configurations for testing "
+"purposes. They are not suitable for production."
+msgstr ""
+"Žemiau pateiktos paprastos konfigūracijos, skirtos testavimui. Jos netinka "
+"gamybai."
+
 #: ../../docs/server_manual/containerized_deployment.rst:225
 msgid "Swarm/docker-compose"
 msgstr "Swarm/docker-compose"
+
+#: ../../docs/server_manual/containerized_deployment.rst:227
+msgid ""
+"Docker now has its own orchestrator: Swarm (compatible with docker-compose "
+"files). You have to `enable it "
+"<https://docs.docker.com/guides/orchestration/#enable-docker-swarm>`_ (the "
+"Mac version will also work with Linux)."
+msgstr ""
+"Docker dabar turi savo orkestratorių: Swarm (suderinamą su docker-compose "
+"failais). Jūs turite `jį įjungti "
+"<https://docs.docker.com/guides/orchestration/#enable-docker-swarm>`_ (Mac "
+"versija veiks ir su Linux)."
+
+#: ../../docs/server_manual/containerized_deployment.rst:235
+msgid "Stack description"
+msgstr "Rinkinio aprašymas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:237
+msgid ""
+"Now that you have Swarm working, create the service file (see `Deploy to "
+"Swarm <https://docs.docker.com/guides/swarm-deploy/>`_) :file:`qgis-"
+"stack.yaml`:"
+msgstr ""
+"Dabar, kai turite veikiantį Swarm, sukurkite paslaugos failą (žr. "
+"`Išplatinti į Swarm <https://docs.docker.com/guides/swarm-deploy/>`_) "
+":file:`qgis-stack.yaml`:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:267
+msgid "To deploy (or update) the stack, type:"
+msgstr "Kad pateiktumėte (ar atnaujintumėte) rinkinį, rašykite:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:273
+msgid ""
+"Check the stack deployment status until you obtain **1/1** in the "
+"**replicas** column:"
+msgstr ""
+"Tikrinkite rinkinio pateikimo būseną, kol gausite **1/1** stulpelyje "
+"**replicas**:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:280
+msgid "Something like:"
+msgstr "Kažkas panašaus į:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:289
+msgid ""
+"To check WMS capabilities, type in a web browser http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"Kad patikrintumėte WMS galimybes, įrašykite naršyklėje "
+"http://localhost:8080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../docs/server_manual/containerized_deployment.rst:295
+msgid "To cleanup, type:"
+msgstr "Kad apsitvarkytumėte, rašykite:"
 
 #: ../../docs/server_manual/containerized_deployment.rst:302
 msgid "Kubernetes"
@@ -46,6 +340,227 @@ msgstr "Kubernetes"
 msgid "Installation"
 msgstr "Įdiegimas"
 
+#: ../../docs/server_manual/containerized_deployment.rst:307
+msgid ""
+"If you have a **Docker Desktop** installation, using Kubernetes (aka k8s) is"
+" pretty straight forward: `enable k8s "
+"<https://docs.docker.com/guides/orchestration/#turn-on-kubernetes>`_."
+msgstr ""
+"Jei turite įsidiegę **Docker Desktop**, Kubernetes (dar vadinamo k8s) "
+"naudojimas yra gan paprastas: `įjunkite k8s "
+"<https://docs.docker.com/guides/orchestration/#turn-on-kubernetes>`_."
+
+#: ../../docs/server_manual/containerized_deployment.rst:311
+msgid ""
+"If not, follow the `minikube tutorial "
+"<https://kubernetes.io/docs/tutorials/hello-minikube/>`_ or `microk8s for "
+"Ubuntu <https://ubuntu.com/tutorials/install-a-local-kubernetes-with-"
+"microk8s>`_."
+msgstr ""
+"Priešingu atveju sekite `minikube vadovą "
+"<https://kubernetes.io/docs/tutorials/hello-minikube/>`_ arba `microk8s "
+"skirtą Ubuntu <https://ubuntu.com/tutorials/install-a-local-kubernetes-with-"
+"microk8s>`_."
+
+#: ../../docs/server_manual/containerized_deployment.rst:316
+msgid ""
+"As Kubernetes installation can be really complex, we will only focus on "
+"aspects used by this demo. For further / deeper information, check the "
+"`official documentation <https://kubernetes.io/docs/home/>`_."
+msgstr ""
+"Kadangi Kubernetes diegimas gali būti tikrai sudėtingas, mes koncentruosimės"
+" tik ties šios demonstracijos aspektais. Tolimesnę / detalesnę informaciją "
+"rasite `oficialioje dokumentacijoje <https://kubernetes.io/docs/home/>`_."
+
 #: ../../docs/server_manual/containerized_deployment.rst:322
 msgid "microk8s"
 msgstr "microk8s"
+
+#: ../../docs/server_manual/containerized_deployment.rst:324
+msgid ""
+"microk8s needs extra steps: you have to enable the registry and tag the "
+"qgis-server image in order to have Kubernetes to find the created images."
+msgstr ""
+"microk8s reikia kelių papildomų žingsnių: jūs turite įjungti registrą ir "
+"pridėti žymą qgis-server vaizdui, kad Kubernetes rastų sukurtus vaizdus."
+
+#: ../../docs/server_manual/containerized_deployment.rst:328
+msgid "First, enable the registry:"
+msgstr "Visų pirmą, įjunkite registrą:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:334
+msgid "Then, tag and push the image to your newly created registry:"
+msgstr ""
+"Tada pridėkite žymą ir sustumkite vaizdą į jūsų naujai sukurtą registrą:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:340
+msgid ""
+"Finally, add or complete the :file:`/etc/docker/daemon.json` to have your "
+"registry **127.0.0.1:32000** listed in the **insecure-registries** field:"
+msgstr ""
+"Galų gale, pridėkite ir pabaikite :file:`/etc/docker/daemon.json`, kad jūsų "
+"registras **127.0.0.1:32000** būtų sąraše lauke **insecure-registries**:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:353
+msgid "Creating manifests"
+msgstr "Manifestų kūrimas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:355
+msgid ""
+"Kubernetes describes the objects to deploy in yaml manifests. There are many"
+" different kinds, but we will only use deployments (handle pods, i.e. docker"
+" images) and services to expose the deployments to internal or external "
+"purposes."
+msgstr ""
+"Kubernetes yaml manifestuose aprašo platinamus objektus. Yra daug skirtingų "
+"tipų, bet mes naudosime tik platinimus (valdyti podus, t.y. docker vaizdus) "
+"ir paslaugas, kad išplatinimai būtų matomi vidiniais ar išoriniais tikslais."
+
+#: ../../docs/server_manual/containerized_deployment.rst:361
+msgid "Deployment manifests"
+msgstr "Platinimo manifestai"
+
+#: ../../docs/server_manual/containerized_deployment.rst:363
+msgid "Create a file :file:`deployments.yaml` with this content:"
+msgstr "Sukurkite failą :file:`deployments.yaml` su tokiu turiniu:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:459
+msgid "Service manifests"
+msgstr "Paslaugos manifestas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:461
+msgid "Create a file :file:`services.yaml` with this content:"
+msgstr "Sukurkite failą :file:`services.yaml` su tokiu turiniu:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:493
+msgid "Deploying manifests"
+msgstr "Manifestų platinimas"
+
+#: ../../docs/server_manual/containerized_deployment.rst:495
+msgid ""
+"To deploy the images and services in Kubernetes, one can use the dashboard "
+"(click on the **+** on the upper right) or the command line."
+msgstr ""
+"Norint platinti vaizdus ir paslaugus Kubernetes, galima naudoti švieslentę "
+"(spauskite **+** viršutiniame dešiniame kampe) arba komandinę eilutę."
+
+#: ../../docs/server_manual/containerized_deployment.rst:499
+msgid ""
+"When using the command line with microk8s you will have to prefix each "
+"command with `microk8s`."
+msgstr ""
+"Kai komandinė eilutė naudojama su microk8s, jūs turėsite prieš kiekvieną "
+"komandą rašyti priešdėlį `microk8s`."
+
+#: ../../docs/server_manual/containerized_deployment.rst:502
+msgid "To deploy or update your manifests:"
+msgstr "Norėdami platinti ar atnaujinti jūsų manifestus:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:508
+msgid "To check what is currently deployed:"
+msgstr "Kad patikrintumėte, kas šiuo metu išplatinta:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:514
+msgid "You should obtain something like::"
+msgstr "Turėtumėte gauti kažką panašaus į tai:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:530
+msgid "To read nginx/qgis logs, type:"
+msgstr "Norėdami skaityti nginx/qgis žurnalą, rašykite:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:536
+msgid ""
+"To check WMS capabilities, type in a web browser "
+"http://localhost:30080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"Norėdami patikrinti WMS galimybes, naršyklėje rašykite "
+"http://localhost:30080/qgis-"
+"server/?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../docs/server_manual/containerized_deployment.rst:542
+msgid "To clean up, type:"
+msgstr "Norėdami apsitvarkyti rašykite:"
+
+#: ../../docs/server_manual/containerized_deployment.rst:549
+msgid "Cloud deployment"
+msgstr "Platinimas debesyje"
+
+#: ../../docs/server_manual/containerized_deployment.rst:551
+msgid ""
+"Managing your own cluster of servers to handle the deployment of "
+"containerized applications, is a complex job. You have to handle multiple "
+"issues, such as hardware, bandwidth and security at different levels."
+msgstr ""
+"Nuosavo serverių spiečiaus tvarkymas valdant konteinerizuotų aplikacijų "
+"platinimą yra sudėtingas darbas. Jūs turite valdyti kelis dalykus, tokius "
+"kaip aparatinė įranga, pralaidumas ir saugumas skirtinguose lygmenyse."
+
+#: ../../docs/server_manual/containerized_deployment.rst:556
+msgid ""
+"Cloud deployment solutions can be a good alternative when you do not want to"
+" focus on infrastructure management."
+msgstr ""
+"Debesų platinimo sprendimai gali būtų gera alternatyva, kai jūs nenorite "
+"gilintis į infrastruktūros valdymą."
+
+#: ../../docs/server_manual/containerized_deployment.rst:559
+msgid ""
+"A cloud deployment may use proprietary mechanisms, but they are also "
+"compatible with the stages explained previously (:ref:`docker images "
+"<simple-docker-images>` and :ref:`stack management <docker-stacks>`)."
+msgstr ""
+"Platinimas debesyje gali naudoti nuosavybinius mechanizmus, bet jie taipogi "
+"suderinami su etapais, paaiškintais anksčiau (:ref:`docker vaizdai <simple-"
+"docker-images>` ir :ref:`rinkinių valdymas <docker-stacks>`)."
+
+#: ../../docs/server_manual/containerized_deployment.rst:565
+msgid "AWS usecase"
+msgstr "AWS atvejis"
+
+#: ../../docs/server_manual/containerized_deployment.rst:567
+msgid ""
+"With Amazon AWS, through `ECS (Elastic Container Service) "
+"<https://console.aws.amazon.com/ecs/home>`_ functionalities, you can use "
+"docker-compose or Kubernetes compatible wrappers to manage your stack. You "
+"will have to create an `image registry "
+"<https://console.aws.amazon.com/ecr/home>`_ for your custom images to be "
+"accessible."
+msgstr ""
+"Su Amazon AWS, per `ECS (Elastic Container Service) "
+"<https://console.aws.amazon.com/ecs/home>`_ funkcionalumus, jūs galite "
+"naudoti docker-compose ar Kubernetes suderinamus įrankius jūsų rinkinio "
+"valdymui. Jūs turėsite sukurti `vaizdų registrą "
+"<https://console.aws.amazon.com/ecr/home>`_, kad jūsų savi vaizdai būtų "
+"prieinami."
+
+#: ../../docs/server_manual/containerized_deployment.rst:575
+msgid ""
+"To use docker-compose alike functionalities, you need to install the **ecs-"
+"cli** client and have `proper permissions / roles "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_."
+" Then, with the help of the `ecs-cli compose <https://github.com/aws/amazon-"
+"ecs-cli>`_ commands, you can reuse the :ref:`stack description <docker-"
+"compose-file>`."
+msgstr ""
+"Norėdami naudoti į docker-compose panašų funkcionalumą, turite įdiegti "
+"**ecs-cli** klientą ir turėti `reikiamas teises / vaidmenis "
+"<https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html>`_."
+" Tada, naudodami `ecs-cli compose <https://github.com/aws/amazon-ecs-cli>`_ "
+"komandas jūs galite perpanaudoti :ref:`rinkinio aprašymą <docker-compose-"
+"file>`."
+
+#: ../../docs/server_manual/containerized_deployment.rst:581
+msgid ""
+"To use Kubernetes, you can use the AWS web console or the command line tool "
+"`eksctl <https://docs.aws.amazon.com/eks/latest/userguide/getting-"
+"started.html>`_ and have the proper permissions / roles. Then with a well "
+"configured kubectl environment, you can reuse the :ref:`Kubernetes manifests"
+" <k8s-manifests>`."
+msgstr ""
+"Norėdami naudoti Kubernetes, jūs galite naudoti AWS žiniatinklio konsolę ar "
+"komandinės eilutės įrankį `eksctl "
+"<https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html>`_ ir"
+" turėti reikiamas teises / vaidmenis. Tada su gerai sukonfigūruota kubectl "
+"aplinka jūs galite perpanaudoti :ref:`Kubernetes manifestus "
+"<k8s-manifests>`."
