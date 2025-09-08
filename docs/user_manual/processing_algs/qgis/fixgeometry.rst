@@ -234,9 +234,19 @@ Outputs
    * - **Report layer from deleting features**
      - ``REPORT``
      - [vector: point]
-     - Output point layer representing the error locations and fix applied
-       (the ID and name of the input layer, the geometry part, ring and vertex index of the erroneous feature,
-       x and y coordinates, affected feature IDs, the applied fix and its successfulness).
+     - Output point layer representing the error locations and fix applied.
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
+       
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the centroid of the erroneous geometry.
+       - ``gc_errory``: the y coordinate of the centroid of the erroneous geometry.
+       - ``gc_error``: the index of the feature where the error belongs.
+       - ``report``: a text field describing the fix applied.
+       - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **Cleaned layer**
      - ``OUTPUT``
      - [vector: same as input]
