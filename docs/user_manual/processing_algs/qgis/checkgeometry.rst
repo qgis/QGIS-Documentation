@@ -765,8 +765,10 @@ Python code
 Lines intersecting each other
 -----------------------------
 
-Checks intersections between line geometries.
+Checks intersections between line geometries within a layer.
 Intersections between two different lines are errors.
+
+.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`, :ref:`qgismultiintersection`, :ref:`qgischeckgeometryselfintersections`, :ref:`qgisfixgeometryselfintersection`
 
 Parameters
 ..........
@@ -796,7 +798,7 @@ Basic parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output layer containing the errors location.
+     - Specification of the output layer containing the intersections location.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -809,7 +811,7 @@ Basic parameters
      - [vector: line]
 
        Default: ``[Skip output]``
-     - Specification of the output layer for features containing the intersections.
+     - Specification of the output layer for features intersecting each other.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -852,13 +854,21 @@ Outputs
    * - **Intersection errors**
      - ``ERRORS``
      - [vector: point]
-     - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the geometry part,
-       ring and vertex index of the erroneous feature, x and y coordinates of the intersection, and affected feature IDs).
+     - Output point layer representing the error locations and information.
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the intersection point.
+       - ``gc_errory``: the y coordinate of the intersection point.
+       - ``gc_error``: the index of the features where the intersection occurs.
    * - **Intersecting feature**
      - ``OUTPUT``
      - [vector: line]
-     - Output layer containing, for each identified intersection, the feature it belongs to.
+     - Output layer containing, for each identified intersection, the features it belongs to.
        If no intersections are found, the output layer will be empty.
        Additional fields are available (see ``ERRORS`` output).
 
