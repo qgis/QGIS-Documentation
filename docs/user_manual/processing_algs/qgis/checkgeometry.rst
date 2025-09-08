@@ -832,11 +832,6 @@ Small segments
 Calculates length of individual segments in line or polygon geometries,
 and reports segments shorter than a minimum length as errors.
 
-.. figure:: img/check_geometry_smallsegments.png
-   :align: center
-
-   Red lines indicate errors on segments shorter than three map units.
-
 .. seealso:: :ref:`qgisfixgeometrydeletefeatures`
 
 Parameters
@@ -931,13 +926,13 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the input attributes, the output layer also contains the following fields:
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
        
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
-       - ``gc_partidx``: the geometry part index of the erroneous feature.
-       - ``gc_ringidx``: the ring index of the erroneous feature.
-       - ``gc_vertidx``: the vertex index of the erroneous feature.
+       - ``gc_partidx``: the index of the feature's geometry part containing the small segment.
+       - ``gc_ringidx``: the index of the feature's geometry ring containing the small segment.
+       - ``gc_vertidx``: the vertex index of the start vertex of the small segment.
        - ``gc_errorx``: the x coordinate of the centroid of the small segment.
        - ``gc_errory``: the y coordinate of the centroid of the small segment.
        - ``gc_error``: the error segment length.
