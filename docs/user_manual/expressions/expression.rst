@@ -75,10 +75,20 @@ using functions, layer fields and values. It contains the following widgets:
   * *Marker*: for every other error (eg, missing parenthesis, unexpected
     character) at a single location.
 
-  .. tip:: **Document your expression with comments**
+* Above the expression editor, a set of tools helps you:
+
+  * |fileNew|:sup:`Clear the expression editor`
+  * Create and manage :ref:`user expressions <user_expressions_functions>`
+  * Toggle comments in the expression editor by selecting the text and pressing the :guilabel:`--` button.
+
+    .. tip:: **Document your expression with comments**
 
     When using complex expression, it is good practice to add
     text either as a multiline comment or inline comments to help you remember.
+    Use one of the following group of characters, as shown in the screenshot below:
+
+      * ``--`` before the text that you want to comment
+      * ``/*`` in the line before the text that you want to comment and ``*/`` in the line after it
 
     ::
 
@@ -105,11 +115,6 @@ using functions, layer fields and values. It contains the following widgets:
           || ' : ' || @airport_alti || 'm'
           -- using || allows regions without airports to be skipped
       )
-
-* Above the expression editor, a set of tools helps you:
-
-  * |fileNew|:sup:`Clear the expression editor`
-  * Create and manage :ref:`user expressions <user_expressions_functions>`
 
 * Under the expression editor, you find:
 
