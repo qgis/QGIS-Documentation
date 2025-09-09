@@ -589,7 +589,7 @@ Outputs
    * - **Line intersecting other layer features**
      - ``OUTPUT``
      - [vector: line]
-     - Output layer containing, for each identified intersection, the feature it belongs to.
+     - Output layer containing, for each identified intersection, the input feature it belongs to.
        If no intersections are found, the output layer will be empty.
        Additional fields are available (see ``ERRORS`` output).
 
