@@ -266,6 +266,30 @@ msgstr ":ref:`メタデータテーブル <plugin_metadata_table>` にリスト�
 msgid "the `version` metadata field must be unique"
 msgstr "`version` メタデータフィールドがユニークであること"
 
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:105
+msgid ""
+"a license file must be included, saved as ``LICENSE`` with no extension "
+"(i.e. not ``LICENSE.txt`` for example)"
+msgstr ""
+"ライセンスファイルが含まれていること、（例えば ``LICENSE.txt`` ではなく）拡張子なしで ``LICENSE`` "
+"として保存されていること。"
+
 #: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:109
 msgid "Plugin structure"
 msgstr "プラグインの構造"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:111
+msgid ""
+"Following the validation rules the compressed (.zip) package of your plugin "
+"must have a specific structure to validate as a functional plugin. As the "
+"plugin will be unzipped inside the users plugins folder it must have it's "
+"own directory inside the .zip file to not interfere with other plugins. "
+"Mandatory files are: :file:`metadata.txt`,  :file:`__init__.py` and "
+":file:`LICENSE`. But it would be nice to have a :file:`README` and of course"
+" an icon to represent the plugin. Following is an example of how a "
+":file:`plugin.zip` could look like."
+msgstr ""
+"検証ルールに従い、プラグインの圧縮（.zip）パッケージは機能するプラグインとして検証されるために特定の構造を持つ必要があります。プラグインはユーザーのプラグインフォルダ内で解凍されるため、他のプラグインと干渉しないよう、.zipファイル内に独自のディレクトリを持つ必要があります。必須ファイルは以下の通りです："
+" :file:`metadata.txt`、 :file:`__init__.py`、および "
+":file:`LICENSE`。また、:file:`README` やプラグインを表すアイコンがあると良いでしょう。以下に "
+":file:`plugin.zip` の構成例を示します。"
