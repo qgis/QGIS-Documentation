@@ -485,7 +485,7 @@ Lines intersecting other layer
 Checks if the input line layer features intersect with the check layer features.
 An input feature that intersects with a check layer feature is an error.
 
-.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`, :ref:`qgismultiintersection`, :ref:`qgischeckgeometryselfintersections`, :ref:`qgisfixgeometryselfintersection`
+.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`, :ref:`qgischeckgeometryselfintersections`
 
 Parameters
 ..........
@@ -580,7 +580,7 @@ Outputs
 
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
-       - ``gc_partidx``
+       - ``gc_partidx``: the index of the feature's geometry part where the intersection occurs.
        - ``gc_ringidx``
        - ``gc_vertidx``
        - ``gc_errorx``: the x coordinate of the intersection point.
