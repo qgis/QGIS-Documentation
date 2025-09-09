@@ -892,6 +892,59 @@ msgstr ""
 "El argumento ``group`` indica el grupo en el que debe aparecer la función en"
 " el cuadro de diálogo Expresión."
 
+#: ../../docs/user_manual/expressions/expression.rst:416
+msgid ""
+"``usesgeometry``: Set this to :const:`True` if the expression requires "
+"access to the features geometry. By default :const:`False`."
+msgstr ""
+"``usesgeometry``: Establezca este valor en :const:`True` si la expresión "
+"requiere acceso a la geometría de las entidades. Por defecto: "
+":const:`False`."
+
+#: ../../docs/user_manual/expressions/expression.rst:418
+msgid ""
+"``handlesnull``: Set this to :const:`True` if the expression has custom "
+"handling for NULL values. If :const:`False` (default), the result will "
+"always be NULL as soon as any parameter is NULL."
+msgstr ""
+"``handlesnull``: Establezca este valor en :const:`True` si la expresión "
+"tiene un tratamiento específico para los valores NULL. Si se establece en "
+":const:`False` (valor predeterminado), el resultado siempre será NULL si "
+"alguno de los parámetros es NULL."
+
+#: ../../docs/user_manual/expressions/expression.rst:420
+msgid ""
+"``referenced_columns``: An array of attribute names that are required to run"
+" the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``. "
+"Specifying a subset of fields or an empty list will result in a faster "
+"execution."
+msgstr ""
+"``referenced_columns``: Un array con los nombres de los atributos necesarios"
+" para ejecutar la función. Por defecto, el valor es "
+"``[QgsFeatureRequest.ALL_ATTRIBUTES]``. Especificar un subconjunto de campos"
+" o una lista vacía mejorará el rendimiento."
+
+#: ../../docs/user_manual/expressions/expression.rst:423
+msgid ""
+"``params_as_list``: Set this to :const:`True` to pass the function "
+"parameters as a list. If :const:`False` (default), the function will receive"
+" the parameters as individual arguments."
+msgstr ""
+"``params_as_list``: Si se establece en :const:`True`, los parámetros de la "
+"función se pasarán como una lista. Si se establece en :const:`False` (valor "
+"predeterminado), la función recibirá los parámetros como argumentos "
+"individuales."
+
+#: ../../docs/user_manual/expressions/expression.rst:426
+msgid ""
+"The function itself takes any number and type of parameters you want to pass"
+" to your function. These should be set before the following optional "
+"arguments:"
+msgstr ""
+"La función en sí puede recibir cualquier número y tipo de parámetros que se "
+"desee. Estos parámetros deben especificarse antes de los siguientes "
+"argumentos opcionales:"
+
 #: ../../docs/user_manual/expressions/expression.rst:429
 msgid "``feature``: the current feature"
 msgstr "``feature``: el objeto espacial actual"
@@ -916,6 +969,16 @@ msgstr ""
 "adicional como variables de expresión. Por ejemplo ``context.variable( "
 "'layer_id' )``"
 
+#: ../../docs/user_manual/expressions/expression.rst:436
+msgid ""
+"If those arguments are present in the function signature, they will be "
+"automatically passed to the function, without the need to specify them in "
+"the expression."
+msgstr ""
+"Si esos argumentos están presentes en la definición de la función, se "
+"pasarán automáticamente a la función, sin necesidad de especificarlos en la "
+"expresión."
+
 #: ../../docs/user_manual/expressions/expression.rst:439
 msgid "The previous example function can then be used in expressions:"
 msgstr "La función de ejemplo anterior se puede usar en expresiones:"
@@ -923,3 +986,14 @@ msgstr "La función de ejemplo anterior se puede usar en expresiones:"
 #: ../../docs/user_manual/expressions/expression.rst:446
 msgid "Custom Function added to the Expression tab"
 msgstr "Función personalizada agregada a la pestaña Expresión"
+
+#: ../../docs/user_manual/expressions/expression.rst:449
+msgid ""
+"Find more examples and additional arguments for custom functions at "
+":mod:`qgsfunction`. Further information about creating Python code can be "
+"found in the :ref:`PyQGIS-Developer-Cookbook`."
+msgstr ""
+"Puede encontrar más ejemplos y argumentos adicionales para funciones "
+"personalizadas en el módulo :mod:`qgsfunction`. Para obtener más información"
+" sobre la creación de código en Python, consulte la guía :ref:`PyQGIS-"
+"Developer-Cookbook`."
