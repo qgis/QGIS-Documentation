@@ -888,12 +888,12 @@ Python code
 Overlaps
 ------------------
 
-Calculates area in polygon geometries, and reports areas smaller than the minimum overlapping area as errors.
+Calculates overlapping areas in polygon geometries, and reports areas smaller than a given minimum as errors.
 
 .. figure:: img/check_geometry_overlaps.png
    :align: center
 
-   Red polygons indicate errors on area smaller than five map units.
+   Hashed polygons indicate overlapping areas smaller than the specified minimum.
 
 .. .. seealso:: :ref:`qgisfixgeometryoverlap`
 
@@ -930,7 +930,7 @@ Basic parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output layer containing centroid points of the overlapping polygons.
+     - Specification of the output layer containing centroid points of the overlapping areas.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -987,18 +987,18 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the input attributes, the output layer also contains the following fields:
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
        
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_errorx``: the x coordinate of the centroid of the overlapping area.
        - ``gc_errory``: the y coordinate of the centroid of the overlapping area.
-       - ``gc_error``: a description of the error.
-       - ``gc_overlap_feature_fid``: the ID of the overlapping feature.
+       - ``gc_error``: the area of the overlapping geometry.
+       - ``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the overlapping feature.
    * - **Overlap features**
      - ``OUTPUT``
      - [vector: polygon]
-     - Output layer containing, for each identified small area, the feature it belongs to.
+     - Output layer containing the overlapping areas.
        Additional fields are available (see ``ERRORS`` output).
 
 Python code
