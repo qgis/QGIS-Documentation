@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoya miyoshi, 2025
 # Transifex Bot <>, 2025
 # Harrissou Sant-anna, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,6 +37,25 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:2
 msgid "Raster tools"
 msgstr "ラスタツール"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:14
+msgid "Align raster"
+msgstr "ラスタを整列"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:16
+msgid ""
+"Aligns raster by resampling it to the same cell size and reprojecting to the"
+" same CRS as a reference raster."
+msgstr "ラスタを、参照ラスタと同じセルサイズに再サンプリングし、同じCRSに再投影することにより整列します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:19
+msgid ""
+"**This algorithm is ONLY available in the** :ref:`Model Designer "
+"<processing.modeler>` context. For other contexts, use instead "
+":ref:`qgisalignrasters`."
+msgstr ""
+"このアルゴリズムは、:ref:`Model Designer <processing.modeler>` の文脈 "
+"**でのみ利用可能です**。その他の文脈では、代わりに :ref:`qgisalignrasters` を使用してください。"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:23
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:145
@@ -138,9 +157,13 @@ msgstr "``INPUT``"
 msgid "[raster]"
 msgstr "[ラスタ]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:37
+msgid "Input raster layer to align"
+msgstr "整列したい入力ラスタレイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:38
 msgid "**Resampling method**"
-msgstr "**リサンプリング方法**"
+msgstr "**再サンプリング方法**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:39
 msgid "``RESAMPLING_METHOD``"
@@ -169,13 +192,33 @@ msgstr ""
 "Method to use for input layer resampling. :class:`Available options "
 "<qgis.core.Qgis.GdalResampleAlgorithm>` are:"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "0 --- Nearest Neighbour"
+msgstr "0 -- 最近傍法"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "1 --- Bilinear (2x2 kernel)"
+msgstr "1 --- バイリニア法（2x2 カーネル）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "2 --- Cubic (4x4 kernel)"
+msgstr "2 --- キュービック法（4x4 カーネル）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "3 --- Cubic B-Spline (4x4 kernel)"
+msgstr "3 --- キュービックBスプライン法（4x4 カーネル）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "4 --- Lanczos (6x6 kernel)"
+msgstr "4 --- ランチョス法（6x6 カーネル）"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:11
 msgid "5 --- Average"
 msgstr "5 -- 平均"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:12
 msgid "6 --- Mode"
-msgstr "6 -- モード"
+msgstr "6 -- 最頻値（mode）"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:13
 msgid "7 --- Maximum"
@@ -188,6 +231,18 @@ msgstr "8 -- 最小値"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:15
 msgid "9 --- Median"
 msgstr "9 -- 中央値"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "10 --- First quartile (Q1)"
+msgstr "10 --- 第1四分位（Q1）"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "11 --- Third quartile (Q3)"
+msgstr "11 --- 第3四分位（Q3）"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:50
+msgid "**Rescale values according to the cell size**"
+msgstr "**セルサイズに応じてスケール**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:51
 msgid "``RESCALE``"
@@ -202,6 +257,10 @@ msgstr "``RESCALE``"
 msgid "[boolean]"
 msgstr "[ブール値]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:54
+msgid "Default: No"
+msgstr "デフォルト: なし"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:56
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:182
 msgid "**Reference layer**"
@@ -211,6 +270,18 @@ msgstr "**スナップで参照するレイヤ**"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:183
 msgid "``REFERENCE_LAYER``"
 msgstr "``REFERENCE_LAYER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:185
+msgid ""
+"A raster layer that will be used to fetch extent, cell size and CRS that "
+"will be applied to input layers."
+msgstr "入力レイヤに適用される範囲、セルサイズ及びCRSを取得するために使われるラスタレイヤ。 "
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:61
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:187
+msgid "**Override reference CRS**"
+msgstr "**参照CRSに優先する**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:63
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:69
@@ -251,25 +322,88 @@ msgstr "``CRS``"
 msgid "[crs]"
 msgstr "[crs]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:66
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:192
+msgid "CRS to be used instead of the reference layer's"
+msgstr "参照レイヤのものに代わって使用するCRS"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:67
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:193
+msgid "**Override reference cell size X**"
+msgstr "**参照セルサイズXに優先する**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:70
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:196
 msgid "``CELL_SIZE_X``"
 msgstr "``CELL_SIZE_X``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:71
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:77
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:83
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:89
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:203
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:209
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:215
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:301
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:404
+msgid "[numeric: double]"
+msgstr "[数値: double]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:72
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:198
+msgid "Cell size in X direction to be used instead of the reference layer's"
+msgstr "参照レイヤのものに変わって使用するX方向のセルサイズ"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:73
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:199
+msgid "**Override reference cell size Y**"
+msgstr "**参照セルサイズYに優先する**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:76
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:202
 msgid "``CELL_SIZE_Y``"
 msgstr "``CELL_SIZE_Y``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:78
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:204
+msgid "Cell size in Y direction to be used instead of the reference layer's"
+msgstr "参照レイヤのものに変わって使用するY方向のセルサイズ"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:205
+msgid "**Override reference grid offset X**"
+msgstr "**参照グリッドオフセットXに優先する**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:82
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:208
 msgid "``GRID_OFFSET_X``"
 msgstr "``GRID_OFFSET_X``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:84
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:210
+msgid "Offset in X direction to apply to cells grid"
+msgstr "セルグリッドに適用されるX方向のオフセット"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:211
+msgid "**Override reference grid offset Y**"
+msgstr "**参照グリッドオフセットYに優先する**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:88
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:214
 msgid "``GRID_OFFSET_Y``"
 msgstr "``GRID_OFFSET_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:90
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:216
+msgid "Offset in Y direction to apply to cells grid"
+msgstr "セルグリッドに適用されるY方向のオフセット"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:217
+msgid "**Clip to extent**"
+msgstr "**切り抜く範囲**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:94
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:220
@@ -332,6 +466,11 @@ msgstr "キャンバスに描画: 考慮する領域を区切る矩形をクリ�
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "``xmin, xmax, ymin, ymax`` として座標を入力します"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:102
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:118
+msgid "**Aligned raster**"
+msgstr "**整列済みラスタ**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:103
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:119
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:326
@@ -340,6 +479,11 @@ msgstr "``xmin, xmax, ymin, ymax`` として座標を入力します"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:459
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:105
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:121
+msgid "output raster with pixels resampled"
+msgstr "ピクセルが再サンプリングされた出力ラスタ"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:108
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:230
@@ -374,6 +518,24 @@ msgstr ""
 "dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
 "コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:136
+msgid "Align rasters"
+msgstr "ラスタを整列"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:138
+msgid ""
+"Aligns rasters by resampling them to the same cell size and reprojecting to "
+"the same CRS as a reference raster."
+msgstr "ラスタを、参照ラスタと同じセルサイズに再サンプリングし、同じCRSに再投影することにより整列します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:141
+msgid ""
+"**This algorithm is NOT available in the** :ref:`Model Designer "
+"<processing.modeler>` context. Use instead :ref:`qgisalignsingleraster`."
+msgstr ""
+"このアルゴリズムは、:ref:`Model Designer <processing.modeler>` **で利用可能できません**。代わりに "
+":ref:`qgisalignsingleraster` を使用してください。"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:156
 msgid "**Input layers**"
 msgstr "**入力レイヤ**"
@@ -383,9 +545,52 @@ msgstr "**入力レイヤ**"
 msgid "[raster] [list]"
 msgstr "[ラスタ] [リスト]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:159
+msgid ""
+"List of input raster layers with resampling options associated (filled as a "
+":class:`QgsProcessingParameterAlignRasterLayers "
+"<qgis.core.QgsProcessingParameterAlignRasterLayers>` item --- done in GUI by"
+" pressing :guilabel:`Configure Raster...` button for each selected layer):"
+msgstr ""
+"再サンプリングオプションが関連付けられた入力ラスタレイヤのリスト（:class:`QgsProcessingParameterAlignRasterLayers"
+" <qgis.core.QgsProcessingParameterAlignRasterLayers>` 項目として入力済み --- "
+"GUIでは、選択した各レイヤに対して :guilabel:`ラスタを設定...` ボタンを押すことで行なわれます）:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:166
+msgid "**Input layer** [string] (``inputFile``)"
+msgstr "**入力レイヤ** [文字列] (``inputFile``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:167
+msgid "Full path of the input layer to align"
+msgstr "整列する入力レイヤのフルパス"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:169
+msgid "**Output file** [string] (``outputFile``)"
+msgstr "**出力ファイル** [文字列] (``outputFile``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:170
+msgid "Full path of the corresponding aligned output layer"
+msgstr "対応する整列された出力レイヤのフルパス"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:172
+msgid "**Resampling method** [enumeration] (``resampleMethod``)"
+msgstr "**再サンプリング方法** [列挙型] (``resampleMethod``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:180
+msgid "**Rescale values according to the cell size** [boolean] (``rescale``)"
+msgstr "**セルサイズに応じてスケール** [ブール値] (``rescale``)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:240
+msgid "**Aligned rasters**"
+msgstr "**整列済みラスタ**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:241
 msgid "``OUTPUT_LAYERS``"
 msgstr "``OUTPUT_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:243
+msgid "output rasters with pixels resampled"
+msgstr "ピクセルが再サンプリングされた出力ラスタ"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:248
 msgid "**Algorithm ID**: ``native:alignrasters``"
@@ -430,6 +635,22 @@ msgstr "**タイルサイズ**"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:294
 msgid "``TILE_SIZE``"
 msgstr "``TILE_SIZE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:295
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:511
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:517
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:523
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:555
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:563
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:575
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:583
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:717
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:723
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:729
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:761
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:769
+msgid "[numeric: integer]"
+msgstr "[数値: Integer]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:297
 msgid "Default: 1024"
@@ -511,6 +732,12 @@ msgstr "**出力レイヤ**"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "デフォルト： ``[一時ファイルに保存]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:330
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:413
+msgid ""
+"Specification of the output raster. :ref:`One of <output_parameter_widget>`:"
+msgstr "出力ラスタを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to a Temporary File"
@@ -531,19 +758,19 @@ msgstr "**Algorithm ID**: ``native:rasterize``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:365
 msgid "Fill NoData cells"
-msgstr "nodataセルを値で埋める"
+msgstr "NoDataのセルを埋める"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:367
 msgid ""
 "Resets the NoData values in the input raster to a chosen value, resulting in"
 " raster dataset with no NoData pixels."
-msgstr "入力ラスタのnodata値をリセットし、指定した値に設定します。この結果、nodataピクセルの無いラスタデータセットが作成されます。"
+msgstr "入力ラスタのNoData値を指定した値に再設定し、NoDataピクセルの無いラスタデータセットが作成されます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:370
 msgid ""
 "The algorithm respects the input raster data type, e.g. a floating point "
 "fill value will be truncated when applied to an integer raster."
-msgstr "このアルゴリズムは入力ラスタのデータ型に従います。例えば、整数値ラスタを埋める値に浮動小数点値を適用しても、値は丸められます。"
+msgstr "このアルゴリズムは入力ラスタのデータ型に従います。例えば、浮動小数点値で整数値ラスタを埋めるとき、値は丸められます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:376
 msgid "Filling NoData values (in grey) of a raster"
@@ -608,6 +835,10 @@ msgstr "**出力ラスタ**"
 msgid "Advanced parameters"
 msgstr "詳細パラメータ"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:431
+msgid "**Creation options**"
+msgstr "**作成オプション**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:434
 msgid "``CREATE_OPTIONS``"
 msgstr "``CREATE_OPTIONS``"
@@ -640,7 +871,7 @@ msgstr "バッチプロセスとモデルデザイナー: 複数のオプショ�
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:461
 msgid "The output raster layer with filled data cells."
-msgstr "nodataセルが産められた出力ラスタレイヤ"
+msgstr "nodataセルが埋められた出力ラスタレイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:466
 msgid "**Algorithm ID**: ``native:fillnodata``"
@@ -648,7 +879,7 @@ msgstr "**Algorithm ID**: ``native:fillnodata``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:476
 msgid "Generate XYZ tiles (Directory)"
-msgstr "XYZタイルの生成（ディレクトリ形式）"
+msgstr "XYZタイルを生成（ディレクトリ形式）"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:478
 msgid ""
@@ -677,7 +908,7 @@ msgstr "タイルの範囲を指定します。内部的にタイルサイズの
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:509
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:715
 msgid "**Minimum zoom**"
-msgstr "**最小ズーム値**"
+msgstr "**最小ズーム**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:510
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:716
@@ -701,7 +932,7 @@ msgstr "最小値0、最大値25"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:515
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:721
 msgid "**Maximum zoom**"
-msgstr "**最大ズーム値**"
+msgstr "**最大ズーム**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:516
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:722
@@ -870,7 +1101,7 @@ msgstr "``TILE_HEIGHT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:587
 msgid "**Use inverted tile Y axis (TMS conventions)**"
-msgstr "**Y軸の反転（TMS）**"
+msgstr "**Y軸を反転したタイル（TMS）**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:588
 msgid "``TMS_CONVENTION``"
@@ -894,6 +1125,12 @@ msgstr "[フォルダ]"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:597
 msgid "Default: ``[Save to temporary folder]``"
 msgstr "デフォルト： ``[一時フォルダに保存]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:598
+msgid ""
+"Specification of the output directory (for the tiles). :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "（タイルの）出力ディレクトリを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
@@ -922,6 +1159,16 @@ msgstr "``OUTPUT_HTML``"
 msgid "[html]"
 msgstr "[html]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:611
+msgid ""
+"Specification of the output HTML file. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "出力HTMLファイルを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:629
+msgid "**Leaflet HTML output title**"
+msgstr "**Leaflet HTML出力ファイル**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:632
 msgid "``HTML_TITLE``"
 msgstr "``HTML_TITLE``"
@@ -931,13 +1178,40 @@ msgstr "``HTML_TITLE``"
 msgid "Default: Not set"
 msgstr "デフォルト：未設定"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:636
+msgid "HTML <title>-tag used for the Leaflet HTML output file."
+msgstr "Leaflet HTML出力ファイルに使われるHTML <title>-タグ"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:637
+msgid "**Leaflet HTML output attribution**"
+msgstr "**Leaflet HTML出力属性**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:640
 msgid "``HTML_ATTRIBUTION``"
 msgstr "``HTML_ATTRIBUTION``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:644
+msgid ""
+"Custom map attribution used for the Leaflet HTML output file. HTML links are"
+" possible."
+msgstr "Leaflet HTML出力ファイルで使用されるカスタムマップの属性。HTMLリンクが可能です。"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:646
+msgid "**Include OpenStreetMap basemap in Leaflet HTML output**"
+msgstr "**LeafletのHTML出力にOpenStreetMapのベース地図を含める**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:647
 msgid "``HTML_OSM``"
 msgstr "``HTML_OSM``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:651
+msgid ""
+"An OpenStreetMap basemap layer (source: https://tile.openstreetmap.org) is "
+"included in the Leaflet HTML output file. Proper map attribution is added "
+"automatically."
+msgstr ""
+"Leaflet HTML出力ファイルにOpenStreetMapベースマップレイヤ (source: "
+"https://tile.openstreetmap.org) が含まれます。適切なマップ属性が自動的に追加されます。"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:669
 msgid "Output directory (for the tiles)"
@@ -976,6 +1250,11 @@ msgstr "``OUTPUT_FILE``"
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:802
 msgid "[file]"
 msgstr "[ファイル]"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:782
+msgid ""
+"Specification of the output file. :ref:`One of <output_parameter_widget>`:"
+msgstr "出力ファイルを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastertools.rst:803
 msgid "The output file."
