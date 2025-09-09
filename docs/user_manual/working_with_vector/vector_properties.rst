@@ -3814,7 +3814,9 @@ settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print
 layout legend <layout_legend_item>`. These options include:
 
 * Depending on the symbology applied to the layer, you may end up with several
-  entries in the legend, not necessarily readable/useful to display.
+  entries in the legend, not necessarily readable/useful to display. To control this behavior,
+  you can uncheck the |checkbox| :guilabel:`Include automatically in print layout legend items` to exclude them
+  from the print layout legends.
   The :guilabel:`Legend placeholder image` helps you :ref:`select an image
   <embedded_file_selector>` for replacement, displayed both in the
   :guilabel:`Layers` panel and the print layout legend.
