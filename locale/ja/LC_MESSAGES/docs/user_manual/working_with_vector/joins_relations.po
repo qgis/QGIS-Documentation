@@ -1033,6 +1033,17 @@ msgstr ""
 "``animal_images`` と ``plant_images`` "
 "という2つの別々のテーブルが必要です。テーブル2つならば問題とはならないかもしれませんが、キノコや鳥などの写真も別々に撮影したいとしたらどうでしょうか。"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:554
+msgid ""
+"Polymorphic relations solve this problem as all the referencing features are"
+" stored in the same table ``documents``. For each feature the referenced "
+"layer is stored in the ``referenced_layer`` field and the referenced feature"
+" id in the ``referenced_id`` field."
+msgstr ""
+"多態リレーションは、参照元の全ての地物を同一の ``documents`` テーブルに格納することでこの問題を解決します。各地物の "
+"``referenced_layer`` フィールドには参照先レイヤが、 ``referenced_id`` フィールドには参照先の地物ID "
+"が格納されます。"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
 msgid "Defining polymorphic relations"
 msgstr "多態リレーションの定義"
@@ -1059,6 +1070,16 @@ msgstr ""
 "参照元レイヤとして ``documents`` を、参照先レイヤとして ``animals`` と ``plants`` "
 "を使用した多態リレーションを追加します。"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:581
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``documents`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``referenced_id``."
+msgstr ""
+"**参照元レイヤ（子）** は子レイヤとも呼ばれ、外部キーのフィールドを持っているレイヤです。この例では ``documents`` "
+"レイヤです。このレイヤには他のレイヤを指す参照元フィールドを追加する必要があり、これが ``referenced_id`` です。"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:593
 msgid ""
 "**Layer Field** is the field in the referencing table that stores the result"
@@ -1067,7 +1088,7 @@ msgid ""
 "field."
 msgstr ""
 "**レイヤのフィールド** "
-"は、評価されたレイヤ式の結果を格納する参照元テーブルのフィールドです。これは、この地物がどのレイヤに属するかの参照テーブルです。 この例では、 "
+"は、評価されたレイヤ式の結果を格納する参照元テーブルのフィールドです。これは、この地物がどのレイヤに属するかの参照元テーブルです。この例では、 "
 "``referenced_layer`` フィールドがこれに該当します。"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:597
