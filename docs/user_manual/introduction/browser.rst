@@ -415,11 +415,11 @@ To add a layer using  :guilabel:`Import Vector Layer...` follow these steps:
    * :guilabel:`Comment`: a description or note attached to the field.
    You can use buttons on the right side to:
 
-   - |newAttribute| :sup:`Add new field` to add a new field to the destination table.
-   - |deleteAttribute| :sup:`Delete selected field` to remove a field from the destination table.
-   - |arrowUp| :sup:`Move selected field up` or |arrowDown| :sup:`Move selected field down` to reorder fields.
-   - |clearText| :sup:`Reset all fields` to clear all fields and start from scratch.
-   - |settings| :sup:`Convert All Fields To Lowercase` or |settings| :sup:`Convert All Fields To Uppercase`,
+   * |newAttribute| :sup:`Add new field` to add a new field to the destination table.
+   * |deleteAttribute| :sup:`Delete selected field` to remove a field from the destination table.
+   * |arrowUp| :sup:`Move selected field up` or |arrowDown| :sup:`Move selected field down` to reorder fields.
+   * |clearText| :sup:`Reset all fields` to clear all fields and start from scratch.
+   * |settings| :sup:`Convert All Fields To Lowercase` or |settings| :sup:`Convert All Fields To Uppercase`,
      to change the case of all field names.
 
 #. Optionally, apply a spatial filter with |checkbox|:ref:`Filter by Extent <extent_selector>`. This restricts
