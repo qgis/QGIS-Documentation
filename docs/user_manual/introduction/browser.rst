@@ -387,7 +387,6 @@ You can start the import in two ways:
 
 .. figure:: img/importvector_dialog.png
    :align: center
-   :width: 30em
 
    Import Vector Layer dialog
 
