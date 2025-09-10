@@ -412,6 +412,7 @@ To add a layer using :guilabel:`Import Vector Layer...` follow these steps:
    * :guilabel:`Constraints`: rules to enforce on the field values.
    * :guilabel:`Alias`: an alternate display name for the field.
    * :guilabel:`Comment`: a description or note attached to the field.
+
    You can use buttons on the right side to:
 
    * |newAttribute| :sup:`Add new field` to add a new field to the destination table.
@@ -423,6 +424,7 @@ To add a layer using :guilabel:`Import Vector Layer...` follow these steps:
 
 #. Optionally, apply a spatial filter with :ref:`Filter by Extent <extent_selector>`. This restricts
    the import to features within a defined bounding box.
+
 #. Optionally, apply an attribute filter with :ref:`Feature filter <expression_builder>`.
    This allows you to use an expression to select which features are imported.
 
