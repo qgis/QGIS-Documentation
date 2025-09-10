@@ -49,9 +49,6 @@ The Expression builder dialog offers access to the:
 The Interface
 -------------
 
-The :guilabel:`Expression` tab provides the main interface to write expressions
-using functions, layer fields and values. It contains the following widgets:
-
 .. _figure_expression_tab:
 
 .. figure:: img/expression_tab.png
@@ -59,6 +56,11 @@ using functions, layer fields and values. It contains the following widgets:
    :width: 100%
 
    The Expression tab
+
+
+The :guilabel:`Expression` tab provides the main interface to write expressions
+using functions, layer fields and values. It contains the following widgets:
+
 
 * An expression editor area for typing or pasting expressions. Autocompletion is
   available to speed expression writing:
