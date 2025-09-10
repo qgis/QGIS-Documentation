@@ -234,9 +234,19 @@ Outputs
    * - **Report layer from deleting features**
      - ``REPORT``
      - [vector: point]
-     - Output point layer representing the error locations and fix applied
-       (the ID and name of the input layer, the geometry part, ring and vertex index of the erroneous feature,
-       x and y coordinates, affected feature IDs, the applied fix and its successfulness).
+     - Output point layer representing the error locations and fix applied.
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
+       
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the centroid of the erroneous geometry.
+       - ``gc_errory``: the y coordinate of the centroid of the erroneous geometry.
+       - ``gc_error``: the index of the feature where the error belongs.
+       - ``report``: a text field describing the fix applied.
+       - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **Cleaned layer**
      - ``OUTPUT``
      - [vector: same as input]
@@ -811,9 +821,21 @@ Outputs
    * - **Report layer from fixing self-intersections**
      - ``REPORT``
      - [vector: point]
-     - Output point layer representing the error locations and fix applied
-       (the ID and name of the input layer, the ID, geometry part, ring and vertex index of the erroneous feature,
-       x and y coordinates, the index of the intersecting segments, the applied fix and its successfulness).
+     - Output point layer representing the error locations and fix applied.
+       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
+       
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the index of the feature's geometry part where the self-intersection occurs.
+       - ``gc_ringidx``: the index of the feature's geometry ring where the self-intersection occurs.
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the self-intersection.
+       - ``gc_errory``: the y coordinate of the self-intersection.
+       - ``gc_error``
+       - ``gc_segment_1``: the index of the first segment involved in the intersection.
+       - ``gc_segment_2``: the index of the second segment involved in the intersection.
+       - ``report``: a text field describing the fix applied.
+       - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **Self-intersections fixed layer**
      - ``OUTPUT``
      - [vector: same as input]
