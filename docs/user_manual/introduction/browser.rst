@@ -391,7 +391,7 @@ You can start the import in two ways:
 
    Import Vector Layer dialog
 
-To add a layer using  :guilabel:`Import Vector Layer...` follow these steps:
+To add a layer using :guilabel:`Import Vector Layer...` follow these steps:
 
 #. Add :guilabel:`Source layer`: the layer to import, chosen from the current QGIS project.
    To import only selected features of the source layer use the |checkbox| :guilabel:`Selected features only` option.
@@ -422,7 +422,7 @@ To add a layer using  :guilabel:`Import Vector Layer...` follow these steps:
    * |settings| :sup:`Convert All Fields To Lowercase` or |settings| :sup:`Convert All Fields To Uppercase`,
      to change the case of all field names.
 
-#. Optionally, apply a spatial filter with |checkbox|:ref:`Filter by Extent <extent_selector>`. This restricts
+#. Optionally, apply a spatial filter with :ref:`Filter by Extent <extent_selector>`. This restricts
    the import to features within a defined bounding box.
 #. Optionally, apply an attribute filter with :ref:`Feature filter <expression_builder>`.
    This allows you to use an expression to select which features are imported.
