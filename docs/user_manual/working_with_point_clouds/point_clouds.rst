@@ -86,7 +86,7 @@ following sections:
      - |elevationscale| :ref:`Elevation <point_clouds_elevation>`:sup:`[1]`
    * - |editMetadata| :ref:`Metadata <point_clouds_metadata>`
      - |basicStatistics| :ref:`Statistics <point_clouds_statistics>`
-     -
+     - |legend| :ref:`Legend <point_clouds_legend>`
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
@@ -716,6 +716,40 @@ abundance.
 
    The point cloud statistics tab
 
+.. index:: Legend, Embedded widget
+.. _point_clouds_legend:
+
+Legend Properties
+-----------------
+
+The |legend| :guilabel:`Legend` tab provides you with advanced
+settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print
+layout legend <layout_legend_item>`. These options include:
+
+* Depending on the symbology applied to the layer, you may end up with several
+  entries in the legend, not necessarily readable/useful to display. To control this behavior,
+  you can uncheck the |checkbox| :guilabel:`Include automatically in print layout legend items` to exclude them
+  from the print layout legends.
+  The :guilabel:`Legend placeholder image` helps you :ref:`select an image
+  <embedded_file_selector>` for replacement, displayed both in the
+  :guilabel:`Layers` panel and the print layout legend.
+* The |legend| :guilabel:`Embedded widgets in Legend` provides you with a list
+  of widgets you can embed within the layer tree in the Layers panel.
+  The idea is to have a way to quickly access some actions that are
+  often used with the layer (setup transparency, filtering, selection,
+  style or other stuff...).
+
+  By default, QGIS provides a transparency widget but this can be
+  extended by plugins that register their own widgets and assign
+  custom actions to layers they manage.
+
+
+.. _figure_point_clouds_legend:
+
+.. figure:: img/point_clouds_legend.png
+   :align: center
+
+   Point Clouds Legend
 
 .. _`virtual_point_cloud`:
 
@@ -812,6 +846,8 @@ that also contains best practices and optional extensions (such as overviews).
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
+   :width: 1.5em
+.. |legend| image:: /static/common/legend.png
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
