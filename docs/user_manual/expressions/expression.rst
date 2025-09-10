@@ -54,7 +54,7 @@ using functions, layer fields and values. It contains the following widgets:
 
 .. _figure_expression_tab:
 
-.. figure:: img/function_list.png
+.. figure:: img/expression_tab.png
    :align: center
    :width: 100%
 
@@ -79,7 +79,7 @@ using functions, layer fields and values. It contains the following widgets:
 
   * |fileNew|:sup:`Clear the expression editor`
   * Create and manage :ref:`user expressions <user_expressions_functions>`
-  * Toggle comments in the expression editor by selecting the text and pressing the :guilabel:`--` button.
+  * Turn comments on or off in the expression editor by selecting the text and then the :guilabel:-- button.
 
     .. tip:: **Document your expression with comments**
 
