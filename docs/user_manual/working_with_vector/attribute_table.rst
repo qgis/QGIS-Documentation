@@ -122,7 +122,8 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   tabular mode, each row representing a feature and each column a field.
   A right-click on the column header allows you to :ref:`configure the table
   display <configure_table_columns>` while a right-click on a cell provides
-  :ref:`interaction with the feature <interacting_features_table>`.
+  :ref:`interaction with the feature <interacting_features_table>`. Double clicking the row
+  header will zoom to the feature in the map canvas (if the layer has geometry).
 
   The attribute table supports :kbd:`Shift+Mouse Wheel` scrolling in table view mode
   to switch between vertical and horizontal scrolling movements.
@@ -472,7 +473,8 @@ Right-click in a cell and you can:
 
 * :guilabel:`Select all` (:kbd:`Ctrl+A`) the features;
 * Copy the content of a cell in the clipboard with :guilabel:`Copy cell content`;
-* :guilabel:`Zoom to feature` without having to select it beforehand;
+* :guilabel:`Zoom to feature` without having to select it beforehand (double clicking
+  the row header does the same);
 * :guilabel:`Pan to feature` without having to select it beforehand;
 * :guilabel:`Flash feature`, to highlight it in the map canvas;
 * :guilabel:`Open form`: it toggles attribute table into form view with a focus
