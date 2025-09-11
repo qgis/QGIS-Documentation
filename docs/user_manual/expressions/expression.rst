@@ -88,7 +88,7 @@ using functions, layer fields and values. It contains the following widgets:
 
     When using complex expression, it is good practice to add
     text either as a multiline comment or inline comments to help you remember.
-    Use one of the following group of characters, as shown in the screenshot below:
+    Use one of the following group of characters, as shown in the sample below:
 
       * ``--`` before the text that you want to comment
       * ``/*`` in the line before the text that you want to comment and ``*/`` in the line after it
