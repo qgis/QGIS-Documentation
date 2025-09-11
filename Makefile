@@ -16,7 +16,7 @@ BUILDDIR        = build
 #SITEDIR         = /var/www/qgisdata/QGIS-Documentation/live/html
 # to be able to run the Makefile in a docker you have to mount (with -v) your site dir on /site
 SITEDIR         = /site
-VERSION         = testing
+VERSION         = 3.44
 
 # needed for Sphinx > 4.5?
 export LC_ALL=C.UTF-8

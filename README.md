@@ -1,9 +1,8 @@
 <img src="https://github.com/qgis/QGIS/blob/master/images/README-md/main_logo.png" width="300" alt="Our full logo">
 
-[![Docs Builds](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml/badge.svg?branch=master&event=push)](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml)
-[![Doctest Build](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml/badge.svg?branch=master&event=push)](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml)
+[![Docs Builds](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml/badge.svg?branch=release_3.44&event=push)](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml)
+[![Doctest Build](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml/badge.svg?branch=release_3.44&event=push)](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml)
 [![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/testing/)
-
 
 This repository is meant to write and manage the Official Documentation of [QGIS](https://qgis.org),
 a free and Open Source Geographic Information System (GIS) Software
@@ -13,15 +12,15 @@ offering a range of complementary open-source GIS software projects.
 
 The latest documentation of QGIS is available at <https://docs.qgis.org/latest>
 
-* [Building the documentation](#building-the-documentation)
-   * [Build on Linux or macOS](#build-on-linux-or-macos)
-     * [Fixing build locale error on macOS](#fixing-build-locale-error-on-macos)
-   * [Build on Windows](#build-on-windows)
-   * [Build PDFs](#build-pdfs)
-* [Translating](#translating)
-  * [GitHub workflow](#github-workflow)
-  * [Managing translations locally](#managing-translations-locally)
-* [Testing Python snippets](#testing-python-snippets)
+- [Building the documentation](#building-the-documentation)
+  - [Build on Linux or macOS](#build-on-linux-or-macos)
+    - [Fixing build locale error on macOS](#fixing-build-locale-error-on-macos)
+  - [Build on Windows](#build-on-windows)
+  - [Build PDFs](#build-pdfs)
+- [Translating](#translating)
+  - [GitHub workflow](#github-workflow)
+  - [Managing translations locally](#managing-translations-locally)
+- [Testing Python snippets](#testing-python-snippets)
 
 # Building the documentation
 
@@ -80,6 +79,7 @@ make LANG=nl html
   ```sh
   make -f venv.mk html
   ```
+
 </details>
 
 If, for some reason, you want to (re)start from scratch:
@@ -191,8 +191,8 @@ but it will use a considerable amount of disk space.
 
 Some languages will also need specific fonts installed:
 
--   Korea (ko) - NanumMyeongjo from the `fonts-nanum` package
--   Hindi (hi) - Nakula from the `fonts-nakula` package
+- Korea (ko) - NanumMyeongjo from the `fonts-nanum` package
+- Hindi (hi) - Nakula from the `fonts-nakula` package
 
 # Translating
 
@@ -203,13 +203,12 @@ Only the [current Long Term Release](https://docs.qgis.org/latest/) is being tra
 To be part of the translation team, please follow
 [becoming a translator](https://www.qgis.org/en/site/getinvolved/translate.html#becoming-a-translator).
 
-
 ## GitHub workflow
 
 The process is automated using the [Transifex - GitHub integration system](https://help.transifex.com/en/articles/6265125-github-via-transifex-ui)
 and some custom scripts:
 
-* The [transifex.yml](transifex.yml) configuration file:
+- The [transifex.yml](transifex.yml) configuration file:
   provides way to retrieve the English source files and where to locate the translated ones.
 
   ---
@@ -223,27 +222,30 @@ and some custom scripts:
       source files and their translation in the GitHub repository and link them to
       the resources in Transifex.
    1. Force-push the translation files to Transifex
+
       ```sh
        tx push -f -t --no-interactive
       ```
+
   ---
 
-* The transifex integration bot: 
+- The transifex integration bot:
   manages pulls and pushes of the strings, in other words:
   - Tracks any changes of the English `*.po` resource files in GitHub
     and automatically sends them to the Transifex platform
   - When a resource is 100% translated, automatically sends back
     the translated `*.po` file to GitHub, for build.
-* The [pofiles action](.github/workflows/pofiles.yml): creates/updates English `*.po` files
+- The [pofiles action](.github/workflows/pofiles.yml): creates/updates English `*.po` files
   with recent changes in the source `*.rst` files. Feeds the transifex bot.
 
-* For files that are not yet fully translated in Transifex,
+- For files that are not yet fully translated in Transifex,
   the [pull_minimized_translations action](.github/workflows/pull_minimized_translations.yml)
   periodically and automatically pulls them to the repository.
 
 Based on the above, translated strings are automatically available in released
 branch so building the docs in any translated locale is possible following
 the instructions in earlier sections:
+
 ```sh
 make html LANG=yourlanguage
 ```
@@ -253,6 +255,7 @@ make html LANG=yourlanguage
 While the master branch is provided only in English, we translate the released branches to various languages.
 The translated strings are available in the corresponding `release_X.Y` branch (see ``locale`` folder),
 so you can build a localized documentation in HTML using:
+
 ```sh
 make html LANG=yourlanguage
 ```
@@ -263,13 +266,16 @@ In that case, you need to manually pull the translations from Transifex to your 
 
 1. Checkout locally the repository and target branch in git
 1. Prepare the environment
+
    ```sh
    python3 -m venv venv
    source ./venv/bin/activate
    pip install -r REQUIREMENTS.txt
    ```
+
 1. Install [Transifex command line client](https://github.com/transifex/cli/).
    On Linux or macOS:
+
    ```sh
    curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
    # and restart the terminal
@@ -280,10 +286,13 @@ In that case, you need to manually pull the translations from Transifex to your 
 
 1. Download the translated strings using the [minimize_translation script](scripts/minimize_translation.sh).
    By default this pulls all the languages.
+
    ```sh
    ./scripts/minimize_translation.sh
    ```
+
    To pull a specific language (e.g. italian), do
+
    ```sh
    ./scripts/minimize_translation.sh -l it
    ```
@@ -291,15 +300,19 @@ In that case, you need to manually pull the translations from Transifex to your 
    IMPORTANT: to be able to pull from transifex.com, you will need a credentials file.
    This file should be named: ``.transifexrc`` and easiest is to put it in your home dir.
    The file should contain this:
+
    ```
    [https://app.transifex.com]
    rest_hostname = https://rest.api.transifex.com
    token = yourtransifextoken
    ```
+
 1. Build the docs in your language
+
    ```sh
    make html LANG=yourlanguage
    ```
+
 1. Share the changes by opening a pull-request, allowing us to integrate
    the new strings for the pulled language(s)
 
@@ -308,11 +321,12 @@ In that case, you need to manually pull the translations from Transifex to your 
 To test Python code snippets in the PyQGIS Cookbook, you need a *QGIS* installation.
 For this there are many options:
 
-* You can use your system *QGIS* installation with *Sphinx* from Python virtual environment:
+- You can use your system *QGIS* installation with *Sphinx* from Python virtual environment:
 
   ```sh
   make -f venv.mk doctest
   ```
+
 * You can use a manually built installation of *QGIS*. To do so, you need to:
   1. Create a custom ``Makefile`` extension on top of the ``venv.mk`` file,
      for example a ``user.mk`` file with the following content:
@@ -332,6 +346,7 @@ For this there are many options:
      ```sh
      make -f user.mk doctest
      ```
+
 * Or you can run target ``doctest`` inside the official *QGIS* docker image:
 
   ```sh
@@ -354,5 +369,4 @@ which does not appear in documentation with directive ``testsetup``, for example
 ```
 
 For more information see *Sphinx* doctest extension documentation:
-https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html
-
+<https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html>
