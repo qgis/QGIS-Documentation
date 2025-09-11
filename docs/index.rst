@@ -90,8 +90,8 @@ Please have a look into one of the documents below.
    :maxdepth: 2
    :caption: For Users
 
-   QGIS Desktop User Guide/Manual (QGIS Testing) <user_manual/index>
-   QGIS Server Guide/Manual (QGIS Testing) <server_manual/index>
+   QGIS Desktop User Guide/Manual (QGIS 3.44) <user_manual/index>
+   QGIS Server Guide/Manual (QGIS 3.44) <server_manual/index>
    Training Manual <training_manual/index>
    A Gentle Introduction to GIS <gentle_gis_introduction/index>
 
@@ -105,7 +105,7 @@ Please have a look into one of the documents below.
    :maxdepth: 2
    :caption: For Developers
 
-   PyQGIS Cookbook (QGIS Testing) <pyqgis_developer_cookbook/index>
+   PyQGIS Cookbook (QGIS 3.44) <pyqgis_developer_cookbook/index>
    Developers Guide <developers_guide/index>
 
 * :ref:`genindex`
