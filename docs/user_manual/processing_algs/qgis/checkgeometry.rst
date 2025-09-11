@@ -772,7 +772,7 @@ Calculates overlapping areas in polygon geometries, and reports areas smaller th
 
    Hashed polygons indicate overlapping areas smaller than the specified minimum.
 
-.. .. seealso:: :ref:`qgisfixgeometryoverlap`
+.. seealso:: :ref:`qgisfixgeometryoverlap`
 
 Parameters
 ..........
