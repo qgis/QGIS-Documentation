@@ -81,7 +81,8 @@ using functions, layer fields and values. It contains the following widgets:
 
   * |fileNew|:sup:`Clear the expression editor`
   * Create and manage :ref:`user expressions <user_expressions_functions>`
-  * Turn comments on or off in the expression editor by selecting the text and then the :guilabel:-- button.
+  * Turn active line(s) in the expression editor into comments by pressing the :guilabel:`--` button.
+    Pressing again will deactivate the comment.
 
     .. tip:: **Document your expression with comments**
 
