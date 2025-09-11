@@ -117,18 +117,6 @@ by distributing equidistantly:
 * centers of items horizontally or vertically;
 * spacing between items horizontally or vertically.
 
-.. _rotate_items:
-
-Rotating items
-..............
-
-Selected layout items feature a rotation handle above them.  
-Click and drag this handle to rotate the item interactively on the layout canvas.  
-Holding the :kbd:`Ctrl` key while rotating constrains the selected item(s) to rotate in 15° steps,
-allowing for precise alignment.
-
-For even more precise control, you can use the :guilabel:`Rotation` field in the :guilabel:`Item Properties` panel.
-
 .. _group_items:
 
 Grouping items
@@ -228,8 +216,6 @@ Background, Item ID, Variables and Rendering (see :numref:`figure_layout_common`
 * The :guilabel:`Position and size` group lets you define the size and position
   of the frame which contains the item (see :ref:`position_size` for more information).
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
-  You can also rotate the item interactively using its rotation handle.  
-  See :ref:`rotate_items` for more details.
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the item.
   Use the :guilabel:`Color`, :guilabel:`Thickness` and :guilabel:`Join style` widgets
   to adjust those properties.

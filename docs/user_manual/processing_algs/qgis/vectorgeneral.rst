@@ -492,8 +492,6 @@ Attributes are not checked, so in case two features have identical
 geometries but different attributes, only one of them will be added to
 the result layer.
 
-Optionally, these duplicate records can be saved to a separate output for analysis.
-
 .. note::
  This algorithm does not require valid geometries as input.
 
@@ -527,19 +525,6 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
-   * - **Duplicates**
-
-       Optional
-     - ``DUPLICATES``
-     - [same as input]
-
-       Default: ``[Skip output]``
-     - Specify the output layer containing only the discarded duplicates.
-       :ref:`One of <output_parameter_widget>`:
-
-       .. include:: ../algs_include.rst
-          :start-after: **layer_output_types_skip**
-          :end-before: **end_layer_output_types_skip**
 
 Outputs
 ..........
@@ -553,10 +538,6 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Duplicates**
-     - ``DUPLICATES``
-     - [same as input]
-     - Vector layer containing the duplicate features.
    * - **Count of discarded duplicate records**
      - ``DUPLICATE_COUNT``
      - [numeric: integer]
