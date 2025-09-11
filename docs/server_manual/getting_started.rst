@@ -881,11 +881,6 @@ In the :guilabel:`WMS` tab, you can define the options for the WMS capabilities.
     Using the :guilabel:`Use layer ids as name` option ensures that multiple layers
     with the same name can be requested as individual layers.
 
-  * If you check |checkbox| :guilabel:`Use only maptip for HTML GetFeatureInfo (empty response when maptip template is missing)`,
-    QGIS Server will return only the HTML maptip content in response to GetFeatureInfo requests.
-    This allows using HTML maptips without requiring the client to pass a vendor-specific parameter (e.g. ``WITH_MAPTIP=HTML_FI_ONLY_MAPTIP``).
-    It is useful for clients that do not support setting additional URL parameters.
-
   .. _`addGeometryToFeatureResponse` :
 
   * If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
