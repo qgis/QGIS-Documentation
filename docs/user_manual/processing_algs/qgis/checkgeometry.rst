@@ -634,6 +634,129 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgischeckgeometrylineintersection:
+
+Lines intersecting each other
+-----------------------------
+
+Checks intersections between line geometries within a layer.
+Intersections between two different lines are errors.
+
+.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`, :ref:`qgischeckgeometryselfintersections`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Intersection errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the intersections location.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Intersecting feature**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer for features intersecting each other.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Intersection errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       Other than the ``UNIQUE_ID`` field referring to an intersecting input feature,
+       the output layer also contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the index of the feature's geometry part where the intersection occurs.
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the intersection point.
+       - ``gc_errory``: the y coordinate of the intersection point.
+       - ``gc_error``: the layer name and index of the other intersecting feature.
+   * - **Intersecting feature**
+     - ``OUTPUT``
+     - [vector: line]
+     - Output layer containing, for each identified intersection, the feature (with same ``UNIQUE_ID`` value) it belongs to.
+       If no intersections are found, the output layer will be empty.
+       Additional fields are available (see ``ERRORS`` output).
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrylineintersection``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgischeckgeometrylinelayerintersection:
 
 Lines intersecting other layer
