@@ -792,12 +792,6 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
      * Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`
      * :guilabel:`Invert axis orientation`.
      * :guilabel:`Use GML2 encoding for transactions`.
-   * :guilabel:`Force initial GetFeature`:
-     When checked, an initial GetFeature call will always be issued
-     in order to determine the geometry type from the first downloaded feature.
-     Because QGIS assumes features are of 2D geometry type, use this option
-     if the layer contains features with Z axis coordinates you would like to get
-     (and possibly edit in WFS-T).
 
    .. warning::
 
