@@ -70,7 +70,7 @@ New releases are branched off the `master` branch and thus require a set of chan
   - [ ] In [README.MD](README.MD) file, update the badges to point to the current branch instead of `master`,
     and current version instead of `testing`
   - [ ] In [Makefile](Makefile) file, set the `VERSION` number as in the conf.py file
-  - [ ] In [doctest.dockerfile](doctest.dockerfile): set the project container to pull QGIS sources from (i.e. `x.y`)
+  - [ ] In [doctest.dockerfile](doctest.dockerfile): set the project container to pull QGIS sources from (i.e. replace `qgis:latest` with `qgis:x.y`)
   - [ ] In main [index.rst](docs/index.rst) file: replace `testing` with `x.y` in the Table Of Contents
 </details>
 
