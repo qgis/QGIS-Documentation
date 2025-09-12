@@ -163,7 +163,7 @@ Deletes error features based on an error layer from the check geometry algorithm
 .. figure:: img/fix_geometry_deletefeatures.png
    :align: center
 
-   Before and after deleting features inside a polygon.
+   Fixing error from the "Features inside polygon" algorithm check.
 
 .. seealso:: :ref:`qgisdeleteduplicategeometries`, :ref:`qgisdropgeometries`
 
