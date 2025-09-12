@@ -123,7 +123,10 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
 * The legend will be updated automatically if |checkbox| :guilabel:`Auto update`
   is checked. When :guilabel:`Auto update` is unchecked this will give you more
   control over the legend items. All the icons below the legend items list will
-  be activated.
+  be activated. Unchecking the
+  |checkbox| :guilabel:`Include automatically in print layout legend items` in the layer properties
+  legend tab will hide the layers by default in the legend. However, you can still
+  add them manually if the auto update is off.
 * The legend items window lists all legend items and allows you to change item
   order, group layers, remove and restore items in the list, edit layer names
   and symbology and add a filter.
