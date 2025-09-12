@@ -132,14 +132,14 @@ The mesh :guilabel:`Layer Properties` dialog provides the following sections:
    * - |metadata| :ref:`Information <meshinformation>`
      - |system| :ref:`Source <meshsource>`
      - |symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`
-     - |legend| :ref:`Legend <meshlegend>`
    * - |3d| :ref:`3D View <mesh3dview>`:sup:`[1]`
      - |temporal| :ref:`Temporal <meshtemporal>`
      - |labelingSingle| :ref:`Labels <meshlabels>`:sup:`[1]`
-     -
    * - |elevationscale| :ref:`Elevation <meshelevation>`
      - |rendering| :ref:`Rendering <meshrendering>`
      - |editMetadata| :ref:`Metadata <meshmetadata>`
+   * - |legend| :ref:`Legend <meshlegend>`
+     -
      -
 
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
