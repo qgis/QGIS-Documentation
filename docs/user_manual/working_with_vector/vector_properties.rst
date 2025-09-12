@@ -3841,7 +3841,8 @@ layout legend <layout_legend_item>`. These options include:
 
    Setting text on symbols (left) and its rendering in the :guilabel:`Layers` panel (right)
 
-* a list of widgets you can embed within the layer tree in the Layers panel.
+* The |legend| :guilabel:`Embedded widgets in Legend` provides you with a list
+  of widgets you can embed within the layer tree in the Layers panel.
   The idea is to have a way to quickly access some actions that are often used
   with the layer (setup transparency, filtering, selection, style or other
   stuff...).
@@ -3850,6 +3851,12 @@ layout legend <layout_legend_item>`. These options include:
   plugins registering their own widgets and assign custom actions to layers
   they manage.
 
+.. _figure_legend_vector:
+
+.. figure:: img/vector_legend.png
+   :align: center
+
+   Vector legend
 
 .. index:: Metadata, Keyword, QGIS Server
 
