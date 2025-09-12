@@ -817,6 +817,75 @@ it is strongly recommended to create them using an automated tool, such as:
 For more details, please refer to the `VPC specification <https://github.com/PDAL/wrench/blob/main/vpc-spec.md>`_
 that also contains best practices and optional extensions (such as overviews).
 
+.. _`editing_point_cloud`:
+
+Editing point clouds layers
+===========================
+
+QGIS supports editing of point cloud layers by providing a dedicated set of tools
+inside the :ref:`3D map view <label_3dmapview>`. These tools allow you to
+interactively select points, filter them based on expressions, and modify their attributes.
+
+.. note::
+   Only local COPC files are editable.  
+   Other formats (e.g. LAS/LAZ) are automatically indexed into COPCs when added to QGIS,
+   but only the resulting COPC file can be edited.
+
+.. list-table:: Tools for point cloud digitizing
+   :header-rows: 1
+
+   * - Label
+     - Purpose
+     - Location
+   * - |toggleEditing| :sup:`Toggle to Edit`
+     - Enable or disable edit mode
+     - :guilabel:`Editing Toolbar`
+   * - |undo| :sup:`Undo`
+     - Undo the last change(s) - :kbd:`Ctrl+Z`
+     - :guilabel:`Editing Toolbar`
+   * - |redo| :sup:`Redo`
+     - Redo the last undone action(s) - :kbd:`Ctrl+Shift+Z`
+     - :guilabel:`Editing Toolbar`
+   * - |selectPolygon| :sup:`Select by Polygon`
+     - Select points with a polygon
+     - :guilabel:`Select Editing Tool`
+   * - |rendering| :sup:`Select by Paintbrush`
+     - Select points with a brush
+     - :guilabel:`Select Editing Tool`
+   * - |selectAboveLine| :sup:`Select Above Line`
+     - Select points above a line
+     - :guilabel:`Select Editing Tool`
+   * - |selectBelowLine| :sup:`Select Below Line`
+     - Select points below a line
+     - :guilabel:`Select Editing Tool`
+   * - |expressionFilter| :sup:`Filter Points`
+     - Apply an expression filter
+     - :guilabel:`Editing Toolbar`
+
+Adding attribute values and filtering points
+--------------------------------------------
+
+Before selecting points, choose the :guilabel:`Attribute` you want to modify and enter the :guilabel:`Value` to assign.  
+Optionally, define a |expressionFilter| :sup:`Filter Points` expression to restrict which points are affected by selections and edits.
+Clicking the filter opens the :ref:`Query Builder <vector_query_builder>`, where you can create or test the expression.  
+Only points matching the filter will be affected by the subsequent selection and edits. Clearing the filter applies edits to all points. 
+
+Selecting points
+----------------
+
+After setting the attribute, value, and optional filter, digitize a selection using one of the following methods:
+
+* |selectPolygon| :sup:`Select by Polygon`: draw a 2D polygon around points to select them.  
+* |rendering| :sup:`Select by Paintbrush`: drag the mouse to paint over points.
+  The brush size can be adjusted with the mouse scroll wheel.  
+* |selectAboveLine| :sup:`Select Above Line`: digitize a line to define the base of a trapezoid; points above it are selected.  
+* |selectBelowLine| :sup:`Select Below Line`: similar to the above, but selects points below the line.   
+
+.. note::
+   Selection polygons are digitized directly in the 3D view.  
+   Camera movement is blocked while digitizing.  
+   Only points in front of the camera’s near plane (i.e. currently rendered)
+   are considered; points behind the camera are ignored.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -833,6 +902,8 @@ that also contains best practices and optional extensions (such as overviews).
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
+.. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
@@ -854,9 +925,19 @@ that also contains best practices and optional extensions (such as overviews).
    :width: 1.5em
 .. |pointCloudExtent| image:: /static/common/pointCloudExtent.png
    :width: 1.5em
+.. |pointCloudLayer| image:: /static/common/mIconPointCloudLayer.png
+   :width: 1.5em
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
 .. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |selectAboveLine| image:: /static/common/mActionSelectAboveLine.png
+   :width: 1.5em
+.. |selectBelowLine| image:: /static/common/mActionSelectBelowLine.png
+   :width: 1.5em
+.. |selectPolygon| image:: /static/common/mActionSelectPolygon.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
@@ -872,5 +953,9 @@ that also contains best practices and optional extensions (such as overviews).
    :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
