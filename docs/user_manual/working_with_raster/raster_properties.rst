@@ -1051,11 +1051,15 @@ The |legend| :guilabel:`Legend` tab provides you with advanced
 settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print
 layout legend <layout_legend_item>`. These options include:
 
-* Depending on the symbology applied to the layer, you may end up with several
-  entries in the legend, not necessarily readable/useful to display.
-  The :guilabel:`Legend placeholder image` helps you :ref:`select an image
-  <embedded_file_selector>` for replacement, displayed both in the
-  :guilabel:`Layers` panel and the print layout legend.
+* Under :guilabel:`General settings`:
+
+  * |checkbox| :guilabel:`Include automatically in print layout legend items`:
+     uncheck this option if you want to hide by default the layer from the print layout legends.
+  * Depending on the symbology applied to the layer, you may end up with several
+    entries in the legend, not necessarily readable/useful to display.
+    The :guilabel:`Legend placeholder image` helps you :ref:`select an image
+    <embedded_file_selector>` for replacement, displayed both in the
+    :guilabel:`Layers` panel and the print layout legend.
 * The |legend| :guilabel:`Embedded widgets in Legend` provides you with a list
   of widgets you can embed within the layer tree in the Layers panel.
   The idea is to have a way to quickly access some actions that are
