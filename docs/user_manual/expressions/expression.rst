@@ -61,7 +61,6 @@ The Interface
 The :guilabel:`Expression` tab provides the main interface to write expressions
 using functions, layer fields and values. It contains the following widgets:
 
-
 * An expression editor area for typing or pasting expressions. Autocompletion is
   available to speed expression writing:
 
@@ -81,19 +80,19 @@ using functions, layer fields and values. It contains the following widgets:
 
   * |fileNew|:sup:`Clear the expression editor`
   * Create and manage :ref:`user expressions <user_expressions_functions>`
-  * Turn active line(s) in the expression editor into comments by pressing the :guilabel:`--` button.
+  * Turn active line(s) in the expression editor into comments by pressing the :kbd:`--` button.
     Pressing again will deactivate the comment.
 
     .. tip:: **Document your expression with comments**
 
-    When using complex expression, it is good practice to add
-    text either as a multiline comment or inline comments to help you remember.
-    Use one of the following group of characters, as shown in the sample below:
+     When using complex expression, it is good practice to add text
+     either as multiline or inline comments to help you remember:
 
-      * ``--`` before the text that you want to comment
-      * ``/*`` in the line before the text that you want to comment and ``*/`` in the line after it
+     * Use ``--`` to mark any text that follows on the same line as comment
+     * Use ``/*`` to mark any text that follows as comment, until ``*/`` is reached.
+       The comment can span multiple lines.
 
-    ::
+     ::
 
       /*
       Labels each region with its highest (in altitude) airport(s)
