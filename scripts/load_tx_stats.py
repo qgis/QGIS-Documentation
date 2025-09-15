@@ -72,7 +72,9 @@ def extract_language_stats(lang):
         total_strings += resource['attributes']['total_strings']
 
     # For actual translated strings we need to ignore the notranslate ones
-    translated_strings -= total_notranslate
+    # which are actually counted as translated after there is one really translated string
+    if translated_strings:
+        translated_strings -= total_notranslate
     percentage = round(
         translated_strings * 100 / (total_strings - total_notranslate),
         2)
