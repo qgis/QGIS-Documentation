@@ -405,11 +405,12 @@ To add a layer using :guilabel:`Import Vector Layer...` follow these steps:
    
    * :guilabel:`Source expression`: expression used to populate the field. By default,
      this corresponds to the original source field.
-   * :guilabel:`Name`: name of the field in the destination table (editable).
+   * :guilabel:`Name`: name of the field in the destination table.
    * :guilabel:`Type`: field data type (integer, text, real, etc.).
    * :guilabel:`Length` and :guilabel:`Precision`: length and precision of the field,
      where applicable.
-   * :guilabel:`Constraints`: rules to enforce on the field values.
+   * :guilabel:`Constraints`: rules to enforce on the field values (e.g. NOT NULL, UNIQUE, DEFAULT).
+     Support depends on the destination database.
    * :guilabel:`Alias`: an alternate display name for the field.
    * :guilabel:`Comment`: a description or note attached to the field.
 
