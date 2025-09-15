@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-17 20:03+0000\n"
+"POT-Creation-Date: 2025-09-12 12:41+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
@@ -726,11 +726,23 @@ msgstr ""
 msgid "Add more OSGeo4W custom configuration variables"
 msgstr "Lägg till fler anpassade konfigurationsvariabler för OSGeo4W"
 
-#: ../../docs/server_manual/getting_started.rst:723
+#: ../../docs/server_manual/getting_started.rst:729
 msgid "Restart the Apache web server"
 msgstr "Starta om Apache-webbservern"
 
-#: ../../docs/server_manual/getting_started.rst:729
+#: ../../docs/server_manual/getting_started.rst:735
+msgid ""
+"Let's add a sample project. You can use your own, or one from `Training demo"
+" data <https://github.com/qgis/QGIS-Training-Data/>`_. Make sure that you "
+"place it in the same folder that your *QGIS_PROJECT_FILE* environment "
+"variable is pointing to:"
+msgstr ""
+"Låt oss lägga till ett exempelprojekt. Du kan använda ditt eget eller ett "
+"från `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_. Se"
+" till att du placerar det i samma mapp som din "
+"*QGIS_PROJECT_FILE*-miljövariabel pekar på:"
+
+#: ../../docs/server_manual/getting_started.rst:742
 msgid ""
 "Open browser window to testing a GetCapabilities request to QGIS Server. "
 "Replace ``localhost:8080`` with the IP and port you set to listen."
@@ -739,7 +751,7 @@ msgstr ""
 "Server. Ersätt ``localhost:8080`` med den IP och port som du har ställt in "
 "för att lyssna."
 
-#: ../../docs/server_manual/getting_started.rst:736
+#: ../../docs/server_manual/getting_started.rst:749
 msgid ""
 "A :file:`XML` file with the capabilities should be returned. Your server is "
 "ready to use."
@@ -747,16 +759,16 @@ msgstr ""
 "En :file:`XML`-fil med funktionerna bör returneras. Din server är klar att "
 "användas."
 
-#: ../../docs/server_manual/getting_started.rst:744
+#: ../../docs/server_manual/getting_started.rst:759
 msgid "Serve a project"
 msgstr "Servera ett projekt"
 
-#: ../../docs/server_manual/getting_started.rst:746
+#: ../../docs/server_manual/getting_started.rst:761
 msgid "Now that QGIS Server is installed and running, we just have to use it."
 msgstr ""
 "Nu när QGIS Server är installerat och igång är det bara att använda det."
 
-#: ../../docs/server_manual/getting_started.rst:748
+#: ../../docs/server_manual/getting_started.rst:763
 msgid ""
 "Obviously, we need a QGIS project to work on. Of course, you can fully "
 "customize your project by defining contact information, precise some "
@@ -769,7 +781,7 @@ msgstr ""
 "Allt du behöver veta om detta beskrivs senare i "
 ":ref:`Creatingwmsfromproject`."
 
-#: ../../docs/server_manual/getting_started.rst:753
+#: ../../docs/server_manual/getting_started.rst:768
 msgid ""
 "But for now, we are going to use a simple project already configured and "
 "previously downloaded in :file:`/home/qgis/projects/world.qgs`, as described"
@@ -779,7 +791,7 @@ msgstr ""
 "tidigare nedladdat i :file:`/home/qgis/projects/world.qgs`, enligt "
 "beskrivningen ovan."
 
-#: ../../docs/server_manual/getting_started.rst:756
+#: ../../docs/server_manual/getting_started.rst:771
 msgid ""
 "By opening the project and taking a quick look on layers, we know that 4 "
 "layers are currently available:"
@@ -787,23 +799,23 @@ msgstr ""
 "Genom att öppna projektet och ta en snabb titt på lager vet vi att 4 lager "
 "för närvarande är tillgängliga:"
 
-#: ../../docs/server_manual/getting_started.rst:759
+#: ../../docs/server_manual/getting_started.rst:774
 msgid "airports"
 msgstr "airports"
 
-#: ../../docs/server_manual/getting_started.rst:760
+#: ../../docs/server_manual/getting_started.rst:775
 msgid "places"
 msgstr "places"
 
-#: ../../docs/server_manual/getting_started.rst:761
+#: ../../docs/server_manual/getting_started.rst:776
 msgid "countries"
 msgstr "countries"
 
-#: ../../docs/server_manual/getting_started.rst:762
+#: ../../docs/server_manual/getting_started.rst:777
 msgid "countries_shapeburst"
 msgstr "countries_shapeburst"
 
-#: ../../docs/server_manual/getting_started.rst:764
+#: ../../docs/server_manual/getting_started.rst:779
 msgid ""
 "You don't have to understand the full request for now but you may retrieve a"
 " map with some of the previous layers thanks to QGIS Server by doing "
@@ -813,27 +825,31 @@ msgstr ""
 "karta med några av de tidigare lagren tack vare QGIS Server genom att göra "
 "något liknande i din webbläsare för att hämta *countries*-lagret:"
 
-#: ../../docs/server_manual/getting_started.rst:768
+#: ../../docs/server_manual/getting_started.rst:783
 msgid ""
 "If you followed the above instructions to install an Apache HTTP Server:"
 msgstr ""
 "Om du följde instruktionerna ovan för att installera en Apache HTTP Server:"
 
-#: ../../docs/server_manual/getting_started.rst:774
+#: ../../docs/server_manual/getting_started.rst:789
 msgid ""
 "If you followed the above instructions to install an NGINX HTTP Server:"
 msgstr ""
 "Om du följde instruktionerna ovan för att installera en NGINX HTTP Server:"
 
-#: ../../docs/server_manual/getting_started.rst:780
+#: ../../docs/server_manual/getting_started.rst:795
+msgid "If you followed the instructions for Windows:"
+msgstr "Om du följde instruktionerna för Windows:"
+
+#: ../../docs/server_manual/getting_started.rst:801
 msgid "If you obtain the next image, then QGIS Server is running correctly:"
 msgstr "Om du får fram nästa bild körs QGIS Server korrekt:"
 
-#: ../../docs/server_manual/getting_started.rst:785
+#: ../../docs/server_manual/getting_started.rst:806
 msgid "Server response to a basic GetMap request"
 msgstr "Serverns svar på en grundläggande GetMap-begäran"
 
-#: ../../docs/server_manual/getting_started.rst:787
+#: ../../docs/server_manual/getting_started.rst:808
 msgid ""
 "Note that you may define **QGIS_PROJECT_FILE** environment variable to use a"
 " project by default instead of giving a **MAP** parameter (see :ref:`qgis-"
@@ -843,15 +859,15 @@ msgstr ""
 "använda ett projekt som standard istället för att ange en **MAP**-parameter "
 "(se :ref:`qgis-server-envvar`)."
 
-#: ../../docs/server_manual/getting_started.rst:790
+#: ../../docs/server_manual/getting_started.rst:811
 msgid "For example with spawn-fcgi:"
 msgstr "Till exempel med spawn-fcgi:"
 
-#: ../../docs/server_manual/getting_started.rst:802
+#: ../../docs/server_manual/getting_started.rst:823
 msgid "Configure your project"
 msgstr "Konfigurera ditt projekt"
 
-#: ../../docs/server_manual/getting_started.rst:804
+#: ../../docs/server_manual/getting_started.rst:825
 msgid ""
 "To provide a new QGIS Server WMS, WFS, OAPIF or WCS, you have to create a "
 "QGIS project file with some data or use one of your current projects. Define"
@@ -867,11 +883,11 @@ msgstr ""
 " i dialogrutan :menuselection:`Projekt --> Egenskaper...` och ange lite "
 "information om OWS på fliken :guilabel:`Service Capabilities`."
 
-#: ../../docs/server_manual/getting_started.rst:816
+#: ../../docs/server_manual/getting_started.rst:837
 msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
 msgstr "Definitioner för ett QGIS Server WMS/WFS/WCS-projekt"
 
-#: ../../docs/server_manual/getting_started.rst:818
+#: ../../docs/server_manual/getting_started.rst:839
 msgid ""
 "You have to :guilabel:`Enable Service Capabilities` first, if it is "
 "deactivated. This will appear in the GetCapabilities response of the WMS, "
@@ -885,19 +901,19 @@ msgstr ""
 "capabilities` kommer QGIS Server att använda informationen i filen "
 ":file:`wms_metadata.xml` som finns i mappen :file:`cgi-bin`."
 
-#: ../../docs/server_manual/getting_started.rst:1070
+#: ../../docs/server_manual/getting_started.rst:1091
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/server_manual/getting_started.rst:825
+#: ../../docs/server_manual/getting_started.rst:846
 msgid "WMS capabilities"
 msgstr "WMS-funktioner"
 
-#: ../../docs/server_manual/getting_started.rst:832
+#: ../../docs/server_manual/getting_started.rst:853
 msgid "Definitions in the WMS tab"
 msgstr "Definitioner i fliken WMS"
 
-#: ../../docs/server_manual/getting_started.rst:834
+#: ../../docs/server_manual/getting_started.rst:855
 msgid ""
 "In the :guilabel:`WMS` tab, you can define the options for the WMS "
 "capabilities."
@@ -905,7 +921,7 @@ msgstr ""
 "På fliken :guilabel:`WMS` kan du definiera alternativen för WMS-"
 "funktionerna."
 
-#: ../../docs/server_manual/getting_started.rst:836
+#: ../../docs/server_manual/getting_started.rst:857
 msgid ""
 "Check :guilabel:`Advertised extent` to define the extent advertised in the "
 "WMS GetCapabilities response. The :ref:`spatial extent selector "
@@ -918,7 +934,7 @@ msgstr ""
 "omfattningen som en ``xmin, xmax, ymin, ymax`` text eller plocka den från "
 "kartans canvas, lager, bokmärken..."
 
-#: ../../docs/server_manual/getting_started.rst:843
+#: ../../docs/server_manual/getting_started.rst:864
 msgid ""
 "By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict in "
 "which coordinate reference systems (CRS) QGIS Server will offer to render "
@@ -936,11 +952,11 @@ msgstr ""
 "koordinatreferenssystem, eller klicka på :guilabel:`Used` för att lägga till"
 " de CRS som används i QGIS-projektet i listan."
 
-#: ../../docs/server_manual/getting_started.rst:1072
+#: ../../docs/server_manual/getting_started.rst:1093
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/server_manual/getting_started.rst:851
+#: ../../docs/server_manual/getting_started.rst:872
 msgid ""
 "If you have print layouts defined in your project, they will be listed in "
 "the ``GetProjectSettings`` response, and they can be used by the GetPrint "
@@ -960,7 +976,7 @@ msgstr ""
 "Välj sedan en utskriftslayout från dialogrutan :guilabel:`Välj "
 "utskriftslayout` för att lägga till den i listan över uteslutna layouter."
 
-#: ../../docs/server_manual/getting_started.rst:860
+#: ../../docs/server_manual/getting_started.rst:881
 msgid ""
 "If you want to exclude any layer or layer group from being published by the "
 "WMS, check |checkbox| :guilabel:`Exclude Layers` and click the "
@@ -981,11 +997,11 @@ msgstr ""
 "från publicering eftersom detta minskar storleken på WMS GetCapabilities-"
 "svaret vilket leder till snabbare laddningstider på klientsidan."
 
-#: ../../docs/server_manual/getting_started.rst:869
+#: ../../docs/server_manual/getting_started.rst:890
 msgid ":guilabel:`Layer and Feature Options`"
 msgstr ":guilabel:`Lager- och funktionsalternativ`"
 
-#: ../../docs/server_manual/getting_started.rst:871
+#: ../../docs/server_manual/getting_started.rst:892
 msgid ""
 "You can receive requested GetFeatureInfo as plain text, XML and GML. The "
 "default is XML."
@@ -993,7 +1009,7 @@ msgstr ""
 "Du kan ta emot begärd GetFeatureInfo som vanlig text, XML och GML. Standard "
 "är XML."
 
-#: ../../docs/server_manual/getting_started.rst:873
+#: ../../docs/server_manual/getting_started.rst:894
 msgid ""
 "If you check |checkbox| :guilabel:`Use layer ids as name`, layer ids will be"
 " used to reference layers in the ``GetCapabilities`` response or ``GetMap "
@@ -1005,7 +1021,7 @@ msgstr ""
 " ``GetMap LAYERS``-parametern. Om inte, används lagrets namn eller kortnamn "
 "om det är definierat (se :ref:`vectorservermenu`)."
 
-#: ../../docs/server_manual/getting_started.rst:877
+#: ../../docs/server_manual/getting_started.rst:898
 msgid ""
 "By default, layer names are used to expose layers through WMS. If multiple "
 "layers have the same name, they will be merged to a single WMS layer and "
@@ -1021,7 +1037,7 @@ msgstr ""
 " ids as name` säkerställer du att flera lager med samma namn kan begäras som"
 " enskilda lager."
 
-#: ../../docs/server_manual/getting_started.rst:886
+#: ../../docs/server_manual/getting_started.rst:907
 msgid ""
 "If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
 "response`. This will include the bounding box for each feature in the "
@@ -1033,7 +1049,7 @@ msgstr ""
 "funktion i GetFeatureInfo-svaret. Se även parametern :ref:`WITH_GEOMETRY "
 "<wms_getfeatureinfo>`."
 
-#: ../../docs/server_manual/getting_started.rst:890
+#: ../../docs/server_manual/getting_started.rst:911
 msgid ""
 "As many web clients can’t display circular arcs in geometries you have the "
 "option to segmentize the geometry before sending it to the client in a "
@@ -1049,7 +1065,7 @@ msgstr ""
 "Du måste markera kryssrutan |checkbox| :guilabel:`Segmentize feature info "
 "geometry` för att aktivera alternativet."
 
-#: ../../docs/server_manual/getting_started.rst:896
+#: ../../docs/server_manual/getting_started.rst:917
 msgid ""
 "You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
 " set the precision of the GetFeatureInfo geometry. This enables you to save "
@@ -1059,7 +1075,7 @@ msgstr ""
 "precision` för att ställa in precisionen för geometrin i GetFeatureInfo. "
 "Detta gör att du kan spara bandbredd när du inte behöver full precision."
 
-#: ../../docs/server_manual/getting_started.rst:900
+#: ../../docs/server_manual/getting_started.rst:921
 msgid ""
 "If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
 "show text using expressions) this will be listed inside the GetFeatureInfo "
@@ -1071,7 +1087,7 @@ msgstr ""
 "utmatningen. Om lagret använder en Value Map för ett av sina attribut kommer"
 " denna information också att visas i GetFeatureInfo-utmatningen."
 
-#: ../../docs/server_manual/getting_started.rst:905
+#: ../../docs/server_manual/getting_started.rst:926
 msgid ""
 "If you want QGIS Server to advertise specific request URLs in the WMS "
 "GetCapabilities response, enter the corresponding URL in the "
@@ -1081,11 +1097,11 @@ msgstr ""
 "GetCapabilities-svaret anger du motsvarande URL i fältet "
 ":guilabel:`Advertised URL`."
 
-#: ../../docs/server_manual/getting_started.rst:908
+#: ../../docs/server_manual/getting_started.rst:929
 msgid ":guilabel:`Map and Legend Options`"
 msgstr ":guilabel:`Alternativ för karta och teckenförklaring`"
 
-#: ../../docs/server_manual/getting_started.rst:910
+#: ../../docs/server_manual/getting_started.rst:931
 msgid ""
 "When a layer group is passed to ``GetLegendGraphic`` request, all of its "
 "leaf layers are added to the legend picture (however without the groups' "
@@ -1099,7 +1115,7 @@ msgstr ""
 "du även vill infoga lagergruppernas (och undergruppernas) namn i "
 "lagerträdet, precis som i QGIS Desktop-förklaringen."
 
-#: ../../docs/server_manual/getting_started.rst:916
+#: ../../docs/server_manual/getting_started.rst:937
 msgid ""
 "When QGIS project contains layer groups, they are listed in WMS capabilities"
 " document alongside with layers. If a group (its name as listed in "
@@ -1120,7 +1136,7 @@ msgstr ""
 " namnattribut, vilket gör det omöjligt att inkludera grupper i listan över "
 "lager i GetMap-begäran."
 
-#: ../../docs/server_manual/getting_started.rst:924
+#: ../../docs/server_manual/getting_started.rst:945
 msgid ""
 "Furthermore, you can restrict the maximum size of the maps returned by the "
 "requests by entering the maximum width and height into the respective fields"
@@ -1132,7 +1148,7 @@ msgstr ""
 "under :guilabel:`Maximal bildstorlek för GetMap- och GetLegendGraphic-"
 "förfrågningar`."
 
-#: ../../docs/server_manual/getting_started.rst:928
+#: ../../docs/server_manual/getting_started.rst:949
 msgid ""
 "You can change the :guilabel:`Quality for JPEG and WebP images` factor. The "
 "quality factor must be in the range 0 to 100. Specify 0 for maximum "
@@ -1142,7 +1158,7 @@ msgstr ""
 "Kvalitetsfaktorn måste ligga inom intervallet 0 till 100. Ange 0 för maximal"
 " komprimering och 100 för ingen komprimering."
 
-#: ../../docs/server_manual/getting_started.rst:932
+#: ../../docs/server_manual/getting_started.rst:953
 msgid ""
 "You can change the limit for atlas features to be printed in one request by "
 "setting the :guilabel:`Maximum features for Atlas print requests` field."
@@ -1151,7 +1167,7 @@ msgstr ""
 "begäran genom att ange fältet :guilabel:`Maximum features for Atlas print "
 "requests`."
 
-#: ../../docs/server_manual/getting_started.rst:935
+#: ../../docs/server_manual/getting_started.rst:956
 msgid ""
 "When QGIS Server is used in tiled mode (see :ref:`TILED parameter "
 "<wms_tiled>`), you can set the :guilabel:`Tile buffer in pixels`. The "
@@ -1163,7 +1179,7 @@ msgstr ""
 "rekommenderade värdet är storleken på den största symbolen eller "
 "linjebredden i ditt QGIS-projekt."
 
-#: ../../docs/server_manual/getting_started.rst:938
+#: ../../docs/server_manual/getting_started.rst:959
 msgid ""
 "Depending on whether the map uses a projected CRS or a geographic CRS and if"
 " there is no information to evaluate the map unit sized symbols, you can "
@@ -1176,11 +1192,11 @@ msgstr ""
 ":guilabel:`Förvald skala för teckenförklaring` eller :guilabel:`Förvald "
 "kartans enheter per mm i teckenförklaring`."
 
-#: ../../docs/server_manual/getting_started.rst:945
+#: ../../docs/server_manual/getting_started.rst:966
 msgid "WMTS capabilities"
 msgstr "WMTS kapacitet"
 
-#: ../../docs/server_manual/getting_started.rst:947
+#: ../../docs/server_manual/getting_started.rst:968
 msgid ""
 "In the :guilabel:`WMTS` tab you can select the layers you want to publish as"
 " WMTS and specify if you want to publish as PNG or JPEG."
@@ -1188,7 +1204,7 @@ msgstr ""
 "På fliken :guilabel:`WMTS` kan du välja de lager som du vill publicera som "
 "WMTS och ange om du vill publicera som PNG eller JPEG."
 
-#: ../../docs/server_manual/getting_started.rst:950
+#: ../../docs/server_manual/getting_started.rst:971
 msgid ""
 "Under :guilabel:`Grids`, for each :ref:`restricted CRS <restricted_crs>`, "
 "you can indicate whether the tile matrices should be published and configure"
@@ -1202,11 +1218,11 @@ msgstr ""
 "kakelmatriserna. Observera att för CRS ``EPSG:3857`` och ``EPSG:4326`` kan "
 "endast den sista nivån i plattmatriserna redigeras."
 
-#: ../../docs/server_manual/getting_started.rst:956
+#: ../../docs/server_manual/getting_started.rst:977
 msgid "You can also set a :guilabel:`Minimum scale` for the tiles display."
 msgstr "Du kan också ange en :guilabel:`Minsta skala` för visning av brickor."
 
-#: ../../docs/server_manual/getting_started.rst:958
+#: ../../docs/server_manual/getting_started.rst:979
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field, QGIS Server will"
 " advertise this specific URL in the WMTS GetCapabilities response."
@@ -1214,15 +1230,15 @@ msgstr ""
 "Om du anger en URL i fältet :guilabel:`Advertised URL`, kommer QGIS Server "
 "att annonsera denna specifika URL i WMTS GetCapabilities-svaret."
 
-#: ../../docs/server_manual/getting_started.rst:966
+#: ../../docs/server_manual/getting_started.rst:987
 msgid "Definitions in the WMTS tab"
 msgstr "Definitioner i fliken WMTS"
 
-#: ../../docs/server_manual/getting_started.rst:969
+#: ../../docs/server_manual/getting_started.rst:990
 msgid "WFS/OAPIF capabilities"
 msgstr "WFS/OAPIF-funktioner"
 
-#: ../../docs/server_manual/getting_started.rst:971
+#: ../../docs/server_manual/getting_started.rst:992
 msgid ""
 "In the :guilabel:`WFS/OAPIF` tab, you can select the layers you want to "
 "publish as WFS or OAPIF, and specify if they will allow update, insert and "
@@ -1232,11 +1248,11 @@ msgstr ""
 "som WFS eller OAPIF och ange om de ska tillåta uppdatering, infogning och "
 "radering."
 
-#: ../../docs/server_manual/getting_started.rst:980
+#: ../../docs/server_manual/getting_started.rst:1001
 msgid "Definitions in the WFS/OAPIF tab"
 msgstr "Definitioner i fliken WFS/OAPIF"
 
-#: ../../docs/server_manual/getting_started.rst:982
+#: ../../docs/server_manual/getting_started.rst:1003
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field, QGIS Server will"
 " advertise this specific URL in the WFS GetCapabilities response."
@@ -1244,11 +1260,11 @@ msgstr ""
 "Om du anger en URL i fältet :guilabel:`Advertised URL`, kommer QGIS Server "
 "att annonsera denna specifika URL i WFS GetCapabilities-svaret."
 
-#: ../../docs/server_manual/getting_started.rst:986
+#: ../../docs/server_manual/getting_started.rst:1007
 msgid "WCS capabilities"
 msgstr "WCS kapacitet"
 
-#: ../../docs/server_manual/getting_started.rst:988
+#: ../../docs/server_manual/getting_started.rst:1009
 msgid ""
 "In the :guilabel:`WCS` tab, you can select the layers that you want to "
 "publish as WCS."
@@ -1256,11 +1272,11 @@ msgstr ""
 "På fliken :guilabel:`WCS` kan du välja de lager som du vill publicera som "
 "WCS."
 
-#: ../../docs/server_manual/getting_started.rst:995
+#: ../../docs/server_manual/getting_started.rst:1016
 msgid "Definitions in the WCS tab"
 msgstr "Definitioner i fliken WCS"
 
-#: ../../docs/server_manual/getting_started.rst:997
+#: ../../docs/server_manual/getting_started.rst:1018
 msgid ""
 "If you enter a URL in the :guilabel:`Advertised URL` field of the "
 ":guilabel:`WCS capabilities` section, QGIS Server will advertise this "
@@ -1270,11 +1286,11 @@ msgstr ""
 ":guilabel:`WCS capabilities`, kommer QGIS Server att annonsera denna "
 "specifika URL i WCS GetCapabilities-svaret."
 
-#: ../../docs/server_manual/getting_started.rst:1002
+#: ../../docs/server_manual/getting_started.rst:1023
 msgid "Fine tuning your OWS"
 msgstr "Finjustera din OWS"
 
-#: ../../docs/server_manual/getting_started.rst:1004
+#: ../../docs/server_manual/getting_started.rst:1025
 msgid ""
 "For vector layers, the :guilabel:`Fields` tab of the :menuselection:`Layer "
 "--> Layer Properties` dialog allows you to define for each attribute if it "
@@ -1288,15 +1304,15 @@ msgstr ""
 "WMS och WFS. Om du inte vill att ett visst attribut ska publiceras "
 "avmarkerar du kryssrutan i kolumnen :guilabel:`Configuration`:"
 
-#: ../../docs/server_manual/getting_started.rst:1010
+#: ../../docs/server_manual/getting_started.rst:1031
 msgid ":guilabel:`Do not expose in WFS`"
 msgstr ":guilabel:`Exponeras inte i WFS`"
 
-#: ../../docs/server_manual/getting_started.rst:1011
+#: ../../docs/server_manual/getting_started.rst:1032
 msgid ":guilabel:`Do not expose in WMS`"
 msgstr ":guilabel:`Exponeras inte i WMS`"
 
-#: ../../docs/server_manual/getting_started.rst:1013
+#: ../../docs/server_manual/getting_started.rst:1034
 msgid ""
 "You can overlay watermarks over the maps produced by your WMS by adding text"
 " annotations or SVG annotations to the project file. See the "
@@ -1322,11 +1338,11 @@ msgstr ""
 ":menuselection:`Projekt --> Egenskaper...`) eller manuellt ändra sökvägen "
 "till SVG-bilden så att den representerar en giltig relativ sökväg."
 
-#: ../../docs/server_manual/getting_started.rst:1027
+#: ../../docs/server_manual/getting_started.rst:1048
 msgid "Integration with third parties"
 msgstr "Integration med tredje part"
 
-#: ../../docs/server_manual/getting_started.rst:1029
+#: ../../docs/server_manual/getting_started.rst:1050
 msgid ""
 "QGIS Server provides standard OGC web services like `WMS, WFS, etc. "
 "<https://www.ogc.org/publications>`_ thus it can be used by a wide variety "
@@ -1336,11 +1352,11 @@ msgstr ""
 "<https://www.ogc.org/publications>`_ och kan därför användas av ett stort "
 "antal olika slutanvändarverktyg."
 
-#: ../../docs/server_manual/getting_started.rst:1033
+#: ../../docs/server_manual/getting_started.rst:1054
 msgid "Integration with QGIS Desktop"
 msgstr "Integration med QGIS Desktop"
 
-#: ../../docs/server_manual/getting_started.rst:1035
+#: ../../docs/server_manual/getting_started.rst:1056
 msgid ""
 "QGIS Desktop is the map designer where QGIS Server is the map server. The "
 "maps or QGIS projects will be served by the QGIS Server to provide OGC "
@@ -1354,7 +1370,7 @@ msgstr ""
 " databas (genom att använda :menuselection:`Project --> Save to --> "
 "PostgreSQL` i QGIS Desktop)."
 
-#: ../../docs/server_manual/getting_started.rst:1040
+#: ../../docs/server_manual/getting_started.rst:1061
 msgid ""
 "Furthermore, dedicated update workflow must be established to refresh a "
 "project used by a QGIS Server (ie. copy project files into server location "
@@ -1367,11 +1383,11 @@ msgstr ""
 "är automatiserade processer (som serveromladdning via Message Queue Service)"
 " ännu inte implementerade."
 
-#: ../../docs/server_manual/getting_started.rst:1047
+#: ../../docs/server_manual/getting_started.rst:1068
 msgid "Integration with MapProxy"
 msgstr "Integration med MapProxy"
 
-#: ../../docs/server_manual/getting_started.rst:1049
+#: ../../docs/server_manual/getting_started.rst:1070
 msgid ""
 "`MapProxy <https://www.mapproxy.org/>`_ is a tile cache server and as it can"
 " read and serve any WMS/WMTS map server, it can be directly connected to "
@@ -1381,11 +1397,11 @@ msgstr ""
 "den kan läsa och betjäna alla WMS/WMTS-kartservrar kan den anslutas direkt "
 "till QGIS-serverns webbtjänster och förbättra slutanvändarens upplevelse."
 
-#: ../../docs/server_manual/getting_started.rst:1055
+#: ../../docs/server_manual/getting_started.rst:1076
 msgid "Integration with QWC2"
 msgstr "Integration med QWC2"
 
-#: ../../docs/server_manual/getting_started.rst:1057
+#: ../../docs/server_manual/getting_started.rst:1078
 msgid ""
 "`QWC2 <https://github.com/qgis/qwc2>`_ is a responsive web application "
 "dedicated to QGIS Server. It helps you to build a highly customized map "
