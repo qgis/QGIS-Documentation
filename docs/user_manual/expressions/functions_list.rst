@@ -1302,6 +1302,8 @@ To use these variables in an expression, they should be preceded by the
    "band_name", "The name of the band in the raster layer"
    "canvas_cursor_point", "The last cursor position on the canvas in the
    project's geographical coordinates"
+   "chart_category", "The chart item category, e.g. 'fruit' or 'june'."
+   "chart_value", "The chart item value."
    "cluster_color", "The color of symbols within a cluster, or NULL if
    symbols have mixed colors"
    "cluster_size", "The number of symbols contained within a cluster"
@@ -1415,7 +1417,7 @@ To use these variables in an expression, they should be preceded by the
    "parent", "Refers to the current feature in the parent layer, providing access to
    its attributes and geometry when filtering an :ref:`aggregate <aggregates_function>` function"
    "plot_axis", "The associated plot axis, e.g. 'x' or 'y'."
-   "plot_axis_value", "The current value for the plot axis."
+   "plot_axis_value", "The current value for the plot axis grid line."
    "project_abstract", "The project abstract, taken from project metadata"
    "project_area_units", "The area unit for the current project, used when
    calculating areas of geometries"
