@@ -2860,6 +2860,12 @@ with the field type. The available widgets are:
   or a specific :guilabel:`Field` of the layer.
   Enable the |checkbox| :guilabel:`Descending order` if you wish the values to be sorted in reverse order.
 
+  Some widget types provide a "representable value" for the field. 
+  That means the stored value (e.g., an integer ID) can be displayed 
+  in a more user-friendly way (e.g., a descriptive label).
+  These represented values are also used in other parts of QGIS,
+  such as classification renderers or labeling, instead of the raw field values.
+
   Several options are available to change the standard behavior:
   allow NULL value, allow multiple selections and use of auto-completer. The forms will display either
   a drop-down list or a line edit field when completer checkbox is enabled.
