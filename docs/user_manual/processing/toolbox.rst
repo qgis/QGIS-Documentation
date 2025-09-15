@@ -134,7 +134,13 @@ The parameters found in the table can be of one of the following types.
      :align: center
 
      Vector input widget
+  .. tip::
 
+   Besides selecting from the drop-down menu or browsing sources,
+   you can also **drag and drop a layer from the Layers panel
+   directly into the combobox**.  
+   This provides a quick and convenient alternative to selecting
+   the layer from the list.
   .. note::
 
      By default, the layer widget shows the CRS of the layer along with its name.
