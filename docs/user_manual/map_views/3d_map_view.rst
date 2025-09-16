@@ -42,7 +42,11 @@ The following tools are provided at the top of the 3D map view panel:
   navigation widget (that is meant to ease controlling of the map view)
 * |identify| :sup:`Identify`: returns information on the clicked point
   of the terrain or the clicked 3D feature(s) -- More details at :ref:`identify`
-* |measure| :sup:`Measurement Line`: measures the horizontal distance between points
+* |measure| :sup:`Measurement Line`: measures the horizontal, vertical, and total 3D distance between points
+
+  * Click to add points
+  * Right-click to finish the measurement
+  * Double-right-click will reset the table
 * |play| :sup:`Animations`: shows/hides the :ref:`animation player
   <create_animation>` widget
 * |sharingExport| :sup:`Export` menu allows to export the scene to various formats:
