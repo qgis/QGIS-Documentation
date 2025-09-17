@@ -725,6 +725,52 @@ to create and edit a metadata report on your layer.
 See :ref:`metadatamenu` for more information.
 
 
+.. _exploring_mesh:
+
+Exploring mesh datasets
+========================
+
+Using the identify tools
+------------------------
+
+To identify mesh elements and their associated datasets, use the
+|identify| :guilabel:`Identify Features` tool from the :guilabel:`Attributes` toolbar.
+Click on a mesh element in the map canvas and the :guilabel:`Identify Results` panel
+opens, displaying information about the mesh layer and the identified element. The panel shows:
+
+* **Dataset values** for the clicked element:
+  
+  * The active dataset groups (scalar and, if available, vector) 
+    at the current time defined by the :guilabel:`Temporal Controller`.
+  * Other dataset groups are also listed after the active ones.
+
+* **Source** of the dataset (the file where it is stored).
+
+* **Time step** of the dataset value being displayed.  
+  This may differ from the current time in the temporal controller if
+  the dataset has a different temporal resolution. For non-temporal 
+  dataset groups, this field remains empty.
+
+* **Vector x-component** and **Vector y-component** values for vector datasets.
+
+* **Geometry information** of the identified element:
+  
+  * Centroid of the face.
+  * Coordinates of a snapped vertex (if the click was snapped to a vertex).
+  * Center of a snapped edge (if the click was snapped to an edge).
+
+When the map canvas is non-temporal (temporal navigation disabled),
+the results only contain values from the static dataset groups defined 
+in the mesh layer properties.
+
+.. _figure_mesh_identify:
+
+.. figure:: img/mesh_identify.png
+   :align: center
+
+   Mesh Identify Results panel
+
+
 .. _editing_mesh:
 
 Editing a mesh layer
@@ -1322,6 +1368,8 @@ the expression to execute.
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
 .. |general| image:: /static/common/general.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |labelbackground| image:: /static/common/labelbackground.png
    :width: 1.5em
