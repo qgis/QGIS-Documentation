@@ -80,7 +80,7 @@ using functions, layer fields and values. It contains the following widgets:
 
   * |fileNew|:sup:`Clear the expression editor`
   * Create and manage :ref:`user expressions <user_expressions_functions>`
-  * Turn active line(s) in the expression editor into comments by pressing the :kbd:`--` button.
+  * Turn active line(s) in the expression editor into comments by pressing the |toggleComment| :sup:`Toggle Comment on Selected Lines` button.
     Pressing again will deactivate the comment.
 
     .. tip:: **Document your expression with comments**
@@ -496,4 +496,6 @@ Further information about creating Python code can be found in the
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |toggleComment| image:: /static/common/toggle_comment.png
    :width: 1.5em
