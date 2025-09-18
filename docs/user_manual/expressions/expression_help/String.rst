@@ -604,6 +604,44 @@ Returns a part of a string.
 
 .. end_substr_section
 
+.. _expression_function_String_substr_count:
+
+substr_count
+............
+
+Counts the number of occurrences of a substring within a string. By default, the function counts non-overlapping occurrences (like in Python). If the third argument is set to true, the function counts overlapping occurrences (like in QT).
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - substr_count(input, substring, [overlapping=False])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **input** - The input string to search in.
+       * **substring** - The substring to search for.
+       * **overlapping** - Optional flag to control whether overlapping occurrences should be counted. Defaults to FALSE (non-overlapping counting). Set to TRUE to count overlapping occurrences.
+   * - Examples
+     - * ``substr_count('banana', 'an')`` → 2
+
+         Counts non-overlapping occurrences of 'an' in 'banana'.
+       * ``substr_count('Funniness', 'n')`` → 3
+
+         Counts non-overlapping occurrences of 'n' in 'Funniness'.
+       * ``substr_count('aaaaa', 'aa')`` → 2
+
+         Counts non-overlapping occurrences of 'aa' in 'aaaaa'.
+       * ``substr_count('aaaaa', 'aa', true)`` → 4
+
+         Counts overlapping occurrences of 'aa' in 'aaaaa'. The substring 'aa' appears four times in an overlapping fashion.
+       * ``substr_count('BANANA', 'an')`` → 0
+
+         Counts non-overlapping occurrences of 'an' in 'BANANA'. Case-sensitive, so no match.
+
+
+.. end_substr_count_section
+
 .. _expression_function_String_title:
 
 title
