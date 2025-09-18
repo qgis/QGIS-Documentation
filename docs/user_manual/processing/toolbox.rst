@@ -208,6 +208,12 @@ The parameters found in the table can be of one of the following types.
 * A **coordinate reference system**. You can select it among the recently used
   ones from the drop-down list or from the :ref:`CRS selection <crs_selector>`
   dialog that appears when you click on the button on the right-hand side.
+
+ .. tip::
+
+     You can also drag a layer from the Layers panel and drop it onto the CRS
+     widget. The widget will automatically set its CRS to match the dropped layer.
+
 * An **extent**, a text box defining a rectangle through its corners coordinate
   in the format ``xmin, xmax, ymin, ymax``. Press the |mapIdentification|
   :sup:`Set to current map canvas extent` button to use the map canvas
