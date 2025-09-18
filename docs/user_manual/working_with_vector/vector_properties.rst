@@ -398,6 +398,13 @@ To use categorized symbology for a layer:
     for some complex expressions it might be simpler to use :ref:`rule-based
     rendering <rule_based_rendering>`.
 
+   .. note:: Keep in mind that some values may use widgets that
+    do not display the actual value stored in the field. For example,
+    a checkbox widget may store ``1`` and ``0`` for checked and unchecked
+    states, while displaying ``True`` and ``False`` labels. In this case,
+    to categorize features based on the checkbox state, you need to use
+    the stored values (``1`` and ``0``) in the expression.
+
 #. Configure the :ref:`Symbol <symbol-selector>`, which will be used as
    base symbol for all the classes;
 #. Indicate the :ref:`Color ramp <color-ramp>`, i.e. the range of colors from which
@@ -2771,6 +2778,11 @@ with the field type. The available widgets are:
   It is also possible to preview the embedded binary file in the field,
   if combined in a drag-and-drop form with e.g. a :ref:`QML or HTML widget <other_widgets>`.
 * **Checkbox**: Displays a checkbox whose state defines the value to insert.
+  Internally, the widget stores a value (e.g. 1 for checked, 0 for unchecked)
+  while representing it visually as a toggled box. You can configure the
+  stored values for the checked and unchecked states in the representation.
+  It is also possible to display the checkbox state as a plain text using "True"/"False" labels.
+  These settings influence how the values are shown in classification renderers.
 * **Classification**: Only available when a :ref:`categorized symbology
   <categorized_renderer>` is applied to the layer, displays a combo box with
   the values of the classes.
@@ -2836,6 +2848,8 @@ with the field type. The available widgets are:
   is set. It provides direct access to the parent feature's form which in turn
   embeds the list and form of its children. The number of entries in the widget
   can be limited for efficiency, and if limit is not set, all entries will be loaded.
+  The field defined in the display expression is used as representable value in classification
+  renderers.
 * **Text Edit** (default): This opens a text edit field that allows simple
   text or multiple lines to be used. If you choose multiple lines you
   can also choose html content.
@@ -2847,6 +2861,8 @@ with the field type. The available widgets are:
 * **Value Map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
+  The description is used as the representable value,
+  meaning it will be shown in classification renderers.
   
   .. note::
 
@@ -2855,16 +2871,13 @@ with the field type. The available widgets are:
 
 * **Value Relation**: Offers values from a related table in a combobox.
   You can select layer, key column and value column.
+  The key column is the stored value in the attribute table,
+  while the value column is the label shown in the combobox.
+  Value column is also the representable value that will be shown in the classification renderers.
   You may also choose to order the list of displayed values
   by the :guilabel:`Key` column (the default sort order), the :guilabel:`Value` column,
   or a specific :guilabel:`Field` of the layer.
   Enable the |checkbox| :guilabel:`Descending order` if you wish the values to be sorted in reverse order.
-
-  Some widget types provide a "representable value" for the field. 
-  That means the stored value (e.g., an integer ID) can be displayed 
-  in a more user-friendly way (e.g., a descriptive label).
-  These represented values are also used in other parts of QGIS,
-  such as classification renderers or labeling, instead of the raw field values.
 
   Several options are available to change the standard behavior:
   allow NULL value, allow multiple selections and use of auto-completer. The forms will display either
