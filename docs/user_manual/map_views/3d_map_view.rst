@@ -74,6 +74,10 @@ The following tools are provided at the top of the 3D map view panel:
   * :guilabel:`Set 3D scene on 2D map view`: allows to clip the 3D scene
     and display only the terrain and features intersecting an extent drawn on the 2D map canvas.
     More options are available in the :ref:`General configuration <scene_extent>` tab.
+  * |editCut| :sup:`Cross Section Tool` creates a cross section in 3D scene by defining a line on the terrain.
+    Click to set the start point, move the mouse to define the line direction
+    and click again to set the end point. Press :kbd:`Esc` or right-click to reset the selection.
+  * Use |editCutDisabled| :sup:`Disable Cross Section` to remove the cross section.
 * |shadow| :sup:`Effects` adds visual effects to the 3D rendering,
   such as showing :ref:`shadows <shadows>`, :ref:`eye dome lighting <eye_dome_lighting>`
   or :ref:`ambient occlusion <ambient_occlusion>`.
@@ -493,6 +497,10 @@ the 3D vector layer.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editCutDisabled| image:: /static/common/mActionEditCutDisabled.png
+   :width: 1.5em
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
