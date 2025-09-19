@@ -1239,10 +1239,18 @@ Outputs
    * - **Small angle errors**
      - ``ERRORS``
      - [vector: point]
-     - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the ID, geometry part,
-       ring and vertex index of the erroneous feature,
-       x and y coordinates of the error and the value of the erroneous angle).
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the index of the feature's geometry part containing the small angle.
+       - ``gc_ringidx``: the index of the feature's geometry ring containing the small angle.
+       - ``gc_vertidx``: the index of the vertex with the small angle in the feature's geometry ring.
+       - ``gc_errorx``: the x coordinate of the vertex with the small angle.
+       - ``gc_errory``: the y coordinate of the vertex with the small angle.
+       - ``gc_error``: the error angle value.
+       - ``UNIQUE_ID`` field: the unique ID of the input feature with the small angle.
 
 Python code
 ...........
