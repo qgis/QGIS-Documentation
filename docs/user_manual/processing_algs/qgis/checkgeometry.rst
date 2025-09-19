@@ -116,7 +116,7 @@ Outputs
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the dangle-end.
        - ``gc_ringidx``: the index of the feature's geometry ring containing the dangle-end.
-       - ``gc_vertidx``: the vertex index of the dangle-end in the feature.
+       - ``gc_vertidx``: the vertex index of the dangle-end in the feature's geometry ring.
        - ``gc_errorx``: the x coordinate of the dangle-end.
        - ``gc_errory``: the y coordinate of the dangle-end.
        - ``gc_error``
@@ -360,7 +360,7 @@ Outputs
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the duplicate vertex.
        - ``gc_ringidx``: the index of the feature's geometry ring containing the duplicate vertex.
-       - ``gc_vertidx``
+       - ``gc_vertidx``: the index of the duplicate vertex in the feature's geometry ring.
        - ``gc_errorx``: the x coordinate of the duplicate vertex.
        - ``gc_errory``: the y coordinate of the duplicate vertex.
        - ``gc_error``
@@ -1367,7 +1367,7 @@ Outputs
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the small segment.
        - ``gc_ringidx``: the index of the feature's geometry ring containing the small segment.
-       - ``gc_vertidx``: the index of the end vertex of the small segment in the input geometry.
+       - ``gc_vertidx``: the index of the end vertex of the small segment in the feature's geometry ring.
        - ``gc_errorx``: the x coordinate of the centroid of the small segment.
        - ``gc_errory``: the y coordinate of the centroid of the small segment.
        - ``gc_error``: the error segment length.
