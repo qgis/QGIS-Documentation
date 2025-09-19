@@ -383,9 +383,13 @@ Outputs
        - ``gc_errorx``: the x coordinate of the centroid of the overlapping area.
        - ``gc_errory``: the y coordinate of the centroid of the overlapping area.
        - ``gc_error``: the area of the overlapping geometry.
-       - ``report``: a text field describing the fix applied.
        - ``UNIQUE_ID`` field: the unique ID of the unique ID of an overlapped input feature.
        - ``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the other overlapping feature.
+       - ``report``: a text field describing the fix applied or justifying the failure.
+         Possible values are:
+
+         * Remove overlapping area from neighboring polygon with shortest shared edge
+         * Error is obsolete
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **No-overlap layer**
      - ``OUTPUT``
