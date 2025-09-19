@@ -127,6 +127,7 @@ Outputs
      - [vector: line]
      - Output line layer containing the input dangle-end features.
        If no dangle-end features are found, the output layer will be empty.
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -752,7 +753,7 @@ Outputs
      - [vector: line]
      - Output layer containing, for each identified intersection, the feature (with same ``UNIQUE_ID`` value) it belongs to.
        If no intersections are found, the output layer will be empty.
-       Additional fields are available (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -879,7 +880,7 @@ Outputs
      - [vector: line]
      - Output layer containing, for each identified intersection, the input feature it belongs to.
        If no intersections are found, the output layer will be empty.
-       Additional fields are available (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -1008,7 +1009,7 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output layer containing the overlapping areas.
-       Additional fields are available (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -1385,7 +1386,7 @@ Outputs
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer containing, for each identified short segment, the feature it belongs to.
-       Additional fields are available (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
