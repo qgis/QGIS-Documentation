@@ -126,8 +126,8 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the duplicate vertex.
@@ -138,6 +138,7 @@ Outputs
        - ``gc_error``
        - ``report``: a text field describing the fix applied.
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that has duplicate vertices.
    * - **Fixed duplicate vertices layer**
      - ``OUTPUT``
      - [vector: same as input]
@@ -235,8 +236,8 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``
@@ -247,6 +248,7 @@ Outputs
        - ``gc_error``: the index of the feature where the error belongs.
        - ``report``: a text field describing the fix applied.
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
+       - ``UNIQUE_ID`` field: the unique ID of the input feature with the error.
    * - **Cleaned layer**
      - ``OUTPUT``
      - [vector: same as input]
@@ -372,15 +374,16 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_errorx``: the x coordinate of the centroid of the overlapping area.
        - ``gc_errory``: the y coordinate of the centroid of the overlapping area.
        - ``gc_error``: the area of the overlapping geometry.
-       - ``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the overlapping feature.
        - ``report``: a text field describing the fix applied.
+       - ``UNIQUE_ID`` field: the unique ID of the unique ID of an overlapped input feature.
+       - ``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the other overlapping feature.
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **No-overlap layer**
      - ``OUTPUT``
@@ -822,8 +825,8 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part where the self-intersection occurs.
@@ -834,6 +837,7 @@ Outputs
        - ``gc_error``
        - ``gc_segment_1``: the index of the first segment involved in the intersection.
        - ``gc_segment_2``: the index of the second segment involved in the intersection.
+       - ``UNIQUE_ID`` field: the unique ID of the self-intersecting input feature.
        - ``report``: a text field describing the fix applied.
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **Self-intersections fixed layer**
