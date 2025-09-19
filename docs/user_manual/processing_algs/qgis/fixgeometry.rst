@@ -126,22 +126,24 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the duplicate vertex.
        - ``gc_ringidx``: the index of the feature's geometry ring containing the duplicate vertex.
-       - ``gc_vertidx``: the index of the duplicate vertex in the feature.
+       - ``gc_vertidx``: the index of the duplicate vertex in the feature's geometry ring.
        - ``gc_errorx``: the x coordinate of the duplicate vertex.
        - ``gc_errory``: the y coordinate of the duplicate vertex.
        - ``gc_error``
        - ``report``: a text field describing the fix applied.
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that has duplicate vertices.
    * - **Fixed duplicate vertices layer**
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer with the geometry fix applied to the input features.
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
@@ -235,8 +237,8 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``
@@ -247,10 +249,12 @@ Outputs
        - ``gc_error``: the index of the feature where the error belongs.
        - ``report``: a text field describing the fix applied.
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
+       - ``UNIQUE_ID`` field: the unique ID of the input feature with the error.
    * - **Cleaned layer**
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer with features removed based on detected errors.
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
@@ -372,21 +376,27 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_errorx``: the x coordinate of the centroid of the overlapping area.
        - ``gc_errory``: the y coordinate of the centroid of the overlapping area.
        - ``gc_error``: the area of the overlapping geometry.
-       - ``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the overlapping feature.
-       - ``report``: a text field describing the fix applied.
+       - ``UNIQUE_ID`` field: the unique ID of the unique ID of an overlapped input feature.
+       - ``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the other overlapping feature.
+       - ``report``: a text field describing the fix applied or justifying the failure.
+         Possible values are:
+
+         * Remove overlapping area from neighboring polygon with shortest shared edge
+         * Error is obsolete
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **No-overlap layer**
      - ``OUTPUT``
      - [vector: polygon]
      - Output layer with input features edited.
        Overlapping areas reported as errors are removed.
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
@@ -523,13 +533,26 @@ Outputs
    * - **Report layer from fixing small angles**
      - ``REPORT``
      - [vector: point]
-     - Output point layer representing the error locations and fix applied
-       (the ID and name of the input layer, the ID, geometry part, ring and vertex index of the erroneous feature,
-       x and y coordinates and value of the erroneous angle, the applied fix and its successfulness).
+     - Output point layer representing the error locations and fix applied.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the index of the feature's geometry part containing the small angle.
+       - ``gc_ringidx``: the index of the feature's geometry ring containing the small angle.
+       - ``gc_vertidx``: the index of the vertex with the small angle in the feature's geometry ring.
+       - ``gc_errorx``: the x coordinate of the vertex with the small angle.
+       - ``gc_errory``: the y coordinate of the vertex with the small angle.
+       - ``gc_error``: the error angle value.
+       - ``UNIQUE_ID`` field: the unique ID of the input feature with the small angle.
+       - ``report``: a text field describing the fix applied or justifying the failure.
+       - ``error_fixed``: a boolean field indicating whether the error was fixed.
+
    * - **Small angle fixed layer**
      - ``OUTPUT``
      - [same as input]
      - Output layer with the geometry fix applied to the input features
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
@@ -660,13 +683,26 @@ Outputs
    * - **Report layer from fixing holes**
      - ``REPORT``
      - [vector: point]
-     - Output point layer representing the error locations and fix applied
-       (the ID and name of the input layer, the geometry part, ring and vertex index of the erroneous feature,
-       x and y coordinates of the error, the applied fix and its successfulness).
+     - Output point layer representing the error locations and fix applied.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the index of the feature's geometry part containing the hole.
+       - ``gc_ringidx``: the index of the feature's geometry ring containing the hole.
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the centroid of the hole.
+       - ``gc_errory``: the y coordinate of the centroid of the hole.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that has a hole.
+       - ``report``: a text field describing the fix applied or justifying the failure.
+       - ``error_fixed``: a boolean field indicating whether the error was fixed.
+
    * - **Holes-filled layer**
      - ``OUTPUT``
      - [vector: polygon]
      - Output layer of polygons without holes.
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
@@ -822,8 +858,8 @@ Outputs
      - ``REPORT``
      - [vector: point]
      - Output point layer representing the error locations and fix applied.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part where the self-intersection occurs.
@@ -834,12 +870,14 @@ Outputs
        - ``gc_error``
        - ``gc_segment_1``: the index of the first segment involved in the intersection.
        - ``gc_segment_2``: the index of the second segment involved in the intersection.
+       - ``UNIQUE_ID`` field: the unique ID of the self-intersecting input feature.
        - ``report``: a text field describing the fix applied.
        - ``error_fixed``: a boolean field indicating whether the error was fixed.
    * - **Self-intersections fixed layer**
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer with the geometry fix applied to the input features.
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
