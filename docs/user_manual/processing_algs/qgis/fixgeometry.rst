@@ -143,6 +143,7 @@ Outputs
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer with the geometry fix applied to the input features.
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
@@ -253,6 +254,7 @@ Outputs
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer with features removed based on detected errors.
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
@@ -390,6 +392,7 @@ Outputs
      - [vector: polygon]
      - Output layer with input features edited.
        Overlapping areas reported as errors are removed.
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
@@ -545,6 +548,7 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output layer with the geometry fix applied to the input features
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
@@ -694,6 +698,7 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output layer of polygons without holes.
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
@@ -868,6 +873,7 @@ Outputs
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer with the geometry fix applied to the input features.
+       The layer contains the same fields as in the input layer.
 
 Python code
 ...........
