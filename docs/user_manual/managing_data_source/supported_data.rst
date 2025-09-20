@@ -49,14 +49,14 @@ Vector Data
 ===========
 
 Many of the features and tools available in QGIS work the same,
-regardless the vector data source.
+regardless of the vector data source.
 However, because of the differences in format specifications
 (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file formats,
 AutoCAD DXF, PostgreSQL, SpatiaLite, Oracle Spatial, MS SQL Server,
 SAP HANA Spatial databases and many more), QGIS may handle some of
 their properties differently. Support is provided by the
 `GDAL vector drivers <https://gdal.org/en/latest/drivers/vector/index.html>`_.
-This section describes how to work with these specifics.
+This section describes how to work with some of these specifics.
 
 .. note::
 
