@@ -268,7 +268,7 @@ Icon                            Substitution                        Icon        
 |formSelect|                    ``|formSelect|``                    |dataDefine|                    ``|dataDefine|``
 |expression|                    ``|expression|``                    |dataDefineOn|                  ``|dataDefineOn|``
 |dataDefineExpressionOn|        ``|dataDefineExpressionOn|``        |dataDefineError|               ``|dataDefineError|``
-|dataDefineExpressionError|     ``|dataDefineExpressionError|``
+|dataDefineExpressionError|     ``|dataDefineExpressionError|``     |toggleComment|                 ``|toggleComment|``
 |addExpression|                 ``|addExpression|``
 |expressionFilter|              ``|expressionFilter|``              |filterMap|                     ``|filterMap|``
 ==============================  ==================================  ==============================  ==================================
@@ -1675,6 +1675,8 @@ Icon                            Substitution                        Icon        
 .. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
 .. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
+   :width: 1.5em
+.. |toggleComment| image:: /static/common/toggle_comment.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
