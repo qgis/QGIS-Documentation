@@ -46,7 +46,7 @@ The following tools are provided at the top of the 3D map view panel:
 
   * Click to add points
   * Right-click to finish the measurement
-  * Double-right-click will reset the table
+  * Right-clicking twice or pressing :guilabel:`New` will reset the table
 * |play| :sup:`Animations`: shows/hides the :ref:`animation player
   <create_animation>` widget
 * |sharingExport| :sup:`Export` menu allows to export the scene to various formats:
