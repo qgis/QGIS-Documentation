@@ -135,6 +135,11 @@ The parameters found in the table can be of one of the following types.
 
      Vector input widget
 
+  .. tip:: **Drag-and drop as convenient alternative for layer selection**
+
+   Besides selecting from the drop-down menu or browsing sources,
+   you can also drag and drop a layer from the :guilabel:`Layers` or :guilabel:`Browser` panel,
+   or from the Operating System file explorer directly into the combobox.  
   .. note::
 
      By default, the layer widget shows the CRS of the layer along with its name.

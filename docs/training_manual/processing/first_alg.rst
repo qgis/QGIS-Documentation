@@ -46,9 +46,11 @@ All algorithms have a similar interface, which basically contains input
 parameters that you have to fill, and outputs that you have to select where to
 store. In this case, the only input we have is a vector layer with polygons.
 
-Select the *Polygons* layer as input. The algorithm has a single output, which
+Select the *Polygons* layer as input. This also can be done by dragging
+and dropping the layer from the layers panel to the input box.
+The algorithm has a single output, which
 is the centroids layer. There are two options to define where a data output is
-saved: enter a filepath or save it to a temporary filename
+saved: enter a filepath or save it to a temporary filename.
 
 In case you want to set a destination and not save the result in a temporary
 file, the format of the output is defined by the filename extension. To select
