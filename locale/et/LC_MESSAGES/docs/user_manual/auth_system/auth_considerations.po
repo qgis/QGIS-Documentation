@@ -32,3 +32,115 @@ msgstr ""
 "Tõlge on kogukonna pingutus `saate liituda "
 "<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
 "translator>`_. Seda lehekülge tõlgitakse hetkel |translation progress|."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:4
+msgid "Security Considerations"
+msgstr "Turvalisuse kaalutlused"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:11
+msgid ""
+"Once the master password is entered, the API is open to access "
+"authentication configs in the authentication database, similar to how "
+"Firefox works. However, in the initial implementation, no wall against "
+"PyQGIS access has been defined. This may lead to issues where a user "
+"downloads/installs a malicious PyQGIS plugin or standalone app that gains "
+"access to authentication credentials."
+msgstr ""
+"Kui põhiparool on sisestatud, on API avatud autentimiskonfiguratsioonidele "
+"autentimisandmebaasis, sarnaselt Firefoxi toimimisele. Esialgses rakenduses "
+"pole aga PyQGIS-i juurdepääsu takistavat seina määratletud. See võib "
+"põhjustada probleeme, kus kasutaja laadib alla/installib pahatahtliku "
+"PyQGIS-i plugina või eraldiseisva rakenduse, mis saab juurdepääsu "
+"autentimismandaatidele."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:17
+msgid ""
+"The quick solution for initial release of feature is to just not include "
+"most PyQGIS bindings for the authentication system."
+msgstr ""
+"Funktsiooni esmase väljalaske kiireim lahendus on enamiku PyQGIS-i "
+"autentimissüsteemi sidumiste väljajätmine."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:28
+msgid ""
+"Such an option's setting would need to be saved in a location non-accessible"
+" to Python, e.g. the authentication database, and encrypted with the master "
+"password."
+msgstr ""
+"Sellise valiku säte tuleks salvestada Pythonile ligipääsmatusse kohta, nt "
+"autentimisandmebaasi, ja krüpteerida master parooliga."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:32
+msgid "Another option may be to track which plugins the user has specifically"
+msgstr ""
+"Teine võimalus on jälgida, millised pluginad kasutajal konkreetselt on"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:33
+msgid ""
+"allowed to access the authentication system, though it may be tricky to "
+"deduce which plugin is actually making the call."
+msgstr ""
+"juurdepääsu lubanud, kuigi võib olla keeruline järeldada, milline plugin "
+"tegelikult kutse teeb."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:42
+msgid ""
+"Another good solution is to issue code-signing certificates to vetted plugin"
+" authors. Then validate the plugin's certificate upon loading. If need be "
+"the user can also directly set an untrusted policy for the certificate "
+"associated with the plugin using existing certificate management dialogs."
+msgstr ""
+"Teine hea lahendus on väljastada koodiallkirjastamise sertifikaadid "
+"kontrollitud pluginate autoritele. Seejärel valideerida plugina sertifikaat "
+"laadimisel. Vajadusel saab kasutaja olemasolevate sertifikaatide haldamise "
+"dialoogide abil pluginaga seotud sertifikaadile otse määrata "
+"ebausaldusväärse poliitika."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:47
+msgid ""
+"Alternatively, access to sensitive authentication system data from Python"
+msgstr ""
+"Alternatiivse võimalusena ei saaks Pythonist kunagi lubada juurdepääsu "
+"tundlikele autentimissüsteemi andmetele"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:48
+msgid ""
+"could never be allowed, and only the use of QGIS core widgets, or "
+"duplicating authentication system integrations, would allow the plugin to "
+"work with resources that have an authentication configuration, while keeping"
+" master password and authentication config loading in the realm of the main "
+"app."
+msgstr ""
+"ning ainult QGIS-i põhividinate kasutamine või autentimissüsteemi "
+"integratsioonide dubleerimine võimaldaks pluginal töötada ressurssidega, "
+"millel on autentimiskonfiguratsioon, hoides samal ajal peaparooli ja "
+"autentimiskonfiguratsiooni laadimise põhirakenduse valdkonnas."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:54
+msgid ""
+"The same security concerns apply to C++ plugins, though it will be harder to"
+" restrict access, since there is no function binding to simply be removed as"
+" with Python."
+msgstr ""
+"Samad turvaprobleemid kehtivad ka C++ pluginate kohta, kuigi juurdepääsu "
+"piiramine on raskem, kuna puudub funktsiooni sidumine, mida saaks lihtsalt "
+"eemaldada nagu Pythoni puhul."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:59
+msgid "Restrictions"
+msgstr "Piirangud"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:66
+msgid ""
+"QCA follows a similar tactic, whereby linking to QCA incurs no restrictions,"
+" because the qca-ossl (OpenSSL) plugin is loaded at run-time. The qca-ossl "
+"plugin is directly linked to the OpenSSL libs. Packagers would be the ones "
+"needing to ensure any OpenSSL-linking restrictions are met, if they ship the"
+" plugin. Maybe.  I don't really know. I'm not a lawyer."
+msgstr ""
+"QCA järgib sarnast taktikat, mille kohaselt QCA-ga linkimine ei too kaasa "
+"mingeid piiranguid, kuna qca-ossl (OpenSSL) plugin laaditakse käitusajal. "
+"Qca-ossl plugin on otse lingitud OpenSSL-i teekidega. Pakendajad peaksid "
+"plugina kättesaadavaks tegemisel tagama, et kõik OpenSSL-i linkimise "
+"piirangud oleksid täidetud. Võib-olla. Ma ei tea päris täpselt. Ma ei ole "
+"jurist."

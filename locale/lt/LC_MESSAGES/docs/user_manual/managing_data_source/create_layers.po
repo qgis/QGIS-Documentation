@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-31 09:36+0200\n"
+"POT-Creation-Date: 2025-07-18 12:17+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -72,54 +72,135 @@ msgstr ""
 msgid "Creating new vector layers"
 msgstr "Naujų vektorinių sluoksnių kūrimas"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:822
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:31
+msgid ""
+"QGIS allows you to create new layers in different formats. It provides tools"
+" for creating GeoPackage, Shapefile, SpatiaLite, GPX format and Temporary "
+"Scratch layers (aka memory layers). Creation of a :ref:`new GRASS layer "
+"<creating_new_grass_vectors>` is supported within the GRASS plugin."
+msgstr ""
+"QGIS leidžia jums kurti naujus sluoksnius skirtingais formatais. Jis teikia "
+"įrankius, leidžiančius kurti GeoPackage, Shapefile, SpatiaLite, GPX "
+"formatais ir Laikinus juodraštinius sluoksnius (dar žinomus kaip atminties "
+"sluoksniai). :ref:`Naujo GRASS sluoksnio <creating_new_grass_vectors>` "
+"kūrimas palaikomas iš GRASS priedo."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:42
+msgid "Creating a new GeoPackage layer"
+msgstr "Naujo GeoPackage sluoksnio kūrimas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:44
+msgid ""
+"To create a new GeoPackage layer, press the |newGeoPackageLayer| "
+":menuselection:`New GeoPackage Layer...` button in the :menuselection:`Layer"
+" --> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. You can also create a new GeoPackage layer through the "
+":guilabel:`Browser Panel` by selecting the :guilabel:`Create Database and "
+"Layer...`. The :guilabel:`New GeoPackage Layer` dialog will be displayed as "
+"shown in :numref:`figure_create_geopackage`."
+msgstr ""
+"Kad sukurtumėte naują GeoPackage sluoksnį, spauskite mygtuką "
+"|newGeoPackageLayer| :menuselection:`Naujas GeoPackage sluoksnis...`, kurį "
+"rasite meniu :menuselection:`Sluoksnis --> Kurti sluoksnį -->` arba "
+"įrankinėje :guilabel:`Duomenų šaltinių tvarkyklė`. Taipogi galite sukurti "
+"naują GeoPackage sluoksnį :guilabel:`Naršyklės skydelyje` parinktę "
+":guilabel:`Kurti duomenų bazę ir sluoksnį...`. Bus parodytas dialogas "
+":guilabel:`Naujas GeoPackage sluoksnis`, kaip matome paveiksle "
+":numref:`figure_create_geopackage`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:835
 msgid "newGeoPackageLayer"
 msgstr "newGeoPackageLayer"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:832
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:58
+msgid "Creating a New GeoPackage layer dialog"
+msgstr "Naujo GeoPackage sluoksnio kūrimo dialogas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:60
+msgid ""
+"The first step is to indicate the database file location. This can be done "
+"by pressing the :guilabel:`...` button to the right of the "
+":guilabel:`Database` field and select an existing GeoPackage file or create "
+"a new one. QGIS will automatically add the right extension to the name you "
+"provide."
+msgstr ""
+"Pirmas žingsnis yra nurodyti duomenų bazės failo vietą. Tai galima padaryti "
+"paspaudus mygtuką :guilabel:`...`, kuris yra lauko :guilabel:`Duombazė` "
+"dešinėje ir parinkus esamą GeoPackage failą arba sukūrus naują. QGIS "
+"automatiškai pridės reikiamą plėtinį prie jūsų nurodyto pavadinimo."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:65
+msgid "Give the new layer / table a name (:guilabel:`Table name`)"
+msgstr ""
+"Nurodykite naujo sluoksnio / lentelės pavadinimą (:guilabel:`Lentelės "
+"pavadinimas`)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:66
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:175
+msgid ""
+"Define the :guilabel:`Geometry type`. If not a geometryless layer, you can "
+"specify whether it should :guilabel:`Include Z dimension` and/or "
+":guilabel:`Include M values`."
+msgstr ""
+"Apibrėžkite :guilabel:`Geometrijos tipą`. Jei tai nėra sluoksnis be "
+"geometrijos, jūs galite nurodyti, ar jame turi reikia :guilabel:`Įtraukti Z "
+"matmenį` ir/ar :guilabel:`Įtraukti M reikšmes`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:69
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:122
+msgid ""
+"Specify the coordinate reference system using the |setProjection| button"
+msgstr ""
+"Naudodami mygtuką |setProjection| nurodykite koordinačių atskaitos sistemą"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:845
 msgid "setProjection"
 msgstr "setProjection"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:820
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:833
 msgid "newAttribute"
 msgstr "newAttribute"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:830
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:843
 msgid "newVectorLayer"
 msgstr "newVectorLayer"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:828
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:841
 msgid "newSpatiaLiteLayer"
 msgstr "newSpatiaLiteLayer"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:814
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:823
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:826
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:839
 msgid "newMeshLayer"
 msgstr "newMeshLayer"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:824
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:837
 msgid "newGpx"
 msgstr "newGpx"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:816
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:825
 msgid "createMemory"
 msgstr "createMemory"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:818
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:827
 msgid "indicatorMemory"
 msgstr "indicatorMemory"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:810
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:363
+msgid "Common parameters"
+msgstr "Bendri parametrai"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:819
 msgid "addPart"
 msgstr "addPart"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:834
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:847
 msgid "unchecked"
 msgstr "unchecked"
 
-#: ../../docs/user_manual/managing_data_source/create_layers.rst:812
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:821
 msgid "addVirtualLayer"
 msgstr "addVirtualLayer"

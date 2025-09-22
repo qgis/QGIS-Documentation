@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:18+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -140,11 +140,11 @@ msgstr "``INPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:288
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:310
 msgid "[point cloud]"
-msgstr "[taškų debesis]"
+msgstr "[taškų masyvas]"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:42
 msgid "Input point cloud layer to calculate boundary for"
-msgstr "Įvesties taškų debesies sluoksnis ribų skaičiavimui"
+msgstr "Įvesties taškų masyvo sluoksnis ribų skaičiavimui"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:43
 msgid "**Resolution of cells used to calculate boundary**"
@@ -222,9 +222,12 @@ msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:60
-msgid "Specify the point cloud file to use as output. One of:"
+msgid ""
+"Specify the point cloud file to use as output. :ref:`One of "
+"<output_parameter_widget>`:"
 msgstr ""
-"Nurodykite taškų debesies failą, kurį naudoti kaip išvestį. Vienas iš:"
+"Nurodykite taškų masyvo failą, kurį naudoti kaip išvestį. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -371,6 +374,22 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:124
+msgid "Density"
+msgstr "Tankumas"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:126
+msgid ""
+"Exports a raster file based on the number of points within each raster cell "
+"- useful for quality checking of point cloud datasets."
+msgstr ""
+"Eksportuoja rastro failą pagal kiekvienoje rastro celėje esančių taškų "
+"skaičių - naudinga taškų masyvų duomenų aibių kokybės tikrinimui."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:132
+msgid "Point density (number of points per 2x2 m) as a raster"
+msgstr "Taškų tankumas (taškų skaičius 2x2 m) kaip rastras"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:151
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:268
 msgid "Input point cloud layer to export"
@@ -400,14 +419,27 @@ msgstr "``TILE_SIZE``"
 msgid "Default: 1000"
 msgstr "Numatytas: 1000"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:163
+msgid "Size of the tiles to split the data into for parallel runs"
+msgstr "Kaladėlių dydis, dalinant duomenis paraleliniam skaičiavimui"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:164
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:227
+msgid "**Density**"
+msgstr "**Tankumas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:166
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:229
 msgid "[raster]"
 msgstr "[rastras]"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:169
-msgid "Specify the raster file to export the data to. One of:"
-msgstr "Nurodykite rastro failą, į kurį eksportuoti duomenis. Vienas iš:"
+msgid ""
+"Specify the raster file to export the data to. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite rastro failą, į kurį eksportuoti duomenis. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:203
 msgid "**X origin of a tile for parallel runs**"
@@ -424,3 +456,15 @@ msgstr "**Paralelinio vykdymo kaladėlių Y pradžia**"
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:212
 msgid "``ORIGIN_Y``"
 msgstr "``ORIGIN_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:230
+msgid ""
+"Output raster layer with number of points within each cell. Currently "
+"supported format is :file:`.TIF`."
+msgstr ""
+"Išvesties rastro sluoksnis su kiekvienoje celėje esančių taškų skaičiumi. "
+"Šiuo metu palaikomas formatas yra :file:`.TIF`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:236
+msgid "**Algorithm ID**: ``pdal:density``"
+msgstr "**Algoritmo ID**: ``pdal:density``"

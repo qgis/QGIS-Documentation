@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Harrissou Sant-anna, 2025
 # Tomas Straupis, 2025
 # 
 #, fuzzy
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:14+0000\n"
+"POT-Creation-Date: 2025-09-04 20:12+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -155,7 +155,7 @@ msgstr ""
 "failais paremtiems duomenimis bei duomenų bazėms ar žiniatinklio paslaugoms,"
 " palaikomoms QGIS."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1729
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1746
 msgid "dataSourceManager"
 msgstr "dataSourceManager"
 
@@ -175,7 +175,7 @@ msgstr ""
 "duomenų bazes. Daugiau informacijos apie DB tvarkyklės galimybes rasite "
 "skyriuje :ref:`dbmanager`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1731
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1748
 msgid "dbManager"
 msgstr "dbManager"
 
@@ -230,7 +230,7 @@ msgstr ""
 " Skydeliai` (ar |kde| :menuselection:`Nustatymai --> Skydeliai`) arba "
 "paspaudę :kbd:`Ctrl+2`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1739
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1756
 msgid "kde"
 msgstr "kde"
 
@@ -246,71 +246,240 @@ msgstr ""
 " vektorius, lentelė) ar duomenų šaltinio formato (paprasti ar suspausti "
 "failai, duomenų bazės, žiniatinklio šaltiniai)."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1699
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:110
+msgid "Exploring the Interface"
+msgstr "Naudotojo sąsajos tyrinėjimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:112
+msgid ""
+"At the top of the Browser panel, you find some buttons that help you to:"
+msgstr ""
+"Naršyklės skydelio viršuje jūs rasite kelis mygtukus, kurie padės jums:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:114
+msgid ""
+"|addLayer| :sup:`Add Selected Layers`: you can also add data to the map "
+"canvas by selecting **Add selected layer(s)** from the layer's context menu;"
+msgstr ""
+"|addLayer| :sup:`Pridėti parinktus sluoksnius`: jūs taipogi galite pridėti "
+"duomenis į žemėlapio drobę parinkdami sluoksnio kontekstiniame meniu "
+"**Pridėti parinktą sluoksnį(ius)**;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1716
 msgid "addLayer"
 msgstr "addLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1757
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:116
+msgid "|refresh| :sup:`Refresh` the browser tree;"
+msgstr "|refresh| :sup:`Atnaujinti` naršyklės medį;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1774
 msgid "refresh"
 msgstr "refresh"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1733
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:117
+msgid ""
+"|filterMap| :sup:`Filter Browser` to search for specific data. Enter a "
+"search word or wildcard and the browser will filter the tree to only show "
+"paths to matching DB tables, filenames or folders -- other data or folders "
+"won't be displayed. See the Browser Panel(2) example in "
+":numref:`figure_browser_panels`. The comparison can be case-sensitive or "
+"not. It can also be set to:"
+msgstr ""
+"|filterMap| :sup:`Filtruoti naršyklę` konkrečių duomenų paieškai. Įveskite "
+"paieškos žodį ar šabloną ir naršyklė filtruos medį, kad rodytų tik kelius į "
+"atitinkamas DB lenteles, failų pavadinimus ar aplankus -- kiti duomenys ir "
+"aplankai nebus rodomi. Žiūrėkite naršyklės skydelio(2) pavyzdį "
+":numref:`figure_browser_panels`. Lyginimą galima daryti atsižvelgiant į "
+"raidžių dydį arba ne. Jį taipogi galima nustatyti į:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1750
 msgid "filterMap"
 msgstr "filterMap"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1727
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:123
+msgid ":guilabel:`Normal`: show items containing the search text"
+msgstr ":guilabel:`Normalų`: rodyti elementus, kuriuose yra ieškomas tekstas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:124
+msgid ""
+":guilabel:`Wildcard(s)`: fine tune the search using the ``?`` and/or ``*`` "
+"characters to specify the position of the search text"
+msgstr ""
+":guilabel:`Šablonas(ai)`: tinkinkite paiešką naudodami ``?`` ir/ar ``*`` "
+"simbolius nurodydami ieškomo teksto poziciją"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:126
+msgid ":guilabel:`Regular expression`"
+msgstr ":guilabel:`Reguliari išraiška`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:128
+msgid "|collapseTree| :sup:`Collapse All` the whole tree;"
+msgstr "|collapseTree| :sup:`Sutraukti viską` visą medį;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1744
 msgid "collapseTree"
 msgstr "collapseTree"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1741
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:129
+msgid ""
+"|metadata| :sup:`Enable/disable properties widget`: when toggled on, a new "
+"widget is added at the bottom of the panel showing, if applicable, metadata "
+"for the selected item."
+msgstr ""
+"|metadata| :sup:`Įjungti/išjungti savybių valdiklį`: įjungus, naujas "
+"valdiklis pridedamas skydelio apačioje ir, kai galima, rodo parinkto "
+"elemento metaduomenis."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1758
 msgid "metadata"
 msgstr "metadata"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1735
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:133
+msgid ""
+"The entries in the :guilabel:`Browser` panel are organised hierarchically, "
+"and there are several top level entries:"
+msgstr ""
+"Skydelio :guilabel:`Naršyklė` įrašai išdėlioti pagal hierarchiją ir yra keli"
+" aukščiausio lygio įrašai:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:136
+msgid ""
+":guilabel:`Favorites` where you can place shortcuts to often used locations"
+msgstr ""
+":guilabel:`Parankiniai`, kur jūs galite padėti dažnai naudojamas vietas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:137
+msgid ""
+":guilabel:`Spatial Bookmarks` where you can store often used map extents "
+"(see :ref:`sec_bookmarks`)"
+msgstr ""
+":guilabel:`Erdvinės žymelės`, kur jūs galite laikyti dažnai naudojamas "
+"žemėlapio apimtis (žr. :ref:`sec_bookmarks`)"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:139
+msgid ""
+":guilabel:`Project Home`: for a quick access to the folder in which (most "
+"of) the data related to your project are stored. The default value is the "
+"directory where your project file resides."
+msgstr ""
+":guilabel:`Projekto namai`: greitai prieigai prie aplanko, kuriame laikoma "
+"(dauguma) su projektų susijusių duomenų. Numatytoji reikšmė yra aplankas, "
+"kuriame yra projekto failas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:142
+msgid ""
+":guilabel:`Home` directory in the file system and the filesystem root "
+"directory."
+msgstr ""
+":guilabel:`Namų` aplankas failų sistemoje ir failų sistemos šakninis "
+"aplankas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:143
+msgid "Connected local or network drives"
+msgstr "Prijungti vietiniai ar tinklo įrenginiai"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:144
+msgid ""
+"Then comes a number of container / database types and service protocols, "
+"depending on your platform and underlying libraries:"
+msgstr ""
+"Toliau išvardinti keli konteinerių / duomenų bazių tipai ir paslaugų "
+"protokolai, priklausomai nuo jūsų platformos ir turimų bibliotekų:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:147
+msgid "|geoPackage| :guilabel:`GeoPackage`"
+msgstr "|geoPackage| :guilabel:`GeoPackage`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1752
 msgid "geoPackage"
 msgstr "geoPackage"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1761
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:148
+msgid "|spatialite| :guilabel:`SpatiaLite`"
+msgstr "|spatialite| :guilabel:`SpatiaLite`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1778
 msgid "spatialite"
 msgstr "spatialite"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1751
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:149
+msgid "|postgis| :guilabel:`PostgreSQL`"
+msgstr "|postgis| :guilabel:`PostgreSQL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1768
 msgid "postgis"
 msgstr "postgis"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1737
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:150
+msgid "|hana| :guilabel:`SAP HANA`"
+msgstr "|hana| :guilabel:`SAP HANA`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1754
 msgid "hana"
 msgstr "hana"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1743
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:151
+msgid "|mssql| :guilabel:`MS SQL Server`"
+msgstr "|mssql| :guilabel:`MS SQL Serveris`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1760
 msgid "mssql"
 msgstr "mssql"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1747
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:152
+msgid "|oracle| :guilabel:`Oracle`"
+msgstr "|oracle| :guilabel:`Oracle`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1764
 msgid "oracle"
 msgstr "oracle"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1773
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:153
+msgid "|wms| :guilabel:`WMS/WMTS`"
+msgstr "|wms| :guilabel:`WMS/WMTS`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1790
 msgid "wms"
 msgstr "wms"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1765
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:154
+msgid "|vectorTileLayer| :guilabel:`Vector Tiles`"
+msgstr "|vectorTileLayer| :guilabel:`Vektorinės kaladėlės`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1782
 msgid "vectorTileLayer"
 msgstr "vectorTileLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1775
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:155
+msgid "|xyz| :guilabel:`XYZ Tiles`"
+msgstr "|xyz| :guilabel:`XYZ kaladėlės`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1792
 msgid "xyz"
 msgstr "xyz"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1767
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:156
+msgid "|wcs| :guilabel:`WCS`"
+msgstr "|wcs| :guilabel:`WCS`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1784
 msgid "wcs"
 msgstr "wcs"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1769
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:157
+msgid "|wfs| :guilabel:`WFS/OGC API-Features`"
+msgstr "|wfs| :guilabel:`WFS/OGC API-geoobjektai`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1786
 msgid "wfs"
 msgstr "wfs"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1721
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:158
+msgid "|afs| :guilabel:`ArcGIS REST Server`"
+msgstr "|afs| :guilabel:`ArcGIS REST Serveris`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1738
 msgid "afs"
 msgstr "afs"
 
@@ -322,39 +491,52 @@ msgstr ":guilabel:`Savybės...`"
 msgid ":menuselection:`Export Layer --> To File...`"
 msgstr ":menuselection:`Eksportuoti sluoksnį --> Į failą...`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1705
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:201
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1371
+msgid ":guilabel:`Add Layer to Project`"
+msgstr ":guilabel:`Pridėti sluoksnį į projektą`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:203
+msgid ":guilabel:`Open with Data Source Manager...`"
+msgstr ":guilabel:`Atverti su duomenų šaltinių tvarkykle...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:206
+msgid ":guilabel:`Show in Files`"
+msgstr ":guilabel:`Rodyti failuose`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1722
 msgid "addOgrLayer"
 msgstr "addOgrLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1711
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1728
 msgid "addRasterLayer"
 msgstr "addRasterLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1755
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1772
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1723
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1740
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1701
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1718
 msgid "addMeshLayer"
 msgstr "addMeshLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1695
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1712
 msgid "addDelimitedTextLayer"
 msgstr "addDelimitedTextLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1753
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1770
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1759
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1776
 msgid "setProjection"
 msgstr "setProjection"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1713
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1730
 msgid "addSpatiaLiteLayer"
 msgstr "addSpatiaLiteLayer"
 
@@ -366,54 +548,58 @@ msgstr "GPS"
 msgid "GRASS"
 msgstr "GRASS"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1709
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1726
 msgid "addPostgisLayer"
 msgstr "addPostgisLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1703
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1720
 msgid "addMssqlLayer"
 msgstr "addMssqlLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1707
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1724
 msgid "addOracleLayer"
 msgstr "addOracleLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1697
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1714
 msgid "addHanaLayer"
 msgstr "addHanaLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1763
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1780
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1771
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1788
 msgid "win"
 msgstr "win"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1745
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1762
 msgid "nix"
 msgstr "nix"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1749
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1766
 msgid "osx"
 msgstr "osx"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1717
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1372
+msgid ":guilabel:`Layer Properties...`"
+msgstr ":guilabel:`Sluoksnio savybės...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1734
 msgid "addVectorTileLayer"
 msgstr "addVectorTileLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1719
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1736
 msgid "addXyzLayer"
 msgstr "addXyzLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1693
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1710
 msgid "addAfsLayer"
 msgstr "addAfsLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1715
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1732
 msgid "addTiledSceneLayer"
 msgstr "addTiledSceneLayer"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1725
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1742
 msgid "cloud"
 msgstr "cloud"

@@ -6,17 +6,17 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Transifex Bot <>, 2025
 # Tomas Straupis, 2025
+# Transifex Bot <>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-14 21:23+0000\n"
+"POT-Creation-Date: 2025-09-01 10:36+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Tomas Straupis, 2025\n"
+"Last-Translator: Transifex Bot <>, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -230,6 +230,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
@@ -241,7 +242,6 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:57
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:73
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:75
@@ -276,7 +276,6 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:259
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:264
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:283
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:285
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:309
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:335
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:357
@@ -667,7 +666,6 @@ msgstr "[] žymi neprivalomus argumentus"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:63
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:75
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:76
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
@@ -1165,7 +1163,6 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:63
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:70
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:76
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:78
@@ -1201,7 +1198,6 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:245
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:266
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:269
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:290
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:292
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:318
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:340
@@ -1356,7 +1352,7 @@ msgid ""
 "\"class\" attribute is greater than 3 only"
 msgstr ""
 "``aggregate(layer:='stotys',aggregate:='sum',expression:=\"keleiviai\",filter:=\"klase\">3)``"
-" → sumuoja lauko „keleiviai“ reikšmes tik iš geoobjektų, kurių atribotas "
+" → sumuoja lauko „keleiviai“ reikšmes tik iš geoobjektų, kurių atributas "
 "„klase“ yra didesnis už 3"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:61
@@ -1514,13 +1510,45 @@ msgstr ""
 msgid "collect"
 msgstr "collect"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:99
+msgid ""
+"Returns the multipart geometry of aggregated geometries from an expression"
+msgstr ""
+"Grąžina pagal išraišką gautų geometrijų agreguotą kelių dalių geometriją"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:105
 msgid "collect(expression, [group_by], [filter])"
 msgstr "collect(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:109
+msgid "**expression** - geometry expression to aggregate"
+msgstr "**expression** - agreguojama geometrijos išraiška"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:113
+msgid "``collect( @geometry )`` → multipart geometry of aggregated geometries"
+msgstr ""
+"``collect( @geometry )`` → agreguotų geometrijų kelių dalių geometrija"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:114
+msgid ""
+"``collect( centroid(@geometry), group_by:=\"region\", filter:= \"use\" = "
+"'civilian' )`` → aggregated centroids of the civilian features based on "
+"their region value"
+msgstr ""
+"``collect( centroid(@geometry), group_by:=\"region\", filter:= \"use\" = "
+"'civilian' )`` → pagal regiono reikšmę ištrauktų civilinių geoobjektų "
+"agreguoti centroidai"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:122
 msgid "concatenate"
 msgstr "concatenate"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:124
+msgid ""
+"Returns all aggregated strings from a field or expression joined by a "
+"delimiter."
+msgstr ""
+"Grąžina visas agreguotas eilutes iš lauko ar išraiškos, sujungtos skirtuku."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:130
 msgid ""
@@ -1528,9 +1556,31 @@ msgid ""
 msgstr ""
 "concatenate(expression, [group_by], [filter], [concatenator], [order_by])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:137
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:163
+msgid ""
+"**concatenator** - optional string to use to join values. Empty by default."
+msgstr ""
+"**concatenator** - neprivaloma eilutės, kurią reikia naudoti jungiant "
+"reikšmes. Pagal nutylėjimą tuščia."
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:140
+msgid ""
+"``concatenate(\"town_name\",group_by:=\"state\",concatenator:=',')`` → comma"
+" separated list of town_names, grouped by state field"
+msgstr ""
+"``concatenate(\"miesto_pavadinimas\",group_by:=\"valstybė\",concatenator:=',')``"
+" → kableliais atskirtas sąrašas miestų pavadinimų, sugrupuotų pagal "
+"valstybės lauką"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:148
 msgid "concatenate_unique"
 msgstr "concatenate_unique"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:150
+msgid ""
+"Returns all unique strings from a field or expression joined by a delimiter."
+msgstr "Grąžina unikalias eilutes iš laukų ar išraiškų, sujungtų skirtuku"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:156
 msgid ""
@@ -1540,49 +1590,160 @@ msgstr ""
 "concatenate_unique(expression, [group_by], [filter], [concatenator], "
 "[order_by])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:166
+msgid ""
+"``concatenate_unique(\"town_name\",group_by:=\"state\",concatenator:=',')`` "
+"→ comma separated list of unique town_names, grouped by state field"
+msgstr ""
+"``concatenate_unique(\"miesto_pavadinimas\",group_by:=\"šalis\",concatenator:=',')``"
+" → kableliais atskirtas sąrašas unikalių miesto pavadinimų, grupuotų pagal "
+"šalies lauką"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:176
+msgid "Returns the count of matching features."
+msgstr "Grąžina atitinkančių geoobjektų skaičių."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:182
 msgid "count(expression, [group_by], [filter])"
 msgstr "count(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:190
+msgid ""
+"``count(\"stations\",group_by:=\"state\")`` → count of stations, grouped by "
+"state field"
+msgstr ""
+"``count(\"stotys\",group_by:=\"šalis\")`` → stočių skaičius, grupuotas pagal"
+" šalių lauką"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:200
+msgid "Returns the count of distinct values."
+msgstr "Grąžina skirtingų reikšmių skaičių."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:206
 msgid "count_distinct(expression, [group_by], [filter])"
 msgstr "count_distinct(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:214
+msgid ""
+"``count_distinct(\"stations\",group_by:=\"state\")`` → count of distinct "
+"stations values, grouped by state field"
+msgstr ""
+"``count_distinct(\"stotys\",group_by:=\"šalis\")`` → skaičius skirtingų "
+"stočių reikšmių, grupuotų pagal šalies lauką"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:224
+msgid "Returns the count of missing (NULL) values."
+msgstr "Grąžina trūkstamų (NULL) reikšmių skaičių."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:230
 msgid "count_missing(expression, [group_by], [filter])"
 msgstr "count_missing(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:238
+msgid ""
+"``count_missing(\"stations\",group_by:=\"state\")`` → count of missing "
+"(NULL) station values, grouped by state field"
+msgstr ""
+"``count_missing(\"stotys\",group_by:=\"šalis\")`` → skaičius trūkstamų "
+"(NULL) stočių reikšmių, grupuotų pagal šalies lauką"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:246
 msgid "iqr"
 msgstr "iqr"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:248
+msgid ""
+"Returns the calculated inter quartile range from a field or expression."
+msgstr ""
+"Grąžina pagal lauką ar išraišką paskaičiuotą tarpkvartilinį diapazoną."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:254
 msgid "iqr(expression, [group_by], [filter])"
 msgstr "iqr(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:262
+msgid ""
+"``iqr(\"population\",group_by:=\"state\")`` → inter quartile range of "
+"population value, grouped by state field"
+msgstr ""
+"``iqr(\"gyventojai\",group_by:=\"valstija\")`` → tarpkvartilinis gyventojų "
+"reikšmės diapazonas sugrupuotas pagal valstijos lauką"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:272
+msgid ""
+"Returns the aggregate majority of values (most commonly occurring value) "
+"from a field or expression."
+msgstr ""
+"Grąžina lauko ar išraiškos agreguotą reikšmių daugumą (dažniausiai "
+"pasitaikančią reikšmę)."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:278
 msgid "majority(expression, [group_by], [filter])"
 msgstr "majority(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:286
+msgid ""
+"``majority(\"class\",group_by:=\"state\")`` → most commonly occurring class "
+"value, grouped by state field"
+msgstr ""
+"``majority(\"klasė\",group_by:=\"valstija\")`` → dažniausiai pasitaikanti "
+"klasės reikšmė sugrupavus pagal valstijos lauką"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:294
 msgid "max_length"
 msgstr "max_length"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:296
+msgid "Returns the maximum length of strings from a field or expression."
+msgstr "Grąžina maksimalų lauko ar išraiškos teksto ilgį."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:302
 msgid "max_length(expression, [group_by], [filter])"
 msgstr "max_length(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:310
+msgid ""
+"``max_length(\"town_name\",group_by:=\"state\")`` → maximum length of "
+"town_name, grouped by state field"
+msgstr ""
+"``max_length(\"miesto_pavadinimas\",group_by:=\"valstybe\")`` → maksimalus "
+"miesto_pavadinimas ilgis grupuojant pagal lauką valstybe"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:318
 msgid "maximum"
 msgstr "maximum"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:320
+msgid "Returns the aggregate maximum value from a field or expression."
+msgstr "Grąžina agreguotą lauko ar išraiškos reikšmės maksimalią reikšmę."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:326
 msgid "maximum(expression, [group_by], [filter])"
 msgstr "maximum(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:334
+msgid ""
+"``maximum(\"population\",group_by:=\"state\")`` → maximum population value, "
+"grouped by state field"
+msgstr ""
+"``maximum(\"gyventojai\",group_by:=\"valstybe\")`` → maksimali gyventojų "
+"reikšmė grupuojant pagal lauką valstybe"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:344
+msgid "Returns the aggregate mean value from a field or expression."
+msgstr "Grąžina lauko ar išraiškos reikšmės agreguotą vidurkį."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:350
 msgid "mean(expression, [group_by], [filter])"
 msgstr "mean(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:358
+msgid ""
+"``mean(\"population\",group_by:=\"state\")`` → mean population value, "
+"grouped by state field"
+msgstr ""
+"``mean(\"gyventojai\",group_by:=\"vaklstybe\")`` → vidutinė gyventojų "
+"skaičiaus reikšmė grupuojant pagal valstybės lauką"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:374
 msgid "median(expression, [group_by], [filter])"
@@ -2661,6 +2822,14 @@ msgstr "now"
 msgid "now()"
 msgstr "now()"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:455
+msgid "second"
+msgstr "second"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:467
+msgid "second(datetime)"
+msgstr "second(datetime)"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:482
 msgid "second(interval)"
 msgstr "second(interval)"
@@ -3006,6 +3175,11 @@ msgstr "bounds"
 msgid "bounds(geometry)"
 msgstr "bounds(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
+msgid "Black lines represent the bounding boxes of each polygon feature"
+msgstr ""
+"Juodos linijos vaizduoja kiekvieno poligono geoobjekto apimties stačiakampį"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "bounds_height"
 msgstr "bounds_height"
@@ -3026,6 +3200,14 @@ msgstr "bounds_width(geometry)"
 msgid "buffer"
 msgstr "buffer"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:73
+msgid ""
+"Buffer (in yellow) of points, line, polygon with positive buffer, and "
+"polygon with negative buffer"
+msgstr ""
+"Buferiai (geltoni) taškų, linijų, poligonų su teigiamu buferiu ir poligonas "
+"su neigiamu buferiu"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "buffer_by_m"
 msgstr "buffer_by_m"
@@ -3037,6 +3219,12 @@ msgstr "centroid"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "centroid(geometry)"
 msgstr "centroid(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"The red stars represent the centroids of the features of the input layer."
+msgstr ""
+"Raudonos žvaigždės reprezentuoja įvesties sluoksnio geoobjektų centroidus."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "close_line"
@@ -3182,19 +3370,19 @@ msgstr "exterior_ring"
 msgid "exterior_ring(geometry)"
 msgstr "exterior_ring(geometry)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "extrude"
 msgstr "extrude"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "extrude(geometry, x, y)"
 msgstr "extrude(geometry, x, y)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "flip_coordinates"
 msgstr "flip_coordinates"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
 msgid "flip_coordinates(geometry)"
 msgstr "flip_coordinates(geometry)"
 
@@ -3312,11 +3500,11 @@ msgstr "interior_ring_n"
 msgid "interior_ring_n(geometry, index)"
 msgstr "interior_ring_n(geometry, index)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:278
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "intersection"
 msgstr "intersection"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:286
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "intersection(geometry1, geometry2)"
 msgstr "intersection(geometry1, geometry2)"
 
@@ -4862,11 +5050,11 @@ msgstr "upper(string)"
 msgid "wordwrap"
 msgstr "wordwrap"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1505
+#: ../../docs/user_manual/expressions/functions_list.rst:1518
 msgid "expressionSelect"
 msgstr "expressionSelect"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1503
+#: ../../docs/user_manual/expressions/functions_list.rst:1516
 msgid "calculateField"
 msgstr "calculateField"
 

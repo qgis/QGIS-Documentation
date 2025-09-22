@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2025-07-02 07:59+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -420,20 +420,7 @@ msgstr "``startVertexIdx`` --- 트리 상에 있는 포인트의 인덱스 (트�
 msgid "``criterionNum`` --- number of edge property to use (started from 0)."
 msgstr "``criterionNum`` --- 사용할 변 속성의 번호 (0에서 시작)"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:257
-msgid ""
-"The :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method has "
-"the same arguments, but returns two arrays. In the first array element `n` "
-"contains index of the incoming edge or -1 if there are no incoming edges. In"
-" the second array element `n` contains the distance from the root of the "
-"tree to vertex `n` or DOUBLE_MAX if vertex `n` is unreachable from the root."
-msgstr ""
-":meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` 메소드도 동일한 인자를 "
-"받지만, 2개의 배열을 반환합니다. 첫 번째 배열 요소 ``n`` 은 들어오는 변의 인덱스를 또는 들어오는 변이 없는 경우 -1을 "
-"담습니다. 두 번째 배열 요소 ``n`` 은 트리의 루트에서 ``n`` 꼭짓점까지의 거리를 또는 루트에서 ``n`` 꼭짓점에 도달할 수 "
-"없는 경우 DOUBLE_MAX를 담습니다."
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:268
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:269
 msgid ""
 "Here is some very simple code to display the shortest path tree using the "
 "graph created with the :meth:`shortestTree() "
@@ -444,7 +431,7 @@ msgstr ""
 "메소드로 생성한 그래프를 사용해서 최단 경로 트리를 표시하는 매우 단순한 코드입니다. (:guilabel:`Layers` 패널에서 "
 "라인스트링 레이어를 선택한 다음 좌표를 여러분 자신의 좌표로 대체하십시오.)"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:273
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:274
 msgid ""
 "Use this code only as an example, it creates a lot of :class:`QgsRubberBand "
 "<qgis.gui.QgsRubberBand>` objects and may be slow on large datasets."
@@ -452,7 +439,7 @@ msgstr ""
 "이 코드를 예제로써만 사용하십시오. 이 코드는 :class:`QgsRubberBand <qgis.gui.QgsRubberBand>` "
 "클래스 객체를 많이 생성하기 때문에 대용량 데이터셋의 경우 느려질 수도 있습니다."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:309
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:310
 msgid ""
 "Same thing but using the :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method"
@@ -460,11 +447,11 @@ msgstr ""
 "동일한 목적이지만 :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` 메소드를 "
 "사용하는 코드입니다:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:346
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:358
 msgid "Finding shortest paths"
 msgstr "최단 경로 찾기"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:348
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:360
 msgid ""
 "To find the optimal path between two points the following approach is used. "
 "Both points (start A and end B) are \"tied\" to the graph when it is built. "
@@ -482,7 +469,7 @@ msgstr ""
 " 트리를 생성합니다. 이 트리에서 종단 포인트 B를 찾아, 트리 안에서 B에서 A로 가는 경로를 탐색합니다. 이 전체 알고리즘을 다음처럼"
 " 작성할 수 있습니다:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:366
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:378
 msgid ""
 "At this point we have the path, in the form of the inverted list of vertexes"
 " (vertexes are listed in reversed order from end point to start point) that "
@@ -491,7 +478,7 @@ msgstr ""
 "이 시점에서 이 경로를 지나가는 동안 거치게 될 꼭짓점들의 역순 목록의 형태로 경로를 얻게 됩니다. (꼭짓점들이 종단 포인트에서 시작 "
 "포인트 순서로 역순으로 나열됩니다.)"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:370
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:382
 msgid ""
 "Here is the sample code for QGIS Python Console (you may need to load and "
 "select a linestring layer in TOC and replace coordinates in the code with "
@@ -502,7 +489,7 @@ msgstr ""
 "메소드를 사용하는 QGIS 파이썬 콘솔의 예시 코드입니다 (TOC(Table of Contents)에 라인스트링 레이어를 불러와 선택한 "
 "다음 코드에 있는 좌표를 여러분의 좌표로 대체해야 할 수도 있습니다):"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:426
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:440
 msgid ""
 "And here is the same sample but using the :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method"
@@ -510,11 +497,11 @@ msgstr ""
 "다음은 동일한 예시이지만 :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` "
 "메소드를 사용하는 코드입니다:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:482
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:496
 msgid "Areas of availability"
 msgstr "도달 가능 영역"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:484
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:498
 msgid ""
 "The area of availability for vertex A is the subset of graph vertexes that "
 "are accessible from vertex A and the cost of the paths from A to these "
@@ -523,7 +510,7 @@ msgstr ""
 "꼭짓점 A의 도달 가능 영역(area of availability)이란 꼭짓점 A에서 접근할 수 있고, 꼭짓점 A에서 이 꼭짓점들까지의 "
 "경로 비용이 지정된 값을 초과하지 않는, 그래프 꼭짓점들의 부분집합을 말합니다. "
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:488
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:502
 msgid ""
 "More clearly this can be shown with the following example: \"There is a fire"
 " station. Which parts of city can a fire truck reach in 5 minutes? 10 "
@@ -533,7 +520,7 @@ msgstr ""
 "다음 질문을 통해 이를 더 명확히 알 수 있습니다. \"소방서가 있다. 소방차가 5분/10분/15분 안에 도착할 수 있는 도시의 구역은 "
 "어디인가?\" 이 질문에 대한 답이 바로 소방서의 도달 가능 영역입니다."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:493
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
 msgid ""
 "To find the areas of availability we can use the :meth:`dijkstra() "
 "<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method of the "
@@ -547,7 +534,7 @@ msgstr ""
 "됩니다. 비용 배열의 요소들을 사전 정의된 값과 비교하는 것으로 충분합니다. cost[i]가 사전 정의 값 이하인 경우, 꼭짓점 i는 "
 "도달 가능 영역 안에 있는 것이고, 초과하는 경우 밖에 있는 것입니다."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:500
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:514
 msgid ""
 "A more difficult problem is to get the borders of the area of availability. "
 "The bottom border is the set of vertexes that are still accessible, and the "
@@ -560,6 +547,6 @@ msgstr ""
 " 꼭짓점들의 집합입니다. 사실 단순합니다 --- 변의 소스 꼭짓점에 접근할 수 있고 변의 대상 꼭짓점에는 접근할 수 없는 최단 경로 "
 "트리의 변들을 바탕으로 한 도달 가능 경계입니다."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:521
 msgid "Here is an example"
 msgstr "다음은 그 예시입니다:"

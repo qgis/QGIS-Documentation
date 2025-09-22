@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 12:20+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -518,8 +518,10 @@ msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:876
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1012
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1147
-msgid "Specification of the output raster. One of:"
-msgstr "Išvesties rastro specifikacija. Vienas iš:"
+msgid ""
+"Specification of the output raster. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Išvesties rastro specifikacija. :ref:`Vienas iš <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -675,7 +677,7 @@ msgstr "``CREATE_OPTIONS``"
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1052
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:1194
 msgid "[string]"
-msgstr "[string]"
+msgstr "[tekstas]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:107
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:247
@@ -918,9 +920,53 @@ msgstr ""
 msgid "**Algorithm ID**: ``native:createrandombinomialrasterlayer``"
 msgstr "**Algoritmo ID**: ``native:createrandombinomialrasterlayer``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:287
+msgid "Create random raster layer (exponential distribution)"
+msgstr "Kurti atsitiktinį rastro sluoksnį (eksponentinis pasiskirstymas)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:289
+msgid ""
+"Generates a raster layer for given extent and cell size filled with "
+"exponentially distributed random values."
+msgstr ""
+"Sukuria nurodytos apimties ir celės dydžio rastro sluoksnį užpildytą "
+"eksponentiškai pasiskirsčiusiomis atsitiktinėmis reikšmėmis."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:292
+msgid ""
+"By default, the values will be chosen given a lambda of 1.0. This can be "
+"overridden by using the advanced parameter for lambda. The raster data type "
+"is set to Float32 by default as the exponential distribution random values "
+"are floating point numbers."
+msgstr ""
+"Pagal nutylėjimą reikšmės bus parenkamos pagal duotą lambdą 1.0. Galima tai "
+"permušti naudojant sudėtingesnį lambdos parametrą. Rastro duomenų tipas "
+"pagal nutylėjimą Float32, nes eksponentinio pasiskirstymo atsitiktinės "
+"reikšmės yra slankaus kablelio skaičiai."
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:362
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:491
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:900
+msgid "0 --- Float32"
+msgstr "0 --- Float32"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:363
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:492
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:901
+msgid "1 --- Float64"
+msgstr "1 --- Float64"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:364
+msgid "**Lambda**"
+msgstr "**Lambda**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:365
 msgid "``LAMBDA``"
 msgstr "``LAMBDA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:406
+msgid "**Algorithm ID**: ``native:createrandomexponentialrasterlayer``"
+msgstr "**Algoritmo ID**: ``native:createrandomexponentialrasterlayer``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rastercreation.rst:494
 msgid "``ALPHA``"

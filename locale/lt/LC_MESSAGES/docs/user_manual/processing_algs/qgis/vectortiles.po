@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:18+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -248,8 +248,12 @@ msgid "Default: [Save to temporary file]"
 msgstr "Numatytas: [įrašyti į laikiną failą]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:60
-msgid "Specification of the output vector tile file. One of:"
-msgstr "Išvesties vektorinių kaladėlių failo specifikacija. Vienas iš:"
+msgid ""
+"Specification of the output vector tile file. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Išvesties vektorinių kaladėlių failo specifikacija. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -292,6 +296,29 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:95
+msgid "Write vector tiles (MBTiles)"
+msgstr "Rašyti vektorines kaladėles (MBTiles)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:97
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:221
+msgid ""
+"Exports one or more vector layers to vector tiles, a data format optimized "
+"for fast map rendering and small data size."
+msgstr ""
+"Eksportuoja vieną ar daugiau vektorinių sluoksnį į vektorines kaladėles, "
+"duomenų formatą, optimizuotą greitam žemėlapio braižymui ir mažam duomenų "
+"kiekiui."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:100
+msgid ""
+"MBTiles is a specification for storing tiled map data in SQLite databases "
+"for immediate usage and for transfer. MBTiles files are known as tilesets."
+msgstr ""
+"MBTiles yra specifikacija, apibrėžianti kaladėlėmis suskirstytų žemėlapio "
+"duomenų saugojimą SQLite duomenų bazėse momentiniam naudojimui ir "
+"perdavimui. MBTiles failai žinomi kaip kaladėlių aibės - „tilesets“."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:114
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:241
 msgid "**Input layers**"
@@ -302,6 +329,17 @@ msgstr "**Įvesties sluoksniai**"
 msgid "[vector: any] [list]"
 msgstr "[vektorius: bet koks] [sąrašas]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:244
+msgid "A list of layers to combine to generate the vector tiles"
+msgstr ""
+"Sąrašas sluoksnių, kuriuos reikia sudėti į kuriamas vektorines kaladėles"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:118
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:245
+msgid "**Minimum zoom level**"
+msgstr "**Minimalus mastelis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:119
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:246
 msgid "``MIN_ZOOM``"
@@ -311,6 +349,34 @@ msgstr "``MIN_ZOOM``"
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:249
 msgid "Default: 0"
 msgstr "Numatytas: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:123
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:250
+msgid ""
+"The lowest zoom level for which the tileset provides data. Set between 0 and"
+" 24."
+msgstr ""
+"Mažiausias mastelis, kuriam teikiami kaladėlių duomenys. Nustatykite tarp 0 "
+"ir 24."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:125
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:252
+msgid "**Maximum zoom level**"
+msgstr "**Maksimalus mastelis**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:129
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:256
+msgid "Default: 3"
+msgstr "Numatytas: 3"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:130
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:257
+msgid ""
+"The highest zoom level for which the tileset provides data. Set between 0 "
+"and 24."
+msgstr ""
+"Didžiausias mastelis, kuriam teikiami kaladėlių duomenys. Nustatykite tarp 0"
+" ir 24."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:134
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:143
@@ -328,6 +394,19 @@ msgstr "Pasirinktinis"
 msgid "Default: Not set"
 msgstr "Numatytas: jokio"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:139
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:266
+msgid ""
+"The maximum extent of the rendered map area. Bounds must define an area "
+"covered by all zoom levels."
+msgstr ""
+"Maksimali braižomo žemėlapio ploto apimtis. Ribos turi apibrėžti visų "
+"mastelių dengiamą plotą."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:141
+msgid "**Metadata: Name**"
+msgstr "**Metaduomenys: pavadinimas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:144
 msgid "``META_NAME``"
 msgstr "``META_NAME``"
@@ -340,37 +419,133 @@ msgstr "``META_NAME``"
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:176
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:237
 msgid "[string]"
-msgstr "[string]"
+msgstr "[tekstas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:146
+msgid "Name of the tileset"
+msgstr "Kaladėlių rinkinio pavadinimas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:147
+msgid "**Metadata: Description**"
+msgstr "**Metaduomenys: aprašymas**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:150
 msgid "``META_DESCRIPTION``"
 msgstr "``META_DESCRIPTION``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:152
+msgid "A description of the tileset's contents"
+msgstr "Kaladėlių rinkinio turinio aprašymas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:153
+msgid "**Metadata: Attribution**"
+msgstr "**Metaduomenys: autoriai**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:156
 msgid "``META_ATTRIBUTION``"
 msgstr "``META_ATTRIBUTION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:158
+msgid ""
+"An attribution string, which explains the sources of data and/or style for "
+"the map."
+msgstr ""
+"Autorių tekstas, kuris aprašo duomenų ir/arba žemėlapio stiliaus šaltinį."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:159
+msgid "**Metadata: Version**"
+msgstr "**Metaduomenys: versija**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:162
 msgid "``META_VERSION``"
 msgstr "``META_VERSION``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:164
+msgid ""
+"The version of the tileset. This refers to a revision of the tileset itself,"
+" not of the MBTiles specification."
+msgstr ""
+"Kaladėlių rinkinio versija. Tai nusako paties kaladėlių rinkinio versiją, o "
+"ne MBTiles specifikaciją."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:166
+msgid "**Metadata: Type**"
+msgstr "**Metaduomenys: tipas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:169
 msgid "``META_TYPE``"
 msgstr "``META_TYPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:171
+msgid "Type of tileset. Possible values are ``overlay`` or ``baselayer``."
+msgstr ""
+"Kaladėlių rinkinio tipas. Galimos reikšmės yra ``overlay`` ar ``baselayer``."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:172
+msgid "**Metadata: Center**"
+msgstr "**Metaduomenys: centras**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:175
 msgid "``META_CENTER``"
 msgstr "``META_CENTER``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:177
+msgid ""
+"The center (string of comma-separated numbers: the longitude, latitude, and "
+"zoom level) of the default view of the map. Example: "
+"``-122.1906,37.7599,11``"
+msgstr ""
+"Numatytojo žemėlapio vaizdo centras (kableliais atskirta skaičių eilutė: "
+"ilguma, platuma ir mastelis) . Pavyzdžiui: ``-122.1906,37.7599,11``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:179
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:201
+msgid "**Destination MBTiles**"
+msgstr "**Paskirties MBTiles**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:184
+msgid ""
+"Specification of the output MBTiles file. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Išvesties MBTiles failo specifikacija. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:203
 msgid "[file]"
 msgstr "[file]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:204
+msgid "Output vector tiles :file:`.mbtiles` file."
+msgstr "Išvesties vektorinių kaladėlių :file:`.mbtiles` failas."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:209
+msgid "**Algorithm ID**: ``native:writevectortiles_mbtiles``"
+msgstr "**Algoritmo ID**: ``native:writevectortiles_mbtiles``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:236
 msgid "``XYZ_TEMPLATE``"
 msgstr "``XYZ_TEMPLATE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:268
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:290
+msgid "**Output directory**"
+msgstr "**Išvesties aplankas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:269
 #: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:291
 msgid "``OUTPUT_DIRECTORY``"
 msgstr "``OUTPUT_DIRECTORY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:270
+#: ../../docs/user_manual/processing_algs/qgis/vectortiles.rst:292
+msgid "[folder]"
+msgstr "[aplankas]"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Save to a Temporary Directory"
+msgstr "Įrašyti į laikiną aplanką"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to Directory"
+msgstr "Įrašyti į aplanką"

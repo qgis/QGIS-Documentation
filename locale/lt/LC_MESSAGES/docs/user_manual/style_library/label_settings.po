@@ -417,7 +417,7 @@ msgid ""
 " ``font-style``, ``word-spacing``). Note that ``word-spacing`` will always "
 "use unit points."
 msgstr ""
-"Šriftų savybės (``color``, ``font-family``, ``font-size``, ``font-weight``, "
+"Šrifto savybės (``color``, ``font-family``, ``font-size``, ``font-weight``, "
 "``font-style``, ``word-spacing``). Atkreipkite dėmesį, kad ``word-spacing`` "
 "visada naudoja taškų vienetą."
 
@@ -435,7 +435,7 @@ msgid ""
 "can not be used for curved labels."
 msgstr ""
 "Teksto lygiavimas (``vertical-align``, ``text-align``). Horizontalaus "
-"lygiavimo negailma naudoti išlenktuose užrašuose."
+"lygiavimo negalima naudoti išlenktuose užrašuose."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:213
 msgid ""
@@ -1021,17 +1021,219 @@ msgstr ""
 "Be teksto formatavimo nustatymų pateiktų čia, jūs taipogi galite nurodyti, "
 "kaip užrašai sąveikauja vieni su kitais ar kitais geoobjektais."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:480
+msgid "Mask tab"
+msgstr "Slėpimo kortelė"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:482
+msgid ""
+"The |labelmask| :guilabel:`Mask` tab allows you to define a mask area around"
+" the labels. This feature is very useful when you have overlapping symbols "
+"and labels with similar colors, and you want to make the labels visible. A "
+"label mask prevents specified features from drawing within the boundary set "
+"for the mask. For example, you could set a label mask so that a specified "
+"layer does not draw within 2mm of the label, but allow features from another"
+" layer to still show. Label masks are similar to label buffers in that they "
+"allow control of the legibility of labels that cover other features. The "
+"label buffer draws on top of any underlying features, while the label mask "
+"selectively stops other layers from drawing."
+msgstr ""
+"|labelmask| :guilabel:`Slėpimo` kortelė leidžia jums nurodyti slėpimo plotą "
+"aplink užrašus. Ši savybė labai naudinga, kai turite persidengiančius "
+"simbolius ir užrašus su panašiomis spalvomis, o jūs norite, kad užrašai būtų"
+" matomi. Užrašo slėpimo plotas neleidžia braižyti nurodytų geoobjektų "
+"nurodytu atstumu. Pavyzdžiui jūs galite nurodyti užrašo slėpimą, kad "
+"nurodytas sluoksnis nebūtų braižomas 2mm atstumu nuo užrašo, bet kito "
+"sluoksnio geoobjektai būtų matomi. Užrašų slėpimas yra panašus į buferius "
+"tuo, kad jie leidžia valdyti kitus geoobjektus degniančių užrašų "
+"įskaitomumą. Užrašų buferis braižomas virš po juo esančių geoobjektų, o "
+"užrašų slėpimas atrinktinai išima sluoksnius iš braižymo."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1084
 msgid "labelmask"
 msgstr "labelmask"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:497
+msgid ""
+"Labels settings - Mask tab (with the text sample showing a green background "
+"representing another layer being excluded)"
+msgstr ""
+"Užrašų nustatymai - Slėpimo kortelė (teksto pavyzdys matomas su žaliu fonu, "
+"reprezentuojančiu kitą sluoksnį, kuris slepiamas)"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:500
+msgid "To create masking effects on labels:"
+msgstr "Norėdami sukurti užrašų slėpimo efektus:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:502
+msgid ""
+"Activate the |checkbox| :guilabel:`Enable mask` checkbox in the |labelmask| "
+"tab."
+msgstr ""
+"Įjunkite varnelę |checkbox| :guilabel:`Naudoti slėpimą` kortelėje "
+"|labelmask|."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:503
+msgid "Then you can set:"
+msgstr "Tada galėsite nurodyti:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:505
+msgid ""
+"the mask's :guilabel:`Size` in the :ref:`supported units <unit_selector>`"
+msgstr "slėpimo :guilabel:`Dydį` :ref:`palaikomais vienetais <unit_selector>`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:506
+msgid "the :guilabel:`Opacity` of the mask area around the label"
+msgstr "aplink užrašą slepiamo ploto :guilabel:`Nepermatomumą`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:507
+msgid "a :guilabel:`Pen Join Style`"
+msgstr ":guilabel:`Piešimo sujungimo stilių`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:508
+msgid ""
+":ref:`paint effects <draw_effects>` through the |checkbox| :guilabel:`Draw "
+"effects` checkbox."
+msgstr ""
+":ref:`paišymo efektus <draw_effects>` per varnelę |checkbox| "
+":guilabel:`Paišymo efektai`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:511
+msgid ""
+"Select this mask shape as a mask source in the overlapping layer properties "
+"|labelmask| :guilabel:`Mask` tab (see :ref:`vector_mask_menu`)."
+msgstr ""
+"Parinkite slėpimo formą kaip slėpimo šaltinį persidengiančių sluoksnių "
+"savybių kortelėje |labelmask| :guilabel:`Slėpimas` (žr. "
+":ref:`vector_mask_menu`)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:518
+msgid "Callouts tab"
+msgstr "Išnešimų kortelė"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:520
+msgid ""
+"A common practice when placing labels on a crowded map is to use "
+"**callouts** - labels which are placed outside (or displaced from) their "
+"associated feature are identified with a dynamic line connecting the label "
+"and the feature. If one of the two endings (either the label or the feature)"
+" is moved, the shape of the connector is recomputed."
+msgstr ""
+"Bendra praktika talpinant užrašus tankiame žemėlapyje yra naudoti "
+"**išnešimus** - užrašai, kurie yra (ar buvo išnešti) už jų susijusių "
+"geoobjektų, identifikuojami dinamine linija, kuri jungia užrašą su "
+"geoobjektu. Jei vienas iš dviejų galų (arba prie užrašo, arba prie "
+"geoobjekto) perkeliamas, jungties forma perskaičiuojama."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:531
+msgid "Labels with various callouts settings"
+msgstr "Užrašai su įvairiais išnešimų nustatymais"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:533
+msgid ""
+"To add a callout to a label, enable the |labelcallout| :guilabel:`Callouts` "
+"tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:"
+msgstr ""
+"Norėdami užrašui pridėti išnešimą, įjunkite kortelę |labelcallout| "
+":guilabel:`Išnešimai` ir įgalinkite |checkbox| :guilabel:`Paišyti "
+"išnešimus`. Tada galėsite:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1078
 msgid "labelcallout"
 msgstr "labelcallout"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:536
+msgid "Select the :guilabel:`Style` of connector, one of:"
+msgstr "Parinkti jungties :guilabel:`Stilių`, vieną iš:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:538
+msgid ":guilabel:`Simple lines`: a straight line, the shortest path"
+msgstr ":guilabel:`Paprastos linijos`:tiesi linija, trumpiausias kelias"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:539
+msgid ":guilabel:`Manhattan style`: a 90° broken line"
+msgstr ":guilabel:`Manheteno laužytos linijos`: 90° kampais laužyta linija"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:540
+msgid ":guilabel:`Curved lines`: a curved line"
+msgstr ":guilabel:`Lenktos linijos`: kreivės"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:541
+msgid ""
+":guilabel:`Balloons`: a speech bubble surrounding the label and pointing to "
+"the feature. It can have rounded corners."
+msgstr ""
+":guilabel:`Balionai`: kalbėjimo balionai apgaubia užrašą ir rodo į "
+"geoobjektą. Gali turėti užapvalintus kampus."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:544
+msgid ""
+"Set the properties of the callout. The following table shows the different "
+"properties, with description and compatible connector style."
+msgstr ""
+"Nurodyti išnešimo savybes. Šioje lentelėje išvardintos skirtingos savybės su"
+" aprašymu ir suderinamu jungties stiliumi."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:548
+msgid "Label callout properties"
+msgstr "Užrašo išnešimo savybės"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:552
+msgid "Property"
+msgstr "Savybė"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:552
+msgid "Style of callout"
+msgstr "Išnešimo stilius"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:552
 msgid "Description"
 msgstr "Aprašymas"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+msgid ":guilabel:`Fill style`"
+msgstr ":guilabel:`Pildymo stilius`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+#: ../../docs/user_manual/style_library/label_settings.rst:602
+msgid "Balloons"
+msgstr "Balionai"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+msgid ""
+"A :ref:`fill symbol <vector_fill_symbols>` with full display capabilities, "
+"including layer effects, data-defined settings, ... for drawing the balloon "
+"shape."
+msgstr ""
+":ref:`Pildymo simbolis <vector_fill_symbols>` su pilnomis rodymo "
+"galimybėmis, įskaitant sluoksnio efektus, nuo duomenų priklausančius "
+"nustatymus, ... baliono formos paišymui."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:557
+msgid ":guilabel:`Corner radius`"
+msgstr ":guilabel:`Kampo spindulys`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:557
+msgid "Corner radius of the speech bubble"
+msgstr "Kalbos burbulio kampo spindulys"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:559
+msgid ":guilabel:`Wedge width`"
+msgstr ":guilabel:`Pleišto plotis`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:559
+msgid ""
+"Sets how large the bubble speech connection with feature's pointer should be"
+msgstr ""
+"Nustato, kokio dydžio turi būti kalbos burbulo jungtis su geoobjekto rodykle"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:561
+msgid ":guilabel:`Margins`"
+msgstr ":guilabel:`Paraštės`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:561
+msgid "Margins around the label's text, in the unit of your choice"
+msgstr "Paraštės aplink užrašo tekstą, jūsų pasirinktais vienetais"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:590
 #: ../../docs/user_manual/style_library/label_settings.rst:606

@@ -15,14 +15,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-09-01 10:36+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Transifex Bot <>, 2025\n"
 "Language-Team: Czech (https://app.transifex.com/qgis/teams/6144/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: cs\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
@@ -1289,6 +1289,14 @@ msgstr "now"
 msgid "now()"
 msgstr "now()"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:455
+msgid "second"
+msgstr "second"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:467
+msgid "second(datetime)"
+msgstr "second(datetime)"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:482
 msgid "second(interval)"
 msgstr "second(interval)"
@@ -1318,7 +1326,7 @@ msgid "year(interval)"
 msgstr "year(interval)"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:235
-#: ../../docs/user_manual/expressions/functions_list.rst:1460
+#: ../../docs/user_manual/expressions/functions_list.rst:1473
 msgid "**Some examples:**"
 msgstr "**Některé příklady:**"
 
@@ -1815,19 +1823,19 @@ msgstr "exterior_ring"
 msgid "exterior_ring(geometry)"
 msgstr "exterior_ring(geometry)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "extrude"
 msgstr "extrude"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "extrude(geometry, x, y)"
 msgstr "extrude(geometry, x, y)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "flip_coordinates"
 msgstr "flip_coordinates"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
 msgid "flip_coordinates(geometry)"
 msgstr "flip_coordinates(geometry)"
 
@@ -1945,11 +1953,11 @@ msgstr "interior_ring_n"
 msgid "interior_ring_n(geometry, index)"
 msgstr "interior_ring_n(geometry, index)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:278
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "intersection"
 msgstr "intersection"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:286
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "intersection(geometry1, geometry2)"
 msgstr "intersection(geometry1, geometry2)"
 
@@ -2920,11 +2928,11 @@ msgstr "url_encode"
 msgid "url_encode(map)"
 msgstr "url_encode(map)"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:870
+#: ../../docs/user_manual/expressions/functions_list.rst:883
 msgid "Mathematical Functions"
 msgstr "Matematické funkce"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:872
+#: ../../docs/user_manual/expressions/functions_list.rst:885
 msgid "This group contains math functions (e.g., square root, sin and cos)."
 msgstr ""
 "Tato skupina obsahuje matematické funkce (např. odmocnina, sin a cos)."
@@ -3113,7 +3121,7 @@ msgstr ""
 "scale_polynomial(value, domain_min, domain_max, range_min, range_max, "
 "exponent)"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:897
+#: ../../docs/user_manual/expressions/functions_list.rst:910
 msgid "Operators"
 msgstr "Operátory"
 
@@ -3145,19 +3153,19 @@ msgstr "raster_attributes"
 msgid "raster_attributes(layer, band, value)"
 msgstr "raster_attributes(layer, band, value)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:43
 msgid "raster_statistic(layer, band, property)"
 msgstr "raster_statistic(layer, band, property)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:69
 msgid "raster_value"
 msgstr "raster_value"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:77
 msgid "raster_value(layer, band, point)"
 msgstr "raster_value(layer, band, point)"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:985
+#: ../../docs/user_manual/expressions/functions_list.rst:998
 msgid "This group contains functions that operate on record identifiers."
 msgstr ""
 "Tato skupina obsahuje funkce, které operují se záznamy identifikátorů."
@@ -3325,6 +3333,7 @@ msgid "uuid([format='WithBraces'])"
 msgstr "uuid([format='WithBraces'])"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
+#, python-brace-format
 msgid "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
 msgstr "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
 
@@ -3344,11 +3353,11 @@ msgstr "sensor_data"
 msgid "sensor_data(name, [expiration])"
 msgstr "sensor_data(name, [expiration])"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1081
+#: ../../docs/user_manual/expressions/functions_list.rst:1094
 msgid "String Functions"
 msgstr "Funkce řetězců"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1083
+#: ../../docs/user_manual/expressions/functions_list.rst:1096
 msgid ""
 "This group contains functions that operate on strings (e.g., that replace, "
 "convert to upper case)."
@@ -3520,11 +3529,11 @@ msgstr "upper(string)"
 msgid "wordwrap"
 msgstr "wordwrap"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1505
+#: ../../docs/user_manual/expressions/functions_list.rst:1518
 msgid "expressionSelect"
 msgstr "expressionSelect"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1503
+#: ../../docs/user_manual/expressions/functions_list.rst:1516
 msgid "calculateField"
 msgstr "calculateField"
 

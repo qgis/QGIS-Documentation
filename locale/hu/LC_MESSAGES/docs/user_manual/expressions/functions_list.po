@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2025
 # Transifex Bot <>, 2025
 # 
 #, fuzzy
@@ -13,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"POT-Creation-Date: 2025-09-01 10:36+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Transifex Bot <>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -30,9 +31,9 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"A fordítás közösségi munka eredménye, amelyhez itt tudsz :ref:`csatlakozni "
-"<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
-"részét fordítottuk le."
+"A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
+"<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
+"van lefordítva."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:5
 msgid "List of functions"
@@ -43,16 +44,34 @@ msgid ""
 "The functions, operators and variables available in QGIS are listed below, "
 "grouped by categories."
 msgstr ""
-"A QGIS-ben elérhető funkciók, operátorok és változók alább láthatóak, "
+"A QGIS-ben elérhető függvények, operátorok és változók alább láthatóak, "
 "kategória szerint csoportosítva."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:20
 msgid "Aggregates Functions"
 msgstr "Aggregáló függvények"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:22
+msgid ""
+"This group contains functions which aggregate values over layers and fields."
+msgstr ""
+"Ez a csoport olyan függvényeket tartalmaz, amelyek a rétegek és mezők "
+"értékeit összesítik."
+
+#: ../../docs/user_manual/expressions/text_include.rst:7
+msgid "Show/hide list of functions"
+msgstr "Függvények listájának megjelenítése/elrejtése"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:12
 msgid "aggregate"
 msgstr "aggregate"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:14
+msgid ""
+"Returns an aggregate value calculated using features from another layer."
+msgstr ""
+"Egy másik réteg elemeinek felhasználásával számított aggregált értéket ad "
+"vissza."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:13
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:19
@@ -212,6 +231,7 @@ msgstr "aggregate"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:41
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
@@ -223,7 +243,6 @@ msgstr "aggregate"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:57
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:73
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:74
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:75
@@ -258,7 +277,6 @@ msgstr "aggregate"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:259
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:264
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:283
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:285
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:309
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:335
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:357
@@ -340,8 +358,8 @@ msgstr "aggregate"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:243
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:19
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:41
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:76
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:13
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:23
@@ -385,6 +403,93 @@ msgid ""
 msgstr ""
 "aggregate(layer, aggregate, expression, [filter], [concatenator=''], "
 "[order_by])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:40
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:82
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:107
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:132
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:158
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:184
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:208
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:232
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:256
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:280
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:304
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:328
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:352
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:376
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:400
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:424
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:448
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:472
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:496
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:520
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:544
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:99
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:108
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:168
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:219
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:69
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:161
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:231
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:387
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:412
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:157
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:36
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:63
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:136
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:38
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:159
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:314
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:506
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:42
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:22
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:58
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:81
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:96
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:97
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:99
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:119
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:129
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:145
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:161
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:169
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:213
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:217
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:262
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:286
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:312
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:383
+#: ../../docs/user_manual/expressions/expression_help/Layout.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:401
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:425
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:449
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:104
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:129
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:22
+#: ../../docs/user_manual/expressions/expression_help/String.rst:16
+#: ../../docs/user_manual/expressions/expression_help/String.rst:38
+#: ../../docs/user_manual/expressions/expression_help/String.rst:105
+msgid "[] marks optional arguments"
+msgstr "a [] az opcionális argumentumokat jelöli"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:17
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:23
@@ -562,7 +667,6 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:61
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:63
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:75
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:76
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
@@ -668,8 +772,8 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:245
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:21
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:43
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:44
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:78
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:17
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:25
@@ -954,7 +1058,6 @@ msgstr "majority"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:63
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:70
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:76
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:77
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:78
@@ -990,7 +1093,6 @@ msgstr "majority"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:245
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:266
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:269
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:290
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:292
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:318
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:340
@@ -1075,8 +1177,8 @@ msgstr "majority"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:248
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:25
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:58
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:81
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:82
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
@@ -2279,6 +2381,14 @@ msgstr "now"
 msgid "now()"
 msgstr "now()"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:455
+msgid "second"
+msgstr "second"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:467
+msgid "second(datetime)"
+msgstr "second(datetime)"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:482
 msgid "second(interval)"
 msgstr "second(interval)"
@@ -2792,19 +2902,19 @@ msgstr "exterior_ring"
 msgid "exterior_ring(geometry)"
 msgstr "exterior_ring(geometry)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "extrude"
 msgstr "extrude"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "extrude(geometry, x, y)"
 msgstr "extrude(geometry, x, y)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "flip_coordinates"
 msgstr "flip_coordinates"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:67
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
 msgid "flip_coordinates(geometry)"
 msgstr "flip_coordinates(geometry)"
 
@@ -2922,11 +3032,11 @@ msgstr "interior_ring_n"
 msgid "interior_ring_n(geometry, index)"
 msgstr "interior_ring_n(geometry, index)"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:278
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "intersection"
 msgstr "intersection"
 
-#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:286
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "intersection(geometry1, geometry2)"
 msgstr "intersection(geometry1, geometry2)"
 
@@ -4109,15 +4219,15 @@ msgstr "raster_attributes"
 msgid "raster_attributes(layer, band, value)"
 msgstr "raster_attributes(layer, band, value)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:42
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:43
 msgid "raster_statistic(layer, band, property)"
 msgstr "raster_statistic(layer, band, property)"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:69
 msgid "raster_value"
 msgstr "raster_value"
 
-#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:77
 msgid "raster_value(layer, band, point)"
 msgstr "raster_value(layer, band, point)"
 
@@ -4284,6 +4394,7 @@ msgid "uuid([format='WithBraces'])"
 msgstr "uuid([format='WithBraces'])"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:20
+#, python-brace-format
 msgid "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
 msgstr "``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'"
 
@@ -4467,11 +4578,11 @@ msgstr "upper(string)"
 msgid "wordwrap"
 msgstr "wordwrap"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1505
+#: ../../docs/user_manual/expressions/functions_list.rst:1518
 msgid "expressionSelect"
 msgstr "expressionSelect"
 
-#: ../../docs/user_manual/expressions/functions_list.rst:1503
+#: ../../docs/user_manual/expressions/functions_list.rst:1516
 msgid "calculateField"
 msgstr "calculateField"
 

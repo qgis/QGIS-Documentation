@@ -7,9 +7,9 @@
 # Translators:
 # fairtommy <fairtommy@gmail.com>, 2025
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
-# tomoya miyoshi, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:36+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,7 +57,7 @@ msgid ""
 "if they depict dead-end streets you won't remove them from your vector "
 "layer)."
 msgstr ""
-"トポロジとは、地理的領域の地物を表すポイント、ライン、およびポリゴン間の関係を表すものです。トポロジチェッカープラグインを使用すると、ベクタファイルを調べて、いくつかのトポロジルールでトポロジを確認することができます。これらのルールは、地物の空間関係がお互いに「等しい」か、「含んでいる」か、「覆っている」か、「覆われている」か、「交わっている」か、「離れている」か、「交差している」か、「重複している」か、「接触している」か、または「範囲内にある」かどうかをチェックします。ベクタデータにどのトポロジルールを適用するかは、個別の質問によります。（たとえば、ラインレイヤのはみ出しは通常は容認しないでしょうが、これが道路の行き止まりを表している場合には、ベクタレイヤからそれらを削除することはしないでしょう）。"
+"トポロジとは、ある地理的領域の地物を表すポイント、ライン、およびポリゴン間の関係を記述するものです。トポロジチェッカープラグインを使うと、ベクタファイルを調べて、トポロジルールを使ってそのトポロジを確認することができます。これらのルールは、地物の空間関係がお互いに「等しい」か、「含んでいる」か、「覆っている」か、「覆われている」か、「交わっている」か、「離れている」か、「交差している」か、「重複している」か、「接触している」か、または「範囲内にある」かどうかをチェックします。ベクタデータにどのトポロジルールを適用するかは、個別の質問によります。（たとえば、ラインレイヤのはみ出しは通常は容認しないでしょうが、これが道路の行き止まりを表している場合には、ベクタレイヤからそれらを削除することはしないでしょう）。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:25
 msgid ""
@@ -66,7 +66,23 @@ msgid ""
 "errors are hard to find. This plugin helps you find such errors through a "
 "list of rules."
 msgstr ""
-"QGISには、新たな地物をエラーなしで作成するのに最適な、組み込みのトポロジ編集機能があります。しかし、既存のデータエラーやユーザに起因するエラーを見つけるのは困難です。このプラグインは、ルールのリストを通じてこのようなエラーを見つけるのに役立ちます。"
+"QGISには、組み込みのトポロジ編集機能があり、新たな地物を誤りなく作るのに最適です。しかし、既存のデータエラーやユーザに起因するエラーを見つけるのは困難です。このプラグインは、リストになったルールを使ってそのようなエラーを見つけるのに役立ちます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:29
+msgid "To enable the :guilabel:`Topology checker` plugin:"
+msgstr ":guilabel:`トポロジチェッカー` プラグインを有効にする:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:31
+msgid "Go to :guilabel:`Plugins` menu"
+msgstr ":guilabel:`プラグイン` メニューを開く"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:32
+msgid ""
+"Open |showPluginManager| :guilabel:`Manage and Install plugins` and choose "
+"|pluginInstalled| :guilabel:`Installed`"
+msgstr ""
+"|showPluginManager| :guilabel:`プラグインの管理とインストール` を開き、|pluginInstalled| "
+":guilabel:`インストール済み` を選ぶ"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:137
 msgid "showPluginManager"
@@ -76,6 +92,10 @@ msgstr "showPluginManager"
 msgid "pluginInstalled"
 msgstr "pluginInstalled"
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:34
+msgid "Enable |checkbox| |topologyChecker| :guilabel:`Topology checker`"
+msgstr "|checkbox| |topologyChecker| :guilabel:`トポロジチェッカー` を有効にする"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:131
 msgid "checkbox"
 msgstr "checkbox"
@@ -83,6 +103,22 @@ msgstr "checkbox"
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:143
 msgid "topologyChecker"
 msgstr "topologyChecker"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:35
+msgid ""
+"Close the :guilabel:`Plugin manager` dialog. A |topologyChecker| "
+":guilabel:`Topology checker` entry is added to the :guilabel:`Vector` menu."
+msgstr ""
+":guilabel:`プラグインマネージャ` ダイアログを閉じます。:guilabel:`ベクタ` メニューに |topologyChecker| "
+":guilabel:`トポロジチェッカー` という項目が追加されています。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:39
+msgid ""
+"After you enabled |topologyChecker| :guilabel:`Topology checker` open it and"
+" choose |options| :guilabel:`Configure` to create your topology rules."
+msgstr ""
+"|topologyChecker| :guilabel:`トポロジチェッカー` を有効にしたらそれを開き、|options| "
+":guilabel:`設定` を選んでトポロジルールを作ります。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:133
 msgid "options"
@@ -92,13 +128,112 @@ msgstr "options"
 msgid "On **point layers** the following rules are available:"
 msgstr "**ポイントレイヤ** に対しては、次のルールが利用可能です:"
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:44
+msgid ""
+":guilabel:`Must be covered by`: Here you can choose a vector layer from your"
+" project. Points that aren't covered by the given vector layer occur in the "
+"'Error' field."
+msgstr ""
+":guilabel:`次の地物に重ならなければならない`: "
+"ここではプロジェクト内のベクタレイヤを選択できます。指定されたベクタレイヤと重なっていないポイントは「エラー」フィールドに表示されます。 "
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:46
+msgid ""
+":guilabel:`Must be covered by endpoints of`: Here you can choose a line "
+"layer from your project."
+msgstr ":guilabel:`次の線の地物の両端に重ならなければならない`: ここではプロジェクト内のラインレイヤを選択できます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:47
+msgid ""
+":guilabel:`Must be inside`: Here you can choose a polygon layer from your "
+"project. The points must be inside a polygon. Otherwise, QGIS writes an "
+"'Error' for the point."
+msgstr ""
+":guilabel:`次のポリゴンの内側でなくてはならない`: "
+"ここではプロジェクト内のポリゴンレイヤを選択できます。ポイントはポリゴンの内側にある必要があります。そうでない場合、QGISはそのポイントに対して「エラー」を書き込みます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:49
+msgid ""
+":guilabel:`Must not have duplicates`: Whenever a point is represented twice "
+"or more, it will occur in the 'Error' field."
+msgstr ""
+":guilabel:`重複ジオメトリの地物があってはならない`: あるポイントが2回以上描写される場合、それは「エラー」フィールドに表示されます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:51
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:61
+msgid ""
+":guilabel:`Must not have invalid geometries`: Checks whether the geometries "
+"are valid."
+msgstr ":guilabel:`不正なジオメトリがあってはならない`: ジオメトリが正当かどうかをチェックします。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:52
+msgid ""
+":guilabel:`Must not have multi-part-geometries`: All multi-part points are "
+"written into the 'Error' field."
+msgstr ":guilabel:`マルチパートがあってはならない`: 全てのマルチパートポイントは「エラー」フィールドに書き込まれます。"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:55
 msgid "On **line layers**, the following rules are available:"
 msgstr "**ラインレイヤ** に対しては、次のルールが利用可能です:"
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:57
+msgid ""
+":guilabel:`End points must be covered by`: Here you can select a point layer"
+" from your project."
+msgstr ":guilabel:`両端は次の点地物に重ならなければならない`: ここではプロジェクトからポイントレイヤを選ぶことができます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:58
+msgid ""
+":guilabel:`Must not have dangles`: This will show the overshoots in the line"
+" layer."
+msgstr ":guilabel:`ダングル（懸垂線）があってはならない`: ラインレイヤ内の線のはみ出しを表示します。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:59
+msgid ""
+":guilabel:`Must not have duplicates`: Whenever a line feature is represented"
+" twice or more, it will occur in the 'Error' field."
+msgstr ""
+":guilabel:`重複ジオメトリの地物があってはならない`: あるライン地物が2回以上描写される場合、それは「エラー」フィールドに表示されます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:62
+msgid ""
+":guilabel:`Must not have multi-part geometries`: Sometimes, a geometry is "
+"actually a collection of simple (single-part) geometries. Such a geometry is"
+" called multi-part geometry. If it contains just one type of simple "
+"geometry, we call it multi-point, multi-linestring or multi-polygon. All "
+"multi-part lines are written into the 'Error' field."
+msgstr ""
+"**マルチパートがあってはならない**: "
+"あるジオメトリが、実際には単純な（シングルパート）ジオメトリの集合となっていることがあります。このようなジオメトリはマルチパートジオメトリと呼ばれています。それが単純なジオメトリの1種類だけを含んでいる場合、これをマルチポイント、マルチラインストリングまたはマルチポリゴンと呼びます。マルチパートのラインは全て「エラー」フィールドに書き込まれます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:67
+msgid ""
+":guilabel:`Must not have pseudos`: A line geometry's endpoint should be "
+"connected to the endpoints of two other geometries. If the endpoint is "
+"connected to only one other geometry's endpoint, the endpoint is called a "
+"pseudo node."
+msgstr ""
+":guilabel:`（2つの地物を接続するだけの）疑似ノードがあってはならない`: "
+"ラインジオメトリの端点は、他の2つのジオメトリと接続していなければなりません。他のジオメトリ1つだけと接続している場合には、この端点は疑似ノードと呼ばれます。"
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:71
 msgid "On **polygon layers**, the following rules are available:"
 msgstr "**ポリゴンレイヤ** に対しては、次のルールが利用可能です:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:75
+msgid ""
+":guilabel:`Must not have duplicates`: Polygons from the same layer must not "
+"have identical geometries. Whenever a polygon feature is represented twice "
+"or more it will occur in the 'Error' field."
+msgstr ""
+"**重複ジオメトリの地物があってはならない**: "
+"同じレイヤのポリゴンに同一のジオメトリを持つものがあってはならない。あるポリゴン地物が2回以上描写される場合、「エラー」フィールドに表示されます。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:81
+msgid ""
+":guilabel:`Must not have invalid geometries`: Checks whether the geometries "
+"are valid. Some of the rules that define a valid geometry are:"
+msgstr "**不正なジオメトリがあってはならない**: ジオメトリが正当かどうかをチェックします。正当なジオメトリを定義するルールには次があります:"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:84
 msgid "Polygon rings must close."
@@ -118,6 +253,18 @@ msgstr "リングは自己交差してはいけません（互いに接触する
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:87
 msgid "Rings may not touch other rings, except at a point."
 msgstr "リングは、1点で接触する場合を除き、他のリングに接触できません。"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:89
+msgid ""
+":guilabel:`Must not have multi-part geometries`: Sometimes, a geometry is "
+"actually a collection of simple (single-part) geometries. Such a geometry is"
+" called multi-part geometry. If it contains just one type of simple "
+"geometry, we call it multi-point, multi-linestring or multi-polygon. For "
+"example, a country consisting of multiple islands can be represented as a "
+"multi-polygon."
+msgstr ""
+"**マルチパートがあってはならない**: "
+"あるジオメトリが、実際には単純な（シングルパート）ジオメトリの集合となっていることがあります。このようなジオメトリはマルチパートジオメトリと呼ばれています。単純なジオメトリが1種類だけ含まれている場合には、これをマルチポイント、マルチラインストリングまたはマルチポリゴンと呼んでいます。例えば、複数の島からなる国は、マルチポリゴンとして表現できます。"
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_topology_checker.rst:139
 msgid "symbologyAdd"

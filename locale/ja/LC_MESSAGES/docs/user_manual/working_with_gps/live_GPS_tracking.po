@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# tomoya miyoshi, 2025
 # Transifex Bot <>, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,7 +88,7 @@ msgid ""
 "recentering parameter <gps_recenter>`."
 msgstr ""
 "|recenter| :sup:`GPS位置に地図を再センタリング`: :ref:`automatic recentering parameter "
-"`に関係なく、マップは直ちに現在のGPS位置に再センタリングされます。"
+"<gps_recenter>` に関係なく、マップは直ちに現在のGPS位置に再センタリングされます。"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:351
 msgid "recenter"
@@ -107,13 +107,19 @@ msgid ""
 " switch depending on your needs. Exposed tools will adapt as well to the "
 "selected layer type."
 msgstr ""
-"|gpsDestinationLayer| :sup:`GPSデジタイズ用レイヤを設定`： QGISは地物をデジタイズするため、デフォルトで "
-":guilabel:`アクティブレイヤに従う`、つまり、GPSデジタイジングツールは :guilabel:`レイヤ` "
-"パネルで選択されたレイヤーに適応し、作成された地物はそのレイヤに保存されます。これは便利な場合もありますが、望んでいないレイヤに地物を保存するのを避けるには、他のレイヤとの相互作用に注意する必要があることを意味します。このオプションは、ライブトラッキングセッション中に、データ保存用のレイヤを明示的に指定することができ、必要に応じて切り替えることができます。露出されたツールは、選択されたレイヤのタイプに適応します。"
+"|gpsDestinationLayer| :sup:`GPSデジタイズ用レイヤを設定`： デフォルトではQGISは地物をデジタイズするとき "
+":guilabel:`アクティブレイヤに従う`、つまり、GPSデジタイズツールは :guilabel:`レイヤ` "
+"パネルで選択されているレイヤに応じて、作成した地物をそのレイヤに保存します。これは便利な場合もありますが、意図しないレイヤに地物を保存するのを避けるには、他のレイヤとの相互作用に注意する必要があることも意味します。このオプションは、ライブトラッキングセッション中に、データ保存用のレイヤを明示的に指定することができ、必要に応じて切り替えることができます。表示されたツールも選択されたレイヤのタイプに応じます。"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:337
 msgid "gpsDestinationLayer"
 msgstr "gpsDestinationLayer"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:44
+msgid ""
+"The GPS destination layer is made automatically editable when a feature is "
+"being created, and the user is notified accordingly."
+msgstr "GPS目的地レイヤは、地物が作成されるときに自動的に編集できる状態となり、ユーザーにはその旨が通知されます。 "
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:47
 msgid "actions for feature creation:"
@@ -175,6 +181,12 @@ msgstr ""
 msgid "metadata"
 msgstr "metadata"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:58
+msgid ""
+"a display box for quick access to some GPS information components you may "
+"need:"
+msgstr "必要となるGPS情報要素を素早く参照するための表示ボックス:"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:60
 msgid "|unchecked| :sup:`Show location`"
 msgstr "|unchecked| :sup:`位置を表示`"
@@ -206,6 +218,14 @@ msgstr "|unchecked| :sup:`合計トラック長を表示`"
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:66
 msgid "|unchecked| :sup:`Show distance from start of track`"
 msgstr "|unchecked| :sup:`始点からの距離を表示`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:70
+msgid ""
+"The |options| :sup:`Settings` button opens a drop-down menu with common "
+"settings which are expected to be modified mid-session:"
+msgstr ""
+"|options| :sup:`設定` "
+"ボタンをクリックすると、セッション中に変更することが想定される一般的な設定項目を持つドロップダウンメニューが開きます:"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:345
 msgid "options"
@@ -262,7 +282,18 @@ msgstr ""
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:91
 msgid ""
 ":guilabel:`Time stamp destination` to adjust the field for time fix storage"
-msgstr ":guilabel:`タイムスタンプ先` は時間固定ストレージのフィールドを調節します"
+msgstr ":guilabel:`タイムスタンプ先` は時刻フィックスを格納するフィールドを調節します"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:95
+msgid ""
+"|unchecked| :guilabel:`Log to GeoPackage/SpatiaLite...`: When activated, the"
+" user will be prompted to select an existing GeoPackage/SpatiaLite file or "
+"enter a new file name. A ``gps_points`` and ``gps_tracks`` table will be "
+"created in the file with a predefined structure."
+msgstr ""
+"|unchecked| :guilabel:`GeoPackage/SpatiaLiteにログ...`: "
+"有効にすると、既存のGeoPackage/SpatiaLiteファイルの選択または新規ファイル名の入力が促されます。そのファイルにあらかじめ定義された構造を持つ"
+" ``gps_points`` テーブルと ``gps_tracks`` テーブルが作られます。"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:101
 msgid ""
@@ -287,13 +318,44 @@ msgstr "gpsTrackBarChart"
 msgid "Position and additional attributes"
 msgstr "位置と追加属性"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:146
+msgid ""
+"In the |metadata| :sup:`Position` tab, if the GPS is receiving signals from "
+"satellites, you will see your position in latitude, longitude and altitude "
+"together with additional attributes."
+msgstr ""
+"|metadata| :sup:`位置` "
+"タブでは、GPSが衛星からの信号を受信しているとき、自分の位置が緯度、経度、高度に追加属性を加えて表示されます。"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:155
 msgid "GPS tracking position and additional attributes"
 msgstr "GPS追跡位置と追加属性"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:158
+msgid ":guilabel:`Latitude`"
+msgstr ":guilabel:`緯度`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:159
+msgid ":guilabel:`Longitude`"
+msgstr ":guilabel:`経度`"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:163
+msgid ""
+":guilabel:`Geoidal separation`: Difference between the WGS-84 Earth "
+"ellipsoid and mean sea level (geoid), ``-`` means mean sea level is below "
+"ellipsoid"
+msgstr ""
+":guilabel:`ジオイドの差`: WGS-84地球楕円体と平均海面（ジオイド）の差。``-`` は平均海面が楕円体の下にあることを示す"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:166
 msgid ":guilabel:`Speed`: Ground speed"
 msgstr ":guilabel:`Speed`: 対地速度"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:167
+msgid ""
+":guilabel:`Direction`: Bearing measured in degrees clockwise from true north"
+" to the direction of travel"
+msgstr ":guilabel:`方向`: 真北から移動方向へ時計回りに度数で測定した方位"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:169
 msgid ":guilabel:`HDOP`: Horizontal dilution of precision"
@@ -306,6 +368,44 @@ msgstr ":guilabel:`VDOP`: 垂直精度低下率"
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:171
 msgid ":guilabel:`PDOP`: Dilution of precision"
 msgstr ":guilabel:`PDOP`: 位置精度低下率"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:173
+msgid ":guilabel:`V accuracy`: Vertical accuracy in meters"
+msgstr ":guilabel:`V正確度`: メートル単位による垂直正確度"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:175
+msgid ""
+":guilabel:`Mode`: GPS receiver configuration 2D/3D mode, can be "
+"``automatic`` or ``manual``"
+msgstr ":guilabel:`モード`: GPS受信機設定2D/3Dモード、``自動`` または ``手動``"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:177
+msgid ":guilabel:`Quality`: Positioning quality indicator"
+msgstr ":guilabel:`品質`: 測位品質の指標"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:179
+msgid ":guilabel:`Satellites`: Count of satellites used in obtaining the fix"
+msgstr ":guilabel:`衛星`: フィックスの取得に使われた衛星の数"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:180
+msgid ":guilabel:`Total track length`: Total distance of current GPS track"
+msgstr ":guilabel:`合計トラック長`: 現在のGPSトラックの総距離"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:181
+msgid ""
+":guilabel:`Distance from start of track`: Direct distance from first vertex "
+"in current GPS track to latest vertex"
+msgstr ":guilabel:`トラックの始点からの距離`: 現在のGPSトラックの最初の頂点から最新の頂点までの直線距離"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:186
+msgid "Signal"
+msgstr "信号"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:188
+msgid ""
+"With |gpsTrackBarChart| :sup:`Signal` tab, you can see the signal strength "
+"of the satellites you are receiving signals from."
+msgstr "|gpsTrackBarChart| :sup:`信号` タブでは、信号を受信して​​いる衛星の信号強度を確認できます。"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:196
 msgid "GPS tracking signal strength"
@@ -375,9 +475,13 @@ msgid ""
 msgstr ""
 "QGISがGPSデータを受信できない場合は、GPSデバイスを再起動して5〜10秒ほど待ってから、再度接続を試みてください。通常、このソリューションで対応できます。再び接続エラーを受信した場合、同じGPSユニットと対になった別のBluetooth受信機が近くにないことを確認してください。"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:232
+msgid "Examples of GPS devices connection in QGIS"
+msgstr "QGISにおけるGPSデバイス接続の例"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:235
 msgid "Using GPSMAP 60cs"
-msgstr "GPSMAP 60cs を使用する"
+msgstr "GPSMAP 60cs を使う"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:238
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:288
@@ -392,6 +496,16 @@ msgstr ""
 "最も簡単に動作させる方法は、`GPSGate <https://gpsgate.com/gpsgate-splitter>`_ "
 "というミドルウェア（フリーウェア、オープンではない）を使うことです。"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:243
+msgid ""
+"Launch the program, make it scan for GPS devices (works for both USB and BT "
+"ones) and then in QGIS:"
+msgstr "プログラムを起動し、GPSデバイスをスキャンさせ（USB接続とBTの両方に対応）、その後QGISで:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:248
+msgid "Press :guilabel:`Connect` in the :guilabel:`GPS Information` panel"
+msgstr ":guilabel:`GPS情報` パネルの :guilabel:`接続` を押します"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:251
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:296
 msgid "Ubuntu/Mint GNU/Linux"
@@ -403,9 +517,23 @@ msgid ""
 "case GPSD, so"
 msgstr "Windowsにとって簡単な手段は中間にサーバーを使うことであり、この場合はGPSDで、このため、"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:256
+msgid "Install the program"
+msgstr "プログラムをインストールします"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:262
 msgid "Then load the ``garmin_gps`` kernel module"
 msgstr "それから ``garmin_gps`` カーネルモジュールを読み込みます"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:268
+msgid ""
+"And then connect the unit and check with ``dmesg`` the actual device being "
+"used by the unit, for example ``/dev/ttyUSB0``."
+msgstr "次にユニットを接続し、ユニットが使っている実際のデバイスを ``dmesg`` で確認します。例 ``//dev/ttyUSB0``"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:271
+msgid "Now you can launch gpsd"
+msgstr "これでgpsdを起動することができます"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:277
 msgid "And finally connect with the QGIS live tracking tool."

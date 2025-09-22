@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Akinobu Masumura, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Akinobu Masumura, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -289,6 +290,12 @@ msgstr "``OUTPUT``"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "デフォルト： ``[一時ファイルに保存]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:46
+msgid ""
+"Specify the point cloud file to use as output. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "出力として使用する点群ファイルを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "一時ファイルに保存"
@@ -469,6 +476,12 @@ msgstr ""
 msgid "**Virtual point cloud**"
 msgstr "**仮想点群**"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:140
+msgid ""
+"Specify the point cloud file to build the data into. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "作成したデータを入れる点群ファイルを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:159
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:258
 msgid "[raster]"
@@ -529,6 +542,13 @@ msgstr "点を切り抜く範囲として使うポリゴンベクタレイヤ"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:256
 msgid "**Clipped**"
 msgstr "**切り抜き結果**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:211
+msgid ""
+"Specify the point cloud file to export the clipped points to. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"切り抜かれた点をエクスポートする点群ファイルを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:218
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:458
@@ -649,6 +669,12 @@ msgstr "キャンバスに描画: 考慮する領域を区切る矩形をクリ�
 msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
 msgstr "``xmin, xmax, ymin, ymax`` として座標を入力します"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:259
+msgid ""
+"Output point cloud whose features are the points within the coverage polygon"
+" layer."
+msgstr "被覆ポリゴンレイヤの内側にあるポイントを地物とする出力点群。"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:264
 msgid "**Algorithm ID**: ``pdal:clip``"
 msgstr "**Algorithm ID**: ``pdal:clip``"
@@ -683,6 +709,12 @@ msgstr "[フォルダ]"
 msgid "Default: ``[Skip output]``"
 msgstr "デフォルト： ``[出力をスキップ]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:300
+msgid ""
+"Specify the folder to create the new files in. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "新しいファイルを入れるフォルダを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "出力をスキップ"
@@ -697,9 +729,31 @@ msgstr "一時ディレクトリに保存"
 msgid "Save to Directory"
 msgstr "ディレクトリに保存します"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:320
+msgid ""
+"Output folder containing point cloud layers with accompanying COPC index "
+"files."
+msgstr "点群レイヤと付随するCOPCインデックスファイルを格納する出力フォルダ。"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:325
 msgid "**Algorithm ID**: ``pdal:createcopc``"
 msgstr "**Algorithm ID**: ``pdal:createcopc``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:335
+msgid "Information"
+msgstr "情報"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:337
+msgid "Outputs basic metadata from an input point cloud file."
+msgstr "入力点群ファイルの基本メタデータを出力します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:339
+msgid "Example of output information::"
+msgstr "出力される情報の例"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:382
+msgid "Input point cloud layer to extract metadata information from"
+msgstr "メタデータ情報を抽出する入力点群レイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:383
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:405
@@ -709,6 +763,12 @@ msgstr "**出力ファイル**"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:385
 msgid "[file]"
 msgstr "[ファイル]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:388
+msgid ""
+"Specify the file to store the metadata information. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "メタデータ情報を保存するファイルを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:407
 msgid "[vector]"
@@ -734,18 +794,45 @@ msgstr "複数の点群ファイルを１つに結合する."
 msgid ":ref:`pdalvirtualpointcloud`"
 msgstr ":ref:`pdalvirtualpointcloud`"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:445
+msgid "Input point cloud layers to merge into a single one"
+msgstr "ひとつに結合される入力点群レイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:446
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:496
 msgid "**Merged**"
 msgstr "**出力レイヤ**"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:451
+msgid ""
+"Specify the output point cloud merging input files. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "入力ファイルを結合している出力点群を指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:499
+msgid "Output point cloud layer merging all the input files."
+msgstr "入力ファイル全てを統合した出力点群レイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:504
 msgid "**Algorithm ID**: ``pdal:merge``"
 msgstr "**Algorithm ID**: ``pdal:merge``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:514
+msgid "Reproject"
+msgstr "再投影"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:516
+msgid ""
+"Reprojects a point cloud to a different Coordinate Reference System (CRS)."
+msgstr "点群を別の座標参照系 (CRS) に再投影します。"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:518
 msgid ":ref:`pdalassignprojection`"
 msgstr ":ref:`pdalassignprojection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:534
+msgid "Input point cloud layer to reproject to a different CRS"
+msgstr "別のCRSに再投影する入力点群レイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:535
 msgid "**Target CRS**"
@@ -755,25 +842,82 @@ msgstr "**ラスタのCRS**"
 msgid "**Reprojected**"
 msgstr "**再投影したラスタファイル**"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:544
+msgid ""
+"Specify the reprojected point cloud file. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "再投影された点群ファイルを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:561
+msgid "**Coordinate operation**"
+msgstr "**座標演算**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:564
 msgid "``OPERATION``"
 msgstr "``OPERATION``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:566
+msgid ""
+"The :ref:`datum transformation <datum_transformation>` to use to reproject "
+"the data between the origin and target systems."
+msgstr "元の系から対象の系へデータを再投影するために使用する :ref:`測地系変換 <datum_transformation>`。 "
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:583
+msgid "Output point cloud layer in the target CRS."
+msgstr "対象CRSになった出力点群レイヤ"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:588
 msgid "**Algorithm ID**: ``pdal:reproject``"
 msgstr "**Algorithm ID**: ``pdal:reproject``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:598
+msgid "Thin (by sampling radius)"
+msgstr "点群を軽量化（距離）"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:600
+msgid ""
+"Creates a thinned version of the point cloud by performing sampling by "
+"distance point (reduces the number of points within a certain radius)."
+msgstr "距離点によるサンプリングを実行して点群を間引いたバージョンを作成します（特定の半径内の点の数を削減します）。 "
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:608
+msgid "Thining point cloud (by sampling radius)"
+msgstr "入力レイヤ"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:610
 msgid ":ref:`pdalthinbydecimate`"
 msgstr ":ref:`pdalthinbydecimate`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:629
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:728
+msgid "Input point cloud layer to create a thinned version from"
+msgstr "間引いたバージョンを作る入力点群レイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:630
+msgid "**Sampling radius (in map units)**"
+msgstr "**サンプリング半径（地図上の単位）**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:631
 msgid "``SAMPLING_RADIUS``"
 msgstr "``SAMPLING_RADIUS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:632
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:830
+msgid "[numeric: double]"
+msgstr "[数値: double]"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:634
 msgid "Default: 1.0"
 msgstr "デフォルト： 1.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:635
+msgid "Distance within which points are sampled to a unique point"
+msgstr "点が一意の点にサンプリングされる距離"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:636
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:686
+msgid "**Thinned (by radius)**"
+msgstr "**軽量化点群（距離）**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:694
 msgid "**Algorithm ID**: ``pdal:thinbyradius``"
@@ -786,6 +930,10 @@ msgstr ":ref:`pdalthinbyradius`"
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:730
 msgid "``POINTS_NUMBER``"
 msgstr "``POINTS_NUMBER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:731
+msgid "[numeric: integer]"
+msgstr "[数値: Integer]"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:733
 msgid "Default: 1"
