@@ -615,11 +615,11 @@ Counts the number of occurrences of a substring within a string. By default, the
    :widths: 15 85
 
    * - Syntax
-     - substr_count(input, substring, [overlapping=False])
+     - substr_count(string, substring, [overlapping=False])
 
        [] marks optional arguments
    * - Arguments
-     - * **input** - The input string to search in.
+     - * **string** - The input string to search in.
        * **substring** - The substring to search for.
        * **overlapping** - Optional flag to control whether overlapping occurrences should be counted. Defaults to FALSE (non-overlapping counting). Set to TRUE to count overlapping occurrences.
    * - Examples
