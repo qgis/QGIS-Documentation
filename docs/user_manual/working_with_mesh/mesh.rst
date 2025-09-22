@@ -761,9 +761,6 @@ layout legend <layout_legend_item>`. These options include:
 Exploring mesh datasets
 ========================
 
-Using the identify tools
-------------------------
-
 To identify mesh elements and their associated datasets, use the
 |identify| :guilabel:`Identify Features` tool from the :guilabel:`Attributes` toolbar.
 Click on a mesh element in the map canvas and the :guilabel:`Identify Results` panel
@@ -771,9 +768,15 @@ opens, displaying information about the mesh layer and the identified element. T
 
 * **Dataset values** for the clicked element:
   
-  * The active dataset groups (scalar and, if available, vector) 
+  * The active dataset groups (scalar and/or vector)
     at the current time defined by the :guilabel:`Temporal Controller`.
+  * When the temporal navigation is enabled, all time-aware dataset groups
+    are shown with values corresponding to the current time step.
+  * When the temporal navigation is disabled, the results only contain values
+    from the :ref:`static dataset groups <meshsource>` defined.
   * Other dataset groups are also listed after the active ones.
+  * Geometry information and some returned properties are always available
+    in both cases.
 
 * **Source** of the dataset (the file where it is stored).
 
@@ -789,10 +792,6 @@ opens, displaying information about the mesh layer and the identified element. T
   * Centroid of the face.
   * Coordinates of a snapped vertex (if the click was snapped to a vertex).
   * Center of a snapped edge (if the click was snapped to an edge).
-
-When the map canvas is non-temporal (temporal navigation disabled),
-the results only contain values from the static dataset groups defined 
-in the mesh layer properties.
 
 .. _figure_mesh_identify:
 
