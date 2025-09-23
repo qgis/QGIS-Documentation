@@ -23,7 +23,8 @@ resulting in an endpoint without a proper connection.
 .. figure:: img/check_geometry_dangleendlines.png
    :align: center
 
-   Errors for dangle-end lines are reported on line features, and entire features with dangling ends are highlighted in red for clarity.
+   Errors for dangle-end lines are reported on line features,
+   and entire features with dangling ends are highlighted in red for clarity.
 
 Parameters
 ..........
@@ -110,21 +111,23 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the dangle-end.
        - ``gc_ringidx``: the index of the feature's geometry ring containing the dangle-end.
-       - ``gc_vertidx``: the vertex index of the dangle-end in the feature.
+       - ``gc_vertidx``: the vertex index of the dangle-end in the feature's geometry ring.
        - ``gc_errorx``: the x coordinate of the dangle-end.
        - ``gc_errory``: the y coordinate of the dangle-end.
        - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature with the dangle-end.
    * - **Dangle-end features**
      - ``OUTPUT``
      - [vector: line]
      - Output line layer containing the input dangle-end features.
        If no dangle-end features are found, the output layer will be empty.
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -230,8 +233,8 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``
@@ -240,6 +243,7 @@ Outputs
        - ``gc_errorx``: the x coordinate of the centroid of the duplicate geometry.
        - ``gc_errory``: the y coordinate of the centroid of the duplicate geometry.
        - ``gc_error``: the indices of the duplicate geometry (all except the highest index).
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that is a duplicate.
    * - **Duplicate geometries**
      - ``OUTPUT``
      - [vector: same as input]
@@ -352,16 +356,17 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
+       The output layer contains the following fields:
 
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the duplicate vertex.
        - ``gc_ringidx``: the index of the feature's geometry ring containing the duplicate vertex.
-       - ``gc_vertidx``
+       - ``gc_vertidx``: the index of the duplicate vertex in the feature's geometry ring.
        - ``gc_errorx``: the x coordinate of the duplicate vertex.
        - ``gc_errory``: the y coordinate of the duplicate vertex.
        - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that has duplicate vertices.
    * - **Duplicated vertices features**
      - ``OUTPUT``
      - [vector: same as input]
@@ -483,8 +488,8 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``
@@ -493,6 +498,7 @@ Outputs
        - ``gc_errorx``: the x coordinate of the centroid of the contained feature.
        - ``gc_errory``: the y coordinate of the centroid of the contained feature.
        - ``gc_error``: the layer name and feature ID of a polygon that contains the feature.
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that is contained within another.
    * - **Contained features**
      - ``OUTPUT``
      - [vector: same as input]
@@ -608,8 +614,8 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the hole.
@@ -618,6 +624,7 @@ Outputs
        - ``gc_errorx``: the x coordinate of the centroid of the hole.
        - ``gc_errory``: the y coordinate of the centroid of the hole.
        - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that has a hole.
    * - **Polygon with holes**
      - ``OUTPUT``
      - [vector: polygon]
@@ -730,8 +737,7 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the ``UNIQUE_ID`` field referring to an intersecting input feature,
-       the output layer also contains the following fields:
+       The output layer contains the following fields:
 
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
@@ -740,13 +746,14 @@ Outputs
        - ``gc_vertidx``
        - ``gc_errorx``: the x coordinate of the intersection point.
        - ``gc_errory``: the y coordinate of the intersection point.
+       - ``UNIQUE_ID`` field: the unique ID of an intersecting input feature.
        - ``gc_error``: the layer name and index of the other intersecting feature.
    * - **Intersecting feature**
      - ``OUTPUT``
      - [vector: line]
      - Output layer containing, for each identified intersection, the feature (with same ``UNIQUE_ID`` value) it belongs to.
        If no intersections are found, the output layer will be empty.
-       Additional fields are available (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -857,7 +864,7 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error location and information.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
+       The output layer contains the following fields:
 
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
@@ -866,13 +873,14 @@ Outputs
        - ``gc_vertidx``
        - ``gc_errorx``: the x coordinate of the intersection point.
        - ``gc_errory``: the y coordinate of the intersection point.
+       - ``UNIQUE_ID`` field: the unique ID of the intersecting input feature.
        - ``gc_error``: the index of the check layer where the intersection occurs.
    * - **Line intersecting other layer features**
      - ``OUTPUT``
      - [vector: line]
      - Output layer containing, for each identified intersection, the input feature it belongs to.
        If no intersections are found, the output layer will be empty.
-       Additional fields are available (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -921,7 +929,7 @@ Basic parameters
      - ``UNIQUE_ID``
      - [tablefield: any]
      - Field storing unique values for feature identification.
-   * - **Min overlap area**
+   * - **Minimum overlap area**
      - ``MIN_OVERLAP_AREA``
      - [numeric: double]
      - Minimum area of the overlap to be reported as an error.
@@ -988,19 +996,20 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_errorx``: the x coordinate of the centroid of the overlapping area.
        - ``gc_errory``: the y coordinate of the centroid of the overlapping area.
        - ``gc_error``: the area of the overlapping geometry.
-       - ``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the overlapping feature.
+       - ``UNIQUE_ID`` field: the unique ID of an overlapped input feature.
+       - ``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the other overlapping feature.
    * - **Overlap features**
      - ``OUTPUT``
      - [vector: polygon]
      - Output layer containing the overlapping areas.
-       Additional fields are available (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
@@ -1111,8 +1120,8 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part where the self-intersection occurs.
@@ -1123,6 +1132,7 @@ Outputs
        - ``gc_error``
        - ``gc_segment_1``: the index of the first segment involved in the intersection.
        - ``gc_segment_2``: the index of the second segment involved in the intersection.
+       - ``UNIQUE_ID`` field: the unique ID of the self-intersecting input feature.
    * - **Self-intersecting features**
      - ``OUTPUT``
      - [vector: line, polygon]
@@ -1231,10 +1241,18 @@ Outputs
    * - **Small angle errors**
      - ``ERRORS``
      - [vector: point]
-     - Output point layer representing the error locations and information
-       (the ID and name of the input layer, the ID, geometry part,
-       ring and vertex index of the erroneous feature,
-       x and y coordinates of the error and the value of the erroneous angle).
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the index of the feature's geometry part containing the small angle.
+       - ``gc_ringidx``: the index of the feature's geometry ring containing the small angle.
+       - ``gc_vertidx``: the index of the vertex with the small angle in the feature's geometry ring.
+       - ``gc_errorx``: the x coordinate of the vertex with the small angle.
+       - ``gc_errory``: the y coordinate of the vertex with the small angle.
+       - ``gc_error``: the error angle value.
+       - ``UNIQUE_ID`` field: the unique ID of the input feature with the small angle.
 
 Python code
 ...........
@@ -1353,21 +1371,22 @@ Outputs
      - ``ERRORS``
      - [vector: point]
      - Output point layer representing the error locations and information.
-       Other than the ``UNIQUE_ID`` field, the output layer also contains the following fields:
-       
+       The output layer contains the following fields:
+
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
        - ``gc_partidx``: the index of the feature's geometry part containing the small segment.
        - ``gc_ringidx``: the index of the feature's geometry ring containing the small segment.
-       - ``gc_vertidx``: the index of the end vertex of the small segment in the input geometry.
+       - ``gc_vertidx``: the index of the end vertex of the small segment in the feature's geometry ring.
        - ``gc_errorx``: the x coordinate of the centroid of the small segment.
        - ``gc_errory``: the y coordinate of the centroid of the small segment.
        - ``gc_error``: the error segment length.
+       - ``UNIQUE_ID`` field: the unique ID of the input feature with the small segment.
    * - **Short segments features**
      - ``OUTPUT``
      - [vector: same as input]
      - Output layer containing, for each identified short segment, the feature it belongs to.
-       Additional fields are available (see ``ERRORS`` output).
+       Available fields are the same as in the ``ERRORS`` output.
 
 Python code
 ...........
