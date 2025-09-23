@@ -1041,18 +1041,30 @@ in the user and the system file, the user file takes precedence.
 Connecting to Oracle Spatial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _figure_new_oracle_connection:
+
+.. figure:: img/neworacleconnection.png
+   :align: center
+
+   Create a New Oracle Connection Dialog
+
 The spatial features in Oracle Spatial aid users in managing geographic and
 location data in a native type within an Oracle database.
 The connection dialog proposes:
 
-* **Database**: SID or SERVICE_NAME of the Oracle instance;
-* **Port**: Port number the Oracle database server listens on. The default
+* :guilabel:`Name`: A name for this connection. It can be the same as :guilabel:`Database`;
+* :guilabel:`Database`: SID or SERVICE_NAME of the Oracle instance;
+* :guilabel:`Host`: The name of the database host;
+* :guilabel:`Port`: Port number the Oracle database server listens on. The default
   port is ``1521``;
-* **Options**: Oracle connection specific options (e.g. OCI_ATTR_PREFETCH_ROWS,
+* :guilabel:`Options`: Oracle connection specific options (e.g. OCI_ATTR_PREFETCH_ROWS,
   OCI_ATTR_PREFETCH_MEMORY). The format of the options string is a semicolon
   separated list of option names or option=value pairs;
-* **Workspace**: Workspace to switch to;
-* **Schema**: Schema in which the data are stored
+* :guilabel:`Workspace`: Workspace to switch to;
+* :menuselection:`Authentication --> Basic`.
+
+  * :guilabel:`User name`: User name used to connect to the database.
+  * :guilabel:`Password`: Password used to connect to the database.
 
 Optionally, you can activate the following checkboxes:
 
