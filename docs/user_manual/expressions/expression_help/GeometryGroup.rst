@@ -2080,7 +2080,8 @@ Returns the number of geometries in a geometry collection, or the number of part
    * - Arguments
      - * **geometry** - geometry collection or multi-part geometry
    * - Examples
-     - * ``num_geometries(geom_from_wkt('GEOMETRYCOLLECTION(POINT(0 1), POINT(0 0), POINT(1 0), POINT(1 1))'))`` → 4
+     - * ``num_geometries(@geometry)`` → number of geometries or number of parts of the current feature's geometry
+       * ``num_geometries(geom_from_wkt('GEOMETRYCOLLECTION(POINT(0 1), POINT(0 0), POINT(1 0), POINT(1 1))'))`` → 4
        * ``num_geometries(geom_from_wkt('MULTIPOINT((0 1), (0 0), (1 0))'))`` → 3
 
 
