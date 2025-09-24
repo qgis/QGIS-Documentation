@@ -244,6 +244,7 @@ Icon                            Substitution                        Icon        
 |tiltUp|                        ``|tiltUp|``                        |tiltDown|                      ``|tiltDown|``
 |3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
 |camera|                        ``|camera|``                        |shadow|                        ``|shadow|``
+|editCutDisabled|               ``|editCutDisabled|``
 |temporal|                      ``|temporal``                       |temporalNavigationOff|         ``|temporalNavigationOff|``
 |temporalNavigationFixedRange|  ``|temporalNavigationFixedRange|``  |temporalNavigationAnimated|    ``|temporalNavigationAnimated|``
 |temporalNavigationMovie|       ``|temporalNavigationMovie|``       |newElevationProfile|           ``|newElevationProfile|``
@@ -899,6 +900,8 @@ Icon                            Substitution                        Icon        
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editCutDisabled| image:: /static/common/mActionEditCutDisabled.png
    :width: 1.5em
 .. |editHelpContent| image:: /static/common/mActionEditHelpContent.png
    :width: 1.5em
