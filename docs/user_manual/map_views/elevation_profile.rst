@@ -202,6 +202,11 @@ To create a profile view, you can:
 #. Under |options| :sup:`Options` drop-down menu, you can set the :guilabel:`Tolerance` value.
    This value is used to create a flat buffer around the elevation profile line, visible in the main map canvas.
    Any visible feature (point, line, polygon, etc.) overlapping that buffer will be captured in the plot canvas.
+   You can also specify the ratio of distance to elevation units that is
+   used for the profile's scale. By default, the scale is 1:1, meaning that one unit of distance
+   is equal to one unit of elevation. Setting a scale of 10:1 means that 10 units of distance
+   are equal to 1 unit of elevation, effectively exaggerating the vertical scale. To freeze
+   the distance/elevation scale ratio, tick the :guilabel:`Lock Distance/Elevation Scales` option.
 
 .. note:: **Limitations with polygon extrusion**
 
