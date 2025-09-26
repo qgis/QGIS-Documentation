@@ -735,29 +735,21 @@ To identify mesh elements and their associated datasets, use the
 Click on a mesh element in the map canvas and the :guilabel:`Identify Results` panel
 opens, displaying information about the mesh layer and the identified element. The panel shows:
 
-* **Dataset values** for the clicked element:
-  
-  * The active dataset groups (scalar and/or vector)
-    at the current time defined by the :guilabel:`Temporal Controller`.
-  * When the temporal navigation is enabled, all time-aware dataset groups
-    are shown with values corresponding to the current time step.
-  * When the temporal navigation is disabled, the results only contain values
-    from the :ref:`static dataset groups <meshsource>` defined.
-  * Other dataset groups are also listed after the active ones.
-  * Geometry information and some returned properties are always available
-    in both cases.
+* Layer name
+* Active dataset groups (scalar and/or vector) for the clicked element will be displayed first.
+  On the other hand, inactive dataset groups are shown afterwards. For each group,
+  the following derived information may also be shown, if applicable:
 
-* **Source** of the dataset (the file where it is stored).
+  * **Source** of the dataset (the file where it is stored).
+  * **Time step** of the dataset value being displayed. For non-temporal dataset groups, this field remains empty.
+  * **Vector x-component** and **Vector y-component** values for vector datasets.
 
-* **Time step** of the dataset value being displayed.  
-  This may differ from the current time in the temporal controller if
-  the dataset has a different temporal resolution. For non-temporal 
-  dataset groups, this field remains empty.
+Please note that when temporal navigation is disabled, the results only contain values
+from the :ref:`static dataset groups <meshsource>` defined.
 
-* **Vector x-component** and **Vector y-component** values for vector datasets.
+* Geometry information shows the coordinates of the clicked point
+  and may contain derived information in the following:
 
-* **Geometry information** of the identified element:
-  
   * Centroid of the face.
   * Coordinates of a snapped vertex (if the click was snapped to a vertex).
   * Center of a snapped edge (if the click was snapped to an edge).
