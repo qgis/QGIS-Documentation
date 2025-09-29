@@ -805,7 +805,7 @@ Then you may need to handle the Z coordinate (or M value) assignment:
   (respectively :guilabel:`m`) widget.
 * When snapping to a vertex, the new or moved vertex takes the snapped one's Z or M value.
 * When snapping to a segment while the topological editing is on,
-  then the new vertex Z or M value is interpolated along the segment.
+  then the new vertex Z or M value is interpolated from the neighbouring vertices.
 * If the :guilabel:`z` (respectively :guilabel:`m`) widget of the
   :guilabel:`Advanced Digitizing Panel` is |locked| locked, then its value is
   applied to the vertex, taking precedence over any snapped vertex or segment
@@ -815,7 +815,6 @@ To edit Z or M values of an existing feature, you can use the
 :ref:`Vertex editor panel <vertex_editor_panel>`.
 To create features with custom Z or M values you may want to rely on the
 :guilabel:`Advanced Digitizing Panel`.
-
 
 .. _clipboard_feature:
 
