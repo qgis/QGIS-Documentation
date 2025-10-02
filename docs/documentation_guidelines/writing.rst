@@ -333,7 +333,7 @@ see :ref:`figure_logo`
 Tables
 ------
 
-A simple table can be coded like this
+You can make a simple table like this:
 
 .. code-block:: rst
 
@@ -355,11 +355,38 @@ x        y        z
 
 Use a ``\`` (backslash) followed by an empty space to leave an empty space.
 
-You can also make more complicated tables and reference them:
+To add a caption to `simple tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables>`_
+or `grid tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`_,
+use an explicit reST `"table" directive <https://docutils.sourceforge.io/docs/ref/rst/directives.html#table>`_. Add the caption on the same line
+as the directive and indent the table three spaces to align with the directive.
+
+You can also add a `hyperlink target <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#hyperlink-targets>`_
+before a table in order to reference it elsewhere.  To avoid conflicts with
+other references, always begin hyperlink targets with ``_table_`` and use terms
+relevant to the table caption.
+
+Here is an example of a more complicated grid table with a caption and a
+hyperlink target:
 
 .. code-block:: rst
 
-   .. _my_drawn_table:
+   .. _table-grid-caption:
+
+   .. table:: Grid table with caption
+
+      +---------------+--------------------+
+      | Windows       | macOS              |
+      +---------------+--------------------+
+      | |win|         | |osx|              |
+      +---------------+--------------------+
+      | and of course not to forget |nix|  |
+      +------------------------------------+
+
+The result:
+
+.. _table-grid-caption:
+
+.. table:: Grid table with caption
 
    +---------------+--------------------+
    | Windows       | macOS              |
@@ -369,31 +396,15 @@ You can also make more complicated tables and reference them:
    | and of course not to forget |nix|  |
    +------------------------------------+
 
-   My drawn table, mind you this is unfortunately not regarded as a caption
-
-   You can reference it like this: my_drawn_table_.
-
-The result:
-
-.. _my_drawn_table:
-
-+---------------+--------------------+
-| Windows       | macOS              |
-+---------------+--------------------+
-| |win|         | |osx|              |
-+---------------+--------------------+
-| and of course not to forget |nix|  |
-+------------------------------------+
-
-My drawn table, mind you this is unfortunately not regarded as a caption
-
-You can reference to it like this my_drawn_table_.
-
-For even more complex tables, it is easier to use ``list-table``:
+You can use reST `list tables <https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table-1>`_
+to make even more complicated tables. Add the caption after the ``list-table``
+directive:
 
 .. code-block:: rst
 
-   .. list-table::
+   .. _table-list-caption:
+
+   .. list-table:: List table with caption
       :header-rows: 1
       :widths: 20 20 20 40
 
@@ -411,7 +422,9 @@ For even more complex tables, it is easier to use ``list-table``:
 
 The result:
 
-.. list-table::
+.. _table-list-caption:
+
+.. list-table:: List table with caption
    :header-rows: 1
    :widths: 20 20 20 40
 
@@ -426,6 +439,46 @@ The result:
 
        * Point
        * Line
+
+You can use Sphinx roles to create `cross references <https://www.sphinx-doc.org/en/master/usage/referencing.html>`_
+to tables.
+
+To create a cross reference with the table caption as the link text, use a ``:ref:`` role like this:
+
+.. code-block:: rst
+
+   see :ref:`table-grid-caption` or :ref:`table-list-caption`
+
+The result:
+
+   see :ref:`table-grid-caption` or :ref:`table-list-caption`
+
+To reference the table by number, use a ``:numref:`` role like this:
+
+.. code-block:: rst
+
+   see :numref:`table-grid-caption` or :numref:`table-list-caption`
+
+The result:
+
+   see :numref:`table-grid-caption` or :numref:`table-list-caption`
+
+You can also customize the ``:numref:`` link text (use ``%s`` as a placeholder
+for the table number):
+
+.. code-block:: rst
+
+   see Tables :numref:`%s <table-grid-caption>` and :numref:`%s <table-list-caption>`
+
+The result:
+
+   see Tables :numref:`%s <table-grid-caption>` and :numref:`%s <table-list-caption>`
+
+.. note::
+
+   You must add a caption to your table in order to create a cross reference
+   with the ``:ref:`` or ``:numref:`` roles.
+
 
 Index
 -----
