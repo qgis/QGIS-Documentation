@@ -273,7 +273,7 @@ It ensures to copy/paste items at the same place, from page to page.
 Below is a list of all the available tools in this menu
 with some convenient information.
 
-.. csv-table:: Available Tools
+.. csv-table::
    :header: "Tool", "Shortcut", "Toolbar", "Reference"
    :widths: 30, 17, 10, 33
 
