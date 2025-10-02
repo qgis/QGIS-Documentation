@@ -170,6 +170,7 @@ one of the classes below and by calling the corresponding method of
 
 .. list-table::
    :widths: auto
+   :header-rows: 1
 
    * - Filter Type
      - Base Class
