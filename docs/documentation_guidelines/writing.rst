@@ -397,8 +397,11 @@ The result:
    +------------------------------------+
 
 You can use reST `list tables <https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table-1>`_
+and `csv tables <https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table-1>`_
 to make even more complicated tables. Add the caption after the ``list-table``
-directive:
+or ``csv-table`` directives.
+
+Here is an example of a list table with a caption and a hyperlink target:
 
 .. code-block:: rst
 
