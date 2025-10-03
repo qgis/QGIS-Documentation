@@ -86,7 +86,7 @@ according to the Coordinate Reference System (CRS) used with the data. For examp
 the width of a buffer zone along the banks of a river can vary depending on the
 intensity of the adjacent land use. For intensive cultivation the buffer distance
 may be bigger than for organic farming (see Figure :numref:`figure_variable_buffer` and
-Table table_buffer_attributes_).
+:numref:`table_buffer_attributes`).
 
 .. _figure_variable_buffer:
 
@@ -98,20 +98,19 @@ Table table_buffer_attributes_).
 
 .. _table_buffer_attributes:
 
-+--------------+---------------------------------+--------------------------+
-| River        | Adjacent land use               | Buffer distance (meters) |
-+==============+=================================+==========================+
-| Breede River | Intensive vegetable cultivation | 100                      |
-+--------------+---------------------------------+--------------------------+
-| Komati       | Intensive cotton cultivation    | 150                      |
-+--------------+---------------------------------+--------------------------+
-| Oranje       | Organic farming                 | 50                       |
-+--------------+---------------------------------+--------------------------+
-| Telle river  | Organic farming                 | 50                       |
-+--------------+---------------------------------+--------------------------+
+.. table:: Different buffer distances to rivers based on adjacent land use.
 
-Table Buffer Attributes 1: Attribute table with different buffer distances to
-rivers based on information about the adjacent land use.
+   +--------------+---------------------------------+--------------------------+
+   | River        | Adjacent land use               | Buffer distance (meters) |
+   +==============+=================================+==========================+
+   | Breede River | Intensive vegetable cultivation | 100                      |
+   +--------------+---------------------------------+--------------------------+
+   | Komati       | Intensive cotton cultivation    | 150                      |
+   +--------------+---------------------------------+--------------------------+
+   | Oranje       | Organic farming                 | 50                       |
+   +--------------+---------------------------------+--------------------------+
+   | Telle river  | Organic farming                 | 50                       |
+   +--------------+---------------------------------+--------------------------+
 
 Buffers around polyline features, such as rivers or roads, do not have to be on
 both sides of the lines. They can be on either the left side or the right side

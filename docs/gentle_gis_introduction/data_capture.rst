@@ -35,21 +35,21 @@ on the computer hard disk. There are a number of different file formats for GIS
 data, but the most common one is probably the 'shape file'. The name is a little
 odd in that although we call it a shape file (singular), it actually consists of
 at least three different files that work together to store your digital vector
-data, as shown in table_shapefile_.
+data, as shown in :numref:`table_shapefile`.
 
 .. _table_shapefile:
 
-+--------------+-------------------------------------------------------------------------------------+
-| Extension    | Description                                                                         |
-+==============+=====================================================================================+
-| :file:`.shp` | The geometry of vector features are stored in this file                             |
-+--------------+-------------------------------------------------------------------------------------+
-| :file:`.dbf` | The attributes of vector features are stored in this file                           |
-+--------------+-------------------------------------------------------------------------------------+
-| :file:`.shx` | This file is an index that helps the GIS Application to find features more quickly. |
-+--------------+-------------------------------------------------------------------------------------+
+.. table:: The Basic Files that make up a 'Shapefile'
 
-Table Shapefile 1: The basic files that together make up a 'shapefile'.
+   +--------------+-------------------------------------------------------------------------------------+
+   | Extension    | Description                                                                         |
+   +==============+=====================================================================================+
+   | :file:`.shp` | The geometry of vector features are stored in this file                             |
+   +--------------+-------------------------------------------------------------------------------------+
+   | :file:`.dbf` | The attributes of vector features are stored in this file                           |
+   +--------------+-------------------------------------------------------------------------------------+
+   | :file:`.shx` | This file is an index that helps the GIS Application to find features more quickly. |
+   +--------------+-------------------------------------------------------------------------------------+
 
 When you look at the files that make up a shapefile on the computer hard disk,
 you will see something like :numref:`figure_shapefile`. If you want to share vector data
@@ -133,21 +133,23 @@ specific place.
 
 For the attributes we would want a **field** for each thing that describes the
 sample site. So we may end up with an attribute table that looks something like
-table_river_attributes_.
+:numref:`table_river_attributes`.
 
 .. _table_river_attributes:
 
-+----------+-----+----+----+-----------+-----------+------------+
-| SampleNo | pH  | DO | CB | Turbidity | Collector | Date       |
-+==========+=====+====+====+===========+===========+============+
-| 1        | 7   | 6  | N  | Low       | Patience  | 12/01/2009 |
-+----------+-----+----+----+-----------+-----------+------------+
-| 2        | 6.8 | 5  | Y  | Medium    | Thabo     | 12/01/2009 |
-+----------+-----+----+----+-----------+-----------+------------+
-| 3        | 6.9 | 6  | Y  | High      | Victor    | 12/01/2009 |
-+----------+-----+----+----+-----------+-----------+------------+
+.. table:: River Attributes
 
-Table River Attributes 1: Drawing a table like this before you create your vector
+   +----------+-----+----+----+-----------+-----------+------------+
+   | SampleNo | pH  | DO | CB | Turbidity | Collector | Date       |
+   +==========+=====+====+====+===========+===========+============+
+   | 1        | 7   | 6  | N  | Low       | Patience  | 12/01/2009 |
+   +----------+-----+----+----+-----------+-----------+------------+
+   | 2        | 6.8 | 5  | Y  | Medium    | Thabo     | 12/01/2009 |
+   +----------+-----+----+----+-----------+-----------+------------+
+   | 3        | 6.9 | 6  | Y  | High      | Victor    | 12/01/2009 |
+   +----------+-----+----+----+-----------+-----------+------------+
+
+Drawing a table like :numref:`table_river_attributes` before you create your vector
 layer will let you decide what attribute fields (columns) you will need. Note
 that the geometry (positions where samples were taken) is not shown in the
 attribute table --– the GIS Application stores it separately!
