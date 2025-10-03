@@ -899,8 +899,12 @@ to display the :guilabel:`Create a New PostgreSQL Connection` dialog.
   You can save any or both of the ``User name`` and ``Password`` parameters, in
   which case they will be used by default each time you need to connect to this
   database. If not saved, you'll be prompted to supply the credentials to
-  connect to the database in next QGIS sessions. The connection
-  parameters you entered are stored in a temporary internal cache and returned
+  connect to the database in next QGIS sessions. 
+  You can cancel the prompt, in which case the connection will fail.
+  QGIS won't ask for the credentials again until you try to end the session.
+  It is also possible to ignore for session or ignore for 10 seconds. This will
+  cancel the prompt but will ask again when you try to connect to the database.
+  The connection parameters you entered are stored in a temporary internal cache and returned
   whenever a username/password for the same database is requested, until you
   end the current QGIS session.
 
