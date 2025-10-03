@@ -160,12 +160,15 @@ share the code via GitHub and much more). Main features are:
   * Use the default Desktop Environment shortcut to find next/previous
     (:kbd:`Ctrl+G` and :kbd:`Shift+Ctrl+G`);
   * Automatically find first match when typing in find box;
+  * |replace| :sup:`Replace` matching text with the text in the replace box;
   * Set initial find string to selection when opening find;
   * Enable the |searchRegex| :guilabel:`Use Regular Expressions` option in the search bar to use regular expressions
     instead of plain text matching;
   * Pressing :kbd:`Esc` closes the find bar.
 
-* Object inspector: a class and function browser;
+* |commentEditorConsole| :sup:`Toggle Comment` in selected lines with :kbd:`Ctrl+:`;
+* |formatCode| :sup:`Format Code`: check more :ref:`here <python_contextual_help>`;
+* |browserConsole| :sup:`Object inspector`: a class and function browser;
 * Go to an object definition with a mouse click (from Object inspector);
 * Execute code snippets with the |runConsole| :guilabel:`Run Selected`
   command in contextual menu;
@@ -198,15 +201,23 @@ share the code via GitHub and much more). Main features are:
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |browserConsole| image:: /static/common/iconClassBrowserConsole.png
+   :width: 1.5em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
+.. |commentEditorConsole| image:: /static/common/iconCommentEditorConsole.png
+   :width: 1.5em
 .. |dock| image:: /static/common/dock.png
+   :width: 1.5em
+.. |formatCode| image:: /static/common/iconFormatCode.png
    :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
+   :width: 1.5em
+.. |replace| image:: /static/common/mActionReplace.png
    :width: 1.5em
 .. |runConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
