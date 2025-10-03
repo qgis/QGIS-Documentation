@@ -808,10 +808,10 @@ the digitizing process.
 Click the |clearText| icon in the widget to reset its value to the Options
 default value.
 
+.. _mesh_z_value_assignment:
+
 Rules of assignment
 ...................
-
-.. _mesh_z_value_assignment:
 
 This is configured in the drop-down menu of the :guilabel:`Digitize mesh elements` tool
 as :guilabel:`New vertex Z value` option. Following methods are available:
@@ -819,28 +819,36 @@ as :guilabel:`New vertex Z value` option. Following methods are available:
 
 .. table:: Z value assignment methods
 
- +---------------------------------+-------------------------------------------------------------+------------------------------------------------------------------------+
- | Method                          | Description                                                 | Note                                                                   |
- +=================================+=============================================================+========================================================================+
- | **Project terrain**             | Z value is always taken or calculated from the              | If the vertex is placed outside of the terrain                         |
- |                                 | :ref:`project reference terrain <project_terrain>`.         | or the terrain doesn't exist, the value falls back to 0                |
- |                                 |                                                             | (or the default Z value set in                                         |
- |                                 |                                                             | :ref:`digitizing options <digitizing_options>`).                       |
- +---------------------------------+-------------------------------------------------------------+------------------------------------------------------------------------+
- | **Z widget**                    | Z value is taken from the :guilabel:`Vertex Z value` widget |                                                                        |
- |                                 | or the :guilabel:`Advanced Digitizing Panel` :guilabel:`Z`  |                                                                        |
- |                                 | widget (if it is in :sup:`Locked` state).                   |                                                                        |
- +---------------------------------+-------------------------------------------------------------+------------------------------------------------------------------------+
- | **Prefer mesh, then Z widget**  | Interpolates the Z value from the mesh layer if available;  |                                                                        |
- |                                 | if not available, it falls back to the :guilabel:`Vertex Z  |                                                                        |
- |                                 | value` or                                                   |                                                                        |
- |                                 | :guilabel:`Advanced Digitizing Panel` :guilabel:`Z` widget. |                                                                        |
- +---------------------------------+-------------------------------------------------------------+------------------------------------------------------------------------+
- | **Prefer mesh, then terrain**   | Interpolates the Z value from the mesh layer if the vertex  |                                                                        |
- |                                 | is on the edge or face, otherwise uses the project          |                                                                        |
- |                                 | reference terrain value.                                    |                                                                        |
- +---------------------------------+-------------------------------------------------------------+------------------------------------------------------------------------+
+ +---------------------------------+-------------------------------------------------------------+
+ | Method                          | Description                                                 |
+ +=================================+=============================================================+
+ | **Project terrain**             | Z value is always taken or calculated from the              |
+ |                                 | :ref:`project reference terrain <project_terrain>`.         |
+ |                                 |                                                             |
+ |                                 |                                                             |
+ |                                 |                                                             |
+ +---------------------------------+-------------------------------------------------------------+
+ | **Z widget**                    | Z value is taken from the :guilabel:`Vertex Z value` widget |
+ |                                 | or the :guilabel:`Advanced Digitizing Panel` :guilabel:`Z`  |
+ |                                 | widget (if it is in :sup:`Locked` state).                   |
+ +---------------------------------+-------------------------------------------------------------+
+ | **Prefer mesh, then Z widget**  | Interpolates the Z value from the mesh layer if available;  |
+ |                                 | if not available, it falls back to the :guilabel:`Vertex Z  |
+ |                                 | value` or  :guilabel:`Advanced Digitizing Panel`            |
+ |                                 | :guilabel:`Z` widget (if it is in :sup:`Locked` state).     |
+ +---------------------------------+-------------------------------------------------------------+
+ | **Prefer mesh, then terrain**   | Interpolates the Z value from the mesh layer if the vertex  |
+ |                                 | is on the edge or face, otherwise uses the project          |
+ |                                 | reference terrain value.                                    |
+ +---------------------------------+-------------------------------------------------------------+
 
+.. note:: **Project terrain method**
+
+  If the :ref:`project reference terrain <project_terrain>`
+  is **Flat**, the value is 0 (or can be overridden in the Z widgets).  
+  If it is a **Mesh**, the value is interpolated from it; if not available
+  or outside its extent, the value falls back to the default Z value set
+  in :ref:`digitizing options <digitizing_options>`.
 
 The following detailed logic describes the behavior of the **“Prefer mesh, then Z widget”** strategy.
 
@@ -989,10 +997,11 @@ Adding vertices
 To add vertices to a mesh layer:
 
 #. Press the |meshDigitizing| :sup:`Digitize mesh elements` button
-#. A :guilabel:`Vertex Z value` widget appears on the top right corner of the map canvas.
-   Set this value to the Z coordinate you would like to assign to the subsequent vertices
-#. You can choose other method for assigning Z values to new vertices from the drop-down menu in the
-   |meshDigitizing| :sup:`Digitize mesh elements` tool. Check the :ref:`available methods <mesh_z_value_assignment>`.
+#. If **Z widget** is selected as :ref:`method <mesh_z_value_assignment>` for assigning Z values to new vertices,
+   a :guilabel:`Vertex Z value` widget appears on the top right corner of the map canvas.
+   Set this value to the Z coordinate you would like to assign to the subsequent vertices.
+#. You can choose other method for assigning Z values
+   to new vertices from the drop-down menu in the |meshDigitizing| :sup:`Digitize mesh elements` tool.
 #. Then double-click:
 
    * outside a face: adds a "free vertex", that is a vertex not linked to any face.
