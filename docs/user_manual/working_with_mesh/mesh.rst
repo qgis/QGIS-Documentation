@@ -756,6 +756,41 @@ layout legend <layout_legend_item>`. These options include:
 
    Mesh Legend
 
+.. _exploring_mesh:
+
+Exploring mesh datasets
+========================
+
+To identify mesh elements and their associated datasets, use the
+|identify| :guilabel:`Identify Features` tool from the :guilabel:`Attributes` toolbar.
+Click on a mesh element in the map canvas and the :guilabel:`Identify Results` panel
+opens, displaying information about the mesh layer and the identified element. The panel shows:
+
+* Layer name
+* Active dataset groups (scalar and/or vector) for the clicked element will be displayed first.
+  On the other hand, inactive dataset groups are shown afterwards. For each group,
+  the following derived information may also be shown, if applicable:
+
+  * **Source** of the dataset (the file where it is stored).
+  * **Time step** of the dataset value being displayed. For non-temporal dataset groups, this field remains empty.
+  * **Vector x-component** and **Vector y-component** values for vector datasets.
+
+Please note that when temporal navigation is disabled, the results only contain values
+from the :ref:`static dataset groups <meshsource>` defined.
+
+* Geometry information shows the coordinates of the clicked point
+  and may contain derived information in the following:
+
+  * Centroid of the face.
+  * Coordinates of a snapped vertex (if the click was snapped to a vertex).
+  * Center of a snapped edge (if the click was snapped to an edge).
+
+.. _figure_mesh_identify:
+
+.. figure:: img/mesh_identify.png
+   :align: center
+
+   Mesh Identify Results panel
 
 .. _editing_mesh:
 
@@ -1310,6 +1345,8 @@ the expression to execute.
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
 .. |general| image:: /static/common/general.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |labelbackground| image:: /static/common/labelbackground.png
    :width: 1.5em
