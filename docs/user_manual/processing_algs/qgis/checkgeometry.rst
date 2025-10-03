@@ -1130,6 +1130,117 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+.. _qgischeckgeometrypointinpolygon:
+
+Points outside polygons
+-----------------------
+
+Checks if points from the input layer are in polygons from the selected polygon layers.
+Points that are not fully inside polygons are errors.
+
+.. .. figure:: img/check_geometry_point_in_polygon.png
+..    :align: center
+
+..    Reporting errors on points outside polygons.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification
+   * - **Polygon layers**
+     - ``POLYGONS``
+     - [vector: polygon][list]
+     - Layer(s) with the polygons to check against.
+   * - **Points outside polygons errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing points outside the polygons.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points outside polygons errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of point outside the polygons.
+       - ``gc_errory``: the y coordinate of point outside the polygons.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that is outside the polygons.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrypointinpolygon``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 .. _qgischeckgeometryselfintersections:
 
 Self-intersections
