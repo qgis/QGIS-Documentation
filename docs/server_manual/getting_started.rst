@@ -1034,18 +1034,18 @@ By setting metadata at the group level, you can provide a clearer description of
 and improve the usability of your service.
 To configure metadata for a group of layers:
 
-* In the :guilabel:`Layers` panel, right-click the desired layer group
-  and select :guilabel:`Set Group WMS Data`.
-* In the dialog that opens, fill in the information:
+#. In the :guilabel:`Layers` panel, right-click the desired layer group
+   and select :guilabel:`Set Group WMS Data`.
+#. In the dialog that opens, fill in the information:
 
-  * a :guilabel:`Description`: the abstract of the layer group.
-  * a :guilabel:`Attribution`: the attribution of the layer group.
-  * a :guilabel:`Metadata URL`: the URL of a metadata document for the layer group.
-  * a :guilabel:`Legend URL`: the URL of a legend image for the layer group.
+   * a :guilabel:`Description`: the abstract of the layer group.
+   * a :guilabel:`Attribution`: the attribution of the layer group.
+   * a :guilabel:`Metadata URL`: the URL of a metadata document for the layer group.
+   * a :guilabel:`Legend URL`: the URL of a legend image for the layer group.
 
-* Optionally, you can check |checkbox| :guilabel:`Compute TIME dimension from children`
-  to have QGIS Server compute the TIME dimension for the group
-  based on the TIME dimensions of its child layers.
+#. Optionally, you can check |checkbox| :guilabel:`Compute TIME dimension from children`
+   to have QGIS Server compute the TIME dimension for the group
+   based on the TIME dimensions of its child layers.
 
 For vector layers, the :guilabel:`Fields` tab of the :menuselection:`Layer -->
 Layer Properties` dialog allows you to define for each attribute if it will be published or not.
