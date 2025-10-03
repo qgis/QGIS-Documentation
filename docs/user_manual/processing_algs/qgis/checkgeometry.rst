@@ -1166,7 +1166,7 @@ Basic parameters
    * - **Unique feature identifier**
      - ``UNIQUE_ID``
      - [tablefield: any]
-     - Field storing unique values for feature identification
+     - Field storing unique values for feature identification.
    * - **Polygon layers**
      - ``POLYGONS``
      - [vector: polygon][list]
