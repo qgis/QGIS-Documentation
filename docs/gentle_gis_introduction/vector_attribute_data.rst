@@ -127,7 +127,7 @@ Attributes in detail
 
 Attributes for a vector feature are stored in a **table**. A table is like a
 spreadsheet. Each column in the table is called a **field**. Each row in the table
-is a **record**. Table table_house_attributes_ shows a simple example of how an
+is a **record**. :numref:`table_house_attributes` shows a simple example of how an
 attribute table looks in a GIS. The records in the attribute table in a GIS each
 correspond to one feature. Usually the information in the attribute table is
 stored in some kind of database. The GIS application links the attribute records
@@ -137,18 +137,17 @@ table.
 
 .. _table_house_attributes:
 
-+-----------------+---------------------+---------------------+------------------+
-| Attribute Table | Field 1 : YearBuilt | Field 2: RoofColour | Field 3: Balcony |
-+=================+=====================+=====================+==================+
-| Record 1        | 1998                | Red                 | Yes              |
-+-----------------+---------------------+---------------------+------------------+
-| Record 2        | 2000                | Black               | No               |
-+-----------------+---------------------+---------------------+------------------+
-| Record 3        | 2001                | Silver              | Yes              |
-+-----------------+---------------------+---------------------+------------------+
+.. table:: House Attributes: An attribute table has fields (columns) and records (in rows).
 
-Table House Attributes: An attribute table has fields (columns) and records (in
-rows).
+   +-----------------+---------------------+---------------------+------------------+
+   | Attribute Table | Field 1 : YearBuilt | Field 2: RoofColour | Field 3: Balcony |
+   +=================+=====================+=====================+==================+
+   | Record 1        | 1998                | Red                 | Yes              |
+   +-----------------+---------------------+---------------------+------------------+
+   | Record 2        | 2000                | Black               | No               |
+   +-----------------+---------------------+---------------------+------------------+
+   | Record 3        | 2001                | Silver              | Yes              |
+   +-----------------+---------------------+---------------------+------------------+
 
 Each field in the attribute table contains a specific type of data –--
 text, numeric or date. Deciding what attributes to use for a feature requires some
@@ -250,34 +249,36 @@ and :numref:`figure_graduated_symbol_map`. **Graduated symbols** are most useful
 want to show clear differences between features with attribute values in different
 value ranges. The GIS Application will analyse the attribute data (e.g. height)
 and, based on the number of classes you request, create groupings for you. This
-process is illustrated in table_graduated_.
+process is illustrated in :numref:`table_graduated`: graduated colour breaks up
+the attribute value ranges into the number of classes you select; each class is
+represented by a different colour.
 
 .. _table_graduated:
 
-+-----------------+------------------+
-| Attribute Value | Class and Colour |
-+=================+==================+
-| 1               | Class 1          |
-+-----------------+------------------+
-| 2               | Class 1          |
-+-----------------+------------------+
-| 3               | Class 1          |
-+-----------------+------------------+
-| 4               | Class 2          |
-+-----------------+------------------+
-| 5               | Class 2          |
-+-----------------+------------------+
-| 6               | Class 2          |
-+-----------------+------------------+
-| 7               | Class 3          |
-+-----------------+------------------+
-| 8               | Class 3          |
-+-----------------+------------------+
-| 9               | Class 3          |
-+-----------------+------------------+
+.. table:: Graduated Symbols
 
-Table Graduated: Graduated colour breaks up the attribute value ranges into the
-number of classes you select. Each class is represented by a different colour.
+   +-----------------+------------------+
+   | Attribute Value | Class and Colour |
+   +=================+==================+
+   | 1               | Class 1          |
+   +-----------------+------------------+
+   | 2               | Class 1          |
+   +-----------------+------------------+
+   | 3               | Class 1          |
+   +-----------------+------------------+
+   | 4               | Class 2          |
+   +-----------------+------------------+
+   | 5               | Class 2          |
+   +-----------------+------------------+
+   | 6               | Class 2          |
+   +-----------------+------------------+
+   | 7               | Class 3          |
+   +-----------------+------------------+
+   | 8               | Class 3          |
+   +-----------------+------------------+
+   | 9               | Class 3          |
+   +-----------------+------------------+
+
 
 Continuous Colour Symbols
 =========================
@@ -286,36 +287,38 @@ In the previous section on Graduated Colour symbols we saw that we can draw
 features in discrete groups or classes. Sometimes it is useful to draw features
 in a **colour range** from one colour to another. The GIS Application will use a
 numerical attribute value from a feature (e.g. contour heights or pollution levels
-in a stream) to decide which colour to use. Table table_continuous_ shows how
-the attribute value is used to define a continuous range of colours.
+in a stream) to decide which colour to use. :numref:`table_continuous` shows
+how the attribute value is used to define a continuous range of colours.
+Continuous colour symbology uses a start colour (e.g. light orange shown here)
+and an end colour (e.g. dark brown shown here) and creates a series of shades
+between those colours.
+
 
 .. _table_continuous:
 
-+-----------------+---------------------------------+
-| Attribute Value | Colour (no classes or grouping) |
-+=================+=================================+
-| 1               |                                 |
-+-----------------+---------------------------------+
-| 2               |                                 |
-+-----------------+---------------------------------+
-| 3               |                                 |
-+-----------------+---------------------------------+
-| 4               |                                 |
-+-----------------+---------------------------------+
-| 5               |                                 |
-+-----------------+---------------------------------+
-| 6               |                                 |
-+-----------------+---------------------------------+
-| 7               |                                 |
-+-----------------+---------------------------------+
-| 8               |                                 |
-+-----------------+---------------------------------+
-| 9               |                                 |
-+-----------------+---------------------------------+
+.. table:: Continuous colour symbology
 
-Table Continuous: Continuous colour symbology uses a start colour (e.g. light
-orange shown here) and an end colour (e.g. dark brown shown here) and creates a
-series of shades between those colours.
+   +-----------------+---------------------------------+
+   | Attribute Value | Colour (no classes or grouping) |
+   +=================+=================================+
+   | 1               |                                 |
+   +-----------------+---------------------------------+
+   | 2               |                                 |
+   +-----------------+---------------------------------+
+   | 3               |                                 |
+   +-----------------+---------------------------------+
+   | 4               |                                 |
+   +-----------------+---------------------------------+
+   | 5               |                                 |
+   +-----------------+---------------------------------+
+   | 6               |                                 |
+   +-----------------+---------------------------------+
+   | 7               |                                 |
+   +-----------------+---------------------------------+
+   | 8               |                                 |
+   +-----------------+---------------------------------+
+   | 9               |                                 |
+   +-----------------+---------------------------------+
 
 Using the same contours example we used in the previous section, let's see how a
 map with continuous colour symbology is defined and looks. The process starts by
@@ -359,24 +362,25 @@ writing symbols. Strings attributes are often used to classify things by name.
 We can tell the GIS Application to give each unique string or number its own
 colour and symbol. Road features may have different classes (e.g. 'street',
 'secondary road', 'main road' etc.), each drawn in the map view of the GIS with
-different colours or symbols. This is illustrated in table_unique_.
+different colours or symbols. This is illustrated in :numref:`table_unique`:
+unique attribute values for a feature type (e.g. roads) can each have their own
+symbol.
 
 .. _table_unique:
 
-+-----------------+-------------------------+
-| Attribute Value | Colour class and symbol |
-+=================+=========================+
-| Arterial route  |                         |
-+-----------------+-------------------------+
-| Main road       |                         |
-+-----------------+-------------------------+
-| Secondary road  |                         |
-+-----------------+-------------------------+
-| Street          |                         |
-+-----------------+-------------------------+
+.. table:: Unique values and symbols
 
-Table Unique: Unique attribute values for a feature type (e.g. roads) can each
-have their own symbol.
+   +-----------------+-------------------------+
+   | Attribute Value | Colour class and symbol |
+   +=================+=========================+
+   | Arterial route  |                         |
+   +-----------------+-------------------------+
+   | Main road       |                         |
+   +-----------------+-------------------------+
+   | Secondary road  |                         |
+   +-----------------+-------------------------+
+   | Street          |                         |
+   +-----------------+-------------------------+
 
 Within the GIS Application we can open/choose to use Unique Value symbology for
 a layer. The GIS will scan through all the different string values in the
@@ -447,7 +451,7 @@ Here are some ideas for you to try with your learners:
 
 * Using the table that you created in the last topic, add a new column for the
   symbology type you would use for each feature type and have the learners
-  identify which symbology type they would use (see table_example_symbols_ for
+  identify which symbology type they would use (see :numref:`table_example_symbols` for
   an example).
 * Try to identify which symbology types you would use for the following types of
   vector features:
@@ -459,26 +463,25 @@ Here are some ideas for you to try with your learners:
 
 .. _table_example_symbols:
 
-+----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Real world feature                     | Geometry Type | Symbology Type                                                                                                                                                                                                                          |
-+========================================+===============+=========================================================================================================================================================================================================================================+
-| The school flagpole                    | Point         | Single Symbol                                                                                                                                                                                                                           |
-+----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| The soccer field                       | Polygon       | Single Symbol                                                                                                                                                                                                                           |
-+----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| The footpaths in and around the school | Polyline      | Have your learners count the number of learners using each footpath in the hour before school and then use **graduated symbols** to show the popularity of each footpath                                                                |
-+----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Places where taps are located          | Point         | Single symbol                                                                                                                                                                                                                           |
-+----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Classrooms                             | Polygon       | **Unique value** based on the grade of the learners in the classroom                                                                                                                                                                    |
-+----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Fence                                  | Polyline      | Have your learners rate the condition of the fence around your school by separating it into sections and grading each section on a scale of 1\-9 based on its condition. Use **graduated symbols** to classify the condition attribute. |
-+----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Classrooms                             | Polygon       | Count the number of learners in each classroom and use a **continuous colour symbol** to define a range of colours from red to blue.                                                                                                    |
-+----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+.. table:: Example Feature Types and Symbology
 
-Table Example Symbols: An example of a table that defines the feature types and
-the kind of symbology you would use for each.
+   +----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Real world feature                     | Geometry Type | Symbology Type                                                                                                                                                                                                                          |
+   +========================================+===============+=========================================================================================================================================================================================================================================+
+   | The school flagpole                    | Point         | Single Symbol                                                                                                                                                                                                                           |
+   +----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | The soccer field                       | Polygon       | Single Symbol                                                                                                                                                                                                                           |
+   +----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | The footpaths in and around the school | Polyline      | Have your learners count the number of learners using each footpath in the hour before school and then use **graduated symbols** to show the popularity of each footpath                                                                |
+   +----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Places where taps are located          | Point         | Single symbol                                                                                                                                                                                                                           |
+   +----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Classrooms                             | Polygon       | **Unique value** based on the grade of the learners in the classroom                                                                                                                                                                    |
+   +----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Fence                                  | Polyline      | Have your learners rate the condition of the fence around your school by separating it into sections and grading each section on a scale of 1\-9 based on its condition. Use **graduated symbols** to classify the condition attribute. |
+   +----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Classrooms                             | Polygon       | Count the number of learners in each classroom and use a **continuous colour symbol** to define a range of colours from red to blue.                                                                                                    |
+   +----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Something to think about
 ========================
