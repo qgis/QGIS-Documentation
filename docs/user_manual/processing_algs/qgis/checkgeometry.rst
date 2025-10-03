@@ -1028,10 +1028,10 @@ Points outside polygons
 Checks if points from the input layer are in polygons from the selected polygon layers.
 Points that are not fully inside polygons are errors.
 
-.. figure:: img/check_geometry_point_in_polygon.png
-   :align: center
+.. .. figure:: img/check_geometry_point_in_polygon.png
+..    :align: center
 
-   Reporting errors on points outside polygons.
+..    Reporting errors on points outside polygons.
 
 Parameters
 ..........
@@ -1055,7 +1055,7 @@ Basic parameters
    * - **Unique feature identifier**
      - ``UNIQUE_ID``
      - [tablefield: any]
-     - Field storing unique values for feature identification
+     - Field storing unique values for feature identification.
    * - **Polygon layers**
      - ``POLYGONS``
      - [vector: polygon][list]
