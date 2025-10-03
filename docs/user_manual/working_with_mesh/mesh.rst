@@ -823,7 +823,7 @@ as :guilabel:`New vertex Z value` option. Following methods are available:
  | Method                          | Description                                                 | Note                                                                   |
  +=================================+=============================================================+========================================================================+
  | **Project terrain**             | Z value is always taken or calculated from the              | If the vertex is placed outside of the terrain                         |
- |                                 | :ref:`project reference terrain <_project_terrain>`.        | or the terrain doesn't exist, the value falls back to 0                |
+ |                                 | :ref:`project reference terrain <project_terrain>`.         | or the terrain doesn't exist, the value falls back to 0                |
  |                                 |                                                             | (or the default Z value set in                                         |
  |                                 |                                                             | :ref:`digitizing options <digitizing_options>`).                       |
  +---------------------------------+-------------------------------------------------------------+------------------------------------------------------------------------+
