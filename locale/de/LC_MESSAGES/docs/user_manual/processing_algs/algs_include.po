@@ -9,6 +9,7 @@
 # Harrissou Sant-anna, 2025
 # Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Steffen Hollah, 2025
+# Heather Hillers, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Steffen Hollah, 2025\n"
+"Last-Translator: Heather Hillers, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,6 +26,14 @@ msgstr ""
 "Generated-By: Babel 2.16.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Algorithms Include"
+msgstr "Algorithmen umfassen"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "Python Code Sample"
+msgstr "Python-Code-Beispiel"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:28
 msgid ""
@@ -38,6 +47,14 @@ msgstr ""
 "(*parameter_dictionary*) enthält die Namen und Werte der Parameter. Siehe "
 ":ref:`processing_console` für Details zur Ausführung von "
 "Verarbeitungsalgorithmen über die Python-Konsole."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:38
+msgid "Output Types"
+msgstr "Ausgabetypen"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:44
+msgid "Directory"
+msgstr "Verzeichnis"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:48
 #: ../../docs/user_manual/processing_algs/algs_include.rst:57
@@ -76,6 +93,12 @@ msgstr "In Datei speichern..."
 msgid "Layer"
 msgstr "Layer"
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:86
+#: ../../docs/user_manual/processing_algs/algs_include.rst:98
+#: ../../docs/user_manual/processing_algs/algs_include.rst:112
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "Temporärlayer erzeugen(``TEMPORARY_OUTPUT``)"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:88
 #: ../../docs/user_manual/processing_algs/algs_include.rst:100
 #: ../../docs/user_manual/processing_algs/algs_include.rst:114
@@ -93,6 +116,14 @@ msgstr "In Datenbank speichern..."
 #: ../../docs/user_manual/processing_algs/algs_include.rst:117
 msgid "The file encoding can also be changed here."
 msgstr "Die Kodierung der Datei kann ebenfalls hier geändert werden."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:102
+msgid "Append to Layer…"
+msgstr "zu Layer hinzufügen..."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:123
+msgid "Extent Dropdown"
+msgstr "Ausdehnung-Dropdown-Menü"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:129
 msgid "Available methods are:"
@@ -285,6 +316,293 @@ msgstr ""
 "Polygone kreuzen sich als Polygon (falsch). Im Bild werden keine Kreise "
 "zurückgegeben."
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:209
+msgid "Notes on algorithms"
+msgstr "Anmerkungen zu Algorithmen"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:213
+msgid "**Geometry modification only**"
+msgstr "\"Nur Geometrieänderung\""
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:215
+msgid ""
+"This operation modifies only the features geometry. The attribute values of "
+"the features are **not modified**, although properties such as area or "
+"length of the features will be modified by the overlay operation. If such "
+"properties are stored as attributes, those attributes will have to be "
+"manually updated."
+msgstr ""
+"Dieser Vorgang verändert nur die Geometrie der Features. Die Attributwerte "
+"der Features werden **nicht verändert**, obwohl Eigenschaften wie Fläche "
+"oder Länge der Features durch den Overlay-Vorgang verändert werden. Wenn "
+"solche Eigenschaften als Attribute gespeichert sind, müssen diese Attribute "
+"manuell aktualisiert werden."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:226
+msgid "Raster data types"
+msgstr "Raster-Datentypen"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:229
+msgid "Without user input (native)"
+msgstr "Ohne Benutzereingaben (native)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:237
+#: ../../docs/user_manual/processing_algs/algs_include.rst:267
+msgid "0 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "0 --- Byte        (8-Bit-Ganzzahl ohne Vorzeichen (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:238
+#: ../../docs/user_manual/processing_algs/algs_include.rst:268
+msgid "1 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "1 --- Int16        (16-Bit-Ganzzahl mit Vorzeichen (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:239
+#: ../../docs/user_manual/processing_algs/algs_include.rst:269
+msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr "2 --- UInt16        (16-Bit-Ganzzahl ohne Vorzeichen (quint6))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:240
+msgid "3 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "3 --- Int132        (32-Bit-Ganzzahl mit Vorzeichen (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:241
+#: ../../docs/user_manual/processing_algs/algs_include.rst:300
+msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr "4 --- UInt32 (32-Bit-Ganzzahl ohne Vorzeichen (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:242
+#: ../../docs/user_manual/processing_algs/algs_include.rst:272
+msgid "5 --- Float32     (Thirty two bit floating point (float))"
+msgstr "5 --- Float32    (32-Bit-Gleitkommazahl (Float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:243
+#: ../../docs/user_manual/processing_algs/algs_include.rst:273
+msgid "6 --- Float64     (Sixty four bit floating point (double))"
+msgstr "6 --- Float64    (64-Bit-Gleitkommazahl (Double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:244
+#: ../../docs/user_manual/processing_algs/algs_include.rst:274
+msgid "7 --- CInt16      (Complex Int16)"
+msgstr "7 --- CInt16     (komplexe Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:245
+#: ../../docs/user_manual/processing_algs/algs_include.rst:275
+msgid "8 --- CInt32      (Complex Int32)"
+msgstr "8 --- CInt32     (komplexe Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:246
+#: ../../docs/user_manual/processing_algs/algs_include.rst:276
+msgid "9 --- CFloat32    (Complex Float32)"
+msgstr "9 --- CFloat32     (komplexe Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:247
+#: ../../docs/user_manual/processing_algs/algs_include.rst:277
+msgid "10 --- CFloat64   (Complex Float64)"
+msgstr "10 --- CFloat64   (komplexe Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:248
+#: ../../docs/user_manual/processing_algs/algs_include.rst:278
+msgid "11 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "11 --- Int8      (8-Bit-Ganzzahl mit Vorzeichen (qint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:250
+#: ../../docs/user_manual/processing_algs/algs_include.rst:280
+#: ../../docs/user_manual/processing_algs/algs_include.rst:310
+msgid ""
+"Available options depend on the GDAL version built with QGIS (see "
+":menuselection:`Help --> About` menu)"
+msgstr ""
+"Die verfügbaren Optionen hängen von der mit QGIS erstellten GDAL-Version ab "
+"(siehe Menü :menuselection:`Hilfe --> Über`)."
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:257
+msgid "Without user input"
+msgstr "Ohne Benutzereingaben"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:270
+msgid "3 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr "3 --- UInt32     (32-Bit-Ganzzahl ohne Vorzeichen (quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:271
+msgid "4 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "4--- Int132        (32-Bit-Ganzzahl mit Vorzeichen (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:287
+msgid "With user input"
+msgstr "Mit Benutzereingaben"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:296
+msgid "0 --- Use Input Layer Data Type"
+msgstr "0 --- Datentyp des Eingabelayers verwenden"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:297
+msgid "1 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "1 --- Byte        (8-Bit-Ganzzahl ohne Vorzeichen (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:298
+msgid "2 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr "2 --- Int16        (16-Bit-Ganzzahl mit Vorzeichen (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:299
+msgid "3 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr "3 --- UInt16        (16-Bit-Ganzzahl ohne Vorzeichen (quint6))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:301
+msgid "5 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr "5--- Int132        (32-Bit-Ganzzahl mit Vorzeichen (qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:302
+msgid "6 --- Float32     (Thirty two bit floating point (float))"
+msgstr "6 --- Float32    (32-Bit-Gleitkommazahl (Float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:303
+msgid "7 --- Float64     (Sixty four bit floating point (double))"
+msgstr "7 --- Float64    (64-Bit-Gleitkommazahl (Double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:304
+msgid "8 --- CInt16      (Complex Int16)"
+msgstr "8 --- CInt16     (komplexe Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:305
+msgid "9 --- CInt32      (Complex Int32)"
+msgstr "9 --- CInt32     (komplexe Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:306
+msgid "10 --- CFloat32   (Complex Float32)"
+msgstr "10 --- CFloat32     (komplexe Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:307
+msgid "11 --- CFloat64   (Complex Float64)"
+msgstr "11 --- CFloat64   (komplexe Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:308
+msgid "12 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "12 --- Int8      (8-Bit-Ganzzahl mit Vorzeichen (qint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:317
+msgid "Resampling methods"
+msgstr "Resampling-Methoden"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:324
+msgid "0 --- Nearest Neighbour"
+msgstr "0 --- Nächster Nachbar"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:325
+msgid "1 --- Bilinear (2x2 kernel)"
+msgstr "1 --- Bilinear (2x2 Kern)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:326
+msgid "2 --- Cubic (4x4 kernel)"
+msgstr "2 --- Kubisch (4x4 Kern)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:327
+msgid "3 --- Cubic B-Spline (4x4 kernel)"
+msgstr "3 --- Kubisch B-Spline (4x4 Kern)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:328
+msgid "4 --- Lanczos (6x6 kernel)"
+msgstr "4 --- Lanczos (6x6 Kern)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:329
+msgid "5 --- Average"
+msgstr "5 --- Durchschnitt"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:330
+msgid "6 --- Mode"
+msgstr "6 --- Modus"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:331
+msgid "7 --- Maximum"
+msgstr "7 --- Maximum"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:332
+msgid "8 --- Minimum"
+msgstr "8 --- Minimum"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:333
+msgid "9 --- Median"
+msgstr "9 --- Median"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:334
+msgid "10 --- First quartile (Q1)"
+msgstr "10 --- erstes Quartil (Q1)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:335
+msgid "11 --- Third quartile (Q3)"
+msgstr "11 --- drittes Quartil (Q3)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:341
+msgid "Vector field types"
+msgstr "Vektorfeldtypen"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:348
+msgid "1 --- Boolean"
+msgstr "1 --- Boolescher Wert"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:349
+msgid "2 --- Integer (32bit)"
+msgstr "2 --- Ganzzahl (32bit)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:350
+msgid "4 --- Integer (64bit)"
+msgstr "4 --- Ganzzahl (64bit)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:351
+msgid "6 --- Decimal (double)"
+msgstr "6 --- Dezimalzahl (double)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:352
+msgid "9 --- Integer list"
+msgstr "9 --- Liste von Ganzzahlen"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:353
+msgid "9 --- Integer (64bit) list"
+msgstr "9 --- Liste von Ganzzahlen (64bit)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:354
+msgid "9 --- Decimal (double) list"
+msgstr "9 --- Liste von Dezimalzahlen (double)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:355
+msgid "10 --- Text (string)"
+msgstr "10 --- Zeichenkette (string)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:356
+msgid "11 --- String list"
+msgstr "11 --- Liste von Zeichenketten"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:357
+msgid "12 --- Binary Object (BLOB)"
+msgstr "12 --- Binär-Objekt (BLOB)"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:358
 msgid "14 --- Date"
 msgstr "14 --- Datum"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:359
+msgid "15 --- Time"
+msgstr "15 --- Uhrzeit"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:360
+msgid "16 --- Date & Time"
+msgstr "16 --- Datum & Uhrzeit"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:370
+msgid "2 --- Integer list"
+msgstr "2 --- Liste von Ganzzahlen"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:371
+msgid "4 --- Integer (64bit) list"
+msgstr "4 --- Liste von Ganzzahlen (64bit)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:372
+msgid "6 --- Decimal (double) list"
+msgstr "6--- Liste von Dezimalzahlen (double)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:373
+msgid "10 --- String list"
+msgstr "10 --- Liste von Zeichenketten"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:374
+msgid "0 --- Any other types"
+msgstr "0 --- alle anderen Typen"
