@@ -100,7 +100,7 @@ To hide it from the HTML use the `:hide:` option::
 Grouping tests
 ----------------------------
 
-For each rst document, the code snippets are tested sequentially, which means
+For each reST document, the code snippets are tested sequentially, which means
 you can use one ``.. testsetup::`` for all the following code snippets and that
 later snippets will have access to variables declared in earlier ones in the document.
 
