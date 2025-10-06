@@ -345,6 +345,13 @@ msgstr "[ブール値]"
 msgid "Default: False"
 msgstr "デフォルト： False"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:61
+msgid ""
+"If set, the result is dissolved. If no field is set for dissolving, all the "
+"buffers are dissolved into one feature."
+msgstr ""
+"設定されている場合、結果はディゾルブされます。ディゾルブ用のフィールドが設定されていない場合、全てのバッファは一つの地物にディゾルブされます。"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:64
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:379
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:614
@@ -398,6 +405,12 @@ msgstr "[ベクタ：ポリゴン]"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:720
 msgid "Default: ``[Save to temporary file]``"
 msgstr "デフォルト： ``[一時ファイルに保存]``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:76
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:626
+msgid ""
+"Specify the output buffer layer. :ref:`One of <output_parameter_widget>`:"
+msgstr "出力バッファレイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -505,6 +518,15 @@ msgstr "矩形領域で切り抜く"
 msgid "Clips any OGR-supported vector file to a given extent."
 msgstr "OGR がサポートする任意のベクタファイルを、指定された範囲に切り取ります。"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:135
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:232
+msgid ""
+"This algorithm is derived from the `GDAL ogr2ogr utility "
+"<https://gdal.org/en/latest/programs/ogr2ogr.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL ogr2ogr utility "
+"<https://gdal.org/en/latest/programs/ogr2ogr.html>`_ から派生したものです。"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:157
 msgid "**Clip extent**"
 msgstr "**切り抜く範囲**"
@@ -574,9 +596,14 @@ msgstr "**出力ファイル**"
 msgid "[same as input]"
 msgstr "[入力レイヤと同じ]"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:173
+msgid ""
+"Specify the output (clipped) layer. :ref:`One of <output_parameter_widget>`:"
+msgstr "（切り抜かれた）出力レイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:213
 msgid "The output (clipped) layer. The default format is \"ESRI Shapefile\"."
-msgstr "（切り抜いた）出力レイヤ。デフォルト形式は「ESRIシェープファイル」。"
+msgstr "（切り抜かれた）出力レイヤ。デフォルト形式は「ESRIシェープファイル」。"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:219
 msgid "**Algorithm ID**: ``gdal:clipvectorbyextent``"
@@ -606,6 +633,10 @@ msgstr "入力ベクタレイヤから切り抜く範囲として使うレイヤ
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:299
 msgid "**Clipped (mask)**"
 msgstr "**出力ファイル**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:262
+msgid "The output (masked) layer. :ref:`One of <output_parameter_widget>`:"
+msgstr "（マスクされた）出力レイヤ。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:302
 msgid "The output (masked) layer. The default format is \"ESRI Shapefile\"."
@@ -688,6 +719,12 @@ msgstr "**ディゾルブした地物の面積と周長を計算する**"
 msgid "``COMPUTE_AREA``"
 msgstr "``COMPUTE_AREA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:405
+msgid ""
+"Compute the area and perimeter of dissolved features and include them in the"
+" output layer"
+msgstr "ディゾルブした地物の面積と周長を計算し、出力レイヤに含めます"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:407
 msgid "**Compute min/max/sum/mean for attribute**"
 msgstr "**属性の最小／最大／合計／平均を計算する**"
@@ -717,6 +754,10 @@ msgstr "[テーブルのフィールド：数値]"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:419
 msgid "The numeric attribute to calculate statistics on"
 msgstr "統計量を計算する数値属性"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:443
+msgid "The output multipart geometry layer (with dissolved geometries)"
+msgstr "（ディゾルブされたジオメトリを持つ）出力マルチパートジオメトリレイヤ"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:448
 msgid "**Algorithm ID**: ``gdal:dissolve``"
@@ -754,6 +795,11 @@ msgstr "**オフセット距離（左: 正、右: 負）**"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:536
 msgid "**Offset curve**"
 msgstr "**曲線をオフセット**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:499
+msgid ""
+"Specify the output line layer. :ref:`One of <output_parameter_widget>`:"
+msgstr "出力ラインレイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:539
 msgid "The output offset curve layer"
@@ -850,6 +896,11 @@ msgstr "**出力レイヤ**"
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:761
 msgid "[vector: point]"
 msgstr "[ベクタ：ポイント]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:721
+msgid ""
+"Specify the output point layer. :ref:`One of <output_parameter_widget>`:"
+msgstr "出力ポイントレイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectorgeoprocessing.rst:759
 msgid "**Points along line**"
