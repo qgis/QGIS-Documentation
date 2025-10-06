@@ -1020,6 +1020,115 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgischeckgeometrypointcoveredbyline:
+
+Points outside lines
+--------------------
+
+Checks if the points in the input layer are covered by a line in the selected line layers.
+A point not covered by a line is an error.
+
+.. figure:: img/check_geometry_pointcoveredbyline.png
+   :align: center
+
+   Reporting errors on points not covered by a line.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Line layers**
+     - ``LINES``
+     - [vector: line][list]
+     - Layer with the lines to check against.
+   * - **Points not covered by a line**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing points not covered by a line.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points not covered by a line**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of point outside the lines.
+       - ``gc_errory``: the y coordinate of point outside the lines.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that is outside the lines.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrypointcoveredbyline``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 .. _qgischeckgeometryselfintersections:
 
