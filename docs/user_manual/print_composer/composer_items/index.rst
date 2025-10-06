@@ -19,3 +19,4 @@ Layout Items
    layout_elevation_profile
    composer_html_frame
    composer_shapes
+   composer_chart
