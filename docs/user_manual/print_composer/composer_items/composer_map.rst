@@ -90,6 +90,10 @@ functionalities:
       their geometry.
 
     You can |checkbox| :guilabel:`Force labels inside atlas feature`.
+    You can also |checkbox| :guilabel:`Clip item frame to match atlas feature`.  
+    When enabled, this option reshapes the map frame to follow the atlas feature’s
+    polygon shape. This can be useful for vector tile or vector-based maps where the
+    background color is part of the design.
     If you don't want to |radioButtonOff| :guilabel:`Clip all layers` to the
     atlas feature you can use the |radioButtonOn| :guilabel:`Clip selected layers`
     option.
