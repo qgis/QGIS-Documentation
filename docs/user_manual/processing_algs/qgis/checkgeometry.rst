@@ -1059,7 +1059,7 @@ Basic parameters
    * - **Line layers**
      - ``LINES``
      - [vector: line][list]
-     - Layer with the lines to check against.
+     - Layer(s) with the lines to check against.
    * - **Points not covered by a line**
      - ``ERRORS``
      - [vector: point]
