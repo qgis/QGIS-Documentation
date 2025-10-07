@@ -1250,6 +1250,135 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+.. _qgischeckgeometryfollowboundaries:
+
+Polygons exceeding boundaries
+-----------------------------
+
+Checks if the polygons follow the boundaries of the reference layer.
+Polygons not following reference boundaries are errors.
+
+.. figure:: img/check_geometry_follow_boundaries.png
+   :align: center
+
+   Reporting errors on features with boundaries not following the reference layer.
+
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Reference layers**
+     - ``POLYGONS``
+     - [vector: polygon]
+     - Layer with the polygons to check against.
+   * - **Errors exceeding boundaries**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the errors location.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Features exceeding boundaries**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Skip output]``
+     - Polygon layer containing features exceeding the boundaries.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Errors exceeding boundaries**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of centroid of the area exceeding the boundary.
+       - ``gc_errory``: the y coordinate of centroid of the area exceeding the boundary.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that exceeds the boundary.
+   * - **Features exceeding boundaries**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output polygon layer with features exceeding the boundaries.
+       If no features exceeding the boundaries are found, the output layer will be empty.
+       Available fields are the same as in the ``ERRORS`` output.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometryfollowboundaries``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgischeckgeometrypointinpolygon:
