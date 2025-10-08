@@ -160,15 +160,20 @@ share the code via GitHub and much more). Main features are:
   * Use the default Desktop Environment shortcut to find next/previous
     (:kbd:`Ctrl+G` and :kbd:`Shift+Ctrl+G`);
   * Automatically find first match when typing in find box;
-  * |replace| :sup:`Replace` matching text with the text in the replace box;
   * Set initial find string to selection when opening find;
   * Enable the |searchRegex| :guilabel:`Use Regular Expressions` option in the search bar to use regular expressions
     instead of plain text matching;
+  * |replace|:sup:`Replace` the matching text with the text in the replace box.  
+    When using a regular expression, you can reference captured groups in the replacement text.  
+    Use :guilabel:`Replace All` to replace all matches at once.
   * Pressing :kbd:`Esc` closes the find bar.
 
-* |commentEditorConsole| :sup:`Toggle Comment` in selected lines with :kbd:`Ctrl+:`;
-* |formatCode| :sup:`Format Code`: check more :ref:`here <python_contextual_help>`;
-* |browserConsole| :sup:`Object inspector`: a class and function browser;
+* |commentEditorConsole| :sup:`Toggle Comment` in selected lines or use :kbd:`Ctrl+:`;
+* |formatCode| :sup:`Reformat Code`: allows to manually apply various formatting rules
+  (sort imports, indentation, line lenght,...) to the code, following :ref:`user-defined settings <python_code_formatting>`.
+  This may require installation of additional Python modules.
+* |browserConsole| :sup:`Object inspector`: a class and function browser.
+  Enable this panel in the :ref:`Python settings - Run and Debug <console_options>`.
 * Go to an object definition with a mouse click (from Object inspector);
 * Execute code snippets with the |runConsole| :guilabel:`Run Selected`
   command in contextual menu;
