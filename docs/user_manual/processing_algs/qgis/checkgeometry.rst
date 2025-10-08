@@ -1381,6 +1381,131 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgischeckgeometryselfcontact:
+
+Self-contacts
+------------------
+
+Checks if the geometry has self contact points (in line or polygon).
+Self contacts are errors.
+
+.. figure:: img/check_geometry_selfcontact.png
+   :align: center
+
+   Reporting errors on features with self-contacts.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Self contact error points**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the errors location.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Self contact features**
+
+       Optional
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Skip output]``
+     - Line or polygon layer containing self-contact features.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Self contact error points**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``: the index of the vertex where the self-contact occurs.
+       - ``gc_errorx``: the x coordinate of the self-contact.
+       - ``gc_errory``: the y coordinate of the self-contact.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the self-contacting input feature.
+   * - **Self contact features**
+     - ``OUTPUT``
+     - [vector: same as input]
+     - Output polygon or line layer with features containing the self-contact features.
+       If no self-contact features are found, the output layer will be empty.
+       Available fields are the same as in the ``ERRORS`` output.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometryselfcontact``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgischeckgeometrypointinpolygon:
 
