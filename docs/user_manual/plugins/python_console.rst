@@ -170,7 +170,7 @@ share the code via GitHub and much more). Main features are:
 
 * |commentEditorConsole| :sup:`Toggle Comment` in selected lines or use :kbd:`Ctrl+:`;
 * |formatCode| :sup:`Reformat Code`: allows to manually apply various formatting rules
-  (sort imports, indentation, line lenght,...) to the code, following :ref:`user-defined settings <python_code_formatting>`.
+  (sort imports, indentation, line lenght,...) to the code, following :ref:`user-defined settings <console_options>`.
   This may require installation of additional Python modules.
 * |browserConsole| :sup:`Object inspector`: a class and function browser.
   Enable this panel in the :ref:`Python settings - Run and Debug <console_options>`.
