@@ -1129,6 +1129,8 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
 .. _qgischeckgeometryfollowboundaries:
 
 Polygons exceeding boundaries
