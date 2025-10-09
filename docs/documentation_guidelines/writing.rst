@@ -641,7 +641,7 @@ guidelines:
 * Avoid using "This algorithm does this and that..." as the first sentence in the
   algorithm description. Try to use more general expressions like:
 
-  .. code-block: rst
+  .. code-block:: rst
 
     Takes a point layer and generates a polygon layer containing the...
 
