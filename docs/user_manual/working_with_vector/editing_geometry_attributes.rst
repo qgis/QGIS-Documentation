@@ -2372,7 +2372,7 @@ To edit features in-place:
    :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
    :width: 1.5em
-.. |chamferFillet| image:: /static/common/mActionChamferFillet.svg
+.. |chamferFillet| image:: /static/common/mActionChamferFillet.png
    :width: 1.5em
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
    :width: 1.5em
