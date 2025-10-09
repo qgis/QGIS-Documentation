@@ -29,7 +29,7 @@ has the following functionalities (:numref:`figure_layout_chart_prop`):
    Chart Item Properties
 
 
-.. _`layout_chart_mainproperties`:
+.. _layout_chart_mainproperties:
 
 Main properties
 ---------------
@@ -70,7 +70,7 @@ For pie charts, these options are not available.
 .. _layout_chart_symbols:
 
 Symbols List
-.............
+..............
 
 The :guilabel:`Symbols List` allows you to customize the appearance of each data
 series in the chart. You can change the color, shape, pattern, or
@@ -132,17 +132,17 @@ It can be set to:
 
 Configure the margin to adjust the spacing around the pie chart.
 
-.. _`layout_chart_datasource`:
+.. _layout_chart_datasource:
 
 Data source
 -----------
 
 In this section, select and configure the layer and fields you want to display in the chart.
 
-#. Select the :guilabel:`Layer` to use as the chart’s data source.
+#. Select the :guilabel:`Layer` to use as the chart's data source.
 #. Check the |checkbox| :guilabel:`Sort by` option to sort data based on selected fields or expressions, 
    and choose the sort direction (ascending or descending).
-#. Use the |add| and |remove| buttons to add or delete series from the chart.
+#. Use the |symbologyAdd| and |symbologyRemove| buttons to add or delete series from the chart.
 #. Double-click a series name to rename it.
 #. Click :guilabel:`Modify Series...` button and define the :guilabel:`X-axis` and :guilabel:`Y-axis` fields using the drop-down lists.
    Optionally, add a filter expression to display only specific data in the chart.
@@ -163,7 +163,7 @@ In this section, select and configure the layer and fields you want to display i
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |remove| image:: /static/common/symbologyRemove.png
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
-.. |add| image:: /static/common/symbologyAdd.png
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
