@@ -199,15 +199,16 @@ Icon                             Substitution                          Icon     
 |rotateFeature|                  ``|rotateFeature|``                   |rotatePointSymbols|              ``|rotatePointSymbols|``
 |scaleFeature|                   ``|scaleFeature|``
 |offsetCurve|                    ``|offsetCurve|``                     |offsetPointSymbols|              ``|offsetPointSymbols|``
-|simplify|                       ``|simplify|``                        |reshape|                         ``|reshape|``
-|addRing|                        ``|addRing|``                         |addPart|                         ``|addPart|``
-|fillRing|                       ``|fillRing|``
-|deleteRing|                     ``|deleteRing|``                      |deletePart|                      ``|deletePart|``
-|mergeFeatures|                  ``|mergeFeatures|``                   |mergeFeatureAttributes|          ``|mergeFeatureAttributes|``
-|splitFeatures|                  ``|splitFeatures|``                   |splitParts|                      ``|splitParts|``
-|reverseLine|                    ``|reverseLine|``
-|allowIntersections|             ``|allowIntersections|``              |avoidIntersectionsCurrentLayer|  ``|avoidIntersectionsCurrentLayer|``
-|avoidIntersectionsLayers|       ``|avoidIntersectionsLayers|``        |snappingSelf|                    ``|snappingSelf|``
+|chamferFillet|                  ``|chamferFillet|``                   |reshape|                         ``|reshape|``
+|simplify|                       ``|simplify|``                        |addPart|                         ``|addPart|``
+|addRing|                        ``|addRing|``
+|fillRing|                       ``|fillRing|``                        |deletePart|                      ``|deletePart|``
+|deleteRing|                     ``|deleteRing|``                      |mergeFeatureAttributes|          ``|mergeFeatureAttributes|``
+|mergeFeatures|                  ``|mergeFeatures|``                   |splitParts|                      ``|splitParts|``
+|splitFeatures|                  ``|splitFeatures|``
+|reverseLine|                    ``|reverseLine|``                     |avoidIntersectionsCurrentLayer|  ``|avoidIntersectionsCurrentLayer|``
+|allowIntersections|             ``|allowIntersections|``              |snappingSelf|                    ``|snappingSelf|``
+|avoidIntersectionsLayers|       ``|avoidIntersectionsLayers|``
 ===============================  ====================================  ================================  =================================
 
 Mesh
