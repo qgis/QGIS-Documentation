@@ -8,15 +8,15 @@ Layout Items
 .. toctree::
    :maxdepth: 1
 
-   composer_items_options
-   composer_map
-   composer_map3d
-   composer_label
-   composer_legend
-   composer_scale_bar
-   composer_tables
-   composer_image
+   layout_items_options
+   layout_map
+   layout_map3d
+   layout_label
+   layout_legend
+   layout_scale_bar
+   layout_tables
+   layout_image
    layout_elevation_profile
-   composer_html_frame
-   composer_shapes
-   composer_chart
+   layout_html_frame
+   layout_shapes
+   layout_chart
