@@ -536,11 +536,6 @@ More details at
 Footnotes
 ---------
 
-.. note::
-
-   Footnotes are not recognized by any translation software and they are not
-   converted to PDF format properly. So, if possible, don't use footnotes
-   within any documentation.
 
 This is for creating a footnote (showing as example [1]_)
 
