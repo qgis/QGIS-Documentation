@@ -1377,7 +1377,7 @@ you to configure :ref:`some parameters <curve_offset_tool>` like **Join style**,
 Chamfer or fillet Curves
 ------------------------
 
-The |chamferFillet| :sup:`Chamfer/fillet curve` tool creates chamfer or fillet on curve vertex for line or polygone layers.
+The |chamferFillet| :sup:`Chamfer/fillet curve` tool creates chamfer or fillet on curve vertex for line or polygon layers.
 The tool is applied to the edited layer (the geometries are modified).
 The :guilabel:`User Input` dialog pops-up, showing the possibility to switch between chamfer or fillet operations
 and other settings.
@@ -1392,10 +1392,10 @@ Your changes may then be saved with the |saveEdits| :sup:`Save Layer Edits` tool
 
 QGIS options dialog (Advanced tab then search for **chamfer**) or the :guilabel:`User Input` dialogs allow
 you to configure some parameters like **Operation**, **Fillet segments**, **Fillet radius** and **Chamfer distances**.
-In the :ref:`Chamfer User Input <_figure_chamfer_fillet_dialog_chamfer>` :ref:`Fillet User Input <_figure_chamfer_fillet_dialog_fillet>` dialogs,
+In the  :ref:`Fillet User Input <_figure_chamfer_fillet_dialog_fillet>` and :ref:`Chamfer User Input <_figure_chamfer_fillet_dialog_chamfer>` dialogs,
 you can move from a field to another by using the :kbd:`Tab`.
 
-For repeated operation, you can set desired values in the :guilabel:`User Input` dialog then use the the |locked| icon to lock them.
+For repeated operation, you can set desired values in the :guilabel:`User Input` dialog then use the |locked| icon to lock them.
 Then you select a feature vertex with a mouse click then hit :kbd:`Enter` to apply the operation using the previous locked
 values in the :guilabel:`User Input` dialog.
 
