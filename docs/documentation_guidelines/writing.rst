@@ -353,8 +353,6 @@ x        y        z
 4                 5
 =======  =======  =======
 
-Use a ``\`` (backslash) followed by an empty space to leave an empty space.
-
 Tables should have a caption. You can use an explicit reST `"table" directive <https://docutils.sourceforge.io/docs/ref/rst/directives.html#table>`_
 to add a caption to `simple tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables>`_
 or `grid tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`_.
