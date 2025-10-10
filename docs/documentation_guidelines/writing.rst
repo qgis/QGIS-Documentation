@@ -445,20 +445,7 @@ The result:
        * Point
        * Line
 
-You can use Sphinx roles to create `cross references <https://www.sphinx-doc.org/en/master/usage/referencing.html>`_
-to tables.
-
-To create a cross reference with the table caption as the link text, use a ``:ref:`` role like this:
-
-.. code-block:: rst
-
-   see :ref:`table-grid-caption` or :ref:`table-list-caption`
-
-The result:
-
-   see :ref:`table-grid-caption` or :ref:`table-list-caption`
-
-To reference the table by number, use a ``:numref:`` role like this:
+Use ``:numref:`` roles to reference tables like this:
 
 .. code-block:: rst
 
@@ -467,23 +454,11 @@ To reference the table by number, use a ``:numref:`` role like this:
 The result:
 
    see :numref:`table-grid-caption` or :numref:`table-list-caption`
-
-You can also customize the ``:numref:`` link text (use ``%s`` as a placeholder
-for the table number):
-
-.. code-block:: rst
-
-   see Tables :numref:`%s <table-grid-caption>` and :numref:`%s <table-list-caption>`
-
-The result:
-
-   see Tables :numref:`%s <table-grid-caption>` and :numref:`%s <table-list-caption>`
 
 .. note::
 
    You must add a caption to your table in order to create a cross reference
-   with the ``:ref:`` or ``:numref:`` roles.
-
+   with the ``:numref:`` role.
 
 Index
 -----
