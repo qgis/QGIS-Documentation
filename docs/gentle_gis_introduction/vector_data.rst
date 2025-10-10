@@ -390,7 +390,7 @@ Here are some ideas for you to try with your learners:
 * Think of how you would create vector features in a GIS to represent real world
   features on your school grounds. Create a table of different features in and
   around your school and then task your learners to decide whether they would be
-  best represented in the GIS as a point, line or polygon. See table_vector_1_
+  best represented in the GIS as a point, line or polygon. See :numref:`table_vector_geometry`
   for an example.
 
 .. _figure_sample_map:
@@ -402,24 +402,27 @@ Here are some ideas for you to try with your learners:
    Can you identify two point features and one polygon feature on this map?
 
 
-.. _table_vector_1:
+.. _table_vector_geometry:
 
-+----------------------------------------+------------------------+
-| Real world feature                     | Suitable Geometry Type |
-+========================================+========================+
-| The school flagpole                    |                        |
-+----------------------------------------+------------------------+
-| The soccer field                       |                        |
-+----------------------------------------+------------------------+
-| The footpaths in and around the school |                        |
-+----------------------------------------+------------------------+
-| Places where taps are located          |                        |
-+----------------------------------------+------------------------+
-| Etc.                                   |                        |
-+----------------------------------------+------------------------+
+.. table:: Vector data and geometry types
 
-Table Vector 1: Create a table like this (leaving the geometry type column empty)
-and ask your learners to decide on suitable geometry types.
+   +----------------------------------------+------------------------+
+   | Real world feature                     | Suitable Geometry Type |
+   +========================================+========================+
+   | The school flagpole                    |                        |
+   +----------------------------------------+------------------------+
+   | The soccer field                       |                        |
+   +----------------------------------------+------------------------+
+   | The footpaths in and around the school |                        |
+   +----------------------------------------+------------------------+
+   | Places where taps are located          |                        |
+   +----------------------------------------+------------------------+
+   | Etc.                                   |                        |
+   +----------------------------------------+------------------------+
+
+Create a table like :numref:`table_vector_geometry` (leaving the "geometry
+type" column empty) and ask your learners to decide on suitable geometry types.
+
 
 Something to think about
 ========================

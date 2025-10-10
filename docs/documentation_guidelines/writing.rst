@@ -333,7 +333,7 @@ see :ref:`figure_logo`
 Tables
 ------
 
-A simple table can be coded like this
+You can make a simple table like this:
 
 .. code-block:: rst
 
@@ -353,13 +353,39 @@ x        y        z
 4                 5
 =======  =======  =======
 
-Use a ``\`` (backslash) followed by an empty space to leave an empty space.
+Tables should have a caption. You can use an explicit reST `"table" directive <https://docutils.sourceforge.io/docs/ref/rst/directives.html#table>`_
+to add a caption to `simple tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables>`_
+or `grid tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`_.
+Add the caption on the same line as the directive and indent the table at least
+one space.
 
-You can also make more complicated tables and reference them:
+You can also add a `hyperlink target <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#hyperlink-targets>`_
+before a table in order to reference it elsewhere.  To avoid conflicts with
+other references, always begin hyperlink targets with ``_table_`` and use terms
+relevant to the table caption.
+
+Here is an example of a more complicated grid table with a caption and a
+hyperlink target:
 
 .. code-block:: rst
 
-   .. _my_drawn_table:
+   .. _table-grid-caption:
+
+   .. table:: Grid table with caption
+
+      +---------------+--------------------+
+      | Windows       | macOS              |
+      +---------------+--------------------+
+      | |win|         | |osx|              |
+      +---------------+--------------------+
+      | and of course not to forget |nix|  |
+      +------------------------------------+
+
+The result:
+
+.. _table-grid-caption:
+
+.. table:: Grid table with caption
 
    +---------------+--------------------+
    | Windows       | macOS              |
@@ -369,31 +395,18 @@ You can also make more complicated tables and reference them:
    | and of course not to forget |nix|  |
    +------------------------------------+
 
-   My drawn table, mind you this is unfortunately not regarded as a caption
+You may find it easier to use `list tables <https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table-1>`_
+or `CSV tables <https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table-1>`_
+to make complex tables. Add the caption after the ``list-table`` or
+``csv-table`` directive.
 
-   You can reference it like this: my_drawn_table_.
-
-The result:
-
-.. _my_drawn_table:
-
-+---------------+--------------------+
-| Windows       | macOS              |
-+---------------+--------------------+
-| |win|         | |osx|              |
-+---------------+--------------------+
-| and of course not to forget |nix|  |
-+------------------------------------+
-
-My drawn table, mind you this is unfortunately not regarded as a caption
-
-You can reference to it like this my_drawn_table_.
-
-For even more complex tables, it is easier to use ``list-table``:
+Here is an example of a list table with a caption and a hyperlink target:
 
 .. code-block:: rst
 
-   .. list-table::
+   .. _table-list-caption:
+
+   .. list-table:: List table with caption
       :header-rows: 1
       :widths: 20 20 20 40
 
@@ -411,7 +424,9 @@ For even more complex tables, it is easier to use ``list-table``:
 
 The result:
 
-.. list-table::
+.. _table-list-caption:
+
+.. list-table:: List table with caption
    :header-rows: 1
    :widths: 20 20 20 40
 
@@ -426,6 +441,21 @@ The result:
 
        * Point
        * Line
+
+Use ``:numref:`` roles to reference tables like this:
+
+.. code-block:: rst
+
+   see :numref:`table-grid-caption` or :numref:`table-list-caption`
+
+The result:
+
+   see :numref:`table-grid-caption` or :numref:`table-list-caption`
+
+.. note::
+
+   You must add a caption to your table in order to create a cross reference
+   with the ``:numref:`` role.
 
 Index
 -----
