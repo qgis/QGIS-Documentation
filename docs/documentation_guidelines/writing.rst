@@ -395,10 +395,10 @@ The result:
    | and of course not to forget |nix|  |
    +------------------------------------+
 
-You can use reST `list tables <https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table-1>`_
-and `csv tables <https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table-1>`_
-to make even more complicated tables. Add the caption after the ``list-table``
-or ``csv-table`` directives.
+You may find it easier to use `list tables <https://docutils.sourceforge.io/docs/ref/rst/directives.html#list-table-1>`_
+or `CSV tables <https://docutils.sourceforge.io/docs/ref/rst/directives.html#csv-table-1>`_
+to make complex tables. Add the caption after the ``list-table`` or
+``csv-table`` directive.
 
 Here is an example of a list table with a caption and a hyperlink target:
 
