@@ -377,10 +377,10 @@ direction and a negative value does the opposite.
    digitize parts of the feature with tracing enabled and other
    parts with tracing disabled.
    Tools behave as usual when tracing is disabled.
-   
+
 .. tip:: **Convert tracing to curved geometries**
-   
-   By using :menuselection:`Settings --> Options --> Digitizing --> Tracing` 
+
+   By using :menuselection:`Settings --> Options --> Digitizing --> Tracing`
    you can create curved geometries while digitizing.
    See :ref:`digitizing options <digitizing_options>`.
 
@@ -610,7 +610,7 @@ operation is done, selection stays active for this feature and tool.
 
 .. tip:: **Drawing a series of new vertices**
 
-   The vertex tool does not support :ref:`automatic tracing <tracing>` and is optimized for 
+   The vertex tool does not support :ref:`automatic tracing <tracing>` and is optimized for
    editing individual vertices and moving or deleting an arbitrary selection
    of multiple vertices.  Try using the |reshape|:sup:`Reshape Features`
    tool when you need to replace or insert a series of new vertices,
@@ -1029,7 +1029,7 @@ Advanced digitizing
   +---------------------------+-----------------------------------------+------------------------+-------------------------+
   | |rotatePointSymbols|      | Rotate Point Symbols                    | |offsetPointSymbols|   | Offset Point Symbols    |
   +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |trimExtend|              | Trim or Extend Feature                  |                        |                         |
+  | |trimExtend|              | Trim or Extend Feature                  | |chamferFillet|        | Chamfer/fillet Curve    |
   +---------------------------+-----------------------------------------+------------------------+-------------------------+
 
 
@@ -1356,18 +1356,61 @@ To create a shift of a line or polygon layer, you must first go into editing mod
 and activate the |offsetCurve| :sup:`Offset Curve` tool.
 Then click on a feature to shift it.
 Move the mouse and click where wanted or enter the desired distance in
-the user input widget. Holding :kbd:`Ctrl` during the 2nd click will make an offset copy. 
+the user input widget. Holding :kbd:`Ctrl` during the 2nd click will make an offset copy.
 Your changes may then be saved with the |saveEdits|
 :sup:`Save Layer Edits` tool.
 
 For geometries on background layers make sure that snapping is on and hold :kbd:`Ctrl`
 to select the geometry from the background. Also hold :kbd:`Ctrl` when doing the second click.
-Geometries will be converted to the target layer geometry type. 
+Geometries will be converted to the target layer geometry type.
 
 QGIS options dialog (Digitizing tab then **Curve offset tools** section) or
 the |settings| icon in the :guilabel:`User Input` dialog allows
 you to configure :ref:`some parameters <curve_offset_tool>` like **Join style**,
 **Quadrant segments**, **Miter limit** and **End cap style**.
+
+
+.. index::
+   single: Digitizing tools; Chamfer/fillet Curves
+.. _chamfer_fillet:
+
+Chamfer or fillet Curves
+------------------------
+
+The |chamferFillet| :sup:`Chamfer/fillet curve` tool creates chamfer or fillet on curve vertex for line or polygon layers.
+The tool is applied to the edited layer (the geometries are modified).
+The :guilabel:`User Input` dialog pops-up, showing the possibility to switch between chamfer or fillet operations
+and other settings.
+
+To create a chamfer or a fillet on a vertex of a line or polygon layer, you must first go into editing mode
+and activate the |chamferFillet| :sup:`Chamfer/fillet curve` tool.
+Then click on a vertex feature to create the chamfer or fillet.
+Move the mouse or enter the desired distances in :guilabel:`User Input` dialog.
+Holding :kbd:`Shift` during the mouse move of chamfer will generate symmetric operation (both distances are the same).
+To validate you can click when it suits you or hit :kbd:`Enter`.
+Your changes may then be saved with the |saveEdits| :sup:`Save Layer Edits` tool.
+
+QGIS options dialog (Advanced tab then search for **chamfer**) or the :guilabel:`User Input` dialogs allow
+you to configure some parameters like **Operation**, **Fillet segments**, **Fillet radius** and **Chamfer distances**.
+In the  :ref:`Fillet User Input <_figure_chamfer_fillet_dialog_fillet>` and :ref:`Chamfer User Input <_figure_chamfer_fillet_dialog_chamfer>` dialogs,
+you can move from a field to another by using the :kbd:`Tab`.
+
+For repeated operation, you can set desired values in the :guilabel:`User Input` dialog then use the |locked| icon to lock them.
+Then you select a feature vertex with a mouse click then hit :kbd:`Enter` to apply the operation using the previous locked
+values in the :guilabel:`User Input` dialog.
+
+.. _figure_chamfer_fillet_dialog_fillet:
+
+.. figure:: img/chamferfilletdialogfillet.png
+   :align: right
+
+   Fillet User Input
+
+.. _figure_chamfer_fillet_dialog_chamfer:
+
+.. figure:: img/chamferfilletdialogchamfer.png
+
+   Chamfer User Input
 
 .. index::
    single: Digitizing tools; Reverse Line
@@ -1621,7 +1664,7 @@ In order to trim or extend existing geometries:
 
 .. note:: Snapping is automatically enabled when this tool is activated.
  Your original snapping settings will be restored once the tool is deactivated.
- 
+
 .. attention:: Pay attention to the modified geometry while using the |trimExtend|
   :sup:`Trim/Extend` tool. Depending on the inputs, it can create invalid
   geometries, potentially resulting in failure at layer saving.
@@ -1857,7 +1900,7 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   You can switch from one method to the other during the digitizing operation,
   and this avoids disabling any of the snapping options in the meantime.
   Press :kbd:`N` (or :kbd:`Shift+N`) during a digitizing operation to cycle through the angles list.
-  
+
 * |floater| :sup:`Floater settings`: if the :guilabel:`Show floater` item is checked,
   a contextual menu with digitizing information follows the cursor during digitizing.
   The values can be accessed using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`,
@@ -2328,6 +2371,8 @@ To edit features in-place:
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
+   :width: 1.5em
+.. |chamferFillet| image:: /static/common/mActionChamferFillet.png
    :width: 1.5em
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
    :width: 1.5em
