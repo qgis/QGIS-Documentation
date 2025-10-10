@@ -24,7 +24,7 @@ Read general information on `QGIS community support <https://qgis.org/resources/
 
 Let's now dive into the process.
 
-Documentation sources are stored using the git version control system and are
+Documentation sources are stored using the Git version control system and are
 available on GitHub at https://github.com/qgis/QGIS-Documentation.
 A list of issues to fix and features to explain can be found at
 https://github.com/qgis/QGIS-Documentation/issues.
@@ -50,7 +50,7 @@ The GitHub web interface allows you to do the following:
 * make a pull request to have your changes inserted into the main repository
 * create, update, or delete branches
 
-If you are not yet familiar with git and GitHub vocabulary, you may want to
+If you are not yet familiar with Git and GitHub vocabulary, you may want to
 read the GitHub `Hello-world <https://docs.github.com/en/get-started/start-your-journey/hello-world>`_
 project to learn some basic vocabulary and actions that will be used below.
 
@@ -411,7 +411,7 @@ repo with your contributions, but it doesn't offer tools to:
 * fix possible conflicts with the main repo
 * build the documentation to test your changes
 
-You need to `install git <https://git-scm.com/downloads>`_ on your hard
+You need to `install Git <https://git-scm.com/downloads>`_ on your hard
 drive in order to get access to more advanced and powerful tools and have a
 local copy of the repository. Some basics you may often need are exposed below.
 You'll also find rules to care about even if you opt for the web interface.
@@ -436,7 +436,7 @@ You can clone  your QGIS repository using the web URL as follows:
 
 The former command line is simply an example.
 You should adapt both the path and the repository URL, replacing ``<YourName>``
-with your github user name.
+with your GitHub user name.
 
 Check the following:
 
@@ -482,7 +482,7 @@ Check the following if you used the SSH protocol:
   * master
 
 You can start to work here but in the long term process you will get a lot of
-issues when you will push your contribution (called Pull Request in github
+issues when you will push your contribution (called Pull Request in GitHub
 process) as the master branch of the qgis/QGIS-Documentation repository will diverge
 from your local/remote repository.
 You then need to keep track of the main remote repository and work with branches.
@@ -606,7 +606,7 @@ you need to send them to your remote repository in order to create pull request:
 Share your Changes
 ------------------
 
-Now you can go to your github repository and :ref:`create a Pull Request
+Now you can go to your GitHub repository and :ref:`create a Pull Request
 <sharing_changes>` as exposed in a previous section.
 Ensure you create a PR from your branch to the remote branch you are targetting
 in the official QGIS-Documentation repository.
@@ -632,7 +632,7 @@ And do not forget to update the ``master`` branch in your local repository!
 Further reading
 ===============
 
-* Other than the Github web interface and the git command line tools exposed
+* Other than the GitHub web interface and the Git command line tools exposed
   above, there are also `GUI applications <https://git-scm.com/downloads/guis>`_
   you can use to create and manage your contributions to the documentation.
 
@@ -647,7 +647,7 @@ Further reading
     and resolve the issue as explained at `Resolving a merge conflict on GitHub
     <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github>`_
   * if the conflict involves files renaming or removal, then you'd need to
-    resolve the conflict using git command lines. Typically, you have to first
+    resolve the conflict using Git command lines. Typically, you have to first
     rebase your branch over the target branch using ``git rebase targetBranch``
     call and fix the conflicts that are reported. Read more at `Resolving a merge
     conflict using the command line
