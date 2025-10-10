@@ -356,9 +356,8 @@ x        y        z
 Tables should have a caption. You can use an explicit reST `"table" directive <https://docutils.sourceforge.io/docs/ref/rst/directives.html#table>`_
 to add a caption to `simple tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#simple-tables>`_
 or `grid tables <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#grid-tables>`_.
-Add the caption on the same line as the directive and indent the table three
-spaces to align with the directive.
-
+Add the caption on the same line as the directive and indent the table at least
+one space.
 
 You can also add a `hyperlink target <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#hyperlink-targets>`_
 before a table in order to reference it elsewhere.  To avoid conflicts with
