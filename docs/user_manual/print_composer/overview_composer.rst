@@ -234,7 +234,7 @@ and |filePrint| :guilabel:`Print...`.
 Below is a list of all the available tools in this menu
 with some convenient information.
 
-.. table:: Layout Menu Tools
+.. table:: "Layout" Menu Tools
 
    ================================================= ========================== ========================== =====================================
     Tool                                              Shortcut                   Toolbar                    Reference
@@ -275,7 +275,7 @@ It ensures to copy/paste items at the same place, from page to page.
 Below is a list of all the available tools in this menu
 with some convenient information.
 
-.. csv-table:: Edit Menu Tools
+.. csv-table:: "Edit" Menu Tools
    :header: "Tool", "Shortcut", "Toolbar", "Reference"
    :widths: 30, 17, 10, 33
 
@@ -338,7 +338,7 @@ all panels are hidden and only previously visible panels are restored when unche
 It's also possible to switch to a full screen mode to have more space to interact with
 by pressing :kbd:`F11` or using :menuselection:`View -->` |checkbox| :guilabel:`Toggle Full Screen`.
 
-.. table:: View Menu Tools
+.. table:: "View" Menu Tools
 
    ================================================= ========================== ========================== =====================================
     Tool                                              Shortcut                   Toolbar                    Reference
@@ -372,7 +372,7 @@ Items menu
 The :menuselection:`Items` helps you configure items' position in the layout
 and the relations between them (see :ref:`interact_layout_item`).
 
-.. table:: Items Menu Tools
+.. table:: "Items" Menu Tools
 
    ================================================= ========================== ========================== ==========================
     Tool                                              Shortcut                   Toolbar                    Reference
@@ -396,7 +396,7 @@ Add Item menu
 These are tools to create layout items. 
 Each of them is deeply described in :ref:`layout_items` chapter.
 
-.. table:: Add Item Menu Tools
+.. table:: "Add Item" Menu Tools
 
    ========================================================= ======================== =====================================
     Tool                                                      Toolbar                    Reference
@@ -428,7 +428,7 @@ Each of them is deeply described in :ref:`layout_items` chapter.
 Atlas menu
 ..........
 
-.. table:: Atlas Menu Tools
+.. table:: "Atlas" Menu Tools
 
    ======================================================== ========================== ========================== =====================================
     Tool                                                     Shortcut                   Toolbar                    Reference
