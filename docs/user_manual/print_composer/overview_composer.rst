@@ -234,28 +234,30 @@ and |filePrint| :guilabel:`Print...`.
 Below is a list of all the available tools in this menu
 with some convenient information.
 
-================================================= ========================== ========================== =====================================
- Tool                                              Shortcut                   Toolbar                    Reference
-================================================= ========================== ========================== =====================================
- |fileSave| :guilabel:`Save Project`               :kbd:`Ctrl+S`              :guilabel:`Layout`         :ref:`sec_projects`
- |newLayout| :guilabel:`New Layout`                :kbd:`Ctrl+N`              :guilabel:`Layout`         :ref:`layout_manager`
- |duplicateLayout| :guilabel:`Duplicate Layout`                               :guilabel:`Layout`         :ref:`layout_manager`
- |deleteSelected| :guilabel:`Delete Layout`
- |layoutManager| :guilabel:`Layout Manager...`                                :guilabel:`Layout`         :ref:`layout_manager`
- :menuselection:`Layouts -->`
- :guilabel:`Layout Properties...`                                                                        :ref:`layout_panel`
- :guilabel:`Rename Layout...`
- :guilabel:`Page Properties...`                                                                          :ref:`page_properties`
- |newPage| :guilabel:`Add Pages...`                                           :guilabel:`Layout`         :ref:`page_properties`
- |fileOpen| :guilabel:`Add Items from Template`                               :guilabel:`Layout`         :ref:`create_layout_item`
- |fileSaveAs| :guilabel:`Save as Template...`                                 :guilabel:`Layout`         :ref:`layout_manager`
- |saveMapAsImage| :guilabel:`Export as Image...`                              :guilabel:`Layout`         :ref:`export_layout_image`
- |saveAsSVG| :guilabel:`Export as SVG...`                                     :guilabel:`Layout`         :ref:`export_layout_svg`
- |saveAsPDF| :guilabel:`Export as PDF...`                                     :guilabel:`Layout`         :ref:`export_layout_pdf`
- :guilabel:`Printer Page Setup...`                 :kbd:`Ctrl+Shift+P`
- |filePrint| :guilabel:`Print...`                  :kbd:`Ctrl+P`              :guilabel:`Layout`         :ref:`create-output`
- :guilabel:`Close`                                 :kbd:`Ctrl+Q`
-================================================= ========================== ========================== =====================================
+.. table:: "Layout" Menu Tools
+
+   ================================================= ========================== ========================== =====================================
+    Tool                                              Shortcut                   Toolbar                    Reference
+   ================================================= ========================== ========================== =====================================
+    |fileSave| :guilabel:`Save Project`               :kbd:`Ctrl+S`              :guilabel:`Layout`         :ref:`sec_projects`
+    |newLayout| :guilabel:`New Layout`                :kbd:`Ctrl+N`              :guilabel:`Layout`         :ref:`layout_manager`
+    |duplicateLayout| :guilabel:`Duplicate Layout`                               :guilabel:`Layout`         :ref:`layout_manager`
+    |deleteSelected| :guilabel:`Delete Layout`
+    |layoutManager| :guilabel:`Layout Manager...`                                :guilabel:`Layout`         :ref:`layout_manager`
+    :menuselection:`Layouts -->`
+    :guilabel:`Layout Properties...`                                                                        :ref:`layout_panel`
+    :guilabel:`Rename Layout...`
+    :guilabel:`Page Properties...`                                                                          :ref:`page_properties`
+    |newPage| :guilabel:`Add Pages...`                                           :guilabel:`Layout`         :ref:`page_properties`
+    |fileOpen| :guilabel:`Add Items from Template`                               :guilabel:`Layout`         :ref:`create_layout_item`
+    |fileSaveAs| :guilabel:`Save as Template...`                                 :guilabel:`Layout`         :ref:`layout_manager`
+    |saveMapAsImage| :guilabel:`Export as Image...`                              :guilabel:`Layout`         :ref:`export_layout_image`
+    |saveAsSVG| :guilabel:`Export as SVG...`                                     :guilabel:`Layout`         :ref:`export_layout_svg`
+    |saveAsPDF| :guilabel:`Export as PDF...`                                     :guilabel:`Layout`         :ref:`export_layout_pdf`
+    :guilabel:`Printer Page Setup...`                 :kbd:`Ctrl+Shift+P`
+    |filePrint| :guilabel:`Print...`                  :kbd:`Ctrl+P`              :guilabel:`Layout`         :ref:`create-output`
+    :guilabel:`Close`                                 :kbd:`Ctrl+Q`
+   ================================================= ========================== ========================== =====================================
 
 Edit menu
 .........
@@ -273,7 +275,7 @@ It ensures to copy/paste items at the same place, from page to page.
 Below is a list of all the available tools in this menu
 with some convenient information.
 
-.. csv-table:: Available Tools
+.. csv-table:: "Edit" Menu Tools
    :header: "Tool", "Shortcut", "Toolbar", "Reference"
    :widths: 30, 17, 10, 33
 
@@ -336,31 +338,33 @@ all panels are hidden and only previously visible panels are restored when unche
 It's also possible to switch to a full screen mode to have more space to interact with
 by pressing :kbd:`F11` or using :menuselection:`View -->` |checkbox| :guilabel:`Toggle Full Screen`.
 
-================================================= ========================== ========================== =====================================
- Tool                                              Shortcut                   Toolbar                    Reference
-================================================= ========================== ========================== =====================================
- |refresh| :guilabel:`Refresh`                     :kbd:`F5`                  :guilabel:`Navigation`
- :menuselection:`Preview -->`
- |zoomIn| :guilabel:`Zoom In`                      :kbd:`Ctrl++`              :guilabel:`Navigation`
- |zoomOut| :guilabel:`Zoom Out`                    :kbd:`Ctrl+-`              :guilabel:`Navigation`
- |zoomActual| :guilabel:`Zoom to 100%`             :kbd:`Ctrl+1`              :guilabel:`Navigation`
- |zoomFullExtent| :guilabel:`Zoom Full`            :kbd:`Ctrl+0`              :guilabel:`Navigation`
- :guilabel:`Zoom to Width`
- |vectorGrid| :guilabel:`Show Grid`                :kbd:`Ctrl+'`                                         :ref:`grid_guides`
- |unchecked| :guilabel:`Snap to Grid`              :kbd:`Ctrl+Shift+'`                                   :ref:`grid_guides`
- |checkbox| :guilabel:`Show Guides`                :kbd:`Ctrl+;`                                         :ref:`grid_guides`
- |checkbox| :guilabel:`Snap to Guides`             :kbd:`Ctrl+Shift+;`                                   :ref:`grid_guides`
- |checkbox| :guilabel:`Smart Guides`               :kbd:`Ctrl+Alt+;`
- :guilabel:`Manage Guides...`                      \                          \                          :ref:`layout_guides_panel`
- :guilabel:`Clear Guides`                          \                          \                          :ref:`layout_guides_panel`
- |checkbox| :guilabel:`Show Rulers`                :kbd:`Ctrl+R`
- |checkbox| :guilabel:`Show Bounding Boxes`        :kbd:`Ctrl+Shift+B`
- |checkbox| :guilabel:`Show Pages`
- :menuselection:`Toolbars -->`                      \                         \                          :ref:`sec_panels_and_toolbars`
- :menuselection:`Panels -->`                        \                         \                          :ref:`sec_panels_and_toolbars`
- |unchecked| :guilabel:`Toggle Full Screen`        :kbd:`F11`                 \                          :ref:`view_menu`
- |unchecked| :guilabel:`Toggle Panel Visibility`   :kbd:`Ctrl+Tab`            \                          :ref:`view_menu`
-================================================= ========================== ========================== =====================================
+.. table:: "View" Menu Tools
+
+   ================================================= ========================== ========================== =====================================
+    Tool                                              Shortcut                   Toolbar                    Reference
+   ================================================= ========================== ========================== =====================================
+    |refresh| :guilabel:`Refresh`                     :kbd:`F5`                  :guilabel:`Navigation`
+    :menuselection:`Preview -->`
+    |zoomIn| :guilabel:`Zoom In`                      :kbd:`Ctrl++`              :guilabel:`Navigation`
+    |zoomOut| :guilabel:`Zoom Out`                    :kbd:`Ctrl+-`              :guilabel:`Navigation`
+    |zoomActual| :guilabel:`Zoom to 100%`             :kbd:`Ctrl+1`              :guilabel:`Navigation`
+    |zoomFullExtent| :guilabel:`Zoom Full`            :kbd:`Ctrl+0`              :guilabel:`Navigation`
+    :guilabel:`Zoom to Width`
+    |vectorGrid| :guilabel:`Show Grid`                :kbd:`Ctrl+'`                                         :ref:`grid_guides`
+    |unchecked| :guilabel:`Snap to Grid`              :kbd:`Ctrl+Shift+'`                                   :ref:`grid_guides`
+    |checkbox| :guilabel:`Show Guides`                :kbd:`Ctrl+;`                                         :ref:`grid_guides`
+    |checkbox| :guilabel:`Snap to Guides`             :kbd:`Ctrl+Shift+;`                                   :ref:`grid_guides`
+    |checkbox| :guilabel:`Smart Guides`               :kbd:`Ctrl+Alt+;`
+    :guilabel:`Manage Guides...`                      \                          \                          :ref:`layout_guides_panel`
+    :guilabel:`Clear Guides`                          \                          \                          :ref:`layout_guides_panel`
+    |checkbox| :guilabel:`Show Rulers`                :kbd:`Ctrl+R`
+    |checkbox| :guilabel:`Show Bounding Boxes`        :kbd:`Ctrl+Shift+B`
+    |checkbox| :guilabel:`Show Pages`
+    :menuselection:`Toolbars -->`                      \                         \                          :ref:`sec_panels_and_toolbars`
+    :menuselection:`Panels -->`                        \                         \                          :ref:`sec_panels_and_toolbars`
+    |unchecked| :guilabel:`Toggle Full Screen`        :kbd:`F11`                 \                          :ref:`view_menu`
+    |unchecked| :guilabel:`Toggle Panel Visibility`   :kbd:`Ctrl+Tab`            \                          :ref:`view_menu`
+   ================================================= ========================== ========================== =====================================
 
 Items menu
 ..........
@@ -368,21 +372,23 @@ Items menu
 The :menuselection:`Items` helps you configure items' position in the layout
 and the relations between them (see :ref:`interact_layout_item`).
 
-================================================= ========================== ========================== ==========================
- Tool                                              Shortcut                   Toolbar                    Reference
-================================================= ========================== ========================== ==========================
- |groupItems| :guilabel:`Group`                    :kbd:`Ctrl+G`              :guilabel:`Actions`        :ref:`group_items`
- |ungroupItems| :guilabel:`Ungroup`                :kbd:`Ctrl+Shift+G`        :guilabel:`Actions`        :ref:`group_items`
- |raiseItems| :guilabel:`Raise`                    :kbd:`Ctrl+]`              :guilabel:`Actions`        :ref:`align_items`
- |lowerItems| :guilabel:`Lower`                    :kbd:`Ctrl+[`              :guilabel:`Actions`        :ref:`align_items`
- |moveItemsToTop| :guilabel:`Bring to Front`       :kbd:`Ctrl+Shift+]`        :guilabel:`Actions`        :ref:`align_items`
- |moveItemsToBottom| :guilabel:`Send to Back`      :kbd:`Ctrl+Shift+[`        :guilabel:`Actions`        :ref:`align_items`
- |locked| :guilabel:`Lock Selected Items`          :kbd:`Ctrl+L`              :guilabel:`Actions`        :ref:`lock_items`
- |unlocked| :guilabel:`Unlock All`                 :kbd:`Ctrl+Shift+L`        :guilabel:`Actions`        :ref:`lock_items`
- :menuselection:`Align Items -->`                                             :guilabel:`Actions`        :ref:`align_items`
- :menuselection:`Distribute Items -->`                                        :guilabel:`Actions`        :ref:`move_resize`
- :menuselection:`Resize -->`                                                  :guilabel:`Actions`        :ref:`move_resize`
-================================================= ========================== ========================== ==========================
+.. table:: "Items" Menu Tools
+
+   ================================================= ========================== ========================== ==========================
+    Tool                                              Shortcut                   Toolbar                    Reference
+   ================================================= ========================== ========================== ==========================
+    |groupItems| :guilabel:`Group`                    :kbd:`Ctrl+G`              :guilabel:`Actions`        :ref:`group_items`
+    |ungroupItems| :guilabel:`Ungroup`                :kbd:`Ctrl+Shift+G`        :guilabel:`Actions`        :ref:`group_items`
+    |raiseItems| :guilabel:`Raise`                    :kbd:`Ctrl+]`              :guilabel:`Actions`        :ref:`align_items`
+    |lowerItems| :guilabel:`Lower`                    :kbd:`Ctrl+[`              :guilabel:`Actions`        :ref:`align_items`
+    |moveItemsToTop| :guilabel:`Bring to Front`       :kbd:`Ctrl+Shift+]`        :guilabel:`Actions`        :ref:`align_items`
+    |moveItemsToBottom| :guilabel:`Send to Back`      :kbd:`Ctrl+Shift+[`        :guilabel:`Actions`        :ref:`align_items`
+    |locked| :guilabel:`Lock Selected Items`          :kbd:`Ctrl+L`              :guilabel:`Actions`        :ref:`lock_items`
+    |unlocked| :guilabel:`Unlock All`                 :kbd:`Ctrl+Shift+L`        :guilabel:`Actions`        :ref:`lock_items`
+    :menuselection:`Align Items -->`                                             :guilabel:`Actions`        :ref:`align_items`
+    :menuselection:`Distribute Items -->`                                        :guilabel:`Actions`        :ref:`move_resize`
+    :menuselection:`Resize -->`                                                  :guilabel:`Actions`        :ref:`move_resize`
+   ================================================= ========================== ========================== ==========================
 
 Add Item menu
 .............
@@ -390,50 +396,54 @@ Add Item menu
 These are tools to create layout items. 
 Each of them is deeply described in :ref:`layout_items` chapter.
 
-========================================================= ======================== =====================================
- Tool                                                      Toolbar                    Reference
-========================================================= ======================== =====================================
- |addMap| :guilabel:`Add Map`                              :guilabel:`Toolbox`        :ref:`layout_map_item`
- |add3DMap| :guilabel:`Add 3D Map`                         :guilabel:`Toolbox`        :ref:`layout_map3d_item`
- |addImage| :guilabel:`Add Picture`                        :guilabel:`Toolbox`        :ref:`layout_picture_item`
- |label| :guilabel:`Add Label`                             :guilabel:`Toolbox`        :ref:`layout_label_item`
- :menuselection:`Add Dynamic Text -->`                                                :ref:`The Label Item <layout_label_main_properties>`
- |addLegend| :guilabel:`Add Legend`                        :guilabel:`Toolbox`        :ref:`layout_legend_item`
- |scaleBar| :guilabel:`Add Scale Bar`                      :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
- |northArrow| :guilabel:`Add North Arrow`                  :guilabel:`Toolbox`        :ref:`layout_northarrow_item`
- |addBasicShape| :menuselection:`Add Shape -->`            :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
- |addBasicRectangle| :menuselection:`--> Add Rectangle`    :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
- |addBasicCircle| :menuselection:`--> Add Ellipse`         :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
- |addBasicTriangle| :menuselection:`--> Add Triangle`      :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
- |addMarker| :guilabel:`Add Marker`                        :guilabel:`Toolbox`        :ref:`layout_marker_item`
- |addArrow| :guilabel:`Add Arrow`                          :guilabel:`Toolbox`        :ref:`layout_arrow_item`
- |addNodesShape| :menuselection:`Add Node Item -->`        :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
- |addPolygon| :menuselection:`--> Add Polygon`             :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
- |addPolyline| :menuselection:`--> Add Polyline`           :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
- |addHtml| :guilabel:`Add HTML`                            :guilabel:`Toolbox`        :ref:`layout_html_item`
- |addTable| :guilabel:`Add Attribute Table`                :guilabel:`Toolbox`        :ref:`layout_attribute_table_item`
- |addManualTable| :guilabel:`Add Fixed Table`              :guilabel:`Toolbox`        :ref:`layout_fixed_table_item`
- |elevationProfile| :guilabel:`Add Elevation Profile`      :guilabel:`Toolbox`        :ref:`layout_elevation_profile_item`
-========================================================= ======================== =====================================
+.. table:: "Add Item" Menu Tools
+
+   ========================================================= ======================== =====================================
+    Tool                                                      Toolbar                    Reference
+   ========================================================= ======================== =====================================
+    |addMap| :guilabel:`Add Map`                              :guilabel:`Toolbox`        :ref:`layout_map_item`
+    |add3DMap| :guilabel:`Add 3D Map`                         :guilabel:`Toolbox`        :ref:`layout_map3d_item`
+    |addImage| :guilabel:`Add Picture`                        :guilabel:`Toolbox`        :ref:`layout_picture_item`
+    |label| :guilabel:`Add Label`                             :guilabel:`Toolbox`        :ref:`layout_label_item`
+    :menuselection:`Add Dynamic Text -->`                                                :ref:`The Label Item <layout_label_main_properties>`
+    |addLegend| :guilabel:`Add Legend`                        :guilabel:`Toolbox`        :ref:`layout_legend_item`
+    |scaleBar| :guilabel:`Add Scale Bar`                      :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
+    |northArrow| :guilabel:`Add North Arrow`                  :guilabel:`Toolbox`        :ref:`layout_northarrow_item`
+    |addBasicShape| :menuselection:`Add Shape -->`            :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+    |addBasicRectangle| :menuselection:`--> Add Rectangle`    :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+    |addBasicCircle| :menuselection:`--> Add Ellipse`         :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+    |addBasicTriangle| :menuselection:`--> Add Triangle`      :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+    |addMarker| :guilabel:`Add Marker`                        :guilabel:`Toolbox`        :ref:`layout_marker_item`
+    |addArrow| :guilabel:`Add Arrow`                          :guilabel:`Toolbox`        :ref:`layout_arrow_item`
+    |addNodesShape| :menuselection:`Add Node Item -->`        :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
+    |addPolygon| :menuselection:`--> Add Polygon`             :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
+    |addPolyline| :menuselection:`--> Add Polyline`           :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
+    |addHtml| :guilabel:`Add HTML`                            :guilabel:`Toolbox`        :ref:`layout_html_item`
+    |addTable| :guilabel:`Add Attribute Table`                :guilabel:`Toolbox`        :ref:`layout_attribute_table_item`
+    |addManualTable| :guilabel:`Add Fixed Table`              :guilabel:`Toolbox`        :ref:`layout_fixed_table_item`
+    |elevationProfile| :guilabel:`Add Elevation Profile`      :guilabel:`Toolbox`        :ref:`layout_elevation_profile_item`
+   ========================================================= ======================== =====================================
 
 
 Atlas menu
 ..........
 
-======================================================== ========================== ========================== =====================================
- Tool                                                     Shortcut                   Toolbar                    Reference
-======================================================== ========================== ========================== =====================================
- |atlas| :guilabel:`Preview Atlas`                        :kbd:`Ctrl+ALt+/`          :guilabel:`Atlas`          :ref:`atlas_preview`
- |atlasFirst| :guilabel:`First Feature`                   :kbd:`Ctrl+<`              :guilabel:`Atlas`          :ref:`atlas_preview`
- |atlasPrev| :guilabel:`Previous Feature`                 :kbd:`Ctrl+,`              :guilabel:`Atlas`          :ref:`atlas_preview`
- |atlasNext| :guilabel:`Next Feature`                     :kbd:`Ctrl+.`              :guilabel:`Atlas`          :ref:`atlas_preview`
- |atlasLast| :guilabel:`Last feature`                     :kbd:`Ctrl+>`              :guilabel:`Atlas`          :ref:`atlas_preview`
- |filePrint| :guilabel:`Print Atlas...`                                              :guilabel:`Atlas`          :ref:`atlas_preview`
- |saveMapAsImage| :guilabel:`Export Atlas as Images...`                              :guilabel:`Atlas`          :ref:`atlas_preview`
- |saveAsSVG| :guilabel:`Export Atlas as SVG...`                                      :guilabel:`Atlas`          :ref:`atlas_preview`
- |saveAsPDF| :guilabel:`Export Atlas as PDF...`                                      :guilabel:`Atlas`          :ref:`atlas_preview`
- |atlasSettings| :guilabel:`Atlas Settings`                                          :guilabel:`Atlas`          :ref:`atlas_generation`
-======================================================== ========================== ========================== =====================================
+.. table:: "Atlas" Menu Tools
+
+   ======================================================== ========================== ========================== =====================================
+    Tool                                                     Shortcut                   Toolbar                    Reference
+   ======================================================== ========================== ========================== =====================================
+    |atlas| :guilabel:`Preview Atlas`                        :kbd:`Ctrl+ALt+/`          :guilabel:`Atlas`          :ref:`atlas_preview`
+    |atlasFirst| :guilabel:`First Feature`                   :kbd:`Ctrl+<`              :guilabel:`Atlas`          :ref:`atlas_preview`
+    |atlasPrev| :guilabel:`Previous Feature`                 :kbd:`Ctrl+,`              :guilabel:`Atlas`          :ref:`atlas_preview`
+    |atlasNext| :guilabel:`Next Feature`                     :kbd:`Ctrl+.`              :guilabel:`Atlas`          :ref:`atlas_preview`
+    |atlasLast| :guilabel:`Last feature`                     :kbd:`Ctrl+>`              :guilabel:`Atlas`          :ref:`atlas_preview`
+    |filePrint| :guilabel:`Print Atlas...`                                              :guilabel:`Atlas`          :ref:`atlas_preview`
+    |saveMapAsImage| :guilabel:`Export Atlas as Images...`                              :guilabel:`Atlas`          :ref:`atlas_preview`
+    |saveAsSVG| :guilabel:`Export Atlas as SVG...`                                      :guilabel:`Atlas`          :ref:`atlas_preview`
+    |saveAsPDF| :guilabel:`Export Atlas as PDF...`                                      :guilabel:`Atlas`          :ref:`atlas_preview`
+    |atlasSettings| :guilabel:`Atlas Settings`                                          :guilabel:`Atlas`          :ref:`atlas_generation`
+   ======================================================== ========================== ========================== =====================================
 
 
 Settings Menu
