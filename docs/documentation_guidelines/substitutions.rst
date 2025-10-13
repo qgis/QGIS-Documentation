@@ -199,15 +199,16 @@ Icon                             Substitution                          Icon     
 |rotateFeature|                  ``|rotateFeature|``                   |rotatePointSymbols|              ``|rotatePointSymbols|``
 |scaleFeature|                   ``|scaleFeature|``
 |offsetCurve|                    ``|offsetCurve|``                     |offsetPointSymbols|              ``|offsetPointSymbols|``
-|simplify|                       ``|simplify|``                        |reshape|                         ``|reshape|``
-|addRing|                        ``|addRing|``                         |addPart|                         ``|addPart|``
-|fillRing|                       ``|fillRing|``
-|deleteRing|                     ``|deleteRing|``                      |deletePart|                      ``|deletePart|``
-|mergeFeatures|                  ``|mergeFeatures|``                   |mergeFeatureAttributes|          ``|mergeFeatureAttributes|``
-|splitFeatures|                  ``|splitFeatures|``                   |splitParts|                      ``|splitParts|``
-|reverseLine|                    ``|reverseLine|``
-|allowIntersections|             ``|allowIntersections|``              |avoidIntersectionsCurrentLayer|  ``|avoidIntersectionsCurrentLayer|``
-|avoidIntersectionsLayers|       ``|avoidIntersectionsLayers|``        |snappingSelf|                    ``|snappingSelf|``
+|chamferFillet|                  ``|chamferFillet|``                   |reshape|                         ``|reshape|``
+|simplify|                       ``|simplify|``                        |addPart|                         ``|addPart|``
+|addRing|                        ``|addRing|``
+|fillRing|                       ``|fillRing|``                        |deletePart|                      ``|deletePart|``
+|deleteRing|                     ``|deleteRing|``                      |mergeFeatureAttributes|          ``|mergeFeatureAttributes|``
+|mergeFeatures|                  ``|mergeFeatures|``                   |splitParts|                      ``|splitParts|``
+|splitFeatures|                  ``|splitFeatures|``
+|reverseLine|                    ``|reverseLine|``                     |avoidIntersectionsCurrentLayer|  ``|avoidIntersectionsCurrentLayer|``
+|allowIntersections|             ``|allowIntersections|``              |snappingSelf|                    ``|snappingSelf|``
+|avoidIntersectionsLayers|       ``|avoidIntersectionsLayers|``
 ===============================  ====================================  ================================  =================================
 
 Mesh
@@ -248,7 +249,7 @@ Icon                            Substitution                        Icon        
 |temporal|                      ``|temporal``                       |temporalNavigationOff|         ``|temporalNavigationOff|``
 |temporalNavigationFixedRange|  ``|temporalNavigationFixedRange|``  |temporalNavigationAnimated|    ``|temporalNavigationAnimated|``
 |temporalNavigationMovie|       ``|temporalNavigationMovie|``       |newElevationProfile|           ``|newElevationProfile|``
-|elevation|                     ``|elevation|``                     
+|elevation|                     ``|elevation|``
 ==============================  ==================================  ==============================  ==================================
 
 Selection and Expressions
@@ -506,8 +507,8 @@ Icon                            Substitution                        Icon        
 |processingAlgorithm|           ``|processingAlgorithm|``           |processingModel|               ``|processingModel|``
 |processingHistory|             ``|processingHistory|``             |processingResult|              ``|processingResult|``
 |menu|                          ``|menu|``                          |runSelected|                   ``|runSelected|``
-|processSelected|               ``|processSelected|``               |editHelpContent|               ``|editHelpContent|``  
-|saveAsPython|                  ``|saveAsPython|``                  |modelOutput|                   ``|modelOutput|``  
+|processSelected|               ``|processSelected|``               |editHelpContent|               ``|editHelpContent|``
+|saveAsPython|                  ``|saveAsPython|``                  |modelOutput|                   ``|modelOutput|``
 |qgsProjectFile|                ``|qgsProjectFile|``                |addToProject|                  ``|addToProject|``
 |fieldInteger|                  ``|fieldInteger|``
 |meanCoordinates|               ``|meanCoordinates|``               |extractLayerExtent|            ``|extractLayerExtent|``
@@ -1310,6 +1311,8 @@ Icon                            Substitution                        Icon        
 .. |offlineEditingSync| image:: /static/common/offline_editing_sync.png
    :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
+   :width: 1.5em
+.. |chamferFillet| image:: /static/common/mActionChamferFillet.png
    :width: 1.5em
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
    :width: 1.5em
