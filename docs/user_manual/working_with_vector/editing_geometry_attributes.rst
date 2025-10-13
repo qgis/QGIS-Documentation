@@ -1382,13 +1382,22 @@ The tool is applied to the edited layer (the geometries are modified).
 The :guilabel:`User Input` dialog pops-up, showing the possibility to switch between chamfer or fillet operations
 and other settings.
 
-To create a chamfer or a fillet on a vertex of a line or polygon layer, you must first go into editing mode
-and activate the |chamferFillet| :sup:`Chamfer/fillet curve` tool.
-Then click on a vertex feature to create the chamfer or fillet.
-Move the mouse or enter the desired distances in :guilabel:`User Input` dialog.
-Holding :kbd:`Shift` during the mouse move of chamfer will generate symmetric operation (both distances are the same).
-To validate you can click when it suits you or hit :kbd:`Enter`.
-Your changes may then be saved with the |saveEdits| :sup:`Save Layer Edits` tool.
+To create a chamfer or a fillet on a vertex of a line or polygon layer:
+
+#. Turn the layer into editing mode.
+#. Activate the |chamferFillet| :sup:`Chamfer/Fillet` tool.
+#. Then click on the vertex of the segments you want to create the chamfer or the fillet on.
+   A user input dialog pops-up, showing the possibility to switch
+   between :guilabel:`Chamfer` or :guilabel:`Fillet` operations and other settings.
+#. Move the mouse or enter the desired distances in the input dialog.
+#. Holding :kbd:`Shift` during the mouse move of chamfer will generate symmetric operation
+   (both distances are the same).
+#. To validate you can click when it suits you or hit :kbd:`Enter`.
+#. For repeated operation, you can set desired values in the input dialog
+   then use the |locked| icon to lock them.
+   Then click on a  target vertex and hit :kbd:`Enter`
+   to apply the operation using the previously locked values.
+#. Your changes may then be saved with the |saveEdits| :sup:`Save Layer Edits` tool.
 
 QGIS options dialog (Advanced tab then search for **chamfer**) or the :guilabel:`User Input` dialogs allow
 you to configure some parameters like **Operation**, **Fillet segments**, **Fillet radius** and **Chamfer distances**.
