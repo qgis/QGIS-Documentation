@@ -1029,7 +1029,7 @@ Advanced digitizing
   +---------------------------+-----------------------------------------+------------------------+-------------------------+
   | |rotatePointSymbols|      | Rotate Point Symbols                    | |offsetPointSymbols|   | Offset Point Symbols    |
   +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |trimExtend|              | Trim or Extend Feature                  | |chamferFillet|        | Chamfer/fillet Curve    |
+  | |trimExtend|              | Trim or Extend Feature                  | |chamferFillet|        | Add Chamfer/fillet      |
   +---------------------------+-----------------------------------------+------------------------+-------------------------+
 
 
@@ -1371,13 +1371,13 @@ you to configure :ref:`some parameters <curve_offset_tool>` like **Join style**,
 
 
 .. index::
-   single: Digitizing tools; Chamfer/fillet Curves
+   single: Digitizing tools; Chamfer/fillet
 .. _chamfer_fillet:
 
-Chamfer or fillet Curves
-------------------------
+Chamfer or fillet
+-----------------
 
-The |chamferFillet| :sup:`Chamfer/fillet curve` tool creates chamfer or fillet on vertex for line or polygon layers.
+The |chamferFillet| :sup:`Chamfer/fillet` tool creates chamfer or fillet on vertex for line or polygon layers.
 
 To create a chamfer or a fillet on a vertex:
 
