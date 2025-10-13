@@ -25,7 +25,7 @@ QGIS User Guide
     working_with_vector_tiles/vector_tiles
     working_with_point_clouds/point_clouds
     working_with_3d_tiles/3d_tiles
-    print_composer/index
+    print_layout/index
     working_with_ogc/ogc_client_support.rst
     working_with_gps/index
     auth_system/index
