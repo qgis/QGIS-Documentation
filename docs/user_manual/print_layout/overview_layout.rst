@@ -95,7 +95,7 @@ To open the layout manager dialog:
 
 .. _figure_layout_manager:
 
-.. figure:: img/print_composer_manager.png
+.. figure:: img/print_layout_manager.png
    :align: center
 
    The Print Layout Manager
@@ -134,7 +134,7 @@ browse to the template and press :guilabel:`Create`.
   generates a new print layout from the template.
 
 
-.. _print_composer_menus:
+.. _print_layout_menus:
 
 Menus, tools and panels of the print layout
 =============================================
@@ -154,7 +154,7 @@ before any elements are added.
 
 .. _figure_layout_overview:
 
-.. figure:: img/print_composer_blank.png
+.. figure:: img/print_layout_blank.png
    :align: center
    :width: 100%
 

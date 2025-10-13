@@ -18,7 +18,7 @@ section.
 
 .. _figure_layout_output:
 
-.. figure:: img/print_composer_complete.png
+.. figure:: img/print_layout_complete.png
    :align: center
    :width: 100%
 

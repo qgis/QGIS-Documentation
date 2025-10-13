@@ -429,6 +429,7 @@ Icon                     Substitution                 Icon                     S
 |addLegend|              ``|addLegend|``              |addHtml|                ``|addHtml|``
 |addManualTable|         ``|addManualTable|``         |addTable|               ``|addTable|``
 |addImage|               ``|addImage|``               |addMarker|              ``|addMarker|``
+|addChart|               ``|addChart|``
 |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
 |select|                 ``|select|``                 |moveItemContent|        ``|moveItemContent|``
 |layers|                 ``|Layers|``
@@ -612,6 +613,8 @@ Icon                            Substitution                        Icon        
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
 .. |addBasicTriangle| image:: /static/common/mActionAddBasicTriangle.png
+   :width: 1.5em
+.. |addChart| image:: /static/common/mActionAddChart.png
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
