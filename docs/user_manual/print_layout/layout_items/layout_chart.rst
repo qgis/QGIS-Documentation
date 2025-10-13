@@ -70,7 +70,7 @@ For pie charts, these options are not available.
 .. _layout_chart_symbols:
 
 Symbols List
-..............
+.............
 
 The :guilabel:`Symbols List` allows you to customize the appearance of each data
 series in the chart. You can change the color, shape, pattern, or
