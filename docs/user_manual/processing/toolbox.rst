@@ -192,7 +192,7 @@ The parameters found in the table can be of one of the following types.
 
      Raster input widget
 
-.. attention:: **Advanced WMS Options Availability**
+  .. attention:: **Advanced WMS Options Availability**
 
    Currently, this option is only available for :ref:`Clip raster by extent <gdalcliprasterbyextent>`
    and :ref:`Clip raster by mask layer <gdalcliprasterbymasklayer>` algorithms.
@@ -207,12 +207,12 @@ The parameters found in the table can be of one of the following types.
   you can select a value derived from any of these variables, such as the cell size
   of a layer or the northernmost coordinate of another one.
 
-.. _figure_number_selector:
+  .. _figure_number_selector:
 
-.. figure:: img/number_selector.png
-   :align: center
+  .. figure:: img/number_selector.png
+     :align: center
 
-   Expression based input
+     Expression based input
 
 * A **range**, with min and max values to be introduced in two text boxes.
 * A **text string**, to be introduced in a text box.
@@ -239,12 +239,12 @@ The parameters found in the table can be of one of the following types.
     rectangle, the dialog will reappear, containing the values in the extent text
     box.
 
-  .. _figure_extent:
+    .. _figure_extent:
 
-  .. figure:: img/extent.png
-     :align: center
+    .. figure:: img/extent.png
+       :align: center
 
-     Extent selector
+       Extent selector
 
 * A **list of elements** (whether raster or vector layers, tables, fields) to
   select from. Click on the :guilabel:`...` button at the left of the option to
