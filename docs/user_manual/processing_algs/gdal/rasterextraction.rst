@@ -37,7 +37,7 @@ Basic parameters
    * - **Input layer**
      - ``INPUT``
      - [raster]
-     - The input raster
+     - The input raster.
    * - **Clipping extent**
      - ``EXTENT``
      - [extent]
@@ -179,7 +179,7 @@ Basic parameters
    * - **Input layer**
      - ``INPUT``
      - [raster]
-     - The input raster
+     - The input raster.
    * - **Mask layer**
      - ``MASK``
      - [vector: polygon]
