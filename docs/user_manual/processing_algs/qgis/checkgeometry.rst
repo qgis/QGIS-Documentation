@@ -1866,6 +1866,176 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgischeckgeometrygap:
+
+Small gaps
+---------------------
+
+Checks the gaps between polygons.
+Gaps with an area smaller than the gap threshold are errors.
+If an allowed gaps layer is given, the gaps contained in polygons from this layer will be ignored.
+An optional buffer can be applied to the allowed gaps.
+The neighbors output layer is needed for the fix geometry (gaps) algorithm.
+It is a 1-N relational table for correspondence between a gap and the unique id of its neighbor features.
+
+.. figure:: img/check_geometry_gap.png
+   :align: center
+
+   Reporting errors on polygon features for gaps smaller than the specified threshold.
+
+.. seealso:: :ref:`qgisfixgeometrygap`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Gap threshold**
+     - ``GAP_THRESHOLD``
+     - [numeric: double]
+
+       Default: 0.0
+     - Maximum area of gaps to be reported as errors, in map units.
+   * - **Allowed gaps layer**
+
+       Optional
+     - ``ALLOWED_GAPS_LAYER``
+     - [vector: polygon]
+     - Layer with polygons representing allowed gaps.
+   * - **Allowed gaps buffer**
+
+       Optional
+     - ``ALLOWED_GAPS_BUFFER``
+     - [numeric: double]
+
+       Default: 0.0
+     - Buffer distance to apply to the allowed gaps layer, in map units.
+   * - **Neighbors layer**
+     - ``NEIGHBORS``
+     - [vector: table]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output table representing the gap ID and the unique ID of the input feature that is a neighbor of the gap.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Gap errors**
+
+       Optional
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer containing the centroid points of the gaps.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+   * - **Gap features**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the gap geometries.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Neighbors layer**
+     - ``NEIGHBORS``
+     - [vector: table]
+     - The output table contains the following fields:
+
+       - ``gc_errorid``: the ID of the gap.
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that is a neighbor of the gap.
+   * - **Gap errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the centroid of the gap.
+       - ``gc_errory``: the y coordinate of the centroid of the gap.
+       - ``gc_error``: the area of the gap.
+       - ``gc_errorid``: the ID of the gap.
+   * - **Gap features**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output layer containing the gap geometries.
+       Available fields are the same as in the ``ERRORS`` output.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrygap``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgischeckgeometrysegmentlength:
 
 Small segments
