@@ -173,9 +173,17 @@ The parameters found in the table can be of one of the following types.
     to its :guilabel:`Selected features only`.
 * A **table**, to select from a list of all available in QGIS.
   Non-spatial tables are loaded into QGIS like vector layers, and use the :ref:`same widget <vector_widget>`.
+
+.. _raster_widget:
+
 * A **raster layer**, to select from a list of all raster layers available in QGIS.
   The selector contains as well a :guilabel:`...` button on its right-hand side,
   to let you select filenames that represent layers currently not loaded in QGIS.
+
+  The raster input widget also has |options| :sup:`Advanced options` button
+  where you can set the reference scale and service resolution for the WMS request.
+  This ensures that scale-dependent rendering (such as symbology and labeling)
+  is preserved in the output raster.
 
   .. _figure_raster_input:
 
@@ -183,6 +191,11 @@ The parameters found in the table can be of one of the following types.
      :align: center
 
      Raster input widget
+
+.. attention:: **Advanced WMS Options Availability**
+
+   Currently, this option is only available for :ref:`Clip raster by extent <gdalcliprasterbyextent>`
+   and :ref:`Clip raster by mask layer <gdalcliprasterbymasklayer>` algorithms.
 
 * An **option**, to choose from a selection list of possible options.
 * A **numerical value**, to be introduced in a spin box. In some contexts (when

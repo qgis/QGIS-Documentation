@@ -37,12 +37,7 @@ Basic parameters
    * - **Input layer**
      - ``INPUT``
      - [raster]
-     - The input raster. When the input raster is a WMS layer, an :guilabel:`Advanced Options`
-       button appears next to the input layer selector.
-       Clicking this button opens the :guilabel:`Input layer Options` panel,
-       where you can set the reference scale and service resolution for the WMS request.
-       This ensures that scale-dependent rendering (such as symbology and labeling) is preserved in the output raster.
-       For other raster types, the button is disabled.
+     - The input raster.
    * - **Clipping extent**
      - ``EXTENT``
      - [extent]
@@ -184,12 +179,7 @@ Basic parameters
    * - **Input layer**
      - ``INPUT``
      - [raster]
-     - The input raster. When the input raster is a WMS layer, an :guilabel:`Advanced Options`
-       button appears next to the input layer selector.
-       Clicking this button opens the :guilabel:`Input layer Options` panel,
-       where you can set the reference scale and service resolution for the WMS request.
-       This ensures that scale-dependent rendering (such as symbology and labeling) is preserved in the output raster.
-       For other raster types, the button is disabled.
+     - The input raster.
    * - **Mask layer**
      - ``MASK``
      - [vector: polygon]
