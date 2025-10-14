@@ -529,9 +529,10 @@ More details at
 
 .. note::
 
-   While text in note, tip and warning frames are translatable, be aware that
-   code block frames do not allow translation. So avoid comments not related to
-   the code and keep comments as short as possible.
+   Text in special comments will be translated, but text in code-block frames
+   will not be translated. So keep comments in code blocks as short as possible
+   and avoid comments unrelated to code.
+
 
 Footnotes
 ---------
