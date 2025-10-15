@@ -1748,11 +1748,6 @@ Strictly multipart
 Checks if multipart geometries have more than one part.
 Multipart geometries with only one part are errors.
 
-.. figure:: img/check_geometry_multipart.png
-   :align: center
-
-   Reporting errors on features that are multipart but have only one part.
-
 .. seealso:: :ref:`qgisfixgeometrymultipart`
 
 Parameters

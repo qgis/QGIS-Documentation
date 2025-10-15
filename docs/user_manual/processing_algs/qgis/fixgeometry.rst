@@ -19,7 +19,7 @@ Converts multipart geometries that consists of only one geometry into singlepart
 based on an error layer from the :ref:`qgischeckgeometrymultipart` algorithm.
 Layer geometry type will not be changed and will remain multipart.
 
-.. seealso:: :ref:`qgischeckgeometrymultipart`, :ref:`promotetomulti`
+.. seealso:: :ref:`qgischeckgeometrymultipart`, :ref:`qgispromotetomulti`
 
 Parameters
 ..........
