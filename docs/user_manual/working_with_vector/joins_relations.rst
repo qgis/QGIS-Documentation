@@ -175,8 +175,6 @@ and :file:`airports` layers in the sample dataset.
 In practice, each airport belongs to exactly one region
 while each region can have any number of airports (a typical one to many relation).
 
-which has a foreign key field (``fk_region``) to the layer regions.
-
 In addition to the attributes describing the airports,
 the aiports layer has another field ``fk_region`` which acts as a foreign key
 (if you have a database, you will probably want to define a constraint on it).
