@@ -62,11 +62,11 @@ common to all lists:
 Indentation
 -----------
 
-Indentation in ReStructuredText should be aligned with the list or markup *marker*. It is
+Indentation in reStructuredText should be aligned with the list or markup *marker*. It is
 also possible to create block quotes with indentation. See the
 `Specification <https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#indentation>`__
 
-.. code-block::
+.. code-block:: rst
 
    #. In a numbered list, there should be
       three spaces when you break lines
@@ -476,7 +476,7 @@ useful (coherent, consistent and really connected to each other):
   in order to reuse the most convenient expression with the right spelling
   and avoid unnecessary duplicates.
 
-Several index tags exist in RST. You can use the inline ``:index:`` tag
+Several index tags exist in reST. You can use the inline ``:index:`` tag
 within normal text:
 
 .. code-block:: rst
@@ -529,16 +529,14 @@ More details at
 
 .. note::
 
-   While texts in note, tip and warning frames are translatable, be aware that
-   code block frames do not allow translation. So avoid comments not related to
-   the code and keep comments as short as possible.
+   Text in special comments will be translated, but text in code-block frames
+   will not be translated. So keep comments in code blocks as short as possible
+   and avoid comments unrelated to code.
+
 
 Footnotes
 ---------
 
-Please note: Footnotes are not recognized by any translation software and
-it is also not converted to pdf format properly.
-So, if possible, don't use footnotes within any documentation.
 
 This is for creating a footnote (showing as example [1]_)
 
@@ -562,7 +560,7 @@ Here are some hints to create new, nice looking screenshots.
 The images should be placed in an image (:file:`img/`) folder that
 is located in the same folder as the referencing :file:`.rst` file.
 
-* You can find some prepared QGIS-projects that are used to create screenshots
+* You can find some prepared QGIS projects that are used to create screenshots
   in the :file:`./qgis-projects` folder of this repository.
   This makes it easier to reproduce screenshots for the next version of QGIS.
   These projects use the QGIS `Sample Data <https://github.com/qgis/QGIS-Sample-Data/archive/master.zip>`_
@@ -579,7 +577,8 @@ is located in the same folder as the referencing :file:`.rst` file.
 * Set print size resolution to ``135 dpi`` (e.g., in GIMP scale down the image
   using :menuselection:`Image --> Scale Image` and setting "X/Y" to ``135 pixels/in``,
   and export it through :menuselection:`File --> Export...`).
-  This way, images will be at original size in html and at a good print resolution in the PDF.
+  This way, images will be at original size in HTML and at a good print
+  resolution in the PDF.
 
   You can also use ImageMagick convert command to do a batch of images:
 
@@ -606,7 +605,7 @@ Here are some additional hints for those that want to create
 screenshots for a translated user guide:
 
 Translated images should be placed in a :file:`img/<your_language>/`
-folder. Use the same filename as the english 'original' screenshot.
+folder. Use the same filename as the 'original' English screenshot.
 
 
 Documenting Processing algorithms
@@ -616,7 +615,7 @@ If you want to write documentation for Processing algorithms, consider these
 guidelines:
 
 * Processing algorithm help files are part of QGIS User Guide, so use the same
-  formatting as User Guide and other documentation.
+  formatting as the User Guide and other documentation.
 
 * Each algorithm documentation should be placed in the corresponding **provider**
   folder and **group** file, e.g. the algorithm `Voronoi polygon` belongs to the
@@ -629,7 +628,9 @@ guidelines:
 * It is **extremely** important that each algorithm has an *anchor* that corresponds
   to the provider name + the unique name of the algorithm itself. This allows the
   Help button to open the Help page of the correct section. The anchor should be
-  placed **above** the title, e.g. (see also the :ref:`my_anchor` section)::
+  placed **above** the title, e.g. (see also the :ref:`my_anchor` section):
+
+  .. code-block:: rst
 
     .. _qgisvoronoipolygons:
 
@@ -639,7 +640,9 @@ guidelines:
   To find out the algorithm name you can just hover the mouse on the algorithm in
   the Processing toolbox.
 * Avoid using "This algorithm does this and that..." as the first sentence in the
-  algorithm description. Try to use more general expressions like::
+  algorithm description. Try to use more general expressions like:
+
+  .. code-block:: rst
 
     Takes a point layer and generates a polygon layer containing the...
 
@@ -664,7 +667,9 @@ guidelines:
 * Avoid adding information about the vector geometry type in the algorithm or parameter
   description, as this information is already available
   in the parameter descriptions.
-* Add the default value of the parameter, e.g.::
+* Add the default value of the parameter, e.g.:
+
+  .. code-block:: rst
 
     * - **Number of points**
       - ``NUMBER_OF_POINTS``
@@ -726,7 +731,9 @@ guidelines:
   to commit your changes and make a Pull Request
 
 Here is an example of an :ref:`existing algorithm <qgiscountpointsinpolygon>`
-to help you with the layout and the description::
+to help you with the layout and the description:
+
+.. code-block:: rst
 
   .. _qgiscountpointsinpolygon:
 
