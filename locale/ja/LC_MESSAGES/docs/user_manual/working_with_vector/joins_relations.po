@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 05:53+0000\n"
+"POT-Creation-Date: 2025-10-15 10:10+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -107,7 +107,7 @@ msgid ""
 "Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab"
 msgstr "レイヤの :menuselection:`プロパティ -->` |join| :guilabel:`テーブル結合` タブに移動します"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:678
 msgid "join"
 msgstr "join"
 
@@ -118,7 +118,7 @@ msgid ""
 msgstr ""
 "|symbologyAdd| :sup:`新規結合を追加` ボタンをクリックします。 :guilabel:`ベクタ結合を追加` ダイアログが現れます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:696
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
@@ -195,7 +195,7 @@ msgstr ""
 "|checkbox| :guilabel:`結合レイヤをキャッシュ` "
 "：探索を高速化するために、結合レイヤの値を（ジオメトリなしで）メモリにキャッシュできるようになります。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:670
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -205,7 +205,7 @@ msgid ""
 " lookups"
 msgstr "|unchecked| :guilabel:`結合属性にインデックスを作成` して探索を高速化"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:702
 msgid "unchecked"
 msgstr "unchecked"
 
@@ -235,7 +235,7 @@ msgstr ""
 "|joinNotEditable| ：結合レイヤが編集可能に設定されていません。ターゲットの属性テーブルから結合地物を編集できるようにしたい場合は、 "
 "|checkbox| :guilabel:`編集可能な結合レイヤ` オプションにチェックを入れる必要があります。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:684
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
 msgid "joinNotEditable"
 msgstr "joinNotEditable"
 
@@ -245,7 +245,7 @@ msgid ""
 "but its current status is read only."
 msgstr "|joinedLayerNotEditable| ：結合レイヤは編集可能に設定されていますが、現在のステータスは読み取り専用です。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:686
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:684
 msgid "joinedLayerNotEditable"
 msgstr "joinedLayerNotEditable"
 
@@ -264,7 +264,7 @@ msgstr ""
 "オプションにチェックを入れる必要があります。対称的に、結合した地物を自動的に削除したい場合には、 |checkbox| "
 ":guilabel:`カスケード削除` を有効にする必要があります。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
 msgid "joinHasNotUpsertOnEdit"
 msgstr "joinHasNotUpsertOnEdit"
 
@@ -296,7 +296,7 @@ msgstr ""
 "2つのレイヤにわたる地物間の1対1のリンクを定義する結合とは異なり、リレーションは2つ以上のレイヤにわたる複数の地物間の相互接続を構築するのに役立ちます。リレーションはプロジェクトレベルの設定であり、:menuselection:`プロジェクト"
 " --> プロパティ -->` |relations| :guilabel:`リレーション` タブで設定します。そこから、次の操作が可能です:"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:692
 msgid "relations"
 msgstr "関係"
 
@@ -343,7 +343,7 @@ msgstr ""
 msgid "|symbologyRemove| :guilabel:`Remove relation`"
 msgstr "|symbologyRemove| :guilabel:`リレーションを削除`"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:700
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
@@ -395,10 +395,6 @@ msgstr ""
 "レイヤを読み込んでみましょう。実際、各空港は正確に1つの地域に属しますが、各地域は任意の数の空港を持つことができます（典型的な1対多リレーション）。"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:178
-msgid "which has a foreign key field (``fk_region``) to the layer regions."
-msgstr "レイヤ地域への外部キー・フィールド（``fk_region``）を持ちます。"
-
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:180
 msgid ""
 "In addition to the attributes describing the airports, the aiports layer has"
 " another field ``fk_region`` which acts as a foreign key (if you have a "
@@ -410,7 +406,7 @@ msgstr ""
 "があります（データベースを持っている場合は、おそらくこのフィールドに制約を定義したいと思うでしょう）。この ``fk_region`` "
 "フィールドには、常に地域のIDが含まれます。これは、その属する地域へのポインタのように見ることができます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:186
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:184
 msgid ""
 "All you have to do is to tell QGIS the relation between the layers so that "
 "you can design a custom edit form for editing and QGIS takes care of the "
@@ -419,11 +415,11 @@ msgid ""
 msgstr ""
 "QGISにレイヤ間のリレーションを伝えるだけで、編集用のカスタム編集フォームを設計でき、QGISが設定を管理します。それはさまざまなプロバイダで動作します（ですからシェープファイルやCSVファイルでも使用できます）。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:191
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:189
 msgid "Defining 1-N relations"
 msgstr "1対Nリレーションの定義"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:193
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:191
 msgid ""
 "The first thing we are going to do is to let QGIS know about the relations "
 "between the layers. This is done in :menuselection:`Project --> "
@@ -434,7 +430,7 @@ msgstr ""
 "で行います。 :guilabel:`リレーション` タブを開き、 |symbologyAdd| :guilabel:`リレーションを追加` "
 "をクリックします。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:197
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:195
 msgid ""
 "**Name** is going to be used as a title. It should be a human readable "
 "string describing what the relation is used for. We will just call say "
@@ -443,7 +439,7 @@ msgstr ""
 "**名前** はタイトルとして使用されます。これはリレーションが何のために用いられるのかを説明する、人が読める文字列であるべきです。ここでは、単に "
 "**airport_relation** と名前を付けましょう。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:200
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:198
 msgid ""
 "**Referenced Layer (Parent)** also considered as parent layer, is the one "
 "with the primary key, pointed to, so here it is the ``regions`` layer. You "
@@ -452,7 +448,7 @@ msgstr ""
 "**参照先レイヤ（親）** 親レイヤとも呼ばれ、主キーを持っており、参照されるレイヤです。この例では、 ``regions`` "
 "レイヤです。参照先レイヤの主キーを定義する必要があり、ここでは ``ID`` を指定します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:203
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:201
 msgid ""
 "**Referencing Layer (Child)** also considered as child layer, is the one "
 "with the foreign key field on it. In our case, this is the ``airports`` "
@@ -462,8 +458,8 @@ msgstr ""
 "**参照元レイヤ（子）** 子レイヤとも呼ばれ、外部キーフィールドを持ったレイヤです。この例では、 ``airports`` "
 "レイヤが該当します。参照元レイヤには他のレイヤを指す参照フィールドを指定する必要があり、ここでは ``fk_region`` とします。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:209
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:587
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:207
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:585
 msgid ""
 "Sometimes, you need more than a single field to uniquely identify features "
 "in a layer. Creating a relation with such a layer requires a **composite "
@@ -475,8 +471,8 @@ msgstr ""
 "**複合キー** 、すなわち、一致するフィールドの複数ペアが必要です。 |symbologyAdd| "
 ":sup:`複合外部キーとしてペアのフィールドを追加` ボタンを使用して、必要な数のペアを追加できます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:215
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:576
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:213
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:574
 msgid ""
 "**Id** will be used for internal purposes and has to be unique. You may need"
 " it to build :ref:`custom forms <customize_form>`. If you leave it empty, "
@@ -486,7 +482,7 @@ msgstr ""
 "**Id** は内部的な目的で使用され、ユニークでなければなりません。これは :ref:`カスタムフォーム <customize_form>` "
 "を作成するために必要となる場合があります。空のままにしておくと自動でIdを作成しますが、扱いやすいように自分でIdを指定することもできます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:219
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:217
 msgid ""
 "**Relationship strength** sets the strength of the relation between the "
 "parent and the child layer. The default :guilabel:`Association` type means "
@@ -500,11 +496,11 @@ msgstr ""
 "タイプは、親レイヤが子レイヤに *単に* リンクされていることを意味します。 一方、 :guilabel:`コンポジション` "
 "タイプでは、親レイヤを複製するときに子レイヤも複製され、親レイヤの地物を削除すると子レイヤの地物も削除されます。これはすべてのレベルにカスケードしていきます（つまり、子レイヤのそのまた子レイヤ...も一緒に削除されます）。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:230
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:228
 msgid "Adding a relation between regions and airports layers"
 msgstr "regionsレイヤとairportsレイヤ間のリレーションの追加"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:232
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:230
 msgid ""
 "From the :guilabel:`Relations` tab, you can also press the |symbologyAdd| "
 ":guilabel:`Discover Relation` button to fetch the relations available from "
@@ -514,11 +510,11 @@ msgstr ""
 ":guilabel:`リレーション` タブでは、 |symbologyAdd| :guilabel:`リレーションを検索` "
 "ボタンを押して、読み込んだレイヤの利用可能なリレーションをプロバイダから取得することもできます。この機能はPostgreSQLやSpatiaLiteといったデータプロバイダに保存されたレイヤで使用可能です。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:240
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:238
 msgid "Forms for 1-N relations"
 msgstr "1対Nリレーションのフォーム"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:242
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:240
 msgid ""
 "Now that QGIS knows about the relation, it will be used to improve the forms"
 " it generates. As we did not change the default form method (autogenerated),"
@@ -529,11 +525,11 @@ msgid ""
 msgstr ""
 "これで、QGISはリレーションを把握できました。これはQGISが生成するフォームを改善するために利用されます。デフォルトのフォームのメソッド（自動生成）を変更していないので、改善はフォームに新しいウィジェットが追加されるのみです。それでは、凡例のregionsレイヤを選択して、識別ツールを使ってみましょう。設定によってはフォームが直接開くこともありますが、識別ダイアログのアクションから選択して地物フォームを開く必要があるかもしれません。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:253
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:251
 msgid "Identification dialog regions with relation to airports"
 msgstr "airportsへのリレーションを持つregionsの識別ダイアログ"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:255
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:253
 msgid ""
 "As you can see, the airports assigned to this particular region are all "
 "shown in a table. And there are also some buttons available. Let's review "
@@ -541,7 +537,7 @@ msgid ""
 msgstr ""
 "見ればわかるとおり、この特定の地域に割り当てられた空港が全てテーブル表示されています。また、いくつかのボタンも用意されています。早速見てみましょう。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:258
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:256
 msgid ""
 "The |toggleEditing| button is for toggling the edit mode. Be aware that it "
 "toggles the edit mode of the airport layer, although we are in the feature "
@@ -551,21 +547,21 @@ msgstr ""
 "|toggleEditing| "
 "ボタンは編集モードを切り替えるためのものです。regionsレイヤの地物の地物フォームを開いていますが、このボタンはairportsレイヤの編集モードを切り替えることに注意してください。ただしこのテーブルは、airportsレイヤの地物を表しています。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:702
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:700
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:262
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:260
 msgid ""
 "The |saveEdits| button is for saving all the edits in the child layer "
 "(airport)."
 msgstr "|saveEdits| ボタンは、子レイヤ（airports）の編集の全てを保存します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:696
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
 msgid "saveEdits"
 msgstr "saveEdits"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:263
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:261
 msgid ""
 "The |capturePoint| button lets you digitize the airport geometry in the map "
 "canvas and assigns the new feature to the current region by default. Note "
@@ -574,11 +570,11 @@ msgstr ""
 "|capturePoint| "
 "ボタンを使用するとマップキャンバス上でairportsレイヤのジオメトリのデジタイズを行うことができ、デフォルトで現在のregionに新しい地物を割り当てます。アイコンはジオメトリタイプによって変わることに注意してください。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:670
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:668
 msgid "capturePoint"
 msgstr "capturePoint"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:266
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:264
 msgid ""
 "The |newTableRow| button adds a new record to the airport layer attribute "
 "table and assigns the new feature to the current region by default. The "
@@ -588,11 +584,11 @@ msgstr ""
 "ボタンは、airportsレイヤの属性テーブルに新しいレコードを追加します。この新しい地物はデフォルトで現在のregionに割り当てられます。ジオメトリは、"
 " :guilabel:`部分を追加` デジタイジングツールを使用して後から追加できます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:690
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:688
 msgid "newTableRow"
 msgstr "newTableRow"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:269
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:267
 msgid ""
 "The |duplicateFeature| button allows you to copy and paste one or more child"
 " features within the child layer. They can later be assigned to a different "
@@ -601,21 +597,21 @@ msgstr ""
 "|duplicateFeature| "
 "ボタンは、子レイヤ内の一つまたは複数の子地物を複製することができます。複製した子地物は後から別の親地物に割り当てることもできますし、属性値を編集することもできます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:676
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:674
 msgid "duplicateFeature"
 msgstr "duplicateFeature"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:272
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:270
 msgid ""
 "The |deleteSelectedFeatures| button deletes the selected airport(s) "
 "permanently."
 msgstr "|deleteSelectedFeatures| ボタンは、選択した空港（複数可）を永久的に削除します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:674
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
 msgid "deleteSelectedFeatures"
 msgstr "deleteSelectedFeatures"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:273
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:271
 msgid ""
 "The |link| symbol opens a new dialog where you can select any existing "
 "airport which will then be assigned to the current region. This may be handy"
@@ -624,32 +620,32 @@ msgstr ""
 "|link| "
 "シンボルをクリックすると、新しいダイアログが開き、既存の空港を選択して現在の地域に割り当てることができます。これは、誤って違う地域の上に空港を作成してしまった場合に便利です。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:688
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:686
 msgid "link"
 msgstr "link"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:276
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:274
 msgid ""
 "The |unlink| symbol unlinks the selected airport(s) from the current region,"
 " leaving them unassigned (the foreign key is set to NULL) effectively."
 msgstr ""
 "|unlink| シンボルは、選択した空港（複数可）を現在の地域からリンク解除し、効果的に未割り当て状態（外部キーをNULLに設定）にします。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:706
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
 msgid "unlink"
 msgstr "unlink"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:278
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:276
 msgid ""
 "With the |zoomToSelected| button you can zoom the map to the selected child "
 "features."
 msgstr "|zoomToSelected| ボタンを押すと、選択した子地物にマップをズームさせます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:708
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:706
 msgid "zoomToSelected"
 msgstr "zoomToSelected"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:279
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:277
 msgid ""
 "The two buttons |formView| and |openTable| to the right switch between the "
 ":ref:`table view and form view <attribute_table_view>` of the related child "
@@ -658,15 +654,15 @@ msgstr ""
 "右にある |formView| と |openTable| の2つのボタンは、リレーションのある子地物の :ref:`テーブル表示とフォーム表示 "
 "<attribute_table_view>` を切り替えます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:678
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:676
 msgid "formView"
 msgstr "formView"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:692
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:690
 msgid "openTable"
 msgstr "openTable"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:282
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:280
 msgid ""
 "If you use the :ref:`Drag and Drop Designer <customize_form>` for the "
 "regions feature, you can select which tools are available. You can even "
@@ -680,11 +676,11 @@ msgstr ""
 ":guilabel:`地物追加時のフォームを表示しない` "
 "オプションで決めることができます。このオプションが正しく動作するためには、NULLでない属性は有効なデフォルト値をとる必要があることに注意してください。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:294
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:292
 msgid "Drag and Drop Designer for configure regions-airports relation tools"
 msgstr "regionsレイヤとairportsレイヤのリレーションツールを設定するドラッグ＆ドロップデザイナー "
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:296
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:294
 msgid ""
 "In the above example the referencing layer has geometries (so it isn't just "
 "an alphanumeric table) so the above steps will create an entry in the layer "
@@ -693,29 +689,29 @@ msgid ""
 msgstr ""
 "上記の例では、参照元レイヤがジオメトリを持っている（つまり、単なる英数字のテーブルではない）ので、上記の手順では、対応するジオメトリ地物を持たないエントリがレイヤの属性テーブルに作成されます。ジオメトリを追加するには、以下の操作を行います。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:301
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:299
 msgid ""
 "Choose |openTable| :menuselection:`Open Attribute Table` for the referencing"
 " layer."
 msgstr "参照元レイヤの |openTable| :menuselection:`属性テーブルを開く` を選択します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:302
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:300
 msgid ""
 "Select the record that has been added previously within the feature form of "
 "the referenced layer."
 msgstr "被参照レイヤの地物フォーム内で追加したレコードを選択します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:303
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:301
 msgid ""
 "Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to "
 "the selected attributes table record."
 msgstr "|addPart| :sup:`部分を追加` デジタイジングツールを使用して、選択した属性テーブルのレコードとジオメトリを結びつけます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:668
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:666
 msgid "addPart"
 msgstr "addPart"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:306
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:304
 msgid ""
 "If you work on the airport table, the widget Relation Reference is "
 "automatically set up for the ``fk_region`` field (the one used to create the"
@@ -725,7 +721,7 @@ msgstr ""
 "フィールド（リレーションを作成するために使用するフィールド）には、「リレーションの参照」ウィジェットが自動的に設定されます。詳細は "
 ":ref:`リレーションの参照ウィジェット <configure_field>` を参照してください。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:312
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:310
 msgid ""
 "In the airport form you will see the |formView| button at the right side of "
 "the ``fk_region`` field: if you click on the button the form of the region "
@@ -735,11 +731,11 @@ msgstr ""
 "airportsレイヤのフォームには、 ``fk_region`` フィールドの右側に |formView| "
 "ボタンがあることがわかります。このボタンをクリックすると、regionsレイヤのフォームが開きます。このウィジェットで、簡単に素早くリンクしている親地物のフォームを開くことができます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:321
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:319
 msgid "Identification dialog airport with relation to regions"
 msgstr "regionsへのリレーションを持つairportsの識別ダイアログ"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:323
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:321
 msgid ""
 "The Relation Reference widget has also an option to embed the form of the "
 "parent layer within the child one. It is available in  the "
@@ -750,7 +746,7 @@ msgstr ""
 ":menuselection:`プロパティ --> 属性フォーム` メニューから設定できます。 ``fk_region`` フィールドを選択して、 "
 "``埋め込みフォームの表示`` オプションにチェックを入れてください。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:327
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:325
 msgid ""
 "If you look at the feature dialog now, you will see that the form of the "
 "region is embedded inside the airports form and will even have a combobox, "
@@ -758,7 +754,7 @@ msgid ""
 msgstr ""
 "今、地物ダイアログを見ると、regionsのフォームがairportsのフォームの中に組み込まれていて、現在の空港を別の地域に割り当てることができるコンボボックスもあることが分かります。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:336
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:334
 msgid ""
 "Moreover if you toggle the editing mode of the airport layer, the "
 "``fk_region`` field has also an autocompleter function: while typing you "
@@ -772,7 +768,7 @@ msgstr ""
 ":menuselection:`プロパティ --> 属性フォーム` メニューの ``新しい地物の追加`` オプションを選択した場合、 "
 "|symbologyAdd| ボタンを使用してregionsレイヤのポリゴンをデジタイズすることができます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:343
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:341
 msgid ""
 "The child layer can also be used in the :ref:`select_by_value` tool in order"
 " to select features of the parent layer based on attributes of their "
@@ -780,27 +776,27 @@ msgid ""
 msgstr ""
 "子レイヤは、 :ref:`select_by_value` ツールで子レイヤの属性に基づいて親レイヤの地物を選択するために使うこともできます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:346
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:344
 msgid ""
 "In :numref:`figure_select_by_value`, all the regions where the mean altitude"
 " of the airports is greater than 500 meters above sea level are selected."
 msgstr ":numref:`figure_select_by_value` では、空港の平均高度が海抜500mより高い地域すべてを選択しています。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:349
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:347
 msgid ""
 "You will find that many different aggregation functions are available in the"
 " form."
 msgstr "フォームには多数のさまざまな集計関数があることがわかります。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:356
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:354
 msgid "Select parent features with child values"
 msgstr "子レイヤの値で親レイヤの地物を選択する"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:363
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:361
 msgid "Many-to-many (N-M) relations"
 msgstr "多対多（N対M）リレーション"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:365
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:363
 msgid ""
 "N-M relations are many-to-many relations between two tables. For instance, "
 "the ``airports`` and ``airlines`` layers: an airport receives several "
@@ -809,7 +805,7 @@ msgstr ""
 "N対Mのリレーションとは、2つのテーブル間の多数対多数の関係のことです。例えば、 ``airports`` レイヤと ``airlines`` "
 "レイヤを考えてみましょう。空港には複数の航空会社が乗り入れており、航空会社は複数の空港に乗り入れています。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:370
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:368
 msgid ""
 "This SQL code creates the three tables we need for an N-M relationship in a "
 "PostgreSQL/PostGIS schema named *locations*. You can run the code using the "
@@ -832,7 +828,7 @@ msgstr ""
 "*ピボットテーブル* として知られています。このテーブルの *制約* "
 "は、両方とも互いのレイヤにある場合にのみ、空港と航空会社を関連づけられるものとすることを強制します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:424
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:422
 msgid ""
 "Instead of PostgreSQL you can also use GeoPackage. In this case, the three "
 "tables can be created manually using the :menuselection:`Database --> DB "
@@ -842,7 +838,7 @@ msgstr ""
 "PostgreSQLの代わりに、GeoPackageを使うこともできます。この場合には、3つのテーブルは :menuselection:`データベース "
 "--> DBマネージャ…` を使用して手動で作成します。GeoPackageにはスキーマが無いため、 *locations* の接頭辞は不要です。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:429
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:427
 msgid ""
 "Foreign key constraints in ``airports_airlines`` table can´t be created "
 "using :menuselection:`Table --> Create Table…` or :menuselection:`Table --> "
@@ -855,35 +851,35 @@ msgstr ""
 ":menuselection:`データベース --> SQLウィンドウ…` を使用して作成する必要があります。GeoPackageは *ADD "
 "CONSTRAINT* 文をサポートしていないため、 ``airports_airlines`` テーブルは2段階で作成する必要があります。："
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:435
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:433
 msgid ""
 "Set up the table only with the ``id`` field using :menuselection:`Table --> "
 "Create Table…`"
 msgstr ""
 ":menuselection:`テーブル --> テーブルを作成…` を使用して、 ``id`` フィールドのみを持つテーブルを準備します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:436
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:434
 msgid ""
 "Using :menuselection:`Database --> SQL Window…`, type and execute this SQL "
 "code:"
 msgstr ":menuselection:`データベース --> SQLウィンドウ…` を使用して、以下のSQLコードを入力し実行します："
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:454
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:452
 msgid ""
 "Then in QGIS, you should set up two :ref:`one-to-many relations "
 "<one_to_many_relation>` as explained above:"
 msgstr ""
 "それから、上で説明したようにQGISで2つの :ref:`1対多のリレーション <one_to_many_relation>` を設定します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:457
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:455
 msgid "a relation between ``airlines`` table and the pivot table;"
 msgstr "``airlines`` テーブルとピボットテーブルの間のリレーション"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:458
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:456
 msgid "and a second one between ``airports`` table and the pivot table."
 msgstr "``airports`` テーブルとピボットテーブルとの間の第２のリレーション"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:460
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:458
 msgid ""
 "An easier way to do it (only for PostgreSQL) is using the "
 ":guilabel:`Discover Relations` in :menuselection:`Project --> Properties -->"
@@ -895,11 +891,11 @@ msgstr ""
 " の :guilabel:`リレーションを検索` "
 "を使用することです。QGISは自動的にデータベース内の全てのリレーションを読み込むので、必要な2つのリレーションを選択するだけで設定ができます。最初にQGISプロジェクトに3つのテーブルを読み込むことを忘れないようにしてください。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:471
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:469
 msgid "Relations and autodiscover"
 msgstr "リレーションと自動検索"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:473
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:471
 msgid ""
 "In case you want to remove an ``airport`` or an ``airline``, QGIS won't "
 "remove the associated record(s) in ``airports_airlines`` table. This task "
@@ -910,11 +906,11 @@ msgstr ""
 "テーブルの関連するレコードを削除しません。この作業は、現在の例のようにピボットテーブルの作成時に正しい *制約* "
 "を指定すれば、データベースによって行われます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:478
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:476
 msgid "**Combining N-M relation with automatic transaction group**"
 msgstr "**N対Mのリレーションと自動トランザクショングループを組み合わせる**"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:480
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:478
 msgid ""
 "You should enable the transaction mode in :menuselection:`Project Properties"
 " --> Data Sources -->` when working on such context. QGIS should be able to "
@@ -925,7 +921,7 @@ msgstr ""
 "でトランザクションモードを有効にする必要があります。 "
 "QGISは、すべてのテーブル（航空会社、空港、ピボットテーブル）の行を追加または更新できる必要があります。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:484
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:482
 msgid ""
 "Finally we have to select the right cardinality in the :menuselection:`Layer"
 " Properties --> Attributes Form` for the ``airports`` and ``airlines`` "
@@ -936,11 +932,11 @@ msgstr ""
 "レイヤに対して正しい「要素数」を選択する必要があります。最初のレイヤには **airlines (id)** オプションを、2番目のレイヤには "
 "**airports (id)** オプションを選択する必要があります。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:495
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:493
 msgid "Set relationship cardinality"
 msgstr "関係の要素数の設定"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:497
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:495
 msgid ""
 "Now you can associate an airport with an airline (or an airline with an "
 "airport) using :guilabel:`Add child feature` or :guilabel:`Link existing "
@@ -951,15 +947,15 @@ msgstr ""
 "を使用してairlineにairportを（そしてairportにairlineを）関連付けることができるようになりました。 "
 "``airports_airlines`` テーブルにはレコードが自動的に挿入されます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:506
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:504
 msgid "N-M relationship between airports and airlines"
 msgstr "airportsとairlinesのN対Mリレーション"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:508
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:506
 msgid "Using **Many to one relation** cardinality"
 msgstr "**多対1リレーション** 要素数を使用する"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:510
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:508
 msgid ""
 "Sometimes hiding the pivot table in an N-M relationship is not desirable. "
 "Mainly because there are attributes in the relationship that can only have "
@@ -973,11 +969,11 @@ msgstr ""
 " :guilabel:`地図上の地物特定` オプション（ :menuselection:`レイヤプロパティ --> 属性フォーム --> "
 "利用可能なウィジェット --> フィールド` ）を有効にするとよいかもしれません。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:517
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:515
 msgid "**Pivot table primary key**"
 msgstr "**ピボットテーブルの主キー**"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:519
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:517
 msgid ""
 "Avoid using multiple fields in the primary key in a pivot table. QGIS "
 "assumes a single  primary key so a constraint like ``constraint "
@@ -986,15 +982,15 @@ msgstr ""
 "ピボットテーブルの主キーには複数のフィールドを使用しないでください。QGIS は単一の主キーを想定しているため、 ``constraint "
 "airports_airlines_pkey primary key (airport_fk, airline_fk)`` のような制約は機能しません。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:528
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:526
 msgid "Polymorphic relations"
 msgstr "多態リレーション"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:531
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:529
 msgid "The purpose"
 msgstr "目的"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:533
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:531
 msgid ""
 "Polymorphic relations are special case of 1-N relations, where a single "
 "referencing (document) layer contains the features for multiple referenced "
@@ -1009,7 +1005,7 @@ msgstr ""
 " ``layer_field`` "
 "カラムを追加することで単一の参照元（ドキュメント）レイヤとすることができ、ここには参照先レイヤを識別する情報を格納します。最も単純な形は、参照元（ドキュメント）レイヤはこのフィールドに参照先レイヤのレイヤ名を入れるだけです。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:541
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:539
 msgid ""
 "To be more precise, a polymorphic relation is a set of normal relations "
 "having the same referencing layer but having the referenced layer "
@@ -1019,7 +1015,7 @@ msgid ""
 msgstr ""
 "より正確に言うならば、多態リレーションは、参照元レイヤが同じ通常のリレーションの集合ですが、参照先レイヤは動的に定義されるものです。レイヤの多態リレーションの設定は、テーブル名、レイヤID、レイヤ名など、参照先レイヤのいくつかのプロパティと一致しなければならない式を使用することで解決されます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:546
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:544
 msgid ""
 "Imagine we are going to the park and want to take pictures of different "
 "species of ``plants`` and ``animals`` we see there. Each plant or animal has"
@@ -1033,7 +1029,7 @@ msgstr ""
 "``animal_images`` と ``plant_images`` "
 "という2つの別々のテーブルが必要です。テーブル2つならば問題とはならないかもしれませんが、キノコや鳥などの写真も別々に撮影したいとしたらどうでしょうか。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:554
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:552
 msgid ""
 "Polymorphic relations solve this problem as all the referencing features are"
 " stored in the same table ``documents``. For each feature the referenced "
@@ -1044,11 +1040,11 @@ msgstr ""
 "``referenced_layer`` フィールドには参照先レイヤが、 ``referenced_id`` フィールドには参照先の地物ID "
 "が格納されます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:558
 msgid "Defining polymorphic relations"
 msgstr "多態リレーションの定義"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:562
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
 msgid ""
 "First, let QGIS know about the polymorphic relations between the layers. "
 "This is done in :menuselection:`Project --> Properties...`. Open the "
@@ -1062,7 +1058,7 @@ msgstr ""
 "ボタンの横にある小さな下向き矢印のボタンをクリックします。新しく現れたドロップダウンメニューから、 :guilabel:`多態リレーションを追加` "
 "オプションを選択します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:573
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:571
 msgid ""
 "Adding a polymorphic relation using ``documents`` layer as referencing and "
 "``animals`` and ``plants`` as referenced layers."
@@ -1070,7 +1066,7 @@ msgstr ""
 "参照元レイヤとして ``documents`` を、参照先レイヤとして ``animals`` と ``plants`` "
 "を使用した多態リレーションを追加します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:581
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:579
 msgid ""
 "**Referencing Layer (Child)** also considered as child layer, is the one "
 "with the foreign key field on it. In our case, this is the ``documents`` "
@@ -1080,7 +1076,7 @@ msgstr ""
 "**参照元レイヤ（子）** は子レイヤとも呼ばれ、外部キーのフィールドを持っているレイヤです。この例では ``documents`` "
 "レイヤです。このレイヤには他のレイヤを指す参照元フィールドを追加する必要があり、これが ``referenced_id`` です。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:593
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:591
 msgid ""
 "**Layer Field** is the field in the referencing table that stores the result"
 " of the evaluated layer expression which is the referencing table that this "
@@ -1091,7 +1087,7 @@ msgstr ""
 "は、評価されたレイヤ式の結果を格納する参照元テーブルのフィールドです。これは、この地物がどのレイヤに属するかの参照元テーブルです。この例では、 "
 "``referenced_layer`` フィールドがこれに該当します。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:597
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:595
 msgid ""
 "**Layer expression** evaluates to a unique identifier of the layer. This can"
 " be the layer name ``@layer_name``, the layer id ``@layer_id``, the layer's "
@@ -1102,7 +1098,7 @@ msgstr ""
 "``@layer_id`` 、レイヤのテーブル名 ``decode_uri(@layer, 'table')`` "
 "など、レイヤを一意に識別できるものであれば何でも利用できます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:602
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:600
 msgid ""
 "**Relationship strength** sets the strength of the generated relations "
 "between the parent and the child layer. The default :guilabel:`Association` "
@@ -1116,7 +1112,7 @@ msgstr ""
 "タイプは、親レイヤが子レイヤに *単に* リンクされていることを意味します。 一方、 :guilabel:`コンポジション` "
 "タイプでは、親レイヤを複製するときに子レイヤも複製され、親レイヤの地物を削除すると子レイヤの地物も削除されます。これはすべてのレベルにカスケードしていきます（つまり、子レイヤのそのまた子レイヤ...も一緒に削除されます）。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:608
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:606
 msgid ""
 "**Referenced Layers** also considered as parent layers, are those with the "
 "primary key, pointed to, so here they would be ``plants`` and ``animals`` "
@@ -1129,18 +1125,18 @@ msgstr ""
 "``animals`` レイヤがこれに該当します。参照先レイヤの主キーをドロップダウンメニューから定義する必要があり、この例では ``fid`` "
 "です。有効な主キーを定義するには、全ての参照先レイヤで同じ名前のフィールドが存在する必要があることに注意してください。そのようなフィールドが存在しない場合には、多態リレーションを保存することができません。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:615
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:613
 msgid ""
 "Once added, the polymorphic relation can be edited via the :guilabel:`Edit "
 "Polymorphic Relation` menu entry."
 msgstr "一度追加したら、この多態リレーションは :guilabel:`多態リレーションを編集` メニューエントリから編集ができます。"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:623
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:621
 msgid ""
 "Preview of the newly created polymorphic relation and its child relations "
 "for animals and plants."
 msgstr "新規作成した多態リレーションとanimalsとplantsに関する子リレーションのプレビュー"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:626
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:624
 msgid "The example above uses the following database schema:"
 msgstr "上記の例では、以下のデータベーススキーマを使用しています："
