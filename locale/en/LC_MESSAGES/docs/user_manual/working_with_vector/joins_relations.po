@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 05:53+0000\n"
+"POT-Creation-Date: 2025-10-15 10:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -91,7 +91,7 @@ msgid ""
 "tab"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:678
 msgid "join"
 msgstr ""
 
@@ -101,7 +101,7 @@ msgid ""
 "vector join` dialog appears."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:696
 msgid "symbologyAdd"
 msgstr ""
 
@@ -173,7 +173,7 @@ msgid ""
 "order to speed up lookups."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:670
 msgid "checkbox"
 msgstr ""
 
@@ -183,7 +183,7 @@ msgid ""
 " up lookups"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:702
 msgid "unchecked"
 msgstr ""
 
@@ -210,7 +210,7 @@ msgid ""
 "join layer`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:684
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
 msgid "joinNotEditable"
 msgstr ""
 
@@ -220,7 +220,7 @@ msgid ""
 "editable, but its current status is read only."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:686
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:684
 msgid "joinedLayerNotEditable"
 msgstr ""
 
@@ -234,7 +234,7 @@ msgid ""
 "activated if you  want to automatically delete join features."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
 msgid "joinHasNotUpsertOnEdit"
 msgstr ""
 
@@ -263,7 +263,7 @@ msgid ""
 "|relations| :guilabel:`Relations` tab. From there, you can:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:692
 msgid "relations"
 msgstr ""
 
@@ -305,7 +305,7 @@ msgstr ""
 msgid "|symbologyRemove| :guilabel:`Remove relation`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:700
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
 msgid "symbologyRemove"
 msgstr ""
 
@@ -352,10 +352,6 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:178
-msgid "which has a foreign key field (``fk_region``) to the layer regions."
-msgstr ""
-
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:180
 msgid ""
 "In addition to the attributes describing the airports, the aiports layer "
 "has another field ``fk_region`` which acts as a foreign key (if you have "
@@ -364,7 +360,7 @@ msgid ""
 " like a pointer to the region it belongs to."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:186
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:184
 msgid ""
 "All you have to do is to tell QGIS the relation between the layers so "
 "that you can design a custom edit form for editing and QGIS takes care of"
@@ -372,11 +368,11 @@ msgid ""
 "with shape and csv files)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:191
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:189
 msgid "Defining 1-N relations"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:193
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:191
 msgid ""
 "The first thing we are going to do is to let QGIS know about the "
 "relations between the layers. This is done in :menuselection:`Project -->"
@@ -384,14 +380,14 @@ msgid ""
 "|symbologyAdd| :guilabel:`Add Relation`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:197
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:195
 msgid ""
 "**Name** is going to be used as a title. It should be a human readable "
 "string describing what the relation is used for. We will just call say "
 "**airport_relation** in this case."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:200
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:198
 msgid ""
 "**Referenced Layer (Parent)** also considered as parent layer, is the one"
 " with the primary key, pointed to, so here it is the ``regions`` layer. "
@@ -399,7 +395,7 @@ msgid ""
 "``ID``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:203
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:201
 msgid ""
 "**Referencing Layer (Child)** also considered as child layer, is the one "
 "with the foreign key field on it. In our case, this is the ``airports`` "
@@ -407,8 +403,8 @@ msgid ""
 " the other layer, so this is ``fk_region``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:209
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:587
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:207
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:585
 msgid ""
 "Sometimes, you need more than a single field to uniquely identify "
 "features in a layer. Creating a relation with such a layer requires a "
@@ -417,8 +413,8 @@ msgid ""
 "foreign key` button to add as many pairs as necessary."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:215
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:576
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:213
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:574
 msgid ""
 "**Id** will be used for internal purposes and has to be unique. You may "
 "need it to build :ref:`custom forms <customize_form>`. If you leave it "
@@ -426,7 +422,7 @@ msgid ""
 "get one that is easier to handle"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:219
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:217
 msgid ""
 "**Relationship strength** sets the strength of the relation between the "
 "parent and the child layer. The default :guilabel:`Association` type "
@@ -437,11 +433,11 @@ msgid ""
 " children of children of... are deleted as well)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:230
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:228
 msgid "Adding a relation between regions and airports layers"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:232
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:230
 msgid ""
 "From the :guilabel:`Relations` tab, you can also press the |symbologyAdd|"
 " :guilabel:`Discover Relation` button to fetch the relations available "
@@ -449,11 +445,11 @@ msgid ""
 "stored in data providers like PostgreSQL or SpatiaLite."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:240
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:238
 msgid "Forms for 1-N relations"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:242
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:240
 msgid ""
 "Now that QGIS knows about the relation, it will be used to improve the "
 "forms it generates. As we did not change the default form method "
@@ -463,18 +459,18 @@ msgid ""
 " to choose to open it in the identification dialog under actions."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:253
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:251
 msgid "Identification dialog regions with relation to airports"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:255
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:253
 msgid ""
 "As you can see, the airports assigned to this particular region are all "
 "shown in a table. And there are also some buttons available. Let's review"
 " them shortly:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:258
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:256
 msgid ""
 "The |toggleEditing| button is for toggling the edit mode. Be aware that "
 "it toggles the edit mode of the airport layer, although we are in the "
@@ -482,32 +478,32 @@ msgid ""
 "representing features of the airport layer."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:702
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:700
 msgid "toggleEditing"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:262
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:260
 msgid ""
 "The |saveEdits| button is for saving all the edits in the child layer "
 "(airport)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:696
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
 msgid "saveEdits"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:263
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:261
 msgid ""
 "The |capturePoint| button lets you digitize the airport geometry in the "
 "map canvas and assigns the new feature to the current region by default. "
 "Note that the icon will change according to the geometry type."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:670
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:668
 msgid "capturePoint"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:266
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:264
 msgid ""
 "The |newTableRow| button adds a new record to the airport layer attribute"
 " table and assigns the new feature to the current region by default. The "
@@ -515,79 +511,79 @@ msgid ""
 "tool."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:690
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:688
 msgid "newTableRow"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:269
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:267
 msgid ""
 "The |duplicateFeature| button allows you to copy and paste one or more "
 "child features within the child layer. They can later be assigned to a "
 "different parent feature or have their attributes modified."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:676
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:674
 msgid "duplicateFeature"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:272
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:270
 msgid ""
 "The |deleteSelectedFeatures| button deletes the selected airport(s) "
 "permanently."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:674
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
 msgid "deleteSelectedFeatures"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:273
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:271
 msgid ""
 "The |link| symbol opens a new dialog where you can select any existing "
 "airport which will then be assigned to the current region. This may be "
 "handy if you created the airport on the wrong region by accident."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:688
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:686
 msgid "link"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:276
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:274
 msgid ""
 "The |unlink| symbol unlinks the selected airport(s) from the current "
 "region, leaving them unassigned (the foreign key is set to NULL) "
 "effectively."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:706
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
 msgid "unlink"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:278
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:276
 msgid ""
 "With the |zoomToSelected| button you can zoom the map to the selected "
 "child features."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:708
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:706
 msgid "zoomToSelected"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:279
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:277
 msgid ""
 "The two buttons |formView| and |openTable| to the right switch between "
 "the :ref:`table view and form view <attribute_table_view>` of the related"
 " child features."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:678
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:676
 msgid "formView"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:692
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:690
 msgid "openTable"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:282
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:280
 msgid ""
 "If you use the :ref:`Drag and Drop Designer <customize_form>` for the "
 "regions feature, you can select which tools are available. You can even "
@@ -597,11 +593,11 @@ msgid ""
 "to work correctly."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:294
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:292
 msgid "Drag and Drop Designer for configure regions-airports relation tools"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:296
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:294
 msgid ""
 "In the above example the referencing layer has geometries (so it isn't "
 "just an alphanumeric table) so the above steps will create an entry in "
@@ -609,36 +605,36 @@ msgid ""
 " add the geometry:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:301
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:299
 msgid ""
 "Choose |openTable| :menuselection:`Open Attribute Table` for the "
 "referencing layer."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:302
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:300
 msgid ""
 "Select the record that has been added previously within the feature form "
 "of the referenced layer."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:303
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:301
 msgid ""
 "Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to"
 " the selected attributes table record."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:668
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:666
 msgid "addPart"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:306
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:304
 msgid ""
 "If you work on the airport table, the widget Relation Reference is "
 "automatically set up for the ``fk_region`` field (the one used to create "
 "the relation), see :ref:`Relation Reference widget <configure_field>`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:312
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:310
 msgid ""
 "In the airport form you will see the |formView| button at the right side "
 "of the ``fk_region`` field: if you click on the button the form of the "
@@ -646,11 +642,11 @@ msgid ""
 " open the forms of the linked parent features."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:321
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:319
 msgid "Identification dialog airport with relation to regions"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:323
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:321
 msgid ""
 "The Relation Reference widget has also an option to embed the form of the"
 " parent layer within the child one. It is available in  the "
@@ -659,7 +655,7 @@ msgid ""
 "form`` option."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:327
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:325
 msgid ""
 "If you look at the feature dialog now, you will see that the form of the "
 "region is embedded inside the airports form and will even have a "
@@ -667,7 +663,7 @@ msgid ""
 "region."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:336
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:334
 msgid ""
 "Moreover if you toggle the editing mode of the airport layer, the "
 "``fk_region`` field has also an autocompleter function: while typing you "
@@ -678,35 +674,35 @@ msgid ""
 " the airport layer."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:343
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:341
 msgid ""
 "The child layer can also be used in the :ref:`select_by_value` tool in "
 "order to select features of the parent layer based on attributes of their"
 " children."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:346
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:344
 msgid ""
 "In :numref:`figure_select_by_value`, all the regions where the mean "
 "altitude of the airports is greater than 500 meters above sea level are "
 "selected."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:349
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:347
 msgid ""
 "You will find that many different aggregation functions are available in "
 "the form."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:356
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:354
 msgid "Select parent features with child values"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:363
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:361
 msgid "Many-to-many (N-M) relations"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:365
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:363
 msgid ""
 "N-M relations are many-to-many relations between two tables. For "
 "instance, the ``airports`` and ``airlines`` layers: an airport receives "
@@ -714,7 +710,7 @@ msgid ""
 "airports."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:370
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:368
 msgid ""
 "This SQL code creates the three tables we need for an N-M relationship in"
 " a PostgreSQL/PostGIS schema named *locations*. You can run the code "
@@ -729,7 +725,7 @@ msgid ""
 "layers."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:424
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:422
 msgid ""
 "Instead of PostgreSQL you can also use GeoPackage. In this case, the "
 "three tables can be created manually using the :menuselection:`Database "
@@ -737,7 +733,7 @@ msgid ""
 "prefix is not needed."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:429
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:427
 msgid ""
 "Foreign key constraints in ``airports_airlines`` table can´t be created "
 "using :menuselection:`Table --> Create Table…` or :menuselection:`Table "
@@ -746,33 +742,33 @@ msgid ""
 " so the ``airports_airlines`` table should be created in two steps:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:435
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:433
 msgid ""
 "Set up the table only with the ``id`` field using :menuselection:`Table "
 "--> Create Table…`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:436
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:434
 msgid ""
 "Using :menuselection:`Database --> SQL Window…`, type and execute this "
 "SQL code:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:454
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:452
 msgid ""
 "Then in QGIS, you should set up two :ref:`one-to-many relations "
 "<one_to_many_relation>` as explained above:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:457
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:455
 msgid "a relation between ``airlines`` table and the pivot table;"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:458
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:456
 msgid "and a second one between ``airports`` table and the pivot table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:460
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:458
 msgid ""
 "An easier way to do it (only for PostgreSQL) is using the "
 ":guilabel:`Discover Relations` in :menuselection:`Project --> Properties "
@@ -781,11 +777,11 @@ msgid ""
 "the three tables in the QGIS project first."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:471
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:469
 msgid "Relations and autodiscover"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:473
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:471
 msgid ""
 "In case you want to remove an ``airport`` or an ``airline``, QGIS won't "
 "remove the associated record(s) in ``airports_airlines`` table. This task"
@@ -793,11 +789,11 @@ msgid ""
 "the pivot table creation as in the current example."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:478
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:476
 msgid "**Combining N-M relation with automatic transaction group**"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:480
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:478
 msgid ""
 "You should enable the transaction mode in :menuselection:`Project "
 "Properties --> Data Sources -->` when working on such context. QGIS "
@@ -805,7 +801,7 @@ msgid ""
 "and the pivot tables)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:484
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:482
 msgid ""
 "Finally we have to select the right cardinality in the "
 ":menuselection:`Layer Properties --> Attributes Form` for the "
@@ -814,11 +810,11 @@ msgid ""
 " option."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:495
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:493
 msgid "Set relationship cardinality"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:497
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:495
 msgid ""
 "Now you can associate an airport with an airline (or an airline with an "
 "airport) using :guilabel:`Add child feature` or :guilabel:`Link existing "
@@ -826,15 +822,15 @@ msgid ""
 "in the ``airports_airlines`` table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:506
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:504
 msgid "N-M relationship between airports and airlines"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:508
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:506
 msgid "Using **Many to one relation** cardinality"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:510
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:508
 msgid ""
 "Sometimes hiding the pivot table in an N-M relationship is not desirable."
 " Mainly because there are attributes in the relationship that can only "
@@ -845,11 +841,11 @@ msgid ""
 " pivot table."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:517
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:515
 msgid "**Pivot table primary key**"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:519
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:517
 msgid ""
 "Avoid using multiple fields in the primary key in a pivot table. QGIS "
 "assumes a single  primary key so a constraint like ``constraint "
@@ -857,15 +853,15 @@ msgid ""
 "work."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:528
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:526
 msgid "Polymorphic relations"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:531
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:529
 msgid "The purpose"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:533
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:531
 msgid ""
 "Polymorphic relations are special case of 1-N relations, where a single "
 "referencing (document) layer contains the features for multiple "
@@ -878,7 +874,7 @@ msgid ""
 "referenced layer into this field."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:541
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:539
 msgid ""
 "To be more precise, a polymorphic relation is a set of normal relations "
 "having the same referencing layer but having the referenced layer "
@@ -887,7 +883,7 @@ msgid ""
 "layer like the table name, layer id, layer name."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:546
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:544
 msgid ""
 "Imagine we are going to the park and want to take pictures of different "
 "species of ``plants`` and ``animals`` we see there. Each plant or animal "
@@ -898,7 +894,7 @@ msgid ""
 "birds etc."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:554
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:552
 msgid ""
 "Polymorphic relations solve this problem as all the referencing features "
 "are stored in the same table ``documents``. For each feature the "
@@ -906,11 +902,11 @@ msgid ""
 "referenced feature id in the ``referenced_id`` field."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:558
 msgid "Defining polymorphic relations"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:562
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
 msgid ""
 "First, let QGIS know about the polymorphic relations between the layers. "
 "This is done in :menuselection:`Project --> Properties...`. Open the "
@@ -920,13 +916,13 @@ msgid ""
 "dropdown."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:573
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:571
 msgid ""
 "Adding a polymorphic relation using ``documents`` layer as referencing "
 "and ``animals`` and ``plants`` as referenced layers."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:581
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:579
 msgid ""
 "**Referencing Layer (Child)** also considered as child layer, is the one "
 "with the foreign key field on it. In our case, this is the ``documents`` "
@@ -934,7 +930,7 @@ msgid ""
 " the other layer, so this is ``referenced_id``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:593
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:591
 msgid ""
 "**Layer Field** is the field in the referencing table that stores the "
 "result of the evaluated layer expression which is the referencing table "
@@ -942,7 +938,7 @@ msgid ""
 "``referenced_layer`` field."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:597
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:595
 msgid ""
 "**Layer expression** evaluates to a unique identifier of the layer. This "
 "can be the layer name ``@layer_name``, the layer id ``@layer_id``, the "
@@ -950,7 +946,7 @@ msgid ""
 "uniquely identifies a layer."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:602
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:600
 msgid ""
 "**Relationship strength** sets the strength of the generated relations "
 "between the parent and the child layer. The default "
@@ -962,7 +958,7 @@ msgid ""
 "well)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:608
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:606
 msgid ""
 "**Referenced Layers** also considered as parent layers, are those with "
 "the primary key, pointed to, so here they would be ``plants`` and "
@@ -973,19 +969,19 @@ msgid ""
 "relation."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:615
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:613
 msgid ""
 "Once added, the polymorphic relation can be edited via the "
 ":guilabel:`Edit Polymorphic Relation` menu entry."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:623
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:621
 msgid ""
 "Preview of the newly created polymorphic relation and its child relations"
 " for animals and plants."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:626
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:624
 msgid "The example above uses the following database schema:"
 msgstr ""
 
