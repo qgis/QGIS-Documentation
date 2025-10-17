@@ -614,6 +614,24 @@ msgstr ""
 msgid "Special Comments"
 msgstr "特別なコメント"
 
+#: ../../docs/documentation_guidelines/writing.rst:473
+msgid ""
+"Sometimes, you may want to emphasize some points of the description, either "
+"to warn, remind or give some hints to the user. In QGIS Documentation, we "
+"use reST special directives such as ``.. warning::``, ``.. seealso::``, ``.."
+" note::`` and ``.. tip::``. These directives generate frames that highlight "
+"your comments. See `Paragraph Level markup <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#paragraph-level-"
+"markup>`_ for more information. A clear and appropriate title is required "
+"for both warnings and tips."
+msgstr ""
+"時には、説明のいくつかのポイントを強調して、ユーザーに警告したり、注意喚起したり、ヒントを与えたりしたいことがあります。QGIS文書では、reSTの特別なディレクティブである"
+" ``... warning::``, ``... seealso::``, ``... note::``, ``... tip::`` "
+"を使っています。これらのディレクティブは、コメントを強調するフレームを生成します。詳しくは `段落レベルのマークアップ "
+"<https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/directives.html#paragraph-level-"
+"markup>`_ をご覧ください。警告とヒントの両方には、明確で適切なタイトルが必要です。"
+
 #: ../../docs/documentation_guidelines/writing.rst:491
 msgid "Code Snippets"
 msgstr "コードスニペット"
@@ -725,6 +743,22 @@ msgstr "背景はカットします。"
 msgid "Make the top corners transparent if the background is not white"
 msgstr "背景が白でない場合は上部の角を透明にします。"
 
+#: ../../docs/documentation_guidelines/writing.rst:549
+msgid ""
+"Set print size resolution to ``135 dpi`` (e.g., in GIMP scale down the image"
+" using :menuselection:`Image --> Scale Image` and setting \"X/Y\" to ``135 "
+"pixels/in``, and export it through :menuselection:`File --> Export...`). "
+"This way, images will be at original size in html and at a good print "
+"resolution in the PDF."
+msgstr ""
+"印刷解像度は ``135 dpi`` に設定してください（例：GIMPでは、:menuselection:`画像 --> 画像のサイズ変更` "
+"で画像を縮小し、\"X/Y\" を 「135 ピクセル/インチ」に設定し、:menuselection:`ファイル --> エクスポート...` "
+"で書き出します）。これにより、画像はHTMLでは元のサイズで表示され、PDFでは良好な印刷解像度で出力されます。"
+
+#: ../../docs/documentation_guidelines/writing.rst:554
+msgid "You can also use ImageMagick convert command to do a batch of images:"
+msgstr "ImageMagickのconvertコマンドを使用して画像のバッチ処理を行うこともできます:"
+
 #: ../../docs/documentation_guidelines/writing.rst:560
 msgid "Save them as :file:`.png` (to avoid :file:`.jpeg` artifacts)"
 msgstr ":file:`.png` で保存します (:file:`.jpeg` は避けてください)。"
@@ -751,6 +785,14 @@ msgid ""
 " a translated user guide:"
 msgstr "翻訳されたユーザガイド用にスクリーンショットを作成したい人向けのヒントです。"
 
+#: ../../docs/documentation_guidelines/writing.rst:578
+msgid ""
+"Translated images should be placed in a :file:`img/<your_language>/` folder."
+" Use the same filename as the english 'original' screenshot."
+msgstr ""
+"翻訳された画像は :file:`img/<your_language>/` "
+"フォルダに置きます。英語のオリジナルのスクリーンショットと同じファイル名を使用してください。"
+
 #: ../../docs/documentation_guidelines/writing.rst:583
 msgid "Documenting Processing algorithms"
 msgstr "プロセシングアルゴリズムのドキュメントを作成する"
@@ -765,7 +807,8 @@ msgstr "プロセシングアルゴリズムのドキュメントを書きたい
 msgid ""
 "Processing algorithm help files are part of QGIS User Guide, so use the same"
 " formatting as User Guide and other documentation."
-msgstr "処理アルゴリズムのヘルプファイルは、QGISユーザーガイドの一部であるので、ユーザーガイドとその他の文書と同じフォーマットを使用します"
+msgstr ""
+"プロセシングアルゴリズムのヘルプファイルは、QGISユーザーガイドの一部であるので、ユーザーガイドとその他の文書と同じフォーマットを使用します"
 
 #: ../../docs/documentation_guidelines/writing.rst:591
 msgid ""
@@ -935,6 +978,22 @@ msgstr "|polygonLayer|"
 msgid "polygonLayer"
 msgstr "polygonLayer"
 
+#: ../../docs/documentation_guidelines/writing.rst:655
+msgid "All spatial vector layers"
+msgstr "全ての空間ベクタレイヤ"
+
+#: ../../docs/documentation_guidelines/writing.rst:655
+msgid "``vector: geometry``"
+msgstr "``vector: geometry``"
+
+#: ../../docs/documentation_guidelines/writing.rst:656
+msgid "Geometryless vector layer"
+msgstr "ジオメトリのないベクタレイヤ"
+
+#: ../../docs/documentation_guidelines/writing.rst:656
+msgid "``vector: table``"
+msgstr "``vector: table``"
+
 #: ../../docs/documentation_guidelines/writing.rst:656
 msgid "|tableLayer|"
 msgstr "|tableLayer|"
@@ -1096,6 +1155,14 @@ msgid "``list``"
 msgstr "``list``"
 
 #: ../../docs/documentation_guidelines/writing.rst:670
+msgid "Integer value"
+msgstr "整数値"
+
+#: ../../docs/documentation_guidelines/writing.rst:670
+msgid "``numeric: integer``"
+msgstr "``numeric: integer``"
+
+#: ../../docs/documentation_guidelines/writing.rst:670
 #: ../../docs/documentation_guidelines/writing.rst:671
 msgid "|selectNumber|"
 msgstr "|selectNumber|"
@@ -1103,6 +1170,14 @@ msgstr "|selectNumber|"
 #: ../../docs/documentation_guidelines/writing.rst:821
 msgid "selectNumber"
 msgstr "selectNumber"
+
+#: ../../docs/documentation_guidelines/writing.rst:671
+msgid "Decimal value"
+msgstr "小数点値"
+
+#: ../../docs/documentation_guidelines/writing.rst:671
+msgid "``numeric: double``"
+msgstr "``numeric: double``"
 
 #: ../../docs/documentation_guidelines/writing.rst:672
 msgid "String"
@@ -1187,6 +1262,14 @@ msgstr "``definition``"
 #: ../../docs/documentation_guidelines/writing.rst:680
 msgid "``point``"
 msgstr "``point``"
+
+#: ../../docs/documentation_guidelines/writing.rst:681
+msgid "Map layers"
+msgstr "地図レイヤ"
+
+#: ../../docs/documentation_guidelines/writing.rst:681
+msgid "``layer`` ``list``"
+msgstr "``layer`` ``list``"
 
 #: ../../docs/documentation_guidelines/writing.rst:682
 msgid "Range"
