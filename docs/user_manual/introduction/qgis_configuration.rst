@@ -1513,6 +1513,8 @@ You can specify:
   The page is opened either in QGIS, as an :guilabel:`Embedded webview (developer tools)`,
   or in the :guilabel:`Default system web browser`.
 
+.. _python_code_formatting:
+
 * under :guilabel:`Formatting`, you can add automated tools to reformat the code you are writing:
 
   * |unchecked| :guilabel:`Reformat on save`: formatting is applied just before saving the script
@@ -1524,6 +1526,8 @@ You can specify:
     * :guilabel:`Autopep8 level` - more details at `autopep8 advanced usage
       <https://pypi.org/project/autopep8/#more-advanced-usage>`_
     * |unchecked| :guilabel:`Normalize quotes`: replaces all single quotes with double quotes if possible
+
+.. _python_debugger:
 
 * under :guilabel:`Run and Debug`
 
