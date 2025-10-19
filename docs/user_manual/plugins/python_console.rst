@@ -163,9 +163,17 @@ share the code via GitHub and much more). Main features are:
   * Set initial find string to selection when opening find;
   * Enable the |searchRegex| :guilabel:`Use Regular Expressions` option in the search bar to use regular expressions
     instead of plain text matching;
+  * |replace| :sup:`Replace` the matching text with the text in the replace box.
+    When using a regular expression, you can reference captured groups in the replacement text.  
+    Use :guilabel:`Replace All` to replace all matches at once.
   * Pressing :kbd:`Esc` closes the find bar.
 
-* Object inspector: a class and function browser;
+* |commentEditorConsole| :sup:`Toggle Comment` in selected lines or use :kbd:`Ctrl+:`;
+* |formatCode| :sup:`Reformat Code`: allows to manually apply various formatting rules
+  (sort imports, indentation, line length,...) to the code, following :ref:`user-defined settings <python_code_formatting>`.
+  This may require installation of additional Python modules.
+* |browserConsole| :sup:`Object inspector`: a class and function browser.
+  Enable this panel in the :ref:`Python settings - Run and Debug <python_debugger>`.
 * Go to an object definition with a mouse click (from Object inspector);
 * Execute code snippets with the |runConsole| :guilabel:`Run Selected`
   command in contextual menu;
@@ -198,15 +206,23 @@ share the code via GitHub and much more). Main features are:
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |browserConsole| image:: /static/common/iconClassBrowserConsole.png
+   :width: 1.5em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
+.. |commentEditorConsole| image:: /static/common/iconCommentEditorConsole.png
+   :width: 1.5em
 .. |dock| image:: /static/common/dock.png
+   :width: 1.5em
+.. |formatCode| image:: /static/common/iconFormatCode.png
    :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
+   :width: 1.5em
+.. |replace| image:: /static/common/mActionReplace.png
    :width: 1.5em
 .. |runConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
