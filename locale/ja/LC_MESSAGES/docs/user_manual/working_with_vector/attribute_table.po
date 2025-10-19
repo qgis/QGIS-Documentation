@@ -7,9 +7,9 @@
 # Translators:
 # fairtommy <fairtommy@gmail.com>, 2025
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
-# tomoya miyoshi, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -739,6 +739,17 @@ msgid ""
 msgstr ""
 "カラムの幅は、カラムのヘッダの右側の境界をドラッグすることでも変更できます。新しいカラム幅はレイヤに保持され、次に属性テーブルを開いたときにこの幅が復元されます。"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:197
+msgid ""
+"In the :ref:`Data Source Settings <datasources_options>`, you can choose to "
+"|checkbox| :guilabel:`Autosize all columns by default when opening attribute"
+" table`, which will make \"Autosize All Columns\" the default view every "
+"time attribute tables are opened in QGIS."
+msgstr ""
+":ref:`データソース設定 <datasources_options>` で、|checkbox| "
+":guilabel:`属性テーブルを開く時にデフォルトですべての列のサイズを自動調整する` "
+"を選択することにより、QGISで属性テーブルが開かれるたびに「すべての列のサイズを自動調整」がデフォルトの表示となります。 "
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:868
 msgid "checkbox"
 msgstr "checkbox"
@@ -746,6 +757,51 @@ msgstr "checkbox"
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:204
 msgid "Hiding and organizing columns and enabling actions"
 msgstr "列の非表示・整理とアクションの有効化"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:206
+msgid ""
+"By right-clicking in a column header, you can choose to :guilabel:`Hide "
+"column` from the attribute table (in \"table view\" mode). For more advanced"
+" controls, press the |editTable| :sup:`Organize columns...` button from the "
+"dialog toolbar or choose :guilabel:`Organize columns...` in a column header "
+"contextual menu."
+msgstr ""
+"（「テーブル表示」モードのとき）カラムヘッダを右クリックすると、属性テーブルから :guilabel:`列を非表示` "
+"するかどうかを選択できます。より詳細に制御するには、ダイアログのツールバーの |editTable| :sup:`列の整理...` "
+"ボタンを押すか、カラムヘッダの右クリックメニューで :guilabel:`列の整理...` を選択します。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:212
+msgid "In the new dialog, you can:"
+msgstr "その新しいダイアログでは、以下の設定ができます："
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:214
+msgid ""
+"check/uncheck columns you want to show or hide: a hidden column will "
+"disappear from every instance of the attribute table dialog until it is "
+"actively restored. It is also possible to:"
+msgstr ""
+"表示したい列にチェック、または非表示したい列のチェックを外す：非表示にした列は、自ら復元するまで、属性テーブルダイアログのすべてのインスタンスから消えます。次のこともできます:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:218
+msgid ""
+"choose :guilabel:`Show All` to display all the fields (columns) and actions "
+"in the table"
+msgstr ":guilabel:`すべて表示` を選び、テーブルにある全てのフィールド（カラム）とアクションを表示します"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:219
+msgid ""
+"choose :guilabel:`Hide All` to hide all the fields (columns) and actions in "
+"the table"
+msgstr ":guilabel:`すべて隠す` を選び、テーブルにある全てのフィールド（カラム）とアクションを非表示にします"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:220
+msgid ""
+"use the :guilabel:`Toggle selection` to invert visibility of the current "
+"selection of columns. You can use :ref:`keyboard combination "
+"<interacting_features_table>` for selecting multiple columns."
+msgstr ""
+":guilabel:`選択を切り替え` を使って、カラムの現在の選択の可視不可視を反転します。複数のカラムを選択するのに :ref:`キーの組合せ "
+"<interacting_features_table>` を使うことができます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:224
 msgid ""
@@ -1263,39 +1319,61 @@ msgstr "地物に関するその他のアクション"
 msgid ""
 "Users have several possibilities to manipulate feature in an attribute "
 "table. Right-click in a cell and you can:"
-msgstr "属性テーブルの地物を操作するには、いくつかの方法があります。セルを右クリックすると、以下のことができます:"
+msgstr "属性テーブルにある地物をいくつかの方法で操作することができます。セルを右クリックすると以下のことができます:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:473
 msgid ":guilabel:`Select all` (:kbd:`Ctrl+A`) the features;"
-msgstr "地物を :guilabel:`すべて選択` （ :kbd:`Ctrl+A` ）"
+msgstr "地物を :guilabel:`すべて選択` （ :kbd:`Ctrl+A` ）する;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:474
 msgid ""
 "Copy the content of a cell in the clipboard with :guilabel:`Copy cell "
 "content`;"
-msgstr ":guilabel:`セルの内容をコピーする` で、セルの内容をクリップボードにコピーする"
+msgstr ":guilabel:`セルの内容をコピーする` を使ってセルの内容をクリップボードにコピーする;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:475
 msgid ":guilabel:`Zoom to feature` without having to select it beforehand;"
-msgstr "地物を選択することなく :guilabel:`地物にズーム`"
+msgstr "地物を選択することなく :guilabel:`地物にズーム` する;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:476
 msgid ":guilabel:`Pan to feature` without having to select it beforehand;"
-msgstr "地物を選択することなく :guilabel:`地物にパン`"
+msgstr "地物を選択することなく :guilabel:`地物にパン` する;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:477
 msgid ":guilabel:`Flash feature`, to highlight it in the map canvas;"
-msgstr ":guilabel:`地物をフラッシュ` で、マップキャンバス内で強調表示"
+msgstr ":guilabel:`地物をフラッシュ` してマップキャンバス内で強調表示する;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:478
 msgid ""
 ":guilabel:`Open form`: it toggles attribute table into form view with a "
 "focus on the clicked feature."
-msgstr ":guilabel:`フォームを開く` ：そのクリックされた地物にフォーカスした状態で、属性テーブルをフォーム表示に切り替えます"
+msgstr ":guilabel:`フォームを開く` ：クリックされた地物にフォーカスした状態で、属性テーブルをフォーム表示に切り替えます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:480
+msgid ""
+"Display a :ref:`list of actions <actions_menu>`, previously enabled in the "
+":menuselection:`Layer properties --> Actions` tab."
+msgstr ""
+":menuselection:`レイヤプロパティ --> アクション` タブで事前に有効化された :ref:`アクションリスト "
+"<actions_menu>` を表示します。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:488
 msgid "Copy cell content button"
 msgstr "「セルの内容をコピーする」ボタン"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:492
+msgid ""
+"If you want to use attribute data in external programs (such as Excel, "
+"LibreOffice, or a custom web application), select one or more row(s) and use"
+" the |copySelected| :sup:`Copy selected rows to clipboard` button or press "
+":kbd:`Ctrl+C`. Moreover, in :menuselection:`Settings --> Options --> Data "
+"Sources` menu you can define the format to paste to with the :guilabel:`Copy"
+" features as` option. More details at :ref:`datasources_options`."
+msgstr ""
+"データソース属性データを外部プログラム（Excel、LibreOffice、カスタムWebアプリケーションなど）で使用したい場合には、1つまたは複数の行を選択して"
+" |copySelected| :sup:`選択している行をクリップボードへコピーする` ボタンを押すか、 :kbd:`Ctrl+C` "
+"を押します。:menuselection:`設定 --> オプション --> データソース` メニューで、:guilabel:`地物をコピー` "
+"オプションを使用して貼り付け先の形式を定義できます。詳細は :ref:`datasources_options` を参照してください。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:505
 msgid "Editing attribute values"
@@ -1939,6 +2017,19 @@ msgstr ""
 "<https://nextcloud.com/>`_ や `Pydio <https://pydio.com>`_ "
 "などのファイルホスティングソフトウェアがこのプロトコルに対応しています。"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:801
+msgid ""
+":guilabel:`AWS S3`: The resource is pushed to a server supporting `AWS "
+"Simple Storage Service <https://en.wikipedia.org/wiki/Amazon_S3>`_ protocol "
+"and the attribute is updated with its URL. Amazon Web Service and `MinIO "
+"<https://en.wikipedia.org/wiki/MinIO>`_ hosting software support this "
+"protocol."
+msgstr ""
+":guilabel:`AWS S3`: リソースは `AWS Simple Storage Service "
+"<https://en.wikipedia.org/wiki/Amazon_S3>`_ "
+"プロトコルをサポートするサーバーにプッシュされ、属性はそのURLで更新されます。Amazon Web Service 及び `MinIO "
+"<https://en.wikipedia.org/wiki/MinIO>`_ ホスティングソフトウェアがこのプロトコルをサポートしています。"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:806
 msgid ""
 "Then, you have to set up the :guilabel:`Store URL` parameter, which provides"
@@ -1960,11 +2051,26 @@ msgstr ""
 "変数 **@selected_file_path** "
 "を式中で使用すれることができ、ユーザーが（ファイルセレクタを使用して、あるいはドラッグ＆ドロップで）選択したファイルの絶対ファイルパスを表すことができます。"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:816
+msgid ""
+"Using the **WebDAV** or **AWS S3** external storage, if the URL ends with a "
+"\"/\", it is considered as a folder and the selected file name will be "
+"appended to get the final URL."
+msgstr ""
+"**WebDAV** 又は **AWS S3** 外部ストレージを使い、URLが \"/\" "
+"で終わっている場合、これはフォルダとみなされ、選択したファイル名が後ろに追加されて最終的なURLとなります。"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:820
 msgid ""
 "If the external storage system needs to, it's possible to configure an "
 ":ref:`authentication <authentication>`."
 msgstr "外部ストレージシステムが必要とするならば、 :ref:`認証 <authentication>` に関する設定も行えます。"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:825
+msgid ""
+"To use the **AWS S3** external storage, you must use an **AWS S3** "
+"authentication type."
+msgstr "**AWS S3** 外部ストレージを使うには、**AWS S3** 認証タイプを使用する必要があります。 "
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:830
 msgid "Using an external storage"
