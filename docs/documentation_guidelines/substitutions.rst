@@ -553,6 +553,10 @@ Icon                            Substitution                        Icon        
 |showPluginManager|             ``|showPluginManager|``             |installPluginFromZip|          ``|installPluginFromZip|``
 |pythonFile|                    ``|pythonFile|``                    |runConsole|                    ``|runConsole|``
 |showEditorConsole|             ``|showEditorConsole|``             |clearConsole|                  ``|clearConsole|``
+|scriptOpen|                    ``|scriptOpen|``                    |searchEditorConsole|           ``|searchEditorConsole|``
+|searchRegex|                   ``|searchRegex|``                   |replace|                       ``|replace|``
+|commentEditorConsole|          ``|commentEditorConsole|``          |formatCode|                    ``|formatCode|``
+|classBrowserConsole|           ``|classBrowserConsole|``           |codepadConsole|                ``|codepadConsole|``
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |topologyChecker|               ``|topologyChecker|``
@@ -775,6 +779,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
+.. |classBrowserConsole| image:: /static/common/iconClassBrowserConsole.png
+   :width: 1.5em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
 .. |clearItem| image:: /static/common/mIconClearItem.png
@@ -782,6 +788,8 @@ Icon                            Substitution                        Icon        
 .. |clip| image:: /static/common/mAlgorithmClip.png
    :width: 1.5em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
+   :width: 1.5em
+.. |codepadConsole| image:: /static/common/iconCodepadConsole.png
    :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
@@ -794,6 +802,8 @@ Icon                            Substitution                        Icon        
 .. |colorSwatches| image:: /static/common/mIconColorSwatches.png
    :width: 1.5em
 .. |colorWheel| image:: /static/common/mIconColorWheel.png
+   :width: 1.5em
+.. |commentEditorConsole| image:: /static/common/iconCommentEditorConsole.png
    :width: 1.5em
 .. |conditionalFormatting| image:: /static/common/mActionConditionalFormatting.png
    :width: 1.5em
@@ -978,6 +988,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.2em
+.. |formatCode| image:: /static/common/iconFormatCode.png
+   :width: 1.5em
 .. |fromSelectedFeature| image:: /static/common/mActionFromSelectedFeature.png
    :width: 1em
 .. |fullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png
@@ -1444,6 +1456,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
+.. |replace| image:: /static/common/mActionReplace.png
+   :width: 1.5em
 .. |reset| image:: /static/common/mActionReset.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
@@ -1486,7 +1500,13 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |scaleFeature| image:: /static/common/mActionScaleFeature.png
    :width: 1.5em
+.. |scriptOpen| image:: /static/common/mActionScriptOpen.png
+   :width: 1.5em
 .. |search| image:: /static/common/search.png
+   :width: 1.5em
+.. |searchEditorConsole| image:: /static/common/iconSearchEditorConsole.png
+   :width: 1.5em
+.. |searchRegex| image:: /static/common/mIconSearchRegex.png
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
