@@ -1411,7 +1411,7 @@ the expression to execute.
 .. |labelshadow| image:: /static/common/labelshadow.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
-   :width: 1.5em
+   :width: 1.2em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png

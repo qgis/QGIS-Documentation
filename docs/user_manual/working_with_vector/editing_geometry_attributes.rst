@@ -2288,6 +2288,8 @@ To edit features in-place:
    :width: 1.5em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
+.. |chamferFillet| image:: /static/common/mActionChamferFillet.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |circle2Points| image:: /static/common/mActionCircle2Points.png
@@ -2371,8 +2373,6 @@ To edit features in-place:
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
-   :width: 1.5em
-.. |chamferFillet| image:: /static/common/mActionChamferFillet.png
    :width: 1.5em
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
    :width: 1.5em

@@ -163,7 +163,7 @@ In this section, select and configure the layer and fields you want to display i
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |symbologyRemove| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
