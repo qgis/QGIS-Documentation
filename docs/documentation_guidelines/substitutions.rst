@@ -557,6 +557,7 @@ Icon                            Substitution                        Icon        
 |searchRegex|                   ``|searchRegex|``                   |replace|                       ``|replace|``
 |commentEditorConsole|          ``|commentEditorConsole|``          |formatCode|                    ``|formatCode|``
 |classBrowserConsole|           ``|classBrowserConsole|``           |codepadConsole|                ``|codepadConsole|``
+|syntaxErrorConsole|            ``|syntaxErrorConsole|``
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |topologyChecker|               ``|topologyChecker|``
@@ -1656,6 +1657,8 @@ Icon                            Substitution                        Icon        
 .. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |symmetricalDifference| image:: /static/common/mAlgorithmSymmetricalDifference.png
+   :width: 1.5em
+.. |syntaxErrorConsole| image:: /static/common/iconSyntaxErrorConsole.png
    :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
