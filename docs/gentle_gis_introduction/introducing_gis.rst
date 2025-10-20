@@ -245,7 +245,7 @@ or based on disease type, and so on. So, with a GIS Application we have a way to
 easily change the appearance of the maps we created based on the non-geographical
 data associated with places.
 
-GIS Systems work with many different types of data. **Vector data** is stored as
+GIS Systems work with many different types of data. **Vector data** are stored as
 a series of ``X, Y`` coordinate pairs inside the computer's memory. Vector data
 are used to represent points, lines and areas. :numref:`figure_vector_data`
 shows different types of vector data being viewed in a GIS application. In the
