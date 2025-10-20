@@ -124,8 +124,6 @@ layer to a map view, the layers are overlaid on top of each other. Look at
 figures :numref:`figure_map_view_towns`, :numref:`figure_map_view_schools`,
 :numref:`figure_map_view_railways` and :numref:`figure_map_view_rivers`
 to see a map view that has several layers being added to it.
-An important function of the map view is to allow you to zoom in to magnify,
-zoom out to see a greater area and move around (panning) in the map.
 
 .. _figure_map_view_towns:
 
@@ -145,7 +143,6 @@ zoom out to see a greater area and move around (panning) in the map.
    A map view with several layers being added to it. A schools layer added to
    the map view
 
-
 .. _figure_map_view_railways:
 
 .. figure:: img/map_view_railways.png
@@ -164,6 +161,20 @@ zoom out to see a greater area and move around (panning) in the map.
    A map view with several layers being added to it. A rivers layer added to the
    map view
 
+An important function of the map view is to allow you to zoom in to magnify,
+zoom out to see a greater area and move around (panning) in the map. GIS
+software also lets you easily change symbology --- the way information is
+displayed. :numref:`figure_map_symbology` shows the map view after panning to
+the side and changing the symbology of the layers.
+
+.. _figure_map_symbology:
+
+.. figure:: img/symbology.png
+   :align: center
+   :width: 30em
+
+   A map view after moving around (panning) and changing the symbology
+
 Another common feature of GIS Applications is the **map legend**. The map legend
 provides a list of layers that have been loaded in the GIS Application. Unlike a
 paper map legend, the map legend or 'layers list' in the GIS Application provides
@@ -174,14 +185,6 @@ dragging the layer to a new position. In figures :numref:`figure_map_legend_befo
 Application window. By changing the layer order, the way that layers are drawn
 can be adjusted –-- in this case so that rivers are drawn below the roads instead
 of over them.
-
-.. _figure_map_symbology:
-
-.. figure:: img/symbology.png
-   :align: center
-   :width: 30em
-
-   GIS Software lets you easily change symbology --- the way information is displayed.
 
 
 .. _figure_map_legend_before:
