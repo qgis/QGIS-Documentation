@@ -407,6 +407,7 @@ Python code
 
 Approximate medial axis
 -----------------------
+|400|
 
 Generates a simplified skeleton of polygon geometries by approximating their
 medial axis. The output is a line layer representing the central structure
@@ -415,7 +416,10 @@ of each polygon, preserving main topology while ignoring small variations.
 Z values are ignored; the medial axis is calculated from the 2D projection
 of input geometries.
 
-This algorithm uses the SFCGAL library.
+.. note:: `SFCGAL <https://www.osgeo.org/projects/sfcgal/>`_ support is disabled by default. To enable it when building QGIS, you need to:
+
+   * Install the SFCGAL development packages on your system.
+   * Enable SFCGAL in the CMake configuration using the ``WITH_SFCGAL`` flag.
 
 Parameters
 ..........
