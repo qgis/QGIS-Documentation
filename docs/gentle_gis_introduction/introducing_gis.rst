@@ -131,8 +131,7 @@ to see a map view that has several layers being added to it.
    :align: center
    :width: 30em
 
-   A map view with several layers being added to it. A towns layer added to the
-   map view.
+   A towns layer added to the map view
 
 .. _figure_map_view_schools:
 
@@ -140,8 +139,7 @@ to see a map view that has several layers being added to it.
    :align: center
    :width: 30em
 
-   A map view with several layers being added to it. A schools layer added to
-   the map view
+   A schools layer added to the map view
 
 .. _figure_map_view_railways:
 
@@ -149,8 +147,7 @@ to see a map view that has several layers being added to it.
    :align: center
    :width: 30em
 
-   A map view with several layers being added to it. A railways layer added to
-   the map view
+   A railways layer added to the map view
 
 .. _figure_map_view_rivers:
 
@@ -158,8 +155,7 @@ to see a map view that has several layers being added to it.
    :align: center
    :width: 30em
 
-   A map view with several layers being added to it. A rivers layer added to the
-   map view
+   A rivers layer added to the map view
 
 An important function of the map view is to allow you to zoom in to magnify,
 zoom out to see a greater area and move around (panning) in the map. GIS
