@@ -24,11 +24,11 @@ About the authors & contributors
 |                | the goal of helping people to learn and use opensource GIS software. |
 |                | **Web**: https://kartoza.com **Email**: marcelle@kartoza.com         |
 +----------------+----------------------------------------------------------------------+
-| |lerato|       | Lerato Nsibande –-- Video Presenter. Lerato is a grade 12 scholar    |
+| |lerato|       | Lerato Nsibande --- Video Presenter. Lerato is a grade 12 scholar    |
 |                | living in Pretoria. Lerato learns Geography at school and has        |
 |                | enjoyed learning GIS with us!                                        |
 +----------------+----------------------------------------------------------------------+
-| |sibongile|    | Sibongile Mthombeni –-- Video Presenter. Sibongile lives near        |
+| |sibongile|    | Sibongile Mthombeni --- Video Presenter. Sibongile lives near        |
 |                | Johannesburg with her young daughter. Her goal is to continue her    |
 |                | studies and become a nurse. Working on this project was the first    |
 |                | time Sibongile used a computer.                                      |

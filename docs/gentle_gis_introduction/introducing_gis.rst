@@ -18,11 +18,11 @@ on a computer. GIS stands for **'Geographical Information System'**.
 
 A GIS consists of:
 
-* **Digital Data** –-- the geographical information that you will view and
+* **Digital Data** --- the geographical information that you will view and
   analyse using computer hardware and software.
-* **Computer Hardware** –-- computers used for storing data, displaying graphics
+* **Computer Hardware** --- computers used for storing data, displaying graphics
   and processing data.
-* **Computer Software** –-- computer programs that run on the computer hardware
+* **Computer Software** --- computer programs that run on the computer hardware
   and allow you to work with digital data. A software program that forms part of
   the GIS is called a GIS Application.
 
@@ -78,7 +78,7 @@ GIS is a relatively new field --- it started in the 1970's. It used to be that
 computerised GIS was only available to companies and universities that had
 expensive computer equipment. These days, anyone with a personal computer or
 laptop can use GIS software. Over time GIS Applications have also become easier
-to use --– it used to require a lot of training to use a GIS Application, but now
+to use --- it used to require a lot of training to use a GIS Application, but now
 it is much easier to get started in GIS even for amateurs and casual users. As we
 described above, GIS is more than just software, it refers to all aspects of
 managing and using digital geographical data. In the tutorials that follow we
@@ -117,7 +117,7 @@ provide a quicker way to use frequently needed actions.
 
 A common function of GIS Applications is to display **map layers**. Map layers
 are stored as files on a disk or as records in a database. Normally each map
-layer will represent something in the real world –-- a roads layer for example
+layer will represent something in the real world --- a roads layer for example
 will have data about the street network.
 
 When you open a layer in the GIS Application it will appear in the **map view**.
@@ -181,7 +181,7 @@ by clicking on a layer in the legend, holding the mouse button down and then
 dragging the layer to a new position. In figures :numref:`figure_map_legend_before` and
 :numref:`figure_map_legend_after` the map legend is shown as the area to the left of the GIS
 Application window. By changing the layer order, the way that layers are drawn
-can be adjusted –-- in this case so that rivers are drawn below the roads instead
+can be adjusted --- in this case so that rivers are drawn below the roads instead
 of over them.
 
 
@@ -238,7 +238,7 @@ date columns hold **non-geographical data**.
 A common feature of GIS is that they allow you to associate information
 (non-geographical data) with places (geographical data). In fact, the GIS
 Application can store many pieces of information which are associated with each
-place --– something that paper maps are not very good at. For example, our health
+place --- something that paper maps are not very good at. For example, our health
 care worker could store the person's age and gender on her table. When the GIS
 Application draws the layer, you can tell it to draw the layer based on gender,
 or based on disease type, and so on. So, with a GIS Application we have a way to

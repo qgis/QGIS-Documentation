@@ -45,7 +45,7 @@ the house pictures in :numref:`figure_house`.
 The geometry of these house features is a polygon (based on the floor plan of the
 house), the attributes we have recorded are roof colour, whether there is a
 balcony, and the year the house was built. Note that attributes don't have to be
-visible things --– they can describe things we know about the feature such as the
+visible things --- they can describe things we know about the feature such as the
 year it was built. In a GIS Application, we can represent this feature type in a
 houses polygon layer, and the attributes in an attribute table (see :numref:`figure_house_gis`).
 
@@ -149,7 +149,7 @@ table.
    | Record 3        | 2001                | Silver              | Yes              |
    +-----------------+---------------------+---------------------+------------------+
 
-Each field in the attribute table contains a specific type of data –--
+Each field in the attribute table contains a specific type of data ---
 text, numeric or date. Deciding what attributes to use for a feature requires some
 thought and planning. In our house example earlier on in this topic, we chose roof
 colour, presence of a balcony and year of construction as attributes of interest.

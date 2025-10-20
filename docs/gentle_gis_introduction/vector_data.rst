@@ -160,7 +160,7 @@ Polygon features are **enclosed areas** like dams, islands, country boundaries
 and so on. Like polyline features, polygons are created from a series of vertices
 that are connected with a continuous line. However because a polygon always
 describes an enclosed area, the first and last vertices should always be at the
-same place! Polygons often have **shared geometry** –-- boundaries that are in
+same place! Polygons often have **shared geometry** --- boundaries that are in
 common with a neighbouring polygon. Many GIS applications have the capability to
 ensure that the boundaries of neighbouring polygons exactly coincide. We will
 explore this in the :ref:`gentle_gis_topology` topic later in this tutorial.
@@ -186,12 +186,12 @@ Editing vector data
 ===================
 
 The GIS application will allow you to create and modify the geometry data in a
-layer --– a process called **digitising** –-- which we will look at more closely
+layer --- a process called **digitising** --- which we will look at more closely
 in a later tutorial. If a layer contains polygons (e.g. farm dams), the GIS
 application will only allow you to create new polygons in that layer. Similarly
 if you want to change the shape of a feature, the application will only allow you
 to do it if the changed shape is correct. For example it won't allow you to edit
-a line in such a way that it has only one vertex –-- remember in our discussion
+a line in such a way that it has only one vertex --- remember in our discussion
 of lines above that all lines must have at least two vertices.
 
 Creating and editing vector data is an important function of a GIS since it is
