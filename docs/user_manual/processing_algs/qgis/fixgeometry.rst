@@ -19,11 +19,6 @@ Converts multipart geometries that consists of only one geometry into singlepart
 based on an error layer from the check geometry.
 Layer geometry type will not be changed and will remain multipart.
 
-.. figure:: img/fix_geometry_multipart.png
-   :align: center
-
-   Before and after converting one-part multipart geometries to singlepart geometries.
-
 .. seealso:: :ref:`qgischeckgeometrymultipart`
 
 Parameters
