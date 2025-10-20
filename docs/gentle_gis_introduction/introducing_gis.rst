@@ -93,8 +93,9 @@ be manipulated using the mouse and keyboard. The application provides **menus**
 near to the top of the window (:guilabel:`Project`, :guilabel:`Edit`, etc.) which,
 when clicked using the mouse, show a panel of **actions**.
 These actions provide a way for you to tell the GIS Application what you want to do.
-For example you may use the menus to tell the GIS Application to add a new layer to the display output.
+For example you may use the menus to tell the GIS Application to add a new layer to the display output, as in :numref:`figure_gis_menus`.
 
+.. _figure_gis_menus:
 
 .. figure:: img/menus.png
    :align: center
@@ -102,10 +103,11 @@ For example you may use the menus to tell the GIS Application to add a new layer
    Application menus, when clicked with the mouse, expand to show a list of
    actions that can be carried out.
 
-**Toolbars** (rows of small pictures that can be clicked with the mouse) normally
-sit just below the menus and provide a quicker way to use frequently needed
-actions.
+As seen in :numref:`figure_gis_toolbars`, **toolbars** (rows of small pictures
+that can be clicked with the mouse) normally sit just below the menus and
+provide a quicker way to use frequently needed actions.
 
+.. _figure_gis_toolbars:
 
 .. figure:: img/toolbars.png
    :align: center
