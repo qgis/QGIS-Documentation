@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 05:53+0000\n"
+"POT-Creation-Date: 2025-10-15 10:10+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -95,39 +95,151 @@ msgstr ""
 "(lentelėse) galima susieti vieną su kitu. Skaičius įrašų, kurie atitinka "
 "vienas kitą gali būti skirtingas (nulis, vienas, daug)."
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:37
+msgid "Joining features between two layers"
+msgstr "Dviejų sluoksnių geoobjektų sujungimas"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:39
+msgid ""
+"**Joins** in QGIS allow you to associate features of the current layer to "
+"features from another loaded vector layer. Whether they are spatially "
+"enabled and the type of geometry do not matter. The join is based on an "
+"attribute that is shared by the layers, in a one-to-one relationship."
+msgstr ""
+"QGIS **Jungtys** leidžia susieti dabartinio sluoksnio geoobjektus su kito "
+"įkelto vektorinio sluoksnio geoobjektais. Nepriklausomai nuo to, ar jie turi"
+" erdvinį komponentą ir kokio tipo yra jų geometrija. Jungtis remiasi "
+"atributu, kuris yra bendras abiems sluoksniams vienas-su-vienu jungtyje."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:44
+msgid "To create a join on a layer (identified below as ``target layer``):"
+msgstr ""
+"Kad sukurtumėte sluoksnio jungtį (žemiau identifikuojamą kaip ``paskirties "
+"sluoksnis``):"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:46
+msgid ""
+"Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab"
+msgstr ""
+"Eikite į sluoksnio kortelę :menuselection:`Savybės -->` |join| "
+":guilabel:`Jungtys`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:678
 msgid "join"
 msgstr "join"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:47
+msgid ""
+"Click the |symbologyAdd| :sup:`Add new join` button. The :guilabel:`Add "
+"vector join` dialog appears."
+msgstr ""
+"Spauskite mygtuką |symbologyAdd| :sup:`Pridėti naują jungtį`. Pasirodo "
+"dialogas :guilabel:`Pridėti vektorinę jungtį`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:696
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:49
+msgid ""
+"Select the :guilabel:`Join layer` you want to connect with the target vector"
+" layer"
+msgstr ""
+"Parinkti :guilabel:`Sujungti sluoksnį`, kurį norite sujungti su paskirties "
+"vektoriniu sluoksniu"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:50
+msgid ""
+"Specify the :guilabel:`Join field` (from the ``join layer``) and the "
+":guilabel:`Target field` (from the ``target layer``). These are the fields "
+"that are used to find matching feature in both layers hence they should have"
+" values in common."
+msgstr ""
+"Nurodykite :guilabel:`Sujungti lauką` (iš ``sujungiamo sluoksnio``) ir "
+":guilabel:`Paskirties lauką` (iš ``paskirties sluoksnio``). Tai laukai, "
+"kurie naudojami rasti atitinkančius geoobjektus abiejuose sluoksniuose, "
+"taigi jie rodo susijusias reikšmes."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:54
+msgid ""
+"Press :guilabel:`OK` and a summary of selected parameters is added to the "
+":guilabel:`Join` panel."
+msgstr ""
+"Spauskite :guilabel:`Gerai`, parinktų parametrų santrauka pridedama į "
+"skydelį :guilabel:`Jungtys`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:61
+msgid "Join an attribute table to an existing vector layer"
+msgstr "Atributų lentelės sujungimas su esamu vektoriniu sluoksniu"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:63
+msgid ""
+"The steps above will create a join, where **ALL** the attributes of the "
+"**first matching feature** in the join layer is added to the target layer's "
+"feature. The following logic is used to pair features during a join process:"
+msgstr ""
+"Aukščiau nurodyti sluoksniai sukurs jungtį, kur **VISI** atributai iš "
+"**pirmo atitinkančio geoobjekto** sujungiamame sluoksnyje pridedami prie "
+"paskirties sluoksnio geoobjekto. Geoobjektų sujungimo metu naudojama tokia "
+"logika:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:68
+msgid ""
+"All the features in the target layer are returned, regardless they have a "
+"match"
+msgstr ""
+"Grąžinami visi paskirties sluoksnio geoobjektai, nepriklausomai nuo to, ar "
+"jie turi atitikmenį"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:69
+msgid ""
+"If the target field contains duplicate values, these features are assigned "
+"the same feature from the join layer."
+msgstr ""
+"Jei paskirties lauke yra pasikartojančios reikšmės, šiems geoobjektams "
+"priskiriamas tas pats geoobjektas iš sujungiamo sluoksnio."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:71
+msgid ""
+"If the join field contains duplicate matching values, only the first fetched"
+" feature is picked."
+msgstr ""
+"Jei sujungiamame lauke yra pasikartojančios atitinkančios reikšmės, "
+"parenkamas tik pirmas atitinkantis geoobjektas."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:73
+msgid ""
+"Joins in QGIS are based on a single field matching so most of the times, you"
+" would want to make sure that values in the matchable fields are unique."
+msgstr ""
+"QGIS jungtys remiasi vieno lauko atitikimu, taigi dažniausiai jūs norite "
+"įsitikinti, kad atitinkamų laukų reikšmės būtų unikalios."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:670
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:702
 msgid "unchecked"
 msgstr "unchecked"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:684
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
 msgid "joinNotEditable"
 msgstr "joinNotEditable"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:686
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:684
 msgid "joinedLayerNotEditable"
 msgstr "joinedLayerNotEditable"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:682
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:680
 msgid "joinHasNotUpsertOnEdit"
 msgstr "joinHasNotUpsertOnEdit"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:692
 msgid "relations"
 msgstr "relations"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:700
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
@@ -135,50 +247,50 @@ msgstr "symbologyRemove"
 msgid "Relations tab"
 msgstr "Ryšių kortelė"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:702
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:700
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:696
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
 msgid "saveEdits"
 msgstr "saveEdits"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:670
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:668
 msgid "capturePoint"
 msgstr "capturePoint"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:690
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:688
 msgid "newTableRow"
 msgstr "newTableRow"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:676
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:674
 msgid "duplicateFeature"
 msgstr "duplicateFeature"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:674
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:672
 msgid "deleteSelectedFeatures"
 msgstr "deleteSelectedFeatures"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:688
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:686
 msgid "link"
 msgstr "link"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:706
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
 msgid "unlink"
 msgstr "unlink"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:708
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:706
 msgid "zoomToSelected"
 msgstr "zoomToSelected"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:678
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:676
 msgid "formView"
 msgstr "formView"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:692
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:690
 msgid "openTable"
 msgstr "openTable"
 
-#: ../../docs/user_manual/working_with_vector/joins_relations.rst:668
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:666
 msgid "addPart"
 msgstr "addPart"

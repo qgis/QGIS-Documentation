@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.40\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:18+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -151,8 +151,11 @@ msgstr "Numatytas: ``[Kurti laikiną sluoksnį]``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:42
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:124
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:195
-msgid "Specify the output vector layer. One of:"
-msgstr "Nurodykite išvesties vektorinį sluoksnį. Vienas iš:"
+msgid ""
+"Specify the output vector layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Nurodykite išvesties vektorinį sluoksnį :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
@@ -177,7 +180,7 @@ msgstr "Įrašyti į duombazės lentelę..."
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 #: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "The file encoding can also be changed here."
-msgstr "Šia taipogi galima pakeisti failo koduotę."
+msgstr "Čia taipogi galima pakeisti failo koduotę."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:49
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:131
@@ -211,9 +214,51 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:77
+msgid "Simplify coverage"
+msgstr "Paprastinti padengimą"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:79
+msgid ""
+"Operates on a coverage (represented as a set of polygon features with "
+"exactly matching edge geometry) to apply a Visvalingam–Whyatt simplification"
+" to the edges, reducing complexity in proportion with the provided "
+"tolerance, while retaining a valid coverage (i.e. no edges will cross or "
+"touch after the simplification). Geometries will never be removed, but they "
+"may be simplified down to just a triangle. Also, some geometries (such as "
+"polygons which have too few non-repeated points) will be returned unchanged."
+msgstr ""
+"Dirba su padengimu (išreikštu aibe poligonų geoobjektų, kurių kratinių "
+"geometrijos tiksliai atitinka) pritaikant kraštinėms Visvalingam–Whyatt "
+"paprastinimą, mažinant sudėtingumą priklausomai nuo pateiktos tolerancijos, "
+"tuo pačiu išlaikant tinkamą padengimą (t.y. po paprastinimo nei viena "
+"kraštinė nesikirs ir nesilies). Geometrijos niekada nebus pašalintos, bet "
+"jos gali būti supaprastintos iki trikampio. Taipogi, kai kurios geometrijos "
+"(tokios kaip poligonai, kurie turi per mažai nepasikartojančių taškų) bus "
+"grąžinamos nepakeistos."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:85
+msgid ""
+"If the input dataset is not a valid coverage due to overlaps, it will still "
+"be simplified, but invalid topology such as crossing edges will still be "
+"invalid."
+msgstr ""
+"Jei įvesties duomenų aibė nėra tinkamas padengimas dėl persidengimų, ji vis "
+"tiek bus supaprastinta, bet netinkama topologija, tokia kaip susikertančios "
+"kraštinės, liks netinkama."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:88
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:165
+msgid "**Requires version of GEOS >= 3.12**"
+msgstr "**Reikia GEOS versijos >= 3.12**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:90
 msgid ":ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`"
 msgstr ":ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:107
+msgid "**Tolerance**"
+msgstr "**Tolerancija**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:108
 msgid "``TOLERANCE``"
@@ -229,6 +274,18 @@ msgstr "[skaičius: slankaus kablelio]"
 msgid "Default: 0.0"
 msgstr "Numatytas: 0.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:112
+msgid ""
+"The maximum distance (in unit of choice) between two consecutive vertices to"
+" get merged."
+msgstr ""
+"Maksimalus atstumas (pasirinktais vienetais) tarp dviejų greta esančių "
+"viršūnių, kad būtų sulietos."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:113
+msgid "**Preserve boundary**"
+msgstr "**Išlaikyti ribą**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:114
 msgid "``PRESERVE_BOUNDARY``"
 msgstr "``PRESERVE_BOUNDARY``"
@@ -241,6 +298,25 @@ msgstr "[boolean]"
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:117
 msgid "Default: False"
 msgstr "Numatytas: ne"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:118
+msgid ""
+"When enabled, the outside edges of the coverage will be preserved without "
+"simplification"
+msgstr "Įjungus, išorinės padengimo ribos bus paliekamos nepaprastintos"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:141
+msgid "**Simplified**"
+msgstr "**Supaprastinta**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:144
+msgid "The output polygon vector layer, with a lower number of vertices."
+msgstr "Išvesties poligonų sluoksnis su mažesniu viršūnių skaičiumi."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:149
+msgid "**Algorithm ID**: ``native:coveragesimplify``"
+msgstr "**Algoritmo ID**: ``native:coveragesimplify``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:167
 msgid ":ref:`qgischeckvalidity`"

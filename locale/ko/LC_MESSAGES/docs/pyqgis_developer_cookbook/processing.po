@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-02 12:51+0000\n"
+"POT-Creation-Date: 2025-07-02 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -33,11 +33,11 @@ msgstr ""
 "번역은 :ref:`여러분이 참여할 수 있는 <translation_guidelines>` 커뮤니티 활동입니다. 이 페이지는 현재 "
 "|translation progress| 번역되었습니다."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:17
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:16
 msgid "Writing a Processing plugin"
 msgstr "공간 처리 플러그인 작성하기"
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:24
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:23
 msgid ""
 "Depending on the kind of plugin that you are going to develop, it might be a"
 " better option to add its functionality as a Processing algorithm (or a set "
@@ -51,7 +51,7 @@ msgstr ""
 " 처리 프레임워크 구성 요소에서 실행할 수 있기 때문에) 추가 기능을 제공할 수 있으며, (공간 처리 프레임워크가 작업의 상당 부분을 "
 "처리해줄 것이기 때문에) 개발 시간도 절약될 것입니다."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:31
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:30
 msgid ""
 "To distribute those algorithms, you should create a new plugin that adds "
 "them to the Processing Toolbox. The plugin should contain an algorithm "
@@ -60,11 +60,11 @@ msgstr ""
 "이런 알고리즘을 배포하려면, 공간 처리 툴박스에 알고리즘을 추가하는 새 플러그인을 생성해야 합니다. 이 플러그인은 알고리즘 제공자를 담고"
 " 있어야 하는데, 플러그인이 인스턴스화될 때 이 알고리즘 제공자를 등록해야 합니다."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:36
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:35
 msgid "Creating from scratch"
 msgstr "처음부터 생성하기"
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:38
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:37
 msgid ""
 "To create a plugin from scratch which contains an algorithm provider, you "
 "can follow these steps using the Plugin Builder:"
@@ -72,11 +72,11 @@ msgstr ""
 "알고리즘 제공자를 담고 있는 플러그인을 처음부터 생성하려면, 플러그인 작성자(Plugin Builder)를 사용해서 다음 단계들을 "
 "따라가면 됩니다:"
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:41
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:40
 msgid "Install the **Plugin Builder** plugin"
 msgstr "**플러그인 작성자** 플러그인을 설치하십시오."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:42
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:41
 msgid ""
 "Create a new plugin using the Plugin Builder. When the Plugin Builder asks "
 "you for the template to use, select \"Processing provider\"."
@@ -84,7 +84,7 @@ msgstr ""
 "플러그인 작성자를 사용해서 새 플러그인을 생성하십시오. 플러그인 작성자가 사용할 템플릿을 고르라고 할 때 \"공간 처리 "
 "제공자(Processing provider)\"를 선택하십시오."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:44
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:43
 msgid ""
 "The created plugin contains a provider with a single algorithm. Both the "
 "provider file and the algorithm file are fully commented and contain "
@@ -94,44 +94,44 @@ msgstr ""
 "생성된 플러그인은 단일 알고리즘을 가진 제공자를 담고 있습니다. 제공자 파일과 알고리즘 파일 둘 다 충분한 주석들과 제공자를 수정하고 "
 "추가적인 알고리즘을 추가하는 방법에 대한 정보를 담고 있습니다. 자세한 정보를 알고 싶다면 이 파일들을 참조하세요."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:49
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:48
 msgid "Updating a plugin"
 msgstr "플러그인을 업데이트하기"
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:51
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:50
 msgid ""
 "If you want to add your existing plugin to Processing, you need to add some "
 "code."
 msgstr "공간 처리 프레임워크에 여러분의 기존 플러그인을 추가하고 싶은 경우, 몇몇 코드를 추가해야 합니다."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:53
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:52
 msgid "In your :file:`metadata.txt` file, you need to add a variable:"
 msgstr ":file:`metadata.txt` 파일에 다음 변수를 추가해야 합니다:"
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:59
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:58
 msgid ""
 "In the Python file where your plugin is setup with the ``initGui`` method, "
 "you need to adapt some lines like this:"
 msgstr "``initGui`` 메소드를 사용해서 플러그인을 초기 설정하는 파이썬 파일에서 몇 줄을 다음과 같이 조정해줘야 합니다:"
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:83
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:82
 msgid ""
 "You can create a folder :file:`processing_provider` with three files in it:"
 msgstr ":file:`processing_provider` 폴더를 생성하고 다음 파일 3개를 생성할 수 있습니다:"
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:85
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:84
 msgid ""
 ":file:`__init__.py` with nothing in it. This is necessary to make a valid "
 "Python package."
 msgstr "아무 내용도 없는 :file:`__init__.py` 파일 --- 이 파일은 무결한 파이썬 패키지를 만들기 위해 필요합니다."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:87
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:86
 msgid ""
 ":file:`provider.py` which will create the Processing provider and expose "
 "your algorithms."
 msgstr ":file:`provider.py` 파일 --- 이 파일이 공간 처리 제공자를 생성하고 여러분의 알고리즘을 알릴 것입니다."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:131
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:129
 msgid ""
 ":file:`example_processing_algorithm.py` which contains the example algorithm"
 " file. Copy/paste the content of the :source:`script template file "
@@ -142,11 +142,7 @@ msgstr ""
 " :source:`스크립트 템플릿 파일 <python/plugins/processing/script/ScriptTemplate.py>` "
 "의 내용을 복사/붙여넣기한 다음 여러분의 필요에 따라 업데이트하십시오."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:136
-msgid "You should have a tree similar to this :"
-msgstr "트리가 다음과 비슷하게 보여야 합니다:"
-
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:149
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:147
 msgid ""
 "Now you can reload your plugin in QGIS and you should see your example "
 "script in the Processing toolbox and modeler."

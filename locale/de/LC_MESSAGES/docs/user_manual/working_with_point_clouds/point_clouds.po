@@ -9,6 +9,7 @@
 # Harrissou Sant-anna, 2025
 # Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Transifex Bot <>, 2025
+# Fischer Teamplan, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Fischer Teamplan, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,9 +37,85 @@ msgstr ""
 "<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
 " übersetzt."
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:6
+msgid "Working with Point Clouds"
+msgstr "Arbeiten mit Punktwolken"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:16
+msgid "Introduction to Point Clouds"
+msgstr "Einführung in Punktwolken"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:18
+msgid "**What is A Point Cloud?**"
+msgstr "**Was ist eine Punktwolke?**"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:20
+msgid ""
+"A point cloud is a three-dimensional image of a space made up of many "
+"individual of data points (up to billions, even trillions). Each of the "
+"points has an x, y and z coordinate. Depending on the capture method, point "
+"clouds usually also have additional attributes that came from the capture, "
+"such as color values or intensity. These attributes can be used, for "
+"instance, to display point clouds in different colors. In QGIS, a point "
+"cloud can be used to generate a three-dimensional image of the landscape (or"
+" of another space)."
+msgstr ""
+"Eine Punktwolke ist ein dreidimensionales Bild eines Raums, das aus vielen "
+"einzelnen Datenpunkten (bis zu Milliarden oder sogar Billionen) besteht. "
+"Jeder dieser Punkte hat eine x-, y- und z-Koordinate. Je nach "
+"Erfassungsmethode verfügen Punktwolken in der Regel auch über zusätzliche "
+"Attribute, die aus der Erfassung stammen, wie beispielsweise Farbwerte oder "
+"Intensität. Diese Attribute können beispielsweise dazu verwendet werden, "
+"Punktwolken in verschiedenen Farben darzustellen. In QGIS kann eine "
+"Punktwolke verwendet werden, um ein dreidimensionales Bild der Landschaft "
+"(oder eines anderen Raums) zu erzeugen."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:29
+msgid "**Supported Formats**"
+msgstr "**Unterstützte Formate**"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:31
+msgid ""
+"QGIS supports the data formats Entwine Point Tile (EPT) and LAS/LAZ. To work"
+" with point clouds, QGIS always saves the data in EPT. EPT is a storage "
+"format that consists of several files stored in a common folder. To allow "
+"quick access to the data, EPT uses indexing. For more information on the EPT"
+" format, see `entwine homepage <https://entwine.io/en/latest/entwine-point-"
+"tile.html>`_"
+msgstr ""
+"QGIS unterstützt die Datenformate Entwine Point Tile (EPT) und LAS/LAZ. Für "
+"die Arbeit mit Punktwolken speichert QGIS die Daten immer im EPT-Format. EPT"
+" ist ein Speicherformat, das aus mehreren Dateien besteht, die in einem "
+"gemeinsamen Ordner gespeichert sind. Um einen schnellen Zugriff auf die "
+"Daten zu ermöglichen, verwendet EPT eine Indizierung. Weitere Informationen "
+"zum EPT-Format finden Sie auf der Entwine-Homepage "
+"<https://entwine.io/en/latest/entwine-point-tile.html>_"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:52
+msgid ""
+"Due to the large number of data points, it is not possible to display an "
+"attribute table of point clouds in QGIS. However, the |identify| "
+":ref:`Identify tool <identify>` supports point clouds, so you can display "
+"all attributes, even of a single data point."
+msgstr ""
+"Aufgrund der großen Anzahl von Datenpunkten ist es nicht möglich, eine "
+"Attributtabelle von Punktwolken in QGIS anzuzeigen. Das Werkzeug |identify| "
+":ref:`Objekte abfragen` unterstützt jedoch Punktwolken, sodass Sie alle "
+"Attribute anzeigen können, auch die eines einzelnen Datenpunkts."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:796
 msgid "identify"
 msgstr "identify"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:65
+msgid ""
+"The :guilabel:`Layer Properties` dialog for a point cloud layer offers "
+"general settings for the layer and its rendering. It also provides "
+"information about the layer."
+msgstr ""
+"Der :guilabel:`Layereigenschaften` Dialog für eine Punktwolkenebene enthält "
+"allgemeine Einstellungen für die Ebene und ihre Darstellung. Außerdem werden"
+" Informationen zur Ebene angezeigt."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:69
 msgid "To access the :guilabel:`Layer Properties` dialog:"
@@ -107,6 +184,27 @@ msgstr ""
 "vorgesehen und stellt einen interessanten Ort dar, um schnell "
 "zusammengefasste Informationen und Metadaten über den aktuellen Layer zu "
 "erhalten. Die bereitgestellten Informationen sind:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:108
+msgid ""
+"General such as name in the project, source path, last save time and size, "
+"the used provider"
+msgstr ""
+"Allgemeine Angaben wie Name im Projekt, Quellpfad, Zeitpunkt der letzten "
+"Speicherung und Größe, verwendeter Anbieter"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:114
+msgid "Based on the provider of the layer: extent and number of points"
+msgstr ""
+"Basierend auf dem Anbieter des Layers: Ausdehnung und Anzahl der Punkte"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:115
+msgid ""
+"The Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr ""
+"Das Koordinatenreferenzsystem: Name, Einheiten, Methode, Genauigkeit, "
+"Referenz (d. h. ob es statisch oder dynamisch ist)"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:134
 msgid "Source Properties"

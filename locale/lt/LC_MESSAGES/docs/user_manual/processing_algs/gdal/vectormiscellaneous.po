@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:45+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -188,7 +188,7 @@ msgstr "``UNIONED``"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1003
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1009
 msgid "[boolean]"
-msgstr "[boolean]"
+msgstr "[loginis]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:41
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:381
@@ -244,8 +244,12 @@ msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:49
-msgid "Specify the output layer containing only the duplicates. One of:"
-msgstr "Nurodykite išvesties sluoksnį, kuriame yra tik dublikatai. Vienas iš:"
+msgid ""
+"Specify the output layer containing only the duplicates. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite išvesties sluoksnį, kuriame bus tik dublikatai. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -271,7 +275,7 @@ msgstr "Išvestys"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:223
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:519
 msgid "[vector: any]"
-msgstr "[vector: any]"
+msgstr "[vektorius: bet koks]"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:71
 msgid "The output virtual vector made from the chosen sources"
@@ -302,6 +306,18 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:86
+msgid "Execute SQL"
+msgstr "Vykdyti SQL"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:88
+msgid ""
+"Runs a simple or complex query with SQL syntax on the source layer. The "
+"result of the query will be added as a new layer."
+msgstr ""
+"Vykdo šaltinio sluoksnyje paprastą arba sudėtingą SQL sintaksės užklausą. "
+"Užklausos rezultatas pridedamas kaip naujas sluoksnis."
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:91
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:202
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:502
@@ -325,6 +341,14 @@ msgstr "Baziniai parametrai"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:988
 msgid "**Input layer**"
 msgstr "**Įvesties sluoksnis**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:112
+msgid "OGR-supported input vector layer"
+msgstr "OGR-palaikomas įvesties vektorinis sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:113
+msgid "**SQL expression**"
+msgstr "**SQL išraiška**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:114
 msgid "``SQL``"
@@ -361,7 +385,19 @@ msgstr "``SQL``"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:925
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:1043
 msgid "[string]"
-msgstr "[string]"
+msgstr "[tekstas]"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:116
+msgid ""
+"Defines the SQL query, for example ``SELECT * FROM my_table WHERE name is "
+"not null``."
+msgstr ""
+"Apibrėžia SQL užklausą, pavyzdžiui ``SELECT * FROM mano_lentele WHERE "
+"pavadinimas is not null``."
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:118
+msgid "**SQL dialect**"
+msgstr "**SQL dialektas**"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:119
 msgid "``DIALECT``"
@@ -380,6 +416,44 @@ msgstr "[sąrašas]"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:533
 msgid "Default: 0"
 msgstr "Numatytas: 0"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:123
+msgid "SQL dialect to use. One of:"
+msgstr "Naudojamas SQL dialektas. Vienas iš:"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:125
+msgid "0 --- None"
+msgstr "0 --- Jokio"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:126
+msgid "1 --- OGR SQL"
+msgstr "1 --- OGR SQL"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:127
+msgid "2 --- SQLite"
+msgstr "2 --- SQLite"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:128
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:174
+msgid "**SQL result**"
+msgstr "**SQL rezultatas**"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:131
+msgid ""
+"Specification of the output layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Išvesties sluoksnio specifikacija. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:138
+msgid ""
+"For ``Save to File``, the output format has to be specified. All GDAL vector"
+" formats are supported. For ``Save to a Temporary File`` the default output "
+"vector layer format will be used."
+msgstr ""
+"Parinkus ``Įrašyti į failą`` reikia nurodyti išvesties formatą. Palaikomi "
+"visi GDAL vektoriniai formatai. Parinkus ``Įrašyti į laikiną failą``, bus "
+"naudojamas numatytasis vektorinių išvesties sluoksnių formatas."
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:144
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:911
@@ -457,6 +531,18 @@ msgstr "Numatytas: '' (jokių papildomų parinkčių)"
 msgid "Additional GDAL creation options."
 msgstr "Papildomos GDAL kūrimo parinktys."
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:177
+msgid "Vector layer created by the query"
+msgstr "Pagal užklausą sukurtas vektorinis sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:182
+msgid "**Algorithm ID**: ``gdal:executesql``"
+msgstr "**Algoritmo ID**: ``gdal:executesql``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:217
+msgid "**Database (connection name)**"
+msgstr "**Duomenų bazė (jungties pavadinimas)**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:218
 msgid "``DATABASE``"
 msgstr "``DATABASE``"
@@ -526,10 +612,20 @@ msgstr "``T_SRS``"
 msgid "``S_SRS``"
 msgstr "``S_SRS``"
 
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:282
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:618
+msgid "**Schema (schema name)**"
+msgstr "**Schema (schemos pavadinimas)**"
+
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:285
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:621
 msgid "``SCHEMA``"
 msgstr "``SCHEMA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:288
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:624
+msgid "Default: 'public'"
+msgstr "Numatyta: 'public'"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:293
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:629
@@ -560,6 +656,11 @@ msgstr "**Geometrijos stulpelio pavadinimas**"
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:658
 msgid "``GEOCOLUMN``"
 msgstr "``GEOCOLUMN``"
+
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:326
+#: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:661
+msgid "Default: 'geom'"
+msgstr "Numatytas: 'geom'"
 
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:332
 #: ../../docs/user_manual/processing_algs/gdal/vectormiscellaneous.rst:667

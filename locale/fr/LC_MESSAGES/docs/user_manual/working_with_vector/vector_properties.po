@@ -6173,6 +6173,25 @@ msgstr ""
 "prédéfinies extraites de la base de données. Ceci n'est actuellement pris en"
 " charge que par le fournisseur PostgreSQL, pour les champs de type ``enum``."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2704
+msgid ""
+"**Attachment**: Uses a \"Open file\" dialog to store file path in a relative"
+" or absolute mode. It can be used to display the document path as a "
+"hyperlink or render the document within a dedicated widget in the form. "
+"Supported document types are image, web page, audio and video, and the "
+"supported file formats depend on the Operating System. You can also "
+"configure an :ref:`external storage system <external_storage>` to "
+"fetch/store resources."
+msgstr ""
+"**Pièce jointe**: Ouvre une fenêtre de sélection de fichier pour en stocker "
+"l'emplacement sous forme absolue ou relative. Cela peut permettre d'afficher"
+" le chemin du fichier sous forme d'hyperlien ou de l'afficher dans un "
+"composant dédié du formulaire. Les types de documents pris en charge sont "
+"image, page web, audio et vidéo, et les formats supportés sont dépendants du"
+" système d'exploitation. Vous pouvez aussi configurer un :ref:`système de "
+"stockage externe <external_storage>` pour récupérer ou déposer des "
+"ressources."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2711
 msgid "**Relative Path in Attachment widget**"
 msgstr "**Widget Chemin relatif dans la pièce jointe**"
@@ -6209,6 +6228,43 @@ msgstr ""
 "pris en charge par le fournisseur PostgreSQL, pour les champs de type "
 "``hstore``."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2723
+msgid ""
+"**JSON View**: Displays JSON data in a syntax highlighted text edit or in "
+"tree view. This widget is currently read only. Several options are available"
+" to change how the data is displayed. 'Default view' specify if the widget "
+"should appear in Text or Tree mode. 'Format JSON' has three options which "
+"are related to the tree view only:"
+msgstr ""
+"**Vue JSON**: Affiche des données JSON dans un éditeur de texte avec "
+"surbrillance de syntaxe ou dans une vue d'arborescence. Ce composant ne "
+"permet actuellement que la lecture des données. Plusieurs options sont "
+"disponibles pour modifier l'affichage des données. 'Vue par défaut' permet "
+"de sélectionner si le coposant doit apparaître en vue Texte ou Arborescence."
+" 'Formater le JSON' propose des options liées uniquement à la vue "
+"Arborescence :"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2729
+msgid ""
+"Indented: Display data in a human readable form with newlines and four space"
+" characters for indentation."
+msgstr ""
+"Indenté: Les données sont affichéess dans une forme plus lisible pour un "
+"humain avec des sauts de lignes et des indentations de quatre espaces."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2730
+msgid ""
+"Compact: Display data in a one-line size optimized string without newlines "
+"or spaces."
+msgstr ""
+"Compact: Les données sont affichées dans une chaîne de caractères optimisée "
+"sur une ligne sans sauts de lignes ou espaces."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2731
+msgid "Disabled: Display data as it comes from the provider."
+msgstr ""
+"Désactivé: Affiche les données telles qu'elles sont fournies par la source."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2733
 msgid ""
 "**List**: Displays a single column table to add different values within a "
@@ -6227,6 +6283,36 @@ msgstr ""
 "**Plage** : Vous permet de spécifier une plage de valeurs numériques "
 "disponibles. Il peut s'agir d'une barre coulissante ou d'une zone de texte "
 "éditable."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2741
+msgid ""
+"Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined "
+"**range Field Domains** will be automatically recognized by QGIS and "
+"assigned a **Range** widget for the relevant fields. The widget will be "
+"prefilled with the minimum and maximum values specified in the domain."
+msgstr ""
+"Certaines couches provenant par exemple de Geopackage ou de File Geodatabase"
+" Esri et comportant un **domaine par plage** seront automatiquement "
+"reconnues par QGIS et un composant **Plage** sera paramétré par défaut sur "
+"les champs adéquats. Le composant sera prérempli avec les bornes minimum et "
+"maximum définies dans le domaine."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2745
+msgid ""
+"**Relation Reference**: This is the default widget assigned to the "
+"referencing field (i.e., the foreign key in the child layer) when a "
+":ref:`relation <vector_relations>` is set. It provides direct access to the "
+"parent feature's form which in turn embeds the list and form of its "
+"children. The number of entries in the widget can be limited for efficiency,"
+" and if limit is not set, all entries will be loaded."
+msgstr ""
+"**Référence de la relation**: Il s'agit du composant par défaut paramétré "
+"sur un champ référençant (c'est-à-dire la clé étrangère d'une couche enfant)"
+" lorsqu'une :ref:`relation <vector_relations>`est définie. Il permet un "
+"accès direct au formulaire de la couche parente, qui contient lui-même les "
+"listes et formulaires de ses enfants. Le nombre d'entrées dans le composant "
+"peut être limité pour plus d'efficacité. Si aucune limite n'est définie, "
+"toutes les entrées seront chargées."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2750
 msgid ""
@@ -6263,10 +6349,21 @@ msgid ""
 " attribute, the description is shown in the combo box. You can define values"
 " manually or load them from a layer or a CSV file."
 msgstr ""
-"**Valeur de carte** : une zone de liste déroulante avec des éléments "
+"**Liste de valeurs** : une zone de liste déroulante avec des éléments "
 "prédéfinis. La valeur est stockée dans l'attribut, la description est "
 "affichée dans la zone de liste déroulante. Vous pouvez définir des valeurs "
 "manuellement ou les charger à partir d'une couche ou d'un fichier CSV."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2764
+msgid ""
+"Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined "
+"**coded Field Domains** will be automatically recognized by QGIS and "
+"assigned a **Value Map** widget for the relevant fields."
+msgstr ""
+"Certaines couches provenant par exemple de Geopackage ou de File Geodatabase"
+" Esri et comportant un **domaine à valeurs codées** seront automatiquement "
+"reconnues par QGIS et un composant **Liste de valeur** sera paramétré par "
+"défaut sur les champs adéquats."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2767
 msgid ""
@@ -6283,6 +6380,18 @@ msgstr ""
 "par valeur, autoriser les sélections multiples et utiliser l’auto-"
 "complétion. Les formulaires afficheront une liste déroulante ou un champ "
 "d'édition de texte lorsque la case à cocher \"Compléter\" est activée."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2773
+msgid ""
+"If a layer that is stored in PostgreSQL, GeoPackage or SpatiaLite is "
+"configured to use a value relation widget, but the required layer is not "
+"already loaded into the project, QGIS will automatically search for the "
+"layer in the same database/connection."
+msgstr ""
+"Si une couche stockée dans PostgreSQL, GeoPackage ou Spatialite est "
+"configurée pour utiliser un composant Valeur relationnelle mais que la "
+"couche n'est pas chargée dans le projet, QGIS recherchera automatiquement "
+"cette couche dans la même base de données ou connexion."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2783
 msgid "Joins Properties"
@@ -6917,6 +7026,16 @@ msgstr ""
 ":guilabel:`Form`: l'action est disponible seulement dans un formulaire "
 "préparé avec le concepteur :ref:`glisser/déplacer <drag_drop_designer>`."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3101
+msgid ""
+":guilabel:`Layer`: action is available in the action button in the attribute"
+" table toolbar. Be aware that this type of action involves the entire layer "
+"and not the single features."
+msgstr ""
+":guilabel:`Couche`: l'action est disponible dans le bouton action de la "
+"barre d'outils dans la table attributaire. Sachez que ce type d'action agit "
+"sur la couche et non sur les entités individuelles."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3104
 #, python-format
 msgid ""
@@ -7005,9 +7124,44 @@ msgstr ""
 " par la valeur du champ sélectionné dans les résultats de l'identification "
 "ou dans la table d'attributs."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3147
+msgid "Duplicating Actions"
+msgstr "Copier des actions"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3149
+msgid ""
+"QGIS allows you to duplicate existing actions. To duplicate an attribute "
+"action, open the vector :guilabel:`Layer Properties` dialog and click on the"
+" :guilabel:`Actions` tab. In the :guilabel:`Actions` tab, click the "
+"|duplicateLayout| :sup:`Duplicate an action` to open the "
+":guilabel:`Duplicate Action` dialog. You must have selected at least one "
+"existing action in order to create a duplicate."
+msgstr ""
+"QGIS vous permet de copier des action existantes. Pour copier une action, "
+"ouvrez la fenêtre :guilabel:`Propriétés…` de la couche et sélectionnez "
+"l'onglet :guilabel:`Actions`. Sélectionnez ensuite une action et cliquez sur"
+" |duplicateLayout| :sup:`Duplicate an action` pour ouvrir la fenêtre "
+":guilabel:`Duplicate Action`."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3962
 msgid "duplicateLayout"
 msgstr "duplicateLayout"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3155
+msgid ""
+"In the dialogue that appears, make any changes that are necessary. See "
+":ref:`adding_actions` for further information. Once finished, press "
+":guilabel:`OK` to create a duplicate of the action with any changes that you"
+" made. If you did not edit the description, or if you changed it to be "
+"identical to the description of any other existing action, \"_1\" will be "
+"added to the end of it."
+msgstr ""
+"Faites les changements nécessaires dans  cette fenêtre. Vous pouvez "
+"consulter :ref:`adding_actions` pour plus d'informations. Pour terminer, "
+"cliquez sur :guilabel:`OK` pour créer une copie de l'action comprenant les "
+"modifications que vous avez effectuées. Si vous n'avez pas modifié la "
+"description ou si elle est identique à celle d'une autre action, \"_1\" sera"
+" ajouté à la fin."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3165
 msgid "Using Actions"
@@ -7358,6 +7512,16 @@ msgstr ""
 "L'onglet |display| :guilabel:`Infobulles` vous permet de configurer les "
 "champs à utiliser pour l'identification des entités :"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3351
+msgid ""
+"The :guilabel:`Display name`: based on a field or an :ref:`expression "
+"<vector_expressions>`. By default, this is set to the first field in the "
+"layer if no field with ``<name>`` component exists. This is used as:"
+msgstr ""
+"Le :guilabel:`Nom d'affichage`: basé sur un champ ou une :ref:`expression "
+"<vector_expressions>`. Par défaut, il s'agit du premier champ de la couche "
+"si aucun champ ne comporte les caractères ``<name>``. C'est utilisé comme :"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3355
 msgid ""
 "the label shown on top of the feature information in the :ref:`Identify tool"
@@ -7381,6 +7545,14 @@ msgid ""
 msgstr ""
 "l'identifiant de l'entité dans la :ref:`vue formulaire "
 "<attribute_table_view>` de la table attributaire"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3359
+msgid ""
+"the feature identifier when the map or layout is exported to a layered "
+"output format such as Geospatial PDF"
+msgstr ""
+"identifiant d'entité lorsque la carte ou la mise en page est exportée dans "
+"un format comportant des couches comme Geospatial PDF"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4016
 msgid "mapTips"

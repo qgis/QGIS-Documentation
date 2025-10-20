@@ -6,10 +6,10 @@
 # 
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
-# tomoya miyoshi, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
 # Hinako Terado, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Hinako Terado, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -97,9 +97,13 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterArea <qgis.core.QgsProcessingParameterArea>`"
 
+#: ../../docs/user_manual/processing/parameters.rst:32
+msgid "A numeric parameter representing an area measure"
+msgstr "面積を表す数値的なパラメータ"
+
 #: ../../docs/user_manual/processing/parameters.rst:33
 msgid "Authentication Configuration"
-msgstr "認証の設定"
+msgstr "認証の構成"
 
 #: ../../docs/user_manual/processing/parameters.rst:34
 msgid ""
@@ -159,6 +163,10 @@ msgstr "``alg.BOOL``"
 msgid "A boolean value"
 msgstr "ブール値"
 
+#: ../../docs/user_manual/processing/parameters.rst:46
+msgid "Connection Name"
+msgstr "接続名"
+
 #: ../../docs/user_manual/processing/parameters.rst:47
 #: ../../docs/user_manual/processing/parameters.rst:190
 msgid ""
@@ -167,6 +175,12 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterProviderConnection "
 "<qgis.core.QgsProcessingParameterProviderConnection>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:49
+msgid ""
+"A selection from available registered connections for a particular data "
+"provider"
+msgstr "データプロバイダごとに利用可能な登録済みの接続の中からの選択"
 
 #: ../../docs/user_manual/processing/parameters.rst:50
 msgid "Color"
@@ -186,6 +200,10 @@ msgstr "``alg.COLOR``"
 msgid "A color"
 msgstr "色"
 
+#: ../../docs/user_manual/processing/parameters.rst:54
+msgid "Coordinate Operation"
+msgstr "座標演算"
+
 #: ../../docs/user_manual/processing/parameters.rst:55
 msgid ""
 ":class:`QgsProcessingParameterCoordinateOperation "
@@ -200,7 +218,7 @@ msgstr "``alg.COORDINATE_OPERATION``"
 
 #: ../../docs/user_manual/processing/parameters.rst:57
 msgid "A coordinate operation (for CRS transformations)"
-msgstr "座標操作（CRS変換）"
+msgstr "座標演算（CRS変換）"
 
 #: ../../docs/user_manual/processing/parameters.rst:58
 msgid "CRS"
@@ -219,6 +237,10 @@ msgstr "``alg.CRS``"
 #: ../../docs/user_manual/processing/parameters.rst:61
 msgid "A Coordinate Reference System"
 msgstr "座標参照系"
+
+#: ../../docs/user_manual/processing/parameters.rst:62
+msgid "Database Schema"
+msgstr "データベーススキーマ"
 
 #: ../../docs/user_manual/processing/parameters.rst:63
 msgid ""
@@ -272,6 +294,10 @@ msgstr ""
 msgid "``alg.DATE``"
 msgstr "``alg.DATE``"
 
+#: ../../docs/user_manual/processing/parameters.rst:73
+msgid "A pure date"
+msgstr "日付"
+
 #: ../../docs/user_manual/processing/parameters.rst:74
 msgid "Datetime"
 msgstr "日時"
@@ -287,6 +313,10 @@ msgstr ""
 #: ../../docs/user_manual/processing/parameters.rst:76
 msgid "``alg.DATETIME``"
 msgstr "``alg.DATETIME``"
+
+#: ../../docs/user_manual/processing/parameters.rst:77
+msgid "A datetime"
+msgstr "日時"
 
 #: ../../docs/user_manual/processing/parameters.rst:78
 msgid "Distance"
@@ -310,6 +340,10 @@ msgstr "``alg.DISTANCE``"
 msgid "A double numeric parameter for distance values"
 msgstr "距離の値用の倍精度数値パラメータ"
 
+#: ../../docs/user_manual/processing/parameters.rst:82
+msgid "DXF Layers"
+msgstr "DXFレイヤ"
+
 #: ../../docs/user_manual/processing/parameters.rst:83
 msgid ""
 ":class:`QgsProcessingParameterDxfLayers "
@@ -321,6 +355,10 @@ msgstr ""
 #: ../../docs/user_manual/processing/parameters.rst:85
 msgid "A list of vector layers to export as DXF file"
 msgstr "DXFファイルとしてエクスポートするベクタレイヤのリスト"
+
+#: ../../docs/user_manual/processing/parameters.rst:86
+msgid "Enum"
+msgstr "列挙"
 
 #: ../../docs/user_manual/processing/parameters.rst:87
 msgid ""
@@ -390,6 +428,10 @@ msgstr "``alg.FIELD``"
 msgid "A field in the attribute table of a vector layer"
 msgstr "ベクタレイヤの属性テーブルのフィールド"
 
+#: ../../docs/user_manual/processing/parameters.rst:102
+msgid "Field Aggregates"
+msgstr "属性によるグループ化（集約）"
+
 #: ../../docs/user_manual/processing/parameters.rst:103
 msgid ""
 ":class:`QgsProcessingParameterAggregate "
@@ -398,6 +440,16 @@ msgstr ""
 ":class:`QgsProcessingParameterAggregate "
 "<qgis.core.QgsProcessingParameterAggregate>`"
 
+#: ../../docs/user_manual/processing/parameters.rst:105
+msgid ""
+"A parameter for “aggregate” configurations, which consist of a definition of"
+" desired output fields, types, and aggregate used to populate them"
+msgstr "「集約」設定のパラメータ。これは、求めたい出力フィールド、型、それらを加えるために使用される集約の定義で構成される"
+
+#: ../../docs/user_manual/processing/parameters.rst:107
+msgid "Fields Mapper"
+msgstr "属性の対応関係"
+
 #: ../../docs/user_manual/processing/parameters.rst:108
 msgid ""
 ":class:`QgsProcessingParameterFieldMapping "
@@ -405,6 +457,17 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterFieldMapping "
 "<qgis.core.QgsProcessingParameterFieldMapping>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:110
+msgid ""
+"A parameter for “field mapping” configurations, which consist of a "
+"definition of desired output fields, types, and expressions used to populate"
+" them"
+msgstr "「属性の対応関係」設定のパラメータ。これは、求めたい出力フィールド、型、それらを加えるために使用される式の定義で構成される"
+
+#: ../../docs/user_manual/processing/parameters.rst:112
+msgid "File/Folder"
+msgstr "File/Folder"
 
 #: ../../docs/user_manual/processing/parameters.rst:113
 msgid ""
@@ -511,6 +574,10 @@ msgstr "``alg.LAYOUT``"
 msgid "A layout"
 msgstr "レイアウト"
 
+#: ../../docs/user_manual/processing/parameters.rst:136
+msgid "Print Layout Item"
+msgstr "印刷レイアウトアイテム"
+
 #: ../../docs/user_manual/processing/parameters.rst:137
 msgid ""
 ":class:`QgsProcessingParameterLayoutItem "
@@ -526,6 +593,10 @@ msgstr "``alg.LAYOUT_ITEM``"
 #: ../../docs/user_manual/processing/parameters.rst:139
 msgid "A layout item"
 msgstr "レイアウトアイテム"
+
+#: ../../docs/user_manual/processing/parameters.rst:140
+msgid "Map Layer"
+msgstr "地図レイヤ"
 
 #: ../../docs/user_manual/processing/parameters.rst:141
 msgid ""
@@ -544,6 +615,10 @@ msgstr "``alg.MAPLAYER``"
 #: ../../docs/user_manual/processing/parameters.rst:285
 msgid "A map layer"
 msgstr "マップレイヤ"
+
+#: ../../docs/user_manual/processing/parameters.rst:144
+msgid "Map Theme"
+msgstr "地図テーマ"
 
 #: ../../docs/user_manual/processing/parameters.rst:145
 msgid ""
@@ -581,6 +656,10 @@ msgstr "``alg.MATRIX``"
 msgid "A matrix"
 msgstr "配列"
 
+#: ../../docs/user_manual/processing/parameters.rst:152
+msgid "Mesh Dataset Groups"
+msgstr "メッシュデータセットグループ"
+
 #: ../../docs/user_manual/processing/parameters.rst:153
 msgid ""
 ":class:`QgsProcessingParameterMeshDatasetGroups "
@@ -589,6 +668,14 @@ msgstr ""
 ":class:`QgsProcessingParameterMeshDatasetGroups "
 "<qgis.core.QgsProcessingParameterMeshDatasetGroups>`"
 
+#: ../../docs/user_manual/processing/parameters.rst:155
+msgid "Dataset groups of mesh layer"
+msgstr "メッシュレイヤのデータセットグループ"
+
+#: ../../docs/user_manual/processing/parameters.rst:156
+msgid "Mesh Dataset Time"
+msgstr "メッシュデータセット時間"
+
 #: ../../docs/user_manual/processing/parameters.rst:157
 msgid ""
 ":class:`QgsProcessingParameterMeshDatasetTime "
@@ -596,6 +683,10 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterMeshDatasetTime "
 "<qgis.core.QgsProcessingParameterMeshDatasetTime>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:159
+msgid "Dataset index from a mesh layer by time setting"
+msgstr "時刻設定によるメッシュレイヤのデータセットインデックス"
 
 #: ../../docs/user_manual/processing/parameters.rst:160
 msgid "Mesh Layer"
@@ -616,6 +707,10 @@ msgstr "``alg.MESH_LAYER``"
 #: ../../docs/user_manual/processing/parameters.rst:163
 msgid "A mesh layer"
 msgstr "メッシュレイヤ"
+
+#: ../../docs/user_manual/processing/parameters.rst:164
+msgid "Multiple Input"
+msgstr "複数入力"
 
 #: ../../docs/user_manual/processing/parameters.rst:165
 msgid ""
@@ -675,6 +770,10 @@ msgstr "``alg.POINT``"
 msgid "A point"
 msgstr "点"
 
+#: ../../docs/user_manual/processing/parameters.rst:176
+msgid "Point Cloud Attribute"
+msgstr "点群属性"
+
 #: ../../docs/user_manual/processing/parameters.rst:177
 msgid ""
 ":class:`QgsProcessingParameterPointCloudAttribute "
@@ -682,6 +781,10 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterPointCloudAttribute "
 "<qgis.core.QgsProcessingParameterPointCloudAttribute>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:179
+msgid "An attribute from a point cloud layer"
+msgstr "点群レイヤの属性"
 
 #: ../../docs/user_manual/processing/parameters.rst:181
 msgid ""
@@ -845,6 +948,10 @@ msgstr "``alg.STRING``"
 msgid "A text string"
 msgstr "テキストストリング"
 
+#: ../../docs/user_manual/processing/parameters.rst:218
+msgid "TIN Creation Layers"
+msgstr "TIN作成レイヤ"
+
 #: ../../docs/user_manual/processing/parameters.rst:219
 msgid ""
 ":class:`QgsProcessingParameterTinInputLayers "
@@ -852,6 +959,12 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterTinInputLayers "
 "<qgis.core.QgsProcessingParameterTinInputLayers>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:221
+msgid ""
+"Selection of multiple layers to create a TIN with vertices and/or break "
+"lines"
+msgstr "頂点及び／又はブレークラインを使ってTINを生成するための複数レイヤの選択"
 
 #: ../../docs/user_manual/processing/parameters.rst:223
 msgid "Time"
@@ -868,6 +981,14 @@ msgstr ""
 #: ../../docs/user_manual/processing/parameters.rst:225
 msgid "``alg.TIME``"
 msgstr "``alg.TIME``"
+
+#: ../../docs/user_manual/processing/parameters.rst:226
+msgid "A pure time"
+msgstr "時刻"
+
+#: ../../docs/user_manual/processing/parameters.rst:227
+msgid "Vector Features"
+msgstr "ベクタ地物"
 
 #: ../../docs/user_manual/processing/parameters.rst:228
 msgid ""
@@ -925,6 +1046,10 @@ msgid ""
 "for a vector layer created by the algorithm"
 msgstr "アルゴリズムで作成されたベクタレイヤの保存先パスを指定するためのベクタレイヤの保存先パラメータ"
 
+#: ../../docs/user_manual/processing/parameters.rst:240
+msgid "Vector Tile Writer Layers"
+msgstr "ベクタタイル書き出しレイヤ"
+
 #: ../../docs/user_manual/processing/parameters.rst:241
 msgid ""
 ":class:`QgsProcessingParameterVectorTileDestination "
@@ -933,6 +1058,10 @@ msgstr ""
 ":class:`QgsProcessingParameterVectorTileDestination "
 "<qgis.core.QgsProcessingParameterVectorTileDestination>`"
 
+#: ../../docs/user_manual/processing/parameters.rst:245
+msgid "Volume"
+msgstr "体積"
+
 #: ../../docs/user_manual/processing/parameters.rst:246
 msgid ""
 ":class:`QgsProcessingParameterVolume "
@@ -940,6 +1069,10 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingParameterVolume "
 "<qgis.core.QgsProcessingParameterVolume>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:248
+msgid "A numeric parameter representing a volume measure"
+msgstr "体積を表す数値的なパラメータ"
 
 #: ../../docs/user_manual/processing/parameters.rst:252
 msgid "Output types"
@@ -1060,3 +1193,7 @@ msgid ""
 msgstr ""
 ":class:`QgsProcessingOutputVectorTileLayer "
 "<qgis.core.QgsProcessingOutputVectorTileLayer>`"
+
+#: ../../docs/user_manual/processing/parameters.rst:306
+msgid "A vector tile layer"
+msgstr "ベクタタイルレイヤ"

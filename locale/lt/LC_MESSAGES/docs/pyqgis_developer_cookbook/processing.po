@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-02 12:51+0000\n"
+"POT-Creation-Date: 2025-07-02 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -34,11 +34,11 @@ msgstr ""
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:17
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:16
 msgid "Writing a Processing plugin"
 msgstr "Apdorojimo priedo rašymas"
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:24
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:23
 msgid ""
 "Depending on the kind of plugin that you are going to develop, it might be a"
 " better option to add its functionality as a Processing algorithm (or a set "
@@ -54,7 +54,7 @@ msgstr ""
 "modelyje arba paketinio apdorojimo sąsajoje). Tai taipogi leistų greitesnį "
 "kūrimą (kadangi Apdorojimas užims didžiąją darbo dalį)."
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:31
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:30
 msgid ""
 "To distribute those algorithms, you should create a new plugin that adds "
 "them to the Processing Toolbox. The plugin should contain an algorithm "
@@ -63,3 +63,39 @@ msgstr ""
 "Norėdami platinti tokius algoritmus, jūs turite sukurti priedą kuris prideda"
 " juos į Apdorojimo įrankinę. Priedas turi turėti algoritmo tiekėją, kuris "
 "turi būti registruotas kai sukuriama priedo kopija."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:35
+msgid "Creating from scratch"
+msgstr "Kūrimas nuo nulio"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:37
+msgid ""
+"To create a plugin from scratch which contains an algorithm provider, you "
+"can follow these steps using the Plugin Builder:"
+msgstr ""
+"Norėdami sukurti nuo nulio priedą, kuris turi algoritmo tiekėją, jūs galite "
+"vykdyti šiuos žingsnius, naudodami Priedų kūrėją:"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:40
+msgid "Install the **Plugin Builder** plugin"
+msgstr "Įdiekite **Priedų kūrėjo** priedą"
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:41
+msgid ""
+"Create a new plugin using the Plugin Builder. When the Plugin Builder asks "
+"you for the template to use, select \"Processing provider\"."
+msgstr ""
+"Sukurkite naują priedą, naudodami Priedų kūrėją. Kai Priedų kūrėjas jūsų "
+"paprašys parinkti šabloną, parinkite „Apdorojimo tiekėjas“."
+
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:43
+msgid ""
+"The created plugin contains a provider with a single algorithm. Both the "
+"provider file and the algorithm file are fully commented and contain "
+"information about how to modify the provider and add additional algorithms. "
+"Refer to them for more information."
+msgstr ""
+"Sukurtas priedas turi tiekėja su vienu algoritmu. Tiek tiekėjo failas, tiek "
+"algoritmo failas yra pilnai komentuoti ir juose yra informacija apie tai, "
+"kaip keisti tiekėją bei pridėti papildomus algoritmus. Ten rasite daugiau "
+"informacijos."

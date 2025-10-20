@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-17 20:03+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,13 +31,54 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"A fordítás közösségi munka eredménye, amelyhez itt tudsz :ref:`csatlakozni "
-"<translation_guidelines>`. Ennek az oldalnak eddig a |translation progress| "
-"részét fordítottuk le."
+"A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
+"<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
+"van lefordítva."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:6
 msgid "Raster Properties Dialog"
 msgstr "Raszter tulajdonságai párbeszédablak"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:13
+msgid ""
+"Raster data is made up of pixels (or cells), and each pixel has a value. It "
+"is commonly used to store various types of data, including:"
+msgstr ""
+"A raszteres adatok pixelekből (vagyis cellákból) állnak, és minden egyes "
+"pixelnek van valamilyen értéke. Általában különböző típusú adatok tárolására"
+" használják, többek között:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:16
+msgid ""
+"Imagery, such as satellite images, digital aerial photographs, scanned maps"
+msgstr ""
+"Képek, például műholdképek, digitális légifelvételek, szkennelt térképek"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:17
+msgid ""
+"Elevation data, such as digital elevation models (DEMs), digital terrain "
+"models (DTMs)"
+msgstr ""
+"magassági adatok, például digitális magassági modellek (DEM), digitális "
+"domborzatmodellek (DTM)"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:18
+msgid ""
+"Other types of data, such as land cover, soil types, rainfall and many "
+"others."
+msgstr ""
+"Egyéb adattípusok, mint például felszínborítás, talajtípusok, csapadék és "
+"sok más."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:20
+msgid ""
+"Raster data can be stored in several supported formats, including GeoTIFF, "
+"ERDAS Imagine, ArcInfo ASCII GRID, PostGIS Raster and others. See more at "
+":ref:`opening_data`."
+msgstr ""
+"A raszteres adatok számos támogatott formátumban tárolhatók, többek között "
+"GeoTIFF, ERDAS Imagine, ArcInfo ASCII GRID, PostGIS Raster és más "
+"formátumokban. További információ a :ref:`opening_data` oldalon található."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:24
 msgid ""
@@ -143,6 +185,10 @@ msgstr "|legend| :ref:`Jelmagyarázat <raster_server>`"
 msgid "legend"
 msgstr "legend"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:44
+msgid "|display| :ref:`Display <raster_display>`"
+msgstr "|display| :ref:`Megjelenítés <raster_display>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1131
 msgid "display"
 msgstr "display"
@@ -202,7 +248,7 @@ msgstr ""
 "Mivel a beágyazott rétegek (lásd :ref:`nesting_projects`) tulajdonságai "
 "(jelrendszer, címkék, műveletek, alapértelmezett értékek, űrlapok, …) az "
 "eredeti projektfájlból vannak kiszedve, a működést eltörő módosításokat "
-"elkerülendő, a rétegtulajdonságok párbeszédpanel nem érhető el ezekhez a "
+"elkerülendő, a rétegtulajdonságok párbeszédablak nem érhető el ezekhez a "
 "rétegekhez."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:74
@@ -227,6 +273,25 @@ msgstr ""
 "általános adatok, mint például a projekt neve, a forrás elérési útvonala, a "
 "segédfájlok listája, az utolsó mentés ideje és mérete, a használt "
 "szolgáltató"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:83
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties include "
+":guilabel:`Identify/format`, which influences how the results from using the"
+" |identify| :ref:`Identify features <raster_identify>` tool over a raster "
+"layer are formatted. More properties can be created and managed using "
+"PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"egyéni tulajdonságok, amelyekkel további információkat tárolható a rétegről "
+"az aktuális projektben. Az alapértelmezett egyéni tulajdonságok közé "
+"tartozik az :guilabel:`Azonosítás/formátum`, amely befolyásolja, hogy az "
+"|identify| :ref:`Elemek azonosítása <raster_identify>` eszköz használatával "
+"kapott eredmények hogyan lesznek formázva egy raszterréteg felett. További "
+"tulajdonságok hozhatók létre és kezelhetők PyQGIS segítségével, különösen a "
+":pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` "
+"metódus segítségével."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1145
 msgid "identify"
@@ -388,6 +453,14 @@ msgstr ""
 ":ref:`Egysávos álszínes <label_colormaptab>` – ez a megjelenítő használható "
 "folytonos palettával vagy színtérképpel (pl. domborzati térkép) rendelkező "
 "fájlok esetén."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:159
+msgid ""
+":ref:`Single color <singlecolor>` - the raster layer will be rendered with a"
+" single color."
+msgstr ""
+":ref:`Egyszínű <singlecolor>` – a raszterréteg egyetlen színnel lesz "
+"megjelenítve."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:161
 msgid ":ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a band."
@@ -623,6 +696,37 @@ msgstr ""
 "megjelenítéséhez a jelmagyarázatban nyomja meg a :guilabel:`Jelmagyarázat "
 "beállításai…` gombot. További részletek a :ref:`raster_legend_settings` "
 "fejezetben."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:309
+msgid "Single color"
+msgstr "Egyszínű"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:311
+msgid ""
+"This renderer allows you to render a raster layer using :guilabel:`Single "
+"color`. This type of renderer is useful when you want to display a raster "
+"layer uniformly, without any variation in color based on pixel values."
+msgstr ""
+"Ez a mód lehetővé teszi egy raszteres réteg megjelenítését "
+":guilabel:`Egyetlen szín` használatával. Ez a fajta megjelenítő akkor "
+"hasznos, ha egy raszteres réteget egységesen, a szín pixelértékek alapján "
+"történő változtatása nélkül szeretnénk megjeleníteni."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:315
+msgid ""
+"The single color renderer can be used with both single-band and multiband "
+"raster layers. When used with multiband rasters, you can select which band "
+"to apply the single color to, effectively displaying that specific band "
+"uniformly across the entire layer."
+msgstr ""
+"Az egyszínű megjelenítő egysávos és többsávos raszterrétegekkel egyaránt "
+"használható. Többsávos raszterrel használva kiválaszthatja, hogy melyik "
+"sávra alkalmazza az egyetlen színt, így az adott sávot egységesen jeleníti "
+"meg az egész rétegen."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:324
+msgid "Raster Symbology - Single color rendering"
+msgstr "Raszteres jelrendszer – Egyszínű megjelenítés"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:330
 msgid "Hillshade"
@@ -1298,6 +1402,20 @@ msgstr ""
 "térkép megjelenését. Egy geometriai transzformáció által új szürkeérték-"
 "mátrixot számít ki."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:606
+msgid ""
+"When applying the 'Nearest neighbour' method, the map can get a pixelated "
+"structure when zooming in. This appearance can be improved by using the "
+"'Bilinear (2x2 kernel)' or 'Cubic (4x4 kernel)' method, which cause sharp "
+"edges to be blurred. The effect is a smoother image. This method can be "
+"applied to for instance digital topographic raster maps."
+msgstr ""
+"A „Legközelebbi szomszéd” módszer használatával a térkép nagyításkor pixeles"
+" szerkezetű lesz. Ez a kinézet javítható „Bilineáris (2x2 kernel)” vagy "
+"„Köbös (4x4 kernel)” mód használatával, amik a kemény éleket elmossák. Az "
+"eredmény egy simább kép. Ez a módszer alkalmazható például digitális "
+"topográfiai raszteres térképekre is."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:613
 msgid ""
 "|checkbox| :guilabel:`Early resampling`: allows to calculate the raster "
@@ -1315,6 +1433,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:624
 msgid "Transparency Properties"
 msgstr "Átlátszósági beállítások"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:626
+msgid ""
+"QGIS provides capabilities to set the |transparency| "
+":guilabel:`Transparency` level of a raster layer."
+msgstr ""
+"A QGIS lehetőséget biztosít a raszterrétegek |transparency| "
+":guilabel:`Átlátszósági` szintjének beállítására."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:629
 msgid ""
@@ -1383,6 +1509,30 @@ msgstr ""
 "Kattintson az |symbologyAdd| :sup:`Értékek manuális hozzáadása` gombra. Egy "
 "új sor jelenik meg a pixellistában."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:663
+msgid ""
+"For single-band based symbology (e.g. DEMs), enter the **From** and **To** "
+"values and adjust the **Percent Transparent** to apply."
+msgstr ""
+"Egysávos jelrendszer (pl. DEM) esetén adja meg a **Ettől** és **Eddig** "
+"értékeket, és állítsa be a **Százalékos átlátszóság** értékét."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:665
+msgid ""
+"For multiband based symbology (e.g. RGB images) enter the **Red**, **Green**"
+" and **Blue** values of the pixel and adjust the **Percent Transparent** to "
+"apply. QGIS supports **Tolerance** for pixel values, when defining "
+"transparency. This means that pixels with color close to the specified RGB "
+"values can also be made transparent. Note that this feature applies only to "
+"multiband rasters."
+msgstr ""
+"Többsávos jelrendszer esetén (pl. RGB képek) adja meg a **vörös**, **zöld** "
+"és **kék** pixelek értékét, és állítsa be a **Százalékkos átlátszóságot**. A"
+" QGIS támogatja a pixelértékek **Toleranciáját** az átlátszóság "
+"meghatározásakor. Ez azt jelenti, hogy a megadott RGB-értékekhez közeli "
+"színű pixelek is átlátszóvá tehetők. Vegye figyelembe, hogy ez a funkció "
+"csak a többsávos rasztereknél érhető el."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:670
 msgid ""
 "Alternatively, you can fetch the pixel values directly from the raster using"
@@ -1427,9 +1577,13 @@ msgstr ""
 msgid "fileSave"
 msgstr "fileSave"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:690
+msgid "Using tolerances for multiband rasters"
+msgstr "A tűréshatár használata többsávos rasztereknél"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:696
 msgid "Histogram Properties"
-msgstr "Hisztogram"
+msgstr "Hisztogram tulajdonságai"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:698
 msgid ""
@@ -1499,6 +1653,23 @@ msgstr "Megjelenítési beállítások"
 msgid "In the |rendering| :guilabel:`Rendering` tab, it's possible to:"
 msgstr ""
 "A |rendering| :guilabel:`Megjelenítés` lapon a következőkre van lehetőség:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:737
+msgid ""
+"set :guilabel:`Scale dependent visibility` for the layer: You can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scales, "
+"defining a range of scales in which the layer will be visible. It will be "
+"hidden outside this range. The |mapIdentification| :sup:`Set to current "
+"canvas scale` button helps you use the current map canvas scale as a "
+"boundary. See :ref:`label_scaledepend` for more information."
+msgstr ""
+"a réteg :guilabel:`Méretarányfüggő láthatóságának` beállítása: Beállíthatja "
+"a :guilabel:`Maximum (magába foglaló)` és :guilabel:`Minimum (kizáró)` "
+"méretarányokat, meghatározva azt a méretarány-tartományt, amelyben a réteg "
+"látható lesz. Ezen a tartományon el lesz rejtve. A |mapIdentification| "
+":sup:`Beállítás a térképvászon aktuális méretarányára` gomb segít beállítani"
+" a határt a térképvászon pillanatnyi méretarányára. Lásd még a "
+":ref:`label_scaledepend` fejezetet."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1149
 msgid "mapIdentification"
@@ -1696,6 +1867,22 @@ msgstr "Raszterpiramisok"
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:900
 msgid "Elevation Properties"
 msgstr "Magassági beállítások"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:902
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and its appearance in the :ref:`profile tool charts "
+"<label_elevation_profile_view>`. Specifically, you can choose to "
+":guilabel:`Disable` this configuration if the layer does not contain "
+"elevation data or you can set:"
+msgstr ""
+"A |elevationscale| :guilabel:`Magasság` lap biztosít lehetőséget a réteg "
+"magassági tulajdonságainak kezelésére a :ref:`3D térképnézetek "
+"<label_3dmapview>` számára, valamint szabályozza a :ref:`szintmetszet eszköz"
+" diagramján <label_elevation_profile_view>` való megjelenést. "
+":guilabel:`Kikapcsolhatja` ezt a beállítást, ha a réteg nem tartalmaz "
+"magassági adatokat, vagy beállíthatja:"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:913
 msgid "Raster Elevation Properties"

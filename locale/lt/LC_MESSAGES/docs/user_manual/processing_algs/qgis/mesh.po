@@ -483,6 +483,14 @@ msgstr "[vektorius: linija]"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Numatytas: ``[Kurti laikiną sluoksnį]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:91
+msgid ""
+"Specify the output line layer representing the contours of the mesh layer. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Nurodykite išvesties linijų sluoksnį, reprezentuojantį tinklelio sluoksnio "
+"kontūrus. :ref:`Vienas iš <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
 msgstr "Kurti laikiną sluoksnį (``TEMPORARY_OUTPUT``)"
@@ -501,7 +509,7 @@ msgstr "Įrašyti į duombazės lentelę..."
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid "The file encoding can also be changed here."
-msgstr "Šia taipogi galima pakeisti failo koduotę."
+msgstr "Čia taipogi galima pakeisti failo koduotę."
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:98
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:125
@@ -519,6 +527,14 @@ msgstr "``OUTPUT_POLYGONS``"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:402
 msgid "[vector: polygon]"
 msgstr "[vektorius: poligonas]"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:103
+msgid ""
+"Specify the output polygon layer representing the contours of the mesh "
+"layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Nurodykite išvesties poligonų sluoksnį, reprezentuojantį tinklelio sluoksnio"
+" kontūrus. :ref:`Vienas iš <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:111
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:215
@@ -568,9 +584,40 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:144
+msgid "Export cross section dataset values on lines from mesh"
+msgstr "Eksportuoti skerspjūvio duomenų aibės reikšmes tinklelio linijose"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:146
+msgid ""
+"Extracts a mesh dataset's values from lines contained in a vector layer."
+msgstr ""
+"Ištraukia tinklelio duomenų aibės reikšmes iš linijų, esančių vektoriniame "
+"sluoksnyje."
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:148
+msgid ""
+"Each line is discretized with a resolution distance parameter for extraction"
+" of values on its vertices."
+msgstr ""
+"Kiekviena linija diskretizuojama raiškos atstumo parametru ištraukiant "
+"reikšmes iš jos viršūnių."
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:179
+msgid "**Lines for data export**"
+msgstr "**Linijos duomenų eksportui**"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:180
 msgid "``INPUT_LINES``"
 msgstr "``INPUT_LINES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:182
+msgid "Lines where the data will be extracted from the dataset mesh"
+msgstr "Linijos, kur duomenys bus ištraukti iš duomenų aibės tinklelio"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:183
+msgid "**Line segmentation resolution**"
+msgstr "**Linijų segmentavimo raiška**"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:184
 msgid "``RESOLUTION``"
@@ -580,6 +627,19 @@ msgstr "``RESOLUTION``"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:474
 msgid "Default: 10.0"
 msgstr "Numatytas: 10.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:188
+msgid ""
+"The distance between points on the lines where the data will be extracted "
+"from the dataset mesh. Units can be selected."
+msgstr ""
+"Atstumas tarp linijos taškų, kur duomenys bus ištraukti iš duomenų aibės "
+"tinklelio. Galima parinkti vienetus."
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:191
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:676
+msgid "**Digits count for coordinates**"
+msgstr "**Skaitmenų skaičius koordinatėms**"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:192
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:677
@@ -600,10 +660,30 @@ msgstr "[skaičius: sveikas skaičius]"
 msgid "Default: 2"
 msgstr "Numatyta: 2"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:196
+msgid "Number of digits for rounding the coordinate values"
+msgstr "Skaičius skaitmenų koordinačių reikšmių apvalinimui"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:682
+msgid "**Digits count for dataset value**"
+msgstr "**Duomenų aibės reikšmių skaitmenų skaičius**"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:198
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:683
 msgid "``DATASET_DIGITS``"
 msgstr "``DATASET_DIGITS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:202
+msgid "Number of digits for rounding the dataset values"
+msgstr "Duomenų aibės reikšmių apvalinimo skaitmenų skaičius"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:203
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:225
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:688
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:710
+msgid "**Exported data CSV file**"
+msgstr "**CSV failas su eksportuotais duomenimis**"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:204
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:226
@@ -652,6 +732,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Įrašyti į laikiną failą"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:233
+msgid "**Algorithm ID**: ``native:meshexportcrosssection``"
+msgstr "**Algoritmo ID**: ``native:meshexportcrosssection``"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:283
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:371
@@ -828,6 +912,10 @@ msgstr "``SOURCE_DATA``"
 msgid "[vector: any] [list]"
 msgstr "[vektorius: bet koks] [sąrašas]"
 
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:881
+msgid "**Vector layer**"
+msgstr "**Vektorinis sluoksnis**"
+
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:887
 msgid "[tablefield: any]"
 msgstr "[tablefield: any]"
@@ -843,6 +931,11 @@ msgstr "Numatytas: ne"
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:899
 msgid "``MESH_FORMAT``"
 msgstr "``MESH_FORMAT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:916
+#: ../../docs/user_manual/processing_algs/qgis/mesh.rst:938
+msgid "**Output file**"
+msgstr "**Išvesties failas**"
 
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:917
 #: ../../docs/user_manual/processing_algs/qgis/mesh.rst:939

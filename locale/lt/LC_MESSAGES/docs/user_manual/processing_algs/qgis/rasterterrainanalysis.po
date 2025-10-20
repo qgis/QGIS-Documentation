@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:18+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -276,8 +276,12 @@ msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:64
-msgid "Specify the output aspect raster layer. One of:"
-msgstr "Nurodykite išvesties aspekto rastro sluoksnį. Vienas iš:"
+msgid ""
+"Specify the output aspect raster layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite išvesties aspekto rastro sluoksnį. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
@@ -329,6 +333,74 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:99
+msgid "DTM filter (slope-based)"
+msgstr "DTM filtras (pagal nuolydį)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:101
+msgid ""
+"Can be used to filter a digital elevation model in order to classify its "
+"cells into ground and object (non-ground) cells."
+msgstr ""
+"Gali būti naudojamas filtruojant skaitmeninį aukščio modelį klasifikuojant "
+"jo celes į žemės ir objektų (ne žemės) celes."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:103
+msgid ""
+"The tool uses concepts as described by Vosselman (2000) and is based on the "
+"assumption that a large height difference between two nearby cells is "
+"unlikely to be caused by a steep slope in the terrain. The probability that "
+"the higher cell might be non-ground increases when the distance between the "
+"two cells decreases. Therefore the filter defines a maximum height "
+"difference (``dz_max``) between two cells as a function of the distance "
+"(``d``) between the cells (``dz_max( d ) = d``). A cell is classified as "
+"terrain if there is no cell within the kernel radius to which the height "
+"difference is larger than the allowed maximum height difference at the "
+"distance between these two cells."
+msgstr ""
+"Įrankis naudoja koncepcijas, apibrėžtas Vosselman (2000) ir remiasi "
+"prielaida, kad dideli aukščio skirtumai tarp gretimų celių negali būti dėl "
+"paviršiaus nuolydžio. Tikimybė, kad aukštesnės celės gali būti ne žemė "
+"didėja mažėjant atstumui tarp dviejų celių. Todėl filtras apibrėžia "
+"maksimalų aukščio skirtumą (``dz_max``) tarp celių kaip funkciją atstumo "
+"(``d``) tarp celių (``dz_max( d ) = d``). Celė klasifikuojama kaip "
+"paviršiaus, jei branduolio spindulio atstumu nėra celės, kurios aukščio "
+"skirtumas būtų didesnis nei nurodytas aukščio skirtumų maksimumas nurodytu "
+"atstumu tarp dviejų celių."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:110
+#, python-format
+msgid ""
+"The approximate terrain slope (``s``) parameter is used to modify the filter"
+" function to match the overall slope in the study area (``dz_max( d ) = d * "
+"s``). A 5 % confidence interval (``ci = 1.65 * sqrt( 2 * stddev )``) may be "
+"used to modify the filter function even further by either relaxing "
+"(``dz_max( d ) = d * s + ci``) or amplifying (``dz_max( d ) = d * s - ci``) "
+"the filter criterium."
+msgstr ""
+"Apytikslio paviršiaus nuolydžio (``s``) parametras naudojamas keisti filtro "
+"funkciją, kad ji atitiktų bendrą nuolydį studijuojamame plote (``dz_max( d )"
+" = d * s``). 5 % užtikrintumo intervalas (``ci = 1.65 * sqrt( 2 * stddev "
+")``) gali būti naudojamas keisti filtro funkciją dar labiau, arba "
+"atlaisvinant (``dz_max( d ) = d * s + ci``), arba padidinant (``dz_max( d ) "
+"= d * s - ci``) filtro kriterijų."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:115
+msgid ""
+"*References: Vosselman, G. (2000): Slope based filtering of laser altimetry "
+"data. IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942*"
+msgstr ""
+"*Šaltinis: Vosselman, G. (2000): Slope based filtering of laser altimetry "
+"data. IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942*"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:117
+msgid ""
+"This tool is a port of the SAGA `DTM Filter (slope-based) <https://saga-"
+"gis.sourceforge.io/saga_tool_doc/9.1.1/grid_filter_7.html>`_"
+msgstr ""
+"Šis įrankis yra perkeltas iš SAGA `DTM Filtro (paremto nuolydžiu) "
+"<https://saga-gis.sourceforge.io/saga_tool_doc/9.1.1/grid_filter_7.html>`_"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:123
 msgid "Basic parameters"
 msgstr "Baziniai parametrai"
@@ -349,6 +421,14 @@ msgstr "``BAND``"
 msgid "[raster band]"
 msgstr "[rastro juosta]"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:141
+msgid "The band of the DEM to consider"
+msgstr "Tiriama DEM juosta"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:142
+msgid "**Kernel radius (pixels)**"
+msgstr "**Branduolio spindulys (pikseliais)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:143
 msgid "``RADIUS``"
 msgstr "``RADIUS``"
@@ -361,9 +441,39 @@ msgstr "[skaičius: sveikas skaičius]"
 msgid "Default: 5"
 msgstr "Numatytas: "
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:147
+msgid ""
+"The radius of the filter kernel (in pixels). Must be large enough to reach "
+"ground cells next to non-ground objects."
+msgstr ""
+"Filtro branduolio spindulys (pikseliais). Turi būti pakankamai didelis, kad "
+"pasiektų paviršiaus celes greta ne žemės objektų."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:149
+msgid "**Terrain slope (%, pixel size/vertical units)**"
+msgstr "**Paviršiaus nuolydis (%, pikselio dydis/vertikalūs vienetai)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:150
 msgid "``TERRAIN_SLOPE``"
 msgstr "``TERRAIN_SLOPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:153
+msgid "Default: 30.0"
+msgstr "Numatytas: 30.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:154
+msgid ""
+"The approximate terrain slope in ``%``. The terrain slope must be adjusted "
+"to account for the ratio of height units vs raster pixel dimensions. Used to"
+" relax the filter criterium in steeper terrain."
+msgstr ""
+"Apytikslis paviršiaus nuolydis ``%``. Paviršiaus nuolydį reikia patikslinti,"
+" kad būtų atsižvelgta į aukščio vienetų ir rastro pikselių matmenų santykį. "
+"Naudojama atlaisvinti filtro kriterijų statesniame paviršiuje."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:157
+msgid "**Filter modification**"
+msgstr "**Filtro modifikacija**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:158
 msgid "``FILTER_MODIFICATION``"
@@ -377,6 +487,26 @@ msgstr "[sąrašas]"
 msgid "Default: 0"
 msgstr "Numatytas: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:162
+msgid ""
+"Choose whether to apply the filter kernel without modification or to use a "
+"confidence interval to relax or amplify the height criterium."
+msgstr ""
+"Pasirinkite, ar taikyti filtro branduolį be pokyčių, ar naudoti užtikrintumo"
+" intervalą aukščio kriterijaus atlaisvinimui ar padidinimui."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:165
+msgid "0 - None"
+msgstr "0 - Jokio"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:166
+msgid "1 - Relax filter"
+msgstr "1 - Atlaisvinti filtrą"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:167
+msgid "2 - Amplify"
+msgstr "2 - Padidinti"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:168
 msgid "**Standard deviation**"
 msgstr "**Standartinis nuokrypis**"
@@ -388,6 +518,20 @@ msgstr "``STANDARD_DEVIATION``"
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:172
 msgid "Default: 0.1"
 msgstr "Numatytas: 0.1"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:173
+#, python-format
+msgid ""
+"The standard deviation used to calculate a 5% confidence interval applied to"
+" the height threshold."
+msgstr ""
+"Standartinis nuokrypis naudojamas skaičiuojant 5% užtikrintumo intervalą, "
+"taikomą aukščio slenksčiui."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:174
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:241
+msgid "**Output layer (ground)**"
+msgstr "**Išvesties sluoksnis (žemė)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:176
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:190
@@ -402,9 +546,22 @@ msgstr "Pasirinktinis"
 msgid "``OUTPUT_GROUND``"
 msgstr "``OUTPUT_GROUND``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:181
+msgid ""
+"Specify the filtered DEM containing only cells classified as ground. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Nurodykite filtruotą DEM, kuriame yra tik celės, klasifikuotos kaip žemė. "
+":ref:`Vienas iš <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "Praleisti išvestį"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:188
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:245
+msgid "**Output layer (non-ground objects)**"
+msgstr "**Išvesties sluoksnis (ne žemės objektai)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:191
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:246
@@ -415,6 +572,14 @@ msgstr "``OUTPUT_NONGROUND``"
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:557
 msgid "Default: ``[Skip output]``"
 msgstr "Numatytas: ``[Praleisti išvestį]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:195
+msgid ""
+"Specify the non-ground objects removed by the filter. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite ne žemės objektus, pašalintus filtro. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:203
 msgid "Advanced parameters"
@@ -430,7 +595,7 @@ msgstr "``CREATE_OPTIONS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:218
 msgid "[string]"
-msgstr "[string]"
+msgstr "[tekstas]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:220
 msgid "Default: ''"
@@ -455,6 +620,18 @@ msgid ""
 msgstr ""
 "Paketinis apdorojimas ir Modelių kūrimas: atskirkite kelias parinktis "
 "statmenu brūkšniu (``|``)."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:244
+msgid "The filtered DEM containing only cells classified as ground."
+msgstr "Filtruotas DEM, kuriame yra tik celės, klasifikuotos kaip žemė."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:248
+msgid "The non-ground objects removed by the filter."
+msgstr "Ne žemės objektai, kuriuos pašalino filtras."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:253
+msgid "**Algorithm ID**: ``native:dtmslopebasedfilter``"
+msgstr "**Algoritmo ID**: ``native:dtmslopebasedfilter``"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:323
 msgid "``AZIMUTH``"
@@ -502,6 +679,19 @@ msgstr "Numatytas: ne"
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:446
 msgid "``OUTPUT_DIRECTORY``"
 msgstr "``OUTPUT_DIRECTORY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:426
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:447
+msgid "[folder]"
+msgstr "[aplankas]"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Save to a Temporary Directory"
+msgstr "Įrašyti į laikiną aplanką"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to Directory"
+msgstr "Įrašyti į aplanką"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:512
 msgid "``AUTO_COLORS``"

@@ -980,6 +980,25 @@ msgstr "[toks pat, kaip įvestis]"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną failą]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:47
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:281
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:461
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:645
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:803
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:973
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1114
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1261
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1402
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1552
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:1692
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2460
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3269
+msgid ""
+"Specification of the output raster. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Išvesties rastro specifikacija. :ref:`Vienas iš <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to a Temporary File"
@@ -1203,7 +1222,7 @@ msgstr "``CREATE_OPTIONS``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3896
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3973
 msgid "[string]"
-msgstr "[string]"
+msgstr "[tekstas]"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:70
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:79
@@ -1792,6 +1811,90 @@ msgstr ""
 "Daugiau informacijos apie tai, kaip vykdyti apdorojimo algoritmus Pythono "
 "konsolėje rasite skyriuje :ref:`processing_console`."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:192
+msgid "Cell stack percentile"
+msgstr "Celių krūvos procentilis"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:194
+msgid ""
+"Calculates the cell-wise percentile value of a stack of rasters and writes "
+"the results to an output raster. The percentile to return is determined by "
+"the percentile input value (ranges between 0 and 1). At each cell location, "
+"the specified percentile is obtained using the respective value from the "
+"stack of all overlaid and sorted cell values of the input rasters."
+msgstr ""
+"Skaičiuoja celių krūvos procentilio reikšmę rastrų krūvai ir įrašo "
+"rezultatus į išvesties rastrą. Grąžinanas procentilis skaičiuojamas pagal "
+"procentilio įvesties reikšmę (diapazonas nuo 0 iki 1). Kiekvienoje celės "
+"pozicijoje nurodytas procentilis gaunamas naudojamas atitinkamas reikšmes iš"
+" krūvos visų perdengtų ir surikiuotų įvesties rastro reikšmių."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:200
+msgid "There are three methods for percentile calculation:"
+msgstr "Yra trys procentilio skaičiavimo būdai:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:202
+msgid ""
+"Nearest rank: returns the value that is nearest to the specified percentile"
+msgstr ""
+"Artimiausias rangas: grąžina reikšmę, kuri yra artimiausia nurodytam "
+"procentiliui"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:206
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:385
+msgid ""
+"The linear interpolation methods return the unique values for different "
+"percentiles. Both interpolation methods follow their counterpart methods "
+"implemented by `LibreOffice <https://help.libreoffice.org/latest/en-"
+"US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_ or Microsoft "
+"Excel."
+msgstr ""
+"Tiesinės interpoliacijos metodai skirtingiems procentiliams grąžina unikalią"
+" reikšmę. Abu interpoliacijos metodai veikia pagal atitinkamus `LibreOffice "
+"<https://help.libreoffice.org/latest/en-"
+"US/text/scalc/01/04060184.html?DbPAR=CALC#bm_id3148807>`_ ar Microsoft Excel"
+" įgyvendinimus."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:221
+msgid "Percentile = 0.25. ``NoData`` cells (grey) are ignored."
+msgstr "Procentilis = 0.25. ``NėraDuomenų`` celės (pilkos) ignoruojamos."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:254
+msgid ""
+"0 --- Nearest rank: returns the value that is nearest to the specified "
+"percentile"
+msgstr ""
+"0 --- Artimiausias rangas: grąžina reikšmę, kuri yra artimiausia nurodytam "
+"procentiliui"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:255
+msgid "1 --- Inclusive linear interpolation (PERCENTILE.INC)"
+msgstr "1 --- Tiesinė interpoliacija imtinai (PERCENTILE.INC)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:256
+msgid "2 --- Exclusive linear interpolation (PERCENTILE.EXC)"
+msgstr "2 --- Tiesinė interpoliacija išimtinai (PERCENTILE.EXC)"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:257
+msgid "**Percentile**"
+msgstr "**Procentilis**"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:261
+msgid "Default: 0.25"
+msgstr "Numatyta: 0.25"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:262
+msgid ""
+"Value to rank among the respective values in the stack of all overlaid and "
+"sorted cell values from the input rasters. Between 0 and 1."
+msgstr ""
+"Reikšmė, kurios rangą reikia rasti, atitinkamai reikšmėms krūvoje visų "
+"perdengtų ir rikiuotų įvesties rastro celių reikšmių. Tarp 0 ir 1."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:360
+msgid "**Algorithm ID**: ``native:cellstackpercentile``"
+msgstr "**Algoritmo ID**: ``native:cellstackpercentile``"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:426
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:776
@@ -1808,6 +1911,10 @@ msgstr "``VALUE_RASTER_BAND``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3692
 msgid "Default: 1"
 msgstr "Numatytas: 1"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:609
+msgid "Input raster layers"
+msgstr "Įvesties rastro sluoksniai"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:611
 msgid "``STATISTIC``"
@@ -2058,11 +2165,57 @@ msgstr "``DATA_TYPE``"
 msgid "Default: 5"
 msgstr "Numatytas: "
 
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "0 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "0 --- Byte        (aštuonių bitų sveikas skaičius be ženklo (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid "1 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr ""
+"1 --- Int16       (Šešiolikos bitų sveikas skaičius su ženklu (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr ""
+"2 --- UInt16      (Šešiolikos bitų sveikas skaičius be ženklo (quint16))"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:11
 msgid "4 --- UInt32      (Thirty two bit unsigned integer (quint32))"
 msgstr ""
 "4 --- UInt32      (Trisdešimt dviejų bitų sveikas skaičius be ženklo "
 "(quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "5 --- Float32     (Thirty two bit floating point (float))"
+msgstr ""
+"5 --- Float32     (Trisdešimt dviejų bitų slankaus kablelio skaičius "
+"(float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "6 --- Float64     (Sixty four bit floating point (double))"
+msgstr ""
+"6 --- Float64     (Šešiasdešimt keturių bitų slankaus kablelio skaičius "
+"(double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:14
+msgid "7 --- CInt16      (Complex Int16)"
+msgstr "7 --- CInt16      (Kompleksinis Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:15
+msgid "8 --- CInt32      (Complex Int32)"
+msgstr "8 --- CInt32      (Kompleksinis Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "9 --- CFloat32    (Complex Float32)"
+msgstr "9 --- CFloat32   (Kompleksinis Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "10 --- CFloat64   (Complex Float64)"
+msgstr "10 --- CFloat64   (Kompleksinis Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "11 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "11 --- Int8       (Aštuonių bitų sveikas skaičius su ženklu (qint8))"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:20
 msgid ""
@@ -2139,6 +2292,11 @@ msgstr "Įveskite koordinates kaip ``xmin, xmax, ymin, ymax``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2548
 msgid "``CELLSIZE``"
 msgstr "``CELLSIZE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2447
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2554
+msgid "**Output CRS**"
+msgstr "**Išvesties CRS**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2450
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2557
@@ -2343,7 +2501,7 @@ msgstr "Įrašyti į duombazės lentelę..."
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 #: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "The file encoding can also be changed here."
-msgstr "Šia taipogi galima pakeisti failo koduotę."
+msgstr "Čia taipogi galima pakeisti failo koduotę."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:2946
 msgid ":ref:`qgiszonalstatisticsfb`"
@@ -2384,6 +2542,13 @@ msgstr "``AREA``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3187
 msgid "``PIXEL_COUNT``"
 msgstr "``PIXEL_COUNT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3233
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3388
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3878
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3961
+msgid "**Raster layer**"
+msgstr "**Rastro sluoksnis**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3234
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3389
@@ -2434,6 +2599,11 @@ msgstr "``RANGE_BOUNDARIES``"
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3449
 msgid "``NODATA_FOR_MISSING``"
 msgstr "``NODATA_FOR_MISSING``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3317
+#: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3461
+msgid "Defines the format of the output raster file. Options:"
+msgstr "Apibrėžia išvesties rastro failo formatą. Parinktys:"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasteranalysis.rst:3399
 msgid "``TABLE``"

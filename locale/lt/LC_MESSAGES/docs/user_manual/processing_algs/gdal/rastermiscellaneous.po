@@ -1235,9 +1235,48 @@ msgstr "Išvesties aplankas (kaladėlėms)"
 msgid "**Algorithm ID**: ``gdal:gdal2tiles``"
 msgstr "**Algoritmo ID**: ``gdal:gdal2tiles``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:513
+msgid "Merge"
+msgstr "Sulieti"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:514
+msgid ""
+"Merges raster files in a simple way. Here you can use a pseudocolor table "
+"from an input raster and define the output raster type. All the images must "
+"be in the same coordinate system."
+msgstr ""
+"Sulieja rastro failus paprastu būdu. Čia galite naudoti pseudo-spalvų "
+"lentelę iš įvesties rastro ir apibrėžti išvesties rastro tipą. Visi "
+"piešiniai turi būti toje pačioje koordinačių sistemoje."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:518
+msgid ""
+"This algorithm is derived from the `GDAL merge utility "
+"<https://gdal.org/en/latest/programs/gdal_merge.html>`_."
+msgstr ""
+"Šis algoritmas kilęs iš `GDAL merge įrankio "
+"<https://gdal.org/en/latest/programs/gdal_merge.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:541
+msgid "Input raster layers"
+msgstr "Įvesties rastro sluoksniai"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:542
+msgid "**Grab pseudocolor table from first layer**"
+msgstr "**Griebti pseudo-spalvų lentelę iš pirmo sluoksnio**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:543
 msgid "``PCT``"
 msgstr "``PCT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:547
+msgid ""
+"The pseudocolor table from the first layer will be used for the coloring"
+msgstr "Pseudo-spalvų lentelė iš pirmo sluoksnio bus naudojama spalvinimui"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:554
+msgid "Place each input file into a separate band"
+msgstr "Padėti kiekvieną įvesties failą į atskirą juostą"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:555
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1284
@@ -1255,6 +1294,69 @@ msgstr "``DATA_TYPE``"
 msgid "Default: 5"
 msgstr "Numatytas: "
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:560
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1289
+msgid "Defines the format of the output raster file. Options:"
+msgstr "Apibrėžia išvesties rastro failo formatą. Parinktys:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "0 --- Byte        (Eight bit unsigned integer (quint8))"
+msgstr "0 --- Byte        (aštuonių bitų sveikas skaičius be ženklo (quint8))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid "1 --- Int16       (Sixteen bit signed integer (qint16))"
+msgstr ""
+"1 --- Int16       (Šešiolikos bitų sveikas skaičius su ženklu (qint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "2 --- UInt16      (Sixteen bit unsigned integer (quint16))"
+msgstr ""
+"2 --- UInt16      (Šešiolikos bitų sveikas skaičius be ženklo (quint16))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:12
+msgid "3 --- UInt32      (Thirty two bit unsigned integer (quint32))"
+msgstr ""
+"3 --- UInt32      (Trisdešimt dviejų bitų sveikas skaičius be ženklo "
+"(quint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:13
+msgid "4 --- Int32       (Thirty two bit signed integer (qint32))"
+msgstr ""
+"4 --- Int32       (Trisdešimt dviejų bitų sveikas skaičius su ženklu "
+"(qint32))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:14
+msgid "5 --- Float32     (Thirty two bit floating point (float))"
+msgstr ""
+"5 --- Float32     (Trisdešimt dviejų bitų slankaus kablelio skaičius "
+"(float))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:15
+msgid "6 --- Float64     (Sixty four bit floating point (double))"
+msgstr ""
+"6 --- Float64     (Šešiasdešimt keturių bitų slankaus kablelio skaičius "
+"(double))"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:16
+msgid "7 --- CInt16      (Complex Int16)"
+msgstr "7 --- CInt16      (Kompleksinis Int16)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:17
+msgid "8 --- CInt32      (Complex Int32)"
+msgstr "8 --- CInt32      (Kompleksinis Int32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:18
+msgid "9 --- CFloat32    (Complex Float32)"
+msgstr "9 --- CFloat32   (Kompleksinis Float32)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:19
+msgid "10 --- CFloat64   (Complex Float64)"
+msgstr "10 --- CFloat64   (Kompleksinis Float64)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:20
+msgid "11 --- Int8       (Eight bit signed integer (qint8))"
+msgstr "11 --- Int8       (Aštuonių bitų sveikas skaičius su ženklu (qint8))"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:22
 msgid ""
 "Available options depend on the GDAL version built with QGIS (see "
@@ -1263,13 +1365,35 @@ msgstr ""
 "Galimi variantai priklauso nuo GDAL versijos, su kuria sukurtas QGIS "
 "(žiūrėkite meniu :menuselection:`Pagalba --> Apie`)"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:567
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:639
+msgid "**Merged**"
+msgstr "**Sulietas**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:590
+msgid "**Input pixel value to treat as \"NoData\"**"
+msgstr ""
+"**Įvesties pikselio reikšmė, kurią reikia interpretuoti kaip „NėraDuomenų“**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:593
 msgid "``NODATA_INPUT``"
 msgstr "``NODATA_INPUT``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:597
+msgid "Ignores pixels from files being merged in with this pixel value"
+msgstr "Ignoruoja suliejamų failų pikselius su šia reikšme"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:598
+msgid "**Assign specified \"NoData\" value to output**"
+msgstr "**Priskirti nurodytą „NėraDuomenų“ reikšmę išvesčiai**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:601
 msgid "``NODATA_OUTPUT``"
 msgstr "``NODATA_OUTPUT``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:605
+msgid "Assigns the specified NoData value to output bands."
+msgstr "Priskiria nurodytą NėraDuomenų reikšmę išvesties juostoms."
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:606
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:724
@@ -1314,6 +1438,10 @@ msgid ""
 msgstr ""
 "Paketinis apdorojimas ir Modelių kūrimas: atskirkite kelias parinktis "
 "statmenu brūkšniu (``|``)."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:647
+msgid "**Algorithm ID**: ``gdal:merge``"
+msgstr "**Algoritmo ID**: ``gdal:merge``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:680
 msgid "``SPECTRAL``"

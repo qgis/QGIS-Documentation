@@ -609,7 +609,7 @@ msgid ""
 msgstr ""
 "Nustatykite idealų linijos dydį automatiniam perkėlimui į kitą eilutę "
 "naudojant parinktį :guilabel:`Kelti eilutes ties`. Dydis gali būti nurodytas"
-" arba :guilabel:`Maksimaliu eilutės ilgiu`, arba the :guilabel:`Maksimaliu "
+" arba :guilabel:`Maksimaliu eilutės ilgiu`, arba :guilabel:`Maksimaliu "
 "linijos ilgiu`."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:297
@@ -672,7 +672,7 @@ msgid ""
 msgstr ""
 "Linijų užrašams jūs galite įtraukti :guilabel:`Linijų krypties simbolį`, kad"
 " padėtumėte suprasti linijų kryptis simboliais, indikuojančiais "
-":guilabel:`Kairėn` ar :guilabel:`Dešinėn`. Jei veikia ypač gerai, kai "
+":guilabel:`Kairėn` ar :guilabel:`Dešinėn`. Jie veikia ypač gerai, kai "
 "naudojami su *išlenktu* ar *lygiagrečiu* pozicionavimu kortelėje "
 ":guilabel:`Vieta`. Yra parinktys, leidžiančios nurodyti simbolio vietą bei "
 "|unchecked| :guilabel:`Apsukti kryptį`."
@@ -1628,21 +1628,325 @@ msgstr ""
 ":guilabel:`Kvadrantą`, kad apribotumėte vietą ar priskirtumėte užrašui "
 ":guilabel:`Pasukimą`."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:698
+msgid "Placement for line layers"
+msgstr "Linijų sluoksnių vietos nustatymas"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:700
+msgid "Label modes for line layers include:"
+msgstr "Linijų sluoksnių užrašų režimai yra:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:702
+msgid ""
+":guilabel:`Parallel`: draws the label parallel to a generalised line "
+"representing the feature, with preference for placement over straighter "
+"portions of the line. You can define:"
+msgstr ""
+":guilabel:`Lygiagrečiai`: braižo užrašą lygiagrečiai generalizuotos linijos "
+"išraiškos, stengiantis užrašą padėti virš lygių linijos dalių. Jūs galite "
+"nurodyti:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:706
+msgid ""
+":guilabel:`Allowed positions`: :guilabel:`Above line`, :guilabel:`On line`, "
+":guilabel:`Below line` and :guilabel:`Line orientation dependent position` "
+"(placing the label at the left or the right of the line). It's possible to "
+"select several options at once. In that case, QGIS will look for the optimal"
+" label position."
+msgstr ""
+":guilabel:`Leidžiamas pozicijas`: :guilabel:`Virš linijos`, :guilabel:`Anti "
+"linijos`, :guilabel:`Po linija` ir :guilabel:`Vieta priklauso nuo linijos "
+"padėties` (užrašą išdėstant linijos kairėje ar dešinėje pusėje). Galima "
+"vienu metu parinkti kelias parinktis. Tokiu atveju QGIS ieškos optimalios "
+"užrašo vietos."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:711
+msgid ":guilabel:`Distance` between the label and the line"
+msgstr ":guilabel:`Atstumą` tarp užrašo ir linijos"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:712
+msgid ""
+":guilabel:`Curved`: draws the label following the curvature of the line "
+"feature. In addition to the parameters available with the "
+":guilabel:`Parallel` mode, you can set the :guilabel:`Maximum angle between "
+"curved characters`, either inside or outside."
+msgstr ""
+":guilabel:`Išlenktai`: braižo užrašą sekant linijos geoobjekto iškraipymus. "
+"Be parametrų, kurie naudojami ir :guilabel:`Lygiagrečiame` režime, jūs "
+"galite nurodyti :guilabel:`Maksimalų kampą tarp išlenktų simbolių`, viduje "
+"arba išorėje."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:716
+msgid ""
+":guilabel:`Horizontal`: draws labels horizontally along the length of the "
+"line feature."
+msgstr ""
+":guilabel:`Horizontaliai`: braižo užrašus horizontaliai išilgai linijinio "
+"geoobjekto."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:724
+msgid "Label placement examples for lines"
+msgstr "Linijų užrašų išdėstymo pavyzdžiai"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:726
+msgid "Next to placement modes, you can set:"
+msgstr "Be vietos nustatymo režimo, jūs galite nurodyti:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:728
+msgid ""
+":guilabel:`Repeating Labels` :guilabel:`Distance` to display multiple times "
+"the label over the length of the feature. The distance can be in "
+"``Millimeters``, ``Points``, ``Pixels``, ``Meters at scale``, ``Map Units`` "
+"and ``Inches``."
+msgstr ""
+":guilabel:`Užrašų pasikartojimai` :guilabel:`Atstumas` po kurio galima "
+"pakartotinai rodyti užrašą išilgai geoobjekto ilgio. Atstumą galima nurodyti"
+" ``Milimetrais``, ``Taškais``, ``Pikseliais``, ``Metrais mastelyje``, "
+"``Žemėlapio vienetais`` ir ``Coliais``."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:732
+msgid ""
+"A :guilabel:`Label Overrun` :guilabel:`Distance` (not available for "
+"horizontal mode): specifies the maximal allowable distance a label may run "
+"past the end (or start) of line features. Increasing this value can allow "
+"for labels to be shown for shorter line features."
+msgstr ""
+":guilabel:`Užrašų išsikišimas` :guilabel:`Atstumas` (netaikomas "
+"horizontaliame režime): nurodo maksimalų leidžiamą atstumą, kuriuo užrašas "
+"gali išsikišti (ar prasidėti) už linijos geoobjekto. Didinant šią reikšmę "
+"galima leisti rodyti užrašus trumpesniems linijiniams geoobjektams."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:736
+msgid ""
+":guilabel:`Label Anchoring`: controls the placement of the labels along the "
+"line feature they refer to. Click on :guilabel:`Settings ...` to choose:"
+msgstr ""
+":guilabel:`Užrašų susiejimas`: valdo užrašų vietą išilgai susijusio "
+"geoobeketo linijos. Spauskite :guilabel:`Nustatymai ...`, kad "
+"pasirinktumėte:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:739
+msgid ""
+"the position along the line (as a ratio) which labels will be placed close "
+"to. It can be data-defined and possible values are:"
+msgstr ""
+"poziciją išilgai linijos (kaip koeficientą), arti kurios bus išdėstomi "
+"užrašai. Tai gali būti ir nuo duomenų priklausantis nustatymas su galimomis "
+"reikšmėmis:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:742
+msgid "|labelAnchorCenter| :guilabel:`Center of Line`"
+msgstr "|labelAnchorCenter| :guilabel:`Linijos centre`"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1066
 msgid "labelAnchorCenter"
 msgstr "labelAnchorCenter"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:743
+msgid "|labelAnchorStart| :guilabel:`Start of Line`"
+msgstr "|labelAnchorStart| :guilabel:`Linijos pradžioje`"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1072
 msgid "labelAnchorStart"
 msgstr "labelAnchorStart"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:744
+msgid "|labelAnchorEnd| :guilabel:`End of Line`"
+msgstr "|labelAnchorEnd| :guilabel:`Linijos pabaigoje`"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1070
 msgid "labelAnchorEnd"
 msgstr "labelAnchorEnd"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:745
+msgid "or |labelAnchorCustom| :guilabel:`Custom...`."
+msgstr "ar |labelAnchorCustom| :guilabel:`Savas...`."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1068
 msgid "labelAnchorCustom"
 msgstr "labelAnchorCustom"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:747
+msgid ""
+":guilabel:`Clipping`: Determines how the label placement on a line is "
+"calculated. By default only the visible extent of the line is used but the "
+"whole extent can be used to have more consistent results."
+msgstr ""
+":guilabel:`Apkarpymas`: nurodo kaip skaičiuojama vieta ant linijos. Pagal "
+"nutylėjimą naudojama tik matoma linijos dalis, bet stabilesniems rezultatams"
+" galima naudoti pilną apimtį."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:750
+msgid ""
+":guilabel:`Anchor text`: controls which part of the text (start, center or "
+"end) will line up with the anchor point. Using :guilabel:`Automatic` "
+"anchoring means that:"
+msgstr ""
+":guilabel:`Teksto pririšimo taškas`: nurodo kuri teksto dalis (pradžia, "
+"vidurys ar pabaiga) bus sulygiuota su pririšimo tašku. Naudojant "
+":guilabel:`Automatinį` pririšimą:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:754
+msgid ""
+"For labels anchored near the start of the line (0-25%), the anchor placement"
+" will be the **start** of the label text"
+msgstr ""
+"Užrašams, kurie pririšti prie linijos pradžios (0-25%), pririšimo vieta bus "
+"užrašo teksto **pradžia**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:756
+msgid ""
+"For labels anchored near the end of the line (75-100%), the anchor placement"
+" will be the **end** of the label text"
+msgstr ""
+"Užrašams, kurių pririšimas yra prie linijos pabaigos (75-100%), pririšimo "
+"vieta bus užrašo teksto **pabaiga**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:758
+msgid ""
+"For labels anchored near the center of the line (25-75%), the anchor "
+"placement will be the **center** of the label text"
+msgstr ""
+"Užrašams, kurie pririšti prie linijos centro (25-75%), pririšimo vieta bus "
+"užrašo teksto **vidurys**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:760
+msgid ""
+":guilabel:`Placement Behavior`: use :guilabel:`Preferred Placement Hint` to "
+"treat the label anchor only as a hint for the label placement. By choosing "
+":guilabel:`Strict`, labels are placed exactly on the label anchor."
+msgstr ""
+":guilabel:`Vietos elgsena`: naudokite :guilabel:`Pageidaujamą vietos "
+"užuominą`, kad užrašo pririšimas būtų traktuojamas tik kaip užrašo vietos "
+"nustatymo užuomina. Jei pasirinksite :guilabel:`Griežta`, užrašai bus "
+"braižomi būtent užrašo pririšimo vietoje."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:767
+msgid "Placement for polygon layers"
+msgstr "Poligonų sluoksnių vietos nustatymas"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:769
+msgid ""
+"You can choose one of the following modes for placing labels of polygons:"
+msgstr ""
+"Galite pasirinkti vieną iš šių poligonų užrašų vietos nustatymo režimų:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:776
+msgid "Label placement examples for polygons"
+msgstr "Poligonų užrašų vietos nustatymų pavyzdžiai"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:779
+msgid ""
+":guilabel:`Offset from Centroid`: labels are placed over the feature "
+"centroid or at a fixed :guilabel:`Offset X,Y` distance (in :ref:`supported "
+"units <unit_selector>`) from the centroid. The reference centroid can be "
+"determined based on the part of the polygon rendered in the map canvas "
+"(:guilabel:`visible polygon`) or the :guilabel:`whole polygon`, no matter if"
+" you can see it. You can also:"
+msgstr ""
+":guilabel:`Poslinkis nuo centroido`: užrašai išdėstomi virš geoobjekto "
+"centroido arba nurodytu :guilabel:`Poslinkio X,Y` atstumu (:ref:`palaikomais"
+" vienetais <unit_selector>`) nuo centroido. Atskaitos centroidas nustatomas "
+"pagal žemėlapio drobėje braižomo poligono dalį (:guilabel:`matomas "
+"poligonas`) arba :guilabel:`visą poligoną`, nepriklausomai nuo to, ar jūs "
+"galite jį matyti. Jūs taipogi galite:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:786
+msgid "force the centroid point to lay inside their polygon"
+msgstr "priversti, kad centroidas būtų poligono viduje"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:787
+msgid "place the label within a specific quadrant"
+msgstr "užrašą išdėstyti konkrečiame kvadrante"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:788
+msgid "assign a rotation"
+msgstr "priskirti pasukimą"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:789
+msgid ""
+":guilabel:`Allow placing labels outside of polygons` when it is not possible"
+" to place them inside the polygon. Thanks to data-defined properties, this "
+"makes possible to either allow outside labels, prevent outside labels, or "
+"force outside labels on a feature-by-feature basis."
+msgstr ""
+":guilabel:`Leisti išdėstyti užrašus už poligono ribų`, kai neįmanoma juos "
+"išdėstyti poligono viduje. Nuo duomenų priklausomų savybių dėka galima "
+"leisti arba neleisti užrašus už poligono ribų ar net priversti užrašus už "
+"geoobjekto ribų skirtingai kiekvienam konkrečiam geoobjektui."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:794
+msgid ""
+":guilabel:`Around Centroid`: places the label within a preset distance "
+"around the centroid, with a preference for the placement directly over the "
+"centroid. Again, you can define whether the centroid is the one of the "
+":guilabel:`visible polygon` or the :guilabel:`whole polygon`, and whether to"
+" force the centroid point inside the polygon."
+msgstr ""
+":guilabel:`Aplink centroidą`: išdėsto užrašą nurodytu atstumu aplink "
+"centroidą teikiant prioritetą išdėstymui tiesiai virš centroido. Vėlgi, jūs "
+"galite nurodyti, ar centroidas yra :guilabel:`matomo poligono` ar "
+":guilabel:`viso poligono`, taipogi ar reikia priversti, kad centroido taškas"
+" būtų poligono viduje."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:800
+msgid ""
+":guilabel:`Horizontal`: places at the best position a horizontal label "
+"inside the polygon. The preferred placement is further from the edges of the"
+" polygon. It's possible to :guilabel:`Allow placing labels outside of "
+"polygons`."
+msgstr ""
+":guilabel:`Horizontaliai`: užrašas padedamas geriausioje horizontalioje "
+"pozicijoje poligono viduje. Stengiamasi užrašą padėti toliau nuo poligono "
+"kraštų. Galima :guilabel:`Leisti užrašus padėti už poligono ribų`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:804
+msgid ""
+":guilabel:`Free (Angled)`: places at the best position a rotated label "
+"inside the polygon. The rotation respects the polygon's orientation and the "
+"preferred placement is further from the edges of the polygon. It's possible "
+"to :guilabel:`Allow placing labels outside of polygons`."
+msgstr ""
+":guilabel:`Laisvas (pakreiptas)`: užrašas padedamas geriausioje vietoje "
+"pasuktas poligono viduje. Pasukimas atsižvelgia į poligono orientaciją ir "
+"stengiamasi parinkti poziciją toliau nuo poligono kraštų. Galima "
+":guilabel:`Leisti užrašus padėti už poligono ribų`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:809
+msgid ""
+":guilabel:`Using Perimeter`: draws the label parallel to a generalised line "
+"representing the polygon boundary, with preference for straighter portions "
+"of the perimeter. You can define:"
+msgstr ""
+":guilabel:`Naudojant perimetrą`: braižo užrašą išilgai generalizuotos "
+"poligono kontūro linijos, prioritetą teikiant tiesesnėms perimetro dalims. "
+"Jūs galite nurodyti:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:813
+msgid ""
+":guilabel:`Allowed positions`: :guilabel:`Above line`, :guilabel:`On line`, "
+":guilabel:`Below line` and :guilabel:`Line orientation dependent position` "
+"(placing the label at the left or the right of the polygon's boundary). It's"
+" possible to select several options at once. In that case, QGIS will look "
+"for the optimal label position."
+msgstr ""
+":guilabel:`Leidžiamas pozicijas`: :guilabel:`Virš linijos`, :guilabel:`Anti "
+"linijos`, :guilabel:`Po linija` ir :guilabel:`Vieta priklauso nuo linijos "
+"padėties` (užrašą išdėstant poligono kontūro kairėje ar dešinėje pusėje). "
+"Galima vienu metu parinkti kelias parinktis. Tokiu atveju QGIS ieškos "
+"optimalios užrašo vietos."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:818
+msgid ":guilabel:`Distance` between the label and the polygon's outline"
+msgstr ":guilabel:`Atstumą` tarp užrašo ir poligono kontūro"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:819
+msgid ""
+"the :guilabel:`Repeating Labels` :guilabel:`Distance` to display multiple "
+"times the label over the length of the perimeter."
+msgstr ""
+":guilabel:`Pasikartojančių užrašų` :guilabel:`Atstumą`, kad užrašas būtų "
+"palei perimetrą braižomas kelis kartus."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1094
 msgid "render"

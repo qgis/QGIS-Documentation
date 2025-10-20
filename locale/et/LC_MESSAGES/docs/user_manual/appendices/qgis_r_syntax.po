@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Katre K, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Katre K, 2025\n"
 "Language-Team: Estonian (https://app.transifex.com/qgis/teams/6144/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,6 +33,216 @@ msgstr ""
 "Tõlge on kogukonna pingutus :ref:`saate liituda <translation_guidelines>`. "
 "Seda lehekülge tõlgitakse hetkel |translation progress|."
 
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:7
+msgid "Appendix D: QGIS R script syntax"
+msgstr "Lisa D: QGIS R skripti süntaks"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:9
+msgid ""
+"Contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/en/istituto/scienze-della-vita/istituto-di-"
+"scienze-della-vita>`_"
+msgstr ""
+"Panustas Matteo Ghetta – rahastas `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/en/istituto/scienze-della-vita/istituto-di-"
+"scienze-della-vita>`_"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:12
+msgid ""
+"Writing R scripts in Processing is a bit tricky because of the special "
+"syntax."
+msgstr ""
+"R skriptide kirjutamine töötlemise funktsiooni juures on spetsiaalse "
+"süntaksi tõttu veidi keeruline."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:28
+msgid "Inputs"
+msgstr "Sisendid"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:30
+msgid ""
+"All input data and parameters have to be specified. There are several types "
+"of inputs:"
+msgstr ""
+"Kõik sisendandmed ja parameetrid tuleb määrata. Sisendeid on mitut tüüpi:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:47
+msgid "Outputs"
+msgstr "Väljundid"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:49
+msgid ""
+"As for the inputs, each output has to be defined at the beginning of the "
+"script:"
+msgstr ""
+"Nii nagu sisendite osas, siis tuleb iga väljundi skripti alguses "
+"defineerida:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:65
+msgid "Syntax Summary for QGIS R scripts"
+msgstr "QGIS R skriptide süntaksi kokkuvõte"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:70
+msgid "A number of input and output parameter types are offered."
+msgstr "Pakutakse mitmeid sisend- ja väljundparameetrite tüüpe."
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:73
+msgid "Input parameter types"
+msgstr "Sisend parameetrite tüübid"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:129
+msgid "Parameter"
+msgstr "Parameeter"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:129
+msgid "Syntax example"
+msgstr "Süntaksi näide"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:76
+msgid "Returning objects"
+msgstr "Tagastatavad objektid"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:131
+msgid "vector"
+msgstr "vektor"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:78
+msgid "Layer = vector"
+msgstr "Layer = vector"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
+msgid "vector point"
+msgstr "vektorpunkt"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:80
+msgid "Layer = vector point"
+msgstr "Layer = vector point"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:82
+msgid "vector line"
+msgstr "vektorjoon"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:84
+msgid "vector polygon"
+msgstr "vektorpolügon"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:86
+msgid "multiple vector"
+msgstr "mitu vektorit"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:88
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:135
+msgid "table"
+msgstr "tabel"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:90
+msgid "field"
+msgstr "väli"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:92
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:133
+msgid "raster"
+msgstr "raster"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:94
+msgid "multiple raster"
+msgstr "mitu rastrit"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:96
+msgid "number"
+msgstr "number"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
+msgid "string"
+msgstr "string"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:98
+msgid "string added in the box"
+msgstr "kasti lisatud string"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
+msgid "longstring"
+msgstr "longstring"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
+msgid "LS = longstring"
+msgstr "LS = longstring"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:100
+msgid "string added in the box, could be longer then the normal string"
+msgstr "kasti lisatud string, võib olla pikem kui tavaline string"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
+msgid "selection"
+msgstr "valik"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:102
+msgid "string of the selected item chosen in the dropdown menu"
+msgstr "rippmenüüst valitud elemendi string"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
+msgid "crs"
+msgstr "crs"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
+msgid "C = crs"
+msgstr "C = crs"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:104
+msgid "string of the resulting CRS chosen, in the format: ``\"EPSG:4326\"``"
+msgstr "valitud CRS-i string vormingus: ``\"EPSG:4326\"``"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:106
+msgid "extent"
+msgstr "ulatus"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
+msgid "point"
+msgstr "punkt"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:108
+msgid "when clicked on the map, you have the coordinates of the point"
+msgstr "kaardil klõpsates kuvatakse punkti koordinaadid"
+
 #: ../../docs/user_manual/appendices/qgis_r_syntax.rst:112
 msgid "folder"
 msgstr "folder"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:126
+msgid "Output parameter types"
+msgstr "Väljundi parameetri tüübid"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:147
+msgid "Script body"
+msgstr "Skripti keha"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:161
+msgid "Examples"
+msgstr "Näited"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:164
+msgid "Example with vector output"
+msgstr "Näide vektori väljundiga"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:179
+msgid "Explanation (per line in the script):"
+msgstr "Selgitus (skripti iga rea ​​kohta):"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:232
+msgid "Example with table output"
+msgstr "Näide tabeli väljundiga"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:265
+msgid "Example with console output"
+msgstr "Näide konsooli väljundiga"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:287
+msgid "The script is exactly the same as the one above except for two edits:"
+msgstr "Skript on täpselt sama mis eelmine, välja arvatud kaks muudatust:"
+
+#: ../../docs/user_manual/appendices/qgis_r_syntax.rst:289
+msgid "no output specified (the fourth line has been removed)"
+msgstr "väljundit pole täpsustatud (neljas rida on eemaldatud)"

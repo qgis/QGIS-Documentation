@@ -301,9 +301,75 @@ msgid ""
 "with speed, bearing, altitude and accuracy information from the GPS."
 msgstr "受信したすべてのGPSメッセージは、GPSからの速度、方位、高度、正確度情報とともに ``gps_points`` レイヤーに記録される。"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:104
+msgid ""
+"When the GPS is disconnected (or QGIS closed), the entire recorded GPS track"
+" will be added to the ``gps_tracks`` table (along with some calculated "
+"information like track length, start and end times)."
+msgstr ""
+"GPSが切断（またはQGISが終了）された場合、記録されたGPSトラック全体が（トラックの長さ、開始時刻、終了時刻などの計算された情報と共に） "
+"``gps_tracks``テーブルに追加されます。 "
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:108
+msgid ""
+"|unchecked| :guilabel:`Log NMEA sentences...`: enables logging all raw NMEA "
+"strings from the device to a text file"
+msgstr ""
+"|unchecked| :guilabel:`NMEAセンテンスを記録...`: "
+"デバイスからの全ての生のNMEA文字列をテキストファイルに記録する機能を有効にします"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:110
+msgid ""
+"|options| :guilabel:`GPS settings...` to access the GPS :ref:`global options"
+" <gps_options>` dialog"
+msgstr ""
+"|options| :guilabel:`GPS設定...` はGPSの :ref:`全体オプション <gps_options>` "
+"ダイアログにアクセスします"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:114
+msgid "**Live status bar information on position**"
+msgstr "**位置に関するライブステータスバー情報**"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:116
+msgid ""
+"When a GPS device is connected and the user moves the cursor over the map "
+"canvas, a live status bar message displays the distance and bearing from the"
+" cursor to the GPS position. Project distance and bearing settings are "
+"respected in this display. On a touch screen device, use a tap-and-hold "
+"event to trigger the live status bar message."
+msgstr ""
+"GPSデバイスが接続され、ユーザーがマップキャンバス上でカーソルを動かすと、ライブステータスバーメッセージに、カーソルからGPS位置までの距離と方位が表示されます。この表示では、プロジェクトの距離と方位の設定が反映されます。タッチスクリーンデバイスでは、タップアンドホールドイベントを使ってライブステータスバーメッセージをトリガーします。"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:125
 msgid "GPS Information Panel"
 msgstr "GPS情報パネル"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:127
+msgid ""
+"For full monitoring of a live GPS tracking in QGIS, you may need to enable "
+"the :guilabel:`GPS Information Panel` (:menuselection:`View --> Panels -->` "
+"or press :kbd:`Ctrl+0`)."
+msgstr ""
+"QGISでライブGPS追跡を完全に監視するには、:guilabel:`GPS情報パネル` "
+"を有効にする必要があります（:menuselection:`表示 --> パネル -->` または :kbd:`Ctrl+0` を押す）。"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:131
+msgid ""
+"In the top right corner of the :guilabel:`GPS Information Panel`, you press "
+":guilabel:`Connect` to initiate connection between QGIS and a plugged-in GPS"
+" receiver, or :guilabel:`Disconnect` them."
+msgstr ""
+":guilabel:`GPS情報パネル` の右上隅では :guilabel:`接続` を押して "
+"QGISと繋がったGPS受信機との接続を開始するか、それらを :guilabel:`切断` します。"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:135
+msgid "In the top left of the panel, following buttons are accessible:"
+msgstr "パネルの左上隅には次のボタンが利用できます:"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:137
+msgid ""
+"|metadata| :sup:`Position`: live details on the GPS position and sensors"
+msgstr "|metadata| :sup:`位置`: GPS位置とセンサーの現在の詳細"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:138
 msgid ""
@@ -313,6 +379,14 @@ msgstr "|gpsTrackBarChart| :sup:`信号`: 衛星接続の信号強度"
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:341
 msgid "gpsTrackBarChart"
 msgstr "gpsTrackBarChart"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:139
+msgid ""
+"|options| :sup:`Settings`: drop-down menu to :ref:`live tracking options "
+"<tracking_settings>` you may need to modify during a session"
+msgstr ""
+"|options| :sup:`設定`: セッション中に変更が必要なときがある :ref:`ライブ追跡オプション "
+"<tracking_settings>` へのドロップダウンメニュー"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:144
 msgid "Position and additional attributes"
@@ -379,9 +453,20 @@ msgid ""
 "``automatic`` or ``manual``"
 msgstr ":guilabel:`モード`: GPS受信機設定2D/3Dモード、``自動`` または ``手動``"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:176
+msgid ""
+":guilabel:`Dimensions`: Position fix dimension, can be ``2D``, ``3D`` or "
+"``No fix``"
+msgstr ":guilabel:`次元`: 位置フィックスの次元。``2D``、``3D``、または ``フィックスなし`` のいずれか"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:177
 msgid ":guilabel:`Quality`: Positioning quality indicator"
 msgstr ":guilabel:`品質`: 測位品質の指標"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:178
+msgid ""
+":guilabel:`Status`: Position fix status, can be ``Valid`` or ``Invalid``"
+msgstr ":guilabel:`状態`: 位置フィックスの状態。``Valid`` または ``Invalid`` のいずれか"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:179
 msgid ":guilabel:`Satellites`: Count of satellites used in obtaining the fix"
@@ -502,6 +587,14 @@ msgid ""
 "ones) and then in QGIS:"
 msgstr "プログラムを起動し、GPSデバイスをスキャンさせ（USB接続とBTの両方に対応）、その後QGISで:"
 
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:246
+msgid ""
+"In :menuselection:`Settings --> Options --> GPS`, detect the plugged-in "
+"device. You can use the |radioButtonOn| :guilabel:`Autodetect` mode."
+msgstr ""
+":menuselection:`設定 --> オプション --> GPS` で、繋がっているデバイスを検出します。|radioButtonOn| "
+":guilabel:`自動検出` モードが使用できます。"
+
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:248
 msgid "Press :guilabel:`Connect` in the :guilabel:`GPS Information` panel"
 msgstr ":guilabel:`GPS情報` パネルの :guilabel:`接続` を押します"
@@ -550,6 +643,15 @@ msgstr "GPSD (Linux) またはGPSGate (Windows) を使うと手間が省略で�
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:285
 msgid "Using BlueMax GPS-4044 datalogger (both BT and USB)"
 msgstr "BlueMax GPS-4044 データロガー (BT とUSB両方)を使用する"
+
+#: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:290
+msgid ""
+"The live tracking works for both USB and BT modes, by using GPSGate or even "
+"without it, just use the |radioButtonOn| :guilabel:`Autodetect` mode, or "
+"point the tool to the right port."
+msgstr ""
+"ライブ追跡はUSBとBTモードのどちらでも動作します。GPSGateを使う場合でも、使わない場合でも、 |radioButtonOn| "
+":guilabel:`自動検出` モードを使用するか、ツールに正しいポートを指示します。"
 
 #: ../../docs/user_manual/working_with_gps/live_GPS_tracking.rst:298
 msgid "**For USB**"

@@ -5,18 +5,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoya miyoshi, 2025
 # Transifex Bot <>, 2025
 # Harrissou Sant-anna, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-15 17:10+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,6 +49,14 @@ msgid ""
 "depending of the level of zoom."
 msgstr ""
 "ラスタレイヤのレンダリング時間を高速化するため、全体図（ピラミッド）を作成することができます。全体図は、QGISがズームのレベルに応じて使用する、データの低解像度コピーです。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:19
+msgid ""
+"This algorithm is derived from the `GDAL addo utility "
+"<https://gdal.org/en/latest/programs/gdaladdo.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL addo utility "
+"<https://gdal.org/en/latest/programs/gdaladdo.html>`_ から派生したものです。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:22
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:150
@@ -441,6 +449,7 @@ msgstr "``RESAMPLING``"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:173
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:240
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:342
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:361
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:411
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:557
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:711
@@ -483,6 +492,18 @@ msgstr "1 -- 平均 (``average``)"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:82
 msgid "2 -- Gaussian (``gauss``)"
 msgstr "2 -- ガウス (``gauss``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:83
+msgid "3 -- Cubic (4x4 kernel) (``cubic``)"
+msgstr "3 -- キュービック法（4x4 カーネル）(``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:84
+msgid "4 -- Cubic B-Spline (4x4 kernel) (``cubicspline``)"
+msgstr "4 -- キュービックBスプライン法（4x4カーネル）(``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:85
+msgid "5 -- Lanczos (6x6 kernel) (``lanczos``)"
+msgstr "5 -- ランチョス法（6x6カーネル）(``lanczos``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:86
 msgid "6 -- Average MP (``average_mp``)"
@@ -661,6 +682,14 @@ msgid ""
 msgstr ""
 "入力GDALでサポートされているラスターのリストのモザイクであるVRT（仮想データセット）を構築します。モザイクを使用すると、複数のラスターファイルをマージできます。"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:147
+msgid ""
+"This algorithm is derived from the `GDAL buildvrt utility "
+"<https://gdal.org/en/latest/programs/gdalbuildvrt.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL buildvrt utility "
+"<https://gdal.org/en/latest/programs/gdalbuildvrt.html>`_ から派生したものです。"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:167
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:538
 msgid "**Input layers**"
@@ -756,8 +785,10 @@ msgstr "デフォルト： ``[一時ファイルに保存]``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:204
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:572
-msgid "Specification of the output raster layer. One of:"
-msgstr "出力ラスタレイヤを指定します。次のいずれかです："
+msgid ""
+"Specification of the output raster layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "出力ラスタレイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
@@ -803,26 +834,70 @@ msgstr "出力ファイルの投影法を上書きします。再投影はされ
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:238
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:709
 msgid "**Resampling algorithm**"
-msgstr "**Resampling algorithm**"
+msgstr "**リサンプリングのアルゴリズム**"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:243
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:714
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1243
+msgid ""
+"The `resampling algorithm "
+"<https://gdal.org/en/latest/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ "
+"to use. Options:"
+msgstr ""
+"使用する `リサンプリングアルゴリズム "
+"<https://gdal.org/en/latest/programs/gdalwarp.html#cmdoption-gdalwarp-r>`_ "
+"です。オプション:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:246
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:717
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1246
 msgid "0 --- Nearest Neighbour (``nearest``)"
-msgstr "0 --- Nearest Neighbour (``nearest``)"
+msgstr "0 --- 最近傍 (``nearest``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:247
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:718
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1247
+msgid "1 --- Bilinear (2x2 kernel) (``bilinear``)"
+msgstr "1 -- バイリニア法（2x2カーネル）(``bilinear``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:248
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:719
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1248
+msgid "2 --- Cubic (4x4 kernel) (``cubic``)"
+msgstr "2 -- キュービック法（4x4カーネル）(``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:249
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:720
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1249
+msgid "3 --- Cubic B-Spline (4x4 kernel) (``cubicspline``)"
+msgstr "3 -- キュービックBスプライン法（4x4カーネル）(``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:250
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:721
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1250
+msgid "4 --- Lanczos (6x6 kernel) (``lanczos``)"
+msgstr "4 -- ランチョス法（6x6カーネル）(``lanczos``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:251
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:722
 msgid "5 --- Average (``average``)"
-msgstr "5 --- Average (``average``)"
+msgstr "5 --- 平均 (``average``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:252
 msgid "6 --- Mode (``mode``)"
-msgstr "6 --- Mode (``mode``)"
+msgstr "6 --- モード (``mode``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:253
+msgid "**NoData value(s) for input bands (space separated)**"
+msgstr "**入力バンドのNoData値（スペース区切り）**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:256
 msgid "``SRC_NODATA``"
 msgstr "``SRC_NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:260
+msgid "Space separated NoData value(s) for input band(s)"
+msgstr "空白で区切られた、入力バンドのNoData値"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:283
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:642
@@ -835,7 +910,25 @@ msgstr "**Algorithm ID**: ``gdal:buildvirtualraster``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:298
 msgid "gdal2tiles"
-msgstr "gdal2tiles"
+msgstr "タイルを生成（gdal2tiles）"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:300
+msgid ""
+"Generates a directory with small tiles and metadata, following the `OSGeo "
+"Tile Map Service Specification "
+"<https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_. See also the"
+" `OpenGIS Web Map Tile Service Implementation Standard "
+"<https://www.ogc.org/publications/standard/wmts>`_. Simple web pages with "
+"viewers based on Google Maps, OpenLayers and Leaflet are generated as well. "
+"To explore your maps on-line in the web browser, you only need to upload the"
+" generated directory onto a web server."
+msgstr ""
+"`OSGeoタイルマップサービス仕様書 "
+"<https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_ "
+"に従った、小さなタイルとメタデータを含んだディレクトリを生成します。`OpenGIS Web Map Tile Service "
+"Implementation Standard <https://www.ogc.org/publications/standard/wmts>`_ "
+"も参照してください。Google "
+"Maps、OpenLayers、Leafletに基づいたビューアを持つシンプルなウェブページも生成されます。オンラインにある自分の地図をウェブブラウザで見るには、生成されたディレクトリをウェブサーバにアップロードするだけです。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:310
 msgid ""
@@ -851,6 +944,14 @@ msgid ""
 " but you can publish a picture without proper georeferencing too."
 msgstr ""
 "ESRIワールドファイルと埋め込まれたジオリファレンスは、タイル生成時に使用されますが、適切なジオリファレンスなしで画像を公開することもできます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:318
+msgid ""
+"This algorithm is derived from the `GDAL gdal2tiles utility "
+"<https://gdal.org/en/latest/programs/gdal2tiles.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL gdal2tiles utility "
+"<https://gdal.org/en/latest/programs/gdal2tiles.html>`_ から派生したものです。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:339
 msgid "GDAL-supported raster layer."
@@ -914,10 +1015,6 @@ msgstr "**生成するWebビューア**"
 msgid "``VIEWER``"
 msgstr "``VIEWER``"
 
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:361
-msgid "[enumerate]"
-msgstr "[列挙型]"
-
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:366
 msgid "0 --- All (``all``)"
 msgstr "0 -- すべて (``all``)"
@@ -975,8 +1072,10 @@ msgstr "デフォルト： ``[一時フォルダに保存]``"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:392
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1200
-msgid "Specify the output folder for the tiles. One of:"
-msgstr "タイルの出力フォルダを指定します。次のいずれかです:"
+msgid ""
+"Specify the output folder for the tiles. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "タイルの出力フォルダを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary Directory"
@@ -985,6 +1084,30 @@ msgstr "一時ディレクトリに保存"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Save to Directory"
 msgstr "ディレクトリに保存します"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:414
+msgid "The resampling algorithm to use. Options:"
+msgstr "使用するリサンプリングアルゴリズム。次のいずれかです:"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:418
+msgid "1 --- Nearest Neighbour (``near``)"
+msgstr "1 -- 最近傍 (``near``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:419
+msgid "2 --- Bilinear (2x2 kernel) (``bilinear``)"
+msgstr "2 -- バイリニア法（2x2カーネル）(``bilinear``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:420
+msgid "3 --- Cubic (4x4 kernel) (``cubic``)"
+msgstr "3 -- キュービック法（4x4カーネル）(``cubic``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:421
+msgid "4 --- Cubic B-Spline (4x4 kernel) (``cubicspline``)"
+msgstr "4 -- キュービックBスプライン法（4x4カーネル）(``cubicspline``)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:422
+msgid "5 --- Lanczos (6x6 kernel) (``lanczos``)"
+msgstr "5 -- ランチョス法（6x6カーネル）(``lanczos``)"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:423
 msgid "6 --- Antialias (``antialias``)"
@@ -1006,6 +1129,16 @@ msgstr "**入力データに割り当てる透明度値**"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:436
 msgid "``NODATA``"
 msgstr "``NODATA``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:437
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:594
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:602
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:907
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1515
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1521
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1527
+msgid "[numeric: double]"
+msgstr "[数値: double]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:439
 msgid "Default: 0.0"
@@ -1086,6 +1219,14 @@ msgid ""
 "be in the same coordinate system."
 msgstr ""
 "簡単な方法でラスタファイルをマージします。ここでは、入力ラスタから擬似カラーテーブルを使用し、出力ラスタの種類を定義できます。すべての画像は同じ座標系でなければなりません。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:518
+msgid ""
+"This algorithm is derived from the `GDAL merge utility "
+"<https://gdal.org/en/latest/programs/gdal_merge.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL merge utility "
+"<https://gdal.org/en/latest/programs/gdal_merge.html>`_ から派生したものです。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:541
 msgid "Input raster layers"
@@ -1192,7 +1333,7 @@ msgstr "**出力レイヤ**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:590
 msgid "**Input pixel value to treat as \"NoData\"**"
-msgstr "**nodata値として扱うピクセル値**"
+msgstr "**NoDataとして扱うピクセル値**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:593
 msgid "``NODATA_INPUT``"
@@ -1269,6 +1410,14 @@ msgid ""
 "operation."
 msgstr "高解像度化処理を行います。（GeoTIFFなど）「古典的な」出力データセットや高解像度処理を記述したVRTデータセットを作成できます。"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:662
+msgid ""
+"See `GDAL Pansharpen "
+"<https://gdal.org/en/latest/programs/gdal_pansharpen.html>`_."
+msgstr ""
+"`GDAL Pansharpen "
+"<https://gdal.org/en/latest/programs/gdal_pansharpen.html>`_ を参照。"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:679
 msgid "**Spectral dataset**"
 msgstr "**低解像度のマルチバンドデータ**"
@@ -1299,10 +1448,6 @@ msgstr "入力する（パンクロマチック）ラスタレイヤ"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1588
 msgid "**Output**"
 msgstr "**出力**"
-
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:692
-msgid "Specify the output (sharpened) raster layer. One of:"
-msgstr "出力（高解像度化した）ラスタレイヤを指定します。次のいずれかです:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:713
 msgid "Default: 2"
@@ -1627,10 +1772,6 @@ msgstr "出力ラスタファイルのデータ型を定義します。オプシ
 msgid "**Calculated**"
 msgstr "**出力レイヤ**"
 
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:951
-msgid "Specify the output (calculated) raster layer. One of:"
-msgstr "（計算した）出力ラスタレイヤを指定します。次のいずれかです:"
-
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1008
 msgid "Output (calculated) raster layer"
 msgstr "（計算した）出力ラスタレイヤ"
@@ -1715,10 +1856,6 @@ msgstr "**出力ファイル**"
 msgid "[html]"
 msgstr "[html]"
 
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1085
-msgid "Specify the HTML file for output. One of:"
-msgstr "出力するHTMLファイルを指定します。次のいずれかです:"
-
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1127
 msgid "The HTML file containing information about the input raster layer"
 msgstr "入力ラスタレイヤの情報を含んでいるHTMLファイル"
@@ -1755,6 +1892,13 @@ msgstr "**タイルの幅**"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1172
 msgid "``TILE_SIZE_X``"
 msgstr "``TILE_SIZE_X``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1173
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1179
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1185
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1191
+msgid "[numeric: integer]"
+msgstr "[数値: Integer]"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1175
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1181
@@ -1816,10 +1960,6 @@ msgstr "[ファイル]"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1211
 msgid "Default: ``[Skip output]``"
 msgstr "デフォルト： ``[出力をスキップ]``"
-
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1212
-msgid "Specify the output file for the tiles. One of:"
-msgstr "タイルの出力ファイルを指定します。次のいずれかです:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
@@ -1948,10 +2088,6 @@ msgstr "**タイルインデックス**"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1462
 msgid "[vector: polygon]"
 msgstr "[ベクタ：ポリゴン]"
-
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1403
-msgid "Specify the polygon vector layer to write the index to. One of:"
-msgstr "インデックスを書き込むポリゴンベクタレイヤを指定します。以下のいずれか:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1422
 msgid "**Transform geometries to the given CRS**"
@@ -2098,10 +2234,6 @@ msgstr "デフォルト： 100.0"
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1530
 msgid "Maximum distance from observer to compute visibility, in the DEM units"
 msgstr "DEMの単位による、視距離を計算する視点からの最大距離"
-
-#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1537
-msgid "Output raster layer. One of:"
-msgstr "出力ラスタレイヤ。次のうちのひとつ:"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:1591
 msgid "The raster layer displaying the viewshed."
