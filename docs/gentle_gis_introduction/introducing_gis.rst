@@ -87,7 +87,7 @@ will be focusing on GIS Software.
 What is GIS Software / a GIS Application?
 =========================================
 
-You can see an example of what a **GIS Application** looks like :numref:`figure_gis_application`.
+You can see an example of what a **GIS Application** looks like in :numref:`figure_gis_application`.
 GIS Applications are normally programs with a graphical user interface that can
 be manipulated using the mouse and keyboard. The application provides **menus**
 near to the top of the window (:guilabel:`Project`, :guilabel:`Edit`, etc.) which,
@@ -178,8 +178,8 @@ provides a list of layers that have been loaded in the GIS Application. Unlike a
 paper map legend, the map legend or 'layers list' in the GIS Application provides
 a way to re-order, hide, show and group layers. Changing the layer order is done
 by clicking on a layer in the legend, holding the mouse button down and then
-dragging the layer to a new position. In figures :numref:`figure_map_legend_before` and
-:numref:`figure_map_legend_after` the map legend is shown as the area to the left of the GIS
+dragging the layer to a new position. In :numref:`figure_map_legend_before` and
+:numref:`figure_map_legend_after`, the map legend is shown as the area to the left of the GIS
 Application window. By changing the layer order, the way that layers are drawn
 can be adjusted --- in this case so that rivers are drawn below the roads instead
 of over them.
@@ -247,7 +247,7 @@ data associated with places.
 
 GIS Systems work with many different types of data. **Vector data** is stored as
 a series of ``X, Y`` coordinate pairs inside the computer's memory. Vector data
-are used to represent points, lines and areas. Illustration :numref:`figure_vector_data`
+are used to represent points, lines and areas. :numref:`figure_vector_data`
 shows different types of vector data being viewed in a GIS application. In the
 tutorials that follow we will be exploring vector data in more detail.
 
@@ -264,7 +264,7 @@ tutorials that follow we will be exploring vector data in more detail.
 the earth and the photographs they take are a kind of raster data that can be
 viewed in a GIS. One important difference between raster and vector data is that
 if you zoom in too much on a raster image, it will start to appear 'blocky' (see
-illustrations :numref:`figure_raster_data` and :numref:`figure_raster_data_zoom`). In fact these
+:numref:`figure_raster_data` and :numref:`figure_raster_data_zoom`). In fact these
 blocks are the individual cells of the data grid that makes up the raster image.
 We will be looking at raster data in greater detail in later tutorials.
 
