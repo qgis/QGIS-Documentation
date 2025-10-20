@@ -15,15 +15,13 @@ Add missing vertices along borders
 ----------------------------------
 
 Adds the missing vertices along polygons borders,
-based on an error layer from the "Missing vertices along borders"
-algorithm in the "Check geometry" section.
+based on an error layer from the :ref:`qgischeckgeometrymissingvertex` algorithm.
 
 .. figure:: img/fix_geometry_missing_vertices.png
    :align: center
 
    Before and after adding missing vertices along polygon borders.
 
-.. seealso:: :ref:`qgischeckgeometrymissingvertex`
 
 Parameters
 ..........
