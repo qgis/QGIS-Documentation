@@ -948,7 +948,7 @@ Basic parameters
      - [vector: polygon]
 
        Default: ``[Skip output]``
-     - Polygon layer with the features containing missing vertices.
+     - Polygon layer with the features whose vertices are missing.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -1006,8 +1006,9 @@ Outputs
    * - **Missing vertices features**
      - ``OUTPUT``
      - [vector: polygon]
-     - Output polygon layer with features containing missing vertices.
-       If no missing vertices are found, the output layer will be empty.
+     - Output polygon layer with features whose vertices are missing.
+       There will be as many (duplicate) features as there are missing vertices in each geometry.
+       If no vertices are missing, the output layer will be empty.
        Available fields are the same as in the ``ERRORS`` output.
 
 Python code
