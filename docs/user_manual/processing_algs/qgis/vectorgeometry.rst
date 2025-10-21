@@ -403,6 +403,74 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisapproximatedmedialaxis:
+
+Approximate medial axis
+-----------------------
+|400|
+
+Generates a simplified skeleton of polygon geometries by approximating their
+medial axis. The output is a line layer representing the central structure
+of each polygon, preserving main topology while ignoring small variations.
+
+Z values are ignored; the medial axis is calculated from the 2D projection
+of input geometries.
+
+.. attention:: This algorithm is not available by default in QGIS. It requires `SFCGAL <https://sfcgal.gitlab.io/SFCGAL/>`_ 
+  library to be installed.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon vector layer
+   * - **Medial axis**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output line layer.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Medial axis**
+     - ``OUTPUT``
+     - [vector: line]
+     - Output line layer containing the approximate medial axis
+
+Python code
+...........
+
+**Algorithm ID**: ``native:approximatedmedialaxis``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 .. _qgisboundary:
 
 Boundary
