@@ -416,10 +416,8 @@ of each polygon, preserving main topology while ignoring small variations.
 Z values are ignored; the medial axis is calculated from the 2D projection
 of input geometries.
 
-.. note:: `SFCGAL <https://www.osgeo.org/projects/sfcgal/>`_ support is disabled by default. To enable it when building QGIS, you need to:
-
-   * Install the SFCGAL development packages on your system.
-   * Enable SFCGAL in the CMake configuration using the ``WITH_SFCGAL`` flag.
+.. attention:: This algorithm is not available by default in QGIS. It requires `SFCGAL <https://sfcgal.gitlab.io/SFCGAL/>`_ 
+  library to be installed.
 
 Parameters
 ..........
