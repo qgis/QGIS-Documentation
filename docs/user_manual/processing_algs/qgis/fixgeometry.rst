@@ -15,7 +15,7 @@ Fix Geometry
 Delete duplicated vertices
 --------------------------
 
-Deletes duplicated vertices from the input geometries.
+Deletes duplicated vertices from the input geometries, based on errors reported by the :ref:`qgischeckgeometryduplicatenodes` algorithm.
 
 .. seealso:: :ref:`qgischeckgeometryduplicatenodes`, :ref:`qgisremoveduplicatevertices`
 
@@ -160,7 +160,12 @@ Python code
 Delete features
 ---------------
 
-Deletes error features based on an error layer from the check geometry algorithms.
+Deletes error features based on an error layer from some check geometry algorithms, such as:
+
+* :ref:`qgischeckgeometrycontained`
+* :ref:`qgischeckgeometrydegeneratepolygons`
+* :ref:`qgischeckgeometrysegmentlength`
+* :ref:`qgischeckgeometryduplicate`
 
 .. figure:: img/fix_geometry_deletefeatures.png
    :align: center
@@ -271,12 +276,14 @@ Python code
 Delete overlaps
 ---------------
 
-Deletes overlapping areas based on an error layer from the check geometry algorithms.
+Deletes overlapping areas based on an error layer from the :ref:`qgischeckgeometryoverlap` algorithm.
 
 .. figure:: img/fix_geometry_deleteoverlaps.png
    :align: center
 
    Before and after deleting overlapping areas.
+
+.. seealso:: :ref:`qgischeckgeometryoverlap`
 
 Parameters
 ..........
@@ -562,6 +569,7 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
 
 .. _qgisfixgeometryhole:
 
