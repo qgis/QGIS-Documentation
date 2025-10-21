@@ -19,7 +19,7 @@ of a vector feature describes its **shape** and **position**, while the
 etc.).
 
 In this section we will look more closely at the process of creating and editing
-vector data --– both the geometry and attributes of vector features.
+vector data --- both the geometry and attributes of vector features.
 
 How does GIS digital data get stored?
 =====================================
@@ -152,7 +152,7 @@ sample site. So we may end up with an attribute table that looks something like
 Drawing a table like :numref:`table_river_attributes` before you create your vector
 layer will let you decide what attribute fields (columns) you will need. Note
 that the geometry (positions where samples were taken) is not shown in the
-attribute table --– the GIS Application stores it separately!
+attribute table --- the GIS Application stores it separately!
 
 Creating an empty shapefile
 ===========================
@@ -179,7 +179,7 @@ Next you will add fields to the attribute table. Normally we give field names th
 are short, have no spaces and indicate what type of information is being stored
 in that field. Example field names may be 'pH', 'RoofColour', 'RoadType' and so
 on. As well as choosing a name for each field, you need to indicate how the
-information should be stored in that field –-- i.e. is it a number, a word or a
+information should be stored in that field --- i.e. is it a number, a word or a
 sentence, or a date?
 
 Computer programs usually call information that is made up of words or sentences
@@ -187,7 +187,7 @@ Computer programs usually call information that is made up of words or sentences
 of a river, you should use 'String' for the field type.
 
 The shapefile format allows you to store the numeric field information as either
-a whole number (**integer**) or a decimal number (**floating point**) –-- so you
+a whole number (**integer**) or a decimal number (**floating point**) --- so you
 need to think before hand whether the numeric data you are going to capture will
 have decimal places or not.
 
