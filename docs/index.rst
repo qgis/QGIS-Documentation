@@ -7,13 +7,18 @@
 
   .. attention::  You are reading the testing version of QGIS documentation,
     an ongoing work which targets the latest changes in the software and may
-    document features not available or compatible with QGIS |CURRENT| Long
-    Term Release.
+    document features not available or compatible with released versions.
 
-.. only:: not testing
+.. only:: ltr
 
   .. hint:: Looking for documentation of versions newer than the
     |version| Long Term Release? Have a look at the
+    `testing docs <https://docs.qgis.org/testing/en/>`_.
+
+.. only:: not (ltr or testing or outdated)
+
+  .. hint:: Looking for documentation of versions newer than
+    |version|, the next to be Long Term Release? Have a look at the
     `testing docs <https://docs.qgis.org/testing/en/>`_.
 
 .. note:: QGIS documentation is available in various languages and versions.

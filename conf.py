@@ -156,7 +156,9 @@ html_context = {
     'outdated': False,
     # When a new QGIS version is released, set this to False to remove the disclaimer
     # information message on the top of the page.
-    'isTesting': True
+    'isTesting': True,
+    # Whether the version is the current LTR
+    'isLtr': False,
 }
 
 # Add custom CSS when a top bar is needed to be shown (for testing or outdated versions)
@@ -168,6 +170,8 @@ if html_context['isTesting']:
     tags.add('testing')
 if html_context['outdated']:
     tags.add('outdated')
+if html_context['isLtr']:
+    tags.add('ltr')
 
 supported_languages = cfg['supported_languages'].split()
 version_list = cfg['version_list'].replace(' ', '').split(',')
