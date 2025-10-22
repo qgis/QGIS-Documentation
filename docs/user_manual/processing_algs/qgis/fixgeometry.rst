@@ -854,7 +854,7 @@ Python code
 Fill gaps
 --------------------
 
-Fills the gaps based on a gap and neighbors layer from the check algorithm.
+Fills the gaps based on a gap and neighbors layer from the :ref:`qgischeckgeometrygap` algorithm.
 Three different fixing methods are available.
 
 .. figure:: img/fix_geometry_gap.png
