@@ -1392,7 +1392,7 @@ Self contacts are errors.
 .. figure:: img/check_geometry_selfcontact.png
    :align: center
 
-   Reporting errors on features with self-contacts.
+   Self-intersection vs self-contact.
 
 Parameters
 ..........
@@ -1483,8 +1483,8 @@ Outputs
 
        - ``gc_layerid``: the ID of the input layer.
        - ``gc_layername``: the name of the input layer.
-       - ``gc_partidx``
-       - ``gc_ringidx``
+       - ``gc_partidx``: the index of the feature's geometry part where the self-contact occurs.
+       - ``gc_ringidx``: the index of the ring where the self-contact occurs.
        - ``gc_vertidx``: the index of the vertex where the self-contact occurs.
        - ``gc_errorx``: the x coordinate of the self-contact.
        - ``gc_errory``: the y coordinate of the self-contact.
