@@ -1611,12 +1611,10 @@ Python code
 Small gaps
 ---------------------
 
-Checks the gaps between polygons.
-Gaps with an area smaller than the gap threshold are errors.
-If an allowed gaps layer is given, the gaps contained in polygons from this layer will be ignored.
+Checks for gaps between polygons in the input layer.
+Gaps with an area smaller than the gap threshold are reported as errors.
+If an allowed gaps layer is provided, the algorithm ignores gaps that fall entirely within polygons from this layer.
 An optional buffer can be applied to the allowed gaps.
-The neighbors output layer is needed for the fix geometry (gaps) algorithm.
-It is a 1-N relational table for correspondence between a gap and the unique id of its neighbor features.
 
 .. figure:: img/check_geometry_gap.png
    :align: center
@@ -1654,12 +1652,14 @@ Basic parameters
 
        Default: 0.0
      - Maximum area of gaps to be reported as errors, in map units.
+       If set to 0, all the gaps are reported.
    * - **Allowed gaps layer**
 
        Optional
      - ``ALLOWED_GAPS_LAYER``
      - [vector: polygon]
-     - Layer with polygons representing allowed gaps.
+     - Optional layer specifying polygons whose areas should be ignored during the gap check.
+       Gaps that fall entirely within these polygons will not be reported as errors.
    * - **Allowed gaps buffer**
 
        Optional
@@ -1667,13 +1667,15 @@ Basic parameters
      - [numeric: double]
 
        Default: 0.0
-     - Buffer distance to apply to the allowed gaps layer, in map units.
+     - Buffer distance to apply to the allowed gaps layer, in selected units.
+       Gaps located within this buffered area are ignored.
+       Allows adding a spatial tolerance around allowed gaps to avoid reporting near-boundary gaps as errors.
    * - **Neighbors layer**
      - ``NEIGHBORS``
      - [vector: table]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output table representing the gap ID and the unique ID of the input feature that is a neighbor of the gap.
+     - Specification of the output table representing the gap ID and the unique ID of its neighbor features.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -1741,10 +1743,11 @@ Outputs
    * - **Neighbors layer**
      - ``NEIGHBORS``
      - [vector: table]
-     - The output table contains the following fields:
+     - A 1–N relational table, meaning that one gap can be associated with multiple neighboring polygons.
+       The output table contains the following fields:
 
        - ``gc_errorid``: the ID of the gap.
-       - ``UNIQUE_ID`` field: the unique ID of the input feature that is a neighbor of the gap.
+       - ``UNIQUE_ID`` field: the unique ID of an input feature that is a neighbor of the gap.
    * - **Gap errors**
      - ``ERRORS``
      - [vector: point]
