@@ -766,6 +766,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |centroids| image:: /static/common/mAlgorithmCentroids.png
    :width: 1.5em
+.. |chamferFillet| image:: /static/common/mActionChamferFillet.png
+   :width: 1.5em
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
 .. |checkGeometry| image:: /static/common/mAlgorithmCheckGeometry.png
@@ -1324,8 +1326,6 @@ Icon                            Substitution                        Icon        
 .. |offlineEditingSync| image:: /static/common/offline_editing_sync.png
    :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
-   :width: 1.5em
-.. |chamferFillet| image:: /static/common/mActionChamferFillet.png
    :width: 1.5em
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
    :width: 1.5em
