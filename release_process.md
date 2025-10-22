@@ -66,7 +66,7 @@ New releases are branched off the `master` branch and thus require a set of chan
 - [ ] Update the new branch, as follows:
   - [ ] In [conf.py](conf.py) file:
     - [ ] set the `version` value (in the form x.y)
-    - [ ] set the html_context `isTesting` option to `False`
+    - [ ] set the html_context `isTesting` and `isLtr` options to `False`
   - [ ] In [README.MD](README.MD) file, update the badges to point to the current branch instead of `master`,
     and current version instead of `testing`
   - [ ] In [Makefile](Makefile) file, set the `VERSION` number as in the conf.py file
@@ -98,7 +98,8 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 ### Old LTR branch 
 <details>
 
-- [ ] In [conf.py](conf.py) file: set the html_context `outdated` option to `True`
+- [ ] In [conf.py](conf.py) file: set the html_context `outdated` option to `True`,
+  and `isLtr` to `False`
 - [ ] Pull translations for all languages from transifex (see instructions in [README](README.md) file)
 - [ ] Build the docs one more time
 
@@ -107,6 +108,7 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 ### New LTR branch 
 <details>
 
+- [ ] In [conf.py](conf.py) file: set the html_context `isLtr` to `True`
 - [ ] In [docs_conf.yml](docs_conf.yml) file: add target languages to the `supported_languages` parameter.
   These are the languages that will be published in the documentation.
   A threshold of 5% is currently applied to candidates.
