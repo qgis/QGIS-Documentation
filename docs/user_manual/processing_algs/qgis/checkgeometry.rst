@@ -1263,14 +1263,15 @@ Python code
 Sliver polygons
 ------------------
 
-Checks sliver polygons in a polygon layer.
+Detects sliver polygons in a polygon layer,
+i.e., polygons with a thinness greater than a specified value.
+
 The thinness is the ratio between the area of the minimum square
 containing the polygon and the area of the polygon itself (a square has a thinness value of 1).
 The thinness value is between 1 and +infinity.
-If a polygon has an area higher than the maximum area,
-it is skipped (a maximum area value of 0 means no area check).
+A maximum area can be set for limiting the checks to polygons of a lower area.
 Polygons having a thinness higher than the maximum thinness are errors.
-To fix sliver polygons, use the "Fix small polygons" algorithm.
+To fix sliver polygons, use the :ref:`qgisfixgeometryarea` algorithm.
 
 .. figure:: img/check_geometry_sliver_polygon.png
    :align: center
@@ -1314,9 +1315,9 @@ Basic parameters
      - [numeric: double]
   
        Default: 0.0
-     - Maximum area of a polygon to be checked.
+     - Maximum area of a polygon to be checked (in map units).
        Any polygon with an area above this threshold is skipped.
-       A value of 0 means no area check.
+       A value of 0 means all polygons are checked.
    * - **Sliver polygon errors**
      - ``ERRORS``
      - [vector: point]
@@ -1393,7 +1394,7 @@ Outputs
    * - **Sliver polygon features**
      - ``OUTPUT``
      - [vector: polygon]
-     - Output layer with features containing the sliver polygon features.
+     - Output layer with features containing the sliver polygons.
        If no sliver polygon features are found, the output layer will be empty.
        Available fields are the same as in the ``ERRORS`` output.
 
@@ -1525,8 +1526,7 @@ Python code
 Small polygons
 ------------------
 
-Checks the areas of polygon geometries.
-Areas below the area threshold are errors.
+Detects polygon features whose area is below a specified value as errors.
 
 .. figure:: img/check_geometry_area.png
    :align: center
@@ -1563,7 +1563,7 @@ Basic parameters
      - [numeric: double]
 
        Default: 0
-     - Minimum area of a polygon to be considered valid, in squared degrees.
+     - Minimum area of a polygon to be considered valid, in selected units.
        Any polygon with an area below this threshold is reported as error.
    * - **Small polygons errors**
      - ``ERRORS``

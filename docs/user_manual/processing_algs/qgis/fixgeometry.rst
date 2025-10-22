@@ -719,14 +719,14 @@ Fix small polygons
 --------------------
 
 Merges neighboring polygons according to the chosen method,
-based on an error layer from the check geometry section.
+based on an error layer from the :ref:`qgischeckgeometryarea` or :ref:`qgischeckgeometrysliverpolygon` algorithm.
 
 .. figure:: img/fix_geometry_area.png
    :align: center
 
    Before and after fixing small polygons (method: merge with neighboring polygon with largest area).
 
-.. seealso:: :ref:`qgischeckgeometryarea`, :ref:`qgischeckgeometrysliverpolygon`
+.. seealso:: :ref:`qgischeckgeometryarea`, :ref:`qgischeckgeometrysliverpolygon`, :ref:`qgisremovepartsbyarea`
 
 Parameters
 ..........
@@ -755,14 +755,15 @@ Basic parameters
      - ``METHOD``
      - [enumeration]
 
+       Default: 0
      - Method to apply to the small polygon geometries:
 
-       * ``Merge with neighboring polygon with longest shared edge``:
-         merges the self-intersecting geometry with the neighboring polygon that has the longest shared edge.
-       * ``Merge with neighboring polygon with largest area``:
-         merges the self-intersecting geometry with the neighboring polygon that has the largest area.
-       * ``Merge with neighboring polygon with identical attribute value, if any, or leave as is``:
-         merges the self-intersecting geometry with the neighboring polygon that has the same attribute value, if such a polygon exists.
+       * 0 --- ``Merge with neighboring polygon with longest shared edge``:
+         merges the small polygon geometry with the neighboring polygon that has the longest shared edge.
+       * 1 --- ``Merge with neighboring polygon with largest area``:
+         merges the small polygon geometry with the neighboring polygon that has the largest area.
+       * 2 --- ``Merge with neighboring polygon with identical attribute value, if any, or leave as is``:
+         merges the small polygon geometry with a neighboring polygon that has the same attribute value, if such a polygon exists.
 
    * - **Field to consider when merging polygons with the identical attribute method**
 
