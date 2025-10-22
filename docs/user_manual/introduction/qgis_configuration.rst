@@ -1415,6 +1415,8 @@ libraries to enable OpenCL acceleration.
 IDE settings
 ------------
 
+.. _github_token:
+
 Under :guilabel:`GitHub access token`, you can generate a personal token
 allowing you to share code snippets from within the Python code editor.
 More details on `GitHub authentication
@@ -1478,10 +1480,10 @@ It can also be accessed using the |options| :sup:`Options...` button from:
 You can specify:
 
 * |unchecked| :guilabel:`Autocompletion`: Enables code completion. You can get
-  autocompletion from the current document, the installed API files or both.
+  autocompletion from the current document, the :ref:`installed API <used_api>` files or both.
 
   * :guilabel:`Autocompletion threshold`: Sets the threshold for displaying
-    the autocompletion list (in characters)
+    the autocompletion list (in number of characters)
 
 * under :guilabel:`Typing`
 
@@ -1537,12 +1539,21 @@ You can specify:
     automatically when executed. This action will store a temporary file (in the
     temporary system directory) that will be deleted automatically after running.
 
-For :guilabel:`APIs` you can specify:
+.. _used_api:
+
+Under :guilabel:`APIs`, you can specify which APIs your code should rely on:
 
 * |checkbox| :guilabel:`Using preloaded APIs file`: You can choose if you would
-  like to use the preloaded API files.  If this is not checked you can add API
-  files and you can also choose if you would like to use prepared API files
-  (see next option).
+  like to use the preloaded API files. By default, supported APIs are:
+
+  * Python
+  * PyQGIS
+  * PyQt
+  * QScintilla2
+  * osgeo-gdal-ogr
+  * osgeo-geos
+
+  You can also choose to add specific API files.
 * |unchecked| :guilabel:`Using prepared APIs file`: If checked, the chosen
   ``*.pap`` file will be used for code completion. To generate a prepared API
   file you have to load at least one ``*.api`` file and then compile it by
