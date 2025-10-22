@@ -8,6 +8,7 @@ Check Geometry
    .. contents::
       :local:
       :depth: 1
+      :class: toc-columns
 
 
 .. _qgischeckgeometrydangle:
