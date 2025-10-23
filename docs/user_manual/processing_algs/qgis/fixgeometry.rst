@@ -16,10 +16,10 @@ Convert to strictly multipart
 ------------------------------
 
 Converts multipart geometries that consists of only one geometry into singlepart geometries,
-based on an error layer from the check geometry.
+based on an error layer from the :ref:`qgischeckgeometrymultipart` algorithm.
 Layer geometry type will not be changed and will remain multipart.
 
-.. seealso:: :ref:`qgischeckgeometrymultipart`
+.. seealso:: :ref:`qgischeckgeometrymultipart`, :ref:`promotetomulti`
 
 Parameters
 ..........
