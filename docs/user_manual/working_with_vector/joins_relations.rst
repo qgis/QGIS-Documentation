@@ -656,6 +656,8 @@ The example above uses the following database schema:
       CONSTRAINT documents_pkey PRIMARY KEY (fid)
    );
 
+Once relations are established, the :ref:`Identify Features <identify>` result panel
+will display related features, allowing you to view associated data directly.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -675,6 +677,8 @@ The example above uses the following database schema:
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.2em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
 .. |joinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png

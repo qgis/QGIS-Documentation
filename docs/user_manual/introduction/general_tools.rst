@@ -1133,6 +1133,7 @@ From bottom to top:
     * |unchecked| :guilabel:`Hide derived attributes from results`
       to only show fields actually defined in the layer
     * |unchecked| :guilabel:`Hide NULL values from results`
+    * |unchecked| :guilabel:`Show Relations` to show relations in the Identify results tree
 
   * |helpContents|:sup:`Help` to access the current documentation
 
@@ -1209,6 +1210,15 @@ The feature information displayed by the identify tool will depend on the type
 of layer you have selected, whether it is a vector layer (including vector tiles 
 or point cloud data) or raster layer. If your layer is raster, clicking on a location
 on the map canvas with identify tool will highlight the identified raster pixel. 
+
+When layer has defined :ref:`relations <vector_relations>`, the :guilabel:`Identify Results` dialog
+can display both **referenced** and **referencing** related features. You can expand these relations
+to explore connected records through several levels, including many-to-many (n:m) relations that use a join table.
+Only nodes you explicitly expand are loaded, preventing excessive nesting.
+To focus the results on a specific related record, right-click it and choose :guilabel:`Identify Features`,
+this re-centers the identification tree on the selected fetures and limits the nesting depth.
+Features already shown in ancestor nodes are omitted automatically to avoid duplicates or circular relations.
+
 The Identify Results dialog can be customized to display custom fields, but by
 default it will display the following information:
 
@@ -1268,6 +1278,7 @@ For example, from the context menu you can:
 
 * View the feature form
 * Zoom to feature
+* Identify Feature
 * Copy feature: Copy all feature geometry and attributes
 * Toggle feature selection: Add identified feature to selection
 * Copy attribute value: Copy only the value of the attribute that you click on
