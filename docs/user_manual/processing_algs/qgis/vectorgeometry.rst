@@ -2800,11 +2800,11 @@ Outputs
        the input layer geometries.
        Other than the input attributes, the output layer also contains the following fields:
        
-       - ``vertex_index``: the index of the vertex within its part. The first vertex is indexed as 0.
+       - ``vertex_index``: the index of the vertex within the geometry. The first vertex is indexed as 0.
        - ``vertex_part``: the part number of the geometry that the vertex belongs to. For single-part geometries, this is always 0.
          For multi-part geometries (e.g. MultiPolygon or MultiLine), this indicates which part the vertex comes from.
        - ``vertex_part_ring``: for polygon geometries, this indicates whether the vertex belongs to the outer ring (0) or one of the inner rings (1, 2, ...).
-       - ``vertex_part_index``: is the index of a vertex in a specific ring.
+       - ``vertex_part_index``: the index of the vertex in its specific ring (outer or inner).
        - ``distance``: the distance from the previous vertex.
        - ``angle``: returns approximate angle at a vertex. 
          Usually the average angle between adjacent segments,
