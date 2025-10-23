@@ -127,12 +127,12 @@ You are now ready to add any layer from this GeoPackage to QGIS.
 #. Click on the :guilabel:`Connect` button.
    In the central part of the window you should now see the list of all the layers
    contained in the GeoPackage file.
-#. Select the :guilabel:`roads` layer and click on the :guilabel:`Add` button.
+#. Select the ``roads`` layer and click on the :guilabel:`Add` button.
 
    .. figure:: img/add_data_dialog_geopackage.png
       :align: center
 
-   A :guilabel:`roads` layer is added to the :guilabel:`Layers` panel with
+   A ``roads`` layer is added to the :guilabel:`Layers` panel with
    features displayed on the map canvas.
 #. Click on :guilabel:`Close`.
 
@@ -171,7 +171,7 @@ the :guilabel:`Browser`.
    Notice that a |dbSchema| :guilabel:`landuse.sqlite` entry has
    been added under the :guilabel:`SpatiaLite` one.
 #. Expand the |dbSchema| :guilabel:`landuse.sqlite` entry.
-#. Double-click the |polygonLayer| :guilabel:`landuse` layer or select and
+#. Double-click the |polygonLayer| ``landuse`` layer or select and
    drag-and-drop it onto the map canvas. A new layer is added to the
    :guilabel:`Layers` panel and its features are displayed on the map canvas.
 
@@ -191,21 +191,21 @@ the :guilabel:`Browser`.
 Load the following datasets from the :file:`exercise_data` folder into your map
 using any of the methods explained above:
 
-* :guilabel:`buildings`
-* :guilabel:`water`
+* ``buildings``
+* ``water``
 
 .. admonition:: Answer
    :class: dropdown
 
    Your map should have seven layers:
 
-   * :guilabel:`protected_areas`
-   * :guilabel:`places`
-   * :guilabel:`rivers`
-   * :guilabel:`roads`
-   * :guilabel:`landuse`
-   * :guilabel:`buildings` (taken from :file:`training_data.gpkg`) and
-   * :guilabel:`water` (taken from :file:`exercise_data/shapefile`).
+   * ``protected_areas``
+   * ``places``
+   * ``rivers``
+   * ``roads``
+   * ``landuse``
+   * ``buildings`` (taken from :file:`training_data.gpkg`) and
+   * ``water`` (taken from :file:`exercise_data/shapefile`).
 
 
 Follow Along: Reordering the Layers
