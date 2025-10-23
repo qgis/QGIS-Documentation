@@ -5,10 +5,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoya miyoshi, 2025
 # fairtommy <fairtommy@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,6 +38,15 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:2
 msgid "File tools"
 msgstr "ファイルツール"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:13
+msgid "Download file via HTTP(S)"
+msgstr "HTTP(S)でファイルをダウンロード"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:14
+msgid ""
+"Downloads a URL to the file system with an HTTP(S) GET or POST request."
+msgstr "URLをHTTP(S) GETまたはPOSTリクエストでファイルシステムにダウンロードします。"
 
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:17
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:109
@@ -131,6 +140,12 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:38
 msgid "Default: ``[Save to temporary file]``"
 msgstr "デフォルト： ``[一時ファイルに保存]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:39
+msgid ""
+"Specification of the file destination. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "ファイルの行先を指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
@@ -233,9 +248,58 @@ msgstr ""
 "dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
 "コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:102
+msgid "HTTP(S) POST/GET request"
+msgstr "HTTP(S) POST/GETリクエスト"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:103
+msgid ""
+"Performs a HTTP(S) POST/GET request and returns the HTTP status code and the"
+" reply data. If an error occurs then the error code and the message will be "
+"returned. Optionally, the result can be written to a file on the disk. By "
+"default the algorithm will warn on errors. Optionally, the algorithm can be "
+"set to treat HTTP errors as failures."
+msgstr ""
+"HTTP(S) "
+"POST/GETリクエストを実行し、HTTPステータスコードと応答データを返します。エラーが発生した場合、エラーコードとメッセージが返されます。オプションで、結果をディスク上のファイルに書き込むことができます。デフォルトでは、アルゴリズムはエラー時に警告を出します。オプションで、アルゴリズムをHTTPエラーを失敗として扱うように設定できます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:227
+msgid "**URL or file path**"
+msgstr "**URLまたはファイルのパス**"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:122
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:230
+msgid "The URL or path of the file to open."
+msgstr "URLまたは開くファイルのパス"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:132
+msgid "**POST Data**"
+msgstr "**POSTデータ**"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:139
+msgid "**Authentication**"
+msgstr "**認証**"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:142
 msgid "``AUTH_CONFIG``"
 msgstr "``AUTH_CONFIG``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:143
+msgid "[authconfig]"
+msgstr "[authconfig]"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:145
+msgid "Default: No authentication"
+msgstr "デフォルト: 認証なし"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:146
+msgid "An authentication configuration to pass"
+msgstr "通過するための認証設定"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:147
+msgid "**Consider HTTP errors as failures**"
+msgstr "**HTTPエラーを失敗とみなす**"
 
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:148
 msgid "``FAIL_ON_ERROR``"
@@ -249,6 +313,23 @@ msgstr "[ブール値]"
 msgid "Default: False"
 msgstr "デフォルト： False"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:152
+msgid "If set, the algorithm will fail on encountering an HTTP error."
+msgstr "セットしたとき、HTTPエラーが起きるとアルゴリズムは失敗します。"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:159
+msgid "Default: ``[Skip Output]``"
+msgstr "デフォルト: ``[Skip Output]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:160
+msgid ""
+"The result can be written to a file instead of being returned as a string. "
+"Specification of the file destination. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"結果を文字列として返す代わりにファイルに書き込むことができます。ファイルの行先を指定します。:ref:`次のいずれかです "
+"<output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "出力をスキップ"
@@ -257,22 +338,76 @@ msgstr "出力をスキップ"
 msgid "[file]"
 msgstr "[ファイル]"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:181
+msgid "The downloaded file with the returned result"
+msgstr "返された結果を含むダウンロードしたファイル"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:182
+msgid "**HTTP Status**"
+msgstr "**HTTPステータス**"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:183
 msgid "``STATUS_CODE``"
 msgstr "``STATUS_CODE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:185
+msgid "The HTTP Status"
+msgstr "HTTPステータス"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:186
+msgid "**Network error code**"
+msgstr "**ネットワークエラーコード**"
 
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:187
 msgid "``ERROR_CODE``"
 msgstr "``ERROR_CODE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:189
+msgid "The error code when it fails (like as well on 404 HTTP Status etc.)"
+msgstr "失敗したときのエラーコード（404 HTTPステータスなどと同様）"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:190
+msgid "**Network error message**"
+msgstr "**ネットワークエラーメッセージ**"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:191
 msgid "``ERROR_MESSAGE``"
 msgstr "``ERROR_MESSAGE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:193
+msgid "A string containing the error message in case of failure"
+msgstr "失敗したときのエラーメッセージを格納する文字列"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:194
+msgid "**Result data**"
+msgstr "**結果データ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:195
 msgid "``RESULT_DATA``"
 msgstr "``RESULT_DATA``"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:197
+msgid "A string containing the result data in case of success"
+msgstr "成功したときの結果データを格納する文字列"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:202
+msgid "**Algorithm ID**: ``native:httprequest``"
+msgstr "**Algorithm ID**: ``native:httprequest``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:212
+msgid "Open file or URL"
+msgstr "ファイルまたはURLを開く"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:213
+msgid ""
+"Opens files in their default associated application, or URLs in the user's "
+"default web browser."
+msgstr "関連づけられたデフォルトのアプリケーションでファイルを開く、若しくは、デフォルトのWebブラウザでURLを開きます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:235
 msgid "The algorithm has no output."
 msgstr "このアルゴリズムに出力はありません。"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:240
+msgid "**Algorithm ID**: ``native:openurl``"
+msgstr "**Algorithm ID**: ``native:openurl``"
