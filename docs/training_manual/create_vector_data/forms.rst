@@ -28,7 +28,7 @@ Obviously it would be nice to be able to do this while looking at the
 map, rather than needing to search for a specific street in the
 :guilabel:`Attribute Table` all the time.
 
-#. Select the :guilabel:`roads` layer in the :guilabel:`Layers` panel
+#. Select the ``roads`` layer in the :guilabel:`Layers` panel
 #. Using the |identify| :sup:`Identify Features` tool, click on any
    street in the map.
 #. The :guilabel:`Identify Results` panel opens and shows a tree view
@@ -43,7 +43,7 @@ map, rather than needing to search for a specific street in the
    .. figure:: img/roads_form.png
       :align: center
 
-#. Each time you click on a single feature with the *Identify* tool,
+#. Each time you click on a single feature with the |identify| :sup:`Identify Features` tool,
    its form pops up as long as the :guilabel:`Auto open form` is
    checked.
 
@@ -74,7 +74,7 @@ everything by hand.
 Fortunately, forms have different kinds of so-called *widgets* that
 allow you to edit data in various different ways.
 
-#. Open the :guilabel:`roads` layer's :guilabel:`Properties...`
+#. Open the ``roads`` layer's :guilabel:`Properties...`
 #. Switch to the :guilabel:`Fields` tab. You'll see this:
 
    .. figure:: img/fields_panel.png
@@ -115,15 +115,15 @@ Set a more appropriate form widget for the :guilabel:`highway` field.
 
    #. Set the widget to :guilabel:`Value Map` and click
       :guilabel:`Load Data from Layer`.
-   #. Select :guilabel:`roads` in the :guilabel:`Label` dropdown and
-      :guilabel:`highway` for both the :guilabel:`Value` and :guilabel:`Description`
+   #. Select ``roads`` in the :guilabel:`Label` dropdown and
+      ``highway`` for both the :guilabel:`Value` and :guilabel:`Description`
       options:
 
       .. figure:: img/value_map_settings.png
          :align: center
 
    #. Click :guilabel:`OK` three times.
-   #. If you use the :guilabel:`Identify` tool on a street now while edit mode is
+   #. If you use the |identify| :sup:`Identify Features` tool on a street now while edit mode is
       active, the dialog you get should look like this:
 
       .. figure:: img/highway_as_value_map.png
@@ -193,7 +193,7 @@ the person who creates the forms).
 #. Add a :guilabel:`Label` for your :guilabel:`Line Edit` and your :guilabel:`Spin Box`.
 #. Arrange the elements to your own desire.
 #. Click anywhere in your dialog.
-#. Find the *Lay Out in a Form Layout* button (in a toolbar along the top
+#. Find the :guilabel:`Lay Out in a Form Layout` button (in a toolbar along the top
    edge of the screen, by default). This lays out your dialog
    automatically.
 #. Set the dialog's maximum size (in its properties) to ``200``
@@ -210,7 +210,7 @@ the person who creates the forms).
 ---------------------------------------------------------------------------------
 
 #. Go back to QGIS
-#. Double click the :guilabel:`test-data` layer in the legend to
+#. Double click the ``test-data`` layer in the legend to
    access its properties.
 #. Click on the :guilabel:`Attributes Form` tab in the
    :guilabel:`Layer Properties` dialog

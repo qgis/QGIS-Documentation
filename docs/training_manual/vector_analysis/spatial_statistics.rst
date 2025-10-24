@@ -177,7 +177,7 @@ Missing (null) values
 
    Alternatively, use the same random point generation method as
    before, but specify only **three** points.
-#. Save your new layer as :guilabel:`distance_points` in the format
+#. Save your new layer as ``distance_points`` in the format
    you prefer.
 
 To generate statistics on the distances between points in the two
@@ -197,8 +197,8 @@ layers:
 
 #. Click :guilabel:`Run` to generate the distance matrix layer.
 #. Open the attribute table of the generated layer: values refer to
-   the distances between the :guilabel:`distance_points` features and
-   their two nearest points in the :guilabel:`Sampled Points` layer:
+   the distances between the ``distance_points`` features and
+   their two nearest points in the ``Sampled Points`` layer:
 
    .. figure:: img/distance_matrix_example.png
       :align: center
@@ -219,7 +219,7 @@ To do a nearest neighbor analysis of a point layer:
 
 #. Choose
    :menuselection:`Vector analysis --> Nearest neighbor analysis`.
-#. In the dialog that appears, select the :guilabel:`Random points`
+#. In the dialog that appears, select the ``Random points``
    layer and click :guilabel:`Run`.
 #. The results will appear in the Processing :guilabel:`Result Viewer`
    Panel.
@@ -238,7 +238,7 @@ To do a nearest neighbor analysis of a point layer:
 To get the mean coordinates of a dataset:
 
 #. Start :menuselection:`Vector analysis --> Mean coordinate(s)`
-#. In the dialog that appears, specify :guilabel:`Random points` as
+#. In the dialog that appears, specify ``Random points`` as
    :guilabel:`Input layer`, and leave the optional choices unchanged.
 #. Click :guilabel:`Run`.
 
@@ -313,7 +313,7 @@ values, and not all values are necessarily visible on the graph.
 
 Let's say you have a collection of sample points from which you would
 like to extrapolate data.
-For example, you might have access to the :guilabel:`Sampled points`
+For example, you might have access to the ``Sampled points``
 dataset we created earlier, and would like to have some idea of what
 the terrain looks like.
 

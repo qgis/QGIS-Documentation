@@ -324,7 +324,7 @@ Our track is a little further to the south:
 #. Create a new ESRI Shapefile line dataset called ``routes.shp`` in the 
    :file:`exercise_data` directory, with attributes ``id`` and ``type``
    (use the approach above to guide you.)
-#. Activate edit mode on the :guilabel:`routes` layer.
+#. Activate edit mode on the ``routes`` layer.
 #. Since you are working with a line feature, click on the
    |captureLine| :sup:`Add Line` button to initiate line
    digitizing mode.
