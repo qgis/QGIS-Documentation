@@ -19,7 +19,7 @@ But there's a problem, as we will see.
 #. Save your current map
 #. Then open the map of the world which you will find under
    :file:`exercise_data/world/world.qgs`
-#. Zoom in to South Africa by using the :guilabel:`Zoom In` tool
+#. Zoom in to South Africa by using the |zoomIn| :sup:`Zoom In` tool
 #. Try setting a scale in the :guilabel:`Scale` field, which is in the
    *Statusbar* along the bottom of the screen.
    While over South Africa, set this value to ``1:5 000 000``
@@ -94,7 +94,7 @@ in different CRSs.
    What do you notice?
 
    The layer is visible even if it has a different CRS from the
-   :guilabel:`continents` one.
+   ``continents`` one.
 
 
 :abbr:`★★☆ (Moderate level)` Follow Along: Saving a Dataset to Another CRS
@@ -247,4 +247,6 @@ QGIS' various vector analysis tools.
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
