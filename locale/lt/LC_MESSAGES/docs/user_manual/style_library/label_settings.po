@@ -1948,6 +1948,152 @@ msgstr ""
 ":guilabel:`Pasikartojančių užrašų` :guilabel:`Atstumą`, kad užrašas būtų "
 "palei perimetrą braižomas kelis kartus."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:822
+msgid ""
+":guilabel:`Using Perimeter (Curved)`: draws the label following the "
+"curvature of the polygon's boundary. In addition to the parameters available"
+" with the :guilabel:`Using Perimeter` mode, you can set the "
+":guilabel:`Maximum angle between curved characters polygon`, either inside "
+"or outside."
+msgstr ""
+":guilabel:`Naudojant perimetrą (išlenktai)`: braižo užrašą pagal poligono "
+"ribos iškraipymą. Be parametrų, kuriuos galima rasti režime "
+":guilabel:`Naudoti perimetrą`, jūs galite nurodyti :guilabel:`Maksimalų "
+"kampą tarp išlankstytų simbolių`, viduje arba išorėje."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:828
+msgid ""
+":guilabel:`Outside Polygons`: always places labels outside the polygons, at "
+"a set :guilabel:`Distance`"
+msgstr ""
+":guilabel:`Už poligonų`: užrašus visada išdėsto už poligonų nurodytu "
+":guilabel:`Atstumu`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:832
+msgid "Common placement settings"
+msgstr "Bendri vietos nustatymai"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:834
+msgid ""
+"Some label placement settings are available for all layer geometry types:"
+msgstr ""
+"Kai kurie užrašų vietos nustatymai taikomi visų sluoksnių geometrijų tipams:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:837
+msgid "Geometry Generator"
+msgstr "Geometrijos generatorius"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:839
+msgid ""
+"The :guilabel:`Geometry Generator` section allows a user to alter the "
+"underlying geometry used to place and render the label, by using "
+":ref:`expressions <vector_expressions>`. This can be useful to perform "
+"displacement of the geometry dynamically or to convert it to another "
+"geometry (type)."
+msgstr ""
+":guilabel:`Geometrijos generatoriaus` skiltis leidžia naudotojui keisti "
+"geometriją, kuri naudojama užrašo pozicionavimui ir braižymui, naudojant "
+":ref:`išraiškas <vector_expressions>`. Tai gali būti naudinga, norint "
+"dinamiškai paslinkti geometriją ar pakeisti ją į kitą geometriją (tipą)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:844
+msgid "In order to use the geometry generator:"
+msgstr "Norėdami naudoti geometrijos generatorių:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:846
+msgid "Check the |checkbox| :guilabel:`Geometry generator` option"
+msgstr "Įjunkite parinktį |checkbox| :guilabel:`Geometrijos generatorius`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:847
+msgid "Enter the expression generating the geometry to rely on"
+msgstr "Įveskite išraišką, remiantis kuria bus generuojama geometrija"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:848
+msgid ""
+"If relevant, select the geometry type of the expression output: the label "
+"geometry-based settings such as placement or rendering are updated to match "
+"the new geometry type capabilities."
+msgstr ""
+"Jei reikia, parinkite išraiškos išvesties geometrijos tipą: nuo geometrijos "
+"priklausantys užrašų nustatymai, tokie kaip vieta ar braižymas, atnaujinami,"
+" kad atitiktų naujo geometrijos tipo galimybes."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:852
+msgid "Some use cases include:"
+msgstr "Keli iš galimų panaudojimo atvejų:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:854
+msgid "Use a geometry which is saved in another field \"label_position\""
+msgstr "Naudoti kitą geometriją, kuri įrašyta kitame lauke „užrašo_pozicija“"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:855
+msgid ""
+"Use the :ref:`generated geometry <geometry_generator_symbol>` from the "
+"symbology also for labeling"
+msgstr ""
+"Naudoti simbologijoje :ref:`sugeneruotą geometriją "
+"<geometry_generator_symbol>` užrašų išdėstymui"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:857
+msgid ""
+"Use the @map_scale variable to calculate distances / sizes be zoom level "
+"independent."
+msgstr ""
+"Naudoti kintamąjį @map_scale skaičiuojant atstumus / dydžius, kurie "
+"nepriklausytų nuo mastelio."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:858
+msgid ""
+"Combined with the curved placement mode, creates a circular label around a "
+"point feature::"
+msgstr ""
+"Kartu su iškraipytos pozicijos režimu sukuria apskritimu aplink taško "
+"geoobjektą išdėstytą užrašą::"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:861
+msgid "Add a label at the start and the end of a line feature::"
+msgstr "Pridėti užrašą linijos geoobjekto pradžioje ir pabaigoje::"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:864
+msgid ""
+"Rely on a smoothed line of a river to get more room for label placement::"
+msgstr "Remtis glotnesne upės linija, kad būtų gauta daugiau vietos užrašui::"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:869
+msgid "Data Defined"
+msgstr "Nuo duomenų priklausantis"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:871
+msgid ""
+"The :guilabel:`Data Defined` group provides direct control on labels "
+"placement, on a feature-by-feature basis. It relies on their attributes or "
+"an expression to set:"
+msgstr ""
+"Grupė :guilabel:`Nuo duomenų priklausantis` teikia tiesioginį užrašų vietos "
+"nustatymo valdymą kiekvienam geoobjektui atskirai. Remiantis atributais ar "
+"išraiška nustatoma:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:875
+msgid "the :guilabel:`X` and :guilabel:`Y` coordinate"
+msgstr ":guilabel:`X` ir :guilabel:`Y` koordinatė"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:876
+msgid "the text alignment over the custom position set above:"
+msgstr "teksto lygiavimas virš savo pozicijos, nustatytos aukščiau:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:878
+msgid ":guilabel:`Horizontal`: it can be **Left**, **Center** or **Right**"
+msgstr ""
+":guilabel:`Horizontaliai`: gali būti **Kairėje**, **Centre** ar **Dešinėje**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:879
+msgid ""
+"the text :guilabel:`Vertical`: it can be **Bottom**, **Base**, **Half**, "
+"**Cap** or **Top**"
+msgstr ""
+":guilabel:`Vertikaliai`: gali būti **Apačioje**, **Pagrindas**, **Pusė**, "
+"**Kepurė** ar **Viršuje**"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1094
 msgid "render"
 msgstr "render"
