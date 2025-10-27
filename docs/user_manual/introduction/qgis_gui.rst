@@ -538,6 +538,10 @@ actions like:
      - :kbd:`Ctrl+Alt+M`
      - :guilabel:`Map Navigation`
      - :ref:`label_3dmapview`
+   * - :menuselection:`-->` |new3DMapGlobe| :guilabel:`New 3D Globe View`
+     -
+     -
+     - :ref:`label_3dmapview`
    * - :menuselection:`--> Manage 3D Map Views`
      -
      -
@@ -2314,6 +2318,8 @@ processes (QGIS startup, plugins loading, processing tools...)
 .. |nearestNeighbour| image:: /static/common/mAlgorithmNearestNeighbour.png
    :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
+   :width: 1.5em
+.. |new3DMapGlobe| image:: /static/common/mActionNew3DMapGlobe.png
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
