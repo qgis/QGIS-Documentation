@@ -55,6 +55,12 @@ Profile curve
   should be from the profile curve in order to display in the layout elevation view.
   Only point features are currently returned.
 
+Show Subsections Indicator
+------------
+
+It is possible to highlight the position of the vertices of the curve on the Elevation Profile. Select the :guilabel:`Show Subsections Indicator` to display vertical lines at the distances of the vertices.
+Use the :guilabel:`Lines` dropdown list to set the symbol, color, opacity and width of the Subsections Indicator lines.
+
 Chart ranges
 ------------
 
