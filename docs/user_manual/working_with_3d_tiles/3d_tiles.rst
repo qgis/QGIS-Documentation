@@ -34,8 +34,8 @@ State of 3D Tiles Support
 
 Currently, QGIS supports two formats of 3D tiles:
 
-* `3D Tiles <https://docs.ogc.org/cs/22-025r4/22-025r4.html>`_ are used primarily for complex 3D models of buildings or whole
-  cities. Such datasets can be provided by cloud-based platforms such as Cesium
+* `"Cesium" 3D Tiles <https://docs.ogc.org/cs/22-025r4/22-025r4.html>`_ are used primarily for complex 3D
+  models of buildings or whole cities. Such datasets can be provided by cloud-based platforms such as Cesium
   Ion or Google (*Photorealistic 3D Tiles*).
 * `Quantized Mesh <https://github.com/CesiumGS/quantized-mesh>`_  tiles are used for terrain elevation data.
 
