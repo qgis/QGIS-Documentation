@@ -1738,3 +1738,126 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _qgischeckgeometrymultipart:
+
+Strictly multipart
+---------------------
+
+Checks if multipart geometries have more than one part.
+Multipart geometries with only one part are errors.
+
+.. seealso:: :ref:`qgisfixgeometrymultipart`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: geometry]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **One-part geometry errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing centroid of the multipart geometries that have only one part.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **One-part geometry features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: same as input]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer for features containing multipart geometries that have only one part.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **One-part geometry errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the centroid of the multipart geometry that has only one part.
+       - ``gc_errory``: the y coordinate of the centroid of the multipart geometry that has only one part.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that is multipart but has only one part.
+   * - **One-part geometry features**
+     - ``OUTPUT``
+     - [vector: same as input]
+     - Output layer containing features that are multipart but have only one part.
+       Available fields are the same as in the ``ERRORS`` output.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrymultipart``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
