@@ -1235,8 +1235,7 @@ Excluding some URLs can be added to the text box below the proxy settings (see
 the string listed in this text box.
 
 If you need more detailed information about the different proxy settings,
-please refer to the manual of the underlying QT library documentation at
-https://doc.qt.io/archives/qt-5.9/qnetworkproxy.html#ProxyType-enum
+please refer to the manual of the underlying QT library documentation at `ProxyType-enum`_.
 
 .. tip:: **Using Proxies**
 
@@ -2856,6 +2855,7 @@ in the QGIS user profile.
 * Project templates must be deployed in the :file:`project_templates` directory.
 * Custom Python macros must be deployed in the :file:`python` directory.
 
+.. _`ProxyType-enum`: https://doc.qt.io/qt-6/qnetworkproxy.html#ProxyType-enum
 .. _`PROJ 8.0`: https://proj.org/en/8.0/
 .. _Qt: https://doc.qt.io/qt-6.8/
 

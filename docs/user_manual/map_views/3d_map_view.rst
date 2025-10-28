@@ -466,8 +466,7 @@ To create an animation:
 #. Click the |play| button to preview the animation. QGIS will generate scenes using
    the camera positions/rotations at set times, and interpolating them in between
    these keyframes. Various :guilabel:`Interpolation` modes for animations are
-   available (eg, linear, inQuad, outQuad, inCirc... -- more details at
-   https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
+   available (eg, linear, inQuad, outQuad, inCirc... -- more details at `QEasingCurve`_.
 
    The animation can also be previewed by moving the time slider.
    Keeping the :guilabel:`Loop` box checked will repeatedly run the
@@ -486,6 +485,8 @@ view by checking :guilabel:`Enable 3D Renderer` in the
 :guilabel:`3D View` section of the vector layer properties.
 A number of options are available for controlling the rendering of
 the 3D vector layer.
+
+.. _`QEasingCurve`: https://doc.qt.io/qt-6/qeasingcurve.html#EasingFunction-typedef).
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

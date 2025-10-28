@@ -61,8 +61,7 @@ module. The implementation is based on the Qt Graphics View framework.
 This framework generally provides a surface and a view where custom graphics
 items are placed and user can interact with them.  We will assume that you are
 familiar enough with Qt to understand the concepts of the graphics scene, view
-and items. If not, please read the `overview of the framework
-<https://doc.qt.io/qt-5/graphicsview.html>`_.
+and items. If not, please read the overview of the `graphicsview`_ framework.
 
 Whenever the map has been panned, zoomed in/out (or some other action that triggers
 a refresh), the map is rendered again within the current extent. The layers are
@@ -471,3 +470,5 @@ Here is an example of a custom canvas item that draws a circle:
   item = CircleCanvasItem(iface.mapCanvas())
   item.setCenter(QgsPointXY(200,200))
   item.setSize(80)
+
+.. _`graphicsview`: https://doc.qt.io/qt-6/.html

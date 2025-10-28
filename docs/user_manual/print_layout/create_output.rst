@@ -239,8 +239,7 @@ To export a layout as PDF:
    
      * :guilabel:`Lossy (JPEG)`, which is the default compression mode
      * or :guilabel:`Lossless`, which creates bigger files in most cases, but is
-       much more suitable for printing outputs or for post-production in external
-       applications (requires Qt 5.13 or later).
+       much more suitable for printing outputs or for post-production in external applications.
    * |unchecked| :guilabel:`Create Geospatial PDF`:
      Generate a georeferenced PDF file.
    * |unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting

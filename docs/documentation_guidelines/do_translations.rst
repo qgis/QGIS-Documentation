@@ -138,8 +138,7 @@ Two different tools are currently used to do translations in QGIS:
   transparently does the process described above and pulls all the translatable
   texts in one place for the translator. Just pick the files you want and translate.
   Translated files are stored in the platform until another release is pushed.
-* `Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_, a Qt
-  development tool, requires the translator to pull locally
+* `Qt Linguist`_, a Qt  development tool, requires the translator to pull locally
   the :file:`.po` (or :file:`.ts`) files from the source code, translate and
   then push back.
 
@@ -280,8 +279,7 @@ In the menu you see the following buttons which are convenient to use.
 * |linguist_previous_todo| The Previous Todo button, searches backward and
   jumps to the first translation item it finds that still needs a translation.
 
-For further information on the use of Qt Linguist, see
-https://doc.qt.io/qt-5/linguist-translators.html
+For further information on the use of Qt Linguist, see `linguist-translators`_.
 
 .. warning::
 
@@ -445,6 +443,9 @@ Stick to above presented rules and the translated document will look fine!
 For any question, please contact the `QGIS Community Team
 <qgis-community-team@lists.osgeo.org>`_ or the
 `QGIS Translation Team <qgis-tr@lists.osgeo.org>`_.
+
+.. _`Qt Linguist`: https://doc.qt.io/qt-6/qtlinguist-index.html
+.. _`linguist-translators`: https://doc.qt.io/qt-6/linguist-translators.html
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

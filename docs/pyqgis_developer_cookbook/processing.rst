@@ -326,4 +326,4 @@ This is especially useful when fetching metadata or updating UI elements based o
 Always connect signals once (typically in ``__init__``) and use ``singleShot=True``
 to ensure the slot is triggered only once after a delay.
 
-.. _QTimer: https://doc.qt.io/archives/qt-5.15/qtimer.html
+.. _QTimer: https://doc.qt.io/qt-6/qtimer.html
