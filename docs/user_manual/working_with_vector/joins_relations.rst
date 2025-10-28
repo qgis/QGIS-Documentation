@@ -656,7 +656,7 @@ The example above uses the following database schema:
       CONSTRAINT documents_pkey PRIMARY KEY (fid)
    );
 
-Once relations are established, the :ref:`Identify Features <identify>` result panel
+Once relations are established, the :ref:`Identify Features <identify_features_vector>` result panel
 will display related features, allowing you to view associated data directly.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
