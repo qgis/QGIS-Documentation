@@ -71,7 +71,7 @@ original scanned map:
    #. And paste the pixels directly as a new layer (:menuselection:`Edit --> Paste as --> New Layer`).
       GIMP will display the pasted pixels as a new layer (``Pasted Layer``) in the :guilabel:`Layers` panel.
    #. Click the "eye" icon next to the original image layer to switch it off,
-      so that only the :guilabel:`Pasted Layer` is visible:
+      so that only the ``Pasted Layer`` is visible:
 
    .. figure:: img/saving_green_px.png
       :align: center
@@ -131,7 +131,7 @@ using the snapping tools available in QGIS.
 #. Next option to get points out of those polygons is to get their centroids:
 
    #. Open :menuselection:`Vector --> Geometry Tools --> Centroids...`.
-   #. Set :guilabel:`Input Layer` to |polygonLayer| :guilabel:`rautjarvi_green_polygon`
+   #. Set :guilabel:`Input Layer` to |polygonLayer| ``rautjarvi_green_polygon``
       (the polygon layer you have just created)
    #. Set :guilabel:`Centroids` output to :file:`green_centroids.shp` file
       within the folder :file:`digitizing`
@@ -184,11 +184,11 @@ Now, if you remember past modules, we have to set up and activate the snapping o
 
 #. Go to :menuselection:`Project --> Snapping options...`
 #. Press |snapping| :sup:`Enable Snapping` and select :guilabel:`Advanced Configuration`
-#. Check the :guilabel:`green_centroids` and :guilabel:`forest_stands` layers
+#. Check the ``green_centroids`` and ``forest_stands`` layers
 #. Set :guilabel:`Type` for each layer to :guilabel:`Vertex`
 #. Set :guilabel:`Tolerance` for each layer to ``10``
 #. Set :guilabel:`Units` for each layer to :guilabel:`pixels`
-#. Check |checkbox| :guilabel:`Avoid Overlap` for the :guilabel:`forest_stands` layer
+#. Check |checkbox| :guilabel:`Avoid Overlap` for the ``forest_stands`` layer
 #. Press |topologicalEditing| :guilabel:`Topological editing`
 #. Choose |avoidIntersectionsLayers| :guilabel:`Follow Advanced Configuration`
 #. Close the pop-up
@@ -201,8 +201,8 @@ Now, if you remember past modules, we have to set up and activate the snapping o
    to one of the points in the centroids layer or any vertex of your digitized
    polygons, a pink square will appear on the point that will be snapped to. 
 
-#. Finally, turn off the visibility of all the layers except :guilabel:`forest_stands`
-   and :guilabel:`rautjarvi_georef`. Make sure that the map image has not transparency any more.
+#. Finally, turn off the visibility of all the layers except ``forest_stands``
+   and ``rautjarvi_georef``. Make sure that the map image has not transparency any more.
 
 A few important things to note before you start digitizing:
 
@@ -248,7 +248,7 @@ Your digitized polygon will look like this:
 |
 
 Now for the second polygon, pick up the stand number 358. Make sure that |checkbox| 
-:guilabel:`Avoid Overlap` is checked for the :guilabel:`forest_stands` layer (as shown above). This
+:guilabel:`Avoid Overlap` is checked for the ``forest_stands`` layer (as shown above). This
 option ensures polygons do not overlap. So, if you
 digitize over an existing polygon, the new polygon will be trimmed to meet
 the border of the existing polygons. You can use this option
@@ -332,7 +332,7 @@ file or a spreadsheet. For this exercise, the information from the inventory for
    #. Open the Layer Properties for the ``forest_stands`` layer.
    #. Go to the :guilabel:`Joins` tab.
    #. Click |symbologyAdd| :sup:`Add new join` on the bottom of the dialog box.
-   #. Select :guilabel:`rautjarvi_1994.csv` as the :guilabel:`Join layer` 
+   #. Select :file:`rautjarvi_1994.csv` as the :guilabel:`Join layer` 
    #. Set the :guilabel:`Join` field to :guilabel:`ID`
    #. Set the :guilabel:`Target` field to :guilabel:`ID`
    #. Click :guilabel:`OK` two times.
@@ -346,7 +346,7 @@ You will see that the field names are prefixed with ``rautjarvi_1994_``. To chan
 
 #. Open the Layer Properties for the ``forest_stands`` layer.
 #. Go to the :guilabel:`Joins` tab.
-#. Select :guilabel:`Join Layer` :guilabel:`rautjarvi_1994` 
+#. Select :guilabel:`Join Layer` ``rautjarvi_1994`` 
 #. Click the |toggleEditing| :sup:`Edit selected join` button to enable editing
 #. Under |checkbox| :guilabel:`Custom field name prefix` remove the prefix name
 

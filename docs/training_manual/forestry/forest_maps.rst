@@ -24,10 +24,10 @@ elements that complete the printed map.
 #. Open the QGIS project from the previous lesson :file:`forest_inventory.qgs`.
    You should have at least the following layers:
 
-   * :guilabel:`forest_stands_2012` (with a 50% transparency, green fill and darker
+   * ``forest_stands_2012`` (with a 50% transparency, green fill and darker
      green border lines)
-   * :guilabel:`systematic_plots_clip`
-   * :guilabel:`rautjarvi_aerial`
+   * ``systematic_plots_clip``
+   * ``rautjarvi_aerial``
 
 #. Save the project with a new name, :file:`map_creation.qgs`.
 
@@ -138,7 +138,7 @@ some guidance from this image:
 You will use later the the green styling of the ``forest_stands_2012`` layer.
 In order to keep it, and have a visualization of it that shows only the stand borders:
 
-#. Right click on :guilabel:`forest_stands_2012` and select :guilabel:`Duplicate`
+#. Right click on ``forest_stands_2012`` and select :guilabel:`Duplicate`
 #. You get a new layer named ``forest_stands_2012 copy`` that you can use to
    define a different style, for example with no filling and red borders.
 
@@ -213,9 +213,9 @@ you want to lock its view so it does not change anymore whenever you change
 the visibility or order of the layers.
 
 #. Go back to the map, but don't close the :guilabel:`Print Layout`.
-#. Right click the :guilabel:`forest_stands_2012` layer and click on :guilabel:`Zoom
+#. Right click the ``forest_stands_2012`` layer and click on :guilabel:`Zoom
    to Layer Extent`.
-#. Deactivate all layers except for :guilabel:`basic_map` and :guilabel:`forest_stands_2012`.
+#. Deactivate all layers except for ``basic_map`` and ``forest_stands_2012``.
 #. Expand the :sup:`Manage map themes` tool on the :guilabel:`Layers` panel
    and select :guilabel:`Add theme`.
 #. Name it ``basic_overview``.
@@ -351,7 +351,7 @@ also customize the text labels in your map to be generated with content from the
   out using the atlas filter
 
 #. Go back to the map view.
-#. Enable editing for the :guilabel:`atlas_coverage` layer.
+#. Enable editing for the ``atlas_coverage`` layer.
 #. Select the polygons that are selected (in yellow) in the image below.
 #. Remove the selected polygons.
 #. Disable editing and save the edits.
@@ -367,7 +367,7 @@ could use to customize the content of the labels in your map. The first step is
 to create them, you can add for example a zone code for the polygon areas and a
 field with some remarks for the field teams to have into account:
 
-#. Open the :guilabel:`Attribute table` for the :guilabel:`atlas_coverage` layer.
+#. Open the :guilabel:`Attribute table` for the ``atlas_coverage`` layer.
 #. Enable editing.
 #. Use the |calculateField| calculator to create and populate the following two fields.
 #. Create a field named ``Zone`` of type :guilabel:`Whole number (integer)`.
@@ -380,18 +380,18 @@ field with some remarks for the field teams to have into account:
 The forest manager will have some information about the area that might be useful
 when visiting the area.
 For example, the existence of a bridge, a swamp or the location of a protected species.
-The :guilabel:`atlas_coverage` layer is probably in edit mode still,
+The ``atlas_coverage`` layer is probably in edit mode still,
 add the following text in the :guilabel:`Remarks` field to the corresponding polygons
 (double click the cell to edit it):
 
 * For the :guilabel:`Zone` 2: ``Bridge to the North of plot 19. Siberian squirrel
   between p_13 and p_14.``
-* For the :guilabel:`Zone` 6: `Difficult to transit in swamp to the North of the lake.``
+* For the :guilabel:`Zone` 6: ``Difficult to transit in swamp to the North of the lake.``
 * For the :guilabel:`Zone` 7: ``Siberian squirrel to the South East of p_94.``
 * Disable editing and save your edits.
 
 Almost ready, now you have to tell the Atlas tool that you want some of the text
-labels to use the information from the :guilabel:`atlas_coverage` layer's attribute table.
+labels to use the information from the ``atlas_coverage`` layer's attribute table.
 
 #. Go back to the :guilabel:`Print Layout`.
 #. Select the text label containing ``Detailed map...``.
@@ -405,10 +405,10 @@ labels to use the information from the :guilabel:`atlas_coverage` layer's attrib
 #. The text inside the box in the :guilabel:`Item properties` should show
    ``Detail map inventory zone: [% "Zone" %]``. Note that the ``[% "Zone" %]``
    will be substituted by the value of the field :guilabel:`Zone` for the corresponding
-   feature from the layer :guilabel:`atlas_coverage`.
+   feature from the layer ``atlas_coverage``.
 
 #. Test the contents of the label by looking at the different Atlas preview maps.
-#. Do the same for the labels with the text :guilabel:`Remarks:` using the field with
+#. Do the same for the labels with the text ``Remarks:`` using the field with
    the zone information. You can leave a break line before you enter the expression.
    You can see the result for the preview of zone 2 in the image below:
 
