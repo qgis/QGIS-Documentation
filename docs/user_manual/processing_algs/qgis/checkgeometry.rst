@@ -1013,6 +1013,135 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgischeckgeometrymissingvertex:
+
+Missing vertices along borders
+------------------------------
+
+Checks for missing vertices along polygon borders.
+To be topologically correct, a vertex at the junction of two polygons
+must be present on both polygons. Missing vertices are errors.
+
+.. figure:: img/check_geometry_missing_vertex.png
+   :align: center
+
+   Reporting errors for missing vertices on polygon features.
+
+.. seealso:: :ref:`qgisfixgeometrymissingvertex`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Missing vertices errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the errors location.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Missing vertices features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Skip output]``
+     - Polygon layer with the features whose vertices are missing.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Missing vertices errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the missing vertex.
+       - ``gc_errory``: the y coordinate of the missing vertex.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that has a missing vertex.
+   * - **Missing vertices features**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output polygon layer with features whose vertices are missing.
+       There will be as many (duplicate) features as there are missing vertices in each geometry.
+       If no vertices are missing, the output layer will be empty.
+       Available fields are the same as in the ``ERRORS`` output.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrymissingvertex``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgischeckgeometryoverlap:
 
