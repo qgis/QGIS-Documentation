@@ -25,6 +25,9 @@ The main steps for creating a plugin are:
 #. *Publish*: Publish your plugin in QGIS repository or make your own
    repository as an "arsenal" of personal "GIS weapons".
 
+.. hint:: If you wish to update an existing plugin in order to support Qt6 and QGIS 4,
+  please find instructions in the dedicated
+  `wiki <https://github.com/qgis/QGIS/wiki/Plugin-migration-to-be-compatible-with-Qt5-and-Qt6>`.
 
 .. index:: Plugins; Writing
 .. _plugin_setup:
@@ -105,7 +108,7 @@ plugin such as its name, description etc. This information is stored in :file:`m
 =====================  ========  =============================================================
 Metadata name          Required  Notes
 =====================  ========  =============================================================
-name                   True      a short string  containing the name of the plugin
+name                   True      a short string containing the name of the plugin
 qgisMinimumVersion     True      dotted notation of minimum QGIS version
 qgisMaximumVersion     False     dotted notation of maximum QGIS version
 description            True      short text which describes the plugin, no HTML allowed
@@ -133,6 +136,8 @@ server                 False     boolean flag, :const:`True` or :const:`False`, 
                                  the plugin has a server interface
 hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, determines if
                                  the plugin provides processing algorithms
+supportsQt6            False     boolean flag, :const:`True` or :const:`False`, determines if
+                                 the plugin supports Qt6 framework
 =====================  ========  =============================================================
 
 By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
@@ -174,8 +179,8 @@ An example for this metadata.txt
   about=This paragraph can contain a detailed description
       of the plugin. Multiline is allowed, HTML is not.
   version=version 1.2
-  tracker=http://bugs.itopen.it
-  repository=http://www.itopen.it/repo
+  tracker=https://bugs.itopen.it
+  repository=https://www.itopen.it/repo
   ; end of mandatory metadata
 
   ; start of optional metadata
@@ -203,7 +208,7 @@ An example for this metadata.txt
   deprecated=False
 
   ; if empty, it will be automatically set to major version + .99
-  qgisMaximumVersion=3.99
+  ; qgisMaximumVersion=3.99
 
   ; Since QGIS 3.8, a comma separated list of plugins to be installed
   ; (or upgraded) can be specified.
@@ -212,6 +217,9 @@ An example for this metadata.txt
   ; Both "MyOtherPlugin" and "YetAnotherPlugin" names come from their own metadata's
   ; name field
   plugin_dependencies=MyOtherPlugin==1.12,YetAnotherPlugin
+
+  ; whether the plugin can be run on QGIS built with Qt6 
+  supportsQt6=True
 
 
 .. index:: Plugins; Initialisation
@@ -415,7 +423,7 @@ Software requirements
 The easiest way to create and manage all the translation files is to install `Qt Linguist`_.
 In a Debian-based GNU/Linux environment you can install it typing::
 
-  sudo apt install qttools5-dev-tools
+  sudo apt install qt6-tools-dev-tools
 
 
 Files and directory
@@ -607,24 +615,24 @@ resources for the GUI, such as icons:
 
 It is good to use a prefix that will not collide with other plugins or any
 parts of QGIS, otherwise you might get resources you did not want. Now you
-just need to generate a Python file that will contain the resources. It's
-done with :command:`pyrcc5` command:
+just need to generate a Python file that will contain the resources.
+It's done with Qt :command:`rcc` command:
 
 ::
 
-  pyrcc5 -o resources.py resources.qrc
+  rcc -g python -o resources.py resources.qrc
 
 .. note::
 
-    In Windows environments, attempting to run the :command:`pyrcc5` from
+    In Windows environments, attempting to run the :command:`rcc` from
     Command Prompt or Powershell will probably result in the error "Windows
     cannot access the specified device, path, or file [...]".  The easiest
     solution is probably to use the OSGeo4W Shell but if you are comfortable
     modifying the PATH environment variable or specifiying the path to the
     executable explicitly you should be able to find it at
-    :file:`<Your QGIS Install Directory>\\bin\\pyrcc5.exe`.
+    :file:`<Your QGIS Install Directory>\\apps\\Qt6\\bin\\rcc.exe`.
 
-.. _Qt Linguist: https://doc.qt.io/qt-5/qtlinguist-index.html
+.. _Qt Linguist: https://doc.qt.io/qt-6/qtlinguist-index.html
 .. _GitHub workflows: https://docs.github.com/en/actions/writing-workflows
 .. _Gitlab-CI: https://docs.gitlab.com/ci/
 .. _Transifex: https://www.transifex.com
