@@ -2532,7 +2532,7 @@ They can be used to enhance the appearance of the form or to display dynamically
   and may contain the result of dynamically calculated expressions.
 * :guilabel:`Spacer Widget`: inserts an empty transparent rectangle, increasing the vertical distance between two widgets.
 
-.. _QML: https://doc.qt.io/qt-5/qtqml-syntax-basics.html
+.. _QML: https://doc.qt.io/qt-6/qtqml-syntax-basics.html
 
 .. tip:: **Display Dynamic Content**
 

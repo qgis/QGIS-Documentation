@@ -689,7 +689,7 @@ like any executable.
   ********* Finished testing of TestQgsDxfExport *********
 
 These tests also take `command line arguments
-<https://doc.qt.io/qt-5/qtest-overview.html#qt-test-command-line-arguments>`_.
+<https://doc.qt.io/qt-6/qtest-overview.html#qt-test-command-line-arguments>`_.
 This makes it possible to run a specific subset of tests:
 
 .. code-block:: bash

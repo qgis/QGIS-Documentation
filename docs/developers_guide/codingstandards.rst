@@ -123,7 +123,7 @@ example:
    *
    ***************************************************************************/
 
-.. note:: There is a template for Qt Creator in git repository. To use it, copy it from
+.. note:: There is a template for Qt Creator in code repository. To use it, copy it from
   :source:`qt_creator_license_template <editors/QtCreator/qt_creator_license_template>`
   to a local location, adjust the
   mail address and - if required - the name and configure QtCreator to use it:

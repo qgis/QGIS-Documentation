@@ -417,8 +417,7 @@ Technical notes on PyQt and SIP
 ===============================
 
 We've decided for Python as it's one of the most favoured languages for
-scripting. PyQGIS bindings in QGIS 3 depend on SIP and PyQt5.
+scripting. PyQGIS bindings in QGIS depend on SIP and PyQt6.
 The reason for using SIP instead of the more widely used SWIG is that the
 QGIS code depends on Qt libraries. Python bindings for Qt (PyQt) are
-done using SIP and this allows seamless integration of PyQGIS with
-PyQt.
+done using SIP and this allows seamless integration of PyQGIS with PyQt.

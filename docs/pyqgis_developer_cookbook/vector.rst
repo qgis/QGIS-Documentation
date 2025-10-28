@@ -1675,8 +1675,8 @@ function becomes
 The icon can also be associated at any later time using the :meth:`setIcon()
 <qgis.core.QgsRendererAbstractMetadata.setIcon>` method
 of the metadata class. The icon can be loaded from a file (as shown above) or
-can be loaded from a `Qt resource <https://doc.qt.io/qt-5/resources.html>`_
-(PyQt5 includes .qrc compiler for Python).
+can be loaded from a `Qt resource <https://doc.qt.io/qt-6/resources.html>`_
+(PyQt6 includes .qrc compiler for Python).
 
 
 Further Topics

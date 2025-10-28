@@ -15,9 +15,8 @@ the settings.
 Another option in the settings allows to define if the
 numeric thousands separator has to be used.
 
-All these features are implemented through the
-`QLocale <https://doc.qt.io/qt-5/qlocale.html>`_
-QT class which provides a very complete support for numeric
+All these features are implemented through the `QLocale`_
+Qt class which provides a very complete support for numeric
 and date types representation.
 
 In order to make this system work a few rules need to be
@@ -32,8 +31,8 @@ For strings that are printed on the screen and visible to the users
 do not use ``QString::number()`` because it does not take locale
 options into consideration and it always uses ``C`` locale.
 
-Also do not use string interpolation unless you use the ``L`` suffix as explained in
-`QString documentation <https://doc.qt.io/qt-5/qstring.html#arg-5>`_.
+Also do not use string interpolation unless you use the ``L`` suffix
+as explained in `QString`_ documentation.
 
 Use ``QLocale().toString()`` instead.
 
@@ -91,3 +90,5 @@ independently on a string obtained from another widget (e.g., a simple
 ``QLineEdit`` widget).
 
 
+.. _QLocale: https://doc.qt.io/qt-6/qlocale.html
+.. _QString: https://doc.qt.io/qt-6/qstring.html#arg-2

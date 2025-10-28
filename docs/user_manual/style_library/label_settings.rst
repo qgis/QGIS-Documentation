@@ -180,7 +180,7 @@ Use whitespaces instead of tabs for any kind of indentation.
 The expression is parsed and any supported HTML tag overrides its corresponding setting in the labels properties.
 Because it is impossible to list and detail every HTML tag and CSS property that QGIS currently supports,
 we invite you to explore and test in your labels
-`the ones supported <https://doc.qt.io/qt-5/richtext-html-subset.html>`_ by the underlying Qt library.
+`the ones supported <https://doc.qt.io/qt-6/richtext-html-subset.html>`_ by the underlying Qt library.
 
 **Examples of supported HTML tags:**
 

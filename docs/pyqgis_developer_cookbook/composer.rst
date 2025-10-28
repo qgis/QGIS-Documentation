@@ -132,13 +132,13 @@ then exported to PDF, SVG, raster images or directly printed on a printer.
 The layout consists of a bunch of classes. They all belong to the core
 library. QGIS application has a convenient GUI for placement of the elements,
 though it is not available in the GUI library. If you are not familiar with
-`Qt Graphics View framework <https://doc.qt.io/qt-5/graphicsview.html>`_,
+`Qt Graphics View framework <https://doc.qt.io/qt-6/graphicsview.html>`_,
 then you are encouraged to check the documentation now, because the layout
 is based on it.
 
 The central class of the layout is the :class:`QgsLayout <qgis.core.QgsLayout>`
-class, which is derived from the Qt `QGraphicsScene <https://doc.qt.io/qt-5/qgraphicsscene.html>`_
-class. Let us create an instance of it:
+class, which is derived from the Qt `QGraphicsScene`_ class.
+Let us create an instance of it:
 
 .. testcode:: composer
 
@@ -333,7 +333,8 @@ To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`
    exporter = QgsLayoutExporter(layout)
    exporter.exportToPdf(pdf_path, QgsLayoutExporter.PdfExportSettings())
 
-Use :meth:`exportToSvg() <qgis.core.QgsLayoutExporter.exportToSvg>` or :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>`
+Use :meth:`exportToSvg() <qgis.core.QgsLayoutExporter.exportToSvg>`
+or :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>`
 in case you want to export to respectively an SVG or image file instead of a PDF file.
 
 Exporting a layout atlas
@@ -352,3 +353,4 @@ example, the pages are exported to PNG images:
 Notice that the outputs will be saved in the base path folder, using the output
 filename expression configured on atlas.
 
+.. _`QGraphicsScene`: https://doc.qt.io/qt-6/qgraphicsscene.html
