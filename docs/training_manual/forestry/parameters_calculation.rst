@@ -102,7 +102,7 @@ on their relative locations, you perform a spatial join:
 #. Accept adding the new layer to your project when prompted.
 #. Close the :guilabel:`Join attributes by location` tool.
 
-Open the :guilabel:`Attribute table` for :guilabel:`forest_stands_2012_results`
+Open the :guilabel:`Attribute table` for ``forest_stands_2012_results``
 and review the results you got. Note that a number of forest stands have
 ``NULL`` as the value for the calculations, those are the ones having no
 sample plots. Select them all and view them in the map, they are some of the
