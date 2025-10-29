@@ -2193,6 +2193,7 @@ be depicted in the :ref:`3D Map view <label_3dmapview>` tool.
 
 To display a layer in 3D, select from the combobox at the top of the tab, either:
 
+* :guilabel:`Render on Terrain Surface`: enables annotations to be rendered as flat items on the terrain surface in 3D views.
 * :guilabel:`Single symbol`: features are rendered using a common 3D symbol
   whose properties can be :ref:`data-defined <data_defined>` or not.
   Read details on :ref:`setting a 3D symbol <3dsymbols>` for each layer geometry type.

@@ -878,6 +878,22 @@ The properties dialog of an annotation layer provides the following tabs:
   Some of these options are accessible from the feature annotation
   :guilabel:`Symbology` properties.
 
+.. _annotationslayer_3dview:
+
+* :guilabel:`3D View`: allows users to control the appearance of annotation layers in
+  3D map views.
+
+  * :guilabel:`Render on Terrain Surface`: enables annotations to be rendered as flat items on the terrain surface in 3D views.
+  * :guilabel:`3D Billboards`: allows annotations to be rendered as 3D objects in 3D views.
+    Billboards always face the camera in 3D views, improving readability during navigation
+    (only for marker and text annotations).
+    
+    * :guilabel:`Relative to Terrain`: billboard elevation is relative to the terrain height.
+    * :guilabel:`Absolute`: all billboard will be placed at the same elevation.
+    * :guilabel:`Offset`: allows you to set a vertical offset for the billboards in 3D views.
+    * :guilabel:`Font`: allows you to set the font properties for text annotations in 3D views.
+    * |checkbox| :guilabel:`Show callout lines`: when enabled, callout lines are drawn from the annotation to its anchor point on the terrain.
+
 Interacting with features
 .........................
 
