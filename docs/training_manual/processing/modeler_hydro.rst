@@ -26,7 +26,7 @@ This model contains all the steps needed to complete the calculation, but it jus
 
    .. figure:: img/modeler_hydro/model_with_threshold.png
 
-   The input that we have just added is not used, so the model hasn't actually changed. We have to link that input to the algorithm that uses it, in this case the *Channel network* one. To edit an algorithm that already exists in the modeler, just click on the pen icon on the corresponding box in the canvas.
+   The input that we have just added is not used, so the model hasn't actually changed. We have to link that input to the algorithm that uses it, in this case the :guilabel:`Channel network` one. To edit an algorithm that already exists in the modeler, just click on the pen icon on the corresponding box in the canvas.
 
 #. Click on the :guilabel:`Channel network` algorithm and you will see something like this.
 

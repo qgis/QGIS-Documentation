@@ -10,7 +10,7 @@ models.
 Insert statement
 -------------------------------------------------------------------------------
 
-How do you add data to a table? The sql :kbd:`INSERT` statement provides the
+How do you add data to a table? The sql ``INSERT`` statement provides the
 functionality for this:
 
 .. code-block:: sql
@@ -19,16 +19,16 @@ functionality for this:
 
 A couple of things to note:
 
-* After the table name (:kbd:`streets`), you list the column names that you
-  will be populating (in this case only the :kbd:`name` column).
-* After the :kbd:`values` keyword, place the list of field values.
+* After the table name (``streets``), you list the column names that you
+  will be populating (in this case only the ``name`` column).
+* After the ``values`` keyword, place the list of field values.
 * Strings should be quoted using single quotes.
-* Note that we did not insert a value for the :kbd:`id` column; this
+* Note that we did not insert a value for the ``id`` column; this
   is because it is a sequence and will be auto-generated.
-* If you do manually set the :kbd:`id`, you may cause serious problems with
+* If you do manually set the ``id``, you may cause serious problems with
   the integrity of your database.
 
-You should see :kbd:`INSERT 0 1` if it is successful.
+You should see ``INSERT 0 1`` if it is successful.
 
 You can see the result of your insert action by selecting all the data in the
 table:
@@ -51,7 +51,7 @@ Result:
 Try Yourself: :abbr:`★☆☆ (Basic level)`
 ...............................................................................
 
-Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` table.
+Use the ``INSERT`` command to add a new street to the ``streets`` table.
 
 .. admonition:: Answer
   :class: dropdown
@@ -68,7 +68,7 @@ Sequencing Data Addition According to Constraints
 Try Yourself: :abbr:`★★☆ (Moderate level)`
 -------------------------------------------------------------------------------
 
-Try to add a person object to the :kbd:`people` table with the following details::
+Try to add a person object to the ``people`` table with the following details::
 
   Name: Joe Smith
   House Number: 55
@@ -79,13 +79,13 @@ Try to add a person object to the :kbd:`people` table with the following details
     integers.
 
 At this point, you should have an error report if you try to do this without
-first creating a record for Main Street in the :kbd:`streets` table.
+first creating a record for Main Street in the ``streets`` table.
 
 You should have also noticed that:
 
 * You can't add the street using its name
-* You can't add a street using a street :kbd:`id` before first creating the
-  street record on the streets table
+* You can't add a street using a street ``id`` before first creating the
+  street record on the ``streets`` table
 
 Remember that our two tables are linked via a Primary/Foreign Key pair. This
 means that no valid person can be created without there also being a valid
@@ -145,7 +145,7 @@ name is changed:
   update streets set name='New Main Road' where name='Main Road';
 
 Be very careful using such update statements - if more than one record matches
-your :kbd:`WHERE` clause, they will all be updated!
+your ``WHERE`` clause, they will all be updated!
 
 A better solution is to use the primary key of the table to reference the
 record to be changed:
@@ -154,15 +154,15 @@ record to be changed:
 
   update streets set name='New Main Road' where id=2;
 
-It should return :kbd:`UPDATE 1`.
+It should return ``UPDATE 1``.
 
-.. note::  the :kbd:`WHERE` statement criteria are case sensitive :kbd:`Main
-   Road` is not the same as :kbd:`Main road`
+.. note::  the ``WHERE`` statement criteria are case sensitive ``Main
+   Road`` is not the same as ``Main road``
 
 Delete Data
 -------------------------------------------------------------------------------
 
-In order to delete an object from a table, use the :kbd:`DELETE` command:
+In order to delete an object from a table, use the ``DELETE`` command:
 
 .. code-block:: sql
 

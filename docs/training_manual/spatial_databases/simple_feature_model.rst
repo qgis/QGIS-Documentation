@@ -90,7 +90,7 @@ At this point you should also add an entry into the ``geometry_columns`` table:
   insert into geometry_columns values
     ('','public','people','geom',2,4326,'POINT');
 
-Why? :kbd:`geometry_columns` is used by certain applications to be aware of
+Why? ``geometry_columns`` is used by certain applications to be aware of
 which tables in the database contain geometry data.
 
 .. note::
@@ -102,21 +102,21 @@ which tables in the database contain geometry data.
 
      select * from geometry_columns;
 
-   If the column :kbd:`f_table_name` contains the value :kbd:`people`, then
+   If the column ``f_table_name`` contains the value ``people``, then
    this table has already been registered and you don't need to do anything
    more.
 
 The value ``2`` refers to the number of dimensions; in this case, two: **X**
 and **Y**.
 
-The value :kbd:`4326` refers to the projection we are using; in this case, WGS
+The value ``4326`` refers to the projection we are using; in this case, WGS
 84, which is referred to by the number 4326 (refer to the earlier discussion
 about the EPSG).
 
 :abbr:`★☆☆ (Basic level)` Try Yourself:
 ...............................................................................
 
-Add an appropriate `geometry_columns` entry for your new cities layer
+Add an appropriate ``geometry_columns`` entry for your new cities layer
 
 .. admonition:: Answer
    :class: dropdown
@@ -154,7 +154,7 @@ Now that our tables are geo-enabled, we can store geometries in them:
    point you want to add if you've already specified it for that data-set, as we
    did earlier.
 
-Now is probably a good time to open QGIS and try to view your :kbd:`people`
+Now is probably a good time to open QGIS and try to view your ``people``
 table. Also, we should try editing / adding / deleting records and then
 performing select queries in the database to see how the data has changed.
 
@@ -183,7 +183,7 @@ Then define a new connection, e.g.::
   User:
   Password:
 
-To see whether QGIS has found the :kbd:`address` database and that your
+To see whether QGIS has found the ``address`` database and that your
 username and password are correct, click :guilabel:`Test Connect`. If it works,
 check the boxes next to :guilabel:`Save Username` and :guilabel:`Save Password`.
 Then click :guilabel:`OK` to create this connection.

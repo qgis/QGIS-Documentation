@@ -9,13 +9,13 @@ For this lesson, we are going to modify the hydrological model that we created i
 
 Starting with the aforementioned model, let's do the following modifications:
 
-First, calculate statistics of the flow accumulation layer using the *Raster layer statistics* algorithm.
+First, calculate statistics of the flow accumulation layer using the :guilabel:`Raster layer statistics` algorithm.
 
 .. figure:: img/modeler_hydro_calculator/stats.png
 
 This will generate a set of statistical values that will now be available for all numeric fields in other algorithms. 
 
-If you edit the  *Channel network* algorithm, as we did in the last lesson, you will see now that you have other options apart from the numeric input that you added.
+If you edit the :guilabel:`Channel network` algorithm, as we did in the last lesson, you will see now that you have other options apart from the numeric input that you added.
 
 .. figure:: img/modeler_hydro_calculator/unfolded.png
 
@@ -27,21 +27,21 @@ The parameters dialog of the calculator algorithm looks like this:
 
 .. figure:: img/modeler_hydro_calculator/calculator.png
 
-As you can see, the dialog is different to the other ones we have seen, but you have in there the same variables that were available in the *Threshold* field in the *Channel network* algorithm. Enter the above formula and click on *OK* to add the algorithm. 
+As you can see, the dialog is different to the other ones we have seen, but you have in there the same variables that were available in the ``Threshold`` field in the :guilabel:`Channel network` algorithm. Enter the above formula and click on :guilabel:`OK` to add the algorithm.
 
 .. figure:: img/modeler_hydro_calculator/calculator_dependencies.png
 
 If you expand the outputs entry, as shown above, you will see that the model is connected to two of the values, namely the mean and the standard deviation, which are the ones that we have used in the formula.
 
-Adding this new algorithm will add a new numeric value. If you go again to the *Channel network* algorithm, you can now select that value in the *Threshold* parameter. 
+Adding this new algorithm will add a new numeric value. If you go again to the :guilabel:`Channel network` algorithm, you can now select that value in the ``Threshold`` parameter.
 
 .. figure:: img/modeler_hydro_calculator/unfolded2.png
 
-Click on *OK* and your model should look like this.
+Click on :guilabel:`OK` and your model should look like this.
 
 .. figure:: img/modeler_hydro_calculator/calculator_output.png
 
-We are not using the numeric input that we added to the model, so it can be removed. Right--click on it and select *Remove*
+We are not using the numeric input that we added to the model, so it can be removed. Right--click on it and select :guilabel:`Remove`
 
 .. warning:: todo: Add image
 

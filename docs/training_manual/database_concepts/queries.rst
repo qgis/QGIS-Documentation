@@ -1,14 +1,14 @@
 Lesson: Queries
 ===============================================================================
 
-When you write a :kbd:`SELECT ...` command it is commonly known as a query -
+When you write a ``SELECT ...`` command it is commonly known as a query -
 you are interrogating the database for information.
 
 **The goal of this lesson:** To learn how to create queries that will return
 useful information.
 
 .. note:: If you did not do so in the previous lesson, add the following people
-  objects to your :kbd:`people` table. If you receive any errors related to
+  objects to your ``people`` table. If you receive any errors related to
   foreign key constraints, you will need to add the 'Main Road' object to your
   streets table first
 
@@ -109,12 +109,12 @@ You can also filter based on text data:
      Roger Jones |       33
     (2 rows)
 
-Here we used the :kbd:`LIKE` clause to find all names with an :kbd:`s` in them.
-You'll notice that this query is case-sensitive, so the :kbd:`Sally Norman` entry
+Here we used the ``LIKE`` clause to find all names with an ``s`` in them.
+You'll notice that this query is case-sensitive, so the ``Sally Norman`` entry
 has not been returned.
 
 If you want to search for a string of letters regardless of case, you can do a
-case in-sensitive search using the :kbd:`ILIKE` clause:
+case in-sensitive search using the ``ILIKE`` clause:
 
 .. code-block:: sql
 
@@ -126,7 +126,7 @@ case in-sensitive search using the :kbd:`ILIKE` clause:
      Sally Norman |       83
     (2 rows)
 
-That query returned every **people** object with an :kbd:`r` or :kbd:`R` in their
+That query returned every **people** object with an ``r`` or ``R`` in their
 name.
 
 Joins
@@ -202,7 +202,7 @@ Result:
     (4 rows)
 
 Now let's show you a sub-selection on this data. We want to show only people who
-live in ``street_id`` number :kbd:`1`:
+live in ``street_id`` number ``1``:
 
 .. code-block:: sql
 
@@ -267,7 +267,7 @@ Result:
          1 |         2
     (3 rows)
 
-.. note::  Because we have not used an :kbd:`ORDER BY` clause, the order of your
+.. note::  Because we have not used an ``ORDER BY`` clause, the order of your
   results may not match what is shown here.
 
 Try Yourself: :abbr:`★★☆ (Moderate level)`
