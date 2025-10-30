@@ -76,6 +76,7 @@ The Console input area main features are:
   * PyQt5
   * QScintilla2
   * osgeo-gdal-ogr
+  * osgeo-geos
 
 * :kbd:`Ctrl+Alt+Space` to view the auto-completion list if enabled in the
   :ref:`console_options`;
@@ -116,7 +117,7 @@ The Console input area main features are:
       QGIS Rocks
 
       >>> !gdalinfo --version
-      GDAL 3.6.2, released 2023/01/02
+      GDAL 3.10.3, released 2025/04/01
 
       >>> !pip install black
       # Install black python formatter using pip (if available)

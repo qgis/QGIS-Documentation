@@ -1011,6 +1011,10 @@ WCS capabilities
 
 In the :guilabel:`WCS` tab, you can select the layers that you want to publish as WCS.
 
+If you enter a URL in the :guilabel:`Advertised URL`
+field of the :guilabel:`WCS capabilities` section, QGIS Server will advertise
+this specific URL in the WCS GetCapabilities response.
+
 .. _figure_wcs_definitions:
 
 .. figure:: img/ows_server_wcs.png
@@ -1018,9 +1022,6 @@ In the :guilabel:`WCS` tab, you can select the layers that you want to publish a
 
    Definitions in the WCS tab
 
-If you enter a URL in the :guilabel:`Advertised URL`
-field of the :guilabel:`WCS capabilities` section, QGIS Server will advertise
-this specific URL in the WCS GetCapabilities response.
 
 Fine tuning your OWS
 ----------------------

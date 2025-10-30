@@ -1879,7 +1879,7 @@ Below is a list of the default panels provided by QGIS:
      - :ref:`debug_dev_tools`
    * - :guilabel:`Elevation Profile`
      -
-     -
+     - :ref:`label_elevation_profile_view`
    * - :guilabel:`Geometry Validation`
      -
      - :ref:`digitizingmenu`
