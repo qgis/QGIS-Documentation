@@ -168,7 +168,7 @@ Converts multipart geometries that consists of only one geometry into singlepart
 based on an error layer from the :ref:`qgischeckgeometrymultipart` algorithm.
 Layer geometry type will not be changed and will remain multipart.
 
-.. seealso:: :ref:`qgischeckgeometrymultipart`, :ref:`qgispromotetomulti`
+.. seealso:: :ref:`qgispromotetomulti`
 
 Parameters
 ..........
@@ -293,9 +293,10 @@ Python code
 Delete duplicated vertices
 --------------------------
 
-Deletes duplicated vertices from the input geometries, based on errors reported by the :ref:`qgischeckgeometryduplicatenodes` algorithm.
+Deletes duplicated vertices from the input geometries,
+based on errors reported by the :ref:`qgischeckgeometryduplicatenodes` algorithm.
 
-.. seealso:: :ref:`qgischeckgeometryduplicatenodes`, :ref:`qgisremoveduplicatevertices`
+.. seealso:: :ref:`qgisremoveduplicatevertices`
 
 Parameters
 ..........
@@ -561,8 +562,6 @@ Deletes overlapping areas based on an error layer from the :ref:`qgischeckgeomet
 
    Before and after deleting overlapping areas.
 
-.. seealso:: :ref:`qgischeckgeometryoverlap`
-
 Parameters
 ..........
 
@@ -709,8 +708,6 @@ the duplicate vertex is deleted to keep a single vertex and preserve topology.
    :align: center
 
    Fixing reported errors on a line feature for angles lower than 15°.
-
-.. seealso:: :ref:`qgischeckgeometryangle`
 
 Parameters
 ..........
@@ -861,8 +858,6 @@ Three different fixing methods are available.
    :align: center
 
    Before and after fixing gaps in polygon features using ``Add to largest neighbouring area`` method.
-
-.. seealso:: :ref:`qgischeckgeometrygap`
 
 Parameters
 ..........
@@ -1019,7 +1014,7 @@ Deletes holes in polygon geometries based on an error layer from the
 
    Before and after fixing holes in a polygon feature.
 
-.. seealso:: :ref:`qgischeckgeometryhole`, :ref:`qgisdeleteholes`
+.. seealso:: :ref:`qgisdeleteholes`
 
 Parameters
 ..........
@@ -1169,8 +1164,6 @@ Splits self-intersecting geometries based on an error layer from the
    :align: center
 
    Comparison between input layer, multi-object fix, and single-object fix geometries.
-
-.. seealso:: :ref:`qgischeckgeometryselfintersections`
 
 Parameters
 ..........

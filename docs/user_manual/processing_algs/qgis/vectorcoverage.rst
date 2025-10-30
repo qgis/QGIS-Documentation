@@ -164,7 +164,7 @@ Invalidity includes polygons that overlap or that have gaps smaller than the spe
 
 **Requires version of GEOS >= 3.12**
 
-.. seealso:: :ref:`qgischeckvalidity`
+.. seealso:: :ref:`qgischeckvalidity`, :ref:`qgischeckgeometrygap`, :ref:`qgischeckgeometryoverlap`
 
 Parameters
 ..........
