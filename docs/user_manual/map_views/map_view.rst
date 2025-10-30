@@ -344,10 +344,10 @@ To create a bookmark:
 
 #. Zoom and pan to the area of interest.
 #. Select the menu option :menuselection:`View -->` |newBookmark|
-   :menuselection:`New Spatial Bookmark...`,
-   press :kbd:`Ctrl+B` or right-click the |showBookmarks| :guilabel:`Spatial
-   Bookmarks` entry in
-   the :guilabel:`Browser` panel and select :guilabel:`New Spatial Bookmark`.
+   :menuselection:`New Spatial Bookmark...`, press :kbd:`Ctrl+B`
+   or right-click the |showBookmarks| :guilabel:`Spatial Bookmarks`
+   entry in the :guilabel:`Browser` panel
+   and select :guilabel:`New Spatial Bookmark`.
    The :guilabel:`Bookmark Editor` dialog opens.
 
    .. _figure_create_bookmarks:
@@ -374,15 +374,13 @@ Working with Bookmarks
 ----------------------
 
 To use and manage bookmarks, you can either use the :guilabel:`Spatial Bookmarks`
-panel or :guilabel:`Browser`.
+panel or :guilabel:`Browser`:
 
-Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show Spatial
-Bookmark Manager` or press :kbd:`Ctrl+7`
-to open the :guilabel:`Spatial Bookmarks Manager` panel.
-Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show Bookmarks`
-or :kbd:`Ctrl+Shift+B` to show
-the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the
-:guilabel:`Browser` panel.
+* Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show Spatial
+  Bookmark Manager` or press :kbd:`Ctrl+7` to open the :guilabel:`Spatial Bookmark Manager` panel.
+* Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show Spatial Bookmarks`
+  or press :kbd:`Ctrl+Shift+B` to show the |showBookmarks| :guilabel:`Spatial Bookmarks` entry
+  in the :guilabel:`Browser` panel.
 
 You can perform the following tasks:
 
