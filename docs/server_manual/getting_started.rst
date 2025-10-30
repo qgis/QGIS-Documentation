@@ -656,7 +656,7 @@ A simple procedure is the following:
    with the following changes (various other combinations are possible):
 
 
-   .. list-table::
+   .. list-table:: Apache configuration update
       :header-rows: 1
 
       * - Purpose
@@ -723,8 +723,6 @@ A simple procedure is the following:
             # default QGIS project
             SetEnv QGIS_PROJECT_FILE "C:/Users/*Your USERNAME*/qgis_projects/qgis-server-tutorial-data/world.qgs"
 
-
-            
 
 #. Restart the Apache web server
 
