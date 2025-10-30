@@ -37,7 +37,7 @@ activate other providers.
 .. figure:: img/first_alg/toolbox_providers.png
 
 To execute an algorithm, you just have to double-click on its name in the
-toolbox. When you double-click on the *Polygon centroids* algorithm, you will
+toolbox. When you double-click on the :guilabel:`Polygon centroids` algorithm, you will
 see the following dialog.
 
 .. figure:: img/first_alg/centroids.png
@@ -46,7 +46,7 @@ All algorithms have a similar interface, which basically contains input
 parameters that you have to fill, and outputs that you have to select where to
 store. In this case, the only input we have is a vector layer with polygons.
 
-Select the *Polygons* layer as input. This also can be done by dragging
+Select the ``Polygons`` layer as input. This also can be done by dragging
 and dropping the layer from the layers panel to the input box.
 The algorithm has a single output, which
 is the centroids layer. There are two options to define where a data output is

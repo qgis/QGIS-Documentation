@@ -179,18 +179,18 @@ connect to the address db:
 
   psql address
 
-Then create a :file:`streets` table:
+Then create a ``streets`` table:
 
 .. code-block:: sql
 
   create table streets (id serial not null primary key, name varchar(50));
 
-:kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells
-PostgreSQL to start an integer sequence (auto-number) to populate the :kbd:`id`
-automatically for every new record. :kbd:`varchar(50)` tells PostgreSQL to
+``serial`` and ``varchar`` are **data types**. ``serial`` tells
+PostgreSQL to start an integer sequence (auto-number) to populate the ``id``
+automatically for every new record. ``varchar(50)`` tells PostgreSQL to
 create a character field of 50 characters in length.
 
-You will notice that the command ends with a :kbd:`;` - all SQL commands should
+You will notice that the command ends with a ``;`` - all SQL commands should
 be terminated this way. When you press :kbd:`Enter`, psql will report something
 like this:
 
@@ -202,12 +202,12 @@ like this:
            "streets_pkey" for table "streets"
   CREATE TABLE
 
-That means your table was created successfully, with a primary key :kbd:`streets_pkey`
-using :kbd:`streets.id`.
+That means your table was created successfully, with a primary key ``streets_pkey``
+using ``streets.id``.
 
-Note: If you hit return without entering a :kbd:`;`, then you will get a prompt like
-this: :kbd:`address-#`. This is because PG is expecting you to enter more. Enter
-:kbd:`;` to run your command.
+Note: If you hit return without entering a ``;``, then you will get a prompt like
+this: ``address-#``. This is because PG is expecting you to enter more. Enter
+``;`` to run your command.
 
 To view your table schema, you can do this:
 
@@ -305,8 +305,8 @@ Our table has already been created, so let's do it the first way:
     add constraint people_streets_fk foreign key (street_id) references streets(id);
 
 
-That tells the :kbd:`people` table that its :kbd:`street_id` fields must match
-a valid street :kbd:`id` from the :kbd:`streets` table.
+That tells the ``people`` table that its ``street_id`` fields must match
+a valid street ``id`` from the ``streets`` table.
 
 The more usual way to create a constraint is to do it when you create the table:
 
@@ -374,7 +374,7 @@ Which results in:
 Dropping Tables in SQL
 -------------------------------------------------------------------------------
 
-If you want to get rid of a table you can use the :kbd:`drop` command:
+If you want to get rid of a table you can use the ``drop`` command:
 
 .. code-block:: sql
 
@@ -386,16 +386,16 @@ In our current example, the above command would not work. Why not?
   :class: dropdown
 
   The reason the DROP command would not work in this case is because the
-  *people* table has a Foreign Key constraint to the *streets* table. This means
-  that dropping (or deleting) the *streets* table would leave the *people* table
-  with references to non-existent *streets* data.
+  ``people`` table has a Foreign Key constraint to the ``streets`` table. This means
+  that dropping (or deleting) the ``streets`` table would leave the ``people`` table
+  with references to non-existent ``streets`` data.
 
-  It is possible to 'force' the *streets* table to be deleted by using the
-  ``CASCADE`` command, but this would also delete the *people* and any other table
-  which had a relationship to the *streets* table. Use with caution!
+  It is possible to 'force' the ``streets`` table to be deleted by using the
+  ``CASCADE`` command, but this would also delete the ``people`` and any other table
+  which had a relationship to the ``streets`` table. Use with caution!
 
 
-If you used the same :kbd:`drop table` command on the `people` table, it would
+If you used the same ``drop table`` command on the ``people`` table, it would
 be successful:
 
 .. code-block:: sql
@@ -403,7 +403,7 @@ be successful:
   drop table people;
 
 
-.. note::  If you actually did enter that command and dropped the :kbd:`people`
+.. note::  If you actually did enter that command and dropped the ``people``
    table, now would be a good time to rebuild it, as you will need it in the
    next exercises.
 

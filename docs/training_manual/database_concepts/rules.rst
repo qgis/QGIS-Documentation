@@ -10,15 +10,15 @@ database.
 Creating a logging rule
 -----------------------
 
-Say you want to log every change of phone_no in your people table in to a
-people_log table. So you set up a new table:
+Say you want to log every change of ``phone_no`` in your ``people`` table in to a
+``people_log`` table. So you set up a new table:
 
 .. code-block:: sql
 
   create table people_log (name text, time timestamp default NOW());
 
-In the next step, create a rule that logs every change of a phone_no in the
-people table into the people_log table:
+In the next step, create a rule that logs every change of a ``phone_no`` in the
+``people`` table into the ``people_log`` table:
 
 .. code-block:: sql
 
@@ -32,7 +32,7 @@ To test that the rule works, let's modify a phone number:
 
   update people set phone_no = '082 555 1234' where id = 2;
 
-Check that the :kbd:`people` table was updated correctly:
+Check that the ``people`` table was updated correctly:
 
 .. code-block:: sql
 
@@ -43,7 +43,7 @@ Check that the :kbd:`people` table was updated correctly:
       2 | Joe Bloggs |        3 |         2 | 082 555 1234
     (1 row)
 
-Now, thanks to the rule we created, the :kbd:`people_log` table will look like
+Now, thanks to the rule we created, the ``people_log`` table will look like
 this:
 
 .. code-block:: sql
@@ -55,7 +55,7 @@ this:
      Joe Bloggs | 2014-01-11 14:15:11.953141
     (1 row)
 
-.. note::  The value of the :kbd:`time` field will depend on the current date
+.. note::  The value of the ``time`` field will depend on the current date
    and time.
 
 In Conclusion

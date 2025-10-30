@@ -16,8 +16,8 @@ delineate watersheds and calculate some statistics.
 
    .. figure:: img/hydro/dem.png
 
-#. The first module to execute is *Catchment area* (in some SAGA versions it is called
-   *Flow accumulation (Top Down)*). You can use any of the others named *Catchment area*.
+#. The first module to execute is :guilabel:`Catchment area` (in some SAGA versions it is called
+   :guilabel:`Flow accumulation (Top Down)`). You can use any of the others named :guilabel:`Catchment area`.
    They have different algorithms underneath, but the results are basically the same.
 
 #. Select the DEM in the :guilabel:`Elevation` field, and leave the default values for
@@ -25,7 +25,7 @@ delineate watersheds and calculate some statistics.
 
    .. figure:: img/hydro/catchmentarea.png
 
-   Some algorithms calculate many layers, but the *Catchment Area* layer is the only one we will be using.
+   Some algorithms calculate many layers, but the :guilabel:`Catchment Area` layer is the only one we will be using.
    You can get rid of the other ones if you want.
 
    The rendering of the layer is not very informative. 

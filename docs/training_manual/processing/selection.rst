@@ -16,7 +16,7 @@ To make a selection, you can use any of the available methods and tools in QGIS.
 
 .. figure:: img/selection/selection_algs.png
 
-Open the *Random selection* algorithm.
+Open the :guilabel:`Random selection` algorithm.
 
 .. figure:: img/selection/random_selection.png
 

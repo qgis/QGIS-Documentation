@@ -8,12 +8,12 @@ HTML outputs
 All the outputs we have produced so far were layers (whether raster or vector).
 However, some algorithms generate outputs in the form of text and graphics.
 All this outputs are wrapped in HTML files and displayed in the so--called
-*Results viewer*, which is another element of the processing framework.
+:guilabel:`Results viewer`, which is another element of the processing framework.
 
 Let's see one of those algorithms to understand how they work.
 
 Open the project with the data to be used in this lesson and then open the
-*Basic statistics for numeric fields* algorithm. 
+:guilabel:`Basic statistics for numeric fields` algorithm.
 
 .. figure:: img/html/paramdialog.png
 
@@ -26,17 +26,17 @@ to save to a temporary file. In this case, however, only the ``html`` and
 format by using a different one.
 
 Run the algorithm selecting the only layer in the project as input, and
-the *POP2000* field, and a new dialog like the one shown next will appear
+the ``POP2000`` field, and a new dialog like the one shown next will appear
 once the algorithm is executed and the parameters dialog is closed.
 
 .. figure:: img/html/result.png
 
-This is the *Results viewer*. It keeps all the HTML result generated during
+This is the :guilabel:`Results viewer`. It keeps all the HTML result generated during
 the current session, easily accessible, so you can check them quickly whenever
 you need it. As it happens with layers, if you have saved the output to a
 temporary file, it will be deleted once you close QGIS. If you have saved
 to a non-temporary path, the file will remain, but it will not appear in
-the *Results viewer* the next time you open QGIS.
+the :guilabel:`Results viewer` the next time you open QGIS.
 
 Some algorithms generate text that cannot be divided into other more
 detailed outputs. That is the case if, for instance, the algorithm captures

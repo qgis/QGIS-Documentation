@@ -122,19 +122,19 @@ Remember to install the postgis extensions:
 
   psql -d postgis_demo -c "CREATE EXTENSION postgis;"
 
-Next, import the data provided in the :kbd:`exercise_data/postgis/` directory.
+Next, import the data provided in the :file:`exercise_data/postgis/` directory.
 Refer back to the previous lesson for instructions, but remember that you'll
 need to create a new PostGIS connection to the new database. You can import from
 the terminal or via DB Manager. Import the files into the following database
 tables:
 
-- :kbd:`points.shp` into :kbd:`building`
-- :kbd:`lines.shp` into :kbd:`road`
-- :kbd:`polygons.shp` into :kbd:`region`
+- :file:`points.shp` into ``building``
+- :file:`lines.shp` into ``road``
+- :file:`polygons.shp` into ``region``
 
 Load these three database layers into QGIS via the :guilabel:`Add PostGIS
 Layers` dialog, as usual. When you open their attribute tables, you'll note
-that they have both an :kbd:`id` field and a :kbd:`gid` field created by the
+that they have both an ``id`` field and a ``gid`` field created by the
 PostGIS import.
 
 Now that the tables are imported, we can use PostGIS to query the data. Go back
@@ -258,8 +258,8 @@ Select using the buffer:
       AND b.name != 'Hokkaido';
 
 In this query, the original buffer view is used as any other table would be. It
-is given the alias :kbd:`a`, and its geometry field, :kbd:`a.geom`, is used
-to select any polygon in the :kbd:`region` table (alias :kbd:`b`) that
+is given the alias ``a``, and its geometry field, ``a.geom``, is used
+to select any polygon in the ``region`` table (alias ``b``) that
 intersects it. However, Hokkaido itself is excluded from this select statement,
 because we don't want it; we only want the regions adjoining it.
 
