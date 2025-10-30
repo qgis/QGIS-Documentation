@@ -772,7 +772,8 @@ Lines intersecting each other
 Checks intersections between line geometries within a layer.
 Intersections between two different lines are errors.
 
-.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`, :ref:`qgischeckgeometryselfintersections`
+.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`,
+   :ref:`qgischeckgeometryselfintersections`
 
 Parameters
 ..........
@@ -895,7 +896,8 @@ Lines intersecting other layer
 Checks if the input line layer features intersect with the check layer features.
 An input feature that intersects with a check layer feature is an error.
 
-.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`, :ref:`qgischeckgeometryselfintersections`
+.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`,
+   :ref:`qgischeckgeometryselfintersections`
 
 Parameters
 ..........
@@ -1155,7 +1157,7 @@ Calculates overlapping areas in polygon geometries, and reports areas smaller th
 
    Hashed polygons indicate overlapping areas smaller than the specified minimum.
 
-.. seealso:: :ref:`qgisfixgeometryoverlap`
+.. seealso:: :ref:`qgisfixgeometryoverlap`, :ref:`qgiscoveragevalidate`
 
 Parameters
 ..........
@@ -1881,7 +1883,7 @@ An optional buffer can be applied to the allowed gaps.
 
    Reporting errors on polygon features for gaps smaller than the specified threshold.
 
-.. seealso:: :ref:`qgisfixgeometrygap`
+.. seealso:: :ref:`qgisfixgeometrygap`, :ref:`qgiscoveragevalidate`
 
 Parameters
 ..........

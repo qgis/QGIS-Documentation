@@ -869,8 +869,8 @@ additional information (number of errors found and types of error):
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgisfixgeometries` and the core plugin
-   :ref:`geometry_checker`, :ref:`qgiscoveragevalidate`
+.. seealso:: :ref:`checkgeometry_algorithms`, :ref:`qgisfixgeometries`,
+   :ref:`qgiscoveragevalidate`
 
 Parameters
 ..........
@@ -1713,6 +1713,8 @@ are smaller than a specified area threshold. Leaving this parameter at
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of polygon features
+
+.. seealso:: qgisfixgeometryhole
 
 Parameters
 ..........
@@ -3136,7 +3138,7 @@ of point, line, and polygon features without M enabled
 
 .. warning:: M values will be dropped from the output.
 
-.. seealso:: :ref:`qgischeckvalidity`
+.. seealso:: :ref:`qgischeckvalidity`, :ref:`fixgeometry_algorithms`
 
 Parameters
 ..........
@@ -5057,7 +5059,8 @@ features.
 :ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
 
-.. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
+.. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`,
+  :ref:`qgisfixgeometrymultipart`
 
 Parameters
 ..........
@@ -5241,7 +5244,8 @@ of point, line, and polygon features
 
 .. seealso:: :ref:`qgisextractvertices`,
    :ref:`qgisextractspecificvertices`,
-   :ref:`qgisdeleteduplicategeometries`
+   :ref:`qgisdeleteduplicategeometries`,
+   :ref:`qgisfixgeometryduplicatenodes`
 
 Parameters
 ..........
