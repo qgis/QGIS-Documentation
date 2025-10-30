@@ -127,23 +127,34 @@ context menu allows you to :guilabel:`Rename Favorite...` and
 Spatial Bookmarks
 ......................................................................
 
-This is where you will find your spatial bookmarks, organised
-into :guilabel:`Project Bookmarks` and :guilabel:`User Bookmarks`.
+This is where you will find your :ref:`spatial bookmarks <sec_bookmarks>`,
+divided into :guilabel:`Project Bookmarks` and :guilabel:`User Bookmarks`.
 
-From the top level context menu, you can create a bookmark
-(:guilabel:`New Spatial Bookmark...`),
-:guilabel:`Show the Spatial Bookmark Manager`,
-:guilabel:`Import Spatial Bookmarks...` and
-:guilabel:`Export Spatial Bookmarks...`.
+.. table:: available actions for spatial bookmarks
 
-For bookmark group entries you can :guilabel:`Export Spatial Bookmarks...`,
-create a bookmark (:guilabel:`New Spatial Bookmark...`),
-:guilabel:`Rename Bookmark Group`,
-and :guilabel:`Delete Bookmark Group`.
-
-For bookmark entries you can :guilabel:`Zoom to Bookmark`,
-:guilabel:`Edit Spatial Bookmark...` and
-:guilabel:`Delete Spatial Bookmark`
+   +----------------------------------+-----------------------------------------------+
+   | Level                            | Contextual menu                               |
+   +==================================+===============================================+
+   | :guilabel:`Spatial Bookmarks`    | :guilabel:`New Spatial Bookmark…`             |
+   |                                  +-----------------------------------------------+
+   |                                  | :guilabel:`Show the Spatial Bookmark Manager` |
+   |                                  +-----------------------------------------------+
+   |                                  | :guilabel:`Import Spatial Bookmarks…`         |
+   |                                  +-----------------------------------------------+
+   |                                  | :guilabel:`Export Spatial Bookmarks…`         |
+   +----------------------------------+-----------------------------------------------+
+   | Bookmark group                   | :guilabel:`New Spatial Bookmark…`             |
+   |                                  +-----------------------------------------------+
+   | (:guilabel:`Project Bookmarks`   | :guilabel:`Import Spatial Bookmarks…`         |
+   | and :guilabel:`User Bookmarks`)  +-----------------------------------------------+
+   |                                  | :guilabel:`Export Spatial Bookmarks…`         |
+   +----------------------------------+-----------------------------------------------+
+   | Individual bookmark              | :guilabel:`Zoom to Bookmark`                  |
+   |                                  +-----------------------------------------------+
+   |                                  | :guilabel:`Edit Spatial Bookmark…`            |
+   |                                  +-----------------------------------------------+
+   |                                  | :guilabel:`Delete Spatial Bookmark`           |
+   +----------------------------------+-----------------------------------------------+
 
 
 Project Home
