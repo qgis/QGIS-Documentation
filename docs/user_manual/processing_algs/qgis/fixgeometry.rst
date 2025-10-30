@@ -582,7 +582,7 @@ Three different fixing methods are available.
 .. figure:: img/fix_geometry_gap.png
    :align: center
 
-   Before and after fixing gaps in polygon features using add to longest shared edge method.
+   Before and after fixing gaps in polygon features using ``Add to largest neighbouring area`` method.
 
 .. seealso:: :ref:`qgischeckgeometrygap`
 
