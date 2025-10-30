@@ -20,7 +20,7 @@ based on an error layer from the :ref:`qgischeckgeometrymissingvertex` algorithm
 .. figure:: img/fix_geometry_missing_vertices.png
    :align: center
 
-   Before and after adding missing vertices along polygon borders.
+   Fixing missing vertices along polygon borders.
 
 
 Parameters
@@ -449,7 +449,7 @@ Deletes error features based on an error layer from some check geometry algorith
 .. figure:: img/fix_geometry_deletefeatures.png
    :align: center
 
-   Before and after deleting features inside a polygon.
+   Deleting features inside a polygon.
 
 .. seealso:: :ref:`qgisdeleteduplicategeometries`, :ref:`qgisdropgeometries`
 
@@ -560,7 +560,7 @@ Deletes overlapping areas based on an error layer from the :ref:`qgischeckgeomet
 .. figure:: img/fix_geometry_deleteoverlaps.png
    :align: center
 
-   Before and after deleting overlapping areas.
+   Deleting overlapping areas.
 
 Parameters
 ..........
@@ -857,7 +857,7 @@ Three different fixing methods are available.
 .. figure:: img/fix_geometry_gap.png
    :align: center
 
-   Before and after fixing gaps in polygon features using ``Add to largest neighbouring area`` method.
+   Fixing gap between polygon features using the ``Add to largest neighbouring area`` method.
 
 Parameters
 ..........
@@ -1012,7 +1012,7 @@ Deletes holes in polygon geometries based on an error layer from the
 .. figure:: img/fix_geometry_holes.png
    :align: center
 
-   Before and after fixing holes in a polygon feature.
+   Deleting holes in a polygon feature.
 
 .. seealso:: :ref:`qgisdeleteholes`
 
@@ -1163,7 +1163,8 @@ Splits self-intersecting geometries based on an error layer from the
 .. figure:: img/fix_geometry_splitselfintersectinggeometries.png
    :align: center
 
-   Comparison between input layer, multi-object fix, and single-object fix geometries.
+   Fixing self-intersection using various methods:
+   as multi-object (middle), and multiple single-object geometries (right).
 
 Parameters
 ..........

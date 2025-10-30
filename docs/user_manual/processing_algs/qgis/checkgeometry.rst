@@ -20,12 +20,10 @@ Detects dangle-end lines in line geometries and reports them as errors.
 A dangle-end line is a line feature that terminates at a vertex connected to only one segment,
 resulting in an endpoint without a proper connection.
 
-
 .. figure:: img/check_geometry_dangleendlines.png
    :align: center
 
-   Errors for dangle-end lines are reported on line features,
-   and entire features with dangling ends are highlighted in red for clarity.
+   Identifying dangle-end features (in red) and vertices (yellow).
 
 Parameters
 ..........
@@ -1500,7 +1498,8 @@ Python code
 Self-contacts
 ------------------
 
-Checks if the geometry has self contact points (in line or polygon).
+Checks if the geometry has self contact points (in line or polygon),
+i.e., a vertex that touches more than two segments of the same ring.
 Self contacts are errors.
 
 .. figure:: img/check_geometry_selfcontact.png
@@ -1635,7 +1634,7 @@ without having a common vertex.
 .. figure:: img/check_geometry_selfintersections.png
    :align: center
 
-   Self-intersections vs self-contacts.
+   Self-intersection vs self-contact.
 
 .. seealso:: :ref:`qgisfixgeometryselfintersection`, :ref:`qgischeckgeometryselfcontact`
 
