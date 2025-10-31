@@ -11,8 +11,8 @@ Point Cloud Conversion
 
 .. _pdalconvertformat:
 
-Convert format
---------------
+Convert point cloud format
+--------------------------
 
 Converts a point cloud to a different file format, e.g. creates a compressed :file:`.LAZ`.
 
@@ -71,8 +71,8 @@ Python code
 
 .. _pdalexportraster:
 
-Export to raster
-----------------
+Export point cloud to raster
+----------------------------
 
 Exports point cloud data to a 2D raster grid having cell size of given resolution,
 writing values from the specified attribute.
@@ -196,8 +196,8 @@ Python code
 
 .. _pdalexportrastertin:
 
-Export raster (using triangulation)
------------------------------------
+Export point cloud raster (using triangulation)
+-----------------------------------------------
 
 Exports point cloud data to a 2D raster grid using a triangulation of points
 and then interpolating cell values from triangles.
@@ -321,8 +321,8 @@ Python code
 
 .. _pdalexportvector:
 
-Export to vector
-----------------
+Export point cloud to vector
+-----------------------------
 
 Exports point cloud data to a vector layer with 3D points (a GeoPackage),
 optionally with extra attributes.

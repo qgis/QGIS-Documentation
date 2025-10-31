@@ -120,8 +120,8 @@ Python code
 
 .. _pdaldensity:
 
-Density
--------
+Point cloud density
+-------------------
 
 Exports a raster file based on the number of points within each raster cell -
 useful for quality checking of point cloud datasets.
@@ -241,8 +241,8 @@ Python code
 
 .. _pdalfilter:
 
-Filter
-------
+Filter point cloud
+------------------
 
 Extracts point from the input point cloud which match PDAL expression and/or are inside of a cropping rectangle.
 
