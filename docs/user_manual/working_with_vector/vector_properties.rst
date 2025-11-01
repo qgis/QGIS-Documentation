@@ -398,13 +398,6 @@ To use categorized symbology for a layer:
     for some complex expressions it might be simpler to use :ref:`rule-based
     rendering <rule_based_rendering>`.
 
-   .. note:: Keep in mind that some values may use widgets that
-    do not display the actual value stored in the field. For example,
-    a checkbox widget may store ``1`` and ``0`` for checked and unchecked
-    states, while displaying ``True`` and ``False`` labels. In this case,
-    to categorize features based on the checkbox state, you need to use
-    the stored values (``1`` and ``0``) in the expression.
-
 #. Configure the :ref:`Symbol <symbol-selector>`, which will be used as
    base symbol for all the classes;
 #. Indicate the :ref:`Color ramp <color-ramp>`, i.e. the range of colors from which
@@ -416,6 +409,17 @@ To use categorized symbology for a layer:
    of random colors if you are not satisfied.
 #. Then click on the :guilabel:`Classify` button to create classes from the
    distinct values of the provided field or expression.
+#. For each class, you can edit the :guilabel:`Legend` column
+   to a more meaningful label (used in the :guilabel:`Layers` panel and the print layout).
+
+   .. note:: Keep in mind that some values may use widgets that
+    do not display the actual value stored in the field.
+    For example, a checkbox widget may store ``1`` and ``0`` for checked and unchecked
+    states, while displaying ``True`` and ``False`` labels. In this case,
+    to categorize features based on the checkbox state, you need to use
+    the stored values (``1`` and ``0``) in the expression.
+    QGIS will automatically use the display value for the legend column.
+
 #. :guilabel:`Apply` the changes if the :ref:`live update <layer_styling_panel>`
    is not in use and each feature on the map canvas will be rendered with the
    symbol of its class.
