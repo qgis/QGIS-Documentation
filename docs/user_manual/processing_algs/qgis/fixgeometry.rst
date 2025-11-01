@@ -1164,7 +1164,7 @@ Splits self-intersecting geometries based on an error layer from the
    :align: center
 
    Fixing self-intersection using various methods:
-   as multi-object (middle), and multiple single-object geometries (right).
+   as multi-part (middle), and multiple single-part geometries (right).
 
 Parameters
 ..........
@@ -1195,9 +1195,9 @@ Basic parameters
 
      - Method to apply to the self-intersecting geometries:
 
-       * 0 -- ``Split feature into a multi-object feature``:
+       * 0 -- ``Split feature into a multi-part feature``:
          splits the self-intersecting geometry into multiple parts stored in a single multipart feature.
-       * 1 -- ``Split feature into multiple single-object features``:
+       * 1 -- ``Split feature into multiple single-part features``:
          splits the self-intersecting geometry into multiple parts, each part stored in a separate feature.
    * - **Field of original feature unique identifier**
      - ``UNIQUE_ID``
