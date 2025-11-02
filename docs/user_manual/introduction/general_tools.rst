@@ -1133,6 +1133,7 @@ From bottom to top:
     * |unchecked| :guilabel:`Hide derived attributes from results`
       to only show fields actually defined in the layer
     * |unchecked| :guilabel:`Hide NULL values from results`
+    * |unchecked| :guilabel:`Show Relations` to show relations in the vector layer :ref:`Identify results tree <identify_features_vector>`
 
   * |helpContents|:sup:`Help` to access the current documentation
 
@@ -1208,7 +1209,7 @@ All the other information about the feature follows.
 The feature information displayed by the identify tool will depend on the type 
 of layer you have selected, whether it is a vector layer (including vector tiles 
 or point cloud data) or raster layer. If your layer is raster, clicking on a location
-on the map canvas with identify tool will highlight the identified raster pixel. 
+on the map canvas with identify tool will highlight the identified raster pixel.
 The Identify Results dialog can be customized to display custom fields, but by
 default it will display the following information:
 
