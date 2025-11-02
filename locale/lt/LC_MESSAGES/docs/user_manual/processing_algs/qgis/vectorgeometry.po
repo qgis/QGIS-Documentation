@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-12 15:11+0000\n"
+"POT-Creation-Date: 2025-10-28 10:01+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
 "Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
@@ -3177,7 +3177,7 @@ msgstr "**Centroidai**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:5281
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7477
 msgid "[vector: point]"
-msgstr "[vector: point]"
+msgstr "[vektorius: taškas]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:806
 msgid ""
@@ -3439,6 +3439,109 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:992
 msgid "**Algorithm ID**: ``qgis:checkvalidity``"
 msgstr "**Algoritmo ID**: ``qgis:checkvalidity``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1002
+msgid "Types of error messages and their meanings"
+msgstr "Klaidų pranešimų tipai ir jų reikšmės"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1004
+msgid "Some examples of geometry check failures in QGIS"
+msgstr "Keli QGIS geometrijos tikrinimo klaidų pavyzdžiai"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1009
+msgid "Geometry context"
+msgstr "Geometrijos kontekstas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1010
+msgid "GEOS validation and error message"
+msgstr "GEOS tikrinimas ir klaidos pranešimas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1011
+msgid "QGIS validation and error message"
+msgstr "QGIS tikrinimas ir klaidos pranešimas"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1012
+msgid "**Consecutive points on a line have the same coordinates**"
+msgstr ""
+"**Vienas po kito einantys linijos taškai turi tas pačias koordinates**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1017
+msgid "|taskCancel| *Repeated point*"
+msgstr "|taskCancel| *Pakartotas taškas*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7565
+msgid "taskCancel"
+msgstr "taskCancel"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1018
+msgid "|taskCancel| *Line a contains x duplicate node(s) at b*"
+msgstr "|taskCancel| *Linijoje yra x pasikartojančių taškų ties b*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1019
+msgid "**Segments of a line intersect each other**"
+msgstr "**Linijos segmentai kerta vienas kitą**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1025
+msgid "|taskCancel| *Segments a and b of line c intersect at d*"
+msgstr "|taskCancel| *Linijos c segmentai a ir b kertasi ties d*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1026
+msgid "**Polygon geometry touches itself and generates a ring**"
+msgstr "**Poligono geometrija liečia save ir sukuria žiedą**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1031
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1032
+msgid "|taskCancel| *Ring self-intersection*"
+msgstr "|taskCancel| *Žiedo savęs kirtimas*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1033
+msgid ""
+"**Two rings (exterior or interior) of a polygon geometry are identical**"
+msgstr ""
+"**Du poligono geometrijos žiedai (išorinis ir vidinis) yra identiški**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1039
+msgid "|taskCancel| *Duplicate rings*"
+msgstr "|taskCancel| *Pasikartojantys žiedai*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1041
+msgid "**Geometry touches itself**"
+msgstr "**Geometrija liečia pati save**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1046
+msgid "|taskCancel| *Self-intersection*"
+msgstr "|taskCancel| *Savęs kirtimas*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1048
+msgid "**A polygon geometry is on top of another polygon geometry**"
+msgstr "**Poligono geometrija yra virš kitos poligono geometrijos**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1053
+msgid "|taskCancel| *Nested shell*"
+msgstr "|taskCancel| *Vidinis kiautas*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1055
+msgid ""
+"**Part of a MultiPolygon geometry is within a hole of a MultiPolygon "
+"geometry**"
+msgstr ""
+"**Dalis MultiPoligono geometrijos yra MultiPoligono geometrijos skylėje**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1061
+msgid "|taskCancel| *Polygon a lies inside polygon b*"
+msgstr "|taskCancel| *Poligonas a yra poligono b viduje*"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1062
+msgid ""
+"Point geometry does not have a proper coordinate pair. The coordinate pair "
+"does not contain a latitude value and a longitude value in that order."
+msgstr ""
+"Taško geometrija neturi tinkamos koordinačių poros. Koordinačių poroje nėra "
+"platumos reikšmės ir ilgumos reikšmės tokioje rikiuotėje."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1064
+msgid "|taskCancel| *Invalid coordinate*"
+msgstr "|taskCancel| *Netinkama koordinatė*"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1109
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2126
