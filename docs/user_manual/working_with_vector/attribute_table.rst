@@ -752,25 +752,26 @@ Under the :guilabel:`Feature` column, panel will display following information:
   in the layer's properties dialog (see :ref:`actions_menu`).
 * **Data attributes**: This is the list of attribute fields and values for the
   feature that has been clicked.
-* information about the related child feature if you defined a :ref:`relation <vector_relations>`:
+* When a vector layer has defined :ref:`relations <vector_relations>`,
+  the :guilabel:`Identify Results` panel can display both **referenced**
+  and **referencing** related features.
+  To view these relations, ensure that the :guilabel:`Show relations` option
+  is enabled in the :ref:`Identify Settings <identify_toolbar>`.
+  Available information for each related feature include:
 
   * the name of the relation
-  * the entry in reference field, e.g. the name of the related child feature
-  * **Data attributes**: This is the list of attributes fields and values of the
-    related child feature.
+  * the entry in the referenced or referencing field, identifying the feature
+  * the list of attribute fields and values
 
-When a vector layer has defined :ref:`relations <vector_relations>`, the :guilabel:`Identify Results` panel
-can display both **referenced** and **referencing** related features. 
-To view these relations, ensure that the :guilabel:`Show relations` option is enabled in the :ref:`Identify Settings <identify_view>`.
+  You can expand related features to explore connected records
+  through multiple levels, including many-to-many (n:m) and polymorphic relations.
+  Only nodes you explicitly expand are loaded, preventing excessive nesting.
 
-You can expand related features to explore connected records through multiple levels,
-including many-to-many (n:m) and polymorphic relations.
-Only nodes you explicitly expand are loaded, preventing excessive nesting.
-
-To focus on a specific related record, right-click it and choose :guilabel:`Identify Feature`. 
-This re-centers the identify results on the selected feature, starting a new identification tree from it 
-and effectively limiting the visible nesting depth. 
-Features already shown in ancestor nodes are automatically omitted to avoid duplicates or circular relations.
+  To focus on a specific related record, right-click it and choose :guilabel:`Identify Feature`.
+  This re-centers the identify results on the selected feature,
+  starting a new identification tree from it and effectively limiting the visible nesting depth.
+  Features already shown in ancestor nodes are automatically omitted
+  to avoid duplicates or circular relations.
 
 
 .. index:: External Storage, WebDAV

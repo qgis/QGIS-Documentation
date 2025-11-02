@@ -1109,6 +1109,9 @@ From bottom to top:
     to identify features from.
     If only a single feature is under the mouse, then the results are automatically displayed.
 
+
+.. _identify_toolbar:
+
 * In the upper part of the :guilabel:`Identify Results` dialog,
   a frame shows the :ref:`information <identified_information>` returned by features
   as a table, a graph or a tree, depending on the :ref:`selected view <identify_view>`.
