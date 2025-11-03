@@ -723,35 +723,55 @@ To use the :guilabel:`Identify features` tool for vector layers, follow these st
 #. Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
 #. Click on a feature in the map view.
 
+.. _figure_identify_vector:
+
+.. figure:: ../introduction/img/identify_features.png
+   :align: center
+
+   Identify Results dialog
+
 The :guilabel:`Identify results` panel will display different features information
-depending on the layer type. There are two columns in the panel, on the left side
-you can see :guilabel:`Feature` and on the right side :guilabel:`Value`.
-Under the :guilabel:`Feature` column, panel will display following information:
+in a tree view.
+There are two columns in the panel: :guilabel:`Feature` and :guilabel:`Value`.
+The first item is the name of the layer and its children are its identified feature(s).
+Each feature is identified by the :ref:`display name <maptips>` field along with its value.
+Other information about the feature follows:
 
 * **Derived** section - those are the information calculated or derived from other
   information in the layer. For example, the area of a polygon or the length of a line.
   General information that can be found in this section:
 
-  * Depending on the geometry type, cartesian measurements of length, perimeter, or area
-    in the layer's CRS units. For 3D line vectors, the cartesian line length is available.
+  * Depending on the geometry type, the cartesian measurements of length,
+    perimeter or area in the layer's CRS units.
+    For 3D line vectors, the cartesian line length is available.
   * Depending on the geometry type and if an ellipsoid is set in the :guilabel:`Project Properties`
     dialog (:menuselection:`General --> Measurements`), ellipsoidal values
     of length, perimeter, or area using the specified units.
   * The count of geometry parts in the feature and the number of the part clicked.
   * The count of vertices in the feature.
 
-  Coordinate information that can be found in this section:
-  
-  * X and Y coordinate values of the clicked point.
-  * The number of the closest vertex to the clicked point.
-  * X and Y coordinate values of the closest vertex.
-  * If you click on a curved segment, the radius of that section is also displayed.
+  * Coordinate information, using the project properties :guilabel:`Coordinates
+    display` settings:
+
+    * ``X`` and ``Y`` coordinate values of the clicked point
+    * the number of the closest vertex to the clicked point
+    * ``X`` and ``Y`` coordinate values of the closest vertex
+      (and ``Z``/``M`` if applicable)
+    * if you click on a curved segment, the radius of that section is also displayed.
+    * if both the vector layer and the project have vertical datums set and they differ,
+      the ``Z`` value will be displayed for both datums.
+
 * **Actions**: Actions can be added to the identify feature windows.
   The action is run by clicking on the action label. By default, only one action
   is added, namely ``View feature form`` for editing. You can define more actions
   in the layer's properties dialog (see :ref:`actions_menu`).
-* **Data attributes**: This is the list of attribute fields and values for the
-  feature that has been clicked.
+* **Data attributes**: This is the list of attribute fields and values
+  for the feature that has been clicked.
+
+  .. note:: Links in the feature's attributes are clickable
+   from the :guilabel:`Identify Results` panel
+   and will open in your default web browser.
+
 * When a vector layer has defined :ref:`relations <vector_relations>`,
   the :guilabel:`Identify Results` panel can display both **referenced**
   and **referencing** related features.
@@ -759,8 +779,9 @@ Under the :guilabel:`Feature` column, panel will display following information:
   is enabled in the :ref:`Identify Settings <identify_toolbar>`.
   Available information for each related feature include:
 
-  * the name of the relation
+  * the name of the relation and the linked layer
   * the entry in the referenced or referencing field, identifying the feature
+  * the activated actions
   * the list of attribute fields and values
 
   You can expand related features to explore connected records

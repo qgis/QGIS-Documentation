@@ -1166,6 +1166,7 @@ To use the |identify|:guilabel:`Identify features` tool:
 #. Select the raster layer in the Layers panel.
 #. Click on the :guilabel:`Identify features` tool in the toolbar or press :kbd:`Ctrl+Shift+I`.
 #. Click on the point in the raster layer that you want to identify.
+   The pixel will get highlighted.
 
 The Identify Results panel will open in its default ``Tree`` view
 and display information about the clicked point.
