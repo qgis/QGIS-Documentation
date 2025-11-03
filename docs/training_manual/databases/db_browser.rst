@@ -19,9 +19,9 @@ interface.
 
 * Start a new empty map in QGIS.
 * Open the Browser by clicking the :guilabel:`Browser` tab at the bottom of the
-  *Layer Panel*
+  :guilabel:`Layer Panel`
 * Open the PostgreSQL portion of the tree and you should find your previously
-  configured connection available (you may need to click the Refresh button at
+  configured connection available (you may need to click the :guilabel:`Refresh` button at
   the top of the browser window).
 
 .. figure:: img/browser_panel.png
@@ -57,7 +57,7 @@ by using queries that we learned about in previous sections.
   :guilabel:`postgis_demo` connection.
 * Expand the :guilabel:`public schema` and you should find the three tables we were
   working with previously.
-* Click the :kbd:`lines` layer to select it, but instead of adding it, click
+* Click the ``lines`` layer to select it, but instead of adding it, click
   the :guilabel:`Set Filter` button to bring up the :guilabel:`Query Builder`
   dialog. 
 * Construct the following expression using the buttons or by entering it
@@ -70,7 +70,7 @@ by using queries that we learned about in previous sections.
 
 * Click :guilabel:`OK` to complete editing the filter and click :guilabel:`Add`
   to add the filtered layer to your map.
-* Rename the :kbd:`lines` layer in the tree to :kbd:`roads_primary`.
+* Rename the ``lines`` layer in the tree to ``roads_primary``.
 
 You will notice that only the Primary Roads have been added to your map rather
 than the entire layer.

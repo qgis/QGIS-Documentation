@@ -7,7 +7,7 @@ Use R scripts in Processing
 Module contributed by Matteo Ghetta - funded by
 `Scuola Superiore Sant'Anna <https://www.santannapisa.it/it>`_
 
-Processing (with the ``Processing R Provider`` plugin) makes it possible to write
+Processing (with the :guilabel:`Processing R Provider` plugin) makes it possible to write
 and run R scripts inside QGIS.
 
 .. warning::
@@ -25,13 +25,13 @@ Adding scripts
 
 Adding a script is simple.
 The easiest way is to open the Processing toolbox and choose
-:menuselection:`Create new R script...` from the R menu (labelled with an
+:guilabel:`Create new R script...` from the R menu (labelled with an
 R icon) at the top of the Processing Toolbox.
 You can also create the script in for instance a text editor and save it in
 your R scripts folder (:file:`processing/rscripts`).
 When it has been saved there, it will be available for editing by
 right-clicking on the script name in the processing toolbox and then choose
-:menuselection:`Edit Script...`).
+:guilabel:`Edit Script...`).
 
 .. figure:: img/r_intro/r_intro_1.png
 
@@ -39,7 +39,7 @@ right-clicking on the script name in the processing toolbox and then choose
    If you cannot see R in Processing, you have to activate it in
    :menuselection:`Processing --> Options --> Providers`
 
-It opens a *script editor window* in which you have to specify some parameters
+It opens a :guilabel:`R Script Editor` in which you have to specify some parameters
 before you can add the script body.
 
 .. figure:: img/r_intro/r_intro_2.png
@@ -143,10 +143,10 @@ script:
 
 You can now fill the parameters required in the Processing algorithm window:
 
-* for **Layer** choose *sample_points*
-* for the **X** field choose *value*
+* for **Layer** choose ``sample_points``
+* for the **X** field choose ``value``
 
-Click on **Run**.
+Click on :guilabel:`Run`.
 
 .. figure:: img/r_intro/r_intro_6.png
 
