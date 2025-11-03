@@ -1085,6 +1085,7 @@ From bottom to top:
   and the formatting of the results; it can be set as:
 
   * **Tree**: this is the default view, and returns the results in a tree-structure
+    where the first item is the name of the layer and its children are its identified element(s).
   * **Table**: available only for raster-based layers, it allows to display the results
     as a table whose columns are ``Layer``, ``FID``, ``Attribute`` and ``Value``
   * or **Graph**: available only for raster-based layers
@@ -1109,13 +1110,23 @@ From bottom to top:
     to identify features from.
     If only a single feature is under the mouse, then the results are automatically displayed.
 
+* In the upper part, the information widget: when you identify a data in the map canvas,
+  this is the place where the :guilabel:`Identify Results` dialog will list details
+  about the clicked (or hovered over, depending on the tool in use) items.
+  Their formatting relies on the :ref:`selected view <identify_view>`.
+
+  The information displayed by the identify tool will depend on the type
+  of layer you have selected, whether it is:
+
+  * a :ref:`vector layer <identify_features_vector>` (including vector tiles
+    or point cloud data),
+  * a :ref:`raster layer <raster_identify>`,
+  * a :ref:`mesh layer <exploring_mesh>`.
 
 .. _identify_toolbar:
 
-* In the upper part of the :guilabel:`Identify Results` dialog,
-  a frame shows the :ref:`information <identified_information>` returned by features
-  as a table, a graph or a tree, depending on the :ref:`selected view <identify_view>`.
-  When in a tree view, you have a handful of tools above the results:
+* When in a tree view, the upper part also displays a handful of tools
+  above the results:
 
   * |formView| :sup:`Open Form` of the current feature
   * |expandTree| :sup:`Expand tree`
@@ -1194,74 +1205,6 @@ may greatly improve identification operations:
    uncheck the :guilabel:`Identifiable` column next to a layer
    to avoid it being queried when using the |identify| :sup:`Identify Features` tool.
    This is a handy way to return features from only layers that are of interest to you.
-
-
-.. _`identified_information`:
-
-Feature information
-...................
-
-When you identify a data in the map canvas, the :guilabel:`Identify Results` dialog will list
-information about the items clicked (or hovered over, depending on the tool in use).
-The default view is a tree view in which the first item is the name of the layer
-and its children are its identified feature(s).
-Each feature is described by the name of a field along with its value.
-This field is the one set in :menuselection:`Layer Properties --> Display`.
-All the other information about the feature follows.
-
-The feature information displayed by the identify tool will depend on the type 
-of layer you have selected, whether it is a vector layer (including vector tiles 
-or point cloud data) or raster layer. If your layer is raster, clicking on a location
-on the map canvas with identify tool will highlight the identified raster pixel.
-The Identify Results dialog can be customized to display custom fields, but by
-default it will display the following information:
-
-.. index:: Actions
-
-* The feature :ref:`display name <maptips>`;
-* **Actions**: Actions can be added to the identify feature windows.
-  The action is run by clicking on the action label. By default, only one action
-  is added, namely ``View feature form`` for editing. You can define more actions
-  in the layer's properties dialog (see :ref:`actions_menu`).
-* **Derived**: This information is calculated or derived from other information.
-  It includes:
-
-  * general information about the feature's geometry:
-
-    * depending on the geometry type, the cartesian measurements of length,
-      perimeter or area in the layer's CRS units.
-      For 3D line vectors the cartesian line length is available.
-    * depending on the geometry type and if an ellipsoid is set in the project
-      properties dialog for :guilabel:`Measurements`, the ellipsoidal values of
-      length, perimeter or area using the specified units
-    * the count of geometry parts in the feature and the number of the part
-      clicked
-    * the count of vertices in the feature
-  * coordinate information, using the project properties :guilabel:`Coordinates
-    display` settings:
-
-    * ``X`` and ``Y`` coordinate values of the point clicked
-    * the number of the closest vertex to the point clicked
-    * ``X`` and ``Y`` coordinate values of the
-      closest vertex (and ``Z``/``M`` if applicable)
-    * if you click on a curved segment,
-      the radius of that section is also displayed.
-    * if both the vector layer and the project have vertical datums set and they differ,
-      the ``Z`` value will be displayed for both datums.
-
-* **Data attributes**: This is the list of attribute fields and values for the
-  feature that has been clicked.
-* information about the related child feature if you defined a :ref:`relation <vector_relations>`:
-
-  * the name of the relation
-  * the entry in reference field, e.g. the name of the related child feature
-  * **Actions**: lists actions defined in the layer's properties dialog (see :ref:`actions_menu`)
-    and the default action is ``View feature form``.
-  * **Data attributes**: This is the list of attributes fields and values of the
-    related child feature.
-
-.. note:: Links in the feature's attributes are clickable from the :guilabel:`Identify
-   Results` panel and will open in your default web browser.
 
 
 Results contextual menu
