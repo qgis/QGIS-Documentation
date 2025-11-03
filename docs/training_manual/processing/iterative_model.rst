@@ -26,7 +26,7 @@ directory.
 
 We can make this example more complex by extending the model and computing some slope
 statistics.
-Add the *Slope* algorithm to the model, and then the *Raster statistics* algorithm,
+Add the :guilabel:`Slope` algorithm to the model, and then the :guilabel:`Raster statistics` algorithm,
 which should use the slope output as its only input.
 
 .. figure:: img/iterative_model/model2.png

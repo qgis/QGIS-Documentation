@@ -21,7 +21,7 @@ productivity can be improved.
 
 The first thing to do is to clean--up the layer, since it contains redundant
 points. These are caused by the movement of the harvester, in places where it
-has to do a turn or it changes its speed for some reason. The *Points filter*
+has to do a turn or it changes its speed for some reason. The :guilabel:`Points filter`
 algorithm will be useful for this. We will use it twice, to remove points that
 can be considered outliers both in the upper and lower part of the distribution.
 
@@ -40,11 +40,11 @@ The final filter layer, with a reduced set of points, should look similar to
 the original one, but it contains a smaller number of points. You can check
 that by comparing their attribute tables.
 
-Now let's rasterize the layer using the *Rasterize* algorithm.
+Now let's rasterize the layer using the :guilabel:`Rasterize` algorithm.
 
 .. figure:: img/interpolation/rasterize.png
 
-The *Filtered points* layer refers to the resulting one of the second filter.
+The ``Filtered points`` layer refers to the resulting one of the second filter.
 It has the same name as the one produced by the first filter, since the name
 is assigned by the algorithm, but you should not use the first one. Since we
 will not be using it for anything else, you can safely remove it from your
@@ -57,7 +57,7 @@ The resulting raster layer looks like this.
 It is already a raster layer, but it is missing data in some of its cells.
 It only contain valid values in those cells that contained a point from the
 vector layer that we have just rasterized, and a no--data value in all the
-other ones. To fill the missing values, we can use the *Close gaps* algorithm.
+other ones. To fill the missing values, we can use the :guilabel:`Close gaps` algorithm.
 
 .. figure:: img/interpolation/close_gaps.png
 
@@ -71,7 +71,7 @@ yield was measured, we can clip the raster layer with the provided limits layer.
 .. figure:: img/interpolation/clip.png
 
 And for a smoother result (less accurate but better for rendering in the
-background as a support layer), we can apply a *Gaussian filter* to the layer.
+background as a support layer), we can apply a :guilabel:`Gaussian filter` to the layer.
 
 .. figure:: img/interpolation/gaussian.png
 
