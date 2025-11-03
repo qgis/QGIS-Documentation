@@ -98,9 +98,9 @@ We now need to save the resulting data to use during your
 course. We'll be using ESRI Shapefile, GeoPackage and SpatiaLite formats
 depending on the data.
 
-To convert the :guilabel:`place` temporary layer to another format:
+To convert the ``place`` temporary layer to another format:
 
-#. Click the |indicatorMemory| icon next to the :guilabel:`place` layer
+#. Click the |indicatorMemory| icon next to the ``place`` layer
    to open the :guilabel:`Save Scratch Layer` dialog.
 
    .. note:: If you need to change any of the temporary layer's properties (CRS, extent,
@@ -117,8 +117,8 @@ To convert the :guilabel:`place` temporary layer to another format:
 
 #. Press :guilabel:`OK`
 
-   In the :guilabel:`Layers` panel, the temporary :guilabel:`place` layer is
-   replaced with the saved :guilabel:`places` shapefile layer and
+   In the :guilabel:`Layers` panel, the temporary ``place`` layer is
+   replaced with the saved ``places`` shapefile layer and
    the temporary icon next to it removed.
 #. Double-click the layer to open its :menuselection:`Layer Properties -->
    Source` tab and update the :guilabel:`Layer name` property to match the file
@@ -133,10 +133,10 @@ To convert the :guilabel:`place` temporary layer to another format:
    Each resulting data set should be saved in the :file:`exercise_data/shapefile/`
    directory.
 
-The next step is to create a GeoPackage file from the :guilabel:`building` layer
+The next step is to create a GeoPackage file from the ``building`` layer
 to use during the course:
 
-#. Click the |indicatorMemory| icon next to the :guilabel:`building` layer
+#. Click the |indicatorMemory| icon next to the ``building`` layer
 #. Select the :guilabel:`GeoPackage` format
 #. Save the file as :file:`training_data.gpkg` under the :file:`exercise_data/`
    folder
@@ -148,12 +148,12 @@ to use during the course:
 
 #. Press :guilabel:`OK`
 #. Rename the layer in its properties dialog
-#. Repeat the process with the :guilabel:`highway` layer, saving it as ``roads`` in
+#. Repeat the process with the ``highway`` layer, saving it as ``roads`` in
    the same GeoPackage database.
 
 The last step is to save the remaining temporary file as a SpatiaLite file.
 
-#. Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer
+#. Click the |indicatorMemory| icon next to the ``landuse`` layer
 #. Select the :guilabel:`SpatiaLite` format
 #. Save the file as :file:`landuse.sqlite` under the :file:`exercise_data/`
    folder. By default, the :guilabel:`Layer name` is filled as the file name.
