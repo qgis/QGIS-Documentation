@@ -20,7 +20,7 @@ based on an error layer from the :ref:`qgischeckgeometrymissingvertex` algorithm
 .. figure:: img/fix_geometry_missing_vertices.png
    :align: center
 
-   Before and after adding missing vertices along polygon borders.
+   Fixing missing vertices along polygon borders.
 
 
 Parameters
@@ -168,7 +168,7 @@ Converts multipart geometries that consists of only one geometry into singlepart
 based on an error layer from the :ref:`qgischeckgeometrymultipart` algorithm.
 Layer geometry type will not be changed and will remain multipart.
 
-.. seealso:: :ref:`qgischeckgeometrymultipart`, :ref:`qgispromotetomulti`
+.. seealso:: :ref:`qgispromotetomulti`
 
 Parameters
 ..........
@@ -293,9 +293,10 @@ Python code
 Delete duplicated vertices
 --------------------------
 
-Deletes duplicated vertices from the input geometries, based on errors reported by the :ref:`qgischeckgeometryduplicatenodes` algorithm.
+Deletes duplicated vertices from the input geometries,
+based on errors reported by the :ref:`qgischeckgeometryduplicatenodes` algorithm.
 
-.. seealso:: :ref:`qgischeckgeometryduplicatenodes`, :ref:`qgisremoveduplicatevertices`
+.. seealso:: :ref:`qgisremoveduplicatevertices`
 
 Parameters
 ..........
@@ -448,7 +449,7 @@ Deletes error features based on an error layer from some check geometry algorith
 .. figure:: img/fix_geometry_deletefeatures.png
    :align: center
 
-   Before and after deleting features inside a polygon.
+   Deleting features inside a polygon.
 
 .. seealso:: :ref:`qgisdeleteduplicategeometries`, :ref:`qgisdropgeometries`
 
@@ -559,9 +560,7 @@ Deletes overlapping areas based on an error layer from the :ref:`qgischeckgeomet
 .. figure:: img/fix_geometry_deleteoverlaps.png
    :align: center
 
-   Before and after deleting overlapping areas.
-
-.. seealso:: :ref:`qgischeckgeometryoverlap`
+   Deleting overlapping areas.
 
 Parameters
 ..........
@@ -709,8 +708,6 @@ the duplicate vertex is deleted to keep a single vertex and preserve topology.
    :align: center
 
    Fixing reported errors on a line feature for angles lower than 15°.
-
-.. seealso:: :ref:`qgischeckgeometryangle`
 
 Parameters
 ..........
@@ -860,9 +857,7 @@ Three different fixing methods are available.
 .. figure:: img/fix_geometry_gap.png
    :align: center
 
-   Before and after fixing gaps in polygon features using ``Add to largest neighbouring area`` method.
-
-.. seealso:: :ref:`qgischeckgeometrygap`
+   Fixing gap between polygon features using the ``Add to largest neighbouring area`` method.
 
 Parameters
 ..........
@@ -1017,9 +1012,9 @@ Deletes holes in polygon geometries based on an error layer from the
 .. figure:: img/fix_geometry_holes.png
    :align: center
 
-   Before and after fixing holes in a polygon feature.
+   Deleting holes in a polygon feature.
 
-.. seealso:: :ref:`qgischeckgeometryhole`, :ref:`qgisdeleteholes`
+.. seealso:: :ref:`qgisdeleteholes`
 
 Parameters
 ..........
@@ -1168,9 +1163,8 @@ Splits self-intersecting geometries based on an error layer from the
 .. figure:: img/fix_geometry_splitselfintersectinggeometries.png
    :align: center
 
-   Comparison between input layer, multi-object fix, and single-object fix geometries.
-
-.. seealso:: :ref:`qgischeckgeometryselfintersections`
+   Fixing self-intersection using various methods:
+   as multi-part (middle), and multiple single-part geometries (right).
 
 Parameters
 ..........
@@ -1201,9 +1195,9 @@ Basic parameters
 
      - Method to apply to the self-intersecting geometries:
 
-       * 0 -- ``Split feature into a multi-object feature``:
+       * 0 -- ``Split feature into a multi-part feature``:
          splits the self-intersecting geometry into multiple parts stored in a single multipart feature.
-       * 1 -- ``Split feature into multiple single-object features``:
+       * 1 -- ``Split feature into multiple single-part features``:
          splits the self-intersecting geometry into multiple parts, each part stored in a separate feature.
    * - **Field of original feature unique identifier**
      - ``UNIQUE_ID``
