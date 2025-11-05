@@ -59,7 +59,7 @@ Show Subsections Indicator
 --------------------------
 
 It is possible to highlight the position of the vertices of the curve on the Elevation Profile.
-Select the :guilabel:`Show Subsections Indicator` to display vertical lines at the distances of the vertices.
+Select the |checkbox| :guilabel:`Show Subsections Indicator` to display vertical lines at the distances of the vertices.
 Use the :guilabel:`Lines` drop-down list to set the symbol, color, opacity and width of the Subsections Indicator lines.
 
 Chart ranges
