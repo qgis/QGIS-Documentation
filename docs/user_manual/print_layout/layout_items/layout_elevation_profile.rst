@@ -56,7 +56,7 @@ Profile curve
   Only point features are currently returned.
 
 Show Subsections Indicator
-------------
+--------------------------
 
 It is possible to highlight the position of the vertices of the curve on the Elevation Profile.
 Select the :guilabel:`Show Subsections Indicator` to display vertical lines at the distances of the vertices.
