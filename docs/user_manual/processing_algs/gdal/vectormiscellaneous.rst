@@ -968,7 +968,9 @@ list of relations and field domains, and many more.
 This algorithm is derived from the
 `GDAL ogrinfo utility <https://gdal.org/en/latest/programs/ogrinfo.html>`_.
 
-**Requires version of GDAL >= 3.7**
+
+.. attention:: Running this algorithm requires QGIS installed with GDAL_ >= 3.7
+   (see :menuselection:`Help --> About` menu).
 
 Parameters
 ..........
@@ -1069,3 +1071,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _GDAL: https://gdal.org/en/stable/index.html

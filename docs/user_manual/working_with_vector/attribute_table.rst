@@ -101,7 +101,7 @@ following functionality:
    "|actionRun|", "Actions", "Lists the actions related to the layer"
 
 
-.. note:: Depending on the format of the data and the GDAL library built with
+.. attention:: Depending on the format of the data and the GDAL library built with
    your QGIS version, some tools may not be available.
 
 Below these buttons is the Quick Field Calculation bar (enabled only in
