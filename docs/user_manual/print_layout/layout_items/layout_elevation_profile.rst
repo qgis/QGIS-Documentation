@@ -103,6 +103,8 @@ in which the elevation profile plot is actually displayed:
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |copyProfileSettings| image:: /static/common/mActionCopyProfileSettings.png
    :width: 1.5em
 .. |elevationProfile| image:: /static/common/mActionElevationProfile.png
