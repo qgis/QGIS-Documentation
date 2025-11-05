@@ -203,7 +203,7 @@ To create a profile view, you can:
 
    * set the :guilabel:`Tolerance` value. This value is used to create a flat buffer around the elevation profile line, 
      visible in the main map canvas. Any visible feature (point, line, polygon, etc.) overlapping that buffer will be captured in the plot canvas.
-   * select the :guilabel:`Show Subsections Indicator` checkbox to display vertical lines at the distance of the vertices of the profile curve. 
+   * select the |checkbox| :guilabel:`Show Subsections Indicator` to display vertical lines at the distance of the vertices of the profile curve. 
      This highlights the position of the vertices of the curve on the Elevation Profile.
    * select the :guilabel:`Subsections Symbology` to set the color, opacity, width and style of the Subsections Indicator lines.
 
