@@ -294,7 +294,7 @@ The Identity-cert authentication method allows you to connect using a client ide
    Identity-cert authentication configs
 
 MapTiler HmacSha256 Authentication
-.................................
+..................................
 
 The MapTiler HmacSha256 authentication method is used to connect to MapTiler services that require HMAC-SHA256 authorization.
 
