@@ -1268,24 +1268,36 @@ Results contextual menu
 .......................
 
 Other functions can be found in the context menu of the identified item.
-For example, from the context menu you can:
+For example, depending on the layer type, you can:
 
-* View the feature form
-* Zoom to feature
-* Copy feature: Copy all feature geometry and attributes
-* Toggle feature selection: Add identified feature to selection
-* Copy attribute value: Copy only the value of the attribute that you click on
-* Copy feature attributes: Copy the attributes of the feature
-* Select features by attribute value: Select all features in the layer
-  that match the selected attribute
-* Clear result: Remove results in the window
-* Clear highlights: Remove features highlighted on the map
-* Highlight all
-* Highlight layer
-* Activate layer: Choose a layer to be activated
-* Layer properties: Open layer properties window
-* Expand all
-* Collapse all
+* interact with the individual identified item:
+
+  * :guilabel:`View feature form` or :guilabel:`Edit feature form`, for vector layers
+  * :guilabel:`Zoom to feature`: Zooms the map canvas to the extent
+    of the identified feature or pixel
+  * :guilabel:`Identify feature`: Restarts and recenters the search results on
+    a :ref:`referenced or referencing vector feature <vector_relations>` of the identified feature.
+    Only available if |checkbox| :guilabel:`Show Relations` is checked in Identify Settings.
+  * :guilabel:`Copy feature`: Copies the vector geometry and attributes, or the pixel geometry
+  * :guilabel:`Toggle feature selection`: Adds or removes identified feature to/from the selection
+  * :guilabel:`Copy attribute value`: Copies the value in the :guilabel:`Value` column
+    of the tree item you click on
+  * :guilabel:`Copy feature attributes`: Copies the attribute names and values of the identified item
+  * :guilabel:`Select features by attribute value`: Selects all vector features in the layer
+    that match the selected attribute value
+
+* control the rendering of the layers, the results panel or the map canvas:
+
+  * :guilabel:`Clear result`: Removes results in the window
+  * :guilabel:`Clear highlights`: Removes items highlighted on the map
+  * :guilabel:`Highlight all`: Highlights in the map canvas all the items identified
+    in the results dialog, regardless of their layer
+  * :guilabel:`Highlight layer`: Highlights in the map canvas all the items identified
+    in the layer of the selected entry
+  * :guilabel:`Activate layer`: Selects the layer of the identified item
+    in the :guilabel:`Layers` panel
+  * :guilabel:`Layer properties`: Opens the layer properties window of the identified item
+  * :guilabel:`Expand all` or :guilabel:`Collapse all` the results tree
 
 
 .. index:: Save properties, Save style, QML, SLD
