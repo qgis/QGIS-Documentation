@@ -353,21 +353,21 @@ The Planetary Computer authentication method allows QGIS to access Microsoft Pla
 
 * Open Planetary Computer - uses SAS tokens to sign assets for access.
   
- .. _figure_authmethod_openplanetary:
+.. _figure_authmethod_openplanetary:
 
- .. figure:: img/auth_method_openplanetary.png
-    :align: center
+.. figure:: img/auth_method_openplanetary.png
+   :align: center
 
-    Microsoft Planetary Computer - Open Planetary Computer authentication configs
+   Microsoft Planetary Computer - Open Planetary Computer authentication configs
 
-* Pro GeoCatalogs - requires SAS signing plus OAuth2 authentication.
+* Planetary Pro Computer - requires SAS signing plus OAuth2 authentication.
 
- .. _figure_authmethod_planetarypro:
+.. _figure_authmethod_planetarypro:
 
- .. figure:: img/auth_method_planetarypro.png
-    :align: center
+.. figure:: img/auth_method_planetarypro.png
+   :align: center
 
-    Microsoft Planetary Computer - Planetary Computer Pro authentication configs
+   Microsoft Planetary Computer - Planetary Computer Pro authentication configs
 
 This method can be applied to STAC connections or directly to individual GDAL or point cloud layers. 
 When a layer is added, the authentication configuration is appended to its URI so QGIS uses it for network requests. 
