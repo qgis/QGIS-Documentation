@@ -3167,8 +3167,10 @@ Parameters
        * 1 --- ``Structure``: first makes all rings valid and then merges shells
          and subtracts holes from shells to generate valid result.
          Assumes that holes and shells are correctly categorized.
-         Requires QGIS version built with GEOS 3.10 or later
-         (check :menuselection:`Help --> About` menu).
+
+         .. attention:: Using this method requires QGIS installed with GEOS_ >= 3.10
+          (see :menuselection:`Help --> About` menu).
+
    * - **Fixed geometries**
      - ``OUTPUT``
      - [same as input]
@@ -7400,6 +7402,10 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _GEOS: https://libgeos.org/
+.. _SFCGAL: https://sfcgal.gitlab.io/SFCGAL/
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

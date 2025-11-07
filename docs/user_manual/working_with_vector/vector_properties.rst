@@ -1441,9 +1441,8 @@ from another layer.
    * :guilabel:`Push labels away from other labels`:
      prevents labels being placed too close to labels from a different layer.
 
-   .. attention:: Because the last three require a build based on GEOS >= 3.10,
-    they may not be available on your QGIS installation depending on the underlying
-    GEOS version in use.
+   .. attention:: The last three options are only available on QGIS installed
+      with GEOS_ >= 3.10 (see :menuselection:`Help --> About` menu).
 
 #. Fill the properties at your will; you can provide a more meaningful name to the rule.
 #. Press :guilabel:`OK`.
@@ -4031,6 +4030,9 @@ To do so:
    * |zoomToLayer| :guilabel:`Zoom to problem`
 
 #. Pick the usual :ref:`digitizing tools <editingvector>` to fix the issue.
+
+
+.. _GEOS: https://libgeos.org/
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

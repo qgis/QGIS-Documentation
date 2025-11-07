@@ -885,8 +885,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
 * :guilabel:`Validate geometries`. Editing complex lines and polygons with many
   nodes can result in very slow rendering. This is because the default
   validation procedures in QGIS can take a lot of time. To speed up rendering, it
-  is possible to select GEOS geometry validation (starting from GEOS 3.3) or to
-  switch it off. GEOS geometry validation is much faster, but the disadvantage
+  is possible to select GEOS geometry validation or to switch it off.
+  GEOS geometry validation is much faster, but the disadvantage
   is that only the first geometry problem will be reported.
 
   Note that depending on the selection, reports of geometry errors may differ

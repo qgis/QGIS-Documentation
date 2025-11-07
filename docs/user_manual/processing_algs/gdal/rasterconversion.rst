@@ -45,7 +45,11 @@ Parameters
      - [numeric: integer]
 
        Default: Not set
-     - Input pixel value to treat as "NoData" (GDAL >= 3.7).
+     - Input pixel value to treat as "NoData"
+
+       .. attention:: Using this parameter requires QGIS installed with GDAL_ >= 3.7
+          (see :menuselection:`Help --> About` menu).
+
    * - **Destination NoData**
 
        Optional
@@ -53,13 +57,21 @@ Parameters
      - [numeric: integer]
 
        Default: Not set
-     - Assign specified "NoData" value to output (GDAL >= 3.7).
+     - Assign specified "NoData" value to output.
+
+       .. attention:: Using this parameter requires QGIS installed with GDAL_ >= 3.7
+          (see :menuselection:`Help --> About` menu).
+
    * - **Do not output NoData values**
      - ``SKIP_NODATA``
      - [boolean]
 
        Default: False
-     - Do not output "NoData" values (GDAL >= 3.3).
+     - Do not output "NoData" values.
+
+       .. attention:: Using this parameter requires QGIS installed with GDAL_ >= 3.3
+          (see :menuselection:`Help --> About` menu).
+
    * - **Output comma-separated values**
      - ``CSV``
      - [boolean]
@@ -621,3 +633,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _GDAL: https://gdal.org/en/stable/index.html
