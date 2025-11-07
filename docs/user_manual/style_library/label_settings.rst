@@ -894,9 +894,8 @@ You can dynamically control :guilabel:`Margin around label` using
 the |dataDefine| :sup:`Data-defined override` button.
 Choose unit from the unit selector, and there you can also :ref:`adjust scaling range <unit_selector>`.
 
-.. attention:: This option requires a build based on GEOS >= 3.10,
-    it may not be available on your QGIS installation depending on the underlying
-    GEOS version in use.
+.. attention:: This option is only available on QGIS installed with GEOS_ >= 3.10
+  (see :menuselection:`Help --> About` menu).
 
 Duplicate Labels
 ^^^^^^^^^^^^^^^^
@@ -907,9 +906,8 @@ When active, it prevents placing labels with the exact same text (case-sensitive
 closer than the minimum distance defined in the :guilabel:`Settings...` option.
 The setting applies across layers, so duplicate text from any layer will be considered.
 
-.. attention:: This option requires a build based on GEOS >= 3.10,
-    it may not be available on your QGIS installation depending on the underlying
-    GEOS version in use.
+.. attention:: This option is only available on QGIS installed with GEOS_ >= 3.10
+  (see :menuselection:`Help --> About` menu).
 
 Geometry Generator
 ^^^^^^^^^^^^^^^^^^
@@ -1129,6 +1127,9 @@ Under :guilabel:`Feature options`:
   to avoid duplicate labels`, rendering a quite airy map in conjunction with
   the :guilabel:`Distance` or :guilabel:`Repeat` options in the :ref:`Placement
   <labels_line_placement>` tab.
+
+
+.. _GEOS: https://libgeos.org/
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
