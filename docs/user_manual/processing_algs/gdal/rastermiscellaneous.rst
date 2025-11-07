@@ -1607,4 +1607,4 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _GDAL: https://gdal.org/en/latest/index.html
+.. _GDAL: https://gdal.org/en/stable/index.html
