@@ -1045,7 +1045,7 @@ msgstr ""
 "nurodytu atstumu. Pavyzdžiui jūs galite nurodyti užrašo slėpimą, kad "
 "nurodytas sluoksnis nebūtų braižomas 2mm atstumu nuo užrašo, bet kito "
 "sluoksnio geoobjektai būtų matomi. Užrašų slėpimas yra panašus į buferius "
-"tuo, kad jie leidžia valdyti kitus geoobjektus degniančių užrašų "
+"tuo, kad jie leidžia valdyti kitus geoobjektus dengiančių užrašų "
 "įskaitomumą. Užrašų buferis braižomas virš po juo esančių geoobjektų, o "
 "užrašų slėpimas atrinktinai išima sluoksnius iš braižymo."
 
@@ -2277,3 +2277,242 @@ msgstr ""
 "(administracinius vienetus, kategorines konvergencijas, ...). Tokiu atveju "
 "neįmanoma išvengti išdėstyti užrašus šių geoobjektų viduje ir vaizdas būna "
 "daug geresnis, jei vengiama juos išdėstyti ant geoobjektų ribų."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:963
+msgid "Rendering tab"
+msgstr "Braižymo kortelė"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:965
+msgid ""
+"In the |render| :guilabel:`Rendering` tab, you can tune when the labels can "
+"be rendered and their interaction with other labels and features."
+msgstr ""
+"Kortelėje |render| :guilabel:`Braižymas` jūs galite nurodyti, kada reikia "
+"braižyti užrašus ir jų sąveiką su kitais užrašais ir geoobjektais."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:969
+msgid "Label options"
+msgstr "Užrašų parinktys"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:971
+msgid "Under :guilabel:`Label options`:"
+msgstr "Skiltyje :guilabel:`Užrašų parinktys`:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:973
+msgid ""
+"You find the :ref:`scale-based <label_scaledepend>` and the :guilabel:`Pixel"
+" size-based` visibility settings."
+msgstr ""
+"Jūs rasite :ref:`nuo mastelio <label_scaledepend>` ir :guilabel:`Pikselio "
+"dydžio` priklausančius matomumo nustatymus."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:976
+msgid ""
+"The :guilabel:`Label z-index` determines the order in which labels are "
+"rendered, as well in relation with other feature labels in the layer (using "
+"data-defined override expression), as with labels from other layers. Labels "
+"with a higher z-index are rendered on top of labels (from any layer) with "
+"lower z-index."
+msgstr ""
+":guilabel:`Užrašo z-indeksas` nurodo užrašų braižymo rikiuotę bei kurie "
+"užrašai braižomi atsižvelgiant į kitus to paties sluoksnio geoobjektų "
+"užrašus (naudojant nuo duomenų priklausančias permušimo išraiškas), bei kitų"
+" sluoksnių užrašus. Užrašai su didesniu z-indeksu braižomi virš kitų (bet "
+"kokio sluoksnio) užrašų su mažesniu z-indeksu."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:981
+msgid ""
+"Additionally, the logic has been tweaked so that if two labels have matching"
+" z-indexes, then:"
+msgstr ""
+"Be to, logika buvo patinkinta taip, kad jei du užrašai turi tokį patį "
+"z-indeksą, tada:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:984
+msgid ""
+"if they are from the same layer, the smaller label will be drawn above the "
+"larger label"
+msgstr ""
+"jei jie yra tame pačiame sluoksnyje, mažesnis užrašas bus braižomas virš "
+"didesnio užrašo"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:986
+msgid ""
+"if they are from different layers, the labels will be drawn in the same "
+"order as their layers themselves (ie respecting the order set in the map "
+"legend)."
+msgstr ""
+"jei jie yra iš skirtingų sluoksnių, užrašai bus braižomi tokia tvarka, kaip "
+"jų sluoksniai (t.y. atsižvelgiant į jų rikiuotą žemėlapio legendoje)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:989
+msgid ""
+"This setting doesn't make labels to be drawn below the features from other "
+"layers, it just controls the order in which labels are drawn on top of all "
+"the layers' features."
+msgstr ""
+"Šis nustatymas nereiškia, kad užrašai braižomi po kitų sluoksnių "
+"geoobjektais, jis tik valdo rikiuotę, kaip užrašai braižomi virš visų "
+"sluoksnių geoobjektų."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:993
+msgid ""
+":guilabel:`Allow inferior fallback placements`: By default QGIS tries to "
+"render labels at their best placement, following your settings. Check this "
+"mode to allow features to fallback to worse placement options when there's "
+"no other choice, e.g. when a line is too short to fit a curved label text "
+"then the label may be placed horizontally just over the feature's center "
+"point."
+msgstr ""
+":guilabel:`Leisti prastas atsargines pozicijas`: Pagal nutylėjimą QGIS "
+"stengiasi braižyti užrašus jų geriausiose pozicijose pagal jūsų nustatymus. "
+"Įjunkite šį režimą, kad leistumėte užrašams atsidurti prastesnėse "
+"pozicijose, kai nėra kito pasirinkimo, pvz. kai linija yra per trumpa, kad "
+"joje tilptų iškreiptas užrašas, kuris turi būti braižomas horizontaliai tik "
+"aplink geoobjekto centrinį tašką."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:999
+msgid ""
+"With data-defined expressions in :guilabel:`Show label` and "
+":guilabel:`Always Show` you can fine tune which labels should be rendered."
+msgstr ""
+"Naudojant nuo duomenų priklausančius nustatymus :guilabel:`Rodyti užrašą` ir"
+" :guilabel:`Visada rodyti`, jūs galite tinkinti, kurie užrašai rodomi."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1001
+msgid ""
+"Allow to :guilabel:`Show upside-down labels`: alternatives are **never**, "
+"**when rotation defined** or **always**."
+msgstr ""
+"Leisti :guilabel:`Rodyti užrašus aukštyn-kojomis`: alternatyvos yra "
+"**niekada**, **kai nurodytas pasukimas** arba **visada**."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1004
+msgid "**never** - default setting, screen readability is prioritized,"
+msgstr ""
+"**niekada** - numatytoji reikšmė, prioritetizuojamas ekrano skaitomumas,"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1006
+msgid ""
+"**when rotation defined** - label rotation should be defined under "
+"|labelplacement| :guilabel:`Placement` tab, within the :guilabel:`Data "
+"Defined` group"
+msgstr ""
+"**kai nurodytas pasukimas** - užrašų pasukimas turi būti nurodytas kortelėje"
+" |labelplacement| :guilabel:`Vieta`, grupėje :guilabel:`Nuo duomenų "
+"priklausantis`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1009
+msgid "**always** - upside-down labels are allowed"
+msgstr "**visada** - leidžiami užrašai aukštyn-kojomis"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1016
+msgid ""
+"Data defined label rotation with show upside-down labels option set to: "
+"\"never\" (left), \"when rotation defined\" (right)"
+msgstr ""
+"Nuo duomenų priklausantis pasukimas su užrašų rodymo aukštyn-kojomis "
+"parinktimi nustatyta: „niekada“ (kairėje), „kai nurodytas pasukimas“ "
+"(dešinėje)"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1018
+msgid ""
+"The :guilabel:`Overlapping labels` group allows you to control whether "
+"overlapping labels are permitted for features in the layer and how each of "
+"them should be handled:"
+msgstr ""
+"Grupė :guilabel:`Persidengiantys užrašai` leidžia jums valdyti, ar "
+"sluoksnyje leidžiami persidengiantys geoobjektų užrašai ir ką reikia daryti "
+"su kiekvienu iš jų:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1022
+msgid ""
+":guilabel:`Never overlap`: never ever place overlapping labels for the "
+"layer, even if it means some labels will be missing"
+msgstr ""
+":guilabel:`Niekada nepersidengia`: niekada neleisti sluoksnio užrašams "
+"persidengti, net jei tai reiškia, kad kai kurių užrašų trūks"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1024
+msgid ""
+":guilabel:`Allow overlaps if required`: if the label can't otherwise be "
+"placed, draw an overlapping label. This mode will cause the label to be "
+"moved to a less ideal placement if possible, e.g. moving the label further "
+"from the center of a line or polygon, IF doing so will avoid overlapping "
+"labels. But if there's no other positions possible, then draw the label "
+"overlapping."
+msgstr ""
+":guilabel:`Leisti persidengimus, jei reikia`: jei nėra kitos galimybės "
+"padėti užrašą, braižyti persidengiantį užrašą. Šiame režime užrašai, jei tik"
+" bus galimybė, bus perkelti į ne tokią idealią poziciją, pvz. užrašas bus "
+"perkeltas toliau nuo linijos ar poligono centro, JEI tai padės išvengti "
+"užrašų persidengimo. Bet jei nėra kitos išeities, tada bus braižomas "
+"persidengiantis užrašas."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1029
+msgid ""
+":guilabel:`Allow overlaps without penalty`: It doesn't matter at all if the "
+"label overlaps other labels or obstacles, that's fine to do and the best "
+"placement (e.g most central placement) should always be used even if an "
+"alternate further placement is possible which avoids overlaps entirely."
+msgstr ""
+":guilabel:`Leisti persidengimą be baudų`: Nesvarbu, ar užrašas dengia kitą "
+"užrašą ar kliūtį, geriausia vieta (pvz. labiausiai centrinė pozicija) turi "
+"būti visada naudojama, net jei yra tolimesnė alternatyvi pozicija, kuri "
+"išvengtų persidengimo."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1034
+msgid ""
+"Allowing both overlapping labels and fallback placements options will "
+"guarantee that all features in the layer are labeled... not necessarily at "
+"their best rendering!"
+msgstr ""
+"Leidus tiek persidengiančius užrašus, tiek atsargines parinktis, bus "
+"garantuota, kad visų geoobjektų užrašai bus nubraižyti... nebūtinai "
+"sukuriant geriausią vaizdą!"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1039
+msgid "Feature options"
+msgstr "Geoobjektų parinktys"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1041
+msgid "Under :guilabel:`Feature options`:"
+msgstr "Skiltyje :guilabel:`Geoobjektų parinktys`:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1043
+msgid ""
+"You can choose to :guilabel:`Label every part of a multi-part features` and "
+":guilabel:`Limit number of features to be labeled to`."
+msgstr ""
+"Jūs galite pasirinkti :guilabel:`Žymėti visas kelių dalių geoobjektų dalis` "
+"ir :guilabel:`Riboti pažymėtų geoobjektų skaičių`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1045
+msgid ""
+"Both line and polygon layers offer the option to set a minimum size for the "
+"features to be labeled, using :guilabel:`Suppress labeling of features "
+"smaller than`."
+msgstr ""
+"Tiek linijų, tiek poligonų sluoksniai leidžia nurodyti minimalų dydį "
+"geoobjekto, kurio užrašas rodomas, naudojant :guilabel:`Nepiešti užrašų "
+"geoobjektams, mažesniems nei`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1048
+msgid ""
+"For polygon features, you can also filter the labels to show according to "
+"whether they completely fit within their feature or not."
+msgstr ""
+"Poligonų geoobjektams jūs taipogi galite filtruoti rodomus užrašus pagal "
+"tai, ar jie pilnai telpa į geoobjektą ar ne."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1050
+msgid ""
+"For line features, you can choose to :guilabel:`Merge connected lines to "
+"avoid duplicate labels`, rendering a quite airy map in conjunction with the "
+":guilabel:`Distance` or :guilabel:`Repeat` options in the :ref:`Placement "
+"<labels_line_placement>` tab."
+msgstr ""
+"Linijų geoobjektams jūs galite pasirinkti :guilabel:`Jungti sujungtas "
+"linijas, kad nebūtų užrašų dublių`, braižant gana erdvų žemėlapį kartu su "
+":guilabel:`Atstumo` ar :guilabel:`Pakartojimo` parinktimis iš kortelės "
+":ref:`Vieta <labels_line_placement>`."
