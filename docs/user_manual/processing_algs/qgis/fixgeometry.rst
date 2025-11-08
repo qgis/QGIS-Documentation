@@ -721,12 +721,12 @@ Fix small polygons
 Merges neighboring polygons according to the chosen method,
 based on an error layer from the :ref:`qgischeckgeometryarea` or :ref:`qgischeckgeometrysliverpolygon` algorithm.
 
-.. figure:: img/fix_geometry_area.png
+.. .. figure:: img/fix_geometry_area.png
    :align: center
 
    Before and after fixing small polygons (method: merge with neighboring polygon with largest area).
 
-.. seealso:: :ref:`qgischeckgeometryarea`, :ref:`qgischeckgeometrysliverpolygon`, :ref:`qgisremovepartsbyarea`
+.. seealso:: :ref:`qgisremovepartsbyarea`
 
 Parameters
 ..........
