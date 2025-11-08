@@ -1164,8 +1164,6 @@ based on an error layer from the :ref:`qgischeckgeometryarea` or :ref:`qgischeck
 
    Before and after fixing small polygons (method: merge with neighboring polygon with largest area).
 
-.. seealso:: :ref:`qgisremovepartsbyarea`
-
 Parameters
 ..........
 
