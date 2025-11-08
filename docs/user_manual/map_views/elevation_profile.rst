@@ -199,9 +199,13 @@ To create a profile view, you can:
       The profile view starts rendering terrain or features of active layers
       crossing the given profile curve, as soon as they have elevation properties configured.
 
-#. Under |options| :sup:`Options` drop-down menu, you can set the :guilabel:`Tolerance` value.
-   This value is used to create a flat buffer around the elevation profile line, visible in the main map canvas.
-   Any visible feature (point, line, polygon, etc.) overlapping that buffer will be captured in the plot canvas.
+#. Under |options| :sup:`Options` drop-down menu, you can:
+
+   * set the :guilabel:`Tolerance` value. This value is used to create a flat buffer around the elevation profile line, 
+     visible in the main map canvas. Any visible feature (point, line, polygon, etc.) overlapping that buffer will be captured in the plot canvas.
+   * select the |checkbox| :guilabel:`Show Subsections Indicator` to display vertical lines at the distance of the vertices of the profile curve. 
+     This highlights the position of the vertices of the curve on the Elevation Profile.
+   * select the :guilabel:`Subsections Symbology` to set the color, opacity, width and style of the Subsections Indicator lines.
 
 .. note:: **Limitations with polygon extrusion**
 
@@ -329,6 +333,8 @@ to export an elevation profile, allowing you to reuse the plots in another softw
    :width: 1.5em
 .. |captureLine| image:: /static/common/mActionCaptureLine.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
