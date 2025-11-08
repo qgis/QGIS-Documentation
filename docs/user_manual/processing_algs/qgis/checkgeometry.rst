@@ -8,6 +8,7 @@ Check Geometry
    .. contents::
       :local:
       :depth: 1
+      :class: toc-columns
 
 
 .. _qgischeckgeometrydangle:
@@ -19,12 +20,10 @@ Detects dangle-end lines in line geometries and reports them as errors.
 A dangle-end line is a line feature that terminates at a vertex connected to only one segment,
 resulting in an endpoint without a proper connection.
 
-
 .. figure:: img/check_geometry_dangleendlines.png
    :align: center
 
-   Errors for dangle-end lines are reported on line features,
-   and entire features with dangling ends are highlighted in red for clarity.
+   Identifying dangle-end features (in red) and vertices (yellow).
 
 Parameters
 ..........
@@ -133,6 +132,127 @@ Python code
 ...........
 
 **Algorithm ID**: ``native:checkgeometrydangle``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgischeckgeometrydegeneratepolygons:
+
+Degenerate polygons
+-------------------
+
+Checks the polygons with less than 3 points, which are degenerate polygons.
+Degenerate polygons are errors.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Degenerate polygons errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the centroid of the degenerate polygons.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Degenerate polygons features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer containing the degenerate polygons.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Degenerate polygons errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the index of the geometry part of the degenerate polygon.
+       - ``gc_ringidx``: the index of the ring of the degenerate polygon.
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the centroid of the degenerate polygon
+       - ``gc_errory``: the y coordinate of the centroid of the degenerate polygon
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that is degenerate.
+   * - **Degenerate polygons features**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output polygon layer with features containing the degenerate polygons.
+       If no degenerate polygon features are found, the output layer will be empty.
+       Available fields are the same as in the ``ERRORS`` output.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrydegeneratepolygon``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -650,7 +770,8 @@ Lines intersecting each other
 Checks intersections between line geometries within a layer.
 Intersections between two different lines are errors.
 
-.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`, :ref:`qgischeckgeometryselfintersections`
+.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`,
+   :ref:`qgischeckgeometryselfintersections`
 
 Parameters
 ..........
@@ -773,7 +894,8 @@ Lines intersecting other layer
 Checks if the input line layer features intersect with the check layer features.
 An input feature that intersects with a check layer feature is an error.
 
-.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`, :ref:`qgischeckgeometryselfintersections`
+.. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`,
+   :ref:`qgischeckgeometryselfintersections`
 
 Parameters
 ..........
@@ -891,6 +1013,135 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgischeckgeometrymissingvertex:
+
+Missing vertices along borders
+------------------------------
+
+Checks for missing vertices along polygon borders.
+To be topologically correct, a vertex at the junction of two polygons
+must be present on both polygons. Missing vertices are errors.
+
+.. figure:: img/check_geometry_missing_vertex.png
+   :align: center
+
+   Reporting errors for missing vertices on polygon features.
+
+.. seealso:: :ref:`qgisfixgeometrymissingvertex`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Missing vertices errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the errors location.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Missing vertices features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Skip output]``
+     - Polygon layer with the features whose vertices are missing.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Missing vertices errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the missing vertex.
+       - ``gc_errory``: the y coordinate of the missing vertex.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that has a missing vertex.
+   * - **Missing vertices features**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output polygon layer with features whose vertices are missing.
+       There will be as many (duplicate) features as there are missing vertices in each geometry.
+       If no vertices are missing, the output layer will be empty.
+       Available fields are the same as in the ``ERRORS`` output.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrymissingvertex``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgischeckgeometryoverlap:
 
@@ -904,7 +1155,7 @@ Calculates overlapping areas in polygon geometries, and reports areas smaller th
 
    Hashed polygons indicate overlapping areas smaller than the specified minimum.
 
-.. seealso:: :ref:`qgisfixgeometryoverlap`
+.. seealso:: :ref:`qgisfixgeometryoverlap`, :ref:`qgiscoveragevalidate`
 
 Parameters
 ..........
@@ -1130,19 +1381,262 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+.. _qgischeckgeometrypointinpolygon:
+
+Points outside polygons
+-----------------------
+
+Checks if points from the input layer are in polygons from the selected polygon layers.
+Points that are not fully inside polygons are errors.
+
+.. figure:: img/check_geometry_point_in_polygon.png
+   :align: center
+
+   Reporting errors on points outside polygons.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Polygon layers**
+     - ``POLYGONS``
+     - [vector: polygon][list]
+     - Layer(s) with the polygons to check against.
+   * - **Points outside polygons errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing points outside the polygons.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points outside polygons errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of point outside the polygons.
+       - ``gc_errory``: the y coordinate of point outside the polygons.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that is outside the polygons.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrypointinpolygon``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgischeckgeometryselfcontact:
+
+Self-contacts
+------------------
+
+Checks if the geometry has self contact points (in line or polygon),
+i.e., a vertex that touches more than two segments of the same ring.
+Self contacts are errors.
+
+.. figure:: img/check_geometry_selfcontact.png
+   :align: center
+
+   Self-intersection vs self-contact.
+
+.. seealso:: :ref:`qgischeckgeometryselfintersections`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Self contact error points**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the errors location.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Self contact features**
+
+       Optional
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Skip output]``
+     - Line or polygon layer containing self-contact features.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Self contact error points**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``: the index of the feature's geometry part where the self-contact occurs.
+       - ``gc_ringidx``: the index of the ring where the self-contact occurs.
+       - ``gc_vertidx``: the index of the vertex where the self-contact occurs.
+       - ``gc_errorx``: the x coordinate of the self-contact.
+       - ``gc_errory``: the y coordinate of the self-contact.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the self-contacting input feature.
+   * - **Self contact features**
+     - ``OUTPUT``
+     - [vector: same as input]
+     - Output polygon or line layer with features containing the self-contact features.
+       If no self-contact features are found, the output layer will be empty.
+       Available fields are the same as in the ``ERRORS`` output.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometryselfcontact``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgischeckgeometryselfintersections:
 
 Self-intersections
 ------------------
 
 Detects self-intersections in line or polygon geometries, and reports them as errors.
+Self-intersections occur when the segments of a geometry cross over each other
+without having a common vertex.
 
 .. figure:: img/check_geometry_selfintersections.png
    :align: center
 
-   Reporting errors on features with self-intersections.
+   Self-intersection vs self-contact.
 
-.. seealso:: :ref:`qgisfixgeometryselfintersection`
+.. seealso:: :ref:`qgisfixgeometryselfintersection`, :ref:`qgischeckgeometryselfcontact`
 
 Parameters
 ..........
@@ -1655,6 +2149,179 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgischeckgeometrygap:
+
+Small gaps
+---------------------
+
+Checks for gaps between polygons in the input layer.
+Gaps with an area smaller than the gap threshold are reported as errors.
+If an allowed gaps layer is provided, the algorithm ignores gaps that fall entirely within polygons from this layer.
+An optional buffer can be applied to the allowed gaps.
+
+.. figure:: img/check_geometry_gap.png
+   :align: center
+
+   Reporting errors on polygon features for gaps smaller than the specified threshold.
+
+.. seealso:: :ref:`qgisfixgeometrygap`, :ref:`qgiscoveragevalidate`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **Gap threshold**
+     - ``GAP_THRESHOLD``
+     - [numeric: double]
+
+       Default: 0.0
+     - Maximum area of gaps to be reported as errors, in map units.
+       If set to 0, all the gaps are reported.
+   * - **Allowed gaps layer**
+
+       Optional
+     - ``ALLOWED_GAPS_LAYER``
+     - [vector: polygon]
+     - Optional layer specifying polygons whose areas should be ignored during the gap check.
+       Gaps that fall entirely within these polygons will not be reported as errors.
+   * - **Allowed gaps buffer**
+
+       Optional
+     - ``ALLOWED_GAPS_BUFFER``
+     - [numeric: double]
+
+       Default: 0.0
+     - Buffer distance to apply to the allowed gaps layer, in selected units.
+       Gaps located within this buffered area are ignored.
+       Allows adding a spatial tolerance around allowed gaps to avoid reporting near-boundary gaps as errors.
+   * - **Neighbors layer**
+     - ``NEIGHBORS``
+     - [vector: table]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output table representing the gap ID and the unique ID of its neighbor features.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **Gap errors**
+
+       Optional
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer containing the centroid points of the gaps.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+   * - **Gap features**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing the gap geometries.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Neighbors layer**
+     - ``NEIGHBORS``
+     - [vector: table]
+     - A 1–N relational table, meaning that one gap can be associated with multiple neighboring polygons.
+       The output table contains the following fields:
+
+       - ``gc_errorid``: the ID of the gap.
+       - ``UNIQUE_ID`` field: the unique ID of an input feature that is a neighbor of the gap.
+   * - **Gap errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the centroid of the gap.
+       - ``gc_errory``: the y coordinate of the centroid of the gap.
+       - ``gc_error``: the area of the gap.
+       - ``gc_errorid``: the ID of the gap.
+   * - **Gap features**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output layer containing the gap geometries.
+       Available fields are the same as in the ``ERRORS`` output.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrygap``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgischeckgeometrysegmentlength:
 
 Small segments
@@ -1783,6 +2450,130 @@ Python code
 ...........
 
 **Algorithm ID**: ``native:checkgeometrysegmentlength``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+
+.. _qgischeckgeometrymultipart:
+
+Strictly multipart
+---------------------
+
+Checks if multipart geometries have more than one part.
+Multipart geometries with only one part are errors.
+
+.. seealso:: :ref:`qgisfixgeometrymultipart`
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: geometry]
+     - Layer with the geometries to check.
+   * - **Unique feature identifier**
+     - ``UNIQUE_ID``
+     - [tablefield: any]
+     - Field storing unique values for feature identification.
+   * - **One-part geometry errors**
+     - ``ERRORS``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer containing centroid of the multipart geometries that have only one part.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+   * - **One-part geometry features**
+
+       Optional
+     - ``OUTPUT``
+     - [vector: same as input]
+
+       Default: ``[Skip output]``
+     - Specification of the output layer for features containing multipart geometries that have only one part.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [numeric: integer]
+
+       Default: 8
+     - Numerical precision of geometric operations, given as an integer n,
+       meaning that two vertices less than 10\ :sup:`-n` apart (in map units)
+       are considered to be merged.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **One-part geometry errors**
+     - ``ERRORS``
+     - [vector: point]
+     - Output point layer representing the error locations and information.
+       The output layer contains the following fields:
+
+       - ``gc_layerid``: the ID of the input layer.
+       - ``gc_layername``: the name of the input layer.
+       - ``gc_partidx``
+       - ``gc_ringidx``
+       - ``gc_vertidx``
+       - ``gc_errorx``: the x coordinate of the centroid of the multipart geometry that has only one part.
+       - ``gc_errory``: the y coordinate of the centroid of the multipart geometry that has only one part.
+       - ``gc_error``
+       - ``UNIQUE_ID`` field: the unique ID of the input feature that is multipart but has only one part.
+   * - **One-part geometry features**
+     - ``OUTPUT``
+     - [vector: same as input]
+     - Output layer containing features that are multipart but have only one part.
+       Available fields are the same as in the ``ERRORS`` output.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:checkgeometrymultipart``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

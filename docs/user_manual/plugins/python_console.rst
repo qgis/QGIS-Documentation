@@ -76,6 +76,7 @@ The Console input area main features are:
   * PyQt5
   * QScintilla2
   * osgeo-gdal-ogr
+  * osgeo-geos
 
 * :kbd:`Ctrl+Alt+Space` to view the auto-completion list if enabled in the
   :ref:`console_options`;
@@ -116,7 +117,7 @@ The Console input area main features are:
       QGIS Rocks
 
       >>> !gdalinfo --version
-      GDAL 3.6.2, released 2023/01/02
+      GDAL 3.10.3, released 2025/04/01
 
       >>> !pip install black
       # Install black python formatter using pip (if available)
@@ -138,44 +139,13 @@ The Console input area main features are:
 The Code Editor
 ===============
 
-Use the |showEditorConsole| :sup:`Show Editor` button to enable the editor
-widget. It allows editing and saving Python files and offers advanced
-functionalities to manage your code (comment and uncomment code, check syntax,
-share the code via GitHub and much more). Main features are:
-
-* Code completion, highlighting syntax and calltips for the following APIs:
-
-  * Python
-  * PyQGIS
-  * PyQt5
-  * QScintilla2
-  * osgeo-gdal-ogr
-
-* :kbd:`Ctrl+Space` to view the auto-completion list.
-* Sharing code snippets via :ref:`GitHub <console_options>`.
-* :kbd:`Ctrl+4` Syntax check.
-* Search bar (open it with the default Desktop Environment shortcut, usually
-  :kbd:`Ctrl+F`):
-
-  * Use the default Desktop Environment shortcut to find next/previous
-    (:kbd:`Ctrl+G` and :kbd:`Shift+Ctrl+G`);
-  * Automatically find first match when typing in find box;
-  * Set initial find string to selection when opening find;
-  * Enable the |searchRegex| :guilabel:`Use Regular Expressions` option in the search bar to use regular expressions
-    instead of plain text matching;
-  * Pressing :kbd:`Esc` closes the find bar.
-
-* Object inspector: a class and function browser;
-* Go to an object definition with a mouse click (from Object inspector);
-* Execute code snippets with the |runConsole| :guilabel:`Run Selected`
-  command in contextual menu;
-* Execute the whole script with the |start| :guilabel:`Run Script`
-  command (this creates a byte-compiled file with the extension :file:`.pyc`).
-
-.. note::
-
- Running partially or totally a script from the :guilabel:`Code Editor`
- outputs the result in the Console output area.
+Use the |showEditorConsole| :sup:`Show Editor` button in the Interactive Console to enable the editor widget.
+It allows editing and saving Python scripts and offers advanced functionalities
+to manage your code.
+Depending on the :ref:`enabled settings <console_options>`,
+it provides various capabilities for easier code writing,
+such as code completion, highlighting syntax and calltips for supported APIs.
+Automatic indentation, parenthesis insertion, code commenting and syntax checking are also available.
 
 .. _figure_python_console_editor:
 
@@ -184,12 +154,96 @@ share the code via GitHub and much more). Main features are:
 
    The Python Console editor
 
+The code editor area allows to simultaneously work on different scripts, each in a specific tab.
+Press |symbologyAdd| :sup:`New editor` to add a new tab.
+You can run partially or totally a script from the :guilabel:`Code Editor`
+and output the result in the Interactive Console output area.
 
-.. tip:: **Save the options**
 
-   To save the state of console's widgets you have to close the Python
-   Console from the close button. This allows you to save the geometry to be
-   restored to the next start.
+.. tip:: Press :kbd:`Ctrl+Space` to view the auto-completion list.
+
+At the top of the dialog, a toolbar provides access to a few commands.
+Right-clicking the editor area provides some more options.
+All available tools are described in the following table.
+
+.. table:: Python Console Editor Tools
+  :widths: 20 60 20
+
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+---------------------------+
+  | Tool name                                             | Function                                                                             | Location                  |
+  +=======================================================+======================================================================================+===========================+
+  | |scriptOpen| :guilabel:`Open script…` (:kbd:`Ctrl+O`) | Loads a Python file in the code editor dialog, as a new tab                          | Toolbar                   |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |showEditorConsole|                                   | Opens a saved Python script in the default external program                          |                           |
+  | :guilabel:`Open in external editor…`                  | set for Python file editing                                                          |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |fileSave| :guilabel:`Save` (:kbd:`Ctrl+S`)           | Saves the current script                                                             |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |fileSaveAs| :guilabel:`Save as…`                     | Saves the current script as a new file                                               |                           |
+  | (:kbd:`Ctrl+Shift+S`)                                 |                                                                                      |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+---------------------------+
+  | |start| :guilabel:`Run script` (:kbd:`Ctrl+Shift+E`)  | Executes the whole script in the Interactive console                                 | Toolbar & Contextual menu |
+  |                                                       | (this creates a byte-compiled file with the extension :file:`.pyc`)                  |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |runSelected| :guilabel:`Run selection`               | Executes in the Interactive console the lines selected in the script                 |                           |
+  | (:kbd:`Ctrl+E`)                                       |                                                                                      |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |editCut| :guilabel:`Cut` (:kbd:`Ctrl+X`)             | Cuts selected text to the clipboard                                                  |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |editCopy| :guilabel:`Copy` (:kbd:`Ctrl+C`)           | Copies selected text to the clipboard                                                |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |editPaste| :guilabel:`Paste` (:kbd:`Ctrl+V`)         | Pastes a cut or copied text                                                          |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |searchEditorConsole| :guilabel:`Find text`           | Allows to search and replace a text in the script.                                   |                           |
+  |                                                       |                                                                                      |                           |
+  |                                                       | * Use the default Desktop Environment shortcut to find next/previous                 |                           |
+  |                                                       |   (:kbd:`Ctrl+G` and :kbd:`Shift+Ctrl+G`);                                           |                           |
+  |                                                       | * Automatically find first match when typing in find box;                            |                           |
+  |                                                       | * Set initial find string to selection when opening find;                            |                           |
+  |                                                       | * Enable the |searchRegex| :guilabel:`Use Regular Expressions` option                |                           |
+  |                                                       |   in the search bar to use regular expressions                                       |                           |
+  |                                                       |   instead of plain text matching;                                                    |                           |
+  |                                                       | * |replace| :sup:`Replace` the matching text with the text in the replace box.       |                           |
+  |                                                       |   When using a regular expression, you can reference captured groups                 |                           |
+  |                                                       |   (e.g. via ``\1``) in the replacement text.                                         |                           |
+  |                                                       |   Use :guilabel:`Replace All` to replace all matches at once.                        |                           |
+  |                                                       | * Pressing :kbd:`Esc` closes the find bar.                                           |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |commentEditorConsole| :guilabel:`Toggle comment`     | Comments out or uncomment selected lines, by adding or removing ``#`` character      |                           |
+  | (:kbd:`Ctrl+:`)                                       | (potentially followed by a space) at the start of the lines.                         |                           |
+  |                                                       | If the selection contains both comments and actual commands,                         |                           |
+  |                                                       | adds ``#`` at the start of each non empty line.                                      |                           |
+  |                                                       | Pressing again the button reverts to the initial state.                              |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |formatCode| :guilabel:`Reformat code`                | Allows to manually apply various formatting rules                                    |                           |
+  | (:kbd:`Ctrl+Alt+F`)                                   | (sort imports, indentation, line length,…) to the code,                              |                           |
+  |                                                       | following :ref:`user-defined settings <python_code_formatting>`.                     |                           |
+  |                                                       | This may require installation of additional Python modules.                          |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |classBrowserConsole| :guilabel:`Object inspector…`   | Shows and hides a dedicated browser with a tree structure                            |                           |
+  |                                                       | for classes and functions available in the script.                                   |                           |
+  |                                                       | Click an item fo a quick access to its definition.                                   |                           |
+  |                                                       | The tool requires an activation from                                                 |                           |
+  |                                                       | the :ref:`Python settings - Run and Debug <python_debugger>`.                        |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+---------------------------+
+  | :guilabel:`Hide editor`                               | Hides the Python code editor block.                                                  | Contextual menu           |
+  |                                                       | To make it visible again, press |showEditorConsole| :sup:`Show editor button`        |                           |
+  |                                                       | from the interactive console toolbar.                                                |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |syntaxErrorConsole| :guilabel:`Check syntax`         | Browses the code and reports syntax errors, such as missing parenthesis,             |                           |
+  | (:kbd:`Ctrl+4`)                                       | colons, wrong indentation,…                                                          |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |undo| :guilabel:`Undo` (:kbd:`Ctrl+Z`)               | Undoes the latest action                                                             |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |redo| :guilabel:`Redo` (:kbd:`Ctrl+Shift+Z`)         | Reverts undone actions to a more recent                                              |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | :guilabel:`Select all` (:kbd:`Ctrl+A`)                | Selects the whole script                                                             |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |codepadConsole| :guilabel:`Share on GitHub`          | Shares the script as a :guilabel:`Secret Gist` or :guilabel:`Public Gist` on GitHub, |                           |
+  |                                                       | provided a :ref:`GitHub access token <github_token>`.                                |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
+  | |options| :guilabel:`Options…`                        | Opens the :ref:`console_options` dialog.                                             |                           |
+  +-------------------------------------------------------+--------------------------------------------------------------------------------------+---------------------------+
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -198,9 +252,27 @@ share the code via GitHub and much more). Main features are:
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |classBrowserConsole| image:: /static/common/iconClassBrowserConsole.png
+   :width: 1.5em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
+.. |codepadConsole| image:: /static/common/iconCodepadConsole.png
+   :width: 1.5em
+.. |commentEditorConsole| image:: /static/common/iconCommentEditorConsole.png
+   :width: 1.5em
 .. |dock| image:: /static/common/dock.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |formatCode| image:: /static/common/iconFormatCode.png
    :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
@@ -208,11 +280,25 @@ share the code via GitHub and much more). Main features are:
    :width: 1em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
-.. |runConsole| image:: /static/common/iconRunConsole.png
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |replace| image:: /static/common/mActionReplace.png
+   :width: 1.5em
+.. |runSelected| image:: /static/common/mActionRunSelected.png
+   :width: 1.5em
+.. |scriptOpen| image:: /static/common/mActionScriptOpen.png
+   :width: 1.5em
+.. |searchEditorConsole| image:: /static/common/iconSearchEditorConsole.png
    :width: 1.5em
 .. |searchRegex| image:: /static/common/mIconSearchRegex.png
    :width: 1.5em
 .. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |syntaxErrorConsole| image:: /static/common/iconSyntaxErrorConsole.png
+   :width: 1.5em
+.. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em

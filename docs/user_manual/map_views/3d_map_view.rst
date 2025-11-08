@@ -86,7 +86,7 @@ The following tools are provided at the top of the 3D map view panel:
 * |shadow| :sup:`Effects` adds visual effects to the 3D rendering,
   such as showing :ref:`shadows <shadows>`, :ref:`eye dome lighting <eye_dome_lighting>`
   or :ref:`ambient occlusion <ambient_occlusion>`.
-* The |options| :sup:`Options` button opens the dialog to configure
+* The |options| :sup:`Configure...` button opens the dialog to configure
   the 3D map view :ref:`settings <scene_configuration>`.
 * |dock| :sup:`Dock 3D Map View`: switch from docked widget to top level window
 
@@ -96,9 +96,8 @@ Scene Configuration
 ===================
 
 The 3D map view opens with some default settings you can customize.
-To do so, expand the |options| :sup:`Options` menu at the top of
-the 3D canvas panel and press the |options| :menuselection:`Configure` button
-to open the :guilabel:`3D configuration` window.
+To do so, press the |options| :sup:`Configure...` button at the top of
+the 3D canvas panel to open the :guilabel:`3D configuration` window.
 
 In the 3D Configuration window there are various options to
 fine-tune the 3D scene:
@@ -362,8 +361,9 @@ Advanced
   the map tile resolution and max. ground error).
 * |unchecked| :guilabel:`Show labels`: Toggles map labels on/off
 * |unchecked| :guilabel:`Show frames per second (FPS)`
-* |unchecked| :guilabel:`Show debug panel`: side panel which displays
-  all debug information about the 3D map view:
+* |unchecked| :guilabel:`Show debug panel`: allows to show or hide a panel
+  next to the 3D map view displaying options to better control map navigation
+  and debug information:
 
   * |unchecked| :guilabel:`Show map tile info`: Include border and tile
     numbers for the terrain tiles (useful for troubleshooting terrain issues)
@@ -392,7 +392,7 @@ Advanced
      * |unchecked| :guilabel:`Looking at X/Y/Z`: sets the target point the camera is looking at
 
 .. note:: When your 3D map view is open in a standalone window, you can
-   use :kbd:`CTRL + SHIFT + d` keyboard shortcut to access the debug panel.
+   use :kbd:`Ctrl+Shift+d` keyboard shortcut to access the debug panel.
 
 .. _`3d_navigation`:
 
@@ -502,11 +502,11 @@ the 3D vector layer.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |dock| image:: /static/common/dock.png
+   :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editCutDisabled| image:: /static/common/mActionEditCutDisabled.png
-   :width: 1.5em
-.. |dock| image:: /static/common/dock.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em

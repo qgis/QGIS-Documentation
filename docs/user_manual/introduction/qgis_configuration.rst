@@ -885,8 +885,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
 * :guilabel:`Validate geometries`. Editing complex lines and polygons with many
   nodes can result in very slow rendering. This is because the default
   validation procedures in QGIS can take a lot of time. To speed up rendering, it
-  is possible to select GEOS geometry validation (starting from GEOS 3.3) or to
-  switch it off. GEOS geometry validation is much faster, but the disadvantage
+  is possible to select GEOS geometry validation or to switch it off.
+  GEOS geometry validation is much faster, but the disadvantage
   is that only the first geometry problem will be reported.
 
   Note that depending on the selection, reports of geometry errors may differ
@@ -1415,6 +1415,8 @@ libraries to enable OpenCL acceleration.
 IDE settings
 ------------
 
+.. _github_token:
+
 Under :guilabel:`GitHub access token`, you can generate a personal token
 allowing you to share code snippets from within the Python code editor.
 More details on `GitHub authentication
@@ -1478,10 +1480,10 @@ It can also be accessed using the |options| :sup:`Options...` button from:
 You can specify:
 
 * |unchecked| :guilabel:`Autocompletion`: Enables code completion. You can get
-  autocompletion from the current document, the installed API files or both.
+  autocompletion from the current document, the :ref:`installed API <used_api>` files or both.
 
   * :guilabel:`Autocompletion threshold`: Sets the threshold for displaying
-    the autocompletion list (in characters)
+    the autocompletion list (in number of characters)
 
 * under :guilabel:`Typing`
 
@@ -1513,6 +1515,8 @@ You can specify:
   The page is opened either in QGIS, as an :guilabel:`Embedded webview (developer tools)`,
   or in the :guilabel:`Default system web browser`.
 
+.. _python_code_formatting:
+
 * under :guilabel:`Formatting`, you can add automated tools to reformat the code you are writing:
 
   * |unchecked| :guilabel:`Reformat on save`: formatting is applied just before saving the script
@@ -1525,6 +1529,8 @@ You can specify:
       <https://pypi.org/project/autopep8/#more-advanced-usage>`_
     * |unchecked| :guilabel:`Normalize quotes`: replaces all single quotes with double quotes if possible
 
+.. _python_debugger:
+
 * under :guilabel:`Run and Debug`
 
   * |unchecked| :guilabel:`Enable Object Inspector (switching between tabs may
@@ -1533,12 +1539,21 @@ You can specify:
     automatically when executed. This action will store a temporary file (in the
     temporary system directory) that will be deleted automatically after running.
 
-For :guilabel:`APIs` you can specify:
+.. _used_api:
+
+Under :guilabel:`APIs`, you can specify which APIs your code should rely on:
 
 * |checkbox| :guilabel:`Using preloaded APIs file`: You can choose if you would
-  like to use the preloaded API files.  If this is not checked you can add API
-  files and you can also choose if you would like to use prepared API files
-  (see next option).
+  like to use the preloaded API files. By default, supported APIs are:
+
+  * Python
+  * PyQGIS
+  * PyQt
+  * QScintilla2
+  * osgeo-gdal-ogr
+  * osgeo-geos
+
+  You can also choose to add specific API files.
 * |unchecked| :guilabel:`Using prepared APIs file`: If checked, the chosen
   ``*.pap`` file will be used for code completion. To generate a prepared API
   file you have to load at least one ``*.api`` file and then compile it by

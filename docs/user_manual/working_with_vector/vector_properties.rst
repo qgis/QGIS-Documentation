@@ -409,6 +409,17 @@ To use categorized symbology for a layer:
    of random colors if you are not satisfied.
 #. Then click on the :guilabel:`Classify` button to create classes from the
    distinct values of the provided field or expression.
+#. For each class, you can edit the :guilabel:`Legend` column
+   to a more meaningful label (used in the :guilabel:`Layers` panel and the print layout).
+
+   .. note:: Keep in mind that some values may use widgets that
+    do not display the actual value stored in the field.
+    For example, a checkbox widget may store ``1`` and ``0`` for checked and unchecked
+    states, while displaying ``True`` and ``False`` labels. In this case,
+    to categorize features based on the checkbox state, you need to use
+    the stored values (``1`` and ``0``) in the expression.
+    QGIS will automatically use the display value for the legend column.
+
 #. :guilabel:`Apply` the changes if the :ref:`live update <layer_styling_panel>`
    is not in use and each feature on the map canvas will be rendered with the
    symbol of its class.
@@ -1430,9 +1441,8 @@ from another layer.
    * :guilabel:`Push labels away from other labels`:
      prevents labels being placed too close to labels from a different layer.
 
-   .. attention:: Because the last three require a build based on GEOS >= 3.10,
-    they may not be available on your QGIS installation depending on the underlying
-    GEOS version in use.
+   .. attention:: The last three options are only available on QGIS installed
+      with GEOS_ >= 3.10 (see :menuselection:`Help --> About` menu).
 
 #. Fill the properties at your will; you can provide a more meaningful name to the rule.
 #. Press :guilabel:`OK`.
@@ -2771,6 +2781,11 @@ with the field type. The available widgets are:
   It is also possible to preview the embedded binary file in the field,
   if combined in a drag-and-drop form with e.g. a :ref:`QML or HTML widget <other_widgets>`.
 * **Checkbox**: Displays a checkbox whose state defines the value to insert.
+  Internally, the widget stores a value (e.g. 1 for checked, 0 for unchecked)
+  while representing it visually as a toggled box. You can configure the
+  stored values for the checked and unchecked states in the representation.
+  It is also possible to display the checkbox state as a plain text using "True"/"False" labels.
+  These settings influence how the values are shown in classification renderers.
 * **Classification**: Only available when a :ref:`categorized symbology
   <categorized_renderer>` is applied to the layer, displays a combo box with
   the values of the classes.
@@ -2836,6 +2851,8 @@ with the field type. The available widgets are:
   is set. It provides direct access to the parent feature's form which in turn
   embeds the list and form of its children. The number of entries in the widget
   can be limited for efficiency, and if limit is not set, all entries will be loaded.
+  The field defined in the display expression is used as representable value in classification
+  renderers.
 * **Text Edit** (default): This opens a text edit field that allows simple
   text or multiple lines to be used. If you choose multiple lines you
   can also choose html content.
@@ -2847,6 +2864,8 @@ with the field type. The available widgets are:
 * **Value Map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
+  The description is used as the representable value,
+  meaning it will be shown in classification renderers.
   
   .. note::
 
@@ -2855,6 +2874,9 @@ with the field type. The available widgets are:
 
 * **Value Relation**: Offers values from a related table in a combobox.
   You can select layer, key column and value column.
+  The key column is the stored value in the attribute table,
+  while the value column is the label shown in the combobox.
+  Value column is also the representable value that will be shown in the classification renderers.
   You may also choose to order the list of displayed values
   by the :guilabel:`Key` column (the default sort order), the :guilabel:`Value` column,
   or a specific :guilabel:`Field` of the layer.
@@ -4019,6 +4041,9 @@ To do so:
    * |zoomToLayer| :guilabel:`Zoom to problem`
 
 #. Pick the usual :ref:`digitizing tools <editingvector>` to fix the issue.
+
+
+.. _GEOS: https://libgeos.org/
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

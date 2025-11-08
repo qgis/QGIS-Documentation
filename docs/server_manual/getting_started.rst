@@ -656,7 +656,7 @@ A simple procedure is the following:
    with the following changes (various other combinations are possible):
 
 
-   .. list-table::
+   .. list-table:: Apache configuration update
       :header-rows: 1
 
       * - Purpose
@@ -723,8 +723,6 @@ A simple procedure is the following:
             # default QGIS project
             SetEnv QGIS_PROJECT_FILE "C:/Users/*Your USERNAME*/qgis_projects/qgis-server-tutorial-data/world.qgs"
 
-
-            
 
 #. Restart the Apache web server
 
@@ -1013,6 +1011,10 @@ WCS capabilities
 
 In the :guilabel:`WCS` tab, you can select the layers that you want to publish as WCS.
 
+If you enter a URL in the :guilabel:`Advertised URL`
+field of the :guilabel:`WCS capabilities` section, QGIS Server will advertise
+this specific URL in the WCS GetCapabilities response.
+
 .. _figure_wcs_definitions:
 
 .. figure:: img/ows_server_wcs.png
@@ -1020,9 +1022,6 @@ In the :guilabel:`WCS` tab, you can select the layers that you want to publish a
 
    Definitions in the WCS tab
 
-If you enter a URL in the :guilabel:`Advertised URL`
-field of the :guilabel:`WCS capabilities` section, QGIS Server will advertise
-this specific URL in the WCS GetCapabilities response.
 
 Fine tuning your OWS
 ----------------------

@@ -200,7 +200,7 @@ greatly increase the amount of storage needed.
 
 Sometimes using a low spatial resolution is useful when you want to work with a
 large area and are not interested in looking at any one area in a lot of detail.
-The cloud maps you see on the weather report, are an example of this –-- it's
+The cloud maps you see on the weather report, are an example of this --- it's
 useful to see the clouds across the whole country. Zooming in to one particular
 cloud in high resolution will not tell you very much about the upcoming weather!
 

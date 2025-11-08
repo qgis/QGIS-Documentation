@@ -19,7 +19,7 @@ of a vector feature describes its **shape** and **position**, while the
 etc.).
 
 In this section we will look more closely at the process of creating and editing
-vector data --– both the geometry and attributes of vector features.
+vector data --- both the geometry and attributes of vector features.
 
 How does GIS digital data get stored?
 =====================================
@@ -35,21 +35,21 @@ on the computer hard disk. There are a number of different file formats for GIS
 data, but the most common one is probably the 'shape file'. The name is a little
 odd in that although we call it a shape file (singular), it actually consists of
 at least three different files that work together to store your digital vector
-data, as shown in table_shapefile_.
+data, as shown in :numref:`table_shapefile`.
 
 .. _table_shapefile:
 
-+--------------+-------------------------------------------------------------------------------------+
-| Extension    | Description                                                                         |
-+==============+=====================================================================================+
-| :file:`.shp` | The geometry of vector features are stored in this file                             |
-+--------------+-------------------------------------------------------------------------------------+
-| :file:`.dbf` | The attributes of vector features are stored in this file                           |
-+--------------+-------------------------------------------------------------------------------------+
-| :file:`.shx` | This file is an index that helps the GIS Application to find features more quickly. |
-+--------------+-------------------------------------------------------------------------------------+
+.. table:: The Basic Files that make up a 'Shapefile'
 
-Table Shapefile 1: The basic files that together make up a 'shapefile'.
+   +--------------+-------------------------------------------------------------------------------------+
+   | Extension    | Description                                                                         |
+   +==============+=====================================================================================+
+   | :file:`.shp` | The geometry of vector features are stored in this file                             |
+   +--------------+-------------------------------------------------------------------------------------+
+   | :file:`.dbf` | The attributes of vector features are stored in this file                           |
+   +--------------+-------------------------------------------------------------------------------------+
+   | :file:`.shx` | This file is an index that helps the GIS Application to find features more quickly. |
+   +--------------+-------------------------------------------------------------------------------------+
 
 When you look at the files that make up a shapefile on the computer hard disk,
 you will see something like :numref:`figure_shapefile`. If you want to share vector data
@@ -133,24 +133,26 @@ specific place.
 
 For the attributes we would want a **field** for each thing that describes the
 sample site. So we may end up with an attribute table that looks something like
-table_river_attributes_.
+:numref:`table_river_attributes`.
 
 .. _table_river_attributes:
 
-+----------+-----+----+----+-----------+-----------+------------+
-| SampleNo | pH  | DO | CB | Turbidity | Collector | Date       |
-+==========+=====+====+====+===========+===========+============+
-| 1        | 7   | 6  | N  | Low       | Patience  | 12/01/2009 |
-+----------+-----+----+----+-----------+-----------+------------+
-| 2        | 6.8 | 5  | Y  | Medium    | Thabo     | 12/01/2009 |
-+----------+-----+----+----+-----------+-----------+------------+
-| 3        | 6.9 | 6  | Y  | High      | Victor    | 12/01/2009 |
-+----------+-----+----+----+-----------+-----------+------------+
+.. table:: River Attributes
 
-Table River Attributes 1: Drawing a table like this before you create your vector
+   +----------+-----+----+----+-----------+-----------+------------+
+   | SampleNo | pH  | DO | CB | Turbidity | Collector | Date       |
+   +==========+=====+====+====+===========+===========+============+
+   | 1        | 7   | 6  | N  | Low       | Patience  | 12/01/2009 |
+   +----------+-----+----+----+-----------+-----------+------------+
+   | 2        | 6.8 | 5  | Y  | Medium    | Thabo     | 12/01/2009 |
+   +----------+-----+----+----+-----------+-----------+------------+
+   | 3        | 6.9 | 6  | Y  | High      | Victor    | 12/01/2009 |
+   +----------+-----+----+----+-----------+-----------+------------+
+
+Drawing a table like :numref:`table_river_attributes` before you create your vector
 layer will let you decide what attribute fields (columns) you will need. Note
 that the geometry (positions where samples were taken) is not shown in the
-attribute table --– the GIS Application stores it separately!
+attribute table --- the GIS Application stores it separately!
 
 Creating an empty shapefile
 ===========================
@@ -177,7 +179,7 @@ Next you will add fields to the attribute table. Normally we give field names th
 are short, have no spaces and indicate what type of information is being stored
 in that field. Example field names may be 'pH', 'RoofColour', 'RoadType' and so
 on. As well as choosing a name for each field, you need to indicate how the
-information should be stored in that field –-- i.e. is it a number, a word or a
+information should be stored in that field --- i.e. is it a number, a word or a
 sentence, or a date?
 
 Computer programs usually call information that is made up of words or sentences
@@ -185,7 +187,7 @@ Computer programs usually call information that is made up of words or sentences
 of a river, you should use 'String' for the field type.
 
 The shapefile format allows you to store the numeric field information as either
-a whole number (**integer**) or a decimal number (**floating point**) –-- so you
+a whole number (**integer**) or a decimal number (**floating point**) --- so you
 need to think before hand whether the numeric data you are going to capture will
 have decimal places or not.
 

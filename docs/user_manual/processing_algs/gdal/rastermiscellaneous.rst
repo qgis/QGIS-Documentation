@@ -913,23 +913,30 @@ Basic parameters
      - [enumeration]
 
        Default: 0
-     - Determines how to handle rasters with different extents. Only available with GDAL 3.3+.
-       `Supported options <https://gdal.org/en/latest/programs/gdal_calc.html#cmdoption-extent>`_ are:
+     - Determines how to handle rasters with different extents.
+       `Supported options <https://gdal.org/en/stable/programs/gdal_calc.html#cmdoption-extent>`_ are:
 
        * 0 --- Ignore
        * 1 --- Fail
        * 2 --- Union
        * 3 --- Intersect
+
+       .. attention:: Using this parameter requires QGIS installed with GDAL_ >= 3.3
+          (see :menuselection:`Help --> About` menu).
+
    * - **Output extent**
 
        Optional
      - ``INPUT``
      - [extent]
-     - Custom extent of the output raster. Only available with GDAL 3.3+.
+     - Custom extent of the output raster.
 
        .. include:: ../algs_include.rst
           :start-after: **extent_options**
           :end-before: **end_extent_options**
+
+       .. attention:: Using this parameter requires QGIS installed with GDAL_ >= 3.3
+          (see :menuselection:`Help --> About` menu).
 
    * - **Output raster type**
      - ``RTYPE``
@@ -1598,3 +1605,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _GDAL: https://gdal.org/en/stable/index.html

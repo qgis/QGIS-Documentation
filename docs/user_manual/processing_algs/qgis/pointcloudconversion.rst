@@ -7,7 +7,8 @@ Point Cloud Conversion
       :local:
       :depth: 1
 
-.. note:: These algorithms are only available if QGIS uses the PDAL library version 2.5.0 or newer.
+.. attention:: Running these algorithms requires QGIS installed with PDAL_ >= 2.5.0
+   (see :menuselection:`Help --> About` menu).
 
 .. _pdalconvertformat:
 
@@ -420,3 +421,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _PDAL: https://pdal.io/en/stable/

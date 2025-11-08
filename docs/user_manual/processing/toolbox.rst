@@ -178,9 +178,17 @@ The parameters found in the table can be of one of the following types.
     to its :guilabel:`Selected features only`.
 * A **table**, to select from a list of all available in QGIS.
   Non-spatial tables are loaded into QGIS like vector layers, and use the :ref:`same widget <vector_widget>`.
+
+.. _raster_widget:
+
 * A **raster layer**, to select from a list of all raster layers available in QGIS.
   The selector contains as well a :guilabel:`...` button on its right-hand side,
   to let you select filenames that represent layers currently not loaded in QGIS.
+
+  The raster input widget also has |options| :sup:`Advanced options` button
+  where you can set the reference scale and service resolution for the WMS request.
+  This ensures that scale-dependent rendering (such as symbology and labeling)
+  is preserved in the output raster.
 
   .. _figure_raster_input:
 
@@ -188,6 +196,11 @@ The parameters found in the table can be of one of the following types.
      :align: center
 
      Raster input widget
+
+  .. attention:: **Advanced WMS Options Availability**
+
+   Currently, this option is only available for :ref:`Clip raster by extent <gdalcliprasterbyextent>`
+   and :ref:`Clip raster by mask layer <gdalcliprasterbymasklayer>` algorithms.
 
 * An **option**, to choose from a selection list of possible options.
 * A **numerical value**, to be introduced in a spin box. In some contexts (when
@@ -199,12 +212,12 @@ The parameters found in the table can be of one of the following types.
   you can select a value derived from any of these variables, such as the cell size
   of a layer or the northernmost coordinate of another one.
 
-.. _figure_number_selector:
+  .. _figure_number_selector:
 
-.. figure:: img/number_selector.png
-   :align: center
+  .. figure:: img/number_selector.png
+     :align: center
 
-   Expression based input
+     Expression based input
 
 * A **range**, with min and max values to be introduced in two text boxes.
 * A **text string**, to be introduced in a text box.
@@ -237,12 +250,12 @@ The parameters found in the table can be of one of the following types.
     rectangle, the dialog will reappear, containing the values in the extent text
     box.
 
-  .. _figure_extent:
+    .. _figure_extent:
 
-  .. figure:: img/extent.png
-     :align: center
+    .. figure:: img/extent.png
+       :align: center
 
-     Extent selector
+       Extent selector
 
 * A **list of elements** (whether raster or vector layers, tables, fields) to
   select from. Click on the :guilabel:`...` button at the left of the option to

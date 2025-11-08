@@ -1419,7 +1419,7 @@ Advanced parameters
 
        Default: Not set
      - If provided, the input geometries are snapped to a grid of the given size,
-       and the result vertices are computed on that same grid. Requires GEOS 3.9.0 or higher.
+       and the result vertices are computed on that same grid.
 
 Outputs
 .......

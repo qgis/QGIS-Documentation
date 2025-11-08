@@ -175,8 +175,6 @@ and :file:`airports` layers in the sample dataset.
 In practice, each airport belongs to exactly one region
 while each region can have any number of airports (a typical one to many relation).
 
-which has a foreign key field (``fk_region``) to the layer regions.
-
 In addition to the attributes describing the airports,
 the aiports layer has another field ``fk_region`` which acts as a foreign key
 (if you have a database, you will probably want to define a constraint on it).
@@ -658,6 +656,8 @@ The example above uses the following database schema:
       CONSTRAINT documents_pkey PRIMARY KEY (fid)
    );
 
+Once relations are established, the :ref:`Identify Features <identify_features_vector>` result panel
+will display related features, allowing you to view associated data directly.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -677,6 +677,8 @@ The example above uses the following database schema:
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.2em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
 .. |joinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png

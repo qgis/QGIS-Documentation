@@ -424,22 +424,21 @@ The 'Digitizing Toolbar' has some specific tools when a GRASS layer is edited:
 
 .. _table_grass_digitizing:
 
-+-------------------------+------------------------+---------------------------------------------+
-| Icon                    | Tool                   | Purpose                                     |
-+=========================+========================+=============================================+
-| |capturePoint|          | New Point              | Digitize new point                          |
-+-------------------------+------------------------+---------------------------------------------+
-| |captureLine|           | New Line               | Digitize new line                           |
-+-------------------------+------------------------+---------------------------------------------+
-| |captureBoundary|       | New Boundary           | Digitize new boundary                       |
-+-------------------------+------------------------+---------------------------------------------+
-| |captureCentroid|       | New Centroid           | Digitize new centroid (label existing area) |
-+-------------------------+------------------------+---------------------------------------------+
-| |capturePolygon|        | New Closed Boundary    | Digitize new closed boundary                |
-+-------------------------+------------------------+---------------------------------------------+
+.. table:: GRASS Digitizing Tools
 
-
-Table GRASS Digitizing: GRASS Digitizing Tools
+   +-------------------------+------------------------+---------------------------------------------+
+   | Icon                    | Tool                   | Purpose                                     |
+   +=========================+========================+=============================================+
+   | |capturePoint|          | New Point              | Digitize new point                          |
+   +-------------------------+------------------------+---------------------------------------------+
+   | |captureLine|           | New Line               | Digitize new line                           |
+   +-------------------------+------------------------+---------------------------------------------+
+   | |captureBoundary|       | New Boundary           | Digitize new boundary                       |
+   +-------------------------+------------------------+---------------------------------------------+
+   | |captureCentroid|       | New Centroid           | Digitize new centroid (label existing area) |
+   +-------------------------+------------------------+---------------------------------------------+
+   | |capturePolygon|        | New Closed Boundary    | Digitize new closed boundary                |
+   +-------------------------+------------------------+---------------------------------------------+
 
 .. tip:: **Digitizing polygons in GRASS**
 
@@ -889,7 +888,7 @@ you select the module.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 3.40
+.. |CURRENT| replace:: 3.44
 .. |captureBoundary| image:: /static/common/mActionCaptureBoundary.png
    :width: 1.5em
 .. |captureCentroid| image:: /static/common/mActionCaptureCentroid.png

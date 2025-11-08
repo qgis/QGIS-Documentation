@@ -85,7 +85,8 @@ Also, some geometries (such as polygons which have too few non-repeated points) 
 If the input dataset is not a valid coverage due to overlaps, it will still be simplified,
 but invalid topology such as crossing edges will still be invalid.
 
-**Requires version of GEOS >= 3.12**
+.. attention:: Running this algorithm requires QGIS installed with GEOS_ >= 3.12
+   (see :menuselection:`Help --> About` menu).
 
 .. seealso:: :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
 
@@ -162,9 +163,11 @@ Analyzes a coverage (represented as a set of polygon features with exactly match
 to find places where the assumption of exactly matching edges is not met.
 Invalidity includes polygons that overlap or that have gaps smaller than the specified gap width.
 
-**Requires version of GEOS >= 3.12**
+.. attention:: Running this algorithm requires QGIS installed with GEOS_ >= 3.12
+   (see :menuselection:`Help --> About` menu).
 
-.. seealso:: :ref:`qgischeckvalidity`
+.. seealso:: :ref:`qgischeckvalidity`, :ref:`qgischeckgeometrygap`,
+   :ref:`qgischeckgeometryoverlap`
 
 Parameters
 ..........
@@ -226,3 +229,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _GEOS: https://libgeos.org/

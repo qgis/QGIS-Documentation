@@ -914,7 +914,7 @@ After setting the attribute, value, and optional filter, digitize a selection us
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
-   :width: 1.5em
+   :width: 1.2em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
@@ -924,8 +924,6 @@ After setting the attribute, value, and optional filter, digitize a selection us
 .. |paletted| image:: /static/common/paletted.png
    :width: 1.5em
 .. |pointCloudExtent| image:: /static/common/pointCloudExtent.png
-   :width: 1.5em
-.. |pointCloudLayer| image:: /static/common/mIconPointCloudLayer.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em

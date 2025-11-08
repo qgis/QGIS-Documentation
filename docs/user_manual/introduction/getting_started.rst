@@ -148,7 +148,7 @@ Where :file:`qgis_sample_data` represents the path to the unzipped dataset.
    #. Click the |setProjection| :sup:`Select projection` button
       in the bottom right of QGIS interface.
       The project properties dialog opens with the :guilabel:`CRS` tab active.
-   #. Type `̀`2964`` in the |search| :guilabel:`Filter` text area.
+   #. Type ``2964`` in the |search| :guilabel:`Filter` text area.
    #. Select the row with ``NAD27 / Alaska Albers`` CRS name.
 
       .. _figure_selectCRS:
