@@ -106,8 +106,12 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
      - Provides access to configuration settings of the profile elevation line.
    * -  :menuselection:`-->` |unchecked| :menuselection:`Lock distance/elevation scales`
      -
-     - Ensures that the horizontal and vertical scales are always kept equal
-       (so that e.g. a 45° slope will appear as a 45° slope in the profile view).
+     - Keeps the current distance and elevation scales fixed when zooming or panning the plot canvas.
+       When unlocked, the ratio is automatically adjusted to fit the full extent of the current profile
+       line and elevation range (similar to “zoom full”), and will change when zooming in/out.
+   * -  :menuselection:`--> Scale Ratio`
+     -
+     - Specifies the ratio of distance to elevation units used for the profile's scale.
    * - :menuselection:`--> Distance units`
      -
      - Allows to render distances in the profile chart with units other than the map canvas units.
@@ -207,11 +211,21 @@ To create a profile view, you can:
      This highlights the position of the vertices of the curve on the Elevation Profile.
    * select the :guilabel:`Subsections Symbology` to set the color, opacity, width and style of the Subsections Indicator lines.
 
-.. note:: **Limitations with polygon extrusion**
+   .. note:: **Limitations with polygon extrusion**
 
-  Geometry extrusion can be set in the |elevationscale| :guilabel:`Elevation` properties of a layer,
-  and rendered in the profile view. When tolerance is enabled, it is however not trivial to render extruded polygons,
-  thus, for now, polygon extrusion is ignored.
+     Geometry extrusion can be set in the |elevationscale| :guilabel:`Elevation` properties of a layer,
+     and rendered in the profile view. When tolerance is enabled, it is however not trivial to render extruded polygons,
+     thus, for now, polygon extrusion is ignored.
+
+
+   You can also specify the ratio of distance to elevation units that is
+   used for the profile's scale. By default, the initial scale is automatically adjusted to
+   fit the entire profile in the viewer (similar to a zoom full view).
+   Setting a scale of 10:1 means that 10 units of distance
+   are equal to 1 unit of elevation, effectively exaggerating the vertical scale. To freeze
+   the distance/elevation scale ratio, check the :guilabel:`Lock Distance/Elevation Scales` option.
+   When this option is enabled, the plot maintains the defined ratio while zooming
+   or navigating within the profile view.
 
 .. _`elevation_profile_interaction`:
 
