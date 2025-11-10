@@ -13,7 +13,7 @@ practical and more interesting ways of doing it as well. We will see all of
 them in this lesson.
 
 First, let's open an algorithm that requires an extent to be defined.
-Open the :guilabel:`Rasterize` algorithm, which creates a raster layer from a vector layer.
+Open the :guilabel:`Rasterize (vector to raster)` algorithm, which creates a raster layer from a vector layer.
 
 .. figure:: img/extents/rasterize.png
 
@@ -68,7 +68,7 @@ layer extent, since it is computed from all of them together.
 
 We will use this last method to execute our rasterization algorithm.
 
-Fill the parameters dialog as shown next, and press :kbd:`OK`.
+Fill the parameters dialog as shown next, and press :guilabel:`OK`.
 
 .. figure:: img/extents/parameters.png
 

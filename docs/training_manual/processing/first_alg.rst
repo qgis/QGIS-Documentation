@@ -37,7 +37,7 @@ activate other providers.
 .. figure:: img/first_alg/toolbox_providers.png
 
 To execute an algorithm, you just have to double-click on its name in the
-toolbox. When you double-click on the :guilabel:`Polygon centroids` algorithm, you will
+toolbox. When you double-click on the :guilabel:`Centroids` algorithm, you will
 see the following dialog.
 
 .. figure:: img/first_alg/centroids.png

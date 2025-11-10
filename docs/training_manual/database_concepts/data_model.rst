@@ -206,7 +206,7 @@ That means your table was created successfully, with a primary key ``streets_pke
 using ``streets.id``.
 
 Note: If you hit return without entering a ``;``, then you will get a prompt like
-this: ``address-#``. This is because PG is expecting you to enter more. Enter
+this: ``address-#``. This is because PostgreSQL is expecting you to enter more. Enter
 ``;`` to run your command.
 
 To view your table schema, you can do this:
@@ -374,7 +374,7 @@ Which results in:
 Dropping Tables in SQL
 -------------------------------------------------------------------------------
 
-If you want to get rid of a table you can use the ``drop`` command:
+If you want to get rid of a table you can use the ``DROP`` command:
 
 .. code-block:: sql
 
