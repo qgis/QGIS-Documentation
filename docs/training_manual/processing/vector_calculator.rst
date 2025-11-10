@@ -4,7 +4,7 @@ Vector calculator
 
 .. note:: In this lesson we will see how to add new attributes to a vector layer based on a mathematical expression, using the vector calculator.
 
-We already know how to use the raster calculator to create new raster layers using mathematical expressions. A similar algorithm is available for vector layers, and generates a new layer with the same attributes of the input layer, plus an additional one with the result of the expression entered. The algorithm is called *Field calculator* and has the following parameters dialog.
+We already know how to use the raster calculator to create new raster layers using mathematical expressions. A similar algorithm is available for vector layers, and generates a new layer with the same attributes of the input layer, plus an additional one with the result of the expression entered. The algorithm is called :guilabel:`Field calculator` and has the following parameters dialog.
 
 .. figure:: img/vector_calculator/field_calculator.png
 
@@ -32,7 +32,7 @@ Enter the following formula
 
 	"MALES" / "FEMALES" 
 
-This time the parameters window should look like this before pressing the *OK* button. 
+This time the parameters window should look like this before pressing the :guilabel:`OK` button.
 
 .. figure:: img/vector_calculator/ratio.png
 
@@ -47,6 +47,6 @@ The parameters window should look like this.
 
 .. figure:: img/vector_calculator/predominance.png
 
-A python field calculator is available in the *Advanced Python field calculator*, which will not be detailed here
+A python field calculator is available in the :guilabel:`Advanced Python field calculator`, which will not be detailed here
 
 .. figure:: img/vector_calculator/advanced.png

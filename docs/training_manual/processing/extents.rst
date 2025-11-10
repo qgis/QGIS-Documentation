@@ -13,7 +13,7 @@ practical and more interesting ways of doing it as well. We will see all of
 them in this lesson.
 
 First, let's open an algorithm that requires an extent to be defined.
-Open the *Rasterize* algorithm, which creates a raster layer from a vector layer.
+Open the :guilabel:`Rasterize (vector to raster)` algorithm, which creates a raster layer from a vector layer.
 
 .. figure:: img/extents/rasterize.png
 
@@ -39,7 +39,7 @@ side of the extent text box.
 
 Let's see what each one of them does.
 
-The first option is *Use layer/canvas extent*, which will show the selection
+The first option is :guilabel:`Use layer/canvas extent`, which will show the selection
 dialog shown below.
 
 .. figure:: img/extents/layer.png
@@ -48,7 +48,7 @@ Here you can select the extent of the canvas (the extent covered by the current 
 or the extension any of the available layers. Select it and click on *OK*,
 and the text box will be automatically filled with the corresponding values.
 
-The second option is *Select extent on canvas*. In this case, the algorithm
+The second option is :guilabel:`Select extent on canvas`. In this case, the algorithm
 dialog disappears and you can click and drag on the QGIS canvas to define
 the desired extent. 
 
@@ -57,23 +57,23 @@ the desired extent.
 Once you release the mouse button, the dialog will reappear and the text box
 will already have the values corresponding to the defined extent.
 
-The last option is *Use min covering extent from input layers*, which is the
+The last option is :guilabel:`Use min covering extent from input layers`, which is the
 default option. This will compute the min covering extent of all layers used
 to run the algorithm, and there is no need to enter any value in the text box.
 In the case of a single input layer, as in the algorithm we are running,
 the same extent can be obtained by selecting that same input layer in the
-*Use layer/canvas extent* that we already saw. However, when there are several
+:guilabel:`Use layer/canvas extent` that we already saw. However, when there are several
 input layers, the min covering extent does not correspond to any of the input
 layer extent, since it is computed from all of them together.
 
 We will use this last method to execute our rasterization algorithm.
 
-Fill the parameters dialog as shown next, and press *OK*.
+Fill the parameters dialog as shown next, and press :guilabel:`OK`.
 
 .. figure:: img/extents/parameters.png
 
-.. note:: In this case, better use an *Integer (1 byte)* instead of a
- *Floating point (4 byte)*, since the *NAME* is an integer with maximum
+.. note:: In this case, better use an ``Integer (1 byte)`` instead of a
+ ``Floating point (4 byte)``, since the ``NAME`` is an integer with maximum
  value=64. This will result in a smaller file size and faster computations.
 
 You will get a rasterized layer that covers exactly the area covered by the
@@ -81,7 +81,7 @@ original vector layer.
 
 .. figure:: img/extents/result.png
 
-In some cases, the last option, *Use min covering extent from input layers*,
+In some cases, the last option, :guilabel:`Use min covering extent from input layers`,
 might not be available. This will happen in those algorithm that do not have
 input layers, but just parameters of other types. In that case, you will have
 to enter the value manually or use any of the other options.

@@ -21,12 +21,12 @@ some general rules about how they are handled by geoalgorithms when creating a n
   graticule algorithm)
 
 Open the project corresponding to this lesson and you will see two layers named
-23030 and 4326. They both contain the same points, but in different CRSs
-(EPSG:23030 and EPSG:4326). They appear in the same place because QGIS is
-reprojecting on the fly to the project CRS (EPSG:4326), but they are not
+``23030`` and ``4326``. They both contain the same points, but in different CRSs
+(``EPSG:23030`` and ``EPSG:4326``). They appear in the same place because QGIS is
+reprojecting on the fly to the project CRS (``EPSG:4326``), but they are not
 actually the same layer.
 
-Open the *Export/Add geometry columns* algorithm.
+Open the :guilabel:`Add geometry attributes` algorithm.
 
 .. figure:: img/crs/add_geom.png
 
@@ -43,7 +43,7 @@ Select the 4326 layer.
 The other parameter of the algorithm allows to set how the algorithm uses
 coordinates to calculate the new value that it will add to the resulting
 layers. Most algorithms do not have an option like that, and just use the
-coordinates directly. Select the *Layer CRS* option to just use coordinates
+coordinates directly. Select the :guilabel:`Layer CRS` option to just use coordinates
 as they are. This is how almost all geoalgorithms work.
 
 You should get a new layer with exactly the same points as the other two layers.
@@ -94,7 +94,7 @@ An interesting module that deals with CRS's is the reprojection one.
 It represents a particular case, since it has an input layer (the one to reproject),
 but it will not use its CRS for the output one.
 
-Open the *Reproject layer* algorithm.
+Open the :guilabel:`Reproject layer` algorithm.
 
 .. figure:: img/crs/reprojection.png
 
@@ -102,7 +102,6 @@ Select any of the layers as input, and select EPSG:23029 as the destination CRS.
 Run the algorithm and you will get a new layer, identical to the input one,
 but with a different CRS. It will appear on the same region of the canvas,
 like the other ones, since QGIS will reproject it on the fly, but its original
-coordinates are different. You can see that by running the *Export/Add geometry
-columns* algorithm using this new layer as input, and veryfing that the added
+coordinates are different. You can see that by running the :guilabel:`Add geometry attributes` algorithm using this new layer as input, and verifying that the added
 coordinates are different to the ones in the attribute tables of both of the
 two layers that we had computed before.
