@@ -339,6 +339,9 @@ algorithm <processing_algs>`.
   Each of these commands opens the :guilabel:`Save Vector Layer as` dialog
   described in the :ref:`general_saveas` section and the saved file
   replaces the temporary one in the :guilabel:`Layers` panel.
+  If the saved file name is different from the original one in the :guilabel:`Layers` panel,
+  a message bar will pop up, and you can click the :guilabel:`Rename layer in layers panel` button
+  to homogenize the naming.
 
 .. index:: Save layer
 .. _general_saveas:
