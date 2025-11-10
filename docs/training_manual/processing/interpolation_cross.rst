@@ -17,7 +17,7 @@ That will select 90% of the points in the layer to rasterize
 
 The selection is random, so your selection might differ from the selection shown in the above image.
 
-Now run the :guilabel:`Rasterize` algorithm to get the first raster layer, and then run the :guilabel:`Close gaps` algorithm to fill the no--data cells [Cell resolution: 100 m].
+Now run the :guilabel:`Rasterize` algorithm to get the first raster layer, and then run the :guilabel:`Close gaps` algorithm to fill the no-data cells [Cell resolution: 100 m].
 
 .. figure:: img/interpolation_cross/filled.png
 
