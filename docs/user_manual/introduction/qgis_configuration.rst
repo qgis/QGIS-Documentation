@@ -1912,6 +1912,8 @@ the project map canvas. You can:
   yet the actual area of interest for the project is a smaller geographic area.
   The project full extent coordinates can be set with the :ref:`extent selector
   <extent_selector>` widget.
+  If you want to save the main canvas extent so that the project always opens with it,
+  check |unchecked|:guilabel:`Use as an extent from the main canvas when opening the project`.
 
 CRS Properties
 --------------
