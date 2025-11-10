@@ -1767,7 +1767,7 @@ A maximum area can be set for limiting the checks to polygons of a lower area.
 Polygons having a thinness higher than the maximum thinness are errors.
 To fix sliver polygons, use the :ref:`qgisfixgeometryarea` algorithm.
 
-.. .. figure:: img/check_geometry_sliver_polygon.png
+.. figure:: img/check_geometry_sliver_polygon.png
    :align: center
 
    Reporting errors on features with sliver polygons.
@@ -2022,7 +2022,7 @@ Small polygons
 
 Detects polygon features whose area is below a specified value as errors.
 
-.. .. figure:: img/check_geometry_area.png
+.. figure:: img/check_geometry_area.png
    :align: center
 
    Reporting errors on features with small polygons (below given area threshold).
