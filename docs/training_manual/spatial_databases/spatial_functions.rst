@@ -94,7 +94,7 @@ already connected to the ``address`` database, do so now. Then run:
 
   \df *point*
 
-This is the command we're looking for: :kbd:`st_pointfromtext`.  To page through
+This is the command we're looking for: ``st_pointfromtext``.  To page through
 the list, use the down arrow, then press :kbd:`Q` to quit back to the psql shell.
 
 Try running this command:
@@ -115,7 +115,7 @@ Result:
 Three things to note:
 
 * We defined a point at position 1,1 (EPSG:4326 is assumed) using
-  :kbd:`POINT(1 1)`,
+  ``POINT(1 1)``,
 * We ran an sql statement, but not on any table, just on data entered from the
   SQL prompt,
 * The resulting row does not make much sense.
@@ -146,9 +146,9 @@ Result:
     POINT(1 1)
     (1 row)
 
-Here, we entered the string :kbd:`POINT(1,1)`, turned it
-into a point using :kbd:`st_pointfromtext()`, and turned it back into a
-human-readable form with :kbd:`st_astext()`, which gave us back our original
+Here, we entered the string ``POINT(1,1)``, turned it
+into a point using ``st_pointfromtext()``, and turned it back into a
+human-readable form with ``st_astext()``, which gave us back our original
 string.
 
 One last example before we really get into the detail of using PostGIS:
@@ -218,7 +218,7 @@ Result:
   AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]
   proj4text | +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
 
-The :kbd:`srtext` is the projection definition in well known text (you may recognise
+The ``srtext`` is the projection definition in well known text (you may recognise
 this from .prj files in your shapefile collection).
 
 In Conclusion

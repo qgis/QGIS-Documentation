@@ -14,14 +14,14 @@ entities directly in PostgreSQL.
 Creating Linestrings
 -------------------------------------------------------------------------------
 
-Going back to our :kbd:`address` database, let's get our streets table matching
+Going back to our ``address`` database, let's get our streets table matching
 the others; i.e., having a constraint on the geometry, an index and an entry in
-the geometry_columns table.
+the ``geometry_columns`` table.
 
 Try Yourself: :abbr:`★★☆ (Moderate level)`
 -------------------------------------------------------------------------------
 
-* Modify the :kbd:`streets` table so that it has a geometry column of type
+* Modify the ``streets`` table so that it has a geometry column of type
   ST_LineString.
 * Don't forget to do the accompanying update to the geometry columns
   table!
@@ -175,7 +175,7 @@ Your updated people schema should look something like this:
 
   then it means that while experimenting with creating polygons for the
   cities table, you must have deleted some of them and started over. Just
-  check the entries in your cities table and use any :guilabel:`id` which exists.
+  check the entries in your cities table and use any ``id`` which exists.
 
 
 
@@ -261,7 +261,7 @@ Access Sub-Objects
 
 With the SFS-Model functions, you have a wide variety of options to access
 sub-objects of SFS Geometries. When you want to select the first vertex point of
-every polygon geometry in the table myPolygonTable, you have to do this in this
+every polygon geometry in the table ``myPolygonTable``, you have to do this in this
 way:
 
 * Transform the polygon boundary to a linestring:
@@ -314,7 +314,7 @@ Building Geometries from Other Geometries
 -------------------------------------------------------------------------------
 
 From a given point table, you want to generate a linestring. The order of the
-points is defined by their :kbd:`id`. Another ordering method could be a
+points is defined by their ``id``. Another ordering method could be a
 timestamp, such as the one you get when you capture waypoints with a GPS
 receiver.
 
@@ -358,8 +358,8 @@ use the PostgreSQL keyword ``EXCEPT``:
   except
   select * from table_b;
 
-As the result, you will get all records from table_a which are not stored in
-table_b.
+As the result, you will get all records from ``table_a`` which are not stored in
+``table_b``.
 
 Tablespaces
 -------------------------------------------------------------------------------

@@ -6,23 +6,23 @@ More algorithms and data types
 
 For this lessons we will need a table and a polygons layer. We are going to create a points layer based on coordinates in the table, and then count the number of points in each polygon. If you open the QGIS project corresponding to this lesson, you will find a table with X and Y coordinates, but you will find no polygons layer. Don't worry, we will create it using a processing geoalgorithm.
 
-The first thing we are going to do is to create a points layer from the coordinates in the table, using the *Points layer from table* algorithm. You now know how to use the search box, so it should not be hard for you to find it. Double--click on it to run it and get to its following dialog.
+The first thing we are going to do is to create a points layer from the coordinates in the table, using the :guilabel:`Create points layer from table` algorithm. You now know how to use the search box, so it should not be hard for you to find it. Double-click on it to run it and get to its following dialog.
 
 This algorithm, like the one from the previous lesson, just generates a single output, and it has three inputs:
 
 - *Table*: the table with the coordinates. You should select here the table from the lesson data.
-- *X and Y fields*: these two parameters are linked to the first one. The corresponding selector will show the name of those fields that are available in the selected table. Select the *XCOORD* field for the *X* parameter, and the *YYCOORD* field for the *Y* parameter.
+- *X and Y fields*: these two parameters are linked to the first one. The corresponding selector will show the name of those fields that are available in the selected table. Select the ``XCOORD`` field for the *X* parameter, and the ``YYCOORD`` field for the *Y* parameter.
 - *CRS*: Since this algorithm takes no input layers, it cannot assign a CRS to the output layer based on them. Instead, it asks you to manually select the CRS that the coordinates in the table use. Click on the button on the left--hand side to open the QGIS CRS selector, and select EPSG:4326 as the output CRS. We are using this CRS because the coordinates in the table are in that CRS.
 
 Your dialog should look like this.
 
 .. figure:: img/second_alg/points_from_table.png
 
-Now press the *Run* button to get the following layer (you may need to zoom full to reenter the map around the newly created points):
+Now press the :guilabel:`Run` button to get the following layer (you may need to zoom full to reenter the map around the newly created points):
 
 .. figure:: img/second_alg/points.png
 
-The next thing we need is the polygon layer. We are going to create a regular grid of polygons using the *Create grid* algorithm, which has the following parameters dialog.
+The next thing we need is the polygon layer. We are going to create a regular grid of polygons using the :guilabel:`Create grid` algorithm, which has the following parameters dialog.
 
 .. figure:: img/second_alg/graticule_dialog.png
 
@@ -36,7 +36,7 @@ The dialog contains a simple calculator, so you can type expressions such as ``1
 
 In this case, we want to create a grid that covers the extent of the input points layer, so we should use its coordinates to calculate the center coordinate of the grid and its width and height, since those are the parameters that the algorithm takes to create the grid. With a little bit of math, try to do that yourself using the calculator dialog and the constants from the input points layer. 
 
-Select *Rectangles (polygons)* in the *Type* field.
+Select :guilabel:`Rectangles (polygons)` in the :guilabel:`Grid type` field.
 
 As in the case of the last algorithm, we have to enter the CRS here as well. Select EPSG:4326 as the target CRS, as we did before.
 
@@ -44,14 +44,14 @@ In the end, you should have a parameters dialog like this:
 
 .. figure:: img/second_alg/graticule_parameters.png
 
-(Better add one spacing on the width and height: Horizontal spacing: 0.0001, Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: -5.695674, Center Y: 40.2477955)
+(Better add one spacing on the width and height: :guilabel:`Horizontal spacing`: ``0.0001``, :guilabel:`Vertical spacing`: ``0.0001``, :guilabel:`Width`: ``0.001004``, :guilabel:`Height`: ``0.000651``, :guilabel:`Center X`: ``-5.695674``, :guilabel:`Center Y`: ``40.2477955``)
 The case of X center is a bit tricky, see: -5.696126+(( -5.695222+ 5.696126)/2)
 
-Press *Run* and you will get the graticule layer.
+Press :guilabel:`Run` and you will get the graticule layer.
 
 .. figure:: img/second_alg/graticule.png
 
-The last step is to count the points in each one of the rectangles of that graticule. We will use the *Count points in polygons* algorithm.
+The last step is to count the points in each one of the rectangles of that graticule. We will use the :guilabel:`Count points in polygons` algorithm.
 
 .. figure:: img/second_alg/count_points.png
 
@@ -61,11 +61,11 @@ Before finishing this lesson, here is a quick tip to make your life easier in ca
 
 .. figure:: img/second_alg/config.png
 
-In the *Output folder* entry that you will find in the *General* group, type the path to your destination folder.
+In the :guilabel:`Output folder` entry that you will find in the :guilabel:`General` group, type the path to your destination folder.
 
 .. figure:: img/second_alg/output_folder.png
 
-Now when you run an algorithm, just use the filename instead of the full path. For instance, with the configuration shown above, if you enter ``graticule.shp`` as the output path for the algorithm that we have just used, the result will be saved in ``D:\processing_output\graticule.shp``. You can still enter a full path in case you want a result to be saved in a different folder.
+Now when you run an algorithm, just use the filename instead of the full path. For instance, with the configuration shown above, if you enter :file:`graticule.shp` as the output path for the algorithm that we have just used, the result will be saved in :file:`D:\processing_output\graticule.shp`. You can still enter a full path in case you want a result to be saved in a different folder.
 
 
-Try yourself the *Create grid* algorithm with different grid sizes, and also with different types of grids.
+Try yourself the :guilabel:`Create grid` algorithm with different grid sizes, and also with different types of grids.
