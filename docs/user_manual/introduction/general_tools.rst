@@ -1657,19 +1657,7 @@ variables overwritten by lower level ones are strike through.
    .net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_
    blog posts.
 
-.. _authentication:
 
-Authentication
-==============
-
-QGIS has the facility to store/retrieve authentication credentials in a secure
-manner. Users can securely save credentials into authentication configurations,
-which are stored in a portable database, can be applied to server or database
-connections, and are safely referenced by their ID tokens in project or settings
-files. For more information see :ref:`authentication_index`.
-
-A master password needs to be set up when initializing the authentication
-system and its portable database.
 
 
 .. _common_widgets:
@@ -2283,6 +2271,49 @@ The values presented in the varying size assistant above will set the size
  coalesce(scale_exp("passengers", 9, 2000, 1, 10, 0.57), 0)
 
 
+.. index:: Authentication
+.. _authentication:
+
+Authentication
+--------------
+
+QGIS has the facility to store and retrieve authentication credentials in a secure
+manner. Users can securely save credentials into authentication configurations,
+which are stored in a portable encrypted database. These configurations can be
+applied to server or database connections and are safely referenced by their ID
+tokens in project or settings files. A master password must be set when
+initializing the authentication system and its database.
+For more information, see :ref:`authentication_index`.
+
+Configurations
+...............
+
+The authentication configuration selector allows users to choose from existing
+authentication configurations or create new ones. It provides options to:
+
+* Select an existing authentication configuration from a drop-down list.
+* Create a new authentication configuration using the |symbologyAdd| button or remove 
+  an existing one with the |symbologyRemove| button.
+* Edit the selected authentication configuration using the |projectProperties| button.
+
+Each authentication configuration safely saves your login details in an encrypted
+QGIS database so you can use them again without typing them every time.
+
+Basic
+............
+
+When creating or editing an authentication configuration, the basic tab
+allows you to set:
+
+* :guilabel:`User name`: User name used to connect to the data source.
+* :guilabel:`Password`: Password used to connect to the data source.
+
+:guilabel:`Convert to configuration` will save the user name and password in a new
+authentication configuration.
+
+See also :ref:`create_postgresql_connection`, :ref:`create_oracle_connection`, :ref:`vector_tiles`, :ref:`xyz_tile`, :ref:`arcgis_rest`, and :ref:`3d_tiles`.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -2437,6 +2468,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
+   :width: 1.5em
 .. |qt| image:: /static/common/mIconQt.png
    :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
