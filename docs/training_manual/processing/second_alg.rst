@@ -6,7 +6,7 @@ More algorithms and data types
 
 For this lessons we will need a table and a polygons layer. We are going to create a points layer based on coordinates in the table, and then count the number of points in each polygon. If you open the QGIS project corresponding to this lesson, you will find a table with X and Y coordinates, but you will find no polygons layer. Don't worry, we will create it using a processing geoalgorithm.
 
-The first thing we are going to do is to create a points layer from the coordinates in the table, using the :guilabel:`Points layer from table` algorithm. You now know how to use the search box, so it should not be hard for you to find it. Double--click on it to run it and get to its following dialog.
+The first thing we are going to do is to create a points layer from the coordinates in the table, using the :guilabel:`Create points layer from table` algorithm. You now know how to use the search box, so it should not be hard for you to find it. Double-click on it to run it and get to its following dialog.
 
 This algorithm, like the one from the previous lesson, just generates a single output, and it has three inputs:
 
@@ -61,7 +61,7 @@ Before finishing this lesson, here is a quick tip to make your life easier in ca
 
 .. figure:: img/second_alg/config.png
 
-In the *Output folder* entry that you will find in the :guilabel:`General` group, type the path to your destination folder.
+In the :guilabel:`Output folder` entry that you will find in the :guilabel:`General` group, type the path to your destination folder.
 
 .. figure:: img/second_alg/output_folder.png
 

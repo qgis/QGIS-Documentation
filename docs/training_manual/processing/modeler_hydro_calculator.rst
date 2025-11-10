@@ -41,7 +41,7 @@ Click on :guilabel:`OK` and your model should look like this.
 
 .. figure:: img/modeler_hydro_calculator/calculator_output.png
 
-We are not using the numeric input that we added to the model, so it can be removed. Right--click on it and select :guilabel:`Remove`
+We are not using the numeric input that we added to the model, so it can be removed. Right-click on it and select :guilabel:`Remove`
 
 .. warning:: todo: Add image
 

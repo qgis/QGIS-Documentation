@@ -26,7 +26,7 @@ Open the project corresponding to this lesson and you will see two layers named
 reprojecting on the fly to the project CRS (``EPSG:4326``), but they are not
 actually the same layer.
 
-Open the :guilabel:`Export/Add geometry columns` algorithm.
+Open the :guilabel:`Add geometry attributes` algorithm.
 
 .. figure:: img/crs/add_geom.png
 
@@ -102,6 +102,6 @@ Select any of the layers as input, and select EPSG:23029 as the destination CRS.
 Run the algorithm and you will get a new layer, identical to the input one,
 but with a different CRS. It will appear on the same region of the canvas,
 like the other ones, since QGIS will reproject it on the fly, but its original
-coordinates are different. You can see that by running the :guilabel:`Export/Add geometry columns` algorithm using this new layer as input, and verifying that the added
+coordinates are different. You can see that by running the :guilabel:`Add geometry attributes` algorithm using this new layer as input, and verifying that the added
 coordinates are different to the ones in the attribute tables of both of the
 two layers that we had computed before.

@@ -14,7 +14,7 @@ The dataset contains shapefiles with cholera deaths and pump locations, and an O
 
 The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen
 polygons) of the pumps layer, to get the influence zone of each pump.
-The :guilabel:`Voronoi Diagram` algorithm can be used for that.
+The :guilabel:`Voronoi polygons` algorithm can be used for that.
 
 
 .. figure:: img/john_snow/voronoi.png
@@ -25,7 +25,7 @@ Pretty easy, but it will already give us interesting information.
 
 Clearly, most cases are within one of the polygons
 
-To get a more quantitative result, we can count the number of deaths in each polygon. Since each point represents a building where deaths occured, and the number of deaths is stored in an attribute, we cannot just count the points. We need a weighted count, so we will use the :guilabel:`Count points in polygon (weighted)` tool.
+To get a more quantitative result, we can count the number of deaths in each polygon. Since each point represents a building where deaths occured, and the number of deaths is stored in an attribute, we cannot just count the points. We need a weighted count, so we will use the :guilabel:`Count points in polygon` tool.
 
 .. figure:: img/john_snow/pointsinpoly.png
 
@@ -43,7 +43,7 @@ The result looks like this:
 
 Although the number of lines is larger in the case of the central pump, do not forget that this does not represent the number of deaths, but the number of locations where cholera cases were found. It is a representative parameter, but it is not considering that some locations might have more cases than other.
 
-A density layer will also give us a very clear view of what is happening. We can create it with the :guilabel:`Kernel density` algorithm. Using the ``Cholera_deaths`` layer, its ``COUNT`` field as weight field, with a radius of 100, the extent and cellsize of the streets raster layer, we get something like this.
+A density layer will also give us a very clear view of what is happening. We can create it with the :guilabel:`Heatmap (Kernel density estimation)` algorithm. Using the ``Cholera_deaths`` layer, its ``COUNT`` field as weight field, with a radius of 100, the extent and cell size of the streets raster layer, we get something like this.
 
 .. figure:: img/john_snow/density.png
 

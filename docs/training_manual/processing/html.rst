@@ -13,7 +13,7 @@ All this outputs are wrapped in HTML files and displayed in the so--called
 Let's see one of those algorithms to understand how they work.
 
 Open the project with the data to be used in this lesson and then open the
-:guilabel:`Basic statistics for numeric fields` algorithm.
+:guilabel:`Basic statistics for fields` algorithm.
 
 .. figure:: img/html/paramdialog.png
 

@@ -156,8 +156,8 @@ record to be changed:
 
 It should return ``UPDATE 1``.
 
-.. note::  the ``WHERE`` statement criteria are case sensitive ``Main
-   Road`` is not the same as ``Main road``
+.. note:: The ``WHERE`` statement criteria are case sensitive, ``Main
+   Road`` is not the same as ``Main road``.
 
 Delete Data
 -------------------------------------------------------------------------------
