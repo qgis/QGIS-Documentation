@@ -18,8 +18,8 @@ ways this can be done in QGIS. Lets start by looking at the new Browser
 interface.
 
 * Start a new empty map in QGIS.
-* Open the Browser by clicking the :guilabel:`Browser` tab at the bottom of the
-  :guilabel:`Layer Panel`
+* Open the Browser by clicking the :guilabel:`Browser` tab. If you do not see this tab,
+  you can enable it by going to :menuselection:`View --> Panels --> Browser`.
 * Open the PostgreSQL portion of the tree and you should find your previously
   configured connection available (you may need to click the :guilabel:`Refresh` button at
   the top of the browser window).
