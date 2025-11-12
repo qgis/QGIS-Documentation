@@ -767,7 +767,7 @@ the search box is preceded by the :ref:`Execute SQL toolbar <execute_sql_toolbar
 Below, collapsible and sorted date entries list their related queries.
 Each query is identifiable by its SQL command, and when expanded, reveals:
 
-* The :guilabel:`Connexion`: the source of the data the query is based on
+* The :guilabel:`Connection`: the source of the data the query is based on
 * The :guilabel:`Row count`: number of returned features
 * The :guilabel:`Execution time`
 
