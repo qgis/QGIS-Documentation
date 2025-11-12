@@ -2303,17 +2303,19 @@ feature. The assistant allows you to:
     features
   * for size properties, the :guilabel:`Scale method` of representation which can be:
   
-    *  **Flannery** - perceptually corrected scaling for circle symbols; 
-       the scaling uses an exponent of 0.57 to make larger symbols appear proportionally bigger
-       and counter human underestimation of area differences
-    *  **Exponential** - diameter scales according to a user-defined exponent; allows custom control over size progression
-    *  **Surface** - symbol area grows linearly with the source value; 
-       diameter scales with the square root of the value, reflecting human perception of size
-    *  **Radius** - diameter changes linearly between specified “size from” and “size to” values as the source value varies
-    *  **Linear** - symbol diameter grows directly in proportion to the source value
+    * **Flannery** - perceptually corrected scaling for circle symbols; 
+      the scaling uses an exponent of 0.57 to make larger symbols appear proportionally bigger
+      and counter human underestimation of area differences
+    * **Exponential** - diameter scales according to a user-defined exponent; allows custom control over size progression
+    * **Surface** - symbol area grows linearly with the source value; 
+      diameter scales with the square root of the value, reflecting human perception of size
+    * **Radius** - diameter changes linearly between specified “size from” and “size to” values as the source value varies
+    * **Linear** - symbol diameter grows directly in proportion to the source value
+    
     All scale methods are internally converted by QGIS into expressions that calculate 
     the symbol size based on the source values and the chosen scaling method. 
     You can view or modify these expressions in the Expression Builder if needed.
+  
   * the :guilabel:`Exponent` to use for data scaling when the :guilabel:`Scale
     method` is of exponential type or when tweaking the opacity
 
