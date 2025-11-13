@@ -225,7 +225,7 @@ Otherwise
 
 .. testoutput:: cheat_sheet
 
-    layer name you like, type: Vector
+    layer name you like of type Vector
 
 **Find layer by name**
 
