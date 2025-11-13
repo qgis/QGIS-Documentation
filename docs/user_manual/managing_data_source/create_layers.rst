@@ -633,7 +633,9 @@ Creating SQL Query Layers
 Beside loading an entire layer in a project or creating new layers from scratch
 or pasted features, you can also load layers generated on the fly from other layer(s).
 They are the result of a more or less advanced filter using SQL language,
-applied to layers regardless of their data provider or their availability in the active project.
+applied to stored layers regardless of their data provider
+or their availability in the active project.
+This means that temporary layers are not compatible with this feature.
 Depending on the provider, one or more layers can be used to write the query.
 The generated layer remains dependent on the layer(s) involved in the query
 and is loaded with the |indicatorFilter| :sup:`Filter` icon next to it.
@@ -652,9 +654,10 @@ This opens a window with a central text box widget where you can write SQL queri
 
 .. figure:: img/executesqlwindow.png
    :align: center
-   :width: 30 em
 
    Executing SQL queries in the Execute SQL window
+
+.. _execute_sql_toolbar:
 
 At the top of the dialog, a toolbar provides a set of tools
 to create, store and manipulate your queries:
@@ -672,7 +675,7 @@ to create, store and manipulate your queries:
   rely on a regular expression.
   It is then possible to navigate through the found strings, replacing them
   one by one or all in a row.
-* Use |clearConsole| :sup:`Clear` to wipe the text editor.
+* Use |clearConsole| :sup:`Clear SQL Editor` to wipe the text editor.
 * The |queryHistory| :sup:`History` button opens a dialog storing previously
   run queries. More at :ref:`sql_history`.
 * As previously mentioned, queries can be saved as an :file:`.sql` file stored on disk.
@@ -743,30 +746,43 @@ Once ready, press :guilabel:`Update layer` and the layer will be modified in-pla
 Query History
 -------------
 
-The :guilabel:`Query History` dialog is accessible when pressing |queryHistory|
-:sup:`History` button in the :guilabel:`Execute SQL` dialog
-or from the :menuselection:`Database -->` |queryHistory| :guilabel:`Query History...` menu.
-It displays all the previously run queries, sorted by date and provider type,
-that you can preview and reuse.
+The :guilabel:`Query History` dialog displays all the previously run queries,
+sorted by date and data provider type.
+It is accessible from the :menuselection:`Database -->` |queryHistory| :guilabel:`Query History…` menu,
+or pressing the |queryHistory| :sup:`History` button from the :guilabel:`Execute SQL` dialog.
 
 .. _figure_history_sql_queries:
 
 .. figure:: img/executesql_history.png
     :align: center
-    :width: 30 em
 
     History of the executed SQL queries
 
-Hover over an entry and the full query is displayed over, as a tooltip.
-Right-click and you can either:
+
+At the top of the dialog, a search box can be used to filter out the queries.
+The search is done through every strings displayed in the query history.
+If the dialog is opened from within the :guilabel:`Execute SQL` dialog,
+the search box is preceded by the :ref:`Execute SQL toolbar <execute_sql_toolbar>`.
+
+Below, collapsible and sorted date entries list their related queries.
+Each query is identifiable by its SQL command, and when expanded, reveals:
+
+* The :guilabel:`Connection`: the source of the data the query is based on
+* The :guilabel:`Row count`: number of returned features
+* The :guilabel:`Execution time`
+
+Hover over an entry and a tooltip displays the full query.
+Likewise, selecting an entry also displayed it in the bottom part of the dialog.
+You can interact with the text, copying all or part of it.
+
+Double-click the SQL command entry and the :guilabel:`Execute SQL` dialog opens,
+filled with the clicked query. Any query being written is overwritten.
+Right-click the SQL command entry and you can either:
 
 * :guilabel:`Load SQL Command…`, loads the target command
   into the :guilabel:`Execute SQL` dialog, replacing any existing query.
   It is the same as double clicking the entry.
-* :guilabel:`Copy SQL Command` and paste it wherever you want
-
-When a query is selected, the full query is displayed in the lower part of the dialog.
-You can interact with the text, copying all or part of it.
+* :guilabel:`Copy SQL Command` and paste it wherever you want.
 
 
 .. index:: Virtual layers
