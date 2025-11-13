@@ -171,8 +171,8 @@ Python code
 
 .. _pdalclip:
 
-Clip
-----
+Clip point cloud
+----------------
 
 Clips a point cloud layer by a polygon layer
 so that the resulting point cloud contains only points within the polygons.
@@ -332,8 +332,8 @@ Python code
 
 .. _pdalinfo:
 
-Information
------------
+Point cloud information
+-----------------------
 
 Outputs basic metadata from an input point cloud file.
 
@@ -419,8 +419,8 @@ Python code
 
 .. _pdalmerge:
 
-Merge
------
+Merge point cloud
+-----------------
 
 Merges multiple point cloud files into a single one.
 
@@ -511,8 +511,8 @@ Python code
 
 .. _pdalreproject:
 
-Reproject
----------
+Reproject point cloud
+---------------------
 
 Reprojects a point cloud to a different Coordinate Reference System (CRS).
 
@@ -800,8 +800,8 @@ Python code
 
 .. _pdaltile:
 
-Tile
------
+Create tile from point cloud
+----------------------------
 
 Creates tiles from input point cloud files,
 recommended for best performance (in display or analysis) with such datasets in QGIS.
