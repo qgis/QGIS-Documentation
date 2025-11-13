@@ -215,6 +215,14 @@ Otherwise
 
    layers TOC = ['layer name you like']
 
+**Obtain layers type**
+
+.. testcode:: cheat_sheet
+
+    for layer in QgsProject.instance().mapLayers().values():
+        layer_type = "Vector" if layer.type() == 0 else "Raster or other"
+        print(f"{layer.name()}, type: {layer_type}")    
+
 **Find layer by name**
 
 .. testcode:: cheat_sheet
