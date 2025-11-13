@@ -221,7 +221,11 @@ Otherwise
 
     for layer in QgsProject.instance().mapLayers().values():
         layer_type = "Vector" if layer.type() == 0 else "Raster or other"
-        print(f"{layer.name()}, type: {layer_type}")    
+        print(f"{layer.name()} of type {layer_type}")    
+
+.. testoutput:: cheat_sheet
+
+    layer name you like, type: Vector
 
 **Find layer by name**
 
