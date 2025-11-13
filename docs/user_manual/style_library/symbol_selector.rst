@@ -598,6 +598,13 @@ symbol layer types:
     * :guilabel:`No Clipping`: no clipping at all is done - lines will cover
       the whole bounding box of the feature
 
+  .. note::
+     Starting from QGIS 3.24, when exporting maps to vector formats such as PDF or SVG,
+     or when the line symbol in the pattern has data-defined properties,
+     QGIS renders the line pattern fill using a line-by-line vector-based approach.
+     This results in smaller output file sizes, higher quality exports, and
+     improved editability of the pattern lines in external vector graphics applications.
+
 * **Point pattern fill**: fills the polygon with a grid pattern of 
   :ref:`marker symbol <vector_marker_symbols>`. You can set:
 
