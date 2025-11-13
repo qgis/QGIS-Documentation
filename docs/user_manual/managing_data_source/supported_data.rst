@@ -553,6 +553,14 @@ For SpatiaLite data management, you can also use the core plugin
 If you want to create a new SpatiaLite layer, please refer to section
 :ref:`vector_create_spatialite`.
 
+QGIS also adds support for the ``REGEXP`` function in SpatiaLite connections.
+This allows users to use regular expressions in SQL filters or expressions, for example:
+
+.. code-block:: sql
+
+   SELECT * FROM places WHERE name REGEXP '^A';
+
+This returns all features where the ``name`` field starts with the letter A.
 
 
 .. index:: GeoJSON Export
