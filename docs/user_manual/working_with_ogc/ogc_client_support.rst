@@ -343,7 +343,9 @@ You can select several layers at once, but only one image style per layer.
 When several layers are selected, they will be combined at the WMS server
 and transmitted to QGIS in one go, as a single layer.
 The default name is a slash (``/``) separated list of their original title.
-You can however opt to |checkbox| :guilabel:`Load as separate layers`.
+You can however opt to |checkbox| :guilabel:`Load as separate layers`,
+in which case each layer is added to the map canvas using its default name
+from the queried service.
 
 .. note:: **Layer name**
 
@@ -847,7 +849,8 @@ Now we are ready to load WFS layers from the above connection.
       Layers are now added with a default name, which can be renamed later in the :guilabel:`Layers` panel.
 
 
-#. Click :guilabel:`Add` to add the layer to the map.
+#. Click :guilabel:`Add` to add the layer to the map,
+   using its default name from the queried service.
 
 .. _figure_OGC_add_wfs:
 
