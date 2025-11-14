@@ -215,6 +215,17 @@ Otherwise
 
    layers TOC = ['layer name you like']
 
+**Obtain layers type**
+
+.. testcode:: cheat_sheet
+
+    for layer in QgsProject.instance().mapLayers().values():
+        print(f"{layer.name()} of type {layer.type().name}")    
+
+.. testoutput:: cheat_sheet
+
+    layer name you like of type Vector
+
 **Find layer by name**
 
 .. testcode:: cheat_sheet
