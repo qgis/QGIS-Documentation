@@ -874,6 +874,31 @@ layer, it doesn't matter how you design the fields and data types. If you
 want to make sure everything - the feature and its attributes - gets copied,
 make sure the schemas match.
 
+.. note:: **Attribute constraints validation when pasting**
+
+   When you paste features into another layer,
+   QGIS checks the attribute values against the constraints defined
+   in the destination layer (for example, ``NOT NULL``, ``Unique``, or
+   ``Expression constraints``).
+
+   If one or more pasted features contain invalid attribute values that
+   do not meet these constraints, a dialog will
+   appear, listing all affected features and fields.
+
+   You can then either:
+   
+   * Fix the invalid values directly in the dialog before confirming, or
+   * Choose to ignore the constraint on purpose, allowing QGIS to insert
+     those features with null or default values.
+
+   When pasting a single feature, the dialog shows simplified options.
+   For multiple features, all invalid attributes can be reviewed and
+   corrected in bulk.
+
+   This ensures that data integrity rules defined in your layer are
+   respected when copying and pasting between layers.
+
+
 .. _tip_projections_and_pasting:
 
 .. note:: **Congruency of Pasted Features**
