@@ -488,6 +488,16 @@ the 3D vector layer.
 
 .. _`QEasingCurve`: https://doc.qt.io/qt-6/qeasingcurve.html#EasingFunction-typedef).
 
+Rendering annotation layers in 3D map views
+============================================
+
+Text and marker annotations are possible to float above the 3D scene. You can enable this feature
+by selecting the :guilabel:`3D Billboards` option in the layer properties.
+Those layers will always face the camera, making it easier to read them
+when navigating the 3D scene. Lines and polygons annotations are not supported
+in 3D map views. See :ref:`3D view layer properties <annotationslayer_3dview>` for more details.
+
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
