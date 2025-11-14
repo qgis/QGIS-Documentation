@@ -220,8 +220,7 @@ Otherwise
 .. testcode:: cheat_sheet
 
     for layer in QgsProject.instance().mapLayers().values():
-        layer_type = "Vector" if layer.type() == 0 else "Raster or other"
-        print(f"{layer.name()} of type {layer_type}")    
+        print(f"{layer.name()} of type {layer.type().name}")    
 
 .. testoutput:: cheat_sheet
 
