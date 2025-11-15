@@ -11,17 +11,17 @@ Open the modeler and start the model by adding the required inputs. In this case
 
 .. figure:: img/modeler_only/inputs.png
 
-The next step is to compute the extent of the selected features. That's where we can use the model-only tool called *Vector layer bounds*. First, we will have to create a layer that has the extent of those selected features. Then, we can use this tool on that layer.
+The next step is to compute the extent of the selected features. That's where we can use the model-only tool called :guilabel:`Vector layer bounds`. First, we will have to create a layer that has the extent of those selected features. Then, we can use this tool on that layer.
 
-An easy way of creating a layer with the extent of the selected features is to compute a convex hull of the input points layer. It will use only the selected point, so the convex hull will have the same bounding box as the selection. Then we can add the *Vector layer bounds* algorithm, and use the convex hull layer as input. It should look this in the modeler canvas:
+An easy way of creating a layer with the extent of the selected features is to compute a convex hull of the input points layer. It will use only the selected point, so the convex hull will have the same bounding box as the selection. Then we can add the :guilabel:`Vector layer bounds` algorithm, and use the convex hull layer as input. It should look this in the modeler canvas:
 
 .. figure:: img/modeler_only/convexhull_and_extent.png
 
-The result from the *Vector layer bounds* is a set of four numeric values and a extent object. We will use both the numeric outputs and the extent for this exercise.
+The result from the :guilabel:`Vector layer bounds` is a set of four numeric values and a extent object. We will use both the numeric outputs and the extent for this exercise.
 
 .. figure:: img/modeler_only/extent_outputs.png
 
-We can now add the algorithm that rasterizes the vector layer, using the extent from the *Vector layer bounds* algorithm as input.
+We can now add the algorithm that rasterizes the vector layer, using the extent from the :guilabel:`Vector layer bounds` algorithm as input.
 
 Fill the parameters of the algorithm as shown next:
 
@@ -31,7 +31,7 @@ The canvas should now look like.
 
 .. figure:: img/modeler_only/canvas_rasterize.png
 
-Finally, fill the no-data values of the raster layer using the *Close gaps* algorithm.
+Finally, fill the no-data values of the raster layer using the :guilabel:`Close gaps` algorithm.
 
 .. figure:: img/modeler_only/close_gaps.png
 

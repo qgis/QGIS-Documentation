@@ -11,7 +11,7 @@ Interpolation
 The project shows a gradient in rainfall, from south to north.
 Let's use different methods for interpolation, all based on vector ``points.shp``, parameter ``RAIN``:
 
-.. warning:: Set cell size to :kbd:`500` for all analyses.
+.. warning:: Set cell size to ``500`` for all analyses.
 
 - :menuselection:`GRASS --> v.surf.rst`
 - :menuselection:`SAGA --> Multilevel B-Spline Interpolation`
