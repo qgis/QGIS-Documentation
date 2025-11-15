@@ -525,7 +525,7 @@ Putting the layer into edit mode will also allow you to
 |editPaste| :sup:`Paste features from clipboard` (:kbd:`Ctrl+V`)
 |editCut| :sup:`Cut selected rows to clipboard` (:kbd:`Ctrl+X`)
 or |deleteSelectedFeatures| :sup:`Delete selected features`.
-More details at :ref:`editingvector`.
+More details at :ref:`clipboard_feature`.
 
 .. _vector_field_calculator:
 
