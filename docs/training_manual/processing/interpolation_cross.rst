@@ -7,7 +7,7 @@ Interpolation is a common technique, and it can be used to demonstrate several t
 
 The data for this lesson contains also a points layer, in this case with elevation data. We are going to interpolate it much in the same way as we did in the previous lesson, but this time we will save part of the original data to use it for assessing the quality of the interpolation process.
 
-First, we have to rasterize the points layer and fill the resulting no--data cells, but using just a fraction of the points in the layer. We will save 10% of the points for a later check, so we need to have 90% of the points ready for the interpolation. To do so, we could use the *Split shapes layer randomly* algorithm, which we have already used in a previous lesson, but there is a better way to do that, without having to create any new intermediate layer. Instead of that, we can just select the points we want to use for the interpolation (the 90% fraction), and then run the algorithm. As we have already seen, the rasterizing algorithm will use only those selected points and ignore the rest. The selection can be done using the *Random selection* algorithm. Run it with the following parameters.
+First, we have to rasterize the points layer and fill the resulting no--data cells, but using just a fraction of the points in the layer. We will save 10% of the points for a later check, so we need to have 90% of the points ready for the interpolation. To do so, we could use the :guilabel:`Split shapes layer randomly` algorithm, which we have already used in a previous lesson, but there is a better way to do that, without having to create any new intermediate layer. Instead of that, we can just select the points we want to use for the interpolation (the 90% fraction), and then run the algorithm. As we have already seen, the rasterizing algorithm will use only those selected points and ignore the rest. The selection can be done using the :guilabel:`Random selection` algorithm. Run it with the following parameters.
 
 .. figure:: img/interpolation_cross/select.png
 
@@ -17,7 +17,7 @@ That will select 90% of the points in the layer to rasterize
 
 The selection is random, so your selection might differ from the selection shown in the above image.
 
-Now run the *Rasterize* algorithm to get the first raster layer, and then run the *Close gaps* algorithm to fill the no--data cells [Cell resolution: 100 m].
+Now run the :guilabel:`Rasterize` algorithm to get the first raster layer, and then run the :guilabel:`Close gaps` algorithm to fill the no-data cells [Cell resolution: 100 m].
 
 .. figure:: img/interpolation_cross/filled.png
 
@@ -27,17 +27,17 @@ Since we are going to use the points that are not selected, first, let's invert 
 
 .. figure:: img/interpolation_cross/inverted.png
 
-The points contain the original values, but not the interpolated ones. To add them in a new field, we can use the *Add raster values to points* algorithm
+The points contain the original values, but not the interpolated ones. To add them in a new field, we can use the :guilabel:`Add raster values to points` algorithm
 
 .. figure:: img/interpolation_cross/addgridvalues.png
 
-The raster layer to select (the algorithm supports multiple raster, but we just need one) is the resulting one from the interpolation. We have renamed it to *interpolate* and that layer name is the one that will be used for the name of the field to add.
+The raster layer to select (the algorithm supports multiple raster, but we just need one) is the resulting one from the interpolation. We have renamed it to ``interpolate`` and that layer name is the one that will be used for the name of the field to add.
 
 Now we have a vector layer that contains both values, with points that were not used for the interpolation.
 
 .. figure:: img/interpolation_cross/extended_layer.png
 
-Now, we will use the fields calculator for this task. Open the *Field calculator* algorithm and run it with the following parameters.
+Now, we will use the fields calculator for this task. Open the :guilabel:`Field calculator` algorithm and run it with the following parameters.
 
 .. figure:: img/interpolation_cross/fields_calculator.png
 
