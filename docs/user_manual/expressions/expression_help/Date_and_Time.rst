@@ -104,6 +104,7 @@ Extracts the day from a date or datetime.
      - * **date** - a date or datetime value
    * - Examples
      - * ``day('2012-05-12')`` → 12
+       * ``day(now())`` → the current day of the month
 
 
 **Interval variant**
@@ -454,6 +455,7 @@ Extracts the month part from a date or datetime.
      - * **date** - a date or datetime value
    * - Examples
      - * ``month('2012-05-12')`` → 05
+       * ``month(now())`` → the current month
 
 
 **Interval variant**
@@ -717,6 +719,7 @@ Extracts the week number from a date or datetime.
      - * **date** - a date or datetime value
    * - Examples
      - * ``week('2012-05-12')`` → 19
+       * ``week(now())`` → the current week of the year
 
 
 **Interval variant**
@@ -757,6 +760,7 @@ Extracts the year part from a date or datetime.
      - * **date** - a date or datetime value
    * - Examples
      - * ``year('2012-05-12')`` → 2012
+       * ``year(now())`` → the current year
 
 
 **Interval variant**
