@@ -146,6 +146,8 @@ will offer to erase the database.
 
    Password prompt after three invalid attempts
 
+.. _autentication_configurations:
+
 Authentication Configurations
 -----------------------------
 
@@ -220,12 +222,58 @@ QGIS will need to be restarted for the new dropped-in plugin to become
 available to the user. Ensure your plugin is compiled against the same target
 version of QGIS if you intend to add it to an existing target install.
 
+API Header Authentication
+.........................
+The API Header authentication method allows you to connect to services that require custom HTTP headers, such as API keys.
+For example, if a WMS service requires an API key sent as a header (e.g. X-API-KEY), you can use this method to provide it.
+
+To create a new API Header authentication configuration follow steps explained in the
+:ref:`Authentication Configurations <autentication_configurations>` section and select the
+:guilabel:`API Header` method. Enter a :guilabel:`Name` and :guilabel:`Resource` (optional URL resource),
+then add the required headers by clicking the |symbologyAdd| button. Enter the :guilabel:`Header Name` and :guilabel:`Header Value`,
+you can add multiple headers as needed. To remove header, select it and click the |symbologyRemove| button or click
+the :guilabel:`Clear` button to remove all headers.
+Once done, click :guilabel:`Save` to save the configuration.
+
+The saved configuration appears in the list of authentication configurations and can be used with supported connections.
+
+.. _figure_authmethod_api:
+
+.. figure:: img/auth_method_api_header.png
+   :align: center
+
+   API Header authentication configs
+
+AWS S3 Authentication
+.....................
+
+The AWS S3 authentication method allows you to connect to Amazon S3 resources by providing
+a :guilabel:`Name`, :guilabel:`Resource`, :guilabel:`Username`, :guilabel:`Password`, and :guilabel:`Region`.
+
+.. _figure_authmethod_awss3:
+
+.. figure:: img/auth_method_awss3.png
+   :align: center
+
+   AWS S3 authentication configs
+
+Basic Authentication
+....................
+
+The Basic authentication method is used for services that require standard HTTP authentication
+with a :guilabel:`Username`, :guilabel:`Password` and :guilabel:`Realm`.
+
 .. _figure_authmethod_http:
 
 .. figure:: img/auth-config-create_basic-auth.png
    :align: center
 
    Basic HTTP authentication configs
+
+ESRI Token Authentication
+.........................
+
+The ESRI token authentication method is used for services that require ESRI token-based authentication.
 
 .. _figure_authmethod_esritoken:
 
@@ -234,12 +282,50 @@ version of QGIS if you intend to add it to an existing target install.
 
    ESRI Token authentication configs
 
+Identity-Cert Authentication
+............................
+
+The Identity-cert authentication method allows you to connect using a client identity certificate.
+
+.. _figure_authmethod_identitycert:
+
+.. figure:: img/auth_method_identity_cert.png
+   :align: center
+
+   Identity-cert authentication configs
+
+MapTiler HmacSha256 Authentication
+..................................
+
+The MapTiler HmacSha256 authentication method is used to connect to MapTiler services that require HMAC-SHA256 authorization.
+
+.. _figure_authmethod_maptiler:
+
+.. figure:: img/auth_method_maptiler.png
+   :align: center
+
+   MapTiler HmacSha256 authentication configs
+
+OAuth2 Authentication
+.....................
+
+The OAuth2 authentication method is used to connect to service that require OAuth2 2.0 authorization,
+allowing secure access using client credential and token-based authentication.
+
+.. note:: The OAuth2 authentication method now allows using localhost as the redirect host,
+   providing compatibility with services that do not accept http://127.0.0.1 redirects (for example, Microsoft SharePoint).
+
 .. _figure_authmethod_oauth2:
 
 .. figure:: img/auth-config-create_oauth2.png
    :align: center
 
    OAuth2 authentication configs
+
+PKI-Paths Authentication
+........................
+
+The PKI-Paths authentication method allows you to connect using separate certificate and key files stored on your system.
 
 .. _figure_authmethod_pki:
 
@@ -248,6 +334,12 @@ version of QGIS if you intend to add it to an existing target install.
 
    PKI paths authentication configs
 
+PKI-PKCS#12 Authentication
+..........................
+
+The PKI-PKCS#12 authentication method allows you to connect using a single bundle file
+containing both the certificate and private key, with an optional passphrase for the key.
+
 .. _figure_authmethod_pkcs:
 
 .. figure:: img/auth-config-create_pkcs12-paths.png
@@ -255,18 +347,32 @@ version of QGIS if you intend to add it to an existing target install.
 
    PKI PKCS#12 file paths authentication configs
 
-.. _figure_authmethod_stored:
+Planetary Computer Authentication
+.................................
 
-.. figure:: img/auth-config-create_stored-identity2.png
+The Planetary Computer authentication method allows QGIS to access Microsoft Planetary Computer data. It supports two modes:
+
+* Open Planetary Computer - uses SAS tokens to sign assets for access.
+  
+.. _figure_authmethod_openplanetary:
+
+.. figure:: img/auth_method_openplanetary.png
    :align: center
 
-   Stored Identity authentication configs
+   Microsoft Planetary Computer - Open Planetary Computer authentication configs
 
-.. note::
+* Planetary Pro Computer - requires SAS signing plus OAuth2 authentication.
 
-   The Resource URL is currently an *unimplemented* feature that will eventually
-   allow a particular configuration to be auto-chosen when connecting to
-   resources at a given URL.
+.. _figure_authmethod_planetarypro:
+
+.. figure:: img/auth_method_planetarypro.png
+   :align: center
+
+   Microsoft Planetary Computer - Planetary Computer Pro authentication configs
+
+This method can be applied to STAC connections or directly to individual GDAL or point cloud layers. 
+When a layer is added, the authentication configuration is appended to its URI so QGIS uses it for network requests. 
+Support for encoding/decoding this configuration was also added to point cloud layers.
 
 Master Password and Auth Config Utilities
 -----------------------------------------
