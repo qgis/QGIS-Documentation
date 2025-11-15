@@ -32,10 +32,10 @@ WMS.
 #. Uncheck the :guilabel:`Only request features overlapping the view extent` option
    below the layers list, since your current map canvas may not cover our area of
    interest: Antarctica.
-#. Find the layer :guilabel:`antarctica_country_border`.
+#. Find the layer ``antarctica_country_border``.
    You can use the :guilabel:`Filter` box at the top.
 #. Click on the layer to select it:
-#. Find and select also the layer :guilabel:`south_poles_wfs`.
+#. Find and select also the layer ``south_poles_wfs``.
    You might need to hold :kbd:`Ctrl`.
 
    .. figure:: img/south_poles_wfs.png
@@ -53,7 +53,7 @@ WMS.
 
 #. Select any of the layers and you'll notice that feature selection and
    attribute table tools are enabled. These are vector layers.
-#. Select the :guilabel:`south_poles_wfs` layer and open its attribute table.
+#. Select the ``south_poles_wfs`` layer and open its attribute table.
    You should see this:
 
    .. figure:: img/poles_attribute_table.png
@@ -85,12 +85,12 @@ it, it's often more efficient to query it before you load it. That way, you're
 only requesting the features you want, meaning that you use far less bandwidth.
 
 For example, on the WFS server we're currently using, there is a layer called
-:guilabel:`countries (excluding Antarctica)`. Let's say that we want to know
-where South Africa is relative to the :guilabel:`south_poles_wfs` layer (and
-perhaps also the :guilabel:`antarctica_country_border` layer) that's already
+``countries (excluding Antarctica)``. Let's say that we want to know
+where South Africa is relative to the ``south_poles_wfs`` layer (and
+perhaps also the ``antarctica_country_border`` layer) that's already
 been loaded.
 
-There are two ways to do this. You can load the whole :guilabel:`countries ...`
+There are two ways to do this. You can load the whole ``countries ...``
 layer, and then build a query as usual once it's loaded. However, transmitting
 the data for all the countries in the world and then only using the data for
 South Africa seems a bit wasteful of bandwidth. Depending on your connection,
@@ -102,7 +102,7 @@ from the server.
 #. Enable the :guilabel:`WFS / OGC API Features` tab in the
    :guilabel:`Data Source Manager` dialog
 #. Connect to the server we used before and you should see the list of available layers.
-#. Find and double-click the :guilabel:`countries (excluding Antarctica)` layer.
+#. Find and double-click the ``countries (excluding Antarctica)`` layer.
    The layer name is ``country_borders_excluding_antarctica``.
    You can also select the layer and press :guilabel:`Build query` button at
    the bottom of the dialog:

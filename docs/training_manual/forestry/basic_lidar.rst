@@ -26,14 +26,14 @@ properly work with LAStools:
 * Close QGIS, if you have already started it.
 * An old lidar plugin might be installed by default in your system in the folder
   :file:`C:/Program Files/QGIS Valmiera/apps/qgis/python/plugins/processing/`.
-* If you have a folder named :kbd:`lidar`, delete it. This is valid for some
+* If you have a folder named :file:`lidar`, delete it. This is valid for some
   installations of QGIS 2.2 and 2.4.
 
 .. figure:: img/remove_lidar_folder.png
    :align: center
 
 * Go to the :file:`exercise_data\\forestry\\lidar\\` folder, there you can find
-  the file :file:`QGIS_2_2_toolbox.zip`. Open it and extract the :kbd:`lidar`
+  the file :file:`QGIS_2_2_toolbox.zip`. Open it and extract the :file:`lidar`
   folder to replace the one you just deleted.
 * If you are using a different QGIS version, you can see more installation
   instructions in `this tutorial <https://rapidlasso.de/how-to-install-lastools-toolbox-in-qgis/>`_.
@@ -44,7 +44,7 @@ and extract the content of the :file:`lastools.zip` file into a folder in your
 system, for example, :file:`C:\\lastools\\`. The path to the :file:`lastools`
 folder cannot have spaces or special characters.
 
-.. note:: Read the :kbd:`LICENSE.txt` file inside the :kbd:`lastools` folder.
+.. note:: Read the :file:`LICENSE.txt` file inside the :file:`lastools` folder.
   Some of the LAStools are open source and other are closed source and require
   licensing for most commercial and governmental use.  For education and
   evaluation purposes you can use and test LAStools as much as you need to.
@@ -53,8 +53,8 @@ The plugin and the actual algorithms are now installed in your computer and
 almost ready to use, you just need to set up the Processing framework to start using them:
 
 * Open a new project in QGIS.
-* Set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN`.
-* Save the project as :kbd:`forest_lidar.qgs`.
+* Set the project's CRS to :guilabel:`ETRS89 / ETRS-TM35FIN`.
+* Save the project as :file:`forest_lidar.qgs`.
 
 To setup the LAStools in QGIS:
 
@@ -62,7 +62,7 @@ To setup the LAStools in QGIS:
 * In the :guilabel:`Processing options` dialog, go to :guilabel:`Providers` and
   then to :guilabel:`Tools for LiDAR data`.
 * Check :guilabel:`Activate`.
-* For :guilabel:`LAStools folder` set :kbd:`c:\\lastools\\` (or the folder you
+* For :guilabel:`LAStools folder` set :file:`c:\\lastools\\` (or the folder you
   extracted LAStools to).
 
 .. figure:: img/processing_options.png
@@ -107,11 +107,11 @@ click and drag on the viewer to pan the LiDAR point cloud to see what it looks l
 * Close the viewer when you are ready.
 
 Creating a DEM with LAStools can be done in two steps, first one to classify the
-point cloud into :kbd:`ground` and :kbd:`no ground` points and then calculating
-a DEM using only the :kbd:`ground` points.
+point cloud into :guilabel:`ground` and :guilabel:`no ground` points and then calculating
+a DEM using only the :guilabel:`ground` points.
 
 * Go back to the :guilabel:`Processing Toolbox`.
-* Note the :guilabel:`Search...` box, write :kbd:`lasground`.
+* Note the :guilabel:`Search...` box, write ``lasground``.
 * Double click to open the :guilabel:`lasground` tool and set it as shown in this image:
 
 .. figure:: img/lasground_dialog.png
@@ -134,13 +134,13 @@ commands. If you are interested, also this `tutorial
 about editing LiDAR points manually will show you different operations within the viewer.
 
 * Close the viewer again.
-* In the :guilabel:`Processing Toolbox`, search for :kbd:`las2dem`.
+* In the :guilabel:`Processing Toolbox`, search for ``las2dem``.
 * Open the :guilabel:`las2dem` tool and set it as shown in this image:
 
 .. figure:: img/las2dem_dialog.png
    :align: center
 
-The result DEM is added to your map with the generic name :kbd:`Output raster file`.
+The result DEM is added to your map with the generic name :guilabel:`Output raster file`.
 
 .. note:: The :guilabel:`lasground` and :guilabel:`las2dem` tools require licensing.
   You can use the unlicensed tool as indicated in the license file, but you get
@@ -160,7 +160,7 @@ For visualization purposes, a hillshade generated from a DEM gives a better
 .. figure:: img/dem_hillshade.png
    :align: center
 
-* Select :kbd:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted.
+* Select :guilabel:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted.
 
 Despite the diagonal lines remaining in the hillshade raster result, you can
 clearly see an accurate relief of the area. You can even see the different

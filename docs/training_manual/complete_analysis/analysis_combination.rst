@@ -15,8 +15,8 @@ suitable plots.
    (you should have saved the file as :file:`analysis.qgs`).
 #. In the :guilabel:`Layers` panel, enable these layers:
 
-   * :guilabel:`hillshade`,
-   * :guilabel:`solution` (or :guilabel:`buildings_over_100`)
+   * ``hillshade``,
+   * ``solution`` (or ``buildings_over_100``)
 
 #. In addition to these layers, which should already be loaded in the map from
    when you worked on it before, also add the :file:`suitable_terrain.shp`
@@ -25,7 +25,7 @@ suitable plots.
    :file:`exercise_data/residential_development/`
 #. Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> Geoprocessing Tools`)
    to create a new vector layer called :file:`new_solution.shp` which contains
-   only those buildings which intersect the :guilabel:`suitable_terrain` layer.
+   only those buildings which intersect the ``suitable_terrain`` layer.
 
 You should now have a layer showing certain buildings as your solution, for
 example:
@@ -37,17 +37,17 @@ example:
 :abbr:`★★☆ (Moderate level)` Try Yourself: Inspecting the Results
 -------------------------------------------------------------------------------
 
-Look at each of the buildings in your :guilabel:`new_solution` layer. Compare them
-with the :guilabel:`suitable_terrain` layer by changing the symbology for the
-:guilabel:`new_solution` layer so that it has outlines only. What do you notice
+Look at each of the buildings in your ``new_solution`` layer. Compare them
+with the ``suitable_terrain`` layer by changing the symbology for the
+``new_solution`` layer so that it has outlines only. What do you notice
 about some of the buildings? Are they all suitable just because they intersect with
-the :guilabel:`suitable_terrain` layer? Why or why not? Which ones would you
+the ``suitable_terrain`` layer? Why or why not? Which ones would you
 deem to be unsuitable?
 
 .. admonition:: Answer
    :class: dropdown
 
-   You may notice that some of the buildings in your :file:`new_solution` layer
+   You may notice that some of the buildings in your ``new_solution`` layer
    have been "sliced" by the :guilabel:`Intersection` tool. This shows that only
    part of the building - and therefore only part of the property - lies on
    suitable terrain. We can therefore sensibly eliminate those buildings from
@@ -61,7 +61,7 @@ You can see from the results that some buildings which were included were
 not really suitable, so we can now refine the analysis.
 
 We want to ensure that our analysis returns only those buildings which fall
-entirely within the :guilabel:`suitable_terrain` layer. How would you achieve this?
+entirely within the ``suitable_terrain`` layer. How would you achieve this?
 Use one or more Vector Analysis tools and remember that our buildings are all
 over 100m squared in size.
 
@@ -86,7 +86,7 @@ over 100m squared in size.
       :align: center
    
    Therefore, you can run an *interior buffer* of 100 meters on your existing
-   :guilabel:`suitable_terrain` vector layer. In the output of the buffer
+   ``suitable_terrain`` vector layer. In the output of the buffer
    function, whatever remains of the original layer will represent areas where
    there is suitable terrain for 100 meters beyond.
    
@@ -98,14 +98,14 @@ over 100m squared in size.
    
       .. figure:: img/suitable_terrain_buffer.png
          :align: center
-   
-   #. Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a
+
+   #. Use the ``suitable_terrain`` layer with ``10`` segments and a
       buffer distance of ``-100``. (The distance is automatically in meters
       because your map is using a projected CRS.)
    #. Save the output in :file:`exercise_data/residential_development/` as
       :file:`suitable_terrain_continuous100m.shp`.
    #. If necessary, move the new layer above your original
-      :guilabel:`suitable_terrain` layer.
+      ``suitable_terrain`` layer.
    
       Your results will look like something like this:
    
@@ -118,18 +118,18 @@ over 100m squared in size.
    
       .. figure:: img/select_by_location.png
          :align: center
-   
-   #. Select features in :guilabel:`new_solution` that intersect features in
-      :guilabel:`suitable_terrain_continuous100m.shp`.
-   
+
+   #. Select features in ``new_solution`` that intersect features in
+      ``suitable_terrain_continuous100m.shp``.
+
       This is the result:
    
       .. figure:: img/buffer_select_result.png
          :align: center
    
       The yellow buildings are selected. Although some of the buildings fall
-      partly outside the new :guilabel:`suitable_terrain_continuous100m` layer,
-      they lie well within the original :guilabel:`suitable_terrain` layer and
+      partly outside the new ``suitable_terrain_continuous100m`` layer,
+      they lie well within the original ``suitable_terrain`` layer and
       therefore meet all of our requirements.
    
    #. Save the selection under :file:`exercise_data/residential_development/` as

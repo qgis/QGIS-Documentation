@@ -44,7 +44,7 @@ You can compare the stands that were created in 1994 with the situation almost 2
    #. Drag and drop the file :file:`forest_stands_1994.shp` onto your project
 #. Set the symbology for the layer so that you can see through your polygons:
 
-   #. Right click :guilabel:`forest_stands_1994`
+   #. Right click ``forest_stands_1994``
    #. Select :guilabel:`Properties`
    #. Go to the |symbology| :guilabel:`Symbology` tab
    #. Set :guilabel:`Fill color` to transparent fill
@@ -73,7 +73,7 @@ the roads and the lake. You don't have to digitize the whole area, as in the
 previous exercise you can start with a vector file that already contains most
 of the forest stands.
 
-#. Remove the layer |polygonLayer| :guilabel:`forest_stands_1994`
+#. Remove the layer |polygonLayer| ``forest_stands_1994``
 #. Add the file :file:`exercise_data\\forestry\\forest_stands_2012.shp` to the project
 #. Set the styling of this layer so that the polygons have no fill and the borders are visible
 
@@ -131,7 +131,7 @@ With these points in mind, you can now digitize the missing forest stands.
 
    #. Go to :menuselection:`Project --> Snapping options...`
    #. Press |snapping| :sup:`Enable Snapping` and select :guilabel:`Advanced Configuration`
-   #. Check the |checkbox| :guilabel:`forest_stands_2012` layer
+   #. Check the |checkbox| ``forest_stands_2012`` layer
 
       #. Set :guilabel:`Type` to :guilabel:`Vertex`
       #. Set :guilabel:`Tolerance` to ``10``
@@ -144,7 +144,7 @@ With these points in mind, you can now digitize the missing forest stands.
       .. figure:: img/snapping_2012.png
          :align: center
 
-#. Select the :guilabel:`forest_stands_2012` layer on the Layers list
+#. Select the ``forest_stands_2012`` layer on the Layers list
 #. Click the |toggleEditing| :sup:`Toggle Editing` button to enable editing
 #. Start digitizing using the same techniques as in the previous lesson.
    The only difference is that you don't have any point layer that you are snapping to.
@@ -189,7 +189,7 @@ Let's more accurately delimitate that area to protect.
 We will create a buffer around the point locations, using the protection distance.
 
 #. Open :menuselection:`Vector --> Geoprocessing Tools --> Buffer`.
-#. Set :guilabel:`Input layer` to |pointLayer| :guilabel:`squirrel`
+#. Set :guilabel:`Input layer` to |pointLayer| ``squirrel``
 #. Set :guilabel:`Distance` to ``15 meters``
 #. Set :guilabel:`Buffered` to :file:`exercise_data\\forestry\\squirrel_15m.shp`
 #. Check |checkbox| :guilabel:`Open output file afer running algorithm`
@@ -219,9 +219,9 @@ To join the information about the squirrels to your forest stands,
 you can use the :guilabel:`Join attributes by location` algorithm:
 
 #. Open :menuselection:`Vector --> Data Management Tools --> Join attributes by location`.
-#. Set :guilabel:`Join to features in` to |polygonLayer| :guilabel:`forest_stands_2012`
+#. Set :guilabel:`Join to features in` to |polygonLayer| ``forest_stands_2012``
 #. In :guilabel:`Geometric predicate`, check |checkbox| :guilabel:`intersect`
-#. Set :guilabel:`By comparing to` to |polygonLayer| :guilabel:`squirrel_15m`
+#. Set :guilabel:`By comparing to` to |polygonLayer| ``squirrel_15m``
 #. Set :guilabel:`Join type` as :guilabel:`Take attributes of the first matching feature only (one-to-one)`
 #. Leave unchecked :guilabel:`Discard records which could not be joined`
 #. Set :guilabel:`Joined layer` to :file:`exercise_data\\forestry\\stands_squirrel.shp`
@@ -245,7 +245,7 @@ showing the protection information for the Siberian flying squirrel.
    about the protection locations.
    The information in the forest stands data will indicate to the forest manager
    that there are protection considerations to be taken into account.
-   Then he or she can get the location from the :guilabel:`squirrel` dataset,
+   Then he or she can get the location from the ``squirrel`` dataset,
    and visit the area to mark the corresponding buffer around the location
    so that the operators in the field can avoid disturbing the squirrels environment.
 

@@ -16,7 +16,7 @@ to your QGIS project.
 It has many different options and settings.
 Let's start to explore some of its features.
 
-#. Start a new map and add the :guilabel:`roads` layer from the :file:`training_data`
+#. Start a new map and add the ``roads`` layer from the :file:`training_data`
    Geopackage.
 #. Install the **QuickMapServices** plugin.
 #. Click on :menuselection:`Web --> QuickMapServices`.
@@ -69,7 +69,7 @@ With an incredible simple interface, the QuickOSM plugin allows you to download
 :abbr:`★☆☆ (Basic level)` Follow Along: Using the Quick Query
 ...............................................................................
 
-#. Start a new empty project and add the :guilabel:`roads` layer from the
+#. Start a new empty project and add the ``roads`` layer from the
    :file:`training_data` GeoPackage.
 #. Install the **QuickOSM** plugin.
    The plugin adds two new buttons in the QGIS Toolbar
@@ -83,10 +83,10 @@ With an incredible simple interface, the QuickOSM plugin allows you to download
     system, click on the :guilabel:`Help with key/value` button. It will open a
     web page with a complete description of this concept of OpenStreetMap.
 
-#. Look for :guilabel:`railway` in the :guilabel:`Key` menu and let the :guilabel:`Value` be
-   empty: so we are downloading all the :guilabel:`railway` features without specifying
+#. Look for ``railway`` in the :guilabel:`Key` menu and let the :guilabel:`Value` be
+   empty: so we are downloading all the ``railway`` features without specifying
    any values.
-#. Select :guilabel:`Layer Extent` in the next drop-down menu and choose :guilabel:`roads`.
+#. Select :guilabel:`Layer Extent` in the next drop-down menu and choose ``roads``.
 #. Click on the :guilabel:`Run query` button.
 
    .. figure:: img/quickosm_setup.png
@@ -184,7 +184,7 @@ The **DataPlotly** plugin allows you to create `D3 <https://d3js.org/>`_ plots o
 attributes data thanks to the `plotly <https://plotly.com/>`_ library.
 
 #. Start a new project
-#. Load the :guilabel:`sample_points` layer from the :file:`exercise_data/plugins`
+#. Load the ``sample_points`` layer from the :file:`exercise_data/plugins`
    folder
 #. Install the plugin following the guidelines described in :ref:`plugin_installation`
    searching :guilabel:`Data Plotly`
@@ -192,10 +192,10 @@ attributes data thanks to the `plotly <https://plotly.com/>`_ library.
    :menuselection:`Plugins --> Data Plotly` menu
 
 In the following example we are creating a simple ``Scatter Plot`` of two fields
-of the :guilabel:`sample_points` layer.
+of the ``sample_points`` layer.
 In the DataPlotly Panel:
 
-#. Choose :guilabel:`sample_points` in the Layer filter, :guilabel:`cl` for
+#. Choose ``sample_points`` in the Layer filter, :guilabel:`cl` for
    the :guilabel:`X Field` and :guilabel:`mg` for the :guilabel:`Y Field`:
 
    .. figure:: img/dataplotly_setup.png

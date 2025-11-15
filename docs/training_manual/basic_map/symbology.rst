@@ -270,7 +270,7 @@ control the order in which the different symbol layers are rendered.
 
 To change the order of the symbol layers:
 
-#. Select the topmost :guilabel:`Line` layer in the symbol layers tree.
+#. Select the topmost ``Line`` layer in the symbol layers tree.
 #. Click :menuselection:`Advanced --> Symbol levels...` in the
    bottom right-hand corner of the window.
 

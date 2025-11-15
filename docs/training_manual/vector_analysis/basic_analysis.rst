@@ -88,7 +88,7 @@ We first need to load the data to work with.
 
 #. Zoom to the layer extent to see |majorUrbanName|, South Africa
 
-   Before proceeding we will filter the :guilabel:`roads` layer,
+   Before proceeding we will filter the ``roads`` layer,
    in order to have only some specific road types to work with.
 
    Some roads in OSM datasets are listed as ``unclassified``,
@@ -110,7 +110,7 @@ We first need to load the data to work with.
    ``IS NOT NULL`` combined with the ``AND`` operator excludes roads with
    no value in the ``highway`` field.
 
-   Note the |indicatorFilter| icon next to the :guilabel:`roads` layer.
+   Note the |indicatorFilter| icon next to the ``roads`` layer.
    It helps you remember that this layer has a filter activated,
    so some features may not be available in the project.
 
@@ -140,7 +140,7 @@ Feel free to choose the best workflow for yourself.
    CRS, but you should use a UTM CRS which is more appropriate for
    your region.
 
-#. Right click the :guilabel:`roads` layer in the :guilabel:`Layers`
+#. Right click the ``roads`` layer in the :guilabel:`Layers`
    panel
 #. Click :guilabel:`Export --> Save Features As...`
 #. In the :guilabel:`Save Vector Layer As` dialog choose
@@ -243,13 +243,13 @@ areas in your region which are within 50m of a road.
 Notice that there are distinct areas within your buffer, which
 correspond to each individual road. To get rid of this problem:
 
-#. Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the
+#. Uncheck the ``roads_buffer_50m`` layer and re-create the
    buffer with :guilabel:`Dissolve results` enabled.
 
    .. figure:: img/dissolve_buffer_setup.png
       :align: center
 
-#. Save the output as :guilabel:`roads_buffer_50m_dissolved`
+#. Save the output as ``roads_buffer_50m_dissolved``
 #. Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog
 
 Once you have added the layer to the :guilabel:`Layers` panel, it
@@ -285,9 +285,9 @@ Save the new layer in the :file:`vector_analysis.gpkg` file as ``schools_buffer_
      .. figure:: img/schools_buffer_setup.png
         :align: center
 
-   The :guilabel:`Buffer distance` is :guilabel:`1` kilometer.
+   The :guilabel:`Buffer distance` is ``1`` kilometer.
 
-   * The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. 
+   * The :guilabel:`Segments to approximate` value is set to ``20``. 
      This is optional, but it's recommended, because it makes the output buffers 
      look smoother. Compare this:
 
@@ -300,7 +300,7 @@ Save the new layer in the :file:`vector_analysis.gpkg` file as ``schools_buffer_
         :align: center
 
    The first image shows the buffer with the :guilabel:`Segments to approximate`
-   value set to :guilabel:`5` and the second shows the value set to :guilabel:`20`.
+   value set to ``5`` and the second shows the value set to ``20``.
    In our example, the difference is subtle, but you can see that the buffer's edges
    are smoother with the higher value.
 
@@ -364,7 +364,7 @@ Next, you want to extract the buildings in that area.
 
 #. Click :guilabel:`Run` and close the dialog
 #. You will probably find that not much seems to have changed.
-   If so, move the :guilabel:`well_located_houses` layer to the top
+   If so, move the ``well_located_houses`` layer to the top
    of the layers list, then zoom in.
 
    .. figure:: img/select_zoom_result.png
@@ -385,14 +385,14 @@ We now need to reduce that selection to only show buildings which are
 within 500m of a restaurant.
 
 Using the processes described above, create a new layer called
-:guilabel:`houses_restaurants_500m` which further filters your
-:guilabel:`well_located_houses` layer to show only those which are
+``houses_restaurants_500m`` which further filters your
+``well_located_houses`` layer to show only those which are
 within 500m of a restaurant.
 
 .. admonition:: Answer
    :class: dropdown
 
-   To create the new :guilabel:`houses_restaurants_500m` layer, we go through a two step
+   To create the new ``houses_restaurants_500m`` layer, we go through a two step
    process:
 
    #. First, create a buffer of 500m around the restaurants and add the layer to
@@ -421,7 +421,7 @@ within 500m of a restaurant.
 To see which buildings are of the correct size (more than 100 square
 meters), we need to calculate their size.
 
-#. Select the :guilabel:`houses_restaurants_500m` layer and open the
+#. Select the ``houses_restaurants_500m`` layer and open the
    *Field Calculator* by clicking on the |calculateField|
    :sup:`Open Field Calculator` button in the main toolbar or in
    the attribute table window

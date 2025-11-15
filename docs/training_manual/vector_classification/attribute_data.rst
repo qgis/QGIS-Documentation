@@ -132,15 +132,15 @@ You may now close the attribute table.
 :abbr:`★☆☆ (Basic level)` Try Yourself: Exploring Vector Data Attributes
 -------------------------------------------------------------------------------
 
-#. How many fields are available in the :guilabel:`rivers` layer?
+#. How many fields are available in the ``rivers`` layer?
 #. Tell us a bit about the ``town`` places in your dataset.
-#. Open the attribute table for the :guilabel:`places` layer.
+#. Open the attribute table for the ``places`` layer.
    Which field would be the most useful to represent in label form, and why?
 
 .. admonition:: Answer
    :class: dropdown
 
-   * There should be 9 fields in the :guilabel:`rivers` layer:
+   * There should be 9 fields in the ``rivers`` layer:
 
      #. Select the layer in the :guilabel:`Layers` panel.
      #. Right-click and choose :guilabel:`Open Attribute Table`,
@@ -148,12 +148,12 @@ You may now close the attribute table.
         (it can be enabled from :menuselection:`View --> Toolbars` menu).
      #. Count the number of columns.
 
-     A quicker approach could be to double-click the :guilabel:`rivers` layer,
+     A quicker approach could be to double-click the ``rivers`` layer,
      open the :menuselection:`Layer properties --> Fields` tab, where you will
      find a numbered list of the table's fields.
 
-   * Information about towns is available in the :guilabel:`places` layer. Open its
-     attribute table as you did with the :guilabel:`rivers` layer:
+   * Information about towns is available in the ``places`` layer. Open its
+     attribute table as you did with the ``rivers`` layer:
      there are two features whose :guilabel:`place`
      attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
      You can add comment on other fields from these two records, if you like.

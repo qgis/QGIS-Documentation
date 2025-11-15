@@ -50,7 +50,7 @@ We are going to use algorithms in the
    with the name ``hillshade.tif``
 #. Finally click on :guilabel:`Run`
 
-You will now have a new layer called :guilabel:`hillshade` that looks like
+You will now have a new layer called ``hillshade`` that looks like
 this:
 
 .. figure:: img/hillshade_raster.png
@@ -69,13 +69,13 @@ time of day. But it can also be used for aesthetic purposes, to make the map
 look better. The key to this is setting the hillshade to being mostly
 transparent.
 
-#. Change the symbology of the original :guilabel:`srtm_41_19` layer to use the
+#. Change the symbology of the original ``srtm_41_19`` layer to use the
    :guilabel:`Pseudocolor` scheme as in the previous exercise
-#. Hide all the layers except the :guilabel:`srtm_41_19` and :guilabel:`hillshade`
+#. Hide all the layers except the ``srtm_41_19`` and ``hillshade``
    layers
-#. Click and drag the :guilabel:`srtm_41_19` to be beneath the :guilabel:`hillshade`
+#. Click and drag the ``srtm_41_19`` to be beneath the ``hillshade``
    layer in the :guilabel:`Layers` panel
-#. Set the :guilabel:`hillshade` layer to be transparent by clicking on the
+#. Set the ``hillshade`` layer to be transparent by clicking on the
    :guilabel:`Transparency` tab in the layer properties
 #. Set the :guilabel:`Global opacity` to ``50%``.
 
@@ -84,12 +84,12 @@ transparent.
    .. figure:: img/hillshade_pseudocolor.png
       :align: center
 
-#. Switch the :guilabel:`hillshade` layer off and back on in the
+#. Switch the ``hillshade`` layer off and back on in the
    :guilabel:`Layers` panel to see the difference it makes.
 
 Using a hillshade in this way, it's possible to enhance the topography of the
 landscape. If the effect doesn't seem strong enough to you, you can change the
-transparency of the :guilabel:`hillshade` layer; but of course, the brighter
+transparency of the ``hillshade`` layer; but of course, the brighter
 the hillshade becomes, the dimmer the colors behind it will be. You will need
 to find a balance that works for you.
 
@@ -122,7 +122,7 @@ To calculate the slope, you need to use the :menuselection:`Slope` algorithm
 of the :menuselection:`Processing --> Raster terrain analysis`.
 
 #. Open the algorithm
-#. Choose :guilabel:`srtm_41_19` as the :guilabel:`Elevation layer`
+#. Choose ``srtm_41_19`` as the :guilabel:`Elevation layer`
 #. Keep the :guilabel:`Z factor` at ``1.0``
 #. Save the output as a file with the name ``slope.tif`` in the same folder as the
    ``hillshade.tif``
@@ -210,7 +210,7 @@ the *Processing Toolbox*
    choosing a ``Reference layer``.
    Choose this last option by clicking on the :guilabel:`...` button
    next to the :guilabel:`Reference layer(s)` parameter.
-#. In the dialog, choose the :guilabel:`aspect` layer, because we want
+#. In the dialog, choose the ``aspect`` layer, because we want
    to obtain a layer with the same resolution.
 #. Save the layer as ``aspect_north.tif``.
 
@@ -278,9 +278,9 @@ DEM.
 
 Now you have generated three raster layers from the DEM:
 
-* :guilabel:`aspect_north`: terrain facing north
-* :guilabel:`slope_lte2`: slope equal to or below 2 degrees
-* :guilabel:`slope_lte5`: slope equal to or below 5 degrees
+* ``aspect_north``: terrain facing north
+* ``slope_lte2``: slope equal to or below 2 degrees
+* ``slope_lte5``: slope equal to or below 5 degrees
 
 Where the condition is met, the pixel value is ``1``.
 Elsewhere, it is ``0``.
@@ -415,7 +415,7 @@ in :menuselection:`Raster analysis` in the
 :guilabel:`Processing Toolbox`.
 
 #. Open the tool
-#. Choose :guilabel:`aspect` as the ``Input raster layer``
+#. Choose ``aspect`` as the ``Input raster layer``
 #. Click on the :guilabel:`...` of :guilabel:`Reclassification table`.
    A table-like dialog will pop up, where you can choose the minimum,
    maximum and new values for each class.
@@ -435,8 +435,8 @@ in :menuselection:`Raster analysis` in the
 
 #. Click on :guilabel:`Run`
 
-If you compare the native :guilabel:`aspect` layer with the
-:guilabel:`reclassified` one, there are not big differences.
+If you compare the native ``aspect`` layer with the
+``reclassified`` one, there are not big differences.
 But by looking at the legend, you can see that the values go from
 ``1`` to ``4``.
 
@@ -477,7 +477,7 @@ How can we query the raster layer to get the value of a pixel?
 We can use the |identify| :sup:`Identify Features` button!
 
 #. Select the tool from the Attributes toolbar.
-#. Click on a random location of the :guilabel:`srtm_41_19` layer.
+#. Click on a random location of the ``srtm_41_19`` layer.
    :guilabel:`Identify Results` will appear with the value of the
    band at the clicked location:
 
@@ -521,7 +521,7 @@ We can use the *Value Tool* plugin to solve this problem.
 #. But there is more.
    The Value Tool plugin allows you to query **all** the active raster
    layers in the :guilabel:`Layers` panel.
-   Set the :guilabel:`aspect` and :guilabel:`slope` layers active
+   Set the ``aspect`` and ``slope`` layers active
    again and hover the mouse on the map:
 
    .. figure:: img/value_tool_query_multi.png

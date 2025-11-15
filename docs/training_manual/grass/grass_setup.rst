@@ -88,7 +88,7 @@ geographic area you'll be working in, also known as Grass ``Region``.
       :align: center
 
 #. Click :guilabel:`Next`.
-#. Now select the region :guilabel:`South Africa` from the dropdown and click
+#. Now select the region ``South Africa`` from the dropdown and click
    :guilabel:`Set`:
 
    .. figure:: img/set_south_africa.png
@@ -184,7 +184,7 @@ same Mapset.
    already loaded into QGIS.
 
 #. Once you've found this tool, click on it to bring up the tool itself. Choose
-   the :guilabel:`rivers` layer in the :guilabel:`Loaded Layer` box and type and
+   the ``rivers`` layer in the :guilabel:`Loaded Layer` box and type and
    name it :file:`g_rivers` to prevent confusion:
 
    .. figure:: img/grass_tool_selected.png
@@ -200,7 +200,7 @@ same Mapset.
 #. Close first the import tool (click the :guilabel:`Close` button to the
    immediate right of :guilabel:`View output`), then close the :guilabel:`GRASS
    Tools` window.
-#. Remove the original :guilabel:`rivers` layer.
+#. Remove the original ``rivers`` layer.
 
 Now you are left with only the imported GRASS layer as displayed in your QGIS
 map.
@@ -276,8 +276,8 @@ Let's close the Mapset by clicking on the :guilabel:`Close Mapset` button of the
    .. figure:: img/grass_open_mapset.png
       :align: center
 
-#. Choose the ``Location`` :guilabel:`SouthAfrica` and the ``Mapset``
-   :guilabel:`grass_mapset` that we have created before.
+#. Choose the ``Location`` ``SouthAfrica`` and the ``Mapset``
+   ``grass_mapset`` that we have created before.
 
 That's it! The GRASS Panel will become active meaning that the Mapset has been
 correctly opened.

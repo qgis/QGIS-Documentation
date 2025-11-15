@@ -17,8 +17,8 @@ be used to complete the analysis.
 :abbr:`★★☆ (Moderate level)` Follow Along: The :guilabel:`Raster to Vector` Tool
 ----------------------------------------------------------------------------------
 
-Start with the map from the last module, :kbd:`raster_analysis.qgs`. There you
-should have the :kbd:`all_conditions_simple.tif` calculated during the previous
+Start with the map from the last module, :file:`raster_analysis.qgs`. There you
+should have the ``all_conditions_simple.tif`` calculated during the previous
 exercises.
 
 * Click on :menuselection:`Raster --> Conversion --> Polygonize (Raster to
@@ -29,7 +29,7 @@ exercises.
      :align: center
 
 * Change the field name (describing the values of the raster) to
-  :guilabel:`suitable`.
+  ``suitable``.
 * Save the layer under :file:`exercise_data/residential_development`
   as :file:`all_terrain.shp`.
 
@@ -54,7 +54,7 @@ Refer back to the module on vector analysis.
 
 
    #. Open the :guilabel:`Query Builder` by right-clicking on the
-      :guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting
+      ``all_terrain`` layer in the :guilabel:`Layers` panel, and selecting
       the :menuselection:`Properties --> Source` tab.
    #. Then build the query ``"suitable" = 1``.
    #. Click :guilabel:`OK` to filter out all the polygons where this condition
@@ -64,7 +64,7 @@ Refer back to the module on vector analysis.
       .. figure:: img/polygonize_raster.png
          :align: center
 
-   #. You can save this layer by right-clicking on the :guilabel:`all_terrain`
+   #. You can save this layer by right-clicking on the ``all_terrain``
       layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
       then continue as per the instructions.
 
@@ -81,12 +81,12 @@ opposite conversion from the one performed above. Convert to raster the
 .. figure:: img/vector_to_raster.png
    :align: center
 
-* :guilabel:`Input layer` is :guilabel:`all_terrain`.
+* :guilabel:`Input layer` is ``all_terrain``.
 * Field name is :guilabel:`suitable`.
 * :guilabel:`Output raster size units` is :guilabel:`Pixels`.
 * :guilabel:`Width` and :guilabel:`Height` are ``837`` and ``661``,
   respectively.
-* Get the :guilabel:`Output extent` from the :guilabel:`all_terrain` layer.
+* Get the :guilabel:`Output extent` from the ``all_terrain`` layer.
 * Set output file :guilabel:`Rasterized` to
   :file:`exercise_data/residential_development/raster_conversion.tif`.
 
