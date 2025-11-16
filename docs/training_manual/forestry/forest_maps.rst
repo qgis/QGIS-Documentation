@@ -404,7 +404,7 @@ labels to use the information from the ``atlas_coverage`` layer's attribute tabl
 #. Click :guilabel:`OK`.
 #. The text inside the box in the :guilabel:`Item properties` should show
    ``Detail map inventory zone: [% "Zone" %]``. Note that the ``[% "Zone" %]``
-   will be substituted by the value of the field :guilabel:`Zone` for the corresponding
+   will be substituted by the value of the field ``Zone`` for the corresponding
    feature from the layer ``atlas_coverage``.
 
 #. Test the contents of the label by looking at the different Atlas preview maps.

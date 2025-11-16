@@ -415,7 +415,7 @@ in :menuselection:`Raster analysis` in the
 :guilabel:`Processing Toolbox`.
 
 #. Open the tool
-#. Choose ``aspect`` as the ``Input raster layer``
+#. Choose ``aspect`` as the :guilabel:`Raster layer`
 #. Click on the :guilabel:`...` of :guilabel:`Reclassification table`.
    A table-like dialog will pop up, where you can choose the minimum,
    maximum and new values for each class.

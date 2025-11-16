@@ -346,7 +346,7 @@ You will see that the field names are prefixed with ``rautjarvi_1994_``. To chan
 
 #. Open the Layer Properties for the ``forest_stands`` layer.
 #. Go to the :guilabel:`Joins` tab.
-#. Select :guilabel:`Join Layer` ``rautjarvi_1994`` 
+#. Select ``rautjarvi_1994`` as the :guilabel:`Join Layer`
 #. Click the |toggleEditing| :sup:`Edit selected join` button to enable editing
 #. Under |checkbox| :guilabel:`Custom field name prefix` remove the prefix name
 

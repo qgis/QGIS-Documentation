@@ -51,7 +51,7 @@ In practice, you simply need to represented the sample plots as points that
 will be used by the field teams later:
 
 #. Open your :file:`digitizing_2012.qgs` project from the previous lesson.
-#. Remove all the layers except for ``forest_stands_2012``.
+#. Remove all the layers except ``forest_stands_2012``.
 #. Save your project now as :file:`forest_inventory.qgs`
 
 Now you need to create a rectangular grid of points separated 80 meters from each other:

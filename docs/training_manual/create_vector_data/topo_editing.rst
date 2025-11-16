@@ -114,7 +114,7 @@ Continuing on the same layer, we will test the |simplify|
 
 #. Click on it to activate it.
 #. Click on one of the areas which you joined using either the
-   |vertexToolActiveLayer|:sup:`Vertex Tool` or *Add Feature* tool.
+   |vertexToolActiveLayer|:sup:`Vertex Tool` or |capturePolygon| :sup:`Add Polygon Feature` tool.
    You will see this dialog:
 
    .. figure:: img/simplify_line_dialog.png
