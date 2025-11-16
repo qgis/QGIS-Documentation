@@ -35,7 +35,7 @@ For the ``forest_stands_2012_results`` layer:
 
 * Open the :guilabel:`Attribute table` and enable editing.
 * Select the polygons with ``NULL`` values.
-* Use the calculator to update the values of the :guilabel:`MEANVol` field to
+* Use the calculator to update the values of the ``MEANVol`` field to
   ``-999`` only for the selected features.
 * Disable editing and save the changes.
 
