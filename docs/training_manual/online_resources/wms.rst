@@ -20,8 +20,8 @@ if you pan or zoom on the map.
 
 For this exercise, you can either use the basic map you made at the start of
 the course, or just start a new map and load some existing layers into it. For
-this example, we used a new map and loaded the original :guilabel:`places`,
-:guilabel:`landuse` and :guilabel:`protected_areas` layers and adjusted the
+this example, we used a new map and loaded the original ``places``,
+``landuse`` and ``protected_areas`` layers and adjusted the
 symbology:
 
 .. figure:: img/new_map.png
@@ -43,8 +43,8 @@ symbology:
       :align: center
 
    Remember how you connected to a SpatiaLite or GeoPackage database at the
-   beginning of the course. The :guilabel:`landuse`, :guilabel:`buildings`, and
-   :guilabel:`roads` layers are stored in a database. To use those layers, you
+   beginning of the course. The ``landuse``, ``buildings``, and
+   ``roads`` layers are stored in a database. To use those layers, you
    first needed to connect to the database. Using a WMS is similar, with the
    exception that the layers are on a remote server.
 
@@ -76,7 +76,7 @@ symbology:
 
    These are all the layers hosted by this WMS server.
 
-#. Click once on the :guilabel:`OSM-WMS` layer.
+#. Click once on the ``OSM-WMS`` layer.
    This will display the default :guilabel:`Coordinate Reference System` in use
    and the number of CRSes supported by the dataset:
 
@@ -98,8 +98,8 @@ symbology:
       #. Click :guilabel:`OK`. The Coordinate Reference System associated with
          the entry has changed.
 
-#. Click :guilabel:`Add` to load the layer in your project using :guilabel:`Layer name``
-   (default is :guilabel:`OpenStreetMap WMS - by terrestris`).
+#. Click :guilabel:`Add` to load the layer in your project using :guilabel:`Layer name`
+   (default is ``OpenStreetMap WMS - by terrestris``).
 #. Close the :guilabel:`Data Source Manager` dialog if not done automatically
 #. In the :guilabel:`Layers` panel, click and drag it to the bottom of the list.
 #. Zoom out in order to get a global view of the layers. You will notice that
@@ -111,7 +111,7 @@ symbology:
       :width: 100%
 
 #. Let's enable the reprojection again, but using the same projection as the
-   :guilabel:`OpenStreetMap WMS` layer, which is :guilabel:`WGS 84 / Pseudo Mercator`.
+   ``OpenStreetMap WMS`` layer, which is :guilabel:`WGS 84 / Pseudo Mercator`.
 
    #. Open the :menuselection:`Project --> Properties... --> CRS` tab
    #. Uncheck :guilabel:`No CRS (or unknown/non-Earth projection)`
@@ -164,7 +164,7 @@ First, let's add another WMS layer.
 -------------------------------------------------------------------------------
 
 #. Add the ``eAtlas`` WMS server at this URL: ``https://maps.eatlas.org.au/maps/wms``
-#. Load a :guilabel:`World: Hillshading` layer into the map.
+#. Load a ``World: Hillshading`` layer into the map.
 #. You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG`
    and its :guilabel:`Tile size` option to ``200`` by ``200``, so that it loads faster.
 #. Your map should look like this (you may need to re-order the layers, and apply some transparency):
@@ -222,7 +222,7 @@ Part of the difficulty of using WMS is finding a good (free) server.
 :abbr:`★★★ (Advanced level)` Try Yourself:
 -------------------------------------------------------------------------------
 
-* Add the :guilabel:`bluemarble` layer from the :guilabel:`MapServer Demonstration Server`.
+* Add the ``bluemarble`` layer from the :guilabel:`MapServer Demonstration Server`.
   Is that a suitable dataset for our study area?
 
 .. admonition:: Answer

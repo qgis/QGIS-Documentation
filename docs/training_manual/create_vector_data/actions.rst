@@ -11,7 +11,7 @@ Assigning actions can add a whole new dimension to your map!
 
 **The goal for this lesson:** To learn how to add custom actions.
 
-In this lesson you will use the :guilabel:`school_property` layer you
+In this lesson you will use the ``school_property`` layer you
 created previously.
 The sample data include photos of each of the three properties you
 digitized.
@@ -50,8 +50,8 @@ property yet. First we will create a field for this purpose.
       :align: center
 
 #. Click :guilabel:`OK` in the :guilabel:`Layer Properties` dialog.
-#. Use the :guilabel:`Identify` tool to click on one of the three
-   features in the :guilabel:`school_property` layer.
+#. Use the |identify| :sup:`Identify Features` tool to click on one of the three
+   features in the ``school_property`` layer.
 
    Since you are still in edit mode, the dialog should be active and
    look like this:
@@ -73,8 +73,7 @@ property yet. First we will create a field for this purpose.
 :abbr:`★☆☆ (Basic level)` Follow Along: Creating an Action
 ----------------------------------------------------------------------
 
-#. Open the :guilabel:`Actions` tab for the
-   :guilabel:`school_property` layer, and click on the
+#. Open the :guilabel:`Actions` tab for the ``school_property`` layer, and click on the
    |symbologyAdd| :sup:`Add a new action` button.
 
    .. figure:: img/layer_actions.png
@@ -130,7 +129,7 @@ property yet. First we will create a field for this purpose.
 
 Now it is time to test the new action:
 
-#. Click on the :guilabel:`school_property` layer in the
+#. Click on the ``school_property`` layer in the
    :guilabel:`Layers` panel so that it is highlighted.
 #. Find the |actionRun| :sup:`Run feature action` button (in the
    :guilabel:`Attributes Toolbar`).
@@ -155,7 +154,7 @@ general information about it. Your first impulse, considering that you're using
 a computer right now, would probably be to Google the name of the area. So
 let's tell QGIS to do that automatically for us!
 
-#. Open the attribute table for the :guilabel:`landuse` layer.
+#. Open the attribute table for the ``landuse`` layer.
 
    We will be using the ``name`` field for each of our landuse
    areas to search Google.
@@ -246,7 +245,7 @@ let's tell QGIS to do that automatically for us!
 
 Now to test the new action.
 
-#. With the :guilabel:`landuse` layer active in the
+#. With the ``landuse`` layer active in the
    :guilabel:`Layers` panel, click on the down arrow to the right of
    the |actionRun| :sup:`Run feature action` button, and select the
    only action (``Google Search``) defined for this layer.
@@ -343,6 +342,8 @@ That is the topic of the next module.
    source folder.
 
 .. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em

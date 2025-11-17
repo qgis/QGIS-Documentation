@@ -33,7 +33,7 @@ To set snapping options:
 #. Make sure that the box in the :guilabel:`Avoid overlap` column is
    checked.
 #. Leave the dialog.
-#. Select the :guilabel:`landuse` layer and enter edit mode
+#. Select the ``landuse`` layer and enter edit mode
    (|toggleEditing|)
 #. Check (under :menuselection:`View --> Toolbars`) that the
    :guilabel:`Advanced Digitizing` toolbar is enabled.
@@ -114,7 +114,7 @@ Continuing on the same layer, we will test the |simplify|
 
 #. Click on it to activate it.
 #. Click on one of the areas which you joined using either the
-   *Vertex Tool* or *Add Feature* tool.
+   |vertexToolActiveLayer|:sup:`Vertex Tool` or |capturePolygon| :sup:`Add Polygon Feature` tool.
    You will see this dialog:
 
    .. figure:: img/simplify_line_dialog.png
@@ -190,7 +190,7 @@ would use this tool to create them.
 #. Select the polygon to which you wish to add the part by using the
    |selectRectangle| :sup:`Select Features by area or single click`
    tool.
-#. Use the :guilabel:`Add Part` tool to add an outlying area.
+#. Use the |addPart| :sup:`Add Part` tool to add an outlying area.
 #. Delete the part you just created using the |deletePart|
    :sup:`Delete Part` tool.
 
@@ -304,7 +304,7 @@ part of the polygon:
 .. admonition:: Answer
    :class: dropdown
 
-   * Use the :guilabel:`Merge Selected Features` tool, making sure to first select
+   * Use the |mergeFeatures|:sup:`Merge Selected Features` tool, making sure to first select
      both of the polygons you wish to merge.
    * Use the feature with the :guilabel:`OGC_FID` of ``1`` as the source of your
      attributes (click on its entry in the dialog, then click the :guilabel:`Take
@@ -317,7 +317,8 @@ part of the polygon:
    .. figure:: img/merge_feature_dialog.png
       :align: center
 
-   Using the :guilabel:`Merge Attributes of Selected Features` tool will keep the
+   Using the |mergeFeatureAttributes|
+   :sup:`Merge Attributes of Selected Features` tool will keep the
    geometries distinct, but give them the same attributes.
 
 In Conclusion
