@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,6 +34,26 @@ msgstr ""
 " <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
 "progress|."
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:5
+msgid "Creating 3D Symbols"
+msgstr "3D simbolių kūrimas"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:12
+msgid ""
+"The :guilabel:`Style Manager` helps you create and store 3D symbols for "
+"every geometry type to render in the :ref:`3D map view <label_3dmapview>`."
+msgstr ""
+":guilabel:`Stilių tvarkyklė` padeda jums kurti ir saugoti visų geometrijų "
+"tipų 3D simbolius braižymui :ref:`3D žemėlapio vaizde <label_3dmapview>`."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:15
+msgid ""
+"As of the other items, enable the |3d| :guilabel:`3D Symbols` tab and expand"
+" the |symbologyAdd| button menu to create:"
+msgstr ""
+"Kaip ir kitiems elementams, įjunkite kortelę |3d| :guilabel:`3D simboliai` "
+"ir išskleiskite meniu mygtuką |symbologyAdd|, kad sukurtumėte:"
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:204
 msgid "3d"
 msgstr "3d"
@@ -41,10 +62,421 @@ msgstr "3d"
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:18
+msgid ":ref:`3D point symbols <3d_pointlayers>`"
+msgstr ":ref:`3D taškų simbolius <3d_pointlayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:19
+msgid ":ref:`3D line symbols <3d_linelayers>`"
+msgstr ":ref:`3D linijų simbolius <3d_linelayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:20
+msgid ":ref:`3D polygon symbols <3d_polygonlayers>`"
+msgstr ":ref:`3D poligonų simbolius <3d_polygonlayers>`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:26
+msgid "Point Layers"
+msgstr "Taškų sluoksniai"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:33
+msgid "Properties of a 3D point symbol"
+msgstr "3D taško simbolio savybės"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:35
+msgid ""
+"You can define different types of 3D :guilabel:`Shape` to use for point "
+"symbols. They are mainly defined by their dimensions whose unit refers to "
+"the CRS of the project. Available types are:"
+msgstr ""
+"Jūs galite nurodyti taškų simboliams naudoti skirtingas 3D "
+":guilabel:`Formas`. Jie pagrinde apibrėžiami matmenimis, kurių matavimo "
+"vienetai atsižvelgia į projekto CRS. Galimi tipai yra:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:39
+msgid ":guilabel:`Sphere` defined by a :guilabel:`Radius`"
+msgstr ":guilabel:`Sfera` apibrėžiama :guilabel:`Spinduliu`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:40
+msgid ""
+":guilabel:`Cylinder` defined by a :guilabel:`Radius` and :guilabel:`Length`"
+msgstr ""
+":guilabel:`Cilindras` apibrėžiamas :guilabel:`Spinduliu` ir "
+":guilabel:`Ilgiu`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:41
+msgid ":guilabel:`Cube` defined by a :guilabel:`Size`"
+msgstr ":guilabel:`Kubas` apibrėžiamas :guilabel:`Dydžiu`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:42
+msgid ""
+":guilabel:`Cone` defined by a :guilabel:`Top radius`, a :guilabel:`Bottom "
+"radius` and a :guilabel:`Length`"
+msgstr ""
+":guilabel:`Kūgis` apibrėžiamas :guilabel:`Viršutiniu spinduliu`, "
+":guilabel:`Apatiniu spinduliu` ir :guilabel:`Ilgiu`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:44
+msgid ":guilabel:`Plane` defined by a :guilabel:`Size`"
+msgstr ":guilabel:`Plokštuma` apibrėžiama :guilabel:`Dydžiu`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:45
+msgid ""
+":guilabel:`Torus` defined by a :guilabel:`Radius` and a :guilabel:`Minor "
+"radius`"
+msgstr ""
+":guilabel:`Toras` apibrėžiamas :guilabel:`Spinduliu` ir :guilabel:`Mažuoju "
+"spinduliu`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:46
+msgid ""
+":guilabel:`3D Model`, using a 3D model file: supported formats include "
+"wavefront :file:`.obj`, :file:`.glTF` and :file:`.fbx`. Models can be a file"
+" on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. Community-created models are shared on the `QGIS "
+"Hub <https://hub.qgis.org/wavefronts>`_."
+msgstr ""
+":guilabel:`3D modelis`, naudojant 3D modelio failą: tarp palaikomų formatų "
+"yra wavefront :file:`.obj`, :file:`.glTF` ir :file:`.fbx`. Modeliai gali "
+"būti failai diske, nutolę URL ar :ref:`įtraukti į projektą "
+"<embedded_file_selector>`. Bendruomenės sukurti simboliai bendrinami `QGIS "
+"Hub <https://hub.qgis.org/wavefronts>`_."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:51
+msgid ""
+":guilabel:`Billboard`, defined by the :guilabel:`Billboard height` and the "
+":guilabel:`Billboard symbol` (usually based on a :ref:`marker symbol "
+"<vector_marker_symbols>`). The symbol will have a stable size. Convenient "
+"for visualizing 3D point clouds Shapes."
+msgstr ""
+":guilabel:`Stendas`, apibrėžiamas :guilabel:`Stendo aukščiu` ir "
+":guilabel:`Stendo simboliu` (paprastai paremtu :ref:`žymeklio simboliu "
+"<vector_marker_symbols>`). Simbolis bus stabilaus dydžio. Patogu "
+"vizualizuojant 3D taškų masyvų formas."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:55
+msgid ""
+"The :guilabel:`Altitude clamping` can be set to :guilabel:`Absolute`, "
+":guilabel:`Relative` or :guilabel:`Terrain`. The :guilabel:`Absolute` "
+"setting can be used when height values of the 3d vectors are provided as "
+"absolute measures from 0. :guilabel:`Relative` and :guilabel:`Terrain` add "
+"given elevation values to the underlying terrain elevation."
+msgstr ""
+":guilabel:`Aukščio prispaudimą` galima nurodyti :guilabel:`Absoliutų`, "
+":guilabel:`Santykinį` ar :guilabel:`Paviršiaus`. Nustatymą "
+":guilabel:`Absoliutus` galima naudoti, kai 3d vektorių aukščio reikšmės "
+"pateiktos kaip absoliutūs dydžiai nuo 0. :guilabel:`Santykinio` ir "
+":guilabel:`Paviršiaus` atveju pateiktos reikšmės pridedamos prie atitinkamo "
+"paviršiaus aukščio."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:60
+#: ../../docs/user_manual/style_library/3d_symbols.rst:91
+#: ../../docs/user_manual/style_library/3d_symbols.rst:136
+msgid "The :ref:`shading <shading_texture>` properties can be defined."
+msgstr "Galia nurodyti :ref:`šešėliavimo <shading_texture>` savybes."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:61
+msgid ""
+"Under the :guilabel:`Transformations` frame, you can apply affine "
+"transformation to the symbol:"
+msgstr ""
+"Skiltyje :guilabel:`Transformacija` jūs galite simboliui taikyti paprastą "
+"transformaciją:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:64
+msgid ":guilabel:`Translation` to move objects in x, y and z axis."
+msgstr ":guilabel:`Postūmis` pastums objektus x, y ir z ašyse."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:65
+msgid ":guilabel:`Scale` to resize the 3D shapes"
+msgstr ":guilabel:`Mastelis` pakeis 3D formų dydį"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:66
+msgid ":guilabel:`Rotation` around the x-, y- and z-axis."
+msgstr ":guilabel:`Pasukimas` aplink x-, y- ir z-ašis."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:72
+msgid "Line layers"
+msgstr "Linijų sluoksniai"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:79
+msgid "Properties of a 3D line symbol"
+msgstr "3D linijos simbolio savybės"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:81
+msgid ""
+"Beneath the :guilabel:`Width` and :guilabel:`Height` settings you can define"
+" the :guilabel:`Extrusion` of the vector lines. If the lines do not have "
+"z-values, you can define the 3d volumes with this setting."
+msgstr ""
+"Po :guilabel:`Pločio` ir :guilabel:`Aukščio` nustatymų jūs galite nurodyti "
+"vektorinių linijų :guilabel:`Išsikišimą`. Jei linijos neturi z-reikšmės, jūs"
+" šiuo nustatymu galite nurodyti 3d tūrius."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:84
+msgid ""
+"With the :guilabel:`Altitude clamping` you define the position of the 3D "
+"lines relative to the underlying terrain surface, if you have included "
+"raster elevation data or other 3D vectors."
+msgstr ""
+"Naudodami :guilabel:`Aukščio prispaudimą` jūs nurodo 3D linijų poziciją "
+"paviršiaus atžvilgiu, jei įtraukėte rastro aukščio duomenis ir kitus 3D "
+"vektorius."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:87
+msgid ""
+"The :guilabel:`Altitude binding` defines how the feature is clamped to the "
+"terrain. Either every :guilabel:`Vertex` of the feature will be clamped to "
+"the terrain or this will be done by the :guilabel:`Centroid`."
+msgstr ""
+":guilabel:`Aukščio pririšimas` nurodo, kaip geoobjektai pritraukiami prie "
+"paviršiaus. Prie paviršiaus gali būti pritraukiama kiekviena geoobjekto "
+":guilabel:`Viršūnė`, arba :guilabel:`Centroidas`."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:90
+msgid "It is possible to |checkbox|:guilabel:`Render as simple 3D lines`."
+msgstr "Galima |checkbox|:guilabel:`Braižyti kaip paprastas 3D linijas`."
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:206
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:96
+msgid "Polygon Layers"
+msgstr "Poligonų sluoksniai"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:103
+msgid "Properties of a 3D polygon symbol"
+msgstr "3D poligono simbolio savybės"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:105
+msgid ""
+"As for the other ones, :guilabel:`Height` can be defined in CRS units. You "
+"can also use the |dataDefine| button to overwrite the value with a custom "
+"expression, a variable or an entry of the attribute table"
+msgstr ""
+"Kaip ir kitiems, :guilabel:`Aukštį` galima nurodyti CRS vienetais. Jūs "
+"tiapogi galite naudoti mygtuką |dataDefine|, kad permuštumėte reikšmę savo "
+"išraiška, kintamuoju arba atributų lentelės įrašu"
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:208
 msgid "dataDefine"
 msgstr "dataDefine"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:109
+msgid ""
+"Again, :guilabel:`Extrusion` is possible for missing z-values. Also for the "
+"extrusion you can use the |dataDefine| button in order to use the values of "
+"the vector layer and have different results for each polygon:"
+msgstr ""
+"Vėlgi, trūkstant z-reikšmių galima naudoti :guilabel:`Išsikišimą`. "
+"Išsikišimui jūs taipogi galite naudoti mygtuką |dataDefine|, jei norite "
+"naudoti vektorinio sluoksnio duomenis ir taip gauti skirtingų poligonų "
+"rezultatus:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:116
+msgid "Data Defined Extrusion"
+msgstr "Nuo duomenų priklausantis išsikišimas"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:118
+msgid ""
+"The :guilabel:`Altitude clamping`, :guilabel:`Altitude binding` can be "
+"defined as explained above."
+msgstr ""
+"Galima apibrėžti :guilabel:`Aukščio pritraukimą`, :guilabel:`Aukščio "
+"susiejimą`, kaip paaiškinta aukščiau."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:120
+msgid "The :guilabel:`Culling mode` to apply to the symbol; it can be:"
+msgstr "Simboliui taikomas :guilabel:`Išmetimo režimas` gali būti:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:122
+msgid ""
+":guilabel:`No Culling`: this can help to avoid seemingly missing surfaces "
+"when polygonZ/multipatch data do not have consistent ordering of vertices "
+"(e.g. all clock-wise or counter clock-wise)"
+msgstr ""
+":guilabel:`Be išmetimo`: tai naudinga, kai reikia išvengti trūkstamų "
+"paviršių, kai polygonZ/multipatch duomenys neturi stabilaus viršūnių "
+"braižymo (pvz. visos pagal arba prieš laikrodžio rodyklę)"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:125
+msgid ":guilabel:`Front`"
+msgstr ":guilabel:`Priekis`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:126
+msgid "or :guilabel:`Back`"
+msgstr "ar :guilabel:`Nugara`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:127
+msgid ""
+"The :guilabel:`Rendered facade` determines the faces to display. Possible "
+"values are :guilabel:`No facades`, :guilabel:`Walls`, :guilabel:`Roofs`, or "
+":guilabel:`Walls and roofs`"
+msgstr ""
+":guilabel:`Braižomas fasadas` nurodo, kuriuos paviršius rodyti. Galimos "
+"reikšmės yra :guilabel:`Be fasadų`, :guilabel:`Sienos`, :guilabel:`Stogai` "
+"arba :guilabel:`Sienos ir stogai`"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:130
+msgid ""
+"|checkbox| :guilabel:`Add back faces`: for each triangle, creates both front"
+" and back face with correct normals - at the expense of increased number of "
+"vertex data. This option can be used to fix shading issues (e.g., due to "
+"data with inconsistent order of vertices)."
+msgstr ""
+"|checkbox| :guilabel:`Pridėti fono piešinius`: kiekvienam trikampiui sukuria"
+" tiek priekinę, tiek galinę plokštumą su tinkamomis normalėmis - didesnių "
+"viršūnių duomenų kaina. Šią parinktį galima naudoti tvarkant šešėliavimo "
+"problemas (pvz. dėl duomenų su nepastovia viršūnių tvarka)."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:134
+msgid ""
+"|checkbox| :guilabel:`Invert normals (experimental)`: can be useful for "
+"fixing clockwise/counter-clockwise face vertex orders"
+msgstr ""
+"|checkbox| :guilabel:`Invertuoti normales (eksperimentinis)`: gali būti "
+"naudingas taisant palei/prieš laikrodžio rodyklę einančių plokštumų viršūnių"
+" rikiuotes"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:137
+msgid ""
+"Display of the |checkbox| :guilabel:`Edges` of the symbols can be enabled "
+"and assigned a :guilabel:`Width` and :guilabel:`Color`."
+msgstr ""
+"Galima įjungti simbolių |checkbox| :guilabel:`Kraštų` rodymą ir nurodyti "
+"jiems :guilabel:`Plotį` ir :guilabel:`Spalvą`."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:140
+msgid "**Combination for best rendering of 3D data**"
+msgstr "**Geriausio 3D duomenų braižymo kombinacijos**"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:142
+msgid ""
+":guilabel:`Culling mode`, :guilabel:`Add back faces` and :guilabel:`Invert "
+"normals` are all meant to fix the look of 3D data if it does not look right."
+" Typically when loading some data, it is best to first try ``culling "
+"mode=back`` and ``add back faces=disabled`` - it is the most efficient. If "
+"the rendering does not look correct, try ``add back faces=enabled`` and keep"
+" ``culling mode=no culling``. Other combinations are more advanced and "
+"useful only in some scenarios based on how mixed up is the input dataset."
+msgstr ""
+":guilabel:`Išmetimo režimas`, :guilabel:`Pridėti fono plokštumas` ir "
+":guilabel:`Invertuoti normales` - visi skirti pataisyti 3D duomenų išvaizdą,"
+" jei ji neatrodo gerai. Paprastai įkeliant kokius nors duomenis, geriausi iš"
+" pradžių pabandyti ``išmetimo režimą=galas`` ir ``pridėti fono "
+"plokštumas=išjungta`` - taip efektyviausia. Jei nubraižytas vaizdas atrodo "
+"negerai, pabandykite ``pridėti fono plokštumas=įjungta`` ir palikit "
+"``išmetimo režimą=be išmetimo``. Kitos kombinacijos yra sudėtingesnės ir "
+"naudingos tik kai kuriais scenarijais, priklausomai nuo to, kaip jūs "
+"sumaišėte įvesties duomenų aibę."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:153
+msgid "Shading the texture"
+msgstr "Tekstūros šešėliavimas"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:155
+msgid ""
+"Shading helps you reveal 3d details of objects which may otherwise be hidden"
+" due to the scene's lighting. Ultimately, it's an easier material to work "
+"with as you don't need to worry about setting up appropriate scene lighting "
+"in order to visualise features."
+msgstr ""
+"Šešėliavimas padeda išryškinti 3d objektų detales, kurios kitu atveju būtų "
+"paslėptos dėl scenos apšvietimo. Galų gale tai lengvesnė darbo medžiaga, nes"
+" jums nereikia rūpintis, kaip sukurti atitinkamą scenos apšvietimą, kad "
+"vizualizuotumėte geoobjektus."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:160
+msgid ""
+"Various techniques of shading are used in QGIS and their availability "
+"depends on the geometry type of the symbol:"
+msgstr ""
+"QGIS naudoja įvairias šešėliavimo technikas, o jų prieinamumas priklauso nuo"
+" simbolio geometrijos tipo:"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:163
+msgid ""
+":guilabel:`Realistic (Phong)`: describes the way a surface reflects light as"
+" a combination of the :guilabel:`Diffuse` reflection of rough surfaces with "
+"the :guilabel:`Specular` reflection of shiny surfaces "
+"(:guilabel:`Shininess`). It also includes an :guilabel:`Ambient` option to "
+"account for the small amount of light that is scattered about the entire "
+"scene. Use the :guilabel:`Opacity` slider to render semi-transparent objects"
+" in 3D. Read more at `Phong reflection description "
+"<https://en.wikipedia.org/wiki/Phong_reflection_model>`_."
+msgstr ""
+":guilabel:`Realistiškas (Phong)`: aprašo kaip paviršius atspindi šviesą, "
+"kaip kombinaciją :guilabel:`Išsklaidyto` atspindžio nuo grubių paviršių su "
+":guilabel:`Veidrodiniu` atspindžių nuo spindinčių paviršių "
+"(:guilabel:`Veidrodinis`). Ten pat yra :guilabel:`Aplinkos` parinktis, "
+"suteikianti nedidelį šviesos kiekį, kuris išsklaidomas po visą sceną. "
+"Naudokite slankiklį :guilabel:`Nepermatomumas`, kad braižytumėte pusiau "
+"permatomus 3d objektus. Daugiau informacijos rasite `Phong atspindžio "
+"aprašyme <https://en.wikipedia.org/wiki/Phong_reflection_model>`_."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:170
+msgid ""
+":guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic "
+"(Phong)` except that an image is used as :guilabel:`Diffuse Texture`. The "
+"image can be a file on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. The :guilabel:`Texture scale` and "
+":guilabel:`Texture rotation` are required. Use the :guilabel:`Opacity` "
+"slider to render semi-transparent objects in 3D."
+msgstr ""
+":guilabel:`Realistiškas pildymas (Phong)`: toks pat kaip ir "
+":guilabel:`Realistinis (Phong)`, tik tiek, kad piešinys naudojamas kaip "
+":guilabel:`Išsklaidymo tekstūra`. Šis piešinys gali būti diske, nutolusiame "
+"URL ar :ref:`įtrauktas į objektą <embedded_file_selector>`. "
+":guilabel:`Tekstūros mastelis` ir :guilabel:`Tekstūros pasukimas` yra "
+"privalomi. Naudokite slankiklį :guilabel:`Nepermatomumas`, kad braižytumėte "
+"puriau permatomus 3D objektus."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:176
+msgid ""
+":guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-"
+"tones so that edge lines and highlights remain visually prominent. Along "
+"with the :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` "
+"options, you need to provide a :guilabel:`Warm` color (for surface facing "
+"toward the light) and a :guilabel:`Cool` color (for the ones facing away). "
+"Also, the relative contributions to the cool and warm colors by the diffuse "
+"color are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties "
+"respectively. See also `Gooch shading "
+"<https://en.wikipedia.org/wiki/Gooch_shading>`_."
+msgstr ""
+":guilabel:`CAD (Gooch)`: ši technika leidžia, kad šešėliai atsirastų tik "
+"vidutiniuose tonuose taip, kad kraštų linijos liktų vizualiai ryškesnės. "
+"Kartu su :guilabel:`Išsklaidymo`, :guilabel:`Veidrodiniu`, "
+":guilabel:`Spindesio` parinktimis jums reikia pateikti ir :guilabel:`Šiltą` "
+"spalvą (paviršiams, kurie yra šviesos pusėje) ir :guilabel:`Vėsią` spalvą "
+"(tiems, kurie yra nukreipti nuo šviesos). Taipogi santykinę išsklaidytos "
+"šviesos įtaką vėsiai ir šiltai spalvoms, valdant atitinkamai "
+":guilabel:`Alfa` ir :guilabel:`Beta` savybes. Daugiau informacijos apie "
+"`Gooch šešėliavimą <https://en.wikipedia.org/wiki/Gooch_shading>`_."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:184
+msgid ""
+":guilabel:`Metal Roughness`: a physically based rendering material that "
+"provides an accurate representation of how light interacts with surfaces. "
+"Options are available for setting the material :guilabel:`Base color`, "
+":guilabel:`Metalness` and :guilabel:`Roughness`."
+msgstr ""
+":guilabel:`Metalo šiurkštumas`: fizika paremtas medžiagos braižymas, kuris "
+"tiksliai reprezentuoja kaip šviesą sąveikauja su paviršiais. Yra parinktys, "
+"leidžiančios nustatyti medžiagos :guilabel:`Bazinę spalvą`, "
+":guilabel:`Metališkumą` ir :guilabel:`Šiurkštumą`."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:188
+msgid ":guilabel:`Embedded Textures` with 3D models shape"
+msgstr ":guilabel:`Įtrauktos tekstūros` su 3D modelių forma"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:192
+msgid "Application example"
+msgstr "Taikymo pavyzdys"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:194
+msgid ""
+"To go through the settings explained above you can have a look at "
+"https://app.merginmaps.com/projects/saber/luxembourg/tree."
+msgstr ""
+"Kad suprastumėte aukščiau paaiškintus nustatymus, galite peržiūrėti "
+"https://app.merginmaps.com/projects/saber/luxembourg/tree."
