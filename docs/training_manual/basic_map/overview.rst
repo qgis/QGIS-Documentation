@@ -63,12 +63,11 @@ all the layers stored in the same path of the project file under in the
 |qgsProjectFile| :guilabel:`Project Home` item.
 
 Moreover, you can set one or more folder as **Favorites**: search under your path
-and once you have found the folder, right click on it and click on ``Add as a
-Favorite``. You should then be able to see your folder in the |favourites|
-:guilabel:`Favorites` item.
+and once you have found the folder, right click on it and click on :guilabel:`Add as a Favorite`.
+You should then be able to see your folder in the |favourites| :guilabel:`Favorites` item.
 
 .. tip:: It can happen that the folders added to Favorite item have a really
-  long name: don't worry right-click on the path and choose ``Rename Favorite...``
+  long name: don't worry right-click on the path and choose :guilabel:`Rename Favorite...`
   to set another name.
 
 :abbr:`★☆☆ (Basic level)` Toolbars

@@ -305,7 +305,7 @@ Changing the symbology of vector layers
 ----------------------------------------------------------------------
 
 #. In the :guilabel:`Layers` panel, right-click on the
-   :guilabel:`Streets` layer
+   ``Streets`` layer
 #. Select :guilabel:`Properties` from the menu that appears
 #. Switch to the :guilabel:`Symbology` tab in the dialog that appears
 #. Click on the :guilabel:`Line` entry in the top widget
@@ -313,8 +313,8 @@ Changing the symbology of vector layers
    transparency, ...)
 #. Click :guilabel:`OK` to close the :guilabel:`Layer Properties`
    dialog.
-   This will change the rendering of the :guilabel:`Streets` layer.
-#. Follow a similar process for the :guilabel:`Zoning` layer and
+   This will change the rendering of the ``Streets`` layer.
+#. Follow a similar process for the ``Zoning`` layer and
    choose an appropriate color for it
 
 .. _changing_raster_symbology:
@@ -325,7 +325,7 @@ Changing the symbology of raster layers
 Raster layer symbology is somewhat different.
 
 #. Open the :guilabel:`Properties` dialog for the
-   :guilabel:`Rainfall30` raster layer
+   ``Rainfall30`` raster layer
 #. Switch to the :guilabel:`Symbology` tab.
    You'll notice that this dialog is very different from the version
    used for vector layers.
@@ -462,7 +462,7 @@ Reclassifying rasters
    
    In the :guilabel:`Raster bands` list on the left, you will see all
    the raster layers in your :guilabel:`Layers` panel.
-   If your Slope layer is called :guilabel:`slope`, it will be listed
+   If your Slope layer is called ``slope``, it will be listed
    as ``slope@1``.
    Indicating band 1 of the slope raster.
 #. The slope needs to be between ``15`` and ``60`` degrees.
@@ -666,12 +666,12 @@ When we use an algorithm to vectorize a raster, sometimes the
 algorithm yields what is called "Invalid geometries", i.e. there are
 empty polygons, or polygons with mistakes in them, that will be
 difficult to analyze in the future.
-So, we need to use the "Fix Geometry" tool.
+So, we need to use the :guilabel:`Fix Geometry` tool.
 
 Fixing geometry
 ----------------------------------------------------------------------
 
-#. In the :guilabel:`Processing Toolbox`, search for "Fix geometries",
+#. In the :guilabel:`Processing Toolbox`, search for ``Fix geometries``,
    and :guilabel:`Execute...` it
 #. For the :guilabel:`Input layer`, select ``aspect_slope_rainfall_1``
 #. Under :guilabel:`Fixed geometries`, select
@@ -831,7 +831,7 @@ Find the locations that are closest to the University of Cape Town
 #. :guilabel:`Input layer` should be ``university``, and
    :guilabel:`Input layer 2` ``suitable_areas``
 #. Set an appropriate output location and name
-   (:guilabel:`Joined layer`)
+   (``Joined layer``)
 #. Set the :guilabel:`Maximum nearest neighbors` to ``4``
 #. Ensure that |checkbox|
    :guilabel:`Open output file after running algorithm` is checked

@@ -51,14 +51,14 @@ In practice, you simply need to represented the sample plots as points that
 will be used by the field teams later:
 
 #. Open your :file:`digitizing_2012.qgs` project from the previous lesson.
-#. Remove all the layers except for :guilabel:`forest_stands_2012`.
+#. Remove all the layers except ``forest_stands_2012``.
 #. Save your project now as :file:`forest_inventory.qgs`
 
 Now you need to create a rectangular grid of points separated 80 meters from each other:
 
 #. Open :menuselection:`Vector --> Research Tools` |regularPoints| :guilabel:`Regular points`.
 #. Press the drop-down button next to the :guilabel:`Input extent` field
-   and from the :guilabel:`Calculate from Layer` menu, select :guilabel:`forest_stands_2012`.
+   and from the :guilabel:`Calculate from Layer` menu, select ``forest_stands_2012``.
 #. In the :guilabel:`Point spacing/count` settings, enter ``80`` ``meters``.
 #. Check the :guilabel:`Use point spacing` box to indicate that the value
    represents the distance between the points.
@@ -83,8 +83,8 @@ points that are actually inside your forest area (see the images below):
 
 #. From the Processing toolbox, open |gdal| :menuselection:`GDAL --> Vector
    geoprocessing --> Clip vector by mask layer`.
-#. Select :guilabel:`systematic_plots` as the :guilabel:`Input layer`.
-#. Set :guilabel:`forest_stands_2012` as the :guilabel:`Mask layer`.
+#. Select ``systematic_plots`` as the :guilabel:`Input layer`.
+#. Set ``forest_stands_2012`` as the :guilabel:`Mask layer`.
 #. Save the :guilabel:`Clipped (mask)` result as :file:`systematic_plots_clip.shp`
    in the :file:`forestry\\sampling\\` folder.
 #. Check :guilabel:`Open output file after running algorithm`.

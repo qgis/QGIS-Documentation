@@ -25,7 +25,7 @@ It contains two layers:
 * ``network_points``
 * ``network_lines``
 
-The :guilabel:`network_lines` layer has already a style that helps to
+The ``network_lines`` layer has already a style that helps to
 understand the road network.
 
 .. figure:: img/network_map.png
@@ -55,7 +55,7 @@ between two points.
 
 
 #. Open the :guilabel:`Shortest path (point to point)` algorithm
-#. Select :guilabel:`network_lines` for
+#. Select ``network_lines`` for
    :guilabel:`Vector layer representing network`
 #. Use ``Shortest`` for :guilabel:`Path type to calculate`
 
@@ -199,7 +199,7 @@ and we will manually choose the start and end points.
 #. Open the
    :menuselection:`Network analysis --> Shortest path (point to point)`
    algorithm
-#. Select :guilabel:`network_lines` for the
+#. Select ``network_lines`` for the
    :guilabel:`Vector layer representing network` parameter
 #. Choose ``Fastest`` as the :guilabel:`Path type to calculate`
 #. Select the :guilabel:`Start point (x, y)` and :guilabel:`End point (x, y)`
@@ -235,7 +235,7 @@ the reachable areas given a distance or a time value?
    point on the map.
 
 Given a distance of ``250`` meters we want to know how far we can go
-on the network from each point of the :guilabel:`network_points` layer.
+on the network from each point of the ``network_points`` layer.
 
 #. Uncheck all the layers except ``network_points``
 #. Open the
