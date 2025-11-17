@@ -281,7 +281,7 @@ To export a layout as PDF:
    (e.g. ``PDF`` and ``TIFF``) creates a georeferenced output by default.
 
 .. note::
-   Starting from QGIS 3.24, when exporting maps or layouts to vector formats
+   When exporting maps or layouts to vector formats
    such as PDF or SVG, line pattern fills are rendered using a line-by-line
    vector-based approach instead of rasterized tiles. This change results in
    smaller and higher-quality output files, with individual pattern lines

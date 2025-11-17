@@ -599,7 +599,7 @@ symbol layer types:
       the whole bounding box of the feature
 
   .. note::
-     Starting from QGIS 3.24, when exporting maps to vector formats such as PDF or SVG,
+     When exporting maps to vector formats such as PDF or SVG,
      or when the line symbol in the pattern has data-defined properties,
      QGIS renders the line pattern fill using a line-by-line vector-based approach.
      This results in smaller output file sizes, higher quality exports, and
