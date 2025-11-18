@@ -1601,14 +1601,18 @@ ArcGIS REST Servers can be added via the
 :guilabel:`ArcGIS REST Servers` entry in the :guilabel:`Browser` panel.
 Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
-* a :guilabel:`Name`
-* the :guilabel:`URL`
-* a :guilabel:`Prefix`: This is used to specify the proxy prefix in the URL,
+* a :guilabel:`Name`: A name for the connection.
+* the :guilabel:`URL`: Main address of the ArcGIS REST Server.
+* a :guilabel:`Prefix`: Used to specify the proxy prefix in the URL,
   which is necessary for some ArcGIS servers that use web proxy prefixes. 
-* a :guilabel:`Community endpoint URL`
-* a :guilabel:`Content endpoint URL`
-* the :ref:`authentication <authentication_index>` configuration if necessary
-* a :guilabel:`Referer`
+* a :guilabel:`Community endpoint URL`: Endpoint URL for ArcGIS Online or Portal for
+  ArcGIS, used to access content groups.
+* a :guilabel:`Content endpoint URL`: Endpoint URL for the content service.
+  This is used to access items in ArcGIS Online or Portal for ArcGIS.
+* the :ref:`authentication <authentication>` credentials if necessary.
+* a :guilabel:`Referer`: The referer URL to be sent in the HTTP headers when making requests
+  to the server. This may be required by some servers for authentication
+  purposes.
 
 .. note::
 
