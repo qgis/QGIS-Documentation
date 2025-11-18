@@ -2761,6 +2761,33 @@ These policies determine initial values when :guilabel:`Merging features`:
 * :guilabel:`Use Largest Feature`: Uses value from feature with the largest geometry.
 * :guilabel:`Set to NULL`: Sets attribute to NULL.
 
+**Add Policies**
+
+When adding new features, fields offer additional policies that control
+how their initial values are populated. These apply only to the
+:guilabel:`When adding features` operation and determine whether the
+field reuses the value last entered during the current editing session.
+
+Available options are:
+
+* :guilabel:`Use Default Value`:  
+  The field value is initialized using its configured
+  :ref:`default value <default_values>`.  
+  If no default value is defined, the field starts unset.
+
+* :guilabel:`Reuse Last Entered Value`:  
+  The last value will be reused. A pin |mIconRememberEnabled| button is added to toggle the behavior.
+  When active, the last value will take priority over the default value.
+  If you disable |mIconRememberDisabled| the pin, the field reverts to using the default value
+  for the next new feature.
+
+* :guilabel:`Allow Reuse of Last Entered Value`:  
+  The last value can be reused, however it will not be by default.
+  A pin |mIconRememberEnabled| button is added to toggle the behavior.
+  When active, the last value will take priority over the default value.
+  If you disable |mIconRememberDisabled| the pin, the field reverts to using the default value
+  for the next new feature.
+
 .. _edit_widgets:
 
 Edit widgets
@@ -4153,6 +4180,10 @@ To do so:
 .. |mergedFeatures| image:: /static/common/rendererMergedFeatures.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
+.. |mIconRememberDisabled| image:: /static/common/mIconRememberDisabled.png
+   :width: 1.5em
+.. |mIconRememberEnabled| image:: /static/common/mIconRememberEnabled.png
    :width: 1.5em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
