@@ -1605,10 +1605,10 @@ Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
   ArcGIS, used to access content groups.
 * a :guilabel:`Content endpoint URL`: Endpoint URL for the content service.
   This is used to access items in ArcGIS Online or Portal for ArcGIS.
-* the :ref:`authentication <authentication_index>` configuration if necessary.
+* the :ref:`authentication <authentication>` credentials if necessary.
 * a :guilabel:`Referer`: The referer URL to be sent in the HTTP headers when making requests
   to the server. This may be required by some servers for authentication
-  purposes. Users are allowed to set any URL as referer.
+  purposes.
 
 .. note::
 
