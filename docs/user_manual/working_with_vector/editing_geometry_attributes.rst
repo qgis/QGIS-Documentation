@@ -879,17 +879,34 @@ QGIS checks the attribute values against the :ref:`constraints <constraints>` de
 in the destination layer (for example, ``NOT NULL``, ``Unique``, or expression constraints).
 If one or more pasted features contain invalid attribute values that
 do not meet these constraints, a dialog will
-appear, listing all affected features and fields. You can then either:
+appear, listing all affected features and fields.
+When pasting a single feature, you can decide whether to:
 
-* Fix the invalid values directly in the dialog before confirming, or
-* Choose to ignore the constraint on purpose, allowing QGIS to insert
-  those features with null or default values.
+* Edit the invalid values directly in the dialog. The corrected values will be used when pasting.
+* :guilabel:`Paste Anyway`: the feature is pasted as-is, even with invalid values.
 
-When pasting a single feature, the dialog shows simplified options.
-For multiple features, all invalid attributes can be reviewed and
-corrected in bulk. This ensures that data integrity rules defined in your layer are
-respected when copying and pasting between layers.
+.. figure:: img/edit_paste_invalid_values_single.png
+   :align: center
+   :width: 400px
 
+   Dialog for handling invalid attribute values when pasting a single feature
+
+When pasting multiple features, the dialog lists all invalid fields across all
+features, allowing bulk review and correction. You can decide per field or
+per feature whether to:
+
+* Edit the invalid values directly in the dialog. The corrected values will be used when pasting.
+* :guilabel:`Discard All`: no features pasted.
+* :guilabel:`Discard All Invalid`: pasted only features with valid attribute values.
+* :guilabel:`Paste All (Including Invalid)`: all features are pasted as-is, even with invalid
+  values.
+* :guilabel:`Skip`: skip the specific feature, allowing proceeding with the rest.
+
+.. figure:: img/edit_paste_invalid_values_multiple.png
+   :align: center
+   :width: 500px
+
+   Dialog for handling invalid attribute values when pasting multiple features
 
 .. _tip_projections_and_pasting:
 
