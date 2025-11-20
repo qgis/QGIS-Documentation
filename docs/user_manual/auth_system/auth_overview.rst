@@ -173,18 +173,17 @@ to remove configurations, and the |symbologyEdit| button to modify existing ones
 The same type of operations for authentication configuration management (Add,
 Edit and Remove) can be done when configuring a given service connection, such
 as configuring an OWS service connection. For that, there are action buttons
-within the configuration selector for fully managing configurations found
+within the :ref:`configuration selector <authentication>` for fully managing configurations found
 within the authentication database. In this case, there is no need to go to the
 :guilabel:`configurations` in :guilabel:`Authentication` tab of QGIS options
 unless you need to do more comprehensive configuration management.
 
 .. _figure_authconfigeditor_wms:
 
-.. figure:: img/auth-selector-wms-connection.png
+.. figure:: ../working_with_ogc/img/add_connection_wms.png
    :align: center
 
-   WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and :guilabel:`Remove`
-   authentication configuration buttons
+   WMS connection dialog showing authentication configuration widget
 
 When creating or editing an authentication configuration, the info required is
 a name, an authentication method and any other info that the authentication
