@@ -2273,43 +2273,16 @@ Authentication
 Many data providers in QGIS (such as databases, web services or file-based
 services) require credentials in order to connect. The authentication widget
 in QGIS helps users supply these credentials securely, and it offers two ways
-to do so: entering basic credentials directly, or selecting an existing
-authentication configuration stored in the encrypted authentication database.
+to do so:
+
+* entering basic credentials directly,
+* or selecting an existing authentication configuration stored in the encrypted authentication database.
 
 .. figure:: img/authentication_widget.png
    :align: center
    :width: 400px
 
    Authentication widget
-
-QGIS stores authentication configurations in a portable encrypted database.
-These configurations can be safely referenced by their ID tokens in projects
-and settings. A master password must be set when initializing the authentication
-system and its database.
-
-For more information, see :ref:`authentication_index`.
-
-Configurations
-...............
-
-The authentication configuration selector allows users to choose from existing
-authentication configurations or create new ones. It provides options to:
-
-* Select an existing authentication configuration from a drop-down list.
-* Create a new authentication configuration using the |symbologyAdd|:sup:`Create a new authentication configuration` button.
-  Choices are:
-
-  * Basic authentication
-  * PKI PKCS#12 authentication
-  * PKI paths authentication
-  * PKI stored identity certificate
-
-  Keep in mind that the available choices depend on the provider's capabilities.
-* Remove an existing one with the |symbologyRemove| :sup:`Delete selected configuration` button.
-* Edit the selected authentication configuration using the |projectProperties| :sup:`Edit selected configuration` button.
-
-Each authentication configuration safely saves your login details in an encrypted
-QGIS database so you can use them again without typing them every time.
 
 Basic
 ............
@@ -2325,14 +2298,14 @@ authentication configuration.
 
 You can save any or both of the ``User name`` and ``Password`` parameters, in
 which case they will be used by default each time you need to connect to this
-database. If not saved, you'll be prompted to supply the credentials to
-connect to the database in next QGIS sessions. 
+database or service. If not saved, you'll be prompted to supply the credentials to
+connect to the database or service in next QGIS sessions. 
 You can cancel the prompt, in which case the connection will fail.
 Click the :guilabel:`Ignore for session` button to avoid being prompted again during
 the current QGIS session. It is also possible to :guilabel:`Ignore for 10 seconds`. This will
 cancel the prompt but you need to wait 10 seconds before you can attempt to connect again.
 The connection parameters you entered are stored in a temporary internal cache and returned
-whenever a username/password for the same database is requested, until you
+whenever a username/password for the same database or service is requested, until you
 end the current QGIS session.
 
  .. warning:: **QGIS User Settings and Security**
@@ -2345,6 +2318,24 @@ end the current QGIS session.
    See :ref:`authentication_index` for more details) or in a service connection
    file (see :ref:`PostgreSQL Service connection file <pg-service-file>` for example).
 
+
+Configurations
+...............
+
+QGIS can store credentials under :ref:`authentication configurations <authentication_methods>`.
+Each configuration safely saves your login details in a portable encrypted database,
+so you can use them again without typing them every time.
+These configurations can be safely referenced by their ID tokens in projects and settings.
+
+The authentication configuration selector allows users to choose from existing
+authentication configurations or create new ones. It provides options to:
+
+* Select an existing authentication configuration from a drop-down list.
+* |symbologyAdd| :sup:`Create a new authentication configuration`
+* |symbologyRemove| :sup:`Delete selected configuration`
+* |projectProperties| :sup:`Edit selected configuration`
+
+For more information on the authentication system, see :ref:`authentication_index`.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
