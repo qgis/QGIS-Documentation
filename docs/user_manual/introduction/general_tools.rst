@@ -2223,23 +2223,27 @@ Using the data-defined assistant interface
 ..........................................
 
 When the |dataDefine| :sup:`Data-defined override` button is associated with a
-size, a rotation, an opacity or a color property, it has an :guilabel:`Assistant...`
-option that helps you change how the data is applied to the parameter for each
-feature. The assistant allows you to:
+size, a width, a rotation, an opacity or a color property, it has an :guilabel:`Assistant...`
+option that helps you change how the data is applied to the parameter for each feature.
+Basically, QGIS will scale a range of input values over a range of output values,
+and render each feature with their corresponding ouput value.
 
-* Define the :guilabel:`Input` data, ie:
+The assistant allows you to:
+
+* Define the :guilabel:`Input` data, i.e.:
 
   * :guilabel:`Source`: the attribute to represent, using a field or an |expression|
     :ref:`expression <vector_expressions>`
-  * the range of values to represent: you can manually enter the values or use
-    the |refresh| :sup:`Fetch value range from layer` button to fill
-    these fields automatically with the minimum and maximum values returned by
-    the :guilabel:`Source` expression applied to your data
-* |unchecked| :guilabel:`Apply transform curve`: by default, output values (see
-  below for setting) are applied to input features following a linear scale.
+  * the range of values to represent: you can manually enter the values
+    or use the |refresh| :sup:`Fetch value range from layer` button
+    to fill these fields automatically with the minimum and maximum values returned
+    by the :guilabel:`Source` expression applied to your data.
+    Features whose values are out of the given range will be represented
+    with the property of the closest limit of the output range.
+* |unchecked| :guilabel:`Apply transform curve`: by default, output values
+  are applied to input features following a specific scaling method (see below for setting).
   You can override this logic: enable the transform option, click on the
-  graphic to add break point(s) and drag the point(s) to apply a custom
-  distribution.
+  graphic to add break point(s) and drag the point(s) to apply a custom distribution.
 * Define the :guilabel:`Output` values: the options vary according to the
   parameter to define. You can globally set:
 
