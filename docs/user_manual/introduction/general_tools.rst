@@ -1657,19 +1657,7 @@ variables overwritten by lower level ones are strike through.
    .net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_
    blog posts.
 
-.. _authentication:
 
-Authentication
-==============
-
-QGIS has the facility to store/retrieve authentication credentials in a secure
-manner. Users can securely save credentials into authentication configurations,
-which are stored in a portable database, can be applied to server or database
-connections, and are safely referenced by their ID tokens in project or settings
-files. For more information see :ref:`authentication_index`.
-
-A master password needs to be set up when initializing the authentication
-system and its portable database.
 
 
 .. _common_widgets:
@@ -2283,6 +2271,80 @@ The values presented in the varying size assistant above will set the size
  coalesce(scale_exp("passengers", 9, 2000, 1, 10, 0.57), 0)
 
 
+.. index:: Authentication
+.. _authentication:
+
+Authentication
+--------------
+
+Many data providers in QGIS (such as databases, web services or file-based
+services) require credentials in order to connect. The authentication widget
+in QGIS helps users supply these credentials securely, and it offers two ways
+to do so:
+
+* entering basic credentials directly,
+* or selecting an existing authentication configuration stored in the encrypted authentication database.
+
+.. figure:: img/authentication_widget.png
+   :align: center
+   :width: 400px
+
+   Authentication widget
+
+Basic
+............
+
+When setting authentication credentials, the :guilabel:`Basic` tab
+allows you to set:
+
+* :guilabel:`User name`: User name used to connect to the data source.
+* :guilabel:`Password`: Password used to connect to the data source.
+
+:guilabel:`Convert to configuration` will save the user name and password in a new
+authentication configuration.
+
+You can save any or both of the ``User name`` and ``Password`` parameters, in
+which case they will be used by default each time you need to connect to this
+database or service. If not saved, you'll be prompted to supply the credentials to
+connect to the database or service in next QGIS sessions. 
+You can cancel the prompt, in which case the connection will fail.
+Click the :guilabel:`Ignore for session` button to avoid being prompted again during
+the current QGIS session. It is also possible to :guilabel:`Ignore for 10 seconds`. This will
+cancel the prompt but you need to wait 10 seconds before you can attempt to connect again.
+The connection parameters you entered are stored in a temporary internal cache and returned
+whenever a username/password for the same database or service is requested, until you
+end the current QGIS session.
+
+ .. warning:: **QGIS User Settings and Security**
+
+   In the :guilabel:`Authentication` tab, saving **username** and **password**
+   will keep unprotected credentials in the connection configuration. Those
+   **credentials will be visible** if, for instance, you share the project file
+   with someone. Therefore, it is advisable to save your credentials in an
+   *Authentication configuration* instead (:guilabel:`Configurations` tab -
+   See :ref:`authentication_index` for more details) or in a service connection
+   file (see :ref:`PostgreSQL Service connection file <pg-service-file>` for example).
+
+
+Configurations
+...............
+
+QGIS can store credentials under :ref:`authentication configurations <authentication_methods>`.
+Each configuration safely saves your login details in a portable encrypted database,
+so you can use them again without typing them every time.
+These configurations can be safely referenced by their ID tokens in projects and settings.
+
+The authentication configuration selector allows users to choose from existing
+authentication configurations or create new ones. It provides options to:
+
+* Select an existing authentication configuration from a drop-down list.
+* |symbologyAdd| :sup:`Create a new authentication configuration`
+* |symbologyRemove| :sup:`Delete selected configuration`
+* |projectProperties| :sup:`Edit selected configuration`
+
+For more information on the authentication system, see :ref:`authentication_index`.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -2437,6 +2499,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
+   :width: 1.5em
 .. |qt| image:: /static/common/mIconQt.png
    :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
