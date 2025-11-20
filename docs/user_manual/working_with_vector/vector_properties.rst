@@ -2733,11 +2733,11 @@ Default values
 Policies
 ^^^^^^^^
 
-Field policies determine how values are assigned to fields during various editing operations:
+Field policies determine how values are initially assigned to fields during various editing operations:
 
-**Split and Duplicate Policies**
+**Split and Duplicate Features Policies**
 
-These policies apply when :guilabel:`Splitting features` or :guilabel:`Duplicating features`:
+These policies apply :guilabel:`When splitting features` or :guilabel:`When duplicating features`:
 
 * :guilabel:`Duplicate Values`: Keeps the existing value of the field for the new features.
 * :guilabel:`Use Default Value`: Resets the field by recalculating its :ref:`default value <default_values>`.
@@ -2746,9 +2746,9 @@ These policies apply when :guilabel:`Splitting features` or :guilabel:`Duplicati
 * :guilabel:`Use Ratio Geometries`: Recalculates the field value for all split portions
   by multiplying the existing value by ratio of the split parts lengths or areas.
 
-**Merge Policies**
+**Merge Features policies**
 
-These policies determine initial values when :guilabel:`Merging features`:
+These policies determine initial values :guilabel:`When merging features`:
 
 * :guilabel:`Remove Value`: Clears the field to an unset state (data provider may populate default value).
 * :guilabel:`Use Default Value`: Uses the default field value set in QGIS.
@@ -2763,10 +2763,7 @@ These policies determine initial values when :guilabel:`Merging features`:
 
 **Add Features policies**
 
-When adding new features, fields offer additional policies that control
-how their initial values are populated. These apply only to the
-:guilabel:`When adding features` operation and determine whether the
-field reuses the value last entered during the current editing session.
+These policies apply :guilabel:`When adding features`:
 
 Available options are:
 
@@ -2775,21 +2772,15 @@ Available options are:
   :ref:`default value <default_values>`.  
   If no default value is defined, the field starts unset.
 
-* :guilabel:`Reuse Last Entered Value`:  
-  The last value will be reused. A pin |mIconRememberEnabled| button is added to toggle the behavior.
-  When active, the last value will take priority over the default value.
-  If you disable |mIconRememberDisabled| the pin, the field reverts to using the default value
+* :guilabel:`Reuse Last Entered Value`:
   The last value will be reused. A pin button is added to toggle the behavior.
   If set to |rememberEnabled|, the entered value will be remembered
   and used for the next new feature.
   If set to |rememberDisabled|, the field reverts to using the default value
   for the next new feature.
 
-* :guilabel:`Allow Reuse of Last Entered Value`:  
+* :guilabel:`Allow Reuse of Last Entered Value`:
   The last value can be reused, however it will not be by default.
-  A pin |mIconRememberEnabled| button is added to toggle the behavior.
-  When active, the last value will take priority over the default value.
-  If you disable |mIconRememberDisabled| the pin, the field reverts to using the default value
   A pin button is added to toggle the behavior.
   If set to |rememberEnabled|, the entered value will be remembered
   and used for the next new feature.
