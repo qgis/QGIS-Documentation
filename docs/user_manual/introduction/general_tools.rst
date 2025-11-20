@@ -2259,6 +2259,22 @@ The assistant allows you to:
     before accelerating as the source values approach their maximum.
     Smaller exponents (less than ``1``) will do the opposite.
     An opacity value to use for symbols with NULL values can also be given.
+  * for width (line symbols): an interpolation is done over a range of minimum and maximum values
+    in order to assign each symbol the correct width.
+    The :guilabel:`Scale method` field controls how the interpolation is done
+    and what the output value represents.
+
+    * **Linear**: linearly interpolates the width of the symbol between the :guilabel:`Size from`
+      and the :guilabel:`Size to` when the :guilabel:`Source` expression value varies
+      from :guilabel:`value from` to :guilabel:`value to`.
+      Symbols width are proportional.
+    * **Exponential**: Also interpolates the width, but allows to control the exact power
+      used for scaling through the :guilabel:`Exponent` field.
+      Power values greater than ``1`` will cause the output values distribution to start slowly
+      before accelerating as the source values approach their maximum.
+      Smaller exponents (less than ``1``) will do the opposite.
+
+    The width to use for symbols with NULL values can also be given.
   * for size properties, the :guilabel:`Scale method` of representation which can
     be **Flannery**, **Exponential**, **Surface**, **Radius** or **Linear**
   * the :guilabel:`Exponent` to use for data scaling when the :guilabel:`Scale
