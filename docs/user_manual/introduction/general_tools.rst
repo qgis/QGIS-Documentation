@@ -2244,14 +2244,21 @@ The assistant allows you to:
   are applied to input features following a specific scaling method (see below for setting).
   You can override this logic: enable the transform option, click on the
   graphic to add break point(s) and drag the point(s) to apply a custom distribution.
-* Define the :guilabel:`Output` values: the options vary according to the
-  parameter to define. You can globally set:
+* Define the :guilabel:`Output` values: the options vary according to the parameter to define.
+  You can globally set:
 
-  * for a color setting, the :ref:`color ramp <color-ramp>` to apply to values
-    and the single color to use for NULL values
-  * for the others, the minimum and maximum values to apply to the selected
-    property as well as the size/angle/opacity value for ignored or NULL source
-    features
+  * for color: a linear interpolation of source values is done
+    over a given :ref:`color ramp <color-ramp>` in order to assign each symbol the correct color.
+    A color to use for symbols with NULL values can also be given.
+  * for rotation: a linear interpolation is done over a range of minimum and maximum angles
+    in order to assign each symbol the correct rotation.
+    An angle to use for symbols with NULL values can also be given.
+  * for opacity: a polynomial interpolation is done over a range of minimum and maximum opacity values.
+    The :guilabel:`Exponent` field dictates the way source values are mapped to the output range.
+    Power values greater than ``1`` will cause the output values distribution to start slowly
+    before accelerating as the source values approach their maximum.
+    Smaller exponents (less than ``1``) will do the opposite.
+    An opacity value to use for symbols with NULL values can also be given.
   * for size properties, the :guilabel:`Scale method` of representation which can
     be **Flannery**, **Exponential**, **Surface**, **Radius** or **Linear**
   * the :guilabel:`Exponent` to use for data scaling when the :guilabel:`Scale
