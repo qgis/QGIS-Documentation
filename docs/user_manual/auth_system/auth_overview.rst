@@ -146,7 +146,7 @@ will offer to erase the database.
 
    Password prompt after three invalid attempts
 
-.. _autentication_configurations:
+.. _authentication_configurations:
 
 Authentication Configurations
 -----------------------------
@@ -162,8 +162,20 @@ the :guilabel:`Authentication` tab of the QGIS Options dialog
 
    Configurations editor
 
-Use the |symbologyAdd| button to add a new configuration, the |symbologyRemove| button
-to remove configurations, and the |symbologyEdit| button to modify existing ones.
+To create a new authentication configuration:
+
+#. Press the |symbologyAdd| :sup:`Add a new authentication configuration`
+#. Provide a :guilabel:`Name` and optional :guilabel:`Resource` URL
+#. A seven-characters :guilabel:`ID` will be assigned to the configuration for identification purpose.
+   It can be customized after you pressed the |locked| :sup:`Unlock to edit ID` button.
+   Be aware that updating that ID may break things.
+#. Select the :ref:`target method <authentication_methods>` and fill the corresponding connection details
+#. Once done, click :guilabel:`Save` to save the configuration.
+   The saved configuration appears in the list of authentication configurations
+   and can be used with supported connections.
+
+The saved configuration can later be edited using |symbologyEdit| :sup:`Edit selected configuration`
+or removed using |symbologyRemove| :sup:`Delete selected configuration`.
 
 .. _figure_authconfigeditor_add:
 
@@ -223,18 +235,15 @@ version of QGIS if you intend to add it to an existing target install.
 
 API Header Authentication
 .........................
-The API Header authentication method allows you to connect to services that require custom HTTP headers, such as API keys.
-For example, if a WMS service requires an API key sent as a header (e.g. X-API-KEY), you can use this method to provide it.
+The API Header authentication method allows you to connect to services
+that require custom HTTP headers, such as API keys.
+For example, if a WMS service requires an API key sent as a header
+(e.g. ``X-API-KEY``), you can use this method to provide it.
 
-To create a new API Header authentication configuration follow steps explained in the
-:ref:`Authentication Configurations <autentication_configurations>` section and select the
-:guilabel:`API Header` method. Enter a :guilabel:`Name` and :guilabel:`Resource` (optional URL resource),
-then add the required headers by clicking the |symbologyAdd| button. Enter the :guilabel:`Header Name` and :guilabel:`Header Value`,
-you can add multiple headers as needed. To remove header, select it and click the |symbologyRemove| button or click
-the :guilabel:`Clear` button to remove all headers.
-Once done, click :guilabel:`Save` to save the configuration.
-
-The saved configuration appears in the list of authentication configurations and can be used with supported connections.
+You can add one or more headers with the |symbologyAdd| button; provide a
+:guilabel:`Header Name` and :guilabel:`Header Value` for each entry. Use
+|symbologyRemove| to delete the selected header or the :guilabel:`Clear`
+button to remove all entries.
 
 .. _figure_authmethod_api:
 
@@ -272,7 +281,7 @@ with a :guilabel:`Username`, :guilabel:`Password` and :guilabel:`Realm`.
 ESRI Token Authentication
 .........................
 
-The ESRI token authentication method is used for services that require ESRI token-based authentication.
+The ESRI token authentication method is used for :ref:`ArcGIS REST Servers <arcgis_rest>` that require token-based authentication.
 
 .. _figure_authmethod_esritoken:
 
@@ -281,10 +290,10 @@ The ESRI token authentication method is used for services that require ESRI toke
 
    ESRI Token authentication configs
 
-Identity-Cert Authentication
-............................
+Identity certificate authentication
+...................................
 
-The Identity-cert authentication method allows you to connect using a client identity certificate.
+The Identity certificate authentication method allows you to connect using a client :ref:`identity certificate <auth_identity>`.
 
 .. _figure_authmethod_identitycert:
 
@@ -293,10 +302,10 @@ The Identity-cert authentication method allows you to connect using a client ide
 
    Identity-cert authentication configs
 
-MapTiler HmacSha256 Authentication
-..................................
+MapTiler HMAC-SHA256 Authentication
+...................................
 
-The MapTiler HmacSha256 authentication method is used to connect to MapTiler services that require HMAC-SHA256 authorization.
+The MapTiler HMAC-SHA256 authentication method is used to connect to MapTiler services that require HMAC-SHA256 authorization.
 
 .. _figure_authmethod_maptiler:
 
@@ -308,11 +317,12 @@ The MapTiler HmacSha256 authentication method is used to connect to MapTiler ser
 OAuth2 Authentication
 .....................
 
-The OAuth2 authentication method is used to connect to service that require OAuth2 2.0 authorization,
+The OAuth2 authentication method is used to connect to services that require OAuth2 2.0 authorization,
 allowing secure access using client credential and token-based authentication.
 
-.. note:: The OAuth2 authentication method now allows using localhost as the redirect host,
-   providing compatibility with services that do not accept http://127.0.0.1 redirects (for example, Microsoft SharePoint).
+.. note:: The OAuth2 authentication method now allows using ``localhost`` as the redirect host,
+   providing compatibility with services that do not accept ``http://127.0.0.1`` redirects 
+   (for example, Microsoft SharePoint).
 
 .. _figure_authmethod_oauth2:
 
@@ -371,7 +381,7 @@ The Planetary Computer authentication method allows QGIS to access Microsoft Pla
 
 This method can be applied to STAC connections or directly to individual GDAL or point cloud layers. 
 When a layer is added, the authentication configuration is appended to its URI so QGIS uses it for network requests. 
-Support for encoding/decoding this configuration was also added to point cloud layers.
+Support for encoding/decoding this configuration is also available for point cloud layers.
 
 Master Password and Auth Config Utilities
 -----------------------------------------
