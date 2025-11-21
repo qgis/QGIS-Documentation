@@ -487,6 +487,8 @@ or standalone app that gains access to authentication credentials.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |locked| image:: /static/common/locked.png
+   :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
