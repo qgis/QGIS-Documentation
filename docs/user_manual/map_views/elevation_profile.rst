@@ -183,7 +183,7 @@ To create a profile view, you can:
       which can be added to the plot, but which currently aren't in the plot.
       Applying the dialog with selected layers will automatically mark them as having elevation data
       and immediately add them to the plot. Clicking the |Remove group action| :sup:`Remove group action`
-      button will removes the selected group while keeping its child layers: the child
+      button will remove the selected group while keeping its child layers: the child
       layers are promoted one level up in the tree instead of being deleted.
 
       .. tip:: Holding :kbd:`Ctrl` key, it is possible to drag and drop additional layers
