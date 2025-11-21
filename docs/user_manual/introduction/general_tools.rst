@@ -2216,35 +2216,91 @@ Using the data-defined assistant interface
 ..........................................
 
 When the |dataDefine| :sup:`Data-defined override` button is associated with a
-size, a rotation, an opacity or a color property, it has an :guilabel:`Assistant...`
-option that helps you change how the data is applied to the parameter for each
-feature. The assistant allows you to:
+size, a width, a rotation, an opacity or a color property, it has an :guilabel:`Assistant...`
+option that helps you change how the data is applied to the parameter for each feature.
+Basically, QGIS will scale a range of input values over a range of output values,
+and render each feature with their corresponding ouput value.
 
-* Define the :guilabel:`Input` data, ie:
+The assistant allows you to:
+
+* Define the :guilabel:`Input` data, i.e.:
 
   * :guilabel:`Source`: the attribute to represent, using a field or an |expression|
     :ref:`expression <vector_expressions>`
-  * the range of values to represent: you can manually enter the values or use
-    the |refresh| :sup:`Fetch value range from layer` button to fill
-    these fields automatically with the minimum and maximum values returned by
-    the :guilabel:`Source` expression applied to your data
-* |unchecked| :guilabel:`Apply transform curve`: by default, output values (see
-  below for setting) are applied to input features following a linear scale.
+  * the range of values to represent: you can manually enter the values
+    or use the |refresh| :sup:`Fetch value range from layer` button
+    to fill these fields automatically with the minimum and maximum values returned
+    by the :guilabel:`Source` expression applied to your data.
+    Features whose values are out of the given range will be represented
+    with the property of the closest limit of the output range.
+* |unchecked| :guilabel:`Apply transform curve`: by default, output values
+  are applied to input features following a specific scaling method (see below for setting).
   You can override this logic: enable the transform option, click on the
-  graphic to add break point(s) and drag the point(s) to apply a custom
-  distribution.
-* Define the :guilabel:`Output` values: the options vary according to the
-  parameter to define. You can globally set:
+  graphic to add break point(s) and drag the point(s) to apply a custom distribution.
+* Define the :guilabel:`Output` values: the options vary according to the parameter to define.
+  You can globally set:
 
-  * for a color setting, the :ref:`color ramp <color-ramp>` to apply to values
-    and the single color to use for NULL values
-  * for the others, the minimum and maximum values to apply to the selected
-    property as well as the size/angle/opacity value for ignored or NULL source
-    features
-  * for size properties, the :guilabel:`Scale method` of representation which can
-    be **Flannery**, **Exponential**, **Surface**, **Radius** or **Linear**
-  * the :guilabel:`Exponent` to use for data scaling when the :guilabel:`Scale
-    method` is of exponential type or when tweaking the opacity
+  * for color: a linear interpolation of source values is done
+    over a given :ref:`color ramp <color-ramp>` in order to assign each symbol the correct color.
+    A color to use for symbols with NULL values can also be given.
+  * for rotation: a linear interpolation is done over a range of minimum and maximum angles
+    in order to assign each symbol the correct rotation.
+    An angle to use for symbols with NULL values can also be given.
+  * for opacity: a polynomial interpolation is done over a range of minimum and maximum opacity values.
+    The :guilabel:`Exponent` field dictates the way source values are mapped to the output range.
+    Power values greater than ``1`` will cause the output values distribution to start slowly
+    before accelerating as the source values approach their maximum.
+    Smaller exponents (less than ``1``) will do the opposite.
+    An opacity value to use for symbols with NULL values can also be given.
+  * for width (line symbols): an interpolation is done over a range of minimum and maximum values
+    in order to assign each symbol the correct width.
+    The :guilabel:`Scale method` field controls how the interpolation is done
+    and what the output value represents.
+
+    * **Linear**: linearly interpolates the width of the symbol between the :guilabel:`Size from`
+      and the :guilabel:`Size to` when the :guilabel:`Source` expression value varies
+      from :guilabel:`value from` to :guilabel:`value to`.
+      Symbols width are proportional.
+    * **Exponential**: Also interpolates the width, but allows to control the exact power
+      used for scaling through the :guilabel:`Exponent` field.
+      Power values greater than ``1`` will cause the output values distribution to start slowly
+      before accelerating as the source values approach their maximum.
+      Smaller exponents (less than ``1``) will do the opposite.
+
+    The width to use for symbols with NULL values can also be given.
+  * for size (point symbols): an interpolation is done over a range of minimum and maximum values
+    in order to assign each symbol the correct size "diameter".
+    The :guilabel:`Scale method` field controls how the interpolation is done
+    and what the output value represents.
+
+    * **Radius**: linearly interpolates the diameter of the symbol between the :guilabel:`Size from`
+      and the :guilabel:`Size to` when the :guilabel:`Source` expression value varies
+      from :guilabel:`value from` to :guilabel:`value to`.
+      Symbols diameter are proportional.
+    * **Surface**: scales the symbol diameter according to the square root (power of ``0.5``)
+      of the :guilabel:`Source` expression value to linearly interpolate the area of the symbol
+      between the :guilabel:`Size from` and the :guilabel:`Size to` when the :guilabel:`Source`
+      expression value varies from :guilabel:`value from` to :guilabel:`value to`.
+      Symbols area are proportional.
+      This method reflects human perception of size variation better than the **radius** one.
+    * **Flannery**: Applies a compensation factor (power of ``0.57``) to the area interpolation,
+      in order to mitigate the eyes' perceptual underestimation of proportional areas.
+      Maybe relevant only for circular symbols.
+    * **Exponential**: Also interpolates the area, but allows to control the exact power
+      used for scaling through the :guilabel:`Exponent` field.
+      Power values greater than ``1`` will cause the output values distribution to start slowly
+      before accelerating as the source values approach their maximum.
+      Smaller exponents (less than ``1``) will do the opposite.
+
+    The size to use for symbols with NULL values can also be given.
+
+    .. _figure_symbology_scale_methods:
+
+    .. figure:: img/scale_methods.png
+       :align: center
+
+       Scaling values using different methods (from left to right): Radius - Surface - Flannery - Exponential of 2
+
 
 When compatible with the property, a live-update preview is displayed in the
 right-hand side of the dialog to help you control the value scaling.
@@ -2257,11 +2313,11 @@ right-hand side of the dialog to help you control the value scaling.
    Scaling feature size based on passengers field's value
 
 The values presented in the varying size assistant above will set the size
-'Data-defined override' with:
+'Data-defined override' with the editable formula below:
 
 ::
 
- coalesce(scale_exp("passengers", 9, 2000, 1, 10, 0.57), 0)
+ coalesce(scale_polynomial("passengers", 9, 2000, 1, 10, 0.57), 0)
 
 
 .. index:: Authentication
