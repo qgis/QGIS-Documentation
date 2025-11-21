@@ -293,7 +293,7 @@ The ESRI token authentication method is used for :ref:`ArcGIS REST Servers <arcg
 Identity certificate authentication
 ...................................
 
-The Identity certificate authentication method allows you to connect using a client :ref:`identity certificate <auth_identity>`.
+The Identity certificate authentication method allows you to connect using a client :ref:`identity certificate <authentication_identities>`.
 
 .. _figure_authmethod_identitycert:
 
