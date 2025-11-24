@@ -444,7 +444,7 @@ provides a text box for filling the path to the output result,
 and a drop-down :menuselection:`...` button for additional options
 (the availability depends on the algorithm you run):
 
-* :guilabel:`Skip Output`: if you are not interested in a given output for this parameter
+* :guilabel:`Skip Output`: if you are not interested in a given output of the algorithm
 * :guilabel:`Create Temporary Layer` (``TEMPORARY_OUTPUT``):
   the output is stored in a vector :ref:`temporary scratch layer <vector_new_scratch_layer>`.
 * :guilabel:`Save to File…`: you will be prompted with a save file dialog,
@@ -472,7 +472,7 @@ and a drop-down :menuselection:`...` button for additional options
   (or select the corresponding option in the context menu), the result will be saved as a temporary file
   in the corresponding default file format, and it will be deleted once you exit QGIS
   (take care with that, in case you save your project and it contains temporary layers).
-  The file is saved in the default `̀̀`TEMP`` folder on the machine,
+  The file is saved in the default ``TEMP`` folder on the machine,
   if :ref:`not overridden <overidden_temp_folder>`.
 
 * :guilabel:`Save to Geopackage…`: the output layer will be saved as a named table
