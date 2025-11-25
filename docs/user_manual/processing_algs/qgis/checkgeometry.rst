@@ -11,6 +11,15 @@ Check Geometry
       :class: toc-columns
 
 
+.. note::
+
+   Some algorithms may stop when they encounter features with invalid geometries.
+   To avoid this and allow the processing to continue, open |actionOptions|:sup:`Advanced options`
+   next to the :guilabel:`Input layer` and set :guilabel:`Invalid feature filtering` to
+   ``Do not Filter (Better Performance)``. This ensures that the algorithm does
+   not stop when invalid geometries are present.
+
+
 .. _qgischeckgeometrydangle:
 
 Dangle-end lines
@@ -138,7 +147,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgischeckgeometrydegeneratepolygons:
+.. _qgischeckgeometrydegeneratepolygon:
 
 Degenerate polygons
 -------------------
@@ -771,7 +780,7 @@ Checks intersections between line geometries within a layer.
 Intersections between two different lines are errors.
 
 .. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`,
-   :ref:`qgischeckgeometryselfintersections`
+   :ref:`qgischeckgeometryselfintersection`
 
 Parameters
 ..........
@@ -895,7 +904,7 @@ Checks if the input line layer features intersect with the check layer features.
 An input feature that intersects with a check layer feature is an error.
 
 .. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`,
-   :ref:`qgischeckgeometryselfintersections`
+   :ref:`qgischeckgeometryselfintersection`
 
 Parameters
 ..........
@@ -1507,7 +1516,7 @@ Self contacts are errors.
 
    Self-intersection vs self-contact.
 
-.. seealso:: :ref:`qgischeckgeometryselfintersections`
+.. seealso:: :ref:`qgischeckgeometryselfintersection`
 
 Parameters
 ..........
@@ -1622,7 +1631,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgischeckgeometryselfintersections:
+.. _qgischeckgeometryselfintersection:
 
 Self-intersections
 ------------------
@@ -2578,3 +2587,14 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |actionOptions| image:: /static/common/mActionOptions.png
+   :width: 1.5em
