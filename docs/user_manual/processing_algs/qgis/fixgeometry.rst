@@ -9,6 +9,15 @@ Fix Geometry
       :local:
       :depth: 1
 
+.. note::
+
+   Some algorithms may stop when they encounter features with invalid geometries.
+   To avoid this and allow the processing to continue, open |actionOptions|:sup:`Advanced options`
+   next to the :guilabel:`Input layer` and set :guilabel:`Invalid feature filtering` to
+   ``Do not Filter (Better Performance)``. This ensures that the algorithm does
+   not stop when invalid geometries are present.
+
+
 .. _qgisfixgeometrymissingvertex:
 
 Add missing vertices along borders
@@ -442,7 +451,7 @@ Delete features
 Deletes error features based on an error layer from some check geometry algorithms, such as:
 
 * :ref:`qgischeckgeometrycontained`
-* :ref:`qgischeckgeometrydegeneratepolygons`
+* :ref:`qgischeckgeometrydegeneratepolygon`
 * :ref:`qgischeckgeometrysegmentlength`
 * :ref:`qgischeckgeometryduplicate`
 
@@ -1326,7 +1335,7 @@ Split self-intersecting geometries
 ----------------------------------
 
 Splits self-intersecting geometries based on an error layer from the
-:ref:`qgischeckgeometryselfintersections` algorithm.
+:ref:`qgischeckgeometryselfintersection` algorithm.
 
 .. figure:: img/fix_geometry_splitselfintersectinggeometries.png
    :align: center
@@ -1492,3 +1501,13 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |actionOptions| image:: /static/common/mActionOptions.png
+   :width: 1.5em
