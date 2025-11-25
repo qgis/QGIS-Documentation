@@ -299,9 +299,12 @@ Parameters
        For each of the added layer-field combinations, a type can
        be chosen:
 
-       * :guilabel:`Points`
-       * :guilabel:`Structured lines`
-       * :guilabel:`Break lines`
+       * :guilabel:`Points`: Individual point features used as elevation/sample nodes in the triangulation.
+         These points form the vertices of the TIN triangles.
+       * :guilabel:`Structured lines`: Lines that connect points in a structured manner,
+         influencing the shape of the triangles in the TIN. These lines help define the surface structure.
+       * :guilabel:`Break lines`: Lines that act as barriers in the triangulation,
+         preventing triangles from crossing them and thus preserving important features in the surface.
 
        In the string, the layer-field elements are separated by
        ``'::|::'``.
@@ -555,9 +558,12 @@ Parameters
        For each of the added layer-field combinations, a type can
        be chosen:
 
-       * :guilabel:`Points`
-       * :guilabel:`Structured lines`
-       * :guilabel:`Break lines`
+       * :guilabel:`Points`: Individual point features used as elevation/sample nodes in the triangulation.
+         These points form the vertices of the TIN triangles.
+       * :guilabel:`Structured lines`: Lines that connect points in a structured manner,
+         influencing the shape of the triangles in the TIN. These lines help define the surface structure.
+       * :guilabel:`Break lines`: Lines that act as barriers in the triangulation,
+         preventing triangles from crossing them and thus preserving important features in the surface.
 
        In the string, the layer-field elements are separated by
        ``'::|::'``.
