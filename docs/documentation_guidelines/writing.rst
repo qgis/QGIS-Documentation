@@ -24,6 +24,7 @@ To each webpage of the documentation corresponds a ``.rst`` file.
 Sections used to structure the text are identified through their title which
 is underlined (and overlined for the first level).
 Same level titles must use same character for underline adornment.
+Precede section titles with a blank line.
 In QGIS Documentation, you should use following styles for chapter,
 section, subsection and minisec.
 
