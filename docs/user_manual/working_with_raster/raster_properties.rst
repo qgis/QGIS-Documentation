@@ -1183,7 +1183,7 @@ and select :guilabel:`Attribute Tables`.
 
    Accessing the raster attribute table
 
-When opening the :guilabel:`Attribute Table` for a raster layer that does not have an
+When opening the :guilabel:`Attribute Tables` for a raster layer that does not have an
 associated Raster Attribute Table, QGIS displays a notice informing that no
 attribute table is currently linked to the data source. In this state, the
 interface provides two options to define and associate a new attribute table:
