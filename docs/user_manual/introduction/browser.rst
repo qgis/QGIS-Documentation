@@ -337,7 +337,7 @@ each level of the dataset tree.
    |               | :menuselection:`Export Layer --> To file…` | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox|    |            |
    |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
    |               | :menuselection:`Manage -->                 |              |              |            |            |               |            |
-   |               | Rename Layer <layer_name>…`                | |checkbox|   | |checkbox|   |            |            |               |            |
+   |               | Rename Layer <layer_name>…`                | |checkbox|   | |checkbox|   |            |            | |checkbox|    |            | 
    |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
    |               | :menuselection:`Manage -->                 |              |              |            |            |               |            |
    |               | Delete Layer <layer_name>…`                | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox|    |            |
