@@ -129,25 +129,57 @@ msgstr "addVectorTileLayer"
 msgid "Vector Tiles Dataset Properties"
 msgstr "Vektorcsempe adathalmaz tulajdonságai"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:57
+msgid ""
+"The vector tiles :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr ""
+"A vektorcsempék :guilabel:`Rétegtulajdonságok` párbeszédablakában a "
+"következő szakaszok láthatóak:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:61
+msgid "|metadata| :ref:`Information <vectortilesinformationmenu>`"
+msgstr "|metadata| :ref:`Információ <vectortilesinformationmenu>`"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:239
 msgid "metadata"
 msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:62
+msgid "|system| :ref:`Source <vectortilessourcemenu>`"
+msgstr "|system| :ref:`Forrás <vectortilessourcemenu>`"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:255
 msgid "system"
 msgstr "system"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:63
+msgid "|symbology| :ref:`Symbology <vectortilesstylesmenu>`:sup:`[1]`"
+msgstr "|symbology| :ref:`Jelrendszer <vectortilesstylesmenu>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:247
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:64
+msgid "|labelingSingle| :ref:`Labels <vectortilesstylesmenu>`:sup:`[1]`"
+msgstr "|labelingSingle| :ref:`Címkék <vectortilesstylesmenu>`:sup:`[1]`"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:235
 msgid "labelingSingle"
 msgstr "labelingSingle"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:65
+msgid "|rendering| :ref:`Rendering <vectortilesrenderingmenu>`"
+msgstr "|rendering| :ref:`Megjelenítés <vectortilesrenderingmenu>`"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:241
 msgid "rendering"
 msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:66
+msgid "|editMetadata| :ref:`Metadata <vectortilesmetadatamenu>`"
+msgstr "|editMetadata| :ref:`Metaadatok <vectortilesmetadatamenu>`"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:233
 msgid "editMetadata"
@@ -181,6 +213,18 @@ msgstr ""
 "a réteg szolgáltatójától függően: név, URI, forrás típusa és útvonala, "
 "zoomszintek száma"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:82
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. More properties can be created and managed "
+"using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"egyéni tulajdonságok, amelyekkel további információkat tárolható a rétegről "
+"az aktuális projektben. További tulajdonságok hozhatók létre és kezelhetők "
+"PyQGIS segítségével, különösen a :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` metódus segítségével."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:85
 msgid ""
 "the Coordinate Reference System: name, units, method, accuracy, reference "
@@ -201,18 +245,143 @@ msgstr ""
 msgid "Source Properties"
 msgstr "Forrás fül"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:95
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected vector tile, including:"
+msgstr ""
+"A |system| :guilabel:`Forrás` lap alapvető információkat jelenít meg a "
+"kiválasztott vektorcsempéről, többek között:"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:98
 msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
 msgstr ""
 "a :guilabel:`Réteg neve`, ami megjelenik a :guilabel:`Rétegek` panelen;"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:99
+msgid ""
+"the :guilabel:`Coordinate Reference System`: Displays the layer's "
+":ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the "
+"layer's CRS, by selecting a recently used one in the drop-down list or "
+"clicking on the |setProjection| :sup:`Select CRS` button (see "
+":ref:`crs_selector`). Use this process only if the layer CRS is wrong or not"
+" specified."
+msgstr ""
+"a :guilabel:`Koordináta-rendszer`: Megjeleníti a réteg :ref:`Koordináta "
+"rendszerét (CRS) <layer_crs>`. A réteg CRS-ét a legördülő listából egy "
+"nemrég használt CRS kiválasztásával vagy a |setProjection| :sup:`Koordináta-"
+"rendszer kiválasztása` gombra kattintva változtathatja meg (lásd "
+":ref:`crs_selector`). Ezt az eljárást csak akkor használja, ha a réteg CRS-e"
+" rossz vagy nincs megadva.."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:245
 msgid "setProjection"
 msgstr "setProjection"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:112
+msgid "Vector Tiles Properties - Source Dialog"
+msgstr "Vektorcsempék tulajdonságai – Források párbeszédablak"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:118
+msgid "Symbology and Labels Properties"
+msgstr "Jelrendszer és címkék tulajdonságai"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:126
 msgid "Vector Tile Layer Symbology"
 msgstr "Egy vektorcsempe-réteg jelrendszere"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:129
+msgid "Setting rules"
+msgstr "Szabályok beállítása"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:131
+msgid ""
+"As vector tiles consist of point, line and polygon geometries, the "
+"respective symbols are available. To apply a cartographic style (with "
+"symbology and/or labels), you can either:"
+msgstr ""
+"Mivel a vektorcsempék pont-, vonal- és felületgeometriákból állnak, ezeknek "
+"megfelelő szimbólumok állnak rendelkezésre. Kartográfiai stílusozáshoz "
+"(szimbólumokkal és/vagy címkékkel) az alábbi lehetőségek közül választhat:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:134
+msgid ""
+"Use a :guilabel:`Style URL` when creating the :ref:`Vector Tiles Connection "
+"<vector_tiles>`. The symbology will be shown immediately in the |symbology| "
+":guilabel:`Symbology` tab after the layer is loaded in QGIS."
+msgstr ""
+"A :ref:`Vektorcsempe-kapcsolat <vector_tiles>` létrehozásakor adja meg a "
+":guilabel:`Stílus URL`-t. A szimbólumok azonnal megjelennek a |symbology| "
+":guilabel:`Jelrendszer` fülön, miután a réteg betöltődött a QGIS-be."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:137
+msgid ""
+"Or build your own symbology and labeling in the corresponding tabs of the "
+"layer properties. By default, QGIS assigns an identical symbol to the "
+"features based on their geometry type."
+msgstr ""
+"Vagy állítsa össze saját jelrendszerét és címkézését a rétegtulajdonságok "
+"megfelelő lapjain. Alapértelmezés szerint a QGIS azonos szimbólumot rendel a"
+" geometriai típusuk alapján az elemekhez."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:140
+msgid ""
+"In both cases, setting a style for a vector tile relies on a set of "
+":ref:`rules <rule_based_rendering>` applied to the features, indicating:"
+msgstr ""
+"Mindkét esetben a vektoros csempe stílusának beállítása az elemekre "
+"alkalmazott :ref:`szabályokon <rule_based_rendering>` alapul, amelyek az "
+"alábbiakból állnak:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:143
+msgid "a vector :ref:`symbol <symbol-selector>` or :ref:`label <showlabels>`"
+msgstr ""
+"egy vektoros :ref:`jelrendszer <symbol-selector>` vagy :ref:`címke "
+"<showlabels>`"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:144
+msgid ""
+"a :guilabel:`Label`, a title for comprehensive identification of the rule"
+msgstr "egy :guilabel:`Címke`, a szabály átfogó azonosítására szolgáló cím"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:145
+msgid ""
+"the name of a particular :guilabel:`Layer` the rule should apply to, if not "
+"applied to ``(all layers)``"
+msgstr ""
+"egy adott :guilabel:`Réteg` neve, amire a szabályt alkalmazni kell, ha az "
+"``(összes réteg)`` nincs megadva"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:146
+msgid ""
+"a :guilabel:`Min. Zoom` and a :guilabel:`Max. Zoom`, for the range of "
+"display. Symbology and labeling can be dependent on the zoom level."
+msgstr ""
+"a :guilabel:`Min. nagyítás` és a :guilabel:`Max. nagyítás`, a megjelenítési "
+"tartományhoz. A szimbólumok és a címkék a nagyítási szinttől függhetnek."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:148
+msgid ""
+"a :guilabel:`Filter`, a QGIS expression to identify the features to apply "
+"the style to"
+msgstr ""
+"egy :guilabel:`Szűrő`, egy QGIS kifejezés, amely azonosítja azokat az "
+"elemeket, amelyekre a stílust alkalmazni kell"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:150
+msgid ""
+"Each rule is added pressing the |symbologyAdd| :sup:`Add rule` button and "
+"selecting the type of symbols (:guilabel:`Marker`, :guilabel:`Line`, "
+":guilabel:`Fill`) corresponding to the features geometry type. You can as "
+"well |symbologyRemove| :sup:`Remove selected rules` or |symbologyEdit| "
+":sup:`Edit current rule`."
+msgstr ""
+"A szabályok hozzáadása a |symbologyAdd| :sup:`Szabály hozzáadása` gomb "
+"megnyomásával és a szimbólumok típusának (:guilabel:`Szimbólum`, "
+":guilabel:`Vonal`, :guilabel:`Kitöltés`) kiválasztásával történik, az elemek"
+" geometriatípusának megfelelően. A |symbologyRemove| :sup:`Kiválasztott "
+"szabályok eltávolítása` vagy az |symbologyEdit| :sup:`Aktuális szabály "
+"szerkesztése` gombokkal is módosíthatja a szabályokat."
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:249
 msgid "symbologyAdd"
@@ -226,6 +395,25 @@ msgstr "symbologyRemove"
 msgid "symbologyEdit"
 msgstr "symbologyEdit"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:155
+msgid ""
+"At the bottom the :guilabel:`Current Zoom` is shown. Check the |unchecked| "
+":guilabel:`Visible rules only` option at the top of the dialog to filter the"
+" list of rules to only those that are visible at the current zoom level. "
+"This makes it easier to work with complex vector styling and to locate "
+"troublesome rules. The |search| :guilabel:`Filter rules` text box also helps"
+" you easily find a rule, by searching the :guilabel:`Label`, "
+":guilabel:`Layer` and :guilabel:`Filter` fields."
+msgstr ""
+"Az alsó részen a :guilabel:`Aktuális nagyítás` jelenik meg. Jelölje be a "
+"párbeszédpanel tetején található |unchecked| :guilabel:`Csak látható "
+"szabályok` opciót, hogy a szabályok listáját csak azokra szűrje, amelyek az "
+"aktuális nagyítási szinten megjelennek. Ez megkönnyíti a komplex vektoros "
+"stílusok kezelését és a problémás szabályok megtalálását. A |search| "
+":guilabel:`Szabályok szűrése` szövegmező is segít a szabályok könnyű "
+"megtalálásában, a :guilabel:`Címke`, :guilabel:`Réteg` és :guilabel:`Szűrő` "
+"mezőkben történő kereséssel."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:257
 msgid "unchecked"
 msgstr "unchecked"
@@ -234,9 +422,27 @@ msgstr "unchecked"
 msgid "search"
 msgstr "search"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:162
+msgid ""
+"In :numref:`figure_vector_tile_symbology` we set up style for the "
+"OpenStreetMap ``landuse`` layer. For better visibility most of the rules are"
+" deselected."
+msgstr ""
+"A :numref:`figure_vector_tile_symbology` szerint beállítottuk az "
+"OpenStreetMap ``landuse`` rétegének stílusát. A jobb láthatóság érdekében a "
+"legtöbb szabályt kikapcsoltuk."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:166
 msgid "Layer rendering"
 msgstr "Rétegmegjelenítés"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:168
+msgid ""
+"From the :guilabel:`Symbology` tab, you can also set some options that "
+"invariably act on all features of the layer:"
+msgstr ""
+"A :guilabel:`Jelrendszer` fülön is elvégezhet pár beállítást, amelyek minden"
+" esetben a réteg összes elemére hatnak:"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:171
 msgid ""
@@ -250,9 +456,33 @@ msgstr ""
 "az igényeihez igazíthatja. A csúszka melletti menüben a láthatóság "
 "százalékos mértékét is pontosan meghatározhatja."
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:174
+msgid ""
+":guilabel:`Blending mode`: You can achieve special rendering effects with "
+"these tools that you may previously only know from graphics programs. The "
+"pixels of your overlaying and underlaying layers are mixed through the "
+"settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`Keverési mód`: Ezekkel az eszközökkel olyan különleges "
+"megjelenítési hatásokat érhet el, amelyeket korábban csak a grafikus "
+"programokból ismerhetett. Az átfedő és az alatta lévő rétegek pixelei a "
+":ref:`blend-modes` pontban leírtak szerint lesznek keverve."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:180
 msgid "Styles"
 msgstr "Stílusok"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:182
+msgid ""
+"Available at the bottom of most of the tabs, the :menuselection:`Styles -->`"
+" menu provides shortcuts to save, load, create, switch styles to apply to "
+"the vector tiles. Vector tiles can have their style saved from QGIS as "
+":guilabel:`QML` files and they can be imported as:"
+msgstr ""
+"A legtöbb fül alján elérhető :menuselection:`Stílusok -->` menü "
+"parancsikonokat tartalmaz a vektorcsempékre alkalmazandó stílusok "
+"mentéséhez, betöltéséhez, létrehozásához és váltásához. A vektorcsempék "
+"stílusa a QGIS-ből :guilabel:`QML` fájlként menthető, és importálható:"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:187
 msgid ":guilabel:`QML` files (:ref:`qgisstylefile`)"
@@ -262,13 +492,38 @@ msgstr ":guilabel:`QML` fájlból (:ref:`qgisstylefile`)"
 msgid ":guilabel:`MapBox GL Json` style configuration files"
 msgstr ":guilabel:`MapBox GL Json` stíluskonfigurációs fájlból"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:190
+msgid "More details at :ref:`save_layer_property`."
+msgstr "További részletek: :ref:`save_layer_property`."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:195
 msgid "Rendering Properties"
 msgstr "Megjelenítési tulajdonságok"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:197
+msgid ""
+"Under |unchecked| :guilabel:`Scale dependent visibility`, you can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scales, "
+"defining a range of scales in which features will be visible. Out of this "
+"range, they are hidden. The |mapIdentification| :sup:`Set to current canvas "
+"scale` button helps you use the current map canvas scale as boundary of the "
+"range visibility. See :ref:`label_scaledepend` for more information."
+msgstr ""
+"A :guilabel:`Méretarányfüggő láthatóság` alatt beállíthatja a "
+":guilabel:`Maximum (magába foglaló)` és :guilabel:`Minimum (kizáró)` "
+"méretarányt, meghatározva vele azt a méretarány-tartományt, amin belül az "
+"elemek megjelennek. Ezen a tartományon kívül rejtve lesznek. A "
+"|mapIdentification| :sup:`Beállítás a térképvászon aktuális méretarányára` "
+"gomb segít az aktuális térképvászon méretarányát használni a tartomány "
+"láthatóságának határaként. Lásd még: :ref:`label_scaledepend`."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:237
 msgid "mapIdentification"
 msgstr "mapIdentification"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:211
+msgid "Vector Tiles Properties - Rendering Dialog"
+msgstr "Vektorcsempék tulajdonságai – Megjelenítés párbeszédablak"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:218
 msgid "Metadata Properties"
