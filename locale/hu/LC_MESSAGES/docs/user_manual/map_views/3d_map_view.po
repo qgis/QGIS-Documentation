@@ -107,6 +107,15 @@ msgstr ""
 msgid "pan"
 msgstr "pan"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:39
+msgid ""
+"|zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole layers' "
+"extent, or the :ref:`reference extent <scene_extent>` if set"
+msgstr ""
+"|zoomFullExtent| :sup:`Nagyítás az egészre`: átméretezi a nézetet az összes "
+"réteg terjedelmére vagy a :ref:`referenciaterjedelemre <scene_extent>`, ha "
+"az be van állítva"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:517
 msgid "zoomFullExtent"
 msgstr "zoomFullExtent"
@@ -160,6 +169,14 @@ msgstr ""
 #: ../../docs/user_manual/map_views/3d_map_view.rst:499
 msgid "play"
 msgstr "play"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:48
+msgid ""
+"|sharingExport| :sup:`Export` menu allows to export the scene to various "
+"formats:"
+msgstr ""
+"Az |sharingExport| :sup:`Exportálás` menü lehetővé teszi a jelenet "
+"exportálását különböző formátumokba:"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:505
 msgid "sharingExport"
@@ -241,6 +258,14 @@ msgstr ""
 msgid "showPresets"
 msgstr "showPresets"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:67
+msgid ""
+"The |camera| :sup:`Camera` menu helps you control relation between the 2D "
+"and 3D views:"
+msgstr ""
+"A |camera| :sup:`Kamera` menü segítségével szabályozhatja a 2D és 3D nézetek"
+" közötti kapcsolatot:"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:479
 msgid "camera"
 msgstr "camera"
@@ -257,9 +282,40 @@ msgstr ""
 msgid ":guilabel:`Show visible camera area in 2D map view`"
 msgstr ":guilabel:`Kamera látóterületének megjelenítése a 2D térképnézeten`"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:72
+msgid ""
+":guilabel:`Set 3D scene on 2D map view`: allows to clip the 3D scene and "
+"display only the terrain and features intersecting an extent drawn on the 2D"
+" map canvas. More options are available in the :ref:`General configuration "
+"<scene_extent>` tab."
+msgstr ""
+":guilabel:`3D jelenet terjedelmének beállítása a 2D térképnézeten`: lehetővé"
+" teszi a 3D jelenet kivágását, és csak a 2D-s térképvásznon megrajzolt "
+"terjedelmet metsző terep és elemek megjelenítését. További beállítások "
+"érhetők el az :ref:`Általános beállítások <scene_extent>` fülön."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:75
+msgid ""
+"|shadow| :sup:`Effects` adds visual effects to the 3D rendering, such as "
+"showing :ref:`shadows <shadows>`, :ref:`eye dome lighting "
+"<eye_dome_lighting>` or :ref:`ambient occlusion <ambient_occlusion>`."
+msgstr ""
+"|shadow| :sup:`Effektek` vizuális effektusokat ad a 3D-s megjelenítéshez, "
+"például :ref:`árnyékokat <shadows>`, :ref:`eye dome lightning "
+"<eye_dome_lighting>` megvilágítást vagy :ref:`környezeti okklúziós "
+"<ambient_occlusion>` megjelenítését."
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:503
 msgid "shadow"
 msgstr "shadow"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:78
+msgid ""
+"The |options| :sup:`Options` button opens the dialog to configure the 3D map"
+" view :ref:`settings <scene_configuration>`."
+msgstr ""
+"A |options| :sup:`Konfigurálás` gomb megnyitja a 3D térképnézet "
+":ref:`beállításainak <scene_configuration>` párbeszédablakát."
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:495
 msgid "options"
@@ -301,13 +357,66 @@ msgstr ""
 "A 3D konfiguráció ablakban többféle lehetőség kínálkozik a 3D jelenet "
 "finomhangolására:"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:98
+msgid "General"
+msgstr "Általános"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:105
+msgid "The 3D Map General Configuration dialog"
+msgstr "A 3D térkép általános beállításainak párbeszédablaka"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:107
+msgid "Under the |general| :guilabel:`General` tab, you can:"
+msgstr ""
+"Az |general| :guilabel:`Általános` fülön a következőket állíthatja be:"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:487
 msgid "general"
 msgstr "general"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:109
+msgid ""
+"Limit the 3D scene's contents to a 2D map extent, using the :ref:`spatial "
+"extent selector <extent_selector>`: terrain and features are clipped at the "
+"specified extent and only the parts falling within the extent are loaded in "
+"the scene. Elevation range of the terrain, mesh and pointcloud layers is "
+"also taken into account so that the camera is not positioned below the "
+"scene's contents, particularly when using the terrain's vertical scale "
+"setting to exaggerate the elevation differences."
+msgstr ""
+"A 3D jelenet tartalmának korlátozása egy 2D térkép terjedelmére a "
+":ref:`térbeliterjedelem-választó <extent_selector>` használatával: a terep "
+"és az elemek a megadott terjedelemre vannak vágva, és csak a terjedelmen "
+"belül eső részek kerülnek betöltésre a jelenetbe. A terep, a háló és a "
+"pontfelhő rétegek magassági tartománya is figyelembe vételre kerül, hogy a "
+"kamera ne kerüljön a jelenet tartalma alá, különösen akkor, ha a terep "
+"függőleges méretarányának beállításával a magasságkülönbség el lett túlozva."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:117
+msgid ""
+"The set extent is also used as reference extent when pressing the "
+"|zoomFullExtent| :sup:`Zoom full` button in 3D map view."
+msgstr ""
+"A beállított terjedelem ilyenkor referenciaterjedelemként is szolgál, ha a "
+"3D térképnézetben megnyomja a |zoomFullExtent| :sup:`Nagyítás az egészre` "
+"gombot."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:119
+msgid ""
+"Check |checkbox| :guilabel:`Show in 2D map view` to display in the main map "
+"canvas a rubberband corresponding to the current extent of the 3D scene."
+msgstr ""
+"Jelölje be a |checkbox| :guilabel:`Megjelenítés a 2D térképnézeten` "
+"jelölőnégyzetet, hogy a fő térképvásznon megjelenjen a 3D jelenet aktuális "
+"terjedelmét ábrázoló gumiszalag."
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:123
 msgid "Terrain"
 msgstr "Terep"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:130
+msgid "The 3D Map Terrain Configuration dialog"
+msgstr "A 3D térkép terepi beállításainak párbeszédablaka"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:132
 msgid ""
@@ -350,6 +459,10 @@ msgstr ""
 #: ../../docs/user_manual/map_views/3d_map_view.rst:147
 msgid "a loaded :guilabel:`Mesh` dataset"
 msgstr "egy betöltött :guilabel:`Háló` adathalmaz"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:148
+msgid "a :guilabel:`Quantized Mesh` layer from the project"
+msgstr "egy :guilabel:`Kavántált háló` réteg a projektből"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:149
 msgid ""
@@ -504,6 +617,22 @@ msgstr ""
 msgid "The 3D Map Lights Configuration dialog"
 msgstr "A 3D térkép megvilágítási beállítások párbeszédablaka"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:216
+msgid "Effects"
+msgstr "Hatások"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:223
+msgid "The 3D Map Effects Configuration dialog"
+msgstr "A 3D térkép effektusai beállításainak párbeszédablaka"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:227
+msgid ""
+"Check |unchecked| :guilabel:`Show shadows` to display shadows within your "
+"scene, given:"
+msgstr ""
+"A jelenetre vetett árnyékok megjelenítéséhez jelölje be az |unchecked| "
+":guilabel:`Árnyékok megjelenítése` jelölőnégyzetet. Beállítási lehetőségek:"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:230
 msgid "a :guilabel:`Directional light`"
 msgstr ":guilabel:`Irányított fényforrás`"
@@ -535,6 +664,93 @@ msgid ""
 msgstr ""
 ":guilabel:`Árnyéktérkép felbontása`: hogy az árnyékok élesebbek legyenek. Ha"
 " a felbontási paraméter túl magas, akkor a teljesítmény csökkenhet."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:241
+msgid ""
+"|unchecked| :guilabel:`Show Eye Dome Lighting` (EDL): a post processing "
+"effect which enhances depth perception. Each pixel's depth (distance off the"
+" camera) is compared to its neighboring pixels' depth and gets highlighted "
+"according to that depth difference, making the edges stand out. Affects the "
+"whole scene and can be combined with :ref:`Screen Space Ambient Occlusion "
+"<ambient_occlusion>`. Following parameters can be controlled:"
+msgstr ""
+"|unchecked| :guilabel:`Eye Dome Lighting megjelenítése` (EDL): egy "
+"utómunkálati effektus, amely javítja a mélységérzetet. Minden pixel "
+"mélységét (a kamerától való távolságát) összehasonlítja a szomszédos pixelek"
+" mélységével, és a mélységkülönbségnek megfelelően kiemeli, így a szélek "
+"jobban kiemelkednek. Az egész jelenetre hatással van, és kombinálható a "
+":ref:`Képernyőterületi környezeti okklúzió <ambient_occlusion>` hatással. A "
+"következő paraméterek szabályozhatók:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:248
+msgid ""
+":guilabel:`Lighting strength`: increases the contrast, allowing for better "
+"depth perception"
+msgstr ""
+":guilabel:`Megvilágítás erőssége`: növeli a kontrasztot, javítja a "
+"mélységérzetet"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:249
+msgid ""
+":guilabel:`Lighting distance`: represents the distance of the used pixels "
+"off the center pixel and has the effect of making edges thicker."
+msgstr ""
+":guilabel:`Megvilágítás távolsága`: a felhasznált pixelek középső pixeltől "
+"mért távolságát jelöli, és az élek vastagabbá tételéért felelős."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:254
+msgid ""
+"Add screen-space |unchecked| :guilabel:`Ambient Occlusion` (SSAO): a post "
+"processing effect which also enhances depth perception by applying a darker "
+"shading to areas which are less exposed to ambient lighting. Affects the "
+"whole scene and can be combined with :ref:`Eye dome Lighting "
+"<eye_dome_lighting>`. Following parameters can be controlled:"
+msgstr ""
+"Képernyőterületi |unchecked| :guilabel:`Környezeti okklúzió` (SSAO): egy "
+"utófeldolgozási effektus, amely a mélységérzetet is javítja azáltal, hogy "
+"sötétebb árnyalatot alkalmaz azokra a területekre, amelyek kevésbé vannak "
+"kitéve a környezeti fénynek. Az egész jelenetre hatással van, és "
+"kombinálható az :ref:`Eye Dome Lighting <eye_dome_lighting>` hatással. A "
+"következő paraméterek szabályozhatók:"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:260
+msgid ""
+":guilabel:`Radius`: how far we will reach to calculate ambient occlusion"
+msgstr ""
+":guilabel:`Radius`: milyen távolságra érjen el a környezeti okklúzió "
+"kiszámítása"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:261
+msgid ""
+":guilabel:`Intensity`: how strong the effect should be (higher values make "
+"things darker)"
+msgstr ""
+":guilabel:`Intenzitás`: az effektus erőssége (a magasabb értékek sötétebbé "
+"teszik az objektumokat)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:262
+msgid ""
+":guilabel:`Occlusion threshold`: how many neighboring points need to be "
+"occluded for the effect to appear (lower values than 50% will make the "
+"output darker, but possibly providing greater range of occlusion)"
+msgstr ""
+":guilabel:`Okklúzió küszöbértéke`: egy pont hány szomszédos pontot kell "
+"kitakarjon ahhoz, hogy a hatás megjelenjen (50% alatti értékek sötétebbé "
+"teszik a kimenetet, de nagyobb okklúziós tartományt biztosíthatnak)"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:270
+msgid ""
+"Rendering Point clouds in 3D map using Eye Dome Lighting (EDL) and/or "
+"Screen-Space Ambient Occlusion (SSAO)"
+msgstr ""
+"Pontfelhők megjelenítése 3D térképen Eye Dome Lighting (EDL) és/vagy "
+"képernyőterületi környezeti okklúzió (SSAO) használatával"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:272
+msgid ""
+"From top, left to right: No effect -- SSAO only -- EDL only -- SSAO and EDL"
+msgstr ""
+"Fentről le, balról jobbra: Nincs hatás – Csak SSAO – Csak EDL – SSAO és EDL"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:276
 msgid "Camera & Skybox"
@@ -645,7 +861,11 @@ msgstr ""
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:325
 msgid "Advanced"
-msgstr "Bővített"
+msgstr "Speciális"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:332
+msgid "The 3D Map Advanced Configuration dialog"
+msgstr "A 3D térkép speciális beállításainak párbeszédablaka"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:334
 msgid ""
@@ -721,6 +941,10 @@ msgstr ""
 msgid "|unchecked| :guilabel:`Show camera's view center`"
 msgstr "|unchecked| :guilabel:`Kamera nézetközpontjának megjelenítése`"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:358
+msgid "|unchecked| :guilabel:`Show camera's rotation center`"
+msgstr "|unchecked| :guilabel:`Kamera forgáspontjának megjelenítése`"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:359
 msgid ""
 "|unchecked| :guilabel:`Show light sources`: shows a sphere at light source "
@@ -730,6 +954,44 @@ msgstr ""
 "|unchecked| :guilabel:`Fényforrások megjelenítése`: egy gömböt jelenít meg a"
 " fényforrás kezdőpontjában, lehetővé téve a fényforrások könnyebb "
 "áthelyezését és elhelyezését a jelenet tartalmához képest"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:361
+msgid "|unchecked| :guilabel:`Show frames per second (FPS)`"
+msgstr "|unchecked| :guilabel:`Képkockasebesség (FPS) megjelenítése`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:362
+msgid ""
+"|unchecked| :guilabel:`Show debug overlay`: visual overlay which displays "
+"some useful debugging and profiling information. This allows in particular "
+"to quickly see the frame graph and the scene graph."
+msgstr ""
+"|unchecked| :guilabel:`Hibakeresési fedvény megjelenítése`: vizuális rátét, "
+"amely néhány hasznos hibakeresési és profilozási információt jelenít meg, "
+"lehetővé téve a képkockagrafikon és a jelenetgrafikon gyors megtekintését."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:365
+msgid ""
+"|unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black "
+"image from the point of view of the light used for shadows (for "
+"troubleshooting). The widget is set with a proportional :guilabel:`Size` to "
+"the 3D map view's, and docked in a :guilabel:`Corner`."
+msgstr ""
+"|unchecked| :guilabel:`Árnyéktérkép hibakeresése`: a jelenetet vörös-fekete "
+"képként jeleníti meg az árnyékokhoz használt fény nézőpontjából (hibakeresés"
+" céljából). A vezérlő :guilabel:`Mérete` a 3D térképnézethez képest "
+"arányosan adható meg, és az egyik :guilabel:`Sarokba` van dokkolva."
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:369
+msgid ""
+"|unchecked| :guilabel:`Debug Depth Map`: renders the scene's depth map as an"
+"  image with nearer pixels being darker (for troubleshooting). The widget is"
+" set with a proportional :guilabel:`Size` to the 3D map view's, and docked "
+"in a :guilabel:`Corner`."
+msgstr ""
+"|unchecked| :guilabel:`Mélységtérkép hibakeresése`: a jelenet "
+"mélységtérképét jeleníti meg képként, amin a közelebbi pixelek sötétebbek "
+"(hibakeresési célból). A vezérlő :guilabel:`Mérete` a 3D térképnézethez "
+"képest arányosan adható meg, és az egyik :guilabel:`Sarokba` van dokkolva."
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:378
 msgid "Navigation options"
