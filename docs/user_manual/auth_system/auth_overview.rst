@@ -146,6 +146,8 @@ will offer to erase the database.
 
    Password prompt after three invalid attempts
 
+.. _authentication_configurations:
+
 Authentication Configurations
 -----------------------------
 
@@ -160,8 +162,20 @@ the :guilabel:`Authentication` tab of the QGIS Options dialog
 
    Configurations editor
 
-Use the |symbologyAdd| button to add a new configuration, the |symbologyRemove| button
-to remove configurations, and the |symbologyEdit| button to modify existing ones.
+To create a new authentication configuration:
+
+#. Press the |symbologyAdd| :sup:`Add a new authentication configuration`
+#. Provide a :guilabel:`Name` and optional :guilabel:`Resource` URL
+#. A seven-characters :guilabel:`ID` will be assigned to the configuration for identification purpose.
+   It can be customized after you pressed the |locked| :sup:`Unlock to edit ID` button.
+   Be aware that updating that ID may break things.
+#. Select the :ref:`target method <authentication_methods>` and fill the corresponding connection details
+#. Once done, click :guilabel:`Save` to save the configuration.
+   The saved configuration appears in the list of authentication configurations
+   and can be used with supported connections.
+
+The saved configuration can later be edited using |symbologyEdit| :sup:`Edit selected configuration`
+or removed using |symbologyRemove| :sup:`Delete selected configuration`.
 
 .. _figure_authconfigeditor_add:
 
@@ -219,12 +233,55 @@ QGIS will need to be restarted for the new dropped-in plugin to become
 available to the user. Ensure your plugin is compiled against the same target
 version of QGIS if you intend to add it to an existing target install.
 
+API Header Authentication
+.........................
+The API Header authentication method allows you to connect to services
+that require custom HTTP headers, such as API keys.
+For example, if a WMS service requires an API key sent as a header
+(e.g. ``X-API-KEY``), you can use this method to provide it.
+
+You can add one or more headers with the |symbologyAdd| button; provide a
+:guilabel:`Header Name` and :guilabel:`Header Value` for each entry. Use
+|symbologyRemove| to delete the selected header or the :guilabel:`Clear`
+button to remove all entries.
+
+.. _figure_authmethod_api:
+
+.. figure:: img/auth_method_api_header.png
+   :align: center
+
+   API Header authentication configs
+
+AWS S3 Authentication
+.....................
+
+The AWS S3 authentication method allows you to connect to Amazon S3 resources by providing
+a :guilabel:`Name`, :guilabel:`Resource`, :guilabel:`Username`, :guilabel:`Password`, and :guilabel:`Region`.
+
+.. _figure_authmethod_awss3:
+
+.. figure:: img/auth_method_awss3.png
+   :align: center
+
+   AWS S3 authentication configs
+
+Basic Authentication
+....................
+
+The Basic authentication method is used for services that require standard HTTP authentication
+with a :guilabel:`Username`, :guilabel:`Password` and :guilabel:`Realm`.
+
 .. _figure_authmethod_http:
 
 .. figure:: img/auth-config-create_basic-auth.png
    :align: center
 
    Basic HTTP authentication configs
+
+ESRI Token Authentication
+.........................
+
+The ESRI token authentication method is used for :ref:`ArcGIS REST Servers <arcgis_rest>` that require token-based authentication.
 
 .. _figure_authmethod_esritoken:
 
@@ -233,12 +290,51 @@ version of QGIS if you intend to add it to an existing target install.
 
    ESRI Token authentication configs
 
+Identity certificate authentication
+...................................
+
+The Identity certificate authentication method allows you to connect using a client :ref:`identity certificate <authentication_identities>`.
+
+.. _figure_authmethod_identitycert:
+
+.. figure:: img/auth_method_identity_cert.png
+   :align: center
+
+   Identity-cert authentication configs
+
+MapTiler HMAC-SHA256 Authentication
+...................................
+
+The MapTiler HMAC-SHA256 authentication method is used to connect to MapTiler services that require HMAC-SHA256 authorization.
+
+.. _figure_authmethod_maptiler:
+
+.. figure:: img/auth_method_maptiler.png
+   :align: center
+
+   MapTiler HmacSha256 authentication configs
+
+OAuth2 Authentication
+.....................
+
+The OAuth2 authentication method is used to connect to services that require OAuth2 2.0 authorization,
+allowing secure access using client credential and token-based authentication.
+
+.. note:: The OAuth2 authentication method now allows using ``localhost`` as the redirect host,
+   providing compatibility with services that do not accept ``http://127.0.0.1`` redirects 
+   (for example, Microsoft SharePoint).
+
 .. _figure_authmethod_oauth2:
 
 .. figure:: img/auth-config-create_oauth2.png
    :align: center
 
    OAuth2 authentication configs
+
+PKI-Paths Authentication
+........................
+
+The PKI-Paths authentication method allows you to connect using separate certificate and key files stored on your system.
 
 .. _figure_authmethod_pki:
 
@@ -247,6 +343,12 @@ version of QGIS if you intend to add it to an existing target install.
 
    PKI paths authentication configs
 
+PKI-PKCS#12 Authentication
+..........................
+
+The PKI-PKCS#12 authentication method allows you to connect using a single bundle file
+containing both the certificate and private key, with an optional passphrase for the key.
+
 .. _figure_authmethod_pkcs:
 
 .. figure:: img/auth-config-create_pkcs12-paths.png
@@ -254,18 +356,6 @@ version of QGIS if you intend to add it to an existing target install.
 
    PKI PKCS#12 file paths authentication configs
 
-.. _figure_authmethod_stored:
-
-.. figure:: img/auth-config-create_stored-identity2.png
-   :align: center
-
-   Stored Identity authentication configs
-
-.. note::
-
-   The Resource URL is currently an *unimplemented* feature that will eventually
-   allow a particular configuration to be auto-chosen when connecting to
-   resources at a given URL.
 
 Master Password and Auth Config Utilities
 -----------------------------------------
@@ -371,6 +461,8 @@ or standalone app that gains access to authentication credentials.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |locked| image:: /static/common/locked.png
+   :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
