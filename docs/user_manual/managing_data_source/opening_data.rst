@@ -1140,14 +1140,12 @@ Optionally, you can activate the following options:
 * |checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter
   schemas for MS SQL connection. If enabled, only checked schemas will be displayed.
   You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` any schema in the list.
-  Renaming a Vector Table (MS SQL)
+ 
+Renaming a Vector Table (MS SQL)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-QGIS allows you to rename a vector table in Microsoft SQL Server. You can do this using:
 
-* **Browser Panel** → Right‑click the table → **Rename**
-* **DB Manager** → Select the table → **Table** menu → **Rename**
-
-This feature uses the new provider capability added to the MSSQL data provider.
+* In :guilabel:`Browser Panel`, right-click the table and select :menuselection:`Manage --> Rename Layer`.
+* In :guilabel:`DB Manager`, select the table, then choose :menuselection:`Table --> Rename`.
 
 
 .. _create_hana_connection:
