@@ -35,6 +35,22 @@ msgstr ""
 "<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
 "van lefordítva."
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:2
+msgid "3D Tiles"
+msgstr "3D csempék"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:14
+msgid "Convert B3DM to GLTF"
+msgstr "B3DM konvertálása GLTF-be"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:16
+msgid ""
+"Converts files from the legacy :file:`.B3DM` format to :file:`.GLTF` or "
+":file:`.GLB`."
+msgstr ""
+"Az elavult :file:`.B3DM` formátumú fájlokat :file:`.GLTF` vagy :file:`.GLB` "
+"formátumba konvertálja."
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:19
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:79
 msgid "Parameters"
@@ -68,10 +84,31 @@ msgstr "Típus"
 msgid "Description"
 msgstr "Leírás"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:30
+msgid "**Input B3DM**"
+msgstr "**Bemeneti B3DM**"
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:31
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:91
 msgid "``INPUT``"
 msgstr "``INPUT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:32
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:58
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:92
+msgid "[3D Tile]"
+msgstr "[3D csempe]"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:33
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:93
+msgid "Input file to convert."
+msgstr "Konvertálandó bemeneti fájl."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:56
+msgid "**Output file**"
+msgstr "**Kimeneti fájl**"
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:35
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:57
@@ -81,6 +118,13 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:38
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Alapértelmezett: ``[Mentés ideiglenes fájlba]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:39
+msgid ""
+"Specify the output 3D tile file. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Adja meg a kimeneti 3D csempefájlt. :ref:`Ezek egyike: "
+"<output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
@@ -96,10 +140,18 @@ msgstr "Mentés fájlba…"
 msgid "Outputs"
 msgstr "Kimenetek"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:59
+msgid "Output layer in :file:`.GLTF` format."
+msgstr "Kimeneti réteg :file:`.GLTF` formátumban."
+
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:62
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:140
 msgid "Python code"
 msgstr "Python kód"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:64
+msgid "**Algorithm ID**: ``native:b3dmtogltf``"
+msgstr "**Algoritmus azonosítója**: ``native:b3dmtogltf``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -108,11 +160,32 @@ msgid ""
 "and values. See :ref:`processing_console` for details on how to run "
 "processing algorithms from the Python console."
 msgstr ""
-"Az *algoritmus azonosító* akkor jelenik meg, ha az egérmutatót az algoritmus"
-" fölé viszi a Feldolgozás eszköztáron. A *paraméterszótár* tartalmazza a "
-"paraméter NAME-eket és érékeket. A feldolgozási algoritmusok Python "
-"konzolról történő futtatásával kapcsolatos részletekért lásd a "
+"Az *algoritmus azonosítója* akkor jelenik meg, ha az egérmutatót az "
+"algoritmus fölé viszi a Feldolgozás eszköztáron. A *paraméterszótár* "
+"tartalmazza a paraméter NAME-eket és érékeket. A feldolgozási algoritmusok "
+"Python konzolról történő futtatásával kapcsolatos részletekért lásd a "
 ":ref:`processing_console` fejezetet."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:74
+msgid "Convert GLTF to vector features"
+msgstr "GLTF vektoros elemekké alakítása"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:76
+msgid ""
+"Converts :file:`.GLTF` or :file:`.GLB` file contents to standard vector "
+"layer formats."
+msgstr ""
+"A :file:`.GLTF` vagy :file:`.GLB` fájlok tartalmát szabványos vektorréteg-"
+"formátumokká konvertálja."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:90
+msgid "**Input GLTF**"
+msgstr "**Bemeneti GLTF**"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:94
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:130
+msgid "**Output polygons**"
+msgstr "**Kimeneti felületek**"
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:96
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:108
@@ -124,11 +197,75 @@ msgstr " Opcionális"
 msgid "``OUTPUT_POLYGONS``"
 msgstr "``OUTPUT_POLYGONS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:98
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:132
+msgid "[vector: polygon]"
+msgstr "[vektor: felület]"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:100
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:112
+msgid "Default: ``[Create temporary layer]``"
+msgstr "Alapértelmezett: ``[Ideiglenes réteg létrehozása]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:101
+msgid ""
+"Specify the output vector layer to store polygon features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Adja meg a kimeneti vektorréteget a felületelemek tárolásához. :ref:`Ezek "
+"egyike: <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "Kimenet kihagyása"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "Ideiglenes réteg létrehozása (``TEMPORARY_OUTPUT``)"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "Save to Geopackage…"
+msgstr "Mentés Geopackage-be…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Save to Database Table…"
+msgstr "Mentés adatbázistáblába…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "The file encoding can also be changed here."
+msgstr "A fájl kódolása is módosítható itt."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:106
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:134
+msgid "**Output lines**"
+msgstr "**Kimeneti vonalak**"
 
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:109
 #: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:135
 msgid "``OUTPUT_LINES``"
 msgstr "``OUTPUT_LINES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:110
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:136
+msgid "[vector: line]"
+msgstr "[vektor: vonal]"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:113
+msgid ""
+"Specify the output vector layer to store line features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Adja meg a kimeneti vektorréteget a vonalelemek tárolásához. :ref:`Ezek "
+"egyike: <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:133
+msgid "A vector layer storing the polygon features in input layer."
+msgstr "A bemeneti réteg felületelemeit tároló vektorréteg."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:137
+msgid "A vector layer storing the line features in input layer."
+msgstr "A bemeneti réteg vonalelemeit tároló vektorréteg."
+
+#: ../../docs/user_manual/processing_algs/qgis/3dtiles.rst:142
+msgid "**Algorithm ID**: ``native:gltftovector``"
+msgstr "**Algoritmus azonosítója**: ``native:gltftovector``"
