@@ -1140,6 +1140,13 @@ Optionally, you can activate the following options:
 * |checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter
   schemas for MS SQL connection. If enabled, only checked schemas will be displayed.
   You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` any schema in the list.
+ 
+Renaming a Vector Table (MS SQL)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* In :guilabel:`Browser Panel`, right-click the table and select :menuselection:`Manage --> Rename Layer`.
+* In :guilabel:`DB Manager`, select the table, then choose :menuselection:`Table --> Rename`.
+
 
 .. _create_hana_connection:
 
