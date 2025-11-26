@@ -150,6 +150,16 @@ You can use tags to emphasize items.
 
      ``layer name``
 
+* **Database, table, column names**
+
+  When referring to databases, tables or columns, format as inline code:
+
+  .. code-block:: rst
+
+     ``database_name``
+     ``table_name``
+     ``column_name``
+
 
 .. _my_anchor:
 
