@@ -713,12 +713,86 @@ msgstr ""
 ":guilabel:`Függvényfájlba` vagy a :guilabel:`Projekt függvényei` közé menti "
 "el."
 
+#: ../../docs/user_manual/expressions/expression.rst:341
+msgid ""
+"If you select :guilabel:`Function file`, you need to enter a name for the "
+"Python :file:`.py` file, which is based on a QGIS template file and is "
+"stored in the :file:`/python/expressions` folder under the active :ref:`user"
+" profile <user_profiles>` directory, thus available for all projects you may"
+" open with that profile."
+msgstr ""
+"Ha a :guilabel:`Függvényfájl` lehetőséget választja, akkor meg kell adnia a "
+"Python :file:`.py` fájl nevét, amely egy QGIS sablonfájlon alapul, és az "
+"aktív :ref:`felhasználói profil <user_profiles>` könyvtár alatti "
+":file:`/python/expressions` mappában található, így minden olyan projekthez "
+"elérhető, amelyet ezzel a profillal nyit meg."
+
+#: ../../docs/user_manual/expressions/expression.rst:346
+msgid ""
+"Custom Python functions stored as Function files are auto loaded whenever "
+"you start a new project under the user profile. Be aware that for sharing "
+"such Python functions, you need to share the :file:`.py` file in the "
+":file:`/python/expressions` folder."
+msgstr ""
+"A Függvény fájlként tárolt egyéni Python függvények automatikusan "
+"betöltődnek, amikor új projektet indít a felhasználói profil alatt. Ne "
+"feledje, hogy az ilyen Python függvények megosztásához a "
+":file:`/python/expressions` mappában lévő :file:`.py` fájlt kell "
+"megosztania."
+
+#: ../../docs/user_manual/expressions/expression.rst:351
+msgid ""
+"If you select :guilabel:`Project functions`, the new function is stored in "
+"the project file and only available for that project."
+msgstr ""
+"Ha a :guilabel:`Projekt függvényei` lehetőséget választja, az új függvény a "
+"projektfájlban lesz eltárolva, és csak az adott projektben lesz elérhető."
+
+#: ../../docs/user_manual/expressions/expression.rst:354
+msgid ""
+"Custom Python functions stored as Project functions can be easily shared by "
+"sharing the project file where they were saved. When opening a project with "
+"project functions, QGIS can load or ignore them depending on whether "
+":ref:`embedded Python code is enabled <load_project_code>`."
+msgstr ""
+"A projektfüggvényként tárolt egyéni Python-függvények könnyen megoszthatók a"
+" projektfájl megosztásával, ahová az el lett mentve. Egy projektfüggvényeket"
+" tartalmazó projekt megnyitásakor a QGIS be tudja tölteni vagy figyelmen "
+"kívül tudja hagyni azokat, attól függően, hogy az engedélyezve van-e a "
+":ref:`beágyazott Python kód <load_project_code>` beállításban."
+
 #: ../../docs/user_manual/expressions/expression.rst:359
 msgid ""
 "A new item is added in the left panel of the :guilabel:`Function Editor` "
 "tab."
 msgstr ""
 "A :guilabel:`Függvényszerkesztő` fül bal oldali panelje új elemmel bővül."
+
+#: ../../docs/user_manual/expressions/expression.rst:361
+msgid ""
+"The right panel displays the content of the file: a python script template."
+msgstr ""
+"A jobb oldali panel a fájl tartalmát jeleníti meg: egy Python script "
+"sablonját."
+
+#: ../../docs/user_manual/expressions/expression.rst:362
+msgid ""
+"Uncomment the code block and start editing it according to your needs. You "
+"can rely on code autocompletion, code formatting and typing helpers, as "
+"defined in :ref:`console_options`."
+msgstr ""
+"Vegye ki a kódblokkot a kikommentelésből, és kezdje el szerkeszteni az "
+"igényeinek megfelelően. Használhatja a kód automatikus kiegészítését, a kód "
+"formázását és a gépelési segédprogramokat, a :ref:`console_options` "
+"beállításainak megfelelően."
+
+#: ../../docs/user_manual/expressions/expression.rst:366
+msgid ""
+"You will find in the :guilabel:`Help` widget general information for setting"
+" the @qgsfunction decorator."
+msgstr ""
+"A :guilabel:`Súgó` talál általános információkat a @qgsfunction dekorátor "
+"beállításához."
 
 #: ../../docs/user_manual/expressions/expression.rst:368
 msgid ""
@@ -812,6 +886,57 @@ msgstr ""
 "A ``group='Custom'`` argumentum azt a csoportot jelöli, amelyben a "
 "függvénynek szerepelnie kell a Kifejezés párbeszédablakban."
 
+#: ../../docs/user_manual/expressions/expression.rst:416
+msgid ""
+"``usesgeometry``: Set this to :const:`True` if the expression requires "
+"access to the features geometry. By default :const:`False`."
+msgstr ""
+"``usesgeometry``: állítsa :const:`True`-ra, ha a kifejezésnek szüksége van "
+"az elemek geometriájához való hozzáférésre. Alapértelmezés szerint "
+":const:`False`."
+
+#: ../../docs/user_manual/expressions/expression.rst:418
+msgid ""
+"``handlesnull``: Set this to :const:`True` if the expression has custom "
+"handling for NULL values. If :const:`False` (default), the result will "
+"always be NULL as soon as any parameter is NULL."
+msgstr ""
+"``handlesnull``: állítsa :const:`True`-ra, ha a kifejezés kezeli a NULL "
+"értékeket. Ha :const:`False` (alapértelmezett), akkor az eredmény mindig "
+"NULL lesz, amint bármelyik paraméter NULL."
+
+#: ../../docs/user_manual/expressions/expression.rst:420
+msgid ""
+"``referenced_columns``: An array of attribute names that are required to run"
+" the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``. "
+"Specifying a subset of fields or an empty list will result in a faster "
+"execution."
+msgstr ""
+"``referenced_columns``: A függvény futtatásához szükséges attribútumnevek "
+"tömbje. Alapértelmezett értéke ``[QgsFeatureRequest.ALL_ATTRIBUTES]``. A "
+"mezők egy részhalmazával vagy üres listával való használat gyorsabb "
+"végrehajtást eredményez."
+
+#: ../../docs/user_manual/expressions/expression.rst:423
+msgid ""
+"``params_as_list``: Set this to :const:`True` to pass the function "
+"parameters as a list. If :const:`False` (default), the function will receive"
+" the parameters as individual arguments."
+msgstr ""
+"``params_as_list``: Állítsa :const:`True`-ra, ha a függvény paramétereit "
+"listaként szeretné átadni. Ha :const:`False` (alapértelmezett), akkor a "
+"függvény a paramétereket egyedi argumentumokként kapja meg."
+
+#: ../../docs/user_manual/expressions/expression.rst:426
+msgid ""
+"The function itself takes any number and type of parameters you want to pass"
+" to your function. These should be set before the following optional "
+"arguments:"
+msgstr ""
+"A függvény maga bármilyen számú és típusú paramétert elfogad, amelyet át "
+"szeretne adni a függvénynek. Ezeket a következő opcionális argumentumok "
+"előtt kell megadni:"
+
 #: ../../docs/user_manual/expressions/expression.rst:429
 msgid "``feature``: the current feature"
 msgstr "``feature``: az aktuális elem"
@@ -836,6 +961,16 @@ msgstr ""
 "hozzáférést biztosít különböző kiegészítő információkhoz, például a "
 "kifejezésváltozókhoz. Pl. ``context.variable( 'layer_id' )``"
 
+#: ../../docs/user_manual/expressions/expression.rst:436
+msgid ""
+"If those arguments are present in the function signature, they will be "
+"automatically passed to the function, without the need to specify them in "
+"the expression."
+msgstr ""
+"Ha ezek az argumentumok szerepelnek a függvény szignatúrájában, akkor "
+"automatikusan átadódnak a függvénynek, anélkül, hogy meg kellene adni őket a"
+" kifejezésben."
+
 #: ../../docs/user_manual/expressions/expression.rst:439
 msgid "The previous example function can then be used in expressions:"
 msgstr "Az előző példafüggvény ezután kifejezésekben használható:"
@@ -843,3 +978,13 @@ msgstr "Az előző példafüggvény ezután kifejezésekben használható:"
 #: ../../docs/user_manual/expressions/expression.rst:446
 msgid "Custom Function added to the Expression tab"
 msgstr "A Kifejezések fülhöz hozzáadott egyéni függvény"
+
+#: ../../docs/user_manual/expressions/expression.rst:449
+msgid ""
+"Find more examples and additional arguments for custom functions at "
+":mod:`qgsfunction`. Further information about creating Python code can be "
+"found in the :ref:`PyQGIS-Developer-Cookbook`."
+msgstr ""
+"További példákat és argumentumokat az egyéni függvényekhez a "
+":mod:`qgsfunction` oldalon talál. Python kód létrehozásával kapcsolatos "
+"további információk a :ref:`PyQGIS-Developer-Cookbook` alatt találhatók."
