@@ -182,7 +182,7 @@ To create a profile view, you can:
       Clicking the |addLayer| :sup:`Add layers` button will show a filtered list of possible layers
       which can be added to the plot, but which currently aren't in the plot.
       Applying the dialog with selected layers will automatically mark them as having elevation data
-      and immediately add them to the plot. Clicking the |Remove group action| static/common/mActionRemoveLayer.png :sup:`Remove group action`
+      and immediately add them to the plot. Clicking the |Remove group action| :sup:`Remove group action`
       button will remove the selected group while keeping its child layers: the child
       layers are promoted one level up in the tree instead of being deleted.
 
