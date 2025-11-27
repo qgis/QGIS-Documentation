@@ -39,6 +39,15 @@ msgstr ""
 msgid "File tools"
 msgstr "Fájleszközök"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:13
+msgid "Download file via HTTP(S)"
+msgstr "Fájl letöltése HTTP(S)-en"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:14
+msgid ""
+"Downloads a URL to the file system with an HTTP(S) GET or POST request."
+msgstr "Letölti az URL-t a fájlrendszerbe HTTP(S) GET vagy POST kéréssel."
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:17
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:109
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:217
@@ -131,6 +140,13 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:38
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Alapértelmezett: ``[Mentés ideiglenes fájlba]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:39
+msgid ""
+"Specification of the file destination. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"A fájl célhelyének megadása. :ref:`Ezek egyike <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
@@ -235,13 +251,90 @@ msgstr ""
 "konzolról történő futtatásával kapcsolatos részletekért lásd a "
 ":ref:`processing_console` fejezetet."
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:102
+msgid "HTTP(S) POST/GET request"
+msgstr "HTTP(S) POST/GET kérés"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:103
+msgid ""
+"Performs a HTTP(S) POST/GET request and returns the HTTP status code and the"
+" reply data. If an error occurs then the error code and the message will be "
+"returned. Optionally, the result can be written to a file on the disk. By "
+"default the algorithm will warn on errors. Optionally, the algorithm can be "
+"set to treat HTTP errors as failures."
+msgstr ""
+"HTTP(S) POST/GET kérést indít, és visszaadja a HTTP állapotkódot és a "
+"válaszadatokat. Ha hiba történik, akkor a hibakód és az üzenet kerül "
+"visszaadásra. Opcionálisan az eredmény fájlba is elmenthető a lemezre. "
+"Alapértelmezés szerint az algoritmus figyelmeztet a hibákra. Opcionálisan az"
+" algoritmus beállítható úgy, hogy a HTTP-hiba esetén leálljon a futtatás."
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:227
+msgid "**URL or file path**"
+msgstr "**URL vagy fájl elérési útja**"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:122
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:230
+msgid "The URL or path of the file to open."
+msgstr "A megnyitni kívánt fájl URL-je vagy elérési útja."
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:132
+msgid "**POST Data**"
+msgstr "**POST adat**"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:139
+msgid "**Authentication**"
+msgstr "**Hitelesítés**"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:142
 msgid "``AUTH_CONFIG``"
 msgstr "``AUTH_CONFIG``"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:143
+msgid "[authconfig]"
+msgstr "[authconfig]"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:145
+msgid "Default: No authentication"
+msgstr "Alapértelmezett: nincs hitelesítés"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:146
+msgid "An authentication configuration to pass"
+msgstr "Egy átadandó hitelesítési konfiguráció"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:147
+msgid "**Consider HTTP errors as failures**"
+msgstr "**HTTP-hibánál a futtatás legyen sikertelen**"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:148
 msgid "``FAIL_ON_ERROR``"
 msgstr "``FAIL_ON_ERROR``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:149
+msgid "[boolean]"
+msgstr "[logikai]"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:151
+msgid "Default: False"
+msgstr "Alapértelmezett: Hamis"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:152
+msgid "If set, the algorithm will fail on encountering an HTTP error."
+msgstr "Ha be van állítva, az algoritmus HTTP-hiba esetén megszakad."
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:159
+msgid "Default: ``[Skip Output]``"
+msgstr "Alapértelmezett: ``[Kimenet kihagyása]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:160
+msgid ""
+"The result can be written to a file instead of being returned as a string. "
+"Specification of the file destination. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Az eredmény karakterláncként való visszaadás helyett fájlba írható. A fájl "
+"célhelyének megadása. :ref:`Ezek egyike <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
@@ -251,18 +344,78 @@ msgstr "Kimenet kihagyása"
 msgid "[file]"
 msgstr "[fájl]"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:181
+msgid "The downloaded file with the returned result"
+msgstr "A letöltött fájl a visszaküldött eredménnyel"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:182
+msgid "**HTTP Status**"
+msgstr "**HTTP-állapot**"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:183
 msgid "``STATUS_CODE``"
 msgstr "``STATUS_CODE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:185
+msgid "The HTTP Status"
+msgstr "A HTTP-állapotkód"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:186
+msgid "**Network error code**"
+msgstr "**Hálózati hibakód**"
 
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:187
 msgid "``ERROR_CODE``"
 msgstr "``ERROR_CODE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:189
+msgid "The error code when it fails (like as well on 404 HTTP Status etc.)"
+msgstr "A hibakód sikertelen futtatás (például HTTP 404 stb.) esetén"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:190
+msgid "**Network error message**"
+msgstr "**Hálózati hibaüzenet**"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:191
 msgid "``ERROR_MESSAGE``"
 msgstr "``ERROR_MESSAGE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:193
+msgid "A string containing the error message in case of failure"
+msgstr "Hiba esetén a hibaüzenetet tartalmazó karakterlánc"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:194
+msgid "**Result data**"
+msgstr "**Eredményadatok**"
+
 #: ../../docs/user_manual/processing_algs/qgis/filetools.rst:195
 msgid "``RESULT_DATA``"
 msgstr "``RESULT_DATA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:197
+msgid "A string containing the result data in case of success"
+msgstr "Sikeres kérés esetén az eredményadatokat tartalmazó karakterlánc"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:202
+msgid "**Algorithm ID**: ``native:httprequest``"
+msgstr "**Algoritmus azonosítója**: ``native:httprequest``"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:212
+msgid "Open file or URL"
+msgstr "Fájl vagy URL megnyitása"
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:213
+msgid ""
+"Opens files in their default associated application, or URLs in the user's "
+"default web browser."
+msgstr ""
+"Megnyitja a fájlokat az alapértelmezett társított alkalmazásban, az URL-eket"
+" pedig a felhasználó alapértelmezett böngészőjében."
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:235
+msgid "The algorithm has no output."
+msgstr "Az algoritmusnak nincsen kimenete."
+
+#: ../../docs/user_manual/processing_algs/qgis/filetools.rst:240
+msgid "**Algorithm ID**: ``native:openurl``"
+msgstr "**Algoritmus azonosítója**: ``native:openurl``"
