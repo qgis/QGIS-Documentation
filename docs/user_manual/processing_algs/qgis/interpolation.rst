@@ -299,12 +299,15 @@ Parameters
        For each of the added layer-field combinations, a type can
        be chosen:
 
-       * :guilabel:`Points`: Individual point features used as elevation/sample nodes in the triangulation.
-         These points form the vertices of the TIN triangles.
-       * :guilabel:`Structured lines`: Lines that connect points in a structured manner,
-         influencing the shape of the triangles in the TIN. These lines help define the surface structure.
-       * :guilabel:`Break lines`: Lines that act as barriers in the triangulation,
-         preventing triangles from crossing them and thus preserving important features in the surface.
+       * :guilabel:`Points`: Elevation sample locations containing the values to be interpolated (e.g., terrain height, Z).
+         These points are the primary input for calculating the output surface.
+
+       * :guilabel:`Structured lines`: Lines representing known continuous surface features that guide the terrain shape or structure
+         (e.g., ridges, road centerlines, levees). They describe terrain direction while assuming continuity along the line.
+
+       * :guilabel:`Break lines`: Lines representing known surface discontinuities or hard boundaries
+         (e.g., cliffs, river banks, excavation edges, lake/pond outlines). They mark where the surface may change sharply.
+         It is required if there are significant changes in elevation along the line.
 
        In the string, the layer-field elements are separated by
        ``'::|::'``.
@@ -558,12 +561,15 @@ Parameters
        For each of the added layer-field combinations, a type can
        be chosen:
 
-       * :guilabel:`Points`: Individual point features used as elevation/sample nodes in the triangulation.
-         These points form the vertices of the TIN triangles.
-       * :guilabel:`Structured lines`: Lines that connect points in a structured manner,
-         influencing the shape of the triangles in the TIN. These lines help define the surface structure.
-       * :guilabel:`Break lines`: Lines that act as barriers in the triangulation,
-         preventing triangles from crossing them and thus preserving important features in the surface.
+       * :guilabel:`Points`: Elevation sample locations containing the values to be interpolated (e.g., terrain height, Z).
+         These points are the primary input for calculating the output surface.
+
+       * :guilabel:`Structured lines`: Lines representing known continuous surface features that guide the terrain shape or structure
+         (e.g., ridges, road centerlines, levees). They describe terrain direction while assuming continuity along the line.
+
+       * :guilabel:`Break lines`: Lines representing known surface discontinuities or hard boundaries
+         (e.g., cliffs, river banks, excavation edges, lake/pond outlines). They mark where the surface may change sharply.
+         It is required if there are significant changes in elevation along the line.
 
        In the string, the layer-field elements are separated by
        ``'::|::'``.
