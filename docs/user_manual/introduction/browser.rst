@@ -496,6 +496,10 @@ After adding projects, you can remove a project by selecting its row and clickin
 
    Import Project dialog
 
+.. note:: Layers from a PostgreSQL provider include additional information in their Layer Properties 
+   under the Information tab. Users can view privileges for the connected database user, 
+   an estimate of the number of rows, and details about spatial indexes associated with the table.
+
 Tiles and Web Services
 ......................
 
