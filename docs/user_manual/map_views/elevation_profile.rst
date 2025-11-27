@@ -48,7 +48,7 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
    * - |layerTree| :sup:`Show Layer Tree`
      -
      - Shows or hides a list of project layers to configure rendering in the profile view.
-   * - |removeLayer| :sup: `Remove Group Action`
+   * - |removeLayer| :sup:`Remove Group Action`
      - 
      - Removes group action
    * - |captureLine| :sup:`Capture Curve`
