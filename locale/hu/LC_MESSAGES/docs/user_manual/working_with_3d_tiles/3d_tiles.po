@@ -34,29 +34,132 @@ msgstr ""
 "<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
 "van lefordítva."
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:6
+msgid "Working with 3D Tiles"
+msgstr "3D csempék"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:14
+msgid "What are 3D Tiles?"
+msgstr "Mik azok a 3D csempék?"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:16
+msgid ""
+"3D tiles are specification for streaming and rendering large-scale 3D "
+"geospatial datasets. They use a hierarchical structure to efficiently manage"
+" and display 3D content, optimising performance by dynamically loading "
+"appropriate levels of detail. This technology is widely used in urban "
+"planning, architecture, simulation, gaming, and virtual reality, providing a"
+" standardised and interoperable solution for visualising complex "
+"geographical data."
+msgstr ""
+"A 3D-csempe nagy méretű 3D-s térinformatikai adathalmazok streamelésére és "
+"megjelenítésére szolgáló specifikáció. Hierarchikus struktúrát használ a "
+"3D-tartalmak hatékony kezelésére és megjelenítésére, és dinamikusan tölti be"
+" a megfelelő részletességi szinteket a teljesítmény optimalizálása "
+"érdekében. Ez a technológia széles körben elterjedt a várostervezésében, az "
+"építészetben, a szimulációkban, a játékokban és a virtuális valóságban, és "
+"szabványosított, interoperábilis megoldást kínál komplex földrajzi adatok "
+"vizualizálására."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:29
+msgid "Example of 3D tiles"
+msgstr "Példa 3D csempékre"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:32
+msgid "Currently, QGIS supports two formats of 3D tiles:"
+msgstr "Jelenleg a QGIS kétféle 3D csempeformátumot támogat:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:34
+msgid ""
+"`Cesium 3D tiles <https://cesium.com/why-cesium/3d-tiles/>`_, used primarily"
+" for complex 3D models of buildings or whole cities. Such datasets can be "
+"provided by cloud-based platforms such as Cesium Ion or Google "
+"(*Photorealistic 3D Tiles*)."
+msgstr ""
+"A `Cesium 3D csempéket <https://cesium.com/why-cesium/3d-tiles/>`_, "
+"elsősorban épületek vagy egész városok komplex 3D-modelljeihez használják. "
+"Az ilyen adathalmazokat felhőalapú platformok, például a Cesium Ion vagy a "
+"Google (*Photorealistic 3D Tiles*) biztosíthatják."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:38
+msgid ""
+"`Quantized Mesh tiles <https://github.com/CesiumGS/quantized-mesh>`_, used "
+"for terrain elevation data."
+msgstr ""
+"`Kvantált hálócsempék <https://github.com/CesiumGS/quantized-mesh>`_, "
+"terepmagassági adatokhoz használatos."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:41
+msgid ""
+"See :ref:`3d_tiles` for instructions on how to add these data sources to "
+"QGIS."
+msgstr ""
+"Az adatok QGIS-hez való hozzáadásának módjáról szóló útmutatóért lásd: "
+"ref:`3d_tiles`."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:46
+msgid "3D Tiles Properties"
+msgstr "3D csempék tulajdonságai"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:48
+msgid ""
+"The 3D tiles :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr ""
+"A 3D csempék :guilabel:`Rétegtulajdonságok` párbeszédablakában a következő "
+"szakaszok láthatóak:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:52
+msgid "|metadata| :ref:`Information <3dtilesinformationmenu>`"
+msgstr "|metadata| :ref:`Információ <3dtilesinformationmenu>`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:228
 msgid "metadata"
 msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:53
+msgid "|system| :ref:`Source <3dtilessourcemenu>`"
+msgstr "|system| :ref:`Forrás <3dtilessourcemenu>`"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:238
 msgid "system"
 msgstr "system"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:54
+msgid "|symbology| :ref:`Symbology <3dtilessymbologymenu>`:sup:`[1]`"
+msgstr "|symbology| :ref:`Jelrendszer <3dtilessymbologymenu>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:236
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:55
+msgid "|3d| :ref:`3D View <3dtiles3dviewmenu>`:sup:`[1]`"
+msgstr "|3d| :ref:`3D nézet <3dtiles3dviewmenu>`:sup:`[1]`"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:218
 msgid "3d"
 msgstr "3d"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:56
+msgid "|rendering| :ref:`Rendering <3dtilesrenderingmenu>`"
+msgstr "|rendering| :ref:`Megjelenítés <3dtilesrenderingmenu>`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:232
 msgid "rendering"
 msgstr "rendering"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:57
+msgid "|elevationscale| :ref:`Elevation <3dtileselevationmenu>`:sup:`[1]`"
+msgstr "|elevationscale| :ref:`Magasság <3dtileselevationmenu>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:224
 msgid "elevationscale"
 msgstr "elevationscale"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:58
+msgid "|editMetadata| :ref:`Metadata <3dtilesmetadatamenu>`"
+msgstr "|editMetadata| :ref:`Metaadatok <3dtilesmetadatamenu>`"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:222
 msgid "editMetadata"
@@ -82,6 +185,26 @@ msgstr ""
 "Az :guilabel:`Információ` fül csak olvasható, és tömör összefoglalást ad az "
 "aktuális rétegről és metaadatairól. A következő információk láthatóak rajta:"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:75
+msgid ""
+"based on the provider of the layer: name, URL, source type and path, number "
+"of zoom levels"
+msgstr ""
+"a réteg szolgáltatójától függően: név, URL, forrás típusa és útvonala, "
+"zoomszintek száma"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:77
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. More properties can be created and managed "
+"using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"egyéni tulajdonságok, amelyekkel további információkat tárolható a rétegről "
+"az aktuális projektben. További tulajdonságok hozhatók létre és kezelhetők "
+"PyQGIS segítségével, különösen a :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` metódus segítségével."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:80
 msgid ""
 "the Coordinate Reference System: name, units, method, accuracy, reference "
@@ -90,14 +213,46 @@ msgstr ""
 "a koordináta-rendszer: neve, mértékegysége, módszere, pontossága, alappontja"
 " (statikus vagy dinamikus)"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:82
+msgid ""
+"picked from the :ref:`filled metadata <3dtilesmetadatamenu>`: access, "
+"extents, links, contacts, history..."
+msgstr ""
+"a :ref:`kitöltött metaadatok <3dtilesmetadatamenu>` közül válogatva: "
+"hozzáférés, terjedelem, hivatkozások, névjegyek, előzmények…"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:88
 msgid "Source Properties"
 msgstr "Forrás fül"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:90
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected 3D tile, including:"
+msgstr ""
+"A |system| :guilabel:`Forrás` lap alapvető információkat jelenít meg a "
+"kiválasztott 3D csempéről, többek között:"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:93
 msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
 msgstr ""
 "a :guilabel:`Réteg neve`, ami megjelenik a :guilabel:`Rétegek` panelen;"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:94
+msgid ""
+"the :guilabel:`Coordinate Reference System`: Displays the layer's "
+":ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the "
+"layer's CRS, by selecting a recently used one in the drop-down list or "
+"clicking on the |setProjection| :sup:`Select CRS` button (see "
+":ref:`crs_selector`). Use this process only if the layer CRS is wrong or not"
+" specified."
+msgstr ""
+"a :guilabel:`Koordináta-rendszer`: Megjeleníti a réteg :ref:`Koordináta "
+"rendszerét (CRS) <layer_crs>`. A réteg CRS-ét a legördülő listából egy "
+"nemrég használt CRS kiválasztásával vagy a |setProjection| :sup:`Koordináta-"
+"rendszer kiválasztása` gombra kattintva változtathatja meg (lásd "
+":ref:`crs_selector`). Ezt az eljárást csak akkor használja, ha a réteg CRS-e"
+" rossz vagy nincs megadva.."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:234
 msgid "setProjection"
@@ -107,9 +262,42 @@ msgstr "setProjection"
 msgid "Symbology Properties"
 msgstr "Jelrendszer lap"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:112
+msgid "3D Tile Layer Symbology"
+msgstr "Egy 3D csemperéteg jelrendszere"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:114
+msgid ""
+"By default, the layer is styled using texture, but you can change it to see "
+"the wireframe mesh behind the scene by choosing :guilabel:`Wireframe` in the"
+" drop-down menu. You can also, change the mesh fill and line symbols similar"
+" to the vector polygons. Checking |checkbox| :guilabel:`Use texture colors` "
+"will render each mesh element with the average value of the full texture. "
+"This is a good option to try when dealing with a large dataset and want to "
+"get a quick overview of the data."
+msgstr ""
+"Alapértelmezés szerint a réteg textúrával van stílusozva, de a legördülő "
+"menüből kiválasztva a :guilabel:`Drótváz` opciót megváltoztathatja, hogy a "
+"háttérben látható drótvázszerű hálót lássa. A vektoros felületekhez "
+"hasonlóan a háló kitöltését és vonalszimbólumait is megváltoztathatja. A "
+"|checkbox| :guilabel:`Textúraszínek használata` jelölőnégyzet bejelölésével "
+"minden hálóelem a teljes textúra átlagértékével jelenik meg. Ez egy jó "
+"lehetőség, ha nagy adathalmazokkal dolgozik, és gyors áttekintést szeretne "
+"kapni az adatokról."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:220
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:128
+msgid "3D Tiles - textured and wireframe"
+msgstr "3D csempék – textúrázva és drótvázzal"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:130
+msgid "To view the data you can open |new3DMap| :guilabel:`New 3D map view`."
+msgstr ""
+"Az adatok megtekintéséhez nyisson meg egy |new3DMap| :guilabel:`Új 3D térkép"
+" nézetet`."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:230
 msgid "new3DMap"
@@ -119,6 +307,87 @@ msgstr "new3DMap"
 msgid "3D Map View"
 msgstr "3D térképnézet"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:139
+msgid ""
+"From the :guilabel:`Symbology` tab, you can also set some options that "
+"invariably act on all features of the layer:"
+msgstr ""
+"A :guilabel:`Jelrendszer` fülön is elvégezhet pár beállítást, amelyek minden"
+" esetben a réteg összes elemére hatnak:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:142
+msgid ""
+":guilabel:`Maximum error`: This parameter determines the level of detail "
+"displayed in the 3D model. Similar to point clouds, 3D tiles often contain "
+"more information than necessary for visual representation. By adjusting this"
+" setting, you control the balance between display density and rendering "
+"speed. A larger value (e.g., 5 mm) may introduce noticeable gaps between "
+"elements, while a smaller value (e.g., 0.1 mm) could lead to the rendering "
+"of an excessive number of details, potentially slowing down the rendering "
+"process. Different units can be selected to tailor the setting to your "
+"specific needs."
+msgstr ""
+":guilabel:`Maximális hiba`: Ez a paraméter határozza meg a 3D-modellben "
+"megjelenített részletesség szintjét. A pontfelhőkhöz hasonlóan a 3D csempék "
+"is gyakran több információt tartalmaznak, mint amennyi a vizuális "
+"ábrázoláshoz szükséges. Ezzel a beállítással szabályozhatja a megjelenítési "
+"sűrűség és a renderelési sebesség közötti egyensúlyt. Egy nagyobb érték (pl."
+" 5 mm) észrevehető résekkel járhat az elemek között, míg egy kisebb érték "
+"(pl. 0,1 mm) túlzott részletességű rendereléshez vezethet, ami lelassíthatja"
+" a renderelési folyamatot. A beállítások egyéni igényekre szabásához "
+"különböző mértékegységek választhatók."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:151
+msgid ""
+":guilabel:`Opacity`: Adjust the visibility of the underlying layer on the "
+"map canvas using this tool. Use slider to tailor the visibility of your "
+"scene layer according to your preferences. Alternatively, specify the exact "
+"percentage of visibility through the menu next to the slider."
+msgstr ""
+":guilabel:`Átlátszatlanság`: Ezzel az eszközzel állíthatja be az alatta lévő"
+" rétegek láthatóságát a térképvásznon. A csúszkával a saját igényeinek "
+"megfelelően állíthatja be a jelenetréteg láthatóságát. Alternatív "
+"megoldásként a csúszka melletti mezőben adhatja meg a láthatóság pontos, "
+"százalékos értékét."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:155
+msgid ""
+":guilabel:`Blending mode`: You can achieve special rendering effects with "
+"these tools that you may previously only know from graphics programs. The "
+"pixels of your overlaying and underlaying layers are mixed through the "
+"settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`Keverési mód`: Ezekkel az eszközökkel olyan különleges "
+"megjelenítési hatásokat érhet el, amelyeket korábban csak a grafikus "
+"programokból ismerhetett. Az átfedő és az alatta lévő rétegek pixelei a "
+":ref:`blend-modes` pontban leírtak szerint lesznek keverve."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:163
+msgid "3D View Properties"
+msgstr "3D nézet tulajdonságai"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:165
+msgid ""
+":guilabel:`Maximum screen space error` determines the threshold for swapping"
+" terrain tiles with more detailed ones (and vice versa) - i.e. how soon the "
+"3D view will use higher quality tiles. Lower numbers mean more details in "
+"the scene at the expenses of increased rendering complexity."
+msgstr ""
+"A :guilabel:`Maximális képernyőterületi hiba` meghatározza a terepcsempék "
+"részletesebbre cserélésének küszöbértékét (és fordítva), vagyis hogy a 3D "
+"nézet milyen hamar kezdjen nagyobb felbontású csempéket használni. Kisebb "
+"szám részletgazdagabb jelenetet eredményez az összetettebb megjelenítés "
+"rovására."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:170
+msgid ""
+"|unchecked| :guilabel:`Show bounding boxes` Show 3D bounding boxes of the "
+"terrain tiles (useful for troubleshooting terrain issues)."
+msgstr ""
+"A |unchecked| :guilabel:`Befoglaló téglalapok megjelenítése` megjeleníti a "
+"terepcsempék 3D-s befoglaló téglalapjait (hasznos a tereppel kapcsolatos "
+"hibák elhárításához)."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:240
 msgid "unchecked"
 msgstr "unchecked"
@@ -127,6 +396,23 @@ msgstr "unchecked"
 msgid "Rendering Properties"
 msgstr "Megjelenítési tulajdonságok"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:179
+msgid ""
+"Under |unchecked| :guilabel:`Scale dependent visibility`, you can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scales, "
+"defining a range of scales in which features will be visible. Out of this "
+"range, they are hidden. The |mapIdentification| :sup:`Set to current canvas "
+"scale` button helps you use the current map canvas scale as boundary of the "
+"range visibility. See :ref:`label_scaledepend` for more information."
+msgstr ""
+"A :guilabel:`Méretarányfüggő láthatóság` alatt beállíthatja a "
+":guilabel:`Maximum (magába foglaló)` és :guilabel:`Minimum (kizáró)` "
+"méretarányt, meghatározva vele azt a méretarány-tartományt, amin belül az "
+"elemek megjelennek. Ezen a tartományon kívül rejtve lesznek. A "
+"|mapIdentification| :sup:`Beállítás a térképvászon aktuális méretarányára` "
+"gomb segít az aktuális térképvászon méretarányát használni a tartomány "
+"láthatóságának határaként. Lásd még: :ref:`label_scaledepend`."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:226
 msgid "mapIdentification"
 msgstr "mapIdentification"
@@ -134,6 +420,26 @@ msgstr "mapIdentification"
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:191
 msgid "Elevation Properties"
 msgstr "Magassági beállítások"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:193
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view "
+"<label_3dmapview>`. Specifically, you can set:"
+msgstr ""
+"A |elevationscale| :guilabel:`Magasság` lap biztosít lehetőséget a réteg "
+"magassági tulajdonságainak kezelésére :ref:`3D térképnézetben "
+"<label_3dmapview>`. Konkrétan beállíthatja:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:197
+msgid ""
+":guilabel:`Elevation Surface`: how the 3D layer vertices Z values should be "
+"interpreted as terrain elevation. You can apply a :guilabel:`Scale` factor "
+"and an :guilabel:`Offset`."
+msgstr ""
+":guilabel:`Magassági felszín`: hogyan kell értelmezni a 3D réteg csúcsainak "
+"Z értékeit a terep magasságaként. Megadható egy :guilabel:`Skálázási` "
+"tényező és egy :guilabel:`Eltolás`."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:205
 msgid "Metadata Properties"
