@@ -6,9 +6,9 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Transifex Bot <>, 2025
 # Fischer Teamplan, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-20 14:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Fischer Teamplan, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -249,6 +249,14 @@ msgstr ""
 "Layer <project_layer_capabilities>` im Bedienfeld :guilabel:`Layers` "
 "anzeigen zu lassen und mit ihm zu interagieren, ohne die "
 "Projekteinstellungen zu ändern."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:94
+msgid ""
+":guilabel:`Show Broken Layers Only`: only layers with broken data sources "
+"are displayed."
+msgstr ""
+":guilabel:`Nur defekte Layer anzeigen`: Es werden nur Layer mit fehlerhaften"
+" Datenquellen angezeigt."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:96
 msgid ""
@@ -2108,9 +2116,33 @@ msgstr ""
 "Aktionen innerhalb von QGIS. Die verfügbaren Werkzeuge sind unter den "
 "folgenden Reitern organisiert:"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:679
+msgid ""
+"|networkAndProxy| :guilabel:`Network Logger`: records and displays network "
+"requests and interactions"
+msgstr ""
+"|networkAndProxy| :guilabel:`Netzwerkprotokoll`: Zeichnet Netzwerk-Anfragen "
+"und Interaktionen auf und zeigt sie an."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2447
 msgid "networkAndProxy"
 msgstr "networkAndProxy"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:681
+msgid ""
+"|dbManager| :guilabel:`Query Logger`: logs SQL commands issued by data "
+"providers and duration of execution"
+msgstr ""
+"|dbManager| :guilabel:`Abfrageprotokollierung`: Protokolliert von "
+"Datenanbietern ausgegebene SQL-Befehle und deren Ausführungsdauer."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:683
+msgid ""
+"|stopwatch| :guilabel:`Profiler`: provides load times for every actions in "
+"order to detect causes of slow down"
+msgstr ""
+"|stopwatch| :guilabel:`Profilnahme`: Liefert Ladezeiten für alle Aktionen, "
+"um Ursachen für Verlangsamungen zu erkennen."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2495
 msgid "stopwatch"
@@ -2314,6 +2346,14 @@ msgstr ""
 "3D-Ansichten, das Auflösen von Referenzen auf Kartenebenen, das Laden von "
 "Lesezeichen oder Layouts, ... handeln. Dies hilft bei der Ermittlung der "
 "Ursachen für langsame Ladezeiten."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:767
+msgid ""
+"Default supported actions can be selected from the :guilabel:`Category` "
+"drop-down menu:"
+msgstr ""
+"Die folgenden Optionen können aus dem Dropdown-Menü :guilabel:`Kategorie` "
+"ausgewählt werden:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:769
 msgid ""
@@ -2609,6 +2649,29 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:897
 msgid ":kbd:`Shift`: add features to the current selection"
 msgstr ":kbd:`Umschalt`: Objekte zur aktuellen Auswahl hinzufügen"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:898
+msgid ":kbd:`Ctrl`/:kbd:`Cmd`: subtract features from the current selection"
+msgstr ":kbd:`Strg`: Objekte aus der aktuellen Auswahl entfernen"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:899
+msgid ""
+":kbd:`Ctrl+Shift`/:kbd:`Cmd+Shift`: intersect with the current selection, "
+"i.e., only keep overlapping features from the current selection"
+msgstr ""
+":kbd:`Strg+Umschalt`/:kbd:`Cmd+Umschalt`: sich mit der aktuellen Auswahl "
+"überschneiden, d.h. nur überlappende Objekte der aktuellen Auswahl behalten"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:901
+msgid ""
+":kbd:`Alt`: select features that are totally within the selection shape. "
+"Combined with :kbd:`Shift` or :kbd:`Ctrl`/:kbd:`Cmd` keys, you can add or "
+"subtract features to/from the current selection."
+msgstr ""
+":kbd:`Alt`: wählen Sie Features aus, die sich vollständig innerhalb der "
+"Auswahlform befinden. Kombiniert mit den Tasten :kbd:`Umschalt` oder "
+":kbd:`Strg` können Sie Features zur aktuellen Auswahl hinzufügen oder von "
+"ihr abziehen."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:908
 msgid "Automatic selection"
@@ -3538,6 +3601,15 @@ msgstr ""
 "Wenn Sie auf ein Kurvensegment klicken, wird auch der Radius dieses "
 "Abschnitts angezeigt."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1228
+msgid ""
+"if both the vector layer and the project have vertical datums set and they "
+"differ, the ``Z`` value will be displayed for both datums."
+msgstr ""
+"Wenn sowohl für den Vektorlayer als auch für das Projekt vertikale "
+"Bezugssysteme festgelegt sind und diese voneinander abweichen, wird der "
+"Z-Wert für beide Bezugssysteme angezeigt."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1231
 msgid ""
 "**Data attributes**: This is the list of attribute fields and values for the"
@@ -3709,6 +3781,23 @@ msgstr ""
 "erreichen. In diesem Menü finden Sie Funktionen zum Erstellen, Laden und "
 "Verwalten von Stilen."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1294
+msgid ""
+"A style stores various information set in the layer or project properties "
+"dialog to render or interact with the layer. This includes:"
+msgstr ""
+"Ein Stil speichert verschiedene Informationen, die im Dialogfeld "
+"„Layereigenschaften“ oder „Projekteigenschaften“ festgelegt wurden, um den "
+"Layer zu rendern oder mit ihm zu interagieren. Dazu gehören:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1297
+msgid "Components of stored style and their references"
+msgstr "Komponenten des gespeicherten Stils und ihre Referenzen"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1300
+msgid "Category"
+msgstr "Kategorie"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1300
 msgid "Vector"
 msgstr "Vector"
@@ -3717,9 +3806,17 @@ msgstr "Vector"
 msgid "Raster"
 msgstr "Raster"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1302
+msgid "|layerConfiguration| :sup:`Layer Configuration`"
+msgstr "|layerConfiguration| :sup:`Layer Konfiguration`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2437
 msgid "layerConfiguration"
 msgstr "layerConfiguration"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1302
+msgid ":ref:`Layers capabilities <project_layer_capabilities>`"
+msgstr ":ref:`Layereigenschaften <project_layer_capabilities>`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1304
 #: ../../docs/user_manual/introduction/general_tools.rst:1319
@@ -3732,6 +3829,10 @@ msgid ":ref:`raster_display`"
 msgstr ":ref:`raster_display`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1306
+msgid "|symbology| :sup:`Symbology`"
+msgstr "|symbology| :sup:`Symbolisierung`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1306
 msgid ":ref:`vector_style_menu`"
 msgstr ":ref:`vector_style_menu`"
 
@@ -3740,20 +3841,56 @@ msgid ":ref:`raster_symbology` :sup:`[1]`"
 msgstr ":ref:`raster_symbology` :sup:`[1]`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1308
+msgid "|3d| :sup:`3D Symbology`"
+msgstr "|3d| :sup:`3D-Ansicht`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1308
 msgid ":ref:`sec_3_d_view`"
 msgstr ":ref:`sec_3_d_view`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1308
+#: ../../docs/user_manual/introduction/general_tools.rst:1310
+#: ../../docs/user_manual/introduction/general_tools.rst:1312
+#: ../../docs/user_manual/introduction/general_tools.rst:1315
+#: ../../docs/user_manual/introduction/general_tools.rst:1317
+#: ../../docs/user_manual/introduction/general_tools.rst:1321
+#: ../../docs/user_manual/introduction/general_tools.rst:1329
+#: ../../docs/user_manual/introduction/general_tools.rst:1331
+#: ../../docs/user_manual/introduction/general_tools.rst:1335
+msgid "N/A"
+msgstr "nicht verfügbar"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1310
+msgid "|labelingSingle| :sup:`Labels`"
+msgstr "|labelingSingle| :sup:`Beschriftungen`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1310
 msgid ":ref:`vector_labels_tab`"
 msgstr ":ref:`vector_labels_tab`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1312
+msgid "|sourceFieldsForms| :sup:`Fields`"
+msgstr "|sourceFieldsForms| :sup:`Felder`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2493
 msgid "sourceFieldsForms"
 msgstr "sourceFieldsForms"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1312
+msgid ":ref:`vector_fields_menu` and :ref:`constraints`"
+msgstr ":ref:`vector_fields_menu` und :ref:`constraints`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1315
+msgid "|formView| :sup:`Attributes Form`"
+msgstr "|formView| :sup:`Attributformular`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1315
 msgid ":ref:`vector_attributes_menu`"
 msgstr ":ref:`vector_attributes_menu`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1317
+msgid "|action| :sup:`Actions`"
+msgstr "|action| :sup:`Aktionen`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2311
 msgid "action"
@@ -3763,9 +3900,17 @@ msgstr "action"
 msgid ":ref:`actions_menu`"
 msgstr ":ref:`actions_menu`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1319
+msgid "|mapTips| :sup:`Map Tips`"
+msgstr "|mapTips| :sup:`Anzeigen`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2443
 msgid "mapTips"
 msgstr "mapTips"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1321
+msgid "|diagram| :sup:`Diagrams`"
+msgstr "|diagram| :sup:`Diagramme`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2351
 msgid "diagram"
@@ -3776,8 +3921,16 @@ msgid ":ref:`sec_diagram`"
 msgstr ":ref:`sec_diagram`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1323
+msgid "|openTable| :sup:`Attribute Table Configuration`"
+msgstr "|openTable| :sup:`Attributtabellenkonfiguration`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1323
 msgid ":ref:`sec_attribute_table`"
 msgstr ":ref:`sec_attribute_table`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1325
+msgid "|rendering| :sup:`Rendering`"
+msgstr "|rendering| :sup:`Darstellung`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2465
 msgid "rendering"
@@ -3792,12 +3945,20 @@ msgid ":ref:`raster_rendering` :sup:`[1]`"
 msgstr ":ref:`raster_rendering` :sup:`[1]`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1327
+msgid "|options| :sup:`Custom Properties`"
+msgstr "|options| :sup:`Benutzereigenschaften`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1327
 msgid ":ref:`vectorinformationmenu`"
 msgstr ":ref:`vectorinformationmenu`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1327
 msgid ":ref:`raster_information`"
 msgstr ":ref:`raster_information`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1329
+msgid "|digitizing| :sup:`Geometry Options`"
+msgstr "|digitizing| :sup:`Geometrieoptionen`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2353
 msgid "digitizing"
@@ -3807,6 +3968,10 @@ msgstr "digitizing"
 msgid ":ref:`digitizingmenu`"
 msgstr ":ref:`digitizingmenu`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1331
+msgid "|relations| :sup:`Relations`"
+msgstr "|relations| :sup:`Beziehungen`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2461
 msgid "relations"
 msgstr "Beziehungen"
@@ -3814,6 +3979,10 @@ msgstr "Beziehungen"
 #: ../../docs/user_manual/introduction/general_tools.rst:1331
 msgid ":ref:`vector_relations`"
 msgstr ":ref:`vector_relations`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1333
+msgid "|temporal| :sup:`Temporal Properties`"
+msgstr "|temporal| :sup:`Zeiteigenschaften`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2505
 msgid "temporal"
@@ -3827,6 +3996,10 @@ msgstr ":ref:`vectortemporalmenu`"
 msgid ":ref:`raster_temporal`"
 msgstr ":ref:`raster_temporal`"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1335
+msgid "|legend| :sup:`Legend Settings`"
+msgstr "|legend| :sup:`Legendeneinstellungen`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2439
 msgid "legend"
 msgstr "legend"
@@ -3834,6 +4007,10 @@ msgstr "legend"
 #: ../../docs/user_manual/introduction/general_tools.rst:1335
 msgid ":ref:`vectorlegendmenu`"
 msgstr ":ref:`vectorlegendmenu`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1337
+msgid "|elevationscale| :sup:`Elevation Properties`"
+msgstr "|elevationscale| :sup:`Geländehöheneigenschaften`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1337
 msgid ":ref:`vectorelevationmenu`"
@@ -3844,8 +4021,23 @@ msgid ":ref:`raster_elevation`"
 msgstr ":ref:`raster_elevation`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1339
+msgid "|indicatorNotes| :sup:`Notes`"
+msgstr "|indicatorNotes| :sup:`Hinweise`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1339
 msgid ":ref:`layer_notes`"
 msgstr ":ref:`layer_notes`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1342
+msgid ""
+":sup:`[1]`: For raster layers, symbology and rendering items are melted "
+"together, meaning that saving/loading one would also save/load items of/from"
+" the other."
+msgstr ""
+":sup:`[1]`: Bei Rasterlayern werden Symbologie- und Rendering-Eigenschaften "
+"miteinander verschmolzen, was bedeutet, dass beim Speichern/Laden eines "
+"Elements auch die Eigenschaften des anderen Elements gespeichert/geladen "
+"werden."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1346
 msgid ""
@@ -3934,6 +4126,24 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:1375
 msgid "**Manage styles from layer context menu**"
 msgstr "**Stile über das Layer-Kontextmenü verwalten**"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1377
+msgid ""
+"Right-click on the layer in the :guilabel:`Layers` panel to copy, paste, add"
+" or rename layer styles. For both vector and raster layers, you can choose "
+"which style categories to copy/paste. Choose :guilabel:`All Style "
+"Categories` or one of the available categories, depending on the layer type."
+" Note that for raster layers, the :guilabel:`Symbology` and "
+":guilabel:`Rendering` categories are always copied together."
+msgstr ""
+"Klicken Sie mit der rechten Maustaste auf den Layer im :guilabel:`Layer`- "
+"Bedienfeld, um Layer-Stile zu kopieren, einzufügen, hinzuzufügen oder "
+"umzubenennen. Sowohl für Vektor- als auch für Raster-Layer können Sie "
+"auswählen, welche Stilkategorien kopiert/eingefügt werden sollen. Wählen Sie"
+" :guilabel:`Alle Stilkategorien` oder eine der verfügbaren Kategorien, je "
+"nach Layer-Typ. Beachten Sie, dass bei Rasterlayern die Kategorien "
+":guilabel:`Symbology` und :guilabel:`Darstellung` immer zusammen kopiert "
+"werden."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1386
 msgid "Storing Styles in a File or a Database"
@@ -4755,6 +4965,29 @@ msgstr ""
 "erneut die Leertaste. Sie können auch auf die Schaltfläche :guilabel:`Farbe "
 "abgreifen` klicken, um die Farbwahl zu aktivieren."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1759
+msgid ""
+"Whatever method you use, the selected color is always described through "
+"options of a :guilabel:`Color model` that defaults to the :ref:`project "
+"color model <project_colors>`:"
+msgstr ""
+"Unabhängig davon, welche Methode Sie verwenden, wird die ausgewählte Farbe "
+"immer über eine :guilabel:`Farbmodell` beschrieben, das standardmäßig auf "
+"das :ref:`Projektfarbmodell <project_colors>` eingestellt ist:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1763
+msgid ""
+":guilabel:`RGB`: color is set using sliders for ``HSV`` (Hue, Saturation, "
+"Value) or ``RGB`` (Red, Green, Blue) values."
+msgstr ""
+":guilabel:`RGB`: Die Farbe wird mithilfe von Schiebereglern für die Werte "
+"``HSV`` (Farbton, Sättigung, Wert) oder ``RGB`` (Rot, Grün, Blau) "
+"eingestellt."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1765
+msgid ":guilabel:`CMYK` (Cyan, Magenta, Yellow, Black)"
+msgstr ":guilabel:`CMYK` (Cyan, Magenta, Gelb, Schwarz)"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1767
 msgid ""
 "Modifying a color is as simple as clicking on the color wheel or ramp or on "
@@ -5413,6 +5646,21 @@ msgstr "Dialog zur Anpassung des Maßstabsbereichs"
 msgid "Number Formatting"
 msgstr "Zahlen Formatierung"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2052
+msgid ""
+"Numeric formatters allow formatting of numeric values for display, using a "
+"variety of different formatting techniques (for instance scientific "
+"notation, currency values, percentage values, custom formatting, etc). One "
+"use of this is to set text in a layout scale bar or table, a color ramp "
+"legend, an elevation profile plot, ..."
+msgstr ""
+"Zahlenformate ermöglichen die Formatierung von Zahlenwerten für die Anzeige "
+"unter Verwendung einer Vielzahl verschiedener Formatierungstechniken (z. B. "
+"wissenschaftliche Notation, Währungswerte, Prozentwerte, benutzerdefinierte "
+"Formatierung usw.). Eine Anwendungsmöglichkeit hierfür ist die Darstellung "
+"von Text in einer Layout-Maßstabsleiste oder -Tabelle, einer "
+"Farbregisterlegende, einem Höhenprofil-Diagramm usw."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2063
 msgid "Formatting numeric value"
 msgstr "Formatierung numerischer Werte"
@@ -5449,9 +5697,23 @@ msgid ""
 ":guilabel:`General`, the default category: has no setting and displays "
 "values as set in the parent widget properties or using the global settings."
 msgstr ""
-":guilabel:`Allgemein\", die Standardkategorie: hat keine Einstellung und "
+":guilabel:`Allgemein`, die Standardkategorie: hat keine Einstellung und "
 "zeigt die Werte an, die in den Eigenschaften des übergeordneten Widgets oder"
 " in den globalen Einstellungen festgelegt wurden."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2077
+msgid ""
+":guilabel:`Custom expression`: allows you to craft a custom :ref:`QGIS "
+"expression <vector_expressions>` to format numbers. The expression can use "
+"the ``@value`` variable to retrieve the value to be formatted, and then use "
+"any standard QGIS expression function to format this as desired."
+msgstr ""
+":guilabel:`Benutzerdefinierter Ausdruck`: Ermöglicht Ihnen die Erstellung "
+"eines benutzerdefinierten :ref:`QGIS-Ausdrucks <vector_expressions>` zur "
+"Formatierung von Zahlen. Der Ausdruck kann die Variable ``@value`` "
+"verwenden, um den zu formatierenden Wert abzurufen, und dann eine beliebige "
+"Standard-QGIS-Ausdrucksfunktion verwenden, um diesen nach Wunsch zu "
+"formatieren."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2081
 msgid ":guilabel:`Number`"
@@ -5582,7 +5844,7 @@ msgid ""
 "channel of the top pixel to blend with the pixel beneath it. The colors "
 "aren't mixed."
 msgstr ""
-":guilabel:`Normal\": Dies ist der Standardüberblendungsmodus, der den "
+":guilabel:`Normal`: Dies ist der Standardüberblendungsmodus, der den "
 "Alphakanal des obersten Pixels verwendet, um mit dem darunter liegenden "
 "Pixel zu mischen. Die Farben werden nicht gemischt."
 
@@ -5961,6 +6223,23 @@ msgstr ""
 "Sie können eine korrekt konfigurierte |dataDefine| :sup:`Datendefinierte "
 "Übersteuerung` aktivieren oder deaktivieren, indem Sie einfach mit der "
 "rechten Maustaste auf das Symbol klicken."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2243
+msgid "**Use middle-click to create or edit the expression to apply**"
+msgstr ""
+"**Verwenden Sie die mittlere Maustaste, um den anzuwendenden Ausdruck zu "
+"erstellen oder zu bearbeiten**"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2245
+msgid ""
+"You can directly open the :guilabel:`Expression String Builder` dialog to "
+"create or edit the expression to apply by simply clicking the |dataDefine| "
+":sup:`Data-defined override` widget with the middle mouse button."
+msgstr ""
+"Sie können den Dialog :guilabel:`Ausdruckseditor` direkt öffnen, um den "
+"anzuwendenden Ausdruck zu erstellen oder zu bearbeiten, indem Sie einfach "
+"mit der mittleren Maustaste auf das Widget |dataDefine| "
+":sup:`Datendefinierte Übersteuerung` klicken."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2252
 msgid "Using the data-defined assistant interface"
