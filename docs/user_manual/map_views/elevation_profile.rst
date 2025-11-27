@@ -48,6 +48,9 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
    * - |layerTree| :sup:`Show Layer Tree`
      -
      - Shows or hides a list of project layers to configure rendering in the profile view.
+   * - |removeGroupAction| :sup: `Remove Group Action`
+     - 
+     - Removes group action
    * - |captureLine| :sup:`Capture Curve`
      -
      - Draws interactively a line over the map canvas to represent the profile curve.
@@ -182,7 +185,7 @@ To create a profile view, you can:
       Clicking the |addLayer| :sup:`Add layers` button will show a filtered list of possible layers
       which can be added to the plot, but which currently aren't in the plot.
       Applying the dialog with selected layers will automatically mark them as having elevation data
-      and immediately add them to the plot. Clicking the |Remove group action| :sup:`Remove group action`
+      and immediately add them to the plot. Clicking the |removeGroupAction| :sup:`Remove group action`
       button will remove the selected group while keeping its child layers: the child
       layers are promoted one level up in the tree instead of being deleted.
 
