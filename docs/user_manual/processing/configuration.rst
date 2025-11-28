@@ -50,8 +50,8 @@ or for :ref:`individual parameters <alg_parameter_types>`.
 * :guilabel:`Max Threads`
 * :guilabel:`Output folder` for non temporary outputs: If no folder path
   is provided for the Processing execution outputs, this is the folder in which
-  they will be saved. Default is :file:`processing/outputs` under the active
-  :ref:`user profile <user_profiles>` directory.
+  they will be saved. Default is :file:`processing` under the user home directory
+  (e.g., :file:`C:\\Users\\<YOURUSERNAME>\\processing\\` on Windows).
 
 .. _overidden_temp_folder:
 
