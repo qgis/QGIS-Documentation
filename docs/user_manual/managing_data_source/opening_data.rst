@@ -1475,11 +1475,11 @@ By default, QGIS provides some default and ready-to-use XYZ Tiles services:
 To add a new service, press :guilabel:`New` (respectively :guilabel:`New Connection`
 from the Browser panel) and provide:
 
-  .. _figure_xyz_tiles_openstreetmap:
-  .. figure:: img/xyz_tiles_dialog_osm.png
-     :align: center
+.. _figure_xyz_tiles_openstreetmap:
+.. figure:: img/xyz_tiles_dialog_osm.png
+   :align: center
 
-     XYZ Tiles - OpenStreetMap configuration
+   XYZ Tiles - OpenStreetMap configuration
 
 * a :guilabel:`Name`
 * the :guilabel:`URL`, you can add ``http://example.com/{z}/{x}/{y}.png`` or 

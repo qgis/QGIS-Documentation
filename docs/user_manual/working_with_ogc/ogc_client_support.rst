@@ -1051,7 +1051,8 @@ Expanding a collection reveals the individual :guilabel:`Items` it contains.
 
 Right-click any STAC :guilabel:`Item` and choose :guilabel:`Details...` to view its metadata.
 The details panel shows the item’s JSON content and a map of its coverage.
-If an item’s asset is a cloud-optimized format (e.g. a COG), you can add it directly to the map canvas.
+If an item’s asset is a cloud-optimized format (e.g. a :file:`.COG`),
+you can add it directly to the map canvas.
 Otherwise, :guilabel:`Download Assets...` to save it locally before use.
 
 Filtering and Searching STAC Items
