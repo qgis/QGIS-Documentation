@@ -195,7 +195,7 @@ not yet known, QGIS will present a trust dialog. The dialog shows all embedded
 code blocks and allows you to preview them before deciding whether to trust the
 project.
 
-.. _figure_project_trust_settings:
+.. _figure_security_prompt:
 
 .. figure:: img/security_prompt.png
    :align: center
