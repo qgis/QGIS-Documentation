@@ -151,6 +151,56 @@ displayed at the bottom of the frame.
     embed auxiliary data`: the auxiliary data is stored in a separate :file:`.qgd`
     file along with the project file.
 
+.. _project_trust:
+
+**Project Trust**
+
+These options control how QGIS handles execution of embedded Python code contained
+in project files. Embedded code includes macros, custom expression functions,
+Python-based actions and attribute form initialization code. QGIS allows you to
+manage trust on a per-project or per-folder basis.
+
+.. _figure_project_trust_settings:
+
+.. figure:: img/project_trust_general.png
+   :align: center
+
+   Project Trust Settings
+
+* :guilabel:`Behavior for untrusted project's embedded Python code`:
+  Use the dropdown menu to select how QGIS should respond when opening a project
+  whose trust status has not yet been decided. Options include:
+
+  * :guilabel:`Never Execute`: block execution of all embedded Python code.
+  * :guilabel:`Never Ask for Trust`: execute all embedded Python code automatically for trusted projects or folders,
+    without prompting. Denied projects are still blocked.
+  * :guilabel:`Ask for Trust`: QGIS will display a trust dialog listing all embedded code and
+    prompt you to allow or deny execution.
+  * :guilabel:`Always Execute (Not recommended)`: enable execution of all embedded Python code.
+
+* :guilabel:`Trusted projects and folders allowed Python code execution`:
+  This list shows project files or folders that you have explicitly marked as
+  trusted. Projects located in these paths are allowed to run their embedded
+  Python code without prompting. Use the |symbologyAdd|:sup:`Add new trusted project` or
+  |symbologyRemove|:sup:`Remove trusted project or folder` buttons to manage the list.
+
+* :guilabel:`Denied projects and folders Python code execution`:
+  Paths listed here are explicitly marked as untrusted. Projects stored in these
+  locations will never run embedded Python code. Use the |symbologyAdd|:sup:`Add new project denial` or
+  |symbologyRemove|:sup:`Remove denied project or folder` buttons to
+  maintain the list.
+
+When opening a project containing embedded Python code and whose trust state is
+not yet known, QGIS will present a trust dialog. The dialog shows all embedded
+code blocks and allows you to preview them before deciding whether to trust the
+project.
+
+.. _figure_project_trust_settings:
+
+.. figure:: img/security_prompt.png
+   :align: center
+
+   Security Prompt for Project Trust
 
 .. index:: Environment variables
 .. _`env_options`:
