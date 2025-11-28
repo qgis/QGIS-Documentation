@@ -7,8 +7,8 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2025
 # Harrissou Sant-anna, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Transifex Bot <>, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-01 10:36+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -843,6 +843,16 @@ msgstr "count_distinct"
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:553
 msgid "count_missing"
 msgstr "count_missing"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:32
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:554
+msgid "minimum or min"
+msgstr "minimum oder min"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:33
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:555
+msgid "maximum or max"
+msgstr "maximum oder max"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:30
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:34
@@ -2225,6 +2235,10 @@ msgstr ""
 "Gibt ein Array zurück, das nur die Elemente enthält, für die der Ausdruck "
 "als wahr ausgewertet wird."
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:166
+msgid "array_filter(array, expression, [limit=0])"
+msgstr "array_filter(array, expression, [limit=0])"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:171
 msgid ""
 "**expression** - an expression to evaluate on each item. The variable "
@@ -2303,6 +2317,16 @@ msgstr ""
 msgid "array_foreach(array, expression)"
 msgstr "array_foreach(array, expression)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:236
+msgid ""
+"**expression** - an expression to evaluate on each item. The variable "
+"`@element` will be replaced by the current value and the variable `@counter`"
+" by the current index (starting with 0)."
+msgstr ""
+"**expression** - Ein Ausdruck, der für jedes Element ausgewertet wird. Die "
+"Variable `@element` wird durch den aktuellen Wert ersetzt, die Variable "
+"`@counter` durch den aktuellen Index (beginnend mit 0)."
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:238
 msgid ""
 "``array_foreach(array('a','b','c'),upper(@element))`` → [ 'A', 'B', 'C' ]"
@@ -2312,6 +2336,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:239
 msgid "``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]"
 msgstr "``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:240
+msgid "``array_foreach(array(1,2,3),@element + @counter)`` → [ 1, 3, 5 ]"
+msgstr "``array_foreach(array(1,2,3),@element + @counter)`` → [ 1, 3, 5 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:248
 msgid "array_get"
@@ -2862,6 +2890,14 @@ msgstr ""
 "``array_replace(array('APP', 'SHOULD', "
 "'ROCK'),map('APP','QGIS','SHOULD','DOES'))`` → [ 'QGIS', 'DOES', 'ROCK' ]"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:64
+msgid ""
+"Further reading: :ref:`expression_function_String_replace`, "
+":ref:`expression_function_String_regexp_replace`"
+msgstr ""
+"Siehe auch: :ref:`expression_function_String_replace`, "
+":ref:`expression_function_String_regexp_replace`"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:6
 msgid "array_reverse"
 msgstr "array_reverse"
@@ -3048,6 +3084,10 @@ msgstr "``array_to_string(array(1,2,3),'-')`` → '1-2-3'"
 msgid "``array_to_string(array('1','','3'),',','0')`` → '1,0,3'"
 msgstr "``array_to_string(array('1','','3'),',','0')`` → '1,0,3'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:71
+msgid "Further reading: :ref:`expression_function_Arrays_string_to_array`"
+msgstr "Siehe auch: :ref:`expression_function_Arrays_string_to_array`"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:6
 msgid "generate_series"
 msgstr "generate_series"
@@ -3097,6 +3137,14 @@ msgstr "geometries_to_array(geometry)"
 msgid "**geometry** - the input geometry"
 msgstr "**geometry** - die Eingabe-Geometrie"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:43
+msgid ""
+"``geometries_to_array(geom_from_wkt('MultiPoint (1 2, 5 21)'))`` → An array "
+"containing 'Point (1 2)' and 'Point (5 21)'"
+msgstr ""
+"``geometries_to_array(geom_from_wkt('MultiPoint (1 2, 5 21)'))`` → Ein "
+"Array, das 'Point (1 2)' and 'Point (5 21)' enthält"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:44
 msgid ""
 "``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1,"
@@ -3106,6 +3154,16 @@ msgstr ""
 "``geometries_to_array(geom_from_wkt('GeometryCollection (Polygon ((5 8, 4 1,"
 " 3 2, 5 8)),LineString (3 2, 4 2))'))`` → ein Array von einer Polygon- und "
 "einer Liniengeometrien"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:45
+msgid ""
+"``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon"
+" ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
+"1, 3 2, 5 8))'"
+msgstr ""
+"``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon"
+" ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
+"1, 3 2, 5 8))'"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:46
 msgid ""
@@ -3159,6 +3217,14 @@ msgstr ""
 "``regexp_matches('key=>','(.*)=>(.*)','empty value')`` → [ 'key', 'empty "
 "value' ]"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:77
+msgid ""
+"Further reading: :ref:`expression_function_String_substr`, "
+":ref:`expression_function_String_regexp_substr`"
+msgstr ""
+"Siehe auch: :ref:`expression_function_String_substr`, "
+":ref:`expression_function_String_regexp_substr`"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:6
 msgid "string_to_array"
 msgstr "string_to_array"
@@ -3195,6 +3261,10 @@ msgstr "``string_to_array('1,2,3',',')`` → [ '1', '2', '3' ]"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:23
 msgid "``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]"
 msgstr "``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:84
+msgid "Further reading: :ref:`expression_function_Arrays_array_to_string`"
+msgstr "Siehe auch: :ref:`expression_function_Arrays_array_to_string`"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:91
 msgid "Color Functions"
@@ -3294,17 +3364,79 @@ msgstr "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
 msgid "color_cmykf"
 msgstr "color_cmykf"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:61
+msgid ""
+"Returns a color object based on its cyan, magenta, yellow, black and alpha "
+"components."
+msgstr ""
+"Gibt ein Farbobjekt basierend auf seinen Cyan-, Magenta-, Gelb-, Schwarz- "
+"und Alpha-Komponenten zurück."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:67
+msgid "color_cmykf(cyan, magenta, yellow, black, [alpha=1.0])"
+msgstr "color_cmykf(cyan, magenta, yellow, black, [alpha=1.0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:71
+msgid "**cyan** - cyan component as a float value from 0.0 to 1.0"
+msgstr "**cyan** - Cyan-Komponente als Fließkommawert von 0,0 bis 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:72
+msgid "**magenta** - magenta component as a float value from 0.0 to 1.0"
+msgstr "**magenta** - Magenta-Komponente als Fließkommawert von 0,0 bis 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:73
+msgid "**yellow** - yellow component as a float value from 0.0 to 1.0"
+msgstr "**yellow** - Gelb-Komponente als Fließkommawert von 0,0 bis 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:74
+msgid "**black** - black component as a float value from 0.0 to 1.0"
+msgstr "**black** - Schwarz- Komponente als Fließkommawert von 0,0 bis 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:166
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:236
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:392
+msgid "**alpha** - alpha component as a float value from 0.0 to 1.0"
+msgstr "**alpha** - Alpha-Komponente als Fließkommawert zwischen 0,0 und 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:77
+msgid "``color_cmykf(1,0.9,0.81,0.62)`` → CMYKA: 1.00,0.90,0.81,0.62,1.00"
+msgstr "``color_cmykf(1,0.9,0.81,0.62)`` → CMYKA: 1.00,0.90,0.81,0.62,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:85
 msgid "color_grayscale_average"
 msgstr "color_grayscale_average"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:87
+msgid ""
+"Applies a grayscale filter to a color and returns it. Returned type is the "
+"same as color argument, i.e. a color string representation or a color "
+"object."
+msgstr ""
+"Wendet einen Graustufenfilter auf eine Farbe an und gibt sie zurück. Der "
+"Rückgabetyp entspricht dem Farbargument, d. h. einer Farbzeichenfolge oder "
+"einem Farbobjekt."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:93
 msgid "color_grayscale_average(color)"
 msgstr "color_grayscale_average(color)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:95
+msgid "**color** - a color string representation or a color object"
+msgstr ""
+"**color** – eine Farbrepräsentation als Farbzeichenfolge oder ein Farbobjekt"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:97
 msgid "``color_grayscale_average('255,100,50')`` → '135,135,135,255'"
 msgstr "``color_grayscale_average('255,100,50')`` → '135,135,135,255'"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:98
+msgid ""
+"``color_grayscale_average(color_cmykf(0.6,0.5,0.1,0.8))`` → CMYKA: "
+"0.40,0.40,0.40,0.80,1.00"
+msgstr ""
+"``color_grayscale_average(color_cmykf(0.6,0.5,0.1,0.8))`` → CMYKA: "
+"0.40,0.40,0.40,0.80,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:106
 msgid "color_hsl"
@@ -3377,6 +3509,39 @@ msgstr "``color_hsla(100,50,70,200)`` → '166,217,140,200'"
 msgid "color_hslf"
 msgstr "color_hslf"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:153
+msgid ""
+"Returns a color object based on its hue, saturation, and lightness "
+"attributes."
+msgstr ""
+"Gibt ein Farbobjekt basierend auf seinen Attributen für Farbton, Sättigung "
+"und Helligkeit zurück."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:159
+msgid "color_hslf(hue, saturation, lightness, [alpha=1.0])"
+msgstr "color_hslf(hue, saturation, lightness, [alpha=1.0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:163
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:233
+msgid "**hue** - hue of the color, as a float value from 0.0 to 1.0"
+msgstr "**hue** - Farbton als Fließkommawert zwischen 0,0 und 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:164
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:234
+msgid ""
+"**saturation** - saturation of the color as a float value from 0.0 to 1.0"
+msgstr "**saturation** - Farbsättigung als Fließkommawert von 0,0 bis 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:165
+msgid ""
+"**lightness** - lightness of the color as a float value from 0.0 to 1.0"
+msgstr ""
+"**lightness** - Helligkeit der Farbe als Fließkommawert von 0,0 bis 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:168
+msgid "``color_hslf(0.3,0.52,0.7)`` → HSLA: 0.30,0.52,0.70,1.00"
+msgstr "``color_hslf(0.3,0.52,0.7)`` → HSLA: 0.30,0.52,0.70,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:176
 msgid "color_hsv"
 msgstr "color_hsv"
@@ -3434,13 +3599,51 @@ msgstr "``color_hsva(40,100,100,200)`` → '255,170,0,200'"
 msgid "color_hsvf"
 msgstr "color_hsvf"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:223
+msgid ""
+"Returns a color object based on its hue, saturation, and value attributes."
+msgstr ""
+"Gibt ein Farbobjekt basierend auf seinen Attributen für Farbton, Sättigung "
+"und Wert zurück."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:229
+msgid "color_hsvf(hue, saturation, value, [alpha=1.0])"
+msgstr "color_hsvf(hue, saturation, value, [alpha=1.0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:235
+msgid "**value** - value of the color as as a float value from 0.0 to 1.0"
+msgstr "**value** - Wert der Farbe als Fließkommawert zwischen 0,0 und 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:238
+msgid "``color_hsvf(0.4,1,0.6)`` → HSVA: 0.40,1.00,0.60,1.00"
+msgstr "``color_hsvf(0.4,1,0.6)`` → HSVA: 0.40,1.00,0.60,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:246
 msgid "color_mix"
 msgstr "color_mix"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:248
+msgid ""
+"Returns a color mixing the red, green, blue, and alpha values of two "
+"provided colors based on a given ratio. Returned type is the same as color "
+"arguments, i.e. a color string representation or a color object."
+msgstr ""
+"Gibt eine Farbe zurück, die die Rot-, Grün-, Blau- und Alpha-Werte zweier "
+"angegebener Farben basierend auf einem vorgegebenen Verhältnis mischt. Der "
+"zurückgegebene Typ entspricht den Farbargumenten, d. h. einer "
+"Farbzeichenfolge oder einem Farbobjekt."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:254
 msgid "color_mix(color1, color2, ratio)"
 msgstr "color_mix(color1, color2, ratio)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:256
+msgid "**color1** - a color string or a color object"
+msgstr "**color1** - eine Farbzeichenfolge oder ein Farbobjekt"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:257
+msgid "**color2** - a color string or a color object"
+msgstr "**color2** - eine Farbzeichenfolge oder ein Farbobjekt"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:258
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:281
@@ -3451,6 +3654,14 @@ msgstr "**ratio** - ein Verhältnis"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:283
 msgid "``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'"
 msgstr "``color_mix_rgb('0,0,0','255,255,255',0.5)`` → '127,127,127,255'"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:261
+msgid ""
+"``color_mix(color_cmykf(0.9,0.9,0.9,0.9),color_cmykf(0.1,0.1,0.1,0.1),0.5)``"
+" → CMYKA: 0.50,0.50,0.50,0.50,1.00"
+msgstr ""
+"``color_mix(color_cmykf(0.9,0.9,0.9,0.9),color_cmykf(0.1,0.1,0.1,0.1),0.5)``"
+" → CMYKA: 0.50,0.50,0.50,0.50,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:269
 msgid "color_mix_rgb"
@@ -3481,9 +3692,24 @@ msgstr "**color2** - eine Farbzeichenfolge"
 msgid "color_part"
 msgstr "color_part"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:293
+msgid ""
+"Returns a specific component from a color string or color object, e.g., the "
+"red component or alpha component."
+msgstr ""
+"Gibt eine bestimmte Komponente aus einer Farbzeichenfolge oder einem "
+"Farbobjekt zurück, z. B. die rote Komponente oder die Alpha-Komponente."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:299
 msgid "color_part(color, component)"
 msgstr "color_part(color, component)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:16
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:301
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:435
+msgid "**color** - a color string or a color object"
+msgstr "**color** - eine Farbzeichenfolge oder ein Farbobjekt"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:302
 msgid ""
@@ -3567,6 +3793,10 @@ msgstr "black: CMYK Schwarz-Anteil(0-100)"
 msgid "``color_part('200,10,30','green')`` → 10"
 msgstr "``color_part('200,10,30','green')`` → 10"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:324
+msgid "``to_int(color_part(color_cmykf(0.1,0.2,0.3,0.9),'black'))`` → 90"
+msgstr "``to_int(color_part(color_cmykf(0.1,0.2,0.3,0.9),'black'))`` → 90"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:332
 msgid "color_rgb"
 msgstr "color_rgb"
@@ -3626,6 +3856,33 @@ msgstr "``color_rgba(255,127,0,200)`` → '255,127,0,200'"
 msgid "color_rgbf"
 msgstr "color_rgbf"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:379
+msgid ""
+"Returns a color object based on its red, green, blue and alpha components."
+msgstr ""
+"Gibt ein Farbobjekt basierend auf seinen Rot-, Grün-, Blau- und Alpha-"
+"Komponenten zurück."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:385
+msgid "color_rgbf(red, green, blue, [alpha=1.0])"
+msgstr "color_rgbf(red, green, blue, [alpha=1.0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:389
+msgid "**red** - red component as a float value from 0.0 to 1.0"
+msgstr "**rot** – Rotanteil als Fließkommawert zwischen 0,0 und 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:390
+msgid "**green** - green component as a float value from 0.0 to 1.0"
+msgstr "**grün** – Grünanteil als Fließkommawert zwischen 0,0 und 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:391
+msgid "**blue** - blue component as a float value from 0.0 to 1.0"
+msgstr "**blau** – Blauanteil als Fließkommawert zwischen 0,0 und 1,0"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:394
+msgid "``color_rgbf(1.0,0.5,0)`` → RGBA: 1.00,0.50,0.00,1.00"
+msgstr "``color_rgbf(1.0,0.5,0)`` → RGBA: 1.00,0.50,0.00,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:402
 msgid "create_ramp"
 msgstr "create_ramp"
@@ -3661,6 +3918,15 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:425
 msgid "darker"
 msgstr "darker"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:427
+msgid ""
+"Returns a darker (or lighter) color. Returned type is the same as color "
+"arguments, i.e. a color string representation or a color object."
+msgstr ""
+"Gibt eine dunklere (oder hellere) Farbe zurück. Der zurückgegebene Typ "
+"entspricht den Farbargumenten, d. h. einer Farbzeichenfolge oder einem "
+"Farbobjekt."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:433
 msgid "darker(color, factor)"
@@ -3704,6 +3970,15 @@ msgstr "Siehe auch: :ref:`expression_function_Color_lighter`"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:6
 msgid "lighter"
 msgstr "lighter"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:8
+msgid ""
+"Returns a lighter (or darker) color. Returned type is the same as color "
+"arguments, i.e. a color string representation or a color object."
+msgstr ""
+"Gibt eine hellere (oder dunklere) Farbe zurück. Der zurückgegebene Typ "
+"entspricht den Farbargumenten, d. h. einer Farbzeichenfolge oder einem "
+"Farbobjekt."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:14
 msgid "lighter(color, factor)"
@@ -3766,9 +4041,23 @@ msgstr "Siehe auch: :ref:`setting project colors <project_colors>`"
 msgid "project_color_object"
 msgstr "project_color_object"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:8
+msgid ""
+"Returns a color from the project's color scheme. Contrary to project_color "
+"which returns a color string representation, project_color_object returns a "
+"color object."
+msgstr ""
+"Gibt eine Farbe aus dem Farbschema des Projekts zurück. Im Gegensatz zu "
+"project_color, das eine Farbzeichenfolge zurückgibt, gibt "
+"project_color_object ein Farbobjekt zurück."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:14
 msgid "project_color_object(name)"
 msgstr "project_color_object(name)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:18
+msgid "``project_color_object('Logo color')`` → RGBA: 0.08,0.55,0.20,1.00"
+msgstr "``project_color_object('Logo color')`` → RGBA: 0.08,0.55,0.20,1.00"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:26
 msgid "ramp_color"
@@ -3857,17 +4146,57 @@ msgstr "Siehe auch: :ref:`color-ramp`, :ref:`color_ramp_widget`"
 msgid "ramp_color_object"
 msgstr "ramp_color_object"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:8
+msgid ""
+"Returns a color object from a color ramp. Contrary to ramp_color which "
+"returns a color string representation, ramp_color_object returns a color "
+"object."
+msgstr ""
+"Gibt ein Farbobjekt aus einer Farbverlaufsrampe zurück. Im Gegensatz zu "
+"ramp_color, das eine Zeichenkettendarstellung der Farbe zurückgibt, gibt "
+"ramp_color_object ein Farbobjekt zurück."
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:12
+msgid "Returns a color object from a saved ramp"
+msgstr "Gibt ein Farbobjekt aus einer gespeicherten Farbskala zurück."
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:18
 msgid "ramp_color_object(ramp_name, value)"
 msgstr "ramp_color_object(ramp_name, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:23
+msgid "``ramp_color_object('Spectral',0.3)`` → RGBA: 0.99,0.75,0.45,1.00"
+msgstr "``ramp_color_object('Spectral',0.3)`` → RGBA: 0.99,0.75,0.45,1.00"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:30
+msgid "Returns a color object from an expression-created ramp"
+msgstr ""
+"Gibt ein Farbobjekt aus einer durch einen Ausdruck erstellten Farbskala "
+"zurück."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:36
 msgid "ramp_color_object(ramp, value)"
 msgstr "ramp_color_object(ramp, value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:41
+msgid ""
+"``ramp_color_object(create_ramp(map(0,color_rgbf(0,0,0),1,color_rgbf(1,0,0))),1)``"
+" → RGBA: 1.00,0.00,0.00,1.00"
+msgstr ""
+"``ramp_color_object(create_ramp(map(0,color_rgbf(0,0,0),1,color_rgbf(1,0,0))),1)``"
+" → RGBA: 1.00,0.00,0.00,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:49
 msgid "set_color_part"
 msgstr "set_color_part"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:51
+msgid ""
+"Sets a specific color component for a color string or a color object, e.g., "
+"the red component or alpha component."
+msgstr ""
+"Legt eine bestimmte Farbkomponente für eine Farbkette oder ein Farbobjekt "
+"fest, z. B. die Rot-Komponente oder die Alpha-Komponente."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:57
 msgid "set_color_part(color, component, value)"
@@ -3892,6 +4221,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:82
 msgid "``set_color_part('200,10,30','green',50)`` → '200,50,30,255'"
 msgstr "``set_color_part('200,10,30','green',50)`` → '200,50,30,255'"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:83
+msgid ""
+"``set_color_part(color_cmykf(0.21,0,0.92,0.70),'black',100)`` → CMYKA: "
+"0.21,0.00,0.92,1.00,1.00"
+msgstr ""
+"``set_color_part(color_cmykf(0.21,0,0.92,0.70),'black',100)`` → CMYKA: "
+"0.21,0.00,0.92,1.00,1.00"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:128
 msgid "Conditional Functions"
@@ -4535,6 +4872,15 @@ msgstr ""
 msgid "``to_date('29 juin, 2019','d MMMM, yyyy','fr')`` → 2019-06-29"
 msgstr "``to_date('29 juin, 2019','d MMMM, yyyy','fr')`` → 2019-06-29"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:156
+#: ../../docs/user_manual/expressions/functions_list.rst:162
+#: ../../docs/user_manual/expressions/functions_list.rst:174
+#: ../../docs/user_manual/expressions/functions_list.rst:217
+#: ../../docs/user_manual/expressions/functions_list.rst:223
+#: ../../docs/user_manual/expressions/functions_list.rst:229
+msgid "Further reading: :ref:`expression_function_Date_and_Time_format_date`"
+msgstr "Siehe auch: :ref:`expression_function_Date_and_Time_format_date`"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:6
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:6
 msgid "to_datetime"
@@ -4709,6 +5055,15 @@ msgstr "``to_dms(6.1545681, 'y', 4, 'suffix')`` → 6°9′16.4452″N"
 msgid "to_int"
 msgstr "to_int"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:82
+msgid ""
+"Converts a string to integer number. If a value cannot be converted to "
+"integer the expression is invalid (e.g '123asd' is invalid)."
+msgstr ""
+"Konvertiert eine Zeichenfolge in eine Ganzzahl. Wenn ein Wert nicht in eine "
+"Ganzzahl konvertiert werden kann, ist der Ausdruck ungültig (z. B. ist "
+"„123asd” ungültig)."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:88
 msgid "to_int(string)"
 msgstr "to_int(string)"
@@ -4775,6 +5130,19 @@ msgstr ""
 msgid "to_real"
 msgstr "to_real"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:124
+msgid ""
+"Converts a string to a real number. If a value cannot be converted to real "
+"the expression is invalid (e.g '123.56asd' is invalid).  Numbers are rounded"
+" after saving changes if the precision is smaller than the result of the "
+"conversion."
+msgstr ""
+"Konvertiert eine Zeichenfolge in eine reale Zahl. Wenn ein Wert nicht in "
+"eine reale Zahl konvertiert werden kann, ist der Ausdruck ungültig (z. B. "
+"ist „123,56asd” ungültig). Zahlen werden nach dem Speichern der Änderungen "
+"gerundet, wenn die Genauigkeit geringer ist als das Ergebnis der "
+"Konvertierung."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:130
 msgid "to_real(string)"
 msgstr "to_real(string)"
@@ -4813,6 +5181,11 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/String.rst:18
 msgid "``to_string(123)`` → '123'"
 msgstr "``to_string(123)`` → '123'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:168
+#: ../../docs/user_manual/expressions/functions_list.rst:1226
+msgid "Further reading: :ref:`expression_function_String_format_number`"
+msgstr "Siehe auch: :ref:`expression_function_String_format_number`"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:6
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:28
@@ -6378,6 +6751,10 @@ msgstr ""
 "Eingabestrings müssen gleich lang sein, und beim Vergleich wird die Groß- "
 "und Kleinschreibung beachtet."
 
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:20
+msgid "hamming_distance(string1, string2)"
+msgstr "hamming_distance(string1, string2)"
+
 #: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:22
 #: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:48
 #: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:71
@@ -6769,6 +7146,14 @@ msgstr ""
 "durchgeführt. Wenn es einen Z- oder M-Offset gibt, die Koordinate aber nicht"
 " in der Geometrie vorhanden ist, wird sie hinzugefügt."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"affine_transform(geometry, delta_x, delta_y, rotation_z, scale_x, scale_y, "
+"[delta_z=0], [delta_m=0], [scale_z=1], [scale_m=1])"
+msgstr ""
+"affine_transform(geometry, delta_x, delta_y, rotation_z, scale_x, scale_y, "
+"[delta_z=0], [delta_m=0], [scale_z=1], [scale_m=1])"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
@@ -6924,6 +7309,14 @@ msgstr ""
 "Wendet ein Strichmuster auf eine Geometrie an und gibt eine MultiLineString-"
 "Geometrie zurück, die die Eingabegeometrie ist, die entlang jeder "
 "Linie/jedes Rings mit dem angegebenen Muster gestrichen ist."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:79
+msgid ""
+"apply_dash_pattern(geometry, pattern, [start_rule=no_rule], "
+"[end_rule=no_rule], [adjustment=both], [pattern_offset=0])"
+msgstr ""
+"apply_dash_pattern(geometry, pattern, [start_rule=no_rule], "
+"[end_rule=no_rule], [adjustment=both], [pattern_offset=0])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:83
@@ -7133,6 +7526,22 @@ msgstr ""
 "authority:ID (z. B. 'EPSG:7030') des Ellipsoids angibt, auf dem die Peilung "
 "gemessen werden soll. Standardmäßig wird die Ellipsoid-Einstellung des "
 "aktuellen Projekts verwendet."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:176
+msgid ""
+"``degrees( bearing( make_point(16198544, -4534850), make_point(18736872, "
+"-1877769), 'EPSG:3857', 'EPSG:7030') )`` → 49.980071"
+msgstr ""
+"``degrees( bearing( make_point(16198544, -4534850), make_point(18736872, "
+"-1877769), 'EPSG:3857', 'EPSG:7030') )`` → 49.980071"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:177
+msgid ""
+"``degrees( bearing( make_point(18736872, -1877769), make_point(16198544, "
+"-4534850), 'EPSG:3857', 'WGS84') )`` → 219.282386"
+msgstr ""
+"``degrees( bearing( make_point(18736872, -1877769), make_point(16198544, "
+"-4534850), 'EPSG:3857', 'WGS84') )`` → 219.282386"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:185
 msgid "boundary"
@@ -7647,6 +8056,16 @@ msgstr ""
 "0,99 ergibt ein Ergebnis, das eine kleinere Fläche als die konvexe Hülle "
 "haben sollte."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:42
+msgid ""
+"**allow_holes** - optional argument specifying whether to allow holes within"
+" the output geometry. Defaults to FALSE, set to TRUE to allow including "
+"holes in the output geometry."
+msgstr ""
+"**allow_holes** – optionales Argument, das angibt, ob Löcher innerhalb der "
+"Ausgabegeometrie zulässig sind. Der Standardwert ist FALSE. Setzen Sie den "
+"Wert auf TRUE, um Löcher in der Ausgabegeometrie zuzulassen."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
 msgid ""
 "``geom_to_wkt(concave_hull(geom_from_wkt('MULTILINESTRING((106 164,30 112,74"
@@ -7897,6 +8316,16 @@ msgstr ""
 "``geom_to_wkt( difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), "
 "geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → 'LINESTRING(4 4, 5 5)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
+msgid ""
+"Difference operation between a two-features input layer ‘a’ and a single "
+"feature overlay layer ‘b’ (left) - resulting in a new layer with the "
+"modified ‘a’ features (right)"
+msgstr ""
+"Differenzoperation zwischen einem Eingabelayer „a“ mit zwei Objekten und "
+"einem Überlagerungslayer „b“ mit einem Objekt (links) – Ergebnis ist ein "
+"neuer Layer mit den modifizierten Objekten von „a“ (rechts)"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:445
 msgid "Further reading: :ref:`qgisdifference` algorithm"
 msgstr "Siehe auch: :ref:`qgisdifference`-Algorithmus"
@@ -8139,6 +8568,14 @@ msgstr ""
 msgid "The dashed line represents the exterior ring of the polygon"
 msgstr "Die gestrichelte Linie stellt den äußeren Ring des Polygons dar"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:470
+msgid ""
+"Further reading: :ref:`qgisboundary` algorithm, "
+":ref:`expression_function_GeometryGroup_interior_ring_n`"
+msgstr ""
+"Siehe auch: :ref:`qgisboundary` algorithm, "
+":ref:`expression_function_GeometryGroup_interior_ring_n`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "extrude"
 msgstr "extrude"
@@ -8215,6 +8652,14 @@ msgstr "flip_coordinates(geometry)"
 msgid "``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'"
 msgstr "``geom_to_wkt(flip_coordinates(make_point(1, 2)))`` → 'Point (2 1)'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
+msgid ""
+"``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
+msgstr ""
+"``geom_to_wkt(flip_coordinates(geom_from_wkt('LineString(0 2, 1 0, 1 "
+"6)')))`` → 'LineString (2 0, 0 1, 6 1)'"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:477
 msgid "Further reading: :ref:`qgisswapxy` algorithm"
 msgstr "Siehe auch: :ref:`qgisswapxy`-Algorithmus"
@@ -8242,6 +8687,14 @@ msgid ""
 msgstr ""
 "**geometry** - eine Geometrie. Alle Nicht-Polygon-Geometrien werden "
 "unverändert zurückgegeben."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
+"2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
+msgstr ""
+"``geom_to_wkt(force_polygon_ccw(geometry:=geom_from_wkt('Polygon ((-1 -1, 0 "
+"2, 4 2, 4 0, -1 -1))')))`` → 'Polygon ((-1 -1, 4 0, 4 2, 0 2, -1 -1))'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:483
 msgid ""
@@ -8779,6 +9232,17 @@ msgstr ""
 "-1 -1))'),1))`` → 'LineString (-0.1 -0.1, 0.4 0, 0.4 0.2, 0 0.2, -0.1 "
 "-0.1))'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:276
+msgid "The dashed line represents a specific interior ring of the polygon"
+msgstr ""
+"Die gestrichelte Linie stellt einen bestimmten inneren Ring des Polygons "
+"dar."
+
+#: ../../docs/user_manual/expressions/functions_list.rst:505
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_exterior_ring`"
+msgstr "Siehe auch: :ref:`expression_function_GeometryGroup_exterior_ring`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "intersection"
 msgstr "intersection"
@@ -9283,17 +9747,65 @@ msgstr "Siehe auch: :ref:`qgisinterpolatepoint`-Algorithmus"
 msgid "line_interpolate_point_by_m"
 msgstr "line_interpolate_point_by_m"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns the point interpolated by a matching M value along a linestring "
+"geometry."
+msgstr ""
+"Gibt den Punkt zurück, der durch einen passenden M-Wert entlang einer "
+"Liniengeometrie interpoliert wird."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "line_interpolate_point_by_m(geometry, m, [use_3d_distance=false])"
 msgstr "line_interpolate_point_by_m(geometry, m, [use_3d_distance=false])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
+msgid "**m** - an M value"
+msgstr "**m** - ein M-Wert"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+msgid ""
+"**use_3d_distance** - controls whether 2D or 3D distances between vertices "
+"should be used during interpolation (this option is only considered for "
+"lines with z values)"
+msgstr ""
+"**use_3d_distance** – Legt fest, ob bei der Interpolation 2D- oder "
+"3D-Abstände zwischen den Eckpunkten verwendet werden sollen (diese Option "
+"wird nur für Linien mit z-Werten berücksichtigt)."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:22
+msgid ""
+"``geom_to_wkt(line_interpolate_point_by_m(geom_from_wkt('LineStringM(0 0 0, "
+"10 10 10)'), m:=5))`` → 'Point (5 5)'"
+msgstr ""
+"``geom_to_wkt(line_interpolate_point_by_m(geom_from_wkt('LineStringM(0 0 0, "
+"10 10 10)'), m:=5))`` → 'Point (5 5)'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:30
 msgid "line_locate_m"
 msgstr "line_locate_m"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
+msgid ""
+"Returns the distance along a linestring corresponding to the first matching "
+"interpolated M value."
+msgstr ""
+"Gibt die Entfernung entlang einer Linienkette zurück, die dem ersten "
+"übereinstimmenden interpolierten M-Wert entspricht."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 msgid "line_locate_m(geometry, m, [use_3d_distance=false])"
 msgstr "line_locate_m(geometry, m, [use_3d_distance=false])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+msgid ""
+"``line_locate_m(geometry:=geom_from_wkt('LineStringM(0 0 0, 10 10 "
+"10)'),m:=5)`` → 7.07106"
+msgstr ""
+"``line_locate_m(geometry:=geom_from_wkt('LineStringM(0 0 0, 10 10 "
+"10)'),m:=5)`` → 7.07106"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 msgid "line_locate_point"
@@ -9458,6 +9970,14 @@ msgid ""
 msgstr ""
 "**vertex** - Index des Knotenpunkts der Geometrie (die Indizes beginnen bei "
 "0; negative Werte gelten ab dem letzten Index, beginnend bei -1)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"``m_at(geom_from_wkt('LineStringZM(0 0 0 0, 10 10 0 5, 10 10 0 0)'), 1)`` → "
+"5"
+msgstr ""
+"``m_at(geom_from_wkt('LineStringZM(0 0 0 0, 10 10 0 5, 10 10 0 0)'), 1)`` → "
+"5"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:47
 msgid "m_max"
@@ -10058,6 +10578,24 @@ msgstr ""
 "``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
 "2))')))`` → 'Polygon ((3 2, 5 8, 4 1, 3 2))'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:390
+msgid ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
+"2))'), 'linework'))`` → 'GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 "
+"8)),LineString (3 2, 4 2))'"
+msgstr ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8, 3 2, 4 "
+"2))'), 'linework'))`` → 'GeometryCollection (Polygon ((5 8, 4 1, 3 2, 5 "
+"8)),LineString (3 2, 4 2))'"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:391
+msgid ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8))'), "
+"method:='linework'))`` → 'Polygon ((3 2, 4 1, 5 8, 3 2))'"
+msgstr ""
+"``geom_to_wkt(make_valid(geom_from_wkt('POLYGON((3 2, 4 1, 5 8))'), "
+"method:='linework'))`` → 'Polygon ((3 2, 4 1, 5 8, 3 2))'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:392
 msgid "``make_valid(geom_from_wkt('LINESTRING(0 0)'))`` → An empty geometry"
 msgstr ""
@@ -10392,6 +10930,16 @@ msgstr "**orderby** - eine Zeichenkette, die die Ordnungskriterien definiert"
 msgid "**ascending** - boolean, True for ascending, False for descending"
 msgstr ""
 "**ascending** - Sortierung; True für aufsteigend, False für absteigend"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:22
+msgid ""
+"``geom_to_wkt(order_parts(geom_from_wkt('MultiPolygon (((1 1, 5 1, 5 5, 1 5,"
+" 1 1)),((1 1, 9 1, 9 9, 1 9, 1 1)))'), 'area(@geometry)', False))`` → "
+"'MultiPolygon (((1 1, 9 1, 9 9, 1 9, 1 1)),((1 1, 5 1, 5 5, 1 5, 1 1)))'"
+msgstr ""
+"``geom_to_wkt(order_parts(geom_from_wkt('MultiPolygon (((1 1, 5 1, 5 5, 1 5,"
+" 1 1)),((1 1, 9 1, 9 9, 1 9, 1 1)))'), 'area(@geometry)', False))`` → "
+"'MultiPolygon (((1 1, 9 1, 9 9, 1 9, 1 1)),((1 1, 5 1, 5 5, 1 5, 1 1)))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
 msgid ""
@@ -10983,6 +11531,22 @@ msgstr ""
 msgid "This argument requires GEOS >= 3.9."
 msgstr "Dieses Argument erfordert GEOS >= 3.9."
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
+msgid ""
+"**return_details** - Set this to true to return a list of maps containing "
+"(key names in quotes) the feature 'id', the expression 'result' and the "
+"'overlap' value (of the largest element in case of multipart). The 'radius' "
+"of the maximum inscribed circle is also returned when the target layer is a "
+"polygon. Only valid when used with the expression parameter"
+msgstr ""
+"**return_details** – Setzen Sie diesen Parameter auf „true“, um eine Liste "
+"von Zuordnungen zurückzugeben, die (Schlüsselfelder in Anführungszeichen) "
+"die „id“ des Objekts , den Ausdruck „result“ und den Wert „overlap“ (im "
+"Falle von Multipart das größte Element) enthalten. Der „radius“ des "
+"maximalen eingeschriebenen Kreises wird ebenfalls zurückgegeben, wenn der "
+"Ziellayer ein Polygon ist. Nur gültig bei Verwendung mit dem Ausdruck-"
+"Parameter."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
 msgid ""
 "**sort_by_intersection_size** - only valid when used with an expression, set"
@@ -11567,6 +12131,14 @@ msgstr ""
 "**tolerance** - maximaler Abstand zwischen dem zurückgegebenen Punkt und dem"
 " tatsächlichen Standort des Pols"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
+msgstr ""
+"``geom_to_wkt(pole_of_inaccessibility( geom_from_wkt('POLYGON((0 1, 0 9, 3 "
+"10, 3 3, 10 3, 10 1, 0 1))'), 0.1))`` → 'Point(1.546875 2.546875)'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
 msgid "Pole of inaccessibility"
 msgstr "Pole of inaccessibility"
@@ -11778,6 +12350,15 @@ msgstr "Rotating features"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 msgid "roundness"
 msgstr "roundness"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"Calculates how close a polygon shape is to a circle. The function returns 1 "
+"when the polygon shape is a perfect circle and 0 when it is completely flat."
+msgstr ""
+"Berechnet, wie nah eine Polygonform an einem Kreis liegt. Die Funktion gibt "
+"1 zurück, wenn die Polygonform ein perfekter Kreis ist, und 0, wenn sie "
+"vollständig flach ist."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
 msgid "roundness(geometry)"
@@ -12306,6 +12887,14 @@ msgid ""
 msgstr ""
 "Konstruiert zufällige quadratische/rechteckige Wellen entlang des Randes "
 "einer Geometrie."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
+msgid ""
+"square_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
+msgstr ""
+"square_wave_randomized(geometry, min_wavelength, max_wavelength, "
+"min_amplitude, max_amplitude, [seed=0])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:132
@@ -12993,6 +13582,10 @@ msgstr "Liefert eine x-Koordinate der Geometrie."
 msgid "x_at(geometry, vertex)"
 msgstr "x_at(geometry, vertex)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``x_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 4"
+msgstr "``x_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 4"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "x_max"
 msgstr "x_max"
@@ -13122,6 +13715,10 @@ msgstr "Liefert eine y-Koordinate der Geometrie."
 msgid "y_at(geometry, vertex)"
 msgstr "y_at(geometry, vertex)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``y_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 5"
+msgstr "``y_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 5"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "y_max"
 msgstr "y_max"
@@ -13215,6 +13812,11 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:113
 msgid "z_at(geometry, vertex)"
 msgstr "z_at(geometry, vertex)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:118
+msgid "``z_at(geom_from_wkt('LineStringZ(0 0 0, 10 10 5, 10 10 0)'), 1)`` → 5"
+msgstr ""
+"``z_at(geom_from_wkt('LineStringZ(0 0 0, 10 10 5, 10 10 0)'), 1)`` → 5"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:126
 msgid "z_max"
@@ -13707,6 +14309,11 @@ msgstr "from_json(string)"
 msgid "**string** - JSON string"
 msgstr "**string** - JSON-Zeichenkette"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:24
+#, python-brace-format
+msgid "``from_json('{\"1\":\"one\",\"2\":\"two\"}')`` → { '1': 'one', '2': 'two' }"
+msgstr "``from_json('{\"1\":\"one\",\"2\":\"two\"}')`` → { '1': 'one', '2': 'two' }"
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:25
 msgid "``from_json('[1,2,3]')`` → [1,2,3]"
 msgstr "``from_json('[1,2,3]')`` → [1,2,3]"
@@ -13991,6 +14598,10 @@ msgstr "map_to_hstore(map)"
 msgid "**map** - the input map"
 msgstr "**map** - die Eingabe-Zuordnung"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:62
+msgid "``map_to_hstore(map('1','one','2','two'))`` → '\"1\"=>\"one\"','\"2\"=>\"two\"'"
+msgstr "``map_to_hstore(map('1','one','2','two'))`` → '\"1\"=>\"one\"','\"2\"=>\"two\"'"
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:70
 msgid "map_to_html_dl"
 msgstr "map_to_html_dl"
@@ -14005,6 +14616,14 @@ msgstr ""
 msgid "map_to_html_dl(map)"
 msgstr "map_to_html_dl(map)"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:82
+msgid ""
+"``map_to_html_dl(map('1','one','2','two'))`` → "
+"<dl><dt>1</dt><dd>one</dd><dt>2</dt><dd>two</dd></dl>"
+msgstr ""
+"``map_to_html_dl(map('1','one','2','two'))`` → "
+"<dl><dt>1</dt><dd>one</dd><dt>2</dt><dd>two</dd></dl>"
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:90
 msgid "map_to_html_table"
 msgstr "map_to_html_table"
@@ -14016,6 +14635,14 @@ msgstr "Zusammenführen von Zuordnungselementen in einen HTML-Tabellenstring."
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:98
 msgid "map_to_html_table(map)"
 msgstr "map_to_html_table(map)"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:102
+msgid ""
+"``map_to_html_table(map('1','one','2','two'))`` → "
+"<table><thead><tr><th>1</th><th>2</th></tr></thead><tbody><tr><td>one</td><td>two</td></tr></tbody></table>"
+msgstr ""
+"``map_to_html_table(map('1','one','2','two'))`` → "
+"<table><thead><tr><th>1</th><th>2</th></tr></thead><tbody><tr><td>one</td><td>two</td></tr></tbody></table>"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:110
 msgid "to_json"
@@ -14034,6 +14661,11 @@ msgstr "to_json(value)"
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:120
 msgid "**value** - The input value"
 msgstr "**value** - der Eingabewert"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:122
+#, python-brace-format
+msgid "``to_json(map('1','one','2','two'))`` → {\"1\":\"one\",\"2\":\"two\"}"
+msgstr "``to_json(map('1','one','2','two'))`` → {\"1\":\"one\",\"2\":\"two\"}"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:123
 msgid "``to_json(array(1,2,3))`` → [1,2,3]"
@@ -14720,10 +15352,18 @@ msgstr ""
 "\"auslaufen\", d. h. die Zuordnung beginnt schnell, wird aber langsamer, "
 "wenn sie sich dem Bereichsmaximum nähert."
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:481
+msgid "``scale_exponential(5,0,10,0,100,2)`` → 3.030"
+msgstr "``scale_exponential(5,0,10,0,100,2)`` → 3.030"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:483
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:543
 msgid "easing in, using an exponent of 2"
 msgstr "ansteigend, mit einem Exponenten von 2"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:484
+msgid "``scale_exponential(3,0,10,0,100,0.5)`` → 87.585"
+msgstr "``scale_exponential(3,0,10,0,100,0.5)`` → 87.585"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:486
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:546
@@ -14793,6 +15433,14 @@ msgid ""
 msgstr ""
 "scale_polynomial(value, domain_min, domain_max, range_min, range_max, "
 "exponent)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:541
+msgid "``scale_polynomial(5,0,10,0,100,2)`` → 25"
+msgstr "``scale_polynomial(5,0,10,0,100,2)`` → 25"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:544
+msgid "``scale_polynomial(3,0,10,0,100,0.5)`` → 54.772"
+msgstr "``scale_polynomial(3,0,10,0,100,0.5)`` → 54.772"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:554
 msgid "sin"
@@ -16010,6 +16658,15 @@ msgstr ""
 "``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
 "make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
 
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:27
+#, python-brace-format
+msgid ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"@layer_cursor_point))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+msgstr ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"@layer_cursor_point))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:35
 msgid "raster_statistic"
 msgstr "raster_statistic"
@@ -16105,6 +16762,10 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:83
 msgid "``raster_value('dem', 1, make_point(1,1))`` → 25"
 msgstr "``raster_value('dem', 1, make_point(1,1))`` → 25"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:84
+msgid "``raster_value('ndvi', 2, @layer_cursor_point)`` → 25"
+msgstr "``raster_value('ndvi', 2, @layer_cursor_point)`` → 25"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:996
 msgid "Record and Attributes Functions"
@@ -17257,6 +17918,10 @@ msgstr ""
 "**expiration** - maximal zulässige Millisekunde seit dem letzten erfassten "
 "Wert"
 
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:27
+msgid "``sensor_data('geiger_1')`` → '2000'"
+msgstr "``sensor_data('geiger_1')`` → '2000'"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:1094
 msgid "String Functions"
 msgstr "Zeichenketten-Funktionen"
@@ -17372,6 +18037,27 @@ msgstr ""
 "ganzzahligen Operanden (Feld oder numerischer Wert) haben, kann dies "
 "fehleranfällig sein und Sie sollten besser die anderen Operatoren "
 "verwenden::"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1118
+msgid ""
+"When any of the arguments is a NULL value, either ``||`` or ``+`` will "
+"return a NULL value. To return the other arguments regardless the NULL "
+"value, you may want to use the ``concat`` or ``array_to_string`` function::"
+msgstr ""
+"Wenn eines der Argumente einen NULL-Wert hat, gibt entweder „||“ oder „+“ "
+"einen NULL-Wert zurück. Um die anderen Argumente unabhängig vom NULL-Wert "
+"zurückzugeben, können Sie die Funktionen „concat“ oder „array_to_string“ "
+"verwenden::"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1127
+msgid ""
+"further reading: :ref:`expression_function_Arrays_array_to_string`, "
+":ref:`expression_function_Operators_concat`, "
+":ref:`expression_function_Operators_plus`"
+msgstr ""
+"Siehe auch: :ref:`expression_function_Arrays_array_to_string`, "
+":ref:`expression_function_Operators_concat`, "
+":ref:`expression_function_Operators_plus`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "format"
@@ -17515,6 +18201,10 @@ msgstr ""
 msgid "``left('Hello World',5)`` → 'Hello'"
 msgstr "``left('Hello World',5)`` → 'Hello'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:1134
+msgid "Further reading: :ref:`expression_function_String_right`"
+msgstr "Siehe auch: :ref:`expression_function_String_right`"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:45
 msgid "lower"
 msgstr "lower"
@@ -17534,6 +18224,14 @@ msgstr "**string** - die in Kleinbuchstaben zu konvertierende Zeichenkette"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:57
 msgid "``lower('HELLO World')`` → 'hello world'"
 msgstr "``lower('HELLO World')`` → 'hello world'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1140
+msgid ""
+"Further reading: :ref:`expression_function_String_upper`, "
+":ref:`expression_function_String_title`"
+msgstr ""
+"Siehe auch: :ref:`expression_function_String_upper`, "
+":ref:`expression_function_String_title`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "lpad"
@@ -17575,6 +18273,10 @@ msgstr "``lpad('Hello', 10, 'x')`` → 'xxxxxHello'"
 msgid "``lpad('Hello', 3, 'x')`` → 'Hel'"
 msgstr "``lpad('Hello', 3, 'x')`` → 'Hel'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:1147
+msgid "Further reading: :ref:`expression_function_String_rpad`"
+msgstr "Siehe auch: :ref:`expression_function_String_rpad`"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "ltrim"
 msgstr "ltrim"
@@ -17615,6 +18317,10 @@ msgid ""
 msgstr ""
 "Siehe auch: :ref:`expression_function_String_rtrim`, "
 ":ref:`expression_function_String_trim`"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1160
+msgid "Further reading: :ref:`expression_function_String_strpos`"
+msgstr "Siehe auch: :ref:`expression_function_String_strpos`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "regexp_replace"
@@ -17676,6 +18382,14 @@ msgstr ""
 "``regexp_replace('my name is John','(.*) is (.*)','\\\\2 is \\\\1')`` → "
 "'John is my name'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:1166
+msgid ""
+"Further reading: :ref:`expression_function_String_replace`, "
+":ref:`expression_function_Arrays_array_replace`"
+msgstr ""
+"Siehe auch: :ref:`expression_function_String_replace`, "
+":ref:`expression_function_Arrays_array_replace`"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "regexp_substr"
 msgstr "regexp_substr"
@@ -17710,6 +18424,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/String.rst:19
 msgid "``regexp_substr('abc123','(\\\\d+)')`` → '123'"
 msgstr "``regexp_substr('abc123','(\\\\d+)')`` → '123'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1173
+msgid ""
+"Further reading: :ref:`expression_function_String_substr`, "
+":ref:`expression_function_Arrays_regexp_matches`"
+msgstr ""
+"Siehe auch: :ref:`expression_function_String_substr`, "
+":ref:`expression_function_Arrays_regexp_matches`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "replace"
@@ -17792,6 +18514,14 @@ msgid ""
 msgstr ""
 "``replace('forty two',map('for','4','two','2','forty two','42'))`` → '42'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:1180
+msgid ""
+"Further reading: :ref:`expression_function_String_regexp_replace`, "
+":ref:`expression_function_Arrays_array_replace`"
+msgstr ""
+"Siehe auch: :ref:`expression_function_String_regexp_replace`, "
+":ref:`expression_function_Arrays_array_replace`"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "right"
 msgstr "right"
@@ -17820,6 +18550,10 @@ msgstr ""
 msgid "``right('Hello World',5)`` → 'World'"
 msgstr "``right('Hello World',5)`` → 'World'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:1187
+msgid "Further reading: :ref:`expression_function_String_left`"
+msgstr "Siehe auch: :ref:`expression_function_String_left`"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "rpad"
 msgstr "rpad"
@@ -17846,6 +18580,10 @@ msgstr "``rpad('Hello', 10, 'x')`` → 'Helloxxxxx'"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:21
 msgid "``rpad('Hello', 3, 'x')`` → 'Hel'"
 msgstr "``rpad('Hello', 3, 'x')`` → 'Hel'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1193
+msgid "Further reading: :ref:`expression_function_String_lpad`"
+msgstr "Siehe auch: :ref:`expression_function_String_lpad`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "rtrim"
@@ -17972,6 +18710,14 @@ msgstr "``substr('HELLO WORLD',-5,2)`` → 'WO'"
 msgid "``substr('HELLO WORLD',-5,-1)`` → 'WORL'"
 msgstr "``substr('HELLO WORLD',-5,-1)`` → 'WORL'"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:1212
+msgid ""
+"Further reading: :ref:`expression_function_String_regexp_substr`, "
+":ref:`expression_function_Arrays_regexp_matches`"
+msgstr ""
+"Siehe auch: :ref:`expression_function_String_regexp_substr`, "
+":ref:`expression_function_Arrays_regexp_matches`"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "title"
 msgstr "title"
@@ -17997,6 +18743,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/String.rst:18
 msgid "``title('hello WOrld')`` → 'Hello World'"
 msgstr "``title('hello WOrld')`` → 'Hello World'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1219
+msgid ""
+"Further reading: :ref:`expression_function_String_lower`, "
+":ref:`expression_function_String_upper`"
+msgstr ""
+"Siehe auch: :ref:`expression_function_String_lower`, "
+":ref:`expression_function_String_upper`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "trim"
@@ -18046,6 +18800,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/String.rst:18
 msgid "``upper('hello WOrld')`` → 'HELLO WORLD'"
 msgstr "``upper('hello WOrld')`` → 'HELLO WORLD'"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1239
+msgid ""
+"Further reading: :ref:`expression_function_String_lower`, "
+":ref:`expression_function_String_title`"
+msgstr ""
+"Siehe auch: :ref:`expression_function_String_lower`, "
+":ref:`expression_function_String_title`"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "wordwrap"
@@ -18273,12 +19035,24 @@ msgid "band"
 msgstr "band"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The number of the band in the raster layer"
+msgstr "Die Nummer des Bandes im Rasterlayer"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "band_description"
 msgstr "band_description"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The description of the band in the raster layer"
+msgstr "Die Beschreibung des Bandes im Rasterlayer"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "band_name"
 msgstr "band_name"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The name of the band in the raster layer"
+msgstr "Der Name des Bandes im Rasterlayer"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "canvas_cursor_point"
@@ -18562,6 +19336,15 @@ msgid "layer_cursor_point"
 msgstr "layer_cursor_point"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"Point geometry under the mouse position in map canvas (or the GetFeatureInfo"
+" position in context of QGIS Server), in active layer's CRS"
+msgstr ""
+"Punktgeometrie unter der Mausposition im Kartenbereich (oder die "
+"GetFeatureInfo-Position im Kontext von QGIS Server) im KBS des aktiven "
+"Layers"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_id"
 msgstr "layer_id"
 
@@ -18590,16 +19373,43 @@ msgid "layer_vertical_crs"
 msgstr "layer_vertical_crs"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The Identifier for the vertical coordinate reference system of the layer "
+"(e.g., 'EPSG:5703')"
+msgstr ""
+"Die Kennung für das vertikale Koordinatenreferenzsystem des Layers (z. B. "
+"„EPSG:5703“)"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_vertical_crs_definition"
 msgstr "layer_vertical_crs_definition"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The full definition of the vertical Coordinate reference system of the layer"
+msgstr ""
+"Die vollständige Definition des vertikalen Koordinatenreferenzsystems des "
+"Layers"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_vertical_crs_description"
 msgstr "layer_vertical_crs_description"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The name of the vertical Coordinate reference system of the layer"
+msgstr "Der Name des vertikalen Koordinatenreferenzsystems des Layers"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layer_vertical_crs_wkt"
 msgstr "layer_vertical_crs_wkt"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The WKT definition of the vertical Coordinate reference system of the "
+"current layer"
+msgstr ""
+"Die WKT-Definition des vertikalen Koordinatenreferenzsystems des aktuellen "
+"Layers"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "layers"
@@ -18914,8 +19724,16 @@ msgid "map_z_range_lower"
 msgstr "map_z_range_lower"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "Lower elevation of the map's elevation range"
+msgstr "Untere Höhe des Höhenbereichs der Karte"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "map_z_range_upper"
 msgstr "map_z_range_upper"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "Upper elevation of the map's elevation range"
+msgstr "Obere Höhe des Höhenbereichs der Karte"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "model_path"
@@ -18988,8 +19806,16 @@ msgid "plot_axis"
 msgstr "plot_axis"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The associated plot axis, e.g. 'x' or 'y'."
+msgstr "Die zugehörige Plotachse, z. B. „x“ oder „y“."
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "plot_axis_value"
 msgstr "plot_axis_value"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid "The current value for the plot axis."
+msgstr "Der aktuelle Wert für die Plotachse."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "project_abstract"
@@ -19042,6 +19868,13 @@ msgstr ""
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "project_crs"
 msgstr "project_crs"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"Identifier for the coordinate reference system of the project (e.g., "
+"'EPSG:4326')"
+msgstr ""
+"Kennung für das Koordinatenreferenzsystem des Projekts (z. B. „EPSG:4326“)"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "project_crs_arconym"
@@ -19198,16 +20031,46 @@ msgid "project_vertical_crs"
 msgstr "project_vertical_crs"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"Identifier for the vertical Coordinate reference system of the project "
+"(e.g., 'EPSG:5703')"
+msgstr ""
+"Kennung für das vertikale Koordinatenreferenzsystem des Projekts (z. B. "
+"„EPSG:5703“)"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "project_vertical_crs_definition"
 msgstr "project_vertical_crs_definition"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The full definition of the vertical coordinate reference system of the "
+"project"
+msgstr ""
+"Die vollständige Definition des vertikalen Koordinatenreferenzsystems des "
+"Projekts"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "project_vertical_crs_description"
 msgstr "project_vertical_crs_description"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The description of the vertical coordinate reference system of the project"
+msgstr ""
+"Die Beschreibung des vertikalen Koordinatenreferenzsystems des Projekts"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "project_vertical_crs_wkt"
 msgstr "project_vertical_crs_wkt"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1
+msgid ""
+"The WKT (well known text) representation of the vertical coordinate "
+"reference system of the project"
+msgstr ""
+"Die WKT-Darstellung (Well Known Text) des vertikalen "
+"Koordinatenreferenzsystems des Projekts"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "qgis_locale"
