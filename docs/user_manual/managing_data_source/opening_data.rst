@@ -1563,69 +1563,91 @@ Examples of XYZ Tile services:
 Using ArcGIS REST Servers
 -------------------------
 
+An `ArcGIS REST Server`_ can host many different types of web services
+(feature service, map service, image service, ...).
 ArcGIS REST Servers can be added via the
 |addAfsLayer| :guilabel:`ArcGIS REST Server` tab of the
 :guilabel:`Data Source Manager` dialog or the contextual menu of the
-:guilabel:`ArcGIS REST Servers` entry in the :guilabel:`Browser` panel.
-Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
+:guilabel:`ArcGIS REST Servers` entry in the :guilabel:`Browser` panel:
 
-* a :guilabel:`Name`: A name for the connection.
-* the :guilabel:`URL`: Main address of the ArcGIS REST Server.
-* a :guilabel:`Prefix`: Used to specify the proxy prefix in the URL,
-  which is necessary for some ArcGIS servers that use web proxy prefixes. 
-* a :guilabel:`Community endpoint URL`: Endpoint URL for ArcGIS Online or Portal for
-  ArcGIS, used to access content groups.
-* a :guilabel:`Content endpoint URL`: Endpoint URL for the content service.
-  This is used to access items in ArcGIS Online or Portal for ArcGIS.
-* the :ref:`authentication <authentication>` credentials if necessary.
-* a :guilabel:`Referer`: The referer URL to be sent in the HTTP headers when making requests
-  to the server. This may be required by some servers for authentication
-  purposes.
+#. Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
-.. note::
+   * a :guilabel:`Name`: A name for the connection.
+   * the :guilabel:`URL`: Main address of the ArcGIS REST Server.
+   * a :guilabel:`Prefix`: Used to specify the proxy prefix in the URL,
+     which is necessary for some ArcGIS servers that use web proxy prefixes.
+   * a :guilabel:`Community endpoint URL`: Endpoint URL for ArcGIS Online or Portal for
+     ArcGIS, used to access content groups.
+   * a :guilabel:`Content endpoint URL`: Endpoint URL for the content service.
+     This is used to access items in ArcGIS Online or Portal for ArcGIS.
+   * the :ref:`authentication <authentication>` credentials if necessary.
+   * a :guilabel:`Referer`: The referer URL to be sent in the HTTP headers when making requests
+     to the server. This may be required by some servers for authentication purposes.
 
-   ArcGIS Feature Service connections which have their corresponding Portal
-   endpoint URLS set can be explored by content groups in the browser panel.
+   .. note::
 
-   If a connection has the Portal endpoints set, then expanding out the connection
-   in the browser will show a “Groups” and “Services” folder, instead of the full
-   list of services usually shown. Expanding out the groups folder will show a list
-   of all content groups that the user is a member of, each of which can be
-   expanded to show the service items belonging to that group.
+    ArcGIS Feature Service connections which have their corresponding Portal
+    endpoint URLS set can be explored by content groups in the browser panel.
 
-Configurations can be saved to :file:`.XML` file (:guilabel:`Save Connections`)
-through the :guilabel:`ArcGIS REST Server` entry in
-:guilabel:`Data Source Manager` dialog. Likewise, they can be added from
-a file (:guilabel:`Load Connections`).
+    If a connection has the Portal endpoints set, then expanding out the connection
+    in the browser will show a “Groups” and “Services” folder, instead of the full
+    list of services usually shown. Expanding out the groups folder will show a list
+    of all content groups that the user is a member of, each of which can be
+    expanded to show the service items belonging to that group.
 
-Once a connection to an ArcGIS REST Server is set, it's possible to:
+#. Then press :guilabel:`OK` to validate the configuration settings.
+   These configurations can be saved to :file:`.XML` file (:guilabel:`Save`).
+   Likewise, they can be added from a file (:guilabel:`Load`).
 
-* :guilabel:`Edit` the ArcGIS REST Server connection settings
-* :guilabel:`Remove` the connection
-* :guilabel:`Refresh` the connection
-* use a filter for the available layers
-* choose from a list of available layers with the option to
-  |checkbox|:guilabel:`Only request features overlapping the current view extent`
+#. Once a connection to an ArcGIS REST Server is set, it is possible to:
 
-* From the :guilabel:`Browser` panel, right-click over the connection entry
-  and you can:
+   * :guilabel:`Edit` the ArcGIS REST Server connection settings
+   * :guilabel:`Remove` the connection
+   * :guilabel:`Refresh` the connection
 
-  * :guilabel:`Refresh`
-  * :guilabel:`Edit connection...`
-  * :guilabel:`Remove connection...`
-  * :guilabel:`View Service Info` which will open the default web browser
-    and display the Service Info.
+#. Press :guilabel:`Connect` to request the server and display its contents.
+   They are organized in a tree structure whose nodes depend on the connection's endpoint.
 
-* Right-click over the layer entry and you can also:
+   .. _figure_arcgis_rest:
 
-  * :guilabel:`View Service Info` which will open the default web browser
-    and display the Service Info.
-  * :menuselection:`Export layer... --> To File`
-  * :guilabel:`Add layer to project`: a double-click also adds the layer
-  * View the :guilabel:`Layer Properties...` and get access to metadata and
-    a preview of the data provided by the service.
-    More settings are available when the layer has been loaded into the
-    project.
+   .. figure:: img/arcgis_rest_server.png
+      :align: center
+
+      Data Source Manager - ArcGIS REST Server
+
+   .. examples of services endpoints for testing: https://mapstest.nj.gov/arcgis/rest/services/
+     https://server.arcgisonline.com/arcgis/rest/services
+     some reference: https://mappingsupport.com/p/surf_gis/list-federal-state-county-city-GIS-servers.pdf
+
+#. Expand the tree to find and select layers that you can add to the map canvas,
+   pressing :guilabel:`Add` button, or with a double-click.
+
+   Because layers can sometimes load and render slowly on the client side,
+   Applying a filter to restrict the features retrieved from the service
+   can significantly improve performance, since only the filtered features are requested from the server.
+   This can be done by:
+
+   * checking |checkbox| :guilabel:`Only request features overlapping the current view extent`
+   * for vector layers (feature service), pressing :guilabel:`Add with filter`
+     to apply attribute-based filters to the layer with :ref:`expression_builder` functions.
+
+     In the :guilabel:`Browser` panel, right-click the ArcGIS REST Server layer
+     and select :guilabel:`Add Filtered Layer to Project` to open the builder dialog.
+
+#. For raster layers, you can also select the :guilabel:`Image encoding` to use
+   among a number of image formats advertized by the target service
+   ( e.g., ``PNG``, ``JPG``, ``GIF``, ``SVG``, ``SVGZ``, ... ).
+
+Most of the above tools to connect and access layers on an ArcGIS REST Server
+are also available from the :guilabel:`Browser` panel, within the contextual menu
+of the target node item.
+Depending on the node, you can also:
+
+* :guilabel:`View Service Info` which will open the default web browser
+  and display information on the requested service.
+* View the :guilabel:`Layer Properties...` and get access to the metadata and
+  a preview of the data provided by the service.
+  More settings are available when the layer has been loaded into the project.
 
 
 .. index:: 3D Tiles services
@@ -1714,7 +1736,7 @@ You can also choose to :guilabel:`Save Connection` to an XML file
 or :guilabel:`Load Connection` from an XML file.
 
 .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
-
+.. _`ArcGIS REST Server`: https://enterprise.arcgis.com/en/server/latest/publish-services/windows/what-types-of-services-can-you-publish.htm
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

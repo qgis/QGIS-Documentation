@@ -1123,15 +1123,7 @@ To update your map with the latest changes, use :menuselection:`View --> Refresh
 If multiple users edit the same layer concurrently, it is recommended to refresh your data
 before performing edits to avoid conflicts.
 
-Filtering and querying
-----------------------
 
-Because of how the Feature Service protocol works, layers can sometimes load and render slowly on the client side.
-Applying a filter to restrict the features retrieved from the service
-can significantly improve performance, since only the filtered features are requested from the server.
-You can apply attribute-based filters to ArcGIS REST Server layers using the :ref:`expression_builder`.
-In the :guilabel:`Browser` panel, right-click the ArcGIS REST Server layer
-and select :guilabel:`Add Filtered Layer to Project` to open the builder dialog.
 .. _`ArcGIS REST Server`: https://enterprise.arcgis.com/en/server/latest/publish-services/windows/what-types-of-services-can-you-publish.htm
 
 
