@@ -7,8 +7,8 @@
 # Translators:
 # Bernhard Ströbl <b.stroebl@stroweb.de>, 2025
 # Harrissou Sant-anna, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Transifex Bot <>, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-22 09:11+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -718,6 +718,98 @@ msgstr "Drücken Sie auf die |symbologyAdd| :sup:`New File` Schaltfläche."
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/expressions/expression.rst:338
+msgid ""
+"Select where to store the new function. You can choose to save it either in "
+"a :guilabel:`Function file` or in :guilabel:`Project functions`."
+msgstr ""
+"Wählen Sie aus, wo die neue Funktion gespeichert werden soll. Sie können "
+"wählen, ob Sie sie entweder in einer :guilabel:`Funktionsdatei` oder in "
+":guilabel:`Projektfunktionen` speichern möchten."
+
+#: ../../docs/user_manual/expressions/expression.rst:341
+msgid ""
+"If you select :guilabel:`Function file`, you need to enter a name for the "
+"Python :file:`.py` file, which is based on a QGIS template file and is "
+"stored in the :file:`/python/expressions` folder under the active :ref:`user"
+" profile <user_profiles>` directory, thus available for all projects you may"
+" open with that profile."
+msgstr ""
+"Wenn Sie :guilabel:`Funktionsdatei` auswählen, müssen Sie einen Namen für "
+"die Python-Datei :file:`*.py` eingeben, die auf einer QGIS-Vorlagendatei "
+"basiert und im Ordner :file:`/python/expressions` des aktiven "
+":ref:`Benutzerprofil-Verzeichnisses  <user_profiles>` gespeichert wird und "
+"somit für alle Projekte verfügbar ist, die Sie mit diesem Benutzerprofil "
+"öffnen."
+
+#: ../../docs/user_manual/expressions/expression.rst:346
+msgid ""
+"Custom Python functions stored as Function files are auto loaded whenever "
+"you start a new project under the user profile. Be aware that for sharing "
+"such Python functions, you need to share the :file:`.py` file in the "
+":file:`/python/expressions` folder."
+msgstr ""
+"Benutzerdefinierte Python-Funktionen, die als Funktionsdateien gespeichert "
+"sind, werden automatisch geladen, wenn Sie ein neues Projekt unter dem "
+"Benutzerprofil starten. Beachten Sie, dass Sie zum Freigeben solcher Python-"
+"Funktionen die Datei :file:`*.py` im Ordner :file:`/python/expressions` "
+"freigeben müssen."
+
+#: ../../docs/user_manual/expressions/expression.rst:351
+msgid ""
+"If you select :guilabel:`Project functions`, the new function is stored in "
+"the project file and only available for that project."
+msgstr ""
+"Wenn Sie :guilabel:`Projektfunktionen` auswählen, wird die neue Funktion in "
+"der Projektdatei gespeichert und ist nur für dieses Projekt verfügbar."
+
+#: ../../docs/user_manual/expressions/expression.rst:354
+msgid ""
+"Custom Python functions stored as Project functions can be easily shared by "
+"sharing the project file where they were saved. When opening a project with "
+"project functions, QGIS can load or ignore them depending on whether "
+":ref:`embedded Python code is enabled <load_project_code>`."
+msgstr ""
+"Benutzerdefinierte Python-Funktionen, die als Projektfunktionen gespeichert "
+"sind, können einfach durch Weitergabe der Projektdatei, in der sie "
+"gespeichert wurden, gemeinsam genutzt werden. Beim Öffnen eines Projekts mit"
+" Projektfunktionen kann QGIS diese laden oder ignorieren, je nachdem, ob "
+":ref:`In Projekt eingebetteten Python-Code aktivieren <load_project_code>` "
+"ausgewählt ist oder nicht."
+
+#: ../../docs/user_manual/expressions/expression.rst:359
+msgid ""
+"A new item is added in the left panel of the :guilabel:`Function Editor` "
+"tab."
+msgstr ""
+"Im linken Bereich der Registerkarte :guilabel:`Funktionseditor` wird ein "
+"neuer Eintrag hinzugefügt."
+
+#: ../../docs/user_manual/expressions/expression.rst:361
+msgid ""
+"The right panel displays the content of the file: a python script template."
+msgstr ""
+"Das rechte Fenster zeigt den Inhalt der Datei an, eine Python-Skriptvorlage."
+
+#: ../../docs/user_manual/expressions/expression.rst:362
+msgid ""
+"Uncomment the code block and start editing it according to your needs. You "
+"can rely on code autocompletion, code formatting and typing helpers, as "
+"defined in :ref:`console_options`."
+msgstr ""
+"Entfernen Sie die Auskommentierung des Codeblocks und beginnen Sie mit der "
+"Bearbeitung entsprechend Ihren Anforderungen. Sie können sich dabei auf die "
+"Autovervollständigung, Formatierung und Eingabehilfe für Code zurückgreifen,"
+" wie in :ref:`Optionen --> Python <console_options>` definiert."
+
+#: ../../docs/user_manual/expressions/expression.rst:366
+msgid ""
+"You will find in the :guilabel:`Help` widget general information for setting"
+" the @qgsfunction decorator."
+msgstr ""
+"Weiter unten finden Sie allgemeine Informationen zum Einrichten des "
+"Dekorators @qgsfunction."
+
 #: ../../docs/user_manual/expressions/expression.rst:368
 msgid ""
 "Press the |start| :guilabel:`Save and Load Functions` button. The function "
@@ -763,9 +855,31 @@ msgstr "Aktivieren Sie den Reiter :guilabel:`Funktionseditor`"
 msgid "Select the function in the list"
 msgstr "Wählen Sie die Funktion in der Liste aus"
 
+#: ../../docs/user_manual/expressions/expression.rst:380
+msgid ""
+"Press the |symbologyRemove| :sup:`Remove selected function`. The function is"
+" removed from the list and, depending on the storage, the corresponding "
+"``.py`` file is deleted from the user profile folder, or the Python "
+"functions are removed from the project file."
+msgstr ""
+"Drücken Sie die Taste |symbologyRemove| :sup:`Gewählte Funktionsdatei "
+"löschen`. Die Funktion wird aus der Liste entfernt und je nach Speicherort "
+"wird die entsprechende ``*.py``-Datei aus dem Benutzerprofilordner gelöscht "
+"oder die Python-Funktionen werden aus der Projektdatei entfernt."
+
 #: ../../docs/user_manual/expressions/expression.rst:488
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/expressions/expression.rst:386
+msgid ""
+"When a project file with Project functions is closed, the corresponding "
+"Project functions are unloaded and are no longer available in the QGIS "
+"session."
+msgstr ""
+"Wenn eine Projektdatei mit Projektfunktionen geschlossen wird, werden die "
+"entsprechenden Projektfunktionen entladen und sind in der QGIS-Sitzung nicht"
+" mehr verfügbar."
 
 #: ../../docs/user_manual/expressions/expression.rst:389
 msgid "**Example**"
@@ -791,6 +905,57 @@ msgstr ""
 "Das Argument ``Gruppe`` gibt die Gruppe an, in der die Funktion im "
 "Ausdrucks-Dialog aufgelistet werden soll."
 
+#: ../../docs/user_manual/expressions/expression.rst:416
+msgid ""
+"``usesgeometry``: Set this to :const:`True` if the expression requires "
+"access to the features geometry. By default :const:`False`."
+msgstr ""
+"„usesgeometry“: Setzen Sie diesen Wert auf „True“, wenn der Ausdruck Zugriff"
+" auf die Geometrie der Features erfordert. Standardmäßig ist der Wert "
+"„False“."
+
+#: ../../docs/user_manual/expressions/expression.rst:418
+msgid ""
+"``handlesnull``: Set this to :const:`True` if the expression has custom "
+"handling for NULL values. If :const:`False` (default), the result will "
+"always be NULL as soon as any parameter is NULL."
+msgstr ""
+"``handlesnull``: Setzen Sie diesen Wert auf :const:`True`, wenn der Ausdruck"
+" eine benutzerdefinierte Behandlung für NULL-Werte hat. Bei :const:`False` "
+"(Standard) ist das Ergebnis immer NULL, sobald ein Parameter NULL ist."
+
+#: ../../docs/user_manual/expressions/expression.rst:420
+msgid ""
+"``referenced_columns``: An array of attribute names that are required to run"
+" the function. Defaults to ``[QgsFeatureRequest.ALL_ATTRIBUTES]``. "
+"Specifying a subset of fields or an empty list will result in a faster "
+"execution."
+msgstr ""
+"``referenced_columns``: Ein Array von Attributnamen, die zum Ausführen der "
+"Funktion erforderlich sind. Der Standardwert ist "
+"``[QgsFeatureRequest.ALL_ATTRIBUTES]``. Durch Angabe einer Teilmenge von "
+"Feldern oder einer leeren Liste wird die Ausführung beschleunigt."
+
+#: ../../docs/user_manual/expressions/expression.rst:423
+msgid ""
+"``params_as_list``: Set this to :const:`True` to pass the function "
+"parameters as a list. If :const:`False` (default), the function will receive"
+" the parameters as individual arguments."
+msgstr ""
+"``params_as_list``: Setzen Sie diesen Wert auf :const:`True`, um die "
+"Funktionsparameter als Liste zu übergeben. Bei :const:`False` (Standard) "
+"erhält die Funktion die Parameter als einzelne Argumente."
+
+#: ../../docs/user_manual/expressions/expression.rst:426
+msgid ""
+"The function itself takes any number and type of parameters you want to pass"
+" to your function. These should be set before the following optional "
+"arguments:"
+msgstr ""
+"Die Funktion selbst akzeptiert eine beliebige Anzahl und Art von Parametern,"
+" die Sie an Ihre Funktion übergeben möchten. Diese sollten vor den folgenden"
+" optionalen Argumenten festgelegt werden:"
+
 #: ../../docs/user_manual/expressions/expression.rst:429
 msgid "``feature``: the current feature"
 msgstr "``feature``: das aktuelle Objekt"
@@ -815,6 +980,16 @@ msgstr ""
 "verschiedenen zusätzlichen Informationen wie Ausdrucksvariablen gibt. Z.B. "
 "``context.variable( 'layer_id' )``"
 
+#: ../../docs/user_manual/expressions/expression.rst:436
+msgid ""
+"If those arguments are present in the function signature, they will be "
+"automatically passed to the function, without the need to specify them in "
+"the expression."
+msgstr ""
+"Wenn diese Argumente in der Funktionssignatur vorhanden sind, werden sie "
+"automatisch an die Funktion übergeben, ohne dass sie im Ausdruck angegeben "
+"werden müssen."
+
 #: ../../docs/user_manual/expressions/expression.rst:439
 msgid "The previous example function can then be used in expressions:"
 msgstr ""
@@ -823,3 +998,13 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression.rst:446
 msgid "Custom Function added to the Expression tab"
 msgstr "Benutzerdefinierte Funktion im Reiter Ausdruck"
+
+#: ../../docs/user_manual/expressions/expression.rst:449
+msgid ""
+"Find more examples and additional arguments for custom functions at "
+":mod:`qgsfunction`. Further information about creating Python code can be "
+"found in the :ref:`PyQGIS-Developer-Cookbook`."
+msgstr ""
+"Weitere Beispiele und zusätzliche Argumente für benutzerdefinierte "
+"Funktionen finden Sie unter :mod:`qgsfunction`. Weitere Informationen zum "
+"Erstellen von Python-Code finden Sie im :ref:`PyQGIS-Developer-Cookbook`."
