@@ -4181,10 +4181,6 @@ To do so:
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
-.. |rememberDisabled| image:: /static/common/mIconRememberDisabled.png
-   :width: 1.5em
-.. |rememberEnabled| image:: /static/common/mIconRememberEnabled.png
-   :width: 1.5em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
@@ -4210,6 +4206,10 @@ To do so:
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
+.. |rememberDisabled| image:: /static/common/mIconRememberDisabled.png
+   :width: 1.5em
+.. |rememberEnabled| image:: /static/common/mIconRememberEnabled.png
    :width: 1.5em
 .. |render| image:: /static/common/render.png
    :width: 1.5em
