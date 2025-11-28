@@ -142,20 +142,13 @@ You can use tags to emphasize items.
 
      ``label``
 
-* **Layer names**
+* **Layers, databases, tables or columns names**
 
-  When referring to layers, format as inline code:
+  When referring to layers, databases, tables or columns, format as inline code:
 
   .. code-block:: rst
 
      ``layer name``
-
-* **Database, table, column names**
-
-  When referring to databases, tables or columns, format as inline code:
-
-  .. code-block:: rst
-
      ``database_name``
      ``table_name``
      ``column_name``
