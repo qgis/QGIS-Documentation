@@ -553,8 +553,6 @@ For SpatiaLite data management, you can also use the core plugin
 If you want to create a new SpatiaLite layer, please refer to section
 :ref:`vector_create_spatialite`.
 
-
-
 .. index:: GeoJSON Export
 .. _export_geojson_files:
 
