@@ -276,6 +276,31 @@ msgstr ":ref:`메타데이터 표 <plugin_metadata_table>` 목록에 있는 필�
 msgid "the `version` metadata field must be unique"
 msgstr "``version`` 메타데이터 필드가 유일해야만 합니다."
 
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:105
+msgid ""
+"a license file must be included, saved as ``LICENSE`` with no extension "
+"(i.e. not ``LICENSE.txt`` for example)"
+msgstr ""
+"사용 허가서 파일을 반드시 포함시켜야만 합니다. 확장자 없이 (예를 들어 ``LICENSE.txt`` 가 아닌) ``LICENSE`` "
+"라는 이름으로 저장하십시오."
+
 #: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:109
 msgid "Plugin structure"
 msgstr "플러그인 구조"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:111
+msgid ""
+"Following the validation rules the compressed (.zip) package of your plugin "
+"must have a specific structure to validate as a functional plugin. As the "
+"plugin will be unzipped inside the users plugins folder it must have it's "
+"own directory inside the .zip file to not interfere with other plugins. "
+"Mandatory files are: :file:`metadata.txt`,  :file:`__init__.py` and "
+":file:`LICENSE`. But it would be nice to have a :file:`README` and of course"
+" an icon to represent the plugin. Following is an example of how a "
+":file:`plugin.zip` could look like."
+msgstr ""
+"무결성 검증 규칙에 따라 플러그인의 압축 (:file:`.zip`) 패키지는 기능하는 플러그인으로써 승인받기 위한 특수 구조를 가져야만 "
+"합니다. 사용자의 플러그인 폴더 안에 플러그인을 압축 해제할 것이기 때문에, 다른 플러그인과 섞이지 않도록 :file:`.zip` 파일 "
+"안에 자체 디렉터리를 가지고 있어야만 합니다. 필수 파일은 :file:`metadata.txt`, :file:`__init__.py` "
+"그리고 :file:`LICENSE` 입니다. 하지만 :file:`README` 파일은 물론 플러그인을 표현할 아이콘도 있는 편이 "
+"좋습니다. 다음은 :file:`plugin.zip` 파일이 어떻게 보이면 되는지에 대한 예시입니다."
