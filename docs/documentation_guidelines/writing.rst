@@ -232,43 +232,40 @@ which returns
 .. figure:: /static/common/logo.png
    :width: 10 em
 
-Replacement
-...........
+Icon substitution
+.................
 
-You can put an image inside text or add an alias to use everywhere. To use an image
-inside a paragraph, first create an alias in the :file:`source/substitutions.txt`
-file:
+You can add an image inside a text paragraph (e.g., as a tool icon).
+To do so, you first need to create an alias (also named substitution),
+which is a reference name used to display the icon.
+To ensure consistency across the documents and help in the use of the icons,
+we maintain a list in the :file:`substitutions.txt` file at the root of this repository.
+Find more details in the :ref:`substitutions` chapter.
 
+Using an icon substitution is usually achieved through these steps:
 
-.. code-block:: rst
+#. Add the icon substitution in the :file:`substitutions.txt` file as below.
+   If a substitution already exists for the icon you want to use, then skip this step.
 
-   .. |nice_logo| image:: /static/common/logo.png
-                  :width: 1 em
+   .. code-block:: rst
 
-and then call it in your paragraph:
+      .. |logo| image:: /static/common/logo.png
+         :width: 1 em
 
-.. code-block:: rst
+#. Call it in your paragraph:
 
-   My paragraph begins here with a nice logo |nice_logo|.
+   .. code-block:: rst
 
-This is how the example will be displayed:
+      My paragraph begins here with |logo|.
 
-.. |nice_logo| image:: /static/common/logo.png
-               :width: 1 em
+#. Add (again) the icon substitution at the end of the file you are modifying. 
+   This helps connecting the replacement text with the actual image,
+   and can be done by copy-pasting it from :file:`substitutions.txt`
+   or by executing the :file:`scripts/find_set_subst.py` script.
 
-My paragraph begins here with a nice logo |nice_logo|.
+   This is how the example will be displayed:
 
-To allow preview rendering in GitHub that is as close as possible
-to HTML rendering, you will also need to add the image replacement
-call at the end of the file you changed.
-This can be done by copy-pasting it from
-:file:`substitutions.txt` or by executing the :file:`scripts/find_set_subst.py`
-script.
-
-.. note::
-
-   Currently, to ensure consistency and help in the use of QGIS icons,
-   a list of aliases is built and available in the :ref:`substitutions` chapter.
+     My paragraph begins here with |logo|.
 
 Figure
 ......
@@ -848,6 +845,8 @@ to help you with the layout and the description:
    :width: 1.5em
 .. |inputText| image:: /static/common/inputtext.png
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
+   :width: 1.5em
+.. |logo| image:: /static/common/logo.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
