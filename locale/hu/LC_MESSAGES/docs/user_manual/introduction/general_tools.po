@@ -87,6 +87,92 @@ msgstr ""
 " projekt összes rétegét, és segít a láthatóságuk kezelésében. A panelt "
 "megjelenítheti vagy elrejtheti a :kbd:`Ctrl+1` billentyűkombinációval."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:52
+msgid "QGIS provides a variety of ways to add layers to a project:"
+msgstr ""
+"A QGIS-ben számos különböző módon adhatóak hozzá rétegek egy projekthez:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:54
+msgid ""
+"using the :guilabel:`Add` button from the dedicated data provider tab in the"
+" :ref:`Data source manager <opening_data>` dialog"
+msgstr ""
+"az :ref:`Adatforrás-kezelő <opening_data>` párbeszédablak megfelelő "
+"adatszolgáltatói fülén található :guilabel:`Hozzáadás` gomb segítségével"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:56
+msgid ""
+"from QGIS :ref:`Browser panel <label_browserpanel>` or :ref:`DB Manager "
+"<dbmanager>`: double-click, drag-and-drop files and layers onto QGIS or use "
+"the contextual menu"
+msgstr ""
+"a QGIS :ref:`Böngésző panelről <label_browserpanel>` vagy a :ref:`Adatbázis-"
+"kezelő <dbmanager>` ablakból: kattintson duplán, vagy húzza át a fájlokat és"
+" rétegeket a QGIS-be, vagy használja a helyi menüt"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:58
+msgid "drag-and-drop files from the Operating System files explorer onto QGIS"
+msgstr "húzza át a fájlokat az operációs rendszer fájlkezelőjéből a QGIS-be"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:60
+msgid ""
+"In all these scenarios, you can open one or many layers at a time. New "
+"layers are added to the :guilabel:`Layers` panel:"
+msgstr ""
+"Mindezekben az esetekben egyszerre egy vagy több réteget is megnyithat. Az "
+"új rétegek a :guilabel:`Rétegek` panelen jelennek meg:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:63
+msgid ""
+"if dropped over the :guilabel:`Layers` panel, at the exact location they are"
+" released"
+msgstr ""
+"a :guilabel:`Rétegek` panelre húzva pontosan abban a sorban jelennek meg, "
+"ahol el lettek engedve"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:64
+msgid ""
+"in the other cases, at a location that respects the global :ref:`behavior "
+"used when adding new layers <layer_tree_insertion_methods>` setting"
+msgstr ""
+"egyéb esetekben egy olyan helyen, amely megfelel az :ref:`új rétegek "
+"hozzáadásakor alkalmazott viselkedés <layer_tree_insertion_methods>` "
+"globális beállításnak"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:66
+msgid ""
+"and in case of multiple layers, they are sorted in a way that increases the "
+"chance of their stacking being logical and features being visible as most as"
+" possible, using the following logic (top to bottom):"
+msgstr ""
+"és több réteg esetén úgy rendezi őket, hogy a rétegek logikus elrendezése és"
+" az elemek lehető legjobb láthatósága biztosított legyen, a következő logika"
+" szerint (fentről lefelé):"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:70
+msgid "vector point layers"
+msgstr "vektoros pontrétegek"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:71
+msgid "vector line layers"
+msgstr "vektoros vonalrétegek"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:72
+msgid "vector polygon layers"
+msgstr "vektoros felületrétegek"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:73
+msgid "point cloud layers"
+msgstr "pontfelhőrétegek"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:74
+msgid "mesh layers"
+msgstr "hálórétegek"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:75
+msgid "raster layers"
+msgstr "raszterrétegek"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:77
 msgid "At the top of the :guilabel:`Layers` panel, a toolbar allows you to:"
 msgstr ""
@@ -158,6 +244,14 @@ msgstr ""
 ":guilabel:`Privát rétegek megjelenítése`: gyors parancsikon a :ref:`privát "
 "rétegek <project_layer_capabilities>` megjelenítéséhez és interakciójához a "
 "projektbeállítások :guilabel:`Rétegek` panelén történő módosítás nélkül."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:94
+msgid ""
+":guilabel:`Show Broken Layers Only`: only layers with broken data sources "
+"are displayed."
+msgstr ""
+":guilabel:`Csak a hibás rétegek megjelenítése`: csak a sérült adatforrású "
+"rétegek jelennek meg."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:96
 msgid ""
@@ -1326,25 +1420,137 @@ msgstr ""
 msgid "Editing layer style"
 msgstr "Rétegstílus szerkesztése"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:423
+msgid ""
+"From the :guilabel:`Layers` panel, you have shortcuts to change the layer "
+"rendering quickly and easily."
+msgstr ""
+"A :guilabel:`Rétegek` panelen keresztül gyorsan és egyszerűen "
+"megváltoztathatja a réteg megjelenítését."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:425
+msgid ""
+"Right-click on a layer and select :menuselection:`Styles -->` in the list in"
+" order to:"
+msgstr ""
+"Kattintson a jobb gombbal egy rétegre, és válassza a listából a "
+":menuselection:`Rétegek -->` menüpontot a következő műveletek elvégzéséhez:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:427
+msgid ""
+"see the :ref:`styles <manage_custom_style>` currently available for the "
+"layer. If you defined many styles for the layer, you can switch from one to "
+"another and your layer rendering will automatically be updated on the map "
+"canvas."
+msgstr ""
+"a rétegen jelenleg elérhető :ref:`stílusok <manage_custom_style>` "
+"megtekintése. Ha több stílust adott meg a réteghez, válthat egyikről a "
+"másikra, aminek az eredménye automatikusan látható lesz a térképvásznon."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:430
 msgid ""
 "copy part or all of the current style, and when applicable, paste a copied "
 "style from another layer"
 msgstr ""
-"átmásolja a jelenlegi stílusok egy részét és később beillessze azokat egy "
-"másik rétegre"
+"a jelenlegi stílusok egy részének másolása, illetve a másolt stílusok "
+"beillesztése egy másik rétegről"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:432
+msgid ":guilabel:`Rename current...` style"
+msgstr ":guilabel:`Jelenlegi stílus átnevezése…`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:433
+msgid ""
+":guilabel:`Add` a new style (which is actually a copy of the current one)"
+msgstr ""
+"új stílus :guilabel:`Hozzáadása` (ami valójában az aktuális stílus másolata)"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:434
+msgid ""
+"or :guilabel:`Remove current` style (only when multiple styles are "
+"available)."
+msgstr ""
+"vagy :guilabel:`Jelenlegi stílus eltávolítása` (csak akkor, ha több stílus "
+"áll rendelkezésre)."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:436
 msgid "**Quickly share a layer style**"
 msgstr "**Rétegstílus gyors megosztása**"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:438
+msgid ""
+"From the context menu, copy the style of a layer and paste it to a group or "
+"a selection of layers: the style is applied to all the layers that are of "
+"the same type (vector, raster, mesh, point cloud, ...) as the original layer"
+" and, for vector layers, have the same geometry type (point, line or "
+"polygon)."
+msgstr ""
+"A helyi menüből másolja a réteg stílusát, majd illessze be egy csoportra "
+"vagy a kiválasztott rétegekre: a stílus alkalmazva lesz az összes, az "
+"eredetivel azonos típusú (vektor, raszter, háló, pontfelhő, …) rétegre, "
+"illetve vektorréteg esetén akkor, ha a geometria típusa is azonos (pont, "
+"vonal vagy felület)."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:443
+msgid ""
+"When using a symbology based on features classification (e.g. "
+":ref:`categorized <categorized_renderer>`, :ref:`graduated "
+"<graduated_renderer>` or :ref:`rule-based <rule_based_rendering>` for vector"
+" layers, or :ref:`classification <point_cloud_classification>` for point "
+"clouds), right-clicking a class entry in the :guilabel:`Layers` panels makes"
+" it possible to edit the visibility of the classes (and their features) and "
+"avoid (un)checking them one by one:"
+msgstr ""
+"Ha elemek osztályozásán alapuló jelrendszert használ (pl. :ref:`kategorizált"
+" <kategorizált_renderelő>`, :ref:`fokozatos <graduated_renderer>` vagy "
+":ref:`szabályalapú <rule_based_rendering>` vektorrétegekhez, vagy "
+":ref:`osztályozást <point_cloud_classification>` pontfelhőkhöz), a "
+":guilabel: `Rétegek` panelen egy osztályra jobb gombbal kattintva lehetőség "
+"van az osztály (és azok elemei) láthatóságának váltására, elkerülve azok "
+"egyenkénti be- és kikapcsolását:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:450
+msgid "|toggleAllLayers| :guilabel:`Toggle Items`"
+msgstr "|toggleAllLayers| :guilabel:`Elemek átkapcsolása`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2507
 msgid "toggleAllLayers"
 msgstr "toggleAllLayers"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:451
+msgid "|showAllLayers| :guilabel:`Show All Items`"
+msgstr "|showAllLayers| :guilabel:`Összes elem megjelenítése`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:452
+msgid "|hideAllLayers| :guilabel:`Hide All Items`"
+msgstr "|hideAllLayers| :guilabel:`Összes elem elrejtése`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:454
+msgid ""
+"With vector layer, the contextual menu of a class leaf entry also gives "
+"access to:"
+msgstr ""
+"Vektorréteg esetén az osztály helyi menüjéből a következőek is elérhetőek:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:456
+msgid ""
+"|selectAll| :guilabel:`Select features`: selects in the layer all the "
+"features matching that class"
+msgstr ""
+"|selectAll| :guilabel:`Elemek kiválasztása`: kiválasztja a réteg összes "
+"elemét, ami megfelel az adott osztálynak"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2469
 msgid "selectAll"
 msgstr "selectAll"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:457
+msgid ""
+"|openTable| :guilabel:`Show in attribute table`: opens an attribute table "
+"filtered to only the features matching that class"
+msgstr ""
+"|openTable| :guilabel:`Megjelenítés az attribútumtáblában`: megnyitja az "
+"attribútumtáblát, szűrve csak az osztálynak megfelelő elemekre"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:459
 msgid ""
@@ -1352,9 +1558,26 @@ msgid ""
 " convenience, the recently used colors are also available at the bottom of "
 "the color wheel."
 msgstr ""
-"frissítse a :ref:`szimbólum színét <color-selector>` egy **Színkerék** "
+"a :ref:`szimbólum színének <color-selector>` módosítása egy **Színkerék** "
 "segítségével. A kényelem kedvéért a közelmúltban használt színek is "
 "elérhetők a színkerék alján."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:461
+msgid ""
+":guilabel:`Edit Symbol...`: opens the :ref:`Symbol Selector <symbol-"
+"selector>` dialog to change feature symbol (symbol, size, color...)."
+msgstr ""
+":guilabel:`Szimbólum szerkesztése…`: megnyitja a :ref:`Szimbólumválasztó "
+"<symbol-selector>` párbeszédablakot az elem szimbólumának módosításához "
+"(szimbólum, méret, szín, stb)."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:463
+msgid ":guilabel:`Copy Symbol`"
+msgstr ":guilabel:`Szimbólum másolása`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:464
+msgid ":guilabel:`Paste Symbol`"
+msgstr ":guilabel:`Szimbólum beillesztése`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:466
 msgid ""
@@ -1856,9 +2079,33 @@ msgstr ""
 "lehetőséget a QGIS-en belüli műveletek elemzéséhez és hibakereséséhez. Az "
 "elérhető eszközök a következő füleken találhatók:"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:679
+msgid ""
+"|networkAndProxy| :guilabel:`Network Logger`: records and displays network "
+"requests and interactions"
+msgstr ""
+"|networkAndProxy| :guilabel:`Hálózati naplózó`: rögzíti és megjeleníti a "
+"hálózati kéréseket és interakciókat"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2447
 msgid "networkAndProxy"
 msgstr "networkAndProxy"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:681
+msgid ""
+"|dbManager| :guilabel:`Query Logger`: logs SQL commands issued by data "
+"providers and duration of execution"
+msgstr ""
+"|dbManager| :guilabel:`Lekérdezésnaplózó`: naplózza az adatszolgáltatók "
+"által kiküldött SQL-parancsokat és azok végrehajtási idejét"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:683
+msgid ""
+"|stopwatch| :guilabel:`Profiler`: provides load times for every actions in "
+"order to detect causes of slow down"
+msgstr ""
+"|stopwatch| :guilabel:`Profilozó`: naplózza minden művelet betöltési idejét,"
+" hogy megtalálható legyen a lassulás oka"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2495
 msgid "stopwatch"
@@ -2060,6 +2307,41 @@ msgstr ""
 "térképvászon vagy 3D nézetek létrehozása, térképrétegek hivatkozásának "
 "feloldása, könyvjelző vagy elrendezés betöltése, … Segítségével "
 "beazonosítható a lassú betöltési idők oka."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:767
+msgid ""
+"Default supported actions can be selected from the :guilabel:`Category` "
+"drop-down menu:"
+msgstr ""
+"Az alapértelmezett támogatott műveleteket a :guilabel:`Kategória` legördülő "
+"menüből lehet kiválasztani:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:769
+msgid ""
+":guilabel:`Startup` helps you diagnose (and fix) occasional long startup "
+"times of QGIS."
+msgstr ""
+"Az :guilabel:`Indítás` segít diagnosztizálni (és kijavítani) a QGIS alkalmi "
+"hosszú indítási idejét."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:770
+msgid ""
+":guilabel:`Project Load` allows you to get a breakdown of the various stages"
+" of project load, in order to identify the causes of slow project load "
+"times."
+msgstr ""
+"A :guilabel:`Projektbetöltés` segítségével megtekinthetők a projekt "
+"betöltésének különböző szakaszai, hogy azonosíthassa a lassú projektbetöltés"
+" okait."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:772
+msgid ""
+":guilabel:`Map Render` tool allows you to identify pain points in your map "
+"rendering and track down exactly which layers are causing long map redraws."
+msgstr ""
+"A :guilabel:`Térképmegjelenítés` segítségével azonosíthatja a térkép "
+"megjelenítésének problémás pontjait, és pontosan nyomon követheti, mely "
+"rétegek okozzák a térkép hosszú újrarajzolását."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:778
 msgid "Profiler for QGIS Startup"
@@ -2299,6 +2581,18 @@ msgstr ""
 "hasznos, ha a gondosan elvégzett kiválasztás után véletlenül máshová "
 "kattint, és töröli a kiválasztást."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:891
+msgid ""
+"While using the |selectRectangle| :guilabel:`Select Feature(s)` tool, "
+"holding :kbd:`Shift` or :kbd:`Ctrl` (:kbd:`Cmd` on macOS) toggles whether a "
+"feature is selected (i.e., either adds to the current selection or removes "
+"from it)."
+msgstr ""
+"Az |selectRectangle| :guilabel:`Elemek kiválasztása` eszköz használata "
+"közben nyomva tartott :kbd:`Shift` vagy :kbd:`Ctrl` (:kbd:`Cmd` macOS-en) "
+"átváltja a kiválasztást (azaz hozzáad az aktuális kiválasztáshoz, vagy "
+"eltávolít belőle)."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:895
 msgid ""
 "For the other tools, different behaviors can be performed by holding down:"
@@ -2309,6 +2603,30 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:897
 msgid ":kbd:`Shift`: add features to the current selection"
 msgstr ":kbd:`Shift`: elemek hozzáadása az aktuális kiválasztáshoz"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:898
+msgid ":kbd:`Ctrl`/:kbd:`Cmd`: subtract features from the current selection"
+msgstr ""
+":kbd:`Ctrl`/:kbd:`Cmd`: elemek eltávolítása az aktuális kiválasztásból"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:899
+msgid ""
+":kbd:`Ctrl+Shift`/:kbd:`Cmd+Shift`: intersect with the current selection, "
+"i.e., only keep overlapping features from the current selection"
+msgstr ""
+":kbd:`Ctrl+Shift`/:kbd:`Cmd+Shift`: metszi az aktuális kiválasztást, pl. a "
+"kiválasztottak közül csak az átfedő elemeket tartja meg"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:901
+msgid ""
+":kbd:`Alt`: select features that are totally within the selection shape. "
+"Combined with :kbd:`Shift` or :kbd:`Ctrl`/:kbd:`Cmd` keys, you can add or "
+"subtract features to/from the current selection."
+msgstr ""
+":kbd:`Alt`: olyan elemek kiválasztása, amelyek teljes mértékben a kijelölt "
+"alakzaton belül vannak. Kombinálva a :kbd:`Shift` vagy "
+":kbd:`Ctrl`/:kbd:`Cmd` billentyűvel az aktuális kiválasztáshoz hozzá lehet "
+"adni, vagy eltávolítani belőle."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:908
 msgid "Automatic selection"
@@ -2408,6 +2726,16 @@ msgstr ""
 #: ../../docs/user_manual/introduction/general_tools.rst:2477
 msgid "selectLocation"
 msgstr "selectLocation"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:930
+msgid ""
+"|selectDistance| :sup:`Select within distance` to select features wherever "
+"they are within the specified maximum distance from referenced features - "
+"see :ref:`qgisselectwithindistance`)"
+msgstr ""
+"|selectDistance| :sup:`Kiválasztás távolságon belül` kiválasztja azokat az "
+"elemeket, melyek a referencia elemeitől a megadott maximális távolságon "
+"belül találhatóak – lásd :ref:`qgisselectwithindistance`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2473
 msgid "selectDistance"
@@ -2652,6 +2980,20 @@ msgstr ""
 msgid "Identifying Features"
 msgstr "Elemek azonosítása"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1036
+msgid ""
+"The |identify| :sup:`Identify Features` tool allows you to interact with the"
+" map canvas and get information on features or pixels in a pop-up window. It"
+" can be used to query most of the layer types supported by QGIS (vector, "
+"raster, mesh, point cloud, wms, wfs, ...). To identify an element, use "
+"either:"
+msgstr ""
+"Az |identify| :sup:`Elemek azonosítása` eszköz lehetővé teszi a térképi "
+"interakciót és információkat jelenít meg az elemről vagy pixelről egy "
+"felugró ablakban. A QGIS által támogatott legtöbb rétegtípus (vektor, "
+"raszter, háló, pontfelhő, wms, wfs, ...) lekérdezésére használható. Egy elem"
+" azonosításának módjai:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2397
 msgid "identify"
 msgstr "identify"
@@ -2664,13 +3006,67 @@ msgstr ":menuselection:`Nézet --> Elemek azonosítása`"
 msgid ":kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),"
 msgstr ":kbd:`Ctrl+Shift+I` (vagy |osx| :kbd:`Cmd+Shift+I`),"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:1044
+msgid ""
+"|identify| :sup:`Identify Features` button on the :guilabel:`Attributes` "
+"toolbar"
+msgstr ""
+"|identify| :sup:`Elemek azonosítása` gomb az :guilabel:`Attribútumok` "
+"eszköztáron"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1046
+msgid ""
+"Then click on a feature or pixel of the active layer. The identified item "
+"gets highlighted in the map canvas while the :guilabel:`Identify Results` "
+"dialog opens with detailed information on it. The dialog also shows a set of"
+" buttons for advanced configuration."
+msgstr ""
+"Ezután kattintson az aktív réteg egy elemére vagy pixelére. Az azonosított "
+"elem ki lesz emelve a térképvásznon, miközben megnyílik a "
+":guilabel:`Azonosítási eredmények` panel a részletes információkkal. A "
+"párbeszédpanelen gombok is találhatóak a speciális beállításokhoz."
+
 #: ../../docs/user_manual/introduction/general_tools.rst:1054
 msgid "The Identify Results dialog"
-msgstr "Azonosítás eredmények párbeszédablak"
+msgstr "Azonosítási eredmények párbeszédablak"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1061
 msgid "Identify Results dialog"
-msgstr "Az Azonosítás eredmények párbeszédablak"
+msgstr "Az Azonosítási eredmények párbeszédablak"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1063
+msgid "From bottom to top:"
+msgstr "Lentről felfelé:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1067
+msgid ""
+"The :guilabel:`View` controls the general aspect of the dialog and the "
+"formatting of the results; it can be set as:"
+msgstr ""
+"A  :guilabel:`Nézet` állítja be a párbeszédablak általános megjelenését és "
+"az eredmények formázását; a következőképpen állítható be:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1070
+msgid ""
+"**Tree**: this is the default view, and returns the results in a tree-"
+"structure"
+msgstr ""
+"**Fa**: ez az alapértelmezett nézet, az eredményeket fa szerkezetben "
+"ábrázolja"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1071
+msgid ""
+"**Table**: available only for raster-based layers, it allows to display the "
+"results as a table whose columns are ``Layer``, ``FID``, ``Attribute`` and "
+"``Value``"
+msgstr ""
+"**Táblázat**: csak raszterrétegek esetén elérhető, és lehetővé teszi az "
+"eredmények táblázat formájában történő megjelenítését, amelynek oszlopai a "
+"következők: „Réteg”, „FID”, „Attribútum” és „Érték”"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:1073
+msgid "or **Graph**: available only for raster-based layers"
+msgstr "vagy **Grafikon**: csak raszterrétegek esetén érhető el"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1100
 msgid "|formView| :sup:`Open Form` of the current feature"
