@@ -234,7 +234,7 @@ Icon substitution
 
 You can add an image inside a text paragraph (e.g., as a tool icon).
 To do so, you first need to create an alias (also named substitution),
-i.e., a reference name that will be used to invoke the icon.
+which is a reference name used to display the icon.
 To ensure consistency across the documents and help in the use of the icons,
 we maintain a list in the :file:`substitutions.txt` file at the root of this repository.
 Find more details in the :ref:`substitutions` chapter.
