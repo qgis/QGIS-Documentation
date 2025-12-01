@@ -5,7 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Li Hongsheng, 2025
+# bc G, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Li Hongsheng, 2025\n"
+"Last-Translator: bc G, 2025\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,5 +29,282 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"翻译是一项社区工作：ref：`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
-"progress|。"
+"翻译是一项社区工作：ref:`you can join  <translation_guidelines>`。此页面目前翻译进度为 "
+"|translation progress|。"
+
+#: ../../docs/developers_guide/processingtesting.rst:5
+msgid "Processing Algorithms Testing"
+msgstr "Processing 算法测试"
+
+#: ../../docs/developers_guide/processingtesting.rst:11
+msgid "Algorithm tests"
+msgstr "算法测试"
+
+#: ../../docs/developers_guide/processingtesting.rst:13
+msgid ""
+"The original version of these instructions is available at "
+":source:`python/plugins/processing/tests/README.md`"
+msgstr "这些说明的原始版本可在 :source:`python/plugins/processing/tests/README.md` 获取"
+
+#: ../../docs/developers_guide/processingtesting.rst:16
+msgid ""
+"QGIS provides several algorithms under the Processing framework. You can "
+"extend this list with algorithms of your own and, like any new feature, "
+"adding tests is required."
+msgstr "QGIS 在 Processing 框架下提供了多个算法。您可以扩展该列表，添加自己的算法，并且与任何新功能一样，必须添加测试。"
+
+#: ../../docs/developers_guide/processingtesting.rst:20
+msgid ""
+"To test algorithms you can add entries into "
+":file:`testdata/qgis_algorithm_tests.yaml` or "
+":file:`testdata/gdal_algorithm_tests.yaml` as appropriate."
+msgstr ""
+"要测试算法，您可以根据需要将条目添加到 :file:`testdata/qgis_algorithm_tests.yaml` 或 "
+":file:`testdata/gdal_algorithm_tests.yaml` 中。"
+
+#: ../../docs/developers_guide/processingtesting.rst:23
+msgid "This file is structured with `yaml syntax <https://yaml.org/>`_."
+msgstr "该文件采用 `YAML 语法 <https://yaml.org/>`_ 编写。"
+
+#: ../../docs/developers_guide/processingtesting.rst:25
+msgid ""
+"A basic test appears under the top level key ``tests`` and looks like this:"
+msgstr "一个基本测试位于顶级键 ``tests`` 下，形式如下："
+
+#: ../../docs/developers_guide/processingtesting.rst:42
+msgid "How To"
+msgstr "操作方法"
+
+#: ../../docs/developers_guide/processingtesting.rst:44
+msgid "To add a new test please follow these steps:"
+msgstr "要添加新测试，请按以下步骤操作："
+
+#: ../../docs/developers_guide/processingtesting.rst:46
+msgid ""
+"Run the :ref:`algorithm <processing_algs>` you want to test in QGIS from the"
+" :ref:`processing toolbox <processing.toolbox>`. If the result is a vector "
+"layer prefer GML, with its XSD, as output for its support of mixed geometry "
+"types and good readability. Redirect output to "
+":file:`python/plugins/processing/tests/testdata/expected`. For input layers "
+"prefer to use what's already there in the folder :file:`testdata`. If you "
+"need extra data, put it into :file:`testdata/custom`."
+msgstr ""
+"在 QGIS 中通过 :ref:`Processing toolbox <processing.toolbox>` 运行您要测试的 "
+":ref:`algorithm <processing_algs>`。如果结果是矢量图层，建议使用 GML（附带 "
+"XSD）作为输出格式，因其支持混合几何类型且可读性好。将输出重定向至 "
+":file:`python/plugins/processing/tests/testdata/expected`。输入图层请优先使用 "
+":file:`testdata` 文件夹中已有的数据；如需额外数据，请放入 :file:`testdata/custom`。"
+
+#: ../../docs/developers_guide/processingtesting.rst:53
+msgid ""
+"When you have run the algorithm, go to :menuselection:`Processing --> "
+"History` and find the algorithm which you have just run."
+msgstr "运行完算法后，请进入 :menuselection:`Processing --> History`，找到刚刚运行的算法。"
+
+#: ../../docs/developers_guide/processingtesting.rst:55
+msgid ""
+"Right click the algorithm and click :guilabel:`Create Test`. A new window "
+"will open with a text definition."
+msgstr "右键单击该算法，然后点击 :guilabel:`Create Test`。将打开一个包含文本定义的新窗口。"
+
+#: ../../docs/developers_guide/processingtesting.rst:57
+msgid ""
+"Open the file "
+":file:`python/plugins/processing/tests/testdata/algorithm_tests.yaml`, copy "
+"the text definition there."
+msgstr ""
+"打开文件 "
+":file:`python/plugins/processing/tests/testdata/algorithm_tests.yaml`，将文本定义复制进去。"
+
+#: ../../docs/developers_guide/processingtesting.rst:60
+msgid ""
+"The first string from the command goes to the key ``algorithm``, the "
+"subsequent ones to ``params`` and the last one(s) to ``results``."
+msgstr ""
+"命令中的第一个字符串对应 ``algorithm`` 键，后续字符串对应 ``params``，最后一个（或多个）对应 ``results``。"
+
+#: ../../docs/developers_guide/processingtesting.rst:63
+msgid "The above translates to"
+msgstr "上述内容转换为"
+
+#: ../../docs/developers_guide/processingtesting.rst:79
+msgid ""
+"It is also possible to create tests for Processing scripts. Scripts should "
+"be placed in the :file:`scripts` subdirectory in the test data directory "
+":file:`python/plugins/processing/tests/testdata/`. The script file name "
+"should match the script algorithm name."
+msgstr ""
+"也可以为 Processing 脚本创建测试。脚本应放在测试数据目录 "
+":file:`python/plugins/processing/tests/testdata/` 下的 :file:`scripts` "
+"子目录中，且脚本文件名应与脚本算法名称一致。"
+
+#: ../../docs/developers_guide/processingtesting.rst:85
+msgid "Parameters and results"
+msgstr "参数与结果"
+
+#: ../../docs/developers_guide/processingtesting.rst:88
+msgid "Trivial type parameters"
+msgstr "简单类型参数"
+
+#: ../../docs/developers_guide/processingtesting.rst:90
+msgid "Parameters and results are specified as lists or dictionaries:"
+msgstr "参数和结果以列表或字典形式指定："
+
+#: ../../docs/developers_guide/processingtesting.rst:99
+msgid "or"
+msgstr "或"
+
+#: ../../docs/developers_guide/processingtesting.rst:109
+msgid "Layer type parameters"
+msgstr "图层类型参数"
+
+#: ../../docs/developers_guide/processingtesting.rst:111
+msgid ""
+"You will often need to specify layers as parameters. To specify a layer you "
+"will need to specify:"
+msgstr "您通常需要将图层指定为参数。为此，需指定以下内容："
+
+#: ../../docs/developers_guide/processingtesting.rst:114
+msgid "the type, ie ``vector`` or ``raster``"
+msgstr "类型，即 ``vector`` 或 ``raster``"
+
+#: ../../docs/developers_guide/processingtesting.rst:115
+msgid "a name, with a relative path like :file:`expected/polys_centroid.gml`"
+msgstr "名称，使用类似 :file:`expected/polys_centroid.gml` 的相对路径"
+
+#: ../../docs/developers_guide/processingtesting.rst:117
+msgid "This is what it looks like in action:"
+msgstr "实际使用时如下所示："
+
+#: ../../docs/developers_guide/processingtesting.rst:131
+msgid "File type parameters"
+msgstr "文件类型参数"
+
+#: ../../docs/developers_guide/processingtesting.rst:133
+msgid ""
+"If you need an external file for the algorithm test, you need to specify the"
+" 'file' type and the (relative) path to the file in its 'name':"
+msgstr "如果算法测试需要外部文件，需指定类型为 'file'，并在其 'name' 字段中提供（相对）路径："
+
+#: ../../docs/developers_guide/processingtesting.rst:148
+msgid "Results"
+msgstr "结果"
+
+#: ../../docs/developers_guide/processingtesting.rst:150
+msgid "Results are specified very similarly."
+msgstr "结果的指定方式非常类似。"
+
+#: ../../docs/developers_guide/processingtesting.rst:153
+msgid "Basic vector files"
+msgstr "基本矢量文件"
+
+#: ../../docs/developers_guide/processingtesting.rst:155
+msgid "It couldn't be more trivial"
+msgstr "这再简单不过了"
+
+#: ../../docs/developers_guide/processingtesting.rst:164
+msgid "Add the expected GML and XSD files in the folder."
+msgstr "将预期的 GML 和 XSD 文件添加到该文件夹中。"
+
+#: ../../docs/developers_guide/processingtesting.rst:167
+msgid "Vector with tolerance"
+msgstr "带容差的矢量"
+
+#: ../../docs/developers_guide/processingtesting.rst:169
+msgid ""
+"Sometimes different platforms create slightly different results which are "
+"still acceptable. In this case (but only then) you may also use additional "
+"properties to define how a layer is compared."
+msgstr "有时不同平台会产生略有差异但可接受的结果。此时（仅在此情况下）您可以使用额外属性来定义图层的比较方式。"
+
+#: ../../docs/developers_guide/processingtesting.rst:173
+msgid ""
+"To deal with a certain tolerance for output values you can specify a "
+"``compare`` property for an output. The compare property can contain sub-"
+"properties for ``fields``. This contains information about how precisely a "
+"certain field is compared (``precision``) or a field can even entirely be "
+"``skip``ed. There is a special field name ``__all__`` which will apply a "
+"certain tolerance to all fields. There is another property ``geometry`` "
+"which also accepts a ``precision`` which is applied to each vertex."
+msgstr ""
+"为处理输出值的一定容差，可为输出指定 ``compare`` 属性。该属性可包含 ``fields`` "
+"子属性，用于指定某字段的比较精度（``precision``），甚至可完全跳过（``skip``）某个字段。特殊字段名 ``__all__`` "
+"可将指定容差应用于所有字段。另有一个 ``geometry`` 属性，也可接受一个 ``precision``，用于应用于每个顶点。"
+
+#: ../../docs/developers_guide/processingtesting.rst:196
+msgid "Raster files"
+msgstr "栅格文件"
+
+#: ../../docs/developers_guide/processingtesting.rst:198
+msgid ""
+"Raster files are compared with a hash checksum. This is calculated when you "
+"create a test from the processing history."
+msgstr "栅格文件通过哈希校验和进行比较。该哈希值在从 Processing 历史记录创建测试时自动生成。"
+
+#: ../../docs/developers_guide/processingtesting.rst:208
+msgid "Files"
+msgstr "文件"
+
+#: ../../docs/developers_guide/processingtesting.rst:210
+msgid ""
+"You can compare the content of an output file to an expected result "
+"reference file"
+msgstr "您可以将输出文件的内容与预期结果参考文件进行比较"
+
+#: ../../docs/developers_guide/processingtesting.rst:219
+msgid ""
+"Or you can use one or more regular expressions that will be `matched "
+"<https://docs.python.org/3/library/re.html#re.search>`_ against the file "
+"content"
+msgstr ""
+"或者，您可以使用一个或多个正则表达式，对文件内容进行 `匹配 "
+"<https://docs.python.org/3/library/re.html#re.search>`_"
+
+#: ../../docs/developers_guide/processingtesting.rst:233
+msgid "Directories"
+msgstr "目录"
+
+#: ../../docs/developers_guide/processingtesting.rst:235
+msgid ""
+"You can compare the content of an output directory with an expected result "
+"reference directory"
+msgstr "您可以将输出目录的内容与预期结果参考目录进行比较"
+
+#: ../../docs/developers_guide/processingtesting.rst:245
+msgid "Algorithm Context"
+msgstr "算法上下文"
+
+#: ../../docs/developers_guide/processingtesting.rst:247
+msgid ""
+"There are a few more definitions that can modify the context of the "
+"algorithm - these can be specified at the top level of test:"
+msgstr "还有一些定义可修改算法的上下文环境——这些可在测试的顶层指定："
+
+#: ../../docs/developers_guide/processingtesting.rst:250
+msgid ""
+"``project`` - will load a specified QGIS project file before running the "
+"algorithm. If not specified, the algorithm will run with an empty project"
+msgstr "``project`` —— 在运行算法前加载指定的 QGIS 工程文件。若未指定，算法将在空工程中运行"
+
+#: ../../docs/developers_guide/processingtesting.rst:252
+msgid ""
+"``project_crs`` - overrides the default project CRS - e.g. ``EPSG:27700``"
+msgstr "``project_crs`` —— 覆盖默认工程坐标系，例如 ``EPSG:27700``"
+
+#: ../../docs/developers_guide/processingtesting.rst:253
+msgid ""
+"``ellipsoid`` - overrides the default project ellipsoid used for "
+"measurements, e.g. ``GRS80``"
+msgstr "``ellipsoid`` —— 覆盖用于测量的默认工程椭球体，例如 ``GRS80``"
+
+#: ../../docs/developers_guide/processingtesting.rst:258
+msgid "Running tests locally"
+msgstr "本地运行测试"
+
+#: ../../docs/developers_guide/processingtesting.rst:264
+msgid ""
+"or one of the following values listed in the :source:`CMakelists.txt "
+"<python/plugins/processing/tests/CMakeLists.txt>`"
+msgstr ""
+"或使用 :source:`CMakelists.txt "
+"<python/plugins/processing/tests/CMakeLists.txt>` 中列出的以下值之一"
