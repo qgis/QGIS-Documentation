@@ -5,7 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Li Hongsheng, 2025
+# bc G, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Li Hongsheng, 2025\n"
+"Last-Translator: bc G, 2025\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,5 +29,254 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"翻译是一项社区工作：ref：`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
-"progress|。"
+"翻译是一项社区工作 :ref:`you can join <translation_guidelines>`。此页面目前翻译进度为 "
+"|translation progress|。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:5
+msgid "Releasing your plugin"
+msgstr "发布您的插件"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:12
+msgid ""
+"Once your plugin is ready and you think the plugin could be helpful for some"
+" people, do not hesitate to upload it to :ref:`official_pyqgis_repository`. "
+"On that page you can also find packaging guidelines about how to prepare the"
+" plugin to work well with the plugin installer. Or in case you would like to"
+" set up your own plugin repository, create a simple XML file that will list "
+"the plugins and their metadata."
+msgstr ""
+"当您的插件准备就绪，并且您认为它可能对某些用户有帮助时，请毫不犹豫地将其上传至 "
+":ref:`official_pyqgis_repository`。在该页面上，您还可以找到打包指南，了解如何准备插件以使其与插件安装程序良好兼容。或者，如果您希望搭建自己的插件仓库，可以创建一个简单的"
+" XML 文件，列出插件及其元数据。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:19
+msgid "Please take special care to the following suggestions:"
+msgstr "请特别注意以下建议："
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:22
+msgid "Metadata and names"
+msgstr "元数据与名称"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:24
+msgid "avoid using a name too similar to existing plugins"
+msgstr "避免使用与现有插件过于相似的名称"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:25
+msgid ""
+"if your plugin has a similar functionality to an existing plugin, please "
+"explain the differences in the About field, so the user will know which one "
+"to use without the need to install and test it"
+msgstr "如果您的插件功能与现有插件类似，请在“关于（About）”字段中说明其差异，以便用户无需安装和测试即可知道应使用哪一个"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:26
+msgid "avoid repeating \"plugin\" in the name of the plugin itself"
+msgstr "避免在插件名称中重复使用“plugin”一词"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:27
+msgid ""
+"use the description field in metadata for a 1 line description, the About "
+"field for more detailed instructions"
+msgstr "在元数据中使用 description 字段提供一行简短描述，使用 About 字段提供更详细的说明"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:28
+msgid ""
+"include a code repository, a bug tracker, and a home page; this will greatly"
+" enhance the possibility of collaboration, and can be done very easily with "
+"one of the available web infrastructures (GitHub, GitLab, Bitbucket, etc.)"
+msgstr ""
+"包含代码仓库、缺陷追踪器和主页；这将极大提升协作可能性，且可借助现有网络基础设施（如 GitHub、GitLab、Bitbucket 等）轻松实现"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:29
+msgid ""
+"choose tags with care: avoid the uninformative ones (e.g. vector) and prefer"
+" the ones already used by others (see the plugin website)"
+msgstr "谨慎选择标签：避免使用信息量不足的标签（如 vector），优先使用他人已采用的标签（参见插件网站）"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:30
+msgid ""
+"add a proper icon, do not leave the default one; see QGIS interface for a "
+"suggestion of the style to be used"
+msgstr "添加合适的图标，不要保留默认图标；可参考 QGIS 界面中建议的图标风格"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:33
+msgid "Code and help"
+msgstr "代码与帮助文档"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:35
+msgid ""
+"do not include generated file (ui_*.py, resources_rc.py, generated help "
+"files…) and useless stuff (e.g. .gitignore) in repository"
+msgstr "不要在仓库中包含生成的文件（如 ui_*.py、resources_rc.py、生成的帮助文件等）和无用内容（例如 .gitignore）"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:36
+msgid "add the plugin to the appropriate menu (Vector, Raster, Web, Database)"
+msgstr "将插件添加到合适的菜单中（矢量、栅格、Web、数据库）"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:37
+msgid ""
+"when appropriate (plugins performing analyses), consider adding the plugin "
+"as a subplugin of Processing framework: this will allow users to run it in "
+"batch, to integrate it in more complex workflows, and will free you from the"
+" burden of designing an interface"
+msgstr ""
+"在合适的情况下（例如执行分析的插件），请考虑将其作为 Processing "
+"框架的子插件：这样用户即可批量运行、集成到更复杂的工作流中，同时您也无需费心设计界面"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:38
+msgid ""
+"include at least minimal documentation and, if useful for testing and "
+"understanding, sample data."
+msgstr "至少包含最基本的文档，如有助于测试和理解，还应提供示例数据。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:43
+msgid "Official Python plugin repository"
+msgstr "官方 Python 插件仓库"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:45
+msgid ""
+"You can find the *official* Python plugin repository at "
+"`<https://plugins.qgis.org/>`_."
+msgstr "您可以在 `<https://plugins.qgis.org/>`_ 找到*官方* Python 插件仓库。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:48
+msgid ""
+"In order to use the official repository you must obtain an OSGEO ID from the"
+" `OSGEO web portal <https://www.osgeo.org/community/getting-started-"
+"osgeo/osgeo_userid/>`_."
+msgstr ""
+"要使用官方仓库，您必须从 `OSGEO 网站门户 <https://www.osgeo.org/community/getting-started-"
+"osgeo/osgeo_userid/>`_ 获取一个 OSGEO ID。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:51
+msgid ""
+"Once you have uploaded your plugin it will be approved by a staff member and"
+" you will be notified."
+msgstr "上传插件后，将由工作人员审核，您会收到通知。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:55
+msgid "**TODO:**"
+msgstr "**待办：**"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:55
+msgid "Insert a link to the governance document"
+msgstr "插入治理文档的链接"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:61
+msgid "Permissions"
+msgstr "权限"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:63
+msgid "These rules have been implemented in the official plugin repository:"
+msgstr "官方插件仓库已实施以下规则："
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:65
+msgid "every registered user can add a new plugin"
+msgstr "所有注册用户均可添加新插件"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:66
+msgid "*staff* users can approve or disapprove all plugin versions"
+msgstr "*staff* 用户可批准或拒绝所有插件版本"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:67
+msgid ""
+"users which have the special permission `plugins.can_approve` get the "
+"versions they upload automatically approved"
+msgstr "拥有特殊权限 `plugins.can_approve` 的用户，其上传的版本将自动获得批准"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:69
+msgid ""
+"users which have the special permission `plugins.can_approve` can approve "
+"versions uploaded by others as long as they are in the list of the plugin "
+"*owners*"
+msgstr "拥有特殊权限 `plugins.can_approve` 的用户，只要在插件*所有者*列表中，即可批准他人上传的版本"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:72
+msgid ""
+"a particular plugin can be deleted and edited only by *staff* users and "
+"plugin *owners*"
+msgstr "特定插件仅可由 *staff* 用户和插件*所有者*删除或编辑"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:74
+msgid ""
+"if a user without `plugins.can_approve` permission uploads a new version, "
+"the plugin version is automatically unapproved."
+msgstr "若无 `plugins.can_approve` 权限的用户上传新版本，该插件版本将自动处于未批准状态。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:79
+msgid "Trust management"
+msgstr "信任管理"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:81
+msgid ""
+"Staff members can grant *trust* to selected plugin creators setting "
+"`plugins.can_approve` permission through the front-end application."
+msgstr "工作人员可通过前端应用程序向选定的插件开发者授予*信任*，即设置 `plugins.can_approve` 权限。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:84
+msgid ""
+"The plugin details view offers direct links to grant trust to the plugin "
+"creator or the plugin *owners*."
+msgstr "插件详情页面提供直接链接，用于向插件创建者或插件*所有者*授予信任。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:90
+msgid "Validation"
+msgstr "验证规则"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:92
+msgid ""
+"Plugin's metadata are automatically imported and validated from the "
+"compressed package when the plugin is uploaded."
+msgstr "插件上传时，其元数据将从压缩包中自动导入并验证。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:95
+msgid ""
+"Here are some validation rules that you should aware of when you want to "
+"upload a plugin on the official repository:"
+msgstr "在向官方仓库上传插件时，请注意以下验证规则："
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:98
+msgid ""
+"the name of the main folder containing your plugin must contain only ASCII "
+"characters (A-Z and a-z), digits and the characters underscore (_) and minus"
+" (-), also it cannot start with a digit"
+msgstr "包含插件的主文件夹名称只能包含 ASCII 字符（A–Z 和 a–z）、数字以及下划线（_）和连字符（-），且不能以数字开头"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:101
+msgid ":file:`metadata.txt` is required"
+msgstr "必须包含 :file:`metadata.txt`"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:102
+msgid ""
+"all required metadata listed in :ref:`metadata table<plugin_metadata_table>`"
+" must be present"
+msgstr ":ref:`metadata table<plugin_metadata_table>` 中列出的所有必填元数据字段都必须存在"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:104
+msgid "the `version` metadata field must be unique"
+msgstr "`version` 元数据字段必须唯一"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:105
+msgid ""
+"a license file must be included, saved as ``LICENSE`` with no extension "
+"(i.e. not ``LICENSE.txt`` for example)"
+msgstr "必须包含许可证文件，且文件名为 ``LICENSE``（无扩展名，例如不能是 ``LICENSE.txt``）"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:109
+msgid "Plugin structure"
+msgstr "插件结构"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/releasing.rst:111
+msgid ""
+"Following the validation rules the compressed (.zip) package of your plugin "
+"must have a specific structure to validate as a functional plugin. As the "
+"plugin will be unzipped inside the users plugins folder it must have it's "
+"own directory inside the .zip file to not interfere with other plugins. "
+"Mandatory files are: :file:`metadata.txt`,  :file:`__init__.py` and "
+":file:`LICENSE`. But it would be nice to have a :file:`README` and of course"
+" an icon to represent the plugin. Following is an example of how a "
+":file:`plugin.zip` could look like."
+msgstr ""
+"根据验证规则，您的插件压缩包（.zip）必须具有特定结构，才能被验证为有效的插件。由于插件将被解压至用户插件文件夹中，因此 .zip "
+"文件内必须包含一个独立的目录，以免与其他插件冲突。必备文件包括：:file:`metadata.txt`、:file:`__init__.py` 和 "
+":file:`LICENSE`。此外，建议包含一个 :file:`README` 文件，当然也应包含代表插件的图标。以下是一个 "
+":file:`plugin.zip` 的示例结构。"
