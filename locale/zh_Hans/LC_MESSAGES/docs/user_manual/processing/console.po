@@ -5,7 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Li Hongsheng, 2025
+# bc G, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Li Hongsheng, 2025\n"
+"Last-Translator: bc G, 2025\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,5 +29,568 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"翻译是一项社区工作：ref：`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
-"progress|。"
+"翻译是一项社区工作 :ref:`you can join <translation_guidelines>`。此页面目前翻译进度为 "
+"|translation progress|。"
+
+#: ../../docs/user_manual/processing/console.rst:4
+msgid "Using processing algorithms from the console"
+msgstr "从控制台使用处理算法"
+
+#: ../../docs/user_manual/processing/console.rst:11
+msgid ""
+"The console allows advanced users to increase their productivity and perform"
+" complex operations that cannot be performed using any of the other GUI "
+"elements of the processing framework. Models involving several algorithms "
+"can be defined using the command-line interface, and additional operations "
+"such as loops and conditional sentences can be added to create more flexible"
+" and powerful workflows."
+msgstr ""
+"控制台允许高级用户提升工作效率，并执行处理框架其他 GUI "
+"元素无法完成的复杂操作。通过命令行接口可定义包含多个算法的模型，并添加循环、条件语句等额外操作，以创建更灵活、更强大的工作流。"
+
+#: ../../docs/user_manual/processing/console.rst:18
+msgid ""
+"There is not a processing console in QGIS, but all processing commands are "
+"available instead from the QGIS built-in :ref:`Python console <console>`.  "
+"That means that you can incorporate those commands into your console work "
+"and connect processing algorithms to all the other features (including "
+"methods from the QGIS API) available from there."
+msgstr ""
+"QGIS 中没有独立的处理控制台，但所有处理命令均可通过 QGIS 内置的 :ref:`Python 控制台 <console>` "
+"使用。这意味着您可以将这些命令集成到控制台工作中，并将处理算法与该环境中所有其他功能（包括 QGIS API 的方法）连接起来。"
+
+#: ../../docs/user_manual/processing/console.rst:24
+msgid ""
+"The code that you can execute from the Python console, even if it does not "
+"call any specific processing method, can be converted into a new algorithm "
+"that you can later call from the toolbox, the graphical modeler or any other"
+" component, just like you do with any other algorithm. In fact, some "
+"algorithms that you can find in the toolbox are simple scripts."
+msgstr ""
+"您在 Python "
+"控制台中执行的代码，即使未调用任何特定的处理方法，也可以转换为一个新算法，之后可像使用其他算法一样，从工具箱、图形建模器或其他组件中调用它。事实上，工具箱中的一些算法就是简单的脚本。"
+
+#: ../../docs/user_manual/processing/console.rst:31
+msgid ""
+"In this section, we will see how to use processing algorithms from the QGIS "
+"Python console, and also how to write algorithms using Python."
+msgstr "在本节中，我们将学习如何从 QGIS Python 控制台使用处理算法，以及如何使用 Python 编写算法。"
+
+#: ../../docs/user_manual/processing/console.rst:35
+msgid "Calling algorithms from the Python console"
+msgstr "从 Python 控制台调用算法"
+
+#: ../../docs/user_manual/processing/console.rst:37
+msgid ""
+"The first thing you have to do is to import the processing functions with "
+"the following line:"
+msgstr "首先，您需要使用以下语句导入处理函数："
+
+#: ../../docs/user_manual/processing/console.rst:44
+msgid ""
+"Now, there is basically just one (interesting) thing you can do with that "
+"from the console: execute an algorithm. That is done using the :meth:`run() "
+"<qgis.core.QgsProcessingAlgorithm.run>` method, which takes the name of the "
+"algorithm to execute as its first parameter, and then a variable number of "
+"additional parameters depending on the requirements of the algorithm. So the"
+" first thing you need to know is the name of the algorithm to execute. That "
+"is not the name you see in the toolbox, but rather a unique command–line "
+"name. To find the right name for your algorithm, you can use the "
+":class:`processingRegistry <qgis.core.QgsProcessingRegistry>`. Type the "
+"following line in your console:"
+msgstr ""
+"现在，从控制台基本只能做一件（有趣）的事：执行算法。这是通过 :meth:`run() "
+"<qgis.core.QgsProcessingAlgorithm.run>` "
+"方法完成的，该方法以要执行的算法名称作为第一个参数，随后是根据算法需求而定的若干附加参数。因此，您首先需要知道要执行的算法名称。这并非工具箱中显示的名称，而是唯一的命令行名称。要查找算法的正确名称，可使用"
+" :class:`processingRegistry <qgis.core.QgsProcessingRegistry>`。在控制台中输入以下代码："
+
+#: ../../docs/user_manual/processing/console.rst:61
+msgid ""
+"You will see something like this (with some extra dashes added to improve "
+"readability)."
+msgstr "您将看到类似以下内容（为提高可读性已添加额外横线）："
+
+#: ../../docs/user_manual/processing/console.rst:81
+msgid ""
+"That's a list of all the available algorithm IDs, sorted by provider name "
+"and algorithm name, along with their corresponding names."
+msgstr "这是所有可用算法 ID 的列表，按提供者名称和算法名称排序，并附带对应的名称。"
+
+#: ../../docs/user_manual/processing/console.rst:84
+msgid ""
+"Once you know the command-line name of the algorithm, the next thing to do "
+"is to determine the right syntax to execute it. That means knowing which "
+"parameters are needed when calling the ``run()`` method."
+msgstr "一旦知道了算法的命令行名称，下一步就是确定执行它的正确语法，即了解调用 ``run()`` 方法时所需的参数。"
+
+#: ../../docs/user_manual/processing/console.rst:88
+msgid ""
+"There is a method to describe an algorithm in detail, which can be used to "
+"get a list of the parameters that an algorithm requires and the outputs that"
+" it will generate. To get this information, you can use the "
+"``algorithmHelp(id_of_the_algorithm)`` method. Use the ID of the algorithm, "
+"not the full descriptive name."
+msgstr ""
+"有一个方法可详细描述算法，用于获取算法所需参数及其生成输出的列表。要获取此信息，可使用 "
+"``algorithmHelp(id_of_the_algorithm)`` 方法。请使用算法的 ID，而非完整的描述性名称。"
+
+#: ../../docs/user_manual/processing/console.rst:94
+msgid ""
+"Calling the method with ``native:buffer`` as parameter (``qgis:buffer`` is "
+"an alias for ``native:buffer`` and will also work), you get the following "
+"description:"
+msgstr ""
+"以 ``native:buffer`` 作为参数调用该方法（``qgis:buffer`` 是 ``native:buffer`` "
+"的别名，同样有效），您将获得如下描述："
+
+#: ../../docs/user_manual/processing/console.rst:222
+msgid ""
+"Now you have everything you need to run any algorithm. As we have already "
+"mentioned, algorithms can be run using: ``run()``. Its syntax is as follows:"
+msgstr "现在您已具备运行任意算法所需的一切。如前所述，可使用 ``run()`` 来运行算法。其语法如下："
+
+#: ../../docs/user_manual/processing/console.rst:230
+msgid ""
+"Where parameters is a dictionary of parameters that depend on the algorithm "
+"you want to run, and is exactly the list that the ``algorithmHelp()`` method"
+" gives you."
+msgstr ""
+"其中 parameters 是一个参数字典，具体内容取决于您要运行的算法，且与 ``algorithmHelp()`` 方法给出的列表完全一致。"
+
+#: ../../docs/user_manual/processing/console.rst:247
+msgid ""
+"If a parameter is optional and you do not want to use it, then don't include"
+" it in the dictionary."
+msgstr "如果某个参数是可选的且您不想使用它，则不要将其包含在字典中。"
+
+#: ../../docs/user_manual/processing/console.rst:250
+msgid "If a parameter is not specified, the default value will be used."
+msgstr "如果未指定某个参数，则将使用其默认值。"
+
+#: ../../docs/user_manual/processing/console.rst:252
+msgid ""
+"Depending on the type of parameter, values are introduced differently. The "
+"next list gives a quick review of how to introduce values for each type of "
+"input parameter:"
+msgstr "根据参数类型不同，值的输入方式也不同。以下列表简要说明了各类输入参数的值输入方法："
+
+#: ../../docs/user_manual/processing/console.rst:255
+msgid ""
+"Raster Layer, Vector Layer or Table. Simply use a string with the name that "
+"identifies the data object to use (the name it has in the QGIS Table of "
+"Contents) or a filename (if the corresponding layer is not opened, it will "
+"be opened but not added to the map canvas). If you have an instance of a "
+"QGIS object representing the layer, you can also pass it as parameter."
+msgstr ""
+"栅格图层、矢量图层或表：只需使用一个字符串，指定数据对象在 QGIS "
+"图层面板中的名称，或使用文件路径（若对应图层未打开，将自动打开但不会添加到地图画布）。如果您已有代表该图层的 QGIS "
+"对象实例，也可直接将其作为参数传入。"
+
+#: ../../docs/user_manual/processing/console.rst:260
+msgid ""
+"Enumeration. If an algorithm has an enumeration parameter, the value of that"
+" parameter should be entered using an integer value. To know the available "
+"options, you can use the ``algorithmHelp()`` command, as above. For "
+"instance, the ``native:buffer`` algorithm has an enumeration called "
+"JOIN_STYLE:"
+msgstr ""
+"枚举类型：若算法包含枚举参数，应使用整数值输入该参数。要了解可用选项，可使用上述的 ``algorithmHelp()`` "
+"命令。例如，``native:buffer`` 算法有一个名为 JOIN_STYLE 的枚举："
+
+#: ../../docs/user_manual/processing/console.rst:281
+msgid ""
+"In this case, the parameter has three options. Notice that ordering is zero-"
+"based."
+msgstr "本例中，该参数有三个选项。请注意，索引从 0 开始。"
+
+#: ../../docs/user_manual/processing/console.rst:283
+msgid "Boolean.  Use ``True`` or ``False``."
+msgstr "布尔值：使用 ``True`` 或 ``False``。"
+
+#: ../../docs/user_manual/processing/console.rst:284
+msgid ""
+"Multiple input. The value is a string with input descriptors separated by "
+"semicolons (``;``). As in the case of single layers or tables, each input "
+"descriptor can be the data object name, or its file path."
+msgstr "多输入：值为一个字符串，各输入描述符以分号（``;``）分隔。与单图层或表类似，每个输入描述符可以是数据对象名称或其文件路径。"
+
+#: ../../docs/user_manual/processing/console.rst:287
+msgid ""
+"Table Field from XXX. Use a string with the name of the field to use. This "
+"parameter is case-sensitive."
+msgstr "来自 XXX 的表字段：使用字符串指定要使用的字段名称。此参数区分大小写。"
+
+#: ../../docs/user_manual/processing/console.rst:289
+msgid ""
+"Fixed Table. Type the list of all table values separated by commas (``,``) "
+"and enclosed between quotes (``\"``). Values start on the upper row and go "
+"from left to right. You can also use a 2-D array of values representing the "
+"table."
+msgstr ""
+"固定表格：输入所有表格值的列表，以逗号（``,``）分隔，并用引号（``\"``）括起。值从上行开始，从左到右排列。您也可以使用一个二维数组来表示该表格。"
+
+#: ../../docs/user_manual/processing/console.rst:292
+msgid "CRS. Enter the EPSG code number of the desired CRS."
+msgstr "坐标参考系（CRS）：输入所需 CRS 的 EPSG 代码编号。"
+
+#: ../../docs/user_manual/processing/console.rst:293
+msgid ""
+"Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax``"
+" values separated by commas (``,``)."
+msgstr ""
+"范围（Extent）：必须使用一个字符串，其中包含以逗号（``,``）分隔的 ``xmin``、``xmax``、``ymin`` 和 ``ymax``"
+" 值。"
+
+#: ../../docs/user_manual/processing/console.rst:296
+msgid ""
+"Boolean, file, string and numerical parameters do not need any additional "
+"explanations."
+msgstr "布尔值、文件、字符串和数值型参数无需额外说明。"
+
+#: ../../docs/user_manual/processing/console.rst:299
+msgid ""
+"Input parameters such as strings, booleans, or numerical values have default"
+" values. The default value is used if the corresponding parameter entry is "
+"missing."
+msgstr "字符串、布尔值或数值等输入参数具有默认值。若未提供相应参数，则使用默认值。"
+
+#: ../../docs/user_manual/processing/console.rst:302
+msgid ""
+"For output data objects, type the file path to be used to save it, just as "
+"it is done from the toolbox. If the output object is not specified, the "
+"result is saved to a temporary file (or skipped if it is an optional "
+"output). The extension of the file determines the file format. If you enter "
+"a file extension not supported by the algorithm, the default file format for"
+" that output type will be used, and its corresponding extension appended to "
+"the given file path."
+msgstr ""
+"对于输出数据对象，请输入用于保存结果的文件路径，方式与工具箱中相同。若未指定输出对象，结果将保存到临时文件（若为可选输出则跳过）。文件扩展名决定文件格式。如果您输入了算法不支持的文件扩展名，将使用该输出类型的默认格式，并将对应扩展名附加到您提供的路径后。"
+
+#: ../../docs/user_manual/processing/console.rst:310
+msgid ""
+"Unlike when an algorithm is executed from the toolbox, outputs are not added"
+" to the map canvas if you execute that same algorithm from the Python "
+"console using the :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` "
+"method. That method returns a dictionary with one or more output names (the "
+"ones shown in the algorithm description) as keys and the file paths of those"
+" outputs as values:"
+msgstr ""
+"与通过工具箱执行算法不同，若通过 Python 控制台使用 :meth:`run() "
+"<qgis.core.QgsProcessingAlgorithm.run>` "
+"方法执行算法，其输出不会自动添加到地图画布。该方法返回一个字典，键为一个或多个输出名称（即算法描述中所示名称），值为对应输出的文件路径："
+
+#: ../../docs/user_manual/processing/console.rst:331
+msgid "You can then load the output in the project as any common layer:"
+msgstr "随后，您可以像加载普通图层一样将输出加载到工程中："
+
+#: ../../docs/user_manual/processing/console.rst:339
+msgid ""
+"To immediately load the processing outputs in the project, you can use the "
+"``runAndLoadResults()`` method instead of ``run()``."
+msgstr "若要立即将处理结果加载到工程中，可使用 ``runAndLoadResults()`` 方法替代 ``run()``。"
+
+#: ../../docs/user_manual/processing/console.rst:348
+msgid ""
+"If you want to open an algorithm dialog from the console you can use the "
+"``createAlgorithmDialog`` method. The only mandatory parameter is the "
+"algorithm name, but you can also define the dictionary of parameters so that"
+" the dialog will be filled automatically:"
+msgstr ""
+"若要从控制台打开算法对话框，可使用 ``createAlgorithmDialog`` "
+"方法。唯一必需的参数是算法名称，但您也可以定义参数字典，以便自动填充对话框："
+
+#: ../../docs/user_manual/processing/console.rst:367
+msgid "The ``execAlgorithmDialog`` method opens the dialog immediately:"
+msgstr "``execAlgorithmDialog`` 方法会立即打开对话框："
+
+#: ../../docs/user_manual/processing/console.rst:384
+msgid "Creating scripts and running them from the toolbox"
+msgstr "创建脚本并从工具箱运行"
+
+#: ../../docs/user_manual/processing/console.rst:386
+msgid ""
+"You can create your own algorithms by writing Python code. Processing "
+"scripts extend :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`, so you need to add some extra lines of "
+"code to implement mandatory functions. You can find :guilabel:`Create new "
+"script` (clean sheet) and :guilabel:`Create New Script from Template` "
+"(template that includes code for mandatory functions of "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`) under "
+"the :guilabel:`Scripts` dropdown menu on the top of the Processing toolbox. "
+"The Processing Script Editor will open, and that's where you should type "
+"your code. Saving the script from there in the :file:`scripts` folder (the "
+"default folder when you open the save file dialog) with a :file:`.py` "
+"extension should create the corresponding algorithm."
+msgstr ""
+"您可以通过编写 Python 代码创建自己的算法。处理脚本需继承 :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`，因此需添加若干额外代码以实现必需的函数。在 Processing 工具箱顶部的 "
+":guilabel:`Scripts` 下拉菜单中，您可以找到 :guilabel:`Create new script`（空白脚本）和 "
+":guilabel:`Create New Script from Template`（包含 "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` "
+"必需函数代码的模板）。将打开 Processing 脚本编辑器，您应在其中编写代码。将脚本保存到 :file:`scripts` "
+"文件夹（打开保存文件对话框时的默认文件夹）并使用 :file:`.py` 扩展名，即可生成对应的算法。"
+
+#: ../../docs/user_manual/processing/console.rst:401
+msgid ""
+"The name of the algorithm (the one you will see in the toolbox) is defined "
+"within the code."
+msgstr "算法名称（即工具箱中显示的名称）需在代码中定义。"
+
+#: ../../docs/user_manual/processing/console.rst:404
+msgid ""
+"Let's have a look at the following code, which defines a Processing "
+"algorithm that performs a buffer operation with a user defined buffer "
+"distance on a vector layer that is specified by the user, after first "
+"smoothing the layer."
+msgstr "让我们看以下代码，它定义了一个处理算法：首先对用户指定的矢量图层进行平滑处理，然后以用户定义的缓冲距离执行缓冲操作。"
+
+#: ../../docs/user_manual/processing/console.rst:469
+msgid ""
+"After doing the necessary imports, the following "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` functions"
+" are specified:"
+msgstr ""
+"完成必要导入后，需指定以下 :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>` 函数："
+
+#: ../../docs/user_manual/processing/console.rst:473
+msgid ""
+":meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`: The id of the "
+"algorithm (lowercase)."
+msgstr ":meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`：算法的 ID（小写）。"
+
+#: ../../docs/user_manual/processing/console.rst:475
+msgid ""
+":meth:`displayName() <qgis.core.QgsProcessingAlgorithm.displayName>`: A "
+"human readable name for the algorithm."
+msgstr ""
+":meth:`displayName() "
+"<qgis.core.QgsProcessingAlgorithm.displayName>`：算法的人类可读名称。"
+
+#: ../../docs/user_manual/processing/console.rst:477
+msgid ""
+":meth:`createInstance() <qgis.core.QgsProcessingAlgorithm.createInstance>`: "
+"Create a new instance of the algorithm class."
+msgstr ""
+":meth:`createInstance() "
+"<qgis.core.QgsProcessingAlgorithm.createInstance>`：创建算法类的新实例。"
+
+#: ../../docs/user_manual/processing/console.rst:479
+msgid ""
+":meth:`initAlgorithm() <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`: "
+"Configure the parameterDefinitions and outputDefinitions."
+msgstr ""
+":meth:`initAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.initAlgorithm>`：配置参数定义和输出定义。"
+
+#: ../../docs/user_manual/processing/console.rst:482
+msgid ""
+"Here you describe the parameters and output of the algorithm.  In this case,"
+" a feature source for the input, a feature sink for the result and a number "
+"for the buffer distance."
+msgstr "在此描述算法的参数和输出。本例中包括：输入的要素源、结果的要素接收器（sink），以及缓冲距离的数值。"
+
+#: ../../docs/user_manual/processing/console.rst:485
+msgid ""
+":meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`: Do the work."
+msgstr ""
+":meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`：执行实际工作。"
+
+#: ../../docs/user_manual/processing/console.rst:488
+msgid ""
+"Here we first run the ``smoothgeometry`` algorithm to smooth the geometry, "
+"and then we run the ``buffer`` algorithm on the smoothed output. To be able "
+"to run algorithms from within another algorithm we have to set the "
+"``is_child_algorithm`` argument to :const:`True`. You can see how input and "
+"output parameters are used as parameters to the ``smoothgeometry`` and "
+"``buffer`` algorithms."
+msgstr ""
+"此处我们首先运行 ``smoothgeometry`` 算法对几何进行平滑处理，然后在其平滑后的输出上运行 ``buffer`` "
+"算法。要在算法内部运行其他算法，必须将 ``is_child_algorithm`` 参数设为 "
+":const:`True`。您可以看到输入和输出参数是如何作为参数传递给 ``smoothgeometry`` 和 ``buffer`` 算法的。"
+
+#: ../../docs/user_manual/processing/console.rst:496
+msgid ""
+"There are a number of different parameter types available for input and "
+"output. You can find the full list at :ref:`processing_algs_input_output`."
+msgstr "输入和输出有多种参数类型可用。完整列表请参见 :ref:`processing_algs_input_output`。"
+
+#: ../../docs/user_manual/processing/console.rst:499
+msgid ""
+"The first parameter to the constructors is the name of the parameter, and "
+"the second is the description of the parameter (for the user interface). The"
+" rest of the constructor parameters are parameter type specific."
+msgstr "构造函数的第一个参数是参数名称，第二个是参数描述（用于用户界面）。其余参数则根据具体参数类型而定。"
+
+#: ../../docs/user_manual/processing/console.rst:504
+msgid ""
+"The input can be turned into QGIS classes using the ``parameterAs`` "
+"functions of :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`. For instance to get the number provided"
+" for the buffer distance as a double::"
+msgstr ""
+"可使用 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` 的 "
+"``parameterAs`` 函数将输入转换为 QGIS 类。例如，要将缓冲距离数值作为双精度浮点数获取：："
+
+#: ../../docs/user_manual/processing/console.rst:510
+msgid ""
+"The ``processAlgorithm`` function should return a dictionary containing "
+"values for every output defined by the algorithm. This allows access to "
+"these outputs from other algorithms, including other algorithms contained "
+"within the same model."
+msgstr ""
+"``processAlgorithm`` 函数应返回一个字典，包含算法定义的每个输出的值。这使得其他算法（包括同一模型中的其他算法）能够访问这些输出。"
+
+#: ../../docs/user_manual/processing/console.rst:515
+msgid ""
+"Well behaved algorithms should define and return as many outputs as makes "
+"sense. Non-feature outputs, such as numbers and strings, are very useful "
+"when running your algorithm as part of a larger model, as these values can "
+"be used as input parameters for subsequent algorithms within the model. "
+"Consider adding numeric outputs for things like the number of features "
+"processed, the number of invalid features encountered, the number of "
+"features output, etc. The more outputs you return, the more useful your "
+"algorithm becomes!"
+msgstr ""
+"良好的算法应定义并返回尽可能多的有意义输出。非要素类输出（如数字和字符串）在将算法作为更大模型的一部分运行时非常有用，因为这些值可用作模型中后续算法的输入参数。建议添加诸如处理的要素数量、遇到的无效要素数量、输出的要素数量等数值型输出。返回的输出越多，您的算法就越有用！"
+
+#: ../../docs/user_manual/processing/console.rst:525
+msgid "Feedback"
+msgstr "反馈机制"
+
+#: ../../docs/user_manual/processing/console.rst:527
+msgid ""
+"The :class:`feedback <qgis.core.QgsProcessingFeedback>` object passed to "
+":meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>` should be used for user"
+" feedback / interaction. You can use the :meth:`setProgress() "
+"<qgis.core.QgsFeedback.setProgress>` function of the :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` object to update the progress bar (0 to "
+"100) to inform the user about the progress of the algorithm. This is very "
+"useful if your algorithm takes a long time to complete."
+msgstr ""
+"应使用传递给 :meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>` 的 :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` 对象向用户提供反馈或交互。您可以使用该对象的 "
+":meth:`setProgress() <qgis.core.QgsFeedback.setProgress>` 方法更新进度条（0 到 "
+"100），以告知用户算法的执行进度。当算法耗时较长时，这非常有用。"
+
+#: ../../docs/user_manual/processing/console.rst:535
+msgid ""
+"The :class:`feedback <qgis.core.QgsProcessingFeedback>` object provides an "
+":meth:`isCanceled() <qgis.core.QgsFeedback.isCanceled>` method that should "
+"be monitored to enable cancelation of the algorithm by the user. The "
+":meth:`pushInfo() <qgis.core.QgsProcessingFeedback.pushInfo>` method of "
+":class:`feedback <qgis.core.QgsProcessingFeedback>` can be used to send "
+"information to the user, and :meth:`reportError() "
+"<qgis.core.QgsProcessingFeedback.reportError>` is handy for pushing non-"
+"fatal errors to users."
+msgstr ""
+":class:`feedback <qgis.core.QgsProcessingFeedback>` 对象提供 :meth:`isCanceled()"
+" <qgis.core.QgsFeedback.isCanceled>` 方法，应持续监控以支持用户取消算法执行。其 :meth:`pushInfo()"
+" <qgis.core.QgsProcessingFeedback.pushInfo>` 方法可用于向用户发送信息，而 "
+":meth:`reportError() <qgis.core.QgsProcessingFeedback.reportError>` "
+"则便于向用户报告非致命错误。"
+
+#: ../../docs/user_manual/processing/console.rst:543
+msgid ""
+"Algorithms should avoid using other forms of providing feedback to users, "
+"such as print statements or logging to :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>`, and should always use the feedback object "
+"instead. This allows verbose logging for the algorithm, and is also thread-"
+"safe (which is important, given that algorithms are typically run in a "
+"background thread)."
+msgstr ""
+"算法应避免使用其他用户反馈形式（如 print 语句或记录到 :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>`），而应始终使用 feedback "
+"对象。这既支持详细日志记录，又具备线程安全性（鉴于算法通常在后台线程中运行，这一点尤为重要）。"
+
+#: ../../docs/user_manual/processing/console.rst:552
+msgid "Handling errors"
+msgstr "错误处理"
+
+#: ../../docs/user_manual/processing/console.rst:554
+msgid ""
+"If your algorithm encounters an error which prevents it from executing, such"
+" as invalid input values or some other condition from which it cannot or "
+"should not recover, then you should raise a :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>`. E.g.::"
+msgstr ""
+"如果您的算法遇到阻止其执行的错误（如无效输入值或其他无法或不应恢复的情况），则应抛出 :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>`。例如：："
+
+#: ../../docs/user_manual/processing/console.rst:563
+msgid ""
+"Try to avoid raising :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>` for non-fatal errors (e.g. when a "
+"feature has a null geometry), and instead just report these errors via "
+"``feedback.reportError()`` and skip the feature. This helps make your "
+"algorithm \"model-friendly\", as it avoids halting the execution of an "
+"entire algorithm when a non-fatal error is encountered."
+msgstr ""
+"应尽量避免对非致命错误（例如要素几何为空）抛出 :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>`，而应通过 ``feedback.reportError()`` "
+"报告错误并跳过该要素。这有助于使您的算法“模型友好”——当遇到非致命错误时，不会导致整个算法执行中断。"
+
+#: ../../docs/user_manual/processing/console.rst:573
+msgid "Documenting your scripts"
+msgstr "为脚本编写文档"
+
+#: ../../docs/user_manual/processing/console.rst:575
+msgid ""
+"As in the case of models, you can create additional documentation for your "
+"scripts, to explain what they do and how to use them."
+msgstr "与模型类似，您可以为脚本创建额外文档，以说明其功能及使用方法。"
+
+#: ../../docs/user_manual/processing/console.rst:578
+msgid ""
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` provides "
+"the :meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>`, "
+":meth:`shortHelpString() <qgis.core.QgsProcessingAlgorithm.shortHelpString>`"
+" and :meth:`helpUrl() <qgis.core.QgsProcessingAlgorithm.helpUrl>` functions "
+"for that purpose. Specify / override these to provide more help to the user."
+msgstr ""
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` 提供了 "
+":meth:`helpString() "
+"<qgis.core.QgsProcessingAlgorithm.helpString>`、:meth:`shortHelpString() "
+"<qgis.core.QgsProcessingAlgorithm.shortHelpString>` 和 :meth:`helpUrl() "
+"<qgis.core.QgsProcessingAlgorithm.helpUrl>` 函数用于此目的。请指定或重写这些方法以向用户提供更多帮助。"
+
+#: ../../docs/user_manual/processing/console.rst:584
+msgid ""
+":meth:`shortDescription() "
+"<qgis.core.QgsProcessingAlgorithm.shortDescription>` is used in the tooltip "
+"when hovering over the algorithm in the toolbox."
+msgstr ""
+":meth:`shortDescription() "
+"<qgis.core.QgsProcessingAlgorithm.shortDescription>` 用于在工具箱中悬停于算法上时显示的工具提示。"
+
+#: ../../docs/user_manual/processing/console.rst:588
+msgid "Pre- and post-execution script hooks"
+msgstr "执行前与执行后脚本钩子"
+
+#: ../../docs/user_manual/processing/console.rst:590
+msgid ""
+"Scripts can also be used as pre- and post-execution hooks that are run "
+"before and after an algorithm is run, respectively. This can be used to "
+"automate tasks that should be performed whenever an algorithm is executed."
+msgstr "脚本也可用作执行前和执行后钩子，分别在算法运行前和运行后执行。这可用于自动化每次执行算法时都应完成的任务。"
+
+#: ../../docs/user_manual/processing/console.rst:594
+msgid ""
+"The syntax is identical to the syntax explained above, but an additional "
+"global variable named ``alg`` is available, representing the algorithm that "
+"has just been (or is about to be) executed."
+msgstr "语法与上述完全相同，但额外提供一个名为 ``alg`` 的全局变量，代表刚刚执行（或即将执行）的算法。"
+
+#: ../../docs/user_manual/processing/console.rst:598
+msgid ""
+"In the :guilabel:`General` group of the processing options dialog, you will "
+"find two entries named :guilabel:`Pre-execution script` and :guilabel:`Post-"
+"execution script` where the filenames of the scripts to be run in each case "
+"can be entered."
+msgstr ""
+"在处理选项对话框的 :guilabel:`General` 组中，您会找到两个条目：:guilabel:`Pre-execution script` 和"
+" :guilabel:`Post-execution script`，可在其中分别输入要运行的脚本文件名。"
