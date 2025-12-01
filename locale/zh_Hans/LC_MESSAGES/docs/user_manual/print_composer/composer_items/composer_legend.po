@@ -7,7 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
-# Li Hongsheng, 2025
+# bc G, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Li Hongsheng, 2025\n"
+"Last-Translator: bc G, 2025\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,16 +31,165 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"翻译是一项社区工作：ref：`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
+"翻译是一项社区工作:ref:`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
 "progress|。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:5
+msgid "The Legend Item"
+msgstr "图例项"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:13
+msgid ""
+"The :guilabel:`Legend` item is a box or a table that explains the meanings "
+"of the symbols used on the map. A legend is then bound to a map item. You "
+"can add a legend item with the |addLegend| :guilabel:`Add Legend` tool "
+"following :ref:`items creation instructions <create_layout_item>` and "
+"manipulate it the same way as exposed in :ref:`interact_layout_item`."
+msgstr ""
+":guilabel:`图例` 项是一个方框或表格，用于说明地图中所用符号的含义。图例随后会绑定到一个地图项上。您可以使用 |addLegend| "
+":guilabel:`添加图例` 工具，按照 :ref:`items creation instructions "
+"<create_layout_item>` 的说明添加图例项，并以 :ref:`interact_layout_item` 中所述的方式对其进行操作。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:318
 msgid "addLegend"
 msgstr "addLegend"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:19
+msgid ""
+"By default, the legend item displays all available layers and can be refined"
+" using its :guilabel:`Item Properties` panel. Other than the :ref:`items "
+"common properties <item_common_properties>`, this feature has the following "
+"functionalities (see :numref:`figure_layout_legend`):"
+msgstr ""
+"默认情况下，图例项会显示所有可用图层，并可通过其 :guilabel:`项属性` 面板进行细化。除了 :ref:`items common "
+"properties <item_common_properties>` 中所述的通用属性外，该功能还具有以下特性（见 "
+":numref:`figure_layout_legend`）："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:32
+msgid "Legend Item Properties Panel"
+msgstr "图例的项属性面板"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:35
+msgid "Main properties"
+msgstr "主要属性"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:37
+msgid ""
+"The :guilabel:`Main properties` group of the legend :guilabel:`Item "
+"Properties` panel provides the following functionalities (see "
+":numref:`figure_layout_legend_ppt`):"
+msgstr ""
+"图例 :guilabel:`项属性` 面板的 :guilabel:`主要属性` 组提供了以下功能 "
+"(看图:numref:`figure_layout_legend_ppt`):"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:45
+msgid "Legend Main properties group"
+msgstr "图例的主要属性组"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:47
+msgid "In Main properties you can:"
+msgstr "在主要属性，你可以"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:49
+msgid ""
+"Change the :guilabel:`Title` of the legend. It can be made dynamic using the"
+" :ref:`data-defined override <data_defined>` setting, useful for example "
+"when generating an atlas;"
+msgstr ""
+"更改图例的 :guilabel:`标题` 。可以使用 :ref:`data-defined override <data_defined>` "
+"设置使其动态，例如在生成地图集时很有用；"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:52
+msgid ""
+"Choose which :guilabel:`Map` item the current legend will refer to. By "
+"default, the map over which the legend item is drawn is picked. If none, "
+"then it falls back to the :ref:`reference map <reference_map>`."
+msgstr ""
+"选择哪个 :guilabel:`地图` 做当前图例参考的项目。默认情况下，会选择绘制图例项所在的地图。如果没有，则回退到 :ref:`reference"
+" map <reference_map>`。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:56
+msgid ""
+":ref:`Variables <expression_variables>` of the linked map item (@map_id, "
+"@map_scale, @map_extent...) are also accessible from data-defined properties"
+" of the legend."
+msgstr ""
+"链接的地图项的 :ref:`Variables <expression_variables>` 例如(@map_id, @map_scale, "
+"@map_extent...) 也可以从图例的数据定义属性中访问。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:60
+msgid ""
+"Wrap the text of the legend on a given character: each time the character "
+"appears, it's replaced with a line break;"
+msgstr "在给定字符上换行图例的文本：每当该字符出现时，它就被换行符替换；"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:62
+msgid ""
+"Set the symbols and text placement in the legend: the "
+":guilabel:`Arrangement` can be :guilabel:`Symbols on left` or "
+":guilabel:`Symbols on right`. The default value depends on the locale in use"
+" (right-to-left based or not)."
+msgstr ""
+"设置图例中的符号和文本位置：:guilabel:`排列` 可以是 :guilabel:`符号居左` 或者 "
+":guilabel:`符号居右`。默认值取决于所使用的语言环境（是否从右向左）。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:65
+msgid ""
+"Use |checkbox| :guilabel:`Resize to fit contents` to control whether or not "
+"a legend should be automatically resized to fit its contents. If unchecked, "
+"then the legend will never resize and instead just stick to whatever size "
+"the user has set. Any content which doesn't fit the size is cropped out."
+msgstr ""
+"使用 |checkbox| :guilabel:`调整至内容大小` "
+"来控制图例是否应该自动调整大小以适合其内容。如果取消勾选，则图例将永远不会调整大小，而只是坚持用户设置的大小。任何不适合尺寸的内容都会被裁剪掉。"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:324
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:72
+msgid "Legend items"
+msgstr "图例项"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:74
+msgid ""
+"The :guilabel:`Legend items` group of the legend :guilabel:`Item Properties`"
+" panel provides the following functionalities (see "
+":numref:`figure_layout_legend_items`):"
+msgstr ""
+"图例 :guilabel:`项属性` 面板的 :guilabel:`图例项` 组提供了以下功能 (看图 "
+":numref:`figure_layout_legend_items`)："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:82
+msgid "Legend Items group"
+msgstr "图例项组"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:84
+msgid ""
+"The legend will be updated automatically if |checkbox| :guilabel:`Auto "
+"update` is checked. When :guilabel:`Auto update` is unchecked this will give"
+" you more control over the legend items. All the icons below the legend "
+"items list will be activated."
+msgstr ""
+"如果选中 |checkbox| :guilabel:`自动更新` ，图例将自动更新。当 :guilabel:`自动更新` "
+"被选中时，这将给你更多的控制图例项目。图例项目列表下面的所有图标将被激活。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:88
+msgid ""
+"The legend items window lists all legend items and allows you to change item"
+" order, group layers, remove and restore items in the list, edit layer names"
+" and symbology and add a filter."
+msgstr "图例项窗口列出了所有图例项目，并允许您更改项目顺序、组层、删除和恢复列表中的项目、编辑图层名称和符号或添加过滤器。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:92
+msgid ""
+"Use the |expandTree| :sup:`Expand all` and |collapseTree| :sup:`Collapse "
+"all` buttons to respectively expand or collapse all the groups and subgroups"
+" in the legend tree. Ensure that the :guilabel:`Auto update` is unchecked to"
+" use these buttons."
+msgstr ""
+"使用 |expandTree| :sup:`全部展开` 和|collapseTree| :sup:`全部折叠` "
+"按钮分别展开或折叠图例树中的所有组和子组。确保 :guilabel:`自动更新` 未选中以使用这些按钮。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:328
 msgid "expandTree"
@@ -50,6 +199,13 @@ msgstr "expandTree"
 msgid "collapseTree"
 msgstr "collapseTree"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:95
+msgid ""
+"The item order can be changed using the |arrowUp| and |arrowDown| buttons or"
+" with 'drag-and-drop' functionality. The order can not be changed for WMS "
+"legend graphics."
+msgstr "可以使用 |arrowUp| 向上和 |arrowDown| 向下按钮或使用“拖放”功能更改项目顺序。不能更改WMS图例图形的顺序。"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:322
 msgid "arrowUp"
 msgstr "arrowUp"
@@ -58,9 +214,19 @@ msgstr "arrowUp"
 msgid "arrowDown"
 msgstr "arrowDown"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:98
+msgid "Use the |addGroup| button to add a legend group."
+msgstr "使用 |addGroup| 按钮添加图例组。"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:316
 msgid "addGroup"
 msgstr "addGroup"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:99
+msgid ""
+"Use the |symbologyAdd| button to add layers and |symbologyRemove| button to "
+"remove groups, layers or symbol classes."
+msgstr "使用 |symbologyAdd| 按钮添加层，使用 |symbologyRemove| 按钮删除组，层或符号类。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:338
 msgid "symbologyAdd"
@@ -70,30 +236,369 @@ msgstr "symbologyAdd"
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:101
+msgid ""
+"The |symbologyEdit| button is used to edit the layer, group name or title. "
+"First you need to select the legend item. Double-clicking the item also "
+"opens the text box to rename it."
+msgstr " |symbologyEdit| 按钮用于编辑图层、组名或标题。首先，您需要选择图例项。双击该项还会打开文本框以重命名它。"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:340
 msgid "symbologyEdit"
 msgstr "symbologyEdit"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:104
+msgid ""
+"The |expression| button uses expressions to customize each symbol label of "
+"the selected layer (see :ref:`legend_items_data_defined`)"
+msgstr ""
+"|expression| 按钮使用表达式来定制所选图层的每个符号标签 (参见 :ref:`legend_items_data_defined`)"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:330
 msgid "expression"
 msgstr "expression"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:106
+msgid "The |sum| button adds a feature count for each class of vector layer."
+msgstr "|sum| 按钮为每一类向量层添加一个特征计数。"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:336
 msgid "sum"
 msgstr "sum"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:107
+msgid ""
+"The |expressionFilter| :sup:`Filter legend by expression` helps you filter "
+"which of the legend items of a layer will be displayed, i.e. using a layer "
+"that has different legend items (e.g., from a rule-based or categorized "
+"symbology), you can specify a boolean expression to remove from the legend "
+"tree, styles that have no feature satisfying a condition. Note that the "
+"features are nevertheless kept and shown in the layout map item."
+msgstr ""
+"|expressionFilter| :sup:`过滤表达式` "
+"可以帮助你过滤一个层的哪些图例项将被显示，即使用一个有不同图例项的层（例如，来自基于规则的或分类的符号），你可以指定一个布尔表达式从图例树中删除，样式没有满足条件的特征。请注意，这些特性仍然保留并显示在布局地图项中。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:332
 msgid "expressionFilter"
 msgstr "expressionFilter"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:114
+msgid ""
+"While the default behavior of the legend item is to mimic the "
+":guilabel:`Layers` panel tree, displaying the same groups, layers and "
+"classes of symbology, right-click any item offers you options to hide "
+"layer's name or raise it as a group or subgroup. In case you have made some "
+"changes to a layer, you can revert them by choosing :guilabel:`Reset to "
+"defaults` from the contextual menu of the legend entry."
+msgstr ""
+"虽然图例项的默认行为是模仿 :guilabel:`图层` "
+"面板树，显示相同的组，层和符号类，右键单击任何项目为您提供隐藏层的名称或将其提升为组或子组的选项。如果你对一个图层做了一些改变，你可以通过在图例条目的上下文菜单中选择"
+" :guilabel:`重置为默认` 来恢复它们。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:121
+msgid ""
+"After changing the symbology in the QGIS main window, you can click on "
+":guilabel:`Update All` to adapt the changes in the legend element of the "
+"print layout."
+msgstr "在QGIS主窗口更改符号后，您可以单击 :guilabel:`全部更新` 来适应打印布局的图例元素的更改。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:125
+msgid ""
+"With the |checkbox| :guilabel:`Only show items inside linked maps`, only the"
+" legend items visible in the linked map will be listed in the legend. If you"
+" have more than one map you can click on :guilabel:`...` and select other "
+"maps from your layout. This tool remains available when |checkbox| "
+":guilabel:`Auto-update` is active."
+msgstr ""
+"使用 |checkbox| "
+":guilabel:`仅显示当前地图内容关联的图例项`，只有在链接地图中可见的图例项目将在图例中列出。如果你有多个地图，你可以点击 "
+":guilabel:`...` 并从布局中选择其他地图。当 |checkbox| :guilabel:`自动更新` 激活时，此工具仍然可用。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:130
+msgid ""
+"While generating an atlas with polygon features, you can filter out legend "
+"items that lie outside the current atlas feature. To do that, check the "
+"|checkbox| :guilabel:`Only show items inside current atlas feature` option."
+msgstr ""
+"在生成具有多边形特征的地图集时，您可以过滤掉位于当前地图集要素之外的图例项目。要做到这一点，勾选 |checkbox| "
+":guilabel:`只显示当前地图集要素内部的项` 选项。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:137
+msgid "Data-define the legend labels"
+msgstr "数据定义图例标签"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:139
+msgid ""
+"|expression| allows you to add :ref:`expressions <vector_expressions>` to "
+"each symbol label of a given layer. New variables (``@symbol_label``, "
+"``@symbol_id`` and ``@symbol_count``) help you interact with the legend "
+"entry."
+msgstr ""
+"|expression| 允许您为给定图层的每个符号标签添加 :ref:`expressions <vector_expressions>` "
+"新增变量(``@symbol_label`` ，``@symbol_id`` 和``@symbol_count``) 可以帮助您与图例条目进行交互。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:143
+msgid ""
+"For example, given a ``regions`` layer categorized by its ``type`` field, "
+"you can append to each class in the legend their number of features and "
+"total area, e.g. ``Borough (3) - 850ha``:"
+msgstr ""
+"例如，对于一个按 ``type`` 字段进行分类的 ``regions`` "
+"图层，您可以在图例中每个类别后附加其要素数量和总面积，例如：``Borough (3) - 850ha``。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:147
+msgid "Select the layer entry in the legend tree"
+msgstr "在图例树中选择图层条目"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:148
+msgid ""
+"Press the |expression| button, opening the :guilabel:`Expression String "
+"Builder` dialog"
+msgstr "按 |expression| 按钮，打开 :guilabel:`表达式构建器` 对话框"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:150
+msgid ""
+"Enter the following expression (*assuming symbol labels have not been "
+"edited*)::"
+msgstr "输入如下表达式 (*假设没有编辑过符号标签*)::"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:158
 msgid "Press :guilabel:`OK`"
-msgstr "按 :guilabel:`确定` 按钮"
+msgstr "按 :guilabel:`OK` 按钮"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:163
+msgid "Customizing legend items"
+msgstr "自定义图例项"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:170
+msgid ""
+"Legend items can also be customized individually in the :guilabel:`Legend "
+"Items Properties`. But these customization can only be done with |checkbox| "
+":guilabel:`Auto update` disabled."
+msgstr ""
+"图例项目也可以在 :guilabel:`图例项属性`中单独定制。 但是这些定制只能在 |checkbox| :guilabel:`自动更新` "
+"禁用时使用."
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:173
+msgid ""
+"Double-clicking on an item or pressing |symbologyEdit| :sup:`Edit selected "
+"item properties` allows for futher customization."
+msgstr "双击一个项或按 |symbologyEdit| :sup:`编辑所选项的属性` 允许进一步定制。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:176
 msgid ":guilabel:`Label`"
 msgstr ":guilabel:`标注`"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:178
+#, python-format
+msgid ""
+"For all item types it allows to modify the label text by typing in or by "
+"inserting expressions using the |expression| :guilabel:`Insert or Edit an "
+"Expression`. Expressions can also be added directly anywhere in the item's "
+"label by using the [% expression %] notation."
+msgstr ""
+"对于所有项目类型，它允许通过使用 |expression| :guilabel:`插入或编辑一个表达式...` "
+"输入或插入表达式来修改标签文本。表达式也可以通过使用[% expression %]表示法直接添加到条目标签的任何位置。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:183
+msgid ":guilabel:`Columns`"
+msgstr ":guilabel:`列`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:185
+msgid ""
+"The Legend Item Property also allows you to control the column splitting "
+"behaviour by forcing the column split to occur after a specific item or all "
+"symbols of a layer. Automatic splitting of a layer and its child can also be"
+" allowed or blocked on a layer-basis in this widget."
+msgstr "图例项属性还允许您通过强制列分割发生在特定项或层的所有符号之后来控制列分割行为。在这个控件中，还可以允许或阻止层及其子层的自动分割。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:189
+msgid ":guilabel:`Patch`"
+msgstr ":guilabel:`图斑`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:191
+msgid ""
+"For items with a symbol, the Legend Item Property allows you to specify the "
+"maximum height and width that a symbol can occupy."
+msgstr "对于带有符号的项，图例项属性允许您指定符号占用的最大高度和宽度。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:194
+msgid ""
+"For vector symbols, you can specify a custom shape for the symbol. The "
+"shapes are usually defined by an expression to represent the geometry in a "
+"simple plane, but those symbols can also be saved in the style manager and "
+"imported later. The default symbol for each geometry type can also be "
+"controlled via the style manager."
+msgstr ""
+"对于矢量符号，您可以为符号指定自定义形状。形状通常由表达式定义，以表示简单平面中的几何形状，但这些符号也可以保存在样式管理器中，以后再导入。每个几何图形类型的默认符号也可以通过样式管理器来控制。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:199
+msgid ":guilabel:`Custom Symbol`"
+msgstr ":guilabel:`自定义符号`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:201
+msgid ""
+"A custom symbol can also be specified for vector symbols. This can be useful"
+" to tweak the render of a specific symbol, to enhance it in the legend or "
+"have a symbol independent from its true symbol preview. This custom symbol "
+"will override the legend symbol, but will take into account the symbol "
+":guilabel:`Patch` specified."
+msgstr ""
+"也可以为矢量符号指定自定义符号。这在需要微调某个特定符号的渲染效果、在图例中对其进行增强，或使用一个与其真实符号预览无关的符号时非常有用。该自定义符号将覆盖图例中的符号，但仍会考虑所指定的符号"
+" :guilabel:`图斑` 设置。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:207
+msgid "Fonts and text formatting"
+msgstr "字体和文本格式"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:209
+msgid ""
+"The :guilabel:`Fonts and text formatting` group of the legend "
+":guilabel:`Item Properties` panel provides the following functionalities:"
+msgstr "图例 :guilabel:`项目属性` 面板的 :guilabel:`字体与文本格式` 组提供以下功能："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:217
+msgid "Legend Fonts properties"
+msgstr "图例字体属性"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:219
+msgid ""
+"You can change the font of the legend title, group, subgroup and item "
+"(feature) in the legend item using the :ref:`font selector <font_selector>` "
+"widget, providing all the capabilities of :ref:`text formatting "
+"<text_format>` (font spacing control, mixed HTML formatting, coloring, "
+"blending, background, text buffer, shadow, ...)"
+msgstr ""
+"您可以使用 :ref:`font selector <font_selector>`  "
+"控件，分别更改图例项中的图例标题、组、子组和项（要素）的字体，并享有 :ref:`text formatting <text_format>`  "
+"的全部功能（包括字间距控制、混合 HTML 格式、颜色、混合模式、背景、文字缓冲、阴影等）。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:223
+msgid ""
+"For each of these levels you can set the text :guilabel:`Alignment`: it can "
+"be :guilabel:`Left` (default for left-to-right based locales), "
+":guilabel:`Center` or :guilabel:`Right` (default for right-to-left based "
+"locales)."
+msgstr ""
+"对于这些内容，你可以设置文本:guilabel:`对齐` ：它可以是 :guilabel:`左对齐` （默认为从左到右的区域）， "
+":guilabel:`水平居中` 或 :guilabel:`右对齐` （默认为从右到左的区域）。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:229
+msgid "Columns"
+msgstr "列"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:231
+msgid ""
+"Under the :guilabel:`Columns` group of the legend :guilabel:`Item "
+"Properties` panel, legend items can be arranged over several columns:"
+msgstr "在“图例项属性”面板的 :guilabel:`列` 组下，:guilabel:`图例项` 可以排列在几个列上："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:234
+msgid ""
+"Set the number of columns in the :guilabel:`Count` |selectNumber| field. "
+"This value can be made dynamic e.g., following atlas features, legend "
+"contents, the frame size..."
+msgstr "设置 :guilabel:`计数` |selectNumber| 字段中的列数。这个值可以是动态的，例如：图集特征、图例内容、帧大小……"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:334
 msgid "selectNumber"
 msgstr "selectNumber"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:237
+msgid ""
+"|checkbox| :guilabel:`Equal column widths` sets how legend columns should be"
+" adjusted."
+msgstr "|checkbox| :guilabel:`列宽相等` 设置图例列的调整方式。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:239
+msgid ""
+"The |checkbox| :guilabel:`Split layers` option allows a categorized or a "
+"graduated layer legend to be divided between columns."
+msgstr "|checkbox| :guilabel:`分割图层` 选项允许在列之间划分分类或分级图层图例。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:247
+msgid "Legend Columns settings"
+msgstr "图例列设置"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:251
+msgid "Symbol"
+msgstr "符号"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:253
+msgid ""
+"The :guilabel:`Symbol` group of the legend :guilabel:`Item Properties` panel"
+" configures the size of symbols displayed next to the legend labels. You "
+"can:"
+msgstr "图例 :guilabel:`项属性` 面板的 :guilabel:`符号` 组配置图例标签旁边显示的符号的大小。您可以:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:257
+msgid "Set the :guilabel:`Symbol width` and :guilabel:`Symbol height`"
+msgstr "设置 :guilabel:`符号宽度` 和 :guilabel:`符号高度`"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:258
+msgid ""
+"Set the markers' :guilabel:`Min symbol size` and :guilabel:`Max symbol "
+"size`: ``0.00mm`` means there is no value set."
+msgstr "设置标记的' :guilabel:`最小符号大小` 和 :guilabel:`最大符号大小`: ``0.00mm`` 表示没有设置值。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:260
+msgid ""
+"|checkbox| :guilabel:`Draw stroke for raster symbols`: this adds an outline "
+"to the symbol representing the band color of the raster layer; you can set "
+"both the :guilabel:`Stroke color` and :guilabel:`Tickness`."
+msgstr ""
+"|checkbox| :guilabel:`为栅格符号绘制描边`：这将为栅格图层的波段符号添加一个轮廓； 你可以设置 :guilabel:`描边颜色` "
+"和 :guilabel:`厚度`。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:269
+msgid "Legend Symbol configuration"
+msgstr "图例的符号配置"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:273
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:284
+msgid "WMS LegendGraphic"
+msgstr "WMS 图例图形"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:275
+msgid ""
+"The :guilabel:`WMS LegendGraphic` section of the legend :guilabel:`Item "
+"Properties` panel provide the following functionalities (see "
+":numref:`figure_layout_legend_wms`):"
+msgstr ""
+"图例的 :guilabel:`项属性` 面板中的 :guilabel:`WMS 图例图形`（WMS LegendGraphic）部分提供以下功能（参见 "
+":numref:`figure_layout_legend_wms`）："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:286
+msgid ""
+"When you have added a WMS layer and you insert a legend item, a request will"
+" be sent to the WMS server to provide a WMS legend. This Legend will only be"
+" shown if the WMS server provides the GetLegendGraphic capability. The WMS "
+"legend content will be provided as a raster image."
+msgstr ""
+"当您添加了 WMS 图层并插入图例项时，系统会向 WMS 服务器发送请求以获取 WMS 图例。该图例仅在 WMS 服务器支持 "
+"GetLegendGraphic 功能时才会显示，且图例内容将以栅格图像形式提供。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:291
+msgid ""
+":guilabel:`WMS LegendGraphic` is used to be able to adjust the "
+":guilabel:`Legend width` and the :guilabel:`Legend height` of the WMS legend"
+" raster image."
+msgstr ""
+":guilabel:`WMS 图例图形` 用于调整 WMS 图例栅格图像的 :guilabel:`图例宽度` 和 :guilabel:`图例高度`。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:295
+msgid "Spacing"
+msgstr "间距"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:303
+msgid ""
+"The :guilabel:`Spacing` section allows you to customize the spacing within "
+"the legend. Spacing can greatly help denote the groupement of items in the "
+"legend and their relation."
+msgstr " :guilabel:`间距` 部分允许您自定义图例中的间距。间距可以极大地帮助表示图例中项目的分组及其关系。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_legend.rst:306
+msgid ""
+":guilabel:`Spacing` around and before title, groups, subgroups, symbols, "
+"labels, boxes, columns and lines can be customized through this dialog."
+msgstr "标题、组、子组、符号、标签、框、列和行周围和之前的 :guilabel:`间距` 可以通过这个对话框自定义。"
