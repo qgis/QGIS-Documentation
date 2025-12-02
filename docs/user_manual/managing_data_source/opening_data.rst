@@ -891,41 +891,8 @@ to display the :guilabel:`Create a New PostgreSQL Connection` dialog.
   to the session_role group and thus share ownership and associated rights with all members
   of the session_role group.
   Read more about `session role <https://www.postgresql.org/docs/current/sql-set-role.html>`_.
-* :guilabel:`Authentication`, basic.
+* :guilabel:`Authentication`: For general details about the authentication dialog behavior, see :ref:`authentication`.
 
-  * :guilabel:`User name`: User name used to log in to the database.
-  * :guilabel:`Password`: Password used with *Username* to connect to the database.
-
-  You can save any or both of the ``User name`` and ``Password`` parameters, in
-  which case they will be used by default each time you need to connect to this
-  database. If not saved, you'll be prompted to supply the credentials to
-  connect to the database in next QGIS sessions. 
-  You can cancel the prompt, in which case the connection will fail.
-  Click the :guilabel:`Ignore for session` button to avoid being prompted again during
-  the current QGIS session. It is also possible to :guilabel:`Ignore for 10 seconds`. This will
-  cancel the prompt but you need to wait 10 seconds before you can attempt to connect again.
-  The connection parameters you entered are stored in a temporary internal cache and returned
-  whenever a username/password for the same database is requested, until you
-  end the current QGIS session.
-
-  .. warning:: **QGIS User Settings and Security**
-
-   In the :guilabel:`Authentication` tab, saving **username** and **password**
-   will keep unprotected credentials in the connection configuration. Those
-   **credentials will be visible** if, for instance, you share the project file
-   with someone. Therefore, it is advisable to save your credentials in an
-   *Authentication configuration* instead (:guilabel:`Configurations` tab -
-   See :ref:`authentication_index` for more details) or in a service connection
-   file (see :ref:`PostgreSQL Service connection file <pg-service-file>` for example).
-
-* :guilabel:`Authentication`, configurations.
-  Choose an authentication configuration. You can add configurations using
-  the |symbologyAdd| button. Choices are:
-
-  * Basic authentication
-  * PKI PKCS#12 authentication
-  * PKI paths authentication
-  * PKI stored identity certificate
 
 Optionally, depending on the type of database, you can activate the following
 checkboxes:
@@ -1065,10 +1032,7 @@ The connection dialog proposes:
   OCI_ATTR_PREFETCH_MEMORY). The format of the options string is a semicolon
   separated list of option names or option=value pairs;
 * :guilabel:`Workspace`: Workspace to switch to;
-* :menuselection:`Authentication --> Basic`.
-
-  * :guilabel:`User name`: User name used to connect to the database.
-  * :guilabel:`Password`: Password used to connect to the database.
+* :guilabel:`Authentication`: For general details about the authentication dialog behavior, see :ref:`authentication`.
 
 Optionally, you can activate the following checkboxes:
 
@@ -1176,6 +1140,13 @@ Optionally, you can activate the following options:
 * |checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter
   schemas for MS SQL connection. If enabled, only checked schemas will be displayed.
   You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` any schema in the list.
+ 
+Renaming a Vector Table (MS SQL)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* In :guilabel:`Browser Panel`, right-click the table and select :menuselection:`Manage --> Rename Layer`.
+* In :guilabel:`DB Manager`, select the table, then choose :menuselection:`Table --> Rename`.
+
 
 .. _create_hana_connection:
 
@@ -1223,10 +1194,7 @@ The following parameters can be entered:
   QGIS will only search for data in that schema. If this field is left blank,
   QGIS will search for data in all schemas.
 
-* :menuselection:`Authentication --> Basic`.
-
-  * :guilabel:`User name`: User name used to connect to the database.
-  * :guilabel:`Password`: Password used to connect to the database.
+* :guilabel:`Authentication`: For general details about the authentication dialog behavior, see :ref:`authentication`.
 
 * :guilabel:`SSL Settings`
 
@@ -1456,7 +1424,7 @@ You set up a service by adding:
   For Mercator projection (used by OpenStreetMap Vector Tiles) Zoom Level 0
   represents the whole world at a scale of 1:500.000.000. Zoom Level 14
   represents the scale 1:35.000.
-* the :ref:`authentication <authentication_index>` configuration if necessary
+* the :ref:`authentication <authentication>` configuration if necessary
 * a :guilabel:`Referer`
 
 :numref:`figure_vector_tiles_configuration` shows the dialog with the
@@ -1516,7 +1484,7 @@ from the Browser panel) and provide:
 * a :guilabel:`Name`
 * the :guilabel:`URL`, you can add ``http://example.com/{z}/{x}/{y}.png`` or 
   ``file:///local_path/{z}/{x}/{y}.png``
-* the :ref:`authentication <authentication_index>` configuration if necessary
+* the :ref:`authentication <authentication>` configuration if necessary
 * the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`
 * a :guilabel:`Referer`
 * the :guilabel:`Tile Resolution`: possible values are
@@ -1601,14 +1569,18 @@ ArcGIS REST Servers can be added via the
 :guilabel:`ArcGIS REST Servers` entry in the :guilabel:`Browser` panel.
 Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
 
-* a :guilabel:`Name`
-* the :guilabel:`URL`
-* a :guilabel:`Prefix`: This is used to specify the proxy prefix in the URL,
+* a :guilabel:`Name`: A name for the connection.
+* the :guilabel:`URL`: Main address of the ArcGIS REST Server.
+* a :guilabel:`Prefix`: Used to specify the proxy prefix in the URL,
   which is necessary for some ArcGIS servers that use web proxy prefixes. 
-* a :guilabel:`Community endpoint URL`
-* a :guilabel:`Content endpoint URL`
-* the :ref:`authentication <authentication_index>` configuration if necessary
-* a :guilabel:`Referer`
+* a :guilabel:`Community endpoint URL`: Endpoint URL for ArcGIS Online or Portal for
+  ArcGIS, used to access content groups.
+* a :guilabel:`Content endpoint URL`: Endpoint URL for the content service.
+  This is used to access items in ArcGIS Online or Portal for ArcGIS.
+* the :ref:`authentication <authentication>` credentials if necessary.
+* a :guilabel:`Referer`: The referer URL to be sent in the HTTP headers when making requests
+  to the server. This may be required by some servers for authentication
+  purposes.
 
 .. note::
 
@@ -1683,6 +1655,8 @@ Choose a :guilabel:`Name` and set the :guilabel:`URL` to the URL of a layer desc
 
 The URL may be remote (e.g. ``http://example.com/tileset.json``) or local (e.g.
 ``file:///path/to/tiles/tileset.json``).
+
+The :ref:`authentication <authentication>` configuration if necessary.
 
 .. _figure_tiled_scene_connection:
 
@@ -1817,8 +1791,6 @@ or :guilabel:`Load Connection` from an XML file.
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
-   :width: 1.5em
-.. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |vectorTileLayer| image:: /static/common/mIconVectorTileLayer.png
    :width: 1.5em

@@ -88,16 +88,21 @@ several ways to define these variables. This is fully described in
      - depends on packaging
      - OAPIF/WFS3
 
+   * - QGIS_SERVER_API_WFS3_MAX_LIMIT
+     - Maximum value for ``limit`` in a OAPIF/WFS3 features request.
+     - 10000
+     - OAPIF/WFS3
+
+   * - QGIS_SERVER_API_WFS3_ROOT_PATH
+     - Defines the root path component of the URL that provides the OGC API services
+     - /oapif
+     - OAPIF/WFS3
+
    * - QGIS_SERVER_APPLICATION_NAME
      - Name of the application to be used, for instance when connecting to a database to identify
        the QGIS server instance connected
      - QGIS3 server
      - All
-
-   * - QGIS_SERVER_API_WFS3_MAX_LIMIT
-     - Maximum value for ``limit`` in a OAPIF/WFS3 features request.
-     - 10000
-     - OAPIF/WFS3
 
    * - QGIS_SERVER_CACHE_DIRECTORY
      - Specifies the network cache directory on the filesystem.
@@ -135,6 +140,13 @@ several ways to define these variables. This is fully described in
        The default behavior can be overridden by setting this variable to ``1`` or ``true``.
        In this case, "bad" layers will just be ignored, and the project will be considered
        valid and available.
+     - false
+     - All
+
+   * - QGIS_SERVER_IGNORE_RENDERING_ERRORS
+     - Sets whether the server should return the rendered map/layout even if rendering errors occured.
+       If false, the server throws an error (usually http 500 with text 'internal server error')
+       if a rendering error is reported.
      - false
      - All
 

@@ -874,6 +874,40 @@ layer, it doesn't matter how you design the fields and data types. If you
 want to make sure everything - the feature and its attributes - gets copied,
 make sure the schemas match.
 
+When you paste features into another layer,
+QGIS checks the attribute values against the :ref:`constraints <constraints>` defined
+in the destination layer (for example, ``NOT NULL``, ``Unique``, or expression constraints).
+If one or more pasted features contain invalid attribute values that
+do not meet these constraints, a dialog will
+appear, listing all affected features and fields.
+When pasting a single feature, you can decide whether to:
+
+* Edit the invalid values directly in the dialog. The corrected values will be used when pasting.
+* :guilabel:`Paste Anyway`: the feature is pasted as-is, even with invalid values.
+
+.. figure:: img/edit_paste_invalid_values_single.png
+   :align: center
+   :width: 400px
+
+   Dialog for handling invalid attribute values when pasting a single feature
+
+When pasting multiple features, the dialog lists all invalid fields across all
+features, allowing bulk review and correction. You can decide per field or
+per feature whether to:
+
+* Edit the invalid values directly in the dialog. The corrected values will be used when pasting.
+* :guilabel:`Discard All`: no features pasted.
+* :guilabel:`Discard All Invalid`: pasted only features with valid attribute values.
+* :guilabel:`Paste All (Including Invalid)`: all features are pasted as-is, even with invalid
+  values.
+* :guilabel:`Skip`: skip the specific feature, allowing proceeding with the rest.
+
+.. figure:: img/edit_paste_invalid_values_multiple.png
+   :align: center
+   :width: 500px
+
+   Dialog for handling invalid attribute values when pasting multiple features
+
 .. _tip_projections_and_pasting:
 
 .. note:: **Congruency of Pasted Features**

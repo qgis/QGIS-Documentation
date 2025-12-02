@@ -363,6 +363,7 @@ Icon                            Substitution                        Icon        
 |relations|                     ``|relations|``                     |layoutItem3DMap|               ``|layoutItem3DMap|``
 |stopwatch|                     ``|stopwatch|``                     |sensor|                        ``|sensor|``
 |clearItem|                     ``|clearItem|``                     |warning|                       ``|warning|``
+|rememberDisabled|              ``|rememberDisabled|``              |rememberEnabled|               ``|rememberEnabled|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -1458,6 +1459,10 @@ Icon                            Substitution                        Icon        
 .. |regularPolygonCenterPoint| image:: /static/common/mActionRegularPolygonCenterPoint.png
    :width: 1.5em
 .. |relations| image:: /static/common/relations.png
+   :width: 1.5em
+.. |rememberDisabled| image:: /static/common/mIconRememberDisabled.png
+   :width: 1.5em
+.. |rememberEnabled| image:: /static/common/mIconRememberEnabled.png
    :width: 1.5em
 .. |removeAllFromOverview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
