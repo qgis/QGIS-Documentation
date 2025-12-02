@@ -773,6 +773,12 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
 
    * Indicate the WFS version of the server.
      If unknown, press the :guilabel:`Detect` button to automatically retrieve it.
+   * Select :guilabel:`Feature format` for data transfer.
+     Available options are:
+
+     * :guilabel:`Default`: uses GML format according to the selected WFS version
+     * :guilabel:`FlatGeoBuf`: the FlatGeoBuf format
+     * :guilabel:`GeoJSON`: the GeoJSON format
    * Select the :guilabel:`Preferred HTTP method` to use for requests.
      The default is :guilabel:`GET`, but you can also select :guilabel:`POST`.
    * Define the :guilabel:`Maximum number of features` retrieved in a single GetFetFeature request.
