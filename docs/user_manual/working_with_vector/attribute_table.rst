@@ -471,13 +471,15 @@ More actions on features
 Users have several possibilities to manipulate feature in an attribute table.
 Right-click in a cell and you can:
 
-* :guilabel:`Select all` (:kbd:`Ctrl+A`) the features;
-* Copy the content of a cell in the clipboard with :guilabel:`Copy cell content`;
-* :guilabel:`Zoom to feature` without having to select it beforehand (double clicking
+* :guilabel:`Select All` (:kbd:`Ctrl+A`) the features;
+* Copy the content of a cell in the clipboard with :guilabel:`Copy Cell Content`;
+* :guilabel:`Copy Raw Value` to copy the unformatted value of the cell to the clipboard;
+  useful when dealing with formatted numbers or dates;
+* :guilabel:`Zoom to Feature` without having to select it beforehand (double clicking
   the row header does the same);
-* :guilabel:`Pan to feature` without having to select it beforehand;
-* :guilabel:`Flash feature`, to highlight it in the map canvas;
-* :guilabel:`Open form`: it toggles attribute table into form view with a focus
+* :guilabel:`Pan to Feature` without having to select it beforehand;
+* :guilabel:`Flash Feature`, to highlight it in the map canvas;
+* :guilabel:`Open Form`: it toggles attribute table into form view with a focus
   on the clicked feature.
 * Display a :ref:`list of actions <actions_menu>`, previously enabled
   in the :menuselection:`Layer properties --> Actions` tab.
