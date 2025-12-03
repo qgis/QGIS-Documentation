@@ -5,7 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Li Hongsheng, 2025
+# bc G, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Li Hongsheng, 2025\n"
+"Last-Translator: bc G, 2025\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,5 +29,378 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"翻译是一项社区工作：ref：`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
-"progress|。"
+"翻译是一项社区工作 :ref:`you can join <translation_guidelines>`。此页面目前翻译进度为 "
+"|translation progress|。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:5
+msgid "Use R scripts in Processing"
+msgstr "在处理（Processing）中使用 R 脚本"
+
+#: ../../docs/training_manual/processing/r_intro.rst:7
+msgid ""
+"Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/it>`_"
+msgstr ""
+"模块由Matteo Ghetta贡献，由 `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/it>`_ 资助"
+
+#: ../../docs/training_manual/processing/r_intro.rst:10
+msgid ""
+"Processing (with the ``Processing R Provider`` plugin) makes it possible to "
+"write and run R scripts inside QGIS."
+msgstr "通过 ``Processing R Provider`` 插件，Processing 可以在 QGIS 中编写并运行 R 脚本。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:14
+msgid ""
+"R has to be installed on your computer and the PATH has to be correctly set "
+"up. Moreover Processing just calls the external R packages, it is not able "
+"to install them. So be sure to install external packages directly in R. See "
+"the related :ref:`chapter <creating_r_scripts>` in the user manual."
+msgstr ""
+"R 必须已安装在您的计算机上，并且 PATH 必须正确设置。此外，Processing 仅调用外部 R 包，无法自行安装它们。因此，请确保直接在 R "
+"中安装所需的外部包。参见用户手册中的相关 :ref:`章节 <creating_r_scripts>`。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:20
+msgid ""
+"If you have *package* problems, it may be related to missing *mandatory* "
+"packages required by Processing, like ``sp``, ``rgdal`` and ``raster``."
+msgstr ""
+"如果您遇到 *package* 问题，可能是由于缺少 Processing 所需的*必备*包，例如 ``sp``、``rgdal`` 和 "
+"``raster``。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:24
+msgid "Adding scripts"
+msgstr "添加脚本"
+
+#: ../../docs/training_manual/processing/r_intro.rst:26
+msgid ""
+"Adding a script is simple. The easiest way is to open the Processing toolbox"
+" and choose :menuselection:`Create new R script...` from the R menu "
+"(labelled with an R icon) at the top of the Processing Toolbox. You can also"
+" create the script in for instance a text editor and save it in your R "
+"scripts folder (:file:`processing/rscripts`). When it has been saved there, "
+"it will be available for editing by right-clicking on the script name in the"
+" processing toolbox and then choose :menuselection:`Edit Script...`)."
+msgstr ""
+"添加脚本很简单。最简单的方法是打开 Processing 工具箱，从工具箱顶部的 R 菜单（标有 R 图标）中选择 "
+":menuselection:`Create new R script...`。您也可以在例如文本编辑器中创建脚本，并将其保存到您的 R "
+"脚本文件夹（:file:`processing/rscripts`）中。保存后，右键单击 Processing 工具箱中的脚本名称，然后选择 "
+":menuselection:`Edit Script...` 即可进行编辑。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:39
+msgid ""
+"If you cannot see R in Processing, you have to activate it in "
+":menuselection:`Processing --> Options --> Providers`"
+msgstr ""
+"如果在 Processing 中看不到 R，请在 :menuselection:`Processing --> Options --> "
+"Providers` 中激活它"
+
+#: ../../docs/training_manual/processing/r_intro.rst:42
+msgid ""
+"It opens a *script editor window* in which you have to specify some "
+"parameters before you can add the script body."
+msgstr "它将打开一个*脚本编辑器窗口*，您必须先指定一些参数，然后才能添加脚本主体。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:50
+msgid "Creating plots"
+msgstr "创建图表"
+
+#: ../../docs/training_manual/processing/r_intro.rst:52
+msgid ""
+"In this tutorial we are going to create a **boxplot** of a vector layer "
+"field."
+msgstr "在本教程中，我们将创建一个矢量图层字段的**箱线图（boxplot）**。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:54
+msgid ""
+"Open the :file:`r_intro.qgs` QGIS project under the "
+":file:`exercise_data/processing/r_intro/` folder."
+msgstr ""
+"打开 :file:`exercise_data/processing/r_intro/` 文件夹下的 :file:`r_intro.qgs` QGIS "
+"工程。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:59
+#: ../../docs/training_manual/processing/r_intro.rst:180
+msgid "Script parameters"
+msgstr "脚本参数"
+
+#: ../../docs/training_manual/processing/r_intro.rst:61
+msgid "Open the editor and start writing at the beginning of it."
+msgstr "打开编辑器并在其开头开始编写。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:63
+msgid "You **must** specify some parameters **before** the script body:"
+msgstr "您**必须**在脚本主体**之前**指定一些参数："
+
+#: ../../docs/training_manual/processing/r_intro.rst:65
+msgid ""
+"The name of the group (`plots` in this case) in which you want to put your "
+"script (if the group does not exist, it will be created)::"
+msgstr "您希望将脚本放入的组名称（本例中为 `plots`）（如果该组不存在，将自动创建）：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:70
+msgid ""
+"You will find your script in the **plots** R group in the Processing "
+"toolbox."
+msgstr "您将在 Processing 工具箱的 **plots** R 组中找到您的脚本。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:72
+msgid ""
+"You have to tell Processing that you want to display a plot (in this "
+"example)::"
+msgstr "您需要告知 Processing 您希望显示一个图表（本例中）：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:76
+msgid ""
+"You will then find a link to the plot in the **Result Viewer** panel (can be"
+" turned on / off in :menuselection:`View --> Panels` and with "
+":menuselection:`Processing --> Results Viewer`)."
+msgstr ""
+"随后您将在 **Result Viewer** 面板中找到指向该图表的链接（可通过 :menuselection:`View --> Panels` 和"
+" :menuselection:`Processing --> Results Viewer` 开启或关闭该面板）。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:80
+msgid ""
+"You also need to tell Processing about your input data. In this example we "
+"want to create a plot from a field of a vector layer::"
+msgstr "您还需要告知 Processing 您的输入数据。在本例中，我们希望从矢量图层的一个字段创建图表：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:85
+msgid ""
+"Processing now knows that the input is a vector. The name *Layer* is not "
+"important, what matters is the **vector** parameter."
+msgstr "Processing 现在知道输入的是一个矢量。名称 *Layer* 并不重要，重要的是 **vector** 参数。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:88
+msgid ""
+"Finally, you have to specify the input field of the vector layer (using the "
+"name you have provided above - *Layer*)::"
+msgstr "最后，您需要指定矢量图层的输入字段（使用上面提供的名称——*Layer*）：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:93
+msgid ""
+"Processing now knows that you need a field of *Layer*, and that you will "
+"call it **X**."
+msgstr "Processing 现在知道您需要 *Layer* 的一个字段，并且您将它命名为 **X**。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:96
+msgid "It is also possible to define the name of your script using ``name``::"
+msgstr "您也可以使用 ``name`` 来定义脚本的名称：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:100
+msgid "If not defined, the file name will be used as the name of the script."
+msgstr "如果未定义，将使用文件名作为脚本名称。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:103
+#: ../../docs/training_manual/processing/r_intro.rst:206
+msgid "Script body"
+msgstr "脚本主体"
+
+#: ../../docs/training_manual/processing/r_intro.rst:105
+msgid ""
+"Now that you have set up the *heading* of the script you can add the "
+"function::"
+msgstr "现在您已经设置好了脚本的*头部*，可以添加函数了：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:109
+msgid ""
+"**boxplot** is the name of the R function, the parameter **Layer** is the "
+"name that you have defined for the input dataset and **X** is the name you "
+"have defined for the field of that dataset."
+msgstr ""
+"**boxplot** 是 R 函数的名称，参数 **Layer** 是您为输入数据集定义的名称，**X** 是您为该数据集字段定义的名称。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:114
+msgid ""
+"The parameter **X** has to be within double square brackets (``[[]]``)."
+msgstr "参数 **X** 必须用双层方括号（``[[]]``）括起来。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:116
+#: ../../docs/training_manual/processing/r_intro.rst:225
+msgid "The final script looks like this::"
+msgstr "最终脚本如下所示：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:126
+msgid ""
+"Save the script in the default path suggested by Processing "
+"(processing/rscripts). If you have not defined a ``name`` in the script "
+"heading, the file name you choose will become the name of the script in the "
+"Processing toolbox."
+msgstr ""
+"将脚本保存在 Processing 建议的默认路径（processing/rscripts）中。如果您未在脚本头部定义 "
+"``name``，则您所选的文件名将成为 Processing 工具箱中的脚本名称。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:131
+msgid ""
+"You can save the script wherever you like, but Processing will then not be "
+"able to include it in the processing toolbox automatically, so you have to "
+"upload it manually."
+msgstr "您可以将脚本保存在任意位置，但 Processing 将无法自动将其纳入处理工具箱，因此您必须手动上传。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:135
+msgid "Now just run it using the button on the top of the editor window:"
+msgstr "现在只需点击编辑器窗口顶部的按钮即可运行它："
+
+#: ../../docs/training_manual/processing/r_intro.rst:139
+msgid ""
+"Once the editor window has been closed, use the text box of Processing to "
+"find your script:"
+msgstr "关闭编辑器窗口后，使用 Processing 的文本框查找您的脚本："
+
+#: ../../docs/training_manual/processing/r_intro.rst:144
+msgid ""
+"You can now fill the parameters required in the Processing algorithm window:"
+msgstr "现在您可以在 Processing 算法窗口中填写所需的参数："
+
+#: ../../docs/training_manual/processing/r_intro.rst:146
+msgid "for **Layer** choose *sample_points*"
+msgstr "对于 **Layer**，选择 *sample_points*"
+
+#: ../../docs/training_manual/processing/r_intro.rst:147
+msgid "for the **X** field choose *value*"
+msgstr "对于 **X** 字段，选择 *value*"
+
+#: ../../docs/training_manual/processing/r_intro.rst:149
+msgid "Click on **Run**."
+msgstr "点击 **Run**。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:153
+msgid ""
+"The **Result window** should be automatically opened, if not, just click on "
+":menuselection:`Processing --> Result Viewer...`."
+msgstr ""
+"**Result window** 应自动打开，如果没有，请点击 :menuselection:`Processing --> Result "
+"Viewer...`。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:156
+msgid "Click on the link in the viewer and you will see:"
+msgstr "点击查看器中的链接，您将看到："
+
+#: ../../docs/training_manual/processing/r_intro.rst:161
+msgid "You can open, copy and save the image by right clicking on the plot."
+msgstr "您可以通过右键单击图表来打开、复制和保存图像。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:164
+msgid "Create a vector"
+msgstr "创建矢量"
+
+#: ../../docs/training_manual/processing/r_intro.rst:166
+msgid ""
+"You can also create a vector layer and have it automatically loaded into "
+"QGIS."
+msgstr "您还可以创建一个矢量图层并使其自动加载到 QGIS 中。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:169
+msgid ""
+"The following example has been taken from the ``Random sampling grid`` "
+"script that can be found in the online collection of R scripts (the scripts "
+"in this online collection can be found in https://github.com/qgis/QGIS-"
+"Processing/tree/master/rscripts)."
+msgstr ""
+"下面的示例取自 ``Random sampling grid`` "
+"(随机抽样网格)脚本，该脚本可以在R脚本的在线集合中找到（该在线集合中的脚本可以在https://github.com/qgis/QGIS-"
+"Processing/tree/master/rscripts中找到）。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:174
+msgid ""
+"The aim of this exercise is to create a random point vector layer using an "
+"input vector layer to restrict the extent using the ``spsample`` function of"
+" the ``sp`` package."
+msgstr "本练习的目标是使用输入的矢量图层限制范围，通过 ``sp`` 包中的 ``spsample`` 函数创建一个随机点矢量图层。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:182
+msgid "As before we have to set some parameters before the script body:"
+msgstr "与之前一样，我们需要在脚本主体之前设置一些参数："
+
+#: ../../docs/training_manual/processing/r_intro.rst:184
+msgid ""
+"Specify the name of the group in which you want to put your script, in this "
+"case *Point pattern analysis*::"
+msgstr "指定您希望将脚本放入的组名，本例中为 *Point pattern analysis*：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:188
+msgid ""
+"Define an input parameter (a vector layer) that will constrain the placement"
+" of the random points::"
+msgstr "定义一个输入参数（矢量图层），用于限制随机点的放置位置：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:193
+msgid ""
+"Set an input parameter for the number of points that are going to be created"
+" (``Size``, with a default value of ``10``)::"
+msgstr "设置一个输入参数，用于指定将要创建的点数（``Size``，默认值为 ``10``）：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:198
+msgid ""
+"Since a default value (``10``) is defined, the user can change this number "
+"or can leave the parameter without a number."
+msgstr "由于已定义默认值（``10``），用户可以更改该数值，也可以将该参数留空。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:201
+msgid "Specify that there is an output vector layer (called ``Output``)::"
+msgstr "指定存在一个输出矢量图层（名为 ``Output``）：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:208
+msgid "Now you can add the body of the function:"
+msgstr "现在您可以添加函数主体："
+
+#: ../../docs/training_manual/processing/r_intro.rst:210
+msgid "Use the ``spsample`` function::"
+msgstr "使用 ``spsample`` 函数：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:214
+msgid ""
+"The function uses the *Layer* to constrain the placement of the points (if "
+"it is a line layer, a points will have to be on one of the lines in the "
+"layer, if it is a polygon layer, a point will have to be within a polygon). "
+"The number of points is taken from the *Size* parameter. The sampling method"
+" is *random*."
+msgstr ""
+"该函数使用 *Layer* 限制点的放置位置（若为线图层，则点必须位于图层中的某条线上；若为面图层，则点必须位于某个多边形内部）。点的数量来自 "
+"*Size* 参数，采样方法为 *random*。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:221
+msgid "Generate the output (the ``Output`` parameter)::"
+msgstr "生成输出（``Output`` 参数）：："
+
+#: ../../docs/training_manual/processing/r_intro.rst:236
+msgid "Save it and run it, clicking on the run button."
+msgstr "保存并点击运行按钮执行它。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:238
+msgid "In the new window type in the right parameters:"
+msgstr "在新窗口中输入正确的参数："
+
+#: ../../docs/training_manual/processing/r_intro.rst:242
+msgid "and click on run."
+msgstr "然后点击 run。"
+
+#: ../../docs/training_manual/processing/r_intro.rst:244
+msgid ""
+"The result layer will be added to the table of contents and its points will "
+"be displayed on the map canvas:"
+msgstr "结果图层将添加到图层面板中，其点将显示在地图画布上："
+
+#: ../../docs/training_manual/processing/r_intro.rst:251
+msgid "Text and graph output from R - syntax"
+msgstr "R 的文本与图形输出——语法"
+
+#: ../../docs/training_manual/processing/r_intro.rst:253
+msgid ""
+"Processing (with the ``Processing R Provider plugin``) uses special syntax "
+"to get the results out of R:"
+msgstr "Processing（通过 ``Processing R Provider 插件``）使用特殊语法从 R 中获取结果："
+
+#: ../../docs/training_manual/processing/r_intro.rst:256
+msgid ""
+"``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the "
+"result should be sent to R output (Result viewer)"
+msgstr "命令前的 ``>``（如 ``>lillie.test(Layer[[Field]])``）表示结果应发送至 R 输出（结果查看器）"
+
+#: ../../docs/training_manual/processing/r_intro.rst:258
+msgid ""
+"``+`` after a plot enables overlay plots. For example ``plot(Layer[[X]], "
+"Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
+msgstr ""
+"图表后的 ``+`` 允许叠加绘图。例如 ``plot(Layer[[X]], Layer[[Y]]) + "
+"abline(h=mean(Layer[[X]]))``"
