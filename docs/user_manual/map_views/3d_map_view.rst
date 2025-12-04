@@ -466,7 +466,7 @@ To create an animation:
 #. Click the |play| button to preview the animation. QGIS will generate scenes using
    the camera positions/rotations at set times, and interpolating them in between
    these keyframes. Various :guilabel:`Interpolation` modes for animations are
-   available (eg, linear, inQuad, outQuad, inCirc... -- more details at `QEasingCurve`_.
+   available (e.g., linear, inQuad, outQuad, inCirc... -- more details at `QEasingCurve`_).
 
    The animation can also be previewed by moving the time slider.
    Keeping the :guilabel:`Loop` box checked will repeatedly run the
@@ -486,8 +486,6 @@ view by checking :guilabel:`Enable 3D Renderer` in the
 A number of options are available for controlling the rendering of
 the 3D vector layer.
 
-.. _`QEasingCurve`: https://doc.qt.io/qt-6/qeasingcurve.html#EasingFunction-typedef).
-
 Rendering annotation layers in 3D map views
 ============================================
 
@@ -497,6 +495,8 @@ Those layers will always face the camera, making it easier to read them
 when navigating the 3D scene. Lines and polygons annotations are not supported
 in 3D map views. See :ref:`3D view layer properties <annotationslayer_3dview>` for more details.
 
+
+.. _`QEasingCurve`: https://doc.qt.io/qt-6/qeasingcurve.html#EasingFunction-typedef
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
