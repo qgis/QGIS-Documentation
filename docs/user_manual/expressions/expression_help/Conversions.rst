@@ -28,6 +28,73 @@ Converts a datetime object to a different timezone.
 
 .. end_convert_timezone_section
 
+.. _expression_function_Conversions_extract_degrees:
+
+extract_degrees
+...............
+
+Extracts the integer number of degrees from a decimal degrees value. The minutes and seconds components are ignored. The extracted degrees values will be truncated towards zero (not rounded).
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - extract_degrees(value)
+   * - Arguments
+     - * **value** - A decimal degrees value.
+   * - Examples
+     - * ``extract_degrees(135.334)`` → 135
+       * ``extract_degrees(-135.998)`` → 135
+       * ``extract_degrees(-135.334)`` → -135
+       * ``extract_degrees(-135.998)`` → -135
+
+
+.. end_extract_degrees_section
+
+.. _expression_function_Conversions_extract_minutes:
+
+extract_minutes
+...............
+
+Extracts the integer number of minutes from a decimal degrees value. The degrees and seconds components are ignored. The extracted minutes values will be truncated towards zero (not rounded), and will always be a positive value.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - extract_minutes(value)
+   * - Arguments
+     - * **value** - A decimal degrees value.
+   * - Examples
+     - * ``extract_minutes(135.75)`` → 45
+       * ``extract_minutes(-135.75)`` → 45
+       * ``extract_minutes(-135.7568)`` → 45
+       * ``extract_minutes(-135.7568)`` → 45
+
+
+.. end_extract_minutes_section
+
+.. _expression_function_Conversions_extract_seconds:
+
+extract_seconds
+...............
+
+Extracts the decimal number of seconds from a decimal degrees value. The degrees and minutes components are ignored. The extracted seconds value will always be a positive value.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - extract_seconds(value)
+   * - Arguments
+     - * **value** - A decimal degrees value.
+   * - Examples
+     - * ``extract_seconds(135.7568)`` → 24.4799
+       * ``extract_seconds(-135.7568)`` → 24.4799
+
+
+.. end_extract_seconds_section
+
 .. _expression_function_Conversions_from_base64:
 
 from_base64
