@@ -5,7 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Li Hongsheng, 2025
+# bc G, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 11:22+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Li Hongsheng, 2025\n"
+"Last-Translator: bc G, 2025\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,5 +29,201 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"翻译是一项社区工作：ref：`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
+"翻译是一项社区工作 :ref:`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
 "progress|。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:2
+msgid "More algorithms and data types"
+msgstr "更多算法与数据类型"
+
+#: ../../docs/training_manual/processing/second_alg.rst:5
+msgid ""
+"In this lesson we will run three more algorithms, learn how to use other "
+"input types, and configure outputs to be saved to a given folder "
+"automatically."
+msgstr "本课程中，我们将运行三个新算法，学习如何使用其他输入类型，并配置输出结果自动保存到指定文件夹。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:7
+msgid ""
+"For this lessons we will need a table and a polygons layer. We are going to "
+"create a points layer based on coordinates in the table, and then count the "
+"number of points in each polygon. If you open the QGIS project corresponding"
+" to this lesson, you will find a table with X and Y coordinates, but you "
+"will find no polygons layer. Don't worry, we will create it using a "
+"processing geoalgorithm."
+msgstr ""
+"本课程需要一个表格和一个多边形图层。我们将根据表格中的坐标创建点图层，然后统计每个多边形内的点数。如果您打开本课程对应的 QGIS 项目，会发现一个包含"
+" X 和 Y 坐标的表格，但没有多边形图层。请不用担心，我们将使用一个处理地理算法来创建它。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:9
+msgid ""
+"The first thing we are going to do is to create a points layer from the "
+"coordinates in the table, using the *Points layer from table* algorithm. You"
+" now know how to use the search box, so it should not be hard for you to "
+"find it. Double--click on it to run it and get to its following dialog."
+msgstr ""
+"首先，我们将使用 *Points layer from "
+"table*（从表格创建点图层）算法，根据表格中的坐标生成点图层。您已掌握搜索框的使用方法，因此应不难找到该算法。双击运行，打开其参数对话框。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:11
+msgid ""
+"This algorithm, like the one from the previous lesson, just generates a "
+"single output, and it has three inputs:"
+msgstr "与上一课程的算法类似，此算法仅生成一个输出，包含三个输入参数："
+
+#: ../../docs/training_manual/processing/second_alg.rst:13
+msgid ""
+"*Table*: the table with the coordinates. You should select here the table "
+"from the lesson data."
+msgstr "*Table*（表格）：包含坐标的表格。请在此选择课程数据中的表格。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:14
+msgid ""
+"*X and Y fields*: these two parameters are linked to the first one. The "
+"corresponding selector will show the name of those fields that are available"
+" in the selected table. Select the *XCOORD* field for the *X* parameter, and"
+" the *YYCOORD* field for the *Y* parameter."
+msgstr ""
+"*X and Y fields*（X 与 Y 字段）：这两个参数与第一个参数关联。选择表格后，下拉菜单将显示该表格中可用的字段名称。为 *X* 参数选择"
+" *XCOORD* 字段，为 *Y* 参数选择 *YYCOORD* 字段。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:15
+msgid ""
+"*CRS*: Since this algorithm takes no input layers, it cannot assign a CRS to"
+" the output layer based on them. Instead, it asks you to manually select the"
+" CRS that the coordinates in the table use. Click on the button on the left"
+"--hand side to open the QGIS CRS selector, and select EPSG:4326 as the "
+"output CRS. We are using this CRS because the coordinates in the table are "
+"in that CRS."
+msgstr ""
+"*CRS*：由于此算法不接受输入图层，无法据此自动设置输出图层的 CRS，因此需手动指定表格中坐标所使用的 CRS。点击左侧按钮打开 QGIS CRS "
+"选择器，选择 EPSG:4326 作为输出 CRS。我们使用此 CRS 是因为表格中的坐标采用的就是该坐标系。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:17
+msgid "Your dialog should look like this."
+msgstr "您的对话框应如下图所示。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:21
+msgid ""
+"Now press the *Run* button to get the following layer (you may need to zoom "
+"full to reenter the map around the newly created points):"
+msgstr "现在点击 *运行* 按钮，即可生成如下图层（您可能需要全图缩放以重新定位到新创建的点周围）："
+
+#: ../../docs/training_manual/processing/second_alg.rst:25
+msgid ""
+"The next thing we need is the polygon layer. We are going to create a "
+"regular grid of polygons using the *Create grid* algorithm, which has the "
+"following parameters dialog."
+msgstr "下一步需要创建多边形图层。我们将使用 *创建格网* 算法生成规则多边形格网，其参数对话框如下所示。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:29
+msgid ""
+"The options are simpler in recent versions of QGIS; you just need to enter "
+"min and max for X and Y (suggested values: "
+"-5.696226,-5.695122,40.24742,40.248171)"
+msgstr ""
+"在较新版本的 QGIS 中，选项更为简化；您只需输入 X 和 Y 的最小值与最大值（建议值：-5.696226, -5.695122, "
+"40.24742, 40.248171）。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:31
+msgid ""
+"The inputs required to create the grid are all numbers. When you have to "
+"enter a numerical value, you have two options: typing it directly on the "
+"corresponding box or clicking the button on the right--hand side to get to a"
+" dialog like the one shown next."
+msgstr "创建格网所需的输入均为数值。输入数值时，您有两种选择：直接在对应框中键入，或点击右侧按钮打开如下所示的对话框。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:35
+msgid ""
+"The dialog contains a simple calculator, so you can type expressions such as"
+" ``11 * 34.7 + 4.6``, and the result will be computed and put in the "
+"corresponding text box in the parameters dialog. Also, it contains constants"
+" that you can use, and values from other layers available."
+msgstr ""
+"该对话框内置简易计算器，您可输入如 ``11 * 34.7 + 4.6`` "
+"的表达式，计算结果将自动填入参数对话框的对应文本框中。此外，它还提供可用的常量及其他图层的数值。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:37
+msgid ""
+"In this case, we want to create a grid that covers the extent of the input "
+"points layer, so we should use its coordinates to calculate the center "
+"coordinate of the grid and its width and height, since those are the "
+"parameters that the algorithm takes to create the grid. With a little bit of"
+" math, try to do that yourself using the calculator dialog and the constants"
+" from the input points layer."
+msgstr ""
+"此处，我们希望创建一个覆盖输入点图层范围的格网，因此应利用点图层的坐标计算格网的中心坐标、宽度和高度——这些正是算法创建格网所需的参数。请尝试结合计算器对话框及点图层提供的常量，自行完成这些计算。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:39
+msgid "Select *Rectangles (polygons)* in the *Type* field."
+msgstr "在 *类型* 字段中选择 *矩形（多边形）* 。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:41
+msgid ""
+"As in the case of the last algorithm, we have to enter the CRS here as well."
+" Select EPSG:4326 as the target CRS, as we did before."
+msgstr "与上一个算法类似，此处也需指定 CRS。请如前所述，选择 EPSG:4326 作为目标 CRS。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:43
+msgid "In the end, you should have a parameters dialog like this:"
+msgstr "最终，您的参数对话框应如下图所示："
+
+#: ../../docs/training_manual/processing/second_alg.rst:47
+msgid ""
+"(Better add one spacing on the width and height: Horizontal spacing: 0.0001,"
+" Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: "
+"-5.695674, Center Y: 40.2477955) The case of X center is a bit tricky, see: "
+"-5.696126+(( -5.695222+ 5.696126)/2)"
+msgstr ""
+"（建议在宽高上增加一点间距：水平间距：0.0001，垂直间距：0.0001，宽度：0.001004，高度：0.000651，中心 "
+"X：-5.695674，中心 Y：40.2477955）X 中心的计算稍复杂，参考公式：-5.696126 + ((-5.695222 + "
+"5.696126) / 2)"
+
+#: ../../docs/training_manual/processing/second_alg.rst:50
+msgid "Press *Run* and you will get the graticule layer."
+msgstr "点击 *运行* ，即可获得格网图层。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:54
+msgid ""
+"The last step is to count the points in each one of the rectangles of that "
+"graticule. We will use the *Count points in polygons* algorithm."
+msgstr "最后一步是统计格网中每个矩形内的点数。我们将使用 *统计多边形内点数* 算法。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:58
+msgid "Now we have the result we were looking for."
+msgstr "现在，我们已获得所需的结果。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:60
+msgid ""
+"Before finishing this lesson, here is a quick tip to make your life easier "
+"in case you want to persistently save your data. If you want all your output"
+" files to be saved in a given folder, you do not have to type the folder "
+"name each time. Instead, go to the processing menu and select the *Options "
+"and configuration* item. It will open the configuration dialog."
+msgstr ""
+"在结束本课程前，提供一个便捷技巧：如果您希望持久化保存数据，可将所有输出文件统一保存到指定文件夹，而无需每次输入路径。请进入处理（Processing）菜单，选择"
+" *选项与配置* 项，打开配置对话框。（3.40版本集成在，设置->选项->数据处理）"
+
+#: ../../docs/training_manual/processing/second_alg.rst:64
+msgid ""
+"In the *Output folder* entry that you will find in the *General* group, type"
+" the path to your destination folder."
+msgstr "在 *通用* 组中找到 *输出文件夹* 项，输入目标文件夹路径。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:68
+msgid ""
+"Now when you run an algorithm, just use the filename instead of the full "
+"path. For instance, with the configuration shown above, if you enter "
+"``graticule.shp`` as the output path for the algorithm that we have just "
+"used, the result will be saved in ``D:\\processing_output\\graticule.shp``. "
+"You can still enter a full path in case you want a result to be saved in a "
+"different folder."
+msgstr ""
+"此后运行算法时，只需输入文件名而非完整路径。例如，若按上述配置将输出路径设为 ``graticule.shp``，结果将保存至 "
+"``D:\\processing_output\\graticule.shp``。若您希望将结果保存到其他文件夹，仍可输入完整路径。"
+
+#: ../../docs/training_manual/processing/second_alg.rst:71
+msgid ""
+"Try yourself the *Create grid* algorithm with different grid sizes, and also"
+" with different types of grids."
+msgstr "请自行尝试使用 *创建网格* 算法，调整格网尺寸，并选用不同类型的格网进行练习。"
