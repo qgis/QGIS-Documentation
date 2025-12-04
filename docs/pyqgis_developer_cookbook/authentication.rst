@@ -243,6 +243,9 @@ authentication manager init. Available authentication methods are:
    * - ``PKI-PKCS#12``
      - PKI PKCS#12 authentication
      - ows, wfs, wcs, wms, postgres
+   * - ``PlanetaryComputer``
+     - Microsoft Planetary Computer authentication
+     - gdal, copc, stac
 
 
 .. _Populate_Authorities:
