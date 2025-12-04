@@ -44,16 +44,16 @@ like:
 
 ::
 
- QGIS 3.44.4 'Solothurn' (108203c541e)
- QGIS code revision 108203c541e
- Qt version 5.15.3
+ QGIS 3.99.0-Master 'Master' (478937d)
+ QGIS code revision 478937d
+ Qt version 6.8.3
  Python version 3.11.10
  GDAL/OGR version 3.11.0
  PROJ version 9.6.2
  EPSG Registry database version v12.013 (2025-05-26)
  GEOS version 3.13.0-CAPI-1.19.0
  SQLite version 3.49.2
- OS Ubuntu 24.04
+ OS Ubuntu 25.10
 
 
 We'll see later on how to make WMS requests.
