@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Transifex Bot <>, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-08 10:04+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -329,6 +329,20 @@ msgstr ""
 "ursprüngliche Geometrie des Objekts bleibt unverändert. Dies ermöglicht die "
 "Erstellung von Füllsymbolen mit einheitlichem Erscheinungsbild, unabhängig "
 "vom gerenderten Datensatz und der Ringausrichtung der einzelnen Objekte."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:124
+msgid ""
+"for marker symbols, the :guilabel:`Buffer settings...` enables addition of a"
+" halo effect around the marker symbol in order to make it more readable "
+"against different backgrounds. The buffer is calculated and drawn using the "
+"shape of ALL the symbol layers in the marker. You can adjust the "
+":guilabel:`Size`, :guilabel:`Join style` and :guilabel:`Symbol` of display."
+msgstr ""
+"Bei Markierungs-Symbolen ermöglicht die Option "
+":guilabel:`Puffereinstellungen...` das Hinzufügen eines Halo-Effekts um das "
+"Markierungs-Symbol herum, um es vor unterschiedlichen Hintergründen besser "
+"lesbar zu machen. Sie können die :guilabel:`Größe`, den "
+":guilabel:`Verbindungsstil` und das :guilabel:`Symbol` des Puffers anpassen."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:129
 msgid ""
@@ -1113,6 +1127,99 @@ msgstr ""
 msgid "Examples of raster lines"
 msgstr "Beispiele für Rasterlinien"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:463
+msgid ""
+"**Linear referencing**: allows placing text labels at regular intervals "
+"along a line, or at positions corresponding to existing vertices. Positions "
+"can be calculated using Cartesian distances, or interpolated from z/m "
+"values. Parameters include:"
+msgstr ""
+"**Lineare Referenzierung**: Ermöglicht das Platzieren von Textbeschriftungen"
+" in regelmäßigen Abständen entlang einer Linie oder an Positionen, die "
+"vorhandenen Eckpunkten entsprechen. Die Positionen können anhand "
+"kartesischer Abstände berechnet oder aus z/m-Werten interpoliert werden. Zu "
+"den Parametern gehören:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:468
+msgid ""
+":guilabel:`Measure placement`: Labels can be placed at regular cartesian 2d "
+"distances, at regular linearly interpolated spacing calculated using the Z "
+"or M values in geometries, or at existing vertices. A fixed or data-defined "
+":guilabel:`Interval` is given."
+msgstr ""
+":guilabel:`Maßplatzierung`: Beschriftungen können in regelmäßigen "
+"kartesischen 2D-Abständen, in regelmäßigen linear interpolierten Abständen, "
+"die anhand der Z- oder M-Werte in Geometrien berechnet werden, oder an "
+"vorhandenen Eckpunkten platziert werden. Es wird ein festes oder "
+"datendefiniertes :guilabel:`Intervall` angegeben."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:472
+msgid ""
+":guilabel:`Quantity`: Label displayed at each position represent the running"
+" distance along the line, or the linearly interpolated Z or M value. Labels "
+"are rendered using the full range of :ref:`text <text_format>` and "
+":ref:`number <number_formatting>` formatting functionalities available in "
+"QGIS."
+msgstr ""
+":guilabel:`Menge`: Die an jeder Position angezeigten Beschriftungen geben "
+"die zurückgelegte Strecke entlang der Linie oder den linear interpolierten "
+"Z- oder M-Wert an. Die Beschriftungen werden unter Verwendung des gesamten "
+"Spektrums der in QGIS verfügbaren Formatierungsfunktionen für :ref:`Text "
+"<text_format>` und :ref:`Zahlen <number_formatting>` gerendert."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:479
+msgid ""
+"When using the distance-based placement or labels, the distances are "
+"calculated using 2D only. Cartesian calculations are based on the original "
+"layer CRS."
+msgstr ""
+"Bei Verwendung der entfernungsbasierten Platzierung werden die Entfernungen "
+"ausschließlich in 2D berechnet. Kartesische Berechnungen basieren auf dem "
+"ursprünglichen KBS des Layers, nicht dem KBS des Projekts."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:482
+msgid ""
+":guilabel:`Skip multiples of`: If set, labels which are a multiple of this "
+"value will be skipped over. This allows construction of complex referencing "
+"labels, e.g. where a symbol has two linear referencing symbol layers, one "
+"set to label every 100m in a small font, skipping multiples of 1000, and a "
+"second set to label every 1000m in a big bold font."
+msgstr ""
+":guilabel:`Vielfaches überspringen von`: Wenn diese Option aktiviert ist, "
+"werden Beschriftungen, die ein Vielfaches dieses Wertes sind, übersprungen. "
+"Dies ermöglicht die Erstellung komplexer Referenzbeschriftungen, z. B. wenn "
+"ein Symbol zwei lineare Referenzsymbolebenen hat, von denen eine so "
+"eingestellt ist, dass sie alle 100 m in kleiner Schrift beschriftet, wobei "
+"Vielfache von 1000 übersprungen werden, und die zweite so eingestellt ist, "
+"dass sie alle 1000 m in großer, fetter Schrift beschriftet."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:486
+msgid ""
+":guilabel:`Average angle over`: Labels are rendered using an angle "
+"calculated by averaging the linestring, so sharp tiny jaggies don't result "
+"in unslightly label rotation."
+msgstr ""
+":guilabel:`Mittlerer Winkel über`: Beschriftungen werden unter Verwendung "
+"eines Winkels gerendert, der durch Mittelung der Linienfolge berechnet wird,"
+" sodass scharfe kleine Zacken in der Linienführung nicht zu einer unschönen "
+"Drehung der Beschriftung führen."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:488
+msgid ""
+":guilabel:`Show marker symbols`, at referenced points in the line feature, "
+"using a full QGIS marker symbol. This allows e.g. showing a cross-hatch at "
+"the labeled point, for a \"ruler\" style line."
+msgstr ""
+":guilabel:`Markierungssymbole anzeigen`: an referenzierten Punkten im "
+"Linienelement werden QGIS-Markierungs-Symbole angezeigt (die vollständigen "
+"Formatierungen für Markierungen stehen zur Verfügung). Dies ermöglicht z. B."
+" die Anzeige einer Kreuzschraffur am beschrifteten Punkt für eine Linie im "
+"\"Lineal-Stil\"."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:497
+msgid "Drawing linear labels along line feature"
+msgstr "Beschriftungen mittels linearer Referenzierung entlang einer Linie"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:502
 msgid ""
 "**Lineburst**: renders a gradient along the width of a line. You can choose "
@@ -1128,6 +1235,22 @@ msgstr ""
 #: ../../docs/user_manual/style_library/symbol_selector.rst:513
 msgid "Examples of lineburst lines"
 msgstr "Beispiele für lineburst-Linien"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:517
+msgid ""
+"**Filled line**: renders the interior of the lines using a fill symbol "
+"allowing for lines filled with gradients, line hatches, etc. The "
+":guilabel:`Stroke width`, :guilabel:`Offset`, :guilabel:`Join style`, "
+":guilabel:`Cap style` can be adjusted."
+msgstr ""
+"**Gefüllte Linie**: Rendert das Innere der Linien mithilfe eines "
+"Füllsymbols, wodurch Linien mit Farbverläufen, Schraffuren usw. gefüllt "
+"werden können. Die Optionen :guilabel:`Strichbreite`, :guilabel:`Versatz`, "
+":guilabel:`Verbindungsstil` und :guilabel:`Endstil` können angepasst werden."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:528
+msgid "Examples of filled lines"
+msgstr "Beispiele für gefüllte Linien"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:534
 msgid "Fill Symbols"
@@ -1512,6 +1635,29 @@ msgstr ""
 ":guilabel:`Markierungen durch Polygon zuschneiden`: legt fest, ob "
 "Markierungen, die in der Nähe der Kanten von Polygonen gerendert werden, an "
 "der Polygongrenze abgeschnitten werden sollen oder nicht"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:682
+msgid ""
+"**Raster image fill**: fills the polygon with tiles from a raster image "
+"(:file:`PNG` :file:`JPG`, :file:`BMP` ...). The image can be a file on the "
+"disk, a remote URL or an embedded file encoded as a string (:ref:`more "
+"details <embedded_file_selector>`). Options include (data defined) opacity, "
+"size, coordinate mode (object or viewport), rotation and offset. Under the "
+"option Size you can independently adjust the width and height of the fill "
+"pattern, enabling stretched raster fills in either the horizontal or "
+"vertical directions. The image width and height can be set using any of the "
+":ref:`common units <unit_selector>` or as a percentage of the original size."
+msgstr ""
+"**Rasterbildfüllung**: Füllt das Polygon mit Kacheln aus einem Rasterbild "
+"(:file:`PNG` :file:`JPG`, :file:`BMP` ...). Das Bild kann eine Datei auf der"
+" Festplatte, eine Remote-URL oder eine als Zeichenfolge codierte "
+"eingebettete Datei sein (:ref:`weitere Details <embedded_file_selector>`). "
+"Zu den Optionen gehören Deckkraft, Größe, Koordinatenmodus (Objekt oder "
+"Ansichtsfenster), Drehung und Versatz. Unter der Option „Größe“ können Sie "
+"die Breite und Höhe des Füllmusters unabhängig voneinander anpassen, wodurch"
+" gestreckte Rasterfüllungen in horizontaler oder vertikaler Richtung möglich"
+" sind. Die Bildbreite und -höhe kann mit einer der :ref:`gängigen Einheiten "
+"<unit_selector>` oder als Prozentsatz der Originalgröße festgelegt werden"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:691
 msgid ""
