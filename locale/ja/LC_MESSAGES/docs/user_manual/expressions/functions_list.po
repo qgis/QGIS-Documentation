@@ -6906,7 +6906,7 @@ msgid ""
 "the calculated area will be ellipsoidal, and if no ellipsoid is set then the"
 " calculated area will be planimetric."
 msgstr ""
-"地物の面積を返します。この関数で計算される面積には、現在のプロジェクトの楕円体設定と面積単位設定の両方が反映されます。例えば、プロジェクトに回転楕円体が設定されている場合、楕円体面積になり、設定されていない場合、平面上の面積になります。"
+"地物の面積を返します。この関数で計算される面積には、現在のプロジェクトの楕円体の設定と面積単位の設定の両方が反映されます。例えばプロジェクトに楕円体が設定されている場合、計算される面積は楕円体上のものになり、設定されていない場合、計算される面積は平面上のものになります。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:109
 msgid "``$area`` → 42"
@@ -7961,6 +7961,14 @@ msgstr ""
 msgid "The dashed line represents the exterior ring of the polygon"
 msgstr "破線はポリゴンの外側のリングを表す"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:470
+msgid ""
+"Further reading: :ref:`qgisboundary` algorithm, "
+":ref:`expression_function_GeometryGroup_interior_ring_n`"
+msgstr ""
+"関係する項目: :ref:`qgisboundary` アルゴリズム、 "
+":ref:`expression_function_GeometryGroup_interior_ring_n`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "extrude"
 msgstr "extrude"
@@ -8551,6 +8559,15 @@ msgstr ""
 "-1 -1))'),1))`` → 'LineString (-0.1 -0.1, 0.4 0, 0.4 0.2, 0 0.2, -0.1 "
 "-0.1))'"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:276
+msgid "The dashed line represents a specific interior ring of the polygon"
+msgstr "破線はポリゴンのひとつの内側のリングを表す"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:505
+msgid ""
+"Further reading: :ref:`expression_function_GeometryGroup_exterior_ring`"
+msgstr "関係する項目: :ref:`expression_function_GeometryGroup_exterior_ring`"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "intersection"
 msgstr "intersection"
@@ -8828,7 +8845,7 @@ msgid ""
 "calculated length will be planimetric."
 msgstr ""
 "ラインストリングの長さを返します。ポリゴンの境界の長さを求める場合には、代わりに $perimeter "
-"を使用してください。この関数で計算される長さは、現在のプロジェクトの楕円体の設定と距離単位の設定の両方が影響します。例えば、プロジェクトに楕円体が設定されている場合、長さは楕円体長になり、楕円体が設定されていない場合は、長さは平面的に計算されます。"
+"を使用してください。この関数で計算される長さは、現在のプロジェクトの楕円体の設定と距離単位の設定の両方が影響します。例えば、プロジェクトに楕円体が設定されている場合、計算される長さは楕円体上のものになり、楕円体が設定されていない場合は、計算される長さは平面上のものになります。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 msgid "``$length`` → 42.4711"
@@ -8925,7 +8942,7 @@ msgid ""
 "ellipsoidal calculations based on the project's ellipsoid and distance unit "
 "settings."
 msgstr ""
-"ラインオブジェクトのジオメトリの3次元的な長さを返します。ジオメトリが3次元ラインオブジェクトでない場合は、2次元的な長さを返します。この計算は、常にこのジオメトリの空間参照系（SRS）で平面的に計算され、長さの単位はSRSの単位と一致します。この値は、プロジェクトの楕円体と距離単位設定にもとづいた楕円体計算が行われる"
+"ラインオブジェクトのジオメトリの3次元的な長さを返します。ジオメトリが3次元ラインオブジェクトでない場合は、2次元的な長さを返します。この計算は、常にこのジオメトリの空間参照系（SRS）で平面的に計算され、長さの単位はSRSの単位と一致します。これは、プロジェクトの楕円体と距離単位設定にもとづいた楕円体計算が行われる"
 " $length 関数とは異なります。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
@@ -11056,7 +11073,7 @@ msgid ""
 "set for the project then the calculated perimeter will be ellipsoidal, and "
 "if no ellipsoid is set then the calculated perimeter will be planimetric."
 msgstr ""
-"現在の地物の周長を返します。この関数で計算される周長は、現在のプロジェクトの楕円体の設定と距離単位の設定の両方が反映されます。例えば、プロジェクトに回転楕円体が設定されている場合は、計算された周長は楕円体長となり、楕円が設定されていない場合には、計算された周長は平面上の長さになります。"
+"現在の地物の周長を返します。この関数で計算される周長は、現在のプロジェクトの楕円体の設定と距離単位の設定の両方が反映されます。例えば、プロジェクトに楕円体が設定されている場合は、計算された周長は楕円体上のものとなり、楕円体が設定されていない場合は、計算された周長は平面上のものになります。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
 msgid "``$perimeter`` → 42"
@@ -11367,6 +11384,13 @@ msgstr "地物の回転"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:37
 msgid "roundness"
 msgstr "roundness"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:39
+msgid ""
+"Calculates how close a polygon shape is to a circle. The function returns 1 "
+"when the polygon shape is a perfect circle and 0 when it is completely flat."
+msgstr ""
+"ポリゴン形状が円にどれだけ近いかを計算します。この関数は、ポリゴン形状が完全な円である場合に 1を、完全に平坦である場合に 0 を返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
 msgid "roundness(geometry)"
@@ -14275,7 +14299,7 @@ msgid ""
 "the calculated area will be ellipsoidal, and if no ellipsoid is set then the"
 " calculated area will be planimetric."
 msgstr ""
-"現在のメッシュ面の面積を返します。この関数で計算される面積には、現在のプロジェクトの楕円体設定と面積単位設定の両方が反映されます。例えば、プロジェクトに回転楕円体が設定されている場合、楕円体面積になり、設定されていない場合、平面上の面積になります。"
+"現在のメッシュ面の面積を返します。この関数で計算される面積には、現在のプロジェクトの楕円体設定と面積単位設定の両方が反映されます。例えば、プロジェクトに楕円体が設定されている場合、計算された面積は楕円体上のものとなり、楕円体が設定されていない場合、計算された面積は平面上のものになります。"
 
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:22
 msgid "``$face_area`` → 42"
@@ -16453,6 +16477,10 @@ msgstr ""
 "のリストとその説明が含まれています。このグループは（例えば :ref:`relation_aggregate "
 "<expression_function_Aggregates_relation_aggregate>` "
 "関数を使って）式を書く際やフォームをカスタマイズする際に、リレーションIDに素早くアクセスすることができます。"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:1079
+msgid "Sensors Functions"
+msgstr "センサー関数"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1081
 msgid "This group contains functions to interact with sensors."
