@@ -109,6 +109,13 @@ displayed at the bottom of the frame.
 
 **Project files**
 
+.. _figure_project_files_settings:
+
+.. figure:: img/project_files_settings.png
+   :align: center
+
+   Project Files Settings
+
 * :guilabel:`Open project on launch`
 
   * 'Welcome Page' (default): can display the "News" feed, the project
@@ -155,10 +162,11 @@ displayed at the bottom of the frame.
 
 **Project Trust**
 
-These options control how QGIS handles execution of embedded Python code contained
-in project files. Embedded code includes macros, custom expression functions,
-Python-based actions and attribute form initialization code. QGIS allows you to
-manage trust on a per-project or per-folder basis.
+These options control how QGIS handles execution of scripts
+in project files. Embedded code includes :ref:`macros <project_macros>`, :ref:`custom expression functions <vector_expressions>`,
+:ref:`actions <actions_menu>` and :ref:`attribute form initialization code <form_custom_functions>`. QGIS allows you to
+manage trust on a per-project or per-folder basis. When a project or folder is trusted, this applies to **all embedded scripts**
+contained within. Trust cannot be granted to individual scripts.
 
 .. _figure_project_trust_settings:
 
@@ -167,30 +175,32 @@ manage trust on a per-project or per-folder basis.
 
    Project Trust Settings
 
-* :guilabel:`Behavior for untrusted project's embedded Python code`:
+* :guilabel:`Behavior for embedded scripts within projects of undetermined trust`:
   Use the dropdown menu to select how QGIS should respond when opening a project
   whose trust status has not yet been decided. Options include:
 
-  * :guilabel:`Never Execute`: block execution of all embedded Python code.
-  * :guilabel:`Never Ask for Trust`: execute all embedded Python code automatically for trusted projects or folders,
-    without prompting. Denied projects are still blocked.
-  * :guilabel:`Ask for Trust`: QGIS will display a trust dialog listing all embedded code and
+  * :guilabel:`Never Execute`: block execution of all embedded scripts.
+  * :guilabel:`Never Ask for Trust`: no request for project trust is made;
+    undetermined or already denied projects have their embedded scripts blocked.
+    Only trusted projects or folders have their embedded scripts executed.
+  * :guilabel:`Ask for Trust`: QGIS will display a trust dialog (see :numref:`figure_security_prompt`) listing all embedded scripts and
     prompt you to allow or deny execution.
-  * :guilabel:`Always Execute (Not recommended)`: enable execution of all embedded Python code.
+  * :guilabel:`Always Execute (Not recommended)`: enable execution of all embedded scripts;
+    not recommended because it bypasses all safety checks and can run untrusted or malicious code without prompting.
 
-* :guilabel:`Trusted projects and folders allowed Python code execution`:
+* :guilabel:`Trusted projects and folders allowing embedded script execution`:
   This list shows project files or folders that you have explicitly marked as
   trusted. Projects located in these paths are allowed to run their embedded
-  Python code without prompting. Use the |symbologyAdd|:sup:`Add new trusted project` or
+  scripts without prompting. Use the |symbologyAdd|:sup:`Add new trusted project` or
   |symbologyRemove|:sup:`Remove trusted project or folder` buttons to manage the list.
 
-* :guilabel:`Denied projects and folders Python code execution`:
+* :guilabel:`Untrusted projects and folders denied embedded script execution`:
   Paths listed here are explicitly marked as untrusted. Projects stored in these
-  locations will never run embedded Python code. Use the |symbologyAdd|:sup:`Add new project denial` or
+  locations will never run embedded scripts. Use the |symbologyAdd|:sup:`Add new project denial` or
   |symbologyRemove|:sup:`Remove denied project or folder` buttons to
   maintain the list.
 
-When opening a project containing embedded Python code and whose trust state is
+When opening a project containing embedded scripts and whose trust state is
 not yet known, QGIS will present a trust dialog. The dialog shows all embedded
 code blocks and allows you to preview them before deciding whether to trust the
 project.
