@@ -1021,7 +1021,7 @@ menu or from the :guilabel:`Annotations Toolbar`:
 * |htmlAnnotation| :sup:`HTML Annotation` to display a HTML-formatted string
   or a whole :file:`HTML` file as an annotation.
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
-  of a vector layer in a customized :file:`ui` file (see :numref:`figure_custom_annotation`).
+  of a vector layer in a customized :file:`.ui` file.
   This is similar to the :ref:`custom attribute forms <provide_ui_file>`,
   but displayed in an annotation item.
 
