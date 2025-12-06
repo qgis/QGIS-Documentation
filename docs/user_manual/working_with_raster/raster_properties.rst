@@ -123,7 +123,7 @@ the selected raster, including:
     it is possible to modify its :ref:`authentication settings <authentication>`,
     while keeping unchanged the details for connecting to the service.
   * For an XYZ remote layer, it is possible to modify at the layer level
-    any of their :ref:`connection details <xyz_tile>` (URL, authentication settings,
+    any of its :ref:`connection details <xyz_tile>` (URL, authentication settings,
     zoom levels, resolution, ...).
     Modifications are applied to the layer without altering the original connection settings.
 
