@@ -83,7 +83,7 @@ Provided information are:
   More properties can be created and managed using PyQGIS, specifically through
   the :pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` method.
 * the Coordinate Reference System: name, units, method, accuracy, reference
-  (i.e. whether it's static or dynamic)
+  (i.e., whether it is static or dynamic)
 * picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access,
   extents, links, contacts, history...
 
@@ -97,12 +97,16 @@ the selected vector tile, including:
 
 * the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;
 * the :guilabel:`Coordinate Reference System`:
-  Displays the layer's
-  :ref:`Coordinate Reference System (CRS) <layer_crs>`.
+  Displays the layer's :ref:`Coordinate Reference System (CRS) <layer_crs>`.
   You can change the layer's CRS, by selecting a recently used one in
   the drop-down list or clicking on the |setProjection|
   :sup:`Select CRS` button (see :ref:`crs_selector`).
   Use this process only if the layer CRS is wrong or not specified.
+* For file based vector tiles (:file:`.vtpk` or :file:`.mbtiles`),
+  a :guilabel:`Layer source` group indicates the path to the source
+  of the dataset and allows for replacing the loaded layer.
+  Edit the path shown in the text box or press :guilabel:`...` :sup:`Browse`
+  to select another file on the disk.
 
 .. _figure_vector_tile_source:
 
