@@ -1051,7 +1051,8 @@ Expanding a collection reveals the individual :guilabel:`Items` it contains.
 
 Right-click any STAC :guilabel:`Item` and choose :guilabel:`Details...` to view its metadata.
 The details panel shows the item’s JSON content and a map of its coverage.
-If an item’s asset is a cloud-optimized format (e.g. a COG), you can add it directly to the map canvas.
+If an item’s asset is a cloud-optimized format (e.g. a :file:`.COG`),
+you can add it directly to the map canvas.
 Otherwise, :guilabel:`Download Assets...` to save it locally before use.
 
 Filtering and Searching STAC Items
@@ -1102,42 +1103,30 @@ After download, use standard QGIS tools (e.g., |raster|:guilabel:`Add Raster Lay
 ArcGIS REST Server
 =====================
 
-Automatic symbol conversion
------------------------------
+An `ArcGIS REST Server`_ can host many different types of web services
+(feature service, map service, image service, ...).
+Read :ref:`arcgis_rest` for instructions to connect to an ArcGIS REST server.
 
-ArcGIS REST Server symbols are automatically converted to QGIS-native symbology,
+When loading layers form an ArcGIS Feature Service,
+symbols are automatically converted to QGIS-native symbology,
 allowing QGIS to visually reproduce the same appearance as ArcGIS web maps.
 
-Editing ArcGIS REST Server layers
-----------------------------------
-
-ArcGIS REST Server layers can be editable in QGIS if the ArcGIS service has editing enabled and your credentials grant write access
-(see :ref:`arcgis_rest` for information on loading and capabilities).
-ArcGIS REST Server layers can be editable in QGIS if:
+Layers from an ArcGIS Feature Service can be editable in QGIS if:
 
 #. The ArcGIS service has editing enabled
 #. Your credentials grant write access
 #. And the remote layer supports editing operations (Create, Update, or Delete capabilities).
    If these options are disabled on the server, the layer will be read-only in QGIS.
 
-To edit an ArcGIS REST Server layer:
-
-#. Right-click the layer and select :guilabel:`Toggle Editing`.
-#. Use QGIS editing tools to add, modify, or delete features.
-#. Click :guilabel:`Save Edits` to apply changes back to the server.
-
+Editing these layers follow the :ref:`same procedure <sec_edit_existing_layer>`
+as for other vector layers.
 To update your map with the latest changes, use :menuselection:`View --> Refresh` or press :kbd:`F5`.
-If multiple users edit the same layer concurrently, it is recommended to refresh your data before performing edits to avoid conflicts.
+If multiple users edit the same layer concurrently, it is recommended to refresh your data
+before performing edits to avoid conflicts.
 
-Filtering and querying
-----------------------
 
-Because of how the Feature Service protocol works, layers can sometimes load and render slowly on the client side.
-Applying a filter to restrict the features retrieved from the service
-can significantly improve performance, since only the filtered features are requested from the server.
-You can apply attribute-based filters to ArcGIS REST Server layers using the :ref:`expression_builder`.
-In the :guilabel:`Browser` panel, right-click the ArcGIS REST Server layer
-and select :guilabel:`Add Filtered Layer to Project` to open the builder dialog.
+.. _`ArcGIS REST Server`: https://enterprise.arcgis.com/en/server/latest/publish-services/windows/what-types-of-services-can-you-publish.htm
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
