@@ -1175,8 +1175,8 @@ Attribute Tables
 ======================
 
 The :guilabel:`Attribute Tables` tab allows you to view and edit raster attribute data.
-To access the attribute table of a raster layer, right-click the layer in the layers panel
-and select :guilabel:`Attribute Tables`.
+To access the attribute table of a raster layer, right-click the layer in the layers panel,
+open :guilabel:`Properties...` and select :guilabel:`Attribute Tables`.
 
 .. figure:: img/raster_attribute_table_menu.png
    :align: center
@@ -1203,7 +1203,9 @@ interface provides two options to define and associate a new attribute table:
    Create new attribute table from current symbology
 
 * :guilabel:`Load attribute table from VAT.DBF file`: retrieve the attribute table
-  from an external DBF file. This file must be named :file:`VAT.DBF` and located in the same directory
+  from an external DBF file. The action also can be done by right-clicking the raster layer
+  in the layers panel and selecting :guilabel:`Load Raster Attribute Table from VAT.DBF`.
+  This file must be named :file:`VAT.DBF` and located in the same directory
   as the raster file. :guilabel:`Load Raster Attribute Table` dialog will appear
   to let you browse and select the DBF file and associate it with the raster band.
 
@@ -1216,10 +1218,11 @@ interface provides two options to define and associate a new attribute table:
 Editing raster attribute tables
 --------------------------------
 
-The raster attribute table provides several tools to edit its content:
+When you open the raster attribute table, the |editTable|:sup:`Edit Attribute Table` button allows you to modify the table.
+If no specific row or field is selected, only the |newAttribute|:sup:`Add Column…` option is available.
+The following list describes all available editing options:
 
 * |editTable|:sup:`Edit Attribute Table` enables editing mode for the raster attribute table.
-  This will activate |newAttribute|:sup:`Add Column...`.
 * |newAttribute|:sup:`Add Column...` opens the :guilabel:`Add Column` dialog to add a new column
   to the raster attribute table. Choose whether the :guilabel:`Column Type` is
   |radioButtonOff|:guilabel:`Standard column`, |radioButtonOff|:guilabel:`Color RGBA` or
@@ -1243,18 +1246,14 @@ The raster attribute table provides several tools to edit its content:
 * :guilabel:`Remove Row` removes the selected row(s) from the raster attribute table.
 * |deleteAttribute|:sup:`Remove Column` removes the selected column(s) from the raster attribute table.
 * :guilabel:`Save Changes` saves any modifications made to the raster attribute table.
-
-.. note:: **Raster Band Selection** 
-
-   Allows selecting which raster band the attribute table applies to.
-   Raster layers may contain multiple bands (e.g., multispectral data).
-   Each band can have its own Raster Attribute Table. If only a single band is present,
-   this dropdown will show only one option.
-
-.. note:: **Classification**
-
-   You can select the field used for classifying the raster layer.
-   This dropdown lists all available fields that can be used for classification.
+* :guilabel:`Raster band`: allows selecting which raster band the attribute table applies to.
+  Raster layers may contain multiple bands (e.g., multispectral data).
+  Each band can have its own Raster Attribute Table. If only a single band is present,
+  this dropdown will show only one option.
+* :guilabel:`Classification`: allows selecting the fields used for classifying the raster layer.
+  Keep in mind that the existing symbology for the raster will be replaced by a new symbology from the attribute table
+  and any unsaved changes to the current symbology will be lost.
+  Make sure to save your symbology style if needed before applying a classification.
 
 .. _raster_identify:
 
