@@ -1161,7 +1161,7 @@ may greatly improve identification operations:
   and returned in the results panel.
 * |identifyByRadius| :sup:`Identify Features by Radius`
   returns items overlapping a drawn circle.
-  Draw a cercle (left-click to indicate the center point,
+  Draw a circle (left-click to indicate the center point,
   move the pointer to shape the area or enter the radius in the pop-up text box
   and left-click or press :kbd:`Enter` to validate the circle).
   All the overlaying features from target layers are highlighted
