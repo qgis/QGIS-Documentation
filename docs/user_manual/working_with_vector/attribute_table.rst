@@ -472,9 +472,11 @@ Users have several possibilities to manipulate feature in an attribute table.
 Right-click in a cell and you can:
 
 * :guilabel:`Select All` (:kbd:`Ctrl+A`) the features;
-* Copy the content of a cell in the clipboard with :guilabel:`Copy Cell Content`;
-* :guilabel:`Copy Raw Value` to copy the unformatted value of the cell to the clipboard;
-  useful when dealing with formatted numbers or dates;
+* Copy the content of a cell to the clipboard with :guilabel:`Copy Cell Content`;
+* :guilabel:`Copy Raw Value`: copies the underlying, unformatted value of the cell 
+  to the clipboard. Useful when the displayed value differs from the stored value.
+  For example, a number stored as ``11000.5`` may appear as ``11.000,5`` depending on the user's locale settings.
+  Hover your mouse over the cell to see the tooltip showing the displayed and raw values (in brackets);
 * :guilabel:`Zoom to Feature` without having to select it beforehand (double clicking
   the row header does the same);
 * :guilabel:`Pan to Feature` without having to select it beforehand;
