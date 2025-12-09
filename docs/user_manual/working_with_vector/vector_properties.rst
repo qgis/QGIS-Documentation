@@ -28,10 +28,10 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
 
    * - |metadata| :ref:`Information <vectorinformationmenu>`
      - |system| :ref:`Source <vectorsourcemenu>`
-     - |symbology| :ref:`Symbology <vector_style_menu>`:sup:`[1]`
-   * - |labelingSingle| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
-     - |labelmask| :ref:`Mask <vector_mask_menu>`:sup:`[1]`
-     - |3d| :ref:`3D View <sec_3_d_view>`:sup:`[1]`
+     - |symbology| :ref:`Symbology <vector_style_menu>` ([1]_)
+   * - |labelingSingle| :ref:`Labels <vector_labels_tab>` ([1]_)
+     - |labelmask| :ref:`Mask <vector_mask_menu>` ([1]_)
+     - |3d| :ref:`3D View <sec_3_d_view>` ([1]_)
    * - |diagram| :ref:`Diagrams <sec_diagram>`
      - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
@@ -48,14 +48,14 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - |legend| :ref:`Legend <vectorlegendmenu>`
      - |overlay| :ref:`QGIS Server <vectorservermenu>`
    * - |digitizing| :ref:`Digitizing <digitizingmenu>`
-     - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+     - :ref:`External plugins <plugins>` ([2]_) tabs
      -
 
 
-:sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
+.. [1] Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
-:sup:`[2]` :ref:`External plugins <plugins>` you install can optionally add tabs to this
-dialog. Those are not presented in this document. Refer to their documentation.
+.. [2] :ref:`External plugins <plugins>` you install can optionally add tabs to this dialog.
+ Those are not presented in this document. Refer to their documentation.
 
 .. tip:: **Share full or partial properties of the layer styles**
 
