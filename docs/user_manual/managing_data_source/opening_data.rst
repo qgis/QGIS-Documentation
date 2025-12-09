@@ -1619,11 +1619,16 @@ ArcGIS REST Servers can be added via the
      https://server.arcgisonline.com/arcgis/rest/services
      some reference: https://mappingsupport.com/p/surf_gis/list-federal-state-county-city-GIS-servers.pdf
 
-#. Expand the tree to find and select layers that you can add to the map canvas,
-   pressing :guilabel:`Add` button, or with a double-click.
+#. Expand the tree to find and select the layers of interest.
+   Their :guilabel:`Coordinate Reference System` is displayed at the bottom of the dialog.
+#. For raster-based layers, you can select the :guilabel:`Image encoding` to use
+   among a number of image formats advertized by the target service
+   ( e.g., ``PNG``, ``JPG``, ``GIF``, ``SVG``, ``SVGZ``, ... ).
 
+#. To add the selected layers to the map canvas, press :guilabel:`Add` button.
+   
    Because layers can sometimes load and render slowly on the client side,
-   Applying a filter to restrict the features retrieved from the service
+   applying a filter to restrict the features retrieved from the service
    can significantly improve performance, since only the filtered features are requested from the server.
    This can be done by:
 
@@ -1632,11 +1637,8 @@ ArcGIS REST Servers can be added via the
      to apply attribute-based filters to the layer with :ref:`expression_builder` functions.
 
      In the :guilabel:`Browser` panel, right-click the ArcGIS REST Server layer
-     and select :guilabel:`Add Filtered Layer to Project` to open the builder dialog.
+     and select :guilabel:`Add Filtered Layer to Project` will also open the builder dialog.
 
-#. For raster layers, you can also select the :guilabel:`Image encoding` to use
-   among a number of image formats advertized by the target service
-   ( e.g., ``PNG``, ``JPG``, ``GIF``, ``SVG``, ``SVGZ``, ... ).
 
 Most of the above tools to connect and access layers on an ArcGIS REST Server
 are also available from the :guilabel:`Browser` panel, within the contextual menu
