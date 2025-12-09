@@ -209,12 +209,41 @@ Available Authentication methods
 :term:`Authentication Method` libraries are loaded dynamically during
 authentication manager init. Available authentication methods are:
 
-#. ``Basic`` User and password authentication
-#. ``EsriToken`` ESRI token based authentication
-#. ``Identity-Cert`` Identity certificate authentication
-#. ``OAuth2`` OAuth2 authentication
-#. ``PKI-Paths`` PKI paths authentication
-#. ``PKI-PKCS#12`` PKI PKCS#12 authentication
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+   :class: longtable
+
+   * - Method
+     - Description
+     - Target providers
+   * - ``Basic``
+     - User and password authentication
+     - postgres, oracle, ows, wfs, wcs, wms, ogr, gdal, proxy
+   * - ``APIHeader``
+     - HTTP headers
+     - ows, wfs, wcs, wms
+   * - ``AWSS3``
+     - AWS Simple Storage Service
+     - awss3
+   * - ``EsriToken``
+     - ESRI token based authentication for ArcGIS REST servers
+     - arcgismapserver, arcgisfeatureserver
+   * - ``Identity-Cert``
+     - Identity certificate authentication
+     - ows, wfs, wcs, wms, postgres
+   * - ``MapTilerHmacSha256``
+     - MapTiler HMAC-SHA256
+     - wms, vectortile, xyzvectortiles
+   * - ``OAuth2``
+     - OAuth2 authentication
+     - ows, wfs, wcs, wms
+   * - ``PKI-Paths``
+     - PKI paths authentication
+     - ows, wfs, wcs, wms, postgres
+   * - ``PKI-PKCS#12``
+     - PKI PKCS#12 authentication
+     - ows, wfs, wcs, wms, postgres
 
 
 .. _Populate_Authorities:
