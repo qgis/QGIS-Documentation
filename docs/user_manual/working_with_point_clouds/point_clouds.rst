@@ -80,20 +80,20 @@ following sections:
 
    * - |metadata| :ref:`Information <point_clouds_information>`
      - |system| :ref:`Source <point_clouds_source>`
-     - |symbology| :ref:`Symbology <point_clouds_symbology>`:sup:`[1]`
-   * - |3d| :ref:`3D View <point_clouds_3d>`:sup:`[1]`
+     - |symbology| :ref:`Symbology <point_clouds_symbology>` ([1]_)
+   * - |3d| :ref:`3D View <point_clouds_3d>` ([1]_)
      - |rendering| :ref:`Rendering <point_clouds_rendering>`
-     - |elevationscale| :ref:`Elevation <point_clouds_elevation>`:sup:`[1]`
+     - |elevationscale| :ref:`Elevation <point_clouds_elevation>` ([1]_)
    * - |editMetadata| :ref:`Metadata <point_clouds_metadata>`
      - |basicStatistics| :ref:`Statistics <point_clouds_statistics>`
      - |legend| :ref:`Legend <point_clouds_legend>`
 
-:sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
+.. [1] Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
 .. note:: Most of the properties of a point cloud layer can be saved
   to or loaded from a :file:`.qml` file using the :guilabel:`Style` menu
-  at the bottom of the properties dialog. More details
-  at :ref:`save_layer_property`
+  at the bottom of the properties dialog.
+  More details at :ref:`save_layer_property`
 
 
 .. _point_clouds_information:
@@ -126,7 +126,7 @@ the current layer. Provided information are:
 
    Point cloud information tab
 
-.. Change screenshot to show Custom properties
+.. todo: Change screenshot to show Custom properties
 
 .. _point_clouds_source:
 
