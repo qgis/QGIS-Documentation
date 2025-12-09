@@ -351,7 +351,7 @@ each level of the dataset tree.
    |               | :menuselection:`Manage -->                 | |checkbox|   | |checkbox|   | |checkbox| | |checkbox| | |checkbox|    |            |
    |               | Add Selected Layers to Project`            |              |              |            |            |               |            |
    |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
-   |               | :menuselection:`Manage -->                 |              |              | |checkbox| |            |               |            |
+   |               | :menuselection:`Manage -->                 |              |              | |checkbox| |            | |checkbox|    |            |
    |               | Move to Another Schema`                    |              |              |            |            |               |            |
    |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
    |               | :menuselection:`Manage -->                 | |checkbox|   | |checkbox|   | |checkbox| |            | |checkbox|    | |checkbox| |
