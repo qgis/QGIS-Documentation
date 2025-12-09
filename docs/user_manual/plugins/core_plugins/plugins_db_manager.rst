@@ -81,6 +81,15 @@ It is possible to highlight a portion of the SQL to only execute that
 portion when pressing :kbd:`Ctrl+R` or clicking the :guilabel:`Execute`
 button.
 
+QGIS also adds support for the ``REGEXP`` function in some providers.
+This allows users to use regular expressions in SQL filters or expressions, for example:
+
+.. code-block:: sql
+
+   SELECT * FROM places WHERE name REGEXP '^A';
+
+This returns all features where the ``name`` field starts with the letter A.
+
 After executing your query, you can select specific cells in the result set.
 Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the clipboard.
 The copied data is available as a formatted table. This allows
