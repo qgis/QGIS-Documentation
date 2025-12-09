@@ -114,6 +114,19 @@ the selected raster, including:
   If you wish to reproject your data, use a reprojection algorithm
   from Processing or
   :ref:`Save it as new dataset <general_saveas>`.
+* Depending on the data provider, a :guilabel:`Layer source` group indicates the path
+  to the source of the dataset and allows for replacing the loaded layer:
+
+  * When the layer is stored as file on disk, edit the path shown in the text box
+    or press :guilabel:`...` :sup:`Browse` to select another file on the disk
+  * When the layer is provided by an ArcGIS MapServer service,
+    it is possible to modify its :ref:`authentication settings <authentication>`,
+    while keeping unchanged the details for connecting to the service.
+  * For an XYZ remote layer, it is possible to modify at the layer level
+    any of its :ref:`connection details <xyz_tile>` (URL, authentication settings,
+    zoom levels, resolution, ...).
+    Modifications are applied to the layer without altering the original connection settings.
+
 
 .. _figure_raster_properties:
 
