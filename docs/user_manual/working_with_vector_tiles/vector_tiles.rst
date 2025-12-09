@@ -64,6 +64,9 @@ The vector tiles :guilabel:`Layer Properties` dialog provides the following sect
    * - |labelingSingle| :ref:`Labels <vectortilesstylesmenu>` ([1]_)
      - |rendering| :ref:`Rendering <vectortilesrenderingmenu>`
      - |editMetadata| :ref:`Metadata <vectortilesmetadatamenu>`
+   * - |overlay| :ref:`QGIS Server <vectortilesservermenu>`
+     -
+     -
 
 .. [1] Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
@@ -225,6 +228,28 @@ The |editMetadata| :guilabel:`Metadata` tab provides you with options
 to create and edit a metadata report on your layer.
 See :ref:`metadatamenu` for more information.
 
+.. index:: QGIS Server
+.. _vectortilesservermenu:
+
+QGIS Server Properties
+======================
+
+The |overlay| :guilabel:`QGIS Server` tab helps you configure
+settings of the data when published by :ref:`QGIS Server <QGIS-Server-manual>`.
+The configuration concerns:
+
+* :guilabel:`Description`: provides information to describe the data,
+  such as :guilabel:`Short name`, :guilabel:`Title`, :guilabel:`Summary`,
+  a :guilabel:`List of Keywords`,  and a :guilabel:`Data URL`
+  whose :guilabel:`Type` can be in ``text/html``, ``text/plain`` or ``application/pdf``.
+* :guilabel:`Attribution`: a :guilabel:`Title` and :guilabel:`URL`
+  to identify who provides the data
+* :guilabel:`Metadata URL`: a list of :guilabel:`URL` for the metadata
+  that can be of ``FGDC`` or ``TC211`` :guilabel:`Type`,
+  and in ``text/plain`` or ``text/xml`` :guilabel:`Format`
+* :guilabel:`Legend URL`: a :guilabel:`URL` for the legend,
+  in either ``image/png`` or ``image/jpeg`` :guilabel:`Format`
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -241,6 +266,8 @@ See :ref:`metadatamenu` for more information.
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
+.. |overlay| image:: /static/common/overlay.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
