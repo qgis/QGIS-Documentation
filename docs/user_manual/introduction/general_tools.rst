@@ -1279,7 +1279,7 @@ This includes:
    +                                                  +---------------------------------------------+---------------------------------------------+
    |                                                  | :ref:`maptips`                              | :ref:`raster_display`                       |
    +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-   | |symbology| :sup:`Symbology`                     | :ref:`vector_style_menu`                    | :ref:`raster_symbology` :sup:`[1]`          |
+   | |symbology| :sup:`Symbology`                     | :ref:`vector_style_menu`                    | :ref:`raster_symbology` ([1]_)              |
    +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
    | |3d| :sup:`3D Symbology`                         | :ref:`sec_3_d_view`                         | N/A                                         |
    +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
@@ -1298,7 +1298,7 @@ This includes:
    +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
    | |openTable| :sup:`Attribute Table Configuration` | :ref:`sec_attribute_table`                  |                                             |
    +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
-   | |rendering| :sup:`Rendering`                     | :ref:`vectorrenderingmenu`                  | :ref:`raster_rendering` :sup:`[1]`          |
+   | |rendering| :sup:`Rendering`                     | :ref:`vectorrenderingmenu`                  | :ref:`raster_rendering` ([1]_)              |
    +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
    | |options| :sup:`Custom Properties`               | :ref:`vectorinformationmenu`                | :ref:`raster_information`                   |
    +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
@@ -1315,8 +1315,8 @@ This includes:
    | |indicatorNotes| :sup:`Notes`                    | :ref:`layer_notes`                                                                        |
    +--------------------------------------------------+---------------------------------------------+---------------------------------------------+
 
-:sup:`[1]`: For raster layers, symbology and rendering items are melted together,
-meaning that saving/loading one would also save/load items of/from the other.
+.. [1] For raster layers, symbology and rendering items are melted together,
+  meaning that saving/loading one would also save/load items of/from the other.
 
 
 By default, the style applied to a loaded layer is named ``default``. Once you
