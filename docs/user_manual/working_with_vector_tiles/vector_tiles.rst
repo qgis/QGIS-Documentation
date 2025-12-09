@@ -60,12 +60,12 @@ The vector tiles :guilabel:`Layer Properties` dialog provides the following sect
 
    * - |metadata| :ref:`Information <vectortilesinformationmenu>`
      - |system| :ref:`Source <vectortilessourcemenu>`
-     - |symbology| :ref:`Symbology <vectortilesstylesmenu>`:sup:`[1]`
-   * - |labelingSingle| :ref:`Labels <vectortilesstylesmenu>`:sup:`[1]`
+     - |symbology| :ref:`Symbology <vectortilesstylesmenu>` ([1]_)
+   * - |labelingSingle| :ref:`Labels <vectortilesstylesmenu>` ([1]_)
      - |rendering| :ref:`Rendering <vectortilesrenderingmenu>`
      - |editMetadata| :ref:`Metadata <vectortilesmetadatamenu>`
 
-:sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
+.. [1] Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
 
 .. _vectortilesinformationmenu:

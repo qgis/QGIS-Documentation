@@ -131,16 +131,16 @@ The mesh :guilabel:`Layer Properties` dialog provides the following sections:
 
    * - |metadata| :ref:`Information <meshinformation>`
      - |system| :ref:`Source <meshsource>`
-     - |symbology| :ref:`Symbology <meshsymbology>`:sup:`[1]`
-   * - |3d| :ref:`3D View <mesh3dview>`:sup:`[1]`
-     - |temporal| :ref:`Temporal <meshtemporal>`
-     - |labelingSingle| :ref:`Labels <meshlabels>`:sup:`[1]`
-   * - |elevationscale| :ref:`Elevation <meshelevation>`
+     - |symbology| :ref:`Symbology <meshsymbology>` ([1]_)
+   * - |labelingSingle| :ref:`Labels <meshlabels>` ([1]_)
+     - |3d| :ref:`3D View <mesh3dview>` ([1]_)
      - |rendering| :ref:`Rendering <meshrendering>`
+   * - |temporal| :ref:`Temporal <meshtemporal>`
+     - |elevationscale| :ref:`Elevation <meshelevation>`
      - |editMetadata| :ref:`Metadata <meshmetadata>`
 
 
-:sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
+.. [1] Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
 .. note:: Most of the properties of a mesh layer can be saved to or loaded from
  a :file:`.qml` using the :guilabel:`Style` menu at the bottom of the dialog.

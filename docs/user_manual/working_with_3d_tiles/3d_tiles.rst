@@ -65,16 +65,15 @@ The 3D tiles :guilabel:`Layer Properties` dialog provides the following sections
 
    * - |metadata| :ref:`Information <3dtilesinformationmenu>`
      - |system| :ref:`Source <3dtilessourcemenu>`
-     - |symbology| :ref:`Symbology <3dtilessymbologymenu>`:sup:`[1]`
-   * - |3d| :ref:`3D View <3dtiles3dviewmenu>`:sup:`[1]`
+     - |symbology| :ref:`Symbology <3dtilessymbologymenu>` ([1]_)
+   * - |3d| :ref:`3D View <3dtiles3dviewmenu>` ([1]_)
      - |rendering| :ref:`Rendering <3dtilesrenderingmenu>`
-     - |elevationscale| :ref:`Elevation <3dtileselevationmenu>`:sup:`[1]`
+     - |elevationscale| :ref:`Elevation <3dtileselevationmenu>` ([1]_)
    * - |editMetadata| :ref:`Metadata <3dtilesmetadatamenu>`
      -
      -
 
-
-:sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
+.. [1] Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
 
 .. _3dtilesinformationmenu:

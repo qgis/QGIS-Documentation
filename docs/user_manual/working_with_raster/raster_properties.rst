@@ -32,25 +32,25 @@ There are several tabs in the dialog:
 
   * - |metadata| :ref:`Information <raster_information>`
     - |system| :ref:`Source <raster_sourcetab>`
-    - |symbology| :ref:`Symbology <raster_symbology>`:sup:`[1]`
-  * - |transparency| :ref:`Transparency <raster_transparency>`:sup:`[1]`
-    - |labelingSingle| :ref:`Labels <raster_labels>`:sup:`[1]`
-    - |rasterHistogram| :ref:`Histogram <raster_histogram>`:sup:`[1]`
+    - |symbology| :ref:`Symbology <raster_symbology>` ([1]_)
+  * - |transparency| :ref:`Transparency <raster_transparency>` ([1]_)
+    - |labelingSingle| :ref:`Labels <raster_labels>` ([1]_)
+    - |rasterHistogram| :ref:`Histogram <raster_histogram>` ([1]_)
   * - |rendering| :ref:`Rendering <raster_rendering>`
     - |temporal| :ref:`Temporal <raster_temporal>`
     - |pyramids| :ref:`Pyramids <raster_pyramids>`
   * - |elevationscale| :ref:`Elevation <raster_elevation>`
     - |editMetadata| :ref:`Metadata <raster_metadata>`
-    - |legend| :ref:`Legend <raster_server>`
+    - |legend| :ref:`Legend <raster_legend>`
   * - |display| :ref:`Display <raster_display>`
     - |overlay| :ref:`QGIS Server <raster_server>`
-    - :ref:`External plugins <plugins>`:sup:`[2]` tabs
+    - :ref:`External plugins <plugins>` ([2]_) tabs
 
 
-:sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
+.. [1] Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
-:sup:`[2]` :ref:`External plugins <plugins>` you install can optionally add tabs to this
-dialog. Those are not presented in this document. Refer to their documentation.
+.. [2] :ref:`External plugins <plugins>` you install can optionally add tabs to this dialog.
+ Those are not presented in this document. Refer to their documentation.
 
 
 .. tip:: **Live update rendering**
