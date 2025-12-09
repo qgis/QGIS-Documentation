@@ -211,6 +211,7 @@ authentication manager init. Available authentication methods are:
 
 .. list-table::
    :header-rows: 1
+   :widths: auto
    :class: longtable
 
    * - Method
