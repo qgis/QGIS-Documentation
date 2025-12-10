@@ -9,15 +9,6 @@ Fix Geometry
       :local:
       :depth: 1
 
-.. note::
-
-   Some algorithms may stop when they encounter features with invalid geometries.
-   To avoid this and allow the processing to continue, open |actionOptions|:sup:`Advanced options`
-   next to the :guilabel:`Input layer` and set :guilabel:`Invalid feature filtering` to
-   ``Do not Filter (Better Performance)``. This ensures that the algorithm does
-   not stop when invalid geometries are present.
-
-
 .. _qgisfixgeometrymissingvertex:
 
 Add missing vertices along borders
@@ -1339,6 +1330,13 @@ Split self-intersecting geometries
 Splits self-intersecting geometries based on an error layer from the
 :ref:`qgischeckgeometryselfintersection` algorithm.
 
+.. note::
+
+   This algorithm detects invalid polygon geometries (self-intersections).
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
+
 .. figure:: img/fix_geometry_splitselfintersectinggeometries.png
    :align: center
 
@@ -1511,5 +1509,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |actionOptions| image:: /static/common/mActionOptions.png
+.. |options| image:: /static/common/mActionOptions.png
    :width: 1.5em
