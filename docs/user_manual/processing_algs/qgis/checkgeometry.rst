@@ -11,15 +11,6 @@ Check Geometry
       :class: toc-columns
 
 
-.. note::
-
-   Some algorithms may stop when they encounter features with invalid geometries.
-   To avoid this and allow the processing to continue, open |actionOptions|:sup:`Advanced options`
-   next to the :guilabel:`Input layer` and set :guilabel:`Invalid feature filtering` to
-   ``Do not Filter (Better Performance)``. This ensures that the algorithm does
-   not stop when invalid geometries are present.
-
-
 .. _qgischeckgeometrydangle:
 
 Dangle-end lines
@@ -154,6 +145,13 @@ Degenerate polygons
 
 Checks the polygons with less than 3 points, which are degenerate polygons.
 Degenerate polygons are errors.
+
+.. note::
+
+   This algorithm detects invalid polygon geometries (degenerate polygons).  
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
 
 Parameters
 ..........
@@ -1511,6 +1509,13 @@ Checks if the geometry has self contact points (in line or polygon),
 i.e., a vertex that touches more than two segments of the same ring.
 Self contacts are errors.
 
+.. note::
+
+   This algorithm detects invalid polygon geometries (self-contacts).
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
+
 .. figure:: img/check_geometry_selfcontact.png
    :align: center
 
@@ -1639,6 +1644,13 @@ Self-intersections
 Detects self-intersections in line or polygon geometries, and reports them as errors.
 Self-intersections occur when the segments of a geometry cross over each other
 without having a common vertex.
+
+.. note::
+
+   This algorithm detects invalid polygon geometries (self-intersections).
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
 
 .. figure:: img/check_geometry_selfintersections.png
    :align: center
@@ -1775,6 +1787,13 @@ The thinness value is between 1 and +infinity.
 A maximum area can be set for limiting the checks to polygons of a lower area.
 Polygons having a thinness higher than the maximum thinness are errors.
 To fix sliver polygons, use the :ref:`qgisfixgeometryarea` algorithm.
+
+.. note::
+
+   This algorithm detects invalid polygon geometries (sliver polygons).
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
 
 .. figure:: img/check_geometry_sliver_polygon.png
    :align: center
@@ -2030,6 +2049,13 @@ Small polygons
 ------------------
 
 Detects polygon features whose area is below a specified value as errors.
+
+.. note::
+
+   This algorithm detects invalid polygon geometries (small polygons).
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
 
 .. figure:: img/check_geometry_area.png
    :align: center
@@ -2596,5 +2622,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |actionOptions| image:: /static/common/mActionOptions.png
+.. |options| image:: /static/common/mActionOptions.png
    :width: 1.5em
