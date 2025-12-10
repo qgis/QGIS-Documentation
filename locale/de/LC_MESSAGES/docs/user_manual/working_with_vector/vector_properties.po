@@ -318,7 +318,7 @@ msgid ""
 "interesting place to quickly grab summarized information and metadata on the"
 " current layer. Provided information are:"
 msgstr ""
-"Die Registerkarte |Metadaten| :guilabel:`Information` ist nur zum Lesen "
+"Die Registerkarte |metadata| :guilabel:`Information` ist nur zum Lesen "
 "vorgesehen und stellt einen interessanten Ort dar, um schnell "
 "zusammengefasste Informationen und Metadaten über den aktuellen Layer zu "
 "erhalten. Die bereitgestellten Informationen sind:"
@@ -330,6 +330,26 @@ msgid ""
 msgstr ""
 "allgemeine Angaben wie Name im Projekt, Quellpfad, Liste der Hilfsdateien, "
 "letzte Speicherzeit und -größe, der verwendete Datenanbieter"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:85
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties may include "
+":ref:`layer notes <layer_notes>`, :ref:`legend widgets <vectorlegendmenu>`, "
+":ref:`layer variables <general_tools_variables>`, :ref:`form properties "
+"<vector_attributes_menu>`... More custom properties can be created and "
+"managed using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"Benutzerdefinierte Eigenschaften, die verwendet werden, um zusätzliche "
+"Informationen über den Layer im aktiven Projekt zu speichern. Zu den "
+"standardmäßigen benutzerdefinierten Eigenschaften können gehören: "
+":ref:`Layer-Notizen <layer_notes>`, :ref:`Legenden-Widgets "
+"<vectorlegendmenu>`, :ref:`Layer-Variablen <general_tools_variables>`, "
+":ref:`Formulareigenschaften <vector_attributes_menu>`... Weitere "
+"benutzerdefinierte Eigenschaften können mit PyQGIS erstellt und verwaltet "
+"werden, insbesondere mit der Methode :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>`."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:91
 msgid ""
@@ -643,7 +663,7 @@ msgid ""
 "that helps you prepare the classification and the symbol to use for features"
 " and at the bottom the :ref:`layer_rendering` widget."
 msgstr ""
-"Die Registerkarte |Symbolik| :guilabel:`Symbolisierung` bietet Ihnen ein "
+"Die Registerkarte |symbology| :guilabel:`Symbolisierung` bietet Ihnen ein "
 "umfassendes Werkzeug zum Rendern und Symbolisieren Ihrer Vektordaten. Sie "
 "können sowohl Werkzeuge verwenden, die für alle Vektordaten gelten, als auch"
 " spezielle Symbolisierungswerkzeuge, die für die verschiedenen Arten von "
@@ -853,10 +873,11 @@ msgid ""
 msgstr ""
 "Wählen Sie den :guilabel:`Wert` der Klassifizierung: Es kann ein bestehendes"
 " Feld oder ein :ref:`Ausdruck` sein, den Sie in das Feld eingeben oder über "
-"die zugehörige Schaltfläche |Ausdruck| erstellen können. Die Verwendung von "
-"Ausdrücken für die Kategorisierung vermeidet die Notwendigkeit, ein Feld nur"
-" für Symbolzwecke zu erstellen (z. B. wenn Ihre Klassifizierungskriterien "
-"von einem oder mehreren Attributen abgeleitet sind)."
+"die zugehörige Schaltfläche |expression| erstellen können. Die Verwendung "
+"von Ausdrücken für die Kategorisierung vermeidet die Notwendigkeit, ein Feld"
+" nur für Symbolzwecke zu erstellen (z. B. wenn Ihre "
+"Klassifizierungskriterien von einem oder mehreren Attributen abgeleitet "
+"sind)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:355
 msgid ""
@@ -908,6 +929,14 @@ msgid ""
 msgstr ""
 "Konfigurieren Sie das :ref:`Symbol <symbol-selector>`, das als Basissymbol "
 "für alle Klassen verwendet werden soll;"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:403
+msgid ""
+"Indicate the :ref:`Color ramp <color-ramp>`, i.e. the range of colors from "
+"which the color applied to each symbol is selected."
+msgstr ""
+"Geben Sie den :ref:`Farbverlauf <color-ramp>` an, d. h. den Farbbereich, aus"
+" dem die Farbe ausgewählt wird, die auf jedes Symbol angewendet wird."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:406
 msgid ""
@@ -1183,7 +1212,7 @@ msgid ""
 msgstr ""
 "Der :guilabel:`Wert` der Klassifizierung kann ein bestehendes Feld oder ein "
 ":ref:`Ausdruck` sein, den Sie in das Feld eingeben oder mit der zugehörigen "
-"Schaltfläche |Ausdruck| erstellen können. Durch die Verwendung von "
+"Schaltfläche |expression| erstellen können. Durch die Verwendung von "
 "Ausdrücken für die Klassifizierung wird die Notwendigkeit vermieden, ein "
 "Feld nur für Symbologiezwecke zu erstellen (z. B. wenn Ihre "
 "Klassifizierungskriterien von einem oder mehreren Attributen abgeleitet "
@@ -2104,9 +2133,58 @@ msgstr "Invertierte Polygone Dialog"
 msgid "Heatmap Renderer"
 msgstr "Heatmap Renderer"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:893
+msgid ""
+"With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live "
+"dynamic heatmaps for (multi)point layers. You can specify the heatmap "
+":guilabel:`Radius` in millimeters, points, pixels, map units or inches, "
+"choose and edit a :guilabel:`Color ramp` for the heatmap style and use a "
+"slider for selecting a trade-off between render speed and quality. You can "
+"also define a :guilabel:`Maximum value` limit and :guilabel:`Weight points "
+"by` using a field or an expression."
+msgstr ""
+"Mit dem |heatmapSymbol| :guilabel:`Heatmap`-Renderer können Sie dynamische "
+"Live-Heatmaps für (Multi-)Punkt-Layer erstellen. Sie können den "
+"Heatmap-:guilabel:`Radius` in Millimetern, Punkten, Pixeln, Karteneinheiten "
+"oder Zoll angeben, eine :guilabel:`Farbverlauf` für den Heatmap-Stil "
+"auswählen und bearbeiten und mit einem Schieberegler einen Kompromiss "
+"zwischen Rendergeschwindigkeit und Qualität wählen. Sie können auch einen "
+":guilabel:`Maximalwert` und :guilabel:`Gewichtungspunkte nach` mithilfe "
+"eines Feldes oder eines Ausdrucks definieren."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3974
 msgid "heatmapSymbol"
 msgstr "heatmapSymbol"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:900
+msgid ""
+"Use |dataDefine| :sup:`Data defined override` to dynamically control "
+":guilabel:`Radius` and :guilabel:`Maximum value` based on the attributes of "
+"your data. For example, the radius of a heatmap point could be determined by"
+" its population attribute, or the maximum value could be based on a temporal"
+" range."
+msgstr ""
+"Verwenden Sie |dataDefine| :sup:`datendefinierte Übersteuerung`, um "
+":guilabel:`Radius` und :guilabel:`Maximalwert` basierend auf den Attributen "
+"Ihrer Daten dynamisch zu steuern. Beispielsweise könnte der Radius eines "
+"Heatmap-Punkts durch sein Bevölkerungsattribut bestimmt werden oder der "
+"Maximalwert könnte auf einem zeitlichen Bereich basieren."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:905
+msgid ""
+"When adding or removing a feature the heatmap renderer updates the heatmap "
+"style automatically. The :guilabel:`Color ramp` will be shown as a legend "
+"bar and in the :guilabel:`Legend settings` you can set the "
+":guilabel:`Labels` for the :guilabel:`Maximum` and :guilabel:`Minimum` "
+"values. You can also change the orientation and direction of the legend in "
+"the :guilabel:`Layout`."
+msgstr ""
+"Beim Hinzufügen oder Entfernen einer Funktion aktualisiert der Heatmap-"
+"Renderer automatisch den Heatmap-Stil. Der :guilabel:`Farbverlauf` wird als "
+"Legendenleiste angezeigt, und in den :guilabel:`Legendeneinstellungen` "
+"können Sie die :guilabel:`Beschriftungen` für die :guilabel:`Maximal`- und "
+":guilabel:`Minimal`-Werte festlegen. Außerdem können Sie die Ausrichtung und"
+" Richtung der Legende im :guilabel:`Layout` ändern."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:916
 msgid "Heatmap dialog"
@@ -2903,9 +2981,43 @@ msgstr ""
 "|labelingSingle| :sup:`Layerbeschriftungseinstellungen` in der "
 "**Beschriftungswerkzeugleiste** aufgerufen werden."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1321
+msgid "At the top of the dialog, you have:"
+msgstr "Am oberen Rand des Dialogfelds finden Sie:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1323
+msgid ""
+"a combobox for selecting the appropriate labeling method for the active "
+"layer"
+msgstr ""
+"Eine Combobox zur Auswahl der gewünschten Beschriftungsmethode für den "
+"aktiven Layer"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1324
+msgid ""
+"the |labelingRules| :sup:`Configure project labeling rules` button: helps "
+"you control interactions between labels and features across the layers in "
+"the project. More details at :ref:`labeling_rules`."
+msgstr ""
+"Die Schaltfläche |labelingRules| :sup:`Projektbeschriftungsregeln "
+"einstellen`: Hilft Ihnen, die Interaktionen zwischen Beschriftungen und "
+"Funktionen über den Layer im Projekt hinweg zu steuern. Weitere Details "
+"finden Sie unter :ref:`labeling_rules`."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4002
 msgid "labelingRules"
 msgstr "labelingRules"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1327
+msgid ""
+"the |autoPlacementSettings| :sup:`Automated placement settings (applies to "
+"all layers)` button: configure general properties on label placement and "
+"conflicts resolution. More details at :ref:`automated_placement`."
+msgstr ""
+"Die Schaltfläche |autoPlacementSettings| :sup:`Automatische "
+"Platzierungseinstellungen (gilt für alle Layer)`: Konfigurieren Sie "
+"allgemeine Eigenschaften für die Platzierung von Beschriftungen und die "
+"Konfliktlösung. Weitere Details finden Sie unter :ref:`automated_placement`."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3932
 msgid "autoPlacementSettings"
@@ -3080,6 +3192,129 @@ msgstr ""
 "Eine Beschreibung, wie die einzelnen Eigenschaften einzustellen sind, findet"
 " sich unter :ref:`showlabels`."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1380
+msgid "Configuring project labeling rules"
+msgstr "Projektbeschriftungsregeln einstellen"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1382
+msgid ""
+"Pressing the |labelingRules| :sup:`Configure project labeling rules` button "
+"next to the labeling method drop-down selector, you can create rules that "
+"controls how labels from a layer can interact with labels or features from "
+"another layer."
+msgstr ""
+"Durch Klicken auf die Schaltfläche |labelingRules| "
+":sup:`Projektbeschriftungsregeln einstellen` neben dem Dropdown-Menü für die"
+" Beschriftungsmethode können Sie Regeln festlegen, die steuern, wie "
+"Beschriftungen aus einem Layer mit Beschriftungen oder Elementen aus einem "
+"anderen Layer zusammenspielen."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1387
+msgid ""
+"Press the |symbologyAdd| :sup:`Add rule` button and in the drop-down menu, "
+"select one of the rule types:"
+msgstr ""
+"Drücken Sie die Schaltfläche |symbologyAdd| :sup:`Regel hinzufügen` und "
+"wählen Sie im Dropdown-Menü einen der Regeltypen aus:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1390
+msgid ""
+":guilabel:`Prevent labels overlapping features`: prevents labels being "
+"placed overlapping features from a different layer."
+msgstr ""
+":guilabel:`Objektüberlappende Beschriftungen vermeiden`: Verhindert, dass "
+"Beschriftungen so platziert werden, dass sie Elemente aus einer anderen "
+"Ebene überlappen."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1392
+msgid ""
+":guilabel:`Pull labels towards features`: prevents labels being placed too "
+"far from features from a different layer. The maximum distance can be set in"
+" the unit of your choice."
+msgstr ""
+":guilabel:`Beschriftungen an Objekten hinziehen`: Verhindert, dass "
+"Beschriftungen zu weit von Objekten eines anderen Layers entfernt platziert "
+"werden. Der maximale Abstand kann in einer Einheit Ihrer Wahl festgelegt "
+"werden."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1395
+msgid ""
+":guilabel:`Push labels away from features`: prevents labels being placed too"
+" close to features from a different layer. The minimum distance can be set "
+"in the unit of your choice, as well as the :ref:`rule's priority "
+"<labels_priority>` (The highest-priority rules are more important to respect"
+" in the event of a label placement conflict)."
+msgstr ""
+":guilabel:`Beschriftungen von Objekten fortschieben: Verhindert, dass "
+"Beschriftungen zu nahe an Objekten aus einem anderen Layer platziert werden."
+" Der Mindestabstand kann in einer Einheit Ihrer Wahl festgelegt werden, "
+"ebenso wie die :ref:`Priorität der Regel <labels_priority>` (Regeln mit der "
+"höchsten Priorität sind bei Konflikten bei der Beschriftungsplatzierung "
+"wichtiger)."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1401
+msgid ""
+":guilabel:`Push labels away from other labels`: prevents labels being placed"
+" too close to labels from a different layer."
+msgstr ""
+":guilabel:`Beschriftungen von anderen Beschriftungen fortschieben: "
+"Verhindert, dass Beschriftungen zu nahe an Beschriftungen aus einer anderen "
+"Ebene platziert werden."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1404
+msgid ""
+"Because the last three require a build based on GEOS >= 3.10, they may not "
+"be available on your QGIS installation depending on the underlying GEOS "
+"version in use."
+msgstr ""
+"Da die letzten drei eine auf GEOS >= 3.10 basierende Version erfordern, sind"
+" sie je nach der verwendeten GEOS-Version möglicherweise nicht in Ihrer "
+"QGIS-Installation verfügbar."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1408
+msgid ""
+"Fill the properties at your will; you can provide a more meaningful name to "
+"the rule."
+msgstr ""
+"Füllen Sie die Eigenschaften nach Belieben aus; Sie können der Regel einen "
+"aussagekräftigeren Namen geben."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1409
+msgid "Press :guilabel:`OK`."
+msgstr "Drücke Sie :guilabel:`OK`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1410
+msgid "Add as many rules as necessary."
+msgstr "Fügen Sie so viele Regeln hinzu, wie nötig."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1411
+msgid ""
+"If necessary, press |symbologyEdit| :sup:`Edit rule` to modify the selected "
+"rule or |symbologyRemove| :sup:`Remove rule` to delete it from the project."
+msgstr ""
+"Drücken Sie bei Bedarf |symbologyEdit| :sup:`Regel bearbeiten`, um die "
+"ausgewählte Regel zu ändern, oder |symbologyRemove| :sup:`Regel entfernen`, "
+"um sie aus dem Projekt zu löschen."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1414
+msgid ""
+"The set rules are available from any layer :guilabel:`Labels` properties "
+"tab, pressing the |labelingRules| :sup:`Configure project labeling rules` "
+"button. You can temporary enable or disable any of them, using the checkbox "
+"next to the name. Hover over a rule to preview its details."
+msgstr ""
+"Die festgelegten Regeln sind in jedem Layer im Projekt unter der "
+"Registerkarte :guilabel:`Beschriftungen` in den Layereigenschaften durch "
+"Klicken auf die Schaltfläche |labelingRules| "
+":sup:`Projektbeschriftungsregeln einstellen` verfügbar. Sie können jede "
+"Regel vorübergehend aktivieren oder deaktivieren, indem Sie das "
+"Kontrollkästchen neben dem Namen aktivieren bzw. deaktivieren. Bewegen Sie "
+"den Mauszeiger über eine Regel, um eine Vorschau ihrer Details anzuzeigen."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1424
+msgid "Overview of labeling rules interaction"
+msgstr "Übersicht über die Interaktion von Beschriftungsregeln"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1431
 msgid "Setting the automated placement engine"
 msgstr "Einstellung des automatischen Platzierungssystems"
@@ -3115,6 +3350,54 @@ msgstr ""
 "Größe basieren. Je länger oder breiter ein Objekt ist, desto mehr Kandidaten"
 " hat es, und seine Beschriftungen können mit geringerem Kollisionsrisiko "
 "besser platziert werden."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1453
+msgid ""
+":guilabel:`Text rendering`: sets the default value for label rendering "
+"widgets when :ref:`exporting a map canvas <exportingmapcanvas>` or :ref:`a "
+"layout <create-output>` to PDF or SVG. If :guilabel:`Always render labels as"
+" text` is selected then labels can be edited in external applications (e.g. "
+"Inkscape) as normal text. BUT the side effect is that the rendering quality "
+"is decreased, and there are issues with rendering when certain text settings"
+" like buffers are in place. That's why :guilabel:`Always render labels as "
+"paths (recommended)` which exports labels as outlines but guarantees "
+"complete compatibility with the full range of formatting options available, "
+"is recommended. With :guilabel:`Prefer rendering labels as text` option, "
+"labels are rendered as text objects, unless doing so results in rendering "
+"artifacts or poor quality rendering (depending on text format settings)."
+msgstr ""
+":guilabel:`Textdarstellung`: Legt den Standardwert für die Darstellung von "
+"Beschriftungs-Widgets fest, wenn :ref:`die Kartenansicht "
+"<exportingmapcanvas>` oder :ref:`ein Druck-Layout <create-output>` als PDF "
+"oder SVG exportiert wird. Wenn :guilabel:`Beschriftungen immer als Text "
+"darstellen` ausgewählt ist, können Beschriftungen in externen Anwendungen "
+"(z. B. Inkscape) wie normaler Text bearbeitet werden. ABER dies hat den "
+"Nebeneffekt, dass die Darstellungsqualität beeinträchtigt wird und es zu "
+"Problemen bei der Darstellung kommt, wenn bestimmte Texteinstellungen wie "
+"Puffer vorhanden sind. Aus diesem Grund wird die Option "
+":guilabel:`Beschriftungen immer als Pfad darstellen` empfohlen, die Labels "
+"als Konturen exportiert, aber vollständige Kompatibilität mit allen "
+"verfügbaren Formatierungsoptionen garantiert. Mit der Option "
+":guilabel:`Anzeige der Schriftungen als Text bevorzugen` werden Labels als "
+"Textobjekte gerendert, es sei denn, dies führt zu Rendering-Artefakten oder "
+"einer schlechten Rendering-Qualität (abhängig von den "
+"Textformateinstellungen)."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1466
+msgid ""
+"When rendering labels as text to a vector based device (e.g. PDF or SVG), "
+"care must be taken to ensure that the required fonts are available to users "
+"when opening the created files, or default fallback fonts will be used to "
+"display the output instead. (Although PDF exports MAY automatically embed "
+"some fonts when possible, depending on the user’s platform)."
+msgstr ""
+"Beim Rendern von Beschriftungen als Text auf einem vektorbasierten Format "
+"(z. B. PDF oder SVG) muss darauf geachtet werden, dass die erforderlichen "
+"Schriftarten beim Öffnen der erstellten Dateien für die Benutzer verfügbar "
+"sind, da sonst stattdessen Standard-Fallback-Schriftarten zur Anzeige der "
+"Ausgabe verwendet werden. (Allerdings KÖNNEN PDF-Exporte je nach Plattform "
+"des Benutzers einige Schriftarten automatisch einbetten, sofern dies möglich"
+" ist)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1471
 msgid ""
@@ -3171,6 +3454,15 @@ msgstr ""
 "Auswirkungen verschiedener Beschriftungseinstellungen nützlich. Dies könnte "
 "für eine bessere manuelle Platzierung mit Werkzeugen aus der "
 ":ref:`Etiketten-Symbolleiste <label_toolbar>` nützlich sein."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1488
+msgid ""
+"|unchecked| :guilabel:`Show label metrics (for debugging)`: displays the "
+"text bounds of the label in red and baselines in blue"
+msgstr ""
+"|unchecked| :guilabel:`Beschriftungseigenschaften anzeigen (zur "
+"Fehlersuche)`: Zeigt die Textgrenzen der Beschriftung in Rot und die "
+"Grundlinien in Blau an."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1490
 msgid ""
@@ -3893,6 +4185,20 @@ msgstr ""
 msgid "Diagrams Properties"
 msgstr "Diagrammeigenschaften"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1860
+msgid ""
+"The |diagram| :guilabel:`Diagrams` tab allows you to add a graphic overlay "
+"to a vector layer (see :numref:`figure_diagrams_attributes`). This dialog "
+"can also be accessed from the :guilabel:`Layer Styling` panel, or using the "
+"|diagram| :sup:`Layer Diagram Options` button of the **Labels toolbar**."
+msgstr ""
+"Über die Registerkarte |diagram| :guilabel:`Diagramme` können Sie einem "
+"Vektorlayer eine grafische Überlagerung hinzufügen (siehe "
+":numref:`figure_diagrams_attributes`). Dieser Dialog kann auch über das "
+"Bedienfeld :guilabel:`Layergestaltung` oder über die Schaltfläche |diagram| "
+":sup:`Layerdiagrammoptionen` der **Beschriftungen**-Werkzeugleiste "
+"aufgerufen werden."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1865
 msgid "The current core implementation of diagrams provides support for:"
 msgstr ""
@@ -3903,7 +4209,7 @@ msgid ""
 "|diagramNone| :guilabel:`No diagrams`: the default value with no diagram "
 "displayed over the features;"
 msgstr ""
-"|diagramNone| :guilabel:`Keine Diagramme\": der Standardwert, bei dem kein "
+"|diagramNone| :guilabel:`Keine Diagramme`: der Standardwert, bei dem kein "
 "Diagramm über den Objekten angezeigt wird;"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3956
@@ -3924,13 +4230,48 @@ msgstr ""
 msgid "piechart"
 msgstr "piechart"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1872
+msgid ""
+"|text| :guilabel:`Text diagram`, a horizontally divided circle showing "
+"statistic values inside;"
+msgstr ""
+"|text| :guilabel:`Textdiagramm`, ein horizontal geteilter Kreis, der "
+"statistische Werte enthält;"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1874
+msgid ""
+"|histogram| :guilabel:`Histogram`, bars of varying colors for each attribute"
+" aligned next to each other;"
+msgstr ""
+"|Histogramm| :guilabel:`Histogramm`, Balken in unterschiedlichen Farben für "
+"jedes Attribut, die nebeneinander angeordnet sind;"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3976
 msgid "histogram"
 msgstr "histogram"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1876
+msgid ""
+"|stackedBar| :guilabel:`Stacked bars`, stacks bars of varying colors for "
+"each attribute on top of each other vertically or horizontally;"
+msgstr ""
+"|stackedBar| :guilabel:`Balkenstapel`, stapelt Balken unterschiedlicher "
+"Farben für jedes Attribut vertikal oder horizontal übereinander;"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4073
 msgid "stackedBar"
 msgstr "stackedBar"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1878
+msgid ""
+"|stackedDiagram| :guilabel:`Stacked diagram`, stacks diagrams of equal or "
+"varying types, next to each other, vertically or horizontally. More details "
+"at :ref:`Stacked Diagrams <stacked_diagrams>`."
+msgstr ""
+"|stackedDiagram| :guilabel:`Gestapeltes Diagramm`, stapelt Diagramme "
+"gleichen oder unterschiedlichen Typs nebeneinander, vertikal oder "
+"horizontal. Weitere Details unter :ref:`Gestapelte Diagramme "
+"<stacked_diagrams>`."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4075
 msgid "stackedDiagram"
@@ -4097,6 +4438,16 @@ msgid ""
 msgstr ""
 "Auf dieser Registerkarte können Sie auch die Sichtbarkeit des Diagramms mit "
 "verschiedenen Optionen verwalten und feineinstellen:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1951
+msgid ""
+":guilabel:`Diagram z-index`: controls how diagrams are drawn on top of each "
+"other and on top of labels. A diagram with a high index is drawn over other "
+"diagrams and labels;"
+msgstr ""
+":guilabel:`Diagramm-Z-Index`: Steuert, wie Diagramme übereinander und über "
+"Beschriftungen gezeichnet werden. Ein Diagramm mit einem hohen Index wird "
+"über anderen Diagrammen und Beschriftungen gezeichnet."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1954
 msgid ""
@@ -4268,6 +4619,33 @@ msgstr ""
 ":ref:`Beschriftungen und Diagramme verschieben <label_toolbar>` gefüllt "
 "werden."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2031
+msgid ""
+"In the :guilabel:`Priority` section, you can define the placement priority "
+"rank of each diagram, i.e. if there are different diagrams or labels "
+"candidates for the same location, the item with the higher priority will be "
+"displayed and the others could be left out."
+msgstr ""
+"Im Abschnitt :guilabel:`Priorität` können Sie die Platzierungspriorität "
+"jedes Diagramms festlegen, d. h. wenn mehrere Diagramme oder Beschriftungen "
+"für denselben Ort in Frage kommen, wird das Element mit der höheren "
+"Priorität angezeigt und die anderen können weggelassen werden."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2036
+msgid ""
+":guilabel:`Discourage diagrams and labels from covering features` defines "
+"features to use as :ref:`obstacles <labels_obstacles>`, i.e. QGIS will try "
+"to not place diagrams nor labels over these features. The priority rank is "
+"then used to evaluate whether a diagram could be omitted due to a greater "
+"weighted obstacle feature."
+msgstr ""
+":guilabel:`Möglichst keine Objekte durch Diagramme und Beschriftungen "
+"verdecken` definiert Objekte, die als :ref:`Hindernisse <labels_obstacles>` "
+"verwendet werden sollen, d. h. QGIS versucht, keine Diagramme oder "
+"Beschriftungen über diesen Features zu platzieren. Der Prioritätsrang wird "
+"dann verwendet, um zu bewerten, ob ein Diagramm aufgrund eines höher "
+"gewichteten Hindernis-Features weggelassen werden kann."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2047
 msgid "Vector properties dialog with diagram properties, Placement tab"
 msgstr "Diagrammeigenschaften - Reiter Platzierung"
@@ -4336,6 +4714,72 @@ msgstr ""
 "Wenn diese Option aktiviert ist, werden die Elemente der Diagrammlegende "
 "(Attribute mit Farbe und Diagrammgröße) auch in der Legende des Drucklayouts"
 " angezeigt, und zwar neben der Layer-Symbolik."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2084
+msgid "Stacked Diagrams"
+msgstr "Gestapelte Diagramme"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2086
+msgid ""
+"Stacked diagrams allow users to create complex diagrams like population "
+"pyramids, where two subdiagrams, namely histograms, are located side by side"
+" and displayed horizontally."
+msgstr ""
+"Gestapelte Diagramme ermöglichen es Benutzern, komplexe Diagramme wie "
+"Bevölkerungspyramiden zu erstellen, bei denen zwei Unterdiagramme, nämlich "
+"Histogramme, nebeneinander angeordnet und horizontal angezeigt werden."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2095
+msgid "Population pyramids built for each layer feature"
+msgstr "Für jeden Layer erstellte Bevölkerungspyramiden"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2097
+msgid ""
+"Multi-temporal diagrams can also be constructed as stacked diagrams. The "
+"number of subdiagrams, as well as the spacing between them can be "
+"configured."
+msgstr ""
+"Multitemporale Diagramme können auch als gestapelte Diagramme erstellt "
+"werden. Die Anzahl der Unterdiagramme sowie der Abstand zwischen ihnen "
+"können konfiguriert werden."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2100
+msgid ""
+"Moreover, subdiagrams can have different types (e.g., a pie chart alongside "
+"a histogram) and have their own independent settings like :ref:`Attributes "
+"<diagram_attributes>`, :ref:`Rendering <diagram_appearance>`, :ref:`Size "
+"<diagram_size>`, :ref:`Options <diagram_options>` and :ref:`Legend "
+"<diagram_legend>`."
+msgstr ""
+"Darüber hinaus können Unterdiagramme unterschiedliche Typen haben (z. B. ein"
+" Kreisdiagramm neben einem Histogramm) und über eigene unabhängige "
+"Einstellungen verfügen, wie z. B. :ref:`Attribute <diagram_attributes>`, "
+":ref:`Darstellung <diagram_appearance>`, :ref:`Größe<diagram_size>`, "
+":ref:`Optionen <diagram_options>` und :ref:`Legende <diagram_legend>`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2105
+msgid ""
+":ref:`Placement <diagram_placement>` settings in a stacked diagram, as well "
+"as some visibility settings (located in the :ref:`Rendering "
+"<diagram_appearance>` tab), are determined by the placement and visibility "
+"settings of the first subdiagram in the stack."
+msgstr ""
+"Die Einstellungen unter :ref:`Platzierung <diagram_placement>` in einem "
+"gestapelten Diagramm sowie einige Sichtbarkeitseinstellungen (zu finden "
+"unter der Registerkarte :ref:`Darstellung <diagram_appearance>`) werden "
+"durch die Platzierungs- und Sichtbarkeitseinstellungen des ersten "
+"Unterdiagramms im Stapel bestimmt."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2110
+msgid ""
+"Finally, subdiagram ordering is given by the item ordering in the Stacked "
+"Diagram's list. The first subdiagram appears to the left in a horizontal "
+"stacked diagram, or in the upper part of a vertical one."
+msgstr ""
+"Schließlich wird die Reihenfolge der Unterdiagramme durch die Reihenfolge "
+"der Elemente in der Liste des gestapelten Diagramms vorgegeben. Das erste "
+"Unterdiagramm erscheint in einem horizontal gestapelten Diagramm links oder "
+"in einem vertikalen Diagramm oben."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2117
 msgid "Masks Properties"
@@ -4652,6 +5096,44 @@ msgstr "Layereigenschaften - Felder Reiter"
 msgid "Attributes Form Properties"
 msgstr "Attributformular"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2263
+msgid ""
+"The |formView| :guilabel:`Attributes Form` tab helps you set up the form to "
+"display when creating new features, editing or querying existing one. This "
+"affects them in both :ref:`table and form views <attribute_table_view>`. You"
+" can define:"
+msgstr ""
+"Der Reiter |formView| :guilabel:`Attributformular` hilft Ihnen dabei, das "
+"Formular einzurichten, das beim Erstellen neuer Features, beim Bearbeiten "
+"oder Abfragen bestehender Features angezeigt wird. Dies wirkt sich sowohl "
+"auf die :ref:`Tabellen- als auch auf die Formularansicht "
+"<attribute_table_view>` aus. Sie können Folgendes definieren:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2268
+msgid ""
+"the look and the behavior (label, visibility, widget, constraints...) of "
+"each field in the current layer, the :ref:`joined layers <sec_joins>` and "
+"the :ref:`relational ones <vector_relations>`;"
+msgstr ""
+"das Aussehen und Verhalten (Beschriftung, Sichtbarkeit, Widget, "
+"Einschränkungen...) jedes Feldes im aktuellen Layer, den :ref:`verknüpften "
+"Layern <sec_joins>` und den :ref:`in Beziehung gesetzten Layern "
+"<vector_relations>`;"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2271
+msgid "the placement of enabled :ref:`actions <actions_menu>`;"
+msgstr "die Platzierung von aktivierten :ref:`Aktionen <actions_menu>`;"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2272
+msgid "the form's structure (custom or autogenerated);"
+msgstr ""
+"die Struktur des Formulars (benutzerdefiniert oder automatisch generiert);"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2273
+msgid "extra HTML, QML, text widgets to enhance the form;"
+msgstr ""
+"zusätzliche HTML-, QML- und Text-Widgets zur Verbesserung des Formulars;"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2274
 msgid ""
 "extra logic in Python to handle interaction with the form or field widgets."
@@ -4743,6 +5225,20 @@ msgstr ""
 msgid "The autogenerated form"
 msgstr "Das automatisch erzeugte Formular"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2309
+msgid ""
+"When the ``Autogenerate`` option is on, the :guilabel:`Available widgets` "
+"panel displays lists of fields (from the current layer, the join and "
+"relation layers) and the enabled actions that would be shown in the form. "
+"Select a field and you can configure its appearance and behavior in the "
+"right panel:"
+msgstr ""
+"Wenn die Option „Automatisch generieren“ aktiviert ist, werden im Bereich "
+"„Verfügbare Elemente“ Listen mit Feldern (aus dem aktuellen Layer, den "
+"Verknüpfungs- und Beziehungs-Layern) und den aktivierten Aktionen angezeigt,"
+" die im Formular angezeigt werden würden. Wählen Sie ein Feld aus, um dessen"
+" Darstellung und Verhalten im rechten Bereich zu konfigurieren:"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2314
 msgid ""
 "adding :ref:`custom label and automated checks <configure_field>` to the "
@@ -4754,6 +5250,18 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2315
 msgid "setting a :ref:`particular widget <edit_widgets>` to use."
 msgstr ":ref:`bestimmtes Funktionen<edit_widgets>`  setzten."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2317
+msgid ""
+"In this editor mode, only the properties can be viewed for the actions. "
+"Moreover, they will be displayed through an :guilabel:`Actions` drop-down "
+"menu in the feature form, and following the :guilabel:`Show in attribute "
+"table` property in other contexts."
+msgstr ""
+"In diesem Bearbeitungsmodus können nur die Eigenschaften der Aktionen "
+"angezeigt werden. Außerdem werden sie über ein Dropdown-Menü „Aktionen“ im "
+"Funktionsformular und in anderen Kontexten nach der Eigenschaft „In "
+"Attributtabelle anzeigen“ angezeigt."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2326
 msgid "The drag and drop designer"
@@ -4841,6 +5349,10 @@ msgstr ""
 "Der erste Schritt ist die Verwendung des Symbols |symbologyAdd| :sup:`Fügt "
 "einen neuen Reiter oder eine Gruppe zum Formularlayout hinzu`. Darin werden "
 "Felder und andere Gruppen angezeigt."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2356
+msgid "Then set the properties of the container, i.e.:"
+msgstr "Legen Sie dann die Eigenschaften des Containers fest, d. h.:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2358
 msgid "the :guilabel:`Label`: the title that will be used for the container"
@@ -5114,6 +5626,61 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2451
 msgid "A preview of your image is displayed on the right."
 msgstr "Auf der rechten Seite wird eine Vorschau Ihres Bildes angezeigt."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2453
+msgid ""
+":guilabel:`QML Widget`: embeds a Qt QML_ document, displaying graphical "
+"elements in the attribute form. Beside the custom :guilabel:`Title` of the "
+"added widget and whether it should be shown or not, you can select from "
+"predefined :guilabel:`QML code` elements:"
+msgstr ""
+":guilabel:`QML Widget`: Bettet ein Qt QML_ Dokument ein und zeigt grafische "
+"Elemente in Form von Attributen an. Neben dem benutzerdefinierten "
+":guilabel:`Titel` des hinzugefügten Widgets und der Entscheidung, ob es "
+"angezeigt werden soll oder nicht, können Sie aus vordefinierten "
+":guilabel:`QML-Kode`-Elementen auswählen:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2457
+msgid ""
+":guilabel:`Free text...`: allows you to write from scratch or paste an "
+"existing code"
+msgstr ""
+":guilabel:`Freier Text...`: Ermöglicht es Ihnen, einen neuen Text zu "
+"verfassen oder einen bestehenden Code einzufügen."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2458
+msgid ""
+":guilabel:`Rectangle`: provides a minimal code for displaying a rectangle"
+msgstr ""
+":guilabel:`Rechteck`: stellt einen minimalen Code zum Anzeigen eines "
+"Rechtecks bereit"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2459
+msgid ""
+":guilabel:`Bar chart`: provides a minimal code for displaying a bar chart"
+msgstr ""
+":guilabel:`Balkendiagramm`: bietet einen minimalen Code zum Anzeigen eines "
+"Balkendiagramms"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2460
+msgid ""
+":guilabel:`Pie chart`: provides a minimal code for displaying a pie chart"
+msgstr ""
+":guilabel:`Kuchendiagramm`: stellt einen minimalen Code für die Anzeige "
+"eines Kuchendiagramms bereit"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2462
+msgid ""
+"You can extend the code with QML syntax, use layer fields or QGIS "
+"expressions that are dynamically calculated."
+msgstr ""
+"Sie können den Code mit QML-Syntax erweitern, Layer-Felder oder QGIS-"
+"Ausdrücke verwenden, die dynamisch berechnet werden."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2470
+msgid "Setting a QML graph to display in attribute form"
+msgstr ""
+"Ein QML-Diagramm so einstellen, dass es in Attributformuar angezeigt wird"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2472
 msgid ""
@@ -5582,6 +6149,34 @@ msgstr ""
 msgid "Policies"
 msgstr "Richtlinien"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2663
+msgid ""
+":guilabel:`Policies` allows you to determine how values are assigned to the "
+"field when :guilabel:`Splitting features` or :guilabel:`Duplicating "
+"features`:"
+msgstr ""
+":guilabel:`Richtlinien` ermöglichen es Ihnen, festzulegen, wie Werte dem "
+"Feld zugewiesen werden, :guilabel:`Beim Teilen von Objekten` und "
+":guilabel:`Beim Duplizieren von Objekten` werden:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2666
+msgid ""
+":guilabel:`Duplicate Values`: Keeps the existing value of the field for the "
+"new features."
+msgstr ""
+":guilabel:`Doppelter Wert`: Behält den bestehenden Wert des Feldes für das "
+"neue Objekt bei."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2667
+msgid ""
+":guilabel:`Use Default Value`: Resets the field by recalculating its "
+":ref:`default value <default_values>`. If no default value clause exists, "
+"the existing value is kept for the new features."
+msgstr ""
+":guilabel:`Vorgabewert verwenden`: Setzt das Feld zurück, indem es seinen "
+":ref:`Vorgabewert 1` neu berechnet. Wenn keine Vorgabewertklausel vorhanden "
+"ist, wird der vorhandene Wert für das neue Objekt beibehalten."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2669
 msgid ":guilabel:`Remove Value`: Clears the field to an unset state."
 msgstr ""
@@ -5697,6 +6292,25 @@ msgstr ""
 "aus der Datenbank abgerufen werden. Dies wird derzeit nur vom PostgreSQL-"
 "Anbieter für Felder vom Typ ``Enum`` unterstützt."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2704
+msgid ""
+"**Attachment**: Uses a \"Open file\" dialog to store file path in a relative"
+" or absolute mode. It can be used to display the document path as a "
+"hyperlink or render the document within a dedicated widget in the form. "
+"Supported document types are image, web page, audio and video, and the "
+"supported file formats depend on the Operating System. You can also "
+"configure an :ref:`external storage system <external_storage>` to "
+"fetch/store resources."
+msgstr ""
+"**Anhang**: Verwendet einen Dialog „Datei öffnen“, um den Dateipfad in einem"
+" relativen oder absoluten Modus zu speichern. Es kann verwendet werden, um "
+"den Dokumentpfad als Hyperlink anzuzeigen oder das Dokument in einem "
+"speziellen Widget im Formular darzustellen. Unterstützte Dokumenttypen sind "
+"Bilder, Webseiten, Audio- und Videodateien, wobei die unterstützten "
+"Dateiformate vom Betriebssystem abhängen. Sie können auch ein :ref:`externes"
+" Speichersystem <external_storage>` konfigurieren, um Ressourcen "
+"abzurufen/zu speichern."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2711
 msgid "**Relative Path in Attachment widget**"
 msgstr "**Relativer Pfad im Anhänge-Elementtyp**"
@@ -5785,6 +6399,36 @@ msgstr ""
 "festzulegen. Das Bearbeitungselement kann entweder ein Schieber oder ein "
 "Drehfeld sein."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2741
+msgid ""
+"Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined "
+"**range Field Domains** will be automatically recognized by QGIS and "
+"assigned a **Range** widget for the relevant fields. The widget will be "
+"prefilled with the minimum and maximum values specified in the domain."
+msgstr ""
+"Einige Layer, wie GeoPackage oder ESRI File Geodatabase, mit vordefinierten "
+"**Bereichs-Felddomänen** werden von QGIS automatisch erkannt und mit einem "
+"**Bereich**-Widget für die entsprechenden Felder versehen. Das Widget wird "
+"mit den in der Domäne angegebenen Minimal- und Maximalwerten vorab "
+"ausgefüllt."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2745
+msgid ""
+"**Relation Reference**: This is the default widget assigned to the "
+"referencing field (i.e., the foreign key in the child layer) when a "
+":ref:`relation <vector_relations>` is set. It provides direct access to the "
+"parent feature's form which in turn embeds the list and form of its "
+"children. The number of entries in the widget can be limited for efficiency,"
+" and if limit is not set, all entries will be loaded."
+msgstr ""
+"**Beziehungsreferenz**: Dies ist das Standard-Widget, das dem Referenzfeld "
+"(d. h. dem Fremdschlüssel in einem Kind-Layer) zugewiesen wird, wenn eine "
+":ref:`Beziehung 1` festgelegt ist. Es bietet direkten Zugriff auf das "
+"Formular des übergeordneten Objekts, das wiederum die Liste und das Formular"
+" seiner untergeordneten Objekte enthält. Die Anzahl der Einträge im Widget "
+"kann aus Effizienzgründen begrenzt werden. Wenn keine Begrenzung festgelegt "
+"ist, werden alle Einträge geladen."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2750
 msgid ""
 "**Text Edit** (default): This opens a text edit field that allows simple "
@@ -5824,6 +6468,16 @@ msgstr ""
 "Wert wird im Attribut gespeichert, die Beschreibung wird in der Combobox "
 "angezeigt. Sie können Werte manuell definieren oder sie aus einem Layer oder"
 " einer CSV-Datei laden."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2764
+msgid ""
+"Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined "
+"**coded Field Domains** will be automatically recognized by QGIS and "
+"assigned a **Value Map** widget for the relevant fields."
+msgstr ""
+"Einige Layer, wie GeoPackage oder ESRI File Geodatabase, mit vordefinierten "
+"**Schlüssel-Felddomänen** werden von QGIS automatisch erkannt und erhalten "
+"ein **Werteabbildungs-Widget** für die entsprechenden Felder."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2767
 msgid ""
@@ -6583,9 +7237,47 @@ msgstr ""
 "durch den Wert des jeweils selektierten Feldes aus :guilabel:`Objekte "
 "abfragen` oder der Attributtabelle ersetzt."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3147
+msgid "Duplicating Actions"
+msgstr "Aktionen duplizieren"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3149
+msgid ""
+"QGIS allows you to duplicate existing actions. To duplicate an attribute "
+"action, open the vector :guilabel:`Layer Properties` dialog and click on the"
+" :guilabel:`Actions` tab. In the :guilabel:`Actions` tab, click the "
+"|duplicateLayout| :sup:`Duplicate an action` to open the "
+":guilabel:`Duplicate Action` dialog. You must have selected at least one "
+"existing action in order to create a duplicate."
+msgstr ""
+"QGIS ermöglicht es Ihnen, vorhandene Aktionen zu duplizieren. Um eine "
+"Attribut-Aktion zu duplizieren, öffnen Sie den Vektor-Dialog "
+":guilabel:`Layereigenschaften` und klicken Sie auf die Registerkarte "
+":guilabel:`Aktionen`. Klicken Sie in der Registerkarte :guilabel:`Aktionen` "
+"auf |duplicateLayout| :sup:`Aktion duplizieren`, um den Dialog "
+":guilabel:`Aktion duplizieren` zu öffnen. Sie müssen mindestens eine "
+"vorhandene Aktion ausgewählt haben, um ein Duplikat erstellen zu können."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3962
 msgid "duplicateLayout"
 msgstr "duplicateLayout"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3155
+msgid ""
+"In the dialogue that appears, make any changes that are necessary. See "
+":ref:`adding_actions` for further information. Once finished, press "
+":guilabel:`OK` to create a duplicate of the action with any changes that you"
+" made. If you did not edit the description, or if you changed it to be "
+"identical to the description of any other existing action, \"_1\" will be "
+"added to the end of it."
+msgstr ""
+"Nehmen Sie im angezeigten Dialogfeld die erforderlichen Änderungen vor. "
+"Weitere Informationen finden Sie unter :ref:`adding_actions`. Wenn Sie "
+"fertig sind, klicken Sie auf :guilabel:`OK`, um eine Kopie der Aktion mit "
+"den vorgenommenen Änderungen zu erstellen. Wenn Sie die Beschreibung nicht "
+"bearbeitet haben oder wenn Sie sie so geändert haben, dass sie mit der "
+"Beschreibung einer anderen vorhandenen Aktion identisch ist, wird am Ende "
+"„_1“ hinzugefügt."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3165
 msgid "Using Actions"
@@ -7013,6 +7705,41 @@ msgid ""
 msgstr ""
 "|checkbox| :guilabel:`Kartentipps einschalten` steuert, ob Kartentipps für "
 "den Layer angezeigt werden sollen"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3366
+msgid ""
+"The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor "
+"for map tips, mixing QGIS expressions and html styles and tags (multiline, "
+"fonts, images, hyperlink, tables, ...). You can check the result of your "
+"code sample in the :guilabel:`Preview` frame (also convenient for previewing"
+" the :guilabel:`Display name` output). Additionally, you can select and edit"
+" existing expressions using the :guilabel:`Insert/Edit Expression` button."
+msgstr ""
+"Die :guilabel:`HTML-Kartenhinweis` bietet einen komplexen und vollständigen "
+"HTML-Texteditor für Kartenhinweise, der QGIS-Ausdrücke und HTML-Stile und "
+"-Tags (mehrzeilig, Schriftarten, Bilder, Hyperlinks, Tabellen usw.) "
+"kombiniert. Sie können das Ergebnis Ihres Code-Beispiels im "
+":guilabel:`Vorschau`-Fenster überprüfen (auch praktisch für die Vorschau der"
+" :guilabel:`Anzeigename`-Ausgabe). Darüber hinaus können Sie vorhandene "
+"Ausdrücke mit der Schaltfläche :guilabel:`Ausdruck einfügen/bearbeiten` "
+"auswählen und bearbeiten."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3373
+msgid "Understanding the :guilabel:`Insert/Edit Expression` button behavior"
+msgstr "Verhalten der Schaltfläche „Ausdruck einfügen/bearbeiten“ verstehen"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3375
+msgid ""
+"If you select some text within an expression (between \"[%\" and \"%]\"), or"
+" if no text is selected but the cursor is inside an expression, the whole "
+"expression will be automatically selected for editing. If the cursor or a "
+"selected text is outside an expression, the dialog opens with the selection."
+msgstr ""
+"Wenn Sie Text innerhalb eines Ausdrucks (zwischen „[%“ und „%]“) auswählen "
+"oder wenn kein Text ausgewählt ist, sich der Cursor jedoch innerhalb eines "
+"Ausdrucks befindet, wird automatisch der gesamte Ausdruck zur Bearbeitung "
+"ausgewählt. Befindet sich der Cursor oder ausgewählter Text außerhalb eines "
+"Ausdrucks, wird das Dialogfeld mit der Auswahl geöffnet."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3385
 msgid "HTML code for map tip"
@@ -7478,6 +8205,39 @@ msgstr ""
 msgid "Vector layer elevation properties dialog"
 msgstr "Dialogfeld für die Höhen-Eigenschaften von Vektorlayern"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3592
+msgid ""
+":guilabel:`Vertical Reference System`: If the CRS of your vector layer is a "
+"compound one (including a Z dimension), then the vertical CRS used for the "
+"layer will be the vertical component of the layer CRS. In this case, you "
+"cannot manually set a different vertical CRS. If your layer CRS is "
+"horizontal (2D), then you can select a specific vertical CRS by clicking on "
+"the |setProjection| :sup:`Select CRS`. Vertical reference systems are "
+"supported for vector layers by:"
+msgstr ""
+":guilabel:`Vertikales Bezugssystem`: Wenn das KBS Ihrer Vektorebene ein "
+"zusammengesetztes KBS ist (einschließlich einer Z-Dimension), dann ist das "
+"für den Layer verwendete vertikale KBS die vertikale Komponente des Layer-"
+"KBS. In diesem Fall können Sie kein anderes vertikales KBS manuell "
+"festlegen. Wenn Ihr Layer-KBS horizontal (2D) ist, können Sie ein bestimmtes"
+" vertikales KBS auswählen, indem Sie auf |setProjection| :sup:`KBS "
+"auswählen` klicken. Vertikale Referenzsysteme werden für Vektor-Layer "
+"unterstützt durch:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3599
+msgid ":ref:`Elevation profiles <label_elevation_profile_view>`"
+msgstr ""
+"|newElevationProfile| :guilabel:`Geländehöhenprofilen "
+"<label_elevation_profile_view>`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3600
+msgid ":ref:`Identify Tool Results <identify_results_dialog>`"
+msgstr ":ref:`Objekte-abfragen-Werkzeug<identify_results_dialog>`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3601
+msgid ":ref:`3D map views <label_3dmapview>`"
+msgstr ":ref:`3D-Kartenansichten <label_3dmapview>`"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3602
 msgid ""
 ":guilabel:`Elevation Clamping`: defines how and whether the features "
@@ -7844,6 +8604,28 @@ msgstr ""
 "Der Reiter |overlay| :guilabel:`QGIS Server` besteht aus den Abschnitten "
 ":guilabel:`Beschreibung`, :guilabel:`Beschreibung`, :guilabel:`Metadaten-"
 "URL` und :guilabel:`Legend-URL`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3762
+msgid ""
+"From the :guilabel:`Description` section, you can change the "
+":guilabel:`Short name` used to reference the layer in requests (to learn "
+"more about short names, read :ref:`services_basics_short_name`). You can "
+"also add or edit a :guilabel:`Title`, an alternative :guilabel:`WFS Title` "
+"and :guilabel:`Abstract` for the layer, or define a :guilabel:`Keyword list`"
+" here. These keyword lists can be used in a metadata catalog. If you want to"
+" use a title from an XML metadata file, you have to fill in a link in the "
+":guilabel:`Data URL` field."
+msgstr ""
+"Im Abschnitt :guilabel:`Beschreibung` können Sie den :guilabel:`Kurznamen` "
+"ändern, der in Anfragen zur Referenzierung des Layers verwendet wird "
+"(weitere Informationen zu Kurznamen finden Sie unter "
+":ref:`services_basics_short_name`). Sie können hier auch einen "
+":guilabel:`Titel`, einen alternativen :guilabel:`WFS-Titel` und eine "
+":guilabel:`Zusammenfassung` für die Layer hinzufügen oder bearbeiten oder "
+"eine :guilabel:`Schlüsselwortliste` definieren. Diese Schlüsselwortlisten "
+"können in einem Metadatenkatalog verwendet werden. Wenn Sie einen Titel aus "
+"einer XML-Metadatendatei verwenden möchten, müssen Sie einen Link in das "
+"Feld :guilabel:`Daten-URL` eingeben."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3771
 msgid ""
