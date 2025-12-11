@@ -138,13 +138,20 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgischeckgeometrydegeneratepolygons:
+.. _qgischeckgeometrydegeneratepolygon:
 
 Degenerate polygons
 -------------------
 
 Checks the polygons with less than 3 points, which are degenerate polygons.
 Degenerate polygons are errors.
+
+.. note::
+
+   This algorithm detects invalid polygon geometries (degenerate polygons).  
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
 
 Parameters
 ..........
@@ -771,7 +778,7 @@ Checks intersections between line geometries within a layer.
 Intersections between two different lines are errors.
 
 .. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`,
-   :ref:`qgischeckgeometryselfintersections`
+   :ref:`qgischeckgeometryselfintersection`
 
 Parameters
 ..........
@@ -895,7 +902,7 @@ Checks if the input line layer features intersect with the check layer features.
 An input feature that intersects with a check layer feature is an error.
 
 .. seealso:: :ref:`qgislineintersections`, :ref:`qgisintersection`,
-   :ref:`qgischeckgeometryselfintersections`
+   :ref:`qgischeckgeometryselfintersection`
 
 Parameters
 ..........
@@ -1502,12 +1509,19 @@ Checks if the geometry has self contact points (in line or polygon),
 i.e., a vertex that touches more than two segments of the same ring.
 Self contacts are errors.
 
+.. note::
+
+   This algorithm detects invalid polygon geometries (self-contacts).
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
+
 .. figure:: img/check_geometry_selfcontact.png
    :align: center
 
    Self-intersection vs self-contact.
 
-.. seealso:: :ref:`qgischeckgeometryselfintersections`
+.. seealso:: :ref:`qgischeckgeometryselfintersection`
 
 Parameters
 ..........
@@ -1622,7 +1636,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgischeckgeometryselfintersections:
+.. _qgischeckgeometryselfintersection:
 
 Self-intersections
 ------------------
@@ -1630,6 +1644,13 @@ Self-intersections
 Detects self-intersections in line or polygon geometries, and reports them as errors.
 Self-intersections occur when the segments of a geometry cross over each other
 without having a common vertex.
+
+.. note::
+
+   This algorithm detects invalid polygon geometries (self-intersections).
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
 
 .. figure:: img/check_geometry_selfintersections.png
    :align: center
@@ -1766,6 +1787,13 @@ The thinness value is between 1 and +infinity.
 A maximum area can be set for limiting the checks to polygons of a lower area.
 Polygons having a thinness higher than the maximum thinness are errors.
 To fix sliver polygons, use the :ref:`qgisfixgeometryarea` algorithm.
+
+.. note::
+
+   This algorithm detects invalid polygon geometries (sliver polygons).
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
 
 .. figure:: img/check_geometry_sliver_polygon.png
    :align: center
@@ -2021,6 +2049,13 @@ Small polygons
 ------------------
 
 Detects polygon features whose area is below a specified value as errors.
+
+.. note::
+
+   This algorithm detects invalid polygon geometries (small polygons).
+   To ensure these invalid features are not filtered out before processing, open
+   |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
+   :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
 
 .. figure:: img/check_geometry_area.png
    :align: center
@@ -2578,3 +2613,14 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1.5em
