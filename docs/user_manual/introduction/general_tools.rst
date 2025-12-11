@@ -1216,31 +1216,33 @@ For example, depending on the layer type, you can:
 * interact with the individual identified item:
 
   * :guilabel:`View Feature Form` or :guilabel:`Edit Feature Form`, for vector layers
-  * :guilabel:`Zoom to Feature`: Zooms the map canvas to the extent
+  * :guilabel:`Zoom to Feature`: zooms the map canvas to the extent
     of the identified feature or pixel
-  * :guilabel:`Identify Feature`: Restarts and recenters the search results on
+  * :guilabel:`Identify Feature`: restarts and recenters the search results on
     a :ref:`referenced or referencing vector feature <vector_relations>` of the identified feature.
     Only available if |checkbox| :guilabel:`Show Relations` is checked in Identify Settings.
-  * :guilabel:`Copy Feature`: Copies the vector geometry and attributes, or the pixel geometry
-  * :guilabel:`Toggle Feature Selection`: Adds or removes identified feature to/from the selection
-  * :guilabel:`Copy Attribute Value`: Copies the value in the :guilabel:`Value` column
+  * :guilabel:`Copy Feature`: copies the vector geometry and attributes, or the pixel geometry
+  * :guilabel:`Toggle Feature Selection`: adds or removes identified feature to/from the selection
+  * :guilabel:`Copy Attribute Value`: copies the value in the :guilabel:`Value` column
     of the tree item you click on
-  * :guilabel:`Copy Raw Value`: Copies the unformatted value of the cell to the clipboard
-  * :guilabel:`Copy Feature Attributes`: Copies the attribute names and values of the identified item
-  * :guilabel:`Select Features by Attribute Value`: Selects all vector features in the layer
+  * :guilabel:`Copy Raw Value`: copies the underlying, unformatted value of the cell 
+    to the clipboard. Useful when the displayed value differs from the stored value.
+    For example, a number stored as ``11000.5`` may appear as ``11.000,5`` depending on the user's locale settings
+  * :guilabel:`Copy Feature Attributes`: copies the attribute names and values of the identified item
+  * :guilabel:`Select Features by Attribute Value`: selects all vector features in the layer
     that match the selected attribute value
 
 * control the rendering of the layers, the results panel or the map canvas:
 
-  * :guilabel:`Clear Results`: Removes results in the window
-  * :guilabel:`Clear Highlights`: Removes items highlighted on the map
-  * :guilabel:`Highlight All`: Highlights in the map canvas all the items identified
+  * :guilabel:`Clear Results`: removes results in the window
+  * :guilabel:`Clear Highlights`: removes items highlighted on the map
+  * :guilabel:`Highlight All`: highlights in the map canvas all the items identified
     in the results dialog, regardless of their layer
-  * :guilabel:`Highlight Layer`: Highlights in the map canvas all the items identified
+  * :guilabel:`Highlight Layer`: highlights in the map canvas all the items identified
     in the layer of the selected entry
-  * :guilabel:`Activate Layer`: Selects the layer of the identified item
+  * :guilabel:`Activate Layer`: selects the layer of the identified item
     in the :guilabel:`Layers` panel
-  * :guilabel:`Layer Properties`: Opens the layer properties window of the identified item
+  * :guilabel:`Layer Properties`: opens the layer properties window of the identified item
   * :guilabel:`Expand All` or :guilabel:`Collapse All` the results tree
 
 
