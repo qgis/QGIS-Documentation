@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Transifex Bot <>, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-15 10:10+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1247,6 +1247,18 @@ msgstr ""
 "``plant_images``. Das mag für zwei Tabellen kein Problem sein, aber stellen "
 "Sie sich vor, wir wollen separate Bilder für Pilze, Vögel usw. aufnehmen."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:552
+msgid ""
+"Polymorphic relations solve this problem as all the referencing features are"
+" stored in the same table ``documents``. For each feature the referenced "
+"layer is stored in the ``referenced_layer`` field and the referenced feature"
+" id in the ``referenced_id`` field."
+msgstr ""
+"Polymorphe Beziehungen lösen dieses Problem, da alle referenzierenden "
+"Objekte in derselben Tabelle „documents“ gespeichert werden. Für jedes "
+"Objekt wird der referenzierte Layer im Feld „referenced_layer“ und die "
+"referenzierte Objekt-ID im Feld „referenced_id“ gespeichert."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:558
 msgid "Defining polymorphic relations"
 msgstr "Eine polymorphe Beziehung definieren"
@@ -1275,6 +1287,19 @@ msgid ""
 msgstr ""
 "Hinzufügen einer polymorphen Beziehung mit dem Layer ``documents`` als "
 "Referenz und den Layern ``animals`` und ``plants`` als referenzierte Layer."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:579
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``documents`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``referenced_id``."
+msgstr ""
+"Die **Referenzierungslayer (Child)**, auch als untergeordnete Layer "
+"bezeichnet, sind diejenigen, die das Fremdschlüsselfeld enthalten. In "
+"unserem Fall ist dies der Layer „documents“ (Dokumente). Für diesen Layer "
+"müssen Sie ein Referenzierungsfeld hinzufügen, das auf den anderen Layer "
+"verweist, also „referenced_id“ (referenzierte ID)."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:591
 msgid ""
