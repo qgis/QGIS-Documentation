@@ -146,7 +146,7 @@ for the import process:
    - |checkbox| :guilabel:`Do not promote to multi-part`: Geometries will be imported as single-part geometries.
    - |checkbox| :guilabel:`Convert field names to lower case`: All field names will be converted to lower case.
    - |checkbox| :guilabel:`Create spatial index`: A spatial index will be created on the geometry column after import.
-   - |checkbox| :guilabel:`Comment`: Add comments to the table and columns based on the source layer's metadata. You can also add or edit comments manually.
+   - |checkbox| :guilabel:`Comment`: Add comments to table. Only available for PostgreSQL databases.
 
 .. figure:: img/db_manager_import.png
    :align: center

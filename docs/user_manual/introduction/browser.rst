@@ -384,7 +384,7 @@ Importing vector layers into databases using Browser panel
 
 QGIS allows you to import vector layers directly into a database from the :guilabel:`Browser` panel.
 This provides a simple way to transfer datasets into supported database
-formats without using |dbManager| :sup:`DB Manager`.
+formats without using |dbManager| :sup:`DB Manager` (see :ref:`dbmanager`).
 
 You can start the import in two ways:
 
