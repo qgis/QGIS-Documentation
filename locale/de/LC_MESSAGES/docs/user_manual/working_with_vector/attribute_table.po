@@ -8,8 +8,8 @@
 # stefan wolff <wolff@mellum.de>, 2025
 # Bernhard Ströbl <b.stroebl@stroweb.de>, 2025
 # Harrissou Sant-anna, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Transifex Bot <>, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -796,6 +796,19 @@ msgstr ""
 "Layer beibehalten und beim nächsten Öffnen der Attributtabelle "
 "wiederhergestellt."
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:197
+msgid ""
+"In the :ref:`Data Source Settings <datasources_options>`, you can choose to "
+"|checkbox| :guilabel:`Autosize all columns by default when opening attribute"
+" table`, which will make \"Autosize All Columns\" the default view every "
+"time attribute tables are opened in QGIS."
+msgstr ""
+"Unter Einstellungen > Optionen können Sie auf dem Reiter :ref:`Datenquellen "
+"<datasources_options>` das Kontrollkästchen :guilabel:`Beim Öffnen der "
+"Attributtabelle die Spaltengröße automatisch anpassen` aktivieren, wodurch "
+"diese Einstellung als Standardansicht verwendet wird, wenn Attributtabellen "
+"geöffnet werden."
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:868
 msgid "checkbox"
 msgstr "checkbox"
@@ -803,6 +816,65 @@ msgstr "checkbox"
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:204
 msgid "Hiding and organizing columns and enabling actions"
 msgstr "Ausblenden und Organisieren von Spalten und Aktivieren von Aktionen"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:206
+msgid ""
+"By right-clicking in a column header, you can choose to :guilabel:`Hide "
+"column` from the attribute table (in \"table view\" mode). For more advanced"
+" controls, press the |editTable| :sup:`Organize columns...` button from the "
+"dialog toolbar or choose :guilabel:`Organize columns...` in a column header "
+"contextual menu."
+msgstr ""
+"Durch einen Rechtsklick auf eine Spaltenüberschrift können Sie "
+"guilabel:`Spalte verbergen` auswählen, um diese aus der Attributtabelle "
+"auszublenden (im Modus „Tabellenansicht“). Für erweiterte "
+"Steuerungsmöglichkeiten klicken Sie auf die Schaltfläche |editTable| "
+":sup:`Spalten anordnen. . .` in der Dialog-Symbolleiste oder wählen Sie "
+":guilabel:`Spalten anordnen. . .` im Kontextmenü der Spaltenüberschrift."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:212
+msgid "In the new dialog, you can:"
+msgstr ""
+"Im Dialogfeld :guilabel:`Spalten anordnen. . .`  haben Sie auch die "
+"folgenden Optionen:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:214
+msgid ""
+"check/uncheck columns you want to show or hide: a hidden column will "
+"disappear from every instance of the attribute table dialog until it is "
+"actively restored. It is also possible to:"
+msgstr ""
+"Aktivieren/deaktivieren Sie die Spalten, die Sie ein- oder ausblenden "
+"möchten: Eine ausgeblendete Spalte verschwindet aus allen Instanzen des "
+"Attributtabellendialogs, bis sie aktiv wiederhergestellt wird. Außerdem ist "
+"es möglich:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:218
+msgid ""
+"choose :guilabel:`Show All` to display all the fields (columns) and actions "
+"in the table"
+msgstr ""
+"Wählen Sie :guilabel:`Alle anzeigen`, um alle Felder (Spalten) und Aktionen "
+"in der Tabelle anzuzeigen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:219
+msgid ""
+"choose :guilabel:`Hide All` to hide all the fields (columns) and actions in "
+"the table"
+msgstr ""
+"Wählen Sie :guilabel:`Alle verbergen`, um alle Felder (Spalten) und Aktionen"
+" in der Tabelle auszublenden."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:220
+msgid ""
+"use the :guilabel:`Toggle selection` to invert visibility of the current "
+"selection of columns. You can use :ref:`keyboard combination "
+"<interacting_features_table>` for selecting multiple columns."
+msgstr ""
+"Verwenden Sie :guilabel:`Auswahl umschalten`, um die Sichtbarkeit der "
+"aktuell ausgewählten Spalten umzukehren. Mit den gängigen "
+":ref:`Tastenkombination <interacting_features_table>` können Sie mehrere "
+"Spalten auswählen."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:224
 msgid ""
@@ -1469,6 +1541,24 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:488
 msgid "Copy cell content button"
 msgstr "Schaltfläche Zellinhalt kopieren"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:492
+msgid ""
+"If you want to use attribute data in external programs (such as Excel, "
+"LibreOffice, or a custom web application), select one or more row(s) and use"
+" the |copySelected| :sup:`Copy selected rows to clipboard` button or press "
+":kbd:`Ctrl+C`. Moreover, in :menuselection:`Settings --> Options --> Data "
+"Sources` menu you can define the format to paste to with the :guilabel:`Copy"
+" features as` option. More details at :ref:`datasources_options`."
+msgstr ""
+"Wenn Sie Daten aus  Attributtabellen in externen Programmen (wie Excel, "
+"LibreOffice oder einer benutzerdefinierten Webanwendung) verwenden möchten, "
+"wählen Sie eine oder mehrere Zeilen aus und verwenden Sie die Schaltfläche "
+"|copySelected| :sup:`Ausgewählte Objekte in Zwischenablage kopieren` oder "
+"drücken Sie :kbd:`Strg+C`. Darüber hinaus können Sie im Menü "
+":menuselection:`Einstellungen --> Optionen --> Datenquellen` mit der Option "
+":guilabel:`Elemente kopieren als` das Format für das Einfügen festlegen. "
+"Weitere Details finden Sie unter :ref:`datasources_options`."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:505
 msgid "Editing attribute values"
