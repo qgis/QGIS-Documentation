@@ -109,6 +109,13 @@ displayed at the bottom of the frame.
 
 **Project files**
 
+.. _figure_project_files_settings:
+
+.. figure:: img/project_files_settings.png
+   :align: center
+
+   Project Files Settings
+
 * :guilabel:`Open project on launch`
 
   * 'Welcome Page' (default): can display the "News" feed, the project
@@ -132,14 +139,6 @@ displayed at the bottom of the frame.
   version of QGIS`. You can always open projects created with older version of
   QGIS but once the project is saved, trying to open with older release may fail
   because of features not available in that version.
-
-.. _load_project_code:
-
-* :guilabel:`Enable project's embedded Python code` |selectString|. This option
-  handles execution of macros that are written to perform an action on project
-  events, as well as custom Python functions to be used as expressions. You can
-  choose between 'Never', 'Ask', 'For this session only' and
-  'Always (not recommended)'.
 * :guilabel:`Default paths`: defines whether paths to files and layers used
   in new projects are stored as 'Absolute' or 'Relative' to the project file.
   This setting can be overwritten at the project level.
@@ -150,6 +149,56 @@ displayed at the bottom of the frame.
   * |radioButtonOff| :guilabel:`QGS Project saved in a clear text, does not
     embed auxiliary data`: the auxiliary data is stored in a separate :file:`.qgd`
     file along with the project file.
+
+.. _project_trust:
+
+**Project Trust**
+
+These options control how QGIS handles execution of scripts
+in project files. Embedded code includes :ref:`macros <project_macros>`, :ref:`custom expression functions <vector_expressions>`,
+:ref:`actions <actions_menu>` and :ref:`attribute form initialization code <form_custom_functions>`. QGIS allows you to
+manage trust on a per-project or per-folder basis. When a project or folder is trusted, this applies to **all embedded scripts**
+contained within. Trust cannot be granted to individual scripts.
+
+.. _figure_project_trust_settings:
+
+.. figure:: img/project_trust_general.png
+   :align: center
+
+   Project Trust Settings
+
+* :guilabel:`Behavior for embedded scripts within projects of undetermined trust`:
+  Use the dropdown menu to select how QGIS should respond when opening a project
+  whose trust status has not yet been decided. Options include:
+
+  * :guilabel:`Never Execute`: block execution of all embedded scripts.
+  * :guilabel:`Never Ask for Trust`: no request for project trust is made;
+    undetermined or already denied projects have their embedded scripts blocked.
+    Only trusted projects or folders have their embedded scripts executed.
+  * :guilabel:`Ask for trust`: QGIS displays a trust dialog listing all embedded scripts
+    and prompts you to allow or deny their execution. This is the default behavior.
+
+  .. _figure_security_prompt:
+
+  .. figure:: img/security_prompt.png
+     :align: center
+
+     Security Prompt for Project Trust
+
+  * :guilabel:`Always Execute (Not recommended)`: enable execution of all embedded scripts;
+    not recommended because it bypasses all safety checks and can run untrusted or malicious code without prompting.
+
+* :guilabel:`Trusted projects and folders allowing embedded script execution`:
+  This list shows project files or folders that you have explicitly marked as
+  trusted. Projects located in these paths are allowed to run their embedded
+  scripts without prompting. Use the |symbologyAdd|:sup:`Add new trusted project` or
+  |symbologyRemove|:sup:`Remove trusted project or folder` buttons to manage the list.
+
+* :guilabel:`Untrusted projects and folders denied embedded script execution`:
+  Paths listed here are explicitly marked as untrusted. Projects stored in these
+  locations will never run embedded scripts. Use the |symbologyAdd|:sup:`Add new project denial` or
+  |symbologyRemove|:sup:`Remove denied project or folder` buttons to
+  maintain the list.
 
 
 .. index:: Environment variables
