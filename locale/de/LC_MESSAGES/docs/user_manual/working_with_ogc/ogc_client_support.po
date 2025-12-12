@@ -7,8 +7,8 @@
 # Translators:
 # Bernhard Ströbl <b.stroebl@stroweb.de>, 2025
 # Harrissou Sant-anna, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Transifex Bot <>, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-12 07:02+0000\n"
 "PO-Revision-Date: 2025-02-27 21:36+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -105,6 +105,10 @@ msgstr "**SFS** --- Simple Features for SQL (:ref:`label_postgis`)"
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:36
 msgid "**GML** --- Geography Markup Language"
 msgstr "**GML** --- Geography Markup Language"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:37
+msgid "**SensorThings API** --- SensorThings API (:ref:`sensor_things`)"
+msgstr "**SensorThings API** --- SensorThings API (:ref:`sensor_things`)"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:39
 msgid ""
@@ -497,6 +501,23 @@ msgstr ""
 ":guilabel:`Undefiniert (nicht skaliert)`, :guilabel:`Standard (96 DPI)` und "
 ":guilabel:`Hoch (192 DPI)`."
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:225
+msgid ""
+":guilabel:`Maximum number of GetFeatureInfo results`: specifies a default "
+"value for the maximum number of results returned per layer by a "
+"GetFeatureInfo request using this connection (see :ref:`FEATURE_COUNT "
+"<wms_featurecount>` parameter). Default value is ``10``. Set to ``0`` to use"
+" server default value (usually ``1``): no FEATURE_COUNT parameter will be "
+"added to the request."
+msgstr ""
+":guilabel:`Maximale Anzahl von GetFeatureInfo-Ergebnissen`: Gibt einen "
+"Standardwert für die maximale Anzahl von Ergebnissen an, die pro Layer von "
+"einer GetFeatureInfo-Anfrage unter Verwendung dieser Verbindung "
+"zurückgegeben werden (siehe Parameter :ref:`FEATURE_COUNT 1`). Der "
+"Standardwert ist ``10``. Setzen Sie den Wert auf ``0``, um den Standardwert "
+"des Servers (normalerweise ``1``) zu verwenden: Der Parameter FEATURE_COUNT "
+"wird dann nicht zur Anfrage hinzugefügt."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:231
 msgid ""
 "|unchecked| :guilabel:`Ignore GetMap/GetTile/GetLegendGraphic URI reported "
@@ -739,6 +760,19 @@ msgstr ""
 "Beschriftungen an den Kachelrändern verringern wollen, erzeugt eine Erhöhung"
 " der Schrittgröße größere Abfragen, weniger Kacheln und weniger Ränder. Der "
 "Standardwert ist 2000."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:324
+msgid ""
+"The :guilabel:`Maximum number of GetFeatureInfo results`: specifies the "
+"maximum number of results returned by a GetFeatureInfo request, for the "
+"layer(s) being loaded. Allows to override the :ref:`connection's default "
+"value <max_feature_count>` for specific layers."
+msgstr ""
+"Die :guilabel:`Maximale Anzahl von GetFeatureInfo-Ergebnissen`: gibt die "
+"maximale Anzahl von Ergebnissen an, die von einer GetFeatureInfo-Anfrage für"
+" die geladenen Layer zurückgegeben werden. Ermöglicht es, den "
+":ref:`Standardwert der Verbindung <max_feature_count>` für bestimmte Layer "
+"zu überschreiben."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:328
 msgid ""
@@ -1714,10 +1748,292 @@ msgstr ""
 msgid "SensorThings"
 msgstr "SensorThings"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:795
+msgid ""
+"QGIS supports connections to `OGC SensorThings API "
+"<https://www.ogc.org/publications/standard/sensorthings/>`_, a standard "
+"providing an open and unified framework to interconnect IoT sensing devices,"
+" data, and applications over the Web. It is an open standard addressing the "
+"syntactic and semantic interoperability of the Internet of Things. It is "
+"based on the `Observations and Measurements "
+"<https://www.ogc.org/publications/standard/om/>`_ data model, a standardized"
+" model for observations, and for features involved in sampling when making "
+"observations."
+msgstr ""
+"QGIS unterstützt Verbindungen zu `OGC SensorThings API "
+"<https://www.ogc.org/publications/standard/sensorthings/>`_, einem Standard,"
+" der ein offenes und einheitliches Framework für die Vernetzung von IoT-"
+"Sensoren, Daten und Anwendungen über das Internet bereitstellt. Es handelt "
+"sich um einen offenen Standard, der sich mit der syntaktischen und "
+"semantischen Interoperabilität des Internets der Dinge befasst. Er basiert "
+"auf dem Datenmodell `Observations and Measurements "
+"<https://www.ogc.org/publications/standard/om/>`_, einem standardisierten "
+"Modell für Beobachtungen und für Funktionen, die bei der Durchführung von "
+"Beobachtungen mit Probenahmen verbunden sind."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:803
+msgid "Setting connection"
+msgstr "Verbindung herstellen"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:805
+msgid ""
+"To add SensorThings data to QGIS use the |addSensorThingsLayer| "
+":guilabel:`SensorThings` tab in the :guilabel:`Data Source Manager` dialog."
+msgstr ""
+"Um SensorThings-Daten zu QGIS hinzuzufügen, verwenden Sie die Registerkarte "
+"|addSensorThingsLayer| :guilabel:`SensorThings` im Dialogfeld "
+":guilabel:`Datenquellenverwaltung`."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:909
 msgid "addSensorThingsLayer"
 msgstr "addSensorThingsLayer"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:808
+msgid ""
+"To establish a new connection, press :guilabel:`New` (or :guilabel:`New "
+"SensorThings Connection` from the Browser panel) and provide "
+":guilabel:`Name` and :guilabel:`URL`. Advanced options, such as "
+":ref:`authentication <authentication_index>` and a :guilabel:`Referer`, can "
+"also be configured."
+msgstr ""
+"Um eine neue Verbindung herzustellen, klicken Sie auf :guilabel:`Neu` (oder "
+":guilabel:`Neue SensorThings-Verbindung` im Browser-Bedienfeld) und geben "
+"Sie :guilabel:`Name` und :guilabel:`URL` ein. Erweiterte Optionen wie "
+":ref:`Authentifizierung <authentication_index>` und ein :guilabel:`Referer` "
+"können ebenfalls konfiguriert werden."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:813
+msgid ""
+"Press :guilabel:`OK` to establish the connection. Then you will be able to:"
+msgstr ""
+"Drücken Sie :guilabel:`OK`, um die Verbindung herzustellen. Anschließend "
+"können Sie:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:816
+msgid ":guilabel:`Edit` the SensorThings connection settings"
+msgstr ":guilabel:`Bearbeiten` der Verbindungseinstellungen für SensorThings."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:817
+msgid ":guilabel:`Remove` the SensorThings connection"
+msgstr ":guilabel:`Entfernen` der SensorThings-Verbindung."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:822
+msgid "SensorThings Connection dialog"
+msgstr "SensorThings-Verbindungsdialog"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:824
+msgid ""
+"Configurations can be saved to an :file:`.XML` file (:guilabel:`Save`) "
+"through the :guilabel:`SensorThings` entry in :guilabel:`Data Source "
+"Manager` dialog or its contextual menu in the :guilabel:`Browser` panel "
+"(:guilabel:`Save Connections`). Likewise, configurations can be added from a"
+" file (:guilabel:`Load`)."
+msgstr ""
+"Konfigurationen können über den Eintrag :guilabel:`SensorThings` im "
+"Dialogfeld :guilabel:`Datenquellenverwaltung` oder über das Kontextmenü im "
+":guilabel:`Browser`-Bedienfeld (:guilabel:`Verbindungen speichern`) in einer"
+" :file:`.XML`-Datei gespeichert werden (:guilabel:`Speichern`). Ebenso "
+"können Konfigurationen aus einer Datei hinzugefügt werden "
+"(:guilabel:`Laden`)."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:830
+msgid "Loading SensorThings data"
+msgstr "Laden von SensorThings-Daten"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:832
+msgid ""
+"Relations between layers (so-called entities) stored in a SensorThings "
+"dataset are expressed in the diagram below."
+msgstr ""
+"Die Beziehungen zwischen den in einem SensorThings-Datensatz gespeicherten "
+"Layern (sogenannten Entitäten) sind in der folgenden Abbildung dargestellt."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:838
+msgid ""
+"Data model Observations and Measurements (Source: `Sensor Web Tutorial by "
+"SIST network <https://sist.pages.in2p3.fr/anf21-sos52north/hands-on/09_sta-"
+"example-request/>`_)"
+msgstr ""
+"Datenmodell Beobachtungen und Messungen (Quelle: „Sensor Web Tutorial“ von "
+"SIST network <https://sist.pages.in2p3.fr/anf21-sos52north/hands-on/09_sta-"
+"example-request/>_)"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:841
+msgid ""
+"Any type of entity can be loaded in QGIS, but not all are spatial data. To "
+"load an entity, there are :guilabel:`Layer Settings` that can be configured:"
+msgstr ""
+"Jede Art von Entität kann in QGIS geladen werden, aber nicht alle sind "
+"räumliche Daten. Um eine Entität zu laden, gibt es die :guilabel:`Layer-"
+"Einstellungen`, die konfiguriert werden können:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:844
+msgid ""
+":guilabel:`Entity Type`: the entity to load from the data model as layer in "
+"QGIS"
+msgstr ""
+":guilabel:`Entitätstyp`: Die Entität, die aus dem Datenmodell als Layer in "
+"QGIS geladen werden soll."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:845
+msgid ""
+":guilabel:`Geometry Type`: the geometry type of the selected entity to load."
+" Press |refresh| :sup:`Check available types` to limit the list to the "
+"actually supported geometry types."
+msgstr ""
+":guilabel:`Geometrie-Typ`: Der Geometrie-Typ des ausgewählten Elements, das "
+"geladen werden soll. Drücken Sie |refresh| :sup:`Verfügbare Typen prüfen`, "
+"um die Liste auf die tatsächlich unterstützten Geometrie-Typen zu "
+"beschränken."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:929
 msgid "refresh"
 msgstr "refresh"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:848
+msgid ":guilabel:`Page Size`"
+msgstr ":guilabel:`Seitengröße`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:849
+msgid ""
+":guilabel:`Feature Limit` sets a maximum number of features to request from "
+"the service"
+msgstr ""
+":guilabel:`Feature Limit` legt eine maximale Anzahl von Features fest, die "
+"vom Dienst angefordert werden können."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:850
+msgid ""
+":guilabel:`Extent Limit` sets a maximum extent limit for the layer, so that "
+"only features within the extent are requested"
+msgstr ""
+":guilabel:`Extent Limit` legt eine maximale Ausdehnungsgrenze für den Layer "
+"fest, sodass nur Features innerhalb dieser Ausdehnung angefordert werden."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:852
+msgid ""
+":guilabel:`Expansions`: The data model of SensorThings provides a mechanism "
+"of expansion of the results to related entities, similar to how tables are "
+"joined together in a relational database. Using this approach, you can "
+"expand the selected layer to include data from other items. This will "
+"flatten the relationship, creating as many parent features as children, and "
+"additional properties are added as columns in the attribute table."
+msgstr ""
+":guilabel:`Erweiterungen`: Das Datenmodell von SensorThings bietet einen "
+"Mechanismus zur Erweiterung der Ergebnisse auf verwandte Entitäten, ähnlich "
+"wie Tabellen in einer relationalen Datenbank miteinander verknüpft werden. "
+"Mit diesem Ansatz können Sie den ausgewählten Layer um Daten aus anderen "
+"Elementen erweitern. Dadurch wird die Beziehung vereinfacht, es werden "
+"ebenso viele übergeordnete Objekte wie untergeordnete Objekte erstellt und "
+"zusätzliche Eigenschaften werden als Spalten in die Attributtabelle "
+"aufgenommen."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:864
+msgid ""
+"Use :guilabel:`Filter` to build a query to filter the data, using "
+"SensorThings filter syntax."
+msgstr ""
+"Verwenden Sie :guilabel:`Filter`, um eine Abfrage zum Filtern der Daten "
+"unter Verwendung der SensorThings-Filtersyntax zu erstellen."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:866
+msgid ""
+"The above settings and filtering options are also available for update in "
+"the layer properties dialog, :guilabel:`Source` tab, once loaded in QGIS."
+msgstr ""
+"Die oben genannten Einstellungen und Filteroptionen können auch im "
+"Dialogfeld Layereigenschaften unter der Registerkarte :guilabel:`Quelle` "
+"aktualisiert werden, sobald sie in QGIS geladen sind."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:869
+msgid ""
+"Press :guilabel:`Add` to load the selected entity type as layer in QGIS."
+msgstr ""
+"Drücken Sie :guilabel:`Hinzufügen`, um den ausgewählten Entitätstyp als "
+"Layer in QGIS zu laden."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:876
+msgid "Working with a vector layer from SensorThings"
+msgstr "Arbeiten mit einem Vektor-Layer aus SensorThings"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:878
+msgid ""
+"A SensorThings layer is loaded in QGIS as a vector layer. As such, it "
+"displays the same tabs in the :ref:`layer properties "
+"<vector_properties_dialog>` and allows same feature interactions using the "
+"selection or identify tools. There are however some specificities you should"
+" consider while working with SensorThings data."
+msgstr ""
+"Ein SensorThings-Layer wird in QGIS als Vektor-Layer geladen. Als solcher "
+"zeigt er dieselben Registerkarten in den :ref:`Layer-Eigenschaften "
+"<vector_properties_dialog>` an und ermöglicht dieselben Objektinteraktionen "
+"mithilfe der Auswahl- oder Identifizierungswerkzeuge. Es gibt jedoch einige "
+"Besonderheiten, die Sie bei der Arbeit mit SensorThings-Daten beachten "
+"sollten."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:883
+msgid ""
+"Because of the data model, the result property of a SensorThings Observation"
+" is a string field. In case you want to use its numerical representation in "
+"for example a graduated style, use an expression to convert the value to "
+"real and try() in case this fails (e.g., ``try( "
+"to_real(\"Observation_result\"), Null)``)."
+msgstr ""
+"Aufgrund des Datenmodells ist die Ergebnis-Eigenschaft einer SensorThings-"
+"Beobachtung ein Zeichenfolgenfeld. Wenn Sie die numerische Darstellung "
+"beispielsweise in einem abgestuften Stil verwenden möchten, verwenden Sie "
+"einen Ausdruck, um den Wert in den Datentyp Realzahl zu konvertieren, und "
+"versuchen Sie es mit try(), falls dies fehlschlägt (z. B. ``try( "
+"to_real(„Observation_result“), Null)``)."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:888
+msgid ""
+"In case you want to create a chart of the observations at one or more "
+"locations, you can install the QGIS plugin :guilabel:`Data Plotly`."
+msgstr ""
+"Wenn Sie ein Diagramm der Beobachtungen an einem oder mehreren Stellen "
+"erstellen möchten, können Sie das QGIS-Plugin :guilabel:`Data Plotly` "
+"installieren."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:891
+msgid "Now select the observations at a point location in the map view."
+msgstr ""
+"Wählen Sie nun die Beobachtungen an einem Punkt in der Kartenansicht aus."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:892
+msgid ""
+"Open the plotly panel and activate the :guilabel:`Use only selected "
+"features` checkbox."
+msgstr ""
+"Öffnen Sie das Plotly-Fenster und aktivieren Sie das Kontrollkästchen "
+":guilabel:`Nur ausgewählte Objekte verwenden`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:893
+msgid ""
+"Select on the x-column a date-time property and on the y-column the "
+":guilabel:`Observation_result`. This will plot the observations at that "
+"location over time."
+msgstr ""
+"Wählen Sie in der x-Spalte eine Datums-/Zeit-Eigenschaft und in der y-Spalte"
+" die :guilabel:`Observation_result` aus. Dadurch werden die Beobachtungen an"
+" diesem Ort im Zeitverlauf dargestellt."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:895
+msgid "Verify to filter by a single Observed Property."
+msgstr ""
+"Stellen Sie sicher, dass Sie nach einer einzelnen beobachteten Eigenschaft "
+"filtern."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:896
+msgid ""
+"Notice that the chart changes as soon as you select other locations on the "
+"map."
+msgstr ""
+"Beachten Sie, dass sich die Karte ändert, sobald Sie andere Orte auf der "
+"Karte auswählen."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:901
+msgid "Use Data plotly to plot the air quality observations at a location"
+msgstr ""
+"Verwenden Sie Data plotly, um die Luftqualitätsbeobachtungen an einem "
+"Standort darzustellen."
