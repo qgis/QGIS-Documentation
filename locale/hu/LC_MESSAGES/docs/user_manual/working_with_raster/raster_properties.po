@@ -1685,9 +1685,49 @@ msgstr ""
 "láthatóságát: kattintson a jobb gombbal a rétegre, és a helyi menüben "
 "válassza a :guilabel:`Réteg méretarányfüggő láthatósága` lehetőséget."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:751
+msgid ""
+"|checkbox| :guilabel:`Refresh layer at interval`: controls whether and how "
+"regular a layer can be refreshed. Available :guilabel:`Configuration` "
+"options are:"
+msgstr ""
+"|checkbox| :guilabel:`Réteg frissítése időközönként`: meghatározza, hogy a "
+"réteget milyen gyakorisággal kell frissíteni. A rendelkezésre álló "
+":guilabel:`Konfigurációs` lehetőségek a következők:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:754
+msgid ""
+":guilabel:`Reload data`: the layer will be completely refreshed. Any cached "
+"data will be discarded and refetched from the provider. This mode may result"
+" in slower map refreshes."
+msgstr ""
+":guilabel:`Adatok újratöltése`: a teljes réteg frissítve lesz. Az összes "
+"gyorsítótárazott adat törlődik, és újra letöltésre kerül a szolgáltatótól. "
+"Ez a mód lassabb térképfrissítést eredményezhet."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:757
+msgid ""
+":guilabel:`Redraw layer only`: this mode is useful for animation or when the"
+" layer's style will be updated at regular intervals. Canvas updates are "
+"deferred in order to avoid refreshing multiple times if more than one layer "
+"has an auto update interval set."
+msgstr ""
+":guilabel:`Csak a réteg újrarajzolása`: ez a mód hasznos animációkhoz vagy "
+"akkor, ha a réteg stílusa rendszeres időközönként frissül. A vászon "
+"frissítéseit elhalasztja, hogy elkerülhető legyen a többszöri frissítés, ha "
+"egynél több réteghez van beállítva automatikus frissítési időköz."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:764
+msgid ""
+"It is also possible to set the :guilabel:`Interval (seconds)` between "
+"consecutive refreshments."
+msgstr ""
+"Lehetőség van a :guilabel:`Intervallum (másodperc)` beállítására is az "
+"egymást követő frissítések között."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:771
 msgid "Raster Rendering Properties"
-msgstr "Raszteres megjelenítési beállítások"
+msgstr "Raszterek megjelenítési beállításai"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:778
 msgid "Temporal Properties"
@@ -1736,9 +1776,75 @@ msgstr ""
 "raszterréteget, ha az animáció ideje a :guilabel:`Kezdő dátum` és "
 ":guilabel:`Befejező dátum` tartományán belül van."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:803
+msgid ""
+":guilabel:`Fixed Time Range Per Band`: only shows a band when the current "
+"animation time is between its :guilabel:`Begin` and :guilabel:`End` date "
+"range. This option allows you to either manually set these time ranges for "
+"each band or use the |expression| button to automatically generate datetime "
+"values, enabling detailed temporal analysis and visualization. This mode is "
+"particularly useful for working with raster layers where each band "
+"corresponds to a specific time period, such as NetCDF files."
+msgstr ""
+":guilabel:`Rögzített időtartomány sávonként`: csak akkor jeleníti meg a "
+"sávot, ha az aktuális animációs idő a :guilabel:`Kezdete` és "
+":guilabel:`Vége` dátumtartomány között van. Ez az opció lehetővé teszi, hogy"
+" manuálisan állítsa be ezeket az időtartományokat az egyes sávokhoz, vagy a "
+"|expression| gomb segítségével automatikusan generáljon dátum- és "
+"időértékeket, lehetővé téve a részletes időbeli elemzést és vizualizációt. "
+"Ez a mód különösen hasznos olyan raszterrétegekkel való munkához, ahol "
+"minden sáv egy adott időtartománynak felel meg, például NetCDF fájlok "
+"esetén."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1137
 msgid "expression"
 msgstr "expression"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:816
+msgid "Example of using the Fixed Time Range Per Band mode"
+msgstr "Példa a Rögzített időtartomány sávonként mód használatára"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:818
+msgid ""
+":guilabel:`Represents Temporal Values`: interprets each pixel in the raster "
+"layer as a datetime value. When this temporal mode is active, pixels that do"
+" not fall within the temporal range specified in the render context will be "
+"hidden, ensuring that only temporally relevant data is displayed. This mode "
+"is effective for:"
+msgstr ""
+":guilabel:`Időbeli értékeket reprezentál`: a raszterréteg minden egyes "
+"pixelét dátum-idő értéknek értelmezi. Ha ez az időbeli mód aktív, a "
+"megjelenítés kontextusban megadott időtartományon kívül eső pixelek el "
+"lesznek rejtve, így biztosítva, hogy csak az időbeli szempontból releváns "
+"adatok jelenjenek meg. Ez a mód az alábbiakhoz hatékony:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:823
+msgid "Analyzing land use changes, like observing deforestation patterns."
+msgstr ""
+"A földhasználat változásainak elemzése, például az erdőirtás mintázatának "
+"megfigyelése."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:824
+msgid "Studying flooding by comparing water coverage across different times."
+msgstr ""
+"Az árvíz tanulmányozása a vízborítás különböző időpontokban történő "
+"összehasonlításával."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:825
+msgid ""
+"Evaluating movement costs in terrain analysis, for example, using GRASS "
+"GIS's r.walk tool to calculate travel costs across a landscape."
+msgstr ""
+"A mozgás költségeinek értékelése terepanalízisben, például a GRASS GIS "
+"r.walk eszközével, amely kiszámítja a tájon való utazás költségeit."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:834
+msgid ""
+"Application of the Represents Temporal Values mode - analyzing GLAD "
+"deforestation alerts"
+msgstr ""
+"Az Időbeli értéket reprezentál mód alkalmazása GDAL erdőirtási riasztások "
+"elemzésére"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:836
 msgid ""
@@ -1888,6 +1994,110 @@ msgstr ""
 msgid "Raster Elevation Properties"
 msgstr "Raszteres magassági beállítások"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:915
+msgid ""
+":guilabel:`Represents Elevation Surface`: whether the raster layer "
+"represents a height surface (e.g DEM) and the pixel values should be "
+"interpreted as elevations. Choose this option if you want to display a "
+"raster in an :ref:`elevation profile view <label_elevation_profile_view>`. "
+"You will also need to fill in the :guilabel:`Band` to pick values from and "
+"can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`."
+msgstr ""
+":guilabel:`Magassági felszínt képvisel`: azt jelzi, hogy a raszterréteg "
+"magassági felszínt reprezentál (pl. DEM), és a pixelértékeit tengerszint "
+"feletti magasságként kell értelmezni. Akkor jelölje be, ha a rasztert egy "
+":ref:`szintmetszet nézeten <label_elevation_profile_view>` szeretné "
+"megjeleníteni. Szükség lesz annak a :guilabel:`Sávnak` a megadására is, "
+"amelyikből az értékeket venni kell, valamint megadható a skálázási "
+":guilabel:`Szorzó` és egy :guilabel:`Eltolás`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:921
+msgid ""
+":guilabel:`Fixed Elevation Range`: The raster layer (or selected raster "
+"band) is associated with a fixed elevation range. This mode can be used when"
+" a layer has a single fixed elevation or a range (slice) of elevation "
+"values. If a range is specified, pixels will be extruded over this range. "
+"You can set the :guilabel:`Lower` and :guilabel:`Upper` elevation range "
+"values for the layer, and specify whether the lower or upper "
+":guilabel:`Limits` are inclusive or exclusive."
+msgstr ""
+":guilabel:`Fix magassági tartomány`: A raszterréteg (vagy a kiválasztott "
+"rasztersáv) egy fix magassági tartományhoz van társítva. Ez a mód akkor "
+"használható, ha egy rétegnek egyetlen fix magassága vagy magasságiérték-"
+"tartománya (szelete) van. Ha tartomány van megadva, a pixelek ezen a "
+"tartományon túlnyúlnak. Beállíthatja a réteg :guilabel:`Alsó` és "
+":guilabel:`Felső` magassági tartományértékeit, és megadhatja, hogy az alsó "
+"vagy felső :guilabel:`Határok` tartalmazzák-e vagy kizárják-e a tartományt."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:927
+msgid ""
+":guilabel:`Fixed Elevation Range Per Band`: Each band in the raster can have"
+" a fixed elevation range associated with it. This is designed for data "
+"sources that expose elevation-related data in bands, such as NetCDF files. "
+"For example, a raster with temperature data at different ocean depths. When "
+"rendering, the uppermost matching band will be selected and used for the "
+"layer's data. This feature is exposed as a user-editable table for raster "
+"bands with lower and upper values. Users can either populate the lower and "
+"upper values manually or use an |expression| :guilabel:`Expression` to auto-"
+"fill all band values based on expression. The expression-based fill allows "
+"you to design expressions that extract useful information from band names. "
+"For example, extracting the depth value from a band name like \"Band 001: "
+"depth=-5500 (meters)\"."
+msgstr ""
+":guilabel:`Fix magassági tartomány sávonként`: A raszter minden sávjához "
+"hozzárendelhető egy fix magassági tartomány. Ez olyan adatforrásokhoz "
+"készült, amelyek sávokban tárolják a magassággal kapcsolatos adatokat, "
+"ilyenek például a NetCDF fájlok. Például egy raszter, amely különböző "
+"óceánmélységek hőmérsékleti adatait tartalmazza. A megjelenítés során a "
+"legfelső megfelelő sáv kerül kiválasztásra és felhasználásra a réteg "
+"adataihoz. Ez a funkció egy felhasználó által szerkeszthető táblázat "
+"formájában jelenik meg a rasztersávok alsó és felső értékeivel. A "
+"felhasználó manuálisan töltheti ki az alsó és felső értékeket, vagy "
+"megteheti ezt egy |expression| :guilabel:`Kifejezés` segítségével, "
+"automatikusan kitöltve az összes sávértéket. A kifejezésalapú kitöltés "
+"lehetővé teszi olyan kifejezések tervezését, amelyek hasznos információkat "
+"nyernek ki a sávnevekből. Például kivonhatja a mélységértéket egy olyan "
+"sávnévből, mint „Sáv 001: mélység=-5500 (méter)”."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:936
+msgid ""
+":guilabel:`Profile Chart Appearance`: controls the rendering of the raster "
+"elevation data in the profile chart. The profile :guilabel:`Style` can be "
+"set as:"
+msgstr ""
+":guilabel:`Kinézet a szintmetszet diagramon`: a magassági raszternek a "
+"szintdiagramon való megjelenítését szabályozza. A :guilabel:`Stílus` a "
+"következőképpen állítható be:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:940
+msgid ""
+"a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`"
+msgstr ""
+":guilabel:`Vonal` a hozzá tartozó :ref:`Vonalstílussal "
+"<vector_line_symbols>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:941
+msgid ""
+"an elevation surface rendered using a fill symbol either above "
+"(:guilabel:`Fill above`) or below (:guilabel:`Fill below`) the elevation "
+"curve line. The surface symbology is represented using:"
+msgstr ""
+"a magassági görbe vonala felett (:guilabel:`Kitöltés fölötte`) vagy alatt "
+"(:guilabel:`Kitöltés alatta`) kitöltési szimbólummal megjelenített magassági"
+" felszín. A felszín jelrendszere a következőképpen jelenik meg:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:945
+msgid "a :ref:`Fill style <vector_fill_symbols>`"
+msgstr ":ref:`Kitöltési stílus <vector_fill_symbols>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:946
+msgid ""
+"and a :guilabel:`Limit`: the maximum (respectively minimum) altitude "
+"determining how high the fill surface will be"
+msgstr ""
+"és egy :guilabel:`Határ`: a maximális (illetve minimális) magasság, amely "
+"meghatározza, hogy milyen magas lesz a kitöltési felszín"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:954
 msgid "Metadata Properties"
 msgstr "Metaadatok beállításai"
@@ -1965,9 +2175,117 @@ msgstr ""
 msgid "Raster Legend"
 msgstr "Raszter jelmagyarázata"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1006
+msgid "Display Properties"
+msgstr "Térképtippek tulajdonságai"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1008
+msgid ""
+"The |display| :guilabel:`Display` tab helps you configure HTML map tips to "
+"use for pixels identification:"
+msgstr ""
+"A |display| :guilabel:`Térképtippek` lapon állíthatja be a pixelek "
+"azonosításához használt HTML térképtippeket:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1011
+msgid ""
+"|checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips "
+"for the layer"
+msgstr ""
+"A |checkbox| :guilabel:`Térképtippek engedélyezése` határozza meg, hogy a "
+"réteghez jelenjenek-e meg térképtippek"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1012
+msgid ""
+"The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor "
+"for map tips, mixing QGIS expressions and html styles and tags (multiline, "
+"fonts, images, hyperlink, tables, ...). You can check the result of your "
+"code sample in the :guilabel:`Preview` frame. You can also select and edit "
+"existing expressions using the :guilabel:`Insert/Edit Expression` button."
+msgstr ""
+"A :guilabel:`HTML térképtipp` egy teljes értékű HTML szövegszerkesztőt "
+"biztosít a térképtippekhez, amelyben egyszerre használhatóak a QGIS-"
+"kifejezések és a HTML stílusok és címkék (sortörés, betűtípusok, képek, "
+"hiperhivatkozások, táblázatok, …). A kódminta eredményét az "
+":guilabel:`Előnézet` keretben ellenőrizheti. A :guilabel:`Kifejezés "
+"beillesztése/szerkesztése` gombbal kiválaszthatja és szerkesztheti a meglévő"
+" kifejezéseket is."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1017
+msgid ""
+"You might look for expressions located in :guilabel:`Rasters` group or the "
+"``@layer_cursor_point`` variable in the :guilabel:`Expressions` dialog."
+msgstr ""
+"A kifejezéseket a :guilabel:`Kifejezések` párbeszédablak "
+":guilabel:`Raszterek` csoportjában vagy a ``@layer_cursor_point változójában"
+" találja."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1020
+msgid ""
+"**Understanding the** :guilabel:`Insert/Edit Expression` **button behavior**"
+msgstr ""
+"**A** :guilabel:`Kifejezés beszúrása/szerkesztése`` **gomb működésének "
+"megértése**"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1022
+msgid ""
+"If you select some text within an expression (between \"[%\" and \"%]\"), or"
+" if no text is selected but the cursor is inside an expression, the whole "
+"expression will be automatically selected for editing. If the cursor or a "
+"selected text is outside an expression, the dialog opens with the selection."
+msgstr ""
+"Ha egy kifejezésen belül (a \"[%\" és \"%]\" között) kijelöli a szöveget, "
+"vagy ha nincs kijelölt szöveg, de a kurzor a kifejezésen belül van, akkor a "
+"teljes kifejezés automatikusan kijelölésre kerül szerkesztés céljából. Ha a "
+"kurzor vagy a kijelölt szöveg a kifejezésen kívül van, akkor a "
+"párbeszédablak a kijelöléssel nyílik meg."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1032
+msgid "Map tips with raster layer"
+msgstr "Raszterréteg térképtippje"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1035
+msgid "To display map tips:"
+msgstr "A térképtippek megjelenítéséhez:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1037
+msgid ""
+"Select the menu option :menuselection:`View --> Show Map Tips` or click on "
+"the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes "
+"Toolbar`."
+msgstr ""
+"Válassza ki a :menuselection:`Nézet --> Térképtippek megjelenítése` "
+"menüpontot, vagy kattintson a |mapTips| :sup:`Térképtippek megjelenítése` "
+"ikonra az :guilabel:`Attribútumok eszköztáron`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1151
 msgid "mapTips"
 msgstr "mapTips"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1039
+msgid ""
+"Make sure that the layer you target is active and has the |checkbox| "
+":guilabel:`Enable Map Tips` property checked."
+msgstr ""
+"Ellenőrizze, hogy a célzott réteg aktív, és a |checkbox| "
+":guilabel:`Térképtippek engedélyezése` tulajdonság be van jelölve."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1041
+msgid ""
+"Move over a pixel, and the corresponding information will be displayed over."
+msgstr ""
+"Mozgassa a kurzort egy pixelre, és a megfelelő információ megjelenik "
+"fölötte."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1043
+msgid ""
+"Map tip is a cross-layer feature meaning that once activated, it stays on "
+"and applies to any map tip enabled layer in the project until it is toggled "
+"off."
+msgstr ""
+"A térképtipp egy rétegektől független funkció, ami azt jelenti, hogy ha "
+"egyszer aktiválják, akkor bekapcsolva marad, és a projektben minden "
+"térképtippel rendelkező rétegre vonatkozik, amíg ki nem kapcsolják."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1051
 msgid "QGIS Server Properties"
@@ -2036,6 +2354,103 @@ msgstr ""
 msgid "QGIS Server in Raster Properties"
 msgstr "QGIS Szerver a raszter beállításaiban"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1083
+msgid "Identify raster cells"
+msgstr "Rasztercellák azonosítása"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1085
+msgid ""
+"The |identify| :ref:`identify features <identify>` tool allows you to get "
+"information about specific points in a raster layer."
+msgstr ""
+"Az |identify| :ref:`elemek azonosítása <identify>` eszköz segítségével "
+"információkat tudhat meg egy raszterréteg meghatározott pontjairól."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1088
+msgid "To use the |identify|:guilabel:`Identify features` tool:"
+msgstr "Az |identify|:guilabel:`Elemek azonosítása` eszköz használatához:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1090
+msgid "Select the raster layer in the Layers panel."
+msgstr "Válassza ki a raszterréteget a Rétegek panelen."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1091
+msgid ""
+"Click on the :guilabel:`Identify features` tool in the toolbar or press "
+":kbd:`Ctrl+Shift+I`."
+msgstr ""
+"Kattintson az eszköztáron az :guilabel:`Elemek azonosítása` eszközre, vagy "
+"nyomja meg a :kbd:`Ctrl+Shift+I` billentyűkombinációt."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1092
+msgid "Click on the point in the raster layer that you want to identify."
+msgstr ""
+"Kattintson a raszterréteg azon pontjára, amelyet azonosítani szeretne."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1094
+msgid ""
+"The Identify Results panel will open in its default ``Tree`` view and "
+"display information about the clicked point. Formatting of the results vary "
+"depending on the provider of the layer. For example:"
+msgstr ""
+"Az Azonosítási eredmények panel az alapértelmezett „Fa” nézetben nyílik meg,"
+" és a kattintott pontra vonatkozó információkat jeleníti meg. Az eredmények "
+"formázása a réteg szolgáltatójától függően változhat. Például:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1098
+msgid ""
+"For a local raster layer: below the name of the layer, you have on the left "
+"the band(s) of the clicked pixel, and on the right their respective value."
+msgstr ""
+"Helyi raszterréteg esetén: a réteg neve alatt bal oldalon a kattintott pixel"
+" sávja(i) láthatóak, jobb oldalon pedig azok értékei."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1101
+msgid ""
+"For a remote layer such as WMS, a :guilabel:`Format` menu allows you to "
+"select whether the information should be displayed as :guilabel:`HTML`, "
+":guilabel:`Feature` or :guilabel:`Text`."
+msgstr ""
+"Távoli réteg, például WMS esetében a :guilabel:`Formátum` menüből "
+"kiválaszthatja, hogy az információkat :guilabel:`HTML`, :guilabel:`Elem` "
+"vagy :guilabel:`Szöveges` formátumban szeretné megjeleníteni."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1105
+msgid ""
+"These values can also be rendered (from the :guilabel:`View` menu located at"
+" the bottom of the panel) in:"
+msgstr ""
+"Ezek az értékek az alábbi módokon is megjeleníthetők (a panel alján "
+"található :guilabel:`Nézet` menüből):"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1107
+msgid ""
+"a ``Table`` view - organizes the information about the identified features "
+"and their values in a table."
+msgstr ""
+"``Táblázat`` nézet – a felismert elemekkel és azok értékeivel kapcsolatos "
+"információkat táblázatba rendezi."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1109
+msgid ""
+"a ``Graph`` view - organizes the information about the identified features "
+"and their values in a graph."
+msgstr ""
+"``Grafikon`` nézet – a felismert elemekkel és azok értékeivel kapcsolatos "
+"információkat grafikonon jeleníti meg."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1112
+msgid ""
+"Under the pixel attributes, you will find the :guilabel:`Derived` "
+"information, such as:"
+msgstr ""
+"A pixel attribútumai alatt megtalálhatók a :guilabel:`Levezetett` "
+"információk, például:"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1115
 msgid "``X`` and ``Y`` coordinate values of the point clicked"
 msgstr "a kattintott pont ``X`` és ``Y`` koordinátái"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1116
+msgid "Column and row of the point clicked (pixel) when compatible"
+msgstr "A kattintott pont (pixel) oszlopa és sora, ha meghatározható"
