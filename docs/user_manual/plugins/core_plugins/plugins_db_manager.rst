@@ -117,11 +117,76 @@ Double clicking on an entry will add the string to the SQL window.
    to use.
 
 
+Import Vector Layer
+---------------------------
+
+You can import layer or file into your database. Here are the parameters you can set
+for the import process:
+
+* :guilabel:`Input`: Select the layer or file to import. Using the dropdown menu,
+  select from the list of loaded layers in QGIS or click on the
+  :guilabel:`...` button to select a file from disk.
+  Check the |checkbox| :guilabel:`Import only selected features` to import only the selected
+  features of the layer.
+* :guilabel:`Output table`: Choose the :guilabel:`Schema` and provide a name for the new table.
+* :guilabel:`Options`: Here are some options for the import process:
+   
+   - |checkbox| :guilabel:`Primary key`: Provide naming for the primary key field. 
+     By default, it is named ``id``.
+   - |checkbox| :guilabel:`Geometry column`: Provide naming for the geometry column.
+     By default, it is named ``geom``.
+   - |checkbox| :guilabel:`Source SRID`: Define the SRID for the geometry column. 
+     By default, it uses the layer's CRS.
+   - |checkbox| :guilabel:`Target SRID`: Define the target SRID to reproject the geometries
+     during the import process. By default, it uses the layer's CRS.
+   - |checkbox| :guilabel:`Encoding`: Define the encoding of the source data. By default, it uses ``Automatic``.
+     It is QGIS's automatic detection mode that attempts to guess the file's character encoding based on available metadata or system locale.
+   - |checkbox| :guilabel:`Replace destination table (if exists)`: If a table with the same name already exists in the selected schema,
+     it will be replaced.
+   - |checkbox| :guilabel:`Do not promote to multi-part`: Geometries will be imported as single-part geometries.
+   - |checkbox| :guilabel:`Convert field names to lower case`: All field names will be converted to lower case.
+   - |checkbox| :guilabel:`Create spatial index`: A spatial index will be created on the geometry column after import.
+   - |checkbox| :guilabel:`Comment`: Add comments to table. Only available for PostgreSQL databases.
+
+.. figure:: img/db_manager_import.png
+   :align: center
+   :width: 400px
+
+   Importing a vector layer into a spatial database using DB Manager
+
+
+Export to Vector File
+---------------------------
+
+To export a table from your database to a vector file, select
+the desired :guilabel:`Format` and :guilabel:`Save as` location.
+Under :guilabel:`Options`, you can set the following parameters:
+
+* |checkbox| :guilabel:`Source SRID`: Define the source SRID of the geometry column.
+  By default, it uses the layer's CRS.
+* |checkbox| :guilabel:`Target SRID`: Define the target SRID to reproject the geometries
+  during the export process. By default, it uses the layer's CRS.
+* |checkbox| :guilabel:`Encoding`: Define the encoding of the output data.
+* |checkbox| :guilabel:`Replace destination table (if exists)`: If a table with the same name already exists at the selected location,
+  it will be replaced.
+
+.. figure:: img/db_manager_export.png
+   :align: center
+   :width: 400px
+
+   Exporting a table to a vector file using DB Manager
+
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
+
