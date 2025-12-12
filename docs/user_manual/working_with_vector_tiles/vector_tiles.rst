@@ -239,8 +239,8 @@ settings of the data when published by :ref:`QGIS Server <QGIS-Server-manual>`.
 The configuration concerns:
 
 * :guilabel:`Description`: provides information to describe the data,
-  such as :guilabel:`Short name`, :guilabel:`Title`, :guilabel:`Summary`,
-  a :guilabel:`List of Keywords`,  and a :guilabel:`Data URL`
+  such as :guilabel:`Short name`, :guilabel:`Title`, :guilabel:`Abstract`,
+  a :guilabel:`Keyword list`,  and a :guilabel:`Data URL`
   whose :guilabel:`Type` can be in ``text/html``, ``text/plain`` or ``application/pdf``.
 * :guilabel:`Attribution`: a :guilabel:`Title` and :guilabel:`URL`
   to identify who provides the data
