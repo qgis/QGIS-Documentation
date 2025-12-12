@@ -361,7 +361,7 @@ To create a new function:
      Custom Python functions stored as Project functions can be easily shared
      by sharing the project file where they were saved.
      When opening a project with project functions, QGIS can load or ignore them
-     depending on whether :ref:`embedded Python code is enabled <load_project_code>`.
+     depending on whether :ref:`embedded Python code is enabled <project_trust>`.
 
    A new item is added in the left panel of the :guilabel:`Function Editor` tab.
 

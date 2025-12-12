@@ -139,14 +139,6 @@ displayed at the bottom of the frame.
   version of QGIS`. You can always open projects created with older version of
   QGIS but once the project is saved, trying to open with older release may fail
   because of features not available in that version.
-
-.. _load_project_code:
-
-* :guilabel:`Enable project's embedded Python code` |selectString|. This option
-  handles execution of macros that are written to perform an action on project
-  events, as well as custom Python functions to be used as expressions. You can
-  choose between 'Never', 'Ask', 'For this session only' and
-  'Always (not recommended)'.
 * :guilabel:`Default paths`: defines whether paths to files and layers used
   in new projects are stored as 'Absolute' or 'Relative' to the project file.
   This setting can be overwritten at the project level.
@@ -183,8 +175,16 @@ contained within. Trust cannot be granted to individual scripts.
   * :guilabel:`Never Ask for Trust`: no request for project trust is made;
     undetermined or already denied projects have their embedded scripts blocked.
     Only trusted projects or folders have their embedded scripts executed.
-  * :guilabel:`Ask for Trust`: QGIS will display a trust dialog (see :numref:`figure_security_prompt`) listing all embedded scripts and
-    prompt you to allow or deny execution.
+  * :guilabel:`Ask for trust`: QGIS displays a trust dialog listing all embedded scripts
+    and prompts you to allow or deny their execution. This is the default behavior.
+
+  .. _figure_security_prompt:
+
+  .. figure:: img/security_prompt.png
+     :align: center
+
+     Security Prompt for Project Trust
+
   * :guilabel:`Always Execute (Not recommended)`: enable execution of all embedded scripts;
     not recommended because it bypasses all safety checks and can run untrusted or malicious code without prompting.
 
@@ -200,17 +200,6 @@ contained within. Trust cannot be granted to individual scripts.
   |symbologyRemove|:sup:`Remove denied project or folder` buttons to
   maintain the list.
 
-When opening a project containing embedded scripts and whose trust state is
-not yet known, QGIS will present a trust dialog. The dialog shows all embedded
-code blocks and allows you to preview them before deciding whether to trust the
-project.
-
-.. _figure_security_prompt:
-
-.. figure:: img/security_prompt.png
-   :align: center
-
-   Security Prompt for Project Trust
 
 .. index:: Environment variables
 .. _`env_options`:
