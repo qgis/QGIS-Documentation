@@ -7,9 +7,9 @@
 # Translators:
 # stefan wolff <wolff@mellum.de>, 2025
 # Harrissou Sant-anna, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Transifex Bot <>, 2025
 # Fischer Teamplan, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Fischer Teamplan, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,6 +91,44 @@ msgstr ""
 "zum EPT-Format finden Sie auf der Entwine-Homepage "
 "<https://entwine.io/en/latest/entwine-point-tile.html>_"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:37
+msgid ""
+"If the data is in LAS or LAZ format, QGIS will convert it to EPT when it is "
+"loaded for the first time. Depending on the size of the file, this may take "
+"some time. In this process, a subfolder is created in the folder in which "
+"the LAS/LAZ file is located according to the scheme :file:`ept_` + "
+":file:`name_LAS/LAZ_file`. If such a subfolder already exists, QGIS loads "
+"the EPT immediately (which leads to a reduced loading time)."
+msgstr ""
+"Wenn die Daten im LAS- oder LAZ-Format vorliegen, konvertiert QGIS sie beim "
+"ersten Laden in das EPT-Format. Je nach Größe der Datei kann dies einige "
+"Zeit in Anspruch nehmen. Dabei wird in dem Ordner, in dem sich die LAS/LAZ-"
+"Datei befindet, ein Unterordner nach folgendem Schema erstellt: :file:`ept_`"
+" + :file:`name_LAS/LAZ_file`. Wenn ein solcher Unterordner bereits vorhanden"
+" ist, lädt QGIS die EPT-Datei sofort (was zu einer verkürzten Ladezeit "
+"führt)."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:44
+msgid "**Worth Knowing**"
+msgstr "**Gut zu wissen**"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:46
+msgid ""
+"In QGIS it is not (yet) possible to edit point clouds. If you want to "
+"manipulate your point cloud, you can use `CloudCompare "
+"<https://www.cloudcompare.org/>`_, an open source point cloud processing "
+"tool. Also the `Point Data Abstraction Library "
+"<https://pdal.io/en/stable/>`_ (PDAL - similar to GDAL) offers you options "
+"to edit point clouds (PDAL is command line only)."
+msgstr ""
+"In QGIS ist es (noch) nicht möglich, Punktwolken zu bearbeiten. Wenn Sie "
+"Ihre Punktwolke bearbeiten möchten, können Sie `CloudCompare "
+"<https://www.cloudcompare.org/>`_ verwenden, ein Open-Source-Tool zur "
+"Bearbeitung von Punktwolken. Auch die `Point Data Abstraction Library "
+"<https://pdal.io/en/stable/>`_ (PDAL – ähnlich wie GDAL) bietet Ihnen "
+"Optionen zur Bearbeitung von Punktwolken (PDAL ist nur über die Befehlszeile"
+" verfügbar)."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:52
 msgid ""
 "Due to the large number of data points, it is not possible to display an "
@@ -107,6 +145,21 @@ msgstr ""
 msgid "identify"
 msgstr "identify"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:57
+msgid ""
+"If you want to create a new layer, in the same or another supported format, "
+"from an existing point cloud layer, see :ref:`Creating new layers from an "
+"existing layer <general_saveas>`."
+msgstr ""
+"Wenn Sie aus einem vorhandenen Punktwolken-Layer einen neuen Layer im "
+"gleichen oder einem anderen unterstützten Format erstellen möchten, lesen "
+"Sie :ref:`Erstellen neuer Layer aus einem vorhandenen Layer "
+"<general_saveas>`."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:64
+msgid "Point Clouds Properties"
+msgstr "Punktwolkenlayer-Eigenschaften"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:65
 msgid ""
 "The :guilabel:`Layer Properties` dialog for a point cloud layer offers "
@@ -122,6 +175,15 @@ msgid "To access the :guilabel:`Layer Properties` dialog:"
 msgstr ""
 "Sie können den :guilabel:`Layereigenschaften` Dialog öffnen, indem Sie:"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:71
+msgid ""
+"In the :guilabel:`Layers` panel, double-click the layer or right-click and "
+"select :guilabel:`Properties...` from the context menu;"
+msgstr ""
+"Doppelklicken Sie im Bedienfeld :guilabel:`Layer` auf den Layer oder klicken"
+" Sie mit der rechten Maustaste darauf und wählen Sie im Kontextmenü "
+":guilabel:`Eigenschaften...` aus."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:73
 msgid ""
 "Go to :menuselection:`Layer --> Layer Properties...` menu when the layer is "
@@ -130,33 +192,73 @@ msgstr ""
 "in der Menüleiste :menuselection:`Layer --> Layereigenschaften ...` "
 "auswählen wenn der Layer aktiv ist"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:76
+msgid ""
+"The point cloud :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr ""
+"die Punktwolken-Layer :guilabel:`Layereigenschaften` enthalten die folgenden"
+" Abschnitte:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:81
+msgid "|metadata| :ref:`Information <point_clouds_information>`"
+msgstr "|metadata| :ref:`Informationen <point_clouds_information>`"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:802
 msgid "metadata"
 msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:82
+msgid "|system| :ref:`Source <point_clouds_source>`"
+msgstr "|system| :ref:`Quelle <point_clouds_source>`"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:826
 msgid "system"
 msgstr "system"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:83
+msgid "|symbology| :ref:`Symbology <point_clouds_symbology>`:sup:`[1]`"
+msgstr "|symbology| :ref:`Symbolisierung <point_clouds_symbology>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:820
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:84
+msgid "|3d| :ref:`3D View <point_clouds_3d>`:sup:`[1]`"
+msgstr "|3d| :ref:`3D-Ansicht <point_clouds_3d>`:sup:`[1]`"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:782
 msgid "3d"
 msgstr "3d"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:85
+msgid "|rendering| :ref:`Rendering <point_clouds_rendering>`"
+msgstr "|rendering| :ref:`Darstellung <point_clouds_rendering>`"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:812
 msgid "rendering"
 msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:86
+msgid "|elevationscale| :ref:`Elevation <point_clouds_elevation>`:sup:`[1]`"
+msgstr "|elevationscale| :ref:`Höhe<point_clouds_elevation>`:sup:`[1]`"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:790
 msgid "elevationscale"
 msgstr "elevationscale"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:87
+msgid "|editMetadata| :ref:`Metadata <point_clouds_metadata>`"
+msgstr "|editMetadata| :ref:`Metadaten <point_clouds_metadata>`"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:788
 msgid "editMetadata"
 msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:88
+msgid "|basicStatistics| :ref:`Statistics <point_clouds_statistics>`"
+msgstr "|basicStatistics| :ref:`Statistik <point_clouds_statistics>`"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:784
 msgid "basicStatistics"
@@ -169,6 +271,17 @@ msgid ""
 msgstr ""
 ":sup:`[1]` Auch im Bedienfeld  :ref:`Layergestalltung<layer_styling_panel>` "
 "verfügbar"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:93
+msgid ""
+"Most of the properties of a point cloud layer can be saved to or loaded from"
+" a :file:`.qml` file using the :guilabel:`Style` menu at the bottom of the "
+"properties dialog. More details at :ref:`save_layer_property`"
+msgstr ""
+"Die meisten Eigenschaften eines Punktwolken-Layers können über das Menü "
+":guilabel:`Stil` am unteren Rand des Eigenschaftendialogs in einer "
+":file:`.qml`-Datei gespeichert oder aus dieser geladen werden. Weitere "
+"Details finden Sie unter :ref:`save_layer_property`."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:102
 msgid "Information Properties"
@@ -193,6 +306,21 @@ msgstr ""
 "Allgemeine Angaben wie Name im Projekt, Quellpfad, Zeitpunkt der letzten "
 "Speicherung und Größe, verwendeter Anbieter"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:110
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties may include "
+":ref:`layer notes <layer_notes>`. More properties can be created and managed"
+" using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"Benutzerdefinierte Eigenschaften, die verwendet werden, um zusätzliche "
+"Informationen über den Layer im aktiven Projekt zu speichern. Zu den "
+"standardmäßigen benutzerdefinierten Eigenschaften können :ref:`Layer-Notizen"
+" <layer_notes>` gehören. Weitere Eigenschaften können mit PyQGIS erstellt "
+"und verwaltet werden, insbesondere mit der Methode "
+":pyqgis:`setCustomProperty() <QGIS.core.QgsMapLayer.setCustomProperty>`."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:114
 msgid "Based on the provider of the layer: extent and number of points"
 msgstr ""
@@ -206,17 +334,186 @@ msgstr ""
 "Das Koordinatenreferenzsystem: Name, Einheiten, Methode, Genauigkeit, "
 "Referenz (d. h. ob es statisch oder dynamisch ist)"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:117
+msgid ""
+"Metadata delivered by the provider: creation date, version, data format, "
+"scale X/Y/Z, ..."
+msgstr ""
+"Vom Anbieter bereitgestellte Metadaten: Erstellungsdatum, Version, "
+"Datenformat, Maßstab X/Y/Z, ..."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:119
+msgid ""
+"Picked from the |editMetadata| :ref:`Metadata <point_clouds_metadata>` tab "
+"(where they can be edited): access, extents, links, contacts, history..."
+msgstr ""
+"Entnommen aus der Registerkarte |editMetadata| :ref:`Metadaten "
+"<point_clouds_metadata>` (wo sie bearbeitet werden können): Zugriff, Umfang,"
+" Links, Kontakte, Verlauf..."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:127
+msgid "Point cloud information tab"
+msgstr "Der Informationen-Reiter von Punktwolken"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:134
 msgid "Source Properties"
 msgstr "Quelle"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:136
+msgid ""
+"In the |system| :guilabel:`Source` tab you can see and edit basic "
+"information about the point cloud layer:"
+msgstr ""
+"Auf der Registerkarte |system| :guilabel:‚Quelle‘ können Sie grundlegende "
+"Informationen zum Punktwolken-Layer anzeigen und bearbeiten:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:144
+msgid "Point cloud source tab"
+msgstr "Der Quelle-Reiter von Punktwolken"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:146
+msgid ""
+":guilabel:`Settings`: Set a Layer name different from the layer filename "
+"that will be used to identify the layer in the project (in the Layers Panel,"
+" with expressions, in print layout legend,...)"
+msgstr ""
+":guilabel:`Einstellungen`: Legen Sie einen Layer-Name fest, der sich vom "
+"Dateinamen des Layers unterscheidet und zur Identifizierung des Layers im "
+"Projekt verwendet wird (im Layer-Bedienfeld, mit Ausdrücken, in der "
+"Drucklayout-Legende usw.)."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:149
+msgid ""
+":guilabel:`Assigned Coordinate Reference System (CRS)`: Here you can change "
+"the layer's assigned :ref:`Coordinate Reference System <layer_crs>`, "
+"selecting a recently used one in the drop-down list or clicking on "
+"|setProjection| set Projection Select CRS button (see :ref:`crs_selector`). "
+"Use this process only if the CRS applied to the layer is a wrong one or if "
+"none was applied."
+msgstr ""
+":guilabel:`Zugewiesenes Koordinatenbezugssystem (KBS)`: Hier können Sie das "
+"dem Layer zugewiesene :ref:`Koordinatenbezugssystem <layer_crs>` ändern, "
+"indem Sie ein kürzlich verwendetes System aus der Dropdown-Liste auswählen "
+"oder mit der Schaltfläche |setProjection| Projektion festlegen, das KBS "
+"auswählen (siehe :ref:`crs_selector`). Wenden Sie dieses Verfahren nur an, "
+"wenn das auf den Layer angewendete KBS falsch ist oder wenn kein KBS "
+"zugewiesen wurde."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:814
 msgid "setProjection"
 msgstr "setProjection"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:159
+msgid ""
+":guilabel:`Provider Feature Filter`: allows to restrict data to use in the "
+"current project to a subset, using functions and expression at the PDAL data"
+" provider level. Press the :guilabel:`Query Builder` button at the bottom to"
+" start setting the filter."
+msgstr ""
+":guilabel:`Provider Feature Filter`: Ermöglicht es, die im aktuellen Projekt"
+" zu verwendenden Daten mithilfe von Funktionen und Ausdrücken auf PDAL-"
+"Datenanbieterebene auf eine Teilmenge zu beschränken. Klicken Sie unten auf "
+"die Schaltfläche :guilabel:`Ausdruckseditor`, um mit der Einstellung des "
+"Filters zu beginnen."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:168
+msgid "Filtering point cloud layer to buildings at specific altitude"
+msgstr "Filterung des Punktwolken-Layers auf Gebäude in einer bestimmten Höhe"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:172
+msgid ""
+"In the bottom part of the dialog, you can type a :guilabel:`Provider "
+"specific filter expression`. Such an expression can be built thanks to:"
+msgstr ""
+"Im unteren Teil des Dialogfelds können Sie einen "
+":guilabel:`Anbieterspezifischen Filterausdruck` eingeben. Ein solcher "
+"Ausdruck kann dank folgender Funktionen erstellt werden:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:175
+msgid ""
+":guilabel:`Fields`: the list contains all the attributes of the point cloud "
+"layer. To add an attribute to the expression, double-click its name or just "
+"type it into the text box."
+msgstr ""
+":guilabel:`Felder`: Die Liste enthält alle Attribute des Punktwolken-Layers."
+" Um ein Attribut zum Ausdruck hinzuzufügen, doppelklicken Sie auf dessen "
+"Namen oder geben Sie ihn einfach in das Textfeld ein."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:177
+msgid ""
+":guilabel:`Values`: frame lists values or statistics of the currently "
+"selected attribute, as a ``key:value`` pair. To add a value to the "
+"expression field, double click its name in the list: depending on the type "
+"of attribute, either the key or the value will be added to the expression. "
+"Or type the value in the expression text box."
+msgstr ""
+":guilabel:`Werte`: Der Bereich listet Werte oder Statistiken des aktuell "
+"ausgewählten Attributs als ``Schlüssel:Wert``-Paare auf. Um einen Wert zum "
+"Ausdrucksfeld hinzuzufügen, doppelklicken Sie auf dessen Namen in der Liste:"
+" Je nach Art des Attributs wird entweder der Schlüssel oder der Wert zum "
+"Ausdruck hinzugefügt. Oder geben Sie den Wert in das Ausdrucksfeld ein."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:181
+msgid ""
+":guilabel:`Operators`: this toolbar contains all usable operators. To add an"
+" operator to the expression field, click the appropriate button. Relational "
+"operators ( ``=`` , ``>`` , ...) and logical operators (``AND``, ``OR``, "
+"...) are available."
+msgstr ""
+":guilabel:`Operatoren`: Diese Symbolleiste enthält alle verwendbaren "
+"Operatoren. Um einen Operator zum Ausdrucksfeld hinzuzufügen, klicken Sie "
+"auf die entsprechende Schaltfläche. Es stehen relationale Operatoren ( ``=``"
+" , ``>`` , ...) und logische Operatoren (``AND``, ``OR``, ...) zur "
+"Verfügung."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:185
+msgid ""
+"The :guilabel:`Test` button helps you check the syntax of your query. Use "
+"the :guilabel:`Clear` button to wipe the query and revert the layer to its "
+"original state (i.e., fully load all the points in the layer). It is "
+"possible to :guilabel:`Save...` the query as a :file:`.QQF` file, or "
+":guilabel:`Load...` the query from a file into the dialog."
+msgstr ""
+"Mit der Schaltfläche :guilabel:`Test` können Sie die Syntax Ihrer Abfrage "
+"überprüfen. Verwenden Sie die Schaltfläche :guilabel:`Löschen`, um die "
+"Abfrage zu löschen und die Layer in ihren ursprünglichen Zustand "
+"zurückzusetzen (d. h. alle Punkte in der Layer vollständig zu laden). Es ist"
+" möglich, die Abfrage als :file:`.QQF`-Datei zu speichern "
+"(:guilabel:`Speichern. . .`) oder die Abfrage aus einer Datei in das "
+"Dialogfeld zu laden (:guilabel:`Laden. . .`)."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:191
+msgid ""
+"When a filter is applied, QGIS treats the resulting subset as if it were the"
+" entire layer. For example if you applied the :ref:`filter above "
+"<figure_point_cloud_querybuilder>` for filtering buildings, you can not e.g."
+" display, query, save or edit points that are of vegetation classification "
+"because they are not part of the subset."
+msgstr ""
+"Wenn ein Filter angewendet wird, behandelt QGIS die resultierende Teilmenge "
+"so, als wäre sie der gesamte Layer. Wenn Sie beispielsweise :ref:`den oben "
+"gezeigten Filter` zum Filtern von Gebäuden angewendet haben, können Sie "
+"keine Punkte anzeigen, abfragen, speichern oder bearbeiten, die zur "
+"Vegetationsklassifizierung gehören, da diese nicht Teil der Teilmenge sind."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:196
 msgid "**Filtered layers are indicated in the Layers Panel**"
 msgstr "**Gefilterte Layer werden im „ Layer“ Bedienfeld gekennzeichnet**"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:198
+msgid ""
+"In the :guilabel:`Layers` panel, a filtered layer is listed with a "
+"|indicatorFilter| :sup:`Filter` icon next to it indicating the query used "
+"when the mouse hovers over the icon. Double-click the icon to open the "
+":guilabel:`Query Builder` dialog for edit. This can also be achieved through"
+" the :menuselection:`Layer --> Filter...` menu."
+msgstr ""
+"Im :guilabel:`Layer`-Bedienfeld wird ein gefilterter Layer mit einem "
+"|indicatorFilter| :sup:`Filter`-Symbol daneben aufgelistet, das die "
+"verwendete Abfrage anzeigt, wenn Sie mit der Maus über das Symbol fahren. "
+"Doppelklicken Sie auf das Symbol, um das Dialogfeld "
+":guilabel:`Ausdruckseditor` zum Bearbeiten zu öffnen. Dies kann auch über "
+"das Menü :menuselection:`Layer --> Filter...` erfolgen."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:798
 msgid "indicatorFilter"
@@ -226,21 +523,204 @@ msgstr "indicatorFilter"
 msgid "Symbology Properties"
 msgstr "Symbolisierung"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:210
+msgid ""
+"In the |symbology| :guilabel:`Symbology` tab the settings for the rendering "
+"of the point cloud are made. In the upper part, the settings of the "
+"different feature renderers can be found. In the lower part, there are "
+"sections with which general settings for the entire layer can be made and "
+"which apply over feature renderers."
+msgstr ""
+"Auf der Registerkarte |symbology| :guilabel:`Symbologie` werden die "
+"Einstellungen für die Darstellung der Punktwolke vorgenommen. Im oberen "
+"Bereich befinden sich die Einstellungen der verschiedenen Objekt-Renderer. "
+"Im unteren Bereich gibt es Abschnitte, in denen allgemeine Einstellungen für"
+" die gesamte Ebene vorgenommen werden können, die über die Objekt-Renderer "
+"hinweg gelten."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:219
+msgid "Feature Rendering types"
+msgstr "Objekt-Rendering-Typen"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:221
+msgid ""
+"There are different options for rendering point clouds that can be selected "
+"using the drop-down menu at the top of the :guilabel:`Symbology` tab (see "
+":numref:`figure_point_cloud_symbology_overview`):"
+msgstr ""
+"Es gibt verschiedene Optionen für die Darstellung von Punktwolken, die über "
+"das Dropdown-Menü oben auf der Registerkarte :guilabel:`Symbologie` "
+"ausgewählt werden können (siehe "
+":numref:`figure_point_cloud_symbology_overview`):"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:225
+msgid ""
+"|pointCloudExtent| :guilabel:`Extent Only`: Only a bounding box of the "
+"extent of the data is displayed; convenient for overviewing the data extent."
+" As usual, the :guilabel:`Symbol` :ref:`widget <symbol_widget_selector>` "
+"helps you configure any properties (color, stroke, opacity, sub-layers, ...)"
+" you'd like for the box."
+msgstr ""
+"|pointCloudExtent| :guilabel:`Nur Ausdehnung`: Es wird nur ein "
+"Begrenzungsrahmen für die Ausdehnung der Daten angezeigt; praktisch, um sich"
+" einen Überblick über die Datenausdehnung zu verschaffen. Wie an anderer "
+"Stelle hilft Ihnen das :guilabel:`Symbol` :ref:`Widget "
+"<symbol_widget_selector>` dabei, alle gewünschten Eigenschaften (Farbe, "
+"Strichstärke, Deckkraft, Unterebenen usw.) für den Rahmen zu konfigurieren."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:808
 msgid "pointCloudExtent"
 msgstr "pointCloudExtent"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:229
+msgid ""
+"|singlebandPseudocolor| :guilabel:`Attribute by Ramp`: The data is drawn "
+"over a color gradient. See :ref:`point_cloud_ramp`"
+msgstr ""
+"|singlebandPseudocolor| :guilabel:`Attribute nach Farbverlauf`: Die Daten "
+"werden über einen Farbverlauf dargestellt. Siehe :ref:`point_cloud_ramp`"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:818
 msgid "singlebandPseudocolor"
 msgstr "singlebandPseudocolor"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:231
+msgid ""
+"|multibandColor| :guilabel:`RGB`: Draw the data using red, green and blue "
+"color values. See :ref:`point_cloud_rgb`"
+msgstr ""
+"|multibandColor| :guilabel:`RGB`: Zeichnen Sie die Daten unter Verwendung "
+"von Rot-, Grün- und Blau-Farbwerten. Siehe :ref:`point_cloud_rgb`"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:804
 msgid "multibandColor"
 msgstr "multibandColor"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:233
+msgid ""
+"|paletted| :guilabel:`Classification`: The data is drawn using different "
+"colors for different classes. See :ref:`point_cloud_classification`"
+msgstr ""
+"|paletted| :guilabel:`Klassifizierung`: Die Daten werden für verschiedene "
+"Klassen in unterschiedlichen Farben dargestellt. Siehe "
+":ref:`point_cloud_classification`"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:806
 msgid "paletted"
 msgstr "paletted"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:236
+msgid ""
+"When a point cloud is loaded, QGIS follows a logic to select the best "
+"renderer:"
+msgstr ""
+"Wenn eine Punktwolke geladen wird, wählt QGIS anhand einer bestimmten Logik "
+"den besten Renderer aus:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:239
+msgid ""
+"if the dataset contains color information (red, green, blue attributes), the"
+" RGB renderer will be used"
+msgstr ""
+"Wenn der Datensatz Farbinformationen enthält (Rot-, Grün-, Blau-Attribute), "
+"wird der RGB-Renderer verwendet."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:241
+msgid ""
+"else if the dataset contains a ``Classification`` attribute, the classified "
+"renderer will be used"
+msgstr ""
+"Wenn nicht, aber der Datensatz ein Attribut ``Classification`` enthält, wird"
+" der klassifizierte Renderer verwendet."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:243
+msgid "else it will fall back to rendering based on Z attribute"
+msgstr ""
+"Andernfalls wird auf die Darstellung basierend auf dem Z-Attribut "
+"zurückgegriffen."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:245
+msgid ""
+"If you do not know the attributes of the point cloud, the |basicStatistics| "
+":guilabel:`Statistics` :ref:`tab <point_clouds_statistics>` provides a good "
+"overview of which attributes are contained in the point cloud and in which "
+"ranges the values are located."
+msgstr ""
+"Wenn Sie die Attribute der Punktwolke nicht kennen, bietet der "
+"|basicStatistics| :guilabel:Statistik :ref:`Reiter "
+"<point_clouds_statistics>` einen guten Überblick darüber, welche Attribute "
+"in der Punktwolke enthalten sind und in welchen Bereichen sich die Werte "
+"befinden."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:250
+msgid ""
+"For each renderer, you can improve the data display adjusting the "
+":ref:`point symbol size <pointsymbol_size>` or enabling :ref:`surface "
+"triangulation <pointcloud_rendersurface>`."
+msgstr ""
+"Für jeden Renderer können Sie die Datenanzeige optimieren, indem Sie die "
+":ref:`Punktsymbolgröße <pointsymbol_size>` anpassen oder die "
+":ref:`Oberflächentriangulation <pointcloud_rendersurface>` aktivieren."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:259
+msgid "Point cloud symbology tab"
+msgstr "Der Symbologie-Reiter von Punktwolken"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:265
+msgid "Attribute by Ramp Renderer"
+msgstr "Attribute nach Farbverlauf"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:267
+msgid ""
+"With |singlebandPseudocolor| :guilabel:`Attribute by Ramp`, the data can be "
+"displayed by numerical values over a color gradient. Such numerical values "
+"can be, for example, an existing intensity attribute or the Z-value. "
+"Depending on a minimum and a maximum value, the other values are spread to "
+"the color gradient via interpolation. The distinct values and their "
+"assignment to a certain color are called \"color map\" and are shown in the "
+"table. There are various setting options, which are described below the "
+"figure."
+msgstr ""
+"Mit |singlebandPseudocolor| :guilabel:`Attribute nach Farbverlauf` können "
+"die Daten anhand von numerischen Werten über einen Farbverlauf dargestellt "
+"werden. Solche numerischen Werte können beispielsweise ein vorhandenes "
+"Intensitätsattribut oder der Z-Wert sein. Abhängig von einem Minimal- und "
+"einem Maximalwert werden die anderen Werte durch Interpolation auf den "
+"Farbverlauf verteilt. Die einzelnen Werte und ihre Zuordnung zu einer "
+"bestimmten Farbe werden als „Farbkarte” bezeichnet und sind in der Tabelle "
+"aufgeführt. Es gibt verschiedene Einstellungsoptionen, die unterhalb der "
+"Abbildung beschrieben werden."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:280
+msgid "Point cloud symbology tab: Attribute by Ramp"
+msgstr "Der Symbologie-Reiter von Punktwolken: Attribute nach Farbverlauf"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:282
+msgid ""
+":guilabel:`Min` and :guilabel:`Max` define the range that is applied to the "
+"color ramp: the :guilabel:`Min` value represents the left, the "
+":guilabel:`Max` value the right end of the color ramp, the values in between"
+" are interpolated. By default QGIS detects the minimum and the maximum from "
+"the selected attribute but they can be modified. Once you have changed the "
+"values, you can restore the defaults by clicking on the :guilabel:`Load` "
+"button."
+msgstr ""
+":guilabel:`Min` und :guilabel:`Max` definieren den Bereich, der auf die "
+"Farbskala angewendet wird: Der Wert :guilabel:`Min` steht für das linke Ende"
+" der Farbskala, der Wert :guilabel:`Max` für das rechte Ende, die Werte "
+"dazwischen werden interpoliert. Standardmäßig erkennt QGIS das Minimum und "
+"Maximum aus dem ausgewählten Attribut, diese Werte können aber geändert "
+"werden. Nachdem Sie die Werte geändert haben, können Sie die "
+"Standardeinstellungen wiederherstellen, indem Sie auf die Schaltfläche "
+":guilabel:`Laden` klicken."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:289
+msgid ""
+"The :guilabel:`Interpolation` entry defines how values are assigned their "
+"color:"
+msgstr ""
+"Der Eintrag :guilabel:`Interpolation` definiert, wie den Werten ihre Farbe "
+"zugewiesen wird:"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:292
 msgid ""
@@ -252,6 +732,16 @@ msgstr ""
 ":guilabel:`Wert` Spalte): Die Farbe wird vom nächstgelegenen "
 "Farbkarteneintrag mit gleichem oder höherem Wert übernommen"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:295
+msgid ""
+":guilabel:`Linear` The color is linearly interpolated from the color map "
+"entries above and below the pixel value, meaning that to each dataset value "
+"corresponds a unique color"
+msgstr ""
+":guilabel:`Linear` Die Farbe wird linear aus den Einträgen der Farbtabelle "
+"oberhalb und unterhalb des Pixelwerts interpoliert, was bedeutet, dass jedem"
+" Datensatzwert eine eindeutige Farbe zugeordnet ist."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:298
 msgid ""
 ":guilabel:`Exact` (a ``=`` symbol appears in the header of the "
@@ -262,6 +752,17 @@ msgstr ""
 ":guilabel:`Wert` Spalte): Nur Pixel mit einem Wert, der einem Eintrag in der"
 " Farbkarte entspricht, werden mit einer Farbe versehen; andere werden nicht "
 "dargestellt."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:301
+msgid ""
+"The :guilabel:`Color ramp` widget helps you select the color ramp to assign "
+"to the dataset. As usual with :ref:`this widget <color_ramp_widget>`, you "
+"can create a new one and edit or save the currently selected one."
+msgstr ""
+"Das Widget :guilabel:`Farbverlauf` hilft Ihnen bei der Auswahl des "
+"Farbverlaufs, der dem Datensatz zugewiesen werden soll. Wie bei :ref:`diesem"
+" Widget <color_ramp_widget>` üblich, können Sie einen neuen Farbverlauf "
+"erstellen und den aktuell ausgewählten bearbeiten oder speichern."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:304
 msgid ""
@@ -282,6 +783,81 @@ msgstr ""
 "Mit dem Klassifizierungs :guilabel:`Modus` können Sie festlegen, wie die "
 "Werte auf die Klassen verteilt werden:"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:311
+msgid ""
+":guilabel:`Continuous`: Classes number and color are fetched from the color "
+"ramp stops; limits values are set following stops distribution in the color "
+"ramp (you can find more information on stops in :ref:`color-ramp`)."
+msgstr ""
+":guilabel:`Kontinuierlich`: Die Anzahl und Farbe der Klassen werden aus den "
+"Farbverlaufsstopps übernommen; die Grenzwerte werden entsprechend der "
+"Verteilung der Stopps im Farbverlauf festgelegt (weitere Informationen zu "
+"Stopps finden Sie unter :ref:`color-ramp`)."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:314
+msgid ""
+":guilabel:`Equal interval`: The number of classes is set by the "
+":guilabel:`Classes` field at the end of the line; limits values are defined "
+"so that the classes all have the same magnitude."
+msgstr ""
+":guilabel:`Gleiches Intervall`: Die Anzahl der Klassen wird durch das Feld "
+":guilabel:`Klassen` am Ende der Zeile festgelegt; die Grenzwerte werden so "
+"definiert, dass alle Klassen die gleiche Größe haben."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:318
+msgid ""
+"The classes are determined automatically and shown in the color map table. "
+"But you can also edit these classes manually:"
+msgstr ""
+"Die Klassen werden automatisch ermittelt und in der Farbtabelle angezeigt. "
+"Sie können diese Klassen jedoch auch manuell bearbeiten:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:321
+msgid ""
+"Double clicking in a :guilabel:`Value` in the table lets you modify the "
+"class value"
+msgstr ""
+"Durch Doppelklicken auf einen :guilabel:`Wert` in der Tabelle können Sie den"
+" Klassenwert ändern."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:322
+msgid ""
+"Double clicking in the :guilabel:`Color` column opens the :ref:`color-"
+"selector` widget, where you can select a color to apply for that value"
+msgstr ""
+"Durch Doppelklicken in die Spalte :guilabel:`Farbe` wird das Widget "
+":ref:„Farbauswahl“ geöffnet, in dem Sie eine Farbe auswählen können, die für"
+" diesen Wert angewendet werden soll."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:324
+msgid ""
+"Double clicking in the :guilabel:`Label` column to modify the label of the "
+"class"
+msgstr ""
+"Doppelklicken Sie in der Spalte :guilabel:`Beschriftung`, um die Bezeichnung"
+" der Klasse zu ändern."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:325
+msgid ""
+"Right-clicking over selected rows in the color table shows a contextual menu"
+" to :guilabel:`Change Color...` and :guilabel:`Change Opacity...` for the "
+"selection"
+msgstr ""
+"Ein Rechtsklick auf ausgewählte Zeilen in der Farbtabelle zeigt ein "
+"Kontextmenü mit den Optionen :guilabel:`Farbe ändern...` und :guilabel:` "
+"Transparenz ändern...` für die Auswahl an."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:328
+msgid ""
+"Below the table there are the options to restore the default classes with "
+":guilabel:`Classify` or to manually |symbologyAdd| :sup:`Add` values or "
+"|symbologyRemove| :sup:`Delete` selected values from the table."
+msgstr ""
+"Unterhalb der Tabelle befinden sich die Optionen zum Wiederherstellen der "
+"Standardklassen mit :guilabel:`Klassifizieren` oder zum manuellen "
+"|symbologyAdd| :sup:`Hinzufügen` von Werten oder |symbologyRemove| "
+":sup:`Entfernen` ausgewählter Werte aus der Tabelle."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:822
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
@@ -289,6 +865,17 @@ msgstr "symbologyAdd"
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:824
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:332
+msgid ""
+"Since a customized color map can be very complex, there is also the option "
+"to |fileOpen| :sup:`Load` an existing color map or to |fileSaveAs| "
+":sup:`Save` it for use in other layers (as a :file:`txt` file)."
+msgstr ""
+"Da ein benutzerdefinierter Farbverlauf sehr komplex sein kann, besteht auch "
+"die Möglichkeit, ein vorhandenen Farbverlauf zu |fileOpen| :sup:`Laden` oder"
+" zu  |fileSaveAs| :sup:`Speichern`, um ihn in anderen Layern zu verwenden "
+"(Format ist :file:`txt`-Datei)."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:792
 msgid "fileOpen"
@@ -298,9 +885,392 @@ msgstr "fileOpen"
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:336
+msgid ""
+"If you have selected :guilabel:`Linear` for :guilabel:`Interpolation`, you "
+"can also configure:"
+msgstr ""
+"Wenn Sie für :guilabel:`Interpolation` die Option :guilabel:`Linear` "
+"ausgewählt haben, können Sie auch Folgendes konfigurieren:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:339
+msgid ""
+"|checkbox| :guilabel:`Clip out of range values` By default, the linear "
+"method assigns the first class (respectively the last class) color to values"
+" in the dataset that are lower than the set :guilabel:`Min` (respectively "
+"greater than the set :guilabel:`Max`) value. Check this setting if you do "
+"not want to render those values."
+msgstr ""
+"|checkbox| :guilabel:`Werte außerhalb des Bereichs ausschließen` "
+"Standardmäßig weist die lineare Methode den Werten im Datensatz, die unter "
+"dem festgelegten Wert :guilabel:`Min`, bzw. über dem festgelegten Wert "
+":guilabel:`Max` liegen, die Farbe der ersten Klasse, bzw. der letzten Klasse"
+" zu. Aktivieren Sie diese Einstellung, wenn Sie diese Werte nicht rendern "
+"möchten."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:786
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:344
+msgid ""
+":guilabel:`Legend settings`, for display in the :guilabel:`Layers` panel and"
+" in the :ref:`layout legend <layout_legend_item>`. Customization works the "
+"same way as with a raster layer (find more details at "
+":ref:`raster_legend_settings`)."
+msgstr ""
+":guilabel:`Legenden-Einstellungen`, zur Anzeige im "
+":guilabel:`Layer`-Bedienfeld und in der :ref:`Layout-Legende "
+"<layout_legend_item>`. Die Anpassung funktioniert genauso wie bei einem "
+"Raster-Layer (weitere Details finden Sie unter "
+":ref:`raster_legend_settings`)."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:353
+msgid "RGB Renderer"
+msgstr "RGB Renderer"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:360
+msgid "The point cloud RGB renderer"
+msgstr "Der Punktwolken-RGB-Renderer"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:362
+msgid ""
+"With the |multibandColor| :guilabel:`RGB` renderer, three selected "
+"attributes from the point cloud will be used as the red, green and blue "
+"component. If the attributes are named accordingly, QGIS selects them "
+"automatically and fetches :guilabel:`Min` and :guilabel:`Max` values for "
+"each band and scales the coloring accordingly. However, it is also possible "
+"to modify the values manually."
+msgstr ""
+"Mit dem Renderer |multibandColor| :guilabel:`RGB` werden drei ausgewählte "
+"Attribute aus der Punktwolke als Rot-, Grün- und Blaukomponente verwendet. "
+"Wenn die Attribute entsprechend benannt sind, wählt QGIS sie automatisch "
+"aus, ruft die Werte :guilabel:`Min` und :guilabel:`Max` für jedes Band ab "
+"und skaliert die Farbgebung entsprechend. Es ist jedoch auch möglich, die "
+"Werte manuell zu ändern."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:368
+msgid ""
+"A :guilabel:`Contrast enhancement` method can be applied to the values: "
+":guilabel:`No Enhancement`, :guilabel:`Stretch to MinMax`, "
+":guilabel:`Stretch and Clip to MinMax` and :guilabel:`Clip to MinMax`"
+msgstr ""
+"Zur :guilabel:`Kontrastverbesserung`-Methode können die folgenden Methoden "
+"angewendet werden: :guilabel:`Keine Verbesserung`, :guilabel:`Auf MinMax "
+"strecken`, :guilabel:`Auf MinMax strecken und beschneiden` und "
+":guilabel:`Auf MinMax beschneiden`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:372
+msgid ""
+"The :guilabel:`Contrast enhancement` tool is still under development. If you"
+" have problems with it, you should use the default setting "
+":guilabel:`Stretch to MinMax`."
+msgstr ""
+"Das Werkzeug :guilabel:`Kontrastverbesserung` befindet sich noch in der "
+"Entwicklung. Wenn Sie Probleme damit haben, sollten Sie die "
+"Standardeinstellung :guilabel:`Auf MinMax strecken` verwenden."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:382
+msgid ""
+"Example of RGB renderer (left) combined with surface triangulation option "
+"(right)"
+msgstr ""
+"Beispiel für einen RGB-Renderer (links) in Kombination mit der Option zur "
+"Oberflächentriangulation (rechts)"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:388
+msgid "Classification Renderer"
+msgstr "Klassifizierungs-Renderer"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:390
+msgid ""
+"In the |paletted| :guilabel:`Classification` rendering, the point cloud is "
+"shown differentiated by color on the basis of an attribute. Any type of "
+"attribute can be used (numeric, string, ...). Point cloud data often "
+"includes a field called ``Classification``. This usually contains data "
+"determined automatically by post-processing, e.g. about vegetation. With "
+":guilabel:`Attribute` you can select the field from the attribute table that"
+" will be used for the classification. By default, QGIS uses the definitions "
+"of the LAS specification (see table 'ASPRS Standard Point Classes' in the "
+"PDF on `ASPRS home page <https://www.asprs.org/divisions-committees/lidar-"
+"division/laser-las-file-format-exchange-activities>`_). However, the data "
+"may deviate from this schema; in case of doubt, you have to ask the person "
+"or institution from which you received the data for the definitions."
+msgstr ""
+"In der |paletted| :guilabel:`Classification`-Darstellung wird die Punktwolke"
+" anhand eines Attributs farblich differenziert dargestellt. Es kann jede Art"
+" von Attribut verwendet werden (numerisch, Zeichenfolge, ...). "
+"Punktwolkendaten enthalten oft ein Feld namens ``Classification``. Dieses "
+"enthält in der Regel Daten, die automatisch durch Nachbearbeitung ermittelt "
+"wurden, z. B. über die Vegetation. Mit :guilabel:`Attribute` können Sie das "
+"Feld aus der Attributtabelle auswählen, das für die Klassifizierung "
+"verwendet werden soll. Standardmäßig verwendet QGIS die Definitionen der "
+"LAS-Spezifikation (siehe Tabelle „ASPRS Standard Point Classes” im PDF auf "
+"der `ASPRS-Homepage <https://www.asprs.org/divisions-committees/lidar-"
+"division/laser-las-file-format-exchange-activities>`_). Die Daten können "
+"jedoch von diesem Schema abweichen. Im Zweifelsfall müssen Sie die Person "
+"oder Institution, von der Sie die Daten erhalten haben, nach den "
+"Definitionen fragen."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:408
+msgid "The point cloud classification renderer"
+msgstr "Der Punktwolkenklassifizierungs-Renderer"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:410
+msgid ""
+"In the table all used values are displayed with the corresponding color and "
+"legend. At the beginning of each row there is a |checkbox| check box; if it "
+"is unchecked, this value is no longer shown on the map. With double click in"
+" the table, you can modify:"
+msgstr ""
+"In der Tabelle werden alle verwendeten Werte mit der entsprechenden Farbe "
+"und Legende angezeigt. Am Anfang jeder Zeile befindet sich ein |checkbox| "
+"Kontrollkästchen. Wenn dieses Kontrollkästchen deaktiviert ist, wird dieser "
+"Wert nicht mehr auf der Karte angezeigt. Mit einem Doppelklick in der "
+"Tabelle können Sie Folgendes ändern:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:415
+msgid "the :guilabel:`Color`: the :ref:`color-selector` widget opens"
+msgstr "die :guilabel:`Farbe`: das :ref:`Farbauswahl`-Widget wird geöffnet"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:416
+msgid ""
+"the :guilabel:`Size`: assigning a size of ``0`` to a category will revert it"
+" to use the default :ref:`point size <pointsymbol_size>` set for the layer"
+msgstr ""
+":guilabel:`Größe`: Wenn Sie einer Kategorie die Größe ``0`` zuweisen, wird "
+"die für den Layer festgelegte :ref:`Standardpunktgröße <pointsymbol_size>` "
+"wieder verwendet."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:418
+msgid "the :guilabel:`Value`"
+msgstr "the :guilabel:`Wert`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:419
+msgid "the :guilabel:`Legend`"
+msgstr "the :guilabel:`Legende`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:420
+msgid ""
+"the :guilabel:`Percentage` column will show you the representation of the "
+"category within the layer."
+msgstr ""
+"Die Spalte :guilabel:`prozentualer Anteil` zeigt Ihnen den Anteil der "
+"Kategorie innerhalb des Layers an."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:423
+msgid ""
+"You can also right-click one or more rows to open a context menu with the "
+"options to change the color, opacity or point size."
+msgstr ""
+"Sie können auch mit der rechten Maustaste auf eine oder mehrere Zeilen "
+"klicken, um ein Kontextmenü mit Optionen zum Ändern der Farbe, Transparenz "
+"oder Punktgröße zu öffnen."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:426
+msgid ""
+"Below the table there are buttons with which you can change the default "
+"classes generated by QGIS:"
+msgstr ""
+"Unterhalb der Tabelle befinden sich Schaltflächen, mit denen Sie die von "
+"QGIS generierten Standardklassen ändern können:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:429
+msgid ""
+"With the :guilabel:`Classify` button the data can be classified "
+"automatically: all values that occur in the attributes and are not yet "
+"present in the table are added"
+msgstr ""
+"Mit der Schaltfläche :guilabel:`Klassifizieren` können die Daten automatisch"
+" klassifiziert werden: Alle Werte, die in den Attributen vorkommen und noch "
+"nicht in der Tabelle vorhanden sind, werden hinzugefügt."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:432
+msgid ""
+"With |symbologyAdd| :sup:`Add` and |symbologyRemove| :sup:`Delete`, values "
+"can be added or removed manually"
+msgstr ""
+"Mit |symbologyAdd| :sup:`Hinzufügen` und |symbologyRemove| :sup:`Löschen` "
+"können Werte manuell hinzugefügt oder entfernt werden."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:434
+msgid ":guilabel:`Delete All` removes all values from the table"
+msgstr ":guilabel:`Alle löschen` entfernt alle Werte aus der Tabelle."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:438
+msgid ""
+"In the :guilabel:`Layers` panel, you can right-click over a class leaf entry"
+" of a layer to quickly configure visibility of the corresponding features."
+msgstr ""
+"Im :guilabel:`Layer`-Bedienfeld können Sie mit der rechten Maustaste auf "
+"einen Klasseneintrag eines Layers klicken, um schnell die Sichtbarkeit der "
+"entsprechenden Objekte zu konfigurieren."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:446
+msgid ""
+"Example of classification renderer (left) combined with surface "
+"triangulation option (right)"
+msgstr ""
+"Beispiel für einen Klassifizierungs-Renderer (links) in Kombination mit der "
+"Option zur Oberflächentriangulation (rechts)"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:451
+msgid "Point Symbol"
+msgstr "Punktsymbol"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:453
+msgid ""
+"Under :guilabel:`Point Symbol`, the size and the unit (e.g. millimeters, "
+"pixels, inches) with which each data point is displayed can be set. Either "
+":guilabel:`Circle` or :guilabel:`Square` can be selected as the style for "
+"the points."
+msgstr ""
+"Unter :guilabel:`Punktsymbol` können die Größe und die Einheit (z. B. "
+"Millimeter, Pixel, Zoll) eingestellt werden, mit der jeder Datenpunkt "
+"angezeigt wird. Als Stil für die Punkte kann entweder :guilabel:`Kreis` oder"
+" :guilabel:`Quadrat` ausgewählt werden."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:460
+msgid "Render as a surface (Triangulate)"
+msgstr "Als Fläche rendern (Triangulieren)"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:462
+msgid ""
+"Check |checkbox| :guilabel:`Render as surface (Triangulate)` to enable the "
+"triangulation of the point cloud layer in the 2D view. This option allows "
+"rendering triangles instead of points. Each point keeps its color for "
+"interpolation in the triangle. You can control the horizontal length of "
+"computed triangles:"
+msgstr ""
+"Aktivieren Sie das Kontrollkästchen „Als Fläche rendern (Triangulieren)“, um"
+" die Triangulierung des Punktwolken-Layers in der 2D-Ansicht zu aktivieren. "
+"Mit dieser Option können Dreiecke anstelle von Punkten gerendert werden. "
+"Jeder Punkt behält seine Farbe für die Interpolation im Dreieck bei. Sie "
+"können die horizontale Länge der berechneten Dreiecke steuern:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:467
+msgid ""
+"By checking the |checkbox| :guilabel:`Skip triangles longer than` option and"
+" setting up the threshold value, you can control the maximum lenght of a "
+"side of the triangles to consider in the horizontal plan. This can be "
+"particularly useful if you want to identify actual holes in the data."
+msgstr ""
+"Durch Aktivieren des Kontrollkästchens „Dreiecke mit einer Länge von mehr "
+"als“ und Festlegen des Schwellenwerts können Sie die maximale Seitenlänge "
+"der Dreiecke festlegen, die im horizontalen Grundriss berücksichtigt werden "
+"sollen. Dies kann besonders nützlich sein, wenn Sie tatsächliche Lücken in "
+"den Daten identifizieren möchten."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:477
+msgid ""
+"Rendering data as a surface with map shading (left) and with map shading, "
+"filtering large triangles (right)"
+msgstr ""
+"Darstellung von Daten als Oberfläche mit Kartenschattierung (links) und mit "
+"Kartenschattierung und Filterung großer Dreiecke (rechts)"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:481
+msgid "Layer Rendering"
+msgstr "Layer-Rendering"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:483
+msgid ""
+"In the :guilabel:`Layer Rendering` section you have the following options to"
+" modify the rendering of the layer:"
+msgstr ""
+"Im Abschnitt :guilabel:`Layer Rendering` haben Sie die folgenden Optionen, "
+"um die Darstellung der Layer zu ändern:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:488
+msgid ""
+":guilabel:`Draw order`: allows to control whether point clouds rendering "
+"order on 2d map canvas should rely on their Z value. It is possible to "
+"render :"
+msgstr ""
+":guilabel:`Zeichnungsreihenfolge`: Ermöglicht die Steuerung, ob die "
+"Reihenfolge der Darstellung von Punktwolken in der 2D-Kartenansicht von "
+"ihrem Z-Wert abhängen soll. Es ist möglich, Folgendes darzustellen:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:492
+msgid ""
+"with the :guilabel:`Default` order in which the points are stored in the "
+"layer,"
+msgstr ""
+"mit der :guilabel:`Standard`-Reihenfolge, in der die Punkte in der Ebene "
+"gespeichert sind,"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:493
+msgid ""
+"from :guilabel:`Bottom to top` (points with larger Z values cover lower "
+"points giving the looks of a true ortho photo),"
+msgstr ""
+"von :guilabel:`Von unten nach oben` (Punkte mit größeren Z-Werten überdecken"
+" niedrigere Punkte, wodurch das Aussehen eines echten Orthofotos entsteht),"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:495
+msgid ""
+"or from :guilabel:`Top to bottom` where the scene appears as viewed from "
+"below."
+msgstr ""
+"oder :guilabel:`Von oben nach unten`, wobei die Szene von unten betrachtet "
+"erscheint."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:499
+msgid ""
+":guilabel:`Maximum error`: Point clouds usually contains more points than "
+"are needed for the display. By this option you set how dense or sparse the "
+"display of the point cloud will be (this can also be understood as 'maximum "
+"allowed gap between points'). If you set a large number (e.g. 5 mm), there "
+"will be visible gaps between points. Low value (e.g. 0.1 mm) could force "
+"rendering of unnecessary amount of points, making rendering slower "
+"(different units can be selected)."
+msgstr ""
+":guilabel:`Maximaler Fehler`: Punktwolken enthalten in der Regel mehr "
+"Punkte, als für die Anzeige erforderlich sind. Mit dieser Option legen Sie "
+"fest, wie dicht oder weitläufig die Anzeige der Punktwolke sein soll (dies "
+"kann auch als „maximal zulässiger Abstand zwischen den Punkten” verstanden "
+"werden). Wenn Sie einen großen Wert (z. B. 5 mm) einstellen, sind zwischen "
+"den Punkten Lücken sichtbar. Ein niedriger Wert (z. B. 0,1 mm) kann dazu "
+"führen, dass eine unnötige Anzahl von Punkten gerendert wird, was das "
+"Rendern verlangsamt (es können verschiedene Einheiten ausgewählt werden)."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:506
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your layer"
+" to your needs. You can also make a precise definition of the percentage of "
+"visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`Transparenz`: Mit diesem Werkzeug können Sie die darunterliegende"
+" Layer in der Kartenansicht sichtbar machen. Verwenden Sie den "
+"Schieberegler, um die Sichtbarkeit Ihres Layers an Ihre Bedürfnisse "
+"anzupassen. Sie können auch den Prozentsatz der Sichtbarkeit im Menü neben "
+"dem Schieberegler genau festlegen."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:511
+msgid ""
+":guilabel:`Blending mode`: You can achieve special rendering effects with "
+"this tool. The pixels of your overlaying and underlying layers are mixed "
+"through the settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`Mischmodus`: Mit diesem Werkzeug können Sie spezielle Rendering-"
+"Effekte erzielen. Die Pixel Ihrer überlagernden und darunterliegenden Layer "
+"werden anhand der unter :ref:`blend-modes` beschriebenen Einstellungen "
+"gemischt."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:515
+msgid ""
+":guilabel:`Eye dome lighting`: this applies shading effects to the map "
+"canvas for a better depth rendering. Rendering quality depends on the "
+":ref:`draw order <point_cloud_draw_order>` property; the :guilabel:`Default`"
+" draw order may give sub-optimal results. Following parameters can be "
+"controlled:"
+msgstr ""
+":guilabel:`Eye Dome Lighting`: Wendet Schattierungseffekte auf die "
+"Kartenansicht an, um eine bessere Tiefenwiedergabe zu erzielen. Die "
+"Wiedergabequalität hängt von der Eigenschaft :ref:„Zeichnungsreihenfolge 1“ "
+"ab. Die Zeichnungsreihenfolge :guilabel:„Standard“ kann zu suboptimalen "
+"Ergebnissen führen. Folgende Parameter können gesteuert werden:"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:520
 msgid ""
@@ -322,13 +1292,193 @@ msgstr ""
 msgid "3D View Properties"
 msgstr "3D-Ansicht Eigenschaften"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:530
+msgid ""
+"In the |3d| :guilabel:`3D View` tab you can make the settings for the "
+"rendering of the point cloud in 3D maps."
+msgstr ""
+"Auf der Registerkarte |3d| :guilabel:`3D-Ansicht` können Sie die "
+"Einstellungen für die Darstellung der Punktwolke in 3D-Karten vornehmen."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:534
+msgid "3D Rendering modes"
+msgstr "3D-Rendering-Modi"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:536
+msgid ""
+"Following options can be selected from the drop down menu at the top of the "
+"tab:"
+msgstr ""
+"Die folgenden Optionen können aus dem Dropdown-Menü oben auf der "
+"Registerkarte ausgewählt werden:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:538
+msgid ":guilabel:`No Rendering`: Data are not displayed"
+msgstr ":guilabel:`Keine Darstellung`: Daten werden nicht angezeigt"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:539
+msgid ""
+":guilabel:`Follow 2D Symbology`: Syncs features rendering in 3D with "
+":ref:`symbology assigned in 2D <point_clouds_rendering_types>`"
+msgstr ""
+":guilabel:`2D-Symbologie folgen`: Synchronisiert die Darstellung von "
+"Features in 3D mit der :ref:`in 2D zugewiesenen Symbologie "
+"<point_clouds_rendering_types>`."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:541
+msgid ""
+"|singleColor| :guilabel:`Single Color`: All points are displayed in the same"
+" :ref:`color <color-selector>` regardless of attributes"
+msgstr ""
+"|singleColor| :guilabel:`Einzelne Farbe`: Alle Punkte werden unabhängig von "
+"ihren Attributen in derselben :ref:`Farbe <color-selector>` angezeigt."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:816
 msgid "singleColor"
 msgstr "singleColor"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:543
+msgid ""
+"|singlebandPseudocolor| :guilabel:`Attribute by Ramp`: Interpolates a given "
+"attribute over a color ramp and assigns to features their matching color. "
+"See :ref:`point_cloud_ramp`."
+msgstr ""
+"|singlebandPseudocolor| :guilabel:„Attribute nach Farbverlauf“: Interpoliert"
+" ein bestimmtes Attribut über einen Farbverlauf und weist den Objekten die "
+"passende Farbe zu. Siehe :ref:`point_cloud_ramp`."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:546
+msgid ""
+"|multibandColor| :guilabel:`RGB`: Use different attributes of the features "
+"to set the Red, Green and Blue color components to assign to them. See "
+":ref:`point_cloud_rgb`."
+msgstr ""
+"|multibandColor| :guilabel:`RGB`: Verwenden Sie verschiedene Attribute der "
+"Objekte, um die ihnen zuzuweisenden Rot-, Grün- und Blau-Farbkomponenten "
+"festzulegen. Siehe :ref:`point_cloud_rgb`."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:549
+msgid ""
+"|paletted| :guilabel:`Classification`: differentiates points by color on the"
+" basis of an attribute. See :ref:`point_cloud_classification`."
+msgstr ""
+"|paletted| :guilabel:`Klassifizierung`: Unterscheidet Punkte anhand eines "
+"Attributs über ihre Farbe. Siehe :ref:`point_cloud_classification`."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:557
+msgid "The point cloud 3D view tab with the classification renderer"
+msgstr ""
+"Der Reiter 3D-Ansicht von Punktwolken mit dem Klassifizierungs-Renderer"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:560
+msgid "3D Point Symbol"
+msgstr "3D-Punktsymbol"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:562
+msgid ""
+"In the lower part of the |3d| :guilabel:`3D View` tab you can find the "
+":guilabel:`Point Symbol` section. Here you can make general settings for the"
+" entire layer which are the same for all renderers. There are the following "
+"options:"
+msgstr ""
+"Im unteren Teil der Registerkarte |3d| :guilabel:`3D-Ansicht` finden Sie den"
+" Abschnitt :guilabel:`Punktsymbol`. Hier können Sie allgemeine Einstellungen"
+" für den gesamten Layer vornehmen, die für alle Renderer gleich sind. Es "
+"gibt folgende Optionen:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:567
+msgid ""
+":guilabel:`Point size`: The size (in pixels) with which each data point is "
+"displayed can be set"
+msgstr ""
+":guilabel:`Punktgröße`: Die Größe (in Pixeln), mit der jeder Datenpunkt "
+"angezeigt wird, kann eingestellt werden."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:569
+msgid ""
+":guilabel:`Maximum screen space error`: By this option you set how dense or "
+"sparse the display of the point cloud will be (in pixels). If you set a "
+"large number (e.g. 10), there will be visible gaps between points; low value"
+" (e.g. 0) could force rendering of unnecessary amount of points, making "
+"rendering slower (you can find more details at :guilabel:`Symbology` "
+":ref:`Maximum error <point_clouds_symbology_maxerror>`)."
+msgstr ""
+":guilabel:`Maximaler Bildschirmfehler`: Mit dieser Option legen Sie fest, "
+"wie dicht oder weitläufig die Punktwolke angezeigt wird (in Pixeln). Wenn "
+"Sie einen hohen Wert (z. B. 10) einstellen, entstehen sichtbare Lücken "
+"zwischen den Punkten; ein niedriger Wert (z. B. 0) kann dazu führen, dass "
+"unnötig viele Punkte gerendert werden müssen, was das Rendern verlangsamt "
+"(weitere Details finden Sie unter :guilabel:`Symbology` :ref:`Maximaler "
+"Fehler <point_clouds_symbology_maxerror>`)."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:575
+msgid ""
+":guilabel:`Point budget`: To avoid long rendering, you can set the maximum "
+"number of points that will be rendered"
+msgstr ""
+":guilabel:`Punktbudget`: Um lange Renderzeiten zu vermeiden, können Sie die "
+"maximale Anzahl der zu rendernden Punkte festlegen."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:577
+msgid ""
+"Check |checkbox| :guilabel:`Render as surface (Triangulate)` to render the "
+"point cloud layer in the 3D view with a solid surface obtained by "
+"triangulation. You can control dimensions of the computed triangles:"
+msgstr ""
+"Aktivieren Sie das Kontrollkästchen :guilabel:`Als Fläche rendern "
+"(Triangulieren)`, um den Punktwolken-Layer in der 3D-Ansicht mit einer durch"
+" Triangulation erhaltenen festen Fläche zu rendern. Sie können die "
+"Abmessungen der berechneten Dreiecke steuern:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:581
+msgid ""
+"|checkbox| :guilabel:`Skip triangles longer than` a threshold value: sets in"
+" the horizontal plan, the maximum length of a side of the triangles to "
+"consider"
+msgstr ""
+"|checkbox| :guilabel:`Dreiecke überspringen, die länger sind als` legt ein "
+"Schwellenwert in der horizontalen Ebene fest, der die maximale Länge einer "
+"Seite der zu berücksichtigenden Dreiecke beschreibt."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:583
+msgid ""
+"|checkbox| :guilabel:`Skip triangles taller than` a threshold value: sets in"
+" the vertical plan, the maximum height of a side of the triangles to "
+"consider"
+msgstr ""
+"|checkbox| :guilabel:`Dreiecke überspringen, die höher als` ein "
+"Schwellenwert sind: Legt in der vertikalen Ebene die maximale Höhe einer "
+"Seite der zu berücksichtigenden Dreiecke fest."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:585
+msgid ""
+"|checkbox| :guilabel:`Show bounding boxes`: Especially useful for debugging,"
+" shows bounding boxes of nodes in hierarchy"
+msgstr ""
+"|checkbox| :guilabel:`Begrenzungsrahmen anzeigen`: Besonders nützlich für "
+"die Fehlersuche, zeigt Begrenzungsrahmen von Knoten in der Hierarchie an."
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:592
 msgid "Rendering Properties"
 msgstr "Darstellung"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:594
+msgid ""
+"Under the :guilabel:`Scale dependent visibility` group box, you can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scale, "
+"defining a range of scale in which features will be visible. Out of this "
+"range, they are hidden. The |mapIdentification| :sup:`Set to current canvas "
+"scale` button helps you use the current map canvas scale as boundary of the "
+"range visibility. See :ref:`label_scaledepend` for more information."
+msgstr ""
+"Unter dem Gruppenfeld :guilabel:`Massstabsabhängige Sichtbarkeit` können Sie"
+" den :guilabel:`Maximalwert (inklusive)` und den :guilabel:`Minimalwert "
+"(exklusiv)` festlegen und so einen Massstabsbereich definieren, in dem "
+"Objekte sichtbar sind. Außerhalb dieses Bereichs werden sie ausgeblendet. "
+"Mit der Schaltfläche |mapIdentification| :sup:„Auf aktuellen Kartenmaßstab "
+"setzen“ können Sie den aktuellen Maßstab der Kartenansicht als Grenze für "
+"den Sichtbarkeitsbereich verwenden. Weitere Informationen finden Sie unter "
+":ref:`label_scaledepend`."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:800
 msgid "mapIdentification"
@@ -345,17 +1495,163 @@ msgstr ""
 "Maustaste auf den Layer und wählen Sie im Kontextmenü "
 ":guilabel:`Maßstabsabhängige Sichtbarkeit des Layers setzen`."
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:613
+msgid "The point cloud rendering tab"
+msgstr "Der Punktwolken-Rendering-Reiter"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:619
 msgid "Elevation Properties"
 msgstr "Höhe"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:621
+msgid ""
+"In the |elevationscale| :guilabel:`Elevation` tab, you can set corrections "
+"for the Z-values of the data. This may be necessary to adjust the elevation "
+"of the data in 3D maps and its appearance in the :ref:`profile tool charts "
+"<label_elevation_profile_view>`. There are following options:"
+msgstr ""
+"Auf dem Reiter |elevationscale| :guilabel:`Höhe` können Sie Korrekturen für "
+"die Z-Werte der Daten vornehmen. Dies kann erforderlich sein, um die Höhe "
+"der Daten in 3D-Karten und deren Darstellung in den :ref:`Höhen-Diagrammen "
+"<label_elevation_profile_view>` anzupassen. Es stehen folgende Optionen zur "
+"Verfügung:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:626
+msgid ""
+":guilabel:`Vertical Reference System`: If the CRS of your point cloud layer "
+"is a compound one (including a Z dimension), then the vertical CRS used for "
+"the layer will be automatically derived from the vertical component of the "
+"layer's CRS. In this case, you cannot manually set a different vertical CRS,"
+" and the option to change it will be disabled. If your point cloud layer "
+"uses a horizontal (2D) CRS (though uncommon), you can manually select a "
+"specific vertical CRS by clicking on the |setProjection|:sup:`Select CRS`. "
+"Vertical reference systems are supported for point cloud layers in:"
+msgstr ""
+":guilabel:`Vertikales Referenzsystem`: Wenn das KBS Ihres Punktewolken-"
+"Layers ein zusammengesetztes KBS ist (einschließlich einer Z-Dimension), "
+"wird das für den Layer verwendete vertikale KBS automatisch aus der "
+"vertikalen Komponente des KBS des Layers abgeleitet. In diesem Fall können "
+"Sie kein anderes vertikales KBS manuell festlegen, und die Option zum Ändern"
+" wird deaktiviert. Wenn Ihr Punktwolken-Layer ein horizontales (2D) KBS "
+"verwendet (was jedoch selten vorkommt), können Sie manuell ein bestimmtes "
+"vertikales KBS auswählen, indem Sie auf |setProjection|:sup:`KBS auswählen` "
+"klicken. Vertikale Referenzsysteme werden für Punktwolken-Layer unterstützt "
+"in:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:634
+msgid ":ref:`Elevation profiles <label_elevation_profile_view>`"
+msgstr ""
+"|newElevationProfile| :guilabel:`Geländehöhenprofilen "
+"<label_elevation_profile_view>`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:635
+msgid ":ref:`Identify Tool Results <identify_results_dialog>`"
+msgstr ":ref:`Objekte-abfragen-Werkzeug<identify_results_dialog>`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:636
+msgid ":ref:`3D map views <label_3dmapview>`"
+msgstr ":ref:`3D-Kartenansichten <label_3dmapview>`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:637
+msgid "Under :guilabel:`Elevation` group:"
+msgstr "Unter der Gruppe :guilabel:`Höhe`:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:639
+msgid ""
+"You can set a :guilabel:`Scale`: If ``10`` is entered here, a point that has"
+" a value Z = ``5`` is displayed at a height of ``50``."
+msgstr ""
+"können Sie eine :guilabel:`Skalierung` festlegen: Wenn Sie hier den Wert "
+"``10`` eingeben, wird ein Punkt mit dem Wert Z = ``5`` in einer Höhe von "
+"``50`` angezeigt."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:641
+msgid ""
+"An :guilabel:`offset` to the z-level can be entered. This is useful to match"
+" different data sources in its height to each other. By default, the lowest "
+"z-value contained in the data is used as this value. This value can also be "
+"restored with the |refresh| :sup:`Refresh` button at the end of the line."
+msgstr ""
+"Ein :guilabel:`Offset` zum Z-Level kann eingegeben werden. Dies ist "
+"nützlich, um verschiedene Datenquellen in ihrer Höhe aufeinander "
+"abzustimmen. Standardmäßig wird der niedrigste in den Daten enthaltene "
+"Z-Wert als dieser Wert verwendet. Dieser Wert kann auch mit der Schaltfläche"
+" |refresh| :sup:`Aktualisieren` am Ende der Zeile wiederhergestellt werden."
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:810
 msgid "refresh"
 msgstr "refresh"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:646
+msgid ""
+"Under :guilabel:`Profile Chart Accuracy`, the :guilabel:`Maximum error` "
+"helps you control how dense or sparse the points will be rendered in the "
+"elevation profile. Larger values result in a faster generation with less "
+"points included."
+msgstr ""
+"Unter :guilabel:`Genauigkeit des Profil-Diagramms` hilft Ihnen die Option "
+":guilabel:`Maximaler Fehler` dabei, zu steuern, wie dicht oder verstreut die"
+" Punkte im Höhenprofil dargestellt werden. Größere Werte führen zu einer "
+"schnelleren Generierung mit weniger Punkten."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:649
+msgid ""
+"Under :guilabel:`Profile Chart Appearance`, you can control the point "
+"display:"
+msgstr ""
+"Unter :guilabel:`Darstellung des Profil-Diagramms` können Sie die "
+"Punktanzeige steuern:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:651
+msgid ""
+":guilabel:`Point size`: the size to render the points with, in supported "
+"units (millimeters, map units, pixels, ...)"
+msgstr ""
+":guilabel:`Punktgröße`: Die Größe, mit der die Punkte gerendert werden "
+"sollen, in unterstützten Einheiten (Millimeter, Karteneinheiten, Pixel, ...)"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:653
+msgid ""
+":guilabel:`Style`: whether to render the points as :guilabel:`Circle` or "
+":guilabel:`Square`"
+msgstr ""
+":guilabel:`Stil`: Gibt an, ob die Punkte als :guilabel:`Kreis` oder "
+":guilabel:`Quadrat` dargestellt werden sollen."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:654
+msgid ""
+"Apply a single :guilabel:`Color` to all the points visible in the profile "
+"view"
+msgstr ""
+"Verwenden Sie eine einzelne :guilabel:`Farbe` für alle Punkte, die in der "
+"Profilansicht sichtbar sind."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:655
+msgid ""
+"Check |checkbox| :guilabel:`Respect layer's coloring` to instead show the "
+"points with the color assigned via their :ref:`2D symbology "
+"<point_clouds_symbology>`"
+msgstr ""
+"Aktivieren Sie das Kontrollkästchen :guilabel:`Farben des Layers "
+"berücksichtigen` , um stattdessen die Punkte mit der Farbe anzuzeigen, die "
+"ihnen über ihre :ref:`2D-Symbologie 1` zugewiesen wurde."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:657
+msgid ""
+"|unchecked| :guilabel:`Apply opacity by distance from curve effect`, "
+"reducing the opacity of points which are further from the profile curve"
+msgstr ""
+"|unchecked| :guilabel:`Transparenz anhand der Entfernung vom Kurveneffekt "
+"anwenden`, wodurch die Transparenz von Punkten reduziert wird, die weiter "
+"von der Profilkurve entfernt sind"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:828
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:665
+msgid "The point cloud elevation tab"
+msgstr "Der Punktwolken-Höhe-Reiter"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:671
 msgid "Metadata Properties"
@@ -370,3 +1666,183 @@ msgstr ""
 "Der Reiter |editMetadata| :guilabel:`Metadata` bietet Ihnen Optionen zum "
 "Erstellen und Bearbeiten eines Metadatenberichts zu Ihrem Layer. Siehe "
 ":ref:`metadatamenu` für weitere Informationen."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:681
+msgid "Statistics Properties"
+msgstr "Statistik"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:683
+msgid ""
+"In the |basicStatistics| :guilabel:`Statistics` tab you can get an overview "
+"of the attributes of your point cloud and their distribution."
+msgstr ""
+"Auf der Registerkarte |basicStatistics| :guilabel:`Statistik` erhalten Sie "
+"einen Überblick über die Attribute Ihrer Punktwolke und deren Verteilung."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:686
+msgid ""
+"At the top you will find the section :guilabel:`Attribute Statistics`. Here "
+"all attributes contained in the point cloud are listed, as well as some of "
+"their statistical values: :guilabel:`Minimum`, :guilabel:`Maximum`, "
+":guilabel:`Mean`, :guilabel:`Standard Deviation`"
+msgstr ""
+"Oben finden Sie den Abschnitt :guilabel:`Attributstatistik`. Hier sind alle "
+"in der Punktwolke enthaltenen Attribute sowie einige ihrer statistischen "
+"Werte aufgeführt: :guilabel:`Minimum`, :guilabel:`Maximum`, "
+":guilabel:`Mittelwert`, :guilabel:`Standardabweichung`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:691
+msgid ""
+"If there is an attribute :guilabel:`Classification`, then there is another "
+"table in the lower section. Here all values contained in the attribute are "
+"listed, as well as their absolute :guilabel:`Count` and relative "
+":guilabel:`%` abundance."
+msgstr ""
+"Wenn es ein Attribut :guilabel:`Classification` gibt, dann gibt es im "
+"unteren Bereich eine weitere Tabelle. Hier werden alle im Attribut "
+"enthaltenen Werte sowie ihre absolute :guilabel:`Anzahl` und relative "
+":guilabel:`%` -Häufigkeit aufgelistet."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:701
+msgid "The point cloud statistics tab"
+msgstr "Der Punktwolken-Statistik-Reiter"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:707
+msgid "Virtual point cloud"
+msgstr "Virtuelle Punktwolke"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:709
+msgid ""
+"Lidar surveys of larger areas are often multi-terabyte datasets with many "
+"billions of points. Having such large datasets represented as a single point"
+" cloud file is not practical due to the difficulties of storage, transfer, "
+"display and analysis. Point cloud data are therefore typically stored and "
+"distributed split into square tiles (e.g. ``1km x 1km``), each tile having a"
+" more manageable file size (e.g. ~200 MB when compressed)."
+msgstr ""
+"Lidar-Vermessungen größerer Gebiete sind oft mehrere Terabyte große "
+"Datensätze mit vielen Milliarden Punkten. Solch große Datensätze als "
+"einzelne Punktwolken-Datei darzustellen, ist aufgrund der Schwierigkeiten "
+"bei der Speicherung, Übertragung, Anzeige und Analyse nicht praktikabel. "
+"Punktwolken-Daten werden daher in der Regel in quadratische Kacheln (z. B. "
+"``1 km x 1 km``) aufgeteilt gespeichert und verteilt, wobei jede Kachel eine"
+" besser handhabbare Dateigröße hat (z. B. ~200 MB im komprimierten Zustand)."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:715
+msgid ""
+"Tiling of data solves the problems with size of data, but it introduces "
+"issues when processing or viewing an area of interest that does not fit "
+"entirely into a single tile. Users need to develop workflows that take into "
+"account multiple tiles and special care needs to be taken to deal with data "
+"near edges of tiles to avoid unwanted artefacts in outputs. Similarly, when "
+"viewing point cloud data, it becomes cumbersome to load many individual "
+"files and apply the same symbology."
+msgstr ""
+"Das Kacheln von Daten löst zwar das Problem der Datengröße, führt jedoch zu "
+"Problemen bei der Verarbeitung oder Anzeige eines Bereichs von Interesse, "
+"der nicht vollständig in eine einzelne Kachel passt. Benutzer müssen "
+"Workflows entwickeln, die mehrere Kacheln berücksichtigen, und es muss "
+"besonders darauf geachtet werden, wie mit Daten in der Nähe der Kachelränder"
+" umgegangen wird, um unerwünschte Artefakte in den Ausgaben zu vermeiden. "
+"Ebenso wird es bei der Anzeige von Punktwolkendaten mühsam, viele einzelne "
+"Dateien zu laden und dieselbe Symbolik anzuwenden."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:724
+msgid ""
+"Here is an example of several point cloud tiles loaded in QGIS. Each tile is"
+" styled based on min/max Z values of the tile, creating visible artefacts on"
+" tile edges. The styling has to be adjusted for each layer separately:"
+msgstr ""
+"Hier ist ein Beispiel für mehrere in QGIS geladene Punktwolkenkacheln. Jede "
+"Kachel wird basierend auf den minimalen/maximalen Z-Werten der Kachel "
+"gestaltet, wodurch sichtbare Artefakte an den Kachelkanten entstehen. Die "
+"Gestaltung muss für jede Ebene separat angepasst werden:"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:733
+msgid "Individual point cloud tiles loaded, with artefacts on edges"
+msgstr "Verschiedene Punktwolken-Kacheln mit Artefakten an den Kanten"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:735
+msgid ""
+"In the GIS world, many users are familiar with the concept of virtual "
+"rasters. A virtual raster is a file that simply references other raster "
+"files with actual data. In this way, GIS software then treats the whole "
+"dataset comprising many files as a single raster layer, making the display "
+"and analysis of all the rasters listed in the virtual file much easier."
+msgstr ""
+"In der Welt der GIS-Software sind viele Nutzer mit dem Konzept der "
+"virtuellen Raster vertraut. Ein virtuelles Raster ist eine Datei, die "
+"lediglich auf andere Rasterdateien mit tatsächlichen Daten verweist. Auf "
+"diese Weise behandelt die GIS-Software den gesamten Datensatz, der aus "
+"vielen Dateien besteht, als einen einzigen Raster-Layer, was die Anzeige und"
+" Analyse aller in der virtuellen Datei aufgeführten Raster erheblich "
+"vereinfacht."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:740
+msgid ""
+"Borrowing the concept of virtual rasters from GDAL, **virtual point cloud "
+"(VPC)** is a file format that references other point cloud files. Software "
+"supporting virtual point clouds handles the whole tiled dataset as a single "
+"data source."
+msgstr ""
+"Das Konzept der virtuellen Raster wurde von GDAL für Punktwolken übernommen."
+" **Virtuelle Punktwolken (VPC)** sind ein Dateiformat, das auf andere "
+"Punktwolken-Dateien verweist. Software, die virtuelle Punktwolken "
+"unterstützt, behandelt den gesamten gekachelten Datensatz als eine einzige "
+"Datenquelle."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:749
+msgid "The virtual point cloud"
+msgstr "Eine virtuelle Punktwolke"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:751
+msgid ""
+"Displaying and manipulating virtual point cloud is much more fluent and "
+"easy."
+msgstr ""
+"Die Anzeige und Bearbeitung virtueller Punktwolken ist wesentlich flüssiger "
+"und einfacher."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:760
+msgid ""
+"The virtual point cloud output on 2D: displaying details when zooming in"
+msgstr ""
+"Die virtuelle Punktwolkenausgabe in 2D: Anzeige von Details beim Vergrößern"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:763
+msgid ""
+"At the core, a virtual point cloud file is a simple JSON file with "
+":file:`.vpc` extension, containing references to actual data files (e.g. "
+":file:`.LAS`, :file:`.LAZ` or :file:`.COPC` files) and additional metadata "
+"extracted from the files. Even though it is possible to write VPC files by "
+"hand, it is strongly recommended to create them using an automated tool, "
+"such as:"
+msgstr ""
+"Im Kern ist eine virtuelle Punktwolken-Datei eine einfache JSON-Datei mit "
+"der Erweiterung :file:`.vpc`, die Verweise auf tatsächliche Datendateien (z."
+" B. :file:`.LAS`-, :file:`.LAZ`- oder :file:`.COPC`-Dateien) und zusätzliche"
+" Metadaten enthält, die aus den Dateien extrahiert wurden. Auch wenn es "
+"möglich ist, VPC-Dateien von Hand zu schreiben, wird dringend empfohlen, sie"
+" mit einem automatisierten Tool zu erstellen, wie z. B."
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:769
+msgid "The Processing :ref:`pdalvirtualpointcloud` algorithm"
+msgstr "Der Verarbeitungsalgorithmus :ref:`pdalvirtualpointcloud`"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:770
+msgid ""
+"The ``build_vpc`` command of `PDAL wrench <https://github.com/PDAL/wrench>`_"
+" tool"
+msgstr ""
+"Der Befehl ``build_vpc`` des Tools `PDAL wrench "
+"<https://github.com/PDAL/wrench>`_"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:772
+msgid ""
+"For more details, please refer to the `VPC specification "
+"<https://github.com/PDAL/wrench/blob/main/vpc-spec.md>`_ that also contains "
+"best practices and optional extensions (such as overviews)."
+msgstr ""
+"Weitere Informationen finden Sie in der `VPC-Spezifikation "
+"<https://github.com/PDAL/wrench/blob/main/vpc-spec.md>`_, die auch Best "
+"Practices und optionale Erweiterungen (z. B. Übersichten) enthält."
