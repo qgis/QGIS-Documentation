@@ -125,7 +125,7 @@ The current translations are made possible thanks to:
   =========================
 
   Efforts of translation for QGIS |CURRENT| Long Term Release are provided below.
-  Only languages that reached 5% by the version release time are published here.
+  Official documentation is published in only the languages that reached 5% of translation.
 
   .. include:: translation_stats.rst
      :start-line: 8
