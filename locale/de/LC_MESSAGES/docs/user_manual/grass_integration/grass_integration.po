@@ -6,9 +6,10 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Steffen Hollah, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,6 +80,31 @@ msgstr ""
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:28
 msgid "Demo dataset"
 msgstr "Beispieldatensatz"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:30
+msgid ""
+"As an example, we will use the QGIS Alaska dataset (see section "
+":ref:`label_sampledata`). It includes a small sample GRASS :file:`LOCATION` "
+"with three vector layers and one raster elevation map. Create a new folder "
+"called :file:`grassdata`, download the QGIS 'Alaska' dataset "
+":file:`qgis\\_sample\\_data.zip` from "
+"https://download.qgis.org//downloads/data/ and unzip the file into "
+":file:`grassdata`."
+msgstr ""
+"Als Beispiel verwenden wir den QGIS-Alaska-Datensatz (siehe Abschnitt "
+":ref:`label_sampledata`). Er enthält eine kleine GRASS-Beispieldatei "
+":file:`LOCATION` mit drei Vektorebenen und einer Raster-Höhenkarte. "
+"Erstellen Sie einen neuen Ordner namens :file:`grassdata`, laden Sie den "
+"QGIS-Datensatz „Alaska” :file:`qgis\\_sample\\_data.zip` von "
+"https://download.qgis.org//downloads/data/ herunter und entpacken Sie die "
+"Datei in :file:`grassdata`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:36
+msgid ""
+"More sample GRASS :file:`LOCATIONs` are available at the GRASS_ website."
+msgstr ""
+"Weitere Beispiel-GRASS-Dateien (:file:`LOCATION`) finden Sie auf der GRASS_ "
+"Website."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:43
 msgid "Loading GRASS raster and vector layers"
@@ -347,6 +373,43 @@ msgstr ""
 msgid "GRASS LOCATION and MAPSET"
 msgstr "Information zur GRASS-Datenbank"
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:133
+msgid ""
+"GRASS data are stored in a directory referred to as GISDBASE. This "
+"directory, often called :file:`grassdata`, must be created before you start "
+"working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS "
+"data are organized by projects stored in subdirectories called "
+":file:`LOCATIONs`. Each :file:`LOCATION` is defined by its coordinate "
+"system, map projection and geographical boundaries. Each :file:`LOCATION` "
+"can have several :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) "
+"that are used to subdivide the project into different topics or sub-regions,"
+" or as workspaces for individual team members (see Neteler & Mitasova 2008 "
+"in :ref:`literature_and_web`). In order to analyze vector and raster layers "
+"with GRASS modules, you generally have to import them into a GRASS "
+":file:`LOCATION`. (This is not strictly true -- with the GRASS modules "
+":file:`r.external` and :file:`v.external` you can create read-only links to "
+"external GDAL-supported datasets without importing them. This is not the "
+"usual way for beginners to work with GRASS, therefore this functionality "
+"will not be described here.)"
+msgstr ""
+"GRASS Daten werden in einem Ordner gespeichert, der als GISDBASE bezeichnet "
+"wird. Standardmäßig wird der Ordner :file:`grassdata` genannt und er muss "
+"erstellt worden sein, bevor man beginnt, mit dem GRASS Plugin in QGIS zu "
+"arbeiten. Innerhalb dieses Ordners sind die GRASS Daten als Projekte in "
+"Unterordnern genannt :file:`LOCATIONs` organisiert. Jede :file:`LOCATION` "
+"ist durch ein Koordinatenbezugssystem, Kartenprojektion und eine "
+"geographische Grenze definiert und kann darüberhinaus weitere Unterordner "
+":file:`MAPSETs` (Unterordner des Ordners :file:`LOCATION`) besitzen, um die "
+"Layer der :file:`LOCATION` weiter z.B. thematisch oder räumlich zu "
+"unterteilen (siehe Neteler & Mitasova 2008 in :ref:`literature_and_web`). Um"
+" Raster- und Vektorlayer mit den GRASS Modulen zu analysieren, müssen diese "
+"zuerst in eine passende GRASS :file:`LOCATION` importiert werden. (Dies ist "
+"nicht ganz korrekt. Mit den GRASS Modulen :file:`r.external` und "
+":file:`v.external` können Sie eine 'read-only' Verknüpfung zu externen durch"
+" GDAL/OGR-unterstützte Layer erstellen, ohne die Daten importieren zu "
+"müssen. Da dies aber nicht der normale Weg für GRASS Anfänger ist, wird auf "
+"diese Möglichkeit nicht näher eingegangen.)."
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:153
 msgid "GRASS data in the alaska LOCATION"
 msgstr "GRASS Daten in der Alaska LOCATION"
@@ -524,7 +587,7 @@ msgid ""
 "Visualize the :file:`alaska.shp` shapefile (see section :ref:`loading_file`)"
 " from the QGIS Alaska dataset (see :ref:`label_sampledata`)."
 msgstr ""
-"Laden Sie die Shapedatei :file:`alaska.shp` aus dem QGIS Alaska Datensatz "
+"Laden Sie das Shapefile :file:`alaska.shp` aus dem QGIS Alaska Datensatz "
 "(see :ref:`label_sampledata`) in QGIS ein (see section :ref:`loading_file`)."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:218
@@ -546,6 +609,19 @@ msgstr ""
 ":file:`grassdata` oder legen Sie für die neue :file:`LOCATION` mit Hilfe des"
 " Dateimanagers einen neuen Ordner an. Klicken Sie dann auf "
 ":guilabel:`Weiter`."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:223
+msgid ""
+"We can use this wizard to create a new :file:`MAPSET` within an existing "
+":file:`LOCATION` (see section :ref:`sec_add_mapset`) or to create a new "
+":file:`LOCATION` altogether. Select |radioButtonOn| :guilabel:`Create new "
+"location` (see :numref:`figure_grass_new_location`)."
+msgstr ""
+"Mit diesem Assistenten können wir einen neuen :file:`MAPSET` innerhalb einer"
+" bestehenden :file:`LOCATION` erstellen (siehe Abschnitt "
+":ref:`sec_add_mapset`) oder eine komplett neue :file:`LOCATION` erstellen. "
+"Wählen Sie |radioButtonOn| :guilabel:`Create new location` (siehe "
+":numref:`figure_grass_new_location`)."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:927
 msgid "radioButtonOn"
@@ -715,6 +791,19 @@ msgstr ""
 ":file:`LOCATION` 'alaska' aus wo Sie eine weitere :file:`MAPSET` genannt "
 "'test' hinzufügen wollen."
 
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:291
+msgid ""
+"We can use this wizard to create a new :file:`MAPSET` within an existing "
+":file:`LOCATION` or to create a new :file:`LOCATION` altogether. Click on "
+"the radio button |radioButtonOn| :guilabel:`Select location` (see "
+":numref:`figure_grass_new_location`) and click :guilabel:`Next`."
+msgstr ""
+"Mit diesem Assistenten können wir ein neues :file:`MAPSET` innerhalb eines "
+"bestehenden :file:`LOCATION` erstellen oder einen komplett neuen "
+":file:`LOCATION` erstellen. Klicken Sie auf das Optionsfeld |radioButtonOn| "
+":guilabel:`Select location` (siehe :numref:`figure_grass_new_location`) und "
+"klicken Sie auf :guilabel:`Next`."
+
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:295
 msgid ""
 "Enter the name :file:`test` for the new :file:`MAPSET`. Below in the wizard,"
@@ -833,6 +922,19 @@ msgstr ""
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:348
 msgid "**Learning the GRASS Vector Model**"
 msgstr "**Das GRASS Vektormodell verstehen**"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:350
+msgid ""
+"The best way to learn the GRASS vector model and its capabilities is to "
+"download one of the many GRASS tutorials where the vector model is described"
+" more deeply. See https://grass.osgeo.org/learn/manuals/ for more "
+"information, books and tutorials in several languages."
+msgstr ""
+"Der beste Weg, um das GRASS-Vektormodell und seine Funktionen "
+"kennenzulernen, ist das Herunterladen eines der zahlreichen GRASS-Tutorials,"
+" in denen das Vektormodell ausführlich beschrieben wird. Weitere "
+"Informationen, Bücher und Tutorials in mehreren Sprachen finden Sie unter "
+"https://grass.osgeo.org/learn/manuals/."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:361
 msgid "Creating a new GRASS vector layer"
@@ -1449,6 +1551,16 @@ msgstr ""
 "Es ist außerdem möglich, die GRASS Werkzeugkiste anzupassen und weitere "
 "Module zu integrieren. Die Herangehensweise ist in Abschnitt "
 ":ref:`sec_toolbox-customizing` beschrieben."
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:605
+msgid ""
+"As shown in :numref:`figure_grass_toolbox`, you can look for the appropriate"
+" GRASS module using the thematically grouped :guilabel:`Modules Tree` or the"
+" searchable :guilabel:`Modules List` tab."
+msgstr ""
+"Wie in :numref:`figure_grass_toolbox` gezeigt, können Sie das passende "
+"GRASS-Modul über die thematisch gruppierte :guilabel:`Modules Tree` oder die"
+" durchsuchbare Registerkarte :guilabel:`Modules List` suchen."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:609
 msgid ""
@@ -2079,3 +2191,11 @@ msgid ""
 msgstr ""
 "Beispielhaft ist hier die XML-Datei zum Modul ``v.buffer`` (v.buffer.qgm) "
 "dargestellt:"
+
+#: ../../docs/user_manual/grass_integration/grass_integration.rst:882
+msgid ""
+"The parser reads this definition and creates a new tab inside the Toolbox "
+"when you select the module."
+msgstr ""
+"Der Parser liest diese Definition und erstellt eine neue Registerkarte in "
+"der Toolbox, wenn Sie das Modul auswählen."
