@@ -470,36 +470,6 @@ To add a layer using :guilabel:`Import Vector Layer...` follow these steps:
 #. Optionally, apply an attribute filter with :ref:`Feature filter <expression_builder>`.
    This allows you to use an expression to select which features are imported.
 
-Managing QGIS Project Files from PostgreSQL Databases
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-QGIS allows you to store and manage project files directly inside a PostgreSQL database.  
-When a PostgreSQL connection is added in the :guilabel:`Browser` panel, a dedicated project and schema options becomes available.
-You can check all available options in the table above. In this section, we focus on the actions available at the schema level.
-
-When right-clicking on a schema within a PostgreSQL connection, two main options are available for managing QGIS projects:
-
-* :guilabel:`Schema operations`, where you can choose 
-  :menuselection:`Schema operations --> Rename Schema…` or 
-  :menuselection:`Schema operations --> Delete Schema…`.  
-* :guilabel:`Project`, where you can choose 
-  :menuselection:`Project --> Save Current Project` or 
-  :menuselection:`Project --> Import Projects…`.  
-
-When importing a project into a schema, a dialog appears allowing you to |add| :sup:`Add selected project or projects from the folder`.  
-After adding projects, you can remove a project by selecting its row and clicking |remove| :sup:`Remove selected row`.
-
-.. _figure_importproject_dialog:
-
-.. figure:: img/import_project_dialog.png
-   :align: center
-
-   Import Project dialog
-
-.. note:: Layers from a PostgreSQL provider include additional information in their Layer Properties 
-   under the Information tab. Users can view privileges for the connected database user, 
-   an estimate of the number of rows, and details about spatial indexes associated with the table.
-
 Tiles and Web Services
 ......................
 
@@ -620,8 +590,7 @@ Supported file types
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |add| image:: /static/common/mActionAdd.png
-   :width: 1.5em
+
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
 .. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
@@ -671,8 +640,6 @@ Supported file types
 .. |oracle| image:: /static/common/mIconOracle.png
    :width: 1.5em
 .. |postgis| image:: /static/common/mIconPostgis.png
-   :width: 1.5em
-.. |remove| image:: /static/common/mActionRemove.png
    :width: 1.5em
 .. |sensor| image:: /static/common/sensor.png
    :width: 1.5em
