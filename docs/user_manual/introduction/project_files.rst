@@ -155,14 +155,13 @@ Managing QGIS Project Files from PostgreSQL Databases
 QGIS allows you to store and manage project files directly inside a
 PostgreSQL database.
 When a PostgreSQL connection is added in the :guilabel:`Browser` panel,
-dedicated project-related options become available.
-When right-clicking on a PostgreSQL connection in the Browser panel, the
-following options are available for managing QGIS projects:
+right-clicking on the database schema provides access to the project menu
+options:
 
-* :guilabel:`Project`, providing project-specific actions:
-
-  * :menuselection:`Project --> Save Current Project`
-  * :menuselection:`Project --> Import Projects…`
+* :menuselection:`Project --> Save Current Project`: saves the current
+  project into the selected PostgreSQL database.
+* :menuselection:`Project --> Import Projects…`: imports one or more projects
+  from a folder into the selected PostgreSQL database.
 
 When importing projects, a dialog opens allowing you to
 |add| :sup:`Add selected project or projects from the folder`.
