@@ -9,6 +9,7 @@
 # Bernhard Ströbl <b.stroebl@stroweb.de>, 2025
 # Transifex Bot <>, 2025
 # Steffen Hollah, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Steffen Hollah, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1082,6 +1083,44 @@ msgstr ""
 msgid "GRASS"
 msgstr "GRASS"
 
+#: ../../docs/user_manual/processing/3rdParty.rst:557
+msgid ""
+"Configuring GRASS is not much different from configuring SAGA. First, the "
+"path to the GRASS folder has to be defined, but only if you are running "
+"Windows."
+msgstr ""
+"Die Konfiguration von GRASS unterscheidet sich nicht wesentlich von der "
+"Konfiguration von SAGA. Zunächst muss der Pfad zum GRASS-Ordner definiert "
+"werden, jedoch nur, wenn Sie Windows verwenden."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:561
+msgid ""
+"By default, the Processing framework tries to configure its GRASS connector "
+"to use the GRASS distribution that ships along with QGIS. This should work "
+"without problems for most systems, but if you experience problems, you might"
+" have to configure the GRASS connector manually. Also, if you want to use a "
+"different GRASS installation, you can change the setting to point to the "
+"folder where the other version is installed. GRASS 7 is needed for "
+"algorithms to work correctly."
+msgstr ""
+"Standardmäßig versucht das Processing-Framework, seinen GRASS-Konnektor so "
+"zu konfigurieren, dass er die mit QGIS gelieferte GRASS-Distribution "
+"verwendet. Dies sollte auf den meisten Systemen problemlos funktionieren. "
+"Sollten dennoch Probleme auftreten, müssen Sie den GRASS-Konnektor "
+"möglicherweise manuell konfigurieren. Wenn Sie eine andere GRASS-"
+"Installation verwenden möchten, können Sie die Einstellung so ändern, dass "
+"sie auf den Ordner verweist, in dem die andere Version installiert ist. "
+"Damit die Algorithmen korrekt funktionieren, ist GRASS 7 erforderlich."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:570
+msgid ""
+"If you are running Linux, you just have to make sure that GRASS is correctly"
+" installed, and that it can be run without problem from a terminal window."
+msgstr ""
+"Wenn Sie Linux verwenden, müssen Sie lediglich sicherstellen, dass GRASS "
+"korrekt installiert ist und ohne Probleme über ein Terminalfenster "
+"ausgeführt werden kann."
+
 #: ../../docs/user_manual/processing/3rdParty.rst:574
 msgid ""
 "GRASS algorithms use a region for calculations. This region can be defined "
@@ -1102,3 +1141,246 @@ msgstr ""
 #: ../../docs/user_manual/processing/3rdParty.rst:587
 msgid "LAStools"
 msgstr "LAStools"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:589
+msgid ""
+"To use `LAStools`_ in QGIS, you need to download and install LAStools on "
+"your computer and install the LAStools plugin (available from the official "
+"repository) in QGIS."
+msgstr ""
+"Um `LAStools`_ in QGIS zu verwenden, müssen Sie LAStools auf Ihren Computer "
+"herunterladen und installieren und das LAStools-Plugin (verfügbar im "
+"offiziellen Repository) in QGIS installieren."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:592
+msgid ""
+"On Linux platforms, you will need `Wine`_ to be able to run some of the "
+"tools."
+msgstr ""
+"Auf Linux-Plattformen benötigen Sie `Wine`_, um einige der Tools ausführen "
+"zu können."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:594
+msgid ""
+"LAStools is activated and configured in the Processing options "
+"(:menuselection:`Settings --> Options`, :guilabel:`Processing` tab, "
+":menuselection:`Providers --> LAStools`), where you can specify the location"
+" of LAStools (:guilabel:`LAStools folder`) and Wine (:guilabel:`Wine "
+"folder`). On Ubuntu, the default Wine folder is :file:`/usr/bin`."
+msgstr ""
+"LAStools wird in den Verarbeitungsoptionen aktiviert und konfiguriert "
+"(:menuselection:`Einstellungen --> Optionen`, "
+":guilabel:`Verarbeitung`-Registerkarte, :menuselection:`Datenanbieter --> "
+"LAStools`), wo Sie den Speicherort von LAStools (:guilabel:`LAStools-"
+"Ordner`) und Wine (:guilabel:`Wine-Ordner`) angeben können. Unter Ubuntu ist"
+" der Standardordner für Wine :file:`/usr/bin`."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:605
+msgid "OTB Applications"
+msgstr "OTB-Anwendungen"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:607
+msgid ""
+"OTB applications are fully supported within the QGIS Processing framework."
+msgstr ""
+"OTB-Anwendungen werden innerhalb des QGIS-Verarbeitungsframeworks "
+"vollständig unterstützt."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:609
+msgid ""
+"`OTB`_ (Orfeo ToolBox) is an image processing library for remote sensing "
+"data. It also provides applications that provide image processing "
+"functionalities. The list of applications and their documentation are "
+"available in `OTB CookBook <https://www.orfeo-"
+"toolbox.org/CookBook/Applications.html>`__"
+msgstr ""
+"`OTB`_ (Orfeo ToolBox) ist eine Bildverarbeitungsbibliothek für "
+"Fernerkundungsdaten. Sie bietet auch Anwendungen, die "
+"Bildverarbeitungsfunktionen bereitstellen. Die Liste der Anwendungen und "
+"ihre Dokumentation sind im `OTB CookBook <https://www.orfeo-"
+"toolbox.org/CookBook/Applications.html>`__ verfügbar."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:616
+msgid ""
+"Note that OTB is not distributed with QGIS and needs to be installed "
+"separately. Binary packages for OTB can be found on the `download page "
+"<https://www.orfeo-toolbox.org/download>`_."
+msgstr ""
+"Beachten Sie, dass OTB nicht mit QGIS ausgeliefert wird und separat "
+"installiert werden muss. Binärpakete für OTB finden Sie auf der `Download-"
+"Seite <https://www.orfeo-toolbox.org/download>`_."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:620
+msgid "To configure QGIS processing to find the OTB library:"
+msgstr ""
+"So konfigurieren Sie die QGIS-Verarbeitung, um die OTB-Bibliothek zu finden:"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:622
+msgid ""
+"Open the processing settings: :menuselection:`Settings --> Options --> "
+"Processing`"
+msgstr ""
+"Öffnen Sie die Verarbeitungseinstellungen: :menuselection:`Einstellungen -->"
+" Optionen --> Verarbeitung`"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:623
+msgid "You can see ``OTB`` under :menuselection:`Providers` menu:"
+msgstr ""
+"Sie finden ``OTB`` unter dem Menüpunkt :menuselection:`Datenanbieter`:"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:625
+msgid "Expand the :guilabel:`OTB` entry"
+msgstr "Erweitern Sie den Eintrag :guilabel:`OTB`."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:626
+msgid ""
+"Set the :guilabel:`OTB folder`. This is the location of your OTB "
+"installation."
+msgstr ""
+"Legen Sie den :guilabel:`OTB-Ordner` fest. Dies ist der Speicherort Ihrer "
+"OTB-Installation."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:627
+msgid ""
+"Set the :guilabel:`OTB application folder`. This is the location of your OTB"
+" applications ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)"
+msgstr ""
+"Legen Sie den :guilabel:`OTB-Anwendungsordner` fest. Dies ist der "
+"Speicherort Ihrer OTB-Anwendungen ( :file:`1/lib/otb/applications`)."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:629
+msgid "Click :guilabel:`OK` to save the settings and close the dialog."
+msgstr ""
+"Klicken Sie auf :guilabel:`OK`, um die Einstellungen zu speichern und das "
+"Dialogfeld zu schließen."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:631
+msgid ""
+"If settings are correct, OTB algorithms will be available in the "
+":guilabel:`Processing Toolbox`."
+msgstr ""
+"Wenn die Einstellungen korrekt sind, sind die OTB-Algorithmen in der "
+":guilabel:`Processing Toolbox` verfügbar."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:634
+msgid "Documentation of OTB settings available in QGIS Processing"
+msgstr ""
+"Dokumentation der OTB-Einstellungen, die in QGIS Processing verfügbar sind"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:636
+msgid "**OTB folder**: This is the directory where OTB is available."
+msgstr "**OTB-Ordner**: Dies ist das Verzeichnis, in dem OTB verfügbar ist."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:638
+msgid ""
+"**OTB application folder**: This is the location(s) of OTB applications."
+msgstr ""
+"**OTB-Anwendungsordner**: Dies ist der Speicherort der OTB-Anwendungen."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:640
+msgid "Multiple paths are allowed."
+msgstr "Es sind mehrere Pfade zulässig."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:642
+msgid ""
+"**Logger level** (optional): Level of logger to use by OTB applications."
+msgstr ""
+"**Logger-Ebene** (optional): Ebene des Loggers, der von OTB-Anwendungen "
+"verwendet werden soll."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:644
+msgid ""
+"The level of logging controls the amount of detail printed during algorithm "
+"execution. Possible values for logger level are ``INFO``, ``WARNING``, "
+"``CRITICAL``, ``DEBUG``. This value is ``INFO`` by default. This is an "
+"advanced user configuration."
+msgstr ""
+"Die Protokollierungsstufe steuert die Menge der während der "
+"Algorithmusausführung ausgegebenen Details. Mögliche Werte für die "
+"Protokollierungsstufe sind ``INFO``, ``WARNING``, ``CRITICAL`` und "
+"``DEBUG``. Der Standardwert ist ``INFO``. Dies ist eine fortgeschrittene "
+"Benutzerkonfiguration."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:649
+msgid ""
+"**Maximum RAM to use** (optional): by default, OTB applications use all "
+"available system RAM."
+msgstr ""
+"**Maximal zu verwendender Arbeitsspeicher** (optional): Standardmäßig "
+"verwenden OTB-Anwendungen den gesamten verfügbaren Arbeitsspeicher des "
+"Systems."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:652
+msgid ""
+"You can, however, instruct OTB to use a specific amount of RAM (in MB) using"
+" this option. A value of 256 is ignored by the OTB processing provider. This"
+" is an advanced user configuration."
+msgstr ""
+"Sie können OTB jedoch mit dieser Option anweisen, eine bestimmte RAM-Größe "
+"(in MB) zu verwenden. Der Wert 256 wird vom OTB-Verarbeitungsanbieter "
+"ignoriert. Dies ist eine fortgeschrittene Benutzerkonfiguration."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:656
+msgid "**Geoid file** (optional): Path to the geoid file."
+msgstr "**Geoid-Datei** (optional): Pfad zur Geoid-Datei."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:658
+msgid ""
+"This option sets the value of the elev.dem.geoid and elev.geoid parameters "
+"in OTB applications. Setting this value globally enables users to share it "
+"across multiple processing algorithms. Empty by default."
+msgstr ""
+"Diese Option legt den Wert der Parameter elev.dem.geoid und elev.geoid in "
+"OTB-Anwendungen fest. Durch die globale Festlegung dieses Werts können "
+"Benutzer ihn für mehrere Verarbeitungsalgorithmen gemeinsam nutzen. "
+"Standardmäßig leer."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:663
+msgid ""
+"**SRTM tiles folder** (optional): Directory where SRTM tiles are available."
+msgstr ""
+"**SRTM-Kachelordner** (optional): Verzeichnis, in dem SRTM-Kacheln verfügbar"
+" sind."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:665
+msgid ""
+"SRTM data can be stored locally to avoid downloading of files during "
+"processing. This option sets the value of elev.dem.path and elev.dem "
+"parameters in OTB applications. Setting this value globally enables users to"
+" share it across multiple processing algorithms. Empty by default."
+msgstr ""
+"SRTM-Daten können lokal gespeichert werden, um das Herunterladen von Dateien"
+" während der Verarbeitung zu vermeiden. Diese Option legt den Wert der "
+"Parameter elev.dem.path und elev.dem in OTB-Anwendungen fest. Durch die "
+"globale Festlegung dieses Werts können Benutzer ihn für mehrere "
+"Verarbeitungsalgorithmen gemeinsam nutzen. Standardmäßig leer."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:673
+msgid "Compatibility and Troubleshoot"
+msgstr "Kompatibilität und Fehlerbehebung"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:675
+msgid ""
+"Starting from OTB 6.6.1, new releases of OTB are made compatible with at "
+"least the latest QGIS version available at that time."
+msgstr ""
+"Ab OTB 6.6.1 sind neue Versionen von OTB mindestens mit der jeweils "
+"aktuellsten QGIS-Version kompatibel."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:678
+msgid ""
+"If you have issues with OTB applications in QGIS Processing, please open an "
+"issue on the `OTB bug tracker <https://gitlab.orfeo-"
+"toolbox.org/orfeotoolbox/otb/-/issues>`_, using the ``qgis`` label."
+msgstr ""
+"Wenn Sie Probleme mit OTB-Anwendungen in QGIS Processing haben, melden Sie "
+"diese bitte unter Verwendung des Labels ``qgis`` im `OTB bug tracker "
+"<https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues>`_."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:682
+msgid ""
+"Additional information about OTB and QGIS can be found in `OTB Cookbook "
+"<https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`__."
+msgstr ""
+"Weitere Informationen zu OTB und QGIS finden Sie im `OTB Cookbook "
+"<https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`__."
