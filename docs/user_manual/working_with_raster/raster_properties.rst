@@ -1174,7 +1174,9 @@ The configuration concerns:
 Attribute Tables
 ======================
 
-The :guilabel:`Attribute Tables` tab allows you to view and edit raster attribute data.
+Similar to vector layers, raster layers in QGIS can have associated
+Raster Attribute Tables (RAT) that store additional information about
+the raster data. The :guilabel:`Attribute Tables` tab allows you to view and edit raster attribute data.
 To access the attribute table of a raster layer, right-click the layer in the layers panel,
 open :guilabel:`Properties...` and select :guilabel:`Attribute Tables`.
 
