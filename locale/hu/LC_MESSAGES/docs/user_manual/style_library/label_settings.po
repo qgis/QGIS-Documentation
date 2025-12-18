@@ -291,6 +291,14 @@ msgstr "a :guilabel:`Szín`"
 msgid "the :guilabel:`Opacity`"
 msgstr "az :guilabel:`Átlátszatlanság`"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:133
+msgid ""
+"and :guilabel:`Allow HTML Formatting` enables the use of a subset of HTML "
+"tags and CSS rules to customize the label."
+msgstr ""
+"és a :guilabel:`HTML-formázás engedélyezése`, ami lehetővé teszi a HTML-"
+"címkék és CSS-szabályok egy részének használatát a címke testreszabásához."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:135
 msgid ""
 "At the bottom of the tab, a widget shows a filterable list of compatible "
@@ -318,6 +326,135 @@ msgstr ""
 "elemek is elérhetőek ebben a listában. Válassza ki az egyiket, hogy "
 "felülírja vele a címke aktuális :ref:`szöveges tulajdonságait "
 "<text_format>`. Ugyanígy szövegformázásokat is létrehozhat/felülírhat innen."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:152
+msgid "Allow HTML Formatting"
+msgstr "HTML-formázás engedélyezése"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:154
+msgid ""
+"With :guilabel:`Allow HTML Formatting` enabled, you need to provide the HTML"
+" code in the :guilabel:`Value` field. Use whitespaces instead of tabs for "
+"any kind of indentation. The expression is parsed and any supported HTML tag"
+" overrides its corresponding setting in the labels properties. Because it is"
+" impossible to list and detail every HTML tag and CSS property that QGIS "
+"currently supports, we invite you to explore and test in your labels `the "
+"ones supported <https://doc.qt.io/qt-5/richtext-html-subset.html>`_ by the "
+"underlying Qt library."
+msgstr ""
+"Ha a :guilabel:`HTML-formázás engedélyezése` be van kapcsolva, a HTML-kódot "
+"az :guilabel:`Érték` mezőben kell megadni. Behúzáshoz használjon szóközöket "
+"a tabulátorok helyett. A kifejezés elemzésre kerül, és minden támogatott "
+"HTML-címke felülírja a címkék tulajdonságaiban megadott beállításokat. Mivel"
+" lehetetlen felsorolni és részletezni minden HTML-címkét és CSS-"
+"tulajdonságot, amelyet a QGIS jelenleg támogat, kérjük, próbálja ki és "
+"tesztelje a címkéiben azokat, amelyeket `az alapul szolgáló Qt könyvtár "
+"támogat <https://doc.qt.io/qt-5/richtext-html-subset.html>`_."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:161
+msgid "**Examples of supported HTML tags:**"
+msgstr "**Példák támogatott HTML-címkékre.**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:163
+msgid "Text formatting, such as italic or bold, e.g.:"
+msgstr "Szövegformázás, például dőlt vagy félkövér betűk, pl.:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:169
+msgid ""
+"Superscript and subscript, where the text will be vertically :sup:`super` or"
+" :sub:`sub` aligned and automatically sized to 2/3 of the parent font size. "
+"You can also set a fixed font size for the superscript/subscript by "
+"including css rules, e.g.:"
+msgstr ""
+"Felső és alsó index, ahol a szöveg függőlegesen :sup:`fentre` vagy "
+":sub:`lentre` igazodik, és automatikusan a szülő betűméret 2/3-ára "
+"méreteződik. A felső/alsó indexhez fix betűméretet is beállíthat css "
+"szabályok beillesztésével, pl.:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:178
+msgid ""
+"Text horizontal alignment, using either HTML the ``align=\"xxx\"`` attribute"
+" or  ``center`` tag. For HTML5 compatibility, prefer using the CSS property "
+"``text-align``."
+msgstr ""
+"Szöveg vízszintes igazítása, az ``align=\"xxx\"`` HTML-attribútummal vagy a "
+"``center`` címkével. A HTML5 kompatibilitás érdekében preferálja a ``text-"
+"align`` CSS-tulajdonságot."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:181
+msgid "Horizontal alignment can not be used for curved labels."
+msgstr "A vízszintes igazítás nem használható íves címkéken."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:183
+msgid ""
+"Structuring a block of text using header tags (such as ``h1``, ``h2``, ...),"
+" or paragraphs (with ``p``, ``div``, ``br``):"
+msgstr ""
+"Szövegblokk strukturálása fejléc címkék segítségével (pl. ``h1``, ``h2``, …)"
+" vagy bekezdésekkel (``p``, ``div``, ``br``):"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:193
+msgid ""
+"Image insertion: any image format readable by QGIS can be used in HTML label"
+" content. It can be served from local file paths, HTTP links, or base64 "
+"embedded content, using the ``src=\"xxx\"`` attribute. Image sizes can be "
+"specified via the ``width=\"##\"`` and ``height=\"##\"`` attributes, in "
+"``points`` unit. If width or height is not specified it will automatically "
+"be calculated from the original image size. Images are placed inline only, "
+"not as floating images, and not on curved text labels."
+msgstr ""
+"Kép beszúrása: a QGIS által olvasható bármely képformátum használható HTML "
+"címke tartalomként. Helyi fájlútvonalakról, HTTP linkekről vagy base64 "
+"beágyazott tartalomként is megadható az ``src=\"xxx\"`` attribútum "
+"használatával. A képek mérete a ``width=\"##\"`` és a ``height=\"##\"`` "
+"attribútumokkal adható meg, ``pont`` mértékegységben. Ha a szélesség vagy a "
+"magasság nincs megadva, akkor az automatikusan az eredeti kép méretéből "
+"kerül kiszámításra. A képek csak inline elhelyezhetők el, vagyis lebegő "
+"képekként és ívelt szövegcímkéken nem."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:205
+msgid "**Examples of supported CSS properties:**"
+msgstr "**Példák támogatott CSS-tulajdonságokra:**"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:207
+msgid ""
+"Font properties (``color``, ``font-family``, ``font-size``, ``font-weight``,"
+" ``font-style``, ``word-spacing``). Note that ``word-spacing`` will always "
+"use unit points."
+msgstr ""
+"Betűtulajdonságok (``color``, ``font-family``, ``font-size``, ``font-"
+"weight``, ``font-style``, ``word-spacing``). Vegye figyelembe, hogy a "
+"``word-spacing`` mértékegysége mindig pont."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:209
+msgid ""
+"Text decorations such as underline, overline and line-through (``text-"
+"decoration``)"
+msgstr ""
+"Szövegdekorációk, például aláhúzás, felülvonás és áthúzás (``text-"
+"decoration``)"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:210
+msgid ""
+"Text alignment (``vertical-align``, ``text-align``). Horizontal alignment "
+"can not be used for curved labels."
+msgstr ""
+"Szövegigazítás (``vertical-align``, ``text-align``). A vízszintes igazítás "
+"nem használható íves címkéken."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:213
+msgid ""
+"CSS properties can be set on HTML tags with the ``style`` attribute. The "
+"HTML tag ``span`` does not apply any formatting to text by itself and is "
+"ideal if you just want to apply CSS styling. A CSS property name and its "
+"value are separated by a colon (``:``). Multiple CSS properties are "
+"separated by semicolon (``;``), e.g.:"
+msgstr ""
+"A CSS tulajdonságok a HTML-címkék ``style`` attribútumában adhatóak meg. A "
+"HTML ``span`` címke önmagában nem alkalmaz semmilyen formázást a szövegre, "
+"ezért ideális, ha csak CSS-stílust szeretne alkalmazni. A CSS tulajdonság "
+"neve és értéke kettősponttal (``:``) van elválasztva. Több CSS tulajdonság "
+"pontvesszővel (``;``) van elválasztva, pl.:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:224
 msgid ""

@@ -7,9 +7,9 @@
 # Translators:
 # fairtommy <fairtommy@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
-# tomoya miyoshi, 2025
 # Transifex Bot <>, 2025
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,9 +51,9 @@ msgid ""
 "executions of the same algorithm on different sets of inputs."
 msgstr ""
 " :guilabel:`プロセシングツールボックス' "
-"は、プロセシングのGUIの主要な要素で、あなたが日々の作業で最も利用するもののひとつでしょう。利用可能なすべての **アルゴリズム** のリストが "
-"*プロバイダ* と、このツールセットを拡張するために追加できるカスタム **モデル** **スクリプト** "
-"と呼ばれるグループに分けられて表示されています。ツールボックスは、一回の処理として、又は同じアルゴリズムを異なる入力セットで複数回実行するバッチ処理として、それらを実行するアクセスポイントです。"
+"は、プロセシングGUIの主要な要素で、あなたが日々の作業で最も利用するもののひとつです。利用可能な全ての **アルゴリズム** の一覧が *プロバイダ*"
+" と呼ばれるグループに分けて表示され、さらにカスタム **モデル** と **スクリプト**  "
+"には追加してツールセットを拡張できます。ツールボックスはアクセスポイントであり、単独の処理として、又は異なる入力セットに対して同じアルゴリズムを複数回実行するバッチ処理として、それらを実行します。"
 
 #: ../../docs/user_manual/processing/toolbox.rst:24
 msgid "Processing Toolbox"
@@ -158,9 +158,62 @@ msgstr ""
 msgid "search"
 msgstr "search"
 
+#: ../../docs/user_manual/processing/toolbox.rst:55
+msgid ""
+"The top of the algorithm list shows the most |processingHistory| "
+":sup:`Recently Used` tools and the |favorites| :sup:`Favorites` tools, "
+"making it convenient to reexecute them. The |processingHistory| "
+":sup:`Recently Used` list is there by default, showing the algorithms you "
+"have recently executed. The |favorites| :sup:`Favorites` list is created "
+"when you manually add an algorithm to it."
+msgstr ""
+"アルゴリズム一覧の上部には、|processingHistory| :sup:`最近使ったツール` と |favorites| :sup:`お気に入り`"
+" ツールが表示され、再実行が容易になっています。|processingHistory| :sup:`最近使ったツール` "
+"リストはデフォルトで表示され、直近に実行したアルゴリズムを示します。|favorites| :sup:`お気に入り` "
+"リストは、手動でアルゴリズムをそれに追加したときに作成されます。"
+
 #: ../../docs/user_manual/processing/toolbox.rst:503
 msgid "favorites"
 msgstr "favorites"
+
+#: ../../docs/user_manual/processing/toolbox.rst:59
+msgid ""
+"You can right-click on any algorithm in the toolbox and choose from the "
+"contextual menu to:"
+msgstr "ツールボックス内の任意のアルゴリズムを右クリックし、コンテキストメニューから以下の操作を選択できます:"
+
+#: ../../docs/user_manual/processing/toolbox.rst:61
+msgid ":guilabel:`Execute...` to run the algorithm."
+msgstr ":guilabel:`実行...` は、そのアルゴリズムを実行します。"
+
+#: ../../docs/user_manual/processing/toolbox.rst:62
+msgid ""
+":guilabel:`Execute as Batch Process...` to run the algorithm in batch mode."
+msgstr ":guilabel:`バッチプロセスで実行...` は、そのアルゴリズムをバッチモードで実行します。"
+
+#: ../../docs/user_manual/processing/toolbox.rst:63
+msgid ""
+":guilabel:`Edit Rendering Styles for Outputs...` to customize the rendering "
+"styles for the algorithm's outputs."
+msgstr ""
+":guilabel:`出力のためのレンダリングスタイルを編集...` は、アルゴリズムの出力に対するレンダリングスタイルをカスタマイズします。"
+
+#: ../../docs/user_manual/processing/toolbox.rst:64
+msgid ""
+":guilabel:`Add to Favorites` to add the algorithm to the Favorites list."
+msgstr ":guilabel:`お気に入りに追加` は、そのアルゴリズムをお気に入りリストに追加します。"
+
+#: ../../docs/user_manual/processing/toolbox.rst:65
+msgid ""
+":guilabel:`Remove from Favorites` to remove the algorithm from the Favorites"
+" list."
+msgstr ":guilabel:`お気に入りから削除` は、そのアルゴリズムをお気に入りリストから削除します。"
+
+#: ../../docs/user_manual/processing/toolbox.rst:67
+msgid ""
+"Unlike the Recently Used list, the Favorites list remains static and is not "
+"affected by which algorithms were executed."
+msgstr "最近使ったツールリストと違ってお気に入りリストは静的で、どのアルゴリズムが実行されたかによる影響は受けません。 "
 
 #: ../../docs/user_manual/processing/toolbox.rst:74
 msgid "Processing Toolbox showing search results"
@@ -534,6 +587,23 @@ msgstr ""
 msgid "Logging the execution"
 msgstr "実効を記録する"
 
+#: ../../docs/user_manual/processing/toolbox.rst:276
+msgid ""
+"Along with the :guilabel:`Parameters` tab, there is another tab named "
+":guilabel:`Log` (see :numref:`figure_alg_dialog_log` below). Information "
+"provided by the algorithm during its execution is written in this tab, "
+"allowing you to track the execution as well as being aware and having more "
+"details about the algorithm as it runs. You can directly click on the names "
+"of output files, folders, or HTML files listed in the log. Doing so will "
+"open the folder containing the generated file and automatically select it. "
+"Information on algorithm execution is also output in the "
+":menuselection:`View --> Panels --> Log Messages Panel`."
+msgstr ""
+":guilabel:`パラメータ` タブの他に、 :guilabel:`ログ` という名前のタブがあります（下記の "
+":numref:`figure_alg_dialog_log` "
+"を参照）。このタブには、アルゴリズムが実行中に提供する情報が書き込まれ、実行を追跡できるだけでなく、アルゴリズムが実行されていることを認識し、より詳細な情報を得ることができます。ログに表示されている出力ファイル、フォルダ、またはHTMLファイルの名前を直接クリックできます。クリックすると、生成されたファイルを含むフォルダが開き、そのファイルが自動的に選択されます。アルゴリズムの実行に関する情報は、"
+" :menuselection:`ビュー --> パネル --> ログメッセージ` にも出力されます。"
+
 #: ../../docs/user_manual/processing/toolbox.rst:286
 msgid ""
 "Notice that not all algorithms write information to the :guilabel:`Log` tab,"
@@ -662,6 +732,18 @@ msgstr "|editPaste| :guilabel:`設定を貼り付け` は :file:`JSON` 形式で
 #: ../../docs/user_manual/processing/toolbox.rst:501
 msgid "editPaste"
 msgstr "editPaste"
+
+#: ../../docs/user_manual/processing/toolbox.rst:337
+msgid ""
+"The :guilabel:`Run as Batch Process...` button triggers the :ref:`batch "
+"processing mode <processing_batch>` allowing to configure and run multiple "
+"instances of the algorithm with a variety of parameters. A :guilabel:`Run as"
+" Single Process...` button helps you switch back from the batch mode."
+msgstr ""
+":guilabel:`バッチプロセスで実行...` ボタンを押すと :ref:`batch processing mode "
+"<processing_batch>` "
+"が起動し、アルゴリズムの複数のインスタンスを様々なパラメータで構成し実行することができます。:guilabel:`シングルプロセスとして実行...` "
+"ボタンは、バッチ処理モードから切り替えることができます。"
 
 #: ../../docs/user_manual/processing/toolbox.rst:342
 msgid ""
