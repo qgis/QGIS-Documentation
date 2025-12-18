@@ -91,42 +91,6 @@ GeoPackage layers can have JSON fields.
 
 GeoPackage is the default format for vector data in QGIS.
 
-Field domain
-................
-
-Field domains are rules that define acceptable values for a field in a database table.
-The following options are available:
-
-* :guilabel:`New Range Domain...`: create a new range domain to restrict field values
-  to a specified numeric range.
-* :guilabel:`New Coded Values Domain...`: create a new coded values domain to
-  restrict field values to a predefined list of acceptable values.
-* :guilabel:`New Glob Domain...`: create a new glob domain to restrict field values
-  based on pattern matching using wildcard characters.
-
-More details on each selected option are provided below:
-
-* :guilabel:`Name`: set the name of the new field domain.
-* :guilabel:`Description`: provide a description for the new field domain.
-* :guilabel:`Field type`: select the data type of the field domain
-  (e.g., Boolean, Text, Integer, Decimal).
-* Here are two available :guilabel:`Policies`:
-
-  * :guilabel:`Split policy`
-  * :guilabel:`Merge policy`
-
-* Under :guilabel:`Range`, you can set the following options:
-
-  * :guilabel:`Minimum`: set the minimum acceptable value for the field.
-  * :guilabel:`Maximum`: set the maximum acceptable value for the field.
-  * Check the |checkbox| :guilabel:`Inclusive` if you want to include the boundary values in the acceptable range.
-
-* :guilabel:`Values`: click the |symbologyAdd| :sup:`Add row` or |symbologyRemove| :sup:`Remove row` to manage
-  the list of acceptable values for the field.
-* :guilabel:`Pattern`: define the :guilabel:`Glob pattern` using wildcard characters
-  (e.g., `*` for any sequence of characters, `?` for a single character).
-
-
 .. index:: ESRI Shapefile format, GDAL
 .. _vector_shapefiles:
 
@@ -686,6 +650,51 @@ columns can be given by using
 selecting the columns in the :guilabel:`Feature id` column. For best
 performance, the :guilabel:`Feature id` value should be a single ``INTEGER``
 column.
+
+
+.. index:: Field domain
+.. _field_domain:
+
+Field domain
+-------------
+
+Field domains are rules that define acceptable values for a field in a database table.
+This is applicable when working with data sources that support field domains,
+such as GeoPackage and OpenfileGDB.
+The following options are available:
+
+* :guilabel:`New Range Domain...`: create a new range domain to restrict field values
+  to a specified numeric range.
+* :guilabel:`New Coded Values Domain...`: create a new coded values domain to
+  restrict field values to a predefined list of acceptable values.
+* :guilabel:`New Glob Domain...`: create a new glob domain to restrict field values
+  based on pattern matching using wildcard characters.
+
+More details on each selected option are provided below:
+
+* :guilabel:`Name`: set the name of the new field domain.
+* :guilabel:`Description`: provide a description for the new field domain.
+* :guilabel:`Field type`: select the data type of the field domain
+  (e.g., Boolean, Text, Integer, Decimal).
+* Here are two available :guilabel:`Policies`:
+
+  * :guilabel:`Split policy`
+  * :guilabel:`Merge policy`
+
+* Under :guilabel:`Range`, you can set the following options:
+
+  * :guilabel:`Minimum`: set the minimum acceptable value for the field.
+  * :guilabel:`Maximum`: set the maximum acceptable value for the field.
+  * Check the |checkbox| :guilabel:`Inclusive` if you want to include the boundary values in the acceptable range.
+
+* :guilabel:`Values`: click the |symbologyAdd| :sup:`Add row` or |symbologyRemove| :sup:`Remove row` to manage
+  the list of acceptable values for the field.
+* :guilabel:`Pattern`: define the :guilabel:`Glob pattern` using wildcard characters
+  (e.g., `*` for any sequence of characters, `?` for a single character).
+
+Update and delete field domains by selecting the desired domain from the list and
+right-clicking to access the context menu options.
+
 
 .. index:: PostgreSQL; PostGIS; ST_Shift_Longitude
 
