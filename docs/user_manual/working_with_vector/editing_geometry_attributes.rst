@@ -1452,15 +1452,31 @@ you to configure some parameters like **Operation**, **Fillet segments**, **Fill
 
 Reverse Line
 ------------
+
 Changing the direction of a line geometry can be useful for
-cartographical purposes or when preparing for network analysis.
+cartographical purposes (e.g., for orienting symbols or labels
+that follow the line direction) or when preparing for network analysis
+where the direction of flow or travel matters.
+
+This tool works only on line layers.
+For multipart lines, you can reverse individual parts
+without affecting the other parts of the feature.
 
 To change a line direction:
 
+#. Select a line layer in the :guilabel:`Layers` panel
+   and make it editable.
 #. Activate the reverse line tool by clicking |reverseLine|
-   :sup:`Reverse line`.
-#. Click on the line. The direction of the line
+   :sup:`Reverse line` in the :guilabel:`Advanced Digitizing` toolbar.
+#. Move the pointer over a line feature.
+   The part under the cursor is highlighted.
+#. Click on the line: the direction of the line (or part)
    is reversed.
+#. You can reverse other lines by clicking on them.
+
+.. tip:: For bulk line direction changes, use the
+   :ref:`qgisreverselinedirection` processing algorithm which can
+   reverse all lines in a layer or a selection at once.
 
 .. index::
    single: Digitizing tools; Split Features
