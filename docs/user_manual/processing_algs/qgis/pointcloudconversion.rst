@@ -241,6 +241,12 @@ Basic parameters
 
        Default: 1000
      -
+   * - **Maximum triangle edge length**
+
+       Optional
+     - ``MAX_EDGE_LENGTH``
+     - [numeric: double]
+     - Maximum length of triangle edges. Edges longer than this value will be ignored during interpolation.
    * - **Exported**
      - ``OUTPUT``
      - [raster]
