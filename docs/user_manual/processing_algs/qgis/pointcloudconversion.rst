@@ -197,8 +197,8 @@ Python code
 
 .. _pdalexportrastertin:
 
-Export point cloud raster (using triangulation)
------------------------------------------------
+Export point cloud to raster (using triangulation)
+--------------------------------------------------
 
 Exports point cloud data to a 2D raster grid using a triangulation of points
 and then interpolating cell values from triangles.
