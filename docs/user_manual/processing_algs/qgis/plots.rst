@@ -437,7 +437,7 @@ Python code
 
 Polar plot
 ----------
-Generates a polar plot based on the value of an input vector layer.
+Generates a polar bar plot based on the value of an input vector layer.
 
 Parameters
 ..........
