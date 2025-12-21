@@ -322,8 +322,8 @@ msgid ""
 msgstr ""
 "**GISアプリケーション** がどのようなものか例をご覧ください "
 ":numref:`figure_gis_application`。GISアプリケーションは通常、マウスとキーボードを使って操作できるグラフィカルユーザーインタフェースを持つプログラムです。アプリケーションにはウィンドウの上部に"
-" **メニュー** があり（:guilabel:`プロジェクト`、:guilabel:`編集` など）、マウスでクリックすると、**アクション** "
-"のパネルが表示されます。これらのアクションは、あなたがしたいことをGISアプリケーションに伝えるための方法です。例えば、メニューを使ってGISアプリケーションに新しいレイヤを表示出力に追加するように指示することができます。"
+" **メニュー** があり（:guilabel:`プロジェクト`、:guilabel:`編集` など）、マウスでクリックすると、**操作** "
+"のパネルが表示されます。これらの操作は、あなたがしたいことをGISアプリケーションに伝えるための方法です。例えば、メニューを使ってGISアプリケーションに新しいレイヤを表示出力に追加するように指示することができます。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:102
 msgid ""
@@ -354,8 +354,8 @@ msgid ""
 "each map layer will represent something in the real world –-- a roads layer "
 "for example will have data about the street network."
 msgstr ""
-"GIS アプリケーションの一般的な機能としては **地図レイヤ** "
-"の表示があります。地図レイヤはディスク上のファイルやデータベースのレコードとして保存されます。通常、それぞれの地図レイヤは現実世界の様々なものを表しています。たとえば、道路レイヤは道路ネットワークを表します。"
+"GIS アプリケーションの一般的な機能には **地図レイヤ** "
+"の表示があります。地図レイヤはディスク上のファイルやデータベースのレコードとして保存されます。通常、それぞれの地図レイヤは現実世界の何かを表しています。たとえば、道路レイヤは街路ネットワークについてのデータを持ちます。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:121
 msgid ""
@@ -373,7 +373,7 @@ msgstr ""
 "に表示されます。マップビューには、レイヤを表すグラフィックが表示されます。マップビューに複数のレイヤを追加すると、レイヤは互いに重なり合って表示されます。:numref:`figure_map_view_towns`、"
 " :numref:`figure_map_view_schools` 、 :numref:`figure_map_view_railways` 、 "
 ":numref:`figure_map_view_rivers` "
-"を見て、いくつかのレイヤが追加されているマップビューを見てみてください。マップビューの重要な機能は、拡大して大きくしたり、縮小してより広い範囲を見たり、地図内を移動（パン）したりすることができることです。"
+"を見ると、マップビューに複数のレイヤが追加される様子が分かります。マップビューの重要な機能は、拡大して大きくしたり、縮小してより広い範囲を見たり、地図内を移動（パン）したりすることができることです。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:136
 msgid ""
@@ -417,7 +417,7 @@ msgstr ""
 "アプリケーションに読み込まれたレイヤのリストを提供します。紙の地図の凡例とは異なり、GIS "
 "アプリケーションのマップ凡例または「レイヤリスト」は、レイヤの順序変更、非表示、表示、およびグループ化を行う方法を提供します。レイヤの順序を変更するには、凡例内のレイヤをクリックし、マウスボタンを押したまま、レイヤを新しい位置までドラッグしてください。"
 " :numref:`figure_map_legend_before` と :numref:`figure_map_legend_after` "
-"では、マップ凡例はGISアプリケーションウィンドウの左側の領域として表示されています。レイヤの順番を変更することで、レイヤの描画方法を調整することができます。この場合、河川は道路の上にではなく、その下に描画されるようになります。"
+"では、マップ凡例はGISアプリケーションウィンドウの左側の領域に表示されています。レイヤの順番を変更することで、レイヤの描画方法を調整することができます。この場合、河川は道路の上にではなく、その下に描画されるようになります。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:184
 msgid ""
@@ -474,14 +474,14 @@ msgid ""
 "record diseases that looked like this:"
 msgstr ""
 "それではGISとは何か、GISアプリケーションは何ができるのか解ってきたところで **GISデータ** について説明しましょう。データは **情報** "
-"と言い換えることもできます。GISで使われる情報というのは地理的な側面を持っています。前述の医療関係者の例を考えてみましょう。彼女は "
+"と言い換えることもできます。GISで使う情報は、通常地理的な側面を持っています。前述の医療関係者の例を考えてみましょう。彼女は "
 "症例を記録するために以下のような表を作りました:"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:234
 msgid ""
 "The longitude and latitude columns hold **geographical data**. The disease "
 "and date columns hold **non-geographical data**."
-msgstr "経度と緯度の列は **地理情報データ** を持っています。病気と診療日の列は **地理情報ではないデータ** です。"
+msgstr "経度と緯度の列は **地理的なデータ** を持っています。病気と診療日の列は **地理的ではないデータ** です。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:237
 msgid ""
@@ -495,7 +495,7 @@ msgid ""
 "Application we have a way to easily change the appearance of the maps we "
 "created based on the non-geographical data associated with places."
 msgstr ""
-"GISの一般的な機能は、情報（地理情報ではないデータ）を場所（地理情報データ）に関連付けることができることです。実際、GISアプリケーションは、それぞれの場所に関連付けられた多くの情報を保存すること－紙の地図があまり得意でないこと－ができます。例えば医療従事者たちは患者の年齢や性別といったデータを表に保存できます。GISアプリケーションがレイヤを描画するとき、性別に基づいたレイヤや病気の種類に基づいたレイヤなどを描画をするように指示することができます。このように、GISアプリケーションを使えば、場所に関連付けられた地理情報でないデータに基づいて地図の外観を簡単に変更することができるのです。"
+"GISの一般的な機能は、情報（地理的ではないデータ）を場所（地理的なデータ）に関連付けることができることです。実際、GISアプリケーションは、それぞれの場所に関連付けられた多くの情報を保存すること－紙の地図があまり得意でないこと－ができます。例えば医療従事者たちは患者の年齢や性別といったデータを表に保存できます。GISアプリケーションがレイヤを描画するとき、性別に基づいたレイヤや病気の種類に基づいたレイヤなどを描画をするように指示することができます。このように、GISアプリケーションを使えば、作成した地図の外観を場所に関連付けられた地理的でないデータに基づいて簡単に変更することができるのです。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:247
 msgid ""
@@ -543,11 +543,11 @@ msgstr "衛星画像のラスタデータ.こちらは東ケープの山岳地�
 msgid ""
 "The same raster data, but this time zoomed in. The grid nature of the data "
 "can be seen."
-msgstr "同じラスタデータを拡大したもの。データのグリッドの性質が判ります。"
+msgstr "同じラスタデータを拡大したもの。データのグリッドの性質が分かります。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:289
 msgid "What have we learned?"
-msgstr "わかりましたか?"
+msgstr "分かりましたか?"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:291
 msgid "Let's wrap up what we covered in this worksheet:"
@@ -557,29 +557,30 @@ msgstr "ここでは以下のことを学びました:"
 msgid ""
 "A **GIS** is a system of computer hardware, computer software and "
 "geographical data."
-msgstr "**GIS** とはコンピュータ・ハードウェア, ソフトウェア, 地理情報のシステムです."
+msgstr "**GIS** とはコンピュータ・ハードウェア, コンピュータ・ソフトウェア, 地理的なデータのシステムです."
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:295
 msgid ""
 "A **GIS Application** allows you to view geographical data and is an "
 "important part of the GIS."
-msgstr "**GISアプリケーション** は地理情報データを見ることを可能にし, GISの重要な部分を占めます."
+msgstr "**GISアプリケーション** は地理的なデータを見ることを可能にし, GISの重要な部分を占めます."
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:297
 msgid ""
 "A GIS Application normally consists of a **menu bar**, **toolbars**, a **map"
 " view** and a **legend**."
-msgstr "GISアプリケーションは通常、 **メニューバー** 、 **ツールバー** 、 **地図ビュー** 、 **凡例** から構成されます."
+msgstr ""
+"GISアプリケーションは通常、 **メニューバー** 、 **ツールバー** 、 **マップビュー** 、 **凡例** から構成されます."
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:299
 msgid ""
 "**Vector** and **raster** data are geographical data used in a GIS "
 "application."
-msgstr "GISアプリケーションで使用される地理情報データには **ベクタデータ** と **ラスタデータ** があります。"
+msgstr "GISアプリケーションで使われる地理的なデータには **ベクタデータ** と **ラスタデータ** があります。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:300
 msgid "**Geographical** data can have associated **non-geographical** data."
-msgstr "**地理情報** データは **地理情報ではない** データと関連付けることができます。"
+msgstr "**地理的な** データは **地理的ではない** データと関連付けることができます。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:303
 msgid "Now you try!"
@@ -595,7 +596,7 @@ msgid ""
 "this tutorial. Ask them to try to think of 3 reasons why it might be handy "
 "to use a GIS instead of paper maps. Here are some that we could think of:"
 msgstr ""
-"**地理情報：** このチュートリアルで示すように、GISのコンセプトを示す概念です. なぜ紙地図よりGISの方が便利なのか, "
+"**地理学：** このチュートリアルで示すように、GISのコンセプトを示す概念です. なぜ紙地図よりGISの方が便利なのか, "
 "GISを学習する人たちに3つ理由を考えさせてみて下さい. 以下にはいくつかの例を示します:"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:311
@@ -611,7 +612,7 @@ msgid ""
 "earlier)."
 msgstr ""
 "GISはすばらしい可視化ツールで, "
-"データそのものやそれらが空間的にどのような関係性を持っているのか（例えば先ほど示した病気の拡大など）をしめすことができます."
+"データそのものやそれらが空間的にどのような関係性を持っているのか（例えば先ほど示した病気の拡大など）を示すことができます."
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:316
 msgid ""
@@ -664,8 +665,7 @@ msgid ""
 " same technique of layering information. However, to properly understand GIS"
 " it is always better to learn it using a computer."
 msgstr ""
-"もしコンピュータが利用できない場合でも、このチュートリアルの多くの項目は、OHPとシートを使って、レイヤ情報の重ね合わせを同様におこなうことで再現可能です。\n"
-"ですが、GISについて正しく理解する目的ならば、コンピュータを使って学ぶ方がよいでしょう。"
+"もしコンピュータが利用できない場合でも、このチュートリアルの多くの項目は、OHPとシートを使って、レイヤ情報の重ね合わせを同様におこなうことで再現可能です。ですが、GISについて正しく理解する目的ならば、コンピュータを使って学ぶ方がよいでしょう。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:342
 msgid "Further reading"
