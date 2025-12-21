@@ -582,6 +582,16 @@ msgstr ":guilabel:`Savybės...`"
 msgid ":guilabel:`Directory Properties...`"
 msgstr ":guilabel:`Aplanko savybės...`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:195
+msgid ""
+"For leaf entries that can act as layers in the project, the context menu "
+"will have supporting entries. For example, for non-database, non-service-"
+"based vector, raster and mesh data sources:"
+msgstr ""
+"Vaikiniams įrašams, kurie yra projektų sluoksniai, kontekstiniame meniu bus "
+"palaikantys įrašai. Pavyzdžiui, ne duomenų bazės, ne vektorinių, rastro ar "
+"duomenų tinklelio paslaugų įrašai turės:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:200
 msgid ":menuselection:`Export Layer --> To File...`"
 msgstr ":menuselection:`Eksportuoti sluoksnį --> Į failą...`"
@@ -591,41 +601,886 @@ msgstr ":menuselection:`Eksportuoti sluoksnį --> Į failą...`"
 msgid ":guilabel:`Add Layer to Project`"
 msgstr ":guilabel:`Pridėti sluoksnį į projektą`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:202
+msgid ":guilabel:`Layer Properties`"
+msgstr ":guilabel:`Sluoksnio savybės`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:203
 msgid ":guilabel:`Open with Data Source Manager...`"
 msgstr ":guilabel:`Atverti su duomenų šaltinių tvarkykle...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:204
+msgid ""
+":menuselection:`Manage --> Rename \"<name of file>\"...` or "
+":guilabel:`Delete \"<name of file>\"...`"
+msgstr ""
+":menuselection:`Tvarkyti --> Pervadinti „<name of file>“...` ar "
+":guilabel:`Trinti „<name of file>“...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:206
 msgid ":guilabel:`Show in Files`"
 msgstr ":guilabel:`Rodyti failuose`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:207
+msgid ":guilabel:`File Properties`"
+msgstr ":guilabel:`Failo savybės`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:209
+msgid ""
+"In the :guilabel:`Layer properties` entry, you will find (similar to what "
+"you will find in the :ref:`vector <vector_properties_dialog>` and "
+":ref:`raster <raster_properties_dialog>` layer properties once the layers "
+"have been added to the project):"
+msgstr ""
+"Įraše :guilabel:`Sluoksnio savybės` jūs rasite (panašiai, kaip ir "
+":ref:`vektorinių <vector_properties_dialog>` ir :ref:`rastro "
+"<raster_properties_dialog>` sluoksnių savybėse, kai sluoksniai pridedami į "
+"projektą):"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:215
+msgid ""
+":guilabel:`Metadata` for the layer. Metadata groups: :guilabel:`Information "
+"from provider` (if possible, :guilabel:`Path` will be a hyperlink to the "
+"source), :guilabel:`Identification`, :guilabel:`Extent`, :guilabel:`Access`,"
+" :guilabel:`Fields` (for vector layers), :guilabel:`Bands` (for raster "
+"layers), :guilabel:`Contacts`, :guilabel:`Links` (for vector layers), "
+":guilabel:`References` (for raster layers), :guilabel:`History`."
+msgstr ""
+"Sluoksnio :guilabel:`Metaduomenis`. Metaduomenų grupes: :guilabel:`Tiekėjo "
+"informacija` (jei įmanoma, :guilabel:`Kelias` bus hipernuoroda į šaltinį), "
+":guilabel:`Identifikacija`, :guilabel:`Apimtis`, :guilabel:`Prieiga`, "
+":guilabel:`Laukai` (vektoriniams sluoksniams), :guilabel:`Juostos` (rastro "
+"sluoksniams), :guilabel:`Kontaktai`, :guilabel:`Jungtys` (vektoriniams "
+"sluoksniams), :guilabel:`Nuorodos` (rastro sluoksniams), "
+":guilabel:`Istorija`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:222
+msgid "A :guilabel:`Preview` panel"
+msgstr ":guilabel:`Peržiūros` skydelį"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:223
+msgid ""
+"The attribute table for vector sources (in the :guilabel:`Attributes` "
+"panel)."
+msgstr ""
+"Vektorinių šaltinių atributų lentelę (skydelyje :guilabel:`Atributai`)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:226
+msgid ""
+"Use :guilabel:`Open with Data Source Manager...` to directly open and "
+"configure the data source in the :guilabel:`Data Source Manager` using the "
+"URI of your data source. This simplifies the process of adding a layer from "
+"the :guilabel:`Browser` by allowing you to set specific opening options for "
+"the data source. It is currently available for vector (including the "
+"dedicated GeoPackage entry), raster, and SpatiaLite data sources."
+msgstr ""
+"Naudokite :guilabel:`Atverti su duomenų šaltinių tvarkykle...`, kad "
+"tiesiogiai atidarytumėte ir konfigūruotumėte duomenų šaltinį su "
+":guilabel:`Duomenų šaltinių tvarkykle` naudojant jūsų duomenų šaltinio URI. "
+"Tai supaprastina sluoksnio pridėjimo iš :guilabel:`Naršyklės` procesą "
+"leidžiant jums nustatyti konkrečias duomenų šaltinio atidarymo parinktis. "
+"Šiuo metu tai veikia su vektoriniais (įskaitant tam skirtus GeoPackage "
+"įrašus), rastro ir SpatiaLite duomenų šaltiniais."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:233
+msgid "To add a layer to the project using the :guilabel:`Browser`:"
+msgstr "Norėdami pridėti į projektą sluoksnį naudojant :guilabel:`Naršyklę`:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:235
+msgid ""
+"Enable the :guilabel:`Browser` as described above. A browser tree with your "
+"file system, databases and web services is displayed. You may need to "
+"connect databases and web services before they appear (see dedicated "
+"sections)."
+msgstr ""
+"Įjunkite :guilabel:`Naršyklę`, kaip aprašyta aukščiau. Bus parodytas jūsų "
+"failų sistemos, duomenų bazių ir žiniatinklio paslaugų medis. Jums gali "
+"prireikti prijungti duomenų bazes ir žiniatinklio paslaugas, kad jos "
+"pasirodytų (žr. tam skirtas skiltis)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:240
+msgid "Find the layer in the list."
+msgstr "Raskite sluoksnį sąraše."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:241
+msgid ""
+"Use the context menu, double-click its name, or drag-and-drop it into the "
+":ref:`map canvas <label_mapview>`. Your layer is now added to the "
+":ref:`Layers panel <label_legend>` and can be viewed on the map canvas."
+msgstr ""
+"Naudokite kontekstinį meniu, du kartus paspauskite pavadinimą arba "
+"pertempkite ir numeskite jį į :ref:`žemėlapio drobę <label_mapview>`. Jūsų "
+"sluoksnis dabar pridėtas į :ref:`Sluoksnių skydelį <label_legend>` ir galite"
+" jį matyti žemėlapio drobėje."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:246
+msgid "**Open a QGIS project directly from the browser**"
+msgstr "**Atverkite QGIS projektą tiesiai iš naršyklės**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:248
+msgid ""
+"You can also open a QGIS project directly from the Browser panel by double-"
+"clicking its name or by drag-and-drop into the map canvas."
+msgstr ""
+"Jūs galite atverti QGIS projektą tiesiai iš Naršyklės skydelio du kartus "
+"paspaudę jo pavadinimą arba nutempę ir numetę jį į žemėlapio drobę."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:251
+msgid ""
+"Once a file is loaded, you can zoom around it using the map navigation "
+"tools. To change the style of a layer, open the :guilabel:`Layer Properties`"
+" dialog by double-clicking on the layer name or by right-clicking on the "
+"name in the legend and choosing :menuselection:`Properties` from the context"
+" menu. See section :ref:`vector_style_menu` for more information on setting "
+"symbology for vector layers."
+msgstr ""
+"Įkėlus failą jūs galite naršyti po jį naudodami žemėlapio navigacijos "
+"įrankius. Norėdami pakeisti sluoksnio stilių, atverkite dialogą "
+":guilabel:`Sluoksnio savybės` du kartus paspaudę sluoksnio pavadinimą ar "
+"paspaudę dešinį pelės mygtuką ant pavadinimo legendoje ir kontekstiniame "
+"meniu parinkę :menuselection:`Savybės`. Daugiau informacijos apie vektorinių"
+" sluoksnių simbologijos nustatymus rasite skyriuje :ref:`vector_style_menu`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:259
+msgid "Right-clicking an item in the browser tree helps you to:"
+msgstr "Dešinys pelės paspaudimas naršyklės medyje padeda jums:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:261
+msgid ""
+"for a file or a table, display its metadata or open it in your project. "
+"Tables can even be renamed, deleted or truncated."
+msgstr ""
+"failui ar lentelei - rodyti jo metaduomenis ar atverti jį jūsų projekte. "
+"Lenteles galima pervadinti, trinti ar ištuštinti."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:263
+msgid ""
+"for a folder, bookmark it into your favourites or hide it from the browser "
+"tree. Hidden folders can be managed from the :menuselection:`Settings --> "
+"Options --> Data Sources` tab."
+msgstr ""
+"aplankui - jį pasidėti į parankinius ar paslėpti naršyklės medyje. Paslėptus"
+" aplankus galima valdyti kortelėje :menuselection:`Nustatymai --> Parinktys "
+"--> Duomenų šaltiniai`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:266
+msgid ""
+"manage your :ref:`spatial bookmarks <sec_bookmarks>`: bookmarks can be "
+"created, exported and imported as ``XML`` files."
+msgstr ""
+"valdyti jūsų :ref:`erdvines žymeles <sec_bookmarks>`: žymeles galima kurti, "
+"eksportuoti ir importuoti kaip ``XML`` failus."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:268
+msgid "create a connection to a database or a web service."
+msgstr "kurti jungtį su duomenų baze ar žiniatinklio paslauga."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:269
+msgid "refresh, rename or delete a schema."
+msgstr "atnaujinti, pervadinti ar ištrinti schemą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:271
+msgid ""
+"You can also import files into databases or copy tables from one "
+"schema/database to another with a simple drag-and-drop. There is a second "
+"browser panel available to avoid long scrolling while dragging. Just select "
+"the file and drag-and-drop from one panel to the other."
+msgstr ""
+"Jūs taipogi galite importuoti failus į duomenų bazes ar kopijuoti lenteles "
+"iš vienos schemos/duomenų bazės į kitą naudojant paprastą pertempimą ir "
+"numetimą. Galima naudoti antrą naršyklės skydelį, kad pertempimo metu "
+"nereikėtų toli sukti slankiklio. Tiesiog pažymėkite failą ir pertempkite bei"
+" numeskite jį į kitą skydelį."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:281
+msgid "QGIS Browser panels side-by-side"
+msgstr "QGIS naršyklės skydeliai vienas greta kito"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:284
+msgid ""
+"**Add layers to QGIS by simple drag-and-drop from your OS file browser**"
+msgstr ""
+"**Pridėkite sluoksnius į QGIS tiesiog pertempdami juos iš jūsų OS failų "
+"naršyklės**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:286
+msgid ""
+"You can also add file(s) to the project by drag-and-dropping them from your "
+"operating system file browser to the :guilabel:`Layers Panel` or the map "
+"canvas."
+msgstr ""
+"Jūs taipogi galite pridėti failą(us) į projektą tempdami ir numesdami juos "
+"iš jūsų operacinės sistemos failų naršyklės į :guilabel:`Sluoksnių skydelį` "
+"ar žemėlapio drobę."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:293
+msgid "The DB Manager"
+msgstr "DB tvarkyklė"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:295
+msgid ""
+"The :guilabel:`DB Manager` Plugin is another tool for integrating and "
+"managing spatial database formats supported by QGIS (PostGIS, SpatiaLite, "
+"GeoPackage, Oracle Spatial, MS SQL Server, Virtual layers). It can be "
+"activated from the :menuselection:`Plugins --> Manage and Install "
+"Plugins...` menu."
+msgstr ""
+"Priedas :guilabel:`DB tvarkyklė` yra dar vienas įrankis, QGIS palaikomų "
+"erdvinių duomenų bazių formatų integravimui ir tvarkymui (PostGIS, "
+"SpatiaLite, GeoPackage, Oracle Spatial, MS SQL Server, Virtualūs "
+"sluoksniai). Jį galima aktyvuoti per meniu :menuselection:`Priedai --> "
+"Tvarkyti ir įdiegti priedus...`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:301
+msgid "The |dbManager| :sup:`DB Manager` Plugin provides several features:"
+msgstr "|dbManager| :sup:`DB tvarkyklės` priedas teikia kelias savybes:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:303
+msgid "connect to databases and display their structure and contents"
+msgstr ""
+"prisijungimas prie duomenų bazių ir jų struktūros bei turinio peržiūra"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:304
+msgid "preview tables of databases"
+msgstr "duomenų bazių lentelių peržiūra"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:305
+msgid ""
+"add layers to the map canvas, either by double-clicking or drag-and-drop."
+msgstr ""
+"sluoksnių pridėjimas į žemėlapio drobę dvigubu paspaudimu arba tempimu ir "
+"numetimu."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:306
+msgid ""
+"add layers to a database from the QGIS Browser or from another database"
+msgstr ""
+"sluoksnių pridėjimas į duomenų bazę iš QGIS naršyklės ar kitos duomenų bazės"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:307
+msgid "create SQL queries and add their output to the map canvas"
+msgstr "SQL užklausų kūrimas ir jų išvesties pridėjimas į žemėlapio drobę"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:308
+msgid "create :ref:`virtual layers <vector_virtual_layers>`"
+msgstr ":ref:`virtualių sluoksnių <vector_virtual_layers>` kūrimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:310
+msgid ""
+"More information on DB Manager capabilities is found in :ref:`dbmanager`."
+msgstr ""
+"Daugiau informacijos apie DB tvarkyklės savybes galima rasti skyriuje "
+":ref:`dbmanager`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:317
+msgid "DB Manager dialog"
+msgstr "DB tvarkyklės dialogas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:321
+msgid "Provider-based loading tools"
+msgstr "Tiekėjų teikiami įkėlimo įrankiai"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:323
+msgid ""
+"Beside the Browser Panel and the DB Manager, the main tools provided by QGIS"
+" to add layers, you'll also find tools that are specific to data providers."
+msgstr ""
+"Be naršyklės skydelio ir DB tvarkyklės - pagrindinių QGIS teikiamų sluoksnių"
+" pridėjimo įrankių, jūs taipogi rasite įrankius, kurie yra naudojami tik su "
+"konkrečiais duomenų tiekėjais."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:328
+msgid ""
+"Some :ref:`external plugins <plugins>` also provide tools to open specific "
+"format files in QGIS."
+msgstr ""
+"Kai kurie :ref:`išoriniai priedai <plugins>` taipogi teikia įrankius, "
+"skirtus atidaryti QGIS konkrečių formatų failus."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:336
+msgid "Loading a layer from a file"
+msgstr "Sluoksnio įkėlimas iš failo"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:338
+msgid "To load a layer from a file:"
+msgstr "Norėdami įkelti sluoksnį iš failo:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:340
+msgid ""
+"Open the layer type tab in the :guilabel:`Data Source Manager` dialog, ie "
+"click the |dataSourceManager| :sup:`Open Data Source Manager` button (or "
+"press :kbd:`Ctrl+L`) and enable the target tab or:"
+msgstr ""
+"Atidarykite sluoksnių tipo kortelę dialoge :guilabel:`Duomenų šaltinių "
+"tvarkyklę`, t.y. spauskite mygtuką |dataSourceManager| :sup:`Atverti duomenų"
+" šaltinių tvarkyklę` (arba spauskite :kbd:`Ctrl+L`) ir įjunkite paskirties "
+"kortelę, arba:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:344
+msgid ""
+"for vector data (like GML, ESRI Shapefile, Mapinfo and DXF layers): press "
+":kbd:`Ctrl+Shift+V`, select the :menuselection:`Layer --> Add Layer -->` "
+"|addOgrLayer| :guilabel:`Add Vector Layer` menu option or click on the "
+"|addOgrLayer| :sup:`Add Vector Layer` toolbar button."
+msgstr ""
+"vektoriniams duomenims (tokiems kaip GML, ESRI Shapefile, Mapinfo ir DXF "
+"sluoksnniams): spauskite :kbd:`Ctrl+Shift+V`, parinkite meniu "
+":menuselection:`Sluoksnis --> Pridėti sluoksnį -->` |addOgrLayer| "
+":guilabel:`Pridėti vektorinį sluoksnį` arba spauskite įrankinės mygtuką "
+"|addOgrLayer| :sup:`Pridėti vektorinį sluoksnį`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1722
 msgid "addOgrLayer"
 msgstr "addOgrLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:354
+msgid "Add Vector Layer Dialog"
+msgstr "Vektorinio sluoksnio pridėjimo dialogas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:356
+msgid ""
+"for raster data (like GeoTiff, MBTiles, GRIdded Binary and DWG layers): "
+"press :kbd:`Ctrl+Shift+R`, select the :menuselection:`Layer --> Add Layer "
+"-->` |addRasterLayer| :guilabel:`Add Raster Layer` menu option or click on "
+"the |addRasterLayer| :sup:`Add Raster Layer` toolbar button."
+msgstr ""
+"rastro duomenims (tokiems kaip GeoTiff, MBTiles, GRIdded Binary ir DWG "
+"sluoksniams): spauskite :kbd:`Ctrl+Shift+R`, parinkite meniu "
+":menuselection:`Sluoksnis --> Pridėti sluoksnį -->` |addRasterLayer| "
+":guilabel:`Pridėti rastro sluoksnį` arba spauskite įrankinės mygtuką "
+"|addRasterLayer| :sup:`Pridėti rastro sluoksnį`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1728
 msgid "addRasterLayer"
 msgstr "addRasterLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:366
+msgid "Add Raster Layer Dialog"
+msgstr "Rastro sluoksnio pridėjimo dialogas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:368
+msgid "Check |radioButtonOn| :guilabel:`File` source type"
+msgstr "Parinkite šaltinio tipą |radioButtonOn| :guilabel:`Failas`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1772
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:369
+msgid "Click on the :guilabel:`...` :sup:`Browse` button"
+msgstr "Spauskite mygtuką :guilabel:`...` :sup:`Naršyti`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:370
+msgid ""
+"Navigate the file system and load a supported data source. More than one "
+"layer can be loaded at the same time by holding down the :kbd:`Ctrl` key and"
+" clicking on multiple items in the dialog or holding down the :kbd:`Shift` "
+"key to select a range of items by clicking on the first and last items in "
+"the range. Only formats that have been well tested appear in the formats "
+"filter. Other formats can be loaded by selecting ``All files`` (the top item"
+" in the pull-down menu)."
+msgstr ""
+"Naviguokite failų sistemoje ir įkelkite palaikomą duomenų šaltinį. Vienu "
+"metu galima įkelti daugiau nei vieną sluoksnį laikant :kbd:`Ctrl` kai "
+"spaudžiama ant elementų dialoge arba laikant paspaustą :kbd:`Shift`, kad "
+"parinktumėte diapazoną elementų paspaudus ant pirmo ir tada paskutinio "
+"diapazono elemento. Formatų filtre rodomi tik tie formatai, kurie buvo gerai"
+" išbandyti. Kitus formatus galima įkelti parinkus ``Visi failai`` "
+"(viršutinis iškrentančio meniu elementas)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:378
+msgid ""
+"Press :guilabel:`Open` to load the selected file into :guilabel:`Data Source"
+" Manager` dialog."
+msgstr ""
+"Spauskite :guilabel:`Atidaryti`, kad įkeltumėte parinktą failą į "
+":guilabel:`Duomenų šaltinių tvarkymo` dialogą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:381
+msgid ""
+"Depending on the selected layer type, additional :guilabel:`Options` "
+"(encoding, geometry type, table filtering, file locking, data formatting "
+"...) are available for configuring. These options are described in detail in"
+" the specific GDAL `vector <https://gdal.org/en/latest/drivers/vector/>`__ "
+"or `raster <https://gdal.org/en/latest/drivers/raster>`__ driver "
+"documentation. At the top of the options, a text with hyperlink will "
+"directly lead to the documentation of the appopriate driver for the selected"
+" file format."
+msgstr ""
+"Priklausomai nuo parinkto sluoksnio tipo, konfigūravimui bus prieinami "
+"papildomos :guilabel:`Parinktys` (koduotė, geometrijos tipas, lentelės "
+"filtravimas, failų rakinimas, duomenų formatavimas ...). Šios parinktys "
+"detaliai aprašomos konkrečiuose GDAL `vektorių "
+"<https://gdal.org/en/latest/drivers/vector/>`__ ar `rastro "
+"<https://gdal.org/en/latest/drivers/raster>`__ tvarkyklių dokumentacijose. "
+"Parinkčių viršuje esantis hypertekstas jus nuves tiesiai į parinkto failo "
+"formato atitinkamos tvarkyklės dokumentaciją."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:395
+msgid "Loading a Shapefile with open options"
+msgstr "Shape failo įkėlimas su atvertomis parinktimis"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:397
+msgid ""
+"Press :guilabel:`Add` to load the file in QGIS and display them in the map "
+"view. When adding vector datasets containing multiple layers, the "
+":guilabel:`Select Items to Add` dialog will appear. In this dialog, you can "
+"choose the specific layers from your dataset that you want to add. Also, "
+"under :guilabel:`Options` you can choose to:"
+msgstr ""
+"Spauskite :guilabel:`Pridėti`, kad įkeltumėte failą į QGIS ir parodytumėte "
+"jį žemėlapio vaizde. Kai pridedamos vektorinės duomenų aibės su keliais "
+"sluoksniais, bus rodomas dialogas :guilabel:`Parinkite pridedamus "
+"elementus`. Šiame dialoge jūs galite parinkti konkrečius jūsų duomenų "
+"rinkinio sluoksnius, kuriuos norite pridėti. Taipogi skiltyje "
+":guilabel:`Parinktys` jūs galite pasirinkti:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:403
+msgid "|checkbox|:guilabel:`Add layers to a group`"
+msgstr "|checkbox|:guilabel:`Pridėti sluoksnius į grupę`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1740
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:404
+msgid "|checkbox|:guilabel:`Show system and internal tables`"
+msgstr "|checkbox|:guilabel:`Rodyti sistemines ir vidines lenteles`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:405
+msgid "|checkbox|:guilabel:`Show empty vector layers`."
+msgstr "|checkbox|:guilabel:`Rodyti tuščius vektorinius sluoksnius`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:407
+msgid ""
+":numref:`figure_vector_loaded` shows QGIS after loading the "
+":file:`alaska.shp` file."
+msgstr ""
+":numref:`figure_vector_loaded` matomas QGIS po failo :file:`alaska.shp` "
+"įkėlimo."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:414
+msgid "QGIS with Shapefile of Alaska loaded"
+msgstr "QGIS su įkeltu Alaskos shape failu"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:418
+msgid ""
+"Because some formats like MapInfo (e.g., :file:`.tab`) or Autocad "
+"(:file:`.dxf`) allow mixing different types of geometry in a single file, "
+"loading such datasets opens a dialog to select geometries to use in order to"
+" have one geometry per layer."
+msgstr ""
+"Kadangi kai kurie formatai, tokie kaip MapInfo (pvz., :file:`.tab`) ar "
+"Autocad (:file:`.dxf`) leidžia viename faile kartu laikyti skirtingų tipų "
+"geometrijas, įkeliant tokius duomenų rinkinius atidaromas dialogas, kur "
+"reikia parinkti geometrijas kiekvienam sluoksniui."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:426
+msgid ""
+"The |addOgrLayer| :sup:`Add Vector Layer` and |addRasterLayer| :sup:`Add "
+"Raster Layer` tabs allow loading of layers from source types other than "
+":guilabel:`File`:"
+msgstr ""
+"Kortelės |addOgrLayer| :sup:`Pridėti vektorinį sluoksnį` ir |addRasterLayer|"
+" :sup:`Pridėti rastro sluoksnį` leidžia įkelti sluoksnius iš šaltini tipų, "
+"kitokių nei :guilabel:`Failas`:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:429
+msgid ""
+"You can load specific vector formats like ``ArcInfo Binary Coverage``, ``UK."
+" National Transfer Format``, as well as the raw TIGER format of the ``US "
+"Census Bureau`` or ``OpenfileGDB``. To do that, you select |radioButtonOn| "
+":guilabel:`Directory` as :guilabel:`Source type`. In this case, a directory "
+"can be selected in the dialog after pressing :guilabel:`...` :sup:`Browse`."
+msgstr ""
+"Jūs galite įkelti specifinius vektorinius formatus, tokius kaip ``ArcInfo "
+"dvejetainis padengimas``, ``UK. Nactionalinis perdavimo formatas`` bei "
+"pradinį TIGER formatą iš ``US Census Bureau`` ar ``OpenfileGDB``. Norėdami "
+"tai padaryti, parinkite |radioButtonOn| :guilabel:`Aplanką` kaip "
+":guilabel:`Šaltinio tipą`. Tokiu atveju, kai paspausite :guilabel:`...` "
+":sup:`Naršyti`, galėsite dialoge parinkti aplanką."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:435
+msgid ""
+"With the |radioButtonOn| :guilabel:`Database` source type you can select an "
+"existing database connection or create one to the selected database type. "
+"Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``, "
+"``MS SQL Server`` as well as ``PostgreSQL`` or ``MySQL`` ."
+msgstr ""
+"Su šaltinio tipu |radioButtonOn| :guilabel:`Duomenų bazė` jūs galite "
+"parinkti esamą duomenų bazės jungtį ar sukurti parinkto tipo naują. Kelios "
+"galimos duomenų bazės yra ``ODBC``, ``Esri Personal Geodatabase``, ``MS SQL "
+"Server`` kaip ir ``PostgreSQL`` ar ``MySQL`` ."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:440
+msgid ""
+"Pressing the :guilabel:`New` button opens the :guilabel:`Create a New OGR "
+"Database Connection` dialog whose parameters are among the ones you can find"
+" in :ref:`vector_create_stored_connection`. Pressing :guilabel:`Open` lets "
+"you select from the available tables, for example of PostGIS enabled "
+"databases."
+msgstr ""
+"Paspaudus mygtuką :guilabel:`Naujas`, atveriamas dialogas :guilabel:`Kurti "
+"naują OGR duomenų bazės jungtį` su parametrais, kuriuos galite rasti "
+"skyriuje :ref:`vector_create_stored_connection`. Paspaudę "
+":guilabel:`Atverti` jūs parenkate iš galimų lentelių, pavyzdžiui iš duomenų "
+"bazių su PostGIS."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:445
+msgid ""
+"The |radioButtonOn| :guilabel:`Protocol: HTTP(S), cloud, etc.` source type "
+"opens data stored locally or on the network, either publicly accessible, or "
+"in private buckets of commercial cloud storage services. Supported protocol "
+"types are:"
+msgstr ""
+"|radioButtonOn| :guilabel:`Protokolas: HTTP(S), debesies ir panašiems "
+"šaltinių tipams atidaro duomenis, kurie saugomi vietoje arba tinkle, kur jie"
+" arba viešai prieinami, arba teikiami privačiuose komercinių debesų saugyklų"
+" paslaugomis. Palaikomi protokolų tipai yra:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:450
+msgid ""
+"``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required, an "
+":ref:`authentication <authentication_index>`."
+msgstr ""
+"``HTTP/HTTPS/FTP``, su :guilabel:`URI` ir, jei reikia, :ref:`autentifikacija"
+" <authentication_index>`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:452
+msgid ""
+"Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft "
+"Azure Blob``, ``Microsoft Azure Data Lake Storage``, ``Alibaba OSS Cloud``, "
+"and ``Open Stack Swift Storage`` supports direct control over VSI "
+":guilabel:`Credential Options` when adding OGR vector or GDAL raster layers."
+" You need to fill in the :guilabel:`Bucket or container` and the "
+":guilabel:`Object key` first. After that, you can add the necessary "
+":guilabel:`Credential Options`."
+msgstr ""
+"Debesų saugyklos, tokios kaip ``AWS S3``, ``Google Cloud Storage``, "
+"``Microsoft Azure Blob``, ``Microsoft Azure Data Lake Storage``, ``Alibaba "
+"OSS Cloud`` ir ``Open Stack Swift Storage``, palaiko tiesioginį valdymą per "
+"VSI :guilabel:`Prisijungimo parinktis`, kai pridedami OGR vektorių ar GDAL "
+"rastro sluoksniai. Jums reikia iš pradžių užpildyti :guilabel:`Kibirėlį ar "
+"konteinerį` ir :guilabel:`Objektų raktą`. Tada jūs galite pridėti reikiamą "
+":guilabel:`Prisijungimo informaciją`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:459
+msgid ""
+"When adding OGR vector or GDAL raster layers from the cloud based protocols,"
+" you can also set additional :guilabel:`Credential options` for that "
+"specific driver and bucket. When credential options are found in a layer's "
+"URI, they will also be automatically set. This allows different layers to "
+"use different credentials."
+msgstr ""
+"Pridedant OGR vektorinius ar GDAL rastro sluoksnius per debesimis paremtus "
+"protokolus, jūs taipogi galite nurodyti papildomas :guilabel:`Prisijungimo "
+"parinktis` konkrečiai tvarkyklei ar kibirėliui. Kai prisijungimo duomenys "
+"randami sluoksnio URI, jie nustatomi automatiškai. Tai leidžia skirtingiems "
+"sluoksniams naudoti skirtingus prisijungimo duomenis."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:463
+msgid ""
+"service supporting OGC ``WFS 3`` (still experimental), using ``GeoJSON`` or "
+"``GEOJSON - Newline Delimited`` format or based on ``CouchDB`` database. A "
+":guilabel:`URI` is required, with optional :ref:`authentication "
+"<authentication_index>`."
+msgstr ""
+"paslauga, palaikanti OGC ``WFS 3`` (vis dar eksperimentinis), naudojant "
+"``GeoJSON`` ar ``GEOJSON - atskirta naujomis eilutėmis`` formatą ar paremtą "
+"``CouchDB`` duomenų baze. Privaloma nurodyti :guilabel:`URI`, galima "
+"nurodyti ir :ref:`autentifikaciją <authentication_index>`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:467
+msgid ""
+"For all vector source types it is possible to define the "
+":guilabel:`Encoding` or to use the :menuselection:`Automatic -->` setting."
+msgstr ""
+"Visiems vektoriniams šaltinių tipams galima nurodyti :guilabel:`Koduotę` "
+"arba naudoti nustatymą :menuselection:`Automatinis -->`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:470
+msgid ""
+"The |radioButtonOn| :guilabel:`OGC API` source type allows you to access "
+"`vector <https://gdal.org/en/latest/drivers/vector/oapif.html>`_ and `raster"
+" <https://gdal.org/en/latest/drivers/raster/ogcapi.html>`_ data from servers"
+" that implement the OGC API standards. To use this option:"
+msgstr ""
+"Šaltinio tipas |radioButtonOn| :guilabel:`OGC API` leidžia pasiekti "
+"`vektorinius <https://gdal.org/en/latest/drivers/vector/oapif.html>`_ ir "
+"`rastro <https://gdal.org/en/latest/drivers/raster/ogcapi.html>`_ duomenis "
+"iš serverių, kurie įgyvendina OGC API standartus. Norėdami naudoti šią "
+"parinktį:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:476
+msgid ""
+"Select |radioButtonOn| :guilabel:`OGC API` from the :guilabel:`Data Source "
+"Manager` dialog."
+msgstr ""
+"Dialoge :guilabel:`Duomenų šaltinių tvarkyklė` parinkite |radioButtonOn| "
+":guilabel:`OGC API`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:478
+msgid ""
+"Enter the endpoint of the OGC API service you want to connect to. Note that "
+"you don't need to prefix the endpoint with \"OGCAPI:\"."
+msgstr ""
+"Įveskite OGC API paslaugos prieigos tašką, prie kurio norite prisijungti. "
+"Pastebėtina, kad nurodant prieigos tašką nereikia jam pridėti priešdėlio "
+"„OGCAPI:“."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:480
+msgid "Click :guilabel:`Connect` to establish a connection to the server."
+msgstr ""
+"Spauskite :guilabel:`Prisijungti`, kad sukurtumėte jungtį su serveriu."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:486
+msgid "Loading a mesh layer"
+msgstr "Tinklelio sluoksnio įkėlimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:488
+msgid ""
+"A mesh is an unstructured grid usually with temporal and other components. "
+"The spatial component contains a collection of vertices, edges and faces in "
+"2D or 3D space. More information on mesh layers at :ref:`label_meshdata`."
+msgstr ""
+"Tinklelis yra nestruktūrinis tinklas, paprastai su laiko ar kitais "
+"komponentais. Erdviniame komponente yra aibė viršūnių, kraštinių ir "
+"plokštumų 2D ir 3D erdvėje. Daugiau informacijos apie tinklelio sluoksnius "
+"rasite skyriuje :ref:`label_meshdata`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:492
+msgid "To add a mesh layer to QGIS:"
+msgstr "Norėdami pridėti tinklelio sluoksnį į QGIS:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:494
+msgid ""
+"Open the :menuselection:`Data Source Manager` dialog, either by selecting it"
+" from the :menuselection:`Layer -->` menu or clicking the "
+"|dataSourceManager| :sup:`Open Data Source Manager` button."
+msgstr ""
+"Atverkite dialogą :menuselection:`Duomenų šaltinių tvarkyklė` arba parenkant"
+" jį per meniu :menuselection:`Sluoksnis -->`, arba paspaudus mygtuką "
+"|dataSourceManager| :sup:`Atverti duomenų šaltinių tvarkyklę`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:497
+msgid "Enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel"
+msgstr ""
+"Kairiame skydelyje įjunkite kortelę |addMeshLayer| :guilabel:`Tinklelis`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1718
 msgid "addMeshLayer"
 msgstr "addMeshLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:498
+msgid ""
+"Press the :guilabel:`...` :sup:`Browse` button to select the file. "
+":ref:`Various formats <mesh_supported_formats>` are supported."
+msgstr ""
+"Spauskite mygtuką :guilabel:`...` :sup:`Naršyti`, kad parinktumėte failą. "
+"Palaikomi :ref:`Įvairūs formatai <mesh_supported_formats>`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:500
+msgid ""
+"Select the file and press :guilabel:`Add`. The layer will be added using the"
+" native mesh rendering."
+msgstr ""
+"Parinkite failą ir spauskite :guilabel:`Pridėti`. Sluoksnis bus pridėtas "
+"naudojant savą tinklelio braižymą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:502
+msgid ""
+"If the selected file contains many mesh layers, then you'll be prompted with"
+" a dialog to choose the sublayers to load. Do your selection and press "
+":guilabel:`OK` and the layers are loaded with the native mesh rendering. "
+"It's also possible to load them within a group."
+msgstr ""
+"Jei parinktame faile yra daug tinklelių sluoksnių, tada jums bus parodytas "
+"dialogas, kuriame jūsų paprašys pasirinkti įkeliamus posluoksnius. "
+"Pasirinkite ir spauskite :guilabel:`Gerai`, tada sluoksniai bus įkelti su "
+"savo tinklelio braižymu. Taipogi galima įkelti juos grupėje."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:512
+msgid "Mesh tab in Data Source Manager"
+msgstr "Tinklelio kortelė Duomenų šaltinių tvarkyklėje"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:520
+msgid "Importing a delimited text file"
+msgstr "Atskirto tekstinio failo importavimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:522
+msgid ""
+"Delimited text files (e.g. :file:`.txt`, :file:`.csv`, :file:`.dat`, "
+":file:`.wkt`) can be loaded using the tools described above. This way, they "
+"will show up as simple tables. Sometimes, delimited text files can contain "
+"coordinates / geometries that you could want to visualize. This is what "
+"|addDelimitedTextLayer|:guilabel:`Add Delimited Text Layer` is designed for."
+msgstr ""
+"Atskirus failus (pvz. :file:`.txt`, :file:`.csv`, :file:`.dat`, "
+":file:`.wkt`) galima įkelti naudojant aukščiau aprašytus įrankius. Tokiu "
+"būdu jie bus rodomi kaip paprastos lentelės. Kartais atskirtuose teksto "
+"failuose gali būti koordinatės / geometrijos, kurias jūs galite norėti "
+"pavaizduoti. Tam ir sukurta galimybė "
+"|addDelimitedTextLayer|:guilabel:`Pridėti atskirtą teksto sluoksnį`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1712
 msgid "addDelimitedTextLayer"
 msgstr "addDelimitedTextLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:530
+msgid ""
+"Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open "
+"the :guilabel:`Data Source Manager` dialog"
+msgstr ""
+"Spauskite piktogramą |dataSourceManager| :sup:`Atverti duomenų šaltinių "
+"tvarkyklę`, kad atvertumėte :guilabel:`Duomenų šaltinių tvarkyklės` dialogą"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:532
+msgid "Enable the |addDelimitedTextLayer| :guilabel:`Delimited Text` tab"
+msgstr ""
+"Įjunkite kortelę |addDelimitedTextLayer| :guilabel:`Atskirtas tekstas`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:533
+msgid ""
+"Select the delimited text file to import (e.g., "
+":file:`qgis_sample_data/csv/elevp.csv`) by clicking on the :guilabel:`...` "
+":sup:`Browse` button."
+msgstr ""
+"Parinkite importuojamą atskirto teksto failą (pvz., "
+":file:`qgis_sample_data/csv/elevp.csv`) paspausdami mygtuką :guilabel:`...` "
+":sup:`Naršyti`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:535
+msgid ""
+"In the :guilabel:`Layer name` field, provide the name to use for the layer "
+"in the project (e.g. :file:`Elevation`)."
+msgstr ""
+"Lauke :guilabel:`Sluoksnio pavadinimas` pateikite pavadinimą, kurį reikia "
+"projekte naudoti kaip sluoksnio pavadinimą (pvz. :file:`Aukštis`)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:537
+msgid ""
+"Configure the settings to meet your dataset and needs, as explained below."
+msgstr ""
+"Sukonfigūruokite nustatymus, kad jie atitiktų jūsų duomenų aibės poreikius, "
+"kaip paaiškinta žemiau."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:544
+msgid "Delimited Text Dialog"
+msgstr "Atskirto teksto dialogas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:547
+msgid "File format"
+msgstr "Failo formatas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:549
+msgid ""
+"Once the file is selected, QGIS attempts to parse the file with the most "
+"recently used delimiter, identifying fields and rows. To enable QGIS to "
+"correctly parse the file, it is important to select the right delimiter. You"
+" can specify a delimiter by choosing between:"
+msgstr ""
+"Parinkus failą QGIS bando išnagrinėti failą su paskutiniu naudotu skirtuku, "
+"identifikuojant laukus ir eilutes. Kad QGIS galėtų teisingai išnagrinėti "
+"failą, labai svarbu parinkti teisingą skirtuką. Jūs galite nurodyti skirtuką"
+" pasirinkdami vieną iš:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:554
+msgid ""
+"|radioButtonOn|:guilabel:`CSV (comma separated values)` to use the comma "
+"character."
+msgstr ""
+"|radioButtonOn|:guilabel:`CSV (kableliu atskirtos reikšmės)` kad naudotumėte"
+" kablelio simbolį."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:556
+msgid ""
+"|radioButtonOff|:guilabel:`Regular expression delimiter` and enter text into"
+" the :guilabel:`Expression` field. For example, to change the delimiter to "
+"tab, use ``\\t`` (this is used in regular expressions for the tab "
+"character)."
+msgstr ""
+"|radioButtonOff|:guilabel:`Reguliarios išraiškos skirtukas` ir įveskite "
+"tekstą į lauką :guilabel:`Išraiška`. Pavyzdžiui jei norite pakeisti skirtuką"
+" į tabuliacijos simbolį, naudokite ``\\t`` (tai reguliariose išraiškose "
+"naudojama kaip tabuliacijos simbolis)."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1770
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:560
+msgid ""
+"|radioButtonOff|:guilabel:`Custom delimiters`, choosing among some "
+"predefined delimiters like ``comma``, ``space``, ``tab``, ``semicolon``, ..."
+" ."
+msgstr ""
+"|radioButtonOff|:guilabel:`Savi skirtukai`, pasirinkite iš iš anksto "
+"apibrėžtų skirtukų, tokių kaip ``kablelis``, ``tarpas``, ``tabuliacija``, "
+"``kabliataškis``, ... ."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:565
+msgid "Records and fields"
+msgstr "Įrašai ir laukai"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:567
+msgid "Some other convenient options can be used for data recognition:"
+msgstr "Duomenų atpažinimui galima naudoti keletą kitų patogių parinkčių:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:569
+msgid ""
+":guilabel:`Number of header lines to discard`: convenient when you want to "
+"avoid the first lines in the file in the import, either because those are "
+"blank lines or with another formatting."
+msgstr ""
+":guilabel:`Skaičius išmetamų antraštės eilučių`: patogu, kai norite išvengti"
+" kelių pirmų failo eilučių importo metu, nes arba jos yra tuščios, arba jose"
+" yra kitoks formatavimas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:572
+msgid ""
+"|checkbox|:guilabel:`First record has field names`: values in the first line"
+" are used as field names, otherwise QGIS uses the field names ``field_1``, "
+"``field_2``..."
+msgstr ""
+"|checkbox|:guilabel:`Pirmame įraše yra laukų pavadinimai`: pirmos eilutės "
+"reikšmės yra naudojamos laukų pavadinimams, kitu atveju QGIS naudoja laukų "
+"pavadinimus ``field_1``, ``field_2``..."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:575
+msgid ""
+"|checkbox|:guilabel:`Detect field types`: automatically recognizes the field"
+" type. If unchecked then all attributes are treated as text fields."
+msgstr ""
+"|checkbox|:guilabel:`Atpažinti laukų tipus`: automatiškai atpažįsta lauko "
+"tipą. Išjungus šią parinktį visi atributai laiko tekstiniais."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:577
+msgid ""
+"|checkbox|:guilabel:`Decimal separator is comma`: you can force decimal "
+"separator to be a comma."
+msgstr ""
+"|checkbox|:guilabel:`Trupmeninės dalies skirtukas yra kablelis`: galite "
+"priversti naudoti kablelį kaip trupmeninės dalies skirtuką."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:579
+msgid ""
+"|checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing "
+"spaces from fields."
+msgstr ""
+"|checkbox|:guilabel:`Apkarpyti laukus`: leidžia jums apkarpyti laukus ir "
+"gale esančius tarpus."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:581
+msgid "|checkbox|:guilabel:`Discard empty fields`."
+msgstr "|checkbox|:guilabel:`Išmesti tuščius laukus`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:582
+msgid ""
+":guilabel:`Custom boolean literals`: allows you to add a custom couple of "
+"string that will be detected as boolean values."
+msgstr ""
+":guilabel:`Savos loginės reikšmės`: leidžia jums pridėti savo eilučių porą, "
+"kuri bus aptinkama kaip loginės reikšmės."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1776
 msgid "setProjection"
