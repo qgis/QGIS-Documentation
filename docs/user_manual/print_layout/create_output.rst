@@ -327,6 +327,7 @@ the :guilabel:`Atlas` panel. This panel contains the following
 
 .. figure:: img/atlas_properties.png
    :align: center
+   :width: 50%
 
    Atlas Panel
 
@@ -464,6 +465,14 @@ provide the following expression to constrain map item size:
 To ensure the map item is centered in the page, set its :guilabel:`Reference
 point` to the upper left radio button and enter ``10`` for its :guilabel:`X`
 and :guilabel:`Y` positions.
+
+Moreover, you may want to control when grid annotations are shown or hidden.
+Data defined override button is available for that property as well.
+For example, to hide the first and last grid annotations on each axis, use:
+
+.. code::
+
+   @grid_index > 1 AND @grid_index < @grid_count
 
 Let's add a title above the map in the center of the page. Select the label
 item and set the horizontal alignment to |radioButtonOn| :guilabel:`Center`.
