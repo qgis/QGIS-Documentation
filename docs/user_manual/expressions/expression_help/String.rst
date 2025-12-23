@@ -702,6 +702,56 @@ Removes all leading and trailing whitespace (spaces, tabs, etc) from a string.
 
 .. end_trim_section
 
+.. _expression_function_String_unaccent:
+
+unaccent
+........
+
+Removes accents and other diacritical marks from a string, replacing accented characters with their unaccented ASCII equivalents. This function is compatible with PostgreSQL's unaccent() function and uses the same comprehensive mapping rules.
+
+
+
+The function handles:
+
+* Diacritical marks (é→e, ñ→n, ü→u, etc.)
+* Ligatures (Æ→AE, œ→oe, etc.)
+* Special letters (ß→ss, ł→l, ð→d, etc.)
+* Compatibility characters (℃→°C, ½→ 1/2, etc.)
+* Cyrillic special characters (ё→е, Ё→Е)
+* Full-width characters (＃→#, etc.)
+
+
+
+Common use cases include normalizing text for search operations, creating ASCII-safe identifiers or filenames from international text, and matching user input regardless of accent usage.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - unaccent(string)
+   * - Arguments
+     - * **string** - The string to remove accents from. If NULL, the function returns NULL.
+   * - Examples
+     - * ``unaccent('Hôtel')`` → 'Hotel'
+       * ``unaccent('crème brûlée')`` → 'creme brulee'
+       * ``unaccent('Românește')`` → 'Romaneste'
+       * ``unaccent('Æsir & Œuvre')`` → 'AEsir & OEuvre'
+       * ``unaccent('Łódź')`` → 'Lodz'
+       * ``unaccent('straße')`` → 'strasse'
+       * ``unaccent('ёлка')`` → 'елка' -- Cyrillic yo to ye
+       * ``unaccent('℃')`` → '°C' -- degree Celsius
+
+.. note:: This function is particularly useful when:
+
+* Searching or filtering data where accents should be ignored (e.g., 'Jose' matches 'José')
+* Creating URL-safe or filename-safe strings from internationalized text
+* Normalizing user input for consistent storage or comparison
+* Preparing text for systems with limited Unicode support
+
+The function uses Unicode NFC normalization internally to ensure consistent handling of composed and decomposed characters.
+
+
+.. end_unaccent_section
 .. _expression_function_String_upper:
 
 upper
