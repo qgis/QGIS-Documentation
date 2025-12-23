@@ -501,12 +501,17 @@ From a drop-down list of current layers in the layer panel, select an item and:
     :guilabel:`Mask` and |3d| :guilabel:`3D View` properties for vector layer.
     These options are the same as in the :ref:`vector_properties_dialog`
     and can be extended by custom properties introduced by third-party plugins.
-  * |symbology| :guilabel:`Symbology` and |3d| :guilabel:`3D View` properties
+  * |symbology| :guilabel:`Symbology`, |labelingSingle| :guilabel:`Labels` and |3d| :guilabel:`3D View` properties
     for mesh layer.
     These options are the same as in the :ref:`label_meshproperties`.
   * |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View`
-    and |elevationscale| :guilabel:`Elevation` properties for point cloud layer.
-    These options are the same as in the :ref:`point_clouds_properties`.
+    and |elevationscale| :guilabel:`Elevation` properties for point cloud or 3D Tiles layer.
+    These options are the same as in the :ref:`point_clouds_properties` or :ref:`3dtiles_properties`.
+  * |symbology| :guilabel:`Symbology` and |labelingSingle| :guilabel:`Labels` properties for vector tiles layer.
+    These options are the same as in the :ref:`vectortiles_properties`.
+  * |symbology| :guilabel:`Symbology` properties for annotations layer.
+    These options are the same as in the :ref:`feature annotation properties <annotation_layer>`.
+
 * Enable and configure :ref:`global map shading <global_map_shading>` properties
 * Manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
   (more details at :ref:`manage_custom_style`).
