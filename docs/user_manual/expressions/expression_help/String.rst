@@ -752,6 +752,7 @@ The function uses Unicode NFC normalization internally to ensure consistent hand
 
 
 .. end_unaccent_section
+
 .. _expression_function_String_upper:
 
 upper
