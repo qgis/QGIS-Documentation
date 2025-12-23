@@ -202,6 +202,13 @@ Export point cloud to raster (using triangulation)
 
 Exports point cloud data to a 2D raster grid using a triangulation of points
 and then interpolating cell values from triangles.
+This method generates a continuous surface, suitable for
+creating elevation models such as Digital Terrain Models (DTM)
+or Digital Surface Models (DSM). When the input contains disconnected areas due to
+gaps in the point cloud, large triangles may span these gaps and produce
+interpolated values where no data is present.
+To avoid this, a maximum triangle edge length can be specified so that triangles
+with edges longer than this value are ignored during interpolation.
 
 .. note:: Using this algorithm can be slower if you are dealing with a large dataset.
    If your point cloud is dense, you can export your ground points as a raster using the :ref:`pdalexportraster` algorithm.
@@ -241,6 +248,14 @@ Basic parameters
 
        Default: 1000
      -
+   * - **Maximum triangle edge length**
+
+       Optional
+     - ``MAX_EDGE_LENGTH``
+     - [numeric: double]
+     - Maximum length of triangle edges. Edges longer than this value will be ignored during interpolation.
+     
+       .. attention:: Using this option requires QGIS installed with PDAL_ >= 2.6.0 (see :guilabel:`Help --> About` menu).
    * - **Exported**
      - ``OUTPUT``
      - [raster]
