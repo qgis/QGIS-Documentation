@@ -419,7 +419,7 @@ You can also define the :guilabel:`Font` :ref:`properties <text_format>` (font, 
 the :guilabel:`Distance to the map frame` and the :guilabel:`Coordinate precision`
 (number of decimals) for the drawn annotations. Moreover, :guilabel:`Annotation visibility`
 allows control over the visibility of individual grid annotations.
-See :ref:`atlas_data_defined_override` for more information on how to use data-defined
+See :ref:`dynamic_layout` for more information on how to use data-defined
 overrides to control annotation visibility.
 
 |unchecked| :guilabel:`Follow grid rotation`: available when the map extent is rotated
@@ -437,7 +437,7 @@ Depending on the selected placement mode, the annotations are also rotated:
 
 .. figure:: img/map_grid_draw_coordinates.png
    :align: center
-   :width: 50%
+   :width: 40%
 
    Grid Draw Coordinates dialog
 

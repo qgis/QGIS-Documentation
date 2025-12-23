@@ -1,3 +1,5 @@
+.. _dynamic_layout:
+
 Lesson: Creating a Dynamic Print Layout
 ======================================================================
 
@@ -76,6 +78,19 @@ Also, the date of creation will adapt dynamically.
    QGIS main canvas.
    The :guilabel:`Grid type` :guilabel:`Cross` is very well suited
    for our purposes.
+
+#. Optionally, you can further control how grid coordinate annotations
+   are displayed.
+
+   Each side of the map frame (Left, Right, Top, Bottom) can have its
+   own annotation visibility rules. Using data-defined overrides, it is
+   possible to selectively hide or show individual grid annotations.
+   For example, to hide the first and last grid annotations on each axis,
+   click on the |dataDefineExpressionOn| :sup:`Data defined override` next to
+   :guilabel:`Annotation visibility`. Activate and choose :guilabel:`Edit ...`.
+   Enter the following expression::
+
+     @grid_index > 1 AND @grid_index < @grid_count
 
 :abbr:`★★☆ (Moderate level)` Follow Along: Creating the dynamic header
 -------------------------------------------------------------------------------
