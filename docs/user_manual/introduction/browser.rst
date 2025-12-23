@@ -357,8 +357,7 @@ each level of the dataset tree.
    |               | :menuselection:`Manage -->                 | |checkbox|   | |checkbox|   | |checkbox| |            | |checkbox|    | |checkbox| |
    |               | Create Spatial Index`                      |              |              |            |            |               |            |
    |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
-   |               | :menuselection:`Manage -->                 |              |              | |checkbox| |            |               |            |
-   |               | Set Comment...`                            |              |              |            |            |               |            |
+   |               | :menuselection:`Manage --> Set Comment…`   |              |              | |checkbox| |            |               |            |
    |               +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
    |               | :menuselection:`Manage -->                 | |checkbox|   | |checkbox|   | |checkbox| |            | |checkbox|    | |checkbox| |
    |               | Delete Spatial Index`                      |              |              |            |            |               |            |
