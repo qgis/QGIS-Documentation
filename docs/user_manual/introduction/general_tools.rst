@@ -509,7 +509,7 @@ From a drop-down list of current layers in the layer panel, select an item and:
     These options are the same as in the :ref:`point_clouds_properties` or :ref:`3dtiles_properties`.
   * |symbology| :guilabel:`Symbology` and |labelingSingle| :guilabel:`Labels` properties for vector tiles layer.
     These options are the same as in the :ref:`vectortiles_properties`.
-  * |symbology| :guilabel:`Symbology` and |3d| :guilabel:`3D View` properties for annotations layer.
+  * |symbology| :guilabel:`Symbology` properties for annotations layer.
     These options are the same as in the :ref:`feature annotation properties <annotation_layer>`.
 
 * Enable and configure :ref:`global map shading <global_map_shading>` properties
