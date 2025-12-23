@@ -1334,6 +1334,8 @@ To use these variables in an expression, they should be preceded by the
    "geometry_ring_num", "Current geometry ring number for feature being rendered
    (for polygon features only). The exterior ring has a value of 0."
    "grid_axis", "The current grid annotation axis (eg, 'x' for longitude, 'y' for latitude)"
+   "grid_count", "The number of grid lines visible on the current grid axis"
+   "grid_index", "The index of the grid line being drawn, starting at 1, and relative to the current grid axis"
    "grid_number", "The current grid annotation value"
    "id", "The ID of the current feature being evaluated"
    "item_id", "The layout item user ID (not necessarily unique)"
