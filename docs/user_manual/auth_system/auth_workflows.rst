@@ -73,7 +73,7 @@ Manager**, which can be accessed in the :guilabel:`Authentication` tab in QGIS
 
 .. _figure_auth_pki_certif:
 
-.. figure:: img/auth-open-Certificate-manager.png
+.. figure:: img/options_authentication.png
    :align: center
 
    Opening the Certificate Manager

@@ -157,7 +157,7 @@ the :guilabel:`Authentication` tab of the QGIS Options dialog
 
 .. _figure_authconfigeditor:
 
-.. figure:: img/auth-editor-configs2.png
+.. figure:: img/options_authentication.png
    :align: center
 
    Configurations editor
