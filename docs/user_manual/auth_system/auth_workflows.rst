@@ -223,19 +223,13 @@ prior to import. Likewise, if the client certificate in the bundle is invalid
 (for example, its effective date has not yet started or has elapsed) the bundle
 can not be imported.
 
-.. _figure_auth_pki_identities_import:
+.. _figure_auth_identities_import:
 
-.. figure:: img/auth-identity-import_paths.png
+.. figure:: img/auth-identity-imports.png
    :align: center
 
-   PEM/DER identity import
+   PEM/DER and PKCS#12 identities import
 
-.. _figure_auth_pki_identities_import_2:
-
-.. figure:: img/auth-identity-import_bundle-valid.png
-   :align: center
-
-   PKCS#12 identity import
 
 Handling bad layers
 -------------------
