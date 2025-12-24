@@ -778,6 +778,9 @@ The following option is available:
   * :guilabel:`attributes`: for tables with complex attribute data.
   * :guilabel:`tiles`: for tables storing tile data.
 
+Editing or deleting existing relationships can be done
+by right-clicking on the relationship in the Browser Panel.
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
