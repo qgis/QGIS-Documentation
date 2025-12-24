@@ -107,6 +107,11 @@ Box plot
 --------
 Creates a box plot from a category field and a numerical layer field.
 
+.. figure:: img/box_plot_example.png
+   :align: center
+
+   Example of box plot
+
 Parameters
 ..........
 
