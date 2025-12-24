@@ -900,7 +900,23 @@ set whether the layer redraw should be:
 * :guilabel:`Represents Temporal Values`: interprets each pixel in the raster layer as a datetime value.
   When this temporal mode is active, pixels that do not fall within the temporal range specified in the
   render context will be hidden, ensuring that only temporally relevant data is displayed.
-  This mode is effective for:
+
+  Use |checkbox|:guilabel:`Accumulate pixels over time` to control how pixels are displayed during
+  temporal navigation. When **unchecked**, only pixels matching the current temporal
+  range are visible, pixels appear and disappear as you move through time. When
+  **checked**, all pixels from the start time through the current position remain
+  visible, creating a cumulative view. 
+  This option provides consistent behavior with vector layers that have accumulation enabled.
+
+  .. only:: html
+
+   .. figure:: img/accumulate_pixels_over_time.gif
+      :align: center
+      :width: 100%
+
+      Comparison of temporal raster rendering with Accumulate pixels over time disabled and enabled
+
+  :guilabel:`Represents Temporal Values` mode is effective for:
 
   * Analyzing land use changes, like observing deforestation patterns.
   * Studying flooding by comparing water coverage across different times.
