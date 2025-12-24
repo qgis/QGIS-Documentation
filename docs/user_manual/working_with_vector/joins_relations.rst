@@ -755,6 +755,29 @@ from the external storage system. In that case, more details might appear in the
 :ref:`log_message_panel`.
 
 
+.. index:: Dataset-stored Relationships, Browser Panel
+.. _`dataset_stored_relationships`:
+
+Dataset-stored Relationships in the Browser Panel
+========================================================
+
+Relationships define associations between tables in a database.
+This relationship is stored within the dataset itself and
+can be managed through the QGIS Browser Panel.
+The following option is available:
+
+* :guilabel:`Name`: set the name of the new relationship.
+* :guilabel:`Cardinality`: define the cardinality of the relationship.
+* :guilabel:`Strength`: specify the strength of the relationship.
+* Under the :guilabel:`Tables` and :guilabel:`Fields`, set your :guilabel:`Parent` and :guilabel:`Child` table.
+* :guilabel:`Advanced` section allows you to set :guilabel:`Related table type`:
+
+  * :guilabel:`features`: for standard feature tables.
+  * :guilabel:`media`: for tables storing media files.
+  * :guilabel:`simple_attributes`: for tables with simple attribute data.
+  * :guilabel:`attributes`: for tables with complex attribute data.
+  * :guilabel:`tiles`: for tables storing tile data.
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
