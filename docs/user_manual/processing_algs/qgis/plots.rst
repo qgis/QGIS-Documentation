@@ -14,6 +14,11 @@ Bar plot
 --------
 Creates a bar plot from a category and a layer field.
 
+.. figure:: img/bar_plot.png
+   :align: center
+
+   Bar plot example
+
 Parameters
 ..........
 
