@@ -390,35 +390,37 @@ authentication database and configurations:
 
    Utilities menu
 
-* **Input master password**: opens the master password input dialog, independent
+* :guilabel:`Input master password…`: opens the master password input dialog, independent
   of performing any authentication database command
-* **Clear cached master password**: unsets the master password if it has been
+* :guilabel:`Clear cached master password`: unsets the master password if it has been
   set
-* **Reset master password**: opens a dialog to change the master password (the
+* :guilabel:`Reset master password…`: opens a dialog to change the master password (the
   current password must be known) and optionally back up the current database
-* **Clear network authentication access cache**: clears the authentication cache
+* :guilabel:`Clear network authentication access cache`: clears the authentication cache
   of all connections
-* **Automatically clear network authentication access cache on SSL errors**: the
+* :guilabel:`Automatically clear network authentication access cache on SSL errors`: the
   connection cache stores all authentication data for connections, also when the
   connection fails. If you change authentication configurations or certification authorities,
   you should clear the authentication cache
   or restart QGIS. When this option is checked, the authentication cache will be
   automatically cleared every time an SSL error occurs and you choose to abort
   the connection
-* **Integrate master password with your Wallet/Keyring**: adds the master
+* :guilabel:`Integrate master password with the Wallet`: adds the master
   password to your personal Wallet/Keyring
-* **Store/update the master password in your Wallet/Keyring**: updates the
-  changed master password in your Wallet/Keyring
-* **Clear the master password from your Wallet/Keyring**: deletes the master
+* :guilabel:`Clear the master password from the Wallet…`: deletes the master
   password from your Wallet/Keyring
-* **Enable password helper debug log**: enables a debug tool that will contain
+* :guilabel:`Enable password helper debug log`: enables a debug tool that will contain
   all the log information of the authentication methods
-* **Clear cached authentication configurations**: clears the internal lookup cache
+* :guilabel:`Clear cached authentication configurations`: clears the internal lookup cache
   for configurations, used to speed up network connections. This does not clear
   QGIS’s core network access manager’s cache, which requires a relaunch of QGIS.
-* **Remove all authentication configurations**: clears the database of all
+* :guilabel:`Remove all authentication configurations…`: clears the database of all
   configuration records, without removing other stored records.
-* **Erase authentication database**: schedules a backup of the current database
+* :guilabel:`Import authentication configurations from file…`: imports from an :file:`.XML` file
+  details for creating custom authentication configurations.
+* :guilabel:`Export selected authentication configurations to file…`: exports the selected
+  items to a possibly encrypted :file:`.XML` file.
+* :guilabel:`Erase authentication database…`: schedules a backup of the current database
   and complete rebuild of the database table structure. The actions are
   scheduled for a later time, to ensure that other operations, like project
   loading, do not interrupt the operation or cause errors due to a temporarily
@@ -436,7 +438,7 @@ third-party PyQGIS or C++ plugins.
 When using the selector, :guilabel:`No authentication` is displayed in the
 pop-up menu control when nothing is selected, when there are no configurations
 to choose from, or when a previously assigned configuration can no longer be
-found in the database. Use the dropdown menu to select an existing authentication
+found in the database. Use the drop-down menu to select an existing authentication
 configuration or press |symbologyAdd| :sup:`Create a new autentication configuration`
 to create a configuration you could use.
 More details at :ref:`authentication`.
