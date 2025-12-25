@@ -207,6 +207,7 @@ Some of these entries are not available when multiple selections are made
 .. table updated with https://tableconvert.com/excel-to-restructuredtext
 .. table:: Contextual menus from :guilabel:`Layers` panel items
  :widths: 34, 11, 11, 11, 11, 11, 11
+ :class: longtable
 
  ============================================================ ============= =============== =============== ============= ==================== =============
   Option                                                       Group         Vector Layer    Raster Layer    Mesh Layer    Point Cloud Layer    3D Layer

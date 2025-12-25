@@ -371,6 +371,7 @@ Available properties depend on the selected symbology as shown in the following 
 
 .. table:: Availability and meaning of the vectors symbology properties
   :widths: 46, 12, 14, 12, 14
+  :class: longtable
 
   +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
   | Label, Description and Properties                                                         | Arrow      | Streamlines | Traces     | Wind Barbs |
@@ -896,6 +897,7 @@ as :guilabel:`New vertex Z value` option. Following methods are available:
 
 .. table:: Z value assignment methods
  :widths: 30, 70
+ :class: longtable
 
  +---------------------------------+---------------------------------------------------------------+
  | Method                          | Description                                                   |

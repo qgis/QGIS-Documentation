@@ -131,6 +131,7 @@ This is where you will find your :ref:`spatial bookmarks <sec_bookmarks>`,
 divided into :guilabel:`Project Bookmarks` and :guilabel:`User Bookmarks`.
 
 .. table:: available actions for spatial bookmarks
+   :class: longtable
 
    +----------------------------------+-----------------------------------------------+
    | Level                            | Contextual menu                               |
@@ -217,6 +218,7 @@ Data type
 
 .. table:: Available actions for plain layer files
    :widths: 32, 17, 17, 17, 17
+   :class: longtable
 
    +----------------------------------------------+--------------------------------------------------------------------------------------------------------------+
    | Level and Context menu                       | Types of layers                                                                                              |
@@ -267,6 +269,7 @@ each level of the dataset tree.
 
 .. table:: Available actions for database entries
    :widths: 27, 15, 13, 15, 10, 10, 10
+   :class: longtable
 
    +--------------------------------------------+------------------------------------------------------------------------------------+
    | Level and Context menu                     |                                  Type of database                                  |
@@ -500,6 +503,7 @@ Tiles and Web Services
 
 .. table:: Available actions for web services (1)
    :widths: 30, 14, 14, 14, 14, 14
+   :class: longtable
 
    +--------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
    | Level and Context menu                                       |                                         Type of services                                        |
@@ -547,6 +551,7 @@ Tiles and Web Services
 
 .. table:: Available actions for web services (2)
    :widths: 30, 14, 14, 14, 14, 14
+   :class: longtable
 
    +--------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
    | Level and Context menu                                       | Type of services                                                                                     |
@@ -602,6 +607,7 @@ Supported file types
 ....................
 
 .. table:: Available actions for various supported files
+   :class: longtable
 
    +--------------------------+------------------------------------------------------------+
    | File type                | Context menu                                               |
