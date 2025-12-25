@@ -1282,7 +1282,8 @@ To use these variables in an expression, they should be preceded by the
 
 .. csv-table::
    :header: "Variable", "Description"
-   :widths: 25, 70
+   :widths: 30, 70
+   :class: longtable
 
    "algorithm_id", "The unique ID of an algorithm"
    "animation_end_time", "End of the animation's overall temporal time range (as a datetime value)"

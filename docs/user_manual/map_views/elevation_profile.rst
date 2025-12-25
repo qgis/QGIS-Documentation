@@ -37,7 +37,7 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
 .. list-table:: Elevation Profile View toolbar
    :header-rows: 1
    :class: longtable
-   :widths: 20 10 70
+   :widths: 25, 20, 55
 
    * - Tool
      - Shortcut
