@@ -206,13 +206,14 @@ Some of these entries are not available when multiple selections are made
 
 .. table updated with https://tableconvert.com/excel-to-restructuredtext
 .. table:: Contextual menus from :guilabel:`Layers` panel items
+ :widths: 34, 11, 11, 11, 11, 11, 11
 
  ============================================================ ============= =============== =============== ============= ==================== =============
   Option                                                       Group         Vector Layer    Raster Layer    Mesh Layer    Point Cloud Layer    3D Layer
  ============================================================ ============= =============== =============== ============= ==================== =============
   |zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   |zoomToLayer| :guilabel:`Zoom to Selection`                                |checkbox|
-  |inOverview| :guilabel:`Show in Overview`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|  
+  |inOverview| :guilabel:`Show in Overview`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :guilabel:`Show Feature Count`                                             |checkbox|
   |labelingSingle| :guilabel:`Show Label`                                    |checkbox|                      |checkbox|
   :guilabel:`Copy Layer/Group`                                 |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
@@ -224,7 +225,7 @@ Some of these entries are not available when multiple selections are made
   |addVirtualLayer| :guilabel:`Edit Virtual Layer...`                        |checkbox|
   |addGroup| :guilabel:`Add Group`                             |checkbox|
   |duplicateLayer| :guilabel:`Duplicate Layer`                               |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  |removeLayer| :guilabel:`Remove Layer/Group...`              |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox| 
+  |removeLayer| :guilabel:`Remove Layer/Group...`              |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :guilabel:`Move Out of Group`                                              |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :guilabel:`Move to Top`                                      |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :guilabel:`Move to Bottom`                                   |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
@@ -239,7 +240,7 @@ Some of these entries are not available when multiple selections are made
   :menuselection:`Actions on selections -->` (in edit mode)                  |checkbox|
   :menuselection:`--> Duplicate Feature`                                     |checkbox|
   :menuselection:`--> Duplicate Feature and Digitize`                        |checkbox|
-  :guilabel:`Set Layer Scale Visibility...`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox| 
+  :guilabel:`Set Layer Scale Visibility...`                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :guilabel:`Zoom to Visible Scale`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :menuselection:`Layer CRS -->`                                             |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Set Project CRS from Layer`                            |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|

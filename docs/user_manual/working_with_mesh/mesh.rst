@@ -370,44 +370,54 @@ Mesh vector dataset can be styled using various types of :guilabel:`Symbology`:
 Available properties depend on the selected symbology as shown in the following table.
 
 .. table:: Availability and meaning of the vectors symbology properties
+  :widths: 46, 12, 14, 12, 14
 
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | Label                                  | Description and Properties                                                                | Arrow      | Streamlines | Traces     | Wind Barbs |
-  +========================================+===========================================================================================+============+=============+============+============+
-  | :guilabel:`Line width`                 | Width of the vector representation                                                        | |checkbox| | |checkbox|  | |checkbox| | |checkbox| |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | :guilabel:`Coloring method`            | * a :guilabel:`Single color` assigned to all vectors                                      | |checkbox| | |checkbox|  | |checkbox| | |checkbox| |
-  |                                        | * or a variable color based on vectors magnitude, using a                                 |            |             |            |            |
-  |                                        |   :ref:`Color ramp shader <color_ramp_shader>`                                            |            |             |            |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | :guilabel:`Filter by magnitude`        | Only vectors whose length for the selected dataset falls between a :guilabel:`Min`        | |checkbox| | |checkbox|  |            | |checkbox| |
-  |                                        | and :guilabel:`Max` range are displayed                                                   |            |             |            |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | :guilabel:`Display on user grid`       | Places the vector on a grid with custom :guilabel:`X spacing` and :guilabel:`Y spacing`   | |checkbox| | |checkbox|  |            | |checkbox| |
-  |                                        | and interpolates their length based on neighbours                                         |            |             |            |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | :guilabel:`Head options`               | :guilabel:`Length` and :guilabel:`Width` of the arrow head, as a percentage of its shaft  | |checkbox| |             |            |            |
-  |                                        | length                                                                                    |            |             |            |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | :guilabel:`Arrow length`               | * **Defined by Min and Max**: You specify the minimum and maximum length for the arrows,  | |checkbox| |             |            |            |
-  |                                        |   QGIS will interpolate their size based on the underlying vector's magnitude             |            |             |            |            |
-  |                                        | * **Scale to magnitude**: arrow length is proportional to their vector's magnitude        |            |             |            |            |
-  |                                        | * **Fixed**: all the vectors are shown with the same length                               |            |             |            |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | :guilabel:`Streamlines seeding method` | * **On mesh/grid**: relies on the user grid to display the vectors                        |            | |checkbox|  |            |            |
-  |                                        | * **Randomly**: vector placement is randomly done with respect to a certain density       |            |             |            |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | :guilabel:`Particles count`            | The amount of "sand" you want to throw into visualisation                                 |            |             | |checkbox| |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | :guilabel:`Max tail length`            | The time until the particle fades out                                                     |            |             | |checkbox| |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
-  | :guilabel:`Wind Barbs`                 | * **Length**: Specifies the length of the wind barbs. Choose the units from a drop-down   |            |             |            | |checkbox| |
-  |                                        |   menu.                                                                                   |            |             |            |            |
-  |                                        | * **Data Units**: Specifies the units of wind speed data. Wind barbs encode the wind      |            |             |            |            |
-  |                                        |   in knots (nautical miles per hour). Therefore, you should select the units that         |            |             |            |            |
-  |                                        |   your data are in, or use a custom :guilabel:`Multiplier` to convert your data units     |            |             |            |            |
-  |                                        |   to knots. This ensures that the wind speed is accurately represented.                   |            |             |            |            |
-  +----------------------------------------+-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | Label, Description and Properties                                                         | Arrow      | Streamlines | Traces     | Wind Barbs |
+  +===========================================================================================+============+=============+============+============+
+  | :guilabel:`Line width`: Width of the vector representation                                | |checkbox| | |checkbox|  | |checkbox| | |checkbox| |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Coloring method`:                                                              |            |             |            |            |
+  |                                                                                           |            |             |            |            |
+  | * a :guilabel:`Single color` assigned to all vectors                                      | |checkbox| | |checkbox|  | |checkbox| | |checkbox| |
+  | * or a variable color based on vectors magnitude, using a                                 |            |             |            |            |
+  |   :ref:`Color ramp shader <color_ramp_shader>`                                            |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Filter by magnitude`: Only vectors whose length for the selected dataset       | |checkbox| | |checkbox|  |            | |checkbox| |
+  | falls between a :guilabel:`Min` and :guilabel:`Max` range are displayed                   |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Display on user grid`: Places the vector on a grid with custom                 | |checkbox| | |checkbox|  |            | |checkbox| |
+  | :guilabel:`X spacing` and :guilabel:`Y spacing` and interpolates their length             |            |             |            |            |
+  | based on neighbours                                                                       |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Head options`: :guilabel:`Length` and :guilabel:`Width` of the arrow head,     | |checkbox| |             |            |            |
+  | as a percentage of its shaft length                                                       |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Arrow length`:                                                                 |            |             |            |            |
+  |                                                                                           |            |             |            |            |
+  | * **Defined by Min and Max**: You specify the minimum and maximum length for the arrows,  | |checkbox| |             |            |            |
+  |   QGIS will interpolate their size based on the underlying vector's magnitude             |            |             |            |            |
+  | * **Scale to magnitude**: arrow length is proportional to their vector's magnitude        |            |             |            |            |
+  | * **Fixed**: all the vectors are shown with the same length                               |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Streamlines seeding method`:                                                   |            |             |            |            |
+  |                                                                                           |            |             |            |            |
+  | * **On mesh/grid**: relies on the user grid to display the vectors                        |            | |checkbox|  |            |            |
+  | * **Randomly**: vector placement is randomly done with respect to a certain density       |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Particles count`: The amount of "sand" you want to throw into visualisation    |            |             | |checkbox| |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Max tail length`: The time until the particle fades out                        |            |             | |checkbox| |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Wind Barbs`:                                                                   |            |             |            |            |
+  |                                                                                           |            |             |            |            |
+  | * **Length**: Specifies the length of the wind barbs. Choose the units from a drop-down   |            |             |            | |checkbox| |
+  |   menu.                                                                                   |            |             |            |            |
+  | * **Data Units**: Specifies the units of wind speed data. Wind barbs encode the wind      |            |             |            |            |
+  |   in knots (nautical miles per hour). Therefore, you should select the units that         |            |             |            |            |
+  |   your data are in, or use a custom :guilabel:`Multiplier` to convert your data units     |            |             |            |            |
+  |   to knots. This ensures that the wind speed is accurately represented.                   |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
 
 .. _mesh_symbology_rendering:
 
@@ -885,6 +895,7 @@ as :guilabel:`New vertex Z value` option. Following methods are available:
 
 
 .. table:: Z value assignment methods
+ :widths: 30, 70
 
  +---------------------------------+---------------------------------------------------------------+
  | Method                          | Description                                                   |
@@ -921,31 +932,31 @@ The following detailed logic describes the behavior of the **Prefer mesh, then Z
 
 .. table:: Matrix of Z value assignment to new vertex
 
- +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
- | Vertex creation                       | Are there selected      | Source of assigned value      | Assigned Z Value                         |
- |                                       | vertices in mesh layer? |                               |                                          |
- +=======================================+=========================+===============================+==========================================+
- | "Free" vertex, not connected to any   | No                      | :guilabel:`Vertex Z value`    | Default or user defined                  |
- | face or edge of a face                |                         |                               |                                          |
- +                                       +                         +-------------------------------+------------------------------------------+
- |                                       |                         | :guilabel:`Advanced           | :guilabel:`z` widget if in               |
- |                                       |                         | Digitizing Panel` (if         | |locked| :sup:`Locked` state             |
- |                                       |                         | :guilabel:`z` widget is in    |                                          |
- |                                       |                         | |locked| :sup:`Locked` state) |                                          |
- +                                       +-------------------------+-------------------------------+------------------------------------------+
- |                                       | Yes                     | :guilabel:`Vertex Z value`    | Average of the selected vertices         |
- |                                       |                         |                               | or user-defined                          |
- +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
- | Vertex on an edge                     | ---                     | Mesh layer                    | Interpolated from the edge's vertices    |
- +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
- | Vertex on a face                      | ---                     | Mesh layer                    | Interpolated from the face's vertices    |
- +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
- | Vertex snapped to a 2D vector feature | ---                     | :guilabel:`Vertex Z value`    | Default or user defined                  |
- +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
- | Vertex snapped to a 3D vector vertex  | ---                     | Vector layer                  | Vertex                                   |
- +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
- | Vertex snapped to a 3D vector segment | ---                     | Vector layer                  | Interpolated along the vector segment    |
- +---------------------------------------+-------------------------+-------------------------------+------------------------------------------+
+ +---------------------------------------+-----------+-------------------------------+------------------------------------------+
+ | Vertex creation                       | Vertices  | Source of assigned value      | Assigned Z Value                         |
+ |                                       | selected? |                               |                                          |
+ +=======================================+===========+===============================+==========================================+
+ | "Free" vertex, not connected to any   | No        | :guilabel:`Vertex Z value`    | Default or user defined                  |
+ | face or edge of a face                |           |                               |                                          |
+ +                                       +           +-------------------------------+------------------------------------------+
+ |                                       |           | :guilabel:`Advanced           | :guilabel:`z` widget if in               |
+ |                                       |           | Digitizing Panel` (if         | |locked| :sup:`Locked` state             |
+ |                                       |           | :guilabel:`z` widget is in    |                                          |
+ |                                       |           | |locked| :sup:`Locked` state) |                                          |
+ +                                       +-----------+-------------------------------+------------------------------------------+
+ |                                       | Yes       | :guilabel:`Vertex Z value`    | Average of the selected vertices         |
+ |                                       |           |                               | or user-defined                          |
+ +---------------------------------------+-----------+-------------------------------+------------------------------------------+
+ | Vertex on an edge                     | ---       | Mesh layer                    | Interpolated from the edge's vertices    |
+ +---------------------------------------+-----------+-------------------------------+------------------------------------------+
+ | Vertex on a face                      | ---       | Mesh layer                    | Interpolated from the face's vertices    |
+ +---------------------------------------+-----------+-------------------------------+------------------------------------------+
+ | Vertex snapped to a 2D vector feature | ---       | :guilabel:`Vertex Z value`    | Default or user defined                  |
+ +---------------------------------------+-----------+-------------------------------+------------------------------------------+
+ | Vertex snapped to a 3D vector vertex  | ---       | Vector layer                  | Vertex                                   |
+ +---------------------------------------+-----------+-------------------------------+------------------------------------------+
+ | Vertex snapped to a 3D vector segment | ---       | Vector layer                  | Interpolated along the vector segment    |
+ +---------------------------------------+-----------+-------------------------------+------------------------------------------+
 
 
 .. note:: The :guilabel:`Vertex Z value` widget is deactivated if
