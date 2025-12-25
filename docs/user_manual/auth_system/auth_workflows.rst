@@ -137,27 +137,12 @@ certificate will not be saved to the database unless the |fileSave|
 *per* selected certification. Closing the dialog will **not** apply the
 policy changes.
 
-.. _figure_auth_pki_policy:
-
-.. figure:: img/auth-authority-edit-trust_save-not-close.png
-   :align: center
-
-   Saving the trust policy changes
-
 You can review the filtered CAs, both intermediate and root certificates, that
 will be trusted for secure connections or change the default trust policy by
 clicking the |transformSettings| **Options** button.
 
 .. warning::
-   Changing the default trust policy may result in problems with secure
-   connections.
-
-.. _figure_auth_pki_options:
-
-.. figure:: img/auth-editor-authorities_utilities-menu.png
-   :align: center
-
-   Authorities options menu
+   Changing the default trust policy may result in problems with secure connections.
 
 You can import CAs or save a file system path from a file that contains multiple
 CAs, or import individual CAs. The standard PEM format for files that contain

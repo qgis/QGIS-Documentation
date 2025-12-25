@@ -424,12 +424,6 @@ authentication database and configurations:
   loading, do not interrupt the operation or cause errors due to a temporarily
   missing database.
 
-  .. _figure_authconfiutilsdb:
-
-  .. figure:: img/auth-db-erase.png
-     :align: center
-
-     DB erase verification menu
 
 Using authentication configurations
 -----------------------------------
@@ -442,20 +436,14 @@ third-party PyQGIS or C++ plugins.
 When using the selector, :guilabel:`No authentication` is displayed in the
 pop-up menu control when nothing is selected, when there are no configurations
 to choose from, or when a previously assigned configuration can no longer be
-found in the database. The :guilabel:`Type` and :guilabel:`Id` fields are
-read-only and provide a description of the authentication method and the
-config’s ID respectively.
+found in the database. Use the dropdown menu to select an existing authentication
+configuration or press |symbologyAdd| :sup:`Create a new autentication configuration`
+to create a configuration you could use.
+More details at :ref:`authentication`.
 
 .. _figure_authconfigselector:
 
-.. figure:: img/auth-selector-no-authentication.png
-   :align: center
-
-   Authentication configuration selector with no authentication
-
-.. _figure_authconfigselector_pkcs:
-
-.. figure:: img/auth-selector-pkcs12-authentication.png
+.. figure:: img/authentication-selector-set.png
    :align: center
 
    Authentication configuration selector with selected config
@@ -463,7 +451,7 @@ config’s ID respectively.
 Python bindings
 ---------------
 
-All classes and public functions have sip bindings, except ``QgsAuthCrypto``,
+All classes and public functions have sip bindings, except :api:`QgsAuthCrypto <classQgsAuthCrypto.html>`,
 since management of the master password hashing and auth database encryption
 should be handled by the main app, and not via Python.
 
