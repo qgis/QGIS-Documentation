@@ -2500,7 +2500,7 @@ Read more on the underlying GEOS "Touches" predicate, as described in PostGIS `S
      - * ``overlay_touches('regions')`` → TRUE if the current feature spatially touches a region
        * ``overlay_touches('regions', filter:= population > 10000)`` → TRUE if the current feature spatially touches a region with a population greater than 10000
        * ``overlay_touches('regions', name)`` → an array of names, for the regions touched by the current feature
-       * ``string_to_array(overlay_touches('regions', name))`` → a string as a comma separated list of names, for the regions touched by the current feature
+       * ``array_to_string(overlay_touches('regions', name))`` → a string as a comma separated list of names, for the regions touched by the current feature
        * ``array_sort(overlay_touches(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions touched by the current feature and with a population greater than 10000
        * ``overlay_touches(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions touched by the current feature
 
