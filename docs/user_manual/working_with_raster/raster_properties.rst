@@ -906,15 +906,6 @@ set whether the layer redraw should be:
   range are visible, pixels appear and disappear as you move through time. When
   **checked**, all pixels from the start time through the current position remain
   visible, creating a cumulative view. 
-  This option provides consistent behavior with vector layers that have accumulation enabled.
-
-  .. only:: html
-
-   .. figure:: img/accumulate_pixels_over_time.gif
-      :align: center
-      :width: 100%
-
-      Comparison of temporal raster rendering with Accumulate pixels over time disabled and enabled
 
   :guilabel:`Represents Temporal Values` mode is effective for:
 
