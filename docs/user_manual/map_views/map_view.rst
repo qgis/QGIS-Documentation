@@ -299,6 +299,9 @@ To create a temporal animation:
 
      * the time :guilabel:`Range` for the animation
      * the :guilabel:`Step (frame length)` in the unit of your choice
+     * use |checkbox| :guilabel:`Cumulative range` to accumulate features and pixels
+       over time in the exported animation, matching the :ref:`temporal controller <temporal_controller>`
+       behavior when cumulative ranging is enabled
 
 .. _`elevation_controller`:
 
