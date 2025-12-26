@@ -592,6 +592,11 @@ Generates a histogram with the values of the attribute of a vector layer.
 
 The attribute to use for computing the histogram must be numeric.
 
+.. figure:: img/vector_layer_histogram.png
+   :align: center
+
+   Example of vector layer histogram
+
 Parameters
 ..........
 
