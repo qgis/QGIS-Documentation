@@ -453,6 +453,11 @@ Two fields must be entered as parameters: one that defines the category each fea
 (to group features) and another one with the variable to plot (this has to be
 a numeric one).
 
+.. figure:: img/polar_plot_example.png
+   :align: center
+
+   Example of polar plot
+
 Parameters
 ..........
 
