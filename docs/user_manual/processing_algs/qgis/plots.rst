@@ -380,7 +380,13 @@ Python code
 
 Mean and standard deviation plot
 --------------------------------
+
 Creates a box plot with mean and standard deviation values.
+
+.. figure:: img/mean_stddev_plot_example.png
+   :align: center
+
+   Example of mean and standard deviation plot
 
 Parameters
 ..........
