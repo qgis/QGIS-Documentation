@@ -131,22 +131,49 @@ You can get to these files by unzipping the ``.qgz`` file.
 
 .. _`saveprojecttodb`:
 
-Projects can also be saved/loaded to/from a PostgreSQL, GeoPackage or 
-Oracle database using the following Project menu items:
+Projects can also be saved to and loaded from a PostgreSQL, GeoPackage, or
+Oracle database using the following :guilabel:`Project` menu items:
 
 * :menuselection:`Project --> Open from`
 * :menuselection:`Project --> Save to`
 
-Both menu items have a sub-menu with a list of extra project storage
-implementations (PostgreSQL, GeoPackage and Oracle).
-Clicking the action will open a dialog to pick a GeoPackage connection
-and project, a PostgreSQL connection, schema and project or Oracle
-connection, owner and project.
+Both menu items provide sub-menus listing the available project storage
+backends (PostgreSQL, GeoPackage, and Oracle). Selecting one of these
+options opens a dialog where you can choose:
 
-Projects stored in GeoPackage, PostgreSQL or Oracle can also be loaded
-through the QGIS browser panel, either by double-clicking them or by
-dragging them to the map canvas.
+* a GeoPackage connection and project
+* a PostgreSQL connection, schema, and project
+* an Oracle connection, owner, and project
 
+Projects stored in GeoPackage, PostgreSQL, or Oracle databases can also be
+loaded from the :ref:`Browser <database_entries>` panel, either by double-clicking the
+project entry or by dragging it onto the map canvas.
+
+Managing QGIS Project Files from PostgreSQL Databases
+-----------------------------------------------------
+
+QGIS allows you to store and manage project files directly inside a
+PostgreSQL database.
+When a PostgreSQL connection is added in the :guilabel:`Browser` panel,
+right-clicking on the database schema provides access to the project menu
+options:
+
+* :menuselection:`Project --> Save Current Project`: saves the current
+  project into the selected PostgreSQL database.
+* :menuselection:`Project --> Import Projects…`: imports one or more projects
+  from a folder into the selected PostgreSQL database.
+
+When importing projects, a dialog opens allowing you to
+|add| :sup:`Add selected project or projects from the folder`.
+After adding projects, you can remove an imported project by selecting
+its row in the list and clicking |remove| :sup:`Remove selected row`.
+
+.. _figure_importproject_dialog:
+
+.. figure:: img/import_project_dialog.png
+   :align: center
+
+   Import Project dialog
 
 .. _handle_broken_paths:
 
@@ -228,6 +255,8 @@ Other ways to produce output files are:
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |add| image:: /static/common/mActionAdd.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
@@ -243,6 +272,8 @@ Other ways to produce output files are:
 .. |indicatorBadLayer| image:: /static/common/mIndicatorBadLayer.png
    :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
+   :width: 1.5em
+.. |remove| image:: /static/common/mActionRemove.png
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
