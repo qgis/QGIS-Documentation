@@ -515,7 +515,7 @@ actions like:
   presentations using QGIS main canvas
 * :guilabel:`Toggle Map Only`: hides panels, toolbars, menus and status
   bar and only shows the map canvas. Combined with the full screen
-  option, it makes your screen display only the map
+  option, it makes your screen display only the map.
 
 
 .. list-table:: The View menu items
@@ -1570,7 +1570,7 @@ Database
 
 The :menuselection:`Database` menu provides tools for Database interaction.
 If no database-related plugins are enabled, there will be no :guilabel:`Database` menu.
-This is what the :menuselection:`Database` menu looks like if all the core plugins are enabled. 
+This is what the :menuselection:`Database` menu looks like if all the core plugins are enabled.
 
 .. list-table:: The Database menu items
    :header-rows: 1
@@ -1756,14 +1756,14 @@ This menu is only available under |osx| macOS and contains some OS
 related commands.
 
 .. csv-table::  The QGIS menu items
-   :header: "Menu Option", "Shortcut"
+   :header: "Menu Option", "Shortcut", "Reference"
    :widths: auto
 
-   ":guilabel:`Preferences`"
    ":guilabel:`About QGIS`"
-   ":guilabel:`Hide QGIS`"
+   ":guilabel:`Preferences`", ":kbd:`Cmd+,`", ":ref:`gui_options`"
+   ":guilabel:`Hide QGIS`", ":kbd:`Cmd+H`"
    ":guilabel:`Show All`"
-   ":guilabel:`Hide Others`"
+   ":guilabel:`Hide Others`", ":kbd:`Shift+Cmd+H`"
    ":guilabel:`Quit QGIS`", ":kbd:`Cmd+Q`"
 
 
