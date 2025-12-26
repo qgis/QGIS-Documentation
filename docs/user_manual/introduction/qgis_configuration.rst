@@ -1221,7 +1221,7 @@ To manage authentications, you can use the list of tools next to the frame, ie:
 
 .. _figure_authentication_settings:
 
-.. figure:: ../auth_system/img/auth-editor-configs2.png
+.. figure:: ../auth_system/img/options_authentication.png
    :align: center
 
    Authentication settings
