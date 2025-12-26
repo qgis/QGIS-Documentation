@@ -20,3 +20,4 @@ and `GDAL vector programs <https://gdal.org/en/latest/programs/index.html#vector
      vectorconversion
      vectorgeoprocessing
      vectormiscellaneous
+     miscellaneous
