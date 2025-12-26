@@ -18,7 +18,7 @@
 .. only:: not (ltr or testing or outdated)
 
   .. hint:: Looking for documentation of versions newer than
-    |version|, the next to be Long Term Release? Have a look at the
+    |version|, the next Long Term Release? Have a look at the
     `testing docs <https://docs.qgis.org/testing/en/>`_.
 
 .. note:: QGIS documentation is available in various languages and versions.
@@ -36,20 +36,20 @@
     existing ones on Transifex.
 
     For the time being, localized translations are only available for
-    the Long Term releases branch, but should be suitable to learn
-    how to use QGIS nevertheless.
+    the Long Term releases branch, but should nevertheless be suitable to learn how to 
+    use QGIS.
 
 Welcome to the official documentation of `QGIS <https://qgis.org>`_,
 the free and open source community-driven GIS software!
 If you are new to this documentation, the table of contents below
-and in the sidebar should let you easily access the documentation
+and in the sidebar should help you easily access the documentation
 for your topic of interest. You can also use the search function
 in the top left corner.
 
 .. todo: Actually, it could be nice to refactor the first chapters of the docs
  (preamble, foreword, features, conventions) to minimize repetition and have
  an introductory chapter for the whole documentation, not within User manual.
- Also we can consider adding an overview of how the docs is structured and what
+ Also we can consider adding an overview of how the docs are structured and what
  people should expect to find in each document (inspired by
  https://docs.godotengine.org/en/stable/about/introduction.html#doc-about-intro).
 
@@ -64,7 +64,7 @@ you can download for offline reading. They are accessible from the
 
 .. note:: QGIS is an open source project developed by a community of contributors.
     The documentation team can always use your feedback and help to improve
-    the tutorials and features description. If you don't understand something,
+    the tutorials and feature descriptions. If you don't understand something,
     or cannot find what you are looking for in the docs, help us make the
     documentation better by letting us know:
 
@@ -77,7 +77,7 @@ you can download for offline reading. They are accessible from the
       or the `#qgis:matrix.org <https://matrix.to/#/#qgis:osgeo.org>`_ room!
 
 
-Please have a look into one of the documents below.
+Please have a look at one of the documents below.
 
 .. toctree::
    :maxdepth: 1
