@@ -520,6 +520,11 @@ Raster layer histogram
 ----------------------
 Generates a histogram with the values of a raster layer.
 
+.. figure:: img/raster_layer_histogram.png
+   :align: center
+
+   Raster layer histogram example
+
 Parameters
 ..........
 
