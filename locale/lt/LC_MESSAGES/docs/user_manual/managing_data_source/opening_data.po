@@ -1482,9 +1482,407 @@ msgstr ""
 ":guilabel:`Savos loginės reikšmės`: leidžia jums pridėti savo eilučių porą, "
 "kuri bus aptinkama kaip loginės reikšmės."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:587
+msgid "Field type detection"
+msgstr "Lauko tipo aptikimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:589
+msgid ""
+"QGIS tries to detect the field types automatically (unless "
+"|checkbox|:guilabel:`Detect field types` is not checked) by examining the "
+"content of an optional sidecar CSVT file (see `GeoCSV specification`_) and "
+"by scanning the whole file to make sure that all values can actually be "
+"converted without errors, the fall-back field type is text."
+msgstr ""
+"QGIS bando automatiškai aptikti laukų tipus (nebent varnelė "
+"|checkbox|:guilabel:`Aptikti laukų tipus` yra išjungta) tiriant papildomo "
+"CSVT failo turinį (žr. `GeoCSV specifikacija`_) ir skenuojant visą failą, "
+"kad būtų įsitikinta, kad reikšmes tikrai galima konvertuoti be klaidų, "
+"atsarginis lauko tipas yra tekstas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:595
+msgid ""
+"The detected field type appears under the field name in sample data preview "
+"table and can be manually changed if necessary."
+msgstr ""
+"Aptiktas lauko tipas matosi po lauko pavadinimu pavyzdinių duomenų peržiūros"
+" lentelėje ir, jei reikia, jį galima pakeisti rankomis."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:598
+msgid "The following field types are supported:"
+msgstr "Palaikomi šie laukų tipai:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:600
+msgid ""
+"``Boolean`` case-insensitive literal couples that are interpreted as boolean"
+" values are ``1``/``0``, ``true``/``false``, ``t``/``f``, ``yes``/``no``"
+msgstr ""
+"``Loginis`` nuo raidžių dydžio nepriklausančios tekstinės poros, kurios "
+"interpretuojamos kaip loginės reikšmės, yra ``1``/``0``, ``true``/``false``,"
+" ``t``/``f``, ``yes``/``no``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:602
+msgid "``Whole Number (integer)``"
+msgstr "``Sveikas skaičius (integer)``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:603
+msgid "``Whole Number (integer - 64 bit)``"
+msgstr "``Sveikas skaičius (integer - 64 bit)``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:604
+msgid "``Decimal Number``: double precision floating point number"
+msgstr "``Dešimtainis skaičius``: double precision floating point number"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:605
+msgid "``Date``"
+msgstr "``Data``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:606
+msgid "``Time``"
+msgstr "``Laikas``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:607
+msgid "``Date and Time``"
+msgstr "``Data ir laikas``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:608
+msgid "``Text``"
+msgstr "``Tekstas``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:612
+msgid "Geometry definition"
+msgstr "Geometrijos apibrėžimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:614
+msgid "Once the file is parsed, set :guilabel:`Geometry definition` to"
+msgstr ""
+"Išnagrinėjus failą, nustatykite :guilabel:`Geometrijos apibrėžimą` kaip"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:616
+msgid ""
+"|radioButtonOn|:guilabel:`Point coordinates` and provide the :guilabel:`X "
+"field`, :guilabel:`Y field`, :guilabel:`Z field` (for 3-dimensional data) "
+"and :guilabel:`M field` (for the measurement dimension) if the layer is of "
+"point geometry type and contains such fields. If the coordinates are defined"
+" as degrees/minutes/seconds, activate the |checkbox|:guilabel:`DMS "
+"coordinates` checkbox. Provide the appropriate :guilabel:`Geometry CRS` "
+"using the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"|radioButtonOn|:guilabel:`Taško koordinates` ir pateikite :guilabel:`X "
+"lauką`, :guilabel:`Y lauką`, :guilabel:`Z lauką` (3-matmenų duomenims) ir "
+":guilabel:`M lauką` (matavimo matmeniui), jei sluoksnis yra taško "
+"geometrijos ir turi tokius laukus. Jei koordinatės nurodytos "
+"laipsniais/minutėmis/sekundėmis, įjunkite varnelę |checkbox|:guilabel:`DMS "
+"koordinatės`. Pateikite atitinkamą :guilabel:`Geometrijos CRS` naudojant "
+"valdiklį |setProjection| :sup:`Parinkti CRS`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1776
 msgid "setProjection"
 msgstr "setProjection"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:624
+msgid ""
+"|radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial "
+"information is represented as WKT: select the :guilabel:`Geometry field` "
+"containing the WKT geometry and choose the approriate :guilabel:`Geometry "
+"field` or let QGIS auto-detect it. Provide the appropriate "
+":guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"|radioButtonOn|:guilabel:`Gerai žinomas teksto (WKT)` parinktį, jei erdvinė "
+"informacija išreikšta kaip WKT: parinkite :guilabel:`Geometrijos lauką`, "
+"kuriame yra WKT geometrija ir parinkite atitinkamą :guilabel:`Geometrijos "
+"tipą` arba leiskite QGIS jį aptikti automatiškai. Pateikite atitinkamą "
+":guilabel:`Geometrijos CRS` naudojant valdiklį |setProjection| "
+":sup:`Parinkti CRS`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:630
+msgid ""
+"If the file contains non-spatial data, activate |radioButtonOn| "
+":guilabel:`No geometry (attribute only table)` and it will be loaded as an "
+"ordinary table."
+msgstr ""
+"Jei faile yra neerdviniai duomenys, įjunkite |radioButtonOn| :guilabel:`Nėra"
+" geometrijos (lentelėje tik atributai)` ir jis bus įkeltas kaip paprasta "
+"lentelė."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:634
+msgid "Layer settings"
+msgstr "Sluoksnio nustatymai"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:636
+msgid "Additionally, you can enable:"
+msgstr "Papildomai jūs galite įjungti:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:638
+msgid ""
+"|checkbox|:guilabel:`Use spatial index` to improve the performance of "
+"displaying and spatially selecting features."
+msgstr ""
+"|checkbox|:guilabel:`Naudoti erdvinį indeksą`, kad pagerintumėte erdvinių "
+"geoobjektų rodymo ir parinkimo greitaveiką."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:640
+msgid ""
+"|checkbox|:guilabel:`Use subset index` to improve performance of "
+":ref:`subset filters <vector_query_builder>` (when defined in the layer "
+"properties)."
+msgstr ""
+"|checkbox|:guilabel:`Naudoti poaibio indeksą`, kad pagerintumėte "
+":ref:`poaibių filtrų <vector_query_builder>` greitaveiką (kai jie apibrėžti "
+"sluoksnio savybėse)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:642
+msgid ""
+"|checkbox|:guilabel:`Watch file` to watch for changes to the file by other "
+"applications while QGIS is running."
+msgstr ""
+"|checkbox|:guilabel:`Stebėti failą`, kad būtų stebima, kada failą keičia "
+"kitos programos kol veikia QGIS."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:646
+msgid ""
+"At the end, click :guilabel:`Add` to add the layer to the map. In our "
+"example, a point layer named ``Elevation`` is added to the project and "
+"behaves like any other map layer in QGIS. This layer is the result of a "
+"query on the :file:`.csv` source file (hence, linked to it) and would "
+"require :ref:`to be saved <general_saveas>` in order to get a spatial layer "
+"on disk."
+msgstr ""
+"Tada spauskite :guilabel:`Pridėti`, kad pridėtumėte sluoksnį į žemėlapį. "
+"Mūsų pavyzdyje į projektą pridedamas taškų sluoksnis vardu ``Elevation`` ir "
+"jis elgiasi lygiai taip pat, kaip visi kiti QGIS žemėlapio sluoksniai. Šis "
+"sluoksnis yra šaltinio failo :file:`.csv` užklausos rezultatas (taigi su juo"
+" susijęs) ir jį reikės :ref:`įrašyti <general_saveas>`, jei norėsite gauti "
+"erdvinį sluoksnį diske."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:654
+msgid "Sample Data"
+msgstr "Pavyzdiniai duomenys"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:656
+msgid ""
+"As you set the parser properties, the sample data preview updates regarding "
+"to the applied settings."
+msgstr ""
+"Kai keičiate nagrinėjimo savybes, pavyzdiniai peržiūros duomenys keičiasi "
+"pagal jūsų nurodytus nustatymus."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:659
+msgid ""
+"Also in the Sample Data Table it is possible to override the automatically "
+"determined column types."
+msgstr ""
+"Taipogi pavyzdinių duomenų lentelėje galima permušti automatiškai nustatytus"
+" stulpelių tipus."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:666
+msgid "Importing a DXF or DWG file"
+msgstr "DXF ar DWG failo importavimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:668
+msgid ""
+":file:`DXF` and :file:`DWG` files can be added to QGIS by simple drag-and-"
+"drop from the Browser Panel. You will be prompted to select the sublayers "
+"you would like to add to the project. Layers are added with random style "
+"properties."
+msgstr ""
+":file:`DXF` ir :file:`DWG` failus galima pridėti į QGIS tiesiog pertempus "
+"juos iš Naršyklės skydelio. Jūsų paprašys parinkti posluoksnius, kuriuos "
+"norite pridėti į projektą. Sluoksniai pridedami su atsitiktinėmis stiliaus "
+"savybėmis."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:673
+msgid ""
+"For DXF files containing several geometry types (point, line and/or "
+"polygon), the name of the layers will be generated as *<filename.dxf> "
+"entities <geometry type>*."
+msgstr ""
+"DXF failams su keliais geometrijos tipais (taškas, linijoma ir/arba "
+"poligonas), sluoksniai bus pavadinti kaip *<failas.dxf> esybės <geometry "
+"type>*."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:677
+msgid ""
+"To keep the dxf/dwg file structure and its symbology in QGIS, you may want "
+"to use the dedicated :menuselection:`Project --> Import/Export --> Import "
+"Layers from DWG/DXF...` tool which allows you to:"
+msgstr ""
+"Kad išlaikytumėte dxf/dwg failo struktūrą ir jo simbologiją QGIS'e, jūs "
+"galite naudoti tam skirtą įrankį :menuselection:`Projektas --> "
+"Importuoti/Eksportuoti --> Importuoti sluoksnius iš DWG/DXF...`, kuris leis "
+"jums:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:682
+msgid "import elements from the drawing file into a GeoPackage database."
+msgstr "importuoti elementus iš brėžinio failo į GeoPackage duomenų bazę."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:683
+msgid "add imported elements to the project."
+msgstr "pridėti importuotus elementus į projektą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:685
+msgid ""
+"In the :guilabel:`DWG/DXF Import` dialog, to import the drawing file "
+"contents:"
+msgstr ""
+"Dialoge :guilabel:`DWG/DXF importas`, norėdami importuoti brėžinio failo "
+"turinį:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:688
+msgid ""
+"Input the location of the :guilabel:`Source drawing`, i.e. the DWG/DXF "
+"drawing file to import."
+msgstr ""
+"Įveskite :guilabel:`Šaltinio brėžinio` vietą, t.y. DWG/DXF brėžinio failą, "
+"kurį reikia importuoti."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:690
+msgid ""
+"Specify the coordinate reference system of the data in the drawing file."
+msgstr "Nurodykite brėžinio failo duomenų koordinačių atskaitos sistemą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:691
+msgid ""
+"Input the location of the :guilabel:`Target package`, i.e. the GeoPackage "
+"file that will store the data. If an existing file is provided, then it will"
+" be overwritten."
+msgstr ""
+"Įveskite :guilabel:`Paskirties paketo` vietą, t.y. GeoPackage failą, į kurį "
+"bus įrašyti duomenys. Jei nurodomas esamas failas, jis bus perrašytas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:694
+msgid "Choose how to import ``blocks`` with the dedicated combobox:"
+msgstr "Parinkite, kaip importuoti ``blokus``:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:696
+msgid ""
+":guilabel:`Expand Block Geometries`: imports the blocks in the drawing file "
+"as normal elements."
+msgstr ""
+":guilabel:`Išskleisti blokų geometrijas`: importuoja brėžinio failo bokus "
+"kaip normalius elementus."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:697
+msgid ""
+":guilabel:`Expand Block Geometries and Add Insert Points`: imports the "
+"blocks in the drawing file as normal elements and adds the insertion point "
+"as a point layer."
+msgstr ""
+":guilabel:`Išskleisti bloko geometrijas ir pridėti įterpimo taškus`: "
+"importuoja brėžinio failo blokus kaip normalius elementus ir prideda "
+"įterpimo tašką kaip taškų sluoksnį."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:698
+msgid ""
+":guilabel:`Add Only Insert Points`: adds the blocks insertion point as a "
+"point layer."
+msgstr ""
+":guilabel:`Tik pridėti taškus`: prideda blokų įterpimo tašką kaip taškų "
+"sluoksnį."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:700
+msgid ""
+"Check |checkbox| :guilabel:`Use curves` to promote the imported layers to a "
+"``curved`` geometry type."
+msgstr ""
+"Įjunkite |checkbox| :guilabel:`Naudoti kreives`, kad keistumėte "
+"importuojamus sluoksnius į ``kreivių`` geometrijos tipą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:702
+msgid ""
+"Use the :guilabel:`Import` button to import the drawing into the destination"
+" GeoPackage file. The GeoPackage database will be automatically populated "
+"with the drawing file content. Depending on the size of the file, this can "
+"take some time."
+msgstr ""
+"Naudokite mygtuką :guilabel:`Importuoti`, kad importuotumėte brėžinį į "
+"paskirties GeoPackage failą. GeoPackage duomenų bazė bus automatiškai "
+"užpildyta brėžinio failo turiniu. Priklausomai nuo failo dydžio, tai gali "
+"užtrukti."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:708
+msgid ""
+"After the :file:`.dwg` or :file:`.dxf` data has been imported into the "
+"GeoPackage database, the frame in the lower half of the dialog is populated "
+"with the list of layers from the imported file. There you can select which "
+"layers to add to the QGIS project:"
+msgstr ""
+"Po to, kai :file:`.dwg` ar :file:`.dxf` duomenys importuojami į GeoPackage "
+"duomenų bazę, apatinėje dialogo dalyje esanti dalis užpildoma importuoto "
+"failo sluoksniais. Ten jūs galite pasirinkti ir pridėti sluoksnius į QGIS "
+"projektą:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:713
+msgid ""
+"At the top, set a :guilabel:`Group name` to group the drawing files in the "
+"project. By default this is set to the filename of the source drawing file."
+msgstr ""
+"Viršuje nurodykite :guilabel:`Grupės pavadinimą`, kad grupuotumėte brėžinių "
+"failus projekte. Pagal nutylėjimą ji nustatoma pagal šaltinio brėžinio "
+"failą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:715
+msgid ""
+"Check layers to show: Each selected layer is added to an ad hoc group which "
+"contains vector layers for the point, line, label and area features of the "
+"drawing layer. The style of the layers will resemble the look they "
+"originally had in \\*CAD."
+msgstr ""
+"Įjunkite rodomus sluoksnius: kiekvienas parinktas sluoksnis pridedamas į ad "
+"hoc grupę, kurioje yra brėžinio sluoksnio taškų, užrašų, linijų ir plotų "
+"geoobjektai. Sluoksnių stiliai panašūs į tuos, kurie buvo \\*CAD."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:720
+msgid "Choose if the layer should be visible at opening."
+msgstr "Parinkite ar sluoksnis turi būti matomas atidarant."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:721
+msgid ""
+"Checking the |checkbox| :guilabel:`Merge layers` option places all layers in"
+" a single group."
+msgstr ""
+"Įjungus parinktį |checkbox| :guilabel:`Sulieti sluoksnius`, visi sluoksniai "
+"bus vienoje grupėje."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:723
+msgid "Press :guilabel:`OK` to open the layers in QGIS."
+msgstr "Spauskite :guilabel:`OK`, kad atvertumėte sluoksnius QGIS."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:731
+msgid "Import dialog for DWG/DXF files"
+msgstr "DWG/DXF failų importavimo dialogas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:738
+msgid "Importing OpenStreetMap Vectors"
+msgstr "OpenStreetMap vektorių importavimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:740
+msgid ""
+"The OpenStreetMap project is popular because in many countries no free "
+"geodata such as digital road maps are available. The objective of the OSM "
+"project is to create a free editable map of the world from GPS data, aerial "
+"photography and local knowledge. To support this objective, QGIS provides "
+"support for OSM data."
+msgstr ""
+"OpenStreetMap projektas yra populiarus, nes daugumoje šalių negalima "
+"nemokamai gauti geoduomenų, tokių kaip kelių žemėlapiai. OSM projekto "
+"tikslas yra sukurti laisvą redaguojamą pasaulio žemėlapį naudojant GPS "
+"duomenis, oro fotografijas ir vietines žinias. Kad padėtų šiam tikslui, QGIS"
+" teikia OSM duomenų palaikymą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:747
+msgid ""
+"Using the :guilabel:`Browser Panel`, you can load an :file:`.osm` file to "
+"the map canvas, in which case you'll get a dialog to select sublayers based "
+"on the geometry type. The loaded layers will contain all the data of that "
+"geometry type in the :file:`.osm` file, and keep the :file:`osm` file data "
+"structure."
+msgstr ""
+"Naudojant :guilabel:`Naršyklės skydelį` jūs galite įsikelti :file:`.osm` "
+"failą į žemėlapio drobę, tokiu atveju jums bus parodytas dialogas, kuriame "
+"galėsite pasirinkti posluoksnius pagal geometrijos tipą. Įkeltuose "
+"sluoksniuose bus visi to geometrijos tipo duomenys iš :file:`.osm` failo ir "
+"jie išlaikys :file:`osm` failo duomenų struktūrą."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1730
 msgid "addSpatiaLiteLayer"
