@@ -447,11 +447,7 @@ Python code
 
 Polar plot
 ----------
-Generates a polar plot based on the value of an input vector layer.
-
-Two fields must be entered as parameters: one that defines the category each feature
-(to group features) and another one with the variable to plot (this has to be
-a numeric one).
+Generates a polar bar plot based on the value of an input vector layer.
 
 .. figure:: img/polar_plot_example.png
    :align: center
@@ -473,10 +469,6 @@ Parameters
      - ``INPUT``
      - [vector: geometry]
      - Input vector layer
-   * - **Category name field**
-     - ``NAME_FIELD``
-     - [tablefield: any]
-     - Categorical field to use for grouping the features (X axis)
    * - **Value field**
      - ``VALUE_FIELD``
      - [tablefield: numeric]
