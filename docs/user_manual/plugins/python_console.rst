@@ -168,6 +168,7 @@ All available tools are described in the following table.
 
 .. table:: Python Console Editor Tools
   :widths: 20 60 20
+  :class: longtable
 
   +-------------------------------------------------------+--------------------------------------------------------------------------------------+---------------------------+
   | Tool name                                             | Function                                                                             | Location                  |
