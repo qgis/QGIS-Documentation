@@ -1175,8 +1175,16 @@ Attribute Tables
 ======================
 
 Similar to vector layers, raster layers in QGIS can have associated
-Raster Attribute Tables (RAT) that store additional information about
-the raster data. The :guilabel:`Attribute Tables` tab allows you to view and edit raster attribute data.
+Raster Attribute Tables (RATs) that store additional information about
+raster pixel values.
+
+A Raster Attribute Table links raster values (or value ranges) to
+descriptive attributes such as class names, pixel counts, and colors.
+RATs are commonly used for classified rasters, color tables, and
+histogram information, helping QGIS interpret how raster values should
+be displayed and classified.
+
+The :guilabel:`Attribute Tables` tab allows you to view and edit raster attribute data.
 To access the attribute table of a raster layer, right-click the layer in the layers panel,
 open :guilabel:`Properties...` and select :guilabel:`Attribute Tables`.
 
