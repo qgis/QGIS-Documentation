@@ -247,7 +247,7 @@ button to remove all entries.
 
 .. _figure_authmethod_api:
 
-.. figure:: img/auth_method_api_header.png
+.. figure:: img/auth-method-api-header.png
    :align: center
 
    API Header authentication configs
@@ -260,7 +260,7 @@ a :guilabel:`Name`, :guilabel:`Resource`, :guilabel:`Username`, :guilabel:`Passw
 
 .. _figure_authmethod_awss3:
 
-.. figure:: img/auth_method_awss3.png
+.. figure:: img/auth-method-awss3.png
    :align: center
 
    AWS S3 authentication configs
@@ -273,7 +273,7 @@ with a :guilabel:`Username`, :guilabel:`Password` and :guilabel:`Realm`.
 
 .. _figure_authmethod_http:
 
-.. figure:: img/auth-config-create_basic-auth.png
+.. figure:: img/auth-method-basic-auth.png
    :align: center
 
    Basic HTTP authentication configs
@@ -285,7 +285,7 @@ The ESRI token authentication method is used for :ref:`ArcGIS REST Servers <arcg
 
 .. _figure_authmethod_esritoken:
 
-.. figure:: img/auth-config-create_esritoken.png
+.. figure:: img/auth-method-esritoken.png
    :align: center
 
    ESRI Token authentication configs
@@ -297,7 +297,7 @@ The Identity certificate authentication method allows you to connect using a cli
 
 .. _figure_authmethod_identitycert:
 
-.. figure:: img/auth_method_identity_cert.png
+.. figure:: img/auth-method-identity-cert.png
    :align: center
 
    Identity-cert authentication configs
@@ -309,7 +309,7 @@ The MapTiler HMAC-SHA256 authentication method is used to connect to MapTiler se
 
 .. _figure_authmethod_maptiler:
 
-.. figure:: img/auth_method_maptiler.png
+.. figure:: img/auth-method-maptiler.png
    :align: center
 
    MapTiler HmacSha256 authentication configs
@@ -326,7 +326,7 @@ allowing secure access using client credential and token-based authentication.
 
 .. _figure_authmethod_oauth2:
 
-.. figure:: img/auth-config-create_oauth2.png
+.. figure:: img/auth-method-oauth2.png
    :align: center
 
    OAuth2 authentication configs
@@ -338,7 +338,7 @@ The PKI-Paths authentication method allows you to connect using separate certifi
 
 .. _figure_authmethod_pki:
 
-.. figure:: img/auth-config-create_pem-der-paths.png
+.. figure:: img/auth-method-pem-der-paths.png
    :align: center
 
    PKI paths authentication configs
@@ -351,7 +351,7 @@ containing both the certificate and private key, with an optional passphrase for
 
 .. _figure_authmethod_pkcs:
 
-.. figure:: img/auth-config-create_pkcs12-paths.png
+.. figure:: img/auth-method-pkcs12-paths.png
    :align: center
 
    PKI PKCS#12 file paths authentication configs
@@ -366,7 +366,7 @@ The Planetary Computer authentication method allows QGIS to access Microsoft Pla
 
 .. _figure_authmethod_planetary:
 
-.. figure:: img/auth_method_planetaries.png
+.. figure:: img/auth-method-planetaries.png
    :align: center
 
    Microsoft Planetary Computer authentication configs
