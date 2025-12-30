@@ -227,20 +227,6 @@ To create a profile view, you can:
 
 #. Under |options| :sup:`Options` drop-down menu, you can:
 
-   Synchronize Layers to Project
-   -----------------------------
-   
-   The "Synchronize Layers to Project" option is available in the
-   Elevation Profile settings menu.
-   
-   When enabled, the elevation profile layers will always match the
-   project’s main map canvas layer structure, including layer order
-   and groups. Any changes to the project :guilabel:`Layers` panel are immediately
-   reflected in the elevation profile.
-   
-   This option is disabled by default.
-   
-
    * set the :guilabel:`Tolerance` value. This value is used to create a flat buffer around the elevation profile line,
      visible in the main map canvas. Any visible feature (point, line, polygon, etc.)
      overlapping that buffer will be captured in the plot canvas.
