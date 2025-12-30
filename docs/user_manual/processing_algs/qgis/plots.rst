@@ -669,6 +669,10 @@ Vector layer scatterplot
 ------------------------
 Creates a simple ``X`` - ``Y`` scatter plot for a vector layer.
 
+.. figure:: img/vector_scatter_plot_example.png
+   :align: center
+
+   Example of vector layer scatterplot
 
 Parameters
 ..........
