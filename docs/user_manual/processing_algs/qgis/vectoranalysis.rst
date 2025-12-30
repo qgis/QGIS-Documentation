@@ -173,7 +173,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:basicstatisticsforfields``
+**Algorithm ID**: ``native:basicstatisticsforfields``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

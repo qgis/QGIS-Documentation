@@ -88,7 +88,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:aspect``
+**Algorithm ID**: ``native:aspect``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -529,7 +529,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:hillshade``
+**Algorithm ID**: ``native:hillshade``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -834,7 +834,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:ruggednessindex``
+**Algorithm ID**: ``native:ruggednessindex``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -912,7 +912,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:slope``
+**Algorithm ID**: ``native:slope``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
