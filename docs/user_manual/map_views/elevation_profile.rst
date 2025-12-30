@@ -116,6 +116,13 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
    * -  :menuselection:`--> Scale Ratio`
      -
      - Specifies the ratio of distance to elevation units used for the profile's scale.
+   * - :menuselection:`--> Synchronize Layers to Project`
+     -
+     - When enabled, the elevation profile layers will always match
+       the project’s main map canvas layer structure, including layer order and groups.
+       Any changes to the project :guilabel:`Layers` panel are immediately
+       reflected in the elevation profile.
+       This option is disabled by default.
    * - :menuselection:`--> Distance Units`
      -
      - Allows to render distances in the profile chart with units other than the map canvas units.
