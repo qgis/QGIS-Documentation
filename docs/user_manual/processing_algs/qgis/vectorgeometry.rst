@@ -1402,7 +1402,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:convertgeometrytype``
+**Algorithm ID**: ``native:convertgeometrytype``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -4003,7 +4003,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:minimumboundinggeometry``
+**Algorithm ID**: ``native:minimumboundinggeometry``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
