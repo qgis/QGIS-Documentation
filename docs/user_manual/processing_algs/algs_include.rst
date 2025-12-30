@@ -162,46 +162,56 @@ comparing them to the orange rectangle feature.
 Available geometric predicates are:
 
 *Intersect*
-  Tests whether a geometry intersects another. Returns 1 (true) if the
-  geometries spatially intersect (share any portion of space - overlap or touch) and 0 if they
-  don’t. In the picture above, this will return circles 1, 2 and 3.
+  Tests whether a geometry intersects another.
+  Returns 1 (true) if the input layer geometry and the join layer geometry spatially intersect
+  (share any portion of space - overlap or touch) and 0 if they don't. In the figure above,
+  if the rectangle is the input layer and circles are the join layer, this will return circles 1, 2 and 3.
 
 *Contain*
-  Returns 1 (true) if and only if no points of b lie in the exterior of a,
-  and at least one point of the interior of b lies in the interior of a.
-  In the picture, no circle is returned, but the rectangle would be if you
-  would look for it the other way around, as it contains circle 1 completely.
-  This is the opposite of *are within*.
+  Returns 1 (true) if and only if no points of the join layer geometry lie in the exterior
+  of the input layer geometry, and at least one point of the interior of the join layer geometry
+  lies in the interior of the input layer geometry.
+  In other words, the input layer feature must completely contain the join layer feature.
+  In the figure, if the rectangle is the input layer and circles are the join layer,
+  circle 1 is returned, as the rectangle contains it completely. This is the opposite of *are within*.
 
 *Disjoint*
-  Returns 1 (true) if the geometries do not share any portion of space (no overlap, not touching).
-  Only circle 4 is returned.
+  Returns 1 (true) if the input layer geometry and the join layer geometry
+  do not share any portion of space (no overlap, not touching).
+  In the figure, if the rectangle is the input layer and circles are the join layer,
+  only circle 4 is returned.
 
 *Equal*
-  Returns 1 (true) if and only if geometries are exactly the same.
-  No circles will be returned.
+  Returns 1 (true) if and only if the input layer geometry and the join layer geometry
+  are exactly the same. In the figure, if the rectangle is the input layer and circles are the join layer,
+  no circles will be returned.
 
 *Touch*
-  Tests whether a geometry touches another. Returns 1 (true) if the geometries
+  Tests whether a geometry touches another. 
+  Returns 1 (true) if the input layer geometry and the join layer geometry
   have at least one point in common, but their interiors do not intersect.
-  Only circle 3 is returned.
+  In the picture, if the rectangle is the input layer and circles are the join layer,
+  only circle 3 is returned.
 
 *Overlap*
-  Tests whether a geometry overlaps another. Returns 1 (true) if the geometries
-  share space, are of the same dimension, but are not completely contained by
-  each other. Only circle 2 is returned.
+  Tests whether a geometry overlaps another. 
+  Returns 1 (true) if the input layer geometry and the join layer geometry share space,
+  are of the same dimension, but are not completely contained by each other.
+  In the figure, if the rectangle is the input layer and circles are the join layer,
+  only circle 2 is returned.
 
 *Are within*
-  Tests whether a geometry is within another. Returns 1 (true) if geometry a
-  is completely inside geometry b. Only circle 1 is returned.
+  Tests whether a geometry is within another. 
+  Returns 1 (true) if the input layer geometry is completely inside the join layer geometry.
+  In the figure, if the circles are the input layer and the rectangle is the join layer,
+  only circle 1 is returned. This is the opposite of *contain*.
 
 *Cross*
-  Returns 1 (true) if the supplied geometries have some, but not all, interior
-  points in common and the actual crossing is of a lower dimension than the
-  highest supplied geometry. For example, a line crossing a polygon will cross
-  as a line (true). Two lines crossing will cross as a point (true).
-  Two polygons cross as a polygon (false).
-  In the picture, no circles will be returned.
+  Returns 1 (true) if the supplied geometries have some,
+  but not all, interior points in common and the actual crossing is of a lower dimension
+  than the highest supplied geometry. For example, a line crossing a polygon will cross as a line (true).
+  Two lines crossing will cross as a point (true). Two polygons cross as a polygon (false).
+  In the figure, if the rectangle is the input layer and circles are the join layer, no circles will be returned.
 
 .. **end_geometric_predicates**
 
