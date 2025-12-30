@@ -73,7 +73,7 @@ Manager**, which can be accessed in the :guilabel:`Authentication` tab in QGIS
 
 .. _figure_auth_pki_certif:
 
-.. figure:: img/auth-open-Certificate-manager.png
+.. figure:: img/options_authentication.png
    :align: center
 
    Opening the Certificate Manager
@@ -137,27 +137,12 @@ certificate will not be saved to the database unless the |fileSave|
 *per* selected certification. Closing the dialog will **not** apply the
 policy changes.
 
-.. _figure_auth_pki_policy:
-
-.. figure:: img/auth-authority-edit-trust_save-not-close.png
-   :align: center
-
-   Saving the trust policy changes
-
 You can review the filtered CAs, both intermediate and root certificates, that
 will be trusted for secure connections or change the default trust policy by
 clicking the |transformSettings| **Options** button.
 
 .. warning::
-   Changing the default trust policy may result in problems with secure
-   connections.
-
-.. _figure_auth_pki_options:
-
-.. figure:: img/auth-editor-authorities_utilities-menu.png
-   :align: center
-
-   Authorities options menu
+   Changing the default trust policy may result in problems with secure connections.
 
 You can import CAs or save a file system path from a file that contains multiple
 CAs, or import individual CAs. The standard PEM format for files that contain
@@ -223,19 +208,13 @@ prior to import. Likewise, if the client certificate in the bundle is invalid
 (for example, its effective date has not yet started or has elapsed) the bundle
 can not be imported.
 
-.. _figure_auth_pki_identities_import:
+.. _figure_auth_identities_import:
 
-.. figure:: img/auth-identity-import_paths.png
+.. figure:: img/auth-identity-imports.png
    :align: center
 
-   PEM/DER identity import
+   PEM/DER and PKCS#12 identities import
 
-.. _figure_auth_pki_identities_import_2:
-
-.. figure:: img/auth-identity-import_bundle-valid.png
-   :align: center
-
-   PKCS#12 identity import
 
 Handling bad layers
 -------------------
