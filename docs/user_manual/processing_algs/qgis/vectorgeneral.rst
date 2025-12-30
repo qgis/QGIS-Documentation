@@ -1332,7 +1332,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:findprojection``
+**Algorithm ID**: ``native:findprojection``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
