@@ -250,7 +250,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:serviceareafromlayer``
+**Algorithm ID**: ``native:serviceareafromlayer``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

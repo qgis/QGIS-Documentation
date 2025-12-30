@@ -92,7 +92,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:filedownloader``
+**Algorithm ID**: ``native:filedownloader``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
