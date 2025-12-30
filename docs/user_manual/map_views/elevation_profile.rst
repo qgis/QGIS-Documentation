@@ -235,7 +235,7 @@ To create a profile view, you can:
    
    When enabled, the elevation profile layers will always match the
    project’s main map canvas layer structure, including layer order
-   and groups. Any changes to the project layer tree are immediately
+   and groups. Any changes to the project :guilabel:`Layers` panel are immediately
    reflected in the elevation profile.
    
    This option is disabled by default.
