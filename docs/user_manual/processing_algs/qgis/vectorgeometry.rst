@@ -3935,7 +3935,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``native:minimumboundinggeometry``
+**Algorithm ID**: ``qgis:minimumboundinggeometry``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
