@@ -611,10 +611,133 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisdistancetonearesthub:
+
+Distance to nearest hub
+-----------------------
+|400|
+
+Computes the distance between features from the source layer to the closest feature from the destination layer.
+Distance calculations are based on the feature's bounding box center.
+
+Two types of output are possible:
+
+* The resulting line layer contains lines linking each origin point with its nearest destination feature.
+
+* The resulting point layer contains each origin feature's center point with additional fields indicating the identifier of the nearest destination feature and the distance to it.
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
+
+.. figure:: img/distance_hub.png
+  :align: center
+
+  Display the nearest hub for the red input features
+
+.. seealso:: :ref:`qgisjoinbynearest`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Source layer (spokes)**
+     - ``INPUT``
+     - [vector: geometry]
+     - Vector layer for which the nearest feature is searched
+   * - **Destination layer (hubs)**
+     - ``HUBS``
+     - [vector: geometry]
+     - Vector layer containing the features to search for
+   * - **Hub layer name attribute**
+     - ``FIELD``
+     - [tablefield: any]
+     - Field to use to uniquely identify features of the destination layer.
+       Used in the output attribute table
+   * - **Measurement unit**
+     - ``UNIT``
+     - [enumeration]
+
+       Default: 0
+     - Units in which to report the distance to the closest feature:
+
+       * 0 --- Meters
+       * 1 --- Feet
+       * 2 --- Miles
+       * 3 --- Kilometers
+       * 4 --- Layer units
+   * - **Hub lines**
+     - ``OUTPUT_LINES``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer connecting the matching points.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+   * - **Hub points**
+     - ``OUTPUT_POINTS``
+     - [vector: point]
+
+       Default: ``[Skip output]``
+     - Specify the output point vector layer with the nearest hub.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Hub lines**
+     - ``OUTPUT_LINES``
+     - [vector: line]
+     - Line vector layer connecting the matching features.
+       Its attribute table contains the attributes of the input features,
+       the identifier of their closest feature and the calculated distance.
+   * - **Hub points**
+     - ``OUTPUT_POINTS``
+     - [vector: point]
+     - Point vector layer representing the center of the source features
+       with their attributes, the identifier of their closest
+       feature and the calculated distance.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:distancetonearesthub``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisdistancetonearesthublinetohub:
 
 Distance to nearest hub (line to hub)
 -------------------------------------
+
+.. warning:: This algorithm is deprecated and can be removed
+  anytime. Prefer using :ref:`qgisdistancetonearesthub` algorithm instead.
+
 Creates lines that join each feature of an input vector to the nearest
 feature in a destination layer.
 Distances are calculated based on the
@@ -626,7 +749,7 @@ Distances are calculated based on the
 
   Display the nearest hub for the red input features
 
-.. seealso:: :ref:`qgisdistancetonearesthubpoints`,
+.. seealso:: :ref:`qgisdistancetonearesthub`,
    :ref:`qgisjoinbynearest`
 
 Parameters
@@ -711,13 +834,16 @@ Python code
 
 Distance to nearest hub (points)
 --------------------------------
+
+.. warning:: This algorithm is deprecated and can be removed
+  anytime. Prefer using :ref:`qgisdistancetonearesthub` algorithm instead.
+
 Creates a point layer representing the
 :ref:`center <qgispointonsurface>` of the input features with the
 addition of two fields containing the identifier of the nearest
-feature (based on its center point) and the distance between the
-points.
+feature (based on its center point) and the distance between the points.
 
-.. seealso:: :ref:`qgisdistancetonearesthublinetohub`,
+.. seealso:: :ref:`qgisdistancetonearesthub`,
    :ref:`qgisjoinbynearest`
 
 Parameters
@@ -1268,8 +1394,8 @@ values:
 .. note:: This algorithm uses ellipsoid based measurements
   and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
-  .. figure:: img/normal_distribution.png
-     :align: center
+.. figure:: img/normal_distribution.png
+   :align: center
 
 
 **Default menu**: :menuselection:`Vector --> Analysis Tools`
@@ -1941,5 +2067,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |400| replace:: ``NEW in 4.0``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
