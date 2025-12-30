@@ -784,6 +784,11 @@ Vector layer scatterplot 3D
 ---------------------------
 Creates a 3D scatter plot for a vector layer.
 
+.. figure:: img/scatter3d_plot_example.png
+   :align: center
+
+   Example of 3D scatter plot
+
 Parameters
 ..........
 
