@@ -772,6 +772,8 @@ The :guilabel:`Annotations Toolbar` provides a set of tools to create and intera
 with both families of annotations.
 
 .. table:: The Annotations Toolbar actions
+ :widths: 33, 55, 17
+ :class: longtable
 
  +--------------------------------------------------------------+---------------------------------------------------------------------+------------------------+
  | Tool                                                         | Usage                                                               | Scope                  |
@@ -903,6 +905,8 @@ Interacting with features
 The Feature annotations have dedicated tools for creation depending on their type.
 
 .. table:: Creating feature annotation
+ :widths: 15, 30, 55
+ :class: longtable
 
  +----------+-----------------------------------------------------+-------------------------------------------------------------------------------------+
  | Family / | Annotation tool                                     | Procedure                                                                           |

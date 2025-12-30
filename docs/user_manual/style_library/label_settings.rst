@@ -75,7 +75,7 @@ Formatting the label text
 Whether you are configuring a :guilabel:`Text Format` or :guilabel:`Label Settings` item,
 and depending on the type of layer you are configuring, you will be given the following options:
 
-.. list-table::
+.. list-table:: Label properties by data type
    :header-rows: 1
    :class: longtable
 
@@ -598,7 +598,8 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    and compatible connector style.
 
    .. table:: Label callout properties
-    :widths: auto
+    :widths: 25, 20, 55
+    :class: longtable
 
     +------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
     | Property                                       | Style of callout  | Description                                                                           |
