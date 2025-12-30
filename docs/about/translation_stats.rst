@@ -159,7 +159,7 @@ Statistics of translation
 
 .. list of substitutions for the statistics:
 
-.. |today| replace:: *2025-12-23*
+.. |today| replace:: *2025-12-30*
 .. |total_strings| replace:: **31322**
 .. |nb_languages| replace:: **61**
 .. |global_percentage| replace:: **16.62%**
@@ -178,7 +178,7 @@ Statistics of translation
 .. |stats_eu| replace:: 1.09
 .. |stats_fa| replace:: 0.72
 .. |stats_fi| replace:: 1.27
-.. |stats_fr| replace:: 83.18
+.. |stats_fr| replace:: 83.17
 .. |stats_gl| replace:: 0.51
 .. |stats_he| replace:: 0.8
 .. |stats_hi| replace:: 0.39
@@ -188,12 +188,12 @@ Statistics of translation
 .. |stats_id| replace:: 3.76
 .. |stats_ig| replace:: 0.11
 .. |stats_it| replace:: 99.98
-.. |stats_ja| replace:: 97.07
+.. |stats_ja| replace:: 97.1
 .. |stats_ka| replace:: 0.22
 .. |stats_kab| replace:: 0.23
 .. |stats_ko| replace:: 94.45
 .. |stats_ku| replace:: 0.28
-.. |stats_lt| replace:: 34.2
+.. |stats_lt| replace:: 34.36
 .. |stats_mi| replace:: 0.28
 .. |stats_mk| replace:: 0.25
 .. |stats_ml| replace:: 0.22
@@ -206,7 +206,7 @@ Statistics of translation
 .. |stats_nl| replace:: 100.0
 .. |stats_nqo| replace:: 1.58
 .. |stats_pl| replace:: 12.94
-.. |stats_pt_BR| replace:: 62.03
+.. |stats_pt_BR| replace:: 62.02
 .. |stats_pt_PT| replace:: 8.1
 .. |stats_ro| replace:: 32.77
 .. |stats_ru| replace:: 27.51
