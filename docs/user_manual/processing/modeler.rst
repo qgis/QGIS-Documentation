@@ -43,6 +43,7 @@ Model menu
 .. list-table::
    :header-rows: 1
    :widths: 25 12 12 50
+   :class: longtable
 
    * - Label
      - Shortcut
@@ -118,6 +119,7 @@ Edit menu
 .. list-table::
    :header-rows: 1
    :widths: 25 12 12 50
+   :class: longtable
 
    * - Label
      - Shortcut
@@ -169,6 +171,7 @@ View menu
 .. list-table::
    :header-rows: 1
    :widths: 25 12 12 50
+   :class: longtable
 
    * - Label
      - Shortcut

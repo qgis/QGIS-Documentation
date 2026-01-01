@@ -396,6 +396,7 @@ For even more complex tables, it is easier to use ``list-table``:
    .. list-table::
       :header-rows: 1
       :widths: 20 20 20 40
+      :class: longtable
 
       * - What
         - Purpose
@@ -414,6 +415,7 @@ The result:
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
+   :class: longtable
 
    * - What
      - Purpose
@@ -726,6 +728,7 @@ to help you with the layout and the description::
   .. list-table::
      :header-rows: 1
      :widths: 20 20 20 40
+     :class: longtable
 
      * - Label
        - Name
@@ -779,6 +782,7 @@ to help you with the layout and the description::
   .. list-table::
      :header-rows: 1
      :widths: 20 20 20 40
+     :class: longtable
 
      * - Label
        - Name

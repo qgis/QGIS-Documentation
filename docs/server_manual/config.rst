@@ -48,6 +48,7 @@ several ways to define these variables. This is fully described in
 .. list-table::
    :header-rows: 1
    :widths: 30 40 15 15
+   :class: longtable
 
    * - Name
      - Description
