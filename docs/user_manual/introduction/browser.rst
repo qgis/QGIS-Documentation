@@ -497,7 +497,6 @@ To add a layer using :guilabel:`Import Vector Layer...` follow these steps:
 #. Optionally, apply an attribute filter with :ref:`Feature filter <expression_builder>`.
    This allows you to use an expression to select which features are imported.
 
-
 Tiles and Web Services
 ......................
 
@@ -636,6 +635,7 @@ Supported file types
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
+
 
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em

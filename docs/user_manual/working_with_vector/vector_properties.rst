@@ -97,6 +97,9 @@ Provided information are:
 * and related to its geometry (spatial extent, CRS...) or its attributes (number
   of fields, characteristics of each...).
 
+.. note:: Layers from a PostgreSQL provider include additional information in their Layer Properties 
+   under the Information tab. Users can view privileges for the connected database user, 
+   an estimate of the number of rows, and details about spatial indexes associated with the table.
 
 .. _vectorsourcemenu:
 
