@@ -157,7 +157,7 @@ the :guilabel:`Authentication` tab of the QGIS Options dialog
 
 .. _figure_authconfigeditor:
 
-.. figure:: img/auth-editor-configs2.png
+.. figure:: img/options_authentication.png
    :align: center
 
    Configurations editor
@@ -247,7 +247,7 @@ button to remove all entries.
 
 .. _figure_authmethod_api:
 
-.. figure:: img/auth_method_api_header.png
+.. figure:: img/auth-method-api-header.png
    :align: center
 
    API Header authentication configs
@@ -260,7 +260,7 @@ a :guilabel:`Name`, :guilabel:`Resource`, :guilabel:`Username`, :guilabel:`Passw
 
 .. _figure_authmethod_awss3:
 
-.. figure:: img/auth_method_awss3.png
+.. figure:: img/auth-method-awss3.png
    :align: center
 
    AWS S3 authentication configs
@@ -273,7 +273,7 @@ with a :guilabel:`Username`, :guilabel:`Password` and :guilabel:`Realm`.
 
 .. _figure_authmethod_http:
 
-.. figure:: img/auth-config-create_basic-auth.png
+.. figure:: img/auth-method-basic-auth.png
    :align: center
 
    Basic HTTP authentication configs
@@ -285,7 +285,7 @@ The ESRI token authentication method is used for :ref:`ArcGIS REST Servers <arcg
 
 .. _figure_authmethod_esritoken:
 
-.. figure:: img/auth-config-create_esritoken.png
+.. figure:: img/auth-method-esritoken.png
    :align: center
 
    ESRI Token authentication configs
@@ -297,7 +297,7 @@ The Identity certificate authentication method allows you to connect using a cli
 
 .. _figure_authmethod_identitycert:
 
-.. figure:: img/auth_method_identity_cert.png
+.. figure:: img/auth-method-identity-cert.png
    :align: center
 
    Identity-cert authentication configs
@@ -309,7 +309,7 @@ The MapTiler HMAC-SHA256 authentication method is used to connect to MapTiler se
 
 .. _figure_authmethod_maptiler:
 
-.. figure:: img/auth_method_maptiler.png
+.. figure:: img/auth-method-maptiler.png
    :align: center
 
    MapTiler HmacSha256 authentication configs
@@ -326,7 +326,7 @@ allowing secure access using client credential and token-based authentication.
 
 .. _figure_authmethod_oauth2:
 
-.. figure:: img/auth-config-create_oauth2.png
+.. figure:: img/auth-method-oauth2.png
    :align: center
 
    OAuth2 authentication configs
@@ -338,7 +338,7 @@ The PKI-Paths authentication method allows you to connect using separate certifi
 
 .. _figure_authmethod_pki:
 
-.. figure:: img/auth-config-create_pem-der-paths.png
+.. figure:: img/auth-method-pem-der-paths.png
    :align: center
 
    PKI paths authentication configs
@@ -351,7 +351,7 @@ containing both the certificate and private key, with an optional passphrase for
 
 .. _figure_authmethod_pkcs:
 
-.. figure:: img/auth-config-create_pkcs12-paths.png
+.. figure:: img/auth-method-pkcs12-paths.png
    :align: center
 
    PKI PKCS#12 file paths authentication configs
@@ -371,46 +371,42 @@ authentication database and configurations:
 
    Utilities menu
 
-* **Input master password**: opens the master password input dialog, independent
+* :guilabel:`Input master password…`: opens the master password input dialog, independent
   of performing any authentication database command
-* **Clear cached master password**: unsets the master password if it has been
+* :guilabel:`Clear cached master password`: unsets the master password if it has been
   set
-* **Reset master password**: opens a dialog to change the master password (the
+* :guilabel:`Reset master password…`: opens a dialog to change the master password (the
   current password must be known) and optionally back up the current database
-* **Clear network authentication access cache**: clears the authentication cache
+* :guilabel:`Clear network authentication access cache`: clears the authentication cache
   of all connections
-* **Automatically clear network authentication access cache on SSL errors**: the
+* :guilabel:`Automatically clear network authentication access cache on SSL errors`: the
   connection cache stores all authentication data for connections, also when the
   connection fails. If you change authentication configurations or certification authorities,
   you should clear the authentication cache
   or restart QGIS. When this option is checked, the authentication cache will be
   automatically cleared every time an SSL error occurs and you choose to abort
   the connection
-* **Integrate master password with your Wallet/Keyring**: adds the master
+* :guilabel:`Integrate master password with the Wallet`: adds the master
   password to your personal Wallet/Keyring
-* **Store/update the master password in your Wallet/Keyring**: updates the
-  changed master password in your Wallet/Keyring
-* **Clear the master password from your Wallet/Keyring**: deletes the master
+* :guilabel:`Clear the master password from the Wallet…`: deletes the master
   password from your Wallet/Keyring
-* **Enable password helper debug log**: enables a debug tool that will contain
+* :guilabel:`Enable password helper debug log`: enables a debug tool that will contain
   all the log information of the authentication methods
-* **Clear cached authentication configurations**: clears the internal lookup cache
+* :guilabel:`Clear cached authentication configurations`: clears the internal lookup cache
   for configurations, used to speed up network connections. This does not clear
   QGIS’s core network access manager’s cache, which requires a relaunch of QGIS.
-* **Remove all authentication configurations**: clears the database of all
+* :guilabel:`Remove all authentication configurations…`: clears the database of all
   configuration records, without removing other stored records.
-* **Erase authentication database**: schedules a backup of the current database
+* :guilabel:`Import authentication configurations from file…`: imports from an :file:`.XML` file
+  details for creating custom authentication configurations.
+* :guilabel:`Export selected authentication configurations to file…`: exports the selected
+  items to a possibly encrypted :file:`.XML` file.
+* :guilabel:`Erase authentication database…`: schedules a backup of the current database
   and complete rebuild of the database table structure. The actions are
   scheduled for a later time, to ensure that other operations, like project
   loading, do not interrupt the operation or cause errors due to a temporarily
   missing database.
 
-  .. _figure_authconfiutilsdb:
-
-  .. figure:: img/auth-db-erase.png
-     :align: center
-
-     DB erase verification menu
 
 Using authentication configurations
 -----------------------------------
@@ -423,20 +419,14 @@ third-party PyQGIS or C++ plugins.
 When using the selector, :guilabel:`No authentication` is displayed in the
 pop-up menu control when nothing is selected, when there are no configurations
 to choose from, or when a previously assigned configuration can no longer be
-found in the database. The :guilabel:`Type` and :guilabel:`Id` fields are
-read-only and provide a description of the authentication method and the
-config’s ID respectively.
+found in the database. Use the drop-down menu to select an existing authentication
+configuration or press |symbologyAdd| :sup:`Create a new autentication configuration`
+to create a configuration you could use.
+More details at :ref:`authentication`.
 
 .. _figure_authconfigselector:
 
-.. figure:: img/auth-selector-no-authentication.png
-   :align: center
-
-   Authentication configuration selector with no authentication
-
-.. _figure_authconfigselector_pkcs:
-
-.. figure:: img/auth-selector-pkcs12-authentication.png
+.. figure:: img/authentication-selector-set.png
    :align: center
 
    Authentication configuration selector with selected config
@@ -444,7 +434,7 @@ config’s ID respectively.
 Python bindings
 ---------------
 
-All classes and public functions have sip bindings, except ``QgsAuthCrypto``,
+All classes and public functions have sip bindings, except :api:`QgsAuthCrypto <classQgsAuthCrypto.html>`,
 since management of the master password hashing and auth database encryption
 should be handled by the main app, and not via Python.
 

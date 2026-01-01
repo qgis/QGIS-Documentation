@@ -235,6 +235,7 @@ Below is a list of all the available tools in this menu
 with some convenient information.
 
 .. table:: "Layout" Menu Tools
+   :class: longtable
 
    ================================================= ========================== ========================== =====================================
     Tool                                              Shortcut                   Toolbar                    Reference
@@ -278,6 +279,7 @@ with some convenient information.
 .. csv-table:: "Edit" Menu Tools
    :header: "Tool", "Shortcut", "Toolbar", "Reference"
    :widths: 30, 17, 10, 33
+   :class: longtable
 
    "|undo| :guilabel:`Undo (last change)`", ":kbd:`Ctrl+Z`", ":guilabel:`Layout`", ":ref:`layout_undo_panel`"
    "|redo| :guilabel:`Redo (last reverted change)`", ":kbd:`Ctrl+Y`", ":guilabel:`Layout`", ":ref:`layout_undo_panel`"
@@ -339,6 +341,7 @@ It's also possible to switch to a full screen mode to have more space to interac
 by pressing :kbd:`F11` or using :menuselection:`View -->` |checkbox| :guilabel:`Toggle Full Screen`.
 
 .. table:: "View" Menu Tools
+   :class: longtable
 
    ================================================= ========================== ========================== =====================================
     Tool                                              Shortcut                   Toolbar                    Reference
@@ -373,6 +376,7 @@ The :menuselection:`Items` helps you configure items' position in the layout
 and the relations between them (see :ref:`interact_layout_item`).
 
 .. table:: "Items" Menu Tools
+   :class: longtable
 
    ================================================= ========================== ========================== ==========================
     Tool                                              Shortcut                   Toolbar                    Reference
@@ -397,6 +401,7 @@ These are tools to create layout items.
 Each of them is deeply described in :ref:`layout_items` chapter.
 
 .. table:: "Add Item" Menu Tools
+   :class: longtable
 
    ========================================================= ======================== =====================================
     Tool                                                      Toolbar                    Reference
@@ -429,6 +434,7 @@ Atlas menu
 ..........
 
 .. table:: "Atlas" Menu Tools
+   :class: longtable
 
    ======================================================== ========================== ========================== =====================================
     Tool                                                     Shortcut                   Toolbar                    Reference
