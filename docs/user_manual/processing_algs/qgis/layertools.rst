@@ -227,7 +227,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:polygonfromlayerextent``
+**Algorithm ID**: ``native:polygonfromlayerextent``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

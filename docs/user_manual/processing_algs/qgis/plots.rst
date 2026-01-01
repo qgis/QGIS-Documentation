@@ -376,7 +376,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:generateelevationprofileimage``
+**Algorithm ID**: ``native:generateelevationprofileimage``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

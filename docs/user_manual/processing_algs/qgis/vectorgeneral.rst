@@ -489,7 +489,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:definecurrentprojection``
+**Algorithm ID**: ``native:definecurrentprojection``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1909,7 +1909,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:joinbylocationsummary``
+**Algorithm ID**: ``native:joinbylocationsummary``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

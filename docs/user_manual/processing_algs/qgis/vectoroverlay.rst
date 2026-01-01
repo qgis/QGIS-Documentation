@@ -94,7 +94,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:clip``
+**Algorithm ID**: ``native:clip``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -214,7 +214,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:difference``
+**Algorithm ID**: ``native:difference``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -305,7 +305,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:multidifference``
+**Algorithm ID**: ``native:multidifference``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -547,7 +547,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:intersection``
+**Algorithm ID**: ``native:intersection``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -648,7 +648,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:multiintersection``
+**Algorithm ID**: ``native:multiintersection``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -766,7 +766,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:lineintersections``
+**Algorithm ID**: ``native:lineintersections``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -850,7 +850,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:splitwithlines``
+**Algorithm ID**: ``native:splitwithlines``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -974,7 +974,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:symmetricaldifference``
+**Algorithm ID**: ``native:symmetricaldifference``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1114,7 +1114,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:union``
+**Algorithm ID**: ``native:union``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1246,7 +1246,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:multiunion``
+**Algorithm ID**: ``native:multiunion``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
