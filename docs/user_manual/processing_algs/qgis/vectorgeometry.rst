@@ -96,7 +96,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:exportaddgeometrycolumns``
+**Algorithm ID**: ``native:exportaddgeometrycolumns``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -3735,7 +3735,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:keepnbiggestparts``
+**Algorithm ID**: ``native:keepnbiggestparts``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

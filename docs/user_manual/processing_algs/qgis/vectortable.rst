@@ -1120,7 +1120,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:renametablefield``
+**Algorithm ID**: ``native:renametablefield``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
