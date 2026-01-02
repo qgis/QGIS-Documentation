@@ -34,6 +34,9 @@ ramp:
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -52,7 +55,7 @@ Parameters
      - [numeric: double]
 
        Default: 1.0
-     - Vertical exaggeration.       
+     - Vertical exaggeration.
        This parameter is useful when the Z units differ from
        the X and Y units, for example feet and meters.
        You can use this parameter to adjust for this.
@@ -67,6 +70,40 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+|400|
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: double]
+
+       Default: -9999.0
+     - Value to use for NoData cells in the output layer.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
 
 Outputs
 .......
@@ -280,7 +317,7 @@ in digital elevation models for hydrologic analysis and modelling.
 International Journal of Geographical Information Science, Vol. 20, No. 2: 193-213.*
 
 .. seealso:: This tool is a port of the SAGA `Fill Sinks (Wang & Liu)`_ tool.
-  
+
 .. _`Fill Sinks (Wang & Liu)`: https://saga-gis.sourceforge.io/saga_tool_doc/9.9.1/ta_preprocessor_4.html
 
 Parameters
@@ -457,6 +494,9 @@ value and overlap it with the elevation raster:
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -475,7 +515,7 @@ Parameters
      - [numeric: double]
 
        Default: 1.0
-     - Vertical exaggeration.       
+     - Vertical exaggeration.
        This parameter is useful when the Z units differ from
        the X and Y units, for example feet and meters.
        You can use this parameter to adjust for this.
@@ -508,6 +548,40 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+|400|
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: double]
+
+       Default: -9999.0
+     - Value to use for NoData cells in the output layer.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
 
 Outputs
 .......
@@ -614,7 +688,7 @@ Outputs
        curves.
        For each feature from the input vector layer, a CSV file
        with area and altitude values will be created.
-       
+
        The file names start with ``histogram_``, followed by
        layer name and feature ID.
 
@@ -666,7 +740,7 @@ Parameters
      - [numeric: double]
 
        Default: 1.0
-     - Vertical exaggeration.       
+     - Vertical exaggeration.
        This parameter is useful when the Z units differ from
        the X and Y units, for example feet and meters.
        You can use this parameter to adjust for this.
@@ -679,7 +753,7 @@ Parameters
 
        Default: False
      - If you check this option the algorithm will create all
-       the relief color classes automatically       
+       the relief color classes automatically
    * - **Relief colors**
 
        Optional
@@ -705,7 +779,7 @@ Parameters
    * - **Relief**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specify the output relief raster layer. :ref:`One of <output_parameter_widget>`:
 
@@ -718,7 +792,7 @@ Parameters
        Optional
      - ``FREQUENCY_DISTRIBUTION``
      - [vector: table]
-       
+
        Default: ``[Skip output]``
      - Specify the CSV table for the output frequency distribution.
        :ref:`One of <output_parameter_widget>`:
@@ -778,6 +852,9 @@ the 8 cells surrounding it.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -796,7 +873,7 @@ Parameters
      - [numeric: double]
 
        Default: 1.0
-     - Vertical exaggeration.       
+     - Vertical exaggeration.
        This parameter is useful when the Z units differ from
        the X and Y units, for example feet and meters.
        You can use this parameter to adjust for this.
@@ -806,13 +883,47 @@ Parameters
    * - **Ruggedness**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specify the output ruggedness raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+|400|
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: double]
+
+       Default: -9999.0
+     - Value to use for NoData cells in the output layer.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
 
 Outputs
 .......
@@ -856,6 +967,9 @@ angle of inclination of the terrain and is expressed in **degrees**.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -874,7 +988,7 @@ Parameters
      - [numeric: double]
 
        Default: 1.0
-     - Vertical exaggeration.       
+     - Vertical exaggeration.
        This parameter is useful when the Z units differ from
        the X and Y units, for example feet and meters.
        You can use this parameter to adjust for this.
@@ -884,13 +998,47 @@ Parameters
    * - **Slope**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specify the output slope raster layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+|400|
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: double]
+
+       Default: -9999.0
+     - Value to use for NoData cells in the output layer.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
 
 Outputs
 .......
@@ -926,3 +1074,4 @@ Python code
    source folder.
 
 .. |344| replace:: ``NEW in 3.44``
+.. |400| replace:: ``NEW in 4.0``
