@@ -6,7 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Báthory Péter <bathory86p@gmail.com>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-02 02:30+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2026\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -533,6 +533,17 @@ msgstr ""
 "A :guilabel:`Térköz` beállításaival módosíthatja a szavak és az egyes betűk "
 "közti térközt."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:271
+msgid ""
+"With :guilabel:`Tab distance` you can adjust the replacement spacing for "
+":kbd:`Tab` characters in the label, in any supported unit. This allows e.g. "
+"to properly separate or vertically align elements of a layout legend text."
+msgstr ""
+"A :guilabel:`Tabulátorméret` segítségével beállíthatja a címkékben lévő "
+":kbd:`Tabulátor` karakterek behelyettesítési távolságát bármely támogatott "
+"mértékegységben. Ez lehetővé teszi például a elrendezésekben lévő "
+"jelmagyarázat szövegének megfelelő elválasztását vagy függőleges igazítását."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:275
 msgid ""
 ":guilabel:`Stretch` ratio: allows text to be horizontally stretched or "
@@ -609,6 +620,20 @@ msgstr ""
 "Állítson be egy ideális sorméretet az automatikus sortöréshez a "
 ":guilabel:`Sortörés ezután` opcióval. Ez a méret a :guilabel:`Maximális "
 "sorhossz` vagy a :guilabel:`Minimális sorhossz` értékét jelentheti."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:297
+msgid ""
+"Decide the :guilabel:`Line Height`: values can be set to be in "
+":guilabel:`Millimeters`, :guilabel:`Points`, :guilabel:`Pixels`, "
+":guilabel:`Percentage`, or :guilabel:`Inches`. When line height is set to "
+"percentage it is the percentage of the default text line spacing of that "
+"font family. Typically 1.2 to 1.5 times the text size."
+msgstr ""
+"Állítsa be a :guilabel:`Sormagasság`: értékét :guilabel:`Milliméter`, "
+":guilabel:`Pont`, :guilabel:`Pixel`, :guilabel:`Százalék` vagy "
+":guilabel:`Hüvelyk` egységekben. Ha a sor magasságát százalékban állítja be,"
+" akkor az az adott betűcsalád alapértelmezett szövegsor-távolságának "
+"százalékos arányát jelenti. Általában a szövegméret 1,2-1,5-szöröse."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:302
 msgid ""
@@ -930,11 +955,21 @@ msgstr ""
 "vagy egy adott komponens, például maga a :guilabel:`Szöveg`, az "
 ":guilabel:`Övezet` vagy az :guilabel:`Árnyék`."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:431
+msgid "Set the shadow's :guilabel:`Offset` from the item being shadowed, ie:"
+msgstr ""
+"Állítsa be az árnyék :guilabel:`Eltolását` az elemhez képest az alábbi "
+"beállításokkal:"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:433
 msgid "The angle: clockwise, it depends on the underlying item orientation"
 msgstr ""
 "A szög: az óramutató járásával megegyező irányban, az alapul szolgáló elem "
 "tájolásától függően."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:434
+msgid "The distance of offset from the item being shadowed"
+msgstr "Az eltolás távolsága az árnyékolt elemtől"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:435
 msgid "The units of the offset"
@@ -999,9 +1034,42 @@ msgstr ""
 msgid "Mask tab"
 msgstr "Maszk lap"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:482
+msgid ""
+"The |labelmask| :guilabel:`Mask` tab allows you to define a mask area around"
+" the labels. This feature is very useful when you have overlapping symbols "
+"and labels with similar colors, and you want to make the labels visible. A "
+"label mask prevents specified features from drawing within the boundary set "
+"for the mask. For example, you could set a label mask so that a specified "
+"layer does not draw within 2mm of the label, but allow features from another"
+" layer to still show. Label masks are similar to label buffers in that they "
+"allow control of the legibility of labels that cover other features. The "
+"label buffer draws on top of any underlying features, while the label mask "
+"selectively stops other layers from drawing."
+msgstr ""
+"A |labelmask| :guilabel:`Maszk` lapon megadhatja a címkék körüli maszkolt "
+"területet. Ez a funkció akkor nagyon hasznos, ha az egymást átfedő "
+"szimbólumok és címkék nagyon hasonló színűek, és a címkéket olvashatóbbá "
+"szeretné tenni. A címkemaszk megakadályozza, hogy a megadott elemek a maszk "
+"határain belül megjelenjenek. Például beállíthat egy címkemaszkot úgy, hogy "
+"egy megadott réteg ne legyen kirajzolva a címke 2 mm-es körzetén belül, míg "
+"egy másik réteg elemei továbbra is láthatóak legyenek. A címkemaszkok "
+"hasonlóak a címkeövezetekhez, mivel lehetővé teszik az egyéb elemeket "
+"eltakaró címkék olvashatóságának szabályozását. A címkeövezet az alatta lévő"
+" elemek fölé rajzol, míg a címkemaszk szelektíven megakadályozza más rétegek"
+" rajzolását."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1084
 msgid "labelmask"
 msgstr "labelmask"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:497
+msgid ""
+"Labels settings - Mask tab (with the text sample showing a green background "
+"representing another layer being excluded)"
+msgstr ""
+"Címkék beállításai – Maszk lap (a szövegminta zöld háttérrel jelzi, hogy egy"
+" másik réteg kizárásra került)"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:500
 msgid "To create masking effects on labels:"
@@ -1110,9 +1178,153 @@ msgstr ""
 ":guilabel:`Buborékok`:  a címkét körülvevő és az elemre mutató "
 "szövegbuborék. A sarkai lekerekítettek lehetnek."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:544
+msgid ""
+"Set the properties of the callout. The following table shows the different "
+"properties, with description and compatible connector style."
+msgstr ""
+"Állítsa be a kihúzás tulajdonságait. Az alábbi táblázat a különböző "
+"tulajdonságokat, azok leírását és a kompatibilis csatlakozó stílusokat "
+"tartalmazza."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:548
+msgid "Label callout properties"
+msgstr "Címkekihúzás tulajdonságai"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:552
+msgid "Property"
+msgstr "Tulajdonság"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:552
+msgid "Style of callout"
+msgstr "Kihúzás stílusa"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:552
 msgid "Description"
 msgstr "Leírás"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+msgid ":guilabel:`Fill style`"
+msgstr ":guilabel:`Kitöltési stílus`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+#: ../../docs/user_manual/style_library/label_settings.rst:602
+msgid "Balloons"
+msgstr "Buborék"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:554
+msgid ""
+"A :ref:`fill symbol <vector_fill_symbols>` with full display capabilities, "
+"including layer effects, data-defined settings, ... for drawing the balloon "
+"shape."
+msgstr ""
+"Egy :ref:`kitöltő szimbólum <vector_fill_symbols>` a buborék alakzat "
+"rajzolásához, minden megjelenítési képességgel, beleértve a réteghatásokat, "
+"az adatvezérelt beállításokat, …"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:557
+msgid ":guilabel:`Corner radius`"
+msgstr ":guilabel:`Lekerekítési sugár`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:557
+msgid "Corner radius of the speech bubble"
+msgstr "A szövegbuborék sarkainak lekerekítése"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:559
+msgid ":guilabel:`Wedge width`"
+msgstr ":guilabel:`Ék szélessége`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:559
+msgid ""
+"Sets how large the bubble speech connection with feature's pointer should be"
+msgstr ""
+"Beállítja, hogy mekkora legyen az elemről a szövegbuborékra mutató vonal "
+"szélessége"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:561
+msgid ":guilabel:`Margins`"
+msgstr ":guilabel:`Margók`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:561
+msgid "Margins around the label's text, in the unit of your choice"
+msgstr "A címke szövege körüli margók, a választott mértékegységben"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:563
+msgid ":guilabel:`Line style`"
+msgstr ":guilabel:`Vonalstílus`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:563
+#: ../../docs/user_manual/style_library/label_settings.rst:572
+msgid "All but balloons"
+msgstr "Összes, kivéve buborék"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:563
+msgid ""
+"A :ref:`line symbol <vector_line_symbols>` with full display capabilities, "
+"including layer effects, data-defined settings, ... for drawing the "
+"connector line."
+msgstr ""
+"Egy :ref:`vonalszimbólum <vector_line_symbols>` az összekötő vonal "
+"rajzolásához, minden megjelenítési képességgel, beleértve a réteghatásokat, "
+"az adatvezérelt beállításokat, …"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:566
+msgid ":guilabel:`Curvature`"
+msgstr ":guilabel:`Görbület`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:566
+msgid "Curved lines"
+msgstr "Íves vonalak"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:566
+msgid "The percentage of curvature of the connection line"
+msgstr "Az összekötő vonal görbületének százalékos aránya"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:568
+msgid ":guilabel:`Orientation`"
+msgstr ":guilabel:`Tájolás`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:568
+msgid ""
+"Orientation, starting from the label to the feature. It can be "
+":guilabel:`Clockwise`, :guilabel:`Counter-clockwise`, or "
+":guilabel:`Automatic` (determining an optimal orientation for each label)."
+msgstr ""
+"Tájolás a címkétől az elem felé. Lehet :guilabel:`Óramutató járásával "
+"egyező` vagy :guilabel:`Óramutató járásával ellentétes` vagy "
+":guilabel:`Automatikus` (optimalizálja az egyes címkék tájolását)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:572
+msgid ":guilabel:`Minimum length`"
+msgstr ":guilabel:`Minimális hosszúság`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:572
+msgid "Minimum length of the connector line"
+msgstr "Az összekötő vonal minimális hossza"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:574
+msgid ":guilabel:`Draw lines to all feature parts`"
+msgstr ":guilabel:`Vonalak rajzolása az elemek összes részéhez`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:574
+msgid ""
+"In case of a multi-part feature, indicates whether a connector line should "
+"be drawn from the label to each geometry part."
+msgstr ""
+"Többrészes elem esetén meghatározza, hogy a címkétől a geometria összes "
+"részhez összekötő vonalat kell-e húzni."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:577
+msgid ":guilabel:`Label anchor point`"
+msgstr ":guilabel:`Címke horgonypontja`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:577
+msgid ""
+"Controls where the connector line should join to the label text. Available "
+"options:"
+msgstr ""
+"Szabályozza, hogy az összekötő vonal a címkeszöveg melyik pontjához "
+"csatlakozzon. Lehetséges értékek:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:580
 msgid ":guilabel:`Closest point`"
@@ -1135,6 +1347,48 @@ msgstr ""
 " középen`, :guilabel:`Bal alsó`, :guilabel:`Alsó közép` vagy :guilabel:`Jobb"
 " alsó`)."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:587
+msgid ":guilabel:`Offset from label area`"
+msgstr ":guilabel:`Eltolás a címke területétől`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:587
+msgid ""
+"Controls the distance from the label anchor point (where the callout line "
+"ends). This avoids drawing lines right up against the text."
+msgstr ""
+"A címke horgonypontjától való távolságot szabályozza (ahol a kihúzásvonal "
+"végződik). Ezzel elkerülhető, hogy a vonalak közvetlenül a szövegig érjenek."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:590
+msgid ":guilabel:`Offset from feature`"
+msgstr ":guilabel:`Eltolás az elemetől`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:590
+#: ../../docs/user_manual/style_library/label_settings.rst:606
+msgid "All"
+msgstr "Összes"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:590
+msgid ""
+"Controls the distance from the feature (or its anchor point if a polygon) "
+"where callout lines end. E.g., this avoids drawing lines right up against "
+"the edges of the features."
+msgstr ""
+"Azt az elemtől (vagy felület esetén a horgonyponttól) való távolságot "
+"szabályozza, ahol a kihúzásvonal végződik. Ezzel elkerülhető, hogy a vonalak"
+" közvetlenül az elem szélénél kezdődjenek."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:594
+msgid ":guilabel:`Feature anchor point`"
+msgstr ":guilabel:`Elem horgonypontja`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:594
+msgid ""
+"Where the connector line ends on the (polygon) feature. Available options:"
+msgstr ""
+"A (felület) elem melyik pontján végződjenek az összekötő vonalak. Lehetséges"
+" értékek:"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:596
 msgid ":guilabel:`Pole of inaccessibility`"
 msgstr ":guilabel:`Megközelíthetetlenség pólusa`"
@@ -1146,6 +1400,28 @@ msgstr ":guilabel:`Pont a körvonalon`"
 #: ../../docs/user_manual/style_library/label_settings.rst:598
 msgid ":guilabel:`Point on surface`"
 msgstr ":guilabel:`Pont a felületen`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:602
+msgid ":guilabel:`End point marker`"
+msgstr ":guilabel:`Végpontjelölő`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:602
+msgid ""
+"A :ref:`marker symbol <vector_marker_symbols>` with full display "
+"capabilities including layer effects, data-defined, ... for rendering a "
+"marker symbol below the endpoint of the balloon callout."
+msgstr ""
+"Egy :ref:`jelölő szimbólum <vector_marker_symbols>` a buborék kihúzásának "
+"végpontjánál, minden megjelenítési képességgel, beleértve a réteghatásokat, "
+"az adatvezérelt beállításokat, …"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:606
+msgid ":guilabel:`Blend mode`"
+msgstr ":guilabel:`Keverési mód`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:606
+msgid "Controls the :ref:`blending <blend-modes>` of the callout."
+msgstr "A kihúzás :ref:`keverését <blend-modes>` szabályozza."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:610
 msgid ""
@@ -1175,6 +1451,20 @@ msgstr "moveLabel"
 #: ../../docs/user_manual/style_library/label_settings.rst:622
 msgid "Placement tab"
 msgstr "Elhelyezés lap"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:624
+msgid ""
+"Choose the |labelplacement| :guilabel:`Placement` tab for configuring label "
+"placement and labeling priority. Note that the placement options differ "
+"according to the type of vector or mesh layer, namely point, line or "
+"polygon, and are affected by the global :ref:`PAL setting "
+"<automated_placement>`."
+msgstr ""
+"A címkék elhelyezésének és címkézési prioritásának beállításához váltson az "
+"|labelplacement| :guilabel:`Elhelyezés` lapra. Vegye figyelembe, hogy az "
+"elhelyezési lehetőségek a vektor- vagy hálóréteg típusától (pont, vonal vagy"
+" felület) függően eltérnek, valamint a globális :ref:`automatikus "
+"címkeelhelyezési beállítás <automated_placement>` befolyásolja őket."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1086
 msgid "labelplacement"
@@ -1207,12 +1497,72 @@ msgid ""
 " it's set by a data defined size or when using different symbols in a "
 ":ref:`categorized <categorized_renderer>` renderer."
 msgstr ""
-"Egy adott :guilabel:`Távolságra` a :ref:`támogatott mértékegységekben "
+"egy adott :guilabel:`Távolságra`, a :ref:`támogatott mértékegységekben "
 "<unit_selector>` megadva, akár magtól a pontelemtől, akár az elemet ábrázoló"
 " szimbólum határától (:guilabel:`Eltolás távolsága ettől` beállítás). Ez "
 "utóbbi beállítás különösen hasznos, ha a szimbólum mérete nem állandó (pl. "
 "adatvezérelt méretű), vagy eltérő szimbólumokat használ a :ref:`kategorizált"
 " <categorized_renderer>` megjelenítőben."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:648
+msgid ""
+"within a :guilabel:`Maximum Distance` from the feature, which is an optional"
+" setting that allows you to control how far a label can be placed from the "
+"feature it's labeling. This works alongside the :guilabel:`Distance` setting"
+" to create a range for label placement, adding flexibility to position "
+"labels more effectively, especially on busy maps, ensuring they fit neatly "
+"around their corresponding features."
+msgstr ""
+"az elemtől egy :guilabel:`Maximális távolságon` belülre. Ez egy opcionális "
+"tulajdonság, amivel az szabályozható, hogy milyen messze helyezhető el a "
+"címke a címkézett elemtől. Ez a :guilabel:`Távolság` beállítás mellett "
+"működik, egy tartományt hozva létre a címke elhelyezéséhez, így rugalmasabbá"
+" téve a címkék elhelyezését, különösen zsúfolt térképeken, biztosítva, hogy "
+"azok pontosan illeszkedjenek a megfelelő elemekhez."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:653
+msgid ""
+"using the :guilabel:`Prioritize Placement` option, which decides what's more"
+" important when placing labels. There are two options:"
+msgstr ""
+"az :guilabel:`Elhelyezés prioritása` beállítással, amellyel eldönthető, hogy"
+" a címkék elhelyezésénél mi a fontosabb. Két érték közül lehet választani:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:656
+msgid ""
+":guilabel:`Prefer closer labels`: By default, labels are kept close to the "
+"feature."
+msgstr ""
+":guilabel:`Közelebbi címkék preferálása`: Alapértelmezés szerint a címkék az"
+" elem közelében maradnak."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:657
+msgid ""
+":guilabel:`Prefer position ordering`: The label will try to stay in a "
+"specific position (like top left or top right), even if it's a bit farther "
+"away from the feature. The label only moves to other positions if there's no"
+" room within the maximum distance at your preferred position."
+msgstr ""
+":guilabel:`Pozíciósorrend preferálása`: A címke megpróbál egy adott "
+"pozícióban maradni (például bal felső vagy jobb felső sarokban), még akkor "
+"is, ha ez kissé távolabb van az elemtől. A címke csak akkor kerül más "
+"pozícióba, ha a kívánt pozícióban nincs hely a maximális távolságon belül."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:661
+msgid ""
+"following a :guilabel:`Position priority` which dictates placement "
+"candidates for anchoring labels around and (centered) over the point "
+"feature, and the order in which the positions are tested. The default order,"
+" based on `guidelines from Krygier and Wood (2011) "
+"<https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_"
+" and other cartographic textbooks, is as follows:"
+msgstr ""
+"egy :guilabel:`Pozícióprioritást` követve, ami meghatározza a pontszerű elem"
+" köré és fölé (közepére) lehorgonyozandó címkék elhelyezési jelöltjeit, "
+"valamint a pozíciók tesztelésének sorrendjét. Az alapértelmezett sorrend "
+"`Krygier és Wood (2011) irányelvei "
+"<https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood>`_"
+" és más kartográfiai tankönyvek alapján a következő:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:668
 msgid "top right"
@@ -1246,9 +1596,39 @@ msgstr "fent, kicsit jobbra"
 msgid "bottom, slightly left."
 msgstr "lent, kicsit balra."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:677
+msgid ""
+"Using the |dataDefine| :sup:`Data-defined override` button, you can provide "
+"a comma separated list of placements in order of priority. This also allows "
+"only certain placements to be used, for certain features only, so e.g., for "
+"coastal features you can prevent labels being placed over the land."
+msgstr ""
+"Az |dataDefine| :sup:`Adatvezérelt felülbírálás` gombot használva megadhatja"
+" az elhelyezések prioritás szerint rendezett listáját, vesszőkkel "
+"elválasztva. Ez azt is lehetővé teszi, hogy egyes elemekhez csak bizonyos "
+"elhelyezéseket lehessen használni, így például a tengerparti elemeknél "
+"megakadályozhatjuk, hogy a feliratok a szárazföld fölé kerüljenek."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1064
 msgid "dataDefine"
 msgstr "dataDefine"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:682
+msgid ""
+":guilabel:`Around Point`: labels are placed in a circle around the feature "
+"with an equal radius set in :guilabel:`Distance`. Additionally you can set "
+":guilabel:`Maximum Distance` from the feature, to control how far a label "
+"can be placed from the feature it's labeling. The placement priority is "
+"clockwise from the \"top right\". The position can be constrained using the "
+"data-defined :guilabel:`Quadrant` option."
+msgstr ""
+":guilabel:`Pont körül`: a címkék az elem körül körben kerülnek elhelyezésre,"
+" az elem körüli egyenlő sugarú körben egyenlő :guilabel:`Távolságban`. "
+"Beállíthat továbbá egy :guilabel:`Maximális távolságot` az elemtől, ezzel "
+"szabályozva, milyen távolságra helyezhető el a címke a jelölendő elemtől. Az"
+" elhelyezési prioritás a jobb felső sarokból indul, az óramutató járásával "
+"megegyező irányban. A pozíciók korlátozhatóak az adatvezérelt "
+":guilabel:`Negyed` beállítással."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:689
 msgid ""
@@ -1734,6 +2114,40 @@ msgstr ""
 ":guilabel:`Függőlegesen`: lehet **Bottom**, **Base**, **Half**, **Cap** vagy"
 " **Top**"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:881
+msgid ""
+"the text :guilabel:`Rotation`. Rotation is defined as clockwise angle with "
+"0° pointing in the direction of East for ``Horizontal`` oriented text and "
+"with 0° pointing in North direction for ``Vertical`` oriented text. "
+"Different units can be defined for the labeling rotation (e.g. ``degrees``, "
+"``minutes of arc``, ``turns``). QGIS prioritizes screen display rotation "
+"angles by default and always rotates text to be most readable on screen, so "
+"\"upside-down\" rotation angles are overridden while rendering. To change "
+"this behavior and force QGIS to render exact data-defined rotation angles "
+"there is an option in |render| :guilabel:`Rendering` tab, under "
+":guilabel:`Show upside-down labels`. Check the :guilabel:`Preserve data "
+"rotation values` entry if you want to keep the rotation value in the "
+"associated field and apply it to the label, whether the label is pinned or "
+"not. If unchecked, unpinning the label rotation is reset and its value "
+"cleared from the attribute table."
+msgstr ""
+"a szöveg :guilabel:`Forgatása`. A forgatás definíciója: óramutató járásával "
+"megegyező irányú szög, ahol a 0° keletre mutat a ``Vízszintes`` tájolású "
+"szövegek esetében, illetve a északra a ``Függőleges`` tájolású szövegek "
+"esetében. A címkézés forgatásához különböző mértékegységek használhatók (pl."
+" ``fok``, ``ívperc``, ``fordulat``). A QGIS alapértelmezés szerint a "
+"képernyőn megjelenített forgási szögeket részesíti előnyben, és a szöveget "
+"mindig úgy forgatja, hogy a képernyőn a legjobban olvasható legyen, ezért a "
+"„fejjel lefelé” forgási szögeket a megjelenítés során felülírja. Ha ezt a "
+"viselkedést meg akarja változtatni, és a QGIS-t arra kényszeríteni, hogy a "
+"pontos, adatvezérelt forgási szögekben rendereljen, akkor azt a |render| "
+":guilabel:`Megjelenítés` fülön, a :guilabel:`Fejjel lefelé lévő címkék "
+"megjelenítése` opcióval teheti meg. Jelölje be a :guilabel:`Forgatási érték "
+"adat megőrzése` tulajdonságot, ha meg akarja őrizni a forgatási értéket a "
+"kapcsolódó mezőben, és azt alkalmazni szeretné a címkére, függetlenül attól,"
+" hogy a címke rögzítve van-e vagy sem. Ha nincs bejelölve, a címke "
+"forgatásának rögzítése visszaáll, és értéke törlődik az attribútumtáblából."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:1094
 msgid "render"
 msgstr "render"
@@ -1985,6 +2399,42 @@ msgid ""
 msgstr ""
 "Az adatvezérelt :guilabel:`Címke megjelenítése` és :guilabel:`Mindig "
 "látszik` beállításokkal a címkék megjelenítését egyenként is vezérelheti."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1001
+msgid ""
+"Allow to :guilabel:`Show upside-down labels`: alternatives are **never**, "
+"**when rotation defined** or **always**."
+msgstr ""
+":guilabel:`Címkék fejjel lefelé` lehetséges értékei: **soha**, **ha meg van "
+"adva forgatás** vagy **bármikor**."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1004
+msgid "**never** - default setting, screen readability is prioritized,"
+msgstr ""
+"**soha** – alapértelmezett beállítás, a képernyő olvashatósága prioritást "
+"élvez,"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1006
+msgid ""
+"**when rotation defined** - label rotation should be defined under "
+"|labelplacement| :guilabel:`Placement` tab, within the :guilabel:`Data "
+"Defined` group"
+msgstr ""
+"**ha meg van adva forgatás** – a címke forgatását az |labelplacement| "
+":guilabel:`Elhelyezés` fülön, az :guilabel:`Adatvezérelt` csoporton belül "
+"kell megadni"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1009
+msgid "**always** - upside-down labels are allowed"
+msgstr "**mindig** – megengedettek a fejjel lefelé írt címkék"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:1016
+msgid ""
+"Data defined label rotation with show upside-down labels option set to: "
+"\"never\" (left), \"when rotation defined\" (right)"
+msgstr ""
+"Adatvezérelt címkeforgatás fejjel lefelé írt címkék megjelenítése "
+"beállítással: „soha” (balra), „ha meg van adva forgatás” (jobbra)"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1018
 msgid ""
