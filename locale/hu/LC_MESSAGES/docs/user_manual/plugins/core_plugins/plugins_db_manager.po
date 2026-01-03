@@ -7,7 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Zoltan Siki <siki.zoltan@epito.bme.hu>, 2025
-# Báthory Péter <bathory86p@gmail.com>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2026\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -120,6 +120,100 @@ msgstr ""
 "Az adatbázis-kezelő használatával lehetőség van PostgreSQL "
 "adatbázistáblákhoz és -oszlopokhoz megjegyzést fűzni."
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:52
+msgid ""
+"The :guilabel:`Providers` window lists all existing databases supported by "
+"QGIS. With a double-click, you can connect to the database. With the right "
+"mouse button, you can rename and delete existing schemas and tables. Tables "
+"can also be added to the QGIS canvas with the context menu."
+msgstr ""
+"A :guilabel:`Szolgáltatók` ablakban látható az összes meglévő, QGIS által "
+"támogatott adatbázis. Duplán kattintva az adatbázisra csatlakozhat hozzá. A "
+"jobb egérgombbal átnevezheti és törölheti a meglévő sémákat és táblákat. A "
+"táblákat a helyi menü segítségével is hozzáadhatja a QGIS térképvásznához."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:59
+msgid ""
+"If connected to a database, the **main** window of the DB Manager offers "
+"four tabs. The :guilabel:`Info` tab provides information about the table and"
+" its geometry, as well as about existing fields, constraints and indexes. It"
+" allows you to create a spatial index on a the selected table. The "
+":guilabel:`Table` tab shows the table, and the :guilabel:`Preview` tab "
+"renders the geometries as preview. When you open an :guilabel:`SQL Window`, "
+"it will be placed in a new tab."
+msgstr ""
+"Ha csatlakozott az adatbázishoz, a Adatbázis-kezelő **fő** ablaka négy fület"
+" kínál. Az :guilabel:`Info` fül információkat nyújt a tábláról és annak "
+"geometriájáról, valamint a meglévő mezőkről, korlátozásokról és indexekről. "
+"Lehetővé teszi térbeli index létrehozását a kiválasztott táblán. A "
+":guilabel:`Tábla` fül a táblát, az :guilabel:`Előnézet` fül pedig a "
+"geometriákat jeleníti meg előnézetként. Amikor megnyit egy :guilabel:`SQL "
+"ablakot`, az egy új fülre kerül."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:70
 msgid "Working with the SQL Window"
 msgstr "Munka az SQL ablakban"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:72
+msgid ""
+"You can use the DB Manager to execute SQL queries against your spatial "
+"database. Queries can be saved and loaded, and there the :guilabel:`SQL "
+"Query Builder` will help you formulate your queries. You can even view "
+"spatial output by checking :guilabel:`Load as new layer` and specifying "
+":guilabel:`Column(s) with unique values` (IDs), :guilabel:`Geometry column` "
+"and :guilabel:`Layer name (prefix)`. It is possible to highlight a portion "
+"of the SQL to only execute that portion when pressing :kbd:`Ctrl+R` or "
+"clicking the :guilabel:`Execute` button."
+msgstr ""
+"Az Adatbázis-kezelő segítségével SQL lekérdezéseket futtathat a térbeli "
+"adatbázisában. A lekérdezéseket el lehet menteni és betölteni, és az "
+":guilabel:`SQL lekérdezéskészítő` segít a lekérdezések összeállításában. "
+"Akár a térbeli kimenetet is megtekintheti, ha bejelöli a :guilabel:`Betöltés"
+" új rétegként` jelölőnégyzetet és beállítja a :guilabel:`Oszlop(ok) egyedi "
+"értékekkel` (ID-k), :guilabel:`Geometriaoszlop` és :guilabel:`Rétegnév "
+"(előtag)` értékeit. Lehetőség van az SQL egy részének kijelölésére, hogy "
+"csak az a rész legyen végrehajtva, amikor megnyomja a :kbd:`Ctrl+R` "
+"billentyűkombinációt vagy rákattint a :guilabel:`Végrehajtás` gombra."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:83
+msgid ""
+"After executing your query, you can select specific cells in the result set."
+" Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the clipboard."
+" The copied data is available as a formatted table. This allows you to paste"
+" the data into other applications, such as spreadsheet where it will show up"
+" as a table."
+msgstr ""
+"A lekérdezés végrehajtása után kiválaszthatja az eredményhalmazban található"
+" egyes cellákat. A :kbd:`Ctrl+C` gyorsbillentyűvel másolhatja a kiválasztott"
+" cellákat a vágólapra. Az adatok formázott táblázatként másolódnak. Ez "
+"lehetővé teszi az adatok más alkalmazásokba, például táblázatkezelő "
+"programokba való beillesztését, ahol táblázatként jelennek meg."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:89
+msgid ""
+"The :guilabel:`Query History` button stores the last 20 queries of each "
+"database and provider."
+msgstr ""
+"A :guilabel:`Lekérdezések előzményei` gomb tárolja az utolsó 20 lekérdezést "
+"adatbázisonként és szolgáltatónként."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:92
+msgid "Double clicking on an entry will add the string to the SQL window."
+msgstr ""
+"Egy bejegyzésre duplán kattintva a karakterlánc hozzáadódik az SQL ablakhoz."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:99
+msgid "Executing SQL queries in the DB Manager SQL window"
+msgstr "SQL-lekérdezések futtatása az Adatbázis-kezelő SQL ablakában"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:103
+msgid ""
+"The SQL Window can also be used to create Virtual Layers. In that case, "
+"instead of selecting a database, select **QGIS Layers** under **Virtual "
+"Layers** before opening the SQL Window. See :ref:`vector_virtual_layers` for"
+" instructions on the SQL syntax to use."
+msgstr ""
+"Az SQL ablak virtuális rétegek létrehozására is használható. Ehhez mielőtt "
+"kiválasztaná az adatbázist, a válasszon egy **QGIS réteget** a **Virtuális "
+"rétegek** alatt, majd nyissa meg az SQL ablakot. A használható SQL "
+"szintaxist lásd a :ref:`vector_virtual_layers` fejezetben."
