@@ -7,7 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
-# Báthory Péter <bathory86p@gmail.com>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2026\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +34,32 @@ msgstr ""
 "A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
 "<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
 "van lefordítva."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:2
+msgid "Layer tools"
+msgstr "Rétegeszközök"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:14
+msgid "Export layer(s) information"
+msgstr "Réteginformációk exportálása"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:16
+msgid ""
+"Creates a polygon layer with features corresponding to the extent of "
+"selected layer(s)."
+msgstr ""
+"Létrehoz egy felületréteget, amelynek elemei a kiválasztott réteg(ek) "
+"terjedelmének felelnek meg."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:18
+msgid ""
+"Additional layer details (CRS, provider name, file path, layer name, subset "
+"filter, abstract and attribution) are attached as attributes to each "
+"feature."
+msgstr ""
+"További rétegadatok (CRS, szolgáltató neve, fájl elérési útja, réteg neve, "
+"részhalmazszűrő, absztrakt és attribútum) minden egyes elemhez "
+"attribútumként vannak csatolva."
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:22
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:83
@@ -87,6 +113,14 @@ msgstr "**Bemeneti rétegek**"
 msgid "``LAYERS``"
 msgstr "``LAYERS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:34
+msgid "[layer] [list]"
+msgstr "[réteg] [lista]"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:35
+msgid "Input layers to get information on."
+msgstr "Bemeneti rétegek, amikről információhoz szeretnénk jutni."
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:36
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:58
 msgid "**Output**"
@@ -112,6 +146,14 @@ msgstr "[vector: felület]"
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:196
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Alapértelmezett: ``[Ideiglenes réteg létrehozása]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:41
+msgid ""
+"Specification of the output layer with information. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Az információkkal ellátott kimeneti réteg specifikációja. :ref:`Egyike "
+"ezeknek <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -139,11 +181,23 @@ msgstr "A fájl kódolása is módosítható itt."
 msgid "Outputs"
 msgstr "Kimenetek"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:61
+msgid ""
+"Polygon vector layer showing extent of input layers and associated "
+"information in attributes."
+msgstr ""
+"Felület vektorréteg, amely a bemeneti rétegek terjedelmét tartalmazza, és a "
+"kapcsolódó információkat az attribútumokban."
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:65
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:151
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:222
 msgid "Python code"
 msgstr "Python kód"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:67
+msgid "**Algorithm ID**: ``native:exportlayersinformation``"
+msgstr "**Algoritmus azonosítója **: ``native:exportlayersinformation``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -158,9 +212,35 @@ msgstr ""
 "konzolról történő futtatásával kapcsolatos részletekért lásd a "
 ":ref:`processing_console` fejezetet."
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:77
+msgid "Export to spreadsheet"
+msgstr "Exportálás táblázatkezelőbe"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:79
+msgid ""
+"Exports the attributes of a selection of vector layers into a spreadsheet "
+"document or optionally appends them to an existing spreadsheet as additional"
+" sheets."
+msgstr ""
+"A kiválasztott vektorrétegek attribútumait táblázatkezelő dokumentumba "
+"exportálja, vagy opcionálisan hozzáfűzi őket egy meglévő táblázatkezelő "
+"dokumentumhoz további lapokként."
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:95
 msgid "[vector: any] [list]"
 msgstr "[vektor: bármi] [lista]"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:96
+msgid ""
+"Input vector layers. The output spreadsheet will consist of a sheet, for "
+"each layer, that contains the attributes of this layer."
+msgstr ""
+"Bemeneti vektorrétegek. A kimeneti táblázat rétegenként egy lapból áll, "
+"amely a réteg attribútumait tartalmazza."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:98
+msgid "**Use field aliases as column headings**"
+msgstr "**Mezőálnevek használata az oszlopfejlécekben**"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:99
 msgid "``USE_ALIAS``"
@@ -177,13 +257,53 @@ msgstr "[logikai]"
 msgid "Default: False"
 msgstr "Alapértelmezett: Hamis"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:103
+msgid "Use the field aliases from the attribute table for the spreadsheet."
+msgstr "Használja a attribútumtáblában szereplő mezőálneveket a táblázatban."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:104
+msgid "**Export formatted values instead of raw values**"
+msgstr "**Formázott értékek exportálása nyers értékek helyett**"
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:105
 msgid "``FORMATTED_VALUES``"
 msgstr "``FORMATTED_VALUES``"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:109
+msgid ""
+"If ``True``, exports the formatted, human readable values (e.g., from a "
+":ref:`value map or value relation <edit_widgets>`) to the spreadsheet."
+msgstr ""
+"Ha ``True``, akkor a formázott, ember által olvasható értékeket (pl. egy "
+":ref:`értékleképezésből vagy értékkapcsolatból <edit_widgets>`) exportálja a"
+" táblázatba."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:111
+msgid "**Overwrite existing spreadsheet**"
+msgstr "**Meglévő táblázat felülírása**"
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:112
 msgid "``OVERWRITE``"
 msgstr "``OVERWRITE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:115
+msgid "Default: True"
+msgstr "Alapértelmezett: Igaz"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:116
+msgid ""
+"If the specified spreadsheet exists, setting this option to ``True`` will "
+"overwrite the existing spreadsheet. If this option is ``False`` and the "
+"spreadsheet exists, the layers will be appended as additional sheets."
+msgstr ""
+"Ha a megadott táblázat létezik, ezt az opciót ``True``-ra állítva felül "
+"fogja írni a meglévő táblázatot. Ha az értéke ``False``, és a táblázat "
+"létezik, a réteg hozzá lesz fűzve új munkalapként."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:141
+msgid "**Destination spreadsheet**"
+msgstr "**Cél táblázat**"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:121
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:143
@@ -194,13 +314,69 @@ msgstr "[fájl]"
 msgid "Default: ``[Save to temporary file]``"
 msgstr "Alapértelmezett: ``[Mentés ideiglenes fájlba]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:124
+msgid ""
+"Output spreadsheet with a sheet for every layer. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Kimeneti táblázatkezelő fájl, rétegenként egy munkalappal. :ref:`Ezek egyike"
+" <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Save to a Temporary File"
 msgstr "Mentés ideiglenes fájlba"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:144
+msgid "Spreadsheet with a sheet for every layer."
+msgstr "Táblázat, rétegenként egy munkalappal."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:145
+msgid "**Layers within spreadsheet**"
+msgstr "**Rétegek a táblázatban**"
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:146
 msgid "``OUTPUT_LAYERS``"
 msgstr "``OUTPUT_LAYERS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:147
+msgid "[list]"
+msgstr "[lista]"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:148
+msgid "The list of sheets added to the spreadsheet."
+msgstr "A táblázathoz hozzáadott munkalapok listája."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:153
+msgid "**Algorithm ID**: ``native:exporttospreadsheet``"
+msgstr "**Algoritmus azonosítója**: ``native:exporttospreadsheet``"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:163
+msgid "Extract layer extent"
+msgstr "Rétegterjedelem kinyerése"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:165
+msgid ""
+"Generates a vector layer with the minimum bounding box (rectangle with N-S "
+"orientation) that covers all the input features."
+msgstr ""
+"Egy új vektorréteget hoz létre a bemeneti réteg összes elemét lefedő "
+"minimális befoglaló téglalappal (É-D-i tájolású téglalap)."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:168
+msgid ""
+"The output layer contains a single bounding box for the whole input layer."
+msgstr ""
+"A kimeneti réteg egyetlen befoglaló téglalapot tartalmaz az egész bemeneti "
+"réteghez."
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:173
+msgid "In red the bounding box of the source layer"
+msgstr "Pirossal a forrás réteg befoglaló téglalapja"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:175
+msgid "**Default menu**: :menuselection:`Vector --> Research Tools`"
+msgstr ""
+"**Alapértelmezett menüpont**: :menuselection:`Vektor --> Kutató eszközök`"
 
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:188
 msgid "**Layer**"
@@ -210,7 +386,33 @@ msgstr "**Réteg**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:190
+msgid "[layer]"
+msgstr "[réteg]"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:191
+msgid "Input layer"
+msgstr "Bemeneti réteg"
+
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:192
 #: ../../docs/user_manual/processing_algs/qgis/layertools.rst:215
 msgid "**Extent**"
 msgstr "**Terjedelem**"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:197
+msgid ""
+"Specify the polygon vector layer for the output extent. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Határozza meg kimeneti terjedelem vektoros felületrétegét. :ref:`Ezek egyike"
+" <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:218
+msgid "Output (polygon) vector layer with the extent (minimum bounding box)"
+msgstr ""
+"A terjedelmet tartalmazó kimeneti (felület) vektorréteg (minimális befoglaló"
+" téglalap)"
+
+#: ../../docs/user_manual/processing_algs/qgis/layertools.rst:224
+msgid "**Algorithm ID**: ``qgis:polygonfromlayerextent``"
+msgstr "**Algoritmus azonosítója**: ``qgis:polygonfromlayerextent``"
