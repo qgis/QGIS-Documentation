@@ -7,7 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
-# Báthory Péter <bathory86p@gmail.com>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2026\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +34,25 @@ msgstr ""
 "A fordítás közösségi munka, amihez :ref:`itt tud csatlakozni "
 "<translation_guidelines>`. Ennek az oldalnak eddig |translation progress|-a "
 "van lefordítva."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:2
+msgid "Vector coverage"
+msgstr "Vektor: fedvény"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:14
+msgid "Dissolve coverage"
+msgstr "Fedvény összevonása"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:16
+msgid ""
+"Operates on a coverage (represented as a set of polygon features with "
+"exactly matching edge geometry) to dissolve (union) the geometries. It "
+"provides a heavily optimized approach for unioning these features compared "
+"with the standard Dissolve tools."
+msgstr ""
+"Egy fedvényt (egymáshoz pontosan illeszkedő oldalú geometriák) dolgoz fel "
+"Erősen optimalizált megközelítést biztosít ezen elemek egyesítésére a "
+"szokásos Összevonás eszközhöz képest."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:20
 msgid ":ref:`qgisdissolve`"
@@ -93,6 +112,27 @@ msgstr "**Bemeneti réteg**"
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:35
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:61
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:105
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:121
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:143
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:182
+msgid "[vector: polygon]"
+msgstr "[vector: felület]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:36
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:106
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:183
+msgid "Input polygon vector layer"
+msgstr "Bemeneti vektoros felületréteg"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:37
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:59
+msgid "**Dissolved**"
+msgstr "**Összevont**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:38
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:60
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:120
@@ -101,10 +141,45 @@ msgstr "``INPUT``"
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:123
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:194
+msgid "Default: ``[Create temporary layer]``"
+msgstr "Alapértelmezett: ``[Ideiglenes réteg létrehozása]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:42
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:124
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:195
+msgid ""
+"Specify the output vector layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Határozza meg a kimeneti vektorréteget. :ref:`Ezek egyike "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "Ideiglenes réteg létrehozása (``TEMPORARY_OUTPUT``)"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 #: ../../docs/user_manual/processing_algs/algs_include.rst:5
 msgid "Save to File…"
 msgstr "Mentés fájlba…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid "Save to Geopackage…"
+msgstr "Mentés Geopackage-be…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+#: ../../docs/user_manual/processing_algs/algs_include.rst:7
+msgid "Save to Database Table…"
+msgstr "Mentés adatbázistáblába…"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "The file encoding can also be changed here."
+msgstr "A fájl kódolása is módosítható itt."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:49
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:131
@@ -112,11 +187,19 @@ msgstr "Mentés fájlba…"
 msgid "Outputs"
 msgstr "Kimenetek"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:62
+msgid "The output polygon vector layer with dissolved geometries."
+msgstr "Az összevont geometriákat tartalmazó kimeneti vektoros felületréteg"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:65
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:147
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:222
 msgid "Python code"
 msgstr "Python kód"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:67
+msgid "**Algorithm ID**: ``native:coverageunion``"
+msgstr "**Algoritmus azonosítója**: ``native:coverageunion``"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
@@ -131,34 +214,182 @@ msgstr ""
 "konzolról történő futtatásával kapcsolatos részletekért lásd a "
 ":ref:`processing_console` fejezetet."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:77
+msgid "Simplify coverage"
+msgstr "Fedvény egyszerűsítése"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:79
+msgid ""
+"Operates on a coverage (represented as a set of polygon features with "
+"exactly matching edge geometry) to apply a Visvalingam–Whyatt simplification"
+" to the edges, reducing complexity in proportion with the provided "
+"tolerance, while retaining a valid coverage (i.e. no edges will cross or "
+"touch after the simplification). Geometries will never be removed, but they "
+"may be simplified down to just a triangle. Also, some geometries (such as "
+"polygons which have too few non-repeated points) will be returned unchanged."
+msgstr ""
+"Egy fedvényt (egymáshoz pontosan illeszkedő oldalú geometriák) dolgoz fel "
+"úgy, hogy az élekre Visvalingam-Whyatt egyszerűsítést alkalmaz, csökkentve "
+"ezzel a komplexitást a megadott tolerancia arányában, miközben fenntartja a "
+"fedvény érvényességét (azaz az egyszerűsítés után egyetlen él sem metszi "
+"vagy érinti egymást). Soha nem távolít el geometriát, legfeljebb "
+"leegyszerűsíti őket egyetlen háromszögre. Emellett egyes geometriákat "
+"(például a túl kevés nem ismétlődő ponttal rendelkező felületeket) "
+"változatlanul adja vissza."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:85
+msgid ""
+"If the input dataset is not a valid coverage due to overlaps, it will still "
+"be simplified, but invalid topology such as crossing edges will still be "
+"invalid."
+msgstr ""
+"Ha a bemeneti adathalmaz átfedések miatt egy nem érvényes fedvény, akkor is "
+"egyszerűsítésre kerül, de az érvénytelen topológia, például az egymást "
+"keresztező élek továbbra is érvénytelenek maradnak."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:88
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:165
+msgid "**Requires version of GEOS >= 3.12**"
+msgstr "**GEOS >= 3.12 verzió szükséges hozzá**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:90
 msgid ":ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`"
 msgstr ":ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:107
+msgid "**Tolerance**"
+msgstr "**Tolerancia**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:108
 msgid "``TOLERANCE``"
 msgstr "``TOLERANCE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:109
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:186
+msgid "[numeric: double]"
+msgstr "[numerikus: double]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:111
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:188
+msgid "Default: 0.0"
+msgstr "Alapértelmezett: 0,0"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:112
+msgid ""
+"The maximum distance (in unit of choice) between two consecutive vertices to"
+" get merged."
+msgstr ""
+"A két egymást követő töréspont közötti maximális távolság (választható "
+"mértékegységben), amelynél azok összeolvadnak."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:113
+msgid "**Preserve boundary**"
+msgstr "**Határok megőrzése**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:114
 msgid "``PRESERVE_BOUNDARY``"
 msgstr "``PRESERVE_BOUNDARY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:115
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:218
+msgid "[boolean]"
+msgstr "[logikai]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:117
+msgid "Default: False"
+msgstr "Alapértelmezett: Hamis"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:118
+msgid ""
+"When enabled, the outside edges of the coverage will be preserved without "
+"simplification"
+msgstr ""
+"Ha engedélyezve van, a fedvény külső szélei egyszerűsítés nélkül maradnak"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:119
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:141
+msgid "**Simplified**"
+msgstr "**Egyszerűsített**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:144
+msgid "The output polygon vector layer, with a lower number of vertices."
+msgstr ""
+"A csökkentett számú töréspontot tartalmazó kimeneti vektoros felületréteg."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:149
+msgid "**Algorithm ID**: ``native:coveragesimplify``"
+msgstr "**Algoritmus azonosítója**: ``native:coveragesimplify``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:159
+msgid "Validate coverage"
+msgstr "Fedvény érvényesítése"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:161
+msgid ""
+"Analyzes a coverage (represented as a set of polygon features with exactly "
+"matching edge geometry) to find places where the assumption of exactly "
+"matching edges is not met. Invalidity includes polygons that overlap or that"
+" have gaps smaller than the specified gap width."
+msgstr ""
+"Egy fedvény (egymáshoz pontosan illeszkedő oldalú geometriák) elemzését "
+"végzi el, hogy megtalálja azokat a helyeket, ahol nem teljesül az élek "
+"pontos illeszkedésének feltétele. Érvénytelennek tekinti az átfedő "
+"felületeket, illetve azokat, melyek közti hézag kisebb a megadott "
+"hézagszélességnél."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:167
 msgid ":ref:`qgischeckvalidity`"
 msgstr ":ref:`qgischeckvalidity`"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:184
+msgid "**Gap width**"
+msgstr "**Rés szélessége**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:185
 msgid "``GAP_WIDTH``"
 msgstr "``GAP_WIDTH``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:189
+msgid "The maximum width of gap to detect"
+msgstr "A felismerendő rés maximális szélessége"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:190
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:212
+msgid "**Invalid edges**"
+msgstr "**Érvénytelen élek**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:191
 msgid "``INVALID_EDGES``"
 msgstr "``INVALID_EDGES``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:214
+msgid "[vector: line]"
+msgstr "[vektor: vonal]"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "Kimenet kihagyása"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:215
+msgid ""
+"The output line vector layer showing error edges for each invalid polygon."
+msgstr ""
+"A kimeneti vektoros vonalréteg, ami az egyes érvénytelen poligonok hibás "
+"éleit tartalmazza."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:216
+msgid "**Validity result**"
+msgstr "**Érvényesítési eredmény**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:217
 msgid "``IS_VALID``"
 msgstr "``IS_VALID``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:219
+msgid "Returns whether the coverage is valid or not."
+msgstr "Visszaadja, hogy a fedvény érvényes vagy sem."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcoverage.rst:224
+msgid "**Algorithm ID**: ``native:coveragevalidate``"
+msgstr "**Algoritmus azonosítója**: ``native:coveragevalidate``"
