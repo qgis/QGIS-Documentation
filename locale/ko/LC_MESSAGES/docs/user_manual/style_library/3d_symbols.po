@@ -6,7 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Kwon.Yongchan <ruvyn@naver.com>, 2025
+# Kwon.Yongchan <ruvyn@naver.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2025\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -125,6 +125,19 @@ msgstr ""
 "반경(:guilabel:`Radius`) 과 작은 반경(:guilabel:`Minor radius`)으로 정의되는 "
 ":guilabel:`Torus` (`원환면 "
 "<https://ko.wikipedia.org/wiki/%EC%9B%90%ED%99%98%EB%A9%B4>`_) 형태"
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:46
+msgid ""
+":guilabel:`3D Model`, using a 3D model file: supported formats include "
+"wavefront :file:`.obj`, :file:`.glTF` and :file:`.fbx`. Models can be a file"
+" on disk, a remote URL or :ref:`embedded in the project "
+"<embedded_file_selector>`. Community-created models are shared on the `QGIS "
+"Hub <https://hub.qgis.org/wavefronts>`_."
+msgstr ""
+"3차원 모델 파일을 사용하는 :guilabel:`3D Model`: 지원 포맷은 파면(wavefront) :file:`.obj`, "
+":file:`.glTF` 및 :file:`.fbx` 파일을 포함합니다. 모델은 디스크 상에 저장된 파일일 수 있고, 원격 URL일 수도 "
+"있으며, :ref:`프로젝트에 내장 <embedded_file_selector>` 되어 있을 수도 있습니다. `QGIS 허브 "
+"<https://hub.qgis.org/wavefronts>`_ 에서 커뮤니티가 생성한 모델들을 공유하고 있습니다."
 
 #: ../../docs/user_manual/style_library/3d_symbols.rst:51
 msgid ""
@@ -360,6 +373,24 @@ msgid ""
 "depends on the geometry type of the symbol:"
 msgstr "QGIS에서는 다양한 음영 기법을 사용하는데, 그 사용성은 심볼의 도형 유형에 따라 달라집니다:"
 
+#: ../../docs/user_manual/style_library/3d_symbols.rst:163
+msgid ""
+":guilabel:`Realistic (Phong)`: describes the way a surface reflects light as"
+" a combination of the :guilabel:`Diffuse` reflection of rough surfaces with "
+"the :guilabel:`Specular` reflection of shiny surfaces "
+"(:guilabel:`Shininess`). It also includes an :guilabel:`Ambient` option to "
+"account for the small amount of light that is scattered about the entire "
+"scene. Use the :guilabel:`Opacity` slider to render semi-transparent objects"
+" in 3D. Read more at `Phong reflection description "
+"<https://en.wikipedia.org/wiki/Phong_reflection_model>`_."
+msgstr ""
+":guilabel:`Realistic (Phong)`: 거친 표면의 :guilabel:`Diffuse` 반사와 광택이 있는 "
+"(:guilabel:`Shininess`) 표면의 :guilabel:`Specular` 반사를 조합해서 표면이 빛을 반사하는 방식을 "
+"설명합니다. 신 전체에 확산되는 소량의 빛을 연산에 넣을 수 있는 :guilabel:`Ambient` 옵션도 포함하고 있습니다. "
+"3차원에서 반쯤 투명한 객체를 렌더링하려면 :guilabel:`Opacity` 슬라이드 바를 이용하십시오. 더 자세한 내용은 "
+"`퐁(Phong) 반사 모델에 대한 설명 "
+"<https://en.wikipedia.org/wiki/Phong_reflection_model>`_ 을 읽어보세요."
+
 #: ../../docs/user_manual/style_library/3d_symbols.rst:170
 msgid ""
 ":guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic "
@@ -374,6 +405,36 @@ msgstr ""
 "있고, 원격 URL일 수도 있으며, :ref:`프로젝트에 내장 <embedded_file_selector>` 되어 있을 수도 있습니다. "
 ":guilabel:`Texture scale` 과 :guilabel:`Texture rotation` 을 설정해줘야 합니다. 반쯤 투명한"
 " 3차원 객체를 렌더링하려면 :guilabel:`Opacity` 슬라이드 바를 이용하십시오."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:176
+msgid ""
+":guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-"
+"tones so that edge lines and highlights remain visually prominent. Along "
+"with the :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` "
+"options, you need to provide a :guilabel:`Warm` color (for surface facing "
+"toward the light) and a :guilabel:`Cool` color (for the ones facing away). "
+"Also, the relative contributions to the cool and warm colors by the diffuse "
+"color are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties "
+"respectively. See also `Gooch shading "
+"<https://en.wikipedia.org/wiki/Gooch_shading>`_."
+msgstr ""
+":guilabel:`CAD (Gooch)`: 이 기법은 경계선이 계속 강조되고 시각적으로 두드러져 보이도록 음영이 중간 톤으로만 발생하게"
+" 해줍니다. :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` 옵션 "
+"외에, (조명을 바라보는 표면을 위한) :guilabel:`Warm` 색상 및 (조명 반대 방향을 바라보는 표면을 위한) "
+":guilabel:`Cool` 색상을 정의해야 합니다. 또한 :guilabel:`Alpha` 와 :guilabel:`Beta` 속성이 "
+"확산(diffuse) 색상이 차가운 색상과 따뜻한 색상에 각각 미치는 상대적 기여도를 제어합니다. `구치 음영법(Gooch "
+"shading)에 대한 설명 <https://en.wikipedia.org/wiki/Gooch_shading>`_ 도 읽어보세요."
+
+#: ../../docs/user_manual/style_library/3d_symbols.rst:184
+msgid ""
+":guilabel:`Metal Roughness`: a physically based rendering material that "
+"provides an accurate representation of how light interacts with surfaces. "
+"Options are available for setting the material :guilabel:`Base color`, "
+":guilabel:`Metalness` and :guilabel:`Roughness`."
+msgstr ""
+":guilabel:`Metal Roughness`: 빛과 표면이 어떻게 상호작용하는지에 대한 정확한 재현을 제공하는 물리 기반 렌더링 "
+"재질입니다. 재질 설정에 :guilabel:`Base color`, :guilabel:`Metalness` 및 "
+":guilabel:`Roughness` 옵션을 사용할 수 있습니다."
 
 #: ../../docs/user_manual/style_library/3d_symbols.rst:188
 msgid ":guilabel:`Embedded Textures` with 3D models shape"
