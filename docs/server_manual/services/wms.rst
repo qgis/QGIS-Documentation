@@ -17,7 +17,7 @@ Standard requests provided by QGIS Server:
 
 .. csv-table::
    :header: "Request", "Description"
-   :widths: auto
+   :widths: 30, 70
 
    ":ref:`GetCapabilities <wms_getcapabilities>`", "Returns XML metadata with information about the server"
    ":ref:`GetMap <wms_getmap>`", "Returns a map"
@@ -31,7 +31,7 @@ Vendor requests provided by QGIS Server:
 
 .. csv-table::
    :header: "Request", "Description"
-   :widths: auto
+   :widths: 30, 70
 
    ":ref:`GetPrint <wms_getprint>`", "Returns a QGIS layout"
    ":ref:`GetProjectSettings <wms_getprojectsettings>`", "Returns specific information about QGIS Server"
@@ -84,6 +84,7 @@ WMS 1.1.1 and 1.3.0 specifications:
 .. csv-table::
    :header: "Parameter", "Required", "Description"
    :widths: auto
+   :class: longtable
 
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetMap**)"
@@ -107,7 +108,8 @@ as well as the following extra parameters:
 
 .. csv-table::
    :header: "Parameter", "Required", "Description"
-   :widths: 20, 10, 65
+   :widths: 30, 15, 55
+   :class: longtable
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
    ":ref:`BGCOLOR <wms_bgcolor>`", "No", "Specify the background color"
@@ -595,7 +597,8 @@ the OGC WMS 1.1.1 and 1.3.0 specifications:
 
 .. csv-table::
    :header: "Parameter", "Required", "Description"
-   :widths: auto
+   :widths: 30, 15, 55
+   :class: longtable
 
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
    ":ref:`REQUEST <services_basics_request>`", "Yes", "Name of the request (**GetFeatureInfo**)"
@@ -1730,7 +1733,8 @@ parameters:
 
 .. csv-table::
    :header: "Parameter", "Required", "Description"
-   :widths: auto
+   :widths: 30, 15, 55
+   :class: longtable
 
    ":ref:`MAP <services_basics_map>`", "Yes", "QGIS project file"
    ":ref:`SERVICE <services_basics_service>`", "Yes", "Name of the service (**WMS**)"
