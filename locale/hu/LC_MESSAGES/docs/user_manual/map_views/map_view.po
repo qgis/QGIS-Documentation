@@ -7,7 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
-# Báthory Péter <bathory86p@gmail.com>, 2025
+# Báthory Péter <bathory86p@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-27 12:44+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2026\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -581,6 +581,13 @@ msgid ""
 msgstr ""
 "a :menuselection:`Nézet --> Panelek --> Időbeli vezérlő panel` menüből"
 
+#: ../../docs/user_manual/map_views/map_view.rst:196
+msgid ""
+"or from the :menuselection:`View --> Data Filtering --> Temporal controller "
+"panel` menu"
+msgstr ""
+"a :menuselection:`Nézet --> Adatszűrés --> Időbeli vezérlő panel` menüből"
+
 #: ../../docs/user_manual/map_views/map_view.rst:202
 msgid "The temporal controller panel"
 msgstr "Az időbeli vezérlő panel"
@@ -636,6 +643,18 @@ msgstr ""
 #: ../../docs/user_manual/map_views/map_view.rst:1477
 msgid "temporalNavigationAnimated"
 msgstr "temporalNavigationAnimated"
+
+#: ../../docs/user_manual/map_views/map_view.rst:219
+msgid ""
+"|temporalNavigationMovie| :sup:`Animated movie`: a total number of frames is"
+" set for the animation, with the map settings advancing at each step, "
+"displaying the progression frame by frame without any time-based filtering "
+"of data."
+msgstr ""
+"|temporalNavigationMovie| :sup:`Animált film`: az animációhoz a képkockák "
+"száma van beállítva, a térképbeállítások minden lépésnél előrehaladnak, és a"
+" folyamatot képkockáról képkockára jeleníti meg, az adatok időalapú szűrése "
+"nélkül."
 
 #: ../../docs/user_manual/map_views/map_view.rst:1481
 msgid "temporalNavigationMovie"
@@ -851,9 +870,71 @@ msgstr "az animáció :guilabel:`Tartománya`"
 msgid "the :guilabel:`Step (frame length)` in the unit of your choice"
 msgstr "a :guilabel:`Lépés (képkockahossz)` a megadott mértékegységben"
 
+#: ../../docs/user_manual/map_views/map_view.rst:306
+msgid "The Elevation Controller panel"
+msgstr "A magassági vezérlő panel"
+
+#: ../../docs/user_manual/map_views/map_view.rst:308
+msgid ""
+"|elevation| :guilabel:`Elevation Controller` allows you to handle elevation "
+"z-range data in 2D maps. This option currently supports point cloud layers "
+"and raster DEMs. Use the panel to visualize and interact with elevation data"
+" in the map canvas."
+msgstr ""
+"a |elevation| :guilabel:`Magassági vezérlő` lehetővé teszi a magassági "
+"z-tartomány adatainak kezelését 2D térképeken. Ez az opció jelenleg "
+"pontfelhő rétegeket és raszteres DEM-eket támogat. A panelen keresztül "
+"megjelenítheti és kezelheti a magassági adatokat a térképvásznon."
+
 #: ../../docs/user_manual/map_views/map_view.rst:1410
 msgid "elevation"
 msgstr "elevation"
+
+#: ../../docs/user_manual/map_views/map_view.rst:312
+msgid ""
+"Activate the |elevation| :guilabel:`Elevation Controller` panel in the map "
+"canvas by clicking on the :guilabel:`Data Filtering` in the :guilabel:`View`"
+" menu. The |elevation| :guilabel:`Elevation Controller` appears as a range "
+"slider on the left side of the map canvas. At the top of the slider, there "
+"is a |settings| :sup:`Settings` menu where you can:"
+msgstr ""
+"Aktiválja a |elevation| :guilabel:`Magassági vezérlő` panelt a térképvásznon"
+" a :guilabel:`Nézet` menü :guilabel:`Adatszűrés` menüpontjában. A "
+"|elevation| :guilabel:`Magassági vezérlő` a térkép bal oldalán egy "
+"tartományállító csúszka formájában jelenik meg. A csúszka tetején található "
+"a |settings| :sup:`Beállítások` menü, ahol a következőket teheti:"
+
+#: ../../docs/user_manual/map_views/map_view.rst:318
+msgid ""
+"Set the :guilabel:`Fixed Range Size` value to lock the elevation range to a "
+"specific size. This setting is saved within the project and retained across "
+"sessions, ensuring consistency for your elevation filter. Use the |checkbox|"
+" :guilabel:`Invert Direction` option to reverse the elevation filter slider,"
+" so that it moves from high values at the bottom to low values at the top."
+msgstr ""
+"Beállíthatja a :guilabel:`Fix tartományméret` értéket, hogy a magassági "
+"tartományt egy adott méretre rögzítse. Ez a beállítás a projektben kerül "
+"mentésre, és a munkamenetek között is megmarad, így biztosítva a magassági "
+"szűrő konzisztenciáját. Az |checkbox| :guilabel:`Irány megfordítása` "
+"opcióval megfordíthatja a magassági szűrő csúszkáját, így az alulról felfelé"
+" haladva a magas értékektől az alacsony értékek felé mozog."
+
+#: ../../docs/user_manual/map_views/map_view.rst:322
+msgid ""
+":guilabel:`Set Elevation Range` to open the project elevation tab, where you"
+" can set dedicated lower and upper bounds for the elevation range"
+msgstr ""
+"A :guilabel:`Magassági tartomány beállítása` megnyitja a projekt "
+"beállításainak Magasság fülét, ahol megadhatja a magasságtartomány alsó és "
+"felső határait"
+
+#: ../../docs/user_manual/map_views/map_view.rst:323
+msgid ""
+":guilabel:`Disable Elevation Filter` to remove the elevation filter from the"
+" map canvas"
+msgstr ""
+"A :guilabel:`Magassági szűrés letiltásával` eltávolíthatja a magassági "
+"szűrőt a térképvászonról"
 
 #: ../../docs/user_manual/map_views/map_view.rst:331
 msgid "Bookmarking extents on the map"
@@ -931,6 +1012,10 @@ msgid ""
 msgstr ""
 "Válassza ki a menteni kívánt terület terjedelmét a :ref:`terjedelemválasztó "
 "<extent_selector>` vezérlő segítségével"
+
+#: ../../docs/user_manual/map_views/map_view.rst:364
+msgid "Change the map :guilabel:`Rotation`"
+msgstr "Módosítsa a térkép :guilabel:`Forgatását`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:365
 msgid "Indicate the :guilabel:`CRS` to use for the extent"
@@ -1152,6 +1237,16 @@ msgid ""
 msgstr ""
 "A könyvjelzőt a mappák (felhasználói és projekt) és az almappák (csoportok) "
 "között is áthúzhatja."
+
+#: ../../docs/user_manual/map_views/map_view.rst:435
+msgid ""
+"You can manage bookmark actions by right-click on the desired bookmark in "
+"the :guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by"
+" typing the bookmark name in the :ref:`locator <label_statusbar>`."
+msgstr ""
+"A könyvjelzők műveleteit a :guilabel:`Térbelikönyvjelző-kezelő` ablakban a "
+"kívánt könyvjelzőre kattintva kezelheti. A könyvjelzőkre nagyíthat is, ha "
+"beírja a könyvjelző nevét a :ref:`keresősáv <label_statusbar>` mezőbe."
 
 #: ../../docs/user_manual/map_views/map_view.rst:443
 msgid "Decorating the map"
