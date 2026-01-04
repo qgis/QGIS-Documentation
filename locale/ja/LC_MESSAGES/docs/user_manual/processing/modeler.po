@@ -8,7 +8,7 @@
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
-# tomoya miyoshi, 2025
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-04 20:12+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: tomoya miyoshi, 2025\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1031,9 +1031,58 @@ msgstr ""
 "タブを開くか、右クリックすることで行えます。同じタブで、個々のモデルコメントに対して手動で色を設定することができます。コメントはモデラーキャンバスのみに表示され、最終アルゴリズムダイアログには表示されません。"
 " :menuselection:`ビュー --> コメントを表示` を無効にすることで非表示にすることができます。"
 
+#: ../../docs/user_manual/processing/modeler.rst:488
+msgid "Your model can be run in various ways:"
+msgstr "モデルは複数の方法で実行することができます:"
+
+#: ../../docs/user_manual/processing/modeler.rst:490
+msgid ""
+"You can run the whole model by clicking on |start| :sup:`Run Model...` from "
+"the toolbar, right-clicking on the model in the :guilabel:`Browser panel` or"
+" :menuselection:`Model -->` |start| :menuselection:`Run Model...`: when "
+"using the editor to execute a model, any non-default values will be saved in"
+" the inputs. This means that executing the model at a later time from the "
+"editor will have the dialog prefilled with those values on any subsequent "
+"run."
+msgstr ""
+"モデル全体を実行するには、ツールバーの |start| :sup:`モデルを実行...` をクリックするか、:guilabel:`ブラウザパネル` "
+"内のモデルを右クリックするか、:menuselection:`モデル -->` |start| :menuselection:`モデルを実行...` "
+"を選択します。エディタを使用してモデルを実行する場合、デフォルト以外の値は入力に保存されます。これは、後でエディタからモデルを実行する際、以降の実行ではダイアログにそれらの値が事前に入力された状態で表示されることを意味します。"
+
 #: ../../docs/user_manual/processing/modeler.rst:740
 msgid "start"
 msgstr "start"
+
+#: ../../docs/user_manual/processing/modeler.rst:496
+msgid ""
+"You can select elements of the model and run only that subset of the model: "
+"press the |runSelected| :guilabel:`Run Selected Steps...` option from the "
+":menuselection:`Models -->` menu or from the contextual menu of a selected "
+"algorithm. The initial state will be taken from any previous executions of "
+"the model through the editor, so results from previous steps in the model "
+"are available for the selected steps. This makes it possible to fix parts of"
+" a large model, without having to constantly run the entire model to test. "
+"Especially useful when earlier steps in the model are time consuming."
+msgstr ""
+"モデルの要素を選択し、そのモデルのサブセットのみを実行できます：:menuselection:`モデル -->` "
+"メニューまたは選択したアルゴリズムのコンテキストメニューから、|runSelected| :guilabel:`選択したステップを実行...` "
+"オプションを押してください。初期状態はエディタ経由でのそのモデルの前回の実行から引き継がれるため、そのモデル内の前回のステップの結果を選択したステップで利用できます。これによって、大きなモデルの一部を修正するときにテストのために常にモデル全体を実行する必要がなくなります。モデルの初期ステップに時間がかかる場合に特に有用です。"
+
+#: ../../docs/user_manual/processing/modeler.rst:504
+msgid ""
+"You can run a subset of the model, starting from a specific algorithm: "
+"right-click the algorithm and select |start| :guilabel:`Run from Here...`. "
+"Likewise, values are taken from previous executions."
+msgstr ""
+"モデルのサブセットを実行できます。特定のアルゴリズムから開始するには：そのアルゴリズムを右クリックし、|start| "
+":guilabel:`ここから実行...` を選択します。同様に、値は前回の実行から取得されます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:507
+msgid ""
+"In order to use the algorithm from the Processing Toolbox, it has to be "
+"saved and the modeler dialog closed, to allow the toolbox to refresh its "
+"contents."
+msgstr "プロセシングツールボックスのアルゴリズムを使用するには、保存してモデラーダイアログを閉じ、ツールボックスに内容を更新させる必要があります。"
 
 #: ../../docs/user_manual/processing/modeler.rst:512
 msgid "Documenting your model"
@@ -1218,6 +1267,13 @@ msgid ""
 "model."
 msgstr "現在作成中のモデルを編集し、ワークフローや、モデルを定義するアルゴリズムと入力の関係を再定義することができます。"
 
+#: ../../docs/user_manual/processing/modeler.rst:613
+msgid ""
+"You can also edit existing model from the :guilabel:`Browser panel` choosing"
+" :guilabel:`Edit Model...` option."
+msgstr ""
+"既存のモデルは、:guilabel:`ブラウザパネル` から:guilabel:`モデルを編集...` オプションを選択して編集することもできます。"
+
 #: ../../docs/user_manual/processing/modeler.rst:616
 msgid ""
 "If you right-click on an algorithm in the canvas, you will see a context "
@@ -1226,7 +1282,34 @@ msgstr "キャンバス内のアルゴリズムを右クリックすると、次
 
 #: ../../docs/user_manual/processing/modeler.rst:624
 msgid "Modeler Right Click"
-msgstr "モデラー右ボタンクリック"
+msgstr "モデラーの右クリック"
+
+#: ../../docs/user_manual/processing/modeler.rst:626
+msgid ""
+"Options for :ref:`running part of the model <running_model>` have been "
+"exposed earlier."
+msgstr ":ref:`モデルの特定部分を実行する <running_model>` オプションは、以前に述べました。"
+
+#: ../../docs/user_manual/processing/modeler.rst:628
+msgid ""
+"Selecting the :guilabel:`Remove` option will cause the selected algorithm to"
+" be removed. An algorithm can be removed only if there are no other "
+"algorithms depending on it. That is, if no output from the algorithm is used"
+" as input in a different one."
+msgstr ""
+":guilabel:`削除` "
+"オプションを選択すると選択されているアルゴリズムを削除できます。アルゴリズムはそれに依存している他のアルゴリズムがないときだけ削除できます。つまり、そのアルゴリズムからの出力が別のアルゴリズムの入力として使われていないときです。"
+
+#: ../../docs/user_manual/processing/modeler.rst:632
+msgid ""
+"Selecting the :guilabel:`Edit...` option will show the parameter dialog so "
+"you can change the inputs and parameter values. Not all input elements "
+"available in the model will appear as available inputs. Layers or values "
+"generated at a more advanced step in the workflow defined by the model will "
+"not be available if they cause circular dependencies."
+msgstr ""
+":guilabel:`編集...` "
+"オプションを選択すると、パラメータダイアログが表示され、入力やパラメータの値を変更できます。モデルで利用可能なすべての入力要素が利用可能な入力として表示されるわけではありません。モデルで定義されたワークフローのより高度なステップで生成されたレイヤや値は、循環依存関係を引き起こす場合には利用できません。"
 
 #: ../../docs/user_manual/processing/modeler.rst:638
 msgid ""
@@ -1242,6 +1325,13 @@ msgid ""
 "to better describe the behavior."
 msgstr ":guilabel:`コメントを追加...` を使うと、アルゴリズムにコメントを追加して動作をより分かりやすく説明することができます。"
 
+#: ../../docs/user_manual/processing/modeler.rst:644
+msgid ""
+"Right-clicking an input parameter will also allow you to :guilabel:`Remove`,"
+" :guilabel:`Edit…` and :guilabel:`Add comment…`"
+msgstr ""
+"入力パラメータを右クリックすると、次の操作も可能です：:guilabel:`削除`、:guilabel:`編集…`、:guilabel:`コメントを追加…`"
+
 #: ../../docs/user_manual/processing/modeler.rst:647
 msgid ""
 "A model can be run partially by deactivating some of its algorithms. To do "
@@ -1254,6 +1344,53 @@ msgstr ""
 " :guilabel:`無効化` "
 "オプションを選択します。選択されたアルゴリズムと、それに依存するモデル内のすべてのアルゴリズムが灰色で表示され、モデルの一部として実行されなくなります。"
 
+#: ../../docs/user_manual/processing/modeler.rst:658
+msgid "Model with a deactivated algorithm"
+msgstr "無効化されたアルゴリズムを持ったモデル"
+
+#: ../../docs/user_manual/processing/modeler.rst:660
+msgid ""
+"When right-clicking on an algorithm that is not active, you will see an "
+":guilabel:`Activate` menu option that you can use to reactivate it."
+msgstr "アクティブでないアルゴリズムを右クリックすると、 :guilabel:`有効化` メニューオプションが表示され、再びアクティブにできます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:663
+msgid ""
+"When editing a model through the designer (and after having run that model),"
+" right-clicking any child step in the model allows to select "
+"|showSelectedLayers| :guilabel:`View Output Layers`. This will add the "
+"output layers from that step as new layers in the current QGIS project."
+msgstr ""
+"デザイナーでモデルを編集する際（およびそのモデルを実行した後）、モデル内の任意の子ステップを右クリックすると、|showSelectedLayers| "
+":guilabel:`出力レイヤを見る` "
+"を選択できます。これにより、そのステップの出力レイヤが現在のQGISプロジェクトに新しいレイヤとして追加されます。 "
+
 #: ../../docs/user_manual/processing/modeler.rst:738
 msgid "showSelectedLayers"
 msgstr "showSelectedLayers"
+
+#: ../../docs/user_manual/processing/modeler.rst:667
+msgid ""
+"This action is available for all child algorithms in the model, even if the "
+"model is not configured to use the outputs from those children as model "
+"outputs. This is designed as a helpful debugging action. If a model fails "
+"(or gives unexpected results), you can then trace through the model and view"
+" the outputs for suspected problematic steps. It avoids the need to add "
+"temporary outputs to a model and re-run to test."
+msgstr ""
+"この操作は、たとえモデルがその子アルゴリズムの出力をモデルの出力として使うよう設定していなくても、モデル内の全ての子アルゴリズムで利用できます。これは便利なデバッグ操作として設計されています。モデルが失敗した場合（または予期しない結果を返した場合）、モデルを通してトレースし、問題が疑われるステップの出力を見ることができます。これにより、テストのためにモデルに臨時の出力を追加して再実行するのを避けられます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:673
+msgid ""
+"Additionally, this action is always available after running the model, even "
+"if the model itself failed (e.g., because of a misconfigured step later in "
+"the model)."
+msgstr ""
+"さらにこの操作は、たとえモデル自体が（例：モデル内の後続ステップの設定ミスによって）失敗した場合であっても、モデルの実行後には常に利用できます。"
+
+#: ../../docs/user_manual/processing/modeler.rst:676
+msgid ""
+"The :guilabel:`View Log` action helps you see the log for each child "
+"algorithm after you've closed down the algorithm dialog."
+msgstr ""
+":guilabel:`ログを見る` アクションは、アルゴリズムダイアログを閉じた後、それぞれの子アルゴリズムのログを確認するのに役立ちます。 "
