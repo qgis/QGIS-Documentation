@@ -256,6 +256,18 @@ several ways to define these variables. This is fully described in
      - filesystem
      - All
 
+   * - QGIS_SERVER_RETRY_BAD_LAYERS
+        "Bad" layers are layers that cannot be loaded when opening a project,
+        due to, e.g., a web service or a database that was down.
+        They can be ignored in order to consider the project valid and open it,
+        and will be kept ignored even if they become available later on.
+
+        Set this option to ``true`` to make the server check upon each request
+        if the bad layers are available again.
+        An available layer is marked as valid and loaded by the server.
+     - false
+     - All
+
    * - .. _qgis_server_service_url:
 
        QGIS_SERVER_SERVICE_URL
