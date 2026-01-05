@@ -7,11 +7,11 @@
 # Translators:
 # fairtommy <fairtommy@gmail.com>, 2025
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
-# tomoya miyoshi, 2025
 # Transifex Bot <>, 2025
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2025
 # Shota Arakawa, 2025
 # Harrissou Sant-anna, 2025
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -20,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-04 20:12+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -916,12 +916,12 @@ msgid ""
 "directly lead to the documentation of the appopriate driver for the selected"
 " file format."
 msgstr ""
-"選択したレイヤータイプによっては、追加の :guilabel:`オプション` "
+"選択したレイヤ型によっては、追加の :guilabel:`オプション` "
 "（エンコーディング、geometryタイプ、テーブルフィルタリング、ファイルロック、データフォーマット設定 "
-"など）が設定用に利用可能です。これらのオプションは該当するGDALの "
-"`ベクタ形式<https://gdal.org/en/latest/drivers/vector/>` や "
-"`ラスタ形式<https://gdal.org/en/latest/drivers/raster>` "
-"のドライバードキュメントで説明されています。オプション一覧の一番上には、選択したファイル形式に対応するドライバーのドキュメントに直接リンクする、ハイパーリンクテキストが表示されます。"
+"など）が設定に利用できます。これらのオプションは該当するGDALの `ベクタ形式 "
+"<https://gdal.org/en/latest/drivers/vector/>` や `ラスタ形式 "
+"<https://gdal.org/en/latest/drivers/raster>` "
+"のドライバドキュメントに説明されています。オプション一覧の一番上には、選択したファイル形式に対応するドライバのドキュメントに直接リンクしている、ハイパーリンクテキストが表示されます。"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:395
 msgid "Loading a Shapefile with open options"
@@ -1054,7 +1054,7 @@ msgid ""
 ":guilabel:`Object key` first. After that, you can add the necessary "
 ":guilabel:`Credential Options`."
 msgstr ""
-" ``AWS S3``, ``Google クラウドストレージ``, ``Microsoft Azure Blob``, ``Microsoft "
+"``AWS S3``, ``Google クラウドストレージ``, ``Microsoft Azure Blob``, ``Microsoft "
 "Azure Data Lake ストレージ``, ``Alibaba OSS クラウド`` や ``Open Stack Swift ストレージ`` "
 "などのクラウドストレージはORGベクタデータやGDALラスタデータのレイヤー追加時に、VSI経由で直接制御するための "
 ":guilabel:`資格情報オプション` がサポートされています。 :guilabel:`バケット名またはコンテナ名` を指定し、 "
@@ -2476,6 +2476,43 @@ msgstr ""
 msgid "Optionally, you can activate the following options:"
 msgstr "オプションで、以下のオプションを有効にできます："
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1130
+msgid ""
+"|checkbox| :guilabel:`Only look in the geometry_columns metadata table`: "
+"restricts the available tables to the ones in the ``geometry_columns`` "
+"metadata table when scanning for tables. This can speed up the table "
+"scanning."
+msgstr ""
+"|checkbox| :guilabel:`geometry_columns メタデータテーブルにあるテーブルのみ参照する`: "
+"テーブル検索時に利用可能なテーブルを ``geometry_columns`` "
+"メタデータテーブル内のものに制限します。これによりテーブル検索を高速化できます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1134
+msgid ""
+"|checkbox| :guilabel:`Use layer extent from geometry_columns table`: this "
+"option, dependent on the previous one, allows QGIS to skip extent "
+"calculation when loading layers and thus lowering the amount of time needed "
+"to load them. It relies on extent manually specified using additional QGIS-"
+"specific columns (``qgis_xmin``, ``qgis_xmax``, ``qgis_ymin``, "
+"``qgis_ymax``) in the ``geometry_columns`` table."
+msgstr ""
+"|checkbox| :guilabel:`geometry_columnsテーブルのレイヤ範囲を使用`: "
+"このオプションは前のオプションに依存しており、QGISがレイヤを読み込みときに範囲計算をスキップできるようにし、レイヤの読み込みに必要な時間を短縮できます。これは、``geometry_columns``テーブルのQGIS固有の追加カラム（``qgis_xmin``、``qgis_xmax``、``qgis_ymin``、``qgis_ymax``）を使って手動で指定した範囲に依存します。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1140
+msgid ""
+"|checkbox| :guilabel:`Use primary key from geometry_columns table`: allows "
+"QGIS to skip primary key calculation for views when loading them, thus "
+"lowering the amount of time needed to load them. It relies on names manually"
+" filled in a QGIS-specific ``qgis_pkey`` column set in the "
+"``geometry_columns`` table. If more than one column is used for the primary "
+"key, they should be filled as comma separated values."
+msgstr ""
+"|checkbox| :guilabel:`geometry_columnsテーブルのプライマリキーを使用`: "
+"ビューを読み込むときにQGISが主キーの計算をスキップできるようにし、読み込みに必要な時間を短縮できます。これは、``geometry_columns``"
+" テーブルに設定されたQGIS固有の ``qgis_pkey`` "
+"カラムに手動で入力された名前を基に動作します。複数のカラムを主キーとして使用するときは、コンマ区切り値で入力してください。"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1147
 msgid ""
 "|checkbox| :guilabel:`Also list table with no geometry`: tables without a "
@@ -2940,6 +2977,14 @@ msgid ""
 "files from the system file manager into the map canvas."
 msgstr ""
 "QLRファイルはブラウザパネル内に表示され、レイヤを（保存されたスタイルで）レイヤパネルに追加するために使用できます。QLRファイルをシステムのファイルマネージャからマップキャンバスへとドラッグ＆ドロップすることもできます。"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1368
+msgid "Available actions for QLR files in the Browser Panel are:"
+msgstr "ブラウザパネルでQLRファイルにできる操作は次のとおりです:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1370
+msgid ":menuselection:`Export Layer --> To file`"
+msgstr ":menuselection:`レイヤエクスポート --> ファイルへ`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1372
 msgid ":guilabel:`Layer Properties...`"
