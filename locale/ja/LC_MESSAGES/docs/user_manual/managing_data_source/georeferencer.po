@@ -7,10 +7,10 @@
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
 # fairtommy <fairtommy@gmail.com>, 2025
-# tomoya miyoshi, 2025
 # Harrissou Sant-anna, 2025
 # KATO YUDAI, 2025
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2025
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-22 08:15+0000\n"
 "PO-Revision-Date: 2025-04-22 08:17+0000\n"
-"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -324,8 +324,8 @@ msgid ""
 "coordinates (mmmm.mm)), which correspond with the selected point on the "
 "image, two alternative procedures can be used:"
 msgstr ""
-"画像上の選択された点に対応するX、Y座標（度分秒（dd mm ss.ss）や度（dd.dd）、あるいは投影された座標（mmmm.mm））の設定手順には、"
-" 2つの選択肢があります："
+"画像上の選択された点に対応するX、Y座標（度分秒（dd mm ss.ss）や度（dd.dd）、あるいは投影座標（mmmm.mm））の設定手順には、 "
+"2つの選択肢があります："
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:62
 msgid ""
@@ -391,7 +391,7 @@ msgid ""
 "points."
 msgstr ""
 "ジオリファレンスされていないラスタのジオリファレンスを開始するには、 |addRasterLayer| "
-"ボタンを使用してそのラスタをロードする必要があります。ラスタはダイアログのメインの作業領域に表示されます。ラスタがロードされると、基準点の入力を開始できます。"
+"ボタンを使用してそのラスタをロードする必要があります。ラスタはダイアログのメインの作業エリアに表示されます。ラスタがロードされると、基準点の入力を開始できます。"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:102
 msgid ""
@@ -435,11 +435,11 @@ msgid ""
 "on the map canvas. This option only takes effect when the georeferencer "
 "window is not docked in the main interface."
 msgstr ""
-"メインマップキャンバスからGCPを入力するとき、メインキャンバスから点を選択している間、ジオリファレンスウインドウを隠すオプションがあります。|checkbox|"
+"メインのマップキャンバスからGCPを入力するとき、メインキャンバスから点を選択している間はジオリファレンサウインドウを隠すオプションがあります。|checkbox|"
 " :guilabel:`ジオリファレンサのウィンドウを自動で隠す` チェックボックスにチェックを入れると、 |pencil| "
 ":guilabel:`地図キャンバスから` "
-"をクリックした後、マップキャンバスに点が追加されるまで、メインのジオリファレンスウィンドウは隠されます。:guilabel:`地図座標の入力` "
-"ダイアログは開いたままになります。このボックスをオフにすると、マップキャンバス上で点を選択している間、両方のウィンドウが開いたままになります。このオプションはジオリファレンスウィンドウがメインインターフェイスにドッキングされていないときのみ効果があります。"
+"をクリックした後、マップキャンバスに点が追加されるまで、メインのジオリファレンサウィンドウは隠されます。:guilabel:`地図座標の入力` "
+"ダイアログは開いたままになります。このボックスをオフにすると、マップキャンバス上で点を選択している間、両方のウィンドウが開いたままになります。このオプションはジオリファレンサウィンドウがメインのインターフェイスにドッキングされていないときだけ効果があります。"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:358
 msgid "checkbox"
@@ -452,7 +452,7 @@ msgid ""
 "additional tools for zooming and panning the working area in order to locate"
 " a relevant set of GCP points."
 msgstr ""
-"点の入力を繰り返します。最低4点の指定が必要ですが、より多くの座標を入力すれば、より良い結果が得られます。また、関連するGCPポイントの組を適切な場所に置くために、作業領域をズームしたりパンしたりするツールもあります。"
+"点の入力を繰り返します。最低4点の指定が必要ですが、より多くの座標を入力すれば、より良い結果が得られます。また、関連するGCPポイントの組を適切な場所に置くために、作業エリアをズームしたりパンしたりするツールもあります。"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:130
 msgid ""
@@ -645,9 +645,7 @@ msgid ""
 " 'cubic resampling', for instance, will usually generate a visually smoother"
 " result."
 msgstr ""
-"どのようなリサンプリング方法を選択するかは、入力データと作業の最終目的によって異なります。（線形、ヘルマート、多項式1以外の変換を使用することによる不均一な幾何学的スケーリングによる影響以外で）ラスタの統計情報を変更したくない場合には、「最近傍（Nearest"
-" "
-"neighbour）」を選択するとよいでしょう。一方で、例えば「キュービック（Cubic）」リサンプリングはほとんどの場合、より視覚的に滑らかな結果が得られます。"
+"どのようなリサンプリング方法を選択するかは、入力データと作業の最終目的によって異なります。（線形、ヘルマート、多項式1以外の変換を使用することによる不均一な幾何学的スケーリングによる影響以外で）ラスタの統計情報を変更したくない場合には、「最近傍法」を選ぶとよいでしょう。一方で、例えば「キュービック法」はほとんどの場合、より視覚的に滑らかな結果が得られます。"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:224
 msgid "It is possible to choose between five different resampling methods:"
@@ -655,23 +653,23 @@ msgstr "5つの異なるリサンプリング方法から選択できます："
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:226
 msgid "Nearest neighbour"
-msgstr "最近傍（Nearest neighbour）"
+msgstr "最近傍法"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:227
 msgid "Bilinear (2x2 kernel)"
-msgstr "バイリニア（2x2 カーネル）"
+msgstr "バイリニア法（2x2カーネル）"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:228
 msgid "Cubic (4x4 kernel)"
-msgstr "キュービック（4x4 カーネル）"
+msgstr "キュービック法（4x4カーネル）"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:229
 msgid "Cubic B-Spline (4x4 kernel)"
-msgstr "キュービックBスプライン（4x4 カーネル）"
+msgstr "キュービックBスプライン法（4x4カーネル）"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:230
 msgid "Lanczos (6x6 kernel)"
-msgstr "ランチョス（6x6 カーネル）"
+msgstr "ランチョス法（6x6カーネル）"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:233
 msgid "Define the transformation settings"
@@ -691,8 +689,8 @@ msgid ""
 ":guilabel:`Output raster` field is not activated, because only a new world "
 "file will be created."
 msgstr ""
-"|checkbox| :guilabel:`ワールドファイルの作成のみ（リニア変換）` "
-"のチェックボックスは、線形変換タイプを指定した場合にのみ利用可能です。これは、実際にはラスタ画像は変換されないことを意味しています。チェックを入れた場合、新しいワールドファイルが作成されるのみのため、"
+"|checkbox| :guilabel:`ワールドファイルの作成のみ（線形変換）` "
+"のチェックボックスは、線形変換タイプを指定した場合にのみ利用可能です。これは、ラスタ画像は実際に変換されないことを意味しています。この場合、新しいワールドファイルが作成されるのみのため、"
 " :guilabel:`出力ラスタ` フィールドは無効になります。"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:243
@@ -813,7 +811,8 @@ msgid ""
 "Load the unreferenced vector layer using the |addOgrLayer| button. The "
 "vector layer will appear in the main working area of the dialog."
 msgstr ""
-"|addOgrLayer| ボタンを使って、参照されていないベクタレイヤを読み込みます。このベクタレイヤは、ダイアログのメイン作業エリアに表示されます。"
+"|addOgrLayer| "
+"ボタンを使って、参照されていないベクタレイヤを読み込みます。このベクタレイヤは、ダイアログのメインの作業エリアに表示されます。"
 
 #: ../../docs/user_manual/managing_data_source/georeferencer.rst:296
 msgid ""
