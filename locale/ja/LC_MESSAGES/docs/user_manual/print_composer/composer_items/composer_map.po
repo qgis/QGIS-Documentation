@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoya miyoshi, 2025
 # Harrissou Sant-anna, 2025
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2025
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,9 +45,9 @@ msgid ""
 "creation instructions <create_layout_item>` to add a new map item that you "
 "can later manipulate the same way as exposed in :ref:`interact_layout_item`."
 msgstr ""
-"地図アイテムは、あなたがマップキャンバスでデザインした地図を表示するメインフレームです。 |addMap| :guilabel:`地図を追加` "
-"ツールを使用して、  :ref:`地図アイテムの作成手順 <create_layout_item>` "
-"に従い、新しい地図アイテムを追加してください。これは、 :ref:`interact_layout_item` と同じ方法で操作できます。"
+"地図アイテムは、あなたがマップキャンバスでデザインした地図を表示する主要な枠です。 |addMap| :guilabel:`地図を追加` "
+"ツールを使用して、 :ref:`アイテムの作成手順 <create_layout_item>` に従い、新しい地図アイテムを追加してください。これは、 "
+":ref:`interact_layout_item` と同じ方法で操作できます。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:515
 msgid "addMap"
@@ -135,8 +135,7 @@ msgstr "showBookmarks"
 msgid ""
 "|moveItemContent| :sup:`Interactively edit map extent`: pan and zoom "
 "interactively within the map item"
-msgstr ""
-"|moveItemContent| :sup:`地図範囲をインタラクティブ編集` ：地図アイテム内でパンとズームがインタラクティブにできます"
+msgstr "|moveItemContent| :sup:`地図範囲をインタラクティブ編集` ：地図アイテム内で対話的にパンとズームができます"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:529
 msgid "moveItemContent"
@@ -487,6 +486,33 @@ msgstr ""
 "|moveItemContent| ツールが有効なときにマウスホイールを使用して拡大・縮小を行うと、表示された地図の縮尺を変更します。 "
 ":kbd:`Ctrl` キーを押しながら操作を行うと、小刻みな拡大・縮小ができます。"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:222
+msgid "Elevation range"
+msgstr "標高範囲"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:223
+msgid ""
+"The :guilabel:`Elevation range` setting in the map item properties allows "
+"you to filter the content of certain layers based on a specific elevation "
+"range. While all layers remain visible, those that support elevation "
+"filtering (currently point clouds and raster DEMs) will have their data "
+"filtered. Only the parts of these layers that fall within the elevation "
+"range set by the :guilabel:`Lower` and :guilabel:`Upper` values will be "
+"displayed."
+msgstr ""
+"地図アイテムのプロパティにある :guilabel:`標高範囲` "
+"設定を使用すると、特定の標高範囲に基づいて特定のレイヤの内容をフィルタリングできます。全てのレイヤは表示されたままですが、標高フィルタリングをサポートするレイヤ（現在は点群データとラスタDEM）のデータはフィルタされます。:guilabel:`下限`"
+" と :guilabel:`上限` の値で設定された標高範囲内に収まる部分のみが表示されます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:230
+msgid ""
+"The :guilabel:`Elevation range` can be data-defined. This means you can set "
+"different elevation ranges for different features in the :ref:`atlas "
+"<atlas_generation>` or :ref:`report <create-reports>`."
+msgstr ""
+":guilabel:`標高範囲` はデータによる定義が可能です。これは、:ref:`地図帳 <atlas_generation>` や "
+":ref:`レポート <create-reports>` で、異なる地物に対して異なる標高範囲を設定できることを意味します。"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:237
 msgid "Temporal range"
 msgstr "時系列範囲"
@@ -513,7 +539,7 @@ msgid ""
 "temporal range and control by atlas in the map item properties and hit atlas"
 " export."
 msgstr ""
-"関連するデータ定義ウィジェットは、時間範囲を動的にするのに役立ち、時間的な :ref:`atlases "
+"関連するデータ定義ウィジェットは、時間範囲を動的にするのに役立ち、時間的な :ref:`地図帳 "
 "<atlas_generation>`、すなわち、固定された空間範囲を持ち、その内容が時間に基づいて変化する自動化されたマップを出力することを可能にします。例えば、カバレッジレイヤとして、ひとつの開始と終了のフィールドペアと、たくさんの日付範囲を表す行を持つcsvファイルを使用し、地図アイテムプロパティで時系列範囲と地図帳による制御の両方を有効にし、地図帳のエクスポートを実行します。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:255
@@ -641,13 +667,90 @@ msgstr ""
 msgid "As grid type, you can specify to use a:"
 msgstr "グリッドタイプとして、以下に挙げるものを指定できます："
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:310
+msgid ""
+"**Solid**: shows a line across the grid frame. The :guilabel:`Line style` "
+"can be customized using :ref:`color <color-selector>` and :ref:`symbol "
+"<symbol-selector>` selector widget;"
+msgstr ""
+"**塗りつぶし**: グリッド枠に渡って線を表示します。:guilabel:`線のスタイル` は、:ref:`色 <color-selector>` と"
+" :ref:`シンボル <symbol-selector>` 選択ウィジェットを使ってカスタマイズできます;"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:313
+msgid ""
+"**Cross**: displays segment at the grid lines intersection for which you can"
+" set the :guilabel:`Line style` and the :guilabel:`Cross width`;"
+msgstr ""
+"**クロス**: グリッド線の交点の位置に区切りを表示します。 :guilabel:`線のスタイル` と :guilabel:`交差幅` "
+"を設定できます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:315
+msgid ""
+"**Markers**: only displays customizable markers symbol at grid lines "
+"intersection;"
+msgstr "**マーカー** ：グリッド線の交点の位置にカスタマイズ可能なマーカーシンボルを表示します。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:316
+msgid "or **Frame and annotations only**."
+msgstr "**フレームと注記のみ**。"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:318
 msgid "Other than the grid type, you can define:"
 msgstr "グリッドタイプの他に、以下の設定の定義ができます："
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:320
+msgid ""
+"the :guilabel:`CRS` of the grid: by default, it will follow the map item "
+"CRS. Press |setProjection| :sup:`Select CRS` button to set it to a different"
+" CRS."
+msgstr ""
+"グリッドの :guilabel:`CRS`: デフォルトでは、地図アイテムのCRSに従います。別のCRSに設定するには、|setProjection| "
+":sup:`CRSを選択` ボタンを押してください。"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:537
 msgid "setProjection"
 msgstr "setProjection"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:322
+msgid "the :guilabel:`Interval` type to use for the grid references:"
+msgstr "グリッド参照に使う:guilabel:`間隔` の種類:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:324
+msgid ""
+"**Map Units**: you set a distance within the map (in the unit of the grid "
+"CRS) between consecutive grid references in the :guilabel:`X` and "
+":guilabel:`Y` directions. The number of grid ticks will vary depending on "
+"the map scale."
+msgstr ""
+"**地図上の単位**: マップ内における連続したグリッド参照の間の距離を、（グリッドCRSの単位で）:guilabel:`X` 方向と "
+":guilabel:`Y` 方向に設定します。グリッド目盛りの数は、マップの縮尺によって異なります。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:327
+msgid ""
+"choosing **Fit Segment Width** will dynamically select the grid interval "
+"based on the map extent to a \"pretty\" interval. That optimal interval is "
+"calculated within a range of distances whose :guilabel:`Minimum` and "
+":guilabel:`Maximum` values can be customized."
+msgstr ""
+"**セグメントの幅をフィット** "
+"を選ぶと、マップの範囲に基づいてグリッド間隔が動的に「適切な」間隔に選ばれます。この最適な間隔は、:guilabel:`最小` と "
+":guilabel:`最大` 値がカスタマイズ可能な、距離の範囲内で計算されます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:331
+msgid ""
+"With **Millimeters** or **Centimeters**, you set a distance on the paper "
+"between consecutive grid references in the :guilabel:`X` and :guilabel:`Y` "
+"directions. The number of grid ticks will be the same whatever the map "
+"scale."
+msgstr ""
+"**ミリメートル** または **センチメートル** を使用すると、紙面上における連続したグリッド参照の間の距離を :guilabel:`X` "
+"方向および :guilabel:`Y` 方向で設定します。グリッド目盛りの数は、地図の縮尺にかかわらず常に同じになります。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:335
+msgid ""
+"the :guilabel:`Offset` from the map item edges, in the :guilabel:`X` and/or "
+"the :guilabel:`Y` direction"
+msgstr "地図アイテムの端からの :guilabel:`X` 方向や :guilabel:`Y` 方向への :guilabel:`オフセット`"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:337
 msgid ""
@@ -680,9 +783,8 @@ msgid ""
 ":guilabel:`Frame margin`, the :guilabel:`Frame line thickness` with "
 "associated color and the :guilabel:`Frame fill colors`."
 msgstr ""
-"対応しているならば、it's possible to set the :guilabel:`フレームサイズ` 、 "
-":guilabel:`フレームマージン` 、 :guilabel:`フレームの線の太さ` と色、 :guilabel:`フレームの塗りつぶし色` "
-"の設定ができます。"
+"対応しているならば、:guilabel:`フレームサイズ` 、 :guilabel:`フレームマージン` 、 :guilabel:`フレームの線の太さ`"
+" と色、 :guilabel:`フレームの塗りつぶし色` が設定できます。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:358
 msgid ""
@@ -694,6 +796,53 @@ msgstr ""
 "目盛りセクションで ``緯度/Yのみ`` や ``経度/Xのみ`` の値を使用すると、回転した地図や再投影されたグリッドを扱う際に、各辺に 緯度/Y "
 "と経度/X 座標が混在して表示されるのを防ぐことができます。また、グリッドフレームの各辺を表示するかしないかを選択することもできます。"
 
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:363
+msgid ""
+"When the map item extent is rotated (from the :guilabel:`Main properties` "
+"group) or the grid has a different CRS applied, grid lines may not be "
+"orthogonal to the map item sides. This can result in bad looking of the grid"
+" when styled with interior and/or exterior ticks. Checking |checkbox| "
+":guilabel:`Follow grid rotation` will align the ticks with grid lines. "
+"Moreover, you can adjust some more properties:"
+msgstr ""
+"地図アイテムの範囲が（:guilabel:`メインプロパティ` "
+"グループから）回転された場合、またはグリッドに異なるCRSが適用されている場合、グリッド線は地図アイテムの辺に対して直交しないことがあります。これにより、内側および/または外側の目盛でスタイル設定した際にグリッドの見栄えが悪くなる可能性があります。|checkbox|"
+" :guilabel:`グリッドの回転に従う` をチェックすると、目盛がグリッド線に揃います。さらに、以下のプロパティを調整できます："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:369
+msgid ""
+":guilabel:`Ticks alignment`: The interior and/or exterior ticks will be "
+"parallel to their corresponding grid line. Their alignment can be:"
+msgstr ":guilabel:`目盛の配置`: 内側および/または外側の目盛は、対応するグリッド線と平行になります。その配置は次のいずれかです:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:373
+msgid ""
+"**Orthogonal**: ticks on the same side end at one line, parallel to the "
+"side. This can result e.g. in some ticks getting longer when with a low "
+"angle to the frame."
+msgstr ""
+"**直交**: "
+"同じ辺にある目盛は、その辺に平行な一本の線で終わります。これにより、例えばフレームに対する角度が小さい場合、一部の目盛が長くなる結果となります。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:375
+msgid ""
+"**Fixed length**: all ticks have the same length, so they may not align"
+msgstr "**固定長**：すべての目盛が同じ長さであるため、揃わない可能性があります"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:376
+msgid ""
+":guilabel:`Skip below angle`: prevents displaying ticks for grid lines "
+"intersecting the frame border below a specified threshold"
+msgstr ":guilabel:`目盛をスキップする角度`: 指定した閾値以下でフレーム境界と交差するグリッド線の目盛表示を防止します"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:378
+msgid ""
+":guilabel:`Margin from map corner`: prevents displaying ticks too close to "
+"the map corners, because they could overlap and/or be out of bounds."
+msgstr ""
+":guilabel:`地図の角からのマージン`: "
+"地図の隅に近すぎる目盛の表示を防止します。これらは重なったり、範囲外になったりする可能性があるためです。"
+
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:387
 msgid "Grid Frame Dialog"
 msgstr "グリッドフレームダイアログ"
@@ -701,6 +850,106 @@ msgstr "グリッドフレームダイアログ"
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:390
 msgid "Coordinates"
 msgstr "座標"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:392
+msgid ""
+"The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add "
+"coordinates to the map frame. Displayed values relate to the chosen "
+":ref:`grid interval <grid_appearance>` unit. You can choose the annotation "
+"numeric format, the options range from decimal to degrees, minute and "
+"seconds, with or without suffix, aligned or not and a custom format using "
+"the expression dialog."
+msgstr ""
+"|checkbox| :guilabel:`座標を描画` は、地図フレームに座標を追加できます。表示される値は選択した :ref:`グリッド間隔 "
+"<grid_appearance>` "
+"単位に基づきます。注記の数値形式を選択でき、オプションは、小数点表示から度分秒表示、接尾辞の有無、整列の有無、および式ダイアログを使用したカスタム形式まで多岐にわたります。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:399
+msgid ""
+"For each of the :guilabel:`Left`, :guilabel:`Right`, :guilabel:`Top` and "
+":guilabel:`Bottom` sides of the grid frame, you can indicate:"
+msgstr ""
+"グリッドフレームの :guilabel:`左`、:guilabel:`右`、:guilabel:`上`、:guilabel:`下` "
+"の各辺について、以下を指定できます："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:402
+msgid ""
+"whether to render the coordinates: **Show all**, **Show latitude/Y only**, "
+"**Show longitude/X only**, **Disabled**. Showing only Latitude/Y or "
+"Longitude/X values in the divisions helps prevent a mix of latitude/Y and "
+"longitude/X coordinates showing on each side when working with rotated maps "
+"or reprojected grids."
+msgstr ""
+"座標を表示するか: "
+"**すべて**、**緯度/Yのみ**、**経度/Xのみ**、**無効**。その区分で緯度/Y値または経度/X値のみを表示することで、回転した地図や再投影されたグリッドを扱う際に、左右で緯度/Y座標と経度/X座標が混在するのを防ぐことができます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:407
+msgid ""
+"the relative position of the text to the grid frame: **Outside frame** or "
+"**Inside frame**"
+msgstr "テキストのグリッドフレームに対する相対位置：**外側フレーム** または **内側フレーム**"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:409
+msgid "the placement and orientation of the annotation:"
+msgstr "注記の配置と向き："
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:411
+msgid "**Horizontal**"
+msgstr "**水平**"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:412
+msgid "**Vertical ascending**, **Vertical descending**"
+msgstr "**垂直上向き**、**垂直下向き**"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:413
+msgid "**Boundary direction**"
+msgstr "**境界線の方向**"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:414
+msgid ""
+"**Above tick**, **On tick**, **Under tick** when a tick-based frame is used"
+msgstr "目盛型のフレームが使われるとき、**目盛の上側**、**目盛上**、**目盛の下側**"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:416
+msgid ""
+"You can also define the :guilabel:`Font` :ref:`properties <text_format>` "
+"(font, size, color, buffer,...) the :guilabel:`Distance to the map frame` "
+"and the :guilabel:`Coordinate precision` (number of decimals) for the drawn "
+"annotations."
+msgstr ""
+"また、描画される注記に対して、:guilabel:`フォント` :ref:`プロパティ "
+"<text_format>`（フォント、サイズ、色、バッファなど）、:guilabel:`地図フレームからの距離`、および　:guilabel:`座標精度`（小数点以下の桁数）を定義できます。"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:420
+msgid ""
+"|unchecked| :guilabel:`Follow grid rotation`: available when the map extent "
+"is rotated or the grid is reprojected, it helps you adjust the annotations "
+"placement. Depending on the selected placement mode, the annotations are "
+"also rotated:"
+msgstr ""
+"|unchecked| :guilabel:`グリッドの回転に従う`: "
+"マップの範囲が回転された場合やグリッドが再投影された場合に利用可能で、注記の配置を調整するのに役立ちます。選択した配置モードに応じて、注記も回転されます:"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:424
+msgid ""
+":guilabel:`Annotations alignment`: it can be **Orthogonal** or of **Fixed "
+"length**"
+msgstr ":guilabel:`注記の配置`: **直交** または **固定長** のいずれか"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:425
+msgid ""
+":guilabel:`Skip below angle`: prevents displaying annotations for grid lines"
+" intersecting the frame border below a specified threshold"
+msgstr ":guilabel:`目盛をスキップする角度`: 指定した閾値以下でフレーム境界と交差するグリッド線の注記の表示を防止します"
+
+#: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:427
+msgid ""
+":guilabel:`Margin from map corner`: prevents displaying annotations too "
+"close to the map corners, because they could overlap and/or be out of "
+"bounds."
+msgstr ""
+":guilabel:`地図の角からのマージン`: "
+"地図の隅に近すぎる注記の表示を防止します。これらは重なったり、範囲外になったりする可能性があるためです。"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_map.rst:436
 msgid "Grid Draw Coordinates dialog"
