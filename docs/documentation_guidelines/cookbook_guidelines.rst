@@ -5,7 +5,9 @@
 Writing code in the PyQGIS Cookbook
 ***********************************
 
-.. contents::
+.. only:: html
+
+ .. contents::
    :local:
 
 If you are planning to add or update some chapters of the

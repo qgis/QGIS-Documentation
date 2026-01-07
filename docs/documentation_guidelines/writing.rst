@@ -4,7 +4,9 @@
 Writing Guidelines
 *************************
 
-.. contents::
+.. only:: html
+
+ .. contents::
    :local:
 
 In general, when creating reST documentation for the QGIS project, please follow
