@@ -213,7 +213,7 @@ System environment variables can be viewed, and many configured, in the
 platforms, such as Mac, where a GUI application does not necessarily inherit
 the user's shell environment. It's also useful for setting and viewing environment
 variables for the external tool sets controlled by the Processing toolbox (e.g.,
-SAGA, GRASS), and for turning on debugging output for specific sections of the
+GRASS), and for turning on debugging output for specific sections of the
 source code.
 
 Check |checkbox| :guilabel:`Use custom variables (restart required - include separators)`
