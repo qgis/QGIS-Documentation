@@ -624,7 +624,8 @@ Two types of output are possible:
 
 * The resulting line layer contains lines linking each origin point with its nearest destination feature.
 
-* The resulting point layer contains each origin feature's center point with additional fields indicating the identifier of the nearest destination feature and the distance to it.
+* The resulting point layer contains each origin feature's center point with additional fields
+  indicating the identifier of the nearest destination feature and the distance to it.
 
 .. note:: This algorithm uses ellipsoid based measurements
   and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
@@ -735,8 +736,8 @@ Python code
 Distance to nearest hub (line to hub)
 -------------------------------------
 
-.. warning:: This algorithm is deprecated and can be removed
-  anytime. Prefer using :ref:`qgisdistancetonearesthub` algorithm instead.
+.. warning:: This algorithm is deprecated since QGIS 4.0 and can be removed anytime.
+  Prefer using :ref:`qgisdistancetonearesthub` algorithm instead.
 
 Creates lines that join each feature of an input vector to the nearest
 feature in a destination layer.
@@ -835,8 +836,8 @@ Python code
 Distance to nearest hub (points)
 --------------------------------
 
-.. warning:: This algorithm is deprecated and can be removed
-  anytime. Prefer using :ref:`qgisdistancetonearesthub` algorithm instead.
+.. warning:: This algorithm is deprecated since QGIS 4.0 and can be removed anytime.
+  Prefer using :ref:`qgisdistancetonearesthub` algorithm instead.
 
 Creates a point layer representing the
 :ref:`center <qgispointonsurface>` of the input features with the
