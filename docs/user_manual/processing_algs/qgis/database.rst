@@ -496,7 +496,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:postgisexecuteandloadsql``
+**Algorithm ID**: ``native:postgisexecuteandloadsql``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
