@@ -374,12 +374,12 @@ To create a new function:
 
    You will find in the :guilabel:`Help` widget general information
    for setting the @qgsfunction decorator.
-#. Press the |start| :guilabel:`Save and Load Functions` button.
+#. Press the |start| :guilabel:`Load or update functions` button.
    The function you wrote is added to the functions tree in the :guilabel:`Expression` tab,
    by default under the ``Custom`` group.
 #. Enjoy your new function.
 #. If the function requires improvements, enable the :guilabel:`Function Editor` tab,
-   do the changes and press again the |start| :guilabel:`Save and Load Functions` button
+   do the changes and press again the |start| :guilabel:`Load or update functions` button
    to make them available in the file, hence in any expression tab.
 
 To delete a custom function:
