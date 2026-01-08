@@ -1066,6 +1066,116 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _nativetotalcurvature:
+
+Total curvature
+---------------
+|400|
+
+Calculates the total curvature from an input raster layer. The curvature is the second
+derivative of the surface, revealing terrain features like ridges (positive curvature,
+convex) and valleys (negative, concave), with zero indicating flat or saddle points.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Z factor**
+     - ``Z_FACTOR``
+     - [numeric: double]
+
+       Default: 1.0
+     - Vertical exaggeration.
+       This parameter is useful when the Z units differ from
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       Increasing the value of this parameter will
+       exaggerate the final result (making it steeper).
+       The default is 1 (no exaggeration).
+   * - **Total curvature**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output total curvature raster layer. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: double]
+
+       Default: -9999.0
+     - Value to use for NoData cells in the output layer.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Total curvature**
+     - ``OUTPUT``
+     - [raster]
+     - The output total curvature raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:totalcurvature``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
