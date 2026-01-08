@@ -2351,6 +2351,14 @@ Basic parameters
        Default: False
      - If checked, curved geometries will be converted to straight segments in the process,
        avoiding potential distortion issues.
+   * - **Also transform Z coordinates**
+
+       Optional
+     - ``TRANSFORM_Z``
+     - [boolean]
+
+       Default: False
+     - If checked, the Z coordinates will also be transformed according to a vertical datum transformation.
    * - **Reprojected**
      - ``OUTPUT``
      - [same as input]
