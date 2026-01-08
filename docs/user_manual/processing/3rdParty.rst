@@ -10,7 +10,7 @@ Configuring external applications
    .. contents::
       :local:
 
-The processing framework can be extended using additional applications.
+The Processing framework can be extended using additional applications.
 Algorithms that rely on external applications are managed by their own
 algorithm providers.
 Additional providers can be found as separate plugins, and installed
@@ -36,12 +36,12 @@ If you are not an advanced user and you are running QGIS on Windows,
 you might not be interested in reading the rest of this chapter.
 Make sure you install QGIS in your system using the standalone
 installer.
-That will automatically install SAGA and GRASS in your system and
-configure them so they can be run from QGIS.
-All the algorithms from these providers will be ready to be run without
+That will automatically install GRASS in your system and configure it so
+it can be run from QGIS.
+All the algorithms from this provider will be ready to be run without
 needing any further configuration.
 If installing with the OSGeo4W application, make sure that you also
-select SAGA and GRASS for installation.
+select GRASS for installation.
 
 
 A note on file formats
@@ -101,103 +101,6 @@ causes longer execution times.
 Using third-party Providers
 ===========================
 
-.. index:: SAGA
-.. _saga_configure:
-
-SAGA
-----
-
-SAGA algorithms can be run from QGIS if SAGA is included with the
-QGIS installation.
-
-If you are running Windows, both the stand-alone installer and the
-OSGeo4W installer include SAGA.
-
-About SAGA grid system limitations
-..................................
-
-Most SAGA algorithms that require several input raster layers require
-them to have the same grid system.
-That is, they must cover the same geographic area and have the same
-cell size, so their corresponding grids match.
-When calling SAGA algorithms from QGIS, you can use any layer,
-regardless of its cell size and extent.
-When multiple raster layers are used as input for a SAGA algorithm,
-QGIS resamples them to a common grid system and then passes them to
-SAGA (unless the SAGA algorithm can operate with layers from different
-grid systems).
-
-The definition of that common grid system is controlled by the user,
-and you will find several parameters in the SAGA group of the settings
-window to do so.
-There are two ways of setting the target grid system:
-
-* Setting it manually. You define the extent by setting the values of
-  the following parameters:
-
-  - :guilabel:`Resampling min X`
-  - :guilabel:`Resampling max X`
-  - :guilabel:`Resampling min Y`
-  - :guilabel:`Resampling max Y`
-  - :guilabel:`Resampling cellsize`
-
-  Notice that QGIS will resample input layers to that extent, even if
-  they do not overlap with it.
-* Setting it automatically from input layers.
-  To select this option, just check the :guilabel:`Use min covering grid
-  system for resampling` option.
-  All the other settings will be ignored and the minimum extent that
-  covers all the input layers will be used.
-  The cell size of the target layer is the maximum of all cell sizes of
-  the input layers.
-
-For algorithms that do not use multiple raster layers, or for those that
-do not need a unique input grid system, no resampling is performed
-before calling SAGA, and those parameters are not used.
-
-Limitations for multi-band layers
-.................................
-
-Unlike QGIS, SAGA has no support for multi-band layers.
-If you want to use a multiband layer (such as an RGB or multispectral
-image), you first have to split it into single-banded images.
-To do so, you can use the 'SAGA/Grid - Tools/Split RGB image' algorithm
-(which creates three images from an RGB image) or the
-'SAGA/Grid - Tools/Extract band' algorithm (to extract a single band).
-
-Limitations in cell size
-........................
-
-SAGA assumes that raster layers have the same cell size in the X and
-Y axis.
-If you are working with a layer with different values for horizontal
-and vertical cell size, you might get unexpected results.
-In this case, a warning will be added to the processing log, indicating
-that an input layer might not be suitable to be processed by SAGA.
-
-Logging
-.......
-
-When QGIS calls SAGA, it does so using its command-line interface, thus
-passing a set of commands to perform all the required operations.
-SAGA shows its progress by writing information to the console, which
-includes the percentage of processing already done, along with
-additional content.
-This output is filtered and used to update the progress bar while the
-algorithm is running.
-
-Both the commands sent by QGIS and the additional information printed
-by SAGA can be logged along with other processing log messages, and
-you might find them useful to track what is going on when QGIS runs a
-SAGA algorithm.
-You will find two settings, namely :guilabel:`Log console output` and
-:guilabel:`Log execution commands`, to activate that logging
-mechanism.
-
-Most other providers that use external applications and call them
-through the command-line have similar options, so you will find them
-as well in other places in the processing settings list.
-
 .. index:: R scripts
 .. _r_scripts:
 
@@ -254,9 +157,9 @@ run these scripts.
 Adding R scripts from the QGIS collection
 .........................................
 
-R integration in QGIS is different from that of SAGA in that there
-is not a predefined set of algorithms you can run (except for some
-example script that come with the *Processing R Provider* plugin).
+R integration in QGIS is different from that of some other third party providers
+like SAGA in that there is not a predefined set of algorithms you can run (except
+for some example script that come with the *Processing R Provider* plugin).
 
 A set of example R scripts is available in the QGIS Repository.
 Perform the following steps to load and enable them using the
@@ -554,9 +457,8 @@ version 2.0 of the *Processing R Provider* plugin and a fresh install of
 GRASS
 -----
 
-Configuring GRASS is not much different from configuring SAGA.
-First, the path to the GRASS folder has to be defined,
-but only if you are running Windows.
+Configuring GRASS is very easy. First, the path to the GRASS folder has to be
+defined, but only if you are running Windows.
 
 By default, the Processing framework tries to configure its GRASS
 connector to use the GRASS distribution that ships along with QGIS.
@@ -572,13 +474,8 @@ correctly installed, and that it can be run without problem
 from a terminal window.
 
 GRASS algorithms use a region for calculations.
-This region can be defined manually using values similar to the ones
-found in the SAGA configuration, or automatically, taking the minimum extent
+This region can be defined manually or automatically, taking the minimum extent
 that covers all the input layers used to execute the algorithm each time.
-If the latter approach is the behavior you prefer, just check the
-:guilabel:`Use min covering region` option in the GRASS configuration
-parameters.
-
 
 .. index:: LAStools
 .. _lastools_configure:
