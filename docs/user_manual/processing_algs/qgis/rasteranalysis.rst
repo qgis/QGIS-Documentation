@@ -1785,6 +1785,113 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgisrastergaussianblur:
+
+Gaussian blur
+----------------------
+
+Applies a Gaussian blur filter to an input raster layer.
+The radius parameter controls the strength of the blur.
+A larger radius results in a smoother output, at the cost of execution time.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer to be processed.
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+  
+       Default: The first band of the raster layer
+     - If the raster is multiband, choose the band that you want to process.
+   * - **Blur radius (pixels)**
+     - ``RADIUS``
+     - [numeric: integer]
+
+       Default: 2
+     - The radius of the Gaussian kernel in pixels.
+       Larger values produce a more pronounced blur effect.
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster containing the result.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options with a pipe
+       character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:rastergaussianblur``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisgreaterthanfrequency:
 
