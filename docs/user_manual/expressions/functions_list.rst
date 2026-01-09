@@ -835,6 +835,19 @@ This function requires the :ref:`Access metadata properties
    :start-after: .. end_map_credits_section
 
 
+Magnetic Models Functions
+--------------------------
+
+This group contains functions that calculate values based on magnetic models.
+
+.. include:: text_include.rst
+   :start-after: .. functions_group_toc
+   :end-before: .. end_functions_group_toc
+
+.. include:: expression_help/MagneticModels.rst
+   :start-after: :orphan:
+
+
 Map Layers
 ----------
 
