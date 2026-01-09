@@ -4,7 +4,9 @@
 Translation Guidelines
 **********************
 
-.. contents::
+.. only:: html
+
+ .. contents::
    :local:
 
 This manual is aiming to help the translator.

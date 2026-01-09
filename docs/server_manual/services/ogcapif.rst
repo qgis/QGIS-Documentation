@@ -84,7 +84,7 @@ Endpoints points provided by the QGIS implementation are:
 
 .. csv-table::
    :header: "Name", "Path", "Description"
-   :widths: auto
+   :widths: 15, 40, 45
 
    "Landing Page", "``/``", "General information about the service and
    provides links to all available endpoints"
@@ -101,7 +101,8 @@ Endpoints points provided by the QGIS implementation are:
    "Feature", "``/collections/{collectionId}/items/{featureId}``", "Information
    about a single feature"
 
-Similar to WFS-T (transactional Web Feature Service), it is possible to add, update and delete features (CRUD). The respective requests are described on "``/api``".
+Similar to WFS-T (transactional Web Feature Service), it is possible to add,
+update and delete features (CRUD). The respective requests are described on "``/api``".
 
 Landing Page
 ^^^^^^^^^^^^^^^^^^^^
