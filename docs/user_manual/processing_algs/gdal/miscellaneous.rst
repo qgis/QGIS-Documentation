@@ -17,7 +17,8 @@ Dataset Identification
 Reports the name of GDAL drivers that can open files contained in a folder,
 with optional additional details, and write the result into an output vector layer.
 
-.. note:: This algorithm requires GDAL version 3.13.0.
+.. attention:: Running this algorithm requires QGIS installed with GDAL_ >=  3.13.0
+   (see :menuselection:`Help --> About` menu).
 
 Parameters
 ..........
@@ -47,12 +48,8 @@ Parameters
      - [boolean]
   
        Default: ``True``
-     - If checked, reports additional information about identified
-       datasets, including whether the file is a Cloud Optimized GeoTIFF
-       (COG), the list of files that compose the dataset, whether it has
-       georeferencing (``has_geotransform`` and ``has_crs`` fields), and
-       overviews.
-       
+     - If checked, additional details about each identified dataset 
+        will be added to the output vector layer.
    * - **Output file**
      - ``OUTPUT``
      - [vector: any]
@@ -64,6 +61,8 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+.. _GDAL: https://gdal.org/en/stable/   
 
 Outputs
 .......
@@ -80,7 +79,17 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
 
-     - Vector layer containing the identification results.
+     - Vector layer containing the identification fields:
+  
+       - ``filename``: name of the file.
+       - ``driver``: name of the GDAL driver that can open the file.
+       - Additional fields if the **Add details about identified datasets in the output** option is checked:
+  
+         - ``layout``: values can be for example ``COG``.
+         - ``file_list``: side-car files (files that store extra data) associated with the dataset.
+         - ``has_crs``: whether the dataset has a coordinate reference system defined.
+         - ``has_geotransform``: whether the dataset has geotransform defined.
+         - ``has_overview``: whether the dataset has overview.
 
 Python code
 ...........
