@@ -1177,6 +1177,105 @@ The configuration concerns:
 
    QGIS Server in Raster Properties
 
+
+
+.. index:: Attribute Tables
+.. _raster_attribute_tables:
+
+Attribute Tables
+======================
+
+Similar to vector layers, raster layers in QGIS can have associated
+Raster Attribute Tables (RATs) that store additional information about
+raster pixel values.
+
+A Raster Attribute Table links raster values (or value ranges) to
+descriptive attributes such as class names, pixel counts, and colors.
+RATs are commonly used for classified rasters, color tables, and
+histogram information, helping QGIS interpret how raster values should
+be displayed and classified.
+
+The :guilabel:`Attribute Tables` tab allows you to view and edit raster attribute data.
+To access the attribute table of a raster layer, right-click the layer in the layers panel,
+open :guilabel:`Properties...` and select :guilabel:`Attribute Tables`.
+
+.. figure:: img/raster_attribute_table_menu.png
+   :align: center
+
+   Accessing the raster attribute table
+
+When opening the :guilabel:`Attribute Tables` for a raster layer that does not have an
+associated Raster Attribute Table, QGIS displays a notice informing that no
+attribute table is currently linked to the data source. In this state, the
+interface provides two options to define and associate a new attribute table:
+
+* :guilabel:`New attribute table from current symbology`: creates table based on the current
+  symbology of the raster layer. The :guilabel:`New Raster Attribute Table` dialog will appear and let you set:
+  
+   * :guilabel:`Managed by the data provider`: the attribute table will be saved
+     and managed by the data provider (if supported).
+   * :guilabel:`Sidecar VAT.DBF file`: the attribute table will be saved
+     in a DBF file named :file:`VAT.DBF` located in the same directory as the raster file.
+
+.. figure:: img/raster_attribute_table_symbology.png
+   :align: center
+   :width: 400px
+
+   Create new attribute table from current symbology
+
+* :guilabel:`Load attribute table from VAT.DBF file`: retrieve the attribute table
+  from an external DBF file. The action also can be done by right-clicking the raster layer
+  in the layers panel and selecting :guilabel:`Load Raster Attribute Table from VAT.DBF`.
+  This file must be named :file:`VAT.DBF` and located in the same directory
+  as the raster file. :guilabel:`Load Raster Attribute Table` dialog will appear
+  to let you browse and select the DBF file and associate it with the raster band.
+
+.. figure:: img/raster_attribute_table_load.png
+   :align: center
+   :width: 400px
+
+   Load attribute table from VAT.DBF file
+
+Editing raster attribute tables
+--------------------------------
+
+When you open the raster attribute table, the |editTable|:sup:`Edit Attribute Table` button allows you to modify the table.
+If no specific row or field is selected, only the |newAttribute|:sup:`Add Column…` option is available.
+The following list describes all available editing options:
+
+* |editTable|:sup:`Edit Attribute Table` enables editing mode for the raster attribute table.
+* |newAttribute|:sup:`Add Column...` opens the :guilabel:`Add Column` dialog to add a new column
+  to the raster attribute table. Choose whether the :guilabel:`Column Type` is
+  |radioButtonOff|:guilabel:`Standard column`, |radioButtonOff|:guilabel:`Color RGBA` or
+  |radioButtonOff|:guilabel:`Color ramp (RGBA minimum and RGBA maximum)`.
+  In the :guilabel:`Column Definition`, :guilabel:`Usage` can be either :guilabel:`Pixel Count`, :guilabel:`Generic` or :guilabel:`Name`.
+  Select the :guilabel:`Data type` as well to :guilabel:`String`, :guilabel:`Integer`,
+  :guilabel:`Long Integer` or :guilabel:`Double`. Enter the :guilabel:`Name` of the new column (can't be blank).
+  Decide whether the :guilabel:`Insertion point` is |radioButtonOff|:guilabel:`Before`
+  or |radioButtonOff|:guilabel:`After` a specific column selected from the dropdown list. 
+
+  .. figure:: img/raster_attribute_table_add_column.png
+     :align: center
+     :width: 400px
+
+     Add Column dialog
+
+* :guilabel:`Add Row...` opens the :guilabel:`Add Row` dialog to add a new row
+  to the raster attribute table. Choose the :guilabel:`Insertion point` as |radioButtonOff|:guilabel:`Before current row`
+  or |radioButtonOff|:guilabel:`After current row`.
+
+* :guilabel:`Remove Row` removes the selected row(s) from the raster attribute table.
+* |deleteAttribute|:sup:`Remove Column` removes the selected column(s) from the raster attribute table.
+* :guilabel:`Save Changes` saves any modifications made to the raster attribute table.
+* :guilabel:`Raster band`: allows selecting which raster band the attribute table applies to.
+  Raster layers may contain multiple bands (e.g., multispectral data).
+  Each band can have its own Raster Attribute Table. If only a single band is present,
+  this dropdown will show only one option.
+* :guilabel:`Classification`: allows selecting the fields used for classifying the raster layer.
+  Keep in mind that the existing symbology for the raster will be replaced by a new symbology from the attribute table
+  and any unsaved changes to the current symbology will be lost.
+  Make sure to save your symbology style if needed before applying a classification.
+
 .. _raster_identify:
 
 Identify raster cells
@@ -1231,10 +1330,14 @@ such as:
    :width: 1.3em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
+.. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
+   :width: 1.5em
 .. |display| image:: /static/common/display.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
+.. |editTable| image:: /static/common/mActionEditTable.png
+   :width: 1.5em
 .. |elevationscale| image:: /static/common/elevationscale.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
@@ -1270,6 +1373,8 @@ such as:
 .. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |overlay| image:: /static/common/overlay.png
    :width: 1.5em
