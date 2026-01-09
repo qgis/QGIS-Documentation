@@ -15,7 +15,7 @@ The :guilabel:`Elevation Profile` panel is a plotting tool for side view,
 for visualizing elevation data along a line.
 It supports vector, raster, mesh and point cloud layers. Data can be of 2D or 3D type.
 
-To add an elevation profile view, go to :menuselection:`View -->` |layoutItem3DMap| :menuselection:`Elevation Profile` menu.
+To add an elevation profile view, go to :menuselection:`View -->` |newElevationProfile| :menuselection:`Elevation Profile` menu.
 You can add as many profile views as you want, and they can be docked, piled on top of each other, or floating.
 
 .. _figure_elevation_tool_interaction:
@@ -382,8 +382,6 @@ to export an elevation profile, allowing you to reuse the plots in another softw
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |layerTree| image:: /static/common/mIconLayerTree.png
-   :width: 1.5em
-.. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
