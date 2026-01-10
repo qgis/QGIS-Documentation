@@ -341,9 +341,9 @@ allows you to create and manage custom expressions for use in QGIS projects.
    The Function Editor tab
 
 .. note::
- Scripts saved as files are autosaved automatically, but project
- functions are saved only when you save the project.
- 
+ file scripts are saved automatically by default while you have to save the project in order 
+ to save project functions.
+
  To create a new function:
 
 #. Press the |symbologyAdd| :sup:`New File` button.
