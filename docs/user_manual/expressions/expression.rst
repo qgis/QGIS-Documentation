@@ -330,7 +330,8 @@ Function Editor
 
 With the :guilabel:`Function Editor` tab, you are able to write your own functions
 in Python language. This provides a handy and comfortable way to address
-particular needs that would not be covered by the predefined functions.
+particular needs that would not be covered by the predefined functions. This also 
+allows you to create and manage custom expressions for use in QGIS projects.
 
 .. _figure_expression_function:
 
@@ -339,7 +340,11 @@ particular needs that would not be covered by the predefined functions.
 
    The Function Editor tab
 
-To create a new function:
+.. note::
+ Scripts saved as files are autosaved automatically, but project
+ functions are saved only when you save the project.
+ 
+ To create a new function:
 
 #. Press the |symbologyAdd| :sup:`New File` button.
 #. Select where to store the new function. You can choose to save it either in a
