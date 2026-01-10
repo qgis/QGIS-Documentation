@@ -87,7 +87,7 @@ Download the prepared dataset from the `Training data repository <training_data_
 and unzip the file. All the necessary data are provided in the :file:`exercise_data`
 folder.
 
-.. _training_data: https://github.com/qgis/QGIS-Training-Data/archive/master.zip
+.. _training_data: https://github.com/qgis/QGIS-Training-Data/archive/release_3.44.zip
 .. _NGI: https://ngi.dalrrd.gov.za/
 .. _CGIAR CSI: https://srtm.csi.cgiar.org/
 .. _OpenStreetMap: https://www.openstreetmap.org/
