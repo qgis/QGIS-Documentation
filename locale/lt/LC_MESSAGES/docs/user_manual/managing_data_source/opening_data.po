@@ -7,7 +7,7 @@
 # Translators:
 # Transifex Bot <>, 2025
 # Harrissou Sant-anna, 2025
-# Tomas Straupis, 2025
+# Tomas Straupis, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-04 20:12+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Tomas Straupis, 2025\n"
+"Last-Translator: Tomas Straupis, 2026\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -912,7 +912,7 @@ msgid ""
 "press :kbd:`Ctrl+L`) and enable the target tab or:"
 msgstr ""
 "Atidarykite sluoksnių tipo kortelę dialoge :guilabel:`Duomenų šaltinių "
-"tvarkyklę`, t.y. spauskite mygtuką |dataSourceManager| :sup:`Atverti duomenų"
+"tvarkyklė`, t.y. spauskite mygtuką |dataSourceManager| :sup:`Atverti duomenų"
 " šaltinių tvarkyklę` (arba spauskite :kbd:`Ctrl+L`) ir įjunkite paskirties "
 "kortelę, arba:"
 
@@ -924,7 +924,7 @@ msgid ""
 "|addOgrLayer| :sup:`Add Vector Layer` toolbar button."
 msgstr ""
 "vektoriniams duomenims (tokiems kaip GML, ESRI Shapefile, Mapinfo ir DXF "
-"sluoksnniams): spauskite :kbd:`Ctrl+Shift+V`, parinkite meniu "
+"sluoksniams): spauskite :kbd:`Ctrl+Shift+V`, parinkite meniu "
 ":menuselection:`Sluoksnis --> Pridėti sluoksnį -->` |addOgrLayer| "
 ":guilabel:`Pridėti vektorinį sluoksnį` arba spauskite įrankinės mygtuką "
 "|addOgrLayer| :sup:`Pridėti vektorinį sluoksnį`."
@@ -1094,7 +1094,7 @@ msgid ""
 "can be selected in the dialog after pressing :guilabel:`...` :sup:`Browse`."
 msgstr ""
 "Jūs galite įkelti specifinius vektorinius formatus, tokius kaip ``ArcInfo "
-"dvejetainis padengimas``, ``UK. Nactionalinis perdavimo formatas`` bei "
+"dvejetainis padengimas``, ``UK. Nacionalinis perdavimo formatas`` bei "
 "pradinį TIGER formatą iš ``US Census Bureau`` ar ``OpenfileGDB``. Norėdami "
 "tai padaryti, parinkite |radioButtonOn| :guilabel:`Aplanką` kaip "
 ":guilabel:`Šaltinio tipą`. Tokiu atveju, kai paspausite :guilabel:`...` "
@@ -1884,37 +1884,916 @@ msgstr ""
 "sluoksniuose bus visi to geometrijos tipo duomenys iš :file:`.osm` failo ir "
 "jie išlaikys :file:`osm` failo duomenų struktūrą."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:759
+msgid "SpatiaLite Layers"
+msgstr "SpatiaLite sluoksniai"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:761
+msgid ""
+"|addSpatiaLiteLayer| The first time you load data from a SpatiaLite "
+"database, begin by:"
+msgstr ""
+"|addSpatiaLiteLayer| Kai pirmą kartą įkeliate duomenis iš SpatiaLite duomenų"
+" bazės, pradėkite:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1730
 msgid "addSpatiaLiteLayer"
 msgstr "addSpatiaLiteLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:764
+msgid ""
+"clicking on the |addSpatiaLiteLayer| :sup:`Add SpatiaLite Layer` toolbar "
+"button"
+msgstr ""
+"spausdami įrankinės mygtuką the |addSpatiaLiteLayer| :sup:`Pridėti "
+"SpatiaLite sluoksnį`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:766
+msgid ""
+"selecting the |addSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` "
+"option from the :menuselection:`Layer --> Add Layer` menu"
+msgstr ""
+"parinkdami parinktį |addSpatiaLiteLayer| :menuselection:`Pridėti SpatiaLite "
+"sluoksnį...` iš meniu :menuselection:`Sluoksniai --> Pridėti sluoksnį`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:768
+msgid "or by typing :kbd:`Ctrl+Shift+L`"
+msgstr "ar spausdami :kbd:`Ctrl+Shift+L`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:770
+msgid ""
+"This will bring up a window that will allow you either to connect to a "
+"SpatiaLite database already known to QGIS (which you choose from the drop-"
+"down menu) or to define a new connection to a new database. To define a new "
+"connection, click on :guilabel:`New` and use the file browser to point to "
+"your SpatiaLite database, which is a file with a :file:`.sqlite` extension."
+msgstr ""
+"Tai pakels langą, kuris leis jums arba prisijungti prie QGIS jau žinomos "
+"duomenų bazės (kurią jūs pasirinktumėte iškrentančiame meniu) arba "
+"apibrėšite naują jungtį į naują duomenų bazę. Kad apibrėžtumėte naują "
+"jungtį, spauskite :guilabel:`Nauja` ir naudokite failų naršyklę, kad "
+"parodytumėte, kur yra jūsų SpatiaLite duomenų bazę, kuri yra failas su "
+"plėtiniu :file:`.sqlite`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:776
+msgid "QGIS also supports editable views in SpatiaLite."
+msgstr "QGIS taipogi leidžia redaguojamus SpatiaLite vaizdus."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:780
 msgid "GPS"
 msgstr "GPS"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:782
+msgid ""
+"There are dozens of different file formats for storing GPS data. The format "
+"that QGIS uses is called GPX (GPS eXchange format), which is a standard "
+"interchange format that can contain any number of waypoints, routes and "
+"tracks in the same file."
+msgstr ""
+"Yra daug failų formatų, leidžiančių laikyti GPS duomenis. QGIS naudoja "
+"formatą, vadinamą GPX (GPS eXchange format), kuris yra standartinis "
+"apsikeitimo formatas, kuriame gali būti bet koks skaičius taškų, maršrutų ir"
+" pėdsakų viename faile."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:787
+msgid ""
+"Use the :guilabel:`...` :sup:`Browse` button to select the GPX file, then "
+"use the check boxes to select the feature types you want to load from that "
+"GPX file. Each feature type will be loaded in a separate layer."
+msgstr ""
+"Naudokite mygtuką :guilabel:`...` :sup:`Naršyti`, kad parinktumėte GPX "
+"failą, tada naudokite varneles, kad parinktumėte geoobjektų tipus, kuriuos "
+"norite įkelti iš to GPS failo. Kiekvienas geoobjektų tipas bus įkeltas kaip "
+"atskiras sluoksnis."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:791
+msgid "More on GPS data manipulation at :ref:`working_gps`."
+msgstr ""
+"Daugiau apie GPS duomenų apdorojimą rasite skyriuje :ref:`working_gps`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:798
+msgid "Loading GPS Data dialog"
+msgstr "GPS duomenų įkėlimo dialogas"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:801
 msgid "GRASS"
 msgstr "GRASS"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:803
+msgid ""
+"Working with GRASS vector data is described in section :ref:`sec_grass`."
+msgstr ""
+"Darbas su vektoriniais GRASS duomenimis aprašytas skyriuje :ref:`sec_grass`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:810
+msgid "Database related tools"
+msgstr "Su duomenų baze susiję įrankiai"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:816
+msgid "Creating a stored Connection"
+msgstr "Įrašytos jungties kūrimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:818
+msgid ""
+"In order to read and write tables from a database format QGIS supports you "
+"have to create a connection to that database. While :ref:`QGIS Browser Panel"
+" <browser_panel>` is the simplest and recommanded way to connect to and use "
+"databases, QGIS provides other tools to connect to each of them and load "
+"their tables:"
+msgstr ""
+"Norint skaityti ir rašyti lenteles QGIS palaikomų duomenų bazių formatų, "
+"jums reikia sukurti jungti į tą duomenų bazę. Nors :ref:`QGIS naršyklės "
+"skydelis <browser_panel>` yra paprasčiausias ir rekomenduojamas būdas "
+"prisijungti ir naudoti duomenų bazes, QGIS teikia ir kitus įrankius "
+"prisijungimui ir jų lentelių įkėlimui:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:824
+msgid ""
+"|addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing "
+":kbd:`Ctrl+Shift+D`"
+msgstr ""
+"|addPostgisLayer| :menuselection:`Pridėti PostGIS sluoksnį...` ar paspaudus "
+":kbd:`Ctrl+Shift+D`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1726
 msgid "addPostgisLayer"
 msgstr "addPostgisLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:826
+msgid "|addMssqlLayer| :menuselection:`Add MS SQL Server Layer`"
+msgstr "|addMssqlLayer| :menuselection:`Pridėti MS SQL Server sluoksnį`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1720
 msgid "addMssqlLayer"
 msgstr "addMssqlLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:827
+msgid ""
+"|addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing "
+":kbd:`Ctrl+Shift+O`"
+msgstr ""
+"|addOracleLayer| :menuselection:`Pridėti Oracle Spatial sluoksnį...` ar "
+"paspaudus :kbd:`Ctrl+Shift+O`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1724
 msgid "addOracleLayer"
 msgstr "addOracleLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:829
+msgid ""
+"|addHanaLayer| :menuselection:`Add SAP HANA Spatial Layer...` or by typing "
+":kbd:`Ctrl+Shift+G`"
+msgstr ""
+"|addHanaLayer| :menuselection:`Pridėti SAP HANA Spatial sluoksnį...` ar "
+"paspaudus :kbd:`Ctrl+Shift+G`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1714
 msgid "addHanaLayer"
 msgstr "addHanaLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:832
+msgid ""
+"These tools are accessible either from the :guilabel:`Manage Layers Toolbar`"
+" and the :menuselection:`Layer --> Add Layer -->` menu. Connecting to "
+"SpatiaLite database is described at :ref:`label_spatialite`."
+msgstr ""
+"Šie įrankiai pasiekiami per :guilabel:`Sluoksnių tvarkymo įrankinę` ir meniu"
+" :menuselection:`Sluoksnis --> Pridėti sluoksnį -->`. Prisijungimas prie "
+"SpatiaLite duomenų bazės aprašytas skyriuje :ref:`label_spatialite`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:836
+msgid "**Create connection to database from the QGIS Browser Panel**"
+msgstr "**Sukurkite jungtį į duomenų bazę QGIS naršyklės skydelyje**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:838
+msgid ""
+"Selecting the corresponding database format in the Browser tree, right-"
+"clicking and choosing connect will provide you with the database connection "
+"dialog."
+msgstr ""
+"Parinkite naršyklės medyje atitinkamą duomenų bazės formatą, spauskite "
+"dešinį pelės mygtuką ir parinkite prisijungimą, tai pateiks jums "
+"prisijungimo prie duomenų bazės dialogą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:842
+msgid "Most of the connection dialogs follow a common structure:"
+msgstr "Dauguma prisijungimo dialogų turi bendrą struktūrą:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:844
+msgid "a section with credentials information to connect to the database"
+msgstr "skiltis su prisijungimo prie duomenų bazės informacija"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:845
+msgid ""
+"a section with options to tune which data can be requested in the database"
+msgstr ""
+"skiltis su parinktimis, nurodančiomis kurių duomenų galima prašyti iš "
+"duomenų bazės"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:850
+msgid "Connecting to PostgreSQL"
+msgstr "Prisijungimas prie PostgreSQL"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:852
+msgid ""
+"The first time you use a PostGIS data source, you must create a connection "
+"to a database that contains the data. Press the appropriate button as "
+"exposed above, opening the :guilabel:`PostgreSQL` tab of the :guilabel:`Data"
+" Source Manager` dialog. To access the connection manager, click on the "
+":guilabel:`New` button to display the :guilabel:`Create a New PostGIS "
+"Connection` dialog."
+msgstr ""
+"Kai pirmą kartą naudojate PostGIS duomenų šaltinį, jūs turite sukurti jungtį"
+" į duomenų bazę, kurioje yra duomenys. Spauskite atitinkamą mygtuką, kaip "
+"parodytą aukščiau, atidarius kortelę :guilabel:`PostgreSQL` dialoge "
+":guilabel:`Duomenų šaltinių tvarkyklė`. Kad pasiektumėte jungčių tvarkyklę, "
+"spauskite mygtuką :guilabel:`Naujas`, bus parodytas dialogas "
+":guilabel:`Sukurti naują PostGIS jungtį`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:864
+msgid "Create a New PostGIS Connection Dialog"
+msgstr "Naujos PostGIS jungties kūrimo dialogas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:866
+msgid ""
+":guilabel:`Name`: A name for this connection. It can be the same as "
+":guilabel:`Database`."
+msgstr ""
+":guilabel:`Pavadinimas`: Šios jungties pavadinimas. Jis gali būti toks pat "
+"kaip :guilabel:`Duomenų bazė`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:867
+msgid ""
+":guilabel:`Service`: Service parameter to be used alternatively to "
+"hostname/port (and potentially database). This can be defined in "
+":file:`pg_service.conf`. Check the :ref:`pg-service-file` section for more "
+"details."
+msgstr ""
+":guilabel:`Paslauga`: Paslaugos parametras, kurį galima naudoti kaip "
+"alternatyvą mašinai/prievadui (ir potencialiai duomenų bazei). Jis gali būti"
+" apibrėžtas faile :file:`pg_service.conf`. Daugiau informacijos rasite "
+"skyriuje :ref:`pg-service-file`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:870
+msgid ""
+":guilabel:`Host`: Name of the database host. This must be a resolvable host "
+"name such as would be used to open a TCP/IP connection or ping the host. If "
+"the database is on the same computer as QGIS, simply enter *localhost* here."
+msgstr ""
+":guilabel:`Stotis`: Duomenų bazės mašinos pavadinimas. Jis turi galėti "
+"išsispręsti ir tikti atverti TCP/IP jungtį ar nusiųsti patikrinimo signalą į"
+" serverį. Jei duomenų bazė yra tame pačiame kompiuteryje kaip QGIS, tiesiog "
+"įveskite *localhost*."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:873
+msgid ""
+":guilabel:`Port`: Port number the PostgreSQL database server listens on. The"
+" default port for PostGIS is ``5432``."
+msgstr ""
+":guilabel:`Prievadas`: PostgreSQL duomenų bazės prievadas, kuriuo ji "
+"klausosi. Numatytasis PostGIS prievadas yra ``5432``."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:875
+msgid ":guilabel:`Database`: Name of the database."
+msgstr ":guilabel:`Duomenų bazė`: Duomenų bazės pavadinimas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:876
+msgid ""
+":guilabel:`SSL mode`: SSL encryption setup. The following options are "
+"available:"
+msgstr ""
+":guilabel:`SSL režimas`: SSL šifravimo režimas. Galimos šios parinktys:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:879
+msgid ""
+":guilabel:`Prefer` (the default): I don't care about encryption, but I wish "
+"to pay the overhead of encryption if the server supports it."
+msgstr ""
+":guilabel:`Pirmenybė` (numatytoji): Man šifravimas nesvarbus, bet aš sutinku"
+" gaišti papildomą laiką šifravimui, jei serveris jį palaiko."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:881
+msgid ""
+":guilabel:`Require`: I want my data to be encrypted, and I accept the "
+"overhead. I trust that the network will make sure I always connect to the "
+"server I want."
+msgstr ""
+":guilabel:`Reikalauti`: Aš noriu, kad mano duomenys būtų užšifruoti ir aš "
+"sutinku su papildomai gaištamu laiku. Aš tikiu, kad tinklas užtikrins, kad "
+"aš visada prisijungiu prie to serverio, prie kurio noriu."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:883
+msgid ""
+":guilabel:`Verify CA`: I want my data encrypted, and I accept the overhead. "
+"I want to be sure that I connect to a server that I trust."
+msgstr ""
+":guilabel:`Tikrinti CA`: Aš noriu, kad mano duomenys būtų šifruoti ir "
+"sutinku su papildomu reikiamu laiku. Aš noriu būti tikras, kad jungiuosi "
+"prie serverio, kuriuo pasitikiu."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:885
+msgid ""
+":guilabel:`Verify Full`: I want my data encrypted, and I accept the "
+"overhead. I want to be sure that I connect to a server I trust, and that "
+"it's the one I specify."
+msgstr ""
+":guilabel:`Tikrinti pilnai`: Aš noriu, kad mano duomenys būtų šifruoti ir "
+"sutinku su papildomu reikiamu laiku. Aš noriu būti tikras, kad jungiuosi "
+"prie serverio, kuriuo pasitikiu ir jis yra tas, kurį aš nurodžiau."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:887
+msgid ""
+":guilabel:`Allow`: I don't care about security, but I will pay the overhead "
+"of encryption if the server insists on it."
+msgstr ""
+":guilabel:`Leisti`: Man saugumas nesvarbu, bet aš mokėsiu kainą už papildomą"
+" šifravimo darbą, jei serveris to reikalauja."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:889
+msgid ""
+":guilabel:`Disable`: I don't care about security, and I don't want to pay "
+"the overhead of encryption."
+msgstr ""
+":guilabel:`Išjungti`: Man saugumas nesvarbus ir aš nenoriu gaišti papildomo "
+"laiko šifravimui."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:892
+msgid ""
+":guilabel:`Session role`: used to set the current user identifier of the "
+"current session. This is useful to automatically give the ownership of a new"
+" object (table, view, function) to the session_role group and thus share "
+"ownership and associated rights with all members of the session_role group. "
+"Read more about `session role <https://www.postgresql.org/docs/current/sql-"
+"set-role.html>`_."
+msgstr ""
+":guilabel:`Sesijos rolė`: naudojama nustatant dabartinės sesijos dabartinio "
+"naudotojo identifikatorių. Tai naudinga, kai reikia automatiškai duoti naujo"
+" objekto (lentelės, vaizdo, funkcijos) nuosavybę sesijos rolės grupei ir "
+"tokiu būdu dalinti susijusiomis teisėmis su visais sesijos rolės grupės "
+"nariais. Daugiau apie tai skaitykite "
+"<https://www.postgresql.org/docs/current/sql-set-role.html>`_."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:897
+msgid ":guilabel:`Authentication`, basic."
+msgstr ":guilabel:`Autentifikacija`, paprasta."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:899
+msgid ":guilabel:`User name`: User name used to log in to the database."
+msgstr ""
+":guilabel:`Naudotojo vardas`: Prisijungimui prie duomenų bazės naudojamas "
+"vardas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:900
+msgid ""
+":guilabel:`Password`: Password used with *Username* to connect to the "
+"database."
+msgstr ""
+":guilabel:`Slaptažodis`: Prisijungimui prie duomenų bazės naudotoju "
+"*Naudotojas* slaptažodis."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:902
+msgid ""
+"You can save any or both of the ``User name`` and ``Password`` parameters, "
+"in which case they will be used by default each time you need to connect to "
+"this database. If not saved, you'll be prompted to supply the credentials to"
+" connect to the database in next QGIS sessions. The connection parameters "
+"you entered are stored in a temporary internal cache and returned whenever a"
+" username/password for the same database is requested, until you end the "
+"current QGIS session."
+msgstr ""
+"Jūs galite įrašyti bet kurį ar abu parametrus - ``Naudotojo vardą`` ir "
+"``Slaptažodį``, kuriuo atveju jie bus naudojami pagal nutylėjimą kiekvieną "
+"kartą, kai jums reikės prisijungti prie šios duomenų bazės. Jei jų "
+"neįrašysite, jums reikės juos įvesti jungiantis prie duomenų bazės kitose "
+"QGIS sesijose. Jūsų įvesti prisijungimo parametrai laikomi laikiname "
+"vidiniame podėlyje ir grąžinami, kai prireikia tos pačios duomenų bazės "
+"naudotojo/slaptažodžio, kol jūs baigiate dabartinę QGIS sesiją."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:910
+msgid "**QGIS User Settings and Security**"
+msgstr "**QGIS naudotojo nustatymai ir saugumas**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:912
+msgid ""
+"In the :guilabel:`Authentication` tab, saving **username** and **password** "
+"will keep unprotected credentials in the connection configuration. Those "
+"**credentials will be visible** if, for instance, you share the project file"
+" with someone. Therefore, it is advisable to save your credentials in an "
+"*Authentication configuration* instead (:guilabel:`Configurations` tab - See"
+" :ref:`authentication_index` for more details) or in a service connection "
+"file (see :ref:`pg-service-file` for example)."
+msgstr ""
+"Kortelėje :guilabel:`Autentifikacija` išsaugojus **naudotoją** ir "
+"**slaptažodį** neapsaugoti prisijungimo duomenys bus laikomi jungties "
+"konfigūracijoje. Šie **prisijungimo duomenys bus matomi** jei, pavyzdžiui, "
+"pasidalinsite projektu su kuo nors kitu. Taigi patariama vietoje to įrašyti "
+"jūsų prisijungimo duomenis į *Autentifikacijos konfigūraciją*, (kortelė "
+":guilabel:`Konfigūracijos` - daugiau informacijos rasite skyriuje "
+":ref:`authentication_index`) arba paslaugos jungties faile (pavyzdį rasite "
+":ref:`pg-service-file`)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:920
+msgid ""
+":guilabel:`Authentication`, configurations. Choose an authentication "
+"configuration. You can add configurations using the |symbologyAdd| button. "
+"Choices are:"
+msgstr ""
+":guilabel:`Autentifikacija`,konfigūracijos. Pasirinkite autentifikacijos "
+"konfigūraciją. Jūs galite pridėti konfigūracijas naudodami mygtuką "
+"|symbologyAdd|. Pasirinkimai yra:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1780
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:924
+msgid "Basic authentication"
+msgstr "Bazinė autentifikacija"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:925
+msgid "PKI PKCS#12 authentication"
+msgstr "PKI PKCS#12 autentifikacija"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:926
+msgid "PKI paths authentication"
+msgstr "PKI kelių autentifikacija"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:927
+msgid "PKI stored identity certificate"
+msgstr "PKI saugomas identiteto sertifikatas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:929
+msgid ""
+"Optionally, depending on the type of database, you can activate the "
+"following checkboxes:"
+msgstr ""
+"Pasirinktinai, priklausomai nuo duomenų bazės tipo, jūs galite įjungti šias "
+"varneles:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:932
+msgid "|checkbox| :guilabel:`Only show layers in the layer registries`"
+msgstr "|checkbox| :guilabel:`Rodyti tik sluoksnius sluoksnių registruose`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:933
+msgid ""
+"|checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`"
+msgstr "|checkbox| :guilabel:`Nespręsti neribotų stulpelių tipų (GEOMETRY)`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:934
+msgid "|checkbox| :guilabel:`Only look in the 'public' schema`"
+msgstr "|checkbox| :guilabel:`Žiūrėti tik schemoje „public“`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:935
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1062
+msgid ""
+"|checkbox| :guilabel:`Also list tables with no geometry`: indicates that "
+"tables without geometry should also be listed by default."
+msgstr ""
+"|checkbox| :guilabel:`Rodyti ir lenteles be geometrijos`: nurodo, kad pagal "
+"nutylėjimą reikia rodyti ir lenteles, kurios neturi geometrijos."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:937
+msgid ""
+"|checkbox| :guilabel:`Use estimated table metadata`: When initializing "
+"layers, various queries may be needed to establish the characteristics of "
+"the geometries stored in the database table. When this option is checked, "
+"these queries examine only a sample of the rows and use the table "
+"statistics, rather than the entire table. This can drastically speed up "
+"operations on large datasets, but may result in incorrect characterization "
+"of layers (e.g. the feature count of filtered layers will not be accurately "
+"determined) and may even cause strange behaviour if columns that are "
+"supposed to be unique actually are not."
+msgstr ""
+"|checkbox| :guilabel:`Naudoti įvertintus lentelės metaduomenis`: "
+"Inicializuojant sluoksnius, gali prireikti įvairių užklausų, kad būtų "
+"sužinotos duomenų bazės lentelėje saugomų geometrijų charakteristikos. "
+"Įjungus šią parinktį šios užklausos tiria tik dalį eilučių ir naudoja "
+"lentelės statistiką, o ne visą lentelę. Tai gali drastiškai pagreitinti "
+"veiksmus su dideliais duomenų rinkiniais, bet gali reikšti neteisingą "
+"sluoksnių charakteristiką (pvz. gali būti neteisingai nustatytas filtruotų "
+"sluoksnių geoobjektų skaičius) ir gali net sukelti keistą elgseną, jei "
+"stulpeliuose, kuriuose turėtų būti unikalios reikšmės, iš tikrųjų taip nėra."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:947
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1077
+msgid ""
+"|checkbox| :guilabel:`Allow saving/loading QGIS projects in the database` - "
+"more details :ref:`here <saveprojecttodb>`"
+msgstr ""
+"|checkbox| :guilabel:`Leisti įrašyti/įkelti QGIS projektus duomenų bazėje` -"
+" daugiau informacijos :ref:`čia <saveprojecttodb>`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:949
+msgid ""
+"|checkbox| :guilabel:`Allow saving/loading QGIS layer metadata in the "
+"database` - more details :ref:`here <savemetadatatodb>`"
+msgstr ""
+"|checkbox| :guilabel:`Leisti įrašyti/įkelti QGIS sluoksnių metaduomenis "
+"duomenų bazėje` - daugiau informacijos :ref:`čia <savemetadatatodb>`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:952
+msgid ""
+"Once all parameters and options are set, you can test the connection by "
+"clicking the :guilabel:`Test Connection` button or apply it by clicking the "
+":guilabel:`OK` button."
+msgstr ""
+"Nustačius visus parametrus ir parinktis galite patikrinti jungtį paspausdami"
+" mygtuką :guilabel:`Bandyti jungtį` arba pritaikyti spausdami mygtuką "
+":guilabel:`Gerai`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:959
+msgid "PostgreSQL Service connection file"
+msgstr "PostgreSQL paslaugos jungties failas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:961
+msgid ""
+"The service connection file allows PostgreSQL connection parameters to be "
+"associated with a single service name. That service name can then be "
+"specified by a client and the associated settings will be used."
+msgstr ""
+"Paslaugos jungties failas leidžia PostgreSQL jungties parametrus susieti su "
+"vienu paslaugos pavadinimu. Tokį paslaugos pavadinimą gali būti nurodyti "
+"klientas ir bus naudojami susiję nustatymai."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:965
+msgid ""
+"It's called :file:`.pg_service.conf` under \\*nix systems (GNU/Linux, macOS "
+"etc.) and :file:`pg_service.conf` on Windows."
+msgstr ""
+"Jis vadinasi :file:`.pg_service.conf` \\*nix sistemose (GNU/Linux, macOS "
+"etc.) ir :file:`pg_service.conf` Windows."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:968
+msgid "The service file can look like this::"
+msgstr "Paslaugos failas gali atrodyti taip::"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:982
+msgid ""
+"There are two services in the above example: ``water_service`` and "
+"``wastewater_service``. You can use these to connect from QGIS, pgAdmin, "
+"etc. by specifying only the name of the service you want to connect to "
+"(without the enclosing brackets). If you want to use the service with "
+"``psql``, you can do ``psql service=water_service``."
+msgstr ""
+"Aukščiau pateiktame pavyzdyje yra dvi paslaugos: ``water_service`` ir "
+"``wastewater_service``. Jūs galite jas naudodami prisijungdami iš QGIS, "
+"pgAdmin ir t.t. nurodydami tik paslaugos, prie kurios norite prisijungti, "
+"pavadinimą (be skliaustelių). Jei norite naudoti paslaugą su ``psql``, "
+"galite tai padaryti taip ``psql service=water_service``."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:988
+msgid ""
+"You can find all the PostgreSQL parameters `here "
+"<https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
+"PARAMKEYWORDS>`_"
+msgstr ""
+"Visus PostgreSQL parametrus galite rasti `čia "
+"<https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
+"PARAMKEYWORDS>`_"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:991
+msgid ""
+"If you don't want to save the passwords in the service file you can use the "
+"`.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ "
+"option."
+msgstr ""
+"Jei nenorite įrašyti slaptažodžių į paslaugos failą, taipogi galite naudoti "
+"variantą `.pg_pass <https://www.postgresql.org/docs/current/libpq-"
+"pgpass.html>`_."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:994
+msgid "**QGIS Server and service**"
+msgstr "**QGIS Serveris ir paslauga**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:996
+msgid ""
+"When using a service file and QGIS Server, you must configure the service on"
+" the server side as well. You can follow the :ref:`QGIS Server <QGIS-Server-"
+"manual>` documentation."
+msgstr ""
+"Kai naudojamas paslaugų failas ir QGIS Serveris, jūs privalote "
+"sukonfigūruoti paslaugą ir serverio pusėje. Galite laikytis instrukcijų, "
+"pateiktų :ref:`QGIS Serverio <QGIS-Server-manual>` dokumentacijoje."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:999
+msgid ""
+"On \\*nix operating systems (GNU/Linux, macOS etc.) you can save the "
+":file:`.pg_service.conf` file in the user's home directory and PostgreSQL "
+"clients will automatically be aware of it. For example, if the logged user "
+"is ``web``, :file:`.pg_service.conf` should be saved in the "
+":file:`/home/web/` directory in order to directly work (without specifying "
+"any other environment variables)."
+msgstr ""
+"\\*nix operacinėse sistemose (GNU/Linux, macOS etc.) jūs galite įrašyti "
+":file:`.pg_service.conf` failą į naudotojų namų aplanką ir PostgreSQL "
+"klientai į jį automatiškai atsižvelgs. Pavyzdžiui, jei prisijungęs "
+"naudotojas yra ``web``, :file:`.pg_service.conf` reikia įrašyti į aplanką "
+":file:`/home/web/`, kad jis veiktų (nenurodant jokių aplinkos kintamųjų)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1006
+msgid ""
+"You can specify the location of the service file by creating a "
+"``PGSERVICEFILE`` environment variable (e.g. run the ``export "
+"PGSERVICEFILE=/home/web/.pg_service.conf`` command under your \\*nix OS to "
+"temporarily set the ``PGSERVICEFILE`` variable)."
+msgstr ""
+"Jūs galite nurodyti paslaugos failo vietą sukurdami aplinkos kintamąjį "
+"``PGSERVICEFILE`` (pvz. įvykdykite komandą ``export "
+"PGSERVICEFILE=/home/web/.pg_service.conf`` jūsų \\*nix OS, kad laikinai "
+"nustatytumėte kintamąjį ``PGSERVICEFILE``)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1011
+msgid ""
+"You can also make the service file available system-wide (all users) either "
+"by placing the :file:`.pg_service.conf` file in ``pg_config --sysconfdir`` "
+"or by adding the ``PGSYSCONFDIR`` environment variable to specify the "
+"directory containing the service file. If service definitions with the same "
+"name exist in the user and the system file, the user file takes precedence."
+msgstr ""
+"Jūs taipogi galite padaryti paslaugų failą prieinamu visai sistemai (visiems"
+" naudotojams) arba padėdami :file:`.pg_service.conf` failą į ``pg_config "
+"--sysconfdir`` arba pridėdami aplinkos kintamąjį ``PGSYSCONFDIR``, kad "
+"nurodytumėte aplanką, kuriame yra paslaugos failas. Jei paslauga su tokiu "
+"pačiu pavadinimu apibrėžta ir naudotojo, ir sistemos faile, bus naudojamas "
+"naudotojo failas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1019
+msgid "There are some caveats under Windows:"
+msgstr "Naudojant Windows yra keli įspėjimai:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1021
+msgid ""
+"The service file should be saved as :file:`pg_service.conf` and not as "
+":file:`.pg_service.conf`."
+msgstr ""
+"Paslaugos failą reikia įrašyti kaip :file:`pg_service.conf`, o ne "
+":file:`.pg_service.conf`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1023
+msgid ""
+"The service file should be saved in Unix format in order to work. One way to"
+" do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_ and "
+":menuselection:`Edit --> EOL Conversion --> UNIX Format --> File save`."
+msgstr ""
+"Paslaugos failą reikia įrašyti Unix formatu, kad jis veiktų. Tai galima "
+"padaryti pavyzdžiui atidarius jį su `Notepad++ <https://notepad-plus-"
+"plus.org/>`_ ir parinkus :menuselection:`Edit --> EOL Conversion --> UNIX "
+"Format --> File save`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1028
+msgid ""
+"You can add environmental variables in various ways; a tested one, known to "
+"work reliably, is :menuselection:`Control Panel --> System and Security --> "
+"System --> Advanced system settings --> Environment Variables` adding "
+"``PGSERVICEFILE`` with the path - e.g. "
+":file:`C:\\\\Users\\\\John\\\\pg_service.conf`"
+msgstr ""
+"Jūs galite pridėti aplinkos kintamuosius keliais būdais. Patikrintas būdas, "
+"kuris užtikrintai veikia, yra :menuselection:`Control Panel --> System and "
+"Security --> System --> Advanced system settings --> Environment Variables` "
+"pridėti ``PGSERVICEFILE`` su keliu - pvz. "
+":file:`C:\\\\Users\\\\John\\\\pg_service.conf`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1033
+msgid ""
+"After adding an environment variable you may also need to restart the "
+"computer."
+msgstr ""
+"Pridėjus aplinkos kintamąjį jums gali tekti iš naujo paleisti jūsų "
+"kompiuterį."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1040
+msgid "Connecting to Oracle Spatial"
+msgstr "Prisijungimas prie Oracle Spatial"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1042
+msgid ""
+"The spatial features in Oracle Spatial aid users in managing geographic and "
+"location data in a native type within an Oracle database. The connection "
+"dialog proposes:"
+msgstr ""
+"Oracle Spatial erdvinės savybės padeda naudotojams valdyti geografinius ir "
+"vietos duomenis naudojant savus tipus Oracle duomenų bazėje. Šis jungties "
+"dialogas siūlo:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1046
+msgid "**Database**: SID or SERVICE_NAME of the Oracle instance;"
+msgstr "**Duomenų bazė**: Oracle egzemplioriaus SID ar SERVICE_NAME;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1047
+msgid ""
+"**Port**: Port number the Oracle database server listens on. The default "
+"port is ``1521``;"
+msgstr ""
+"**Prievadas**: Prievado numeris, kuriuo klausosi Oracle duomenų bazė. "
+"Numatytasis prievadas yra ``1521``;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1049
+msgid ""
+"**Options**: Oracle connection specific options (e.g. "
+"OCI_ATTR_PREFETCH_ROWS, OCI_ATTR_PREFETCH_MEMORY). The format of the options"
+" string is a semicolon separated list of option names or option=value pairs;"
+msgstr ""
+"**Parinktys**: specifinės Oracle jungties parinktys (pvz. "
+"OCI_ATTR_PREFETCH_ROWS, OCI_ATTR_PREFETCH_MEMORY). Parinkčių eilutės "
+"formatas yra kabliataškiais atskirtas sąrašas parinkčių pavadinimų ar porų "
+"parinktis=reikšmė;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1052
+msgid "**Workspace**: Workspace to switch to;"
+msgstr "**Darbo erdvė**: Darbo erdvė, į kurią reikia persijungti;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1053
+msgid "**Schema**: Schema in which the data are stored"
+msgstr "**Schema**: Schema, kurioje laikomi duomenys"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1055
+msgid "Optionally, you can activate the following checkboxes:"
+msgstr "Pasirinktinai galite įjungti šias varneles:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1057
+msgid ""
+"|checkbox| :guilabel:`Only look in metadata table`: restricts the displayed "
+"tables to those that are in the ``all_sdo_geom_metadata`` view. This can "
+"speed up the initial display of spatial tables."
+msgstr ""
+"|checkbox| :guilabel:`Ieškoti tik metaduomenų lentelėje`: rodo tik tas "
+"lenteles, kurios yra vaizde ``all_sdo_geom_metadata``. Tai gali pagreitinti "
+"pradinį erdvinių lentelių parodymą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1060
+msgid ""
+"|checkbox| :guilabel:`Only look for user's tables`: when searching for "
+"spatial tables, restricts the search to tables that are owned by the user."
+msgstr ""
+"|checkbox| :guilabel:`Ieškoti tik naudotojo lentelėse`: ieškant erdvinių "
+"lentelių apsiribojama tik lentelėmis, kurių savininkas yra dabartinis "
+"naudotojas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1064
+msgid ""
+"|checkbox| :guilabel:`Use estimated table statistics for the layer "
+"metadata`: when the layer is set up, various metadata are required for the "
+"Oracle table. This includes information such as the table row count, "
+"geometry type and spatial extents of the data in the geometry column. If the"
+" table contains a large number of rows, determining this metadata can be "
+"time-consuming. By activating this option, the following fast table metadata"
+" operations are done: Row count is determined from ``all_tables.num_rows``. "
+"Table extents are always determined with the SDO_TUNE.EXTENTS_OF function, "
+"even if a layer filter is applied. Table geometry is determined from the "
+"first 100 non-null geometry rows in the table."
+msgstr ""
+"|checkbox| :guilabel:`Naudoti įvertintas lentelių statistikas sluoksnių "
+"metaduomenims`: kai ruošiamas sluoksnis, reikia turėti įvairius Oracle "
+"lentelės metaduomenis, tokius kaip lentelės įrašų skaičius, geometrijos "
+"tipas, geometrijos stulpelių duomenų erdvinė apimtis. Jei lentelėje yra daug"
+" įrašų, šių rodiklių nustatymas gali užtrukti daug laiko. Įjungus šią "
+"parinktį bus vykdomi šie greiti metaduomenų nustatymo veiksmai: įrašų "
+"skaičius nustatomas pagal ``all_tables.num_rows``. Lentelės apimtis visada "
+"nustatoma naudojant funkciją SDO_TUNE.EXTENTS_OF, net jei taikomas sluoksnio"
+" filtras. Lentelės geometrija nustatoma pagal pirmus 100 ne null geometrijos"
+" įrašų."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1074
+msgid ""
+"|checkbox| :guilabel:`Only existing geometry types`: only lists the existing"
+" geometry types and don't offer to add others."
+msgstr ""
+"|checkbox| :guilabel:`Tik esami geometrijos tipai`: rodo tik esamos "
+"geometrijos tipus ir nesiūlo pridėti kitų."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1076
+msgid "|checkbox| :guilabel:`Include additional geometry attributes`."
+msgstr "|checkbox| :guilabel:`Įtraukti papildomus geometrijos atributus`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1079
+msgid ""
+":guilabel:`Schema`: Allows to specify a single schema to limit a connection "
+"to. When set, only tables from the matching schema will be included in the "
+"browser panel and data source select for the connection. This can be used to"
+" limit the database work required to populate tables for a connection "
+"pointing to a large database store."
+msgstr ""
+":guilabel:`Schema`: Leidžia nurodyti vieną schemą, kuria apsiriboti "
+"prisijungiant. Jei ji nurodyta, naršyklės skydelyje ir duomenų šaltinio "
+"pasirinkime jungtyje bus rodomos lentelės iš atitinkančios schemos. Tai "
+"galima naudoti ribojant duombazės darbą, kurio prireiks pildant jungties "
+"lenteles, kai kalba apie dideles duomenų bazių saugyklas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1087
+msgid "**Oracle Spatial Layers**"
+msgstr "**Oracle Spatial sluoksniai**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1089
+msgid ""
+"Normally, an Oracle Spatial layer is defined by an entry in the "
+"**USER_SDO_METADATA** table."
+msgstr ""
+"Paprastai Oracle Spatial sluoksnis apibrėžiamas įrašu lentelėje "
+"**USER_SDO_METADATA**."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1092
+msgid ""
+"To ensure that selection tools work correctly, it is recommended that your "
+"tables have a **primary key**."
+msgstr ""
+"Kad įsitikintumėte, kad parinkimo įrankiai veikia korektiškai, "
+"rekomenduojama, kad jūsų lentelės turėtų **pirminį raktą**."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1099
+msgid "Connecting to MS SQL Server"
+msgstr "Prisijungimas prie MS SQL Server"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1101
+msgid ""
+"As mentioned in :ref:`vector_create_stored_connection` QGIS allows you to "
+"create MS SQL Server connection through :guilabel:`Data Source Manager`."
+msgstr ""
+"Kaip paminėta :ref:`vector_create_stored_connection`, QGIS leidžia jums "
+"sukurti MS SQL Server jungtį naudojant :guilabel:`Duomenų šaltinių "
+"tvarkyklę`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1109
+msgid "MS SQL Server Connection"
+msgstr "MS SQL Server jungtis"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1111
+msgid ""
+"To create a new MS SQL Server connection, you need to provide some of the "
+"following information in the :guilabel:`Connection Details` dialog:"
+msgstr ""
+"Norėdami sukurti naują MS SQL Server jungtį jūs turite pateikti toliau "
+"išvardintą informaciją :guilabel:`Jungties detalių` dialoge:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1114
+msgid ":guilabel:`Connection name`"
+msgstr ":guilabel:`Jungties pavadinimas`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1115
+msgid ":guilabel:`Provider/DSN`"
+msgstr ":guilabel:`Tiekėjas/DSN`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1116
+msgid ":guilabel:`Host`"
+msgstr ":guilabel:`Mašina`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1117
+msgid ""
+":guilabel:`Login` information. You can choose to |checkbox| :guilabel:`Save`"
+" your credentials."
+msgstr ""
+":guilabel:`Prisijungimo` informacija. Jūs galite pasirinkti |checkbox| "
+":guilabel:`Įrašyti` jūsų prisijungimo duomenis."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1120
+msgid ""
+"Navigate to the :guilabel:`Database Details` section and click the "
+":guilabel:`List Databases` button to view the available datasets. Select "
+"datasets that you want, then press :guilabel:`OK`. Optionally, you can also "
+"perform a :guilabel:`Test Connection`. Once you click :guilabel:`OK` the "
+":guilabel:`Create a New MS SQL Server Connection` dialog will close and in "
+"the :guilabel:`Data Source Manager` press :guilabel:`Connect`, select a "
+"layer and then click :guilabel:`Add`."
+msgstr ""
+"Nueikite į skiltį :guilabel:`Duomenų bazės detalės` ir spauskite mygtuką "
+":guilabel:`Duomenų bazių sąrašas`, kad peržiūrėtumėte pasiekiamus duomenų "
+"rinkinius. Parinkite duomenų rinkinius, kurių jums reikia, tada spauskite "
+":guilabel:`Gerai`. Pasirinktinai jūs galite vykdyti :guilabel:`Bandyti "
+"jungtį`. Paspaudus :guilabel:`Gerai`, dialogas :guilabel:`Kurti naują MS SQL"
+" Server jungtį` užsidarys, :guilabel:`Duomenų šaltinių tvarkyklėje` "
+"spauskite :guilabel:`Prisijungti`, parinkite sluoksnį ir spauskite "
+":guilabel:`Pridėti`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1128
+msgid "Optionally, you can activate the following options:"
+msgstr "Pasirinktinai galite įjungti šias parinktis:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1130
+msgid ""
+"|checkbox| :guilabel:`Only look in the geometry_columns metadata table`: "
+"restricts the available tables to the ones in the ``geometry_columns`` "
+"metadata table when scanning for tables. This can speed up the table "
+"scanning."
+msgstr ""
+"|checkbox| :guilabel:`Ieškoti tik metaduomenų lentelėje geometry_columns`: "
+"skenuojant rodo tik tas lentas, kurios yra metaduomenų lentelėje "
+"``geometry_columns``. Tai gali pagreitinti lentelių skenavimą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1134
+msgid ""
+"|checkbox| :guilabel:`Use layer extent from geometry_columns table`: this "
+"option, dependent on the previous one, allows QGIS to skip extent "
+"calculation when loading layers and thus lowering the amount of time needed "
+"to load them. It relies on extent manually specified using additional QGIS-"
+"specific columns (``qgis_xmin``, ``qgis_xmax``, ``qgis_ymin``, "
+"``qgis_ymax``) in the ``geometry_columns`` table."
+msgstr ""
+"|checkbox| :guilabel:`Naudoti sluoksnio apimtį iš lentelės "
+"geometry_columns`: ši parinktis, priklausanti nuo ankstesnės, leidžia QGIS "
+"praleisti apimties skaičiavimą įkeliant sluoksnius, taip sumažinant "
+"įkrovimui reikiamą laiką. Remiamasi rankiniu būdu nurodyta apimtimi "
+"naudojant QGIS-specifinius laukus (``qgis_xmin``, ``qgis_xmax``, "
+"``qgis_ymin``, ``qgis_ymax``) lentelėje ``geometry_columns``."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1788
 msgid "win"
