@@ -655,7 +655,7 @@ Scale Bar
 |scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas.
 You can control the style and placement, as well as the labelling of the bar.
 The scale bar respects the active :ref:`project's distance unit <measurements_ellipsoid>`
-as defined in :menuselection:`Project properties --> General --> Units for distance measurement`.
+as defined in :menuselection:`Project properties --> General --> Units for distance measurement`. The scale bar will be automatically resized based on your zoom level and settings. It works best when the distance units are set to **Meters** or **Feet**, as the units (e.g., from meters to kilometers or feet to miles) will be automatically adjusted according to your zoom level.
 
 To add a scale bar:
 
@@ -676,7 +676,8 @@ To add a scale bar:
    bar fill and outline can be made opaque by clicking on the down arrow to the right
    of the color input.
 #. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box
-#. Set the :guilabel:`Size of bar` in the active unit
+#. Set the :guilabel:`Size of bar` based on the active distance units set in :guilabel:`Map Units` (maximum allowed value is 10,000). The scale bar will display this value when the current zoom level allows it.
+#. Set the :guilabel:`Max Width` (values ranging from 1-80%) as the maximum width of the scale bar as a percentage of the width of the map canvas
 #. Optionally check |checkbox| :guilabel:`Automatically snap to round number on resize`
    to display easy-to-read values
 #. Choose the placement from the :guilabel:`Placement` |selectString| combo box
