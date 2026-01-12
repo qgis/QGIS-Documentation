@@ -167,7 +167,7 @@ contained within. Trust cannot be granted to individual scripts.
 
    Project Trust Settings
 
-* :guilabel:`Behavior for embedded scripts within projects of undetermined trust`:
+* :guilabel:`Behavior for embedded scripts within projects with undetermined trust`:
   Use the dropdown menu to select how QGIS should respond when opening a project
   whose trust status has not yet been decided. Options include:
 
@@ -188,13 +188,13 @@ contained within. Trust cannot be granted to individual scripts.
   * :guilabel:`Always Execute (Not recommended)`: enable execution of all embedded scripts;
     not recommended because it bypasses all safety checks and can run untrusted or malicious code without prompting.
 
-* :guilabel:`Trusted projects and folders allowing embedded script execution`:
+* :guilabel:`Trusted projects and folders that allow embedded script execution`:
   This list shows project files or folders that you have explicitly marked as
   trusted. Projects located in these paths are allowed to run their embedded
   scripts without prompting. Use the |symbologyAdd|:sup:`Add new trusted project` or
   |symbologyRemove|:sup:`Remove trusted project or folder` buttons to manage the list.
 
-* :guilabel:`Untrusted projects and folders denied embedded script execution`:
+* :guilabel:`Untrusted projects and folders are denied embedded script execution`:
   Paths listed here are explicitly marked as untrusted. Projects stored in these
   locations will never run embedded scripts. Use the |symbologyAdd|:sup:`Add new project denial` or
   |symbologyRemove|:sup:`Remove denied project or folder` buttons to
