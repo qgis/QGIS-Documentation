@@ -1076,6 +1076,11 @@ Calculates the total curvature from an input raster layer. The curvature is the 
 derivative of the surface, revealing terrain features like ridges (positive curvature,
 convex) and valleys (negative, concave), with zero indicating flat or saddle points.
 
+.. figure:: img/total_curvature.png
+   :align: center
+
+   Total curvature
+
 Parameters
 ..........
 
