@@ -5,7 +5,9 @@
  A Step By Step Contribution
 *****************************
 
-.. contents::
+.. only:: html
+
+ .. contents::
    :local:
 
 .. note:: Though QGIS-Documentation is used to demonstrate the process, all
