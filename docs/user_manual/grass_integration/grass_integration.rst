@@ -589,10 +589,8 @@ need to be written to the currently selected :file:`LOCATION` and :file:`MAPSET`
 Working with GRASS modules
 ---------------------------
 
-The GRASS shell inside the GRASS Toolbox provides access to almost all (more than
-300) GRASS modules in a command line interface. To offer a more user-friendly
-working environment, about 200 of the available GRASS modules and functionalities
-are also provided by graphical dialogs within the GRASS plugin Toolbox.
+The GRASS plugin provides a user-friendly toolbox with about 200 of the available
+GRASS modules and functionalities.
 
 A complete list of GRASS modules available in the graphical Toolbox in QGIS
 version |CURRENT| is available in the GRASS wiki at
@@ -779,48 +777,6 @@ You should now have the ``gtopo30`` elevation with its colormap and transparency
 setting displayed **above** the grayscale hillshade map. In order to see the
 visual effects of the hillshading, turn off the ``gtopo30_shade`` map, then turn
 it back on.
-
-**Using the GRASS shell**
-
-The GRASS plugin in QGIS is designed for users who are new to GRASS and not
-familiar with all the modules and options. As such, some modules in the Toolbox
-do not show all the options available, and some modules do not appear at all.
-The GRASS shell (or console) gives the user access to those additional GRASS
-modules that do not appear in the Toolbox tree, and also to some additional
-options to the modules that are in the Toolbox with the simplest default
-parameters. This example demonstrates the use of an additional option in the
-**r.shaded.relief** module that was shown above.
-
-.. _figure_grass_module_shell:
-
-.. figure:: img/grass_toolbox_shell.png
-   :align: center
-
-   The GRASS shell, r.shaded.relief module
-
-The module **r.shaded.relief** can take a parameter ``zmult``, which multiplies
-the elevation values relative to the X-Y coordinate units so that the hillshade
-effect is even more pronounced.
-
-* Load the ``gtopo30`` elevation raster as above, then start the GRASS Toolbox
-  and click on the GRASS shell. In the shell window, type the command
-  ``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` and
-  press :kbd:`Enter`.
-* After the process finishes, shift to the :guilabel:`Browse` tab and double-click
-  on the new ``gtopo30_shade2`` raster to display it in QGIS.
-* As explained above, move the shaded relief raster below the ``gtopo30`` raster in
-  the table of contents, then check the transparency of the colored ``gtopo30`` layer.
-  You should see that the 3-D effect stands out more strongly compared with the
-  first shaded relief map.
-
-.. _figure_grass_module_display:
-
-.. figure:: img/grass_toolbox_shadedrelief.png
-   :align: center
-   :width: 35em
-
-   Displaying shaded relief created with the GRASS module r.shaded.relief
-
 
 Raster statistics in a vector map
 ..................................
