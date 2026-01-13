@@ -2356,7 +2356,11 @@ Basic parameters
      - [boolean]
 
        Default: False
-     - If checked, the Z coordinates will also be transformed according to a vertical datum transformation. This requires that the Z coordinates in the geometries represent height relative to the vertical datum of the source CRS and are expressed in its vertical units. If Z coordinates do not match these requirements, either transformation of Z coordinates or all X, Y and Z coordinates may be incorrect.
+     - If checked, the Z coordinates will also be transformed according to a vertical datum transformation.
+       This requires that the Z coordinates in the geometries represent height relative to the vertical datum
+       of the source CRS and are expressed in its vertical units.
+       If Z coordinates do not match these requirements, either transformation of Z coordinates
+       or all X, Y and Z coordinates may be incorrect.
    * - **Reprojected**
      - ``OUTPUT``
      - [same as input]
