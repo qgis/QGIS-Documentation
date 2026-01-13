@@ -516,6 +516,11 @@ Parameters
        can add::
        
          value = $geom.area()
+
+       To access an existing field use its name enclosed in the angle brackets.
+       For example, to uppercase values of the "address" field::
+
+         value = <address>.upper()
        
    * - **Calculated**
      - ``OUTPUT``
