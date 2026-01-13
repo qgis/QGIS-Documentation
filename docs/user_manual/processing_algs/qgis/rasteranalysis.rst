@@ -4394,9 +4394,10 @@ standard low-pass filters (e.g., mean, median, Gaussian) or resampling, which of
 features.
 
 The algorithm works in three steps:
+
  #. Calculating surface normal 3D vectors for each grid cell.
  #. Smoothing the normal vector field using a filter that applies more
- weight to neighbors with similar surface normals (preserving edges).
+    weight to neighbors with similar surface normals (preserving edges).
  #. Iteratively updating the elevations in the DEM to match the smoothed normal field.
 
 *References: Lindsay, John et al (2019): LiDAR DEM Smoothing and the Preservation of Drainage Features.
@@ -4502,13 +4503,13 @@ Advanced parameters
      - [string]
 
        Default: ''
-     - For adding one or more creation options that control the raster to be created
-       (colors, block size, file compression...).
-       For convenience, you can rely on predefined profiles (see
-       :ref:`GDAL driver options section <gdal_createoptions>`).
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
 
-       Batch Process and Model Designer: separate multiple options with a pipe
-       character (``|``).
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
 
 Outputs
 .......
