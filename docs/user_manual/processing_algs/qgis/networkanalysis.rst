@@ -7,6 +7,155 @@ Network analysis
       :local:
       :depth: 1
 
+.. _qgisextractnetworkendpoints:
+
+Extract network end points
+----------------------------
+
+Extracts the end points (nodes) from a network line layer.
+Two definitions are available for identifying end points:
+
+#. Nodes with only all incoming or all outgoing edges: Identifies 'Source' or 'Sink' nodes based on the direction of flow. These are nodes where flow can start (only outgoing) or stop (only incoming).
+#. Nodes connected to a single edge: Identifies topological 'dead-ends' or 'dangles', regardless of directionality. This checks if the node is connected to only one other distinct node.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector layer representing network**
+     - ``INPUT``
+     - [vector: line]
+     - Line vector layer representing the network to extract end points from.
+   * - **End point definition**
+     - ``ENDPOINT_DEFINITION``
+     - [enumeration]
+
+       Default: 1
+     - The definition used to identify end points. One of:
+
+       * 0 --- Extract Nodes with only All Incoming or All Outgoing Edges
+       * 1 --- Extract Nodes Connected to a Single Edge
+   * - **Network endpoints**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output point layer for the extracted network end points.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Direction field**
+
+       Optional
+     - ``DIRECTION_FIELD``
+     - [tablefield: any]
+     - The field used to specify directions for the network edges.
+       
+       The values used in this field are specified with the three parameters
+       ``Value for forward direction``, ``Value for backward direction``
+       and ``Value for both directions``.
+       Forward and reverse directions correspond to a one-way edge,
+       "both directions" indicates a two-way edge.
+       If a feature does not have a value in this field, or no field is set
+       then the default direction setting (provided with the ``Default direction`` parameter) is used.
+   * - **Value for forward direction**
+
+       Optional
+     - ``VALUE_FORWARD``
+     - [string]
+
+       Default: '' (empty string)
+     - Value set in the direction field to identify edges with a
+       forward direction
+   * - **Value for backward direction**
+
+       Optional
+     - ``VALUE_BACKWARD``
+     - [string]
+
+       Default: '' (empty string)
+     - Value set in the direction field to identify edges with a
+       backward direction
+   * - **Value for both directions**
+
+       Optional
+     - ``VALUE_BOTH``
+     - [string]
+
+       Default: '' (empty string)
+     - Value set in the direction field to identify bidirectional edges
+   * - **Default direction**
+     - ``DEFAULT_DIRECTION``
+     - [enumeration]
+
+       Default: 2
+     - If a feature has no value set in the direction field or
+       if no direction field is set, then this direction value is used.
+       One of:
+
+       * 0 --- Forward direction
+       * 1 --- Backward direction
+       * 2 --- Both directions
+   * - **Topology tolerance**
+     - ``TOLERANCE``
+     - [numeric: double]
+
+       Default: 0.0
+     - Two lines with nodes closer than the specified
+       tolerance are considered connected
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Network endpoints**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output point layer for the extracted network end points.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:extractnetworkendpoints``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisserviceareafromlayer:
 
@@ -778,6 +927,180 @@ Python code
 ...........
 
 **Algorithm ID**: ``native:shortestpathpointtopoint``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+.. _qgisvalidatenetwork:
+
+Validate network
+---------------------
+
+Analyzes a network vector layer to identify data and topology errors that may affect network analysis tools (like shortest path).
+Optional checks include:
+
+#. Validating the 'Direction' field to ensure all direction field values in the input layer match the configured forward/backward/both values. Errors will be reported if the direction field value is non-null and does not match one of the configured values.
+#. Checking node-to-node separation. This check identifies nodes from the network graph that are closer to other nodes than the specified tolerance distance. This often indicates missed snaps or short segments in the input layer. In the case that a node violates this condition with multiple other nodes, only the closest violation will be reported.
+#. Checking node-to-segment separation: This check identifies nodes that are closer to a line segment (e.g. a graph edge) than the specified tolerance distance, without being connected to it. In the case that a node violates this condition with multiple other edges, only the closest violation will be reported.
+
+Two layers are output by this algorithm:
+
+#. An output containing features from the original network layer which failed the direction validation checks.
+#. An output representing the problematic node locations with a 'error' field explaining the error. This is a line layer, where the output features join the problematic node to the node or segment which failed the tolerance checks.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector layer representing network**
+     - ``INPUT``
+     - [vector: line]
+     - Line vector layer representing the network to be validated.
+   * - **Minimum separation between nodes**
+
+       Optional
+     - ``TOLERANCE_NODE_NODE``
+     - [numeric: double]
+
+       Default: Not set
+     - The minimum allowed distance between two distint graph nodes.
+       Nodes closer than this distance (but not identical) will be flagged as errors.
+       Leave empty to disable this check.
+   * - **Minimum separation between nodes and non-noded segments**
+
+       Optional
+     - ``TOLERANCE_NODE_SEGMENT``
+     - [numeric: double]
+
+       Default: Not set
+     - The minimum allowed distance between a graph node and a graph edge (segment) that
+       is not connected to the node.
+       Nodes closer to a segment than this distance will be flagged.
+       Leave empty to disable this check.
+   * - **Direction field**
+
+       Optional
+     - ``DIRECTION_FIELD``
+     - [tablefield: any]
+     - The field used to specify directions for the network edges.
+       
+       The values used in this field are specified with the three parameters
+       ``Value for forward direction``, ``Value for backward direction``
+       and ``Value for both directions``.
+       Forward and reverse directions correspond to a one-way edge,
+       "both directions" indicates a two-way edge.
+       If a feature does not have a value in this field, or no field is set
+       then the default direction setting (provided with the ``Default direction`` parameter) is used.
+   * - **Value for forward direction**
+
+       Optional
+     - ``VALUE_FORWARD``
+     - [string]
+
+       Default: '' (empty string)
+     - Value set in the direction field to identify edges with a
+       forward direction
+   * - **Value for backward direction**
+
+       Optional
+     - ``VALUE_BACKWARD``
+     - [string]
+
+       Default: '' (empty string)
+     - Value set in the direction field to identify edges with a
+       backward direction
+   * - **Value for both directions**
+
+       Optional
+     - ``VALUE_BOTH``
+     - [string]
+
+       Default: '' (empty string)
+     - Value set in the direction field to identify bidirectional edges
+   * - **Invalid network features**
+
+       Optional
+     - ``OUTPUT_INVALID_NETWORK``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line layer for the invalid network features.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_skip**
+          :end-before: **end_layer_output_types_skip**
+   * - **Invalid network nodes**
+
+       Optional
+     - ``OUTPUT_INVALID_NODES``
+     - [vector: line]
+  
+       Default: ``[Create temporary layer]``
+     - Specify the output line layer for the invalid network nodes.
+       :ref:`One of <output_parameter_widget>`:
+  
+       .. include:: ../algs_include.rst
+           :start-after: **layer_output_types_skip**
+           :end-before: **end_layer_output_types_skip**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Topology tolerance**
+     - ``TOLERANCE``
+     - [numeric: double]
+
+       Default: 0.0
+     - Two lines with nodes closer than the specified
+       tolerance are considered connected
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Invalid network features**
+     - ``OUTPUT_INVALID_NETWORK``
+     - [vector: line]
+     - The output line layer for the invalid network features.
+   * - **Invalid network nodes**
+     - ``OUTPUT_INVALID_NODES``
+     - [vector: line]
+     - The output line layer for the invalid network nodes.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:validatenetwork``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
