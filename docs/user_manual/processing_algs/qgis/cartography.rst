@@ -174,11 +174,11 @@ Outputs
    * - **Color ramp count**
      - ``COLORRAMPS``
      - [numeric: integer]
-     - 
+     - Number of color ramps
    * - **Label settings count**
      - ``LABELSETTINGS``
      - [numeric: integer]
-     - 
+     - Number of label settings
    * - **Output style database**
      - ``OUTPUT``
      - [file]
@@ -186,11 +186,11 @@ Outputs
    * - **Symbol count**
      - ``SYMBOLS``
      - [numeric: integer]
-     - 
+     - Number of symbols
    * - **Text format count**
      - ``TEXTFORMATS``
      - [numeric: integer]
-     - 
+     - Number of text formats
 
 Python code
 ...........
