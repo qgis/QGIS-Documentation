@@ -781,6 +781,23 @@ The following option is available:
 Editing or deleting existing relationships can be done
 by right-clicking on the relationship in the Browser Panel.
 
+.. figure:: img/browser_panel_relationships.png
+   :align: center
+   :width: 400px
+
+   Managing dataset-stored relationships in the Browser Panel
+
+.. note:: **Dataset-stored vs Project-level Relationships**
+
+   Relationships defined in the Browser Panel are stored within the dataset itself
+   and influence how layers are loaded into a project.
+   When parent and child layers are loaded, QGIS automatically creates temporary
+   project relations based on these dataset-stored relationships.
+   Go to :menuselection:`Project --> Properties --> Relations` to view
+   and manage these temporary project relations.
+   For more details on project-level relations and how they interact with
+   database-stored relationships, see :ref:`vector_relations`.
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
