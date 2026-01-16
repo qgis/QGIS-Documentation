@@ -49,7 +49,7 @@ Parameters
   
        Default: ``True``
      - If checked, additional details about each identified dataset 
-        will be added to the output vector layer.
+       will be added to the output vector layer.
    * - **Output file**
      - ``OUTPUT``
      - [vector: any]
