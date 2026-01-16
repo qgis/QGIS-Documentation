@@ -85,10 +85,13 @@ Outputs
        - ``driver``: name of the GDAL driver that can open the file.
        - Additional fields if the **Add details about identified datasets in the output** option is checked:
   
-         - ``layout``: values can be for example ``COG``.
+         - ``layout``: specifies the internal layout of the dataset,
+           indicating how and where the different components of a TIFF file are stored.
+           Currently, the only supported value (when set) is COG (Cloud Optimized GeoTIFF).
          - ``file_list``: side-car files (files that store extra data) associated with the dataset.
          - ``has_crs``: whether the dataset has a coordinate reference system defined.
-         - ``has_geotransform``: whether the dataset has geotransform defined.
+         - ``has_geotransform``: whether the dataset defines a geotransform that maps image (pixel–line) coordinates
+           to georeferenced coordinates (projected or geographic coordinates).
          - ``has_overview``: whether the dataset has overview.
 
 Python code
