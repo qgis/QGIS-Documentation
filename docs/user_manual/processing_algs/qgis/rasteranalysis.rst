@@ -4401,7 +4401,7 @@ The algorithm works in three steps:
  #. Iteratively updating the elevations in the DEM to match the smoothed normal field.
 
 *References: Lindsay, John et al (2019): LiDAR DEM Smoothing and the Preservation of Drainage Features.
-Remote Sensing, Vol. 11, Issue 16, https://doi.org/10.3390/rs11161926
+Remote Sensing, Vol. 11, Issue 16, https://doi.org/10.3390/rs11161926*
 
 .. seealso:: This is a port of the WhiteboxTools `FeaturePreservingSmoothing`_ algorithm.
 
@@ -4459,7 +4459,7 @@ Basic parameters
      - ``MAX_ELEVATION_CHANGE``
      - [numeric: double]
 
-       Default: 0
+       Default: 0.0
      - The allowed maximum height change of any cell in one iteration. If the calculated change
        exceeds this value, the elevation remains unchanged. This prevents excessive deviation
        from the original surface.
