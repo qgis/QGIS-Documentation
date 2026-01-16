@@ -4489,6 +4489,162 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgisrasterfeaturepreservingsmoothing:
+
+Feature preserving DEM smoothing
+--------------------------------
+|400|
+
+Can be used to remove surface roughness from digital elevation model without significantly altering sharp
+features such as breaks-in-slope, stream banks, or terrace scarps. This makes this algorithm superior to
+standard low-pass filters (e.g., mean, median, Gaussian) or resampling, which often blur distinct topographic
+features.
+
+The algorithm works in three steps:
+
+ #. Calculating surface normal 3D vectors for each grid cell.
+ #. Smoothing the normal vector field using a filter that applies more
+    weight to neighbors with similar surface normals (preserving edges).
+ #. Iteratively updating the elevations in the DEM to match the smoothed normal field.
+
+*References: Lindsay, John et al (2019): LiDAR DEM Smoothing and the Preservation of Drainage Features.
+Remote Sensing, Vol. 11, Issue 16, https://doi.org/10.3390/rs11161926*
+
+.. seealso:: This is a port of the WhiteboxTools `FeaturePreservingSmoothing`_ algorithm.
+
+.. _`FeaturePreservingSmoothing`: https://www.whiteboxgeo.com/manual/wbt_book/available_tools/geomorphometric_analysis.html#FeaturePreservingSmoothing
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+     - The band of the DEM to consider
+   * - **Filter radius (pixels)**
+     - ``RADIUS``
+     - [numeric: integer]
+
+       Default: 5
+     - Radius of the filter kernel.
+       A radius of 5 results in an 11x11 kernel.
+   * - **Normal difference threshold (degrees)**
+     - ``THRESHOLD``
+     - [numeric: double]
+
+       Default: 15.0
+     - Maximum angular difference (in degrees) between the normal vector of the center cell and
+       a neighbor for the neighbor to be included in the filter. Higher values result in more
+       neighbors being included, producing smoother surfaces. A range of 10-20 degrees
+       is typically optimal.
+   * - **Elevation update iterations**
+     - ``ITERATIONS``
+     - [numeric: integer]
+
+       Default: 3
+     - Number of times the smoothing process (elevation update) is repeated. Increasing this
+       value from the default of 3 will result in significantly greater smoothing.
+   * - **Maximum elevation change**
+
+       Optional
+     - ``MAX_ELEVATION_CHANGE``
+     - [numeric: double]
+
+       Default: 0.0
+     - The allowed maximum height change of any cell in one iteration. If the calculated change
+       exceeds this value, the elevation remains unchanged. This prevents excessive deviation
+       from the original surface.
+   * - **Z factor**
+     - ``Z_FACTOR``
+     - [numeric: double]
+
+       Default: 1.0
+     - Vertical exaggeration.
+       This parameter is useful when the Z units differ from the X and Y units, for example
+       feet and meters. You can use this parameter to adjust for this. Increasing the value of
+       this parameter will exaggerate the final result (making it look more "hilly").
+       The default is 1 (no exaggeration).
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``Save to temporary file``
+     - Specify the output hillshade raster layer. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - The output smoothed raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:rasterfeaturepreservingsmoothing``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. |gaussian_formula| image:: img/fuzzy_gaussian_formula.png
    :height: 1.5em
 .. |fuzzy_large_formula| image:: img/fuzzy_large_formula.png
@@ -4510,3 +4666,4 @@ Python code
    source folder.
 
 .. |344| replace:: ``NEW in 3.44``
+.. |400| replace:: ``NEW in 4.0``
