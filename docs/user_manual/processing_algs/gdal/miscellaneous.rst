@@ -17,6 +17,9 @@ Dataset Identification
 Reports the name of GDAL drivers that can open files contained in a folder,
 with optional additional details, and write the result into an output vector layer.
 
+This algorithm is derived from the
+`GDAL dataset identify utility <https://gdal.org/en/stable/programs/gdal_dataset_identify.html>`_.
+
 .. attention:: Running this algorithm requires QGIS installed with GDAL_ >=  3.13.0
    (see :menuselection:`Help --> About` menu).
 
