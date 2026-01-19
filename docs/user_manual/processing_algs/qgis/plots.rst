@@ -466,7 +466,7 @@ Generates a polar bar plot based on the value of an input vector layer.
 .. figure:: img/polar_plot_example.png
    :align: center
 
-   Example of polar plot
+   Example of polar (bar) plot
 
 Parameters
 ..........
