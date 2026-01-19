@@ -1091,11 +1091,11 @@ Outputs
    * - **Invalid network features**
      - ``OUTPUT_INVALID_NETWORK``
      - [vector: line]
-     - The output line layer for the invalid network features.
+     - An output containing features from the original network layer which failed the direction validation checks.
    * - **Invalid network nodes**
      - ``OUTPUT_INVALID_NODES``
      - [vector: line]
-     - The output line layer for the invalid network nodes.
+     - An output representing the problematic node locations with a 'error' field explaining the error.
 
 Python code
 ...........
