@@ -8,6 +8,7 @@
 # Harrissou Sant-anna, 2025
 # 徐保才 <1302638819@qq.com>, 2025
 # Li Hongsheng, 2025
+# bc G, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Li Hongsheng, 2025\n"
+"Last-Translator: bc G, 2025\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,25 +111,55 @@ msgstr "addVectorTileLayer"
 msgid "Vector Tiles Dataset Properties"
 msgstr "矢量瓦片数据集属性"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:57
+msgid ""
+"The vector tiles :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr "矢量瓦片 :guilabel:`图层属性` 对话框提供以下部分："
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:61
+msgid "|metadata| :ref:`Information <vectortilesinformationmenu>`"
+msgstr "|metadata| :ref:`信息 <vectorinformationmenu>`"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:239
 msgid "metadata"
 msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:62
+msgid "|system| :ref:`Source <vectortilessourcemenu>`"
+msgstr "|system| :ref:`源 <vectorsourcemenu>`"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:255
 msgid "system"
 msgstr "system"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:63
+msgid "|symbology| :ref:`Symbology <vectortilesstylesmenu>`:sup:`[1]`"
+msgstr "|symbology| :ref:`符号化 <vector_style_menu>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:247
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:64
+msgid "|labelingSingle| :ref:`Labels <vectortilesstylesmenu>`:sup:`[1]`"
+msgstr "|labelingSingle| :ref:`标注 <vector_labels_tab>`:sup:`[1]`"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:235
 msgid "labelingSingle"
 msgstr "labelingSingle"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:65
+msgid "|rendering| :ref:`Rendering <vectortilesrenderingmenu>`"
+msgstr "|rendering| :ref:`渲染 <vectorrenderingmenu>`"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:241
 msgid "rendering"
 msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:66
+msgid "|editMetadata| :ref:`Metadata <vectortilesmetadatamenu>`"
+msgstr "|editMetadata| :ref:`元数据 <vectormetadatamenu>`"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:233
 msgid "editMetadata"
@@ -149,14 +180,23 @@ msgid ""
 "The :guilabel:`Information` tab is read-only and represents an interesting "
 "place to quickly grab summarized information and metadata on the current "
 "layer. Provided information are:"
-msgstr ""
-":guilabel:`Information` 选项卡为只读状态，这是引人关注的位置，可以快速获取当前图层的摘要信息和元数据。提供的信息包括："
+msgstr ":guilabel:`信息` 选项卡是只读的，代表了一个有趣的地方，可以快速获取当前图层的摘要信息和元数据。提供的信息包括："
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:80
 msgid ""
 "based on the provider of the layer: name, URI, source type and path, number "
 "of zoom levels"
 msgstr "基于图层的提供程序：名称、URI、源类型和路径、缩放级别的数量"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:82
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. More properties can be created and managed "
+"using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"自定义属性，用于在活动项目中存储有关图层的附加信息。使用PyQGIS可以创建和管理更多的属性，特别是通过 "
+":pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` 方法。"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:85
 msgid ""
@@ -173,6 +213,31 @@ msgstr "从 :ref:`已填充的元数据 <vectortilesmetadatamenu>` 中提取：�
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:93
 msgid "Source Properties"
 msgstr "源属性"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:95
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected vector tile, including:"
+msgstr "|system| :guilabel:`源` 选项卡显示所选矢量瓦片的基本信息，包括："
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:98
+msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
+msgstr ":guilabel:`图层名` 显示在 :guilabel:`图层面板`中；"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:99
+msgid ""
+"the :guilabel:`Coordinate Reference System`: Displays the layer's "
+":ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the "
+"layer's CRS, by selecting a recently used one in the drop-down list or "
+"clicking on the |setProjection| :sup:`Select CRS` button (see "
+":ref:`crs_selector`). Use this process only if the layer CRS is wrong or not"
+" specified."
+msgstr ""
+" :guilabel:`Coordinate Reference System`: 显示图层的 :ref:`Coordinate Reference "
+"System (CRS) `. "
+"你可以通过选择一个最近使用过的按钮来改变图层的CRS（参见坐标参考系统选择器）。你可以通过选择最近使用的CRS来更改图层的CRS。 下拉列表或点击 "
+"|setProjection| :sup:`Select CRS`  按钮（参见 :ref:`crs_selector`）。 "
+"只有当层CRS错误或未指定时才使用此过程。"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:245
 msgid "setProjection"

@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# tomoya miyoshi, 2025
 # Harrissou Sant-anna, 2025
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
+# tomoya miyoshi, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-01 13:25+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -130,6 +130,19 @@ msgstr ""
 msgid ":guilabel:`Max Threads`"
 msgstr ":guilabel:`最大スレッド数`"
 
+#: ../../docs/user_manual/processing/configuration.rst:51
+msgid ""
+":guilabel:`Output folder` for non temporary outputs: If no folder path is "
+"provided for the Processing execution outputs, this is the folder in which "
+"they will be saved. Default is :file:`processing` under the user home "
+"directory (e.g., :file:`C:\\\\Users\\\\<YOURUSERNAME>\\\\processing\\\\` on "
+"Windows)."
+msgstr ""
+"一時的ではない出力のための :guilabel:`出力フォルダ`: "
+"プロセシング実行時の出力にフォルダパスが与えられていない場合、このフォルダに保存されます。デフォルトはユーザーのホームディレクトリにある "
+":file:`processing` "
+"です（例えばWindowsのときは、:file:`C:\\\\Users\\\\<YOURUSERNAME>\\\\processing\\\\`）。"
+
 #: ../../docs/user_manual/processing/configuration.rst:58
 msgid ""
 ":guilabel:`Override temporary output folder path`: Temporary outputs are "
@@ -162,7 +175,7 @@ msgid ""
 "meaningless one intended to avoid collision with other already existing "
 "filenames."
 msgstr ""
-":guilabel:`レイヤ名にファイル名を優先使用する`。アルゴリズムによって作成される各結果レイヤの名前は、そのアルゴリズム自体によって定義されます。ある場合には、どの入力レイヤを使用しても同じ出力名が使用されることを意味する、固定名が使用されるかもしれません。他の場合、名前は入力レイヤの名前やアルゴリズムの実行に使われるパラメーターの一部に依存するかもしれません。このチェックボックスをオンにすると、代わりに出力ファイル名から名前が取られます。出力が一時ファイルに保存される場合、この一時ファイルのファイル名は通常、他の既存のファイル名との衝突を避けるための長くて無意味なものであることに注意してください。"
+":guilabel:`レイヤ名にファイル名を優先使用する`。アルゴリズムによって作成される各結果レイヤの名前は、そのアルゴリズム自体によって定義されます。ある場合には固定の名前、つまり、どの入力レイヤを使用しても同じ出力名が使われるかもしれません。別の場合には、その名前に入力レイヤの名前やそのアルゴリズムの実行に使われるパラメータの一部に依存するかもしれません。このチェックボックスをオンにすると、代わりに出力ファイル名から名前が取られます。出力が一時ファイルに保存される場合、この一時ファイルのファイル名は通常、他の既存のファイル名との衝突を避けるための長くて無意味なものであることに注意してください。"
 
 #: ../../docs/user_manual/processing/configuration.rst:77
 msgid ""
@@ -176,8 +189,8 @@ msgid ""
 ":guilabel:`Open output file after running algorithm` is checked in the "
 "algorithm dialog."
 msgstr ""
-":guilabel:`結果グループ名`。すべてのプロセシング結果レイヤを :guilabel:`レイヤ` "
-"パネルでグループ化して取得したい場合、このパラメータにグループ名を設定します。グループは既に存在していてもいなくてもかまいません。QGISはすべての出力レイヤをこのようなグループに追加します。デフォルトでは、このパラメータは空なので、すべての出力レイヤは、アルゴリズムを実行するときにアクティブになる項目によって、:guilabel:`レイヤ`"
+":guilabel:`結果グループ名`。全てのプロセシング結果レイヤを :guilabel:`レイヤ` "
+"パネルでグループ化して取得したい場合、このパラメータにグループ名を設定します。グループは既にあるものでもそうでなくても構いません。QGISはすべての出力レイヤをこのようなグループに追加します。デフォルトは、このパラメータは空なので、全ての出力レイヤはアルゴリズムを実行するときにアクティブな項目によって、:guilabel:`レイヤ`"
 " パネル内の異なる場所に追加されます。なお、出力レイヤが :guilabel:`レイヤ` パネルに読み込まれるのは、アルゴリズムダイアログで "
 ":guilabel:`アルゴリズムの終了後に出力ファイルを開く` がチェックされている場合のみです。"
 
@@ -286,6 +299,17 @@ msgstr ""
 msgid "assign an :guilabel:`Icon` to the algorithm"
 msgstr "そのアルゴリズムに :guilabel:`Icon` を割り当てる"
 
+#: ../../docs/user_manual/processing/configuration.rst:140
+msgid ""
+"set a :guilabel:`Menu path`: the algorithm will then be available through an"
+" existing or a custom menu, e.g. ``Vect&or/MyTopAlgorithms`` will add a "
+"shortcut in a :menuselection:`MyTopAlgorithms` sub-menu of the default "
+":menuselection:`Vector` menu."
+msgstr ""
+":guilabel:`Menu path` を設定する: このアルゴリズムは、既存のメニューまたはカスタムメニューから利用できるようになります。例えば "
+"``Vect&or/MyTopAlgorithms`` は、デフォルトの :menuselection:`ベクタ` メニューのサブメニュー "
+":menuselection:`MyTopAlgorithms` にショートカットを追加します。"
+
 #: ../../docs/user_manual/processing/configuration.rst:144
 msgid ""
 "Restart QGIS to apply the settings. At any time, your changes can be "
@@ -296,6 +320,18 @@ msgstr ""
 #: ../../docs/user_manual/processing/configuration.rst:148
 msgid "Models and Scripts"
 msgstr "モデルとスクリプト"
+
+#: ../../docs/user_manual/processing/configuration.rst:150
+msgid ""
+"In the |processingModel| :guilabel:`Models` and |pythonFile| "
+":guilabel:`Scripts` blocks, a default path, set under the active :ref:`User "
+"profile <user_profiles>` folder, is provided for storing models and scripts "
+"respectively. As for the other options, you can modify the path, e.g., to "
+"lead to a remote or shared folder for all your users."
+msgstr ""
+"|processingModel| :guilabel:`モデル` および |pythonFile| :guilabel:`スクリプト` "
+"ブロックでは、モデルとスクリプトを保存するためのデフォルトパスがアクティブな :ref:`ユーザープロファイル <user_profiles>` "
+"フォルダー下にそれぞれ設定されています。別のオプションとして、例えば全てのユーザーが利用できるリモートフォルダや共有フォルダを指すようにそのパスを変更できます。"
 
 #: ../../docs/user_manual/processing/configuration.rst:196
 msgid "processingModel"
@@ -309,6 +345,54 @@ msgstr "pythonFile"
 msgid "Providers"
 msgstr "プロバイダ"
 
+#: ../../docs/user_manual/processing/configuration.rst:159
+msgid ""
+"You will also find a block for algorithm |processingAlgorithm| "
+":guilabel:`Providers`. This is the place where installed providers expose "
+"their settings."
+msgstr ""
+"また、アルゴリズム |processingAlgorithm| :guilabel:`プロバイダ` "
+"のためのブロックが見つかります。これは、インストールされたプロバイダが設定を公開する場所です。"
+
+#: ../../docs/user_manual/processing/configuration.rst:162
+msgid "By default, QGIS is installed with two algorithm providers:"
+msgstr "QGISはデフォルトで二つのアルゴリズムプロバイダと共にインストールされます:"
+
+#: ../../docs/user_manual/processing/configuration.rst:164
+msgid ""
+":guilabel:`GDAL` whose algorithms you may :guilabel:`Activate` (or not) in "
+"this dialog. Read more about the :ref:`GDAL algorithms <gdal_algorithms>`."
+msgstr ""
+":guilabel:`GDAL` アルゴリズムは、このダイアログで :guilabel:`有効化` (または無効化) できます。詳細については "
+":ref:`GDAL アルゴリズム <gdal_algorithms>` を参照してください。"
+
+#: ../../docs/user_manual/processing/configuration.rst:166
+msgid ""
+":guilabel:`GRASS` whose algorithms require the installation of the "
+":guilabel:`GRASS GIS Processing Provider` from the :guilabel:`Plugins "
+"Manager`. You could then set some dedicated settings such as:"
+msgstr ""
+":guilabel:`GRASS` のアルゴリズムは、:guilabel:`プラグインマネージャ`から :guilabel:`GRASS GIS "
+"Processing Provider` のインストールを必要とします。その後、以下のような専用の設定を行うことができます:"
+
 #: ../../docs/user_manual/processing/configuration.rst:190
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/processing/configuration.rst:172
+msgid ""
+":guilabel:`Location of GRASS docs`: by default, and depending on your OS, "
+"QGIS utilizes a hardcoded list of paths for finding the local GRASS "
+"documentation and opening it whenever you hit the :guilabel:`Help` button of"
+" a GRASS algorithm dialog. Filling this option will override the default "
+"path, allowing you to use a custom location, or remote documentation."
+msgstr ""
+":guilabel:`Location of GRASS docs`: "
+"デフォルトでは、使用しているOSに応じて、GRASSアルゴリズムダイアログの:guilabel:`ヘルプ` "
+"ボタンをクリックした際にローカルのGRASSドキュメントを検索しそれを開くためにハードコードされたパスのリストを利用します。このオプションに値を設定するとデフォルトパスが上書きされ、カスタムの場所やリモートドキュメントを使用できるようになります。"
+
+#: ../../docs/user_manual/processing/configuration.rst:180
+msgid ""
+"Installed plugins that provide Processing algorithms may also have their "
+"provider listed in this group, with custom settings."
+msgstr "プロセシングアルゴリズムを提供するインストール済みプラグインも、カスタム設定と共にこのグループにプロバイダがリストされる場合があります。"

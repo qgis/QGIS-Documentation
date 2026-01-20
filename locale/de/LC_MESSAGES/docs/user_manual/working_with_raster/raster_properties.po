@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
+# Joern G <j.gutzeit@umwelt-it.de>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-17 20:03+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -262,7 +263,7 @@ msgid ""
 "interesting place to quickly grab summarized information and metadata for "
 "the current layer. Provided information are:"
 msgstr ""
-"Die Registerkarte |Metadaten| :guilabel:`Information` ist schreibgeschützt "
+"Die Registerkarte |metadata| :guilabel:`Information` ist schreibgeschützt "
 "und stellt einen interessanten Ort dar, um schnell zusammengefasste "
 "Informationen und Metadaten für den aktuellen Layer zu erhalten. Die "
 "bereitgestellten Informationen sind:"
@@ -274,6 +275,25 @@ msgid ""
 msgstr ""
 "allgemeine Angaben wie Name im Projekt, Quellpfad, Liste der Hilfsdateien, "
 "letzte Speicherzeit und -größe, der verwendete Datenanbieter"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:83
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties include "
+":guilabel:`Identify/format`, which influences how the results from using the"
+" |identify| :ref:`Identify features <raster_identify>` tool over a raster "
+"layer are formatted. More properties can be created and managed using "
+"PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"Benutzerdefinierte Eigenschaften, die verwendet werden, um zusätzliche "
+"Informationen über den Layer im aktiven Projekt zu speichern. Zu den "
+"standardmäßigen benutzerdefinierten Eigenschaften gehört "
+":guilabel:`Identifikation/Format`, was Einfluss darauf hat, wie die "
+"Ergebnisse der Verwendung des Werkzeugs |identify| :ref:`Objekte abfragen` "
+"über einen Raster-Layer formatiert werden. Weitere Eigenschaften können mit "
+"PyQGIS erstellt und verwaltet werden, insbesondere mit der Methode "
+":pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>`."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1145
 msgid "identify"
@@ -438,6 +458,14 @@ msgstr ""
 ":ref:`Einkanalpseudofarbe <label_colormaptab>` - diese Darstellung kann für "
 "Dateien mit einer kontinuierlichen Palette oder Farbkarte (z. B. eine "
 "Höhenkarte) verwendet werden)."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:159
+msgid ""
+":ref:`Single color <singlecolor>` - the raster layer will be rendered with a"
+" single color."
+msgstr ""
+":ref:Einzelfarbe 1 – Die Raster-Layer wird mit einer einzigen Farbe "
+"gerendert."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:161
 msgid ":ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a band."
@@ -677,6 +705,38 @@ msgstr ""
 ":guilabel:`Legendeneinstellungen...`, wenn Sie die Einstellungen ändern oder"
 " stattdessen eine Legende mit getrennten Klassen (und Farben) verwenden "
 "möchten. Mehr Details unter :ref:`Raster_legend_settings`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:309
+msgid "Single color"
+msgstr "Einzelfarbe"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:311
+msgid ""
+"This renderer allows you to render a raster layer using :guilabel:`Single "
+"color`. This type of renderer is useful when you want to display a raster "
+"layer uniformly, without any variation in color based on pixel values."
+msgstr ""
+"Mit diesem Renderer können Sie einen Raster-Layer mit einer "
+":guilabel:`Einzelfarbe` rendern. Dieser Renderertyp ist nützlich, wenn Sie "
+"einen Raster-Layer einheitlich darstellen möchten, ohne dass es zu "
+"Farbabweichungen aufgrund von Pixelwerten kommt."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:315
+msgid ""
+"The single color renderer can be used with both single-band and multiband "
+"raster layers. When used with multiband rasters, you can select which band "
+"to apply the single color to, effectively displaying that specific band "
+"uniformly across the entire layer."
+msgstr ""
+"Der Einzelfarben-Renderer kann sowohl mit Einband- als auch mit Mehrband-"
+"Raster-Layern verwendet werden. Bei Verwendung mit Mehrband-Rastern können "
+"Sie auswählen, auf welches Band die Einzelfarbe angewendet werden soll, "
+"wodurch dieses bestimmte Band effektiv einheitlich über die gesamte Raster-"
+"Layer angezeigt wird."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:324
+msgid "Raster Symbology - Single color rendering"
+msgstr "Rastersymbolisierung – Einfarbige Darstellung"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:330
 msgid "Hillshade"
@@ -1487,6 +1547,32 @@ msgstr ""
 "Klicken Sie den |symbologyAdd| :sup:`Werte manuell hinzufügen` Knopf. Eine "
 "neue Zeile erscheint in der Pixelliste."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:663
+msgid ""
+"For single-band based symbology (e.g. DEMs), enter the **From** and **To** "
+"values and adjust the **Percent Transparent** to apply."
+msgstr ""
+"Bei einbandbasierten Symbologien (z. B. DEMs) geben Sie die Werte **Von** "
+"und **Bis** ein und passen Sie den Wert **Prozentuale Transparenz** "
+"entsprechend an."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:665
+msgid ""
+"For multiband based symbology (e.g. RGB images) enter the **Red**, **Green**"
+" and **Blue** values of the pixel and adjust the **Percent Transparent** to "
+"apply. QGIS supports **Tolerance** for pixel values, when defining "
+"transparency. This means that pixels with color close to the specified RGB "
+"values can also be made transparent. Note that this feature applies only to "
+"multiband rasters."
+msgstr ""
+"Für multibandbasierte Symbologie (z. B. RGB-Bilder) geben Sie die Werte für "
+"**Rot**, **Grün** und **Blau** der Pixel ein und passen Sie den Wert für "
+"**Prozentuale Transparenz** an. QGIS unterstützt bei der Definition der "
+"Transparenz eine **Toleranz** für Pixelwerte. Das bedeutet, dass auch Pixel "
+"mit Farben, die den angegebenen RGB-Werten nahekommen, transparent gemacht "
+"werden können. Beachten Sie, dass diese Funktion nur für Multiband-Raster "
+"gilt."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:670
 msgid ""
 "Alternatively, you can fetch the pixel values directly from the raster using"
@@ -1531,6 +1617,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1141
 msgid "fileSave"
 msgstr "fileSave"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:690
+msgid "Using tolerances for multiband rasters"
+msgstr "Verwendung von Toleranzen für Multiband-Raster"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:696
 msgid "Histogram Properties"
@@ -1733,9 +1823,75 @@ msgstr ""
 "Animationszeit innerhalb eines :guilabel:`Startdatum` und "
 ":guilabel:`Enddatum` Bereichs liegt"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:803
+msgid ""
+":guilabel:`Fixed Time Range Per Band`: only shows a band when the current "
+"animation time is between its :guilabel:`Begin` and :guilabel:`End` date "
+"range. This option allows you to either manually set these time ranges for "
+"each band or use the |expression| button to automatically generate datetime "
+"values, enabling detailed temporal analysis and visualization. This mode is "
+"particularly useful for working with raster layers where each band "
+"corresponds to a specific time period, such as NetCDF files."
+msgstr ""
+":guilabel:`Fester Zeitraum je Kanal`: Zeigt ein Band nur an, wenn die "
+"aktuelle Animationszeit zwischen dem Datumsbereich :guilabel:`Anfang` und "
+":guilabel:`Ende` liegt. Mit dieser Option können Sie diese Zeitspannen für "
+"jedes Band entweder manuell festlegen oder mit der Schaltfläche |expression|"
+" automatisch Datums- und Zeitwerte generieren, was eine detaillierte "
+"zeitliche Analyse und Visualisierung ermöglicht. Dieser Modus ist besonders "
+"nützlich für die Arbeit mit Raster-Layer, bei denen jedes Band einem "
+"bestimmten Zeitraum entspricht, wie z. B. bei NetCDF-Dateien."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1137
 msgid "expression"
 msgstr "expression"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:816
+msgid "Example of using the Fixed Time Range Per Band mode"
+msgstr "Beispiel für die Verwendung des Modus „Fester Zeitraum je Kanal“"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:818
+msgid ""
+":guilabel:`Represents Temporal Values`: interprets each pixel in the raster "
+"layer as a datetime value. When this temporal mode is active, pixels that do"
+" not fall within the temporal range specified in the render context will be "
+"hidden, ensuring that only temporally relevant data is displayed. This mode "
+"is effective for:"
+msgstr ""
+":guilabel:`Stellt zeitliche Werte`: Interpretiert jedes Pixel in der Raster-"
+"Layer als Datums-/Zeitwert. Wenn dieser zeitliche Modus aktiv ist, werden "
+"Pixel, die nicht in den im Renderkontext angegebenen zeitlichen Bereich "
+"fallen, ausgeblendet, sodass nur zeitlich relevante Daten angezeigt werden. "
+"Dieser Modus ist wirksam für:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:823
+msgid "Analyzing land use changes, like observing deforestation patterns."
+msgstr ""
+"Analyse von Landnutzungsänderungen, wie beispielsweise die Beobachtung von "
+"Entwaldungsmustern."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:824
+msgid "Studying flooding by comparing water coverage across different times."
+msgstr ""
+"Untersuchung von Überschwemmungen durch Vergleich der Wasserbedeckung zu "
+"verschiedenen Zeitpunkten."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:825
+msgid ""
+"Evaluating movement costs in terrain analysis, for example, using GRASS "
+"GIS's r.walk tool to calculate travel costs across a landscape."
+msgstr ""
+"Bewertung der Bewegungskosten in der Geländanalyse, beispielsweise mithilfe "
+"des Tools „r.walk“ von GRASS GIS zur Berechnung der Reisekosten in einer "
+"Landschaft."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:834
+msgid ""
+"Application of the Represents Temporal Values mode - analyzing GLAD "
+"deforestation alerts"
+msgstr ""
+"Anwendung des Modus „Stellt zeitliche Werte“ – Analyse von GLAD-"
+"Entwaldungswarnungen"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:836
 msgid ""
@@ -2006,6 +2162,19 @@ msgid ""
 msgstr ""
 "|checkbox| :guilabel:`Kartentipps einschalten` steuert, ob Kartentipps für "
 "den Layer angezeigt werden sollen"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1022
+msgid ""
+"If you select some text within an expression (between \"[%\" and \"%]\"), or"
+" if no text is selected but the cursor is inside an expression, the whole "
+"expression will be automatically selected for editing. If the cursor or a "
+"selected text is outside an expression, the dialog opens with the selection."
+msgstr ""
+"Wenn Sie Text innerhalb eines Ausdrucks (zwischen „[%“ und „%]“) auswählen "
+"oder wenn kein Text ausgewählt ist, sich der Cursor jedoch innerhalb eines "
+"Ausdrucks befindet, wird automatisch der gesamte Ausdruck zur Bearbeitung "
+"ausgewählt. Befindet sich der Cursor oder ausgewählter Text außerhalb eines "
+"Ausdrucks, wird das Dialogfeld mit der Auswahl geöffnet."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1032
 msgid "Map tips with raster layer"

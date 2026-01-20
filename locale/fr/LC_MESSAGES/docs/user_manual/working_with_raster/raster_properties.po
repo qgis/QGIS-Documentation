@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
+# Clem Las, 2025
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-17 20:03+0000\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Clem Las, 2025\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -984,6 +985,36 @@ msgstr ""
 "panneau de couches. Clic-droit sur la couche et dans le menu contextuel, "
 "sélectionner :guilabel:`Définir l'échelle de visibilité`."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:754
+msgid ""
+":guilabel:`Reload data`: the layer will be completely refreshed. Any cached "
+"data will be discarded and refetched from the provider. This mode may result"
+" in slower map refreshes."
+msgstr ""
+":guilabel:`Reload data`: la couche sera entièrement rechargée. Les données "
+"en cache seront supprimées et récupérées de nouveau auprès du fournisseur. "
+"Ce mode peut provoquer une actualisation plus lente de la carte."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:757
+msgid ""
+":guilabel:`Redraw layer only`: this mode is useful for animation or when the"
+" layer's style will be updated at regular intervals. Canvas updates are "
+"deferred in order to avoid refreshing multiple times if more than one layer "
+"has an auto update interval set."
+msgstr ""
+":guilabel:`Redraw layer only`: ce mode est utile pour les animations ou si "
+"le style de couche est mis à jour régulièrement. Les mises à jour du canevas"
+" de carte sont retardées si un intervalle de mise à jour automatique est "
+"défini sur plus d'une couche pour éviter les actualisations multiples."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:764
+msgid ""
+"It is also possible to set the :guilabel:`Interval (seconds)` between "
+"consecutive refreshments."
+msgstr ""
+"Il est également possible de définir l' :guilabel:`Interval (seconds)` entre"
+" les actualisations."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:771
 msgid "Raster Rendering Properties"
 msgstr "Propriétés du rendu de raster"
@@ -991,6 +1022,18 @@ msgstr "Propriétés du rendu de raster"
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:778
 msgid "Temporal Properties"
 msgstr "Onglet Temporel"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:780
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab provides options to control the "
+"rendering of the layer over time. Such dynamic rendering requires the "
+":ref:`temporal navigation <maptimecontrol>` to be enabled over the map "
+"canvas."
+msgstr ""
+"L'onglet |temporal| :guilabel:`Temporel` contient des options permettant de "
+"contrôler l'affichage de la couche en fonction du temps. Cet affichage "
+"dynamique nécessite d'activer la  :ref:`navigation temporelle "
+"<maptimecontrol>` sur le canevas de la carte."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1137
 msgid "expression"
@@ -1165,6 +1208,21 @@ msgstr "Métadonnées raster"
 msgid "Legend Properties"
 msgstr "Onglet Légende"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:978
+msgid ""
+"Depending on the symbology applied to the layer, you may end up with several"
+" entries in the legend, not necessarily readable/useful to display. The "
+":guilabel:`Legend placeholder image` helps you :ref:`select an image "
+"<embedded_file_selector>` for replacement, displayed both in the "
+":guilabel:`Layers` panel and the print layout legend."
+msgstr ""
+"En fonction de la symbologie appliquée à la couche, il est possible que des "
+"entrées de légendes ne soient pas bien compréhensibles ou pertinentes à "
+"afficher. L' :guilabel:`Image de substitution pour la légende` vous permet "
+"de :ref:`sélectionner une image <embedded_file_selector>` de remplacement, "
+"qui s'affichera dans le panneau:guilabel:`Couches` et dans les légendes de "
+"mises en page."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:989
 msgid ""
 "By default, QGIS provides a transparency widget but this can be extended by "
@@ -1183,13 +1241,49 @@ msgstr "Legende Raster"
 msgid "Display Properties"
 msgstr "Onglet Infobulles"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1011
+msgid ""
+"|checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips "
+"for the layer"
+msgstr ""
+"|checkbox| :guilabel:`Enable Map Tips` contrôle l'affichage des infobulles "
+"pour la couche"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1022
+msgid ""
+"If you select some text within an expression (between \"[%\" and \"%]\"), or"
+" if no text is selected but the cursor is inside an expression, the whole "
+"expression will be automatically selected for editing. If the cursor or a "
+"selected text is outside an expression, the dialog opens with the selection."
+msgstr ""
+"Si vous sélectionnez du texte dans une expression (entre \"[%\" et \"%]\"), "
+"ou si aucun texte n'est sélectionné mais que le curseur est positionné dans "
+"une expression, toute l'expression sera automatiquement sélectionnée pour "
+"édition. Si le curseur ou le texte sélectionné se trouvent en dehors d'une "
+"expression, la fenêtre s'ouvre sur la sélection."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1035
 msgid "To display map tips:"
 msgstr "Pour afficher les infobulles :"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1037
+msgid ""
+"Select the menu option :menuselection:`View --> Show Map Tips` or click on "
+"the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes "
+"Toolbar`."
+msgstr "hasietnr baba truc"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1151
 msgid "mapTips"
 msgstr "mapTips"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1039
+msgid ""
+"Make sure that the layer you target is active and has the |checkbox| "
+":guilabel:`Enable Map Tips` property checked."
+msgstr ""
+"Assurez-vous que la couche que vous ciblez est active et que |checkbox| "
+":guilabel:`Afficher les infobulles` est activée dans ses propriétés."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1051
 msgid "QGIS Server Properties"

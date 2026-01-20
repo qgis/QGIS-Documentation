@@ -5,27 +5,26 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
-# Daniel Nylander <po@danielnylander.se>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"POT-Creation-Date: 2026-01-14 03:32+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../<rst_prolog>:5
+#: ../../<rst_prologue>:5
 msgid ""
 "Translation is a community effort :ref:`you can join "
 "<translation_guidelines>`. This page is currently translated at |translation"
@@ -88,13 +87,9 @@ msgstr ""
 "Beroende på HTTP-servern och hur du kör QGIS Server finns det flera sätt att"
 " definiera dessa variabler. Detta beskrivs i sin helhet i :ref:`httpserver`."
 
-#: ../../docs/server_manual/config.rst:52
-msgid "Name"
-msgstr "Namn"
-
 #: ../../docs/server_manual/config.rst:53
-msgid "Description"
-msgstr "Beskrivning"
+msgid "Name & Description"
+msgstr "Namn och beskrivning"
 
 #: ../../docs/server_manual/config.rst:54
 msgid "Default"
@@ -120,42 +115,42 @@ msgstr ""
 
 #: ../../docs/server_manual/config.rst:61
 #: ../../docs/server_manual/config.rst:67
-#: ../../docs/server_manual/config.rst:77
-#: ../../docs/server_manual/config.rst:82
-#: ../../docs/server_manual/config.rst:169
-#: ../../docs/server_manual/config.rst:211
-#: ../../docs/server_manual/config.rst:259
-#: ../../docs/server_manual/config.rst:288
-#: ../../docs/server_manual/config.rst:294
-#: ../../docs/server_manual/config.rst:306
-#: ../../docs/server_manual/config.rst:312
-#: ../../docs/server_manual/config.rst:331
+#: ../../docs/server_manual/config.rst:78
+#: ../../docs/server_manual/config.rst:83
+#: ../../docs/server_manual/config.rst:171
+#: ../../docs/server_manual/config.rst:212
+#: ../../docs/server_manual/config.rst:260
+#: ../../docs/server_manual/config.rst:289
+#: ../../docs/server_manual/config.rst:295
+#: ../../docs/server_manual/config.rst:307
+#: ../../docs/server_manual/config.rst:313
+#: ../../docs/server_manual/config.rst:332
 msgid "''"
 msgstr "''"
 
 #: ../../docs/server_manual/config.rst:62
 #: ../../docs/server_manual/config.rst:68
-#: ../../docs/server_manual/config.rst:78
-#: ../../docs/server_manual/config.rst:95
-#: ../../docs/server_manual/config.rst:105
-#: ../../docs/server_manual/config.rst:110
-#: ../../docs/server_manual/config.rst:115
-#: ../../docs/server_manual/config.rst:129
-#: ../../docs/server_manual/config.rst:139
-#: ../../docs/server_manual/config.rst:144
-#: ../../docs/server_manual/config.rst:151
-#: ../../docs/server_manual/config.rst:158
-#: ../../docs/server_manual/config.rst:170
-#: ../../docs/server_manual/config.rst:181
-#: ../../docs/server_manual/config.rst:188
-#: ../../docs/server_manual/config.rst:199
-#: ../../docs/server_manual/config.rst:205
-#: ../../docs/server_manual/config.rst:212
-#: ../../docs/server_manual/config.rst:227
-#: ../../docs/server_manual/config.rst:238
-#: ../../docs/server_manual/config.rst:260
-#: ../../docs/server_manual/config.rst:283
-#: ../../docs/server_manual/config.rst:332
+#: ../../docs/server_manual/config.rst:79
+#: ../../docs/server_manual/config.rst:96
+#: ../../docs/server_manual/config.rst:106
+#: ../../docs/server_manual/config.rst:111
+#: ../../docs/server_manual/config.rst:116
+#: ../../docs/server_manual/config.rst:130
+#: ../../docs/server_manual/config.rst:140
+#: ../../docs/server_manual/config.rst:145
+#: ../../docs/server_manual/config.rst:152
+#: ../../docs/server_manual/config.rst:159
+#: ../../docs/server_manual/config.rst:172
+#: ../../docs/server_manual/config.rst:183
+#: ../../docs/server_manual/config.rst:190
+#: ../../docs/server_manual/config.rst:200
+#: ../../docs/server_manual/config.rst:206
+#: ../../docs/server_manual/config.rst:213
+#: ../../docs/server_manual/config.rst:228
+#: ../../docs/server_manual/config.rst:239
+#: ../../docs/server_manual/config.rst:261
+#: ../../docs/server_manual/config.rst:284
+#: ../../docs/server_manual/config.rst:333
 msgid "All"
 msgstr "Alla"
 
@@ -185,23 +180,11 @@ msgstr ""
 " frågesträngen (med *MAP*), du kan också ange den som en miljövariabel "
 "(t.ex. genom att använda Apache-modulen ``mod_rewrite``)."
 
-#: ../../docs/server_manual/config.rst:75
-msgid ""
-"Note that you may also indicate a project stored in PostgreSQL, e.g. "
-"``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``"
-" or inside a geopackage file, e.g. "
-"``geopackage:/path/to/geopackage/file.gpkg?projectName=myProjectName``."
-msgstr ""
-"Observera att du också kan ange ett projekt som lagras i PostgreSQL, t.ex. "
-"``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``"
-" eller inuti en geopackage-fil, t.ex. "
-"``geopackage:/path/to/geopackage/file.gpkg?projectName=myProjectName``."
-
-#: ../../docs/server_manual/config.rst:80
+#: ../../docs/server_manual/config.rst:81
 msgid "QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS"
 msgstr "QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS"
 
-#: ../../docs/server_manual/config.rst:81
+#: ../../docs/server_manual/config.rst:82
 msgid ""
 "Comma separated list of strings that represent the allowed extra SQL tokens "
 "accepted as components of a feature filter."
@@ -209,20 +192,20 @@ msgstr ""
 "Kommaseparerad lista med strängar som representerar de tillåtna extra SQL-"
 "tokens som accepteras som komponenter i ett feature-filter."
 
-#: ../../docs/server_manual/config.rst:83
-#: ../../docs/server_manual/config.rst:124
-#: ../../docs/server_manual/config.rst:221
-#: ../../docs/server_manual/config.rst:269
-#: ../../docs/server_manual/config.rst:301
-#: ../../docs/server_manual/config.rst:307
+#: ../../docs/server_manual/config.rst:84
+#: ../../docs/server_manual/config.rst:125
+#: ../../docs/server_manual/config.rst:222
+#: ../../docs/server_manual/config.rst:270
+#: ../../docs/server_manual/config.rst:302
+#: ../../docs/server_manual/config.rst:308
 msgid "WMS"
 msgstr "WMS"
 
-#: ../../docs/server_manual/config.rst:85
+#: ../../docs/server_manual/config.rst:86
 msgid "QGIS_SERVER_API_RESOURCES_DIRECTORY"
 msgstr "QGIS_SERVER_API_RESOURCES_DIRECTORY"
 
-#: ../../docs/server_manual/config.rst:86
+#: ../../docs/server_manual/config.rst:87
 msgid ""
 "Base directory for all OGC API (such as OAPIF/WFS3) static resources (HTML "
 "templates, CSS, JS, ...)"
@@ -230,20 +213,20 @@ msgstr ""
 "Baskatalog för alla statiska resurser för OGC API (t.ex. OAPIF/WFS3) (HTML-"
 "mallar, CSS, JS, ...)"
 
-#: ../../docs/server_manual/config.rst:88
+#: ../../docs/server_manual/config.rst:89
 msgid "depends on packaging"
 msgstr "beror på förpackning"
 
-#: ../../docs/server_manual/config.rst:89
-#: ../../docs/server_manual/config.rst:100
+#: ../../docs/server_manual/config.rst:90
+#: ../../docs/server_manual/config.rst:101
 msgid "OAPIF/WFS3"
 msgstr "OAPIF/WFS3"
 
-#: ../../docs/server_manual/config.rst:91
+#: ../../docs/server_manual/config.rst:92
 msgid "QGIS_SERVER_APPLICATION_NAME"
 msgstr "QGIS_SERVER_APPLICATION_NAME"
 
-#: ../../docs/server_manual/config.rst:92
+#: ../../docs/server_manual/config.rst:93
 msgid ""
 "Name of the application to be used, for instance when connecting to a "
 "database to identify the QGIS server instance connected"
@@ -251,63 +234,63 @@ msgstr ""
 "Namn på den applikation som ska användas, t.ex. vid anslutning till en "
 "databas för att identifiera den anslutna QGIS-serverinstansen"
 
-#: ../../docs/server_manual/config.rst:94
+#: ../../docs/server_manual/config.rst:95
 msgid "QGIS3 server"
 msgstr "QGIS3-server"
 
-#: ../../docs/server_manual/config.rst:97
+#: ../../docs/server_manual/config.rst:98
 msgid "QGIS_SERVER_API_WFS3_MAX_LIMIT"
 msgstr "QGIS_SERVER_API_WFS3_MAX_LIMIT"
 
-#: ../../docs/server_manual/config.rst:98
+#: ../../docs/server_manual/config.rst:99
 msgid "Maximum value for ``limit`` in a OAPIF/WFS3 features request."
 msgstr "Högsta värde för ``limit`` i en begäran om OAPIF/WFS3-funktioner."
 
-#: ../../docs/server_manual/config.rst:99
+#: ../../docs/server_manual/config.rst:100
 msgid "10000"
 msgstr "10000"
 
-#: ../../docs/server_manual/config.rst:102
+#: ../../docs/server_manual/config.rst:103
 msgid "QGIS_SERVER_CACHE_DIRECTORY"
 msgstr "QGIS_SERVER_CACHE_DIRECTORY"
 
-#: ../../docs/server_manual/config.rst:103
+#: ../../docs/server_manual/config.rst:104
 msgid "Specifies the network cache directory on the filesystem."
 msgstr "Anger katalogen för nätverkscache i filsystemet."
 
-#: ../../docs/server_manual/config.rst:104
+#: ../../docs/server_manual/config.rst:105
 msgid "``cache`` in profile directory"
 msgstr "``cache`` i profilkatalogen"
 
-#: ../../docs/server_manual/config.rst:107
+#: ../../docs/server_manual/config.rst:108
 msgid "QGIS_SERVER_CACHE_SIZE"
 msgstr "QGIS_SERVER_CACHE_SIZE"
 
-#: ../../docs/server_manual/config.rst:108
+#: ../../docs/server_manual/config.rst:109
 msgid "Sets the network cache size in MB."
 msgstr "Ställer in storleken på nätverkscachen i MB."
 
-#: ../../docs/server_manual/config.rst:109
+#: ../../docs/server_manual/config.rst:110
 msgid "50 MB"
 msgstr "50 MB"
 
-#: ../../docs/server_manual/config.rst:112
+#: ../../docs/server_manual/config.rst:113
 msgid "QGIS_SERVER_CAPABILITIES_CACHE_SIZE"
 msgstr "QGIS_SERVER_CAPABILITIES_CACHE_SIZE"
 
-#: ../../docs/server_manual/config.rst:113
+#: ../../docs/server_manual/config.rst:114
 msgid "The maximum number of project capabilities to cache."
 msgstr "Det maximala antalet projektfunktioner som ska cachas."
 
-#: ../../docs/server_manual/config.rst:114
+#: ../../docs/server_manual/config.rst:115
 msgid "40"
 msgstr "40"
 
-#: ../../docs/server_manual/config.rst:117
+#: ../../docs/server_manual/config.rst:118
 msgid "QGIS_SERVER_DISABLE_GETPRINT"
 msgstr "QGIS_SERVER_DISABLE_GETPRINT"
 
-#: ../../docs/server_manual/config.rst:118
+#: ../../docs/server_manual/config.rst:119
 msgid ""
 "This is an option at the project level to improve project read time by "
 "disabling loading of layouts."
@@ -315,7 +298,7 @@ msgstr ""
 "Detta är ett alternativ på projektnivå för att förbättra projektets lästid "
 "genom att inaktivera laddning av layouter."
 
-#: ../../docs/server_manual/config.rst:121
+#: ../../docs/server_manual/config.rst:122
 msgid ""
 "Activating this option disables the QGIS WMS GetPrint request. Set this QGIS"
 " project flag to not load layouts."
@@ -323,30 +306,30 @@ msgstr ""
 "Om du aktiverar detta alternativ inaktiveras QGIS WMS GetPrint-begäran. "
 "Ställ in denna QGIS-projektflagga för att inte ladda layouter."
 
-#: ../../docs/server_manual/config.rst:123
-#: ../../docs/server_manual/config.rst:128
-#: ../../docs/server_manual/config.rst:138
-#: ../../docs/server_manual/config.rst:187
-#: ../../docs/server_manual/config.rst:198
-#: ../../docs/server_manual/config.rst:220
-#: ../../docs/server_manual/config.rst:268
-#: ../../docs/server_manual/config.rst:282
+#: ../../docs/server_manual/config.rst:124
+#: ../../docs/server_manual/config.rst:129
+#: ../../docs/server_manual/config.rst:139
+#: ../../docs/server_manual/config.rst:189
+#: ../../docs/server_manual/config.rst:199
+#: ../../docs/server_manual/config.rst:221
+#: ../../docs/server_manual/config.rst:269
+#: ../../docs/server_manual/config.rst:283
 msgid "false"
 msgstr "falskt"
 
-#: ../../docs/server_manual/config.rst:126
+#: ../../docs/server_manual/config.rst:127
 msgid "QGIS_SERVER_FORCE_READONLY_LAYERS"
 msgstr "QGIS_SERVER_FORCE_READONLY_LAYERS"
 
-#: ../../docs/server_manual/config.rst:127
+#: ../../docs/server_manual/config.rst:128
 msgid "Force QGIS Server to open all layers in a read only mode"
 msgstr "Tvinga QGIS Server att öppna alla lager i skrivskyddat läge"
 
-#: ../../docs/server_manual/config.rst:131
+#: ../../docs/server_manual/config.rst:132
 msgid "QGIS_SERVER_IGNORE_BAD_LAYERS"
 msgstr "QGIS_SERVER_IGNORE_BAD_LAYERS"
 
-#: ../../docs/server_manual/config.rst:132
+#: ../../docs/server_manual/config.rst:133
 msgid ""
 "\"Bad\" layers are layers that cannot be loaded. The default behavior of "
 "QGIS Server is to consider the project as not available if it contains a bad"
@@ -356,7 +339,7 @@ msgstr ""
 "Server är att betrakta projektet som inte tillgängligt om det innehåller ett"
 " dåligt lager."
 
-#: ../../docs/server_manual/config.rst:135
+#: ../../docs/server_manual/config.rst:136
 msgid ""
 "The default behavior can be overridden by setting this variable to ``1`` or "
 "``true``. In this case, \"bad\" layers will just be ignored, and the project"
@@ -366,36 +349,36 @@ msgstr ""
 "\"1\" eller \"true\". I detta fall kommer \"dåliga\" lager att ignoreras och"
 " projektet kommer att betraktas som giltigt och tillgängligt."
 
-#: ../../docs/server_manual/config.rst:141
+#: ../../docs/server_manual/config.rst:142
 msgid "QGIS_SERVER_LANDING_PAGE_PREFIX"
 msgstr "QGIS_SERVER_LANDING_PAGE_PREFIX"
 
-#: ../../docs/server_manual/config.rst:142
+#: ../../docs/server_manual/config.rst:143
 msgid "Prefix of the path component of the landing page base URL"
 msgstr "Prefix för sökvägskomponenten i landningssidans bas-URL"
 
-#: ../../docs/server_manual/config.rst:143
-#: ../../docs/server_manual/config.rst:150
-#: ../../docs/server_manual/config.rst:157
+#: ../../docs/server_manual/config.rst:144
+#: ../../docs/server_manual/config.rst:151
+#: ../../docs/server_manual/config.rst:158
 msgid "\"\""
 msgstr "\"\""
 
-#: ../../docs/server_manual/config.rst:148
+#: ../../docs/server_manual/config.rst:149
 msgid "QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES"
 msgstr "QGIS_SERVER_LANDING_PAGE_PROJECTS_DIRECTORIES"
 
-#: ../../docs/server_manual/config.rst:149
+#: ../../docs/server_manual/config.rst:150
 msgid ""
 "Directories used by the landing page service to find .qgs and .qgz projects"
 msgstr ""
 "Kataloger som används av landningssidestjänsten för att hitta .qgs- och "
 ".qgz-projekt"
 
-#: ../../docs/server_manual/config.rst:155
+#: ../../docs/server_manual/config.rst:156
 msgid "QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS"
 msgstr "QGIS_SERVER_LANDING_PAGE_PROJECTS_PG_CONNECTIONS"
 
-#: ../../docs/server_manual/config.rst:156
+#: ../../docs/server_manual/config.rst:157
 msgid ""
 "PostgreSQL connection strings used by the landing page service to find "
 "projects"
@@ -403,11 +386,11 @@ msgstr ""
 "PostgreSQL-anslutningssträngar som används av målsidestjänsten för att hitta"
 " projekt"
 
-#: ../../docs/server_manual/config.rst:162
+#: ../../docs/server_manual/config.rst:163
 msgid "QGIS_SERVER_LOG_FILE"
 msgstr "QGIS_SERVER_LOG_FILE"
 
-#: ../../docs/server_manual/config.rst:163
+#: ../../docs/server_manual/config.rst:164
 msgid ""
 "Specify path and filename. Make sure that server has proper permissions for "
 "writing to file. File should be created automatically, just send some "
@@ -418,7 +401,7 @@ msgstr ""
 "förfrågningar till servern. Om den inte finns där, kontrollera "
 "behörigheterna."
 
-#: ../../docs/server_manual/config.rst:167
+#: ../../docs/server_manual/config.rst:168
 msgid ""
 "QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4, use "
 "QGIS_SERVER_LOG_STDERR instead. File logging support will be removed in QGIS"
@@ -428,23 +411,23 @@ msgstr ""
 "QGIS_SERVER_LOG_STDERR istället. Stöd för filloggning kommer att tas bort i "
 "QGIS 4.0."
 
-#: ../../docs/server_manual/config.rst:174
+#: ../../docs/server_manual/config.rst:176
 msgid "QGIS_SERVER_LOG_LEVEL"
 msgstr "QGIS_SERVER_LOG_LEVEL"
 
-#: ../../docs/server_manual/config.rst:175
+#: ../../docs/server_manual/config.rst:177
 msgid "Specify desired log level. Available values are:"
 msgstr "Ange önskad loggnivå. Tillgängliga värden är:"
 
-#: ../../docs/server_manual/config.rst:177
+#: ../../docs/server_manual/config.rst:179
 msgid "``0`` or ``INFO`` (log all requests)"
 msgstr "``0`` eller ``INFO`` (logga alla förfrågningar)"
 
-#: ../../docs/server_manual/config.rst:178
+#: ../../docs/server_manual/config.rst:180
 msgid "``1`` or ``WARNING``"
 msgstr "``1`` eller ``WARNING``"
 
-#: ../../docs/server_manual/config.rst:179
+#: ../../docs/server_manual/config.rst:181
 msgid ""
 "``2`` or ``CRITICAL`` (log just critical errors, suitable for production "
 "purposes)"
@@ -452,15 +435,15 @@ msgstr ""
 "``2`` eller ``CRITICAL`` (loggar bara kritiska fel, lämpliga för "
 "produktionsändamål)"
 
-#: ../../docs/server_manual/config.rst:180
+#: ../../docs/server_manual/config.rst:182
 msgid "0"
 msgstr "0"
 
-#: ../../docs/server_manual/config.rst:185
+#: ../../docs/server_manual/config.rst:187
 msgid "QGIS_SERVER_LOG_PROFILE"
 msgstr "QGIS_SERVER_LOG_PROFILE"
 
-#: ../../docs/server_manual/config.rst:186
+#: ../../docs/server_manual/config.rst:188
 msgid ""
 "Add detailed profile information to the logs, only effective when "
 "QGIS_SERVER_LOG_LEVEL=0"
@@ -468,11 +451,11 @@ msgstr ""
 "Lägg till detaljerad profilinformation i loggarna, gäller endast när "
 "QGIS_SERVER_LOG_LEVEL=0"
 
-#: ../../docs/server_manual/config.rst:192
+#: ../../docs/server_manual/config.rst:194
 msgid "QGIS_SERVER_LOG_STDERR"
 msgstr "QGIS_SERVER_LOG_STDERR"
 
-#: ../../docs/server_manual/config.rst:193
+#: ../../docs/server_manual/config.rst:195
 msgid ""
 "Activate logging to stderr. This variable  has no effect when "
 "``QGIS_SERVER_LOG_FILE`` is set."
@@ -480,23 +463,23 @@ msgstr ""
 "Aktivera loggning till stderr. Denna variabel har ingen effekt när "
 "``QGIS_SERVER_LOG_FILE`` är inställd."
 
-#: ../../docs/server_manual/config.rst:196
-#: ../../docs/server_manual/config.rst:218
-#: ../../docs/server_manual/config.rst:266
-msgid "``0`` or ``false`` (case insensitive)"
-msgstr "``0`` eller ``false`` (skiftlägeskänslighet saknas)"
-
 #: ../../docs/server_manual/config.rst:197
 #: ../../docs/server_manual/config.rst:219
 #: ../../docs/server_manual/config.rst:267
+msgid "``0`` or ``false`` (case insensitive)"
+msgstr "``0`` eller ``false`` (skiftlägeskänslighet saknas)"
+
+#: ../../docs/server_manual/config.rst:198
+#: ../../docs/server_manual/config.rst:220
+#: ../../docs/server_manual/config.rst:268
 msgid "``1`` or ``true`` (case insensitive)"
 msgstr "``1`` eller ``true`` (skiftlägeskänslighet saknas)"
 
-#: ../../docs/server_manual/config.rst:201
+#: ../../docs/server_manual/config.rst:202
 msgid "QGIS_SERVER_MAX_THREADS"
 msgstr "QGIS_SERVER_MAX_THREADS"
 
-#: ../../docs/server_manual/config.rst:202
+#: ../../docs/server_manual/config.rst:203
 msgid ""
 "Number of threads to use when parallel rendering is activated. If value is "
 "``-1`` it uses the number of processor cores."
@@ -504,16 +487,16 @@ msgstr ""
 "Antal trådar som ska användas när parallell rendering är aktiverad. Om "
 "värdet är ``-1`` används antalet processorkärnor."
 
-#: ../../docs/server_manual/config.rst:204
-#: ../../docs/server_manual/config.rst:300
+#: ../../docs/server_manual/config.rst:205
+#: ../../docs/server_manual/config.rst:301
 msgid "-1"
 msgstr "-1"
 
-#: ../../docs/server_manual/config.rst:207
+#: ../../docs/server_manual/config.rst:208
 msgid "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
 msgstr "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
 
-#: ../../docs/server_manual/config.rst:208
+#: ../../docs/server_manual/config.rst:209
 msgid ""
 "Sets LOCALE to be used by QGIS server. The default value is empty (no "
 "override)."
@@ -521,15 +504,15 @@ msgstr ""
 "Ställer in LOCALE som ska användas av QGIS-servern. Standardvärdet är tomt "
 "(ingen åsidosättning)."
 
-#: ../../docs/server_manual/config.rst:210
+#: ../../docs/server_manual/config.rst:211
 msgid "Example: ``de_CH.utf8``"
 msgstr "Exempel: ``de_CH.utf8``"
 
-#: ../../docs/server_manual/config.rst:214
+#: ../../docs/server_manual/config.rst:215
 msgid "QGIS_SERVER_PARALLEL_RENDERING"
 msgstr "QGIS_SERVER_PARALLEL_RENDERING"
 
-#: ../../docs/server_manual/config.rst:215
+#: ../../docs/server_manual/config.rst:216
 msgid ""
 "Activates parallel rendering for WMS GetMap requests. It's disabled "
 "(``false``) by default. Available values are:"
@@ -537,11 +520,11 @@ msgstr ""
 "Aktiverar parallell rendering för WMS GetMap-begäranden. Den är inaktiverad "
 "(``false``) som standard. Tillgängliga värden är:"
 
-#: ../../docs/server_manual/config.rst:223
+#: ../../docs/server_manual/config.rst:224
 msgid "QGIS_SERVER_PROJECT_CACHE_CHECK_INTERVAL"
 msgstr "QGIS_SERVER_PROJECT_CACHE_CHECK_INTERVAL"
 
-#: ../../docs/server_manual/config.rst:224
+#: ../../docs/server_manual/config.rst:225
 msgid ""
 "Controls the periodic strategy interval for cache invalidation, in "
 "milliseconds. Defaults to 0 which selects the legacy File system watcher."
@@ -550,22 +533,22 @@ msgstr ""
 "i millisekunder. Standardvärdet är 0, vilket innebär att den gamla "
 "filsystemövervakaren väljs."
 
-#: ../../docs/server_manual/config.rst:229
+#: ../../docs/server_manual/config.rst:230
 msgid "QGIS_SERVER_PROJECT_CACHE_STRATEGY"
 msgstr "QGIS_SERVER_PROJECT_CACHE_STRATEGY"
 
-#: ../../docs/server_manual/config.rst:230
+#: ../../docs/server_manual/config.rst:231
 msgid ""
 "Defines method for invalidating the project cache. Available strategies are:"
 msgstr ""
 "Definierar metod för att inaktivera projektcachen. Tillgängliga strategier "
 "är:"
 
-#: ../../docs/server_manual/config.rst:232
+#: ../../docs/server_manual/config.rst:233
 msgid "``filesystem``: uses the file system watcher strategy"
 msgstr "``filesystem``: använder filsystemets bevakningsstrategi"
 
-#: ../../docs/server_manual/config.rst:233
+#: ../../docs/server_manual/config.rst:234
 msgid ""
 "``periodic``: uses the last modified value of a project for checking changes"
 " on project configuration. Convenient on atypical file systems, such as NFS,"
@@ -576,19 +559,19 @@ msgstr ""
 "filsystem, t.ex. NFS, eller när projektfilen lagras i ett databassystem som "
 "PostgreSQL."
 
-#: ../../docs/server_manual/config.rst:236
+#: ../../docs/server_manual/config.rst:237
 msgid "``off``: disables internal cache invalidation completely"
 msgstr "``off``: inaktiverar intern cache-invalidering helt och hållet"
 
-#: ../../docs/server_manual/config.rst:237
+#: ../../docs/server_manual/config.rst:238
 msgid "filesystem"
 msgstr "filesystem"
 
-#: ../../docs/server_manual/config.rst:242
+#: ../../docs/server_manual/config.rst:243
 msgid "QGIS_SERVER_SERVICE_URL"
 msgstr "QGIS_SERVER_SERVICE_URL"
 
-#: ../../docs/server_manual/config.rst:243
+#: ../../docs/server_manual/config.rst:244
 msgid ""
 "This is an option to set the service URL if it is not present in the "
 "project."
@@ -596,47 +579,47 @@ msgstr ""
 "Detta är ett alternativ för att ange tjänstens URL om den inte finns i "
 "projektet."
 
-#: ../../docs/server_manual/config.rst:245
+#: ../../docs/server_manual/config.rst:246
 msgid "The service URL is defined from (in order of precedence):"
 msgstr "Tjänstens URL definieras från (i prioritetsordning):"
 
-#: ../../docs/server_manual/config.rst:247
+#: ../../docs/server_manual/config.rst:248
 msgid "Value defined in the project per service"
 msgstr "Värde definierat i projektet per tjänst"
 
-#: ../../docs/server_manual/config.rst:248
+#: ../../docs/server_manual/config.rst:249
 msgid "The ``QGIS_SERVER_<service>_SERVICE_URL`` environment variable"
 msgstr "Miljövariabeln ``QGIS_SERVER_<service>_SERVICE_URL``"
 
-#: ../../docs/server_manual/config.rst:249
+#: ../../docs/server_manual/config.rst:250
 msgid "The ``QGIS_SERVER_SERVICE_URL`` environment variable"
 msgstr "Miljövariabeln ``QGIS_SERVER_SERVICE_URL``"
 
-#: ../../docs/server_manual/config.rst:250
+#: ../../docs/server_manual/config.rst:251
 msgid "The ``X-Qgis-<service>-Service-Url`` header"
 msgstr "Rubriken ``X-Qgis-<service>-Service-Url``"
 
-#: ../../docs/server_manual/config.rst:251
+#: ../../docs/server_manual/config.rst:252
 msgid "The ``X-Qgis-Service-Url`` header"
 msgstr "Rubriken \"X-Qgis-Service-Url"
 
-#: ../../docs/server_manual/config.rst:252
+#: ../../docs/server_manual/config.rst:253
 msgid "Build from the ``Forwarded`` header"
 msgstr "Bygg från rubriken ``Forwarded``"
 
-#: ../../docs/server_manual/config.rst:253
+#: ../../docs/server_manual/config.rst:254
 msgid "Build from the ``X-Forwarded-Host`` and ``X-Forwarded-Proto`` headers"
 msgstr "Bygg från rubrikerna ``X-Forwarded-Host`` och ``X-Forwarded-Proto``"
 
-#: ../../docs/server_manual/config.rst:254
+#: ../../docs/server_manual/config.rst:255
 msgid "Build from the ``Host`` header and the server protocol"
 msgstr "Byggs upp från ``Host``-huvudet och serverprotokollet"
 
-#: ../../docs/server_manual/config.rst:255
+#: ../../docs/server_manual/config.rst:256
 msgid "Build from the server name and the server protocol."
 msgstr "Bygg från servernamnet och serverprotokollet."
 
-#: ../../docs/server_manual/config.rst:257
+#: ../../docs/server_manual/config.rst:258
 msgid ""
 "In the last four cases, the resulting Service URL is based on the ``MAP`` "
 "parameter provided in the query string and on the incoming path request."
@@ -644,11 +627,11 @@ msgstr ""
 "I de fyra sista fallen baseras den resulterande service-URL:en på parametern"
 " ``MAP`` som anges i frågesträngen och på den inkommande sökvägsbegäran."
 
-#: ../../docs/server_manual/config.rst:262
+#: ../../docs/server_manual/config.rst:263
 msgid "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
 msgstr "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
 
-#: ../../docs/server_manual/config.rst:263
+#: ../../docs/server_manual/config.rst:264
 msgid ""
 "Defines whether a group separator (e.g. thousand separator) should be used "
 "for numeric values (e.g. in GetFeatureInfo responses). The default value is "
@@ -657,11 +640,11 @@ msgstr ""
 "Anger om en gruppavgränsare (t.ex. tusenavgränsare) ska användas för "
 "numeriska värden (t.ex. i GetFeatureInfo-svar). Standardvärdet är ``0``."
 
-#: ../../docs/server_manual/config.rst:271
+#: ../../docs/server_manual/config.rst:272
 msgid "QGIS_SERVER_TRUST_LAYER_METADATA"
 msgstr "QGIS_SERVER_TRUST_LAYER_METADATA"
 
-#: ../../docs/server_manual/config.rst:272
+#: ../../docs/server_manual/config.rst:273
 msgid ""
 "This is an option at the project level to improve project read time by using"
 " the vector layer extents defined in the project metadata and disabling the "
@@ -672,7 +655,7 @@ msgstr ""
 "metadata och inaktivera kontrollen för PostgreSQL / PostGIS-lagrets primära "
 "nyckelunikhet."
 
-#: ../../docs/server_manual/config.rst:276
+#: ../../docs/server_manual/config.rst:277
 msgid ""
 "Trusting layer metadata can be forced by setting this variable to ``1`` or "
 "``true``. The vector layer's extent will then be the one defined in the "
@@ -684,20 +667,20 @@ msgstr ""
 "att vara den som definieras i projektet, och PostgreSQL / PostGIS-lagrets "
 "primära nyckel som definieras i datakällan betraktas som unik utan kontroll."
 
-#: ../../docs/server_manual/config.rst:281
+#: ../../docs/server_manual/config.rst:282
 msgid "Do not use it if layers' extent is not fixed during the project's use."
 msgstr ""
 "Använd den inte om lagrens utsträckning inte är fastställd under projektets "
 "användning."
 
-#: ../../docs/server_manual/config.rst:285
+#: ../../docs/server_manual/config.rst:286
 msgid "QGIS_SERVER_WCS_SERVICE_URL"
 msgstr "QGIS_SERVER_WCS_SERVICE_URL"
 
-#: ../../docs/server_manual/config.rst:286
-#: ../../docs/server_manual/config.rst:292
-#: ../../docs/server_manual/config.rst:304
-#: ../../docs/server_manual/config.rst:310
+#: ../../docs/server_manual/config.rst:287
+#: ../../docs/server_manual/config.rst:293
+#: ../../docs/server_manual/config.rst:305
+#: ../../docs/server_manual/config.rst:311
 msgid ""
 "This is an option to set the service URL if it is not present in the "
 "project. See :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` for "
@@ -707,23 +690,23 @@ msgstr ""
 "projektet. Se :ref:`QGIS_SERVER_SERVICE_URL <qgis_server_service_url>` för "
 "mer information."
 
-#: ../../docs/server_manual/config.rst:289
+#: ../../docs/server_manual/config.rst:290
 msgid "WCS"
 msgstr "WCS"
 
-#: ../../docs/server_manual/config.rst:291
+#: ../../docs/server_manual/config.rst:292
 msgid "QGIS_SERVER_WFS_SERVICE_URL"
 msgstr "QGIS_SERVER_WFS_SERVICE_URL"
 
-#: ../../docs/server_manual/config.rst:295
+#: ../../docs/server_manual/config.rst:296
 msgid "WFS"
 msgstr "WFS"
 
-#: ../../docs/server_manual/config.rst:297
+#: ../../docs/server_manual/config.rst:298
 msgid "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
 msgstr "QGIS_SERVER_WMS_MAX_HEIGHT / QGIS_SERVER_WMS_MAX_WIDTH"
 
-#: ../../docs/server_manual/config.rst:298
+#: ../../docs/server_manual/config.rst:299
 msgid ""
 "Maximum height/width for a WMS request. The most conservative between this "
 "and the project one is used. If the value is ``-1``, it means that there is "
@@ -733,23 +716,23 @@ msgstr ""
 "detta och projektets används. Om värdet är ``-1`` betyder det att det inte "
 "finns någon maxgräns."
 
-#: ../../docs/server_manual/config.rst:303
+#: ../../docs/server_manual/config.rst:304
 msgid "QGIS_SERVER_WMS_SERVICE_URL"
 msgstr "QGIS_SERVER_WMS_SERVICE_URL"
 
-#: ../../docs/server_manual/config.rst:309
+#: ../../docs/server_manual/config.rst:310
 msgid "QGIS_SERVER_WMTS_SERVICE_URL"
 msgstr "QGIS_SERVER_WMTS_SERVICE_URL"
 
-#: ../../docs/server_manual/config.rst:313
+#: ../../docs/server_manual/config.rst:314
 msgid "WMTS"
 msgstr "WMTS"
 
-#: ../../docs/server_manual/config.rst:315
+#: ../../docs/server_manual/config.rst:316
 msgid "QUERY_STRING"
 msgstr "QUERY_STRING"
 
-#: ../../docs/server_manual/config.rst:316
+#: ../../docs/server_manual/config.rst:317
 msgid ""
 "The query string, normally passed by the web server. This variable can be "
 "useful while testing QGIS server binary from the command line."
@@ -757,7 +740,7 @@ msgstr ""
 "Frågesträngen, som normalt skickas av webbservern. Den här variabeln kan "
 "vara användbar när du testar QGIS server binär från kommandoraden."
 
-#: ../../docs/server_manual/config.rst:319
+#: ../../docs/server_manual/config.rst:320
 msgid ""
 "For example for testing a GetCapabilities request on the command line to a "
 "project that also requires a PostgreSQL connection defined in a "
@@ -767,7 +750,7 @@ msgstr ""
 "ett projekt som också kräver en PostgreSQL-anslutning som definieras i en "
 "pg_service.conf-fil:"
 
-#: ../../docs/server_manual/config.rst:329
+#: ../../docs/server_manual/config.rst:330
 msgid ""
 "The result should be either the content of the GetCapabilities response or, "
 "if something is wrong, an error message."
@@ -775,11 +758,11 @@ msgstr ""
 "Resultatet ska antingen vara innehållet i GetCapabilities-svaret eller, om "
 "något är fel, ett felmeddelande."
 
-#: ../../docs/server_manual/config.rst:336
+#: ../../docs/server_manual/config.rst:337
 msgid "Settings summary"
 msgstr "Sammanfattning av inställningar"
 
-#: ../../docs/server_manual/config.rst:338
+#: ../../docs/server_manual/config.rst:339
 msgid ""
 "When QGIS Server is starting, you have a summary of all configurable "
 "parameters thanks to environment variables. Moreover, the value currently "
@@ -789,11 +772,11 @@ msgstr ""
 "konfigureras tack vare miljövariablerna. Dessutom visas det värde som "
 "används för närvarande och ursprunget."
 
-#: ../../docs/server_manual/config.rst:342
+#: ../../docs/server_manual/config.rst:343
 msgid "For example with spawn-fcgi:"
 msgstr "Till exempel med spawn-fcgi:"
 
-#: ../../docs/server_manual/config.rst:373
+#: ../../docs/server_manual/config.rst:374
 msgid ""
 "In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and "
 "**QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found "
@@ -808,11 +791,11 @@ msgstr ""
 "motsvarande posterna i ini-filen är **/qgis/max_threads** och "
 "**/qgis/parallel_rendering** och deras värden är **true** och **4** trådar."
 
-#: ../../docs/server_manual/config.rst:381
+#: ../../docs/server_manual/config.rst:382
 msgid "Connection to service file"
 msgstr "Anslutning till servicefil"
 
-#: ../../docs/server_manual/config.rst:383
+#: ../../docs/server_manual/config.rst:384
 msgid ""
 "In order to make apache aware of the PostgreSQL service file (see the "
 ":ref:`pg-service-file` section) you need to make your :file:`*.conf` file "
@@ -821,11 +804,11 @@ msgstr ""
 "För att göra apache medveten om PostgreSQL-tjänstfilen (se avsnittet "
 ":ref:`pg-service-file`) måste du få din :file:`*.conf`-fil att se ut som:"
 
-#: ../../docs/server_manual/config.rst:399
+#: ../../docs/server_manual/config.rst:400
 msgid "Add fonts to your linux server"
 msgstr "Lägg till teckensnitt på din Linux-server"
 
-#: ../../docs/server_manual/config.rst:401
+#: ../../docs/server_manual/config.rst:402
 msgid ""
 "Keep in mind that you may use QGIS projects that point to fonts that may not"
 " exist by default on other machines. This means that if you share the "
@@ -837,7 +820,7 @@ msgstr ""
 "projektet kan det se annorlunda ut på andra maskiner (om teckensnitten inte "
 "finns på målmaskinen)."
 
-#: ../../docs/server_manual/config.rst:405
+#: ../../docs/server_manual/config.rst:406
 msgid ""
 "In order to ensure this does not happen you just need to install the missing"
 " fonts on the target machine. Doing this on desktop systems is usually "
@@ -847,7 +830,7 @@ msgstr ""
 "teckensnitten på målmaskinen. På stationära system är det oftast trivialt "
 "(dubbelklicka på teckensnitten)."
 
-#: ../../docs/server_manual/config.rst:408
+#: ../../docs/server_manual/config.rst:409
 msgid ""
 "For linux, if you don't have a desktop environment installed (or you prefer "
 "the command line) you need to:"
@@ -855,10 +838,10 @@ msgstr ""
 "För Linux, om du inte har en skrivbordsmiljö installerad (eller om du "
 "föredrar kommandoraden) måste du göra det:"
 
-#: ../../docs/server_manual/config.rst:410
+#: ../../docs/server_manual/config.rst:411
 msgid "On Debian based systems:"
 msgstr "På Debian-baserade system:"
 
-#: ../../docs/server_manual/config.rst:423
+#: ../../docs/server_manual/config.rst:424
 msgid "On Fedora based systems:"
 msgstr "På Fedora-baserade system:"

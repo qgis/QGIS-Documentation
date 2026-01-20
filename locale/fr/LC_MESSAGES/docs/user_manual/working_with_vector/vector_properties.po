@@ -4182,6 +4182,14 @@ msgstr ""
 "|text| :guilabel:`Text diagram`, les attributs sélectionnés sont affichés "
 "avec la couleur spécifiée dans un cercle divisé horizontalement;"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1874
+msgid ""
+"|histogram| :guilabel:`Histogram`, bars of varying colors for each attribute"
+" aligned next to each other;"
+msgstr ""
+"|histogram| :guilabel:`Histogram`, des barres de couleur différentes pour "
+"chaque attributs placées les unes à côté des autres;"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3976
 msgid "histogram"
 msgstr "histogram"
@@ -4198,6 +4206,16 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4073
 msgid "stackedBar"
 msgstr "stackedBar"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1878
+msgid ""
+"|stackedDiagram| :guilabel:`Stacked diagram`, stacks diagrams of equal or "
+"varying types, next to each other, vertically or horizontally. More details "
+"at :ref:`Stacked Diagrams <stacked_diagrams>`."
+msgstr ""
+"|stackedDiagram| :guilabel:`Stacked diagram`, combinaison de diagrammes de "
+"types identiques ou différents, verticalement ou horizontalement. Plus de "
+"détails dans la section :ref:`Diagrammes empilés <stacked_diagrams>`."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4075
 msgid "stackedDiagram"
@@ -4690,6 +4708,18 @@ msgstr ""
 "indépendants comme :ref:`Attributes <diagram_attributes>`, :ref:`Rendering "
 "<diagram_appearance>`, :ref:`Size <diagram_size>`, :ref:`Options "
 "<diagram_options>` et  :ref:`Legend <diagram_legend>`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2105
+msgid ""
+":ref:`Placement <diagram_placement>` settings in a stacked diagram, as well "
+"as some visibility settings (located in the :ref:`Rendering "
+"<diagram_appearance>` tab), are determined by the placement and visibility "
+"settings of the first subdiagram in the stack."
+msgstr ""
+"La :ref:`Position <diagram_placement>` d'un diagramme empilé ainsi que "
+"certaines propriétés de visibilité situées dans l'onglet :ref:`Rendu "
+"<diagram_appearance>`), sont déterminées par le placement et la visibilité "
+"du premier sous-diagramme de la liste."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2110
 msgid ""
@@ -7554,9 +7584,65 @@ msgstr ""
 "identifiant d'entité lorsque la carte ou la mise en page est exportée dans "
 "un format comportant des couches comme Geospatial PDF"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3361
+msgid ""
+"the map tip information, i.e. the message displayed in the map canvas when "
+"hovering over a feature of the active layer with the |mapTips| :sup:`Show "
+"Map Tips` icon pressed. Applicable when |checkbox| :guilabel:`Enable Map "
+"Tips` is active and no :guilabel:`HTML Map Tip` is set."
+msgstr ""
+"les informations du pointeur de carte, c'est-à-dire le message affiché dans "
+"le canevas de carte lorsque vous survolez une entité de la couche active "
+"avec l'icône |mapTips| :sup:`Afficher les infobulles` activée. Cela "
+"s'applique lorsque |checkbox| :guilabel:`Enable map tips` est coché et "
+"qu'aucune `Infobulle HTML` n'est définie."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4016
 msgid "mapTips"
 msgstr "mapTips"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3365
+msgid ""
+"|checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips "
+"for the layer"
+msgstr ""
+"|checkbox| :guilabel:`Enable Map Tips` contrôle l'affichage des infobulles "
+"pour la couche"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3366
+msgid ""
+"The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor "
+"for map tips, mixing QGIS expressions and html styles and tags (multiline, "
+"fonts, images, hyperlink, tables, ...). You can check the result of your "
+"code sample in the :guilabel:`Preview` frame (also convenient for previewing"
+" the :guilabel:`Display name` output). Additionally, you can select and edit"
+" existing expressions using the :guilabel:`Insert/Edit Expression` button."
+msgstr ""
+"Le panneau :guilabel:`Infobulle HTML` fournit un éditeur HTML complet pour "
+"les infobulles, combinant les expressions QGIS avec les styles et balises "
+"HTML (multiligne, polices, images, hyperliens, tableaux, ...). Vous pouvez "
+"prévisualiser le résultat de votre code dans le panneau :guilabel:`Preview`"
+"  ( qui permet également de visualiser le résultat du :guilabel:`Nom "
+"d'affichage`). Vous pouvez par ailleurs sélectionner et éditer des "
+"expressions en utilisant le bouton :guilabel:`Insert/Edit Expression`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3373
+msgid "Understanding the :guilabel:`Insert/Edit Expression` button behavior"
+msgstr ""
+"Comprendre le comportement du bouton :guilabel:`Insert/Edit Expression`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3375
+msgid ""
+"If you select some text within an expression (between \"[%\" and \"%]\"), or"
+" if no text is selected but the cursor is inside an expression, the whole "
+"expression will be automatically selected for editing. If the cursor or a "
+"selected text is outside an expression, the dialog opens with the selection."
+msgstr ""
+"Si vous sélectionnez du texte dans une expression (entre \"[%\" et \"%]\"), "
+"ou si aucun texte n'est sélectionné mais que le curseur est positionné dans "
+"une expression, toute l'expression sera automatiquement sélectionnée pour "
+"édition. Si le curseur ou le texte sélectionné se trouvent en dehors d'une "
+"expression, la fenêtre s'ouvre sur la sélection."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3385
 msgid "HTML code for map tip"
@@ -7566,6 +7652,39 @@ msgstr "Code HTML pour les infobulles"
 msgid "To display map tips:"
 msgstr "Pour afficher les infobulles :"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3390
+msgid ""
+"Select the menu option :menuselection:`View --> Show Map Tips` or click on "
+"the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes "
+"Toolbar`."
+msgstr ""
+"Activez l'option dans le menu :menuselection:`Vue --> Afficher les "
+"infobulles` ou activez l'icône |mapTips| :sup:`Afficher les infobulles` dans"
+" la barre d'outils :guilabel:`Attributs`. "
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3392
+msgid ""
+"Make sure that the layer you target is active and has the |checkbox| "
+":guilabel:`Enable Map Tips` property checked."
+msgstr ""
+"Assurez-vous que la couche que vous ciblez est active et que |checkbox| "
+":guilabel:`Afficher les infobulles` est activée dans ses propriétés."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3394
+msgid ""
+"Move over a feature, and the corresponding information will be displayed "
+"over."
+msgstr "Déplacez le pointeur sur une entité pour afficher l'infobulle."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3396
+msgid ""
+"Map tip is a cross-layer feature meaning that once activated, it stays on "
+"and applies to any map tip enabled layer in the project until it's toggled "
+"off."
+msgstr ""
+"Une fois l'option activée dans le projet, les infobulles s'ouvrent sur "
+"toutes les couches pour lesquelles l'affichage des infobulles est coché."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3404
 msgid "Map tip made with HTML code"
 msgstr "Infobulles basées sur du code HTML"
@@ -7573,6 +7692,15 @@ msgstr "Infobulles basées sur du code HTML"
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3411
 msgid "Rendering Properties"
 msgstr "Propriétés de Rendu (onglet rendu)"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3418
+msgid "Layer Rendering Properties dialog"
+msgstr "Fenêtre des propriétés de rendu"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3420
+msgid "The |rendering| :guilabel:`Rendering` tab offers following properties:"
+msgstr ""
+"L'onglet |rendering| :guilabel:`Rendu` contient les propriétés suivantes :"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3422
 msgid ""
@@ -7634,6 +7762,69 @@ msgstr ""
 "et d'affichage imprécis lors de l'utilisation de couches de symboles basées "
 "sur des décalages."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3449
+msgid ""
+"The |unchecked| :guilabel:`Fixed reference scale` indicates the map scale at"
+" which symbology and labeling sizes which uses paper-based units (such as "
+"millimeters or points) relate to. The sizes will be scaled accordingly "
+"whenever the map is viewed at a different scale."
+msgstr ""
+"L' |unchecked| :guilabel:`Échelle de référence fixe` indique l'échelle de la"
+" carte à laquelle se rapportent les tailles de symbologie et d'étiquetage "
+"qui utilisent des unités papier (telles que des millimètres ou des points). "
+"Les tailles seront modifiées en conséquence à chaque fois que la carte sera"
+"  visualisée à une échelle différente."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3453
+msgid ""
+"For instance, a line layer using a 2mm wide line with a 1:2000 "
+":guilabel:`Reference scale` set will be rendered using 4mm wide lines when "
+"the map is viewed at 1:1000."
+msgstr ""
+"Par exemple, une couche de lignes utilisant une ligne de 2 mm de large avec "
+"une :guilabel:`Échelle de référence` de 1:2000 sera rendue avec des lignes "
+"de 4 mm de large lorsque la carte sera visualisée à 1:1000."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3456
+msgid ""
+"The :guilabel:`Selections` group allows you to control whether a specific "
+"color or symbol should be used in place of the defaults "
+"(:menuselection:`Project properties --> General --> Selection color`) for a "
+"particular layer. This is useful to improve the visibility of selected "
+"features with certain symbology:"
+msgstr ""
+"Le groupe :guilabel:`Selections` vous permet d'attribuer un symbole ou une "
+"couleur de sélection spécifique à la couche en remplacement des paramètres "
+"par défaut (:menuselection:`Projet --> Propriétés --> Général --> Couleur de"
+" la sélection`). Cela peut permettre d'améliorer la visibilité des entités "
+"sélectionnées avec certaines symbologies."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3461
+msgid ":guilabel:`Use default selection color`"
+msgstr ":guilabel:`Use default selection color`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3462
+msgid ""
+":guilabel:`Override color for selected features`: e.g. if the layer uses a "
+"yellow color by default and the standard yellow selection is not visible."
+msgstr ""
+":guilabel:`Override color for selected features`: par exemple si la couche "
+"utilise une symbologie de couleur jaune et que la sélection par défaut "
+"(jaune) n'est pas visible."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3470
+msgid ""
+"Rendering extremely detailed layers (e.g. polygon layers with a huge number "
+"of nodes), can cause layout exports in PDF/SVG format to be huge as all "
+"nodes are included in the exported file. This can also make the resultant "
+"file very slow to work with/open in other programs."
+msgstr ""
+"Afficher des couches très détaillées (par exemple des couches de polygones "
+"comprenant de nombreux nœuds) peut rendre les exports de mises en pages très"
+" volumineux en format PDF/SVG car tous les nœuds seront inclus dans les "
+"fichiers exportés. Le fichier exporté peut également être lent à ouvrir ou "
+"manipuler dans d'autres programmes."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3474
 msgid ""
 "Checking |checkbox| :guilabel:`Force layer to render as raster` forces these"
@@ -7645,6 +7836,58 @@ msgstr ""
 "tant que raster`, les couches sont rasterisées de manière à ce que les "
 "fichiers exportés n'incluent pas l'ensemble des noeuds des couches et que le"
 " rendu se fasse plus rapidement."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3478
+msgid ""
+"You can also do this by forcing the layout to export as a raster, but that "
+"is an all-or-nothing solution, given that the rasterisation is applied to "
+"all layers. Alternatively, you can rely on geometry simplification in "
+":ref:`layout export settings <create-output>`."
+msgstr ""
+"Vous pouvez également forcer l'export de la mise en page comme raster, mais "
+"cela concernera alors toutes les couches. Vous pouvez aussi envisager la "
+"simplification des géométries dans les :ref:`paramètres d'export de la mise "
+"en page <create-output>`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3482
+msgid ""
+"|unchecked| :guilabel:`Refresh layer at interval`: controls whether and how "
+"regular a layer can be refreshed. Available :guilabel:`Configuration` "
+"options are:"
+msgstr ""
+"|unchecked| :guilabel:`Refresh layer at interval`:  cotrôle si une couche "
+"doit être rechargée et à quelle fréquence. Les options de "
+":guilabel:`Configuration` sont :"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3485
+msgid ""
+":guilabel:`Reload data`: the layer will be completely refreshed. Any cached "
+"data will be discarded and refetched from the provider. This mode may result"
+" in slower map refreshes."
+msgstr ""
+":guilabel:`Reload data`: la couche sera entièrement rechargée. Les données "
+"en cache seront supprimées et récupérées de nouveau auprès du fournisseur. "
+"Ce mode peut provoquer une actualisation plus lente de la carte."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3488
+msgid ""
+":guilabel:`Redraw layer only`: this mode is useful for animation or when the"
+" layer's style will be updated at regular intervals. Canvas updates are "
+"deferred in order to avoid refreshing multiple times if more than one layer "
+"has an auto update interval set."
+msgstr ""
+":guilabel:`Redraw layer only`: ce mode est utile pour les animations ou si "
+"le style de couche est mis à jour régulièrement. Les mises à jour du canevas"
+" de carte sont retardées si un intervalle de mise à jour automatique est "
+"défini sur plus d'une couche pour éviter les actualisations multiples."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3495
+msgid ""
+"It is also possible to set the :guilabel:`Interval (seconds)` between "
+"consecutive refreshments."
+msgstr ""
+"Il est également possible de définir l' :guilabel:`Interval (seconds)` entre"
+" les actualisations."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3497
 msgid ""
@@ -7666,9 +7909,135 @@ msgstr ""
 msgid "Temporal Properties"
 msgstr "Propriétés Temporelles (onglet temporel)"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3510
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab provides options to control the "
+"rendering of the layer over time. Such dynamic rendering requires the "
+":ref:`temporal navigation <maptimecontrol>` to be enabled over the map "
+"canvas."
+msgstr ""
+"L'onglet |temporal| :guilabel:`Temporel` contient des options permettant de "
+"contrôler l'affichage de la couche en fonction du temps. Cet affichage "
+"dynamique nécessite d'activer la  :ref:`navigation temporelle "
+"<maptimecontrol>` sur le canevas de la carte."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3519
+msgid "Vector layer temporal properties dialog"
+msgstr "La fenêtre de propriétés temporelles d'une couche vecteur"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3521
+msgid ""
+"Check the |checkbox| :guilabel:`Dynamic Temporal Control` option to "
+"configure the vector layer temporal rendering. Depending on the structure of"
+" your dataset, you may want to use one of the provided "
+":guilabel:`Configuration` options:"
+msgstr ""
+"Cochez l'option |checkbox| :guilabel:`Contrôle temporel dynamique` pour "
+"configurer le rendu temporel de la couche vecteur. En fonction de la "
+"structure de votre jeu de données, vous  pouvez sélectionner l'une des "
+"options de :guilabel:`Configuration` suivantes :"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3526
+msgid ""
+":guilabel:`Fixed time range`: all the features are rendered if the map "
+"canvas temporal frame overlaps the given :guilabel:`Start date` and "
+":guilabel:`End date` range."
+msgstr ""
+":guilabel:`Plage de temps fixe`: toutes les entités de la couche sont "
+"affichées si l'étendue temporelle de la carte chevauche l'étendue définie "
+"entre :guilabel:`Date de début` et :guilabel:`Date de fin` range."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3529
+msgid ""
+":guilabel:`Single field with date/time`: features are rendered if their "
+":guilabel:`Field`'s value falls within the map canvas temporal frame. An "
+":guilabel:`Event duration` can be set. With checking the "
+":guilabel:`Accumulate features over time` option, all features which occur "
+"before or within the map's temporal range will continue to be rendered. The "
+"event duration is thus ignored."
+msgstr ""
+":guilabel:`Champ unique avec date/heure`: les entités sont affichées si la "
+"valeur contenue dans le :guilabel:`Champ` défini est incluse dans la plage "
+"temporelle de la carte. Une :guilabel:`Durée de l'événement` peut être "
+"définie. En cochant l'option :guilabel:`Accumuler les entités au fil du "
+"temps`, toutes les entités se produisant avant ou durant la plage temporelle"
+" de la carte seront affichées. La :guilabel:`Durée de l'événement` est alors"
+" ignorée."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3535
+msgid ""
+":guilabel:`Separate fields for start and end date/time`: features are "
+"rendered if the range specified by their :guilabel:`Start field` and "
+":guilabel:`End field` values overlaps the map canvas temporal."
+msgstr ""
+":guilabel:`Champs séparés pour la date/heure de début et de fin` : les "
+"entités sont affichées si la plage temporelle définie entre leurs valeurs de"
+" :guilabel:`Champ début` et :guilabel:`Fin du champ` chevauche la plage "
+"temporelle de la carte."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3538
+msgid ""
+":guilabel:`Separate fields for start and event duration`: features are "
+"rendered if the range defined by their :guilabel:`Start field` and "
+":guilabel:`Event duration field` values overlaps the map canvas temporal."
+msgstr ""
+":guilabel:`Champs séparés pour le début et la durée de l'événement`: les "
+"entités sont affichées si la plage temporelle définie par la valeur du champ"
+" :guilabel:`Champ Début` additionnée à la valeur du champ :guilabel:`Champ "
+"Durée de l'évènement` chevauche la plage temporelle de la carte."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3541
+msgid ""
+":guilabel:`Start and end date/time from expressions`: features are rendered "
+"if the time range specified by the fields :guilabel:`Start expression` and "
+":guilabel:`End expression` overlaps the map canvas temporal."
+msgstr ""
+":guilabel:`Date/heure de début et de fin à partir d'expressions`: les "
+"entités sont affichées si la plage temporelle définie entre l' "
+":guilabel:`Expression de début` et l' :guilabel:`Expression de fin` "
+"chevauche la plage temporelle de la carte."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3544
+msgid ""
+":guilabel:`Redraw layer only`: the layer is redrawn at each new animation "
+"frame but no time-based filtering is applied to the features. It's useful "
+"when the layer uses time-based expression values for renderer settings (e.g."
+" data-defined symbology)."
+msgstr ""
+":guilabel:`Redessiner la couche uniquement`: la couche est redessinée à "
+"chaque fois que la plage temporelle est modifiée mais aucun filtre de temps "
+"n'est appliqué aux entités. Cette configuration est utile lorsque la couche "
+"utilise des paramètres de rendu basés sur le temps (par exemple des "
+"expressions de symbologie définies par des données)."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3549
+msgid ""
+"It is also possible to set the :guilabel:`Limits` of the features time range"
+" as:"
+msgstr ""
+"Il est également possible de définir les :guilabel:`Limites` de la plage "
+"temporelle :"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3551
+msgid ":guilabel:`Include start, exclude end`"
+msgstr ":guilabel:`Inclure le début, exclure la fin (par défaut)`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3552
+msgid ":guilabel:`Include start, include end`"
+msgstr ":guilabel:`Inclure le début, inclure la fin`"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3560
 msgid "Variables Properties"
 msgstr "Onglet Variables"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3562
+msgid ""
+"The |expression| :guilabel:`Variables` tab lists all the variables available"
+" at the layer's level (which includes all global and project's variables)."
+msgstr ""
+"L'onglet |expression| :guilabel:`Variables` liste l'ensemble des variables "
+"disponibles au niveau de la couche (qui inclut toutes les variables globales"
+" ainsi que celles du projet)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3565
 msgid ""
@@ -7708,6 +8077,28 @@ msgstr ""
 ":ref:`graphiques de l'outil de profil <label_elevation_profile_view>`. Plus "
 "précisément, vous pouvez définir :"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3590
+msgid "Vector layer elevation properties dialog"
+msgstr "Les propriétés de l'onglet Élévation"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3592
+msgid ""
+":guilabel:`Vertical Reference System`: If the CRS of your vector layer is a "
+"compound one (including a Z dimension), then the vertical CRS used for the "
+"layer will be the vertical component of the layer CRS. In this case, you "
+"cannot manually set a different vertical CRS. If your layer CRS is "
+"horizontal (2D), then you can select a specific vertical CRS by clicking on "
+"the |setProjection| :sup:`Select CRS`. Vertical reference systems are "
+"supported for vector layers by:"
+msgstr ""
+":guilabel:`Vertical Reference System`: Si le SCR de votre couche vecteur est"
+" composé (qu'il inclut la dimension Z), alors le  SCR vertical appliqué à la"
+" couche sera le composant vertical du SCR de la couche. Dans ce cas, vous ne"
+" pouvez pas définir manuellement un autre SCR vertical. Si le SCR de votre "
+"couche est horizontal (2D), alors vous pouvez sélectionner un SCR vertical "
+"en cliquant sur |setProjection| :sup:`Sélectionner le SCR`. Les systèmes de "
+"référence verticaux pour les couches vecteur sont pris en compte par :"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3599
 msgid ":ref:`Elevation profiles <label_elevation_profile_view>`"
 msgstr ":ref:`Profils d'élévation <label_elevation_profile_view>`"
@@ -7719,6 +8110,120 @@ msgstr ":ref:`Résultats de l'outil Identifer <identify_results_dialog>`"
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3601
 msgid ":ref:`3D map views <label_3dmapview>`"
 msgstr ":ref:`Vues Cartographiques 3D <label_3dmapview>`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3602
+msgid ""
+":guilabel:`Elevation Clamping`: defines how and whether the features "
+"altitude should be:"
+msgstr ""
+":guilabel:`Restriction d'élévation`: définit si l'altitude des entités doit "
+"être :"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3605
+msgid ""
+":guilabel:`Clamped to terrain`: takes elevation directly from the terrain "
+"height and ignores any existing Z values in the features. A data-defined "
+":guilabel:`Offset` value from the terrain can also be filled."
+msgstr ""
+":guilabel:`Fixé au terrain`: l'élévation est prise directement de la hauteur"
+" du terrain, les valeurs Z existantes dans les entités sont ignorées. Il est"
+" possible de spécifier une valeur de :guilabel:`Décalage` à partir du "
+"terrain."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3608
+msgid ""
+":guilabel:`Relative to terrain`: any existing Z values in the features are "
+"added to the terrain height. A :guilabel:`Scale` factor followed by a data-"
+"defined :guilabel:`Offset` can be used to adjust the elevation. This option "
+"is not available for 2D geometry layers."
+msgstr ""
+":guilabel:`Relatif au terrain`: les valeurs Z des entités sont ajoutées à la"
+" hauteur du terrain. Une :guilabel:`Échelle` ainsi qu'un  "
+":guilabel:`Décalage` basé sur les données peuvent être utilisés pour ajuster"
+" l'élévation. Cette option n'est pas disponibles pour les couches de "
+"géométries 2D."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3612
+msgid ""
+":guilabel:`Absolute`: ignores the terrain height and directly takes Z values"
+" from the features for the elevation. A :guilabel:`Scale` factor followed by"
+" a data-defined :guilabel:`Offset` can be used to adjust the elevation. For "
+"2D geometry layers (with no Z values), a data-defined :guilabel:`Base "
+"height` can instead be set."
+msgstr ""
+":guilabel:`Absolu`: ignore la hauteur du terrain et calcule l'élévation à "
+"partir des valeurs Z des entités. Une :guilabel:`Échelle` ainsi qu' un "
+":guilabel:`Décalage` basé sur les données peuvent être utilisées pour "
+"ajuster l'élévation. Pour les couches de géométries 2D (sans valeurs Z), une"
+" :guilabel:`Hauteur de Base` basée sur les données peut être définie."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3617
+msgid ""
+"|unchecked| :guilabel:`Enable extrusion`: you can set a :guilabel:`Height` "
+"to control how high features vertically extend above their base. This is "
+"convenient to indicate that a 2D geometry layers, e.g. a polygon building "
+"footprints layer, actually represents 3D objects."
+msgstr ""
+"|unchecked| :guilabel:`Activer l' extrusion`: vous pouvez définir une "
+":guilabel:`Hauteur` à ajouter aux entités. Cela peut être utile pour "
+"indiquer qu'une couche de géométries 2D représente des objets 3D (par "
+"exemple des emplacements de bâtiments)."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3621
+msgid ""
+":guilabel:`Elevation Binding`: only relevant when combining an "
+":guilabel:`Elevation clamping` relying on the terrain with a line or polygon"
+" layer, this option controls how feature elevation is set relative to the "
+"terrain height. The terrain can be sampled:"
+msgstr ""
+":guilabel:`Fixation de l'élévation`: pertinent uniquement si l'on combine "
+"une :guilabel:`Restriction d'élévation` basée sur le terrain avec une couche"
+" de lignes ou de polygones. Cette option contrôle la manière de calculer "
+"l'élévation de l'entité relativement à la hauteur du terrain :"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3626
+msgid ""
+"at the feature's :guilabel:`Centroid`, with the centroid height being added "
+"to each vertex's z value"
+msgstr ""
+"au :guilabel:`Centroïde` de l'entité, la hauteur du centroïde étant ajoutée "
+"à la valeur z de chaque sommet"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3628
+msgid ""
+"at every individual :guilabel:`Vertex` before being added to the vertex's z "
+"value"
+msgstr "à chaque :guilabel:`Sommet` avant d'ajouter la valeur z du sommet"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3631
+msgid ""
+":guilabel:`Profile Chart Appearance`: controls how features are rendered "
+"when drawing a profile chart. Two main :guilabel:`Interpretation` modes are "
+"available:"
+msgstr ""
+":guilabel:`Apparence du graphique de profil`: cotrôle la manière dont les "
+"entités sont affichées lors de la visualisation d'un graphique de profil. "
+"Deux modes d':guilabel:`Interprétation` sont disponibles :"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3635
+msgid ""
+"as :guilabel:`Individual features`: samples discrete positions where the "
+"cross section profile line intersects the vector features. That intersection"
+" can be represented as point, line or surface depending on the layer type "
+"and whether an extrusion is applied."
+msgstr ""
+":guilabel:`Entités individuelles`: échantillonne les positions auxquelles la"
+" ligne de profil intersecte les entités. Cette intersection peut être "
+"représentée en tant que point, ligne ou surface selon le type de couche et "
+"l'application d'une extrusion."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3647
+msgid ""
+"Depending on the layer settings, profile symbols can be represented with a "
+"custom style, using:"
+msgstr ""
+"En fonction des paramètres de la couche, les symboles de profils peuvent "
+"être représentés avec un style spécifique en utilisant :"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3663
 msgid ""
@@ -7750,6 +8255,16 @@ msgstr ""
 "et une :guilabel:`Limite` : l'altitude maximale (respectivement minimale) "
 "déterminant la hauteur de la surface de remplissage."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3672
+msgid ""
+"Moreover, you can check |unchecked| :guilabel:`Show markers at sampled "
+"points` to make them visible over the interpretation line and assign them a "
+":guilabel:`Marker style`."
+msgstr ""
+"Vous pouvez également cocher |unchecked| :guilabel:`Afficher les marqueurs "
+"aux points échantillonnés` pour les afficher sur le graphique de profil et "
+"définir un :guilabel:`Style de marqueur`."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3681
 msgid "Metadata Properties"
 msgstr "Propriétés de Métadonnées (onglet métadonnées)"
@@ -7768,6 +8283,23 @@ msgstr ""
 msgid "Dependencies Properties"
 msgstr "Onglet Dépendances"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3694
+msgid ""
+"The |dependencies| :guilabel:`Dependencies` tab allows to declare data "
+"dependencies between layers. A data dependency occurs when a data "
+"modification in a layer, not by direct user manipulation, may modify data of"
+" other layers. This is the case for instance when geometry of a layer is "
+"updated by a database trigger or custom PyQGIS scripting after modification "
+"of another layer's geometry."
+msgstr ""
+"L'onglet |dependencies| :guilabel:`Dépendances` permet de déclarer les "
+"dépendances de données entre les couches. Une dépendance de données est "
+"établie lorsqu'une modification de données dans une couche peut modifier les"
+" données d'autres couches sans manipulation de l'utilisateur. C'est le cas "
+"par exemple lorsque la géométrie d'une couche est mise à jour par un "
+"déclencheur de base de données ou un script PyQGIS personnalisé après "
+"modification d'une géométrie dans une autre couche."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3701
 msgid ""
 "In the :guilabel:`Dependencies` tab, you can select any layers which may "
@@ -7784,6 +8316,41 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3711
 msgid "Legend Properties"
 msgstr "Onglet Légende"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3713
+msgid ""
+"The |legend| :guilabel:`Legend` properties tab provides you with advanced "
+"settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print "
+"layout legend <layout_legend_item>`. These options include:"
+msgstr ""
+"L'onglet |legend| :guilabel:`Légende` vous fournit des paramètres avancés "
+"pour le :ref:`panneau  Couches <label_legend>` et / ou la :ref:`Légende de "
+"mise en page <layout_legend_item>`. Ces options incluent :"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3717
+msgid ""
+"Depending on the symbology applied to the layer, you may end up with several"
+" entries in the legend, not necessarily readable/useful to display. The "
+":guilabel:`Legend placeholder image` helps you :ref:`select an image "
+"<embedded_file_selector>` for replacement, displayed both in the "
+":guilabel:`Layers` panel and the print layout legend."
+msgstr ""
+"En fonction de la symbologie appliquée à la couche, il est possible que des "
+"entrées de légendes ne soient pas bien compréhensibles ou pertinentes à "
+"afficher. L' :guilabel:`Image de substitution pour la légende` vous permet "
+"de :ref:`sélectionner une image <embedded_file_selector>` de remplacement, "
+"qui s'affichera dans le panneau:guilabel:`Couches` et dans les légendes de "
+"mises en page."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3722
+msgid ""
+"|checkbox| :guilabel:`Show label legend`: Displays overviews of the "
+"different label settings as entries in the legends. The :ref:`label style "
+"<showlabels>` is previewed along with the description."
+msgstr ""
+"|checkbox| :guilabel:`Afficher la légende d'étiquettes`: Affiche un aperçu "
+"des étiquettes de la couche en tant qu'entrées de légende. Le :ref:`style "
+"d'étiquette <showlabels>` est affiché avec sa description."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3725
 msgid ""
@@ -7841,6 +8408,38 @@ msgstr ""
 msgid "QGIS Server Properties"
 msgstr "Onglet QGIS Server"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3758
+msgid ""
+"The |overlay| :guilabel:`QGIS Server` tab consists of "
+":guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`Metadata URL`, "
+"and :guilabel:`Legend URL` sections."
+msgstr ""
+"L'onglet |overlay| :guilabel:`QGIS Server` regroupe les sections "
+":guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`Metadata URL`, "
+":guilabel:`Legend URL`, et :guilabel:`Dimensions`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3762
+msgid ""
+"From the :guilabel:`Description` section, you can change the "
+":guilabel:`Short name` used to reference the layer in requests (to learn "
+"more about short names, read :ref:`services_basics_short_name`). You can "
+"also add or edit a :guilabel:`Title`, an alternative :guilabel:`WFS Title` "
+"and :guilabel:`Abstract` for the layer, or define a :guilabel:`Keyword list`"
+" here. These keyword lists can be used in a metadata catalog. If you want to"
+" use a title from an XML metadata file, you have to fill in a link in the "
+":guilabel:`Data URL` field."
+msgstr ""
+"Dans la section :guilabel:`Description`, vous pouvez modifier le "
+":guilabel:`Short name` utilisé pour identifier la couche dans les requêtes "
+"(pour en savoir plus sur les short names, vous pouvez lire "
+":ref:`services_basics_short_name`). Vous pouvez également indiquer un "
+":guilabel:`Title`, un :guilabel:`WFS Title` alternatif et un "
+":guilabel:`Abstract` pour la couche, ou définir une :guilabel:`Keyword "
+"list`. Cette liste de mots clés peut être utilisée dans un catalogue de "
+"métadonnées. Si vous souhaitez utiliser un titre issu d'un fichier de "
+"métadonnées XML, vous devez indiquer un lien dans le champ :guilabel:`Data "
+"URL`."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3771
 msgid ""
 "Use :guilabel:`Attribution` to get attribute data from an XML metadata "
@@ -7848,6 +8447,29 @@ msgid ""
 msgstr ""
 "Utilisez le groupe :guilabel:`Attribution` pour récupérer les données "
 "d'attributs depuis un catalogue de métadonnées XML."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3773
+msgid ""
+"In :guilabel:`Metadata URL`, you can add the general paths to the XML "
+"metadata catalog. This information will be saved in the QGIS project file "
+"for subsequent sessions and will be used for QGIS Server."
+msgstr ""
+"Dans la section :guilabel:`Metadata URL`, vous pouvez ajouter les chemins "
+"vers le catalogue de métadonnées XML. Cette information sera sauvegardée "
+"dans le fichier de projet QGIS pour les sessions suivantes et sera utilisé "
+"pour QGIS Server."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3777
+msgid ""
+"In the :guilabel:`Legend URL` section, you can provide the url of a legend "
+"image in the url field. You can use the Format drop-down option to apply the"
+" appropriate format of the image. Currently png, jpg and jpeg image formats "
+"are supported."
+msgstr ""
+"Dans la section :guilabel:`Legend URL` vous pouvez indiquer l'url d'une "
+"image de légende dans le champ URL. Vous pouvez utiliser la liste d'options "
+":guilabel:`Format` pour indiquer le format de l'image. Actuellement les "
+"formats png, jpg et jpeg sont pris en charge."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3786
 msgid "QGIS Server tab in vector layers properties dialog"
@@ -7863,6 +8485,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3794
 msgid "Digitizing Properties"
 msgstr "Onglet numérisation"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3796
+msgid ""
+"The |digitizing| :guilabel:`Digitizing` tab gives access to options that "
+"help to ensure the quality of digitized geometries."
+msgstr ""
+"L'onglet |digitizing| :guilabel:`Numérisation` contient des options "
+"permettant de contrôler la qualité des géométries numérisées."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3804
 msgid "The QGIS Digitizing tab in the vector layers properties dialog"
@@ -7896,6 +8526,10 @@ msgstr ""
 "couche. Les valeurs Z et M ne sont pas arrondies. Avec de nombreux outils "
 "cartographiques, une grille s'affiche sur le canevas lors de la "
 "numérisation."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3825
+msgid "Moving the top vertex snaps all the vertices to the grid"
+msgstr "Déplacer le sommet supérieur attache tous les sommets sur la grille"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3828
 msgid "Geometry Checks"

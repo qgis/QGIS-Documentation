@@ -623,6 +623,10 @@ msgstr "Megjelenítés"
 msgid "Options"
 msgstr "Beállítások"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2150
+msgid "3D View Properties"
+msgstr "3D nézet tulajdonságai"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4024
 msgid "newAttribute"
 msgstr "newAttribute"
@@ -672,13 +676,77 @@ msgstr "nix"
 msgid "osx"
 msgstr "osx"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3346
+msgid "Display Properties"
+msgstr "Térképtippek tulajdonságai"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4016
 msgid "mapTips"
 msgstr "mapTips"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3365
+msgid ""
+"|checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips "
+"for the layer"
+msgstr ""
+"A |checkbox| :guilabel:`Térképtippek engedélyezése` határozza meg, hogy a "
+"réteghez jelenjenek-e meg térképtippek"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3375
+msgid ""
+"If you select some text within an expression (between \"[%\" and \"%]\"), or"
+" if no text is selected but the cursor is inside an expression, the whole "
+"expression will be automatically selected for editing. If the cursor or a "
+"selected text is outside an expression, the dialog opens with the selection."
+msgstr ""
+"Ha egy kifejezésen belül (a \"[%\" és \"%]\" között) kijelöli a szöveget, "
+"vagy ha nincs kijelölt szöveg, de a kurzor a kifejezésen belül van, akkor a "
+"teljes kifejezés automatikusan kijelölésre kerül szerkesztés céljából. Ha a "
+"kurzor vagy a kijelölt szöveg a kifejezésen kívül van, akkor a "
+"párbeszédablak a kijelöléssel nyílik meg."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3388
+msgid "To display map tips:"
+msgstr "A térképtippek megjelenítéséhez:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3390
+msgid ""
+"Select the menu option :menuselection:`View --> Show Map Tips` or click on "
+"the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes "
+"Toolbar`."
+msgstr ""
+"Válassza ki a :menuselection:`Nézet --> Térképtippek megjelenítése` "
+"menüpontot, vagy kattintson a |mapTips| :sup:`Térképtippek megjelenítése` "
+"ikonra az :guilabel:`Attribútumok eszköztáron`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3392
+msgid ""
+"Make sure that the layer you target is active and has the |checkbox| "
+":guilabel:`Enable Map Tips` property checked."
+msgstr ""
+"Ellenőrizze, hogy a célzott réteg aktív, és a |checkbox| "
+":guilabel:`Térképtippek engedélyezése` tulajdonság be van jelölve."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3411
 msgid "Rendering Properties"
 msgstr "Megjelenítési tulajdonságok"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3422
+msgid ""
+"Under |unchecked| :guilabel:`Scale dependent visibility`, you can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scales, "
+"defining a range of scales in which features will be visible. Out of this "
+"range, they are hidden. The |mapIdentification| :sup:`Set to current canvas "
+"scale` button helps you use the current map canvas scale as boundary of the "
+"range visibility. See :ref:`label_scaledepend` for more information."
+msgstr ""
+"A :guilabel:`Méretarányfüggő láthatóság` alatt beállíthatja a "
+":guilabel:`Maximum (magába foglaló)` és :guilabel:`Minimum (kizáró)` "
+"méretarányt, meghatározva vele azt a méretarány-tartományt, amin belül az "
+"elemek megjelennek. Ezen a tartományon kívül rejtve lesznek. A "
+"|mapIdentification| :sup:`Beállítás a térképvászon aktuális méretarányára` "
+"gomb segít az aktuális térképvászon méretarányát használni a tartomány "
+"láthatóságának határaként. Lásd még: :ref:`label_scaledepend`."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4014
 msgid "mapIdentification"
@@ -693,6 +761,36 @@ msgstr ""
 "A :guilabel:`Rétegek` panelen is aktiválhatja egy réteg méretarányfüggő "
 "láthatóságát: kattintson a jobb gombbal a rétegre, és a helyi menüben "
 "válassza a :guilabel:`Réteg méretarányfüggő láthatósága` lehetőséget."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3485
+msgid ""
+":guilabel:`Reload data`: the layer will be completely refreshed. Any cached "
+"data will be discarded and refetched from the provider. This mode may result"
+" in slower map refreshes."
+msgstr ""
+":guilabel:`Adatok újratöltése`: a teljes réteg frissítve lesz. Az összes "
+"gyorsítótárazott adat törlődik, és újra letöltésre kerül a szolgáltatótól. "
+"Ez a mód lassabb térképfrissítést eredményezhet."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3488
+msgid ""
+":guilabel:`Redraw layer only`: this mode is useful for animation or when the"
+" layer's style will be updated at regular intervals. Canvas updates are "
+"deferred in order to avoid refreshing multiple times if more than one layer "
+"has an auto update interval set."
+msgstr ""
+":guilabel:`Csak a réteg újrarajzolása`: ez a mód hasznos animációkhoz vagy "
+"akkor, ha a réteg stílusa rendszeres időközönként frissül. A vászon "
+"frissítéseit elhalasztja, hogy elkerülhető legyen a többszöri frissítés, ha "
+"egynél több réteghez van beállítva automatikus frissítési időköz."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3495
+msgid ""
+"It is also possible to set the :guilabel:`Interval (seconds)` between "
+"consecutive refreshments."
+msgstr ""
+"Lehetőség van a :guilabel:`Intervallum (másodperc)` beállítására is az "
+"egymást követő frissítések között."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3508
 msgid "Temporal Properties"
@@ -713,6 +811,35 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3578
 msgid "Elevation Properties"
 msgstr "Magassági beállítások"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3663
+msgid ""
+"a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`"
+msgstr ""
+":guilabel:`Vonal` a hozzá tartozó :ref:`Vonalstílussal "
+"<vector_line_symbols>`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3664
+msgid ""
+"an elevation surface rendered using a fill symbol either above "
+"(:guilabel:`Fill above`) or below (:guilabel:`Fill below`) the elevation "
+"curve line. The surface symbology is represented using:"
+msgstr ""
+"a magassági görbe vonala felett (:guilabel:`Kitöltés fölötte`) vagy alatt "
+"(:guilabel:`Kitöltés alatta`) kitöltési szimbólummal megjelenített magassági"
+" felszín. A felszín jelrendszere a következőképpen jelenik meg:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3668
+msgid "a :ref:`Fill style <vector_fill_symbols>`"
+msgstr ":ref:`Kitöltési stílus <vector_fill_symbols>`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3669
+msgid ""
+"and a :guilabel:`Limit`: the maximum (respectively minimum) altitude "
+"determining how high the fill surface will be"
+msgstr ""
+"és egy :guilabel:`Határ`: a maximális (illetve minimális) magasság, amely "
+"meghatározza, hogy milyen magas lesz a kitöltési felszín"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3681
 msgid "Metadata Properties"

@@ -7,6 +7,7 @@
 # Translators:
 # Li Hongsheng, 2025
 # Transifex Bot <>, 2025
+# liuxspro <liuxspro@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: liuxspro <liuxspro@gmail.com>, 2026\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -146,3 +147,60 @@ msgid ""
 ":meth:`addPluginToWebMenu() <qgis.gui.QgisInterface.addPluginToWebMenu>`"
 msgstr ""
 ":meth:`addPluginToWebMenu() <qgis.gui.QgisInterface.addPluginToWebMenu>`"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:406
+msgid "Translating plugins"
+msgstr "插件的翻译"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:408
+msgid ""
+"With a few steps you can set up the environment for the plugin localization "
+"so that depending on the locale settings of your computer the plugin will be"
+" loaded in different languages."
+msgstr "仅需几个步骤，你就可以设置插件本地化的环境，根据你电脑的本地设置，插件会自动加载成不同的语言。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:413
+msgid "Software requirements"
+msgstr "所需软件"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:415
+msgid ""
+"The easiest way to create and manage all the translation files is to install"
+" `Qt Linguist`_. In a Debian-based GNU/Linux environment you can install it "
+"typing::"
+msgstr ""
+"创建和管理所有翻译文件最简单的方法是安装“Qt Linguist”（语言家）。在基于 Debian 的 GNU/Linux "
+"环境中，你可以输入以下内容安装："
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:422
+msgid "Files and directory"
+msgstr "文件和目录"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:424
+msgid ""
+"When you create the plugin you will find the ``i18n`` folder within the main"
+" plugin directory."
+msgstr "创建插件时，你会在插件主目录中找到``i18n``文件夹。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:427
+msgid "**All the translation files have to be within this directory.**"
+msgstr "**所有的翻译文件都在此目录中**"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:430
+msgid ".pro file"
+msgstr ".pro 文件"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:432
+msgid ""
+"First you should create a ``.pro`` file, that is a *project* file that can "
+"be managed by **Qt Linguist**."
+msgstr "首先你应该创建一个``.pro``文件，这是一个*项目*文件，可以由**Qt Linguist**管理。"
+
+#: ../../docs/pyqgis_developer_cookbook/plugins/plugins.rst:435
+msgid ""
+"In this ``.pro`` file you have to specify all the files and forms you want "
+"to translate. This file is used to set up the localization files and "
+"variables. A possible project file, matching the structure of our "
+":ref:`example plugin <plugin_files_architecture>`:"
+msgstr ""
+"在这个``.pro``文件中，你必须指定所有想翻译的文件和表单。该文件用于设置本地化文件和变量。项目工程文件结构可参考`示例插件<plugin_files_architecture>`："

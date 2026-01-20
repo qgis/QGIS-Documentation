@@ -6,12 +6,12 @@
 # 
 # Translators:
 # Mihiro Takizawa, 2025
-# Keita UEMORI, 2025
-# tomoya miyoshi, 2025
+# Keita Uemori, 2025
 # tomoyuki arai <tarai.3367@gmail.com>, 2025
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2025
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -20,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2025\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,6 +67,20 @@ msgstr ""
 msgid "**Supported Formats**"
 msgstr "**サポートしている形式**"
 
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:31
+msgid ""
+"QGIS supports the data formats Entwine Point Tile (EPT) and LAS/LAZ. To work"
+" with point clouds, QGIS always saves the data in EPT. EPT is a storage "
+"format that consists of several files stored in a common folder. To allow "
+"quick access to the data, EPT uses indexing. For more information on the EPT"
+" format, see `entwine homepage <https://entwine.io/en/latest/entwine-point-"
+"tile.html>`_"
+msgstr ""
+"QGISは、Entwine Point Tile "
+"(EPT)とLAS/LAZのデータ形式に対応しています。点群データを扱う場合、QGISは常にEPTでデータを保存します。EPTは、共通のフォルダーに保存される複数のファイルで構成された保存形式です。データに素早くアクセスできるように、EPTはインデックスを使います。EPT形式の詳細については、`entwine"
+" homepage <https://entwine.io/en/latest/entwine-point-tile.html>`_ "
+"を参照してください。"
+
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:37
 msgid ""
 "If the data is in LAS or LAZ format, QGIS will convert it to EPT when it is "
@@ -105,12 +119,21 @@ msgid ""
 ":ref:`Identify tool <identify>` supports point clouds, so you can display "
 "all attributes, even of a single data point."
 msgstr ""
-"データ点の数が多いため、QGISでは点群の属性テーブルを表示することはできません。しかし、|identify| :ref:`Identify tool "
-"<identify>` は点群をサポートしているので、1つのデータポイントであってもすべての属性を表示することができます。"
+"データ点の数が多いため、QGISでは点群の属性テーブルを表示することはできません。しかし、|identify| :ref:`地物情報を表示ツール "
+"<identify>` は点群をサポートしているので、1つのデータ点のものであっても全ての属性を表示することができます。"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:796
 msgid "identify"
 msgstr "identify"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:57
+msgid ""
+"If you want to create a new layer, in the same or another supported format, "
+"from an existing point cloud layer, see :ref:`Creating new layers from an "
+"existing layer <general_saveas>`."
+msgstr ""
+"既存の点群レイヤから、同じ形式か対応している別の形式で新しいレイヤを作成したい場合は、:ref:`既存のレイヤから新しいレイヤを作成する "
+"<general_saveas>` を参照してください。"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:64
 msgid "Point Clouds Properties"
@@ -245,7 +268,20 @@ msgstr ""
 msgid ""
 "General such as name in the project, source path, last save time and size, "
 "the used provider"
-msgstr "名前、ソースパス、最終保存日時と大きさ、使用されたプロバイダなどの一般"
+msgstr "一般には、プロジェクトでの名前、ソースパス、最終保存日時と大きさ、使用されたプロバイダなど"
+
+#: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:110
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties may include "
+":ref:`layer notes <layer_notes>`. More properties can be created and managed"
+" using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"カスタムプロパティには、そのレイヤに関する追加情報をアクティブなプロジェクトに保存するために使用されます。デフォルトのカスタムプロパティには、:ref:`レイヤノート"
+" <layer_notes>` を含めることができます。PyQGIS、具体的には :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` "
+"メソッドを使ってより多くのプロパティを作成・管理することができます。"
 
 #: ../../docs/user_manual/working_with_point_clouds/point_clouds.rst:114
 msgid "Based on the provider of the layer: extent and number of points"

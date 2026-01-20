@@ -2795,9 +2795,121 @@ msgstr ""
 "naudojant QGIS-specifinius laukus (``qgis_xmin``, ``qgis_xmax``, "
 "``qgis_ymin``, ``qgis_ymax``) lentelėje ``geometry_columns``."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1140
+msgid ""
+"|checkbox| :guilabel:`Use primary key from geometry_columns table`: allows "
+"QGIS to skip primary key calculation for views when loading them, thus "
+"lowering the amount of time needed to load them. It relies on names manually"
+" filled in a QGIS-specific ``qgis_pkey`` column set in the "
+"``geometry_columns`` table. If more than one column is used for the primary "
+"key, they should be filled as comma separated values."
+msgstr ""
+"|checkbox| :guilabel:`Naudoti pirminį raktą iš lentelės geometry_columns`: "
+"leidžia QGIS praleisti pirminio rakto skaičiavimą įkeliant vaizdus, taip "
+"sumažinant įkėlimui reikiamą laiką. Jis remiasi rankiniu vardų užpildymu "
+"QGIS-specifiniame ``qgis_pkey`` stulpelyje lentelėje ``geometry_columns``. "
+"Jei pirminiam raktui naudojamas daugiau nei vienas stulpelis, jie turėtų "
+"būti užpildyti kaip kableliais atskirtos reikšmės."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1147
+msgid ""
+"|checkbox| :guilabel:`Also list table with no geometry`: tables without a "
+"geometry column attached will also be shown in the available table list."
+msgstr ""
+"|checkbox| :guilabel:`Taipogi rodyti lenteles be geometrijos`: lentelės be "
+"prisegto geometrijos lauko irgi bus rodomos galimų lentelių sąraše."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1149
+msgid ""
+"|checkbox| :guilabel:`Use estimated table parameters`: only estimated table "
+"metadata will be used. This avoids a slow table scan, but may result in "
+"incorrect layer properties such as layer extent."
+msgstr ""
+"|checkbox| :guilabel:`Naudoti įvertintus lentelės parametrus`: bus naudojami"
+" tik įvertinti lentelės metaduomenys. Taip išvengiama lėtų lentelės "
+"skenavimų, bet dėl to gali būti gautos netikslios sluoksnio savybės, tokios "
+"kaip sluoksnio apimtis."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1152
+msgid ""
+"|checkbox| :guilabel:`Skip invalid geometry handling`: all handling of "
+"records with invalid geometry will be disabled. This speeds up the provider,"
+" however, if any invalid geometries are present in a table then the result "
+"is unpredictable and may include missing records. Only check this option if "
+"you are certain that all geometries present in the database are valid, and "
+"any newly added geometries or tables will also be valid."
+msgstr ""
+"|checkbox| :guilabel:`Praleisti netinkamų geometrijų apdorojimą`: visas "
+"įrašų su netinkamomis geometrijomis apdorojimas bus išjungtas. Tai "
+"pagreitina tiekėją, bet bet kokios lentelėje esančios netinkamos geometrijos"
+" reikš neprognozuojamus ir kartais trūkstamus įrašus. Įjunkite šią parinktį "
+"tik kai esate įsitikinę, kad visos duomenų bazėje esančios geometrijos yra "
+"tinkamos ir bet kokios naujai pridėtos geometrijos ar lentelės taipogi bus "
+"tinkamos."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1158
+msgid ""
+"|checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter"
+" schemas for MS SQL connection. If enabled, only checked schemas will be "
+"displayed. You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` "
+"any schema in the list."
+msgstr ""
+"|checkbox| :guilabel:`Naudoti tik schemų poaibį` leis jums filtruoti MS SQL "
+"jungties schemas. Įjungus šią parinktį bus rodomos tik pažymėtos schemos. "
+"Jūs galite spausti :guilabel:`Įjungti` ar :guilabel:`Išjungti` bet kurią "
+"sąraše esančią schemą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1165
+msgid "Connecting to SAP HANA"
+msgstr "Prisijungimas prie SAP HANA"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1167
+msgid ""
+"You require the SAP HANA Client to connect to a SAP HANA database. You can "
+"download the SAP HANA Client for your platform at the `SAP Development Tools"
+" website <https://tools.hana.ondemand.com/#hanatools>`_."
+msgstr ""
+"Jei norite prisijungti prie SAP HANA duomenų bazės, jums reikia SAP HANA "
+"kliento. Atsisiųsti SAP HANA klientą jūsų platformai galite iš `SAP vystymo "
+"įrankių svetainės <https://tools.hana.ondemand.com/#hanatools>`_."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1176
+msgid "Create a New SAP HANA Connection Dialog"
+msgstr "Naujos SAP HANA jungties kūrimo dialogas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1178
+msgid "The following parameters can be entered:"
+msgstr "Galima įvesti šiuos parametrus:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1180
+msgid ":guilabel:`Name`: A name for this connection."
+msgstr ":guilabel:`Pavadinimas`: šios jungties pavadinimas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1182
+msgid ""
+":guilabel:`Driver` |win|: The name of the HANA ODBC driver. It is "
+"``HDBODBC`` if you are using 64-bit QGIS, ``HDBODBC32`` if you are using "
+"32-bit QGIS. The appropriate driver name is entered automatically."
+msgstr ""
+":guilabel:`Tvarkyklė` |win|: HANA ODBC tvarkyklės pavadinimas. Jis yra "
+"``HDBODBC``, jei naudojate 64-bitų QGIS, ``HDBODBC32``, jei naudojate "
+"32-bitų QGIS. Atitinkamas tvarkyklės pavadinimas įvedamas automatiškai."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1788
 msgid "win"
 msgstr "win"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1186
+msgid ""
+":guilabel:`Driver` |nix| |osx|: Either the name under which the SAP HANA "
+"ODBC driver has been registered in :file:`/etc/odbcinst.ini` or the full "
+"path to the SAP HANA ODBC driver. The SAP HANA Client installer will install"
+" the ODBC driver to :file:`/usr/sap/hdbclient/libodbcHDB.so` by default."
+msgstr ""
+":guilabel:`Tvarkyklė` |nix| |osx|: arba pavadinimas, kuriuo buvo registruota"
+" SAP HANA ODBC tvarkyklė :file:`/etc/odbcinst.ini`, arba pilnas kelias iki "
+"SAP HANA ODBC tvarkyklės. Pagal nutylėjimą SAP HANA kliento diegyklė įdiegs "
+"ODBC tvarakyklę į :file:`/usr/sap/hdbclient/libodbcHDB.so`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1762
 msgid "nix"
@@ -2806,6 +2918,65 @@ msgstr "nix"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1766
 msgid "osx"
 msgstr "osx"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1191
+msgid ":guilabel:`Host`: The name of the database host."
+msgstr ":guilabel:`Serveris`: Duomenų bazės serverio pavadinimas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1193
+msgid ""
+":guilabel:`Identifier`: Identifies the instance to connect to on the host. "
+"This can be either :guilabel:`Instance Number` or :guilabel:`Port Number`. "
+"Instance numbers consist of two digits, port numbers are in the range from 1"
+" to 65,535."
+msgstr ""
+":guilabel:`Identifikatorius`: identifikuoja serverio egzempliorių, prie "
+"kurio reikia prisijungti. Tai gali būti :guilabel:`Egzemplioriaus numeris` "
+"ar :guilabel:`Prievado numeris`. Egzemplioriaus numerį sudaro du skaitmenys,"
+" prievadai yra intervale nuo 1 iki 65,535."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1198
+msgid ""
+":guilabel:`Mode`: Specifies the mode in which the SAP HANA instance runs. "
+"This setting is only taken into account if :guilabel:`Identifier` is set to "
+":guilabel:`Instance Number`. If the database hosts multiple containers, you "
+"can either connect to a tenant with the name given at :guilabel:`Tenant "
+"database` or you can connect to the system database."
+msgstr ""
+":guilabel:`Režimas`: nurodo kokiu režimu veikia SAP HANA egzempliorius. Šis "
+"nustatymas naudojamas tik tada, jei paskyros :guilabel:`Identifikatorius` "
+"nurodytas :guilabel:`Egzemplioriaus numeris`. Jei duomenų bazėje yra keli "
+"konteineriai, jūs galite arba prisijungti prie nuomininko su vardu, nurodytu"
+" :guilabel:`Nuomininko duomenų bazė`, arba galite prisijungti prie "
+"sisteminės duomenų bazės."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1204
+msgid ""
+":guilabel:`Schema`: This parameter is optional. If a schema name is given, "
+"QGIS will only search for data in that schema. If this field is left blank, "
+"QGIS will search for data in all schemas."
+msgstr ""
+":guilabel:`Schema`: šis parametras nėra privalomas. Jei nurodyta schema, "
+"QGIS duomenų ieškos tik toje schemoje. Jei šis laukas bus paliktas tuščias, "
+"QGIS duomenų ieškos visose schemose."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1208
+msgid ":menuselection:`Authentication --> Basic`."
+msgstr ":menuselection:`Autentifikacija --> Bazinė`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1210
+msgid ":guilabel:`User name`: User name used to connect to the database."
+msgstr ""
+":guilabel:`Naudotojo vardas`: prisijungimo prie duomenų bazės naudotojo "
+"vardas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1211
+msgid ":guilabel:`Password`: Password used to connect to the database."
+msgstr ":guilabel:`Slaptažodis`: prisijungimo prie duomenų bazės slaptažodis."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1213
+msgid ":guilabel:`SSL Settings`"
+msgstr ":guilabel:`SSL nustatymai`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1372
 msgid ":guilabel:`Layer Properties...`"

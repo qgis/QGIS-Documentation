@@ -6,17 +6,17 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Tomas Straupis, 2025
 # Transifex Bot <>, 2025
+# Tomas Straupis, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 10:36+0000\n"
+"POT-Creation-Date: 2025-12-25 12:25+0000\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Tomas Straupis, 2025\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#: ../../<rst_prolog>:5
+#: ../../<rst_prologue>:5
 msgid ""
 "Translation is a community effort :ref:`you can join "
 "<translation_guidelines>`. This page is currently translated at |translation"
@@ -1561,7 +1561,7 @@ msgstr ""
 msgid ""
 "**concatenator** - optional string to use to join values. Empty by default."
 msgstr ""
-"**concatenator** - neprivaloma eilutės, kurią reikia naudoti jungiant "
+"**concatenator** - neprivalomas tekstas, kurį reikia naudoti jungiant "
 "reikšmes. Pagal nutylėjimą tuščia."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:140
@@ -1745,45 +1745,123 @@ msgstr ""
 "``mean(\"gyventojai\",group_by:=\"vaklstybe\")`` → vidutinė gyventojų "
 "skaičiaus reikšmė grupuojant pagal valstybės lauką"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:368
+msgid "Returns the aggregate median value from a field or expression."
+msgstr "Grąžina agreguotą lauko ar išraiškos reikšmės medianą."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:374
 msgid "median(expression, [group_by], [filter])"
 msgstr "median(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:382
+msgid ""
+"``median(\"population\",group_by:=\"state\")`` → median population value, "
+"grouped by state field"
+msgstr ""
+"``median(\"gyventojai\",group_by:=\"vaklstybe\")`` → gyventojų skaičiaus "
+"medianos reikšmė grupuojant pagal valstybės lauką"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:390
 msgid "min_length"
 msgstr "min_length"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:392
+msgid "Returns the minimum length of strings from a field or expression."
+msgstr "Grąžina minimalų lauko ar išraiškos teksto ilgį."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:398
 msgid "min_length(expression, [group_by], [filter])"
 msgstr "min_length(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:406
+msgid ""
+"``min_length(\"town_name\",group_by:=\"state\")`` → minimum length of "
+"town_name, grouped by state field"
+msgstr ""
+"``min_length(\"miesto_pavadinimas\",group_by:=\"valstybe\")`` → minimalus "
+"miesto_pavadinimas ilgis grupuojant pagal lauką valstybe"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:414
 msgid "minimum"
 msgstr "minimum"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:416
+msgid "Returns the aggregate minimum value from a field or expression."
+msgstr "Grąžina agreguotą minimalią lauko ar išraiškos reikšmės reikšmę."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:422
 msgid "minimum(expression, [group_by], [filter])"
 msgstr "minimum(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:430
+msgid ""
+"``minimum(\"population\",group_by:=\"state\")`` → minimum population value, "
+"grouped by state field"
+msgstr ""
+"``minimum(\"gyventojai\",group_by:=\"valstybe\")`` → minimali gyventojų "
+"reikšmė grupuojant pagal lauką valstybe"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:440
+msgid ""
+"Returns the aggregate minority of values (least occurring value) from a "
+"field or expression."
+msgstr ""
+"Grąžina lauko ar išraiškos agreguotą reikšmių mažumą (rečiausiai "
+"pasitaikančią reikšmę)."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:446
 msgid "minority(expression, [group_by], [filter])"
 msgstr "minority(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:454
+msgid ""
+"``minority(\"class\",group_by:=\"state\")`` → least occurring class value, "
+"grouped by state field"
+msgstr ""
+"``minority(\"klasė\",group_by:=\"valstija\")`` → rečiausiai pasitaikanti "
+"klasės reikšmė sugrupavus pagal valstijos lauką"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:462
 msgid "q1"
 msgstr "q1"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:464
+msgid "Returns the calculated first quartile from a field or expression."
+msgstr ""
+"Grąžina pagal lauką ar išraišką paskaičiuotą pirmo kvartilio diapazoną."
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:470
 msgid "q1(expression, [group_by], [filter])"
 msgstr "q1(expression, [group_by], [filter])"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:478
+msgid ""
+"``q1(\"population\",group_by:=\"state\")`` → first quartile of population "
+"value, grouped by state field"
+msgstr ""
+"``q1(\"gyventojai\",group_by:=\"valstija\")`` → pirmo kvartilio gyventojų "
+"reikšmių diapazonas sugrupuotas pagal valstijos lauką"
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:486
 msgid "q3"
 msgstr "q3"
 
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:488
+msgid "Returns the calculated third quartile from a field or expression."
+msgstr ""
+"Grąžina pagal lauką ar išraišką paskaičiuotą trečio kvartilio diapazoną."
+
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:494
 msgid "q3(expression, [group_by], [filter])"
 msgstr "q3(expression, [group_by], [filter])"
+
+#: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:502
+msgid ""
+"``q3(\"population\",group_by:=\"state\")`` → third quartile of population "
+"value, grouped by state field"
+msgstr ""
+"``q3(\"gyventojai\",group_by:=\"valstija\")`` → trečio kvartilio gyventojų "
+"reikšmių diapazonas sugrupuotas pagal valstijos lauką"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:518
 msgid "range(expression, [group_by], [filter])"
