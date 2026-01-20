@@ -8,6 +8,101 @@ Raster conversion
       :depth: 1
 
 
+.. _gdalcreatecog:
+
+Create Cloud Optimized GeoTIFF
+-------------------------------
+
+Creates a Cloud Optimized GeoTIFF (COG) from the input raster layers.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster][list]
+     - Input raster layers to convert to COG.
+   * - **Output directory**
+     - ``OUTPUT``
+     - [file]
+
+       Default: ``[Save to temporary folder]``
+     - Specification of the output file.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
+
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options with a pipe
+       character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output directory**
+     - ``OUTPUT``
+     - [file]
+     - Directory containing the created Cloud Optimized GeoTIFF(s).
+   * - **Output layers**
+     - ``OUTPUT_LAYERS``
+     - [raster][list]
+     - List of created Cloud Optimized GeoTIFF layer(s).
+
+Python code
+...........
+
+**Algorithm ID**: ``gdal:createcog``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 .. _gdalgdal2xyz:
 
 gdal2xyz
