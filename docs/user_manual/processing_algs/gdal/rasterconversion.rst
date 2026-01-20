@@ -30,10 +30,10 @@ Basic parameters
      - Name
      - Type
      - Description
-   * - **Input layer**
+   * - **Input layers**
      - ``INPUT``
      - [raster][list]
-     - Input raster layer(s) to convert to COG.
+     - Input raster layers to convert to COG.
    * - **Output directory**
      - ``OUTPUT``
      - [file]
@@ -61,7 +61,7 @@ Advanced parameters
    * - **Additional creation options**
 
        Optional
-     - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)
+     - ``CREATION_OPTIONS``
      - [string]
 
        Default: ''
@@ -89,6 +89,10 @@ Outputs
      - ``OUTPUT``
      - [file]
      - Directory containing the created Cloud Optimized GeoTIFF(s).
+   * - **Output layers**
+     - ``OUTPUT_LAYERS``
+     - [raster][list]
+     - List of created Cloud Optimized GeoTIFF layer(s).
 
 Python code
 ...........
