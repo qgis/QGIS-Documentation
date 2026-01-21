@@ -947,8 +947,6 @@ you will be able to interact with any feature annotation:
   You may need to play with the Z-index property of features in order to select
   ones they would sit above.
 * **Moving**: Left click on a selected annotation item to start moving it.
-  When multiple annotations are selected, the movement applies to all
-  selected items.
   A right-click or pressing :kbd:`Esc` key cancels the move, while a second
   left click will confirm the move.
   The displacement can also be controlled pressing the cursor keys:
