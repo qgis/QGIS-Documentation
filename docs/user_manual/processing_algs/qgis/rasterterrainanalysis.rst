@@ -1079,7 +1079,7 @@ convex) and valleys (negative, concave), with zero indicating flat or saddle poi
 .. figure:: img/total_curvature.png
    :align: center
 
-   Total curvature
+   Total curvature layer, showing concave (negative) surfaces in white, convex (positive) surfaces in blue, and near-flat areas in red
 
 Parameters
 ..........
