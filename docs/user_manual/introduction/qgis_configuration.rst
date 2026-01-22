@@ -113,6 +113,7 @@ displayed at the bottom of the frame.
 
 .. figure:: img/project_files_settings.png
    :align: center
+   :width: 70%
 
    Project Files Settings
 
@@ -164,6 +165,7 @@ contained within. Trust cannot be granted to individual scripts.
 
 .. figure:: img/project_trust_general.png
    :align: center
+   :width: 70%
 
    Project Trust Settings
 
