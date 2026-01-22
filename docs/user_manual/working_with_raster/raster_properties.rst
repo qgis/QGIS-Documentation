@@ -132,6 +132,7 @@ the selected raster, including:
 
 .. figure:: img/rasterPropertiesDialog.png
    :align: center
+   :width: 70%
 
    Raster Layer Properties - Source Dialog
 
@@ -653,6 +654,7 @@ of an atlas, ...
 
 .. figure:: img/rasterTransparency.png
    :align: center
+   :width: 70%
 
    Raster Transparency
 
@@ -738,6 +740,7 @@ Using the |labelingSingle| :guilabel:`Label with pixel values` option, the follo
 
 .. figure:: img/rasterLabels.png
    :align: center
+   :width: 70%
 
    Raster layer labeling settings
 
@@ -802,6 +805,7 @@ advanced options to customize the histogram:
 
 .. figure:: img/rasterHistogram.png
    :align: center
+   :width: 60%
 
    Raster Histogram
 
@@ -847,6 +851,7 @@ In the |rendering| :guilabel:`Rendering` tab, it's possible to:
 
 .. figure:: img/rasterRendering.png
    :align: center
+   :width: 70%
 
    Raster Rendering Properties
 
@@ -865,6 +870,7 @@ the rendering of the layer over time. Such dynamic rendering requires the
 
 .. figure:: img/rasterTemporal.png
    :align: center
+   :width: 70%
 
    Raster Temporal Properties
 
@@ -971,6 +977,7 @@ Finally, click :guilabel:`Build Pyramids` to start the process.
 
 .. figure:: img/rasterPyramids.png
    :align: center
+   :width: 70%
 
    Raster Pyramids
 
@@ -991,6 +998,7 @@ does not contain elevation data or you can set:
 
 .. figure:: img/rasterElevation.png
    :align: center
+   :width: 70%
 
    Raster Elevation Properties
 
@@ -1050,6 +1058,7 @@ See :ref:`metadatamenu` for more information.
 
 .. figure:: img/rasterMetadata.png
    :align: center
+   :width: 70%
 
    Raster Metadata
 
@@ -1084,6 +1093,7 @@ layout legend <layout_legend_item>`. These options include:
 
 .. figure:: img/rasterLegend.png
    :align: center
+   :width: 70%
 
    Raster Legend
 
@@ -1163,6 +1173,7 @@ The configuration concerns:
 
 .. figure:: img/rasterServer.png
    :align: center
+   :width: 70%
 
    QGIS Server in Raster Properties
 
@@ -1190,6 +1201,7 @@ open :guilabel:`Properties...` and select :guilabel:`Attribute Tables`.
 
 .. figure:: img/raster_attribute_table_menu.png
    :align: center
+   :width: 70%
 
    Accessing the raster attribute table
 
