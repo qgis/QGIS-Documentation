@@ -34,6 +34,7 @@ PostgreSQL database.
 
 .. figure:: img/browser_panel.png
    :align: center
+   :width: 30%
 
    The Browser panel
 
@@ -76,6 +77,7 @@ When enabled, it opens at the bottom of the browser panel, as shown in
 
 .. figure:: img/browser_p_properties_w.png
    :align: center
+   :width: 30%
 
    The properties widget
 
