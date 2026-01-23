@@ -2363,11 +2363,7 @@ Read more on the underlying GEOS "Disjoint" predicate, as described in PostGIS `
 overlay_equals
 ..............
 
-Returns whether the current feature spatially equals to at least one feature from a target layer, or an array of expression-based results for the features in the target layer that are spatially equal to the current feature.
-
-
-
-Read more on the underlying GEOS "Equals" predicate, as described in PostGIS `ST_Equals <https://postgis.net/docs/ST_Equals.html>`_ function.
+Returns whether the current feature is exactly equal to at least one feature from a target layer, or an array of expression-based results for the features in the target layer that are exactly equal to the current feature. Note that the order of vertices matters.
 
 .. list-table::
    :widths: 15 85
@@ -2383,12 +2379,12 @@ Read more on the underlying GEOS "Equals" predicate, as described in PostGIS `ST
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_equals('regions')`` → TRUE if the current feature is spatially equal to a region
-       * ``overlay_equals('regions', filter:= population > 10000)`` → TRUE if the current feature is spatially equal to a region with a population greater than 10000
-       * ``overlay_equals('regions', name)`` → an array of names, for the regions spatially equal to the current feature
-       * ``array_to_string(overlay_equals('regions', name))`` → a string as a comma separated list of names, for the regions spatially equal to the current feature
-       * ``array_sort(overlay_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions spatially equal to the current feature and with a population greater than 10000
-       * ``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions spatially equal to the current feature
+     - * ``overlay_equals('regions')`` → TRUE if the current feature is exactly equal to a region
+       * ``overlay_equals('regions', filter:= population > 10000)`` → TRUE if the current feature is exactly equal to a region with a population greater than 10000
+       * ``overlay_equals('regions', name)`` → an array of names, for the regions exactly equal to the current feature
+       * ``array_to_string(overlay_equals('regions', name))`` → a string as a comma separated list of names, for the regions exactly equal to the current feature
+       * ``array_sort(overlay_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions exactly equal to the current feature and with a population greater than 10000
+       * ``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions exactly equal to the current feature
 
 
 .. end_overlay_equals_section
