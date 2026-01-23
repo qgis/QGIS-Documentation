@@ -136,6 +136,7 @@ Terrain
 
 .. figure:: img/3dmapconfiguration_terrain.png
    :align: center
+   :width: 70%
 
    The 3D Map Terrain Configuration dialog
 
