@@ -1386,6 +1386,7 @@ save the style as a:
 
 .. figure:: img/style_combobox.png
    :align: center
+   :width: 70%
 
    Vector layer style combo box options
 
@@ -1694,6 +1695,7 @@ apply your choice to the item.
 
 .. figure:: img/color_selector_ramp.png
    :align: center
+   :width: 70%
 
    Color selector ramp tab
 
@@ -1716,6 +1718,7 @@ options to:
 
 .. figure:: img/color_selector_recent_colors.png
    :align: center
+   :width: 70%
 
    Color selector swatches tab
 
