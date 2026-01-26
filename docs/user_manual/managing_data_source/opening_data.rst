@@ -1809,8 +1809,6 @@ or :guilabel:`Load Connection` from an XML file.
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
-.. |symbologyAdd| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |vectorTileLayer| image:: /static/common/mIconVectorTileLayer.png
    :width: 1.5em
 .. |warning| image:: /static/common/mIconWarning.png

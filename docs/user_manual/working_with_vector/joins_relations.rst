@@ -773,8 +773,6 @@ from the external storage system. In that case, more details might appear in the
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.2em
-.. |identify| image:: /static/common/mActionIdentify.png
-   :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
 .. |joinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png

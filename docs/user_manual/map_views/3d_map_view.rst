@@ -500,11 +500,11 @@ the 3D vector layer.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |dock| image:: /static/common/dock.png
+   :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editCutDisabled| image:: /static/common/mActionEditCutDisabled.png
-   :width: 1.5em
-.. |dock| image:: /static/common/dock.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
