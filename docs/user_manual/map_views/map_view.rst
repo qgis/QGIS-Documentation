@@ -940,6 +940,8 @@ select its features. Simply grab the |select| :sup:`Modify Annotations` tool and
 you will be able to interact with any feature annotation:
 
 * **Selection**: left-click on the annotation.
+  For multiple selection, hold the :kbd:`Shift` key while left-clicking
+  on additional annotations.
   By default, annotations are rendered in the order of creation,
   meaning that recent annotations will be placed on top of older.
   You may need to play with the Z-index property of features in order to select
@@ -951,6 +953,10 @@ you will be able to interact with any feature annotation:
 
   * :kbd:`Shift+key` for big movement
   * :kbd:`Alt+key` for ``1 px`` movement
+* **Resize and rotation**: move over an annotation and squares (the resize handles) are displayed
+  on its corners and mid-segments.
+  Left-click a square, drag to resize.
+  For rotation, left-click the rotation handle, drag to rotate.
 * **Geometry modification**: move over an annotation and purple squares are displayed
   on nodes of its underlying geometry.
   Left-click on the square, move and click again.
