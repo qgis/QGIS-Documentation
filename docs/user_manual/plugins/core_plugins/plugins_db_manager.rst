@@ -184,9 +184,7 @@ Under :guilabel:`Options`, you can set the following parameters:
    please add it also to the substitutions.txt file in the
    source folder.
 
-
 .. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.5em
+   :width: 1.3em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
-

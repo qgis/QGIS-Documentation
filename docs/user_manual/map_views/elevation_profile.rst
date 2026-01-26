@@ -394,7 +394,7 @@ to export an elevation profile, allowing you to reuse the plots in another softw
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
-   :width: 1.5em   
+   :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png

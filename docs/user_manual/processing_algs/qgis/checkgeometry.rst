@@ -2623,4 +2623,4 @@ Python code
    source folder.
 
 .. |options| image:: /static/common/mActionOptions.png
-   :width: 1.5em
+   :width: 1em
