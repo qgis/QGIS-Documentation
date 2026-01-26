@@ -730,6 +730,30 @@ Returns the last node from a geometry.
 
 .. end_end_point_section
 
+.. _expression_function_GeometryGroup_equals:
+
+equals
+......
+
+Tests whether two geometries are equal. Note that the order of their vertices matters. Returns TRUE if geometry1 is exactly equal to geometry2.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - equals(geometry1, geometry2)
+   * - Arguments
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
+   * - Examples
+     - * ``equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'POINT( 0 0 )' ) )`` → TRUE
+       * ``equals( geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ), geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ) )`` → TRUE
+       * ``equals( geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ), geom_from_wkt( 'LINESTRING( 1 1, 0 0 )' ) )`` → FALSE
+       * ``equals( geom_from_wkt( 'POLYGON(( 0 0, 0 1, 1 1, 0 0 ))' ), geom_from_wkt( 'POLYGON(( 0 0, 1 1, 0 1, 0 0 ))' ) )`` → FALSE
+
+
+.. end_equals_section
+
 .. _expression_function_GeometryGroup_exif_geotag:
 
 exif_geotag
