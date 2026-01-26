@@ -659,6 +659,58 @@ The example above uses the following database schema:
 Once relations are established, the :ref:`Identify Features <identify_features_vector>` result panel
 will display related features, allowing you to view associated data directly.
 
+
+.. _`dataset_stored_relationships`:
+
+Dataset-stored Relationships
+--------------------------------
+
+Other than the above mentioned relationships that are created in the project properties
+and apply only in the active project,
+QGIS can also read database-level relations, i.e., connections defined between layers
+in the dataset.
+This is supported for database providers such as PostgreSQL, SpatiaLite, GeoPackage, ESRI FileGeodatabase.
+When such parent and child layers are loaded in a project, QGIS can automatically detect
+the relation settings and fill appropriately the :menuselection:`Project --> Project properties --> Relations` tab.
+This can also be triggered using the |symbologyAdd| :guilabel:`Discover relations` button.
+
+For some data types (e.g., GeoPackage, SpatiaLite or ESRI FileGeodatabase),
+QGIS also allows to create and edit the relations between the tables in the database.
+This can be managed through the :guilabel:`Browser Panel`.
+From the :guilabel:`Browser panel`, right-click on the database entry,
+select :guilabel:`New relationship...`, and in the new dialog, fill the following options:
+
+* :guilabel:`Name`: set the name of the new relationship.
+* :guilabel:`Cardinality`: define the cardinality of the relationship.
+* :guilabel:`Strength`: specify the strength of the relationship.
+* Under the :guilabel:`Tables` group, set your :guilabel:`Parent` and :guilabel:`Child` tables.
+* Under the :guilabel:`Fields` group, set your :guilabel:`Parent field` and :guilabel:`Child field`.
+* Under the :guilabel:`Advanced` section, depending on the database type, you can set:
+
+  * :guilabel:`Related table type`:
+
+    * :guilabel:`features`: for standard feature tables.
+    * :guilabel:`media`: for tables storing media files.
+    * :guilabel:`simple_attributes`: for tables with simple attribute data.
+    * :guilabel:`attributes`: for tables with complex attribute data.
+    * :guilabel:`tiles`: for tables storing tile data.
+
+  * :guilabel:`Forward label`: a name to uniquely identify the relationship when navigating from the parent table to the child table.
+  * :guilabel:`Reverse label`:  a name to uniquely identify the relationship when navigating from the child table to the parent table.
+
+Applying the dialog will add a :guilabel:`Relationships` node under the database entry,
+with the new relationship as child item.
+
+Editing or deleting existing relationships can be done
+by right-clicking on the relationship in the Browser Panel.
+
+.. figure:: img/browser_panel_relationships.png
+   :align: center
+   :width: 400px
+
+   Managing dataset-stored relationships in the Browser Panel
+
+
 .. index:: External Storage, WebDAV
 .. _external_storage:
 
