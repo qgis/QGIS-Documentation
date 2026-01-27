@@ -3854,7 +3854,7 @@ Input LineString geometry doesn't need to close a loop,
 algorithm will automatically connect last to first point when forming a polygon.
 Result is always promoted to MultiPolygon.
 LineString geometry that has less than three vertices will produce
-new polygon features with **EMPTY** MultiPolygon geometry, attributes are kept.
+new polygon features with **EMPTY** geometry.
 
 The attribute table of the output layer is the same as the one of
 the input layer.
