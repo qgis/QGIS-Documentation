@@ -1497,6 +1497,7 @@ options:
 
 .. figure:: img/placement_engine.png
    :align: center
+   :width: 60%
 
    The labels automated placement engine
 
