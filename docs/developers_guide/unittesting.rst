@@ -452,6 +452,22 @@ antialiasing or font differences), the script
 :source:`parse_dash_results.py <scripts/parse_dash_results.py>`
 can help you when you are updating the local test masks.
 
+
+Test report
+=======================================
+
+When running the unit tests simply using ``make test`` or ``ctest`` three kinds of output are generated. 
+
+A few summary data files are written to ``build/Testing/Temporary``, in particular ``LastTest.log`` and ``LastTestsFailed.log``. These will be overwritten every time you call ``make test`` or `ctest``.
+
+A bunch of temporary files are saved to ``$TMPDIR``, and if the tests are written as intended, almost all of this is deleted in the teardown process, at the end of each test item. If any of this data is not cleaned up, by default your OS will eventually clean up all files in ``$TMPDIR`` after some time has expired. 
+
+Some tests (either always or only in the case of a fail) will leave some some data behind, that helps the developer understand what failed. This is by default saved to ``$TMPDIR/qgis_test_report``, but the destination can be overwritten with the environment variable ``$QGIS_TEST_REPORT``. 
+
+Some of the content written to the ``$QGIS_TEST_REPORT`` folder are html pages, and the unit test code will ask the OS to open these pages in the default browser. On some OS, e.g. Ubuntu since v. 21.04, the default browsers are installed as snap apps, which mean they can't access the typical destinations, either ``/tmp`` or ``~/.tmp``. The user will experience a number of tabs open in the browser, but each showing an error message with access denied instead of the actual html. In this case, we recommend that you either change ``$TMPDIR`` or you you define ``$QGIS_TEST_REPORT``, e.g.
+to ``~/qgis_test_report``.
+
+
 Adding your unit test to CMakeLists.txt
 =======================================
 
