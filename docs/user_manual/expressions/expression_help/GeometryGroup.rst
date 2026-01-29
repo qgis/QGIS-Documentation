@@ -747,6 +747,7 @@ Tests whether two geometries are equal. Note that the order of their vertices ma
        * **geometry2** - a geometry
    * - Examples
      - * ``equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'POINT( 0 0 )' ) )`` → TRUE
+       * ``equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'MULTIPOINT( ( 0 0 ) )' ) )`` → FALSE
        * ``equals( geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ), geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ) )`` → TRUE
        * ``equals( geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ), geom_from_wkt( 'LINESTRING( 1 1, 0 0 )' ) )`` → FALSE
        * ``equals( geom_from_wkt( 'POLYGON(( 0 0, 0 1, 1 1, 0 0 ))' ), geom_from_wkt( 'POLYGON(( 0 0, 1 1, 0 1, 0 0 ))' ) )`` → FALSE
@@ -2282,7 +2283,7 @@ Tests whether a geometry overlaps another. Returns TRUE if the geometries share 
 overlay_contains
 ................
 
-Returns whether the current feature spatially contains at least one feature from a target layer, or an array of expression-based results for the features in the target layer contained in the current feature.
+Returns whether the current feature spatially contains at least one feature from a target layer, or returns an array of expression-based results for the features in the target layer contained in the current feature.
 
 
 
@@ -2317,7 +2318,7 @@ Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `
 overlay_crosses
 ...............
 
-Returns whether the current feature spatially crosses at least one feature from a target layer, or an array of expression-based results for the features in the target layer crossed by the current feature.
+Returns whether the current feature spatially crosses at least one feature from a target layer, or returns an array of expression-based results for the features in the target layer crossed by the current feature.
 
 
 
@@ -2352,7 +2353,7 @@ Read more on the underlying GEOS "Crosses" predicate, as described in PostGIS `S
 overlay_disjoint
 ................
 
-Returns whether the current feature is spatially disjoint from all the features of a target layer, or an array of expression-based results for the features in the target layer that are disjoint from the current feature.
+Returns whether the current feature is spatially disjoint from all the features of a target layer, or returns an array of expression-based results for the features in the target layer that are disjoint from the current feature.
 
 
 
@@ -2387,7 +2388,7 @@ Read more on the underlying GEOS "Disjoint" predicate, as described in PostGIS `
 overlay_equals
 ..............
 
-Returns whether the current feature is exactly equal to at least one feature from a target layer, or an array of expression-based results for the features in the target layer that are exactly equal to the current feature. Note that the order of vertices matters.
+Returns whether the current feature's geometry is exactly equal to at least one feature's geometry from a target layer, or returns an array of expression-based results for the features in the target layer whose geometry is exactly equal to the current feature's geometry. Note that the order of vertices matters.
 
 .. list-table::
    :widths: 15 85
@@ -2403,12 +2404,14 @@ Returns whether the current feature is exactly equal to at least one feature fro
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
    * - Examples
-     - * ``overlay_equals('regions')`` → TRUE if the current feature is exactly equal to a region
-       * ``overlay_equals('regions', filter:= population > 10000)`` → TRUE if the current feature is exactly equal to a region with a population greater than 10000
+     - * ``overlay_equals('regions')`` → TRUE if the current feature's geometry is exactly the same as the geometry of a region
+       * ``overlay_equals('regions', filter:= population > 10000)`` → TRUE if the current feature's geometry is exactly the same as the geometry of a region whose population is greater than 10000
        * ``overlay_equals('regions', name)`` → an array of names, for the regions exactly equal to the current feature
        * ``array_to_string(overlay_equals('regions', name))`` → a string as a comma separated list of names, for the regions exactly equal to the current feature
        * ``array_sort(overlay_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions exactly equal to the current feature and with a population greater than 10000
        * ``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions exactly equal to the current feature
+
+.. note:: This function requires exact equality of geometries, meaning that the geometries 'LINESTRING( 0 0, 1 1 )' and 'LINESTRING( 1 1, 0 0 )' are different.
 
 
 .. end_overlay_equals_section
@@ -2418,7 +2421,7 @@ Returns whether the current feature is exactly equal to at least one feature fro
 overlay_intersects
 ..................
 
-Returns whether the current feature spatially intersects at least one feature from a target layer, or an array of expression-based results for the features in the target layer intersected by the current feature.
+Returns whether the current feature spatially intersects at least one feature from a target layer, or returns an array of expression-based results for the features in the target layer intersected by the current feature.
 
 
 
@@ -2468,7 +2471,7 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
 overlay_nearest
 ...............
 
-Returns whether the current feature has feature(s) from a target layer within a given distance, or an array of expression-based results for the features in the target layer within a distance from the current feature.
+Returns whether the current feature has feature(s) from a target layer within a given distance, or returns an array of expression-based results for the features in the target layer within a distance from the current feature.
 
 
 
@@ -2505,7 +2508,7 @@ Note: This function can be slow and consume a lot of memory for large layers.
 overlay_touches
 ...............
 
-Returns whether the current feature spatially touches at least one feature from a target layer, or an array of expression-based results for the features in the target layer touched by the current feature.
+Returns whether the current feature spatially touches at least one feature from a target layer, or returns an array of expression-based results for the features in the target layer touched by the current feature.
 
 
 
