@@ -128,23 +128,19 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   The attribute table supports :kbd:`Shift+Mouse Wheel` scrolling in table view mode
   to switch between vertical and horizontal scrolling movements.
   This can also be achieved replacing the mouse with the trackpad on macOS.
-* The |formView| :sup:`Form view` shows :ref:`feature identifiers
-  <maptips>` in a first panel and displays only the attributes of the clicked
-  identifier in the second one.
+* The |formView| :sup:`Form view` shows :ref:`feature identifiers <maptips>`
+  in a first panel and displays only the attributes of the clicked identifier in the second one.
   There is a pull-down menu at the top of the first panel where the "identifier"
-  can be specified using an attribute (:guilabel:`Column preview`) or an
-  :guilabel:`Expression`.
+  can be specified using an attribute (:menuselection:`Columns -->`) or an :guilabel:`Expression`.
   The pull-down also includes the last 10 expressions for re-use.
-  Form view uses the layer fields configuration
-  (see :ref:`vector_attributes_menu`).
+  Form view uses the layer fields configuration (see :ref:`vector_attributes_menu`).
 
   You can browse through the feature identifiers with the arrows on the bottom
   of the first panel. The features attributes update in the second panel as you
   go. It's also possible to identify or move to the active feature in the map
   canvas with pushing down any of the button at the bottom:
 
-  * |highlightFeature| :sup:`Highlight current feature` if visible in the
-    map canvas
+  * |highlightFeature| :sup:`Highlight current feature` if visible in the map canvas
   * |panTo| :sup:`Automatically pan to current feature`
   * |zoomTo| :sup:`Zoom to current feature`
 
@@ -235,16 +231,22 @@ In the new dialog, you can:
 Sorting rows
 ...............
 
-The rows can be sorted by any column, by clicking on the column header. A
-small arrow indicates the sort order (downward pointing means descending
+By default, the table rows order respects the display :ref:`sort order <maptips>`.
+The rows can also be sorted by any column, by clicking on the column header.
+A small arrow indicates the sort order (downward pointing means descending
 values from the top row down, upward pointing means ascending values from
 the top row down).
-You can also choose to sort the rows with the :guilabel:`Sort...` option of the
-column header context menu and write an expression. E.g. to sort the rows
-using multiple columns you can write ``concat(col0, col1)``.
+You can also choose to sort the rows with the :guilabel:`Sort...` option
+of the column header context menu.
+The :guilabel:`Configure attribute table sort order` dialog opens,
+filled with the current sort order expression.
+Check |unchecked| :guilabel:`Defined sort order in attribute table`
+and edit the expression to suit your needs.
+E.g., to sort the rows using multiple columns you can write ``concat(col0, col1)``.
+The sort order is set with |unchecked| :guilabel:`Sort ascending`.
 
-In form view, features identifier can be sorted using the |sort| :guilabel:`Sort
-by preview expression` option.
+In form view, features identifier can be sorted using the |sort| :menuselection:`Sort...-->` menu.
+The order can be set using a custom expression or the display name.
 
 Note that sorting the rows only affects the table rendering and does not alter
 the features order in the layer datasource.
@@ -255,8 +257,8 @@ the features order in the layer datasource.
 
   Trying to sort an attribute table based on columns of string and numeric types
   may lead to unexpected result because of the ``concat("USE", "ID")`` expression
-  returning string values (ie, ``'Borough105' < 'Borough6'``).
-  You can workaround this by using eg ``concat("USE", lpad("ID", 3, 0))`` which
+  returning string values (i.e., ``'Borough105' < 'Borough6'``).
+  You can workaround this by using e.g., ``concat("USE", lpad("ID", 3, 0))`` which
   returns ``'Borough105' > 'Borough006'``.
 
 .. index:: Conditional formatting
