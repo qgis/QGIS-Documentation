@@ -2274,11 +2274,13 @@ To edit features in-place:
    modification will apply to the whole layer.
 #. Press the |processSelected| :sup:`Edit Features In-Place` button at the top
    of the :ref:`Processing toolbox <processing.toolbox>`. The list of algorithms
-   is filtered, showing only those compatible with in-place modifications, i.e.:
-
-   * They work at the feature source and not at the layer level.
-   * They do not change the layer structure, e.g. adding or removing fields.
-   * They do not change the geometry type, e.g. from line to point layer.
+   is filtered, showing only those supporting in-place modifications.
+   
+   .. note:: In-place editing works at the feature source level, not at the
+   layer level. It does not change the layer structure, e.g. adding or removing
+   fields.  Algorithms that usually work on layer level, e.g. ``Reproject
+   layer`` or add fields, e.g. ``Orientated minimum bounding boxes`` will not
+   do so when editing features in-place. 
 
    .. figure:: img/edit_inplace_algorithms.png
       :align: center
