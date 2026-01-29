@@ -3523,11 +3523,16 @@ feature identification:
   * the map tip information, i.e. the message displayed in the map canvas
     when hovering over a feature of the active layer with the |mapTips| :sup:`Show Map Tips` icon pressed.
     Applicable when |checkbox| :guilabel:`Enable Map Tips` is active
-    and no :guilabel:`HTML Map Tip` is set.
+    and no HTML code is set.
+* :guilabel:`Sort Order`: an optional field or
+  :ref:`expression <vector_expressions>` that controls the default ordering 
+  of features when displayed in the :ref:`attribute table views <attribute_table_view>` and :ref:`relation 
+  editor widgets <edit_widgets>`. You can set the sort direction 
+  using the |arrowDown| :guilabel:`Sort direction` button.
 * |checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips for the layer
-* The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor for map tips,
+  if enabled, provides a complex and full HTML text editor for map tips,
   mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
-  You can check the result of your code sample in the :guilabel:`Preview` frame
+  You can check the result of your code sample in the :guilabel:`Preview Map Tips` frame
   (also convenient for previewing the :guilabel:`Display name` output).
   Additionally, you can select and edit existing expressions
   using the :guilabel:`Insert/Edit Expression` button. 
