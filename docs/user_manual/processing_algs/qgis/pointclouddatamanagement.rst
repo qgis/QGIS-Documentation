@@ -262,7 +262,7 @@ Outputs
      - Description
    * - **Clipped**
      - ``OUTPUT``
-     - [raster]
+     - [point cloud]
      - Output point cloud whose features are the points within the coverage polygon layer.
 
 Python code
@@ -415,7 +415,7 @@ Outputs
      - Description
    * - **Layer information**
      - ``OUTPUT``
-     - [vector]
+     - [html]
      - :file:`HTML` file to store the metadata information.
 
 Python code
