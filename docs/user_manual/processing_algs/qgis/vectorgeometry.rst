@@ -3328,6 +3328,144 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisforcecw:
+
+Force polygons clockwise
+------------------------
+
+|400|
+
+Forces polygon geometries to respect the convention where the exterior ring
+is oriented in a clockwise direction and the interior rings in a counter-clockwise
+direction.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input vector layer
+   * - **Reoriented**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Reoriented**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer with reoriented geometries.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:forcecw``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisforceccw:
+
+Force polygons counter-clockwise
+--------------------------------
+
+|400|
+
+Forces polygon geometries to respect the convention where the exterior ring
+is oriented in a counter-clockwise direction and the interior rings in a clockwise
+direction.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input vector layer
+   * - **Reoriented**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Reoriented**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer with reoriented geometries.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:forceccw``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisforcerhr:
 
 Force right-hand-rule
@@ -3337,6 +3475,9 @@ Forces polygon geometries to respect the Right-Hand-Rule, in which
 the area that is bounded by a polygon is to the right of the boundary.
 In particular, the exterior ring is oriented in a clockwise
 direction and any interior rings in a counter-clockwise direction.
+
+Due to the inconsistency in the definition of the Right-Hand-Rule in some contexts,
+it is recommended to use the explicit :ref:`qgisforcecw` algorithm instead.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
@@ -7767,7 +7908,6 @@ Python code
 
 .. _GEOS: https://libgeos.org/
 .. _SFCGAL: https://sfcgal.gitlab.io/SFCGAL/
-
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
