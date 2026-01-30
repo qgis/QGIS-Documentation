@@ -500,14 +500,16 @@ Further reading: :ref:`qgisswapxy` algorithm
    :start-after: .. end_flip_coordinates_section
    :end-before: .. end_force_polygon_ccw_section
 
-Further reading: :ref:`expression_function_GeometryGroup_force_polygon_cw`,
+Further reading: :ref:`qgisforceccw` algorithm,
+:ref:`expression_function_GeometryGroup_force_polygon_cw`,
 :ref:`expression_function_GeometryGroup_force_rhr`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_force_polygon_ccw_section
    :end-before: .. end_force_polygon_cw_section
 
-Further reading: :ref:`expression_function_GeometryGroup_force_polygon_ccw`,
+Further reading: :ref:`qgisforcecw` algorithm,
+:ref:`expression_function_GeometryGroup_force_polygon_ccw`,
 :ref:`expression_function_GeometryGroup_force_rhr`
 
 .. include:: expression_help/GeometryGroup.rst
