@@ -704,20 +704,68 @@ symbol layer types:
   Configurable parameters include distance from the boundary to shade, use of
   color ramps or simple two color gradients, optional blurring of the fill and
   offsets.
-* **Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to
-  represent the polygon boundary. The settings for the outline arrow are the same
-  as for arrow line symbols.
-* **Outline: Hashed line**: uses a :ref:`hash line symbol <hashed_line_symbol>`
-  layer to represent the polygon boundary (:guilabel:`Rings`) which can be the
-  interior rings only, the exterior ring only or all the rings).
+
+.. _outline_arrow_symbol:
+
+* **Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer
+  to represent the polygon boundary (:guilabel:`Rings`) which can be the interior rings only,
+  the exterior ring only or all the rings.
+  The settings for the outline arrow are the same as for arrow line symbols.
+
+.. _outline_filled_line_symbol:
+
+* **Outline: Filled line**: uses a :ref:`filled line symbol <filled_line_symbol>` layer
+  to represent the polygon boundary (:guilabel:`Rings`) which can be the interior rings only,
+  the exterior ring only or all the rings.
+  The settings are the same as for filled line symbols.
+
+.. _outline_hashed_line_symbol:
+
+* **Outline: Hashed line**: uses a :ref:`hash line symbol <hashed_line_symbol>` layer
+  to represent the polygon boundary (:guilabel:`Rings`) which can be the interior rings only,
+  the exterior ring only or all the rings.
+  The other settings are the same as for hashed line symbols.
+
+.. _outline_interpolated_line_symbol:
+
+* **Outline: Interpolated line**: uses an :ref:`interpolated line symbol <interpolated_line_symbol>` layer
+  to represent the polygon boundary (:guilabel:`Rings`) which can be the interior rings only,
+  the exterior ring only or all the rings.
+  The other settings are the same as for interpolated line symbols.
+
+.. _outline_linear_referencing_symbol:
+
+* **Outline: Linear referencing**: uses a :ref:`linear referencing symbol <hashed_line_symbol>` layer
+  to represent the polygon boundary (:guilabel:`Rings`) which can be the interior rings only,
+  the exterior ring only or all the rings.
+  The other settings are the same as for linear referencing symbols.
+
+.. _outline_lineburst_symbol:
+
+* **Outline: Lineburst**: uses a :ref:`lineburst symbol <lineburst_symbol>` layer
+  to represent the polygon boundary (:guilabel:`Rings`) which can be the interior rings only,
+  the exterior ring only or all the rings.
+  The other settings are the same as for lineburst symbols.
+
+.. _outline_marker_line_symbol:
+
+* **Outline: Marker line**: uses a :ref:`marker line symbol <marker_line_symbol>` layer
+  to represent the polygon boundary (:guilabel:`Rings`) which can be the interior rings only,
+  the exterior ring only or all the rings.
+  The other settings for the outline marker line are the same as for marker line symbols.
+
+.. _outline_raster_line_symbol:
+
+* **Outline: Raster line**: uses a :ref:`raster line symbol <raster_line_symbol>` layer
+  to represent the polygon boundary (:guilabel:`Rings`) which can be the interior rings only,
+  the exterior ring only or all the rings.
   The other settings for the outline hashed line are the same as for hashed line symbols.
-* **Outline: Marker line**: uses a :ref:`marker line symbol <marker_line_symbol>`
-  layer to represent the polygon boundary (:guilabel:`Rings`) which can be the
-  interior rings only, the exterior ring only or all the rings).
-  The other settings for the outline marker line are same as for marker line symbols.
-* **Outline: simple line**: uses a :ref:`simple line symbol <simple_line_symbol>`
-  layer to represent the polygon boundary (:guilabel:`Rings`) which can be the
-  interior rings only, the exterior ring only or all the rings).
+
+.. _outline_simple_line_symbol:
+
+* **Outline: Simple line**: uses a :ref:`simple line symbol <simple_line_symbol>`
+  layer to represent the polygon boundary (:guilabel:`Rings`)
+  which can be the interior rings only, the exterior ring only or all the rings.
   The :guilabel:`Draw line only inside polygon` option displays the
   polygon borders inside the polygon and can be useful to clearly represent
   adjacent polygon boundaries.
