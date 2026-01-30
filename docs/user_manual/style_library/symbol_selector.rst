@@ -187,6 +187,22 @@ Marker Symbols
 Appropriate for point geometry features, marker symbols have several
 :guilabel:`Symbol layer types`:
 
+.. list-table:: List of marker symbol layer types
+   :class: longtable
+
+   * - :ref:`Simple marker <simple_marker_symbol>`
+     - :ref:`Animated marker <animated_marker>`
+     - :ref:`Ellipse marker <ellipse_marker_symbol>`
+   * - :ref:`Filled marker <filled_marker_symbol>`
+     - :ref:`Font marker <font_marker_symbol>`
+     - :ref:`Geometry generator <geometry_generator_symbol>`
+   * - :ref:`Mask <mask_marker_symbol>`
+     - :ref:`Raster image marker <raster_image_marker>`
+     - :ref:`Vector Field marker <vector_field_marker>`
+   * - :ref:`SVG marker <svg_marker>`
+     -
+     -
+
 .. _simple_marker_symbol:
 
 * **Simple marker** (default)
@@ -213,12 +229,21 @@ Appropriate for point geometry features, marker symbols have several
     as placement origin. This is the point the :guilabel:`Offset` is applied on.
 
 * **Animated marker** (see :ref:`animated_marker`)
+
+.. _ellipse_marker_symbol:
+
 * **Ellipse marker**: a simple marker symbol layer, with customizable width and
   height
+
+.. _filled_marker_symbol:
+
 * **Filled marker**: similar to the simple marker symbol layer, except that it
   uses a :ref:`fill sub symbol <vector_fill_symbols>` to render the marker.
   This allows use of all the existing QGIS fill (and stroke) styles for
   rendering markers, e.g. gradient or shapeburst fills.
+
+.. _font_marker_symbol:
+
 * **Font marker**: similar to the simple marker symbol layer, except that it
   uses installed fonts to render the marker. Its additional properties
   are:
@@ -282,6 +307,23 @@ Line Symbols
 
 Appropriate for line geometry features, line symbols have the following symbol
 layer types:
+
+.. list-table:: List of line symbol layer types
+   :class: longtable
+
+   * - :ref:`Simple line <simple_line_symbol>`
+     - :ref:`Arrow <arrow_symbol>`
+     - :ref:`Filled line <filled_line_symbol>`
+   * - :ref:`Geometry generator <geometry_generator_symbol>`
+     - :ref:`Hashed line <hashed_line_symbol>`
+     - :ref:`Interpolated line <interpolated_line_symbol>`
+   * - :ref:`Linear referencing <linear_referencing_symbol>`
+     - :ref:`Lineburst <lineburst_symbol>`
+     - :ref:`Marker line <marker_line_symbol>`
+   * - :ref:`Raster line <raster_line_symbol>`
+     -
+     -
+
 
 .. _simple_line_symbol:
 
@@ -538,6 +580,37 @@ Fill Symbols
 Appropriate for polygon geometry features, fill symbols have also several
 symbol layer types:
 
+.. table:: List of fill symbol layer types
+ :widths: 50, 50
+ :class: longtable
+
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+ | For polygon interior                                       | For polygon ring                                                         |
+ +============================================================+==========================================================================+
+ | :ref:`Simple fill <simple_fill_symbol>`                    | :ref:`Outline: Arrow <outline_arrow_symbol>`                             |
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+ | :ref:`Centroid fill <centroid_fill_symbol>`                | :ref:`Outline: Filled line <outline_filled_line_symbol>`                 |
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+ | :ref:`Geometry generator <geometry_generator_symbol>`      | :ref:`Outline: Hashed line <outline_hashed_line_symbol>`                 |
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+ | :ref:`Gradient fill <gradient_fill_symbol>`                | :ref:`Outline: Interpolated line <outline_interpolated_line_symbol>`     |
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+ | :ref:`Line pattern fill <line_pattern_fill_symbol>`        | :ref:`Outline: Linear referencing <outline_linear_referencing_symbol>`   |
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+ | :ref:`Point pattern fill line <point_pattern_fill_symbol>` | :ref:`Outline: Lineburst <outline_lineburst_symbol>`                     |
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+ | :ref:`Random marker fill <random_marker_fill>`             | :ref:`Outline: Marker line <outline_marker_line_symbol>`                 |
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+ | :ref:`Raster image <raster_image_fill_symbol>`             | :ref:`Outline: Raster line <outline_raster_line_symbol>`                 |
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+ | :ref:`SVG fill <svg_fill_symbol>`                          | :ref:`Outline: Simple line <outline_simple_line_symbol>`                 |
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+ | :ref:`Shapeburst fill <shapeburst_fill_symbol>`            |                                                                          |
+ +------------------------------------------------------------+--------------------------------------------------------------------------+
+
+
+.. _simple_fill_symbol:
+
 * **Simple fill** (default): fills a polygon with a uniform color
 
   .. _figure_simple_fill_symbol:
@@ -546,6 +619,8 @@ symbol layer types:
      :align: center
 
      Designing a Simple Fill Symbol
+
+.. _centroid_fill_symbol:
 
 * **Centroid fill**: places a :ref:`marker symbol <vector_marker_symbols>`
   at the centroid of the visible feature.
@@ -566,12 +641,18 @@ symbol layer types:
     part boundary only`)
 
 * **Geometry generator** (see :ref:`geometry_generator_symbol`)
+
+.. _gradient_fill_symbol:
+
 * **Gradient fill**: uses a radial, linear or conical gradient, based on either
   simple two color gradients or a predefined :ref:`gradient color ramp
   <color-ramp>` to fill polygons. The gradient can be rotated and applied on
   a single feature basis or across the whole map extent. Also start and end
   points can be set via coordinates or using the centroid (of feature or map).
   A data-defined offset can be defined.
+
+.. _line_pattern_fill_symbol:
+
 * **Line pattern fill**: fills the polygon with a hatching pattern of
   :ref:`line symbol layer <vector_line_symbols>`. You can set:
 
@@ -604,6 +685,8 @@ symbol layer types:
      QGIS renders the line pattern fill using a line-by-line vector-based approach.
      This results in smaller output file sizes, higher quality exports, and
      improved editability of the pattern lines in external vector graphics applications.
+
+.. _point_pattern_fill_symbol:
 
 * **Point pattern fill**: fills the polygon with a grid pattern of 
   :ref:`marker symbol <vector_marker_symbols>`. You can set:
@@ -688,6 +771,8 @@ symbol layer types:
   * :guilabel:`Clip markers to polygon boundary`: whether markers rendered near
     the edges of polygons should be clipped to the polygon boundary or not
 
+.. _raster_image_fill_symbol:
+
 * **Raster image fill**: fills the polygon with tiles from a raster image (:file:`PNG`
   :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
   or an embedded file encoded as a string (:ref:`more details <embedded_file_selector>`).
@@ -697,8 +782,14 @@ symbol layer types:
   stretched raster fills in either the horizontal or vertical directions. 
   The image width and height can be set using any of the
   :ref:`common units <unit_selector>` or as a percentage of the original size.
+
+.. _svg_fill_symbol:
+
 * **SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`
   of a given size (:guilabel:`Texture width`).
+
+.. _shapeburst_fill_symbol:
+
 * **Shapeburst fill**: buffers a gradient fill, where a gradient
   is drawn from the boundary of a polygon towards the polygon's centre.
   Configurable parameters include distance from the boundary to shade, use of
