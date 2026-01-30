@@ -473,6 +473,12 @@ Further reading: :ref:`expression_function_GeometryGroup_start_point`,
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_end_point_section
+   :end-before: .. end_equals_section
+
+Further reading: :ref:`expression_function_GeometryGroup_overlay_equals`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_equals_section
    :end-before: .. end_extend_section
 
 Further reading: :ref:`qgisextendlines` algorithm
@@ -627,7 +633,8 @@ algorithm
    :start-after: .. end_overlay_disjoint_section
    :end-before: .. end_overlay_equals_section
 
-Further reading: :ref:`array manipulation <array_functions>`
+Further reading: :ref:`expression_function_GeometryGroup_equals`,
+:ref:`array manipulation <array_functions>`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_equals_section
