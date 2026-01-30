@@ -627,8 +627,7 @@ algorithm
    :start-after: .. end_overlay_disjoint_section
    :end-before: .. end_overlay_equals_section
 
-Further reading: :ref:`array manipulation <array_functions>`,
-:ref:`qgisselectbylocation` algorithm
+Further reading: :ref:`array manipulation <array_functions>`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_equals_section
