@@ -171,6 +171,17 @@ regardless it's of marker, line or fill sub-type:
 * the |checkbox| :guilabel:`Draw effects` button for :ref:`effects rendering
   <draw_effects>`.
 
+In addition, marker and hashed line sub-types share a common option:
+
+* :guilabel:`Blank Segments`: allows defining blank sections along a feature
+  when using templated line symbology.
+  The information is stored as a data-defined property
+  (using a data field or an auxiliary storage field).
+  To create a blank segment, click on the desired starting point along the line
+  and click again to define the end of the segment. Existing segments can be
+  resized by dragging their start or end points along the line.
+  To remove a segment, select it and press :kbd:`Del`.
+
 .. note::
 
  While the description below assumes that the symbol layer type is bound to the
