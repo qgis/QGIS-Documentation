@@ -21,3 +21,5 @@ steps to easily and efficiently contribute to QGIS code.
     unittesting
     processingtesting
     ogcconformancetesting
+    ai_policy
+
