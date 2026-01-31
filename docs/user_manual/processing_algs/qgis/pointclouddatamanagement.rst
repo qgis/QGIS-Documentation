@@ -302,11 +302,12 @@ The output point cloud will have several new dimensions: ``m3c2_distance``,
 ``m3c2_uncertainty``, ``m3c2_significant``, ``m3c2_std_dev1``, ``m3c2_std_dev2``,
 ``m3c2_count1`` and ``m3c2_count2``.
 
-*References: Lague, Dimitri, Nicolas Brodu, and Jérôme Leroux. Accurate 3D Compariso
+*References: Lague, Dimitri, Nicolas Brodu, and Jérôme Leroux. Accurate 3D Comparison
 of Complex Topography with Terrestrial Laser Scanner: Application to the Rangitikei
 Canyon (N-Z). arXiv, 2013, https://arxiv.org/abs/1302.1183.*
 
-This algorithms available only QGIS is build with PDAL >= 2.10.
+.. attention:: Running this algorithm requires QGIS installed with PDAL_ >= 2.10
+   (see :menuselection:`Help --> About` menu).
 
 Parameters
 ..........
@@ -428,6 +429,15 @@ Outputs
      - ``OUTPUT``
      - [point cloud]
      - Output comparison point cloud.
+       The output point cloud contains the following additional dimensions:
+
+       - ``m3c2_distance``
+       - ``m3c2_uncertainty``
+       - ``m3c2_significant``
+       - ``m3c2_std_dev1``
+       - ``m3c2_std_dev2``
+       - ``m3c2_count1``
+       - ``m3c2_count2``
 
 Python code
 ...........
@@ -1078,4 +1088,13 @@ Python code
 
 
 .. _PDAL: https://pdal.io/en/stable/
+.. |400| replace:: ``NEW in 4.0``
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
 .. |400| replace:: ``NEW in 4.0``
