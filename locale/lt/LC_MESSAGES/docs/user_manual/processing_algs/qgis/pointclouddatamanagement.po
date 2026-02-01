@@ -869,9 +869,23 @@ msgstr "Išvesties taškų masyvo sluoksnis, suliejantis visus įvesties failus.
 msgid "**Algorithm ID**: ``pdal:merge``"
 msgstr "**Algoritmo ID**: ``pdal:merge``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:528
+msgid "Reproject"
+msgstr "Perprojektuoti"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:530
+msgid ""
+"Reprojects a point cloud to a different Coordinate Reference System (CRS)."
+msgstr ""
+"Perprojektuoja taškų masyvą į kitą koordinačių atskaitos sistemą (CRS)."
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:532
 msgid ":ref:`pdalassignprojection`"
 msgstr ":ref:`pdalassignprojection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:549
+msgid "Input point cloud layer to reproject to a different CRS"
+msgstr "Įvesties taškų masyvo sluoksnis, kur reikia perprojektuoti į kitą CRS"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:550
 msgid "**Target CRS**"
@@ -881,13 +895,75 @@ msgstr "**Paskirties CRS**"
 msgid "**Reprojected**"
 msgstr "**Perprojektuota**"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:559
+msgid ""
+"Specify the reprojected point cloud file. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite perprojektuojamą taškų masyvo failą. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:577
+msgid "**Coordinate operation**"
+msgstr "**Koordinačių veiksmas**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:580
 msgid "``OPERATION``"
 msgstr "``OPERATION``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:581
+msgid "[datum]"
+msgstr "[datum]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:582
+msgid ""
+"The :ref:`datum transformation <datum_transformation>` to use to reproject "
+"the data between the origin and target systems."
+msgstr ""
+":ref:`Duomenų transformacija <datum_transformation>`, kurią reikia naudoti "
+"perprojektuojant duomenis tarp pradinės ir paskirties sistemų."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:597
+msgid "**REPROJECTED**"
+msgstr "**PERPROJEKTUOTA**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:600
+msgid "Output point cloud layer in the target CRS."
+msgstr "Išvesties taškų masyvo sluoksnis su paskirties CRS"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:605
+msgid "**Algorithm ID**: ``pdal:reproject``"
+msgstr "**Algoritmo ID**: ``pdal:reproject``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:615
+msgid "Thin (by sampling radius)"
+msgstr "Ploninti (pagal mėginio spindulį)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:617
+msgid ""
+"Creates a thinned version of the point cloud by performing sampling by "
+"distance point (reduces the number of points within a certain radius)."
+msgstr ""
+"Sukuria paplonintą taškų masyvo versiją imant mėginius pagal atstumo tašką "
+"(sumažina kiekį taškų,k esančių konkrečiame spindulyje)."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:625
+msgid "Thining point cloud (by sampling radius)"
+msgstr "Ploninamas taškų masyvas (pagal mėginio spindulį)"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:627
 msgid ":ref:`pdalthinbydecimate`"
 msgstr ":ref:`pdalthinbydecimate`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:647
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:749
+msgid "Input point cloud layer to create a thinned version from"
+msgstr ""
+"Įvesties taškų masyvo sluoksnis, kurio plonintą versiją reikia sukurti"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:648
+msgid "**Sampling radius (in map units)**"
+msgstr "**Mėginių spindulys (žemėlapio vienetais)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:649
 msgid "``SAMPLING_RADIUS``"
@@ -902,9 +978,52 @@ msgstr "[skaičius: slankaus kablelio]"
 msgid "Default: 1.0"
 msgstr "Numatytas: 1.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:653
+msgid "Distance within which points are sampled to a unique point"
+msgstr "Atstumas, kuriame taškai surenkami į vieną unikalų tašką"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:654
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:706
+msgid "**Thinned (by radius)**"
+msgstr "**Paplonintas (pagal spindulį)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:659
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:761
+msgid ""
+"Specify the output point cloud with reduced points. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite išvesties taškų masyvą su sumažintu taškų skaičiumi. :ref:`Vienas"
+" iš <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:709
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:811
+msgid "Output point cloud layer with reduced points."
+msgstr "Išvesties taškų masyvo sluoksnis su sumažintu taškų skaičiumi."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:714
+msgid "**Algorithm ID**: ``pdal:thinbyradius``"
+msgstr "**Algoritmo ID**: ``pdal:thinbyradius``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:724
+msgid "Thin (by skipping points)"
+msgstr "Ploninti (praleidžiant taškus)"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:726
+msgid ""
+"Creates a thinned version of the point cloud by keeping only every N-th "
+"point (reduces the number of points by skipping nearby points)."
+msgstr ""
+"Sukuria paplonintą taškų masyvo versiją paliekant tik kas N-tąjį tašką "
+"(sumažina taškų skaičių praleidžiant greta esančius taškus)."
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:729
 msgid ":ref:`pdalthinbyradius`"
 msgstr ":ref:`pdalthinbyradius`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:750
+msgid "**Number of points to skip**"
+msgstr "**Praleidžiamų taškų skaičius**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:751
 msgid "``POINTS_NUMBER``"
@@ -918,14 +1037,77 @@ msgstr "[skaičius: sveikas skaičius]"
 msgid "Default: 1"
 msgstr "Numatytas: 1"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:755
+msgid "Keep only every N-th point in the input layer"
+msgstr "Palikti tik kas N-tą įvesties sluoksnio tašką"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:756
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:808
+msgid "**Thinned (by decimation)**"
+msgstr "**Paplonintas (sunaikinimu)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:816
+msgid "**Algorithm ID**: ``pdal:thinbydecimate``"
+msgstr "**Algoritmo ID**: ``pdal:thinbydecimate``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:826
+msgid "Tile"
+msgstr "Kaladėlės"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:828
+msgid ""
+"Creates tiles from input point cloud files, recommended for best performance"
+" (in display or analysis) with such datasets in QGIS."
+msgstr ""
+"Kuria įvesties taškų masyvo failų kaladėles, rekomenduojama geriausiai "
+"greitaveikai (rodant ar analizuojant) dirbant su tokiais duomenų rinkiniais "
+"QGIS."
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:831
 msgid ":ref:`pdalvirtualpointcloud`, :ref:`pdalcreatecopc`"
 msgstr ":ref:`pdalvirtualpointcloud`, :ref:`pdalcreatecopc`"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:851
+msgid "Input point cloud layers to create tiles from"
+msgstr "Įvesties taškų masyvo sluoksniai, iš kurių kurti kaladėles"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:852
+msgid "**Tile length**"
+msgstr "**Kaladėlės ilgis**"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:853
 msgid "``LENGTH``"
 msgstr "``LENGTH``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:856
+msgid "Default: 1000.0"
+msgstr "Numatytas: 1000.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:857
+msgid "Size of the edge of each generated tile"
+msgstr "Kiekvienos sugeneruotos kaladėlės kraštinės dydis"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:862
 msgid "Default: ``[Save to temporary folder]``"
 msgstr "Numatytas: ``[Įrašyti į laikiną aplanką]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:863
+msgid ""
+"Specify the folder to store the generated tiles. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Nurodykite aplanką, kuriame rašyti sukurtas kaladėles. :ref:`Vienas iš "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:881
+msgid "**Assign CRS**"
+msgstr "**Priskirti CRS**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:903
+msgid "Output folder containing the tiles generated from input files."
+msgstr ""
+"Išvesties aplankas, kuriame yra iš įvesties failų sugeneruotos kaladėlės."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointclouddatamanagement.rst:908
+msgid "**Algorithm ID**: ``pdal:tile``"
+msgstr "**Algoritmo ID**: ``pdal:tile``"
