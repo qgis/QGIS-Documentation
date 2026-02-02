@@ -15,8 +15,21 @@ The :guilabel:`Elevation Profile` panel is a plotting tool for side view,
 for visualizing elevation data along a line.
 It supports vector, raster, mesh and point cloud layers. Data can be of 2D or 3D type.
 
-To add an elevation profile view, go to :menuselection:`View -->` |newElevationProfile| :menuselection:`Elevation Profile` menu.
-You can add as many profile views as you want, and they can be docked, piled on top of each other, or floating.
+To create or manage elevation profile panels,
+expand the :menuselection:`View --> Elevation Profiles -->` menu and either press:
+
+* |newElevationProfile| :menuselection:`New Elevation Profile` (:kbd:`Ctrl+Alt+E`):
+  creates an elevation profile based on the project layer tree.
+* :menuselection:`Manage Elevation Profiles...`: opens the :guilabel:`Elevation Profile Manager` dialog
+  listing all available elevation profile views, and allowing to:
+
+  * search for an elevation profile
+  * open any elevation profile in the project
+  * duplicate, rename or remove an existing elevation profile
+
+You can add as many profile views as you want, and they can be docked,
+piled on top of each other, or floating.
+They are stored in the project upon saving the project.
 
 .. _figure_elevation_tool_interaction:
 
@@ -175,10 +188,10 @@ It also allows a set of interactions such as zooming, panning, measuring, identi
 Creating an elevation profile
 =============================
 
-To create a profile view, you can:
+To create an elevation profile view:
 
-#. Go to :menuselection:`View -->` |newElevationProfile| :menuselection:`Elevation Profile` menu.
-   The :guilabel:`Elevation profile` panel opens.
+#. Press :menuselection:`View -->` |newElevationProfile| :menuselection:`New Elevation Profile` button
+   or press :kbd:`Ctrl+Alt+E`. The :guilabel:`Elevation profile` view opens.
 #. Create the profile line along which the terrain and the features will be rendered.
    Select a drawing tool:
 
