@@ -43,8 +43,6 @@ There are several tabs in the dialog:
     - |editMetadata| :ref:`Metadata <raster_metadata>`
     - |legend| :ref:`Legend <raster_legend>`
   * - |display| :ref:`Display <raster_display>`
-    - |overlay| :ref:`QGIS Server <raster_server>`
-    - :ref:`External plugins <plugins>` ([2]_) tabs
     - |openTable| :ref:`Attribute Tables <raster_attribute_tables>`
     - |overlay| :ref:`QGIS Server <raster_server>`
   * - :ref:`External plugins <plugins>` ([2]_) tabs
