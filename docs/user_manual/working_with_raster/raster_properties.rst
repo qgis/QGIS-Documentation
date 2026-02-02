@@ -45,7 +45,9 @@ There are several tabs in the dialog:
   * - |display| :ref:`Display <raster_display>`
     - |overlay| :ref:`QGIS Server <raster_server>`
     - :ref:`External plugins <plugins>` ([2]_) tabs
-  * - :ref:`Attribute Tables <raster_attribute_tables>`
+    - |openTable| :ref:`Attribute Tables <raster_attribute_tables>`
+    - |overlay| :ref:`QGIS Server <raster_server>`
+  * - :ref:`External plugins <plugins>` ([2]_) tabs
     -
     -
 
@@ -1441,6 +1443,8 @@ such as:
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |overlay| image:: /static/common/overlay.png
    :width: 1.5em
