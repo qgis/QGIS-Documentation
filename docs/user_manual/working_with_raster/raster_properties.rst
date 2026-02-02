@@ -43,8 +43,11 @@ There are several tabs in the dialog:
     - |editMetadata| :ref:`Metadata <raster_metadata>`
     - |legend| :ref:`Legend <raster_legend>`
   * - |display| :ref:`Display <raster_display>`
+    - |openTable| :ref:`Attribute Tables <raster_attribute_tables>`
     - |overlay| :ref:`QGIS Server <raster_server>`
-    - :ref:`External plugins <plugins>` ([2]_) tabs
+  * - :ref:`External plugins <plugins>` ([2]_) tabs
+    -
+    -
 
 
 .. [1] Also available in the :ref:`Layer styling panel <layer_styling_panel>`
@@ -132,6 +135,7 @@ the selected raster, including:
 
 .. figure:: img/rasterPropertiesDialog.png
    :align: center
+   :width: 70%
 
    Raster Layer Properties - Source Dialog
 
@@ -653,6 +657,7 @@ of an atlas, ...
 
 .. figure:: img/rasterTransparency.png
    :align: center
+   :width: 70%
 
    Raster Transparency
 
@@ -738,6 +743,7 @@ Using the |labelingSingle| :guilabel:`Label with pixel values` option, the follo
 
 .. figure:: img/rasterLabels.png
    :align: center
+   :width: 70%
 
    Raster layer labeling settings
 
@@ -802,6 +808,7 @@ advanced options to customize the histogram:
 
 .. figure:: img/rasterHistogram.png
    :align: center
+   :width: 60%
 
    Raster Histogram
 
@@ -847,6 +854,7 @@ In the |rendering| :guilabel:`Rendering` tab, it's possible to:
 
 .. figure:: img/rasterRendering.png
    :align: center
+   :width: 70%
 
    Raster Rendering Properties
 
@@ -865,6 +873,7 @@ the rendering of the layer over time. Such dynamic rendering requires the
 
 .. figure:: img/rasterTemporal.png
    :align: center
+   :width: 70%
 
    Raster Temporal Properties
 
@@ -971,6 +980,7 @@ Finally, click :guilabel:`Build Pyramids` to start the process.
 
 .. figure:: img/rasterPyramids.png
    :align: center
+   :width: 70%
 
    Raster Pyramids
 
@@ -991,6 +1001,7 @@ does not contain elevation data or you can set:
 
 .. figure:: img/rasterElevation.png
    :align: center
+   :width: 70%
 
    Raster Elevation Properties
 
@@ -1050,6 +1061,7 @@ See :ref:`metadatamenu` for more information.
 
 .. figure:: img/rasterMetadata.png
    :align: center
+   :width: 70%
 
    Raster Metadata
 
@@ -1084,6 +1096,7 @@ layout legend <layout_legend_item>`. These options include:
 
 .. figure:: img/rasterLegend.png
    :align: center
+   :width: 70%
 
    Raster Legend
 
@@ -1163,8 +1176,165 @@ The configuration concerns:
 
 .. figure:: img/rasterServer.png
    :align: center
+   :width: 70%
 
    QGIS Server in Raster Properties
+
+
+
+.. index:: Attribute Tables
+.. _raster_attribute_tables:
+
+Attribute Tables
+======================
+
+Similar to vector layers, raster layers in QGIS can have associated
+Raster Attribute Tables (RATs) that store additional information about
+raster pixel values.
+
+A Raster Attribute Table links raster values (or value ranges) to
+descriptive attributes such as class names, pixel counts, and colors.
+RATs are commonly used for classified rasters, color tables, and
+histogram information, helping QGIS interpret how raster values should
+be displayed and classified.
+
+The :guilabel:`Attribute Tables` tab allows you to view and edit raster attribute data.
+To access the attribute table of a raster layer, right-click the layer in the layers panel,
+open :guilabel:`Properties...` and select :guilabel:`Attribute Tables`.
+
+.. figure:: img/raster_attribute_table_menu.png
+   :align: center
+   :width: 70%
+
+   Accessing the raster attribute table
+
+When opening the :guilabel:`Attribute Tables` for a raster layer that does not have an
+associated Raster Attribute Table, QGIS displays a notice informing that no
+attribute table is currently linked to the data source. In this state, the
+interface provides two options to define and associate a new attribute table:
+
+* :guilabel:`New attribute table from current symbology`: will appear if your raster
+  layer has a classified symbology applied. Otherwise, this option is disabled. Applying classified
+  symbology also triggers an option in the layer context menu to |createTable|:guilabel:`Create Raster Attribute Table`.
+  Click this button and set the following options in the :guilabel:`New Raster Attribute Table` dialog.
+  
+   * :guilabel:`Managed by the data provider`: the attribute table will be saved
+     and managed by the data provider (if supported), overwriting any existing table
+     for the raster band used by the current style. Depending on the data provider,
+     the attribute table will be embedded in the main raster file or saved
+     into a sidecar file managed by the data provider.
+   * :guilabel:`Sidecar VAT.DBF file`: saves the attribute table into
+     a sidecar VAT.DBF file. The resulting file will not be associated with
+     any particular band.
+
+   .. figure:: img/raster_attribute_table_symbology.png
+      :align: center
+      :width: 400px
+
+      Create new attribute table from current symbology
+
+* :guilabel:`Load attribute table from VAT.DBF file`: retrieves the attribute table
+  from an external DBF file.
+  :guilabel:`Load Raster Attribute Table` dialog will appear
+  to let you browse and select the DBF file and associate it with the raster band.
+  The action also can be done by right-clicking the raster layer
+  in the layers panel and selecting |addTable|:guilabel:`Load Raster Attribute Table from VAT.DBF`.
+  |checkbox| :guilabel:`Open the newly loaded attribute table` allows you to
+  directly open the attribute table editor after loading the table.
+
+  .. figure:: img/raster_attribute_table_load.png
+     :align: center
+     :width: 400px
+
+     Load attribute table from VAT.DBF file
+
+Editing raster attribute tables
+--------------------------------
+
+When set, a raster attribute table can be accessed from the :guilabel:`Attribute tables` tab
+of the layer properties dialog or by selecting :guilabel:`Open raster attribute table`
+from the layer contextual menu in :guilabel:`Layers` panel.
+This dialog shows a table whose rows correspond to the different pixel values
+or value ranges classified in a given band of the raster layer.
+Depending on the type of classification, a row is described by:
+
+* for an exact values classification (e.g., paletted/unique values):
+  the band name and the applied :guilabel:`Color`.
+  Additional fields of the :guilabel:`Red`, :guilabel:`Green`, :guilabel:`Blue` and :guilabel:`Opacity` of the color are displayed.
+* for range values classification (e.g., singleband pseudocolor): the range of values
+  defined by their :guilabel:`Min`,  :guilabel:`Max`, the associated label (:guilabel:`Class`)
+  and color ramp interpolated over the values (:guilabel:`Color`).
+  Additional fields of the minimum and maximum of  :guilabel:`Red`, :guilabel:`Green`, :guilabel:`Blue`
+  and :guilabel:`Opacity` of the color ramp are displayed.
+
+You can also customize the raster attribute table by adding new fields for classification
+and group different value ranges accordingly,
+modifying value ranges and their associated colors or labels,
+adding new rows, ...
+The new attribute table can be used to update the current layer symbology.
+
+.. figure:: img/raster_attribute_table.png
+   :align: center
+   :width: 70%
+
+   Raster Attribute Table
+
+At the top of the dialog, a set of tools allows to edit and save changes to the attribute table:
+
+* |editTable| :sup:`Edit Attribute Table` turns the table into edit mode.
+  If no specific row or field is selected, only the |newAttribute| :sup:`Add Column…` option is available.
+* |newAttribute| :sup:`Add Column...` opens the :guilabel:`Add Column` dialog to add a new
+  column to the raster attribute table. The dialog lets you define:
+
+  * :guilabel:`Column Type`, which can be:
+  
+    * |radioButtonOff| :guilabel:`Standard column`
+    * |radioButtonOff| :guilabel:`Color RGBA`
+    * |radioButtonOff| :guilabel:`Color ramp (RGBA minimum and RGBA maximum)`
+
+  * :guilabel:`Column Definition`, including:
+  
+    * :guilabel:`Name` of the column (mandatory)
+    * :guilabel:`Usage`, which can be:
+    
+      * :guilabel:`Pixel Count`: stores the number of pixels belonging to a given value or value range.
+      * :guilabel:`Generic`: general-purpose column with no predefined meaning.
+      * :guilabel:`Name`: stores the class name or label associated with a raster value or range.
+
+    * :guilabel:`Data type`, which can be:
+    
+      * :guilabel:`String`
+      * :guilabel:`Integer`
+      * :guilabel:`Long Integer`
+      * :guilabel:`Double`
+
+  * :guilabel:`Insertion point`, defining whether the new column is inserted
+    |radioButtonOff| :guilabel:`Before` or |radioButtonOff| :guilabel:`After`
+    a selected existing column.
+
+  .. figure:: img/raster_attribute_table_add_column.png
+     :align: center
+     :width: 400px
+
+     Add Column dialog
+
+* |newTableRow|:guilabel:`Add Row...` opens the :guilabel:`Add Row` dialog to add a new row
+  to the raster attribute table. Choose the :guilabel:`Insertion point` as |radioButtonOff|:guilabel:`Before current row`
+  or |radioButtonOff|:guilabel:`After current row`.
+
+* |removeSelectedFeature|:sup:`Remove Row` removes the selected row from the raster attribute table.
+* |deleteAttribute|:sup:`Remove Column` removes the selected column from the raster attribute table.
+* |saveAllEdits|:sup:`Save Changes` saves any modifications made to the raster attribute table.
+
+The next row provides options for controlling the displayed information in the table:
+
+* :guilabel:`Raster band`: allows selecting which raster band the attribute table applies to.
+  Raster layers may contain multiple bands (e.g., multispectral data).
+  Each band can have its own Raster Attribute Table.
+* :guilabel:`Classification`: allows selecting the fields used for classifying the raster layer.
+  Keep in mind that the existing symbology for the raster will be replaced by a new symbology from the attribute table
+  and any unsaved changes to the current symbology will be lost.
+  Make sure to save your symbology style if needed before applying a classification.
 
 .. _raster_identify:
 
@@ -1214,16 +1384,24 @@ such as:
 
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
+.. |addTable| image:: /static/common/mActionAddTable.png
+   :width: 1.5em
 .. |autoPlacementSettings| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
+.. |createTable| image:: /static/common/mActionCreateTable.png
+   :width: 1.5em
+.. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
+   :width: 1.5em
 .. |display| image:: /static/common/display.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
+.. |editTable| image:: /static/common/mActionEditTable.png
+   :width: 1.5em
 .. |elevationscale| image:: /static/common/elevationscale.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
@@ -1260,6 +1438,12 @@ such as:
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
+.. |newTableRow| image:: /static/common/mActionNewTableRow.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
 .. |overlay| image:: /static/common/overlay.png
    :width: 1.5em
 .. |pyramids| image:: /static/common/pyramids.png
@@ -1270,9 +1454,13 @@ such as:
    :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
+.. |removeSelectedFeature| image:: /static/common/mActionRemoveSelectedFeature.png
+   :width: 1.5em
 .. |render| image:: /static/common/render.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |saveAllEdits| image:: /static/common/mActionSaveAllEdits.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
